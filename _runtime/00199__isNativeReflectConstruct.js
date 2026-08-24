@@ -2,14 +2,14 @@
 import dispatchDefault from "00132_dispatch.js";
 import EventDefault from "00133_Event.js";
 import _isNativeReflectConstructDefault from "00207__isNativeReflectConstruct.js";
-import _get from "metro/00096__get.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00096__get.js";
+import closure_4 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "00098__inherits.js";
 
-let XMLHttpRequest = fn;
+let XMLHttpRequest = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -202,8 +202,8 @@ const items1 = [
         const _HermesInternal2 = HermesInternal;
         XMLHttpRequest(38)(tmp9, "The provided value '" + _responseType + "' is unsupported in this environment.");
         if ("blob" === _responseType) {
-          XMLHttpRequest(38)(XMLHttpRequest(200).default.isAvailable, "Native module BlobModule is required for blob support");
-          const tmp6Result = XMLHttpRequest(38);
+          tmp6(38)(tmp6(200).default.isAvailable, "Native module BlobModule is required for blob support");
+          const tmp6Result = tmp6(38);
         }
         tmp._responseType = _responseType;
         const tmp8 = XMLHttpRequest(38);
@@ -308,8 +308,8 @@ const items1 = [
     key: "__didUploadProgress",
     value: function __didUploadProgress(arg0, arg1, arg2) {
       if (arg0 === this._requestId) {
-        XMLHttpRequest(135);
-        const obj = { lengthComputable: true, loaded: null, total: null };
+        let obj = XMLHttpRequest(135);
+        obj = { lengthComputable: true, loaded: null, total: null };
         obj[1] = arg1;
         obj[2] = arg2;
         const tmp10 = new _isNativeReflectConstructDefault("progress", obj);
@@ -392,8 +392,8 @@ const items1 = [
     key: "__didReceiveDataProgress",
     value: function __didReceiveDataProgress(arg0, arg1, arg2) {
       if (arg0 === this._requestId) {
-        XMLHttpRequest(135);
-        const obj = { lengthComputable: null, loaded: null, total: null };
+        let obj = XMLHttpRequest(135);
+        obj = { lengthComputable: null, loaded: null, total: null };
         obj[0] = arg2 >= 0;
         obj[1] = arg1;
         obj[2] = arg2;
@@ -426,11 +426,11 @@ const items1 = [
         const _interceptor = XMLHttpRequest._interceptor;
         if (_response) {
           if (_interceptor) {
-            const _interceptor3 = XMLHttpRequest._interceptor;
+            const _interceptor3 = tmp6._interceptor;
             _interceptor3.loadingFailed(arg0, _response);
           }
         } else if (_interceptor) {
-          const _interceptor2 = XMLHttpRequest._interceptor;
+          const _interceptor2 = tmp6._interceptor;
           _interceptor2.loadingFinished(arg0, self._response.length);
         }
       }
@@ -443,9 +443,9 @@ const items1 = [
       if (!_subscriptions) {
         _subscriptions = [];
       }
-      const item = _subscriptions.forEach((item, index) => {
-        if (item) {
-          item.remove();
+      const item = _subscriptions.forEach((remove) => {
+        if (remove) {
+          remove.remove();
         }
       });
       this._subscriptions = [];
@@ -470,12 +470,18 @@ const items1 = [
           let value = map.get(formatted);
           let tmp14 = value;
           if (value) {
+            let tmp19 = value;
+            let tmp20 = tmp10;
             tmp14.headerValue = `${tmp14.headerValue}, ${tmp10}`;
+            let tmp21 = formatted;
             let result = map.set(tmp12, tmp14);
           } else {
+            let tmp15 = formatted;
             let obj = { lowerHeaderName: null, upperHeaderName: null, headerValue: null };
             obj[0] = tmp12;
+            let tmp16 = str2;
             obj[1] = str3.toUpperCase();
+            let tmp17 = tmp10;
             obj[2] = tmp10;
             let result1 = map.set(tmp12, obj);
           }
@@ -494,7 +500,7 @@ const items1 = [
           }
           return num;
         });
-        const mapped = sorted.map((item, index) => item.lowerHeaderName + ": " + item.headerValue);
+        const mapped = sorted.map((lowerHeaderName) => lowerHeaderName.lowerHeaderName + ": " + lowerHeaderName.headerValue);
         return mapped.join("\r\n") + "\r\n";
       } else {
         return null;
@@ -572,7 +578,8 @@ const items1 = [
   {
     key: "send",
     value: function send(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       if (this.readyState !== this.OPENED) {
         const _Error2 = Error;
         error = new Error("Request has not been opened");
@@ -641,7 +648,6 @@ const items1 = [
         ({ _method, _trackingName } = self);
         ({ __didCreateRequest, _url: _url2, _headers, timeout } = self);
         _default7.sendRequest(_method, _trackingName, _url2, _headers, arg0, str7, self._incrementalEvents || self.onreadystatechange || self.onprogress, timeout, __didCreateRequest.bind(self), self.withCredentials);
-        const _default6 = self(208).default;
       }
     }
   },
@@ -657,6 +663,7 @@ const items1 = [
       let tmp4 = self.readyState === self.UNSENT;
       if (!tmp4) {
         tmp4 = self.readyState === self.OPENED && !self._sent;
+        const tmp5 = self.readyState === self.OPENED && !self._sent;
       }
       if (!tmp4) {
         tmp4 = self.readyState === self.DONE;
@@ -681,9 +688,9 @@ const items1 = [
         obj = {};
       }
       const keys = Object.keys(obj);
-      this._lowerCaseResponseHeaders = keys.reduce((acc, item, index) => {
-        acc[item.toLowerCase()] = obj[item];
-        return acc;
+      this._lowerCaseResponseHeaders = keys.reduce((arg0, str) => {
+        arg0[str.toLowerCase()] = obj[str];
+        return arg0;
       }, {});
     }
   },
@@ -693,6 +700,7 @@ const items1 = [
       const self = this;
       this.readyState = DONE;
       let obj = XMLHttpRequest;
+      let tmp2 = importDefault;
       const obj2 = XMLHttpRequest(135);
       obj2.dispatchTrustedEvent(this, new EventDefault("readystatechange"));
       if (DONE === this.DONE) {
@@ -702,6 +710,7 @@ const items1 = [
           objResult.dispatchTrustedEvent(self, tmp23);
           obj = obj(135);
           let tmp2Result = EventDefault;
+          tmp2 = new.target;
           tmp2Result = new tmp2Result("loadend");
           obj.dispatchTrustedEvent(self, tmp2Result);
         } else if (!self._hasError) {

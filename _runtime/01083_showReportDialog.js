@@ -53,8 +53,8 @@ arg5.showReportDialog = function showReportDialog(arg0) {
         element.onload = onLoad;
       }
       if (onClose) {
-        reportDialogClosedMessageHandler = function reportDialogClosedMessageHandler(event) {
-          if ("__sentry_reportdialog_closed__" === event.data) {
+        reportDialogClosedMessageHandler = function reportDialogClosedMessageHandler(data) {
+          if ("__sentry_reportdialog_closed__" === data.data) {
             try {
               onClose();
               const WINDOW = onClose(reportDialogClosedMessageHandler[0]).WINDOW;

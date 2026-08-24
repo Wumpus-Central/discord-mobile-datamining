@@ -16,6 +16,7 @@ const obj = {
     let tmp5 = tmp;
     if (bCHDigit - obj.getBCHDigit(obj.G15) >= 0) {
       do {
+        let tmp6 = obj;
         let bCHDigit1 = obj.getBCHDigit(tmp4);
         let tmp8 = tmp4 ^ obj.G15 << bCHDigit1 - obj.getBCHDigit(obj.G15);
         let bCHDigit2 = obj.getBCHDigit(tmp8);
@@ -34,6 +35,7 @@ const obj = {
     let tmp4 = tmp;
     if (bCHDigit - obj.getBCHDigit(obj.G18) >= 0) {
       do {
+        let tmp5 = obj;
         let bCHDigit1 = obj.getBCHDigit(tmp3);
         let tmp7 = tmp3 ^ obj.G18 << bCHDigit1 - obj.getBCHDigit(obj.G18);
         let bCHDigit2 = obj.getBCHDigit(tmp7);
@@ -93,10 +95,17 @@ const obj = {
     let tmp2 = tmp;
     if (0 < diff) {
       do {
+        let tmp3 = require;
+        let tmp4 = dependencyMap;
         let tmp5 = QRPolynomial;
         let obj2 = _mod12383;
         let items = [1, obj2.gexp(num)];
+        let tmp6 = new.target;
+        let tmp7 = new.target;
+        let tmp8 = items;
+        let num2 = 0;
         tmp5 = new tmp5(items, 0);
+        let tmp10 = tmp5;
         multiplyResult = multiplyResult.multiply(tmp5);
         num = num + 1;
         tmp2 = multiplyResult;
@@ -109,11 +118,11 @@ const obj = {
       if (arg1 < 10) {
         if (_mod12377.MODE_NUMBER === arg0) {
           return 10;
-        } else if (_mod12377.MODE_ALPHA_NUM === arg0) {
+        } else if (tmp20(12377).MODE_ALPHA_NUM === arg0) {
           return 9;
         } else {
-          if (_mod12377.MODE_8BIT_BYTE !== arg0) {
-            if (_mod12377.MODE_KANJI !== arg0) {
+          if (tmp20(12377).MODE_8BIT_BYTE !== arg0) {
+            if (tmp20(12377).MODE_KANJI !== arg0) {
               const _Error4 = Error;
               error = new Error("mode:" + arg0);
               throw error;
@@ -126,11 +135,11 @@ const obj = {
     if (arg1 < 27) {
       if (_mod12377.MODE_NUMBER === arg0) {
         return 12;
-      } else if (_mod12377.MODE_ALPHA_NUM === arg0) {
+      } else if (tmp13(12377).MODE_ALPHA_NUM === arg0) {
         return 11;
-      } else if (_mod12377.MODE_8BIT_BYTE === arg0) {
+      } else if (tmp13(12377).MODE_8BIT_BYTE === arg0) {
         return 16;
-      } else if (_mod12377.MODE_KANJI === arg0) {
+      } else if (tmp13(12377).MODE_KANJI === arg0) {
         return 10;
       } else {
         const _Error3 = Error;
@@ -140,11 +149,11 @@ const obj = {
     } else if (arg1 < 41) {
       if (_mod12377.MODE_NUMBER === arg0) {
         return 14;
-      } else if (_mod12377.MODE_ALPHA_NUM === arg0) {
+      } else if (tmp6(12377).MODE_ALPHA_NUM === arg0) {
         return 13;
-      } else if (_mod12377.MODE_8BIT_BYTE === arg0) {
+      } else if (tmp6(12377).MODE_8BIT_BYTE === arg0) {
         return 16;
-      } else if (_mod12377.MODE_KANJI === arg0) {
+      } else if (tmp6(12377).MODE_KANJI === arg0) {
         return 12;
       } else {
         const _Error2 = Error;
@@ -165,15 +174,20 @@ const obj = {
     let num3 = 0;
     if (0 < moduleCount) {
       do {
+        let tmp2 = num;
         let tmp3 = num2;
         let num4 = 0;
         let tmp4 = num2;
         if (0 < moduleCount) {
+          let tmp6 = num4;
+          let tmp7 = tmp3;
           let num5 = -1;
           let num6 = 0;
           do {
             do {
               let sum = num + num5;
+              let tmp9 = num5;
+              let tmp10 = num6;
               let tmp11 = num6;
               if (sum >= 0) {
                 let num7 = -1;
@@ -183,6 +197,8 @@ const obj = {
                   do {
                     let sum1 = num4 + num7;
                     let tmp15 = sum1 < 0;
+                    let tmp16 = num7;
+                    let tmp17 = tmp13;
                     if (sum1 >= 0) {
                       tmp15 = moduleCount <= sum1;
                     }
@@ -230,11 +246,14 @@ const obj = {
     if (0 < moduleCount - 1) {
       do {
         sum4 = num8 + 1;
+        let tmp25 = num8;
         let tmp26 = tmp22;
         let num9 = 0;
         let tmp27 = tmp22;
         if (0 < moduleCount - 1) {
           do {
+            let tmp28 = num9;
+            let tmp29 = tmp26;
             let num10 = 0;
             if (self.isDark(num8, num9)) {
               num10 = 1;
@@ -275,12 +294,15 @@ const obj = {
     let tmp37 = tmp23;
     if (0 < moduleCount) {
       do {
+        let tmp38 = num11;
         let tmp39 = tmp36;
         let num12 = 0;
         let tmp40 = tmp36;
         if (0 < moduleCount - 6) {
           do {
             let isDarkResult = self.isDark(num11, num12);
+            let tmp42 = num12;
+            let tmp43 = tmp39;
             if (isDarkResult) {
               isDarkResult = !self.isDark(num11, num12 + 1);
             }
@@ -318,12 +340,15 @@ const obj = {
     let tmp46 = tmp37;
     if (0 < moduleCount) {
       do {
+        let tmp47 = num13;
         let tmp48 = tmp45;
         let num14 = 0;
         let tmp49 = tmp45;
         if (0 < moduleCount - 6) {
           do {
             let isDarkResult1 = self.isDark(num14, num13);
+            let tmp51 = num14;
+            let tmp52 = tmp48;
             if (isDarkResult1) {
               isDarkResult1 = !self.isDark(num14 + 1, num13);
             }
@@ -362,10 +387,13 @@ const obj = {
     if (0 < moduleCount) {
       do {
         let tmp54 = num15;
+        let tmp55 = num16;
         let num18 = 0;
         let tmp56 = num15;
         if (0 < moduleCount) {
           do {
+            let tmp57 = tmp54;
+            let tmp58 = num18;
             let sum12 = tmp54;
             if (self.isDark(num18, num16)) {
               sum12 = tmp54 + 1;

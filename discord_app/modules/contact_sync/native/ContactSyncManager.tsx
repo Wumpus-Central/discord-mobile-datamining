@@ -1,14 +1,14 @@
 // discord_app/modules/contact_sync/native/ContactSyncManager.tsx
 import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import set from "../../../stores/ConnectedAccountsStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 import setStoredContacts from "ContactSyncPersistedStore.tsx";
 import { ContactPermissions } from "ContactSyncConstants.tsx";
 import { PlatformTypes } from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function _requestAndSyncContacts() {
   const self = this;
   const tmp = callback(function*() {
@@ -149,9 +149,9 @@ let prototype = function ContactSyncLifecycleManager() {
     if (null != currentUser.getCurrentUser()) {
       localAccount = localAccount.getLocalAccount(constants.CONTACTS);
       if (obj.isContactSyncEnabled(localAccount)) {
-        const result = applyArgumentsResult(table[7]).checkContactPermissions();
-        result.then((result) => {
-          if (result === constants.AUTHORIZED) {
+        const result = tmp4(tmp5[7]).checkContactPermissions();
+        result.then((arg0) => {
+          if (arg0 === constants.AUTHORIZED) {
             callback(table[9]).runAfterInteractions(() => (function requestAndSyncContacts() {
               const self = this;
               const apply = closure_11.apply;
@@ -165,9 +165,11 @@ let prototype = function ContactSyncLifecycleManager() {
             const obj = callback(table[9]);
           }
         });
-        const tmp4Result = applyArgumentsResult(table[7]);
+        const tmp4Result = tmp4(tmp5[7]);
       }
       obj = applyArgumentsResult(table[7]);
+      tmp4 = applyArgumentsResult;
+      tmp5 = table;
     }
   };
   return applyArgumentsResult;
@@ -175,7 +177,7 @@ let prototype = function ContactSyncLifecycleManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/ContactSyncManager.tsx");
+let result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncManager.tsx");
 
 export default prototype;
 export const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";

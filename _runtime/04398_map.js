@@ -1,15 +1,10 @@
 // _runtime/04398_map.js
 import callBoundIntrinsic from "00574_callBoundIntrinsic.js";
 import ToObject from "04399_ToObject.js";
-import isString from "04401_isString.js";
 import ToUint32 from "04402_ToUint32.js";
 import ToString from "04414_ToString.js";
 import apply from "04426_apply.js";
-import ArraySpeciesCreate from "04427_ArraySpeciesCreate.js";
-import Get from "04437_Get.js";
 import HasProperty from "04450_HasProperty.js";
-import Call from "04451_Call.js";
-import CreateDataPropertyOrThrow from "04452_CreateDataPropertyOrThrow.js";
 
 const ObjectResult = Object("a");
 let tmp2 = "a" !== ObjectResult[0];
@@ -24,7 +19,7 @@ export default function map(arg0) {
   let arr = tmp3;
   if (closure_2) {
     arr = tmp3;
-    if (isString(tmp3)) {
+    if (tmp(4401)(tmp3)) {
       arr = callback(tmp3, "");
     }
   }
@@ -33,14 +28,17 @@ export default function map(arg0) {
     if (arguments.length > 1) {
       const tmp11 = arguments[1];
     }
-    const tmp12 = ArraySpeciesCreate(tmp3, tmp5);
+    const tmp12 = tmp(4427)(tmp3, tmp5);
     for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
+      let tmp13 = require;
+      let tmp14 = dependencyMap;
       let tmp15 = ToString(num2);
+      let tmp16 = num2;
       if (HasProperty(tmp3, tmp15)) {
-        let tmp17 = Get(tmp3, tmp15);
+        let tmp17 = tmp13(4437)(tmp3, tmp15);
         let items = [tmp17, num2, tmp3];
-        let tmp18 = Call(arg0, tmp11, items);
-        let tmp19 = CreateDataPropertyOrThrow(tmp12, tmp15, tmp18);
+        let tmp18 = tmp13(4451)(arg0, tmp11, items);
+        let tmp19 = tmp13(4452)(tmp12, tmp15, tmp18);
       }
     }
     return tmp12;

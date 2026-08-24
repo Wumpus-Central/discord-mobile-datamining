@@ -1,9 +1,9 @@
 // discord_app/modules/safety_flows/openSafetyFlow.native.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import handleRequiredAction from "../../stores/UserRequiredActionStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserRequiredActionStore.tsx";
 import { UserRequiredActions } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _openSafetyFlow() {
   const self = this;
   const tmp = callback(() => {
@@ -102,13 +102,13 @@ function _openSafetyFlow() {
                 if (null != callback) {
                   closure_2 = (function getInitialScreenForTask(closure_1) {
                     if (closure_1.task_type === requiredAction(table[3]).TaskType.AGE_VERIFICATION) {
-                      let UPDATE_APP = requiredAction(table[3]).SafetyFlowScreens.AGE_VERIFICATION;
-                    } else if (closure_1.task_type === requiredAction(table[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
-                      UPDATE_APP = requiredAction(table[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
-                    } else if (null != requiredAction(table[3]).TASK_TYPE_TO_SCREENS[closure_1.task_type]) {
-                      UPDATE_APP = requiredAction(table[3]).SafetyFlowScreens.OVERVIEW;
+                      let UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.AGE_VERIFICATION;
+                    } else if (closure_1.task_type === tmp(tmp2[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
+                      UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION;
+                    } else if (null != tmp(tmp2[3]).TASK_TYPE_TO_SCREENS[closure_1.task_type]) {
+                      UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.OVERVIEW;
                     } else {
-                      UPDATE_APP = requiredAction(table[3]).SafetyFlowScreens.UPDATE_APP;
+                      UPDATE_APP = tmp(tmp2[3]).SafetyFlowScreens.UPDATE_APP;
                     }
                     return UPDATE_APP;
                   })(callback);
@@ -150,7 +150,7 @@ function _openSafetyFlow() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
 
 export const openSafetyFlow = function openSafetyFlow(arg0) {
   const self = this;

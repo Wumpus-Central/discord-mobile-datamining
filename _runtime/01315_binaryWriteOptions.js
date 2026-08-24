@@ -1,5 +1,5 @@
 // _runtime/01315_binaryWriteOptions.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const BinaryWriter = require;

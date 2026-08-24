@@ -6,7 +6,7 @@ import BaseTextField from "BaseTextField.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
   let obj = useTextFieldState;
   const textField = obj.useTextField(onClear, ref);
@@ -18,6 +18,7 @@ const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
     ({ content: obj3[0], pressableProps: obj3[1] } = inputClearButtonConfig);
     tmp5 = obj;
   }
+  const obj2 = useInputClearButton;
   const inputAttachments = InputAttachmentContainer.useInputAttachments(onClear, tmp5);
   ({ leading, trailing, inputStyle } = inputAttachments);
   obj = {};
@@ -28,6 +29,6 @@ const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
   obj.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("obj132").fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
 
 export const TextField = forwardRefResult;

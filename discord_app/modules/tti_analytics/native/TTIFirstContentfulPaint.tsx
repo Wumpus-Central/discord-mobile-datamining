@@ -1,27 +1,25 @@
 // discord_app/modules/tti_analytics/native/TTIFirstContentfulPaint.tsx
-import serializeDefault from "../TTITracker.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/tti_analytics/native/TTIFirstContentfulPaint.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/tti_analytics/native/TTIFirstContentfulPaint.tsx");
 
 export const TTIFirstContentfulPaint = function TTIFirstContentfulPaint(checkFocusedScreen) {
   checkFocusedScreen = checkFocusedScreen.checkFocusedScreen;
   const items = [checkFocusedScreen];
   const onMeasurement = React.useCallback((nativeEvent) => {
     if (null != checkFocusedScreen) {
-      const rootNavigationRef = checkFocusedScreen(dependencyMap[2]).getRootNavigationRef();
+      const rootNavigationRef = checkFocusedScreen(closure_1_2[2]).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
       }
-      const obj = checkFocusedScreen(dependencyMap[2]);
+      const obj = checkFocusedScreen(closure_1_2[2]);
     }
-    const firstContentfulPaint = serializeDefault.firstContentfulPaint;
+    const firstContentfulPaint = closure_1_1(closure_1_2[3]).firstContentfulPaint;
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
-    checkFocusedScreen(dependencyMap[4]).notifyAboutTTI();
-    const obj3 = checkFocusedScreen(dependencyMap[4]);
+    checkFocusedScreen(closure_1_2[4]).notifyAboutTTI();
   }, items);
   return jsx(checkFocusedScreen(11076).TTIMeasurementView, { onMeasurement });
 };

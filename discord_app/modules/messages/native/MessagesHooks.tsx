@@ -1,44 +1,42 @@
 // discord_app/modules/messages/native/MessagesHooks.tsx
-import getVisibleMessages from "MessagesUtils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { findNodeHandle } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import _toTimestampMs from "../../channel/VoiceChannelStartTimeStore.tsx";
+import closure_6 from "../../channel/VoiceChannelStartTimeStore.tsx";
 import { updateShouldShowJumpToPresentButton as closure_7 } from "../../chat_input/native/useChatBottomManagerUIStore.tsx";
-import handleConnectionOpen from "../../../stores/GuildAvailabilityStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import sortActivity from "../../../stores/PresenceStore.tsx";
+import closure_8 from "../../../stores/GuildAvailabilityStore.tsx";
+import closure_9 from "../../../stores/GuildStore.tsx";
+import closure_10 from "../../../stores/PresenceStore.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
 export const useMessageAuthorActivities = function useMessageAuthorActivities(arg0) {
   const _require = arg0;
   const items = [arg0];
   const memo = React.useMemo(() => {
     const obj = {};
-    const item = obj.forEach((item, index) => {
+    const item = obj.forEach((author) => {
       if (tmp) {
-        obj[item.author.id] = null;
+        obj[author.author.id] = null;
       }
-      tmp = null != item.author && null != item.activity;
     });
     return obj;
   }, items);
   const items1 = [closure_10];
   const items2 = [memo];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items1, () => memo(dependencyMap[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
+  return _initialize.useStateFromStoresObject(items1, () => memo(closure_1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 };
 export const useFetchMessageApplications = function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const memo = React.useMemo(() => {
     const set = new Set();
-    const item = set.forEach((item, index) => {
+    const item = set.forEach((applicationId) => {
       if (tmp) {
-        set.add(item.applicationId);
+        set.add(applicationId.applicationId);
       }
-      tmp = null != item.applicationId && null == item.application;
     });
     return Array.from(set);
   }, items);
@@ -46,21 +44,20 @@ export const useFetchMessageApplications = function useFetchMessageApplications(
   const items1 = [memo];
   const effect = React.useEffect(() => {
     if (!obj.areArraysShallowEqual(memo, ref.current)) {
-      const obj2 = memo(ref[11]);
-      const found = memo(ref[9])(memo).filter(callback(ref[12]).isNotNullish);
-      const arr = memo(ref[9])(memo);
+      const obj2 = memo(tmp2[11]);
+      const found = memo(tmp2[9])(tmp3).filter(callback(tmp2[12]).isNotNullish);
+      const arr = memo(tmp2[9])(tmp3);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
-      ref.current = memo;
+      ref.current = tmp3;
       const iter = found.uniq();
     }
-    obj = callback(ref[10]);
   }, items1);
 };
 export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChannelInviteStartTimes(stateFromStores4) {
   const _require = stateFromStores4;
   const items = [closure_9, closure_8];
   const items1 = [stateFromStores4];
-  const stateFromStoresObject = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
     const obj = {};
     const values = stateFromStores4.values();
     const iter = values[Symbol.iterator]();
@@ -68,12 +65,19 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.guild) {
-        let obj2 = stateFromStores4(dependencyMap[13]);
+        let tmp4 = stateFromStores4;
+        let tmp5 = closure_1_2;
+        let obj2 = stateFromStores4(closure_1_2[13]);
+        let tmp6 = nextResult;
         if (obj2.isVoiceChannelInvite(tmp3)) {
+          let tmp7 = nextResult;
           let id = tmp3.guild.id;
+          let tmp9 = closure_1_9;
           let tmp8 = id;
           let tmp10 = null != closure_1_9.getGuild(id);
           if (tmp10) {
+            let tmp11 = closure_1_8;
+            let tmp12 = id;
             tmp10 = !closure_1_8.isUnavailable(tmp8);
           }
           obj[id] = tmp10;
@@ -91,16 +95,24 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.guild) {
-        let obj = stateFromStores4(dependencyMap[13]);
+        let tmp4 = stateFromStores4;
+        let tmp5 = closure_1_2;
+        let obj = stateFromStores4(closure_1_2[13]);
+        let tmp6 = nextResult;
         if (obj.isVoiceChannelInvite(tmp3)) {
+          let tmp7 = nextResult;
           let id = tmp3.guild.id;
           let tmp8 = id;
+          let tmp9 = stateFromStoresObject;
           let result = true !== stateFromStoresObject[id];
           if (!result) {
+            let tmp11 = closure_1_6;
+            let tmp12 = id;
             result = closure_1_6.hasRequestedStartTimes(tmp8);
           }
           if (!result) {
-            let tmp4Result = stateFromStores4(dependencyMap[14]);
+            let tmp4Result = tmp4(tmp5[14]);
+            let tmp13 = id;
             let channelInfo = tmp4Result.fetchChannelInfo(tmp8);
           }
         }
@@ -114,9 +126,10 @@ export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
   screenIndex = screenIndex.screenIndex;
   ({ updateRows: findNodeHandle, scrollToMessageId: closure_6 } = screenIndex);
   const effect = screenIndex.useEffect(() => {
-    const obj = { messages: closure_0, isMessagesReady: closure_1, oldestUnreadMessageId: closure_2, channelId, screenIndex, updateRows: closure_5, scrollToMessageId: closure_6 };
+    let obj = closure_1_0(closure_1_2[15]);
+    obj = { messages: closure_0, isMessagesReady: closure_1, oldestUnreadMessageId: closure_2, channelId, screenIndex, updateRows: closure_5, scrollToMessageId: closure_6 };
     obj.syncMessageDisplay(obj);
-    getVisibleMessages.recordTimings(channelId, closure_0);
+    closure_1_0(closure_1_2[15]).recordTimings(channelId, closure_0);
   }, []);
   const items = [channelId, screenIndex];
   const effect1 = screenIndex.useEffect(() => () => {

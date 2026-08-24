@@ -1,8 +1,8 @@
 // _runtime/07059_useLayoutState.js
-import _slicedToArray from "metro/07041__slicedToArray.js";
+import closure_2 from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
 
-const require = fn;
+const require = arg1;
 ({ useState: c3, useCallback: c4 } = noop);
 
 export const useLayoutState = function useLayoutState(arg0) {
@@ -22,8 +22,9 @@ export const useLayoutState = function useLayoutState(arg0) {
     });
     if (!arg1) {
       if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
+        obj.layout();
       }
+      obj = recyclerViewContext;
     }
   }, items1);
   return items;

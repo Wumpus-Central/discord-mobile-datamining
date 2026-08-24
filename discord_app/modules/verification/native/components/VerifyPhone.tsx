@@ -1,11 +1,11 @@
 // discord_app/modules/verification/native/components/VerifyPhone.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/VerifyPhone.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/verification/native/components/VerifyPhone.tsx");
 
 export default function VerifyPhone(phone) {
   phone = phone.phone;
@@ -16,14 +16,16 @@ export default function VerifyPhone(phone) {
   }
   ({ error, onCodeEnteredIntercept } = phone);
   const onVerified = phone.onVerified;
-  let callback2;
   let callback;
+  let callback2;
+  callback = undefined;
   ({ backgroundStyle, disableKeyboardAvoidingView } = phone);
   const tmp = callback2(callback.useState(null), 2);
   callback = tmp[1];
   const tmp2 = callback2(callback.useState(false), 2);
   callback2 = tmp2[1];
-  callback((arg0) => {
+  _require = undefined;
+  _require = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -77,6 +79,7 @@ export default function VerifyPhone(phone) {
               }
               closure_1_3(message);
               c6 = 3;
+              const tmp16 = closure_1_3;
             } else if (2 === tmp7) {
               if (arg0 === 1) {
                 c6 = 3;
@@ -135,6 +138,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items);
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -171,7 +175,7 @@ export default function VerifyPhone(phone) {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(closure_0);
+              obj1[0] = closure_1_5(closure_0);
               return obj1;
             }
           } else if (arg0 === 1) {

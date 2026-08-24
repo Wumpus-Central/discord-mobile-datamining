@@ -1,9 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/IconActionButton.tsx
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../../design/void/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
 import getFontScale from "../../../screen/native/useFontScale.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import DEFAULT_BADGE_SIZE from "Badge.tsx";
@@ -12,7 +10,7 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class ButtonBadge {
   constructor(arg0) {
     str = global.badgePosition;
@@ -51,9 +49,9 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[6] = { marginLeft: 4, marginTop: num };
   obj[7] = { position: "absolute", left: -2, top: -1 };
   obj[8] = { position: "absolute", right: -2, top: -1 };
-  obj = { color: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  obj = { color: tmp4(712).colors.BACKGROUND_BASE_LOW };
   obj[9] = obj;
-  obj3 = obj132;
+  obj3 = set;
   obj[10] = { position: "relative", marginLeft: ThemesDefault.space.PX_8 };
   return obj;
 });
@@ -61,6 +59,7 @@ let closure_7 = importAllResult.memo((color) => {
   ({ IconComponent, source } = color);
   let ICON_SUBTLE = color.color;
   const isRefreshEnabled = color.isRefreshEnabled;
+  dependencyMap = undefined;
   const tmp = callback2(isRefreshEnabled);
   dependencyMap = tmp;
   const items = [tmp, ICON_SUBTLE, source];
@@ -70,13 +69,14 @@ let closure_7 = importAllResult.memo((color) => {
     }
     let obj = { size: "sm", color: null };
     obj[1] = ICON_SUBTLE;
-    let tmp2Result = callback(IconComponent, obj);
+    let tmp2Result = closure_4(IconComponent, obj);
+    const tmp4 = closure_4;
   } else {
     tmp2Result = tmp2();
   }
   return tmp2Result;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/IconActionButton.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/IconActionButton.tsx");
 
 export default function IconActionButton(variant) {
   let str = variant.variant;
@@ -119,7 +119,7 @@ export default function IconActionButton(variant) {
     obj = { variant: "text-sm/bold", style: null, children: null };
     obj[1] = tmp3.actionText;
     obj[2] = buttonText;
-    tmp11Result = callback(Text.Text, obj);
+    tmp11Result = tmp11(tmp4(4734).Text, obj);
   }
   items1[1] = tmp11Result;
   tmp11Result = null;
@@ -127,17 +127,17 @@ export default function IconActionButton(variant) {
     obj = { style: null, value: null };
     obj[0] = tmp3.countStyle;
     obj[1] = num;
-    tmp11Result = callback(Button.Badge, obj);
+    tmp11Result = tmp11(tmp4(1297).Badge, obj);
   }
   items1[2] = tmp11Result;
   if (badge) {
     obj1 = { badgePosition: null };
     obj1[0] = badgePosition;
-    badge = callback(ButtonBadge, obj1);
+    badge = tmp11(ButtonBadge, obj1);
   }
   items1[3] = badge;
   obj[7] = items1;
-  return callback2(PressableBase.PressableOpacity, obj);
+  return closure_5(PressableBase.PressableOpacity, obj);
 };
 export const ICON_ACTION_BUTTON_SIZE = 32;
 export { ButtonBadge };

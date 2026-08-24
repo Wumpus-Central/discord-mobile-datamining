@@ -1,5 +1,5 @@
 // discord_app/lib/ModalRegistry.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set2 from "../../_runtime/00002_set.js";
 
 class ModalRegistry {
   constructor(arg0) {
@@ -10,6 +10,8 @@ class ModalRegistry {
       const iter = modals[Symbol.iterator]();
       while (iter !== undefined) {
         let stores = iter.next().stores;
+        let tmp = stores;
+        let tmp2 = stores;
         for (const item10016 of stores) {
           let addResult = set.add(item10016);
           continue;
@@ -27,7 +29,7 @@ prototype["getStores"] = function getStores() {
 };
 prototype["getOpenModal"] = function getOpenModal() {
   const modals = this.modals;
-  const findIndexResult = modals.findIndex((item, index) => item.isOpen());
+  const findIndexResult = modals.findIndex((isOpen) => isOpen.isOpen());
   if (-1 === findIndexResult) {
     return null;
   } else {
@@ -50,6 +52,6 @@ prototype["getOpenModal"] = function getOpenModal() {
     return obj;
   }
 };
-const result = obj132.fileFinishedImporting("lib/ModalRegistry.tsx");
+const result = set2.fileFinishedImporting("lib/ModalRegistry.tsx");
 
 export default ModalRegistry;

@@ -1,34 +1,36 @@
 // discord_app/modules/age_assurance/native/GoogleWalletVerificationScreen.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import { ActivityIndicator } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { NOT_AVAILABLE: "not_available", FAILED: "credential_error" };
-let result = require("obj132").fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
 
 export default function GoogleWalletVerificationScreen(modalSessionId) {
   modalSessionId = modalSessionId.modalSessionId;
+  let navigation;
   dependencyMap = undefined;
+  let callback;
   let callback1;
   let React;
   let obj = modalSessionId(1500);
-  let navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   [tmp5, c2] = callback1(React.useState({ type: "loading" }), 2);
   obj1 = modalSessionId(4992);
   const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
-  const callback = React.useCallback(() => {
+  callback = React.useCallback(() => {
     navigation.goBack();
   }, items);
   const items1 = [callback];
   callback1 = React.useCallback(callback(function*() {
     closure_1 = tmp3;
     let v0 = 1;
-    yield modalSessionId(closure_1_2[7]).requestGoogleWalletVerification();
+    yield closure_1_0(closure_1_2[7]).requestGoogleWalletVerification();
     if (1 === tmp7) {
       v0 = 0;
       let code;
@@ -36,9 +38,9 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
         code = lib.code;
       }
       if ("CANCELLED" === code) {
-        let obj11 = navigation(closure_1_2[8]);
+        let obj11 = closure_1_1(closure_1_2[8]);
         const obj2 = { name: null, tags: null };
-        obj2[0] = modalSessionId(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+        obj2[0] = closure_1_0(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
         obj2[1] = ["reason:user_cancelled"];
         obj11.increment(obj2);
         v0();
@@ -55,14 +57,14 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
           }
         }
         if ("unsupported_issuing_country" === reason) {
-          let obj7 = navigation(closure_1_2[8]);
+          let obj7 = closure_1_1(closure_1_2[8]);
           let obj4 = { name: null, tags: null };
-          obj4[0] = modalSessionId(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+          obj4[0] = closure_1_0(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
           obj4[1] = ["reason:unsupported_issuing_country"];
           obj7.increment(obj4);
           const obj5 = { type: "error", message: null };
-          const intl = modalSessionId(closure_1_2[10]).intl;
-          obj5[1] = intl.string(navigation(closure_1_2[11]).Pf5xUq);
+          const intl = closure_1_0(closure_1_2[10]).intl;
+          obj5[1] = intl.string(closure_1_1(closure_1_2[11]).Pf5xUq);
           lib(obj5);
           c5 = 3;
           const obj6 = { value: null, done: true };
@@ -71,20 +73,20 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
         } else {
           v0 = (function getFailureReason(closure_2) {
             let status;
-            if (tmp45 != null) {
-              status = tmp45.status;
+            if (closure_2 != null) {
+              status = closure_2.status;
             }
             let str = "rate_limited";
             if (429 !== status) {
               let code;
-              if (tmp45 != null) {
-                code = tmp45.code;
+              if (closure_2 != null) {
+                code = closure_2.code;
               }
               let str3 = "unknown";
               if (null != code) {
                 str3 = "unknown";
-                if (tmp45.code in closure_9) {
-                  str3 = tmp3[tmp45.code];
+                if (closure_2.code in closure_9) {
+                  str3 = tmp3[closure_2.code];
                 }
               }
               str = str3;
@@ -92,32 +94,32 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
             return str;
           })(lib);
           obj7 = { name: null, tags: null };
-          obj7[0] = modalSessionId(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+          obj7[0] = closure_1_0(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
           const _HermesInternal = HermesInternal;
           const items = ["reason:" + v0];
           obj7[1] = items;
-          navigation(closure_1_2[8]).increment(obj7);
+          closure_1_1(closure_1_2[8]).increment(obj7);
           const obj8 = { type: "error", message: null };
-          const intl2 = modalSessionId(closure_1_2[10]).intl;
-          obj8[1] = intl2.string(navigation(closure_1_2[11])["+pwfOA"]);
+          const intl2 = closure_1_0(closure_1_2[10]).intl;
+          obj8[1] = intl2.string(closure_1_1(closure_1_2[11])["+pwfOA"]);
           lib(obj8);
           c5 = 3;
-          const obj19 = navigation(closure_1_2[8]);
+          const obj19 = closure_1_1(closure_1_2[8]);
         }
       }
     } else if (2 === tmp7) {
       if (arg0 === 1) {
         c5 = 3;
-        throw request_json;
+        throw arg1;
       } else if (arg0 === 2) {
         v0 = 0;
         c5 = 3;
         const obj9 = { value: null, done: true };
-        obj9[0] = request_json;
+        obj9[0] = arg1;
         return obj9;
       } else {
-        request_json = request_json.request_json;
-        obj4 = modalSessionId(closure_1_2[7]);
+        const request_json = arg1.request_json;
+        obj4 = closure_1_0(closure_1_2[7]);
         c4 = 3;
         c5 = 1;
         const obj10 = { value: null, done: false };
@@ -127,16 +129,16 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     } else if (3 === tmp7) {
       if (arg0 === 1) {
         c5 = 3;
-        throw request_json;
+        throw arg1;
       } else if (arg0 === 2) {
         v0 = 0;
         c5 = 3;
         obj11 = { value: null, done: true };
-        obj11[0] = request_json;
+        obj11[0] = arg1;
         return obj11;
       } else {
-        closure_1 = request_json;
-        obj1 = modalSessionId(closure_1_2[7]);
+        closure_1 = arg1;
+        obj1 = closure_1_0(closure_1_2[7]);
         c4 = 4;
         c5 = 1;
         const obj12 = { value: null, done: false };
@@ -145,12 +147,12 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
       }
     } else if (arg0 === 1) {
       c5 = 3;
-      throw request_json;
+      throw arg1;
     } else if (arg0 !== 2) {
       v0 = 0;
     }
     v0 = 0;
-    return request_json;
+    return arg1;
   }), items1);
   React = React.useRef(false);
   const items2 = [navigation, callback1];
@@ -177,6 +179,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
     };
   }, items2);
   if ("loading" === tmp5.type) {
+    obj = { children: null };
     obj = { children: null };
     obj1 = { align: "center", justify: "center", spacing: 16, children: null };
     const items3 = [callback(ActivityIndicator, { size: "large" }), ];

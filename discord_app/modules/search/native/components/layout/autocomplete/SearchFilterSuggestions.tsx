@@ -1,13 +1,13 @@
 // discord_app/modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SearchFilterAddLocations } from "../../../tracking/TrackingConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-let require = fn;
+let require = arg1;
 function SearchFilterPrefixRow(text) {
   text = text.text;
   require = text;
@@ -20,7 +20,7 @@ function SearchFilterPrefixRow(text) {
     const searchTokenIcon = text(onPress[7]).getSearchTokenIcon(searchTokenType);
     let tmp2 = null;
     if (null != searchTokenIcon) {
-      tmp2 = <searchTokenIcon size="sm" />;
+      tmp2 = closure_1_7(searchTokenIcon, { size: "sm" });
     }
     return tmp2;
   }, items);
@@ -33,7 +33,7 @@ function SearchFilterPrefixRow(text) {
   return jsx(require(onPress[8]).TableRow, { icon: memo, onPress: callback, label: jsx(require(onPress[9]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: text }), subLabel: memo1 });
 }
 function getSuggestionsKey(arr) {
-  const mapped = arr.map((item, index) => item.text);
+  const mapped = arr.map((text) => text.text);
   return mapped.join(" ");
 }
 function AnimatedEnterExitContainer(children) {
@@ -43,28 +43,31 @@ function AnimatedEnterExitContainer(children) {
   let obj = state(sharedValue[10]);
   sharedValue = obj.useSharedValue(0);
   let fn = function l() {
+    let obj = { opacity: null, transform: null };
     const value = sharedValue.get();
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_0 === state(sharedValue[13]).TransitionStates.YEETED;
+        tmp = closure_0 === closure_1_0(closure_1_2[13]).TransitionStates.YEETED;
       }
       if (tmp) {
-        state(sharedValue[10]).runOnJS(closure_1)();
-        const obj = state(sharedValue[10]);
+        closure_1_0(closure_1_2[10]).runOnJS(closure_1)();
+        const obj = closure_1_0(closure_1_2[10]);
       }
     };
-    let obj = { state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
+    obj = { state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
     fn.__closure = obj;
     fn.__workletHash = 10696166249954;
     fn.__initData = closure_1_12;
     obj[0] = state(sharedValue[11]).withSpring(value, state(sharedValue[12]).springStandard, "respect-motion-settings", fn);
     const obj2 = state(sharedValue[11]);
+    let tmp = state;
+    const tmp2 = sharedValue;
     let num = -15;
     if (1 === sharedValue.get()) {
       num = 0;
     }
-    obj = { translateY: state(sharedValue[11]).withSpring(num, state(sharedValue[12]).springStandard) };
+    obj = { translateY: state(sharedValue[11]).withSpring(num, tmp(tmp2[12]).springStandard) };
     const items = [obj];
     obj[1] = items;
     return obj;
@@ -85,7 +88,8 @@ function AnimatedEnterExitContainer(children) {
   return jsx(cleanUp(sharedValue[10]).View, { style, children: children.children });
 }
 let c4 = importAllResult;
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
+let obj = { card: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
@@ -99,42 +103,46 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
   const onLayoutMeasure = searchContext.onLayoutMeasure;
   const containerStyle = searchContext.containerStyle;
   const dismissed = searchContext.dismissed;
+  importAllResult = undefined;
+  let validFilterTokens;
+  let first;
+  jsx = undefined;
   let memo;
   closure_9 = undefined;
   let callback;
   const tmp = memo();
   importAllResult = tmp;
   let obj = searchContext(containerStyle[14]);
-  const validFilterTokens = obj.useValidFilterTokens(searchContext);
+  validFilterTokens = obj.useValidFilterTokens(searchContext);
   const tmp3 = dismissed(importAllResult.useState([]), 2);
-  const first = tmp3[0];
+  first = tmp3[0];
   jsx = tmp5;
   let items = [validFilterTokens, searchContext, tmp3[1]];
   const effect = importAllResult.useEffect(() => onLayoutMeasure(containerStyle[15]).subscribeSearchQueryState(searchContext, (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), isAutocompleteVisible: getTextInputValue.isAutocompleteVisible() }), (arg0) => {
     ({ textInputValue, isAutocompleteVisible } = arg0);
     if ("" !== textInputValue.trim()) {
       if (!isAutocompleteVisible) {
-        const searchFilterSuggestions = searchContext(containerStyle[7]).getSearchFilterSuggestions(textInputValue);
+        const searchFilterSuggestions = closure_1_0(closure_1_2[7]).getSearchFilterSuggestions(textInputValue);
         if (0 !== searchFilterSuggestions.length) {
           closure_1 = [];
-          const item = searchFilterSuggestions.forEach((item, index) => {
-            const token = item.token;
+          const item = searchFilterSuggestions.forEach((token) => {
+            token = token.token;
             if (closure_1_5.has(token)) {
               const obj = { text: null, searchTokenType: null, start: null, end: null, onPress: null };
-              obj[0] = item.text;
+              obj[0] = token.text;
               obj[1] = token;
-              obj[2] = 0 === index;
-              obj[3] = index === searchFilterSuggestions.length - 1;
-              obj[4] = searchContext(containerStyle[7]).getSearchTokenPressHandler(searchFilterSuggestions, token, first.SEARCH_INPUT_DROPDOWN);
+              obj[2] = 0 === arg1;
+              obj[3] = arg1 === searchFilterSuggestions.length - 1;
+              obj[4] = closure_2_0(closure_2_2[7]).getSearchTokenPressHandler(searchFilterSuggestions, token, closure_2_6.SEARCH_INPUT_DROPDOWN);
               arr = arr.push(obj);
-              const obj2 = searchContext(containerStyle[7]);
+              const obj2 = closure_2_0(closure_2_2[7]);
             }
           });
           callback((arr) => {
-            const mapped = arr.map((item, index) => item.text);
+            const mapped = arr.map((text) => text.text);
             let tmp2 = arr;
             const joined = mapped.join(" ");
-            const mapped1 = arr.map((item, index) => item.text);
+            const mapped1 = arr.map((text) => text.text);
             if (joined === mapped1.join(" ")) {
               tmp2 = arr;
             }
@@ -143,7 +151,7 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
         } else {
           callback(closure_1_14);
         }
-        let obj = searchContext(containerStyle[7]);
+        let obj = closure_1_0(closure_1_2[7]);
       }
     }
     callback(closure_1_14);
@@ -201,22 +209,23 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
     return items1;
   }, items3);
   const callback1 = importAllResult.useCallback((arg0, arr, state, cleanUp) => {
-    const obj = {
+    let obj = { state, cleanUp, children: null };
+    obj = {
       ref: closure_9,
       style: memo,
       collapsable: false,
       onLayout: callback,
-      children: arr.map((item, index) => {
-        const merged = Object.assign(item);
-        return callback(closure_9, {}, item.text);
+      children: arr.map((text) => {
+        const merged = Object.assign(text);
+        return callback(closure_9, {}, text.text);
       })
     };
     obj[2] = callback(validFilterTokens, obj);
-    return callback(AnimatedEnterExitContainer, obj, arg0);
+    return callback(closure_1_13, obj, arg0);
   }, items4);
   obj = { items: memo1, renderItem: callback1, getItemKey: callback };
   return jsx(searchContext(containerStyle[13]).TransitionGroup, { items: memo1, renderItem: callback1, getItemKey: callback });
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
 
 export default memoResult;

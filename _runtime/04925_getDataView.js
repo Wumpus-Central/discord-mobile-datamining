@@ -10,6 +10,7 @@ arg5.default = {
     let tmp = dataView;
     if (tmp) {
       tmp = getDataView.getStringFromDataView(dataView, c2, length.length) === length;
+      const obj = getDataView;
     }
     return tmp;
   },

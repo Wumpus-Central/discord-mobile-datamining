@@ -1,10 +1,11 @@
 // discord_app/modules/activities/ActivitiesInTextUtils.tsx
 import set from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function isActivityInTextSupportedForChannel(channel) {
   if (null == channel) {
     return false;
@@ -25,7 +26,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 
 export { isActivityInTextSupportedForChannel };
 export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel) {
@@ -50,18 +51,18 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnabled(id) {
   const _require = id;
   const items = [closure_2, closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let flag = false;
     if (null != channel) {
       flag = false;
       if (undefined !== channel) {
         flag = false;
-        if (isActivityInTextSupportedForChannel(channel)) {
+        if (closure_1_5(channel)) {
           flag = true;
           if (null != channel.guild_id) {
             flag = true;
-            if (!closure_1_3.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
+            if (!closure_1_3.can(closure_1_4.USE_EMBEDDED_ACTIVITIES, channel)) {
               flag = false;
             }
           }
@@ -85,7 +86,7 @@ export const getIsAppLauncherEnabled = function getIsAppLauncherEnabled(channel)
 export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
   const _require = id;
   const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const channel = closure_1_2.getChannel(closure_0);
     let tmp2 = null != channel;
     if (tmp2) {
@@ -95,7 +96,7 @@ export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
       }
       let tmp4 = null != guild_id;
       if (!tmp4) {
-        tmp4 = isActivityInTextSupportedForChannel(channel);
+        tmp4 = closure_1_5(channel);
       }
       tmp2 = tmp4;
     }

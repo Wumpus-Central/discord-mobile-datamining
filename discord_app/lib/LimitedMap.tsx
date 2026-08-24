@@ -1,5 +1,5 @@
 // discord_app/lib/LimitedMap.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
 class LimitedMap extends Map {
   constructor(arg0) {
@@ -18,6 +18,6 @@ class LimitedMap extends Map {
   }
 }
 let closure_0 = LimitedMap.prototype;
-const result = obj132.fileFinishedImporting("lib/LimitedMap.tsx");
+const result = set.fileFinishedImporting("lib/LimitedMap.tsx");
 
 export default LimitedMap;

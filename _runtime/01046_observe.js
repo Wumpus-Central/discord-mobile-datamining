@@ -12,7 +12,7 @@ arg5.observe = (arg0, arg1) => {
       const performanceObserver = new globalThis.PerformanceObserver((arg0) => {
         closure_0 = arg0;
         const resolved = Promise.resolve();
-        resolved.then((result) => {
+        resolved.then(() => {
           entries(entries.getEntries());
         });
       });

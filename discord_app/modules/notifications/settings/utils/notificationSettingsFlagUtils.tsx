@@ -1,10 +1,10 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import hasFlagAll from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MAX_FAVORITES from "../../../user_settings/UserSettingsConstants.tsx";
 
 ({ GuildNotificationSettingsFlags: obj1, ChannelNotificationSettingsFlags: c3 } = MAX_FAVORITES);
-const result = obj132.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx");
+const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx");
 
 export const resetGuildUnreadFlags = function resetGuildUnreadFlags(setting) {
   return hasFlagAll.removeFlags(setting, constants.UNREADS_ALL_MESSAGES, constants.UNREADS_ONLY_MENTIONS);

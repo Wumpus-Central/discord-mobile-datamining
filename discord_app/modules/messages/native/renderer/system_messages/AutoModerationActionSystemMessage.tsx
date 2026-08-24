@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import ME from "../../../../../Constants.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
@@ -21,28 +21,31 @@ import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/sh
 import DATE_CONFIG from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import registerAssetDefault2 from "../../../../../../_runtime/08238_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../../../../stores/GuildMemberStore.tsx";
-import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../../../stores/UserStore.tsx";
 import apply from "../../../../../../_runtime/00012_apply.js";
 
 ({ processColor: c3, Image: c4 } = get_ActivityIndicator);
 const Permissions = ME.Permissions;
 let closure_11 = apply.memoize((arg0) => {
+  let obj = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
-  const obj = { defaultUsernameColor: null };
+  obj = { defaultUsernameColor: null };
   const isThemeDarkResult = obj.isThemeDark(arg0);
+  const tmp = require;
   const tmp4 = obj.isThemeDark(arg0) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_630;
   obj[0] = processColorOrThrow.processColorOrThrow(tmp4);
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx");
+let result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AutoModerationActionSystemMessage.tsx");
 
 export const createAutoModerationActionSystemMessage = function createAutoModerationActionSystemMessage(message) {
   ({ message, theme, roleStyle } = message);
   const defaultUsernameColor = callback2(theme).defaultUsernameColor;
+  const tmp = require;
   let obj = getDecisionOutcomeFromMessage;
   if (obj.isAutomodMessageRecord(message)) {
     let tmpResult = getDecisionOutcomeFromMessage;
@@ -229,12 +232,13 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       const tmpResult3 = getDecisionOutcomeFromMessage;
       const internal5 = ThemesDefault.internal;
       obj5[5] = processColorOrThrow.processColorOrThrow(internal5.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
+      let tmpResult18 = closure_4;
       let getRaidAlertResolveCTAText = closure_4.resolveAssetSource;
       let internal6 = getAvatarURL;
       let intl9 = internal6.makeSource;
       obj5[6] = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8237 : 8076))).uri;
       const tmpResult16 = processColorOrThrow;
-      internal6 = ThemesDefault.internal;
+      internal6 = tmp45(712).internal;
       obj5[7] = processColorOrThrow.processColorOrThrow(internal6.resolveSemanticColor(theme, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL));
       intl9 = getSystemLocale.intl;
       const obj6 = { dateTime: null };
@@ -242,7 +246,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj5[8] = intl9.formatToPlainString(getSystemLocale.t["4QIIZl"], obj6);
       const intl10 = getSystemLocale.intl;
       intl10.string(getSystemLocale.t.ufawcw);
-      const tmpResult18 = getDecisionOutcomeFromMessage;
+      tmpResult18 = getDecisionOutcomeFromMessage;
       getRaidAlertResolveCTAText = tmpResult18.getRaidAlertResolveCTAText;
       resolvedReason = resolvedReason.resolvedReason;
       const raidAlertResolveCTAText = getRaidAlertResolveCTAText(resolvedReason);
@@ -269,6 +273,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj8.authorId = author.id;
       const intl11 = getSystemLocale.intl;
       obj8.username = intl11.string(getSystemLocale.t.hG1StD);
+      const tmp57 = importDefault;
       const tmpResult20 = ensureAvatarSource;
       const tmpResult21 = getAvatarURL;
       obj8.avatarURL = tmpResult20.ensureAvatarSource(tmpResult21.makeSource(ensureAvatarSource.getAutomodAvatarURL())).uri;
@@ -316,22 +321,25 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       obj11[5] = messageAuthor.nick;
       let tmp66 = defaultUsernameColor;
       if ("username" === roleStyle) {
-        let tmp60Result = callback(colorString);
+        let tmp60Result = tmp60(colorString);
         if (tmp60Result == null) {
           tmp60Result = defaultUsernameColor;
         }
         tmp66 = tmp60Result;
+        const tmp67 = colorString;
       }
       obj11[6] = tmp66;
       obj11[7] = callback(colorString);
       obj11[8] = "dot" === roleStyle && null != colorString;
-      tmp60Result = callback(colorString);
+      tmp60Result = tmp60(colorString);
       if (tmp60Result == null) {
         tmp60Result = defaultUsernameColor;
       }
       obj11[9] = tmp60Result;
       obj11[10] = null;
       obj11[11] = content;
+      const tmp61 = colorString;
+      const tmp69 = colorString;
       const tmpResult22 = ensureAvatarSource;
       obj11[12] = isCommunicationDisabled.isMemberCommunicationDisabled(member1);
       const tmpResult24 = isCommunicationDisabled;
@@ -352,7 +360,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj9[6] = formatToPlainStringResult1;
       const tmpResult25 = resetCache;
-      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(importDefault(result1 ? 8239 : 8240))).uri;
+      obj9[7] = closure_4.resolveAssetSource(getAvatarURL.makeSource(tmp57(result1 ? 8239 : 8240))).uri;
       const intl16 = getSystemLocale.intl;
       const string2 = intl16.string;
       const t3 = getSystemLocale.t;

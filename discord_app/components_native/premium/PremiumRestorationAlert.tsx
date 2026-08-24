@@ -14,6 +14,6 @@ PremiumRestorationAlert.prototype["render"] = function render() {
 };
 const items = [importDefaultResult];
 const tmp4 = importDefaultResult1.connectStores(items, () => ({ isBusy: importDefaultResult.isBusy() }))(PremiumRestorationAlert);
-const result = require("obj132").fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
 
 export default tmp4;

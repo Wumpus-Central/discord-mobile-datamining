@@ -1,8 +1,8 @@
 // discord_app/lib/StateManager.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
 
-const result = obj132.fileFinishedImporting("lib/StateManager.tsx");
+const result = set.fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {
   constructor() {
     flag = global;
@@ -47,13 +47,18 @@ prototype["update"] = function update() {
   const nextState = this.getNextState(obj);
   if (flag) {
     self.dirty = !isUndefinedOrNullDefault(nextState, self.getInitialState());
+    const tmp14 = isUndefinedOrNullDefault;
   } else {
     const _Object = Object;
     const keys = Object.keys(nextState);
     for (const item10021 of keys) {
+      let tmp8 = item10021;
       let dirty = self.dirty;
       if (!dirty) {
-        dirty = !isUndefinedOrNullDefault(self.state[item10021], nextState[item10021]);
+        let tmp9 = importDefault;
+        let tmp10 = dependencyMap;
+        let tmp11 = item10021;
+        dirty = !isUndefinedOrNullDefault(self.state[tmp8], nextState[tmp8]);
       }
       self.dirty = dirty;
       continue;

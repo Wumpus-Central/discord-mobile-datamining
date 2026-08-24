@@ -2,14 +2,14 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import NativePaymentContextProvider from "../../../payments/native/NativePaymentContext.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function TestView() {
   const tmp = callback2();
   let obj = importAllResult;
@@ -27,6 +27,7 @@ function TestView() {
   first1 = tmp2Result[0];
   tmp2Result = tmp2(obj.useState(undefined), 2);
   first2 = tmp2Result[0];
+  obj = { spacing: 16, style: tmp.container, children: null };
   const items1 = [callback(first(first1[9]).Text, { variant: "text-lg/bold", children: "Android Payment Flow Test" }), ];
   obj = { style: tmp.title, variant: "text-md/bold", children: "Gift Purchase SKU" };
   const items2 = [callback(first(first1[9]).Text, obj), , , , ];
@@ -69,15 +70,16 @@ function TestView() {
     }
   });
   obj4[0] = items2;
-  items1[1] = callback(first(first1[10]).Card, obj4);
+  items1[1] = closure_8(first(first1[10]).Card, obj4);
   obj[2] = items1;
-  return callback(first(first1[8]).Stack, obj);
+  return closure_8(first(first1[8]).Stack, obj);
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { wrap: null, container: null, textInput: null, title: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-const createCacheKey = { padding: ThemesDefault.space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
 obj[2] = { marginBottom: 16 };
 obj[3] = { marginBottom: 8 };
@@ -85,11 +87,11 @@ let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function PaymentFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   let obj = { skuIDs: [], activeSubscription: null, children: null };
-  { style: callback2().wrap, contentContainerStyle: obj, children: callback(TestView, {}) };
+  obj = { style: callback2().wrap, contentContainerStyle: obj, children: callback(TestView, {}) };
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
   obj[2] = callback(ScrollView, obj);
   return callback(NativePaymentContextProvider.NativePaymentContextProvider, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
 
 export default memoResult;

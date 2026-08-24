@@ -1,14 +1,14 @@
 // discord_app/modules/guild_automod/native/ModerateUserActionSheet.tsx
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PermissionStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
 import { Permissions } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { padding: 16, gap: 16 }, memberRoles: { justifyContent: "flex-start" } });
@@ -36,29 +36,29 @@ const memoResult = importAllResult.memo((user) => {
     let canKickMemberResult = null != guild;
     if (canKickMemberResult) {
       let obj = user(stateFromStores[9]);
-      canKickMemberResult = obj.canKickMember(user, guild);
+      canKickMemberResult = obj.canKickMember(user, tmp);
     }
     obj = { canKickUser: canKickMemberResult, canBanUser: null, canChangeNick: null, canManageRoles: null, canModerateMembers: null };
-    let canBanMemberResult = null != guild;
+    let canBanMemberResult = null != tmp;
     if (canBanMemberResult) {
-      canBanMemberResult = user(stateFromStores[9]).canBanMember(user, guild);
+      canBanMemberResult = user(stateFromStores[9]).canBanMember(user, tmp);
       const obj3 = user(stateFromStores[9]);
     }
     obj[1] = canBanMemberResult;
-    let canManageUserResult = null != guild;
+    let canManageUserResult = null != tmp;
     if (canManageUserResult) {
-      canManageUserResult = closure_1_6.canManageUser(Permissions.MANAGE_NICKNAMES, user, guild);
+      canManageUserResult = closure_1_6.canManageUser(closure_1_8.MANAGE_NICKNAMES, user, tmp);
     }
     obj[2] = canManageUserResult;
-    let canResult = null != guild;
+    let canResult = null != tmp;
     if (canResult) {
-      canResult = closure_1_6.can(Permissions.MANAGE_ROLES, guild);
+      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
     }
     obj[3] = canResult;
-    let result = null != guild;
+    let result = null != tmp;
     if (result) {
       const items = [closure_1_7, closure_1_5, closure_1_6];
-      result = user(stateFromStores[10]).canToggleCommunicationDisableOnUser(guild.id, user.id, items);
+      result = user(stateFromStores[10]).canToggleCommunicationDisableOnUser(tmp.id, user.id, items);
       const obj4 = user(stateFromStores[10]);
     }
     obj[4] = result;
@@ -96,14 +96,14 @@ const memoResult = importAllResult.memo((user) => {
         obj[1] = callback(tmp2(tmp3[13]).ActionSheetRow.Icon, obj);
         obj[2] = function onPress() {
           hideActionSheet();
-          guild(stateFromStores[16]);
-          const obj = {
+          let obj = guild(stateFromStores[16]);
+          obj = {
             userId: user.id,
             guildId: guild.id,
             onClose() {
-              let arr = guild(stateFromStores[16]);
+              let arr = closure_1_1(closure_1_2[16]);
               arr = arr.pop();
-              guild(stateFromStores[19])({ guild: closure_1, user: closure_0 });
+              closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
             },
             onRemove() {
               let arr = callback(table[16]);
@@ -147,7 +147,7 @@ const memoResult = importAllResult.memo((user) => {
               const result1 = obj.openDisableCommunication(obj);
             }
           };
-          t = items4.push(callback(tmp2(tmp3[13]).ActionSheetRow, obj1));
+          t = items4.push(tmp15(tmp2(tmp3[13]).ActionSheetRow, obj1));
         }
       }
       if (tmp17) {
@@ -162,7 +162,7 @@ const memoResult = importAllResult.memo((user) => {
             guildId: guild.id,
             userId: user.id,
             cancelButtonCallback() {
-              return guild(stateFromStores[19])({ guild: closure_1, user: closure_0 });
+              return closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
             }
           });
         };
@@ -180,7 +180,7 @@ const memoResult = importAllResult.memo((user) => {
             guildId: guild.id,
             userId: user.id,
             cancelButtonCallback() {
-              return guild(stateFromStores[19])({ guild: closure_1, user: closure_0 });
+              return closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
             }
           });
         };
@@ -201,7 +201,7 @@ const memoResult = importAllResult.memo((user) => {
       obj10[2] = tmp5;
       const items6 = [callback(guild(tmp3[29]), obj10), ];
       const obj11 = { hasIcons: true, children: null };
-      obj11[1] = items4.map((item, index) => callback(hideActionSheet.Fragment, { children: item }, "action_" + index));
+      obj11[1] = items4.map((children) => callback(hideActionSheet.Fragment, { children }, "action_" + arg1));
       items6[1] = callback(tmp2(tmp3[30]).TableRowGroup, obj11);
       obj7[2] = items6;
       return callback2(tmp2(tmp3[27]).BottomSheet, obj7);
@@ -209,6 +209,6 @@ const memoResult = importAllResult.memo((user) => {
   }
   return null;
 });
-let result = require("obj132").fileFinishedImporting("modules/guild_automod/native/ModerateUserActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_automod/native/ModerateUserActionSheet.tsx");
 
 export default memoResult;

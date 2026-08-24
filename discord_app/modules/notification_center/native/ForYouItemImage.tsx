@@ -3,14 +3,13 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { getGuildAcronym } from "../../../records/GuildRecord.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
 import PROFILE_BACKGROUND from "../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import "createCacheKey";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = PROFILE_BACKGROUND);
 let closure_9 = createCacheKey.createStyles((arg0) => {
@@ -30,7 +29,8 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[2] = obj;
   return obj;
 });
-let obj = { color: ThemesDefault.colors.WHITE };
+let obj = { fallbackImage: null, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
+obj = { color: ThemesDefault.colors.WHITE };
 obj[0] = obj;
 createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = createCacheKey;
@@ -41,17 +41,19 @@ obj[4] = { backgroundColor: FRIEND_BACKGROUND };
 obj[5] = { backgroundColor: MESSAGE_BACKGROUND };
 obj[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_10 = createCacheKey.createStyles(obj);
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 const memoResult = importAllResult.memo((item) => {
   item = item.item;
   const compactMode = item.compactMode;
   let analyticsLocations;
+  let id;
   let stateFromStores;
   const tmp = callback(compactMode);
   let obj = analyticsLocations;
   analyticsLocations = compactMode(analyticsLocations[20])().analyticsLocations;
   const tmp3 = callback2();
   const other_user = item.other_user;
-  let id;
+  id = undefined;
   if (other_user != null) {
     id = other_user.id;
   }
@@ -68,7 +70,7 @@ const memoResult = importAllResult.memo((item) => {
     } else {
       let tmpResult = { onPress: null, children: null };
       tmpResult[0] = function onPress() {
-        compactMode(analyticsLocations[23])({ userId: id.id, localUser: id, messageId: message_id.message_id, sourceAnalyticsLocations: closure_2 });
+        closure_1_1(closure_1_2[23])({ userId: id.id, localUser: id, messageId: message_id.message_id, sourceAnalyticsLocations: closure_2 });
       };
       tmpResult = { source: null, size: null, avatarDecoration: null };
       const obj3 = item(analyticsLocations[24]);
@@ -77,9 +79,9 @@ const memoResult = importAllResult.memo((item) => {
       tmpResult[1] = compactMode ? AvatarSizes.REFRESH_MEDIUM_32 : AvatarSizes.LARGE_48;
       avatarDecoration = avatarDecoration.avatarDecoration;
       tmpResult[2] = avatarDecoration;
-      tmpResult = jsx(item(analyticsLocations[17]).Avatar, { source: null, size: null, avatarDecoration: null });
+      tmpResult = tmp(item(analyticsLocations[17]).Avatar, tmpResult);
       tmpResult[1] = tmpResult;
-      tmpResult = jsx(item(analyticsLocations[22]).PressableOpacity, tmpResult);
+      tmpResult = tmp(item(analyticsLocations[22]).PressableOpacity, tmpResult);
     }
   }, items1);
   if (null != item.icon_name) {
@@ -88,6 +90,8 @@ const memoResult = importAllResult.memo((item) => {
     obj[1] = tmp3.fallbackImage.color;
     jsx(tmp5(obj[17]).Icon, { source: null, color: null });
     const brandBackground2 = tmp3.brandBackground;
+    const tmp26 = jsx;
+    const tmp27 = "icHighlight" === item.icon_name ? obj[13] : obj[14];
   } else {
     if (null != item.icon_url) {
       let brandBackground = null;
@@ -210,6 +214,7 @@ const memoResult = importAllResult.memo((item) => {
               obj11[1] = items2;
               obj11[2] = tmp9;
               let tmp12Result = jsx(tmp5(obj[26]).Text, { variant: null, style: null, children: null });
+              const tmp12 = jsx;
             }
             brandBackground = obj9.backgroundStyle;
             if (brandBackground == null) {
@@ -219,6 +224,7 @@ const memoResult = importAllResult.memo((item) => {
           }
           ({ icon: obj8[0], color: obj8[1] } = obj9);
           tmp12Result = jsx(tmp5(obj[17]).Icon, { source: null, color: null });
+          const obj12 = { source: null, color: null };
         }
       }
     }
@@ -229,6 +235,6 @@ const memoResult = importAllResult.memo((item) => {
     return <stateFromStores style={null}>{null}</stateFromStores>;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouItemImage.tsx");
+let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouItemImage.tsx");
 
 export const ForYouItemImage = memoResult;

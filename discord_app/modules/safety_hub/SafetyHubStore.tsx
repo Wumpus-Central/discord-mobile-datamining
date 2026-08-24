@@ -1,5 +1,5 @@
 // discord_app/modules/safety_hub/SafetyHubStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ContentIdType from "SafetyHubModels.tsx";
@@ -203,10 +203,15 @@ obj = {
     } else {
       const LOADING = AgeCheckStatus.LOADING;
       for (const key10002 in closure_6) {
+        let tmp7 = key10002;
+        let tmp8 = dependencyMap;
         if (!dependencyMap[key10002].is_coppa) {
           continue;
         } else {
+          let tmp = dependencyMap;
           obj = { status: null };
+          let tmp2 = require;
+          let tmp3 = dependencyMap;
           obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
           dependencyMap[key10002].appeal_status = obj;
           continue;
@@ -249,6 +254,7 @@ obj = {
   LOGOUT: function reset() {
     c9 = false;
     closure_6 = {};
+    obj = { state: ContentIdType.AccountStandingState.ALL_GOOD };
     c12 = null;
     DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
     c19 = "";
@@ -256,6 +262,6 @@ obj = {
   }
 };
 const safetyHubStore = new SafetyHubStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("modules/safety_hub/SafetyHubStore.tsx");
+const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubStore.tsx");
 
 export default safetyHubStore;

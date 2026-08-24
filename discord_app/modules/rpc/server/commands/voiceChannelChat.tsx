@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/server/commands/voiceChannelChat.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
@@ -10,8 +10,8 @@ const RPCErrors = ME.RPCErrors;
 let obj = {
   scope: RPC_SCOPE_CONFIG.RPC_LOCAL_SCOPE,
   validation(boolean) {
-    createRpcJoiSchemaObjectDefault(boolean);
-    const obj = { open: boolean.boolean() };
+    let obj = createRpcJoiSchemaObjectDefault(boolean);
+    obj = { open: boolean.boolean() };
     return obj.keys(obj);
   },
   handler(args) {
@@ -29,6 +29,6 @@ let obj = {
     }
   }
 };
-let result = obj132.fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
+let result = set.fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
 
 export default { [ME.RPCCommands.TOGGLE_VOICE_CHANNEL_CHAT]: obj };

@@ -1,26 +1,28 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleUpdateStart from "../../GuildProfileStore.tsx";
+import closure_6 from "../../GuildProfileStore.tsx";
 import { GuildProfileFetchStatus } from "../../GuildProfileStore.tsx";
 import { INVALID_ACCESS_ERROR_CODE } from "../../GuildProfileConstants.tsx";
 import { VerticalGradient } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, scrollView: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[2] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
 
 export default function GuildProfileActionSheet(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
   let analyticsLocations;
+  let token1;
   ({ context, inviteKey } = guildId);
   const tmp = callback3();
   let obj = guildId(analyticsLocations[9]);
@@ -38,7 +40,7 @@ export default function GuildProfileActionSheet(guildId) {
   const tmp4 = fetchGuildProfile(analyticsLocations[8])();
   analyticsLocations = fetchGuildProfile(analyticsLocations[13])(fetchGuildProfile(analyticsLocations[14]).GUILD_PROFILE).analyticsLocations;
   let obj4 = guildId(analyticsLocations[11]);
-  const token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
+  token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
   let obj5 = token1;
   const items1 = [guildId, analyticsLocations];
   const effect = token1.useEffect(() => {
@@ -120,5 +122,4 @@ export default function GuildProfileActionSheet(guildId) {
   tmp19 = callback(closure_4, { style: tmp.loadingContainer, children: callback(closure_5, { animating: true, size: "large" }) });
   tmp18 = null;
   tmp20 = callback;
-  const obj9 = { style: tmp.loadingContainer, children: callback(closure_5, { animating: true, size: "large" }) };
 };

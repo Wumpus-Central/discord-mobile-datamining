@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/useEmbeddedActivityBackground.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let closure_4 = ["embedded_cover", "embedded_background"];
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
 
 export default function useEmbeddedActivityBackground(applicationId) {
   applicationId = applicationId.applicationId;
@@ -41,17 +41,24 @@ export default function useEmbeddedActivityBackground(applicationId) {
     const current = ref.current;
     if (null != current) {
       const assets = applicationId(names[2]).getAssets(tmp);
-      assets.then((result) => {
+      assets.then((arg0) => {
         closure_1_3(false);
-        const entries = Object.entries(result);
+        const entries = Object.entries(arg0);
         const obj = entries[Symbol.iterator]();
         while (obj !== undefined) {
+          let tmp4 = callback;
           let tmp5 = callback(tmp3, 2);
           [r10020, tmp6] = tmp5;
+          let tmp7 = tmp6;
           if (null != tmp6) {
-            if ("" !== tmp6.id) {
-              if (current.includes(tmp6.name)) {
+            let tmp8 = tmp6;
+            if ("" !== tmp7.id) {
+              let tmp9 = current;
+              let tmp10 = tmp6;
+              if (current.includes(tmp7.name)) {
+                let tmp11 = closure_1_2;
                 let tmp12 = closure_1_2(tmp6.id);
+                let tmp13 = obj;
                 obj.return();
               }
             }

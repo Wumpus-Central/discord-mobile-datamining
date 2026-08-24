@@ -1,9 +1,9 @@
 // _runtime/04158__initialize.js
-import "asyncGeneratorStep";
+import _initialize from "00005_asyncGeneratorStep.js";
 import { NitroModules } from "metro/04112__.js";
 
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
-function _initialize() {
+_initialize = function _initialize() {
   const self = this;
   const tmp = _initialize(function*() {
     if (c3 === 2) {
@@ -74,7 +74,7 @@ function _initialize() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-}
+};
 
 export const RiveRuntime = {
   initialize() {

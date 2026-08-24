@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/hooks/useConnectGuardianGate.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../FamilyCenterStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export const useConnectGuardianGate = function useConnectGuardianGate() {
   let obj = initialize;
@@ -30,14 +30,14 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
     ref.current = sum;
     const callback = sum;
     callback(false);
-    const linkCodeForCurrentUser = require(ref[4]).getLinkCodeForCurrentUser();
-    const obj = require(ref[4]);
-    linkCodeForCurrentUser.then((result) => {
+    const linkCodeForCurrentUser = closure_1_0(ref[4]).getLinkCodeForCurrentUser();
+    const obj = closure_1_0(ref[4]);
+    linkCodeForCurrentUser.then(() => {
       if (closure_0 === closure_1_2.current) {
         sum(false);
         closure_1_1(true);
       }
-    }).catch((error) => {
+    }).catch(() => {
       if (closure_0 === closure_1_2.current) {
         const linkCodeExpiresAt = closure_2_5.getLinkCodeExpiresAt();
         if (null != closure_2_5.getLinkCode()) {

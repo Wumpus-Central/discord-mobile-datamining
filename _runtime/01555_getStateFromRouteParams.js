@@ -9,16 +9,16 @@ function getStateFromRouteParams(params) {
               const _Array = Array;
               if (Array.isArray(params.state.routes)) {
                 const routes = params.state.routes;
-                if (routes.every((item, index) => {
-                  let tmp = typeof item === "object";
-                  if (typeof item === "object") {
-                    tmp = null != item;
+                if (routes.every((obj) => {
+                  let tmp = typeof obj === "object";
+                  if (typeof obj === "object") {
+                    tmp = null != obj;
                   }
                   if (tmp) {
-                    tmp = "name" in item;
+                    tmp = "name" in obj;
                   }
                   if (tmp) {
-                    tmp = typeof item.name === "string";
+                    tmp = typeof obj.name === "string";
                   }
                   return tmp;
                 })) {

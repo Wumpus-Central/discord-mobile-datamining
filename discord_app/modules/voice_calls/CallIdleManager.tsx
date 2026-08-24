@@ -4,12 +4,12 @@ import start from "../../../discord_common/js/packages/timers/Timers.tsx";
 import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
-import participantFromServer from "../activities/EmbeddedActivitiesStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
-import getVoiceStatesForGuild from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/VoiceStateStore.tsx";
+import closure_6 from "../../stores/views/SortedVoiceStateStore.tsx";
 
-require = fn;
+require = arg1;
 function disconnect() {
   currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
   let flag = false;
@@ -31,14 +31,15 @@ function disconnect() {
     flag = tmp4;
   }
   if (flag) {
-    const currentClientVoiceChannelId1 = obj.getCurrentClientVoiceChannelId(null);
+    const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
       const intl = getSystemLocale.intl;
       trackInviteDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
+      const obj3 = trackInviteDefault;
       const voiceChannel = _modDef4975.selectVoiceChannel(null);
+      const obj4 = _modDef4975;
     }
   }
-  obj = currentClientVoiceChannelId;
 }
 let c7 = 180000;
 initializeDefault;
@@ -73,7 +74,7 @@ let prototype = function CallIdleManager() {
     }
     if (flag) {
       const idleTimeout = applyArgumentsResult.idleTimeout;
-      idleTimeout.start(closure_1_7, disconnect, true);
+      idleTimeout.start(closure_1_7, closure_1_8, true);
     }
   };
   applyArgumentsResult.handleVoiceStateUpdates = function handleVoiceStateUpdates() {
@@ -98,7 +99,7 @@ let prototype = function CallIdleManager() {
     }
     const idleTimeout = applyArgumentsResult.idleTimeout;
     if (flag) {
-      idleTimeout.start(closure_1_7, disconnect, false);
+      idleTimeout.start(closure_1_7, closure_1_8, false);
     } else {
       idleTimeout.stop();
     }
@@ -109,6 +110,6 @@ let prototype = function CallIdleManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
 
 export default prototype;

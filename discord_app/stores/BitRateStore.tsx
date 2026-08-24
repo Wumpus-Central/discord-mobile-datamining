@@ -1,5 +1,5 @@
 // discord_app/stores/BitRateStore.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
@@ -20,6 +20,6 @@ const bitRateStore = new BitRateStore(dispatcherDefault, {
     bitrate = bitrate.bitrate;
   }
 });
-const result = obj132.fileFinishedImporting("stores/BitRateStore.tsx");
+const result = set.fileFinishedImporting("stores/BitRateStore.tsx");
 
 export default bitRateStore;

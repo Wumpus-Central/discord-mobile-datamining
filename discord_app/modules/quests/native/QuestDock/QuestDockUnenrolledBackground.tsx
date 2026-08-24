@@ -1,27 +1,28 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../a11y/AccessibilityStore.tsx";
 import { QuestDockMode } from "../../QuestConstants.tsx";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
 import { VerticalGradient } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ AppState: c5, StyleSheet } = get_ActivityIndicator);
 ({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c9 } = QUEST_DOCK_COLLAPSED_HEIGHT);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = {};
+let obj = { backgroundWrapper: null, backgroundHeroAsset: null, backgroundHeroAssetVideo: null, backgroundGradient: null };
+obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.right = undefined;
 obj.bottom = undefined;
 obj.height = QUEST_DOCK_EXPANDED_HEIGHT;
 obj.zIndex = 1;
 obj[0] = obj;
-const createCacheKey = {};
+createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.height = QUEST_DOCK_EXPANDED_HEIGHT;
 createCacheKey.resizeMode = "cover";
@@ -70,13 +71,13 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
     let obj = activeQuestDockMode(setRestingQuestDockMode[19]);
     obj1 = activeQuestDockMode;
     let num = 0;
-    if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
+    if (activeQuestDockMode.get() === closure_1_7.COLLAPSED) {
       num = -1 * closure_1_9;
     }
     obj = { translateX: obj.withSpring(num, closure_1_8) };
     const items = [obj, ];
     let num3 = 0;
-    if (obj1.get() === QuestDockMode.COLLAPSED) {
+    if (obj1.get() === closure_1_7.COLLAPSED) {
       num3 = -1 * closure_1_9;
     }
     obj = { transform: null, width: null };
@@ -91,21 +92,21 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
   fn.__workletHash = 3565242281634;
   fn.__initData = closure_14;
   const animatedStyle = obj5.useAnimatedStyle(fn);
+  const tmp14 = closure_8;
   const tmp16 = token;
   const tmp8 = windowDimensions(setRestingQuestDockMode[13])(activeQuestDockMode);
   [tmp18, closure_4] = token(importAllResult.useState("active" !== first.currentState), 2);
   const items2 = [activeQuestDockMode, setRestingQuestDockMode];
   const effect = importAllResult.useEffect(() => {
-    closure_0 = first.addEventListener("change", (event) => {
-      callback2("active" !== event);
-      let tmp3 = lib(setRestingQuestDockMode[20]).isIOS() && tmp;
+    closure_0 = first.addEventListener("change", (arg0) => {
+      callback2("active" !== arg0);
+      let tmp3 = lib(closure_1_2[20]).isIOS() && tmp;
       if (tmp3) {
         tmp3 = lib.get() === closure_1_7.EXPANDED;
       }
       if (tmp3) {
         callback(closure_1_7.COLLAPSED);
       }
-      const obj = lib(setRestingQuestDockMode[20]);
     });
     return () => {
       lib.remove();
@@ -151,7 +152,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
       return obj;
     }
   }
-  obj = { withSpring: tmp(tmp2[19]).withSpring, activeQuestDockMode, QuestDockMode, videoLoaded: first, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8 };
+  obj = { withSpring: tmp(tmp2[19]).withSpring, activeQuestDockMode, QuestDockMode: tmp13, videoLoaded: first, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp14 };
   G.__closure = obj;
   G.__workletHash = 13084905891385;
   G.__initData = closure_15;
@@ -167,7 +168,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
     obj4 = { uri: null };
     obj4[0] = videoAsset.url;
     obj3[2] = obj4;
-    obj3[3] = tmp8 !== QuestDockMode.EXPANDED;
+    obj3[3] = tmp8 !== tmp13.EXPANDED;
     const items4 = [callback(tmp(tmp2[24]).VideoComponent, obj3), ];
     obj5 = { style: null, children: null };
     obj5[0] = animatedStyle1;
@@ -180,7 +181,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
     obj5[1] = callback(tmp7(tmp2[25]), obj6);
     items4[1] = callback(tmp7Result, obj5);
     obj2[0] = items4;
-    let tmp25Result = callback(obj2.Fragment, obj2);
+    let tmp25Result = tmp25(obj2.Fragment, obj2);
     let tmp27 = callback;
   } else {
     tmp27 = callback;
@@ -193,8 +194,9 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBackground()
   }
   const items5 = [tmp25Result, tmp27(windowDimensions(setRestingQuestDockMode[26]), { locations: memo1, style: tmp4.backgroundGradient, start: VerticalGradient.START, end: VerticalGradient.END, colors: memo })];
   obj1[1] = items5;
-  return callback(tmp7Result, obj1);
+  return closure_12(tmp7Result, obj1);
 });
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
+let obj2 = {};
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
 
 export default memoResult;

@@ -103,7 +103,7 @@ class MonthFromTime {
       num6 = 0;
       num7 = 0;
       num8 = 0;
-      setUTCHoursResult = require("../discord_app/index.native.tsx");
+      setUTCHoursResult = require("module_0");
       result = date1.getTime() / tmp;
     } else {
       _Date = Date;
@@ -425,10 +425,10 @@ arg5.DayWithinYear = function DayWithinYear(arg0) {
     const date1 = new Date(0);
     date1.setUTCFullYear(uTCFullYear, 0, 1);
     date1.setUTCHours(0, 0, 0, 0);
-    let result = date1.getTime() / c3;
+    let result = date1.getTime() / tmp;
   } else {
     const _Date = Date;
-    result = Date.UTC(uTCFullYear, 0) / c3;
+    result = Date.UTC(uTCFullYear, 0) / tmp;
   }
   return rounded - result;
 };
@@ -461,10 +461,10 @@ arg5.DateFromTime = function DateFromTime(arg0) {
     const date1 = new Date(0);
     date1.setUTCFullYear(uTCFullYear, 0, 1);
     date1.setUTCHours(0, 0, 0, 0);
-    let result = date1.getTime() / c3;
+    let result = date1.getTime() / tmp;
   } else {
     const _Date = Date;
-    result = Date.UTC(uTCFullYear, 0) / c3;
+    result = Date.UTC(uTCFullYear, 0) / tmp;
   }
   const diff = rounded - result;
   const tmp12 = MonthFromTime(arg0);

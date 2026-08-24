@@ -5,9 +5,9 @@ import BaseIconImage from "../../BaseIconImage.tsx";
 import registerAsset from "../../../../../../../_runtime/06842_registerAsset.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/HubIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/HubIcon.tsx");
 
 export const HubIcon = function HubIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

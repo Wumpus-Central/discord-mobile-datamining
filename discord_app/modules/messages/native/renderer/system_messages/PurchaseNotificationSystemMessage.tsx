@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import PermissionOverwriteType from "../../../../../flow/Server.tsx";
 import createGuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage.tsx";
 
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
 export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {
   const purchaseNotification = message.message.purchaseNotification;

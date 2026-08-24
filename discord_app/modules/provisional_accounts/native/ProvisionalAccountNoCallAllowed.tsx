@@ -8,13 +8,14 @@ import { HelpdeskArticles } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ header: { alignSelf: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
+const result = require("set").fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
 
 export default function ProvisionalAccountNoCallAllowed() {
-  let obj = { size: "lg", style: callback().header };
+  let obj = { header: null, title: null, content: null, actions: null };
+  obj = { size: "lg", style: callback().header };
   obj[0] = jsx(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: callback().header });
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["vh+Zpq"]);

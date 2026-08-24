@@ -1,8 +1,9 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import CollectiblesMarketingType from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
 
-const prototype = function CollectiblesMarketingBadgeRecord(arg0) {
+let prototype;
+prototype = function CollectiblesMarketingBadgeRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.BADGE;
   ({ dismissibleContent: tmp.dismissibleContent, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, showHoverGradient: tmp.showHoverGradient } = arg0);
@@ -20,6 +21,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ dismissibleContent: tmp3.dismissibleContent, version: tmp3.version, refTargetBackground: tmp3.refTargetBackground, badgeIcon: tmp3.badgeIcon, badgeText: tmp3.badgeText, showHoverGradient: tmp3.showHoverGradient } = obj);
   return obj;
 };
-const result = obj132.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBadgeRecord.tsx");
 
 export const CollectiblesMarketingBadgeRecord = prototype;

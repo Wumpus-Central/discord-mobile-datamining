@@ -1,10 +1,10 @@
 // discord_app/modules/activities/getActivityReportOptions.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import items3 from "Constants.tsx";
 
 const ActivityFeedbackReasons = items3.ActivityFeedbackReasons;
-const result = obj132.fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");
+const result = set.fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");
 
 export default function getActivityReportOptions(arg0) {
   let flag = arg1;
@@ -14,17 +14,17 @@ export default function getActivityReportOptions(arg0) {
   let obj = { value: ActivityFeedbackReasons.FAILED_LOAD, label: null };
   const intl = getSystemLocale.intl;
   const string = intl.string;
-  let t = getSystemLocale.t;
+  const t = getSystemLocale.t;
   if (arg0) {
     let stringResult = string(t.uaiF6B);
-    let tmp6 = require;
+    let tmp6 = tmp2;
   } else {
     stringResult = string(t.aO6OMZ);
-    tmp6 = require;
+    tmp6 = tmp2;
   }
   obj[1] = stringResult;
   const items = [obj, , , , ];
-  obj = { value: ActivityFeedbackReasons.LAGGING, label: null };
+  obj = { value: tmp.LAGGING, label: null };
   const intl2 = tmp6(1236).intl;
   const string2 = intl2.string;
   const t2 = tmp6(1236).t;
@@ -35,7 +35,7 @@ export default function getActivityReportOptions(arg0) {
   }
   obj[1] = string2Result;
   items[1] = obj;
-  obj = { value: ActivityFeedbackReasons.CONFUSING, label: null };
+  obj = { value: tmp.CONFUSING, label: null };
   const intl3 = tmp6(1236).intl;
   const string3 = intl3.string;
   const t3 = tmp6(1236).t;
@@ -65,15 +65,13 @@ export default function getActivityReportOptions(arg0) {
     return items;
   } else {
     let obj3 = { value: null, label: null };
-    obj3[0] = ActivityFeedbackReasons.ADS;
+    obj3[0] = tmp.ADS;
     const intl6 = tmp6(1236).intl;
     const string5 = intl6.string;
-    t = tmp6(1236).t;
     if (arg0) {
-      t = t["5o1UL6"];
-      let string5Result = string5(t);
+      let string5Result = string5(_5o1UL6);
     } else {
-      string5Result = string5(t.XeeDhK);
+      string5Result = string5(_5o1UL6.XeeDhK);
     }
     obj3[1] = string5Result;
     obj3 = items.push(obj3);

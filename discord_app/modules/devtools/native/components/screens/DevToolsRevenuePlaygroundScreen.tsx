@@ -2,29 +2,28 @@
 import defaultAreStatesEqual from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../../design/void/native.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRowGroupTitle from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import serializePurchaseResponse from "../../../../../utils/native/IAPUtils.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getCurrentTime from "../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
-import recomputeAffinities from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
-import handleConnectionClosedOrResumed from "../../../../user_settings/UserSettingsProtoStore.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../../../../stores/SelectedChannelStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
-import getUserAgnosticState from "../../../dev_settings/DevSettingsStore.tsx";
+import closure_7 from "../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
+import closure_8 from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
+import closure_9 from "../../../../user_settings/UserSettingsProtoStore.tsx";
+import closure_10 from "../../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../../stores/SelectedChannelStore.tsx";
+import closure_12 from "../../../../../stores/UserStore.tsx";
+import closure_13 from "../../../dev_settings/DevSettingsStore.tsx";
 import { DevSettingsCategory } from "../../../dev_settings/DevSettingsStore.tsx";
 import GuildFeatures from "../../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function describeServerError(status) {
   status = undefined;
   if (status != null) {
@@ -82,7 +81,7 @@ function FriendAnniversary() {
     obj[1] = "" + arg2 + "Mobile: " + str5 + " \u00B7 Server: " + str4;
     let tmp8Result;
     if (tmp6) {
-      tmp8Result = closure_1_17(callback(stateFromStores2[18]).TableRowArrow, {});
+      tmp8Result = tmp8(callback(stateFromStores2[18]).TableRowArrow, {});
     }
     obj[2] = tmp8Result;
     obj[3] = first1;
@@ -93,10 +92,10 @@ function FriendAnniversary() {
           const HTTP = callback(closure_1_2[15]).HTTP;
           if (null != callback) {
             const _HermesInternal2 = HermesInternal;
-            let url = "" + closure_1_21 + "/" + closure_1_22 + "/" + callback;
+            let url = "" + closure_1_21 + "/" + tmp + "/" + tmp2;
           } else {
             const _HermesInternal = HermesInternal;
-            url = "" + closure_1_21 + "/" + closure_1_22;
+            url = "" + closure_1_21 + "/" + tmp;
           }
           return HTTP.del({ url, rejectWithError: true });
         }, "Cleared server dismissal for " + username + ".");
@@ -108,17 +107,17 @@ function FriendAnniversary() {
   let obj = _require(stateFromStores2[14]);
   items = [closure_7, map, closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    function buildRow(item, index) {
-      userAffinity = userAffinity.getUserAffinity(item);
-      const obj = { userId: item, username: null, affinity: null };
-      user = user.getUser(item);
+    function buildRow(userId) {
+      userAffinity = userAffinity.getUserAffinity(userId);
+      const obj = { userId, username: null, affinity: null };
+      user = user.getUser(userId);
       let username;
       if (user != null) {
         username = user.username;
       }
       if (username == null) {
         const _HermesInternal = HermesInternal;
-        username = "Unknown User (" + item + ")";
+        username = "Unknown User (" + userId + ")";
       }
       obj[1] = username;
       let dmProbability;
@@ -193,10 +192,10 @@ function FriendAnniversary() {
       HermesBuiltin.throwTypeError();
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw body;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = body;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -207,11 +206,11 @@ function FriendAnniversary() {
         if (0 === c5) {
           if (arg0 === 1) {
             v02 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             v02 = 3;
             obj = { value: null, done: true };
-            obj[0] = body;
+            obj[0] = arg1;
             return obj;
           } else {
             let status = tmp4;
@@ -220,7 +219,7 @@ function FriendAnniversary() {
             closure_1 = undefined;
             closure_1_7(true);
             let v0 = 2;
-            const HTTP = closure_1_0(stateFromStores2[15]).HTTP;
+            const HTTP = closure_1_0(closure_1_2[15]).HTTP;
             c5 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
@@ -240,7 +239,7 @@ function FriendAnniversary() {
             if (closure_1) {
               v0([]);
             } else {
-              obj1 = stateFromStores1(stateFromStores2[16]);
+              obj1 = closure_1_1(closure_1_2[16]);
               const obj2 = { key: "dev-tools-gift-intent-server", content: null };
               obj2[1] = closure_1_23(status);
               obj1.open(obj2);
@@ -250,9 +249,9 @@ function FriendAnniversary() {
             v02 = 3;
           } else if (arg0 === 1) {
             v02 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 !== 2) {
-            dismissals = body.body;
+            dismissals = arg1.body;
             dismissals = dismissals.dismissals;
             if (dismissals == null) {
               dismissals = [];
@@ -260,12 +259,13 @@ function FriendAnniversary() {
             v0(dismissals);
             v02(false);
             v0 = 1;
+            const tmp11 = v0;
           }
           v0 = 0;
           callback(false);
           v02 = 3;
           obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         }
       } catch (tmp52) {
@@ -285,6 +285,7 @@ function FriendAnniversary() {
   const effect = first.useEffect(() => {
     callback();
   }, items4);
+  _require = undefined;
   _require = stateFromStores3((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -339,7 +340,7 @@ function FriendAnniversary() {
               closure_1 = closure_4;
               let obj5 = stateFromStores1(stateFromStores2[16]);
               const obj2 = { key: "dev-tools-gift-intent-server", content: null };
-              obj2[1] = describeServerError(closure_1);
+              obj2[1] = closure_2_23(closure_1);
               obj5.open(obj2);
               c5 = 0;
               closure_1_8(false);
@@ -407,27 +408,27 @@ function FriendAnniversary() {
   if (!first1) {
     first1 = tmp12[0];
   }
-  const found = arr5.filter((item, index) => item.intent_type === closure_22);
-  map = new Map(found.map((item, index) => {
-    items = [item.target_id, Number(item.dismissed_at_ms)];
+  const found = arr5.filter((intent_type) => intent_type.intent_type === closure_22);
+  map = new Map(found.map((target_id) => {
+    items = [target_id.target_id, Number(target_id.dismissed_at_ms)];
     return items;
   }));
-  new Set(highestAffinity.map((item, index) => item.userId));
+  const set = new Set(highestAffinity.map((userId) => userId.userId));
   const items6 = [...highAffinity];
   const tmp10 = callback(first.useState(false), 2);
-  let arr = Array.from(new Map(items6.map((item, index) => {
-    items = [item.userId, item];
+  let arr = Array.from(new Map(items6.map((userId) => {
+    items = [userId.userId, userId];
     return items;
   })).values());
-  new Set(arr.map((item, index) => item.userId));
+  const set1 = new Set(arr.map((userId) => userId.userId));
   const items7 = [...Object.keys(stateFromStores1), ...Array.from(map.keys())];
-  map1 = new Map(items6.map((item, index) => {
-    items = [item.userId, item];
+  map1 = new Map(items6.map((userId) => {
+    items = [userId.userId, userId];
     return items;
   }));
   arr = Array.from(new Set(items7));
-  const found1 = arr.filter((item, index) => !set1.has(item));
-  const found2 = items.find((item, index) => item.value === closure_0);
+  const found1 = arr.filter((arg0) => !set1.has(arg0));
+  const found2 = items.find((value) => value.value === closure_0);
   let str;
   if (found2 != null) {
     str = found2.label;
@@ -435,17 +436,18 @@ function FriendAnniversary() {
   if (str == null) {
     str = "None";
   }
+  obj = { title: "Friend Anniversary", hasIcons: false, children: null };
   obj = {
     label: "Number of anniversaries",
     subLabel: "Current: " + str,
     trailing: callback2(tmp(tmp2[18]).TableRowArrow, {}),
     onPress() {
-      callback(stateFromStores2[20]);
-      let obj = {
+      let obj = callback(stateFromStores2[20]);
+      obj = {
         key: "dev-tools-friend-anniversary-count",
         header: { title: "Anniversaries to generate" },
-        options: items.map((item, index) => {
-          ({ label, value } = item);
+        options: closure_1_20.map((arg0) => {
+          ({ label, value } = arg0);
           closure_0 = value;
           let combined = label;
           if (value === closure_0) {
@@ -455,8 +457,8 @@ function FriendAnniversary() {
           return {
             label: combined,
             onPress() {
-              closure_1_1(closure_1_2[13]);
-              const obj = { type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: closure_0 };
+              let obj = closure_1_1(closure_1_2[13]);
+              obj = { type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: closure_0 };
               obj.dispatch(obj);
             }
           };
@@ -500,10 +502,10 @@ function FriendAnniversary() {
     }
   };
   items8[1] = callback2(_require(stateFromStores2[17]).TableRow, obj1);
-  items8[2] = arr.map((item, index) => {
-    const userId = item.userId;
+  items8[2] = arr.map((userId) => {
+    userId = userId.userId;
     const hasItem = set.has(userId);
-    return renderDismissalRow(userId, hasItem, "" + item.affinity + " \u00B7 ", "gen");
+    return renderDismissalRow(userId, hasItem, "" + userId.affinity + " \u00B7 ", "gen");
   });
   obj[2] = items8;
   const items9 = [callback3(_require(stateFromStores2[19]).TableRowGroup, obj), , , ];
@@ -512,12 +514,12 @@ function FriendAnniversary() {
     obj2 = { children: null };
     obj3 = { size: null };
     obj3[0] = stateFromStores1(tmp2[23]).space.PX_16;
-    const items10 = [callback2(tmp(tmp2[22]).Spacer, obj3), ];
+    const items10 = [tmp21(tmp(tmp2[22]).Spacer, obj3), ];
     let obj4 = { title: "Other Dismissals (not generated)", hasIcons: false, children: null };
-    obj4[2] = found1.map((item, index) => renderDismissalRow(item, false, "", "other"));
-    items10[1] = callback2(tmp(tmp2[19]).TableRowGroup, obj4);
+    obj4[2] = found1.map((userId) => renderDismissalRow(userId, false, "", "other"));
+    items10[1] = tmp21(tmp(tmp2[19]).TableRowGroup, obj4);
     obj2[0] = items10;
-    tmp19Result = callback3(closure_19, obj2);
+    tmp19Result = tmp19(tmp20, obj2);
   }
   items9[1] = tmp19Result;
   const set2 = new Set(items7);
@@ -550,7 +552,7 @@ function FriendAnniversary() {
         if (closure_3 == null) {
           num = 0;
         }
-        return closure_1_0(stateFromStores2[24]).fetchAndReconcileGiftIntentDismissals(num);
+        return closure_1_0(closure_1_2[24]).fetchAndReconcileGiftIntentDismissals(num);
       }, "Reconcile triggered.");
     }
   });
@@ -565,20 +567,20 @@ function FriendAnniversary() {
   }
   obj8[3] = tmp29;
   obj8[4] = function onPress() {
-    callback(stateFromStores2[20]);
-    const obj = {
+    let obj = callback(stateFromStores2[20]);
+    obj = {
       key: "dev-tools-gift-intent-seed",
       header: { title: "Dismiss a generated anniversary on the server" },
-      options: arr.map((item, index) => {
-        closure_0 = item;
+      options: arr.map((label) => {
+        closure_0 = label;
         return {
-          label: item.username,
+          label: label.username,
           onPress() {
             return closure_1_10(() => {
               const HTTP = lib(closure_2_2[15]).HTTP;
               const body = { intent_type: closure_2_22, target_id: lib.userId };
               return HTTP.post({ url: "/users/@me/gift-intents/dismiss", body, rejectWithError: true });
-            }, "Dismissed " + item.username + " on the server.");
+            }, "Dismissed " + label.username + " on the server.");
           }
         };
       }),
@@ -634,49 +636,51 @@ function TrialOfferSheetExample() {
     disabled: tmp7,
     onPress() {
       if (null != premiumTrialOffer) {
-        const obj = { fallbackPremiumType: null, userTrialOffer: null, markAsDismissed: null };
+        let obj = closure_1_1(closure_1_2[27]);
+        obj = { fallbackPremiumType: null, userTrialOffer: null, markAsDismissed: null };
         obj[0] = tmp;
         obj[1] = tmp2;
         obj[2] = function markAsDismissed() {
 
         };
-        obj.openLazy(premiumTrialOffer(dependencyMap[29])(dependencyMap[28], dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        obj.openLazy(premiumTrialOffer(closure_1_2[29])(closure_1_2[28], closure_1_2.paths), "PremiumTrialOfferActionSheet", obj);
       }
     }
   };
-  items = [callback(premiumTrialOffer(6291).TableRow, obj), ];
+  items = [closure_17(premiumTrialOffer(6291).TableRow, obj), ];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = callback(premiumTrialOffer(6291).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6291).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
     onPress() {
       if (null != premiumTrialOffer) {
-        const obj = { fallbackPremiumType: null, userTrialOffer: null, markAsDismissed: null };
+        let obj = closure_1_1(closure_1_2[27]);
+        obj = { fallbackPremiumType: null, userTrialOffer: null, markAsDismissed: null };
         obj[0] = tmp;
         obj[1] = tmp2;
         obj[2] = function markAsDismissed() {
 
         };
-        obj.openLazy(premiumTrialOffer(dependencyMap[29])(dependencyMap[28], dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        obj.openLazy(premiumTrialOffer(closure_1_2[29])(closure_1_2[28], closure_1_2.paths), "PremiumTrialOfferActionSheet", obj);
       }
     }
   });
   obj[2] = items;
-  return callback2(premiumTrialOffer(6286).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(6286).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = defaultAreStatesEqual;
   items = [closure_13];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_13.allByCategory(constants.PREMIUM).filter((item, index) => {
-    [tmp] = item;
+  const stateFromStores = obj.useStateFromStores(items, () => closure_13.allByCategory(constants.PREMIUM).filter((arg0) => {
+    [tmp] = arg0;
     return "force_mock_iap" !== tmp;
   }), [], defaultAreStatesEqual.statesWillNeverBeEqual);
   obj = {
     title: "Premium Toggles",
     hasIcons: false,
-    children: stateFromStores.map((item, index) => {
-      [tmp, tmp2, ] = item;
+    children: stateFromStores.map((arg0) => {
+      [tmp, tmp2, ] = arg0;
       return callback2(callback(table[30]).TableSwitchRow, {
         label: tmp3,
         subLabel: tmp,
@@ -703,7 +707,7 @@ function ForceMockIAP() {
   if (!result) {
     tmp4 = stateFromStores;
   }
-  obj = { title: "iOS IAP Mock", hasIcons: false, children: callback(TableSwitchRow.TableSwitchRow, obj) };
+  obj = { title: "iOS IAP Mock", hasIcons: false, children: tmp3(TableSwitchRow.TableSwitchRow, obj) };
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
@@ -712,10 +716,11 @@ function ForceMockIAP() {
     const obj = callback(15144);
     const result = callback2(10970).checkForUpdateAndReload();
   };
-  return callback(TableRowGroupTitle.TableRowGroup, obj);
+  return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }
 function PaymentFlowTest() {
-  const obj = {
+  let obj = { title: "Payment Flow Test", hasIcons: false, children: null };
+  obj = {
     label: "Test Payment Flow",
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[35], paths.paths));
@@ -726,7 +731,8 @@ function PaymentFlowTest() {
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function Orbs() {
-  const obj = {
+  let obj = { title: "Orbs", hasIcons: false, children: null };
+  obj = {
     label: "Test Orbs Flow",
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[36], paths.paths));
@@ -737,7 +743,8 @@ function Orbs() {
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function RevenueSmokeTests() {
-  const obj = {
+  let obj = { title: "Revenue Smoke Tests", hasIcons: false, children: null };
+  obj = {
     label: "Test all purchasing flows",
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[37], paths.paths));
@@ -748,7 +755,8 @@ function RevenueSmokeTests() {
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function GuildPowerups() {
-  const obj = {
+  let obj = { title: "Guild Powerups", hasIcons: false, children: null };
+  obj = {
     label: "Guild Powerups",
     onPress() {
       callback2(paths[34]).pushLazy(callback(paths[29])(paths[38], paths.paths));
@@ -759,7 +767,8 @@ function GuildPowerups() {
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function GuildTagBadges() {
-  const obj = {
+  let obj = { title: "Guild Tag Badges", hasIcons: false, children: null };
+  obj = {
     label: "Badge gallery",
     subLabel: "Preview all native badge kinds across sizes and tints",
     onPress() {
@@ -775,16 +784,19 @@ function GuildTagBadges() {
 let items = [{ label: "None", value: null }, { label: "1", value: 1 }, { label: "2", value: 2 }, { label: "3", value: 3 }, { label: "4", value: 4 }, { label: "5", value: 5 }, { label: "10", value: 10 }, { label: "25", value: 25 }];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { container: null, scrollContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_25 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx");
+let obj1 = { padding: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx");
 
 export default function DevToolsRevenuePlaygroundScreen() {
   const tmp = callback4();
+  let obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
   items = [callback2(TrialOfferSheetExample, {}), , , , , , , , , , , , , , , , ];
-  let obj = { size: ThemesDefault.space.PX_16 };
+  obj = { size: ThemesDefault.space.PX_16 };
   items[1] = callback2(Button.Spacer, obj);
   items[2] = callback2(PremiumToggles, {});
   obj = { size: ThemesDefault.space.PX_16 };
@@ -792,14 +804,19 @@ export default function DevToolsRevenuePlaygroundScreen() {
   items[4] = callback2(ForceMockIAP, {});
   items[5] = callback2(Button.Spacer, { size: ThemesDefault.space.PX_16 });
   items[6] = callback2(PaymentFlowTest, {});
+  obj1 = { size: ThemesDefault.space.PX_16 };
   items[7] = callback2(Button.Spacer, { size: ThemesDefault.space.PX_16 });
   items[8] = callback2(Orbs, {});
+  const obj2 = { size: ThemesDefault.space.PX_16 };
   items[9] = callback2(Button.Spacer, { size: ThemesDefault.space.PX_16 });
   items[10] = callback2(RevenueSmokeTests, {});
+  const obj3 = { size: ThemesDefault.space.PX_16 };
   items[11] = callback2(Button.Spacer, { size: ThemesDefault.space.PX_16 });
   items[12] = callback2(GuildPowerups, {});
+  const obj4 = { size: ThemesDefault.space.PX_16 };
   items[13] = callback2(Button.Spacer, { size: ThemesDefault.space.PX_16 });
   items[14] = callback2(GuildTagBadges, {});
+  const obj5 = { size: ThemesDefault.space.PX_16 };
   items[15] = callback2(Button.Spacer, { size: ThemesDefault.space.PX_16 });
   items[16] = callback2(FriendAnniversary, {});
   obj[2] = items;

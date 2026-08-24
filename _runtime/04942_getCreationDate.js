@@ -86,7 +86,8 @@ function getEncodingName(value) {
   }
   return str;
 }
-let obj = {
+let obj = { 256: null, 261: null, 276: null, 278: null, 286: "Service Identifier", 296: "Envelope Number", 306: "Product ID", 316: "Envelope Priority", 326: null, 336: null, 346: null, 356: "UNO", 376: null, 378: null, 512: null, 515: "Object Type Reference", 516: "Object Attribute Reference", 517: "Object Name", 519: "Edit Status", 520: null, 522: "Urgency", 524: null, 527: "Category", 532: null, 534: "Fixture Identifier", 537: null, 538: null, 539: null, 542: "Release Date", 547: "Release Time", 549: "Expiration Date", 550: "Expiration Time", 552: "Special Instructions", 554: null, 557: null, 559: null, 562: null, 567: null, 572: null, 574: null, 575: null, 577: "Originating Program", 582: "Program Version", 587: null, 592: null, 597: null, 602: "City", 604: "Sub-location", 607: "Province/State", 612: "Country/Primary Location Code", 613: "Country/Primary Location Name", 615: "Original Transmission Reference", 617: "Headline", 622: "Credit", 627: "Source", 628: "Copyright Notice", 630: null, 632: "Caption/Abstract", 634: null, 637: null, 642: "Image Type", 643: null, 647: "Language Identifier", 662: null, 663: null, 664: null, 665: null, 666: "Audio Outcue", 698: "Short Document ID", 699: "Unique Document ID", 700: "Owner ID", 712: null, 713: null, 714: "ObjectData Preview Data", 1802: null, 1812: null, 1882: null, 1887: null };
+obj = {
   name: "Model Version",
   description(arg0) {
     return (arg0[0] << 8) + arg0[1].toString();
@@ -141,6 +142,7 @@ obj[524] = {
   name: "Subject Reference",
   repeatable: true,
   description(value) {
+    const obj = getStringValue;
     const parts = getStringValue.getStringValue(value).split(":");
     let str2 = "";
     let str3 = "";

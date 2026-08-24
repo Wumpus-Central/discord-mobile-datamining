@@ -1,9 +1,9 @@
 // discord_app/modules/media_channel/MediaChannelExperimentUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 
 const GuildFeatures = ME.GuildFeatures;
-const result = obj132.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
+const result = set.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
 
 export const useGuildEligibleForMediaChannels = function useGuildEligibleForMediaChannels(stateFromStores) {
   let id;

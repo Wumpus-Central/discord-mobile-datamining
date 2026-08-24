@@ -29,11 +29,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -46,6 +48,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -53,34 +56,34 @@ if (self2) {
         return obj;
       };
     }
-    function _lte(value, message) {
+    function _lte(value, enc) {
       const obj = { check: "less_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = value;
       obj.inclusive = true;
       const ZodCheckLessThan = new closure_2.$ZodCheckLessThan(obj);
       return ZodCheckLessThan;
     }
-    function _gte(value, message) {
+    function _gte(value, enc) {
       const obj = { check: "greater_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = value;
       obj.inclusive = true;
       const ZodCheckGreaterThan = new closure_2.$ZodCheckGreaterThan(obj);
       return ZodCheckGreaterThan;
     }
     const _Object3 = Object;
-    function _lt(value, message) {
+    function _lt(value, enc) {
       const obj = { check: "less_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = value;
       obj.inclusive = false;
       const ZodCheckLessThan = new closure_2.$ZodCheckLessThan(obj);
       return ZodCheckLessThan;
     }
-    function _gt(value, message) {
+    function _gt(value, enc) {
       const obj = { check: "greater_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = value;
       obj.inclusive = false;
       const ZodCheckGreaterThan = new closure_2.$ZodCheckGreaterThan(obj);
@@ -90,8 +93,8 @@ if (self2) {
       const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx });
       return ZodCheckOverwrite;
     }
-    function _check(check, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    function _check(check, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       const ZodCheck = new closure_2.$ZodCheck({ check: "custom" });
       ZodCheck._zod.check = check;
       return ZodCheck;
@@ -101,180 +104,180 @@ if (self2) {
       const merged = Object.assign(closure_5.normalizeParams(closure_0));
       return new ZodString({ type: "string" });
     };
-    exports._coercedString = function _coercedString(ZodString, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._coercedString = function _coercedString(ZodString, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodString({ type: "string", coerce: true });
     };
-    exports._email = function _email(ZodEmail, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._email = function _email(ZodEmail, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodEmail({ type: "string", format: "email", check: "string_format", abort: false });
     };
-    exports._guid = function _guid(ZodGUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._guid = function _guid(ZodGUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodGUID({ type: "string", format: "guid", check: "string_format", abort: false });
     };
-    exports._uuid = function _uuid(ZodUUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uuid = function _uuid(ZodUUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodUUID({ type: "string", format: "uuid", check: "string_format", abort: false });
     };
-    exports._uuidv4 = function _uuidv4(ZodUUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uuidv4 = function _uuidv4(ZodUUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodUUID({ type: "string", format: "uuid", check: "string_format", abort: false, version: "v4" });
     };
-    exports._uuidv6 = function _uuidv6(ZodUUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uuidv6 = function _uuidv6(ZodUUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodUUID({ type: "string", format: "uuid", check: "string_format", abort: false, version: "v6" });
     };
-    exports._uuidv7 = function _uuidv7(ZodUUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uuidv7 = function _uuidv7(ZodUUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodUUID({ type: "string", format: "uuid", check: "string_format", abort: false, version: "v7" });
     };
-    exports._url = function _url(ZodURL, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._url = function _url(ZodURL, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodURL({ type: "string", format: "url", check: "string_format", abort: false });
     };
-    exports._emoji = function _emoji(ZodEmoji, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._emoji = function _emoji(ZodEmoji, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodEmoji({ type: "string", format: "emoji", check: "string_format", abort: false });
     };
-    exports._nanoid = function _nanoid(ZodNanoID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._nanoid = function _nanoid(ZodNanoID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNanoID({ type: "string", format: "nanoid", check: "string_format", abort: false });
     };
-    exports._cuid = function _cuid(ZodCUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._cuid = function _cuid(ZodCUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodCUID({ type: "string", format: "cuid", check: "string_format", abort: false });
     };
-    exports._cuid2 = function _cuid2(ZodCUID2, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._cuid2 = function _cuid2(ZodCUID2, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodCUID2({ type: "string", format: "cuid2", check: "string_format", abort: false });
     };
-    exports._ulid = function _ulid(ZodULID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._ulid = function _ulid(ZodULID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodULID({ type: "string", format: "ulid", check: "string_format", abort: false });
     };
-    exports._xid = function _xid(ZodXID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._xid = function _xid(ZodXID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodXID({ type: "string", format: "xid", check: "string_format", abort: false });
     };
-    exports._ksuid = function _ksuid(ZodKSUID, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._ksuid = function _ksuid(ZodKSUID, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodKSUID({ type: "string", format: "ksuid", check: "string_format", abort: false });
     };
-    exports._ipv4 = function _ipv4(ZodIPv4, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._ipv4 = function _ipv4(ZodIPv4, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodIPv4({ type: "string", format: "ipv4", check: "string_format", abort: false });
     };
-    exports._ipv6 = function _ipv6(ZodIPv6, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._ipv6 = function _ipv6(ZodIPv6, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodIPv6({ type: "string", format: "ipv6", check: "string_format", abort: false });
     };
     exports._mac = function _mac(ZodMAC, delimiter) {
       const merged = Object.assign(closure_5.normalizeParams(delimiter));
       return new ZodMAC({ type: "string", format: "mac", check: "string_format", abort: false });
     };
-    exports._cidrv4 = function _cidrv4(ZodCIDRv4, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._cidrv4 = function _cidrv4(ZodCIDRv4, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodCIDRv4({ type: "string", format: "cidrv4", check: "string_format", abort: false });
     };
-    exports._cidrv6 = function _cidrv6(ZodCIDRv6, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._cidrv6 = function _cidrv6(ZodCIDRv6, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodCIDRv6({ type: "string", format: "cidrv6", check: "string_format", abort: false });
     };
-    exports._base64 = function _base64(ZodBase64, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._base64 = function _base64(ZodBase64, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBase64({ type: "string", format: "base64", check: "string_format", abort: false });
     };
-    exports._base64url = function _base64url(ZodBase64URL, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._base64url = function _base64url(ZodBase64URL, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBase64URL({ type: "string", format: "base64url", check: "string_format", abort: false });
     };
-    exports._e164 = function _e164(ZodE164, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._e164 = function _e164(ZodE164, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodE164({ type: "string", format: "e164", check: "string_format", abort: false });
     };
-    exports._jwt = function _jwt(ZodJWT, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._jwt = function _jwt(ZodJWT, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodJWT({ type: "string", format: "jwt", check: "string_format", abort: false });
     };
-    exports._isoDateTime = function _isoDateTime(ZodISODateTime, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._isoDateTime = function _isoDateTime(ZodISODateTime, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodISODateTime({ type: "string", format: "datetime", check: "string_format", offset: false, local: false, precision: null });
     };
-    exports._isoDate = function _isoDate(ZodISODate, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._isoDate = function _isoDate(ZodISODate, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodISODate({ type: "string", format: "date", check: "string_format" });
     };
-    exports._isoTime = function _isoTime(ZodISOTime, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._isoTime = function _isoTime(ZodISOTime, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodISOTime({ type: "string", format: "time", check: "string_format", precision: null });
     };
-    exports._isoDuration = function _isoDuration(ZodISODuration, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._isoDuration = function _isoDuration(ZodISODuration, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodISODuration({ type: "string", format: "duration", check: "string_format" });
     };
-    exports._number = function _number(ZodNumber, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._number = function _number(ZodNumber, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumber({ type: "number", checks: [] });
     };
-    exports._coercedNumber = function _coercedNumber(ZodNumber, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._coercedNumber = function _coercedNumber(ZodNumber, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumber({ type: "number", coerce: true, checks: [] });
     };
-    exports._int = function _int(ZodNumberFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._int = function _int(ZodNumberFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumberFormat({ type: "number", check: "number_format", abort: false, format: "safeint" });
     };
-    exports._float32 = function _float32(ZodNumberFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._float32 = function _float32(ZodNumberFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumberFormat({ type: "number", check: "number_format", abort: false, format: "float32" });
     };
-    exports._float64 = function _float64(ZodNumberFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._float64 = function _float64(ZodNumberFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumberFormat({ type: "number", check: "number_format", abort: false, format: "float64" });
     };
-    exports._int32 = function _int32(ZodNumberFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._int32 = function _int32(ZodNumberFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumberFormat({ type: "number", check: "number_format", abort: false, format: "int32" });
     };
-    exports._uint32 = function _uint32(ZodNumberFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uint32 = function _uint32(ZodNumberFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNumberFormat({ type: "number", check: "number_format", abort: false, format: "uint32" });
     };
-    exports._boolean = function _boolean(ZodBoolean, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._boolean = function _boolean(ZodBoolean, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBoolean({ type: "boolean" });
     };
-    exports._coercedBoolean = function _coercedBoolean(ZodBoolean, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._coercedBoolean = function _coercedBoolean(ZodBoolean, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBoolean({ type: "boolean", coerce: true });
     };
-    exports._bigint = function _bigint(ZodBigInt, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._bigint = function _bigint(ZodBigInt, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBigInt({ type: "bigint" });
     };
-    exports._coercedBigint = function _coercedBigint(ZodBigInt, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._coercedBigint = function _coercedBigint(ZodBigInt, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBigInt({ type: "bigint", coerce: true });
     };
-    exports._int64 = function _int64(ZodBigIntFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._int64 = function _int64(ZodBigIntFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBigIntFormat({ type: "bigint", check: "bigint_format", abort: false, format: "int64" });
     };
-    exports._uint64 = function _uint64(ZodBigIntFormat, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uint64 = function _uint64(ZodBigIntFormat, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodBigIntFormat({ type: "bigint", check: "bigint_format", abort: false, format: "uint64" });
     };
-    exports._symbol = function _symbol(ZodSymbol, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._symbol = function _symbol(ZodSymbol, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodSymbol({ type: "symbol" });
     };
-    exports._undefined = function _undefined(arg0, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._undefined = function _undefined(arg0, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "undefined" });
     };
-    exports._null = function _null(arg0, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._null = function _null(arg0, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "null" });
     };
     exports._any = function _any(ZodAny) {
@@ -283,24 +286,24 @@ if (self2) {
     exports._unknown = function _unknown(ZodUnknown) {
       return new ZodUnknown({ type: "unknown" });
     };
-    exports._never = function _never(ZodNever, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._never = function _never(ZodNever, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNever({ type: "never" });
     };
-    exports._void = function _void(arg0, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._void = function _void(arg0, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "void" });
     };
-    exports._date = function _date(ZodDate, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._date = function _date(ZodDate, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodDate({ type: "date" });
     };
-    exports._coercedDate = function _coercedDate(ZodDate, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._coercedDate = function _coercedDate(ZodDate, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodDate({ type: "date", coerce: true });
     };
-    exports._nan = function _nan(ZodNaN, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._nan = function _nan(ZodNaN, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodNaN({ type: "nan" });
     };
     exports._lt = _lt;
@@ -313,133 +316,133 @@ if (self2) {
     exports._min = _gte;
     exports._gte = _gte;
     exports._min = _gte;
-    exports._positive = function _positive(message) {
+    exports._positive = function _positive(enc) {
       const obj = { check: "greater_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = 0;
       obj.inclusive = false;
       const ZodCheckGreaterThan = new closure_2.$ZodCheckGreaterThan(obj);
       return ZodCheckGreaterThan;
     };
-    exports._negative = function _negative(message) {
+    exports._negative = function _negative(enc) {
       const obj = { check: "less_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = 0;
       obj.inclusive = false;
       const ZodCheckLessThan = new closure_2.$ZodCheckLessThan(obj);
       return ZodCheckLessThan;
     };
-    exports._nonpositive = function _nonpositive(message) {
+    exports._nonpositive = function _nonpositive(enc) {
       const obj = { check: "less_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = 0;
       obj.inclusive = true;
       const ZodCheckLessThan = new closure_2.$ZodCheckLessThan(obj);
       return ZodCheckLessThan;
     };
-    exports._nonnegative = function _nonnegative(message) {
+    exports._nonnegative = function _nonnegative(enc) {
       const obj = { check: "greater_than" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = 0;
       obj.inclusive = true;
       const ZodCheckGreaterThan = new closure_2.$ZodCheckGreaterThan(obj);
       return ZodCheckGreaterThan;
     };
-    exports._multipleOf = function _multipleOf(value, message) {
+    exports._multipleOf = function _multipleOf(value, enc) {
       const obj = { check: "multiple_of" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.value = value;
       const ZodCheckMultipleOf = new closure_2.$ZodCheckMultipleOf(obj);
       return ZodCheckMultipleOf;
     };
-    exports._maxSize = function _maxSize(maximum, message) {
+    exports._maxSize = function _maxSize(maximum, enc) {
       const obj = { check: "max_size" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.maximum = maximum;
       const ZodCheckMaxSize = new closure_2.$ZodCheckMaxSize(obj);
       return ZodCheckMaxSize;
     };
-    exports._minSize = function _minSize(minimum, message) {
+    exports._minSize = function _minSize(minimum, enc) {
       const obj = { check: "min_size" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.minimum = minimum;
       const ZodCheckMinSize = new closure_2.$ZodCheckMinSize(obj);
       return ZodCheckMinSize;
     };
-    exports._size = function _size(size, message) {
+    exports._size = function _size(size, enc) {
       const obj = { check: "size_equals" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.size = size;
       const ZodCheckSizeEquals = new closure_2.$ZodCheckSizeEquals(obj);
       return ZodCheckSizeEquals;
     };
-    exports._maxLength = function _maxLength(maximum, message) {
+    exports._maxLength = function _maxLength(maximum, enc) {
       const obj = { check: "max_length" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.maximum = maximum;
       const ZodCheckMaxLength = new closure_2.$ZodCheckMaxLength(obj);
       return ZodCheckMaxLength;
     };
-    exports._minLength = function _minLength(minimum, message) {
+    exports._minLength = function _minLength(minimum, enc) {
       const obj = { check: "min_length" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.minimum = minimum;
       const ZodCheckMinLength = new closure_2.$ZodCheckMinLength(obj);
       return ZodCheckMinLength;
     };
-    exports._length = function _length(arg0, message) {
+    exports._length = function _length(arg0, enc) {
       const obj = { check: "length_equals" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.length = arg0;
       const ZodCheckLengthEquals = new closure_2.$ZodCheckLengthEquals(obj);
       return ZodCheckLengthEquals;
     };
-    exports._regex = function _regex(pattern, message) {
+    exports._regex = function _regex(pattern, enc) {
       const obj = { check: "string_format", format: "regex" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.pattern = pattern;
       const ZodCheckRegex = new closure_2.$ZodCheckRegex(obj);
       return ZodCheckRegex;
     };
-    exports._lowercase = function _lowercase(message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._lowercase = function _lowercase(enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       const ZodCheckLowerCase = new closure_2.$ZodCheckLowerCase({ check: "string_format", format: "lowercase" });
       return ZodCheckLowerCase;
     };
-    exports._uppercase = function _uppercase(message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._uppercase = function _uppercase(enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       const ZodCheckUpperCase = new closure_2.$ZodCheckUpperCase({ check: "string_format", format: "uppercase" });
       return ZodCheckUpperCase;
     };
-    exports._includes = function _includes(includes, message) {
+    exports._includes = function _includes(includes, enc) {
       const obj = { check: "string_format", format: "includes" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.includes = includes;
       const ZodCheckIncludes = new closure_2.$ZodCheckIncludes(obj);
       return ZodCheckIncludes;
     };
-    exports._startsWith = function _startsWith(prefix, message) {
+    exports._startsWith = function _startsWith(prefix, enc) {
       const obj = { check: "string_format", format: "starts_with" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.prefix = prefix;
       const ZodCheckStartsWith = new closure_2.$ZodCheckStartsWith(obj);
       return ZodCheckStartsWith;
     };
-    exports._endsWith = function _endsWith(suffix, message) {
+    exports._endsWith = function _endsWith(suffix, enc) {
       const obj = { check: "string_format", format: "ends_with" };
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       obj.suffix = suffix;
       const ZodCheckEndsWith = new closure_2.$ZodCheckEndsWith(obj);
       return ZodCheckEndsWith;
     };
-    exports._property = function _property(property, schema, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._property = function _property(property, schema, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       const ZodCheckProperty = new closure_2.$ZodCheckProperty({ check: "property", property, schema });
       return ZodCheckProperty;
     };
-    exports._mime = function _mime(items, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
-      const ZodCheckMimeType = new closure_2.$ZodCheckMimeType({ check: "mime_type", mime: items });
+    exports._mime = function _mime(mime, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
+      const ZodCheckMimeType = new closure_2.$ZodCheckMimeType({ check: "mime_type", mime });
       return ZodCheckMimeType;
     };
     exports._overwrite = _overwrite;
@@ -464,78 +467,78 @@ if (self2) {
       const ZodCheckOverwrite = new closure_2.$ZodCheckOverwrite({ check: "overwrite", tx: (arg0) => closure_5.slugify(arg0) });
       return ZodCheckOverwrite;
     };
-    exports._array = function _array(ZodArray, closure_0, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._array = function _array(ZodArray, closure_0, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodArray({ type: "array", element: closure_0 });
     };
-    exports._union = function _union(arg0, options, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._union = function _union(arg0, options, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "union", options });
     };
-    exports._xor = function _xor(arg0, options, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._xor = function _xor(arg0, options, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "union", options, inclusive: false });
     };
-    exports._discriminatedUnion = function _discriminatedUnion(arg0, discriminator, options, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._discriminatedUnion = function _discriminatedUnion(arg0, discriminator, options, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "union", options, discriminator });
     };
     exports._intersection = function _intersection(arg0, left, right) {
       return new arg0({ type: "intersection", left, right });
     };
-    exports._tuple = function _tuple(arg0, items, message, message) {
-      let tmp2 = message;
-      if (message instanceof ZodType.$ZodType) {
-        tmp2 = message;
+    exports._tuple = function _tuple(arg0, items, arg2, enc) {
+      let tmp2 = arg2;
+      if (arg2 instanceof ZodType.$ZodType) {
+        tmp2 = enc;
       }
       const obj = { type: "tuple", items, rest: null };
       let tmp3 = null;
-      if (message instanceof ZodType.$ZodType) {
-        tmp3 = message;
+      if (arg2 instanceof ZodType.$ZodType) {
+        tmp3 = arg2;
       }
       obj[2] = tmp3;
       const merged = Object.assign(closure_5.normalizeParams(tmp2));
       return new arg0(obj);
     };
-    exports._record = function _record(arg0, keyType, valueType, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._record = function _record(arg0, keyType, valueType, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "record", keyType, valueType });
     };
-    exports._map = function _map(arg0, keyType, valueType, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._map = function _map(arg0, keyType, valueType, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "map", keyType, valueType });
     };
-    exports._set = function _set(arg0, valueType, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._set = function _set(arg0, valueType, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "set", valueType });
     };
-    exports._enum = function _enum(arg0, arr, message) {
+    exports._enum = function _enum(arg0, arr, enc) {
       let fromEntriesResult = arr;
       if (Array.isArray(arr)) {
         const _Object = Object;
-        fromEntriesResult = Object.fromEntries(arr.map((item, index) => {
-          const items = [item, item];
+        fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
+          const items = [arg0, arg0];
           return items;
         }));
       }
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "enum", entries: fromEntriesResult });
     };
-    exports._nativeEnum = function _nativeEnum(arg0, entries, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._nativeEnum = function _nativeEnum(arg0, entries, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "enum", entries });
     };
-    exports._literal = function _literal(arg0, arg1, message) {
+    exports._literal = function _literal(arg0, arg1, enc) {
       let tmp = arg1;
       if (!Array.isArray(arg1)) {
         const items = [arg1];
         tmp = items;
       }
-      const merged = Object.assign(closure_5.normalizeParams(message));
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "literal", values: tmp });
     };
-    exports._file = function _file(ZodFile, dependencyMap) {
-      const merged = Object.assign(closure_5.normalizeParams(dependencyMap));
+    exports._file = function _file(ZodFile, arr2) {
+      const merged = Object.assign(closure_5.normalizeParams(arr2));
       return new ZodFile({ type: "file" });
     };
     exports._transform = function _transform(arg0, transform) {
@@ -552,10 +555,10 @@ if (self2) {
       const obj = { type: "default", innerType };
       Object.defineProperty(obj, "defaultValue", {
         get: () => {
-          if (typeof callback === "function") {
-            let shallowCloneResult = callback();
+          if (typeof closure_0 === "function") {
+            let shallowCloneResult = tmp();
           } else {
-            shallowCloneResult = closure_1_5.shallowClone(callback);
+            shallowCloneResult = closure_1_5.shallowClone(tmp);
           }
           return shallowCloneResult;
         },
@@ -563,8 +566,8 @@ if (self2) {
       });
       return new arg0(obj);
     };
-    exports._nonoptional = function _nonoptional(arg0, innerType, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._nonoptional = function _nonoptional(arg0, innerType, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "nonoptional", innerType });
     };
     exports._success = function _success(arg0, innerType) {
@@ -585,8 +588,8 @@ if (self2) {
     exports._readonly = function _readonly(arg0, innerType) {
       return new arg0({ type: "readonly", innerType });
     };
-    exports._templateLiteral = function _templateLiteral(arg0, parts, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._templateLiteral = function _templateLiteral(arg0, parts, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new arg0({ type: "template_literal", parts });
     };
     exports._lazy = function _lazy(arg0, getter) {
@@ -595,16 +598,16 @@ if (self2) {
     exports._promise = function _promise(arg0, innerType) {
       return new arg0({ type: "promise", innerType });
     };
-    exports._custom = function _custom(ZodCustom, fn, message) {
-      const normalizeParamsResult = closure_5.normalizeParams(message);
+    exports._custom = function _custom(ZodCustom, fn, enc) {
+      const normalizeParamsResult = closure_5.normalizeParams(enc);
       if (normalizeParamsResult.abort == null) {
         normalizeParamsResult.abort = true;
       }
       const merged = Object.assign(normalizeParamsResult);
       return new ZodCustom({ type: "custom", check: "custom", fn });
     };
-    exports._refine = function _refine(ZodCustom, fn, message) {
-      const merged = Object.assign(closure_5.normalizeParams(message));
+    exports._refine = function _refine(ZodCustom, fn, enc) {
+      const merged = Object.assign(closure_5.normalizeParams(enc));
       return new ZodCustom({ type: "custom", check: "custom", fn });
     };
     exports._superRefine = function _superRefine(arg0) {
@@ -613,28 +616,28 @@ if (self2) {
       const ZodCheck = new closure_2.$ZodCheck({ check: "custom" });
       ZodCheck._zod.check = (value) => {
         const callback = value;
-        value.addIssue = (fatal) => {
-          if (typeof fatal === "string") {
+        value.addIssue = (str) => {
+          if (typeof str === "string") {
             const issues = value.issues;
-            issues.push(closure_2_5.issue(fatal, value.value, ZodCheck._zod.def));
+            issues.push(closure_2_5.issue(str, value.value, closure_1_1._zod.def));
           } else {
-            if (fatal.fatal) {
-              fatal.continue = false;
+            if (str.fatal) {
+              str.continue = false;
             }
-            if (fatal.code == null) {
-              fatal.code = "custom";
+            if (str.code == null) {
+              str.code = "custom";
             }
-            if (fatal.input == null) {
-              fatal.input = value.value;
+            if (str.input == null) {
+              str.input = value.value;
             }
-            if (fatal.inst == null) {
-              fatal.inst = ZodCheck;
+            if (str.inst == null) {
+              str.inst = closure_1_1;
             }
-            if (fatal.continue == null) {
-              fatal.continue = !ZodCheck._zod.def.abort;
+            if (str.continue == null) {
+              str.continue = !closure_1_1._zod.def.abort;
             }
             const issues1 = value.issues;
-            issues1.push(closure_2_5.issue(fatal));
+            issues1.push(closure_2_5.issue(str));
           }
         };
         return callback(value.value, value);
@@ -688,8 +691,8 @@ if (self2) {
       };
       return ZodCheck;
     };
-    exports._stringbool = function _stringbool(Codec, message) {
-      const normalizeParamsResult = ZodCodec.normalizeParams(message);
+    exports._stringbool = function _stringbool(Codec, enc) {
+      const normalizeParamsResult = ZodCodec.normalizeParams(enc);
       self2 = normalizeParamsResult;
       let truthy = normalizeParamsResult.truthy;
       if (truthy == null) {
@@ -704,17 +707,17 @@ if (self2) {
       let tmp2 = falsy;
       let tmp3 = truthy;
       if ("sensitive" !== normalizeParamsResult.case) {
-        mapped = truthy.map((item, index) => {
-          let formatted = item;
-          if (typeof item === "string") {
-            formatted = item.toLowerCase();
+        mapped = truthy.map((str) => {
+          let formatted = str;
+          if (typeof str === "string") {
+            formatted = str.toLowerCase();
           }
           return formatted;
         });
-        mapped1 = falsy.map((item, index) => {
-          let formatted = item;
-          if (typeof item === "string") {
-            formatted = item.toLowerCase();
+        mapped1 = falsy.map((str) => {
+          let formatted = str;
+          if (typeof str === "string") {
+            formatted = str.toLowerCase();
           }
           return formatted;
         });
@@ -756,7 +759,7 @@ if (self2) {
               issues = issues.issues;
               obj = { code: "invalid_value", expected: "stringbool", values: null, input: null, inst: null, continue: false };
               const items = [];
-              HermesBuiltin.arraySpread(set1, HermesBuiltin.arraySpread(set, 0));
+              HermesBuiltin.arraySpread(tmp4, HermesBuiltin.arraySpread(tmp2, 0));
               obj[2] = items;
               obj[3] = issues.value;
               obj[4] = ZodCodec;
@@ -770,6 +773,7 @@ if (self2) {
         reverseTransform(value, issues) {
           if (true === value) {
             let tmp2 = mapped[0] || "true";
+            const tmp4 = mapped[0] || "true";
           } else {
             tmp2 = mapped1[0] || "false";
           }

@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx
 import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
 import now from "../../../google/protobuf/timestamp.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3 } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = fn;
+require = arg1;
 let obj = { UNSPECIFIED_DISCLOSURE: 0, [0]: "UNSPECIFIED_DISCLOSURE", IP_LOCATION: 1, [1]: "IP_LOCATION", DISPLAYS_ADVERTISEMENTS: 2, [2]: "DISPLAYS_ADVERTISEMENTS", PARTNER_SDK_DATA_SHARING_MESSAGE: 3, [3]: "PARTNER_SDK_DATA_SHARING_MESSAGE" };
 class ApplicationUserRoleConnection$Type extends MessageType {
   constructor() {
@@ -20,6 +20,7 @@ class ApplicationUserRoleConnection$Type extends MessageType {
 }
 const prototype = ApplicationUserRoleConnection$Type.prototype;
 prototype["create"] = function create(arr) {
+  obj = { metadata: {}, platformName: "", platformUsername: "", version: "0" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -38,6 +39,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -52,16 +54,31 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -76,8 +93,10 @@ prototype["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
+      let tmp4 = callback;
       let tmp5 = callback(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
+      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -109,6 +128,8 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(metadata, tag, w
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.LengthDelimited);
@@ -171,6 +192,7 @@ class AcknowledgedApplicationDisclosure$Type extends MessageType2 {
 }
 const prototype2 = AcknowledgedApplicationDisclosure$Type.prototype;
 prototype2["create"] = function create(arr) {
+  obj = { disclosureType: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -189,26 +211,47 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.disclosureType = pos.int32();
       } else if (2 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let Timestamp = now.Timestamp;
+        let tmp24 = Timestamp;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.ackedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ackedAt);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -258,7 +301,7 @@ const items1 = [
     }
   }
 ];
-tmp2 = new tmp2("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items1, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", items1, undefined, fn, dependencyMap, obj, new.target, tmp6, new.target);
+tmp2 = new tmp2("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosure", items1, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", tmp2, "internalBinaryWrite", items1, undefined, arg1, dependencyMap, obj, new.target, tmp6, new.target);
 // ThrowIfThisInitialized (0x7c)
 let closure_4 = tmp2;
 class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
@@ -281,6 +324,7 @@ class AcknowledgedApplicationDisclosures$Type extends MessageType3 {
 }
 const prototype3 = AcknowledgedApplicationDisclosures$Type.prototype;
 prototype3["create"] = function create(arr) {
+  obj = { ackedDisclosures: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -299,24 +343,41 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let ackedDisclosures = obj.ackedDisclosures;
+        let tmp22 = closure_4;
         let arr = ackedDisclosures.push(closure_4.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -330,6 +391,9 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosure
   let num = 0;
   if (0 < ackedDisclosures.ackedDisclosures.length) {
     do {
+      let tmp = closure_4;
+      let tmp2 = require;
+      let tmp3 = dependencyMap;
       let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
       let internalBinaryWriteResult = closure_4.internalBinaryWrite(ackedDisclosures.ackedDisclosures[num], tagResult.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
@@ -358,8 +422,8 @@ obj = {
 };
 const items2 = [obj];
 // ThrowIfThisInitialized (0x7c)
-const tmp8 = new "internalBinaryWrite"("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items2, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", AcknowledgedApplicationDisclosures$Type, "internalBinaryWrite", items2, undefined, fn, dependencyMap, obj);
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx");
+let tmp8 = new "internalBinaryWrite"("discord_protos.discord_kkv_store_value_models.v1.AcknowledgedApplicationDisclosures", items2, tmp4, AcknowledgedApplicationDisclosure$Type, "create", "internalBinaryRead", AcknowledgedApplicationDisclosures$Type, "internalBinaryWrite", items2, undefined, arg1, dependencyMap, obj);
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx");
 
 export const ApplicationDisclosureType = obj;
 export const ApplicationUserRoleConnection = tmp6;

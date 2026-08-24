@@ -4,11 +4,11 @@ import renderElementAll from "00114_renderElement.js";
 import childrenDefault from "00251_children.js";
 import RootTagContext from "00253_RootTagContext.js";
 import frozenDefault from "00257_frozen.js";
-import noop from "00019_noop.js";
+import closure_4 from "00019_noop.js";
 import 00247__ from "metro/00247__.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 
 export default function renderApplication(arg0) {
   ({ initialProps, rootTag, debugName, displayMode } = arg0);
@@ -26,7 +26,7 @@ export default function renderApplication(arg0) {
   const merged = Object.assign(initialProps);
   obj.rootTag = rootTag;
   obj[5] = <RootComponent />;
-  let tmp4Result = jsx(childrenDefault, {});
+  let tmp4Result = tmp4(childrenDefault, obj);
   if (true === useOffscreen) {
     if (null != displayMode) {
       let str = "hidden";
@@ -36,9 +36,11 @@ export default function renderApplication(arg0) {
       obj = { mode: null, children: null };
       obj[0] = str;
       obj[1] = tmp4Result;
-      tmp4Result = <unstable_Activity.unstable_Activity mode={null}>{null}</unstable_Activity.unstable_Activity>;
+      tmp4Result = tmp4(unstable_Activity.unstable_Activity, obj);
     }
   }
+  const tmp = importDefault;
+  const tmp5 = childrenDefault;
   obj1 = { element: tmp4Result, rootTag: null };
   const obj4 = renderElementAll;
   obj1[1] = RootTagContext.createRootTag(rootTag);

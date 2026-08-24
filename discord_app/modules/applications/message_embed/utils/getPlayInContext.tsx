@@ -1,10 +1,10 @@
 // discord_app/modules/applications/message_embed/utils/getPlayInContext.tsx
-import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
-import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../../stores/SelectedChannelStore.tsx";
 import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
 export const usePlayInContext = function usePlayInContext(arg0) {
   const _require = arg0;
@@ -17,7 +17,7 @@ export const usePlayInContext = function usePlayInContext(arg0) {
       return null;
     } else {
       const embeddedActivitiesForChannel = closure_1_2.getEmbeddedActivitiesForChannel(tmp);
-      const found = embeddedActivitiesForChannel.filter((item, index) => item.applicationId === closure_0);
+      const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
       let first;
       if (found.length > 0) {
         first = found[0];
@@ -61,15 +61,15 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
     return { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: false, canLaunchInChannel: false };
   } else {
     if (null != channelId) {
-      let obj = getEmbeddedActivityLaunchability;
+      let obj = _getEmbeddedActivityLaunchability;
       let NO_CHANNEL = obj.getEmbeddedActivityLaunchabilityForChannel(channelId);
       let tmp3 = _require;
     } else {
       tmp3 = _require;
-      NO_CHANNEL = require("../../../activities/utils/getEmbeddedActivityLaunchability.tsx").EmbeddedActivityLaunchability.NO_CHANNEL;
+      NO_CHANNEL = _getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.NO_CHANNEL;
     }
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channelId);
-    const found = embeddedActivitiesForChannel.filter((item, index) => item.applicationId === closure_0);
+    const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
     let first;
     if (found.length > 0) {
       first = found[0];

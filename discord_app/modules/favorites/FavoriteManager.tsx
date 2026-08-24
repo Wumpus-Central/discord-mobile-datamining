@@ -1,6 +1,5 @@
 // discord_app/modules/favorites/FavoriteManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
-import getFavoritesAwareGuildName from "FavoritesUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import getNextPositionFromChannels from "FavoritesActionCreators.tsx";
 import items from "FavoritesGuildSuggestionsStore.tsx";
@@ -19,14 +18,12 @@ function handleCategoryCollapseAll(guildId) {
     const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(true);
     const tmpResult = getNextPositionFromChannels;
   }
-  obj = getFavoritesAwareGuildName;
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
     const result = getNextPositionFromChannels.setFavoriteCategoriesCollapsed(false);
     const tmpResult = getNextPositionFromChannels;
   }
-  obj = getFavoritesAwareGuildName;
 }
 function handleLogout() {
   callback(closure_2);
@@ -41,6 +38,6 @@ let prototype = function FavoriteManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
+let result = set.fileFinishedImporting("modules/favorites/FavoriteManager.tsx");
 
 export default prototype;

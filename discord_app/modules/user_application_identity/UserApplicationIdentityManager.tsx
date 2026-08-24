@@ -2,7 +2,7 @@
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import fetchStore from "UserApplicationIdentityActionCreators.tsx";
 
-require = fn;
+require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
   const useUserApplicationIdentities = fetchStore.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
@@ -16,6 +16,6 @@ let prototype = function UserApplicationIdentityManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityManager.tsx");
+const result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityManager.tsx");
 
 export default prototype;

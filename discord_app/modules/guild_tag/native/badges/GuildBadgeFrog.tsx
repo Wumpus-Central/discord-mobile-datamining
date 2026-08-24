@@ -4,7 +4,7 @@ import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = ["#008456", "#6BE473"];
@@ -13,7 +13,7 @@ let items = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }];
 let closure_7 = ["#FFB84B", "#FFE361"];
 let closure_8 = [0.4, 0.8];
 const items1 = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }];
-const result = require("obj132").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeFrog.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeFrog.tsx");
 
 export const GuildBadgeFrog = function GuildBadgeFrog(width) {
   let num = width.width;
@@ -26,7 +26,8 @@ export const GuildBadgeFrog = function GuildBadgeFrog(width) {
   }
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.create(null));
-  let obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: closure_7, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
+  let obj = getTransformedBadgeColors;
+  obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: closure_7, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
   obj = {};

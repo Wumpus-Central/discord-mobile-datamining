@@ -1,16 +1,17 @@
 // discord_app/modules/guild_scheduled_events/useSelectStage.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default function useSelectStage() {
   const items = [closure_6];
   const stateFromStores = _require(first[5]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
+  _require = stateFromStores;
   const tmp2 = callback2(React.useState(stateFromStores), 2);
   first = tmp2[0];
   const callback = tmp2[1];
@@ -23,6 +24,7 @@ export default function useSelectStage() {
       clearTimeout(closure_0);
     };
   }, items1);
+  _require = undefined;
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -33,7 +35,7 @@ export default function useSelectStage() {
       closure_2 = tmp3;
       c5 = 1;
       if (closure_1 === closure_1) {
-        const channel = closure_2_5.getChannel(closure_1);
+        const channel = closure_2_5.getChannel(tmp31);
         if (null != channel) {
           callback(first[6]).navigateToStage(channel);
           c5 = 0;

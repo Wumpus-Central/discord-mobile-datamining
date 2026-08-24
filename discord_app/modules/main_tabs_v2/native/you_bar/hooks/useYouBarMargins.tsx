@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import PlatformTypes from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import map from "../../../../../design/tokens/native/useToken.tsx";
 import CONNECTION_BANNER_HEIGHT from "../YouBarConstants.tsx";
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: c4, YOU_BAR_FLOATING_OFFSET_MINIMUM: c5 } = CONNECTION_BANNER_HEIGHT);
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
 
 export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
   if (useSafeAreaInsetsDefault().bottom > 0) {

@@ -1,6 +1,7 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function reset() {
   c0 = false;
@@ -83,6 +84,7 @@ const scheduledMessageStore = new ScheduledMessageStore(dispatcherDefault, {
   FETCH_SCHEDULED_MESSAGES_SUCCESS: function handleFetchScheduledMessagesSuccess(arg0) {
     closure_1 = {};
     for (const item10007 of tmp) {
+      let tmp2 = closure_1;
       closure_1[item10007.scheduledMessageId] = item10007;
       continue;
     }
@@ -98,6 +100,6 @@ const scheduledMessageStore = new ScheduledMessageStore(dispatcherDefault, {
   LOGOUT: reset,
   CONNECTION_OPEN: reset
 });
-const result = require("obj132").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageStore.tsx");
+const result = set.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageStore.tsx");
 
 export default scheduledMessageStore;

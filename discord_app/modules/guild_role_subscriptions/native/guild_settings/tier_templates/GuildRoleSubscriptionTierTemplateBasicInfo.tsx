@@ -6,24 +6,28 @@ import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js"
 import { SubscriptionIntervalTypes } from "../../../../premium/PremiumConstants.tsx";
 import { CurrencyCodes } from "../../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
+createCacheKey = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
+let obj1 = { borderRadius: ThemesDefault.radii.sm };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
 
 export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   template = template.template;
   ({ handleSelectTemplateInPreview: importDefault, closeActionSheet: dependencyMap, descriptionTextProps } = template);
   ({ subscriptionPlanTextStyle, descriptionTextStyle } = template);
   const tmp = callback3();
+  let obj = { style: tmp.container, children: null };
+  obj = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  const obj = { source: { uri: image }, style: tmp.image };
+  obj = { source: { uri: image }, style: tmp.image };
   const items = [callback(preloadDefault, obj), callback(template(1297).Spacer, { size: 16 }), ];
   obj1 = { style: { flexShrink: 1 }, children: null };
   const items1 = [callback(template(4734).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), callback(template(1297).Spacer, { size: 4 }), ];

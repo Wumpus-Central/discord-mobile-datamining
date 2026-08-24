@@ -1,13 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import getHash from "../../experiments/ExperimentStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import closure_2 from "../../experiments/ExperimentStore.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
 import ME from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
 
 export default {
   title() {

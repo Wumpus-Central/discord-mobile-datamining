@@ -9,10 +9,10 @@ import { CollectiblesMobileShopScreen as closure_4 } from "../CollectiblesShopCo
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_6 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopFeaturedPage.tsx");
 
 export default function _default(shopBlock) {
   shopBlock = shopBlock.shopBlock;
@@ -25,11 +25,10 @@ export default function _default(shopBlock) {
     }
     return tmp6;
   }
-  { style: callback().container, children: null };
+  obj = { style: callback().container, children: null };
   obj = { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.eAn6z2);
   obj[1] = jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: getNoResultsSource.NoResults, body: null });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={getNoResultsSource.NoResults} body={null} />;
-  const tmp = callback();
 };

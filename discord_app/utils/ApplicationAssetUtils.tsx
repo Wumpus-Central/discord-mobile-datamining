@@ -3,12 +3,12 @@ import timestampDefault from "../modules/debug/Logger.tsx";
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import handleImageLoad from "../modules/image_upload/ImageLoaderUtils.tsx";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import handleFetchEmbeddedActivityShelfSuccess from "../modules/applications/ApplicationAssetsStore.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../modules/applications/ApplicationAssetsStore.tsx";
 import ME from "../Constants.tsx";
 
-require = fn;
+require = arg1;
 function updateAssets(closure_0) {
   const self = this;
   const apply = _updateAssets.apply;
@@ -119,13 +119,16 @@ function _resolveExternalAssets() {
         }
       } else {
         while (true) {
+          let num = 2;
           c9 = 2;
           let tmp4 = c8;
           if (0 === c8) {
             if (arg0 === 1) {
+              let num7 = 3;
               c9 = 3;
               throw body;
             } else if (arg0 === 2) {
+              let num6 = 3;
               c9 = 3;
               obj = { value: null, done: true };
               obj[0] = body;
@@ -133,26 +136,31 @@ function _resolveExternalAssets() {
             } else {
               closure_5 = tmp;
               closure_4 = tmp4;
+              let tmp30 = c1;
               body = undefined;
               c1 = undefined;
               let url;
               let external_asset_path;
               let tmp29 = body;
-              let found = c1.filter((item, index) => {
-                let tmp = null != item;
+              let found = c1.filter((arg0) => {
+                let tmp = null != arg0;
                 if (tmp) {
-                  tmp = null == closure_12.get(item);
+                  tmp = null == closure_12.get(arg0);
                 }
                 return tmp;
               });
               if (0 !== found.length) {
+                let tmp11 = callback;
+                let tmp12 = closure_1_2;
                 let HTTP = callback(closure_1_2[6]).HTTP;
                 obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
+                let tmp13 = closure_1_6;
                 obj1[0] = closure_1_6.APPLICATION_EXTERNAL_ASSETS(tmp29);
                 let obj2 = { urls: null };
                 obj2[0] = found;
                 obj1[1] = obj2;
                 c8 = 1;
+                let num5 = 1;
                 c9 = 1;
                 let obj3 = { value: null, done: false };
                 obj3[0] = HTTP.post(obj1);
@@ -161,31 +169,51 @@ function _resolveExternalAssets() {
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
+              let num3 = 3;
               c9 = 3;
               throw body;
             } else if (arg0 === 2) {
+              let num2 = 3;
               c9 = 3;
               obj = { value: null, done: true };
               obj[0] = body;
               return obj;
             } else {
+              let tmp18 = closure_4;
               body = body.body;
+              let tmp19 = body;
+              external_asset_path = body;
+              let tmp20 = body;
               external_asset_path = body;
               url = body[Symbol.iterator]();
+              let tmp8 = external_asset_path;
+              let tmp9 = url;
               while (url !== undefined) {
+                let tmp21 = closure_4;
+                let tmp22 = closure_5;
+                c7 = 1;
                 c1 = tmp10;
+                let tmp23 = c1;
                 url = c1.url;
+                let tmp24 = c1;
                 external_asset_path = c1.external_asset_path;
+                let tmp25 = closure_12;
+                let tmp26 = url;
+                let tmp27 = external_asset_path;
                 let result = closure_12.set(url, external_asset_path);
                 c7 = 0;
                 continue;
               }
             }
           } else {
+            let tmp5 = closure_6;
+            let tmp6 = closure_6;
             c7 = 0;
+            let tmp7 = url;
             url.return();
             throw closure_6;
           }
+          let num4 = 3;
           c9 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         }
@@ -203,15 +231,15 @@ function _resolveExternalAssets() {
 }
 function updateUrlAssetIds(arr) {
   let num = 0;
-  if (arr.filter((item, index) => {
+  if (arr.filter((str) => {
     let startsWithResult;
-    if (item != null) {
-      startsWithResult = item.startsWith("http:");
+    if (str != null) {
+      startsWithResult = str.startsWith("http:");
     }
     if (!startsWithResult) {
       let startsWithResult1;
-      if (item != null) {
-        startsWithResult1 = item.startsWith("https:");
+      if (str != null) {
+        startsWithResult1 = str.startsWith("https:");
       }
       startsWithResult = startsWithResult1;
     }
@@ -223,11 +251,15 @@ function updateUrlAssetIds(arr) {
     if (0 < arr.length) {
       do {
         let tmp3 = arr[num3];
+        let tmp4 = num3;
+        let tmp5 = num4;
         let sum = num4;
         if (null != tmp3) {
+          let tmp7 = map;
           let value = map.get(tmp3);
           sum = num4;
           if (null != value) {
+            let tmp9 = closure_11;
             let mp = closure_11.mp;
             let str4 = mp.serialize(value);
             let combined = null;
@@ -254,6 +286,8 @@ function updateNonUrlAssetIds(arg0, arg1, arg2, arg3) {
   if (0 < arg0.length) {
     do {
       let tmp = arg0[num];
+      let tmp2 = num;
+      let tmp3 = flag;
       let tmp4 = flag;
       if (null != tmp) {
         tmp4 = flag;
@@ -353,15 +387,15 @@ function _fetchAssetIds() {
                 obj2[1] = closure_0;
                 lib(num13[7]).dispatch(obj2);
                 closure_3 = [];
-                length = lib.filter((item, index) => {
+                length = lib.filter((str) => {
                   let startsWithResult;
-                  if (item != null) {
-                    startsWithResult = item.startsWith("http:");
+                  if (str != null) {
+                    startsWithResult = str.startsWith("http:");
                   }
                   if (!startsWithResult) {
                     let startsWithResult1;
-                    if (item != null) {
-                      startsWithResult1 = item.startsWith("https:");
+                    if (str != null) {
+                      startsWithResult1 = str.startsWith("https:");
                     }
                     startsWithResult = startsWithResult1;
                   }
@@ -401,7 +435,7 @@ function _fetchAssetIds() {
                 obj5[2] = c5;
                 lib(num13[7]).dispatch(obj5);
                 if (callback4(lib, closure_3, c5, num13)) {
-                  callback(closure_0).then((result) => closure_1_21(closure_0, closure_1, num13 - 1));
+                  callback(closure_0).then(() => closure_1_21(closure_0, closure_1, num13 - 1));
                   const promise = callback(closure_0);
                 } else {
                   obj1 = lib(num13[7]);
@@ -462,6 +496,27 @@ const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{wi
 const re10 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/;
 let obj = {
   deserialize(arg0) {
+    return "" + c8 + encodeURIComponent(arg0);
+  },
+  serialize(arg0) {
+    return arg0.split(c8)[1];
+  }
+};
+obj = {
+  deserialize(arg0, arg1) {
+    return "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + encodeURIComponent(arg0) + "-" + arg1[0] + "x" + arg1[1] + ".jpg";
+  },
+  serialize(str) {
+    const match = str.match(closure_9);
+    let tmp2 = null;
+    if (null != match) {
+      tmp2 = match[1];
+    }
+    return tmp2;
+  }
+};
+obj = {
+  deserialize(arg0) {
     return "https://i.ytimg.com/vi/" + encodeURIComponent(arg0) + "/hqdefault_live.jpg";
   },
   serialize(str) {
@@ -520,11 +575,10 @@ let closure_11 = {
   }
 };
 const map = new Map();
-let result = require("obj132").fileFinishedImporting("utils/ApplicationAssetUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/ApplicationAssetUtils.tsx");
 
 export const getAssetFromImageURL = function getAssetFromImageURL(SPOTIFY, url) {
-  const serializer = closure_11[SPOTIFY];
-  const str = serializer.serialize(url);
+  const str = closure_11[SPOTIFY].serialize(url);
   let combined = null;
   if (str) {
     const _HermesInternal = HermesInternal;
@@ -532,9 +586,9 @@ export const getAssetFromImageURL = function getAssetFromImageURL(SPOTIFY, url) 
   }
   return combined;
 };
-export const getAssetImage = function getAssetImage(application_id, media_assets_large_image, items, png) {
-  let str = png;
-  if (png === undefined) {
+export const getAssetImage = function getAssetImage(application_id, media_assets_large_image, items, applicationId) {
+  let str = applicationId;
+  if (applicationId === undefined) {
     str = "png";
   }
   if (null != media_assets_large_image) {
@@ -543,19 +597,19 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       if (tmp21 === PlatformTypes.TWITCH) {
         if (null != items) {
           if (typeof items !== "number") {
-            const deserializer2 = closure_11[tmp23.TWITCH];
-            const deserializeResult = deserializer2.deserialize(tmp22, items);
+            const deserializeResult = closure_11[tmp23.TWITCH].deserialize(tmp22, items);
+            const obj5 = closure_11[tmp23.TWITCH];
           }
         }
-        const obj2 = new timestampDefault("ApplicationAssetUtils");
-        obj2.warn("getAssetImage: size must === [number, number] for Twitch");
+        const obj3 = new timestampDefault("ApplicationAssetUtils");
+        obj3.warn("getAssetImage: size must === [number, number] for Twitch");
       } else {
         const _Object = Object;
         const call = hasOwnProperty.call;
         let deserializeResult1;
         if (typeof call === "unknown" ? hasOwnProperty(tmp21) : call(closure_11, tmp21)) {
-          const deserializer = closure_11[tmp21];
-          deserializeResult1 = deserializer.deserialize(tmp22);
+          deserializeResult1 = tmp25[tmp21].deserialize(tmp22);
+          const obj2 = tmp25[tmp21];
         }
         return deserializeResult1;
       }
@@ -577,6 +631,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       if (typeof applyResult === "number") {
         const _HermesInternal3 = HermesInternal;
         str4 = "?size=" + handleImageLoad.getBestMediaProxySize(applyResult);
+        const obj4 = handleImageLoad;
       }
       const _window = window;
       if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -587,6 +642,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       } else {
         const _HermesInternal = HermesInternal;
         combined = "" + sendRequest.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
+        const obj = sendRequest;
       }
       return combined;
     }
@@ -597,15 +653,15 @@ export { fetchAssetIds };
 export const getAssetIds = function getAssetIds(id, closure_11) {
   const items = [];
   let num = 0;
-  if (closure_11.filter((item, index) => {
+  if (closure_11.filter((str) => {
     let startsWithResult;
-    if (item != null) {
-      startsWithResult = item.startsWith("http:");
+    if (str != null) {
+      startsWithResult = str.startsWith("http:");
     }
     if (!startsWithResult) {
       let startsWithResult1;
-      if (item != null) {
-        startsWithResult1 = item.startsWith("https:");
+      if (str != null) {
+        startsWithResult1 = str.startsWith("https:");
       }
       startsWithResult = startsWithResult1;
     }
@@ -617,11 +673,15 @@ export const getAssetIds = function getAssetIds(id, closure_11) {
     if (0 < closure_11.length) {
       do {
         let tmp3 = closure_11[num3];
+        let tmp4 = num3;
+        let tmp5 = num4;
         let sum = num4;
         if (null != tmp3) {
+          let tmp7 = map;
           let value = map.get(tmp3);
           sum = num4;
           if (null != value) {
+            let tmp9 = closure_11;
             let mp = closure_11.mp;
             let str4 = mp.serialize(value);
             let combined = null;
@@ -650,6 +710,7 @@ export const getAssetIds = function getAssetIds(id, closure_11) {
     if (null != assets) {
       for (let num6 = 0; num6 < closure_11.length; num6 = num6 + 1) {
         let tmp13 = closure_11[num6];
+        let tmp14 = num6;
         if (null != tmp13) {
           if (null == items[num6]) {
             let _Object = Object;

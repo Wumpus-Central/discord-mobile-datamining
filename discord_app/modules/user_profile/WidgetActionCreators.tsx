@@ -1,15 +1,16 @@
 // discord_app/modules/user_profile/WidgetActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/UserStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
 
 export default {
   setPendingWidgets(items) {
-    const obj = { type: "WIDGET_PENDING_SET", widgets: items };
+    let obj = dispatcherDefault;
+    obj = { type: "WIDGET_PENDING_SET", widgets: items };
     obj.dispatch(obj);
   },
   savePendingWidgets(arg0) {
@@ -54,7 +55,7 @@ export default {
                 let obj5 = closure_1_1(closure_1_2[3]);
                 obj5.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
                 c3 = 1;
-                const mapped = closure_1_0.map((item, index) => item.toSubmission());
+                const mapped = closure_1_0.map((toSubmission) => toSubmission.toSubmission());
                 const HTTP = closure_1_0(closure_1_2[4]).HTTP;
                 obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
                 obj1[0] = constants.USER_PROFILE_WIDGETS;
@@ -121,10 +122,10 @@ export default {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -135,15 +136,15 @@ export default {
           if (0 === table) {
             if (arg0 === 1) {
               c3 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
               let upload_url = tmp2;
-              body = tmp5;
+              let body = tmp5;
               body = undefined;
               upload_url = undefined;
               table = undefined;
@@ -164,14 +165,14 @@ export default {
           } else if (1 === tmp5) {
             if (arg0 === 1) {
               c3 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
               const obj4 = { value: null, done: true };
-              obj4[0] = body;
+              obj4[0] = arg1;
               return obj4;
             } else {
-              body = body.body;
+              body = arg1.body;
               upload_url = body.upload_url;
               table = body.upload_filename;
               const obj5 = { method: "PUT", body: null, headers: null };
@@ -191,14 +192,14 @@ export default {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c3 = 3;
             const obj8 = { value: null, done: true };
-            obj8[0] = body;
+            obj8[0] = arg1;
             return obj8;
           } else {
-            c3 = body;
+            c3 = arg1;
             if (c3.ok) {
               c3 = 3;
               obj = { value: null, done: true };
@@ -226,6 +227,7 @@ export default {
     }
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return callback(function*() {
+      let upload_url = tmp2;
       const HTTP2 = closure_1_0(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: true };
       obj1[0] = closure_1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
@@ -233,8 +235,8 @@ export default {
       obj2[0] = closure_1_0.size;
       obj1[1] = obj2;
       yield HTTP2.post(obj1);
-      body = body.body;
-      const upload_url = body.upload_url;
+      const body = arg1.body;
+      upload_url = body.upload_url;
       const HTTP = closure_1_0(530).HTTP;
       const obj5 = { url: null, body: null, headers: null, onRequestProgress: null, signal: null, rejectWithError: true };
       obj5[0] = upload_url;
@@ -376,7 +378,8 @@ export default {
     })();
   },
   removeGameFromSuggestedGames(applicationId) {
-    const obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
+    let obj = dispatcherDefault;
+    obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
     obj.dispatch(obj);
   }
 };

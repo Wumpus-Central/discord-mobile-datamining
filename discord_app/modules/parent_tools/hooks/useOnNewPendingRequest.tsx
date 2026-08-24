@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/hooks/useOnNewPendingRequest.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../FamilyCenterStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
 
 export default function useOnNewPendingRequest(stateFromStores) {
   const _require = stateFromStores;
@@ -14,7 +14,7 @@ export default function useOnNewPendingRequest(stateFromStores) {
   pendingRequestCount(stateFromStores[4])(() => {
     if (!ref2.getAreLinkedUsersProcessed()) {
       const linkedUsers = pendingRequestCount(stateFromStores[5]).fetchLinkedUsers();
-      linkedUsers.catch((error) => {
+      linkedUsers.catch(() => {
 
       });
       const obj = pendingRequestCount(stateFromStores[5]);
@@ -30,12 +30,12 @@ export default function useOnNewPendingRequest(stateFromStores) {
   const effect1 = React.useEffect(() => {
     if (stateFromStores) {
       if (null != ref2.current) {
-        ref2.current = pendingRequestCount;
-        if (pendingRequestCount > ref2.current) {
+        tmp.current = pendingRequestCount;
+        if (pendingRequestCount > tmp.current) {
           ref.current();
         }
       } else {
-        ref2.current = pendingRequestCount;
+        tmp.current = pendingRequestCount;
       }
     }
   }, items2);

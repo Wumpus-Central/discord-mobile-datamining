@@ -1,8 +1,8 @@
 // _runtime/01652_Animated.js
 import noopDefault from "00019_noop.js";
 import cancelAnimationDefault from "01654_cancelAnimation.js";
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
@@ -10,8 +10,9 @@ import controlEdgeToEdgeValues from "01653_controlEdgeToEdgeValues.js";
 import { cancelAnimation } from "01654_cancelAnimation.js";
 import { useEventHandlerRegistration } from "01843_useEventHandlerRegistration.js";
 import { useAnimatedKeyboardHandler } from "01845_useAnimatedKeyboardHandler.js";
+import { NOOP } from "01847_NOOP.js";
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c4, useEffect: c5, useMemo: closure_6, useRef: error, useState: closure_8 } = noop);
 noopDefault;
 let Animated = get_ActivityIndicator.Animated;
@@ -42,19 +43,19 @@ export const KeyboardProvider = (enabled) => {
   const tmp4 = callback(sharedValue2(tmp), 2);
   const first = tmp4[0];
   callback = tmp4[1];
-  let obj = useEventHandlerRegistration;
+  let obj = _useEventHandlerRegistration;
   const callback2 = obj.useAnimatedValue(0);
-  obj1 = useEventHandlerRegistration;
+  obj1 = _useEventHandlerRegistration;
   const callback3 = obj1.useAnimatedValue(0);
-  let obj2 = cancelAnimation;
+  let obj2 = _cancelAnimation;
   const sharedValue = obj2.useSharedValue(0);
-  let obj3 = cancelAnimation;
+  let obj3 = _cancelAnimation;
   sharedValue1 = obj3.useSharedValue(0);
-  sharedValue2 = require("01654_cancelAnimation.js").useSharedValue(null);
-  const obj5 = cancelAnimation;
-  Animated = require("01843_useEventHandlerRegistration.js").useEventHandlerRegistration(tmp3);
-  const obj6 = useEventHandlerRegistration;
-  closure_10 = require("01843_useEventHandlerRegistration.js").useEventHandlerRegistration(tmp3);
+  sharedValue2 = _cancelAnimation.useSharedValue(null);
+  const obj5 = _cancelAnimation;
+  Animated = _useEventHandlerRegistration.useEventHandlerRegistration(tmp3);
+  const obj6 = _useEventHandlerRegistration;
+  closure_10 = _useEventHandlerRegistration.useEventHandlerRegistration(tmp3);
   closure_11 = callback2(first(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -116,9 +117,10 @@ export const KeyboardProvider = (enabled) => {
     }
   }), []);
   let items = [first];
-  const obj7 = useEventHandlerRegistration;
+  const obj7 = _useEventHandlerRegistration;
   const tmp9 = sharedValue(() => {
-    let obj = { progress: closure_4, height: closure_9.multiply(closure_5, -1) };
+    let obj = { enabled: first, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
+    obj = { progress: closure_4, height: closure_9.multiply(closure_5, -1) };
     obj[1] = obj;
     obj = { progress: sharedValue, height: sharedValue1 };
     obj[2] = obj;
@@ -134,7 +136,7 @@ export const KeyboardProvider = (enabled) => {
     return closure_9.event(items, { useNativeDriver: true });
   }, []);
   const fn = function _(progress, arr) {
-    if (arr.includes(android)) {
+    if (arr.includes(closure_1_15)) {
       sharedValue.value = progress.progress;
       sharedValue1.value = -progress.height;
     }
@@ -200,7 +202,7 @@ export const KeyboardProvider = (enabled) => {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android", "ios"];
-    if (items.includes(android)) {
+    if (items.includes(closure_1_15)) {
       sharedValue.value = progress.progress;
       sharedValue1.value = -progress.height;
     }
@@ -214,7 +216,7 @@ export const KeyboardProvider = (enabled) => {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android"];
-    if (items.includes(android)) {
+    if (items.includes(closure_1_15)) {
       sharedValue.value = progress.progress;
       sharedValue1.value = -progress.height;
     }
@@ -223,8 +225,8 @@ export const KeyboardProvider = (enabled) => {
   fn3.__workletHash = 10129400155228;
   fn3.__initData = closure_20;
   obj[3] = fn3;
-  const obj9 = useAnimatedKeyboardHandler;
-  const animatedKeyboardHandler = require("01845_useAnimatedKeyboardHandler.js").useAnimatedKeyboardHandler(obj, []);
+  const obj9 = _useAnimatedKeyboardHandler;
+  const animatedKeyboardHandler = _useAnimatedKeyboardHandler.useAnimatedKeyboardHandler(obj, []);
   obj1 = { onFocusedInputLayoutChanged: null };
   class I {
     constructor(arg0) {
@@ -244,7 +246,7 @@ export const KeyboardProvider = (enabled) => {
   I.__initData = closure_21;
   obj1[0] = I;
   let items1 = [undefined === preload || preload];
-  const obj11 = useAnimatedKeyboardHandler;
+  const obj11 = _useAnimatedKeyboardHandler;
   callback3(() => {
     if (callback) {
       const KeyboardController = callback(table[10]).KeyboardController;
@@ -273,9 +275,9 @@ export const KeyboardProvider = (enabled) => {
   obj3[8] = tmp11;
   obj3[9] = tmp11;
   obj3[10] = tmp11;
-  obj3[11] = require("01845_useAnimatedKeyboardHandler.js").useFocusedInputLayoutHandler(obj1, []);
+  obj3[11] = _useAnimatedKeyboardHandler.useFocusedInputLayoutHandler(obj1, []);
   obj3[12] = children;
   const items2 = [closure_10(closure_13, obj3), closure_10(Animated.View, { style: tmp10 })];
   obj2[1] = items2;
-  return closure_11(require("01847_NOOP.js").KeyboardContext.Provider, obj2);
+  return closure_11(_NOOP.KeyboardContext.Provider, obj2);
 };

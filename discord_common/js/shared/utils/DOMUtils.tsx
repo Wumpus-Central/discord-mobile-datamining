@@ -1,10 +1,10 @@
 // discord_common/js/shared/utils/DOMUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const re0 = /input/i;
 const re1 = /textarea/i;
-const set = new Set(["text", "password", "number", "date", "datetime-local", "time", "week", "month", "email", "search", "tel", "url"]);
-let result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/DOMUtils.tsx");
+let set = new Set(["text", "password", "number", "date", "datetime-local", "time", "week", "month", "email", "search", "tel", "url"]);
+let result = set.fileFinishedImporting("../discord_common/js/shared/utils/DOMUtils.tsx");
 
 export const isElement = function isElement(ownerDocument, name) {
   if (null == ownerDocument) {
@@ -31,8 +31,8 @@ export const isElement = function isElement(ownerDocument, name) {
     }
   }
 };
-export const cssValueToNumber = function cssValueToNumber(match) {
-  const parsed = parseInt(match, 10);
+export const cssValueToNumber = function cssValueToNumber(joined) {
+  const parsed = parseInt(joined, 10);
   let num = 0;
   if (!isNaN(parsed)) {
     num = parsed;

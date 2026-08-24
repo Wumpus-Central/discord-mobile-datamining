@@ -17,12 +17,13 @@ function forHorizontalIOS(layouts) {
     obj[0] = [0, 1];
     const items2 = [0, -0.3 * screen.width];
     obj[1] = items2;
-    num = callback(progress2.interpolate(obj), inverted);
+    num = tmp(progress2.interpolate(obj), inverted);
   }
   obj = { cardStyle: { transform: items1 }, overlayStyle: { opacity: progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 0.07], extrapolate: "clamp" }) }, shadowStyle: null };
   items1[1] = { translateX: num };
   progress3 = current.progress;
   obj1 = { opacity: progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 0.07], extrapolate: "clamp" }) };
+  tmp = callback;
   const progress4 = current.progress;
   obj[2] = { shadowOpacity: progress4.interpolate({ inputRange: [0, 1], outputRange: [0, 0.3], extrapolate: "clamp" }) };
   return obj;
@@ -38,7 +39,9 @@ export const forHorizontalIOSInverted = function forHorizontalIOSInverted(invert
   return forHorizontalIOS(obj);
 };
 export const forVerticalIOS = function forVerticalIOS(inverted) {
-  const obj = { translateY: callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted.inverted) };
+  let obj = { cardStyle: null };
+  obj = { transform: null };
+  obj = { translateY: callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted.inverted) };
   progress = inverted.current.progress;
   items = [inverted.layouts.screen.height, 0];
   const items1 = [obj];
@@ -66,7 +69,7 @@ export const forModalPresentationIOS = function forModalPresentationIOS(next) {
     obj[1] = [0, 1];
     num3 = progress2.interpolate(obj);
   }
-  const tmp3Result = callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num3);
+  const tmp3Result = closure_3(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num3);
   obj = { inputRange: [0, 1, 2], outputRange: null };
   const items = [screen.height, , ];
   let num4 = 0;
@@ -81,6 +84,8 @@ export const forModalPresentationIOS = function forModalPresentationIOS(next) {
   items[2] = num5 - num2 * result;
   obj[1] = items;
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
+  const tmp3 = closure_3;
+  const tmp6 = closure_4;
   let num6 = 1;
   const opacity = tmp3Result.interpolate({ inputRange: [0, 1, 1.0001, 2], outputRange: [0, 0.3, 1, 1] });
   if (screen.width <= screen.height) {
@@ -115,7 +120,7 @@ export const forModalPresentationIOS = function forModalPresentationIOS(next) {
     num11 = num2;
   }
   obj2[7] = num11;
-  const items2 = [{ translateY: callback2(tmp3Result.interpolate(obj), inverted) }, { scale: num6 }];
+  const items2 = [{ translateY: closure_4(tmp3Result.interpolate(obj), inverted) }, { scale: num6 }];
   obj2[8] = items2;
   return { cardStyle: obj2, overlayStyle: { opacity } };
 };
@@ -124,7 +129,8 @@ export const forFadeFromBottomAndroid = function forFadeFromBottomAndroid(curren
   const progress = current.progress;
   const items = [0.08 * current.layouts.screen.height, 0];
   ({ inverted, closing } = current);
-  const obj = { opacity: null, transform: null };
+  let obj = { cardStyle: null };
+  obj = { opacity: null, transform: null };
   const tmp = callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted);
   const progress2 = current.progress;
   obj[0] = conditional.conditional(closing, current.progress, progress2.interpolate({ inputRange: [0, 0.5, 0.9, 1], outputRange: [0, 0.25, 0.7, 1], extrapolate: "clamp" }));
@@ -136,7 +142,9 @@ export const forFadeFromBottomAndroid = function forFadeFromBottomAndroid(curren
 export const forRevealFromBottomAndroid = function forRevealFromBottomAndroid(layouts) {
   ({ current, next, inverted } = layouts);
   const screen = layouts.layouts.screen;
-  const obj = { translateY: callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted) };
+  let obj = { containerStyle: null, cardStyle: null, overlayStyle: null };
+  obj = { overflow: "hidden", transform: null };
+  obj = { translateY: callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted) };
   progress = current.progress;
   items = [screen.height, ];
   let num = 0;
@@ -153,11 +161,12 @@ export const forRevealFromBottomAndroid = function forRevealFromBottomAndroid(la
     obj2[0] = [0, 1];
     const items4 = [0, 0.02 * screen.height * -1];
     obj2[1] = items4;
-    num = callback(progress3.interpolate(obj2), inverted);
+    num = tmp(progress3.interpolate(obj2), inverted);
   }
   items3[1] = { translateY: num };
   obj[1] = { transform: items3 };
   obj1 = { translateY: callback(progress2.interpolate({ inputRange: [0, 1], outputRange: items2, extrapolate: "clamp" }), inverted) };
+  tmp = callback;
   const progress4 = current.progress;
   obj[2] = { opacity: progress4.interpolate({ inputRange: [0, 0.36, 1], outputRange: [0, 0.1, 0.1], extrapolate: "clamp" }) };
   return obj;
@@ -173,10 +182,12 @@ export const forScaleFromCenterAndroid = function forScaleFromCenterAndroid(clos
     obj[1] = [0, 1];
     num = progress2.interpolate(obj);
   }
-  const tmpResult = callback(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
+  const tmpResult = closure_3(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
+  obj = { cardStyle: null };
   obj = { opacity: tmpResult.interpolate({ inputRange: [0, 0.75, 0.875, 1, 1.0825, 1.2075, 2], outputRange: [0, 0, 1, 1, 1, 1, 0] }), transform: null };
   obj1 = { scale: null };
   const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
+  const tmp = closure_3;
   const progress3 = current.progress;
   const obj6 = conditional;
   obj1[0] = obj6.conditional(closing.closing, progress3.interpolate({ inputRange: [0, 1], outputRange: [0.925, 1], extrapolate: "clamp" }), tmpResult.interpolate({ inputRange: [0, 1, 2], outputRange: [0.85, 1, 1.075] }));
@@ -194,9 +205,11 @@ export const forFadeFromRightAndroid = function forFadeFromRightAndroid(closing)
     let obj = { inputRange: null, outputRange: null, extrapolate: "clamp" };
     obj[0] = [0, 1];
     obj[1] = [0, -96];
-    num = callback(progress2.interpolate(obj), inverted);
+    num = tmp(progress2.interpolate(obj), inverted);
   }
+  obj = { cardStyle: null };
   obj = { opacity: null, transform: null };
+  tmp = callback;
   const tmp2 = callback(progress.interpolate({ inputRange: [0, 1], outputRange: [96, 0], extrapolate: "clamp" }), inverted);
   const progress3 = current.progress;
   obj[0] = conditional.conditional(closing.closing, progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), current.progress);
@@ -210,7 +223,8 @@ export const forBottomSheetAndroid = function forBottomSheetAndroid(current) {
   const progress = current.progress;
   const items = [0.8 * current.layouts.screen.height, 0];
   ({ inverted, closing } = current);
-  let obj = { opacity: null, transform: null };
+  let obj = { cardStyle: null, overlayStyle: null };
+  obj = { opacity: null, transform: null };
   const tmp = callback(progress.interpolate({ inputRange: [0, 1], outputRange: items, extrapolate: "clamp" }), inverted);
   const progress2 = current.progress;
   obj[0] = conditional.conditional(closing, current.progress, progress2.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }));
@@ -224,7 +238,8 @@ export const forBottomSheetAndroid = function forBottomSheetAndroid(current) {
 };
 export const forFadeFromCenter = function forFadeFromCenter(current) {
   const progress = current.current.progress;
-  let obj = { opacity: progress.interpolate({ inputRange: [0, 0.5, 0.9, 1], outputRange: [0, 0.25, 0.7, 1] }) };
+  let obj = { cardStyle: null, overlayStyle: null };
+  obj = { opacity: progress.interpolate({ inputRange: [0, 0.5, 0.9, 1], outputRange: [0, 0.25, 0.7, 1] }) };
   obj[0] = obj;
   obj = { opacity: progress.interpolate({ inputRange: [0, 1], outputRange: [0, 0.5], extrapolate: "clamp" }) };
   obj[1] = obj;

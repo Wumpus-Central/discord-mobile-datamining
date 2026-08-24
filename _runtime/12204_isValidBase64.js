@@ -3,28 +3,28 @@ import _isNativeReflectConstruct from "12200__isNativeReflectConstruct.js";
 import mergeDefs from "12203_mergeDefs.js";
 import _mod12205 from "metro/12205__.js";
 import mergeDefs2 from "12206_mergeDefs.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00005_asyncGeneratorStep.js";
 
 let self = this;
-function isValidBase64(closure_0) {
-  if ("" === _require) {
+function isValidBase64(replaced) {
+  if ("" === replaced) {
     return true;
-  } else if (_require.length % 4 !== 0) {
+  } else if (replaced.length % 4 !== 0) {
     return false;
   } else {
     try {
       const _atob = atob;
-      atob(_require);
+      atob(replaced);
       return true;
     } catch (err) {
       return false;
     }
   }
 }
-function isValidJWT(str, alg) {
-  let tmp = alg;
-  if (alg === undefined) {
+function isValidJWT(str) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
     tmp = null;
   }
   try {
@@ -32,7 +32,7 @@ function isValidJWT(str, alg) {
     if (3 !== parts.length) {
       return false;
     } else {
-      const first = _slicedToArray(tmp3, 1)[0];
+      const first = callback(tmp3, 1)[0];
       if (first) {
         const _JSON = JSON;
         const _atob = atob;
@@ -46,7 +46,7 @@ function isValidJWT(str, alg) {
           tmp7 = "JWT" === typ;
         }
         if (tmp7) {
-          alg = tmp6.alg;
+          let alg = tmp6.alg;
           if (alg) {
             let tmp13 = !tmp;
             if (tmp) {
@@ -78,6 +78,7 @@ function normalizeDef(shape) {
     shape = shape.shape;
     let hasItem;
     if (shape != null) {
+      let tmp4 = nextResult;
       let tmp5 = shape[tmp2];
       if (tmp5 != null) {
         let _zod = tmp5._zod;
@@ -93,8 +94,14 @@ function normalizeDef(shape) {
       continue;
     } else {
       let _Error = Error;
+      let tmp6 = nextResult;
       let _HermesInternal = HermesInternal;
+      let str = "\": expected a Zod schema";
+      let str2 = "Invalid element at key \"";
+      let tmp7 = new.target;
+      let tmp8 = new.target;
       error = new Error("Invalid element at key \"" + tmp2 + "\": expected a Zod schema");
+      let tmp10 = error;
       throw error;
     }
   }
@@ -108,14 +115,16 @@ function normalizeDef(shape) {
   obj.optionalKeys = new Set(optionalKeysResult);
   return obj;
 }
-function handleCatchall(arr, closure_0, tmp12Result, arg3, keySet, closure_0) {
-  let iter = tmp12Result;
-  closure_1 = tmp12Result;
+function handleCatchall(arr, closure_0, arg2, arg3, keySet) {
+  const key10019 = closure_0;
+  let iter = arg2;
+  closure_1 = arg2;
   let items = [];
   keySet = keySet.keySet;
   const _zod = keySet.catchall._zod;
   closure_2 = tmp2;
   for (const key10019 in arg1) {
+    let tmp14 = key10019;
     if (keySet.has(key10019)) {
       continue;
     } else {
@@ -129,22 +138,22 @@ function handleCatchall(arr, closure_0, tmp12Result, arg3, keySet, closure_0) {
         let runResult = _zod.run(obj, arg3);
         let _Promise2 = Promise;
         if (runResult instanceof Promise) {
-          arr = arg0.push(runResult.then((result) => {
-            if (result.issues.length) {
+          arr = arg0.push(runResult.then((issues) => {
+            if (issues.issues.length) {
               if (!closure_2) {
-                const issues = tmp12Result.issues;
+                issues = iter.issues;
                 const push = issues.push;
                 const items = [];
-                HermesBuiltin.arraySpread(closure_10.prefixIssues(key10019, result.issues), 0);
+                HermesBuiltin.arraySpread(closure_10.prefixIssues(tmp, issues.issues), 0);
                 HermesBuiltin.apply(items, issues);
               }
             }
-            if (undefined === result.value) {
-              if (key10019 in key10019) {
-                tmp12Result.value[key10019] = undefined;
+            if (undefined === issues.value) {
+              if (tmp in tmp2) {
+                iter.value[tmp] = undefined;
               }
             } else {
-              tmp12Result.value[key10019] = result.value;
+              iter.value[tmp] = issues.value;
             }
           }));
           continue;
@@ -153,8 +162,14 @@ function handleCatchall(arr, closure_0, tmp12Result, arg3, keySet, closure_0) {
             if (!tmp2) {
               let issues = iter.issues;
               let push = issues.push;
+              let tmp3 = closure_10;
               let items1 = [];
+              let tmp4 = items1;
+              let num = 0;
               let arraySpreadResult = HermesBuiltin.arraySpread(closure_10.prefixIssues(key10019, runResult.issues), 0);
+              let tmp6 = push;
+              let tmp7 = items1;
+              let tmp8 = issues;
               let applyResult = HermesBuiltin.apply(items1, issues);
             }
             continue;
@@ -184,27 +199,29 @@ function handleCatchall(arr, closure_0, tmp12Result, arg3, keySet, closure_0) {
     obj = { code: "unrecognized_keys", keys: null, input: null, inst: null };
     obj[1] = items;
     obj[2] = closure_0;
-    obj[3] = closure_0;
+    obj[3] = arg5;
     issues1.push(obj);
   }
   if (arr.length) {
-    iter = Promise.all(arr).then((result) => closure_1);
+    iter = Promise.all(arr).then(() => closure_1);
     const allPromises = Promise.all(arr);
   }
   return iter;
 }
-function handleUnionResults(arr, issues, closure_02, closure_1) {
-  closure_0 = closure_1;
+function handleUnionResults(arr, issues) {
+  closure_0 = arg3;
   const iter = arr[Symbol.iterator]();
   const iter2 = iter.next();
   while (iter !== undefined) {
+    let tmp = iter2;
     if (0 === iter2.issues.length) {
       issues.value = iter2.value;
+      let tmp2 = iter;
       iter.return();
       return issues;
     }
   }
-  const found = arr.filter((item, index) => !closure_10.aborted(item));
+  const found = arr.filter((closure_1_0) => !closure_10.aborted(closure_1_0));
   if (1 === found.length) {
     issues.value = found[0].value;
     let first = found[0];
@@ -212,38 +229,38 @@ function handleUnionResults(arr, issues, closure_02, closure_1) {
     issues = issues.issues;
     const obj = { code: "invalid_union", input: null, inst: null, errors: null };
     obj[1] = issues.value;
-    obj[2] = closure_02;
-    obj[3] = arr.map((item, index) => {
-      const issues = item.issues;
-      return issues.map((item, index) => closure_1_10.finalizeIssue(item, closure_0, closure_1_8.config()));
+    obj[2] = arg2;
+    obj[3] = arr.map((issues) => {
+      issues = issues.issues;
+      return issues.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
     });
-    arr = issues.push(obj);
+    issues.push(obj);
     first = issues;
   }
   return first;
 }
-function handleExclusiveUnionResults(arr, issues, closure_0, arg3) {
+function handleExclusiveUnionResults(arr, issues) {
   closure_0 = arg3;
-  const found = arr.filter((item, index) => 0 === item.issues.length);
+  const found = arr.filter((issues) => 0 === issues.issues.length);
   if (1 === found.length) {
     issues.value = found[0].value;
   } else if (0 === found.length) {
     issues = issues.issues;
     let obj = { code: "invalid_union", input: null, inst: null, errors: null };
     obj[1] = issues.value;
-    obj[2] = closure_0;
-    obj[3] = arr.map((item, index) => {
-      const issues = item.issues;
-      return issues.map((item, index) => closure_1_10.finalizeIssue(item, closure_0, closure_1_8.config()));
+    obj[2] = arg2;
+    obj[3] = arr.map((issues) => {
+      issues = issues.issues;
+      return issues.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
     });
-    arr = issues.push(obj);
+    issues.push(obj);
   } else {
     const issues1 = issues.issues;
     obj = { code: "invalid_union", input: null, inst: null, errors: null, inclusive: false };
     obj[1] = issues.value;
-    obj[2] = closure_0;
+    obj[2] = arg2;
     obj[3] = [];
-    arr = issues1.push(obj);
+    issues1.push(obj);
   }
   return issues;
 }
@@ -271,7 +288,7 @@ function mergeValues(value, value2) {
         closure_0 = Object.keys(value2);
         const _Object2 = Object;
         const keys = Object.keys(value);
-        const found = keys.filter((item, index) => -1 !== closure_0.indexOf(item));
+        const found = keys.filter((arg0) => -1 !== closure_0.indexOf(arg0));
         obj1 = {};
         const merged = Object.assign(value);
         const merged1 = Object.assign(value2);
@@ -279,16 +296,23 @@ function mergeValues(value, value2) {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp18 = nextResult;
+          let tmp19 = mergeValues;
           let tmp20 = mergeValues(value[nextResult], value2[nextResult]);
           let tmp21 = tmp20;
+          let tmp22 = nextResult;
           if (tmp20.valid) {
+            let tmp27 = tmp20;
             obj1[tmp18] = tmp21.data;
             continue;
           } else {
             let obj2 = { valid: false, mergeErrorPath: null };
             let items = [tmp18];
+            let tmp23 = tmp20;
+            let num4 = 1;
+            let tmp24 = items;
             let arraySpreadResult = HermesBuiltin.arraySpread(tmp21.mergeErrorPath, 1);
             obj2[1] = items;
+            let tmp26 = iter;
             iter.return();
             return obj2;
           }
@@ -340,46 +364,62 @@ function handleIntersectionResults(issues, value, value2) {
   while (iter !== undefined) {
     let tmp3 = nextResult;
     if ("unrecognized_keys" === nextResult.code) {
+      let tmp6 = tmp;
       if (tmp == null) {
         tmp = nextResult;
       }
+      let tmp7 = nextResult;
       let keys = tmp3.keys;
+      let tmp8 = keys;
+      let tmp9 = keys;
       for (const item10035 of keys) {
+        let tmp10 = item10035;
         if (!map.has(item10035)) {
-          let result = map.set(item10035, {});
+          let tmp11 = item10035;
+          let result = map.set(tmp10, {});
         }
-        map.get(item10035).l = true;
+        let tmp13 = item10035;
+        map.get(tmp10).l = true;
         continue;
       }
     } else {
       issues = issues.issues;
+      let tmp4 = nextResult;
       let arr = issues.push(tmp3);
     }
     continue;
   }
   for (const item10054 of tmp14) {
+    let tmp15 = item10054;
     if ("unrecognized_keys" === item10054.code) {
-      let keys2 = item10054.keys;
+      let tmp18 = item10054;
+      let keys2 = tmp15.keys;
+      let tmp19 = keys2;
+      let tmp20 = keys2;
       for (const item10067 of keys2) {
+        let tmp21 = item10067;
         if (!map.has(item10067)) {
-          let result1 = map.set(item10067, {});
+          let tmp22 = item10067;
+          let result1 = map.set(tmp21, {});
         }
-        map.get(item10067).r = true;
+        let tmp24 = item10067;
+        map.get(tmp21).r = true;
         continue;
       }
     } else {
       let issues1 = arg0.issues;
-      arr = issues1.push(item10054);
+      let tmp16 = item10054;
+      arr = issues1.push(tmp15);
     }
     continue;
   }
   const items = [...map];
-  const found = items.filter((item, index) => {
-    [, tmp] = item;
+  const found = items.filter((arg0) => {
+    [, tmp] = arg0;
     return tmp.l && tmp.r;
   });
-  const mapped = found.map((item, index) => {
-    [tmp] = item;
+  const mapped = found.map((arg0) => {
+    [tmp] = arg0;
     return tmp;
   });
   if (tmp25) {
@@ -416,8 +456,8 @@ function handleTupleResult(issues, issues2, closure_0) {
   }
   issues2.value[closure_0] = issues.value;
 }
-function handleMapResult(issues, issues2, issues3, closure_0, closure_1_2, closure_03, closure_1) {
-  closure_0 = closure_1;
+function handleMapResult(issues, issues2, issues3, closure_0) {
+  closure_0 = arg6;
   if (issues.issues.length) {
     let obj = closure_10;
     const propertyKeyTypes = closure_10.propertyKeyTypes;
@@ -429,10 +469,10 @@ function handleMapResult(issues, issues2, issues3, closure_0, closure_1_2, closu
       HermesBuiltin.apply(items, issues);
     } else {
       obj = { code: "invalid_key", origin: "map", input: null, inst: null, issues: null };
-      obj[2] = dependencyMap;
-      obj[3] = closure_03;
+      obj[2] = arg4;
+      obj[3] = arg5;
       const issues1 = issues.issues;
-      obj[4] = issues1.map((item, index) => closure_1_10.finalizeIssue(item, closure_0, closure_1_8.config()));
+      obj[4] = issues1.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
       push(obj);
     }
   }
@@ -442,17 +482,18 @@ function handleMapResult(issues, issues2, issues3, closure_0, closure_1_2, closu
     const push2 = issues2.push;
     if (propertyKeyTypes2.has(typeof closure_0)) {
       const items1 = [];
-      HermesBuiltin.arraySpread(closure_10.prefixIssues(closure_0, issues2.issues), 0);
+      HermesBuiltin.arraySpread(obj3.prefixIssues(closure_0, issues2.issues), 0);
       HermesBuiltin.apply(items1, issues2);
     } else {
       obj = { origin: "map", code: "invalid_element", input: null, inst: null, key: null, issues: null };
-      obj[2] = dependencyMap;
-      obj[3] = closure_03;
+      obj[2] = arg4;
+      obj[3] = arg5;
       obj[4] = closure_0;
       issues3 = issues2.issues;
-      obj[5] = issues3.map((item, index) => closure_1_10.finalizeIssue(item, closure_0, closure_1_8.config()));
+      obj[5] = issues3.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
       push2(obj);
     }
+    obj3 = closure_10;
   }
   const value = issues3.value;
   const result = value.set(issues.value, issues2.value);
@@ -479,15 +520,15 @@ function handleCodecAResult(issues, transform, direction) {
     if ("forward" === tmp) {
       const transformResult = transform.transform(issues.value, issues);
       if (transformResult instanceof Promise) {
-        let nextPromise = transformResult.then((result) => {
+        let nextPromise = transformResult.then((arg0) => {
           if (issues.issues.length) {
-            issues.aborted = true;
-            let runResult = issues;
+            tmp.aborted = true;
+            let runResult = tmp;
           } else {
             const _zod = tmp2._zod;
             const obj = { value: null, issues: null };
-            obj[0] = result;
-            obj[1] = issues.issues;
+            obj[0] = arg0;
+            obj[1] = tmp.issues;
             runResult = _zod.run(obj, tmp3);
           }
           return runResult;
@@ -506,15 +547,15 @@ function handleCodecAResult(issues, transform, direction) {
     } else {
       const reverseTransformResult = transform.reverseTransform(issues.value, issues);
       if (reverseTransformResult instanceof Promise) {
-        let nextPromise1 = reverseTransformResult.then((result) => {
+        let nextPromise1 = reverseTransformResult.then((arg0) => {
           if (issues.issues.length) {
-            issues.aborted = true;
-            let runResult = issues;
+            tmp.aborted = true;
+            let runResult = tmp;
           } else {
             const _zod = tmp2._zod;
             const obj = { value: null, issues: null };
-            obj[0] = result;
-            obj[1] = issues.issues;
+            obj[0] = arg0;
+            obj[1] = tmp.issues;
             runResult = _zod.run(obj, tmp3);
           }
           return runResult;
@@ -562,11 +603,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -579,6 +622,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -684,10 +728,10 @@ if (self2) {
     let fnResult = fn(_isNativeReflectConstruct);
     let closure_9 = fn(mergeDefs2);
     let closure_10 = fn(mergeDefs);
-    exports.$ZodType = fnResult.$constructor("$ZodType", (headerResult, def) => {
-      let tmp = headerResult;
-      let obj = headerResult;
-      if (headerResult == null) {
+    exports.$ZodType = fnResult.$constructor("$ZodType", (props, def) => {
+      let tmp = props;
+      let obj = props;
+      if (props == null) {
         obj = {};
         tmp = obj;
       }
@@ -702,13 +746,15 @@ if (self2) {
       if (checks == null) {
         checks = [];
       }
-      let items = [...checks];
+      const items = [...checks];
       const traits = tmp._zod.traits;
       if (traits.has("$ZodCheck")) {
         items.unshift(tmp);
       }
       for (const item10034 of items) {
         let onattach = item10034._zod.onattach;
+        let tmp3 = onattach;
+        let tmp4 = onattach;
         for (const item10041 of onattach) {
           let item10041Result = item10041(tmp);
           continue;
@@ -730,19 +776,20 @@ if (self2) {
         runChecks = function runChecks(parsed1, closure_1, skipChecks) {
           let nextPromise = parsed1;
           closure_0 = parsed1;
-          items = skipChecks;
+          closure_1 = skipChecks;
           closure_3 = closure_10.aborted(parsed1);
           function _loop() {
             if (lib._zod.def.when) {
-              const def = lib._zod.def;
+              const def = tmp._zod.def;
               if (!def.when(length)) {
                 return 0;
               }
             } else if (closure_3) {
               return 0;
             }
-            const _zod = lib._zod;
-            const checkResult = _zod.check(length.issues.length);
+            length = length.issues.length;
+            const _zod = tmp._zod;
+            const checkResult = _zod.check(length);
             skipChecks = checkResult;
             if (checkResult instanceof Promise) {
               let async;
@@ -810,9 +857,9 @@ if (self2) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    if (length.issues.length !== closure_0) {
+                    if (closure_1_0.issues.length !== closure_0) {
                       if (!closure_3) {
-                        closure_3 = closure_2_10.aborted(length, closure_0);
+                        closure_3 = closure_2_10.aborted(closure_1_0, closure_0);
                       }
                     }
                     c2 = 3;
@@ -825,14 +872,14 @@ if (self2) {
               }
             }));
           }
-          const iter = items[Symbol.iterator]();
+          const iter = closure_1[Symbol.iterator]();
           while (iter !== undefined) {
             closure_4 = iter.next();
             let _loopResult = _loop();
             continue;
           }
           if (runChecks) {
-            nextPromise = runChecks.then((result) => closure_0);
+            nextPromise = runChecks.then(() => closure_0);
           }
           return nextPromise;
         };
@@ -855,28 +902,29 @@ if (self2) {
             obj.skipChecks = true;
             const parsed = _zod2.parse(obj, obj);
             if (parsed instanceof Promise) {
-              let nextPromise = parsed.then((result) => {
-                if (typeof handleCanaryResult !== "function") {
+              let nextPromise = parsed.then((closure_1_0) => {
+                if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (closure_1_10.aborted(result)) {
-                  result.aborted = true;
-                  let nextPromise = result;
+                skipChecks = tmp2;
+                if (closure_1_10.aborted(closure_1_0)) {
+                  closure_1_0.aborted = true;
+                  let nextPromise = closure_1_0;
                 } else {
-                  const promise = runChecks(skipChecks, skipChecks, skipChecks);
+                  const promise = closure_1_2(skipChecks, closure_1, tmp2);
                   if (promise instanceof Promise) {
-                    if (false === skipChecks.async) {
+                    if (false === tmp2.async) {
                       const ZodAsyncError = new closure_1_8.$ZodAsyncError();
                       throw ZodAsyncError;
                     } else {
-                      nextPromise = promise.then((result) => {
+                      nextPromise = promise.then((arg0) => {
                         _zod = _zod._zod;
-                        return _zod.parse(result, _zod);
+                        return _zod.parse(arg0, _zod);
                       });
                     }
                   } else {
                     let _zod = skipChecks._zod;
-                    nextPromise = _zod.parse(promise, skipChecks);
+                    nextPromise = _zod.parse(promise, tmp2);
                   }
                 }
                 return nextPromise;
@@ -896,9 +944,9 @@ if (self2) {
                     let ZodAsyncError = new closure_1_8.$ZodAsyncError();
                     throw ZodAsyncError;
                   } else {
-                    nextPromise = promise3.then((result) => {
+                    nextPromise = promise3.then((arg0) => {
                       _zod = _zod._zod;
-                      return _zod.parse(result, _zod);
+                      return _zod.parse(arg0, _zod);
                     });
                   }
                 } else {
@@ -916,7 +964,7 @@ if (self2) {
                 const ZodAsyncError1 = new closure_1_8.$ZodAsyncError();
                 throw ZodAsyncError1;
               } else {
-                return parsed1.then((result) => runChecks(result, closure_1, closure_1));
+                return parsed1.then((arg0) => closure_1_2(arg0, closure_1, closure_1));
               }
             } else {
               return runChecks(parsed1, closure_1, skipChecks);
@@ -927,7 +975,7 @@ if (self2) {
       closure_10.defineLazy(tmp, "~standard", () => ({
         validate(arg0) {
           try {
-            const safeParseResult = closure_1_0(runChecks[7]).safeParse(closure_0, arg0);
+            const safeParseResult = closure_1_0(closure_1_2[7]).safeParse(closure_0, arg0);
             if (safeParseResult.success) {
               obj = { value: null };
               obj[0] = safeParseResult.data;
@@ -942,12 +990,12 @@ if (self2) {
             }
             return obj;
           } catch (err) {
-            return closure_1_0(runChecks[7]).safeParseAsync(closure_0, tmp2).then((result) => {
-              if (result.success) {
+            return closure_1_0(closure_1_2[7]).safeParseAsync(closure_0, tmp2).then((success) => {
+              if (success.success) {
                 obj = { value: null };
-                obj[0] = result.data;
+                obj[0] = success.data;
               } else {
-                error = result.error;
+                error = success.error;
                 let issues;
                 if (error != null) {
                   issues = error.issues;
@@ -1247,7 +1295,7 @@ if (self2) {
             error = new Error();
             throw error;
           } else {
-            [tmp30, tmp31] = _slicedToArray(parts, 2);
+            [tmp30, tmp31] = closure_1_3(parts, 2);
             if (tmp31) {
               const _Number = Number;
               const NumberResult = Number(tmp31);
@@ -1273,7 +1321,7 @@ if (self2) {
               const error3 = new Error();
               throw error3;
             }
-            const tmp29 = _slicedToArray(parts, 2);
+            const tmp29 = closure_1_3(parts, 2);
           }
         } catch (err) {
           const issues = iter.issues;
@@ -1295,7 +1343,7 @@ if (self2) {
       $ZodStringFormat.init(_zod, pattern);
       _zod._zod.bag.contentEncoding = "base64";
       _zod._zod.check = (value) => {
-        if (!isValidBase64(value.value)) {
+        if (!closure_1_11(value.value)) {
           const issues = value.issues;
           const obj = { code: "invalid_format", format: "base64", input: null, inst: null, continue: null };
           obj[2] = value.value;
@@ -1326,7 +1374,7 @@ if (self2) {
             return str;
           });
           const _Math = Math;
-          flag = isValidBase64(replaced.padEnd(4 * Math.ceil(replaced.length / 4), "="));
+          flag = closure_1_11(replaced.padEnd(4 * Math.ceil(replaced.length / 4), "="));
         }
         if (!flag) {
           const issues = value.issues;
@@ -1351,7 +1399,7 @@ if (self2) {
       const $ZodStringFormat = _exports.$ZodStringFormat;
       $ZodStringFormat.init(_zod, arg1);
       _zod._zod.check = (value) => {
-        if (!isValidJWT(value.value, alg.alg)) {
+        if (!closure_1_12(value.value, alg.alg)) {
           const issues = value.issues;
           const obj = { code: "invalid_format", format: "jwt", input: null, inst: null, continue: null };
           obj[2] = value.value;
@@ -1370,10 +1418,10 @@ if (self2) {
         if (!closure_1.fn(value.value)) {
           const issues = value.issues;
           const obj = { code: "invalid_format", format: null, input: null, inst: null, continue: null };
-          obj[1] = closure_1.format;
+          obj[1] = tmp.format;
           obj[2] = value.value;
           obj[3] = closure_0;
-          obj[4] = !closure_1.abort;
+          obj[4] = !tmp.abort;
           issues.push(obj);
         }
       };
@@ -1628,36 +1676,44 @@ if (self2) {
           iter.value = Array(value.length);
           let items = [];
           for (let num3 = 0; num3 < value.length; num3 = num3 + 1) {
+            let tmp3 = element;
             _zod = element.element._zod;
             let obj = { value: null, issues: null };
             obj[0] = value[num3];
             obj[1] = [];
             let runResult = _zod.run(obj, arg1);
             let _Promise = Promise;
+            let tmp4 = num3;
             if (runResult instanceof Promise) {
-              let arr = items.push(runResult.then((result) => {
-                if (result.issues.length) {
-                  const issues = num3.issues;
+              let arr = items.push(runResult.then((issues) => {
+                if (issues.issues.length) {
+                  issues = iter.issues;
                   const push = issues.push;
                   const items = [];
-                  HermesBuiltin.arraySpread(closure_2_10.prefixIssues(num3, result.issues), 0);
+                  HermesBuiltin.arraySpread(closure_2_10.prefixIssues(tmp, issues.issues), 0);
                   HermesBuiltin.apply(items, issues);
                 }
-                num3.value[num3] = result.value;
+                num3.value[num3] = issues.value;
               }));
             } else {
               if (runResult.issues.length) {
                 let issues = iter.issues;
                 let push = issues.push;
+                let tmp5 = closure_1_10;
                 let items1 = [];
+                let tmp6 = items1;
+                let num4 = 0;
                 let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_10.prefixIssues(num3, runResult.issues), 0);
+                let tmp8 = push;
+                let tmp9 = items1;
+                let tmp10 = issues;
                 let applyResult = HermesBuiltin.apply(items1, issues);
               }
               iter.value[num3] = runResult.value;
             }
           }
           if (items.length) {
-            iter = Promise.all(items).then((result) => num3);
+            iter = Promise.all(items).then(() => num3);
             const allPromises = Promise.all(items);
           }
           return iter;
@@ -1693,21 +1749,27 @@ if (self2) {
         };
         Object.defineProperty(shape, "shape", obj);
       }
-      closure_3 = closure_10.cached(() => normalizeDef(closure_1));
+      closure_3 = closure_10.cached(() => closure_1_13(closure_1));
       closure_10.defineLazy(_zod._zod, "propValues", () => {
         shape = shape.shape;
         const obj = {};
         for (const key10008 in shape) {
+          let tmp8 = key10008;
           _zod = shape[key10008]._zod;
           if (!_zod.values) {
             continue;
           } else {
             if (obj[key10008] == null) {
               let _Set = Set;
+              let tmp = new.target;
+              let tmp2 = new.target;
               let set = new Set();
+              let tmp4 = set;
               obj[key10008] = set;
             }
             let values = _zod.values;
+            let tmp5 = values;
+            let tmp6 = values;
             for (const item10019 of values) {
               let obj2 = obj[key10008];
               let addResult = obj2.add(item10019);
@@ -1739,22 +1801,22 @@ if (self2) {
             _zod = tmp._zod;
             const runResult = _zod.run({ value: value[iter], issues: [] }, closure_1);
             if (runResult instanceof Promise) {
-              items.push(runResult.then((result) => {
-                if (result.issues.length) {
+              items.push(runResult.then((issues) => {
+                if (issues.issues.length) {
                   if (!closure_1) {
-                    const issues = iter.issues;
+                    issues = iter.issues;
                     const push = issues.push;
                     items = [];
-                    HermesBuiltin.arraySpread(closure_2_10.prefixIssues(iter, result.issues), 0);
+                    HermesBuiltin.arraySpread(closure_2_10.prefixIssues(tmp, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
                 }
-                if (undefined === result.value) {
-                  if (iter in closure_1_2) {
-                    iter.value[iter] = undefined;
+                if (undefined === issues.value) {
+                  if (tmp in tmp2) {
+                    iter.value[tmp] = undefined;
                   }
                 } else {
-                  iter.value[iter] = result.value;
+                  iter.value[tmp] = issues.value;
                 }
               }));
             } else {
@@ -1768,7 +1830,7 @@ if (self2) {
                 }
               }
               if (undefined === runResult.value) {
-                if (iter in value) {
+                if (iter in tmp3) {
                   iter.value[iter] = undefined;
                 }
               } else {
@@ -1782,18 +1844,18 @@ if (self2) {
             continue;
           }
           if (catchall) {
-            let nextPromise = handleCatchall(items, value, value, arg1, items.value, closure_0);
+            let nextPromise = closure_1_14(items, value, value, arg1, items.value, closure_0);
           } else {
             nextPromise = value;
             if (items.length) {
-              nextPromise = Promise.all(items).then((result) => closure_0);
+              nextPromise = Promise.all(items).then(() => closure_0);
               const allPromises = Promise.all(items);
             }
           }
           return nextPromise;
         } else {
           let issues = value.issues;
-          let obj = { expected: "object", code: "invalid_type", input: null, inst: null };
+          const obj = { expected: "object", code: "invalid_type", input: null, inst: null };
           obj[2] = value;
           obj[3] = closure_0;
           issues.push(obj);
@@ -1807,7 +1869,7 @@ if (self2) {
       const $ZodObject = _exports.$ZodObject;
       $ZodObject.init(_zod, catchall);
       const parse = _zod._zod.parse;
-      closure_5 = closure_10.cached(() => normalizeDef(closure_1));
+      closure_5 = closure_10.cached(() => closure_1_13(closure_1));
       const isObject = closure_10.isObject;
       const jitless = value.globalConfig.jitless;
       value = !jitless;
@@ -1843,6 +1905,7 @@ if (self2) {
                   const obj = Object.create(null);
                   let num = 0;
                   while (tmp3 !== undefined) {
+                    let tmp5 = num;
                     let tmp6 = +num;
                     num = tmp6 + 1;
                     obj[tmp4] = `key_${tmp6}`;
@@ -1853,6 +1916,7 @@ if (self2) {
                   const nextResult = iter.next();
                   while (iter !== undefined) {
                     let tmp10 = obj[nextResult];
+                    let tmp11 = closure_1_10;
                     let tmp9 = nextResult;
                     let escResult = closure_1_10.esc(nextResult);
                     let tmp13 = shape[nextResult];
@@ -1863,13 +1927,63 @@ if (self2) {
                         optout = _zod.optout;
                       }
                     }
+                    let tmp15 = tmp10;
+                    let tmp16 = nextResult;
                     let _HermesInternal = HermesInternal;
+                    let str = "const ";
+                    let tmp17 = tmp10;
+                    let str2 = " = ";
+                    let str3 = ";";
                     let writeResult2 = doc.write("const " + tmp10 + " = " + parseStr(tmp9) + ";");
                     if ("optional" === optout) {
+                      let tmp31 = tmp10;
+                      let tmp32 = escResult;
                       let _HermesInternal3 = HermesInternal;
+                      let str14 = "\n        if (";
+                      let tmp33 = tmp10;
+                      let str15 = ".issues.length) {\n          if (";
+                      let tmp34 = escResult;
+                      let str16 = " in input) {\n            payload.issues = payload.issues.concat(";
+                      let tmp35 = tmp10;
+                      let str17 = ".issues.map(iss => ({\n              ...iss,\n              path: iss.path ? [";
+                      let tmp36 = escResult;
+                      let str18 = ", ...iss.path] : [";
+                      let tmp37 = escResult;
+                      let str19 = "]\n            })));\n          }\n        }\n        \n        if (";
+                      let tmp38 = tmp10;
+                      let str20 = ".value === undefined) {\n          if (";
+                      let tmp39 = escResult;
+                      let str21 = " in input) {\n            newResult[";
+                      let tmp40 = escResult;
+                      let str22 = "] = undefined;\n          }\n        } else {\n          newResult[";
+                      let tmp41 = escResult;
+                      let str23 = "] = ";
+                      let tmp42 = tmp10;
+                      let str24 = ".value;\n        }\n        \n      ";
                       let writeResult3 = doc.write("\n        if (" + tmp10 + ".issues.length) {\n          if (" + escResult + " in input) {\n            payload.issues = payload.issues.concat(" + tmp10 + ".issues.map(iss => ({\n              ...iss,\n              path: iss.path ? [" + escResult + ", ...iss.path] : [" + escResult + "]\n            })));\n          }\n        }\n        \n        if (" + tmp10 + ".value === undefined) {\n          if (" + escResult + " in input) {\n            newResult[" + escResult + "] = undefined;\n          }\n        } else {\n          newResult[" + escResult + "] = " + tmp10 + ".value;\n        }\n        \n      ");
                     } else {
+                      let tmp19 = tmp10;
+                      let tmp20 = escResult;
                       let _HermesInternal2 = HermesInternal;
+                      let str4 = "\n        if (";
+                      let tmp21 = tmp10;
+                      let str5 = ".issues.length) {\n          payload.issues = payload.issues.concat(";
+                      let tmp22 = tmp10;
+                      let str6 = ".issues.map(iss => ({\n            ...iss,\n            path: iss.path ? [";
+                      let tmp23 = escResult;
+                      let str7 = ", ...iss.path] : [";
+                      let tmp24 = escResult;
+                      let str8 = "]\n          })));\n        }\n        \n        if (";
+                      let tmp25 = tmp10;
+                      let str9 = ".value === undefined) {\n          if (";
+                      let tmp26 = escResult;
+                      let str10 = " in input) {\n            newResult[";
+                      let tmp27 = escResult;
+                      let str11 = "] = undefined;\n          }\n        } else {\n          newResult[";
+                      let tmp28 = escResult;
+                      let str12 = "] = ";
+                      let tmp29 = tmp10;
+                      let str13 = ".value;\n        }\n        \n      ";
                       let writeResult4 = doc.write("\n        if (" + tmp10 + ".issues.length) {\n          payload.issues = payload.issues.concat(" + tmp10 + ".issues.map(iss => ({\n            ...iss,\n            path: iss.path ? [" + escResult + ", ...iss.path] : [" + escResult + "]\n          })));\n        }\n        \n        if (" + tmp10 + ".value === undefined) {\n          if (" + escResult + " in input) {\n            newResult[" + escResult + "] = undefined;\n          }\n        } else {\n          newResult[" + escResult + "] = " + tmp10 + ".value;\n        }\n        \n      ");
                     }
                     continue;
@@ -1884,12 +1998,14 @@ if (self2) {
               }
               const tmp12Result = tmp12(tmp2, arg1);
               tmp2 = catchall;
+              let tmp16 = tmp12Result;
               if (catchall) {
-                let tmp16 = handleCatchall([], value, tmp12Result, arg1, value2, closure_0);
+                tmp16 = closure_1_14([], value, tmp12Result, arg1, value2, closure_0);
               }
+              let tmp11 = tmp16;
             }
           }
-          const tmp11 = parse(tmp2, arg1);
+          tmp11 = parse(tmp2, arg1);
         } else {
           const issues = tmp2.issues;
           let obj = { expected: "object", code: "invalid_type", input: null, inst: null };
@@ -1908,7 +2024,7 @@ if (self2) {
       closure_10.defineLazy(_zod._zod, "optin", () => {
         options = options.options;
         let str;
-        if (options.some((item, index) => "optional" === item._zod.optin)) {
+        if (options.some((_zod) => "optional" === _zod._zod.optin)) {
           str = "optional";
         }
         return str;
@@ -1916,28 +2032,28 @@ if (self2) {
       closure_10.defineLazy(_zod._zod, "optout", () => {
         options = options.options;
         let str;
-        if (options.some((item, index) => "optional" === item._zod.optout)) {
+        if (options.some((_zod) => "optional" === _zod._zod.optout)) {
           str = "optional";
         }
         return str;
       });
       closure_10.defineLazy(_zod._zod, "values", () => {
         options = options.options;
-        if (options.every((item, index) => item._zod.values)) {
+        if (options.every((_zod) => _zod._zod.values)) {
           const _Set = Set;
           const options2 = tmp.options;
-          const set = new Set(options2.flatMap((item, index) => Array.from(item._zod.values)));
+          const set = new Set(options2.flatMap((_zod) => Array.from(_zod._zod.values)));
           return set;
         }
         tmp = options;
       });
       closure_10.defineLazy(_zod._zod, "pattern", () => {
         options = options.options;
-        if (options.every((item, index) => item._zod.pattern)) {
+        if (options.every((_zod) => _zod._zod.pattern)) {
           options = tmp.options;
-          const mapped = options.map((item, index) => item._zod.pattern);
+          const mapped = options.map((_zod) => _zod._zod.pattern);
           const _RegExp = RegExp;
-          const mapped1 = mapped.map((item, index) => closure_10.cleanRegex(item.source));
+          const mapped1 = mapped.map((source) => closure_10.cleanRegex(source.source));
           const _HermesInternal = HermesInternal;
           const regExp = new RegExp("^(" + mapped1.join("|") + ")$");
           return regExp;
@@ -1946,11 +2062,11 @@ if (self2) {
       });
       closure_2 = 1 === options.options.length;
       const run = options.options[0]._zod.run;
-      _zod._zod.parse = (value, closure_1) => {
+      _zod._zod.parse = (value) => {
         closure_0 = value;
-        options = closure_1;
+        options = arg1;
         if (closure_2) {
-          return run(value, closure_1);
+          return run(value, arg1);
         } else {
           let flag = false;
           const items = [];
@@ -1961,25 +2077,32 @@ if (self2) {
             let obj = { value: null, issues: null };
             obj[0] = value.value;
             obj[1] = [];
-            let runResult = _zod.run(obj, closure_1);
+            let runResult = _zod.run(obj, arg1);
             let tmp7 = runResult;
             let _Promise = Promise;
             if (runResult instanceof Promise) {
+              let tmp13 = runResult;
               let arr = items.push(tmp7);
               flag = true;
-            } else if (0 === tmp7.issues.length) {
-              iter.return();
-              return tmp7;
             } else {
-              arr = items.push(tmp7);
+              let tmp8 = runResult;
+              if (0 === tmp7.issues.length) {
+                let tmp11 = runResult;
+                let tmp12 = iter;
+                iter.return();
+                return tmp7;
+              } else {
+                let tmp9 = runResult;
+                arr = items.push(tmp7);
+              }
             }
             continue;
           }
           if (flag) {
-            let nextPromise = Promise.all(items).then((result) => handleUnionResults(result, closure_0, closure_0, closure_1));
+            let nextPromise = Promise.all(items).then((arg0) => closure_2_15(arg0, closure_0, closure_0, closure_1));
             const allPromises = Promise.all(items);
           } else {
-            nextPromise = handleUnionResults(items, value, closure_0, closure_1);
+            nextPromise = closure_1_15(items, value, closure_0, arg1);
           }
           return nextPromise;
         }
@@ -2009,7 +2132,9 @@ if (self2) {
             obj[0] = value.value;
             obj[1] = [];
             let runResult = _zod.run(obj, arg1);
+            let tmp7 = runResult;
             let _Promise = Promise;
+            let tmp9 = runResult;
             let tmp8 = runResult instanceof Promise;
             let arr = items.push(runResult);
             if (tmp8) {
@@ -2018,9 +2143,9 @@ if (self2) {
             continue;
           }
           if (flag) {
-            let nextPromise = Promise.all(items).then((result) => {
+            let nextPromise = Promise.all(items).then((arr) => {
               closure_0 = closure_1;
-              const found = result.filter((item, index) => 0 === item.issues.length);
+              const found = arr.filter((issues) => 0 === issues.issues.length);
               if (1 === found.length) {
                 iter.value = found[0].value;
               } else if (0 === found.length) {
@@ -2028,9 +2153,9 @@ if (self2) {
                 let obj = { code: "invalid_union", input: null, inst: null, errors: null };
                 obj[1] = iter.value;
                 obj[2] = tmp;
-                obj[3] = result.map((item, index) => {
-                  const issues = item.issues;
-                  return issues.map((item, index) => closure_1_10.finalizeIssue(item, closure_0, closure_1_8.config()));
+                obj[3] = arr.map((issues) => {
+                  issues = issues.issues;
+                  return issues.map((path) => closure_1_10.finalizeIssue(path, closure_0, closure_1_8.config()));
                 });
                 issues.push(obj);
               } else {
@@ -2045,7 +2170,7 @@ if (self2) {
             });
             const allPromises = Promise.all(items);
           } else {
-            handleExclusiveUnionResults(items, value, closure_0, arg1);
+            closure_1_16(items, value, closure_0, arg1);
             nextPromise = value;
           }
           return nextPromise;
@@ -2064,24 +2189,37 @@ if (self2) {
         const iter = closure_1.options[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
+          let tmp2 = nextResult;
           let propValues = nextResult._zod.propValues;
           let tmp3 = propValues;
           if (propValues) {
             let _Object = Object;
+            let tmp4 = propValues;
             if (0 !== Object.keys(tmp3).length) {
               let _Object2 = Object;
+              let tmp25 = propValues;
               let entries = Object.entries(tmp3);
+              let tmp27 = entries;
+              let tmp5 = entries;
               for (const item10026 of entries) {
+                let tmp6 = lib;
                 let tmp7 = lib(item10026, 2);
                 let first = tmp7[0];
                 let tmp9 = first;
                 let tmp10 = tmp7[1];
                 if (!obj[first]) {
+                  let tmp11 = first;
                   let _Set = Set;
+                  let tmp12 = new.target;
+                  let tmp13 = new.target;
                   let set = new Set();
+                  let tmp15 = set;
                   obj[tmp9] = set;
                 }
+                let tmp16 = tmp10;
+                let tmp17 = tmp10;
                 for (const item10044 of tmp10) {
+                  let tmp18 = first;
                   let obj2 = obj[tmp9];
                   let addResult = obj2.add(item10044);
                   continue;
@@ -2092,9 +2230,15 @@ if (self2) {
             }
           }
           let _Error = Error;
+          let tmp20 = closure_1;
           let options = closure_1.options;
           let _HermesInternal = HermesInternal;
+          let str = "\"";
+          let str2 = "Invalid discriminated union option at index \"";
+          let tmp21 = new.target;
+          let tmp22 = new.target;
           error = new Error("Invalid discriminated union option at index \"" + options.indexOf(nextResult) + "\"");
+          let tmp24 = error;
           throw error;
         }
         return obj;
@@ -2108,20 +2252,33 @@ if (self2) {
           let tmp3;
           let tmp2 = nextResult;
           if (propValues != null) {
+            let tmp4 = closure_1;
             tmp3 = propValues[closure_1.discriminator];
           }
           let tmp5 = tmp3;
           if (tmp3) {
+            let tmp6 = tmp3;
             if (0 !== tmp5.size) {
+              let tmp22 = tmp5;
+              let tmp7 = tmp3;
               for (const item10030 of tmp3) {
+                let tmp8 = item10030;
                 if (map.has(item10030)) {
                   let _Error = Error;
                   let _String = String;
+                  let tmp12 = item10030;
                   let _HermesInternal = HermesInternal;
-                  error = new Error("Duplicate discriminator value \"" + String(item10030) + "\"");
+                  let str = "\"";
+                  let str2 = "Duplicate discriminator value \"";
+                  let tmp13 = new.target;
+                  let tmp14 = new.target;
+                  error = new Error("Duplicate discriminator value \"" + String(tmp8) + "\"");
+                  let tmp16 = error;
                   throw error;
                 } else {
-                  let result = map.set(item10030, tmp2);
+                  let tmp9 = item10030;
+                  let tmp10 = nextResult;
+                  let result = map.set(tmp8, tmp2);
                   continue;
                 }
               }
@@ -2129,9 +2286,15 @@ if (self2) {
             }
           }
           let _Error2 = Error;
+          let tmp17 = closure_1;
           let options = closure_1.options;
           let _HermesInternal2 = HermesInternal;
+          let str3 = "\"";
+          let str4 = "Invalid discriminated union option at index \"";
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           let error1 = new Error("Invalid discriminated union option at index \"" + options.indexOf(nextResult) + "\"");
+          let tmp21 = error1;
           throw error1;
         }
         return map;
@@ -2154,9 +2317,9 @@ if (self2) {
             const issues = value.issues;
             let obj = { code: "invalid_union", errors: null, note: "No matching discriminator", discriminator: null, input: null, path: null, inst: null };
             obj[1] = [];
-            obj[3] = closure_1.discriminator;
+            obj[3] = tmp9.discriminator;
             obj[4] = value;
-            const items = [closure_1.discriminator];
+            const items = [tmp9.discriminator];
             obj[5] = items;
             obj[6] = closure_0;
             issues.push(obj);
@@ -2187,17 +2350,16 @@ if (self2) {
         const runResult1 = _zod2.run({ value, issues: [] }, arg1);
         if (!(runResult instanceof Promise)) {
           if (!(runResult1 instanceof Promise)) {
-            handleIntersectionResults(nextPromise, runResult, runResult1);
+            closure_1_18(nextPromise, runResult, runResult1);
           }
           return nextPromise;
         }
         const items = [runResult, runResult1];
-        nextPromise = Promise.all(items).then((result) => {
-          [tmp, tmp2] = result;
+        nextPromise = Promise.all(items).then((arg0) => {
+          [tmp, tmp2] = arg0;
           closure_1_18(closure_0, tmp, tmp2);
           return closure_0;
         });
-        const allPromises = Promise.all(items);
       };
     });
     exports.$ZodTuple = fnResult.$constructor("$ZodTuple", (_zod, items) => {
@@ -2216,10 +2378,14 @@ if (self2) {
           const items1 = [];
           HermesBuiltin.arraySpread(items, 0);
           const reversed = items1.reverse();
-          const findIndexResult = reversed.findIndex((item, index) => "optional" !== item._zod.optin);
+          const findIndexResult = reversed.findIndex((_zod) => "optional" !== _zod._zod.optin);
+          let num4 = 0;
+          if (-1 !== findIndexResult) {
+            num4 = arr4.length - findIndexResult;
+          }
           if (!sum1.rest) {
             let issues = nextPromise.issues;
-            if (tmp9) {
+            if (value.length > arr4.length) {
               let obj = { code: "too_big", maximum: null, inclusive: true };
               obj[1] = arr4.length;
             } else {
@@ -2237,39 +2403,50 @@ if (self2) {
           let num6 = -1;
           sum1 = -1;
           for (const item10060 of arr4) {
+            let tmp18 = num6;
             let sum = num6 + 1;
             num6 = sum;
             sum1 = sum;
             if (sum < value.length) {
+              let tmp21 = item10060;
               _zod = tmp17._zod;
               let obj2 = { value: null, issues: null };
+              let tmp22 = num6;
               obj2[0] = value[num6];
               obj2[1] = [];
               let runResult = _zod.run(obj2, arg1);
               let promise = runResult;
               let _Promise = Promise;
               if (runResult instanceof Promise) {
-                let arr = items.push(promise.then((result) => {
-                  if (result.issues.length) {
-                    const issues = value.issues;
+                let tmp28 = runResult;
+                let arr = items.push(promise.then((issues) => {
+                  if (issues.issues.length) {
+                    issues = iter.issues;
                     const push = issues.push;
                     items = [];
-                    HermesBuiltin.arraySpread(closure_1_10.prefixIssues(sum1, result.issues), 0);
+                    HermesBuiltin.arraySpread(closure_1_10.prefixIssues(tmp, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
-                  value.value[sum1] = result.value;
+                  closure_0.value[sum1] = issues.value;
                 }));
               } else {
-                let tmp27 = handleTupleResult(promise, nextPromise, num6);
+                let tmp24 = closure_1_19;
+                let tmp25 = runResult;
+                let tmp26 = num6;
+                let tmp27 = closure_1_19(promise, nextPromise, num6);
               }
+            } else {
+              let tmp20 = num6;
             }
             continue;
           }
           if (sum1.rest) {
             const substr = value.slice(items.length);
             for (const item10098 of substr) {
+              let tmp35 = num6;
               sum1 = num6 + 1;
               num6 = sum1;
+              let tmp37 = sum1;
               let _zod2 = sum1.rest._zod;
               let obj3 = { value: null, issues: null };
               obj3[0] = item10098;
@@ -2278,24 +2455,28 @@ if (self2) {
               let promise2 = runResult1;
               let _Promise2 = Promise;
               if (runResult1 instanceof Promise) {
-                let arr1 = items.push(promise2.then((result) => {
-                  if (result.issues.length) {
-                    const issues = value.issues;
+                let tmp43 = runResult1;
+                let arr1 = items.push(promise2.then((issues) => {
+                  if (issues.issues.length) {
+                    issues = iter.issues;
                     const push = issues.push;
                     items = [];
-                    HermesBuiltin.arraySpread(closure_1_10.prefixIssues(sum1, result.issues), 0);
+                    HermesBuiltin.arraySpread(closure_1_10.prefixIssues(tmp, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
-                  value.value[sum1] = result.value;
+                  closure_0.value[sum1] = issues.value;
                 }));
               } else {
-                let tmp42 = handleTupleResult(promise2, nextPromise, num6);
+                let tmp39 = closure_1_19;
+                let tmp40 = runResult1;
+                let tmp41 = num6;
+                let tmp42 = closure_1_19(promise2, nextPromise, num6);
               }
               continue;
             }
           }
           if (items.length) {
-            nextPromise = Promise.all(items).then((result) => closure_0);
+            nextPromise = Promise.all(items).then(() => closure_0);
             const allPromises = Promise.all(items);
           }
           return nextPromise;
@@ -2338,15 +2519,15 @@ if (self2) {
               _zod = closure_1.valueType._zod;
               const runResult = _zod.run({ value: value2[iter2], issues: [] }, closure_1);
               if (runResult instanceof Promise) {
-                items.push(runResult.then((result) => {
-                  if (result.issues.length) {
-                    const issues = iter2.issues;
+                items.push(runResult.then((issues) => {
+                  if (issues.issues.length) {
+                    issues = iter2.issues;
                     const push = issues.push;
                     items = [];
-                    HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter2, result.issues), 0);
+                    HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter2, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
-                  iter2.value[iter2] = result.value;
+                  iter2.value[iter2] = issues.value;
                 }));
               } else {
                 if (runResult.issues.length) {
@@ -2369,6 +2550,7 @@ if (self2) {
             if (keys !== undefined) {
               tmp21 = tmp20;
               while (keys[iter2] !== undefined) {
+                let tmp29 = tmp24;
                 if (set.has(tmp24)) {
                   continue;
                 } else {
@@ -2420,7 +2602,7 @@ if (self2) {
                     if (number.test(iter)) {
                       iter = runResult;
                       if (runResult.issues.length) {
-                        _zod = closure_1.keyType._zod;
+                        _zod = tmp27.keyType._zod;
                         obj = { value: null, issues: null };
                         const _Number = Number;
                         obj[0] = Number(iter);
@@ -2440,13 +2622,13 @@ if (self2) {
                     }
                   }
                   if (iter.issues.length) {
-                    if ("loose" === closure_1.mode) {
+                    if ("loose" === tmp27.mode) {
                       value.value[iter] = value2[iter];
                     } else {
                       let issues = value.issues;
                       obj = { code: "invalid_key", origin: "record", issues: null, input: null, path: null, inst: null };
                       const issues1 = iter.issues;
-                      obj[2] = issues1.map((item, index) => closure_2_10.finalizeIssue(item, runResult1, closure_2_8.config()));
+                      obj[2] = issues1.map((path) => closure_2_10.finalizeIssue(path, runResult1, closure_2_8.config()));
                       obj[3] = iter;
                       items = [iter];
                       obj[4] = items;
@@ -2455,21 +2637,21 @@ if (self2) {
                     }
                     return 0;
                   } else {
-                    const _zod2 = closure_1.valueType._zod;
+                    const _zod2 = tmp27.valueType._zod;
                     obj1 = { value: null, issues: null };
                     obj1[0] = value2[iter];
                     obj1[1] = [];
                     const runResult2 = _zod2.run(obj1, tmp28);
                     if (runResult2 instanceof Promise) {
-                      items.push(runResult2.then((result) => {
-                        if (result.issues.length) {
-                          const issues = iter.issues;
+                      items.push(runResult2.then((issues) => {
+                        if (issues.issues.length) {
+                          issues = iter.issues;
                           const push = issues.push;
                           items = [];
-                          HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter, result.issues), 0);
+                          HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter, issues.issues), 0);
                           HermesBuiltin.apply(items, issues);
                         }
-                        iter.value[runResult1.value] = result.value;
+                        iter.value[runResult1.value] = issues.value;
                       }));
                     } else {
                       if (runResult2.issues.length) {
@@ -2493,7 +2675,7 @@ if (self2) {
             }
           }
           if (items.length) {
-            nextPromise = Promise.all(items).then((result) => closure_0);
+            nextPromise = Promise.all(items).then(() => closure_0);
             const allPromises = Promise.all(items);
           }
           return nextPromise;
@@ -2533,26 +2715,26 @@ if (self2) {
             const runResult1 = _zod2.run(obj, closure_1);
             if (!(runResult instanceof Promise)) {
               if (!(runResult1 instanceof Promise)) {
-                handleMapResult(runResult, runResult1, closure_0, value, closure_2, closure_0, closure_1);
+                closure_2_20(runResult, runResult1, closure_0, value, closure_2, closure_0, tmp);
               }
             }
             items = [runResult, runResult1];
-            items.push(Promise.all(items).then((result) => {
-              [tmp, tmp2] = result;
-              handleMapResult(tmp, tmp2, closure_0, closure_0, closure_1_2, closure_0, closure_1_1);
+            items.push(Promise.all(items).then((arg0) => {
+              [tmp, tmp2] = arg0;
+              closure_3_20(tmp, tmp2, closure_0, closure_0, closure_1_2, closure_0, closure_1_1);
             }));
-            const allPromises = Promise.all(items);
           }
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
-            let tmp14 = _slicedToArray(tmp11, 2);
+            let tmp13 = closure_1_3;
+            let tmp14 = closure_1_3(tmp11, 2);
             closure_4 = tmp14[1];
             let _loop7Result = _loop7(tmp14[0]);
             continue;
           }
           if (items.length) {
-            nextPromise = Promise.all(items).then((result) => closure_0);
-            let allPromises = Promise.all(items);
+            nextPromise = Promise.all(items).then(() => closure_0);
+            const allPromises = Promise.all(items);
           }
           return nextPromise;
         } else {
@@ -2581,6 +2763,7 @@ if (self2) {
           nextPromise.value = set;
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
+            let tmp13 = valueType;
             _zod = valueType.valueType._zod;
             let obj = { value: null, issues: null };
             obj[0] = tmp11;
@@ -2589,24 +2772,27 @@ if (self2) {
             let promise = runResult;
             let _Promise = Promise;
             if (runResult instanceof Promise) {
-              let arr = items.push(promise.then((result) => {
-                if (result.issues.length) {
-                  const issues = value.issues;
+              let tmp18 = runResult;
+              let arr = items.push(promise.then((issues) => {
+                if (issues.issues.length) {
+                  issues = iter.issues;
                   const push = issues.push;
                   const items = [];
-                  HermesBuiltin.arraySpread(result.issues, 0);
+                  HermesBuiltin.arraySpread(issues.issues, 0);
                   HermesBuiltin.apply(items, issues);
                 }
-                value = value.value;
-                value.add(result.value);
+                value = iter.value;
+                value.add(issues.value);
               }));
             } else {
-              let tmp17 = handleSetResult(promise, nextPromise);
+              let tmp15 = closure_1_21;
+              let tmp16 = runResult;
+              let tmp17 = closure_1_21(promise, nextPromise);
             }
             continue;
           }
           if (items.length) {
-            nextPromise = Promise.all(items).then((result) => closure_0);
+            nextPromise = Promise.all(items).then(() => closure_0);
             const allPromises = Promise.all(items);
           }
           return nextPromise;
@@ -2627,15 +2813,15 @@ if (self2) {
       enumValues = closure_10.getEnumValues(arg1.entries);
       const set = new Set(enumValues);
       _zod._zod.values = set;
-      const found = enumValues.filter((item, index) => {
+      const found = enumValues.filter((arg0) => {
         const propertyKeyTypes = closure_10.propertyKeyTypes;
-        return propertyKeyTypes.has(typeof item);
+        return propertyKeyTypes.has(typeof arg0);
       });
-      const mapped = found.map((item, index) => {
-        if (typeof item === "string") {
-          let escapeRegexResult = closure_10.escapeRegex(item);
+      const mapped = found.map((includes) => {
+        if (typeof includes === "string") {
+          let escapeRegexResult = closure_10.escapeRegex(includes);
         } else {
-          escapeRegexResult = item.toString();
+          escapeRegexResult = includes.toString();
         }
         return escapeRegexResult;
       });
@@ -2669,14 +2855,14 @@ if (self2) {
         _zod._zod.values = set;
         const _RegExp = RegExp;
         const values = arg1.values;
-        const mapped = values.map((item, index) => {
-          if (typeof item === "string") {
-            let escapeRegexResult = closure_10.escapeRegex(item);
-          } else if (item) {
-            escapeRegexResult = closure_10.escapeRegex(item.toString());
+        const mapped = values.map((includes) => {
+          if (typeof includes === "string") {
+            let escapeRegexResult = closure_10.escapeRegex(includes);
+          } else if (includes) {
+            escapeRegexResult = closure_10.escapeRegex(includes.toString());
           } else {
             const _String = String;
-            escapeRegexResult = String(item);
+            escapeRegexResult = String(includes);
           }
           return escapeRegexResult;
         });
@@ -2730,8 +2916,8 @@ if (self2) {
             if (!tmp15) {
               resolved = Promise.resolve(transformResult);
             }
-            return resolved.then((result) => {
-              closure_0.value = result;
+            return resolved.then((value) => {
+              closure_0.value = value;
               return closure_0;
             });
           } else if (tmp15) {
@@ -2776,10 +2962,10 @@ if (self2) {
           const _zod2 = tmp.innerType._zod;
           const runResult = _zod2.run(value, arg1);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then((result) => {
-              let tmp2 = result;
-              if (result.issues.length) {
-                tmp2 = result;
+            let nextPromise = runResult.then((issues) => {
+              let tmp2 = issues;
+              if (issues.issues.length) {
+                tmp2 = issues;
                 if (undefined === tmp) {
                   const obj = { issues: null, value: "a" };
                   obj[0] = [];
@@ -2873,11 +3059,11 @@ if (self2) {
           const _zod = closure_0.innerType._zod;
           const runResult = _zod.run(value, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then((result) => {
-              if (undefined === result.value) {
-                result.value = defaultValue.defaultValue;
+            let nextPromise = runResult.then((value) => {
+              if (undefined === value.value) {
+                value.value = defaultValue.defaultValue;
               }
-              return result;
+              return value;
             });
           } else {
             nextPromise = runResult;
@@ -2918,7 +3104,7 @@ if (self2) {
           const _Set = Set;
           const items = [];
           HermesBuiltin.arraySpread(values, 0);
-          set = new Set(items.filter((item, index) => undefined !== item));
+          set = new Set(items.filter((arg0) => undefined !== arg0));
         }
         return set;
       });
@@ -2926,19 +3112,19 @@ if (self2) {
         _zod = closure_1.innerType._zod;
         const runResult = _zod.run(arg0, arg1);
         if (runResult instanceof Promise) {
-          let nextPromise = runResult.then((result) => {
-            let length = result.issues.length;
+          let nextPromise = runResult.then((issues) => {
+            let length = issues.issues.length;
             if (!length) {
-              length = undefined !== result.value;
+              length = undefined !== issues.value;
             }
             if (!length) {
-              const issues = result.issues;
+              issues = issues.issues;
               const obj = { code: "invalid_type", expected: "nonoptional", input: null, inst: null };
-              obj[2] = result.value;
+              obj[2] = issues.value;
               obj[3] = closure_0;
               issues.push(obj);
             }
-            return result;
+            return issues;
           });
         } else {
           let length = runResult.issues.length;
@@ -2950,10 +3136,11 @@ if (self2) {
             let issues = runResult.issues;
             let obj = { code: "invalid_type", expected: "nonoptional", input: null, inst: null };
             obj[2] = runResult.value;
-            obj[3] = closure_0;
+            obj[3] = tmp;
             issues.push(obj);
             nextPromise = runResult;
           }
+          tmp = closure_0;
         }
         return nextPromise;
       };
@@ -2972,8 +3159,8 @@ if (self2) {
           const _zod = innerType.innerType._zod;
           const runResult = _zod.run(nextPromise, direction);
           if (runResult instanceof Promise) {
-            nextPromise = runResult.then((result) => {
-              closure_0.value = 0 === result.issues.length;
+            nextPromise = runResult.then((issues) => {
+              closure_0.value = 0 === issues.issues.length;
               return closure_0;
             });
           } else {
@@ -3000,17 +3187,18 @@ if (self2) {
           const _zod2 = closure_0.innerType._zod;
           const runResult = _zod2.run(value, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then((result) => {
-              value.value = result.value;
-              if (result.issues.length) {
-                const merged = Object.assign(value);
-                const obj = { issues: null };
-                const issues = result.issues;
-                obj[0] = issues.map((item, index) => closure_2_10.finalizeIssue(item, closure_1, closure_2_8.config()));
+            let nextPromise = runResult.then((value) => {
+              value.value = value.value;
+              if (value.issues.length) {
+                let obj = {};
+                const merged = Object.assign(iter);
+                obj = { issues: null };
+                const issues = value.issues;
+                obj[0] = issues.map((path) => closure_2_10.finalizeIssue(path, closure_1, closure_2_8.config()));
                 obj.error = obj;
-                obj.input = value.value;
-                value.value = value.catchValue(obj);
-                value.issues = [];
+                obj.input = iter.value;
+                iter.value = value.catchValue(obj);
+                iter.issues = [];
               }
               return value;
             });
@@ -3018,10 +3206,11 @@ if (self2) {
             value.value = runResult.value;
             nextPromise = value;
             if (runResult.issues.length) {
+              let obj = {};
               let merged = Object.assign(value);
-              let obj = { issues: null };
+              obj = { issues: null };
               let issues = runResult.issues;
-              obj[0] = issues.map((item, index) => closure_2_10.finalizeIssue(item, closure_1, closure_2_8.config()));
+              obj[0] = issues.map((path) => closure_2_10.finalizeIssue(path, closure_1, closure_2_8.config()));
               obj.error = obj;
               obj.input = value.value;
               value.value = closure_0.catchValue(obj);
@@ -3068,14 +3257,14 @@ if (self2) {
           const _zod2 = closure_0.out._zod;
           let runResult = _zod2.run(arg0, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then((result) => {
-              if (result.issues.length) {
-                result.aborted = true;
-                let runResult = result;
+            let nextPromise = runResult.then((issues) => {
+              if (issues.issues.length) {
+                issues.aborted = true;
+                let runResult = issues;
               } else {
                 const _zod = tmp._zod;
                 const obj = { value: null, issues: null };
-                ({ value: obj[0], issues: obj[1] } = result);
+                ({ value: obj[0], issues: obj[1] } = issues);
                 runResult = _zod.run(obj, tmp2);
               }
               return runResult;
@@ -3094,14 +3283,14 @@ if (self2) {
           const _zod4 = closure_0.in._zod;
           const runResult1 = _zod4.run(arg0, direction);
           if (runResult1 instanceof Promise) {
-            let nextPromise1 = runResult1.then((result) => {
-              if (result.issues.length) {
-                result.aborted = true;
-                let runResult = result;
+            let nextPromise1 = runResult1.then((issues) => {
+              if (issues.issues.length) {
+                issues.aborted = true;
+                let runResult = issues;
               } else {
                 const _zod = tmp._zod;
                 const obj = { value: null, issues: null };
-                ({ value: obj[0], issues: obj[1] } = result);
+                ({ value: obj[0], issues: obj[1] } = issues);
                 runResult = _zod.run(obj, tmp2);
               }
               return runResult;
@@ -3133,18 +3322,18 @@ if (self2) {
           const _zod2 = closure_0.in._zod;
           const runResult = _zod2.run(arg0, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then((result) => handleCodecAResult(result, closure_0, closure_0));
+            let nextPromise = runResult.then((arg0) => closure_2_22(arg0, closure_0, closure_0));
           } else {
-            nextPromise = handleCodecAResult(runResult, closure_0, direction);
+            nextPromise = closure_1_22(runResult, closure_0, direction);
           }
           return nextPromise;
         } else {
           const _zod = closure_0.out._zod;
           const runResult1 = _zod.run(arg0, direction);
           if (runResult1 instanceof Promise) {
-            let nextPromise1 = runResult1.then((result) => handleCodecAResult(result, closure_0, closure_0));
+            let nextPromise1 = runResult1.then((arg0) => closure_2_22(arg0, closure_0, closure_0));
           } else {
-            nextPromise1 = handleCodecAResult(runResult1, closure_0, direction);
+            nextPromise1 = closure_1_22(runResult1, closure_0, direction);
           }
           return nextPromise1;
         }
@@ -3187,7 +3376,7 @@ if (self2) {
           const _zod = closure_0.innerType._zod;
           const runResult = _zod.run(arg0, direction);
           if (runResult instanceof Promise) {
-            let nextPromise = runResult.then(handleReadonlyResult);
+            let nextPromise = runResult.then(closure_1_23);
           } else {
             const _Object = Object;
             runResult.value = Object.freeze(runResult.value);
@@ -3208,45 +3397,76 @@ if (self2) {
       while (iter !== undefined) {
         let tmp3 = nextResult;
         if (typeof nextResult === "object") {
+          let tmp38 = nextResult;
           if (null !== tmp3) {
+            let tmp15 = nextResult;
             if (tmp3._zod.pattern) {
+              let tmp23 = nextResult;
               let _RegExp = RegExp;
+              let tmp24 = nextResult;
               let pattern = tmp3._zod.pattern;
               let tmp25 = tmp3._zod.pattern instanceof RegExp ? pattern.source : pattern;
               let arr3 = tmp25;
               if (tmp25) {
+                let tmp31 = tmp25;
                 let num2 = 0;
                 if (arr3.startsWith("^")) {
                   num2 = 1;
                 }
+                let tmp33 = tmp25;
                 let tmp32 = num2;
+                let tmp34 = tmp25;
                 let length = arr3.length;
+                let tmp35 = tmp25;
+                let tmp36 = num2;
                 length = items.push(arr3.slice(tmp32, arr3.endsWith("$") ? length - 1 : length));
               } else {
                 let _Error3 = Error;
+                let tmp26 = nextResult;
                 let _HermesInternal4 = HermesInternal;
+                let str3 = "Invalid template literal part: ";
+                let tmp27 = new.target;
+                let tmp28 = new.target;
                 error = new Error("Invalid template literal part: " + tmp3._zod.traits);
+                let tmp30 = error;
                 throw error;
               }
             } else {
               let _Error2 = Error;
+              let tmp16 = nextResult;
               let items1 = [];
+              let tmp17 = items1;
+              let num = 0;
               let arraySpreadResult = HermesBuiltin.arraySpread(tmp3._zod.traits, 0);
               let _HermesInternal3 = HermesInternal;
+              let str2 = "Invalid template literal part, no pattern found: ";
+              let tmp19 = new.target;
+              let tmp20 = new.target;
               let error1 = new Error("Invalid template literal part, no pattern found: " + items1.shift());
+              let tmp22 = error1;
               throw error1;
             }
           }
         }
+        let tmp4 = nextResult;
         if (null !== tmp3) {
+          let tmp5 = closure_10;
           let primitiveTypes = closure_10.primitiveTypes;
+          let tmp6 = nextResult;
           if (!primitiveTypes.has(typeof tmp3)) {
             let _Error = Error;
+            let tmp7 = nextResult;
             let _HermesInternal = HermesInternal;
+            let str = "Invalid template literal part: ";
+            let tmp8 = new.target;
+            let tmp9 = new.target;
             let error2 = new Error("Invalid template literal part: " + tmp3);
+            let tmp11 = error2;
             throw error2;
           }
         }
+        let tmp12 = closure_10;
+        let tmp13 = nextResult;
         let _HermesInternal2 = HermesInternal;
         let arr = items.push(closure_10.escapeRegex("" + tmp3));
         continue;
@@ -3267,13 +3487,13 @@ if (self2) {
             const issues1 = value.issues;
             obj = { input: null, inst: null, code: "invalid_format", format: null, pattern: null };
             obj[0] = value.value;
-            obj[1] = _zod;
+            obj[1] = tmp6;
             let str = format.format;
             if (str == null) {
               str = "template_literal";
             }
             obj[3] = str;
-            obj[4] = _zod._zod.pattern.source;
+            obj[4] = tmp6._zod.pattern.source;
             issues1.push(obj);
           }
         }
@@ -3297,12 +3517,12 @@ if (self2) {
             const items = [...arguments];
             let parsed = items;
             if (lib._def.input) {
-              parsed = lib(dependencyMap[7]).parse(lib._def.input, items);
+              parsed = lib(closure_2_2[7]).parse(tmp._def.input, items);
             }
             const applyResult = Reflect.apply(lib, this, parsed);
             let parsed1 = applyResult;
             if (lib._def.output) {
-              parsed1 = lib(dependencyMap[7]).parse(lib._def.output, applyResult);
+              parsed1 = lib(closure_2_2[7]).parse(tmp._def.output, applyResult);
             }
             return parsed1;
           };
@@ -3315,7 +3535,7 @@ if (self2) {
           error = new Error("implementAsync() must be called with a function");
           throw error;
         } else {
-          return asyncGeneratorStep(function() {
+          return closure_1_4(function() {
             const self = this;
             closure_1 = [...arguments];
             c5 = 0;
@@ -3458,12 +3678,12 @@ if (self2) {
         } else {
           let output = _zod._def.output;
           if (output) {
-            output = "promise" === _zod._def.output._zod.def.type;
+            output = "promise" === obj2._def.output._zod.def.type;
           }
           if (output) {
-            let implementAsyncResult = _zod.implementAsync(value.value);
+            let implementAsyncResult = obj2.implementAsync(value.value);
           } else {
-            implementAsyncResult = _zod.implement(value.value);
+            implementAsyncResult = obj2.implement(value.value);
           }
           value.value = implementAsyncResult;
           return value;
@@ -3476,13 +3696,13 @@ if (self2) {
         if (Array.isArray(items[0])) {
           obj = { type: "tuple", items: null, rest: null };
           [obj2[1], obj2[2]] = items;
-          const ZodTuple = new exports.$ZodTuple(obj);
+          const ZodTuple = new closure_1_1.$ZodTuple(obj);
           obj[1] = ZodTuple;
-          obj[2] = _zod._def.output;
+          obj[2] = tmp._def.output;
           constructor = new constructor(obj);
         } else {
           obj[1] = items[0];
-          obj[2] = _zod._def.output;
+          obj[2] = tmp._def.output;
           constructor = new constructor(obj);
         }
         return constructor;
@@ -3500,9 +3720,9 @@ if (self2) {
       _zod._zod.parse = (value) => {
         closure_0 = arg1;
         const resolved = Promise.resolve(value.value);
-        return resolved.then((result) => {
+        return resolved.then((value) => {
           const _zod = innerType.innerType._zod;
-          return _zod.run({ value: result, issues: [] }, innerType);
+          return _zod.run({ value, issues: [] }, innerType);
         });
       };
     });
@@ -3575,21 +3795,21 @@ if (self2) {
         closure_1 = value;
         fnResult = closure_1.fn(value);
         if (fnResult instanceof Promise) {
-          return fnResult.then((result) => {
-            if (!result) {
+          return fnResult.then((arg0) => {
+            if (!arg0) {
               const obj = { code: "custom", input: null, inst: null, path: null, continue: null };
               obj[1] = tmp2;
-              obj[2] = value;
-              let path = value._zod.def.path;
+              obj[2] = tmp3;
+              let path = tmp3._zod.def.path;
               if (path == null) {
                 path = [];
               }
               const items = [];
               HermesBuiltin.arraySpread(path, 0);
               obj[3] = items;
-              obj[4] = !value._zod.def.abort;
-              if (value._zod.def.params) {
-                obj.params = value._zod.def.params;
+              obj[4] = !tmp3._zod.def.abort;
+              if (tmp3._zod.def.params) {
+                obj.params = tmp3._zod.def.params;
               }
               const issues = tmp.issues;
               issues.push(closure_2_10.issue(obj));

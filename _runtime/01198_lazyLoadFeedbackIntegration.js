@@ -1,6 +1,5 @@
 // _runtime/01198_lazyLoadFeedbackIntegration.js
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
-import _getClientIntegration from "01133__getClientIntegration.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,11 +11,11 @@ arg5.lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(_getClientIntegration.MOBILE_FEEDBACK_INTEGRATION_NAME);
+      integrationByName = client.getIntegrationByName(tmp(1133).MOBILE_FEEDBACK_INTEGRATION_NAME);
     }
   }
   if (!integrationByName) {
-    let tmpResult = registerSpanErrorInstrumentation;
+    let tmpResult = tmp(817);
     const client1 = tmpResult.getClient();
     integrationByName = null === client1;
   }
@@ -24,7 +23,7 @@ arg5.lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    tmpResult = _getClientIntegration;
+    tmpResult = tmp(1133);
     obj3.addIntegration(tmpResult.feedbackIntegration());
   }
 };

@@ -1,6 +1,5 @@
 // _runtime/00142_getElementSibling.js
 import _isNativeReflectConstruct from "00131__isNativeReflectConstruct.js";
-import _isNativeReflectConstruct2 from "00141__isNativeReflectConstruct.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -20,7 +19,7 @@ arg5.getElementSibling = function getElementSibling(parentNode, next) {
       }
       const sum = index + num;
       if (null == closure_2) {
-        closure_2 = _isNativeReflectConstruct2.default;
+        closure_2 = tmp9(141).default;
       }
       let tmp3 = sum;
       if (null != childNodes[sum]) {
@@ -30,6 +29,7 @@ arg5.getElementSibling = function getElementSibling(parentNode, next) {
           const sum1 = tmp5 + num;
           tmp3 = sum1;
           while (null != childNodes[sum1]) {
+            let tmp7 = closure_2;
             tmp5 = sum1;
             tmp3 = sum1;
             if (childNodes[sum1] instanceof closure_2) {
@@ -44,5 +44,7 @@ arg5.getElementSibling = function getElementSibling(parentNode, next) {
       }
       return tmp8;
     }
+    const obj = _isNativeReflectConstruct;
+    tmp9 = require;
   }
 };

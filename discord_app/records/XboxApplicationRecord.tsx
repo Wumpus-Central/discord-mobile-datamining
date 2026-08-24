@@ -4,7 +4,7 @@ import getPlatformUserUrlDefault from "../lib/Platforms.tsx";
 
 createExecutableDefault;
 let c2 = "xbox:";
-const result = require("obj132").fileFinishedImporting("records/XboxApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/XboxApplicationRecord.tsx");
 class XboxApplicationRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new XboxApplicationRecord(global, tmp2, tmp);

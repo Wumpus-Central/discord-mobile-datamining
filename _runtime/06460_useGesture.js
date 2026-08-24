@@ -1,5 +1,7 @@
 // _runtime/06460_useGesture.js
 import noop from "00019_noop.js";
+import { tagMessage } from "06382_tagMessage.js";
+import { useGestureCallbacks } from "06461_useGestureCallbacks.js";
 
 ({ useEffect: obj1, useMemo: c3 } = noop);
 
@@ -10,31 +12,32 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
   const callback = tmp2;
   if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => clonedAndRemappedConfig.disableReanimated, [])) {
     const _Error2 = Error;
-    error = new Error(require("06382_tagMessage.js").tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
+    error = new Error(_tagMessage.tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
     throw error;
   } else {
-    const gestureCallbacks = require("06461_useGestureCallbacks.js").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
+    const gestureCallbacks = _useGestureCallbacks.useGestureCallbacks(tmp2, clonedAndRemappedConfig);
     jsEventHandler = gestureCallbacks.jsEventHandler;
     const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
     const animatedEventHandler = gestureCallbacks.animatedEventHandler;
     if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
       if (!reanimatedEventHandler) {
         const _Error = Error;
-        const error1 = new Error(require("06382_tagMessage.js").tagMessage("Failed to create reanimated event handlers."));
+        const error1 = new Error(_tagMessage.tagMessage("Failed to create reanimated event handlers."));
         throw error1;
       }
     }
     const items = [tmp2, , , ];
     ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
     let tmpResult = tmp(() => {
-      Fling(clonedAndRemappedConfig[4]);
-      const obj = { simultaneousWith: clonedAndRemappedConfig.simultaneousWith, requireToFail: clonedAndRemappedConfig.requireToFail, block: clonedAndRemappedConfig.block };
+      let obj = Fling(clonedAndRemappedConfig[4]);
+      obj = { simultaneousWith: clonedAndRemappedConfig.simultaneousWith, requireToFail: clonedAndRemappedConfig.requireToFail, block: clonedAndRemappedConfig.block };
       return obj.prepareRelations(obj, closure_2);
     }, items);
     closure_6 = tmpResult;
     const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
     tmpResult = tmp(() => {
-      const obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
+      obj = { handlerTag: closure_2, type: closure_0, config: closure_1, detectorCallbacks: obj, gestureRelations: closure_6 };
+      obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
       return obj;
     }, items1);
     closure_7 = tmpResult;
@@ -44,9 +47,9 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
       NativeProxy.createGestureHandler(Fling, closure_2, {});
       let result = Fling(clonedAndRemappedConfig[6]).scheduleFlushOperations();
       return () => {
-        const NativeProxy = Fling(clonedAndRemappedConfig[5]).NativeProxy;
+        const NativeProxy = closure_1_0(closure_1_1[5]).NativeProxy;
         NativeProxy.dropGestureHandler(closure_2);
-        const result = Fling(clonedAndRemappedConfig[6]).scheduleFlushOperations();
+        const result = closure_1_0(closure_1_1[6]).scheduleFlushOperations();
       };
     }, items2);
     const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult];
@@ -61,9 +64,9 @@ export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
       const obj3 = Fling(clonedAndRemappedConfig[4]);
       Fling(clonedAndRemappedConfig[7]).registerGesture(closure_2, closure_7);
       return () => {
-        Fling(clonedAndRemappedConfig[4]).unbindSharedValues(closure_1, closure_2);
-        const obj = Fling(clonedAndRemappedConfig[4]);
-        Fling(clonedAndRemappedConfig[7]).unregisterGesture(closure_2);
+        closure_1_0(closure_1_1[4]).unbindSharedValues(closure_1, closure_2);
+        const obj = closure_1_0(closure_1_1[4]);
+        closure_1_0(closure_1_1[7]).unregisterGesture(closure_2);
       };
     }, items3);
     return tmpResult;

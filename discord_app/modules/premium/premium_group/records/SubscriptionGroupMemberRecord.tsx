@@ -1,6 +1,6 @@
 // discord_app/modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx
 import toJSDefault from "../../../../lib/Record.tsx";
-import createdAt from "../../../../records/UserRecord.tsx";
+import closure_0 from "../../../../records/UserRecord.tsx";
 
 toJSDefault;
 const obj = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
@@ -43,7 +43,7 @@ prototype["isInvited"] = function isInvited() {
   }
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
 
 export default SubscriptionGroupMemberRecord;
 export const SubscriptionMemberTypes = obj;

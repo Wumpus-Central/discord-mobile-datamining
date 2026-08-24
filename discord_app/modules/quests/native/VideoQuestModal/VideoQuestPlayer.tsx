@@ -1,22 +1,23 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _isNativeReflectConstructDefault from "../../../../../_runtime/09019__isNativeReflectConstruct.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getState from "../../../../stores/native/AppStateStore.tsx";
-import _toPropertyKey from "../../VideoQuestUIStore.tsx";
+import closure_8 from "../../../../stores/native/AppStateStore.tsx";
+import closure_9 from "../../VideoQuestUIStore.tsx";
 import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../../_runtime/00689_n.js";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet, Pressable: closure_6, ActivityIndicator: error } = get_ActivityIndicator);
 ({ AppStates: unpackModuleId, ComponentActions: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
+let obj = { left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, top: ThemesDefault.space.PX_16, bottom: ThemesDefault.space.PX_16 };
 let closure_16 = importAllResult.memo(_isNativeReflectConstructDefault);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
@@ -41,10 +42,10 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 741911733910;
 canSeekForward.__initData = { code: "function canSeekForward_VideoQuestPlayerTsx2(currentTime,maxTimestamp,videoDuration,isQuestCompleted){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(isQuestCompleted||currentTime<=maxTimestamp-1);}" };
-let obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, iconDisabled: null, controlButton: null };
+obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, iconDisabled: null, controlButton: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = {};
-const createCacheKey = {};
+createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
 createCacheKey.justifyContent = "center";
@@ -60,6 +61,7 @@ obj[4] = { height: "100%", width: "100%" };
 obj[5] = { position: "relative", height: "100%", width: "100%" };
 let obj4 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
+let obj1 = {};
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
 obj4.backgroundColor = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
 obj4.justifyContent = "center";
@@ -68,19 +70,26 @@ obj4.flexDirection = "column";
 obj[6] = obj4;
 const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5);
 obj[7] = { flexDirection: "row", justifyContent: "flex-end", padding: ThemesDefault.space.PX_8, position: "absolute", left: 0, right: 0 };
+let obj5 = { flexDirection: "row", justifyContent: "flex-end", padding: ThemesDefault.space.PX_8, position: "absolute", left: 0, right: 0 };
 obj[8] = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: ThemesDefault.space.PX_24, pointerEvents: "box-none" };
 obj[9] = { top: 0 };
 obj[10] = { bottom: 0 };
+let obj6 = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: ThemesDefault.space.PX_24, pointerEvents: "box-none" };
 obj[11] = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: ThemesDefault.space.PX_16, overflow: "hidden" };
+let obj7 = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: ThemesDefault.space.PX_16, overflow: "hidden" };
 obj[12] = { height: 1, backgroundColor: ThemesDefault.colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: "#FFFFFF" };
+let obj8 = { height: 1, backgroundColor: ThemesDefault.colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: "#FFFFFF" };
 obj[13] = { color: ThemesDefault.colors.TEXT_DEFAULT };
+let obj9 = { color: ThemesDefault.colors.TEXT_DEFAULT };
 obj[14] = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj10 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 obj[15] = { padding: ThemesDefault.space.PX_8 };
 let closure_19 = createCacheKey.createStyles(obj);
 let obj12 = { PAUSED: "paused", PLAYING: "playing", ENDED: "ended", LOADING: "loading", ERRORED: "errored" };
 let closure_21 = { code: "function shouldShowControls_VideoQuestPlayerTsx3(){const{hasLoaded,showControls,playerState,PlayerState,isVideoEnded,externallyPaused}=this.__closure;return hasLoaded&&(showControls.get()||playerState===PlayerState.PAUSED||playerState===PlayerState.ENDED||playerState===PlayerState.ERRORED||isVideoEnded||externallyPaused);}" };
 let closure_22 = { code: "function VideoQuestPlayerTsx4(){const{shouldShowControls,withSpring,SUBTLE_SPRING}=this.__closure;const show=shouldShowControls();return{opacity:withSpring(show?1:0,SUBTLE_SPRING),pointerEvents:show?'auto':'none'};}" };
 let closure_23 = { code: "function VideoQuestPlayerTsx5(){const{withTiming,progress,timingFast}=this.__closure;return{width:withTiming(progress.get()*100+\"%\",timingFast,'animate-always')};}" };
+let obj11 = { padding: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo((onLoad) => {
   onLoad = onLoad.onLoad;
   handleBufferAnalytics = onLoad;
@@ -103,6 +112,9 @@ const memoResult = importAllResult.memo((onLoad) => {
   if (flag2 === undefined) {
     flag2 = true;
   }
+  let ref;
+  let quest;
+  let questTaskDetails;
   closure_8 = undefined;
   let memo;
   let memo1;
@@ -110,6 +122,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   closure_12 = undefined;
   let targetSeconds;
   closure_14 = undefined;
+  obj = undefined;
   let first1;
   closure_17 = undefined;
   closure_18 = undefined;
@@ -150,12 +163,12 @@ const memoResult = importAllResult.memo((onLoad) => {
   let callback18;
   let tmp = first2();
   obj = externallyPaused;
-  const ref = externallyPaused.useRef(null);
+  ref = externallyPaused.useRef(null);
   obj1 = handleBufferAnalytics(14478);
   const videoQuestModalContext = obj1.useVideoQuestModalContext();
-  const quest = videoQuestModalContext.quest;
+  quest = videoQuestModalContext.quest;
   let obj2 = handleBufferAnalytics(10684);
-  const questTaskDetails = obj2.useQuestTaskDetails(quest);
+  questTaskDetails = obj2.useQuestTaskDetails(quest);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
@@ -327,7 +340,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     return () => {
       const items = [...arguments];
       clearTimeout(closure_1_29.current);
-      let result = sharedValue.set(true);
+      let result = closure_1_26.set(true);
       closure_1_29.current = setTimeout(() => {
         const result = closure_26.set(false);
       }, 2000);
@@ -336,6 +349,7 @@ const memoResult = importAllResult.memo((onLoad) => {
         HermesBuiltin.arraySpread(items, 0);
         return HermesBuiltin.apply(items1, undefined);
       }
+      const tmp3 = closure_0;
     };
   }, items2);
   obj1 = { duration: first, isQuestCompleted: tmp8, playerState: first1, questId: quest.id, videoSessionId: videoQuestModalContext.videoSessionId, videoAssetId: VIDEO_PLAYER_VIDEO, sourceQuestContent };
@@ -381,34 +395,34 @@ const memoResult = importAllResult.memo((onLoad) => {
   const effect = obj.useEffect(() => {
     if (null != ref.current) {
       if (null != url1) {
-        if (0 !== url1.length) {
-          handleBufferAnalytics(ref[23]);
+        if (0 !== arr.length) {
+          obj = handleBufferAnalytics(ref[23]);
           obj = { location: null };
           obj[0] = memo1.VIDEO_MODAL_MOBILE;
           if (obj.getVideoQoEMetricsConfig(obj).externalAnalyticsEnabled) {
-            const constants = handleBufferAnalytics(ref[24]).getConstants();
+            const constants = tmp2(tmp3[24]).getConstants();
             obj = { videoRef: null, feature: "quests", appVersion: null, releaseChannel: null, contentMetadata: null };
             obj[0] = tmp.current;
             ({ Version: obj4[2], ReleaseChannel: obj4[3] } = constants);
             obj1 = { contentId: null, videoStreamType: null, contentType: "quests", durationMs: null, title: null, questId: null, gameName: null };
-            obj1[0] = url1;
+            obj1[0] = arr;
             obj1[1] = str;
             obj1[3] = 1000 * targetSeconds;
             obj1[4] = videoTitle;
             obj1[5] = id;
             obj1[6] = gameTitle;
             obj[4] = obj1;
-            const mobileMuxWrapper = new handleBufferAnalytics(ref[23]).MobileMuxWrapper(obj);
+            const mobileMuxWrapper = new tmp2(tmp3[23]).MobileMuxWrapper(obj);
             ref1.current = mobileMuxWrapper;
             let current = ref1.current;
             current.initialize();
             return () => {
               if (null != ref2.current) {
-                const current = ref2.current;
+                const current = tmp.current;
                 current.onProgress(ref.current);
-                const current2 = ref2.current;
+                const current2 = tmp.current;
                 current2.destroy();
-                ref2.current = null;
+                tmp.current = null;
               }
             };
           }
@@ -459,7 +473,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       current.onLoad(duration);
     }
     if (null != naturalSize) {
-      const current2 = ref1.current;
+      const current2 = tmp4.current;
       if (current2 != null) {
         const result = current2.updateVideoSourceDimensions(naturalSize.width, naturalSize.height);
       }
@@ -475,7 +489,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       tmp7 = trackId.length > 0;
     }
     if (tmp7) {
-      const current3 = ref1.current;
+      const current3 = tmp4.current;
       if (current3 != null) {
         current3.onVideoTrackChange(trackId, videoTracks);
       }
@@ -508,10 +522,10 @@ const memoResult = importAllResult.memo((onLoad) => {
       flag = true;
     }
     if (first1 !== lib2.ERRORED) {
-      if (first1 !== lib2.PAUSED) {
-        if (first1 !== lib2.LOADING) {
-          if (first1 === lib2.PLAYING) {
-            callback2(lib2.PAUSED);
+      if (tmp !== tmp2.PAUSED) {
+        if (tmp !== tmp2.LOADING) {
+          if (tmp === tmp2.PLAYING) {
+            callback2(tmp2.PAUSED);
             handlePausePlaybackAnalytics();
             const current3 = ref1.current;
             if (current3 != null) {
@@ -520,7 +534,7 @@ const memoResult = importAllResult.memo((onLoad) => {
           }
         }
       }
-      callback2(lib2.PLAYING);
+      callback2(tmp2.PLAYING);
       handleResumePlaybackAnalytics();
       const current = ref1.current;
       if (current != null) {
@@ -571,9 +585,9 @@ const memoResult = importAllResult.memo((onLoad) => {
     let ComponentDispatch2 = handleBufferAnalytics(ref[26]).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(lib.QUEST_APP_STORE_OVERLAY_FINISHED, callback7);
     return () => {
-      const ComponentDispatch = handleBufferAnalytics(closure_1_2[26]).ComponentDispatch;
+      const ComponentDispatch = closure_1_0(closure_1_2[26]).ComponentDispatch;
       ComponentDispatch.unsubscribe(closure_1_12.QUEST_GAME_LINK_OPENED, closure_48);
-      const ComponentDispatch2 = handleBufferAnalytics(closure_1_2[26]).ComponentDispatch;
+      const ComponentDispatch2 = closure_1_0(closure_1_2[26]).ComponentDispatch;
       ComponentDispatch2.unsubscribe(closure_1_12.QUEST_APP_STORE_OVERLAY_FINISHED, closure_49);
     };
   }, items11);
@@ -604,8 +618,8 @@ const memoResult = importAllResult.memo((onLoad) => {
       closure_21.current = currentTime.currentTime;
       closure_23.current = null;
       if (first > 0) {
-        const result = sharedValue1.set(currentTime.currentTime / first);
-        callback(quest.id, currentTime.currentTime, first);
+        const result = sharedValue1.set(currentTime.currentTime / tmp15);
+        callback(quest.id, currentTime.currentTime, tmp15);
       }
       handleSeekAnalytics(arr, currentTime.currentTime);
       current = ref1.current;
@@ -616,6 +630,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       if (current2 != null) {
         current2.onSeek();
       }
+      const tmp9 = ref1;
     }
   }, items14);
   if (!tmp51) {
@@ -708,7 +723,6 @@ const memoResult = importAllResult.memo((onLoad) => {
     if (ref1 != null) {
       ref1();
     }
-    obj = handleBufferAnalytics(ref[27]);
   }, items18);
   const items20 = [handleErrorAnalytics];
   const callback14 = obj.useCallback(() => {
@@ -802,8 +816,8 @@ const memoResult = importAllResult.memo((onLoad) => {
             }
           }
         } catch (tmp4) {
-          ref1(closure_1_2[30]).captureException(tmp4);
-          const obj2 = ref1(closure_1_2[30]);
+          closure_1_1(closure_1_2[30]).captureException(tmp4);
+          const obj2 = closure_1_1(closure_1_2[30]);
         }
       };
     }
@@ -844,7 +858,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       }
     } else {
       if (first1 !== lib2.LOADING) {
-        handleBufferAnalytics(ref[25]);
+        obj = handleBufferAnalytics(ref[25]);
       }
       callback18(true);
     }
@@ -854,13 +868,11 @@ const memoResult = importAllResult.memo((onLoad) => {
     if (obj.isIOS()) {
       callback18(true);
     }
-    obj = handleBufferAnalytics(ref[25]);
   }, items25);
   const callback21 = obj.useCallback(() => {
     if (obj.isIOS()) {
       callback18(false);
     }
-    obj = handleBufferAnalytics(ref[25]);
   }, items26);
   const rect = tmp29(1629)();
   if (null == memo2) {
@@ -1116,7 +1128,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     tmp83 = quest;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
 export const PlayerState = obj12;
 export const VideoQuestPlayer = memoResult;

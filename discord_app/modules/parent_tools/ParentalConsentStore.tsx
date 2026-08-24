@@ -38,6 +38,6 @@ const parentalConsentStore = new ParentalConsentStore(dispatcherDefault, {
     parentalConsentStore.persist();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/ParentalConsentStore.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentStore.tsx");
 
 export default parentalConsentStore;

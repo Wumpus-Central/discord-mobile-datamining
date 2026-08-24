@@ -1,9 +1,9 @@
 // discord_app/modules/applications/message_embed/native/createActivityMessageEmbed.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import createAppMessageEmbed from "createAppMessageEmbed.tsx";
 import fetchCustomActivityLink from "../../../activities/utils/CustomActivityLinkUtils.tsx";
 
-const result = obj132.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
+const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
@@ -36,4 +36,5 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
+  const tmp = require;
 };

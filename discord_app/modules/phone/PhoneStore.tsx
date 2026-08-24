@@ -1,5 +1,5 @@
 // discord_app/modules/phone/PhoneStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import DEFAULT_COUNTRY_CODE_NAME from "../i18n/CountryCodeUtils.tsx";
@@ -41,6 +41,6 @@ const phoneStore = new PhoneStore(dispatcherDefault, {
   CONNECTION_OPEN: handleSetLocationMetadata,
   SET_LOCATION_METADATA: handleSetLocationMetadata
 });
-const result = obj132.fileFinishedImporting("modules/phone/PhoneStore.tsx");
+const result = set.fileFinishedImporting("modules/phone/PhoneStore.tsx");
 
 export default phoneStore;

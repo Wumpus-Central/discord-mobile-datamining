@@ -2,19 +2,14 @@
 import _modDef38 from "metro/00038__.js";
 import _inheritsDefault from "00098__inherits.js";
 import dispatchDefault from "00132_dispatch.js";
-import EventDefault from "00133_Event.js";
 import BlobManagerDefault from "00200_BlobManager.js";
 import BlobDefault from "00203_Blob.js";
-import byteLengthDefault from "00206_byteLength.js";
 import NativeEventEmitterDefault from "00209_NativeEventEmitter.js";
-import binaryToBase64Default from "00212_binaryToBase64.js";
 import WebSocketModuleDefault from "00218_WebSocketModule.js";
-import _isNativeReflectConstructDefault from "00220__isNativeReflectConstruct.js";
-import _isNativeReflectConstructDefault2 from "00221__isNativeReflectConstruct.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const WebSocket = arg1;
@@ -132,15 +127,15 @@ let items = [
       if (!tmp2) {
         _modDef38(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
         if ("blob" === _binaryType) {
-          let tmp3Result = BlobManagerDefault;
+          let tmp3Result = tmp3(200);
           tmp3Result.addWebSocketHandler(self._socketId);
         } else {
-          tmp3Result = BlobManagerDefault;
+          tmp3Result = tmp3(200);
           const result = tmp3Result.removeWebSocketHandler(self._socketId);
         }
+        const tmp5 = _modDef38;
       }
       self._binaryType = _binaryType;
-      tmp2 = "blob" !== this._binaryType && "blob" !== _binaryType;
     }
   },
   {
@@ -162,9 +157,9 @@ let items = [
         error = new Error("INVALID_STATE_ERR");
         throw error;
       } else if (str instanceof BlobDefault) {
-        let tmp16Result = _modDef38;
-        tmp16Result(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
-        tmp16Result = BlobManagerDefault;
+        let tmp16Result = tmp16(38);
+        tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
+        tmp16Result = tmp16(200);
         tmp16Result.sendOverSocket(str, self._socketId);
       } else if (typeof str !== "string") {
         const _ArrayBuffer = ArrayBuffer;
@@ -176,11 +171,11 @@ let items = [
             throw error1;
           }
         }
-        WebSocketModuleDefault.sendBinary(binaryToBase64Default(str), self._socketId);
-        const tmp16Result1 = WebSocketModuleDefault;
+        tmp16(218).sendBinary(tmp16(212)(str), self._socketId);
+        const tmp16Result1 = tmp16(218);
       } else {
-        WebSocketModuleDefault.send(str, self._socketId);
-        const tmp16Result2 = WebSocketModuleDefault;
+        tmp16(218).send(str, self._socketId);
+        const tmp16Result2 = tmp16(218);
       }
     }
   },
@@ -217,7 +212,7 @@ let items = [
     key: "_unregisterEvents",
     value: function _unregisterEvents() {
       const _subscriptions = this._subscriptions;
-      const item = _subscriptions.forEach((item, index) => item.remove());
+      const item = _subscriptions.forEach((remove) => remove.remove());
       this._subscriptions = [];
     }
   },
@@ -233,14 +228,16 @@ let items = [
           if (id.id === self._socketId) {
             ({ data, type } = dispatchEventResult);
             if ("binary" === type) {
-              data = byteLengthDefault.toByteArray(dispatchEventResult.data).buffer;
+              data = closure_1_1(closure_1_2[12]).toByteArray(dispatchEventResult.data).buffer;
+              const obj3 = closure_1_1(closure_1_2[12]);
             } else if ("blob" === type) {
-              data = BlobManagerDefault.createFromOptions(dispatchEventResult.data);
+              data = closure_1_1(closure_1_2[9]).createFromOptions(dispatchEventResult.data);
+              const obj2 = closure_1_1(closure_1_2[9]);
             }
             obj = { data: null, raw_length: null };
             obj[0] = data;
             obj[1] = dispatchEventResult.raw_length;
-            const tmp11 = new _isNativeReflectConstructDefault("message", obj);
+            const tmp11 = new closure_1_1(closure_1_2[13])("message", obj);
             dispatchEventResult = obj.dispatchEvent(tmp11);
           }
         }),
@@ -251,10 +248,10 @@ let items = [
       const _eventEmitter2 = this._eventEmitter;
       items[1] = _eventEmitter2.addListener("websocketOpen", (id) => {
         if (id.id === self._socketId) {
-          self.readyState = self.OPEN;
-          self.protocol = id.protocol;
-          const tmp5 = new EventDefault("open");
-          self.dispatchEvent(tmp5);
+          obj.readyState = obj.OPEN;
+          obj.protocol = id.protocol;
+          const tmp5 = new closure_1_1(closure_1_2[14])("open");
+          obj.dispatchEvent(tmp5);
         }
       });
       const _eventEmitter3 = this._eventEmitter;
@@ -264,7 +261,7 @@ let items = [
           obj.readyState = obj.CLOSED;
           obj = { code: null, reason: null };
           ({ code: obj2[0], reason: obj2[1] } = id);
-          const tmp6 = new _isNativeReflectConstructDefault2("close", obj);
+          const tmp6 = new closure_1_1(closure_1_2[15])("close", obj);
           obj.dispatchEvent(tmp6);
           obj._unregisterEvents();
           obj.close();
@@ -275,11 +272,11 @@ let items = [
         let obj = self;
         if (id.id === self._socketId) {
           obj.readyState = obj.CLOSED;
-          const tmp5 = new EventDefault("error");
+          const tmp5 = new closure_1_1(closure_1_2[14])("error");
           obj.dispatchEvent(tmp5);
           obj = { code: 1006, reason: null };
           obj[1] = id.message;
-          const tmp11 = new _isNativeReflectConstructDefault2("close", obj);
+          const tmp11 = new closure_1_1(closure_1_2[15])("close", obj);
           obj.dispatchEvent(tmp11);
           obj._unregisterEvents();
           obj.close();

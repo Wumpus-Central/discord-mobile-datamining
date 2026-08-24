@@ -1,33 +1,36 @@
 // discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import BoostedGuildTiers from "constants/GuildPowerupsConstants.tsx";
+import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
+import { items } from "mocks/GuildPowerupMocks.tsx";
 
 ({ GUILD_POWERUP_APPLICATION_ID: c3, GuildPowerupType: c4 } = BoostedGuildTiers);
 const Endpoints = ME.Endpoints;
-let result = obj132.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
+let result = set.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
 export const guildPowerupsAckNotification = function guildPowerupsAckNotification(closure_0) {
-  const obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
   obj.dispatch(obj);
 };
 export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
   dispatcherDefault.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 };
-export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(guildId) {
-  const _require = guildId;
+export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
+  const _require = closure_0;
   if (true === arg1) {
-    const MOCK_LEVELS = require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
-    const combined = MOCK_LEVELS.concat(require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS);
+    const MOCK_LEVELS = _items.MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(_items.MOCK_PERKS);
     let obj = {};
-    obj[constants.LEVEL] = require("mocks/GuildPowerupMocks.tsx").MOCK_LEVELS;
-    obj[constants.PERK] = require("mocks/GuildPowerupMocks.tsx").MOCK_PERKS;
+    obj[constants.LEVEL] = _items.MOCK_LEVELS;
+    obj[constants.PERK] = _items.MOCK_PERKS;
     let obj2 = dispatcherDefault;
     obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
-    obj[1] = guildId;
+    obj[1] = closure_0;
     let sorted = combined.sort((skuId, skuId2) => {
       let num = -1;
       if (skuId.skuId >= skuId2.skuId) {
@@ -35,9 +38,9 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
       }
       return num;
     });
-    obj[2] = sorted.reduce((acc, item, index) => {
-      acc[item.skuId] = item;
-      return acc;
+    obj[2] = sorted.reduce((arg0, skuId) => {
+      arg0[skuId.skuId] = skuId;
+      return arg0;
     }, {});
     obj[3] = obj;
     obj2.dispatch(obj);
@@ -46,16 +49,16 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     obj1[0] = Endpoints.STORE_PUBLISHED_LISTINGS_SKUS;
     obj2 = { application_id: null, guild_id: null };
     obj2[0] = closure_3;
-    obj2[1] = guildId;
+    obj2[1] = closure_0;
     obj1[1] = obj2;
-    const obj5 = _httpGetWithCountryCodeQuery;
-    obj1[3] = require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj5 = __httpGetWithCountryCodeQuery;
+    obj1[3] = _sendRequest.rejectWithMigratedError();
     const result = obj5.httpGetWithCountryCodeQuery(obj1);
-    return result.then((result) => {
-      guildId = result;
-      const body = result.body;
-      const mapped = body.map((item, index) => closure_1_1(closure_1_2[6])(body.body, item));
-      const found = mapped.filter(guildId(dependencyMap[7]).isNotNullish);
+    return result.then((body) => {
+      const callback = body;
+      body = body.body;
+      const mapped = body.map((arg0) => closure_1_1(closure_1_2[6])(body.body, arg0));
+      const found = mapped.filter(callback(closure_1_2[7]).isNotNullish);
       const sorted = found.sort((skuId, skuId2) => {
         let num = -1;
         if (skuId.skuId >= skuId2.skuId) {
@@ -63,24 +66,24 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
         }
         return num;
       });
-      const reduced = sorted.reduce((acc, item, index) => {
-        const powerupCatalog = acc.powerupCatalog;
-        acc.allPowerups[item.skuId] = item;
-        if (null == powerupCatalog[item.type]) {
-          powerupCatalog[item.type] = [];
+      const reduced = sorted.reduce((powerupCatalog, skuId) => {
+        powerupCatalog = powerupCatalog.powerupCatalog;
+        powerupCatalog.allPowerups[skuId.skuId] = skuId;
+        if (null == powerupCatalog[skuId.type]) {
+          powerupCatalog[skuId.type] = [];
         }
-        let arr = powerupCatalog[item.type];
+        let arr = powerupCatalog[skuId.type];
         if (arr != null) {
           const push = arr.push;
           if (push != null) {
-            arr = push(item);
+            arr = push(skuId);
           }
         }
-        return acc;
+        return powerupCatalog;
       }, { allPowerups: {}, powerupCatalog: {} });
       ({ allPowerups, powerupCatalog } = reduced);
-      dispatcherDefault.dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId, allPowerups, powerupCatalog });
-      return result.body;
+      closure_1_1(closure_1_2[2]).dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: callback, allPowerups, powerupCatalog });
+      return body.body;
     });
   }
 };
@@ -90,14 +93,15 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   if (arg1 === undefined) {
     flag = true;
   }
-  _httpGetWithCountryCodeQuery;
-  let obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: require("../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
+  let obj = __httpGetWithCountryCodeQuery;
+  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
   const result = obj.httpGetWithCountryCodeQuery(obj);
-  return result.then((result) => {
+  return result.then((body) => {
     let obj = {};
-    const body = result.body;
-    const item = body.forEach((item, index) => {
-      const sku = item.sku;
+    obj = {};
+    body = body.body;
+    const item = body.forEach((sku) => {
+      sku = sku.sku;
       let powerup;
       if (sku != null) {
         const tenant_metadata = sku.tenant_metadata;
@@ -110,14 +114,14 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
       }
       if (null == powerup) {
         let powerup_metadata;
-        if (item != null) {
-          const sku2 = item.sku;
+        if (sku != null) {
+          const sku2 = sku.sku;
           if (sku2 != null) {
             powerup_metadata = sku2.powerup_metadata;
           }
         }
         if (null == powerup_metadata) {
-          const sku3 = item.sku;
+          const sku3 = sku.sku;
           let game_server;
           if (sku3 != null) {
             const tenant_metadata2 = sku3.tenant_metadata;
@@ -129,14 +133,14 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
             }
           }
           if (null != game_server) {
-            obj[item.id] = item;
+            obj[sku.id] = sku;
           }
         }
       }
-      obj[item.sku_id] = item;
+      obj[sku.sku_id] = sku;
     });
     obj = { type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS", guildId: obj, unlockedPowerups: obj, unlockedGameServers: obj };
-    dispatcherDefault.dispatch(obj);
+    closure_1_1(closure_1_2[2]).dispatch(obj);
   });
 };
 export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {

@@ -8,7 +8,7 @@ function _wrapNativeSuper(fn) {
   _wrapNativeSuper = function _wrapNativeSuper(fn) {
     closure_0 = fn;
     if (null !== fn) {
-      if (map(dependencyMap[0])(fn)) {
+      if (map(closure_1_2[0])(fn)) {
         if (typeof fn !== "function") {
           const _TypeError = TypeError;
           const typeError = new TypeError("Super expression must either be null or a function");
@@ -29,13 +29,16 @@ function _wrapNativeSuper(fn) {
             }
           }
           const _Object = Object;
-          const obj = { value: null, enumerable: false, writable: true, configurable: true };
+          let obj = { constructor: null };
+          obj = { value: null, enumerable: false, writable: true, configurable: true };
           obj[0] = Wrapper;
           obj[0] = obj;
           Wrapper.prototype = Object.create(fn.prototype, obj);
-          return map(dependencyMap[3])(Wrapper, fn);
+          return tmp7(tmp8[3])(Wrapper, fn);
         }
       }
+      tmp7 = map;
+      tmp8 = closure_1_2;
     }
     return fn;
   };

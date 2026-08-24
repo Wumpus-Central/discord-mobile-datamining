@@ -1,10 +1,11 @@
 // discord_app/modules/checkpoint/CheckpointColors.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import CheckpointPersonas2 from "CheckpointConstants.tsx";
 
 const CheckpointPersonas = CheckpointPersonas2.CheckpointPersonas;
-let obj = { primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY, secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY, backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_BACKGROUND_OVERLAY, gradient: null };
+let obj = {};
+obj = { primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY, secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY, backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_BACKGROUND_OVERLAY, gradient: null };
 const items = [ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_START, ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_END];
 obj[3] = items;
 obj[CheckpointPersonas.ZERO] = obj;
@@ -44,6 +45,6 @@ const obj8 = { primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_N
 const items9 = [ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_START, ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_END];
 obj8[3] = items9;
 obj[CheckpointPersonas.NINE] = obj8;
-const result = obj132.fileFinishedImporting("modules/checkpoint/CheckpointColors.native.tsx");
+const result = set.fileFinishedImporting("modules/checkpoint/CheckpointColors.native.tsx");
 
 export const CHECKPOINT_PERSONA_COLORS = obj;

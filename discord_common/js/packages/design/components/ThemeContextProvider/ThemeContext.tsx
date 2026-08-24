@@ -4,12 +4,13 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
 let c0 = importAllResult;
 ({ Fragment: closure_1, jsx: obj1 } = jsxProd);
-let obj = {};
+let obj = { theme: "light", primaryColor: null, secondaryColor: null, gradient: null, flags: 0, contrast: 1, saturation: 1, density: "compact", disableAdaptiveTheme: false, reduceAdaptiveTheme: false };
+obj = {};
 let json = JSON.stringify(obj);
 let merged = Object.assign(obj);
 obj.key = json;
 let context = importAllResult.createContext(obj);
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx");
 
 export const createThemedContext = function createThemedContext(arg0) {
   const obj = {};

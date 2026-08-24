@@ -1,17 +1,16 @@
 // _runtime/00245_map.js
-import _modDef38 from "metro/00038__.js";
 import frozen from "00257_frozen.js";
-import _modDef258 from "metro/00258__.js";
+import { HeadlessJsTaskSupport } from "00259_HeadlessJsTaskSupport.js";
 
 require = arg1;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let closure_5 = {};
 let closure_6 = {};
 const map = new Map();
 const map1 = new Map();
-function componentProviderInstrumentationHook(fn) {
-  return fn();
+function componentProviderInstrumentationHook(arg0) {
+  return arg0();
 }
 arg5.setWrapperComponentProvider = function setWrapperComponentProvider(arg0) {
   closure_3 = arg0;
@@ -20,13 +19,13 @@ arg5.setRootViewStyleProvider = function setRootViewStyleProvider(arg0) {
   closure_4 = arg0;
 };
 arg5.registerConfig = function registerConfig(arr) {
-  const item = arr.forEach((item, index) => {
-    if (item.run) {
-      closure_5[item.appKey] = item.run;
+  const item = arr.forEach((run) => {
+    if (run.run) {
+      closure_5[run.appKey] = run.run;
     } else {
-      component(table[0])(null != item.component, "AppRegistry.registerConfig(...): Every config is expected to set either `run` or `component`, but `%s` has neither.", item.appKey);
-      const appKey = item.appKey;
-      component = item.component;
+      component(table[0])(null != run.component, "AppRegistry.registerConfig(...): Every config is expected to set either `run` or `component`, but `%s` has neither.", run.appKey);
+      const appKey = run.appKey;
+      component = run.component;
       closure_5[appKey] = (arg0, arg1) => {
         const obj = { RootComponent: closure_1_9(component, component(closure_1_2[2])), initialProps: null, rootTag: null, WrapperComponent: null, rootViewStyle: null, isLogBox: null, debugName: null, displayMode: null };
         ({ initialProps: obj[1], rootTag: obj[2] } = arg0);
@@ -45,7 +44,7 @@ arg5.registerConfig = function registerConfig(arr) {
         obj[7] = arg1;
         appKey(closure_1_2[1]).default(obj);
       };
-      if (item.section) {
+      if (run.section) {
         closure_6[appKey] = tmp5[appKey];
       }
     }
@@ -118,8 +117,8 @@ arg5.getRunnable = function getRunnable(Discord) {
   return dependencyMap[Discord];
 };
 arg5.getRegistry = function getRegistry() {
-  { sections: Object.keys(closure_6), runnables: null };
-  const obj = {};
+  let obj = { sections: Object.keys(closure_6), runnables: null };
+  obj = {};
   const merged = Object.assign(closure_5);
   obj[1] = obj;
   return obj;
@@ -133,9 +132,11 @@ arg5.runApplication = function runApplication(name) {
     const _console = console;
     console.log("Running \"" + name + "\"");
   }
-  _modDef38(dependencyMap[name], "\"" + name + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
-  const obj = { name };
+  module(38)(dependencyMap[name], "\"" + name + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
+  let obj = module(258);
+  obj = { name };
   obj.setActiveScene(obj);
+  const tmp3 = module(38);
   dependencyMap[name](arg1, frozen.coerceDisplayMode(arg2));
 };
 arg5.setSurfaceProps = function setSurfaceProps(arg0, arg1, arg2) {
@@ -145,7 +146,8 @@ arg5.setSurfaceProps = function setSurfaceProps(arg0, arg1, arg2) {
     const _console = console;
     console.log(`${`Updating props for Surface "${arg0}`}" with ${JSON.stringify(arg1)}`);
   }
-  _modDef38(dependencyMap[arg0], "\"" + arg0 + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
+  module(38)(dependencyMap[arg0], "\"" + arg0 + "\" has not been registered. This can happen if:\n* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.\n* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called.");
+  const tmp4 = module(38);
   dependencyMap[arg0](arg1, frozen.coerceDisplayMode(arg2));
 };
 arg5.unmountApplicationComponentAtRootTag = function unmountApplicationComponentAtRootTag(arg0) {
@@ -174,23 +176,23 @@ arg5.registerCancellableHeadlessTask = function registerCancellableHeadlessTask(
 };
 arg5.startHeadlessTask = function startHeadlessTask(arg0, arg1, arg2) {
   const _require = arg0;
-  const _default = require("00259_HeadlessJsTaskSupport.js").default;
+  const _default = _HeadlessJsTaskSupport.default;
   const value = map.get(arg1);
   if (value) {
     const promise = value()(arg2);
-    value()(arg2).then((result) => {
+    value()(arg2).then(() => {
       if (_default) {
         _default.notifyTaskFinished(closure_0);
       }
-    }).catch((error) => {
-      console.error(error);
+    }).catch((arg0) => {
+      console.error(arg0);
       let tmp2 = _default;
       if (_default) {
-        tmp2 = error instanceof _default(dependencyMap[6]);
+        tmp2 = arg0 instanceof _default(closure_1_2[6]);
       }
       if (tmp2) {
-        _default.notifyTaskRetry(closure_0).then((result) => {
-          if (!result) {
+        _default.notifyTaskRetry(closure_0).then((arg0) => {
+          if (!arg0) {
             closure_1.notifyTaskFinished(closure_0);
           }
         });

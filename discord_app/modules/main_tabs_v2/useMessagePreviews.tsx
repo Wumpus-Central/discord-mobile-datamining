@@ -1,11 +1,12 @@
 // discord_app/modules/main_tabs_v2/useMessagePreviews.tsx
 import useIsNsfwGatedDefault from "../age_gate/useIsNsfwGated.tsx";
 import useLatestChannelMessageDefault from "../message_previews/useLatestChannelMessage.tsx";
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
-import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
 
 export default function useMessagePreview(guild_id) {
   ({ unread, disabled } = arg1);
@@ -27,13 +28,13 @@ export default function useMessagePreview(guild_id) {
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(dependencyMap[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(dependencyMap[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
   const obj = guild_id(589);
@@ -66,7 +67,7 @@ export default function useMessagePreview(guild_id) {
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const guilds = closure_1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {
@@ -82,13 +83,13 @@ export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) 
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(dependencyMap[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(dependencyMap[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
 };

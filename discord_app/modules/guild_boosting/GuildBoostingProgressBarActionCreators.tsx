@@ -1,15 +1,15 @@
 // discord_app/modules/guild_boosting/GuildBoostingProgressBarActionCreators.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-const result = obj132.fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarActionCreators.tsx");
 
 export const updateGuildPremiumSubscriptionCount = function updateGuildPremiumSubscriptionCount(guildId, arg1) {
   importDefault = guildId;
   dependencyMap = arg1;
   dispatcherDefault.wait(() => {
-    guildId(table[0]);
-    const obj = { type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId, premiumCount: table };
+    let obj = guildId(table[0]);
+    obj = { type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId, premiumCount: table };
     obj.dispatch(obj);
   });
 };

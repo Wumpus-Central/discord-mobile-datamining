@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");
 
 export default function useTrialActiveUserLimitOptions() {
   return React.useMemo(() => {

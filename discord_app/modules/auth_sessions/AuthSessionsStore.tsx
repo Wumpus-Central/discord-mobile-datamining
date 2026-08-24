@@ -18,21 +18,22 @@ const authSessionsStore = new AuthSessionsStore(dispatcherDefault, {
   LOGIN_SUCCESS: handleInit,
   FETCH_AUTH_SESSIONS_SUCCESS: function handleFetchAuthSessionsSuccess(sessions) {
     sessions = sessions.sessions;
-    closure_0 = sessions.map((item, index) => {
+    closure_0 = sessions.map((approx_last_used_time) => {
       const obj = {};
-      const merged = Object.assign(item);
-      obj.approx_last_used_time = new Date(item.approx_last_used_time);
+      const merged = Object.assign(approx_last_used_time);
+      obj.approx_last_used_time = new Date(approx_last_used_time.approx_last_used_time);
       return obj;
     });
   },
   LOGOUT_AUTH_SESSIONS_SUCCESS: function handleLogoutAuthSessionsSuccess(arg0) {
     let items;
+    c1 = undefined;
     items = [...items];
     c1 = false;
     for (const item10014 of tmp) {
       let tmp2 = (function _loop(item10014) {
         items = item10014;
-        const findIndexResult = items.findIndex((item, index) => item.id_hash === closure_0);
+        const findIndexResult = items.findIndex((id_hash) => id_hash.id_hash === closure_0);
         if (findIndexResult >= 0) {
           items.splice(findIndexResult, 1);
           c1 = true;
@@ -45,6 +46,6 @@ const authSessionsStore = new AuthSessionsStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/auth_sessions/AuthSessionsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsStore.tsx");
 
 export default authSessionsStore;

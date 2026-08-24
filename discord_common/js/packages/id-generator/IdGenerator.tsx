@@ -1,9 +1,9 @@
 // discord_common/js/packages/id-generator/IdGenerator.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import IntegerDefault from "../../../../_runtime/00014_Integer.js";
 import Buffer from "../../../../_runtime/00511_Buffer.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {
     obj = Object.create(new.target.prototype);

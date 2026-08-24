@@ -1,38 +1,45 @@
 // _runtime/00781_equalArrays.js
 import { SetCache } from "00782_SetCache.js";
 
-export default function equalArrays(key, closure_0, height, fn, fn2, get) {
-  const _require = height;
-  dependencyMap = fn;
-  closure_2 = fn2;
+export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
+  const _require = arg2;
+  dependencyMap = arg3;
+  closure_2 = arg4;
   closure_3 = get;
-  if (key.length != length2) {
+  if (arg0.length != arg1.length) {
     return false;
   }
-  get.get(key);
-  const value = get.get(_require);
+  let value = get.get(arg0);
+  value = get.get(arg1);
   if (value) {
     if (value) {
-      return value == _require && value == key;
+      return value == arg1 && value == arg0;
     }
   }
   let tmp4;
-  if (2 & height) {
-    tmp4 = new SetCache();
+  if (2 & arg2) {
+    tmp4 = new _SetCache();
   }
   closure_4 = tmp4;
-  const result = get.set(key, _require);
-  const result1 = get.set(_require, key);
+  const result = get.set(arg0, arg1);
+  const result1 = get.set(arg1, arg0);
   let num = 0;
   let flag2 = true;
-  if (0 < key.length) {
+  if (0 < arg0.length) {
     closure_5 = tmp12;
-    while (!fn) {
+    while (!arg3) {
       if (undefined !== tmp11) {
         flag2 = false;
       } else if (tmp4) {
+        let tmp35 = _require;
+        let tmp36 = dependencyMap;
         flag2 = false;
       } else if (tmp12 !== tmp13) {
+        let tmp30 = tmp12;
+        let tmp31 = tmp13;
+        let tmp32 = arg2;
+        let tmp33 = arg3;
+        let tmp34 = get;
         flag2 = false;
       }
       let sum = num + 1;
@@ -40,12 +47,12 @@ export default function equalArrays(key, closure_0, height, fn, fn2, get) {
       flag2 = true;
     }
     if (tmp) {
-      let tmp22 = fn(tmp13, tmp12, tmp15, _require, key, get);
+      let tmp22 = arg3(tmp13, tmp12, tmp15, arg1, arg0, get);
     } else {
-      tmp22 = fn(tmp12, tmp13, tmp15, key, _require, get);
+      tmp22 = arg3(tmp12, tmp13, tmp15, arg0, arg1, get);
     }
   }
-  get.delete(key);
-  get.delete(_require);
+  get.delete(arg0);
+  get.delete(arg1);
   return flag2;
 };

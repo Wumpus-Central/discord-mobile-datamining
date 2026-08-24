@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/utils/calculatePIPState.tsx
 import isStreamKey from "../../../go_live/utils/StreamKeyUtils.tsx";
 import PIPReferenceDimensions from "../pip/VoicePanelPIPUtils.tsx";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
-import reset from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_2 from "../../../calls/ChannelRTCStore.tsx";
+import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
 import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
 export default function calculatePIPState(channelId, getTargetDimensions, lastParticipantId, speakingUserId, focusedId) {
   let tmp = null != focusedId.focusedId;
@@ -23,6 +23,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
     set.add(isStreamKey.encodeStreamKey(currentUserActiveStream));
+    const obj2 = isStreamKey;
   }
   let tmp10 = focusedId.mode === VoicePanelModes.PANEL;
   if (tmp11) {
@@ -53,6 +54,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
     }
     tmp18 = tmp20;
   }
+  const obj3 = PIPReferenceDimensions;
   tmp11 = null != focusedId.focusedId && tmp10;
   let id1;
   if (pIPParticipantToShow != null) {
@@ -60,7 +62,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   }
   let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
-    SquarePIPReferenceDimensions = PIPReferenceDimensions.SquarePIPReferenceDimensions;
+    SquarePIPReferenceDimensions = tmp13(16306).SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;

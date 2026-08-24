@@ -4,30 +4,33 @@ import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
 import PermissionOverwriteType from "../../../flow/Server.tsx";
 import rebuild from "../../messages/MessageParser.tsx";
 import rebuildDefault from "../../messages/MessageParser.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../threads/ActiveJoinedThreadsStore.tsx";
 import { isGuildSelectableChannelType as closure_5 } from "../../../records/ChannelRecord.tsx";
-import comparator from "../../../stores/GuildChannelStore.tsx";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import createGuildRoleRecordFromRust from "../../../stores/GuildRoleStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../stores/GuildMemberStore.tsx";
+import closure_8 from "../../../stores/GuildRoleStore.tsx";
+import closure_9 from "../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
 import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import { NOOP } from "../../../utils/AutocompleteUtils.tsx";
 
-require = fn;
+require = arg1;
 function getUsers(getGuildId) {
   const guildId = getGuildId.getGuildId();
   if (getGuildId.isPrivate()) {
-    let mapped = applyDefault(getGuildId.recipients).map((item, index) => ({ userId: item }));
+    let mapped = applyDefault(getGuildId.recipients).map((userId) => ({ userId }));
     const arr3 = applyDefault(getGuildId.recipients);
   } else if (null != guildId) {
-    mapped = applyDefault(members.getMembers(guildId)).map((item, index) => ({ userId: item.userId }));
+    const tmp7 = applyDefault;
+    mapped = applyDefault(members.getMembers(guildId)).map((userId) => ({ userId: userId.userId }));
     const tmp7Result = applyDefault(members.getMembers(guildId));
   } else {
     mapped = applyDefault([]);
   }
-  const mapped1 = mapped.map((item, index) => user.getUser(item.userId));
+  const mapped1 = mapped.map((userId) => user.getUser(userId.userId));
   const found = mapped1.filter(isDiscordFrontendDevelopment.isNotNullish);
-  return found.map((item, index) => ({ id: item.id, text: item.tag }));
+  return found.map((id) => ({ id: id.id, text: id.tag }));
 }
 function getChannels(getGuildId, arr) {
   const _require = arr;
@@ -35,39 +38,39 @@ function getChannels(getGuildId, arr) {
   if (null == guildId) {
     const items = [];
     if (tmp2) {
-      arr = items.push(getGuildId);
+      items.push(getGuildId);
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
-    return guildId(12)(items).map((item, index) => {
-      const obj = { id: item.id, text: arr(4984).computeChannelName(item, closure_10, closure_9) };
+    return guildId(12)(items).map((id) => {
+      const obj = { id: id.id, text: arr(4984).computeChannelName(id, closure_10, closure_9) };
       return obj;
     });
   } else {
     dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
-    const tmp9Result = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(require("../../../utils/AutocompleteUtils.tsx").COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((item, index) => closure_1_6.getChannels(guildId)[item].map((item, index) => item.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
-    const found = combined.filter((item, index) => {
-      let hasItem = null == arr;
+    const tmp9Result = guildId(12)(_NOOP.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const combined = guildId(12)(_NOOP.COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(closure_4.computeAllActiveJoinedThreads(guildId));
+    const found = combined.filter((type) => {
+      let hasItem = null == closure_0;
       if (!hasItem) {
-        hasItem = arr.includes(item.type);
+        hasItem = closure_0.includes(type.type);
       }
       return hasItem;
     });
-    return found.map((item, index) => {
-      const obj = { id: item.id, text: null };
-      if (closure_1_5(item.type)) {
+    return found.map((id) => {
+      const obj = { id: id.id, text: null };
+      if (closure_1_5(id.type)) {
         let name;
-        if (dependencyMap[item.id] != null) {
+        if (dependencyMap[id.id] != null) {
           name = tmp7.name;
         }
         if (name == null) {
-          name = arr(4984).computeChannelName(item, closure_1_10, closure_1_9);
+          name = arr(4984).computeChannelName(id, closure_1_10, closure_1_9);
           const obj3 = arr(4984);
         }
         let channelName = name;
       } else {
-        channelName = arr(4984).computeChannelName(item, closure_1_10, closure_1_9);
+        channelName = arr(4984).computeChannelName(id, closure_1_10, closure_1_9);
         const obj2 = arr(4984);
       }
       obj[1] = channelName;
@@ -93,26 +96,27 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
     } else {
       sortedRoles = [];
     }
-    closure_2 = closure_1_1(closure_1_2[9])(sortedRoles).map((item, index) => ({ id: item.id, text: item.name }));
-    closure_3 = arr.map((item, index) => {
+    closure_2 = closure_1_1(closure_1_2[9])(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+    closure_3 = arr.map((text) => {
       obj = {};
-      const merged = Object.assign(item);
-      obj.text = item.text.split("#")[0];
+      const merged = Object.assign(text);
+      obj.text = text.text.split("#")[0];
       return obj;
     });
     function matchUser() {
+      const arr = closure_1_11;
       obj = closure_1;
       if (typeof closure_1_14 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let firstResult = null;
-      if (closure_1_11[0] === closure_1_11) {
-        closure_1 = closure_1_11.substr(closure_1_11.length);
-        const found = obj.sortBy((text) => -text.text.length).filter((item, index) => {
+      if (arr[0] === arr) {
+        closure_1 = str.substr(arr.length);
+        const found = obj.sortBy((text) => -text.text.length).filter((text) => {
           const formatted = closure_1.toLowerCase();
-          return formatted === item.text.toLowerCase();
+          return formatted === text.text.toLowerCase();
         });
-        const mapped = found.map((item, index) => ({ text: arr + item.text, id: item.id }));
+        const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
         const sortByResult = obj.sortBy((text) => -text.text.length);
       }
@@ -129,15 +133,15 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
           HermesBuiltin.throwTypeError();
         }
         let firstResult1 = null;
-        if (closure_1_11[0] === closure_1_11) {
-          closure_1 = closure_1_11.substr(closure_1_11.length);
-          const found1 = closure_3.sortBy((text) => -text.text.length).filter((item, index) => {
+        if (str[0] === arr) {
+          closure_1 = str.substr(arr.length);
+          const found1 = obj6.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
-            return formatted === item.text.toLowerCase();
+            return formatted === text.text.toLowerCase();
           });
-          const mapped1 = found1.map((item, index) => ({ text: arr + item.text, id: item.id }));
+          const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult1 = mapped1.first();
-          const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
+          const sortByResult1 = obj6.sortBy((text) => -text.text.length);
         }
         let id1;
         if (firstResult1 != null) {
@@ -148,6 +152,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
           obj[1] = firstResult1.id;
           tmp6 = obj;
         }
+        obj6 = closure_3;
       }
       return tmp6;
     }
@@ -177,11 +182,11 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       let firstResult = null;
       if (arr[0] === arr) {
         closure_1 = str.substr(arr.length);
-        const found = obj.sortBy((text) => -text.text.length).filter((item, index) => {
+        const found = obj.sortBy((text) => -text.text.length).filter((text) => {
           const formatted = closure_1.toLowerCase();
-          return formatted === item.text.toLowerCase();
+          return formatted === text.text.toLowerCase();
         });
-        const mapped = found.map((item, index) => ({ text: arr + item.text, id: item.id }));
+        const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
         const sortByResult = obj.sortBy((text) => -text.text.length);
       }
@@ -211,11 +216,11 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       let firstResult = null;
       if (str[0] === arr6) {
         closure_1 = str.substr(arr6.length);
-        let found = obj6.sortBy((text) => -text.text.length).filter((item, index) => {
+        let found = obj6.sortBy((text) => -text.text.length).filter((text) => {
           const formatted = closure_1.toLowerCase();
-          return formatted === item.text.toLowerCase();
+          return formatted === text.text.toLowerCase();
         });
-        let mapped = found.map((item, index) => ({ text: arr + item.text, id: item.id }));
+        let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
         firstResult = mapped.first();
         let sortByResult = obj6.sortBy((text) => -text.text.length);
       }
@@ -255,7 +260,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
   obj.channel = channel;
   return obj;
 }.prototype;
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/ApplicationCommandOptionValueParser.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/ApplicationCommandOptionValueParser.tsx");
 
 export { getUsers };
 export const getRoles = function getRoles(guild_id) {
@@ -265,7 +270,7 @@ export const getRoles = function getRoles(guild_id) {
   } else {
     sortedRoles = [];
   }
-  return applyDefault(sortedRoles).map((item, index) => ({ id: item.id, text: item.name }));
+  return applyDefault(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
 };
 export { getChannels };
 export const ApplicationCommandOptionValueParser = prototype;
@@ -283,12 +288,23 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
       let tmp5 = current[nextResult.name];
       let tmp6 = tmp5;
       if (null != tmp5) {
+        let tmp21 = tmp5;
         if ("text" === tmp6[0].type) {
+          let tmp22 = nextResult;
+          let tmp23 = require;
+          let tmp24 = dependencyMap;
+          let tmp25 = dependencyMap;
           if (tmp4.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING) {
+            let tmp7 = nextResult;
             if (null == tmp4.choices) {
+              let tmp8 = nextResult;
               if (!tmp4.autocomplete) {
+                let tmp9 = nextResult;
                 obj = { type: "text", text: null };
+                let tmp10 = importDefault;
+                let tmp11 = tmp24;
                 let obj2 = rebuildDefault;
+                let tmp12 = tmp5;
                 obj[1] = obj2.parse(channel, tmp6[0].text, parserState).content;
                 let items = [obj];
                 obj[tmp4.name] = items;
@@ -296,6 +312,8 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
             }
           }
         }
+        let tmp13 = nextResult;
+        let tmp14 = tmp5;
         obj[tmp4.name] = tmp6;
       }
       continue;
@@ -307,10 +325,10 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
   channel = channel.channel;
   const items = [channel];
   return React.useMemo(() => {
-    if (typeof prototype !== "function") {
+    if (typeof closure_1_17 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(prototype.prototype);
+    let obj = Object.create(closure_1_17.prototype);
     obj.parse = function parse(text, type) {
       const str = text.trim();
       let arr6 = str;
@@ -322,26 +340,27 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
       } else {
         sortedRoles = [];
       }
-      closure_2 = closure_1_1(closure_1_2[9])(sortedRoles).map((item, index) => ({ id: item.id, text: item.name }));
-      closure_3 = arr.map((item, index) => {
+      closure_2 = closure_1_1(closure_1_2[9])(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+      closure_3 = arr.map((text) => {
         obj = {};
-        const merged = Object.assign(item);
-        obj.text = item.text.split("#")[0];
+        const merged = Object.assign(text);
+        obj.text = text.text.split("#")[0];
         return obj;
       });
       function matchUser() {
+        const arr = closure_1_11;
         obj = closure_1;
         if (typeof closure_1_14 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let firstResult = null;
-        if (closure_1_11[0] === closure_1_11) {
-          closure_1 = closure_1_11.substr(closure_1_11.length);
-          const found = obj.sortBy((text) => -text.text.length).filter((item, index) => {
+        if (arr[0] === arr) {
+          closure_1 = str.substr(arr.length);
+          const found = obj.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
-            return formatted === item.text.toLowerCase();
+            return formatted === text.text.toLowerCase();
           });
-          const mapped = found.map((item, index) => ({ text: arr + item.text, id: item.id }));
+          const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
           const sortByResult = obj.sortBy((text) => -text.text.length);
         }
@@ -358,15 +377,15 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             HermesBuiltin.throwTypeError();
           }
           let firstResult1 = null;
-          if (closure_1_11[0] === closure_1_11) {
-            closure_1 = closure_1_11.substr(closure_1_11.length);
-            const found1 = closure_3.sortBy((text) => -text.text.length).filter((item, index) => {
+          if (str[0] === arr) {
+            closure_1 = str.substr(arr.length);
+            const found1 = obj6.sortBy((text) => -text.text.length).filter((text) => {
               const formatted = closure_1.toLowerCase();
-              return formatted === item.text.toLowerCase();
+              return formatted === text.text.toLowerCase();
             });
-            const mapped1 = found1.map((item, index) => ({ text: arr + item.text, id: item.id }));
+            const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
             firstResult1 = mapped1.first();
-            const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
+            const sortByResult1 = obj6.sortBy((text) => -text.text.length);
           }
           let id1;
           if (firstResult1 != null) {
@@ -377,6 +396,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             obj[1] = firstResult1.id;
             tmp6 = obj;
           }
+          obj6 = closure_3;
         }
         return tmp6;
       }
@@ -406,11 +426,11 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         let firstResult = null;
         if (arr[0] === arr) {
           closure_1 = str.substr(arr.length);
-          const found = obj.sortBy((text) => -text.text.length).filter((item, index) => {
+          const found = obj.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
-            return formatted === item.text.toLowerCase();
+            return formatted === text.text.toLowerCase();
           });
-          const mapped = found.map((item, index) => ({ text: arr + item.text, id: item.id }));
+          const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
           const sortByResult = obj.sortBy((text) => -text.text.length);
         }
@@ -440,11 +460,11 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
         let firstResult = null;
         if (str[0] === arr6) {
           closure_1 = str.substr(arr6.length);
-          let found = obj6.sortBy((text) => -text.text.length).filter((item, index) => {
+          let found = obj6.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
-            return formatted === item.text.toLowerCase();
+            return formatted === text.text.toLowerCase();
           });
-          let mapped = found.map((item, index) => ({ text: arr + item.text, id: item.id }));
+          let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
           firstResult = mapped.first();
           let sortByResult = obj6.sortBy((text) => -text.text.length);
         }

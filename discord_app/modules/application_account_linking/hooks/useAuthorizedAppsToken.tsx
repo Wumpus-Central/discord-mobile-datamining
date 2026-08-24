@@ -1,9 +1,9 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import recomputeFromAppTokens from "../../oauth2/AuthorizedAppsStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../oauth2/AuthorizedAppsStore.tsx";
 import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
-const require = fn;
+const require = arg1;
 function useAuthorizedAppsTokens(closure_3, arg1) {
   const _require = closure_3;
   let obj = arg1;
@@ -17,7 +17,7 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
   const tokens = _require(stateFromStoresArray1[2]).useStateFromStoresArray(items, () => {
     let found;
     if (callback != null) {
-      const mapped = callback.map((item, index) => newestTokenForApplication.getNewestTokenForApplication(item));
+      const mapped = callback.map((id) => newestTokenForApplication.getNewestTokenForApplication(id));
       found = mapped.filter(callback(stateFromStoresArray1[3]).isNotNullish);
     }
     if (found == null) {
@@ -31,7 +31,7 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
   const fetched = _require(stateFromStoresArray1[2]).useStateFromStores(items2, () => {
     let flag;
     if (closure_0 != null) {
-      flag = closure_0.every((item, index) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
+      flag = closure_0.every((arg0) => fetchStateForApplication.getFetchStateForApplication(arg0) === constants.FETCHED);
     }
     if (flag == null) {
       flag = false;
@@ -44,7 +44,7 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
   stateFromStoresArray1 = _require(stateFromStoresArray1[2]).useStateFromStoresArray(items4, () => {
     let found;
     if (closure_0 != null) {
-      found = closure_0.filter((item, index) => fetchStateForApplication.getFetchStateForApplication(item) === constants.NOT_FETCHED);
+      found = closure_0.filter((arg0) => fetchStateForApplication.getFetchStateForApplication(arg0) === constants.NOT_FETCHED);
     }
     if (found == null) {
       found = [];
@@ -64,7 +64,7 @@ function useAuthorizedAppsTokens(closure_3, arg1) {
   }, items6);
   return { tokens, fetched };
 }
-const result = require("obj132").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 
 export { useAuthorizedAppsTokens };
 export const useAuthorizedAppsToken = function useAuthorizedAppsToken(parentId) {

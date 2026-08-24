@@ -5,20 +5,19 @@ import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js"
 import dispatcherDefault from "../Dispatcher.tsx";
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import getComboId from "../utils/LibraryApplicationUtils.tsx";
 import isListeningOnSpotifyDefault from "../modules/activities/utils/isListeningOnSpotify.tsx";
-import upsertAccount from "../modules/spotify/SpotifyStore.tsx";
-import handleConnectionClosedOrResumed from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import gameFromServer from "DetectableGameStore.tsx";
-import checkIdleAFK from "IdleStore.tsx";
-import setLibraryApplications from "LibraryApplicationStore.tsx";
-import updateActivities from "LocalActivityStore.tsx";
-import sortActivity from "PresenceStore.tsx";
+import closure_3 from "../modules/spotify/SpotifyStore.tsx";
+import closure_4 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "DetectableGameStore.tsx";
+import closure_6 from "IdleStore.tsx";
+import closure_7 from "LibraryApplicationStore.tsx";
+import closure_8 from "LocalActivityStore.tsx";
+import closure_9 from "PresenceStore.tsx";
 import { sortActivity } from "PresenceStore.tsx";
-import handleUpdate2 from "SessionsStore.tsx";
+import closure_11 from "SessionsStore.tsx";
 import ME from "../Constants.tsx";
 
-require = fn;
+require = arg1;
 function filterPlayingActivities(arg0) {
   if (0 === arg0.length) {
     return arg0;
@@ -29,9 +28,12 @@ function filterPlayingActivities(arg0) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
+      let tmp5 = constants2;
       if (nextResult.type === constants2.PLAYING) {
+        let tmp8 = nextResult;
         let arr = items1.push(tmp4);
       } else {
+        let tmp6 = nextResult;
         arr = items.push(tmp4);
       }
       continue;
@@ -64,34 +66,34 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = getComboId;
+          let tmpResult = tmp(4520);
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
         }
       }
       return shouldShowActivityResult;
-    } else if (constants2.PLAYING === type) {
+    } else if (tmp3.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = getComboId;
+        tmpResult = tmp(4520);
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
       } else {
         const searchGamesByNameResult = closure_5.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = getComboId.shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
-          const tmpResult1 = getComboId;
+          result = tmp(4520).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
+          const tmpResult1 = tmp(4520);
         } else {
-          const ShowCurrentGame = explicitContentFromProto.ShowCurrentGame;
+          const ShowCurrentGame = tmp(4066).ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }
       return result;
     } else {
-      if (constants2.STREAMING !== type) {
-        const WATCHING = constants2.WATCHING;
+      if (tmp3.STREAMING !== type) {
+        const WATCHING = tmp3.WATCHING;
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = getComboId.shouldShareApplicationActivity(flags.application_id, closure_7);
-        const tmpResult2 = getComboId;
+        result1 = tmp(4520).shouldShareApplicationActivity(flags.application_id, closure_7);
+        const tmpResult2 = tmp(4520);
       }
       return result1;
     }
@@ -124,10 +126,10 @@ function handleUpdate() {
     tmp7 = num > 0;
   }
   if (tmp7) {
-    IDLE = StatusTypes.IDLE;
+    IDLE = tmp6.IDLE;
   }
   if (!c23) {
-    if (IDLE !== StatusTypes.INVISIBLE) {
+    if (IDLE !== tmp6.INVISIBLE) {
       activities = activities.getActivities();
       let found = activities.filter(shouldShowActivity);
     }
@@ -144,12 +146,12 @@ function handleUpdate() {
     if (flag) {
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(found, 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((item, index) => item.type !== constants.CUSTOM_STATUS), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(remoteActivities.filter((type) => type.type !== constants.CUSTOM_STATUS), arraySpreadResult);
       const tmp12Result = applyDefault;
       const tmp12ResultResult = applyDefault(items.sort(sortActivity));
-      const iter = applyDefault(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
-      closure_27 = filterPlayingActivities(applyDefault(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value());
       const valueResult = applyDefault(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name).value();
+      closure_27 = filterPlayingActivities(valueResult);
+      const iter = applyDefault(items.sort(sortActivity)).uniqBy((type) => "" + type.type + ":" + type.application_id + ":" + type.name);
     }
   }
   found = [];
@@ -276,6 +278,6 @@ const selfPresenceStore = new SelfPresenceStore(dispatcherDefault, {
     return false;
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/SelfPresenceStore.tsx");
+let result = require("set").fileFinishedImporting("stores/SelfPresenceStore.tsx");
 
 export default selfPresenceStore;

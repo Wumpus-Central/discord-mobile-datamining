@@ -3,7 +3,8 @@ import { TransportTypes } from "../../Constants.tsx";
 import { RPCCloseCodes } from "../../../../Constants.tsx";
 import importDefaultResult from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let closure_0 = importDefaultResult((arg0, arg1, arg2) => {
+let closure_0 = arg1;
+closure_0 = importDefaultResult((arg0, arg1, arg2) => {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -41,7 +42,7 @@ let closure_0 = importDefaultResult((arg0, arg1, arg2) => {
             const result = callback(8757).validateOriginAndUpdateSocket(callback, callback2);
             if (null == dependencyMap) {
               obj1 = { closeCode: null };
-              obj1[0] = RPCCloseCodes.INVALID_CLIENTID;
+              obj1[0] = closure_1_4.INVALID_CLIENTID;
               const tmp23 = new callback2(8752)(obj1, "No Client ID Specified");
               c6 = 3;
               const obj2 = { value: null, done: true };
@@ -52,10 +53,11 @@ let closure_0 = importDefaultResult((arg0, arg1, arg2) => {
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
-              obj3[0] = obj3.processSocketThrottlers(dependencyMap, callback.transport !== TransportTypes.POST_MESSAGE, callback.abortController.signal);
+              obj3[0] = obj3.processSocketThrottlers(tmp33, tmp31.transport !== closure_1_3.POST_MESSAGE, tmp31.abortController.signal);
               return obj3;
             }
             const obj10 = callback(8757);
+            tmp33 = dependencyMap;
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -79,9 +81,9 @@ let closure_0 = importDefaultResult((arg0, arg1, arg2) => {
     }
   })();
 });
-let result = require("obj132").fileFinishedImporting("modules/rpc/native/server/NativeRPCHelpers.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/native/server/NativeRPCHelpers.tsx");
 
-export const validateSocketClient = function(closure_4, origin, client_id) {
+export const validateSocketClient = function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

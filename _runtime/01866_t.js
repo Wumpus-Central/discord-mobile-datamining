@@ -11,9 +11,9 @@ let fn = function t(worklet) {
     const items = [...arguments];
     const timestamp = Date.now();
     if (timestamp - obj.time < num) {
-      obj.time = timestamp;
+      tmp2.time = timestamp;
     } else {
-      obj.time = timestamp;
+      tmp2.time = timestamp;
       const items1 = [];
       HermesBuiltin.arraySpread(items, 0);
       return HermesBuiltin.apply(items1, undefined);
@@ -31,7 +31,7 @@ const fn2 = function n(arg0, arr) {
   closure_0 = arg0;
   let found;
   if (arr) {
-    found = arr.find((item, index) => item >= closure_0);
+    found = arr.find((arg0) => arg0 >= closure_0);
   }
   if (found == null) {
     found = arg0;

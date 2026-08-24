@@ -1,28 +1,31 @@
 // discord_app/modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleStageInstanceCreateOrUpdate from "../../StageInstanceStore.tsx";
+import closure_8 from "../../StageInstanceStore.tsx";
 import MAX_STAGE_TOPIC_LENGTH from "../../StageChannelsConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { GuildScheduledEventPrivacyLevel as closure_12 } from "../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ MAX_STAGE_TOPIC_LENGTH: c9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = MAX_STAGE_TOPIC_LENGTH);
 ({ AnalyticEvents: unpackModuleId, Fonts } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = { container: { padding: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, startButton: { marginTop: 16 }, buttonSubtitle: { paddingTop: 8, textAlign: "center" }, ageVerificationNotice: null, error: null };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
+let obj1 = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
 
 export default function StartStageChannelEventActionSheet(channel) {
   channel = channel.channel;
+  let stateFromStores;
   let first;
   dependencyMap = undefined;
   c4 = undefined;
@@ -65,18 +68,18 @@ export default function StartStageChannelEventActionSheet(channel) {
                 const result = obj3.dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != closure_1_1) {
-                  let tmp33Result = closure_1_2(8062);
+                  let tmp33Result = tmp33(8062);
                   v0 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = tmp33Result.editStage(closure_1_0, closure_1_2, closure_1_12.GUILD_ONLY);
+                  obj1[0] = tmp33Result.editStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY);
                   return obj1;
                 } else {
-                  tmp33Result = closure_1_2(8062);
+                  tmp33Result = tmp33(8062);
                   v0 = 2;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = tmp33Result.startStage(closure_1_0, closure_1_2, closure_1_12.GUILD_ONLY, false);
+                  obj2[0] = tmp33Result.startStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY, false);
                   return obj2;
                 }
               }
@@ -138,7 +141,7 @@ export default function StartStageChannelEventActionSheet(channel) {
   let tmp = callback2();
   let obj = channel(589);
   const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getStageInstanceByChannel(channel.id));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getStageInstanceByChannel(channel.id));
   obj1 = React;
   let str;
   if (stateFromStores != null) {
@@ -163,6 +166,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj = { stage_instance_id: id, can_start_public_stage: false, guild_id: channel.guild_id };
     obj.track(closure_1_11.START_STAGE_OPENED, obj);
   });
+  obj = { style: tmp.header, children: null };
   const items1 = [callback(stateFromStores(8068), {}), , ];
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == stateFromStores) {
@@ -203,7 +207,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     return applyArgumentsResult;
   }
   let obj2 = { bottom: true, style: tmp.container, children: null };
-  const items2 = [callback(View, obj), , , , , ];
+  const items2 = [closure_14(View, obj), , , , , ];
   obj3 = { label: null, maxLength: null, value: null, placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", isClearable: true, accessibilityLabel: null, onSubmitEditing: null };
   const intl6 = tmp2(1236).intl;
   obj3[0] = intl6.string(channel(1236).t["5FPBOB"]);
@@ -228,7 +232,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-feedback-critical", children: null };
     obj5[0] = tmp.error;
     obj5[3] = obj2.getAnyErrorMessage();
-    tmp15Result = callback(tmp2(4734).Text, obj5);
+    tmp15Result = tmp15(tmp2(4734).Text, obj5);
   }
   items2[3] = tmp15Result;
   const obj6 = { style: tmp.startButton, children: null };
@@ -247,10 +251,18 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj8[1] = tmp.buttonSubtitle;
     const intl11 = tmp2(1236).intl;
     obj8[4] = intl11.string(tmp2(1236).t.gR66jX);
-    tmp15Result = callback(tmp2(4734).Text, obj8);
+    tmp15Result = tmp15(tmp2(4734).Text, obj8);
   }
-  const tmp13Result = callback(View, obj);
+  const obj4 = {
+    onConfirmPress() {
+      return stateFromStores(_undefined[17]).hideActionSheet(closure_10);
+    },
+    style: tmp.ageVerificationNotice,
+    channelId: channel.id
+  };
+  const obj7 = { text: stringResult3, onPress: handleSave, disabled: "" === first, loading: tmp8, accessibilityHint: stringResult2 };
+  const tmp13Result = closure_14(View, obj);
   items2[5] = tmp15Result;
   obj2[2] = items2;
-  return callback(channel(6950).BottomSheet, { keyboardShouldPersistTaps: "always", children: callback(channel(6803).SafeAreaPaddingView, obj2) });
+  return callback(channel(6950).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(6803).SafeAreaPaddingView, obj2) });
 };

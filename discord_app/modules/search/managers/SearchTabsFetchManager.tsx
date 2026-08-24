@@ -1,11 +1,11 @@
 // discord_app/modules/search/managers/SearchTabsFetchManager.tsx
 import fetch from "../SearchFetcher.tsx";
-import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import MessageEmbedTypes from "../SearchConstants.tsx";
 import { SearchTypes } from "../../../Constants.tsx";
 import { AbstractSearchFetchManager } from "AbstractSearchFetchManager.tsx";
 
-require = fn;
+require = arg1;
 let closure_2 = ["include_nsfw", "channel_id"];
 ({ SEARCH_FILTERS_BY_TAB: c4, SEARCH_QUERY_BY_SEARCH_FILTER: c5, SEARCH_QUERY_DEFAULT_FILTERS: closure_6 } = MessageEmbedTypes);
 class SearchTabsFetchManager extends AbstractSearchFetchManager {
@@ -18,8 +18,8 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
   ({ include_nsfw, channel_id } = searchQuery);
   closure_2 = obj(searchQuery, closure_2);
   obj = { include_nsfw, channel_ids: channel_id, tabs: {}, track_exact_total_hits: trackExactTotalHits.trackExactTotalHits };
-  const item = searchTabs.forEach((item, index) => {
-    if (null != closure_1_4[item]) {
+  const item = searchTabs.forEach((arg0) => {
+    if (null != closure_1_4[arg0]) {
       obj = closure_1_5[tmp2];
     } else {
       obj = {};
@@ -29,9 +29,8 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(closure_2);
     const merged3 = Object.assign(closure_1);
-    obj.limit = callback(item);
-    obj.tabs[item] = obj;
-    const tmp = callback(item);
+    obj.limit = callback(arg0);
+    obj.tabs[arg0] = obj;
   });
   return obj;
 };
@@ -40,12 +39,12 @@ prototype["createWithPayload"] = function createWithPayload(searchTabs) {
   const requestPayload = this.createRequestPayload({ searchQuery, searchTabs: searchTabs.searchTabs, getLimit: searchTabs.getLimit, pagination: searchTabs.pagination, trackExactTotalHits: searchTabs.trackExactTotalHits });
   const type = searchContext.type;
   if (SearchTypes.GUILD !== type) {
-    if (SearchTypes.GUILD_CHANNEL !== type) {
-      if (SearchTypes.THREAD !== type) {
-        if (SearchTypes.CHANNEL === type) {
+    if (tmp2.GUILD_CHANNEL !== type) {
+      if (tmp2.THREAD !== type) {
+        if (tmp2.CHANNEL === type) {
           const searchTabFetcherImpl = new fetch.SearchTabFetcherImpl(searchContext.channelId, searchContext.type, searchQuery, requestPayload);
           return searchTabFetcherImpl;
-        } else if (SearchTypes.DMS === type) {
+        } else if (tmp2.DMS === type) {
           const searchTabFetcherImpl1 = new fetch.SearchTabFetcherImpl(searchContext.type, searchContext.type, searchQuery, requestPayload);
           return searchTabFetcherImpl1;
         } else {
@@ -68,6 +67,6 @@ prototype["create"] = function create(arg0) {
   return withPayload;
 };
 const searchTabsFetchManager = new SearchTabsFetchManager();
-let result = require("obj132").fileFinishedImporting("modules/search/managers/SearchTabsFetchManager.tsx");
+let result = require("set").fileFinishedImporting("modules/search/managers/SearchTabsFetchManager.tsx");
 
 export default searchTabsFetchManager;

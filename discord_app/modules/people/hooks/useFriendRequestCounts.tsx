@@ -1,11 +1,11 @@
 // discord_app/modules/people/hooks/useFriendRequestCounts.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import recountRelationshipTypes from "../../game_relationships/GameRelationshipStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../game_relationships/GameRelationshipStore.tsx";
+import closure_4 from "../../../stores/RelationshipStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
 
 export const getIncomingFriendRequestCount = function getIncomingFriendRequestCount(items) {
   [obj, obj2] = callback(items, 2);

@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/components/NewUserModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
@@ -9,37 +9,44 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { useNavigatorBackPressHandler } from "../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createNativeStackNavigator.createNativeStackNavigator();
+createNativeStackNavigator = { header: null };
 createNativeStackNavigator = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 createNativeStackNavigator[0] = createNativeStackNavigator;
 let closure_9 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/NewUserModal.tsx");
 
 export default function NewUserModal(arg0) {
   ({ initialRouteName, initialOnboardingStepIndex } = arg0);
+  let _require;
+  let first;
+  dependencyMap = undefined;
   let first1;
   let React;
-  const _require = callback2();
+  closure_5 = undefined;
+  let callback;
+  callback = undefined;
+  _require = callback2();
   const tmp = first1(React.useState(initialOnboardingStepIndex), 2);
-  const first = tmp[0];
+  first = tmp[0];
   dependencyMap = tmp[1];
   const tmp3 = first1(React.useState(initialOnboardingStepIndex), 2);
   first1 = tmp3[0];
   React = tmp3[1];
   closure_5 = React.useRef(null);
-  let obj = NavigationStack;
-  obj.useAccessibilityNativeStackOptions();
+  let obj = _NavigationStack;
+  callback = obj.useAccessibilityNativeStackOptions();
   const items = [first1, first];
-  const callback = React.useCallback((flag) => {
+  callback = React.useCallback((flag) => {
     if (flag == null) {
       flag = false;
     }
     const nextOnboardingStep = lib(16659).getNextOnboardingStep(flag, first1, first);
-    nextOnboardingStep.then((result) => {
-      const onboardingStepIndex = result.onboardingStepIndex;
-      ({ lastShownStepIndex, continueNavigation } = result);
+    nextOnboardingStep.then((onboardingStepIndex) => {
+      onboardingStepIndex = onboardingStepIndex.onboardingStepIndex;
+      ({ lastShownStepIndex, continueNavigation } = onboardingStepIndex);
       callback(onboardingStepIndex);
       callback2(lastShownStepIndex);
       if (continueNavigation) {
@@ -48,11 +55,10 @@ export default function NewUserModal(arg0) {
           const obj2 = closure_1_0(closure_1_2[11]);
         }
       }
-      first(closure_1_2[12]).popWithKey(closure_1_0(closure_1_2[13]).NEW_USER_MODAL_KEY);
-      const obj = first(closure_1_2[12]);
+      closure_1_1(closure_1_2[12]).popWithKey(closure_1_0(closure_1_2[13]).NEW_USER_MODAL_KEY);
     });
   }, items);
-  obj1 = useNavigatorBackPressHandler;
+  obj1 = _useNavigatorBackPressHandler;
   obj1.useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
@@ -111,15 +117,15 @@ export default function NewUserModal(arg0) {
           const merged = Object.assign(arg0);
           obj.onPress = function onPress() {
             closure_0 = closure_7;
-            closure_1_0(closure_1_2[9]);
-            const obj = {
+            let obj = closure_1_0(closure_1_2[9]);
+            obj = {
               onConfirm() {
                 return callback(true);
               }
             };
             obj.openAlert("skip-avatar-upload", closure_1_6(closure_1_4.lazy(() => callback(paths[8])(paths[7], paths.paths)), obj));
           };
-          return closure_1_6(first(closure_1_2[18]), obj);
+          return closure_1_6(closure_1_1(closure_1_2[18]), obj);
         }
       };
     },

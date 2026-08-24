@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import setFontSize from "../../../a11y/AccessibilityActionCreators.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
-import "createToggle";
+import closure_2 from "../../../a11y/AccessibilityStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["St+DJK"]);
@@ -26,6 +26,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SyncReducedMotionWithDeviceSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncReducedMotionWithDeviceSetting.tsx");
 
 export default createToggle;

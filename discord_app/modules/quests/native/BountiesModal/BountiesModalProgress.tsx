@@ -1,16 +1,17 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalProgress.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
-  let obj = {};
+  let obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
+  obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.borderRadius = ThemesDefault.radii.round;
   obj.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
@@ -23,14 +24,15 @@ let closure_9 = createCacheKey.createStyles(() => {
 });
 let closure_10 = { code: "function BountiesModalProgressTsx1(){const{withTiming,visible,timingFast}=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};}" };
 let closure_11 = { code: "function BountiesModalProgressTsx2(){const{withTiming,progress,shouldSkipAnimation,timingNone,timingFast}=this.__closure;return{width:withTiming(progress*100+\"%\",shouldSkipAnimation?timingNone:timingFast,'animate-always')};}" };
-let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
 
 export default function BountiesModalProgress(progress) {
   progress = progress.progress;
   const visible = progress.visible;
+  let first;
   const tmp = callback4();
   let tmp2 = callback(React.useState(false), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   const tmp4 = callback(React.useState(progress), 2);
   const first1 = tmp4[0];
   if (progress !== first1) {

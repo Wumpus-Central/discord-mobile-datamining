@@ -2,29 +2,31 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getCardProductName from "../../collectibles/utils/getProductName.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { width: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_WIDTH, height: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_HEIGHT, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { card: null };
+createCacheKey = { width: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_WIDTH, height: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_HEIGHT, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeOrbShopRewardCard.tsx");
 
 export default function QuestHomeOrbShopRewardCard(product) {
   product = product.product;
   require = product;
+  let stateFromStores;
   let obj = initialize;
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => stateFromStores(table[8]).canUseShopDiscounts(currentUser.getCurrentUser()));
+  stateFromStores = obj.useStateFromStores(items, () => stateFromStores(table[8]).canUseShopDiscounts(currentUser.getCurrentUser()));
   const items1 = [product, stateFromStores];
   const memo = React.useMemo(() => {
-    product(dependencyMap[9]);
-    const obj = { product: closure_0, hasShopDiscount: stateFromStores };
+    let obj = product(closure_1_2[9]);
+    obj = { product: closure_0, hasShopDiscount: stateFromStores };
     return obj.getProductOrbPrice(obj);
   }, items1);
   getCardProductName;

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/FriendStreamNotificationsSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
@@ -15,6 +15,15 @@ const toggle = createToggle.createToggle({
   useValue: explicitContentFromProto.StreamNotificationsEnabled.useSetting,
   onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/FriendStreamNotificationsSetting.tsx");
+const obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.FEFn90);
+  },
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.StreamNotificationsEnabled.useSetting,
+  onValueChange: onGoLiveNotificationSettingsChanged.onGoLiveNotificationSettingsChanged
+};
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendStreamNotificationsSetting.tsx");
 
 export default toggle;

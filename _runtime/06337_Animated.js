@@ -1,10 +1,10 @@
 // _runtime/06337_Animated.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const Animated = get_ActivityIndicator.Animated;
 ({ Easing: c5, Platform, Pressable } = get_ActivityIndicator);
@@ -21,23 +21,26 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
   ({ style, children } = disabled);
   const merged = Object.assign(disabled, Object.create(null));
   const callback2 = arg1;
-  disabled(1501);
-  const first = callback(importAllResult.useState(() => {
+  let first;
+  let animateTo;
+  closure_9 = undefined;
+  let obj = disabled(1501);
+  first = callback(importAllResult.useState(() => {
     const value = new pressOpacity.Value(1);
     return value;
   }), 1)[0];
-  function animateTo(arg0, arg1) {
+  animateTo = function animateTo(arg0, arg1) {
 
-  }
+  };
   closure_9 = importAllResult.useRef(null);
   const items = [arg1];
   const items1 = [disabled, merged.href];
   callback = importAllResult.useCallback((current) => {
     closure_9.current = null;
-    if (typeof callback === "function") {
-      return callback(current);
-    } else if (null != callback) {
-      callback.current = current;
+    if (typeof closure_6 === "function") {
+      return tmp(current);
+    } else if (null != tmp) {
+      tmp.current = current;
     }
   }, items);
   const effect = importAllResult.useEffect(() => {
@@ -45,9 +48,9 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
     if (null != merged.href) {
       if (null != current) {
         if (current) {
-          function preventNavigation(event) {
-            event.preventDefault();
-            event.stopPropagation();
+          function preventNavigation(preventDefault) {
+            preventDefault.preventDefault();
+            preventDefault.stopPropagation();
           }
           const listener = current.addEventListener("click", preventNavigation, true);
           const listener1 = current.addEventListener("auxclick", preventNavigation, true);
@@ -59,7 +62,7 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
       }
     }
   }, items1);
-  let obj = { ref: callback, accessible: true, role: "button", onPress: null, onPressIn: null, onPressOut: null, android_ripple: null, style: null };
+  obj = { ref: callback, accessible: true, role: "button", onPress: null, onPressIn: null, onPressOut: null, android_ripple: null, style: null };
   let fn;
   if (!disabled) {
     fn = (arg0) => {

@@ -1,16 +1,20 @@
 // discord_app/modules/auth/makeAuthenticated.tsx
 import noopAll from "../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
 import { LoginStates } from "../../Constants.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/auth/makeAuthenticated.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/makeAuthenticated.tsx");
 
 export const makeAuthenticated = function makeAuthenticated(displayName) {
   closure_0 = displayName;
   closure_1 = arg1;
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = { passProps: true };
+  }
   let str = displayName.displayName;
   if (str == null) {
     str = displayName.name;

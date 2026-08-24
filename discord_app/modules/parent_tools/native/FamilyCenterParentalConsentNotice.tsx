@@ -1,25 +1,26 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { useIsParentalConsentBannerActive } from "../useIsParentalConsentBannerActive.tsx";
 import { useParentalConsentWarning } from "../useParentalConsentWarning.tsx";
 
-const require = fn;
-const createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
+const require = arg1;
+createCacheKey = { container: null, link: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textDecorationLine: "underline" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalConsentNotice.tsx");
 
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = callback();
   const _require = tmp;
-  let obj = useIsParentalConsentBannerActive;
+  let obj = _useIsParentalConsentBannerActive;
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  obj1 = useParentalConsentWarning;
+  obj1 = _useParentalConsentWarning;
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {
@@ -35,7 +36,7 @@ export default function FamilyCenterParentalConsentNotice() {
     if (null != daysRemaining) {
       if (daysRemaining >= 0) {
         function learnMoreHook(children) {
-          return jsx(lib(dependencyMap[7]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, accessibilityRole: "link", onPress: closure_1, children }, arg1);
+          return closure_1_4(lib(closure_1_2[7]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, accessibilityRole: "link", onPress: closure_1, children }, arg1);
         }
         obj = { style: null, text: null };
         obj[0] = tmp.container;

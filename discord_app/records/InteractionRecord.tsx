@@ -1,9 +1,10 @@
 // discord_app/records/InteractionRecord.tsx
 import toJSDefault from "../lib/Record.tsx";
-import createdAt from "UserRecord.tsx";
+import closure_0 from "UserRecord.tsx";
 
 toJSDefault;
-const prototype = function InteractionRecord(name) {
+let prototype;
+prototype = function InteractionRecord(name) {
   const tmp = new prototype(new.target, name, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name, type: tmp.type, user: tmp.user, name_localized } = name);
@@ -33,6 +34,6 @@ prototype["createFromServer"] = function createFromServer(user) {
   tmp4.displayName = name_localized;
   return tmp4;
 };
-const result = require("obj132").fileFinishedImporting("records/InteractionRecord.tsx");
+const result = require("set").fileFinishedImporting("records/InteractionRecord.tsx");
 
 export default prototype;

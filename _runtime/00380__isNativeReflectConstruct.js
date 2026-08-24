@@ -5,14 +5,13 @@ import flattenStyleDefault from "00148_flattenStyle.js";
 import setDefault from "00357_set.js";
 import _assertNativeAnimatedModuleDefault from "00367__assertNativeAnimatedModule.js";
 import _isNativeReflectConstructDefault from "00381__isNativeReflectConstruct.js";
-import _isNativeReflectConstructDefault2 from "00382__isNativeReflectConstruct.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
+import closure_8 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
+import closure_9 from "00090__classPrivateFieldBase.js";
 import importDefaultResult2 from "00091__classPrivateFieldKey.js";
 import importDefaultResult1 from "00098__inherits.js";
 
@@ -50,6 +49,7 @@ function _connectAnimatedView2(instance) {
     instance.connectedViewTag = findNodeHandleResult;
   }
   const obj = AnimatedProps(114);
+  const tmp = importDefault;
 }
 function _connectShadowNode2(instance) {
   if (obj.cxxNativeAnimatedEnabled()) {
@@ -58,14 +58,14 @@ function _connectShadowNode2(instance) {
       _modDef38(this.__isNative, "Expected node to be marked as \"native\"");
       const nodeFromPublicInstance = AnimatedProps(272).getNodeFromPublicInstance(instance.instance);
       if (null != nodeFromPublicInstance) {
-        const API = setDefault.API;
+        const API = tmp4(357).API;
         const result = API.connectAnimatedNodeToShadowNodeFamily(self.__getNativeTag(), nodeFromPublicInstance);
       }
       const obj3 = AnimatedProps(272);
+      tmp4 = importDefault;
     }
     tmpResult = javaScriptFlagGetterAll;
   }
-  obj = javaScriptFlagGetterAll;
 }
 function _disconnectAnimatedView2(connectedViewTag) {
   const self = this;
@@ -183,12 +183,18 @@ let items = [
       for (let num = 0; num < length; num = num + 1) {
         let tmp = keys[num];
         let obj2 = this._props[tmp];
+        let tmp2 = importDefault;
+        let tmp3 = dependencyMap;
+        let tmp4 = num;
         if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
           obj[tmp] = obj2.__getValue();
-        } else if (obj2 instanceof AnimatedProps(384).AnimatedEvent) {
-          obj[tmp] = obj2.__getHandler();
         } else {
-          obj[tmp] = obj2;
+          let tmp5 = AnimatedProps;
+          if (obj2 instanceof AnimatedProps(384).AnimatedEvent) {
+            obj[tmp] = obj2.__getHandler();
+          } else {
+            obj[tmp] = obj2;
+          }
         }
       }
       return obj;
@@ -203,21 +209,31 @@ let items = [
       const merged = Object.assign(style);
       const keys = Object.keys(style);
       let num = 0;
-      if (0 < length) {
+      if (0 < keys.length) {
         while (true) {
           let tmp2 = keys[num];
           obj2 = this._props[tmp2];
+          let tmp3 = num;
           if ("style" === tmp2) {
+            let tmp8 = importDefault;
+            let tmp9 = dependencyMap;
             tmp10 = flattenStyleDefault(style.style);
             if (obj2 instanceof _isNativeReflectConstructDefault) {
               break;
             } else {
               obj[tmp2] = tmp10;
             }
-          } else if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
-            obj[tmp2] = obj2.__getValue();
-          } else if (obj2 instanceof AnimatedProps(384).AnimatedEvent) {
-            obj[tmp2] = obj2.__getHandler();
+          } else {
+            let tmp4 = importDefault;
+            let tmp5 = dependencyMap;
+            if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
+              obj[tmp2] = obj2.__getValue();
+            } else {
+              let tmp6 = AnimatedProps;
+              if (obj2 instanceof AnimatedProps(384).AnimatedEvent) {
+                obj[tmp2] = obj2.__getHandler();
+              }
+            }
           }
           num = num + 1;
         }
@@ -244,7 +260,10 @@ let items = [
       for (let num = 0; num < length; num = num + 1) {
         let tmp = keys[num];
         let tmp2 = this._props[tmp];
+        let tmp3 = AnimatedProps;
+        let tmp4 = dependencyMap;
         let __isNative = tmp2 instanceof AnimatedProps(384).AnimatedEvent;
+        let tmp5 = num;
         if (__isNative) {
           __isNative = tmp2.__isNative;
         }
@@ -307,7 +326,6 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
-      length = _nodes.length;
     }
   },
   {
@@ -327,6 +345,7 @@ let items = [
       }
       if (!self.__isNative) {
         self.__isNative = true;
+        fn = undefined;
         fn = callback4(callback3(self.prototype), "__setPlatformConfig", self);
         if (typeof fn === "function") {
           fn = (items) => fn.apply(self, items);
@@ -341,21 +360,20 @@ let items = [
           const tmp12 = callback5(self, closure_12);
         }
       }
-      length = _nodes.length;
     }
   },
   {
     key: "setNativeView",
-    value: function setNativeView(getScrollableNode) {
+    value: function setNativeView(arg0) {
       const self = this;
       const _target = this._target;
       let instance;
       if (_target != null) {
         instance = _target.instance;
       }
-      if (instance !== getScrollableNode) {
+      if (instance !== arg0) {
         const obj = { instance: null, connectedViewTag: null };
-        obj[0] = getScrollableNode;
+        obj[0] = arg0;
         self._target = obj;
         if (self.__isNative) {
           callback5(self, closure_11)[closure_11](obj);
@@ -394,10 +412,35 @@ let items = [
   }
 ];
 let fn = Object.hasOwn;
+let obj = {
+  key: "__getValue",
+  value: function __getValue() {
+    const obj = {};
+    const keys = Object.keys(this._props);
+    for (let num = 0; num < length; num = num + 1) {
+      let tmp = keys[num];
+      let obj2 = this._props[tmp];
+      let tmp2 = importDefault;
+      let tmp3 = dependencyMap;
+      let tmp4 = num;
+      if (obj2 instanceof _assertNativeAnimatedModuleDefault) {
+        obj[tmp] = obj2.__getValue();
+      } else {
+        let tmp5 = AnimatedProps;
+        if (obj2 instanceof AnimatedProps(384).AnimatedEvent) {
+          obj[tmp] = obj2.__getHandler();
+        } else {
+          obj[tmp] = obj2;
+        }
+      }
+    }
+    return obj;
+  }
+};
 if (fn == null) {
-  fn = (arg0, key10009) => {
+  fn = (arg0, arg1) => {
     const call = hasOwnProperty.call;
-    return typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009);
+    return typeof call === "unknown" ? hasOwnProperty(arg1) : call(arg0, arg1);
   };
 }
 

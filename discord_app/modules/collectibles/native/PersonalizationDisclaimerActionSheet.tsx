@@ -6,18 +6,20 @@ import Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, header: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
+let obj1 = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
 
 export default function PersonalizationDisclaimerActionSheet() {
   const tmp = callback3();
@@ -25,7 +27,8 @@ export default function PersonalizationDisclaimerActionSheet() {
     const obj = callback(4090);
     obj.openURL(callback(1993).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
   }, []);
-  let obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
+  let obj = { contentStyles: tmp.container, children: null };
+  obj = { variant: "heading-md/medium", color: "mobile-text-heading-primary", accessibilityRole: "header", style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.euks4U);
   const items = [callback(Text.Text, obj), ];

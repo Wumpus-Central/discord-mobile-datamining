@@ -1,16 +1,17 @@
 // _runtime/00341__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
 import importDefaultResult from "00005_asyncGeneratorStep.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "metro/00042__createClass.js";
 import importDefaultResult2 from "00098__inherits.js";
 import { createRef } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
 const KeyboardAvoidingView = importDefault;
+let closure_1 = dependencyMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,7 +33,7 @@ function _isNativeReflectConstruct() {
 }
 let closure_2 = ["behavior", "children", "contentContainerStyle", "enabled", "keyboardVerticalOffset", "style", "onLayout"];
 let c4 = importDefaultResult;
-let closure_1;
+closure_1 = undefined;
 class KeyboardAvoidingView {
   constructor(arg0) {
     self = this;
@@ -299,13 +300,13 @@ closure_1 = importDefaultResult(function(arg0) {
           let sum = self;
           let num6 = self._frame;
           if (num6) {
-            if (screenY) {
+            if (tmp18) {
               const keyboardVerticalOffset = sum.props.keyboardVerticalOffset;
               c2 = keyboardVerticalOffset;
               if (keyboardVerticalOffset == null) {
                 c2 = 0;
               }
-              let diff = screenY.screenY - c2;
+              let diff = tmp18.screenY - c2;
               if ("height" === sum.props.behavior) {
                 const _Math2 = Math;
                 sum = sum.state.bottom + num6.y;
@@ -367,20 +368,19 @@ let items = [
         self._keyboardEvent = null;
         self._setBottom(0);
       }
-      let tmpResult = KeyboardAvoidingView(343);
+      let tmpResult = tmp(343);
       const items = [tmpResult.addListener("keyboardDidHide", self._onKeyboardHide), ];
-      tmpResult = KeyboardAvoidingView(343);
+      tmpResult = tmp(343);
       items[1] = tmpResult.addListener("keyboardDidShow", self._onKeyboardChange);
       self._subscriptions = items;
-      obj = KeyboardAvoidingView(343);
     }
   },
   {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       const _subscriptions = this._subscriptions;
-      const item = _subscriptions.forEach((item, index) => {
-        item.remove();
+      const item = _subscriptions.forEach((remove) => {
+        remove.remove();
       });
     }
   },

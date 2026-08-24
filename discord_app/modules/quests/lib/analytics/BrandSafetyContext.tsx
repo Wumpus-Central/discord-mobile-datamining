@@ -1,23 +1,23 @@
 // discord_app/modules/quests/lib/analytics/BrandSafetyContext.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "ContentImpressionTrackerConstants.tsx";
 import SidebarVisibilityMethodStore from "../../../guild_sidebar/SidebarVisibilityMethodStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import handleConnectionOpen from "../../../../stores/SelectedGuildStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
 import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx";
 
 ({ getVisibleChannelIdsMethod: c3, getVisibleGuildIdsMethod: c4 } = SidebarVisibilityMethodStore);
 let closure_10 = MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
-let result = obj132.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
+let result = set.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  let obj = getQuestDeliveryDataForPlacement;
+  let obj = _getQuestDeliveryDataForPlacement;
   const result = obj.isBillableQuestContent(questContent);
-  obj1 = getQuestDeliveryDataForPlacement;
+  obj1 = _getQuestDeliveryDataForPlacement;
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();
@@ -38,8 +38,8 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
             let items = [];
           } else {
             _require = store.getGuilds();
-            const mapped = tmp4().map((item, index) => {
-              if (undefined === dependencyMap[item]) {
+            const mapped = tmp4().map((arg0) => {
+              if (undefined === dependencyMap[arg0]) {
                 return null;
               } else {
                 let obj = { id: null, name: null };
@@ -49,7 +49,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                 }
                 let tmp2 = null;
                 if (null !== tmp.icon) {
-                  importDefault(closure_1_2[8]);
+                  obj = closure_1_1(closure_1_2[8]);
                   obj = { id: null, icon: null, size: 44, canAnimate: true };
                   ({ id: obj2[0], icon: obj2[1] } = tmp);
                   let guildIconURL = obj.getGuildIconURL(obj);
@@ -64,15 +64,15 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                 return obj;
               }
             });
-            items = mapped.filter((item, index) => null !== item);
+            items = mapped.filter((arg0) => null !== arg0);
             const tmp4Result = tmp4();
           }
           obj = { guilds: null, channels: null };
           obj[0] = items;
           if (!tmp8) {
             if (null != guild) {
-              const mapped1 = tmp5().map((item, index) => {
-                channel = channel.getChannel(item);
+              const mapped1 = tmp5().map((arg0) => {
+                channel = channel.getChannel(arg0);
                 if (undefined === channel) {
                   return null;
                 } else {
@@ -85,7 +85,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                   return obj;
                 }
               });
-              let found = mapped1.filter((item, index) => null !== item);
+              let found = mapped1.filter((arg0) => null !== arg0);
               const tmp5Result = tmp5();
             }
             obj[1] = found;
@@ -105,18 +105,19 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                 guildBannerURL = null;
               }
               tmp15 = guildBannerURL;
+              const obj4 = getAvatarURLDefault;
             }
             if (null !== tmp15) {
               obj.selected_guild_banner_url = tmp15;
             }
             if (obj.guilds.length > closure_10) {
               const guilds = obj.guilds;
-              obj.guilds = guilds.slice(0, closure_10);
+              obj.guilds = guilds.slice(0, tmp18);
               obj.truncated = true;
             }
             if (obj.channels.length > closure_10) {
               const channels = obj.channels;
-              obj.channels = channels.slice(0, closure_10);
+              obj.channels = channels.slice(0, tmp18);
               obj.truncated = true;
             }
             obj1 = { brand_safety_context: null };

@@ -1,5 +1,5 @@
 // discord_app/lib/Frecency.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import applyDefault from "../../_runtime/00012_apply.js";
 import tDefault from "../../_runtime/03975_t.js";
 
@@ -64,10 +64,11 @@ class Frecency {
   }
 }
 const prototype = Frecency.prototype;
-prototype["overwriteHistory"] = function overwriteHistory(closure_0, pendingUsages) {
-  const self = this;
-  let obj = closure_0;
-  if (closure_0 == null) {
+prototype["overwriteHistory"] = function overwriteHistory(arg0, pendingUsages) {
+  let self = this;
+  self = this;
+  let obj = arg0;
+  if (arg0 == null) {
     obj = {};
   }
   self.usageHistory = self(12).mapValues(obj, (arg0) => {
@@ -77,7 +78,7 @@ prototype["overwriteHistory"] = function overwriteHistory(closure_0, pendingUsag
     return obj;
   });
   if (pendingUsages != null) {
-    const item = pendingUsages.forEach((item, index) => self.track(item.key, { timestamp: item.timestamp }));
+    const item = pendingUsages.forEach((timestamp) => self.track(timestamp.key, { timestamp: timestamp.timestamp }));
   }
   self.markDirty();
 };
@@ -184,7 +185,8 @@ prototype["getFrecency"] = function getFrecency(id) {
   return frecency;
 };
 prototype["compute"] = function compute() {
-  const self = this;
+  let self = this;
+  self = this;
   dependencyMap = tDefault();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
@@ -200,47 +202,48 @@ prototype["compute"] = function compute() {
       const table = self.computeBonus(arg1) / 100;
       recentUses.score = 0;
       const item = maxByResult(table[0]).forEach(recentUses, (arg0, arg1) => {
-        if (arg1 >= self.maxSamples) {
+        if (arg1 >= closure_1_2.maxSamples) {
           return false;
         } else {
-          score.score = score.score + closure_1 * self.computeWeight(closure_1.diff(maxByResult(closure_1[1])(arg0), "days"));
+          score.score = score.score + closure_1 * obj.computeWeight(closure_1.diff(maxByResult(closure_1[1])(arg0), "days"));
         }
+        obj = closure_1_2;
       });
       if (recentUses.score > 0) {
         if (recentUses.recentUses.length > 0) {
-          const obj = { numOfRecentUses: null, maxTotalUse: null };
+          let obj = { numOfRecentUses: null, maxTotalUse: null };
           obj[0] = recentUses.length;
           let totalUses;
           if (maxByResult != null) {
             totalUses = maxByResult.totalUses;
           }
           obj[1] = totalUses;
-          recentUses.frecency = self.computeFrecency(tmp3, recentUses.score, obj);
+          recentUses.frecency = obj2.computeFrecency(tmp3, recentUses.score, obj);
         }
-        self.usageHistory[arg1] = recentUses;
+        obj2.usageHistory[arg1] = recentUses;
       } else {
-        const usageHistory = self.usageHistory;
+        const usageHistory = obj2.usageHistory;
         delete tmp2[tmp];
       }
       const arr2 = maxByResult(table[0]);
     }
   });
-  const mapped = applyDefault(self.usageHistory).map((item, index) => {
-    const lookupKeyResult = self.lookupKey(index);
+  const mapped = applyDefault(self.usageHistory).map((frecency) => {
+    const lookupKeyResult = self.lookupKey(arg1);
     let tmp2 = null;
     if (null != lookupKeyResult) {
-      const items = [lookupKeyResult, item.frecency];
+      const items = [lookupKeyResult, frecency.frecency];
       tmp2 = items;
     }
     return tmp2;
   });
-  const found = mapped.filter((item, index) => null !== item);
+  const found = mapped.filter((arg0) => null !== arg0);
   let arr2 = applyDefault(self.usageHistory);
   const mapped1 = found.sortBy((arg0) => {
     [, tmp] = arg0;
     return -tmp;
-  }).map((item, index) => {
-    [tmp] = item;
+  }).map((arg0) => {
+    [tmp] = arg0;
     return tmp;
   });
   const sortByResult = found.sortBy((arg0) => {
@@ -267,6 +270,6 @@ Object.defineProperty(prototype, "frequently", {
     this._frequently = _frequently;
   }
 });
-const result = obj132.fileFinishedImporting("lib/Frecency.tsx");
+const result = set.fileFinishedImporting("lib/Frecency.tsx");
 
 export default Frecency;

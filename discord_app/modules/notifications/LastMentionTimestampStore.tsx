@@ -1,9 +1,9 @@
 // discord_app/modules/notifications/LastMentionTimestampStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
 
 let c5 = null;
 let c6 = null;
@@ -161,6 +161,8 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       c8 = null;
     }
     for (const key10037 in closure_9) {
+      let tmp19 = key10037;
+      let tmp20 = dependencyMap;
       let tmp21 = dependencyMap[key10037];
       let tmp15 = null != tmp21;
       if (tmp15) {
@@ -176,6 +178,8 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       continue;
     }
     for (const key10045 in closure_10) {
+      let tmp22 = key10045;
+      let tmp23 = dependencyMap2;
       let tmp24 = dependencyMap2[key10045];
       let tmp16 = null != tmp24;
       if (tmp16) {
@@ -191,6 +195,8 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       continue;
     }
     for (const key10053 in closure_12) {
+      let tmp25 = key10053;
+      let tmp26 = dependencyMap4;
       let tmp27 = dependencyMap4[key10053];
       let tmp17 = null != tmp27;
       if (tmp17) {
@@ -206,6 +212,8 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
       continue;
     }
     for (const key10061 in closure_11) {
+      let tmp28 = key10061;
+      let tmp29 = dependencyMap3;
       let tmp30 = dependencyMap3[key10061];
       let tmp18 = null != tmp30;
       if (tmp18) {
@@ -245,7 +253,7 @@ const lastMentionTimestampStore = new LastMentionTimestampStore(dispatcherDefaul
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
+let result = require("set").fileFinishedImporting("modules/notifications/LastMentionTimestampStore.tsx");
 
 export default lastMentionTimestampStore;
 export const trackMessageNotificationTimestamps = function trackMessageNotificationTimestamps(mentions, guildId) {
@@ -259,7 +267,7 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   const result1 = closure_3.isSuppressRolesEnabled(guildId);
   if (someResult) {
     mentions = mentions.mentions;
-    someResult = mentions.some((item, index) => item.id === id);
+    someResult = mentions.some((id) => id.id === id);
   }
   let member = null;
   if (null != guildId) {
@@ -271,13 +279,13 @@ export const trackMessageNotificationTimestamps = function trackMessageNotificat
   let someResult1 = null != mentions.mention_roles && null != member && null != member.roles;
   if (someResult1) {
     const mention_roles = mentions.mention_roles;
-    someResult1 = mention_roles.some((item, index) => {
+    someResult1 = mention_roles.some((arg0) => {
       const roles = member.roles;
-      return roles.includes(item);
+      return roles.includes(arg0);
     });
   }
-  id(member[3]);
-  const obj = { type: "MESSAGE_NOTIFICATION_SHOWN", guildId, mentioned: someResult, roleMentioned: null, everyoneMentioned: null };
+  let obj = id(member[3]);
+  obj = { type: "MESSAGE_NOTIFICATION_SHOWN", guildId, mentioned: someResult, roleMentioned: null, everyoneMentioned: null };
   if (someResult1) {
     someResult1 = !result1;
   }

@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx
-import obj132 from "../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import YOU_SCREEN_ID from "../YouConstants.tsx";
 
 let closure_3 = YOU_SCREEN_ID.YOU_ACCOUNT_ACTION_SHEET_KEY;
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx");
 
 export const showYouAccountActionSheet = function showYouAccountActionSheet() {
   let flag = arg0;

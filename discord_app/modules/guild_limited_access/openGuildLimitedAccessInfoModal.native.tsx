@@ -5,22 +5,22 @@ import { Keyboard } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
 
 export default function openGuildLimitedAccessInfoModal(arg0) {
   const _require = arg0;
   Keyboard.dismiss();
-  let obj = getBestActiveInput;
+  let obj = _getBestActiveInput;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
   }
   obj = {
     importer() {
-      return callback(dependencyMap[6])(dependencyMap[5], dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      return callback(closure_1_2[6])(closure_1_2[5], closure_1_2.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);

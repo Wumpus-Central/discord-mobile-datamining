@@ -5,10 +5,10 @@ import useCanPurchaseFrames from "useCanPurchaseFrames.tsx";
 import apexExperiment from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
 import apexExperimentDefault2 from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
 import apexExperiment2 from "../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
 
 export const deriveProfileFramesMarketing = function deriveProfileFramesMarketing(arg0) {
   ({ canViewProfileFramesInCollectiblesShop, isEarlyAccess, isFramesEAMarketingEnabled, hasPaidTier2 } = arg0);
@@ -45,7 +45,9 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   let obj = useCanPurchaseFrames;
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
   let isProfileFramesEarlyAccessPhase = useCanPurchaseFrames.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
+  const obj2 = useCanPurchaseFrames;
   const isProfileFramesEAMarketingEnabled = apexExperiment2.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
+  const obj3 = apexExperiment2;
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => callback(table[1]).isUserPaidTier2(currentUser.getCurrentUser()));
   let tmp5 = canViewProfileFramesInCollectiblesShop;
@@ -79,7 +81,8 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   return obj;
 };
 export const getProfileFramesMarketing = function getProfileFramesMarketing(location) {
-  let obj = { location };
+  let obj = apexExperimentDefault;
+  obj = { location };
   let enableProfileFrames = obj.getConfig(obj).enableProfileFrames;
   obj = { location };
   const bucket = apexExperimentDefault2.getConfig(obj).bucket;
@@ -90,7 +93,9 @@ export const getProfileFramesMarketing = function getProfileFramesMarketing(loca
   if (enableProfileFrames) {
     enableProfileFrames = bucket === apexExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
+  const obj3 = apexExperimentDefault2;
   const isProfileFramesEAMarketingEnabled = apexExperiment2.getIsProfileFramesEAMarketingEnabled(location);
+  const obj5 = apexExperiment2;
   const isUserPaidTier2Result = useCanPurchaseFrames.isUserPaidTier2(currentUser.getCurrentUser());
   if (tmp2) {
     tmp2 = !enableProfileFrames;

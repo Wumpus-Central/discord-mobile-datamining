@@ -1,8 +1,8 @@
 // discord_app/modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import closure_0 from "../../../../stores/AuthenticationStore.tsx";
 import { LinkType } from "../MessageEmbedConstants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 
 export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id) {
   let str;

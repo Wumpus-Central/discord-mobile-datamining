@@ -1,5 +1,5 @@
 // _runtime/10331_dealWithAnimation.js
-const require = fn;
+const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_dealWithAnimationTs2(isFinished){const{cb}=this.__closure;return cb(isFinished);}" };
 let closure_3 = { code: "function pnpm_dealWithAnimationTs3(isFinished){const{cb}=this.__closure;return cb(isFinished);}" };
@@ -15,7 +15,7 @@ function dealWithAnimation(type) {
       fn.__closure = { cb };
       fn.__workletHash = 5381689684735;
       fn.__initData = closure_1_2;
-      return type(dependencyMap[0]).withSpring(value, type.config, fn);
+      return type(closure_1_1[0]).withSpring(value, type.config, fn);
     };
   } else {
     return "timing" === type ? ((value, cb) => {
@@ -26,7 +26,7 @@ function dealWithAnimation(type) {
       fn.__closure = { cb };
       fn.__workletHash = 457847741022;
       fn.__initData = closure_1_3;
-      return type(dependencyMap[0]).withTiming(value, type.config, fn);
+      return type(closure_1_1[0]).withTiming(value, type.config, fn);
     }) : undefined;
   }
 }

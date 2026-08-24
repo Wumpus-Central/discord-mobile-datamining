@@ -4,31 +4,34 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import registerAssetDefault from "../../../../_runtime/10245_registerAsset.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import loadSavedGuildStickers from "../StickersStore.tsx";
+import closure_6 from "../StickersStore.tsx";
 import { useStickerPickerStore } from "StickerPickerStore.tsx";
 import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 let c4 = importAllResult;
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: c9, STICKER_SIZE: c10 } = PADDING_HORIZONTAL);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = { color: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj = { listPlaceholder: null, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
+obj = { color: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 obj[0] = obj;
-const createCacheKey = { justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+const obj2 = { backgroundColor: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
 obj[3] = { flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 obj[4] = { marginLeft: 4, textAlign: "center" };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.memo((height) => {
   const tmp = callback3();
-  const items = [tmp.nsfwContainer, { height: height.height }];
-  let obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL };
+  let obj = { style: items, children: null };
+  items = [tmp.nsfwContainer, { height: height.height }];
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL };
   const items1 = [callback(Button.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = getSystemLocale.intl;
@@ -49,6 +52,7 @@ let closure_16 = importAllResult.memo((height) => {
   const style = { height: height.height };
   return callback(View, { style });
 });
+const obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 const memoResult = importAllResult.memo((bottomSheetRef) => {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const bottomSheetIndex = bottomSheetRef.bottomSheetIndex;
@@ -73,30 +77,47 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
     const items = [bottomSheetRef(setCategoryIndex[13]).StickerFormat.PNG, bottomSheetRef(setCategoryIndex[13]).StickerFormat.APNG, bottomSheetRef(setCategoryIndex[13]).StickerFormat.LOTTIE, bottomSheetRef(setCategoryIndex[13]).StickerFormat.GIF];
     stickerFormats = items;
   }
+  let ref;
+  closure_8 = undefined;
+  let first;
+  closure_10 = undefined;
+  let callback;
+  let stateFromStores;
   let callback3;
-  const ref = onLongPressStickerDetail.useRef(null);
+  let memo;
+  let sectionHeights;
+  let sectionSize;
+  let sectionFooterSize;
+  let sectionLabels;
+  let rowsBySection;
+  let rowHeight;
+  let rowSize;
+  let packToScrollToIndex;
+  let setCategory;
+  ref = onLongPressStickerDetail.useRef(null);
   const tmp4 = callback3();
   closure_8 = tmp4;
   const tmp5 = onPressSticker(onLongPressStickerDetail.useState(null), 2);
-  const first = tmp5[0];
+  first = tmp5[0];
   closure_10 = tmp5[1];
   let obj = bottomSheetRef(setCategoryIndex[14]);
   const isPortalKeyboardInModal = obj.useIsPortalKeyboardInModal();
   const tmp11 = bottomSheetIndex(setCategoryIndex[15])(flag);
+  callback = tmp11;
   const items1 = [flag];
-  const stateFromStores = bottomSheetRef(setCategoryIndex[16]).useStateFromStores(items1, () => flag.hasLoadedStickerPacks);
+  stateFromStores = bottomSheetRef(setCategoryIndex[16]).useStateFromStores(items1, () => flag.hasLoadedStickerPacks);
   const tmp13 = ref((setPackToScrollTo) => setPackToScrollTo.setPackToScrollTo);
   callback3 = tmp13;
   const items2 = [setCategoryIndex, tmp13, bottomSheetRef];
-  const memo = onLongPressStickerDetail.useMemo(() => {
+  memo = onLongPressStickerDetail.useMemo(() => {
     function scrollToCancel() {
       return clearTimeout(ref.scrollTo);
     }
     closure_0 = { scrollTo: -1 };
     return {
-      scroll(layout) {
-        const index = layout.index;
-        ({ delay, expand } = layout);
+      scroll(index) {
+        index = index.index;
+        ({ delay, expand } = index);
         clearTimeout(index.scrollTo);
         if (expand) {
           let current = ref.current;
@@ -113,35 +134,35 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
           }
           closure_1_13(null);
         }, delay);
-        setCategoryIndex(index);
+        closure_1_2(index);
       },
       cancel() {
         return scrollToCancel;
       }
     };
   }, items2);
-  const tmp15 = bottomSheetIndex(setCategoryIndex[17])({ channel, containerWidth: tmp11, searchResults, stickerFormats });
-  const sectionHeights = tmp15.sectionHeights;
-  const sectionSize = tmp15.sectionSize;
-  const sectionFooterSize = tmp15.sectionFooterSize;
-  const sectionLabels = tmp15.sectionLabels;
-  const rowsBySection = tmp15.rowsBySection;
-  const rowHeight = tmp15.rowHeight;
-  const rowSize = tmp15.rowSize;
-  const packToScrollToIndex = tmp15.packToScrollToIndex;
+  let tmp15 = bottomSheetIndex(setCategoryIndex[17])({ channel, containerWidth: tmp11, searchResults, stickerFormats });
+  sectionHeights = tmp15.sectionHeights;
+  sectionSize = tmp15.sectionSize;
+  sectionFooterSize = tmp15.sectionFooterSize;
+  sectionLabels = tmp15.sectionLabels;
+  rowsBySection = tmp15.rowsBySection;
+  rowHeight = tmp15.rowHeight;
+  rowSize = tmp15.rowSize;
+  packToScrollToIndex = tmp15.packToScrollToIndex;
   const items3 = [flag, bottomSheetIndex, stateFromStores, packToScrollToIndex, memo];
   const effect = onLongPressStickerDetail.useEffect(() => {
     if (tmp2) {
       if (flag) {
         if (bottomSheetIndex.get() < 1) {
           let obj = { index: null, delay: null, expand: true };
-          obj[0] = packToScrollToIndex;
+          obj[0] = tmp;
           obj[1] = first;
           memo.scroll(obj);
         }
       }
       obj = { index: null, delay: null };
-      obj[0] = packToScrollToIndex;
+      obj[0] = tmp;
       obj[1] = closure_8;
       memo.scroll(obj);
     }
@@ -151,7 +172,7 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
   }, items3);
   const items4 = [sectionLabels, sectionSize, tmp4.sectionSticker];
   const items5 = [sectionFooterSize];
-  const callback = onLongPressStickerDetail.useCallback((arg0) => callback(sectionHeights, { label: sectionLabels[arg0], sectionStyle: closure_8.sectionSticker, height: sectionSize }), items4);
+  callback = onLongPressStickerDetail.useCallback((arg0) => callback(sectionHeights, { label: sectionLabels[arg0], sectionStyle: closure_8.sectionSticker, height: sectionSize }), items4);
   const items6 = [channel, tmp11, first, onLongPressStickerDetail, onPressSticker, rowHeight, rowSize, rowsBySection];
   const callback1 = onLongPressStickerDetail.useCallback(() => callback(sectionSize, { height: sectionFooterSize }), items5);
   const items7 = [setCategoryIndex, sectionHeights];
@@ -170,14 +191,15 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
         obj[5] = first;
         obj[6] = closure_10;
         obj[7] = channel;
-        return callback(bottomSheetIndex(setCategoryIndex[18]), obj);
-      } else if (bottomSheetRef(setCategoryIndex[17]).StickerPickerSectionType.NSFW === type) {
+        return callback(bottomSheetIndex(tmp16[18]), obj);
+      } else if (tmp15(tmp16[17]).StickerPickerSectionType.NSFW === type) {
         obj = { height: null };
         obj[0] = rowHeight;
         return callback(memo, obj);
       } else {
         return null;
       }
+      tmp15 = bottomSheetRef;
     }
   }, items6);
   const memo1 = onLongPressStickerDetail.useMemo(() => {
@@ -213,11 +235,12 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
     };
     return obj;
   }, items7);
-  const setCategory = memo1.setCategory;
+  setCategory = memo1.setCategory;
   const items8 = [tmp4, rowSize];
   const items9 = [setCategory];
   const memo2 = onLongPressStickerDetail.useMemo(() => {
-    let obj = { type: bottomSheetRef(setCategoryIndex[20]).FastestListPropsPlaceholderType.SHAPE, colorHex: closure_8.listPlaceholder.color, shape: "rect", borderRadius: bottomSheetIndex(setCategoryIndex[8]).radii.md, paddingVertical: bottomSheetIndex(setCategoryIndex[8]).space.PX_4 };
+    let obj = { sectionHeader: null, sectionItem: null };
+    obj = { type: bottomSheetRef(setCategoryIndex[20]).FastestListPropsPlaceholderType.SHAPE, colorHex: closure_8.listPlaceholder.color, shape: "rect", borderRadius: bottomSheetIndex(setCategoryIndex[8]).radii.md, paddingVertical: bottomSheetIndex(setCategoryIndex[8]).space.PX_4 };
     obj[0] = obj;
     obj = { type: bottomSheetRef(setCategoryIndex[20]).FastestListPropsPlaceholderType.SHAPE, colorHex: closure_8.listPlaceholder.color, shape: "circle", shapeCount: rowSize, width: closure_10, height: closure_10 };
     obj[1] = obj;
@@ -261,6 +284,6 @@ const memoResult = importAllResult.memo((bottomSheetRef) => {
   }
   return tmp26;
 });
-const result = require("obj132").fileFinishedImporting("modules/stickers/native/StickerPickerList.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerList.tsx");
 
 export default memoResult;

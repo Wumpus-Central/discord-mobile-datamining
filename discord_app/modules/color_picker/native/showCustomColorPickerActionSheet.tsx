@@ -1,10 +1,10 @@
 // discord_app/modules/color_picker/native/showCustomColorPickerActionSheet.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const CustomColorPicker = "CustomColorPicker";
-const result = obj132.fileFinishedImporting("modules/color_picker/native/showCustomColorPickerActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/color_picker/native/showCustomColorPickerActionSheet.tsx");
 
 export default function showCustomColorPickerActionSheet(arg0, arg1) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14010, dependencyMap.paths), CustomColorPicker, arg0, arg1);

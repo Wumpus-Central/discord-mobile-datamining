@@ -1,11 +1,12 @@
 // discord_app/modules/messages/SignedAttachmentLinkUtils.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import isImageProxyURL from "../image_proxy/ImageProxyUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function shouldRefreshAttachmentUrl(searchParams) {
   searchParams = searchParams.searchParams;
   let str = searchParams.get("ex");
@@ -15,7 +16,7 @@ function shouldRefreshAttachmentUrl(searchParams) {
   const parsed = parseInt(str, 16);
   let result;
   if (!isNaN(parsed)) {
-    result = parsed * obj132Default.Millis.SECOND;
+    result = parsed * setDefault.Millis.SECOND;
   }
   let tmp5 = null == result;
   if (!tmp5) {
@@ -37,7 +38,7 @@ function isAttachmentExpired(url) {
     const _isNaN = isNaN;
     let result;
     if (!isNaN(parsed)) {
-      result = parsed * obj132Default.Millis.SECOND;
+      result = parsed * setDefault.Millis.SECOND;
     }
     let tmp8 = null == result;
     if (!tmp8) {
@@ -59,9 +60,9 @@ function isEmbedMediaExpiredAttachment(image) {
       const _Array = Array;
       const hasItem = set1.has(toURLSafeResult.hostname);
       const arr = Array.from(set);
-      let tmp6 = hasItem && Array.from(set).some((item, index) => {
+      let tmp6 = hasItem && Array.from(set).some((arg0) => {
         const pathname = toURLSafeResult.pathname;
-        return pathname.startsWith(item);
+        return pathname.startsWith(arg0);
       });
       if (tmp6) {
         const searchParams = toURLSafeResult.searchParams;
@@ -73,7 +74,7 @@ function isEmbedMediaExpiredAttachment(image) {
         const _isNaN = isNaN;
         let result;
         if (!isNaN(parsed)) {
-          result = parsed * obj132Default.Millis.SECOND;
+          result = parsed * setDefault.Millis.SECOND;
         }
         let tmp9 = null == result;
         if (!tmp9) {
@@ -83,9 +84,9 @@ function isEmbedMediaExpiredAttachment(image) {
         tmp6 = tmp9;
       }
       tmp11 = tmp6;
-      const tmp5 = hasItem && Array.from(set).some((item, index) => {
+      const tmp5 = hasItem && Array.from(set).some((arg0) => {
         const pathname = toURLSafeResult.pathname;
-        return pathname.startsWith(item);
+        return pathname.startsWith(arg0);
       });
     }
     return tmp11;
@@ -97,12 +98,12 @@ function embedHasExpiredAttachmentUrl(image) {
     const images = image.images;
     let someResult;
     if (images != null) {
-      someResult = images.some(isEmbedMediaExpiredAttachment);
+      someResult = images.some(tmp);
     }
     tmpResult = someResult;
   }
   if (!tmpResult) {
-    tmpResult = isEmbedMediaExpiredAttachment(image.video);
+    tmpResult = tmp(image.video);
   }
   return tmpResult;
 }
@@ -173,13 +174,13 @@ function _maybeRefreshAttachmentUrl() {
               if (null == toURLSafeResult) {
                 c4 = 3;
                 obj1 = { value: null, done: true };
-                obj1[0] = closure_0;
+                obj1[0] = tmp18;
                 return obj1;
               } else if (closure_1_8(toURLSafeResult)) {
                 c3 = 1;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = (function refreshAttachmentUrl(closure_0) {
+                obj2[0] = (function refreshAttachmentUrl(arg0) {
                   const self = this;
                   const apply = closure_12.apply;
                   if (typeof apply === "unknown") {
@@ -188,12 +189,12 @@ function _maybeRefreshAttachmentUrl() {
                     applyArgumentsResult = apply(self, arguments);
                   }
                   return applyArgumentsResult;
-                })(closure_0);
+                })(tmp18);
                 return obj2;
               } else {
                 c4 = 3;
                 const obj3 = { value: null, done: true };
-                obj3[0] = closure_0;
+                obj3[0] = tmp18;
                 return obj3;
               }
               const obj8 = closure_1_1(closure_1_2[4]);
@@ -232,21 +233,21 @@ function _maybeRefreshAttachmentUrl() {
   }
   return applyArgumentsResult;
 }
-const set = new Set(["/attachments/", "/ephemeral-attachments/"]);
-const HOUR = obj132Default.Millis.HOUR;
+let set = new Set(["/attachments/", "/ephemeral-attachments/"]);
+const HOUR = setDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
 let substr;
 if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
-  substr = require("obj132");
+  substr = require("set");
 }
 items[1] = substr;
 function isAttachmentUrl(toURLSafeResult) {
   closure_0 = toURLSafeResult;
   const hasItem = set1.has(toURLSafeResult.hostname);
   const arr = Array.from(set);
-  return hasItem && Array.from(set).some((item, index) => {
+  return hasItem && Array.from(set).some((arg0) => {
     const pathname = toURLSafeResult.pathname;
-    return pathname.startsWith(item);
+    return pathname.startsWith(arg0);
   });
 }
 function getSignedAttachmentExpiration(searchParams) {
@@ -258,19 +259,19 @@ function getSignedAttachmentExpiration(searchParams) {
   const parsed = parseInt(str, 16);
   let result;
   if (!isNaN(parsed)) {
-    result = parsed * obj132Default.Millis.SECOND;
+    result = parsed * setDefault.Millis.SECOND;
   }
   return result;
 }
-const mapped = items.map(function getHostWithoutPort(item, index) {
+const mapped = items.map(function getHostWithoutPort(arg0) {
   let first;
-  if (item != null) {
-    first = item.split(":")[0];
+  if (arg0 != null) {
+    first = arg0.split(":")[0];
   }
   return first;
 });
 const set1 = new Set(mapped.filter(Boolean));
-let result = require("obj132").fileFinishedImporting("modules/messages/SignedAttachmentLinkUtils.tsx");
+let result = set.fileFinishedImporting("modules/messages/SignedAttachmentLinkUtils.tsx");
 
 export { isAttachmentUrl };
 export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
@@ -289,6 +290,7 @@ export const removeSignedUrlParameters = function removeSignedUrlParameters(toUR
     }
     return toURLSafeResult;
   }
+  const obj = isDiscordProxiedAssetUrlDefault;
 };
 export { getSignedAttachmentExpiration };
 export const messageHasExpiredAttachmentUrl = function messageHasExpiredAttachmentUrl(attachments) {

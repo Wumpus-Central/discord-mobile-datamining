@@ -1,13 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
-import isSubscriptionGated from "../channel/GatedChannelStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../channel/GatedChannelStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_1_8) {
-  let obj = getChannelRoleSubscriptionStatus;
-  if (getChannelRoleSubscriptionStatus === undefined) {
+  let obj = closure_1_7;
+  if (closure_1_7 === undefined) {
     obj = closure_3;
   }
   let obj2 = closure_1_6;
@@ -44,12 +45,12 @@ function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_
   return obj;
 }
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
-let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
 export default function useChannelRoleSubscriptionStatus(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_2, closure_4];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => getChannelRoleSubscriptionStatus(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
+  return _initialize.useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
 };
 export { getChannelRoleSubscriptionStatus };

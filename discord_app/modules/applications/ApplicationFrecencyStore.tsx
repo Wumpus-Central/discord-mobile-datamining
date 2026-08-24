@@ -3,8 +3,8 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
-import participantFromServer from "../activities/EmbeddedActivitiesStore.tsx";
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_2 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
 import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 function handleUserSettingsProtoStoreChange() {
@@ -21,7 +21,7 @@ function handleUserSettingsProtoStoreChange() {
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
     const mapped = recentUses.map(Number);
-    obj.recentUses = mapped.filter((item, index) => item > 0);
+    obj.recentUses = mapped.filter((arg0) => arg0 > 0);
     return obj;
   }), closure_6.pendingUsages);
 }
@@ -95,6 +95,7 @@ obj = {
         closure_7.compute();
       }
       hasItem = !isLaunching;
+      const tmp6 = !isLaunching;
     }
     return hasItem;
   },
@@ -116,6 +117,6 @@ obj = {
 };
 const applicationFrecencyStore = new ApplicationFrecencyStore(dispatcherDefault, obj);
 const tmp2 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("obj132").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
 
 export default applicationFrecencyStore;

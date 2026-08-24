@@ -1,13 +1,13 @@
 // discord_app/modules/guild_sidebar/native/useShouldRenderChannelList.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import handleClearCaches from "../../cache/CacheStore.tsx";
-import _handleConnectionOpen from "../../gateway/GatewayConnectionStore.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../cache/CacheStore.tsx";
+import closure_5 from "../../gateway/GatewayConnectionStore.tsx";
 import { ComponentActions } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 let c7 = false;
-let result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
 
 export const useShouldRenderChannelList = function useShouldRenderChannelList() {
   const tmp = callback(React.useState(c7), 2);
@@ -15,7 +15,7 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
   closure_1 = tmp[1];
   const items = [first];
   const effect = React.useEffect(() => {
-    function allowRender(handleGatewayChange) {
+    function allowRender(arg0) {
       c7 = true;
       handleGatewayChange(true);
     }
@@ -42,13 +42,12 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
         c7 = true;
         handleGatewayChange(true);
       }
-      const obj2 = allowRender(handleGatewayChange[6]);
     }
     if (!allowRender) {
       let result = closure_1_5.addReactChangeListener(handleGatewayChange);
       let result1 = closure_1_4.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1231).ComponentDispatch;
-      const subscription = ComponentDispatch.subscribe(ComponentActions.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
+      const subscription = ComponentDispatch.subscribe(closure_1_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
       let rootNavigationRef = first(4230).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
@@ -57,12 +56,11 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
         const result = closure_2_5.removeReactChangeListener(handleGatewayChange);
         const result1 = closure_2_4.addReactChangeListener(handleCacheChange);
         const ComponentDispatch = first(handleGatewayChange[7]).ComponentDispatch;
-        ComponentDispatch.unsubscribe(ComponentActions.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
+        ComponentDispatch.unsubscribe(closure_2_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
         const rootNavigationRef = first(handleGatewayChange[6]).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.removeListener("state", handleNavigationChange);
         }
-        const obj = first(handleGatewayChange[6]);
       };
     }
   }, items);

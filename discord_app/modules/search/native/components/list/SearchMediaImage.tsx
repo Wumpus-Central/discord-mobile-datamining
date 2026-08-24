@@ -1,14 +1,14 @@
 // discord_app/modules/search/native/components/list/SearchMediaImage.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import handleReaction from "../../../SearchMessageStore.tsx";
+import closure_8 from "../../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../SearchMessageStore.tsx";
 import { MessageAttachmentFlags } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function SearchMediaObscurityIcon(obscureReason) {
   obscureReason = obscureReason.obscureReason;
   const height = obscureReason.height;
@@ -26,18 +26,18 @@ function SearchMediaObscurityIcon(obscureReason) {
   const memo = importAllResult.useMemo(() => ({ height, width }), items);
   const memo1 = importAllResult.useMemo(() => {
     if (obscureReason(width[10]).ObscureReason.SPOILER === obscureReason) {
-      return closure_1_11(obscureReason(width[11]).SpoilerIcon, { size: "lg" });
+      return closure_1_11(tmp2(tmp3[11]).SpoilerIcon, { size: "lg" });
     } else {
-      if (obscureReason(width[10]).ObscureReason.EXPLICIT_CONTENT !== obscureReason) {
-        if (obscureReason(width[10]).ObscureReason.GORE_CONTENT !== obscureReason) {
-          if (obscureReason(width[10]).ObscureReason.SELF_HARM_CONTENT !== obscureReason) {
-            if (obscureReason(width[10]).ObscureReason.POTENTIAL_EXPLICIT_CONTENT === obscureReason) {
+      if (tmp2(tmp3[10]).ObscureReason.EXPLICIT_CONTENT !== tmp) {
+        if (tmp2(tmp3[10]).ObscureReason.GORE_CONTENT !== tmp) {
+          if (tmp2(tmp3[10]).ObscureReason.SELF_HARM_CONTENT !== tmp) {
+            if (tmp2(tmp3[10]).ObscureReason.POTENTIAL_EXPLICIT_CONTENT === tmp) {
               return null;
             }
           }
         }
       }
-      return closure_1_11(obscureReason(width[12]).ImageWarningIcon, { size: "lg" });
+      return closure_1_11(tmp2(tmp3[12]).ImageWarningIcon, { size: "lg" });
     }
   }, items1);
   const items2 = [absoluteFill.absoluteFill, memo];
@@ -51,7 +51,7 @@ function SearchMediaObscurityIcon(obscureReason) {
     tmp9Result = callback2(closure_7, obj);
   }
   children[1] = tmp9Result;
-  return callback(closure_12, { children });
+  return closure_13(closure_12, { children });
 }
 let c4 = importAllResult;
 ({ ImageBackground: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
@@ -79,8 +79,8 @@ let closure_16 = importAllResult.memo((containerWidth) => {
           items2[1] = Math.round(mediaHeight * (result / mediaWidth));
         }
         [tmp6, tmp7] = callback(items2, 2);
-        containerHeight(1493);
-        let obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: "png" };
+        let obj = containerHeight(1493);
+        obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: "png" };
         obj[0] = mediaUrl;
         obj[1] = mediaWidth;
         obj[2] = mediaHeight;
@@ -97,7 +97,7 @@ let closure_16 = importAllResult.memo((containerWidth) => {
           obj[2] = containerWidth;
           tmp12 = callback2(SearchMediaObscurityIcon, obj);
         }
-        let tmp8Result = containerHeight(500);
+        let tmp8Result = tmp8(500);
         if (tmp8Result.isAndroid()) {
           if (null != obscureReason) {
             obj1 = { style: null, children: null };
@@ -113,11 +113,11 @@ let closure_16 = importAllResult.memo((containerWidth) => {
             return callback3(closure_7, obj1);
           }
         }
-        tmp8Result = containerHeight(500);
+        tmp8Result = tmp8(500);
         let stringResult = obscuredAlt;
         if (tmp8Result.isAndroid()) {
-          const intl = containerHeight(1236).intl;
-          stringResult = intl.string(containerHeight(1236).t.jes7FG);
+          const intl = tmp8(1236).intl;
+          stringResult = intl.string(tmp8(1236).t.jes7FG);
         }
         const obj4 = { style: null, children: null };
         obj4[0] = containerStyle;
@@ -141,15 +141,16 @@ let closure_16 = importAllResult.memo((containerWidth) => {
   }
   return tmp23;
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/list/SearchMediaImage.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchMediaImage.tsx");
 
 export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(attachment) {
   attachment = attachment.attachment;
   const channelId = attachment.channelId;
   const merged = Object.assign(attachment, Object.create(null));
+  let enabledHarmTypesBitmaskForChannelAndAuthorId;
   dependencyMap = undefined;
   let obj = attachment(10118);
-  const enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
+  enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
   let num = attachment.flags;
   if (num == null) {
     num = 0;
@@ -175,6 +176,8 @@ export const SearchEmbedMediaImage = function SearchEmbedMediaImage(embed) {
   embed = embed.embed;
   ({ sources: importDefault, messageId: dependencyMap, channelId } = embed);
   const merged = Object.assign(embed, Object.create(null));
+  closure_3 = undefined;
+  closure_4 = undefined;
   let obj = embed(10118);
   closure_3 = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
   closure_4 = embed(5267).useIsChannelSpoilerGated(store.getChannel(channelId));
@@ -187,7 +190,7 @@ export const SearchEmbedMediaImage = function SearchEmbedMediaImage(embed) {
     if (null == message) {
       return null;
     } else {
-      const flattenSourceResult = embed(dependencyMap[22]).flattenSource(closure_1, false);
+      const flattenSourceResult = embed(closure_1_2[22]).flattenSource(closure_1, false);
       let flag2;
       if (flattenSourceResult != null) {
         flag2 = flattenSourceResult.spoiler;
@@ -195,7 +198,7 @@ export const SearchEmbedMediaImage = function SearchEmbedMediaImage(embed) {
       if (flag2 == null) {
         flag2 = false;
       }
-      const tmp2Result = embed(dependencyMap[15]);
+      const tmp2Result = embed(closure_1_2[15]);
       if (!flag2) {
         flag2 = closure_4;
       }
@@ -256,19 +259,23 @@ export const SearchComponentMediaImage = function SearchComponentMediaImage(unfu
   const sources = unfurledMediaItem.sources;
   ({ channelId, isBot } = unfurledMediaItem);
   const merged = Object.assign(unfurledMediaItem, Object.create(null));
+  let enabledHarmTypesBitmaskForChannelAndAuthorId;
+  let isChannelSpoilerGated;
   let obj = unfurledMediaItem(isBot[19]);
-  const enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, unfurledMediaItem.authorId);
-  const isChannelSpoilerGated = unfurledMediaItem(isBot[21]).useIsChannelSpoilerGated(store.getChannel(channelId));
+  enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, unfurledMediaItem.authorId);
+  isChannelSpoilerGated = unfurledMediaItem(isBot[21]).useIsChannelSpoilerGated(store.getChannel(channelId));
   const items = [unfurledMediaItem, enabledHarmTypesBitmaskForChannelAndAuthorId, sources, isBot, isChannelSpoilerGated];
   obj = {};
   const memo = isChannelSpoilerGated.useMemo(() => {
     const obj = unfurledMediaItem(isBot[15]);
+    const tmp = unfurledMediaItem;
+    const tmp2 = enabledHarmTypesBitmaskForChannelAndAuthorId;
     const flattenSourceResult = unfurledMediaItem(isBot[22]).flattenSource(sources);
     let spoiler;
     if (flattenSourceResult != null) {
       spoiler = flattenSourceResult.spoiler;
     }
-    return obj.getObscureReasonForUnfurledMediaItem(unfurledMediaItem, enabledHarmTypesBitmaskForChannelAndAuthorId, spoiler || isChannelSpoilerGated, isBot);
+    return obj.getObscureReasonForUnfurledMediaItem(tmp, tmp2, spoiler || isChannelSpoilerGated, isBot);
   }, items);
   const merged1 = Object.assign(merged);
   obj.obscureReason = memo;

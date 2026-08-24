@@ -1,12 +1,12 @@
 // discord_app/modules/activity_status/native/ActivityEmoji.tsx
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_5 = createCacheKey.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
 
 export default function ActivityEmoji(emoji) {
   emoji = emoji.emoji;
@@ -44,12 +44,12 @@ export default function ActivityEmoji(emoji) {
   const memo = React.useMemo(() => {
     let id;
     if (emoji != null) {
-      id = emoji.id;
+      id = tmp.id;
     }
     if (null != id) {
-      _undefined(dependencyMap[4]);
-      const obj = { id: null, size: 48, animated: null };
-      obj[0] = emoji.id;
+      let obj = _undefined(closure_1_2[4]);
+      obj = { id: null, size: 48, animated: null };
+      obj[0] = tmp.id;
       obj[2] = _undefined;
       return obj.getEmojiURL(obj);
     }

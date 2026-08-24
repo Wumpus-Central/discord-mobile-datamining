@@ -1,15 +1,15 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import initialize from "../impersonate/ImpersonateStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import shouldShowOnboarding from "GuildOnboardingStore.tsx";
+import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "GuildOnboardingStore.tsx";
 import { GuildOnboardingStatus } from "GuildOnboardingStore.tsx";
 import { GuildOnboardingMode } from "GuildOnboardingPromptsConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function handleUpdate(arg0) {
   ({ guildId, updates } = arg0);
   let prop = updates.onboardingPromptsSeen;
@@ -46,33 +46,36 @@ function handleUpdate(arg0) {
     prompts = [];
   }
   const obj = {};
-  const mapped = prompts.map((item, index) => {
+  const mapped = prompts.map((options) => {
     const items = [];
     let num = 0;
     let flag = false;
     let flag2 = false;
-    if (0 < item.options.length) {
+    if (0 < options.options.length) {
       do {
-        let tmp3 = item.options[num];
+        let tmp3 = options.options[num];
         let tmp4 = null == tmp2[tmp3.id];
+        let tmp5 = num;
         let flag3 = flag;
         if (tmp4) {
           flag3 = true;
         }
         obj = {};
+        let tmp6 = obj;
+        let tmp7 = tmp3;
         let merged = Object.assign(tmp3);
         obj.isUnseen = tmp4;
         let arr = items.push(obj);
         num = num + 1;
         flag = flag3;
         flag2 = flag3;
-      } while (num < item.options.length);
+      } while (num < options.options.length);
     }
     obj = {};
-    const merged1 = Object.assign(item);
+    const merged1 = Object.assign(options);
     obj.options = items;
     obj.hasNewAnswers = flag2;
-    obj.isNew = null == prompts_seen[item.id];
+    obj.isNew = null == prompts_seen[options.id];
     return obj;
   });
   const merged = Object.assign(dependencyMap[guildId]);
@@ -136,8 +139,8 @@ prototype["getOnboardingResponses"] = function getOnboardingResponses(closure_0)
 prototype["getSelectedOptions"] = function getSelectedOptions(guildId) {
   const onboardingResponses = this.getOnboardingResponses(guildId);
   const onboardingPrompts = this.getOnboardingPrompts(guildId);
-  const mapped = onboardingPrompts.map((item, index) => item.options);
-  return mapped.flat().filter((item, index) => closure_0.includes(item.id));
+  const mapped = onboardingPrompts.map((options) => options.options);
+  return mapped.flat().filter((id) => closure_0.includes(id.id));
 };
 prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesForPrompt(guildId, id) {
   closure_0 = id;
@@ -145,14 +148,15 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
     return closure_13;
   } else {
     const prompts = tmp.prompts;
-    const found = prompts.find((item, index) => item.id === closure_0);
+    const found = prompts.find((id) => id.id === closure_0);
     if (null == found) {
       let intersectionResult = closure_13;
     } else {
       const self = this;
       const options = found.options;
-      const mapped = options.map((item, index) => item.id);
+      const mapped = options.map((id) => id.id);
       intersectionResult = applyDefault.intersection(mapped, this.getOnboardingResponses(guildId));
+      const obj = applyDefault;
     }
     return intersectionResult;
   }
@@ -208,16 +212,16 @@ prototype["getEnabled"] = function getEnabled(closure_0) {
 prototype["getOnboardingPrompt"] = function getOnboardingPrompt(closure_1) {
   closure_0 = closure_1;
   const values = Object.values(closure_8);
-  const mapped = values.map((item, index) => item.prompts);
-  return mapped.flat().find((item, index) => item.id === closure_0);
+  const mapped = values.map((prompts) => prompts.prompts);
+  return mapped.flat().find((id) => id.id === closure_0);
 };
 prototype["isLoading"] = function isLoading() {
   return c11;
 };
-prototype["shouldFetchPrompts"] = function shouldFetchPrompts(guildId) {
+prototype["shouldFetchPrompts"] = function shouldFetchPrompts(arg0) {
   let HOUR = arg1;
   if (arg1 === undefined) {
-    HOUR = obj132Default.Millis.HOUR;
+    HOUR = setDefault.Millis.HOUR;
   }
   if (c11) {
     return false;
@@ -236,15 +240,15 @@ prototype["getPendingResponseOptions"] = function getPendingResponseOptions(clos
 prototype["ackIdForGuild"] = function ackIdForGuild(closure_0) {
   const enabledOnboardingPrompts = this.getEnabledOnboardingPrompts(closure_0);
   c0 = "0";
-  let item = enabledOnboardingPrompts.forEach((item, index) => {
-    const options = item.options;
-    item = options.forEach((item, index) => {
-      if (obj.compare(item.id, id) > 0) {
-        id = item.id;
+  let item = enabledOnboardingPrompts.forEach((options) => {
+    options = options.options;
+    const item = options.forEach((id) => {
+      if (obj.compare(id.id, id) > 0) {
+        id = id.id;
       }
     });
-    if (obj.compare(item.id, id) > 0) {
-      id = item.id;
+    if (obj.compare(options.id, id) > 0) {
+      id = options.id;
     }
   });
   return c0;
@@ -321,33 +325,36 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
     const tmp = onboardingStatus.getOnboardingStatus(guildId) === GuildOnboardingStatus.READY;
     guildId = onboardingPromptsSeen;
     responses = onboardingResponsesSeen;
-    const mapped = prompts.map((item, index) => {
+    const mapped = prompts.map((options) => {
       const items = [];
       let num = 0;
       let flag = false;
       let flag2 = false;
-      if (0 < item.options.length) {
+      if (0 < options.options.length) {
         do {
-          let tmp3 = item.options[num];
+          let tmp3 = options.options[num];
           let tmp4 = null == tmp2[tmp3.id];
+          let tmp5 = num;
           let flag3 = flag;
           if (tmp4) {
             flag3 = true;
           }
           obj = {};
+          let tmp6 = obj;
+          let tmp7 = tmp3;
           let merged = Object.assign(tmp3);
           obj.isUnseen = tmp4;
           let arr = items.push(obj);
           num = num + 1;
           flag = flag3;
           flag2 = flag3;
-        } while (num < item.options.length);
+        } while (num < options.options.length);
       }
       obj = {};
-      const merged1 = Object.assign(item);
+      const merged1 = Object.assign(options);
       obj.options = items;
       obj.hasNewAnswers = flag2;
-      obj.isNew = null == prompts_seen[item.id];
+      obj.isNew = null == prompts_seen[options.id];
       return obj;
     });
     let obj = {
@@ -355,10 +362,10 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
       mode,
       belowRequirements,
       prompts: mapped,
-      onboardingPrompts: mapped.filter((item, index) => item.inOnboarding),
-      defaultChannelIds: defaultChannelIds.filter((item, index) => {
+      onboardingPrompts: mapped.filter((inOnboarding) => inOnboarding.inOnboarding),
+      defaultChannelIds: defaultChannelIds.filter((id) => {
         obj = guildId(obj[4]);
-        return obj.canChannelBeDefault(guildId, item);
+        return obj.canChannelBeDefault(guildId, id);
       }),
       responses: null,
       onboardingPromptsSeen: null,
@@ -386,38 +393,38 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
       if (null != dependencyMap2[guildId]) {
         obj = {};
         const _Object = Object;
-        const keys = Object.keys(dependencyMap2[guildId]);
-        const item = keys.forEach((item, index) => {
-          if (!options_seen.includes(item)) {
-            if (closure_1_9[prompts_seen][item]) {
-              options_seen[item] = true;
+        const keys = Object.keys(tmp3[guildId]);
+        const item = keys.forEach((arg0) => {
+          if (!options_seen.includes(arg0)) {
+            if (closure_1_9[prompts_seen][arg0]) {
+              obj[arg0] = true;
             }
           }
-          let hasItem = options_seen.includes(item);
+          let hasItem = obj.includes(arg0);
           if (hasItem) {
-            hasItem = false === closure_1_9[prompts_seen][item];
+            hasItem = false === closure_1_9[prompts_seen][arg0];
           }
           if (hasItem) {
-            options_seen[item] = false;
+            obj[arg0] = false;
           }
         });
-        dependencyMap2[guildId] = obj;
-        const found = responses.filter((item, index) => {
-          let tmp = null == obj[item];
+        tmp3[guildId] = obj;
+        const found = responses.filter((arg0) => {
+          let tmp = null == obj[arg0];
           if (!tmp) {
-            tmp = true === obj[item];
+            tmp = true === obj[arg0];
           }
           return tmp;
         });
         const _Object2 = Object;
         const keys1 = Object.keys(obj);
-        const item1 = keys1.forEach((item, index) => {
-          let hasItem = true !== obj[item];
+        const item1 = keys1.forEach((arg0) => {
+          let hasItem = true !== obj[arg0];
           if (!hasItem) {
-            hasItem = options_seen.includes(item);
+            hasItem = options_seen.includes(arg0);
           }
           if (!hasItem) {
-            found.push(item);
+            found.push(arg0);
           }
         });
         obj = {};
@@ -451,19 +458,20 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
           responses.push(optionId);
         } else {
           applyDefault.pull(dependencyMap[guildId].responses, optionId);
+          const obj2 = applyDefault;
         }
         if (null == dependencyMap2[guildId]) {
-          dependencyMap2[guildId] = {};
+          tmp15[guildId] = {};
         }
         dependencyMap2[guildId][optionId] = selected;
         if (null != removedOptionIds) {
-          const item = removedOptionIds.forEach((item, index) => {
-            closure_1_9[guildId][item] = false;
+          const item = removedOptionIds.forEach((arg0) => {
+            closure_1_9[guildId][arg0] = false;
             return false;
           });
         }
         obj = {};
-        const merged = Object.assign(dependencyMap2[guildId]);
+        const merged = Object.assign(tmp15[guildId]);
         dependencyMap2[guildId] = obj;
         flag = true;
       }
@@ -480,38 +488,38 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
     if (null != dependencyMap2[guildId]) {
       obj = {};
       const _Object = Object;
-      const keys = Object.keys(dependencyMap2[guildId]);
-      const item = keys.forEach((item, index) => {
-        if (!options_seen.includes(item)) {
-          if (closure_1_9[prompts_seen][item]) {
-            options_seen[item] = true;
+      const keys = Object.keys(tmp[guildId]);
+      const item = keys.forEach((arg0) => {
+        if (!options_seen.includes(arg0)) {
+          if (closure_1_9[prompts_seen][arg0]) {
+            obj[arg0] = true;
           }
         }
-        let hasItem = options_seen.includes(item);
+        let hasItem = obj.includes(arg0);
         if (hasItem) {
-          hasItem = false === closure_1_9[prompts_seen][item];
+          hasItem = false === closure_1_9[prompts_seen][arg0];
         }
         if (hasItem) {
-          options_seen[item] = false;
+          obj[arg0] = false;
         }
       });
-      dependencyMap2[guildId] = obj;
-      found = options.filter((item, index) => {
-        let tmp = null == obj[item];
+      tmp[guildId] = obj;
+      found = options.filter((arg0) => {
+        let tmp = null == obj[arg0];
         if (!tmp) {
-          tmp = true === obj[item];
+          tmp = true === obj[arg0];
         }
         return tmp;
       });
       const _Object2 = Object;
       const keys1 = Object.keys(obj);
-      const item1 = keys1.forEach((item, index) => {
-        let hasItem = true !== obj[item];
+      const item1 = keys1.forEach((arg0) => {
+        let hasItem = true !== obj[arg0];
         if (!hasItem) {
-          hasItem = options_seen.includes(item);
+          hasItem = options_seen.includes(arg0);
         }
         if (!hasItem) {
-          found.push(item);
+          found.push(arg0);
         }
       });
       obj = {};
@@ -523,39 +531,42 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
       return false;
     } else {
       const prompts = tmp2.prompts;
-      const mapped = prompts.map((item, index) => {
+      const mapped = prompts.map((options) => {
         const items = [];
         let num = 0;
         let flag = false;
         let flag2 = false;
-        if (0 < item.options.length) {
+        if (0 < options.options.length) {
           do {
-            let tmp3 = item.options[num];
+            let tmp3 = options.options[num];
             let tmp4 = null == tmp2[tmp3.id];
+            let tmp5 = num;
             let flag3 = flag;
             if (tmp4) {
               flag3 = true;
             }
             obj = {};
+            let tmp6 = obj;
+            let tmp7 = tmp3;
             let merged = Object.assign(tmp3);
             obj.isUnseen = tmp4;
             let arr = items.push(obj);
             num = num + 1;
             flag = flag3;
             flag2 = flag3;
-          } while (num < item.options.length);
+          } while (num < options.options.length);
         }
         obj = {};
-        const merged1 = Object.assign(item);
+        const merged1 = Object.assign(options);
         obj.options = items;
         obj.hasNewAnswers = flag2;
-        obj.isNew = null == prompts_seen[item.id];
+        obj.isNew = null == prompts_seen[options.id];
         return obj;
       });
       obj = {};
       let merged1 = Object.assign(tmp2);
       obj.prompts = mapped;
-      obj.onboardingPrompts = mapped.filter((item, index) => item.inOnboarding);
+      obj.onboardingPrompts = mapped.filter((inOnboarding) => inOnboarding.inOnboarding);
       obj.onboardingPromptsSeen = prompts_seen;
       obj.onboardingResponsesSeen = options_seen;
       dependencyMap[guildId] = obj;
@@ -587,6 +598,6 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDe
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
 
 export default guildOnboardingPromptsStore;

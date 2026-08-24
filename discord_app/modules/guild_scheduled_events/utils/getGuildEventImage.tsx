@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/utils/getGuildEventImage.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
 
 const Endpoints = ME.Endpoints;
-let result = obj132.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
+let result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
 
 export default function getGuildEventImageURL(image, size) {
   if (null == image.image) {
@@ -14,6 +14,7 @@ export default function getGuildEventImageURL(image, size) {
     if (null == size) {
       const _window = window;
       result = window.screen.width * handleImageLoad.getDevicePixelRatio();
+      const obj = handleImageLoad;
     }
     const _window2 = window;
     const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(result);

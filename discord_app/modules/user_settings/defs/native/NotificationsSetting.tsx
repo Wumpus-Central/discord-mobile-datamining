@@ -1,18 +1,27 @@
 // discord_app/modules/user_settings/defs/native/NotificationsSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import BellIcon from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SystemNotificationsSubLabel } from "../../notifications/native/SettingsNotificationScreen.tsx";
 
-const obj = {
+obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.HcoRu0);
+  },
+  parent: null,
+  IconComponent: BellIcon.BellIcon,
+  screen: obj
+};
+obj = {
   route: ME.UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return SystemNotificationsSubLabel /* SystemNotificationsSubLabel */.default;
+    return SystemNotificationsSubLabel.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/NotificationsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotificationsSetting.tsx");
 
 export default route;

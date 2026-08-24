@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/useDrawerState.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
 export const useDrawerOpen = function useDrawerOpen(enableHome) {
   let flag = enableHome;
@@ -62,7 +62,7 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
           tmp = routes[num];
         }
       }
-      const coerceGuildsRouteResult = handleStateChange(navigation[3]).coerceGuildsRoute(tmp);
+      const coerceGuildsRouteResult = handleStateChange(closure_1_1[3]).coerceGuildsRoute(tmp);
       if (null != coerceGuildsRouteResult) {
         const params = coerceGuildsRouteResult.params;
         let drawerOpen;
@@ -71,12 +71,11 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
         }
         callback(true === drawerOpen);
       }
-      const obj = handleStateChange(navigation[3]);
     }
     if (handleStateChange) {
       navigation.addListener("state", handleStateChange);
       return () => {
-        navigation.removeListener("state", handleStateChange);
+        closure_1_1.removeListener("state", handleStateChange);
       };
     }
   }, items);

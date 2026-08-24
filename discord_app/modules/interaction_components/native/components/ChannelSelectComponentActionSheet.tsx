@@ -1,17 +1,18 @@
 // discord_app/modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx");
 
 export default function ChannelSelectComponentActionSheet(guildId) {
   ({ selectionActionComponent, channelId } = guildId);
   guildId = guildId.guildId;
+  let channelTypes;
   let React;
-  const channelTypes = selectionActionComponent.channelTypes;
+  channelTypes = selectionActionComponent.channelTypes;
   const items = [channelId, channelTypes];
   ({ labelComponent, containerId, onSubmit, allowEmpty } = guildId);
   const callback = React.useCallback((arg0) => channelId(channelTypes[4]).queryChannels(arg0, channelId, channelTypes), items);
@@ -32,7 +33,7 @@ export default function ChannelSelectComponentActionSheet(guildId) {
         if (tmp8) {
           obj = { source: null };
           obj[0] = channelIconData;
-          tmp8 = jsx(channelId(channelTypes[8]).Icon, { source: null });
+          tmp8 = closure_1_6(channelId(channelTypes[8]).Icon, obj);
         }
         return tmp8;
       }

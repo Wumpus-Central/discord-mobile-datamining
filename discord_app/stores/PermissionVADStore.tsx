@@ -1,12 +1,12 @@
 // discord_app/stores/PermissionVADStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import fetchFingerprint from "AuthenticationStore.tsx";
-import ensureGuildLoaded from "ChannelStore.tsx";
-import _detectH265HardwareDecode from "MediaEngineStore.tsx";
-import getUncachedChannelPermissions from "PermissionStore.tsx";
-import createRTCConnection from "RTCConnectionStore.tsx";
-import updateVoiceState from "VoiceStateStore.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "ChannelStore.tsx";
+import closure_4 from "MediaEngineStore.tsx";
+import closure_5 from "PermissionStore.tsx";
+import closure_6 from "RTCConnectionStore.tsx";
+import closure_7 from "VoiceStateStore.tsx";
 import ME from "../Constants.tsx";
 
 function handleUpdateVADPermission() {
@@ -25,6 +25,7 @@ function handleUpdateVADPermission() {
     }
     if (!canResult) {
       canResult = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
+      const tmp12 = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
     }
     flag = canResult;
   }
@@ -34,6 +35,7 @@ function handleUpdateVADPermission() {
     obj[1] = flag;
     dispatcherDefault.dispatch(obj);
     flag2 = true;
+    const obj2 = dispatcherDefault;
   }
   return flag2;
 }
@@ -66,8 +68,8 @@ const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
   IMPERSONATE_STOP: handleUpdateVADPermission,
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.some((item, index) => {
-      let tmp = item.userId === id.getId();
+    return voiceStates.some((userId) => {
+      let tmp = userId.userId === id.getId();
       if (tmp) {
         tmp = callback();
       }
@@ -81,6 +83,6 @@ const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
     c11 = true;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/PermissionVADStore.tsx");
+const result = require("set").fileFinishedImporting("stores/PermissionVADStore.tsx");
 
 export default permissionVADStore;

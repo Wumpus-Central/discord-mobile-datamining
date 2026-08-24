@@ -1,7 +1,7 @@
 // discord_app/lib/uploader/UploaderQueue.tsx
 import timestampDefault from "../../modules/debug/Logger.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import obj132 from "../../../_runtime/00002_obj132.js";
+import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import set from "../../../_runtime/00002_set.js";
 
 let closure_1 = new timestampDefault("UploaderQueue.tsx");
 class UploaderQueue {
@@ -12,10 +12,10 @@ class UploaderQueue {
   }
 }
 const prototype = UploaderQueue.prototype;
-prototype["enqueue"] = function enqueue(headerResult) {
+prototype["enqueue"] = function enqueue(props) {
   const self = this;
   const queue = this.queue;
-  queue.unshift(headerResult);
+  queue.unshift(props);
   let str = "no";
   if (this.drainingQueue) {
     str = "yes";
@@ -57,24 +57,24 @@ prototype["drainQueue"] = function drainQueue() {
             closure_1 = tmp3;
             closure_0 = tmp7;
             closure_0 = undefined;
-            self.drainingQueue = true;
+            closure_1_0.drainingQueue = true;
             const _HermesInternal2 = HermesInternal;
-            closure_1_1.log("drainQueue() - starting, queue length: " + self.queue.length);
-            const queue = self.queue;
+            closure_1_1.log("drainQueue() - starting, queue length: " + closure_1_0.queue.length);
+            const queue = closure_1_0.queue;
             const arr = queue.pop();
             if (null == arr) {
               closure_1_1.log("drainQueue() - No uploads left, setting drainingQueue to false");
-              self.drainingQueue = false;
+              closure_1_0.drainingQueue = false;
               c5 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               c3 = 1;
               closure_1_1.log("drainQueue() - start uploader");
               closure_0 = arr();
-              const promise = new Promise((fn) => {
-                const _aborted = fn;
+              const promise = new Promise((arg0) => {
+                const _aborted = arg0;
                 if (tmp) {
-                  fn();
+                  arg0();
                 }
                 _aborted.addListener("complete", () => callback());
                 _aborted.addListener("error", () => callback());
@@ -119,8 +119,8 @@ prototype["drainQueue"] = function drainQueue() {
     }
   })();
 };
-let obj132 = Object.create(UploaderQueue.prototype);
-obj132[0] = [];
-const result = obj132.fileFinishedImporting("lib/uploader/UploaderQueue.tsx");
+let set = Object.create(UploaderQueue.prototype);
+set[0] = [];
+const result = set.fileFinishedImporting("lib/uploader/UploaderQueue.tsx");
 
-export default obj132;
+export default set;

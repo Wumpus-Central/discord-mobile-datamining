@@ -1,5 +1,5 @@
 // discord_common/js/packages/tokens/transforms.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set2 from "../../../../_runtime/00002_set.js";
 import nDefault from "../../../../_runtime/00689_n.js";
 
 function interpolate(arg0, arg1, arg2) {
@@ -24,7 +24,7 @@ let closure_6 = [1.3, 0.7];
 let closure_7 = [0.98, 1];
 let closure_8 = [0.75, 1.5];
 let closure_9 = [1.45, 0.45];
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
+let result = set2.fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
 
 export const transformColorForReducedContrast = function transformColorForReducedContrast(arg0, arg1, arg2) {
   if ("background" !== arg1) {

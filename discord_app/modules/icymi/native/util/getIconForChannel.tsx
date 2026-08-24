@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/util/getIconForChannel.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import TextIcon from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
@@ -9,21 +9,21 @@ import StageIcon from "../../../../design/components/Icon/native/redesign/genera
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 
 const ChannelTypes = ME.ChannelTypes;
-const result = obj132.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
+const result = set.fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");
 
-export const getIconForChannel = function getIconForChannel(stateFromStores) {
-  const type = stateFromStores.type;
+export const getIconForChannel = function getIconForChannel(type) {
+  type = type.type;
   if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
     return AnnouncementsIcon.AnnouncementsIcon;
-  } else if (ChannelTypes.GUILD_VOICE === type) {
+  } else if (tmp.GUILD_VOICE === type) {
     return VoiceNormalIcon.VoiceNormalIcon;
-  } else if (ChannelTypes.GUILD_STAGE_VOICE === type) {
+  } else if (tmp.GUILD_STAGE_VOICE === type) {
     return StageIcon.StageIcon;
-  } else if (ChannelTypes.GUILD_TEXT === type) {
+  } else if (tmp.GUILD_TEXT === type) {
     return TextIcon.TextIcon;
-  } else if (ChannelTypes.GUILD_FORUM === type) {
+  } else if (tmp.GUILD_FORUM === type) {
     return ForumIcon.ForumIcon;
-  } else if (ChannelTypes.GUILD_MEDIA === type) {
+  } else if (tmp.GUILD_MEDIA === type) {
     return ImageIcon.ImageIcon;
   } else {
     return TextIcon.TextIcon;

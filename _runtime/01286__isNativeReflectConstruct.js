@@ -1,9 +1,9 @@
 // _runtime/01286__isNativeReflectConstruct.js
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
 import _isNativeReflectConstruct2 from "01278__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -38,7 +38,6 @@ function formatToAst(str) {
   }
   return bindFormatValuesResult;
 }
-_possibleConstructorReturn;
 let obj = {};
 const AstBuilder = obj;
 obj.Text = "text";
@@ -95,9 +94,9 @@ _inherits(AstBuilder, _isNativeReflectConstruct2.FormatBuilder);
 obj = {
   key: "pushRichTextTag",
   value: function pushRichTextTag(formatting) {
-    if (formatting in dependencyMap) {
+    if (formatting in closure_5) {
       const self = this;
-      const tmp4 = dependencyMap[formatting](arg1, "", arg2);
+      const tmp4 = tmp[formatting](arg1, "", arg2);
       const _Array = Array;
       const result = this.result;
       const push = result.push;
@@ -112,6 +111,7 @@ obj = {
       const _HermesInternal = HermesInternal;
       throw "" + formatting + " is not a known rich text formatting tag";
     }
+    tmp = closure_5;
   }
 };
 let items = [

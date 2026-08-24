@@ -8,6 +8,6 @@ arg5.isRecordEqual = function isRecordEqual(value, arg1) {
     const _Object = Object;
     const keys = Object.keys(value);
     const _Object2 = Object;
-    return keys.length === Object.keys(arg1).length && keys.every((item, index) => Object.is(value[item], table[item]));
+    return keys.length === Object.keys(arg1).length && keys.every((arg0) => Object.is(value[arg0], table[arg0]));
   }
 };

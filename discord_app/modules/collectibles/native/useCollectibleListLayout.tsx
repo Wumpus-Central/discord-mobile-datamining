@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/useCollectibleListLayout.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
 
 ({ useCallback: closure_1, useState: obj1 } = noop);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
 
 export default function useCollectibleListLayout() {
   const tmp = callback(callback3(0), 2);

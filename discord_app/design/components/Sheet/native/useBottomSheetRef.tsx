@@ -1,7 +1,7 @@
 // discord_app/design/components/Sheet/native/useBottomSheetRef.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
 
 export const useBottomSheetRef = function useBottomSheetRef() {
   ref = ref.useRef(null);

@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/useCurrentEmbeddedApplication.tsx
 import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 
 export default function useCurrentEmbeddedApplication() {
   let obj = arg0;

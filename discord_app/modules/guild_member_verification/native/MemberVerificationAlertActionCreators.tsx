@@ -4,9 +4,9 @@ import dismissGlobalKeyboardAll from "../../../utils/native/KeyboardManagerUtils
 import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx");
 
 export const openMemberVerificationSuccessAlert = function openMemberVerificationSuccessAlert(guildId, arg1) {
   closure_0 = guildId;
@@ -15,8 +15,8 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
-      return guildId(dependencyMap[5])(dependencyMap[4], dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      return guildId(closure_1_3[5])(closure_1_3[4], closure_1_3.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
@@ -36,14 +36,14 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
-      return guildId(dependencyMap[5])(dependencyMap[6], dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      return guildId(closure_1_3[5])(closure_1_3[6], closure_1_3.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.guildId = closure_0;
           closure_0 = closure_1_1;
-          obj.onClose = (closure_3) => {
+          obj.onClose = (arg0) => {
             closure_1_1(closure_1_3[3]).close();
             if (callback != null) {
               callback();
@@ -62,8 +62,8 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
-      return onClose(closure_1_3[5])(closure_1_3[7], closure_1_3.paths).then((result) => {
-        closure_0 = result.default;
+      return closure_1_0(closure_1_3[5])(closure_1_3[7], closure_1_3.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
@@ -71,7 +71,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
           obj.confirmText = closure_1_1;
           obj.subtitleText = closure_1_2;
           closure_0 = closure_1_3;
-          obj.onClose = (closure_3) => {
+          obj.onClose = (arg0) => {
             closure_1_1(closure_1_3[3]).close();
             if (callback != null) {
               callback();
@@ -87,7 +87,7 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
   ({ guildId: onClose, onClose } = canWithdraw);
   dependencyMap = undefined;
-  const fn = (closure_3) => {
+  const fn = (arg0) => {
     closure_1_1(closure_1_3[3]).close();
     if (callback != null) {
       callback();
@@ -95,8 +95,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
   };
   if (canWithdraw.canWithdraw) {
     let obj = { text: null, variant: "destructive", onPress: null };
-    const intl2 = onClose(1236).intl;
-    obj[0] = intl2.string(onClose(1236).t.g9tK0o);
+    const intl2 = tmp2(1236).intl;
+    obj[0] = intl2.string(tmp2(1236).t.g9tK0o);
     obj[2] = function onPress() {
       if (typeof fn !== "function") {
         HermesBuiltin.throwTypeError();
@@ -112,8 +112,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
       const obj3 = fn(paths[2]);
       obj = {
         importer() {
-          return onClose(closure_1_3[5])(closure_1_3[7], closure_1_3.paths).then((result) => {
-            closure_0 = result.default;
+          return closure_1_0(closure_1_3[5])(closure_1_3[7], closure_1_3.paths).then((arg0) => {
+            closure_0 = arg0.default;
             return (arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);
@@ -131,23 +131,24 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     };
   } else {
     obj = { text: null, onPress: null };
-    const intl = onClose(1236).intl;
-    obj[0] = intl.string(onClose(1236).t.BddRzS);
+    const intl = tmp2(1236).intl;
+    obj[0] = intl.string(tmp2(1236).t.BddRzS);
     obj[1] = fn;
   }
   dependencyMap = jsx(onClose(4745).Button, obj);
   let result = fn(1892).dismissGlobalKeyboard();
   let obj3 = fn(1892);
+  const tmp = jsx;
   obj = {
     importer() {
-      return onClose(paths[5])(paths[10], paths.paths).then((result) => {
-        closure_0 = result.default;
+      return onClose(paths[5])(paths[10], paths.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.guildId = closure_0;
           closure_0 = closure_1_1;
-          obj.onClose = (closure_3) => {
+          obj.onClose = (arg0) => {
             closure_1_1(closure_1_3[3]).close();
             if (callback != null) {
               callback();
@@ -160,15 +161,14 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
     }
   };
   onClose(4656).openLazy(obj);
-  const obj4 = onClose(4656);
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
   let obj = dismissGlobalKeyboardAll;
   const result = obj.dismissGlobalKeyboard();
   obj = {
     importer() {
-      return callback(paths[5])(paths[11], paths.paths).then((result) => {
-        closure_0 = result.default;
+      return callback(paths[5])(paths[11], paths.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const merged = Object.assign(arg0);
           return closure_1_4(closure_0, {});
@@ -180,7 +180,7 @@ export const openMemberVerificationUpdateAlert = function openMemberVerification
 };
 export function closeMemberVerificationAlert(arg0) {
   closure_0 = arg0;
-  return (closure_3) => {
+  return (arg0) => {
     closure_1_1(closure_1_3[3]).close();
     if (callback != null) {
       callback();
@@ -194,14 +194,14 @@ export const openMemberVerificationIncompleteAlert = function openMemberVerifica
   obj = {
     isDismissable: true,
     importer() {
-      return callback(dependencyMap[5])(dependencyMap[12], dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      return callback(closure_1_3[5])(closure_1_3[12], closure_1_3.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.guildId = closure_0;
           closure_0 = closure_1_1;
-          obj.onClose = (closure_3) => {
+          obj.onClose = (arg0) => {
             closure_1_1(closure_1_3[3]).close();
             if (callback != null) {
               callback();

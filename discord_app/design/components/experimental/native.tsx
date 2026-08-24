@@ -1,5 +1,5 @@
 // discord_app/design/components/experimental/native.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import AnimatedPressableHighlight from "Pressables/native/AnimatedPressableHighlight.native.tsx";
 import BackgroundBlurView from "BackgroundBlurView/native/BackgroundBlurView.native.tsx";
 import BlurTheme from "BackgroundBlurView/native/BackgroundBlurFill.native.tsx";
@@ -12,7 +12,7 @@ import CollapsableButton from "Button/native/CollapsibleFloatingActionButton.nat
 import useCollapsibleFloatingActionButtonState from "Button/native/CollapsibleFloatingActionButtonState.native.tsx";
 import ActionSheetDragHandle from "ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx";
 
-const result = obj132.fileFinishedImporting("design/components/experimental/native.tsx");
+const result = set.fileFinishedImporting("design/components/experimental/native.tsx");
 
 export const TwinButtons = TwinButtons.TwinButtons;
 export const HeaderButton = HeaderButton.HeaderButton;

@@ -1,8 +1,8 @@
 // _runtime/01608_useLinking.js
-import noop from "00019_noop.js";
+import closure_2 from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 ({ Linking: c3, Platform } = get_ActivityIndicator);
 
 export const useLinking = function useLinking(ref, enabled) {
@@ -30,8 +30,8 @@ export const useLinking = function useLinking(ref, enabled) {
   if (fn2 === undefined) {
     fn2 = function l(arg0) {
       closure_0 = arg0;
-      callback = function callback(event) {
-        return callback(event.url);
+      callback = function callback(url) {
+        return callback(url.url);
       };
       closure_2 = filter.addEventListener("url", callback);
       const removeEventListener = filter.removeEventListener;
@@ -43,10 +43,10 @@ export const useLinking = function useLinking(ref, enabled) {
       return () => {
         let remove;
         if (closure_2 != null) {
-          remove = closure_2.remove;
+          remove = obj.remove;
         }
         if (remove) {
-          closure_2.remove();
+          obj.remove();
         } else if (closure_3 != null) {
           tmp2("url", callback);
         }
@@ -61,6 +61,14 @@ export const useLinking = function useLinking(ref, enabled) {
   if (getActionFromState === undefined) {
     getActionFromState = _require(flag[2]).getActionFromState;
   }
+  closure_9 = undefined;
+  closure_10 = undefined;
+  closure_11 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  closure_14 = undefined;
+  closure_15 = undefined;
+  let callback;
   let items = [flag, _require(flag[2]).useNavigationIndependentTree()];
   const effect = prefixes.useEffect(() => {
 
@@ -81,10 +89,10 @@ export const useLinking = function useLinking(ref, enabled) {
     closure_14.current = getStateFromPath;
     closure_15.current = getActionFromState;
   });
-  let callback = prefixes.useCallback((closure_1_1) => {
-    if (closure_1_1) {
+  callback = prefixes.useCallback((AUTO_DISMISS) => {
+    if (AUTO_DISMISS) {
       if (!ref3.current) {
-        const extractPathFromURLResult = callback(flag[3]).extractPathFromURL(ref2.current, closure_1_1);
+        const extractPathFromURLResult = callback(flag[3]).extractPathFromURL(ref2.current, AUTO_DISMISS);
         if (undefined !== extractPathFromURLResult) {
           try {
             return ref6.current(extractPathFromURLResult, ref4.current);
@@ -95,6 +103,7 @@ export const useLinking = function useLinking(ref, enabled) {
         }
         const obj2 = callback(flag[3]);
       }
+      const obj = ref3;
     }
   }, []);
   const items1 = [callback];
@@ -104,17 +113,17 @@ export const useLinking = function useLinking(ref, enabled) {
       const currentResult = ref5.current();
       if (null != currentResult) {
         if (typeof currentResult !== "string") {
-          return currentResult.then((result) => callback(result));
+          return currentResult.then((arg0) => callback(arg0));
         }
       }
       closure_0 = callback(currentResult);
     }
-    return {
-      then(fn) {
-        if (fn) {
-          let tmp2 = fn(closure_0);
+    const obj = {
+      then(arg0) {
+        if (arg0) {
+          let tmp2 = arg0(tmp);
         } else {
-          tmp2 = closure_0;
+          tmp2 = tmp;
         }
         return Promise.resolve(tmp2);
       },
@@ -122,6 +131,7 @@ export const useLinking = function useLinking(ref, enabled) {
         return obj;
       }
     };
+    return obj;
   }, items1);
   const effect2 = prefixes.useEffect(() => fn2((arg0) => {
     if (closure_1) {

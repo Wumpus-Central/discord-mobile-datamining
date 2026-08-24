@@ -1,10 +1,9 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx
-import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import handleConnectionOpen from "../../../../stores/SelectedGuildStore.tsx";
-import handleGatewayJoinRequestUpdate from "../../UserGuildJoinRequestStore.tsx";
+import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_4 from "../../UserGuildJoinRequestStore.tsx";
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 let prototype = function MemberVerificationApplicationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -25,8 +24,9 @@ let prototype = function MemberVerificationApplicationManager() {
     const guildId = closure_1_3.getGuildId();
     if (null == guildId) {
       if (guildId.isShowingAlert) {
-        _modDef4656.close();
+        closure_1_1(closure_1_2[3]).close();
         tmp11.isShowingAlert = false;
+        const obj3 = closure_1_1(closure_1_2[3]);
       }
     } else {
       const request = closure_1_4.getRequest(guildId);
@@ -34,15 +34,16 @@ let prototype = function MemberVerificationApplicationManager() {
       if (request != null) {
         applicationStatus = request.applicationStatus;
       }
-      if (applicationStatus === applyArgumentsResult(dependencyMap[4]).GuildJoinRequestApplicationStatuses.APPROVED) {
+      if (applicationStatus === applyArgumentsResult(closure_1_2[4]).GuildJoinRequestApplicationStatuses.APPROVED) {
         if (guildId.isShowingAlert) {
           let lastSeen;
           if (request != null) {
             lastSeen = request.lastSeen;
           }
           if (null !== lastSeen) {
-            _modDef4656.close();
+            closure_1_1(tmp4[3]).close();
             tmp17.isShowingAlert = false;
+            const obj2 = closure_1_1(tmp4[3]);
           }
         }
         let tmp6 = tmp17.isShowingAlert || null == request;
@@ -54,11 +55,11 @@ let prototype = function MemberVerificationApplicationManager() {
           tmp6 = null !== lastSeen1;
         }
         if (!tmp6) {
-          let result = applyArgumentsResult(dependencyMap[5]).openMemberVerificationSuccessAlert(guildId, () => {
+          let result = applyArgumentsResult(tmp4[5]).openMemberVerificationSuccessAlert(guildId, () => {
             const result = request(closure_1_2[6]).ackUserGuildJoinRequest(guildId, request.joinRequestId);
           });
           tmp17.isShowingAlert = true;
-          const tmp3Result = applyArgumentsResult(dependencyMap[5]);
+          const tmp3Result = applyArgumentsResult(tmp4[5]);
         }
       }
     }
@@ -68,6 +69,6 @@ let prototype = function MemberVerificationApplicationManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx");
 
 export default prototype;

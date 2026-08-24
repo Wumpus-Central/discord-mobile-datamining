@@ -1,6 +1,6 @@
 // discord_app/modules/polls/native/useFocusHelper.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
 let closure_3 = function FocusHelperState() {
   const obj = Object.create(new.target.prototype);
@@ -27,6 +27,7 @@ class FocusHelperImpl {
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[tmp] !== undefined) {
+          let tmp11 = tmp4;
           let tmp12 = refsByKey[tmp4];
           let isFocusedResult;
           if (tmp12 != null) {
@@ -72,10 +73,10 @@ class FocusHelperImpl {
 }
 const prototype = FocusHelperImpl.prototype;
 prototype["restartState"] = function restartState() {
-  if (typeof ctor !== "function") {
+  if (typeof closure_3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj = Object.create(ctor.prototype);
+  const obj = Object.create(closure_3.prototype);
   obj[0] = {};
   obj[1] = [];
   this.pendingState = obj;
@@ -101,7 +102,7 @@ prototype["refWithKey"] = function refWithKey(question) {
     return ref;
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/polls/native/useFocusHelper.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/native/useFocusHelper.tsx");
 
 export default function useFocusHelper() {
   let obj = arg0;
@@ -111,14 +112,14 @@ export default function useFocusHelper() {
   let onAddAnswer = obj.onAddAnswer;
   let obj2;
   obj2 = onAddAnswer(obj2[2])(() => {
-    if (typeof ctor2 !== "function") {
+    if (typeof closure_4 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(ctor2.prototype);
-    if (typeof ctor !== "function") {
+    let obj = Object.create(closure_4.prototype);
+    if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = Object.create(ctor.prototype);
+    obj = Object.create(closure_3.prototype);
     obj[0] = {};
     obj[1] = [];
     obj.validState = obj;
@@ -128,6 +129,7 @@ export default function useFocusHelper() {
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[tmp] !== undefined) {
+          let tmp11 = tmp4;
           let tmp12 = refsByKey[tmp4];
           let isFocusedResult;
           if (tmp12 != null) {

@@ -1,15 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import DEFAULT_BADGE_SIZEDefault from "Badge.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
+const require = arg1;
+createCacheKey = { maskStyle: { position: "relative", right: "call" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
+createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");
 
 export default function MaskedBadge(backgroundColor) {
   backgroundColor = backgroundColor.backgroundColor;
@@ -33,6 +34,7 @@ export default function MaskedBadge(backgroundColor) {
     obj[3] = value;
     obj[4] = maxValue;
     let tmp7Result = jsx(backgroundColor(1297).MaskedBadge, { maskStyle: null, dotStyle: null, style: null, value: null, maxValue: null });
+    const tmp7 = jsx;
   } else {
     tmp7Result = null;
     if (unread) {

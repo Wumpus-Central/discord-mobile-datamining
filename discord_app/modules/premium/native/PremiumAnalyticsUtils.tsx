@@ -1,5 +1,5 @@
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import v1 from "../../../../_runtime/00514_v1.js";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
@@ -7,7 +7,7 @@ import ME from "../../../Constants.tsx";
 
 ({ SubscriptionTypes: c3, PurchaseTypeToAnalyticsPaymentType: c4, PurchaseTypes: c5, AnalyticEvents: closure_6 } = ME);
 let obj = { WHAT_YOU_LOSE: 1, [1]: "WHAT_YOU_LOSE", CONFIRM: 2, [2]: "CONFIRM", PREVIEW: 3, [3]: "PREVIEW", DOWNGRADE_TO_TIER_0: 4, [4]: "DOWNGRADE_TO_TIER_0", MOBILE_SUBSCRIPTION_MANAGE: 5, [5]: "MOBILE_SUBSCRIPTION_MANAGE" };
-const result = obj132.fileFinishedImporting("modules/premium/native/PremiumAnalyticsUtils.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/PremiumAnalyticsUtils.tsx");
 
 export const PaymentFlowStep = { SKU_SELECT: "sku_select", PLAN_SELECT: "plan_select", REVIEW: "review", CONFIRM: "confirm", MOBILE_WEB_REDIRECT_CHECKOUT: "mobile_web_redirect_checkout", YEARLY_UPSELL: "yearly_upsell", PREMIUM_UPSELL: "premium_upsell", EXTERNAL_PAYMENT: "external_payment", REWARD_SKU_SELECT: "reward_sku_select" };
 export const getBasePurchaseFlowAnalyticsFields = function getBasePurchaseFlowAnalyticsFields(isGift) {
@@ -40,35 +40,37 @@ export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
 export const CancellationFlowSteps = obj;
 export const STEP_ANALYTICS_NAMES = { [obj.WHAT_YOU_LOSE]: "What You're Losing", [obj.DOWNGRADE_TO_TIER_0]: "Downgrade To Tier 0", [obj.CONFIRM]: "Confirm Cancellation", [obj.PREVIEW]: "Preview Updated Subscription", [obj.MOBILE_SUBSCRIPTION_MANAGE]: "Mobile Subscription Manage" };
 export const trackPremiumSubscriptionCancellationStarted = function trackPremiumSubscriptionCancellationStarted(closure_0, analyticsLocations) {
-  let obj = { location_stack: analyticsLocations };
+  let obj = expandEventPropertiesDefault;
+  obj = { location_stack: analyticsLocations };
   let id;
-  if (_require != null) {
-    id = _require.id;
+  if (closure_0 != null) {
+    id = closure_0.id;
   }
   obj = { subscription_id: id, subscription_type: null, subscription_plan_id: null, subscription_plan_gateway_plan_id: null, subscription_status: null };
   let type;
-  if (_require != null) {
-    type = _require.type;
+  if (closure_0 != null) {
+    type = closure_0.type;
   }
   obj[1] = type;
   let tmp4;
-  if (null != _require) {
-    const premiumPlanItem = getPremiumPlanItem.getPremiumPlanItem(_require);
+  if (null != closure_0) {
+    const premiumPlanItem = getPremiumPlanItem.getPremiumPlanItem(closure_0);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
+    const obj4 = getPremiumPlanItem;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;
-  if (_require != null) {
-    paymentGatewayPlanId = _require.paymentGatewayPlanId;
+  if (closure_0 != null) {
+    paymentGatewayPlanId = closure_0.paymentGatewayPlanId;
   }
   obj[3] = paymentGatewayPlanId;
   let status;
-  if (_require != null) {
-    status = _require.status;
+  if (closure_0 != null) {
+    status = closure_0.status;
   }
   obj[4] = status;
   const merged = Object.assign(obj);
@@ -77,7 +79,8 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
 export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiumSubscriptionCancellationFlowStep(subscription) {
   subscription = subscription.subscription;
   ({ fromStep, toStep, analyticsLocations } = subscription);
-  let obj = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
+  let obj = expandEventPropertiesDefault;
+  obj = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
   let id;
   if (subscription != null) {
     id = subscription.id;
@@ -96,6 +99,7 @@ export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiu
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
+    const obj4 = getPremiumPlanItem;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;

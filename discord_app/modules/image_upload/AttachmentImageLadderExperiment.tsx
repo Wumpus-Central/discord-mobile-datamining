@@ -1,5 +1,5 @@
 // discord_app/modules/image_upload/AttachmentImageLadderExperiment.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import items from "AttachmentImageLadder.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
@@ -12,7 +12,7 @@ obj1.enabled = true;
 obj[1] = obj1;
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = obj132.fileFinishedImporting("modules/image_upload/AttachmentImageLadderExperiment.tsx");
+const result = set.fileFinishedImporting("modules/image_upload/AttachmentImageLadderExperiment.tsx");
 
 export default apexExperiment;
 export const getAttachmentImageLadderConfig = function getAttachmentImageLadderConfig(location) {

@@ -1,14 +1,14 @@
 // discord_app/utils/HelpdeskUtils.tsx
-import obj132 from "PlatformUtils.tsx";
+import set from "PlatformUtils.tsx";
 import getLocalizedLinkDefault from "../modules/links/getLocalizedLink.tsx";
-import _getSystemLocale from "../modules/user_settings/LocaleStore.tsx";
+import closure_3 from "../modules/user_settings/LocaleStore.tsx";
 import ME from "../Constants.tsx";
 
-require = fn;
+require = arg1;
 const LocalizedLinks = ME.LocalizedLinks;
 let combined = "https://" + ME.SUPPORT_DOMAIN;
 let closure_6 = "https://" + ME.SUPPORT_DEV_DOMAIN;
-const result = require("obj132").fileFinishedImporting("utils/HelpdeskUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/HelpdeskUtils.tsx");
 
 export default {
   getArticleURL(REFERRAL_PROGRAM) {
@@ -33,7 +33,7 @@ export default {
   },
   getSubmitRequestURL(arg0) {
     const formatted = closure_3.locale.toLowerCase();
-    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(obj132.getPlatformName());
+    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(set.getPlatformName());
     let sum1 = sum;
     if (null != arg0) {
       const _encodeURIComponent = encodeURIComponent;

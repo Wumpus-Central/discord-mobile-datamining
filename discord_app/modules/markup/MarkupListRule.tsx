@@ -8,7 +8,7 @@ const re3 = /(?:^|\n)( *)$/;
 let regExp = new RegExp("^" + "(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +".replace("%INDENT_CAPTURE_PATTERN%", " *"));
 const re5 = / *\n$/;
 let regExp1 = new RegExp("^( *)((?:[*-]|\\d+\\.)) [\\s\\S]+?(?:\\n(?! )(?!\\1(?:[*-]|\\d+\\.) )|$)");
-const regExp2 = new RegExp("^\\n" + require("../debug/logAppStart.tsx"));
+const regExp2 = new RegExp("^\\n" + require("module_1"));
 const re8 = /^\n/;
 const re9 = /\n *$/;
 const re11 = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/;
@@ -76,16 +76,18 @@ obj.parse = function parse(arg0, arg1, arg2) {
   const match1 = str3.match(regExp);
   _modDef38(null != match1, "markup list items can not be parsed.");
   regex2 = false;
+  let str = arg0[0];
   const str2 = arg0[0].replace(regex3, "");
   return {
     ordered: arg0[2].length > 1,
     start: bound,
-    items: match1.map((item, index) => {
-      const replaced = item.replace(c4, "").replace(regExp1, "");
+    items: match1.map((str) => {
+      const replaced = str.replace(c4, "").replace(regExp1, "");
       const diff = match1.length - 1;
       let tmp2 = -1 !== replaced.indexOf("\n\n");
       if (!tmp2) {
-        tmp2 = index === diff && closure_4;
+        tmp2 = arg1 === diff && closure_4;
+        const tmp4 = arg1 === diff && closure_4;
       }
       closure_4 = tmp2;
       _listLevel = _listLevel._listLevel;
@@ -106,24 +108,25 @@ obj.parse = function parse(arg0, arg1, arg2) {
       const obj = {};
       const merged = Object.assign(tmp5);
       obj.allowHeading = false;
-      let str = item.replace(c4, "");
+      str = str.replace(c4, "");
       _listLevel.inline = inline;
       _listLevel._list = _list;
       _listLevel._listLevel = _listLevel;
-      return callback(replaced1, obj).map((item, index) => {
-        let tmp = "text" === item.type;
+      return callback(replaced1, obj).map((type) => {
+        let tmp = "text" === type.type;
         if (tmp) {
-          tmp = null != item.content;
+          tmp = null != type.content;
         }
         if (tmp) {
-          item.content = item.content.replace(/\n+\s*$/, "");
+          type.content = type.content.replace(/\n+\s*$/, "");
+          const str = type.content;
         }
-        return item;
+        return type;
       });
     }),
     consumedLeadingNewline: isMatch
   };
 };
-const result = require("obj132").fileFinishedImporting("modules/markup/MarkupListRule.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/MarkupListRule.tsx");
 
 export default obj;

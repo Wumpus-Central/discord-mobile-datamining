@@ -1,11 +1,11 @@
 // discord_app/modules/themes/getSystemTheme.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import SystemThemeState from "../user_settings/ThemeConstants.tsx";
 
 const Appearance = get_ActivityIndicator.Appearance;
 const SystemTheme = SystemThemeState.SystemTheme;
-const result = obj132.fileFinishedImporting("modules/themes/getSystemTheme.native.tsx");
+const result = set.fileFinishedImporting("modules/themes/getSystemTheme.native.tsx");
 
 export default function getSystemTheme() {
   const colorScheme = Appearance.getColorScheme();

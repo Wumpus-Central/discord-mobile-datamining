@@ -13,7 +13,7 @@ function allSettled(arg0) {
   if (undefined === this) {
     self = Promise;
   }
-  return callback(self, arg0);
+  return closure_0(self, arg0);
 }
 const obj = { getPolyfill: null, implementation: null, shim: null };
 obj[0] = getPolyfill;

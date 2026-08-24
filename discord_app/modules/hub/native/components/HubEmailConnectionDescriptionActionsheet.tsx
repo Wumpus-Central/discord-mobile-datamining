@@ -7,15 +7,16 @@ import Background from "../../../../design/components/Sheet/native/BottomSheet.n
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = createCacheKey.createStyles({ description: { marginBottom: 8 } });
-const result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
 
 export default function HubEmailConnectionDescriptionActionsheet() {
   const tmp = callback3();
-  let obj = { title: null };
+  let obj = { children: null };
+  obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["48kg+O"]);
   const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), , ];

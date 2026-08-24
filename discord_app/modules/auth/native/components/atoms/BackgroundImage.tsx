@@ -1,11 +1,11 @@
 // discord_app/modules/auth/native/components/atoms/BackgroundImage.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ Image: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/atoms/BackgroundImage.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/atoms/BackgroundImage.tsx");
 
 export default function BackgroundImage(backgroundImageSource) {
   backgroundImageSource = backgroundImageSource.backgroundImageSource;
@@ -13,10 +13,12 @@ export default function BackgroundImage(backgroundImageSource) {
   if (flag === undefined) {
     flag = false;
   }
+  dependencyMap = undefined;
   const tmp = flag(4310)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
-  let obj = {};
+  let obj = { style: absoluteFill.absoluteFill, children: null };
+  obj = {};
   const merged = Object.assign(React.useMemo(() => {
     const items = [closure_1_6.absoluteFill, ];
     const obj = { style: items, source: null };
@@ -28,9 +30,9 @@ export default function BackgroundImage(backgroundImageSource) {
       let tmp2 = table;
       if (obj2.isThemeDark(table)) {
         tmp2 = tmp2[5];
-        let tmp4Result = flag(tmp2);
+        let tmp4Result = tmp4(tmp2);
       } else {
-        tmp4Result = flag(tmp2[6]);
+        tmp4Result = tmp4(tmp2[6]);
       }
       obj2 = backgroundImageSource(table[4]);
     }

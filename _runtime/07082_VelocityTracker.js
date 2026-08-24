@@ -14,12 +14,13 @@ class VelocityTracker {
 const items = [
   {
     key: "computeVelocity",
-    value: function computeVelocity(adjustOffsetForRTLResult, absoluteLastScrollOffset, arg2, fn) {
-      const self = this;
-      closure_0 = fn;
+    value: function computeVelocity(arg0, absoluteLastScrollOffset, arg2, arg3) {
+      let self = this;
+      self = this;
+      closure_0 = arg3;
       this.cleanUp();
       const timestamp = Date.now();
-      const diff = adjustOffsetForRTLResult - absoluteLastScrollOffset;
+      const diff = arg0 - absoluteLastScrollOffset;
       const result = diff / Math.max(1, timestamp - this.lastUpdateTime);
       this.lastUpdateTime = timestamp;
       let num = 0;
@@ -32,7 +33,7 @@ const items = [
         num2 = result;
       }
       self.velocity.y = num2;
-      fn(self.velocity, false);
+      arg3(self.velocity, false);
       self.timeoutId = setTimeout(() => {
         self.cleanUp();
         self.lastUpdateTime = Date.now();

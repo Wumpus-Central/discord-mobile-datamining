@@ -1,15 +1,18 @@
 // _runtime/01574_isNavigationState.js
 import useEffectDefault from "01522_useEffect.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "00019_noop.js";
+import closure_4 from "metro/00032__slicedToArray.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
+import closure_6 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 import { PrivateValueStore } from "01504_PrivateValueStore.js";
 import { useLazyValue } from "01523_useLazyValue.js";
+import { NavigationBuilderContext } from "01530_NavigationBuilderContext.js";
+import { ConsumedParamsContext } from "01532_ConsumedParamsContext.js";
+import { context } from "01541_context.js";
 import { isArrayEqual } from "01564_isArrayEqual.js";
 import { useRegisterNavigator } from "01575_useRegisterNavigator.js";
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["children", "layout", "screenOptions", "screenLayout", "screenListeners", "UNSTABLE_router"];
 function isNavigationState(state) {
   let isArray = null != state && typeof state === "object";
@@ -22,41 +25,42 @@ function isNavigationState(state) {
   }
   return isArray;
 }
-function getRouteConfigsFromChildren(children) {
-  const items = [];
+function getRouteConfigsFromChildren(arg0) {
+  let items;
+  items = [];
   c1 = undefined;
   c2 = undefined;
   const Children = React.Children;
-  return Children.toArray(children).reduce((acc, item, index) => {
+  return Children.toArray(arg0).reduce((arr, type) => {
     let obj = closure_1_6;
-    if (closure_1_6.isValidElement(item)) {
-      if (item.type === closure_1_0(closure_1_2[5]).Screen) {
-        if (typeof item.props === "object") {
-          if (null !== item.props) {
-            if (typeof item.props.name === "string") {
-              if ("" !== item.props.name) {
-                if (undefined !== item.props.navigationKey) {
+    if (closure_1_6.isValidElement(type)) {
+      if (type.type === closure_1_0(closure_1_2[5]).Screen) {
+        if (typeof type.props === "object") {
+          if (null !== type.props) {
+            if (typeof type.props.name === "string") {
+              if ("" !== type.props.name) {
+                if (undefined !== type.props.navigationKey) {
                   let _Error2 = Error;
                   let _JSON3 = JSON;
                   let _HermesInternal4 = HermesInternal;
-                  let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the screen '" + item.props.name + "'. It must be a non-empty string or 'undefined'.");
+                  let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                   throw error;
                 }
                 obj = { keys: null, options: null, layout: null, props: null };
                 let items = [];
-                items[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                items[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                 obj[0] = items;
                 obj[1] = items3;
                 obj[2] = screenLayout;
-                obj[3] = item.props;
-                acc.push(obj);
-                return acc;
+                obj[3] = type.props;
+                arr.push(obj);
+                return arr;
               }
             }
             let _Error3 = Error;
             let _JSON4 = JSON;
             let _HermesInternal5 = HermesInternal;
-            let error1 = new Error("Got an invalid name (" + JSON.stringify(item.props.name) + ") for the screen. It must be a non-empty string.");
+            let error1 = new Error("Got an invalid name (" + JSON.stringify(type.props.name) + ") for the screen. It must be a non-empty string.");
             throw error1;
           }
         }
@@ -64,36 +68,36 @@ function getRouteConfigsFromChildren(children) {
         let error2 = new Error("Got an invalid element for screen.");
         throw error2;
       } else {
-        let tmp4 = item.type === obj.Fragment;
+        let tmp4 = type.type === obj.Fragment;
         if (!tmp4) {
-          tmp4 = item.type === closure_1_0(closure_1_2[6]).Group;
+          tmp4 = type.type === tmp2(tmp3[6]).Group;
         }
         if (tmp4) {
-          let navigationKey = item.props.navigationKey;
+          let navigationKey = type.props.navigationKey;
           if (undefined !== navigationKey) {
             let _Error = Error;
             let _JSON2 = JSON;
             let _HermesInternal3 = HermesInternal;
-            let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
+            let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
             throw error3;
           }
-          let push = acc.push;
-          if (null != item.props.navigationKey) {
+          let push = arr.push;
+          if (null != type.props.navigationKey) {
             let items1 = [];
-            items1[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+            items1[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
             items4 = items1;
           }
-          if (item.type === closure_1_0(closure_1_2[6]).Group) {
+          if (type.type === tmp2(tmp3[6]).Group) {
             if (null != items3) {
               let items2 = [];
-              items2[HermesBuiltin.arraySpread(tmp13, 0)] = item.props.screenOptions;
+              items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
               items3 = items2;
             } else {
-              items3 = [item.props.screenOptions];
+              items3 = [type.props.screenOptions];
             }
           }
-          if (typeof item.props.screenLayout === "function") {
-            screenLayout = item.props.screenLayout;
+          if (typeof type.props.screenLayout === "function") {
+            screenLayout = type.props.screenLayout;
           }
           if (typeof closure_1_9 !== "function") {
             HermesBuiltin.throwTypeError();
@@ -103,36 +107,36 @@ function getRouteConfigsFromChildren(children) {
           }
           let Children = obj.Children;
           let items5 = [];
-          HermesBuiltin.arraySpread(Children.toArray(item.props.children).reduce((acc, item, index) => {
+          HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
             let obj = closure_1_6;
-            if (closure_1_6.isValidElement(item)) {
-              if (item.type === closure_1_0(closure_1_2[5]).Screen) {
-                if (typeof item.props === "object") {
-                  if (null !== item.props) {
-                    if (typeof item.props.name === "string") {
-                      if ("" !== item.props.name) {
-                        if (undefined !== item.props.navigationKey) {
+            if (closure_1_6.isValidElement(type)) {
+              if (type.type === closure_1_0(closure_1_2[5]).Screen) {
+                if (typeof type.props === "object") {
+                  if (null !== type.props) {
+                    if (typeof type.props.name === "string") {
+                      if ("" !== type.props.name) {
+                        if (undefined !== type.props.navigationKey) {
                           let _Error2 = Error;
                           let _JSON3 = JSON;
                           let _HermesInternal4 = HermesInternal;
-                          let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the screen '" + item.props.name + "'. It must be a non-empty string or 'undefined'.");
+                          let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                           throw error;
                         }
                         obj = { keys: null, options: null, layout: null, props: null };
                         let items = [];
-                        items[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                        items[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                         obj[0] = items;
                         obj[1] = items3;
                         obj[2] = screenLayout;
-                        obj[3] = item.props;
-                        acc.push(obj);
-                        return acc;
+                        obj[3] = type.props;
+                        arr.push(obj);
+                        return arr;
                       }
                     }
                     let _Error3 = Error;
                     let _JSON4 = JSON;
                     let _HermesInternal5 = HermesInternal;
-                    let error1 = new Error("Got an invalid name (" + JSON.stringify(item.props.name) + ") for the screen. It must be a non-empty string.");
+                    let error1 = new Error("Got an invalid name (" + JSON.stringify(type.props.name) + ") for the screen. It must be a non-empty string.");
                     throw error1;
                   }
                 }
@@ -140,36 +144,36 @@ function getRouteConfigsFromChildren(children) {
                 let error2 = new Error("Got an invalid element for screen.");
                 throw error2;
               } else {
-                let tmp4 = item.type === obj.Fragment;
+                let tmp4 = type.type === obj.Fragment;
                 if (!tmp4) {
-                  tmp4 = item.type === closure_1_0(closure_1_2[6]).Group;
+                  tmp4 = type.type === tmp2(tmp3[6]).Group;
                 }
                 if (tmp4) {
-                  let navigationKey = item.props.navigationKey;
+                  let navigationKey = type.props.navigationKey;
                   if (undefined !== navigationKey) {
                     let _Error = Error;
                     let _JSON2 = JSON;
                     let _HermesInternal3 = HermesInternal;
-                    let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
+                    let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
                     throw error3;
                   }
-                  let push = acc.push;
-                  if (null != item.props.navigationKey) {
+                  let push = arr.push;
+                  if (null != type.props.navigationKey) {
                     let items1 = [];
-                    items1[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                    items1[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                     items4 = items1;
                   }
-                  if (item.type === closure_1_0(closure_1_2[6]).Group) {
+                  if (type.type === tmp2(tmp3[6]).Group) {
                     if (null != items3) {
                       let items2 = [];
-                      items2[HermesBuiltin.arraySpread(tmp13, 0)] = item.props.screenOptions;
+                      items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
                       items3 = items2;
                     } else {
-                      items3 = [item.props.screenOptions];
+                      items3 = [type.props.screenOptions];
                     }
                   }
-                  if (typeof item.props.screenLayout === "function") {
-                    screenLayout = item.props.screenLayout;
+                  if (typeof type.props.screenLayout === "function") {
+                    screenLayout = type.props.screenLayout;
                   }
                   if (typeof closure_1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
@@ -179,36 +183,36 @@ function getRouteConfigsFromChildren(children) {
                   }
                   let Children = obj.Children;
                   let items5 = [];
-                  HermesBuiltin.arraySpread(Children.toArray(item.props.children).reduce((acc, item, index) => {
+                  HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
                     let obj = closure_1_6;
-                    if (closure_1_6.isValidElement(item)) {
-                      if (item.type === closure_1_0(closure_1_2[5]).Screen) {
-                        if (typeof item.props === "object") {
-                          if (null !== item.props) {
-                            if (typeof item.props.name === "string") {
-                              if ("" !== item.props.name) {
-                                if (undefined !== item.props.navigationKey) {
+                    if (closure_1_6.isValidElement(type)) {
+                      if (type.type === closure_1_0(closure_1_2[5]).Screen) {
+                        if (typeof type.props === "object") {
+                          if (null !== type.props) {
+                            if (typeof type.props.name === "string") {
+                              if ("" !== type.props.name) {
+                                if (undefined !== type.props.navigationKey) {
                                   let _Error2 = Error;
                                   let _JSON3 = JSON;
                                   let _HermesInternal4 = HermesInternal;
-                                  let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the screen '" + item.props.name + "'. It must be a non-empty string or 'undefined'.");
+                                  let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                                   throw error;
                                 }
                                 obj = { keys: null, options: null, layout: null, props: null };
                                 let items = [];
-                                items[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                                items[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                                 obj[0] = items;
                                 obj[1] = items3;
                                 obj[2] = screenLayout;
-                                obj[3] = item.props;
-                                acc.push(obj);
-                                return acc;
+                                obj[3] = type.props;
+                                arr.push(obj);
+                                return arr;
                               }
                             }
                             let _Error3 = Error;
                             let _JSON4 = JSON;
                             let _HermesInternal5 = HermesInternal;
-                            let error1 = new Error("Got an invalid name (" + JSON.stringify(item.props.name) + ") for the screen. It must be a non-empty string.");
+                            let error1 = new Error("Got an invalid name (" + JSON.stringify(type.props.name) + ") for the screen. It must be a non-empty string.");
                             throw error1;
                           }
                         }
@@ -216,36 +220,36 @@ function getRouteConfigsFromChildren(children) {
                         let error2 = new Error("Got an invalid element for screen.");
                         throw error2;
                       } else {
-                        let tmp4 = item.type === obj.Fragment;
+                        let tmp4 = type.type === obj.Fragment;
                         if (!tmp4) {
-                          tmp4 = item.type === closure_1_0(closure_1_2[6]).Group;
+                          tmp4 = type.type === tmp2(tmp3[6]).Group;
                         }
                         if (tmp4) {
-                          let navigationKey = item.props.navigationKey;
+                          let navigationKey = type.props.navigationKey;
                           if (undefined !== navigationKey) {
                             let _Error = Error;
                             let _JSON2 = JSON;
                             let _HermesInternal3 = HermesInternal;
-                            let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
+                            let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
                             throw error3;
                           }
-                          let push = acc.push;
-                          if (null != item.props.navigationKey) {
+                          let push = arr.push;
+                          if (null != type.props.navigationKey) {
                             let items1 = [];
-                            items1[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                            items1[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                             items4 = items1;
                           }
-                          if (item.type === closure_1_0(closure_1_2[6]).Group) {
+                          if (type.type === tmp2(tmp3[6]).Group) {
                             if (null != items3) {
                               let items2 = [];
-                              items2[HermesBuiltin.arraySpread(tmp13, 0)] = item.props.screenOptions;
+                              items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
                               items3 = items2;
                             } else {
-                              items3 = [item.props.screenOptions];
+                              items3 = [type.props.screenOptions];
                             }
                           }
-                          if (typeof item.props.screenLayout === "function") {
-                            screenLayout = item.props.screenLayout;
+                          if (typeof type.props.screenLayout === "function") {
+                            screenLayout = type.props.screenLayout;
                           }
                           if (typeof closure_1_9 !== "function") {
                             HermesBuiltin.throwTypeError();
@@ -255,36 +259,36 @@ function getRouteConfigsFromChildren(children) {
                           }
                           let Children = obj.Children;
                           let items5 = [];
-                          HermesBuiltin.arraySpread(Children.toArray(item.props.children).reduce((acc, item, index) => {
+                          HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce((arr, type) => {
                             let obj = closure_1_6;
-                            if (closure_1_6.isValidElement(item)) {
-                              if (item.type === closure_1_0(closure_1_2[5]).Screen) {
-                                if (typeof item.props === "object") {
-                                  if (null !== item.props) {
-                                    if (typeof item.props.name === "string") {
-                                      if ("" !== item.props.name) {
-                                        if (undefined !== item.props.navigationKey) {
+                            if (closure_1_6.isValidElement(type)) {
+                              if (type.type === closure_1_0(closure_1_2[5]).Screen) {
+                                if (typeof type.props === "object") {
+                                  if (null !== type.props) {
+                                    if (typeof type.props.name === "string") {
+                                      if ("" !== type.props.name) {
+                                        if (undefined !== type.props.navigationKey) {
                                           let _Error2 = Error;
                                           let _JSON3 = JSON;
                                           let _HermesInternal4 = HermesInternal;
-                                          let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the screen '" + item.props.name + "'. It must be a non-empty string or 'undefined'.");
+                                          let error = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the screen '" + type.props.name + "'. It must be a non-empty string or 'undefined'.");
                                           throw error;
                                         }
                                         obj = { keys: null, options: null, layout: null, props: null };
                                         let items = [];
-                                        items[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                                        items[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                                         obj[0] = items;
                                         obj[1] = items3;
                                         obj[2] = screenLayout;
-                                        obj[3] = item.props;
-                                        acc.push(obj);
-                                        return acc;
+                                        obj[3] = type.props;
+                                        arr.push(obj);
+                                        return arr;
                                       }
                                     }
                                     let _Error3 = Error;
                                     let _JSON4 = JSON;
                                     let _HermesInternal5 = HermesInternal;
-                                    let error1 = new Error("Got an invalid name (" + JSON.stringify(item.props.name) + ") for the screen. It must be a non-empty string.");
+                                    let error1 = new Error("Got an invalid name (" + JSON.stringify(type.props.name) + ") for the screen. It must be a non-empty string.");
                                     throw error1;
                                   }
                                 }
@@ -292,36 +296,36 @@ function getRouteConfigsFromChildren(children) {
                                 let error2 = new Error("Got an invalid element for screen.");
                                 throw error2;
                               } else {
-                                let tmp4 = item.type === obj.Fragment;
+                                let tmp4 = type.type === obj.Fragment;
                                 if (!tmp4) {
-                                  tmp4 = item.type === closure_1_0(closure_1_2[6]).Group;
+                                  tmp4 = type.type === tmp2(tmp3[6]).Group;
                                 }
                                 if (tmp4) {
-                                  let navigationKey = item.props.navigationKey;
+                                  let navigationKey = type.props.navigationKey;
                                   if (undefined !== navigationKey) {
                                     let _Error = Error;
                                     let _JSON2 = JSON;
                                     let _HermesInternal3 = HermesInternal;
-                                    let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(item.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
+                                    let error3 = new Error("Got an invalid 'navigationKey' prop (" + JSON.stringify(type.props.navigationKey) + ") for the group. It must be a non-empty string or 'undefined'.");
                                     throw error3;
                                   }
-                                  let push = acc.push;
-                                  if (null != item.props.navigationKey) {
+                                  let push = arr.push;
+                                  if (null != type.props.navigationKey) {
                                     let items1 = [];
-                                    items1[HermesBuiltin.arraySpread(items4, 0)] = item.props.navigationKey;
+                                    items1[HermesBuiltin.arraySpread(items4, 0)] = type.props.navigationKey;
                                     items4 = items1;
                                   }
-                                  if (item.type === closure_1_0(closure_1_2[6]).Group) {
+                                  if (type.type === tmp2(tmp3[6]).Group) {
                                     if (null != items3) {
                                       let items2 = [];
-                                      items2[HermesBuiltin.arraySpread(tmp13, 0)] = item.props.screenOptions;
+                                      items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
                                       items3 = items2;
                                     } else {
-                                      items3 = [item.props.screenOptions];
+                                      items3 = [type.props.screenOptions];
                                     }
                                   }
-                                  if (typeof item.props.screenLayout === "function") {
-                                    screenLayout = item.props.screenLayout;
+                                  if (typeof type.props.screenLayout === "function") {
+                                    screenLayout = type.props.screenLayout;
                                   }
                                   if (typeof closure_1_9 !== "function") {
                                     HermesBuiltin.throwTypeError();
@@ -331,28 +335,28 @@ function getRouteConfigsFromChildren(children) {
                                   }
                                   let Children = obj.Children;
                                   let items5 = [];
-                                  HermesBuiltin.arraySpread(Children.toArray(item.props.children).reduce(() => { ... }, []), 0);
-                                  HermesBuiltin.apply(items5, acc);
-                                  return acc;
+                                  HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce(() => { ... }, []), 0);
+                                  HermesBuiltin.apply(items5, arr);
+                                  return arr;
                                 }
                               }
                             }
-                            if (obj.isValidElement(item)) {
-                              if (typeof item.type === "string") {
-                                let name = item.type;
+                            if (obj.isValidElement(type)) {
+                              if (typeof type.type === "string") {
+                                let name = type.type;
                               } else {
-                                let type = item.type;
+                                type = type.type;
                                 if (type != null) {
                                   name = type.name;
                                 }
                               }
                               let str2 = "";
-                              if (null != item.props) {
+                              if (null != type.props) {
                                 str2 = "";
-                                if (typeof item.props === "object") {
+                                if (typeof type.props === "object") {
                                   str2 = "";
-                                  if ("name" in item.props) {
-                                    let props = item.props;
+                                  if ("name" in type.props) {
+                                    let props = type.props;
                                     name = undefined;
                                     if (props != null) {
                                       name = props.name;
@@ -360,45 +364,45 @@ function getRouteConfigsFromChildren(children) {
                                     str2 = "";
                                     if (name) {
                                       let _HermesInternal = HermesInternal;
-                                      str2 = " for the screen '" + item.props.name + "'";
+                                      str2 = " for the screen '" + type.props.name + "'";
                                     }
                                   }
                                 }
                               }
                               let _HermesInternal2 = HermesInternal;
                               let combined = "'" + name + "'" + str2;
-                            } else if (typeof item === "object") {
+                            } else if (typeof type === "object") {
                               let _JSON = JSON;
-                              combined = JSON.stringify(item);
+                              combined = JSON.stringify(type);
                             } else {
                               let _String = String;
                               let _HermesInternal6 = HermesInternal;
-                              combined = "'" + String(item) + "'";
+                              combined = "'" + String(type) + "'";
                             }
                             let error4 = new Error("A navigator can only contain 'Screen', 'Group' or 'React.Fragment' as its direct children (found " + combined + "). To render this component in the navigator, pass it in the 'component' prop to 'Screen'.");
                             throw error4;
                           }, []), 0);
-                          HermesBuiltin.apply(items5, acc);
-                          return acc;
+                          HermesBuiltin.apply(items5, arr);
+                          return arr;
                         }
                       }
                     }
-                    if (obj.isValidElement(item)) {
-                      if (typeof item.type === "string") {
-                        let name = item.type;
+                    if (obj.isValidElement(type)) {
+                      if (typeof type.type === "string") {
+                        let name = type.type;
                       } else {
-                        let type = item.type;
+                        type = type.type;
                         if (type != null) {
                           name = type.name;
                         }
                       }
                       let str2 = "";
-                      if (null != item.props) {
+                      if (null != type.props) {
                         str2 = "";
-                        if (typeof item.props === "object") {
+                        if (typeof type.props === "object") {
                           str2 = "";
-                          if ("name" in item.props) {
-                            let props = item.props;
+                          if ("name" in type.props) {
+                            let props = type.props;
                             name = undefined;
                             if (props != null) {
                               name = props.name;
@@ -406,45 +410,45 @@ function getRouteConfigsFromChildren(children) {
                             str2 = "";
                             if (name) {
                               let _HermesInternal = HermesInternal;
-                              str2 = " for the screen '" + item.props.name + "'";
+                              str2 = " for the screen '" + type.props.name + "'";
                             }
                           }
                         }
                       }
                       let _HermesInternal2 = HermesInternal;
                       let combined = "'" + name + "'" + str2;
-                    } else if (typeof item === "object") {
+                    } else if (typeof type === "object") {
                       let _JSON = JSON;
-                      combined = JSON.stringify(item);
+                      combined = JSON.stringify(type);
                     } else {
                       let _String = String;
                       let _HermesInternal6 = HermesInternal;
-                      combined = "'" + String(item) + "'";
+                      combined = "'" + String(type) + "'";
                     }
                     let error4 = new Error("A navigator can only contain 'Screen', 'Group' or 'React.Fragment' as its direct children (found " + combined + "). To render this component in the navigator, pass it in the 'component' prop to 'Screen'.");
                     throw error4;
                   }, []), 0);
-                  HermesBuiltin.apply(items5, acc);
-                  return acc;
+                  HermesBuiltin.apply(items5, arr);
+                  return arr;
                 }
               }
             }
-            if (obj.isValidElement(item)) {
-              if (typeof item.type === "string") {
-                let name = item.type;
+            if (obj.isValidElement(type)) {
+              if (typeof type.type === "string") {
+                let name = type.type;
               } else {
-                let type = item.type;
+                type = type.type;
                 if (type != null) {
                   name = type.name;
                 }
               }
               let str2 = "";
-              if (null != item.props) {
+              if (null != type.props) {
                 str2 = "";
-                if (typeof item.props === "object") {
+                if (typeof type.props === "object") {
                   str2 = "";
-                  if ("name" in item.props) {
-                    let props = item.props;
+                  if ("name" in type.props) {
+                    let props = type.props;
                     name = undefined;
                     if (props != null) {
                       name = props.name;
@@ -452,45 +456,45 @@ function getRouteConfigsFromChildren(children) {
                     str2 = "";
                     if (name) {
                       let _HermesInternal = HermesInternal;
-                      str2 = " for the screen '" + item.props.name + "'";
+                      str2 = " for the screen '" + type.props.name + "'";
                     }
                   }
                 }
               }
               let _HermesInternal2 = HermesInternal;
               let combined = "'" + name + "'" + str2;
-            } else if (typeof item === "object") {
+            } else if (typeof type === "object") {
               let _JSON = JSON;
-              combined = JSON.stringify(item);
+              combined = JSON.stringify(type);
             } else {
               let _String = String;
               let _HermesInternal6 = HermesInternal;
-              combined = "'" + String(item) + "'";
+              combined = "'" + String(type) + "'";
             }
             let error4 = new Error("A navigator can only contain 'Screen', 'Group' or 'React.Fragment' as its direct children (found " + combined + "). To render this component in the navigator, pass it in the 'component' prop to 'Screen'.");
             throw error4;
           }, []), 0);
-          HermesBuiltin.apply(items5, acc);
-          return acc;
+          HermesBuiltin.apply(items5, arr);
+          return arr;
         }
       }
     }
-    if (obj.isValidElement(item)) {
-      if (typeof item.type === "string") {
-        let name = item.type;
+    if (obj.isValidElement(type)) {
+      if (typeof type.type === "string") {
+        let name = type.type;
       } else {
-        let type = item.type;
+        type = type.type;
         if (type != null) {
           name = type.name;
         }
       }
       let str2 = "";
-      if (null != item.props) {
+      if (null != type.props) {
         str2 = "";
-        if (typeof item.props === "object") {
+        if (typeof type.props === "object") {
           str2 = "";
-          if ("name" in item.props) {
-            let props = item.props;
+          if ("name" in type.props) {
+            let props = type.props;
             name = undefined;
             if (props != null) {
               name = props.name;
@@ -498,20 +502,20 @@ function getRouteConfigsFromChildren(children) {
             str2 = "";
             if (name) {
               let _HermesInternal = HermesInternal;
-              str2 = " for the screen '" + item.props.name + "'";
+              str2 = " for the screen '" + type.props.name + "'";
             }
           }
         }
       }
       let _HermesInternal2 = HermesInternal;
       let combined = "'" + name + "'" + str2;
-    } else if (typeof item === "object") {
+    } else if (typeof type === "object") {
       let _JSON = JSON;
-      combined = JSON.stringify(item);
+      combined = JSON.stringify(type);
     } else {
       let _String = String;
       let _HermesInternal6 = HermesInternal;
-      combined = "'" + String(item) + "'";
+      combined = "'" + String(type) + "'";
     }
     let error4 = new Error("A navigator can only contain 'Screen', 'Group' or 'React.Fragment' as its direct children (found " + combined + "). To render this component in the navigator, pass it in the 'component' prop to 'Screen'.");
     throw error4;
@@ -546,7 +550,8 @@ function getStateFromParams(state) {
         initial = state.initial;
       }
       if (false !== initial) {
-        const obj = { name: null, params: null, path: null };
+        let obj = { routes: null };
+        obj = { name: null, params: null, path: null };
         ({ screen: obj2[0], params: obj2[1], path: obj2[2] } = state);
         const items = [obj];
         obj[0] = items;
@@ -559,10 +564,10 @@ function getStateFromParams(state) {
 export const useNavigationBuilder = function useNavigationBuilder(StackRouter, UNSTABLE_routeNamesChangeBehavior) {
   const _require = StackRouter;
   importDefault = UNSTABLE_routeNamesChangeBehavior;
-  let obj = useRegisterNavigator;
+  let obj = _useRegisterNavigator;
   dependencyMap = obj.useRegisterNavigator();
-  const context = React.useContext(require("01541_context.js").NavigationRouteContext);
-  const context1 = React.useContext(require("01532_ConsumedParamsContext.js").ConsumedParamsContext);
+  const context = React.useContext(_context.NavigationRouteContext);
+  const context1 = React.useContext(_ConsumedParamsContext.ConsumedParamsContext);
   let params;
   if (context != null) {
     params = context.params;
@@ -583,12 +588,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
   ({ children, screenOptions, screenLayout } = UNSTABLE_routeNamesChangeBehavior);
   getRouteConfigsFromChildren = hasItem(UNSTABLE_routeNamesChangeBehavior, context);
   const arr = getRouteConfigsFromChildren(children);
-  const lazyValue = require("01523_useLazyValue.js").useLazyValue(() => {
+  const lazyValue = _useLazyValue.useLazyValue(() => {
     if (null != initialRouteName.initialRouteName) {
-      if (arr.every((item, index) => item.props.name !== initialRouteName.initialRouteName)) {
+      if (arr.every((props) => props.props.name !== initialRouteName.initialRouteName)) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("Couldn't find a screen named '" + initialRouteName.initialRouteName + "' to use as 'initialRouteName'.");
+        error = new Error("Couldn't find a screen named '" + tmp.initialRouteName + "' to use as 'initialRouteName'.");
         throw error;
       }
     }
@@ -603,8 +608,9 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       return tmp3;
     }
   });
-  let mapped = arr.map((item, index) => item.props.name);
+  let mapped = arr.map((props) => props.props.name);
   if (mapped.length) {
+    obj = {};
     obj = {};
     obj1 = {};
     const obj2 = {};
@@ -616,10 +622,18 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       let tmp18 = name;
       if (name in obj) {
         let _Error2 = Error;
+        let tmp22 = name;
         let _HermesInternal = HermesInternal;
+        let str2 = "')";
+        let str3 = "A navigator cannot contain multiple 'Screen' components with the same name (found duplicate screen named '";
+        let tmp23 = new.target;
+        let tmp24 = new.target;
         error = new Error("A navigator cannot contain multiple 'Screen' components with the same name (found duplicate screen named '" + tmp18 + "')");
+        let tmp26 = error;
         throw error;
       } else {
+        let tmp19 = name;
+        let tmp20 = nextResult;
         obj[tmp18] = tmp17;
         obj[tmp18] = tmp17.keys;
         obj1[tmp18] = tmp17.props.initialParams;
@@ -653,12 +667,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     let items2 = [mapped];
     const callback2 = React.useCallback((routes) => {
       routes = routes.routes;
-      return routes.every((item, index) => !closure_12.includes(item.name));
+      return routes.every((name) => !closure_12.includes(name.name));
     }, items2);
-    const context2 = React.useContext(require("01517_get_getKey.js").NavigationStateContext);
+    const context2 = React.useContext(_require("01517_get_getKey.js") /* get getKey */.NavigationStateContext);
     let state = context2.state;
     ({ getState: closure_21, setState: closure_22, setKey: closure_23, getKey: closure_24, getIsInitial: closure_25 } = context2);
-    const context3 = React.useContext(require("01530_NavigationBuilderContext.js").NavigationBuilderContext);
+    const context3 = React.useContext(_NavigationBuilderContext.NavigationBuilderContext);
     const getIsStateEmitted = context3.getIsStateEmitted;
     closure_27 = React.useRef(false);
     closure_28 = React.useRef(undefined);
@@ -674,16 +688,16 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     const tmp37 = context1(React.useMemo(() => {
       if (ref.current) {
         if (ref2.current) {
-          if (callback(ref2.current)) {
+          if (callback(tmp.current)) {
             const items = [undefined, , , ];
-            if (callback1(ref2.current)) {
-              current = ref2.current;
+            if (callback1(tmp.current)) {
+              current = tmp.current;
             } else {
               obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
               obj[0] = mapped;
               obj[1] = obj1;
               obj[2] = obj2;
-              current = lazyValue.getRehydratedState(ref2.current, obj);
+              current = lazyValue.getRehydratedState(tmp.current, obj);
             }
             items[1] = current;
             items[2] = false;
@@ -692,33 +706,33 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           }
         }
       }
-      const reduced = mapped.reduce((acc, item, index) => {
-        const initialParams = table[item].props.initialParams;
+      const reduced = mapped.reduce((arg0, arg1) => {
+        const initialParams = table[arg1].props.initialParams;
         state = undefined;
         if (closure_3 != null) {
-          const params = closure_3.params;
+          const params = tmp.params;
           if (params != null) {
             state = params.state;
           }
         }
         if (null == state) {
           let initial;
-          if (closure_3 != null) {
-            const params3 = closure_3.params;
+          if (tmp != null) {
+            const params3 = tmp.params;
             if (params3 != null) {
               initial = params3.initial;
             }
           }
           if (false !== initial) {
             let screen;
-            if (closure_3 != null) {
-              const params4 = closure_3.params;
+            if (tmp != null) {
+              const params4 = tmp.params;
               if (params4 != null) {
                 screen = params4.screen;
               }
             }
-            if (screen === item) {
-              const params2 = closure_3.params.params;
+            if (screen === arg1) {
+              const params2 = tmp.params.params;
             }
           }
         }
@@ -728,21 +742,21 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           const merged1 = Object.assign(params2);
           const tmp5 = obj;
         }
-        acc[item] = tmp5;
-        return acc;
+        arg0[arg1] = tmp5;
+        return arg0;
       }, {});
       if (undefined === state) {
         state = undefined;
         if (context != null) {
-          let params = context.params;
+          let params = tmp7.params;
           if (params != null) {
             state = params.state;
           }
         }
         if (null == state) {
           let screen;
-          if (context != null) {
-            let params2 = context.params;
+          if (tmp7 != null) {
+            let params2 = tmp7.params;
             if (params2 != null) {
               screen = params2.screen;
             }
@@ -751,7 +765,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             if (!hasItem) {
               const items1 = [undefined, , , ];
               obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
-              obj[0] = mapped;
+              obj[0] = tmp3;
               obj[1] = reduced;
               obj[2] = obj2;
               items1[1] = lazyValue.getInitialState(obj);
@@ -761,8 +775,8 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             }
           } else {
             let initial;
-            if (context != null) {
-              let params3 = context.params;
+            if (tmp7 != null) {
+              let params3 = tmp7.params;
               if (params3 != null) {
                 initial = params3.initial;
               }
@@ -787,13 +801,13 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       }
       if (null == tmp18) {
         obj = { routeNames: null, routeParamList: null, routeGetIdList: null };
-        obj[0] = mapped;
+        obj[0] = tmp3;
         obj[1] = reduced;
         obj[2] = obj2;
         let initialState = lazyValue.getInitialState(obj);
       } else {
         obj1 = { routeNames: null, routeParamList: null, routeGetIdList: null };
-        obj1[0] = mapped;
+        obj1[0] = tmp3;
         obj1[1] = reduced;
         obj1[2] = obj2;
         initialState = lazyValue.getRehydratedState(tmp18, obj1);
@@ -818,13 +832,14 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     }, items3), 4);
     [tmp38, tmp39] = tmp37;
     closure_30 = tmp39;
+    const ref = React.useRef(obj);
     const insertionEffect = React.useInsertionEffect(() => {
       ref.current = obj;
     });
-    let current = React.useRef(obj).current;
+    let current = ref.current;
     const _Object2 = Object;
     let keys = Object.keys(obj);
-    let found = keys.filter((item, index) => {
+    let found = keys.filter((arg0) => {
       let tmp3 = null != tmp && null != tmp2;
       if (tmp3) {
         obj = StackRouter(1564);
@@ -832,7 +847,6 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       }
       return tmp3;
     });
-    const ref = React.useRef(obj);
     [tmp43, tmp44] = context1(React.useState(tmp38), 2);
     closure_33 = tmp44;
     if (tmp45) {
@@ -1008,7 +1022,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         const items = [];
         const routes = rehydratedState.routes;
         if (target.target) {
-          let found = routes.find((item, index) => item.key === target.target);
+          let found = routes.find((key) => key.key === target.target);
           closure_1 = found;
           let name;
           if (found != null) {
@@ -1025,12 +1039,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           let _Object = Object;
           let keys = Object.keys(obj);
           const items1 = [];
-          HermesBuiltin.arraySpread(keys.filter((item, index) => {
+          HermesBuiltin.arraySpread(keys.filter((arg0) => {
             let name;
             if (name != null) {
               name = name.name;
             }
-            return name === item;
+            return name === arg0;
           }), 0);
           HermesBuiltin.apply(items1, items);
         }
@@ -1040,43 +1054,43 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             const items2 = [];
             const concat = items2.concat;
             const items3 = [tmp25];
-            HermesBuiltin.arraySpread(items.map((item, index) => dependencyMap[item].props.listeners), 1);
+            HermesBuiltin.arraySpread(items.map((arg0) => dependencyMap[arg0].props.listeners), 1);
             const items4 = [];
-            HermesBuiltin.arraySpread(items3.map((item, index) => {
-              let tmp = item;
-              if (typeof item === "function") {
+            HermesBuiltin.arraySpread(items3.map((fn) => {
+              let tmp = fn;
+              if (typeof fn === "function") {
                 obj = { route: null, navigation: null };
                 obj[0] = closure_1;
                 obj[1] = navigation;
-                tmp = item(obj);
+                tmp = fn(obj);
               }
               closure_0 = tmp;
               mapped = undefined;
               if (tmp) {
                 const _Object = Object;
                 const keys = Object.keys(tmp);
-                const found = keys.filter((item, index) => item === type.type);
-                mapped = found.map((item, index) => {
+                const found = keys.filter((arg0) => arg0 === type.type);
+                mapped = found.map((arg0) => {
                   let tmp2;
                   if (closure_0 != null) {
-                    tmp2 = tmp[item];
+                    tmp2 = tmp[arg0];
                   }
                   return tmp2;
                 });
               }
               return mapped;
             }), 0);
-            const found1 = HermesBuiltin.apply(items4, items2).filter((item, index, arr) => {
-              let tmp = item;
-              if (item) {
-                tmp = arr.lastIndexOf(item) === index;
+            const found1 = HermesBuiltin.apply(items4, items2).filter((arg0, arg1, arr) => {
+              let tmp = arg0;
+              if (arg0) {
+                tmp = arr.lastIndexOf(arg0) === arg1;
               }
               return tmp;
             });
-            const item = found1.forEach((item, index) => {
+            const item = found1.forEach((arg0) => {
               let tmp;
-              if (item != null) {
-                tmp = item(closure_0);
+              if (arg0 != null) {
+                tmp = arg0(closure_0);
               }
               return tmp;
             });
@@ -1227,24 +1241,25 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           obj[3] = arg0;
           tmpResult = tmp(obj);
         }
+        obj = { value: "Array", children: 0 };
         obj = { value: navigationHelpers, children: null };
-        obj1 = { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(StackRouter(1542).FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(StackRouter(1571).PreventRemoveProvider, { children: tmpResult }) }) };
-        obj[1] = jsx(StackRouter(1592).NavigationStateListenerProvider, { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(StackRouter(1542).FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(StackRouter(1571).PreventRemoveProvider, { children: tmpResult }) }) });
-        obj[1] = jsx(StackRouter(1566).NavigationHelpersContext.Provider, { value: navigationHelpers, children: null });
-        return jsx(StackRouter(1569).NavigationMetaContext.Provider, { value: navigationHelpers, children: null });
+        obj1 = { state: rehydratedState, getState: navigationHelpers.getState, children: closure_1_7(StackRouter(1542).FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: closure_1_7(StackRouter(1571).PreventRemoveProvider, { children: tmpResult }) }) };
+        obj[1] = closure_1_7(StackRouter(1592).NavigationStateListenerProvider, obj1);
+        obj[1] = closure_1_7(StackRouter(1566).NavigationHelpersContext.Provider, obj);
+        return closure_1_7(StackRouter(1569).NavigationMetaContext.Provider, obj);
       });
       return obj17;
     }
     let everyResult;
     if (tmp43 != null) {
       let routes = tmp43.routes;
-      everyResult = routes.every((item, index) => mapped.includes(item.name));
+      everyResult = routes.every((name) => mapped.includes(name.name));
     }
     if (everyResult) {
       let everyResult1;
       if (tmp39 != null) {
         const routes2 = tmp39.routes;
-        everyResult1 = routes2.every((item, index) => !mapped.includes(item.name));
+        everyResult1 = routes2.every((name) => !mapped.includes(name.name));
       }
       if (everyResult1) {
         c36 = true;
@@ -1259,7 +1274,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     }
     const tmp42 = context1(React.useState(tmp38), 2);
     tmp45 = "lastUnhandled" === UNSTABLE_routeNamesChangeBehavior.UNSTABLE_routeNamesChangeBehavior && tmp38 && tmp43 !== tmp38;
-    const tmp30Result12 = isArrayEqual;
+    const tmp30Result12 = _isArrayEqual;
     rehydratedState = tmp39;
     if (!tmp51) {
       const obj19 = { routeNames: null, routeParamList: null, routeGetIdList: null, routeKeyChanges: null };
@@ -1270,11 +1285,10 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       stateForRouteNamesChange = lazyValue.getStateForRouteNamesChange(tmp39, obj19);
       rehydratedState = stateForRouteNamesChange;
     }
-    tmp51 = require("01564_isArrayEqual.js").isArrayEqual(tmp39.routeNames, mapped) && 0 === found.length;
+    tmp51 = _isArrayEqual.isArrayEqual(tmp39.routeNames, mapped) && 0 === found.length;
   } else {
     let _Error = Error;
     const error1 = new Error("Couldn't find any screens for the navigator. Have you defined any screens as its children?");
     throw error1;
   }
-  let tmpResult = useLazyValue;
 };

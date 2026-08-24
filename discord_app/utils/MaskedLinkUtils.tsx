@@ -1,17 +1,20 @@
 // discord_app/utils/MaskedLinkUtils.tsx
-import isBlockedDomain from "../modules/blocked_domains/BlockedDomainStore.tsx";
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../stores/GuildStore.tsx";
-import set from "../stores/MaskedLinkStore.tsx";
-import reinjectEphemerals from "../stores/MessageStore.tsx";
-import markAllUserIdListsStale from "../stores/RelationshipStore.tsx";
-import handleConnectionOpen from "../stores/SelectedChannelStore.tsx";
+import closure_3 from "../modules/blocked_domains/BlockedDomainStore.tsx";
+import closure_4 from "../stores/ChannelStore.tsx";
+import closure_5 from "../stores/GuildStore.tsx";
+import closure_6 from "../stores/MaskedLinkStore.tsx";
+import closure_7 from "../stores/MessageStore.tsx";
+import closure_8 from "../stores/RelationshipStore.tsx";
+import closure_9 from "../stores/SelectedChannelStore.tsx";
 import ME from "../Constants.tsx";
+import { getSystemLocale } from "../intl/index.native.tsx";
+import { openInviteModal } from "../lib/getOnClick.tsx";
+import { set1 } from "../modules/masked_link/constants/TrustedURLs.tsx";
 import { getHostname } from "../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ChannelTypes: c10, AnalyticEvents: unpackModuleId, GuildFeatures: closure_12, MessageFlags: map1 } = ME);
-let result = require("obj132").fileFinishedImporting("utils/MaskedLinkUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/MaskedLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
   const channel = store.getChannel(channelId.getChannelId());
@@ -40,10 +43,11 @@ export const handleClick = function handleClick(href, preventDefault) {
   let _require;
   channelId = undefined;
   dependencyMap = undefined;
+  let guild_id;
   let store;
   let message_id;
   let channel_id;
-  let guild_id;
+  guild_id = undefined;
   ({ trusted, onClick, onConfirm: c0, onCancel, shouldConfirm, messageId, channelId } = href);
   let obj = channelId(4092);
   const sanitizeUrlResult = obj.sanitizeUrl(href.href);
@@ -53,12 +57,12 @@ export const handleClick = function handleClick(href, preventDefault) {
     }
     let tmp3Result = tmp3(4827);
     obj = { title: null, body: null, isDismissable: true, contextKey: null };
-    const intl = require("../intl/index.native.tsx").intl;
-    obj[0] = intl.string(require("../intl/index.native.tsx").t.x87gan);
-    const intl2 = require("../intl/index.native.tsx").intl;
+    const intl = _getSystemLocale.intl;
+    obj[0] = intl.string(_getSystemLocale.t.x87gan);
+    const intl2 = _getSystemLocale.intl;
     obj = { url: null };
     obj[0] = href.href;
-    obj[1] = intl2.format(require("../intl/index.native.tsx").t["9rqRwl"], obj);
+    obj[1] = intl2.format(_getSystemLocale.t["9rqRwl"], obj);
     obj[3] = arg3;
     tmp3Result.show(obj);
   } else {
@@ -191,7 +195,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (hasItem1) {
           tmp3Result = tmp3(698);
           obj1 = { url_domain: null, guild_id: null, channel_id: null };
-          let obj4 = getHostname;
+          let obj4 = _getHostname;
           obj1[0] = obj4.getHostname(tmp8);
           obj1[1] = guild1.id;
           obj1[2] = channel.id;
@@ -210,7 +214,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
-        require("../lib/getOnClick.tsx").default(tmp8, obj3);
+        const defaultResult = _openInviteModal.default(tmp8, obj3);
       }
       if (onCancel == null) {
         onCancel = () => {
@@ -222,25 +226,24 @@ export const handleClick = function handleClick(href, preventDefault) {
           preventDefault.preventDefault();
         }
         tmp3(12418).show(tmp8);
-        const tmp3Result3 = tmp3(12418);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = require("../modules/masked_link/constants/TrustedURLs.tsx").TRUSTED_URLS;
+          const TRUSTED_URLS = _set1.TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
-        const protocol = require("../stores/MaskedLinkStoreMethodsAdditional.native.tsx").getProtocol(tmp8);
+        const protocol = _getHostname.getProtocol(tmp8);
         let tmp55 = "http:" === protocol;
         if (!tmp55) {
           tmp55 = "https:" === protocol;
         }
         function handleConfirm() {
           if (closure_4) {
-            channelId(_undefined[14]);
-            const obj = { messageId: null, channelId: null, guildId: null, sourceChannelId: null, sourceGuildId: null };
+            let obj = channelId(_undefined[14]);
+            obj = { messageId: null, channelId: null, guildId: null, sourceChannelId: null, sourceGuildId: null };
             obj[0] = message_id;
             obj[1] = channelId;
             obj[2] = guild_id;
@@ -296,7 +299,7 @@ export const handleClick = function handleClick(href, preventDefault) {
           let result = tmp3(8780).trackAnnouncementMessageLinkClicked(obj6);
           const tmp3Result6 = tmp3(8780);
         }
-        const obj10 = getHostname;
+        const obj10 = _getHostname;
       }
       const tmp3Result2 = tmp3(8780);
     } catch (err) {

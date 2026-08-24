@@ -1,18 +1,19 @@
 // discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx
-import _createCreatorMonetizationEnableRequestAll from "CreatorMonetizationEligibilityActionCreators.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
 import { CreatorMonetizationApplicationState as closure_6 } from "CreatorMonetizationEligibilityConstants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
 export default function useCreatorMonetizationEligibility(arg0) {
+  closure_0 = arg0;
   [tmp2, importAll] = callback(React.useState(null != arg0), 2);
   const tmp = callback(React.useState(null != arg0), 2);
   [tmp4, dependencyMap] = callback(React.useState(), 2);
   const tmp5 = callback(React.useState(), 2);
   callback = tmp5[1];
+  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -51,7 +52,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
               callback(true);
               closure_1_2(undefined);
               c4 = 2;
-              obj1 = _createCreatorMonetizationEnableRequestAll;
+              obj1 = closure_2_1(closure_2_2[4]);
               c5 = 3;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -66,7 +67,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               callback = closure_3;
-              const tmp45 = new lib(dependencyMap[5])(callback);
+              const tmp45 = new lib(closure_2_2[5])(callback);
               closure_1_2(tmp45);
               c4 = 0;
               callback(false);
@@ -125,6 +126,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
               obj2[19] = perc_ret_w1;
               closure_1_3(obj2);
               c4 = 1;
+              const tmp75 = closure_1_3;
             }
             c4 = 0;
             callback(false);

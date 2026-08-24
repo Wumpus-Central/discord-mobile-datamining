@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/utils/openGiftModal.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
 
-const result = obj132.fileFinishedImporting("modules/premium/native/utils/openGiftModal.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/utils/openGiftModal.tsx");
 
 export const openGiftModal = function openGiftModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.create(null));

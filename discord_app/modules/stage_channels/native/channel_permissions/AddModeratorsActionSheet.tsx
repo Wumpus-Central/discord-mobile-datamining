@@ -1,33 +1,36 @@
 // discord_app/modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
 import { RowType } from "../../../channel_permissions/ChannelPermissionsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+const require = arg1;
+createCacheKey = { container: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/channel_permissions/AddModeratorsActionSheet.tsx");
 
 export default function AddModeratorsActionSheet(channel) {
   channel = channel.channel;
+  let first;
   function _handleAddModeratorsPressed() {
     const self = this;
     const tmp = closure_1_3(function*() {
+      c1 = tmp3;
       c0 = 0;
       c1 = 0;
       const _Object = Object;
       const values = Object.values(closure_1_1);
-      const found = values.filter((item, index) => null != item.row.id);
+      const found = values.filter((row) => null != row.row.id);
       c3 = 1;
-      const mapped = found.map((item, index) => {
-        const row = item.row;
+      const mapped = found.map((row) => {
+        row = row.row;
         if (row.rowType === closure_2_8.ROLE) {
           closure_1 = closure_1 + 1;
           let moderatorOverwrite = closure_2_0(closure_2_2[11]).createModeratorOverwrite(row.id, closure_2_0(closure_2_2[12]).PermissionOverwriteType.ROLE, c0);
@@ -66,7 +69,7 @@ export default function AddModeratorsActionSheet(channel) {
     return applyArgumentsResult;
   }
   const tmp2 = callback(React.useState({}), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   let obj = channel(_handleAddModeratorsPressed[9]);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -100,8 +103,8 @@ export default function AddModeratorsActionSheet(channel) {
         let obj4 = obj;
       }
       obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
-      obj[2] = <tmp13 {...obj4} />;
-      obj1[1] = jsx(tmp4(tmp5[17]).BottomSheetTitleHeader, obj);
+      obj[2] = tmp12(tmp13, obj4);
+      obj1[1] = tmp12(tmp4(tmp5[17]).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { inActionSheet: true, channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null };
@@ -110,9 +113,9 @@ export default function AddModeratorsActionSheet(channel) {
       obj3[3] = tmp4(tmp5[21]).MODERATE_STAGE_CHANNEL_PERMISSIONS;
       obj3[4] = first;
       obj3[5] = tmp2[1];
-      obj2[1] = jsx(tmp7(tmp5[20]), { inActionSheet: true, channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null });
-      obj1[3] = <View style={null}>{null}</View>;
-      return jsx(tmp4(tmp5[16]).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
+      obj2[1] = tmp12(first(tmp5[20]), obj3);
+      obj1[3] = tmp12(View, obj2);
+      return tmp12(tmp4(tmp5[16]).BottomSheet, obj1);
     }
     obj4 = { size: "sm", disabled: null, text: null, onPress: null };
     obj4[1] = tmp11;
@@ -129,6 +132,4 @@ export default function AddModeratorsActionSheet(channel) {
       return applyArgumentsResult;
     };
   }
-  tmp = callback2();
-  tmp7 = first;
 };

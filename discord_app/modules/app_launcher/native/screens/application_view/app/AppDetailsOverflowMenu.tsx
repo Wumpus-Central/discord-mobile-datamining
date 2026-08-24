@@ -2,9 +2,9 @@
 import noopAll from "../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
 
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;

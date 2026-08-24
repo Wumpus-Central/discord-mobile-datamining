@@ -1,23 +1,24 @@
 // discord_app/modules/stage_channels/native/modals/GuildStageChannelSelection.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 let closure_7 = createCacheKey.createStyles({ channelText: { marginTop: 8, flexDirection: "row" } });
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
 
 export default function GuildStageChannelSelection(channel) {
   channel = channel.channel;
   const onChangeChannel = channel.onChangeChannel;
+  let channelsUserCanStartStageIn;
   function handleSelectChannel() {
     let obj = channelsUserCanStartStageIn(handleSelectChannel[7]);
     const result = obj.dismissGlobalKeyboard();
-    const mapped = channelsUserCanStartStageIn.map((item, index) => {
-      const obj = { value: item.id, label: callback(table[6]).computeChannelName(item, closure_5, closure_4, true) };
+    const mapped = channelsUserCanStartStageIn.map((id) => {
+      const obj = { value: id.id, label: callback(table[6]).computeChannelName(id, closure_5, closure_4, true) };
       return obj;
     });
     obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -27,12 +28,11 @@ export default function GuildStageChannelSelection(channel) {
     obj[1] = mapped;
     obj[2] = function onItemSelect(arg0) {
       closure_0 = arg0;
-      const found = closure_2.find((item, index) => item.id === closure_0);
+      const found = closure_2.find((id) => id.id === closure_0);
       if (null != found) {
         callback2(found);
       }
-      onChangeChannel(handleSelectChannel[8]).hideActionSheet();
-      const obj = onChangeChannel(handleSelectChannel[8]);
+      closure_1_1(closure_1_3[8]).hideActionSheet();
     };
     let id;
     if (channel != null) {
@@ -45,7 +45,7 @@ export default function GuildStageChannelSelection(channel) {
     return callback(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, arg1);
   }
   let obj = channel(handleSelectChannel[5]);
-  const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(channel.guild);
+  channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(channel.guild);
   const tmp3 = onChangeChannel(handleSelectChannel[6])(channel);
   obj = { style: callback().channelText, variant: "text-xs/medium", color: "text-default", children: null };
   let intl = channel(handleSelectChannel[11]).intl;
@@ -56,7 +56,7 @@ export default function GuildStageChannelSelection(channel) {
     obj[0] = tmp3;
     obj[1] = renderChannelHook;
     obj[2] = function changeHook(children) {
-      return jsx(channel(handleSelectChannel[12]).Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, arg1);
+      return closure_1_6(channel(handleSelectChannel[12]).Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, arg1);
     };
     obj[3] = format(t.AkzLcV, obj);
     let tmp5 = obj;

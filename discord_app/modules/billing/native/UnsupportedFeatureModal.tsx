@@ -1,26 +1,28 @@
 // discord_app/modules/billing/native/UnsupportedFeatureModal.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/billing/native/UnsupportedFeatureModal.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/native/UnsupportedFeatureModal.tsx");
 
 export default function UnsupportedFeatureModal(onDismiss) {
   onDismiss = onDismiss.onDismiss;
-  let obj = {
+  let obj = { initialRouteName: "Unsupported", screens: null };
+  obj = { Unsupported: null };
+  obj = {
     title: onDismiss.title,
     headerLeft: onDismiss(6314).getHeaderCloseButton(() => {
-      let arr = _modDef5260;
+      let arr = closure_1_1(closure_1_2[5]);
       arr = arr.pop();
       if (onDismiss != null) {
         onDismiss();
       }
     }),
     render() {
-      const obj = { variant: "text-lg/normal", color: "text-default", children: null };
+      let obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
+      obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1236).intl;
       obj[2] = intl.string(onDismiss(1236).t.I22zuX);
       obj[1] = callback(onDismiss(4734).Text, obj);
@@ -32,14 +34,15 @@ export default function UnsupportedFeatureModal(onDismiss) {
   return jsx(onDismiss(6312).Navigator, {
     title: onDismiss.title,
     headerLeft: onDismiss(6314).getHeaderCloseButton(() => {
-      let arr = _modDef5260;
+      let arr = closure_1_1(closure_1_2[5]);
       arr = arr.pop();
       if (onDismiss != null) {
         onDismiss();
       }
     }),
     render() {
-      const obj = { variant: "text-lg/normal", color: "text-default", children: null };
+      let obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
+      obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1236).intl;
       obj[2] = intl.string(onDismiss(1236).t.I22zuX);
       obj[1] = callback(onDismiss(4734).Text, obj);

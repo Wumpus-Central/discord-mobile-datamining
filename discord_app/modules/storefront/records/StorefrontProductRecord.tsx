@@ -1,8 +1,9 @@
 // discord_app/modules/storefront/records/StorefrontProductRecord.tsx
-import fromServer from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
-import createFromServer from "../../skus/SKURecord.tsx";
+import closure_0 from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
+import closure_1 from "../../skus/SKURecord.tsx";
 
-const prototype = function StorefrontProductRecord(arg0) {
+let prototype;
+prototype = function StorefrontProductRecord(arg0) {
   ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
@@ -11,11 +12,11 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   let obj = {};
   const merged = Object.assign(Object.assign(sku_ids, Object.create(null)));
   obj.skuIds = sku_ids.sku_ids;
-  obj.options = options.map((item, index) => ({ name: item.name, optionValues: item.option_values }));
+  obj.options = options.map((name) => ({ name: name.name, optionValues: name.option_values }));
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
   obj.updatedAt = new Date(updated_at);
-  obj.skus = skus.map((item, index) => closure_1.createFromServer(item));
+  obj.skus = skus.map((arg0) => closure_1.createFromServer(arg0));
   const collectibles = tenant_metadata.collectibles;
   let prop;
   if (collectibles != null) {
@@ -61,10 +62,10 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj = Object.create(prototype.prototype);
+  obj = Object.create(tmp.prototype);
   ({ id: tmp15.id, skuIds: tmp15.skuIds, name: tmp15.name, summary: tmp15.summary, options: tmp15.options, createdAt: tmp15.createdAt, updatedAt: tmp15.updatedAt, skus: tmp15.skus, primaryCollectionId: tmp15.primaryCollectionId, primaryCollectionStyles: tmp15.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp15.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp15.primaryCollectionWillUnpublishAt, gameApplicationId: tmp15.gameApplicationId } = obj);
   return obj;
 };
-const result = require("obj132").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");
 
 export default prototype;

@@ -1,20 +1,21 @@
 // discord_app/modules/auth/native/components/utils/usePasswordScore.tsx
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
 
 export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
-export const usePasswordScore = function usePasswordScore(arg0) {
-  closure_0 = arg0;
+export const usePasswordScore = function usePasswordScore(first) {
+  closure_0 = first;
   [tmp2, dependencyMap] = callback(React.useState(null), 2);
   let tmp = callback(React.useState(null), 2);
   [tmp4, closure_2] = callback(React.useState(null), 2);
   callback = React.useRef(null);
   const effect = React.useEffect(() => {
-    let lib = closure_1_2((arg0) => {
+    let lib;
+    lib = closure_1_2((arg0) => {
       closure_0 = arg0;
       c5 = 0;
       c6 = 0;
@@ -94,7 +95,7 @@ export const usePasswordScore = function usePasswordScore(arg0) {
         }
       })();
     });
-    closure_3.current = lib(dependencyMap[3]).throttle(function() {
+    closure_3.current = lib(closure_1_1[3]).throttle(function() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -116,7 +117,7 @@ export const usePasswordScore = function usePasswordScore(arg0) {
       }
     };
   }, []);
-  const items = [arg0];
+  const items = [first];
   const effect1 = React.useEffect(() => {
     let tmp = null != ref.current;
     if (tmp) {

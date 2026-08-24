@@ -13,6 +13,7 @@ let closure_6 = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){co
 const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   ({ onRefresh, scrollableGesture } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
+  dependencyMap = undefined;
   let iter;
   const tmp4 = iter(scrollableGesture(6964).BottomSheetDraggableContext);
   dependencyMap = tmp4;
@@ -27,7 +28,7 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   const fn = function f() {
     return { enabled: iter.value === scrollableGesture(6953).SCROLLABLE_STATE.UNLOCKED };
   };
-  obj = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6953).SCROLLABLE_STATE };
+  obj = { animatedScrollableState: iter, SCROLLABLE_STATE: tmp2(6953).SCROLLABLE_STATE };
   fn.__closure = obj;
   fn.__workletHash = 8403038560398;
   fn.__initData = closure_6;
@@ -55,14 +56,14 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
     const merged1 = Object.assign(merged);
     obj1.onRefresh = onRefresh;
     obj1.animatedProps = animatedProps;
-    obj[1] = <closure_5 />;
-    let tmp8Result = jsx(scrollableGesture(6377).GestureDetector, { gesture: null, children: null });
+    obj[1] = tmp8(closure_5, obj1);
+    let tmp8Result = tmp8(tmp2(6377).GestureDetector, obj);
   } else {
     const obj2 = {};
     const merged2 = Object.assign(merged);
     obj2.onRefresh = onRefresh;
     obj2.animatedProps = animatedProps;
-    tmp8Result = <closure_5 />;
+    tmp8Result = tmp8(closure_5, obj2);
   }
   return tmp8Result;
 });

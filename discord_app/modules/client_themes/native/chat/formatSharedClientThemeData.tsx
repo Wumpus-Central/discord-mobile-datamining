@@ -1,12 +1,12 @@
 // discord_app/modules/client_themes/native/chat/formatSharedClientThemeData.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../intl/ClientThemes.messages.js";
 import registerAssetDefault from "../../../../../_runtime/07989_registerAsset.js";
 
 const Image = get_ActivityIndicator.Image;
-const result = obj132.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
+const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
 
 export const formatSharedClientThemeData = function formatSharedClientThemeData(message, ensureAvatarSourceResult, nick) {
   const sharedClientTheme = message.sharedClientTheme;

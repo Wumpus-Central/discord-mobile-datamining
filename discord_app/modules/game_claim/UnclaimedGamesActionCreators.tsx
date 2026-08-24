@@ -1,12 +1,12 @@
 // discord_app/modules/game_claim/UnclaimedGamesActionCreators.tsx
 import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import obj132Default from "../../utils/Durations.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult from "UnclaimedGamesStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function fetchUnclaimedGames() {
   const self = this;
   const apply = _fetchUnclaimedGames.apply;
@@ -25,10 +25,10 @@ function _fetchUnclaimedGames() {
       HermesBuiltin.throwTypeError();
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw body;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = body;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -39,15 +39,15 @@ function _fetchUnclaimedGames() {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c3 = 3;
             obj = { value: null, done: true };
-            obj[0] = body;
+            obj[0] = arg1;
             return obj;
           } else {
             const callback = tmp2;
-            body = tmp5;
+            let body = tmp5;
             body = undefined;
             const HTTP = closure_1_0(530).HTTP;
             obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
@@ -60,14 +60,14 @@ function _fetchUnclaimedGames() {
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           c3 = 3;
           const obj3 = { value: null, done: true };
-          obj3[0] = body;
+          obj3[0] = arg1;
           return obj3;
         } else {
-          body = body.body;
+          body = arg1.body;
           obj = callback(709);
           const obj4 = { type: "UNCLAIMED_GAMES_FETCH_SUCCESS", guildIdToGameIds: null };
           obj4[1] = body;
@@ -93,15 +93,32 @@ function _fetchUnclaimedGames() {
 let c4 = importDefaultResult;
 let closure_6 = [];
 initialize = {
+  getQueryId(arg0) {
+    let str = null;
+    if (arg0) {
+      str = "unclaimed-games";
+    }
+    return str;
+  },
+  get() {
+    return importDefaultResult.getMap();
+  },
+  load() {
+    return fetchUnclaimedGames();
+  },
+  staleAfter: setDefault.Seconds.DAY,
+  retryConfig: initialize
+};
+initialize = {
   backoff() {
     let tmp = failsDefault;
-    tmp = new tmp(5 * obj132Default.Millis.MINUTE);
+    tmp = new tmp(5 * setDefault.Millis.MINUTE);
     return tmp;
   },
   maxRetries: 10
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
-const result = require("obj132").fileFinishedImporting("modules/game_claim/UnclaimedGamesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/game_claim/UnclaimedGamesActionCreators.tsx");
 
 export default { fetch: fetchUnclaimedGames };
 export { fetchUnclaimedGames };

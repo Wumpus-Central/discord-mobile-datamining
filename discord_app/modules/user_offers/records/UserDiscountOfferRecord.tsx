@@ -1,6 +1,6 @@
 // discord_app/modules/user_offers/records/UserDiscountOfferRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
-import createFromServer from "../../billing/records/DiscountRecord.tsx";
+import closure_0 from "../../billing/records/DiscountRecord.tsx";
 
 toJSDefault;
 let UserDiscountOfferRecord;
@@ -90,6 +90,6 @@ prototype["isDeleted"] = function isDeleted() {
 prototype["hasAcknowledged"] = function hasAcknowledged() {
   return null != this.expiresAt;
 };
-const result = require("obj132").fileFinishedImporting("modules/user_offers/records/UserDiscountOfferRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/user_offers/records/UserDiscountOfferRecord.tsx");
 
 export default UserDiscountOfferRecord;

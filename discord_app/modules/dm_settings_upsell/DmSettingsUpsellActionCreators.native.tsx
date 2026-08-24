@@ -1,13 +1,12 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import trackEvent from "DmSettingsUpsellUtils.tsx";
 import DM_SETTINGS_UPSELL_LAST_SHOWN_KEY from "DmSettingsUpsellConstants.tsx";
 
 ({ DM_SETTINGS_UPSELL_LAST_SHOWN_KEY: c3, DM_SETTINGS_UPSELL_LAST_SHOWN_MAX_TIME_MS: c4 } = DM_SETTINGS_UPSELL_LAST_SHOWN_KEY);
-let result = obj132.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx");
+let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx");
 
 export default {
   openDmSettingsUpsellModal(guildId) {
@@ -16,12 +15,12 @@ export default {
     const timestamp = Date.now();
     if (null != value) {
       if (timestamp - value <= closure_4) {
-        trackEvent.trackEvent(trackEvent.DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
-        const tmpResult = trackEvent;
+        tmp(16557).trackEvent(tmp(16557).DmUpsellActionTypes.SUPPRESSED_BY_COOLDOWN, guildId);
+        const tmpResult = tmp(16557);
       }
     }
     ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16556, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
-    const Storage2 = Storage3.Storage;
+    const Storage2 = tmp(595).Storage;
     const result = Storage2.set(closure_3, timestamp);
   }
 };

@@ -7,15 +7,16 @@ import _modDef9744 from "../../../games/native/GameActivityIcon.tsx";
 import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
+import { GameProfileEmbedAction } from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import { importDefaultResult1 } from "../../../games/hooks/useGame.tsx";
 
-require = fn;
+require = arg1;
 function GameRow(gameId) {
   gameId = gameId.gameId;
   let _require;
-  let obj = importDefaultResult1;
+  let obj = _importDefaultResult1;
   const data = obj.useGame(gameId).data;
-  obj = { gameId, source: require("../../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.VoiceChannelGames };
+  obj = { gameId, source: _GameProfileEmbedAction.GameProfileSources.VoiceChannelGames };
   const tmp4Result = useOpenGameProfileModalDefault(obj);
   _require = tmp4Result;
   if (null == data) {
@@ -49,6 +50,8 @@ function GameRow(gameId) {
     }
     return jsx(tmp(6291).TableRow, obj2);
   }
+  const tmp3 = importDefault;
+  const tmp4 = useOpenGameProfileModalDefault;
 }
 const memoResult = importAllResult.memo(function VoicePanelGamesSection(arg0) {
   ({ members, guildId } = arg0);
@@ -61,12 +64,12 @@ const memoResult = importAllResult.memo(function VoicePanelGamesSection(arg0) {
       const obj = { title: null, hasIcons: true, children: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t.crRMpG);
-      obj[2] = arr.map((item, index) => callback(closure_4, { gameId: item }, item));
+      obj[2] = arr.map((gameId) => callback(closure_4, { gameId }, gameId));
       tmp3 = jsx(VoiceBadges.VoicePanelFormSection, { title: null, hasIcons: true, children: null });
     }
   }
   return tmp3;
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx");
 
 export default memoResult;

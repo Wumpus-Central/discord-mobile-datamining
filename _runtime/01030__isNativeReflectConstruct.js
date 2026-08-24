@@ -1,10 +1,10 @@
 // _runtime/01030__isNativeReflectConstruct.js
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import c3 from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import closure_5 from "metro/00096__get.js";
 import _inherits from "00098__inherits.js";
 
 const BrowserClient = require;
@@ -111,17 +111,17 @@ class BrowserClient {
     if (_document) {
       _document2 = require("ignoreNextOnError").WINDOW.document;
       str2 = "visibilitychange";
-      listener = _document2.addEventListener("visibilitychange", (event) => {
+      listener = _document2.addEventListener("visibilitychange", () => {
         if ("hidden" === lib(sendClientReports[6]).WINDOW.document.visibilityState) {
           if (sendClientReports) {
             lib._flushOutcomes();
           }
           if (enableLogs) {
-            let tmpResult = lib(sendClientReports[7]);
+            let tmpResult = tmp(tmp2[7]);
             const result = tmpResult._INTERNAL_flushLogsBuffer(lib);
           }
           if (enableMetrics) {
-            tmpResult = lib(sendClientReports[7]);
+            tmpResult = tmp(tmp2[7]);
             const result1 = tmpResult._INTERNAL_flushMetricsBuffer(lib);
           }
         }
@@ -157,7 +157,8 @@ let items = [
     value: function _prepareEvent(platform) {
       platform.platform = platform.platform || "javascript";
       const self = this;
-      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "_prepareEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

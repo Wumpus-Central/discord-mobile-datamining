@@ -5,23 +5,25 @@ import Button from "../../../../design/void/native.tsx";
 import TrashIcon from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import stylesDefault from "FormStyles.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
-import resetImperatively from "GuildRoleSubscriptionBenefitEditorModalStateStore.tsx";
+import closure_7 from "../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
+import closure_9 from "GuildRoleSubscriptionBenefitEditorModalStateStore.tsx";
 import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-require = fn;
+require = arg1;
 function DeleteButton(onDelete) {
   const tmp = callback4();
-  const items = [stylesDefault().textInput, tmp.deleteButton];
-  let obj = { style: tmp.deleteIcon, color: ThemesDefault.unsafe_rawColors.RED_400, size: "custom" };
+  let obj = { style: items, accessibilityRole: "button", onPress: onDelete.onDelete, children: null };
+  items = [stylesDefault().textInput, tmp.deleteButton];
+  obj = { style: tmp.deleteIcon, color: ThemesDefault.unsafe_rawColors.RED_400, size: "custom" };
   const items1 = [callback2(TrashIcon.TrashIcon, obj), ];
   obj = { style: tmp.deleteLabel, children: null };
   const intl = getSystemLocale.intl;
@@ -33,12 +35,13 @@ function DeleteButton(onDelete) {
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: unpackModuleId, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" };
+let obj = { container: null, scrollContainer: null, deleteButton: null, deleteIcon: null, deleteLabel: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" };
 obj[0] = obj;
 obj[1] = { flexGrow: 1 };
 obj[2] = { flexDirection: "row", marginTop: 16, alignItems: "center", justifyContent: "center" };
 obj[3] = { width: 20, height: 20 };
-const createCacheKey = {};
+createCacheKey = {};
 const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_SEMIBOLD, ThemesDefault.unsafe_rawColors.RED_400, 16));
 createCacheKey.marginStart = 8;
 createCacheKey.lineHeight = 20;
@@ -201,12 +204,12 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
   }
   if (!tmp13) {
     if (benefitType.benefitType === _handleSave.CHANNEL) {
-      const intl2 = require("../../../../intl/index.native.tsx").intl;
-      let stringResult = intl2.string(require("../../../../intl/index.native.tsx").t.Odqwp9);
+      const intl2 = _getSystemLocale.intl;
+      let stringResult = intl2.string(_getSystemLocale.t.Odqwp9);
       let tmp20 = _require;
     } else {
-      const intl = require("../../../../intl/index.native.tsx").intl;
-      stringResult = intl.string(require("../../../../intl/index.native.tsx").t["0rVUnI"]);
+      const intl = _getSystemLocale.intl;
+      stringResult = intl.string(_getSystemLocale.t["0rVUnI"]);
       tmp20 = _require;
     }
     if (benefitType.benefitType === _handleSave.CHANNEL) {
@@ -320,10 +323,11 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     }
     items2[6] = tmp26Result;
     obj2[4] = items2;
-    items[1] = callback(closure_6, obj2);
+    items[1] = closure_14(closure_6, obj2);
     obj[1] = items;
-    return callback(first2, obj);
+    return closure_14(first2, obj);
   } else if (benefitType.benefitType === _handleSave.CHANNEL) {
+    let tmp15 = null != first4;
   } else {
     let num3;
     if (first != null) {
@@ -332,8 +336,9 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     if (num3 == null) {
       num3 = 0;
     }
+    tmp15 = num3 > 0;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx");
 
 export default forwardRefResult;

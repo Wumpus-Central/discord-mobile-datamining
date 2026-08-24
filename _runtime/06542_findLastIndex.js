@@ -1,8 +1,8 @@
 // _runtime/06542_findLastIndex.js
-arg5.findLastIndex = function findLastIndex(arg0, fn) {
+arg5.findLastIndex = function findLastIndex(arg0, arg1) {
   let diff = arg0.length - 1;
   if (0 <= diff) {
-    while (!fn(arg0[diff])) {
+    while (!arg1(arg0[diff])) {
       diff = diff - 1;
     }
     return diff;

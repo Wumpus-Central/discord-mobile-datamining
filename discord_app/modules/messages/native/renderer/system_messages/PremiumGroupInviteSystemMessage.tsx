@@ -4,14 +4,14 @@ import registerAssetDefault from "../../../../../../_runtime/07989_registerAsset
 import frozen from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import createPremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
-import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import "createCacheKey";
+import closure_3 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
-const createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+require = arg1;
+createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
 let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
 
 export const createPremiumGroupInviteSystemMessage = function createPremiumGroupInviteSystemMessage(message) {
   ({ message, theme } = message);
@@ -30,4 +30,5 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }
+  const tmp3 = require;
 };

@@ -1,9 +1,10 @@
 // discord_app/modules/markup/MarkupAttachmentLinkRule.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import tDefault from "../../../_runtime/04092_t.js";
 
 const re0 = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/;
-const obj = {
+let obj = { attachmentLink: null };
+obj = {
   order: tDefault.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
@@ -15,6 +16,6 @@ const obj = {
   }
 };
 obj[0] = obj;
-const result = obj132.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
+const result = set.fileFinishedImporting("modules/markup/MarkupAttachmentLinkRule.tsx");
 
 export default obj;

@@ -2,17 +2,17 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import comparator from "../../../stores/GuildChannelStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import closure_3 from "../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");
 
 export default function openChannelPicker(onClose) {
   ({ guildId, filterFn } = onClose);
   ({ selectedChannel, channelType } = onClose);
   if (filterFn === undefined) {
-    filterFn = function h(item, index) {
+    filterFn = function h() {
       return true;
     };
   }
@@ -22,14 +22,16 @@ export default function openChannelPicker(onClose) {
   if (items == null) {
     items = [];
   }
-  const obj = { title: null, onClose: null };
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+  obj = { header: null, guild: null, channels: null, selectedChannel: null };
+  obj = { title: null, onClose: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.r2ptsz);
   obj[1] = onClose.onClose;
   obj[0] = obj;
   obj[1] = guild;
   const found = items.filter(filterFn);
-  obj[2] = found.map((item, index) => item.channel);
+  obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
   obj.openLazy(asyncRequireImpl(10534, dependencyMap.paths), "ChannelPicker", obj);

@@ -1,9 +1,9 @@
 // discord_app/modules/devtools/native/components/screens/performance/useFrameMonitor.tsx
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
 
 export default function useFrameMonitor(stateFromStores) {
   closure_0 = stateFromStores;
@@ -22,7 +22,6 @@ export default function useFrameMonitor(stateFromStores) {
     }
     ref.current = stateFromStores(15183).startFrameMonitor();
     dependencyMap(true);
-    const obj = stateFromStores(15183);
   }, []);
   const stop = React.useCallback(() => {
     const current = ref.current;

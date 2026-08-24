@@ -1,18 +1,18 @@
 // discord_app/modules/guild_badge/GuildTraits.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set2 from "../../../_runtime/00002_set.js";
 import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
 import ME from "../../Constants.tsx";
 
 ({ GuildFeatures: obj1, BoostedGuildTiers: c3 } = ME);
 let obj = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO_JOIN: "APPLY_TO_JOIN" };
-const result = obj132.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
+const result = set2.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
 
 export const GuildVisibility = obj;
 export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
   const set = new Set(fromGuildProfileResult.features);
   let APPLY_TO_JOIN = obj.INVITE_ONLY;
   if (set.has(constants.COMMUNITY)) {
-    if (set.has(constants.DISCOVERABLE)) {
+    if (set.has(tmp2.DISCOVERABLE)) {
       APPLY_TO_JOIN = tmp.PUBLIC;
     }
     if (null == fromGuildProfileResult) {
@@ -23,6 +23,7 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
           num4 = 0;
         }
         num3 = num4;
+        const obj3 = fromGuildPropertiesWithAdditionalFields;
       }
       if (obj4.isGuildRecord(fromGuildProfileResult)) {
         let NONE = fromGuildProfileResult.premiumTier;
@@ -30,10 +31,10 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
         NONE = constants2.NONE;
       }
       obj = { verified: null, partnered: null, community: null, staff: null, visibility: null, premium: null, premiumSubscriberCount: null, premiumTier: null };
-      obj[0] = set.has(constants.VERIFIED);
-      obj[1] = set.has(constants.PARTNERED);
-      obj[2] = set.has(constants.COMMUNITY);
-      obj[3] = set.has(constants.INTERNAL_EMPLOYEE_ONLY);
+      obj[0] = set.has(tmp2.VERIFIED);
+      obj[1] = set.has(tmp2.PARTNERED);
+      obj[2] = set.has(tmp2.COMMUNITY);
+      obj[3] = set.has(tmp2.INTERNAL_EMPLOYEE_ONLY);
       obj[4] = APPLY_TO_JOIN;
       obj[5] = tmp5;
       obj[6] = num3;
@@ -58,7 +59,6 @@ export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {
   if (tmp3) {
     APPLY_TO_JOIN = tmp.APPLY_TO_JOIN;
   }
-  tmp3 = set.has(constants.MEMBER_VERIFICATION_MANUAL_APPROVAL) && set.has(constants.MEMBER_VERIFICATION_GATE_ENABLED);
 };
 export const isPremiumGuild = function isPremiumGuild(has) {
   let premiumTier = has;

@@ -1,22 +1,22 @@
 // discord_app/modules/voice_calls/native/ProximitySensorManager.tsx
-import obj1322 from "../../../utils/PlatformUtils.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import RouteTypes from "../VoiceCallTypes.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeProximitySensorManagerModule.tsx";
-import participantFromServer from "../../activities/EmbeddedActivitiesStore.tsx";
-import reset from "../../../stores/ApplicationStreamingStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
-import handleAudioRouteChanged from "../AudioRouteStore.native.tsx";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import closure_2 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../../stores/RTCConnectionStore.tsx";
+import closure_5 from "../AudioRouteStore.native.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 function handleChange() {
   currentRouteType = currentRouteType.getCurrentRouteType();
   const tmp3 = null != currentEmbeddedActivity.getCurrentEmbeddedActivity();
   const isConnectedResult = connected.isConnected();
   let tmp8 = currentRouteType === RouteTypes.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = obj1322.isIOS();
+    let isIOSResult = set2.isIOS();
     if (!isIOSResult) {
       let tmp10 = !tmp3;
       if (!tmp3) {
@@ -25,12 +25,11 @@ function handleChange() {
       isIOSResult = tmp10;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = obj1322;
+    const tmp6Result = set2;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
-  tmp4 = allActiveStreams.getAllActiveStreams().length > 0;
 }
-if (obj132.isIOS()) {
+if (set.isIOS()) {
   let ProximitySensorManager = require("get ActivityIndicator").NativeModules.ProximitySensorManager;
 } else {
   ProximitySensorManager = enforcingDefault;
@@ -45,6 +44,6 @@ let prototype = function ProximitySensorManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
+let result = set.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 
 export default prototype;

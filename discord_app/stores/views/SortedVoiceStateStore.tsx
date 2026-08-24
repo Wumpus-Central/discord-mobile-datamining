@@ -6,17 +6,17 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import getFavoritesAwareGuildName from "../../modules/favorites/FavoritesUtils.tsx";
 import version2 from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import initializeFromUserSettings from "../../modules/favorites/FavoriteStore.tsx";
-import createdAt from "../../records/UserRecord.tsx";
-import fetchFingerprint from "../AuthenticationStore.tsx";
-import ensureGuildLoaded from "../ChannelStore.tsx";
-import trackCommunicationDisabled from "../GuildMemberStore.tsx";
-import mergeGuildAvatar from "../UserStore.tsx";
-import updateVoiceState from "../VoiceStateStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../modules/favorites/FavoriteStore.tsx";
+import closure_5 from "../../records/UserRecord.tsx";
+import closure_6 from "../AuthenticationStore.tsx";
+import closure_7 from "../ChannelStore.tsx";
+import closure_8 from "../GuildMemberStore.tsx";
+import closure_9 from "../UserStore.tsx";
+import closure_10 from "../VoiceStateStore.tsx";
 import { ME } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function getVoiceStatesForGuild(guildId) {
   let tmp = dependencyMap[guildId];
   if (null == tmp) {
@@ -41,10 +41,11 @@ function getVoiceStatesForGuild(guildId) {
     obj.guildId = guildId;
     dependencyMap[guildId] = obj;
     tmp = obj;
+    const tmp15 = SortedVoiceStates;
   }
   return tmp;
 }
-function makeSortedVoiceState(voiceState, guildId, arr, connectedOn) {
+function makeSortedVoiceState(voiceState, guildId, arr) {
   const user = authStore.getUser(arr);
   let tmp3 = user;
   if (null == user) {
@@ -60,6 +61,7 @@ function makeSortedVoiceState(voiceState, guildId, arr, connectedOn) {
   }
   if (nick == null) {
     nick = nameFromUserDefault.getName(tmp3);
+    const obj2 = nameFromUserDefault;
   }
   let str = "\u0001";
   if (voiceState.selfStream) {
@@ -71,9 +73,9 @@ function makeSortedVoiceState(voiceState, guildId, arr, connectedOn) {
     nick1 = member.nick;
   }
   obj[4] = nick1;
-  connectedOn = undefined;
-  if (connectedOn != null) {
-    connectedOn = connectedOn.connectedOn;
+  let connectedOn;
+  if (arg3 != null) {
+    connectedOn = arg3.connectedOn;
   }
   if (connectedOn == null) {
     const _Date = Date;
@@ -96,7 +98,7 @@ function handleFavoriteChannelAppeared() {
   let tmp = null == _null;
   if (!tmp) {
     const unknownChannels = _null.unknownChannels;
-    tmp = !unknownChannels.some((item, index) => null != channel.getChannel(item));
+    tmp = !unknownChannels.some((arg0) => null != channel.getChannel(arg0));
   }
   let flag = !tmp;
   if (!tmp) {
@@ -252,14 +254,14 @@ prototype["updateUsers"] = function updateUsers() {
   if (reduced) {
     let _voiceStates = this._voiceStates;
     const values = _voiceStates.values();
-    reduced = values.reduce((acc, item, index) => {
-      const user = closure_1_9.getUser(item.user.id);
-      let flag = acc;
+    reduced = values.reduce((arg0, user) => {
+      user = closure_1_9.getUser(user.user.id);
+      let flag = arg0;
       if (null != user) {
-        flag = acc;
-        if (item.user !== user) {
+        flag = arg0;
+        if (user.user !== user) {
           const _voiceStates = self._voiceStates;
-          const result = _voiceStates.set(user.id, makeSortedVoiceState(item.voiceState, self.guildId, user.id, item));
+          const result = _voiceStates.set(user.id, closure_1_16(user.voiceState, self.guildId, user.id, user));
           flag = true;
         }
       }
@@ -297,11 +299,12 @@ prototype["getVersion"] = function getVersion() {
   return this._voiceStates.version;
 };
 prototype["processPending"] = function processPending() {
-  const self = this;
+  let self = this;
+  self = this;
   if (null != this._pending) {
     const _pending = self._pending;
     self._pending = undefined;
-    const item = _pending.forEach((item, index) => self.updateVoiceState(item));
+    const item = _pending.forEach((arg0) => self.updateVoiceState(arg0));
   }
 };
 const Store = initializeDefault.Store;
@@ -313,12 +316,12 @@ prototype2["initialize"] = function initialize() {
   c14 = null;
   const allVoiceStates = store2.getAllVoiceStates();
   const keys = DISCORD_EPOCHDefault.keys(allVoiceStates);
-  const item = keys.forEach((item, index) => {
-    allVoiceStates = item;
-    const keys = Object.keys(allVoiceStates[item]);
-    item = keys.forEach((item, index) => {
-      let tmp = item;
-      if (item == null) {
+  const item = keys.forEach((arg0) => {
+    allVoiceStates = arg0;
+    const keys = Object.keys(allVoiceStates[arg0]);
+    const item = keys.forEach((arg0) => {
+      let tmp = callback;
+      if (callback == null) {
         tmp = closure_1_11;
       }
       let obj = closure_1_13[tmp];
@@ -330,7 +333,7 @@ prototype2["initialize"] = function initialize() {
         const _Set = Set;
         const set = new Set();
         obj[0] = set;
-        const secondaryIndexMap = new item(closure_1_2[10]).SecondaryIndexMap((voiceState) => {
+        const secondaryIndexMap = new callback(closure_1_2[10]).SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
             const items = [channelId];
@@ -343,8 +346,9 @@ prototype2["initialize"] = function initialize() {
         obj[1] = secondaryIndexMap;
         obj.guildId = tmp;
         closure_1_13[tmp] = obj;
+        const tmp16 = closure_1_17;
       }
-      obj.updateVoiceState(item);
+      obj.updateVoiceState(arg0);
     });
   });
   this.waitFor(closure_6, closure_7, closure_4, closure_8, closure_9, store2);
@@ -363,24 +367,28 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
         if ((function isFavoritesResultCurrent() {
           if (null == closure_14) {
             return false;
-          } else if (closure_14.favoriteChannels !== favoriteChannels.getFavoriteChannels()) {
+          } else if (tmp.favoriteChannels !== favoriteChannels.getFavoriteChannels()) {
             return false;
           } else {
-            const unknownChannels = closure_14.unknownChannels;
-            if (unknownChannels.some((item, index) => null != channel.getChannel(item))) {
+            const unknownChannels = tmp.unknownChannels;
+            if (unknownChannels.some((arg0) => null != channel.getChannel(arg0))) {
               return false;
             } else {
-              const versions = closure_14.versions;
+              const versions = tmp.versions;
               const obj = versions[Symbol.iterator]();
               while (obj !== undefined) {
+                let tmp6 = callback;
                 let tmp7 = callback(tmp4, 2);
                 let tmp8 = tmp7[1];
+                let tmp9 = table;
                 let obj2 = table[tmp7[0]];
                 let version;
                 if (obj2 != null) {
                   version = obj2.getVersion();
                 }
+                let tmp11 = tmp8;
                 if (version !== tmp8) {
+                  let tmp12 = obj;
                   obj.return();
                   let flag = false;
                   return false;
@@ -402,23 +410,34 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
+        let tmp5 = callback;
+        let tmp6 = dependencyMap;
         if (favoriteChannels[nextResult].type !== callback(1306).FavoriteChannelType.CATEGORY) {
+          let tmp19 = channel;
+          let tmp20 = nextResult;
           channel = channel.getChannel(tmp4);
           let obj5 = channel;
           if (null != channel) {
+            let tmp9 = channel;
             if (obj5.isVocal()) {
+              let tmp10 = channel;
               let guildId = obj5.getGuildId();
               if (guildId == null) {
                 guildId = closure_11;
               }
+              let tmp12 = callback3;
               let obj4 = callback3(guildId);
               result = map.set(guildId, obj4.getVersion());
+              let tmp14 = nextResult;
               let voiceStatesForChannel = obj4.getVoiceStatesForChannel(tmp4);
               if (voiceStatesForChannel.length > 0) {
+                let tmp16 = nextResult;
+                let tmp17 = voiceStatesForChannel;
                 obj[tmp4] = tmp15;
               }
             }
           } else {
+            let tmp7 = nextResult;
             let arr = items.push(tmp4);
           }
         }
@@ -455,6 +474,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       obj.guildId = tmp4;
       dependencyMap[tmp4] = obj;
       obj2 = obj;
+      const tmp18 = SortedVoiceStates;
     }
     voiceStates = obj2.getVoiceStates();
   }
@@ -490,12 +510,13 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
     obj[1] = secondaryIndexMap;
     obj.guildId = guildId;
     dependencyMap[guildId] = obj;
+    const tmp15 = SortedVoiceStates;
   }
   return obj.getVoiceStatesForChannel(getGuildId.id);
 };
-prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt(id, guildId) {
-  let tmp = guildId;
-  if (guildId == null) {
+prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt(id, closure_0) {
+  let tmp = closure_0;
+  if (closure_0 == null) {
     tmp = ME;
   }
   let obj = dependencyMap[tmp];
@@ -520,6 +541,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
     obj[1] = secondaryIndexMap;
     obj.guildId = tmp;
     dependencyMap[tmp] = obj;
+    const tmp15 = SortedVoiceStates;
   }
   return obj.getVoiceStatesForChannel(id);
 };
@@ -554,6 +576,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
       obj.guildId = guildId;
       dependencyMap[guildId] = obj;
       obj2 = obj;
+      const tmp16 = SortedVoiceStates;
     }
     num = obj2.countVoiceStatesForChannel(arg0);
   }
@@ -586,6 +609,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
     obj[1] = secondaryIndexMap;
     obj.guildId = tmp;
     dependencyMap[tmp] = obj;
+    const tmp15 = SortedVoiceStates;
   }
   return obj.getVersion();
 };
@@ -600,12 +624,12 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
     c14 = null;
     let allVoiceStates = store2.getAllVoiceStates();
     let keys = DISCORD_EPOCHDefault.keys(allVoiceStates);
-    let item = keys.forEach((item, index) => {
-      allVoiceStates = item;
-      const keys = Object.keys(allVoiceStates[item]);
-      item = keys.forEach((item, index) => {
-        let tmp = item;
-        if (item == null) {
+    let item = keys.forEach((arg0) => {
+      allVoiceStates = arg0;
+      const keys = Object.keys(allVoiceStates[arg0]);
+      const item = keys.forEach((arg0) => {
+        let tmp = callback;
+        if (callback == null) {
           tmp = closure_1_11;
         }
         let obj = closure_1_13[tmp];
@@ -617,7 +641,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
           const _Set = Set;
           const set = new Set();
           obj[0] = set;
-          const secondaryIndexMap = new item(closure_1_2[10]).SecondaryIndexMap((voiceState) => {
+          const secondaryIndexMap = new callback(closure_1_2[10]).SecondaryIndexMap((voiceState) => {
             const channelId = voiceState.voiceState.channelId;
             if (null != channelId) {
               const items = [channelId];
@@ -630,8 +654,9 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
           obj[1] = secondaryIndexMap;
           obj.guildId = tmp;
           closure_1_13[tmp] = obj;
+          const tmp16 = closure_1_17;
         }
-        obj.updateVoiceState(item);
+        obj.updateVoiceState(arg0);
       });
     });
   },
@@ -665,6 +690,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
         obj[1] = secondaryIndexMap;
         obj.guildId = guildId;
         dependencyMap[guildId] = obj;
+        const tmp17 = SortedVoiceStates;
       }
       updateVoiceStateResult = obj.updateVoiceState(id);
     }
@@ -672,17 +698,17 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((acc, item, index) => {
-      let guildId = item.guildId;
+    return voiceStates.reduce((arg0, guildId) => {
+      guildId = guildId.guildId;
       if (guildId == null) {
         guildId = closure_11;
       }
       let obj = table2[guildId];
       if (null == obj) {
-        if (typeof ctor !== "function") {
+        if (typeof closure_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = Object.create(ctor.prototype);
+        obj = Object.create(closure_17.prototype);
         const _Set = Set;
         const set = new Set();
         obj[0] = set;
@@ -699,8 +725,9 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
         obj[1] = secondaryIndexMap;
         obj.guildId = guildId;
         table2[guildId] = obj;
+        const tmp15 = closure_17;
       }
-      return obj.updateVoiceState(item.userId) || acc;
+      return obj.updateVoiceState(guildId.userId) || arg0;
     }, false);
   },
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(guildId) {
@@ -727,6 +754,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
       obj[1] = secondaryIndexMap;
       obj.guildId = guildId;
       dependencyMap[guildId] = obj;
+      const tmp14 = SortedVoiceStates;
     }
     return obj.updateMember(guildId.user.id);
   },
@@ -745,7 +773,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
     voiceStates = voiceStates.voiceStates;
     let mapped;
     if (voiceStates != null) {
-      mapped = voiceStates.map((item, index) => item.userId);
+      mapped = voiceStates.map((userId) => userId.userId);
     }
     const set = new Set(userIds);
     const tmp4 = new Set(userIds);
@@ -753,6 +781,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
     const items = [...set1];
     const set2 = new Set(voiceStates.removedVoiceStateUsers);
     for (const item10051 of set3) {
+      let tmp7 = getVoiceStatesForGuild;
       let obj3 = getVoiceStatesForGuild(arg0.guildId);
       let updateVoiceStateResult = obj3.updateVoiceState(item10051);
       if (!updateVoiceStateResult) {
@@ -762,9 +791,12 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
       continue;
     }
     for (const item10062 of tmp4) {
+      let tmp9 = item10062;
       if (!set2.has(item10062)) {
+        let tmp10 = getVoiceStatesForGuild;
         let obj4 = getVoiceStatesForGuild(arg0.guildId);
-        let updateMemberResult = obj4.updateMember(item10062);
+        let tmp11 = item10062;
+        let updateMemberResult = obj4.updateMember(tmp9);
         if (!updateMemberResult) {
           updateMemberResult = flag;
         }
@@ -775,7 +807,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(dispatcherDefault, {
     return flag;
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/views/SortedVoiceStateStore.tsx");
+let result = require("set").fileFinishedImporting("stores/views/SortedVoiceStateStore.tsx");
 
 export default sortedVoiceStateStore;
 export const NO_VOICE_STATES = frozen;
@@ -787,6 +819,7 @@ export const makeMemberAndComparator = function makeMemberAndComparator(selfStre
   }
   if (nick == null) {
     nick = nameFromUserDefault.getName(arg2);
+    const obj2 = nameFromUserDefault;
   }
   let str = "\u0001";
   if (selfStream.selfStream) {

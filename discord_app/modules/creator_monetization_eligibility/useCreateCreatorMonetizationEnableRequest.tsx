@@ -1,9 +1,9 @@
 // discord_app/modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx");
 
 export default function useCreateCreatorMonetizationEnableRequest(arg0) {
   closure_0 = arg0;

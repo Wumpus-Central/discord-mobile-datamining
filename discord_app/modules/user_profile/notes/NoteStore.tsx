@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/notes/NoteStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set2 from "../../../../_runtime/00002_set.js";
 import identity from "../../libdiscore/stores/LibdiscoreStore.tsx";
 import items from "../../libdiscore/libdiscoreExperiments.tsx";
 import isValueEqual from "../../../lib/PlainRecord.tsx";
@@ -44,7 +44,7 @@ const noteStore = new NoteStore({
     const result = set.set(userId.userId, callback(Note, { loading: true, note: null }));
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-let result = obj132.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
+let result = set2.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
 
 export default noteStore;
 export const NoteRecordTypeTag = "Note";

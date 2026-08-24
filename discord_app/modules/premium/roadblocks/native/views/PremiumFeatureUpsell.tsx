@@ -1,25 +1,29 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import GuildFeatures from "../../../PremiumConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 import { Gradients } from "../../../../colors/native/ColorConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 
-const require = fn;
+const require = arg1;
 function PremiumFeatureUpsellPill(featureName) {
   featureName = featureName.featureName;
   let flag = featureName.showShadow;
   if (flag === undefined) {
     flag = true;
   }
+  let useTier0UpsellContent;
+  dependencyMap = undefined;
   let loading;
   let obj = featureName(8471);
   obj1 = featureName(9350);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
-  const useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
+  useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = callback(useTier0UpsellContent);
   dependencyMap = tmp4;
   const tmp6 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
@@ -68,9 +72,9 @@ function PremiumFeatureUpsellPill(featureName) {
   items[1] = flag;
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
-  const items1 = [callback(featureName(1297).Icon, { source: useTier0UpsellContent(useTier0UpsellContent ? 9396 : 9397), style: tmp4.nitroWheel, disableColor: true }), callback(featureName(4734).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
+  const items1 = [closure_12(featureName(1297).Icon, { source: useTier0UpsellContent(useTier0UpsellContent ? 9396 : 9397), style: tmp4.nitroWheel, disableColor: true }), closure_12(featureName(4734).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
   obj5[1] = items1;
-  const items2 = [callback2(closure_5, obj5), ];
+  const items2 = [closure_13(closure_5, obj5), ];
   const obj8 = { disabled: loading, shrink: true, style: tmp4.button, size: featureName(1297).ButtonSizes.XSMALL, onPress: tmp10.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
   const intl5 = tmp(1236).intl;
   const string = intl5.string;
@@ -92,19 +96,20 @@ function PremiumFeatureUpsellPill(featureName) {
     return closure_1_12(featureName(closure_2[15]).NitroWheel, { style });
   };
   obj8[8] = function renderLinearGradient() {
-    const obj = { style: closure_2.gradient, start: featureName(closure_2[20]).HorizontalGradient.START, end: featureName(closure_2[20]).HorizontalGradient.END, colors: useTier0UpsellContent ? Gradients.PREMIUM_TIER_0 : Gradients.PREMIUM_TIER_2_TRI_COLOR };
+    const obj = { style: closure_2.gradient, start: featureName(closure_2[20]).HorizontalGradient.START, end: featureName(closure_2[20]).HorizontalGradient.END, colors: useTier0UpsellContent ? closure_1_11.PREMIUM_TIER_0 : closure_1_11.PREMIUM_TIER_2_TRI_COLOR };
     return closure_1_12(useTier0UpsellContent(closure_2[19]), obj);
   };
-  items2[1] = callback(featureName(1297).ShinyButton, obj8);
+  items2[1] = closure_12(featureName(1297).ShinyButton, obj8);
   obj4[1] = items2;
-  return callback2(closure_5, obj4);
+  return closure_13(closure_5, obj4);
 }
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ PremiumSubscriptionSKUs: closure_6, PremiumTypes: error, PremiumUpsellTypes: closure_8 } = GuildFeatures);
 ({ AnalyticEvents: c9, AnalyticsPages: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_12, justifyContent: "space-between" };
+  let obj = { container: null, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelDisabled: null, button: null, gradient: null };
+  obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_12, justifyContent: "space-between" };
   obj[0] = obj;
   obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
@@ -113,10 +118,12 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj.shadowOpacity = 0.6;
   obj[1] = obj;
   obj[2] = { width: 20, height: 20, marginEnd: ThemesDefault.space.PX_4 };
+  obj1 = { width: 20, height: 20, marginEnd: ThemesDefault.space.PX_4 };
   obj[3] = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: ThemesDefault.space.PX_4 };
   obj[4] = { flexShrink: 1, flexWrap: "wrap" };
   obj[5] = { marginStart: -2, width: 20, height: 20 };
   obj[6] = { opacity: 0.6 };
+  const obj2 = { flexDirection: "row", flexShrink: 1, alignItems: "center", marginEnd: ThemesDefault.space.PX_4 };
   obj[7] = { alignSelf: "center", borderRadius: ThemesDefault.radii.round };
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[8] = {};
@@ -125,7 +132,7 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
 let closure_16 = { code: "function PremiumFeatureUpsellTsx2(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
 function animationEnterExit(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring(value, require("../../../../../design/animation/reanimated/spring/springPresets.tsx").springStandard, "respect-motion-settings", fn) };
+  const obj = { opacity: _CONFIG_NEVER_ANIMATE.withSpring(value, _SUBTLE_SPRING.springStandard, "respect-motion-settings", fn) };
   fn = function l(arg0) {
     if (closure_0 != null) {
       tmp(arg0);
@@ -140,13 +147,15 @@ createCacheKey = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, sprin
 animationEnterExit.__closure = createCacheKey;
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
-const result = require("obj132").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 
 export default function PremiumFeatureUpsell(shouldShow) {
   let merged = Object.assign(shouldShow, Object.create(null));
+  let ref;
   let analyticsLocations;
   let _location;
-  const ref = _location.useRef(false);
+  closure_4 = undefined;
+  ref = _location.useRef(false);
   analyticsLocations = ref(analyticsLocations[23])().analyticsLocations;
   let obj = merged(analyticsLocations[24]);
   _location = obj.useAnalyticsContext().location;
@@ -154,7 +163,8 @@ export default function PremiumFeatureUpsell(shouldShow) {
   closure_4 = tmp3;
   const items = [ref, _location, analyticsLocations, tmp3, merged.featureName];
   const callback = _location.useCallback((arg0, style) => {
-    const obj = {};
+    let obj = { style, children: null };
+    obj = {};
     merged = Object.assign(arg0);
     obj[1] = callback(closure_15, obj);
     return callback(ref(analyticsLocations[26]).View, obj);
@@ -200,5 +210,5 @@ export default function PremiumFeatureUpsell(shouldShow) {
     tmp8 = merged;
   }
   obj = { useReducedMotion: false, item: tmp8, entering: animationEnterExit, exiting: animationEnterExit, renderItem: callback };
-  return callback(ref(analyticsLocations[28]), obj);
+  return closure_12(ref(analyticsLocations[28]), obj);
 };

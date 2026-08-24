@@ -1,10 +1,11 @@
 // discord_app/modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx
 import useGetOrFetchApplicationsDefault from "../applications/useGetOrFetchApplications.tsx";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import set from "../../../_runtime/00002_set.js";
 
 let items = [require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
+const result = set.fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
 
 export const useGetOrFetchNotificationCenterItemsApplications = function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
   importDefault = stateFromStores1;
@@ -12,9 +13,9 @@ export const useGetOrFetchNotificationCenterItemsApplications = function useGetO
   const memo = React.useMemo(() => {
     set = new Set();
     const items = [];
-    const item = set.forEach((item, index) => {
-      const applicationId = item.applicationId;
-      if (closure_1_3.has(item.type)) {
+    const item = set.forEach((applicationId) => {
+      applicationId = applicationId.applicationId;
+      if (closure_1_3.has(applicationId.type)) {
         let hasItem = null == applicationId;
         if (!hasItem) {
           hasItem = set.has(applicationId);

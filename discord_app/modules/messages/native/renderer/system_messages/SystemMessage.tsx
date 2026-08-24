@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/SystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import createAddRecipientSystemMessage from "AddRecipientSystemMessage.tsx";
 import createRemoveRecipientSystemMessage from "RemoveRecipientSystemMessage.tsx";
 import createCallSystemMessage from "CallSystemMessage.tsx";
@@ -40,101 +40,101 @@ import createGiftIntentSystemMessage from "GiftIntentSystemMessage.tsx";
 import ME from "../../../../../Constants.tsx";
 
 ({ MessageTypes: obj1, BoostedGuildTiers: c3 } = ME);
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/SystemMessage.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/SystemMessage.tsx");
 
 export const createSystemMessageContent = function createSystemMessageContent(message) {
   const type = message.message.type;
   if (constants.RECIPIENT_ADD === type) {
     return createAddRecipientSystemMessage.createAddRecipientSystemMessage(message);
-  } else if (constants.RECIPIENT_REMOVE === type) {
+  } else if (tmp.RECIPIENT_REMOVE === type) {
     return createRemoveRecipientSystemMessage.createRemoveRecipientSystemMessage(message);
-  } else if (constants.CALL === type) {
+  } else if (tmp.CALL === type) {
     return createCallSystemMessage.createCallSystemMessage(message);
-  } else if (constants.CHANNEL_NAME_CHANGE === type) {
+  } else if (tmp.CHANNEL_NAME_CHANGE === type) {
     return createChangeChannelNameSystemMessage.createChangeChannelNameSystemMessage(message);
-  } else if (constants.CHANNEL_ICON_CHANGE === type) {
+  } else if (tmp.CHANNEL_ICON_CHANGE === type) {
     return createChangeChannelIconSystemMessage.createChangeChannelIconSystemMessage(message);
-  } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
+  } else if (tmp.CHANNEL_PINNED_MESSAGE === type) {
     return createChannelPinnedMessageSystemMessage.createChannelPinnedMessageSystemMessage(message);
-  } else if (constants.USER_JOIN === type) {
+  } else if (tmp.USER_JOIN === type) {
     return createUserJoinSystemMessage.createUserJoinSystemMessage(message);
-  } else if (constants.GUILD_BOOST === type) {
+  } else if (tmp.GUILD_BOOST === type) {
     return createUserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
-  } else if (constants.GUILD_BOOST_TIER_1 === type) {
+  } else if (tmp.GUILD_BOOST_TIER_1 === type) {
     return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_1);
-  } else if (constants.GUILD_BOOST_TIER_2 === type) {
+  } else if (tmp.GUILD_BOOST_TIER_2 === type) {
     return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_2);
-  } else if (constants.GUILD_BOOST_TIER_3 === type) {
+  } else if (tmp.GUILD_BOOST_TIER_3 === type) {
     return createUserPremiumGuildSubscriptionTierAchievedSystemMessage.createUserPremiumGuildSubscriptionTierAchievedSystemMessage(message, closure_3.TIER_3);
-  } else if (constants.CHANNEL_FOLLOW_ADD === type) {
+  } else if (tmp.CHANNEL_FOLLOW_ADD === type) {
     return createChannelFollowAddSystemMessage.createChannelFollowAddSystemMessage(message);
-  } else if (constants.GUILD_STREAM === type) {
+  } else if (tmp.GUILD_STREAM === type) {
     return createGuildStreamSystemMessage.createGuildStreamSystemMessage(message);
-  } else if (constants.GUILD_DISCOVERY_DISQUALIFIED === type) {
+  } else if (tmp.GUILD_DISCOVERY_DISQUALIFIED === type) {
     return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryDisqualifiedSystemMessage(message);
-  } else if (constants.GUILD_DISCOVERY_REQUALIFIED === type) {
+  } else if (tmp.GUILD_DISCOVERY_REQUALIFIED === type) {
     return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryRequalifiedSystemMessage(message);
-  } else if (constants.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING === type) {
+  } else if (tmp.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING === type) {
     return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryGracePeriodInitialWarningSystemMessage(message);
-  } else if (constants.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING === type) {
+  } else if (tmp.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING === type) {
     return createGuildDiscoveryDisqualifiedSystemMessage.createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message);
   } else {
-    if (constants.CHAT_INPUT_COMMAND !== type) {
-      if (constants.CONTEXT_MENU_COMMAND !== type) {
-        if (constants.GUILD_INVITE_REMINDER === type) {
+    if (tmp.CHAT_INPUT_COMMAND !== type) {
+      if (tmp.CONTEXT_MENU_COMMAND !== type) {
+        if (tmp.GUILD_INVITE_REMINDER === type) {
           return null;
-        } else if (constants.THREAD_CREATED === type) {
+        } else if (tmp.THREAD_CREATED === type) {
           return createNewThreadSystemMessage.createNewThreadSystemMessage(message);
-        } else if (constants.THREAD_STARTER_MESSAGE === type) {
+        } else if (tmp.THREAD_STARTER_MESSAGE === type) {
           return createThreadStarterSystemMessage.createThreadStarterSystemMessage(message);
-        } else if (constants.AUTO_MODERATION_ACTION === type) {
+        } else if (tmp.AUTO_MODERATION_ACTION === type) {
           return createAutoModerationActionSystemMessage.createAutoModerationActionSystemMessage(message);
-        } else if (constants.ROLE_SUBSCRIPTION_PURCHASE === type) {
+        } else if (tmp.ROLE_SUBSCRIPTION_PURCHASE === type) {
           return createRoleSubscriptionPurchaseSystemMessage.createRoleSubscriptionPurchaseSystemMessage(message);
-        } else if (constants.PURCHASE_NOTIFICATION === type) {
+        } else if (tmp.PURCHASE_NOTIFICATION === type) {
           return createPurchaseNotificationSystemMessage.createPurchaseNotificationSystemMessage(message);
-        } else if (constants.STAGE_START === type) {
+        } else if (tmp.STAGE_START === type) {
           return createStageStartSystemMessage.createStageStartSystemMessage(message);
-        } else if (constants.STAGE_END === type) {
+        } else if (tmp.STAGE_END === type) {
           return createStageEndSystemMessage.createStageEndSystemMessage(message);
-        } else if (constants.STAGE_TOPIC === type) {
+        } else if (tmp.STAGE_TOPIC === type) {
           return createStageTopicSystemMessage.createStageTopicSystemMessage(message);
-        } else if (constants.STAGE_SPEAKER === type) {
+        } else if (tmp.STAGE_SPEAKER === type) {
           return createStageSpeakerSystemMessage.createStageSpeakerSystemMessage(message);
-        } else if (constants.STAGE_RAISE_HAND === type) {
+        } else if (tmp.STAGE_RAISE_HAND === type) {
           return createStageRaiseHandSystemMessage.createStageRaiseHandSystemMessage(message);
-        } else if (constants.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION === type) {
+        } else if (tmp.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION === type) {
           return createApplicationSubscriptionPurchaseSystemMessage.createApplicationSubscriptionPurchaseSystemMessage(message);
         } else {
-          if (constants.PRIVATE_CHANNEL_INTEGRATION_ADDED !== type) {
-            if (constants.PRIVATE_CHANNEL_INTEGRATION_REMOVED !== type) {
-              if (constants.GUILD_INCIDENT_ALERT_MODE_ENABLED === type) {
+          if (tmp.PRIVATE_CHANNEL_INTEGRATION_ADDED !== type) {
+            if (tmp.PRIVATE_CHANNEL_INTEGRATION_REMOVED !== type) {
+              if (tmp.GUILD_INCIDENT_ALERT_MODE_ENABLED === type) {
                 return nativeStyleProperties.createGuildAlertModeEnabledSystemMessage(message);
-              } else if (constants.GUILD_INCIDENT_ALERT_MODE_DISABLED === type) {
+              } else if (tmp.GUILD_INCIDENT_ALERT_MODE_DISABLED === type) {
                 return nativeStyleProperties.createGuildAlertModeDisabledSystemMessage(message);
-              } else if (constants.GUILD_INCIDENT_REPORT_RAID === type) {
+              } else if (tmp.GUILD_INCIDENT_REPORT_RAID === type) {
                 return createGuildReportRaidSystemMessage.createGuildReportRaidSystemMessage(message);
-              } else if (constants.GUILD_INCIDENT_REPORT_FALSE_ALARM === type) {
+              } else if (tmp.GUILD_INCIDENT_REPORT_FALSE_ALARM === type) {
                 return createGuildReportFalseAlarmSystemMessage.createGuildReportFalseAlarmSystemMessage(message);
-              } else if (constants.POLL_RESULT === type) {
+              } else if (tmp.POLL_RESULT === type) {
                 return createPollResultSystemMessage.createPollResultSystemMessage(message);
-              } else if (constants.CHANNEL_LINKED_TO_LOBBY === type) {
+              } else if (tmp.CHANNEL_LINKED_TO_LOBBY === type) {
                 return createChannelLinkedToLobbySystemMessage.createChannelLinkedToLobbySystemMessage(message);
-              } else if (constants.IN_GAME_MESSAGE_NUX === type) {
+              } else if (tmp.IN_GAME_MESSAGE_NUX === type) {
                 return createInGameMessageNuxSystemMessage.createInGameMessageNuxSystemMessage(message);
               } else {
-                if (constants.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION !== type) {
-                  if (constants.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION !== type) {
-                    if (constants.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION !== type) {
-                      if (constants.PREMIUM_GROUP_INVITE === type) {
+                if (tmp.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION !== type) {
+                  if (tmp.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION !== type) {
+                    if (tmp.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION !== type) {
+                      if (tmp.PREMIUM_GROUP_INVITE === type) {
                         return createPremiumGroupInviteSystemMessage.createPremiumGroupInviteSystemMessage(message);
-                      } else if (constants.PREMIUM_REFERRAL === type) {
+                      } else if (tmp.PREMIUM_REFERRAL === type) {
                         return createReferralSystemMessage.createReferralSystemMessage(message);
-                      } else if (constants.VOICE_SESSION === type) {
+                      } else if (tmp.VOICE_SESSION === type) {
                         return createVoiceSessionSystemMessage.createVoiceSessionSystemMessage(message);
-                      } else if (constants.FRIEND_REQUEST_ACCEPTED === type) {
+                      } else if (tmp.FRIEND_REQUEST_ACCEPTED === type) {
                         return createFriendRequestAcceptedSystemMessage.createFriendRequestAcceptedSystemMessage(message);
-                      } else if (constants.GIFTING_PROMPT === type) {
+                      } else if (tmp.GIFTING_PROMPT === type) {
                         return createGiftIntentSystemMessage.createGiftIntentSystemMessage(message);
                       } else {
                         return null;

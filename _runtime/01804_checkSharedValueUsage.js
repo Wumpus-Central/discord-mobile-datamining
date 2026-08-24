@@ -10,10 +10,12 @@ import { updateProps } from "01754_updateProps.js";
 import { isAnimated } from "01800_isAnimated.js";
 import { o } from "01805_o.js";
 
+let runAnimations = global;
 function checkSharedValueUsage(value, nextResult) {
   if (Array.isArray(value)) {
     const tmp9 = value[Symbol.iterator]();
     while (tmp9 !== undefined) {
+      let tmp13 = checkSharedValueUsage;
       let tmp14 = checkSharedValueUsage(tmp11, nextResult);
       continue;
     }
@@ -26,6 +28,7 @@ function checkSharedValueUsage(value, nextResult) {
           const iter = keys[Symbol.iterator]();
           nextResult = iter.next();
           while (iter !== undefined) {
+            let tmp6 = checkSharedValueUsage;
             let tmp7 = checkSharedValueUsage(value[nextResult], nextResult);
             continue;
           }
@@ -51,36 +54,36 @@ function animatedStyleHandleToJSON() {
 ({ useEffect: c3, useRef: c4 } = noop);
 const Platform = get_ActivityIndicator.Platform;
 isJest = isJest.shouldBeUseWeb();
-function prepareAnimation(arg0, onFrame, animations, animations2) {
+function prepareAnimation(arg0, arr, arg2, arg3) {
   closure_0 = arg0;
-  closure_1 = onFrame;
-  let current = animations;
-  closure_2 = animations;
-  let iter = animations2;
-  closure_3 = animations2;
-  if (Array.isArray(onFrame)) {
-    const item = onFrame.forEach((item, index) => {
-      let tmp3 = animations;
-      if (animations) {
-        tmp3 = animations[index];
-      }
-      let tmp4 = dependencyMap;
+  closure_1 = arr;
+  let current = arg2;
+  closure_2 = arg2;
+  let iter = arg3;
+  closure_3 = arg3;
+  if (Array.isArray(arr)) {
+    const item = arr.forEach((arg0, arg1) => {
+      let tmp3 = dependencyMap;
       if (dependencyMap) {
-        tmp4 = dependencyMap[index];
+        tmp3 = dependencyMap[arg1];
       }
-      callback(callback, item, tmp3, tmp4);
+      let tmp4 = dependencyMap2;
+      if (dependencyMap2) {
+        tmp4 = dependencyMap2[arg1];
+      }
+      closure_0(closure_0, arg0, tmp3, tmp4);
     });
   }
-  if (typeof onFrame === "object") {
-    if (onFrame.onFrame) {
-      closure_4 = onFrame;
-      current = onFrame.current;
+  if (typeof arr === "object") {
+    if (arr.onFrame) {
+      closure_4 = arr;
+      current = arr.current;
       if (null == iter) {
-        onFrame.callStart = (arg0) => {
-          onFrame2.onStart(onFrame2, current, arg0, closure_2);
+        arr.callStart = (arg0) => {
+          arr2.onStart(arr2, current, arg0, closure_2);
         };
-        onFrame.callStart(arg0);
-        onFrame.callStart = null;
+        arr.callStart(arg0);
+        arr.callStart = null;
       } else if (typeof iter !== "object") {
         current = iter;
       }
@@ -106,66 +109,67 @@ function prepareAnimation(arg0, onFrame, animations, animations2) {
       }
     }
   }
-  if (typeof onFrame === "object") {
+  if (typeof arr === "object") {
     const _Object = Object;
-    const keys = Object.keys(onFrame);
-    const item1 = keys.forEach((item, index) => {
-      let tmp3 = animations;
-      if (animations) {
-        tmp3 = animations[item];
-      }
-      let tmp4 = dependencyMap;
+    const keys = Object.keys(arr);
+    const item1 = keys.forEach((arg0) => {
+      let tmp3 = dependencyMap;
       if (dependencyMap) {
-        tmp4 = dependencyMap[item];
+        tmp3 = dependencyMap[arg0];
       }
-      callback(callback, onFrame[item], tmp3, tmp4);
+      let tmp4 = dependencyMap2;
+      if (dependencyMap2) {
+        tmp4 = dependencyMap2[arg0];
+      }
+      closure_0(closure_0, arr[arg0], tmp3, tmp4);
     });
   }
 }
+runAnimations = prepareAnimation;
 prepareAnimation.__closure = {};
 prepareAnimation.__workletHash = 14540565048240;
 prepareAnimation.__initData = { code: "function prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp,lastAnimation,lastValue){const prepareAnimation_Pnpm_useAnimatedStyleTs1=this._recur;if(Array.isArray(animatedProp)){animatedProp.forEach(function(prop,index){prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,prop,lastAnimation&&lastAnimation[index],lastValue&&lastValue[index]);});}if(typeof animatedProp==='object'&&animatedProp.onFrame){const animation=animatedProp;let value=animation.current;if(lastValue!==undefined&&lastValue!==null){if(typeof lastValue==='object'){if(lastValue.value!==undefined){value=lastValue.value;}else if(lastValue.onFrame!==undefined){if((lastAnimation===null||lastAnimation===void 0?void 0:lastAnimation.current)!==undefined){value=lastAnimation.current;}else if((lastValue===null||lastValue===void 0?void 0:lastValue.current)!==undefined){value=lastValue.current;}}}else{value=lastValue;}}animation.callStart=function(timestamp){animation.onStart(animation,value,timestamp,lastAnimation);};animation.callStart(frameTimestamp);animation.callStart=null;}else if(typeof animatedProp==='object'){Object.keys(animatedProp).forEach(function(key){return prepareAnimation_Pnpm_useAnimatedStyleTs1(frameTimestamp,animatedProp[key],lastAnimation&&lastAnimation[key],lastValue&&lastValue[key]);});}}" };
-function runAnimations(onFrame, timestamp, keys, arg3, value) {
-  closure_0 = onFrame;
+runAnimations = function runAnimations(arr, timestamp, arg2, arg3, value) {
+  closure_0 = arr;
   closure_1 = timestamp;
-  closure_2 = keys;
+  closure_2 = arg2;
   closure_3 = arg3;
   closure_4 = value;
   closure_5 = arg5;
   if (value.value) {
     const _Array = Array;
-    if (Array.isArray(onFrame)) {
-      arg3[keys] = [];
+    if (Array.isArray(arr)) {
+      arg3[arg2] = [];
       c6 = true;
-      closure_5 = "boxShadow" === keys;
-      const item = onFrame.forEach((item, index) => {
-        if (!onFrame(item, closure_1, index, dependencyMap[closure_2], closure_4, closure_5)) {
+      closure_5 = "boxShadow" === arg2;
+      const item = arr.forEach((arg0, arg1) => {
+        if (!arr(arg0, closure_1, arg1, dependencyMap[closure_2], closure_4, closure_5)) {
           c6 = false;
         }
       });
       return c6;
     } else {
-      if (typeof onFrame === "object") {
-        if (onFrame.onFrame) {
+      if (typeof arr === "object") {
+        if (arr.onFrame) {
           let flag4 = true;
-          if (!onFrame.finished) {
-            if (onFrame.callStart) {
-              onFrame.callStart(timestamp);
-              onFrame.callStart = null;
+          if (!arr.finished) {
+            if (arr.callStart) {
+              arr.callStart(timestamp);
+              arr.callStart = null;
             }
-            const onFrameResult = onFrame.onFrame(onFrame, timestamp);
-            onFrame.timestamp = timestamp;
+            const onFrameResult = arr.onFrame(arr, timestamp);
+            arr.timestamp = timestamp;
             flag4 = onFrameResult;
             if (onFrameResult) {
-              onFrame.finished = true;
+              arr.finished = true;
               flag4 = onFrameResult;
-              if (onFrame.callback) {
-                onFrame.callback(true);
+              if (arr.callback) {
+                arr.callback(true);
                 flag4 = onFrameResult;
               }
             }
           }
-          const current = onFrame.current;
+          const current = arr.current;
           if (arg5) {
             const obj = {};
             const merged = Object.assign(current);
@@ -173,34 +177,34 @@ function runAnimations(onFrame, timestamp, keys, arg3, value) {
           } else {
             tmp8 = current;
           }
-          arg3[keys] = tmp8;
+          arg3[arg2] = tmp8;
           return flag4;
         }
       }
-      if (typeof onFrame === "object") {
-        arg3[keys] = {};
+      if (typeof arr === "object") {
+        arg3[arg2] = {};
         c7 = true;
         const _Object = Object;
-        keys = Object.keys(onFrame);
-        const item1 = keys.forEach((item, index) => {
-          if (!onFrame(onFrame[item], closure_1, item, dependencyMap[closure_2], closure_4, closure_5)) {
+        const keys = Object.keys(arr);
+        const item1 = keys.forEach((arg0) => {
+          if (!arr(arr[arg0], closure_1, arg0, dependencyMap[closure_2], closure_4, closure_5)) {
             c7 = false;
           }
         });
         return c7;
       } else {
-        arg3[keys] = onFrame;
+        arg3[arg2] = arr;
         return true;
       }
     }
   } else {
     return true;
   }
-}
+};
 runAnimations.__closure = {};
 runAnimations.__workletHash = 2714844766543;
 runAnimations.__initData = { code: "function runAnimations_Pnpm_useAnimatedStyleTs2(animation,timestamp,key,result,animationsActive,forceCopyAnimation){const runAnimations_Pnpm_useAnimatedStyleTs2=this._recur;if(!animationsActive.value){return true;}if(Array.isArray(animation)){result[key]=[];let allFinished=true;forceCopyAnimation=key==='boxShadow';animation.forEach(function(entry,index){if(!runAnimations_Pnpm_useAnimatedStyleTs2(entry,timestamp,index,result[key],animationsActive,forceCopyAnimation)){allFinished=false;}});return allFinished;}else if(typeof animation==='object'&&animation.onFrame){let finished=true;if(!animation.finished){if(animation.callStart){animation.callStart(timestamp);animation.callStart=null;}finished=animation.onFrame(animation,timestamp);animation.timestamp=timestamp;if(finished){animation.finished=true;animation.callback&&animation.callback(true);}}if(forceCopyAnimation){result[key]={...animation.current};}else{result[key]=animation.current;}return finished;}else if(typeof animation==='object'){result[key]={};let allFinished=true;Object.keys(animation).forEach(function(k){if(!runAnimations_Pnpm_useAnimatedStyleTs2(animation[k],timestamp,k,result[key],animationsActive,forceCopyAnimation)){allFinished=false;}});return allFinished;}else{result[key]=animation;return true;}}" };
-function styleUpdater(arg0, fn, animations) {
+function styleUpdater(arg0, arg1, animations) {
   let tmp7;
   const __frameTimestamp = arg0;
   const _require = animations;
@@ -214,7 +218,7 @@ function styleUpdater(arg0, fn, animations) {
   if (animations == null) {
     animations = {};
   }
-  let obj = fn();
+  let obj = arg1();
   if (obj == null) {
     obj = {};
   }
@@ -224,8 +228,8 @@ function styleUpdater(arg0, fn, animations) {
     boxShadow = obj.boxShadow;
   }
   if (boxShadow) {
-    require("01805_o.js").processBoxShadow(obj);
-    const obj3 = o;
+    _o.processBoxShadow(obj);
+    const obj3 = _o;
   }
   obj = {};
   let flag2 = false;
@@ -237,11 +241,17 @@ function styleUpdater(arg0, fn, animations) {
     flag4 = flag2;
     flag5 = flag3;
     while (keys[tmp] !== undefined) {
+      let tmp28 = tmp13;
       let tmp29 = obj[tmp13];
-      let obj9 = isAnimated;
+      let tmp30 = _require;
+      let tmp31 = dependencyMap;
+      let obj9 = _isAnimated;
       if (obj9.isAnimated(tmp29)) {
         let obj5 = __frameTimestamp;
         let tmp14 = __frameTimestamp.__frameTimestamp || obj5._getAnimationTimestamp();
+        let tmp15 = prepareAnimation;
+        let tmp16 = tmp14;
+        let tmp17 = tmp29;
         let tmp18 = prepareAnimation(tmp14, tmp29, animations[tmp13], last[tmp13]);
         animations[tmp13] = tmp29;
         tmp7 = tmp14;
@@ -258,7 +268,7 @@ function styleUpdater(arg0, fn, animations) {
     const tmp8 = tmp7;
   }
   if (flag5) {
-    frame = function frame(timestamp) {
+    frame = function frame(arg0) {
       ({ animations, last } = animations);
       closure_0 = last;
       if (animations.isAnimationCancelled) {
@@ -271,25 +281,34 @@ function styleUpdater(arg0, fn, animations) {
         if (keys !== undefined) {
           flag3 = flag;
           while (keys[tmp] !== undefined) {
+            let tmp19 = tmp9;
             closure_0 = tmp9;
+            let tmp20 = closure_1_7;
+            let tmp21 = table;
+            let tmp22 = arg0;
+            let tmp23 = tmp9;
+            let tmp24 = obj;
             let flag5 = false;
-            if (!runAnimations(animations[tmp9], timestamp, tmp9, obj, table)) {
+            if (!closure_1_7(animations[tmp9], arg0, tmp9, obj, table)) {
               flag = false;
               continue;
             } else {
               let _Array = Array;
               let arr = obj[tmp9];
               if (Array.isArray(obj[tmp9])) {
-                let item = arr.forEach((item, index) => {
+                let item = arr.forEach((obj) => {
                   for (const key10003 in arg0) {
+                    let tmp2 = key10003;
+                    let tmp3 = table;
+                    let tmp4 = table;
                     let tmp = table[table];
                     if (tmp) {
-                      tmp = typeof table[table] === "object";
+                      tmp = typeof tmp3[tmp4] === "object";
                     }
                     if (!tmp) {
-                      table[table] = {};
+                      tmp3[tmp4] = {};
                     }
-                    table[table][key10003] = arg0[key10003];
+                    tmp3[tmp4][key10003] = arg0[key10003];
                     continue;
                   }
                 });
@@ -297,6 +316,7 @@ function styleUpdater(arg0, fn, animations) {
                 last[tmp9] = arr;
               }
               delete tmp2[tmp3];
+              let tmp11 = flag;
             }
           }
         }
@@ -317,13 +337,13 @@ function styleUpdater(arg0, fn, animations) {
       frame(tmp8);
     }
     if (flag4) {
-      require("01754_updateProps.js").updateProps(arg0, obj);
-      const obj8 = updateProps;
+      _updateProps.updateProps(arg0, obj);
+      const obj8 = _updateProps;
     }
   } else {
     animations.isAnimationCancelled = true;
     animations.animations = [];
-    let shallowEqualResult = require("01800_isAnimated.js").shallowEqual(last, obj);
+    let shallowEqualResult = _isAnimated.shallowEqual(last, obj);
     if (shallowEqualResult) {
       shallowEqualResult = !arg5;
     }
@@ -331,7 +351,7 @@ function styleUpdater(arg0, fn, animations) {
       tmp19(1754).updateProps(arg0, obj, flag);
       const tmp19Result = tmp19(1754);
     }
-    const obj6 = isAnimated;
+    const obj6 = _isAnimated;
     tmp19 = _require;
   }
   animations.last = obj;
@@ -340,35 +360,38 @@ let obj = { SHOULD_BE_USE_WEB: isJest, processBoxShadow: o.processBoxShadow, isA
 styleUpdater.__closure = obj;
 styleUpdater.__workletHash = 3108907120254;
 styleUpdater.__initData = { code: "function styleUpdater_Pnpm_useAnimatedStyleTs3(viewDescriptors,updater,state,animationsActive,isAnimatedProps=false,forceUpdate){const{SHOULD_BE_USE_WEB,processBoxShadow,isAnimated,prepareAnimation,runAnimations,updateProps,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;const nonAnimatedNewValues={};let hasAnimations=false;let frameTimestamp;let hasNonAnimatedValues=false;if(!SHOULD_BE_USE_WEB&&newValues.boxShadow){processBoxShadow(newValues);}for(const key in newValues){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}else{hasNonAnimatedValues=true;nonAnimatedNewValues[key]=value;delete animations[key];}}if(hasAnimations){const frame=function(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;for(const propName in animations){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){if(Array.isArray(updates[propName])){updates[propName].forEach(function(obj){for(const prop in obj){if(!last[propName]||typeof last[propName]!=='object'){last[propName]={};}last[propName][prop]=obj[prop];}});}else{last[propName]=updates[propName];}delete animations[propName];}else{allFinished=false;}}if(updates){updateProps(viewDescriptors,updates);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}};state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}if(hasNonAnimatedValues){updateProps(viewDescriptors,nonAnimatedNewValues);}}else{state.isAnimationCancelled=true;state.animations=[];if(!shallowEqual(oldValues,newValues)||forceUpdate){updateProps(viewDescriptors,newValues,isAnimatedProps);}}state.last=newValues;}" };
-function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
+function jestStyleUpdater(arg0, arg1, animations) {
+  closure_0 = arg0;
   let last = arg3;
-  let obj = keys;
+  let obj = arg4;
+  c4 = arg5;
   animations = animations.animations;
   if (animations == null) {
     animations = {};
   }
-  obj = fn();
+  obj = arg1();
   if (obj == null) {
     obj = {};
   }
   last = animations.last;
   c9 = false;
-  keys = Object.keys(animations);
-  let item = keys.forEach((item, index) => {
+  let keys = Object.keys(animations);
+  let item = keys.forEach((arg0) => {
     obj = animations(last[4]);
-    if (!obj.isAnimated(obj[item])) {
+    if (!obj.isAnimated(obj[arg0])) {
       delete tmp[tmp2];
     }
   });
   const keys1 = Object.keys(obj);
-  const item1 = keys1.forEach((item, index) => {
+  const item1 = keys1.forEach((arg0) => {
     obj = animations(last[4]);
-    if (obj.isAnimated(obj[item])) {
+    if (obj.isAnimated(obj[arg0])) {
       const tmp2 = __frameTimestamp.__frameTimestamp || __frameTimestamp._getAnimationTimestamp();
       closure_5 = tmp2;
-      animations(tmp2, tmp, animations[item], last[item]);
-      animations[item] = tmp;
+      animations(tmp2, tmp, animations[arg0], last[arg0]);
+      animations[arg0] = tmp;
       c9 = true;
+      const obj2 = __frameTimestamp;
     }
   });
   if (c9) {
@@ -376,7 +399,8 @@ function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
     if (!animations.isAnimationRunning) {
       animations.isAnimationCancelled = false;
       animations.isAnimationRunning = true;
-      function frame(closure_0) {
+      function frame(arg0) {
+        closure_0 = arg0;
         animations = animations.animations;
         last = animations.last;
         if (animations.isAnimationCancelled) {
@@ -386,9 +410,9 @@ function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
           c4 = true;
           const _Object = Object;
           const keys = Object.keys(animations);
-          const item = keys.forEach((item, index) => {
-            if (obj(animations[item], closure_0, item, obj, last)) {
-              last[item] = obj[item];
+          const item = keys.forEach((arg0) => {
+            if (obj(animations[arg0], closure_0, arg0, obj, last)) {
+              last[arg0] = obj[arg0];
               delete tmp[tmp2];
             } else {
               c4 = false;
@@ -409,6 +433,7 @@ function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
       }
       closure_0 = isJest;
       animations = undefined;
+      last = undefined;
       obj = undefined;
       c4 = undefined;
       animations = animations.animations;
@@ -420,9 +445,9 @@ function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
         c4 = true;
         let _Object = Object;
         const keys2 = Object.keys(animations);
-        const item2 = keys2.forEach((item, index) => {
-          if (obj(animations[item], closure_0, item, obj, last)) {
-            last[item] = obj[item];
+        const item2 = keys2.forEach((arg0) => {
+          if (obj(animations[arg0], closure_0, arg0, obj, last)) {
+            last[arg0] = obj[arg0];
             delete tmp[tmp2];
           } else {
             c4 = false;
@@ -431,7 +456,7 @@ function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
         let _Object2 = Object;
         if (Object.keys(obj).length) {
           const obj4 = animations(last[5]);
-          let result = obj4.updatePropsJestWrapper(closure_0, obj, keys, c4);
+          let result = obj4.updatePropsJestWrapper(arg0, obj, arg4, arg5);
         }
         if (c4) {
           animations.isAnimationRunning = false;
@@ -451,12 +476,9 @@ function jestStyleUpdater(closure_0, fn, animations, arg3, keys, c4) {
     shallowEqualResult = !arg6;
   }
   if (!shallowEqualResult) {
-    const tmp15Result = tmp15(tmp16[5]);
-    const result1 = tmp15Result.updatePropsJestWrapper(closure_0, obj, keys, c4);
+    const tmp15Result = animations(last[5]);
+    const result1 = tmp15Result.updatePropsJestWrapper(arg0, obj, arg4, arg5);
   }
-  const obj5 = animations(last[4]);
-  tmp15 = animations;
-  tmp16 = last;
 }
 obj = { isAnimated: isAnimated.isAnimated, prepareAnimation, runAnimations, updatePropsJestWrapper: updateProps.updatePropsJestWrapper, shallowEqual: isAnimated.shallowEqual };
 jestStyleUpdater.__closure = obj;
@@ -475,6 +497,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
   if (arg3 === undefined) {
     flag = false;
   }
+  let callback;
   let callback2;
   let items1;
   let sharedValue;
@@ -482,7 +505,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
   c8 = undefined;
   let shareableViewDescriptors;
   let tmp2 = callback2(null);
-  let callback = tmp2;
+  callback = tmp2;
   let __closure = fn.__closure;
   if (__closure == null) {
     __closure = {};
@@ -539,7 +562,8 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
   if (!tmp2.current) {
     let tmp10Result = tmp10(tmp11[8]);
     const initialUpdaterRunResult = tmp10Result.initialUpdaterRun(fn);
-    let obj = { value: null, updater: null };
+    let obj = { initial: null, remoteState: null, viewDescriptors: null, styleUpdaterContainer: null };
+    obj = { value: null, updater: null };
     obj[0] = initialUpdaterRunResult;
     obj[1] = fn;
     obj[0] = obj;
@@ -562,8 +586,8 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       fn = function s() {
         const tmp = callback();
         callback = tmp;
-        const item = closure_5.forEach((item, index) => {
-          item(closure_0);
+        const item = closure_5.forEach((arg0) => {
+          arg0(closure_0);
         });
         return tmp;
       };
@@ -577,7 +601,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     }
     if (obj2.isJest()) {
       const fn3 = function l(arg0) {
-        shareableViewDescriptors(closure_9, fn, closure_8, closure_6, closure_7, closure_5, arg0);
+        closure_1_9(closure_9, fn, closure_8, closure_6, closure_7, closure_5, arg0);
       };
       obj = { jestStyleUpdater: null, shareableViewDescriptors: null, updater: null, remoteState: null, areAnimationsActive: null, jestAnimatedValues: null, adaptersArray: null };
       obj[0] = shareableViewDescriptors;
@@ -593,7 +617,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       let tmp13 = fn3;
     } else {
       const fn2 = function o(arg0) {
-        callback3(shareableViewDescriptors, fn, closure_1_8, sharedValue, flag, arg0);
+        callback3(closure_1_9, fn, closure_1_8, closure_1_6, closure_1_2, arg0);
       };
       obj = { styleUpdater: null, shareableViewDescriptors: null, updaterFn: null, remoteState: null, areAnimationsActive: null, isAnimatedProps: null };
       obj[0] = _undefined;
@@ -614,12 +638,12 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       if (isFirstRun) {
         const _requestAnimationFrame = requestAnimationFrame;
         const animationFrame = requestAnimationFrame(() => {
-          callback2(flag[9]);
+          let obj = callback2(flag[9]);
           fn = function t() {
             closure_2_8(closure_1_9, closure_0, closure_1_8, closure_1_6, closure_1_2);
             closure_1_8.isFirstRun = false;
           };
-          const obj = { styleUpdater: c8, shareableViewDescriptors, updaterFn: fn, remoteState: closure_1_8, areAnimationsActive: sharedValue, isAnimatedProps: closure_1_2 };
+          obj = { styleUpdater: c8, shareableViewDescriptors: closure_1_9, updaterFn: fn, remoteState: closure_1_8, areAnimationsActive: closure_1_6, isAnimatedProps: closure_1_2 };
           fn.__closure = obj;
           fn.__workletHash = 11622360674991;
           fn.__initData = closure_2_14;
@@ -632,6 +656,8 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
       ref.current.styleUpdaterContainer.current = tmp13;
     }
     obj2 = callback(flag[2]);
+    const tmp5 = callback;
+    const tmp6 = flag;
     callback = callback(flag[9]).startMapper(tmp13, closure_4);
     return () => {
       let obj = callback2(flag[9]);

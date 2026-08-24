@@ -4,13 +4,13 @@ import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils
 import trackInviteDefault from "../../../actions/MessageActionCreators.tsx";
 import handleEdit from "../../messages/native/long_press/LongPressMessageActionSheetUtils.tsx";
 import createPendingReply from "../PendingReplyActionCreators.tsx";
-import initialize from "../../../stores/EditMessageStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import getState from "../PendingReplyStore.tsx";
+import closure_3 from "../../../stores/EditMessageStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import closure_5 from "../PendingReplyStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
 
 export default function longPressMessageHandleReply(arg0) {
   ({ message, channel, chatInputRef, actionSource, invertible } = arg0);
@@ -27,6 +27,7 @@ export default function longPressMessageHandleReply(arg0) {
     obj[4] = handleEdit.getContextBarCancelReason("edit", actionSource);
     obj[5] = null != currentUser && currentUser.id === editingMessage.author.id;
     obj10.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
+    const obj12 = handleEdit;
   }
   obj = trackInviteDefault;
   obj.endEditMessage(channel.id);
@@ -36,7 +37,7 @@ export default function longPressMessageHandleReply(arg0) {
       if (null != pendingReply) {
         if (pendingReply.message.id === message.id) {
           const currentUser1 = authStore.getCurrentUser();
-          let tmp3Result = expandEventPropertiesDefault;
+          let tmp3Result = tmp3(698);
           obj = { message_id: null, channel_id: null, guild_id: null, context_action: "reply", reason: "swipe_reply_undo", is_own_message: null };
           obj[0] = message.id;
           ({ id: obj8[1], guild_id: obj8[2] } = channel);
@@ -62,13 +63,16 @@ export default function longPressMessageHandleReply(arg0) {
               }
             }
           }
+          const obj9 = createPendingReply;
         }
       }
     }
   }
-  tmp3Result = expandEventPropertiesDefault;
+  tmp3Result = tmp3(698);
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(channel.guild_id));
   obj1 = { source: actionSource };
+  const obj4 = collectGuildAnalyticsMetadata;
+  const tmp7 = require;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel));
   tmp3Result.track(AnalyticEvents.REPLY_MESSAGE_STARTED, obj1);
   const currentUser2 = authStore.getCurrentUser();
@@ -80,6 +84,7 @@ export default function longPressMessageHandleReply(arg0) {
   if (tmp13) {
     tmp13 = message.author.id !== currentUser2.id;
   }
+  const obj5 = collectGuildAnalyticsMetadata;
   const pendingReply1 = createPendingReply.createPendingReply({ message, channel, shouldMention: tmp13, source: actionSource });
   if (chatInputRef != null) {
     const current3 = chatInputRef.current;
@@ -87,5 +92,4 @@ export default function longPressMessageHandleReply(arg0) {
       current3.openSystemKeyboard();
     }
   }
-  const tmp7Result = createPendingReply;
 };

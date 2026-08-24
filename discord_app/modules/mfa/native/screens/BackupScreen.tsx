@@ -1,11 +1,11 @@
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
 import finishMFACheck from "../../../../../discord_common/js/shared/MFA.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function isValidClipboardCode(arg0) {
   let tmp3 = arg0.length >= finishMFACheck.BACKUP_CODE_MIN_LENGTH;
   if (tmp3) {
@@ -14,25 +14,30 @@ function isValidClipboardCode(arg0) {
   return tmp3;
 }
 ({ jsxs: closure_6, jsx: error, Fragment: closure_8 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
 
 export default function BackupScreen(finish) {
   finish = finish.finish;
+  let _require = finish;
   importDefault = undefined;
   let first;
+  let callback;
   let callback2;
   let React;
+  let first1;
+  closure_7 = undefined;
+  closure_8 = undefined;
   const tmp3 = importDefault(first[7])();
   [tmp5, c1] = callback2(React.useState(false), 2);
   const tmp6 = callback2(React.useState(""), 2);
   first = tmp6[0];
-  const callback = tmp6[1];
+  callback = tmp6[1];
   const tmp4 = callback2(React.useState(false), 2);
   [tmp8, c4] = callback2(React.useState(undefined), 2);
   const tmp7 = callback2(React.useState(undefined), 2);
   [tmp10, c5] = callback2(React.useState(false), 2);
   const tmp11 = callback2(React.useState(10), 2);
-  const first1 = tmp11[0];
+  first1 = tmp11[0];
   closure_7 = tmp11[1];
   const items = [first1];
   const effect = React.useEffect(() => {
@@ -44,7 +49,8 @@ export default function BackupScreen(finish) {
       return () => clearTimeout(closure_0);
     }
   }, items);
-  const _require = callback((arg0) => {
+  _require = undefined;
+  _require = callback((arg0) => {
     closure_0 = arg0;
     c6 = 0;
     c7 = 0;
@@ -73,6 +79,7 @@ export default function BackupScreen(finish) {
         closure_1_4(message);
         closure_1_1(false);
         c7 = 3;
+        const tmp15 = closure_1_4;
       } else if (arg0 === 1) {
         c7 = 3;
         throw arg1;
@@ -102,6 +109,7 @@ export default function BackupScreen(finish) {
   const intl2 = _require(first[6]).intl;
   obj[1] = intl2.string(_require(first[6]).t.c5J7O0);
   if (first1 > 0) {
+    obj = { variant: "text-md/normal", children: null };
     const intl3 = tmp16(tmp2[6]).intl;
     const items2 = [intl3.string(tmp16(tmp2[6]).t.RRtlLg), ];
     const intl4 = tmp16(tmp2[6]).intl;

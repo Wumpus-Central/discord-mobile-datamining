@@ -1,45 +1,45 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx
 import ManaContext from "../../../../../../discord_common/js/packages/design/native.tsx";
-import VideoIcon from "../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import VideoSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import initialize from "../../../../video_calls/native/ChannelCallLifecycleStore.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
-import _detectH265HardwareDecode from "../../../../../stores/MediaEngineStore.tsx";
-import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../../video_calls/native/ChannelCallLifecycleStore.tsx";
+import closure_6 from "../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../../stores/MediaEngineStore.tsx";
+import closure_9 from "../../../../../stores/PermissionStore.tsx";
 import { Features } from "../../../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function VideoButtonRive(arg0) {
   ({ isVideoEnabled, color } = arg0);
-  const obj = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
+  let obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
+  obj = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
   let str = "CamOff";
   if (isVideoEnabled) {
     str = "CamOn";
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = VideoIcon.VideoIcon;
+    let VideoSlashIcon = tmp3(7998).VideoIcon;
   } else {
-    VideoSlashIcon = VideoSlashIcon2.VideoSlashIcon;
+    VideoSlashIcon = tmp3(12149).VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
   return <View dataBinding={{ fill: color, on: isVideoEnabled }} defaultViewModelInstance={null} fallback={null} />;
 }
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");
 
 export default function VideoButton(arg0) {
+  let channelId;
   let stateFromStores;
   let stateFromStores1;
   let stateFromStores2;
   let color;
   let obj = stateFromStores2;
   ({ props, wrapperSpecs } = arg0);
-  const channelId = stateFromStores2.useContext(stateFromStores(stateFromStores1[9])).channelId;
+  channelId = stateFromStores2.useContext(stateFromStores(stateFromStores1[9])).channelId;
   const voicePanelButtonStyles = channelId(stateFromStores1[10]).useVoicePanelButtonStyles(wrapperSpecs);
   let obj2 = channelId(stateFromStores1[10]);
   let tmp = stateFromStores;
@@ -87,8 +87,7 @@ export default function VideoButton(arg0) {
     obj[3] = stringResult;
     obj[4] = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     const items4 = [color, stateFromStores1];
-    obj[5] = obj.useMemo(() => <VideoButtonRive isVideoEnabled={stateFromStores1} color={color} />, items4);
+    obj[5] = obj.useMemo(() => closure_1_11(closure_1_12, { isVideoEnabled: stateFromStores1, color }), items4);
     return jsx(tmp(tmp2[17]), { onPress: null, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
   }
-  const obj5 = channelId(stateFromStores1[11]);
 };

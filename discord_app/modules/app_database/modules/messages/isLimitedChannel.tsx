@@ -1,9 +1,9 @@
 // discord_app/modules/app_database/modules/messages/isLimitedChannel.tsx
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import handleInviteData from "../../../../stores/GuildMemberCountStore.tsx";
+import closure_0 from "../../../../stores/ChannelStore.tsx";
+import closure_1 from "../../../../stores/GuildMemberCountStore.tsx";
 import { ChannelTypes } from "../../../../Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 
 export const LIMITED_GUILD_MEMBER_THRESHOLD = 10000;
 export const isLimitedChannel = function isLimitedChannel(basicChannel) {

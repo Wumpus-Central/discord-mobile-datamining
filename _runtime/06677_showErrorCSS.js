@@ -1,6 +1,6 @@
 // _runtime/06677_showErrorCSS.js
-arg5.showErrorCSS = function showErrorCSS(arg0, arg1) {
-  throw Error("[react-native-svg] You are trying to import a " + arg1 + " `" + arg0 + "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.");
+arg5.showErrorCSS = function showErrorCSS(trying, trying2) {
+  throw Error("[react-native-svg] You are trying to import a " + trying2 + " `" + trying + "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.");
 };
 arg5.SvgCss = function SvgCss() {
   throw Error("[react-native-svg] You are trying to import a " + "component" + " `" + "SvgCss" + "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.");

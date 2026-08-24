@@ -1,10 +1,10 @@
 // discord_app/modules/calls/native/useVideoTileGradientColors.tsx
 import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import getProfileTheme from "../../user_profile/UserProfileGradientUtils.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { ThemeTypes } from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function rgbToHex(arg0) {
   [tmp, tmp2, tmp3] = arg0;
   let str = Math.max(0, Math.min(255, tmp));
@@ -23,8 +23,10 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
       if (DARK == null) {
         DARK = ThemeTypes.DARK;
       }
-      const tmp9Result = getProfileTheme;
+      let tmp9Result = tmp9(688);
+      tmp9Result = tmp9(8422);
       const int2rgbArrayResult = tmp9Result.int2rgbArray(tmp9Result.calculateModalV2BackgroundColor(modalV2BackgroundColor, modalV2BackgroundColor, DARK));
+      const obj7 = getProfileTheme;
       const tmp9Result1 = int2hslRaw;
       const int2rgbArrayResult1 = int2hslRaw.int2rgbArray(modalV2BackgroundColor);
       const tmp9Result2 = int2hslRaw;
@@ -33,25 +35,25 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
       [arr[0], arr[1], arr[2]] = int2rgbArrayResult;
       const items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult1;
-      getProfileTheme.getValueInColorGradientByPercentage(items, items1, 20);
+      let valueInColorGradientByPercentage = getProfileTheme.getValueInColorGradientByPercentage(items, items1, 20);
       const tmp9Result3 = getProfileTheme;
       const items2 = [, , ];
       [arr3[0], arr3[1], arr3[2]] = int2rgbArrayResult;
       const items3 = [, , ];
       [arr4[0], arr4[1], arr4[2]] = int2rgbArrayResult2;
-      const valueInColorGradientByPercentage = getProfileTheme.getValueInColorGradientByPercentage(items2, items3, 60);
+      valueInColorGradientByPercentage = getProfileTheme.getValueInColorGradientByPercentage(items2, items3, 60);
       const items4 = [rgbToHex(valueInColorGradientByPercentage), rgbToHex(valueInColorGradientByPercentage)];
       return items4;
     }
   }
   return null;
 }
-const result = require("obj132").fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
 
 export { computeVideoTileGradientStops };
 export const useVideoTileGradientColors = function useVideoTileGradientColors(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
-  return React.useMemo(() => computeVideoTileGradientStops(closure_0, closure_1), items);
+  return React.useMemo(() => closure_1_5(closure_0, closure_1), items);
 };

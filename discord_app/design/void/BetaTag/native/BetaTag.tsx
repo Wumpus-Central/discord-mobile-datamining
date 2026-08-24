@@ -8,16 +8,17 @@ import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Gradients } from "../../../../modules/colors/native/ColorConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
+createCacheKey = { container: null, text: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textTransform: "uppercase" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { SMALL: "small", MEDIUM: "medium" };
-const result = require("obj132").fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
+const result = require("set").fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
 
 export default function BetaTag(gradient) {
   ({ style, textStyle, size } = gradient);
@@ -48,8 +49,9 @@ export default function BetaTag(gradient) {
     obj[2] = items1;
     const intl2 = getSystemLocale.intl;
     obj[3] = intl2.string(getSystemLocale.t.oW0eUd);
-    obj[4] = jsx(Text.Text, { variant: null, color: "text-overlay-light", style: null, children: null });
-    let tmp3Result = jsx(LinearGradientDefault, { variant: null, color: "text-overlay-light", style: null, children: null });
+    obj[4] = tmp3(Text.Text, obj);
+    let tmp3Result = tmp3(LinearGradientDefault, obj);
+    const tmp10 = LinearGradientDefault;
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp2.container, style];
@@ -60,8 +62,8 @@ export default function BetaTag(gradient) {
     obj1[2] = items3;
     const intl = getSystemLocale.intl;
     obj1[3] = intl.string(getSystemLocale.t.oW0eUd);
-    obj[1] = jsx(Text.Text, { variant: null, color: "text-overlay-light", style: null, children: null });
-    tmp3Result = <View style={null}>{null}</View>;
+    obj[1] = tmp3(Text.Text, obj1);
+    tmp3Result = tmp3(View, obj);
   }
   return tmp3Result;
 };

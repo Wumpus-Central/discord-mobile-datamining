@@ -57,7 +57,7 @@ export default {
       if (typeof dateLongFormatter !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if ("P" === "P") {
+      if ("P" === str) {
         let dateResult1 = dateTime.date({ width: "short" });
       } else if ("PP" === str) {
         dateResult1 = dateTime.date({ width: "medium" });

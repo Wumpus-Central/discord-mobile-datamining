@@ -1,17 +1,16 @@
 // discord_app/modules/threads/ThreadConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const AbortCodes = ME.AbortCodes;
 let obj = { HAS_INTERACTED: 1, ALL_MESSAGES: 2, ONLY_MENTIONS: 4, NO_MESSAGES: 8 };
 let items = [, , , ];
 ({ TOO_MANY_ATTACHMENTS: arr[0], EXPLICIT_CONTENT: arr[1], ENTITY_TOO_LARGE: arr[2], EXPLICIT_CONTENT: arr[3] } = AbortCodes);
+let set = new Set(items);
 const items1 = [, ];
 ({ AUTOMOD_MESSAGE_BLOCKED: arr2[0], AUTOMOD_TITLE_BLOCKED: arr2[1] } = AbortCodes);
-const set = new Set(items);
-const set1 = new Set(items1);
-const result = obj132.fileFinishedImporting("modules/threads/ThreadConstants.tsx");
+const result = set.fileFinishedImporting("modules/threads/ThreadConstants.tsx");
 
 export const DEFAULT_AUTO_ARCHIVE_DURATION = 4320;
 export const MAX_THREAD_MESSAGE_COUNT_OLD = 50;
@@ -37,4 +36,4 @@ export const getThreadNotificationOptions = function getThreadNotificationOption
 };
 export const ThreadSortOrderReadableForAnalytics = { LATEST_ACTIVITY: "Last Message", CREATION_DATE: "Creation" };
 export const FORUM_POST_CREATION_UPLOAD_ERRORS = set;
-export const FORUM_POST_CREATION_AUTOMOD_ERRORS = set1;
+export const FORUM_POST_CREATION_AUTOMOD_ERRORS = new Set(items1);

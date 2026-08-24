@@ -1,5 +1,5 @@
 // _runtime/01582_useOnRouteFocus.js
-import noop from "00019_noop.js";
+import closure_2 from "00019_noop.js";
 
 const require = arg1;
 
@@ -8,7 +8,8 @@ export const useOnRouteFocus = function useOnRouteFocus(router) {
   const getState = router.getState;
   const key = router.key;
   const setState = router.setState;
-  const onRouteFocus = key.useContext(router(getState[1]).NavigationBuilderContext).onRouteFocus;
+  let onRouteFocus;
+  onRouteFocus = key.useContext(router(getState[1]).NavigationBuilderContext).onRouteFocus;
   const items = [getState, onRouteFocus, router, setState, key];
   return key.useCallback((arg0) => {
     const tmp = getState();

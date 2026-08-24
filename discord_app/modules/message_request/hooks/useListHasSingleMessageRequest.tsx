@@ -1,10 +1,10 @@
 // discord_app/modules/message_request/hooks/useListHasSingleMessageRequest.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import processChannel from "../MessageRequestStore.tsx";
-import processChannel2 from "../SpamMessageRequestStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../MessageRequestStore.tsx";
+import closure_5 from "../SpamMessageRequestStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useListHasSingleMessageRequest.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useListHasSingleMessageRequest.tsx");
 
 export const useListHasSingleMessageRequest = function useListHasSingleMessageRequest() {
   messageRequestsCount = messageRequestsCount(stateFromStores[3]).useMessageRequestsCount();

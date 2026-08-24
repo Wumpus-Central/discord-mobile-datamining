@@ -13,8 +13,8 @@ const memoResult = noop.memo((arg0) => {
   let items = [backgroundStyle];
   ({ animatedIndex, animatedPosition } = arg0);
   const style = useMemo(() => {
-    const items = [backgroundStyle(dependencyMap[3]).styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
+    const items = [backgroundStyle(closure_1_1[3]).styles.container, backgroundStyle];
+    return closure_1_3.flatten(items);
   }, items);
   if (backgroundComponent == null) {
     backgroundComponent = backgroundStyle(7002).BottomSheetBackground;

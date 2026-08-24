@@ -44,9 +44,11 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
     const items = [];
     const items1 = [];
     for (const key10027 in _mod4883.FileTypes) {
+      let tmp22 = key10027;
       let _Object4 = Object;
       let call2 = hasOwnProperty2.call;
       let tmp23 = require;
+      let tmp24 = dependencyMap;
       let FileTypes5 = _mod4883.FileTypes;
       if (typeof call2 === "unknown") {
         let hasOwnProperty2Result = hasOwnProperty2(key10027);
@@ -76,7 +78,7 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
           obj = { sequence: null };
           let sequence = detectbBySignaturesResult.sequence;
           let merged = Object.assign({}, detectbBySignaturesResult);
-          obj[0] = sequence.map((item, index) => item.toString(16));
+          obj[0] = sequence.map((arg0) => arg0.toString(16));
           obj[3] = Object.assign(merged, obj);
           arr = items.push(obj);
           continue;
@@ -95,7 +97,7 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
       const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
       require = result;
       if (result) {
-        return items.find((item, index) => item.extension === closure_0);
+        return items.find((extension) => extension.extension === closure_0);
       }
     }
   }

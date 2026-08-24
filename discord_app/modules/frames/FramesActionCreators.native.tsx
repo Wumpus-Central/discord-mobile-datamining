@@ -1,7 +1,7 @@
 // discord_app/modules/frames/FramesActionCreators.native.tsx
 import _launchFrameAll from "FramesActionCreators.shared.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/VoiceStateStore.tsx";
 
 function _launchFrameOnNative() {
   const self = this;
@@ -42,6 +42,6 @@ obj.launchFrame = function launchFrameOnNative() {
   }
   return applyArgumentsResult;
 };
-const result = require("obj132").fileFinishedImporting("modules/frames/FramesActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/frames/FramesActionCreators.native.tsx");
 
 export default obj;

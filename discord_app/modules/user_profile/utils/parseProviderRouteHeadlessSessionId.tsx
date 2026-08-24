@@ -1,15 +1,14 @@
 // discord_app/modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx
 import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 let c3 = "h:";
-const result = require("obj132").fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx");
 
 export default function parseProviderRouteHeadlessSessionId(str) {
   if (null != str) {
     if (str.startsWith(c3)) {
-      str = str.slice(2);
-      const first = callback(str.split(","), 1)[0];
+      const first = callback(str.slice(2).split(","), 1)[0];
       if (null != first) {
         if (0 !== first.length) {
           const value = getPlatformUserUrlDefault.get(first);

@@ -1,13 +1,13 @@
 // discord_app/modules/user_affinities/UserAffinitiesActionCreators.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import hasConsented from "../../stores/ConsentStore.tsx";
-import recomputeAffinities from "UserAffinitiesV2Store.tsx";
+import closure_3 from "../../stores/ConsentStore.tsx";
+import closure_4 from "UserAffinitiesV2Store.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ Endpoints: c5, Consents: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/user_affinities/UserAffinitiesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesActionCreators.tsx");
 
 export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
   let flag = arg0;
@@ -27,48 +27,48 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
       }
       obj[1] = num;
       const value = HTTP.get(obj);
-      let nextPromise = value.then((result) => {
-        callback(709);
-        let obj = {
+      let nextPromise = value.then((body) => {
+        let obj = callback(709);
+        obj = {
           type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
-          affineUsers: user_affinities.map((item, index) => {
-            const obj = { otherUserId: item.other_user_id, userSegment: item.user_segment, otherUserSegment: item.other_user_segment, isFriend: item.is_friend, dmProbability: null, dmRank: null, vcProbability: null, vcRank: null, serverMessageProbability: null, serverMessageRank: null, communicationProbability: null, communicationRank: null };
-            let num = item.dm_probability;
+          affineUsers: user_affinities.map((otherUserId) => {
+            const obj = { otherUserId: otherUserId.other_user_id, userSegment: otherUserId.user_segment, otherUserSegment: otherUserId.other_user_segment, isFriend: otherUserId.is_friend, dmProbability: null, dmRank: null, vcProbability: null, vcRank: null, serverMessageProbability: null, serverMessageRank: null, communicationProbability: null, communicationRank: null };
+            let num = otherUserId.dm_probability;
             if (num == null) {
               num = 0;
             }
             obj[4] = num;
-            let num2 = item.dm_rank;
+            let num2 = otherUserId.dm_rank;
             if (num2 == null) {
               num2 = 0;
             }
             obj[5] = num2;
-            let num3 = item.vc_probability;
+            let num3 = otherUserId.vc_probability;
             if (num3 == null) {
               num3 = 0;
             }
             obj[6] = num3;
-            let num4 = item.vc_rank;
+            let num4 = otherUserId.vc_rank;
             if (num4 == null) {
               num4 = 0;
             }
             obj[7] = num4;
-            let num5 = item.server_message_probability;
+            let num5 = otherUserId.server_message_probability;
             if (num5 == null) {
               num5 = 0;
             }
             obj[8] = num5;
-            let num6 = item.server_message_rank;
+            let num6 = otherUserId.server_message_rank;
             if (num6 == null) {
               num6 = 0;
             }
             obj[9] = num6;
-            let num7 = item.communication_probability;
+            let num7 = otherUserId.communication_probability;
             if (num7 == null) {
               num7 = 0;
             }
             obj[10] = num7;
-            let num8 = item.communication_rank;
+            let num8 = otherUserId.communication_rank;
             if (num8 == null) {
               num8 = 0;
             }
@@ -76,7 +76,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
             return obj;
           })
         };
-        user_affinities = result.body.user_affinities;
+        user_affinities = body.body.user_affinities;
         obj.dispatch(obj);
       }, () => {
         callback(709).dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });

@@ -1,14 +1,10 @@
 // discord_app/modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
-import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
-import set from "../../../../emojis/EmojiConstants.tsx";
-import parseRawEmojiObjectDefault from "../../../../emojis/UnicodeEmojis.tsx";
-import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
-import createCommonMessageDefault from "createCommonMessage.tsx";
+import set from "../../../../../../_runtime/00002_set.js";
+import set2 from "../../../../emojis/EmojiConstants.tsx";
 import parsePollResultSystemMessageEmbedDefault from "../../../../polls/parsePollResultSystemMessageEmbed.tsx";
 
-const EMOJI_URL_BASE_SIZE = set.EMOJI_URL_BASE_SIZE;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
+const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
 
 export const createPollResultSystemMessage = function createPollResultSystemMessage(message) {
   const tmp3 = parsePollResultSystemMessageEmbedDefault(message.message.embeds[0]);
@@ -25,7 +21,7 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = message.roleStyle;
-    obj[1] = formatUsernameOnClickDefault(obj);
+    obj[1] = tmp(8187)(obj);
     obj[2] = tmp3.questionText;
     obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
     obj1[1] = message.messageReference.channel_id;
@@ -67,12 +63,12 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
           if (null != id.id) {
             const obj7 = { id: null, type: "customEmoji", alt: null, src: null, frozenSrc: null };
             ({ id: obj3[0], name: obj3[2] } = id);
-            let tmpResult = getAvatarURLDefault;
+            let tmpResult = tmp(1435);
             const obj8 = { id: null, animated: null, size: null };
             ({ id: obj5[0], animated: obj5[1] } = id);
             obj8[2] = EMOJI_URL_BASE_SIZE;
             obj7[3] = tmpResult.getEmojiURL(obj8);
-            tmpResult = getAvatarURLDefault;
+            tmpResult = tmp(1435);
             const obj9 = { id: null, animated: false, size: null };
             id = id.id;
             obj9[0] = id;
@@ -81,17 +77,17 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
             items.push(obj7);
           } else {
             obj = { type: "emoji", content: null, surrogate: null };
-            obj[1] = parseRawEmojiObjectDefault.convertSurrogateToName(id.name, false);
+            obj[1] = tmp(4034).convertSurrogateToName(id.name, false);
             obj[2] = id.name;
             items.push(obj);
-            const tmpResult1 = parseRawEmojiObjectDefault;
+            const tmpResult1 = tmp(4034);
           }
           items.push({ type: "text", content: " " });
         }
       }
     }
     const obj10 = {};
-    const merged3 = Object.assign(createCommonMessageDefault(message));
+    const merged3 = Object.assign(tmp(8188)(message));
     obj10.content = formatToPartsResult;
     return obj10;
   }

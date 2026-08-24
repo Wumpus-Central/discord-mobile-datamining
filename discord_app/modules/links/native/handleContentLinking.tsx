@@ -1,8 +1,8 @@
 // discord_app/modules/links/native/handleContentLinking.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Routes } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _handleContentLinking() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -172,7 +172,7 @@ function _handleContentLinking() {
 }
 require("processCallbacks").addPostConnectionCallback;
 let c6 = null;
-const result = require("obj132").fileFinishedImporting("modules/links/native/handleContentLinking.tsx");
+const result = require("set").fileFinishedImporting("modules/links/native/handleContentLinking.tsx");
 
 export default function handleContentLinking() {
   const self = this;

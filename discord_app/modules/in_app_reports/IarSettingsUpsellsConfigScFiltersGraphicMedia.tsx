@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import resolveGoreSettingWithDefaults from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
@@ -25,25 +25,27 @@ let obj = {
 const items = [ReportNames.ReportSubType.SUB_GORE, ReportNames.ReportSubType.SUB_GLORIFYING_VIOLENCE];
 obj[3] = items;
 obj[4] = function onApply() {
+  let obj = resolveGoreSettingWithDefaults;
   const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
-  const obj = {};
+  obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   if (goreContentGuilds === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentGuilds = create.ExplicitContentRedaction.BLUR;
+    obj.goreContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   if (goreContentFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentFriendDm = create.ExplicitContentRedaction.BLUR;
+    obj.goreContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   if (goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
-    obj.goreContentNonFriendDm = create.ExplicitContentRedaction.BLUR;
+    obj.goreContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
 };
 obj[5] = function predicate() {
   const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
+  const obj = resolveGoreSettingWithDefaults;
   return goreContentGuilds === create.ExplicitContentRedaction.SHOW || goreContentFriendDm === create.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
 };
-const result = obj132.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 
 export default obj;

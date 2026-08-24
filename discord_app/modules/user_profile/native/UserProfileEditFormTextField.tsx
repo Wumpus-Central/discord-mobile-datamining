@@ -4,9 +4,9 @@ import TextInput from "../../../design/components/TextInput/native/TextInput.nat
 import TextArea from "../../../design/components/TextInput/native/TextArea.native.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
 
 export default function UserProfileEditFormTextField(inputRef) {
   ({ errorMessage, numberOfLines } = inputRef);

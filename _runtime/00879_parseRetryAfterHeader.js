@@ -1,11 +1,12 @@
 // _runtime/00879_parseRetryAfterHeader.js
 import safeDateNow from "00831_safeDateNow.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function parseRetryAfterHeader(arg0) {
   let safeDateNowResult = arg1;
   if (arg1 === undefined) {
     safeDateNowResult = safeDateNow.safeDateNow();
+    const obj = safeDateNow;
   }
   const parsed = parseInt("" + arg0, 10);
   if (isNaN(parsed)) {
@@ -32,6 +33,7 @@ export const isRateLimited = function isRateLimited(all) {
   let safeDateNowResult = arg2;
   if (arg2 === undefined) {
     safeDateNowResult = safeDateNow.safeDateNow();
+    const obj = safeDateNow;
   }
   return (all[arg1] || all.all || 0) > safeDateNowResult;
 };
@@ -50,48 +52,59 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
     prop = headers["x-sentry-rate-limits"];
   }
   if (headers != null) {
-    const prop1 = headers["retry-after"];
+    retry_after = headers["retry-after"];
   }
   if (prop) {
     const parts = prop.trim().split(",");
     const iter = parts[Symbol.iterator]();
     const str = prop.trim();
     while (iter !== undefined) {
-      let tmp14 = _slicedToArray(str7.split(":", 5), 5);
-      let str8 = tmp14[1];
-      let str9 = tmp14[4];
+      let tmp12 = callback;
+      let tmp13 = callback(str7.split(":", 5), 5);
+      let str8 = tmp13[1];
+      let str9 = tmp13[4];
       let _parseInt = parseInt;
-      let parsed = parseInt(tmp14[0], 10);
+      let parsed = parseInt(tmp13[0], 10);
+      let tmp15 = parsed;
       let _isNaN = isNaN;
       let num6 = 60;
       if (!isNaN(parsed)) {
         num6 = parsed;
       }
       let result = 1000 * num6;
+      let tmp17 = str8;
       if (str8) {
+        let tmp19 = str8;
         let parts1 = str8.split(";");
+        let tmp21 = parts1;
+        let tmp22 = parts1;
         for (const item10070 of parts1) {
-          let tmp25 = "metric_bucket" === item10070;
-          if (tmp25) {
-            tmp25 = str9;
+          let tmp24 = "metric_bucket" === item10070;
+          let tmp23 = item10070;
+          if (tmp24) {
+            tmp24 = str9;
           }
-          if (tmp25) {
+          if (tmp24) {
+            let tmp25 = str9;
             let parts2 = str9.split(";");
-            tmp25 = !parts2.includes("custom");
+            tmp24 = !parts2.includes("custom");
           }
-          if (!tmp25) {
-            obj[item10070] = safeDateNowResult + result;
+          if (!tmp24) {
+            let tmp26 = item10070;
+            let tmp27 = result;
+            obj[tmp23] = safeDateNowResult + result;
           }
           continue;
         }
       } else {
+        let tmp18 = result;
         obj.all = safeDateNowResult + result;
       }
       continue;
     }
     str7 = iter.next();
-  } else if (prop1) {
-    obj.all = safeDateNowResult + parseRetryAfterHeader(prop1, safeDateNowResult);
+  } else if (retry_after) {
+    obj.all = safeDateNowResult + parseRetryAfterHeader(retry_after, safeDateNowResult);
   } else if (429 === headers.statusCode) {
     obj.all = safeDateNowResult + 60000;
   }

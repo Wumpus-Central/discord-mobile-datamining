@@ -2,12 +2,12 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
 import { Features } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/jwMtn"]);
@@ -29,6 +29,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
 
 export default createToggle;

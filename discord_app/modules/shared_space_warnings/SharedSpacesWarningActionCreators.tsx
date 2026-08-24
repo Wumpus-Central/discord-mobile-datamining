@@ -1,12 +1,12 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 import useSharedSpacesWarningStore from "SharedSpacesWarningStore.tsx";
 
 let closure_2 = useSharedSpacesWarningStore.setDismissalTimeForChannel;
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
 
 export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
   callback(channelId);

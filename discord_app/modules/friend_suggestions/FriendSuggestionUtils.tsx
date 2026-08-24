@@ -1,7 +1,7 @@
 // discord_app/modules/friend_suggestions/FriendSuggestionUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
+const result = set.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
 export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
   let contactNames;

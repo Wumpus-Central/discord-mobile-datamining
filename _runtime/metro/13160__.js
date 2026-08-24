@@ -8,12 +8,12 @@ import { Range } from "../13154_Range.js";
 export default (arg0, arg1, arg2, arg3) => {
   let obj;
   let _require = arg3;
-  const tmp3 = new SemVer(arg0, arg3);
-  const tmp4 = new Range(arg1, arg3);
+  const tmp3 = new _SemVer(arg0, arg3);
+  const tmp4 = new _Range(arg1, arg3);
   if (">" === arg2) {
     dependencyMap = tmp(13143);
-    tmp(13148);
-    let tmpResult = tmp(13144);
+    let tmpResult = tmp(13148);
+    tmpResult = tmp(13144);
     closure_2 = tmpResult;
     let str3 = ">=";
     let str = ">";
@@ -32,7 +32,7 @@ export default (arg0, arg1, arg2, arg3) => {
       throw typeError;
     }
   }
-  if (Range(tmp3, tmp4, arg3)) {
+  if (_Range(tmp3, tmp4, arg3)) {
     return false;
   } else {
     let num = 0;
@@ -42,9 +42,9 @@ export default (arg0, arg1, arg2, arg3) => {
         let arr = tmp4.set[num3];
         _require = null;
         dependencyMap = null;
-        let item = arr.forEach((item, index) => {
-          let tmp = item;
-          if (item.semver === Comparator.ANY) {
+        let item = arr.forEach((semver) => {
+          let tmp = semver;
+          if (semver.semver === Comparator.ANY) {
             tmp = new Comparator(">=0.0.0");
           }
           let tmp6 = _null;
@@ -63,15 +63,24 @@ export default (arg0, arg1, arg2, arg3) => {
             _null2 = tmp;
           }
         });
+        let tmp15 = _require;
+        let tmp16 = num;
         if (_require.operator !== str) {
+          let tmp22 = _require;
           if (_require.operator !== str3) {
+            let tmp17 = dependencyMap;
             if (!dependencyMap.operator) {
+              let tmp19 = dependencyMap;
               if (tmpResult(tmp3, dependencyMap.semver)) {
                 obj = { v: false };
               }
+            } else {
+              let tmp18 = dependencyMap;
             }
+            let tmp20 = dependencyMap;
             obj = undefined;
             if (dependencyMap.operator === str3) {
+              let tmp21 = dependencyMap;
               if (tmpResult1(tmp3, dependencyMap.semver)) {
                 obj = { v: false };
               }

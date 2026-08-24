@@ -1,12 +1,12 @@
 // discord_app/modules/messages/renderMessageMarkup.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import get_defaultRulesDefault from "../markup/MarkupUtils.tsx";
 
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;
   return { channelId: channelId.channelId, messageId: channelId.messageId, authorId: channelId.authorId, allowLinks: Boolean(renderOptions.allowLinks), allowDevLinks: Boolean(renderOptions.allowDevLinks), allowGameMentions: Boolean(renderOptions.allowGameMentions), allowTimeMentionInput: Boolean(renderOptions.allowTimeMentionInput), formatInline: Boolean(renderOptions.formatInline), noStyleAndInteraction: Boolean(renderOptions.noStyleAndInteraction), allowHeading: Boolean(renderOptions.allowHeading), allowList: Boolean(renderOptions.allowList), previewLinkTarget: Boolean(renderOptions.previewLinkTarget), disableAnimatedEmoji: Boolean(renderOptions.disableAnimatedEmoji), allowEmojiLinks: false, disableAutoBlockNewlines: true, mentionChannels: [], soundboardSounds: [], muted: false, unknownUserMentionPlaceholder: true, viewingChannelId: renderOptions.viewingChannelId, forceWhite: Boolean(renderOptions.forceWhite), textColor: renderOptions.textColor, disablePressableChannelMention: Boolean(renderOptions.disablePressableChannelMention) };
 }
-function render(fn, channelId, toAST) {
+function render(arg0, channelId, toAST) {
   closure_0 = channelId;
   toAST = toAST.toAST;
   closure_1 = undefined !== toAST && toAST;
@@ -46,13 +46,13 @@ function render(fn, channelId, toAST) {
   obj = {
     hasSpoilerEmbeds: c6,
     hasBailedAst: c7,
-    content: fn(content, true, obj, (ast, inline) => {
+    content: arg0(content, true, obj, (ast, inline) => {
       let flag = arg2;
       if (arg2 == null) {
         flag = false;
       }
-      channelId(table[0]);
-      const obj = { ast, inline, hasBailedAst: flag, message: channelId, contentMessage, messageContent: content, hideSimpleEmbedContent: table, formatInline: closure_3, toAST: closure_1 };
+      let obj = channelId(table[0]);
+      obj = { ast, inline, hasBailedAst: flag, message: channelId, contentMessage, messageContent: content, hideSimpleEmbedContent: table, formatInline: closure_3, toAST: closure_1 };
       const result = obj.runMessageMarkupPostProcessors(obj);
       ({ ast, hasSpoilerEmbeds: c6 } = result);
       let tmp2 = ast;
@@ -64,7 +64,7 @@ function render(fn, channelId, toAST) {
   };
   return obj;
 }
-let result = obj132.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
+let result = set.fileFinishedImporting("modules/messages/renderMessageMarkup.tsx");
 
 export default function renderMessageMarkup(arg0) {
   let obj = arg1;

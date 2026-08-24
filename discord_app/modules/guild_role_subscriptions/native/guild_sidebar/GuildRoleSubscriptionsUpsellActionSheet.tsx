@@ -5,7 +5,6 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import _modDef8874 from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import registerAssetDefault from "../../../../../_runtime/15506_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { GuildSettingsSections } from "../../../../Constants.tsx";
@@ -13,16 +12,23 @@ import { ContentDismissActionType } from "../../../dismissible_content/Dismissib
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
 
 export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = callback3();
-  let obj = { source: registerAssetDefault };
+  let obj = {
+    startExpanded: true,
+    onDismiss() {
+      return callback(closure_1_5.UNKNOWN);
+    },
+    children: null
+  };
+  obj = { source: registerAssetDefault };
   const items = [callback(preloadDefault, obj), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
@@ -34,8 +40,8 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   items[2] = callback(Text.Text, obj1);
   const obj2 = {
     onPress() {
-      callback(ContentDismissActionType.UNKNOWN);
-      _modDef8874.open(closure_0, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
+      callback(closure_1_5.UNKNOWN);
+      closure_1_1(closure_1_2[12]).open(closure_0, closure_1_4.ROLE_SUBSCRIPTIONS);
     },
     text: null
   };
@@ -45,7 +51,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   const obj3 = { style: tmp.dismissButton, children: null };
   const obj4 = {
     onPress() {
-      return callback(ContentDismissActionType.UNKNOWN);
+      return callback(closure_1_5.UNKNOWN);
     },
     text: null,
     variant: "secondary"

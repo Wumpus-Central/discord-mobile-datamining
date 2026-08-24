@@ -7,11 +7,11 @@ import toSource from "../00742_toSource.js";
 import toStringTag from "../00607_toStringTag.js";
 import getNative from "../00771_getNative.js";
 
-toSource(getNative);
-toSource(getNative2);
-toSource(getNative3);
-toSource(getNative4);
-toSource(getNative5);
+let closure_2 = toSource(getNative);
+let closure_3 = toSource(getNative2);
+let closure_4 = toSource(getNative3);
+let closure_5 = toSource(getNative4);
+let closure_6 = toSource(getNative5);
 if (getNative) {
   const _ArrayBuffer = ArrayBuffer;
   let _module6 = getNative;
@@ -63,15 +63,15 @@ if (getNative) {
       str = toSource(constructor);
     }
     if (str) {
-      if (getNative === str) {
+      if (closure_2 === str) {
         return "[object DataView]";
-      } else if (getNative === str) {
+      } else if (closure_3 === str) {
         return "[object Map]";
-      } else if (getNative === str) {
+      } else if (closure_4 === str) {
         return "[object Promise]";
-      } else if (getNative === str) {
+      } else if (closure_5 === str) {
         return "[object Set]";
-      } else if (getNative === str) {
+      } else if (closure_6 === str) {
         return "[object WeakMap]";
       }
     }

@@ -1,9 +1,9 @@
 // discord_app/components_native/common/SafeAreaView.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-const result = require("obj132").fileFinishedImporting("components_native/common/SafeAreaView.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/SafeAreaView.tsx");
 
 export const SafeAreaPaddingView = function SafeAreaPaddingView(top) {
   let flag = top.top;

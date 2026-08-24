@@ -2,10 +2,10 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import redactionSettingToRenderedString from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
-import "createToggle";
+import closure_2 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 function useGoreContentNonFriendsDmSettingValue() {
   const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
   let prop;
@@ -22,15 +22,15 @@ function useGoreContentNonFriendsDmSettingValue() {
 function onGoreContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    selectedTeenId(14185);
-    let obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
+    let obj = selectedTeenId(14185);
+    obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1236).intl;
     obj[0] = intl.string(selectedTeenId(1236).t["16/3Bi"]);
     const intl2 = selectedTeenId(1236).intl;
     obj[1] = intl2.string(selectedTeenId(1236).t["Yh+HX1"]);
     obj[2] = function handlePress(goreContentNonFriendDm) {
-      selectedTeenId(dependencyMap[4]);
-      const obj = { goreContentNonFriendDm };
+      let obj = selectedTeenId(closure_1_1[4]);
+      obj = { goreContentNonFriendDm };
       return obj.updateGoreContentSetting(selectedTeenId, obj);
     };
     obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
@@ -40,7 +40,7 @@ function onGoreContentNonFriendsDmOnPress() {
     const obj2 = selectedTeenId(14178);
   }
 }
-let createToggle = {
+createToggle = {
   useTitle: function getTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["Yh+HX1"]);
@@ -51,7 +51,7 @@ let createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default createToggle;
 export { useGoreContentNonFriendsDmSettingValue };

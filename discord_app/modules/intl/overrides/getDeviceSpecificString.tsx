@@ -1,8 +1,8 @@
 // discord_app/modules/intl/overrides/getDeviceSpecificString.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
+const result = set.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
 export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2Yp7dF) {
   let str = null;

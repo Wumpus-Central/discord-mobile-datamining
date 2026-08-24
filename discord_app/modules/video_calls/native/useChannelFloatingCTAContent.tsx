@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/useChannelFloatingCTAContent.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");
 
 export default function useChannelFloatingCTAContent(arg0) {
   const _require = arg0;
@@ -30,7 +30,7 @@ export default function useChannelFloatingCTAContent(arg0) {
     if (stateFromStores) {
       items.push(callback(stateFromStores[5]).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
     }
-    if (closure_1.some((item, index) => item.twoWayLink)) {
+    if (closure_1.some((twoWayLink) => twoWayLink.twoWayLink)) {
       items.push(callback(stateFromStores[5]).DismissibleContent.DONUT_MOBILE_NUX);
     }
     return items;

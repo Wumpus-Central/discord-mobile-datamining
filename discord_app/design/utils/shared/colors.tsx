@@ -1,11 +1,12 @@
 // discord_app/design/utils/shared/colors.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import nDefault from "../../../../_runtime/00689_n.js";
 
-const result = obj132.fileFinishedImporting("design/utils/shared/colors.tsx");
+const result = set.fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {
   const obj = nDefault(token);
+  const tmp = importDefault;
   const rgbaResult = obj.rgba();
   const rgbaResult1 = nDefault(context).rgba();
   if (1 !== rgbaResult1[3]) {

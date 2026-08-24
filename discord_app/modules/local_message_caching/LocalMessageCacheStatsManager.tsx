@@ -1,5 +1,5 @@
 // discord_app/modules/local_message_caching/LocalMessageCacheStatsManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import recordChannelFetchStartDefault from "MessageCacheStats.tsx";
@@ -39,7 +39,8 @@ function handleAppStateUpdate(state) {
     const _Array = Array;
     const fetchLogs = recordChannelFetchStartDefault.fetchLogs;
     const mapped = Array.from(fetchLogs.values()).map(makeLogLine);
-    const obj = { num_channels_fetch_started: null, num_channels_local_cached: null, num_channels_fetched_network: null, num_times_backgrounded: null, fetch_entries: null };
+    let obj = expandEventPropertiesDefault;
+    obj = { num_channels_fetch_started: null, num_channels_local_cached: null, num_channels_fetched_network: null, num_times_backgrounded: null, fetch_entries: null };
     obj[0] = recordChannelFetchStartDefault.channelsFetchStarted.size;
     obj[1] = recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size;
     obj[2] = recordChannelFetchStartDefault.channelsFetchedNetwork.size;
@@ -62,6 +63,6 @@ let prototype = function LocalMessageCacheStatsManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = obj132.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
+const result = set.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
 
 export default prototype;

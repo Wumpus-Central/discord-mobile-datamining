@@ -1,9 +1,9 @@
 // _runtime/01774__isNativeReflectConstruct.js
 import FlipOutEasyY from "metro/00032__slicedToArray.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -54,8 +54,10 @@ class FlipInXUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetHeight) {
-        const items = [{ perspective: 500 }, { rotateX: "90deg" }, ];
-        const obj = { translateY: -targetHeight.targetHeight };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "90deg" }, ];
+        obj = { translateY: -targetHeight.targetHeight };
         items[2] = obj;
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -116,8 +118,10 @@ class FlipInYLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetWidth) {
-        const items = [{ perspective: 500 }, { rotateY: "-90deg" }, ];
-        const obj = { translateX: -targetWidth.targetWidth };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "-90deg" }, ];
+        obj = { translateX: -targetWidth.targetWidth };
         items[2] = obj;
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -180,8 +184,10 @@ class FlipInXDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetHeight) {
-        const items = [{ perspective: 500 }, { rotateX: "-90deg" }, ];
-        const obj = { translateY: targetHeight.targetHeight };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateX: "-90deg" }, ];
+        obj = { translateY: targetHeight.targetHeight };
         items[2] = obj;
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -244,8 +250,10 @@ class FlipInYRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(targetWidth) {
-        const items = [{ perspective: 500 }, { rotateY: "90deg" }, ];
-        const obj = { translateX: targetWidth.targetWidth };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
+        items = [{ perspective: 500 }, { rotateY: "90deg" }, ];
+        obj = { translateX: targetWidth.targetWidth };
         items[2] = obj;
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -309,7 +317,8 @@ class FlipInEasyX {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateX: "90deg" }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -371,7 +380,8 @@ class FlipInEasyY {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateY: "90deg" }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -433,7 +443,8 @@ class FlipOutXUp {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentHeight) {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateX: "0deg" }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -497,7 +508,8 @@ class FlipOutYLeft {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateY: "0deg" }, { translateX: 0 }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -561,7 +573,8 @@ class FlipOutXDown {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentHeight) {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateX: "0deg" }, { translateY: 0 }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -625,7 +638,8 @@ class FlipOutYRight {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n(currentWidth) {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateY: "0deg" }, { translateX: 0 }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -689,7 +703,8 @@ class FlipOutEasyX {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateX: "0deg" }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;
@@ -751,7 +766,8 @@ class FlipOutEasyY {
       const callbackV = delayFunction.callbackV;
       const initialValues = delayFunction.initialValues;
       const fn = function n() {
-        let obj = { transform: items };
+        let obj = { initialValues: null, animations: null, callback: null };
+        obj = { transform: items };
         items = [{ perspective: 500 }, { rotateY: "0deg" }];
         const merged = Object.assign(initialValues);
         obj[0] = obj;

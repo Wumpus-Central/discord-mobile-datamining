@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/RowGeneratorTypes.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");
 
 export const MediaGalleryItemType = { IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO", VISUAL_PLACEHOLDER: 3, [3]: "VISUAL_PLACEHOLDER" };
 export const MessageContextType = { DEFAULT: 0, [0]: "DEFAULT", SEARCH: 1, [1]: "SEARCH", MEDIA_VIEWER: 2, [2]: "MEDIA_VIEWER" };

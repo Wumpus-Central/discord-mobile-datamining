@@ -4,9 +4,9 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import getAlertModalItemKey from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/OneTimeLoginForgotPasswordConfirmAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/OneTimeLoginForgotPasswordConfirmAlertModal.tsx");
 
 export default function OneTimeLoginForgotPasswordConfirmAlertModal() {
   let obj = { title: null, content: null, actions: null };
@@ -14,6 +14,7 @@ export default function OneTimeLoginForgotPasswordConfirmAlertModal() {
   obj[0] = intl.string(getSystemLocale.t["6Ecyts"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.iAcrqV);
+  obj = { children: null };
   obj = { text: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.BddRzS);

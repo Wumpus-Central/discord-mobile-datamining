@@ -1,21 +1,21 @@
 // _runtime/00600_arrayEach.js
 
-export default function arrayEach(arr, fn) {
+export default function arrayEach(arg0, arg1) {
   let num = 0;
-  if (null != arr) {
-    num = arr.length;
+  if (null != arg0) {
+    num = arg0.length;
   }
   if (0 < num) {
     let num3 = 0;
-    if (false !== fn(arr[0], 0, arr)) {
+    if (false !== arg1(arg0[0], 0, arg0)) {
       const sum = num3 + 1;
       while (sum < num) {
         num3 = sum;
-        if (false === fn(arr[sum], sum, arr)) {
+        if (false === arg1(arg0[sum], sum, arg0)) {
           break;
         }
       }
     }
   }
-  return arr;
+  return arg0;
 };

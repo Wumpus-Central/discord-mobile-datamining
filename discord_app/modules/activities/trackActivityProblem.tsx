@@ -1,10 +1,10 @@
 // discord_app/modules/activities/trackActivityProblem.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
+const result = set.fileFinishedImporting("modules/activities/trackActivityProblem.tsx");
 
 export default function trackActivityProblem(arg0) {
   ({ channel, activityApplication, analyticsData } = arg0);
@@ -16,7 +16,8 @@ export default function trackActivityProblem(arg0) {
   if (rating === undefined) {
     rating = null;
   }
-  const obj = { reason: problem, guild_id: null, channel_id: null, application_id: null, application_name: null, location: null, rating: null, feedback: null, embedded_activity_location_kind: null, rtc_connection_id: null, media_session_id: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { reason: problem, guild_id: null, channel_id: null, application_id: null, application_name: null, location: null, rating: null, feedback: null, embedded_activity_location_kind: null, rtc_connection_id: null, media_session_id: null };
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();

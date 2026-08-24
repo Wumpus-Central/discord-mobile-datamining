@@ -1,5 +1,5 @@
 // discord_app/modules/premium_marketing/native/BuyNitroMarketingFooter.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import LegacyBaseButton from "../../../../_runtime/06377_LegacyBaseButton.js";
@@ -10,18 +10,20 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 ({ Platform, View: c3 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-let obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: 0, backgroundColor: null, borderTopColor: null, borderTopWidth: 1 };
+let obj = { footer: null };
+obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: 0, backgroundColor: null, borderTopColor: null, borderTopWidth: 1 };
 const PX_24 = ThemesDefault.space.PX_24;
 obj[3] = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
 obj[4] = ThemesDefault.colors.BORDER_SUBTLE;
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingFooter.tsx");
+const result = set.fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketingFooter.tsx");
 
 export default function BuyNitroMarketingFooter(arg0) {
   ({ planSelection, applicationId, onPaymentSuccess, onPaymentDismiss } = arg0);
   let obj = LegacyBaseButton;
   const panGesture = obj.usePanGesture({ activeOffsetY: [-8, 8] });
+  obj = { gesture: panGesture, children: null };
   obj = { style: callback().footer, collapsable: false, children: null };
   obj1 = { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null };
   const tmp = callback();

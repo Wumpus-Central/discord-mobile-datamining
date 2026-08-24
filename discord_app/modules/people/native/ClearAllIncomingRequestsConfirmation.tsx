@@ -1,31 +1,41 @@
 // discord_app/modules/people/native/ClearAllIncomingRequestsConfirmation.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { display: "flex", flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%", paddingTop: ThemesDefault.space.PX_24 };
+createCacheKey = { root: null, closeButton: null, content: null, container: null, footer: null, header: null, headerText: null, body: null, noticeHeader: null, buttonWrapper: null };
+createCacheKey = { display: "flex", flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 8, alignSelf: "flex-end" };
 createCacheKey[2] = { flexGrow: 1, padding: ThemesDefault.space.PX_16 };
+let obj1 = { flexGrow: 1, padding: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { display: "flex", flexDirection: "column", height: "100%", marginTop: ThemesDefault.space.PX_24 };
+let obj2 = { display: "flex", flexDirection: "column", height: "100%", marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { flexGrow: 0, flexShrink: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj3 = { flexGrow: 0, flexShrink: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj4 = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
+let obj5 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[7] = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj6 = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[8] = { marginBottom: ThemesDefault.space.PX_4 };
+let obj7 = { marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[9] = { marginBottom: ThemesDefault.space.PX_4 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmation.tsx");
+let obj8 = { marginBottom: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmation.tsx");
 
 export default function ClearAllIncomingRequestsConfirmationModal(incomingRequestCount) {
   let _require;
   let callback;
+  let callback1;
   const tmp = callback4();
   [tmp3, c0] = callback(React.useState(false), 2);
   callback = React.useCallback(() => {
@@ -33,7 +43,7 @@ export default function ClearAllIncomingRequestsConfirmationModal(incomingReques
     let arr = callback(callback1[6]);
     arr = arr.pop();
   }, []);
-  const callback1 = React.useCallback(() => {
+  callback1 = React.useCallback(() => {
     _undefined(false);
     const intl = _undefined(callback1[8]).intl;
     _undefined(callback1[7]).presentFailedToast(intl.string(_undefined(callback1[8]).t.R0RpRX));
@@ -45,7 +55,9 @@ export default function ClearAllIncomingRequestsConfirmationModal(incomingReques
     const obj = callback(callback1[9]);
     result.then(callback).catch(callback1);
   }, items);
-  let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
+  let obj = { top: true, children: null };
+  obj = { style: tmp.root, children: null };
+  obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp2 = callback(React.useState(false), 2);
   let intl = _require(callback1[8]).intl;
   obj[1] = intl.string(_require(callback1[8]).t.cpT0Cq);

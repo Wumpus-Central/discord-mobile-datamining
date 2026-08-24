@@ -21,10 +21,12 @@ export default function formatDistance(arg0, arg1, arg2) {
         if (tmp.otherWithSuffix) {
           const _String2 = String;
           let replaced = tmp.otherWithSuffix.replace("{{count}}", String(arg1));
+          const str3 = tmp.otherWithSuffix;
         }
       }
       const _String = String;
       replaced = tmp.other.replace("{{count}}", String(arg1));
+      const str = tmp.other;
     }
     if (!obj.addSuffix) {
       const one = tmp.one;

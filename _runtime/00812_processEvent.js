@@ -1,5 +1,5 @@
 // _runtime/00812_processEvent.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const require = arg1;
 function processEvent(arg0, arg1) {
@@ -58,13 +58,15 @@ function processEvent(arg0, arg1) {
                     do {
                       let arr = items.push(tmp);
                       let cause = tmp.cause;
+                      let tmp3 = tmp51;
+                      let tmp4 = dependencyMap;
                       let obj2 = tmp51(813);
                       tmp = cause;
                       isErrorLikeResult = obj2.isErrorLike(cause);
                     } while (isErrorLikeResult);
                   }
                   return items;
-                })(closure_1_1.originalException).entries();
+                })(tmp40.originalException).entries();
                 dependencyMap = entries;
                 dependencyMap = entries;
                 closure_0 = entries[Symbol.iterator]();
@@ -88,23 +90,26 @@ function processEvent(arg0, arg1) {
                     do {
                       let arr = items.push(tmp);
                       let cause = tmp.cause;
+                      let tmp3 = tmp51;
+                      let tmp4 = dependencyMap;
                       let obj2 = tmp51(813);
                       tmp = cause;
                       isErrorLikeResult = obj2.isErrorLike(cause);
                     } while (isErrorLikeResult);
                   }
                   return items;
-                })(closure_1_1.originalException);
+                })(tmp40.originalException);
               }
               v02 = 3;
+              tmp40 = closure_1_1;
             }
             if (closure_1_1.syntheticException) {
               let obj3 = closure_1_0(closure_1_1[1]);
-              if (obj3.isErrorLike(closure_1_1.syntheticException)) {
+              if (obj3.isErrorLike(tmp41.syntheticException)) {
                 v0 = 3;
                 v02 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = v0(closure_1_1.syntheticException.stack, closure_1_0(closure_1_1[1]).getFramesToPop(closure_1_1.syntheticException));
+                obj2[0] = v0(tmp41.syntheticException.stack, closure_1_0(closure_1_1[1]).getFramesToPop(tmp41.syntheticException));
                 return obj2;
               }
             }
@@ -148,7 +153,7 @@ function processEvent(arg0, arg1) {
             }
             if (threads) {
               (function replaceThreadFramesInEvent(closure_0, closure_5) {
-                const threads = tmp51.threads;
+                const threads = closure_0.threads;
                 let values;
                 if (null !== threads) {
                   if (undefined !== threads) {
@@ -168,7 +173,7 @@ function processEvent(arg0, arg1) {
                   }
                 }
                 if (stacktrace) {
-                  tmp51.threads.values[0].stacktrace.frames = closure_5.reverse();
+                  closure_0.threads.values[0].stacktrace.frames = closure_5.reverse();
                 }
               })(closure_0, closure_5);
             }
@@ -195,6 +200,10 @@ function processEvent(arg0, arg1) {
 }
 function symbolicate(arg0) {
   closure_0 = arg0;
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 0;
+  }
   return fn(undefined, undefined, undefined, () => {
     c4 = 0;
     closure_5 = 0;
@@ -234,12 +243,12 @@ function symbolicate(arg0) {
               c3 = undefined;
               c4 = undefined;
               c3 = 1;
-              const obj10 = closure_1_0(num[2]);
-              const parseErrorStackResult = closure_1_0(num[2]).parseErrorStack(closure_1_0);
+              const obj10 = closure_1_0(closure_1_1[2]);
+              const parseErrorStackResult = closure_1_0(closure_1_1[2]).parseErrorStack(closure_1_0);
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(num[2]).symbolicateStackTrace(parseErrorStackResult);
+              obj1[0] = closure_1_0(closure_1_1[2]).symbolicateStackTrace(parseErrorStackResult);
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -247,7 +256,7 @@ function symbolicate(arg0) {
             const message = closure_2;
             const _Error = Error;
             if (message instanceof Error) {
-              const debug2 = closure_1_0(num[3]).debug;
+              const debug2 = closure_1_0(closure_1_1[3]).debug;
               const _HermesInternal = HermesInternal;
               debug2.warn("Unable to symbolicate stack trace: " + message.message);
             }
@@ -272,17 +281,18 @@ function symbolicate(arg0) {
                   stack = tmp19;
                 }
                 const _Math = Math;
-                closure_2 = Math.max(num - 1, 0);
+                closure_2 = Math.max(closure_1_1 - 1, 0);
                 found = stack;
                 if (closure_2) {
                   let substr = found.slice(closure_2);
                 } else {
                   substr = found;
                 }
-                found = substr.filter((item, index) => {
-                  let file = item.file;
+                found = substr.filter((file) => {
+                  file = file.file;
                   if (file) {
-                    file = null === item.file.match(c4);
+                    file = null === file.file.match(c4);
+                    const str = file.file;
                   }
                   return file;
                 });
@@ -297,7 +307,7 @@ function symbolicate(arg0) {
                 c4 = 3;
                 c5 = 1;
               } else {
-                const debug = closure_1_0(num[3]).debug;
+                const debug = closure_1_0(closure_1_1[3]).debug;
                 debug.error("React Native DevServer could not symbolicate the stack trace.");
                 c3 = 0;
                 c5 = 3;
@@ -316,7 +326,7 @@ function symbolicate(arg0) {
               return obj3;
             } else {
               c4 = arg1;
-              obj2 = closure_1_0(num[2]);
+              obj2 = closure_1_0(closure_1_1[2]);
               c4 = 4;
               c5 = 1;
               const obj4 = { value: null, done: false };
@@ -374,12 +384,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -399,8 +409,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -414,13 +424,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);

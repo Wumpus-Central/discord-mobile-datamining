@@ -1,22 +1,24 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import importDefaultResult from "../SettingsAppearanceConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult1 from "../../../../reanimated/ReanimatedRexport.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = importDefaultResult1.createAnimatedComponent(require("Button").Icon);
-let obj = { gap: ThemesDefault.space.PX_24, alignItems: "center" };
+let obj = { container: null, textCentered: null, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
+obj = { gap: ThemesDefault.space.PX_24, alignItems: "center" };
 obj[0] = obj;
 obj[1] = { textAlign: "center" };
-const createCacheKey = { gap: ThemesDefault.space.PX_4, alignItems: "center" };
+createCacheKey = { gap: ThemesDefault.space.PX_4, alignItems: "center" };
 obj[2] = createCacheKey;
 obj[3] = { minHeight: 20, marginTop: ThemesDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+let obj2 = { minHeight: 20, marginTop: ThemesDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
 obj[4] = { position: "absolute", left: ThemesDefault.space.PX_24 };
 let obj4 = { borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_4, paddingRight: ThemesDefault.space.PX_8 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
@@ -25,12 +27,14 @@ obj[5] = obj4;
 let items = [{ rotate: "90deg" }];
 obj[6] = { transform: items };
 obj[7] = { textTransform: "uppercase" };
+let obj3 = { position: "absolute", left: ThemesDefault.space.PX_24 };
 obj[8] = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
 obj[9] = { flexDirection: "row" };
 obj[10] = { flexGrow: 0 };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function SettingsAppearanceThemeCarouselTsx1(){const{withTiming,isMidnightNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isMidnightNuxVisible.get()?1:0,timingStandard),pointerEvents:isMidnightNuxVisible.get()?'auto':'none'};}" };
-let result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
+let obj5 = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
+let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
 
 export default function SettingsAppearanceThemeCarousel(themes) {
   themes = themes.themes;
@@ -38,15 +42,20 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   const isPreview = themes.isPreview;
   ({ defaultIndex, deviceWidth } = themes);
   ({ animatedStyles, hasMidnightNux: closure_4, isRefreshEnabled, onThemeSelected } = themes);
+  let ref;
+  let callback;
+  closure_8 = undefined;
+  let sharedValue;
+  let sharedValue1;
   let callback2;
   const tmp = callback2();
   let obj = themes(isPreview[8]);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
-  const ref = deviceWidth.useRef(null);
-  deviceWidth.useRef(defaultIndex);
+  ref = deviceWidth.useRef(null);
+  callback = deviceWidth.useRef(defaultIndex);
   const items = [themes];
   closure_8 = deviceWidth.useMemo(() => {
-    const findIndexResult = themes.findIndex((item, index) => "midnight" === item.theme);
+    const findIndexResult = themes.findIndex((theme) => "midnight" === theme.theme);
     let num = 0;
     if (findIndexResult >= 0) {
       num = findIndexResult;
@@ -54,9 +63,9 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     return num;
   }, items);
   obj1 = themes(isPreview[4]);
-  const sharedValue = obj1.useSharedValue(false);
+  sharedValue = obj1.useSharedValue(false);
   let obj2 = themes(isPreview[4]);
-  const sharedValue1 = obj2.useSharedValue(false);
+  sharedValue1 = obj2.useSharedValue(false);
   const items1 = [sharedValue, sharedValue1];
   const effect = deviceWidth.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -68,35 +77,35 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   const items2 = [onThemeSelected];
   callback2 = deviceWidth.useMemo(() => currentThemeIndex(isPreview[9]).debounce(onThemeSelected, 180), items2);
   const items3 = [isPreview, onThemeSelected, currentThemeIndex];
-  const callback = deviceWidth.useCallback((index) => {
+  callback = deviceWidth.useCallback((index) => {
     index = index.index;
     return ref(currentThemeIndex(isPreview[10]), {
       themePreset: index.item,
       isPreview,
       isSelected: index === currentThemeIndex,
       onPress() {
-        if (null != ref.current) {
-          const current = ref.current;
+        if (null != closure_1_6.current) {
+          const current = tmp.current;
           const currentIndex = current.getCurrentIndex();
           if (currentIndex === index) {
-            return onThemeSelected(index);
+            return closure_1_5(tmp3);
           } else {
-            if (currentIndex !== index) {
+            if (currentIndex !== tmp3) {
               if (0 === currentIndex) {
                 let obj = { count: null };
-                obj[0] = index;
-                return ref.current.next(obj);
+                obj[0] = tmp3;
+                return tmp.current.next(obj);
               } else {
-                const current2 = ref.current;
+                const current2 = tmp.current;
                 obj = { index: null, animated: true };
-                obj[0] = index;
+                obj[0] = tmp3;
                 current2.scrollTo(obj);
               }
             }
-            const current3 = ref.current;
+            const current3 = tmp.current;
             if (current3 != null) {
               obj = { index: null, animated: true };
-              obj[0] = index;
+              obj[0] = tmp3;
               current3.scrollTo(obj);
             }
           }
@@ -144,13 +153,13 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   obj8 = themes[currentThemeIndex];
   items4[1] = callback(themes(isPreview[15]).Text, obj2);
   obj[1] = items4;
-  let tmp11Result = tmp11(closure_4, obj);
+  let tmp11Result = tmp11(tmp12, obj);
   if (!isScreenReaderEnabled) {
     if (!tmp2(tmp3[16]).isThumbstickScrollDevice) {
       obj3 = { children: null };
       const obj4 = { pointerEvents: "none", style: null };
       obj4[1] = tmp.selectionBorder;
-      const items5 = [tmp17(closure_4, obj4), ];
+      const items5 = [tmp17(tmp12, obj4), ];
       const obj5 = { ref: null, data: null, renderItem: null, style: null, width: null, height: null, loop: false, pagingEnabled: true, defaultIndex: null, onSnapToItem: null, scrollAnimationDuration: 200, onProgressChange: null };
       obj5[0] = ref;
       obj5[1] = themes;
@@ -191,7 +200,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     const obj7 = { children: null };
     obj7[0] = tmp11Result;
-    let tmp17Result = tmp17(closure_4, obj7);
+    let tmp17Result = tmp17(tmp12, obj7);
     obj8 = { animated: true, style: null, variant: "text-sm/medium", children: null };
     const items6 = [animatedStyles.headerSecondary, tmp.textCentered];
     obj8[1] = items6;
@@ -209,7 +218,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
         obj10[0] = tmp.labelGroup;
         const items8 = [tmp11Result, tmp17Result];
         obj10[1] = items8;
-        items7[1] = tmp11(closure_4, obj10);
+        items7[1] = tmp11(tmp12, obj10);
         obj9[0] = items7;
         let tmp28 = obj9;
       } else {
@@ -239,9 +248,9 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       items12[1] = tmp17(tmp2(tmp3[15]).Text, obj15);
       obj13[1] = items12;
       obj12[1] = tmp11(currentThemeIndex(tmp3[4]).View, obj13);
-      const items14 = [tmp17(closure_4, obj12), tmp11(sharedValue, tmp28)];
+      const items14 = [tmp17(tmp12, obj12), tmp11(sharedValue, tmp28)];
       obj11[1] = items14;
-      return tmp11(closure_4, obj11);
+      return tmp11(tmp12, obj11);
     }
     const intl = tmp2(tmp3[19]).intl;
     const string = intl.string;
@@ -256,36 +265,18 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     horizontal: true,
     style: tmp.a11yThemeListScroll,
     contentContainerStyle: tmp.a11yThemeList,
-    children: themes.map((item, index) => {
-      { children: ref(currentThemeIndex(isPreview[10]), obj) };
-      closure_0 = index;
+    children: themes.map((themePreset) => {
+      obj = { children: ref(currentThemeIndex(isPreview[10]), obj) };
+      closure_0 = arg1;
       obj = {
-        themePreset: item,
+        themePreset,
         isPreview,
-        isSelected: index === currentThemeIndex,
+        isSelected: arg1 === currentThemeIndex,
         onPress() {
-          return onThemeSelected(closure_0);
+          return closure_1_5(closure_0);
         }
       };
-      return ref(closure_1_4, obj, "theme-" + index);
+      return ref(closure_1_4, obj, "theme-" + arg1);
     })
   });
-  const obj16 = {
-    horizontal: true,
-    style: tmp.a11yThemeListScroll,
-    contentContainerStyle: tmp.a11yThemeList,
-    children: themes.map((item, index) => {
-      { children: ref(currentThemeIndex(isPreview[10]), obj) };
-      closure_0 = index;
-      obj = {
-        themePreset: item,
-        isPreview,
-        isSelected: index === currentThemeIndex,
-        onPress() {
-          return onThemeSelected(closure_0);
-        }
-      };
-      return ref(closure_1_4, obj, "theme-" + index);
-    })
-  };
 };

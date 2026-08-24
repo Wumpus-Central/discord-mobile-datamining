@@ -1,9 +1,9 @@
 // discord_app/modules/opt_in_channels/FavoritesSuggestionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
+import closure_0 from "../../stores/ChannelStore.tsx";
+import closure_1 from "../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../stores/UserGuildSettingsStore.tsx";
 
 function handleChange() {
   channelId = channelId.getChannelId();
@@ -20,15 +20,19 @@ function handleChange() {
           if (null == dependencyMap[guild_id]) {
             const _Set = Set;
             const set = new Set();
-            dependencyMap[guild_id] = set;
+            tmp6[guild_id] = set;
           }
           if (optInEnabled.isFavorite(guild_id, channelId)) {
-            dependencyMap[guild_id].delete(channelId);
+            tmp6[guild_id].delete(channelId);
+            const obj4 = tmp6[guild_id];
           } else {
             if (null == dependencyMap2[guild_id]) {
               if (dependencyMap3[channelId] > 50) {
-                dependencyMap[guild_id].add(channelId);
+                tmp6[guild_id].add(channelId);
+                const obj3 = tmp6[guild_id];
               }
+            } else {
+              const obj2 = tmp12[guild_id];
             }
             return flag;
           }
@@ -36,6 +40,7 @@ function handleChange() {
         delete tmp[tmp2];
         if (null != dependencyMap[guild_id]) {
           dependencyMap[guild_id].delete(channelId);
+          const obj5 = dependencyMap[guild_id];
         }
       }
     }
@@ -56,16 +61,26 @@ prototype["initialize"] = function initialize(arg0) {
     ({ suggestedChannels, dismissedSuggestions, channelOpensByChannelId } = arg0);
     if (null != suggestedChannels) {
       for (const key10015 in suggestedChannels) {
+        let tmp7 = key10015;
+        let tmp8 = closure_3;
         let _Set = Set;
+        let tmp9 = new.target;
+        let tmp10 = new.target;
         let set = new Set(suggestedChannels[key10015]);
+        let tmp12 = set;
         closure_3[key10015] = set;
         continue;
       }
     }
     if (null != dismissedSuggestions) {
       for (const key10019 in dismissedSuggestions) {
+        let tmp13 = key10019;
+        let tmp14 = closure_4;
         let _Set2 = Set;
+        let tmp15 = new.target;
+        let tmp16 = new.target;
         let set1 = new Set(dismissedSuggestions[key10019]);
+        let tmp18 = set1;
         closure_4[key10019] = set1;
         continue;
       }
@@ -89,13 +104,13 @@ const favoritesSuggestionStore = new FavoritesSuggestionStore(dispatcherDefault,
     if (null == dependencyMap2[guildId]) {
       const _Set = Set;
       const set = new Set();
-      dependencyMap2[guildId] = set;
+      tmp[guildId] = set;
     }
     dependencyMap2[guildId].add(channelId);
     dependencyMap[guildId].delete(channelId);
     return true;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/opt_in_channels/FavoritesSuggestionStore.tsx");
+const result = require("set").fileFinishedImporting("modules/opt_in_channels/FavoritesSuggestionStore.tsx");
 
 export default favoritesSuggestionStore;

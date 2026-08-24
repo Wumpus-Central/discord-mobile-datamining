@@ -1,9 +1,9 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { DEFAULT: "DEFAULT", YAPPING: "YAPPING", VENTING: "VENTING", OVERSHARING: "OVERSHARING", BARKING: "BARKING", BABBLING: "BABBLING", DAYDREAMING: "DAYDREAMING" };
 obj = { emojis: [], typingSuggestion: obj.DEFAULT, animation: null };
-const result = obj132.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
+const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
 
 export const CustomTypingIndicatorAnimation = { PULSE: "PULSE", RING: "RING", WAVE: "WAVE" };
 export const CustomTypingIndicatorSuggestion = obj;

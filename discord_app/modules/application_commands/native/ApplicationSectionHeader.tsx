@@ -2,18 +2,20 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../../stores/GuildMemberStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 };
+createCacheKey = { applicationHeaderWrapper: null, applicationIcon: null };
+createCacheKey = { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ApplicationSectionHeader.tsx");
+const obj1 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationSectionHeader.tsx");
 
 export default function ApplicationSectionHeader(section) {
   section = section.section;
@@ -25,10 +27,10 @@ export default function ApplicationSectionHeader(section) {
     if (null != guildId) {
       let botId;
       if (section != null) {
-        botId = section.botId;
+        botId = tmp2.botId;
       }
       if (null != botId) {
-        return closure_1_4.getMember(tmp, section.botId);
+        return closure_1_4.getMember(tmp, tmp2.botId);
       }
     }
   });
@@ -54,6 +56,6 @@ export default function ApplicationSectionHeader(section) {
   }
   const items1 = [tmp9, callback(section(4734).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
   obj[2] = items1;
-  return callback(View, obj);
+  return closure_6(View, obj);
 };
 export const APPLICATION_SECTION_HEADER_HEIGHT = 32;

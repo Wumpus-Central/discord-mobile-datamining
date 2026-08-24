@@ -1,18 +1,18 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTeen.tsx
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
+import closure_3 from "../FamilyCenterStore.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeen.tsx");
 
 export const useSelectedTeen = function useSelectedTeen() {
   const items = [closure_3];
-  _require = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
-  const obj = defaultAreStatesEqual;
+  _require = _defaultAreStatesEqual.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  const obj = _defaultAreStatesEqual;
   const items1 = [closure_2];
-  return require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items1, () => {
     let user;
     if (null !== closure_0) {
       user = closure_1_2.getUser(tmp);

@@ -1,10 +1,10 @@
 // discord_app/modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsActionSheetWrapper.tsx");
 
 export default function SafetyToolsActionSheetWrapper(channelId) {
   channelId = channelId.channelId;
@@ -22,6 +22,7 @@ export default function SafetyToolsActionSheetWrapper(channelId) {
   }, items1);
   let tmp5 = null;
   if (null != stateFromStores) {
+    obj = { showGradient: true, startExpanded: true, header: null, children: null };
     obj = { recipientId: null, warningId: null, warningType: null, hasBackButton: null, title: null, channelId: null };
     obj[0] = recipientId;
     obj[1] = warningId;

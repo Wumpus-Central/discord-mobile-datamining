@@ -5,25 +5,36 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
+createCacheKey = { container: null, topContainer: null, setAsThumbnailContainer: null, contentContainer: null, title: null, description: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, width: "100%", paddingVertical: 40, paddingHorizontal: 12, backgroundColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING, borderRadius: ThemesDefault.radii.sm };
+let obj1 = { flex: 1, width: "100%", paddingVertical: 40, paddingHorizontal: 12, backgroundColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[2] = { flex: 1, flexDirection: "row", padding: 12, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, alignItems: "center", justifyContent: "space-between" };
 createCacheKey[3] = { alignItems: "center", flex: 1 };
 createCacheKey[4] = { marginTop: 24 };
 createCacheKey[5] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/media_channel/native/MediaPostMultipleThumbnailActionSheet.tsx");
+let obj2 = { flex: 1, flexDirection: "row", padding: 12, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, alignItems: "center", justifyContent: "space-between" };
+const result = require("set").fileFinishedImporting("modules/media_channel/native/MediaPostMultipleThumbnailActionSheet.tsx");
 
 export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const tmp = callback3();
-  const obj = { contentContainerStyle: items, children: null };
+  let obj = {
+    backdropOpacity: 0.8,
+    onDismiss() {
+      return markAsDismissed(closure_1_4.UNKNOWN);
+    },
+    children: null
+  };
+  obj = { style: tmp.container, children: null };
+  obj = { contentContainerStyle: items, children: null };
   items = [tmp.contentContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj1 = { style: tmp.topContainer, children: null };
   const obj2 = { style: tmp.setAsThumbnailContainer, children: null };
@@ -48,7 +59,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const intl4 = markAsDismissed(1236).intl;
   obj6[0] = intl4.string(markAsDismissed(1236).t["NX+WJN"]);
   obj6[2] = function onPress() {
-    return markAsDismissed(ContentDismissActionType.UNKNOWN);
+    return markAsDismissed(closure_1_4.UNKNOWN);
   };
   items2[5] = callback(markAsDismissed(4745).Button, obj6);
   obj[1] = items2;

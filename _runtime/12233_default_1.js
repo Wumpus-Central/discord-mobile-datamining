@@ -1,5 +1,5 @@
 // _runtime/12233_default_1.js
-import mergeDefs2 from "12234_mergeDefs.js";
+import mergeDefs from "12234_mergeDefs.js";
 
 let fn = this;
 if (this) {
@@ -17,9 +17,9 @@ if (!fn) {
     return tmp;
   };
 }
-const mergeDefs = fn(mergeDefs2);
+let closure_0 = fn(mergeDefs);
 
 export default function default_1() {
-  return mergeDefs.default();
+  return closure_0.default();
 };
 export default exports.default;

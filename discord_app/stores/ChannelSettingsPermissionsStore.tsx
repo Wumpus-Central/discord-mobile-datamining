@@ -4,13 +4,14 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import applyOverwritesAll from "../utils/PermissionUtils.tsx";
-import normalizeChannelPropertyForCompare from "ChannelSettingsStore.tsx";
-import ensureGuildLoaded from "ChannelStore.tsx";
+import closure_6 from "ChannelSettingsStore.tsx";
+import closure_7 from "ChannelStore.tsx";
 import ME from "../Constants.tsx";
 import { ADVANCED_MODE_ON_KEY } from "../modules/channel_permissions/ChannelPermissionsConstants.tsx";
 import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import set from "../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function init() {
   const _null2 = store.getChannel();
   const category = store.getCategory();
@@ -31,7 +32,6 @@ function init() {
     c13 = false;
     CLOSED = FormStates.CLOSED;
     set.clear();
-    tmp = null != guildId1 && null == obj[guildId1];
   }
 }
 function syncChannelUpdates(id) {
@@ -54,9 +54,9 @@ function syncChannelUpdates(id) {
             obj[guildId1] = obj.makeEveryoneOverwrite(guildId1);
           }
           obj = {};
-          const item = set.forEach((item, index) => {
+          const item = set.forEach((arg0) => {
             if (null != obj1) {
-              obj[item] = obj1[item];
+              obj[arg0] = obj1[arg0];
             }
           });
           let tmp6 = null == obj[guildId];
@@ -65,6 +65,7 @@ function syncChannelUpdates(id) {
           }
           if (tmp6) {
             obj[guildId] = applyOverwritesAll.makeEveryoneOverwrite(guildId);
+            const obj3 = applyOverwritesAll;
           }
           obj1 = {};
           const merged1 = Object.assign(channel.permissionOverwrites);
@@ -90,7 +91,7 @@ function syncChannelUpdates(id) {
   return false;
 }
 ({ ChannelSettingsSections: closure_8, FormStates } = ME);
-const set = new Set();
+let set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c13 = false;
 let c14 = null;
@@ -157,13 +158,13 @@ Object.defineProperty(prototype, "locked", {
   set: undefined
 });
 Object.defineProperty(prototype, "channel", {
-  get: function channel(dependencyMap, arg1) {
+  get: function channel(channel, arg1) {
     return c16;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "category", {
-  get: function category(closure_2) {
+  get: function category(arg0) {
     return c17;
   },
   set: undefined
@@ -204,6 +205,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
         set.add(id);
         const OPEN = FormStates.OPEN;
         closure_13 = !applyDefault.isEqual(obj, c15);
+        const obj3 = applyDefault;
         closure_4 = applyOverwritesAll.areChannelsLocked(c16, c17);
       }
     }
@@ -239,6 +241,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
       let flag2 = false;
       const tmp2 = channels[Symbol.iterator]();
       while (tmp2 !== undefined) {
+        let tmp6 = syncChannelUpdates;
         if (false !== syncChannelUpdates(tmp4.id)) {
           flag2 = true;
         }
@@ -252,9 +255,9 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function handleSaveSuccess(silent) {
     if (silent.silent) {
-      CLOSED = FormStates.OPEN;
+      CLOSED = tmp.OPEN;
     } else {
-      CLOSED = FormStates.CLOSED;
+      CLOSED = tmp.CLOSED;
       init();
     }
   },
@@ -264,7 +267,6 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
   }
 });
-const tmp4 = Storage.get(ADVANCED_MODE_ON_KEY) || false;
-let result = require("obj132").fileFinishedImporting("stores/ChannelSettingsPermissionsStore.tsx");
+let result = set.fileFinishedImporting("stores/ChannelSettingsPermissionsStore.tsx");
 
 export default channelSettingsPermissionsStore;

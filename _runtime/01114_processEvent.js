@@ -17,12 +17,16 @@ function processEvent(tags, originalException) {
     tmp2 = originalException1;
   }
   const obj = { turbo_module: isHermesEnabled.isTurboModuleEnabled(), fabric: null, react_native_version: null, expo: null };
+  const obj2 = isHermesEnabled;
   obj[1] = isHermesEnabled.isFabricEnabled();
+  const obj3 = isHermesEnabled;
   obj[2] = isHermesEnabled.getReactNativeVersion();
+  const obj4 = isHermesEnabled;
   obj[3] = isHermesEnabled.isExpo();
+  const obj5 = isHermesEnabled;
   if (obj6.isHermesEnabled()) {
     obj.js_engine = "hermes";
-    let tmp4Result = isHermesEnabled;
+    let tmp4Result = tmp4(1002);
     const hermesVersion = tmp4Result.getHermesVersion();
     if (hermesVersion) {
       obj.hermes_version = hermesVersion;
@@ -54,17 +58,24 @@ function processEvent(tags, originalException) {
         let tmp2 = stacktrace;
         let frames;
         if (null !== stacktrace) {
+          let tmp3 = stacktrace;
           if (undefined !== tmp2) {
+            let tmp4 = stacktrace;
             frames = tmp2.frames;
           }
         }
         if (!frames) {
           frames = [];
         }
+        let tmp5 = frames;
+        let tmp6 = frames;
         for (const item10023 of frames) {
           if (undefined === item10023.platform) {
+            let tmp8 = item10023;
             if (1 === tmp7.lineno) {
+              let tmp9 = obj;
               obj.return();
+              let tmp10 = iter;
               iter.return();
               let flag = true;
               return true;
@@ -96,7 +107,7 @@ function processEvent(tags, originalException) {
   if (componentStack) {
     obj.component_stack = tmp2.componentStack;
   }
-  tmp4Result = isHermesEnabled;
+  tmp4Result = tmp4(1002);
   const expoGoVersion = tmp4Result.getExpoGoVersion();
   if (expoGoVersion) {
     obj.expo_go_version = expoGoVersion;

@@ -1,13 +1,11 @@
 // _runtime/00294_SoundManager.js
-import SoundManagerDefault from "00295_SoundManager.js";
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
   playTouchSound() {
-    if (SoundManagerDefault) {
-      SoundManagerDefault.playTouchSound();
-      const tmpResult = SoundManagerDefault;
+    if (module(295)) {
+      module(295).playTouchSound();
+      const tmpResult = module(295);
     }
   }
 };

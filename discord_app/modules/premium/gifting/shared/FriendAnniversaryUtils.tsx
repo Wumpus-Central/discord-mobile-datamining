@@ -1,8 +1,8 @@
 // discord_app/modules/premium/gifting/shared/FriendAnniversaryUtils.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import _mod3618 from "../../../../../_runtime/metro/03618__.js";
 
-const result = obj132.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
+const result = set.fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
 
 export const FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS = 7;
 export const isFriendAnniversary = function isFriendAnniversary(date) {
@@ -11,14 +11,18 @@ export const isFriendAnniversary = function isFriendAnniversary(date) {
   const fullYear = date.getFullYear();
   const obj2 = items[Symbol.iterator]();
   while (obj2 !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let obj3 = _mod3618;
     let setYearResult = obj3.setYear(date, fullYear + tmp2);
     let tmp6 = setYearResult;
     let obj4 = _mod3618;
     if (!obj4.isSameDay(setYearResult, date)) {
       let _Math = Math;
-      let tmp3Result = _mod3618;
+      let tmp3Result = tmp3(3618);
+      let tmp7 = setYearResult;
       if (Math.abs(tmp3Result.differenceInDays(date, tmp6)) <= 7) {
+        let tmp8 = obj2;
         obj2.return();
         let flag = true;
         return true;
@@ -32,37 +36,42 @@ export const yearsSince = function yearsSince(friendsSince) {
   const obj = _mod3618;
   return Math.round(obj.differenceInMonths(new Date(), friendsSince) / 12);
 };
-export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(closure_11, fn, flag) {
+export const categorizeFriendAnniversariesByAffinity = function categorizeFriendAnniversariesByAffinity(closure_11, arg1, flag) {
   const highestAffinity = new Set();
   const highAffinity = new Set();
   if (flag) {
     const _Math = Math;
-    const substr = arr.slice(0, Math.ceil(arr.length / 2));
-    const item = substr.forEach((item, index) => {
-      highestAffinity.add(item);
+    const substr = closure_11.slice(0, Math.ceil(closure_11.length / 2));
+    const item = substr.forEach((arg0) => {
+      highestAffinity.add(arg0);
     });
-    const item1 = arr.forEach((item, index) => {
-      highAffinity.add(item);
+    const item1 = closure_11.forEach((arg0) => {
+      highAffinity.add(arg0);
     });
   } else {
-    const iter = arr[Symbol.iterator]();
+    const iter = closure_11[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp6 = nextResult;
-      let tmp7 = fn(nextResult);
+      let tmp7 = arg1(nextResult);
       let tmp8 = tmp7;
       let tmp9 = null != tmp7;
       if (tmp9) {
+        let tmp10 = tmp7;
         tmp9 = tmp8 > 0.7;
       }
       if (tmp9) {
+        let tmp11 = nextResult;
         let addResult = highestAffinity.add(tmp6);
       }
+      let tmp13 = tmp7;
       let tmp14 = null != tmp8;
       if (tmp14) {
+        let tmp15 = tmp7;
         tmp14 = tmp8 > 0.5;
       }
       if (tmp14) {
+        let tmp16 = nextResult;
         let addResult1 = highAffinity.add(tmp6);
       }
       continue;
@@ -73,6 +82,7 @@ export const categorizeFriendAnniversariesByAffinity = function categorizeFriend
 export const pruneTimestampMap = function pruneTimestampMap(messageGiftIntentLastShownMap, currentTime, arg2) {
   const obj = {};
   for (const key10006 in arg0) {
+    let tmp = key10006;
     let tmp2 = arg0[key10006];
     if (arg1 - tmp2 > arg2) {
       continue;

@@ -2,18 +2,20 @@
 import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
 import items3 from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
 import itemsDefault from "../../privacy_and_safety/native/SettingsScreenNotices.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersScreen.tsx");
 
 export default function UserSettingsSensitiveContentFilters() {
+  let obj = { children: null };
   const memo = React.useMemo(() => {
-    callback(10669);
-    const obj = { label: null, settings: null, subLabel: null };
+    let obj = callback(10669);
+    obj = { sections: null };
+    obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.GYpoAq);
     const items = [, , ];
@@ -34,7 +36,7 @@ export default function UserSettingsSensitiveContentFilters() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  let obj = { screen: items3.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
+  obj = { screen: items3.SettingsScreen.SENSITIVE_CONTENT_FILTERS };
   let items = [callback(itemsDefault, obj), callback(_modDef13991, { node: memo })];
   obj[0] = items;
   return callback2(closure_6, obj);

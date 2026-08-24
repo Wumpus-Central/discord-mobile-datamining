@@ -1,10 +1,10 @@
 // discord_app/modules/quests/experiments/BountiesStage1Experiment.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null, 2: { enabled: true, verticalScrollEnabled: false, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 50 }, 3: { enabled: true, verticalScrollEnabled: false, loopingEnabled: true, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 50 }, 4: { enabled: true, verticalScrollEnabled: false, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 30 }, 5: { enabled: true, verticalScrollEnabled: false, loopingEnabled: false, ctaTimerMilliSeconds: 0, rewardTimerSeconds: 15, orbAmount: 50 }, 6: { enabled: true, verticalScrollEnabled: false, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 25, orbAmount: 50 }, 7: { enabled: true, verticalScrollEnabled: true, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 50 }, 8: { enabled: true, verticalScrollEnabled: true, loopingEnabled: true, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 50 }, 9: { enabled: true, verticalScrollEnabled: true, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 30 }, 10: { enabled: true, verticalScrollEnabled: true, loopingEnabled: false, ctaTimerMilliSeconds: 0, rewardTimerSeconds: 15, orbAmount: 50 } };
 obj[10] = { enabled: true, verticalScrollEnabled: true, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 25, orbAmount: 50 };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-05-bounties-stage-1", kind: "user", defaultConfig: { enabled: false, verticalScrollEnabled: false, loopingEnabled: false, ctaTimerMilliSeconds: 3000, rewardTimerSeconds: 15, orbAmount: 50 }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/quests/experiments/BountiesStage1Experiment.tsx");
+const result = set.fileFinishedImporting("modules/quests/experiments/BountiesStage1Experiment.tsx");
 
 export const BountiesStage1Experiment = apexExperiment;

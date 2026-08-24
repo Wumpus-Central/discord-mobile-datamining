@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import "createToggle";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.tiCXaH);
@@ -14,7 +14,7 @@ let createToggle = {
   useOptions: function useDmSpamFilterSettingOptions() {
     return React.useMemo(() => {
       const dmSpamOptions = callback(table[2]).generateDmSpamOptions();
-      return dmSpamOptions.map((item, index) => ({ value: item.value, label: item.name, subLabel: item.desc }));
+      return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
   useValue: require("useDerivedDmSpamFilterSettingValue").useDerivedDmSpamFilterSettingValue,
@@ -31,6 +31,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSpamFilterSetting.tsx");
 
 export default createToggle;

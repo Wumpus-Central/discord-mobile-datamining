@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingSearchManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set2 from "../../../_runtime/00002_set.js";
 
-let result = obj132.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
+let result = set2.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
 class SettingSearchManager {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -12,17 +12,18 @@ class SettingSearchManager {
     map1 = new Map();
     obj.cacheScored = map1;
     obj.preprocessed = [];
-    item = global.forEach((item, index) => {
-      [tmp, arr] = item;
+    item = global.forEach((arg0) => {
+      [tmp, arr] = arg0;
+      let set;
       const items = [];
       const items1 = [];
-      const set = new Set();
-      item = arr.forEach((item, index) => {
-        items.push(item.toLocaleLowerCase());
-        if (item.includes(" ")) {
-          const parts = item.split(/\s+/);
-          item = parts.forEach((item, index) => {
-            const toLocaleLowerCaseResult = item.toLocaleLowerCase();
+      set = new Set();
+      let item = arr.forEach((toLocaleLowerCase) => {
+        items.push(toLocaleLowerCase.toLocaleLowerCase());
+        if (toLocaleLowerCase.includes(" ")) {
+          const parts = toLocaleLowerCase.split(/\s+/);
+          const item = parts.forEach((toLocaleLowerCase) => {
+            const toLocaleLowerCaseResult = toLocaleLowerCase.toLocaleLowerCase();
             if (!set.has(toLocaleLowerCaseResult)) {
               arr = arr.push(toLocaleLowerCaseResult);
               set.add(toLocaleLowerCaseResult);
@@ -40,8 +41,8 @@ const prototype = SettingSearchManager.prototype;
 prototype["search"] = function search(arg0) {
   const self = this;
   closure_0 = arg0;
-  return new Promise((fn) => {
-    fn(self.getMatchingSettings(closure_0));
+  return new Promise((arg0) => {
+    arg0(self.getMatchingSettings(closure_0));
   });
 };
 prototype["getMatchingSettings"] = function getMatchingSettings(closure_0) {
@@ -53,13 +54,18 @@ prototype["getMatchingSettings"] = function getMatchingSettings(closure_0) {
   } else {
     const items = [];
     const terms = self.terms;
-    const item = terms.forEach((item, index) => {
-      [tmp, tmp2] = item;
+    const item = terms.forEach((arg0) => {
+      [tmp, tmp2] = arg0;
       for (const item10015 of tmp2) {
-        let tmp5 = items(dependencyMap[0]);
+        let tmp3 = items;
+        let tmp4 = closure_1_2;
+        let tmp6 = closure_0;
+        let tmp5 = items(closure_1_2[0]);
         let formatted = closure_0.toLowerCase();
         if (tmp5(formatted, item10015.toLowerCase())) {
+          let tmp8 = items;
           let arr = items.push(tmp);
+          let tmp10 = obj;
           obj.return();
           break;
         }
@@ -85,16 +91,16 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
     } else {
       const items = [];
       const preprocessed = self.preprocessed;
-      let item = preprocessed.forEach((item, index) => {
-        [tmp, ] = item;
+      let item = preprocessed.forEach((arg0) => {
+        [tmp, ] = arg0;
         c0 = 0;
-        if (arr.some((item, index) => item === c0)) {
+        if (arr.some((arg0) => arg0 === c0)) {
           c0 = 1;
-        } else if (obj.some((item, index) => item.startsWith(c0))) {
+        } else if (obj.some((str) => str.startsWith(c0))) {
           c0 = 0.95;
         } else {
-          item = arr.forEach((item, index) => {
-            const result = toLocaleLowerCaseResult(dependencyMap[1]).calculateJaroWinklerSimilarity(c0, item);
+          const item = arr.forEach((arg0) => {
+            const result = toLocaleLowerCaseResult(closure_2_2[1]).calculateJaroWinklerSimilarity(c0, arg0);
             let num = 0;
             if (result >= 0.8) {
               num = result;

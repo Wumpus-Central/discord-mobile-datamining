@@ -1,14 +1,15 @@
 // discord_app/modules/share/native/ShareEmbed.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-const createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey = { container: null, containerRevamp: null, thumbnail: null, contentContainer: null, authorView: null, authorThumbnail: null, loadingSpinner: null };
+createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderWidth: 0 };
 createCacheKey[2] = { width: 80 };
@@ -17,23 +18,26 @@ createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginBottom: 
 createCacheKey[5] = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
 createCacheKey[6] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
+let obj1 = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
+const result = require("set").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
 
 export default function ShareEmbed(embed) {
   embed = embed.embed;
   const isLoadingEmbed = embed.isLoadingEmbed;
+  let React;
+  let memo3;
   let tmp = callback();
-  const React = tmp;
+  React = tmp;
   let items = [embed];
   const memo = React.useMemo(() => {
     if (null != embed) {
-      const thumbnail = embed.thumbnail;
+      const thumbnail = tmp.thumbnail;
       let url;
       if (thumbnail != null) {
         url = thumbnail.url;
       }
       if (url == null) {
-        const image = embed.image;
+        const image = tmp.image;
         let url1;
         if (image != null) {
           url1 = image.url;
@@ -90,7 +94,7 @@ export default function ShareEmbed(embed) {
       return closure_1_6(closure_1_4, obj);
     }
   }, items2);
-  const memo3 = React.useMemo(() => {
+  memo3 = React.useMemo(() => {
     let title;
     if (embed != null) {
       title = embed.title;
@@ -137,7 +141,7 @@ export default function ShareEmbed(embed) {
         obj = { style: null, source: null, resizeMode: "cover" };
         obj[0] = tmp.thumbnail;
         obj[1] = memo;
-        tmp9Result = callback(memo3, obj);
+        tmp9Result = tmp9(memo3, obj);
       }
       obj = { children: null };
       const items6 = [tmp9Result, ];
@@ -145,12 +149,13 @@ export default function ShareEmbed(embed) {
       obj1[0] = tmp.contentContainer;
       const items7 = [memo2, memo3, memo4, tmp7];
       obj1[1] = items7;
-      items6[1] = callback2(closure_4, obj1);
+      items6[1] = closure_6(tmp10, obj1);
       obj[0] = items6;
-      memo1 = callback2(closure_7, obj);
+      memo1 = tmp12(closure_7, obj);
+      const tmp13 = closure_7;
     }
     obj[1] = memo1;
-    tmp9Result = callback(closure_4, obj);
+    tmp9Result = tmp9(tmp10, obj);
   } else {
     tmp9Result = null;
   }

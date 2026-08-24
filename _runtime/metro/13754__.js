@@ -2,11 +2,12 @@
 import SymbolResult1 from "../13748_SymbolResult1.js";
 import URLSearchParamsImpl from "../13755_URLSearchParamsImpl.js";
 import _ from "../13756__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _slicedToArray from "00032__slicedToArray.js";
+import closure_3 from "00041__classCallCheck.js";
+import closure_4 from "00042__createClass.js";
+import closure_5 from "00032__slicedToArray.js";
 
-let obj = {
+obj = { next: obj };
+obj = {
   value: function next() {
     const tmp3 = this[SymbolResult1.iterInternalSymbol];
     ({ kind, index } = tmp3);
@@ -15,7 +16,7 @@ let obj = {
       return { value: "HermesInternal", done: "HermesInternal" };
     } else {
       tmp3.index = index + 1;
-      [tmp7, tmp8] = _slicedToArray(arr[index].map(SymbolResult1.tryWrapperForImpl), 2);
+      [tmp7, tmp8] = callback2(arr[index].map(SymbolResult1.tryWrapperForImpl), 2);
       if ("key" === kind) {
         let tmp4 = tmp7;
       } else if ("value" === kind) {
@@ -28,6 +29,7 @@ let obj = {
       obj[0] = tmp4;
       return obj;
     }
+    const tmp = require;
   },
   writable: true,
   enumerable: true,
@@ -40,13 +42,14 @@ obj = {
   is(arg0) {
     if (arg0) {
       if (obj.hasOwn(arg0, SymbolResult1.implSymbol)) {
-        if (arg0[SymbolResult1.implSymbol] instanceof URLSearchParamsImpl.implementation) {
+        if (arg0[tmp(undefined, 13748).implSymbol] instanceof tmp(13755).implementation) {
           return true;
         }
       }
       const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
       for (const item10025 of _mixedIntoPredicates) {
         if (item10025(arg0)) {
+          let tmp6 = obj2;
           obj2.return();
           let flag = true;
           return true;
@@ -64,13 +67,15 @@ obj = {
         const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
         for (const item10018 of _mixedIntoPredicates) {
           if (item10018(tmpResult.wrapperForImpl(arg0))) {
+            let tmp6 = obj2;
             obj2.return();
             let flag = true;
             return true;
           }
         }
-        const tmpResult = SymbolResult1;
+        const tmpResult = tmp(13748);
       }
+      tmp = require;
     }
     return false;
   },
@@ -94,7 +99,7 @@ obj = {
     }
   },
   createDefaultIterator(self, key) {
-    Object.create(closure_6);
+    obj = Object.create(closure_6);
     obj = { target: self, kind: key, index: 0 };
     Object.defineProperty(obj, SymbolResult1.iterInternalSymbol, { value: obj, configurable: true });
     return obj;
@@ -115,9 +120,10 @@ obj = {
         return obj.setup(Object.create(_URLSearchParams.prototype), arg0, arg1, arg2);
       }
     }
+    const tmp = require;
   },
   createImpl(arg0, arg1, arg2) {
-    obj.create(arg0, arg1, arg2);
+    obj = obj.create(arg0, arg1, arg2);
     obj = SymbolResult1;
     return obj.implForWrapper(obj);
   },
@@ -141,8 +147,8 @@ obj = {
     Object.defineProperty(wrapper, SymbolResult1.implSymbol, obj);
     wrapper[SymbolResult1.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
     if (URLSearchParamsImpl.init) {
-      URLSearchParamsImpl.init(wrapper[SymbolResult1.implSymbol], obj);
-      const tmp2Result = URLSearchParamsImpl;
+      tmp2(13755).init(wrapper[tmp2(undefined, 13748).implSymbol], obj);
+      const tmp2Result = tmp2(13755);
     }
     return wrapper;
   },
@@ -469,9 +475,10 @@ obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const _exports2 = closure_1.exports;
+              const _exports2 = tmp.exports;
               return _exports2.createDefaultIterator(self, "key");
             }
+            tmp = closure_1;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -484,9 +491,10 @@ obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const _exports2 = closure_1.exports;
+              const _exports2 = tmp.exports;
               return _exports2.createDefaultIterator(self, "value");
             }
+            tmp = closure_1;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -499,9 +507,10 @@ obj = {
           if (this) {
             const _exports = closure_1.exports;
             if (_exports.is(self)) {
-              const _exports2 = closure_1.exports;
+              const _exports2 = tmp.exports;
               return _exports2.createDefaultIterator(self, "key+value");
             }
+            tmp = closure_1;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -509,7 +518,7 @@ obj = {
       },
       {
         key: "forEach",
-        value: function forEach(call) {
+        value: function forEach(fn) {
           const self = this;
           if (this) {
             const _exports = closure_1.exports;
@@ -518,7 +527,7 @@ obj = {
                 const _TypeError2 = TypeError;
                 const typeError = new TypeError("Failed to execute 'forEach' on 'iterable': 1 argument required, but only 0 present.");
                 throw typeError;
-              } else if (typeof call !== "function") {
+              } else if (typeof fn !== "function") {
                 const _TypeError = TypeError;
                 const typeError1 = new TypeError("Failed to execute 'forEach' on 'iterable': The callback provided as parameter 1 is not a function.");
                 throw typeError1;
@@ -531,16 +540,25 @@ obj = {
                 if (0 < arr.length) {
                   do {
                     arr = tmp11[num2];
-                    let tmp6 = callback(arr.map(URLSearchParams(13748).tryWrapperForImpl), 2);
+                    let tmp3 = URLSearchParams;
+                    let tmp4 = dependencyMap;
+                    let tmp5 = callback2;
+                    let tmp6 = callback2(arr.map(URLSearchParams(13748).tryWrapperForImpl), 2);
                     [tmp7, tmp8] = tmp6;
-                    call = call.call;
+                    let call = fn.call;
+                    let tmp9 = num2;
                     if (typeof call === "unknown") {
-                      let tmp10 = call(tmp8, tmp7, self);
+                      let tmp10 = fn(tmp8, tmp7, self);
                     } else {
+                      let tmp27 = fn;
+                      let tmp28 = tmp23;
+                      let tmp29 = tmp8;
+                      let tmp30 = tmp7;
+                      let tmp31 = self;
                       let callResult = call(tmp23, tmp8, tmp7, self);
                     }
                     let _Array = Array;
-                    arr = Array.from(self[URLSearchParams(undefined, 13748).implSymbol]);
+                    arr = Array.from(self[tmp3(undefined, 13748).implSymbol]);
                     num2 = num2 + 1;
                     tmp11 = arr;
                   } while (num2 < arr.length);
@@ -553,7 +571,7 @@ obj = {
         }
       }
     ];
-    const tmp = _createClass(URLSearchParams, items);
+    let tmp = callback(URLSearchParams, items);
     obj = { append: { enumerable: true }, delete: { enumerable: true }, get: { enumerable: true }, getAll: { enumerable: true }, has: { enumerable: true }, set: { enumerable: true }, sort: { enumerable: true }, toString: { enumerable: true }, keys: { enumerable: true }, values: { enumerable: true }, entries: { enumerable: true }, forEach: { enumerable: true } };
     obj[Symbol.toStringTag] = { value: "URLSearchParams", configurable: true };
     obj[Symbol.iterator] = { value: tmp.prototype.entries, configurable: true, writable: true };

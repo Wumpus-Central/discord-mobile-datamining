@@ -1,13 +1,14 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandAppScreen.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { list: null };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
 
 export default function ContextMenuCommandAppScreen(route) {
   const params = route.route.params;
@@ -23,10 +24,10 @@ export default function ContextMenuCommandAppScreen(route) {
   const callback = onPressCommand.useCallback((arg0, arg1) => {
     closure_0 = tmp;
     const diff = commands.length - 1;
-    return jsx(section(commands[6]), {
+    return closure_1_3(section(commands[6]), {
       item: commands[arg1],
       onPress() {
-        return onPressCommand(closure_0);
+        return closure_1_2(closure_0);
       },
       section: closure_0,
       start: 0 === arg1,

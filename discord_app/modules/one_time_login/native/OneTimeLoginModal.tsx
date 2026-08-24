@@ -3,40 +3,51 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import getMixedGradientColorDefault from "../../client_themes/native/ThemedGradient.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_8 from "../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_12 } from "../../client_themes/ClientThemesConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c5, ActivityIndicator: closure_6, Image: error } = get_ActivityIndicator);
 ({ Routes: c10, AnalyticEvents: unpackModuleId } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { padding: 24, paddingTop: 128, paddingBottom: 96, borderRadius: ThemesDefault.radii.md, alignItems: "center", flex: 1, justifyContent: "space-between" };
+createCacheKey = { container: null, centerContent: null, bottomContent: null, logo: null, loadingContainer: null, link: null, raisedIcon: null };
+createCacheKey = { padding: 24, paddingTop: 128, paddingBottom: 96, borderRadius: ThemesDefault.radii.md, alignItems: "center", flex: 1, justifyContent: "space-between" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { width: 80, height: 80, alignSelf: "center" };
+let obj1 = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center", marginBottom: 48 };
+let obj2 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center", marginBottom: 48 };
 createCacheKey[5] = { textDecorationLine: "underline", textDecorationColor: ThemesDefault.colors.TEXT_DEFAULT, flexShrink: 1 };
+const obj3 = { textDecorationLine: "underline", textDecorationColor: ThemesDefault.colors.TEXT_DEFAULT, flexShrink: 1 };
 createCacheKey[6] = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignSelf: "center" };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/one_time_login/native/OneTimeLoginModal.tsx");
+let obj4 = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignSelf: "center" };
+const result = require("set").fileFinishedImporting("modules/one_time_login/native/OneTimeLoginModal.tsx");
 
 export default function OneTimeLoginModal(token) {
   token = token.token;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  let height;
   let callback;
+  let callback1;
+  let callback2;
   let callback3;
+  let callback4;
   const tmp = callback3();
   importDefault = tmp;
   const tmp2 = useSafeAreaInsetsDefault();
   dependencyMap = tmp2;
-  let height = useWindowDimensionsDefault().height;
+  height = useWindowDimensionsDefault().height;
   const items = [tmp2.bottom, height];
   const items1 = [token];
   const memo = callback.useMemo(() => {
@@ -47,8 +58,8 @@ export default function OneTimeLoginModal(token) {
     return { height };
   }, items);
   const effect = callback.useEffect(() => {
-    lib(bottom[13]);
-    const obj = { has_token: null != token };
+    let obj = lib(bottom[13]);
+    obj = { has_token: null != token };
     obj.track(closure_1_11.ONE_TIME_LOGIN_MODAL_OPENED, obj);
     lib(bottom[13]).track(closure_1_11.DEEP_LINK_CLICKED, { source: "native_modal", destination: "one_time_login_native_modal", deep_link_provider: "native_app" });
   }, items1);
@@ -59,7 +70,7 @@ export default function OneTimeLoginModal(token) {
     const obj2 = lib(bottom[14]);
     token(bottom[15]).resetToAuthRoute();
   }, []);
-  const callback1 = callback.useCallback(() => {
+  callback1 = callback.useCallback(() => {
     lib(bottom[13]).track(constants2.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: "already_logged_in" });
     const obj = lib(bottom[13]);
     lib(bottom[14]).popWithKey("ONE_TIME_LOGIN_MODAL");
@@ -67,9 +78,10 @@ export default function OneTimeLoginModal(token) {
     token(bottom[16]).transitionTo(constants.ME);
   }, []);
   const items2 = [callback, tmp.raisedIcon];
-  const callback2 = callback.useCallback(() => {
-    token(bottom[17]);
-    const obj = { style: lib.raisedIcon, children: closure_1_13(token(bottom[19]).CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
+  callback2 = callback.useCallback(() => {
+    let obj = token(bottom[17]);
+    obj = { header: null, title: null, content: null, actions: null };
+    obj = { style: lib.raisedIcon, children: closure_1_13(token(bottom[19]).CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
     obj[0] = closure_1_13(callback1, obj);
     const intl = token(bottom[20]).intl;
     obj[1] = intl.string(token(bottom[20]).t.L6htwI);
@@ -85,8 +97,9 @@ export default function OneTimeLoginModal(token) {
   }, items2);
   const items3 = [tmp.raisedIcon, callback1];
   callback3 = callback.useCallback(() => {
-    token(bottom[17]);
-    const obj = { style: lib.raisedIcon, children: closure_1_13(token(bottom[19]).CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
+    let obj = token(bottom[17]);
+    obj = { header: null, title: null, content: null, actions: null };
+    obj = { style: lib.raisedIcon, children: closure_1_13(token(bottom[19]).CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
     obj[0] = closure_1_13(callback1, obj);
     const intl = token(bottom[20]).intl;
     obj[1] = intl.string(token(bottom[20]).t.MKW8z2);
@@ -102,23 +115,23 @@ export default function OneTimeLoginModal(token) {
     obj[2] = intl2.formatToPlainString(token(bottom[20]).t.YOeM7B, { username: str });
     obj1 = { children: null };
     const obj2 = { onPress: callback1, text: null };
-    const intl3 = token(bottom[20]).intl;
+    const intl3 = tmp(tmp2[20]).intl;
     obj2[1] = intl3.string(token(bottom[20]).t["3PatSz"]);
     obj1[0] = closure_1_13(token(bottom[18]).AlertActionButton, obj2, "confirm");
     obj[3] = closure_1_13(token(bottom[21]).AlertActions, obj1);
     obj.openAlert("already-logged-in-alert", closure_1_13(token(bottom[18]).AlertModal, obj));
   }, items3);
   const items4 = [token, callback2, callback3];
-  const callback4 = callback.useCallback(height(function*() {
+  callback4 = callback.useCallback(height(function*() {
     let lib = tmp3;
     c3 = 1;
-    if (null == token) {
+    if (null == closure_1_0) {
       lib(closure_1_2[13]).track(closure_1_11.ONE_TIME_LOGIN_ERROR, { source: "native_modal", error_reason: "missing_token", error_message: "No token provided" });
-      callback2();
+      closure_1_6();
       c3 = 0;
     }
-    if (callback4.isAuthenticated()) {
-      callback3();
+    if (closure_1_8.isAuthenticated()) {
+      closure_1_7();
       c3 = 0;
     }
     let obj4 = lib(closure_1_2[13]);
@@ -137,7 +150,7 @@ export default function OneTimeLoginModal(token) {
       obj4 = { source: "native_modal", error_reason: "api_error", error_message: null };
       obj4[2] = str;
       obj2.track(closure_1_11.ONE_TIME_LOGIN_ERROR, obj4);
-      callback2();
+      closure_1_6();
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
@@ -158,11 +171,14 @@ export default function OneTimeLoginModal(token) {
   const effect1 = callback.useEffect(() => {
     callback4();
   }, items5);
-  let obj = { dark: token(4194).OverlayOpacity.LEVEL_1 };
+  let obj = { style: memo, children: null };
+  obj = { absolute: true, wide: true, tall: true, gradientOverride: table[5], mix: true, angleOverride: 0, mixAmount: null };
+  obj = { dark: token(4194).OverlayOpacity.LEVEL_1 };
   obj[6] = obj;
   const items6 = [callback(getMixedGradientColorDefault, obj), ];
   obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
+  const tmp11 = getMixedGradientColorDefault;
   const items7 = [callback(callback3, { source: token(13322), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];

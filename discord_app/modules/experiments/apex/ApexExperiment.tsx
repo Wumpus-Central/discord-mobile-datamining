@@ -3,10 +3,11 @@ import extractId from "../../../../discord_common/js/packages/fingerprint-utils/
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import loggerDefault from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "ApexExperimentStore.tsx";
 
-require = fn;
+require = arg1;
 function getUnitId(arg0, guildId) {
   if ("guild" === arg0) {
     return guildId.guildId;
@@ -33,18 +34,19 @@ function useUnitId(arg0, guildId) {
   } else if ("user" === arg0) {
     return tmp4;
   } else if ("installation" === arg0) {
-    let tmpResult = extractId;
+    let tmpResult = tmp(513);
     let str3 = tmpResult.maybeExtractId(tmp5);
     if (str3 == null) {
       str3 = "";
     }
     return str3;
   } else {
-    tmpResult = isDiscordFrontendDevelopment;
+    tmpResult = tmp(1370);
     tmpResult.assertNever(arg0);
   }
+  const obj = initialize;
 }
-const result = require("obj132").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
 export default function createApexExperiment(ApexExperiment) {
   return loggerDefault(ApexExperiment, closure_5, getUnitId, useUnitId);

@@ -6,9 +6,9 @@ import inlineStyles from "../../../../../../_runtime/06571_inlineStyles.js";
 import inlineStylesDefault from "../../../../../../_runtime/06571_inlineStyles.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/images/PremiumTier2LogoSmall.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/images/PremiumTier2LogoSmall.tsx");
 
 export default function PremiumTier2LogoSmall(arg0) {
   ({ style, width, height } = arg0);

@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import ME from "../../../../Constants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { CodeRow } from "../../account/native/UserSettingsAccountBackupCodes.tsx";
 
-require = fn;
+require = arg1;
 ({ NOOP_NULL: c4, UserSettingsSections } = ME);
-{
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.xZEzbu);
@@ -20,7 +20,7 @@ require = fn;
       let obj = {
         onSubmit(password) {
           const result = closure_1_1(closure_1_2[3]).sendMFABackupCodesVerificationKeyEmail(password);
-          return result.then((result) => {
+          return result.then(() => {
             const obj = {
               onSubmit(verificationKey) {
                 return callback(table[3]).confirmViewBackupCodes(verificationKey, false);
@@ -72,10 +72,10 @@ require = fn;
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return CodeRow /* CodeRow */.default;
+    return CodeRow.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
 
 export default createToggle;

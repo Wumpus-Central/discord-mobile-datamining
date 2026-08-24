@@ -1,10 +1,10 @@
 // _runtime/06456_VirtualDetector.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c3, useEffect: c4, useMemo: c5, useRef: closure_6, useState: error } = noop);
 ({ findNodeHandle: closure_8, Platform } = get_ActivityIndicator);
 
@@ -59,7 +59,7 @@ export const VirtualDetector = function VirtualDetector(children) {
           ({ userSelect: obj[4], touchAction: obj[5], enableContextMenu: obj[6] } = tmp2);
           register(obj);
           return () => {
-            unregister(obj);
+            closure_1_2(obj);
           };
         }
       }
@@ -72,6 +72,7 @@ export const VirtualDetector = function VirtualDetector(children) {
           num2 = -1;
         }
         callback(num2);
+        const tmp4 = callback;
       } else {
         callback(-1);
       }

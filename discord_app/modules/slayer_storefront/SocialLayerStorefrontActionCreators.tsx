@@ -1,13 +1,14 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx
 import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import getPromotionIdOverride from "../storefront/StorefrontPromotionOverrideStore.tsx";
-import handleUserSettingsStoreUpdate from "SocialLayerStorefrontStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../storefront/StorefrontPromotionOverrideStore.tsx";
+import closure_5 from "SocialLayerStorefrontStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
+import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchSocialLayerStorefront(arg0, Endpoints, arg2) {
   const self = this;
   const apply = _fetchSocialLayerStorefront2.apply;
@@ -30,236 +31,289 @@ function _fetchSocialLayerStorefront2() {
     const iter = (function*(arg0, arg1) {
       if (c9 === 2) {
         c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let forceFetch = tmp3;
-              let promotionIdOverride = tmp7;
-              obj1 = undefined;
-              if (obj1 === undefined) {
-                obj1 = {};
-              }
-              let eager;
-              promotionIdOverride = undefined;
-              forceFetch = undefined;
-              closure_6 = undefined;
-              let storefrontFetchState;
-              c8 = undefined;
-              c9 = undefined;
-              closure_10 = undefined;
-              let applicationId;
-              let callback2;
-              let promotionIdOverride2;
-              let result1;
-              closure_15 = undefined;
-              let body;
-              closure_17 = undefined;
-              c8 = 1;
-              c9 = 1;
-              return { value: "ct", done: true };
-            }
+        throwTypeErrorResult = arg1;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp5;
+        throwTypeErrorResult = null;
+        throwTypeErrorResult = globalThis;
+        if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           } else {
-            if (1 === tmp7) {
+            return { value: "HermesInternal", done: "HermesInternal" };
+          }
+        } else {
+          try {
+            c9 = 2;
+            if (0 === c8) {
               if (arg0 === 1) {
                 c9 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
                 c9 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
               } else {
-                eager = obj1.eager;
-                let tmp55 = undefined !== eager;
-                if (tmp55) {
-                  tmp55 = eager;
+                let forceFetch = tmp3;
+                let promotionIdOverride = tmp7;
+                obj1 = undefined;
+                throwTypeErrorResult = lib;
+                throwTypeErrorResult = callback;
+                if (obj1 === undefined) {
+                  obj1 = {};
                 }
-                promotionIdOverride = tmp55;
-                forceFetch = obj1.forceFetch;
-                let tmp59 = undefined !== forceFetch;
-                if (tmp59) {
-                  tmp59 = forceFetch;
-                }
-                closure_6 = tmp59;
-                storefrontFetchState = forceFetch.getStorefrontFetchState(lib);
-                let state;
-                if (storefrontFetchState != null) {
-                  state = storefrontFetchState.state;
-                }
-                c8 = "loading" === state;
-                let state1;
-                if (storefrontFetchState != null) {
-                  state1 = storefrontFetchState.state;
-                }
-                let tmp68 = "error" === state1;
-                if (tmp68) {
-                  tmp68 = null != storefrontFetchState.fetchedAt;
-                }
-                if (tmp68) {
-                  const _Date = Date;
-                  tmp68 = Date.now() - storefrontFetchState.fetchedAt < storefrontFetchState;
-                }
-                c9 = tmp68;
-                let state2;
-                if (storefrontFetchState != null) {
-                  state2 = storefrontFetchState.state;
-                }
-                let tmp77 = "fetched" === state2;
-                if (tmp77) {
-                  tmp77 = null != storefrontFetchState.fetchedAt;
-                }
-                if (tmp77) {
-                  const _Date2 = Date;
-                  tmp77 = Date.now() - storefrontFetchState.fetchedAt < c8;
-                }
-                closure_10 = tmp77;
-                if (!c8) {
-                  storefrontFetchState = 1;
-                  const obj3 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD", guildOrApplicationId: null };
-                  obj3[1] = lib;
-                  callback(obj1[5]).dispatch(obj3);
-                  if ("application" === lib.type) {
-                    applicationId = lib.applicationId;
-                  } else {
-                    applicationId = lib(obj1[6]).getSocialLayerStorefrontApplicationId(lib.guildId);
-                    const obj19 = lib(obj1[6]);
-                  }
-                  callback2 = {};
-                  let result = null != applicationId;
-                  if (result) {
-                    result = lib(obj1[7]).isTestModeForApplication(applicationId);
-                    const obj20 = lib(obj1[7]);
-                  }
-                  if (result) {
-                    callback2.test_mode = true;
-                  }
-                  promotionIdOverride2 = promotionIdOverride.getPromotionIdOverride();
-                  if (null != promotionIdOverride2) {
-                    callback2.promotion_id_override = promotionIdOverride2;
-                  }
-                  result1 = "guild" === lib.type;
-                  if (result1) {
-                    result1 = null == applicationId;
-                  }
-                  if (result1) {
-                    result1 = lib(obj1[7]).isAnyApplicationInTestMode();
-                    const obj21 = lib(obj1[7]);
-                  }
-                  const HTTP = lib(obj1[8]).HTTP;
-                  let obj4 = { url: null, query: null, rejectWithError: true, retries: 3 };
-                  obj4[0] = callback;
-                  obj4[1] = callback2;
-                  c8 = 3;
-                  c9 = 1;
-                  const obj5 = { value: null, done: false };
-                  obj5[0] = HTTP.get(obj4);
-                  return obj5;
-                }
+                let eager;
+                promotionIdOverride = undefined;
+                forceFetch = undefined;
+                closure_6 = undefined;
+                let storefrontFetchState;
+                c8 = undefined;
+                c9 = undefined;
+                closure_10 = undefined;
+                let applicationId;
+                let callback2;
+                let promotionIdOverride2;
+                c14 = undefined;
+                closure_15 = undefined;
+                let body;
+                closure_17 = undefined;
+                c8 = 1;
+                c9 = 1;
+                return { value: "ct", done: true };
               }
-            } else if (2 === tmp7) {
-              storefrontFetchState = 0;
-              let obj6 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildOrApplicationId: null, eager: null };
-              obj6[1] = lib;
-              obj6[2] = promotionIdOverride;
-              callback(obj1[5]).dispatch(obj6);
-              const obj15 = callback(obj1[5]);
             } else {
-              if (3 === tmp7) {
+              if (1 === tmp7) {
                 if (arg0 === 1) {
+                  c9 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c9 = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = arg1;
+                  return obj2;
+                } else {
+                  throwTypeErrorResult = promotionIdOverride;
+                  throwTypeErrorResult = obj1;
+                  eager = obj1.eager;
+                  throwTypeErrorResult = eager;
+                  let tmp55 = undefined !== eager;
+                  if (tmp55) {
+                    tmp55 = eager;
+                  }
+                  promotionIdOverride = tmp55;
+                  forceFetch = obj1.forceFetch;
+                  let tmp59 = undefined !== forceFetch;
+                  if (tmp59) {
+                    tmp59 = forceFetch;
+                  }
+                  closure_6 = tmp59;
+                  storefrontFetchState = forceFetch.getStorefrontFetchState(lib);
+                  let state;
+                  if (storefrontFetchState != null) {
+                    state = storefrontFetchState.state;
+                  }
+                  c8 = "loading" === state;
+                  let state1;
+                  if (storefrontFetchState != null) {
+                    state1 = storefrontFetchState.state;
+                  }
+                  let tmp68 = "error" === state1;
+                  if (tmp68) {
+                    tmp68 = null != storefrontFetchState.fetchedAt;
+                  }
+                  if (tmp68) {
+                    const _Date = Date;
+                    tmp68 = Date.now() - storefrontFetchState.fetchedAt < storefrontFetchState;
+                  }
+                  c9 = tmp68;
+                  let state2;
+                  if (storefrontFetchState != null) {
+                    state2 = storefrontFetchState.state;
+                  }
+                  let tmp77 = "fetched" === state2;
+                  if (tmp77) {
+                    tmp77 = null != storefrontFetchState.fetchedAt;
+                  }
+                  if (tmp77) {
+                    const _Date2 = Date;
+                    tmp77 = Date.now() - storefrontFetchState.fetchedAt < c8;
+                  }
+                  closure_10 = tmp77;
+                  if (!c8) {
+                    storefrontFetchState = 1;
+                    const obj3 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD", guildOrApplicationId: null };
+                    obj3[1] = lib;
+                    callback(obj1[5]).dispatch(obj3);
+                    if ("application" === lib.type) {
+                      throwTypeErrorResult = promotionIdOverride;
+                      throwTypeErrorResult = lib;
+                      applicationId = lib.applicationId;
+                    } else {
+                      applicationId = lib(obj1[6]).getSocialLayerStorefrontApplicationId(lib.guildId);
+                      const obj19 = lib(obj1[6]);
+                    }
+                    throwTypeErrorResult = promotionIdOverride;
+                    callback2 = {};
+                    throwTypeErrorResult = applicationId;
+                    throwTypeErrorResult = null != applicationId;
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = promotionIdOverride;
+                      throwTypeErrorResult = forceFetch;
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = obj1;
+                      throwTypeErrorResult = applicationId;
+                      throwTypeErrorResult = lib(obj1[7]).isTestModeForApplication(applicationId);
+                      const obj20 = lib(obj1[7]);
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = promotionIdOverride;
+                      throwTypeErrorResult = callback2;
+                      callback2.test_mode = true;
+                    }
+                    throwTypeErrorResult = promotionIdOverride;
+                    throwTypeErrorResult = forceFetch;
+                    throwTypeErrorResult = promotionIdOverride;
+                    promotionIdOverride2 = promotionIdOverride.getPromotionIdOverride();
+                    throwTypeErrorResult = promotionIdOverride2;
+                    if (null != promotionIdOverride2) {
+                      throwTypeErrorResult = promotionIdOverride;
+                      throwTypeErrorResult = callback2;
+                      throwTypeErrorResult = promotionIdOverride2;
+                      callback2.promotion_id_override = promotionIdOverride2;
+                    }
+                    throwTypeErrorResult = promotionIdOverride;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = "guild" === lib.type;
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = promotionIdOverride;
+                      throwTypeErrorResult = applicationId;
+                      throwTypeErrorResult = null == applicationId;
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = forceFetch;
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = obj1;
+                      throwTypeErrorResult = lib(obj1[7]).isAnyApplicationInTestMode();
+                      const obj21 = lib(obj1[7]);
+                    }
+                    throwTypeErrorResult = promotionIdOverride;
+                    throwTypeErrorResult = forceFetch;
+                    c14 = throwTypeErrorResult;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = obj1;
+                    const HTTP = lib(obj1[8]).HTTP;
+                    let obj4 = { url: null, query: null, rejectWithError: true, retries: 3 };
+                    throwTypeErrorResult = callback;
+                    obj4[0] = callback;
+                    throwTypeErrorResult = callback2;
+                    obj4[1] = callback2;
+                    c8 = 3;
+                    c9 = 1;
+                    const obj5 = { value: null, done: false };
+                    obj5[0] = HTTP.get(obj4);
+                    return obj5;
+                  }
+                }
+              } else if (2 === tmp7) {
+                storefrontFetchState = 0;
+                let obj6 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildOrApplicationId: null, eager: null };
+                obj6[1] = lib;
+                obj6[2] = promotionIdOverride;
+                callback(obj1[5]).dispatch(obj6);
+                const obj15 = callback(obj1[5]);
+              } else {
+                if (3 === tmp7) {
+                  if (arg0 === 1) {
+                    c9 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    storefrontFetchState = 0;
+                    c9 = 3;
+                    const obj7 = { value: null, done: true };
+                    obj7[0] = arg1;
+                    return obj7;
+                  } else {
+                    throwTypeErrorResult = promotionIdOverride;
+                    throwTypeErrorResult = forceFetch;
+                    closure_15 = arg1;
+                    throwTypeErrorResult = closure_15;
+                    body = closure_15.body;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = body;
+                    closure_17 = lib(obj1[6]).transformSlayerApplicationStorefrontServer(body);
+                    throwTypeErrorResult = closure_17;
+                    if (null != closure_17.storefrontPricing) {
+                      obj1 = callback(obj1[5]);
+                      let obj8 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
+                      let obj9 = { type: "application", applicationId: null };
+                      obj9[1] = closure_17.applicationId;
+                      obj8[1] = obj9;
+                      obj8[2] = closure_17.storefrontPricing;
+                      obj1.dispatch(obj8);
+                    }
+                    obj4 = callback(obj1[5]);
+                    const obj10 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildOrApplicationId: null, storefront: null };
+                    obj10[1] = lib;
+                    obj10[2] = closure_17;
+                    obj4.dispatch(obj10);
+                    obj6 = callback(obj1[5]);
+                    let obj11 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
+                    obj11[1] = closure_17.applicationId;
+                    obj8 = lib(obj1[6]);
+                    obj11[2] = obj8.transformStorefrontMetadataServer(body);
+                    obj6.dispatch(obj11);
+                    obj9 = callback(obj1[5]);
+                    const store_listings = closure_15.body.store_listings;
+                    eager = store_listings;
+                    if (store_listings == null) {
+                      eager = [];
+                    }
+                    const obj12 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
+                    obj12[1] = eager;
+                    obj9.dispatch(obj12);
+                    let result = c14;
+                    if (c14) {
+                      obj11 = lib(obj1[7]);
+                      result = obj11.isTestModeForApplication(closure_17.applicationId);
+                    }
+                    c8 = 4;
+                    c9 = 1;
+                    const obj13 = { value: null, done: false };
+                    obj13[0] = callback2(lib, callback, { forceFetch: true });
+                    return obj13;
+                  }
+                } else if (arg0 === 1) {
                   c9 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
                   storefrontFetchState = 0;
                   c9 = 3;
-                  const obj7 = { value: null, done: true };
-                  obj7[0] = arg1;
-                  return obj7;
-                } else {
-                  closure_15 = arg1;
-                  body = closure_15.body;
-                  closure_17 = lib(obj1[6]).transformSlayerApplicationStorefrontServer(body);
-                  if (null != closure_17.storefrontPricing) {
-                    obj1 = callback(obj1[5]);
-                    let obj8 = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
-                    let obj9 = { type: "application", applicationId: null };
-                    obj9[1] = closure_17.applicationId;
-                    obj8[1] = obj9;
-                    obj8[2] = closure_17.storefrontPricing;
-                    obj1.dispatch(obj8);
-                  }
-                  obj4 = callback(obj1[5]);
-                  const obj10 = { type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildOrApplicationId: null, storefront: null };
-                  obj10[1] = lib;
-                  obj10[2] = closure_17;
-                  obj4.dispatch(obj10);
-                  obj6 = callback(obj1[5]);
-                  let obj11 = { type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS", applicationId: null, storefrontMetadata: null };
-                  obj11[1] = closure_17.applicationId;
-                  obj8 = lib(obj1[6]);
-                  obj11[2] = obj8.transformStorefrontMetadataServer(body);
-                  obj6.dispatch(obj11);
-                  obj9 = callback(obj1[5]);
-                  const store_listings = closure_15.body.store_listings;
-                  eager = store_listings;
-                  if (store_listings == null) {
-                    eager = [];
-                  }
-                  const obj12 = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: null };
-                  obj12[1] = eager;
-                  obj9.dispatch(obj12);
-                  let result2 = result1;
-                  if (result1) {
-                    obj11 = lib(obj1[7]);
-                    result2 = obj11.isTestModeForApplication(closure_17.applicationId);
-                  }
-                  c8 = 4;
-                  c9 = 1;
-                  const obj13 = { value: null, done: false };
-                  obj13[0] = callback2(lib, callback, { forceFetch: true });
-                  return obj13;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
                 }
-              } else if (arg0 === 1) {
-                c9 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
                 storefrontFetchState = 0;
-                c9 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
               }
-              storefrontFetchState = 0;
+              c9 = 3;
             }
-            c9 = 3;
-          }
-        } catch (tmp133) {
-          closure_6 = tmp133;
-          if (tmp4 === storefrontFetchState) {
-            c9 = tmp2;
-            throw tmp133;
-          } else {
-            c8 = tmp;
+          } catch (throwTypeErrorResult) {
+            closure_6 = throwTypeErrorResult;
+            throwTypeErrorResult = storefrontFetchState;
+            if (tmp4 === storefrontFetchState) {
+              throwTypeErrorResult = tmp2;
+              c9 = tmp2;
+              throw throwTypeErrorResult;
+            } else {
+              c8 = throwTypeErrorResult;
+            }
           }
         }
       }
@@ -414,8 +468,8 @@ function _fetchSocialLayerStorefrontSkuWithUrl2() {
                 obj8 = { type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS", assets: null };
                 const _Object = Object;
                 const assets = closure_9.body.assets;
-                obj8[1] = Object.fromEntries(assets.map((item, index) => {
-                  const items = [item.id, item];
+                obj8[1] = Object.fromEntries(assets.map((id) => {
+                  const items = [id.id, id];
                   return items;
                 }));
                 callback2(obj1[5]).dispatch(obj8);
@@ -515,7 +569,8 @@ function _fetchSocialLayerStorefrontEntries() {
                 state = storefrontEntries.state;
               }
               if ("loading" !== state) {
-                lib = closure_1_19(closure_1_20, callback);
+                const tmp54 = closure_1_19(closure_1_20, tmp49);
+                lib = tmp54;
                 let state1;
                 if (storefrontEntries != null) {
                   state1 = storefrontEntries.state;
@@ -531,11 +586,11 @@ function _fetchSocialLayerStorefrontEntries() {
                   c4 = 1;
                   let obj3 = closure_1_1(closure_1_2[5]);
                   obj1 = { type: "SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD", applicationId: null };
-                  obj1[1] = callback;
+                  obj1[1] = tmp49;
                   obj3.dispatch(obj1);
                   const HTTP = callback(closure_1_2[8]).HTTP;
                   const obj2 = { url: null, rejectWithError: true, retries: 3 };
-                  obj2[0] = c6.SOCIAL_LAYER_STOREFRONTS_ALL(callback);
+                  obj2[0] = c6.SOCIAL_LAYER_STOREFRONTS_ALL(tmp49);
                   storefrontEntries = 2;
                   c6 = 1;
                   obj3 = { value: null, done: false };
@@ -544,7 +599,6 @@ function _fetchSocialLayerStorefrontEntries() {
                 } else {
                   const _Date = Date;
                 }
-                const tmp54 = closure_1_19(closure_1_20, callback);
               }
             }
           } else {
@@ -643,7 +697,8 @@ function _fetchSocialLayerStorefrontById() {
                 state = storefrontById.state;
               }
               if ("loading" !== state) {
-                closure_2 = closure_1_19(closure_1_21, callback2);
+                const tmp92 = closure_1_19(closure_1_21, tmp87);
+                closure_2 = tmp92;
                 let state1;
                 if (storefrontById != null) {
                   state1 = storefrontById.state;
@@ -663,13 +718,12 @@ function _fetchSocialLayerStorefrontById() {
                   }
                 }
                 c6 = 1;
-                const tmp92 = closure_1_19(closure_1_21, callback2);
                 obj1 = { type: "SOCIAL_LAYER_STOREFRONT_BY_ID_LOAD", storefrontId: null };
-                obj1[1] = callback2;
+                obj1[1] = tmp87;
                 callback2(closure_1_2[5]).dispatch(obj1);
                 const obj2 = {};
                 const obj14 = callback2(closure_1_2[5]);
-                if (obj17.isTestModeForApplication(callback)) {
+                if (obj17.isTestModeForApplication(tmp86)) {
                   obj2.test_mode = true;
                 }
                 const promotionIdOverride = closure_1_4.getPromotionIdOverride();
@@ -678,7 +732,7 @@ function _fetchSocialLayerStorefrontById() {
                 }
                 const HTTP = callback(closure_1_2[8]).HTTP;
                 let obj3 = { url: null, query: null, rejectWithError: true, retries: 3 };
-                obj3[0] = c6.SOCIAL_LAYER_STOREFRONT_BY_ID(callback, callback2);
+                obj3[0] = c6.SOCIAL_LAYER_STOREFRONT_BY_ID(tmp86, tmp87);
                 obj3[1] = obj2;
                 c7 = 2;
                 c8 = 1;
@@ -767,7 +821,8 @@ function _fetchSocialLayerStorefrontById() {
   return applyArgumentsResult;
 }
 function setSocialLayerStorefrontPreview(applicationId, storefrontId) {
-  const obj = { type: "SOCIAL_LAYER_STOREFRONT_SET_PREVIEW", applicationId, storefrontId };
+  let obj = dispatcherDefault;
+  obj = { type: "SOCIAL_LAYER_STOREFRONT_SET_PREVIEW", applicationId, storefrontId };
   obj.dispatch(obj);
 }
 function _fetchSocialLayerStorefrontAnnouncement() {
@@ -846,10 +901,10 @@ function _fetchSocialLayerStorefrontConfig() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw body;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = body;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -860,16 +915,16 @@ function _fetchSocialLayerStorefrontConfig() {
         if (0 === obj) {
           if (arg0 === 1) {
             configFetchState = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             configFetchState = 3;
             obj = { value: null, done: true };
-            obj[0] = body;
+            obj[0] = arg1;
             return obj;
           } else {
             let date = tmp3;
             let callback = tmp7;
-            body = undefined;
+            let body;
             callback = undefined;
             date = undefined;
             c3 = undefined;
@@ -902,9 +957,9 @@ function _fetchSocialLayerStorefrontConfig() {
             obj5.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
           } else if (arg0 === 1) {
             configFetchState = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 !== 2) {
-            body = body.body;
+            body = arg1.body;
             callback = null;
             if (null != body.promotion_end_datetime) {
               let _Date = Date;
@@ -917,11 +972,11 @@ function _fetchSocialLayerStorefrontConfig() {
             const storefronts = body.storefronts;
             let mapped;
             if (storefronts != null) {
-              mapped = storefronts.map((item, index) => {
+              mapped = storefronts.map((guildId) => {
                 date = null;
-                if (null != item.promotion_end_datetime) {
+                if (null != guildId.promotion_end_datetime) {
                   const _Date = Date;
-                  date = new Date(item.promotion_end_datetime);
+                  date = new Date(guildId.promotion_end_datetime);
                 }
                 let isNaNResult = null == date;
                 if (!isNaNResult) {
@@ -932,15 +987,15 @@ function _fetchSocialLayerStorefrontConfig() {
                 if (!isNaNResult) {
                   tmp7 = date;
                 }
-                obj = { guildId: item.guild_id, applicationId: item.application_id, gameId: item.game_id, collectiblesShopNavigationEnabled: true === item.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null, promotionEndDatetime: null, allowOrbsSpending: null };
-                let excluded_platforms = item.excluded_platforms;
+                obj = { guildId: guildId.guild_id, applicationId: guildId.application_id, gameId: guildId.game_id, collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null, promotionEndDatetime: null, allowOrbsSpending: null };
+                let excluded_platforms = guildId.excluded_platforms;
                 if (excluded_platforms == null) {
                   excluded_platforms = [];
                 }
                 obj[4] = excluded_platforms;
-                obj[5] = true === item.disable_mobile_account_linking;
+                obj[5] = true === guildId.disable_mobile_account_linking;
                 obj[6] = tmp7;
-                obj[7] = true === item.allow_orbs_spending;
+                obj[7] = true === guildId.allow_orbs_spending;
                 return obj;
               });
             }
@@ -969,7 +1024,7 @@ function _fetchSocialLayerStorefrontConfig() {
           c3 = 0;
           configFetchState = 3;
           obj5 = { value: null, done: true };
-          obj5[0] = body;
+          obj5[0] = arg1;
           return obj5;
         }
         configFetchState = 3;
@@ -1008,9 +1063,9 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
       c13 = 3;
     } else if (arg0 === 1) {
       c13 = 3;
-      throw body;
+      throw arg1;
     } else if (arg0 !== 2) {
-      body = body.body;
+      const body = arg1.body;
       closure_0 = body;
       if (body == null) {
         closure_0 = null;
@@ -1052,7 +1107,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
         const features = closure_0.features;
         let mapped;
         if (features != null) {
-          mapped = features.map((item, index) => ({ assetUrl: item.asset_url, title: item.title, subtitle: item.subtitle }));
+          mapped = features.map((assetUrl) => ({ assetUrl: assetUrl.asset_url, title: assetUrl.title, subtitle: assetUrl.subtitle }));
         }
         c6 = mapped;
         if (mapped == null) {
@@ -1073,7 +1128,7 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
       c11 = 0;
     }
     c11 = 0;
-    return body;
+    return arg1;
   });
   closure_27 = tmp;
   const apply = tmp.apply;
@@ -1084,17 +1139,17 @@ function _fetchSocialLayerStorefrontLaunchAnnouncement() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = 30 * obj132Default.Millis.SECOND;
-let closure_8 = 30 * obj132Default.Millis.MINUTE;
-let closure_9 = 60 * obj132Default.Millis.MINUTE;
-let closure_10 = 30 * obj132Default.Millis.SECOND;
-let closure_11 = 5 * obj132Default.Millis.SECOND;
-let closure_16 = 5 * obj132Default.Millis.MINUTE;
-let closure_17 = 30 * obj132Default.Millis.SECOND;
-let closure_18 = 5 * obj132Default.Millis.MINUTE;
+let closure_7 = 30 * setDefault.Millis.SECOND;
+let closure_8 = 30 * setDefault.Millis.MINUTE;
+let closure_9 = 60 * setDefault.Millis.MINUTE;
+let closure_10 = 30 * setDefault.Millis.SECOND;
+let closure_11 = 5 * setDefault.Millis.SECOND;
+let closure_16 = 5 * setDefault.Millis.MINUTE;
+let closure_17 = 30 * setDefault.Millis.SECOND;
+let closure_18 = 5 * setDefault.Millis.MINUTE;
 const map = new Map();
 const map1 = new Map();
-let result = require("obj132").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx");
 
 export { _fetchSocialLayerStorefront };
 export const fetchSocialLayerStorefrontForApplication = function fetchSocialLayerStorefrontForApplication(applicationId, arg1) {
@@ -1128,7 +1183,8 @@ export const fetchSocialLayerStorefrontSku = function fetchSocialLayerStorefront
   return _fetchSocialLayerStorefrontSkuWithUrl(id, Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(arg0, id), obj);
 };
 export const setSocialLayerStorefrontState = function setSocialLayerStorefrontState(applicationId, pageIndex, skuId) {
-  const obj = { type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId, pageIndex, skuId };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId, pageIndex, skuId };
   obj.dispatch(obj);
 };
 export const fetchSocialLayerStorefrontEntries = function fetchSocialLayerStorefrontEntries() {
@@ -1183,35 +1239,40 @@ export const fetchSocialLayerSKUPurchaseEligibility = function fetchSocialLayerS
     tmp2 = "ineligible" !== sKUEligibility;
   }
   if (tmp2) {
-    let obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: null };
+    let obj = dispatcherDefault;
+    obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: null };
     obj[1] = closure_0;
     obj.dispatch(obj);
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
       if ("checking" === closure_1_5.getSKUEligibility(closure_0)) {
-        const obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: null, reason: "interaction_deadline" };
+        let obj = closure_1_1(closure_1_2[5]);
+        obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: null, reason: "interaction_deadline" };
         obj[1] = closure_0;
         obj.dispatch(obj);
       }
     }, closure_11);
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
     obj = { url: null, rejectWithError: true };
     obj[0] = Endpoints.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(arg0, closure_0);
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((result) => {
-      const obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId: closure_0, interactionId: result.body.interaction_id };
+    HTTP.post(obj).then((body) => {
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId: closure_0, interactionId: body.body.interaction_id };
       obj.dispatch(obj);
-    }).catch((error) => {
-      const obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: closure_0, httpStatus: null };
-      let status;
-      if (error != null) {
-        status = error.status;
+    }).catch((status) => {
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: closure_0, httpStatus: null };
+      status = undefined;
+      if (status != null) {
+        status = status.status;
       }
       obj[2] = status;
       obj.dispatch(obj);
     });
-    const nextPromise = HTTP.post(obj).then((result) => {
-      const obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId: closure_0, interactionId: result.body.interaction_id };
+    const nextPromise = HTTP.post(obj).then((body) => {
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE", skuId: closure_0, interactionId: body.body.interaction_id };
       obj.dispatch(obj);
     });
   }

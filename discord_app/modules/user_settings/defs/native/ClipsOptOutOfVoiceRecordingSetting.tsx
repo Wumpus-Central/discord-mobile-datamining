@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import "createToggle";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 function _updateClipsAllowVoiceRecording() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -75,7 +75,7 @@ function _updateClipsAllowVoiceRecording() {
   }
   return applyArgumentsResult;
 }
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.AGDDkH);
@@ -98,6 +98,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
 
 export default createToggle;

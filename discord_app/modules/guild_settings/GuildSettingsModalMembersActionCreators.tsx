@@ -1,33 +1,35 @@
 // discord_app/modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 ({ Endpoints: c3, ME: c4 } = ME);
-const result = obj132.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
 
 export default {
   startEditingRoles(id, id2) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
+    let obj = dispatcherDefault;
+    obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
     obj.dispatch(obj);
   },
   stopEditingRoles() {
     dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
   },
   toggleRole(roleId, state) {
-    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
+    let obj = dispatcherDefault;
+    obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
     obj.dispatch(obj);
   },
   updateMemberRoles(guildId, closure_1_1, roles) {
-    function onEnd(result) {
+    function onEnd() {
       return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE_COMPLETE" });
     }
     let obj = dispatcherDefault;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
     const HTTP = sendRequest.HTTP;
-    { url: closure_3.GUILD_MEMBER(guildId, closure_1_1), body: obj, oldFormErrors: true, rejectWithError: true };
+    obj = { url: closure_3.GUILD_MEMBER(guildId, closure_1_1), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { roles };
     HTTP.patch(obj).then(onEnd, onEnd);
   },
@@ -43,25 +45,25 @@ export default {
     }
     let obj = dispatcherDefault;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME" });
-    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    const HTTP = _sendRequest.HTTP;
+    obj = { url: GUILD_MEMBER_NICKResult, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { nick };
-    obj[3] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
-    const obj4 = sendRequest;
-    HTTP.patch(obj).then((result) => {
+    obj[3] = _sendRequest.rejectWithMigratedError();
+    const obj4 = _sendRequest;
+    HTTP.patch(obj).then(() => {
       callback2(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
     }, (status) => {
-      const intl = callback(dependencyMap[3]).intl;
-      let stringResult = intl.string(callback(dependencyMap[3]).t["5LO/Ss"]);
+      const intl = callback(closure_1_2[3]).intl;
+      let stringResult = intl.string(callback(closure_1_2[3]).t["5LO/Ss"]);
       if (null != callback) {
-        const intl2 = callback(dependencyMap[3]).intl;
-        stringResult = intl2.string(callback(dependencyMap[3]).t.rJfW6S);
+        const intl2 = tmp(tmp2[3]).intl;
+        stringResult = intl2.string(tmp(tmp2[3]).t.rJfW6S);
       }
       if (403 === status.status) {
-        const intl3 = callback(dependencyMap[3]).intl;
-        stringResult = intl3.formatToMarkdownString(callback(dependencyMap[3]).t.Izf9jO, {});
+        const intl3 = tmp(tmp2[3]).intl;
+        stringResult = intl3.formatToMarkdownString(tmp(tmp2[3]).t.Izf9jO, {});
       }
-      dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE", error: stringResult });
+      closure_1_1(closure_1_2[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE", error: stringResult });
     });
-    const patchResult = HTTP.patch(obj);
   }
 };

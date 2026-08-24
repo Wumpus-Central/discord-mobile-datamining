@@ -7,9 +7,9 @@ import TwoWayLinkError from "../TwoWayLinkError.tsx";
 import { XboxLinkModalScenes } from "XboxLinkConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkError.tsx");
 
 export default function XboxLinkDiscordError(onClose) {
   let obj = useNavigation;

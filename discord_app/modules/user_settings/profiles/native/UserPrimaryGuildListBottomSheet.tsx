@@ -1,19 +1,18 @@
 // discord_app/modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx
-import applyDefault from "../../../../../_runtime/00012_apply.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { GuildTagBadgeSize } from "../../../guild_tag/GuildTagConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null };
 let num = 18;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num = 16;
 }
 obj[3] = { lineHeight: num };
@@ -56,7 +55,6 @@ let closure_9 = importAllResult.memo((item) => {
       }
       onSelectGuild(tmp2);
       selected(onSelectGuild[9]).hideActionSheet();
-      const obj = selected(onSelectGuild[9]);
     },
     label: null,
     icon: null,
@@ -75,7 +73,7 @@ let closure_9 = importAllResult.memo((item) => {
     obj[0] = tmp.guildIcon;
     obj[1] = item;
     obj[2] = tmp8(tmp9[11]).GuildIconSizes.SMALL_32;
-    tmp7Result = callback(selected(tmp9[11]), obj);
+    tmp7Result = tmp7(selected(tmp9[11]), obj);
     const tmp12 = selected(tmp9[11]);
   }
   obj[4] = tmp7Result;
@@ -91,34 +89,38 @@ let closure_9 = importAllResult.memo((item) => {
     obj2[2] = tag;
     obj2[3] = guildTagBadgeUrl;
     obj2[4] = GuildTagBadgeSize.SIZE_16;
-    tmp7Result = callback(tmp8(tmp9[12]).BaseGuildTagChiplet, obj2);
+    tmp7Result = tmp7(tmp8(tmp9[12]).BaseGuildTagChiplet, obj2);
   }
-  const items = [tmp7Result, callback(item(onSelectGuild[13]).FormRadio, { selected })];
+  const items = [tmp7Result, closure_6(item(onSelectGuild[13]).FormRadio, { selected })];
   obj1[1] = items;
-  obj[5] = callback2(View, obj1);
-  return callback(item(onSelectGuild[8]).TableRow, obj);
+  obj[5] = closure_7(View, obj1);
+  return closure_6(item(onSelectGuild[8]).TableRow, obj);
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
 
 export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   availableGuilds = availableGuilds.availableGuilds;
   ({ userPrimaryGuild: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
+  importAllResult = undefined;
+  let memo;
   const tmp = callback2();
   importAllResult = tmp;
   let items = [availableGuilds];
-  const memo = importAllResult.useMemo(() => {
+  memo = importAllResult.useMemo(() => {
     const items = [null];
-    HermesBuiltin.arraySpread(applyDefault.sortBy(availableGuilds, (name) => name.name.toLowerCase()), 1);
+    HermesBuiltin.arraySpread(closure_1_1(closure_1_2[14]).sortBy(availableGuilds, (name) => name.name.toLowerCase()), 1);
     return items;
   }, items);
-  let obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+  let obj = { scrollable: true, startExpanded: true, header: null, children: null };
+  obj = { style: tmp.titleContainer, children: null };
+  obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = availableGuilds(1236).intl;
   obj[3] = intl.string(availableGuilds(1236).t.Fo0g9x);
   obj[1] = callback(availableGuilds(4734).Text, obj);
   obj[2] = callback(memo, obj);
   obj[3] = callback(availableGuilds(8029).BottomSheetFlashList, {
     ItemSeparatorComponent() {
-      return closure_1_6(availableGuilds(dependencyMap[18]).FormDivider, { iconPush: true, style: divider.divider });
+      return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
     },
     data: memo,
     contentContainerStyle: { padding: 16 },

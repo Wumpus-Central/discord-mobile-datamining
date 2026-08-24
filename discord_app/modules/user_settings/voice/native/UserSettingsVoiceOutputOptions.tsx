@@ -1,20 +1,18 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx
-import _modDef38 from "../../../../../_runtime/metro/00038__.js";
-import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import reset from "../../../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../stores/MediaEngineStore.tsx";
 import { MediaEngineContextTypes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ slider: { marginTop: 4 } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
 
 export default function UserSettingsVoiceOutputOptions() {
   const tmp = callback2();
@@ -40,13 +38,13 @@ export default function UserSettingsVoiceOutputOptions() {
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores1) {
-      num = closure_1_7.getLocalVolume(tmp.ownerId, MediaEngineContextTypes.STREAM);
+      num = closure_1_7.getLocalVolume(tmp.ownerId, closure_1_8.STREAM);
     }
     return num;
   });
   const callback = React.useCallback((arg0) => {
-    _modDef38(null != stateFromStores1, "Can not set stream volume without active stream");
-    trackDeviceChangedDefault.setLocalVolume(stateFromStores1.ownerId, arg0, MediaEngineContextTypes.STREAM);
+    closure_1_1(closure_1_2[9])(null != stateFromStores1, "Can not set stream volume without active stream");
+    closure_1_1(closure_1_2[10]).setLocalVolume(stateFromStores1.ownerId, arg0, closure_1_8.STREAM);
   }, items3);
   obj = { title: null, hasIcons: false, children: null };
   const intl = stateFromStores1(1236).intl;
@@ -80,5 +78,5 @@ export default function UserSettingsVoiceOutputOptions() {
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return callback(stateFromStores1(12547).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(12547).UserSettingsTableRowGroup, obj);
 };

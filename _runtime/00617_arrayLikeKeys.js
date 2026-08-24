@@ -1,9 +1,5 @@
 // _runtime/00617_arrayLikeKeys.js
 import _mod599 from "metro/00599__.js";
-import baseIsArguments from "00618_baseIsArguments.js";
-import isBuffer from "00621_isBuffer.js";
-import _mod623 from "metro/00623__.js";
-import baseTimes from "00627_baseTimes.js";
 import isIndex from "00628_isIndex.js";
 
 
@@ -11,14 +7,14 @@ export default function arrayLikeKeys(obj) {
   const tmp3 = _mod599(obj);
   let tmp4 = !tmp3;
   if (!tmp3) {
-    tmp4 = baseIsArguments(obj);
+    tmp4 = tmp(618)(obj);
   }
   let tmp5 = !tmp3;
   if (!tmp3) {
     tmp5 = !tmp4;
   }
   if (tmp5) {
-    tmp5 = isBuffer(obj);
+    tmp5 = tmp(621)(obj);
   }
   let tmp6 = !tmp3;
   if (!tmp3) {
@@ -28,7 +24,7 @@ export default function arrayLikeKeys(obj) {
     tmp6 = !tmp5;
   }
   if (tmp6) {
-    tmp6 = _mod623(obj);
+    tmp6 = tmp(623)(obj);
   }
   let tmp7 = tmp3;
   if (!tmp3) {
@@ -42,11 +38,12 @@ export default function arrayLikeKeys(obj) {
   }
   if (tmp7) {
     const _String = String;
-    let items = baseTimes(obj.length, String);
+    let items = tmp(627)(obj.length, String);
   } else {
     items = [];
   }
   for (const key10033 in arg0) {
+    let tmp23 = key10033;
     let tmp21 = !arg1;
     if (arg1) {
       if (!tmp21) {
@@ -79,6 +76,8 @@ export default function arrayLikeKeys(obj) {
             tmp14 = tmp17;
           }
           if (!tmp14) {
+            let tmp19 = require;
+            let tmp20 = dependencyMap;
             tmp14 = isIndex(key10033, tmp9);
           }
           tmp13 = tmp14;
@@ -93,12 +92,14 @@ export default function arrayLikeKeys(obj) {
       }
       continue;
     } else {
+      let tmp10 = hasOwnProperty;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {
-        let callResult = hasOwnProperty(key10033);
+        let callResult = tmp10(key10033);
       } else {
         callResult = call(arg0, key10033);
       }
+      let tmp12 = !callResult;
     }
   }
   return items;

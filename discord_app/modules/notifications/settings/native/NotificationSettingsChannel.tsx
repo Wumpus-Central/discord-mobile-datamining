@@ -1,36 +1,43 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsChannel.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { Form } from "../../../../design/void/Form/native/index.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
+import { NotificationSettingsMessageNotification } from "NotificationSettingsMessageNotification.tsx";
+import { NotificationSettingsMessageUnread } from "NotificationSettingsMessageUnread.tsx";
+import { NotificationSettingsPresets } from "NotificationSettingsPresets.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
+createCacheKey = { screenContainer: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
 
 export default function NotificationSettingsChannel(channel) {
   const _require = channel;
-  let obj = useChannelPresetSettings;
+  let obj = _useChannelPresetSettings;
   const channelPresetInheritance = obj.useChannelPresetInheritance(channel.channel);
-  const intl = require("../../../../intl/index.native.tsx").intl;
-  importDefault = intl.string(require("../../../../intl/index.native.tsx").t.h850Ss);
+  const intl = _getSystemLocale.intl;
+  importDefault = intl.string(_getSystemLocale.t.h850Ss);
   dependencyMap = computeChannelNameDefault(channel.channel);
-  obj1 = useNavigation;
+  obj1 = _useNavigation;
   const React = obj1.useNavigation();
   const layoutEffect = React.useLayoutEffect(() => {
-    let obj = {
+    let obj = options;
+    obj = {
       title: "" + closure_1 + " (" + dependencyMap + ")",
       headerTitle() {
-        return closure_1_6(channel(closure_1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
+        return closure_1_6(closure_1_0(closure_1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
       }
     };
     options.setOptions(obj);
@@ -47,7 +54,7 @@ export default function NotificationSettingsChannel(channel) {
   const callback1 = React.useCallback(() => {
     const result = callback(6798).updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, { muted: false }, channel(6795).NotificationLabels.Unmuted);
   }, items1);
-  let obj2 = initialize;
+  let obj2 = _initialize;
   const items2 = [closure_5];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => ({ config: closure_1_5.getChannelMuteConfig(channel.channel.guild_id, channel.channel.id), muted: closure_1_5.isChannelMuted(channel.channel.guild_id, channel.channel.id) }));
   obj = { style: callback2().screenContainer, children: null };
@@ -64,10 +71,10 @@ export default function NotificationSettingsChannel(channel) {
   }
   const items3 = [muted, , , , , ];
   obj1 = { channel: channel.channel };
-  items3[1] = callback(require("NotificationSettingsPresets.tsx").NotificationSettingsChannelPresets, obj1);
+  items3[1] = callback(_NotificationSettingsPresets.NotificationSettingsChannelPresets, obj1);
   obj2 = { style: { marginTop: 24 }, channel: channel.channel };
-  items3[2] = callback(require("NotificationSettingsMessageNotification.tsx").NotificationSettingsChannelMessageNotification, obj2);
-  items3[3] = callback(require("NotificationSettingsMessageUnread.tsx").NotificationSettingsChannelMessageUnread, { style: { marginTop: 24 }, channel: channel.channel });
+  items3[2] = callback(_NotificationSettingsMessageNotification.NotificationSettingsChannelMessageNotification, obj2);
+  items3[3] = callback(_NotificationSettingsMessageUnread.NotificationSettingsChannelMessageUnread, { style: { marginTop: 24 }, channel: channel.channel });
   channel = channel.channel;
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
@@ -91,5 +98,5 @@ export default function NotificationSettingsChannel(channel) {
   }
   items3[5] = tmp11Result;
   obj[1] = items3;
-  return callback(require("../../../../design/void/Form/native/index.tsx").Form, obj);
+  return closure_7(_Form.Form, obj);
 };

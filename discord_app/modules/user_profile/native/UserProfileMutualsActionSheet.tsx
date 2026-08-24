@@ -1,7 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileMutualsActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../design/void/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
 import getNicknameDefault from "../../../utils/NicknameUtils.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
@@ -9,17 +7,15 @@ import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet.tsx";
 import ActivityStatusDefault from "../../activity_status/native/ActivityStatus.tsx";
 import useUserProfileMutualsDefault from "../hooks/useUserProfileMutuals.tsx";
-import getMutualGuildsLabelDefault from "../utils/getMutualGuildsLabel.tsx";
-import getMutualFriendsLabelDefault from "../utils/getMutualFriendsLabel.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import sortActivity from "../../../stores/PresenceStore.tsx";
+import closure_7 from "../../../stores/PresenceStore.tsx";
 import { UserProfileSections } from "../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function MutualFriendRow(mutualFriend) {
   const user = mutualFriend.mutualFriend.user;
   const guildId = mutualFriend.guildId;
@@ -30,6 +26,7 @@ function MutualFriendRow(mutualFriend) {
   const items = [closure_7];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ status: closure_1_7.getStatus(user.id), isMobileOnline: closure_1_7.isMobileOnline(user.id), isVROnline: closure_1_7.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
+  obj = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
   obj = { user, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
   obj[1] = callback2(user(1297).Avatar, obj);
   const tmp = callback4();
@@ -92,32 +89,37 @@ class MutualGuildRow {
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { flex: 1, gap: 20, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null, loadingState: null, emptyState: null, activityStatusText: null, mutualGuildSubLabel: null };
+createCacheKey = { flex: 1, gap: 20, paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[2] = { alignItems: "center" };
+let obj1 = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[3] = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
+let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
 
 export default function UserProfileMutualsActionSheet(user) {
   user = user.user;
   ({ guildId: importDefault, onPressMutualFriend: dependencyMap, onPressMutualGuild: closure_3 } = user);
   let React;
   const tmp = callback4();
+  let obj = React;
   const tmp2 = callback(React.useState(0), 2);
   React = tmp2[1];
   ({ mutualFriends, mutualGuilds } = useUserProfileMutualsDefault(user));
   obj1 = user(8799);
-  let obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
+  obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
   let num = 0;
   if (user.section === UserProfileSections.MUTUAL_GUILDS) {
     num = 1;
   }
   obj[1] = num;
   let length;
-  let tmp3Result = getMutualFriendsLabelDefault;
+  let tmp3Result = tmp3(11778);
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
@@ -143,7 +145,7 @@ export default function UserProfileMutualsActionSheet(user) {
     };
     obj3[2] = function renderItem(item) {
       item = item.item;
-      return closure_1_9(MutualFriendRow, {
+      return closure_1_9(closure_1_12, {
         mutualFriend: item,
         guildId: closure_1,
         onPress() {
@@ -158,7 +160,7 @@ export default function UserProfileMutualsActionSheet(user) {
   obj[2] = tmp10;
   const items = [obj, ];
   let length1;
-  tmp3Result = getMutualGuildsLabelDefault;
+  tmp3Result = tmp3(11772);
   if (mutualGuilds != null) {
     length1 = mutualGuilds.length;
   }
@@ -181,7 +183,7 @@ export default function UserProfileMutualsActionSheet(user) {
     };
     obj7[2] = function renderItem(item) {
       item = item.item;
-      return closure_1_9(MutualGuildRow, {
+      return closure_1_9(closure_1_13, {
         user: item,
         mutualGuild: item,
         onPress() {

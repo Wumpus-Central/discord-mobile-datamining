@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/isOnMetaHorizon.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import items3 from "../Constants.tsx";
 
 let closure_0 = items3.META_PRESENCE_APPLICATION_ID;
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = obj132.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
 
 export default function isOnMetaHorizon(application_id) {
   application_id = undefined;

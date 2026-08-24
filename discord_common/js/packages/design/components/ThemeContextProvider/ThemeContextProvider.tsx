@@ -1,9 +1,9 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx");
 
 export const ThemeContextProvider = function ThemeContextProvider(children) {
   let theme = children.theme;
@@ -17,7 +17,8 @@ export const ThemeContextProvider = function ThemeContextProvider(children) {
   let density = children.density;
   let disableAdaptiveTheme = children.disableAdaptiveTheme;
   let reduceAdaptiveTheme = children.reduceAdaptiveTheme;
-  const context = secondaryColor.useContext(theme(primaryColor[2]).ThemeContext);
+  let context;
+  context = secondaryColor.useContext(theme(primaryColor[2]).ThemeContext);
   const FALLBACK_THEME_CONTEXT_VALUE = theme(primaryColor[2]).FALLBACK_THEME_CONTEXT_VALUE;
   const items = [theme, , , , , , , , , , , , , , , , , , , , , ];
   ({ theme: arr[1], primaryColor: arr[2], secondaryColor: arr[3], gradient: arr[4], flags: arr[5], contrast: arr[6], saturation: arr[7], enabledExperiments: arr[8], density: arr[9], disableAdaptiveTheme: arr[10], reduceAdaptiveTheme: arr[11] } = context);

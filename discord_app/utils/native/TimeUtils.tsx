@@ -1,7 +1,7 @@
 // discord_app/utils/native/TimeUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-let result = obj132.fileFinishedImporting("utils/native/TimeUtils.tsx");
+let result = set.fileFinishedImporting("utils/native/TimeUtils.tsx");
 
 export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes) {
   padMinutes = undefined;

@@ -11,10 +11,10 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AllChannelAccessOptions } from "../../edit_state/GuildRoleSubscriptionEditStore.tsx";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
-require = fn;
+require = arg1;
 function Row(arg0) {
   ({ selected, disabled } = arg0);
   ({ icon, label, onPress } = arg0);
@@ -32,7 +32,7 @@ function Row(arg0) {
   }
   obj[3] = tmp7;
   obj[4] = onPress;
-  obj = { size: Button.Icon.Sizes.MEDIUM, source: icon };
+  obj = { size: tmp2(1297).Icon.Sizes.MEDIUM, source: icon };
   const items = [callback(Button.Icon, obj), , ];
   const items1 = [tmp.rowLabel, ];
   let rowLabelSelected = selected;
@@ -43,11 +43,12 @@ function Row(arg0) {
   items[1] = callback(Button.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
   items[2] = callback(Button.RadioIndicator, { style: tmp.rowIndicator, active: selected });
   obj[5] = items;
-  return callback(renderDefault, obj);
+  return closure_6(renderDefault, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { container: null, row: null, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 };
 let obj1 = {};
@@ -62,7 +63,8 @@ createCacheKey[4] = { marginStart: "auto" };
 const importDefaultResult1 = importDefaultResult;
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx");
+const obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx");
 
 export default function AllChannelsSwitch(style) {
   ({ channelAccessFormat, setChannelAccessFormat: require, disabled } = style);
@@ -70,13 +72,14 @@ export default function AllChannelsSwitch(style) {
     disabled = false;
   }
   const tmp = callback3();
-  const items = [tmp.container, style.style];
-  let obj = { icon: registerAssetDefault, label: null, selected: null, onPress: null, disabled: null };
+  let obj = { style: items, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
+  items = [tmp.container, style.style];
+  obj = { icon: registerAssetDefault, label: null, selected: null, onPress: null, disabled: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["vs2T+B"]);
   obj[2] = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
   obj[3] = function onPress() {
-    return callback(AllChannelAccessOptions.SOME_CHANNELS_ACCESS);
+    return callback(closure_1_4.SOME_CHANNELS_ACCESS);
   };
   obj[4] = disabled;
   const items1 = [callback(Row, obj), , ];
@@ -87,7 +90,7 @@ export default function AllChannelsSwitch(style) {
   obj1[1] = intl2.string(getSystemLocale.t.l4Tr7X);
   obj1[2] = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
   obj1[3] = function onPress() {
-    return callback(AllChannelAccessOptions.ALL_CHANNELS_ACCESS);
+    return callback(closure_1_4.ALL_CHANNELS_ACCESS);
   };
   obj1[4] = disabled;
   items1[2] = callback(Row, obj1);

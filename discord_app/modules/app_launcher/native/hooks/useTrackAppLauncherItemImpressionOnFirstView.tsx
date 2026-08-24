@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
   let obj = entrypoint(9565);
@@ -21,8 +21,8 @@ export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackApp
       if (!current.has(itemKey)) {
         const current2 = ref.current;
         current2.add(itemKey);
-        entrypoint(ref[3]);
-        let obj = { type: null, name: null, properties: null };
+        let obj = entrypoint(ref[3]);
+        obj = { type: null, name: null, properties: null };
         obj[0] = entrypoint(ref[4]).ImpressionTypes.VIEW;
         obj[1] = entrypoint(ref[4]).ImpressionNames.APP_LAUNCHER_ITEM;
         obj = { source: null, section_name: null, section_position: null, section_overall_position: null, application_id: null, command_id: null, application_flags: null };

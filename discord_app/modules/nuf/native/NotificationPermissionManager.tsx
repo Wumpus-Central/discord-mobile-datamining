@@ -2,19 +2,19 @@
 import tDefault from "../../../../_runtime/03975_t.js";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import getOrRefreshPushSyncToken from "../../../actions/native/PushNotificationActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import storeThread from "../../threads/JoinedThreadsStore.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import updateUserGuildSettingsInternal from "../../../stores/UserGuildSettingsStore.tsx";
-import set from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import closure_5 from "../../threads/JoinedThreadsStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../stores/native/PushNotificationPermissionStore.tsx";
 import { PermissionPromptType } from "../../../stores/native/PushNotificationPermissionStore.tsx";
 import EventActionType from "components/notification/NotificationPermissionConstants.tsx";
 import ME from "../../../Constants.tsx";
 import { NotificationAuthorizationStatus as closure_16 } from "../../native_permissions/NativePermissionConstants.tsx";
 
-require = fn;
+require = arg1;
 function haveNotSeenPromptSince(arg0, arg1) {
   const tmp = state.getState().promptLastSeen[arg0];
   let tmp2 = null == tmp;
@@ -46,6 +46,7 @@ function _shouldShowPrompt() {
     c4 = 0;
     return (function*(arg0) {
       closure_2 = tmp2;
+      closure_1 = tmp3;
       const NativePermissionManager = obj.NativePermissionManager;
       closure_1 = yield NativePermissionManager.getNotificationAuthorizationStatus();
       let tmp11 = closure_1 === constants.UNDETERMINED;
@@ -112,14 +113,14 @@ function showPrompt(arg0, arg1, arg2) {
     clearTimeout(timeout);
   }
   timeout = setTimeout(() => {
-    let obj = callback(dependencyMap[15]);
+    let obj = callback(closure_1_2[15]);
     const result = obj.setPushPermissionReactivationSeen(callback);
     obj = { impressionName: null, impressionProperties: null, location: null };
-    const obj2 = callback2(dependencyMap[10]);
-    obj[0] = callback(dependencyMap[13]).ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
+    const obj2 = callback2(closure_1_2[10]);
+    obj[0] = callback(closure_1_2[13]).ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj[1] = { action_location: callback2 };
     obj[2] = callback2;
-    obj2.openLazy(callback(dependencyMap[12])(dependencyMap[11], dependencyMap.paths), closure_1_11, obj);
+    obj2.openLazy(callback(closure_1_2[12])(closure_1_2[11], closure_1_2.paths), closure_1_11, obj);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -870,6 +871,7 @@ prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(
             }
             if (!isMutedResult) {
               const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+              const obj = getOrRefreshPushSyncToken;
             }
           }
         }
@@ -890,12 +892,13 @@ prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(opti
         }
         if (!isMutedResult) {
           const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+          const obj = getOrRefreshPushSyncToken;
         }
       }
     }
   }
 };
 const notificationPermissionManager = new NotificationPermissionManager();
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/NotificationPermissionManager.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/NotificationPermissionManager.tsx");
 
 export default notificationPermissionManager;

@@ -1,12 +1,12 @@
 // discord_app/modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import isAnimatedBackgroundOption from "VideoBackgroundUtils.tsx";
-import noop from "../../../_runtime/00019_noop.js";
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
 
 export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgroundOption(currentUser) {
   const voiceAndVideo = settings.settings.voiceAndVideo;
@@ -15,17 +15,19 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
     prop = voiceAndVideo.videoBackgroundFilterDesktop;
   }
   const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+  const obj = isAnimatedBackgroundOption;
+  const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
     if (typeof videoBackgroundOptionFromProto !== "number") {
       let tmp7 = videoBackgroundOptionFromProto;
     } else {
-      isAnimatedBackgroundOption;
       tmp7 = null;
+      const tmp2Result = isAnimatedBackgroundOption;
     }
     let tmp6 = tmp7;
   } else {
-    getPremiumPlanItemDefault;
     tmp6 = null;
+    const obj3 = getPremiumPlanItemDefault;
   }
   return tmp6;
 };
@@ -44,22 +46,23 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
   return React.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const videoBackgroundOptionFromProto = stateFromStores1(dependencyMap[3]).getVideoBackgroundOptionFromProto(prop, stateFromStores1.id);
-      const obj = stateFromStores1(dependencyMap[3]);
+      const videoBackgroundOptionFromProto = stateFromStores1(closure_1_2[3]).getVideoBackgroundOptionFromProto(prop, tmp.id);
+      const obj = stateFromStores1(closure_1_2[3]);
+      const tmp4 = stateFromStores1;
       if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
         if (typeof videoBackgroundOptionFromProto !== "number") {
           let tmp9 = videoBackgroundOptionFromProto;
         } else {
-          stateFromStores1(dependencyMap[3]);
           tmp9 = null;
+          const tmp4Result = tmp4(tmp5[3]);
         }
         let tmp8 = tmp9;
       } else {
-        prop(dependencyMap[4]);
         tmp8 = null;
+        const obj3 = prop(tmp5[4]);
       }
       tmp2 = tmp8;
-      obj2 = stateFromStores1(dependencyMap[3]);
+      obj2 = stateFromStores1(closure_1_2[3]);
     }
     return tmp2;
   }, items2);

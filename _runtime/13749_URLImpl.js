@@ -1,6 +1,6 @@
 // _runtime/13749_URLImpl.js
 import _createClass from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const URLImpl = require;
 class URLImpl {
@@ -47,7 +47,7 @@ class URLImpl {
       }
       tmp10 = global;
       self._url = basicURLParseResult1;
-      tmp7Result = require("metro/13754__.js");
+      tmp7Result = require("module_13754");
       items = [];
       items[0] = str;
       self._query = tmp7Result.createImpl(global, items, { doNotStripQMark: true });
@@ -76,11 +76,12 @@ let items = [
         _list.splice(0);
         const query = basicURLParseResult.query;
         if (null !== query) {
-          self._query._list = URLImpl(13753).parseUrlencoded(query);
-          const tmpResult = URLImpl(13753);
+          self._query._list = tmp(13753).parseUrlencoded(query);
+          const tmpResult = tmp(13753);
         }
       }
       const obj = URLImpl(13750);
+      tmp = URLImpl;
     }
   },
   {
@@ -95,8 +96,8 @@ let items = [
       return this._url.scheme + ":";
     },
     set(arg0) {
-      URLImpl(13750);
-      const obj = { url: this._url, stateOverride: "scheme start" };
+      let obj = URLImpl(13750);
+      obj = { url: this._url, stateOverride: "scheme start" };
       obj.basicURLParse(`${arg0}:`, obj);
     }
   },
@@ -110,7 +111,6 @@ let items = [
         URLImpl(13750).setTheUsername(this._url, arg0);
         const tmpResult = URLImpl(13750);
       }
-      obj = URLImpl(13750);
     }
   },
   {
@@ -123,7 +123,6 @@ let items = [
         URLImpl(13750).setThePassword(this._url, arg0);
         const tmpResult = URLImpl(13750);
       }
-      obj = URLImpl(13750);
     }
   },
   {
@@ -145,8 +144,8 @@ let items = [
     },
     set(arg0) {
       if (!this._url.cannotBeABaseURL) {
-        URLImpl(13750);
-        const obj = { url: null, stateOverride: "host" };
+        let obj = URLImpl(13750);
+        obj = { url: null, stateOverride: "host" };
         obj[0] = tmp._url;
         obj.basicURLParse(arg0, obj);
       }
@@ -164,8 +163,8 @@ let items = [
     },
     set(arg0) {
       if (!this._url.cannotBeABaseURL) {
-        URLImpl(13750);
-        const obj = { url: null, stateOverride: "hostname" };
+        let obj = URLImpl(13750);
+        obj = { url: null, stateOverride: "hostname" };
         obj[0] = tmp._url;
         obj.basicURLParse(arg0, obj);
       }
@@ -215,8 +214,8 @@ let items = [
       const self = this;
       if (!this._url.cannotBeABaseURL) {
         self._url.path = [];
-        URLImpl(13750);
-        const obj = { url: null, stateOverride: "path start" };
+        let obj = URLImpl(13750);
+        obj = { url: null, stateOverride: "path start" };
         obj[0] = self._url;
         obj.basicURLParse(arg0, obj);
       }
@@ -243,16 +242,15 @@ let items = [
         self._query._list = [];
       } else {
         let substr = str;
-        if ("?" === "?"[0]) {
+        if ("?" === str[0]) {
           substr = str.substring(1);
         }
         _url.query = "";
-        URLImpl(13750);
-        const obj = { url: null, stateOverride: "query" };
+        let obj = URLImpl(13750);
+        obj = { url: null, stateOverride: "query" };
         obj[0] = _url;
         obj.basicURLParse(substr, obj);
         self._query._list = URLImpl(13753).parseUrlencoded(substr);
-        const obj3 = URLImpl(13753);
       }
     }
   },
@@ -279,12 +277,12 @@ let items = [
       const self = this;
       if ("" !== str) {
         let substr = str;
-        if ("#" === "#"[0]) {
+        if ("#" === str[0]) {
           substr = str.substring(1);
         }
         self._url.fragment = "";
-        URLImpl(13750);
-        const obj = { url: null, stateOverride: "fragment" };
+        let obj = URLImpl(13750);
+        obj = { url: null, stateOverride: "fragment" };
         obj[0] = self._url;
         obj.basicURLParse(substr, obj);
       } else {

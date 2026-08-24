@@ -1,44 +1,47 @@
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
-import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 import messagesProxyDefault from "AgeAssurance.messages.js";
 import AgeVerificationModalEntryPoint from "AgeVerificationAnalyticsUtils.tsx";
-import openIncodeAgeVerificationModalDefault from "AgeVerificationActionCreators.native.tsx";
+import set from "../../../_runtime/00002_set.js";
+import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 let items = [AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.NSFW_GUILD];
-let obj = { title: messagesProxyDefault["2yLvkS"], description: messagesProxyDefault.eJmat5 };
+let set = new Set(items);
+let obj = { FACIAL_AGE_ESTIMATION: 1, [1]: "FACIAL_AGE_ESTIMATION", ID_VERIFICATION: 2, [2]: "ID_VERIFICATION", MODULAR: 3, [3]: "MODULAR", GOOGLE_WALLET: 9, [9]: "GOOGLE_WALLET" };
+obj = {};
+obj = { title: messagesProxyDefault["2yLvkS"], description: messagesProxyDefault.eJmat5 };
 obj[obj.FACIAL_AGE_ESTIMATION] = obj;
-const set = new Set(items);
 obj[obj.ID_VERIFICATION] = { title: messagesProxyDefault.dwkwo0, description: messagesProxyDefault.ZdmRwW };
+const obj1 = { title: messagesProxyDefault.dwkwo0, description: messagesProxyDefault.ZdmRwW };
 obj[obj.GOOGLE_WALLET] = { title: messagesProxyDefault.Y9sLpR, description: messagesProxyDefault.dah4bF };
-let result = obj132.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
+let result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
 export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
   const _require = arg0;
   let obj = { title: null, description: null };
-  const intl = require("../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(require("../../intl/index.native.tsx").t.HphYKp);
-  const intl2 = require("../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(require("../../intl/index.native.tsx").t["GCZC+9"]);
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.HphYKp);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t["GCZC+9"]);
   const items = [obj, , ];
   obj = { title: null, description: null };
-  const intl3 = require("../../intl/index.native.tsx").intl;
-  obj[0] = intl3.string(require("../../intl/index.native.tsx").t.nkO4L3);
-  const intl4 = require("../../intl/index.native.tsx").intl;
-  obj[1] = intl4.string(require("../../intl/index.native.tsx").t.rHZFsH);
+  const intl3 = _getSystemLocale.intl;
+  obj[0] = intl3.string(_getSystemLocale.t.nkO4L3);
+  const intl4 = _getSystemLocale.intl;
+  obj[1] = intl4.string(_getSystemLocale.t.rHZFsH);
   items[1] = obj;
   obj = { title: null, description: null };
-  const intl5 = require("../../intl/index.native.tsx").intl;
-  obj[0] = intl5.string(require("../../intl/index.native.tsx").t.aVwLfn);
-  const intl6 = require("../../intl/index.native.tsx").intl;
-  obj[1] = intl6.format(require("../../intl/index.native.tsx").t.n5vd1E, {
+  const intl5 = _getSystemLocale.intl;
+  obj[0] = intl5.string(_getSystemLocale.t.aVwLfn);
+  const intl6 = _getSystemLocale.intl;
+  obj[1] = intl6.format(_getSystemLocale.t.n5vd1E, {
     handleOnHelpUrlHook() {
-      const obj = openIncodeAgeVerificationModalDefault;
-      obj.openUrl(combinedDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_SYSTEM_DMS));
-      const result = callback(dependencyMap[1]).trackAgeVerificationModalClicked(callback, callback(dependencyMap[1]).AgeVerificationModalVersion.PRIMARY, callback(dependencyMap[1]).AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE);
+      const obj = closure_1_1(closure_1_2[3]);
+      obj.openUrl(closure_1_1(closure_1_2[4]).getArticleURL(closure_1_3.TIGGER_PAWTECT_SYSTEM_DMS));
+      const obj2 = closure_1_1(closure_1_2[4]);
+      const result = callback(closure_1_2[1]).trackAgeVerificationModalClicked(callback, callback(closure_1_2[1]).AgeVerificationModalVersion.PRIMARY, callback(closure_1_2[1]).AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE);
     }
   });
   items[2] = obj;

@@ -5,21 +5,24 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import useUrlParts from "../../masked_link/SharedStateUtils.tsx";
 import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsxs: c3, jsx: c4 } = jsxProd);
-const createCacheKey = { maxHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: ThemesDefault.radii.md };
+createCacheKey = { linkCalloutContainer: null, linkCalloutContainerText: null };
+createCacheKey = { maxHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
+const obj1 = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
 export const URLCallout = function URLCallout(url) {
   const tmp = callback3();
   let obj = useUrlParts;
   const urlParts = obj.useUrlParts(url.url);
+  obj = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
   obj = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
   const items = [protocol, "//"];

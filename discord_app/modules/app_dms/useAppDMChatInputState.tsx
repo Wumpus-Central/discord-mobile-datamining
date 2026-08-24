@@ -1,26 +1,28 @@
 // discord_app/modules/app_dms/useAppDMChatInputState.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
 import { useQueryState } from "../application_commands/ApplicationCommandIndexStore.tsx";
-import addApplication from "../applications/ApplicationStore.tsx";
-import createUserWidgetFromServer from "../user_profile/UserProfileStore.tsx";
-import createExecutable from "../../records/ApplicationRecord.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_5 from "../applications/ApplicationStore.tsx";
+import closure_6 from "../user_profile/UserProfileStore.tsx";
+import closure_7 from "../../records/ApplicationRecord.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 let items = [require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT, require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.MESSAGE, require("PermissionOverwriteType").ApplicationCommandType.USER];
-const result = require("obj132").fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
+const result = require("set").fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
 
 export default function useAppDMChatInputState(context) {
+  let channel;
+  let memo;
   let stateFromStores;
   let application;
-  const channel = context.context.channel;
+  channel = context.context.channel;
   let obj = application;
   items = [channel];
-  const memo = application.useMemo(() => {
+  memo = application.useMemo(() => {
     if (null != channel) {
-      if (true === channel.isDM()) {
-        const user = closure_1_8.getUser(channel.getRecipientId());
+      if (true === obj.isDM()) {
+        const user = closure_1_8.getUser(obj.getRecipientId());
         let tmp3 = null;
         if (undefined !== user) {
           tmp3 = null;
@@ -47,8 +49,8 @@ export default function useAppDMChatInputState(context) {
     let tmp2;
     if (null !== memo) {
       let id;
-      if (memo != null) {
-        id = memo.id;
+      if (tmp != null) {
+        id = tmp.id;
       }
       const userProfile = closure_1_6.getUserProfile(id);
       application = undefined;
@@ -74,7 +76,7 @@ export default function useAppDMChatInputState(context) {
         id = memo.id;
       }
       if (id == null) {
-        id = EMPTY_STRING_SNOWFLAKE_ID;
+        id = closure_1_9;
       }
       memo(stateFromStores[9])(id, undefined, { withMutualGuilds: true });
       const tmp3 = memo(stateFromStores[9]);
@@ -88,15 +90,16 @@ export default function useAppDMChatInputState(context) {
   const effect1 = obj.useEffect(() => {
     let id;
     if (memo != null) {
-      id = memo.id;
+      id = tmp.id;
     }
     if (null != id) {
-      memo(stateFromStores[10]);
-      const obj = { type: "APP_DM_OPEN", botUserId: null };
-      obj[1] = memo.id;
+      let obj = memo(stateFromStores[10]);
+      obj = { type: "APP_DM_OPEN", botUserId: null };
+      obj[1] = tmp.id;
       obj.dispatch(obj);
     }
   }, items4);
+  obj = { commandTypes: items };
   obj = { applicationId: stateFromStores, allowFetch: null, allowApplicationState: true };
   let id2;
   if (memo != null) {
@@ -104,8 +107,8 @@ export default function useAppDMChatInputState(context) {
   }
   obj[1] = null != id2;
   const descriptors = useQueryState({ channel, type: "channel" }, obj, obj).descriptors;
-  const found = descriptors.find((item, index) => {
-    application = item.application;
+  const found = descriptors.find((application) => {
+    application = application.application;
     let id;
     if (application != null) {
       id = application.id;
@@ -125,6 +128,9 @@ export default function useAppDMChatInputState(context) {
     return fromServer;
   }, items5);
   const obj3 = channel(stateFromStores[8]);
+  const tmp10 = useQueryState;
+  let tmp2 = channel;
+  let tmp3 = stateFromStores;
   if (null == memo1) {
     const tmp15 = stateFromStores;
   }

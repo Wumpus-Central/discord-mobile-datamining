@@ -1,9 +1,9 @@
 // _runtime/06972_n.js
 import cancelAnimation from "01654_cancelAnimation.js";
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
-fn = function n(arg0) {
+const fn = function n(arg0, arg1) {
   if ("easeIn" === arg0) {
     let obj = { easing: null, duration: null };
     const Easing3 = cancelAnimation.Easing;

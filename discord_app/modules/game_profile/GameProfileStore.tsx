@@ -14,38 +14,38 @@ const Store = initializeDefault.Store;
 class GameProfileStore extends Store {
 }
 const prototype = GameProfileStore.prototype;
-prototype["getSimilarGames"] = function getSimilarGames(closure_0) {
-  return table[closure_0];
+prototype["getSimilarGames"] = function getSimilarGames(arg0) {
+  return table[arg0];
 };
-prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(closure_0) {
-  return table2[closure_0];
+prototype["getShopCollectionSkuIds"] = function getShopCollectionSkuIds(arg0) {
+  return table2[arg0];
 };
-prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(closure_0) {
-  let flag = table3[closure_0];
+prototype["hasShopCollectionBeenFetched"] = function hasShopCollectionBeenFetched(arg0) {
+  let flag = table3[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["isShopCollectionFetching"] = function isShopCollectionFetching(closure_0) {
-  let flag = table4[closure_0];
+prototype["isShopCollectionFetching"] = function isShopCollectionFetching(arg0) {
+  let flag = table4[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["getAnnouncements"] = function getAnnouncements(closure_0) {
-  return table5[closure_0];
+prototype["getAnnouncements"] = function getAnnouncements(arg0) {
+  return table5[arg0];
 };
-prototype["hasAnnouncementsBeenFetched"] = function hasAnnouncementsBeenFetched(closure_0) {
-  let flag = table6[closure_0];
+prototype["hasAnnouncementsBeenFetched"] = function hasAnnouncementsBeenFetched(arg0) {
+  let flag = table6[arg0];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["isAnnouncementsFetching"] = function isAnnouncementsFetching(closure_0) {
-  let flag = table7[closure_0];
+prototype["isAnnouncementsFetching"] = function isAnnouncementsFetching(arg0) {
+  let flag = table7[arg0];
   if (flag == null) {
     flag = false;
   }
@@ -119,6 +119,6 @@ const gameProfileStore = new GameProfileStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileStore.tsx");
 
 export default gameProfileStore;

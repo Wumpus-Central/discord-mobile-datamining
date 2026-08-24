@@ -7,7 +7,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 let closure_5 = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.24);
 const memoResult = importAllResult.memo(() => {
   let obj = map;
@@ -15,6 +15,6 @@ const memoResult = importAllResult.memo(() => {
   obj = { style: StyleSheet.absoluteFill, blurStyle: "default", tintColor: closure_5, android_fallbackColor: token, blurAmount: 0.24, blurTheme: "dark" };
   return jsx(isBlurDisabledDefault, { style: StyleSheet.absoluteFill, blurStyle: "default", tintColor: closure_5, android_fallbackColor: token, blurAmount: 0.24, blurTheme: "dark" });
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/BlurVisualEffectView.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/BlurVisualEffectView.tsx");
 
 export default memoResult;

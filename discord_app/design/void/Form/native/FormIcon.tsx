@@ -4,10 +4,10 @@ import Button from "../../native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ icon: { opacity: 0.6 } });
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
 
 export default function FormIcon(color) {
   ({ style, themedColor } = color);

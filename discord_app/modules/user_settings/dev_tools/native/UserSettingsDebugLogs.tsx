@@ -1,25 +1,29 @@
 // discord_app/modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ RefreshControl: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsxs: error, jsx: closure_8 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { wrap: null, searchWrap: null, searchField: null, shareButton: null, list: null, log: null, code: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { flex: 1 };
+let obj1 = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, height: require("InputHeights").InputHeights.MD, width: require("InputHeights").InputHeights.MD, justifyContent: "center", alignItems: "center" };
 let obj2 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, height: require("InputHeights").InputHeights.MD, width: require("InputHeights").InputHeights.MD, justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { fontFamily: require("ME").Fonts.CODE_BOLD };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");
+const obj4 = { paddingBottom: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogs.tsx");
 
 export default function UserSettingsDebugLogs() {
   const tmp = callback2();
@@ -28,7 +32,7 @@ export default function UserSettingsDebugLogs() {
   [tmp6, importDefault] = first(React.useState(0), 2);
   let callback = React.useCallback(() => {
     callback((arg0) => arg0 + 1);
-    importDefault(callback[9]).open({ content: "Debug logs refreshed", key: "debug-logs-refreshed" });
+    closure_1_1(callback[9]).open({ content: "Debug logs refreshed", key: "debug-logs-refreshed" });
   }, []);
   let Storage = _require(callback[10]).Storage;
   let str = Storage.get("debug-log-sort-order", "oldest");
@@ -64,10 +68,11 @@ export default function UserSettingsDebugLogs() {
         try {
           const _RegExp = RegExp;
           const regExp = new RegExp(closure_7, "i");
-          callback2(closure_6.filter((item, index) => {
-            let tmp2 = null != item.category.match(regExp);
+          callback2(closure_6.filter((category) => {
+            let tmp2 = null != category.category.match(regExp);
             if (!tmp2) {
-              tmp2 = null != item.message.match(regExp);
+              tmp2 = null != category.message.match(regExp);
+              const str2 = category.message;
             }
             return tmp2;
           }));
@@ -84,11 +89,13 @@ export default function UserSettingsDebugLogs() {
     }
   }, items1);
   let items2 = [tmp];
+  obj = { style: tmp.wrap, children: null };
   obj = { style: tmp.searchWrap, children: null };
   obj1 = { style: tmp.searchField, children: null };
   const callback1 = obj.useCallback((item) => {
     item = item.item;
-    let obj = { style: lib.code, variant: "text-xs/normal", color: "text-muted", children: null };
+    let obj = { style: lib.log, children: null };
+    obj = { style: lib.code, variant: "text-xs/normal", color: "text-muted", children: null };
     const items = [new Date(item.time).toISOString(), " ", ];
     let str = item.timing;
     if (str == null) {
@@ -97,21 +104,22 @@ export default function UserSettingsDebugLogs() {
     items[2] = str;
     obj[3] = items;
     const items1 = [first1(lib(callback[12]).Text, obj), ];
-    obj = { style: lib.code, variant: "text-sm/normal", children: null };
+    obj = { style: tmp3.code, variant: "text-sm/normal", children: null };
     const date = new Date(item.time);
+    const tmp2 = memo;
     const items2 = [callback3(lib(callback[12]).Text, { style: lib.code, variant: "text-sm/normal", color: "text-brand", children: "[" + item.category + "]: " }), item.message];
     obj[2] = items2;
     items1[1] = first1(lib(callback[12]).Text, obj);
     obj[1] = items1;
-    return first1(memo, obj, item.index);
+    return first1(tmp2, obj, item.index);
   }, items2);
   const obj2 = { size: "md", placeholder: "Filter (regex)", onChange: tmp4Result[1], defaultValue: first1, trailingIcon: _require(callback[14]).FiltersHorizontalIcon, trailingPressableProps: null };
   const obj3 = { accessibilityLabel: null, onPress: null };
   const intl = tmp8(tmp3[15]).intl;
   obj3[0] = intl.string(_require(callback[15]).t["+1H47t"]);
   obj3[1] = function onPress() {
-    lib(callback[16]);
-    const obj = {
+    let obj = lib(callback[16]);
+    obj = {
       sortOrder: first,
       onRefresh() {
         callback();
@@ -119,7 +127,7 @@ export default function UserSettingsDebugLogs() {
       },
       onSortOrderChanged(arg0) {
         callback2(arg0);
-        closure_1_1(callback[17]).hideActionSheet();
+        closure_1_1(closure_1_2[17]).hideActionSheet();
       }
     };
     const result = obj.openUserSettingsDebugLogsFiltersActionSheet(obj);

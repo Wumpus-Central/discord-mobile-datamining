@@ -2,9 +2,9 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import parseDefault from "../../../_runtime/01484_parse.js";
 import getFirstQueryStringValue from "../../utils/QueryStringUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 
-require = fn;
+require = arg1;
 function readSnowflake(firstQueryStringValue) {
   let tmp;
   if (typeof firstQueryStringValue === "string") {
@@ -38,12 +38,12 @@ function generateInviteKeyFromExtraData(closure_1) {
 const event = "event";
 const channel = "channel";
 const message = "message";
-const result = require("obj132").fileFinishedImporting("modules/instant_invite/InviteCodeUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/InviteCodeUtils.tsx");
 
 export { readSnowflake };
-export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlParams(match2, search) {
+export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlParams(inviteHostRemainingPath, search) {
   if (null == search) {
-    return match2;
+    return inviteHostRemainingPath;
   } else {
     let substr = search;
     if ("?" === search.charAt(0)) {
@@ -53,15 +53,18 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       let obj = parseDefault;
       const parsed = obj.parse(substr);
       const firstQueryStringValue = getFirstQueryStringValue.getFirstQueryStringValue(parsed[event]);
+      const obj2 = getFirstQueryStringValue;
+      const tmp10 = readSnowflake;
+      const tmp6 = require;
       const tmp12 = readSnowflake(getFirstQueryStringValue.getFirstQueryStringValue(parsed[channel]));
       obj = { baseCode: null, guildScheduledEventId: null, targetChannelId: null, targetMessageId: null };
-      obj[0] = match2;
+      obj[0] = inviteHostRemainingPath;
       obj[1] = firstQueryStringValue;
       obj[2] = tmp12;
       let tmp10Result;
       if (null != tmp12) {
-        tmp10Result = readSnowflake(getFirstQueryStringValue.getFirstQueryStringValue(parsed[message]));
-        const tmp6Result = getFirstQueryStringValue;
+        tmp10Result = tmp10(tmp6(4361).getFirstQueryStringValue(parsed[message]));
+        const tmp6Result = tmp6(4361);
       }
       obj[3] = tmp10Result;
       return generateInviteKeyFromExtraData(obj);
@@ -79,11 +82,14 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     return obj;
   } else {
     const parsed = parseDefault.parse(tmp3);
+    const obj4 = parseDefault;
+    const tmp12 = require;
     const firstQueryStringValue = getFirstQueryStringValue.getFirstQueryStringValue(parsed[event]);
+    const obj5 = getFirstQueryStringValue;
     const firstQueryStringValue1 = getFirstQueryStringValue.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
     if (typeof firstQueryStringValue1 === "string") {
-      let tmp9Result = DISCORD_EPOCHDefault;
+      let tmp9Result = tmp9(11);
       if (tmp9Result.isProbablyAValidSnowflake(firstQueryStringValue1)) {
         tmp4 = firstQueryStringValue1;
       }
@@ -94,16 +100,16 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     obj[2] = tmp4;
     let tmp5;
     if (null != tmp4) {
-      const firstQueryStringValue2 = getFirstQueryStringValue.getFirstQueryStringValue(parsed[message]);
+      const firstQueryStringValue2 = tmp12(4361).getFirstQueryStringValue(parsed[message]);
       let tmp8;
       if (typeof firstQueryStringValue2 === "string") {
-        tmp9Result = DISCORD_EPOCHDefault;
+        tmp9Result = tmp9(11);
         if (tmp9Result.isProbablyAValidSnowflake(firstQueryStringValue2)) {
           tmp8 = firstQueryStringValue2;
         }
       }
       tmp5 = tmp8;
-      const tmp12Result = getFirstQueryStringValue;
+      const tmp12Result = tmp12(4361);
     }
     obj[3] = tmp5;
     return obj;

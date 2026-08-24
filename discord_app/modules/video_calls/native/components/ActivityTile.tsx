@@ -2,21 +2,22 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { ActivityLayoutMode } from "../../../activities/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ActivityTileInner(participant) {
   participant = participant.participant;
   const channel = participant.channel;
   const onSingleTap = participant.onSingleTap;
+  let first;
   let stateFromStores;
   let analyticsLocations;
   closure_6 = undefined;
@@ -67,7 +68,7 @@ function ActivityTileInner(participant) {
               }
               if (tmp12) {
                 obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null };
-                obj1[0] = closure_1_4.applicationId;
+                obj1[0] = tmp24.applicationId;
                 obj1[1] = v0.id;
                 obj1[2] = closure_1_6.location;
                 obj1[3] = closure_1_5;
@@ -79,6 +80,7 @@ function ActivityTileInner(participant) {
               } else {
                 dependencyMap = 3;
               }
+              tmp24 = closure_1_4;
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;
@@ -108,12 +110,12 @@ function ActivityTileInner(participant) {
   }
   let tmp = callback2();
   const items = [participant.applicationId];
-  const first = stateFromStores(channel(onSingleTap[15])(items), 1)[0];
+  first = stateFromStores(channel(onSingleTap[15])(items), 1)[0];
   let obj = participant(onSingleTap[13]);
   obj1 = embeddedActivityJoinability;
   const items1 = [embeddedActivityJoinability];
   const stateFromStoresArray = obj.useStateFromStoresArray(items1, () => {
-    const mapped = Array.from(participant.participants).map((item, index) => user.getUser(item.userId));
+    const mapped = Array.from(participant.participants).map((userId) => user.getUser(userId.userId));
     return mapped.filter(participant(onSingleTap[14]).isNotNullish);
   });
   let obj2 = channel(onSingleTap[16]);
@@ -136,12 +138,12 @@ function ActivityTileInner(participant) {
   const items2 = [closure_6];
   stateFromStores = tmp5Result.useStateFromStores(items2, () => {
     embeddedActivitiesForChannelIncludingHidden = embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(channel.id);
-    return embeddedActivitiesForChannelIncludingHidden.find((item, index) => {
+    return embeddedActivitiesForChannelIncludingHidden.find((applicationId) => {
       let id;
       if (id != null) {
         id = id.id;
       }
-      return item.applicationId === id;
+      return applicationId.applicationId === id;
     });
   });
   tmp2Result = tmp2(tmp3[19]);
@@ -234,13 +236,13 @@ function ActivityTileInner(participant) {
     obj8[2] = tmp5(tmp3[10]).OverflowText;
     obj8[3] = stateFromStoresArray;
     obj8[5] = function renderItem(user) {
-      let obj = { user, guildId, size: XSMALL, cutout: null };
+      let obj = { user, guildId, size: closure_1_12, cutout: null };
       guildId = participant.guildId;
       let tmp5;
       if (!arg1) {
         obj = { radius: null, direction: null, inset: -6 };
-        obj[0] = participant(onSingleTap[10]).AVATAR_SIZE_MAP[tmp4] / 2 + 3;
-        obj[1] = participant(onSingleTap[10]).CutoutDirection.RIGHT;
+        obj[0] = tmp2(tmp3[10]).AVATAR_SIZE_MAP[tmp4] / 2 + 3;
+        obj[1] = tmp2(tmp3[10]).CutoutDirection.RIGHT;
         tmp5 = obj;
       }
       obj[3] = tmp5;
@@ -264,14 +266,14 @@ function ActivityTileInner(participant) {
       obj12[1] = tmp.buttonPill;
       const intl5 = tmp5(tmp3[22]).intl;
       obj12[2] = intl5.string(tmp5(tmp3[22]).t["4i2vj+"]);
-      obj11[1] = callback(tmp5(tmp3[31]).BaseTextButton, obj12);
-      tmp25Result = callback(tmp26, obj11);
+      obj11[1] = tmp25(tmp5(tmp3[31]).BaseTextButton, obj12);
+      tmp25Result = tmp25(tmp26, obj11);
     }
     items5[3] = tmp25Result;
     obj7[1] = items5;
-    items3[1] = callback(analyticsLocations, obj7);
+    items3[1] = closure_11(analyticsLocations, obj7);
     obj4[5] = items3;
-    tmp23Result = callback(tmp5(tmp3[27]).PressableOpacity, obj4);
+    tmp23Result = tmp23(tmp5(tmp3[27]).PressableOpacity, obj4);
   }
   return tmp23Result;
 }
@@ -280,21 +282,25 @@ noopAll;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const XSMALL = require("Button").AvatarSizes.XSMALL;
 const themedRippleConfig = require("semanticColor").getThemedRippleConfig({ foreground: true });
-const createCacheKey = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
+createCacheKey = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
+createCacheKey = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", display: "flex", width: "100%", padding: 16 };
 createCacheKey[2] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
 createCacheKey[4] = { textAlign: "center", marginLeft: 16, marginRight: 16 };
+let obj2 = { fontSize: 16, lineHeight: 24, color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.DISPLAY_EXTRABOLD, textAlign: "center", marginLeft: 16, marginRight: 16 };
 createCacheKey[5] = { height: require("Button").AVATAR_SIZE_MAP[XSMALL], backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 createCacheKey[6] = { marginTop: 8, alignSelf: "center" };
 createCacheKey[7] = { borderRadius: 100 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { height: require("Button").AVATAR_SIZE_MAP[XSMALL], backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ActivityTile.tsx");
 
 export default function ActivityTile(arg0) {
-  const obj = {};
+  let obj = { theme: constants.DARK, children: null };
+  obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(ActivityTileInner, obj);
   return callback(ManaContext.ThemeContextProvider, obj);

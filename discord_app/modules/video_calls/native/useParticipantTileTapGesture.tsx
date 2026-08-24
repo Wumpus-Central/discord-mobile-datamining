@@ -1,8 +1,8 @@
 // discord_app/modules/video_calls/native/useParticipantTileTapGesture.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import LegacyBaseButton from "../../../../_runtime/06377_LegacyBaseButton.js";
 
-const result = obj132.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
+const result = set.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
 
 export default function useParticipantTileTapGesture(arg0) {
   ({ onSingleTapStart, onDoubleTapStart } = arg0);

@@ -1,6 +1,5 @@
 // _runtime/00273_get_Version.js
-import { PlatformConstants } from "00274_PlatformConstants.js";
-const importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let obj = { __constants: null, OS: "android" };
 Object.defineProperty(obj, "Version", {
@@ -13,8 +12,8 @@ Object.defineProperty(obj, "constants", {
   get: function() {
     const self = this;
     if (null == this.__constants) {
-      self.__constants = require("00274_PlatformConstants.js").getConstants();
-      const obj = PlatformConstants;
+      self.__constants = module(274).getConstants();
+      const obj = module(274);
     }
     return self.__constants;
   },

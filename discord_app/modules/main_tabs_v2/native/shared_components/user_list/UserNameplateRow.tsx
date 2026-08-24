@@ -1,16 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-const createCacheKey = { padding: 0, paddingRight: ThemesDefault.space.PX_40, overflow: "hidden" };
+createCacheKey = { card: null };
+createCacheKey = { padding: 0, paddingRight: ThemesDefault.space.PX_40, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx");
 
 export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   ({ icon, onPressIn } = onPressOut);
@@ -69,16 +70,16 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   const merged1 = Object.assign(merged);
   const items2 = [callback2(onPressOut(9221), { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), callback2(onPressIn(6291).TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
   obj.children = items2;
-  let tmp12Result = callback(onPressIn(6292).Card, obj);
+  let tmp12Result = tmp12(tmp3(6292).Card, obj);
   if (!context) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result, ];
       obj1 = { adjustSpacingForIcon: null };
       obj1[0] = null != icon;
-      items3[1] = callback2(onPressIn(6287).TableRowDivider, obj1);
+      items3[1] = tmp15(tmp3(6287).TableRowDivider, obj1);
       obj[0] = items3;
-      tmp12Result = callback(closure_7, obj);
+      tmp12Result = tmp12(closure_7, obj);
     }
   }
   return tmp12Result;

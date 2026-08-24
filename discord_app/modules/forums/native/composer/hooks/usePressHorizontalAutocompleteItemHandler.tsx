@@ -1,11 +1,12 @@
 // discord_app/modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import set from "../../../../../../_runtime/00002_set.js";
 
-const require = fn;
+const require = arg1;
 let items = [, , , ];
 ({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = require("ME").AutoCompleteResultTypes);
-const set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx");
 
 export const usePressHorizontalAutocompleteItemHandler = function usePressHorizontalAutocompleteItemHandler(draftContent) {
   draftContent = draftContent.draftContent;

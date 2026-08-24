@@ -1,10 +1,10 @@
 // discord_app/modules/rtc/hooks/useIsSecureFramesVerified.tsx
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
-import computeCallVerification from "../SecureFramesVerifiedStore.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../SecureFramesVerifiedStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesVerified.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesVerified.tsx");
 
 export const useIsUserSecureFramesVerified = function useIsUserSecureFramesVerified(channelId) {
   const userId = channelId.userId;
@@ -16,13 +16,13 @@ export const useIsUserSecureFramesVerified = function useIsUserSecureFramesVerif
   return userId(isSecureFramesUIEnabled[4]).useStateFromStores(items, () => {
     let isUserConnectedResult = null != userId && isSecureFramesUIEnabled;
     if (isUserConnectedResult) {
-      isUserConnectedResult = closure_1_3.isUserConnected(userId);
+      isUserConnectedResult = closure_1_3.isUserConnected(tmp);
     }
     if (isUserConnectedResult) {
-      isUserConnectedResult = closure_1_2.getId() !== userId;
+      isUserConnectedResult = closure_1_2.getId() !== tmp;
     }
     if (isUserConnectedResult) {
-      isUserConnectedResult = closure_1_4.isUserVerified(userId);
+      isUserConnectedResult = closure_1_4.isUserVerified(tmp);
     }
     return isUserConnectedResult;
   }, items1);
@@ -30,9 +30,10 @@ export const useIsUserSecureFramesVerified = function useIsUserSecureFramesVerif
 export const useIsStreamSecureFramesVerified = function useIsStreamSecureFramesVerified(channelId) {
   const streamKey = channelId.streamKey;
   let isSecureFramesUIEnabled;
+  let isStreamRTCConnectionEmpty;
   isSecureFramesUIEnabled = streamKey(isSecureFramesUIEnabled[3]).useIsSecureFramesUIEnabled({ channelId: channelId.channelId });
   const obj = streamKey(isSecureFramesUIEnabled[3]);
-  const isStreamRTCConnectionEmpty = streamKey(isSecureFramesUIEnabled[5]).useIsStreamRTCConnectionEmpty(streamKey);
+  isStreamRTCConnectionEmpty = streamKey(isSecureFramesUIEnabled[5]).useIsStreamRTCConnectionEmpty(streamKey);
   const obj2 = streamKey(isSecureFramesUIEnabled[5]);
   const items = [closure_4, isStreamRTCConnectionEmpty];
   const items1 = [isStreamRTCConnectionEmpty, isSecureFramesUIEnabled, streamKey];
@@ -43,9 +44,9 @@ export const useIsStreamSecureFramesVerified = function useIsStreamSecureFramesV
           return false;
         } else {
           const id = isStreamRTCConnectionEmpty.getId();
-          let isStreamVerifiedResult = streamKey(isSecureFramesUIEnabled[6]).decodeStreamKey(streamKey).ownerId !== id;
+          let isStreamVerifiedResult = streamKey(isSecureFramesUIEnabled[6]).decodeStreamKey(tmp2).ownerId !== id;
           if (isStreamVerifiedResult) {
-            isStreamVerifiedResult = closure_1_4.isStreamVerified(streamKey);
+            isStreamVerifiedResult = closure_1_4.isStreamVerified(tmp2);
           }
           return isStreamVerifiedResult;
         }

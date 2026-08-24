@@ -2,7 +2,6 @@
 import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
 import consoleSandbox from "00824_consoleSandbox.js";
 import isInstanceOf from "00827_isInstanceOf.js";
-import isMatchingPattern from "00832_isMatchingPattern.js";
 import setupIntegration from "00887_setupIntegration.js";
 
 function _extractErrorData(cause) {
@@ -16,25 +15,39 @@ function _extractErrorData(cause) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp9 = nextResult;
+      let tmp10 = items;
       if (-1 !== items.indexOf(nextResult)) {
         continue;
       } else {
+        let tmp39 = nextResult;
         let tmp40 = cause[tmp9];
         let tmp41 = tmp40;
+        let tmp42 = obj;
+        let tmp43 = require;
+        let tmp44 = require;
+        let tmp45 = dependencyMap;
+        let tmp46 = dependencyMap;
         let obj5 = isInstanceOf;
         if (!obj5.isError(tmp40)) {
+          let tmp11 = tmp40;
           if (typeof tmp41 !== "string") {
+            let tmp47 = tmp40;
             obj[tmp9] = tmp41;
           }
         }
         if (arg2) {
-          let tmp44Result = isMatchingPattern;
+          let tmp14 = tmp43;
+          let tmp15 = tmp45;
+          let tmp44Result = tmp44(832);
+          let tmp16 = tmp40;
           let _HermesInternal2 = HermesInternal;
           let truncateResult = tmp44Result.truncate("" + tmp41, arg2);
         } else {
+          let tmp12 = tmp40;
           let _HermesInternal = HermesInternal;
           truncateResult = "" + tmp41;
         }
+        let tmp17 = truncateResult;
       }
     }
     if (arg1) {
@@ -58,9 +71,16 @@ function _extractErrorData(cause) {
       const _Object2 = Object;
       const keys1 = Object.keys(toJSONResult);
       for (const item10058 of keys1) {
+        let tmp23 = toJSONResult;
         let tmp24 = tmp53[item10058];
         let str2 = tmp24;
+        let tmp25 = obj;
+        let tmp26 = require;
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
+        let tmp29 = dependencyMap;
         let obj4 = isInstanceOf;
+        let tmp30 = tmp24;
         if (obj4.isError(tmp24)) {
           str = str2.toString();
         } else {
@@ -87,8 +107,13 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
   if (arg0 === undefined) {
     obj = {};
   }
+  let num;
   closure_1 = undefined;
   const depth = obj.depth;
+  num = 3;
+  if (undefined !== depth) {
+    num = depth;
+  }
   const captureErrorCause = obj.captureErrorCause;
   closure_1 = undefined === captureErrorCause || captureErrorCause;
   obj = {
@@ -102,18 +127,18 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
       if (obj.originalException) {
         tmp3 = contexts;
         if (obj2.isError(obj.originalException)) {
-          const tmp8 = _extractErrorData(obj.originalException, table, getOptions.getOptions().maxValueLength);
+          const tmp8 = closure_1_2(obj.originalException, table, getOptions.getOptions().maxValueLength);
           tmp3 = contexts;
           if (tmp8) {
             obj = {};
             const merged = Object.assign(contexts.contexts);
-            const normalizer = num(table[2]);
-            const normalizeResult = normalizer.normalize(tmp8, num);
-            let tmp4Result = num(table[1]);
+            let tmp4Result = tmp4(tmp5[2]);
+            const normalizeResult = tmp4Result.normalize(tmp8, num);
+            tmp4Result = tmp4(tmp5[1]);
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              tmp4Result = num(table[3]);
-              const result = tmp4Result.addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
+              const result = tmp4(tmp5[3]).addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
               obj[tmp6] = normalizeResult;
+              const tmp4Result1 = tmp4(tmp5[3]);
             }
             obj = {};
             const merged1 = Object.assign(contexts);

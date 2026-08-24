@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/hooks/useSimilarGames.tsx
-import handleLoadMessages from "../../games/GameStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../games/GameStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "../../../../discord_common/js/shared/shared-constants/SimilarGamesConstants.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_5 = [];
 let closure_6 = [];
-const result = require("obj132").fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
 
 export default function useSimilarGames(arg0, arg1) {
   let tmp = arg1;
@@ -27,7 +27,7 @@ export default function useSimilarGames(arg0, arg1) {
   tmp3Result = tmp3(589);
   const items = [closure_2];
   const items1 = [tmp7];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => data.some((item, index) => null == game.getGame(item) && !game.hasNoData(item) && !game.didFetchingFail(item)), items1);
+  const stateFromStores = tmp3Result.useStateFromStores(items, () => data.some((closure_0) => null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0)), items1);
   data(589);
   const items2 = [closure_2, closure_3];
   [][0] = tmp7;
@@ -35,6 +35,7 @@ export default function useSimilarGames(arg0, arg1) {
     obj = { isFetching: null, similarGames: null };
     obj[0] = null == error && null == data || isLoading || stateFromStores;
     obj[1] = tmp11;
+    const tmp14 = null == error && null == data || isLoading || stateFromStores;
   } else {
     obj = { isFetching: false, similarGames: null };
     obj[1] = closure_6;

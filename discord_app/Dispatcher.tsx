@@ -1,5 +1,5 @@
 // discord_app/Dispatcher.tsx
-import obj132 from "../_runtime/00002_obj132.js";
+import set from "../_runtime/00002_set.js";
 import initialize from "../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../discord_common/js/packages/storage/Storage.tsx";
 import logger from "../discord_common/js/packages/flux/LoggingUtils.tsx";
@@ -16,7 +16,7 @@ obj = { persist: flag };
 const actionLogger = new logger.ActionLogger(obj);
 obj = { addBreadcrumb: addSentryBreadcrumbDefault };
 const dispatcher = new initialize.Dispatcher(obj.Default, actionLogger, obj);
-const result = obj132.fileFinishedImporting("Dispatcher.tsx");
+const result = set.fileFinishedImporting("Dispatcher.tsx");
 
 export default dispatcher;
 export const DispatchBand = obj;

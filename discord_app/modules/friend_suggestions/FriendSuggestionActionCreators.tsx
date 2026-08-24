@@ -1,10 +1,10 @@
 // discord_app/modules/friend_suggestions/FriendSuggestionActionCreators.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
 
 export default {
   fetch() {

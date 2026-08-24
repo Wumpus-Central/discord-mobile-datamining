@@ -5,12 +5,13 @@ import getIllustrationSource from "../../index.tsx";
 import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/TopPattern.tsx");
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/TopPattern.tsx");
 
 export const getTopPatternSource = function getTopPatternSource(theme) {
-  const obj = {
+  let obj = getIllustrationSource;
+  obj = {
     dark() {
       return callback(12951);
     },
@@ -24,7 +25,8 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useTopPatternSource = function useTopPatternSource() {
-  const obj = {
+  let obj = AccessibilityAnnouncer;
+  obj = {
     dark() {
       return callback(12951);
     },
@@ -38,7 +40,19 @@ export const useTopPatternSource = function useTopPatternSource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const TopPattern = function TopPattern(arg0) {
-  const obj = {};
+  let obj = AccessibilityAnnouncer;
+  obj = {
+    dark() {
+      return callback(12951);
+    },
+    darker() {
+      return callback(12952);
+    },
+    light() {
+      return callback(12953);
+    }
+  };
+  obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

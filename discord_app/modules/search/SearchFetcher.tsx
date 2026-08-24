@@ -1,17 +1,17 @@
 // discord_app/modules/search/SearchFetcher.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import parseDefault from "../../../_runtime/01484_parse.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ SearchTypes: c5, Endpoints: closure_6 } = ME);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     obj.searchId = global;
-    obj.searchType = fn;
+    obj.searchType = arg1;
     obj.query = importDefault;
     return obj;
   }
@@ -53,12 +53,12 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             let callback = tmp7;
             let lib;
             callback = undefined;
-            if (!self.isCanceled) {
+            if (!closure_1_3.isCanceled) {
               c4 = 1;
               c5 = 2;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = self.makeRequest({ rejectWithError: false });
+              obj1[0] = closure_1_3.makeRequest({ rejectWithError: false });
               return obj1;
             }
           }
@@ -112,6 +112,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                   closure_3.retryDelay = num2;
                   closure_3.retryLater(lib, callback, dependencyMap);
                   callback(closure_1_0);
+                  const tmp71 = closure_3;
                 }
               }
               c4 = 0;
@@ -150,7 +151,7 @@ prototype["retryLater"] = function retryLater(c0, closure_1, closure_2) {
   const _fetch = self.fetch;
   self.indexingPollId = setTimeout(_fetch.bind(self, c0, closure_1, closure_2), self.retryDelay);
 };
-const result = require("obj132").fileFinishedImporting("modules/search/SearchFetcher.tsx");
+const result = require("set").fileFinishedImporting("modules/search/SearchFetcher.tsx");
 class SearchFetcherImpl extends SearchFetcher {
 }
 const prototype2 = SearchFetcherImpl.prototype;
@@ -163,7 +164,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
         return closure_6.SEARCH_GUILD(self.searchId);
       }
     }
-  } else if (constants.GUILD_CHANNEL === searchType) {
+  } else if (tmp.GUILD_CHANNEL === searchType) {
     if (null != self.searchId) {
       if ("" !== self.searchId) {
         channel = channel.getChannel(self.searchId);
@@ -176,7 +177,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
         }
       }
     }
-  } else if (constants.CHANNEL === searchType) {
+  } else if (tmp.CHANNEL === searchType) {
     if (null != self.searchId) {
       if ("" !== self.searchId) {
         return closure_6.SEARCH_CHANNEL(self.searchId);
@@ -199,12 +200,13 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
     obj[1] = parseDefault.stringify(this.query);
     obj[3] = rejectWithError.rejectWithError;
     value = HTTP.get(obj);
+    const obj2 = parseDefault;
   }
   return value;
 };
 class SearchTabFetcherImpl extends SearchFetcher {
   constructor(arg0, arg1, arg2, arg3) {
-    tmp = new tmp(global, fn, importDefault, new.target);
+    tmp = new tmp(global, arg1, importDefault, new.target);
     // ThrowIfThisInitialized (0x7c)
     tmp.payload = importAll;
     return tmp;
@@ -217,10 +219,10 @@ prototype3["getEndpoint"] = function getEndpoint() {
   if (constants.DMS === searchType) {
     return closure_6.SEARCH_TABS_DMS;
   } else {
-    if (constants.GUILD_CHANNEL !== searchType) {
-      if (constants.GUILD !== searchType) {
-        if (constants.THREAD !== searchType) {
-          if (constants.CHANNEL === searchType) {
+    if (tmp.GUILD_CHANNEL !== searchType) {
+      if (tmp.GUILD !== searchType) {
+        if (tmp.THREAD !== searchType) {
+          if (tmp.CHANNEL === searchType) {
             if (null != self.searchId) {
               if ("" !== self.searchId) {
                 return closure_6.SEARCH_TABS_CHANNEL(self.searchId);

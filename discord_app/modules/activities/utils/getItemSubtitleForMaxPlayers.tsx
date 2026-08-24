@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getItemSubtitleForMaxPlayers.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 
 export default function getItemSubtitleForMaxPlayers(arg0) {
   if (arg0 > 0) {

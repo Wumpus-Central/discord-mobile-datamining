@@ -1,9 +1,10 @@
 // discord_common/js/shared/shared-constants/IntegrationTypes.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const obj = { SYNCABLE: new Set(["twitch", "youtube"]) };
-const set = new Set(["twitch", "youtube"]);
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationTypes.tsx");
+const obj = { SYNCABLE: null };
+let set = new Set(["twitch", "youtube"]);
+obj[0] = set;
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationTypes.tsx");
 
 export const IntegrationTypes = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
 export const IntegrationTypesSets = obj;

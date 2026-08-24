@@ -2,22 +2,24 @@
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import TableRowGroupTitle from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import _toArray from "../../../_runtime/00853__toArray.js";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import setIndex from "../../stores/GuildCategoryStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00853__toArray.js";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildCategoryStore.tsx";
+import closure_8 from "../../stores/GuildStore.tsx";
+import closure_9 from "../../stores/PermissionStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
+import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = { screenContainer: null, stackPadding: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 let closure_15 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -33,16 +35,16 @@ class ChannelSettingsChangeCategory extends Component {
     categories = closure_7.getCategories(channel2.getGuildId());
     obj[0] = closure_6.getChannel(global.channel.parent_id);
     _categories = categories._categories;
-    mapped = _categories.map((item, index) => item.channel);
-    obj[1] = mapped.filter((item, index) => {
-      let canResult = "null" === item.id;
+    mapped = _categories.map((channel) => channel.channel);
+    obj[1] = mapped.filter((id) => {
+      let canResult = "null" === id.id;
       if (canResult) {
-        canResult = closure_1_9.can(Permissions.MANAGE_CHANNELS, closure_0);
+        canResult = closure_1_9.can(closure_1_12.MANAGE_CHANNELS, closure_0);
       }
       if (!canResult) {
-        let canResult1 = closure_1_9.can(Permissions.MANAGE_CHANNELS, item);
+        let canResult1 = closure_1_9.can(closure_1_12.MANAGE_CHANNELS, id);
         if (canResult1) {
-          canResult1 = closure_1_9.can(Permissions.VIEW_CHANNEL, item);
+          canResult1 = closure_1_9.can(closure_1_12.VIEW_CHANNEL, id);
         }
         canResult = canResult1;
       }
@@ -66,13 +68,14 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       throw error;
     } else {
       obj = channel(channel[17]);
-      return channel(channel[17]).batchChannelUpdate(tmp, closure_7).then((result) => arr.pop());
+      return channel(channel[17]).batchChannelUpdate(tmp, closure_7).then(() => arr.pop());
     }
   }
   const props = this.props;
+  let channel = props.channel;
   const navigation = props.navigation;
   let obj = obj1;
-  const channel = obj1.getChannel(id);
+  channel = obj1.getChannel(id);
   const guildId = channel.getGuildId();
   if (null == guildId) {
     const _Error2 = Error;
@@ -86,7 +89,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
     _require = tmp3;
     const categories = store.getCategories(channel.getGuildId());
     let arr = channel(channel[14])(categories._categories, categories, (channel) => channel.channel.type === channel.type);
-    const found = arr.find((item, index) => item.channel.id === channel.id);
+    const found = arr.find((channel) => channel.channel.id === channel.id);
     if (null == found) {
       let _Error = Error;
       const error1 = new Error("ChannelSettingsChangeCategory.handleSetCategory: Could not find original channel.");
@@ -94,19 +97,19 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
     } else {
       obj = {};
       const _categories = categories._categories;
-      const item = _categories.forEach((item, index) => {
+      const item = _categories.forEach((channel) => {
         const items = [];
-        obj[item.channel.id] = items;
+        obj[channel.channel.id] = items;
         return items;
       });
-      const item1 = arr.forEach((item, index) => {
-        let tmp = item.channel.id !== channel.id;
+      const item1 = arr.forEach((channel) => {
+        let tmp = channel.channel.id !== channel.id;
         if (tmp) {
           const _String = String;
-          obj[String(undefined, item.channel.parent_id)];
-          let arr;
+          let arr = obj[String(undefined, channel.channel.parent_id)];
+          arr = undefined;
           if (arr != null) {
-            arr = arr.push(item);
+            arr = arr.push(channel);
           }
           tmp = arr;
         }
@@ -128,11 +131,11 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
       const result = _require(tmp7[15]).calculatePositionDeltas(obj);
       store = result;
       if (result.length > 0) {
-        const found1 = result.find((item, index) => {
-          let flag = item.id === channel.id;
+        const found1 = result.find((id) => {
+          let flag = id.id === channel.id;
           if (flag) {
-            item.parent_id = closure_0;
-            closure_6 = item;
+            id.parent_id = closure_0;
+            closure_6 = id;
             flag = true;
           }
           return flag;
@@ -151,7 +154,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
         if (null != channel) {
           if (closure_9) {
             if (!closure_8) {
-              channel(channel[18]);
+              obj = channel(channel[18]);
               obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
               const intl = id(channel[19]).intl;
               obj[0] = intl.string(id(channel[19]).t.YWMtRe);
@@ -173,8 +176,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
                   throw error;
                 } else {
                   obj = closure_1_1(closure_1_3[17]);
-                  closure_1_1(closure_1_3[17]).batchChannelUpdate(tmp, closure_7).then((result) => arr.pop());
-                  const batchChannelUpdateResult = closure_1_1(closure_1_3[17]).batchChannelUpdate(tmp, closure_7);
+                  closure_1_1(closure_1_3[17]).batchChannelUpdate(tmp, closure_7).then(() => arr.pop());
                 }
               };
               obj[5] = saveUpdates;
@@ -189,8 +191,8 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
           throw error;
         } else {
           const obj6 = channel(channel[17]);
-          channel(channel[17]).batchChannelUpdate(tmp24, closure_7).then((result) => arr.pop());
-          let batchChannelUpdateResult = channel(channel[17]).batchChannelUpdate(tmp24, closure_7);
+          channel(channel[17]).batchChannelUpdate(tmp24, closure_7).then(() => arr.pop());
+          const batchChannelUpdateResult = channel(channel[17]).batchChannelUpdate(tmp24, closure_7);
         }
       });
     }
@@ -200,7 +202,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
   const _require = label;
-  return callback3(require("../../design/components/TableRow/native/TableRow.native.tsx").TableRow, {
+  return callback3(_TableRowInner.TableRow, {
     label: label.name,
     onPress() {
       return self.handleSetCategory(label.id);
@@ -232,11 +234,13 @@ prototype["renderCategories"] = function renderCategories() {
   return tmp4;
 };
 prototype["render"] = function render() {
-  const self = this;
+  let self = this;
+  self = this;
   const category = this.state.category;
   const first = callback(this.state.categories, 1)[0];
   const tmp2 = callback4(this.context);
-  let obj = { style: tmp2.stackPadding, spacing: self(712).space.PX_24, children: null };
+  let obj = { style: tmp2.screenContainer, children: null };
+  obj = { style: tmp2.stackPadding, spacing: self(712).space.PX_24, children: null };
   const intl = first(1236).intl;
   if (null != category) {
     let name = category.name;
@@ -245,7 +249,7 @@ prototype["render"] = function render() {
     name = intl2.string(tmp4(1236).t.GSfOoo);
   }
   obj = { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }) };
-  const items = [callback(first(4734).Text, obj), , ];
+  const items = [closure_13(first(4734).Text, obj), , ];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -258,19 +262,20 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = callback(tmp4(6291).TableRow, obj2, first.id);
-        tmp3Result = callback(tmp4(6286).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(6291).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(6286).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = callback2(first(4733).Stack, obj);
-  return callback(first(8083).Form, obj);
+  obj[1] = closure_14(first(4733).Stack, obj);
+  return closure_13(first(8083).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
-let result = require("obj132").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
+let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+let result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
 export default function ConnectedChannelSettingsChangeCategory(channelId) {
   channelId = channelId.channelId;

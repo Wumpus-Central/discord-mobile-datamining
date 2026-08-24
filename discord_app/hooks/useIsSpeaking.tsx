@@ -1,11 +1,11 @@
 // discord_app/hooks/useIsSpeaking.tsx
-import handleSoundCreateOrUpdate from "../modules/soundboard/SoundboardStore.tsx";
-import handleConnectionOpen from "../stores/SelectedChannelStore.tsx";
-import anyoneHasFlagInContext from "../stores/SpeakingStore.tsx";
-import updateVoiceState from "../stores/VoiceStateStore.tsx";
+import closure_2 from "../modules/soundboard/SoundboardStore.tsx";
+import closure_3 from "../stores/SelectedChannelStore.tsx";
+import closure_4 from "../stores/SpeakingStore.tsx";
+import closure_5 from "../stores/VoiceStateStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("hooks/useIsSpeaking.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("hooks/useIsSpeaking.tsx");
 
 export default function useIsSpeaking(checkSoundboardSounds) {
   ({ userId: require, checkSoundSharing } = checkSoundboardSounds);
@@ -45,7 +45,7 @@ export default function useIsSpeaking(checkSoundboardSounds) {
     }
     flag2 = mute;
   }
-  let tmpResult = require(tmp2[4]);
+  let tmpResult = tmp(tmp2[4]);
   const items1 = [flag2];
   let stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
     let isSpeakingResult = flag2.isSpeaking(closure_0, context);
@@ -54,7 +54,7 @@ export default function useIsSpeaking(checkSoundboardSounds) {
     }
     return isSpeakingResult;
   });
-  tmpResult = require(tmp2[4]);
+  tmpResult = tmp(tmp2[4]);
   const items2 = [flag2];
   const stateFromStores2 = tmpResult.useStateFromStores(items2, () => flag2.isSoundSharing(closure_0) && checkSoundSharing);
   const obj = require(checkSoundSharing[4]);

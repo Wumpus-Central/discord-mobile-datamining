@@ -1,14 +1,35 @@
 // discord_app/modules/games/autocomplete/useGameAutocomplete.tsx
 import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GameAutocompleteUtils.tsx";
 import _fetchGameAutocomplete from "GameAutocompleteActionCreators.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import importDefaultResult from "GameAutocompleteStore.tsx";
 import { QueryIds } from "../../../Constants.tsx";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 let c4 = importDefaultResult;
+initialize = {
+  getQueryId(c0) {
+    return QueryIds.GAME_AUTOCOMPLETE(GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.normalizeGameAutocompleteQuery(c0));
+  },
+  get(arg0) {
+    let results = importDefaultResult.getResults(arg0);
+    if (results == null) {
+      results = null;
+    }
+    return results;
+  },
+  load(arg0) {
+    return _fetchGameAutocomplete.fetchGameAutocomplete(arg0);
+  },
+  getIsLoading(arg0) {
+    return importDefaultResult.isFetching(arg0);
+  },
+  retryConfig: initialize,
+  staleAfter: 3600,
+  failureStaleAfter: 60
+};
 initialize = {
   retryableErrors: function isRetryableError(status) {
     status = status.status;
@@ -28,7 +49,7 @@ initialize = {
   }
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
-let result = require("obj132").fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
+let result = require("set").fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
 
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MS = 200;
 export const GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS = 500;
@@ -47,7 +68,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
   const effect = React.useEffect(() => {
     if (timeout !== ref.current) {
       if (null != tmp) {
-        if (null != ref.current) {
+        if (null != tmp2.current) {
           const _Date2 = Date;
           function emit() {
             closure_3.current = Date.now();
@@ -65,7 +86,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
       }
       const _Date = Date;
       ref2.current = Date.now();
-      ref.current = tmp;
+      tmp2.current = tmp;
       _undefined(tmp);
     }
   }, items);

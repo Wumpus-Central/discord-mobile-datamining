@@ -1,12 +1,12 @@
 // discord_app/modules/tooltip/TooltipStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const StorageKeys = ME.StorageKeys;
-const set = new Set();
+let set = new Set();
 const set1 = new Set();
 const Store = initializeDefault.Store;
 class TooltipStore extends Store {
@@ -47,16 +47,16 @@ const tooltipStore = new TooltipStore(dispatcherDefault, {
     if (!set.has(tooltip)) {
       if (!set1.has(tooltip)) {
         if (!ignoreMaxShownLimit) {
-          ignoreMaxShownLimit = set.size < 1;
+          ignoreMaxShownLimit = obj.size < 1;
         }
         if (ignoreMaxShownLimit) {
-          set.add(tooltip);
+          obj.add(tooltip);
         }
       }
     }
     return false;
   }
 });
-let result = obj132.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
+let result = set.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
 
 export default tooltipStore;

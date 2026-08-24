@@ -1,27 +1,27 @@
 // discord_app/modules/soundplayer/SoundPlayer.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import participantFromServer from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
 import { NO_ACTIVITIES } from "../activities/EmbeddedActivitiesStore.tsx";
-import map from "../frames/FramesStore.tsx";
-import set from "../game_console/GameConsoleStore.tsx";
-import handleProjectUpsert from "../vibegrations/stores/VibegrationsProjectStore.tsx";
+import closure_5 from "../frames/FramesStore.tsx";
+import closure_6 from "../game_console/GameConsoleStore.tsx";
+import closure_7 from "../vibegrations/stores/VibegrationsProjectStore.tsx";
 import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_8 } from "../../records/ChannelRecord.tsx";
-import reset from "../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
-import DesktopNotificationTypes from "../../stores/NotificationSettingsStore.tsx";
-import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import anyoneHasFlagInContext from "../../stores/SpeakingStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
-import getVoiceStatesForGuild from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_9 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_10 from "../../stores/AuthenticationStore.tsx";
+import closure_11 from "../../stores/ChannelStore.tsx";
+import closure_12 from "../../stores/GuildStore.tsx";
+import closure_13 from "../../stores/MediaEngineStore.tsx";
+import closure_14 from "../../stores/NotificationSettingsStore.tsx";
+import closure_15 from "../../stores/RTCConnectionStore.tsx";
+import closure_16 from "../../stores/SelectedChannelStore.tsx";
+import closure_17 from "../../stores/SpeakingStore.tsx";
+import closure_18 from "../../stores/VoiceStateStore.tsx";
+import closure_19 from "../../stores/views/SortedVoiceStateStore.tsx";
 import ME from "../../Constants.tsx";
 import FrameLayoutModes from "../frames/FramesConstants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function MuteDeafen() {
   const items = [closure_13, closure_16];
   const f99395 = () => ({ inVoiceChannel: null != voiceChannelId.getVoiceChannelId(), selfMute: closure_13.isSelfMute(), selfDeaf: closure_13.isSelfDeaf(), audioPermissionReady: closure_13.isNativeAudioPermissionReady(), shouldSkipMuteUnmuteSound: closure_13.shouldSkipMuteUnmuteSound() });
@@ -38,6 +38,11 @@ function MuteDeafen() {
         if (selfDeaf.selfMute !== selfMute) {
           if (tmp2) {
             const result = closure_13.notifyMuteUnmuteSoundWasSkipped();
+          } else {
+            let str = "unmute";
+            if (selfMute) {
+              str = "mute";
+            }
           }
         }
       }
@@ -117,10 +122,10 @@ function RTCConnect() {
     const obj = { channelType: type, guildId, connected: state === constants.RTC_CONNECTED, connectHasStarted: null, awaitingRemote: null, connectedRemote: null };
     let tmp6 = !wasEverRtcConnected;
     if (!wasEverRtcConnected) {
-      tmp6 = state !== constants.DISCONNECTED;
+      tmp6 = state !== tmp5.DISCONNECTED;
     }
     if (!tmp6) {
-      tmp6 = state === constants.RTC_CONNECTED;
+      tmp6 = state === tmp5.RTC_CONNECTED;
     }
     obj[3] = tmp6;
     obj[4] = null != store.getAwaitingRemoteSessionInfo();
@@ -361,7 +366,7 @@ function VoiceChannel() {
         }
         voiceChannelUserCount = result - num;
         const allApplicationStreamsForChannel = obj.getAllApplicationStreamsForChannel(channel.id);
-        streamingUserIds = allApplicationStreamsForChannel.map((item, index) => item.ownerId);
+        streamingUserIds = allApplicationStreamsForChannel.map((ownerId) => ownerId.ownerId);
         channelType = channel.type;
       }
     }
@@ -382,7 +387,7 @@ function VoiceChannel() {
     if (null != first) {
       const encodeStreamKeyResult = currentUserId(f99411[23]).encodeStreamKey(first);
       const viewerIds = obj.getViewerIds(encodeStreamKeyResult);
-      singleActiveStreamViewerCount = viewerIds.filter((item, index) => item !== currentUserId).length;
+      singleActiveStreamViewerCount = viewerIds.filter((arg0) => arg0 !== currentUserId).length;
       singleActiveStreamKey = encodeStreamKeyResult;
       const obj2 = currentUserId(f99411[23]);
     }
@@ -403,11 +408,12 @@ function VoiceChannel() {
           if (null != guildId) {
             guild = guild.getGuild(guildId);
             flag = null != guild && guild.afkChannelId === channel.id;
+            const tmp4 = null != guild && guild.afkChannelId === channel.id;
           }
         }
         if (!flag) {
           const allActiveStreams = voiceChannelId.allActiveStreams;
-          closure_3 = allActiveStreams.map((item, index) => item.ownerId);
+          closure_3 = allActiveStreams.map((ownerId) => ownerId.ownerId);
           const streamingUserIds2 = voiceChannelId.streamingUserIds;
           let str = "stream_started";
           if (!someResult) {
@@ -487,13 +493,13 @@ function ActivitySounds() {
     } else {
       embeddedActivitiesForChannel = closure_4;
     }
-    let tmp4Result = items(f99413[25]);
+    let tmp4Result = tmp4(tmp5[25]);
     if (tmp4Result.isNotNullish(voiceChannelId)) {
       let embeddedActivitiesForChannel1 = obj.getEmbeddedActivitiesForChannel(voiceChannelId);
     } else {
       embeddedActivitiesForChannel1 = closure_4;
     }
-    tmp4Result = items(f99413[25]);
+    tmp4Result = tmp4(tmp5[25]);
     if (tmp4Result.isNotNullish(embeddedActivityLocationChannelId)) {
       let embeddedActivitiesForChannel2 = obj.getEmbeddedActivitiesForChannel(embeddedActivityLocationChannelId);
     } else {
@@ -509,7 +515,7 @@ function ActivitySounds() {
     if (mainFrame != null) {
       surface = mainFrame.surface;
     }
-    const tmp13Result = callback(surface);
+    const tmp13Result = closure_23(surface);
     let result = null == tmp13Result;
     if (result) {
       let applicationId;
@@ -520,8 +526,8 @@ function ActivitySounds() {
     }
     let result1 = null != tmp13Result;
     if (result1) {
-      result1 = items(f99413[26]).isVibegrationsChannelCandidate(channel.getChannel(tmp13Result), "ActivitySounds");
-      const tmp4Result2 = items(f99413[26]);
+      result1 = tmp4(tmp5[26]).isVibegrationsChannelCandidate(channel.getChannel(tmp13Result), "ActivitySounds");
+      const tmp4Result2 = tmp4(tmp5[26]);
     }
     if (!result1) {
       result1 = result;
@@ -532,27 +538,27 @@ function ActivitySounds() {
   const f99414 = (voiceChannelActivities) => {
     ({ connectedActivityLocation, currentUserId: items, userConnectedActivity } = arg1);
     ({ voiceChannelActivities, hasFrame, voiceChannelId, channelActivities, connectedChannelActivities, inVibegrationsChannel } = arg1);
-    const someResult = voiceChannelActivities.some((item, index) => {
-      let applicationId;
+    const someResult = voiceChannelActivities.some((applicationId) => {
+      applicationId = undefined;
       if (userConnectedActivity != null) {
-        applicationId = userConnectedActivity.applicationId;
+        applicationId = tmp.applicationId;
       }
-      return item.applicationId === applicationId && item.launchId === userConnectedActivity.launchId;
+      return applicationId.applicationId === applicationId && applicationId.launchId === userConnectedActivity.launchId;
     });
     let str;
     if (obj.isNotNullish(voiceChannelId)) {
       const prop = voiceChannelActivities.voiceChannelActivities;
-      const found = prop.find((item, index) => {
-        const userIds = item.userIds;
+      const found = prop.find((userIds) => {
+        userIds = userIds.userIds;
         return userIds.has(closure_0);
       });
-      const found1 = voiceChannelActivities.find((item, index) => {
-        const userIds = item.userIds;
+      const found1 = voiceChannelActivities.find((userIds) => {
+        userIds = userIds.userIds;
         return userIds.has(closure_0);
       });
       let isNotNullishResult = voiceChannelActivities.voiceChannelActivities.length < voiceChannelActivities.length;
       if (isNotNullishResult) {
-        let tmp2Result = items(userConnectedActivity[25]);
+        let tmp2Result = tmp2(tmp3[25]);
         isNotNullishResult = tmp2Result.isNotNullish(voiceChannelActivities.voiceChannelId);
       }
       let str2;
@@ -561,7 +567,7 @@ function ActivitySounds() {
       }
       let isNotNullishResult1 = undefined === found1;
       if (isNotNullishResult1) {
-        tmp2Result = items(userConnectedActivity[25]);
+        tmp2Result = tmp2(tmp3[25]);
         isNotNullishResult1 = tmp2Result.isNotNullish(found);
       }
       if (isNotNullishResult1) {
@@ -569,8 +575,8 @@ function ActivitySounds() {
       }
       let isNotNullishResult2 = undefined === found;
       if (isNotNullishResult2) {
-        isNotNullishResult2 = items(userConnectedActivity[25]).isNotNullish(found1);
-        const tmp2Result1 = items(userConnectedActivity[25]);
+        isNotNullishResult2 = tmp2(tmp3[25]).isNotNullish(found1);
+        const tmp2Result1 = tmp2(tmp3[25]);
       }
       if (isNotNullishResult2) {
         isNotNullishResult2 = found1.userIds.size > 1;
@@ -578,10 +584,10 @@ function ActivitySounds() {
       if (isNotNullishResult2) {
         str2 = "activity_user_join";
       }
-      let isNotNullishResult3 = items(userConnectedActivity[25]).isNotNullish(found1);
+      let isNotNullishResult3 = tmp2(tmp3[25]).isNotNullish(found1);
       if (isNotNullishResult3) {
-        isNotNullishResult3 = items(userConnectedActivity[25]).isNotNullish(found);
-        const tmp2Result3 = items(userConnectedActivity[25]);
+        isNotNullishResult3 = tmp2(tmp3[25]).isNotNullish(found);
+        const tmp2Result3 = tmp2(tmp3[25]);
       }
       str = str2;
       if (isNotNullishResult3) {
@@ -593,7 +599,7 @@ function ActivitySounds() {
         }
         str = str2;
       }
-      const tmp2Result2 = items(userConnectedActivity[25]);
+      const tmp2Result2 = tmp2(tmp3[25]);
     }
     let str3 = str;
     if (!someResult) {
@@ -603,16 +609,16 @@ function ActivitySounds() {
       const userConnectedActivity2 = voiceChannelActivities.userConnectedActivity;
       let isNotNullishResult4 = null == userConnectedActivity;
       if (isNotNullishResult4) {
-        isNotNullishResult4 = items(userConnectedActivity[25]).isNotNullish(userConnectedActivity2);
-        const tmp2Result4 = items(userConnectedActivity[25]);
+        isNotNullishResult4 = tmp2(tmp3[25]).isNotNullish(userConnectedActivity2);
+        const tmp2Result4 = tmp2(tmp3[25]);
       }
       if (isNotNullishResult4) {
         str = "activity_end";
       }
-      let isNotNullishResult5 = items(userConnectedActivity[25]).isNotNullish(userConnectedActivity);
+      let isNotNullishResult5 = tmp2(tmp3[25]).isNotNullish(userConnectedActivity);
       if (isNotNullishResult5) {
-        isNotNullishResult5 = items(userConnectedActivity[25]).isNotNullish(userConnectedActivity2);
-        const tmp2Result6 = items(userConnectedActivity[25]);
+        isNotNullishResult5 = tmp2(tmp3[25]).isNotNullish(userConnectedActivity2);
+        const tmp2Result6 = tmp2(tmp3[25]);
       }
       str3 = str;
       if (isNotNullishResult5) {
@@ -625,11 +631,12 @@ function ActivitySounds() {
         str3 = str;
       }
       tmp10 = voiceChannelActivities.connectedChannelActivities.length < connectedChannelActivities.length && voiceChannelActivities.channelActivities.length < channelActivities.length;
-      const tmp2Result5 = items(userConnectedActivity[25]);
+      const tmp2Result5 = tmp2(tmp3[25]);
     }
     let tmp14 = null != str3;
     if (!tmp14) {
       tmp14 = null == voiceChannelActivities.connectedActivityLocation && null == connectedActivityLocation;
+      const tmp15 = null == voiceChannelActivities.connectedActivityLocation && null == connectedActivityLocation;
     }
     let str4 = str3;
     if (!tmp14) {
@@ -660,6 +667,7 @@ function ActivitySounds() {
     let tmp18 = null == str4;
     if (tmp18) {
       tmp18 = voiceChannelActivities.hasFrame || hasFrame;
+      const tmp19 = voiceChannelActivities.hasFrame || hasFrame;
     }
     let tmp20 = str4;
     if (tmp18) {
@@ -707,7 +715,7 @@ function ActivitySounds() {
 ({ InputModes: closure_20, ApplicationStreamStates: closure_21, RTCConnectionStates: closure_22 } = ME);
 ({ getChannelIdForSurface: closure_23, isLaunched: closure_24 } = FrameLayoutModes);
 ({ jsx: closure_25, Fragment: closure_26, jsxs: closure_27 } = jsxProd);
-let result = require("obj132").fileFinishedImporting("modules/soundplayer/SoundPlayer.tsx");
+let result = require("set").fileFinishedImporting("modules/soundplayer/SoundPlayer.tsx");
 
 export default function SoundPlayer() {
   const obj = { children: null };

@@ -4,15 +4,15 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import useGuildOnboardingAvailableDefault from "../useGuildOnboardingAvailable.tsx";
 import _modDef9930 from "../../main_tabs_v2/native/utils/ModalStackNavigator.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
 import { GuildOnboardingTab } from "../GuildOnboardingPromptsConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ChannelsAndRolesScreen(guildId) {
   guildId = guildId.guildId;
   const defaultTab = guildId.defaultTab;
@@ -38,17 +38,17 @@ function ChannelsAndRolesScreen(guildId) {
     const items1 = [intl.string(tmp2(tmp3[11]).t.F1VixV), ];
     const intl2 = tmp2(tmp3[11]).intl;
     items1[1] = intl2.string(tmp2(tmp3[11]).t.MWmtj8);
-    obj[3] = items1.map((item, index) => ({ id: item, label: item, page: null }));
+    obj[3] = items1.map((id) => ({ id, label: id, page: null }));
     segmentedControlState = tmp2(tmp3[10]).useSegmentedControlState(obj);
     const items2 = [tmp6, first, segmentedControlState];
     const effect = obj1.useEffect(() => {
       let tmp = closure_1;
       if (!closure_1) {
-        tmp = first !== GuildOnboardingTab.CUSTOMIZE;
+        tmp = first !== closure_1_7.CUSTOMIZE;
       }
       if (!tmp) {
-        callback(GuildOnboardingTab.BROWSE);
-        segmentedControlState.setActiveIndex(GuildOnboardingTab.BROWSE, false);
+        callback(closure_1_7.BROWSE);
+        segmentedControlState.setActiveIndex(closure_1_7.BROWSE, false);
       }
     }, items2);
     obj = { style: null, children: null };
@@ -60,7 +60,7 @@ function ChannelsAndRolesScreen(guildId) {
       const obj2 = { state: null };
       obj2[0] = segmentedControlState;
       obj1[1] = callback2(tmp2(tmp3[12]).SegmentedControl, obj2);
-      tmp17 = callback2(View, obj1);
+      tmp17 = callback2(tmp16, obj1);
     }
     const items3 = [tmp17, ];
     if (first === GuildOnboardingTab.CUSTOMIZE) {
@@ -75,15 +75,17 @@ function ChannelsAndRolesScreen(guildId) {
     }
     items3[1] = tmp21;
     obj[1] = items3;
-    return callback2(View, obj);
+    return closure_9(View, obj);
   }
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { screen: null, tabBar: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/ChannelsAndRolesModal.tsx");
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ChannelsAndRolesModal.tsx");
 
 export default function ChannelsAndRolesModal(arg0) {
   ({ guildId: require, defaultTab: importDefault } = arg0);
@@ -91,6 +93,7 @@ export default function ChannelsAndRolesModal(arg0) {
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(closure_0));
   const tmp2 = useGuildOnboardingAvailableDefault(stateFromStores);
+  const tmp3 = closure_8;
   const intl = getSystemLocale.intl;
   const string = intl.string;
   const t = getSystemLocale.t;
@@ -103,8 +106,8 @@ export default function ChannelsAndRolesModal(arg0) {
     screenKey: "channelAndRolesModal",
     title: stringResult,
     render() {
-      return closure_1_8(ChannelsAndRolesScreen, { guildId: closure_0, defaultTab: closure_1 });
+      return closure_1_8(closure_1_11, { guildId: closure_0, defaultTab: closure_1 });
     }
   };
-  return callback(_modDef9930, obj);
+  return tmp3(_modDef9930, obj);
 };

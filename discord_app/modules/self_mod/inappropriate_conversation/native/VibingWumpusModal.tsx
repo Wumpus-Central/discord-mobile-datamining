@@ -1,17 +1,17 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../a11y/AccessibilityStore.tsx";
 import { VIBING_WUMPUS_MODAL_KEY } from "../../Constants.tsx";
 import VibingWumpusAction from "../InappropriateConversationsConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class VibingWumpusScreen {
   constructor() {
     tmp = closure_15();
@@ -35,14 +35,14 @@ class VibingWumpusScreen {
       obj = { source: constants2.INAPPROPRIATE_CONVERSATION };
       callback(ref[12]).track(constants3.VIBING_WUMPUS_VIEWED, obj);
       return () => {
-        closure_1_1(ref[12]);
-        const obj = { duration_open_ms: null, source: null };
+        let obj = closure_1_1(closure_1_2[12]);
+        obj = { duration_open_ms: null, source: null };
         date = new Date();
         const time = date.getTime();
         obj[0] = time - date.getTime();
         obj[1] = closure_1_10.INAPPROPRIATE_CONVERSATION;
         obj.track(closure_1_11.VIBING_WUMPUS_CLOSED, obj);
-        const result = date(ref[11]).stopVibingWumpusMusic();
+        const result = date(closure_1_2[11]).stopVibingWumpusMusic();
       };
     }, []);
     tmp9 = jsxs;
@@ -56,7 +56,7 @@ class VibingWumpusScreen {
     obj1 = { style: tmp.container, children: null };
     obj2 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
     tmp14 = require("play");
-    obj2[0] = require("../../../../../_runtime/metro/10618__.js");
+    obj2[0] = require("module_10618");
     obj2[1] = ref;
     obj2[2] = !stateFromStores;
     obj2[4] = tmp.wumpus;
@@ -84,8 +84,8 @@ class VibingWumpusScreen {
     intl3 = require("getSystemLocale").intl;
     obj7[2] = intl3.string(require("getSystemLocale").t["8eKkaf"]);
     obj7[4] = function onPress() {
-      callback(ref[12]);
-      const obj = { action: constants.BACK_TO_CONVERSATION };
+      let obj = callback(ref[12]);
+      obj = { action: constants.BACK_TO_CONVERSATION };
       obj.track(constants3.VIBING_WUMPUS_ACTION, obj);
       callback(ref[19]).popWithKey(closure_8);
     };
@@ -110,27 +110,27 @@ class VibingWumpusScreen {
               const result = obj.playVibingWumpusMusic();
               obj = { action: null };
               obj[0] = closure_1_9.PLAY;
-              callback(ref[12]).track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj);
+              callback(ref[12]).track(closure_1_11.VIBING_WUMPUS_ACTION, obj);
               const obj4 = callback(ref[12]);
             } else {
               const result1 = obj.pauseVibingWumpusMusic();
               obj = { action: null };
               obj[0] = closure_1_9.PAUSE;
-              callback(ref[12]).track(AnalyticEvents.VIBING_WUMPUS_ACTION, obj);
+              callback(ref[12]).track(closure_1_11.VIBING_WUMPUS_ACTION, obj);
               const obj2 = callback(ref[12]);
             }
             let tmp14 = stateFromStores;
             if (!stateFromStores) {
-              if (first) {
+              if (tmp) {
                 const current = ref.current;
                 if (current != null) {
                   current.resume();
                 }
               }
-              callback(!first);
+              callback(!tmp);
             }
             if (!tmp14) {
-              tmp14 = first;
+              tmp14 = tmp;
             }
             if (!tmp14) {
               const current2 = ref.current;
@@ -161,16 +161,19 @@ class VibingWumpusScreen {
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ VibingWumpusAction: c9, VibingWumpusSource: c10 } = VibingWumpusAction);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_16, height: "100%" };
+createCacheKey = { container: null, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
+createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_16, height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_4 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { textAlign: "center" };
 createCacheKey[5] = { height: 187 };
 createCacheKey[6] = { position: "absolute", width: "100%", height: 440, top: 120 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
+let obj2 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/VibingWumpusModal.tsx");
 
 export default function VibingWumpusModal() {
   const VIBING_WUMPUS = {

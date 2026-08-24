@@ -1,20 +1,21 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
-import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../../stores/UserStore.tsx";
 import { UserRowModes } from "../../shared_components/user_list/UserRowConstants.tsx";
 import { RelationshipTypes } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
 
 export default function SpamRequestsScreen(navigation) {
   navigation = navigation.navigation;
+  let analyticsLocations;
   let stateFromStoresArray;
   let stateFromStoresArray1;
   let callback;
-  const analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
+  analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
   let obj = analyticsLocations(stateFromStoresArray1[8]);
   const items = [closure_4];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
@@ -28,8 +29,8 @@ export default function SpamRequestsScreen(navigation) {
   const items1 = [closure_5];
   const items2 = [stateFromStoresArray];
   stateFromStoresArray1 = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(items1, () => {
-    const mapped = stateFromStoresArray.map((item, index) => user.getUser(item));
-    return mapped.filter((item, index) => null != item);
+    const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
+    return mapped.filter((arg0) => null != arg0);
   }, items2);
   const items3 = [analyticsLocations];
   callback = callback.useCallback((id) => {

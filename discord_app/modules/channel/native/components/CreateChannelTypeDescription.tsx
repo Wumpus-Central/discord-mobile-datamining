@@ -1,12 +1,12 @@
 // discord_app/modules/channel/native/components/CreateChannelTypeDescription.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { GuildProfileFetchStatus } from "../../../guild_profile/GuildProfileStore.tsx";
 import { ChannelTypes } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
 
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
@@ -32,6 +32,7 @@ export default function CreateChannelTypeDescription(guildId) {
   }, items);
   let tmp9 = null;
   if (tmp6) {
+    obj = { children: null };
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["2Ab4Id"]);

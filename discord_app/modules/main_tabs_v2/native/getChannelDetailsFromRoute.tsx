@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import coerceMainRoute from "../helpers/NavigationRouteUtils.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {
   let flag = arg1;
@@ -37,4 +37,6 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
+  const obj = coerceMainRoute;
+  const tmp = require;
 };

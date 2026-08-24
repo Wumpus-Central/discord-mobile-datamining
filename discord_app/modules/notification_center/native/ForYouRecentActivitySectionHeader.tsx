@@ -5,19 +5,22 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey = { container: null, textHeader: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx");
+const obj1 = { marginTop: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx");
 
 export const ForYouRecentActivitySectionHeader = function ForYouRecentActivitySectionHeader() {
   const tmp = callback();
-  const obj = { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null };
+  let obj = { style: tmp.container, children: null };
+  obj = { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.yM9Krm);
   obj[1] = jsx(Text.Text, { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null });

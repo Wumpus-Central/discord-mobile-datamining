@@ -1,12 +1,12 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
 import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = obj132.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
+const result = set.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experimentTreatmentFromEmbedURL) {
@@ -14,10 +14,10 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
     if (!Number.isNaN(experimentTreatmentFromEmbedURL)) {
-      let obj = parseRegisteredExperiments;
+      let obj = _parseRegisteredExperiments;
       const legacyExperiments = obj.getLegacyExperiments();
       ({ experiments, overridesInfo } = legacyExperiments);
-      const apexExperiments = require("../client_override_hooks/useApexExperiments.tsx").getApexExperiments();
+      const apexExperiments = _makeClientVariant.getApexExperiments();
       let tmp5 = experiments[experimentFromEmbedURL];
       if (tmp5 == null) {
         tmp5 = apexExperiments.experiments[experimentFromEmbedURL];
@@ -32,7 +32,7 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
         }
         let tmpResult = tmp(4364);
         const experimentBuckets = tmpResult.getExperimentBuckets(tmp5);
-        const iter = experimentBuckets.find((item, index) => item.value === closure_0);
+        const iter = experimentBuckets.find((value) => value.value === closure_0);
         if (null != iter) {
           if (null != tmp6) {
             if (tmp6.variantId === iter.value) {
@@ -44,9 +44,9 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
           const tmpResult1 = tmp(4296);
         }
       }
-      const obj2 = makeClientVariant;
+      const obj2 = _makeClientVariant;
     }
   }
   obj = { id: experimentFromEmbedURL };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10986, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(_asyncRequireImpl(10986, dependencyMap.paths), "ExperimentOverrideSheet", obj);
 };

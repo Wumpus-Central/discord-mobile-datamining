@@ -2,13 +2,13 @@
 import getSystemLocale from "../../../../../../../../intl/index.native.tsx";
 import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
-import ensureGuildLoaded from "../../../../../../../../stores/ChannelStore.tsx";
-import markAllUserIdListsStale from "../../../../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../../../../../stores/UserStore.tsx";
 import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
 
 export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, closure_2) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
@@ -28,10 +28,10 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.qmtuXE);
-    let tmp8 = require;
+    let tmp8 = tmp7;
   } else {
     str = string(t["3p3/BK"]);
-    tmp8 = require;
+    tmp8 = tmp7;
   }
   const intl2 = tmp8(1236).intl;
   const string2 = intl2.string;
@@ -75,7 +75,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
     channelName = name;
   }
   if (!channelName) {
-    const mapped = recipients_.map((item, index) => item.username);
+    const mapped = recipients_.map((username) => username.username);
     channelName = mapped.join(", ");
   }
   if (!channelName) {

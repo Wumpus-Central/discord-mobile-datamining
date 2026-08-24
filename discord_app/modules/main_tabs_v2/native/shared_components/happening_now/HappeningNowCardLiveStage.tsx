@@ -9,9 +9,9 @@ import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js"
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HappeningNowConstants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class HappeningNowLiveStageContent {
   constructor(arg0) {
     ({ stage, streamingUser, guildId } = global);
@@ -106,12 +106,14 @@ function getUsersSubtitle(arg0) {
       let obj = { name: null };
       obj[0] = getNicknameDefault.getName(guildId, null, first);
       let str3 = intl9.formatToPlainString(getSystemLocale.t.lJXKtO, obj);
-    } else if (constants.WATCHING === action) {
+      const obj14 = getNicknameDefault;
+    } else if (tmp16.WATCHING === action) {
       const intl8 = getSystemLocale.intl;
       obj = { name: null };
       obj[0] = getNicknameDefault.getName(guildId, null, first);
       str3 = intl8.formatToPlainString(getSystemLocale.t.iWY9wg, obj);
-    } else if (constants.ON_STAGE === action) {
+      const obj12 = getNicknameDefault;
+    } else if (tmp16.ON_STAGE === action) {
       const intl7 = getSystemLocale.intl;
       obj1 = { name: null };
       let obj9 = getNicknameDefault;
@@ -119,11 +121,12 @@ function getUsersSubtitle(arg0) {
       str3 = intl7.formatToPlainString(getSystemLocale.t["5uJ3+u"], obj1);
     } else {
       str3 = "";
-      if (constants.SHARING === action) {
+      if (tmp16.SHARING === action) {
         const intl12 = getSystemLocale.intl;
         const obj2 = { name: null };
         obj2[0] = getNicknameDefault.getName(guildId, null, first);
         str3 = intl12.formatToPlainString(getSystemLocale.t["5oa7dX"], obj2);
+        const obj19 = getNicknameDefault;
       }
     }
     return str3;
@@ -139,13 +142,13 @@ function getUsersSubtitle(arg0) {
       obj3[0] = name;
       obj3[1] = name1;
       let str2 = intl6.formatToPlainString(getSystemLocale.t.GFMcxs, obj3);
-    } else if (constants.WATCHING === action) {
+    } else if (tmp11.WATCHING === action) {
       const intl5 = getSystemLocale.intl;
       obj4 = { name1: null, name2: null };
       obj4[0] = name;
       obj4[1] = name1;
       str2 = intl5.formatToPlainString(getSystemLocale.t.afUnti, obj4);
-    } else if (constants.ON_STAGE === action) {
+    } else if (tmp11.ON_STAGE === action) {
       const intl4 = getSystemLocale.intl;
       const obj5 = { name1: null, name2: null };
       obj5[0] = name;
@@ -153,7 +156,7 @@ function getUsersSubtitle(arg0) {
       str2 = intl4.formatToPlainString(getSystemLocale.t.SrTuJ6, obj5);
     } else {
       str2 = "";
-      if (constants.SHARING === action) {
+      if (tmp11.SHARING === action) {
         const intl11 = getSystemLocale.intl;
         const obj6 = { name1: null, name2: null };
         obj6[0] = name;
@@ -173,13 +176,13 @@ function getUsersSubtitle(arg0) {
         obj7[0] = name2;
         obj7[1] = diff;
         str = intl3.formatToPlainString(getSystemLocale.t.CsvyMc, obj7);
-      } else if (constants.WATCHING === action) {
+      } else if (tmp34.WATCHING === action) {
         const intl2 = getSystemLocale.intl;
         const obj8 = { name: null, count: null };
         obj8[0] = name2;
         obj8[1] = diff;
         str = intl2.formatToPlainString(getSystemLocale.t.Iwxee0, obj8);
-      } else if (constants.ON_STAGE === action) {
+      } else if (tmp34.ON_STAGE === action) {
         const intl = getSystemLocale.intl;
         obj = { name: null, count: null };
         obj[0] = name2;
@@ -187,7 +190,7 @@ function getUsersSubtitle(arg0) {
         str = intl.formatToPlainString(getSystemLocale.t.zRm3ZX, obj);
       } else {
         str = "";
-        if (constants.SHARING === action) {
+        if (tmp34.SHARING === action) {
           const intl10 = getSystemLocale.intl;
           obj9 = { name: null, count: null };
           obj9[0] = name2;
@@ -195,6 +198,7 @@ function getUsersSubtitle(arg0) {
           str = intl10.formatToPlainString(getSystemLocale.t["m+NEcC"], obj9);
         }
       }
+      const obj15 = getNicknameDefault;
     }
     return str;
   }
@@ -202,29 +206,33 @@ function getUsersSubtitle(arg0) {
 let c3 = importAllResult;
 ({ HappeningNowCardTrackingType: c5, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, HAPPENING_NOW_STAGE_PREVIEW_WIDTH } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, borderRadius: ThemesDefault.radii.sm, alignItems: "center", paddingTop: 6 };
+let obj = { content: { flexShrink: 1, gap: 2 }, stagePreviewContainer: { marginRight: 12, flexDirection: "column", justifyContent: "space-between", height: "100%", width: HAPPENING_NOW_STAGE_PREVIEW_WIDTH }, stagePreviewBackground: null, stagePreviewBackgroundNoAudience: null, avatarStackContainer: null };
+obj = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, borderRadius: ThemesDefault.radii.sm, alignItems: "center", paddingTop: 6 };
 obj[2] = obj;
-const createCacheKey = { height: HAPPENING_NOW_CONTENT_HEIGHT, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, borderRadius: ThemesDefault.radii.sm, justifyContent: "center", alignItems: "center" };
+createCacheKey = { height: HAPPENING_NOW_CONTENT_HEIGHT, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, borderRadius: ThemesDefault.radii.sm, justifyContent: "center", alignItems: "center" };
 obj[3] = createCacheKey;
 obj[4] = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_11 = { LISTENING: 0, [0]: "LISTENING", WATCHING: 1, [1]: "WATCHING", ON_STAGE: 2, [2]: "ON_STAGE", SHARING: 3, [3]: "SHARING" };
+let obj2 = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 const memoResult = importAllResult.memo((arg0) => {
   ({ stage, index } = arg0);
   ({ fullwidth, renderingContext, panelVariant } = arg0);
   if (panelVariant === undefined) {
     panelVariant = false;
   }
+  let channel_id;
+  let guild_id;
   const tmp = callback3();
-  const channel_id = stage.channel_id;
-  const guild_id = stage.guild_id;
+  channel_id = stage.channel_id;
+  guild_id = stage.guild_id;
   const items = [channel_id, guild_id, index];
   const callback = importAllResult.useCallback(() => {
-    channel_id(guild_id[7]);
-    const obj = { order: index, guild_id, type: closure_1_5.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
-    obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
-    index(guild_id[9])(guild_id[8], guild_id.paths).then((result) => {
-      result.default(closure_1, true);
+    let obj = channel_id(guild_id[7]);
+    obj = { order: index, guild_id, type: closure_1_5.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
+    obj.track(closure_1_6.ACTIVITY_CARD_CLICKED, obj);
+    index(guild_id[9])(guild_id[8], guild_id.paths).then((arg0) => {
+      arg0.default(closure_1, true);
     });
   }, items);
   let obj = index(guild_id[10]);
@@ -250,7 +258,7 @@ const memoResult = importAllResult.memo((arg0) => {
       str = "full";
     }
     obj[1] = str;
-    obj[2] = index(tmp4[14]).StageIcon;
+    obj[2] = tmp3(tmp4[14]).StageIcon;
     obj[3] = panelVariant;
     obj1 = { style: null, children: null };
     obj1[0] = tmp.stagePreviewContainer;
@@ -262,8 +270,8 @@ const memoResult = importAllResult.memo((arg0) => {
       obj3[0] = speakers[0];
       obj3[1] = speakers[0].avatarDecoration;
       obj3[2] = guild_id;
-      obj3[3] = index(tmp4[15]).AvatarSizes.REFRESH_MEDIUM_32;
-      tmp7Result = tmp7(index(tmp4[15]).Avatar, obj3);
+      obj3[3] = tmp3(tmp4[15]).AvatarSizes.REFRESH_MEDIUM_32;
+      tmp7Result = tmp7(tmp3(tmp4[15]).Avatar, obj3);
     }
     obj2[1] = tmp7Result;
     const items1 = [callback(View, obj2), ];
@@ -280,13 +288,13 @@ const memoResult = importAllResult.memo((arg0) => {
         num2 = 1;
       }
       obj5[2] = sum - num2;
-      obj5[4] = index(tmp4[15]).AvatarSizes.SIZE_16;
-      obj4[1] = tmp7(index(tmp4[16]).HappeningNowAvatarStack, obj5);
-      tmp7Result = tmp7(View, obj4);
+      obj5[4] = tmp3(tmp4[15]).AvatarSizes.SIZE_16;
+      obj4[1] = tmp7(tmp3(tmp4[16]).HappeningNowAvatarStack, obj5);
+      tmp7Result = tmp7(tmp6, obj4);
     }
     items1[1] = tmp7Result;
     obj1[1] = items1;
-    const items2 = [callback(View, obj1), ];
+    const items2 = [closure_8(View, obj1), ];
     const obj6 = { stage: null, renderingContext: null, guildId: null };
     obj6[0] = stage;
     obj6[1] = renderingContext;
@@ -297,12 +305,13 @@ const memoResult = importAllResult.memo((arg0) => {
     obj6[2] = tmp12;
     items2[1] = callback(HappeningNowLiveStageContent, obj6);
     obj[4] = items2;
-    tmp16Result = callback(channel_id(tmp4[13]), obj);
+    tmp16Result = tmp16(channel_id(tmp4[13]), obj);
+    const tmp11 = HappeningNowLiveStageContent;
     const tmp18 = channel_id(tmp4[13]);
   }
   return tmp16Result;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardLiveStage.tsx");
 
 export default memoResult;
 export { HappeningNowLiveStageContent };

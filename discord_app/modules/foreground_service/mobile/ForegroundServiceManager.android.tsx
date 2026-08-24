@@ -1,5 +1,5 @@
 // discord_app/modules/foreground_service/mobile/ForegroundServiceManager.android.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import setRequestedByAll from "../../gateway/RequestGatewaySocket.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
@@ -15,13 +15,13 @@ class ForegroundServiceManager {
     obj.serviceNotificationIdentifier = 1;
     obj.handleChange = function handleChange() {
       if (obj.serviceNotifications.size > 0) {
-        const ForegroundServiceModule2 = NativeModules.ForegroundServiceModule;
+        const ForegroundServiceModule2 = closure_1_3.ForegroundServiceModule;
         const serviceNotifications = tmp.serviceNotifications;
         const items = [];
         HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
         ForegroundServiceModule2.startService(items);
       } else {
-        const ForegroundServiceModule = NativeModules.ForegroundServiceModule;
+        const ForegroundServiceModule = closure_1_3.ForegroundServiceModule;
         ForegroundServiceModule.stopService();
       }
     };
@@ -38,11 +38,11 @@ prototype["terminate"] = function terminate() {
 prototype["addServiceHandler"] = function addServiceHandler(arg0) {
   const self = this;
   closure_0 = arg0;
-  return new Promise((fn) => {
+  return new Promise((arg0) => {
     const serviceNotificationIdentifier = self.serviceNotificationIdentifier;
     self.serviceNotificationIdentifier = self.serviceNotificationIdentifier + 1;
     self.updateServiceHandler(serviceNotificationIdentifier, closure_0);
-    fn(serviceNotificationIdentifier);
+    arg0(serviceNotificationIdentifier);
   });
 };
 prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGateway) {
@@ -55,6 +55,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const serviceNotifications3 = self.serviceNotifications;
       serviceNotifications3.delete(arg0);
       self.handleChange();
+      const obj2 = setRequestedByAll;
     }
   } else {
     const serviceNotifications4 = self.serviceNotifications;
@@ -86,13 +87,13 @@ obj.serviceNotifications = new Map();
 obj.serviceNotificationIdentifier = 1;
 obj.handleChange = function handleChange() {
   if (obj.serviceNotifications.size > 0) {
-    const ForegroundServiceModule2 = NativeModules.ForegroundServiceModule;
+    const ForegroundServiceModule2 = closure_1_3.ForegroundServiceModule;
     const serviceNotifications = tmp.serviceNotifications;
     const items = [];
     HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
     ForegroundServiceModule2.startService(items);
   } else {
-    const ForegroundServiceModule = NativeModules.ForegroundServiceModule;
+    const ForegroundServiceModule = closure_1_3.ForegroundServiceModule;
     ForegroundServiceModule.stopService();
   }
 };
@@ -120,6 +121,6 @@ prototype2["isForegroundServiceRunning"] = function isForegroundServiceRunning(a
 };
 const foregroundServiceLifecycleManager = new ForegroundServiceLifecycleManager();
 const map = new Map();
-let result = obj132.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManager.android.tsx");
+let result = set.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManager.android.tsx");
 
 export default foregroundServiceLifecycleManager;

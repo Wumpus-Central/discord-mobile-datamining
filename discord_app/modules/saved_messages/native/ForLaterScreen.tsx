@@ -2,14 +2,14 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
 import getSavedMessagesForTypeDefault from "../useSavedMessagesForPage.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import getTimeSafe from "../SavedMessagesStore.tsx";
+import closure_6 from "../SavedMessagesStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function keyExtractor(saveData) {
   return saveData.saveData.messageId;
 }
@@ -62,7 +62,7 @@ function ForLaterPage(type) {
   first = tmp17[0];
   importDefault = tmp17[1];
   const effect = importAllResult.useEffect(() => {
-    const interval = setInterval(() => callback(new Date()), callback(dependencyMap[17]).Millis.MINUTE);
+    const interval = setInterval(() => callback(new Date()), callback(closure_1_2[17]).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
@@ -93,20 +93,23 @@ function ForLaterPage(type) {
       const obj6 = { isReminder: null, isAtLimit: null };
       obj6[0] = tmp5;
       obj6[1] = tmp8;
-      tmp25Result = callback2(tmp2(12734), obj6);
+      tmp25Result = tmp25(tmp2(12734), obj6);
     }
     items2[1] = tmp25Result;
     obj3[1] = items2;
-    tmp24Result = callback(tmp4(7139).AnalyticsLocationProvider, obj3);
+    tmp24Result = closure_8(tmp4(7139).AnalyticsLocationProvider, obj3);
+    const tmp24 = closure_8;
+    tmp25 = callback2;
   }
   return tmp24Result;
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const ForLaterScreen = "ForLaterScreen";
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
+let obj = { container: null, headerBorder: null, cardContainer: null, listContainer: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
 obj[0] = obj;
-const createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: 16, paddingVertical: 8 };
 obj[3] = { flex: 1 };
@@ -123,8 +126,7 @@ const memoResult = importAllResult.memo((type) => {
     if (nativeEvent.nativeEvent.contentOffset.y > 8) {
       num = 1;
     }
-    const result = sharedValue.set(sharedValue(dependencyMap[8]).withSpring(num));
-    const obj = sharedValue(dependencyMap[8]);
+    const result = sharedValue.set(sharedValue(closure_1_2[8]).withSpring(num));
   }, items);
   const fn = function s() {
     return { opacity: sharedValue.get() };
@@ -139,6 +141,6 @@ const memoResult = importAllResult.memo((type) => {
   obj[1] = items2;
   return callback3(View, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/saved_messages/native/ForLaterScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterScreen.tsx");
 
 export default memoResult;

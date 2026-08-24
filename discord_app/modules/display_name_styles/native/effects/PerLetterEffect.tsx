@@ -1,32 +1,33 @@
 // discord_app/modules/display_name_styles/native/effects/PerLetterEffect.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, Text: c5 } = get_ActivityIndicator);
 let closure_7 = createCacheKey.createStyles({ container: { overflow: "hidden" } });
-const result = require("obj132").fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
+const result = require("set").fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
 
 export default function PerLetterEffect(name) {
   name = name.name;
   ({ textProps, colors } = name);
   ({ containerStyle, textStyle } = name);
   const items = [name, colors];
-  const items1 = [callback().container, containerStyle];
+  let obj = { style: items1, children: null };
+  items1 = [callback().container, containerStyle];
   const memo = React.useMemo(() => {
-    closure_0 = colors(dependencyMap[4])();
+    closure_0 = colors(closure_1_2[4])();
     c1 = 0;
-    let obj = name(dependencyMap[5]);
-    return name(dependencyMap[5]).splitGraphemes(closure_0).map((item, index) => {
+    let obj = name(closure_1_2[5]);
+    return name(closure_1_2[5]).splitGraphemes(closure_0).map((children) => {
       regex.lastIndex = 0;
-      const tmp = regex.test(item) || 0 === item.trim().length;
+      const tmp = regex.test(children) || 0 === children.trim().length;
       let tmp2;
       if (null != c1) {
-        if (c1.length > 0) {
+        if (arr.length > 0) {
           if (!tmp) {
-            tmp2 = c1[closure_1 % c1.length];
+            tmp2 = arr[closure_1 % arr.length];
           }
         }
       }
@@ -39,11 +40,11 @@ export default function PerLetterEffect(name) {
         obj[0] = tmp2;
         tmp7 = obj;
       }
-      obj = { style: tmp7, children: item };
-      return <closure_2_5 key={index} style={tmp7}>{item}</closure_2_5>;
+      obj = { style: tmp7, children };
+      return closure_2_6(closure_2_5, obj, arg1);
     });
   }, items);
-  let obj = {};
+  obj = {};
   const merged = Object.assign(textProps);
   obj.textBreakStrategy = "simple";
   let accessibilityLabel = textProps.accessibilityLabel;

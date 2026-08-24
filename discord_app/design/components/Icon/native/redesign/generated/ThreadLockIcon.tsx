@@ -5,9 +5,9 @@ import BaseIconImage from "../../BaseIconImage.tsx";
 import registerAsset from "../../../../../../../_runtime/06833_registerAsset.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThreadLockIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ThreadLockIcon.tsx");
 
 export const ThreadLockIcon = function ThreadLockIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

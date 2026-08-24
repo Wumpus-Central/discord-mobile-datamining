@@ -16,6 +16,9 @@ const fn = function q(arg0) {
   let num2 = 0;
   while (true) {
     let tmp2 = num2 < arr.length;
+    let tmp3 = num;
+    let tmp4 = num2;
+    let tmp5 = arr;
     if (!tmp2) {
       let _String = String;
       arr = items.push(fromCharCode.apply(null, uint16Array.subarray(0, num)));
@@ -108,7 +111,7 @@ class m {
       num = 1;
       num2 = 32;
       num3 = 7;
-      bound = require("metro/00032__slicedToArray.js");
+      bound = require("module_32");
       _Uint8Array = Uint8Array;
       num4 = 3;
       tmp3 = new.target;
@@ -243,9 +246,9 @@ class m {
         }
       }
       if (arr2.slice) {
-        substr = require("../discord_app/index.native.tsx");
+        substr = require("module_0");
       } else {
-        substr = require("../discord_app/index.native.tsx");
+        substr = require("module_0");
       }
       return substr;
     }
@@ -364,7 +367,7 @@ if (typeof Buffer !== "function") {
         num = 1;
         num2 = 32;
         num3 = 7;
-        bound = require("metro/00032__slicedToArray.js");
+        bound = require("module_32");
         _Uint8Array = Uint8Array;
         num4 = 3;
         tmp3 = new.target;
@@ -499,9 +502,9 @@ if (typeof Buffer !== "function") {
           }
         }
         if (arr2.slice) {
-          substr = require("../discord_app/index.native.tsx");
+          substr = require("module_0");
         } else {
-          substr = require("../discord_app/index.native.tsx");
+          substr = require("module_0");
         }
         return substr;
       }

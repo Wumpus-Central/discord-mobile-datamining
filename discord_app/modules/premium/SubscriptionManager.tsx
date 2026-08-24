@@ -1,17 +1,18 @@
 // discord_app/modules/premium/SubscriptionManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import handlePaymentSourceCreateEnd from "../../stores/billing/BillingInfoStore.tsx";
-import reset from "../../stores/billing/SubscriptionStore.tsx";
-import addEntitlement from "../../stores/game_store/EntitlementStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/UserStore.tsx";
+import closure_4 from "../../stores/billing/BillingInfoStore.tsx";
+import closure_5 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_6 from "../../stores/game_store/EntitlementStore.tsx";
 import GuildFeatures from "PremiumConstants.tsx";
 
-let require = fn;
+let require = arg1;
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: closure_8 } = GuildFeatures);
 initializeDefault;
 let prototype = function SubscriptionManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       const result = applyArgumentsResult.maybeFetchSubscriptions();
@@ -119,6 +120,8 @@ let prototype = function SubscriptionManager() {
       premiumType = null;
     }
     const obj2 = applyArgumentsResult(table[7]);
+    const tmp = applyArgumentsResult;
+    const tmp2 = table;
     let hasHadPremiumResult = null != currentUser;
     isFetchingMostRecentSubscription = isFetchingMostRecentSubscription.getIsFetchingMostRecentSubscription();
     if (hasHadPremiumResult) {
@@ -131,10 +134,9 @@ let prototype = function SubscriptionManager() {
       hasHadPremiumResult = !isFetchingMostRecentSubscription;
     }
     if (hasHadPremiumResult) {
-      const mostRecentSubscription = applyArgumentsResult(table[8]).fetchMostRecentSubscription();
-      const tmpResult = applyArgumentsResult(table[8]);
+      const mostRecentSubscription = tmp(tmp2[8]).fetchMostRecentSubscription();
+      const tmpResult = tmp(tmp2[8]);
     }
-    isPremiumAtMostResult = applyArgumentsResult(table[7]).isPremiumAtMost(premiumType, TIER_1.TIER_1);
   };
   require = applyArgumentsResult;
   applyArgumentsResult.maybeFetchCountryCode = callback(function*() {
@@ -270,6 +272,6 @@ let prototype = function SubscriptionManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 
 export default prototype;

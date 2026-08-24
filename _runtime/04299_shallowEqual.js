@@ -27,8 +27,14 @@ export default function shallowEqual(obj, obj2, call) {
                       if (typeof call2 === "unknown") {
                         let call2Result = call(tmp5, tmp6, tmp3);
                       } else {
+                        let tmp10 = call;
+                        let tmp11 = arg3;
+                        let tmp12 = tmp5;
+                        let tmp13 = tmp6;
+                        let tmp14 = tmp3;
                         call2Result = call2(arg3, tmp5, tmp6, tmp3);
                       }
+                      let tmp8 = call2Result;
                     }
                   }
                   return false;

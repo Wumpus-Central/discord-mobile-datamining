@@ -5,14 +5,19 @@ let closure_2 = { code: "function pnpm_BottomSheetFooterContainerTsx1(){const{an
 const memoResult = noop.memo((renderFooter) => {
   let animatedContainerHeight;
   let animatedHandleHeight;
+  let animatedFooterHeight;
+  let animatedPosition;
+  let animatedKeyboardState;
+  let animatedKeyboardHeightInContainer;
   let obj = animatedContainerHeight(animatedHandleHeight[1]);
   const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedContainerHeight = bottomSheetInternal.animatedContainerHeight;
   animatedHandleHeight = bottomSheetInternal.animatedHandleHeight;
-  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
-  const animatedPosition = bottomSheetInternal.animatedPosition;
-  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
-  const animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
+  animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  animatedKeyboardHeightInContainer = bottomSheetInternal.animatedKeyboardHeightInContainer;
+  obj = { animatedFooterPosition: null };
   const fn = function o() {
     let value = animatedHandleHeight.get();
     if (value === animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT) {
@@ -26,11 +31,13 @@ const memoResult = noop.memo((renderFooter) => {
       const value4 = animatedFooterHeight.get();
       const bound = Math.max(0, value1 - value2);
       let diff = bound;
-      if (value3 === animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE.SHOWN) {
+      if (value3 === tmp2(tmp3[4]).KEYBOARD_STATE.SHOWN) {
         diff = bound - value;
       }
       return diff - value4 - value;
     }
+    tmp2 = animatedContainerHeight;
+    tmp3 = animatedHandleHeight;
   };
   obj = { animatedHandleHeight, INITIAL_HANDLE_HEIGHT: animatedContainerHeight(animatedHandleHeight[3]).INITIAL_HANDLE_HEIGHT, animatedKeyboardHeightInContainer, animatedContainerHeight, animatedPosition, animatedKeyboardState, animatedFooterHeight, KEYBOARD_STATE: animatedContainerHeight(animatedHandleHeight[4]).KEYBOARD_STATE };
   fn.__closure = obj;

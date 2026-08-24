@@ -64,6 +64,7 @@ arg5.node = function node(arg0) {
         }
         tmp3 = substr2;
         tmp4 = tmp9;
+        const tmp5 = substr3;
       }
       if (tmp4) {
         let UNKNOWN_FUNCTION = tmp4;
@@ -82,6 +83,7 @@ arg5.node = function node(arg0) {
       if (match[2]) {
         if (obj2.startsWith("file://")) {
           let str7 = match[2].slice(7);
+          const arr3 = match[2];
         }
         let match1 = str7;
         if (str7) {
@@ -200,6 +202,7 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
           }
           tmp3 = substr2;
           tmp4 = tmp9;
+          const tmp5 = substr3;
         }
         if (tmp4) {
           let UNKNOWN_FUNCTION = tmp4;
@@ -218,6 +221,7 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
         if (match[2]) {
           if (obj2.startsWith("file://")) {
             let str7 = match[2].slice(7);
+            const arr3 = match[2];
           }
           let match1 = str7;
           if (str7) {

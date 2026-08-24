@@ -4,29 +4,30 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import registerAssetDefault from "../../../../_runtime/04332_registerAsset.js";
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import registerAssetDefault2 from "../../../../_runtime/08933_registerAsset.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
 import { UserRemediationAction } from "../RelationshipConstants.tsx";
 import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "RestrictionConfirmationConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function BlockedInformationTable() {
   return callback2(TableRowGroupTitle.TableRowGroup, {
     hasIcons: true,
-    children: items.map((item, index) => {
-      const obj = { size: callback(1297).Icon.Sizes.MEDIUM, source: item.icon };
+    children: items.map((icon) => {
+      let obj = { start: 0 === arg1, end: length.length - 1 === arg1, icon: null, label: null, subLabel: null, accessible: true, accessibilityLabel: null };
+      obj = { size: callback(1297).Icon.Sizes.MEDIUM, source: icon.icon };
       obj[2] = callback2(callback(1297).Icon, obj);
-      obj[3] = item.text();
-      obj[4] = item.subtext();
-      obj[6] = item.a11yLabel();
-      return callback2(callback(6291).TableRow, obj, index);
+      obj[3] = icon.text();
+      obj[4] = icon.subtext();
+      obj[6] = icon.a11yLabel();
+      return callback2(callback(6291).TableRow, obj, arg1);
     })
   });
 }
@@ -34,18 +35,24 @@ let c4 = importAllResult;
 ({ IGNORE_CONFIRMATION_ACTION_SHEET_KEY: c10, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: unpackModuleId } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
 ({ HelpdeskArticles: closure_12, AnalyticEvents: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { marginBottom: ThemesDefault.space.PX_16 };
+let obj = { button: { alignContent: "center", textAlign: "center" }, tableContainer: null, otherOptions: null, headerText: null, container: null, header: null, avatarContainer: null, avatarIconContainer: null, avatar: null, footerText: null };
+obj = { marginBottom: ThemesDefault.space.PX_16 };
 obj[1] = obj;
-const createCacheKey = { marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_24 };
 obj[2] = createCacheKey;
 obj[3] = { textAlign: "center" };
 obj[4] = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
+let obj2 = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
 obj[5] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_16 };
 obj[6] = { position: "relative", alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj4 = { position: "relative", alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
 obj[7] = { position: "absolute", bottom: -8, right: -8, padding: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
 obj[8] = { alignSelf: "center" };
+let obj5 = { position: "absolute", bottom: -8, right: -8, padding: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
 obj[9] = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_4 };
 let closure_16 = createCacheKey.createStyles(obj);
+let obj6 = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_4 };
 let items = [
   {
     icon: registerAssetDefault2,
@@ -65,7 +72,37 @@ let items = [
 ,
 
 ];
+let obj7 = {
+  icon: registerAssetDefault2,
+  text() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.fjFJFV);
+  },
+  subtext() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["8SIMPz"]);
+  },
+  a11yLabel() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.qHsrGS);
+  }
+};
 items[1] = {
+  icon: registerAssetDefault2,
+  text() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.QCrmqS);
+  },
+  subtext() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.TKDMoN);
+  },
+  a11yLabel() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.WR1Mbe);
+  }
+};
+let obj8 = {
   icon: registerAssetDefault2,
   text() {
     const intl = getSystemLocale.intl;
@@ -95,12 +132,28 @@ items[2] = {
     return intl.string(getSystemLocale.t.lfrNw0);
   }
 };
+let obj9 = {
+  icon: registerAssetDefault,
+  text() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["lkm/a8"]);
+  },
+  subtext() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["8j3qaC"]);
+  },
+  a11yLabel() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.lfrNw0);
+  }
+};
 const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
   ({ onBlock: dependencyMap, onIgnore: closure_3, onSuccess: closure_4 } = userId);
   c5 = undefined;
-  const tmp = callback4();
+  let stateFromStores;
+  let tmp = callback4();
   const bottom = channelId(1629)().bottom;
   items = [channelId(7159).IGNORE_CONFIRMATION_ACTION_SHEET];
   const tmp4 = channelId(7139);
@@ -108,7 +161,7 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
   let obj = userId(589);
   const items1 = [closure_8];
   const items2 = [userId];
-  const stateFromStores = obj.useStateFromStores(items1, () => closure_1_8.getUser(userId), items2);
+  stateFromStores = obj.useStateFromStores(items1, () => closure_1_8.getUser(userId), items2);
   obj1 = userId(589);
   const items3 = [closure_7];
   const items4 = [userId];
@@ -127,8 +180,8 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
   }, items6);
   const effect = importAllResult.useEffect(() => {
     if (null == stateFromStores) {
-      const user = userId(dependencyMap[22]).getUser(userId);
-      const obj = userId(dependencyMap[22]);
+      const user = userId(closure_1_2[22]).getUser(userId);
+      const obj = userId(closure_1_2[22]);
     }
   }, items7);
   let tmp13Result = null;
@@ -137,8 +190,8 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     obj[0] = tmp4(items).analyticsLocations;
     obj = { onDismiss: null, scrollable: true, startHeight: null, bodyStyles: null, children: null };
     obj[0] = function onDismiss() {
-      channelId(698);
-      const obj = { action: constants.DISMISS_BLOCK, location: "user-profile-context-menu" };
+      let obj = channelId(698);
+      obj = { action: constants.DISMISS_BLOCK, location: "user-profile-context-menu" };
       obj.track(constants3.USER_REMEDIATION_ACTION, obj);
     };
     let num = 485;
@@ -160,14 +213,14 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     obj4[1] = stateFromStores;
     obj4[3] = tmp7(1297).AvatarSizes.XLARGE;
     obj4[4] = tmp.avatar;
-    const items8 = [callback(tmp7(1297).Avatar, obj4), ];
+    const items8 = [closure_14(tmp7(1297).Avatar, obj4), ];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.avatarIconContainer;
     const obj6 = { size: null, source: null };
     obj6[0] = tmp7(1297).Icon.Sizes.MEDIUM;
     obj6[1] = tmp2(8942);
-    obj5[1] = callback(tmp7(1297).Icon, obj6);
-    items8[1] = callback(c5, obj5);
+    obj5[1] = closure_14(tmp7(1297).Icon, obj6);
+    items8[1] = closure_14(c5, obj5);
     obj3[1] = items8;
     const items9 = [callback3(c5, obj3), , ];
     const obj7 = { style: null, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
@@ -176,18 +229,18 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     const obj8 = { username: null };
     obj8[0] = tmp2(4796).getName(stateFromStores2, channelId, stateFromStores);
     obj7[4] = intl.format(tmp7(1236).t.CIbzHR, obj8);
-    items9[1] = callback(tmp7(4734).Text, obj7);
+    items9[1] = closure_14(tmp7(4734).Text, obj7);
     const obj9 = { style: null, variant: "heading-md/medium", color: "text-default", accessibilityRole: "header", children: null };
     obj9[0] = tmp.headerText;
     const intl2 = tmp7(1236).intl;
     obj9[4] = intl2.string(tmp7(1236).t.S70jou);
-    items9[2] = callback(tmp7(4734).Text, obj9);
+    items9[2] = closure_14(tmp7(4734).Text, obj9);
     obj2[1] = items9;
     const items10 = [callback3(c5, obj2), , , ];
     const obj10 = { style: null, children: null };
     obj10[0] = tmp.tableContainer;
-    obj10[1] = callback(BlockedInformationTable, {});
-    items10[1] = callback(c5, obj10);
+    obj10[1] = closure_14(BlockedInformationTable, {});
+    items10[1] = closure_14(c5, obj10);
     tmp13Result = !stateFromStores1;
     if (!stateFromStores1) {
       const obj11 = { style: null, children: null };
@@ -199,7 +252,7 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
       const obj14 = { size: null, source: null };
       obj14[0] = tmp7(1297).Icon.Sizes.MEDIUM;
       obj14[1] = tmp2(8606);
-      obj13[0] = callback(tmp7(1297).Icon, obj14);
+      obj13[0] = tmp13(tmp7(1297).Icon, obj14);
       const intl4 = tmp7(1236).intl;
       obj13[1] = intl4.string(tmp7(1236).t.hC8tcc);
       const intl5 = tmp7(1236).intl;
@@ -207,16 +260,16 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
       const intl6 = tmp7(1236).intl;
       obj13[3] = intl6.string(tmp7(1236).t["8qGQsM"]);
       obj13[4] = function onPress() {
-        channelId(dependencyMap[24]);
-        let obj = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
+        let obj = channelId(closure_1_2[24]);
+        obj = { action: closure_1_9.GOTO_IGNORE, location: "user-profile-context-menu" };
         obj.track(closure_1_13.USER_REMEDIATION_ACTION, obj);
-        const obj3 = channelId(dependencyMap[30]);
-        obj = { userId, channelId, onSuccess: closure_4, onIgnore: closure_3, impressionName: userId(dependencyMap[33]).ImpressionNames.IGNORE_USER_CONFIRMATION };
-        obj3.openLazy(userId(dependencyMap[32])(dependencyMap[31], dependencyMap.paths), closure_1_10, obj, "replaceTopSheet");
+        const obj3 = channelId(closure_1_2[30]);
+        obj = { userId, channelId, onSuccess: closure_4, onIgnore: closure_3, impressionName: userId(closure_1_2[33]).ImpressionNames.IGNORE_USER_CONFIRMATION };
+        obj3.openLazy(userId(closure_1_2[32])(closure_1_2[31], closure_1_2.paths), closure_1_10, obj, "replaceTopSheet");
       };
-      obj12[2] = callback(tmp7(6291).TableRow, obj13);
-      obj11[1] = callback(tmp7(6286).TableRowGroup, obj12);
-      tmp13Result = callback(tmp19, obj11);
+      obj12[2] = tmp13(tmp7(6291).TableRow, obj13);
+      obj11[1] = tmp13(tmp7(6286).TableRowGroup, obj12);
+      tmp13Result = tmp13(tmp19, obj11);
     }
     const obj15 = { children: null };
     items10[2] = tmp13Result;
@@ -227,27 +280,29 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
     obj17[2] = intl7.string(tmp7(1236).t.l4Emac);
     obj17[3] = function onPress() {
       _undefined(true);
-      channelId(closure_1_2[35]);
-      let obj = { location: channelId(closure_1_2[20]).BLOCK_CONFIRMATION_ACTION_SHEET };
-      obj.blockUser(userId, obj).then((result) => {
-        result = channelId(closure_1_2[36]).showBlockSuccessToast(closure_0, closure_1);
+      let obj = channelId(closure_1_2[35]);
+      obj = { location: channelId(closure_1_2[20]).BLOCK_CONFIRMATION_ACTION_SHEET };
+      obj.blockUser(userId, obj).then(() => {
+        const result = closure_1_1(closure_1_2[36]).showBlockSuccessToast(closure_0, closure_1);
         if (callback != null) {
           callback();
         }
-        const obj = channelId(closure_1_2[36]);
-        channelId(closure_1_2[30]).hideActionSheet();
-        const tmpResult = channelId(closure_1_2[30]);
+        const obj = closure_1_1(closure_1_2[36]);
+        const tmp = closure_1_1;
+        const tmp2 = closure_1_2;
+        closure_1_1(closure_1_2[30]).hideActionSheet();
       });
       if (dependencyMap != null) {
         dependencyMap();
       }
       const blockUserResult = obj.blockUser(userId, obj);
+      let tmp2 = channelId;
+      const tmp3 = closure_1_2;
       channelId(closure_1_2[24]).track(closure_1_13.BLOCK_USER_CONFIRMED);
-      const tmp2Result = channelId(closure_1_2[24]);
     };
     obj17[4] = tmp6;
     obj17[5] = tmp6;
-    const items11 = [callback(tmp7(4745).Button, obj17), ];
+    const items11 = [closure_14(tmp7(4745).Button, obj17), ];
     const obj18 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj18[0] = tmp.footerText;
     const intl8 = tmp7(1236).intl;
@@ -260,17 +315,17 @@ const memoResult = importAllResult.memo(function BlockConfirmationActionSheet(us
       channelId(4090).openURL(articleURL);
     };
     obj18[3] = intl8.format(tmp7(1236).t.CpTgBn, obj19);
-    items11[1] = callback(tmp7(4734).Text, obj18);
+    items11[1] = closure_14(tmp7(4734).Text, obj18);
     obj16[1] = items11;
     items10[3] = callback3(c5, obj16);
     obj15[0] = items10;
     obj[4] = callback3(tmp7(6952).BottomSheetScrollView, obj15);
-    obj[1] = callback(tmp7(6950).BottomSheet, obj);
-    tmp13Result = callback(tmp7(7139).AnalyticsLocationProvider, obj);
-    let tmp2Result = tmp2(4796);
+    obj[1] = closure_14(tmp7(6950).BottomSheet, obj);
+    tmp13Result = tmp13(tmp7(7139).AnalyticsLocationProvider, obj);
+    const tmp2Result = tmp2(4796);
   }
   return tmp13Result;
 });
-let result = require("obj132").fileFinishedImporting("modules/relationships/native/BlockConfirmationActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/relationships/native/BlockConfirmationActionSheet.tsx");
 
 export default memoResult;

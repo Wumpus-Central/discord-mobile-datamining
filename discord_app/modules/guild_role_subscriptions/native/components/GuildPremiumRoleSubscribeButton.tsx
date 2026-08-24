@@ -5,10 +5,10 @@ import CreatorRevenueButton from "CreatorRevenueButton.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ crButton: { marginVertical: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");
 
 export const GuildPremiumRoleSubscribeButton = function GuildPremiumRoleSubscribeButton(onPress) {
   const obj = { text: null, onPress: null, style: null, disabled: true };

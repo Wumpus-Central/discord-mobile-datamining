@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/RowGeneratorStyleSheet.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const processColor = get_ActivityIndicator.processColor;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");
 
 export const processColorOrThrow = function processColorOrThrow(arg0) {
   const tmp = processColor(arg0);

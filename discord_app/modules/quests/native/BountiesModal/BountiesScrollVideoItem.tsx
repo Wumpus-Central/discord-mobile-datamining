@@ -1,23 +1,24 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import redeemError from "../../../virtual_currency/stores/VirtualCurrencyStore.tsx";
-import set from "../../BountyStore.tsx";
+import closure_7 from "../../../virtual_currency/stores/VirtualCurrencyStore.tsx";
+import closure_8 from "../../BountyStore.tsx";
 import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function BountiesScrollVideoItemInner(bounty) {
   bounty = bounty.bounty;
+  let isActive = bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
   let ref = sourceQuestContent;
   const width = bounty.width;
   dependencyMap = width;
   const height = bounty.height;
   let callback = height;
-  const isActive = bounty.isActive;
+  isActive = bounty.isActive;
   const isScrollingInBoundsSharedValue = bounty.isScrollingInBoundsSharedValue;
   let flag = bounty.isScrollIndicatorOverlayEnabled;
   ({ index, isRecapPageRevealed, isRecapPageOnTop } = bounty);
@@ -32,6 +33,7 @@ function BountiesScrollVideoItemInner(bounty) {
   if (softDownloadCapsEnabled === undefined) {
     softDownloadCapsEnabled = false;
   }
+  let stateFromStores;
   orbAmount = undefined;
   c8 = undefined;
   QuestsExperimentLocations = undefined;
@@ -51,7 +53,7 @@ function BountiesScrollVideoItemInner(bounty) {
   const memo = isScrollingInBoundsSharedValue.useMemo(() => ({ width: closure_2, height: closure_3 }), items);
   obj1 = isActive(589);
   const items1 = [c8];
-  const stateFromStores = obj1.useStateFromStores(items1, () => _undefined.isBountyCompleted(isActive.id));
+  stateFromStores = obj1.useStateFromStores(items1, () => _undefined.isBountyCompleted(isActive.id));
   [tmp7, tmp8] = isActive(isScrollingInBoundsSharedValue.useState(flag2), 2);
   const tmp9 = isActive(isScrollingInBoundsSharedValue.useState(flag2), 2);
   if (tmp9[0] !== flag2) {
@@ -76,8 +78,10 @@ function BountiesScrollVideoItemInner(bounty) {
     }
     c8 = result;
     ref = obj.useRef(null);
+    dependencyMap = undefined;
+    callback = undefined;
     dependencyMap = obj.useRef(true);
-    obj.useRef(null);
+    callback = obj.useRef(null);
     const items2 = [isActive, ref];
     callback = obj.useCallback((current) => {
       closure_3.current = current;
@@ -154,14 +158,14 @@ function BountiesScrollVideoItemInner(bounty) {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = isActive(closure_1_2[12]).claimBountyReward(isActive.id, ref);
+              obj1[0] = closure_1_0(closure_1_2[12]).claimBountyReward(closure_1_0.id, closure_1_1);
               return obj1;
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
               closure_1 = closure_2;
-              obj1 = isActive(closure_1_2[13]);
+              obj1 = closure_1_0(closure_1_2[13]);
               const result = obj1.openBountyRewardClaimErrorToast(closure_1);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -356,7 +360,7 @@ function BountiesScrollVideoItemInner(bounty) {
         sourceQuestContent: ref,
         overrideVisibility: isEndCardVisible,
         children() {
-          return handleProgress(ref(closure_1_2[20]), { bounty: closure_0, visible: closure_17, onReplay: closure_20, isActive: closure_4, isScrollingInBoundsSharedValue: closure_5, sourceQuestContent: closure_1 });
+          return closure_1_10(closure_1_1(closure_1_2[20]), { bounty: closure_0, visible: closure_17, onReplay: closure_20, isActive: closure_4, isScrollingInBoundsSharedValue: closure_5, sourceQuestContent: closure_1 });
         }
       });
     };
@@ -365,7 +369,7 @@ function BountiesScrollVideoItemInner(bounty) {
   }
   result = 1000 * rewardTimerSeconds;
 }
-let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
 
 export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) {
   bounty = bounty.bounty;
@@ -401,7 +405,7 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {
-      return flag3(BountiesScrollVideoItemInner, { bounty, sourceQuestContent, width: closure_2, height: closure_3, index: closure_4, isActive, isRecapPageRevealed: flag, isRecapPageOnTop: flag2, isScrollingInBoundsSharedValue: closure_8, isScrollIndicatorOverlayEnabled, shouldLoadHls: flag3, scrollAffordance: closure_11, peekScale: closure_12, softDownloadCapsEnabled });
+      return flag3(closure_1_11, { bounty, sourceQuestContent, width: closure_2, height: closure_3, index: closure_4, isActive, isRecapPageRevealed: flag, isRecapPageOnTop: flag2, isScrollingInBoundsSharedValue: closure_8, isScrollIndicatorOverlayEnabled, shouldLoadHls: flag3, scrollAffordance: closure_11, peekScale: closure_12, softDownloadCapsEnabled });
     }
   });
 };

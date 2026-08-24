@@ -1,11 +1,12 @@
 // discord_app/utils/NicknameUtils.tsx
 import getSystemLocale from "../intl/index.native.tsx";
 import nameFromUserDefault from "UserUtils.tsx";
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../stores/GuildMemberStore.tsx";
-import markAllUserIdListsStale from "../stores/RelationshipStore.tsx";
+import closure_3 from "../stores/ChannelStore.tsx";
+import closure_4 from "../stores/GuildMemberStore.tsx";
+import closure_5 from "../stores/RelationshipStore.tsx";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function getNickname(id, arg1, id) {
   if (null == id) {
     return null;
@@ -51,6 +52,7 @@ function getName(id, arg1, id) {
     }
     if (stringResult == null) {
       stringResult = nameFromUserDefault.getName(id);
+      const obj2 = nameFromUserDefault;
     }
   }
   return stringResult;
@@ -60,9 +62,9 @@ function useName(arg0, arg1, arg2) {
   closure_1 = arg1;
   dependencyMap = arg2;
   const items = [closure_4, closure_3, closure_5];
-  return require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => getName(closure_0, closure_1, closure_2));
+  return _initialize.useStateFromStores(items, () => closure_1_6(closure_0, closure_1, closure_2));
 }
-const result = require("obj132").fileFinishedImporting("utils/NicknameUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/NicknameUtils.tsx");
 
 export default { getNickname, getName, useName };
 export { getNickname };

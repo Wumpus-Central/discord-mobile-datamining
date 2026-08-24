@@ -1,14 +1,14 @@
 // discord_app/modules/app_analytics/ThreadAnalyticsUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import transitionTo from "../routing/router_utils.tsx";
-import updateFromGuild from "../threads/ThreadMembersStore.tsx";
-import updateState from "../threads/ThreadMessageStore.tsx";
+import closure_3 from "../threads/ThreadMembersStore.tsx";
+import closure_4 from "../threads/ThreadMessageStore.tsx";
 import { THREAD_CHANNEL_TYPES } from "../../records/ChannelRecord.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
 
 export const collectThreadMetadata = function collectThreadMetadata(channel, arg1) {
   let flag = arg1;
@@ -56,6 +56,7 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
       obj[7] = closure_6.can(Permissions.SEND_MESSAGES, channel);
       obj[8] = channel.parentChannelThreadType;
       tmp = obj;
+      const obj3 = DISCORD_EPOCHDefault;
     }
   }
   return tmp;

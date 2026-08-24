@@ -3,8 +3,8 @@ import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedGuildStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/SelectedGuildStore.tsx";
 import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
 
 function truncateOldMessageData(channelId) {
@@ -12,8 +12,9 @@ function truncateOldMessageData(channelId) {
     let nowResult = globalThis;
     const _Date2 = Date;
     importDefault = DISCORD_EPOCHDefault.fromTimestamp(Date.now() - c5);
+    const obj = DISCORD_EPOCHDefault;
     const tmp6 = importDefault;
-    const findIndexResult = applyDefault.findIndex(arr, (id) => callback(dependencyMap[3]).compare(id.id, callback) > 0);
+    const findIndexResult = applyDefault.findIndex(arr, (id) => callback(closure_1_1[3]).compare(id.id, callback) > 0);
     if (-1 === findIndexResult) {
       dependencyMap2[channelId] = [];
     } else {
@@ -25,6 +26,7 @@ function truncateOldMessageData(channelId) {
     const _Date = nowResult.Date;
     nowResult = _Date.now();
     closure_8[channelId] = nowResult;
+    const obj2 = applyDefault;
   }
 }
 function handleChannelDelete(channel) {
@@ -44,8 +46,8 @@ const prototype = ActiveChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(closure_2, closure_3);
 };
-prototype["getActiveChannelsFetchStatus"] = function getActiveChannelsFetchStatus(id) {
-  return dependencyMap3[id];
+prototype["getActiveChannelsFetchStatus"] = function getActiveChannelsFetchStatus(arg0) {
+  return dependencyMap3[arg0];
 };
 prototype["getActiveChannelIds"] = function getActiveChannelIds(guildId) {
   return dependencyMap[guildId];
@@ -73,10 +75,10 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
         if (null == dependencyMap[guildId]) {
           return false;
         } else {
-          const item = arr.forEach((item, index) => {
-            callback(item);
+          const item = arr.forEach((arg0) => {
+            callback(arg0);
             let length;
-            if (dependencyMap[item] != null) {
+            if (dependencyMap[arg0] != null) {
               length = arr.length;
             }
             if (0 === length) {
@@ -84,7 +86,8 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
             }
           });
           const _Array = Array;
-          const found = applyDefault.chain(Array.from(arr)).filter((item, index) => item in closure_7);
+          const obj = applyDefault;
+          const found = applyDefault.chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
           const chainResult = applyDefault.chain(Array.from(arr));
           const _Set = Set;
           const set = new Set(found.sortBy((arg0) => {
@@ -98,16 +101,6 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
             return -num;
           }).value());
           dependencyMap[guildId] = set;
-          const iter = found.sortBy((arg0) => {
-            let num;
-            if (dependencyMap[arg0] != null) {
-              num = arr.length;
-            }
-            if (num == null) {
-              num = 0;
-            }
-            return -num;
-          });
         }
       }
     }
@@ -170,13 +163,13 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
     guildId = guildId.guildId;
     const channels = guildId.channels;
     closure_9[guildId] = { loading: false, error: null, fetchedAt: Date.now() };
-    let obj = { loading: false, error: null, fetchedAt: Date.now() };
+    const obj = { loading: false, error: null, fetchedAt: Date.now() };
     closure_6[guildId] = new Set();
-    let item = channels.forEach((item, index) => {
-      ({ channel_id: guildId, messages } = item);
-      item = messages.forEach((item, index) => {
-        ({ message_id, user_id } = item);
-        closure_2_6[guildId].add(closure_0);
+    let item = channels.forEach((arg0) => {
+      ({ channel_id: guildId, messages } = arg0);
+      const item = messages.forEach((arg0) => {
+        ({ message_id, user_id } = arg0);
+        closure_2_6[closure_1_0].add(closure_0);
         let tmp4 = null == tmp3;
         if (!tmp4) {
           const _Date = Date;
@@ -184,12 +177,12 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
           tmp4 = sum > Date.now();
         }
         if (tmp4) {
-          truncateOldMessageData(closure_0);
+          closure_2_10(tmp);
         }
         if (null == closure_2_7[closure_0]) {
-          closure_2_7[closure_0] = [];
+          closure_2_7[tmp] = [];
         }
-        let arr = closure_2_7[closure_0];
+        let arr = closure_2_7[tmp];
         arr = arr.push({ id: message_id, userId: user_id });
       });
     });
@@ -204,13 +197,13 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
       if (dependencyMap[guildId] == null) {
         items = [];
       }
-      const reduced = Array.from(items).reduce((acc, item, index) => {
-        let items = table[item];
+      const reduced = Array.from(items).reduce((arg0, arg1) => {
+        let items = table[arg1];
         if (items == null) {
           items = [];
         }
-        acc[item] = items;
-        return acc;
+        arg0[arg1] = items;
+        return arg0;
       }, {});
       dependencyMap = {};
       closure_7 = {};
@@ -245,7 +238,7 @@ const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_home/ActiveChannelsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_home/ActiveChannelsStore.tsx");
 
 export default activeChannelsStore;
 export const MAX_STORED_MESSAGES = 26;

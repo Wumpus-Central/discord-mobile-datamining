@@ -10,19 +10,21 @@ import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
 import _modDef8575 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../stores/GuildStore.tsx";
 import { GuildPrompts } from "../../../guild/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
-require = fn;
+require = arg1;
 function GuildDirectoryNicknameUpsell(arg0) {
   ({ guildId: require, handleClose: importDefault } = arg0);
   dependencyMap = undefined;
+  let first;
   let ref;
   function _handleSubmit() {
     const self = this;
@@ -66,13 +68,16 @@ function GuildDirectoryNicknameUpsell(arg0) {
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   [obj2, c2] = ref(_handleSubmit.useState(null), 2);
   const tmp7 = ref(_handleSubmit.useState(""), 2);
-  const first = tmp7[0];
+  first = tmp7[0];
   ref = _handleSubmit.useRef(null);
+  obj = { ref, contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
   obj = { paddingBottom: insets.bottom + ThemesDefault.space.PX_16, paddingTop: insets.top };
   items1[1] = obj;
   obj[1] = items1;
   obj1 = { style: tmp.guildIcon, guild: stateFromStores, size: null };
+  const tmp11 = closure_7;
+  const tmp5 = importDefault;
   const tmp6 = ref(_handleSubmit.useState(null), 2);
   obj1[2] = GuildIconSizes.GuildIconSizes.XLARGE;
   const items2 = [callback(GuildIconSizesDefault, obj1), , , , ];
@@ -86,15 +91,16 @@ function GuildDirectoryNicknameUpsell(arg0) {
   obj3[4] = intl.format(getSystemLocale.t["d+6kzl"], { guildName: name });
   const items3 = [callback(Text.Text, obj3), ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp2(1236).intl;
   obj4[3] = intl2.string(getSystemLocale.t.b3L8yx);
   items3[1] = callback(Text.Text, obj4);
   obj2[1] = items3;
-  items2[1] = callback(closure_6, obj2);
+  items2[1] = closure_11(closure_6, obj2);
   const obj5 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  const intl3 = getSystemLocale.intl;
+  const tmp13 = GuildIconSizesDefault;
+  const intl3 = tmp2(1236).intl;
   obj5[0] = intl3.string(getSystemLocale.t.ilDlmW);
-  const intl4 = getSystemLocale.intl;
+  const intl4 = tmp2(1236).intl;
   obj5[1] = intl4.string(getSystemLocale.t.RfWvWI);
   obj5[2] = first;
   obj5[3] = tmp7[1];
@@ -125,7 +131,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
-  const intl5 = getSystemLocale.intl;
+  const intl5 = tmp2(1236).intl;
   obj8[1] = intl5.string(getSystemLocale.t.Np4yXU);
   obj8[2] = function handleSubmit() {
     const self = this;
@@ -140,11 +146,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
   obj7[1] = callback(Button2.Button, obj8);
   items2[4] = callback(closure_6, obj7);
   obj[2] = items2;
-  return callback(closure_7, obj);
+  return closure_11(tmp11, obj);
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { flex: 1, flexGrow: 2, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+createCacheKey = { container: null, guildIcon: null, title: null, description: null, header: null, input: null, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+createCacheKey = { flex: 1, flexGrow: 2, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", marginTop: 16 };
 createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
@@ -152,15 +159,18 @@ createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { alignItems: "center", justifyContent: "center", padding: 16 };
 createCacheKey[5] = { marginHorizontal: 16 };
 createCacheKey[6] = { borderRadius: ThemesDefault.radii.lg };
+let obj1 = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[7] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
+let obj2 = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[8] = { paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 const UPSELL_SCREEN_KEY = "UPSELL_SCREEN_KEY";
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModal.tsx");
+let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModal.tsx");
 
 export default function GuildDirectoryNicknameUpsellModal(arg0) {
   const _require = arg0;
-  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, {
+  return callback(_NavigationStack.Navigator, {
     screens: useInitialValueDefault(() => {
       ({ guildId: closure_0, onHide: closure_1 } = callback);
       function handleClose() {
@@ -169,9 +179,10 @@ export default function GuildDirectoryNicknameUpsellModal(arg0) {
         const obj = closure_1_1(handleClose[20]);
         closure_1_1(handleClose[21]).close();
       }
-      let obj = {
+      let obj = {};
+      obj = {
         fullscreen: true,
-        headerLeft: callback(dependencyMap[22]).getHeaderCloseButton(handleClose),
+        headerLeft: callback(closure_1_2[22]).getHeaderCloseButton(handleClose),
         headerTitle() {
           return null;
         },
@@ -179,7 +190,7 @@ export default function GuildDirectoryNicknameUpsellModal(arg0) {
           return closure_1_10(closure_1_13, { guildId: closure_0, handleClose });
         }
       };
-      obj[UPSELL_SCREEN_KEY] = obj;
+      obj[closure_1_14] = obj;
       return obj;
     }),
     initialRouteName: UPSELL_SCREEN_KEY

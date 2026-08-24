@@ -9,8 +9,6 @@ import dateTimestampInSeconds from "00838_dateTimestampInSeconds.js";
 import _mod839 from "metro/00839__.js";
 import getSpanStatusFromHttpCode from "00840_getSpanStatusFromHttpCode.js";
 import getAsyncContextStrategy from "00841_getAsyncContextStrategy.js";
-import _getSpanForScope from "00844__getSpanForScope.js";
-import getClient from "00848_getClient.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -58,6 +56,7 @@ function spanToJSON(getSpanJSON) {
             sum = result1;
           } else {
             sum = dateTimestampInSeconds.timestampInSeconds();
+            const obj3 = dateTimestampInSeconds;
           }
         }
       }
@@ -83,6 +82,7 @@ function spanToJSON(getSpanJSON) {
             sum1 = result3;
           } else {
             sum1 = dateTimestampInSeconds.timestampInSeconds();
+            const obj4 = dateTimestampInSeconds;
           }
         }
       }
@@ -91,11 +91,13 @@ function spanToJSON(getSpanJSON) {
       if (status) {
         if (status.code !== getSpanStatusFromHttpCode.SPAN_STATUS_UNSET) {
           let str3 = "ok";
-          if (status.code !== getSpanStatusFromHttpCode.SPAN_STATUS_OK) {
+          if (status.code !== tmp17(840).SPAN_STATUS_OK) {
             str3 = status.message || "internal_error";
+            const tmp19 = status.message || "internal_error";
           }
           tmp16 = str3;
         }
+        tmp17 = require;
       }
       obj[7] = tmp16;
       obj[8] = attributes[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_OP];
@@ -103,11 +105,11 @@ function spanToJSON(getSpanJSON) {
       let mapped;
       if (links) {
         if (links.length > 0) {
-          mapped = links.map((item, index) => {
-            const context = item.context;
+          mapped = links.map((attributes) => {
+            const context = attributes.context;
             ({ spanId, traceId, traceFlags } = context);
             const merged = Object.assign(Object.assign(context, Object.create(null)));
-            return { span_id: spanId, trace_id: traceId, sampled: 1 === traceFlags, attributes: item.attributes };
+            return { span_id: spanId, trace_id: traceId, sampled: 1 === traceFlags, attributes: attributes.attributes };
           });
         }
       }
@@ -140,12 +142,13 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
   }
   const result = addNonEnumerableProperty.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
   if (arg0[_sentryChildSpans]) {
-    arg0[_sentryChildSpans].add(arg1);
+    arg0[tmp6].add(arg1);
+    const obj3 = arg0[tmp6];
   } else {
     const _Set = Set;
     const items = [arg1];
     const set = new Set(items);
-    const result1 = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _sentryChildSpans, set);
+    const result1 = addNonEnumerableProperty.addNonEnumerableProperty(arg0, tmp6, set);
     const tmp3Result = addNonEnumerableProperty;
   }
 };
@@ -153,11 +156,11 @@ arg5.convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(_links) 
   let mapped;
   if (_links) {
     if (_links.length > 0) {
-      mapped = _links.map((item, index) => {
-        const context = item.context;
+      mapped = _links.map((attributes) => {
+        const context = attributes.context;
         ({ spanId, traceId, traceFlags } = context);
         const merged = Object.assign(Object.assign(context, Object.create(null)));
-        return { span_id: spanId, trace_id: traceId, sampled: 1 === traceFlags, attributes: item.attributes };
+        return { span_id: spanId, trace_id: traceId, sampled: 1 === traceFlags, attributes: attributes.attributes };
       });
     }
   }
@@ -165,11 +168,13 @@ arg5.convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(_links) 
 };
 arg5.getActiveSpan = function getActiveSpan() {
   const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
   const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
-    const tmpResult = getClient;
+    let tmpResult = tmp(844);
+    tmpResult = tmp(848);
     activeSpan = tmpResult._getSpanForScope(tmpResult.getCurrentScope());
   }
   return activeSpan;
@@ -181,10 +186,10 @@ arg5.getSpanDescendants = function getSpanDescendants(arg0) {
   const set = new Set();
   function addSpanChildren(arg0) {
     if (!set.has(arg0)) {
-      if (spanIsSampled(arg0)) {
+      if (closure_1_4(arg0)) {
         set.add(arg0);
-        let tmp3 = _sentryChildSpans;
-        if (arg0[_sentryChildSpans]) {
+        let tmp3 = closure_1_5;
+        if (arg0[closure_1_5]) {
           const _Array = Array;
           let items = Array.from(arg0[tmp3]);
         } else {
@@ -202,16 +207,19 @@ arg5.getStatusMessage = function getStatusMessage(code) {
   if (code) {
     if (code.code !== getSpanStatusFromHttpCode.SPAN_STATUS_UNSET) {
       let str = "ok";
-      if (code.code !== getSpanStatusFromHttpCode.SPAN_STATUS_OK) {
+      if (code.code !== tmp(840).SPAN_STATUS_OK) {
         str = code.message || "internal_error";
+        const tmp3 = code.message || "internal_error";
       }
       return str;
     }
+    tmp = require;
   }
 };
 arg5.removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
   if (arg0[_sentryChildSpans]) {
     arg0[tmp].delete(arg1);
+    const obj = arg0[tmp];
   }
 };
 arg5.showSpanDropWarning = function showSpanDropWarning() {
@@ -220,24 +228,25 @@ arg5.showSpanDropWarning = function showSpanDropWarning() {
       console.warn("[Sentry] Returning null from `beforeSendSpan` is disallowed. To drop certain spans, configure the respective integrations directly or use `ignoreSpans`.");
     });
     c2 = true;
+    const obj = consoleSandbox;
   }
 };
 arg5.spanIsSampled = spanIsSampled;
-arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(getTime) {
-  if (typeof getTime === "number") {
-    let result = getTime;
-    if (getTime > 9999999999) {
-      result = getTime / 1000;
+arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(num) {
+  if (typeof num === "number") {
+    let result = num;
+    if (num > 9999999999) {
+      result = num / 1000;
     }
     let sum = result;
   } else {
     const _Array = Array;
-    if (Array.isArray(getTime)) {
-      sum = getTime[0] + getTime[1] / 1000000000;
+    if (Array.isArray(num)) {
+      sum = num[0] + num[1] / 1000000000;
     } else {
       const _Date = Date;
-      if (getTime instanceof Date) {
-        const time = getTime.getTime();
+      if (num instanceof Date) {
+        const time = num.getTime();
         let result1 = time;
         if (time > 9999999999) {
           result1 = time / 1000;
@@ -245,6 +254,7 @@ arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(getTime) {
         sum = result1;
       } else {
         sum = dateTimestampInSeconds.timestampInSeconds();
+        const obj = dateTimestampInSeconds;
       }
     }
   }

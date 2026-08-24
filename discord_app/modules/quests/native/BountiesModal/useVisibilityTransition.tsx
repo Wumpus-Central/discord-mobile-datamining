@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/BountiesModal/useVisibilityTransition.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function useVisibilityTransitionTsx1(){const{withTiming,visibility,visible,entranceTiming,exitTiming,runOnJS,animationCallbackJSThread}=this.__closure;return{opacity:withTiming(visibility,visible?entranceTiming:exitTiming,'respect-motion-settings',function(){'worklet';runOnJS(animationCallbackJSThread)();})};}" };
 let closure_5 = { code: "function useVisibilityTransitionTsx2(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}" };
-const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
 
 export const useVisibilityTransition = function useVisibilityTransition(visible) {
   visible = visible.visible;
@@ -31,12 +31,14 @@ export const useVisibilityTransition = function useVisibilityTransition(visible)
   if (visible) {
     num = 1;
   }
+  obj = { opacityStyle: null, shouldRender: null };
   let fn = function k() {
-    visible(entranceTiming[3]);
+    let obj = visible(entranceTiming[3]);
+    obj = { opacity: null };
     const fn = function n() {
-      visible(entranceTiming[2]).runOnJS(closure_4)();
+      closure_1_0(closure_1_1[2]).runOnJS(closure_4)();
     };
-    const obj = { runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: callback };
+    obj = { runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: callback };
     fn.__closure = obj;
     fn.__workletHash = 11904317879470;
     fn.__initData = num;

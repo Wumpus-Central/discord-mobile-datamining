@@ -1,9 +1,9 @@
 // discord_app/modules/premium/experiments/BogoPromotionExperiment.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-gate-v2", kind: "user", defaultConfig: false, variations: { 1: true } });
-const result = obj132.fileFinishedImporting("modules/premium/experiments/BogoPromotionExperiment.tsx");
+const result = set.fileFinishedImporting("modules/premium/experiments/BogoPromotionExperiment.tsx");
 
 export default apexExperiment;
 export const useBogoPromotionGateEnabled = function useBogoPromotionGateEnabled(location) {

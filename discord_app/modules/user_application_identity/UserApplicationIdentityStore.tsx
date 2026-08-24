@@ -21,8 +21,8 @@ prototype["getUserIdentities"] = function getUserIdentities(arg0) {
   return identities;
 };
 prototype["getUserIdentityByApplication"] = function getUserIdentityByApplication(closure_0, closure_1) {
-  map.get(closure_0);
-  let value;
+  let value = map.get(closure_0);
+  value = undefined;
   if (value != null) {
     const byApplication = value.byApplication;
     value = byApplication.get(closure_1);
@@ -49,8 +49,8 @@ obj = {
   USER_APPLICATION_IDENTITY_FETCH_USER_SUCCESS: function handleFetchUserSuccess(userId) {
     const result = map1.set(userId.userId, obj.FETCHED);
     ({ userId, identities } = userId);
-    map = new Map(identities.map((item, index) => {
-      const items = [item.application_id, item];
+    map = new Map(identities.map((application_id) => {
+      const items = [application_id.application_id, application_id];
       return items;
     }));
     const result1 = map.set(userId, { identities, byApplication: map });
@@ -60,6 +60,7 @@ obj = {
     const result = map1.set(userId.userId, obj.FETCHED);
   },
   USER_APPLICATION_IDENTITY_REMOVE: function handleRemoveIdentity(user_id) {
+    obj = user_id;
     obj = map;
     const value = map.get(user_id.user_id);
     if (null == value) {
@@ -67,10 +68,10 @@ obj = {
     } else {
       user_id = user_id.user_id;
       const identities = value.identities;
-      const found = identities.filter((item, index) => item.application_id !== user_id.application_id);
+      const found = identities.filter((application_id) => application_id.application_id !== user_id.application_id);
       const _Map = Map;
-      map = new Map(found.map((item, index) => {
-        const items = [item.application_id, item];
+      map = new Map(found.map((application_id) => {
+        const items = [application_id.application_id, application_id];
         return items;
       }));
       obj = { identities: null, byApplication: null };
@@ -82,7 +83,7 @@ obj = {
   }
 };
 const userApplicationIdentityStore = new UserApplicationIdentityStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityStore.tsx");
+let result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityStore.tsx");
 
 export default userApplicationIdentityStore;
 export const FetchState = obj;

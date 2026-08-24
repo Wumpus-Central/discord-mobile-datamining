@@ -1,5 +1,5 @@
 // discord_app/utils/ErrorUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import BAGGAGE_HEADER_NAME from "../../_runtime/07732_BAGGAGE_HEADER_NAME.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -11,7 +11,7 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   }
   return NSUnderlyingError.userInfo.NSLocalizedDescription;
 }
-const result = obj132.fileFinishedImporting("utils/ErrorUtils.tsx");
+const result = set.fileFinishedImporting("utils/ErrorUtils.tsx");
 
 export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
   try {

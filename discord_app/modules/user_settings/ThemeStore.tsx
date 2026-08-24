@@ -5,14 +5,14 @@ import getSystemThemeDefault from "../themes/getSystemTheme.native.tsx";
 import resolveThemeDefault from "../themes/resolveTheme.native.tsx";
 import updateBackgroundColorDefault from "../themes/updateBackgroundColor.native.tsx";
 import updateUserGuildSettings from "UserSettingsProtoActionCreators.tsx";
-import initialize from "SelectivelySyncedUserSettingsStore.tsx";
-import CHANNEL_SIDEBAR_WIDTH from "UnsyncedUserSettingsStore.tsx";
-import handleConnectionClosedOrResumed from "UserSettingsProtoStore.tsx";
+import closure_3 from "SelectivelySyncedUserSettingsStore.tsx";
+import closure_4 from "UnsyncedUserSettingsStore.tsx";
+import closure_5 from "UserSettingsProtoStore.tsx";
 import SystemThemeState from "ThemeConstants.tsx";
 import { UserSettingsDelay } from "UserSettingsConstants.tsx";
 import { ThemeTypes } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function handleThemeChange() {
   const tmp3 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
   let flag = tmp3 !== closure_13;
@@ -60,7 +60,7 @@ prototype["getState"] = function getState() {
   return { theme: this.theme, preferences: THEME_PREFERENCES_MOBILE, syncedClientThemes: closure_14, syncedThemesEnabled: c15, status: UNSET };
 };
 Object.defineProperty(prototype, "theme", {
-  get: function theme(dependencyMap, items) {
+  get: function theme(arg0, items) {
     return closure_13;
   },
   set: undefined
@@ -98,6 +98,7 @@ const items = [
     if (null != preferences.preferences) {
       tmp = preferences;
       if (preferences.preferences[constants.DARK] === ThemeTypes.DARK) {
+        obj = {};
         const merged = Object.assign(preferences);
         obj = {};
         const merged1 = Object.assign(preferences.preferences);
@@ -128,6 +129,7 @@ obj = {
       dispatcherDefault.wait(() => {
         callback(table[11]).dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
       });
+      obj = dispatcherDefault;
     }
     const tmp13 = resolveThemeDefault(closure_12, THEME_PREFERENCES_MOBILE, c15);
     let flag = tmp13 !== closure_13;
@@ -148,10 +150,11 @@ obj = {
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        updateBackgroundColorDefault(closure_13);
+        tmp2(1373)(closure_13);
         flag = true;
       }
       tmp = flag;
+      tmp2 = importDefault;
     }
     return tmp;
   },
@@ -251,6 +254,6 @@ obj = {
   }
 };
 const themeStore = new ThemeStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/ThemeStore.tsx");
 
 export default themeStore;

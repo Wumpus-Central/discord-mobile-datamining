@@ -1,10 +1,11 @@
 // discord_app/modules/user_settings/accessibility/getSettingsOverrideReason.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import updateExistingSettings from "../UserSettingsOverridesStore.tsx";
+import closure_2 from "../UserSettingsOverridesStore.tsx";
 import { SettingsOverrideReasonKeys as closure_3 } from "../UserSettingsConstants.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
 
 export default function getSettingsOverrideReason(arg0) {
   if (constants.REDUCED_MOTION === arg0) {
@@ -18,14 +19,14 @@ export default function getSettingsOverrideReason(arg0) {
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const appliedOverrideReasonKey = closure_1_2.getAppliedOverrideReasonKey(callback);
     if (closure_1_3.REDUCED_MOTION === appliedOverrideReasonKey) {
-      const intl2 = callback(dependencyMap[2]).intl;
-      let formatResult = intl2.format(callback(dependencyMap[2]).t["1dT9V4"], {});
+      const intl2 = callback(closure_1_1[2]).intl;
+      let formatResult = intl2.format(callback(closure_1_1[2]).t["1dT9V4"], {});
     } else if (tmp2.REDUCED_MOTION_STICKERS === appliedOverrideReasonKey) {
-      const intl = callback(dependencyMap[2]).intl;
-      formatResult = intl.string(callback(dependencyMap[2]).t["2ExvRu"]);
+      const intl = callback(closure_1_1[2]).intl;
+      formatResult = intl.string(callback(closure_1_1[2]).t["2ExvRu"]);
     }
     return formatResult;
   });

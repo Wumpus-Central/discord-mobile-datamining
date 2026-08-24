@@ -1,11 +1,11 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizationApp.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import addApplication from "../../applications/ApplicationStore.tsx";
-import createExecutable from "../../../records/ApplicationRecord.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../applications/ApplicationStore.tsx";
+import closure_4 from "../../../records/ApplicationRecord.tsx";
 import { ApplicationTypes } from "../../applications/ApplicationConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 
 export const getAuthorizationApp = function getAuthorizationApp(type) {
   if (null == type) {
@@ -16,7 +16,7 @@ export const getAuthorizationApp = function getAuthorizationApp(type) {
     const linkedGames = type.linkedGames;
     let found;
     if (linkedGames != null) {
-      found = linkedGames.find((item, index) => item.type === callback(table[4]).GameLinkTypes.OFFICIAL);
+      found = linkedGames.find((type) => type.type === callback(table[4]).GameLinkTypes.OFFICIAL);
     }
     let application;
     if (found != null) {
@@ -50,12 +50,14 @@ export const useAuthorizationApp = function useAuthorizationApp(getOfficialAppli
     if (null == closure_0) {
       return null;
     } else if (application instanceof closure_1_4) {
+      let tmp4 = null;
       if (null != application) {
-        if (application.type === ApplicationTypes.GAME) {
+        tmp4 = application;
+        if (application.type === closure_1_5.GAME) {
           const linkedGames = application.linkedGames;
           let found;
           if (linkedGames != null) {
-            found = linkedGames.find((item, index) => item.type === callback(table[4]).GameLinkTypes.OFFICIAL);
+            found = linkedGames.find((type) => type.type === callback(table[4]).GameLinkTypes.OFFICIAL);
           }
           application = undefined;
           if (found != null) {
@@ -71,7 +73,14 @@ export const useAuthorizationApp = function useAuthorizationApp(getOfficialAppli
           if (application == null) {
             application = null;
           }
+          tmp4 = application;
         }
+      }
+      let tmp3 = tmp4;
+    } else {
+      tmp3 = getOrFetchApplication;
+      if (getOrFetchApplication == null) {
+        tmp3 = null;
       }
     }
   }, items);

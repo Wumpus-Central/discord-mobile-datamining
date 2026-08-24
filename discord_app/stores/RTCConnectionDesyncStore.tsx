@@ -3,18 +3,17 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import keysDefault from "../lib/CachedEntriesMap.tsx";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
-import getNicknameDefault from "../utils/NicknameUtils.tsx";
-import useAvatarDecoration from "../modules/collectibles/avatar_decorations/useAvatarDecoration.tsx";
-import isVoiceMuted from "../records/VoiceStateRecord.tsx";
-import ensureGuildLoaded from "ChannelStore.tsx";
-import createRTCConnection from "RTCConnectionStore.tsx";
-import mergeGuildAvatar from "UserStore.tsx";
-import updateVoiceState from "VoiceStateStore.tsx";
+import closure_3 from "../records/VoiceStateRecord.tsx";
+import closure_4 from "ChannelStore.tsx";
+import closure_5 from "RTCConnectionStore.tsx";
+import closure_6 from "UserStore.tsx";
+import closure_7 from "VoiceStateStore.tsx";
 import { makeSortedVoiceState } from "views/SortedVoiceStateStore.tsx";
 import ME from "../Constants.tsx";
 import { ParticipantTypes } from "../modules/calls/CallConstants.tsx";
+import set from "../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function retryFailedUsers() {
   const channelId = store.getChannelId();
   if (null == channelId) {
@@ -26,34 +25,35 @@ function retryFailedUsers() {
       guildId = channel.getGuildId();
     }
     c2 = false;
-    const item = set.forEach((item, index) => {
-      if (null == closure_1_7.getVoiceStateForChannel(channelId, item)) {
-        const user = closure_1_6.getUser(item);
+    const item = set.forEach((userId) => {
+      if (null == closure_1_7.getVoiceStateForChannel(channelId, userId)) {
+        const user = closure_1_6.getUser(userId);
         if (null != user) {
           dependencyMap = true;
-          set.delete(item);
+          closure_1_14.delete(userId);
           let obj = { userId: null, channelId: null };
           obj[0] = user.id;
-          obj[1] = channelId;
+          obj[1] = tmp;
           const tmp23 = new closure_1_3(obj);
           let tmp6 = guildId;
           if (guildId == null) {
             tmp6 = closure_1_9;
           }
-          const result = closure_1_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
+          const result = closure_1_12.set(user.id, closure_1_8(tmp23, tmp6, user.id));
           obj = { type: null, user: null, id: null, streamId: null, voiceState: null, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: null, userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
-          obj[0] = ParticipantTypes.USER;
+          obj[0] = closure_1_11.USER;
           obj[1] = user;
           obj[2] = user.id;
           obj[4] = tmp23;
-          obj[10] = guildId(4796).getName(guildId, channelId, user);
+          obj[10] = guildId(4796).getName(guildId, tmp, user);
           const obj2 = guildId(4796);
+          const tmp24 = closure_1_8;
           obj[11] = channelId(4797).getAvatarDecoration(user, guildId);
           const result1 = closure_1_13.set(user.id, obj);
           const obj3 = channelId(4797);
         }
       } else {
-        set.delete(item);
+        closure_1_14.delete(userId);
       }
     });
     return c2;
@@ -63,7 +63,7 @@ function retryFailedUsers() {
 let closure_12 = new keysDefault();
 const tmp3 = new keysDefault();
 let closure_13 = new keysDefault();
-const set = new Set();
+let set = new Set();
 const Store = initializeDefault.Store;
 class RTCConnectionDesyncStore extends Store {
 }
@@ -115,12 +115,13 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const channelId = store.getChannelId();
+    let channelId;
+    channelId = store.getChannelId();
     let reduced = null != channelId;
     if (reduced) {
-      reduced = voiceStates.reduce((acc, item, index) => {
-        const userId = item.userId;
-        let tmp = item.channelId === channelId;
+      reduced = voiceStates.reduce((arg0, userId) => {
+        userId = userId.userId;
+        let tmp = userId.channelId === channelId;
         if (tmp) {
           let deleteResult = closure_1_12.delete(userId);
           const deleteResult1 = closure_1_13.delete(userId);
@@ -131,10 +132,10 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
             deleteResult = deleteResult2;
           }
           tmp = deleteResult;
-          deleteResult2 = set.delete(userId);
+          deleteResult2 = closure_1_14.delete(userId);
         }
         if (!tmp) {
-          tmp = acc;
+          tmp = arg0;
         }
         return tmp;
       }, false);
@@ -145,33 +146,36 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
     ({ userIds, guildId: require, channelId: importDefault } = context);
     let reduced = context.context === BaseConnectionEvent.MediaEngineContextTypes.DEFAULT;
     if (reduced) {
-      reduced = userIds.reduce((acc, item, index) => {
-        if (null != closure_1_7.getVoiceStateForChannel(closure_1, item)) {
-          return acc;
+      reduced = userIds.reduce((arg0, userId) => {
+        if (null != closure_1_7.getVoiceStateForChannel(closure_1, userId)) {
+          return arg0;
         } else {
-          const user = closure_1_6.getUser(item);
+          const user = closure_1_6.getUser(userId);
           if (null == user) {
-            set.add(item);
-            let flag = acc;
+            closure_1_14.add(userId);
+            let flag = arg0;
           } else {
             let obj = { userId: null, channelId: null };
             obj[0] = user.id;
-            obj[1] = closure_1;
+            obj[1] = tmp;
             const tmp21 = new closure_1_3(obj);
             let tmp2 = closure_0;
             if (closure_0 == null) {
               tmp2 = closure_1_9;
             }
-            const result = closure_1_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
+            const result = closure_1_12.set(user.id, closure_1_8(tmp21, tmp2, user.id));
             obj = { type: null, user: null, id: null, streamId: null, voiceState: null, voicePlatform: null, speaking: false, lastSpoke: 0, soundsharing: false, ringing: false, userNick: null, userAvatarDecoration: null, localVideoDisabled: false, isPoppedOut: false };
-            obj[0] = ParticipantTypes.USER;
+            obj[0] = closure_1_11.USER;
             obj[1] = user;
             obj[2] = user.id;
             obj[4] = tmp21;
-            obj[10] = getNicknameDefault.getName(closure_0, closure_1, user);
-            obj[11] = useAvatarDecoration.getAvatarDecoration(user, closure_0);
+            obj[10] = closure_1_1(closure_1_2[9]).getName(closure_0, tmp, user);
+            const obj2 = closure_1_1(closure_1_2[9]);
+            const tmp22 = closure_1_8;
+            obj[11] = closure_1_0(closure_1_2[10]).getAvatarDecoration(user, closure_0);
             const result1 = closure_1_13.set(user.id, obj);
             flag = true;
+            const obj3 = closure_1_0(closure_1_2[10]);
           }
           return flag;
         }
@@ -197,7 +201,6 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(dispatcherDefault,
     return tmp;
   }
 });
-const tmp4 = new keysDefault();
-let result = require("obj132").fileFinishedImporting("stores/RTCConnectionDesyncStore.tsx");
+let result = set.fileFinishedImporting("stores/RTCConnectionDesyncStore.tsx");
 
 export default rTCConnectionDesyncStore;

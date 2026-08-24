@@ -1,24 +1,25 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import recomputeFromAppTokens from "../../../oauth2/AuthorizedAppsStore.tsx";
+import closure_7 from "../../../oauth2/AuthorizedAppsStore.tsx";
 import { FetchState } from "../../../oauth2/AuthorizedAppsStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ActivityIndicator: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ AnalyticsPages: c9, UserSettingsSections: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = ThemesDefault.space.PX_24;
-const createCacheKey = { paddingHorizontal: 16, paddingTop: ThemesDefault.space.PX_24 };
+createCacheKey = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: null, headerDescription: null, appListHeader: null };
+createCacheKey = { paddingHorizontal: 16, paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { marginTop: 12 };
 createCacheKey[5] = { marginTop: 24 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
 
 export default function UserSettingsAuthedApps() {
   const tmp = callback3();
@@ -35,8 +36,8 @@ export default function UserSettingsAuthedApps() {
   React = React.useCallback((item) => {
     item = item.item;
     const index = item.index;
-    appAuthTokens(navigation[19]);
-    let obj = { id: item.application.id, icon: item.application.icon };
+    let obj = appAuthTokens(navigation[19]);
+    obj = { id: item.application.id, icon: item.application.icon };
     const applicationIconSource = obj.getApplicationIconSource(obj);
     obj = {
       icon: closure_1_11(appAuthTokens(navigation[21]), { iconSource: applicationIconSource, iconBorderRadius: 6 }),
@@ -45,6 +46,7 @@ export default function UserSettingsAuthedApps() {
         let obj = appAuthTokens(navigation[22]);
         obj.setSection(closure_2_10.AUTHORIZED_APP);
         obj1 = item(navigation[23]);
+        obj = { destinationPane: closure_2_10.AUTHORIZED_APP, source: obj, applicationId: item.application.id };
         obj = { page: closure_2_9.USER_SETTINGS };
         const result = obj1.trackUserSettingsPaneViewed(obj);
         obj1 = { oauth2Token: item };
@@ -59,7 +61,9 @@ export default function UserSettingsAuthedApps() {
   if (null != appAuthTokens) {
     if (stateFromStoresObject.fetchState === FetchState.FETCHED) {
       function renderHeader() {
-        const obj = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
+        let obj = { children: null };
+        obj = { children: null };
+        obj = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
         const intl = lib(navigation[17]).intl;
         obj[2] = intl.string(lib(navigation[17]).t.HU3RFw);
         const items = [closure_1_11(lib(navigation[16]).Text, obj), ];
@@ -113,18 +117,19 @@ export const DisclosureIcon = function DisclosureIcon(disclosure) {
   const style = disclosure.style;
   const items = [disclosure, style];
   return React.useMemo(() => {
-    if (disclosure(dependencyMap[7]).ApplicationDisclosureType.IP_LOCATION === disclosure) {
+    if (disclosure(closure_1_2[7]).ApplicationDisclosureType.IP_LOCATION === disclosure) {
       let obj = { style: null, size: "xs" };
       obj[0] = style;
-      return closure_1_11(disclosure(dependencyMap[8]).GlobeEarthIcon, obj);
-    } else if (disclosure(dependencyMap[7]).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
+      return closure_1_11(tmp2(tmp3[8]).GlobeEarthIcon, obj);
+    } else if (tmp2(tmp3[7]).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === tmp) {
       obj = { style: null, size: "xs" };
       obj[0] = style;
-      return closure_1_11(disclosure(dependencyMap[9]).EmbedIcon, obj);
+      return closure_1_11(tmp2(tmp3[9]).EmbedIcon, obj);
     } else {
       obj = { style: null, size: "xs" };
       obj[0] = style;
-      return closure_1_11(disclosure(dependencyMap[10]).CircleInformationIcon, obj);
+      return closure_1_11(tmp2(tmp3[10]).CircleInformationIcon, obj);
     }
+    tmp = disclosure;
   }, items);
 };

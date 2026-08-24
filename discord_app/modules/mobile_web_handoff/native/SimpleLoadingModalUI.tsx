@@ -1,14 +1,14 @@
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Modal: c3, View: c4 } = get_ActivityIndicator);
 let closure_6 = createCacheKey.createStyles({ modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" } });
 let closure_7 = { OPENING: 0, [0]: "OPENING", SHOWN: 1, [1]: "SHOWN", DISMISSED: 2, [2]: "DISMISSED" };
-const result = require("obj132").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
+const result = require("set").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
 
 export default function SimpleLoadingModal(operation) {
   operation = operation.operation;
@@ -47,10 +47,13 @@ export default function SimpleLoadingModal(operation) {
     }
   }
   const onDismissed = D;
+  jsx = undefined;
+  let callback;
   let callback1;
+  let callback2;
   jsx = onRejected.useRef(callback1.OPENING);
   const items = [D];
-  const callback = onRejected.useCallback(() => {
+  callback = onRejected.useCallback(() => {
     if (ref.current === callback1.SHOWN) {
       onDismissed();
     }
@@ -62,16 +65,33 @@ export default function SimpleLoadingModal(operation) {
     callback();
   }, items1);
   const items2 = [callback, I];
-  const callback2 = onRejected.useCallback((_55) => {
-    onRejected(_55);
+  callback2 = onRejected.useCallback((arg0) => {
+    onRejected(arg0);
     callback();
   }, items2);
   const items3 = [operation, callback1, callback2];
   const effect = onRejected.useEffect(() => {
     const promise = operation();
-    operation().then((result) => callback(result)).catch((error) => callback2(error));
+    operation().then((arg0) => callback(arg0)).catch((arg0) => callback2(arg0));
   }, items3);
-  const obj = { style: callback().modalBackground, children: jsx(operation(onResolved[4]).ActivityIndicator, {}) };
+  let obj = {
+    transparent: true,
+    animationType: "none",
+    onShow() {
+      if (ref.current === callback1.DISMISSED) {
+        onDismissed();
+      } else {
+        tmp.current = tmp2.SHOWN;
+      }
+    },
+    onRequestClose() {
+      if (cancelable) {
+        callback();
+      }
+    },
+    children: null
+  };
+  obj = { style: callback().modalBackground, children: jsx(operation(onResolved[4]).ActivityIndicator, {}) };
   obj[4] = <onDismissed style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</onDismissed>;
   return <cancelable style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</cancelable>;
 };

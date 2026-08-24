@@ -1,10 +1,10 @@
 // _runtime/01864_forwardRef.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_3 from "00005_asyncGeneratorStep.js";
 import noop from "00019_noop.js";
-import noop2 from "00019_noop.js";
+import closure_8 from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c4, useEffect: c5, useImperativeHandle: closure_6, useMemo: error, forwardRef } = noop);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = { code: "function pnpm_indexTsx1(e,animated=false){const{enabled,layout,scrollViewTarget,height,keyboardHeight,bottomOffset,interpolate,initialKeyboardSize,scrollDistanceWithRespectToSnapPoints,scrollPosition,snapToOffsets,scrollTo,scrollViewAnimatedRef,scrollViewPageY}=this.__closure;var _layout$value,_layout$value2,_layout$value3;if(!enabled){return 0;}if(((_layout$value=layout.value)===null||_layout$value===void 0?void 0:_layout$value.parentScrollViewTarget)!==scrollViewTarget.value){return 0;}const visibleRect=height-keyboardHeight.value;const absoluteY=((_layout$value2=layout.value)===null||_layout$value2===void 0?void 0:_layout$value2.layout.absoluteY)||0;const inputHeight=((_layout$value3=layout.value)===null||_layout$value3===void 0?void 0:_layout$value3.layout.height)||0;const point=absoluteY+inputHeight;if(visibleRect-point<=bottomOffset){const relativeScrollTo=keyboardHeight.value-(height-point)+bottomOffset;const interpolatedScrollTo=interpolate(e,[initialKeyboardSize.value,keyboardHeight.value],[0,scrollDistanceWithRespectToSnapPoints(relativeScrollTo+scrollPosition.value,snapToOffsets)-scrollPosition.value]);const targetScrollY=Math.max(interpolatedScrollTo,0)+scrollPosition.value;scrollTo(scrollViewAnimatedRef,0,targetScrollY,animated);return interpolatedScrollTo;}if(point<scrollViewPageY.value){const positionOnScreen=visibleRect-bottomOffset;const topOfScreen=scrollPosition.value+point;scrollTo(scrollViewAnimatedRef,0,topOfScreen-positionOnScreen,animated);}return 0;}" };
@@ -53,7 +53,28 @@ export default forwardRef((bottomOffset) => {
   }
   const snapToOffsets = bottomOffset.snapToOffsets;
   let merged = Object.assign(bottomOffset, Object.create(null));
+  let animatedRef;
   let ref;
+  let sharedValue;
+  let sharedValue1;
+  let offset;
+  let layout;
+  let size;
+  let sharedValue2;
+  let sharedValue3;
+  let sharedValue4;
+  let sharedValue5;
+  let sharedValue6;
+  let sharedValue7;
+  let input;
+  let update;
+  let sharedValue8;
+  let sharedValue9;
+  let sharedValue10;
+  let sharedValue11;
+  let sharedValue12;
+  let sharedValue13;
+  let height;
   closure_29 = undefined;
   closure_30 = undefined;
   closure_31 = undefined;
@@ -64,46 +85,47 @@ export default forwardRef((bottomOffset) => {
   closure_36 = undefined;
   closure_37 = undefined;
   let obj = _require(flag[3]);
-  const animatedRef = obj.useAnimatedRef();
+  animatedRef = obj.useAnimatedRef();
   ref = ref.useRef(null);
   const tmp8 = num(flag[4])(animatedRef, ref);
   obj1 = _require(flag[3]);
-  const sharedValue = obj1.useSharedValue(null);
+  sharedValue = obj1.useSharedValue(null);
   let obj2 = _require(flag[3]);
-  const sharedValue1 = obj2.useSharedValue(0);
+  sharedValue1 = obj2.useSharedValue(0);
   let tmp11 = num(flag[5])(animatedRef);
-  const offset = tmp11.offset;
-  let layout = tmp11.layout;
-  const size = tmp11.size;
+  offset = tmp11.offset;
+  layout = tmp11.layout;
+  size = tmp11.size;
   let obj3 = _require(flag[3]);
-  const sharedValue2 = obj3.useSharedValue(0);
+  sharedValue2 = obj3.useSharedValue(0);
   let obj4 = _require(flag[3]);
-  const sharedValue3 = obj4.useSharedValue(0);
+  sharedValue3 = obj4.useSharedValue(0);
   let obj5 = _require(flag[3]);
-  const sharedValue4 = obj5.useSharedValue(false);
+  sharedValue4 = obj5.useSharedValue(false);
   let obj6 = _require(flag[3]);
-  const sharedValue5 = obj6.useSharedValue(-1);
-  const sharedValue6 = _require(flag[3]).useSharedValue(0);
+  sharedValue5 = obj6.useSharedValue(-1);
+  sharedValue6 = _require(flag[3]).useSharedValue(0);
   const obj8 = _require(flag[3]);
-  const sharedValue7 = _require(flag[3]).useSharedValue(0);
+  sharedValue7 = _require(flag[3]).useSharedValue(0);
   const obj9 = _require(flag[3]);
   const reanimatedFocusedInput = _require(flag[6]).useReanimatedFocusedInput();
-  const input = reanimatedFocusedInput.input;
-  const update = reanimatedFocusedInput.update;
+  input = reanimatedFocusedInput.input;
+  update = reanimatedFocusedInput.update;
   const obj10 = _require(flag[6]);
-  const sharedValue8 = _require(flag[3]).useSharedValue(null);
+  sharedValue8 = _require(flag[3]).useSharedValue(null);
   const obj11 = _require(flag[3]);
-  const sharedValue9 = _require(flag[3]).useSharedValue(null);
+  sharedValue9 = _require(flag[3]).useSharedValue(null);
   const obj12 = _require(flag[3]);
-  const sharedValue10 = _require(flag[3]).useSharedValue(-1);
+  sharedValue10 = _require(flag[3]).useSharedValue(-1);
   const obj13 = _require(flag[3]);
-  const sharedValue11 = _require(flag[3]).useSharedValue(false);
+  sharedValue11 = _require(flag[3]).useSharedValue(false);
   const obj14 = _require(flag[3]);
-  const sharedValue12 = _require(flag[3]).useSharedValue(false);
+  sharedValue12 = _require(flag[3]).useSharedValue(false);
   const obj15 = _require(flag[3]);
-  const sharedValue13 = _require(flag[3]).useSharedValue(0);
+  sharedValue13 = _require(flag[3]).useSharedValue(0);
   const obj16 = _require(flag[3]);
-  let height = _require(flag[6]).useWindowDimensions().height;
+  height = _require(flag[6]).useWindowDimensions().height;
+  _require = undefined;
   _require = flag2((arg0) => {
     closure_0 = arg0;
     c4 = 0;
@@ -139,14 +161,14 @@ export default forwardRef((bottomOffset) => {
               closure_2 = tmp3;
               closure_1 = tmp7;
               let callback;
-              const findNodeHandleResult = callback(flag[7]).findNodeHandle(animatedRef.current);
-              sharedValue.value = findNodeHandleResult;
+              const findNodeHandleResult = callback(flag[7]).findNodeHandle(closure_1_7.current);
+              closure_1_9.value = findNodeHandleResult;
               if (callback != null) {
                 callback(tmp21);
               }
               if (null !== findNodeHandleResult) {
                 c3 = 1;
-                const KeyboardControllerNative = tmp22(flag[8]).KeyboardControllerNative;
+                const KeyboardControllerNative = tmp22(tmp23[8]).KeyboardControllerNative;
                 c4 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
@@ -156,6 +178,7 @@ export default forwardRef((bottomOffset) => {
               const obj5 = callback(flag[7]);
               tmp21 = callback;
               tmp22 = callback;
+              tmp23 = flag;
             }
           } else {
             if (1 === tmp7) {
@@ -165,7 +188,7 @@ export default forwardRef((bottomOffset) => {
               throw arg1;
             } else if (arg0 !== 2) {
               callback = arg1.y;
-              sharedValue13.value = callback;
+              closure_1_27.value = callback;
               c3 = 0;
             }
             c3 = 0;
@@ -512,7 +535,7 @@ export default forwardRef((bottomOffset) => {
   N.__workletHash = 7363285427351;
   N.__initData = sharedValue6;
   const items9 = [tmp31, tmp33, tmp30, tmp26];
-  const tmp34 = num2(N, items9);
+  let tmp34 = num2(N, items9);
   const obj17 = _require(flag[6]);
   const items10 = [tmp34];
   _require(flag[6]).useFocusedInputHandler({ onSelectionChange: tmp34 }, items10);
@@ -712,7 +735,7 @@ export default forwardRef((bottomOffset) => {
             table = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = update();
+            obj1[0] = closure_1_21();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -731,7 +754,7 @@ export default forwardRef((bottomOffset) => {
           obj2[0] = closure_34;
           fn.__closure = obj2;
           fn.__workletHash = 15498084251450;
-          fn.__initData = sharedValue8;
+          fn.__initData = closure_1_22;
           closure_1_0(table[3]).runOnUI(fn)();
           c3 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -850,6 +873,7 @@ export default forwardRef((bottomOffset) => {
     items17[1] = flag2;
     obj4.children = items17;
     let tmp50Result = sharedValue1(ScrollView, obj4);
+    const tmp50 = sharedValue1;
   } else {
     obj6 = { ref: null };
     obj6[0] = tmp8;

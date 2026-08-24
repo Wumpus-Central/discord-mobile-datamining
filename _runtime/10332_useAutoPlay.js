@@ -1,5 +1,5 @@
 // _runtime/10332_useAutoPlay.js
-import noop from "00019_noop.js";
+import closure_0 from "00019_noop.js";
 
 
 export const useAutoPlay = function useAutoPlay(autoPlay) {
@@ -17,7 +17,7 @@ export const useAutoPlay = function useAutoPlay(autoPlay) {
     if (!ref2.current) {
       if (ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
+        clearTimeout(tmp.current);
       }
       const _setTimeout = setTimeout;
       ref.current = setTimeout(() => {

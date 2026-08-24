@@ -1,12 +1,12 @@
 // discord_app/design/void/Shadows/native/Shadows.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
-import obj1322 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../../_runtime/00002_set.js";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 
-const result = obj132.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
+const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
-export const generateBoxShadowStyle = (EIGHT_DP_ELEVATION_SHADOW_PARAMS) => {
-  ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = EIGHT_DP_ELEVATION_SHADOW_PARAMS);
-  let obj = obj1322;
+export const generateBoxShadowStyle = (arg0) => {
+  ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
+  let obj = set2;
   if (obj.isAndroid()) {
     obj = { elevation: null, shadowColor: null };
     obj[0] = elevation;

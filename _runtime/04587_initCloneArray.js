@@ -14,9 +14,10 @@ export default function initCloneArray(arg0) {
   } else {
     const call = hasOwnProperty.call;
     if (typeof call === "unknown") {
-      let callResult = hasOwnProperty("index");
+      let callResult = tmp2("index");
     } else {
       callResult = call(arg0, "index");
     }
+    tmp2 = hasOwnProperty;
   }
 };

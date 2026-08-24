@@ -2,9 +2,10 @@
 import fromServerDefault from "BaseCollectiblesItemRecord.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-require = fn;
+require = arg1;
 fromServerDefault;
-const prototype = function UnknownCollectiblesItemRecord(arg0) {
+let prototype;
+prototype = function UnknownCollectiblesItemRecord(arg0) {
   tmp = new tmp(arg0, new.target, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)
   tmp.type = CollectiblesItemType.CollectiblesItemType.NONE;
@@ -26,7 +27,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp2.type = CollectiblesItemType.CollectiblesItemType.NONE;
   return tmp2;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/UnknownCollectiblesItemRecord.tsx");
 
 export default prototype;
 export const isUnknownCollectiblesItemRecord = function isUnknownCollectiblesItemRecord(arg0) {

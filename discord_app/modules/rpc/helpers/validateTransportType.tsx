@@ -1,12 +1,12 @@
 // discord_app/modules/rpc/helpers/validateTransportType.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import RPC_SCOPE_CONFIG from "../Constants.tsx";
 import prototypeDefault from "../RPCError.tsx";
 
 const TransportTypes = RPC_SCOPE_CONFIG.TransportTypes;
 const RPCErrors = ME.RPCErrors;
-const result = obj132.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
+const result = set.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
 
 export const validateTransportType = function validateTransportType(transport) {
   if (TransportTypes.IPC !== transport) {

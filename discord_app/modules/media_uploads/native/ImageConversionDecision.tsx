@@ -1,14 +1,14 @@
 // discord_app/modules/media_uploads/native/ImageConversionDecision.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import obj1322 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import _initializeDefault from "../../media/native/IosImageTypesManager.tsx";
 
-const result = obj132.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
+const result = set.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
-export const isPhotoKitAsset = function isPhotoKitAsset(closure_0, closure_1) {
-  let tmp = null != _require.match(/^ph:\/\//i);
+export const isPhotoKitAsset = function isPhotoKitAsset(closure_0, closure_1_1) {
+  let tmp = null != closure_0.match(/^ph:\/\//i);
   if (tmp) {
-    tmp = null != closure_1;
+    tmp = null != closure_1_1;
   }
   return tmp;
 };
@@ -25,7 +25,7 @@ export const isHeicUTI = function isHeicUTI(str) {
   }
 };
 export const shouldForceConvertToJPG = function shouldForceConvertToJPG(closure_0, closure_1_1, closure_1_10) {
-  let isIOSResult = obj1322.isIOS();
+  let isIOSResult = set2.isIOS();
   if (isIOSResult) {
     let flag = false;
     if (null != closure_1_10) {
@@ -41,13 +41,14 @@ export const shouldForceConvertToJPG = function shouldForceConvertToJPG(closure_
     } else {
       if (tmp8) {
         let match;
-        if (importDefault != null) {
-          match = importDefault.match(/\.HEI[CF]$/i);
+        if (closure_1_1 != null) {
+          match = closure_1_1.match(/\.HEI[CF]$/i);
         }
+        let tmp9 = null != match;
       } else {
-        const tmp9 = null != _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)(HEI[CF])$/i);
+        tmp9 = null != closure_0.match(/^(assets-library|file):\/\/.+(&ext=|\.)(HEI[CF])$/i);
       }
-      tmp8 = null != _require.match(/^ph:\/\//i) && null != importDefault;
+      tmp8 = null != closure_0.match(/^ph:\/\//i) && null != closure_1_1;
     }
   }
   return isIOSResult;
@@ -69,7 +70,7 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, closure
       const formatted = closure_1_1.substring(num + 1).toLowerCase();
       const str2 = closure_1_1.substring(num + 1);
     }
-    const match = _require.match;
+    const match = closure_0.match;
     if (flag) {
       if (tmp8) {
         if (null == formatted) {
@@ -78,32 +79,33 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, closure
           if ("png" === formatted) {
             if (closure_1_4) {
               return true;
-            } else if (dependencyMap) {
+            } else if (closure_1_2) {
               return true;
             }
           } else {
             if (obj2.isExtensionAnimated(formatted)) {
               return false;
             } else {
-              const supportedExtensions = _initializeDefault.getSupportedExtensions();
+              const supportedExtensions = tmp14(4861).getSupportedExtensions();
               if (null !== supportedExtensions) {
                 if (supportedExtensions.has(formatted)) {
                   return true;
                 }
               }
-              const tmp14Result = _initializeDefault;
+              const tmp14Result = tmp14(4861);
             }
             obj2 = _initializeDefault;
+            tmp14 = importDefault;
           }
           return false;
         }
       } else {
-        let tmp11 = null != _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)(hei[cf]|jpe?g|dng)$/i);
+        let tmp11 = null != closure_0.match(/^(assets-library|file):\/\/.+(&ext=|\.)(hei[cf]|jpe?g|dng)$/i);
         if (!tmp11) {
-          let tmp12 = null == _require.match(/^(assets-library|file):\/\/.+(&ext=|\.)png$/i);
+          let tmp12 = null == closure_0.match(/^(assets-library|file):\/\/.+(&ext=|\.)png$/i);
           if (!tmp12) {
-            let tmp13 = !dependencyMap;
-            if (!dependencyMap) {
+            let tmp13 = !closure_1_2;
+            if (!closure_1_2) {
               tmp13 = !closure_1_4;
             }
             tmp12 = tmp13;
@@ -126,5 +128,5 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, closure
   } else {
     return false;
   }
-  obj = obj1322;
+  obj = set2;
 };

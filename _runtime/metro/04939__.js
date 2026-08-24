@@ -1,5 +1,6 @@
 // _runtime/metro/04939__.js
-const obj = {
+let obj = { 4: null };
+obj = {
   name: "ShotInfo",
   description(arg0) {
     return arg0;

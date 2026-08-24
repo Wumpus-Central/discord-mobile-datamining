@@ -1,12 +1,12 @@
 // discord_app/modules/experiments/ExperimentManager.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import getHash from "ExperimentStore.tsx";
+import closure_2 from "ExperimentStore.tsx";
 import { registerExperiment } from "ExperimentStore.tsx";
 import ExperimentBuckets from "ExperimentConstants.tsx";
 
 ({ ExperimentTypes: c4, ExposureTypes } = ExperimentBuckets);
 let obj = { LEGACY: "legacy", APEX: "apex" };
-const result = require("obj132").fileFinishedImporting("modules/experiments/ExperimentManager.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/ExperimentManager.tsx");
 
 export const trackExposureToExperiment = function trackExposureToExperiment(id, descriptor, location) {
   obj = { experimentId: id, descriptor, location: null, location_stack: null, fingerprint: null, excluded: null, exposureType: null };
@@ -58,11 +58,13 @@ export const overrideBucket = function overrideBucket(system, closure_0, id) {
     }
     obj[2] = tmp10;
     dispatcherDefault.dispatch(obj);
+    const obj5 = dispatcherDefault;
   } else if (tmp.APEX === system) {
     if (null == id) {
       obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: null };
       obj[1] = closure_0;
       dispatcherDefault.dispatch(obj);
+      const obj3 = dispatcherDefault;
     } else {
       obj = dispatcherDefault;
       obj1 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: null, variantId: null };

@@ -1,9 +1,9 @@
 // discord_app/modules/content_inventory/ContentInventoryHttpApi.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { ContentInventoryFeedKey } from "ContentInventoryConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _getMyContentInventory() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -267,8 +267,8 @@ function _deleteContentInventoryEntryHistory() {
           const intl = lib(1236).intl;
           closure_3 = intl.string(lib(1236).t.FMbL3s);
         }
-        callback(709);
-        const obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: null };
+        let obj3 = callback(709);
+        obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: null };
         obj3[1] = closure_3;
         obj3.dispatch(obj3);
         c9 = 3;
@@ -392,7 +392,7 @@ function _postTrackToContentInventory() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");
+const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");
 
 export const getMyContentInventory = function getMyContentInventory(arg0) {
   const self = this;

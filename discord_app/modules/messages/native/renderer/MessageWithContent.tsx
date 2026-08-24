@@ -1,12 +1,11 @@
 // discord_app/modules/messages/native/renderer/MessageWithContent.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import createThreadEmbedDefault from "createMessageContent.tsx";
-import nativeStylePropertiesDefault from "RowGeneratorUtils.tsx";
-import handleMessageSendFailedAutomod from "../../../guild_automod/GuildAutomodMessageStore.tsx";
+import closure_3 from "../../../guild_automod/GuildAutomodMessageStore.tsx";
 import { RowType } from "RowGeneratorConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
 export const generateMessageRowData = function generateMessageRowData(canShowImages, options, theme) {
   ({ message, isEditing, isSystemDM } = canShowImages);
@@ -23,7 +22,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  { type: RowType.MESSAGE, message: createThreadEmbedDefault(obj), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
+  obj = { type: RowType.MESSAGE, message: createThreadEmbedDefault(obj), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
   obj = { options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.lfIHs4);
@@ -36,7 +35,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   obj[9] = truncation;
   obj[10] = tmp3;
   if (overrideBackgroundHighlight == null) {
-    let tmp4Result = nativeStylePropertiesDefault;
+    let tmp4Result = tmp4(8321);
     obj = { message: null, theme: null, isEditing: null, isAutomodBlockedMessage: null };
     obj[0] = message;
     obj[1] = theme;
@@ -45,17 +44,17 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     overrideBackgroundHighlight = tmp4Result.createBackgroundHighlight(obj);
   }
   obj[11] = overrideBackgroundHighlight;
-  tmp4Result = nativeStylePropertiesDefault;
+  tmp4Result = tmp4(8321);
   let canReply = options.enableSwipeActions;
   if (canReply) {
     canReply = canShowImages.canReply;
   }
   obj[12] = tmp4Result.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp6(1236).intl;
   obj[13] = intl3.string(getSystemLocale.t["5IEsGx"]);
-  const intl4 = getSystemLocale.intl;
+  const intl4 = tmp6(1236).intl;
   obj[14] = intl4.string(getSystemLocale.t.I3ltXO);
-  const intl5 = getSystemLocale.intl;
+  const intl5 = tmp6(1236).intl;
   obj[15] = intl5.string(getSystemLocale.t.rBIGBL);
   const forcedTheme = options.forcedTheme;
   obj[16] = forcedTheme;

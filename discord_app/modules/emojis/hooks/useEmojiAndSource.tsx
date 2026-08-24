@@ -1,15 +1,15 @@
 // discord_app/modules/emojis/hooks/useEmojiAndSource.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import getEmojiToGroupId from "../EmojiStore.tsx";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../EmojiStore.tsx";
 import getEmojiSourceData from "../records/ExpressionSourceRecord.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: closure_8, getEmojiSourceData: c9 } = getEmojiSourceData);
-const result = require("obj132").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
+const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
 export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   emojiId = emojiId.emojiId;
@@ -38,7 +38,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
       if (customEmojiById != null) {
         guildId = customEmojiById.guildId;
       }
-      obj[1] = _undefined.getGuild(guildId);
+      obj[1] = c5.getGuild(guildId);
     } else {
       obj = { emoji: null, joinedEmojiSourceGuildRecord: null };
     }

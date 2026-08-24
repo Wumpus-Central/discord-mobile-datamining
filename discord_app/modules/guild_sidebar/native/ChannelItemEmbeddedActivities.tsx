@@ -6,17 +6,18 @@ import GameIcon from "../../game_detection/native/GameIcon.tsx";
 import GameIconDefault from "../../game_detection/native/GameIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" };
+createCacheKey = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: null, container: null, modeMuted: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", flexDirection: "row" };
 createCacheKey[3] = { opacity: 0.3 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ChannelItemEmbeddedActivities.tsx");
 
 export default function ChannelItemEmbeddedActivities(muted) {
   ({ embeddedApps, size } = muted);
@@ -50,7 +51,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
       obj = { game: null, size: null };
       obj[0] = embeddedApps[1].application;
       obj[1] = size;
-      let tmp16Result = callback(GameIconDefault, obj);
+      let tmp16Result = tmp16(GameIconDefault, obj);
     } else {
       const obj2 = { style: null, children: null };
       const items1 = [tmp3.overflowContainer, ];
@@ -63,11 +64,11 @@ export default function ChannelItemEmbeddedActivities(muted) {
       obj4[0] = tmp3.overflow;
       const _HermesInternal = HermesInternal;
       obj4[2] = "+" + diff;
-      obj2[1] = callback(Text.Text, obj4);
-      tmp16Result = callback(View, obj2);
+      obj2[1] = tmp16(Text.Text, obj4);
+      tmp16Result = tmp16(tmp15, obj2);
     }
     items[1] = tmp16Result;
     obj[1] = items;
-    return callback(View, obj);
+    return closure_5(View, obj);
   }
 };

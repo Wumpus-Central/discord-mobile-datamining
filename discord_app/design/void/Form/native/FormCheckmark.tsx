@@ -4,9 +4,9 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import CheckmarkSmallIcon from "../../../components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
 
 export default function RowCheckmark(selected) {
   let tmp = null;

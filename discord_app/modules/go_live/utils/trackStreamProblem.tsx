@@ -1,10 +1,10 @@
 // discord_app/modules/go_live/utils/trackStreamProblem.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/go_live/utils/trackStreamProblem.tsx");
+const result = set.fileFinishedImporting("modules/go_live/utils/trackStreamProblem.tsx");
 
 export default function trackStreamProblem(arg0) {
   ({ stream, streamApplication, analyticsData, rating } = arg0);
@@ -13,7 +13,8 @@ export default function trackStreamProblem(arg0) {
     rating = null;
   }
   ({ category, variant } = arg0);
-  const obj = { reason: problem, category, reason_variant: variant, streamer_user_id: stream.ownerId, stream_channel_id: stream.channelId, guild_id: stream.guildId, application_id: null, application_name: null, location: null, rating: null, feedback: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { reason: problem, category, reason_variant: variant, streamer_user_id: stream.ownerId, stream_channel_id: stream.channelId, guild_id: stream.guildId, application_id: null, application_name: null, location: null, rating: null, feedback: null };
   let id = null;
   if (null != streamApplication) {
     id = streamApplication.id;

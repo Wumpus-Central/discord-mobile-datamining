@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
@@ -11,11 +11,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
-let obj = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xs };
+let obj = { colorSwatch: null, gummySwatch: null };
+obj = { width: 24, height: 24, borderRadius: ThemesDefault.radii.xs };
 obj[0] = obj;
 obj[1] = { flexDirection: "row", overflow: "hidden" };
 let closure_5 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
+const result = set.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesColorSwatch.tsx");
 
 export default function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
@@ -34,7 +35,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
   }
   if (colors.length >= 2) {
     obj1 = { colors: null, start: null, end: null, style: null };
-    obj1[0] = colors.map((item, index) => callback(table[7]).int2hex(item));
+    obj1[0] = colors.map((color) => callback(table[7]).int2hex(color));
     obj1[1] = { x: 0, y: 0 };
     obj1[2] = { x: 1, y: 0 };
     obj1[3] = tmp.colorSwatch;
@@ -53,4 +54,5 @@ export default function DisplayNameStylesColorSwatch(colors) {
     obj2[0] = items1;
     return <View style={null} />;
   }
+  const tmp2 = require;
 };

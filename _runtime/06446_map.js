@@ -1,23 +1,22 @@
 // _runtime/06446_map.js
-import tagMessage from "06382_tagMessage.js";
 import _mod6420 from "metro/06420__.js";
 import hash from "06434_hash.js";
 import items2 from "06435_items2.js";
 import isNativeEvent from "06447_isNativeEvent.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { useMemo } from "00019_noop.js";
 
-require = fn;
+require = arg1;
 const map = new Map();
 function DEFAULT_PROPS_TRANSFORMER(arg0) {
   return arg0;
 }
 function isGestureEnabled(closure_0) {
-  if (obj.isComposedGesture(_require)) {
-    const gestures = _require.gestures;
+  if (obj.isComposedGesture(closure_0)) {
+    const gestures = closure_0.gestures;
     let someResult = gestures.some(isGestureEnabled);
   } else {
-    someResult = false !== hash.maybeUnpackValue(_require.config.enabled);
+    someResult = false !== hash.maybeUnpackValue(closure_0.config.enabled);
     const tmpResult = hash;
   }
   return someResult;
@@ -28,6 +27,7 @@ export const resolveInternalConfigProps = function resolveInternalConfigProps(us
   useAnimated = useAnimated.useAnimated;
   if (!useAnimated) {
     useAnimated = isNativeEvent.isNativeAnimatedEvent(useAnimated.onUpdate);
+    const obj = isNativeEvent;
   }
   useAnimated.dispatchesAnimatedEvents = useAnimated;
   if (useAnimated.dispatchesAnimatedEvents) {
@@ -40,6 +40,7 @@ export const resolveInternalConfigProps = function resolveInternalConfigProps(us
   }
   if (result) {
     result = hash.hasWorkletEventHandlers(useAnimated);
+    const obj2 = hash;
   }
   if (result) {
     result = !useAnimated.dispatchesAnimatedEvents;
@@ -48,10 +49,10 @@ export const resolveInternalConfigProps = function resolveInternalConfigProps(us
   useAnimated.needsPointerData = isNativeEvent.shouldHandleTouchEvents(useAnimated);
 };
 export const prepareConfigForNativeSide = function prepareConfigForNativeSide(closure_0, closure_1) {
-  let shouldUseReanimatedDetector = dependencyMap.shouldUseReanimatedDetector;
+  let shouldUseReanimatedDetector = closure_1.shouldUseReanimatedDetector;
   if (shouldUseReanimatedDetector) {
     let obj = hash;
-    shouldUseReanimatedDetector = !obj.maybeUnpackValue(dependencyMap.runOnJS);
+    shouldUseReanimatedDetector = !obj.maybeUnpackValue(closure_1.runOnJS);
   }
   obj = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
   const PropsWhiteLists = items2.PropsWhiteLists;
@@ -59,39 +60,60 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(cl
   if (EMPTY_WHITE_LIST == null) {
     EMPTY_WHITE_LIST = items2.EMPTY_WHITE_LIST;
   }
-  const entries = Object.entries(dependencyMap);
+  const entries = Object.entries(closure_1);
   while (tmp12 !== undefined) {
+    let tmp14 = callback;
     let tmp15 = callback(tmp13, 2);
     let first = tmp15[0];
     let tmp17 = first;
     let iter = tmp15[1];
+    let tmp18 = require;
+    let tmp19 = require;
+    let tmp20 = dependencyMap;
+    let tmp21 = dependencyMap;
     let allowedNativeProps = items2.allowedNativeProps;
     if (!allowedNativeProps.has(first)) {
+      let tmp22 = first;
       if (!EMPTY_WHITE_LIST.has(tmp17)) {
-        let PropsToFilter = items2.PropsToFilter;
+        let tmp23 = tmp18;
+        let tmp24 = tmp20;
+        let PropsToFilter = tmp19(6435).PropsToFilter;
+        let tmp25 = first;
         if (PropsToFilter.has(tmp17)) {
           continue;
         } else {
           let _console = console;
-          let tmp19Result = tagMessage;
+          let tmp26 = tmp18;
+          let tmp27 = tmp20;
+          let tmp19Result = tmp19(6382);
+          let tmp28 = first;
           let _HermesInternal = HermesInternal;
+          let str = "";
+          let str2 = " is not a valid property for ";
+          let tmp29 = closure_0;
+          let str3 = " and will be ignored.";
           let warnResult = console.warn(tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + closure_0 + " and will be ignored."));
           continue;
         }
         continue;
       }
     }
-    let Reanimated = _mod6420.Reanimated;
+    let tmp31 = first;
+    let tmp32 = tmp18;
+    let tmp33 = tmp20;
+    let Reanimated = tmp19(6420).Reanimated;
     let isSharedValueResult;
     if (Reanimated != null) {
+      let tmp35 = iter;
       isSharedValueResult = Reanimated.isSharedValue(iter);
     }
+    let tmp36 = iter;
     obj[tmp17] = isSharedValueResult ? iter.value : iter;
   }
   return obj;
 };
-export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(closure_6, map, transformHoverProps) {
-  closure_0 = closure_6;
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps, map, transformHoverProps) {
+  closure_0 = gestureHandlerProps;
   let tmp = map;
   if (map === undefined) {
     tmp = map;
@@ -102,21 +124,21 @@ export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(cl
     tmp2 = DEFAULT_PROPS_TRANSFORMER;
   }
   closure_2 = tmp2;
-  const items = [closure_6, tmp, tmp2];
+  const items = [gestureHandlerProps, tmp, tmp2];
   return useMemo(() => {
     const obj = {};
     const merged = Object.assign(obj);
-    const item = closure_1.forEach((item, index) => {
-      if (index in obj) {
-        obj[item] = obj[index];
+    const item = closure_1.forEach((arg0, arg1) => {
+      if (arg1 in obj) {
+        tmp3[arg0] = tmp3[arg1];
         delete tmp[tmp2];
       }
     });
-    const tmp3 = callback2(obj);
+    const tmp3 = callback(obj);
     let useAnimated = tmp3.useAnimated;
     if (!useAnimated) {
-      useAnimated = callback(closure_1[4]).isNativeAnimatedEvent(tmp3.onUpdate);
-      const obj2 = callback(closure_1[4]);
+      useAnimated = gestureHandlerProps(closure_1[4]).isNativeAnimatedEvent(tmp3.onUpdate);
+      const obj2 = gestureHandlerProps(closure_1[4]);
     }
     tmp3.dispatchesAnimatedEvents = useAnimated;
     if (tmp3.dispatchesAnimatedEvents) {
@@ -125,17 +147,17 @@ export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(cl
     const disableReanimated = tmp3.disableReanimated;
     let result = !disableReanimated;
     if (!disableReanimated) {
-      result = undefined !== callback(closure_1[5]).Reanimated;
+      result = undefined !== gestureHandlerProps(closure_1[5]).Reanimated;
     }
     if (result) {
-      result = callback(closure_1[3]).hasWorkletEventHandlers(tmp3);
-      const obj3 = callback(closure_1[3]);
+      result = gestureHandlerProps(closure_1[3]).hasWorkletEventHandlers(tmp3);
+      const obj3 = gestureHandlerProps(closure_1[3]);
     }
     if (result) {
       result = !tmp3.dispatchesAnimatedEvents;
     }
     tmp3.shouldUseReanimatedDetector = result;
-    tmp3.needsPointerData = callback(closure_1[4]).shouldHandleTouchEvents(tmp3);
+    tmp3.needsPointerData = gestureHandlerProps(closure_1[4]).shouldHandleTouchEvents(tmp3);
     return tmp3;
   }, items);
 };

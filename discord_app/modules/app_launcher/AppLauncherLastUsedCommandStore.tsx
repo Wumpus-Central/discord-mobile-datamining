@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/AppLauncherLastUsedCommandStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-let closure_0 = 10 * obj132Default.Millis.MINUTE;
+let closure_0 = 10 * setDefault.Millis.MINUTE;
 let closure_1 = { lastUsedCommandId: null, lastUsedTimeMs: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class AppLauncherLastUsedCommandStore extends PersistedStore {
@@ -21,12 +21,12 @@ prototype["getLastUsedCommandId"] = function getLastUsedCommandId() {
   let lastUsedCommandId = null;
   if (null != lastUsedTimeMs.lastUsedTimeMs) {
     lastUsedCommandId = null;
-    if (null != lastUsedTimeMs.lastUsedCommandId) {
-      if (tmp > lastUsedTimeMs.lastUsedTimeMs + closure_0) {
-        lastUsedTimeMs.lastUsedCommandId = null;
-        lastUsedTimeMs.lastUsedTimeMs = null;
+    if (null != tmp2.lastUsedCommandId) {
+      if (tmp > tmp2.lastUsedTimeMs + closure_0) {
+        tmp2.lastUsedCommandId = null;
+        tmp2.lastUsedTimeMs = null;
       }
-      lastUsedCommandId = lastUsedTimeMs.lastUsedCommandId;
+      lastUsedCommandId = tmp2.lastUsedCommandId;
     }
   }
   return lastUsedCommandId;
@@ -39,6 +39,6 @@ const appLauncherLastUsedCommandStore = new AppLauncherLastUsedCommandStore(disp
     closure_1.lastUsedTimeMs = Date.now();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/AppLauncherLastUsedCommandStore.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherLastUsedCommandStore.tsx");
 
 export default appLauncherLastUsedCommandStore;

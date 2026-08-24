@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import reset from "../../../../stores/billing/SubscriptionStore.tsx";
-import createEmptyPromotionsByType from "../../promotions/PromotionsStore.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../promotions/PromotionsStore.tsx";
 import { PremiumTypes } from "../../PremiumConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   const items = [closure_4];

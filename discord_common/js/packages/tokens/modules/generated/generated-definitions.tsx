@@ -1,7 +1,45 @@
 // discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 
-const obj = {
+let set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 2147483647;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 2147483647;
+    }
+  }
+};
+let obj = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 2147483647;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 2147483647;
+    }
+  }
+};
+obj = {
   resolve(density) {
     density = density.density;
     if ("compact" === density) {
@@ -16,11 +54,1556 @@ const obj = {
     }
   }
 };
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx");
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 2147483647;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 2147483647;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 0.15;
+  }
+};
+set = {
+  resolve() {
+    return 8;
+  }
+};
+set = {
+  resolve() {
+    return 6;
+  }
+};
+set = {
+  resolve() {
+    return 0.4;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "heading-md/bold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "heading-lg/semibold";
+          return "heading-lg/semibold";
+        }
+      }
+      return "heading-md/bold";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 1;
+          return 1;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 4;
+          return 4;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 2147483647;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 2147483647;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-md/medium";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-md/normal";
+          return "text-md/normal";
+        }
+      }
+      return "text-md/medium";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-sm/medium";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-md/normal";
+          return "text-md/normal";
+        }
+      }
+      return "text-sm/medium";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-xs/medium";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-xs/normal";
+          return "text-xs/normal";
+        }
+      }
+      return "text-xs/medium";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 40;
+  }
+};
+set = {
+  resolve() {
+    return 20;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 2147483647;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 2147483647;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 1;
+          return 1;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 24;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          return 0;
+        }
+      }
+      return 24;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 4;
+          return 4;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "icon-default";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "icon-default";
+          return "icon-default";
+        }
+      }
+      return "icon-default";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 4;
+          return 4;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-default";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-default";
+          return "text-default";
+        }
+      }
+      return "text-default";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-xs/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-xs/medium";
+          return "text-xs/medium";
+        }
+      }
+      return "text-xs/semibold";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve() {
+    return "row";
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 32;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "redesign/channel-title/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-md/medium";
+          return "text-md/medium";
+        }
+      }
+      return "redesign/channel-title/semibold";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 15;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 24;
+          return 24;
+        }
+      }
+      return 15;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 24;
+          return 24;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 288;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 24;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 24;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 24;
+          return 24;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 4;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 24;
+          return 24;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 4;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 4;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 32;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 36;
+          return 36;
+        }
+      }
+      return 32;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          return 0;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 14;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 8;
+          return 8;
+        }
+      }
+      return 14;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 36;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 32;
+          return 32;
+        }
+      }
+      return 36;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 56;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-sm/medium";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-sm/normal";
+          return "text-sm/normal";
+        }
+      }
+      return "text-sm/medium";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 60;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 56;
+          return 56;
+        }
+      }
+      return 60;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 32;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "mobile-text-heading-primary";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-strong";
+          return "text-strong";
+        }
+      }
+      return "mobile-text-heading-primary";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-md/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-md/medium";
+          return "text-md/medium";
+        }
+      }
+      return "text-md/semibold";
+    }
+  }
+};
+set = {
+  resolve() {
+    return 12;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 22;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 22;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return -6;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = -4;
+          return -4;
+        }
+      }
+      return -6;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-xxs/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-xs/medium";
+          return "text-xs/medium";
+        }
+      }
+      return "text-xxs/semibold";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-sm/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let str2 = "text-sm/medium";
+          return "text-sm/medium";
+        }
+      }
+      return "text-sm/semibold";
+    }
+  }
+};
+set = {
+  resolve() {
+    return 16;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 22;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 20;
+          return 20;
+        }
+      }
+      return 22;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 0;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 1;
+          return 1;
+        }
+      }
+      return 0;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 10;
+          return 10;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 14;
+  }
+};
+set = {
+  resolve() {
+    return 17;
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 4;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          return 0;
+        }
+      }
+      return 4;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return "text-sm/semibold";
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let str4 = "text-xs/semibold";
+          return "text-xs/semibold";
+        } else if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          let str3 = "text-sm/semibold";
+          return "text-sm/semibold";
+        }
+      }
+      return "text-sm/semibold";
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 40;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let num2 = 32;
+          return 32;
+        } else if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          let num = 58;
+          return 58;
+        }
+      }
+      return 40;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 8;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          return 0;
+        }
+      }
+      return 8;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 9;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          return 0;
+        }
+      }
+      return 9;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 10;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let num = 6;
+          return 6;
+        } else if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          return 0;
+        }
+      }
+      return 10;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 27;
+          return 27;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 40;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let num2 = 32;
+          return 32;
+        } else if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          let num = 36;
+          return 36;
+        }
+      }
+      return 40;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 32;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 32;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh-floating" === nextResult) {
+          let tmp6 = iter;
+          iter.return();
+          let num2 = 10;
+          return 10;
+        } else if ("mobile-visual-refresh-legacy-send-button" === nextResult) {
+          let tmp5 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 32;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 32;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 16;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 4;
+          return 4;
+        }
+      }
+      return 16;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 12;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 12;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 24;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 12;
+          return 12;
+        }
+      }
+      return 24;
+    }
+  }
+};
+set = {
+  resolve(enabledExperiments) {
+    enabledExperiments = enabledExperiments.enabledExperiments;
+    if (0 === enabledExperiments.length) {
+      return 28;
+    } else {
+      const iter = enabledExperiments[Symbol.iterator]();
+      while (iter !== undefined) {
+        if ("mobile-visual-refresh" === iter.next()) {
+          let tmp4 = iter;
+          iter.return();
+          let num = 16;
+          return 16;
+        }
+      }
+      return 28;
+    }
+  }
+};
+set = {
+  resolve() {
+    return 24;
+  }
+};
+set = {
+  resolve() {
+    return 16;
+  }
+};
+set = {
+  resolve() {
+    return 800;
+  }
+};
+set = {
+  resolve() {
+    return 602;
+  }
+};
+set = {
+  resolve() {
+    return 442;
+  }
+};
+set = {
+  resolve() {
+    return 248;
+  }
+};
+set = {
+  resolve() {
+    return 40;
+  }
+};
+const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx");
 
 export const _private = {
   Modules: {
-    button: { BORDER_RADIUS: obj, BORDER_RADIUS_LG: obj },
+    button: { BORDER_RADIUS: set, BORDER_RADIUS_LG: obj },
     channels: {
       NAME_LINE_HEIGHT: obj,
       SPINE_INVERTED_OFFSET_TOP: {
@@ -115,11 +1698,20 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("refresh-fast-follow-avatars" === iter.next()) {
+                let str2 = "compact";
                 if ("compact" !== density) {
+                  let str3 = "default";
+                  if ("default" !== density) {
+                    let str4 = "cozy";
+                  }
+                  let tmp4 = iter;
                   iter.return();
+                  let num = 44;
                   return 44;
                 }
+                let tmp5 = iter;
                 iter.return();
+                let num2 = 40;
                 return 40;
               }
             }
@@ -136,11 +1728,20 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("refresh-fast-follow-avatars" === iter.next()) {
+                let str2 = "compact";
                 if ("compact" !== density) {
+                  let str3 = "default";
+                  if ("default" !== density) {
+                    let str4 = "cozy";
+                  }
+                  let tmp4 = iter;
                   iter.return();
+                  let num = 52;
                   return 52;
                 }
+                let tmp5 = iter;
                 iter.return();
+                let num2 = 48;
                 return 48;
               }
             }
@@ -198,7 +1799,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -220,6 +1823,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -237,7 +1841,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "lg";
                 return "lg";
               }
             }
@@ -254,7 +1860,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "icon-only";
                 return "icon-only";
               }
             }
@@ -271,6 +1879,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -288,7 +1897,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 1;
                 return 1;
               }
             }
@@ -305,6 +1916,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -322,7 +1934,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "xs";
                 return "xs";
               }
             }
@@ -339,7 +1953,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -356,7 +1972,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "text-sm/medium";
                 return "text-sm/medium";
               }
             }
@@ -373,7 +1991,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "heading-lg/semibold";
                 return "heading-lg/semibold";
               }
             }
@@ -390,6 +2010,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -407,7 +2028,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -424,7 +2047,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "background-base-lower";
                 return "background-base-lower";
               }
             }
@@ -444,12 +2069,16 @@ export const _private = {
               if ("mobile-visual-refresh" !== nextResult) {
                 if ("mobile-visual-refresh-legacy-send-button" !== nextResult) {
                   if ("mobile-visual-refresh-floating" === nextResult) {
+                    let tmp5 = iter;
                     iter.return();
+                    let num = 10;
                     return 10;
                   }
                 }
               }
+              let tmp6 = iter;
               iter.return();
+              let num2 = 8;
               return 8;
             }
             return 0;
@@ -465,6 +2094,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -482,7 +2112,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 32;
                 return 32;
               }
             }
@@ -499,7 +2131,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "icon-strong";
                 return "icon-strong";
               }
             }
@@ -516,7 +2150,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 20;
                 return 20;
               }
             }
@@ -533,7 +2169,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -555,7 +2193,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 1;
                 return 1;
               }
             }
@@ -572,7 +2212,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -589,7 +2231,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -606,7 +2250,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -623,7 +2269,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -640,7 +2288,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -657,7 +2307,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 10;
                 return 10;
               }
             }
@@ -674,7 +2326,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 1;
                 return 1;
               }
             }
@@ -691,7 +2345,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -708,7 +2364,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -725,6 +2383,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -742,6 +2401,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -759,7 +2419,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -776,7 +2438,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -794,10 +2458,14 @@ export const _private = {
             const nextResult = iter.next();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === nextResult) {
+                let tmp6 = iter;
                 iter.return();
+                let num2 = 10;
                 return 10;
               } else if ("mobile-visual-refresh-legacy-send-button" === nextResult) {
+                let tmp5 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -815,10 +2483,14 @@ export const _private = {
             const nextResult = iter.next();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === nextResult) {
+                let tmp6 = iter;
                 iter.return();
+                let num2 = 10;
                 return 10;
               } else if ("mobile-visual-refresh-legacy-send-button" === nextResult) {
+                let tmp5 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -835,7 +2507,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 20;
                 return 20;
               }
             }
@@ -852,7 +2526,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -869,7 +2545,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 56;
                 return 56;
               }
             }
@@ -886,7 +2564,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 36;
                 return 36;
               }
             }
@@ -903,7 +2583,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 24;
                 return 24;
               }
             }
@@ -920,7 +2602,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -937,7 +2621,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "interactive-icon-default";
                 return "interactive-icon-default";
               }
             }
@@ -954,7 +2640,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let str2 = "small20";
                 return "small20";
               }
             }
@@ -971,7 +2659,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 1;
                 return 1;
               }
             }
@@ -988,7 +2678,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -1005,6 +2697,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -1022,6 +2715,7 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
                 return 0;
               }
@@ -1039,7 +2733,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh-floating" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -1059,12 +2755,16 @@ export const _private = {
               if ("mobile-visual-refresh" !== nextResult) {
                 if ("mobile-visual-refresh-legacy-send-button" !== nextResult) {
                   if ("mobile-visual-refresh-floating" === nextResult) {
+                    let tmp5 = iter;
                     iter.return();
+                    let num = 36;
                     return 36;
                   }
                 }
               }
+              let tmp6 = iter;
               iter.return();
+              let num2 = 32;
               return 32;
             }
             return 40;
@@ -1081,13 +2781,19 @@ export const _private = {
             const nextResult = iter.next();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === nextResult) {
+                let tmp7 = iter;
                 iter.return();
+                let num3 = 32;
                 return 32;
               } else if ("mobile-visual-refresh-floating" === nextResult) {
+                let tmp6 = iter;
                 iter.return();
+                let num2 = 36;
                 return 36;
               } else if ("mobile-visual-refresh-legacy-send-button" === nextResult) {
+                let tmp5 = iter;
                 iter.return();
+                let num = 40;
                 return 40;
               }
             }
@@ -1104,7 +2810,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 240;
                 return 240;
               }
             }
@@ -1121,7 +2829,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -1138,7 +2848,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 4;
                 return 4;
               }
             }
@@ -1155,7 +2867,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 1.2;
                 return 1.2;
               }
             }
@@ -1177,7 +2891,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 1.2;
                 return 1.2;
               }
             }
@@ -1194,7 +2910,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -1216,7 +2934,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 28;
                 return 28;
               }
             }
@@ -1233,7 +2953,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 28;
                 return 28;
               }
             }
@@ -1250,7 +2972,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 20;
                 return 20;
               }
             }
@@ -1267,7 +2991,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 56;
                 return 56;
               }
             }
@@ -1284,7 +3010,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 48;
                 return 48;
               }
             }
@@ -1301,7 +3029,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 22;
                 return 22;
               }
             }
@@ -1318,7 +3048,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 28;
                 return 28;
               }
             }
@@ -1335,7 +3067,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 12;
                 return 12;
               }
             }
@@ -1352,7 +3086,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 24;
                 return 24;
               }
             }
@@ -1369,7 +3105,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 16;
                 return 16;
               }
             }
@@ -1386,7 +3124,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 64;
                 return 64;
               }
             }
@@ -1403,7 +3143,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 6;
                 return 6;
               }
             }
@@ -1430,7 +3172,9 @@ export const _private = {
             const iter = enabledExperiments[Symbol.iterator]();
             while (iter !== undefined) {
               if ("mobile-visual-refresh" === iter.next()) {
+                let tmp4 = iter;
                 iter.return();
+                let num = 8;
                 return 8;
               }
             }
@@ -1438,1387 +3182,98 @@ export const _private = {
           }
         }
       },
-      GUILD_FOLDER_BACKGROUND_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 2147483647;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 2147483647;
-          }
-        }
-      },
-      GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      GUILD_FOLDER_COLOR_OPACITY: {
-        resolve() {
-          return 0.15;
-        }
-      },
-      GUILD_FOLDER_PADDING: {
-        resolve() {
-          return 8;
-        }
-      },
-      GUILD_FOLDER_PREVIEW_ICON_MARGIN: {
-        resolve() {
-          return 6;
-        }
-      },
-      GUILD_FOLDER_PREVIEW_OPACITY: {
-        resolve() {
-          return 0.4;
-        }
-      },
-      GUILD_ITEM_SELECTED_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      HEADER_TITLE_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "heading-md/bold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "heading-lg/semibold";
-              }
-            }
-            return "heading-md/bold";
-          }
-        }
-      },
-      INPUT_FIELD_BORDER_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 1;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      INPUT_FIELD_PADDING_VERTICAL_SM_IOS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 4;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      INPUT_FIELD_RADIUS_LG: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      INPUT_FIELD_RADIUS_MD: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      INPUT_FIELD_RADIUS_SM: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      INPUT_FIELD_ROUND_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 2147483647;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 2147483647;
-          }
-        }
-      },
-      INPUT_FIELD_TEXT_STYLE_LG: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-md/medium";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-md/normal";
-              }
-            }
-            return "text-md/medium";
-          }
-        }
-      },
-      INPUT_FIELD_TEXT_STYLE_MD: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-sm/medium";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-md/normal";
-              }
-            }
-            return "text-sm/medium";
-          }
-        }
-      },
-      INPUT_FIELD_TEXT_STYLE_SM: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-xs/medium";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-xs/normal";
-              }
-            }
-            return "text-xs/medium";
-          }
-        }
-      },
-      JUMP_TO_PRESENT_BOTTOM_SPACING: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      JUMP_TO_PRESENT_BUTTON_SIZE: {
-        resolve() {
-          return 40;
-        }
-      },
-      JUMP_TO_PRESENT_ICON_SIZE: {
-        resolve() {
-          return 20;
-        }
-      },
-      JUMP_TO_PRESENT_RIGHT_SPACING: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BAR_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 2147483647;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 2147483647;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BAR_BORDER_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 1;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 24;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 0;
-              }
-            }
-            return 24;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BAR_GAP: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 4;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "icon-default";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "icon-default";
-              }
-            }
-            return "icon-default";
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BUTTON_PADDING: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 4;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-default";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-default";
-              }
-            }
-            return "text-default";
-          }
-        }
-      },
-      MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-xs/semibold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-xs/medium";
-              }
-            }
-            return "text-xs/semibold";
-          }
-        }
-      },
-      MEDIA_KEYBOARD_SEND_VERTICAL_INSET: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      MESSAGES_HEADER_BUTTON_GAP: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      MESSAGES_HEADER_BUTTON_LAYOUT: {
-        resolve() {
-          return "row";
-        }
-      },
-      MESSAGES_HEADER_PADDING_BOTTOM: obj132,
-      MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      MESSAGES_ITEM_CHANNEL_AVATAR_SIZE: {
-        resolve() {
-          return 32;
-        }
-      },
-      MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "redesign/channel-title/semibold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-md/medium";
-              }
-            }
-            return "redesign/channel-title/semibold";
-          }
-        }
-      },
-      MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      MOBILE_KEYBOARD_TOP_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 15;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 24;
-              }
-            }
-            return 15;
-          }
-        }
-      },
-      MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 24;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      PROMO_SHEET_GRAPHIC_MAX_WIDTH: {
-        resolve() {
-          return 288;
-        }
-      },
-      QUEST_DOCK_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 24;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 24;
-          }
-        }
-      },
-      SEGMENTED_CONTROL_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      SETTINGS_PADDING_TOP: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 24;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      SHEET_HANDLE_HEIGHT: {
-        resolve() {
-          return 4;
-        }
-      },
-      SHEET_HANDLE_MARGIN_BOTTOM: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 24;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      SHEET_HANDLE_MARGIN_TOP: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 4;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 4;
-          }
-        }
-      },
-      SHEET_HANDLE_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 32;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 36;
-              }
-            }
-            return 32;
-          }
-        }
-      },
-      SHEET_HEADER_PADDING_HORIZONTAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 0;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      TABLE_ROW_ARROW_MARGIN_END: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      TABLE_ROW_ARROW_MARGIN_START: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 14;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 8;
-              }
-            }
-            return 14;
-          }
-        }
-      },
-      TABLE_ROW_ARROW_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      TABLE_ROW_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      TABLE_ROW_CONTENT_HEIGHT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 36;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 32;
-              }
-            }
-            return 36;
-          }
-        }
-      },
-      TABLE_ROW_DIVIDER_PADDING: {
-        resolve() {
-          return 56;
-        }
-      },
-      TABLE_ROW_GROUP_HELPER_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-sm/medium";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-sm/normal";
-              }
-            }
-            return "text-sm/medium";
-          }
-        }
-      },
-      TABLE_ROW_HEIGHT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 60;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 56;
-              }
-            }
-            return 60;
-          }
-        }
-      },
-      TABLE_ROW_ICON_SIZE: {
-        resolve() {
-          return 32;
-        }
-      },
-      TABLE_ROW_LABEL_COLOR: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "mobile-text-heading-primary";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-strong";
-              }
-            }
-            return "mobile-text-heading-primary";
-          }
-        }
-      },
-      TABLE_ROW_LABEL_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-md/semibold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-md/medium";
-              }
-            }
-            return "text-md/semibold";
-          }
-        }
-      },
-      TABLE_ROW_PADDING: {
-        resolve() {
-          return 12;
-        }
-      },
-      TAB_BAR_UNREAD_BADGE_SIZE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 22;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 22;
-          }
-        }
-      },
-      TAB_LABEL_MARGIN_TOP: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return -6;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return -4;
-              }
-            }
-            return -6;
-          }
-        }
-      },
-      TAB_LABEL_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-xxs/semibold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-xs/medium";
-              }
-            }
-            return "text-xxs/semibold";
-          }
-        }
-      },
-      USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-sm/semibold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return "text-sm/medium";
-              }
-            }
-            return "text-sm/semibold";
-          }
-        }
-      },
-      USER_ROW_LABEL_LINE_HEIGHT_ANDROID: {
-        resolve() {
-          return 16;
-        }
-      },
-      USER_ROW_LABEL_LINE_HEIGHT_IOS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 22;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 20;
-              }
-            }
-            return 22;
-          }
-        }
-      },
-      VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 0;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 1;
-              }
-            }
-            return 0;
-          }
-        }
-      },
-      VOICE_MESSAGE_CHAT_GAP: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 10;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID: {
-        resolve() {
-          return 14;
-        }
-      },
-      VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: {
-        resolve() {
-          return 17;
-        }
-      },
-      VOICE_MESSAGE_DURATION_MARGIN_LEFT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 4;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 0;
-              }
-            }
-            return 4;
-          }
-        }
-      },
-      VOICE_MESSAGE_DURATION_TEXT_STYLE: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return "text-sm/semibold";
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === nextResult) {
-                iter.return();
-                return "text-xs/semibold";
-              } else if ("mobile-visual-refresh-floating" === nextResult) {
-                iter.return();
-                return "text-sm/semibold";
-              }
-            }
-            return "text-sm/semibold";
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 40;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === nextResult) {
-                iter.return();
-                return 32;
-              } else if ("mobile-visual-refresh-floating" === nextResult) {
-                iter.return();
-                return 58;
-              }
-            }
-            return 40;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 8;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 0;
-              }
-            }
-            return 8;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 9;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 0;
-              }
-            }
-            return 9;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 10;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === nextResult) {
-                iter.return();
-                return 6;
-              } else if ("mobile-visual-refresh-floating" === nextResult) {
-                iter.return();
-                return 0;
-              }
-            }
-            return 10;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 27;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 40;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === nextResult) {
-                iter.return();
-                return 32;
-              } else if ("mobile-visual-refresh-floating" === nextResult) {
-                iter.return();
-                return 36;
-              }
-            }
-            return 40;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 32;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 32;
-          }
-        }
-      },
-      VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh-floating" === nextResult) {
-                iter.return();
-                return 10;
-              } else if ("mobile-visual-refresh-legacy-send-button" === nextResult) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      VOICE_PANEL_CONTROLS_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 32;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 32;
-          }
-        }
-      },
-      VOICE_PANEL_CONTROLS_PADDING: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 16;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 4;
-              }
-            }
-            return 16;
-          }
-        }
-      },
-      VOICE_PANEL_GUTTER: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      VOICE_PANEL_PADDING: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 12;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 12;
-          }
-        }
-      },
-      VOICE_TILE_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 24;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 12;
-              }
-            }
-            return 24;
-          }
-        }
-      },
-      YOU_BAR_BORDER_RADIUS: {
-        resolve(enabledExperiments) {
-          enabledExperiments = enabledExperiments.enabledExperiments;
-          if (0 === enabledExperiments.length) {
-            return 28;
-          } else {
-            const iter = enabledExperiments[Symbol.iterator]();
-            while (iter !== undefined) {
-              if ("mobile-visual-refresh" === iter.next()) {
-                iter.return();
-                return 16;
-              }
-            }
-            return 28;
-          }
-        }
-      }
+      GUILD_FOLDER_BACKGROUND_RADIUS: set,
+      GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET: set,
+      GUILD_FOLDER_COLOR_OPACITY: set,
+      GUILD_FOLDER_PADDING: set,
+      GUILD_FOLDER_PREVIEW_ICON_MARGIN: set,
+      GUILD_FOLDER_PREVIEW_OPACITY: set,
+      GUILD_ITEM_SELECTED_BORDER_RADIUS: set,
+      HEADER_TITLE_TEXT_STYLE: set,
+      INPUT_FIELD_BORDER_WIDTH: set,
+      INPUT_FIELD_PADDING_VERTICAL_SM_IOS: set,
+      INPUT_FIELD_RADIUS_LG: set,
+      INPUT_FIELD_RADIUS_MD: set,
+      INPUT_FIELD_RADIUS_SM: set,
+      INPUT_FIELD_ROUND_RADIUS: set,
+      INPUT_FIELD_TEXT_STYLE_LG: set,
+      INPUT_FIELD_TEXT_STYLE_MD: set,
+      INPUT_FIELD_TEXT_STYLE_SM: set,
+      JUMP_TO_PRESENT_BOTTOM_SPACING: set,
+      JUMP_TO_PRESENT_BUTTON_SIZE: set,
+      JUMP_TO_PRESENT_ICON_SIZE: set,
+      JUMP_TO_PRESENT_RIGHT_SPACING: set,
+      MEDIA_KEYBOARD_BAR_BORDER_RADIUS: set,
+      MEDIA_KEYBOARD_BAR_BORDER_WIDTH: set,
+      MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL: set,
+      MEDIA_KEYBOARD_BAR_GAP: set,
+      MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL: set,
+      MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL: set,
+      MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS: set,
+      MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE: set,
+      MEDIA_KEYBOARD_BUTTON_PADDING: set,
+      MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE: set,
+      MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT: set,
+      MEDIA_KEYBOARD_SEND_VERTICAL_INSET: set,
+      MESSAGES_HEADER_BUTTON_GAP: set,
+      MESSAGES_HEADER_BUTTON_LAYOUT: set,
+      MESSAGES_HEADER_PADDING_BOTTOM: set,
+      MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END: set,
+      MESSAGES_ITEM_CHANNEL_AVATAR_SIZE: set,
+      MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE: set,
+      MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM: set,
+      MOBILE_KEYBOARD_TOP_BORDER_RADIUS: set,
+      MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS: set,
+      PROMO_SHEET_GRAPHIC_MAX_WIDTH: set,
+      QUEST_DOCK_BORDER_RADIUS: set,
+      SEGMENTED_CONTROL_BORDER_RADIUS: set,
+      SETTINGS_PADDING_TOP: set,
+      SHEET_HANDLE_HEIGHT: set,
+      SHEET_HANDLE_MARGIN_BOTTOM: set,
+      SHEET_HANDLE_MARGIN_TOP: set,
+      SHEET_HANDLE_WIDTH: set,
+      SHEET_HEADER_PADDING_HORIZONTAL: set,
+      TABLE_ROW_ARROW_MARGIN_END: set,
+      TABLE_ROW_ARROW_MARGIN_START: set,
+      TABLE_ROW_ARROW_WIDTH: set,
+      TABLE_ROW_BORDER_RADIUS: set,
+      TABLE_ROW_CONTENT_HEIGHT: set,
+      TABLE_ROW_DIVIDER_PADDING: set,
+      TABLE_ROW_GROUP_HELPER_TEXT_STYLE: set,
+      TABLE_ROW_HEIGHT: set,
+      TABLE_ROW_ICON_SIZE: set,
+      TABLE_ROW_LABEL_COLOR: set,
+      TABLE_ROW_LABEL_TEXT_STYLE: set,
+      TABLE_ROW_PADDING: set,
+      TAB_BAR_UNREAD_BADGE_SIZE: set,
+      TAB_LABEL_MARGIN_TOP: set,
+      TAB_LABEL_TEXT_STYLE: set,
+      USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE: set,
+      USER_ROW_LABEL_LINE_HEIGHT_ANDROID: set,
+      USER_ROW_LABEL_LINE_HEIGHT_IOS: set,
+      VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH: set,
+      VOICE_MESSAGE_CHAT_GAP: set,
+      VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID: set,
+      VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: set,
+      VOICE_MESSAGE_DURATION_MARGIN_LEFT: set,
+      VOICE_MESSAGE_DURATION_TEXT_STYLE: set,
+      VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT: set,
+      VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT: set,
+      VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM: set,
+      VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL: set,
+      VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL: set,
+      VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT: set,
+      VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH: set,
+      VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS: set,
+      VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL: set,
+      VOICE_PANEL_CONTROLS_BORDER_RADIUS: set,
+      VOICE_PANEL_CONTROLS_PADDING: set,
+      VOICE_PANEL_GUTTER: set,
+      VOICE_PANEL_PADDING: set,
+      VOICE_TILE_BORDER_RADIUS: set,
+      YOU_BAR_BORDER_RADIUS: set
     },
-    modal: {
-      HORIZONTAL_PADDING: {
-        resolve() {
-          return 24;
-        }
-      },
-      VERTICAL_PADDING: {
-        resolve() {
-          return 16;
-        }
-      },
-      WIDTH_LARGE: {
-        resolve() {
-          return 800;
-        }
-      },
-      WIDTH_MEDIUM: {
-        resolve() {
-          return 602;
-        }
-      },
-      WIDTH_SMALL: {
-        resolve() {
-          return 442;
-        }
-      }
-    },
-    select: {
-      MAX_WIDTH: {
-        resolve() {
-          return 248;
-        }
-      },
-      OPTION_HEIGHT: {
-        resolve() {
-          return 40;
-        }
-      }
-    }
+    modal: { HORIZONTAL_PADDING: set, VERTICAL_PADDING: set, WIDTH_LARGE: set, WIDTH_MEDIUM: set, WIDTH_SMALL: set },
+    select: { MAX_WIDTH: set, OPTION_HEIGHT: set }
   }
 };

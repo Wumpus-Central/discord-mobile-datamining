@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import StreamIssueReportReasons from "../../../../go_live/Constants.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
@@ -8,7 +8,7 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 
 const StreamTypes = StreamIssueReportReasons.StreamTypes;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
 
 export const createGuildStreamSystemMessage = function createGuildStreamSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -20,8 +20,8 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   const tmp3 = getHumanizedCallDurationDefault(message);
   obj1 = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
-  const obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
+  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
   obj1 = { ended: tmp4, content: null };
   const intl = getSystemLocale.intl;
   const formatToParts = intl.formatToParts;

@@ -1,12 +1,12 @@
 // discord_app/modules/settings/native/search/hooks/useSettingSearchResults.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import zustandStore from "../../../../user_settings/UserSettingSearchStore.tsx";
-import zustandStore2 from "../../renderer/stores/SettingBlocklistStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../user_settings/UserSettingSearchStore.tsx";
+import closure_6 from "../../renderer/stores/SettingBlocklistStore.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_7 = [];
-const result = require("obj132").fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
@@ -24,8 +24,8 @@ export const useSettingSearchResults = function useSettingSearchResults() {
   memo1 = memo1.useMemo(() => callback(636)((arg0) => {
     let scoredSearchResults = closure_1_6.getField("blocklist");
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
-    const found = scoredSearchResults.filter((item, index) => {
-      const setting = item.setting;
+    const found = scoredSearchResults.filter((setting) => {
+      setting = setting.setting;
       const isBlockedResult = closure_1_1(closure_1_2[4]).isBlocked(setting, callback);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
@@ -58,7 +58,7 @@ export const useSettingSearchResults = function useSettingSearchResults() {
     });
     return () => {
       callback();
-      const cancel = memo1.cancel;
+      const cancel = closure_1_4.cancel;
       if (cancel != null) {
         cancel();
       }

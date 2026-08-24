@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardView.tsx
 import SelfStreamCardDefault from "VoicePanelCard.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import closure_7 from "../../../calls/ChannelRTCStore.tsx";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
 import { VoicePanelPIPModes } from "../pip/VoicePanelPIPConstants.tsx";
@@ -11,7 +11,7 @@ import { EDGE_GUTTER } from "VoicePanelCardConstants.tsx";
 import { isUserParticipant } from "../../../calls/CallConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function getCardKey(type) {
   return "" + type.type + "-" + type.id;
 }
@@ -20,16 +20,21 @@ function renderCard(arg0, item, transitionState, cleanUp) {
 }
 function CardContentFreezer(children) {
   children = children.children;
-  let _require;
+  let _require = children;
+  importDefault = undefined;
   let animatedStyle;
+  _require = undefined;
+  importDefault = undefined;
+  animatedStyle = undefined;
   obj = _require(animatedStyle[20]);
   const mode = obj.usePIPState().mode;
+  _require = mode;
   const ref = safeArea.useRef(mode === VoicePanelPIPModes.IN_APP);
   importDefault = ref;
   animatedStyle = controlsSpecs(safeArea.useState({}), 2)[1];
   let items = [mode];
   const effect = safeArea.useEffect(() => {
-    if (timeout === VoicePanelPIPModes.IN_APP) {
+    if (timeout === closure_1_11.IN_APP) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
         if (!ref.current) {
@@ -45,26 +50,38 @@ function CardContentFreezer(children) {
     }
   }, items);
   const tmp6 = mode === VoicePanelPIPModes.IN_APP && importDefault(animatedStyle[21])(ref);
+  importDefault = tmp6;
   _require = tmp6;
   importDefault = undefined;
   animatedStyle = undefined;
+  controlsSpecs = undefined;
+  safeArea = undefined;
+  let contentDimensions;
+  let windowDimensions;
+  let mode2;
+  let focused;
+  let wrapperOffset;
+  let token;
   let tmp7 = importDefault(animatedStyle[13])("VoicePanelCardView");
   importDefault = tmp7;
   const context = obj2.useContext(tmp5(tmp2[14]));
   const connected = context.connected;
+  animatedStyle = connected;
   controlsSpecs = context.controlsSpecs;
   safeArea = context.safeArea;
-  const contentDimensions = context.contentDimensions;
-  const windowDimensions = context.windowDimensions;
-  const mode2 = context.mode;
-  const focused = context.focused;
-  const wrapperOffset = context.wrapperOffset;
+  contentDimensions = context.contentDimensions;
+  windowDimensions = context.windowDimensions;
+  mode2 = context.mode;
+  focused = context.focused;
+  wrapperOffset = context.wrapperOffset;
   let tmpResult = tmp(tmp2[15]);
-  const token = tmpResult.useToken(tmp5(tmp2[16]).modules.mobile.VOICE_PANEL_GUTTER);
+  token = tmpResult.useToken(tmp5(tmp2[16]).modules.mobile.VOICE_PANEL_GUTTER);
   tmpResult = tmp(tmp2[11]);
   const fn = function o() {
     obj = controlsSpecs;
-    const bound = Math.max(safeArea.get().bottom, EDGE_GUTTER);
+    const bound = Math.max(safeArea.get().bottom, closure_1_12);
+    const tmp = closure_1_12;
+    const tmp3 = callback2;
     const tmp5 = callback2(animatedStyle[17]);
     ({ height, paddingTop } = callback2(animatedStyle[17])(safeArea.get(), token));
     let num = 1;
@@ -75,7 +92,7 @@ function CardContentFreezer(children) {
       obj1 = contentDimensions;
       let height2 = paddingTop + contentDimensions.get().height + bound;
       if (height2 - windowDimensions.get().height < 8) {
-        height2 = windowDimensions.get().height;
+        height2 = obj3.get().height;
       }
       num2 = 0;
       num3 = num;
@@ -89,20 +106,20 @@ function CardContentFreezer(children) {
           num3 = num;
           num4 = height2;
           if (null == focused.get()) {
-            const diff = height2 - height - EDGE_GUTTER;
+            const diff = height2 - height - tmp;
             const diff1 = diff - obj.get().height - bound;
-            const diff2 = windowDimensions.get().height - paddingTop - bound;
-            const diff3 = windowDimensions.get().height - height;
+            const diff2 = obj3.get().height - paddingTop - bound;
+            const diff3 = obj3.get().height - height;
             const diff4 = diff3 - obj.get().height - bound;
             if (obj1.get().height > diff1) {
               let result = diff1 / obj1.get().height;
             } else {
-              const width = windowDimensions.get().width;
+              const width = obj3.get().width;
               if (callback2) {
-                result = width / windowDimensions.get().width;
+                result = width / obj3.get().width;
               } else {
                 const diff5 = width - 48;
-                result = diff5 / windowDimensions.get().width;
+                result = diff5 / obj3.get().width;
               }
             }
             let diff6 = height;
@@ -113,7 +130,7 @@ function CardContentFreezer(children) {
             if (obj1.get().height > diff1) {
               let sum = diff6 + (height2 * result - height2) / 2;
             } else {
-              sum = diff6 + (diff1 - (windowDimensions.get().height - paddingTop - bound)) / 2;
+              sum = diff6 + (diff1 - (obj3.get().height - paddingTop - bound)) / 2;
             }
             paddingTop = paddingTop * result;
             const diff7 = sum - paddingTop;
@@ -121,8 +138,10 @@ function CardContentFreezer(children) {
           }
         }
       }
+      const tmp7 = paddingTop;
     }
-    obj = { position: "relative", width: windowDimensions.get().width, height: callback2(animatedStyle[18])(num4), transform: null, opacity: null };
+    obj = { position: "relative", width: windowDimensions.get().width, height: tmp3(tmp4[18])(num4), transform: null, opacity: null };
+    const tmp25 = callback;
     const tmp5Result = callback2(animatedStyle[17])(safeArea.get(), token);
     const sum1 = num2 + wrapperOffset.get().y;
     if (!wrapperOffset.get().gestureActive) {
@@ -133,7 +152,7 @@ function CardContentFreezer(children) {
       obj[0] = obj5.withSpring(sum1, tmp29);
       const items = [obj, ];
       obj1 = { scale: null };
-      obj1[0] = callback(animatedStyle[19]).withSpring(num3, closure_1_15);
+      obj1[0] = tmp25(tmp4[19]).withSpring(num3, closure_1_15);
       items[1] = obj1;
       obj[3] = items;
       if (callback) {
@@ -143,7 +162,6 @@ function CardContentFreezer(children) {
       return obj;
     }
     tmp29 = focused;
-    obj5 = callback(animatedStyle[19]);
   };
   obj = { controlsSpecs, VoicePanelControlsModes: token, safeArea, EDGE_GUTTER, calculateVoicePanelHeaderSpecs: tmp5(tmp2[17]), edgeGutter: token, connected, contentDimensions, windowDimensions, mode: mode2, VoicePanelModes: wrapperOffset, focused, isRefreshEnabled: tmp7, roundToNearestPixel: tmp5(tmp2[18]), withSpring: tmp(tmp2[19]).withSpring, wrapperOffset, LAYOUT_PHYSICS: focused, SCALE_PHYSICS: obj, freeze: tmp6 };
   fn.__closure = obj;
@@ -152,9 +170,11 @@ function CardContentFreezer(children) {
   animatedStyle = tmpResult.useAnimatedStyle(fn);
   const items1 = [animatedStyle, tmp6, children];
   return safeArea.useMemo(() => {
+    obj = { style: animatedStyle, children: null };
+    obj = { freeze: callback2, children: closure_1_14(windowDimensions, obj) };
     obj = { collapsable: false, style: contentDimensions.absoluteFill, children: callback };
-    obj[1] = jsx(callback(animatedStyle[23]).Freeze, { collapsable: false, style: contentDimensions.absoluteFill, children: callback });
-    return jsx(callback2(animatedStyle[22]), { collapsable: false, style: contentDimensions.absoluteFill, children: callback });
+    obj[1] = closure_1_14(callback(animatedStyle[23]).Freeze, obj);
+    return closure_1_14(callback2(animatedStyle[22]), obj);
   }, items1);
 }
 let c4 = importAllResult;
@@ -169,19 +189,22 @@ let closure_19 = { code: "function VoicePanelCardViewTsx1(){const{viewableChunks
 let closure_20 = { code: "function VoicePanelCardViewTsx2(newChunks,previous){const{cheapWorkletShallowEqual,runOnJS,updateValueIfChange}=this.__closure;if(cheapWorkletShallowEqual(newChunks,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(updateValueIfChange)(newChunks);}" };
 let closure_21 = { code: "function VoicePanelCardViewTsx3(){const{controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,mode,VoicePanelModes,focused,isRefreshEnabled,roundToNearestPixel,withSpring,wrapperOffset,LAYOUT_PHYSICS,SCALE_PHYSICS,freeze}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if(mode.get()!==VoicePanelModes.PIP&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return isRefreshEnabled?windowDimensions.get().width/windowDimensions.get().width:(windowDimensions.get().width-48)/windowDimensions.get().width;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+wrapperOffset.get().y,wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.PIP?LAYOUT_PHYSICS:SCALE_PHYSICS)},{scale:withSpring(scale,SCALE_PHYSICS)}],opacity:freeze?0:1};}" };
 const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChunks) {
+  viewableChunks = viewableChunks.viewableChunks;
   viewableChunks = undefined;
   chunkedParticipants = undefined;
   let stateFromStoresArray;
   let callback;
   const channelId = importAllResult.useContext(chunkedParticipants(stateFromStoresArray[14])).channelId;
+  chunkedParticipants = undefined;
+  stateFromStoresArray = undefined;
   [tmp2, chunkedParticipants] = callback(importAllResult.useState(closure_18), 2);
   callback = importAllResult.useCallback((arg0) => {
     closure_0 = arg0;
     chunkedParticipants((start) => {
       let tmp2 = start;
       if (start.start === start.start) {
-        tmp2 = start;
-        if (start.end === start.end) {
+        tmp2 = tmp;
+        if (start.end === tmp.end) {
           tmp2 = start;
         }
       }
@@ -189,7 +212,7 @@ const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChun
     });
   }, []);
   stateFromStoresArray = callback;
-  viewableChunks(stateFromStoresArray[11]);
+  obj = viewableChunks(stateFromStoresArray[11]);
   const fn = function h() {
     return viewableChunks.get();
   };
@@ -197,55 +220,53 @@ const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChun
   fn.__workletHash = 1074173860641;
   fn.__initData = closure_19;
   const fn2 = function s(safeAreaState, current) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
       viewableChunks(stateFromStoresArray[11]).runOnJS(stateFromStoresArray)(safeAreaState);
       const tmp2Result = viewableChunks(stateFromStoresArray[11]);
     }
-    obj = viewableChunks(stateFromStoresArray[12]);
-    tmp = current;
   };
   obj = { cheapWorkletShallowEqual: viewableChunks(stateFromStoresArray[12]).cheapWorkletShallowEqual, runOnJS: viewableChunks(stateFromStoresArray[11]).runOnJS, updateValueIfChange: callback };
   fn2.__closure = obj;
   fn2.__workletHash = 13543715159803;
   fn2.__initData = closure_20;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  let tmp = callback(importAllResult.useState(closure_18), 2);
+  const tmp = callback(importAllResult.useState(closure_18), 2);
   chunkedParticipants = viewableChunks(stateFromStoresArray[24]).useChunkedParticipants(channelId, tmp2);
   const obj3 = viewableChunks(stateFromStoresArray[24]);
   const items = [closure_7];
   const items1 = [channelId];
   stateFromStoresArray = viewableChunks(stateFromStoresArray[25]).useStateFromStoresArray(items, () => {
     const participants = closure_1_7.getParticipants(viewableChunks);
-    return participants.filter((item, index) => callback(item));
+    return participants.filter((arg0) => callback(arg0));
   }, items1);
   callback = importAllResult.useRef(stateFromStoresArray);
   const items2 = [stateFromStoresArray, channelId];
   const effect = importAllResult.useEffect(() => {
     obj = chunkedParticipants(stateFromStoresArray[26]);
     if (!obj.isEqual(ref.current, stateFromStoresArray)) {
-      const differenceWithResult = chunkedParticipants(stateFromStoresArray[26]).differenceWith(ref.current, stateFromStoresArray, (id, id2) => id.id === id2.id);
+      const differenceWithResult = chunkedParticipants(tmp2[26]).differenceWith(tmp3.current, tmp4, (id, id2) => id.id === id2.id);
       let user = null;
       if (differenceWithResult.length > 0) {
         user = differenceWithResult[0].user;
       }
       if (null != user) {
-        const AccessibilityAnnouncer = viewableChunks(stateFromStoresArray[27]).AccessibilityAnnouncer;
-        const intl = viewableChunks(stateFromStoresArray[28]).intl;
+        const AccessibilityAnnouncer = viewableChunks(tmp2[27]).AccessibilityAnnouncer;
+        const intl = viewableChunks(tmp2[28]).intl;
         obj = { username: null };
         obj[0] = user.username;
-        AccessibilityAnnouncer.announce(intl.formatToPlainString(viewableChunks(stateFromStoresArray[28]).t["9NqwWZ"], obj));
+        AccessibilityAnnouncer.announce(intl.formatToPlainString(viewableChunks(tmp2[28]).t["9NqwWZ"], obj));
       }
-      const tmpResult = chunkedParticipants(stateFromStoresArray[26]);
+      const tmpResult = chunkedParticipants(tmp2[26]);
     }
     ref.current = stateFromStoresArray;
   }, items2);
   const items3 = [chunkedParticipants];
   return importAllResult.useMemo(() => {
-    { children: jsx(viewableChunks(stateFromStoresArray[29]).TransitionGroup, obj) };
-    obj = { items: chunkedParticipants, renderItem: renderCard, getItemKey: getCardKey, lazyCleanUpDelay: 1000 };
-    return <CardContentFreezer items={chunkedParticipants} renderItem={renderCard} getItemKey={getCardKey} lazyCleanUpDelay={1000} />;
+    obj = { children: closure_1_14(viewableChunks(stateFromStoresArray[29]).TransitionGroup, obj) };
+    obj = { items: chunkedParticipants, renderItem: closure_1_17, getItemKey: closure_1_16, lazyCleanUpDelay: 1000 };
+    return closure_1_14(closure_1_22, obj);
   }, items3);
 });
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardView.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardView.tsx");
 
 export default memoResult;

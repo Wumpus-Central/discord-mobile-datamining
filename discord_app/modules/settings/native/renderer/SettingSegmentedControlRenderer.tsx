@@ -1,21 +1,24 @@
 // discord_app/modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import zustandStore from "../../../user_settings/UserSettingSearchStore.tsx";
+import closure_6 from "../../../user_settings/UserSettingSearchStore.tsx";
 import { NodeType } from "SettingRendererConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
+import { SegmentedControlPage } from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey = { controlContainer: null, pageContainer: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
 
 export default function SettingSegmentedControl(node) {
   let _require;
@@ -34,8 +37,11 @@ export default function SettingSegmentedControl(node) {
       } else {
         const ancestors = settings(_undefined[8]).getAncestors(field);
         for (const item10020 of ancestors) {
+          let tmp9 = settings;
           let index1 = settings.indexOf(item10020);
+          let tmp11 = index1;
           if (-1 !== index1) {
+            let tmp12 = obj2;
             obj2.return();
             return index1;
           }
@@ -51,23 +57,24 @@ export default function SettingSegmentedControl(node) {
   }, []);
   const memo = React.useMemo(() => {
     const items = [];
-    const item = settings.forEach((item, index) => {
-      const tmp = items(closure_1_2[9]).SETTING_RENDERER_CONFIG[item];
-      settings(closure_1_2[10])(tmp.type === closure_1_7.ROUTE, "Invalid setting type for segmented control: " + item);
+    const item = settings.forEach((closure_0) => {
+      const tmp = items(closure_1_2[9]).SETTING_RENDERER_CONFIG[closure_0];
+      closure_1_1(closure_1_2[10])(tmp.type === closure_1_7.ROUTE, "Invalid setting type for segmented control: " + closure_0);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
-      const tmp2 = settings(closure_1_2[10]);
-      obj[0] = items(closure_1_2[11]).getSettingTitle(item);
-      obj[1] = item;
+      const tmp2 = closure_1_1(closure_1_2[10]);
+      obj[0] = items(closure_1_2[11]).getSettingTitle(closure_0);
+      obj[1] = closure_0;
       obj[2] = closure_1_8(component, {});
       items.push(obj);
     });
     return items;
   }, items);
-  let obj = useSegmentedControlState;
+  let obj = _useSegmentedControlState;
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
-  obj = { style: tmp.controlContainer, onLayout: callback, children: callback2(require("../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx").SegmentedControl, { state: segmentedControlState }) };
+  obj = { children: null };
+  obj = { style: tmp.controlContainer, onLayout: callback, children: callback2(_SegmentedControl.SegmentedControl, { state: segmentedControlState }) };
   const items1 = [callback2(View, obj), ];
   const tmp4 = callback(React.useState(() => {
     const field = closure_1_6.getField("selected");
@@ -78,8 +85,11 @@ export default function SettingSegmentedControl(node) {
       } else {
         const ancestors = settings(_undefined[8]).getAncestors(field);
         for (const item10020 of ancestors) {
+          let tmp9 = settings;
           let index1 = settings.indexOf(item10020);
+          let tmp11 = index1;
           if (-1 !== index1) {
+            let tmp12 = obj2;
             obj2.return();
             return index1;
           }
@@ -89,7 +99,7 @@ export default function SettingSegmentedControl(node) {
     }
     return c0;
   }), 2);
-  items1[1] = callback2(View, { style: tmp.pageContainer, children: callback2(require("../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx").SegmentedControlPages, { state: segmentedControlState }) });
+  items1[1] = callback2(View, { style: tmp.pageContainer, children: callback2(_SegmentedControlPage.SegmentedControlPages, { state: segmentedControlState }) });
   obj[0] = items1;
   return callback3(closure_9, obj);
 };

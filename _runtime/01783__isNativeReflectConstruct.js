@@ -1,11 +1,11 @@
 // _runtime/01783__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
-const CurvedTransition = fn;
+const CurvedTransition = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -63,10 +63,14 @@ class CurvedTransition {
       }
       let obj = { easingX: tmp.easingXV, easingY: tmp.easingYV, easingWidth: tmp.easingWidthV, easingHeight: tmp.easingHeightV };
       const fn = function n(currentOriginX) {
+        obj = { initialValues: obj, animations: null, callback: null };
+        obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
         obj = { originX: null, originY: null, width: null, height: null };
         let obj3 = delayFunction(callbackV[6]);
         obj[0] = delayFunction(delay, obj3.withTiming(currentOriginX.targetOriginX, { duration: num, easing: obj.easingX }));
         obj[1] = delayFunction(delay, delayFunction(callbackV[6]).withTiming(currentOriginX.targetOriginY, { duration: num, easing: obj.easingY }));
+        obj1 = { duration: num, easing: obj.easingX };
+        const obj2 = { duration: num, easing: obj.easingY };
         const obj6 = delayFunction(callbackV[6]);
         obj3 = { duration: num, easing: obj.easingWidth };
         obj[2] = delayFunction(delay, delayFunction(callbackV[6]).withTiming(currentOriginX.targetWidth, obj3));
@@ -76,7 +80,7 @@ class CurvedTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withTiming: callback(dependencyMap[6]).withTiming, duration: num, easing: obj, callback: callbackV };
+      obj = { delayFunction, delay, withTiming: callback(closure_1_1[6]).withTiming, duration: num, easing: obj, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 8113645568730;
       fn.__initData = closure_1_6;

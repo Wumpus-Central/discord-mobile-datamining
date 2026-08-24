@@ -1,18 +1,19 @@
 // discord_app/modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import calculateAppliedBoosts from "../GuildPowerupsStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildPowerupsStore.tsx";
 import { PowerupActiveStatusType } from "../constants/GuildPowerupsConstants.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
 export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   const _require = arg0;
   importDefault = arg1;
   dependencyMap = arg2;
   const items = [closure_4];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => stateForGuild.getStateForGuild(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => stateForGuild.getStateForGuild(closure_0));
   const tmp2 = usePowerupActiveStatusDefault(arg0, arg1);
   closure_4 = tmp2;
   const items1 = [stateFromStores, , , , ];
@@ -23,14 +24,14 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
     if (null == stateFromStores) {
       return { disabled: true, reason: "a" };
     } else {
-      if (stateForGuild.type !== PowerupActiveStatusType.LEVEL_ACTIVATED) {
+      if (stateForGuild.type !== closure_1_5.LEVEL_ACTIVATED) {
         if (stateForGuild.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
-          ({ allPowerups, unlockedPowerups } = stateFromStores);
+          ({ allPowerups, unlockedPowerups } = tmp);
           if (dependencyMap) {
             const _Object = Object;
             const values = Object.values(unlockedPowerups);
-            const found = values.find((item, index) => {
-              const sku = item.sku;
+            const found = values.find((sku) => {
+              sku = sku.sku;
               let dependent_sku_id;
               if (sku != null) {
                 dependent_sku_id = sku.dependent_sku_id;
@@ -44,7 +45,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
             let found1 = sku_id;
           } else {
             const dependencies = lib.dependencies;
-            found1 = dependencies.find((item, index) => null == unlockedPowerups[item]);
+            found1 = dependencies.find((arg0) => null == unlockedPowerups[arg0]);
           }
           let obj = { disabled: null, reason: null };
           obj[0] = null != found1;
@@ -60,6 +61,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
               obj = { perk: null };
               obj[0] = title;
               formatToPlainStringResult = intl.formatToPlainString(dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"], obj);
+              const tmp12 = dependencyMap ? tmp11.vCEBiS : tmp11["1B8AZr"];
             }
           }
           obj[1] = formatToPlainStringResult;
@@ -68,5 +70,6 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
       }
       return { disabled: true, reason: "a" };
     }
+    tmp = stateFromStores;
   }, items1);
 };

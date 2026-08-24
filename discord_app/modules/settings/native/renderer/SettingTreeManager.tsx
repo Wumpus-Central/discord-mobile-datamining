@@ -1,5 +1,5 @@
 // discord_app/modules/settings/native/renderer/SettingTreeManager.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
 import map from "SettingHookHarness.tsx";
 import frozen from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
@@ -65,6 +65,8 @@ prototype2["getAncestors"] = function getAncestors(field) {
   if (null != transformParentResult) {
     do {
       let arr = items.push(transformParentResult);
+      let tmp3 = require;
+      let tmp4 = dependencyMap;
       transformParentResult = self.transformParent(frozen.SETTING_RENDERER_CONFIG[transformParentResult].parent);
     } while (null != transformParentResult);
   }
@@ -74,7 +76,7 @@ prototype2["isBlocked"] = function isBlocked(field) {
   closure_0 = arg1;
   const ancestors = this.getAncestors(field);
   ancestors.push(field);
-  return ancestors.some((item, index) => set.has(item));
+  return ancestors.some((arg0) => set.has(arg0));
 };
 prototype2["getHighestLevelAncestor"] = function getHighestLevelAncestor(setting) {
   const self = this;
@@ -101,8 +103,13 @@ prototype2["getNearestRouteAncestorDataOrSelf"] = function getNearestRouteAncest
     const self = this;
     const ancestors = this.getAncestors(setting);
     for (const item10013 of ancestors) {
+      let tmp3 = require;
+      let tmp4 = dependencyMap;
       let tmp5 = frozen.SETTING_RENDERER_CONFIG[item10013];
+      let tmp6 = tmp5;
+      let tmp7 = NodeType;
       if (tmp5.type === NodeType.ROUTE) {
+        let tmp8 = obj;
         obj.return();
         return tmp5;
       }
@@ -123,9 +130,12 @@ prototype2["getBreadcrumbs"] = function getBreadcrumbs(setting) {
     const items = [];
     const ancestors = self.getAncestors(setting);
     for (const item10009 of ancestors) {
+      let tmp3 = require;
+      let tmp4 = dependencyMap;
       let obj = map;
       let cachedSettingTitle = obj.getCachedSettingTitle(item10009);
       if (null != cachedSettingTitle) {
+        let tmp7 = cachedSettingTitle;
         let arr = items.push(tmp6);
       }
       continue;
@@ -141,13 +151,13 @@ prototype2["clearCaches"] = function clearCaches() {
   const highestAncestorCache = this.highestAncestorCache;
   highestAncestorCache.clear();
 };
-Object.create(SettingTreeManager.prototype);
-let obj = Object.create(SettingTreeManagerCache.prototype);
+let obj = Object.create(SettingTreeManager.prototype);
+obj = Object.create(SettingTreeManagerCache.prototype);
 obj[0] = {};
 obj[0] = obj;
 let obj1 = Object.create(SettingTreeManagerCache.prototype);
 obj1[0] = {};
 obj[1] = obj1;
-let result = obj132.fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
+let result = set.fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
 
 export default obj;

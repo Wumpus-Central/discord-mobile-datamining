@@ -3,12 +3,13 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import apexExperiment from "../modules/overlay/OverlayV3Experiment.tsx";
-import fetchFingerprint from "AuthenticationStore.tsx";
+import closure_3 from "AuthenticationStore.tsx";
 import { AnalyticEvents } from "../Constants.tsx";
 
-require = fn;
+require = arg1;
+let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };
 let closure_6 = {};
-let obj = {};
+obj = {};
 let merged = Object.assign(obj);
 const PersistedStore = initializeDefault.PersistedStore;
 class StreamerModeStore extends PersistedStore {
@@ -127,6 +128,7 @@ let items = [
     if (null != arg0) {
       if (null != id) {
         obj = {};
+        obj = {};
         const merged = Object.assign(arg0);
         obj[id] = obj;
       }
@@ -158,6 +160,7 @@ obj = {
         obj = { enabled: null, automatic: false };
         obj[0] = value.value;
         expandEventPropertiesDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
+        const obj5 = expandEventPropertiesDefault;
       }
       return true;
     }
@@ -185,6 +188,7 @@ obj = {
   RUNNING_STREAMER_TOOLS_CHANGE: function handleRunningStreamerToolsChange(count) {
     if (obj.autoToggle) {
       obj.enabled = count.count > 0;
+      obj = expandEventPropertiesDefault;
       obj = { enabled: null, automatic: true };
       obj[0] = count.count > 0;
       obj.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
@@ -195,6 +199,6 @@ obj = {
   }
 };
 const streamerModeStore = new StreamerModeStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("stores/StreamerModeStore.tsx");
+const result = require("set").fileFinishedImporting("stores/StreamerModeStore.tsx");
 
 export default streamerModeStore;

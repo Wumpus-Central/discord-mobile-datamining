@@ -9,6 +9,7 @@ arg5.getMainCarrier = function getMainCarrier() {
   const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
   GLOBAL_OBJ.__SENTRY__ = tmp3;
   tmp3.version = tmp3.version || _mod7740.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod7740.SDK_VERSION;
   tmp3[_mod7740.SDK_VERSION] = tmp3[_mod7740.SDK_VERSION] || {};
   return getGlobalSingleton.GLOBAL_OBJ;
 };

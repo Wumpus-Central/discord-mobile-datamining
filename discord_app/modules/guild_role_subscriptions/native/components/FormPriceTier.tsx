@@ -4,19 +4,20 @@ import usePriceTiers from "../RoleTierEditStore.tsx";
 import { CurrencyCodes } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: c4 } = usePriceTiers);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormPriceTier.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormPriceTier.tsx");
 
 export default function FormPriceTier(guildId) {
   guildId = guildId.guildId;
   const price = guildId.price;
   const onChange = guildId.onChange;
+  let tiers;
   let callback;
   let USD;
   const tmp = callback(guildId);
-  const tiers = tmp.tiers;
+  tiers = tmp.tiers;
   ({ state, onRefresh: c4 } = tmp);
   USD = USD.USD;
   if (null == tiers) {
@@ -47,23 +48,22 @@ export default function FormPriceTier(guildId) {
     obj[1] = guildId.disabled;
     obj[2] = function onPress() {
       price(onChange[7])(null != tiers, "handleSelectPrice must only be called if tiers != null");
-      price(onChange[8]);
-      let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      let obj = price(onChange[8]);
+      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
       const intl = guildId(onChange[4]).intl;
       obj[0] = intl.string(guildId(onChange[4]).t.nCOuYJ);
-      obj[1] = tiers.map((item, index) => {
-        const obj = { label: guildId(onChange[6]).formatPrice(item, closure_5), value: item };
+      obj[1] = tiers.map((amount) => {
+        const obj = { label: closure_1_0(closure_1_2[6]).formatPrice(amount, closure_5), value: amount };
         return obj;
       });
       obj[2] = function onItemSelect(arg0) {
         if (closure_2 != null) {
           tmp(arg0);
         }
-        price(onChange[8]).hideActionSheet();
+        closure_1_1(closure_1_2[8]).hideActionSheet();
       };
       obj[3] = price;
       obj.openLazy(guildId(onChange[10])(onChange[9], onChange.paths), "GuildRoleSubscriptionPriceTierSelect", obj);
-      const tmp2 = guildId(onChange[10])(onChange[9], onChange.paths);
     };
     let intl = guildId(tmp15[4]).intl;
     obj[3] = intl.string(guildId(onChange[4]).t.nCOuYJ);

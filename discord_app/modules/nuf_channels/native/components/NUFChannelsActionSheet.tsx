@@ -1,24 +1,34 @@
 // discord_app/modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NUFActionSheetTemplateDefault from "NUFTemplateV2.tsx";
 import NUFChannelIllustrationDefault from "NUFChannelIllustration.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
 
 export default function NUFChannelsActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   const items = [markAsDismissed];
   const callback = React.useCallback(() => {
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+    closure_1_1(closure_1_2[3]).hideActionSheet();
     if (markAsDismissed != null) {
-      tmp2(ContentDismissActionType.UNKNOWN);
+      tmp2(closure_1_4.UNKNOWN);
     }
   }, items);
-  let obj = { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
+  let obj = {
+    onDismiss() {
+      let tmpResult;
+      if (markAsDismissed != null) {
+        tmpResult = tmp(closure_1_4.UNKNOWN);
+      }
+      return tmpResult;
+    },
+    startExpanded: true,
+    children: null
+  };
+  obj = { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
   const intl = markAsDismissed(1236).intl;
   obj[1] = intl.string(markAsDismissed(1236).t.Ay9424);
   const intl2 = markAsDismissed(1236).intl;

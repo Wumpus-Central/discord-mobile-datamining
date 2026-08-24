@@ -12,6 +12,6 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const metricKitManager = new MetricKitManager();
-const result = require("obj132").fileFinishedImporting("modules/metric_kit_tracker/native/MetricKitManager.android.tsx");
+const result = require("set").fileFinishedImporting("modules/metric_kit_tracker/native/MetricKitManager.android.tsx");
 
 export default metricKitManager;

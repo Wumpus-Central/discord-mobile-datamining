@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/VoicePanelStore.tsx
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
 import identity from "../../../_runtime/00700_identity.js";
 
-const require = fn;
+const require = arg1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
@@ -47,7 +47,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     if (result) {
       const channels = dependencyMap().channels;
       if (!channels.has(arg0)) {
-        tmp(705).batchUpdates(() => {
+        callback(705).batchUpdates(() => {
           callback((channels) => {
             const obj = {};
             const merged = Object.assign(channels);
@@ -59,11 +59,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             return obj;
           });
         });
-        const tmpResult = tmp(705);
+        const tmpResult = callback(705);
       }
     }
-    let obj = callback(8665);
-    tmp = callback;
   };
   obj[8] = function closeChannel(channelId) {
     const callback = channelId;
@@ -71,7 +69,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       channelId((arg0) => {
         ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
         if (!channels.has(closure_0)) {
-          if (!voicePanelsFullscreen.has(closure_0)) {
+          if (!voicePanelsFullscreen.has(tmp)) {
             let tmp2 = arg0;
           }
           return tmp2;
@@ -80,21 +78,21 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         if (channels.has(closure_0)) {
           const _Set = Set;
           const set = new Set(channels);
-          set.delete(closure_0);
+          set.delete(tmp);
           tmp3 = set;
         }
         let tmp10 = voicePanelsFullscreen;
         if (voicePanelsFullscreen.has(closure_0)) {
           const _Set2 = Set;
           const set1 = new Set(voicePanelsFullscreen);
-          set1.delete(closure_0);
+          set1.delete(tmp);
           tmp10 = set1;
         }
         let tmp17 = voicePanelsOpened;
         if (voicePanelsOpened.has(closure_0)) {
           const _Set3 = Set;
           const set2 = new Set(voicePanelsOpened);
-          set2.delete(closure_0);
+          set2.delete(tmp);
           tmp17 = set2;
         }
         const obj = {};
@@ -110,10 +108,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     const channels = dependencyMap().channels;
     return channels.has(arg0);
   };
-  obj[10] = function setIsActivityFocused(connectedValue) {
-    const callback = connectedValue;
+  obj[10] = function setIsActivityFocused(arg0) {
+    const callback = arg0;
     callback(705).batchUpdates(() => {
-      connectedValue((isActivityFocused) => {
+      callback((isActivityFocused) => {
         let tmp2 = isActivityFocused;
         if (isActivityFocused.isActivityFocused !== closure_0) {
           const obj = {};
@@ -136,10 +134,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           if (hasItem) {
             return voicePanelsFullscreen;
           } else {
-            set.add(closure_0);
+            set.add(tmp);
           }
         } else if (hasItem) {
-          set.delete(closure_0);
+          set.delete(tmp);
         } else {
           return voicePanelsFullscreen;
         }
@@ -159,15 +157,15 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         if (channels.has(closure_0)) {
           const _Set = Set;
           const set = new Set(channels.voicePanelsOpened);
-          const hasItem = set.has(closure_0);
+          const hasItem = set.has(tmp);
           if (closure_1) {
             if (hasItem) {
               return channels;
             } else {
-              set.add(closure_0);
+              set.add(tmp);
             }
           } else if (hasItem) {
-            set.delete(closure_0);
+            set.delete(tmp);
           } else {
             return channels;
           }
@@ -196,10 +194,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           if (hasItem) {
             return voicePanelsPIP;
           } else {
-            set.add(closure_0);
+            set.add(tmp);
           }
         } else if (hasItem) {
-          set.delete(closure_0);
+          set.delete(tmp);
         } else {
           return voicePanelsPIP;
         }
@@ -212,6 +210,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");
 
 export default withEqualityFn;

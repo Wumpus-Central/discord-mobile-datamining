@@ -1,7 +1,7 @@
 // _runtime/04346_setEnabled.js
 import isRingerSilent from "04347_isRingerSilent.js";
 import RNHapticFeedbackDefault from "04348_RNHapticFeedback.js";
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_3 from "00005_asyncGeneratorStep.js";
 
 require = arg1;
 let closure_4 = { [arg1(4347).HapticFeedbackTypes.impactLight]: 0.3, [arg1(4347).HapticFeedbackTypes.impactMedium]: 0.6, [arg1(4347).HapticFeedbackTypes.impactHeavy]: 0.8, [arg1(4347).HapticFeedbackTypes.rigid]: 1, [arg1(4347).HapticFeedbackTypes.soft]: 0.1, [arg1(4347).HapticFeedbackTypes.selection]: 0.3 };
@@ -30,6 +30,7 @@ export default {
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
         RNHapticFeedbackDefault.trigger(selection, obj);
+        const obj2 = RNHapticFeedbackDefault;
       } catch (tmp12) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: trigger failed \u2013", tmp12);
@@ -40,6 +41,7 @@ export default {
     if (c6) {
       try {
         RNHapticFeedbackDefault.stop();
+        const obj = RNHapticFeedbackDefault;
       } catch (tmp4) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: stop failed \u2013", tmp4);
@@ -64,6 +66,7 @@ export default {
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
         RNHapticFeedbackDefault.triggerPattern(arg0, obj);
+        const obj2 = RNHapticFeedbackDefault;
       } catch (tmp11) {
         const _console = console;
         console.warn("RNReactNativeHapticFeedback: triggerPattern failed \u2013", tmp11);
@@ -106,6 +109,7 @@ export default {
         const merged = Object.assign(closure_5);
         const merged1 = Object.assign(obj);
         RNHapticFeedbackDefault.triggerPattern(items, obj);
+        const obj2 = RNHapticFeedbackDefault;
       } catch (tmp17) {
         const _console = tmp.console;
         _console.warn("RNReactNativeHapticFeedback: impact failed \u2013", tmp17);

@@ -1,15 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import frozen from "../EmbedUtils.tsx";
 import registerAssetDefault from "../../../../../../_runtime/08174_registerAsset.js";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import createGiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
-import createEphemeralIndication from "../row_data/EphemeralIndication.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 let closure_3 = createCacheKey.createNativeStyleProperties({ iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG });
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx");
+let obj = { iconTintColor: ThemesDefault.colors.BACKGROUND_BRAND, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx");
 
 export const createGiftIntentSystemMessage = function createGiftIntentSystemMessage(message) {
   ({ message, theme } = message);
@@ -21,9 +20,9 @@ export const createGiftIntentSystemMessage = function createGiftIntentSystemMess
     obj = {};
     const merged = Object.assign(createCommonMessageDefault(message));
     obj.giftIntentInfo = giftIntentEmbed;
-    let tmpResult = createEphemeralIndication;
+    let tmpResult = tmp(8297);
     obj.ephemeralIndication = tmpResult.createEphemeralIndication(message);
-    tmpResult = frozen;
+    tmpResult = tmp(8171);
     obj.iconUrl = tmpResult.getAssetUriForEmbed(registerAssetDefault);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = callback(theme));
     return obj;

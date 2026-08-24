@@ -1,22 +1,22 @@
 // discord_app/modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
 import { LoginStates } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   const space = ThemesDefault.space;
   if (arg0) {
     let PX_16 = space.PX_8;
-    let tmp4 = importDefault;
+    let tmp4 = tmp;
   } else {
     PX_16 = space.PX_16;
-    tmp4 = importDefault;
+    tmp4 = tmp;
   }
   const container = { display: "flex", height: "100%", flex: 1, paddingBottom: PX_16, paddingHorizontal: null, backgroundColor: null, justifyContent: null };
   let num = 0;
@@ -36,28 +36,30 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   container[6] = str2;
   return { container, image: { marginBottom: 32, alignSelf: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 24, textAlign: "center" } };
 });
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
 
 export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   handleLogin = handleLogin.handleLogin;
   const onReset = handleLogin.onReset;
   let navigation;
+  let stateFromStores;
+  closure_4 = undefined;
   let obj = handleLogin(navigation[7]);
   navigation = obj.useNavigation();
   obj1 = handleLogin(navigation[8]);
   const items = [closure_5];
-  const stateFromStores = obj1.useStateFromStores(items, () => loginStatus.getLoginStatus());
+  stateFromStores = obj1.useStateFromStores(items, () => loginStatus.getLoginStatus());
   closure_4 = stateFromStores.useRef(null);
   const items1 = [stateFromStores, navigation];
   const effect = stateFromStores.useEffect(() => {
     if (ref.current !== stateFromStores) {
-      if (null != ref.current) {
+      if (null != tmp.current) {
         if (tmp4) {
           navigation.pop();
         }
-        tmp4 = stateFromStores !== LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION && stateFromStores !== LoginStates.ACCOUNT_DISABLED;
+        tmp4 = tmp2 !== closure_1_6.ACCOUNT_SCHEDULED_FOR_DELETION && tmp2 !== closure_1_6.ACCOUNT_DISABLED;
       } else {
-        ref.current = stateFromStores;
+        tmp.current = tmp2;
       }
     }
   }, items1);
@@ -97,6 +99,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   } else {
     string2Result = string2(t2["pCBti+"]);
   }
+  obj = { contentStyle: { flexGrow: 1 }, children: null };
   obj = { style: tmp9.container, children: null };
   obj1 = { children: null };
   const items4 = [callback(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), callback(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult }), callback(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];

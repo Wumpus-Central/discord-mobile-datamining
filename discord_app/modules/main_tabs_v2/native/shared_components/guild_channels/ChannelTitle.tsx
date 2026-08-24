@@ -5,13 +5,15 @@ import { UnreadSetting } from "../../../../read_states/ReadStateConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_5 = createCacheKey.createStyleProperties({ muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
+let obj = { muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
 const memoResult = importAllResult.memo(function ChannelTitle(unread) {
   ({ title, muted } = unread);
   unread = unread.unread;
   const resolvedUnreadSetting = unread.resolvedUnreadSetting;
   const connected = unread.connected;
+  closure_4 = undefined;
   let obj = muted(unread[5]);
   const layoutStyles = obj.getLayoutStyles(unread.layout);
   let tmp2 = callback();
@@ -20,7 +22,7 @@ const memoResult = importAllResult.memo(function ChannelTitle(unread) {
   const memo = resolvedUnreadSetting.useMemo(() => {
     let color = normal.normal;
     if (muted) {
-      color = normal.muted;
+      color = tmp.muted;
     } else {
       let tmp2 = unread;
       if (unread) {
@@ -30,7 +32,7 @@ const memoResult = importAllResult.memo(function ChannelTitle(unread) {
         tmp2 = connected;
       }
       if (tmp2) {
-        color = normal.unreadOrConnected;
+        color = tmp.unreadOrConnected;
       }
     }
     return { color, paddingRight: 4, flexShrink: 1 };
@@ -42,6 +44,6 @@ const memoResult = importAllResult.memo(function ChannelTitle(unread) {
   obj[4] = title;
   return closure_4(muted(unread[6]).Text, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelTitle.tsx");
 
 export default memoResult;

@@ -1,8 +1,8 @@
 // _runtime/10333_ScrollViewGesture.js
-import noop from "00019_noop.js";
+import closure_3 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 require("noop").useCallback;
 let closure_6 = { code: "function pnpm_ScrollViewGestureTsx1(){const{vertical}=this.__closure;return!vertical;}" };
 let closure_7 = { code: "function pnpm_ScrollViewGestureTsx2(){const{loop,overscrollEnabled,measure,containerRef,dataLength,size}=this.__closure;if(!loop&&!overscrollEnabled){const measurement=measure(containerRef);const containerWidth=(measurement===null||measurement===void 0?void 0:measurement.width)||0;if(dataLength*size<containerWidth)return 0;return dataLength*size-containerWidth;}return dataLength*size;}" };
@@ -124,8 +124,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           tmp = onFinished;
         }
         if (tmp) {
-          onFinished(snapEnabled[3]).runOnJS(onFinished)();
-          const obj = onFinished(snapEnabled[3]);
+          onFinished(closure_1_2[3]).runOnJS(onFinished)();
+          const obj = onFinished(closure_1_2[3]);
         }
       };
       obj1 = { onFinished: arg1, runOnJS: null };
@@ -460,9 +460,9 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         if (translation.value <= 0) {
           num2 = -sharedValue.value;
         }
-        translation.value = num2 + 0.5 * (tmp9 - (num2 - sharedValue1.value));
+        translation.value = num2 + 0.5 * (tmp9 - (num2 - iter.value));
       }
-      translation.value = sharedValue1.value + tmp9;
+      translation.value = iter.value + tmp9;
     }
   }
   const obj5 = { panOffset: sharedValue1, validStart: sharedValue3, cancelAnimation: null, translation: null, touching: null, isHorizontal: null, fixedDirection: null, loop: null, max: null };
@@ -485,7 +485,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         velocityY = velocityX.velocityX;
       }
       sharedValue5.value = velocityY;
-      if (derivedValue.value) {
+      if (iter2.value) {
         translationY = translationX;
       }
       if ("negative" === fixedDirection) {
@@ -505,7 +505,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         if (Math.abs(sum) > maxScrollDistancePerSwipe) {
           const _Math11 = Math;
           const _Math12 = Math;
-          const result = Math.round((sharedValue1.value + tmp10 * Math.sign(sum)) / size) * size;
+          const result = Math.round((iter.value + tmp10 * Math.sign(sum)) / size) * size;
           if (typeof withProcessTranslation !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -523,18 +523,20 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
             }
           }
           translation.value = callback1(result1, onScrollEnd);
+          const tmp31 = translation;
+          const tmp32 = callback1;
         }
         if (!loop) {
           sharedValue2.value = false;
         }
-        sharedValue1.value = undefined;
+        iter.value = undefined;
       }
       if (closure_26) {
         const _Math4 = Math;
         if (Math.abs(sum) < minScrollDistancePerSwipe) {
           const _Math5 = Math;
           const _Math6 = Math;
-          const result2 = Math.round((sharedValue1.value + tmp13 * Math.sign(sum)) / size) * size;
+          const result2 = Math.round((iter.value + tmp13 * Math.sign(sum)) / size) * size;
           if (typeof withProcessTranslation !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -552,9 +554,12 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
             }
           }
           translation.value = callback1(result3, onScrollEnd);
+          const tmp19 = translation;
+          const tmp20 = callback1;
         }
       }
       callback2(tmp3, velocityY, onScrollEnd);
+      iter2 = derivedValue;
     }
   }
   yn.__closure = { panOffset: sharedValue1, isHorizontal: derivedValue, scrollEndVelocity: sharedValue5, fixedDirection, scrollEndTranslation: sharedValue4, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, translation, withSpring: callback1, withProcessTranslation, onScrollEnd, minScrollDistancePerSwipeIsSet: typeof minScrollDistancePerSwipe === "number", minScrollDistancePerSwipe, endWithSpring: callback2, loop, touching: sharedValue2 };
@@ -562,7 +567,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   yn.__initData = sharedValue2;
   const items10 = [size, loop, sharedValue2, sharedValue1, translation, derivedValue, sharedValue5, sharedValue4, fixedDirection, typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "number", minScrollDistancePerSwipe, callback2, callback1, onScrollEnd];
   const tmp21 = scrollAnimationDuration(En, items8);
-  const tmp22 = scrollAnimationDuration(bn, items9);
+  let tmp22 = scrollAnimationDuration(bn, items9);
   const tmp23 = scrollAnimationDuration(yn, items10);
   class Pn {
     constructor(arg0) {

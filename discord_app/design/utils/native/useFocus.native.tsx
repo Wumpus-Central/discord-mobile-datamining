@@ -1,8 +1,8 @@
 // discord_app/design/utils/native/useFocus.native.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("design/utils/native/useFocus.native.tsx");
+const result = require("set").fileFinishedImporting("design/utils/native/useFocus.native.tsx");
 
 export const useFocus = function useFocus() {
   const tmp = callback(React.useState(false), 2);

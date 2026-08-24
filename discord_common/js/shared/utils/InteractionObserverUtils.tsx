@@ -1,27 +1,27 @@
 // discord_common/js/shared/utils/InteractionObserverUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
 function __handleIntersections(arr) {
   closure_0 = arg1;
-  const item = arr.forEach((item, index) => {
-    weakMap1.get(closure_0);
-    let value;
+  const item = arr.forEach((target) => {
+    let value = closure_1_1.get(closure_0);
+    value = undefined;
     if (value != null) {
-      value = value.get(item.target);
+      value = value.get(target.target);
     }
     if (null != value) {
       const call = value.call;
       if (typeof call === "unknown") {
-        value(item);
+        value(target);
       } else {
-        call(null, item);
+        call(null, target);
       }
     }
   });
 }
 let weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
-let result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
 
 export const getIntersectionObserver = function getIntersectionObserver(current) {
   let value = weakMap.get(current);

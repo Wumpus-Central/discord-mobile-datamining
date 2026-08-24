@@ -5,12 +5,12 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import UserSettingsVoice from "UserSettingsVoice.tsx";
 import dispatcherDefault from "../../../voice_overlay/native/MobileVoiceOverlayActionCreators.tsx";
-import getUserAgnosticState from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
+import closure_3 from "../../../../stores/native/MobileVoiceOverlayStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
 export default function UserSettingsVoiceOverlay() {
   let obj = defaultAreStatesEqual;

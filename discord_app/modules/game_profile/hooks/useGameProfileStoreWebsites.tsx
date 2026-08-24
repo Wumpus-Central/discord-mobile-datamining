@@ -1,10 +1,11 @@
 // discord_app/modules/game_profile/hooks/useGameProfileStoreWebsites.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const require = fn;
-const set = new Set(["1402418703554842694", "356877880938070016"]);
+const require = arg1;
+let set = new Set(["1402418703554842694", "356877880938070016"]);
 let items = [require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.STEAM, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.ROBLOX, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.BATTLENET, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.RIOT, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
-const result = require("obj132").fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
+const result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
 
 export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(data) {
   let id;
@@ -33,19 +34,19 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
       if (null != id1) {
         let found;
         if (arr != null) {
-          found = arr.filter((item, index) => {
-            let tmp3 = item.category === steamWebsiteUrl(id1[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
+          found = arr.filter((category) => {
+            let tmp3 = category.category === closure_1_0(closure_1_2[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
             if (tmp3) {
-              tmp3 = !steamReleaseStatus.has(closure_2);
+              tmp3 = !closure_1_4.has(closure_2);
             }
             let tmp6 = !tmp3;
             if (!tmp3) {
-              let hasItem = item.category !== steamWebsiteUrl(id1[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM;
+              let hasItem = category.category !== tmp(tmp2[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM;
               if (!hasItem) {
-                hasItem = closure_4 !== steamWebsiteUrl(id1[4]).SteamReleaseStatus.RETIRED_ABANDONED;
+                hasItem = closure_4 !== tmp(tmp2[4]).SteamReleaseStatus.RETIRED_ABANDONED;
               }
               if (hasItem) {
-                hasItem = closure_1_5.includes(item.category);
+                hasItem = closure_1_5.includes(category.category);
               }
               tmp6 = hasItem;
             }
@@ -60,7 +61,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
           someResult = steamReleaseStatus === steamWebsiteUrl(id1[4]).SteamReleaseStatus.RETIRED_ABANDONED;
         }
         if (!someResult) {
-          someResult = found.some((item, index) => item.category === callback(9104).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          someResult = found.some((category) => category.category === callback(9104).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         }
         if (!someResult) {
           let obj = { category: null, url: null };

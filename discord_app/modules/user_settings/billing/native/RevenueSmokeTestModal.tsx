@@ -1,16 +1,17 @@
 // discord_app/modules/user_settings/billing/native/RevenueSmokeTestModal.tsx
-import getNavigationModalPresentationDefault from "../../../main_tabs_v2/native/utils/getNavigationModalPresentation.tsx";
 import _modDef15153 from "../../../billing/native/smoke/BillingFlows.android.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { NativePaymentContextProvider } from "../../../payments/native/NativePaymentContext.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
-  let obj = NavigationStack;
+  let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
+  obj = { skuIDs: [], activeSubscription: null, children: null };
   obj = {
     screenOptions(navigation) {
       const obj = {
@@ -19,11 +20,11 @@ const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
           const merged1 = Object.assign(merged);
           return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(dependencyMap[5]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
       let merged = Object.assign(callback);
-      let merged1 = Object.assign(getNavigationModalPresentationDefault());
+      let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
       return obj;
     },
     children: <Screen name="RunAllFlows" options={function options() {
@@ -38,16 +39,16 @@ const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
         const merged1 = Object.assign(merged);
         return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
       },
-      headerLeft: callback(dependencyMap[5]).getRenderModalCloseImage(navigation.navigation),
+      headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
       headerTitleAlign: "center"
     };
     let merged = Object.assign(callback);
-    let merged1 = Object.assign(getNavigationModalPresentationDefault());
+    let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
     return obj;
   }}><Screen name="RunAllFlows" options={function options() {
     return { title: "Run All Payment Flows" };
   }} component={_modDef15153.RunAllFlows} /></Navigator>;
-  return jsx(require("../../../payments/native/NativePaymentContext.tsx").NativePaymentContextProvider, {
+  return jsx(_NativePaymentContextProvider.NativePaymentContextProvider, {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
@@ -55,11 +56,11 @@ const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
           const merged1 = Object.assign(merged);
           return callback2(callback(table[5]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(dependencyMap[5]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: callback(closure_1_2[5]).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
       let merged = Object.assign(callback);
-      let merged1 = Object.assign(getNavigationModalPresentationDefault());
+      let merged1 = Object.assign(closure_1_1(closure_1_2[6])());
       return obj;
     },
     children: <Screen name="RunAllFlows" options={function options() {
@@ -67,6 +68,6 @@ const memoResult = importAllResult.memo(function RevenueSmokeTestModal() {
     }} component={_modDef15153.RunAllFlows} />
   });
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/RevenueSmokeTestModal.tsx");
 
 export default memoResult;

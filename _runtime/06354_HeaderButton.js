@@ -4,7 +4,7 @@ import Animated from "06337_Animated.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 ({ StyleSheet, Platform } = get_ActivityIndicator);
 const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabled, ref) {
   disabled = disabled.disabled;
@@ -22,6 +22,7 @@ const forwardRefResult = noopAll.forwardRef(function HeaderButtonInternal(disabl
   return jsx(Animated.PlatformPressable, { ref, disabled, href, "aria-label": accessibilityLabel, testID, onPress, pressColor, pressOpacity, android_ripple: obj, style: null, hitSlop: null, children: null });
 });
 forwardRefResult.displayName = "HeaderButton";
+let obj = { borderless: true, foreground: Platform.Version >= 23, radius: 20 };
 const styles = StyleSheet.create({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, borderRadius: 10, borderCurve: "continuous" }, disabled: { opacity: 0.5 } });
 
 export const HeaderButton = forwardRefResult;

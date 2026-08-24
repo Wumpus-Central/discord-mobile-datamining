@@ -5,5 +5,5 @@ require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericRangeToParts = function FormatNumericRangeToParts(arg0, isNaN, isNaN2, getInternalSlots) {
   const result = __exportStarResult25.PartitionNumberRangePattern(arg0, isNaN, isNaN2, { getInternalSlots: getInternalSlots.getInternalSlots });
-  return result.map((item, index) => ({ type: item.type, value: item.value, source: item.source, result: index.toString() }));
+  return result.map((type) => ({ type: type.type, value: type.value, source: type.source, result: arg1.toString() }));
 };

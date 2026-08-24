@@ -1,9 +1,9 @@
 // _runtime/06603__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 

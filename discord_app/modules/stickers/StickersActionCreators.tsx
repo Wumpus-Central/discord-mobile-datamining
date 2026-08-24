@@ -1,17 +1,16 @@
 // discord_app/modules/stickers/StickersActionCreators.tsx
-import applyDefault from "../../../_runtime/00012_apply.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import obj132Default from "../../actions/AlertActionCreators.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
-import _getSystemLocale from "../user_settings/LocaleStore.tsx";
-import handleConnectionOpen from "../../stores/GuildAvailabilityStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import loadSavedGuildStickers from "StickersStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../user_settings/LocaleStore.tsx";
+import closure_6 from "../../stores/GuildAvailabilityStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import closure_8 from "StickersStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchStickerPack() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -316,13 +315,13 @@ function _fetchGuildStickersWithCreator() {
             obj = body(table[10]);
             const obj4 = { type: "GUILD_STICKERS_FETCH_SUCCESS", guildId: null, stickers: null };
             obj4[1] = callback;
-            obj4[2] = body.map((item, index) => {
-              let tmp = item;
-              if (null != item.user) {
+            obj4[2] = body.map((user) => {
+              let tmp = user;
+              if (null != user.user) {
                 const obj = {};
-                const merged = Object.assign(item);
-                obj.user_id = item.user.id;
-                obj.user = item.user;
+                const merged = Object.assign(user);
+                obj.user_id = user.user.id;
+                obj.user = user.user;
                 tmp = obj;
               }
               return tmp;
@@ -454,6 +453,7 @@ function _createGuildSticker() {
         obj5[1] = { uri: null, name: null, type: null };
         const items1 = [obj5];
         const tmp12 = items1;
+        const obj6 = { uri: null, name: null, type: null };
       }
       obj1[3] = tmp12;
       const obj7 = closure_1_1(closure_1_2[12]);
@@ -511,7 +511,7 @@ function _updateGuildSticker() {
   return applyArgumentsResult;
 }
 ({ MAX_FAVORITES: c10, UserSettingsDelay: unpackModuleId } = MAX_FAVORITES);
-const result = require("obj132").fileFinishedImporting("modules/stickers/StickersActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/StickersActionCreators.tsx");
 
 export const fetchStickerPack = function fetchStickerPack(_847199849233514549, arg1) {
   const self = this;
@@ -573,7 +573,7 @@ export const createGuildSticker = function createGuildSticker(arg0) {
   }
   return applyArgumentsResult;
 };
-export const updateGuildSticker = function updateGuildSticker(closure_1_1, arg1, arg2) {
+export const updateGuildSticker = function updateGuildSticker(arg0, arg1, arg2) {
   const self = this;
   const apply = _updateGuildSticker.apply;
   if (typeof apply === "unknown") {
@@ -584,63 +584,66 @@ export const updateGuildSticker = function updateGuildSticker(closure_1_1, arg1,
   return applyArgumentsResult;
 };
 export const addStickerPreview = function addStickerPreview(channelId, sticker, draftType) {
-  const obj = { type: "ADD_STICKER_PREVIEW", channelId, sticker, draftType };
+  let obj = dispatcherDefault;
+  obj = { type: "ADD_STICKER_PREVIEW", channelId, sticker, draftType };
   obj.dispatch(obj);
 };
 export const clearStickerPreview = function clearStickerPreview(channelId, draftType) {
-  const obj = { type: "CLEAR_STICKER_PREVIEW", channelId, draftType };
+  let obj = dispatcherDefault;
+  obj = { type: "CLEAR_STICKER_PREVIEW", channelId, draftType };
   obj.dispatch(obj);
 };
 export const favoriteSticker = function favoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
     let tmp = stickerIds;
     if (closure_1_6.totalUnavailableGuilds <= 0) {
       let found = stickerIds;
       if (closure_1_4.isConnected()) {
-        found = stickerIds.filter((item, index) => null != stickerById.getStickerById(item));
+        found = stickerIds.filter((arg0) => null != stickerById.getStickerById(arg0));
       }
       tmp = found;
     }
     stickerIds.stickerIds = tmp;
-    let obj = applyDefault;
+    let obj = closure_1_1(closure_1_2[14]);
     if (obj.size(stickerIds.stickerIds) >= closure_1_10) {
       obj = { title: null, body: null };
-      const intl = id(dependencyMap[16]).intl;
-      obj[0] = intl.string(id(dependencyMap[16]).t["+XYXtZ"]);
-      const intl2 = id(dependencyMap[16]).intl;
+      const intl = id(tmp5[16]).intl;
+      obj[0] = intl.string(id(tmp5[16]).t["+XYXtZ"]);
+      const intl2 = id(tmp5[16]).intl;
       obj = { count: null };
       obj[0] = tmp6;
-      obj[1] = intl2.formatToPlainString(id(dependencyMap[16]).t.JaIyFi, obj);
-      obj132Default.show(obj);
+      obj[1] = intl2.formatToPlainString(id(tmp5[16]).t.JaIyFi, obj);
+      closure_1_1(tmp5[15]).show(obj);
       let flag = false;
-      const tmp4Result = obj132Default;
+      const tmp4Result = closure_1_1(tmp5[15]);
     } else {
       stickerIds = stickerIds.stickerIds;
       const hasItem = stickerIds.includes(id);
       flag = !hasItem;
       if (!hasItem) {
         const stickerIds1 = stickerIds.stickerIds;
-        stickerIds1.push(id);
+        stickerIds1.push(tmp7);
       }
+      tmp7 = id;
     }
     return flag;
   }, constants.INFREQUENT_USER_ACTION);
 };
 export const unfavoriteSticker = function unfavoriteSticker(id) {
   const _require = id;
-  const FrecencyUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", (stickerIds) => {
     stickerIds = stickerIds.stickerIds;
-    stickerIds.stickerIds = stickerIds.filter((item, index) => item !== closure_0);
+    stickerIds.stickerIds = stickerIds.filter((arg0) => arg0 !== closure_0);
     const stickerIds1 = stickerIds.stickerIds;
     let tmp = stickerIds1;
     if (closure_1_6.totalUnavailableGuilds <= 0) {
       let found = stickerIds1;
       if (closure_1_4.isConnected()) {
-        found = stickerIds1.filter((item, index) => null != stickerById.getStickerById(item));
+        found = stickerIds1.filter((arg0) => null != stickerById.getStickerById(arg0));
       }
       tmp = found;
     }

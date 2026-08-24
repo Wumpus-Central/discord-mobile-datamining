@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");
 
 export const useTextChannelPressEvents = function useTextChannelPressEvents(channel, flag2) {
   closure_0 = channel;
@@ -14,25 +14,25 @@ export const useTextChannelPressEvents = function useTextChannelPressEvents(chan
   const items1 = [channel];
   return {
     onPress: React.useCallback(() => {
-      let obj = callback(dependencyMap[2]);
+      let obj = callback(closure_1_2[2]);
       obj.preload(channel.guild_id, channel.id);
       obj = { navigationReplace: callback };
-      channel(dependencyMap[3]).transitionToChannel(channel.id, obj);
+      channel(closure_1_2[3]).transitionToChannel(channel.id, obj);
     }, items),
     onLongPress: React.useCallback(() => {
       channel = closure_1_4.getChannel(channel.parent_id);
       if (null != channel) {
         if (channel.isForumLikeChannel()) {
           if (obj.isForumPost()) {
-            callback(dependencyMap[4])(obj, channel);
+            callback(closure_1_2[4])(obj, channel);
           }
         }
       }
       if (channel.isThread()) {
-        callback(dependencyMap[5])(obj.id);
+        callback(closure_1_2[5])(obj.id);
       } else {
-        const result = channel(dependencyMap[6]).openChannelLongPressActionSheet(obj.id);
-        const obj3 = channel(dependencyMap[6]);
+        const result = channel(closure_1_2[6]).openChannelLongPressActionSheet(obj.id);
+        const obj3 = channel(closure_1_2[6]);
       }
     }, items1),
     unstable_pressDelay: 32

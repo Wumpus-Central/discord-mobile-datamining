@@ -1,5 +1,5 @@
 // _runtime/01322_ReflectionTypeCheck.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const ReflectionTypeCheck = require;
@@ -29,30 +29,39 @@ let items = [
         while (iter !== undefined) {
           let tmp5 = nextResult;
           if (nextResult.oneof) {
+            let tmp15 = nextResult;
             if (!items2.includes(tmp5.oneof)) {
-              items2.push(tmp5.oneof);
-              let arr = items.push(tmp5.oneof);
+              let tmp16 = nextResult;
+              let arr = items2.push(tmp5.oneof);
+              arr = items.push(tmp5.oneof);
               let arr1 = items1.push(tmp5.oneof);
             }
           } else {
+            let tmp6 = nextResult;
             let arr2 = items1.push(tmp5.localName);
             let kind = tmp5.kind;
             if ("scalar" !== kind) {
               if ("enum" !== kind) {
                 if ("message" === kind) {
+                  let tmp8 = nextResult;
                   if (tmp5.repeat) {
+                    let tmp9 = nextResult;
                     let arr3 = items.push(tmp5.localName);
                   }
                 } else if ("map" === kind) {
+                  let tmp21 = nextResult;
                   let arr4 = items.push(tmp5.localName);
                 }
               }
             }
+            let tmp11 = nextResult;
             let opt = tmp5.opt;
             if (opt) {
+              let tmp12 = nextResult;
               opt = !tmp5.repeat;
             }
             if (!opt) {
+              let tmp13 = nextResult;
               let arr5 = items.push(tmp5.localName);
             }
           }
@@ -76,10 +85,11 @@ let items = [
       if (arg2 === undefined) {
         flag = false;
       }
+      let self = this;
       let keys;
       let data;
       let item10014;
-      const self = this;
+      self = this;
       if (arg1 < 0) {
         return true;
       } else {
@@ -91,11 +101,11 @@ let items = [
             data = self.data;
             if (keys.length >= data.req.length) {
               const req = data.req;
-              if (!req.some((item, index) => !keys.includes(item))) {
+              if (!req.some((arg0) => !keys.includes(arg0))) {
                 if (!flag) {
-                  if (keys.some((item, index) => {
+                  if (keys.some((arg0) => {
                     const known = data.known;
-                    return !known.includes(item);
+                    return !known.includes(arg0);
                   })) {
                     return false;
                   }
@@ -107,7 +117,9 @@ let items = [
                   for (const item10014 of oneofs) {
                     let tmp18Result = tmp18();
                     if (0 !== tmp18Result) {
+                      let tmp4 = tmp18Result;
                       if (tmp3) {
+                        let tmp5 = obj2;
                         obj2.return();
                         return tmp18Result.v;
                       }
@@ -116,8 +128,15 @@ let items = [
                   }
                   let fields = self.fields;
                   for (const item10026 of fields) {
+                    let tmp8 = item10026;
                     if (undefined === item10026.oneof) {
-                      if (!self.field(arg0[item10026.localName], item10026, flag, arg1)) {
+                      let tmp9 = item10026;
+                      let tmp10 = self;
+                      let tmp11 = tmp8;
+                      let tmp12 = flag;
+                      let tmp13 = arg1;
+                      if (!self.field(arg0[tmp8.localName], item10026, flag, arg1)) {
+                        let tmp14 = obj;
                         obj.return();
                         let flag3 = false;
                         return false;
@@ -253,20 +272,20 @@ let items = [
     key: "scalar",
     value: function scalar(flag) {
       if (ReflectionTypeCheck(1320).ScalarType.UINT64 !== arg1) {
-        if (ReflectionTypeCheck(1320).ScalarType.FIXED64 !== arg1) {
-          if (ReflectionTypeCheck(1320).ScalarType.INT64 !== arg1) {
-            if (ReflectionTypeCheck(1320).ScalarType.SFIXED64 !== arg1) {
-              if (ReflectionTypeCheck(1320).ScalarType.SINT64 !== arg1) {
-                if (ReflectionTypeCheck(1320).ScalarType.BOOL === arg1) {
+        if (tmp(1320).ScalarType.FIXED64 !== arg1) {
+          if (tmp(1320).ScalarType.INT64 !== arg1) {
+            if (tmp(1320).ScalarType.SFIXED64 !== arg1) {
+              if (tmp(1320).ScalarType.SINT64 !== arg1) {
+                if (tmp(1320).ScalarType.BOOL === arg1) {
                   return typeof flag === "boolean";
-                } else if (ReflectionTypeCheck(1320).ScalarType.STRING === arg1) {
+                } else if (tmp(1320).ScalarType.STRING === arg1) {
                   return typeof flag === "string";
-                } else if (ReflectionTypeCheck(1320).ScalarType.BYTES === arg1) {
+                } else if (tmp(1320).ScalarType.BYTES === arg1) {
                   const _Uint8Array = Uint8Array;
                   return flag instanceof Uint8Array;
                 } else {
-                  if (ReflectionTypeCheck(1320).ScalarType.DOUBLE !== arg1) {
-                    if (ReflectionTypeCheck(1320).ScalarType.FLOAT !== arg1) {
+                  if (tmp(1320).ScalarType.DOUBLE !== arg1) {
+                    if (tmp(1320).ScalarType.FLOAT !== arg1) {
                       let isIntegerResult = typeof flag === "number";
                       if (typeof flag === "number") {
                         const _Number = Number;
@@ -289,7 +308,7 @@ let items = [
       }
       if (ReflectionTypeCheck(1320).LongType.BIGINT === arg2) {
         return typeof flag === "bigint";
-      } else if (ReflectionTypeCheck(1320).LongType.NUMBER === arg2) {
+      } else if (tmp(1320).LongType.NUMBER === arg2) {
         let tmp6 = typeof flag === "number";
         if (typeof flag === "number") {
           const _isNaN2 = isNaN;
@@ -337,21 +356,22 @@ let items = [
       const self = this;
       const keys = Object.keys(arg0);
       if (ReflectionTypeCheck(1320).ScalarType.INT32 !== INT32) {
-        if (ReflectionTypeCheck(1320).ScalarType.FIXED32 !== INT32) {
-          if (ReflectionTypeCheck(1320).ScalarType.SFIXED32 !== INT32) {
-            if (ReflectionTypeCheck(1320).ScalarType.SINT32 !== INT32) {
-              if (ReflectionTypeCheck(1320).ScalarType.UINT32 !== INT32) {
-                if (ReflectionTypeCheck(1320).ScalarType.BOOL === INT32) {
+        if (tmp(1320).ScalarType.FIXED32 !== INT32) {
+          if (tmp(1320).ScalarType.SFIXED32 !== INT32) {
+            if (tmp(1320).ScalarType.SINT32 !== INT32) {
+              if (tmp(1320).ScalarType.UINT32 !== INT32) {
+                if (tmp(1320).ScalarType.BOOL === INT32) {
                   const substr = keys.slice(0, arg2);
-                  return self.scalars(substr.map((item, index) => {
-                    let tmp = "true" == item;
+                  return self.scalars(substr.map((arg0) => {
+                    let tmp = "true" == arg0;
                     if (!tmp) {
-                      tmp = "false" != item && item;
+                      tmp = "false" != arg0 && arg0;
+                      const tmp2 = "false" != arg0 && arg0;
                     }
                     return tmp;
                   }), INT32, arg2);
                 } else {
-                  return self.scalars(keys, INT32, arg2, ReflectionTypeCheck(1320).LongType.STRING);
+                  return self.scalars(keys, INT32, arg2, tmp(1320).LongType.STRING);
                 }
               }
             }
@@ -359,7 +379,7 @@ let items = [
         }
       }
       const substr1 = keys.slice(0, arg2);
-      return self.scalars(substr1.map((item, index) => parseInt(item)), INT32, arg2);
+      return self.scalars(substr1.map((joined) => parseInt(joined)), INT32, arg2);
     }
   }
 ];

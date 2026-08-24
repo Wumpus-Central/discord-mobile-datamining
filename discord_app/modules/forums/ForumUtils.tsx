@@ -1,50 +1,50 @@
 // discord_app/modules/forums/ForumUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import set from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
 import { ForumTimestampFormats } from "ForumConstants.tsx";
 import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 
-require = fn;
+require = arg1;
 function getCreationDefaultFormatter() {
   const obj = { minutes: getSystemLocale.t.nFt9ck, hours: getSystemLocale.t.jzCewe, days: getSystemLocale.t.U4I0sw, month: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["nBNJ/L"]);
   return obj;
 }
-const result = require("obj132").fileFinishedImporting("modules/forums/ForumUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumUtils.tsx");
 
-export const getForumPostReadStates = function getForumPostReadStates(closure_0, guild, items) {
+export const getForumPostReadStates = function getForumPostReadStates(isArchivedThread, guild, items) {
   let tmp = items;
   if (items === undefined) {
     items = [closure_4];
     tmp = items;
   }
   [obj] = tmp;
-  const isArchivedThreadResult = _require.isArchivedThread();
+  const isArchivedThreadResult = isArchivedThread.isArchivedThread();
   let isNewForumThreadResult = !isArchivedThreadResult;
   if (!isArchivedThreadResult) {
-    isNewForumThreadResult = obj.isNewForumThread(_require.id, _require.parent_id, guild);
+    isNewForumThreadResult = obj.isNewForumThread(isArchivedThread.id, isArchivedThread.parent_id, guild);
   }
   obj = { isNew: isNewForumThreadResult, hasUnreads: null };
-  const isArchivedThreadResult1 = _require.isArchivedThread();
+  const isArchivedThreadResult1 = isArchivedThread.isArchivedThread();
   let isForumPostUnreadResult = !isArchivedThreadResult1;
   if (!isArchivedThreadResult1) {
-    isForumPostUnreadResult = obj.isForumPostUnread(_require.id);
+    isForumPostUnreadResult = obj.isForumPostUnread(isArchivedThread.id);
   }
   obj[1] = isForumPostUnreadResult;
   return obj;
 };
-export const getForumPostReadStatesById = function getForumPostReadStatesById(item) {
+export const getForumPostReadStatesById = function getForumPostReadStatesById(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
     const items = [closure_2, closure_3, closure_4];
     tmp = items;
   }
   [obj, obj2, tmp5] = tmp;
-  const channel = obj.getChannel(item);
+  const channel = obj.getChannel(arg0);
   if (null == channel) {
     return null;
   } else {

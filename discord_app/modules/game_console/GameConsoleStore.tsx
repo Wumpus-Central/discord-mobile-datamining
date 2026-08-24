@@ -1,12 +1,13 @@
 // discord_app/modules/game_console/GameConsoleStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import handleUpdate from "../../stores/SessionsStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_0 from "../../stores/SessionsStore.tsx";
+import closure_1 from "../../stores/VoiceStateStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let c2 = null;
 let c3 = null;
-const set = new Set();
+let set = new Set();
 let closure_5 = {};
 let closure_6 = {};
 const set1 = new Set();
@@ -79,7 +80,9 @@ const gameConsoleStore = new GameConsoleStore(dispatcherDefault, {
     obj = {};
     for (const item10014 of devices) {
       obj[item10014.id] = item10014;
+      let tmp3 = obj;
       if (obj[platform] === item10014.id) {
+        let tmp4 = item10014;
         obj[platform] = tmp2.id;
       }
       continue;
@@ -92,6 +95,6 @@ const gameConsoleStore = new GameConsoleStore(dispatcherDefault, {
     closure_6[platform.platform] = platform.deviceId;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/game_console/GameConsoleStore.tsx");
+const result = set.fileFinishedImporting("modules/game_console/GameConsoleStore.tsx");
 
 export default gameConsoleStore;

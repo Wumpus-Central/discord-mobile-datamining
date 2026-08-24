@@ -1,15 +1,15 @@
 // discord_app/modules/toast/native/ToastActionCreators.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 
-const result = obj132.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
 
 export default {
   open(arg0) {
     importDefault = arg0;
     dispatcherDefault.wait(() => {
-      callback(dependencyMap[0]);
-      const obj = { type: "TOAST_OPEN", toastProps: callback };
+      let obj = callback(closure_1_1[0]);
+      obj = { type: "TOAST_OPEN", toastProps: callback };
       return obj.dispatch(obj);
     });
   },

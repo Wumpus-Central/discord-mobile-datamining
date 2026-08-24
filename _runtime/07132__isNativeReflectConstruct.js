@@ -1,16 +1,16 @@
 // _runtime/07132__isNativeReflectConstruct.js
 import noopDefault from "00019_noop.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/07133___INTERNAL_VIEW_CONFIG.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const LottieView = fn;
+const LottieView = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -158,10 +158,10 @@ let items = [
           const colorFilters = self.props.colorFilters;
           let mapped;
           if (colorFilters != null) {
-            mapped = colorFilters.map((item, index) => {
+            mapped = colorFilters.map((color) => {
               const obj = {};
-              const merged = Object.assign(item);
-              obj.color = callback(item.color);
+              const merged = Object.assign(color);
+              obj.color = callback(color.color);
               return obj;
             });
           }

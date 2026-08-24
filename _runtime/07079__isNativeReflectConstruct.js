@@ -1,9 +1,9 @@
 // _runtime/07079__isNativeReflectConstruct.js
 import _inheritsDefault from "07074__inherits.js";
 import RVGridLayoutManagerImpl from "metro/07050__classCallCheck.js";
-import _possibleConstructorReturn from "metro/07069__possibleConstructorReturn.js";
-import _getPrototypeOf from "07071__getPrototypeOf.js";
-import _get from "metro/07072__get.js";
+import closure_1 from "metro/07069__possibleConstructorReturn.js";
+import closure_2 from "07071__getPrototypeOf.js";
+import closure_3 from "metro/07072__get.js";
 import importDefaultResult from "metro/07051__createClass.js";
 
 function _isNativeReflectConstruct() {
@@ -31,7 +31,7 @@ class RVGridLayoutManagerImpl {
     tmp = RVGridLayoutManagerImpl(this, RVGridLayoutManagerImpl);
     items = [, ];
     items[0] = global;
-    items[1] = fn;
+    items[1] = arg1;
     tmp2 = closure_2;
     obj = closure_2(RVGridLayoutManagerImpl);
     tmp3 = closure_1;
@@ -53,7 +53,9 @@ let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize) {
-      const self = this;
+      let self = this;
+      self = this;
+      closure_1 = undefined;
       const tmp = callback2(callback(self.prototype), "updateLayoutParams", this);
       closure_1 = tmp;
       let fn = tmp;
@@ -131,6 +133,7 @@ let items = [
       if (result <= arg1) {
         do {
           let layout1 = self.getLayout(result);
+          let tmp4 = result;
           let sum = y;
           let num = x;
           if (!self.checkBounds(x, layout1.width)) {
@@ -172,6 +175,8 @@ let items = [
         while (true) {
           let tmp5 = self.layouts[tmp2];
           let BooleanResult = flag;
+          let tmp7 = tmp2;
+          let tmp8 = num;
           let tmp9 = tmp3;
           if (!flag) {
             let _Boolean = Boolean;

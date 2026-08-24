@@ -2,15 +2,16 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import getCurrentBuildOverride from "../BuildOverrideStore.tsx";
+import closure_5 from "../BuildOverrideStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { flex: 1, height: "100%", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
+createCacheKey = { container: null, content: null, imageWrapper: null, text: null, buildOverrideName: null, buildOverrideExpiration: null, buildOverrideInvalid: null, buttonWrapper: null, actionButton: null };
+createCacheKey = { flex: 1, height: "100%", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 160, flex: 1, alignItems: "center" };
 createCacheKey[2] = { width: 100, height: 100, borderRadius: ThemesDefault.radii.round, marginBottom: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center" };
@@ -21,7 +22,8 @@ createCacheKey[6] = { marginTop: 8 };
 createCacheKey[7] = { alignSelf: "stretch" };
 createCacheKey[8] = { marginBottom: 8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/build_overrides/native/BuildOverrideModal.tsx");
+const obj1 = { width: 100, height: 100, borderRadius: ThemesDefault.radii.round, marginBottom: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center" };
+let result = require("set").fileFinishedImporting("modules/build_overrides/native/BuildOverrideModal.tsx");
 
 export default function BuildOverrideModal(overrideUrl) {
   let str = overrideUrl.overrideUrl;
@@ -59,6 +61,7 @@ export default function BuildOverrideModal(overrideUrl) {
   }
   const tmp5Result = str(589);
   const durationResult = tmp2Result.duration(obj3.diff(expiresAt));
+  obj = { top: true, bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.content, children: null };
   const humanizeResult = tmp2Result.duration(obj3.diff(expiresAt)).humanize();
   const items2 = [callback(closure_4, { style: tmp.imageWrapper, children: callback(closure_3, { source: tmp2Result }) }), , ];
@@ -71,26 +74,26 @@ export default function BuildOverrideModal(overrideUrl) {
     const obj4 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj4[0] = tmp.buildOverrideName;
     obj4[3] = id;
-    const items3 = [callback(tmp5(4734).Text, obj4), ];
+    const items3 = [tmp14(tmp5(4734).Text, obj4), ];
     const obj5 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
     obj5[0] = tmp.buildOverrideExpiration;
     const intl3 = tmp5(1236).intl;
     const obj6 = { expirationDuration: null };
     obj6[0] = humanizeResult;
     obj5[3] = intl3.format(tmp5(1236).t.lOsPpu, obj6);
-    items3[1] = callback(tmp5(4734).Text, obj5);
+    items3[1] = tmp14(tmp5(4734).Text, obj5);
     obj3[0] = items3;
-    let tmp14Result = callback(closure_7, obj3);
+    let tmp14Result = tmp12(closure_7, obj3);
   } else {
     const obj7 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj7[0] = tmp.buildOverrideInvalid;
     const intl2 = tmp5(1236).intl;
     obj7[3] = intl2.string(tmp5(1236).t["cz+sue"]);
-    tmp14Result = callback(tmp5(4734).Text, obj7);
+    tmp14Result = tmp14(tmp5(4734).Text, obj7);
   }
   items2[2] = tmp14Result;
   obj[1] = items2;
-  const items4 = [callback(closure_4, obj), ];
+  const items4 = [closure_8(closure_4, obj), ];
   const obj8 = { style: tmp.buttonWrapper, children: null };
   if (null != id) {
     const obj9 = { children: null };
@@ -104,19 +107,19 @@ export default function BuildOverrideModal(overrideUrl) {
       if (str == null) {
         str = "";
       }
-      const result = str(dependencyMap[11]).setBuildOverrideFromLink(str);
+      const result = str(closure_1_2[11]).setBuildOverrideFromLink(str);
     };
-    obj10[1] = callback(tmp5(4745).Button, obj11);
-    const items5 = [callback(closure_4, obj10), ];
+    obj10[1] = tmp14(tmp5(4745).Button, obj11);
+    const items5 = [tmp14(tmp13, obj10), ];
     const obj12 = { text: null, variant: "secondary", grow: true, onPress: null };
     const intl6 = tmp5(1236).intl;
     obj12[0] = intl6.string(tmp5(1236).t.b5KKph);
     obj12[3] = function onPress() {
       return stateFromStores(5260).pop();
     };
-    items5[1] = callback(tmp5(4745).Button, obj12);
+    items5[1] = tmp14(tmp5(4745).Button, obj12);
     obj9[0] = items5;
-    let tmp12Result = callback(closure_7, obj9);
+    let tmp12Result = tmp12(closure_7, obj9);
   } else {
     const obj13 = { text: null, grow: true, onPress: null };
     const intl4 = tmp5(1236).intl;
@@ -124,10 +127,10 @@ export default function BuildOverrideModal(overrideUrl) {
     obj13[2] = function onPress() {
       return stateFromStores(5260).pop();
     };
-    tmp12Result = callback(tmp5(4745).Button, obj13);
+    tmp12Result = tmp14(tmp5(4745).Button, obj13);
   }
   obj8[1] = tmp12Result;
   items4[1] = callback(closure_4, obj8);
   obj[3] = items4;
-  return callback(str(6803).SafeAreaPaddingView, obj);
+  return closure_8(str(6803).SafeAreaPaddingView, obj);
 };

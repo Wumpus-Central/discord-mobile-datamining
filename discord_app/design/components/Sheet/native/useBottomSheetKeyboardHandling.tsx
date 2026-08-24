@@ -1,13 +1,14 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
 
 export default function useBottomSheetKeyboardHandling(onFocus) {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
-  const bottomSheetInternal = onFocus(onBlur[1]).useBottomSheetInternal(true);
+  let bottomSheetInternal;
+  bottomSheetInternal = onFocus(onBlur[1]).useBottomSheetInternal(true);
   const items = [bottomSheetInternal, onBlur, onFocus];
   return bottomSheetInternal.useMemo(() => {
     if (null == bottomSheetInternal) {

@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx
 import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedFirstCardCoachmarkAnchor.tsx");
 
 export default function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = React.useRef(null);

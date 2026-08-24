@@ -1,13 +1,15 @@
 // discord_app/modules/forums/tracking/ForumChannelSeenManager.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import markAnalyticsFeedItemSeen from "../../../utils/AnalyticsFeedItemSeenActionCreators.tsx";
 import maybeMarkSeen from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
+import { maybeMarkSeen } from "../../../utils/AnalyticsFeedItemSeenManager.tsx";
+import { collectForumAnalyticsMetadata } from "TrackingUtils.tsx";
 
 const AnalyticsFeedItemSeenManager = maybeMarkSeen.AnalyticsFeedItemSeenManager;
 const prototype = function ForumChannelSeenManager(channelId) {
   channelId = channelId.channelId;
   let obj = { windowId: channelId.windowId, isPaused: channelId.isPaused, id: null };
-  const FORUM_CHANNEL = require("../../../utils/AnalyticsFeedItemSeenManager.tsx").AnalyticsFeedTypes.FORUM_CHANNEL;
+  const FORUM_CHANNEL = _maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL;
   obj[2] = concat(FORUM_CHANNEL, "_", channelId);
   tmp = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
   // ThrowIfThisInitialized (0x7c)
@@ -28,8 +30,10 @@ const prototype = function ForumChannelSeenManager(channelId) {
           let tmp3 = nextResult;
           let seenTimeDestructive = obj.computeSeenTimeDestructive(isForcedFlush);
           if (seenTimeDestructive > 0) {
-            items.push(tmp3);
-            let arr = items1.push(tmp5);
+            let tmp6 = nextResult;
+            let arr = items.push(tmp3);
+            let tmp8 = seenTimeDestructive;
+            arr = items1.push(tmp5);
           }
           continue;
         }
@@ -48,12 +52,12 @@ const prototype = function ForumChannelSeenManager(channelId) {
   };
   tmp.guildId = channelId.guildId;
   tmp.channelId = channelId;
-  tmp.sessionId = require("TrackingUtils.tsx").getForumChannelSessionId(channelId);
+  tmp.sessionId = _collectForumAnalyticsMetadata.getForumChannelSessionId(channelId);
   return tmp;
 }.prototype;
 class prototype extends AnalyticsFeedItemSeenManager {
 }
-let result = obj132.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
+let result = set.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
 
 export default prototype;
 export const getForumPostSeenManagerId = function getForumPostSeenManagerId(arg0) {

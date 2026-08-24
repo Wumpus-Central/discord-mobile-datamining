@@ -1,10 +1,10 @@
 // discord_common/js/packages/apex/ApexExperiment.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { useEffect } from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 const logger = new require("log").Logger("ApexExperiment");
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/apex/ApexExperiment.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/apex/ApexExperiment.tsx");
 
 export default function createApexExperimentCommon(definition, registerExperiment) {
   closure_0 = registerExperiment;
@@ -82,7 +82,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
       }
       closure_9 = tmp14;
       const items2 = [tmp, first, trackedVariantId, revision, location.location, isOverride, prop, useAsEligibility, null == tmp12];
-      useEffect(() => {
+      closure_1_3(() => {
         let tmp2 = null == closure_3;
         if (!tmp2) {
           tmp2 = null == trackedVariantId;
@@ -103,7 +103,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
           tmp2 = closure_9;
         }
         if (!tmp2) {
-          const result = _location.trackExperimentExposure(closure_3, trackedVariantId, _location.location, revision, revision, trackedVariantId, closure_1);
+          const result = _location.trackExperimentExposure(tmp, trackedVariantId, _location.location, revision, revision, trackedVariantId, closure_1);
         }
       }, items2);
       if (null != variantId) {
@@ -184,13 +184,12 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp14 = null != tmp12;
       }
       if (tmp14) {
-        const result = evaluationAndAssignment.trackExperimentExposure(tmp7, closure_4, location.location, closure_5, revision, trackedVariantId, tmp3);
+        const result = obj2.trackExperimentExposure(tmp7, tmp5, location.location, tmp2, revision, trackedVariantId, tmp3);
       }
       if (null != variantId) {
         return tmp12;
       }
       tmp12 = closure_7;
-      const tmp6 = callback(evaluationAndAssignment.getEvaluationAndAssignment(closure_5, tmp3, closure_4, tmpResult), 2);
     }
   };
 };

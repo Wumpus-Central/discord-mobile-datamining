@@ -1,10 +1,10 @@
 // discord_app/modules/build_overrides/native/BuildOverrideUtils.tsx
 import BundleUpdaterManagerDefault from "../../../lib/native/BundleUpdater.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import getCurrentBuildOverride from "../BuildOverrideStore.tsx";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../BuildOverrideStore.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
-const require = fn;
+const require = arg1;
 function setBuildOverrideForBranch(id) {
   setBuildOverride({ type: "branch", id });
 }
@@ -249,6 +249,7 @@ function _toggleOverride() {
                   }
                 }
                 obj10 = lib(closure_1_2[6]);
+                const tmp39 = lib;
                 c3 = 1;
                 currentBuildOverride = 1;
                 obj1 = { value: null, done: false };
@@ -256,6 +257,7 @@ function _toggleOverride() {
                 return obj1;
               }
               currentBuildOverride = 3;
+              const obj9 = currentBuildOverride;
             }
           } else if (arg0 === 1) {
             currentBuildOverride = 3;
@@ -356,6 +358,8 @@ function _setBuildOverrideFromLink() {
                 }
               }
               currentBuildOverride = 3;
+              const obj9 = currentBuildOverride;
+              const tmp34 = lib;
             }
           } else if (arg0 === 1) {
             currentBuildOverride = 3;
@@ -393,10 +397,10 @@ function _setBuildOverrideFromLink() {
   return applyArgumentsResult;
 }
 let str = "discord_ios";
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   str = "discord_android";
 }
-let result = obj132.fileFinishedImporting("modules/build_overrides/native/BuildOverrideUtils.tsx");
+let result = set.fileFinishedImporting("modules/build_overrides/native/BuildOverrideUtils.tsx");
 
 export const DEVICE_FIELD = str;
 export { setBuildOverrideForBranch };

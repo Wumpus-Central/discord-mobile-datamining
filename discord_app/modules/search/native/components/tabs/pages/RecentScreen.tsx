@@ -2,25 +2,24 @@
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11534 from "../../../SearchPlatformActionCreators.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import handleReaction from "../../../../SearchMessageStore.tsx";
-import search from "../../../stores/SearchGuildChannelTabStore.tsx";
-import deserialize from "../../../stores/SearchHistoryStore.tsx";
-import prototype from "../../../stores/SearchQueryStore.tsx";
+import closure_6 from "../../../../SearchMessageStore.tsx";
+import closure_7 from "../../../stores/SearchGuildChannelTabStore.tsx";
+import closure_8 from "../../../stores/SearchHistoryStore.tsx";
+import closure_9 from "../../../stores/SearchQueryStore.tsx";
 import MessageEmbedTypes from "../../../../SearchConstants.tsx";
 import { EMPTY_MEDIA_RESULTS } from "../../../SearchPlatformConstants.tsx";
 import { SearchTypes } from "../../../../../../Constants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function ClearAllHistory(searchContext) {
   searchContext = searchContext.searchContext;
   let obj = {
     onPress() {
-      return _modDef11534.clearSearchHistory(searchContext);
+      return closure_1_1(closure_1_2[12]).clearSearchHistory(searchContext);
     },
     accessibilityRole: "button",
     unstable_pressDelay: 130,
@@ -51,9 +50,16 @@ let closure_19 = importAllResult.memo((searchContext) => {
   searchContext = searchContext.searchContext;
   let searchContextId = searchContext;
   const onJumpToMedia = searchContext.onJumpToMedia;
+  importDefault = onJumpToMedia;
   const suggestedData = searchContext.suggestedData;
+  let messages;
+  let isLoadingMediaGrid;
+  let isInitialSearchQuery;
   c6 = undefined;
+  closure_7 = undefined;
+  let memo;
   let onPressMediaItem;
+  let callback;
   let fullscreenPlaceholderCount;
   let obj = searchContextId(suggestedData[20]);
   let items = [onPressMediaItem, c6];
@@ -63,18 +69,18 @@ let closure_19 = importAllResult.memo((searchContext) => {
     obj = { messages: _undefined2.getMessages(searchTabFetchId), isLoadingMediaGrid: !_undefined2.getIsInitialFetchComplete(searchTabFetchId), isInitialSearchQuery: onPressMediaItem.isInitialSearchQuery(searchContextId) };
     return obj;
   });
-  const messages = stateFromStoresObject.messages;
-  const isLoadingMediaGrid = stateFromStoresObject.isLoadingMediaGrid;
-  const isInitialSearchQuery = stateFromStoresObject.isInitialSearchQuery;
+  messages = stateFromStoresObject.messages;
+  isLoadingMediaGrid = stateFromStoresObject.isLoadingMediaGrid;
+  isInitialSearchQuery = stateFromStoresObject.isInitialSearchQuery;
   searchContextId = searchContextId(suggestedData[19]).getSearchContextId(searchContext);
   importDefault = undefined;
   let obj2 = searchContextId(suggestedData[19]);
   [tmp4, c1] = messages(isInitialSearchQuery.useState(() => memo.getSearchHistory(searchContextId)), 2);
-  const tmp3 = messages(isInitialSearchQuery.useState(() => memo.getSearchHistory(searchContextId)), 2);
+  let tmp3 = messages(isInitialSearchQuery.useState(() => memo.getSearchHistory(searchContextId)), 2);
   let items1 = [searchContextId];
   const focusEffect = searchContextId(suggestedData[21]).useFocusEffect(isInitialSearchQuery.useCallback(() => {
     function handleChange() {
-      callback(memo.getSearchHistory(handleChange));
+      callback(closure_1_8.getSearchHistory(handleChange));
     }
     _undefined(memo.getSearchHistory(handleChange));
     let result = memo.addReactChangeListener(handleChange);
@@ -86,17 +92,21 @@ let closure_19 = importAllResult.memo((searchContext) => {
   let tmp6 = importDefault(suggestedData[22])(searchContext.width);
   closure_7 = tmp6;
   const items2 = [messages, searchContext];
-  const memo = isInitialSearchQuery.useMemo(() => {
+  memo = isInitialSearchQuery.useMemo(() => {
     if (null != messages) {
-      if (0 !== messages.length) {
+      if (0 !== arr.length) {
         const items = [];
-        const obj2 = messages[Symbol.iterator]();
+        const obj2 = arr[Symbol.iterator]();
         while (obj2 !== undefined) {
+          let tmp4 = searchContextId;
+          let tmp5 = suggestedData;
           let obj = searchContextId(suggestedData[23]);
+          let tmp6 = items;
           let items1 = [tmp2];
           let media = obj.getMedia(items, items1);
-          let item = media.forEach((item, index) => items.push(item));
+          let item = media.forEach((arg0) => items.push(arg0));
           if (items.length >= 9) {
+            let tmp8 = obj2;
             obj2.return();
             break;
           }
@@ -104,23 +114,23 @@ let closure_19 = importAllResult.memo((searchContext) => {
         }
       }
     }
-    return EMPTY_MEDIA_RESULTS;
+    return closure_1_14;
   }, items2);
   let obj3 = searchContextId(suggestedData[21]);
   onPressMediaItem = searchContextId(suggestedData[16]).useOnPressMediaItem({ searchContext, allMediaResults: memo });
   const items3 = [messages, onPressMediaItem];
-  const callback = isInitialSearchQuery.useCallback((media) => {
+  callback = isInitialSearchQuery.useCallback((media) => {
     media = media.media;
     let found;
     if (messages != null) {
-      found = messages.find((item, index) => item.id === media.messageId);
+      found = messages.find((id) => id.id === media.messageId);
     }
     let obj = searchContextId(suggestedData[24]);
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
       obj = { entryPoint: null };
-      obj[0] = searchContextId(suggestedData[26]).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
-      const result = _undefined(suggestedData[25]).showAgeVerificationGetStartedModal(obj);
-      const obj2 = _undefined(suggestedData[25]);
+      obj[0] = searchContextId(tmp3[26]).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
+      const result = _undefined(tmp3[25]).showAgeVerificationGetStartedModal(obj);
+      const obj2 = _undefined(tmp3[25]);
     } else {
       onPressMediaItem(media, media.originView);
     }
@@ -134,12 +144,18 @@ let closure_19 = importAllResult.memo((searchContext) => {
     const items = [];
     if (!isInitialSearchQuery) {
       if (0 === items.length) {
-        for (let num3 = 0; num3 < fullscreenPlaceholderCount; num3 = num3 + 1) {
-          let obj = { type: null, key: null };
-          obj[0] = closure_1_12.MESSAGE_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj[1] = "message-placeholder-" + num3;
-          let arr = items.push(obj);
+        let num3 = 0;
+        if (0 < fullscreenPlaceholderCount) {
+          do {
+            let obj = { type: null, key: null };
+            let tmp3 = closure_1_12;
+            obj[0] = closure_1_12.MESSAGE_PLACEHOLDER;
+            let _HermesInternal = HermesInternal;
+            obj[1] = "message-placeholder-" + num3;
+            let arr = items.push(obj);
+            num3 = num3 + 1;
+            let tmp5 = fullscreenPlaceholderCount;
+          } while (num3 < fullscreenPlaceholderCount);
         }
         return items;
       }
@@ -153,17 +169,18 @@ let closure_19 = importAllResult.memo((searchContext) => {
       obj[0] = intl.string(searchContextId(suggestedData[13]).t.ZZpBr4);
       obj1 = { searchContext: null };
       obj1[0] = items;
-      obj[1] = <ClearAllHistory searchContext={null} />;
+      obj[1] = closure_1_16(closure_1_17, obj1);
       obj[1] = obj;
       items.push(obj);
-      const item = arr1.forEach((item, index) => {
-        const obj = { searchHistoryItem: item, searchContext: items };
+      const item = arr1.forEach((searchHistoryItem) => {
+        obj = { type: closure_2_12.SEARCH_HISTORY_ITEM, props: obj };
+        obj = { searchHistoryItem, searchContext: items };
         items.push(obj);
       });
     }
     let arr2 = suggestedData;
     if (suggestedData != null) {
-      const item1 = arr2.forEach((item, index) => items.push(item));
+      const item1 = arr2.forEach((arg0) => items.push(arg0));
     }
     if (memo.length > 0) {
       const obj2 = { type: null, props: null };
@@ -173,7 +190,7 @@ let closure_19 = importAllResult.memo((searchContext) => {
       obj3[0] = intl2.string(searchContextId(suggestedData[13]).t.LBYpDH);
       const obj4 = { onJumpToMedia: null };
       obj4[0] = c1;
-      obj3[1] = <ViewAll onJumpToMedia={null} />;
+      obj3[1] = closure_1_16(closure_1_18, obj4);
       obj2[1] = obj3;
       arr1 = items.push(obj2);
       const obj5 = { type: null, props: null };
@@ -190,7 +207,7 @@ let closure_19 = importAllResult.memo((searchContext) => {
   const ListFooterComponent = isInitialSearchQuery.useMemo(() => {
     let fn = null;
     if (isLoadingMediaGrid) {
-      fn = () => closure_1_16(searchContextId(suggestedData[28]).RecentsMediaGridPlaceholder, { numRows: 3, visible: true, size: closure_7 });
+      fn = () => closure_1_16(closure_1_0(closure_1_2[28]).RecentsMediaGridPlaceholder, { numRows: 3, visible: true, size: closure_7 });
     }
     return fn;
   }, items5);
@@ -206,6 +223,7 @@ let closure_20 = importAllResult.memo((searchContext) => {
   let tmp = importDefault(onPressDMItem[15])(obj);
   importDefault = tmp;
   onPressDMItem = _require(onPressDMItem[16]).useOnPressDMItem({ searchContext });
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
@@ -289,8 +307,8 @@ let closure_20 = importAllResult.memo((searchContext) => {
   const memo = importAllResult.useMemo(() => {
     const items = [];
     if (0 !== length.length) {
-      let item = length.forEach((item, index) => {
-        ({ title, items } = item);
+      let item = length.forEach((arg0) => {
+        ({ title, items } = arg0);
         let tmp = 0 !== items.length;
         if (tmp) {
           tmp = null != title;
@@ -302,8 +320,9 @@ let closure_20 = importAllResult.memo((searchContext) => {
           obj[0] = title;
           obj[1] = obj;
           items.push(obj);
-          item = items.forEach((item, index) => {
-
+          const item = items.forEach((user) => {
+            obj = { type: closure_2_12.DM, props: obj };
+            obj = { user: user.user, onPress: closure_1_3 };
           });
         }
       });
@@ -316,20 +335,23 @@ let closure_20 = importAllResult.memo((searchContext) => {
 });
 let closure_21 = importAllResult.memo((searchContext) => {
   searchContext = searchContext.searchContext;
+  let searchContextId;
   let stateFromStores;
+  let onPressGuildTextChannel;
+  let memo;
   let callback;
   let obj = searchContext(stateFromStores[19]);
-  const searchContextId = obj.getSearchContextId(searchContext);
+  searchContextId = obj.getSearchContextId(searchContext);
   let items = [closure_7];
   stateFromStores = searchContext(stateFromStores[20]).useStateFromStores(items, () => closure_1_7.getTextChannels(closure_1));
   const obj2 = searchContext(stateFromStores[20]);
-  const onPressGuildTextChannel = searchContext(stateFromStores[16]).useOnPressGuildTextChannel({ searchContext });
+  onPressGuildTextChannel = searchContext(stateFromStores[16]).useOnPressGuildTextChannel({ searchContext });
   const items1 = [stateFromStores];
-  const memo = callback.useMemo(() => stateFromStores.slice(0, 3), items1);
+  memo = callback.useMemo(() => stateFromStores.slice(0, 3), items1);
   const items2 = [onPressGuildTextChannel, searchContext];
   callback = callback.useCallback((channelId) => {
-    callback(stateFromStores[18]);
-    const obj = { searchContext, channelId };
+    let obj = callback(stateFromStores[18]);
+    obj = { searchContext, channelId };
     const result = obj.trackSuggestedSearchClicked(obj);
     onPressGuildTextChannel(channelId);
   }, items2);
@@ -345,8 +367,9 @@ let closure_21 = importAllResult.memo((searchContext) => {
       obj[0] = intl.string(searchContext(stateFromStores[13]).t.HbJ7eD);
       obj[1] = obj;
       items.push(obj);
-      const item = memo.forEach((item, index) => {
-        const obj = { channel: item.channel, lastMessageId: item.lastMessageId, onPress: callback };
+      const item = memo.forEach((channel) => {
+        obj = { type: closure_2_12.GUILD_TEXT_CHANNEL, props: obj };
+        obj = { channel: channel.channel, lastMessageId: channel.lastMessageId, onPress: closure_1_5 };
         items.push(obj);
       });
     }
@@ -365,15 +388,15 @@ const memoResult = importAllResult.memo(function RecentScreenContainer(arg0) {
     obj[1] = onJumpToMedia;
     obj[2] = width;
     return <closure_20 searchContext={null} onJumpToMedia={null} width={null} />;
-  } else if (SearchTypes.GUILD === type) {
+  } else if (tmp.GUILD === type) {
     obj = { searchContext: null, onJumpToMedia: null, width: null };
     obj[0] = searchContext;
     obj[1] = onJumpToMedia;
     obj[2] = width;
     return <closure_21 searchContext={null} onJumpToMedia={null} width={null} />;
   } else {
-    if (SearchTypes.GUILD_CHANNEL !== type) {
-      if (SearchTypes.CHANNEL !== type) {
+    if (tmp.GUILD_CHANNEL !== type) {
+      if (tmp.CHANNEL !== type) {
         return null;
       }
     }
@@ -384,6 +407,6 @@ const memoResult = importAllResult.memo(function RecentScreenContainer(arg0) {
     return <closure_19 searchContext={null} onJumpToMedia={null} width={null} />;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/RecentScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/RecentScreen.tsx");
 
 export default memoResult;

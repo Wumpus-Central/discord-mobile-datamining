@@ -2,11 +2,11 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
 import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
-import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
-import "createToggle";
+import closure_3 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxyDefault.ZhaNu8);
@@ -25,6 +25,6 @@ let createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx");
 
 export default createToggle;

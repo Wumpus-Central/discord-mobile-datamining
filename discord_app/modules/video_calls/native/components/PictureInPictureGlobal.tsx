@@ -1,21 +1,21 @@
 // discord_app/modules/video_calls/native/components/PictureInPictureGlobal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PictureInPicturePositionsDefault from "PictureInPicture.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import closure_8 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_9 from "../../../calls/ChannelRTCStore.tsx";
 import { useBestActiveChatInputContainerHeight as closure_10 } from "../../../chat_input/native/useChatBottomManagerUIStore.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import closure_11 from "../../../../stores/AuthenticationStore.tsx";
+import closure_12 from "../../../../stores/MediaEngineStore.tsx";
 import { PictureInPicturePositions } from "../../../../Constants.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import Button from "../../../../design/void/native.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6, TouchableOpacity: error } = get_ActivityIndicator);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -24,7 +24,7 @@ let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationSh
 obj[1] = Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[2] = obj;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[3] = createCacheKey;
 let closure_18 = createCacheKey.createStyles(obj);
 let closure_19 = importAllResult.memo((channel) => {
@@ -43,7 +43,7 @@ let closure_19 = importAllResult.memo((channel) => {
   items[1] = closure_11;
   const stateFromStores = obj.useStateFromStores(items, () => {
     const streamParticipants = closure_1_9.getStreamParticipants(channel.id);
-    return streamParticipants.find((item, index) => item.user.id === id.getId());
+    return streamParticipants.find((user) => user.user.id === id.getId());
   });
   let obj2 = channel(callback[15]);
   const items1 = [closure_9, closure_8];
@@ -51,8 +51,8 @@ let closure_19 = importAllResult.memo((channel) => {
     const currentEmbeddedActivity = closure_1_8.getCurrentEmbeddedActivity();
     let participant = null;
     if (null != currentEmbeddedActivity) {
-      channel(callback[16]);
-      const obj = { applicationId: null, instanceId: null };
+      let obj = channel(callback[16]);
+      obj = { applicationId: null, instanceId: null };
       ({ applicationId: obj2[0], compositeInstanceId: obj2[1] } = currentEmbeddedActivity);
       participant = closure_1_9.getParticipant(channel.id, obj.getEmbeddedActivityParticipantId(obj));
     }
@@ -86,7 +86,7 @@ let closure_19 = importAllResult.memo((channel) => {
     let tmp2 = null;
     if (null != participant) {
       tmp2 = null;
-      if (participant.type === ParticipantTypes.USER) {
+      if (participant.type === closure_1_14.USER) {
         tmp2 = null;
         if (null != participant.streamId) {
           tmp2 = participant;
@@ -99,6 +99,7 @@ let closure_19 = importAllResult.memo((channel) => {
   callback = isScreenLandscape.useCallback(() => {
     channel(callback[18]).openGuildVoiceModal(channel, "PIP");
   }, items5);
+  const tmp6 = closure_9;
   tmp9 = stateFromStores1(callback[17])(channel.id);
   shouldForcePipOrientation = channel(callback[19]).useShouldForcePipOrientation({ channel });
   const tmp5Result1 = channel(callback[19]);
@@ -128,8 +129,8 @@ let closure_19 = importAllResult.memo((channel) => {
     type1 = tmp10.type;
   }
   if (ParticipantTypes.HIDDEN_STREAM !== type1) {
-    if (ParticipantTypes.STREAM !== type1) {
-      if (ParticipantTypes.USER === type1) {
+    if (tmp18.STREAM !== type1) {
+      if (tmp18.USER === type1) {
         let tmp22 = null;
         if (!stateFromStores2) {
           obj = { participant: null, avatarSize: null, resizeMode: null, onSingleTap: null, onDoubleTap: null };
@@ -144,7 +145,7 @@ let closure_19 = importAllResult.memo((channel) => {
         let tmp21 = tmp22;
       } else {
         tmp21 = null;
-        if (ParticipantTypes.ACTIVITY === type1) {
+        if (tmp18.ACTIVITY === type1) {
           obj1 = { participant: null, channel: null, onSingleTap: null };
           obj1[0] = tmp10;
           obj1[1] = channel;
@@ -182,20 +183,20 @@ let closure_19 = importAllResult.memo((channel) => {
       obj4[1] = tmp5(tmp3[12]).AvatarSizes.PROFILE;
       obj4[2] = tmp5(tmp3[25]).ResizeMode.COVER;
       obj4[3] = callback;
-      tmp26Result = callback3(tmp2Result, obj4);
+      tmp26Result = tmp26(tmp2Result, obj4);
     }
     const items8 = [tmp26Result, , ];
     tmp26Result = null != stateFromStores && !tmp19;
     if (tmp26Result) {
       const obj5 = { onSingleTap: null };
       obj5[0] = callback;
-      tmp26Result = callback3(tmp2(tmp3[29]), obj5);
+      tmp26Result = tmp26(tmp2(tmp3[29]), obj5);
     }
     items8[1] = tmp26Result;
     const obj6 = { activeOpacity: 0.7, children: null };
     items8[2] = (null == stateFromStores3 || null == stateFromStores || null == stateFromStores1) && tmp21;
     obj3[1] = items8;
-    obj6[1] = callback(width, obj3);
+    obj6[1] = closure_16(width, obj3);
     obj2[1] = callback3(closure_7, obj6);
     return callback3(width, obj2);
   }
@@ -206,7 +207,6 @@ let closure_19 = importAllResult.memo((channel) => {
   obj7[2] = callback;
   obj7[3] = callback;
   tmp21 = callback3(stateFromStores1(callback[24]), obj7);
-  const tmp2Result1 = stateFromStores1(callback[24]);
 });
 let closure_20 = importAllResult.memo((channel) => {
   channel = channel.channel;
@@ -218,7 +218,7 @@ let closure_20 = importAllResult.memo((channel) => {
 });
 let closure_21 = { code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}" };
 let closure_22 = { code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}" };
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPictureGlobal.tsx");
 
 export default function PictureInPictureGlobal(channel) {
   let num;
@@ -233,8 +233,8 @@ export default function PictureInPictureGlobal(channel) {
   importDefault = tmp4;
   let tmp2Result = tmp2(tmp3[32]);
   const fn = function n() {
-    num(derivedValue[33]);
-    const obj = { easing: num(derivedValue[12]).STANDARD_EASING, duration: 250 };
+    let obj = num(derivedValue[33]);
+    obj = { easing: num(derivedValue[12]).STANDARD_EASING, duration: 250 };
     return obj.withTiming(num, obj);
   };
   obj = { withTiming: tmp2(tmp3[33]).withTiming, drawerState: num, STANDARD_EASING: tmp2(tmp3[12]).STANDARD_EASING };

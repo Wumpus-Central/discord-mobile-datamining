@@ -29,5 +29,5 @@ if (nativePerformanceNow.nativePerformanceNow) {
 }
 arg5.start = () => {
   closure_0 = performanceNow();
-  return () => performanceNow() - closure_0;
+  return () => closure_1_1() - closure_0;
 };

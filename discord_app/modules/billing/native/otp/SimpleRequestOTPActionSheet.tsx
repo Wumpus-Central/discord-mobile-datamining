@@ -1,24 +1,28 @@
 // discord_app/modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx
 import timestampDefault from "../../../debug/Logger.tsx";
 import NativePaymentContextProvider from "../../../payments/native/NativePaymentContext.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
-import addSku from "../../../../stores/game_store/SKUStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../../../stores/game_store/SKUStore.tsx";
 import { PriceSetAssignmentPurchaseTypes as closure_9 } from "../../../../Constants.tsx";
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
-require = fn;
+require = arg1;
 function GiftPurchaseSKUView(selectedSkuId) {
   selectedSkuId = selectedSkuId.selectedSkuId;
   ({ giftRecipientId, giftMessage } = selectedSkuId);
   let first;
+  dependencyMap = undefined;
+  let currentUser;
   let callback;
   let React;
+  let memo;
   let memo1;
   closure_8 = undefined;
   function _submitGiftPurchase() {
@@ -138,7 +142,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   const tmp4 = callback(React.useState(false), 2);
   first = tmp4[0];
   dependencyMap = tmp4[1];
-  const currentUser = memo1.getCurrentUser();
+  currentUser = memo1.getCurrentUser();
   callback = React.useRef({});
   obj1 = selectedSkuId(9625);
   const giftStyle = obj1.useNativeGiftContext().giftStyle;
@@ -158,21 +162,21 @@ function GiftPurchaseSKUView(selectedSkuId) {
     }
   }, items1);
   const items2 = [product, currentUser, selectedSkuId];
-  const memo = React.useMemo(() => {
-    if (null != _undefined) {
-      if (null != _undefined.googleSkuIds) {
-        const googleSkuIds = _undefined.googleSkuIds;
-        if (obj.isPremium(currentUser, PremiumTypes.TIER_2)) {
-          let tmp2 = googleSkuIds[_submitGiftPurchase.MOBILE_PREMIUM_TIER_2];
+  memo = React.useMemo(() => {
+    if (null != c5) {
+      if (null != tmp.googleSkuIds) {
+        const googleSkuIds = tmp.googleSkuIds;
+        if (obj.isPremium(currentUser, closure_1_10.TIER_2)) {
+          let tmp2 = googleSkuIds[tmp10.MOBILE_PREMIUM_TIER_2];
         } else {
-          tmp2 = googleSkuIds[_submitGiftPurchase.MOBILE];
+          tmp2 = googleSkuIds[tmp10.MOBILE];
         }
         if (null == tmp2) {
           const items = [tmp2];
           let values = items;
         } else {
           const _Object = Object;
-          values = Object.values(_undefined.googleSkuIds);
+          values = Object.values(tmp.googleSkuIds);
         }
         return values;
       }
@@ -313,9 +317,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
     if (null == c5) {
       let items = ["Loading...", "Loading..."];
     } else {
-      items = [selectedSkuId(5313).getFormattedPriceForCollectiblesProduct(c5, true, true), ];
+      items = [selectedSkuId(5313).getFormattedPriceForCollectiblesProduct(tmp, true, true), ];
       const obj = selectedSkuId(5313);
-      items[1] = selectedSkuId(5313).getFormattedPriceForCollectiblesProduct(c5, false, true);
+      items[1] = selectedSkuId(5313).getFormattedPriceForCollectiblesProduct(tmp, false, true);
       const obj2 = selectedSkuId(5313);
     }
     return items;
@@ -342,21 +346,25 @@ function GiftPurchaseSKUView(selectedSkuId) {
     }
   }
   items6[14] = str;
-  const items7 = [callback(selectedSkuId(4734).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }), , ];
-  obj3 = { children: callback2(tmp7(4745).Button, obj4) };
-  items7[1] = callback2(selectedSkuId(6292).Card, obj3);
+  const items7 = [closure_11(selectedSkuId(4734).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }), , ];
+  let str4 = "Send Gift";
+  if (isFetching) {
+    str4 = "Loading...";
+  }
+  obj3 = { children: tmp21(tmp7(4745).Button, obj4) };
+  items7[1] = closure_12(selectedSkuId(6292).Card, obj3);
   const obj5 = { children: null };
   const items8 = ["Select style: ", giftStyle];
-  const items9 = [callback(selectedSkuId(4734).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), callback2(first(9598), {})];
+  const items9 = [closure_11(selectedSkuId(4734).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), closure_12(first(9598), {})];
   obj5[0] = items9;
-  items7[2] = callback(selectedSkuId(6292).Card, obj5);
+  items7[2] = closure_11(selectedSkuId(6292).Card, obj5);
   obj1[2] = items7;
-  return callback(selectedSkuId(4733).Stack, obj1);
+  return closure_11(selectedSkuId(4733).Stack, obj1);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
   let _require;
-  let obj = v1;
+  let obj = _v1;
   const v4Result = obj.v4();
   _require = v4Result;
   [][0] = v4Result;
@@ -385,24 +393,25 @@ function SimpleRequestOTPActionSheet(giftMessage) {
     }
   }
   tmp8 = callback2;
-  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-lg/bold", color: "text-feedback-warning", children: "Gift purchasing is the only supported feature on Android in this version." }), ];
+  const items = [callback2(_Text.Text, { variant: "text-lg/bold", color: "text-feedback-warning", children: "Gift purchasing is the only supported feature on Android in this version." }), ];
   let str = "none";
   if (null != requestType) {
     str = requestType;
   }
   const obj2 = { children: null };
   const items1 = ["Request type: ", str];
-  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/normal", color: "text-feedback-warning", children: items1 });
+  items[1] = closure_11(_Text.Text, { variant: "text-md/normal", color: "text-feedback-warning", children: items1 });
   obj2[0] = items;
-  tmp6Result = callback(View, obj2);
+  tmp6Result = tmp6(View, obj2);
 }
 ({ jsxs: unpackModuleId, jsx: closure_12 } = jsxProd);
 let closure_13 = new timestampDefault("PaymentFlowTest.android");
 const tmp3 = new timestampDefault("PaymentFlowTest.android");
-const result = require("obj132").fileFinishedImporting("modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx");
 
 export default function SimpleCreateOTPActionSheetWrapper(arg0) {
-  const obj = {};
+  let obj = { skuIDs: [], activeSubscription: null, children: null };
+  obj = {};
   const merged = Object.assign(arg0);
   obj[2] = callback2(SimpleRequestOTPActionSheet, obj);
   return callback2(NativePaymentContextProvider.NativePaymentContextProvider, obj);

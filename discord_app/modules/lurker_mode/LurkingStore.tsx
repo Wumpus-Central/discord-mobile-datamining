@@ -1,11 +1,11 @@
 // discord_app/modules/lurker_mode/LurkingStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set2 from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_1 from "../../stores/GuildMemberStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
 const isGuildLurker = GuildNSFWContentLevel.isGuildLurker;
@@ -43,10 +43,10 @@ prototype["isLurking"] = function isLurking(guildId) {
     return Boolean(tmp6);
   }
 };
-prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(guildId) {
+prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(closure_0) {
   let tmp = null;
-  if (null != guildId) {
-    let tmp3 = table2[guildId];
+  if (null != closure_0) {
+    let tmp3 = table2[closure_0];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -65,8 +65,8 @@ LurkingStore.displayName = "LurkingStore";
 const lurkingStore = new LurkingStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const guildsArray = store.getGuildsArray();
-    const found = guildsArray.filter((item, index) => callback(item));
-    closure_6 = found.map((item, index) => item.id);
+    const found = guildsArray.filter((arg0) => callback(arg0));
+    closure_6 = found.map((id) => id.id);
     closure_8 = {};
   },
   GUILD_JOIN: function handleGuildJoin(lurker) {
@@ -84,16 +84,16 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
       }
       if (constants.MOBILE_GUILD_DISCOVERY === source) {
         let obj = { type: null };
-        obj[0] = constants.MOBILE_GUILD_DISCOVERY;
+        obj[0] = tmp12.MOBILE_GUILD_DISCOVERY;
         closure_8[guildId] = obj;
-      } else if (constants.DIRECTORY_ENTRY === source) {
+      } else if (tmp12.DIRECTORY_ENTRY === source) {
         obj = { type: null, directoryChannelId: null };
-        obj[0] = constants.DIRECTORY_ENTRY;
+        obj[0] = tmp12.DIRECTORY_ENTRY;
         obj[1] = tmp3;
         closure_8[guildId] = obj;
-      } else if (constants.GAME_COMMUNITY_UPSELL === source) {
+      } else if (tmp12.GAME_COMMUNITY_UPSELL === source) {
         obj = { type: null };
-        obj[0] = constants.GAME_COMMUNITY_UPSELL;
+        obj[0] = tmp12.GAME_COMMUNITY_UPSELL;
         closure_8[guildId] = obj;
       } else {
         delete tmp2[tmp];
@@ -112,10 +112,10 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
     let items = [...ignoredGuildIds];
     set = new Set(items);
     const items1 = [...items];
-    return items1.reduce((acc, item, index) => {
-      let tmp4 = acc;
-      if (!set.has(item)) {
-        index = items.indexOf(item);
+    return items1.reduce((arg0, arg1) => {
+      let tmp4 = arg0;
+      if (!set.has(arg1)) {
+        const index = items.indexOf(arg1);
         let flag = false;
         if (index > -1) {
           items = [];
@@ -126,7 +126,7 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
           flag = true;
         }
         if (!flag) {
-          flag = acc;
+          flag = arg0;
         }
         tmp4 = flag;
       }
@@ -214,6 +214,6 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = obj132.fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
+const result = set2.fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
 
 export default lurkingStore;

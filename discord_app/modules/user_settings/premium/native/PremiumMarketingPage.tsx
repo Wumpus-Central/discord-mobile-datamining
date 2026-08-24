@@ -1,18 +1,19 @@
 // discord_app/modules/user_settings/premium/native/PremiumMarketingPage.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { FractionalPremiumStates } from "../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { tintColor: ThemesDefault.colors.TEXT_DEFAULT };
+createCacheKey = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: null, backButton: null, sectionWithTopMargin: null, sectionWithPadding: null, sectionWidth: null, accountCreditContainer: null, accountCreditContainerWithSpacing: null, themedBackground: null, backButtonBackground: null, promotionCardHeader: null };
+createCacheKey = { tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[2] = createCacheKey;
 let items = [{ scaleX: -1 }];
 createCacheKey[3] = { transform: items, position: "absolute", left: 16 };
@@ -27,7 +28,7 @@ createCacheKey[10] = { backgroundColor: require("result").TIER_0_MARKETING_PAGE_
 createCacheKey[11] = { marginBottom: 16, marginHorizontal: "auto", textAlign: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { backgroundColor: require("result").TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
-let result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumMarketingPage.tsx");
 
 export default function PremiumMarketingPage(userHasSubscription) {
   userHasSubscription = userHasSubscription.userHasSubscription;
@@ -36,6 +37,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
   if (isFullScreenPresentation === undefined) {
     isFullScreenPresentation = false;
   }
+  let navigation;
   let analyticsLocations;
   let callback;
   let React;
@@ -51,7 +53,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
   const commonTriggerPoint = obj.useCommonTriggerPoint(userHasSubscription(analyticsLocations[11]).OpenNitroTriggerPoint);
   const tmp4 = onClose();
   obj1 = userHasSubscription(analyticsLocations[12]);
-  const navigation = obj1.useNavigation();
+  navigation = obj1.useNavigation();
   analyticsLocations = navigation(analyticsLocations[13])().analyticsLocations;
   let obj2 = React;
   [c3, c4] = callback(React.useState(false), 2);
@@ -93,16 +95,16 @@ export default function PremiumMarketingPage(userHasSubscription) {
   const effect = obj2.useEffect(() => {
     let isDismissed = null == promotionMarketingComponent;
     if (!isDismissed) {
-      isDismissed = "premiumTab" !== promotionMarketingComponent.properties.properties.oneofKind;
+      isDismissed = "premiumTab" !== tmp.properties.properties.oneofKind;
     }
     if (!isDismissed) {
       let obj = userHasSubscription(analyticsLocations[20]);
-      isDismissed = obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(userHasSubscription(analyticsLocations[21]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId).isDismissed;
+      isDismissed = obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(userHasSubscription(analyticsLocations[21]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, tmp.promotionId).isDismissed;
     }
     if (!isDismissed) {
       obj = { dismissAction: null };
       obj[0] = ref2.AUTO_DISMISS;
-      const result = userHasSubscription(analyticsLocations[22]).markSnowflakeBoundDismissibleContentAsDismissed(userHasSubscription(analyticsLocations[21]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId, obj);
+      const result = userHasSubscription(analyticsLocations[22]).markSnowflakeBoundDismissibleContentAsDismissed(userHasSubscription(analyticsLocations[21]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, tmp.promotionId, obj);
       const obj2 = userHasSubscription(analyticsLocations[22]);
     }
   }, items1);
@@ -154,8 +156,8 @@ export default function PremiumMarketingPage(userHasSubscription) {
         tmp2 = nativeEvent.layoutMeasurement.height + contentOffset.y >= tmp.height;
       }
       if (tmp2) {
-        navigation(analyticsLocations[30]);
-        const obj = { location_stack: null };
+        let obj = navigation(analyticsLocations[30]);
+        obj = { location_stack: null };
         obj[0] = analyticsLocations;
         obj.track(ref.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
         _undefined(true);

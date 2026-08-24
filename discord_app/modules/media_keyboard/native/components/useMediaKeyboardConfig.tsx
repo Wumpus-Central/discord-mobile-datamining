@@ -1,15 +1,18 @@
 // discord_app/modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx
 import useUploadDisabledDefault from "../useUploadDisabled.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { MediaKeyboardTarget } from "../MediaKeyboardConstants.tsx";
 import ME from "../../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ChannelTypesSets: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx");
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/useMediaKeyboardConfig.tsx");
 
 export default function useMediaKeyboardConfig(arg0) {
   ({ channel, context } = arg0);
+  importDefault = undefined;
+  dependencyMap = undefined;
+  let canStartThread;
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
   const tmp4 = context(7508).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
@@ -17,7 +20,7 @@ export default function useMediaKeyboardConfig(arg0) {
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
   let tmp2Result = tmp2(7234);
-  let canStartThread = tmp2Result.useCanStartThread(channel);
+  canStartThread = tmp2Result.useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
     canStartThread = !GUILD_THREADS_ONLY.has(channel.type);
@@ -37,7 +40,7 @@ export default function useMediaKeyboardConfig(arg0) {
   return canStartThread.useMemo(() => {
     const target = context.target;
     if (target !== constants.CHAT) {
-      if (target !== constants.COMMAND) {
+      if (target !== tmp2.COMMAND) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
         error = new Error("MediaKeyboard does not support context target " + target);
@@ -46,8 +49,8 @@ export default function useMediaKeyboardConfig(arg0) {
     }
     let fileTypes;
     if (target === constants.COMMAND) {
-      if (context.option.type === context(table[8]).ApplicationCommandOptionType.ATTACHMENT) {
-        fileTypes = context.option.fileTypes;
+      if (tmp.option.type === context(table[8]).ApplicationCommandOptionType.ATTACHMENT) {
+        fileTypes = tmp.option.fileTypes;
       }
     }
     let num = 1;
@@ -57,7 +60,7 @@ export default function useMediaKeyboardConfig(arg0) {
     const obj = { uploadLimit: num, disableWhenReachedLimit: target === constants.CHAT, includedUploadIds: null, fileTypes: null, canPostPolls: null, canStartThreads: null, isAppLauncherEnabled: null, uploadDisabled: null, draftType: null };
     let tmp6;
     if (target !== constants.CHAT) {
-      const items = [context.option.name];
+      const items = [tmp.option.name];
       tmp6 = items;
     }
     obj[2] = tmp6;

@@ -1,11 +1,11 @@
 // _runtime/01808_useAnimatedRef.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import isJest from "01657_isJest.js";
 
-const require = fn;
+const require = arg1;
 ({ useRef: c3, useState: c4 } = noop);
-isJest.shouldBeUseWeb();
+isJest = isJest.shouldBeUseWeb();
 isJest = isJest.isIOS();
 if (!isJest) {
   isJest = require("isJest").isMacOS();
@@ -37,8 +37,8 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
         fun.current = map;
         if (tag.size) {
           tag = undefined;
-          if (fun != null) {
-            const getTag = fun.getTag;
+          if (tmp3 != null) {
+            const getTag = tmp3.getTag;
             if (getTag != null) {
               tag = getTag();
             }
@@ -46,19 +46,19 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
           if (tag == null) {
             tag = null;
           }
-          const item = arr.forEach((item, index) => {
-            if (item != null) {
-              item();
+          const item = arr.forEach((arg0, arg1) => {
+            if (arg0 != null) {
+              arg0();
             }
-            const result = tag.set(index, index(tag));
+            const result = tag.set(arg1, arg1(tag));
           });
         }
         arr = tag;
       }
       return ref.current;
     };
-    fun.observe = (fn) => {
-      closure_0 = fn;
+    fun.observe = (arg0) => {
+      closure_0 = arg0;
       let tag;
       if (fun != null) {
         const getTag = fun.getTag;
@@ -69,13 +69,13 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       if (tag == null) {
         tag = null;
       }
-      const result = current.set(fn, fn(tag));
+      const result = current.set(arg0, arg0(tag));
       return () => {
-        const value = current.get(closure_0);
+        const value = closure_1_1.get(closure_0);
         if (value != null) {
           value();
         }
-        current.delete(closure_0);
+        closure_1_1.delete(closure_0);
       };
     };
     fun.current = null;
@@ -94,8 +94,10 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
     }
     return mutable;
   }), 1)[0];
+  let f71297 = first;
   const first1 = callback(callback2(() => f71297(current[4]).makeMutable(null)), 1)[0];
-  const f71297 = (current) => {
+  let current = first1;
+  f71297 = (viewConfig) => {
     if (obj.isFabric()) {
       let fn = f71297(current[5]).getShadowNodeWrapperFromRef;
     } else {
@@ -111,11 +113,11 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
         return callback(table[3]).findNodeHandle(scrollableNode);
       };
     }
-    current.value = fn(current);
+    current.value = fn(viewConfig);
     if (f71297) {
       let str;
-      if (current != null) {
-        const viewConfig = current.viewConfig;
+      if (viewConfig != null) {
+        viewConfig = viewConfig.viewConfig;
         if (viewConfig != null) {
           str = viewConfig.uiViewClassName;
         }
@@ -127,8 +129,10 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
     }
     return current.value;
   };
+  current = undefined;
+  callback = undefined;
   let fun;
-  let current = fun(new Map()).current;
+  current = fun(new Map()).current;
   callback = fun(-1);
   const tmp4 = fun(null);
   if (!tmp4.current) {
@@ -140,8 +144,8 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
         fun.current = map;
         if (tag.size) {
           tag = undefined;
-          if (fun != null) {
-            const getTag = fun.getTag;
+          if (tmp3 != null) {
+            const getTag = tmp3.getTag;
             if (getTag != null) {
               tag = getTag();
             }
@@ -149,19 +153,19 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
           if (tag == null) {
             tag = null;
           }
-          const item = arr.forEach((item, index) => {
-            if (item != null) {
-              item();
+          const item = arr.forEach((arg0, arg1) => {
+            if (arg0 != null) {
+              arg0();
             }
-            const result = tag.set(index, index(tag));
+            const result = tag.set(arg1, arg1(tag));
           });
         }
         arr = tag;
       }
       return ref.current;
     };
-    fun.observe = (fn) => {
-      closure_0 = fn;
+    fun.observe = (arg0) => {
+      closure_0 = arg0;
       let tag;
       if (fun != null) {
         const getTag = fun.getTag;
@@ -172,13 +176,13 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       if (tag == null) {
         tag = null;
       }
-      const result = current.set(fn, fn(tag));
+      const result = current.set(arg0, arg0(tag));
       return () => {
-        const value = current.get(closure_0);
+        const value = closure_1_1.get(closure_0);
         if (value != null) {
           value();
         }
-        current.delete(closure_0);
+        closure_1_1.delete(closure_0);
       };
     };
     fun.current = null;
@@ -187,6 +191,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
   current = tmp4.current;
   const shareableMappingCache = f71297(current[6]).shareableMappingCache;
   if (!shareableMappingCache.get(current)) {
+    let obj = { __init: null };
     let fn = function n() {
       const fn = function f() {
         return value.value;
@@ -196,7 +201,7 @@ export const useAnimatedRef = isJest ? (function useAnimatedRefWeb() {
       }
       return fn;
     };
-    const obj = { tagOrWrapper: null, viewName: null };
+    obj = { tagOrWrapper: null, viewName: null };
     obj[0] = first1;
     obj[1] = first;
     fn.__closure = obj;

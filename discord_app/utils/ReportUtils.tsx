@@ -1,12 +1,12 @@
 // discord_app/utils/ReportUtils.tsx
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
-import handleInviteData from "../stores/GuildMemberCountStore.tsx";
-import getUncachedChannelPermissions from "../stores/PermissionStore.tsx";
-import mergeGuildAvatar from "../stores/UserStore.tsx";
+import closure_0 from "../stores/ChannelStore.tsx";
+import closure_1 from "../stores/GuildMemberCountStore.tsx";
+import closure_2 from "../stores/PermissionStore.tsx";
+import closure_3 from "../stores/UserStore.tsx";
 import ME from "../Constants.tsx";
 
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("utils/ReportUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/ReportUtils.tsx");
 
 export const canReportUser = function canReportUser(user) {
   if (null == user) {

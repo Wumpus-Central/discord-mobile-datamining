@@ -1,7 +1,7 @@
 // discord_common/js/shared/MFA.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 function finishMFACheck() {
   const self = this;
   const apply = _finishMFACheck.apply;
@@ -190,7 +190,7 @@ function _trySubmit() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("../discord_common/js/shared/MFA.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/shared/MFA.tsx");
 
 export const BACKUP_CODE_MIN_LENGTH = 8;
 export const BACKUP_CODE_MAX_LENGTH = 11;

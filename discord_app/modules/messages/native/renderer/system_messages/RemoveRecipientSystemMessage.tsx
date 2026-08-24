@@ -1,15 +1,13 @@
 // discord_app/modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
+import set from "../../../../../../_runtime/00002_set.js";
 import createChannelRecord from "../../../../../records/ChannelRecord.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
-import createCommonMessageDefault from "createCommonMessage.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/UserStore.tsx";
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
 
 export const createRemoveRecipientSystemMessage = function createRemoveRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);
@@ -23,9 +21,9 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
   if (message.author.id === first) {
-    const intl = getSystemLocale.intl;
+    const intl = tmp5(1236).intl;
     const formatToParts = intl.formatToParts;
-    const t = getSystemLocale.t;
+    const t = tmp5(1236).t;
     if (hasItem) {
       let formatToPartsResult = formatToParts(t.uHmblj, obj);
     } else {
@@ -33,11 +31,11 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     }
     obj = { content: null };
     obj[0] = formatToPartsResult;
-    const merged = Object.assign(createCommonMessageDefault(message));
+    const merged = Object.assign(tmp8(8188)(message));
     return obj;
   } else {
     user = user.getUser(first);
-    const userAuthorWithProcessedColor = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
+    const userAuthorWithProcessedColor = tmp5(8185).getUserAuthorWithProcessedColor(user, channel);
     obj1 = {};
     const merged1 = Object.assign(obj);
     obj1.otherUsername = userAuthorWithProcessedColor.nick;
@@ -46,10 +44,10 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     obj2[1] = message;
     obj2[2] = userAuthorWithProcessedColor;
     obj2[3] = roleStyle;
-    obj1.otherUsernameOnClick = formatUsernameOnClickDefault(obj2);
-    const intl2 = getSystemLocale.intl;
+    obj1.otherUsernameOnClick = tmp8(8187)(obj2);
+    const intl2 = tmp5(1236).intl;
     const formatToParts2 = intl2.formatToParts;
-    const t2 = getSystemLocale.t;
+    const t2 = tmp5(1236).t;
     if (hasItem) {
       let formatToParts2Result = formatToParts2(t2.KBrM5t, obj1);
     } else {
@@ -57,7 +55,7 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
     }
     const obj3 = { content: null };
     obj3[0] = formatToParts2Result;
-    const merged2 = Object.assign(createCommonMessageDefault(message));
+    const merged2 = Object.assign(tmp8(8188)(message));
     return obj3;
   }
 };

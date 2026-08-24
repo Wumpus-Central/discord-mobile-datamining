@@ -10,14 +10,14 @@ import _modDef4090 from "../../../lib/native/Linking.tsx";
 import _modDef5227 from "../../../utils/TrackedHTTPUtils.tsx";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import _requestAndSyncContacts from "ContactSyncManager.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_5 from "../../../stores/ConnectedAccountsStore.tsx";
 import setStoredContacts from "ContactSyncPersistedStore.tsx";
 import ContactSyncLandingPage from "ContactSyncConstants.tsx";
 import ME from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function _uploadContacts() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -105,8 +105,8 @@ function _uploadContacts() {
             body = body.body;
             obj = flag(709);
             obj.wait(() => {
-              flag(table[9]);
-              const obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
+              let obj = flag(table[9]);
+              obj = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
               return obj.dispatch(obj);
             });
             c5 = 3;
@@ -138,7 +138,7 @@ function _uploadContacts() {
 error = new Error("No contact permissions");
 const error1 = new Error("No phone number");
 const error2 = new Error("Failed to fetch contact image");
-let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/ContactSyncUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncUtils.tsx");
 
 export const ContactSyncPermissionDenied = error;
 export const ContactSyncFailedUserHasNoPhone = error1;
@@ -191,9 +191,11 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
   let obj = _modDef5227;
+  obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
   obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
-  return obj.post(obj).then((result) => result.body);
+  obj1 = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  return obj.post(obj).then((body) => body.body);
 };
 export const adminDeleteContactSync = function adminDeleteContactSync() {
   callback2();
@@ -202,7 +204,7 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   const result = obj.removeLastUserContactsUpload();
   const ContactSyncEnabled = explicitContentFromProto.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
-  { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
+  obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
   return _modDef5227.delete(obj);
@@ -213,7 +215,7 @@ export const getImageForContactId = function getImageForContactId(closure_0, arg
     DCDContactSyncManager = arg1;
     const imageForContactId = DCDContactSyncManager.getImageForContactId(closure_0, (arg0, str) => {
       if (null == arg0) {
-        callback("".replace(/(\r\n|\n|\r)/gm, ""));
+        callback(str.replace(/(\r\n|\n|\r)/gm, ""));
       } else {
         callback2(closure_1_17);
       }
@@ -221,7 +223,12 @@ export const getImageForContactId = function getImageForContactId(closure_0, arg
   });
 };
 export const getContacts = function getContacts(closure_0, storedContacts) {
-  const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
+  let str = storedContacts;
+  if (storedContacts === undefined) {
+    str = "";
+  }
+  let DCDContactSyncManager;
+  DCDContactSyncManager = NativeModules.DCDContactSyncManager;
   return new Promise((closure_0, closure_1) => {
     DCDContactSyncManager.syncContacts(closure_1, closure_0, (arg0, arg1, arg2) => {
       if (null == arg0) {
@@ -230,7 +237,7 @@ export const getContacts = function getContacts(closure_0, storedContacts) {
           let parsed = JSON.parse(arg1);
           const _Object = Object;
           const values = Object.values(parsed);
-          const found = values.find((item, index) => item.phone === closure_0);
+          const found = values.find((phone) => phone.phone === closure_0);
           let unencryptedName;
           if (found != null) {
             unencryptedName = found.unencryptedName;
@@ -243,12 +250,13 @@ export const getContacts = function getContacts(closure_0, storedContacts) {
           }
           obj[1] = tmp10;
           obj[2] = arg2;
-          callback(obj);
+          closure_0(obj);
+          const tmp9 = closure_0;
         } catch (err) {
           parsed = {};
         }
       } else {
-        callback(error);
+        callback(closure_2_16);
       }
     });
   });
@@ -259,6 +267,7 @@ export const getStoredContacts = function getStoredContacts() {
     return JSON.parse(tmp2);
   } catch (tmp4) {
     _modDef1208.captureException(tmp4);
+    const obj = _modDef1208;
   }
 };
 export const useContactSyncAccount = function useContactSyncAccount() {

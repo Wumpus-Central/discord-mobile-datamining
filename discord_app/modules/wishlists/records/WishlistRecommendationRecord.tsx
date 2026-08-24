@@ -1,22 +1,23 @@
 // discord_app/modules/wishlists/records/WishlistRecommendationRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
-import createFromServer from "../../skus/SKURecord.tsx";
-import createExecutable from "../../../records/ApplicationRecord.tsx";
+import closure_0 from "../../skus/SKURecord.tsx";
+import closure_1 from "../../../records/ApplicationRecord.tsx";
 
 toJSDefault;
-const prototype = function WishlistRecommendationRecord(skus) {
+let prototype;
+prototype = function WishlistRecommendationRecord(skus) {
   const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp);
   // ThrowIfThisInitialized (0x7c)
   skus = skus.skus;
-  tmp5.skus = skus.map((item, index) => closure_0.createFromServer(item));
+  tmp5.skus = skus.map((arg0) => closure_0.createFromServer(arg0));
   const entries = Object.entries(skus.skus_to_user_and_reason);
-  tmp5.skusToUserAndReason = Object.fromEntries(entries.map((item, index) => {
-    [tmp, tmp2] = item;
+  tmp5.skusToUserAndReason = Object.fromEntries(entries.map((arg0) => {
+    [tmp, tmp2] = arg0;
     const items = [tmp, tmp2];
     return items;
   }));
   const applications = skus.applications;
-  tmp5.applications = applications.map((item, index) => closure_1.createFromServer(item));
+  tmp5.applications = applications.map((arg0) => closure_1.createFromServer(arg0));
   return tmp5;
 }.prototype;
 class prototype extends tmp2 {
@@ -28,18 +29,18 @@ prototype["fromServer"] = function fromServer(skus) {
   const tmp4 = new prototype("Trying to call a non-function", tmp3, tmp2, tmp);
   // ThrowIfThisInitialized (0x7c)
   skus = skus.skus;
-  tmp4.skus = skus.map((item, index) => closure_0.createFromServer(item));
+  tmp4.skus = skus.map((arg0) => closure_0.createFromServer(arg0));
   const entries = Object.entries(skus.skus_to_user_and_reason);
-  tmp4.skusToUserAndReason = Object.fromEntries(entries.map((item, index) => {
-    [tmp, tmp2] = item;
+  tmp4.skusToUserAndReason = Object.fromEntries(entries.map((arg0) => {
+    [tmp, tmp2] = arg0;
     const items = [tmp, tmp2];
     return items;
   }));
   const applications = skus.applications;
-  tmp4.applications = applications.map((item, index) => closure_1.createFromServer(item));
+  tmp4.applications = applications.map((arg0) => closure_1.createFromServer(arg0));
   return tmp4;
 };
-const result = require("obj132").fileFinishedImporting("modules/wishlists/records/WishlistRecommendationRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/records/WishlistRecommendationRecord.tsx");
 
 export default prototype;
 export const WishlistRecommendationReason = { WISHLIST: "WISHLIST", RECOMMENDATION: "RECOMMENDATION" };

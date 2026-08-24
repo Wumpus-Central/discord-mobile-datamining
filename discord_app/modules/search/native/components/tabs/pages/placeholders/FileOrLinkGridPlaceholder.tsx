@@ -1,14 +1,15 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
 import _modDef4115 from "../../../../../../reanimated/ReanimatedRexport.tsx";
-import noop from "../../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
+  importDefault = undefined;
   let obj = width(15870);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;

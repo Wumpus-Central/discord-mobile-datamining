@@ -1,19 +1,20 @@
 // discord_app/modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleSafetyHubRequestAgeVerificationResetModalAction from "../SafetyHubStore.tsx";
+import closure_5 from "../SafetyHubStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
+createCacheKey = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: null, closeIcon: null };
+createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
 
 export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) {
   const onSave = onPress.onSave;
@@ -32,6 +33,7 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
     stringResult = intl.string(tmp2(tmp3[8]).t.tnE3bZ);
   }
   const intl3 = tmp2(tmp3[8]).intl;
+  obj = { startExpanded: true, children: null };
   obj = { spacing: 16, children: null };
   const stringResult1 = intl3.string(onSave(first[8]).t["Rk+uJx"]);
   const items1 = [callback2(onSave(first[11]).PressableOpacity, { onPress: onPress.onClose, style: tmp.closeIcon, children: callback2(onSave(first[12]).XSmallIcon, { size: "md" }) }), callback2(onSave(first[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , , ];

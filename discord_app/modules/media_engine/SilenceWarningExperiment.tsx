@@ -1,8 +1,9 @@
 // discord_app/modules/media_engine/SilenceWarningExperiment.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "ct", enableHardwareSilenceWarning: true };
+obj = { name: "2026-02-silence-warning-aggression", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null, 2: null, 3: null };
 const obj1 = {};
 const merged = Object.assign(obj);
@@ -18,6 +19,6 @@ obj3.enableHardwareSilenceWarning = true;
 obj[3] = obj3;
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = obj132.fileFinishedImporting("modules/media_engine/SilenceWarningExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_engine/SilenceWarningExperiment.tsx");
 
 export default apexExperiment;

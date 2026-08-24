@@ -1,7 +1,7 @@
 // _runtime/04147_getNumberProperty.js
 import c from "04135_c.js";
 import useRiveProperty from "04148_useRiveProperty.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function getNumberProperty(numberProperty) {
@@ -11,6 +11,7 @@ function getNumberProperty(numberProperty) {
 export const useRiveNumber = function useRiveNumber(AnimationState, instance) {
   let obj = c;
   const cResult = obj.c(4);
+  const obj2 = useRiveProperty;
   [tmp3, tmp4, tmp5] = callback(useRiveProperty.useRiveProperty(instance, AnimationState, getNumberProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {

@@ -1,24 +1,21 @@
 // discord_app/stores/StreamRTCConnectionStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import obj132 from "../utils/PlatformUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
-import isOwner2 from "../modules/go_live/StreamRTCConnection.tsx";
 import isOwnerDefault from "../modules/go_live/StreamRTCConnection.tsx";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
-import _findPlayingActivity from "../modules/go_live/utils/StreamerApplicationSelectors.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
-import initialize from "../modules/game_detection/RunningGameStore.native.tsx";
-import fetchFingerprint from "AuthenticationStore.tsx";
+import closure_4 from "../modules/game_detection/RunningGameStore.native.tsx";
+import closure_5 from "AuthenticationStore.tsx";
 import importDefaultResult from "MediaEngineStore.tsx";
-import sortActivity from "PresenceStore.tsx";
-import createRTCConnection from "RTCConnectionStore.tsx";
+import closure_7 from "PresenceStore.tsx";
+import closure_8 from "RTCConnectionStore.tsx";
 import ME from "../Constants.tsx";
 import { StreamTypes } from "../modules/go_live/Constants.tsx";
 import importDefaultResult1 from "../Dispatcher.tsx";
 
-require = fn;
+require = arg1;
 ({ RTCConnectionQuality: c9, StreamLayouts } = ME);
 let closure_11 = {};
 let closure_12 = {};
@@ -229,8 +226,8 @@ if (importDefaultResult.isSupported()) {
     if (tmp6) {
       const _Object = Object;
       const entries = Object.entries(wants);
-      const someResult = entries.some((item, index) => {
-        [tmp, tmp2] = item;
+      const someResult = entries.some((arg0) => {
+        [tmp, tmp2] = arg0;
         let tmp3 = "any" !== tmp;
         if (tmp3) {
           tmp3 = 0 !== tmp2;
@@ -249,11 +246,11 @@ if (importDefaultResult.isSupported()) {
     appContext = appContext.appContext;
     ({ pid, nativePickerStyleUsed: importDefault, goLiveModalDurationMs } = appContext);
     ({ streamType, guildId, channelId, sourceId, sourcePid, analyticsLocations } = appContext);
-    appContext(4531);
-    let obj = { streamType, guildId, channelId, ownerId: id.getId() };
+    let obj = appContext(4531);
+    obj = { streamType, guildId, channelId, ownerId: id.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
-    const item = applyDefault.forEach(dependencyMap, (analyticsContext) => {
+    const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);
       const result = analyticsContext.setNativePickerStyleUsed(closure_1);
@@ -273,11 +270,11 @@ if (importDefaultResult.isSupported()) {
         ({ name: obj3[0], id: obj3[1], exeName: obj3[2], distributor: obj3[3], sku: obj3[4], gameMetadata: obj3[5] } = gameForPID);
         dependencyMap[encodeStreamKeyResult] = obj;
       }
-      if (dependencyMap[encodeStreamKeyResult] != null) {
+      if (tmp4[encodeStreamKeyResult] != null) {
         let analyticsContext = tmp10.analyticsContext;
         let result = analyticsContext.updateStreamApplication(dependencyMap[encodeStreamKeyResult]);
       }
-    } else if (dependencyMap[encodeStreamKeyResult] != null) {
+    } else if (tmp4[encodeStreamKeyResult] != null) {
       const analyticsContext2 = tmp6.analyticsContext;
       const result1 = analyticsContext2.updateStreamApplication(null);
     }
@@ -320,15 +317,15 @@ if (importDefaultResult.isSupported()) {
         tmp11 = null == dependencyMap2[streamKey];
       }
       if (tmp11) {
-        dependencyMap[streamKey] = _findPlayingActivity.getStreamerApplication(decodeStreamKeyResult, closure_7);
-        const tmp4Result = _findPlayingActivity;
+        tmp10[streamKey] = tmp4(7487).getStreamerApplication(decodeStreamKeyResult, closure_7);
+        const tmp4Result = tmp4(7487);
       }
       obj = { streamRegion: null, streamApplication: null, streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
       obj[0] = region;
       obj[1] = dependencyMap[streamKey];
       let str2 = "unknown";
       if (null != dependencyMap2[streamKey]) {
-        if (!obj132.isPlatformEmbedded) {
+        if (!tmp4(500).isPlatformEmbedded) {
           let name;
           if (globalThis.platform != null) {
             name = globalThis.platform.name;
@@ -384,7 +381,7 @@ if (importDefaultResult.isSupported()) {
         analyticsLocations = tmp23.analyticsLocations;
       }
       obj[6] = analyticsLocations;
-      const streamRTCAnalyticsContext = new isOwner2.StreamRTCAnalyticsContext(obj);
+      const streamRTCAnalyticsContext = new tmp4(4561).StreamRTCAnalyticsContext(obj);
       _modDef38(null != closure_3, "Creating RTCConnection without session.");
       obj = { sessionId: null, streamKey: null, serverId: null, channelId: null, initialLayout: null, analyticsContext: null, parentMediaSessionId: null };
       obj[0] = closure_3;
@@ -396,11 +393,13 @@ if (importDefaultResult.isSupported()) {
       let tmp32 = isOwnerDefault;
       obj[6] = mediaSessionId.getMediaSessionId();
       tmp32 = new tmp32(obj);
-      dependencyMap3[streamKey] = tmp32;
+      tmp3[streamKey] = tmp32;
       obj = tmp32;
+      const tmp19 = table;
     }
     delete tmp[tmp2];
     decodeStreamKeyResult = obj1.decodeStreamKey(streamKey);
+    tmp3 = dependencyMap3;
     obj1 = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: obj.getMediaEngineConnectionId() };
     importDefaultResult1.dispatch(obj1);
   };
@@ -438,7 +437,7 @@ if (importDefaultResult.isSupported()) {
   obj[14] = function handleLayoutUpdate(layout) {
     layout = layout.layout;
     const values = Object.values(closure_18);
-    const item = values.forEach((item, index) => item.layoutChange(layout));
+    const item = values.forEach((layoutChange) => layoutChange.layoutChange(layout));
   };
   obj[15] = function handleVideoSizeUpdate(arg0) {
     ({ streamId: require, dimensions: importDefault, zoom: dependencyMap } = arg0);
@@ -452,6 +451,6 @@ if (importDefaultResult.isSupported()) {
   obj = {};
 }
 const streamRTCConnectionStore = new StreamRTCConnectionStore(importDefaultResult1, obj);
-let result = require("obj132").fileFinishedImporting("stores/StreamRTCConnectionStore.tsx");
+let result = require("set").fileFinishedImporting("stores/StreamRTCConnectionStore.tsx");
 
 export default streamRTCConnectionStore;

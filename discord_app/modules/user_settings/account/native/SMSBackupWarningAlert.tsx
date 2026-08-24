@@ -1,15 +1,14 @@
 // discord_app/modules/user_settings/account/native/SMSBackupWarningAlert.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
 import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ title: { textAlign: "center" }, body: { marginTop: 8, textAlign: "center", lineHeight: 18 } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
 
 export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
@@ -21,7 +20,7 @@ export default function SMSBackupWarningAlert(onConfirm) {
   obj[1] = intl2.string(onConfirm(1236).t.N86XcP);
   obj[2] = function onConfirm() {
     onConfirm();
-    _modDef4656.close();
+    closure_1_1(closure_1_2[5]).close();
   };
   obj[3] = function onCancel() {
     return callback(table[5]).close();

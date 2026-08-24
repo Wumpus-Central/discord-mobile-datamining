@@ -1,10 +1,11 @@
 // discord_app/modules/guild/BasicGuildActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import getGuild from "BasicGuildStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "BasicGuildStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-const require = fn;
+const require = arg1;
 function _fetchBasicGuild() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -43,17 +44,17 @@ function _fetchBasicGuild() {
               body = tmp8;
               body = undefined;
               if (null == guild.getGuild(callback)) {
-                if (null == guildOrStatus.getGuildOrStatus(callback)) {
-                  if (!closure_1_7.has(callback)) {
+                if (null == guildOrStatus.getGuildOrStatus(tmp57)) {
+                  if (!closure_1_7.has(tmp57)) {
                     let obj5 = closure_1_1(closure_1_2[4]);
                     obj1 = { type: "BASIC_GUILD_FETCH", guildId: null };
-                    obj1[1] = callback;
+                    obj1[1] = tmp57;
                     obj5.dispatch(obj1);
-                    closure_1_7.add(callback);
+                    closure_1_7.add(tmp57);
                     guild = 2;
                     const HTTP = callback(closure_1_2[5]).HTTP;
                     const obj2 = { url: null, rejectWithError: true };
-                    obj2[0] = c6.GUILD_BASIC(callback);
+                    obj2[0] = c6.GUILD_BASIC(tmp57);
                     guildOrStatus = 3;
                     c6 = 1;
                     let obj3 = { value: null, done: false };
@@ -119,8 +120,8 @@ function _fetchBasicGuild() {
   }
   return applyArgumentsResult;
 }
-const set = new Set();
-const result = require("obj132").fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");
+let set = new Set();
+const result = set.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");
 
 export const fetchBasicGuild = function fetchBasicGuild(guild_id) {
   const self = this;

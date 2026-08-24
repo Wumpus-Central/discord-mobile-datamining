@@ -1,27 +1,24 @@
 // _runtime/06588_extractFill.js
-import extractOpacityDefault from "06577_extractOpacity.js";
-import extractBrushDefault from "06589_extractBrush.js";
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let closure_2 = { evenodd: 0, nonzero: 1 };
 const obj = { type: 0, payload: require("get ActivityIndicator").processColor("black") };
 arg5.default = function extractFill(arg0, arg1, arr) {
   ({ fill, fillRule, fillOpacity } = arg1);
   if (null != fill) {
-    arr = arr.push("fill");
+    arr.push("fill");
     if (!fill) {
       if (typeof fill !== "number") {
         let tmp5 = obj;
       }
       arg0.fill = tmp5;
     }
-    tmp5 = extractBrushDefault(fill);
+    tmp5 = module(6589)(fill);
   } else {
     arg0.fill = obj;
     if (null != fillOpacity) {
-      arr = arr.push("fillOpacity");
-      arg0.fillOpacity = extractOpacityDefault(fillOpacity);
+      arr.push("fillOpacity");
+      arg0.fillOpacity = module(6577)(fillOpacity);
     }
     if (null != fillRule) {
       arr.push("fillRule");

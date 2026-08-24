@@ -1,22 +1,26 @@
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetCard.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../user_settings/LocaleStore.tsx";
+import closure_8 from "../../../stores/AuthenticationStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Image: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { width: 16, height: 16, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+createCacheKey = { appIcon: null, header: null, divider: null, stillSyncing: null };
+createCacheKey = { width: 16, height: 16, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetCard.tsx");
+let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetCard.tsx");
 
 export default function UserProfileApplicationWidgetCard(userId) {
   userId = userId.userId;
@@ -24,12 +28,13 @@ export default function UserProfileApplicationWidgetCard(userId) {
   if (isFirstWidget === undefined) {
     isFirstWidget = false;
   }
+  let stateFromStores;
   dependencyMap = undefined;
   let token;
   let tmp = callback3();
   let obj = userId(589);
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
+  stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [stateFromStores];
   const memo = token.useMemo(() => userId(12190).createCompactNumberFormat(stateFromStores), items1);
   obj1 = userId(589);
@@ -77,9 +82,9 @@ export default function UserProfileApplicationWidgetCard(userId) {
         let tmp21 = null != token;
         if (tmp21) {
           const _Array = Array;
-          let someResult = Array.from(tmp2(4375).OAuth2ScopesSets.APPLICATION_IDENTITIES_SCOPES).some((item, index) => {
+          let someResult = Array.from(tmp2(4375).OAuth2ScopesSets.APPLICATION_IDENTITIES_SCOPES).some((arg0) => {
             const scopes = token.scopes;
-            return scopes.includes(item);
+            return scopes.includes(arg0);
           });
           if (!someResult) {
             let scopes = token.scopes;
@@ -136,6 +141,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
     children: null
   };
   const tmp2Result1 = userId(12190);
+  const tmp31 = closure_5;
   obj6[4] = userId(5369).getWidgetTitle(widget);
   const items4 = [tmp18, ];
   let str = "text-sm/semibold";
@@ -152,7 +158,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
   obj7[3] = userId(5369).getWidgetTitle(widget);
   items4[1] = callback(userId(4734).Text, obj7);
   obj6[5] = items4;
-  let tmp30Result = callback2(closure_5, obj6);
+  let tmp30Result = tmp30(tmp31, obj6);
   if (tmp16 != null) {
     let layout = tmp16.layout;
   }
@@ -164,7 +170,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
       obj8[1] = tmp16;
       obj8[2] = result;
       obj8[3] = memo;
-      tmp32Result = callback(tmp7(12189), obj8);
+      tmp32Result = tmp32(tmp7(12189), obj8);
     } else {
       tmp32Result = null;
       if (tmp2(12188).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
@@ -173,7 +179,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
         obj9[1] = tmp16;
         obj9[2] = result;
         obj9[3] = memo;
-        tmp32Result = callback(tmp7(12279), obj9);
+        tmp32Result = tmp32(tmp7(12279), obj9);
       }
     }
   }
@@ -187,19 +193,19 @@ export default function UserProfileApplicationWidgetCard(userId) {
       obj10[0] = tmp17;
       obj10[1] = result;
       obj10[2] = memo;
-      tmp32Result = callback(tmp7(12280), obj10);
+      tmp32Result = tmp32(tmp7(12280), obj10);
     } else if (tmp2(12188).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
       const obj11 = { bottomConfig: null, resolveFieldValue: null };
       obj11[0] = tmp17;
       obj11[1] = result;
-      tmp32Result = callback(tmp7(12281), obj11);
+      tmp32Result = tmp32(tmp7(12281), obj11);
     } else {
       tmp32Result = null;
       if (tmp2(12188).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
         const obj12 = { bottomConfig: null, resolveFieldValue: null };
         obj12[0] = tmp17;
         obj12[1] = result;
-        tmp32Result = callback(tmp7(12282), obj12);
+        tmp32Result = tmp32(tmp7(12282), obj12);
       }
     }
   }
@@ -226,10 +232,10 @@ export default function UserProfileApplicationWidgetCard(userId) {
       const items6 = [tmp32Result, , ];
       const obj15 = { style: null };
       obj15[0] = tmp.divider;
-      items6[1] = callback(closure_6, obj15);
+      items6[1] = tmp32(closure_6, obj15);
       items6[2] = tmp32Result;
       obj14[1] = items6;
-      tmp30Result = callback2(tmp7(7185), obj14);
+      tmp30Result = tmp30(tmp7(7185), obj14);
       const tmp7Result1 = tmp7(7185);
     }
   }

@@ -1,10 +1,11 @@
 // _runtime/01633_context.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
+import { NativeSafeAreaProvider } from "01634_NativeSafeAreaProvider.js";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ Dimensions: c4, StyleSheet } = get_ActivityIndicator);
 let context = importAllResult.createContext(null);
@@ -50,6 +51,9 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     obj[3] = store.get("window").height;
     frame = obj;
   }
+  const tmp2 = context;
+  const tmp4 = context1;
+  const tmp7 = callback;
   const tmp8 = callback(importAllResult.useState(insets), 2);
   [tmp13, c1] = callback(obj.useState(frame), 2);
   callback = obj.useCallback((nativeEvent) => {
@@ -95,11 +99,11 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     const obj2 = { value: null, children: null };
     obj2[0] = tmp9;
     obj2[1] = children;
-    obj1[1] = <tmp2.Provider value={null}>{null}</tmp2.Provider>;
-    tmp15Result = <tmp4.Provider value={null}>{null}</tmp4.Provider>;
+    obj1[1] = tmp15(tmp2.Provider, obj2);
+    tmp15Result = tmp15(tmp4.Provider, obj1);
   }
   obj.children = tmp15Result;
-  return jsx(require("01634_NativeSafeAreaProvider.js").NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
+  return jsx(_NativeSafeAreaProvider.NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {
   onChange = onChange.onChange;
@@ -148,7 +152,7 @@ export const withSafeAreaInsets = function withSafeAreaInsets(arg0) {
       const merged = Object.assign(arg0);
       obj.insets = context;
       obj.ref = ref;
-      return <closure_0 />;
+      return closure_1_5(closure_0, obj);
     }
   });
 };

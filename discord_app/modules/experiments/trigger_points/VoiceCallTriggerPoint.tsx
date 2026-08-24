@@ -5,6 +5,6 @@ import experimentDefault3 from "../../voice_calls/VoiceCallTriggerPointExperimen
 
 const items = [experimentDefault, require("experiment").VoiceChannelHoistingExperiment, require("experiment").HangoutWindowExperiment, experimentDefault2, experimentDefault3, require("experiment").VoiceChannelBadgeExperiment];
 const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration(items, require("ExperimentBuckets").CommonTriggerPoints.VOICE_CALL, { location: "voice call initiated" });
-const result = require("obj132").fileFinishedImporting("modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/VoiceCallTriggerPoint.tsx");
 
 export const VoiceCallTriggerPoint = commonTriggerPointConfiguration;

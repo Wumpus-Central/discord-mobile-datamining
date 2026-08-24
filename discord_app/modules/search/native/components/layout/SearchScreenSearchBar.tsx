@@ -14,9 +14,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   ({ onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed } = arg0);
   const tmp = callback2();
   const items = [tmp.header, ];
+  let obj = { style: items, children: null };
   items[1] = null != backButton && tmp.headerWithBackButton;
   const items1 = [backButton, , ];
-  const obj = { ref, searchContext, setSuggestionsDismissed };
+  obj = { style: tmp.headerSearch, children: null };
+  obj = { ref, searchContext, setSuggestionsDismissed };
   const items2 = [callback(_modDef15850, obj), ];
   obj1 = { style: tmp.suggestionsAnchor, children: null };
   const obj2 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
@@ -30,11 +32,14 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   obj1[1] = callback(SearchFilterPrefixRowDefault, obj2);
   items2[1] = callback(View, obj1);
   obj[1] = items2;
-  items1[1] = callback(View, obj);
+  items1[1] = closure_4(View, obj);
+  const tmp4 = null != backButton && tmp.headerWithBackButton;
+  const tmp6 = importDefault;
+  const tmp8 = SearchFilterPrefixRowDefault;
   items1[2] = callback(View, { style: tmp.headerControlsRight, children: callback(_modDef15859, { searchContext }) });
   obj[1] = items1;
-  return callback(View, obj);
+  return closure_4(View, obj);
 }));
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");
 
 export default memoResult;

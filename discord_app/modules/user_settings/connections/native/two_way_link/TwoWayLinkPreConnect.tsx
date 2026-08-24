@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx
 import timestampDefault from "../../../../debug/Logger.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { WebBrowserType } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function _authorizeLink() {
   const self = this;
   const tmp = callback2((arg0) => {
@@ -97,7 +97,7 @@ function _authorizeLink() {
 let closure_11 = new timestampDefault("TwoWayLink");
 let closure_12 = createCacheKey.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const tmp4 = new timestampDefault("TwoWayLink");
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
 
 export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) {
   platformType = platformType.platformType;
@@ -105,13 +105,14 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   const onNext = platformType.onNext;
   ({ imgStyle, redirectDestination } = platformType);
   let callback;
+  let callback2;
   let callback1;
   ({ img, title, body } = platformType);
   const tmp = callback3();
   let obj = platformType(onNext[12]);
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
   [tmp6, c3] = callback(callback1.useState(false), 2);
-  const callback2 = callback1.useRef(undefined);
+  callback2 = callback1.useRef(undefined);
   const items = [onError, platformType];
   const items1 = [platformType, onNext];
   callback = callback1.useCallback(callback2(function*() {
@@ -159,7 +160,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            })(platformType);
+            })(closure_1_0);
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -182,8 +183,8 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
           closure_0 = arg1;
           v0 = 0;
           v0(false);
-          state = platformType(onNext[13]).getCallbackParamsFromURL(closure_0).state;
-          onError(onNext[14])(null != state, "Authorize URL state query parameter must be present");
+          state = closure_1_0(closure_1_2[13]).getCallbackParamsFromURL(closure_0).state;
+          closure_1_1(closure_1_2[14])(null != state, "Authorize URL state query parameter must be present");
           c4.current = state;
           c5 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -215,9 +216,10 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   const effect = callback1.useEffect(() => {
     const subscription = onError(onNext[15]).subscribe("USER_CONNECTIONS_LINK_CALLBACK", callback1);
     return () => {
-      onError(onNext[15]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
+      closure_1_1(closure_1_2[15]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
     };
   }, items2);
+  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   obj1 = { source: img, style: null };
   const items3 = [tmp.image, ];
@@ -226,7 +228,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   }
   items3[1] = imgStyle;
   obj1[1] = items3;
-  const items4 = [callback(closure_6, obj1), callback(platformType(onNext[16]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: title }), callback(platformType(onNext[16]).Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body }), ];
+  const items4 = [closure_9(closure_6, obj1), closure_9(platformType(onNext[16]).Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: title }), closure_9(platformType(onNext[16]).Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body }), ];
   let tmp12Result = null != redirectDestination;
   if (tmp12Result) {
     const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
@@ -235,11 +237,11 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
     const obj5 = { redirectUrl: null };
     obj5[0] = redirectDestination;
     obj4[3] = intl.format(tmp2(tmp3[17]).t.XhlYYn, obj5);
-    tmp12Result = callback(tmp2(tmp3[16]).Text, obj4);
+    tmp12Result = tmp12(tmp2(tmp3[16]).Text, obj4);
   }
   items4[3] = tmp12Result;
   obj[1] = items4;
-  const items5 = [callback2(closure_7, obj), ];
+  const items5 = [closure_10(closure_7, obj), ];
   const obj6 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj7 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
@@ -247,9 +249,9 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
   obj8[2] = intl2.string(platformType(onNext[17]).t["3PatSz"]);
   obj8[3] = callback;
   obj8[4] = tmp6;
-  obj7[1] = callback(platformType(onNext[19]).Button, obj8);
-  obj6[2] = callback(closure_7, obj7);
-  items5[1] = callback(platformType(onNext[18]).SafeAreaPaddingView, obj6);
+  obj7[1] = closure_9(platformType(onNext[19]).Button, obj8);
+  obj6[2] = closure_9(closure_7, obj7);
+  items5[1] = closure_9(platformType(onNext[18]).SafeAreaPaddingView, obj6);
   obj[1] = items5;
-  return callback2(closure_7, obj);
+  return closure_10(closure_7, obj);
 };

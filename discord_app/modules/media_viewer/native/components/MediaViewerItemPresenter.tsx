@@ -1,13 +1,13 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItemPresenter.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
 let closure_8 = { code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,0]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
 
 export default function MediaViewerItemPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
@@ -15,6 +15,9 @@ export default function MediaViewerItemPresenter(windowHeight) {
   const entranceAnimationDriver = windowHeight.entranceAnimationDriver;
   const index = windowHeight.index;
   const panGestureConfig = windowHeight.panGestureConfig;
+  let field;
+  let width;
+  let height;
   let num3;
   let diff2;
   let diff3;
@@ -24,13 +27,13 @@ export default function MediaViewerItemPresenter(windowHeight) {
   const entranceAnimation = obj.useEntranceAnimation(entranceAnimationDriver);
   ({ loads, handleLoad, handleError, handleLoadStart } = entranceAnimation);
   const MediaViewerSourcesStore = windowWidth(entranceAnimationDriver[4]).MediaViewerSourcesStore;
-  const field = MediaViewerSourcesStore.useField("spoilerIndexes");
+  field = MediaViewerSourcesStore.useField("spoilerIndexes");
   obj1 = index;
   let items = [index, field];
   const memo = index.useMemo(() => field.has(index), items);
   const size = windowHeight(entranceAnimationDriver[5])(windowWidth, windowHeight, source);
-  const width = size.width;
-  const height = size.height;
+  width = size.width;
+  height = size.height;
   const itemVisible = windowHeight.useItemVisible(index);
   let items1 = [];
   if (Array.isArray(source)) {
@@ -96,6 +99,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
     height2 = originLayout.height;
     diff2 = originLayout.x - (windowWidth - width) / 2;
     diff3 = originLayout.y - result1;
+    num3 = 1;
     let tmp19 = height2;
     let tmp20 = width2;
     diff1 = diff3;

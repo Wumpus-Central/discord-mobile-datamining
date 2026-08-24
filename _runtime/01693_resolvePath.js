@@ -1,6 +1,9 @@
 // _runtime/01693_resolvePath.js
+import { addLogBoxLog } from "01658_addLogBoxLog.js";
 import { isValidLayoutAnimationProp } from "01694_isValidLayoutAnimationProp.js";
-const require = fn;
+import { call } from "01697_call.js";
+import { t } from "01705_t.js";
+const require = arg1;
 const dependencyMap = arg6;
 function resolvePath(arg0, arg1) {
   let arr = arg1;
@@ -8,12 +11,12 @@ function resolvePath(arg0, arg1) {
     const items = [arg1];
     arr = items;
   }
-  return arr.reduce((acc, item, index) => {
-    if (!Array.isArray(acc)) {
+  return arr.reduce((obj, num) => {
+    if (!Array.isArray(obj)) {
       let tmp2;
       return tmp2;
     }
-    tmp2 = acc[item];
+    tmp2 = obj[num];
   }, arg0);
 }
 resolvePath.__closure = {};
@@ -30,6 +33,8 @@ function setPath(arg0, arg1, arg2) {
   let num = 0;
   if (0 < arr.length - 1) {
     do {
+      let tmp3 = num;
+      let tmp4 = tmp;
       if (!(arr[num] in tmp)) {
         if (typeof arr[num + 1] === "number") {
           tmp[arr[num]] = [];
@@ -50,7 +55,7 @@ setPath.__initData = { code: "function setPath_Pnpm_styleAnimationTs2(obj,path,v
 let closure_4 = { code: "function pnpm_styleAnimationTs4(){const{ColorProperties,setPath,processColor,styleAnimations,resolvePath,__DEV__,logger,isValidLayoutAnimationProp,withTiming}=this.__closure;const onFrame=function(animation,now){let stillGoing=false;const entriesToCheck=[{value:animation.styleAnimations,path:[]}];while(entriesToCheck.length>0){const currentEntry=entriesToCheck.pop();if(Array.isArray(currentEntry.value)){for(let index=0;index<currentEntry.value.length;index++){entriesToCheck.push({value:currentEntry.value[index],path:currentEntry.path.concat(index)});}}else if(typeof currentEntry.value==='object'&&currentEntry.value.onFrame===undefined){for(const key of Object.keys(currentEntry.value)){entriesToCheck.push({value:currentEntry.value[key],path:currentEntry.path.concat(key)});}}else{const currentStyleAnimation=currentEntry.value;if(currentStyleAnimation.finished){continue;}const finished=currentStyleAnimation.onFrame(currentStyleAnimation,now);if(finished){currentStyleAnimation.finished=true;if(currentStyleAnimation.callback){currentStyleAnimation.callback(true);}}else{stillGoing=true;}const isAnimatingColorProp=ColorProperties.includes(currentEntry.path[0]);setPath(animation.current,currentEntry.path,isAnimatingColorProp?processColor(currentStyleAnimation.current):currentStyleAnimation.current);}}return!stillGoing;};const onStart=function(animation,value,now,previousAnimation){const entriesToCheck=[{value:styleAnimations,path:[]}];while(entriesToCheck.length>0){const currentEntry=entriesToCheck.pop();if(Array.isArray(currentEntry.value)){for(let index=0;index<currentEntry.value.length;index++){entriesToCheck.push({value:currentEntry.value[index],path:currentEntry.path.concat(index)});}}else if(typeof currentEntry.value==='object'&&currentEntry.value.onStart===undefined){for(const key of Object.keys(currentEntry.value)){entriesToCheck.push({value:currentEntry.value[key],path:currentEntry.path.concat(key)});}}else{const prevAnimation=resolvePath(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.styleAnimations,currentEntry.path);let prevVal=resolvePath(value,currentEntry.path);if(prevAnimation&&!prevVal){prevVal=prevAnimation.current;}if(__DEV__){if(prevVal===undefined){logger.warn(\"Initial values for animation are missing for property \"+currentEntry.path.join('.'));}const propName=currentEntry.path[0];if(typeof propName==='string'&&!isValidLayoutAnimationProp(propName.trim())){logger.warn(\"'\"+propName+\"' property is not officially supported for layout animations. It may not work as expected.\");}}setPath(animation.current,currentEntry.path,prevVal);let currentAnimation;if(typeof currentEntry.value!=='object'||!currentEntry.value.onStart){currentAnimation=withTiming(currentEntry.value,{duration:0});setPath(animation.styleAnimations,currentEntry.path,currentAnimation);}else{currentAnimation=currentEntry.value;}currentAnimation.onStart(currentAnimation,prevVal,now,prevAnimation);}}};const callback=function(finished){if(!finished){const animationsToCheck=[styleAnimations];while(animationsToCheck.length>0){const currentAnimation=animationsToCheck.pop();if(Array.isArray(currentAnimation)){for(const element of currentAnimation){animationsToCheck.push(element);}}else if(typeof currentAnimation==='object'&&currentAnimation.onStart===undefined){for(const value of Object.values(currentAnimation)){animationsToCheck.push(value);}}else{const currentStyleAnimation=currentAnimation;if(!currentStyleAnimation.finished&&currentStyleAnimation.callback){currentStyleAnimation.callback(false);}}}}};return{isHigherOrder:true,onFrame:onFrame,onStart:onStart,current:{},styleAnimations:styleAnimations,callback:callback};}" };
 function withStyleAnimation(animations) {
   const _require = animations;
-  isValidLayoutAnimationProp;
+  let obj = _isValidLayoutAnimationProp;
   const fn = function i() {
     return {
       isHigherOrder: true,
@@ -63,6 +68,7 @@ function withStyleAnimation(animations) {
           let iter = items.pop();
           let _Array = Array;
           let value = iter.value;
+          let tmp = flag;
           if (Array.isArray(iter.value)) {
             let num = 0;
             let tmp2 = flag;
@@ -83,6 +89,8 @@ function withStyleAnimation(animations) {
               if (undefined === iter.value.onFrame) {
                 let _Object = Object;
                 let keys = Object.keys(iter.value);
+                let tmp9 = keys;
+                let tmp10 = keys;
                 tmp2 = flag;
                 for (const item10057 of keys) {
                   obj = { value: null, path: null };
@@ -106,14 +114,17 @@ function withStyleAnimation(animations) {
                   flag3 = flag;
                 }
               }
+              let tmp4 = callback;
+              let tmp5 = table;
               let ColorProperties = callback(table[1]).ColorProperties;
+              let tmp6 = closure_3;
               if (ColorProperties.includes(iter.path[0])) {
-                let tmp4Result = callback(table[1]);
+                let tmp4Result = tmp4(tmp5[1]);
                 let current = tmp4Result.processColor(value.current);
               } else {
                 current = value.current;
               }
-              let tmp6Result = callback(styleAnimations.current, iter.path, current);
+              let tmp6Result = tmp6(styleAnimations.current, iter.path, current);
               tmp2 = flag3;
             }
           }
@@ -148,6 +159,8 @@ function withStyleAnimation(animations) {
                 if (undefined === iter.value.onStart) {
                   let _Object = Object;
                   let keys = Object.keys(iter.value);
+                  let tmp19 = keys;
+                  let tmp20 = keys;
                   for (const item10061 of keys) {
                     obj = { value: null, path: null };
                     obj[0] = iter.value[item10061];
@@ -158,12 +171,13 @@ function withStyleAnimation(animations) {
                   }
                 }
               }
+              let tmp = closure_1_2;
               styleAnimations = undefined;
               if (styleAnimations != null) {
                 styleAnimations = styleAnimations.styleAnimations;
               }
-              let tmpResult = closure_1_2(styleAnimations, iter.path);
-              current = closure_1_2(arg1, iter.path);
+              let tmpResult = tmp(styleAnimations, iter.path);
+              current = tmp(arg1, iter.path);
               let tmp4 = tmpResult;
               if (tmpResult) {
                 tmp4 = !current;
@@ -171,16 +185,24 @@ function withStyleAnimation(animations) {
               if (tmp4) {
                 current = tmpResult.current;
               }
+              let tmp5 = closure_1_3;
               let tmp6 = closure_1_3(current.current, iter.path, current);
               if (typeof iter.value === "object") {
                 if (iter.value.onStart) {
                   value = iter.value;
+                  let tmp12 = value;
+                  let tmp13 = value;
+                  let tmp14 = current;
+                  let tmp15 = arg2;
+                  let tmp16 = tmpResult;
                   let onStartResult = value.onStart(value, tmp7, arg2, tmpResult);
                 }
               }
-              let obj2 = animations(closure_1_1[2]);
+              let tmp8 = closure_1_0;
+              let tmp9 = closure_1_1;
+              let obj2 = closure_1_0(closure_1_1[2]);
               let withTimingResult = obj2.withTiming(iter.value, { duration: 0 });
-              let tmp5Result = closure_1_3(current.styleAnimations, iter.path, withTimingResult);
+              let tmp5Result = tmp5(current.styleAnimations, iter.path, withTimingResult);
               value = withTimingResult;
             }
           } while (items.length > 0);
@@ -196,6 +218,8 @@ function withStyleAnimation(animations) {
               let arr = items.pop();
               let _Array = Array;
               if (Array.isArray(arr)) {
+                let tmp8 = arr;
+                let tmp9 = arr;
                 for (const item10031 of arr) {
                   arr = items.push(item10031);
                   continue;
@@ -205,6 +229,8 @@ function withStyleAnimation(animations) {
                   if (undefined === arr.onStart) {
                     let _Object = Object;
                     let values = Object.values(arr);
+                    let tmp5 = values;
+                    let tmp6 = values;
                     for (const item10023 of values) {
                       let arr1 = items.push(item10023);
                       continue;
@@ -226,7 +252,7 @@ function withStyleAnimation(animations) {
       }
     };
   };
-  let obj = { ColorProperties: require("01697_call.js").ColorProperties, setPath, processColor: require("01697_call.js").processColor, styleAnimations: animations, resolvePath, __DEV__: false, logger: require("01658_addLogBoxLog.js").logger, isValidLayoutAnimationProp: require("01694_isValidLayoutAnimationProp.js").isValidLayoutAnimationProp, withTiming: require("01705_t.js").withTiming };
+  obj = { ColorProperties: _call.ColorProperties, setPath, processColor: _call.processColor, styleAnimations: animations, resolvePath, __DEV__: false, logger: _addLogBoxLog.logger, isValidLayoutAnimationProp: _isValidLayoutAnimationProp.isValidLayoutAnimationProp, withTiming: _t.withTiming };
   fn.__closure = obj;
   fn.__workletHash = 1293354823532;
   fn.__initData = closure_4;

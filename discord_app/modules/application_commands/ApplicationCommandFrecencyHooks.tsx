@@ -1,12 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyHooks.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
 import handleUserSettingsProtoStoreChange from "ApplicationCommandFrecencyStore.tsx";
-import handleUserSettingsProtoStoreChange2 from "ApplicationCommandFrecencyStore.tsx";
+import closure_5 from "ApplicationCommandFrecencyStore.tsx";
 import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ getFilteredTopCommands: c3, getTopRealCommands: c4 } = handleUserSettingsProtoStoreChange);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
 
 export const useTopCommands = function useTopCommands(commandContext) {
   const _require = commandContext;

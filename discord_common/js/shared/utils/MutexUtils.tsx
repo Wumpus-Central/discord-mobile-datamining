@@ -1,7 +1,7 @@
 // discord_common/js/shared/utils/MutexUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");
 
 export const createLock = function createLock() {
   closure_0 = Promise.resolve(null);
@@ -39,9 +39,9 @@ export const createObservableLock = function createObservableLock(arg0) {
     }
     return new Promise((arg0, arg1) => {
       const nextPromise = promise.then(promise);
-      promise = promise.then(promise).then(arg0, arg1).then((result) => arr.splice(0, 1));
+      promise = promise.then(promise).then(arg0, arg1).then(() => arr.splice(0, 1));
       if (null != timerId) {
-        promise = promise.then((result) => clearTimeout(closure_2));
+        promise = promise.then(() => clearTimeout(closure_2));
       }
     });
   }

@@ -1,10 +1,11 @@
 // _runtime/13661_getSupportedNumberingSystems.js
+import { 13662__ } from "metro/13662__.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
   const _require = locale;
-  const numberingSystemNames = require("metro/13662__.js").numberingSystemNames;
-  return numberingSystemNames.filter((item, index) => (function isSupportedNumberingSystem(item, closure_0) {
+  const numberingSystemNames = _13662__.numberingSystemNames;
+  return numberingSystemNames.filter((arg0) => (function isSupportedNumberingSystem(arg0, closure_0) {
     let str = closure_0;
     if (undefined === closure_0) {
       str = "en";
@@ -12,8 +13,8 @@ arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale
     try {
       const concat = "".concat;
       const combined = "".concat(str, "-u-nu-");
-      const memoizedNumberFormat = callback(table[0]).createMemoizedNumberFormat(combined.concat(item));
-      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+      const memoizedNumberFormat = callback(table[0]).createMemoizedNumberFormat(combined.concat(arg0));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== arg0) {
         if ("123" === memoizedNumberFormat.format(123)) {
           return false;
         }
@@ -21,5 +22,5 @@ arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale
       return true;
     } catch (err) {
     }
-  })(item, closure_0));
+  })(arg0, closure_0));
 };

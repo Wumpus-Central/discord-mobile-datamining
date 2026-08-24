@@ -1,13 +1,13 @@
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import reset from "../../stores/billing/SubscriptionStore.tsx";
-import emitChanges from "../../stores/billing/UserOfferStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import closure_3 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../stores/billing/UserOfferStore.tsx";
 import GuildFeatures from "PremiumConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c5, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6, PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: error, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8, PREMIUM_TRIAL_IDS_ALL: c9 } = GuildFeatures);
-const result = require("obj132").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export const useHasActiveTrial = function useHasActiveTrial() {
   const items = [closure_3];
@@ -50,6 +50,7 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
 export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() {
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj = initialize;
   const items1 = [closure_2];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let hasActiveTrial;
@@ -67,7 +68,7 @@ export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() 
   return tmp4;
 };
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
-  const mapped = closure_9.map((item, index) => userTrialOffer.getUserTrialOffer(item));
-  const found = mapped.filter((item, index) => null != item && !item.hasExpired());
+  const mapped = closure_9.map((closure_9) => userTrialOffer.getUserTrialOffer(closure_9));
+  const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired());
   return found.shift();
 };

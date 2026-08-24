@@ -3,7 +3,8 @@ import result from "../00026_result.js";
 import resultDefault from "../00026_result.js";
 import weakSet from "../00106_weakSet.js";
 
-let obj = { topAccessibilityAction: { registrationName: "onAccessibilityAction" }, onGestureHandlerEvent: null, onGestureHandlerStateChange: null, topContentSizeChange: null, topScrollBeginDrag: null, topMessage: null, topSelectionChange: null, topLoadingFinish: null, topMomentumScrollEnd: null, topLoadingStart: null, topLoadingError: null, topMomentumScrollBegin: null, topScrollEndDrag: null, topScroll: null, topLayout: null };
+let obj = { directEventTypes: null, bubblingEventTypes: null, validAttributes: null };
+obj = { topAccessibilityAction: { registrationName: "onAccessibilityAction" }, onGestureHandlerEvent: null, onGestureHandlerStateChange: null, topContentSizeChange: null, topScrollBeginDrag: null, topMessage: null, topSelectionChange: null, topLoadingFinish: null, topMomentumScrollEnd: null, topLoadingStart: null, topLoadingError: null, topMomentumScrollBegin: null, topScrollEndDrag: null, topScroll: null, topLayout: null };
 obj[1] = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerEvent" });
 obj[2] = weakSet.DynamicallyInjectedByGestureHandler({ registrationName: "onGestureHandlerStateChange" });
 obj[3] = { registrationName: "onContentSizeChange" };

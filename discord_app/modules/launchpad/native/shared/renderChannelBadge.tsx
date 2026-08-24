@@ -7,9 +7,9 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import NewBadgeDefault from "../../../channel_list_v2/native/components/NewBadge.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/renderChannelBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/renderChannelBadge.tsx");
 
 export default function renderChannelBadge(newChannel) {
   let flag = newChannel.newChannel;
@@ -41,6 +41,7 @@ export default function renderChannelBadge(newChannel) {
         obj1[0] = shortenAndLocalizeNumber.humanizeValue(newPostCount, newChannel.locale);
         obj[2] = intl.format(getSystemLocale.t.GkAbqY, obj1);
         tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
+        const obj5 = shortenAndLocalizeNumber;
       }
     }
     if (null != postsWithUnreadsCount) {

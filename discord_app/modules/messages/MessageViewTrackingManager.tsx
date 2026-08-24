@@ -1,5 +1,5 @@
 // discord_app/modules/messages/MessageViewTrackingManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set2 from "../../../_runtime/00002_set.js";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
@@ -84,7 +84,8 @@ class MessageViewTrackingManager extends tmp2 {
 }
 const prototype = MessageViewTrackingManager.prototype;
 prototype["handleMessageBecameVisible"] = function handleMessageBecameVisible(type) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_1 = type;
   if (type.type === obj.VOICE_INVITE_EMBED) {
     const _HermesInternal2 = HermesInternal;
@@ -146,15 +147,16 @@ prototype["handleMessageListVisibilityChange"] = function handleMessageListVisib
       let _HermesInternal = HermesInternal;
       let endsWithResult = nextResult.endsWith("-" + ANNOUNCEMENT);
       if (endsWithResult) {
+        let tmp8 = nextResult;
         endsWithResult = !set.has(tmp6);
       }
       if (endsWithResult) {
+        let tmp9 = nextResult;
         let clearTimerResult = self.clearTimer(tmp6);
       }
       continue;
     }
   }
-  tmp = items[Symbol.iterator]();
 };
 prototype["clearTimer"] = function clearTimer(arg0) {
   if (null != this.currentlyVisibleMessageTimers[arg0]) {
@@ -180,7 +182,10 @@ prototype["handleChannelSelect"] = function handleChannelSelect() {
 prototype["drainBuffer"] = function drainBuffer() {
   const self = this;
   while (tmp !== undefined) {
+    let tmp3 = getAnalyticsConfig;
     let tmp4 = getAnalyticsConfig(tmp2);
+    let tmp5 = importDefault;
+    let tmp6 = dependencyMap;
     obj = expandEventPropertiesDefault;
     let trackResult = obj.track(tmp4.event, tmp4.properties);
     continue;
@@ -191,10 +196,10 @@ prototype["drainBuffer"] = function drainBuffer() {
     clearTimeout(self.batchTimerId);
     self.batchTimerId = null;
   }
-  tmp = this.batchBuffer[Symbol.iterator]();
 };
 prototype["bufferViewTrack"] = function bufferViewTrack(closure_1) {
-  const self = this;
+  let self = this;
+  self = this;
   if (this.batchBuffer.length >= 10) {
     self.drainBuffer();
   }
@@ -206,7 +211,7 @@ prototype["bufferViewTrack"] = function bufferViewTrack(closure_1) {
   }
 };
 const messageViewTrackingManager = new MessageViewTrackingManager();
-let result = obj132.fileFinishedImporting("modules/messages/MessageViewTrackingManager.tsx");
+let result = set2.fileFinishedImporting("modules/messages/MessageViewTrackingManager.tsx");
 
 export default messageViewTrackingManager;
 export const MessageViewTrackingType = obj;

@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
 import tDefault from "../../../_runtime/03975_t.js";
 
 const TENURE_BADGES = GuildFeatures.TENURE_BADGES;
-const result = obj132.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
 
 export const getTieredTenureBadgeData = function getTieredTenureBadgeData(tieredTenureBadge) {
   return TENURE_BADGES[tieredTenureBadge];

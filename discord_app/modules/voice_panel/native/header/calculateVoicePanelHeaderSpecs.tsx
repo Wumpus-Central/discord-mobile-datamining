@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/header/calculateVoicePanelHeaderSpecs.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
 const fn = function t(top) {
   const bound = Math.max(arg1, top.top);
@@ -8,7 +8,7 @@ const fn = function t(top) {
 fn.__closure = { BASE_VOICE_PANEL_HEADER_HEIGHT: 44 };
 fn.__workletHash = 6201232972174;
 fn.__initData = { code: "function calculateVoicePanelHeaderSpecs_calculateVoicePanelHeaderSpecsTsx1(safeArea,edgeGutter){const{BASE_VOICE_PANEL_HEADER_HEIGHT}=this.__closure;const paddingTop=Math.max(edgeGutter,safeArea.top);const paddingLeft=Math.max(edgeGutter,safeArea.left);const paddingRight=Math.max(edgeGutter,safeArea.right);const height=BASE_VOICE_PANEL_HEADER_HEIGHT+paddingTop;return{height:height,paddingTop:paddingTop,paddingLeft:paddingLeft,paddingRight:paddingRight};}" };
-const result = obj132.fileFinishedImporting("modules/voice_panel/native/header/calculateVoicePanelHeaderSpecs.tsx");
+const result = set.fileFinishedImporting("modules/voice_panel/native/header/calculateVoicePanelHeaderSpecs.tsx");
 
 export default fn;
 export const BASE_VOICE_PANEL_HEADER_HEIGHT = 44;

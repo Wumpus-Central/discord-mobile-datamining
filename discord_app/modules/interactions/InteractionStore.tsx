@@ -1,35 +1,35 @@
 // discord_app/modules/interactions/InteractionStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import InteractionState from "InteractionTypes.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
 
-require = fn;
-function deleteNonce(arg0) {
-  if (null == dependencyMap4[arg0]) {
+require = arg1;
+function deleteNonce(first) {
+  if (null == dependencyMap4[first]) {
     delete tmp[tmp2];
-    if (null != dependencyMap3[arg0]) {
+    if (null != dependencyMap3[first]) {
       delete tmp[tmp3];
     }
     delete tmp[tmp2];
     const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
     const _Date = Date;
     obj[0] = Date.now();
-    obj[1] = arg0;
-    obj[2] = dependencyMap3[arg0];
-    obj[3] = dependencyMap[arg0];
-    dependencyMap4[arg0] = obj;
+    obj[1] = first;
+    obj[2] = dependencyMap3[first];
+    obj[3] = dependencyMap[first];
+    dependencyMap4[first] = obj;
   } else {
     delete tmp[tmp2];
   }
 }
-const result = 5 * obj132Default.Millis.MINUTE;
-const result1 = 10 * obj132Default.Millis.SECOND;
+const result = 5 * setDefault.Millis.MINUTE;
+const result1 = 10 * setDefault.Millis.SECOND;
 let closure_8 = {};
 let closure_9 = {};
 let closure_10 = {};
@@ -45,7 +45,7 @@ prototype["initialize"] = function initialize() {
 };
 prototype["getInteraction"] = function getInteraction(closure_0) {
   let tmp2 = null;
-  if (null != dependencyMap2[_require.id]) {
+  if (null != dependencyMap2[closure_0.id]) {
     tmp2 = dependencyMap[tmp];
   }
   return tmp2;
@@ -54,10 +54,14 @@ prototype["getMessageInteractionStates"] = function getMessageInteractionStates(
   const obj = {};
   const entries = Object.entries(closure_8);
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     let tmp6 = tmp5[1];
+    let tmp7 = dependencyMap3;
     let tmp8 = dependencyMap3[tmp5[0]];
     if (null != tmp8) {
+      let tmp10 = tmp8;
+      let tmp11 = tmp6;
       obj[tmp9] = tmp6.state;
     }
     continue;
@@ -116,13 +120,16 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       const timestamp = Date.now();
       const entries = Object.entries(closure_13);
       while (tmp5 !== undefined) {
+        let tmp7 = callback;
         let tmp8 = callback(tmp6, 2);
+        let tmp10 = closure_7;
         if (timestamp - tmp8[1].insertedAt > closure_7) {
+          let tmp11 = closure_13;
+          let tmp12 = tmp9;
           delete tmp2[tmp];
         }
         continue;
       }
-      tmp5 = entries[Symbol.iterator]();
     }, closure_6);
   },
   INTERACTION_QUEUE: function handleInteractionQueue(arg0) {
@@ -141,12 +148,13 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     } else {
       if (null != dependencyMap[nonce]) {
         if (tmp3.state === InteractionState.InteractionState.QUEUED) {
-          tmp3.state = InteractionState.InteractionState.CREATED;
+          tmp3.state = tmp4(4809).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);
           }
         }
+        tmp4 = require;
       }
       return false;
     }
@@ -255,9 +263,14 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       const entries = Object.entries(closure_8);
       const tmp16 = entries[Symbol.iterator]();
       while (tmp16 !== undefined) {
+        let tmp4 = callback;
         let tmp5 = callback(tmp2, 2);
         let first = tmp5[0];
+        let tmp7 = require;
+        let tmp8 = dependencyMap;
         if (tmp5[1].state === InteractionState.InteractionState.FAILED) {
+          let tmp9 = deleteNonce;
+          let tmp10 = first;
           let tmp11 = deleteNonce(first);
         }
         continue;
@@ -327,13 +340,15 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     }
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
+    let sessionId;
+    importDefault = undefined;
     const participants = instance.instance.participants;
-    const sessionId = store.getSessionId();
+    sessionId = store.getSessionId();
     importDefault = store.getId();
-    const found = participants.find((item, index) => {
-      let tmp = item.user_id === closure_1;
+    const found = participants.find((user_id) => {
+      let tmp = user_id.user_id === closure_1;
       if (tmp) {
-        tmp = item.session_id === closure_0;
+        tmp = user_id.session_id === closure_0;
       }
       return tmp;
     });
@@ -369,6 +384,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
           }
           if (tmp18) {
             trackInviteDefault.deleteMessage(interaction.data.channelId, messageId, true);
+            const obj2 = trackInviteDefault;
           }
         }
         tmp7 = null != interaction && null != messageId;
@@ -376,7 +392,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     }
   }
 });
-const result2 = require("obj132").fileFinishedImporting("modules/interactions/InteractionStore.tsx");
+const result2 = require("set").fileFinishedImporting("modules/interactions/InteractionStore.tsx");
 
 export default interactionStore;
 export const STALE_INTERACTION_INTERVAL = result;

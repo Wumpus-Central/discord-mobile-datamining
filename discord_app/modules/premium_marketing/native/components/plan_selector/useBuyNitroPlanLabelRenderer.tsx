@@ -1,21 +1,23 @@
 // discord_app/modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../../../user_settings/LocaleStore.tsx";
+import closure_5 from "../../../../user_settings/LocaleStore.tsx";
 import GuildFeatures from "../../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ DISCOUNTS: closure_6, SubscriptionPlans: error } = GuildFeatures);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey = { labelRow: null, discountBadge: null, discountBadgeText: null };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textTransform: "uppercase" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx");
+let obj1 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx");
 
 export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRenderer() {
   const tmp = callback();
@@ -53,21 +55,22 @@ export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRendere
       let tmp21Result = null != stringResult;
       if (tmp21Result) {
         obj1 = { style: null, children: null };
-        obj1[0] = lib.discountBadge;
+        obj1[0] = tmp20.discountBadge;
         const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
-        obj2[2] = lib.discountBadgeText;
+        obj2[2] = tmp20.discountBadgeText;
         obj2[3] = stringResult;
-        obj1[1] = closure_1_8(lib(token1[10]).Text, obj2);
-        tmp21Result = closure_1_8(View, obj1);
+        obj1[1] = tmp21(lib(token1[10]).Text, obj2);
+        tmp21Result = tmp21(tmp19, obj1);
       }
       items[1] = tmp21Result;
       obj[1] = items;
-      return closure_1_9(View, obj);
+      return closure_1_9(closure_1_4, obj);
     }
     if (tmp2) {
       if (null != discounted.percentOff) {
         const intl2 = lib(token1[8]).intl;
-        const obj3 = lib(token1[9]);
+        let obj3 = { discount: null };
+        obj3 = lib(token1[9]);
         obj3[0] = obj3.formatPercent(closure_1_5.locale, discounted.percentOff / 100);
         stringResult = intl2.format(lib(token1[8]).t.IAybsG, obj3);
       }

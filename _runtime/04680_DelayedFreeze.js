@@ -1,12 +1,13 @@
 // _runtime/04680_DelayedFreeze.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 
 export default function DelayedFreeze(children) {
   let freeze = children.freeze;
+  dependencyMap = undefined;
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
   const items = [freeze];

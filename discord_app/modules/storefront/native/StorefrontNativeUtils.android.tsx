@@ -1,8 +1,9 @@
 // discord_app/modules/storefront/native/StorefrontNativeUtils.android.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
 
 export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   sku = sku.sku;
@@ -23,17 +24,17 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   const effect = React.useEffect(() => {
     if (null != _null) {
       const items = [tmp];
-      const inAppSkus = _null(dependencyMap[1]).loadInAppSkus(items);
-      const obj = _null(dependencyMap[1]);
+      const inAppSkus = _null(closure_1_2[1]).loadInAppSkus(items);
+      const obj = _null(closure_1_2[1]);
     }
   }, items);
   const items1 = [stateFromStores(5319)];
   const items2 = [tmp2];
-  stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  stateFromStores = _initialize.useStateFromStores(items1, () => {
     let product = null;
     if (null != c0) {
-      product = stateFromStores(dependencyMap[3]).getProduct(tmp);
-      const obj = stateFromStores(dependencyMap[3]);
+      product = stateFromStores(closure_1_2[3]).getProduct(tmp);
+      const obj = stateFromStores(closure_1_2[3]);
     }
     return product;
   }, items2);
@@ -41,11 +42,11 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   return React.useMemo(() => {
     let priceString;
     if (stateFromStores != null) {
-      priceString = stateFromStores.priceString;
+      priceString = tmp.priceString;
     }
     if (null != priceString) {
       let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
-      ({ priceString: obj2[0], priceString: obj2[3] } = stateFromStores);
+      ({ priceString: obj2[0], priceString: obj2[3] } = tmp);
     } else {
       obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     }

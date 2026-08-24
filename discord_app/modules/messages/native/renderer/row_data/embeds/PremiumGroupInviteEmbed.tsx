@@ -1,8 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
-import obj132 from "../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import messagesProxyDefault from "../../../../../premium/premium_group/PremiumGroup.messages.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import frozen from "../../EmbedUtils.tsx";
 import registerAssetDefault from "../../../../../../../_runtime/08267_registerAsset.js";
@@ -10,7 +8,7 @@ import getPremiumGroupInviteEmbedText from "../../../../../premium/premium_group
 import SubscriptionStatusTypes from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: c4 } = SubscriptionStatusTypes);
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx");
 
 export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEmbed(message, theme, id, channel) {
   if (null != message.author) {
@@ -21,10 +19,13 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     obj[3] = ThemesDefault.colors.BACKGROUND_MOD_NORMAL;
     obj[4] = ThemesDefault.colors.BLACK;
     obj[5] = ThemesDefault.colors.WHITE;
+    const obj4 = createCacheKey;
+    const tmp8 = importDefault;
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createCacheKey.createNativeStyleProperties(obj)(theme));
     const tmp9 = createCacheKey.createNativeStyleProperties(obj)(theme);
     const author = message.author;
     const assetUriForEmbed = frozen.getAssetUriForEmbed(registerAssetDefault);
+    const obj6 = frozen;
     obj = { sender: null, channel: null, isSender: null, inviteState: null };
     obj[0] = author;
     obj[1] = channel;
@@ -33,7 +34,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     const premiumGroupInviteEmbedText = getPremiumGroupInviteEmbedText.getPremiumGroupInviteEmbedText(obj);
     if (null != premiumGroupInviteEmbedText) {
       ({ header, body } = premiumGroupInviteEmbedText);
-      const intl = getSystemLocale.intl;
+      const intl = tmp6(1236).intl;
       obj = { learnMoreLinkOnClick: null };
       obj1 = { action: "bindOpenUrl", url: null, linkColor: null };
       obj1[1] = closure_3;
@@ -45,9 +46,9 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[2] = backgroundColor;
       obj2[3] = backgroundColor;
       obj2[4] = assetUriForEmbed;
-      const intl2 = getSystemLocale.intl;
-      const formatToPartsResult = intl.formatToParts(messagesProxyDefault["9VTnfI"], obj);
-      obj2[5] = intl2.string(getSystemLocale.t.oW0eUd).toUpperCase();
+      const intl2 = tmp6(1236).intl;
+      const formatToPartsResult = intl.formatToParts(tmp8(2917)["9VTnfI"], obj);
+      obj2[5] = intl2.string(tmp6(1236).t.oW0eUd).toUpperCase();
       obj2[6] = betaPillTextColor;
       obj2[7] = betaPillBackgroundColor;
       obj2[8] = body;
@@ -55,5 +56,6 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj2[10] = formatToPartsResult;
       return obj2;
     }
+    const obj7 = getPremiumGroupInviteEmbedText;
   }
 };

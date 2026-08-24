@@ -10,14 +10,14 @@ import useIsStageSpeakingDisabledForCurrentUser from "useStageSpeakingForCurrent
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
 import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
 import fillChunk from "StageChannelUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../stores/VoiceStateStore.tsx";
 import ME from "../../Constants.tsx";
 import { SafetyToastType } from "../safety_common/Constants.tsx";
 
-require = fn;
-function audienceAckRequestToSpeak(channel, closure_1) {
+require = arg1;
+function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -32,7 +32,7 @@ function audienceAckRequestToSpeak(channel, closure_1) {
   voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(channel.id);
   obj1 = useAudienceRequestToSpeakState;
   const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
-  if (!closure_1) {
+  if (!suppress) {
     let objResult = useIsStageSpeakingDisabledForCurrentUser;
     if (objResult.shouldAgeVerifyToSpeakForCurrentUser()) {
       return Promise.resolve();
@@ -47,7 +47,7 @@ function audienceAckRequestToSpeak(channel, closure_1) {
   }
   const HTTP = sendRequest.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
-  obj1 = { suppress: closure_1, request_to_speak_timestamp: null, channel_id: channel.id };
+  obj1 = { suppress, request_to_speak_timestamp: null, channel_id: channel.id };
   if (flag) {
     const obj2 = { silent: null };
     obj2[0] = flag;
@@ -61,7 +61,6 @@ function audienceAckRequestToSpeak(channel, closure_1) {
   result = obj.rejectWithMigratedError();
   obj[2] = result;
   HTTP.patch(obj);
-  tmp7 = audienceRequestToSpeakState !== useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK || closure_1;
 }
 function _startStage() {
   const self = this;
@@ -103,15 +102,15 @@ function _startStage() {
               closure_4 = tmp3;
               closure_1 = undefined;
               if ("" !== closure_1) {
-                if (closure_1_5.getVoiceChannelId() !== callback.id) {
+                if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
                   let obj2 = callback(8057);
-                  obj2.connectToStage(callback);
+                  obj2.connectToStage(tmp28);
                 }
                 const obj4 = callback(8067);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj4.startStageInstance(callback.id, tmp29, closure_2, dependencyMap);
+                obj1[0] = obj4.startStageInstance(tmp28.id, tmp29, tmp30, tmp31);
                 return obj1;
               } else {
                 c7 = 3;
@@ -294,15 +293,17 @@ function _endStage() {
   return applyArgumentsResult;
 }
 ({ AbortCodes: error, AnalyticEvents: closure_8, Endpoints: c9 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 
-export const toggleRequestToSpeak = function toggleRequestToSpeak(closure_0, arg1) {
-  const guildId = _require.getGuildId();
+export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, arg1) {
+  const guildId = channel_id.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   if (arg1) {
-    let obj = {};
-    const merged = Object.assign(fillChunk.getStageChannelMetadata(_require));
+    let obj = collectGuildAnalyticsMetadata;
+    obj = {};
+    const merged = Object.assign(fillChunk.getStageChannelMetadata(channel_id));
     obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj);
+    const obj3 = fillChunk;
   }
   const HTTP = sendRequest.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
@@ -312,7 +313,7 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(closure_0, arg
     const date = new Date();
     toISOStringResult = date.toISOString();
   }
-  obj[1] = { request_to_speak_timestamp: toISOStringResult, channel_id: _require.id };
+  obj[1] = { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id };
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
@@ -320,17 +321,18 @@ export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
   const guildId = voiceChannel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = sendRequest.HTTP;
-  { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
-  let obj = { suppress: false, request_to_speak_timestamp: new Date().toISOString(), channel_id: voiceChannel.id };
+  let obj = { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
+  obj = { suppress: false, request_to_speak_timestamp: new Date().toISOString(), channel_id: voiceChannel.id };
   obj[1] = obj;
   const date = new Date();
   obj[2] = sendRequest.rejectWithMigratedError();
-  return HTTP.patch(obj).catch((error) => {
-    if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+  const obj4 = sendRequest;
+  return HTTP.patch(obj).catch((code) => {
+    if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
       callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
       const obj = callback(table[9]);
     }
-    return error;
+    return code;
   });
 };
 export { audienceAckRequestToSpeak };
@@ -341,24 +343,25 @@ export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
   }
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = sendRequest.HTTP;
-  { url: closure_9.UPDATE_VOICE_STATE(guildId), body: obj, rejectWithError: null };
+  obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: obj, rejectWithError: null };
   obj = { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false };
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const setUserSuppress = function setUserSuppress(closure_0, id, suppress) {
-  const guildId = _require.getGuildId();
+  const guildId = closure_0.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = sendRequest.HTTP;
-  { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: obj, rejectWithError: null };
-  obj = { suppress, channel_id: _require.id };
+  obj = { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: obj, rejectWithError: null };
+  obj = { suppress, channel_id: closure_0.id };
   obj[2] = sendRequest.rejectWithMigratedError();
-  return HTTP.patch(obj).catch((error) => {
-    if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+  const obj3 = sendRequest;
+  return HTTP.patch(obj).catch((code) => {
+    if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
       callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
       const obj = callback(table[9]);
     }
-    return error;
+    return code;
   });
 };
 export const moveUserToAudience = function moveUserToAudience(user, voiceChannel) {
@@ -375,12 +378,13 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
       obj[1] = voiceChannel.id;
       obj[1] = obj;
       obj[2] = sendRequest.rejectWithMigratedError();
-      HTTP.patch(obj).catch((error) => {
-        if (error.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
+      const obj3 = sendRequest;
+      HTTP.patch(obj).catch((code) => {
+        if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
           callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
           const obj = callback(table[9]);
         }
-        return error;
+        return code;
       });
       const HTTP2 = sendRequest.HTTP;
       obj = { url: null, body: null, rejectWithError: null };
@@ -401,8 +405,8 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
   }
   if (tmp2) {
     showTooManyUserGuildsAlertDefault.setChannel(guildId, id.id, null);
+    const obj = showTooManyUserGuildsAlertDefault;
   }
-  tmp2 = null != guildId && null != id;
 };
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
@@ -412,17 +416,16 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
   const obj2 = fromStringAll;
   if (arg2) {
     obj.allow = obj2.add(obj.allow, REQUEST_TO_SPEAK);
-    let tmp5Result = fromStringAll;
+    let tmp5Result = tmp5(506);
     obj.deny = tmp5Result.remove(obj.deny, REQUEST_TO_SPEAK);
   } else {
     obj.allow = obj2.remove(obj.allow, REQUEST_TO_SPEAK);
-    tmp5Result = fromStringAll;
+    tmp5Result = tmp5(506);
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
   const result = _modDef4770.updatePermissionOverwrite(getGuildId.id, obj);
-  const tmp2Result = _modDef4770;
 };
-export const startStage = function startStage(closure_1_0, closure_1_2, GUILD_ONLY, closure_1_11) {
+export const startStage = function startStage(closure_1_0, arg1, GUILD_ONLY, closure_1_11) {
   const self = this;
   const apply = _startStage.apply;
   if (typeof apply === "unknown") {
@@ -432,7 +435,7 @@ export const startStage = function startStage(closure_1_0, closure_1_2, GUILD_ON
   }
   return applyArgumentsResult;
 };
-export const editStage = function editStage(closure_1_0, closure_1_2, GUILD_ONLY) {
+export const editStage = function editStage(closure_1_0, arg1, GUILD_ONLY) {
   const self = this;
   const apply = _editStage.apply;
   if (typeof apply === "unknown") {

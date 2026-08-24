@@ -1,32 +1,37 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_6, AnalyticsSections: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_40 };
+const obj2 = { paddingTop: ThemesDefault.space.PX_40 };
 createCacheKey[3] = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj3 = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
 createCacheKey[5] = { textTransform: "none" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
+const obj4 = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
 
 export default function UsernameSearchScreen(navigation) {
   navigation = navigation.navigation;
   let ref;
   const tmp = callback3();
   const effect = React.useEffect(() => {
-    ref(table[6]);
-    const obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
+    let obj = ref(table[6]);
+    obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
     obj.track(constants.FRIEND_ADD_VIEWED, obj);
   }, []);
   const insets = ref(5441)().insets;
@@ -35,8 +40,8 @@ export default function UsernameSearchScreen(navigation) {
   const effect1 = React.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = navigation(closure_1_2[8]).getIsScreenReaderEnabled();
-      const obj = navigation(closure_1_2[8]);
+      closing = closure_1_0(closure_1_2[8]).getIsScreenReaderEnabled();
+      const obj = closure_1_0(closure_1_2[8]);
     }
     if (!closing) {
       const current = ref.current;
@@ -58,15 +63,16 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }
+  obj = { style: tmp.background, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.content, clientThemesOverride];
-  tmp3(6551);
+  let tmp3Result = tmp3(6551);
   const items2 = [callback(ref(9091), { absolute: true }), ];
   obj1 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, { paddingBottom: insets.bottom + ref(712).space.PX_16 }];
   obj1[2] = items3;
   const obj3 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
-  const tmp3Result = tmp3(13315);
+  tmp3Result = tmp3(13315);
   const intl = tmp7(1236).intl;
   obj3[2] = intl.string(navigation(1236).t.YEOwDM);
   obj3[3] = tmp.headerText;

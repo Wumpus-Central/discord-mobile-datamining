@@ -1,6 +1,7 @@
 // discord_app/modules/quests/BountyStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let c0 = false;
 let closure_1 = [];
@@ -27,10 +28,12 @@ Object.defineProperty(prototype, "questHomeBounties", {
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
   return set.has(id);
 };
-prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(first) {
   let num = 0;
   while (tmp !== undefined) {
+    let tmp3 = set;
     if (set.has(tmp2.id)) {
+      let tmp4 = num;
       num = num + 1;
     }
     continue;
@@ -41,11 +44,11 @@ prototype["isClaimingBountyReward"] = function isClaimingBountyReward(closure_0)
   return set1.has(closure_0);
 };
 prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
-  return closure_1.every((item, index) => set.has(item.id));
+  return closure_1.every((id) => set.has(id.id));
 };
 prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(arg0, adContentId) {
-  map.get(arg0);
-  let value;
+  let value = map.get(arg0);
+  value = undefined;
   if (value != null) {
     value = value.get(adContentId);
   }
@@ -114,6 +117,6 @@ const bountyStore = new BountyStore(dispatcherDefault, {
     map = new Map();
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/quests/BountyStore.tsx");
+let result = set.fileFinishedImporting("modules/quests/BountyStore.tsx");
 
 export default bountyStore;

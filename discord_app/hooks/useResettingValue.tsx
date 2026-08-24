@@ -1,11 +1,11 @@
 // discord_app/hooks/useResettingValue.tsx
 import useInitialValueDefault from "useInitialValue.tsx";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 ({ useState: c4, useCallback: c5, useEffect: closure_6 } = noop);
-const result = require("obj132").fileFinishedImporting("hooks/useResettingValue.tsx");
+const result = require("set").fileFinishedImporting("hooks/useResettingValue.tsx");
 
 export default function useResettingValue(arg0, arg1) {
   closure_0 = arg0;

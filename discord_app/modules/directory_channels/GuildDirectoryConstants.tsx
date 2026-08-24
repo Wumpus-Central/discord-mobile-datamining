@@ -1,14 +1,15 @@
 // discord_app/modules/directory_channels/GuildDirectoryConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
-let obj = { ALL: -1, [-1]: "ALL", UNCATEGORIZED: 0, [0]: "UNCATEGORIZED", SCHOOL_CLUB: 1, [1]: "SCHOOL_CLUB", CLASS: 2, [2]: "CLASS", STUDY_SOCIAL: 3, [3]: "STUDY_SOCIAL", MISC: 5, [5]: "MISC" };
+let obj = { CREATE: "CREATE", HUB_SCHOOL_CLUB: "HUB_SCHOOL_CLUB", HUB_STUDY: "HUB_STUDY", HUB_CLASS: "HUB_CLASS", HUB_SOCIAL: "HUB_SOCIAL", HUB_MAJOR: "HUB_MAJOR", HUB_DORM: "HUB_DORM" };
+obj = { ALL: -1, [-1]: "ALL", UNCATEGORIZED: 0, [0]: "UNCATEGORIZED", SCHOOL_CLUB: 1, [1]: "SCHOOL_CLUB", CLASS: 2, [2]: "CLASS", STUDY_SOCIAL: 3, [3]: "STUDY_SOCIAL", MISC: 5, [5]: "MISC" };
 let c7 = "883060064561299456";
-const result = obj132.fileFinishedImporting("modules/directory_channels/GuildDirectoryConstants.tsx");
+const result = set.fileFinishedImporting("modules/directory_channels/GuildDirectoryConstants.tsx");
 
 export const DirectoryEntryTypes = { GUILD: 0, [0]: "GUILD", GUILD_SCHEDULED_EVENT: 1, [1]: "GUILD_SCHEDULED_EVENT" };
 export const CreateOrAddGuildSlideTypes = { GUILD_TEMPLATES: "guild-templates", CUSTOMIZE_NEW_GUILD: "customize-new-guild", CHOOSE_GUILD: "choose-guild", CUSTOMIZE_EXISTING_GUILD: "customize-existing-guild", CONFIRMATION: "confirmation" };

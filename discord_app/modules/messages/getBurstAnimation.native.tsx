@@ -1,6 +1,7 @@
 // discord_app/modules/messages/getBurstAnimation.native.tsx
 import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorStep.js";
 
+let closure_0 = arg1;
 let obj = {
   load() {
     return callback(7533);
@@ -187,7 +188,7 @@ const items1 = [
     }
   }
 ];
-let closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
+closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
@@ -243,11 +244,13 @@ let closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
         } else {
           const _HermesInternal = HermesInternal;
           burstAnimationHash = callback(table[37]).getBurstAnimationHash("" + callback + table + closure_2);
+          let tmp10 = closure_5;
           if (flag) {
             let tmp6 = closure_2;
           } else {
             tmp6 = length;
           }
+          tmp10 = burstAnimationHash;
           obj = tmp6[burstAnimationHash % length.length];
           obj.load();
           c7 = 3;
@@ -262,9 +265,9 @@ let closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
   iter.next();
   return iter;
 });
-const result = require("obj132").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
-export const getBurstAnimation = function(arg0, arg1, name, arg3) {
+export const getBurstAnimation = function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

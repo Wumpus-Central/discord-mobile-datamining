@@ -1,14 +1,15 @@
 // discord_app/modules/cache/trackCacheSkipped.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getDeviceMetadata from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
+const result = set.fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
 
 export default function trackCacheSkipped(arg0, message) {
-  const obj = { load_id: getDeviceMetadata.currentLoadId(), reason: arg0, error_message: null, error_stack: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { load_id: getDeviceMetadata.currentLoadId(), reason: arg0, error_message: null, error_stack: null };
   message = undefined;
   if (message != null) {
     message = message.message;

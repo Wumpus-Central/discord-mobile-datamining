@@ -1,27 +1,30 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardWrapper.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import initialize from "../../../lurker_mode/LurkingStore.tsx";
+import closure_3 from "../../../lurker_mode/LurkingStore.tsx";
 import { isThread } from "../../../../records/ChannelRecord.tsx";
-import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import recomputeGuild from "../../../../stores/GuildVerificationStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../stores/GuildVerificationStore.tsx";
+import closure_8 from "../../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
 import { TextAreaCta } from "../ChatInputConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "../../../phone/PhoneConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ AnalyticEvents: unpackModuleId, ChannelTypes: closure_12, VerificationCriteria: map1 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
 
 export default function ChatInputGuardWrapper(channel) {
   channel = channel.channel;
+  let guildId;
   let stateFromStores;
+  let notClaimed;
+  let verificationRole;
   ({ screenIndex, canSendMessages, canCreateThreads, children, isReadonly, onJumpToPresent } = channel);
-  const guildId = channel.getGuildId();
+  guildId = channel.getGuildId();
   const tmp3 = stateFromStores;
   let obj = channel(stateFromStores[12]);
   const items = [closure_6];
@@ -29,8 +32,8 @@ export default function ChatInputGuardWrapper(channel) {
   obj1 = channel(stateFromStores[12]);
   const items1 = [closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getCheck(guildId));
-  const notClaimed = stateFromStores1.notClaimed;
-  const verificationRole = stateFromStores1.verificationRole;
+  notClaimed = stateFromStores1.notClaimed;
+  verificationRole = stateFromStores1.verificationRole;
   ({ notPhoneVerified, notEmailVerified, newMember, newAccount, memberDeadline, accountDeadline, missingVerificationRole } = stateFromStores1);
   let obj2 = channel(stateFromStores[12]);
   const items2 = [closure_9, closure_5];
@@ -56,6 +59,8 @@ export default function ChatInputGuardWrapper(channel) {
     }
     obj[2] = tmp8;
     obj2 = channel(stateFromStores[14]);
+    const tmp6 = channel;
+    const tmp7 = stateFromStores;
     obj[3] = channel(stateFromStores[15]).hasAutomodQuarantinedProfile(member);
     return obj;
   }, items3);
@@ -67,9 +72,9 @@ export default function ChatInputGuardWrapper(channel) {
   }
   obj = { channelId: channel.id };
   const tmp10 = guildId(tmp3[17])(obj);
-  tmp2(tmp3[18]);
+  let tmp2Result = tmp2(tmp3[18]);
   let tmp8 = guildId(stateFromStores[16])(user, channel);
-  const tmp2Result = tmp2(tmp3[19]);
+  tmp2Result = tmp2(tmp3[19]);
   const tmp11 = tmp2Result.useIsMessageRequest(channel.id) && channel.isPrivate();
   const tmp12 = tmp2Result.useIsSpamMessageRequest(channel.id) && channel.isPrivate();
   const isForumPostResult = channel.isForumPost();
@@ -140,7 +145,7 @@ export default function ChatInputGuardWrapper(channel) {
             let obj = channel;
             if (channel.isDM()) {
               obj = { cta_type: null };
-              obj[0] = TextAreaCta.UNBLOCK;
+              obj[0] = closure_1_10.UNBLOCK;
               guildId(stateFromStores[22]).trackWithMetadata(closure_1_11.TEXT_AREA_CTA_CLICKED, obj);
               const obj2 = guildId(stateFromStores[22]);
               guildId(stateFromStores[23]).unblockUser(obj.getRecipientId());
@@ -182,8 +187,8 @@ export default function ChatInputGuardWrapper(channel) {
                 const intl10 = tmp2(tmp3[35]).intl;
                 obj9[2] = intl10.string(tmp2(tmp3[35]).t["50gfOv"]);
                 obj9[3] = function handleVerifyPhone() {
-                  guildId(stateFromStores[22]);
-                  let obj = { cta_type: constants.VERIFY_PHONE };
+                  let obj = guildId(stateFromStores[22]);
+                  obj = { cta_type: constants.VERIFY_PHONE };
                   obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj);
                   obj = { reason: null };
                   const obj3 = guildId(stateFromStores[24]);
@@ -200,8 +205,8 @@ export default function ChatInputGuardWrapper(channel) {
                 const intl8 = tmp2(tmp3[35]).intl;
                 obj10[2] = intl8.string(tmp2(tmp3[35]).t.lm1UKt);
                 obj10[3] = function handleVerifyEmail() {
-                  guildId(stateFromStores[22]);
-                  const obj = { cta_type: constants.VERIFY_EMAIL };
+                  let obj = guildId(stateFromStores[22]);
+                  obj = { cta_type: constants.VERIFY_EMAIL };
                   obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj);
                   guildId(stateFromStores[28]).open();
                 };
@@ -258,8 +263,8 @@ export default function ChatInputGuardWrapper(channel) {
                       obj17 = { type: "simple-action", message: null };
                       obj17[1] = formatResult;
                     }
-                    tmp21Result = jsx(tmp7(tmp3[33]), obj17);
-                    tmp23 = jsx;
+                    tmp21Result = tmp27(tmp7(tmp3[33]), obj17);
+                    tmp23 = tmp27;
                     const tmp7Result6 = tmp7(tmp3[33]);
                   }
                 }
@@ -276,15 +281,15 @@ export default function ChatInputGuardWrapper(channel) {
                           obj18[3] = function handleCreateThread() {
                             const result = channel(stateFromStores[30]).navigateToThreadCreation(channel, "chat input guard");
                           };
-                          tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-                          tmp23 = jsx;
+                          tmp21Result = tmp21(tmp7(tmp3[33]), obj18);
+                          tmp23 = tmp21;
                           const tmp7Result7 = tmp7(tmp3[33]);
                         } else {
                           const obj19 = { guildId: null, channel: null };
                           obj19[0] = guildId;
                           obj19[1] = channel;
-                          tmp21Result = jsx(tmp7(tmp3[45]), { guildId: null, channel: null });
-                          tmp23 = jsx;
+                          tmp21Result = tmp21(tmp7(tmp3[45]), obj19);
+                          tmp23 = tmp21;
                         }
                       }
                     }

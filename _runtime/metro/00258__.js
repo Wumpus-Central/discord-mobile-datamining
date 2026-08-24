@@ -4,7 +4,7 @@ let closure_1 = { name: "default" };
 arg5.default = {
   setActiveScene(arg0) {
     closure_1 = arg0;
-    const item = arr.forEach((item, index) => item(closure_1));
+    const item = arr.forEach((arg0) => arg0(closure_1));
   },
   getActiveScene() {
     return closure_1;
@@ -14,7 +14,7 @@ arg5.default = {
     arr = arr.push(arg0);
     return {
       remove() {
-        closure_0 = closure_0.filter((item, index) => closure_0 !== item);
+        closure_0 = closure_0.filter((arg0) => closure_0 !== arg0);
       }
     };
   }

@@ -1,19 +1,19 @@
 // discord_app/modules/premium/premium_group/PremiumGroupStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import reset from "../../../stores/billing/SubscriptionStore.tsx";
+import closure_3 from "../../../stores/billing/SubscriptionStore.tsx";
 import SubscriptionStatusTypes from "PremiumGroupConstants.tsx";
 import { NOOP_NULL } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function handleMutationStart() {
   closure_7.membersData.isUpdating = true;
 }
 function handleMutationSuccess(subscriptionId) {
   subscriptionId = subscriptionId.subscriptionId;
   dispatcherDefault.wait(() => {
-    const subscriptionGroupMembers = subscriptionId(dependencyMap[4]).fetchSubscriptionGroupMembers(subscriptionId);
-    return subscriptionGroupMembers.catch(NOOP_NULL);
+    const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
+    return subscriptionGroupMembers.catch(closure_1_6);
   });
   closure_7.membersData.isUpdating = false;
 }
@@ -76,10 +76,11 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     let flag = !isFetching;
     if (!isFetching) {
       dispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(dependencyMap[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(NOOP_NULL);
+        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(closure_1_6);
       });
       flag = true;
+      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -102,6 +103,7 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
         return premiumGroupMembership.catch(closure_6);
       });
       flag = true;
+      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -133,8 +135,8 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     subscriptionId = subscriptionId.subscriptionId;
     if (subscriptionId.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
       dispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(dependencyMap[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(NOOP_NULL);
+        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(closure_1_6);
       });
       closure_7.membersData.isUpdating = false;
       return true;
@@ -146,6 +148,6 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
 
 export default premiumGroupStore;

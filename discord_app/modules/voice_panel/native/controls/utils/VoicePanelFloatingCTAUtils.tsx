@@ -3,34 +3,37 @@ import getSystemLocale from "../../../../../intl/index.native.tsx";
 import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import XSmallIcon from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import getDeviceSpecificString from "../../../../intl/overrides/getDeviceSpecificString.tsx";
-import SoundboardIcon from "../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
-import showSoundboardSoundPickerActionSheet from "../../../../soundboard/native/SoundboardActionCreators.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { Pressable } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getParticipants from "../../../../calls/ChannelRTCStore.tsx";
-import initialize from "../../../../guild_scheduled_events/EventBannerStore.tsx";
+import closure_6 from "../../../../calls/ChannelRTCStore.tsx";
+import closure_7 from "../../../../guild_scheduled_events/EventBannerStore.tsx";
 import { isGuildScheduledEventActive as closure_8 } from "../../../../guild_scheduled_events/GuildScheduledEventStore.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../../stores/ChannelStore.tsx";
 import { GuildScheduledEventEntityTypes as closure_10 } from "../../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
+import { CircleErrorIcon } from "../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
+import { XSmallIcon } from "../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
+import { RowButtonWrapper } from "../../../../../design/components/TableRow/native/RowButton.native.tsx";
+import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
-require = fn;
+require = arg1;
 function useFloatingCTAProps(stateFromStores) {
   obj = React;
   let tmp3 = stateFromStores(nextRecurrenceIdInEvent[29])(React.useContext(stateFromStores(nextRecurrenceIdInEvent[10])).showFloatingCTA);
+  let _require = tmp3;
   stateFromStores = undefined;
   const setShowFloatingCTA = React.useContext(stateFromStores(nextRecurrenceIdInEvent[10])).setShowFloatingCTA;
+  stateFromStores = setShowFloatingCTA;
   const items = [setShowFloatingCTA, tmp3];
   let memo = React.useMemo(() => {
     let tmp = null;
-    if (closure_0 === obj.BAD_CONNECTION) {
-      tmp = getBadConnectionCTAProps(() => callback(null));
+    if (closure_0 === closure_1_12.BAD_CONNECTION) {
+      tmp = closure_1_14(() => callback(null));
     }
     return tmp;
   }, items);
-  let _require;
+  _require = undefined;
   stateFromStores = undefined;
   nextRecurrenceIdInEvent = undefined;
   const tmp5 = stateFromStores(nextRecurrenceIdInEvent[9])();
@@ -45,7 +48,7 @@ function useFloatingCTAProps(stateFromStores) {
   const items1 = [closure_7];
   const items2 = [imminentUpcomingGuildEvents];
   stateFromStores = tmp7Result.useStateFromStores(items1, () => {
-    let found = stateFromStores.find((item, index) => !eventDismissed.isEventDismissed(item.id));
+    let found = stateFromStores.find((id) => !eventDismissed.isEventDismissed(id.id));
     if (found == null) {
       found = null;
     }
@@ -119,12 +122,12 @@ function useFloatingCTAProps(stateFromStores) {
   const items4 = [closure_6];
   const stateFromStores1 = _require(nextRecurrenceIdInEvent[13]).useStateFromStores(items4, () => {
     let id;
-    if (stateFromStores != null) {
-      id = stateFromStores.id;
+    if (closure_0 != null) {
+      id = tmp.id;
     }
     let tmp3 = null != id;
     if (tmp3) {
-      tmp3 = 1 === closure_1_6.getParticipants(stateFromStores.id).length;
+      tmp3 = 1 === closure_1_6.getParticipants(tmp.id).length;
     }
     return tmp3;
   });
@@ -159,12 +162,12 @@ function useFloatingCTAProps(stateFromStores) {
 function getBadConnectionCTAProps(arg0) {
   const _require = arg0;
   obj = { label: null, subLabel: null, icon: null, onPress: null, trailing: null };
-  const intl = require("../../../../../intl/index.native.tsx").intl;
-  obj[0] = intl.string(require("../../../../../intl/index.native.tsx").t.uv1tVh);
-  const intl2 = require("../../../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(require("../../../../../intl/index.native.tsx").t["gQ14+g"]);
-  obj = { IconComponent: require("../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, variant: "translucent" };
-  obj[2] = jsx(require("../../../../../design/components/TableRow/native/RowButton.native.tsx").RowButton.Icon, { IconComponent: require("../../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx").CircleErrorIcon, variant: "translucent" });
+  const intl = _getSystemLocale.intl;
+  obj[0] = intl.string(_getSystemLocale.t.uv1tVh);
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t["gQ14+g"]);
+  obj = { IconComponent: _CircleErrorIcon.CircleErrorIcon, variant: "translucent" };
+  obj[2] = jsx(_RowButtonWrapper.RowButton.Icon, { IconComponent: _CircleErrorIcon.CircleErrorIcon, variant: "translucent" });
   obj[3] = function onPress() {
     let tmp;
     if (callback != null) {
@@ -173,15 +176,15 @@ function getBadConnectionCTAProps(arg0) {
     return tmp;
   };
   obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, children: null };
-  const intl3 = require("../../../../../intl/index.native.tsx").intl;
-  obj[1] = intl3.string(require("../../../../../intl/index.native.tsx").t.cpT0Cq);
+  const intl3 = _getSystemLocale.intl;
+  obj[1] = intl3.string(_getSystemLocale.t.cpT0Cq);
   obj[3] = function onPress() {
-    const result = callback(dependencyMap[30]).UNSAFE_markDismissibleContentAsDismissed(callback(dependencyMap[32]).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
+    const result = callback(closure_1_2[30]).UNSAFE_markDismissibleContentAsDismissed(callback(closure_1_2[32]).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
     if (callback != null) {
       callback();
     }
   };
-  obj[4] = jsx(require("../../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx").XSmallIcon, { color: "interactive-icon-default" });
+  obj[4] = jsx(_XSmallIcon.XSmallIcon, { color: "interactive-icon-default" });
   obj[4] = <Pressable accessibilityRole="button" accessibilityLabel={null} hitSlop={4} onPress={null}>{null}</Pressable>;
   return obj;
 }
@@ -200,29 +203,30 @@ function getDismissableCTAProps(arg0) {
   ({ dismissableContent, channel: require } = arg0);
   if (DismissibleContent.DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA === dismissableContent) {
     return getBadConnectionCTAProps();
-  } else if (DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
+  } else if (tmp(1377).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     obj = { icon: null, onPress: null, label: null, trailing: null };
-    obj[0] = jsx(SoundboardIcon.SoundboardIcon, { color: "interactive-icon-default" });
+    obj[0] = jsx(tmp(7993).SoundboardIcon, { color: "interactive-icon-default" });
     obj[1] = function onPress() {
       if (null != closure_0) {
+        obj = closure_1_0(closure_1_2[33]);
         obj = { channel: null, analyticsSource: "SOUNDBOARD_MOBILE_FLOATING_CTA" };
         obj[0] = tmp;
         const result = obj.showSoundboardSoundPickerActionSheet(obj);
       }
-      const result1 = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
+      const result1 = closure_1_0(closure_1_2[30]).UNSAFE_markDismissibleContentAsDismissed(closure_1_0(closure_1_2[32]).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
     };
     obj = { quest: null };
-    obj[0] = getSystemLocale.t.XLlWUe;
-    obj[2] = getDeviceSpecificString.getDeviceSpecificString(obj, getSystemLocale.t.IJgkPX);
+    obj[0] = tmp(1236).t.XLlWUe;
+    obj[2] = tmp(7571).getDeviceSpecificString(obj, tmp(1236).t.IJgkPX);
     obj[3] = <CloseSoundboardMobileFloatingCtaIcon />;
     return obj;
   } else {
-    const DONUT_MOBILE_NUX = DismissibleContent.DismissibleContent.DONUT_MOBILE_NUX;
+    const DONUT_MOBILE_NUX = tmp(1377).DismissibleContent.DONUT_MOBILE_NUX;
     return null;
   }
 }
 let obj = { BAD_CONNECTION: "BAD_CONNECTION" };
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/utils/VoicePanelFloatingCTAUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/utils/VoicePanelFloatingCTAUtils.tsx");
 
 export const FLOATING_CTA_HIDE_TIMEOUT = 5000;
 export const OverrideFloatingCTA = obj;
@@ -234,7 +238,7 @@ export const useShouldShowFloatingCTA = function useShouldShowFloatingCTA(channe
   const items = [closure_9];
   stateFromStores = _require(stateFromStores[13]).useStateFromStores(items, () => closure_1_9.getChannel(closure_0));
   const items1 = [first, stateFromStores];
-  const memo = React.useMemo(() => getDismissableCTAProps({ dismissableContent: first, channel: stateFromStores }), items1);
+  const memo = React.useMemo(() => closure_1_17({ dismissableContent: first, channel: stateFromStores }), items1);
   const obj2 = _require(stateFromStores[13]);
   return null != memo || null != useFloatingCTAProps(stateFromStores);
 };

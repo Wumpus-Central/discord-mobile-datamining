@@ -1,7 +1,7 @@
 // discord_app/utils/PathUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("utils/PathUtils.tsx");
+const result = set.fileFinishedImporting("utils/PathUtils.tsx");
 
 export const pathJoin = function pathJoin(closure_1, closure_15) {
   const items = [...arguments];
@@ -9,7 +9,7 @@ export const pathJoin = function pathJoin(closure_1, closure_15) {
   if (obj.isWindows()) {
     str = "\\";
   }
-  const found = items.filter((item, index) => item.length > 0);
+  const found = items.filter((arg0) => arg0.length > 0);
   return found.join(str);
 };
 export const pathBasename = function pathBasename(str) {

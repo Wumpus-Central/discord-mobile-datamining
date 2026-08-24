@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/getPreviewVideoAssetUrl.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("modules/activities/utils/getPreviewVideoAssetUrl.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getPreviewVideoAssetUrl.tsx");
 
 export default function getPreviewVideoAssetUrl(closure_7, banner_asset_id) {
   if (null != CDN_HOST) {

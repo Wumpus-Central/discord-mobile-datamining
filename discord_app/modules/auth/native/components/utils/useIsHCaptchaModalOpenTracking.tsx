@@ -1,24 +1,24 @@
 // discord_app/modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
 import { doesRegistrationHaveIdentityType as closure_3 } from "../../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ RegisterTransitionSteps: c4, RegistrationTransitionActionTypes: c5 } = RegistrationTransitionActionTypes);
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTracking() {
   context = React.useContext(context(15210).TrackRegistrationContext);
   const items = [context];
   const layoutEffect = React.useLayoutEffect(() => {
-    const rootNavigationRef = context(dependencyMap[4]).getRootNavigationRef();
+    const rootNavigationRef = context(closure_1_1[4]).getRootNavigationRef();
     let current;
     if (rootNavigationRef != null) {
       current = rootNavigationRef.current;
     }
     if (null != current) {
       return rootNavigationRef.addListener("state", () => {
-        let obj = context(closure_1_1[5]);
+        let obj = closure_1_0(closure_1_1[5]);
         let isModalOpenResult = obj.isModalOpen("hcaptcha");
         if (isModalOpenResult) {
           isModalOpenResult = closure_1_3();
@@ -31,6 +31,6 @@ export const useIsHCaptchaModalOpenTracking = function useIsHCaptchaModalOpenTra
         }
       });
     }
-    let obj = context(dependencyMap[4]);
+    let obj = context(closure_1_1[4]);
   }, items);
 };

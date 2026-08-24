@@ -1,25 +1,29 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsxs: closure_6, jsx: error } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
+createCacheKey = { container: { margin: 16, flex: 1, alignItems: "center", padding: 40 }, item: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSegmentedControl.tsx");
 
 export default function UserSettingsDesignSystemSegmentedControl() {
   const tmp = callback(React.useState(0), 2);
-  const tmp2 = callback(React.useState(3), 2);
-  const first = tmp2[0];
+  let first = tmp[1];
+  let tmp2 = callback(React.useState(3), 2);
+  first = tmp2[0];
+  dependencyMap = first;
   callback = tmp2[1];
-  const tmp5 = callback4();
+  dependencyMap = undefined;
+  let tmp5 = callback4();
   dependencyMap = tmp5;
   let items = [first, tmp5.item];
   const memo = React.useMemo(() => {
@@ -34,14 +38,21 @@ export default function UserSettingsDesignSystemSegmentedControl() {
         obj[0] = "Item " + sum;
         let _HermesInternal2 = HermesInternal;
         obj[1] = "item-" + sum;
+        let tmp2 = closure_1_7;
+        let tmp3 = closure_1_4;
         obj = { style: null, children: null };
+        let tmp4 = item;
         obj[0] = item.item;
+        let tmp5 = closure_1_6;
+        let tmp6 = first;
+        let tmp7 = item;
         obj = { variant: "heading-xxl/bold", children: null };
         let items1 = ["Item ", sum];
         obj[1] = items1;
         obj[1] = closure_1_6(first(item[6]).Text, obj);
         obj[2] = closure_1_7(closure_1_4, obj);
         let arr = items.push(obj);
+        let tmp9 = first;
         num = sum;
       } while (sum < first);
     }
@@ -49,6 +60,7 @@ export default function UserSettingsDesignSystemSegmentedControl() {
   }, items);
   let obj = first(8799);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
+  obj = { children: null };
   obj = {
     style: callback4().container,
     onLayout: React.useCallback((nativeEvent) => {

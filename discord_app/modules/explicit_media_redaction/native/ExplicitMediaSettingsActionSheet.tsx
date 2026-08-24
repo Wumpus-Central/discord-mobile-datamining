@@ -1,17 +1,17 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaSettingsActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { content: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaSettingsActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaSettingsActionSheet.tsx");
 
 export default function ExplicitMediaSettingsActionSheet(options) {
   options = options.options;
@@ -20,10 +20,11 @@ export default function ExplicitMediaSettingsActionSheet(options) {
   const items = [options];
   const callback = React.useCallback((arg0) => {
     options = arg0;
-    const found = options.find((item, index) => item.value === closure_0);
+    const found = options.find((value) => value.value === closure_0);
     if (null != found) {
       found.onPress();
-      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+      closure_1_1(closure_1_2[5]).hideActionSheet();
+      const obj2 = closure_1_1(closure_1_2[5]);
     }
   }, items);
   const items1 = [callback(options(6949).BottomSheetTitleHeader, { title, subtitle }), ];
@@ -31,9 +32,10 @@ export default function ExplicitMediaSettingsActionSheet(options) {
   if (SHOW == null) {
     SHOW = options(1306).ExplicitContentRedaction.SHOW;
   }
-  obj = { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((item, index) => callback(options(table[10]).TableRadioRow, { label: item.label, value: item.value }, item.value)) };
+  obj = { startExpanded: true, children: null };
+  obj = { defaultValue: SHOW, onChange: callback, hasIcons: false, children: options.map((label) => callback(options(table[10]).TableRadioRow, { label: label.label, value: label.value }, label.value)) };
   obj[1] = callback(options(8101).TableRadioGroup, obj);
   items1[1] = callback(View, obj);
   obj[1] = items1;
-  return callback(options(6950).BottomSheet, obj);
+  return closure_6(options(6950).BottomSheet, obj);
 };

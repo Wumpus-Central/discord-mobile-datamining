@@ -5,18 +5,19 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import componentDidMountDefault from "../../../../../components_native/common/Alert.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { marginLeft: "auto", marginRight: "auto", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.round, padding: 12, marginTop: 8, marginBottom: 8 };
+createCacheKey = { headerImage: null, header: null, subtitle: null, buttons: null };
+createCacheKey = { marginLeft: "auto", marginRight: "auto", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.round, padding: 12, marginTop: 8, marginBottom: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 8, marginBottom: 8, textAlign: "center" };
 createCacheKey[2] = { lineHeight: 18, marginBottom: 8, textAlign: "center" };
 createCacheKey[3] = { marginTop: 16, marginBottom: 8, gap: 12 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlert.tsx");
 
 export default function MemberVerificationAlert(arg0) {
   ({ icon, subtitle } = arg0);
@@ -41,10 +42,10 @@ export default function MemberVerificationAlert(arg0) {
     obj1 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj1[0] = tmp2.subtitle;
     obj1[3] = subtitle;
-    tmp10Result = callback(Text.Text, obj1);
+    tmp10Result = tmp10(Text.Text, obj1);
   }
   items[2] = tmp10Result;
   items[3] = callback(View, { style: tmp2.buttons, children: buttons });
   obj.children = items;
-  return callback(componentDidMountDefault, obj);
+  return closure_5(componentDidMountDefault, obj);
 };

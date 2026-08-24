@@ -11,17 +11,22 @@ import registerAssetDefault6 from "../../../../_runtime/09159_registerAsset.js";
 import registerAssetDefault7 from "../../../../_runtime/09160_registerAsset.js";
 import registerAssetDefault8 from "../../../../_runtime/09161_registerAsset.js";
 
-require = fn;
-let obj = { imageSource: registerAssetDefault };
+require = arg1;
+let obj = {};
+obj = { imageSource: registerAssetDefault };
 obj[require("BadgeCategory").BadgeCategory.STAFF] = obj;
 obj = { imageSource: registerAssetDefault2 };
 obj[require("BadgeCategory").BadgeCategory.PARTNERED] = obj;
 obj[require("BadgeCategory").BadgeCategory.VERIFIED] = { imageSource: registerAssetDefault };
+const obj1 = { imageSource: registerAssetDefault };
 obj[require("BadgeCategory").BadgeCategory.COMMUNITY] = { imageSource: registerAssetDefault3, imageSourceLight: registerAssetDefault4, premiumImageSource: registerAssetDefault5 };
+let obj2 = { imageSource: registerAssetDefault3, imageSourceLight: registerAssetDefault4, premiumImageSource: registerAssetDefault5 };
 obj[require("BadgeCategory").BadgeCategory.DISCOVERABLE] = { imageSource: registerAssetDefault6, imageSourceLight: registerAssetDefault7, premiumImageSource: registerAssetDefault8 };
+const obj3 = { imageSource: registerAssetDefault6, imageSourceLight: registerAssetDefault7, premiumImageSource: registerAssetDefault8 };
 obj[require("BadgeCategory").BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: registerAssetDefault };
 obj[require("BadgeCategory").BadgeCategory.NONE] = {};
-const result = require("obj132").fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");
+const obj4 = { imageSource: registerAssetDefault };
+const result = require("set").fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");
 
 export const badgeVariants = obj;
 export const resolveImageSource = function resolveImageSource(premiumImageSource, guildTraits, arg2) {

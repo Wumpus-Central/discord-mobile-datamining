@@ -1,10 +1,10 @@
 // discord_app/modules/channel_list_v2/native/items/index.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import renderCategoryItem from "RedesignCategory.tsx";
 import ThreadChannelDefault from "ThreadChannel.tsx";
 import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary.tsx";
 
-const result = obj132.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 
 export const CategoryChannel = renderCategoryItem.CategoryChannel;
 export const SuggestedCategory = renderCategoryItem.SuggestedCategory;

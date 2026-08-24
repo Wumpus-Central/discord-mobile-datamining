@@ -1,9 +1,9 @@
 // _runtime/01787__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import LinearTransition from "metro/00032__slicedToArray.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 function _isNativeReflectConstruct() {
@@ -53,7 +53,9 @@ class LinearTransition {
       const callbackV = delayFunction.callbackV;
       const delay = delayFunction.getDelay();
       const fn = function t(currentOriginX) {
-        const obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)), width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)), height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)) };
+        obj = { initialValues: obj, animations: null, callback: null };
+        obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
+        obj = { originX: delayFunction(delay, first(currentOriginX.targetOriginX, closure_2)), originY: delayFunction(delay, first(currentOriginX.targetOriginY, closure_2)), width: delayFunction(delay, first(currentOriginX.targetWidth, closure_2)), height: delayFunction(delay, first(currentOriginX.targetHeight, closure_2)) };
         obj[1] = obj;
         obj[2] = callbackV;
         return obj;

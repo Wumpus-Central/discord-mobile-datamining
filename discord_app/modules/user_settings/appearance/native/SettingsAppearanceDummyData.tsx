@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import registerAssetDefault from "../../../../../_runtime/10102_registerAsset.js";
@@ -17,11 +17,12 @@ import registerAssetDefault12 from "../../../../../_runtime/14633_registerAsset.
 import registerAssetDefault13 from "../../../../../_runtime/14634_registerAsset.js";
 
 const StatusTypes = ME.StatusTypes;
-const result = obj132.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
 
 export default function _default() {
   const items = [{ id: "1", kind: "messages-header" }, , , , , , , , , , ];
-  let obj = { title: null, subtitle: null, kind: "activity", image: null, avatars: null };
+  let obj = { id: "2", kind: "activity-cards", cards: null };
+  obj = { title: null, subtitle: null, kind: "activity", image: null, avatars: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.B6GPzA);
   const intl2 = getSystemLocale.intl;

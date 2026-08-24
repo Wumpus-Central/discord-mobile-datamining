@@ -2,16 +2,17 @@
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../../../stores/ChannelStore.tsx";
 import { SearchMediaTypes } from "../../../../SearchConstants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, Pressable: c5, useWindowDimensions: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj = { container: null, avatar: null, card: null };
+obj = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[0] = obj;
 obj[1] = { position: "absolute", top: 8, right: 8 };
 obj[2] = { padding: 0 };
@@ -23,6 +24,7 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
   const size = media.size;
   const onPress = media.onPress;
   let ref;
+  let stateFromStores;
   let sharedValue;
   ({ containerStyle, animate } = media);
   const tmp = callback2();
@@ -31,7 +33,7 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
   ref = ref.useRef(null);
   obj1 = media(onPress[7]);
   const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getChannel(media.channelId));
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getChannel(media.channelId));
   const items1 = [media.author, ];
   let guild_id;
   if (stateFromStores != null) {
@@ -51,7 +53,7 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     onPress({ media, originView: ref.current });
   }, items2);
   let tmp3Result = tmp3(tmp4[8]);
-  sharedValue = tmp3Result.useSharedValue(animate ? constants.HIDDEN : constants.VISIBLE);
+  sharedValue = tmp3Result.useSharedValue(animate ? tmp9.HIDDEN : tmp9.VISIBLE);
   tmp3Result = tmp3(tmp4[8]);
   const fn = function f() {
     const obj = { opacity: null };
@@ -81,10 +83,10 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     obj2[5] = scale;
     obj2[6] = size;
     obj2[7] = size;
-    tmp14Result = callback(tmp3(tmp4[11]).SearchEmbedMediaImage, obj2);
+    tmp14Result = tmp14(tmp3(tmp4[11]).SearchEmbedMediaImage, obj2);
   }
   const items6 = [tmp14Result, , , , ];
-  tmp14Result = media.type === SearchMediaTypes.ATTACHMENT;
+  tmp14Result = media.type === tmp17.ATTACHMENT;
   if (tmp14Result) {
     const obj3 = { attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
     ({ attachment: obj9[0], channelId: obj9[1] } = media);
@@ -92,18 +94,18 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     obj3[3] = scale;
     obj3[4] = size;
     obj3[5] = size;
-    tmp14Result = callback(tmp3(tmp4[11]).SearchAttachmentMediaImage, obj3);
+    tmp14Result = tmp14(tmp3(tmp4[11]).SearchAttachmentMediaImage, obj3);
   }
   items6[1] = tmp14Result;
-  let tmp14Result1 = media.type === SearchMediaTypes.AUDIO;
+  let tmp14Result1 = media.type === tmp17.AUDIO;
   if (tmp14Result1) {
     const obj4 = { height: null, width: null };
     obj4[0] = size;
     obj4[1] = size;
-    tmp14Result1 = callback(tmp3(tmp4[11]).SearchSoundMediaImage, obj4);
+    tmp14Result1 = tmp14(tmp3(tmp4[11]).SearchSoundMediaImage, obj4);
   }
   items6[2] = tmp14Result1;
-  let tmp14Result2 = media.type === SearchMediaTypes.COMPONENT;
+  let tmp14Result2 = media.type === tmp17.COMPONENT;
   if (tmp14Result2) {
     const obj5 = { unfurledMediaItem: null, sources: null, channelId: null, authorId: null, isBot: null, scale: null, containerHeight: null, containerWidth: null };
     ({ unfurledMediaItem: obj11[0], sources: obj11[1], channelId: obj11[2] } = media);
@@ -112,7 +114,7 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     obj5[5] = scale;
     obj5[6] = size;
     obj5[7] = size;
-    tmp14Result2 = callback(tmp3(tmp4[11]).SearchComponentMediaImage, obj5);
+    tmp14Result2 = tmp14(tmp3(tmp4[11]).SearchComponentMediaImage, obj5);
   }
   items6[3] = tmp14Result2;
   let tmp14Result3 = null != memo;
@@ -125,15 +127,15 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     obj8[0] = memo;
     obj8[1] = tmp3(tmp4[13]).AvatarSizes.XSMALL;
     obj8[2] = media.author.avatarDecoration;
-    obj7[2] = callback(tmp3(tmp4[13]).Avatar, obj8);
-    obj6[1] = callback(tmp3(tmp4[12]).Card, obj7);
-    tmp14Result3 = callback(stateFromStores, obj6);
+    obj7[2] = tmp14(tmp3(tmp4[13]).Avatar, obj8);
+    obj6[1] = tmp14(tmp3(tmp4[12]).Card, obj7);
+    tmp14Result3 = tmp14(stateFromStores, obj6);
   }
   items6[4] = tmp14Result3;
   obj1[4] = items6;
-  obj[1] = callback2(sharedValue, obj1);
-  return callback(size(onPress[8]).View, obj);
+  obj[1] = closure_10(sharedValue, obj1);
+  return closure_9(size(onPress[8]).View, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
 
 export default memoResult;

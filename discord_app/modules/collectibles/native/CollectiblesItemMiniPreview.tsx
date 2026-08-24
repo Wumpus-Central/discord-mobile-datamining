@@ -11,16 +11,17 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "../records/AvatarDecorationRecord.tsx";
 import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "../profile_frames/native/ProfileFrameConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
-let obj = { overflow: "hidden", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.sm };
+let obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
+obj = { overflow: "hidden", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.sm };
 obj[2] = obj;
 obj[3] = { aspectRatio: require("SAMPLE_PROFILE_ASPECT_RATIO").SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
-const createCacheKey = { overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.xs, borderBottomRightRadius: ThemesDefault.radii.xs };
+createCacheKey = { overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.xs, borderBottomRightRadius: ThemesDefault.radii.xs };
 obj[4] = createCacheKey;
 obj[5] = { alignItems: "flex-start" };
 obj[6] = { width: "90%", aspectRatio: 1.6, position: "relative" };
@@ -85,6 +86,6 @@ const memoResult = importAllResult.memo(function CollectiblesItemMiniPreview(arg
     return null;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesItemMiniPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesItemMiniPreview.tsx");
 
 export default memoResult;

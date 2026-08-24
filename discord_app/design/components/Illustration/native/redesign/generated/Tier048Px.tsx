@@ -5,12 +5,13 @@ import getIllustrationSource from "../../index.tsx";
 import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Tier048Px.tsx");
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Tier048Px.tsx");
 
 export const getTier048PxSource = function getTier048PxSource(theme) {
-  const obj = {
+  let obj = getIllustrationSource;
+  obj = {
     dark() {
       return callback(12940);
     },
@@ -24,7 +25,8 @@ export const getTier048PxSource = function getTier048PxSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useTier048PxSource = function useTier048PxSource() {
-  const obj = {
+  let obj = AccessibilityAnnouncer;
+  obj = {
     dark() {
       return callback(12940);
     },
@@ -38,7 +40,19 @@ export const useTier048PxSource = function useTier048PxSource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const Tier048Px = function Tier048Px(arg0) {
-  const obj = {};
+  let obj = AccessibilityAnnouncer;
+  obj = {
+    dark() {
+      return callback(12940);
+    },
+    darker() {
+      return callback(12941);
+    },
+    light() {
+      return callback(12942);
+    }
+  };
+  obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

@@ -4,13 +4,14 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import { Fonts } from "../../../../Constants.tsx";
 import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
+createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_MUTED, 16));
 createCacheKey[2] = createCacheKey;
 let obj1 = {};
@@ -18,7 +19,7 @@ const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDe
 createCacheKey[3] = obj1;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormEmojiPicker.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormEmojiPicker.tsx");
 
 export default function FormEmojiPicker(emoji) {
   ({ emojiId, emojiName } = emoji.emoji);
@@ -51,8 +52,8 @@ export default function FormEmojiPicker(emoji) {
     style: items,
     accessibilityRole: "link",
     onPress() {
-      guildId(dependencyMap[14]);
-      let obj = {
+      let obj = guildId(closure_1_2[14]);
+      obj = {
         guildId,
         onPressEmoji(id) {
           if (null != id.id) {
@@ -69,7 +70,7 @@ export default function FormEmojiPicker(emoji) {
             }
           }
         },
-        pickerIntention: EmojiIntention.GUILD_ROLE_BENEFIT_EMOJI
+        pickerIntention: closure_1_3.GUILD_ROLE_BENEFIT_EMOJI
       };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
@@ -77,6 +78,7 @@ export default function FormEmojiPicker(emoji) {
   };
   items = [tmp.container, onChange(13358)().textInput];
   const items1 = [tmp9, , ];
+  const tmp12 = closure_5;
   const tmp4 = onChange(13358)();
   const items2 = [tmp.content, ];
   const obj2 = { style: items2, children: null };
@@ -93,5 +95,5 @@ export default function FormEmojiPicker(emoji) {
   const tmp2Result1 = onChange(8910);
   items1[2] = tmp10(guildId(1297).Icon, { size: guildId(1297).Icon.Sizes.MEDIUM, source: onChange(11640) });
   obj1[3] = items1;
-  return callback(tmp2Result1, obj1);
+  return tmp12(tmp2Result1, obj1);
 };

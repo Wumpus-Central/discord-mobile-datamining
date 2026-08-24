@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import getState from "../../../../../stores/native/AppStateStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/native/AppStateStore.tsx";
 import { TwoFAModalSetupSections } from "TwoFAConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
 
 export default function TwoFASetupEnterCode(stateFromStores) {
   const _require = stateFromStores;
@@ -25,6 +25,7 @@ export default function TwoFASetupEnterCode(stateFromStores) {
   const items = [ref1];
   stateFromStores = obj2.useStateFromStores(items, () => ref1.getState());
   const tmp6 = callback(ref.useState(false), 2);
+  callback = tmp6[1];
   ref = ref.useRef(null);
   ref1 = ref.useRef(null);
   const items1 = [navigation];
@@ -35,14 +36,14 @@ export default function TwoFASetupEnterCode(stateFromStores) {
     obj = { code, secret: encodeTotpSecretResult };
     const obj2 = ref(navigation[10]);
     const enableResult = ref(navigation[10]).enable(obj);
-    ref(navigation[10]).enable(obj).then((result) => {
+    ref(navigation[10]).enable(obj).then(() => {
 
-    }).catch((error) => {
-      if (null != error.body) {
-        let message = error.body.message;
+    }).catch((body) => {
+      if (null != body.body) {
+        let message = body.body.message;
       } else {
-        const intl = stateFromStores(navigation[11]).intl;
-        message = intl.string(stateFromStores(navigation[11]).t["1u5B+G"]);
+        const intl = closure_1_0(closure_1_2[11]).intl;
+        message = intl.string(closure_1_0(closure_1_2[11]).t["1u5B+G"]);
       }
       closure_4.current = message;
       const current = ref.current;
@@ -52,6 +53,7 @@ export default function TwoFASetupEnterCode(stateFromStores) {
       callback(false);
     });
   }, items1);
+  obj = { children: null };
   obj = { bottom: true, style: callback4().container, children: null };
   obj1 = { style: items2, children: null };
   items2 = [, ];

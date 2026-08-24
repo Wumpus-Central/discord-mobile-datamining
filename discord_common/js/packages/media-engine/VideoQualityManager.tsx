@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/VideoQualityManager.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getMaxSinkValue from "MediaSinkWantsLadder.tsx";
 import DesktopSources from "Constants.tsx";
 
@@ -65,6 +65,7 @@ prototype["equals"] = function equals(width, width2) {
     let tmp2 = null != width && null != width2;
     if (tmp2) {
       tmp2 = width.width === width2.width && width.height === width2.height && width.framerate === width2.framerate;
+      const tmp3 = width.width === width2.width && width.height === width2.height && width.framerate === width2.framerate;
     }
     tmp = tmp2;
   }
@@ -124,7 +125,7 @@ prototype["extend"] = function extend(width, width2) {
   }
 };
 const frozen = Object.freeze({ [VideoQualityMode.AUTO]: {}, [VideoQualityMode.FULL]: { encode: { width: 1280, height: 720 } } });
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/VideoQualityManager.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/VideoQualityManager.tsx");
 class VideoQualityManager {
   constructor(arg0, arg1) {
     tmp = importDefault;
@@ -253,7 +254,8 @@ prototype2["getVideoQuality"] = function getVideoQuality(arg0) {
   const self = this;
   const ladder = this.ladder;
   const resolution = ladder.getResolution(arg0);
-  const obj = {};
+  let obj = { encode: null, capture: null, bitrateMin: null, bitrateMax: null, localWant: null };
+  obj = {};
   const result = this.options.videoBitrate.min * resolution.budgetPortion;
   const result1 = this.options.videoBitrate.max * resolution.budgetPortion;
   const merged = Object.assign(resolution);
@@ -313,7 +315,9 @@ prototype2["getGoliveQuality"] = function getGoliveQuality(localWant, arg1) {
   return self.goliveMaxQuality;
 };
 prototype2["getDefaultGoliveQuality"] = function getDefaultGoliveQuality() {
-  const obj = { width: 1280, height: 720, framerate: closure_4, pixelCount: 921600 };
+  obj = { capture: obj, encode: obj, bitrateMin: this.options.desktopBitrate.min, bitrateMax: this.options.desktopBitrate.max, bitrateTarget: this.options.desktopBitrate.target };
+  obj = { width: 1280, height: 720, framerate: closure_4 };
+  obj = { width: 1280, height: 720, framerate: closure_4, pixelCount: 921600 };
   return new WantsVideoQuality(obj);
 };
 

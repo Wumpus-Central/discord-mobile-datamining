@@ -9,24 +9,24 @@ import STATUS_PADDING from "../../Status/native/StatusConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function getStatusSize(arg0) {
   if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
-    if (StaticNativeCutoutAvatarImage.AvatarSizes.XSMALL !== arg0) {
-      if (StaticNativeCutoutAvatarImage.AvatarSizes.XSMALL_20 !== arg0) {
-        if (StaticNativeCutoutAvatarImage.AvatarSizes.SMALL !== arg0) {
-          if (StaticNativeCutoutAvatarImage.AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
+    if (tmp(12125).AvatarSizes.XSMALL !== arg0) {
+      if (tmp(12125).AvatarSizes.XSMALL_20 !== arg0) {
+        if (tmp(12125).AvatarSizes.SMALL !== arg0) {
+          if (tmp(12125).AvatarSizes.REFRESH_MEDIUM_32 === arg0) {
             return closure_7.REFRESH_MEDIUM_10;
           } else {
-            if (StaticNativeCutoutAvatarImage.AvatarSizes.NORMAL !== arg0) {
-              if (StaticNativeCutoutAvatarImage.AvatarSizes.TABS_22 !== arg0) {
-                if (StaticNativeCutoutAvatarImage.AvatarSizes.LARGE !== arg0) {
-                  if (StaticNativeCutoutAvatarImage.AvatarSizes.LARGE_48 !== arg0) {
-                    if (StaticNativeCutoutAvatarImage.AvatarSizes.XLARGE !== arg0) {
-                      if (StaticNativeCutoutAvatarImage.AvatarSizes.XLARGE_72 !== arg0) {
-                        if (StaticNativeCutoutAvatarImage.AvatarSizes.XXLARGE !== arg0) {
-                          if (StaticNativeCutoutAvatarImage.AvatarSizes.PROFILE !== arg0) {
-                            if (StaticNativeCutoutAvatarImage.AvatarSizes.YOUBAR_60 !== arg0) {
+            if (tmp(12125).AvatarSizes.NORMAL !== arg0) {
+              if (tmp(12125).AvatarSizes.TABS_22 !== arg0) {
+                if (tmp(12125).AvatarSizes.LARGE !== arg0) {
+                  if (tmp(12125).AvatarSizes.LARGE_48 !== arg0) {
+                    if (tmp(12125).AvatarSizes.XLARGE !== arg0) {
+                      if (tmp(12125).AvatarSizes.XLARGE_72 !== arg0) {
+                        if (tmp(12125).AvatarSizes.XXLARGE !== arg0) {
+                          if (tmp(12125).AvatarSizes.PROFILE !== arg0) {
+                            if (tmp(12125).AvatarSizes.YOUBAR_60 !== arg0) {
                               return null;
                             }
                           }
@@ -49,17 +49,19 @@ function getStatusSize(arg0) {
 let c3 = importAllResult;
 ({ STATUS_PADDING: closure_6, StatusSizes: error } = STATUS_PADDING);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles((closure_11) => {
-  let obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: ThemesDefault.colors.STATUS_SPEAKING };
+let closure_10 = createCacheKey.createStyles((NORMAL) => {
+  let obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
+  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: ThemesDefault.colors.STATUS_SPEAKING };
   obj[1] = obj;
   obj[2] = { position: "absolute", right: -2, bottom: -2 };
   obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, borderRadius: ThemesDefault.radii.md, right: 0, bottom: 0 };
   obj[3] = obj;
   obj1 = { position: "absolute", top: null, left: null };
-  const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(closure_11);
-  obj1[1] = -(decorationSizeForAvatarSize - StaticNativeCutoutAvatarImage.styles[closure_11].width) / 2;
-  const decorationSizeForAvatarSize1 = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(closure_11);
-  obj1[2] = -(decorationSizeForAvatarSize1 - StaticNativeCutoutAvatarImage.styles[closure_11].width) / 2;
+  const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[1] = -(decorationSizeForAvatarSize - StaticNativeCutoutAvatarImage.styles[NORMAL].width) / 2;
+  const obj5 = getDecorationSizeForAvatarSize;
+  const decorationSizeForAvatarSize1 = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[2] = -(decorationSizeForAvatarSize1 - StaticNativeCutoutAvatarImage.styles[NORMAL].width) / 2;
   obj[4] = obj1;
   obj[5] = { position: "relative" };
   return obj;
@@ -105,18 +107,20 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
     typing = false;
   }
   let statusSizeOverride = isMobileOnline.statusSizeOverride;
+  let callback;
   const tmp3 = callback2(NORMAL);
-  const callback = tmp3;
+  callback = tmp3;
   let items = [cutout, autoStatusCutout, flag, flag2, NORMAL, status, typing, statusSizeOverride, tmp3];
   const memo = NORMAL.useMemo(() => {
     if (null != autoStatusCutout) {
       let diff1 = status;
       let items = statusSizeOverride;
+      let tmp6;
       if (null != diff1) {
         if (diff1 !== autoStatusCutout.UNKNOWN) {
-          diff1 = flag(status[7]).AVATAR_SIZE_MAP[NORMAL];
+          diff1 = flag(status[7]).AVATAR_SIZE_MAP[tmp2];
           if (items == null) {
-            items = getStatusSize(NORMAL);
+            items = closure_1_11(tmp2);
           }
           if (items == null) {
             items = 0;
@@ -126,8 +130,15 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
             const statusTypingDimensions = flag(status[8]).getStatusTypingDimensions(items);
             ({ width: width3, height: height3 } = statusTypingDimensions);
             const obj9 = flag(status[8]);
+            if (flag == null) {
+              flag = false;
+            }
+            if (flag2 == null) {
+              flag2 = false;
+            }
             const sum = height3 + 2 * typing;
-            let obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
+            let obj = { nativeCutouts: null };
+            obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
             const tmp29 = flag2(status[9]);
             obj[0] = flag(status[10]).CutoutShape.RoundedRect;
             const diff = diff1 - width3 - typing;
@@ -141,6 +152,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
             obj[5] = result;
             items = [obj];
             obj[0] = items;
+            tmp6 = obj;
             const obj12 = flag(status[8]);
           } else {
             if (flag2) {
@@ -158,6 +170,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
               obj2[5] = vRStatusContainerRect.cornerRadius;
               const items1 = [obj2];
               obj1[0] = items1;
+              tmp6 = obj1;
             } else if (!flag) {
               const sum1 = items / 2 + tmp4;
               const diff2 = diff1 - sum1 - 2 * result;
@@ -169,6 +182,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
               obj3[3] = 2 * sum1;
               const items2 = [obj3];
               obj[0] = items2;
+              tmp6 = obj;
             }
             obj2 = flag(status[8]);
             const mobileStatusContainerRect = obj2.getMobileStatusContainerRect(items);
@@ -183,6 +197,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
             obj5[5] = mobileStatusContainerRect.cornerRadius;
             const items3 = [obj5];
             obj4[0] = items3;
+            tmp6 = obj4;
           }
         }
       }
@@ -273,7 +288,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
             obj5[1] = flag2(tmp7[16]);
             obj5[2] = flag2(tmp7[6]).unsafe_rawColors.WHITE;
             obj4[1] = callback(flag2(tmp7[15]), obj5);
-            let tmp53 = callback(cutout, obj4);
+            let tmp53 = callback(tmp6, obj4);
             const tmp59 = flag2(tmp7[15]);
           } else if (mute) {
             let obj6 = { style: null, children: null };
@@ -285,12 +300,12 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
             obj7[1] = flag2(tmp7[17]);
             obj7[2] = flag2(tmp7[6]).unsafe_rawColors.WHITE;
             obj6[1] = callback(flag2(tmp7[15]), obj7);
-            tmp53 = callback(cutout, obj6);
+            tmp53 = callback(tmp6, obj6);
             const tmp56 = flag2(tmp7[15]);
           }
           items2[4] = tmp53;
           merged[4] = items2;
-          return callback(cutout, merged);
+          return closure_9(tmp6, merged);
         }
       }
     }
@@ -340,11 +355,11 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
       obj13[2] = sum / 2;
       items7[1] = obj13;
       obj11[0] = items7;
-      tmp9Result = tmp9(cutout, obj11);
+      tmp9Result = tmp9(tmp6, obj11);
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("design/void/Avatar/native/Avatar.tsx");
+let result = require("set").fileFinishedImporting("design/void/Avatar/native/Avatar.tsx");
 
 export default memoResult;
 export const AvatarSizes = require("StaticNativeCutoutAvatarImage").AvatarSizes;

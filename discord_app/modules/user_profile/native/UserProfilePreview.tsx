@@ -1,28 +1,33 @@
 // discord_app/modules/user_profile/native/UserProfilePreview.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleFormOpen from "../UserProfileSettingsStore.tsx";
+import closure_6 from "../UserProfileSettingsStore.tsx";
 import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: error, UserProfileThemeTypes: closure_8 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  let obj = { overflow: "hidden", minHeight: num2, borderWidth: 1, borderColor: null, borderRadius: null };
+  let num = arg2;
+  if (arg2 == null) {
+    num = 263;
+  }
+  let obj = { profileContainer: { position: "relative", width: "100%", maxWidth: num }, profileContentContainer: null, profileInnerContent: null, aboutMeCard: null, profileEffect: null };
+  obj = { overflow: "hidden", minHeight: num2, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = ThemesDefault.colors;
   if (arg1) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
-    let tmp4 = importDefault;
+    let tmp4 = tmp;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = importDefault;
+    tmp4 = tmp;
   }
   obj[3] = BACKGROUND_SURFACE_HIGH;
   obj[4] = tmp4(712).radii.lg;
@@ -33,7 +38,7 @@ let closure_12 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[4] = { zIndex: 1 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfilePreview.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePreview.tsx");
 
 export default function UserProfilePreview(hideFrame) {
   ({ user, displayName, guildId } = hideFrame);
@@ -66,7 +71,7 @@ export default function UserProfilePreview(hideFrame) {
   obj1 = guildId(set[12]);
   const customStatusActivity = obj1.useCustomStatusActivity();
   let tmp27Result = null != customStatusActivity && !compact;
-  let tmpResult = guildId(tmp2[13]);
+  let tmpResult = tmp(tmp2[13]);
   const userProfileColors = tmpResult.useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
   if (undefined !== profileEffectOverride) {
@@ -78,7 +83,7 @@ export default function UserProfilePreview(hideFrame) {
   if (undefined !== displayNameStylesOverride) {
     pendingDisplayNameStyles = displayNameStylesOverride;
   }
-  tmpResult = guildId(tmp2[14]);
+  tmpResult = tmp(tmp2[14]);
   obj = { pendingValue: pendingProfileEffect, userValue: null, guildValue: null, guildId: null };
   let profileEffect;
   if (tmp5 != null) {
@@ -113,8 +118,8 @@ export default function UserProfilePreview(hideFrame) {
     }
     obj[2] = profileFrame1;
     obj[3] = guildId;
-    profilePreviewValue = guildId(tmp2[14]).getProfilePreviewValue(obj);
-    const tmpResult1 = guildId(tmp2[14]);
+    profilePreviewValue = tmp(tmp2[14]).getProfilePreviewValue(obj);
+    const tmpResult1 = tmp(tmp2[14]);
   }
   let skuId;
   let tmp4Result = tmp4(tmp2[15]);
@@ -128,8 +133,8 @@ export default function UserProfilePreview(hideFrame) {
   const pendingAvatarSrc = guildId(set[16]).getPendingAvatarSrc(obj1);
   const arr2 = importDefault(set[17])(tmp5, pendingLegacyUsernameDisabled);
   let str2 = globalThis;
-  set = new Set(arr2.map((item, index) => item.id));
-  const items1 = [...arr2, ...additionalBadges.filter((item, index) => !set.has(item.id))];
+  set = new Set(arr2.map((id) => id.id));
+  const items1 = [...arr2, ...additionalBadges.filter((id) => !set.has(id.id))];
   const tmp23 = first(React.useState({ width: 0, height: 0 }), 2);
   first = tmp23[0];
   React = tmp23[1];
@@ -139,13 +144,13 @@ export default function UserProfilePreview(hideFrame) {
   }, []);
   const memo = React.useMemo(() => {
     if (null != callback) {
-      const layers = callback.layers;
-      ({ overflowTop, overflowBottom, overflowHorizontal } = callback(set[18])(callback, first.width));
+      const layers = tmp.layers;
+      ({ overflowTop, overflowBottom, overflowHorizontal } = callback(set[18])(tmp, first.width));
       let num = 0;
-      if (layers.some((item, index) => {
-        let tmp = "staple" === item.type;
+      if (layers.some((type) => {
+        let tmp = "staple" === type.type;
         if (tmp) {
-          tmp = "top" === item.anchor;
+          tmp = "top" === type.anchor;
         }
         return tmp;
       })) {
@@ -153,12 +158,12 @@ export default function UserProfilePreview(hideFrame) {
       }
       const obj = { marginTop: null, marginBottom: null, marginHorizontal: null };
       obj[0] = num;
-      const layers2 = callback.layers;
+      const layers2 = tmp.layers;
       let num2 = 0;
-      if (layers2.some((item, index) => {
-        let tmp = "staple" === item.type;
+      if (layers2.some((type) => {
+        let tmp = "staple" === type.type;
         if (tmp) {
-          tmp = "bottom" === item.anchor;
+          tmp = "bottom" === type.anchor;
         }
         return tmp;
       })) {
@@ -180,9 +185,9 @@ export default function UserProfilePreview(hideFrame) {
     obj5[1] = filterLayer;
     obj5[2] = constants.PREVIEW;
     tmp4Result = tmp4(tmp2[20]);
-    obj5[3] = guildId(tmp2[21]).ProfileFrameLayerOrder.BACK;
+    obj5[3] = tmp(tmp2[21]).ProfileFrameLayerOrder.BACK;
     ({ width: obj13[4], height: obj13[5] } = first);
-    tmp27Result = callback(tmp4Result, obj5);
+    tmp27Result = tmp27(tmp4Result, obj5);
   }
   const items4 = [tmp27Result, , ];
   const obj6 = { onLayout: callback, style: tmp8.profileContentContainer, children: null };
@@ -201,9 +206,9 @@ export default function UserProfilePreview(hideFrame) {
     tmp36 = pendingThemeColors;
   }
   obj7[6] = tmp36;
-  const items5 = [callback(importDefault(set[22]), obj7), , ];
+  const items5 = [closure_9(importDefault(set[22]), obj7), , ];
   const obj8 = { style: tmp8.profileInnerContent, children: null };
-  const items6 = [callback(importDefault(set[24]), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration, backgroundColor: avatarBackground, disableStatus: true }), ];
+  const items6 = [closure_9(importDefault(set[24]), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration, backgroundColor: avatarBackground, disableStatus: true }), ];
   const obj9 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: null, children: null };
   const items7 = [, , ];
   ({ profileContentWrapper: arr9[0], profileContent: arr9[1] } = tmp9);
@@ -222,7 +227,7 @@ export default function UserProfilePreview(hideFrame) {
     obj11[1] = constants.PREVIEW;
     obj11[2] = tmp7;
     ({ customStatusBubble: obj19[3], emojiOnlyCustomStatusBubble: obj19[4] } = tmp9);
-    tmp27Result = callback(tmp4(tmp2[26]), obj11);
+    tmp27Result = tmp27(tmp4(tmp2[26]), obj11);
   }
   const items8 = [tmp27Result, , ];
   const obj12 = { user, themeType: constants.PREVIEW, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, showBadgeToastOnPress: false, pendingDisplayNameStyles: null, guildId: null };
@@ -243,45 +248,45 @@ export default function UserProfilePreview(hideFrame) {
   obj12[5] = containerBackground;
   obj12[7] = pendingDisplayNameStyles;
   obj12[8] = guildId;
-  items8[1] = callback(importDefault(set[27]), obj12);
+  items8[1] = closure_9(importDefault(set[27]), obj12);
   let tmp27Result1 = !compact;
   if (!compact) {
     const obj13 = { userId: null, displayProfile: null, themeType: null, style: null, bioLineClamp: 1 };
     obj13[0] = user.id;
     obj13[1] = tmp5;
-    obj13[2] = constants.PREVIEW;
+    obj13[2] = tmp42.PREVIEW;
     const items9 = [tmp9.card, tmp8.aboutMeCard, ];
     const obj14 = { backgroundColor: null };
     obj14[0] = containerBackground;
     items9[2] = obj14;
     obj13[3] = items9;
-    tmp27Result1 = callback(tmp4(tmp2[28]), obj13);
+    tmp27Result1 = tmp27(tmp4(tmp2[28]), obj13);
   }
   items8[2] = tmp27Result1;
   obj9[4] = items8;
-  items6[1] = callback2(tmp4Result2, obj9);
+  items6[1] = closure_10(tmp4Result2, obj9);
   obj8[1] = items6;
-  items5[1] = callback2(View, obj8);
+  items5[1] = closure_10(View, obj8);
   if (null == str) {
     items5[2] = tmp45;
     obj6[2] = items5;
-    items4[1] = callback2(View, obj6);
+    items4[1] = tmp29(tmp28, obj6);
     let tmp27Result2 = null != tmp4ResultResult;
     if (tmp27Result2) {
       const obj15 = { frame: null, filterLayer: null, profileThemeType: null, frameOrder: null, containerWidth: null, containerHeight: null };
       obj15[0] = tmp4ResultResult;
       obj15[1] = filterLayer;
-      obj15[2] = constants.PREVIEW;
-      obj15[3] = guildId(tmp2[21]).ProfileFrameLayerOrder.FRONT;
+      obj15[2] = tmp42.PREVIEW;
+      obj15[3] = tmp(tmp2[21]).ProfileFrameLayerOrder.FRONT;
       ({ width: obj24[4], height: obj24[5] } = first);
-      tmp27Result2 = callback(tmp4(tmp2[20]), obj15);
+      tmp27Result2 = tmp27(tmp4(tmp2[20]), obj15);
       const tmp4Result4 = tmp4(tmp2[20]);
     }
     items4[2] = tmp27Result2;
     obj4[3] = items4;
-    obj3[5] = callback2(View, obj4);
-    obj2[3] = callback(View, obj3);
-    return callback(guildId(tmp2[19]).ThemeContextProvider, obj2);
+    obj3[5] = tmp29(tmp28, obj4);
+    obj2[3] = tmp27(tmp28, obj3);
+    return tmp27(tmp(tmp2[19]).ThemeContextProvider, obj2);
   } else {
     const obj16 = { skuId: null, style: null };
     obj16[0] = str.skuId;
@@ -293,8 +298,7 @@ export default function UserProfilePreview(hideFrame) {
     } else {
       skuId = `-`.skuId;
     }
-    callback(tmp4(tmp2[29]), obj16, skuId);
+    tmp27(tmp4(tmp2[29]), obj16, skuId);
     const tmp4Result5 = tmp4(tmp2[29]);
   }
-  const tmp4Result3 = importDefault(set[27]);
 };

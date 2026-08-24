@@ -5,12 +5,13 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import HomeDrawerSharedItem from "HomeDrawerShared.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
 
 export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavoritesRowExpandedChildren() {
-  const obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+  let obj = { title: null, subtitle: null };
+  obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.wMWyci);
   obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });

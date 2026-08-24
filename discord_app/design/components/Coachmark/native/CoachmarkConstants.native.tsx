@@ -1,4 +1,4 @@
 // discord_app/design/components/Coachmark/native/CoachmarkConstants.native.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("design/components/Coachmark/native/CoachmarkConstants.native.tsx");
+const result = set.fileFinishedImporting("design/components/Coachmark/native/CoachmarkConstants.native.tsx");

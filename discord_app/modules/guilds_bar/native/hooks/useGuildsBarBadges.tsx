@@ -1,21 +1,21 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx
-import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import computeAlertSettings from "../../../guild_antiraid/GuildIncidentsStore.tsx";
-import handleGatewayJoinRequestUpdate from "../../../guild_member_verification/UserGuildJoinRequestStore.tsx";
-import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../guild_antiraid/GuildIncidentsStore.tsx";
+import closure_7 from "../../../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import closure_8 from "../../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["guildActivityIndicatorSource"];
 ({ GuildFeatures: closure_12, Permissions: map1 } = ME);
 let closure_15 = createCacheKey.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
-const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
 
 export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImportance) {
   const _require = arg0;
@@ -44,16 +44,17 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
       if (null != currentUser) {
         if (null != request) {
           if (request.userId === currentUser.id) {
-            const member = cutout.getMember(callback, request.userId);
+            const member = cutout.getMember(tmp2, request.userId);
             if (null != member) {
               if (!member.isPending) {
-                callback(stateFromStores[12]);
+                const obj = callback(stateFromStores[12]);
               }
             }
             return request.applicationStatus;
           }
         }
       }
+      tmp2 = callback;
     }
   }, items2);
   let obj2 = _require(stateFromStores[11]);
@@ -106,7 +107,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const items6 = [tmp5, memo, token];
   const memo1 = token1.useMemo(() => {
     let obj = callback(stateFromStores[17]);
-    const mediaIcon = obj.getMediaIcon(obj);
+    const mediaIcon = obj.getMediaIcon(closure_3);
     let source;
     if (mediaIcon != null) {
       source = mediaIcon.source;
@@ -120,23 +121,23 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
       icon = mediaIcon.icon;
     }
     obj[1] = icon;
-    obj[2] = obj.isCurrentUserConnected;
+    obj[2] = closure_3.isCurrentUserConnected;
     const guildActivityIndicatorSource = obj.guildActivityIndicatorSource;
-    const tmp7 = token(obj, obj);
+    const tmp7 = token(obj, closure_3);
     let tmp8 = null;
     if (null != guildActivityIndicatorSource) {
       obj = { style: null, source: null };
       obj[0] = memo;
       obj[1] = guildActivityIndicatorSource;
       const merged = Object.assign(tmp7);
-      tmp8 = jsx(callback(stateFromStores[17]).GuildsBarActivityIndicatorBase, { style: null, source: null });
+      tmp8 = closure_1_14(callback(tmp2[17]).GuildsBarActivityIndicatorBase, obj);
     }
     obj1 = { badgeTopRight: tmp8, cutoutTopRight: null };
     let tmp14;
     if (null != guildActivityIndicatorSource) {
       const obj2 = { position: "top-right", containerSize: null };
       obj2[1] = token;
-      tmp14 = lib(stateFromStores[18])(obj2);
+      tmp14 = lib(tmp2[18])(obj2);
     }
     obj1[1] = tmp14;
     return obj1;

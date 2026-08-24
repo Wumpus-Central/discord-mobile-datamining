@@ -1,11 +1,11 @@
 // discord_app/modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { 1: null };
 obj[1] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-voice-gateway-protocol-version", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
+const result = set.fileFinishedImporting("modules/voice_calls/VoiceGatewayProtocolVersionExperiment.tsx");
 
 export default apexExperiment;
 export const getVoiceGatewayProtocolVersion = function getVoiceGatewayProtocolVersion(supportsSfuUpdate) {

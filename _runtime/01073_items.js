@@ -1,5 +1,5 @@
 // _runtime/01073_items.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -20,7 +20,7 @@ let items = [
     } else {
       const match1 = regex.exec(str);
       if (match1) {
-        const tmp25 = _slicedToArray(match1, 4);
+        const tmp25 = callback(match1, 4);
         let UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
         obj = { filename: null, function: null, in_app: true };
         obj[0] = tmp25[1];
@@ -49,14 +49,14 @@ let items = [
           if (!UNKNOWN_FUNCTION) {
             UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
-          if (typeof extractSafariExtensionDetails !== "function") {
+          if (typeof tmp8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const tmp12 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");
           if (!tmp12) {
             if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
               const items = [UNKNOWN_FUNCTION, tmp11];
-              const tmp19 = _slicedToArray(items, 2);
+              const tmp19 = callback(items, 2);
               let UNKNOWN_FUNCTION2 = tmp19[0];
               let tmp20;
               if (match2[3]) {
@@ -94,6 +94,7 @@ let items = [
             combined = concat(tmp11);
           }
           items1[1] = combined;
+          tmp8 = extractSafariExtensionDetails;
         }
       }
     }
@@ -114,6 +115,7 @@ let items1 = [
             match[3] = match1[1];
             match[4] = match1[2];
             match[5] = "";
+            const tmp4 = match[1] || "eval";
           }
         }
         arr = match[3];
@@ -129,7 +131,7 @@ let items1 = [
       if (!tmp9) {
         if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
           const items = [UNKNOWN_FUNCTION, tmp5];
-          const tmp16 = _slicedToArray(items, 2);
+          const tmp16 = callback(items, 2);
           let UNKNOWN_FUNCTION2 = tmp16[0];
           let tmp17;
           if (match[4]) {
@@ -197,6 +199,7 @@ const items2 = [
         obj.colno = tmp6;
         tmp2 = obj;
       }
+      const tmp5 = +match[3];
     }
     return tmp2;
   }
@@ -220,6 +223,7 @@ const items3 = [
       obj[1] = UNKNOWN_FUNCTION;
       obj.lineno = +match[1];
       tmp2 = obj;
+      const tmp5 = +match[1];
     }
     return tmp2;
   }
@@ -247,6 +251,8 @@ const items4 = [
       obj.lineno = +match[1];
       obj.colno = +match[2];
       tmp2 = obj;
+      const tmp5 = +match[1];
+      const tmp6 = +match[2];
     }
     return tmp2;
   }

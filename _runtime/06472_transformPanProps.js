@@ -128,11 +128,12 @@ fillInDefaultValues.__closure = {};
 fillInDefaultValues.__workletHash = 12221662243929;
 fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_usePanGestureTs2(event){event.changeX=0;event.changeY=0;}" };
 let closure_6 = {};
-arg5.usePanGesture = function usePanGesture(closure_6) {
-  let tmp = closure_6;
-  if (closure_6 === undefined) {
+arg5.usePanGesture = function usePanGesture(gestureHandlerProps) {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
     tmp = closure_6;
   }
   const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformPanProps);
+  const obj = isGestureEnabled;
   return useGesture.useGesture(ComposedGestureName.SingleGestureName.Pan, clonedAndRemappedConfig);
 };

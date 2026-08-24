@@ -20,23 +20,33 @@ arg5.varint64read = function varint64read() {
       let tmp5 = +self.pos;
       self.pos = tmp5 + 1;
       let tmp6 = self.buf[tmp5];
+      let num3 = 15;
       let tmp7 = tmp3 | (15 & tmp6) << 28;
+      let num4 = 112;
+      let num5 = 4;
       let tmp8 = (112 & tmp6) >> 4;
       let num6 = 3;
+      let num7 = 31;
       let tmp9 = tmp8;
       if (128 & tmp6) {
         let tmp11 = +self.pos;
         self.pos = tmp11 + 1;
         let tmp12 = self.buf[tmp11];
         let tmp13 = tmp9 | (127 & tmp12) << num6;
+        let tmp14 = num6;
         while (128 & tmp12) {
           num6 = num6 + 7;
           tmp9 = tmp13;
           if (num6 <= 31) {
             continue;
           } else {
+            let tmp16 = globalThis;
             let _Error = Error;
+            let tmp17 = new.target;
+            let str = "invalid varint";
+            let tmp18 = new.target;
             error = new Error("invalid varint");
+            let tmp20 = error;
             throw error;
           }
         }
@@ -60,6 +70,7 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
     let tmp = lo >>> num;
     let tmp2 = tmp >>> 7;
     let tmp3 = tmp2 === 0;
+    let tmp4 = num;
     if (tmp2 === 0) {
       tmp3 = 0 == hi;
     }
@@ -76,6 +87,8 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
       if (num < 28) {
         continue;
       } else {
+        let num2 = 4;
+        let num3 = 15;
         let tmp8 = lo >>> 28 & 15 | (7 & hi) << 4;
         let num4 = 3;
         let tmp9 = hi >> 3;
@@ -84,10 +97,12 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
           tmp10 = 128 | tmp8;
         }
         arr = buf.push(255 & tmp10);
+        let num5 = 31;
         if (tmp9) {
           while (true) {
             let tmp12 = hi >>> num4;
             let tmp13 = tmp12 >>> 7 !== 0;
+            let tmp14 = num4;
             let tmp15 = tmp12;
             if (tmp13) {
               tmp15 = 128 | tmp12;
@@ -100,6 +115,7 @@ arg5.varint64write = function varint64write(lo, hi, buf) {
               if (num4 < 31) {
                 continue;
               } else {
+                let num6 = 1;
                 let arr2 = buf.push(hi >>> 31 & 1);
               }
             }
@@ -119,32 +135,32 @@ arg5.int64fromString = function int64fromString(trimmed) {
   let num2 = 0;
   let result = NumberResult;
   if (NumberResult >= c0) {
-    num2 = NumberResult / c0 | 0;
-    result = NumberResult % c0;
+    num2 = NumberResult / tmp3 | 0;
+    result = NumberResult % tmp3;
   }
   const result1 = num2 * 1000000;
   const sum = result * 1000000 + Number(substr.slice(-18, -12));
   let sum1 = result1;
   let result2 = sum;
   if (sum >= c0) {
-    sum1 = result1 + (sum / c0 | 0);
-    result2 = sum % c0;
+    sum1 = result1 + (sum / tmp3 | 0);
+    result2 = sum % tmp3;
   }
   const result3 = sum1 * 1000000;
   const sum2 = result2 * 1000000 + Number(substr.slice(-12, -6));
   let sum3 = result3;
   let result4 = sum2;
   if (sum2 >= c0) {
-    sum3 = result3 + (sum2 / c0 | 0);
-    result4 = sum2 % c0;
+    sum3 = result3 + (sum2 / tmp3 | 0);
+    result4 = sum2 % tmp3;
   }
   const result5 = sum3 * 1000000;
   const sum4 = result4 * 1000000 + Number(substr.slice(-6, undefined));
   let sum5 = result5;
   let result6 = sum4;
   if (sum4 >= c0) {
-    sum5 = result5 + (sum4 / c0 | 0);
-    result6 = sum4 % c0;
+    sum5 = result5 + (sum4 / tmp3 | 0);
+    result6 = sum4 % tmp3;
   }
   const items = ["-" == trimmed[0], result6, sum5];
   return items;

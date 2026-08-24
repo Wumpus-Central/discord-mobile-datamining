@@ -1,12 +1,10 @@
 // _runtime/01680_importDefaultResult1.js
-import t from "01665_t.js";
 import WorkletsModule from "01670_WorkletsModule.js";
-import ReanimatedTurboModule2 from "01676_ReanimatedTurboModule.js";
 import _mod1681 from "metro/01681__.js";
 import getShadowNodeWrapperFromRef from "01682_getShadowNodeWrapperFromRef.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
+import closure_4 from "00090__classPrivateFieldBase.js";
 import importDefaultResult1 from "00091__classPrivateFieldKey.js";
 
 let DummyReanimatedModuleProxy = global;
@@ -26,7 +24,7 @@ class NativeReanimatedModule {
     tmp6 = closure_4(this, closure_5);
     tmp6[closure_5] = require("WorkletsModule").WorkletsModule;
     tmp9 = DummyReanimatedModuleProxy;
-    DummyReanimatedModuleProxy._REANIMATED_VERSION_JS = require("metro/01681__.js").jsVersion;
+    DummyReanimatedModuleProxy._REANIMATED_VERSION_JS = require("module_1681").jsVersion;
     if (undefined === DummyReanimatedModuleProxy.__reanimatedModuleProxy) {
       if (require("ReanimatedTurboModule").ReanimatedTurboModule) {
         ReanimatedTurboModule = require("ReanimatedTurboModule").ReanimatedTurboModule;

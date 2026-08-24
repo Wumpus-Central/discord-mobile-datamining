@@ -1,15 +1,15 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import useMobileTenureBadgeImages from "hooks/useMobileTenureBadgeImages.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UserSettingsSections } from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function CoachmarkImg(badge) {
   badge = badge.badge;
   const tmp = callback2();
@@ -37,7 +37,7 @@ function CoachmarkImg(badge) {
   return tmp5;
 }
 let closure_9 = createCacheKey.createStyles({ image: { width: "100%", height: "100%" }, imageContainer: { width: 110, height: 72, marginTop: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx");
 
 export default function TieredTenureBadgeCoachmark(arg0) {
   let tieredTenureBadgeData;
@@ -76,8 +76,8 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     };
     obj[7] = function onButtonPress() {
       callback(closure_1_7.TAKE_ACTION);
-      tieredTenureBadgeData(closure_1_2[13]);
-      const obj = { screen: closure_1_6.PREMIUM };
+      let obj = closure_1_0(closure_1_2[13]);
+      obj = { screen: closure_1_6.PREMIUM };
       obj.openUserSettings(obj);
     };
     const intl3 = tieredTenureBadgeData(1236).intl;

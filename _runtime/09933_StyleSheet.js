@@ -1,10 +1,10 @@
 // _runtime/09933_StyleSheet.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ Animated: c5, Platform, StatusBar: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ useAnimatedValue: closure_8, View: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -329,7 +329,8 @@ function SceneView(arg0) {
     items4[2] = obj10;
     obj9[0] = items4;
     obj9[1] = headerBackground();
-    tmp36Result = callback(closure_9, obj9);
+    tmp36Result = tmp36(closure_9, obj9);
+    const tmp42 = closure_9;
   }
   const items5 = [tmp36Result, , ];
   tmp36Result = null;
@@ -361,8 +362,8 @@ function SceneView(arg0) {
       obj14[2] = route;
       obj14[3] = navigation;
       obj13[2] = header(obj14);
-      obj12[1] = callback(closure_9, obj13);
-      tmp36Result = callback(closure_9, obj12);
+      obj12[1] = tmp36(closure_9, obj13);
+      tmp36Result = tmp36(tmp45, obj12);
     }
   }
   items5[1] = tmp36Result;
@@ -371,14 +372,15 @@ function SceneView(arg0) {
     tmp47 = tmp39;
   }
   const obj15 = { value: tmp47, children: null };
+  const tmp38 = closure_11;
   const tmp8Result3 = num6(9935);
-  obj15[1] = callback(num6(6319).HeaderBackContext.Provider, { value: memo1, children: descriptor.render() });
-  items5[2] = callback(num6(6319).HeaderShownContext.Provider, obj15);
+  obj15[1] = closure_10(num6(6319).HeaderBackContext.Provider, { value: memo1, children: descriptor.render() });
+  items5[2] = closure_10(num6(6319).HeaderShownContext.Provider, obj15);
   obj8[1] = items5;
-  obj7[1] = callback2(num6(6319).HeaderHeightContext.Provider, obj8);
-  obj4[52] = callback(num6(9937).AnimatedHeaderHeightContext.Provider, obj7);
-  obj3[2] = callback(num6(4670).ScreenStackItem, obj4);
-  return callback(num6(1501).NavigationProvider, obj3);
+  obj7[1] = tmp38(num6(6319).HeaderHeightContext.Provider, obj8);
+  obj4[52] = closure_10(num6(9937).AnimatedHeaderHeightContext.Provider, obj7);
+  obj3[2] = closure_10(num6(4670).ScreenStackItem, obj4);
+  return closure_10(num6(1501).NavigationProvider, obj3);
 }
 const styles = StyleSheet.create({ container: { flex: 1 }, header: { zIndex: 1 }, absolute: { position: "absolute", top: 0, start: 0, end: 0 }, translucent: { position: "absolute", top: 0, start: 0, end: 0, zIndex: 1, elevation: 1 }, background: { overflow: "hidden" } });
 
@@ -386,30 +388,34 @@ export const NativeStackView = function NativeStackView(state) {
   state = state.state;
   ({ navigation: require, descriptors } = state);
   const describe = state.describe;
+  let setNextDismissedKey;
+  let modalRouteKeys;
+  closure_6 = undefined;
   let obj = require(descriptors[11]);
-  const setNextDismissedKey = obj.useDismissedRouteError(state).setNextDismissedKey;
+  setNextDismissedKey = obj.useDismissedRouteError(state).setNextDismissedKey;
   const invalidPreventRemoveError = require(descriptors[12]).useInvalidPreventRemoveError(descriptors);
   const obj2 = require(descriptors[12]);
-  const modalRouteKeys = require(descriptors[13]).getModalRouteKeys(state.routes, descriptors);
+  modalRouteKeys = require(descriptors[13]).getModalRouteKeys(state.routes, descriptors);
   const preloadedRoutes = state.preloadedRoutes;
-  closure_6 = preloadedRoutes.reduce((acc, item, index) => {
-    let tmp = acc[item.key];
+  closure_6 = preloadedRoutes.reduce((arg0, key) => {
+    let tmp = arg0[key.key];
     if (!tmp) {
-      tmp = describe(item, true);
+      tmp = describe(key, true);
     }
-    acc[item.key] = tmp;
-    return acc;
+    arg0[key.key] = tmp;
+    return arg0;
   }, {});
+  obj = { children: null };
   obj = { style: closure_13.container, children: null };
   const routes = state.routes;
   const combined = routes.concat(state.preloadedRoutes);
-  obj[1] = combined.map((item, index) => {
-    state = item;
-    let tmp2 = descriptors[item.key];
+  obj[1] = combined.map((key, index) => {
+    state = key;
+    let tmp2 = descriptors[key.key];
     if (tmp2 == null) {
-      tmp2 = dependencyMap[item.key];
+      tmp2 = dependencyMap[key.key];
     }
-    let key;
+    key = undefined;
     const diff = state.index - 1;
     if (state.routes[index - 1] != null) {
       key = tmp6.key;
@@ -420,13 +426,13 @@ export const NativeStackView = function NativeStackView(state) {
     }
     let tmp10;
     if (key) {
-      tmp10 = descriptors[key];
+      tmp10 = tmp[key];
     }
     let tmp11;
     if (key1) {
-      tmp11 = descriptors[key1];
+      tmp11 = tmp[key1];
     }
-    const hasItem = closure_5.includes(item.key);
+    const hasItem = closure_5.includes(key.key);
     let flag = hasItem;
     if (hasItem) {
       flag = false;
@@ -452,7 +458,7 @@ export const NativeStackView = function NativeStackView(state) {
         tmp15 = !flag;
       }
     }
-    return closure_1_10(SceneView, {
+    return closure_1_10(closure_1_12, {
       index,
       focused: state.index === index,
       shouldFreeze: tmp15,
@@ -460,52 +466,53 @@ export const NativeStackView = function NativeStackView(state) {
       previousDescriptor: tmp10,
       nextDescriptor: tmp11,
       isPresentationModal: hasItem,
-      isPreloaded: undefined !== dependencyMap[item.key] && undefined === descriptors[item.key],
+      isPreloaded: undefined !== dependencyMap[key.key] && undefined === descriptors[key.key],
       onWillDisappear(onDidDisappear, arg1) {
-        closure_1_1.emit({ type: "transitionStart", data: { closing: true }, target: item.key });
+        closure_1_1.emit({ type: "transitionStart", data: { closing: true }, target: key.key });
       },
       onWillAppear() {
-        closure_1_1.emit({ type: "transitionStart", data: { closing: false }, target: item.key });
+        closure_1_1.emit({ type: "transitionStart", data: { closing: false }, target: key.key });
       },
       onAppear() {
-        closure_1_1.emit({ type: "transitionEnd", data: { closing: false }, target: item.key });
+        closure_1_1.emit({ type: "transitionEnd", data: { closing: false }, target: key.key });
       },
       onDisappear() {
-        closure_1_1.emit({ type: "transitionEnd", data: { closing: true }, target: item.key });
+        closure_1_1.emit({ type: "transitionEnd", data: { closing: true }, target: key.key });
       },
       onDismissed(nativeEvent) {
         const obj = {};
-        const StackActions = require(descriptors[4]).StackActions;
+        const StackActions = closure_2_1(descriptors[4]).StackActions;
         const merged = Object.assign(StackActions.pop(nativeEvent.nativeEvent.dismissCount));
-        obj.source = item.key;
-        obj.target = item.key;
+        obj.source = key.key;
+        obj.target = key.key;
         closure_1_1.dispatch(obj);
-        setNextDismissedKey(item.key);
+        closure_1_4(key.key);
       },
       onHeaderBackButtonClicked() {
         const obj = {};
-        const StackActions = require(descriptors[4]).StackActions;
+        const StackActions = closure_2_1(descriptors[4]).StackActions;
         const merged = Object.assign(StackActions.pop());
-        obj.source = item.key;
-        obj.target = item.key;
+        obj.source = key.key;
+        obj.target = key.key;
         closure_1_1.dispatch(obj);
       },
       onNativeDismissCancelled(nativeEvent) {
         const obj = {};
-        const StackActions = require(descriptors[4]).StackActions;
+        const StackActions = closure_2_1(descriptors[4]).StackActions;
         const merged = Object.assign(StackActions.pop(nativeEvent.nativeEvent.dismissCount));
-        obj.source = item.key;
-        obj.target = item.key;
+        obj.source = key.key;
+        obj.target = key.key;
         closure_1_1.dispatch(obj);
       },
       onGestureCancel() {
-        closure_1_1.emit({ type: "gestureCancel", target: item.key });
+        closure_1_1.emit({ type: "gestureCancel", target: key.key });
       },
       onSheetDetentChanged(index) {
-        const obj = { index: index.nativeEvent.index, stable: index.nativeEvent.isStable };
+        obj = { type: "sheetDetentChange", target: key.key, data: obj };
+        obj = { index: index.nativeEvent.index, stable: index.nativeEvent.isStable };
         closure_1_1.emit(obj);
       }
-    }, item.key);
+    }, key.key);
   });
   obj[0] = callback3(require(descriptors[8]).ScreenStack, obj);
   return callback3(require(descriptors[6]).SafeAreaProviderCompat, obj);

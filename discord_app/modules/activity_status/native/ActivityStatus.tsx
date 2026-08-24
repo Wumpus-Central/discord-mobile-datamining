@@ -1,18 +1,18 @@
 // discord_app/modules/activity_status/native/ActivityStatus.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import sortActivity from "../../../stores/PresenceStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_5 from "../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
 import { DOT_UNICODE } from "../ActivityStatusConstants.tsx";
 import { ActivityTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
 
 export default function ActivityStatus(guildId) {
   const userId = guildId.userId;
@@ -28,19 +28,20 @@ export default function ActivityStatus(guildId) {
   if (flag === undefined) {
     flag = false;
   }
+  let stateFromStores1;
   const tmp = callback2();
   let obj = userId(589);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getUser(userId));
   obj1 = userId(589);
   const items1 = [closure_5];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
   const voiceChannel = stateFromStores1(9896)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = React.useMemo(() => {
     let found;
     if (stateFromStores1 != null) {
-      found = stateFromStores1.find((item, index) => item.type === constants.CUSTOM_STATUS);
+      found = arr.find((type) => type.type === constants.CUSTOM_STATUS);
     }
     if (null == found) {
       return null;
@@ -63,6 +64,7 @@ export default function ActivityStatus(guildId) {
       }
       return tmp4;
     }
+    arr = stateFromStores1;
   }, items2);
   let obj2 = userId(9287);
   let state;
@@ -70,6 +72,7 @@ export default function ActivityStatus(guildId) {
     state = memo.state;
   }
   const gameMentionsAsPlainText = obj2.useGameMentionsAsPlainText(state);
+  const tmp2 = userId;
   const tmp6 = stateFromStores1(9895)(userId);
   const items3 = [closure_6];
   if (tmp2Result.useStateFromStores(items3, () => closure_1_6.isBlockedOrIgnored(userId))) {
@@ -97,12 +100,13 @@ export default function ActivityStatus(guildId) {
       obj[4] = tmp12;
       obj[5] = tmp13;
       let tmp18Result = callback(tmp5(9897), obj);
+      const tmp18 = callback;
       const tmp5Result = tmp5(9897);
     } else {
       let found1;
       if (stateFromStores1 != null) {
-        found1 = stateFromStores1.find((item, index) => {
-          const type = item.type;
+        found1 = stateFromStores1.find((type) => {
+          type = type.type;
           return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
         });
       }
@@ -159,7 +163,9 @@ export default function ActivityStatus(guildId) {
         const obj4 = { children: null };
         items7[1] = tmp27;
         obj4[0] = items7;
-        tmp23Result = callback(closure_11, obj4);
+        tmp23Result = closure_12(closure_11, obj4);
+        const tmp23 = closure_12;
+        const tmp24 = closure_11;
       }
       tmp21 = tmp23Result;
     }
@@ -180,7 +186,7 @@ export default function ActivityStatus(guildId) {
     items8[1] = tmp31;
     items8[2] = tmp21;
     obj5[1] = items8;
-    return callback(View, obj5);
+    return closure_12(View, obj5);
   }
   tmp2Result = userId(589);
 };

@@ -1,8 +1,6 @@
 // _runtime/04406_ToPrimitive.js
 import apply from "01421_apply.js";
 import isPrimitive from "04407_isPrimitive.js";
-import _mod4408 from "metro/04408__.js";
-import isDateObject from "04409_isDateObject.js";
 
 let tmp = typeof Symbol === "function";
 if (typeof Symbol === "function") {
@@ -34,8 +32,8 @@ export default function ToPrimitive(arg0) {
       {
         let tmp16 = "default" === str2;
         if (tmp16) {
-          tmp16 = isDateObject(arg0) || _mod4408(arg0);
-          const tmp15 = isDateObject(arg0) || _mod4408(arg0);
+          tmp16 = tmp(4409)(arg0) || tmp(4408)(arg0);
+          const tmp15 = tmp(4409)(arg0) || tmp(4408)(arg0);
         }
         let str8 = str2;
         if (tmp16) {
@@ -56,10 +54,13 @@ export default function ToPrimitive(arg0) {
             if (0 < arr.length) {
               while (true) {
                 let tmp18 = arg0[arr[num2]];
+                let tmp19 = require;
+                let tmp20 = dependencyMap;
+                let tmp21 = num2;
                 if (apply(tmp18)) {
                   let call = tmp18.call;
                   tmp22 = typeof call === "unknown" ? tmp18() : call(arg0);
-                  if (isPrimitive(tmp22)) {
+                  if (tmp19(4407)(tmp22)) {
                     break;
                   }
                 }
@@ -83,7 +84,7 @@ export default function ToPrimitive(arg0) {
         let tmp8;
         if (null != arg0[toPrimitive]) {
           tmp8 = tmp6;
-          if (!apply(tmp6)) {
+          if (!tmp(1421)(tmp6)) {
             const _TypeError = TypeError;
             const _String2 = String;
             const text = `${tmp6} returned for property `;
@@ -92,7 +93,7 @@ export default function ToPrimitive(arg0) {
           }
         }
         let valueOf = tmp8;
-      } else if (_mod4408(arg0)) {
+      } else if (tmp(4408)(arg0)) {
         const _Symbol2 = Symbol;
         valueOf = Symbol.prototype.valueOf;
       }

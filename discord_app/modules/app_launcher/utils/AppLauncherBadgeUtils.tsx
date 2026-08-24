@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/utils/AppLauncherBadgeUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
+const result = set.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
 export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {
   ({ storeState, surface } = arg0);

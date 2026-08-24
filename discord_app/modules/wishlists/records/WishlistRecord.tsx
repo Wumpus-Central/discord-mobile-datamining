@@ -1,14 +1,15 @@
 // discord_app/modules/wishlists/records/WishlistRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
-import createExecutable from "../../../records/ApplicationRecord.tsx";
-import fromServer from "BaseWishlistItemRecord.tsx";
-import createCollectiblesItemFromServerResponse from "CollectiblesWishlistItemRecord.tsx";
-import fromServer2 from "PremiumWishlistItemRecord.tsx";
-import fromServer3 from "SKUWishlistItemRecord.tsx";
+import closure_0 from "../../../records/ApplicationRecord.tsx";
+import closure_1 from "BaseWishlistItemRecord.tsx";
+import closure_2 from "CollectiblesWishlistItemRecord.tsx";
+import closure_3 from "PremiumWishlistItemRecord.tsx";
+import closure_4 from "SKUWishlistItemRecord.tsx";
 import { SKUProductLines } from "../../../Constants.tsx";
 
 toJSDefault;
-const prototype = function WishlistRecord(arg0) {
+let prototype;
+prototype = function WishlistRecord(arg0) {
   const tmp = new prototype(new.target, new.target, arg0);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, userId: tmp.userId, items: tmp.items, applications } = arg0);
@@ -23,16 +24,16 @@ prototype["fromServer"] = function fromServer(arg0) {
   const merged = Object.assign(arg0, obj);
   obj = {};
   let str = obj;
-  const mapped = wishlist_items.map((item, index) => {
-    const sku_product_line = item.sku_product_line;
+  const mapped = wishlist_items.map((sku_product_line) => {
+    sku_product_line = sku_product_line.sku_product_line;
     if (constants.COLLECTIBLES === sku_product_line) {
-      return closure_2.fromServer(item);
-    } else if (constants.SOCIAL_LAYER_GAME_ITEM === sku_product_line) {
-      return closure_4.fromServer(item);
-    } else if (constants.PREMIUM === sku_product_line) {
-      return closure_3.fromServer(item);
+      return closure_2.fromServer(sku_product_line);
+    } else if (tmp.SOCIAL_LAYER_GAME_ITEM === sku_product_line) {
+      return closure_4.fromServer(sku_product_line);
+    } else if (tmp.PREMIUM === sku_product_line) {
+      return closure_3.fromServer(sku_product_line);
     } else {
-      return closure_1.fromServer(item);
+      return closure_1.fromServer(sku_product_line);
     }
   });
   const merged1 = Object.assign(merged);
@@ -41,7 +42,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   applications = merged.applications;
   let mapped1;
   if (applications != null) {
-    mapped1 = applications.map((item, index) => closure_0.createFromServer(item));
+    mapped1 = applications.map((arg0) => closure_0.createFromServer(arg0));
   }
   obj.applications = mapped1;
   if (typeof prototype !== "function") {
@@ -54,19 +55,19 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp7.applications = applications;
   return tmp7;
 };
-const result = require("obj132").fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
 export const getWishlistSkuIds = function getWishlistSkuIds(items) {
   items = items.items;
-  return items.map((item, index) => item.skuId);
+  return items.map((skuId) => skuId.skuId);
 };
 export const wishlistHasSkuId = function wishlistHasSkuId(items) {
   closure_0 = arg1;
   items = items.items;
-  return items.some((item, index) => item.skuId === closure_0);
+  return items.some((skuId) => skuId.skuId === closure_0);
 };
 export const getWishlistProductLines = function getWishlistProductLines(items) {
   items = items.items;
-  return new Set(items.map((item, index) => item.skuProductLine));
+  return new Set(items.map((skuProductLine) => skuProductLine.skuProductLine));
 };

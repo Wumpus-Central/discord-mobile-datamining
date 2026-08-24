@@ -1,7 +1,8 @@
 // discord_common/js/packages/kv-storage/js/api/MessageDao.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import fromDatabaseTransaction from "Table.tsx";
 import TableId from "../types/index.tsx";
+import { TableId } from "../types/index.tsx";
 
 let MessageDao;
 class MessageDao {
@@ -56,7 +57,7 @@ prototype["getRange"] = function getRange(arg0, arg1, str, str2) {
 };
 prototype["getMostRecents"] = function getMostRecents(closure_1_0) {
   const messages = this.table.messages;
-  return messages.getLatest(require);
+  return messages.getLatest(closure_1_0);
 };
 prototype["put"] = function put(arg0, arg1, data) {
   let Replace = arg3;
@@ -74,14 +75,14 @@ prototype["putAll"] = function putAll(arg0, arg1, arr) {
   dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = require("../types/index.tsx").ConflictOptions.Replace;
+    Replace = _TableId.ConflictOptions.Replace;
   }
   const table = this.table;
-  return table.putAll(arr.map((item, index) => {
-    const id = item.id;
+  return table.putAll(arr.map((data) => {
+    const id = data.id;
     const padStartResult = id.padStart(19, "0");
     const items = [closure_0, closure_1, padStartResult];
-    return { key: items, data: item, generation: padStartResult };
+    return { key: items, data, generation: padStartResult };
   }), Replace);
 };
 prototype["deleteAll"] = function deleteAll() {
@@ -107,12 +108,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof MessageDaoTransaction !== "function") {
+    if (typeof closure_1_2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(MessageDaoTransaction.prototype);
+    const obj = Object.create(closure_1_2.prototype);
     obj.transaction = transaction;
-    return callback(obj);
+    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
@@ -166,14 +167,14 @@ prototype2["putAll"] = function putAll(arg0, arg1, arr) {
   dependencyMap = arg1;
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = require("../types/index.tsx").ConflictOptions.Replace;
+    Replace = _TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  transaction.putAll(arr.map((item, index) => {
-    const id = item.id;
+  transaction.putAll(arr.map((data) => {
+    const id = data.id;
     const padStartResult = id.padStart(19, "0");
     const items = [closure_0, closure_1, padStartResult];
-    return { key: items, data: item, generation: padStartResult };
+    return { key: items, data, generation: padStartResult };
   }), Replace);
 };
 prototype2["replaceChannel"] = function replaceChannel(arg0, arg1, arg2) {
@@ -216,7 +217,7 @@ prototype2["trimChannelsNotIn"] = function trimChannelsNotIn(arg0, arg1) {
   const messages = this.transaction.messages;
   messages.trimChannelsNotIn(arg0, arg1);
 };
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/MessageDao.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/MessageDao.tsx");
 
 export { MessageDao };
 export { MessageDaoTransaction };

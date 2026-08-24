@@ -1,12 +1,12 @@
 // _runtime/06955_BottomSheet.js
 import noopDefault from "00019_noop.js";
 import cancelAnimationDefault from "01654_cancelAnimation.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ useMemo: c4, useCallback: c5, useImperativeHandle: closure_6, useEffect: error, forwardRef, memo } = noop);
 noopDefault;
 ({ Platform: closure_8, StyleSheet: c9 } = get_ActivityIndicator);
@@ -215,7 +215,7 @@ class BottomSheet {
     reactiveSharedValue2 = tmp33Result2.useReactiveSharedValue(handleHeight);
     closure_33 = reactiveSharedValue2;
     tmp33Result3 = require("cancelAnimation");
-    sharedValue = require("../discord_app/index.native.tsx");
+    sharedValue = require("module_0");
     closure_34 = sharedValue;
     tmp33Result4 = require("cancelAnimation");
     if (contentHeight == null) {
@@ -391,7 +391,7 @@ class BottomSheet {
     shouldHandleKeyboardEvents = keyboard.shouldHandleKeyboardEvents;
     closure_63 = shouldHandleKeyboardEvents;
     tmp33Result23 = require("cancelAnimation");
-    sharedValue12 = require("../discord_app/index.native.tsx");
+    sharedValue12 = require("module_0");
     closure_64 = sharedValue12;
     tmp33Result24 = require("cancelAnimation");
     reducedMotion = tmp33Result24.useReducedMotion();
@@ -401,8 +401,8 @@ class BottomSheet {
     items5[1] = overrideReduceMotion;
     tmp64 = DEFAULT_ENABLE_OVER_DRAG(() => {
       if (overrideReduceMotion) {
-        if (overrideReduceMotion !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).ReduceMotion.System) {
-          let tmp4 = overrideReduceMotion === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).ReduceMotion.Always;
+        if (tmp !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).ReduceMotion.System) {
+          let tmp4 = tmp === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).ReduceMotion.Always;
         }
         return tmp4;
       }
@@ -421,22 +421,22 @@ class BottomSheet {
         return animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SHEET_STATE.CLOSED;
       } else {
         const diff = derivedValue.value - derivedValue3.value;
-        if (sharedValue2.value === diff) {
+        if (iter.value === diff) {
           return animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SHEET_STATE.EXTENDED;
         } else {
           const _Math = Math;
           const bound = Math.max(0, iter2.value - (iter3.value + sharedValue12.value));
           if (keyboardBehavior === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_BEHAVIOR.interactive) {
             if (sharedValue7.value) {
-              if (sharedValue2.value === bound) {
+              if (iter.value === bound) {
                 let OPENED = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SHEET_STATE.EXTENDED;
               }
               return OPENED;
             }
           }
-          if (0 === sharedValue2.value) {
+          if (0 === iter.value) {
             OPENED = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SHEET_STATE.FILL_PARENT;
-          } else if (sharedValue2.value < diff) {
+          } else if (iter.value < diff) {
             OPENED = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SHEET_STATE.OVER_EXTENDED;
           } else {
             OPENED = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).SHEET_STATE.OPENED;
@@ -520,7 +520,7 @@ class BottomSheet {
       const reversed = substr.reverse();
       value = first.value;
       const substr1 = value.slice();
-      const mapped = substr1.map((item, index) => index);
+      const mapped = substr1.map((arg0, arg1) => arg1);
       const reversed1 = mapped.reverse();
       reversed.push(derivedValue.value);
       reversed1.push(-1);
@@ -592,8 +592,9 @@ class BottomSheet {
           tmp3 = -1 !== arg0;
         }
         if (!tmp3) {
-          tmp(reactiveSharedValue3.value, arg0, sharedValue2.value, arg1, arg2);
+          tmp(iter.value, arg0, sharedValue2.value, arg1, arg2);
         }
+        iter = reactiveSharedValue3;
       }
     }, items10);
     closure_73 = tmp71;
@@ -629,6 +630,7 @@ class BottomSheet {
         sharedValue3.value = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[5]).INITIAL_VALUE;
         sharedValue4.value = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[5]).INITIAL_VALUE;
         sharedValue9.value = false;
+        const tmp = sharedValue14;
       }
     };
     obj5 = { __DEV__: false, runOnJS: require("cancelAnimation").runOnJS, print: require("normalizeSnapPoint").print, animatedCurrentIndex: reactiveSharedValue3, animatedNextPosition: sharedValue3, animatedNextPositionIndex: sharedValue4, animatedAnimationSource: sharedValue14, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE, isAnimatedOnMount: sharedValue5, isForcedClosing: sharedValue8, animatedAnimationState: sharedValue13, ANIMATION_STATE: require("GESTURE_SOURCE").ANIMATION_STATE, INITIAL_VALUE: require("DEFAULT_HANDLE_HEIGHT").INITIAL_VALUE, animatedContainerHeightDidChange: sharedValue9 };
@@ -646,18 +648,18 @@ class BottomSheet {
       if (initialPosition !== sharedValue2.value) {
         if (undefined !== initialPosition) {
           if (sharedValue13.value !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_STATE.RUNNING) {
-            if (sharedValue13.value === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_STATE.RUNNING) {
+            if (iter2.value === tmp18(tmp19[8]).ANIMATION_STATE.RUNNING) {
               workletCallback();
             }
-            sharedValue13.value = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_STATE.RUNNING;
+            iter2.value = tmp18(tmp19[8]).ANIMATION_STATE.RUNNING;
             sharedValue14.value = GESTURE;
             sharedValue3.value = initialPosition;
-            let tmp8 = state.value === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_STATE.SHOWN;
+            let tmp8 = state.value === tmp18(tmp19[8]).KEYBOARD_STATE.SHOWN;
             if (tmp8) {
-              tmp8 = keyboardBehavior !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_BEHAVIOR.extend;
+              tmp8 = keyboardBehavior !== tmp18(tmp19[8]).KEYBOARD_BEHAVIOR.extend;
             }
             if (tmp8) {
-              tmp8 = initialPosition < sharedValue2.value;
+              tmp8 = initialPosition < iter.value;
             }
             num2 = 0;
             if (tmp8) {
@@ -666,9 +668,9 @@ class BottomSheet {
             let tmp11 = arg3;
             const value = first.value;
             sharedValue4.value = value.indexOf(initialPosition + num2);
-            let tmp18Result = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]);
+            let tmp18Result = tmp18(tmp19[4]);
             tmp18Result.runOnJS(closure_73)(sharedValue4.value, initialPosition, GESTURE);
-            tmp18Result = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[9]);
+            tmp18Result = tmp18(tmp19[9]);
             const obj = { point: null, configs: null, velocity: null, overrideReduceMotion: null, onComplete: null };
             obj[0] = initialPosition;
             if (!arg3) {
@@ -678,7 +680,7 @@ class BottomSheet {
             obj[2] = num;
             obj[3] = overrideReduceMotion;
             obj[4] = workletCallback1;
-            sharedValue2.value = tmp18Result.animate(obj);
+            iter.value = tmp18Result.animate(obj);
           }
         }
       }
@@ -724,13 +726,15 @@ class BottomSheet {
     closure_77 = workletCallback3;
     tmp33Result34 = require("cancelAnimation");
     getEvaluatedPosition = function getEvaluatedPosition(arg0) {
-      const value = state.value;
+      let value = reactiveSharedValue3.value;
+      value = first.value;
+      value = state.value;
       const value1 = derivedValue1.value;
       if (arg0 === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_SOURCE.KEYBOARD) {
-        if (DEFAULT_KEYBOARD_BLUR_BEHAVIOR === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_BLUR_BEHAVIOR.restore) {
-          if (value === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_STATE.HIDDEN) {
-            if (sharedValue10.value !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[7]).State.ACTIVE) {
-              if (sharedValue11.value !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[7]).State.ACTIVE) {
+        if (DEFAULT_KEYBOARD_BLUR_BEHAVIOR === tmp(tmp2[8]).KEYBOARD_BLUR_BEHAVIOR.restore) {
+          if (value === tmp(tmp2[8]).KEYBOARD_STATE.HIDDEN) {
+            if (sharedValue10.value !== tmp(tmp2[7]).State.ACTIVE) {
+              if (sharedValue11.value !== tmp(tmp2[7]).State.ACTIVE) {
                 sharedValue7.value = false;
                 return value[value];
               }
@@ -739,18 +743,18 @@ class BottomSheet {
         }
       }
       if (keyboardBehavior === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_BEHAVIOR.extend) {
-        if (value === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_STATE.SHOWN) {
+        if (value === tmp(tmp2[8]).KEYBOARD_STATE.SHOWN) {
           return value1;
         }
       }
       if (keyboardBehavior === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_BEHAVIOR.fillParent) {
-        if (value === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_STATE.SHOWN) {
+        if (value === tmp(tmp2[8]).KEYBOARD_STATE.SHOWN) {
           sharedValue7.value = true;
           return 0;
         }
       }
       if (keyboardBehavior === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_BEHAVIOR.interactive) {
-        if (value === animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).KEYBOARD_STATE.SHOWN) {
+        if (value === tmp(tmp2[8]).KEYBOARD_STATE.SHOWN) {
           if ("adjustResize" !== DEFAULT_KEYBOARD_INPUT_MODE) {
             sharedValue7.value = true;
             const _Math = Math;
@@ -802,10 +806,10 @@ class BottomSheet {
                 }
               }
               if (sharedValue4.value !== reactiveSharedValue3.value) {
-                workletCallback2(first.value[sharedValue4.value], arg0, undefined, arg1);
+                workletCallback2(first.value[iter2.value], arg0, undefined, arg1);
               }
             }
-            if (sharedValue13.value !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_STATE.RUNNING) {
+            if (iter.value !== animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_STATE.RUNNING) {
               if (-1 === derivedValue7.value) {
                 workletCallback3(derivedValue2.value);
               }
@@ -815,6 +819,7 @@ class BottomSheet {
             } else {
               workletCallback2(tmp6, arg0, undefined, arg1);
             }
+            iter = sharedValue13;
           } else if (DEFAULT_ANIMATE_ON_MOUNT) {
             workletCallback2(tmp6, animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_SOURCE.MOUNT, undefined, arg1);
           } else {
@@ -856,9 +861,9 @@ class BottomSheet {
         }
         if (value) {
           sharedValue7.value = false;
-          const obj = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]);
-          animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2)(tmp7, animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_SOURCE.USER, 0, arg1);
-          const runOnUIResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2);
+          const obj = animationConfigs(tmp3[4]);
+          animationConfigs(tmp3[4]).runOnUI(workletCallback2)(tmp7, animationConfigs(tmp3[8]).ANIMATION_SOURCE.USER, 0, arg1);
+          const runOnUIResult = animationConfigs(tmp3[4]).runOnUI(workletCallback2);
         }
         const tmp4 = -1(DEFAULT_ANIMATE_ON_MOUNT[10]);
       }
@@ -876,11 +881,10 @@ class BottomSheet {
       }
       if (tmp4) {
         sharedValue7.value = true;
-        const tmpResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]);
-        animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2)(normalizeSnapPointResult, animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_SOURCE.USER, 0, arg1);
-        const runOnUIResult = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]).runOnUI(workletCallback2);
+        const tmpResult = tmp(tmp2[4]);
+        tmp(tmp2[4]).runOnUI(workletCallback2)(normalizeSnapPointResult, tmp(tmp2[8]).ANIMATION_SOURCE.USER, 0, arg1);
+        const runOnUIResult = tmp(tmp2[4]).runOnUI(workletCallback2);
       }
-      const obj = animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[9]);
     };
     obj10 = { __DEV__: false, print: require("normalizeSnapPoint").print, BottomSheet: closure_39, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, animatedContainerHeight: derivedValue, isLayoutCalculated: derivedValue4, animatedNextPosition: sharedValue3, isForcedClosing: sharedValue8, isInTemporaryPosition: sharedValue7, runOnUI: require("cancelAnimation").runOnUI, animateToPosition: workletCallback2, ANIMATION_SOURCE: require("GESTURE_SOURCE").ANIMATION_SOURCE };
     handleSnapToPosition.__closure = obj10;
@@ -904,7 +908,8 @@ class BottomSheet {
     items16[4] = sharedValue3;
     items16[5] = derivedValue2;
     tmp80 = closure_5(function handleClose(arg0) {
-      let value = derivedValue4.value;
+      let value = derivedValue2.value;
+      value = derivedValue4.value;
       if (value) {
         value = value !== sharedValue3.value;
       }
@@ -949,7 +954,8 @@ class BottomSheet {
     items18[5] = sharedValue3;
     items18[6] = sharedValue4;
     tmp82 = closure_5(function handleExpand(arg0) {
-      let value = derivedValue4.value;
+      let value = first.value;
+      value = derivedValue4.value;
       if (value) {
         value = value.length - 1 !== sharedValue4.value;
       }
@@ -995,7 +1001,7 @@ class BottomSheet {
       }
     }, items19);
     closure_85 = tmp83;
-    tmp84 = DEFAULT_DYNAMIC_SIZING(fn, () => ({ snapToIndex: stableCallback, snapToPosition: workletCallback6, expand: closure_84, collapse: closure_85, close: closure_82, forceClose: closure_83 }));
+    tmp84 = DEFAULT_DYNAMIC_SIZING(arg1, () => ({ snapToIndex: stableCallback, snapToPosition: workletCallback6, expand: closure_84, collapse: closure_85, close: closure_82, forceClose: closure_83 }));
     items20 = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items20[0] = derivedValue7;
     items20[1] = sharedValue2;
@@ -1063,9 +1069,9 @@ class BottomSheet {
         tmp = animationConfigs;
         tmp2 = DEFAULT_ANIMATE_ON_MOUNT;
         if (global !== require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT) {
-          tmp9 = fn;
+          tmp9 = arg1;
           tmp10 = closure_50;
-          closure_50.value = global !== fn;
+          closure_50.value = global !== arg1;
           tmp11 = closure_67;
           tmp4 = closure_67.value === require("GESTURE_SOURCE").ANIMATION_STATE.RUNNING;
           if (tmp4) {
@@ -1131,11 +1137,11 @@ class BottomSheet {
       constructor(arg0, arg1) {
         ({ _keyboardState, _keyboardHeight } = global);
         _keyboardState = undefined;
-        if (fn != null) {
-          _keyboardState = fn._keyboardState;
+        if (arg1 != null) {
+          _keyboardState = arg1._keyboardState;
         }
-        if (fn != null) {
-          _keyboardHeight2 = fn._keyboardHeight;
+        if (arg1 != null) {
+          _keyboardHeight2 = arg1._keyboardHeight;
         }
         if (_keyboardState !== _keyboardState) {
           tmp2 = animationConfigs;
@@ -1383,16 +1389,16 @@ class BottomSheet {
     obj22[5] = tmp26;
     items28 = [, ];
     items28[0] = children;
-    tmp94Result2 = null;
+    tmp = null;
     if (renderFooter) {
       obj23 = { renderFooter: null };
       obj23[0] = renderFooter;
-      tmp94Result2 = tmp94(require("BottomSheetFooter").BottomSheetFooterContainer, obj23);
+      tmp = tmp94(require("BottomSheetFooter").BottomSheetFooterContainer, obj23);
     }
-    items28[1] = tmp94Result2;
+    items28[1] = tmp;
     obj22[6] = items28;
     items27[1] = tmp95(require("memo").BottomSheetContent, obj22);
-    tmp94Result3 = null;
+    tmp = null;
     if (null !== handleComponent) {
       obj24 = { animatedIndex: null, animatedPosition: null, handleHeight: null, enableHandlePanningGesture: null, enableOverDrag: null, enablePanDownToClose: null, overDragResistanceFactor: null, keyboardBehavior: null, handleComponent: null, handleStyle: null, handleIndicatorStyle: null };
       obj24[0] = derivedValue7;
@@ -1407,9 +1413,9 @@ class BottomSheet {
       obj24[9] = handleStyle;
       obj24[10] = handleIndicatorStyle;
       str2 = "BottomSheetHandleContainer";
-      tmp94Result3 = tmp94(require("BottomSheetHandle").BottomSheetHandleContainer, obj24, "BottomSheetHandleContainer");
+      tmp = tmp94(require("BottomSheetHandle").BottomSheetHandleContainer, obj24, "BottomSheetHandleContainer");
     }
-    items27[2] = tmp94Result3;
+    items27[2] = tmp;
     obj20[2] = items27;
     obj19[7] = tmp95(require("memo").BottomSheetBody, obj20);
     items26[1] = tmp94(require("BottomSheetHostingContainer").BottomSheetHostingContainer, obj19, "BottomSheetContainer");

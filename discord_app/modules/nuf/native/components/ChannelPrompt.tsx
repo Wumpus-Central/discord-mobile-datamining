@@ -1,17 +1,18 @@
 // discord_app/modules/nuf/native/components/ChannelPrompt.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import comparator from "../../../../stores/GuildChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../stores/GuildChannelStore.tsx";
+import closure_9 from "../../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
+createCacheKey = { flex: { flex: 1 }, safePadding: null, contentContainer: null, guildIcon: null, guildName: null, title: null, subTitle: null, topicInput: null, buttonWrapper: null, error: null };
+createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingHorizontal: 16 };
 createCacheKey[3] = { alignSelf: "center" };
@@ -22,7 +23,7 @@ createCacheKey[7] = { marginTop: 24 };
 createCacheKey[8] = { marginTop: 8 };
 createCacheKey[9] = { marginTop: 4 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");
 
 export default function ChannelPrompt(guildId) {
   guildId = guildId.guildId;
@@ -33,6 +34,7 @@ export default function ChannelPrompt(guildId) {
   let first;
   c6 = undefined;
   c7 = undefined;
+  let navigation;
   const tmp = callback();
   let obj = guildId(hasSkip[9]);
   const items = [closure_9];
@@ -43,7 +45,7 @@ export default function ChannelPrompt(guildId) {
   const tmp7 = onSuccess(first.useState(false), 2);
   [obj2, c7] = onSuccess(first.useState(null), 2);
   obj2 = guildId(hasSkip[10]);
-  const navigation = obj2.useNavigation();
+  navigation = obj2.useNavigation();
   const items1 = [navigation, hasBack, hasSkip, onCancel, onSuccess];
   const layoutEffect = first.useLayoutEffect(() => {
     if (hasBack) {
@@ -68,21 +70,21 @@ export default function ChannelPrompt(guildId) {
     closure_1 = tmp3;
     closure_1_7(null);
     closure_1_6(true);
-    const defaultChannel = navigation.getDefaultChannel(guildId);
+    const defaultChannel = closure_1_8.getDefaultChannel(closure_1_0);
     c3 = 1;
-    const intl = guildId(hasSkip[12]).intl;
+    const intl = closure_1_0(closure_1_2[12]).intl;
     obj1 = { topic: null };
     obj1[0] = c5;
-    const formatToPlainStringResult = intl.formatToPlainString(guildId(hasSkip[12]).t.V4lepJ, obj1);
-    const obj6 = hasBack(hasSkip[13]);
+    const formatToPlainStringResult = intl.formatToPlainString(closure_1_0(closure_1_2[12]).t.V4lepJ, obj1);
+    const obj6 = closure_1_1(closure_1_2[13]);
     if (defaultChannel != null) {
       const parent_id = defaultChannel.parent_id;
     }
-    yield obj6.createTextChannel(guildId, c5, parent_id, formatToPlainStringResult);
+    yield obj6.createTextChannel(closure_1_0, c5, parent_id, formatToPlainStringResult);
     if (1 === tmp7) {
       c3 = 0;
       closure_0 = closure_2;
-      const aPIError = new guildId(hasSkip[14]).APIError(closure_0);
+      const aPIError = new closure_1_0(closure_1_2[14]).APIError(closure_0);
       callback2(aPIError);
       callback(false);
       c5 = 3;
@@ -115,21 +117,21 @@ export default function ChannelPrompt(guildId) {
       guildIconURL = tmp17Result.getGuildIconURL(obj2);
     }
     obj1[2] = guildIconURL;
-    const items3 = [callback(hasBack(tmp3[16]), obj1), , , , , , ];
+    const items3 = [closure_10(hasBack(tmp3[16]), obj1), , , , , , ];
     let obj3 = { style: null, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[0] = tmp.guildName;
     obj3[4] = stateFromStores.name;
-    items3[1] = callback(tmp2(tmp3[18]).Text, obj3);
+    items3[1] = closure_10(tmp2(tmp3[18]).Text, obj3);
     const obj4 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj4[0] = tmp.title;
     let intl = tmp2(tmp3[12]).intl;
     obj4[4] = intl.string(tmp2(tmp3[12]).t["8VRa7d"]);
-    items3[2] = callback(tmp2(tmp3[18]).Text, obj4);
+    items3[2] = closure_10(tmp2(tmp3[18]).Text, obj4);
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj5[0] = tmp.subTitle;
     const intl2 = tmp2(tmp3[12]).intl;
     obj5[3] = intl2.string(tmp2(tmp3[12]).t["+855Pm"]);
-    items3[3] = callback(tmp2(tmp3[18]).Text, obj5);
+    items3[3] = closure_10(tmp2(tmp3[18]).Text, obj5);
     let obj6 = { style: null, label: null, value: null, error: null, onChangeText: null, onSubmitEditing: null, maxLength: 100, placeholder: null, returnKeyType: "done", autoFocus: true };
     obj6[0] = tmp.topicInput;
     tmp17Result = tmp17(tmp3[19]);
@@ -145,7 +147,7 @@ export default function ChannelPrompt(guildId) {
     obj6[5] = callback;
     const intl4 = tmp2(tmp3[12]).intl;
     obj6[7] = intl4.string(tmp2(tmp3[12]).t.xGOYA8);
-    items3[4] = callback(tmp17Result, obj6);
+    items3[4] = closure_10(tmp17Result, obj6);
     const obj7 = { style: null, children: null };
     obj7[0] = tmp.buttonWrapper;
     const obj8 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
@@ -153,8 +155,8 @@ export default function ChannelPrompt(guildId) {
     obj8[2] = callback;
     obj8[3] = tmp8;
     obj8[4] = tmp8;
-    obj7[1] = callback(tmp2(tmp3[20]).Button, obj8);
-    items3[5] = callback(c7, obj7);
+    obj7[1] = closure_10(tmp2(tmp3[20]).Button, obj8);
+    items3[5] = closure_10(c7, obj7);
     let hasFieldErrorsResult;
     if (obj1 != null) {
       hasFieldErrorsResult = obj1.hasFieldErrors();
@@ -168,13 +170,15 @@ export default function ChannelPrompt(guildId) {
         anyErrorMessage = obj1.getAnyErrorMessage();
       }
       obj9[1] = anyErrorMessage;
-      tmp14Result = callback(tmp17(tmp3[21]), obj9);
+      tmp14Result = tmp14(tmp17(tmp3[21]), obj9);
       const tmp17Result1 = tmp17(tmp3[21]);
     }
     items3[6] = tmp14Result;
     obj[6] = items3;
-    obj[2] = callback2(c6, obj);
-    tmp14Result = callback(tmp2(tmp3[15]).SafeAreaPaddingView, obj);
+    obj[2] = closure_11(c6, obj);
+    tmp14Result = tmp14(tmp2(tmp3[15]).SafeAreaPaddingView, obj);
+    const tmp15 = closure_11;
+    const tmp16 = c6;
     const tmp18 = hasBack(tmp3[16]);
   }
   return tmp14Result;

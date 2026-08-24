@@ -9,6 +9,6 @@ const memoResult = importAllResult.memo(() => {
   const tmp = callback();
   return jsx(resultDefault, { style: callback().spinner, animate: true });
 });
-const result = require("obj132").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx");
 
 export default memoResult;

@@ -5,13 +5,13 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import BaseConnectionEvent from "../../../../../discord_common/js/packages/media-engine/index.tsx";
 import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
 import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
-import reset from "../../../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
-import "createToggle";
+import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../stores/MediaEngineStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.pEAl4b);
@@ -55,6 +55,7 @@ let createToggle = {
   usePredicate: function useHasStreamVolumeSetting() {
     const obj = apexExperimentDefault;
     let items = [closure_3, closure_4];
+    const obj2 = initialize;
     return initialize.useStateFromStores(items, () => {
       const items = [closure_3, closure_4];
       [obj, obj2] = items;
@@ -78,6 +79,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
 
 export default createToggle;

@@ -23,7 +23,9 @@ function _getUnhandledRejectionError(reason) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const _eventFromRejectionWithPrimitive = function _eventFromRejectionWithPrimitive(reason) {
-  const obj = { type: "UnhandledRejection", value: "Non-Error promise rejection captured with value: " + String(reason) };
+  let obj = { exception: null };
+  obj = { values: null };
+  obj = { type: "UnhandledRejection", value: "Non-Error promise rejection captured with value: " + String(reason) };
   const items = [obj];
   obj[0] = items;
   obj[0] = obj;
@@ -35,6 +37,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
   if (arg0 === undefined) {
     obj = {};
   }
+  obj = undefined;
   obj = { onerror: true, onunhandledrejection: true };
   const merged = Object.assign(obj);
   obj = {
@@ -45,7 +48,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
     setup(arg0) {
       if (obj.onerror) {
         obj = arg0;
-        obj = obj(dependencyMap[0]);
+        obj = obj(closure_1_1[0]);
         let result = obj.addGlobalErrorInstrumentationHandler((arg0) => {
           obj = callback(closure_1_1[0]);
           const client = obj.getClient();
@@ -61,12 +64,12 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
             options = obj;
           }
           ({ stackParser, attachStacktrace } = options);
-          let tmpResult = callback(closure_1_1[0]);
+          let tmpResult = tmp(tmp2[0]);
           if (tmpResult.getClient() === callback) {
-            tmpResult = callback(closure_1_1[1]);
+            tmpResult = tmp(tmp2[1]);
             if (!tmpResult.shouldIgnoreOnError()) {
               ({ url, error, msg, line, column } = arg0);
-              const tmpResult1 = callback(closure_1_1[2]);
+              const tmpResult1 = tmp(tmp2[2]);
               let tmp5 = error;
               if (!error) {
                 tmp5 = msg;
@@ -88,43 +91,44 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
                   combined = url;
                   if (url.startsWith("data:")) {
                     const _HermesInternal = HermesInternal;
-                    combined = "<" + callback(closure_1_1[0]).stripDataUrlContent(url, false) + ">";
-                    const tmpResult3 = callback(closure_1_1[0]);
+                    combined = "<" + tmp(tmp2[0]).stripDataUrlContent(url, false) + ">";
+                    const tmpResult3 = tmp(tmp2[0]);
                   }
                 }
               }
               if (combined == null) {
-                combined = callback(closure_1_1[0]).getLocationHref();
-                const tmpResult4 = callback(closure_1_1[0]);
+                combined = tmp(tmp2[0]).getLocationHref();
+                const tmpResult4 = tmp(tmp2[0]);
               }
               if (0 === arr.length) {
                 obj = { colno: null, filename: null, function: null, in_app: true, lineno: null };
                 obj[0] = column;
                 obj[1] = combined;
-                obj[2] = callback(closure_1_1[0]).UNKNOWN_FUNCTION;
+                obj[2] = tmp(tmp2[0]).UNKNOWN_FUNCTION;
                 obj[4] = line;
                 arr = arr.push(obj);
               }
               result.level = "error";
-              tmpResult2 = callback(closure_1_1[0]);
+              tmpResult2 = tmp(tmp2[0]);
               obj1 = { originalException: null, mechanism: null };
               obj1[0] = error;
               obj1[1] = { handled: false, type: "auto.browser.global_handlers.onerror" };
-              callback(closure_1_1[0]).captureEvent(result, obj1);
-              const tmpResult5 = callback(closure_1_1[0]);
+              tmp(tmp2[0]).captureEvent(result, obj1);
+              const tmpResult5 = tmp(tmp2[0]);
             }
           }
         });
-        if (obj(dependencyMap[3]).DEBUG_BUILD) {
-          const debug = tmp5(dependencyMap[0]).debug;
+        if (obj(closure_1_1[3]).DEBUG_BUILD) {
+          const debug = tmp5(tmp6[0]).debug;
           let _HermesInternal = HermesInternal;
           debug.log("Global Handler attached: " + "onerror");
         }
         tmp5 = obj;
+        tmp6 = closure_1_1;
       }
-      if (tmp.onunhandledrejection) {
+      if (obj.onunhandledrejection) {
         obj = arg0;
-        const result1 = obj(dependencyMap[0]).addGlobalUnhandledRejectionInstrumentationHandler((arg0) => {
+        const result1 = obj(closure_1_1[0]).addGlobalUnhandledRejectionInstrumentationHandler((arg0) => {
           let captureEvent = callback;
           let captureEventResult5 = closure_1_1;
           obj = callback(closure_1_1[0]);
@@ -171,17 +175,16 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
             }
             captureEventResult1 = captureEvent(captureEventResult5[1]);
           }
-          captureEventResult = captureEvent(captureEventResult5[0]);
         });
-        if (obj(dependencyMap[3]).DEBUG_BUILD) {
-          const debug2 = tmp12(dependencyMap[0]).debug;
+        if (obj(closure_1_1[3]).DEBUG_BUILD) {
+          const debug2 = tmp12(tmp13[0]).debug;
           const _HermesInternal2 = HermesInternal;
           debug2.log("Global Handler attached: " + "onunhandledrejection");
         }
-        let obj2 = obj(dependencyMap[0]);
+        let obj2 = obj(closure_1_1[0]);
         tmp12 = obj;
+        tmp13 = closure_1_1;
       }
-      tmp = obj;
     }
   };
   return obj;

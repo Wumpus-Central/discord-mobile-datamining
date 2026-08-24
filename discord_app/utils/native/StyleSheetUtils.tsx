@@ -1,5 +1,5 @@
 // discord_app/utils/native/StyleSheetUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
 function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
@@ -22,6 +22,6 @@ function getStyleProp(style, borderRadius) {
     }
   }
 }
-const result = obj132.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
+const result = set.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
 
 export default { getStyleProp };

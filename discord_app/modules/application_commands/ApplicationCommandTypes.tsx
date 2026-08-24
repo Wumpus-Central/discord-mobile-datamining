@@ -1,7 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandTypes.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
+const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
 
 export const ApplicationCommandSectionType = { BUILT_IN: 0, [0]: "BUILT_IN", APPLICATION: 1, [1]: "APPLICATION" };
 export const ApplicationCommandInputType = { BUILT_IN: 0, [0]: "BUILT_IN", BUILT_IN_TEXT: 1, [1]: "BUILT_IN_TEXT", BUILT_IN_INTEGRATION: 2, [2]: "BUILT_IN_INTEGRATION", BOT: 3, [3]: "BOT", PLACEHOLDER: 4, [4]: "PLACEHOLDER" };

@@ -1,12 +1,12 @@
 // discord_app/modules/notification_center/NotificationCenterUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import NotificationCenterScenes from "NotificationCenterItemsTypes.tsx";
 import getDurationString from "getTimestampString.tsx";
 import getDurationStringDefault from "getTimestampString.tsx";
 
-const result = obj132.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
+const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
 export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {
   if (flag === undefined) {
@@ -23,6 +23,7 @@ export const isRemoteAcked = function isRemoteAcked(addResult, closure_1) {
     let tmp4 = closure_1 !== explicitContentFromProto.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
     if (tmp4) {
       tmp4 = DISCORD_EPOCHDefault.compare(closure_1, addResult.id) >= 0;
+      const obj = DISCORD_EPOCHDefault;
     }
     acked = tmp4;
   }

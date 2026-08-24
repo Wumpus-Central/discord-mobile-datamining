@@ -3,7 +3,7 @@ import importDefaultResult from "00019_noop.js";
 import { StyleSheet } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function pnpm_CarouselLayoutTsx1(){const{size,dataLength,handlerOffset,loop}=this.__closure;const totalSize=size*dataLength;const x=handlerOffset.value%totalSize;if(!loop)return handlerOffset.value;return Number.isNaN(x)?0:x;}" };
 let closure_5 = { code: "function pnpm_CarouselLayoutTsx2(){const{width,height}=this.__closure;return{width:width||\"100%\",height:height||\"100%\"};}" };
 const styles = StyleSheet.create({ layoutContainer: { display: "flex" }, contentContainer: { overflow: "hidden" }, itemsHorizontal: { flexDirection: "row" }, itemsVertical: { flexDirection: "column" } });
@@ -83,8 +83,8 @@ export const CarouselLayout = importDefaultResult.forwardRef((arg0, ref) => {
   const items1 = [loop, autoFillData, rawDataLength, getSharedIndex, onSnapToItem, onScrollEnd];
   const callback = dataLength.useCallback(() => {
     const rounded = Math.round(getSharedIndex());
-    loop(autoFillData[9]);
-    const obj = { index: rounded, dataLength: rawDataLength, loop, autoFillData };
+    let obj = loop(autoFillData[9]);
+    obj = { index: rounded, dataLength: rawDataLength, loop, autoFillData };
     const result = obj.computedRealIndexWithAutoFillData(obj);
     if (onSnapToItem) {
       onSnapToItem(result);

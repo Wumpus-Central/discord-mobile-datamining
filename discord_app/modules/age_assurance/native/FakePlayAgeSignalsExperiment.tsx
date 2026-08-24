@@ -1,12 +1,12 @@
 // discord_app/modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { OFF: "off", ADULT: "adult", TEEN: "teen", UNDER_13: "under_13", SUPERVISED_PENDING: "supervised_pending", SUPERVISED_DENIED: "supervised_denied", UNKNOWN: "unknown", DECLARED: "declared", EMPTY: "empty", ERROR: "error" };
 obj = { enabled: false, scenario: obj.OFF };
 obj = { enabled: false, scenario: obj.OFF };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-fake-play-age-signals", defaultConfig: obj, variations: { 0: obj, 1: { enabled: true, scenario: obj.ADULT }, 2: { enabled: true, scenario: obj.TEEN }, 3: { enabled: true, scenario: obj.UNDER_13 }, 4: { enabled: true, scenario: obj.SUPERVISED_PENDING }, 5: { enabled: true, scenario: obj.SUPERVISED_DENIED }, 6: { enabled: true, scenario: obj.UNKNOWN }, 7: { enabled: true, scenario: obj.DECLARED }, 8: { enabled: true, scenario: obj.EMPTY }, 9: { enabled: true, scenario: obj.ERROR } } });
-const result = obj132.fileFinishedImporting("modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx");
+const result = set.fileFinishedImporting("modules/age_assurance/native/FakePlayAgeSignalsExperiment.tsx");
 
 export default apexExperiment;
 export const FakePlayAgeSignalsScenario = obj;

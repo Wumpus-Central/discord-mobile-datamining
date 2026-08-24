@@ -4,10 +4,10 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
 
 export default function UserProfileConfirmCancelFriendRequest(arg0) {
   ({ userDisplayName, onConfirm } = arg0);
@@ -16,6 +16,7 @@ export default function UserProfileConfirmCancelFriendRequest(arg0) {
   obj[0] = intl.string(getSystemLocale.t["bTfA//"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.formatToPlainString(getSystemLocale.t["72FwjH"], { name: userDisplayName });
+  obj = { children: null };
   obj = { variant: "destructive", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t["bTfA//"]);

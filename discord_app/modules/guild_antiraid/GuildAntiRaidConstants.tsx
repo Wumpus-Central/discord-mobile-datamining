@@ -1,12 +1,12 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 const Permissions = sum.Permissions;
 const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
-const result = obj132.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
+const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
 
 export const GUILD_REPORT_RAID_MOBILE_KEY = "guild_report_raid_mobile";
 export const NAGBAR_DISPLAY_MAX_HOURS = 2;

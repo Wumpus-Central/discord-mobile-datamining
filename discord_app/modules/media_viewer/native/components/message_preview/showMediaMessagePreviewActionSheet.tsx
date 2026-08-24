@@ -1,11 +1,11 @@
 // discord_app/modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx
 import asyncRequireImpl from "../../../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
 
 export default function showMediaMessagePreviewActionSheet(message) {
   message = message.message;
@@ -14,7 +14,8 @@ export default function showMediaMessagePreviewActionSheet(message) {
     if (null != message) {
       user = user.getUser(message.author.id);
       if (null != user) {
-        const obj = { channel: null, message: null, user: null, closeMediaModal: null };
+        let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+        obj = { channel: null, message: null, user: null, closeMediaModal: null };
         obj[0] = channel;
         obj[1] = message;
         obj[2] = user;

@@ -2,7 +2,7 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import CircleErrorIcon from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NITRO_UPSELL_ALERT_KEY } from "../DoubleTapToRaectConstants.tsx";
 import { UserSettingsSections } from "../../../Constants.tsx";
@@ -10,25 +10,27 @@ import { MobileUserSettings } from "../../user_settings/core/native/SettingsCons
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
 
 export default function DoubleTapNitroAlert(emojiName) {
   const callback = React.useCallback(() => {
     let obj = callback(7360);
+    obj = { screen: constants.TEXT, params: obj };
     obj = { initialSetting: constants2.DOUBLE_TAP_EMOJI };
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    callback(7360);
-    const obj = { screen: constants.PREMIUM };
+    let obj = callback(7360);
+    obj = { screen: constants.PREMIUM };
     obj.openUserSettings(obj, () => {
       callback(table[8]).dismissAlert(closure_4);
     });
   }, []);
-  let obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
+  let obj = { header: null, title: null, content: null, actions: null };
+  obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
   obj[0] = callback(View, obj);
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.HRAWfC);

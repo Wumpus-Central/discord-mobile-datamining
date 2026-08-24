@@ -1,10 +1,10 @@
 // discord_app/lib/uploader_inline/safetyScannedUploadSurfaces.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import UploadTypes2 from "../../modules/image_cropping/web/ImageCroppingConstants.tsx";
 
 const UploadTypes = UploadTypes2.UploadTypes;
 const obj = { USER_DEFAULT_PROFILE_AVATAR: "USER_DEFAULT_PROFILE_AVATAR", USER_DEFAULT_PROFILE_BANNER: "USER_DEFAULT_PROFILE_BANNER", USER_GUILD_PROFILE_AVATAR: "USER_GUILD_PROFILE_AVATAR", USER_GUILD_PROFILE_BANNER: "USER_GUILD_PROFILE_BANNER", GUILD_ICON: "GUILD_ICON", GUILD_BANNER: "GUILD_BANNER", GUILD_DISCOVERY_SPLASH: "GUILD_DISCOVERY_SPLASH", GUILD_INVITE_SPLASH: "GUILD_INVITE_SPLASH", EMOJI: "EMOJI", STICKER: "STICKER" };
-const result = obj132.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
+const result = set.fileFinishedImporting("lib/uploader_inline/safetyScannedUploadSurfaces.tsx");
 
 export const SafetyScannedUploadSurface = obj;
 export const getSafetyScannedUploadSurfaceForProfileCustomization = function getSafetyScannedUploadSurfaceForProfileCustomization(arg0, arg1) {
@@ -15,7 +15,7 @@ export const getSafetyScannedUploadSurfaceForProfileCustomization = function get
       USER_DEFAULT_PROFILE_AVATAR = obj.USER_DEFAULT_PROFILE_AVATAR;
     }
     return USER_DEFAULT_PROFILE_AVATAR;
-  } else if (UploadTypes.BANNER === arg0) {
+  } else if (tmp.BANNER === arg0) {
     if (null != arg1) {
       let USER_DEFAULT_PROFILE_BANNER = obj.USER_GUILD_PROFILE_BANNER;
     } else {

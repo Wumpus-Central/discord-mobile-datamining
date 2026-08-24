@@ -1,9 +1,9 @@
 // _runtime/00429__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import jsxProd from "react/00021_jsxProd.js";
@@ -62,28 +62,29 @@ let items = [
   {
     key: "_createPressabilityConfig",
     value: function _createPressabilityConfig() {
-      const self = this;
+      let self = this;
+      self = this;
       const obj = { cancelable: !this.props.rejectResponderTermination, disabled: null, hitSlop: null, delayLongPress: null, delayPressIn: null, delayPressOut: null, minPressDuration: 0, pressRectOffset: null, onBlur: null, onFocus: null, onLongPress: null, onPress: null, onPressIn: null, onPressOut: null };
-      let disabled = this.props.disabled;
-      if (disabled == null) {
-        disabled = self.props["aria-disabled"];
+      aria_disabled = this.props.disabled;
+      if (aria_disabled == null) {
+        aria_disabled = self.props["aria-disabled"];
       }
-      if (disabled == null) {
+      if (aria_disabled == null) {
         const accessibilityState = self.props.accessibilityState;
-        let disabled1;
+        let disabled;
         if (accessibilityState != null) {
-          disabled1 = accessibilityState.disabled;
+          disabled = accessibilityState.disabled;
         }
-        disabled = disabled1;
+        aria_disabled = disabled;
       }
-      obj[1] = disabled;
+      obj[1] = aria_disabled;
       obj[2] = self.props.hitSlop;
       obj[3] = self.props.delayLongPress;
       obj[4] = self.props.delayPressIn;
       obj[5] = self.props.delayPressOut;
       obj[7] = self.props.pressRetentionOffset;
       obj[8] = function onBlur(arg0) {
-        if (self(dependencyMap[10]).isTV) {
+        if (self(closure_1_1[10]).isTV) {
           self._opacityInactive(250);
         }
         if (null != self.props.onBlur) {
@@ -92,7 +93,7 @@ let items = [
         }
       };
       obj[9] = function onFocus(arg0) {
-        if (self(dependencyMap[10]).isTV) {
+        if (self(closure_1_1[10]).isTV) {
           self._opacityActive(150);
         }
         if (null != self.props.onFocus) {
@@ -109,7 +110,7 @@ let items = [
         }
         self._opacityActive(num);
         if (null != self.props.onPressIn) {
-          const props = self.props;
+          const props = tmp.props;
           props.onPressIn(dispatchConfig);
         }
       };
@@ -126,8 +127,8 @@ let items = [
   {
     key: "_setOpacityTo",
     value: function _setOpacityTo(toValue, duration) {
-      TouchableOpacity(397);
-      const obj = { toValue, duration, easing: TouchableOpacity(364).inOut(TouchableOpacity(364).quad), useNativeDriver: true };
+      let obj = TouchableOpacity(397);
+      obj = { toValue, duration, easing: TouchableOpacity(364).inOut(TouchableOpacity(364).quad), useNativeDriver: true };
       const obj3 = TouchableOpacity(364);
       obj.timing(this.state.anim, obj).start();
     }
@@ -170,103 +171,103 @@ let items = [
       const pressability = this.state.pressability;
       const eventHandlers = pressability.getEventHandlers();
       ({ onBlur, onFocus } = eventHandlers);
-      let prop = this.props["aria-busy"];
-      if (prop == null) {
+      aria_busy = this.props["aria-busy"];
+      if (aria_busy == null) {
         const accessibilityState = self.props.accessibilityState;
         let busy;
         if (accessibilityState != null) {
           busy = accessibilityState.busy;
         }
-        prop = busy;
+        aria_busy = busy;
       }
-      let obj = { busy: prop, checked: null, disabled: null, expanded: null, selected: null };
-      let prop1 = self.props["aria-checked"];
-      if (prop1 == null) {
+      let obj = { busy: aria_busy, checked: null, disabled: null, expanded: null, selected: null };
+      aria_checked = self.props["aria-checked"];
+      if (aria_checked == null) {
         const accessibilityState2 = self.props.accessibilityState;
         let checked;
         if (accessibilityState2 != null) {
           checked = accessibilityState2.checked;
         }
-        prop1 = checked;
+        aria_checked = checked;
       }
-      obj[1] = prop1;
-      let prop2 = self.props["aria-disabled"];
-      if (prop2 == null) {
+      obj[1] = aria_checked;
+      aria_disabled = self.props["aria-disabled"];
+      if (aria_disabled == null) {
         const accessibilityState3 = self.props.accessibilityState;
         let disabled;
         if (accessibilityState3 != null) {
           disabled = accessibilityState3.disabled;
         }
-        prop2 = disabled;
+        aria_disabled = disabled;
       }
-      obj[2] = prop2;
-      let prop3 = self.props["aria-expanded"];
-      if (prop3 == null) {
+      obj[2] = aria_disabled;
+      aria_expanded = self.props["aria-expanded"];
+      if (aria_expanded == null) {
         const accessibilityState4 = self.props.accessibilityState;
         let expanded;
         if (accessibilityState4 != null) {
           expanded = accessibilityState4.expanded;
         }
-        prop3 = expanded;
+        aria_expanded = expanded;
       }
-      obj[3] = prop3;
-      let prop4 = self.props["aria-selected"];
-      if (prop4 == null) {
+      obj[3] = aria_expanded;
+      aria_selected = self.props["aria-selected"];
+      if (aria_selected == null) {
         const accessibilityState5 = self.props.accessibilityState;
         let selected;
         if (accessibilityState5 != null) {
           selected = accessibilityState5.selected;
         }
-        prop4 = selected;
+        aria_selected = selected;
       }
-      obj[4] = prop4;
-      let tmp13 = obj;
+      obj[4] = aria_selected;
+      let tmp8 = obj;
       if (null != self.props.disabled) {
         obj = {};
         const merged = Object.assign(obj);
         obj.disabled = self.props.disabled;
-        tmp13 = obj;
+        tmp8 = obj;
       }
-      let prop5 = self.props["aria-valuemax"];
-      if (prop5 == null) {
+      aria_valuemax = self.props["aria-valuemax"];
+      if (aria_valuemax == null) {
         const accessibilityValue = self.props.accessibilityValue;
         let max;
         if (accessibilityValue != null) {
           max = accessibilityValue.max;
         }
-        prop5 = max;
+        aria_valuemax = max;
       }
-      obj = { max: prop5, min: null, now: null, text: null };
-      let prop6 = self.props["aria-valuemin"];
-      if (prop6 == null) {
+      obj = { max: aria_valuemax, min: null, now: null, text: null };
+      aria_valuemin = self.props["aria-valuemin"];
+      if (aria_valuemin == null) {
         const accessibilityValue2 = self.props.accessibilityValue;
         let min;
         if (accessibilityValue2 != null) {
           min = accessibilityValue2.min;
         }
-        prop6 = min;
+        aria_valuemin = min;
       }
-      obj[1] = prop6;
-      let prop7 = self.props["aria-valuenow"];
-      if (prop7 == null) {
+      obj[1] = aria_valuemin;
+      aria_valuenow = self.props["aria-valuenow"];
+      if (aria_valuenow == null) {
         const accessibilityValue3 = self.props.accessibilityValue;
         let now;
         if (accessibilityValue3 != null) {
           now = accessibilityValue3.now;
         }
-        prop7 = now;
+        aria_valuenow = now;
       }
-      obj[2] = prop7;
-      let prop8 = self.props["aria-valuetext"];
-      if (prop8 == null) {
+      obj[2] = aria_valuenow;
+      aria_valuetext = self.props["aria-valuetext"];
+      if (aria_valuetext == null) {
         const accessibilityValue4 = self.props.accessibilityValue;
         let text;
         if (accessibilityValue4 != null) {
           text = accessibilityValue4.text;
         }
-        prop8 = text;
+        aria_valuetext = text;
       }
-      obj[3] = prop8;
+      obj[3] = aria_valuetext;
       let str = "none";
       if ("off" !== self.props["aria-live"]) {
         let accessibilityLiveRegion = self.props["aria-live"];
@@ -279,7 +280,7 @@ let items = [
       if (accessibilityLabel == null) {
         accessibilityLabel = self.props.accessibilityLabel;
       }
-      obj1 = { accessible: false !== self.props.accessible, accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityLanguage: self.props.accessibilityLanguage, accessibilityRole: self.props.accessibilityRole, accessibilityState: tmp13, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, accessibilityValue: obj, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityLiveRegion: null, accessibilityElementsHidden: null, style: null, nativeID: null, testID: null, onLayout: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, hasTVPreferredFocus: null, hitSlop: null, focusable: null, ref: null };
+      obj1 = { accessible: false !== self.props.accessible, accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityLanguage: self.props.accessibilityLanguage, accessibilityRole: self.props.accessibilityRole, accessibilityState: tmp8, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, accessibilityValue: obj, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityLiveRegion: null, accessibilityElementsHidden: null, style: null, nativeID: null, testID: null, onLayout: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, hasTVPreferredFocus: null, hitSlop: null, focusable: null, ref: null };
       let str2 = "no-hide-descendants";
       if (true !== self.props["aria-hidden"]) {
         str2 = self.props.importantForAccessibility;
@@ -317,7 +318,7 @@ let items = [
       const merged1 = Object.assign(callback(eventHandlers, closure_2));
       const items1 = [self.props.children, null];
       obj1.children = items1;
-      return callback2(TouchableOpacity(397).View, obj1);
+      return closure_8(TouchableOpacity(397).View, obj1);
     }
   },
   {
@@ -339,6 +340,7 @@ let items = [
           opacity1 = tmp8.opacity;
         }
         tmp2 = opacity === opacity1;
+        const tmp3 = TouchableOpacity;
       }
       if (!tmp2) {
         self._opacityInactive(250);

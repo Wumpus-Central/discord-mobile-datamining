@@ -1,12 +1,12 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSources.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set2 from "../../../../_runtime/00002_set.js";
 import defaultStatesAreEqual from "../../../lib/ZustandStore.tsx";
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
   const obj = { sources: [], spoilerIndexes: new Set() };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
+const result = set2.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
 
 export const MediaViewerSourcesStore = zustandStore;
 export const setMediaViewerSources = function setMediaViewerSources(arg0) {
@@ -14,22 +14,23 @@ export const setMediaViewerSources = function setMediaViewerSources(arg0) {
   if (initialIndex === undefined) {
     initialIndex = null;
   }
+  let set;
   const items = [];
-  const set = new Set();
-  const item = sources.forEach((item, index) => {
-    const flattenSourceResult = initialIndex(items[1]).flattenSource(item);
+  set = new Set();
+  const item = sources.forEach((closure_1) => {
+    const flattenSourceResult = initialIndex(items[1]).flattenSource(closure_1);
     let tmp2 = null != flattenSourceResult;
     if (tmp2) {
       tmp2 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
+      const tmp3 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
     }
     if (tmp2) {
-      tmp2 = initialIndex !== index;
+      tmp2 = initialIndex !== arg1;
     }
     if (tmp2) {
-      set.add(index);
+      set.add(arg1);
     }
-    items.push(item);
-    const obj = initialIndex(items[1]);
+    items.push(closure_1);
   });
   set.setState({ sources: items, spoilerIndexes: set });
 };

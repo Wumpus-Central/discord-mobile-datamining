@@ -1,30 +1,31 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
 import { isGuildScheduledEventActive as closure_8 } from "../../GuildScheduledEventStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../../GuildScheduledEventsConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: c9, GuildScheduledEventEntityTypes: c10 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ Permissions: unpackModuleId, GuildSettingsSections: closure_12 } = ME);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = createCacheKey.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
 
 export default function EditGuildEventWhere(guild) {
   guild = guild.guild;
   const guildEvent = guild.guildEvent;
   const onChange = guild.onChange;
+  let ref;
   let callback;
   let React;
   ({ guildEventId, initialGuildEvent } = guild);
   const tmp = callback3();
-  const ref = React.useRef(null);
+  ref = React.useRef(null);
   let obj = guild(ref[11]);
   const items = [closure_6];
   const items1 = [guildEvent.channelId];
@@ -41,9 +42,9 @@ export default function EditGuildEventWhere(guild) {
   guildEvent(ref[13]);
   let obj4 = guild(ref[10]);
   obj[3] = obj4.getChannelTypeFromEntity(guildEvent.entityType);
-  obj[4] = function onChangeChannel(handleSelectChannel) {
+  obj[4] = function onChangeChannel(channelId) {
     _undefined(null);
-    onChange({ channelId: handleSelectChannel.id });
+    onChange({ channelId: channelId.id });
   };
   obj[5] = tmp.channelSelection;
   if (guildEvent.entityType === constants.EXTERNAL) {
@@ -65,7 +66,7 @@ export default function EditGuildEventWhere(guild) {
         }
       }, 100);
     };
-    let tmp10Result = callback(tmp3(tmp4[14]).GuildEventLocation, obj);
+    let tmp10Result = tmp10(tmp3(tmp4[14]).GuildEventLocation, obj);
     const tmp3Result = tmp3(tmp4[10]);
   } else {
     tmp10Result = tmp13;
@@ -78,7 +79,7 @@ export default function EditGuildEventWhere(guild) {
     obj1 = { style: null, variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     obj1[0] = tmp.error;
     obj1[3] = tmp8;
-    tmp10Result = callback(tmp3(tmp4[15]).Text, obj1);
+    tmp10Result = tmp10(tmp3(tmp4[15]).Text, obj1);
   }
   obj2 = { children: null };
   const items4 = [tmp10Result, ];
@@ -97,17 +98,17 @@ export default function EditGuildEventWhere(guild) {
           error = new Error(intl3.string(callback(1236).t.C4KzmQ));
           throw error;
         } else {
-          if (entityType === constants.EXTERNAL) {
+          if (entityType === tmp2.EXTERNAL) {
             if (null == obj.getLocationFromEventData(guildEvent)) {
               const _Error2 = Error;
-              const intl2 = callback(1236).intl;
-              const error1 = new Error(intl2.string(callback(1236).t.q91szp));
+              const intl2 = tmp3(1236).intl;
+              const error1 = new Error(intl2.string(tmp3(1236).t.q91szp));
               throw error1;
             }
             obj = callback(8788);
           }
           if (null == tmp) {
-            if (entityType !== constants.EXTERNAL) {
+            if (entityType !== tmp2.EXTERNAL) {
               const _Error = Error;
               const intl = callback(1236).intl;
               const error2 = new Error(intl.string(callback(1236).t["4LQwnw"]));
@@ -122,23 +123,23 @@ export default function EditGuildEventWhere(guild) {
       const AccessibilityAnnouncer = guild(tmp2[19]).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp13.message);
     }
-    let obj = onChange(ref[17]);
   };
   obj3[3] = null != tmp8;
-  items4[1] = callback(guild(ref[16]).Button, obj3);
+  items4[1] = closure_13(guild(ref[16]).Button, obj3);
   obj2[0] = items4;
+  const tmp16 = closure_14;
   const tmp9 = callback2(initialGuildEvent);
-  obj4 = { action: callback2(closure_14, obj2), ref, children: null };
-  tmp11(tmp4[20]);
+  obj4 = { action: closure_15(closure_14, obj2), ref, children: null };
+  let tmp11Result = tmp11(tmp4[20]);
   const obj5 = { title: null, subtitle: null };
-  const tmp11Result = tmp11(tmp4[21]);
+  tmp11Result = tmp11(tmp4[21]);
   let intl2 = tmp3(tmp4[9]).intl;
   obj5[0] = intl2.string(guild(ref[9]).t["DC+Qm8"]);
   let intl3 = tmp3(tmp4[9]).intl;
   obj5[1] = intl3.string(guild(ref[9]).t.IwmXLP);
   const items5 = [
-    callback(tmp11Result, obj5),
-    callback(guild(ref[14]).GuildEventEntityTypeSelection, {
+    closure_13(tmp11Result, obj5),
+    closure_13(guild(ref[14]).GuildEventEntityTypeSelection, {
       guild,
       entityType: guildEvent.entityType,
       onChange(entityType) {
@@ -147,10 +148,12 @@ export default function EditGuildEventWhere(guild) {
         if (entityType === closure_1_10.EXTERNAL) {
           let obj2 = guildEvent(ref[22])(guildEvent.scheduledStartTime);
           if (obj2 == null) {
-            obj2 = guildEvent(ref[22])();
+            obj2 = tmp2(tmp3[22])();
           }
           obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
           const addResult = obj2.add(1, "hour");
+          tmp2 = guildEvent;
+          tmp3 = ref;
         }
         onChange(obj);
       },
@@ -160,8 +163,28 @@ export default function EditGuildEventWhere(guild) {
   ,
 
   ];
-  const tmp15Result = callback2(closure_14, obj2);
-  items5[3] = set.has(guildEvent.entityType) && callback(guildEvent(ref[23]), {});
+  const obj6 = {
+    guild,
+    entityType: guildEvent.entityType,
+    onChange(entityType) {
+      _undefined(null);
+      const obj = { entityType, scheduledEndTime: "a" };
+      if (entityType === closure_1_10.EXTERNAL) {
+        let obj2 = guildEvent(ref[22])(guildEvent.scheduledStartTime);
+        if (obj2 == null) {
+          obj2 = tmp2(tmp3[22])();
+        }
+        obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
+        const addResult = obj2.add(1, "hour");
+        tmp2 = guildEvent;
+        tmp3 = ref;
+      }
+      onChange(obj);
+    },
+    disabled: tmp9
+  };
+  const tmp15Result = closure_15(closure_14, obj2);
+  items5[3] = set.has(guildEvent.entityType) && closure_13(guildEvent(ref[23]), {});
   if (stateFromStores1) {
     const obj7 = { style: null, variant: "text-sm/normal", color: "text-default", children: null };
     obj7[0] = tmp.text;
@@ -171,9 +194,9 @@ export default function EditGuildEventWhere(guild) {
       guildEvent(ref[24]).open(guild.id, closure_1_12.ROLES);
     };
     obj7[3] = intl4.format(tmp3(tmp4[9]).t["K+DH2o"], obj8);
-    stateFromStores1 = callback(tmp3(tmp4[15]).Text, obj7);
+    stateFromStores1 = tmp10(tmp3(tmp4[15]).Text, obj7);
   }
   items5[4] = stateFromStores1;
   obj4[2] = items5;
-  return callback2(tmp11Result, obj4);
+  return closure_15(tmp11Result, obj4);
 };

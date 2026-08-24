@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/ApplicationIconAndName.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
@@ -8,11 +8,12 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((width) => {
-  const obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: ThemesDefault.radii.xs };
+  let obj = { gameIcon: null };
+  obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: ThemesDefault.radii.xs };
   obj[0] = obj;
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
 
 export default function ApplicationIconAndName(textVariant) {
   ({ application, iconSize, useComma } = textVariant);
@@ -25,7 +26,7 @@ export default function ApplicationIconAndName(textVariant) {
     str = "";
   }
   obj[2] = { uri: str };
-  const items = [callback(Button.Icon, obj, application.id), ];
+  const items = [closure_3(Button.Icon, obj, application.id), ];
   obj = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {
@@ -33,7 +34,7 @@ export default function ApplicationIconAndName(textVariant) {
   }
   obj = { children: null };
   obj[1] = "" + application.name + str2;
-  items[1] = callback(Text.Text, obj);
+  items[1] = closure_3(Text.Text, obj);
   obj[0] = items;
-  return callback2(closure_4, obj);
+  return closure_5(closure_4, obj);
 };

@@ -1,15 +1,15 @@
 // discord_app/modules/auth/native/components/MFA.tsx
 import applyDefault from "../../../../../_runtime/00012_apply.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function statesAreEqual(arg0, arg1) {
   return applyDefault.isEqual(arg0, arg1);
 }
 let closure_7 = { flex: 1, position: "relative" };
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/MFA.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default function ConnectedMFA() {
   let obj = arg0;
@@ -17,19 +17,20 @@ export default function ConnectedMFA() {
     obj = {};
   }
   ({ inContainer, isMultiAccount } = obj);
-  const navigation = isMultiAccount(1500).useNavigation();
+  let navigation;
+  navigation = isMultiAccount(1500).useNavigation();
   if (inContainer) {
     inContainer = navigation(8582)();
   }
-  let tmpResult = isMultiAccount(589);
+  let tmpResult = tmp(589);
   const items = [closure_4];
   const items1 = [isMultiAccount];
   const stateFromStores = tmpResult.useStateFromStores(items, () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }), [], statesAreEqual);
   const items2 = [navigation];
   const callback = React.useCallback((arg0) => {
     ({ mfaType, data, ticket } = arg0);
-    navigation(dependencyMap[7]);
-    const obj = { code: data, ticket, mfaType, isMultiAccount };
+    let obj = navigation(closure_1_2[7]);
+    obj = { code: data, ticket, mfaType, isMultiAccount };
     return obj.loginMFAv2(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
@@ -56,15 +57,14 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(isMultiAccount(15120).MFAModal, obj);
+    return jsx(tmp(15120).MFAModal, obj);
   } else {
-    tmpResult = isMultiAccount(501);
-    tmp4(712).space;
+    tmpResult = tmp(501);
+    let space = tmp4(712).space;
     const isAndroidResult = tmpResult.isAndroid();
-    const space = { paddingLeft: null, paddingTop: null };
+    space = { paddingLeft: null, paddingTop: null };
     space[0] = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
     space[1] = tmp4(712).space.PX_12;
     const tmp11 = tmpResult.isAndroid() ? space.PX_8 : space.PX_16;
   }
-  const obj2 = isMultiAccount(1500);
 };

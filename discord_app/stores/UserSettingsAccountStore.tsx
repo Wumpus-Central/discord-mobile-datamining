@@ -1,7 +1,7 @@
 // discord_app/stores/UserSettingsAccountStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import mergeGuildAvatar from "UserStore.tsx";
+import closure_0 from "UserStore.tsx";
 import { FormStates } from "../Constants.tsx";
 
 function handleFormClose() {
@@ -103,6 +103,6 @@ const userSettingsAccountStore = new UserSettingsAccountStore(dispatcherDefault,
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
+const result = require("set").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
 
 export default userSettingsAccountStore;

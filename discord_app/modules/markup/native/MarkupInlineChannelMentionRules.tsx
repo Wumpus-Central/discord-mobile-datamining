@@ -2,17 +2,18 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import { jsxs } from "../../../../_runtime/react/00021_jsxProd.js";
 
+let c0 = arg1;
 noopAll;
-let c0 = "\u{1F4AC}";
-const result = require("obj132").fileFinishedImporting("modules/markup/native/MarkupInlineChannelMentionRules.tsx");
+c0 = "\u{1F4AC}";
+const result = require("set").fileFinishedImporting("modules/markup/native/MarkupInlineChannelMentionRules.tsx");
 
-export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, fn, key) {
+export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, output, key) {
   if (null == inContent.inContent) {
-    let smartOutputResult = u1F4AC(8308).smartOutput(inContent, fn, key);
+    let smartOutputResult = u1F4AC(8308).smartOutput(inContent, output, key);
     const obj3 = u1F4AC(8308);
   } else {
     const obj = { children: null };
-    const items = [fn(inContent.inContent, key), " \u203A ", u1F4AC(8308).smartOutput(inContent, fn, key)];
+    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(8308).smartOutput(inContent, output, key)];
     obj[0] = items;
     smartOutputResult = jsxs(u1F4AC(1297).LegacyText, { children: null }, key.key);
     const obj2 = u1F4AC(8308);
@@ -20,6 +21,10 @@ export const inlineChannelMentionReact = function inlineChannelMentionReact(inCo
   return smartOutputResult;
 };
 export function createInlineChannelReact(arg0) {
+  let str = arg0;
+  if (arg0 === undefined) {
+    str = "\u{1F4AC}";
+  }
   return (iconType) => {
     iconType = iconType.iconType;
     switch (iconType) {
@@ -103,9 +108,9 @@ export function createInlineChannelReact(arg0) {
       break;
       case "accessibilityRole":
         let obj = { children: null };
-        const items = [undefined, str(dependencyMap[2]).smartOutput(iconType, tmp3, tmp), undefined];
+        const items = [undefined, str(closure_1_1[2]).smartOutput(iconType, tmp3, tmp), undefined];
         obj[0] = items;
-        return tmp2(iconType(dependencyMap[3]).LegacyText, obj, tmp.key);
+        return tmp2(iconType(closure_1_1[3]).LegacyText, obj, tmp.key);
       case "accessible":
         str = "\"";
       break;
@@ -420,7 +425,7 @@ export function createInlineChannelReact(arg0) {
       case "skuId":
       break;
       default:
-        obj = str(dependencyMap[4]);
+        obj = str(closure_1_1[4]);
         obj.assertNever(iconType);
     }
   };
@@ -508,9 +513,9 @@ export const inlineChannelReact = (iconType) => {
     break;
     case "accessibilityRole":
       let obj = { children: null };
-      const items = [undefined, str(dependencyMap[2]).smartOutput(iconType, tmp3, tmp), undefined];
+      const items = [undefined, str(closure_1_1[2]).smartOutput(iconType, tmp3, tmp), undefined];
       obj[0] = items;
-      return tmp2(iconType(dependencyMap[3]).LegacyText, obj, tmp.key);
+      return tmp2(iconType(closure_1_1[3]).LegacyText, obj, tmp.key);
     case "accessible":
       str = "\"";
     break;
@@ -825,7 +830,7 @@ export const inlineChannelReact = (iconType) => {
     case "skuId":
     break;
     default:
-      obj = str(dependencyMap[4]);
+      obj = str(closure_1_1[4]);
       obj.assertNever(iconType);
   }
 };

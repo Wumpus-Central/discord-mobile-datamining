@@ -4,7 +4,7 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/Action
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function onPress() {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14314, dependencyMap.paths), "AddConnection");
 }
@@ -33,6 +33,6 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
   }, items);
   return jsx(tmp(14315).UserSettingsConnections, { selectedPlatformType });
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 
 export default memoResult;

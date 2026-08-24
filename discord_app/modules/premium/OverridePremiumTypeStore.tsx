@@ -1,5 +1,5 @@
 // discord_app/modules/premium/OverridePremiumTypeStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import validatePremiumType from "../user/UserStoreUtils.tsx";
@@ -36,9 +36,9 @@ prototype["initialize"] = function initialize(premiumTypeActual) {
     if (null != premiumTypeActual.createdAtOverride) {
       const _Date = Date;
       const date = new Date(premiumTypeActual.createdAtOverride);
-      closure_4.createdAtOverride = date;
+      tmp4.createdAtOverride = date;
     } else {
-      closure_4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
+      tmp4.createdAtOverride = UNSELECTED_CREATED_AT_DATE;
     }
   } else {
     closure_4.premiumTypeOverride = UNSELECTED_PREMIUM_TYPE_OVERRIDE;
@@ -90,6 +90,6 @@ const overridePremiumTypeStore = new OverridePremiumTypeStore(dispatcherDefault,
   CURRENT_USER_UPDATE: setPremiumTypeActual,
   CONNECTION_OPEN: setPremiumTypeActual
 });
-const result = obj132.fileFinishedImporting("modules/premium/OverridePremiumTypeStore.tsx");
+const result = set.fileFinishedImporting("modules/premium/OverridePremiumTypeStore.tsx");
 
 export default overridePremiumTypeStore;

@@ -1,8 +1,8 @@
 // discord_app/modules/auth/native/useLoginReset.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/AuthenticationStore.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/useLoginReset.tsx");
 
 export default function useLoginReset() {
   const effect = React.useEffect(() => () => {

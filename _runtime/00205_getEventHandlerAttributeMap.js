@@ -47,5 +47,4 @@ arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventLis
   if (tmp18) {
     setEventHandlerAttributeMap(removeEventListener, null);
   }
-  tmp18 = null != obj && 0 === obj.size;
 };

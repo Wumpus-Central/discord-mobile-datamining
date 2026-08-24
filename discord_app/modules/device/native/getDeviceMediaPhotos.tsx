@@ -1,25 +1,25 @@
 // discord_app/modules/device/native/getDeviceMediaPhotos.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import timestampDefault from "../../debug/Logger.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import obj1322 from "../../../utils/PlatformUtils.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import get_ActivityIndicatorDefault from "DCDPhotos.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = new timestampDefault("DeviceMedia.tsx");
 const tmp2 = new timestampDefault("DeviceMedia.tsx");
-const result = obj132.fileFinishedImporting("modules/device/native/getDeviceMediaPhotos.tsx");
+const result = set.fileFinishedImporting("modules/device/native/getDeviceMediaPhotos.tsx");
 
 export default function getDeviceMediaPhotos(arg0) {
   ({ batchSize, extensions, onFetched, onError } = arg0);
   ({ endCursor, lastAssetIndex, lastNodeImageUri } = arg0);
   if (onError === undefined) {
-    onError = function u(error) {
-      logger.log("CameraRollUtils -- Failed to get photos with error " + error);
-      callback(table[2]).captureException(error, { tags: { source: "DEVICE_MEDIA" } });
+    onError = function u(arg0) {
+      logger.log("CameraRollUtils -- Failed to get photos with error " + arg0);
+      callback(table[2]).captureException(arg0, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = obj1322;
+  let obj = set2;
   if (obj.isIOS()) {
     const obj3 = get_ActivityIndicatorDefault;
     if (obj3 != null) {

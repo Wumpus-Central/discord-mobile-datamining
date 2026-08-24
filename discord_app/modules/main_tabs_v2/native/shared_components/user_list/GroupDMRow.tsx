@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { UserRowModes } from "UserRowConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
 
 export default function GroupDMRow(channel) {
   channel = channel.channel;
@@ -29,18 +29,18 @@ export default function GroupDMRow(channel) {
       tmp(channel);
     }
   }, items);
-  { size: channel(1297).AvatarSizes.REFRESH_MEDIUM_32, channel };
+  let obj = { size: channel(1297).AvatarSizes.REFRESH_MEDIUM_32, channel };
   const tmp6 = onPress(9916);
   obj1 = channel(9917);
   const recipientsLabel = obj1.useRecipientsLabel(channel);
-  let obj = {};
+  obj = {};
   const merged1 = Object.assign(merged);
   obj.disabled = flag2;
   let tmp5Result;
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     obj[3] = recipientsLabel;
-    tmp5Result = jsx(tmp7(4734).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null });
+    tmp5Result = tmp5(tmp7(4734).Text, obj);
   }
   obj.subLabel = tmp5Result;
   obj.icon = jsx(onPress(9916), {});
@@ -55,10 +55,11 @@ export default function GroupDMRow(channel) {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.checked = flag;
-    tmp5Result = jsx(tmp7(8558).TableCheckboxRow, {});
+    tmp5Result = tmp5(tmp7(8558).TableCheckboxRow, obj1);
   } else {
+    const obj2 = {};
     const merged3 = Object.assign(obj);
-    tmp5Result = jsx(tmp7(6291).TableRow, {});
+    tmp5Result = tmp5(tmp7(6291).TableRow, obj2);
   }
   return tmp5Result;
 };

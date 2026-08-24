@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
 import isIterable from "../../../../../../_runtime/04006_isIterable.js";
 import NativeModulesDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import identity from "../../../../../../_runtime/00700_identity.js";
 import { batchUpdates } from "../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-require = fn;
+require = arg1;
 function _initializeAndroidNotificationSettingsStore() {
   const self = this;
   const tmp = callback(function*() {
@@ -149,7 +149,7 @@ function _initializeAndroidNotificationSettingsStore() {
   return applyArgumentsResult;
 }
 let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "flex", isSoundsEnabled: "y", isNotifyEveryTime: "HermesInternal" }));
-let result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
 export const initializeAndroidNotificationSettingsStore = function initializeAndroidNotificationSettingsStore() {
   const self = this;
@@ -166,8 +166,8 @@ export const useAndroidNotificationLightsEnabled = function useAndroidNotificati
 };
 export const setAndroidNotificationLightsEnabled = function setAndroidNotificationLightsEnabled(arg0) {
   const _require = arg0;
-  require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ isLightsEnabled: closure_0 }));
-  const obj = batchUpdates;
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ isLightsEnabled: closure_0 }));
+  const obj = _batchUpdates;
   NativeModulesDefault.setLightsEnabled(arg0);
 };
 export const useAndroidNotificationVibrationsEnabled = function useAndroidNotificationVibrationsEnabled() {
@@ -175,8 +175,8 @@ export const useAndroidNotificationVibrationsEnabled = function useAndroidNotifi
 };
 export const setAndroidNotificationVibrationsEnabled = function setAndroidNotificationVibrationsEnabled(arg0) {
   const _require = arg0;
-  require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ isVibrationsEnabled: closure_0 }));
-  const obj = batchUpdates;
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ isVibrationsEnabled: closure_0 }));
+  const obj = _batchUpdates;
   NativeModulesDefault.setVibrationsEnabled(arg0);
 };
 export const useAndroidNotificationSoundsEnabled = function useAndroidNotificationSoundsEnabled() {
@@ -184,8 +184,8 @@ export const useAndroidNotificationSoundsEnabled = function useAndroidNotificati
 };
 export const setAndroidNotificationSoundsEnabled = function setAndroidNotificationSoundsEnabled(arg0) {
   const _require = arg0;
-  require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ isSoundsEnabled: closure_0 }));
-  const obj = batchUpdates;
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ isSoundsEnabled: closure_0 }));
+  const obj = _batchUpdates;
   NativeModulesDefault.setSoundsEnabled(arg0);
 };
 export const useAndroidMessageNotificationsEnabled = function useAndroidMessageNotificationsEnabled() {
@@ -193,7 +193,7 @@ export const useAndroidMessageNotificationsEnabled = function useAndroidMessageN
 };
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(arg0) {
   const _require = arg0;
-  require("../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_4.setState({ isNotifyEveryTime: closure_0 }));
-  const obj = batchUpdates;
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ isNotifyEveryTime: closure_0 }));
+  const obj = _batchUpdates;
   const result = NativeModulesDefault.setAndroidNotifyEveryTime(arg0);
 };

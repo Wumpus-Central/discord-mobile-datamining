@@ -1,6 +1,6 @@
 // _runtime/00266_IntersectionObserverEntry.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
 const IntersectionObserverEntry = importDefault;
@@ -8,7 +8,7 @@ class IntersectionObserverEntry {
   constructor(arg0, arg1) {
     tmp = closure_2(this, IntersectionObserverEntry);
     this._nativeEntry = global;
-    this._target = fn;
+    this._target = arg1;
     return;
   }
 }

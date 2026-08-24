@@ -1,9 +1,10 @@
 // discord_app/modules/parent_tools/hooks/useIsOnMainSurface.native.tsx
 import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import set from "../../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function getIsOnMainSurface() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
@@ -47,8 +48,8 @@ function getIsOnMainSurface() {
   }
   return false;
 }
-const set = new Set(["tabs", "channel"]);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
+let set = new Set(["tabs", "channel"]);
+const result = set.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = function useIsOnMainSurface() {
   [tmp2, require] = callback(React.useState(getIsOnMainSurface), 2);
@@ -56,14 +57,15 @@ export const useIsOnMainSurface = function useIsOnMainSurface() {
     function handleNavigationChange() {
       return rootNavigationRef(closure_1_5());
     }
-    const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
     if (null != rootNavigationRef) {
-      rootNavigationRef(getIsOnMainSurface());
+      rootNavigationRef(closure_1_5());
       rootNavigationRef.addListener("state", handleNavigationChange);
       return () => {
         rootNavigationRef.removeListener("state", handleNavigationChange);
       };
     }
+    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

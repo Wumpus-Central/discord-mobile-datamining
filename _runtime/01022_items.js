@@ -12,6 +12,7 @@ arg5.disable = function disable() {
 };
 arg5.enable = function enable(arg0) {
   let obj = arg0;
+  obj = arg0;
   function onUnhandled(arg0) {
     let allRejections = error.allRejections;
     if (!allRejections) {
@@ -20,26 +21,27 @@ arg5.enable = function enable(arg0) {
         whitelist = c2;
       }
       error = dependencyMap[arg0].error;
-      allRejections = whitelist.some((item, index) => closure_0 instanceof item);
+      allRejections = whitelist.some((arg0) => closure_0 instanceof arg0);
     }
     if (allRejections) {
       closure_2 = tmp4 + 1;
       dependencyMap[arg0].displayId = +closure_2;
       dependencyMap[arg0].logged = true;
       if (obj.onUnhandled) {
-        obj.onUnhandled(dependencyMap[arg0].displayId, dependencyMap[arg0].error);
+        obj.onUnhandled(tmp2[arg0].displayId, tmp2[arg0].error);
       } else {
-        error = dependencyMap[arg0].error;
+        error = tmp2[arg0].error;
         const _console = console;
         console.warn(`Possible Unhandled Promise Rejection (id: ${tmp2[arg0].displayId}):`);
         let tmp7 = error;
         if (error) {
           tmp7 = error.stack || error;
+          const tmp8 = error.stack || error;
         }
         const text = `${tmp7}`;
         const parts = `${tmp7}`.split("\n");
-        const item = parts.forEach((item, index) => {
-          console.warn(`  ${item}`);
+        const item = parts.forEach((arg0) => {
+          console.warn(`  ${arg0}`);
         });
       }
     }
@@ -52,6 +54,7 @@ arg5.enable = function enable(arg0) {
     obj(1019)._37 = null;
     obj(1019)._87 = null;
   }
+  closure_3 = true;
   dependencyMap = 0;
   c2 = 0;
   closure_3 = {};
@@ -64,10 +67,10 @@ arg5.enable = function enable(arg0) {
     if (tmp3) {
       if (dependencyMap[_51._51].logged) {
         const _512 = _51._51;
-        if (dependencyMap[_512].logged) {
+        if (tmp5[_512].logged) {
           if (obj.onHandled) {
-            obj.onHandled(dependencyMap[_512].displayId, dependencyMap[_512].error);
-          } else if (!dependencyMap[_512].onUnhandled) {
+            obj.onHandled(tmp5[_512].displayId, tmp5[_512].error);
+          } else if (!tmp5[_512].onUnhandled) {
             const _console = console;
             console.warn(`Promise Rejection Handled (id: ${tmp5[_512].displayId}):`);
             const _console2 = console;
@@ -76,7 +79,7 @@ arg5.enable = function enable(arg0) {
         }
       } else {
         const _clearTimeout = clearTimeout;
-        clearTimeout(dependencyMap[_51._51].timeout);
+        clearTimeout(tmp5[_51._51].timeout);
       }
       _51 = _51._51;
       delete tmp2[tmp];
@@ -90,12 +93,13 @@ arg5.enable = function enable(arg0) {
       obj[1] = arg1;
       closure_0 = arg1;
       let num = 2000;
-      if (c2.some((item, index) => closure_0 instanceof item)) {
+      if (c2.some((arg0) => closure_0 instanceof arg0)) {
         num = 100;
       }
       obj[2] = setTimeout(onUnhandled.bind(null, _40._51), num);
       closure_3[_40._51] = obj;
       const bindResult = onUnhandled.bind(null, _40._51);
+      const tmp4 = closure_3;
     }
   };
 };

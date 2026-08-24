@@ -2,11 +2,11 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import result2 from "../../../../design/migrations/native/LegacyTokens.tsx";
 import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../../../stores/ChannelStore.tsx";
 import { useVoiceMessagesUIStore } from "../VoiceMessagesUIStore.tsx";
 import { VoiceMessageAnimationState } from "../../VoiceMessageConstants.tsx";
 import { ComponentActionsKeyed } from "../../../../Constants.tsx";
@@ -17,19 +17,22 @@ import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult3 from "../../../../../_runtime/00012_apply.js";
 
-require = fn;
+require = arg1;
 function LockPill(safeAreaBottom) {
   safeAreaBottom = safeAreaBottom.safeAreaBottom;
+  let voiceMessageAnimationState = safeAreaBottom;
   const initialAnimation = safeAreaBottom.initialAnimation;
-  const voiceMessageAnimationState = safeAreaBottom.voiceMessageAnimationState;
-  let token3 = voiceMessageAnimationState;
+  let token3 = initialAnimation;
+  voiceMessageAnimationState = safeAreaBottom.voiceMessageAnimationState;
+  token3 = voiceMessageAnimationState;
   let token4;
   let obj = voiceMessageAnimationState(token3[21]);
   const tmp4 = callback5(obj.useToken(token3(token3[18]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
   const tmp5 = token4(derivedValue3.useState(false), 2);
+  token4 = tmp6;
   obj1 = voiceMessageAnimationState(token3[11]);
   const fn = function _() {
-    return token3.get()[1] === VoiceMessageAnimationState.LOCKED || token3.get()[1] === tmp.LOCKING;
+    return token3.get()[1] === closure_1_11.LOCKED || token3.get()[1] === tmp.LOCKING;
   };
   obj = { voiceMessageAnimationState, VoiceMessageAnimationState };
   fn.__closure = obj;
@@ -47,15 +50,24 @@ function LockPill(safeAreaBottom) {
   fn2.__initData = closure_43;
   const animatedReaction = obj1.useAnimatedReaction(fn, fn2);
   token3 = undefined;
+  token3 = undefined;
+  token4 = undefined;
+  derivedValue3 = undefined;
+  let derivedValue4;
+  let derivedValue5;
   let obj4 = voiceMessageAnimationState(token3[21]);
   const token = obj4.useToken(token3(token3[18]).colors.MOBILE_VOICE_MESSAGE_RECORDING_LOCK_BACKGROUND_DEFAULT);
   let obj5 = voiceMessageAnimationState(token3[21]);
   const token1 = obj5.useToken(token3(token3[18]).colors.MOBILE_VOICE_MESSAGE_RECORDING_LOCK_BACKGROUND_ACTIVE);
   token3 = token;
+  token3 = token;
+  token4 = token1;
+  derivedValue3 = token1;
+  derivedValue4 = undefined;
   let obj6 = voiceMessageAnimationState(token3[11]);
   const fn3 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj1 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(token3[25]).withTiming, Easing: voiceMessageAnimationState(token3[11]).Easing };
@@ -63,6 +75,7 @@ function LockPill(safeAreaBottom) {
   fn3.__workletHash = 8516919791077;
   fn3.__initData = closure_34;
   const derivedValue = obj6.useDerivedValue(fn3);
+  derivedValue4 = derivedValue;
   let obj8 = voiceMessageAnimationState(token3[11]);
   const fn4 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -83,14 +96,17 @@ function LockPill(safeAreaBottom) {
   const token2 = obj10.useToken(token3(token3[18]).modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH);
   token3 = token2;
   const result = -c23 - token2 / 2;
+  token4 = result;
   let obj11 = voiceMessageAnimationState(token3[21]);
   token3 = obj11.useToken(token3(token3[18]).colors.MOBILE_VOICE_MESSAGE_RECORDING_LOCK_ICON_DEFAULT);
   let obj12 = voiceMessageAnimationState(token3[21]);
   token4 = obj12.useToken(token3(token3[18]).colors.MOBILE_VOICE_MESSAGE_RECORDING_LOCK_ICON_ACTIVE);
+  derivedValue3 = token4;
+  derivedValue4 = undefined;
   let obj13 = voiceMessageAnimationState(token3[11]);
   const fn5 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   let obj2 = { voiceMessageAnimationState, sendingColor: token, lockingColor: token1, lockedColor: token1, cancelingColor: token, interpolateColor: voiceMessageAnimationState(token3[11]).interpolateColor, timing: derivedValue, VOICE_MESSAGE_ANIMATION_STATES: items };
@@ -99,6 +115,7 @@ function LockPill(safeAreaBottom) {
   fn5.__workletHash = 8516919791077;
   fn5.__initData = closure_34;
   const derivedValue2 = obj13.useDerivedValue(fn5);
+  derivedValue4 = derivedValue2;
   let obj3 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(token3[25]).withTiming, Easing: voiceMessageAnimationState(token3[11]).Easing };
   const fn6 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -117,25 +134,25 @@ function LockPill(safeAreaBottom) {
   derivedValue3 = voiceMessageAnimationState(token3[11]).useDerivedValue(fn6);
   const obj16 = voiceMessageAnimationState(token3[11]);
   const fn7 = function n() {
-    voiceMessageAnimationState(token3[25]);
-    const obj = { easing: voiceMessageAnimationState(token3[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(token3[25]);
+    obj = { easing: voiceMessageAnimationState(token3[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj5 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(token3[25]).withTiming, Easing: voiceMessageAnimationState(token3[11]).Easing };
   fn7.__closure = obj5;
   fn7.__workletHash = 11443022128299;
   fn7.__initData = closure_36;
-  const derivedValue4 = voiceMessageAnimationState(token3[11]).useDerivedValue(fn7);
+  derivedValue4 = voiceMessageAnimationState(token3[11]).useDerivedValue(fn7);
   const obj18 = voiceMessageAnimationState(token3[11]);
   const fn8 = function s() {
     const tmp = token4(voiceMessageAnimationState.get(), 2);
-    return voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), items, tmp[0] + tmp[1] === 2 ? [1, 1, 1, 0] : [1, 0, 1, 0]);
+    return voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), closure_1_26, tmp[0] + tmp[1] === 2 ? [1, 1, 1, 0] : [1, 0, 1, 0]);
   };
   obj6 = { voiceMessageAnimationState, interpolate: voiceMessageAnimationState(token3[11]).interpolate, timing: derivedValue4, VOICE_MESSAGE_ANIMATION_STATES: items };
   fn8.__closure = obj6;
   fn8.__workletHash = 467806088074;
   fn8.__initData = closure_37;
-  const derivedValue5 = voiceMessageAnimationState(token3[11]).useDerivedValue(fn8);
+  derivedValue5 = voiceMessageAnimationState(token3[11]).useDerivedValue(fn8);
   const obj20 = voiceMessageAnimationState(token3[11]);
   const fn9 = function l() {
     const obj = { height: voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), closure_1_26, items) };
@@ -170,11 +187,11 @@ function LockPill(safeAreaBottom) {
   const animatedStyle1 = voiceMessageAnimationState(token3[11]).useAnimatedStyle(fn10);
   const obj24 = voiceMessageAnimationState(token3[11]);
   const fn11 = function _() {
-    const obj = { width: voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), items, [24, 24, 32, 32]), height: null, marginTop: null, tintColor: null };
+    const obj = { width: voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), closure_1_26, [24, 24, 32, 32]), height: null, marginTop: null, tintColor: null };
     const obj2 = voiceMessageAnimationState(token3[11]);
-    obj[1] = voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), items, [24, 24, 32, 32]);
+    obj[1] = voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), closure_1_26, [24, 24, 32, 32]);
     const obj3 = voiceMessageAnimationState(token3[11]);
-    obj[2] = voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), items, [12, 12, 10, 10]);
+    obj[2] = voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), closure_1_26, [12, 12, 10, 10]);
     obj[3] = derivedValue3.get();
     return obj;
   };
@@ -185,7 +202,7 @@ function LockPill(safeAreaBottom) {
   const animatedStyle2 = obj26.useAnimatedStyle(fn11);
   const obj9 = { interpolate: voiceMessageAnimationState(token3[11]).interpolate, timing: derivedValue4, VOICE_MESSAGE_ANIMATION_STATES: items, lockIconColor: derivedValue3 };
   const fn12 = function u() {
-    const obj = { opacity: voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), items, [1, 1, 0, 0]) };
+    const obj = { opacity: voiceMessageAnimationState(token3[11]).interpolate(derivedValue4.get(), closure_1_26, [1, 1, 0, 0]) };
     return obj;
   };
   obj10 = { interpolate: voiceMessageAnimationState(token3[11]).interpolate, timing: derivedValue4, VOICE_MESSAGE_ANIMATION_STATES: items };
@@ -196,7 +213,7 @@ function LockPill(safeAreaBottom) {
   const obj28 = voiceMessageAnimationState(token3[11]);
   const tmp3Result = token3(tmp5[0] ? token3[26] : token3[27]);
   const fn13 = function v() {
-    const sum = voiceMessageAnimationState + CHAT_INPUT_HEIGHT + 24;
+    const sum = voiceMessageAnimationState + closure_1_14 + 24;
     return { opacity: token3.get(), bottom: sum + 8 * token3.get() };
   };
   obj11 = { initialAnimation, safeAreaBottom, CHAT_INPUT_HEIGHT, LOCK_PILL_BOTTOM_OFFSET: 32, INITIAL_SHIFT: 8 };
@@ -228,7 +245,8 @@ let closure_21 = importDefaultResult3.memoize(() => importDefaultResult.createAn
 let c22 = 68;
 let c23 = 56;
 let closure_24 = createCacheKey.createStyles((width) => {
-  let obj = { alignItems: "center" };
+  let obj = { container: null, innerContainer: null, contentContainer: null, contentContainerFloating: null, trashContainer: null, sendContainer: null, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
+  obj = { alignItems: "center" };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.overflow = "hidden";
   obj[0] = obj;
@@ -237,13 +255,21 @@ let closure_24 = createCacheKey.createStyles((width) => {
   obj[2] = { position: "absolute", bottom: 0, width: "100%", alignItems: "center", overflow: "hidden" };
   obj[3] = { justifyContent: "flex-end", overflow: "visible" };
   obj[4] = { width, height: width, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, alignItems: "center", justifyContent: "center" };
+  obj1 = { width, height: width, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, alignItems: "center", justifyContent: "center" };
   obj[5] = { width, height: width, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, alignItems: "center", justifyContent: "center" };
+  const obj2 = { width, height: width, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, alignItems: "center", justifyContent: "center" };
   obj[6] = { width: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
+  const obj3 = { width: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH, height: ThemesDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT };
   obj[7] = { backgroundColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
+  const obj4 = { backgroundColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND };
   obj[8] = { tintColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
+  const obj5 = { tintColor: ThemesDefault.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
   obj[9] = { flex: 1, height: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT, marginRight: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT, alignItems: "flex-end" };
+  const obj6 = { flex: 1, height: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT, marginRight: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT, alignItems: "flex-end" };
   obj[10] = { height: c22, width: c23, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, display: "flex", alignItems: "center", flexDirection: "column", elevation: 12, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 12 }, shadowOpacity: 0.12, shadowRadius: 36, borderWidth: result2.DARK_0_LIGHT_1, borderStyle: "solid", borderColor: "rgba(0, 0, 0, 0.08)" };
+  const obj7 = { height: c22, width: c23, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, display: "flex", alignItems: "center", flexDirection: "column", elevation: 12, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 12 }, shadowOpacity: 0.12, shadowRadius: 36, borderWidth: result2.DARK_0_LIGHT_1, borderStyle: "solid", borderColor: "rgba(0, 0, 0, 0.08)" };
   obj[11] = { position: "absolute", right: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT, width: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH };
+  const obj8 = { position: "absolute", right: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT, width: ThemesDefault.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH };
   obj[12] = { height: 16, width: 16, marginTop: 8, tintColor: ThemesDefault.colors.ICON_SUBTLE };
   return obj;
 });
@@ -256,27 +282,36 @@ let closure_29 = { code: "function VoiceMessageOverlayTsx3(){const{voiceMessageE
 let closure_30 = { code: "function VoiceMessageOverlayTsx4(){const{radius,height,offset}=this.__closure;return{position:'absolute',width:radius*2,height:height.get()+offset.get(),bottom:0};}" };
 const memoResult = importAllResult.memo((opacity) => {
   const radius = opacity.radius;
+  let voiceMessageAnimationState = radius;
   const height = opacity.height;
+  let token = height;
   const offsetThreshold = opacity.offsetThreshold;
   let RED_400 = offsetThreshold;
-  const voiceMessageAnimationState = opacity.voiceMessageAnimationState;
+  voiceMessageAnimationState = opacity.voiceMessageAnimationState;
+  token = undefined;
+  token = undefined;
+  let derivedValue1;
+  let derivedValue2;
+  let derivedValue3;
   let obj = voiceMessageAnimationState(RED_400[20]);
   items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
+  token = stateFromStores;
   const tmp2 = useVoiceMessagesUIStore((currWaveHeight) => currWaveHeight.currWaveHeight);
-  let token = tmp2;
+  token = tmp2;
   obj1 = voiceMessageAnimationState(RED_400[11]);
   const fn = function c() {
     let num = 0.5;
     if (!token) {
       let num2;
       if (token != null) {
-        num2 = token.get();
+        num2 = obj.get();
       }
       if (num2 == null) {
         num2 = 0;
       }
       num = num2;
+      obj = token;
     }
     return num;
   };
@@ -284,19 +319,21 @@ const memoResult = importAllResult.memo((opacity) => {
   fn.__workletHash = 2925868096827;
   fn.__initData = closure_27;
   const derivedValue = obj1.useDerivedValue(fn);
+  derivedValue1 = derivedValue;
   let obj2 = voiceMessageAnimationState(RED_400[21]);
   token = obj2.useToken(token(RED_400[18]).colors.BACKGROUND_BRAND);
   RED_400 = token(RED_400[18]).unsafe_rawColors.RED_400;
+  derivedValue1 = undefined;
   const fn2 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(RED_400[25]).withTiming, Easing: voiceMessageAnimationState(RED_400[11]).Easing };
   fn2.__closure = obj;
   fn2.__workletHash = 8516919791077;
   fn2.__initData = closure_34;
-  const derivedValue1 = voiceMessageAnimationState(RED_400[11]).useDerivedValue(fn2);
+  derivedValue1 = voiceMessageAnimationState(RED_400[11]).useDerivedValue(fn2);
   const obj4 = voiceMessageAnimationState(RED_400[11]);
   const fn3 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -312,7 +349,7 @@ const memoResult = importAllResult.memo((opacity) => {
   fn3.__closure = obj;
   fn3.__workletHash = 4463544053380;
   fn3.__initData = closure_35;
-  const derivedValue2 = voiceMessageAnimationState(RED_400[11]).useDerivedValue(fn3);
+  derivedValue2 = voiceMessageAnimationState(RED_400[11]).useDerivedValue(fn3);
   const obj6 = voiceMessageAnimationState(RED_400[11]);
   const fn4 = function u() {
     return derivedValue1.get() * RED_400;
@@ -320,7 +357,7 @@ const memoResult = importAllResult.memo((opacity) => {
   fn4.__closure = { derivedCurrWaveHeight: derivedValue, offsetThreshold };
   fn4.__workletHash = 7278593580538;
   fn4.__initData = closure_28;
-  const derivedValue3 = voiceMessageAnimationState(RED_400[11]).useDerivedValue(fn4);
+  derivedValue3 = voiceMessageAnimationState(RED_400[11]).useDerivedValue(fn4);
   const obj8 = voiceMessageAnimationState(RED_400[11]);
   class A {
     constructor() {
@@ -357,11 +394,12 @@ let closure_33 = importAllResult.memo((initialAnimation) => {
   const recordingAnimation = initialAnimation.recordingAnimation;
   const voiceMessageState = initialAnimation.voiceMessageState;
   let stringResult5;
+  let chatInputFloating;
   let ref;
   let tmp2 = useVoiceMessagesUIStore((savedVoiceMessageUploadData) => null != savedVoiceMessageUploadData.savedVoiceMessageUploadData);
   let obj = initialAnimation(stringResult5[22]);
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "VoiceMessagePrompt" });
-  const chatInputFloating = mobileVisualRefreshConfig.chatInputFloating;
+  chatInputFloating = mobileVisualRefreshConfig.chatInputFloating;
   ref = ref.useRef(undefined);
   const tmp7 = recordingAnimation(stringResult5[23])(ref);
   if (initialAnimation.exiting) {
@@ -457,9 +495,10 @@ let closure_33 = importAllResult.memo((initialAnimation) => {
     const tmp24 = mobileVisualRefreshConfig.enabled ? { maxFontSizeMultiplier: 2 } : {};
     const merged = Object.assign(tmp24);
     obj.children = stringResult;
-    callback(closure_20, obj);
+    closure_15(closure_20, obj);
+    const tmp22 = closure_15;
+    const tmp23 = closure_20;
   }
-  tmp = useVoiceMessagesUIStore((isUsingHoldGesture) => isUsingHoldGesture.isUsingHoldGesture);
 });
 let closure_34 = { code: "function VoiceMessageOverlayTsx6(){const{voiceMessageAnimationState,withTiming,Easing}=this.__closure;const currValue=voiceMessageAnimationState.get()[1];return withTiming(currValue,{easing:Easing.linear,duration:150});}" };
 let closure_35 = { code: "function VoiceMessageOverlayTsx7(){const{voiceMessageAnimationState,sendingColor,lockingColor,lockedColor,cancelingColor,interpolateColor,timing,VOICE_MESSAGE_ANIMATION_STATES}=this.__closure;const[prevValue,currValue]=voiceMessageAnimationState.get();const distance=prevValue+currValue;const colors=distance===2?[sendingColor,sendingColor,lockingColor,lockedColor]:[sendingColor,cancelingColor,lockingColor,lockedColor];return interpolateColor(timing.get(),VOICE_MESSAGE_ANIMATION_STATES,colors);}" };
@@ -484,10 +523,16 @@ let closure_54 = { code: "function VoiceMessageOverlayTsx25(){const{insetsNoKeyb
 let closure_55 = { code: "function VoiceMessageOverlayTsx26(){const{insetsNoKeyboard,CHAT_INPUT_HEIGHT}=this.__closure;return insetsNoKeyboard.bottom+CHAT_INPUT_HEIGHT*1.6;}" };
 let closure_56 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
-  let voiceMessageAnimationState = channelId.voiceMessageAnimationState;
+  let voiceMessageAnimationState = channelId;
+  voiceMessageAnimationState = channelId.voiceMessageAnimationState;
   importDefault = voiceMessageAnimationState;
   const exiting = channelId.exiting;
   let WHITE7 = exiting;
+  let WHITE8;
+  importAllResult = undefined;
+  let derivedValue8;
+  let sharedValue1;
+  c7 = undefined;
   let ref;
   let derivedValue3;
   let derivedValue5;
@@ -503,7 +548,9 @@ let closure_56 = importAllResult.memo((channelId) => {
   const tmp6 = callback5(token);
   const insets = importDefault(WHITE7[29])({ includeCustomKeyboardHeight: true, includeKeyboardHeight: true }).insets;
   const tmp7 = importDefault(WHITE7[30])();
+  WHITE8 = tmp7;
   const diff = insets.bottom - tmp7.bottom;
+  importAllResult = diff;
   const bottom = insets.bottom;
   let obj3 = voiceMessageAnimationState(WHITE7[31]);
   const keyboardOpenPaddingStyle = obj3.useKeyboardOpenPaddingStyle();
@@ -511,46 +558,47 @@ let closure_56 = importAllResult.memo((channelId) => {
   voiceMessageAnimationState = tmp10;
   importDefault = exiting;
   WHITE7 = undefined;
+  WHITE8 = undefined;
   importAllResult = undefined;
   let obj4 = voiceMessageAnimationState(WHITE7[11]);
   const sharedValue = obj4.useSharedValue(0);
   WHITE7 = sharedValue;
-  let WHITE8 = importAllResult.useRef(performance.now());
+  WHITE8 = importAllResult.useRef(performance.now());
   items = [sharedValue];
   const effect = importAllResult.useEffect(() => {
-    voiceMessageAnimationState(WHITE7[11]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.quad, duration: 250 };
+    let obj = voiceMessageAnimationState(WHITE7[11]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.quad, duration: 250 };
     const result = WHITE7.set(obj.withDelay(500, voiceMessageAnimationState(WHITE7[25]).withTiming(1, obj)));
   }, items);
   let items1 = [sharedValue, exiting];
   const effect1 = importAllResult.useEffect(() => {
     if (closure_1) {
-      voiceMessageAnimationState(WHITE7[25]);
-      const obj = { easing: null, duration: 100 };
+      let obj = voiceMessageAnimationState(WHITE7[25]);
+      obj = { easing: null, duration: 100 };
       obj[0] = voiceMessageAnimationState(WHITE7[11]).Easing.quad;
       const result = WHITE7.set(obj.withTiming(0, obj));
     }
   }, items1);
   let obj5 = voiceMessageAnimationState(WHITE7[11]);
-  const sharedValue1 = obj5.useSharedValue(0);
+  sharedValue1 = obj5.useSharedValue(0);
   importAllResult = sharedValue1;
   const items2 = [sharedValue, sharedValue1, tmp10];
   const effect2 = importAllResult.useEffect(() => {
     if (voiceMessageAnimationState) {
-      voiceMessageAnimationState(WHITE7[25]);
-      let obj = { easing: null, duration: 200 };
+      let obj = voiceMessageAnimationState(WHITE7[25]);
+      obj = { easing: null, duration: 200 };
       obj[0] = voiceMessageAnimationState(WHITE7[11]).Easing.quad;
       const result = closure_4.set(obj.withTiming(1, obj));
       const _performance = performance;
       if (performance.now() - WHITE8.current < 500) {
         obj = { easing: null, duration: 250 };
-        obj[0] = voiceMessageAnimationState(WHITE7[11]).Easing.quad;
-        const result1 = WHITE7.set(voiceMessageAnimationState(WHITE7[25]).withTiming(1, obj));
-        const tmp2Result = voiceMessageAnimationState(WHITE7[25]);
+        obj[0] = tmp2(tmp3[11]).Easing.quad;
+        const result1 = WHITE7.set(tmp2(tmp3[25]).withTiming(1, obj));
+        const tmp2Result = tmp2(tmp3[25]);
       }
     }
   }, items2);
-  let derivedValue8 = sharedValue;
+  derivedValue8 = sharedValue;
   [tmp18, tmp19] = WHITE8(importAllResult.useState(derivedValue7.SENDING), 2);
   c7 = tmp19;
   let obj6 = voiceMessageAnimationState(WHITE7[11]);
@@ -585,16 +633,16 @@ let closure_56 = importAllResult.memo((channelId) => {
   }, []);
   const items3 = [channelId];
   const effect4 = importAllResult.useEffect(() => {
-    closure_0 = _undefined.addEventListener("change", (event) => {
-      let tmp = "inactive" !== event;
+    closure_0 = _undefined.addEventListener("change", (arg0) => {
+      let tmp = "inactive" !== arg0;
       if (tmp) {
-        tmp = "background" !== event;
+        tmp = "background" !== arg0;
       }
       if (!tmp) {
-        const ComponentDispatch = lib(WHITE7[34]).ComponentDispatch;
+        const ComponentDispatch = lib(closure_1_2[34]).ComponentDispatch;
         const obj = { isCancelling: true, cancelReason: null };
-        obj[1] = lib(WHITE7[35]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND;
-        ComponentDispatch.dispatchKeyed(derivedValue9.VOICE_MESSAGE_SEND, lib, obj);
+        obj[1] = lib(closure_1_2[35]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND;
+        ComponentDispatch.dispatchKeyed(closure_1_12.VOICE_MESSAGE_SEND, lib, obj);
       }
     });
     return () => {
@@ -608,10 +656,13 @@ let closure_56 = importAllResult.memo((channelId) => {
   const BRAND_6003 = importDefault(WHITE7[18]).unsafe_rawColors.BRAND_600;
   importDefault = BRAND_600;
   WHITE7 = RED_500;
+  WHITE8 = BRAND_6002;
+  importAllResult = BRAND_6003;
+  derivedValue8 = undefined;
   let obj8 = voiceMessageAnimationState(WHITE7[11]);
   const fn2 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(WHITE7[25]).withTiming, Easing: voiceMessageAnimationState(WHITE7[11]).Easing };
@@ -619,6 +670,7 @@ let closure_56 = importAllResult.memo((channelId) => {
   fn2.__workletHash = 8516919791077;
   fn2.__initData = closure_34;
   const derivedValue = obj8.useDerivedValue(fn2);
+  derivedValue8 = derivedValue;
   let obj10 = voiceMessageAnimationState(WHITE7[11]);
   const fn3 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -641,10 +693,13 @@ let closure_56 = importAllResult.memo((channelId) => {
   const BRAND_6006 = importDefault(WHITE7[18]).unsafe_rawColors.BRAND_600;
   importDefault = BRAND_6004;
   WHITE7 = WHITE;
+  WHITE8 = BRAND_6005;
+  importAllResult = BRAND_6006;
+  derivedValue8 = undefined;
   let obj12 = voiceMessageAnimationState(WHITE7[11]);
   const fn4 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj2 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(WHITE7[25]).withTiming, Easing: voiceMessageAnimationState(WHITE7[11]).Easing };
@@ -652,6 +707,7 @@ let closure_56 = importAllResult.memo((channelId) => {
   fn4.__workletHash = 8516919791077;
   fn4.__initData = closure_34;
   const derivedValue2 = obj12.useDerivedValue(fn4);
+  derivedValue8 = derivedValue2;
   let obj14 = voiceMessageAnimationState(WHITE7[11]);
   const fn5 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -682,10 +738,13 @@ let closure_56 = importAllResult.memo((channelId) => {
   const WHITE4 = importDefault(WHITE7[18]).unsafe_rawColors.WHITE;
   importDefault = WHITE2;
   WHITE7 = RED_5002;
+  WHITE8 = WHITE3;
+  importAllResult = WHITE4;
+  derivedValue8 = undefined;
   let obj17 = voiceMessageAnimationState(WHITE7[11]);
   const fn7 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj4 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(WHITE7[25]).withTiming, Easing: voiceMessageAnimationState(WHITE7[11]).Easing };
@@ -693,6 +752,7 @@ let closure_56 = importAllResult.memo((channelId) => {
   fn7.__workletHash = 8516919791077;
   fn7.__initData = closure_34;
   const derivedValue4 = obj17.useDerivedValue(fn7);
+  derivedValue8 = derivedValue4;
   let obj19 = voiceMessageAnimationState(WHITE7[11]);
   const fn8 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -725,10 +785,11 @@ let closure_56 = importAllResult.memo((channelId) => {
   WHITE7 = RED_5003;
   WHITE8 = BRAND_6007;
   importAllResult = WHITE6;
+  derivedValue8 = undefined;
   let obj22 = voiceMessageAnimationState(WHITE7[11]);
   const fn10 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj6 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(WHITE7[25]).withTiming, Easing: voiceMessageAnimationState(WHITE7[11]).Easing };
@@ -736,6 +797,7 @@ let closure_56 = importAllResult.memo((channelId) => {
   fn10.__workletHash = 8516919791077;
   fn10.__initData = closure_34;
   const derivedValue6 = obj22.useDerivedValue(fn10);
+  derivedValue8 = derivedValue6;
   let obj24 = voiceMessageAnimationState(WHITE7[11]);
   const fn11 = function u() {
     const tmp = WHITE8(voiceMessageAnimationState.get(), 2);
@@ -764,10 +826,11 @@ let closure_56 = importAllResult.memo((channelId) => {
   WHITE8 = importDefault(WHITE7[18]).unsafe_rawColors.WHITE;
   importDefault = PLUM_13;
   importAllResult = PLUM_13;
+  derivedValue8 = undefined;
   let obj27 = voiceMessageAnimationState(WHITE7[11]);
   const fn13 = function _() {
-    voiceMessageAnimationState(WHITE7[25]);
-    const obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
+    let obj = voiceMessageAnimationState(WHITE7[25]);
+    obj = { easing: voiceMessageAnimationState(WHITE7[11]).Easing.linear, duration: 150 };
     return obj.withTiming(voiceMessageAnimationState.get()[1], obj);
   };
   obj8 = { voiceMessageAnimationState, withTiming: voiceMessageAnimationState(WHITE7[25]).withTiming, Easing: voiceMessageAnimationState(WHITE7[11]).Easing };
@@ -858,7 +921,7 @@ let closure_56 = importAllResult.memo((channelId) => {
     obj13[3] = voiceMessageAnimationState;
     items5[1] = callback2(closure_31, obj13);
     obj11[2] = items5;
-    tmp45Result = callback2(tmp3(stringResult[11]).View, obj11);
+    tmp45Result = tmp45(tmp3(stringResult[11]).View, obj11);
   }
   const items6 = [tmp45Result, , ];
   const items7 = [tmp6.contentContainer, { bottom }, animatedStyle4, ];
@@ -900,7 +963,7 @@ let closure_56 = importAllResult.memo((channelId) => {
       const ComponentDispatch = voiceMessageAnimationState(WHITE7[34]).ComponentDispatch;
       ComponentDispatch.dispatchKeyed(derivedValue9.VOICE_MESSAGE_SEND, voiceMessageAnimationState, { isCancelling: true });
     };
-    obj18[2] = callback2(tmp(stringResult[40]).IconButton, obj19);
+    obj18[2] = tmp54(tmp(stringResult[40]).IconButton, obj19);
     let obj20 = { ref: null, active: null, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null };
     obj20[0] = ref;
     let tmp61 = tmp18 === tmp16.SENDING;
@@ -922,11 +985,11 @@ let closure_56 = importAllResult.memo((channelId) => {
         const ComponentDispatch = voiceMessageAnimationState(WHITE7[34]).ComponentDispatch;
         ComponentDispatch.dispatchKeyed(derivedValue9.VOICE_MESSAGE_SEND, voiceMessageAnimationState, { isCancelling: false });
       };
-      obj20 = callback2(tmp3Result, obj20);
+      obj20 = tmp54(tmp3Result, obj20);
       obj18[3] = obj20;
-      obj18 = callback2(tmp3Result, obj18);
+      obj18 = tmp54(tmp3Result, obj18);
       obj17[1] = obj18;
-      callback2(tmp3(stringResult[11]).View, obj17);
+      tmp54(tmp3(stringResult[11]).View, obj17);
     }
     SendMessageIcon = tmp(stringResult[44]).SendMessageIcon;
   } else {
@@ -947,16 +1010,16 @@ let closure_56 = importAllResult.memo((channelId) => {
     obj22[0] = animatedStyle1;
     obj22[1] = tmp3(stringResult[41]);
     obj22[2] = tmp(stringResult[12]).Icon.Sizes.MEDIUM;
-    obj21[6] = callback2(closure_18, obj22);
-    const items11 = [callback2(closure_19, obj21), , ];
+    obj21[6] = tmp54(closure_18, obj22);
+    const items11 = [tmp54(closure_19, obj21), , ];
     const obj23 = { style: null, children: null };
     obj23[0] = tmp6.voiceChatContainer;
     obj24 = { isRecording: null, initialAnimation: null, backgroundColor: null };
     obj24[0] = tmp10;
     obj24[1] = sharedValue;
     obj24[2] = derivedValue1;
-    obj23[1] = callback2(tmp3(stringResult[39]), obj24);
-    items11[1] = callback2(tmp3(stringResult[11]).View, obj23);
+    obj23[1] = tmp54(tmp3(stringResult[39]), obj24);
+    items11[1] = tmp54(tmp3(stringResult[11]).View, obj23);
     const obj25 = { ref: null, style: null, androidRippleConfig: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
     obj25[0] = ref;
     const items12 = [tmp6.sendContainer, animatedStyle2];
@@ -973,26 +1036,27 @@ let closure_56 = importAllResult.memo((channelId) => {
     obj27 = { children: null };
     obj26[1] = tmp3(tmp10 ? stringResult[46] : stringResult[47]);
     obj26[2] = tmp(stringResult[12]).Icon.Sizes.MEDIUM;
-    obj25[6] = callback2(closure_18, obj26);
-    items11[2] = callback2(closure_19, obj25);
+    obj25[6] = tmp54(closure_18, obj26);
+    items11[2] = tmp54(closure_19, obj25);
     obj27[0] = items11;
     const obj28 = { children: null };
-    obj16[1] = callback2(closure_17, obj27);
-    items9[2] = callback2(tmp55, obj16);
+    obj16[1] = tmp45(tmp46, obj27);
+    items9[2] = tmp54(tmp55, obj16);
     obj14[1] = items9;
-    items6[1] = callback2(tmp3(stringResult[11]).View, obj14);
+    items6[1] = tmp45(tmp3(stringResult[11]).View, obj14);
     obj29 = { safeAreaBottom: null, initialAnimation: null, voiceMessageAnimationState: null };
     obj29[0] = bottom;
     obj29[1] = sharedValue;
     obj29[2] = voiceMessageAnimationState;
-    items6[2] = callback2(LockPill, obj29);
+    items6[2] = tmp54(LockPill, obj29);
     obj28[0] = items6;
-    return callback2(closure_17, obj28);
+    return tmp45(tmp46, obj28);
   }
-  const obj36 = voiceMessageAnimationState(WHITE7[11]);
 });
 const memoResult1 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
+  closure_1 = undefined;
+  dependencyMap = undefined;
   const tmp = useVoiceMessagesUIStore((showRecordingOverlay) => showRecordingOverlay.showRecordingOverlay);
   closure_1 = tmp;
   let obj = channelId(589);
@@ -1034,7 +1098,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
   }
   return tmp6;
 });
-let result = require("obj132").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageOverlay.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageOverlay.tsx");
 
 export default memoResult1;
 export const VoiceMessageEllipse = memoResult;

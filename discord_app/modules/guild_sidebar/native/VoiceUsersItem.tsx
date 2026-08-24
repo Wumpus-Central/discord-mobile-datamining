@@ -6,7 +6,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 noopAll;
 let closure_2 = createCacheKey.createStyles({ voiceStates: { paddingRight: 8 }, voiceStatesCollapsed: { paddingRight: 0, flexDirection: "row", flexWrap: "wrap", alignItems: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsersItem.tsx");
 
 export default function VoiceUsersItem(children) {
   let voiceStatesCollapsed = children.collapsed;
@@ -20,5 +20,5 @@ export default function VoiceUsersItem(children) {
     voiceStatesCollapsed = tmp.voiceStatesCollapsed;
   }
   style[1] = voiceStatesCollapsed;
-  return <View style={style}>{children.children}</View>;
+  return <View style={style}>{arg0.children}</View>;
 };

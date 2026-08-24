@@ -1,16 +1,17 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _requestAgeSignalChallenge() {
   const self = this;
   const tmp = callback(function*() {
+    let body = tmp2;
     const HTTP = closure_1_0(table[2]).HTTP;
     obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
     obj1[0] = closure_1_3.AGE_SIGNAL_CHALLENGE;
     obj1[1] = {};
-    let body = yield HTTP.post(obj1);
+    body = yield HTTP.post(obj1);
     body = body.body;
     if (body != null) {
       const nonce = body.nonce;
@@ -66,7 +67,7 @@ function _submitAgeSignal() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
 
 export const requestAgeSignalChallenge = function requestAgeSignalChallenge() {
   const self = this;

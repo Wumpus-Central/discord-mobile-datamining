@@ -9,9 +9,9 @@ import registerAssetDefault from "../../../../../_runtime/08572_registerAsset.js
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { resetChangeEmailStore } from "../../ChangeEmailStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function handlePress() {
   resetChangeEmailStore();
   _modDef8561.close();
@@ -19,7 +19,8 @@ function handlePress() {
 noopAll;
 ({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, gap: 20, alignItems: "center" };
+createCacheKey = { contentContainer: null, image: null, title: null, body: null, bodyInner: null, tooltip: null };
+createCacheKey = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, gap: 20, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 190, width: 220, resizeMode: "contain" };
 createCacheKey[2] = { textAlign: "center" };
@@ -28,11 +29,13 @@ createCacheKey[4] = { gap: 2 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
 
 export default function ChangeEmailComplete(email) {
   const tmp = callback3();
-  let obj = { style: tmp.image, source: registerAssetDefault };
+  let obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
+  obj = { style: tmp.image, source: registerAssetDefault };
   const items = [callback(closure_4, obj), , , ];
   obj = { style: tmp.bodyInner, children: null };
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

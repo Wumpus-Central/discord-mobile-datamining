@@ -1,27 +1,32 @@
 // discord_app/modules/media_viewer/native/components/MediaModalYoutube.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { YOUTUBE_EMBED_PAGE_TYPE } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 let closure_7 = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT;
 const memoResult = importAllResult.memo((visible) => {
   visible = visible.visible;
   const source = visible.source;
   const merged = Object.assign(visible, Object.create(null));
+  let first;
+  dependencyMap = undefined;
   let callback;
   importAllResult = undefined;
+  closure_5 = undefined;
+  let ref;
   let tmp4 = callback(importAllResult.useState(visible(9016).PlayerState.UNREADY), 2);
-  const first = tmp4[0];
+  first = tmp4[0];
   dependencyMap = tmp4[1];
   const tmp6 = callback(importAllResult.useState(undefined), 2);
+  callback = tmp6[1];
   const tmp8 = first(6701)(first);
   importAllResult = tmp8;
   const tmp9 = first(6701)(visible);
   closure_5 = tmp9;
-  const ref = importAllResult.useRef(null);
+  ref = importAllResult.useRef(null);
   const effect = importAllResult.useEffect(() => {
     const MediaViewerAnalytics = visible(8996).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
@@ -37,6 +42,7 @@ const memoResult = importAllResult.memo((visible) => {
         READY = visible(9016).PlayerState.READY;
       }
       dependencyMap(READY);
+      const tmp17 = dependencyMap;
     } else if ("onError" === type) {
       let str = value;
       if (typeof value === "number") {
@@ -95,23 +101,23 @@ const memoResult = importAllResult.memo((visible) => {
         tmp7 = first === visible(9016).PlayerState.READY;
       }
       if (tmp7) {
-        const current = ref.current;
+        const current = tmp.current;
         current.injectJavaScript("window.player.playVideo();  true;");
       }
-      let tmp15 = visible;
+      let tmp15 = tmp6;
       if (visible) {
         tmp15 = !closure_5;
       }
       if (tmp15) {
-        const current2 = ref.current;
+        const current2 = tmp.current;
         current2.injectJavaScript("window.player.playVideo();  true;");
       }
-      let tmp18 = !visible;
+      let tmp18 = !tmp6;
       if (!visible) {
         tmp18 = closure_5;
       }
       if (tmp18) {
-        const current3 = ref.current;
+        const current3 = tmp.current;
         current3.injectJavaScript("window.player.pauseVideo(); true;");
       }
     }
@@ -166,6 +172,6 @@ const memoResult = importAllResult.memo((visible) => {
     return ref(tmp7(9016), obj, youtubeVideoIdFromURI.videoId);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutube.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutube.tsx");
 
 export default memoResult;

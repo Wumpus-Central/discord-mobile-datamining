@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/BigFlagUtils.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import tmp6Result from "../../../../discord_app/index.native.tsx";
 
 let HighLow;
@@ -7,7 +7,7 @@ class HighLow {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj.parts = global;
-    obj.str = fn;
+    obj.str = arg1;
     return obj;
   }
 }
@@ -17,15 +17,20 @@ HighLow["fromString"] = function fromString(arg0) {
   for (let num = 0; num < arg0.length; num = num + 1) {
     let _Number = Number;
     let NumberResult = Number(arg0[num]);
+    let tmp2 = num;
     let num2 = 0;
     let tmp3 = NumberResult;
     if (NumberResult) {
       while (true) {
         let num3 = items[num2];
+        let tmp4 = num2;
+        let tmp5 = tmp3;
         if (!num3) {
           num3 = 0;
         }
+        let num4 = 10;
         let sum = tmp3 + 10 * num3;
+        let num5 = 16;
         items[num2] = sum % 16;
         let result = (sum - items[num2]) / 16;
         let sum1 = num2 + 1;
@@ -52,8 +57,11 @@ HighLow["fromString"] = function fromString(arg0) {
   let num8 = 0;
   do {
     let tmp10 = items[4 * num6 + num7];
+    let tmp12 = num8;
     let tmp13 = num8;
     while (undefined !== tmp10) {
+      let num9 = 16;
+      let tmp14 = num7;
       num8 = num8 + tmp10 * 16 ** tmp11;
       num7 = num7 + 1;
       tmp13 = num8;
@@ -70,6 +78,7 @@ HighLow["fromBit"] = function fromBit(arg0) {
   const rounded = Math.floor(arg0 / 16);
   let num = 0;
   do {
+    let tmp3 = num;
     let num2 = 0;
     if (num === rounded) {
       num2 = 1 << arg0 - 16 * rounded;
@@ -107,13 +116,15 @@ HighLow["asUintN"] = function asUintN(arg0, flags) {
           break;
         }
       }
+      const tmp3 = 1 << bound;
     }
   }
   return num;
 };
 prototype["and"] = function and(parts) {
+  parts = parts.parts;
   parts = this.parts;
-  const mapped = parts.map((item, index) => item & parts[index]);
+  const mapped = parts.map((arg0, arg1) => arg0 & parts[arg1]);
   if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -123,8 +134,9 @@ prototype["and"] = function and(parts) {
   return obj;
 };
 prototype["or"] = function or(parts) {
+  parts = parts.parts;
   parts = this.parts;
-  const mapped = parts.map((item, index) => item | parts[index]);
+  const mapped = parts.map((arg0, arg1) => arg0 | parts[arg1]);
   if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -134,8 +146,9 @@ prototype["or"] = function or(parts) {
   return obj;
 };
 prototype["xor"] = function xor(parts) {
+  parts = parts.parts;
   parts = this.parts;
-  const mapped = parts.map((item, index) => item ^ parts[index]);
+  const mapped = parts.map((arg0, arg1) => arg0 ^ parts[arg1]);
   if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -146,7 +159,7 @@ prototype["xor"] = function xor(parts) {
 };
 prototype["not"] = function not() {
   const parts = this.parts;
-  const mapped = parts.map((item, index) => ~item);
+  const mapped = parts.map((arg0) => ~arg0);
   if (typeof HighLow !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -156,8 +169,9 @@ prototype["not"] = function not() {
   return obj;
 };
 prototype["equals"] = function equals(parts) {
+  parts = parts.parts;
   parts = this.parts;
-  return parts.every((item, index) => item === parts[index]);
+  return parts.every((arg0, arg1) => arg0 === parts[arg1]);
 };
 prototype["toString"] = function toString() {
   const self = this;
@@ -167,9 +181,9 @@ prototype["toString"] = function toString() {
     const _Array = Array;
     const array = new Array(16);
     const parts = self.parts;
-    const item = parts.forEach((item, index) => {
+    const item = parts.forEach((arg0, arg1) => {
       let sum2;
-      const str = item.toString();
+      const str = arg0.toString();
       const items = [];
       let num = 0;
       let num2 = 0;
@@ -177,15 +191,20 @@ prototype["toString"] = function toString() {
         do {
           let _Number = Number;
           let NumberResult = Number(str[num]);
+          let tmp2 = num;
           let num3 = 0;
           let tmp3 = NumberResult;
           if (NumberResult) {
             while (true) {
               let num4 = items[num3];
+              let tmp4 = num3;
+              let tmp5 = tmp3;
               if (!num4) {
                 num4 = 0;
               }
+              let num5 = 10;
               let sum = tmp3 + 10 * num4;
+              let num6 = 16;
               items[num3] = sum % 16;
               let result = (sum - items[num3]) / 16;
               let sum1 = num3 + 1;
@@ -213,11 +232,13 @@ prototype["toString"] = function toString() {
       }
       do {
         let num7 = items[3 - num2];
-        let result1 = 4 * index;
+        let tmp12 = num2;
+        let tmp10 = array;
+        let result1 = 4 * arg1;
         if (!num7) {
           num7 = 0;
         }
-        array[num2 + result1] = num7;
+        tmp10[num2 + result1] = num7;
         num2 = num2 + 1;
       } while (num2 < 4);
     });
@@ -258,9 +279,9 @@ let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
       str = num.toString();
     }
     if (null == table[str]) {
-      table[str] = HighLow.fromString(str);
+      tmp3[str] = HighLow.fromString(str);
     }
-    tmp = table[str];
+    tmp = tmp3[str];
   }
   return tmp;
 });
@@ -341,7 +362,7 @@ let tmp10 = tmp2 ? ((arg0, arg1) => arg0 === arg1) : ((equals) => {
 let closure_9 = tmp10;
 const tmp11 = tmp2 ? ((arg0) => BigInt(1) << BigInt(arg0)) : ((arg0) => HighLow.fromBit(arg0));
 let closure_10 = tmp11;
-let result = require("obj132").fileFinishedImporting("../discord_common/js/shared/utils/BigFlagUtils.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BigFlagUtils.tsx");
 
 export const isBigFlag = tmp2 ? ((arg0) => typeof arg0 === "bigint") : ((arg0) => arg0 instanceof HighLow);
 export const deserialize = tmp6;
@@ -369,6 +390,7 @@ export const combine = function combine() {
   let tmp2 = first;
   if (1 < items.length) {
     do {
+      let tmp3 = callback3;
       first = callback3(first, items[num]);
       num = num + 1;
       tmp2 = first;
@@ -406,8 +428,11 @@ export const flagNameOf = function flagNameOf(arg0, arg1) {
   const entries = Object.entries(arg1);
   const obj = entries[Symbol.iterator]();
   while (obj !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
+    let tmp5 = callback5;
     if (callback5(arg0, tmp4[1])) {
+      let tmp6 = obj;
       obj.return();
       return tmp4[0];
     }

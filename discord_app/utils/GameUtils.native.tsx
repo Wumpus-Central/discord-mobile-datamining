@@ -1,8 +1,8 @@
 // discord_app/utils/GameUtils.native.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
 let c0 = "not supported";
-const result = obj132.fileFinishedImporting("utils/GameUtils.native.tsx");
+const result = set.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {

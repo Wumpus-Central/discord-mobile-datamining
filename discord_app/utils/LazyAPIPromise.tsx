@@ -1,10 +1,10 @@
 // discord_app/utils/LazyAPIPromise.tsx
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../_runtime/00019_noop.js";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("utils/LazyAPIPromise.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("utils/LazyAPIPromise.tsx");
 
 export default function useLazyAPIPromise(arg0, arg1) {
   closure_0 = arg0;

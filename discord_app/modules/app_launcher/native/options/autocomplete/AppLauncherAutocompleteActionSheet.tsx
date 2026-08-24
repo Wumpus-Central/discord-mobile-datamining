@@ -3,65 +3,66 @@ import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import Button from "../../../../../design/void/native.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import t from "../../../../../../_runtime/04486_t.js";
-import Text from "../../../../../design/components/Text/native/Text.tsx";
-import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import _executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
 import registerAssetDefault from "../../../../../../_runtime/11346_registerAsset.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleInit from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
-import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
+import closure_7 from "../../../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../../../_runtime/00012_apply.js";
 
-require = fn;
+require = arg1;
 function Item(arg0) {
   ({ item, index: require, choices: importDefault, onChoiceSelect: dependencyMap } = arg0);
   closure_3 = undefined;
   let React;
   function ListItem(arg0) {
     ({ label, onPress } = arg0);
-    return closure_1_9(TableRowInner.TableRow, { label, onPress, start: 0 === closure_0, end: closure_0 === length.length - 1 });
+    return closure_1_9(closure_1_0(closure_1_2[18]).TableRow, { label, onPress, start: 0 === closure_0, end: closure_0 === length.length - 1 });
   }
   let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
   if (!tmp4) {
-    tmp4 = item.type === AutoCompleteResultTypes.CHOICE_LOADING;
+    tmp4 = item.type === tmp3.CHOICE_LOADING;
   }
   if (!tmp4) {
-    tmp4 = item.type === AutoCompleteResultTypes.LABEL;
+    tmp4 = item.type === tmp3.LABEL;
   }
   _modDef38(tmp4, "Invalid autocomplete result type");
   closure_3 = callback2();
   React = React.useMemo(() => 100 * Math.random() + 50, []);
+  const tmp2 = _modDef38;
   const match = t.match(item);
-  let obj = { type: AutoCompleteResultTypes.LABEL };
+  let obj = { type: tmp3.CHOICE };
+  const str = t;
+  obj = { type: tmp3.LABEL };
   const withResult = match.with(obj, (children) => {
     closure_0 = children;
-    {
-      label: closure_1_9(Text.Text, obj),
+    obj = {
+      label: closure_1_9(closure_1_0(closure_1_2[20]).Text, obj),
       onPress() {
         if (closure_1_2 != null) {
           tmp(choice.choice);
         }
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+        closure_2_1(closure_2_2[13]).hideActionSheet();
       }
     };
     obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: children.choice.displayName };
     return closure_1_9(ListItem, obj);
   });
+  obj1 = { type: AutoCompleteResultTypes.CHOICE_LOADING };
   const withResult1 = match.with(obj, (children) => {
     closure_0 = children;
-    {
-      label: closure_1_9(Text.Text, obj),
+    obj = {
+      label: closure_1_9(closure_1_0(closure_1_2[20]).Text, obj),
       onPress() {
         if (closure_1_2 != null) {
           tmp(choice.choice);
         }
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+        closure_2_1(closure_2_2[13]).hideActionSheet();
       }
     };
     obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: children.choice.displayName };
@@ -70,26 +71,26 @@ function Item(arg0) {
     closure_0 = label;
     const items = ["\"", label.label, "\""];
     return closure_1_9(ListItem, {
-      label: closure_1_10(Text.Text, { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items }),
+      label: closure_1_10(closure_1_0(closure_1_2[20]).Text, { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items }),
       onPress() {
         if (closure_1_2 != null) {
           const obj = { name: null, value: null, displayName: null };
           ({ label: obj[0], label: obj[1], label: obj[2] } = closure_0);
           tmp(obj);
         }
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+        closure_2_1(closure_2_2[13]).hideActionSheet();
       }
     });
   });
   return match.with(obj, (children) => {
     closure_0 = children;
-    {
-      label: closure_1_9(Text.Text, obj),
+    obj = {
+      label: closure_1_9(closure_1_0(closure_1_2[20]).Text, obj),
       onPress() {
         if (closure_1_2 != null) {
           tmp(choice.choice);
         }
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+        closure_2_1(closure_2_2[13]).hideActionSheet();
       }
     };
     obj = { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: children.choice.displayName };
@@ -98,20 +99,21 @@ function Item(arg0) {
     closure_0 = label;
     const items = ["\"", label.label, "\""];
     return closure_1_9(ListItem, {
-      label: closure_1_10(Text.Text, { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items }),
+      label: closure_1_10(closure_1_0(closure_1_2[20]).Text, { lineClamp: 1, variant: "text-md/normal", color: "mobile-text-heading-primary", children: items }),
       onPress() {
         if (closure_1_2 != null) {
           const obj = { name: null, value: null, displayName: null };
           ({ label: obj[0], label: obj[1], label: obj[2] } = closure_0);
           tmp(obj);
         }
-        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+        closure_2_1(closure_2_2[13]).hideActionSheet();
       }
     });
   }).with({ type: AutoCompleteResultTypes.CHOICE_LOADING }, () => {
-    { style: closure_3.commandChoiceLoadingContainer, children: closure_1_9(ListItem, { style: items }) };
+    let obj = { label: null };
+    obj = { style: closure_3.commandChoiceLoadingContainer, children: closure_1_9(ListItem, { style: items }) };
     items = [closure_3.commandChoiceLoadingItem, ];
-    const obj = { width: closure_4 };
+    obj = { width: closure_4 };
     items[1] = obj;
     obj[0] = closure_1_9(ListItem, obj);
     return closure_1_9(ListItem, obj);
@@ -126,11 +128,12 @@ function AutocompleteFailedEmptyState() {
 require("ME").AutoCompleteResultTypes;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = importDefaultResult.debounce(_executeCommandDefault, require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj = { commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" }, commandChoiceLoadingItem: null, emptyState: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 obj[1] = obj;
 obj[2] = { backgroundColor: "transparent" };
 let closure_12 = createCacheKey.createStyles(obj);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx");
 
 export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const option = onDismiss.option;
@@ -185,7 +188,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
     if (null != autocompleteResults) {
       const push2 = items.push;
       const items2 = [];
-      HermesBuiltin.arraySpread(autocompleteResults.map((item, index) => ({ type: constants.CHOICE, choice: item })), 0);
+      HermesBuiltin.arraySpread(arr2.map((choice) => ({ type: constants.CHOICE, choice })), 0);
       HermesBuiltin.apply(items2, items);
     }
   }, items2);
@@ -193,7 +196,7 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   const items3 = [channel, option.name, activeCommand, optionValues, first];
   const effect = obj.useEffect(() => {
     let obj = { command: activeCommand, optionValues, context: null };
-    { channel, guild: autocompleteResults.getGuild(channel.guild_id), autocomplete: obj };
+    obj = { channel, guild: autocompleteResults.getGuild(channel.guild_id), autocomplete: obj };
     obj = { name: option.name, query: first };
     obj[2] = obj;
     closure_1_11(obj);
@@ -204,20 +207,21 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   }, items3);
   const items4 = [onChoiceSelect, memo];
   const items5 = [onChoiceSelect, first];
-  const callback = obj.useCallback((item) => memo(Item, { item: item.item, index: item.index, onChoiceSelect, choices: memo }), items4);
+  const callback = obj.useCallback((item) => memo(closure_1_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }), items4);
   const callback1 = obj.useCallback(() => {
     if ("" !== first) {
       if (onChoiceSelect != null) {
         const obj = { name: null, value: null, displayName: null };
-        obj[0] = first;
-        obj[1] = first;
-        obj[2] = first;
+        obj[0] = tmp;
+        obj[1] = tmp;
+        obj[2] = tmp;
         tmp2(obj);
       }
       onChoiceSelect(channel[13]).hideActionSheet();
       const obj2 = onChoiceSelect(channel[13]);
     }
   }, items5);
+  obj = { option, onDismiss: onDismiss.onDismissAutocompleteSheet, children: null };
   obj = { placeholder: null, onChange: null, autoFocus: true, returnKeyType: "done", onSubmitEditing: null };
   const intl = tmp4(tmp5[16]).intl;
   obj[0] = intl.string(option(channel[16]).t.Wuie9L);
@@ -247,5 +251,5 @@ export default function AppLauncherAutocompleteActionSheet(onDismiss) {
   }
   items6[3] = lastErrored;
   obj[2] = items6;
-  return callback(option(channel[14]).AppLauncherCommandOptionActionSheet, obj);
+  return closure_10(option(channel[14]).AppLauncherCommandOptionActionSheet, obj);
 };

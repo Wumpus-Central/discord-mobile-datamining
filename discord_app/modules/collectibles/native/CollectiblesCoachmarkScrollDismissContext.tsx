@@ -10,16 +10,19 @@ const context = importAllResult.createContext({
   },
   handleDismissCoachmarkOnScroll: "a"
 });
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
 
 export const useCollectiblesCoachmarkScrollDismissContext = function useCollectiblesCoachmarkScrollDismissContext() {
   return importAllResult.useContext(closure_3);
 };
 export const CollectiblesCoachmarkScrollDismissProvider = function CollectiblesCoachmarkScrollDismissProvider(children) {
   importAllResult = undefined;
+  closure_1 = undefined;
+  let callback;
+  let callback1;
   importAllResult = importAllResult.useRef(null);
   closure_1 = importAllResult.useRef(null);
-  const callback = importAllResult.useCallback((current) => {
+  callback = importAllResult.useCallback((current) => {
     closure_0 = current;
     closure_0.current = current;
     closure_1.current = null;
@@ -30,19 +33,19 @@ export const CollectiblesCoachmarkScrollDismissProvider = function CollectiblesC
       }
     };
   }, []);
-  const callback1 = importAllResult.useCallback((nativeEvent) => {
+  callback1 = importAllResult.useCallback((nativeEvent) => {
     const current = ref.current;
     if (null != current) {
       const contentOffset = nativeEvent.nativeEvent.contentOffset;
       if (null != ref2.current) {
         const _Math = Math;
-        if (Math.abs(contentOffset.x - ref2.current) >= 16) {
+        if (Math.abs(contentOffset.x - tmp3.current) >= 16) {
           tmp.current = null;
-          ref2.current = null;
+          tmp3.current = null;
           current();
         }
       } else {
-        ref2.current = contentOffset.x;
+        tmp3.current = contentOffset.x;
       }
     }
   }, []);

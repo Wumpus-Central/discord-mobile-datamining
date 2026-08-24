@@ -2,21 +2,23 @@
 import timestampDefault from "../debug/Logger.tsx";
 import getSoundPackDefault from "../soundpacks/getSoundsForPack.tsx";
 import _createSound from "native/SoundUtils.tsx";
-import Soundpacks from "../soundpacks/SoundpackStore.tsx";
-import initialize from "../../stores/StreamerModeStore.tsx";
+import closure_3 from "../soundpacks/SoundpackStore.tsx";
+import closure_4 from "../../stores/StreamerModeStore.tsx";
 import { SoundOutputChannel } from "Constants.tsx";
+import { _createSound } from "native/SoundUtils.tsx";
 
-require = fn;
+require = arg1;
 let closure_6 = new timestampDefault("SoundUtils");
 const tmp2 = new timestampDefault("SoundUtils");
-const result = require("obj132").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
 
-export const createSoundForPack = function createSoundForPack(call_calling, soundpack, _volume, DEFAULT) {
-  let num = _volume;
-  if (_volume === undefined) {
+export const createSoundForPack = function createSoundForPack(call_calling, soundpack) {
+  let num = arg2;
+  if (arg2 === undefined) {
     num = 1;
   }
-  if (DEFAULT === undefined) {
+  let DEFAULT = arg3;
+  if (arg3 === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
   let tmp3 = getSoundPackDefault(soundpack)[call_calling];
@@ -32,23 +34,25 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   const mobileAudioSound = new _createSound.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
   return mobileAudioSound;
 };
-export const createSound = function createSound(stage_waiting, soundboard_sound, _volume, DEFAULT, flag) {
-  let num = _volume;
-  if (_volume === undefined) {
+export const createSound = function createSound(stage_waiting, soundboard_sound, arg2) {
+  let num = arg2;
+  if (arg2 === undefined) {
     num = 1;
   }
-  if (DEFAULT === undefined) {
+  let DEFAULT = arg3;
+  if (arg3 === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  if (flag === undefined) {
+  let flag = arg4;
+  if (arg4 === undefined) {
     flag = false;
   }
   const mobileAudioSound = new _createSound.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
   return mobileAudioSound;
 };
-export const playSound = function playSound(name, _volume, arg2, arg3, outputChannel) {
-  let num = _volume;
-  if (_volume === undefined) {
+export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChannel) {
+  let num = arg1;
+  if (arg1 === undefined) {
     num = 1;
   }
   const _require = arg2;
@@ -62,9 +66,9 @@ export const playSound = function playSound(name, _volume, arg2, arg3, outputCha
       const _HermesInternal = HermesInternal;
       logger.log("Unable to find sound for pack name: " + arg3);
     }
-    let tmp13 = tmp4Result[name];
+    let tmp13 = tmp4Result[arg0];
     if (tmp13 == null) {
-      tmp13 = name;
+      tmp13 = arg0;
     }
     outputChannel = undefined;
     if (outputChannel != null) {
@@ -89,10 +93,10 @@ export const playSound = function playSound(name, _volume, arg2, arg3, outputCha
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new require("native/SoundUtils.tsx").MobileAudioSound(tmp13, name, num, outputChannel, flag);
+    const mobileAudioSound = new __createSound.MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
     if (null != arg2) {
-      mobileAudioSound.playWithListener().then((result) => {
-        if (result) {
+      mobileAudioSound.playWithListener().then((arg0) => {
+        if (arg0) {
           callback();
         }
       });

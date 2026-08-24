@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/closeCustomKeyboard.native.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getBestActiveInput from "../../../utils/native/ChatInputUtils.tsx";
 
-const result = obj132.fileFinishedImporting("modules/activities/utils/closeCustomKeyboard.native.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/closeCustomKeyboard.native.tsx");
 
 export default function closeCustomKeyboard(channelId) {
   const bestActiveInputForChannelId = getBestActiveInput.getBestActiveInputForChannelId(channelId);

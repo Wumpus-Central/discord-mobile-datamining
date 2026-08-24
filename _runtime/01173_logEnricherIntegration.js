@@ -14,12 +14,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -39,8 +39,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -54,13 +54,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -222,7 +222,7 @@ arg5.logEnricherIntegration = () => ({
             }
           }
         }
-      }).then((result) => {
+      }).then(() => {
         lib.on("beforeCaptureLog", (attributes) => {
           if (undefined !== closure_1_3) {
             attributes = attributes.attributes;
@@ -233,6 +233,7 @@ arg5.logEnricherIntegration = () => ({
             let tmp2 = !brand;
             if (brand) {
               tmp2 = attributes["device.brand"] && false;
+              const tmp3 = attributes["device.brand"] && false;
             }
             if (!tmp2) {
               attributes["device.brand"] = brand;
@@ -241,6 +242,7 @@ arg5.logEnricherIntegration = () => ({
             let tmp5 = !model;
             if (model) {
               tmp5 = attributes["device.model"] && false;
+              const tmp6 = attributes["device.model"] && false;
             }
             if (!tmp5) {
               attributes["device.model"] = model;
@@ -249,6 +251,7 @@ arg5.logEnricherIntegration = () => ({
             let tmp8 = !family;
             if (family) {
               tmp8 = attributes["device.family"] && false;
+              const tmp9 = attributes["device.family"] && false;
             }
             if (!tmp8) {
               attributes["device.family"] = family;
@@ -257,6 +260,7 @@ arg5.logEnricherIntegration = () => ({
             let tmp11 = !os;
             if (os) {
               tmp11 = attributes["os.name"] && false;
+              const tmp12 = attributes["os.name"] && false;
             }
             if (!tmp11) {
               attributes["os.name"] = os;
@@ -265,6 +269,7 @@ arg5.logEnricherIntegration = () => ({
             let tmp14 = !version;
             if (version) {
               tmp14 = attributes["os.version"] && false;
+              const tmp15 = attributes["os.version"] && false;
             }
             if (!tmp14) {
               attributes["os.version"] = version;
@@ -273,11 +278,12 @@ arg5.logEnricherIntegration = () => ({
             let tmp17 = !release;
             if (release) {
               tmp17 = attributes["sentry.release"] && false;
+              const tmp18 = attributes["sentry.release"] && false;
             }
             if (!tmp17) {
               attributes["sentry.release"] = release;
             }
-            integrationByName = integrationByName.getIntegrationByName("MobileReplay");
+            const integrationByName = closure_0.getIntegrationByName("MobileReplay");
             let replayId;
             if (null != integrationByName) {
               replayId = integrationByName.getReplayId();
@@ -285,6 +291,7 @@ arg5.logEnricherIntegration = () => ({
             let tmp20 = !replayId;
             if (replayId) {
               tmp20 = attributes["sentry.replay_id"] && false;
+              const tmp21 = attributes["sentry.replay_id"] && false;
             }
             if (!tmp20) {
               attributes["sentry.replay_id"] = replayId;

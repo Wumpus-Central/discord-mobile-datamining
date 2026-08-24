@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import initialize from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 import { SuggestedFriendSource } from "../screens/FriendsScreenConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
 export default function useSuggestedFriends(arg0) {
   let obj = arg0;
@@ -23,10 +23,10 @@ export default function useSuggestedFriends(arg0) {
   const items1 = [first, stateFromStoresArray, flag];
   const memo = React.useMemo(() => {
     if (flag) {
-      const found = first.filter((item, index) => item.source === constants.USER_SUGGESTIONS);
-      const mapped = stateFromStoresArray.map((item, index) => {
-        const obj = { user: item.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: item.contactNames };
-        name = item.name;
+      const found = first.filter((source) => source.source === constants.USER_SUGGESTIONS);
+      const mapped = stateFromStoresArray.map((user) => {
+        const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
+        name = user.name;
         return obj;
       });
       let obj = first(flag[5]);

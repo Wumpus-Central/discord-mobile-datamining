@@ -4,23 +4,23 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import BaseChannelSubtitle from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 import BaseChannelSubtitleDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import comparator from "../../../../stores/GuildChannelStore.tsx";
-import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
+import closure_4 from "../../../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
 import { InstantInviteSources } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function HubItem(arg0) {
   ({ label, unreadCount } = arg0);
   ({ IconComponent, handleItemClick, active } = arg0);
   const ChannelModes = BaseChannelSubtitle.ChannelModes;
   if (active) {
     let DEFAULT = ChannelModes.SELECTED;
-    let tmp5 = require;
+    let tmp5 = tmp2;
   } else {
     DEFAULT = ChannelModes.DEFAULT;
-    tmp5 = require;
+    tmp5 = tmp2;
   }
   let obj = { style: callback2().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = callback2();
@@ -30,25 +30,28 @@ function HubItem(arg0) {
   if (null != unreadCount) {
     obj = { value: null };
     obj[0] = unreadCount;
-    tmp6Result = callback(tmp5(1297).Badge, obj);
+    tmp6Result = tmp6(tmp5(1297).Badge, obj);
   }
   obj[8] = tmp6Result;
   return callback(BaseChannelSubtitleDefault, obj);
 }
 noopAll;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = { container: null, row: null };
+createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
+let result = require("set").fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
 
 export default function HubSidebar(guild) {
   guild = guild.guild;
+  let stateFromStores;
+  dependencyMap = undefined;
   let obj = guild(589);
   const items = [closure_4];
   const items1 = [guild.id];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getDefaultChannel(guild.id), items1);
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getDefaultChannel(guild.id), items1);
   obj1 = guild(589);
   const items2 = [closure_4];
   dependencyMap = obj1.useStateFromStoresObject(items2, () => closure_1_4.getChannels(guild.id));
@@ -88,8 +91,8 @@ export default function HubSidebar(guild) {
     const intl2 = tmp(1236).intl;
     obj2[1] = intl2.string(tmp(1236).t.emRpdS);
     obj2[2] = function handleItemClick() {
-      stateFromStores(11475);
-      const obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
+      let obj = stateFromStores(11475);
+      obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
       return obj.open(obj);
     };
     items4[2] = callback(HubItem, obj2);
@@ -98,11 +101,13 @@ export default function HubSidebar(guild) {
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(8918).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, InstantInviteSources.GUILD_HEADER);
+      const result = guild(8918).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;
-    tmp9Result = callback(View, obj);
+    tmp9Result = closure_8(View, obj);
+    const tmp10 = View;
+    const tmp9 = closure_8;
   }
   return tmp9Result;
 };

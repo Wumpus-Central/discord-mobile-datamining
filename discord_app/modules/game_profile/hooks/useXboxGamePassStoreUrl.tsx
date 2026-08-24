@@ -1,20 +1,20 @@
 // discord_app/modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import XBOX_DISCORD_OCID from "../../activities/utils/distributorStoreUrls.tsx";
 
 const Distributors = ME.Distributors;
-const result = obj132.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
+const result = set.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
 
 export default function useXboxGamePassStoreUrl(thirdPartySkus) {
   if (null == thirdPartySkus) {
     return null;
   } else {
     thirdPartySkus = thirdPartySkus.thirdPartySkus;
-    const found = thirdPartySkus.find((item, index) => {
-      let tmp = item.distributor === constants.XBOX_GAME_PASS;
+    const found = thirdPartySkus.find((distributor) => {
+      let tmp = distributor.distributor === constants.XBOX_GAME_PASS;
       if (tmp) {
-        tmp = !callback(table[1]).isNullOrEmpty(item.id);
+        tmp = !callback(table[1]).isNullOrEmpty(distributor.id);
         const obj = callback(table[1]);
       }
       return tmp;
@@ -26,6 +26,7 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     let xboxGamePassStoreUrl = null;
     if (null != id) {
       xboxGamePassStoreUrl = XBOX_DISCORD_OCID.buildXboxGamePassStoreUrl(found.id);
+      let obj = XBOX_DISCORD_OCID;
     }
     return xboxGamePassStoreUrl;
   }

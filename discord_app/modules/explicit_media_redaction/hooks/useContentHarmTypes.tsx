@@ -1,60 +1,62 @@
 // discord_app/modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx
 import getEligibleHarmTypesConfigsForContext from "../ObscuredMediaUtils.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import handleConnectionClosedOrResumed from "../../user_settings/UserSettingsProtoStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../user_settings/UserSettingsProtoStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
+import { getShouldObscureForSetting } from "../SensitiveMediaRedactionSettingUtils.tsx";
 
-require = fn;
+require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   const _require = channelId;
   dependencyMap = authorId;
-  const eligibleHarmTypesConfigsForContext = require("../ObscuredMediaUtils.tsx").getEligibleHarmTypesConfigsForContext();
-  let obj = getEligibleHarmTypesConfigsForContext;
+  const eligibleHarmTypesConfigsForContext = _getEligibleHarmTypesConfigsForContext.getEligibleHarmTypesConfigsForContext();
+  let obj = _getEligibleHarmTypesConfigsForContext;
   let items = [closure_6];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = initialize;
+  const stateFromStores = _initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = _initialize;
   const items1 = [stateFromStores1, stateFromStores2];
-  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     const items = [stateFromStores1, stateFromStores2];
     return channelId(authorId[5]).getChannelTypeById(channelId, authorId, items);
   });
-  const obj3 = initialize;
+  const obj3 = _initialize;
   const items2 = [stateFromStores];
   const items3 = [eligibleHarmTypesConfigsForContext];
-  stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => eligibleHarmTypesConfigsForContext.reduce((acc, item, index) => {
+  stateFromStores2 = _initialize.useStateFromStores(items2, () => eligibleHarmTypesConfigsForContext.reduce((arg0, harmType) => {
     const obj = {};
-    const merged = Object.assign(acc);
-    obj[item.harmType] = item.getProtoUserSettings(settings.settings);
+    const merged = Object.assign(arg0);
+    obj[harmType.harmType] = harmType.getProtoUserSettings(settings.settings);
     return obj;
-  }, {}), items3, require("../SensitiveMediaRedactionSettingUtils.tsx").areSettingsEqual);
+  }, {}), items3, _getShouldObscureForSetting.areSettingsEqual);
   const items4 = [stateFromStores1, eligibleHarmTypesConfigsForContext, stateFromStores2, authorId, stateFromStores];
   const memo = eligibleHarmTypesConfigsForContext.useMemo(() => {
     if (null != stateFromStores1) {
       let id;
       if (stateFromStores != null) {
-        id = stateFromStores.id;
+        id = tmp2.id;
       }
-      if (closure_1 !== id) {
-        if (null != stateFromStores) {
-          const mapped = eligibleHarmTypesConfigsForContext.map((item, index) => {
+      if (tmp !== id) {
+        if (null != tmp2) {
+          const mapped = eligibleHarmTypesConfigsForContext.map((harmType) => {
             let tmp3 = null;
             if (null != closure_4) {
-              tmp3 = item.getUserSettingsWithDefaults(tmp)[tmp2];
+              tmp3 = harmType.getUserSettingsWithDefaults(tmp)[tmp2];
             }
-            let harmType = null;
+            harmType = null;
             if (obj.shouldRedactForSettingValue(tmp3)) {
-              harmType = item.harmType;
+              harmType = harmType.harmType;
             }
             return harmType;
           });
-          const found = mapped.filter((item, index) => null != item);
+          const found = mapped.filter((arg0) => null != arg0);
         }
         return [];
       }
+      tmp = closure_1;
     }
   }, items4);
   if (0 === memo.length) {
@@ -65,7 +67,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   }
   return NONE;
 }
-const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
 
 export { useEnabledHarmTypesBitmaskForChannelAndAuthorId };
 export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypesBitmaskForMessage(stateFromStores) {

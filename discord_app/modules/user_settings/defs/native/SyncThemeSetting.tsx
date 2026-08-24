@@ -4,14 +4,15 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import saveGuildFoldersDefault from "../../../../actions/UserSettingsActionCreators.tsx";
 import track from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
-import isSyncedModeThemesEnabled from "../../../client_themes/ClientThemesBackgroundStore.tsx";
-import handleThemeChange from "../../ThemeStore.tsx";
-import handleConnectionClosedOrResumed from "../../UserSettingsProtoStore.tsx";
+import closure_3 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
+import closure_4 from "../../SelectivelySyncedUserSettingsStore.tsx";
+import closure_5 from "../../ThemeStore.tsx";
+import closure_6 from "../../UserSettingsProtoStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["3340dY"]);
@@ -46,7 +47,8 @@ let createToggle = {
         prop = clientThemeSettings.customUserThemeSettings;
       }
     }
-    const obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
+    let obj = track;
+    obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
     obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
     const result = saveGuildFoldersDefault.setShouldSyncAppearanceSettings(is_sync_enabled);
   },
@@ -56,6 +58,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
 
 export default createToggle;

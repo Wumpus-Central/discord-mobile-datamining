@@ -1,10 +1,9 @@
 // discord_app/modules/voice_calls/native/VoiceActionSheetManager.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../stores/VoiceStateStore.tsx";
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 class VoiceActionSheetManager extends tmp2 {
   constructor() {
@@ -14,14 +13,14 @@ class VoiceActionSheetManager extends tmp2 {
     applyArgumentsResult.handleOpenChannelCallModal = function handleOpenChannelCallModal() {
       channel = channel.channel;
       if (null != channel) {
-        dispatcherDefault.wait(() => {
+        closure_1_1(closure_1_2[3]).wait(() => {
           const result = channel(closure_1_2[4]).dismissVoiceChannelScreens(channel);
           const obj = channel(closure_1_2[4]);
           channel(closure_1_2[4]).openChannelCallModal(channel);
         });
-        obj.terminate();
+        channel.terminate();
+        const obj2 = closure_1_1(closure_1_2[3]);
       }
-      obj = channel;
     };
     return applyArgumentsResult;
   }
@@ -37,6 +36,6 @@ prototype["_terminate"] = function _terminate() {
   closure_3.removeChangeListener(this.handleOpenChannelCallModal);
 };
 const voiceActionSheetManager = new VoiceActionSheetManager();
-let result = require("obj132").fileFinishedImporting("modules/voice_calls/native/VoiceActionSheetManager.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_calls/native/VoiceActionSheetManager.tsx");
 
 export default voiceActionSheetManager;

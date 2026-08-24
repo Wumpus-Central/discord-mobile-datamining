@@ -1,9 +1,9 @@
 // discord_app/modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
-const result = obj132.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
 
 export const isActivityTemporaryCustomStatus = function isActivityTemporaryCustomStatus(type) {
   let tmp = type.type === ActivityTypes.CUSTOM_STATUS;

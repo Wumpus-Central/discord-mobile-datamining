@@ -247,84 +247,14 @@ class Buffer {
     throw typeError;
   }
   static isEncoding(arg0) {
-    str = String(arg0);
-    switch (str.toLowerCase()) {
-      case "to":
-        flag2 = false;
-        return false;
-      case "Date":
-      break;
-      case "TypeError":
-      break;
-      case "Error":
-      break;
-      case "HTTP":
-      break;
-      case "T":
-        flag = true;
-        return true;
-      case "HermesInternal":
-      break;
-      case "Icon":
-        flag = true;
-        return true;
-      case "IconComponent":
-      break;
-      case "c":
-        flag = true;
-        return true;
-      case "p":
-      break;
-      case "LIGHT":
-        flag = true;
-        return true;
-      case "LengthDelimited":
-      break;
-      case "limit":
-        flag = true;
-        return true;
-      case "i":
-      break;
-      case "it":
-        flag = true;
-        return true;
-      case "d":
-      break;
-      case "Map":
-        flag = true;
-        return true;
-      case "Math":
-      break;
-      case "h":
-        flag = true;
-        return true;
-      case "Number":
-      break;
-      case "Object":
-        flag = true;
-        return true;
-      case "ct":
-      break;
-      case "PX_16":
-        flag = true;
-        return true;
-      case "flex":
-      break;
-      case "flexDirection":
-        flag = true;
-        return true;
-      default:
-        flag2 = false;
-        return false;
-    }
-    return;
+    return true;
   }
   static concat(arg0, arg1) {
     if (Array.isArray(arg0)) {
       num = 0;
       if (0 === arg0.length) {
         tmp21 = Buffer;
-        return require("../discord_app/index.native.tsx");
+        return require("module_0");
       } else {
         num5 = arg1;
         if (undefined === arg1) {
@@ -655,7 +585,7 @@ class Buffer {
       str2 = "utf8";
       num2 = 0;
     } else {
-      tmp12 = arg2;
+      tmp20 = arg2;
       if (undefined === arg2) {
         if (typeof arg1 === "string") {
           length = self.length;
@@ -700,11 +630,66 @@ class Buffer {
     if (arg0.length <= 0) {
       if (num2 <= self.length) {
         if (!str2) {
-          str2 = "utf8";
+          str3 = "utf8";
         }
         flag = false;
-        tmp10 = str2;
-        while (true) {}
+        while (true) {
+          items = [];
+          if (0 >= arg0.length) {
+            break;
+          } else {
+            num3 = 2;
+            diff1 = tmp10 - 2;
+            num4 = 8;
+            num5 = 256;
+            num6 = 1;
+            num7 = 0;
+            if (diff1 < 0) {
+              break;
+            } else {
+              charCodeAtResult = arg0.charCodeAt(num7);
+              tmp13 = charCodeAtResult >> 8;
+              arr = items.push(charCodeAtResult % 256);
+              arr1 = items.push(tmp13);
+              sum = num7 + 1;
+              tmp17 = diff1;
+              while (sum < arg0.length) {
+                diff1 = diff1 - 2;
+                num7 = sum;
+                if (diff1 < 0) {
+                  break;
+                }
+              }
+            }
+          }
+          num8 = 0;
+          if (0 < length) {
+            num8 = 0;
+            if (num2 < self.length) {
+              num9 = 1;
+              num10 = 0;
+              num8 = 0;
+              if (0 < items.length) {
+                self[num10 + num2] = items[num10];
+                sum1 = num10 + 1;
+                num8 = sum1;
+                while (sum1 < length) {
+                  num8 = sum1;
+                  if (sum1 + num2 >= self.length) {
+                    break;
+                  } else {
+                    num10 = sum1;
+                    num8 = sum1;
+                    if (sum1 >= items.length) {
+                      break;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          return num8;
+        }
       }
     } else if (length >= 0) {
     }
@@ -717,7 +702,7 @@ class Buffer {
     tmp = this._arr || this;
     if (typeof call === "unknown") {
       num = 0;
-      substr = require("../discord_app/index.native.tsx");
+      substr = require("module_0");
     } else {
       num2 = 0;
       substr = call(tmp, 0);
@@ -1071,7 +1056,7 @@ class Buffer {
       _Math = Math;
       num5 = 2;
       num6 = 8;
-      diff = tmp15 - require("00002_obj132.js");
+      diff = tmp15 - require("module_2");
     }
     return diff;
   }
@@ -1132,7 +1117,7 @@ class Buffer {
       _Math = Math;
       num4 = 2;
       num5 = 8;
-      diff2 = tmp16 - require("00002_obj132.js");
+      diff2 = tmp16 - require("module_2");
     }
     return diff2;
   }
@@ -1451,7 +1436,7 @@ class Buffer {
       num2 = 8;
       num3 = 1;
       tmp6 = Buffer;
-      diff = require("00002_obj132.js") - 1;
+      diff = require("module_2") - 1;
       if (Buffer.isBuffer(self)) {
         if (diff >= tmp) {
           if (tmp >= 0) {
@@ -1512,7 +1497,7 @@ class Buffer {
       num2 = 8;
       num3 = 1;
       tmp6 = Buffer;
-      diff = require("00002_obj132.js") - 1;
+      diff = require("module_2") - 1;
       if (Buffer.isBuffer(self)) {
         if (diff >= tmp) {
           if (tmp >= 0) {
@@ -1805,7 +1790,7 @@ class Buffer {
       num = 8;
       num2 = 2;
       num3 = 1;
-      powResult = require("00002_obj132.js");
+      powResult = require("module_2");
       tmp7 = Buffer;
       diff = powResult - 1;
       tmp6 = -powResult;
@@ -1885,7 +1870,7 @@ class Buffer {
       num = 8;
       num2 = 2;
       num3 = 1;
-      powResult = require("00002_obj132.js");
+      powResult = require("module_2");
       tmp7 = Buffer;
       diff = powResult - 1;
       tmp6 = -powResult;
@@ -2497,7 +2482,7 @@ class Buffer {
       num2 = arg0;
       if (1 === arg0.length) {
         num5 = 0;
-        charCodeAtResult = require("../discord_app/index.native.tsx");
+        charCodeAtResult = require("module_0");
         str2 = "utf8";
         tmp11 = "utf8" === tmp;
         if (tmp11) {
@@ -2596,218 +2581,244 @@ class Buffer {
     throw rangeError;
   }
 }
-function from(buffer, str) {
-  if (typeof buffer === "string") {
-    let tmp100 = typeof str === "string";
+function from(data, str) {
+  if (typeof data === "string") {
+    let rangeError = typeof str === "string";
     if (typeof str === "string") {
-      tmp100 = "" !== str;
+      rangeError = "" !== str;
     }
     let str17 = str;
-    if (!tmp100) {
+    if (!rangeError) {
       str17 = "utf8";
     }
+    rangeError = Buffer;
     if (Buffer.isEncoding(str17)) {
-      const tmp108 = byteLength(buffer, str17) | 0;
-      if (tmp108 > v2147483647) {
+      rangeError = byteLength;
+      rangeError = byteLength(data, str17) | 0;
+      rangeError = c3;
+      if (rangeError > c3) {
+        rangeError = globalThis;
         const _RangeError8 = RangeError;
-        const rangeError = new RangeError("The value \"" + tmp108 + "\" is invalid for option \"size\"");
+        rangeError = new.target;
+        rangeError = new.target;
+        rangeError = new RangeError("The value \"" + rangeError + "\" is invalid for option \"size\"");
         throw rangeError;
       } else {
+        rangeError = globalThis;
         const _Uint8Array8 = Uint8Array;
-        const uint8Array = new Uint8Array(tmp108);
+        rangeError = new.target;
+        rangeError = new.target;
+        const uint8Array = new Uint8Array(rangeError);
+        rangeError = uint8Array;
         const _Object4 = Object;
-        Object.setPrototypeOf(uint8Array, Buffer.prototype);
-        const writeResult = uint8Array.write(buffer, str17);
-        let substr = uint8Array;
-        if (writeResult !== tmp108) {
-          substr = uint8Array.slice(0, writeResult);
+        rangeError = Object.setPrototypeOf(uint8Array, rangeError.prototype);
+        rangeError = uint8Array.write(data, str17);
+        rangeError = uint8Array;
+        if (rangeError !== rangeError) {
+          rangeError = uint8Array.slice(0, rangeError);
         }
-        return substr;
+        return rangeError;
       }
     } else {
+      rangeError = globalThis;
       const _TypeError4 = TypeError;
-      const typeError = new TypeError("Unknown encoding: " + str17);
-      throw typeError;
+      rangeError = new.target;
+      rangeError = new.target;
+      rangeError = new TypeError("Unknown encoding: " + str17);
+      throw rangeError;
     }
   } else {
+    rangeError = globalThis;
     const _ArrayBuffer = ArrayBuffer;
-    if (ArrayBuffer.isView(buffer)) {
-      return fromArrayLike(buffer);
-    } else if (null == buffer) {
-      const _TypeError3 = TypeError;
-      const typeError1 = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof buffer);
-      throw typeError1;
+    if (ArrayBuffer.isView(data)) {
+      return fromArrayLike(data);
     } else {
-      let tmp3 = buffer instanceof ArrayBuffer;
-      if (!tmp3) {
-        tmp3 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp124.name;
-      }
-      if (!tmp3) {
-        if (buffer) {
-          buffer = buffer.buffer;
-          let tmp6 = buffer instanceof ArrayBuffer;
-          if (!tmp6) {
-            tmp6 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp5.name;
-          }
+      rangeError = null;
+      if (null == data) {
+        const _TypeError3 = TypeError;
+        const typeError = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof data);
+        throw typeError;
+      } else {
+        let tmp3 = data instanceof ArrayBuffer;
+        if (!tmp3) {
+          tmp3 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+          const tmp2 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
         }
-        const _SharedArrayBuffer = SharedArrayBuffer;
-        if (typeof SharedArrayBuffer !== "undefined") {
-          let tmp9 = buffer instanceof SharedArrayBuffer;
-          if (!tmp9) {
-            tmp9 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp125.name;
-          }
-          if (!tmp9) {
-            if (buffer) {
-              const buffer2 = buffer.buffer;
-              let tmp11 = buffer2 instanceof SharedArrayBuffer;
-              if (!tmp11) {
-                tmp11 = null != buffer2 && null != buffer2.constructor && null != buffer2.constructor.name && buffer2.constructor.name === tmp10.name;
-              }
+        if (!tmp3) {
+          if (data) {
+            const buffer = data.buffer;
+            let tmp6 = buffer instanceof ArrayBuffer;
+            if (!tmp6) {
+              tmp6 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp5.name;
+              const tmp7 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp5.name;
             }
           }
-          if (str >= 0) {
-            if (buffer.byteLength >= str) {
-              let num9 = arg2;
-              if (!arg2) {
-                num9 = 0;
-              }
-              if (buffer.byteLength < str + num9) {
-                const _RangeError4 = RangeError;
-                const rangeError1 = new RangeError("\"length\" is outside of buffer bounds");
-                throw rangeError1;
-              } else {
-                if (undefined === str) {
-                  if (undefined === arg2) {
-                    const _Uint8Array4 = Uint8Array;
-                    let uint8Array1 = new Uint8Array(buffer);
-                  }
-                  const _Object2 = Object;
-                  Object.setPrototypeOf(uint8Array1, Buffer.prototype);
-                  return uint8Array1;
+          const _SharedArrayBuffer = SharedArrayBuffer;
+          if (typeof SharedArrayBuffer !== "undefined") {
+            let tmp9 = data instanceof SharedArrayBuffer;
+            if (!tmp9) {
+              tmp9 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+              const tmp8 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+            }
+            if (!tmp9) {
+              if (data) {
+                const buffer2 = data.buffer;
+                let tmp11 = buffer2 instanceof SharedArrayBuffer;
+                if (!tmp11) {
+                  tmp11 = null != buffer2 && null != buffer2.constructor && null != buffer2.constructor.name && buffer2.constructor.name === tmp10.name;
+                  const tmp12 = null != buffer2 && null != buffer2.constructor && null != buffer2.constructor.name && buffer2.constructor.name === tmp10.name;
                 }
-                if (undefined === arg2) {
-                  const _Uint8Array3 = Uint8Array;
-                  uint8Array1 = new Uint8Array(buffer, str);
+              }
+            }
+            if (str >= 0) {
+              if (data.byteLength >= str) {
+                let num9 = arg2;
+                if (!arg2) {
+                  num9 = 0;
+                }
+                if (data.byteLength < str + num9) {
+                  const _RangeError4 = RangeError;
+                  const rangeError1 = new RangeError("\"length\" is outside of buffer bounds");
+                  throw rangeError1;
                 } else {
-                  const _Uint8Array2 = Uint8Array;
-                  uint8Array1 = new Uint8Array(buffer, str, arg2);
+                  if (undefined === str) {
+                    if (undefined === arg2) {
+                      const _Uint8Array4 = Uint8Array;
+                      let uint8Array1 = new Uint8Array(data);
+                    }
+                    const _Object2 = Object;
+                    Object.setPrototypeOf(uint8Array1, Buffer.prototype);
+                    return uint8Array1;
+                  }
+                  if (undefined === arg2) {
+                    const _Uint8Array3 = Uint8Array;
+                    uint8Array1 = new Uint8Array(data, str);
+                  } else {
+                    const _Uint8Array2 = Uint8Array;
+                    uint8Array1 = new Uint8Array(data, str, arg2);
+                  }
                 }
               }
             }
+            const _RangeError5 = RangeError;
+            const rangeError2 = new RangeError("\"offset\" is outside of buffer bounds");
+            throw rangeError2;
           }
-          const _RangeError5 = RangeError;
-          const rangeError2 = new RangeError("\"offset\" is outside of buffer bounds");
-          throw rangeError2;
-        }
-        if (typeof buffer === "number") {
-          const _TypeError2 = TypeError;
-          const typeError2 = new TypeError("The \"value\" argument must not be of type number. Received type number");
-          throw typeError2;
-        } else {
-          const tmp13 = buffer.valueOf && buffer.valueOf();
-          if (null != tmp13) {
-            if (tmp13 !== buffer) {
-              return Buffer.from(tmp13, str, arg2);
-            }
-          }
-          if (Buffer.isBuffer(buffer)) {
-            if (length >= v2147483647) {
-              const _RangeError3 = RangeError;
-              const rangeError3 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + v2147483647.toString(16) + " bytes");
-              throw rangeError3;
-            } else if ((length | 0 | 0) > v2147483647) {
-              const _RangeError2 = RangeError;
-              const rangeError4 = new RangeError("The value \"" + tmp126 + "\" is invalid for option \"size\"");
-              throw rangeError4;
-            } else {
-              const _Uint8Array9 = Uint8Array;
-              const uint8Array2 = new Uint8Array(tmp126);
-              const _Object5 = Object;
-              Object.setPrototypeOf(uint8Array2, Buffer.prototype);
-              let tmp14 = uint8Array2;
-              if (0 !== uint8Array2.length) {
-                buffer.copy(tmp130, 0, 0, tmp126);
-                tmp14 = uint8Array2;
-              }
-              tmp130 = uint8Array2;
-            }
-          } else if (undefined !== length) {
-            if (typeof buffer.length === "number") {
-              if (buffer.length == buffer.length) {
-                let tmp17 = fromArrayLike(buffer);
-              }
-              tmp14 = tmp17;
-            }
-            if (0 > v2147483647) {
-              const _RangeError = RangeError;
-              const rangeError5 = new RangeError("The value \"" + "\" is invalid for option \"size\"");
-              throw rangeError5;
-            } else {
-              const _Uint8Array = Uint8Array;
-              const uint8Array3 = new Uint8Array(0);
-              const _Object = Object;
-              Object.setPrototypeOf(uint8Array3, Buffer.prototype);
-              tmp17 = uint8Array3;
-            }
-          } else if ("Buffer" === buffer.type) {
-            const _Array = Array;
-            if (Array.isArray(buffer.data)) {
-              tmp14 = fromArrayLike(buffer.data);
-            }
-          }
-          if (tmp14) {
-            return tmp14;
+          if (typeof data === "number") {
+            const _TypeError2 = TypeError;
+            const typeError1 = new TypeError("The \"value\" argument must not be of type number. Received type number");
+            throw typeError1;
           } else {
-            const _Symbol = Symbol;
-            if (typeof Symbol !== "undefined") {
-              const _Symbol4 = Symbol;
-              if (null != Symbol.toPrimitive) {
-                const _Symbol2 = Symbol;
-                if (typeof buffer[Symbol.toPrimitive] === "function") {
-                  const _Symbol3 = Symbol;
-                  return Buffer.from(buffer[Symbol.toPrimitive]("string"), str, arg2);
+            const tmp13 = data.valueOf && data.valueOf();
+            if (null != tmp13) {
+              if (tmp13 !== data) {
+                return Buffer.from(tmp13, str, arg2);
+              }
+            }
+            if (Buffer.isBuffer(data)) {
+              if (length >= c3) {
+                const _RangeError3 = RangeError;
+                const rangeError3 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str4.toString(16) + " bytes");
+                throw rangeError3;
+              } else {
+                rangeError = length | 0 | 0;
+                if (rangeError > str4) {
+                  const _RangeError2 = RangeError;
+                  const rangeError4 = new RangeError("The value \"" + rangeError + "\" is invalid for option \"size\"");
+                  throw rangeError4;
+                } else {
+                  const _Uint8Array9 = Uint8Array;
+                  rangeError = new.target;
+                  rangeError = new.target;
+                  const uint8Array2 = new Uint8Array(rangeError);
+                  const _Object5 = Object;
+                  rangeError = uint8Array2;
+                  rangeError = Object.setPrototypeOf(uint8Array2, obj.prototype);
+                  let tmp14 = uint8Array2;
+                  if (0 !== uint8Array2.length) {
+                    data.copy(rangeError, 0, 0, rangeError);
+                    tmp14 = uint8Array2;
+                  }
                 }
               }
+            } else if (undefined !== length) {
+              if (typeof data.length === "number") {
+                if (data.length == data.length) {
+                  let tmp17 = fromArrayLike(data);
+                }
+                tmp14 = tmp17;
+              }
+              if (0 > c3) {
+                const _RangeError = RangeError;
+                const rangeError5 = new RangeError("The value \"" + "\" is invalid for option \"size\"");
+                throw rangeError5;
+              } else {
+                const _Uint8Array = Uint8Array;
+                const uint8Array3 = new Uint8Array(0);
+                const _Object = Object;
+                Object.setPrototypeOf(uint8Array3, obj.prototype);
+                tmp17 = uint8Array3;
+              }
+            } else if ("Buffer" === data.type) {
+              const _Array = Array;
+              if (Array.isArray(data.data)) {
+                tmp14 = fromArrayLike(data.data);
+              }
             }
-            const _TypeError = TypeError;
-            const typeError3 = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof buffer);
-            throw typeError3;
+            if (tmp14) {
+              return tmp14;
+            } else {
+              const _Symbol = Symbol;
+              if (typeof Symbol !== "undefined") {
+                const _Symbol4 = Symbol;
+                if (null != Symbol.toPrimitive) {
+                  const _Symbol2 = Symbol;
+                  if (typeof data[Symbol.toPrimitive] === "function") {
+                    const _Symbol3 = Symbol;
+                    return obj.from(data[Symbol.toPrimitive]("string"), str, arg2);
+                  }
+                }
+              }
+              const _TypeError = TypeError;
+              const typeError2 = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof data);
+              throw typeError2;
+            }
           }
         }
-      }
-      if (str >= 0) {
-        if (buffer.byteLength >= str) {
-          let num11 = arg2;
-          if (!arg2) {
-            num11 = 0;
-          }
-          if (buffer.byteLength < str + num11) {
-            const _RangeError6 = RangeError;
-            const rangeError6 = new RangeError("\"length\" is outside of buffer bounds");
-            throw rangeError6;
-          } else {
-            if (undefined === str) {
+        if (str >= 0) {
+          if (data.byteLength >= str) {
+            let num11 = arg2;
+            if (!arg2) {
+              num11 = 0;
+            }
+            if (data.byteLength < str + num11) {
+              const _RangeError6 = RangeError;
+              const rangeError6 = new RangeError("\"length\" is outside of buffer bounds");
+              throw rangeError6;
+            } else {
+              if (undefined === str) {
+                if (undefined === arg2) {
+                  const _Uint8Array7 = Uint8Array;
+                  let uint8Array4 = new Uint8Array(data);
+                }
+                const _Object3 = Object;
+                Object.setPrototypeOf(uint8Array4, Buffer.prototype);
+                return uint8Array4;
+              }
               if (undefined === arg2) {
-                const _Uint8Array7 = Uint8Array;
-                let uint8Array4 = new Uint8Array(buffer);
+                const _Uint8Array6 = Uint8Array;
+                uint8Array4 = new Uint8Array(data, str);
+              } else {
+                const _Uint8Array5 = Uint8Array;
+                uint8Array4 = new Uint8Array(data, str, arg2);
               }
-              const _Object3 = Object;
-              Object.setPrototypeOf(uint8Array4, Buffer.prototype);
-              return uint8Array4;
-            }
-            if (undefined === arg2) {
-              const _Uint8Array6 = Uint8Array;
-              uint8Array4 = new Uint8Array(buffer, str);
-            } else {
-              const _Uint8Array5 = Uint8Array;
-              uint8Array4 = new Uint8Array(buffer, str, arg2);
             }
           }
         }
+        const _RangeError7 = RangeError;
+        const rangeError7 = new RangeError("\"offset\" is outside of buffer bounds");
+        throw rangeError7;
       }
-      const _RangeError7 = RangeError;
-      const rangeError7 = new RangeError("\"offset\" is outside of buffer bounds");
-      throw rangeError7;
     }
   }
 }
@@ -2823,15 +2834,16 @@ function allocUnsafe(num) {
   } else {
     num = 0;
     if (num >= 0) {
-      if (num >= v2147483647) {
+      if (num >= c3) {
         const _RangeError = RangeError;
-        const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + v2147483647.toString(16) + " bytes");
+        const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
         throw rangeError1;
       } else {
         num = num | 0 | 0;
       }
+      str = c3;
     }
-    if (num > v2147483647) {
+    if (num > c3) {
       const _RangeError2 = RangeError;
       const rangeError2 = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
       throw rangeError2;
@@ -2847,15 +2859,16 @@ function allocUnsafe(num) {
 function fromArrayLike(data) {
   let num = 0;
   if (data.length >= 0) {
-    if (data.length >= v2147483647) {
+    if (data.length >= c3) {
       const _RangeError = RangeError;
-      const rangeError = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + v2147483647.toString(16) + " bytes");
+      const rangeError = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
       throw rangeError;
     } else {
       num = length | 0 | 0;
     }
+    str = c3;
   }
-  if (num > v2147483647) {
+  if (num > c3) {
     const _RangeError2 = RangeError;
     const rangeError1 = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
     throw rangeError1;
@@ -2874,21 +2887,22 @@ function fromArrayLike(data) {
     return uint8Array;
   }
 }
-function byteLength(byteLength) {
-  if (Buffer.isBuffer(byteLength)) {
-    return byteLength.length;
+function byteLength(str) {
+  if (Buffer.isBuffer(str)) {
+    return str.length;
   } else {
     byteLength = globalThis;
     const _ArrayBuffer = ArrayBuffer;
-    if (!ArrayBuffer.isView(byteLength)) {
-      let tmp2 = byteLength instanceof ArrayBuffer;
+    if (!ArrayBuffer.isView(str)) {
+      let tmp2 = str instanceof ArrayBuffer;
       if (!tmp2) {
-        tmp2 = null != byteLength && null != byteLength.constructor && null != byteLength.constructor.name && byteLength.constructor.name === tmp.name;
+        tmp2 = null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp.name;
+        const tmp4 = null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp.name;
       }
       if (!tmp2) {
-        if (typeof byteLength !== "string") {
+        if (typeof str !== "string") {
           const _TypeError = TypeError;
-          const typeError = new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof byteLength);
+          const typeError = new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof str);
           throw typeError;
         } else {
           let tmp5 = arguments.length > 2;
@@ -2896,9 +2910,11 @@ function byteLength(byteLength) {
             tmp5 = true === arguments[2];
           }
           let flag2 = false;
+          let tmp7 = arg1;
           if (!tmp5) {
             flag2 = false;
-            if (0 === byteLength.length) {
+            tmp7 = arg1;
+            if (0 === str.length) {
               return 0;
             }
           }
@@ -2906,7 +2922,7 @@ function byteLength(byteLength) {
       }
       return byteLength;
     }
-    byteLength = byteLength.byteLength;
+    byteLength = str.byteLength;
   }
 }
 function slowToString(arg0, arg1, arg2) {
@@ -2931,9 +2947,27 @@ function slowToString(arg0, arg1, arg2) {
     } else if (length >>> 0 <= num >>> 0) {
       return "";
     } else {
-      let flag = false;
-      if (!arg0) {
-        flag = false;
+      while (true) {
+        let substr = self.slice(tmp5, tmp4);
+        let str2 = "";
+        let tmp3 = globalThis;
+        let num4 = 1;
+        let num5 = 256;
+        let num6 = 2;
+        let num7 = 0;
+        let str3 = "";
+        if (0 >= substr.length) {
+          break;
+        } else {
+          do {
+            let _String = String;
+            str2 = `${String.fromCharCode(arr[num7] + 256 * arr[num7 + 1])}`;
+            num7 = num7 + 2;
+            str3 = str2;
+            length2 = substr.length;
+          } while (num7 < length2);
+        }
+        return str3;
       }
     }
     tmp2 = undefined === arg2 || length > self.length;
@@ -3044,6 +3078,7 @@ function arrayIndexOf(readUInt16BE, readUInt16BE2) {
     if (result2 < result) {
       while (true) {
         tmp11 = num7;
+        let tmp12 = result2;
         if (1 === num) {
           let uInt16BE = readUInt16BE[result2];
         } else {
@@ -3087,11 +3122,13 @@ function arrayIndexOf(readUInt16BE, readUInt16BE2) {
     }
     if (diff1 >= 0) {
       while (true) {
+        let tmp5 = diff1;
         let num5 = 0;
         let flag = true;
         if (0 < result1) {
           while (true) {
             let sum = diff1 + num5;
+            let tmp7 = num5;
             if (1 === num) {
               let uInt16BE2 = readUInt16BE[sum];
             } else {
@@ -3134,6 +3171,8 @@ function utf8Slice(arg0, arg1, arg2) {
   if (arg1 < bound) {
     do {
       let tmp4 = arg0[sum];
+      let tmp5 = tmp3;
+      let tmp6 = sum;
       let num = 4;
       if (tmp4 <= 239) {
         let num2 = 3;
@@ -3258,6 +3297,7 @@ function utf8Slice(arg0, arg1, arg2) {
       do {
         let _String = String;
         let _String2 = String;
+        let tmp28 = c13;
         sum1 = num6 + c13;
         str = `${tmp27(String, arr.slice(num6, tmp29))}`;
         str2 = str;
@@ -3278,6 +3318,9 @@ function utf8ToBytes(str) {
   if (0 < str.length) {
     while (true) {
       let charCodeAtResult = str.charCodeAt(num2);
+      let tmp3 = num2;
+      let tmp4 = tmp;
+      let tmp5 = num;
       if (charCodeAtResult > 55295) {
         if (charCodeAtResult < 57344) {
           if (tmp) {
@@ -3320,6 +3363,7 @@ function utf8ToBytes(str) {
             } else {
               let diff4 = tmp10 - 4;
               if (diff4 >= 0) {
+                let tmp31 = items;
                 let arr3 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
                 tmp12 = null;
                 tmp13 = diff4;

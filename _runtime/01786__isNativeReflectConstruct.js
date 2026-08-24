@@ -1,11 +1,11 @@
 // _runtime/01786__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
-const JumpingTransition = fn;
+const JumpingTransition = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -58,6 +58,8 @@ class JumpingTransition {
       let obj = { duration: num };
       const fn = function n(originX) {
         const absolute = Math.abs(originX.targetOriginX - originX.currentOriginX);
+        obj = { initialValues: obj, animations: null, callback: null };
+        obj = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
         obj = { originX: null, originY: null, width: null, height: null };
         const bound = Math.max(absolute, Math.abs(originX.targetOriginY - originX.currentOriginY));
         obj[0] = delayFunction(delay, delayFunction(callbackV[5]).withTiming(originX.targetOriginX, obj));
@@ -82,7 +84,7 @@ class JumpingTransition {
         obj[2] = callbackV;
         return obj;
       };
-      obj = { delayFunction, delay, withTiming: callback(dependencyMap[5]).withTiming, config: obj, withSequence: callback(dependencyMap[5]).withSequence, halfDuration: result, Easing: callback(dependencyMap[6]).Easing, callback: callbackV };
+      obj = { delayFunction, delay, withTiming: callback(closure_1_1[5]).withTiming, config: obj, withSequence: callback(closure_1_1[5]).withSequence, halfDuration: result, Easing: callback(closure_1_1[6]).Easing, callback: callbackV };
       fn.__closure = obj;
       fn.__workletHash = 11549153259849;
       fn.__initData = closure_1_6;

@@ -1,32 +1,36 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: c4, Endpoints: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesActionCreators.tsx");
 
 export default {
   resetSuggestions() {
     return dispatcherDefault.dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
   },
-  fetchSuggestionsRegistration(callback) {
-    closure_0 = callback;
+  fetchSuggestionsRegistration(arg0) {
+    closure_0 = arg0;
+    let num = arg1;
+    if (arg1 === undefined) {
+      num = 1500;
+    }
     return callback(function*() {
       closure_1 = tmp3;
-      num(closure_1_2[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
+      closure_1_1(closure_1_2[3]).dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" });
       c3 = 1;
-      const HTTP = callback(closure_1_2[4]).HTTP;
+      const HTTP = closure_1_0(closure_1_2[4]).HTTP;
       obj1 = { url: null, query: null, timeout: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
       obj1[0] = constants.POMELO_SUGGESTIONS_UNAUTHED;
-      if (null != callback) {
+      if (null != closure_1_0) {
         const obj2 = { global_name: null };
-        obj2[0] = callback;
+        obj2[0] = closure_1_0;
         const tmp17 = obj2;
       }
       obj1[1] = tmp17;
-      obj1[2] = num;
+      obj1[2] = closure_1_1;
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
@@ -51,7 +55,7 @@ export default {
           c3 = 0;
         }
       }
-      const obj = num(closure_1_2[3]);
+      const obj = closure_1_1(closure_1_2[3]);
       const obj5 = { type: "UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS", suggestion: null, source: null };
       obj5[1] = closure_0.body;
       obj5[2] = closure_0;
@@ -59,10 +63,14 @@ export default {
       return obj.dispatch(obj5);
     })();
   },
-  attemptUsername(arg0, registration, closure_2, closure_3) {
+  attemptUsername(arg0, arg1, arg2, closure_3) {
     closure_0 = arg0;
-    let flag = closure_2;
-    if (closure_2 === undefined) {
+    let str = arg1;
+    if (arg1 === undefined) {
+      str = "modal";
+    }
+    let flag = arg2;
+    if (arg2 === undefined) {
       flag = false;
     }
     let flag2 = closure_3;
@@ -119,20 +127,20 @@ export default {
                 obj1[0] = tmp84;
                 obj1[2] = aPIError;
                 obj1[3] = closure_3;
-                aPIError(flag[5]).track(constants.POMELO_ERRORS, obj1);
-                const obj14 = aPIError(flag[5]);
+                aPIError(closure_1_2[5]).track(constants.POMELO_ERRORS, obj1);
+                const obj14 = aPIError(closure_1_2[5]);
                 let obj2 = { type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", username: null, error: null };
                 obj2[1] = closure_1_0;
                 obj2[2] = tmp84;
                 c6 = 3;
                 const obj3 = { value: null, done: true };
-                obj3[0] = aPIError(flag[3]).dispatch(obj2);
+                obj3[0] = aPIError(closure_1_2[3]).dispatch(obj2);
                 return obj3;
               } else {
                 constants = 1;
-                let post = aPIError(flag[6]).post;
+                let post = aPIError(closure_1_2[6]).post;
                 let obj4 = c5;
-                if (flag) {
+                if (closure_1_2) {
                   let POMELO_ATTEMPT = obj4.POMELO_ATTEMPT_UNAUTHED;
                 } else {
                   POMELO_ATTEMPT = obj4.POMELO_ATTEMPT;
@@ -143,7 +151,7 @@ export default {
                 obj5[0] = closure_1_0;
                 obj4[1] = obj5;
                 const obj6 = { event: null, properties: null };
-                obj6[0] = closure_1_0(flag[7]).NetworkActionNames.POMELO_ATTEMPT;
+                obj6[0] = closure_1_0(closure_1_2[7]).NetworkActionNames.POMELO_ATTEMPT;
                 let obj7 = { requested_username: null };
                 obj7[0] = closure_1_0;
                 obj6[1] = obj7;
@@ -151,26 +159,26 @@ export default {
                 post = post(obj4);
                 c5 = 2;
                 c6 = 1;
-                const tmp87 = aPIError(flag[6]);
+                const tmp87 = aPIError(closure_1_2[6]);
               }
             }
           } else {
             if (1 === tmp7) {
               constants = 0;
-              aPIError = new closure_1_0(flag[8]).APIError(closure_3);
+              aPIError = new closure_1_0(closure_1_2[8]).APIError(closure_3);
               const anyErrorMessage = aPIError.getAnyErrorMessage();
               closure_0 = anyErrorMessage;
               if (anyErrorMessage == null) {
                 closure_0 = undefined;
               }
               closure_2 = closure_0;
-              obj5 = aPIError(flag[5]);
+              obj5 = aPIError(closure_1_2[5]);
               const obj8 = { reason: null, username_error: true, location: null, one_click_flow: null };
               obj8[0] = closure_2;
               obj8[2] = aPIError;
               obj8[3] = closure_3;
               obj5.track(constants.POMELO_ERRORS, obj8);
-              obj7 = aPIError(flag[3]);
+              obj7 = aPIError(closure_1_2[3]);
               const obj9 = { username: null, type: "UNIQUE_USERNAME_ATTEMPT_FAILURE", error: null, statusCode: null, retryAfter: null };
               obj9[0] = closure_0;
               let tmp49;
@@ -192,13 +200,13 @@ export default {
             } else if (arg0 !== 2) {
               closure_0 = arg1;
               if (closure_0.body.taken) {
-                obj = aPIError(flag[5]);
+                obj = aPIError(closure_1_2[5]);
                 const obj10 = { reason: "already_taken", username_error: true, location: null, one_click_flow: null };
                 obj10[2] = aPIError;
                 obj10[3] = closure_3;
                 obj.track(constants.POMELO_ERRORS, obj10);
               }
-              obj2 = aPIError(flag[3]);
+              obj2 = aPIError(closure_1_2[3]);
               const obj11 = { type: "UNIQUE_USERNAME_ATTEMPT_SUCCESS", username: null, taken: null };
               obj11[1] = closure_0;
               obj11[2] = closure_0.body.taken;

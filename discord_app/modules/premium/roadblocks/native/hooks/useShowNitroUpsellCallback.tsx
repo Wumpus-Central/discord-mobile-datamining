@@ -1,8 +1,8 @@
 // discord_app/modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx");
 
 export default function useShowNitroUpsellCallback() {
   let obj = sharedValue(4115);

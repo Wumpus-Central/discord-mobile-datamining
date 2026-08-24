@@ -1,11 +1,11 @@
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelMuted.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import storeThread from "../../threads/JoinedThreadsStore.tsx";
+import closure_2 from "../../threads/JoinedThreadsStore.tsx";
 import { isThread } from "../../../records/ChannelRecord.tsx";
-import updateUserGuildSettingsInternal from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_4 from "../../../stores/UserGuildSettingsStore.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
   const items = [closure_2, closure_4];

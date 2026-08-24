@@ -1,17 +1,17 @@
 // discord_app/modules/calls/native/usePrivateChannelCall.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/ChannelStore.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
 
 export default function usePrivateChannelCall(arg0, arg1, arg2) {
   const _require = arg0;
   closure_1 = arg1;
   dependencyMap = arg2;
-  let obj = initialize;
+  let obj = _initialize;
   const items = [closure_5];
   const items1 = [arg1, arg0];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -28,10 +28,10 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
     const t = callback(1236).t;
     if (callback2) {
       let stringResult = string(t["7AWk50"]);
-      let tmp10 = callback;
+      let tmp10 = tmp6;
     } else {
       stringResult = string(t["EZgS+9"]);
-      tmp10 = callback;
+      tmp10 = tmp6;
     }
     obj = { text: stringResult, accessibilityHint: null, inCall: false };
     const intl2 = tmp10(1236).intl;
@@ -85,9 +85,10 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(4770).ensurePrivateChannel(closure_1_0);
+                obj1[0] = closure_1_1(4770).ensurePrivateChannel(tmp33);
                 return obj1;
               }
+              tmp33 = closure_1_0;
             }
           } else if (arg0 === 1) {
             c3 = 3;

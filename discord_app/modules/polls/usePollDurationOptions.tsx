@@ -1,10 +1,10 @@
 // discord_app/modules/polls/usePollDurationOptions.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
 
 const PollDurations = POLL_ATTACHMENT_FOLDER.PollDurations;
-const result = obj132.fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
+const result = set.fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
 
 export default function usePollDurationOptions() {
   const obj = {};

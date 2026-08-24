@@ -22,10 +22,11 @@ keys2.shim = function shimObjectKeys() {
       const _Object2 = Object;
       Object.keys = function keys(arg0) {
         if (callback(table[1])(arg0)) {
-          const call = callback.call;
-          callback2(typeof call === "unknown" ? callback() : call(arg0));
+          const call = closure_2.call;
+          tmp(typeof call === "unknown" ? closure_2() : call(arg0));
+          const tmp2 = closure_2;
         } else {
-          return callback2(arg0);
+          return tmp(arg0);
         }
       };
     }

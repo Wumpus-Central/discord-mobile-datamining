@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/nameplates/hooks/useFetchNameplate.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import getNameplateData from "../utils.tsx";
 import CollectiblesItemType from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import useFetchCollectiblesProduct from "../../hooks/useFetchCollectiblesProduct.tsx";
 
-const result = obj132.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {
   let obj = useFetchCollectiblesProduct;

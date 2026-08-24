@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/getGamePlatform.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import isOnXboxDefault from "isOnXbox.tsx";
 import ME from "../../../Constants.tsx";
 
 ({ ActivityTypes: obj1, ActivityGamePlatforms: c3 } = ME);
-const result = obj132.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
 
 export default function getGamePlatform(type) {
   let tmp = null;

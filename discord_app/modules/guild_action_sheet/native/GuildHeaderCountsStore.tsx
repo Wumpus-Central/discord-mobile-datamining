@@ -1,11 +1,11 @@
 // discord_app/modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import getMemberListId from "../../../stores/ChannelMemberStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import handleInviteData from "../../../stores/GuildMemberCountStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_0 from "../../../stores/ChannelMemberStore.tsx";
+import closure_1 from "../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../stores/GuildMemberCountStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/VoiceStateStore.tsx";
 
 let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -73,6 +73,6 @@ obj = {
   }
 };
 const guildHeaderCountsStore = new GuildHeaderCountsStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
 
 export default guildHeaderCountsStore;

@@ -1,11 +1,11 @@
 // _runtime/00172__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import PerformanceResourceTiming from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
+import closure_4 from "00090__classPrivateFieldBase.js";
 import importDefaultResult2 from "00091__classPrivateFieldKey.js";
 
 function _isNativeReflectConstruct() {
@@ -133,7 +133,8 @@ let items = [
   {
     key: "toJSON",
     value: function toJSON() {
-      const self = this;
+      let self = this;
+      self = this;
       const tmp = callback2(callback(self.prototype), "toJSON", this);
       closure_1 = tmp;
       let fn = tmp;

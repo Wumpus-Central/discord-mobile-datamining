@@ -1,28 +1,29 @@
 // discord_app/modules/guild_onboarding_home/MemberActionUtils.tsx
 import useIsNewMemberDefault from "useIsNewMember.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import handleSettingsLoadSuccess from "GuildOnboardingHomeSettingsStore.tsx";
-import set from "GuildOnboardingMemberActionStore.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "GuildOnboardingHomeSettingsStore.tsx";
+import closure_5 from "GuildOnboardingMemberActionStore.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 
 export const useMemberActionsForChannel = function useMemberActionsForChannel(guild_id, channel) {
   const _require = guild_id;
   importDefault = channel;
-  let obj = defaultAreStatesEqual;
+  let obj = _defaultAreStatesEqual;
   const items = [closure_4];
   const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getNewMemberActions(closure_0), items1);
   const tmp = useIsNewMemberDefault(guild_id);
   const items2 = [closure_5];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items2, () => closure_1_5.getCompletedActions(closure_0));
+  const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items2, () => closure_1_5.getCompletedActions(closure_0));
   if (tmp) {
     let num;
     if (stateFromStores != null) {
-      num = stateFromStores.findIndex((item, index) => item.channelId === id.id);
+      num = stateFromStores.findIndex((channelId) => channelId.channelId === id.id);
     }
     if (num == null) {
       num = 0;
@@ -49,26 +50,26 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
   } else {
     return {};
   }
-  const obj3 = defaultAreStatesEqual;
+  const obj3 = _defaultAreStatesEqual;
 };
 export const useNextMemberAction = function useNextMemberAction(guild_id, channelId) {
   const _require = guild_id;
   closure_1 = channelId;
   const items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_4.getNewMemberActions(closure_0));
-  const obj = defaultAreStatesEqual;
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_4.getNewMemberActions(closure_0));
+  const obj = _defaultAreStatesEqual;
   const items1 = [closure_5];
-  dependencyMap = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => closure_1_5.getCompletedActions(closure_0));
+  dependencyMap = _defaultAreStatesEqual.useStateFromStores(items1, () => closure_1_5.getCompletedActions(closure_0));
   let found;
   if (stateFromStores != null) {
-    found = stateFromStores.find((item, index) => {
+    found = stateFromStores.find((channelId) => {
       let tmp2;
       if (closure_2 != null) {
-        tmp2 = tmp[item.channelId];
+        tmp2 = tmp[channelId.channelId];
       }
       let tmp3 = true !== tmp2;
       if (tmp3) {
-        tmp3 = item.channelId !== closure_1;
+        tmp3 = channelId.channelId !== closure_1;
       }
       return tmp3;
     });
@@ -78,8 +79,8 @@ export const useNextMemberAction = function useNextMemberAction(guild_id, channe
 export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) {
   const _require = guild_id;
   const items = [closure_3];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_3.getSelfMember(closure_0));
-  const obj = defaultAreStatesEqual;
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_3.getSelfMember(closure_0));
+  const obj = _defaultAreStatesEqual;
   let num;
   if (stateFromStores != null) {
     num = stateFromStores.flags;
@@ -87,5 +88,5 @@ export const useAllActionsCompleted = function useAllActionsCompleted(guild_id) 
   if (num == null) {
     num = 0;
   }
-  return require("../../../discord_common/js/shared/utils/FlagUtils.tsx").hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+  return _hasFlag.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
 };

@@ -1,33 +1,36 @@
 // discord_app/modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx");
 
 export default function AppLauncherChannelOption(option) {
   option = option.option;
   ({ initialValue: importDefault, onChannelPress } = option);
   ({ onActionSheetDismiss: closure_3, channel: closure_4, onPress: closure_5 } = option);
+  let first;
+  closure_7 = undefined;
+  let stateFromStores;
   ({ style, autoFocus, hasError } = option);
   let tmp = callback(React.useState(() => {
     let channelId = null;
     if (null != closure_1) {
       channelId = null;
-      if ("channelMention" === closure_1.type) {
-        channelId = closure_1.channelId;
+      if ("channelMention" === tmp.type) {
+        channelId = tmp.channelId;
       }
     }
     return channelId;
   }), 2);
-  const first = tmp[0];
+  first = tmp[0];
   closure_7 = tmp[1];
   let obj = option(onChannelPress[4]);
   const items = [closure_5];
   const items1 = [first];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(first), items1);
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(first), items1);
   const items2 = [onChannelPress, first, stateFromStores];
   const effect = React.useEffect(() => {
     let tmp = null != first;
@@ -53,8 +56,8 @@ export default function AppLauncherChannelOption(option) {
     if (closure_5 != null) {
       tmp();
     }
-    importDefault(onChannelPress[8]);
-    const obj = {
+    let obj = closure_1_1(onChannelPress[8]);
+    obj = {
       option,
       channel: closure_4,
       onChannelPress(channel) {
@@ -63,7 +66,7 @@ export default function AppLauncherChannelOption(option) {
         if (channel != null) {
           id = channel.id;
         }
-        callback(id);
+        closure_7(id);
         callback({ channel });
       },
       onActionSheetDismiss: closure_3

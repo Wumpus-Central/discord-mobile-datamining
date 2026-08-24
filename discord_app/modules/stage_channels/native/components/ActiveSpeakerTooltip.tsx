@@ -1,25 +1,27 @@
 // discord_app/modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import UserSummaryItemDefault from "../../../../components_native/common/UserSummaryItem.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import useActiveSpeakerPillScrollHandler from "../StageChannelListStore.tsx";
 
-const require = fn;
+const require = arg1;
 ({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round };
+let obj = { container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" }, participantItemContainer: null, participantAvatarContainer: null, participantAvatarText: null, participantNameplateContainer: null, participantNameplateSpeakingText: null };
+obj = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round };
 obj[1] = obj;
 obj[2] = { alignItems: "center", justifyContent: "center" };
-const createCacheKey = { fontSize: 12, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
+createCacheKey = { fontSize: 12, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
 obj[3] = createCacheKey;
 obj[4] = { paddingHorizontal: 3, flexDirection: "row", alignItems: "center", justifyContent: "center" };
 obj[5] = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_10 = createCacheKey.createStyles(obj);
+let obj2 = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const tmp = callback5();
@@ -28,7 +30,7 @@ const memoResult = importAllResult.memo((channel) => {
   const items1 = [channel.id];
   const first = callback(obj.useStateFromStores(items, () => {
     const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
-    const items = [speakingParticipants.map((item, index) => item.user), closure_1_5.getParticipantsVersion(channel.id)];
+    const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
     return items;
   }, items1, channel(6709).isVersionEqual), 1)[0];
   let tmp5 = null;
@@ -62,10 +64,11 @@ const memoResult = importAllResult.memo((channel) => {
       obj[1] = items2;
       obj[3] = callback4(View, obj);
       tmp5 = callback3(tmp2(5433).PressableOpacity, obj);
+      const tmp10 = UserSummaryItemDefault;
     }
   }
   return tmp5;
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx");
 
 export default memoResult;

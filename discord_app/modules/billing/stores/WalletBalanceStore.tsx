@@ -1,6 +1,7 @@
 // discord_app/modules/billing/stores/WalletBalanceStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let closure_0 = {};
 let set = new Set();
@@ -45,6 +46,6 @@ const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
     set = new Set();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
+const result = set.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
 
 export default walletBalanceStore;

@@ -1,18 +1,19 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let closure_4 = createCacheKey.createStyles((arg0) => {
-  const obj = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 + arg0, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, alignSelf: "flex-end" };
+  let obj = { container: null };
+  obj = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 + arg0, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, alignSelf: "flex-end" };
   obj[0] = obj;
   return obj;
 });
 const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(description) {
-  let str;
+  let str = description.description;
+  str = undefined;
   if (str == null) {
     str = "";
   }
@@ -27,7 +28,7 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
         if (str == null) {
           str = "";
         }
-        openMediaModalOverlayAltTextSheetDefault({ description: str });
+        closure_1_1(closure_1_2[7])({ description: str });
       };
       obj[2] = { top: 6, bottom: 6, left: 6, right: 6 };
       obj = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
@@ -39,6 +40,6 @@ const memoResult = importAllResult.memo(function MediaModalOverlayAltTextButton(
   }
   return tmp4;
 });
-const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx");
 
 export default memoResult;

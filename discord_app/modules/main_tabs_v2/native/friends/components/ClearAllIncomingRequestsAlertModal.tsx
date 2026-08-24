@@ -2,10 +2,10 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import getAlertModalItemKey from "../../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function handleConfirm() {
   const self = this;
   const apply = _handleConfirm.apply;
@@ -81,7 +81,7 @@ function _handleConfirm() {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
 
 export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   let obj = { title: null, content: null, actions: null };
@@ -89,6 +89,7 @@ export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount)
   obj[0] = intl.string(getSystemLocale.t.z2pFjo);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.formatToPlainString(getSystemLocale.t["0nTvEw"], { incomingRequestCount: incomingRequestCount.incomingRequestCount });
+  obj = { children: null };
   obj = { variant: "destructive", onPress: handleConfirm, text: null };
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);

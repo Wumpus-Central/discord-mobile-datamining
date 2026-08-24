@@ -1,27 +1,28 @@
 // discord_app/modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx
 import isClickstreamEnabled from "../../clickstream/Clickstream.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../../stores/ChannelStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ ChannelTypes: c3, AnalyticEvents: c4 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx");
+const result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx");
 
 export default function trackChannelOpenedClickstream(channelId) {
   channelId = channelId.channelId;
   if (StaticChannelRoute.VIBEGRATIONS !== channelId) {
-    if (StaticChannelRoute.CHANNEL_BROWSER !== channelId) {
-      if (StaticChannelRoute.GUILD_HOME !== channelId) {
-        if (StaticChannelRoute.GUILD_SHOP !== channelId) {
-          if (StaticChannelRoute.GAME_SHOP !== channelId) {
-            if (StaticChannelRoute.MEMBER_APPLICATIONS !== channelId) {
-              if (StaticChannelRoute.ROLE_SUBSCRIPTIONS !== channelId) {
-                if (StaticChannelRoute.CUSTOMIZE_COMMUNITY !== channelId) {
-                  if (StaticChannelRoute.MEMBER_SAFETY !== channelId) {
-                    if (StaticChannelRoute.GUILD_ONBOARDING !== channelId) {
-                      if (StaticChannelRoute.GUILD_BOOSTS !== channelId) {
-                        const obj = { channel_id: null, channel_type: null };
+    if (tmp.CHANNEL_BROWSER !== channelId) {
+      if (tmp.GUILD_HOME !== channelId) {
+        if (tmp.GUILD_SHOP !== channelId) {
+          if (tmp.GAME_SHOP !== channelId) {
+            if (tmp.MEMBER_APPLICATIONS !== channelId) {
+              if (tmp.ROLE_SUBSCRIPTIONS !== channelId) {
+                if (tmp.CUSTOMIZE_COMMUNITY !== channelId) {
+                  if (tmp.MEMBER_SAFETY !== channelId) {
+                    if (tmp.GUILD_ONBOARDING !== channelId) {
+                      if (tmp.GUILD_BOOSTS !== channelId) {
+                        let obj = isClickstreamEnabled;
+                        obj = { channel_id: null, channel_type: null };
                         obj[0] = channelId;
                         channel = channel.getChannel(channelId);
                         let type;

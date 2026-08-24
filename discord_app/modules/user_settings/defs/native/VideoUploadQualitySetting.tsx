@@ -3,12 +3,12 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
-import CHANNEL_SIDEBAR_WIDTH from "../../UnsyncedUserSettingsStore.tsx";
+import closure_2 from "../../UnsyncedUserSettingsStore.tsx";
 import { VideoQualitySettings } from "../../UnsyncedUserSettingsStore.tsx";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.PXq9f1);
@@ -19,7 +19,8 @@ let createToggle = {
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
-    const obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    let obj = UserSettingsText;
+    obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
     ({ lowQualityImageMode: obj2[2], dataSavingMode: obj2[3] } = closure_2);
@@ -45,6 +46,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
 
 export default createToggle;

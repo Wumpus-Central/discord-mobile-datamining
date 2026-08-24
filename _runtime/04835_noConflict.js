@@ -1,10 +1,11 @@
 // _runtime/04835_noConflict.js
 let self = this;
-const module = arg4;
+const dependencyMap = arg4;
 const exports = arg5;
 const fn = function() {
   const self = this;
-  const obj = {};
+  let obj = this.humanize;
+  obj = {};
   if (undefined !== obj) {
     if (tmp5) {
       tmp4.exports = obj;
@@ -84,8 +85,8 @@ const fn = function() {
     const re1 = tmp11;
     function formatChrCb(arg0, arg1) {
       let tmp = arg1;
-      if (lib[arg0]) {
-        tmp = lib[arg0]();
+      if (closure_5[arg0]) {
+        tmp = closure_5[arg0]();
       }
       return tmp;
     }
@@ -93,24 +94,25 @@ const fn = function() {
     closure_4 = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     closure_5 = {
       d() {
-        return formatChrCb.pad(lib.j(), 2, "0");
+        return formatChrCb.pad(closure_5.j(), 2, "0");
       },
       D() {
-        return lib.l().slice(0, 3);
+        return closure_5.l().slice(0, 3);
       },
       j() {
         return date.getDate();
       },
       l() {
-        return dependencyMap[lib.w(lib)];
+        return dependencyMap[closure_5.w(closure_5)];
       },
       N() {
-        return lib.w() || 7;
+        return closure_5.w() || 7;
       },
       S() {
-        const jResult = lib.j();
+        const jResult = closure_5.j();
         if (jResult <= 4) {
           let str = { 1: "st", 2: "nd", 3: "rd" }[jResult % 10] || "th";
+          const tmp2 = { 1: "st", 2: "nd", 3: "rd" }[jResult % 10] || "th";
         } else {
           str = "th";
         }
@@ -120,15 +122,15 @@ const fn = function() {
         return date.getDay();
       },
       z() {
-        if (lib.L()) {
-          let tmp2 = dependencyMap2[lib.n(lib)];
+        if (closure_5.L()) {
+          let tmp2 = dependencyMap2[obj.n(obj)];
         } else {
-          tmp2 = dependencyMap[lib.n(lib)];
+          tmp2 = dependencyMap[obj.n(obj)];
         }
-        return tmp2 + lib.j() - 1;
+        return tmp2 + closure_5.j() - 1;
       },
       W() {
-        const sum = lib.z() - lib.N() + 1.5;
+        const sum = closure_5.z() - closure_5.N() + 1.5;
         let num = 0;
         const sum1 = 1 + Math.floor(Math.abs(sum) / 7);
         if (3.5 < sum % 7) {
@@ -140,17 +142,17 @@ const fn = function() {
         return dependencyMap2[date.getMonth(date)];
       },
       m() {
-        return formatChrCb.pad(lib.n(), 2, "0");
+        return formatChrCb.pad(closure_5.n(), 2, "0");
       },
       M() {
-        return lib.F().slice(0, 3);
+        return closure_5.F().slice(0, 3);
       },
       n() {
         return date.getMonth() + 1;
       },
       t() {
-        const YResult = lib.Y();
-        return new Date(lib.Y(), lib.n(), 0).getDate();
+        const YResult = closure_5.Y();
+        return new Date(closure_5.Y(), closure_5.n(), 0).getDate();
       },
       L() {
         let num = 0;
@@ -160,8 +162,8 @@ const fn = function() {
         return num;
       },
       o() {
-        const nResult = lib.n();
-        const WResult = lib.W();
+        const nResult = closure_5.n();
+        const WResult = closure_5.W();
         if (12 !== nResult) {
           let tmp4 = 1 === nResult;
           if (tmp4) {
@@ -171,13 +173,13 @@ const fn = function() {
         } else {
           num2 = -1;
         }
-        return lib.Y() + num2;
+        return closure_5.Y() + num2;
       },
       Y() {
         return date.getFullYear();
       },
       y() {
-        return String(lib.Y()).slice(-2);
+        return String(closure_5.Y()).slice(-2);
       },
       a() {
         let str = "am";
@@ -187,7 +189,7 @@ const fn = function() {
         return str;
       },
       A() {
-        return lib.a().toUpperCase();
+        return closure_5.a().toUpperCase();
       },
       B() {
         const result = date.getTime() / 1000;
@@ -207,16 +209,16 @@ const fn = function() {
         return rounded;
       },
       g() {
-        return lib.G() % 12 || 12;
+        return closure_5.G() % 12 || 12;
       },
       G() {
         return date.getHours();
       },
       h() {
-        return formatChrCb.pad(lib.g(), 2, "0");
+        return formatChrCb.pad(closure_5.g(), 2, "0");
       },
       H() {
-        return formatChrCb.pad(lib.G(), 2, "0");
+        return formatChrCb.pad(closure_5.G(), 2, "0");
       },
       i() {
         return formatChrCb.pad(date.getMinutes(), 2, "0");
@@ -237,7 +239,7 @@ const fn = function() {
         return str + formatChrCb.pad(100 * Math.floor(absolute / 60) + absolute % 60, 4, "0");
       },
       P() {
-        const str = lib.O();
+        const str = closure_5.O();
         const text = `${str.substr(0, 3)}:`;
         return `${str.substr(0, 3)}:` + str.substr(3, 2);
       },
@@ -461,8 +463,8 @@ const fn = function() {
       text5 = `${"in " + -tmp11} years`;
     }
   };
-  obj.ordinal = (match) => {
-    const parsed = parseInt(match, 10);
+  obj.ordinal = (joined) => {
+    const parsed = parseInt(joined, 10);
     let num = 0;
     if (!isNaN(parsed)) {
       num = parsed;
@@ -476,6 +478,7 @@ const fn = function() {
     const sum = str + absolute;
     if (4 >= result) {
       let str2 = { 1: "st", 2: "nd", 3: "rd" }[absolute % 10] || "th";
+      const tmp5 = { 1: "st", 2: "nd", 3: "rd" }[absolute % 10] || "th";
     } else {
       str2 = "th";
     }
@@ -551,9 +554,9 @@ const fn = function() {
   };
   obj.linebreaks = (str) => {
     str = str.replace(/^([\n|\r]*)/, "");
-    const str2 = str.replace(/([\n|\r]*)$/, "");
-    const str3 = str.replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n");
-    return "<p>" + str.replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n").replace(/(\n{2,})/g, "</p><p>").replace(/\n/g, "<br />") + "</p>";
+    const str2 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "");
+    const str3 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n");
+    return "<p>" + str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n").replace(/(\n{2,})/g, "</p><p>").replace(/\n/g, "<br />") + "</p>";
   };
   obj.nl2br = (str) => str.replace(/(\r\n|\n|\r)/g, "<br />");
   obj.truncatechars = (arg0, arg1) => {

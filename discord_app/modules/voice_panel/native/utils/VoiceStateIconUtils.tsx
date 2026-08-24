@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/utils/VoiceStateIconUtils.tsx
 import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
-import updateVoiceState from "../../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../../stores/VoiceStateStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function isStableVoiceStateEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
@@ -16,8 +16,9 @@ function isStableVoiceStateEqual(arg0, arg1) {
   }
   return tmp;
 }
-let obj = { VIDEO_DISABLED_LOCAL_AUTO: 0, [0]: "VIDEO_DISABLED_LOCAL_AUTO", VIDEO_DISABLED_LOCAL: 1, [1]: "VIDEO_DISABLED_LOCAL", VIDEO_ACTIVE: 2, [2]: "VIDEO_ACTIVE" };
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
+let obj = { DEAFENED_SERVER: 0, [0]: "DEAFENED_SERVER", DEAFENED: 1, [1]: "DEAFENED", MUTED_SERVER: 2, [2]: "MUTED_SERVER", MUTED_LOCAL: 3, [3]: "MUTED_LOCAL", MUTED: 4, [4]: "MUTED" };
+obj = { VIDEO_DISABLED_LOCAL_AUTO: 0, [0]: "VIDEO_DISABLED_LOCAL_AUTO", VIDEO_DISABLED_LOCAL: 1, [1]: "VIDEO_DISABLED_LOCAL", VIDEO_ACTIVE: 2, [2]: "VIDEO_ACTIVE" };
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
 
 export const MuteDeafenIconState = obj;
 export const VideoIconState = obj;
@@ -26,7 +27,7 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
   closure_1 = arg1;
   const items = [closure_3, closure_4];
   const items1 = [arg0, arg1];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
       if (null != voiceState) {
@@ -42,7 +43,7 @@ export const useStableVoiceParticipant = function useStableVoiceParticipant(arg0
 export const useMuteDeafenIconState = function useMuteDeafenIconState(id, guildId) {
   const _require = id;
   closure_1 = guildId;
-  obj = initialize;
+  obj = _initialize;
   const items = [closure_3, closure_4];
   const items1 = [id, guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -79,12 +80,13 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
   closure_1 = arg1;
   const items = [closure_3, closure_4];
   const items1 = [arg1, arg0];
-  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  return _initialize.useStateFromStoresObject(items, () => {
     if (null != closure_0) {
-      const voiceState = closure_1_4.getVoiceState(closure_1, closure_0);
+      const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
     }
     if (null != closure_0) {
       if (null != voiceState) {
+        obj = closure_1_3;
         obj = { selfVideo: null, localVideoDisabledState: null };
         obj[0] = voiceState.selfVideo;
         let tmp5 = null;
@@ -105,15 +107,16 @@ export const useStableVideoState = function useStableVideoState(arg0, arg1) {
 export const useVideoIconState = function useVideoIconState(id, guildId) {
   const _require = id;
   closure_1 = guildId;
-  obj = initialize;
+  obj = _initialize;
   const items = [closure_3, closure_4];
   const items1 = [guildId, id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     if (null != closure_0) {
-      const voiceState = closure_1_4.getVoiceState(closure_1, closure_0);
+      const voiceState = closure_1_4.getVoiceState(closure_1, tmp);
     }
     if (null != closure_0) {
       if (null != voiceState) {
+        obj = closure_1_3;
         obj = { selfVideo: null, localVideoDisabledState: null };
         obj[0] = voiceState.selfVideo;
         let tmp5 = null;

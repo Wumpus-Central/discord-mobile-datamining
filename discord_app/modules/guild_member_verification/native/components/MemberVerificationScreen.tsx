@@ -4,17 +4,17 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import _modDef6551 from "../../../keyboard/native/KeyboardAwareView.tsx";
 import MemberVerificationModalDefault from "MemberVerificationModal.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import comparator from "../../../../stores/GuildChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import handleGatewayJoinRequestUpdate from "../../UserGuildJoinRequestStore.tsx";
+import closure_6 from "../../../../stores/GuildChannelStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
+import closure_8 from "../../UserGuildJoinRequestStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import makeAuthenticated from "../../../auth/makeAuthenticated.tsx";
 
-require = fn;
+require = arg1;
 function Loading() {
   return <View style={callback().flexLoading}>{jsx(ActivityIndicator.ActivityIndicator, {})}</View>;
 }
@@ -25,9 +25,11 @@ function MemberVerificationRouteView(arg0) {
 function ExistingJoinRequestHandler(guildId) {
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
+  let stateFromStores;
   let stateFromStores1;
+  let React;
   const items = [closure_7];
-  const stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => closure_1_7.getGuild(guildId));
+  stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => closure_1_7.getGuild(guildId));
   let obj = guildId(stateFromStores1[11]);
   const items1 = [closure_6];
   const items2 = [stateFromStores];
@@ -47,7 +49,7 @@ function ExistingJoinRequestHandler(guildId) {
   const items3 = [closure_8];
   const stateFromStores2 = guildId(stateFromStores1[11]).useStateFromStores(items3, () => closure_1_8.getRequest(guildId));
   const tmp6 = onClose(stateFromStores1[12])(stateFromStores2);
-  const React = tmp6;
+  React = tmp6;
   const items4 = [guildId, tmp6, onClose];
   const effect = React.useEffect(() => {
     let applicationStatus;
@@ -56,11 +58,11 @@ function ExistingJoinRequestHandler(guildId) {
     }
     if (guildId(stateFromStores1[13]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       onClose();
-      let tmp2Result = guildId(stateFromStores1[14]);
+      let tmp2Result = tmp2(tmp3[14]);
       const result = tmp2Result.openMemberVerificationPendingAlert(guildId);
-    } else if (guildId(stateFromStores1[13]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    } else if (tmp2(tmp3[13]).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       onClose();
-      tmp2Result = guildId(stateFromStores1[14]);
+      tmp2Result = tmp2(tmp3[14]);
       const obj = { guildId: null, canWithdraw: true };
       obj[0] = guildId;
       const result1 = tmp2Result.openMemberVerificationRejectedAlert(obj);
@@ -94,7 +96,8 @@ function ExistingJoinRequestHandler(guildId) {
   return <Loading />;
 }
 ({ ME: c9, Routes: c10 } = ME);
-const createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: { flex: 1 }, flexLoading: null };
+createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
@@ -117,7 +120,9 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
         if (index >= 0) {
           while (null != routes[diff]) {
             if ("member-verification" !== tmp10.name) {
-              let obj4 = navigation(dependencyMap[16]);
+              let tmp12 = navigation;
+              let tmp13 = closure_1_3;
+              let obj4 = navigation(closure_1_3[16]);
               let popScreensResult = obj4.popScreens(index - diff);
               break;
             } else {
@@ -136,8 +141,8 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     } else {
       obj = { screen: "guilds", guildId: null };
       obj[1] = closure_1_9;
-      navigation(dependencyMap[16]).navigateToRootTab(obj);
-      const obj2 = navigation(dependencyMap[16]);
+      navigation(closure_1_3[16]).navigateToRootTab(obj);
+      const obj2 = navigation(closure_1_3[16]);
     }
   }, items);
   useSafeAreaInsetsDefault();
@@ -147,6 +152,7 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     let obj = { guildId: null, onClose: null, children: null };
     obj[0] = guildId;
     obj[1] = callback;
+    obj = { style: null, children: null };
     const items1 = [tmp.flex, ];
     obj = { marginLeft: null, marginRight: null };
     obj[0] = tmp6;
@@ -163,6 +169,6 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
   }
   return tmp10;
 });
-let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationScreen.tsx");
 
 export default authenticated;

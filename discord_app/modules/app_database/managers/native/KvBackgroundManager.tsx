@@ -1,17 +1,17 @@
 // discord_app/modules/app_database/managers/native/KvBackgroundManager.tsx
 import timestampDefault from "../../../debug/Logger.tsx";
-import obj132Default from "../../../../utils/Durations.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import initialize from "../../../multi_account/MultiAccountStore.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../multi_account/MultiAccountStore.tsx";
 import handleSelectedChannelStoreChanged from "../../modules/messages/SaveableChannelsStore.tsx";
-import handleSelectedChannelStoreChanged2 from "../../modules/messages/SaveableChannelsStore.tsx";
+import closure_8 from "../../modules/messages/SaveableChannelsStore.tsx";
 import closure_9 from "../../stores/FileSystemStore.tsx";
 
-let require = fn;
+let require = arg1;
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } = handleSelectedChannelStoreChanged);
-let closure_10 = 5 * obj132Default.Millis.MINUTE;
+let closure_10 = 5 * setDefault.Millis.MINUTE;
 let closure_11 = new timestampDefault("KvBackgroundManager");
 initializeDefault;
 class KvBackgroundManager extends tmp4 {
@@ -35,7 +35,7 @@ class KvBackgroundManager extends tmp4 {
     };
     applyArgumentsResult.steps = {
       trimOrphanedChannels(closure_1_0) {
-            closure_0 = require;
+            closure_0 = closure_1_0;
             return callback(function*() {
               if (c0 === 2) {
                 c0 = 3;
@@ -143,16 +143,23 @@ class KvBackgroundManager extends tmp4 {
                       obj1 = { value: null, done: false };
                       obj1[0] = c0.transaction((arg0) => {
                         while (tmp !== undefined) {
+                          let tmp3 = closure_1_3;
                           let tmp4 = closure_1_3(tmp2, 2);
+                          let tmp7 = v3;
+                          let tmp8 = closure_1_2;
                           [tmp5, tmp6] = tmp4;
                           let items = [tmp6];
+                          let tmp9 = v3;
+                          let tmp10 = new.target;
+                          let tmp11 = new.target;
+                          let tmp12 = items;
                           let flag = true;
                           let table = new v3(closure_1_2[11]).Table(items, tmp5, v3, true);
+                          let tmp13 = table;
                           let upgradeTransactionResult = table.upgradeTransaction(arg0);
                           let deleteResult = upgradeTransactionResult.delete();
                           continue;
                         }
-                        tmp = v3(closure_1_2[10]).DEPRECATED_KEYSPACES[Symbol.iterator]();
                       }, "deleteDeprecatedKeyspaces");
                       return obj1;
                     }
@@ -206,7 +213,7 @@ class KvBackgroundManager extends tmp4 {
                       c1 = 1;
                       c0 = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = c0.incrementalVacuum().catch((error) => logger.warn(error));
+                      obj1[0] = c0.incrementalVacuum().catch((arg0) => logger.warn(arg0));
                       return obj1;
                     }
                   } else if (arg0 === 1) {
@@ -244,12 +251,15 @@ class KvBackgroundManager extends tmp4 {
                 }
               } else {
                 while (true) {
+                  let num = 2;
                   c7 = 2;
                   if (0 === c6) {
                     if (arg0 === 1) {
+                      let num6 = 3;
                       c7 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
+                      let num5 = 3;
                       c7 = 3;
                       obj = { value: null, done: true };
                       obj[0] = arg1;
@@ -257,12 +267,20 @@ class KvBackgroundManager extends tmp4 {
                     } else {
                       closure_3 = tmp;
                       closure_2 = tmp2;
+                      let set;
                       closure_1 = undefined;
+                      let tmp30 = users;
                       users = users.getUsers();
                       let _Set = Set;
-                      let set = new Set(users.map((item, index) => callback(tmp2[12]).databaseName(item.id)));
+                      let tmp31 = new.target;
+                      let tmp32 = new.target;
+                      set = new Set(users.map((id) => callback(tmp2[12]).databaseName(id.id)));
+                      let tmp34 = set;
+                      let tmp35 = closure_1_0;
+                      let tmp36 = closure_1_2;
                       let Kv = closure_1_0(closure_1_2[11]).Kv;
                       c6 = 1;
+                      let num12 = 1;
                       c7 = 1;
                       obj1 = { value: null, done: false };
                       obj1[0] = Kv.databases();
@@ -270,34 +288,54 @@ class KvBackgroundManager extends tmp4 {
                     }
                   } else if (1 === tmp5) {
                     if (arg0 === 1) {
+                      let num4 = 3;
                       c7 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
+                      let num3 = 3;
                       c7 = 3;
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
                     } else {
                       closure_1 = arg1;
+                      let tmp26 = arg1;
+                      closure_1 = arg1;
                       set = arg1[Symbol.iterator]();
+                      let tmp9 = closure_1;
+                      let tmp10 = set;
                       while (set !== undefined) {
+                        let tmp27 = closure_2;
                         users = 1;
                         closure_1 = tmp11;
+                        let tmp28 = set;
+                        let tmp29 = closure_1;
                         if (!set.has(closure_1)) {
+                          let tmp12 = closure_2;
+                          let tmp13 = closure_3;
+                          let tmp14 = closure_1_11;
+                          let tmp15 = closure_1;
                           let _HermesInternal = HermesInternal;
                           let logResult = closure_1_11.log("deleting orphaned database: " + closure_1);
+                          let tmp17 = closure_1_0;
+                          let tmp18 = closure_1_2;
                           let Database = closure_1_0(closure_1_2[11]).Database;
+                          let tmp19 = closure_1;
                           let deleteResult = Database.delete(closure_1);
-                          let catchPromise = deleteResult.catch((error) => null);
+                          let catchPromise = deleteResult.catch(() => null);
                         }
                         users = 0;
                         continue;
                       }
+                      let num2 = 3;
                       c7 = 3;
                       return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
+                    let tmp6 = closure_4;
+                    let tmp7 = closure_4;
                     users = 0;
+                    let tmp8 = set;
                     set.return();
                     throw closure_4;
                   }
@@ -415,13 +453,13 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             timestamp = undefined;
             isLowDisk = undefined;
             c2 = undefined;
-            if (self.hasConnected) {
-              if (!self.isCleaning) {
+            if (closure_1_0.hasConnected) {
+              if (!closure_1_0.isCleaning) {
                 const _Date = Date;
                 timestamp = Date.now();
                 isLowDisk = closure_1_9.isLowDisk;
                 if (!isLowDisk) {
-                  isLowDisk = timestamp - self.lastDeepClean >= closure_1_10;
+                  isLowDisk = timestamp - closure_1_0.lastDeepClean >= closure_1_10;
                 }
                 c4 = 1;
                 c5 = 1;
@@ -450,20 +488,20 @@ prototype["maybeCleanup"] = function maybeCleanup() {
               }
             }
             c3 = 1;
-            self.isCleaning = true;
+            closure_1_0.isCleaning = true;
             c4 = 3;
             c5 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = self.cleanupAsync(closure_1_1);
+            obj3[0] = closure_1_0.cleanupAsync(closure_1_1);
             return obj3;
           }
         } else if (2 === tmp8) {
           c3 = 0;
           timestamp.isCleaning = false;
           if (closure_1_1) {
-            let lastDeepClean3 = self;
+            let lastDeepClean3 = closure_1_0;
           } else {
-            lastDeepClean3 = self.lastDeepClean;
+            lastDeepClean3 = closure_1_0.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean3;
           obj2 = closure_1_1(7503);
@@ -483,18 +521,20 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           timestamp.lastDeepClean = lastDeepClean;
           obj = closure_1_1(7503);
           obj.endBackgroundTask(c2);
+          const tmp12 = timestamp;
         }
         c3 = 0;
-        self.isCleaning = false;
+        closure_1_0.isCleaning = false;
         if (isLowDisk) {
           let lastDeepClean2 = timestamp;
         } else {
           lastDeepClean2 = timestamp.lastDeepClean;
         }
-        self.lastDeepClean = lastDeepClean2;
+        closure_1_0.lastDeepClean = lastDeepClean2;
         obj1 = closure_1_1(7503);
         obj1.endBackgroundTask(c2);
         c5 = 3;
+        const tmp26 = closure_1_0;
       } catch (tmp70) {
         c2 = tmp70;
         if (tmp4 === c3) {
@@ -508,7 +548,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
   })();
 };
 prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
-  closure_0 = importDefault;
+  closure_0 = closure_1_1;
   const self = this;
   return callback(function*() {
     if (table === 2) {
@@ -545,10 +585,11 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
               v0 = 1;
               table = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0.cleanDatabaseAsync(databaseResult, closure_1_0);
+              obj1[0] = v0.cleanDatabaseAsync(databaseResult, tmp17);
               return obj1;
             }
             const obj9 = v0(table[10]);
+            tmp17 = closure_1_0;
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
@@ -602,9 +643,9 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
     }
   })();
 };
-prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, closure_1_0) {
+prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, arg1) {
   closure_0 = databaseResult;
-  closure_1 = require;
+  closure_1 = arg1;
   const self = this;
   return callback(function*() {
     if (c5 === 2) {
@@ -636,7 +677,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, cl
             closure_1 = tmp3;
             closure_0 = tmp7;
             c3 = 1;
-            const steps3 = self.steps;
+            const steps3 = closure_1_2.steps;
             c4 = 2;
             c5 = 1;
             obj1 = { value: null, done: false };
@@ -711,7 +752,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, cl
   })();
 };
 const kvBackgroundManager = new KvBackgroundManager();
-const tmp3 = new timestampDefault("KvBackgroundManager");
-const result = require("obj132").fileFinishedImporting("modules/app_database/managers/native/KvBackgroundManager.tsx");
+let tmp3 = new timestampDefault("KvBackgroundManager");
+const result = require("set").fileFinishedImporting("modules/app_database/managers/native/KvBackgroundManager.tsx");
 
 export default kvBackgroundManager;

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
 let closure_0 = { selectedGuildId: "0" };
@@ -15,7 +15,7 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
 export const useUserSafetySettingsSelectedGuildStore = obj;

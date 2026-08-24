@@ -1,12 +1,12 @@
 // discord_app/utils/native/AutocompleteUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 ME.AutoCompleteResultTypes;
 const items = [["game", "gameMentionInput"]];
 const map = new Map(items);
-const result = obj132.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
+const result = set.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
 
 export default {
   MENTION_EVERYONE() {

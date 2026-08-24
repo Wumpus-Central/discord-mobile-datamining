@@ -29,10 +29,10 @@ import registerAsset27 from "../../../../_runtime/01267_registerAsset.js";
 import registerAsset28 from "../../../../_runtime/01268_registerAsset.js";
 import registerAsset29 from "../../../../_runtime/01269_registerAsset.js";
 import registerAsset30 from "../../../../_runtime/01270_registerAsset.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
-require = fn;
+require = arg1;
 function loadJsonAsset(arg0) {
   const self = this;
   const apply = _loadJsonAsset.apply;
@@ -185,7 +185,7 @@ function _loadJsonAsset() {
 }
 ({ Image: c4, NativeModules: c5 } = get_ActivityIndicator);
 let closure_6 = {};
-const result = require("obj132").fileFinishedImporting("modules/asset_json/native/AssetJsonUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/asset_json/native/AssetJsonUtils.tsx");
 
 export const jsonAssets = {
   i18n_bg() {

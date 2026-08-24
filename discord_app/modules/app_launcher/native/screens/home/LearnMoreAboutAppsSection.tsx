@@ -5,22 +5,25 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import AppLauncherEntrypoint from "../../../AppLauncherTypes.tsx";
 import TrackSectionHeaderDefault from "TrackSectionHeader.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { marginTop: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: ThemesDefault.space.PX_64 };
+createCacheKey = { container: null, body: null, divider: null, linkButton: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: ThemesDefault.space.PX_64 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { height: ThemesDefault.space.PX_16 };
+const obj1 = { height: ThemesDefault.space.PX_16 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, paddingVertical: 12, paddingHorizontal: 16, minHeight: 48, justifyContent: "center", alignItems: "center" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
+const obj2 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, paddingVertical: 12, paddingHorizontal: 16, minHeight: 48, justifyContent: "center", alignItems: "center" };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/LearnMoreAboutAppsSection.tsx");
 
 export default function LearnMoreAboutAppsSection(visible) {
   const tmp = callback3();
@@ -37,6 +40,7 @@ export default function LearnMoreAboutAppsSection(visible) {
   const formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.xx5Sug, { sectionTitle: stringResult, sectionBody: stringResult1 });
   obj[0] = AppLauncherEntrypoint.AppLauncherSectionName.NEW_TO_APPS;
   obj[3] = visible.visible;
+  obj = { style: tmp.container, children: null };
   obj = { style: tmp.divider };
   const items = [callback(View, obj), callback(Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: stringResult }), callback(Text.Text, { variant: "text-xs/normal", color: "text-default", style: tmp.body, children: stringResult1 }), callback(View, { style: tmp.divider }), , ];
   const obj3 = { style: tmp.linkButton, onPress: callback, accessibilityRole: "link", accessibilityLabel: formatToPlainStringResult, children: null };

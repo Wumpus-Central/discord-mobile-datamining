@@ -1,7 +1,7 @@
 // discord_app/modules/quests/QuestStore.tsx
 import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import _modDef1208 from "../../utils/SentryUtils.native.tsx";
 import getQuestDeliveryDataForPlacement from "utils/QuestDataUtils.tsx";
@@ -10,13 +10,13 @@ import getQuestLogger from "lib/getQuestLogger.tsx";
 import progressFromServer from "utils/QuestServerUtils.tsx";
 import result6 from "../ads/utils/AdDecisionUtils.tsx";
 import AdCreativeType from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import useConsoleQuestUIStore from "ConsoleQuestUIStore.tsx";
-import _toPropertyKey from "VideoQuestUIStore.tsx";
+import closure_33 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_34 from "ConsoleQuestUIStore.tsx";
+import closure_35 from "VideoQuestUIStore.tsx";
 import { QuestsExperimentLocations } from "QuestConstants.tsx";
 import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
 
-require = fn;
+require = arg1;
 function initializeState() {
   c3 = false;
   c4 = false;
@@ -82,24 +82,32 @@ function updateQuestData(questId, result2) {
         }
         const values = Object.values(progress);
         for (const item10011 of values) {
+          let tmp4 = item10011;
+          let tmp5 = callback;
+          let tmp6 = table;
           let obj2 = callback(table[5]);
           if (!obj2.isNil(item10011)) {
-            let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-            if (DESKTOP.has(item10011.eventName)) {
-              let heartbeat = item10011.heartbeat;
+            let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+            let tmp7 = item10011;
+            if (DESKTOP.has(tmp4.eventName)) {
+              let tmp8 = item10011;
+              let heartbeat = tmp4.heartbeat;
               let lastBeatAt;
               if (heartbeat != null) {
                 lastBeatAt = heartbeat.lastBeatAt;
               }
               if (null != lastBeatAt) {
+                let tmp14 = set;
                 let addResult = set.add(arg0);
               } else {
-                let heartbeat2 = item10011.heartbeat;
+                let tmp10 = item10011;
+                let heartbeat2 = tmp4.heartbeat;
                 let lastBeatAt1;
                 if (heartbeat2 != null) {
                   lastBeatAt1 = heartbeat2.lastBeatAt;
                 }
                 if (null == lastBeatAt1) {
+                  let tmp12 = set;
                   let deleteResult = set.delete(arg0);
                 }
               }
@@ -125,22 +133,22 @@ function updateQuestData(questId, result2) {
 }
 function _runExpirationCheck() {
   const _require = false;
-  const item = store.forEach((item, index) => {
-    if (true !== map.get(index)) {
-      if (obj2.isQuestExpired(item)) {
-        const result = map.set(index, true);
+  map = new Map(map);
+  const item = store.forEach((arg0, arg1) => {
+    if (true !== map.get(arg1)) {
+      if (obj2.isQuestExpired(arg0)) {
+        const result = obj.set(arg1, true);
         const callback = true;
-      } else if (!map.has(index)) {
-        const result1 = map.set(index, false);
+      } else if (!obj.has(arg1)) {
+        const result1 = obj.set(arg1, false);
       }
-      obj2 = callback(dependencyMap[9]);
+      obj2 = callback(closure_1_2[9]);
     }
   });
   if (_require) {
     questStore.emitChange();
   }
-  map = new Map(map);
-  let result = require("utils/QuestDataUtils.tsx").findNextUpcomingExpirationEpochMs(Array.from(store.values()));
+  let result = _getQuestDeliveryDataForPlacement.findNextUpcomingExpirationEpochMs(Array.from(store.values()));
   if (null != result) {
     const _Math = Math;
     const _Date = Date;
@@ -152,13 +160,12 @@ function _runExpirationCheck() {
       }, bound);
     }
   }
-  const obj = getQuestDeliveryDataForPlacement;
 }
 let map = new Map();
 let c38 = null;
 let c39 = null;
-let closure_40 = 30 * obj132Default.Millis.SECOND;
-let closure_41 = 10 * obj132Default.Millis.MINUTE;
+let closure_40 = 30 * setDefault.Millis.SECOND;
+let closure_41 = 10 * setDefault.Millis.MINUTE;
 let c42 = null;
 let c43 = false;
 let c44 = null;
@@ -243,15 +250,15 @@ prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
   return tmp3;
 };
 prototype["getQuestPreviewOverride"] = function getQuestPreviewOverride(QUEST_BAR_MOBILE) {
-  closure_23.get(QUEST_BAR_MOBILE);
-  let value;
+  let value = closure_23.get(QUEST_BAR_MOBILE);
+  value = undefined;
   if (null != value) {
     value = store.get(value);
   }
   return value;
 };
 Object.defineProperty(prototype, "questEnrollmentBlockedUntil", {
-  get: function questEnrollmentBlockedUntil(closure_7, arg1) {
+  get: function questEnrollmentBlockedUntil() {
     return closure_27;
   },
   set: undefined
@@ -320,8 +327,8 @@ prototype["selectedTaskPlatform"] = function selectedTaskPlatform(closure_0) {
   return value;
 };
 prototype["getOptimisticProgress"] = function getOptimisticProgress(id, WATCH_VIDEO) {
-  map.get(id);
-  let value;
+  let value = map.get(id);
+  value = undefined;
   if (value != null) {
     value = value.get(WATCH_VIDEO);
   }
@@ -395,11 +402,13 @@ const questStore = new QuestStore(dispatcherDefault, {
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function handleFetchCurrentQuestsSuccess(arg0) {
     ({ quests, excludedQuests, questEnrollmentBlockedUntil, questAccessSuspendedUntil } = arg0);
+    let mapped;
     const items = [...map.keys()];
-    const mapped = quests.map((item, index) => item.id);
-    const found = items.filter((item, index) => !mapped.includes(item));
+    mapped = quests.map((id) => id.id);
+    const found = items.filter((arg0) => !mapped.includes(arg0));
     if (found.length > 0) {
-      let obj = { category: "quests.store", message: null, data: null };
+      let obj = _modDef1208;
+      obj = { category: "quests.store", message: null, data: null };
       const _HermesInternal = HermesInternal;
       obj[1] = "handleFetchCurrentQuestsSuccess: " + found.length + " quest(s) removed during rebuild";
       obj = { prevQuestIds: null, nextQuestIds: null, removedIds: null };
@@ -417,23 +426,35 @@ const questStore = new QuestStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp9 = nextResult;
+      let tmp10 = map;
       let result = map.set(nextResult.id, nextResult);
+      let tmp12 = mapped;
       let tmp13 = mapped;
+      let tmp14 = dependencyMap;
+      let tmp15 = dependencyMap;
       let obj5 = mapped(7451);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
       if (targetedContent.includes(mapped(6719).QuestContent.QUEST_BAR)) {
+        let tmp17 = tmp12;
+        let tmp18 = tmp14;
         let tmp13Result = tmp13(7459);
         obj1 = { location: null };
+        let tmp19 = QuestsExperimentLocations;
         obj1[0] = QuestsExperimentLocations.QUESTS_STORE;
         let questLogger = tmp13Result.getQuestLogger(obj1);
+        let tmp20 = nextResult;
         let _HermesInternal2 = HermesInternal;
+        let str3 = "Delivered ";
+        let str4 = " (";
+        let str5 = ")";
         let logResult = questLogger.log("Delivered " + tmp9.config.messages.questName + " (" + tmp9.id + ")");
       }
       continue;
     }
     const map2 = new Map();
     for (const item10116 of excludedQuests) {
+      let tmp23 = map2;
       let result2 = map2.set(item10116.id, item10116);
       continue;
     }
@@ -441,10 +462,18 @@ const questStore = new QuestStore(dispatcherDefault, {
       const values = closure_32.values();
     }
     for (const item10131 of values) {
+      let tmp26 = item10131;
+      let tmp27 = map;
       if (!map.has(item10131.id)) {
-        let result3 = map.set(item10131.id, item10131);
+        let tmp28 = map;
+        let tmp29 = item10131;
+        let result3 = map.set(tmp26.id, tmp26);
+        let tmp31 = mapped;
+        let tmp32 = mapped;
+        let tmp33 = dependencyMap;
+        let tmp34 = dependencyMap;
         let obj10 = mapped(7451);
-        let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
+        let result4 = map1.set(tmp26.id, obj10.isQuestExpired(tmp26));
       }
       continue;
     }
@@ -456,13 +485,15 @@ const questStore = new QuestStore(dispatcherDefault, {
       }
       callback();
     })();
+    let date = null;
     if (null != questEnrollmentBlockedUntil) {
       let _Date = Date;
-      new Date(questEnrollmentBlockedUntil);
+      date = new Date(questEnrollmentBlockedUntil);
     }
+    let date1 = null;
     if (null != questAccessSuspendedUntil) {
       const _Date2 = Date;
-      new Date(questAccessSuspendedUntil);
+      date1 = new Date(questAccessSuspendedUntil);
     }
     (function _startSuspensionExpirationTimer() {
       if (null != timeout) {
@@ -497,6 +528,7 @@ const questStore = new QuestStore(dispatcherDefault, {
     c6 = false;
     map = new Map();
     for (const item10013 of tmp) {
+      let tmp3 = map;
       let result = map.set(item10013.id, item10013);
       continue;
     }
@@ -571,7 +603,9 @@ const questStore = new QuestStore(dispatcherDefault, {
       prop = value.earnedDecisionByQuestId;
     }
     map1 = new Map(prop);
+    const obj2 = result6;
     while (tmp5 !== undefined) {
+      let tmp7 = callback;
       let tmp8 = callback(tmp6, 2);
       let first = tmp8[0];
       let tmp10 = first;
@@ -583,25 +617,46 @@ const questStore = new QuestStore(dispatcherDefault, {
       let tmp12 = tmp11;
       let result1 = map1.set(first, obj);
       if (null != tmp11) {
+        let tmp33 = map2;
+        let tmp34 = first;
         value = map2.get(tmp10);
+        let tmp36 = require;
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
+        let tmp39 = dependencyMap;
         let obj8 = progressFromServer;
+        let tmp40 = tmp11;
         let result2 = obj8.questWithUserStatusFromServer(tmp12);
         if (null != value) {
+          let tmp28 = updateQuestData;
+          let tmp29 = first;
+          let tmp30 = result2;
           let tmp31 = updateQuestData(tmp10, result2);
         } else {
           let _Map = Map;
+          let tmp14 = map2;
+          let tmp15 = new.target;
+          let tmp16 = new.target;
           map2 = new Map(map2);
+          let tmp17 = map2;
+          let tmp18 = first;
+          let tmp19 = result2;
           let result3 = map2.set(tmp10, result2);
           let _Map2 = Map;
+          let tmp21 = map3;
+          let tmp22 = new.target;
+          let tmp23 = new.target;
           map3 = new Map(map3);
-          let tmp37Result = getQuestDeliveryDataForPlacement;
+          let tmp24 = map3;
+          let tmp25 = tmp36;
+          let tmp26 = tmp38;
+          let tmp37Result = tmp37(7451);
           let result4 = map3.set(tmp10, tmp37Result.isQuestExpired(result2));
         }
       }
       continue;
     }
     const result5 = store2.set(content, { earnedDecisionByQuestId: map1 });
-    tmp5 = serverQuests[Symbol.iterator]();
   },
   QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE: function handleFetchEarnedQuestToDeliverFailure(content) {
     c7 = false;
@@ -655,24 +710,32 @@ const questStore = new QuestStore(dispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
+            let tmp4 = item10011;
+            let tmp5 = callback;
+            let tmp6 = table;
             let obj2 = callback(table[5]);
             if (!obj2.isNil(item10011)) {
-              let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
+              let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+              let tmp7 = item10011;
+              if (DESKTOP.has(tmp4.eventName)) {
+                let tmp8 = item10011;
+                let heartbeat = tmp4.heartbeat;
                 let lastBeatAt;
                 if (heartbeat != null) {
                   lastBeatAt = heartbeat.lastBeatAt;
                 }
                 if (null != lastBeatAt) {
+                  let tmp14 = set;
                   let addResult = set.add(arg0);
                 } else {
-                  let heartbeat2 = item10011.heartbeat;
+                  let tmp10 = item10011;
+                  let heartbeat2 = tmp4.heartbeat;
                   let lastBeatAt1;
                   if (heartbeat2 != null) {
                     lastBeatAt1 = heartbeat2.lastBeatAt;
                   }
                   if (null == lastBeatAt1) {
+                    let tmp12 = set;
                     let deleteResult = set.delete(arg0);
                   }
                 }
@@ -746,24 +809,32 @@ const questStore = new QuestStore(dispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
+            let tmp4 = item10011;
+            let tmp5 = callback;
+            let tmp6 = table;
             let obj2 = callback(table[5]);
             if (!obj2.isNil(item10011)) {
-              let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
+              let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+              let tmp7 = item10011;
+              if (DESKTOP.has(tmp4.eventName)) {
+                let tmp8 = item10011;
+                let heartbeat = tmp4.heartbeat;
                 let lastBeatAt;
                 if (heartbeat != null) {
                   lastBeatAt = heartbeat.lastBeatAt;
                 }
                 if (null != lastBeatAt) {
+                  let tmp14 = set;
                   let addResult = set.add(arg0);
                 } else {
-                  let heartbeat2 = item10011.heartbeat;
+                  let tmp10 = item10011;
+                  let heartbeat2 = tmp4.heartbeat;
                   let lastBeatAt1;
                   if (heartbeat2 != null) {
                     lastBeatAt1 = heartbeat2.lastBeatAt;
                   }
                   if (null == lastBeatAt1) {
+                    let tmp12 = set;
                     let deleteResult = set.delete(arg0);
                   }
                 }
@@ -809,7 +880,8 @@ const questStore = new QuestStore(dispatcherDefault, {
       userStatus = value.userStatus;
     }
     if (tmp5) {
-      const obj = {};
+      let obj = { userStatus: null };
+      obj = {};
       const merged = Object.assign(userStatus);
       obj.claimedAt = rewardCode.claimedAt;
       obj[0] = obj;
@@ -832,24 +904,32 @@ const questStore = new QuestStore(dispatcherDefault, {
             }
             const values = Object.values(progress);
             for (const item10011 of values) {
+              let tmp4 = item10011;
+              let tmp5 = callback;
+              let tmp6 = table;
               let obj2 = callback(table[5]);
               if (!obj2.isNil(item10011)) {
-                let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-                if (DESKTOP.has(item10011.eventName)) {
-                  let heartbeat = item10011.heartbeat;
+                let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+                let tmp7 = item10011;
+                if (DESKTOP.has(tmp4.eventName)) {
+                  let tmp8 = item10011;
+                  let heartbeat = tmp4.heartbeat;
                   let lastBeatAt;
                   if (heartbeat != null) {
                     lastBeatAt = heartbeat.lastBeatAt;
                   }
                   if (null != lastBeatAt) {
+                    let tmp14 = set;
                     let addResult = set.add(arg0);
                   } else {
-                    let heartbeat2 = item10011.heartbeat;
+                    let tmp10 = item10011;
+                    let heartbeat2 = tmp4.heartbeat;
                     let lastBeatAt1;
                     if (heartbeat2 != null) {
                       lastBeatAt1 = heartbeat2.lastBeatAt;
                     }
                     if (null == lastBeatAt1) {
+                      let tmp12 = set;
                       let deleteResult = set.delete(arg0);
                     }
                   }
@@ -944,24 +1024,32 @@ const questStore = new QuestStore(dispatcherDefault, {
               }
               const values = Object.values(progress);
               for (const item10011 of values) {
+                let tmp4 = item10011;
+                let tmp5 = callback;
+                let tmp6 = table;
                 let obj2 = callback(table[5]);
                 if (!obj2.isNil(item10011)) {
-                  let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-                  if (DESKTOP.has(item10011.eventName)) {
-                    let heartbeat = item10011.heartbeat;
+                  let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+                  let tmp7 = item10011;
+                  if (DESKTOP.has(tmp4.eventName)) {
+                    let tmp8 = item10011;
+                    let heartbeat = tmp4.heartbeat;
                     let lastBeatAt;
                     if (heartbeat != null) {
                       lastBeatAt = heartbeat.lastBeatAt;
                     }
                     if (null != lastBeatAt) {
+                      let tmp14 = set;
                       let addResult = set.add(arg0);
                     } else {
-                      let heartbeat2 = item10011.heartbeat;
+                      let tmp10 = item10011;
+                      let heartbeat2 = tmp4.heartbeat;
                       let lastBeatAt1;
                       if (heartbeat2 != null) {
                         lastBeatAt1 = heartbeat2.lastBeatAt;
                       }
                       if (null == lastBeatAt1) {
+                        let tmp12 = set;
                         let deleteResult = set.delete(arg0);
                       }
                     }
@@ -996,16 +1084,18 @@ const questStore = new QuestStore(dispatcherDefault, {
     set = new Set(set);
     set.add(questId);
     map = new Map(map);
+    let flag = false;
     while (tmp2 !== undefined) {
+      let tmp4 = callback;
       let tmp5 = callback(tmp3, 2);
       let first = tmp5[0];
       if (tmp5[1] === questId) {
+        let tmp7 = first;
         let deleteResult = map.delete(first);
-        let flag = true;
+        flag = true;
       }
       continue;
     }
-    tmp2 = map[Symbol.iterator]();
   },
   QUESTS_DISMISS_CONTENT_SUCCESS: function handleDismissContentSuccess(dismissedQuestUserStatus) {
     dismissedQuestUserStatus = dismissedQuestUserStatus.dismissedQuestUserStatus;
@@ -1029,24 +1119,32 @@ const questStore = new QuestStore(dispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
+            let tmp4 = item10011;
+            let tmp5 = callback;
+            let tmp6 = table;
             let obj2 = callback(table[5]);
             if (!obj2.isNil(item10011)) {
-              let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
+              let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+              let tmp7 = item10011;
+              if (DESKTOP.has(tmp4.eventName)) {
+                let tmp8 = item10011;
+                let heartbeat = tmp4.heartbeat;
                 let lastBeatAt;
                 if (heartbeat != null) {
                   lastBeatAt = heartbeat.lastBeatAt;
                 }
                 if (null != lastBeatAt) {
+                  let tmp14 = set;
                   let addResult = set.add(arg0);
                 } else {
-                  let heartbeat2 = item10011.heartbeat;
+                  let tmp10 = item10011;
+                  let heartbeat2 = tmp4.heartbeat;
                   let lastBeatAt1;
                   if (heartbeat2 != null) {
                     lastBeatAt1 = heartbeat2.lastBeatAt;
                   }
                   if (null == lastBeatAt1) {
+                    let tmp12 = set;
                     let deleteResult = set.delete(arg0);
                   }
                 }
@@ -1078,7 +1176,8 @@ const questStore = new QuestStore(dispatcherDefault, {
   },
   QUESTS_USER_STATUS_UPDATE: function handleQuestUserStatusUpdate(user_status) {
     user_status = user_status.user_status;
-    let obj = { location: QuestsExperimentLocations.QUESTS_STORE };
+    let obj = getQuestLogger;
+    obj = { location: QuestsExperimentLocations.QUESTS_STORE };
     const questLogger = obj.getQuestLogger(obj);
     questLogger.log("Received user status update for " + user_status.quest_id, user_status);
     const result = progressFromServer.questUserStatusFromServer(user_status);
@@ -1102,24 +1201,32 @@ const questStore = new QuestStore(dispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
+            let tmp4 = item10011;
+            let tmp5 = callback;
+            let tmp6 = table;
             let obj2 = callback(table[5]);
             if (!obj2.isNil(item10011)) {
-              let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
+              let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+              let tmp7 = item10011;
+              if (DESKTOP.has(tmp4.eventName)) {
+                let tmp8 = item10011;
+                let heartbeat = tmp4.heartbeat;
                 let lastBeatAt;
                 if (heartbeat != null) {
                   lastBeatAt = heartbeat.lastBeatAt;
                 }
                 if (null != lastBeatAt) {
+                  let tmp14 = set;
                   let addResult = set.add(arg0);
                 } else {
-                  let heartbeat2 = item10011.heartbeat;
+                  let tmp10 = item10011;
+                  let heartbeat2 = tmp4.heartbeat;
                   let lastBeatAt1;
                   if (heartbeat2 != null) {
                     lastBeatAt1 = heartbeat2.lastBeatAt;
                   }
                   if (null == lastBeatAt1) {
+                    let tmp12 = set;
                     let deleteResult = set.delete(arg0);
                   }
                 }
@@ -1200,24 +1307,32 @@ const questStore = new QuestStore(dispatcherDefault, {
           }
           const values = Object.values(progress);
           for (const item10011 of values) {
+            let tmp4 = item10011;
+            let tmp5 = callback;
+            let tmp6 = table;
             let obj2 = callback(table[5]);
             if (!obj2.isNil(item10011)) {
-              let DESKTOP = callback(table[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
-              if (DESKTOP.has(item10011.eventName)) {
-                let heartbeat = item10011.heartbeat;
+              let DESKTOP = tmp5(tmp6[6]).FirstPartyQuestTaskTypesSets.DESKTOP;
+              let tmp7 = item10011;
+              if (DESKTOP.has(tmp4.eventName)) {
+                let tmp8 = item10011;
+                let heartbeat = tmp4.heartbeat;
                 let lastBeatAt;
                 if (heartbeat != null) {
                   lastBeatAt = heartbeat.lastBeatAt;
                 }
                 if (null != lastBeatAt) {
+                  let tmp14 = set;
                   let addResult = set.add(arg0);
                 } else {
-                  let heartbeat2 = item10011.heartbeat;
+                  let tmp10 = item10011;
+                  let heartbeat2 = tmp4.heartbeat;
                   let lastBeatAt1;
                   if (heartbeat2 != null) {
                     lastBeatAt1 = heartbeat2.lastBeatAt;
                   }
                   if (null == lastBeatAt1) {
+                    let tmp12 = set;
                     let deleteResult = set.delete(arg0);
                   }
                 }
@@ -1260,6 +1375,7 @@ const questStore = new QuestStore(dispatcherDefault, {
         const map4 = new Map(store3);
         store3 = map4.set(previewQuestUserStatus.questId, isQuestExpiredResult);
       }
+      const obj8 = getQuestDeliveryDataForPlacement;
     }
   },
   QUESTS_PREVIEW_OVERRIDE: function handlePreviewOverride(arg0) {
@@ -1336,6 +1452,6 @@ const questStore = new QuestStore(dispatcherDefault, {
     const result = map.set(placement.placement, false);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/quests/QuestStore.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/QuestStore.tsx");
 
 export default questStore;

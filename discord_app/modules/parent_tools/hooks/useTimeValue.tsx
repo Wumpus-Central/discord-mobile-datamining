@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/hooks/useTimeValue.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
 
 export default function useTimeValue(arg0) {
   ({ initial: closure_0, defaultValue: closure_1 } = arg0);

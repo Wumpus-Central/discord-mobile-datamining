@@ -4,19 +4,19 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import tinycolorDefault from "../../../../_runtime/05311_tinycolor.js";
 import Background from "../../../../_runtime/06319_Background.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import _toArray from "../../../../_runtime/00853__toArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00853__toArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../a11y/AccessibilityStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function CancelButton(arg0) {
   ({ tintColor: require, onCancel } = arg0);
+  dependencyMap = undefined;
   dependencyMap = callback2();
   const items = [onCancel];
   const callback = React.useCallback(() => {
@@ -29,7 +29,7 @@ function CancelButton(arg0) {
     onPress: callback,
     backImage() {
       const style = [closeButtonIcon.closeButtonIcon, { tintColor: closure_0 }];
-      return closure_1_12(require(closeButtonIcon[12]).XSmallIcon, { size: "lg", style });
+      return closure_1_12(closure_1_0(closeButtonIcon[12]).XSmallIcon, { size: "lg", style });
     },
     accessibilityLabel: null,
     displayMode: "minimal"
@@ -40,10 +40,11 @@ function CancelButton(arg0) {
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
+  let backgroundColors;
   importDefault = undefined;
   let token;
   let token1;
-  const backgroundColors = importDefault(token[19])(product.styles).backgroundColors;
+  backgroundColors = importDefault(token[19])(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -59,20 +60,20 @@ function ProductPurchaseGradientBackground(product) {
       const items = [token, token, token1, closure_1_22, closure_1_22];
       let items2 = items;
     } else {
-      const primary2 = backgroundColors.primary;
+      const primary2 = tmp.primary;
       const toHexStringResult = primary2.toHexString();
       if (closure_1) {
         const items1 = [toHexStringResult, , ];
-        const secondary2 = backgroundColors.secondary;
+        const secondary2 = tmp.secondary;
         items1[1] = secondary2.toHexString();
-        const tertiary = backgroundColors.tertiary;
+        const tertiary = tmp.tertiary;
         items1[2] = tertiary.toHexString();
         items2 = items1;
       } else {
         items2 = [toHexStringResult, , , , ];
-        const primary = backgroundColors.primary;
+        const primary = tmp.primary;
         items2[1] = primary.toHexString();
-        const secondary = backgroundColors.secondary;
+        const secondary = tmp.secondary;
         items2[2] = secondary.toHexString();
         items2[3] = closure_1_22;
         items2[4] = closure_1_22;
@@ -86,7 +87,8 @@ function ProductPurchaseGradientBackground(product) {
 ({ Image: closure_6, ScrollView: error, View: closure_8 } = get_ActivityIndicator);
 ({ Orientation: c10, VerticalGradient: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { closeButtonIcon: null };
+createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[0] = createCacheKey;
 let closure_15 = createCacheKey.createStyles(createCacheKey);
 let closure_16 = createCacheKey.createStyles((arg0) => {
@@ -94,7 +96,8 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  let obj = { root: null, header: null, headerLeading: null, imageBackground: null, backdrop: null, main: null, curtain: null, body: null, preview: null, previewBundle: null, messages: null, title: null, footer: null, cta: null };
+  obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[1] = obj;
@@ -116,13 +119,13 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   obj2[4] = str;
   let PX_32;
   if (arg0 === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
-    PX_32 = ThemesDefault.space.PX_32;
+    PX_32 = tmp(712).space.PX_32;
   }
   obj2[5] = PX_32;
   if (flag) {
-    if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1949).CollectiblesItemType.AVATAR_DECORATION) {
       const obj3 = { shadowColor: null, shadowOffset: null, shadowOpacity: 1, shadowRadius: 60, elevation: 24 };
-      obj3[0] = ThemesDefault.unsafe_rawColors.PRIMARY_630;
+      obj3[0] = tmp(712).unsafe_rawColors.PRIMARY_630;
       obj3[1] = { width: 0, height: 0 };
       let obj8 = obj3;
     }
@@ -130,25 +133,25 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
     obj[8] = obj2;
     obj[9] = { flex: 1, justifyContent: "flex-start", alignItems: "center", minHeight: 250 };
     const obj4 = { paddingTop: null, minHeight: null, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: null };
-    obj4[0] = ThemesDefault.space.PX_24;
+    obj4[0] = tmp(712).space.PX_24;
     let str2;
-    if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
+    if (arg0 === tmp3(1949).CollectiblesItemType.AVATAR_DECORATION) {
       str2 = "32%";
     }
     obj4[1] = str2;
-    obj4[5] = ThemesDefault.space.PX_16;
+    obj4[5] = tmp(712).space.PX_16;
     obj[10] = obj4;
     const obj5 = { textAlign: "center", marginHorizontal: null };
-    obj5[1] = ThemesDefault.space.PX_32;
+    obj5[1] = tmp(712).space.PX_32;
     obj[11] = obj5;
     const obj6 = { marginBottom: null };
-    obj6[0] = ThemesDefault.space.PX_16;
+    obj6[0] = tmp(712).space.PX_16;
     obj[12] = obj6;
     const obj7 = { flexDirection: "row", gap: null, paddingVertical: null, marginHorizontal: null, borderRadius: null };
-    obj7[1] = ThemesDefault.space.PX_12;
-    obj7[2] = ThemesDefault.space.PX_16;
-    obj7[3] = ThemesDefault.space.PX_24;
-    obj7[4] = ThemesDefault.radii.round;
+    obj7[1] = tmp(712).space.PX_12;
+    obj7[2] = tmp(712).space.PX_16;
+    obj7[3] = tmp(712).space.PX_24;
+    obj7[4] = tmp(712).radii.round;
     obj[13] = obj7;
     return obj;
   }
@@ -160,7 +163,7 @@ let closure_20 = { code: "function ProductPurchaseSuccessModalTsx3(){const{inter
 let closure_21 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
 let closure_22 = tinycolorDefault("black").toHexString();
 let obj5 = tinycolorDefault("black");
-let result = require("obj132").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessModal.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessModal.tsx");
 
 export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
   ({ product, useCategoryImage } = orbBalancePriorToPurchase);
@@ -274,8 +277,8 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
   const animatedStyle = stateFromStores(sharedValue[14]).useAnimatedStyle(fn);
   const tmp2Result4 = stateFromStores(sharedValue[14]);
   const fn2 = function n() {
-    { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: null };
-    const obj = { scale: null };
+    let obj = { opacity: stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0, 1]), transform: null };
+    obj = { scale: null };
     const obj2 = stateFromStores(sharedValue[14]);
     obj[0] = stateFromStores(sharedValue[14]).interpolate(sharedValue.get(), [0, 1], [0.75, 1]);
     const items = [obj];
@@ -354,7 +357,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       showOrbBalancePill = tmp31(tmp2(tmp3[32]).BalanceWidgetPill, obj9);
     }
     obj8[1] = showOrbBalancePill;
-    const items5 = [tmp31(closure_8, obj8), ];
+    const items5 = [tmp31(tmp28, obj8), ];
     let toHexStringResult;
     if (backgroundColors != null) {
       const label = backgroundColors.label;
@@ -368,7 +371,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
     obj10[1] = onCancel;
     items5[1] = tmp31(CancelButton, obj10);
     obj7[1] = items5;
-    const items6 = [callback(closure_8, obj7), , ];
+    const items6 = [tmp27(tmp28, obj7), , ];
     const obj11 = { style: null, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
     obj11[0] = { flex: 1 };
     obj11[1] = tmp6.body;
@@ -389,7 +392,7 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
         tmp30Result = tmp30(tmp4(tmp3[33]), obj14);
       }
       obj13[2] = tmp30Result;
-      tmp30Result = tmp30(closure_8, obj13);
+      tmp30Result = tmp30(tmp28, obj13);
     } else if (tmp2(tmp3[9]).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj15 = { item: null, size: null, avatarSource: null, animate: null };
       obj15[0] = sharedValue1(product.items, 1)[0];
@@ -450,13 +453,14 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       obj22[3] = formatResult;
       items10[1] = tmp31(tmp2(tmp3[38]).Text, obj22);
       obj25[0] = items10;
-      renderMessagesResult = callback(closure_14, obj25);
+      renderMessagesResult = tmp27(closure_14, obj25);
       const tmp2Result12 = tmp2(tmp3[39]);
+      const tmp41 = closure_14;
     }
     obj19[1] = renderMessagesResult;
     items8[1] = tmp31(tmp4(tmp3[14]).View, obj19);
     obj11[3] = items8;
-    items6[1] = callback(closure_7, obj11);
+    items6[1] = tmp27(closure_7, obj11);
     const obj26 = { style: null, children: null };
     obj26[0] = tmp6.footer;
     const obj27 = { style: null, children: null };
@@ -476,19 +480,18 @@ export default function ProductPurchaseSuccessModal(orbBalancePriorToPurchase) {
       obj29[1] = intl.string(tmp2(tmp3[13]).t["2p2aYz"]);
     }
     obj27[1] = tmp31(tmp2(tmp3[40]).Button, obj29);
-    obj26[1] = tmp31(closure_8, obj27);
-    items6[2] = tmp31(closure_8, obj26);
+    obj26[1] = tmp31(tmp28, obj27);
+    items6[2] = tmp31(tmp28, obj26);
     obj5[5] = items6;
-    items3[1] = callback(tmp2(tmp3[31]).SafeAreaPaddingView, obj5);
+    items3[1] = tmp27(tmp2(tmp3[31]).SafeAreaPaddingView, obj5);
     const obj30 = { style: null, pointerEvents: "none" };
     const items11 = [tmp6.curtain, animatedStyle2];
     obj30[0] = items11;
     items3[2] = tmp31(tmp4(tmp3[14]).View, obj30);
     obj2[2] = items3;
-    return callback(closure_8, obj2);
+    return tmp27(tmp28, obj2);
   }
   tmp29 = callback(ProductPurchaseGradientBackground, { product });
   tmp30 = callback;
   tmp31 = callback;
-  const tmp24 = sharedValue1(obj3.useState(), 2);
 };

@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import _handleConnectionOpen from "../../../../gateway/GatewayConnectionStore.tsx";
-import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
-import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
-import makeSortedChannel from "../../../../../stores/views/PrivateChannelSortStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../../stores/views/PrivateChannelSortStore.tsx";
 
-const require = fn;
+const require = arg1;
 let obj = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
 
 export default function useMessagesData() {
   let items = [numFriendSuggestions, friendSuggestions];
@@ -38,14 +38,14 @@ export default function useMessagesData() {
   const items3 = [connected, connectedToGateway, first, tmp4[1], numFriendSuggestions, friendSuggestions, setting, stateFromStores, setAdded];
   return setAdded.useMemo(() => {
     if (-1 === ref.current) {
-      ref.current = 0;
+      tmp.current = 0;
     } else {
       let tmp2 = connected;
       if (connected) {
         tmp2 = connectedToGateway;
       }
       if (tmp2) {
-        ref.current = ref.current + 1;
+        tmp.current = tmp.current + 1;
       }
     }
     let arr = first;
@@ -62,7 +62,7 @@ export default function useMessagesData() {
       bound = Math.min(tmp4, 5);
     }
     const items = [];
-    items.push(arr.length);
+    arr = items.push(arr.length);
     arr = items.push(arr1.length);
     let num4 = 0;
     if (numFriendSuggestions > 0) {
@@ -97,7 +97,7 @@ export default function useMessagesData() {
     let combined = null;
     if (ref.current > 0) {
       const _HermesInternal = HermesInternal;
-      combined = "" + ref.current;
+      combined = "" + tmp.current;
     }
     obj[2] = combined;
     let tmp26 = !tmp3;

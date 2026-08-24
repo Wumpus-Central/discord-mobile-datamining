@@ -1,20 +1,22 @@
 // discord_app/modules/video_calls/native/components/usePipDimensions.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let c4 = 0.5625;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
 export default function usePipDimensions(channelId) {
   let forcedOrientation = channelId.forcedOrientation;
   if (forcedOrientation === undefined) {
     forcedOrientation = null;
   }
+  let isViewingActivity;
   let width;
-  const isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
+  let height;
+  isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
   const size = isViewingActivity(width[2])();
   width = size.width;
-  let height = size.height;
+  height = size.height;
   const items = [height, width, forcedOrientation, isViewingActivity];
   return height.useMemo(() => {
     let tmp3 = width > height;

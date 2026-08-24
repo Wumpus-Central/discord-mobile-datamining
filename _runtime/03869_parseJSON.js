@@ -47,6 +47,9 @@ export default function parseJSON(str) {
       const diff1 = +match[4] - num2 * num3;
       const diff2 = +match[5] - num4 * num5;
       _Date = new _Date(Date.UTC(tmp7, diff, tmp9, diff1, diff2, tmp12, +`${tmp13}00`.substring(0, 3)));
+      const tmp10 = +match[4];
+      const tmp11 = +match[5];
+      const tmp8 = +match[2];
     } else {
       _Date = new _Date(NaN);
     }

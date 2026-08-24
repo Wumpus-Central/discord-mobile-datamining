@@ -1,10 +1,8 @@
 // discord_app/modules/activities/records/CustomActivityLinkRecord.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import updateAssets from "../../../utils/ApplicationAssetUtils.tsx";
-import fetchCustomActivityLink from "../utils/CustomActivityLinkUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 import CustomLinkType from "../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx";
 
-let result = obj132.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
+let result = set.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
   constructor(arg0) {
     obj = require("CustomLinkType");
@@ -36,10 +34,10 @@ class CustomActivityLinkRecord {
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
   if (this.type === CustomLinkType.CustomLinkType.MANAGED) {
-    let tmpResult = updateAssets;
+    let tmpResult = tmp(7247);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === CustomLinkType.CustomLinkType.QUICK) {
-    tmpResult = fetchCustomActivityLink;
+  } else if (self.type === tmp(12414).CustomLinkType.QUICK) {
+    tmpResult = tmp(12411);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

@@ -1,8 +1,7 @@
 // _runtime/09702_pbkdf2Init.js
 import _asyncLoop from "09699__asyncLoop.js";
 import number from "09700_number.js";
-import _isNativeReflectConstruct from "09703__isNativeReflectConstruct.js";
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function pbkdf2Init(sha256, B, B, arg3) {
   number.hash(sha256);
@@ -16,12 +15,12 @@ function pbkdf2Init(sha256, B, B, arg3) {
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
-    const toBytesResult = _asyncLoop.toBytes(B);
+    const toBytesResult = tmp(9699).toBytes(B);
     const uint8Array = new Uint8Array(dkLen);
-    const hmac = _isNativeReflectConstruct.hmac;
-    hmac.create(sha256, toBytesResult);
-    const toBytesResult1 = _asyncLoop.toBytes(B);
-    const obj = { c: null, dkLen: null, asyncTick: null, DK: null, PRF: null, PRFSalt: null };
+    const hmac = tmp(9703).hmac;
+    let obj = hmac.create(sha256, toBytesResult);
+    const toBytesResult1 = tmp(9699).toBytes(B);
+    obj = { c: null, dkLen: null, asyncTick: null, DK: null, PRF: null, PRFSalt: null };
     obj[0] = c;
     obj[1] = dkLen;
     obj[2] = asyncTick;
@@ -43,7 +42,7 @@ function pbkdf2Output(destroy, destroy2, arg2, destroy3, arr) {
 }
 function _pbkdf2Async() {
   const self = this;
-  const tmp = asyncGeneratorStep((arg0, arg1, arg2, arg3) => {
+  const tmp = callback((arg0, arg1, arg2, arg3) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -131,13 +130,13 @@ function _pbkdf2Async() {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        const subarrayResult = closure_1_4.subarray(closure_1_12, closure_1_12 + iter4.outputLen);
+                        const subarrayResult = closure_1_4.subarray(closure_1_12, closure_1_12 + closure_1_5.outputLen);
                         v0 = subarrayResult;
                         closure_1_8.setInt32(0, closure_1_11, false);
-                        let _cloneIntoResult = next._cloneInto(v0);
+                        let _cloneIntoResult = closure_1_6._cloneInto(v0);
                         v0 = _cloneIntoResult;
-                        _cloneIntoResult.update(iter3).digestInto(uint8Array1);
-                        const result = subarrayResult.set(uint8Array1.subarray(0, subarrayResult.length));
+                        _cloneIntoResult.update(closure_1_7).digestInto(closure_1_9);
+                        const result = subarrayResult.set(closure_1_9.subarray(0, subarrayResult.length));
                         table = 1;
                         v0 = 1;
                         obj1 = { value: null, done: false };
@@ -148,12 +147,13 @@ function _pbkdf2Async() {
                           let num = 0;
                           if (0 < c0.length) {
                             do {
+                              let tmp2 = c0;
+                              let tmp3 = closure_1_9;
                               c0[num] = c0[num] ^ closure_1_9[num];
                               num = num + 1;
                               length = c0.length;
                             } while (num < length);
                           }
-                          const updateResult = closure_1_5._cloneInto(c0).update(closure_1_9);
                         });
                         return obj1;
                       }
@@ -296,10 +296,13 @@ export const pbkdf2 = function pbkdf2(sha256, B, B, arg3) {
       let updateResult = _cloneIntoResult.update(uint8Array);
       let digestIntoResult = updateResult.digestInto(uint8Array1);
       let result = subarrayResult.set(uint8Array1.subarray(0, subarrayResult.length));
+      let tmp8 = num;
+      let tmp9 = num2;
       for (let num3 = 1; num3 < c; num3 = num3 + 1) {
         let _cloneIntoResult1 = PRF._cloneInto(_cloneIntoResult);
         let updateResult1 = _cloneIntoResult1.update(uint8Array1);
         let digestIntoResult1 = updateResult1.digestInto(uint8Array1);
+        let tmp11 = num3;
         let num4 = 0;
         if (0 < subarrayResult.length) {
           do {

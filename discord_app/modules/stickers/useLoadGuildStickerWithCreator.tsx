@@ -1,18 +1,18 @@
 // discord_app/modules/stickers/useLoadGuildStickerWithCreator.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import parseServerGuildSticker from "GuildStickersStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "GuildStickersStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
 
 export default function useLoadGuildStickersWithCreator(arg0) {
   const _require = arg0;
   [tmp2, dependencyMap] = callback(React.useState("loading"), 2);
-  let obj = initialize;
+  let obj = _initialize;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getStickersByGuildId(closure_0));
   const items1 = [arg0];
@@ -22,7 +22,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
       const tmp = closure_2_2(function*() {
         c0 = tmp3;
         c3 = 1;
-        obj1 = abortController(signal[6]);
+        obj1 = closure_2_0(closure_2_1[6]);
         yield obj1.fetchGuildStickersWithCreator(closure_1_0, v0);
         if (1 === tmp7) {
           c3 = 0;
@@ -71,12 +71,12 @@ export default function useLoadGuildStickersWithCreator(arg0) {
   if ("success" === tmp2) {
     obj = { status: null, stickers: null };
     obj[0] = tmp2;
-    obj[1] = stateFromStores.map((item, index) => {
-      user = user.getUser(item.user_id);
-      let tmp2 = item;
+    obj[1] = stateFromStores.map((user_id) => {
+      user = user.getUser(user_id.user_id);
+      let tmp2 = user_id;
       if (null != user) {
         const obj = {};
-        const merged = Object.assign(item);
+        const merged = Object.assign(user_id);
         obj.user = user;
         tmp2 = obj;
       }

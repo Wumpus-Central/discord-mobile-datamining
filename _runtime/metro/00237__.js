@@ -24,6 +24,7 @@ const obj = {
         HermesBuiltin.arraySpread(substr, 0);
         HermesBuiltin.apply(items1, undefined);
       }
+      const tmp2 = c4;
     }
   },
   logToConsole(arg0) {

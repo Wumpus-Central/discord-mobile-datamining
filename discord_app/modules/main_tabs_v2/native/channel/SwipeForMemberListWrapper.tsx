@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx
 import timestampDefault from "../../../debug/Logger.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import useChannelDetailsStore from "../sidebar/details/stores/ChannelDetailsStore.tsx";
 import { MIDNIGHT_BORDER_WIDTH } from "../shared_components/MainTabsV2Constants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
@@ -19,14 +19,16 @@ const View = get_ActivityIndicator.View;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new timestampDefault("SwipeForMemberListWrapper");
 let context = importAllResult.createContext(undefined);
-let obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { memberListPreview: null, content: null, memberListContainer: null, midnightBorder: null, midnightRightOverflow: null };
+obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-const createCacheKey = {};
+createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.overflow = "hidden";
 obj[1] = createCacheKey;
 const tmp6 = new timestampDefault("SwipeForMemberListWrapper");
 obj[2] = { flex: 1, overflow: "hidden", backgroundColor: ThemesDefault.colors.MODAL_BACKGROUND };
+let obj2 = { flex: 1, overflow: "hidden", backgroundColor: ThemesDefault.colors.MODAL_BACKGROUND };
 obj[3] = { borderLeftColor: ThemesDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
 obj[4] = { right: -MIDNIGHT_BORDER_WIDTH };
 let closure_17 = createCacheKey.createStyles(obj);
@@ -37,14 +39,24 @@ let closure_21 = { code: "function SwipeForMemberListWrapperTsx4(isInactive,wasI
 let closure_22 = { code: "function SwipeForMemberListWrapperTsx5(){const{maxWidth,translateX}=this.__closure;return maxWidth-translateX.get();}" };
 let closure_23 = { code: "function SwipeForMemberListWrapperTsx6(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,MIDNIGHT_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.MIDNIGHT||isChatBesideChannelList)return translateX.get();return translateX.get()-MIDNIGHT_BORDER_WIDTH;}" };
 let closure_24 = { code: "function SwipeForMemberListWrapperTsx7(){const{shownPixels,PEEK_PIXEL_THRESHOLD}=this.__closure;const exceedsPeekThreshold=shownPixels.get()>PEEK_PIXEL_THRESHOLD*2;return{display:exceedsPeekThreshold?'none':'flex',opacity:exceedsPeekThreshold?0:1-shownPixels.get()/PEEK_PIXEL_THRESHOLD};}" };
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx");
+let obj3 = { borderLeftColor: ThemesDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx");
 
 export default function _default(channelId) {
   channelId = channelId.channelId;
   gesture = channelId;
   const screenIndex = channelId.screenIndex;
+  let derivedValue = screenIndex;
   let gesture2 = channelId.isBackEnabled;
-  let derivedValue;
+  let disallowGesture;
+  let translateX2;
+  let gesture3;
+  let disallowGesture2;
+  let translateX3;
+  let disallowGesture3;
+  let isChatLockedOpen;
+  let maxWidth;
+  derivedValue = undefined;
   let derivedStateFromSharedValue;
   let callback2;
   let callback3;
@@ -52,12 +64,12 @@ export default function _default(channelId) {
   ({ children, style } = channelId);
   let tmp = callback();
   let tmp4 = derivedValue(gesture2[15])();
-  let disallowGesture = tmp4;
+  disallowGesture = tmp4;
   const isChatBesideChannelList = derivedValue(gesture2[12])().isChatBesideChannelList;
-  let translateX2 = isChatBesideChannelList;
+  translateX2 = isChatBesideChannelList;
   let obj = translateX2;
   const tmp5 = disallowGesture(translateX2.useState(channelId), 2);
-  let gesture3 = tmp5[1];
+  gesture3 = tmp5[1];
   const items = [channelId];
   const effect = translateX2.useEffect(() => {
     closure_0 = gesture(gesture2[16]).runAfterInteractions(() => {
@@ -71,7 +83,7 @@ export default function _default(channelId) {
     gesture(gesture2[17]).dismissKeyboard();
   }, []);
   const tmp8 = derivedValue(gesture2[18])(screenIndex);
-  let disallowGesture2 = tmp8;
+  disallowGesture2 = tmp8;
   const items1 = [tmp4, tmp8];
   const items2 = [channelId, screenIndex];
   const memo = translateX2.useMemo(() => {
@@ -94,12 +106,12 @@ export default function _default(channelId) {
   }, items2);
   const tmp11 = derivedValue(gesture2[20])({ canDrag: true, onDragStart: callback, onPreMovement: callback1, startShown: false, cancelOnSwipeRightFromStart: true, openWidth: memo });
   ({ gesture, panelGestureContext } = tmp11);
-  let translateX3 = panelGestureContext;
+  translateX3 = panelGestureContext;
   ({ isDragging, translateX } = tmp11);
-  let disallowGesture3 = translateX;
+  disallowGesture3 = translateX;
   const movePanel = tmp11.movePanel;
-  let isChatLockedOpen = movePanel;
-  const maxWidth = tmp11.maxWidth;
+  isChatLockedOpen = movePanel;
+  maxWidth = tmp11.maxWidth;
   obj1 = gesture(gesture2[13]);
   class X {
     constructor() {
@@ -172,10 +184,10 @@ export default function _default(channelId) {
     let ComponentDispatch2 = gesture(gesture2[19]).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(derivedValue.HIDE_CHANNEL_DETAILS, callback3);
     return () => {
-      const ComponentDispatch = gesture(gesture2[19]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(derivedValue.SHOW_CHANNEL_DETAILS, closure_13);
-      const ComponentDispatch2 = gesture(gesture2[19]).ComponentDispatch;
-      ComponentDispatch2.unsubscribe(derivedValue.HIDE_CHANNEL_DETAILS, closure_14);
+      const ComponentDispatch = closure_1_0(closure_1_2[19]).ComponentDispatch;
+      ComponentDispatch.unsubscribe(closure_1_11.SHOW_CHANNEL_DETAILS, closure_13);
+      const ComponentDispatch2 = closure_1_0(closure_1_2[19]).ComponentDispatch;
+      ComponentDispatch2.unsubscribe(closure_1_11.HIDE_CHANNEL_DETAILS, closure_14);
     };
   }, items7);
   const items8 = [derivedValue, callback3, channelId];
@@ -192,13 +204,13 @@ export default function _default(channelId) {
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
       }
-      let tmp23Result = gesture(gesture2[12]);
+      let tmp23Result = tmp23(tmp24[12]);
       isChatLockedOpen = tmp23Result.getChatLayout().isChatLockedOpen;
-      tmp23Result = gesture(gesture2[24]);
+      tmp23Result = tmp23(tmp24[24]);
       let coerceChannelRouteResult = tmp23Result.coerceChannelRoute(currentRoute);
       if (tmp3) {
-        coerceChannelRouteResult = gesture(gesture2[24]).coerceGuildsRoute(currentRoute);
-        const tmp23Result1 = gesture(gesture2[24]);
+        coerceChannelRouteResult = tmp23(tmp24[24]).coerceGuildsRoute(currentRoute);
+        const tmp23Result1 = tmp23(tmp24[24]);
       }
       obj = { route: null, channelId: null, currentRoute: null, isChatLockedOpen: null, routeParams: null };
       obj[0] = coerceChannelRouteResult;
@@ -223,7 +235,7 @@ export default function _default(channelId) {
         if (params2 != null) {
           channelId = params2.channelId;
         }
-        if (channelId !== gesture) {
+        if (channelId !== tmp5) {
           params = coerceChannelRouteResult.params;
           let channelId1;
           if (params != null) {
@@ -231,12 +243,12 @@ export default function _default(channelId) {
           }
           const obj2 = { routeChannelId: null, expectedChannelId: null };
           obj2[0] = channelId1;
-          obj2[1] = gesture;
+          obj2[1] = tmp5;
           navigation.verbose("handleBackPress", "route channelId mismatch", obj2);
           flag = false;
-        } else if (translateX3(gesture)) {
+        } else if (translateX3(tmp5)) {
           navigation.verbose("handleBackPress", "cancelling search before closing panel");
-          disallowGesture3(gesture, false, "initial");
+          disallowGesture3(tmp5, false, "initial");
           flag = true;
         } else {
           callback3();
@@ -255,10 +267,12 @@ export default function _default(channelId) {
   closure_15 = obj5.useNavigation();
   gesture = channelId;
   derivedValue = screenIndex;
+  gesture2 = isDragging;
+  disallowGesture = derivedStateFromSharedValue;
   const items10 = [channelId, screenIndex, derivedStateFromSharedValue];
   const effect5 = translateX2.useEffect(() => {
-    derivedValue(gesture2[10]);
-    const obj = { channel_id: gesture, screen_index: String(derivedValue), member_list_open: disallowGesture };
+    let obj = derivedValue(gesture2[10]);
+    obj = { channel_id: gesture, screen_index: String(derivedValue), member_list_open: disallowGesture };
     obj.trackWithMetadata(maxWidth.MEMBER_LIST_SWIPE_TOGGLED, obj);
   }, items10);
   const items11 = [derivedStateFromSharedValue, channelId, screenIndex, isDragging];
@@ -268,8 +282,8 @@ export default function _default(channelId) {
       value = gesture2.get();
     }
     if (value) {
-      derivedValue(gesture2[10]);
-      const obj = { channel_id: null, screen_index: null };
+      let obj = derivedValue(gesture2[10]);
+      obj = { channel_id: null, screen_index: null };
       obj[0] = gesture;
       const _String = String;
       obj[1] = String(derivedValue);
@@ -277,6 +291,7 @@ export default function _default(channelId) {
     }
   }, items11);
   gesture2 = undefined;
+  disallowGesture = undefined;
   translateX2 = undefined;
   gesture3 = undefined;
   disallowGesture2 = undefined;
@@ -316,11 +331,12 @@ export default function _default(channelId) {
     if (arg0 !== arg1) {
       const result = disallowGesture.set(arg0);
       if (disallowGesture2 != null) {
-        const result1 = disallowGesture2.set(arg0);
+        const result1 = obj.set(arg0);
       }
       if (!arg0) {
         const result2 = disallowGesture3.set(false);
       }
+      obj = disallowGesture2;
     }
   };
   fn2.__closure = { mainDisallowGesture: disallowGesture, stackDisallowGesture: disallowGesture2, panelDisallowGesture: disallowGesture3 };
@@ -336,9 +352,10 @@ export default function _default(channelId) {
     if (!tmp) {
       let tmp4 = null != translateX3;
       if (tmp4) {
-        tmp4 = translateX3.get() > 0;
+        tmp4 = obj.get() > 0;
       }
       tmp = tmp4;
+      obj = translateX3;
     }
     return tmp;
   };
@@ -430,6 +447,7 @@ export default function _default(channelId) {
   obj5 = { children: tmp35(tmp2(tmp3[32]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) };
   items17[1] = callback2(gesture(gesture2[31]).LayerScope, obj5);
   const tmp12Result3 = gesture(gesture2[13]);
+  const tmp41 = !derivedStateFromSharedValue;
   const items18 = [gesture3.absoluteFill, animatedStyle];
   items17[2] = callback2(derivedValue(gesture2[13]).View, { style: items18, children: callback2(disallowGesture2, obj7) });
   obj4[3] = items17;

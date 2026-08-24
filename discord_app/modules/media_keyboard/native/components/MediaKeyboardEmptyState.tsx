@@ -11,9 +11,9 @@ import registerAssetDefault2 from "../../../../../_runtime/10294_registerAsset.j
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NativePermissionStatus } from "../../../native_permissions/NativePermissionConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class MediaKeyboardEmptyState {
   constructor(arg0) {
     ({ actionIcon, actionLabel, actionPress, imageSource, label } = global);
@@ -31,11 +31,13 @@ class MediaKeyboardEmptyState {
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
+createCacheKey = { container: null, label: null };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginVertical: ThemesDefault.space.PX_16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx");
+const obj1 = { textAlign: "center", marginVertical: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx");
 
 export default MediaKeyboardEmptyState;
 export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComponentOrNull(photosEmpty) {
@@ -44,9 +46,9 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
     showCameraButton = true;
   }
   if (photoPermissionStatus !== NativePermissionStatus.DENIED) {
-    if (photoPermissionStatus !== NativePermissionStatus.RESTRICTED) {
+    if (photoPermissionStatus !== tmp3.RESTRICTED) {
       if (photosEmpty.photosEmpty) {
-        if (photoPermissionStatus === NativePermissionStatus.LIMITED) {
+        if (photoPermissionStatus === tmp3.LIMITED) {
           let obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
           obj[0] = callback(SettingsIcon.SettingsIcon, { color: "white", size: "sm" });
           const intl3 = getSystemLocale.intl;

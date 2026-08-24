@@ -1,15 +1,15 @@
 // discord_app/modules/external_pip/useExternalPipParticipant.android.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import getParticipants from "../calls/ChannelRTCStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
-import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../stores/RTCConnectionStore.tsx";
 import ParticipantTypes from "../calls/CallConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ isStreamParticipant: closure_8, ParticipantTypes: c9 } = ParticipantTypes);
-const result = require("obj132").fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
+const result = require("set").fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
 
 export default function useExternalPipParticipant() {
   const items = [closure_7];
@@ -17,9 +17,12 @@ export default function useExternalPipParticipant() {
   let tmpResult = tmp(tmp2[7]);
   const items1 = [closure_5];
   let stateFromStores1 = tmpResult.useStateFromStores(items1, () => id.getId());
+  selectedParticipantStreamId = channelId;
+  focusedParticipantStreamId = stateFromStores1;
+  stateFromStores1 = undefined;
   let React;
   stateFromStores1 = React.useRef(undefined);
-  React.useRef(undefined);
+  React = React.useRef(undefined);
   tmpResult = tmp(tmp2[7]);
   const items2 = [selectedParticipantSpeaking];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items2, () => {
@@ -42,12 +45,13 @@ export default function useExternalPipParticipant() {
       if (tmp6 != null) {
         id1 = tmp6.id;
       }
-      stateFromStores1.current = id1;
+      tmp7.current = id1;
       let type;
       if (tmp6 != null) {
         type = tmp6.type;
       }
       _undefined.current = type;
+      const tmp9 = _undefined;
     }
     let id2;
     if (tmp6 != null) {
@@ -76,7 +80,7 @@ export default function useExternalPipParticipant() {
         type2 = tmp6.type;
       }
       let tmp17;
-      if (type2 !== closure_1_9.ACTIVITY) {
+      if (type2 !== tmp13.ACTIVITY) {
         let id3;
         if (tmp6 != null) {
           const user2 = tmp6.user;
@@ -92,6 +96,7 @@ export default function useExternalPipParticipant() {
         type3 = tmp6.type;
       }
       obj[2] = type3;
+      tmp13 = closure_1_9;
     }
     return obj;
   });
@@ -121,27 +126,36 @@ export default function useExternalPipParticipant() {
         while (iter !== undefined) {
           let tmp5 = nextResult;
           if (!tmp53) {
+            let tmp6 = nextResult;
+            let tmp7 = closure_1_9;
             if (tmp5.type === closure_1_9.USER) {
+              let tmp8 = nextResult;
               let user = tmp5.user;
               let id;
               if (user != null) {
                 id = user.id;
               }
+              let tmp10 = stateFromStores1;
             }
             continue;
           }
+          let tmp11 = nextResult;
           let type = tmp5.type;
           if (closure_1_9.USER === type) {
+            let tmp21 = nextResult;
             let speaking = tmp5.speaking;
             if (!speaking) {
+              let tmp22 = nextResult;
               speaking = timestamp - tmp5.lastSpoke < 1000;
             }
             if (speaking) {
+              let tmp23 = tmp24;
               speaking = null == tmp24;
             }
             if (speaking) {
               tmp24 = nextResult;
             }
+            let tmp25 = nextResult;
             let voiceState = tmp5.voiceState;
             let flag;
             if (voiceState != null) {
@@ -151,8 +165,11 @@ export default function useExternalPipParticipant() {
               flag = false;
             }
             if (flag) {
+              let tmp26 = tmp30;
               let tmp27 = null == tmp30;
               if (!tmp27) {
+                let tmp28 = tmp30;
+                let tmp29 = nextResult;
                 tmp27 = tmp30.lastSpoke < tmp5.lastSpoke;
               }
               flag = tmp27;
@@ -160,21 +177,30 @@ export default function useExternalPipParticipant() {
             if (flag) {
               tmp30 = nextResult;
             }
+            let tmp31 = tmp35;
             let tmp32 = null == tmp35;
             if (!tmp32) {
+              let tmp33 = tmp35;
+              let tmp34 = nextResult;
               tmp32 = tmp35.lastSpoke < tmp5.lastSpoke;
             }
             if (tmp32) {
               tmp35 = nextResult;
             }
           } else if (tmp12.STREAM === type) {
+            let tmp55 = tmp20;
             let tmp14 = null != tmp20;
             if (!tmp14) {
+              let tmp13 = nextResult;
               tmp14 = null == tmp5.streamId;
             }
             if (!tmp14) {
+              let tmp15 = closure_1_8;
+              let tmp16 = nextResult;
               let tmp17 = closure_1_8(tmp5);
               if (tmp17) {
+                let tmp18 = nextResult;
+                let tmp19 = stateFromStores1;
                 tmp17 = tmp5.user.id === stateFromStores1;
               }
               tmp14 = tmp17;

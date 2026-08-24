@@ -1,12 +1,13 @@
 // discord_app/modules/applications/ApplicationActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import set from "../global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx";
-import createExecutable from "../../records/ApplicationRecord.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx";
+import closure_5 from "../../records/ApplicationRecord.tsx";
 import importDefaultResult from "ApplicationStore.tsx";
 import ME from "../../Constants.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function fetchApplication() {
   const self = this;
   const apply = _fetchApplication.apply;
@@ -148,18 +149,228 @@ function _fetchApplication() {
 }
 ({ Endpoints: error, NOOP: closure_8 } = ME);
 let obj = {
+  createApplication(arg0) {
+    ({ name: require, guildId: importDefault, type: dependencyMap, teamId: closure_3 } = arg0);
+    return callback(function*() {
+      closure_1 = tmp2;
+      let body = tmp5;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = closure_1_7.APPLICATIONS;
+      const obj2 = { name: null, type: null, guild_id: null, team_id: null };
+      obj2[0] = closure_1_0;
+      obj2[1] = dependencyMap;
+      obj2[2] = closure_1_1;
+      obj2[3] = c3;
+      obj1[1] = obj2;
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      body = arg1.body;
+      let tmp8 = null != closure_1;
+      if (tmp8) {
+        tmp8 = null != dependencyMap;
+      }
+      if (tmp8) {
+        const obj = closure_1_1(709);
+        const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
+        obj5[1] = body;
+        obj.dispatch(obj5);
+      }
+      return closure_1_0;
+    })();
+  },
+  getApplicationsForGuild(closure_0, arg1) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    const includeTeam = obj.includeTeam;
+    closure_2 = Object.assign(obj, Object.create(null));
+    return callback(function*() {
+      closure_1 = tmp2;
+      let body = tmp5;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, query: null, rejectWithError: null };
+      obj1[0] = closure_1_7.GUILD_APPLICATIONS(closure_1_0);
+      const obj2 = {};
+      const merged = Object.assign(dependencyMap);
+      obj2.include_team = closure_1_1;
+      obj1[1] = obj2;
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      body = arg1.body;
+      const obj = closure_1_1(709);
+      const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null };
+      obj5[1] = body;
+      obj.dispatch(obj5);
+      return body;
+    })();
+  },
+  transferApplication(arg0) {
+    ({ applicationId: require, teamId: importDefault } = arg0);
+    return callback(function*() {
+      closure_1 = tmp2;
+      let body = tmp5;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = closure_1_7.APPLICATION_OWNER_TRANSFER(closure_1_0);
+      const obj2 = { team_id: null };
+      obj2[0] = closure_1_1;
+      obj1[1] = obj2;
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      body = arg1.body;
+      const obj = closure_1_1(709);
+      const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
+      obj5[1] = body;
+      obj.dispatch(obj5);
+      return body;
+    })();
+  },
+  fetchApplications(arg0) {
+    closure_0 = arg0;
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = true;
+    }
+    return callback(function*() {
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: "HermesInternal" };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_1 = tmp3;
+              let found = tmp5;
+              closure_1 = undefined;
+              let body;
+              c3 = undefined;
+              c4 = undefined;
+              found = closure_1_0;
+              let arr = closure_1_0;
+              if (!closure_1_1) {
+                found = arr2.filter((id) => {
+                  const tmp = null != application.getApplication(id) && application.isHydrated(id);
+                  let tmp2 = !tmp;
+                  if (!tmp) {
+                    tmp2 = !obj.isFetchingApplication(id);
+                  }
+                  if (tmp2) {
+                    tmp2 = !obj.didFetchingApplicationFail(id);
+                  }
+                  if (tmp2) {
+                    tmp2 = id.length > 0;
+                  }
+                  return tmp2;
+                });
+                arr = found;
+              }
+              if (arr.length > 0) {
+                let obj3 = closure_1_1(closure_1_2[5]);
+                obj1 = { type: "APPLICATIONS_FETCH", applicationIds: null };
+                obj1[1] = arr;
+                obj3.dispatch(obj1);
+                c3 = 1;
+                const HTTP = closure_1_0(closure_1_2[6]).HTTP;
+                const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+                obj2[0] = closure_1_7.APPLICATIONS_PUBLIC;
+                const _URLSearchParams = URLSearchParams;
+                const str = new URLSearchParams(arr.map((arg0) => {
+                  const items = ["application_ids", arg0];
+                  return items;
+                }));
+                obj2[1] = str.toString();
+                obj2[3] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
+                c4 = 2;
+                c5 = 1;
+                obj3 = { value: null, done: false };
+                obj3[0] = HTTP.get(obj2);
+                return obj3;
+              } else {
+                c5 = 3;
+              }
+              arr2 = closure_1_0;
+            }
+          } else if (1 === tmp8) {
+            c3 = 0;
+            const status = body;
+            if (429 !== status.status) {
+              obj1 = closure_1_1(closure_1_2[5]);
+              const obj4 = { type: "APPLICATIONS_FETCH_FAIL", applicationIds: null };
+              obj4[1] = found;
+              obj1.dispatch(obj4);
+            }
+            throw status;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            closure_1 = arg1;
+            c3 = 0;
+            body = closure_1.body;
+            const _Set = Set;
+            const set = new Set(body.map((id) => id.id));
+            c3 = set;
+            c4 = found.filter((arg0) => !set.has(arg0));
+            const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null, unknownApplicationIds: null, isHydrated: true };
+            obj5[1] = closure_1.body;
+            obj5[2] = c4;
+            closure_1_1(closure_1_2[5]).dispatch(obj5);
+            const obj11 = closure_1_1(closure_1_2[5]);
+          }
+          c3 = 0;
+          c5 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp32) {
+          body = tmp32;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp32;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    })();
+  },
+  fetchApplication
+};
+obj = {
   getQueryId: ME.QueryIds.APPLICATIONS,
-  get(item) {
+  get(id) {
     let tmp = null;
-    if (null != item) {
+    if (null != id) {
       tmp = null;
-      if (importDefaultResult.isHydrated(item)) {
-        let application = importDefaultResult.getApplication(item);
+      if (importDefaultResult.isHydrated(id)) {
+        let application = obj.getApplication(id);
         if (application == null) {
           application = null;
         }
         tmp = application;
       }
+      obj = importDefaultResult;
     }
     return tmp;
   },
@@ -181,7 +392,7 @@ let obj = {
   }
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, obj);
-let result = require("obj132").fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
 
 export default obj;
 export { fetchApplication };
@@ -192,7 +403,7 @@ export const useApplicationWithLoggedOutContext = function useApplicationWithLog
   const data = tmp.data;
   error = tmp.error;
   const obj = {
-    app: require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+    app: _initialize.useStateFromStores(items, () => {
       if (null == data) {
         const application = closure_1_4.getApplication(closure_0);
         if (null != application) {

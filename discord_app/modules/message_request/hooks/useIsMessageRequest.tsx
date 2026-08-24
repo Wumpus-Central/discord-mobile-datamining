@@ -1,25 +1,26 @@
 // discord_app/modules/message_request/hooks/useIsMessageRequest.tsx
-import processChannel from "../MessageRequestStore.tsx";
-import processChannel2 from "../SpamMessageRequestStore.tsx";
+import closure_2 from "../MessageRequestStore.tsx";
+import closure_3 from "../SpamMessageRequestStore.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
 
 export const useIsMessageRequest = function useIsMessageRequest(id) {
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.isMessageRequest(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => closure_1_2.isMessageRequest(closure_0), items1);
 };
 export const useIsEitherTypeOfMessageRequest = function useIsEitherTypeOfMessageRequest(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let isMessageRequestResult = closure_1_2.isMessageRequest(closure_0);
+      let isMessageRequestResult = closure_1_2.isMessageRequest(tmp);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = closure_1_3.isSpam(closure_0);
+        isMessageRequestResult = closure_1_3.isSpam(tmp);
       }
       tmp2 = isMessageRequestResult;
     }

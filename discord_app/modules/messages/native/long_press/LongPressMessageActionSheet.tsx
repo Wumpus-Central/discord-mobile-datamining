@@ -1,23 +1,24 @@
 // discord_app/modules/messages/native/long_press/LongPressMessageActionSheet.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import handleMessageSendFailedAutomod from "../../../guild_automod/GuildAutomodMessageStore.tsx";
-import handleSelectedGuildChange from "../../../report_to_mod/ReportToModStore.tsx";
-import getTimeSafe from "../../../saved_messages/SavedMessagesStore.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../guild_automod/GuildAutomodMessageStore.tsx";
+import closure_6 from "../../../report_to_mod/ReportToModStore.tsx";
+import closure_7 from "../../../saved_messages/SavedMessagesStore.tsx";
 import { isMessageComponentsV2 } from "../../../../records/MessageRecord.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import closure_9 from "../../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../../stores/GuildStore.tsx";
+import closure_11 from "../../../../stores/PermissionStore.tsx";
 import { FileUploadErrorTypes } from "../../MessageConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16, LOCAL_BOT_ID: closure_17, MessageAttachmentFlags: closure_18, MessageFlags: closure_19, MessageStates: closure_20, MessageTypes: closure_21, MessageTypesSets: closure_22, Permissions: closure_23 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheet.tsx");
 
 export default function LongPressMessageActionSheet(analyticsLocation) {
   const _require = analyticsLocation;
+  let props = analyticsLocations;
   const tmp3 = analyticsLocation;
   analyticsLocations = analyticsLocations(analyticsLocation[12])(analyticsLocations(analyticsLocation[13]).MESSAGE_LONG_PRESS_MENU).analyticsLocations;
   analyticsLocation = analyticsLocation.analyticsLocation;
@@ -37,14 +38,15 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   isMessageComponentsV2 = undefined !== canAddNewReactions && canAddNewReactions;
   let items = [analyticsLocation, channel];
   const effect = channel.useEffect(() => {
-    analyticsLocations(analyticsLocation[14]);
-    const obj = { page: channel.isPrivate() ? props3.DM_CHANNEL : props3.GUILD_CHANNEL };
+    let obj = analyticsLocations(analyticsLocation[14]);
+    obj = { channel_id: channel.id, guild_id: channel.guild_id, location: null };
+    obj = { page: channel.isPrivate() ? tmp.DM_CHANNEL : tmp.GUILD_CHANNEL };
     const merged = Object.assign(analyticsLocation);
     obj[2] = obj;
-    obj.trackWithMetadata(props2.MESSAGE_ACTION_SHEET_OPENED, obj);
+    obj.trackWithMetadata(props.MESSAGE_ACTION_SHEET_OPENED, obj);
   }, items);
   const items1 = [analyticsLocation];
-  channel.useCallback(() => {
+  let id = channel.useCallback(() => {
     const result = analyticsLocation(analyticsLocation[15]).showLongPressMessageActionSheet(analyticsLocation);
   }, items1);
   const tmp8 = _require;
@@ -66,7 +68,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const hasForLaterAccess = obj5.useHasForLaterAccess("LongPressMessageActionSheet");
   let obj6 = _require(tmp3[20]);
   const isNonModInLockedThread = obj6.useIsNonModInLockedThread(channel);
-  let id;
+  id = undefined;
   const tmp13 = message(obj4.useStateFromStoresArray(items2, () => {
     const items = [actionSheetSource.isMessageReminder(channel.id, message.id), actionSheetSource.isMessageBookmarked(channel.id, message.id)];
     return items;
@@ -74,9 +76,9 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmpResult = analyticsLocations(tmp3[21]);
+  const arrResult = props(tmp3[21]);
   const tmp21 = null != message.getMessage(message.id);
-  let tmp22 = analyticsLocations(tmp3[22])(message);
+  let tmp22 = props(tmp3[22])(message);
   let tmp8Result = tmp8(tmp3[20]);
   guild = tmp8Result.useIsActiveChannelOrUnarchivableThread(channel);
   if (user != null) {
@@ -86,21 +88,21 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const DeveloperMode = tmp8(tmp3[23]).DeveloperMode;
   let obj8 = props;
   const setting = DeveloperMode.getSetting();
-  const canResult = props.can(props17.MANAGE_MESSAGES, channel);
-  const tmpResultResult = analyticsLocations(tmp3[21])(id);
+  const canResult = props.can(props.MANAGE_MESSAGES, channel);
+  const tmpResultResult = props(tmp3[21])(id);
   tmp8Result = tmp8(tmp3[24]);
   const canToggleGuildOfficialMessages = tmp8Result.useCanToggleGuildOfficialMessages(message, channel, "LongPressMessageActionSheet");
-  let hasFlagResult = message.hasFlag(props13.CROSSPOSTED);
+  let hasFlagResult = message.hasFlag(props.CROSSPOSTED);
   let tmp33 = !hasFlagResult;
-  const canResult1 = props.can(props17.SEND_MESSAGES, channel);
+  const canResult1 = props.can(props.SEND_MESSAGES, channel);
   if (!hasFlagResult) {
-    tmp33 = channel.type === props7.GUILD_ANNOUNCEMENT;
+    tmp33 = channel.type === props.GUILD_ANNOUNCEMENT;
   }
   if (tmp33) {
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(props10.NEWS);
+      hasItem = features.has(props.NEWS);
     }
     tmp33 = hasItem;
   }
@@ -109,14 +111,15 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   }
   if (tmp33) {
     tmp33 = message.author.id === id1 || canResult;
+    const tmp37 = message.author.id === id1 || canResult;
   }
   if (tmp33) {
-    tmp33 = message.type === props15.DEFAULT;
+    tmp33 = message.type === props.DEFAULT;
   }
   if (tmp33) {
     tmp33 = !message.isPoll();
   }
-  const tmp32 = analyticsLocations(tmp3[25])(message, channel);
+  const tmp32 = props(tmp3[25])(message, channel);
   const canStartPublicThread = tmp8(tmp3[20]).computeCanStartPublicThread(channel, message);
   const contentMessage = message.getContentMessage();
   if (isMessageComponentsV2(contentMessage)) {
@@ -133,18 +136,18 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     canDeleteOwnMessageResult = length > 0;
   }
   if (canDeleteOwnMessageResult) {
-    canDeleteOwnMessageResult = message.author.id !== props11;
+    canDeleteOwnMessageResult = message.author.id !== props;
   }
   if (canDeleteOwnMessageResult) {
     canDeleteOwnMessageResult = !tmp8(tmp3[27]).hasFlag(message.flags, tmp30.EPHEMERAL);
     const tmp8Result3 = tmp8(tmp3[27]);
   }
   if (canDeleteOwnMessageResult) {
-    canDeleteOwnMessageResult = tmp(tmp3[28])(message) >= 1;
+    canDeleteOwnMessageResult = props(tmp3[28])(message) >= 1;
   }
   let tmp48 = !tmp21;
   if (!tmp21) {
-    tmp48 = message.interactionError !== props1.EXPLICIT_CONTENT;
+    tmp48 = message.interactionError !== props.EXPLICIT_CONTENT;
   }
   if (tmp48) {
     let result = null == message.interactionData;
@@ -157,10 +160,10 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const attachments = message.attachments;
   let tmp52 = message.author.id === id1;
   if (tmp52) {
-    let tmp53 = attachments.filter((item, index) => {
-      let tmp = null == item.flags;
+    let tmp53 = attachments.filter((flags) => {
+      let tmp = null == flags.flags;
       if (!tmp) {
-        tmp = !analyticsLocation(analyticsLocation[27]).hasFlag(item.flags, props12.IS_THUMBNAIL);
+        tmp = !analyticsLocation(analyticsLocation[27]).hasFlag(flags.flags, props.IS_THUMBNAIL);
         const obj = analyticsLocation(analyticsLocation[27]);
       }
       return tmp;
@@ -183,89 +186,101 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     ({ IconComponent, variant } = arrow);
     return {
       arrow: arrow.arrow,
-      icon: props18(analyticsLocation(analyticsLocation[31]).ActionSheetRow.Icon, { IconComponent }),
+      icon: props(analyticsLocation(analyticsLocation[31]).ActionSheetRow.Icon, { IconComponent }),
       label,
       onPress() {
-        const result = label(analyticsLocation[32]).longPressMessageOptionHandler({ actionSheetSource, analyticsLocations, channel, chatInputRef: closure_1_5, label, message, onBack: closure_1_9, onActionExecuted: closure_1, selectedMedia, disabled });
+        const result = label(analyticsLocation[32]).longPressMessageOptionHandler({ actionSheetSource: closure_1_7, analyticsLocations: closure_1_1, channel: closure_1_4, chatInputRef: closure_1_5, label, message: closure_1_3, onBack: closure_1_9, onActionExecuted: closure_1, selectedMedia: closure_1_6, disabled });
       },
       variant,
       disabled
     };
   }
   function render(items5) {
-    let obj = { showGradient: true, startExpanded: analyticsLocation(analyticsLocation[34]).isMetaQuest(), header: null, children: null };
+    let obj = { value: analyticsLocations, children: null };
+    obj = { showGradient: true, startExpanded: analyticsLocation(analyticsLocation[34]).isMetaQuest(), header: null, children: null };
     const obj3 = analyticsLocation(analyticsLocation[34]);
+    const tmp2 = analyticsLocation;
     let shouldShowEmojiRowResult = analyticsLocation(analyticsLocation[35]).shouldShowEmojiRow(closure_8, message, closure_10);
     if (shouldShowEmojiRowResult) {
       obj = { message: null, channel: null };
       obj[0] = message;
       obj[1] = channel;
-      shouldShowEmojiRowResult = props18(analyticsLocations(analyticsLocation[36]), obj);
+      shouldShowEmojiRowResult = tmp(analyticsLocations(tmp2[36]), obj);
     }
     obj[2] = shouldShowEmojiRowResult;
     let mapped;
     if (items5 != null) {
-      mapped = items5.map((item, index) => callback2(callback(table[31]).ActionSheetRow.Group, {
+      mapped = items5.map((arr) => callback2(callback(table[31]).ActionSheetRow.Group, {
         hasIcons: true,
-        children: item.map((item, index) => {
-          ({ icon, arrow, label, onPress, variant, disabled } = item);
-          return callback2(callback(table[31]).ActionSheetRow, { icon, arrow, label, onPress, variant, disabled }, index);
+        children: arr.map((arg0, arg1) => {
+          ({ icon, arrow, label, onPress, variant, disabled } = arg0);
+          return callback2(callback(table[31]).ActionSheetRow, { icon, arrow, label, onPress, variant, disabled }, arg1);
         })
-      }, index));
+      }, arg1));
     }
     obj[3] = mapped;
-    obj[1] = props18(analyticsLocation(analyticsLocation[33]).ActionSheet, obj);
-    return props18(analyticsLocation(analyticsLocation[12]).AnalyticsLocationProvider, obj);
+    obj[1] = props(analyticsLocation(analyticsLocation[33]).ActionSheet, obj);
+    return props(analyticsLocation(analyticsLocation[12]).AnalyticsLocationProvider, obj);
   }
-  if (message.state === props14.SEND_FAILED) {
+  if (message.state === props.SEND_FAILED) {
     const items4 = [];
     if (tmp48) {
       let obj = { label: null, IconComponent: null };
+      props = tmp7;
+      props = tmp2;
       const intl17 = tmp8(tmp3[37]).intl;
       obj[0] = intl17.string(tmp8(tmp3[37]).t["5911Lb"]);
       obj[1] = tmp8(tmp3[38]).RetryIcon;
-      items4.push(getProps(obj));
+      props = items4.push(getProps(obj));
     }
-    let tmp193 = null != allTextDisplayContent;
-    if (tmp193) {
-      tmp193 = allTextDisplayContent.length > 0;
+    props = null != allTextDisplayContent;
+    if (props) {
+      props = allTextDisplayContent.length > 0;
     }
-    if (tmp193) {
+    if (props) {
       obj = { label: null, IconComponent: null };
+      props = tmp7;
+      props = tmp2;
       const intl18 = tmp8(tmp3[37]).intl;
       obj[0] = intl18.string(tmp8(tmp3[37]).t.JrGD7E);
       obj[1] = tmp8(tmp3[39]).CopyIcon;
-      items4.push(getProps(obj));
+      props = items4.push(getProps(obj));
     }
     obj1 = { label: null, IconComponent: null, variant: "danger" };
     const intl19 = tmp7(tmp2[37]).intl;
     obj1[0] = intl19.string(tmp7(tmp2[37]).t.xwMqD7);
     obj1[1] = tmp7(tmp2[40]).TrashIcon;
-    items4.push(getProps(obj1));
+    props = items4.push(getProps(obj1));
     const items5 = [items4];
     return render(items5);
   } else if (message.state === tmp57.SENDING) {
-    let tmp183 = null != allTextDisplayContent;
-    if (tmp183) {
-      tmp183 = allTextDisplayContent.length > 0;
+    props = null != allTextDisplayContent;
+    if (props) {
+      props = allTextDisplayContent.length > 0;
     }
     const items6 = [];
-    if (tmp183) {
+    if (props) {
       obj2 = { label: null, IconComponent: null };
+      props = tmp7;
+      props = tmp2;
       const intl15 = tmp8(tmp3[37]).intl;
       obj2[0] = intl15.string(tmp8(tmp3[37]).t.JrGD7E);
       obj2[1] = tmp8(tmp3[39]).CopyIcon;
-      items6.push(getProps(obj2));
+      props = items6.push(getProps(obj2));
     }
     obj3 = { label: null, IconComponent: null, variant: "danger" };
+    props = tmp7;
+    props = tmp2;
     const intl16 = tmp8(tmp3[37]).intl;
     obj3[0] = intl16.string(tmp8(tmp3[37]).t.xwMqD7);
     obj3[1] = tmp8(tmp3[40]).TrashIcon;
-    items6.push(getProps(obj3));
+    props = items6.push(getProps(obj3));
     const items7 = [items6];
     return render(items7);
-  } else if (message.type === props15.THREAD_STARTER_MESSAGE) {
+  } else if (message.type === props.THREAD_STARTER_MESSAGE) {
     obj4 = { label: null, IconComponent: null };
+    props = tmp7;
+    props = tmp2;
     const intl14 = tmp8(tmp3[37]).intl;
     obj4[0] = intl14.string(tmp8(tmp3[37]).t.k5WiPf);
     obj4[1] = tmp8(tmp3[41]).LinkIcon;
@@ -274,6 +289,8 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     return render(items9);
   } else {
     obj5 = { label: null, IconComponent: null };
+    props = tmp7;
+    props = tmp2;
     const intl20 = tmp8(tmp3[37]).intl;
     obj5[0] = intl20.string(tmp8(tmp3[37]).t.fsBWmS);
     obj5[1] = tmp8(tmp3[42]).PencilIcon;
@@ -282,127 +299,127 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     const intl21 = tmp8(tmp3[37]).intl;
     obj6[0] = intl21.string(tmp8(tmp3[37]).t["5IEsGx"]);
     obj6[1] = tmp8(tmp3[43]).ArrowAngleLeftUpIcon;
-    props1 = getProps(obj6);
+    props = getProps(obj6);
     const obj7 = { label: null, IconComponent: null };
     const intl22 = tmp8(tmp3[37]).intl;
     obj7[0] = intl22.string(tmp8(tmp3[37]).t.I3ltXO);
-    obj7[1] = tmp(tmp3[44]);
-    const props2 = getProps(obj7);
+    obj7[1] = props(tmp3[44]);
+    props = getProps(obj7);
     obj8 = { label: null, IconComponent: null };
     const intl23 = tmp8(tmp3[37]).intl;
     obj8[0] = intl23.string(tmp8(tmp3[37]).t.rBIGBL);
     obj8[1] = tmp8(tmp3[45]).ThreadIcon;
-    const props3 = getProps(obj8);
+    props = getProps(obj8);
     const obj9 = { label: null, IconComponent: null };
     const intl24 = tmp8(tmp3[37]).intl;
     obj9[0] = intl24.string(tmp8(tmp3[37]).t["39d0Wj"]);
     obj9[1] = tmp8(tmp3[45]).ThreadIcon;
-    const props4 = getProps(obj9);
+    props = getProps(obj9);
     const obj10 = { label: null, IconComponent: null };
     const intl25 = tmp8(tmp3[37]).intl;
     obj10[0] = intl25.string(tmp8(tmp3[37]).t["+TSRGD"]);
     obj10[1] = tmp8(tmp3[46]).ChatArrowRightIcon;
-    const props5 = getProps(obj10);
+    props = getProps(obj10);
     const obj11 = { label: null, IconComponent: null };
     const intl26 = tmp8(tmp3[37]).intl;
     obj11[0] = intl26.string(tmp8(tmp3[37]).t.JrGD7E);
     obj11[1] = tmp8(tmp3[39]).CopyIcon;
-    const props6 = getProps(obj11);
+    props = getProps(obj11);
     const obj12 = { label: null, IconComponent: null };
     const intl27 = tmp8(tmp3[37]).intl;
     obj12[0] = intl27.string(tmp8(tmp3[37]).t.RpE9k7);
     obj12[1] = tmp8(tmp3[47]).ChatMarkUnreadIcon;
-    props7 = getProps(obj12);
+    props = getProps(obj12);
     const obj13 = { label: null, IconComponent: null };
     const intl28 = tmp8(tmp3[37]).intl;
     obj13[0] = intl28.string(tmp8(tmp3[37]).t.grdwwt);
     obj13[1] = tmp8(tmp3[48]).ClockXIcon;
-    const props8 = getProps(obj13);
+    props = getProps(obj13);
     const obj14 = { label: null, IconComponent: null };
     const intl29 = tmp8(tmp3[37]).intl;
     obj14[0] = intl29.string(tmp8(tmp3[37]).t.gHp0C4);
     obj14[1] = tmp8(tmp3[49]).ReactionIcon;
-    const props9 = getProps(obj14);
+    props = getProps(obj14);
     let obj15 = { label: null, IconComponent: null };
     const intl30 = tmp8(tmp3[37]).intl;
     obj15[0] = intl30.string(tmp8(tmp3[37]).t.MFGE51);
     obj15[1] = tmp8(tmp3[50]).AnnouncementsIcon;
-    props10 = getProps(obj15);
+    props = getProps(obj15);
     const obj16 = { label: null, IconComponent: null };
     const intl31 = tmp8(tmp3[37]).intl;
     obj16[0] = intl31.string(tmp8(tmp3[37]).t.CvQ18w);
     obj16[1] = tmp8(tmp3[51]).PinIcon;
-    props11 = getProps(obj16);
+    props = getProps(obj16);
     const obj17 = { label: null, IconComponent: null };
     const intl32 = tmp8(tmp3[37]).intl;
     obj17[0] = intl32.string(tmp8(tmp3[37]).t["Bse+F/"]);
     obj17[1] = tmp8(tmp3[51]).PinIcon;
-    const props12 = getProps(obj17);
+    props = getProps(obj17);
     const obj18 = { label: null, IconComponent: null };
     const intl33 = tmp8(tmp3[37]).intl;
     obj18[0] = intl33.string(tmp8(tmp3[37]).t["lE/PG3"]);
     obj18[1] = tmp8(tmp3[52]).StampIcon;
-    props13 = getProps(obj18);
+    props = getProps(obj18);
     const obj19 = { label: null, IconComponent: null };
     const intl34 = tmp8(tmp3[37]).intl;
     obj19[0] = intl34.string(tmp8(tmp3[37]).t["2km5Gf"]);
     obj19[1] = tmp8(tmp3[53]).StampXIcon;
-    props14 = getProps(obj19);
+    props = getProps(obj19);
     const obj20 = { label: null, IconComponent: null };
     const intl35 = tmp8(tmp3[37]).intl;
     obj20[0] = intl35.string(tmp8(tmp3[37]).t.tpxJto);
     obj20[1] = tmp8(tmp3[54]).NitroWheelIcon;
-    props15 = getProps(obj20);
+    props = getProps(obj20);
     const obj21 = { label: null, IconComponent: null };
     const intl36 = tmp8(tmp3[37]).intl;
     obj21[0] = intl36.string(tmp8(tmp3[37]).t.tpxJto);
     obj21[1] = tmp8(tmp3[55]).BookmarkOutlineIcon;
-    const props16 = getProps(obj21);
+    props = getProps(obj21);
     const obj22 = { label: null, IconComponent: null };
     const intl37 = tmp8(tmp3[37]).intl;
     obj22[0] = intl37.string(tmp8(tmp3[37]).t.SvXS1Z);
     obj22[1] = tmp8(tmp3[56]).BookmarkIcon;
-    props17 = getProps(obj22);
+    props = getProps(obj22);
     const obj23 = { label: null, IconComponent: null, arrow: true };
     const intl38 = tmp8(tmp3[37]).intl;
     obj23[0] = intl38.string(tmp8(tmp3[37]).t.mJ3P0N);
     obj23[1] = tmp8(tmp3[57]).ClockIcon;
-    const props18 = getProps(obj23);
+    props = getProps(obj23);
     const obj24 = { label: null, IconComponent: null, arrow: true };
     const intl39 = tmp8(tmp3[37]).intl;
     obj24[0] = intl39.string(tmp8(tmp3[37]).t.vrbqs1);
     obj24[1] = tmp8(tmp3[57]).ClockIcon;
-    const props19 = getProps(obj24);
+    props = getProps(obj24);
     const obj25 = { label: null, IconComponent: null, arrow: true };
     const intl40 = tmp8(tmp3[37]).intl;
     obj25[0] = intl40.string(tmp8(tmp3[37]).t.PHjkRE);
     obj25[1] = tmp8(tmp3[58]).RobotIcon;
-    const props20 = getProps(obj25);
+    props = getProps(obj25);
     const obj26 = { label: null, IconComponent: null };
     const intl41 = tmp8(tmp3[37]).intl;
     obj26[0] = intl41.string(tmp8(tmp3[37]).t["g33r/P"]);
     obj26[1] = tmp8(tmp3[59]).ChatIcon;
-    const props21 = getProps(obj26);
+    props = getProps(obj26);
     const obj27 = { label: null, IconComponent: null };
     const intl42 = tmp8(tmp3[37]).intl;
     obj27[0] = intl42.string(tmp8(tmp3[37]).t.P8tvKG);
     obj27[1] = tmp8(tmp3[60]).AtIcon;
-    const props22 = getProps(obj27);
+    props = getProps(obj27);
     const obj28 = { label: null, IconComponent: null };
     const intl43 = tmp8(tmp3[37]).intl;
     obj28[0] = intl43.string(tmp8(tmp3[37]).t["S/xNKV"]);
     obj28[1] = tmp8(tmp3[61]).DownloadIcon;
-    const props23 = getProps(obj28);
+    props = getProps(obj28);
     const obj29 = { label: null, IconComponent: null };
     const intl44 = tmp8(tmp3[37]).intl;
     obj29[0] = intl44.string(tmp8(tmp3[37]).t.JVuuz3);
     obj29[1] = tmp8(tmp3[61]).DownloadIcon;
-    const props24 = getProps(obj29);
+    props = getProps(obj29);
     const obj30 = { label: null, IconComponent: null };
     const intl45 = tmp8(tmp3[37]).intl;
     obj30[0] = intl45.string(tmp8(tmp3[37]).t.vbAEaA);
     obj30[1] = tmp8(tmp3[61]).DownloadIcon;
-    const props25 = getProps(obj30);
+    props = getProps(obj30);
     try {
       let mediaUrl;
       if (selectedMedia != null) {
@@ -431,29 +448,27 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
       const intl = tmp8(tmp3[37]).intl;
       const t = tmp8(tmp3[37]).t;
       if (tmp68) {
-        let v8xHmxo = t["8xHmxo"];
       } else {
-        v8xHmxo = t["92CPQ+"];
       }
       const obj31 = { label: null, IconComponent: null };
-      obj31[0] = intl.string(v8xHmxo);
+      obj31[0] = intl.string(_92CPQ_);
       obj31[1] = tmp8(tmp3[41]).LinkIcon;
-      const props26 = getProps(obj31);
+      props = getProps(obj31);
       const obj32 = { label: null, IconComponent: null };
       const intl2 = tmp8(tmp3[37]).intl;
       obj32[0] = intl2.string(tmp8(tmp3[37]).t.Xrt5Po);
       obj32[1] = tmp8(tmp3[41]).LinkIcon;
-      const props27 = getProps(obj32);
+      const props1 = getProps(obj32);
       const obj33 = { label: null, IconComponent: null, arrow: true };
       const intl3 = tmp8(tmp3[37]).intl;
       obj33[0] = intl3.string(tmp8(tmp3[37]).t.Rjezbz);
       obj33[1] = tmp8(tmp3[57]).ClockIcon;
-      const props28 = getProps(obj33);
+      const props2 = getProps(obj33);
       const obj34 = { label: null, IconComponent: null };
       const intl4 = tmp8(tmp3[37]).intl;
       obj34[0] = intl4.string(tmp8(tmp3[37]).t.zBoHlf);
       obj34[1] = tmp8(tmp3[62]).IdIcon;
-      const props29 = getProps(obj34);
+      const props3 = getProps(obj34);
       if (length > 1) {
         const intl6 = tmp8(tmp3[37]).intl;
         let stringResult = intl6.string(tmp8(tmp3[37]).t.wUIMqa);
@@ -464,277 +479,286 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
       let obj35 = { label: null, IconComponent: null, variant: "danger" };
       obj35[0] = stringResult;
       obj35[1] = tmp8(tmp3[63]).XSmallBoldIcon;
-      const props30 = getProps(obj35);
+      const props4 = getProps(obj35);
       const obj36 = { label: null, IconComponent: null, variant: "danger" };
       const intl7 = tmp8(tmp3[37]).intl;
       obj36[0] = intl7.string(tmp8(tmp3[37]).t.ZbtGBm);
       obj36[1] = tmp8(tmp3[40]).TrashIcon;
-      const props31 = getProps(obj36);
+      const props5 = getProps(obj36);
       const obj37 = { label: null, IconComponent: null, variant: "danger" };
       const intl8 = tmp8(tmp3[37]).intl;
       obj37[0] = intl8.string(tmp8(tmp3[37]).t.kFwAsa);
       obj37[1] = tmp8(tmp3[40]).TrashIcon;
-      const props32 = getProps(obj37);
+      const props6 = getProps(obj37);
       const obj38 = { label: null, IconComponent: null, variant: "danger" };
       const intl9 = tmp8(tmp3[37]).intl;
       obj38[0] = intl9.string(tmp8(tmp3[37]).t["+78Pfm"]);
       obj38[1] = tmp8(tmp3[64]).FlagIcon;
-      const props33 = getProps(obj38);
+      const props7 = getProps(obj38);
       const obj39 = { label: null, variant: "danger", IconComponent: null };
       const intl10 = tmp8(tmp3[37]).intl;
       obj39[0] = intl10.string(tmp8(tmp3[37]).t.n5EBAJ);
       obj39[2] = tmp8(tmp3[65]).ClydeIcon;
-      const props34 = getProps(obj39);
+      const props8 = getProps(obj39);
       const obj40 = { label: null, IconComponent: null, disabled: null };
       const intl11 = tmp8(tmp3[37]).intl;
-      obj40[0] = intl11.string(tmp(tmp3[66])["1D+vqy"]);
+      obj40[0] = intl11.string(props(tmp3[66])["1D+vqy"]);
       obj40[1] = tmp8(tmp3[64]).FlagIcon;
       obj40[2] = stateFromStores;
-      const props35 = getProps(obj40);
+      const props9 = getProps(obj40);
       const obj41 = { label: null, IconComponent: null };
       const intl12 = tmp8(tmp3[37]).intl;
       obj41[0] = intl12.string(tmp8(tmp3[37]).t.ZH7P2h);
       obj41[1] = tmp8(tmp3[67]).ImageWarningIcon;
-      const props36 = getProps(obj41);
+      const props10 = getProps(obj41);
       const obj42 = { label: null, IconComponent: null, variant: "danger" };
       const intl13 = tmp8(tmp3[37]).intl;
       obj42[0] = intl13.string(tmp8(tmp3[37]).t.xwMqD7);
       obj42[1] = tmp8(tmp3[40]).TrashIcon;
-      const props37 = getProps(obj42);
+      const props11 = getProps(obj42);
       closure_37 = (() => {
         let hasFlagResult = "Preview" === actionSheetSource;
         if (!hasFlagResult) {
-          hasFlagResult = analyticsLocation(analyticsLocation[27]).hasFlag(message.flags, props13.EPHEMERAL);
+          hasFlagResult = analyticsLocation(analyticsLocation[27]).hasFlag(message.flags, props.EPHEMERAL);
           const obj = analyticsLocation(analyticsLocation[27]);
         }
         const items = [];
         if (hasFlagResult) {
-          items.push(props3, props7, props16, props17, props15, props18, props19, props30, props37, props, props22, props21, props20, props31);
+          items.push(props, props, props, props, props, props, props, props4, props11, props, props, props, props, props5);
         }
         let tmp22 = closure_10;
         if (closure_10) {
-          tmp22 = !analyticsLocation(analyticsLocation[27]).hasFlag(message.flags, props13.EPHEMERAL);
+          tmp22 = !analyticsLocation(analyticsLocation[27]).hasFlag(message.flags, props.EPHEMERAL);
           const obj2 = analyticsLocation(analyticsLocation[27]);
         }
         if (!tmp22) {
-          items.push(props, props1, props30, props32, props37, props10, props11, props12, props13, props14, props7, props22, props20, props31);
+          items.push(props, props, props4, props6, props11, props, props, props, props, props, props, props, props, props5);
         }
-        if (obj3.hasFlag(message.flags, props13.EPHEMERAL)) {
-          items.push(props2, props1, props27, props33, props34, props35);
+        if (obj3.hasFlag(message.flags, props.EPHEMERAL)) {
+          items.push(props, props, props1, props7, props8, props9);
         }
         obj3 = analyticsLocation(analyticsLocation[27]);
         return new Set(items);
       })();
       const items10 = [];
       if ("Preview" === tmp5) {
-        items10.unshift(props5);
+        items10.unshift(props);
       }
       if (canStartPublicThread) {
-        items10.unshift(props3);
+        items10.unshift(props);
       } else if (message.hasFlag(tmp30.HAS_THREAD)) {
-        items10.unshift(props4);
+        items10.unshift(props);
       }
-      items10.unshift(props27);
+      items10.unshift(props1);
       if (setting) {
-        items10.unshift(props29);
+        items10.unshift(props3);
       }
       if (tmp56) {
+        props = tmp7;
+        props = tmp2;
         if (tmp8Result7.canReportMessageToMods(message)) {
-          items10.unshift(props34);
-          items10.unshift(props35);
+          props = items10.unshift(props8);
+          props = items10.unshift(props9);
         }
-        items10.unshift(props7);
+        props = items10.unshift(props);
         if (isForLaterExperimentOn) {
-          let isPrivateResult = tmp15;
+          props = tmp15;
           if (!tmp15) {
-            isPrivateResult = tmp14;
+            props = tmp14;
           }
-          if (!isPrivateResult) {
-            isPrivateResult = channel.isPrivate();
+          if (!props) {
+            props = channel.isPrivate();
           }
-          if (!isPrivateResult) {
-            isPrivateResult = obj8.can(tmp26.READ_MESSAGE_HISTORY, channel);
+          if (!props) {
+            props = obj8.can(tmp26.READ_MESSAGE_HISTORY, channel);
           }
-          isForLaterExperimentOn = isPrivateResult;
+          isForLaterExperimentOn = props;
         }
         if (isForLaterExperimentOn) {
           if (!hasForLaterAccess) {
             if (!tmp15) {
               if (!tmp14) {
-                items10.unshift(props15);
+                props = items10.unshift(props);
               }
             }
           }
-          let tmp114 = props16;
-          if (tmp15) {
-            tmp114 = props17;
-          }
-          items10.unshift(tmp114);
-          let tmp116 = props18;
-          if (tmp14) {
-            tmp116 = props19;
-          }
-          items10.unshift(tmp116);
+          props = items10.unshift(props);
+          props = items10.unshift(props);
         }
         if (canDeleteOwnMessageResult) {
-          items10.unshift(props30);
+          props = items10.unshift(props4);
         }
-        let hasItem1 = !canResult;
+        props = !canResult;
         if (!canResult) {
-          hasItem1 = !message.canDeleteOwnMessage(id1);
+          props = !message.canDeleteOwnMessage(id1);
         }
-        if (!hasItem1) {
-          const UNDELETABLE = props16.UNDELETABLE;
-          hasItem1 = UNDELETABLE.has(message.type);
+        if (!props) {
+          const UNDELETABLE = props.UNDELETABLE;
+          props = UNDELETABLE.has(message.type);
         }
-        if (!hasItem1) {
-          items10.unshift(props37);
+        if (!props) {
+          props = items10.unshift(props11);
         }
-        let tmp123 = tmp(tmp3[70])(message, id1);
-        if (tmp123) {
-          tmp123 = !isNonModInLockedThread;
+        props = tmp2;
+        props = props(tmp3[70])(message, id1);
+        if (props) {
+          props = !isNonModInLockedThread;
         }
-        if (tmp123) {
-          items10.unshift(props);
+        if (props) {
+          props = items10.unshift(props);
         }
         if (tmp33) {
-          items10.unshift(props10);
+          props = items10.unshift(props);
         }
-        let isPrivateResult1 = channel.isPrivate();
-        if (isPrivateResult1) {
-          isPrivateResult1 = !tmp127;
+        props = channel.type === props.GROUP_DM;
+        props = channel.isPrivate();
+        if (props) {
+          props = !props;
         }
-        if (!isPrivateResult1) {
-          isPrivateResult1 = true === isNonUserBotResult;
+        if (!props) {
+          props = true === isNonUserBotResult;
         }
-        if (!isPrivateResult1) {
-          let canResult2 = obj8.can(tmp26.SEND_MESSAGES, channel);
-          if (!canResult2) {
-            canResult2 = tmp127;
+        if (!props) {
+          props = obj8.can(tmp26.SEND_MESSAGES, channel);
+          if (props) {
+            props = items10.unshift(props);
           }
-          if (canResult2) {
-            items10.unshift(props22);
-          }
-          let id2;
+          props = undefined;
           if (user != null) {
-            id2 = user.id;
+            props = user.id;
           }
-          if (id1 !== id2) {
-            items10.unshift(props21);
+          if (id1 !== props) {
+            props = items10.unshift(props);
           }
         }
         if (tmp32) {
-          let tmp133 = props11;
-          if (message.pinned) {
-            tmp133 = props12;
-          }
-          items10.unshift(tmp133);
+          props = items10.unshift(props);
         }
         if (canToggleGuildOfficialMessages) {
-          let tmp137 = props13;
-          if (tmp8Result8.hasFlag(message.flags, tmp30.IS_GUILD_OFFICIAL)) {
-            tmp137 = props14;
-          }
-          items10.unshift(tmp137);
-          tmp8Result8 = tmp8(tmp3[27]);
+          props = tmp7;
+          props = tmp2;
+          props = items10.unshift(props);
+          const tmp8Result8 = tmp8(tmp3[27]);
         }
-        let tmp139 = null != allTextDisplayContent;
-        if (tmp139) {
-          tmp139 = allTextDisplayContent.length > 0;
+        props = null != allTextDisplayContent;
+        if (props) {
+          props = allTextDisplayContent.length > 0;
         }
-        if (tmp139) {
-          items10.unshift(props6);
+        if (props) {
+          props = items10.unshift(props);
         }
         if (canReplyToMessage) {
-          items10.unshift(props1);
+          props = items10.unshift(props);
         }
         if (canForwardMessage) {
-          items10.unshift(props2);
+          props = items10.unshift(props);
         }
-        let tmp143 = null == selectedMedia;
-        if (!tmp143) {
-          tmp143 = tmpResultResult;
+        props = null == selectedMedia;
+        if (!props) {
+          props = tmpResultResult;
         }
-        if (!tmp143) {
-          items10.unshift(props26);
+        if (!props) {
+          props = items10.unshift(props);
           if ("image" === selectedMedia.mediaType) {
-            items10.unshift(props23);
+            props = items10.unshift(props);
           } else {
             if ("video" === selectedMedia.mediaType) {
+              props = tmp7;
+              props = tmp2;
               if (!tmp8Result9.isWebPlayerVideoUrl(selectedMedia.mediaUrl)) {
-                items10.unshift(props24);
+                props = items10.unshift(props);
               }
               tmp8Result9 = tmp8(tmp3[71]);
             }
-            let tmp148 = "audio" !== selectedMedia.mediaType;
-            if (tmp148) {
-              tmp148 = "file" !== selectedMedia.mediaType;
+            props = "audio" !== selectedMedia.mediaType;
+            if (props) {
+              props = "file" !== selectedMedia.mediaType;
             }
-            if (!tmp148) {
-              items10.unshift(props25);
+            if (!props) {
+              props = items10.unshift(props);
             }
           }
+          props = tmp7;
+          props = tmp2;
           if (tmp8Result10.messageHasObscurableMedia(message)) {
-            items10.unshift(props36);
+            props = items10.unshift(props10);
           }
-          let tmp154 = "attachment" === selectedMedia.sourceType;
-          if (tmp154) {
-            tmp154 = tmp52;
+          props = "attachment" === selectedMedia.sourceType;
+          if (props) {
+            props = tmp52;
           }
-          if (tmp154) {
-            items10.unshift(props32);
+          if (props) {
+            props = items10.unshift(props6);
           }
           tmp8Result10 = tmp8(tmp3[72]);
         }
-        let tmp156 = message.reactions.length > 0;
-        if (tmp156) {
-          const isPollResult = message.isPoll();
-          let hasNonVoteReactionsResult = !isPollResult;
-          if (isPollResult) {
-            hasNonVoteReactionsResult = tmp8(tmp3[73]).hasNonVoteReactions(message);
+        props = message.reactions.length > 0;
+        if (props) {
+          props = message.isPoll();
+          props = !props;
+          if (props) {
+            props = tmp7;
+            props = tmp2;
+            props = tmp8(tmp3[73]).hasNonVoteReactions(message);
             const tmp8Result11 = tmp8(tmp3[73]);
           }
-          tmp156 = hasNonVoteReactionsResult;
         }
-        if (tmp156) {
-          items10.unshift(props9);
+        if (props) {
+          props = items10.unshift(props);
           if (canResult) {
-            items10.unshift(props31);
+            props = items10.unshift(props5);
           }
         }
+        props = tmp22;
+        props = tmp22;
         for (const item10608 of tmp22) {
+          props = _require;
+          props = _require;
+          props = analyticsLocation;
+          props = analyticsLocation;
           if (item10608 === _require(analyticsLocation[22]).PollMessageContextItemTypes.END_EARLY) {
-            let arr34 = items10.unshift(props8);
+            props = items10.unshift(props);
           }
           continue;
         }
-        items10.unshift(props20);
+        props = items10.unshift(props);
+        props = _require;
+        props = _require;
+        props = analyticsLocation;
+        props = analyticsLocation;
         obj35 = _require(analyticsLocation[74]);
         if (obj35.canViewInteractionInfo(message)) {
-          items10.unshift(props28);
+          props = items10.unshift(props2);
         }
+        props = globalThis;
         const _Set = Set;
-        const set = new Set(items10.filter((item, index) => !set.has(item)));
-        const items11 = [props, props1, props2, props3];
+        props = new.target;
+        props = new.target;
+        props = new Set(items10.filter((arg0) => !set.has(arg0)));
+        const items11 = [props, props, props, props];
         const items12 = [items11, , ];
-        const items13 = [props5, props4, props6, props7, props8, props9, props10, props11, props12, props13, props14, props15, props16, props17, props18, props19, props20, props21, props22, props23, props24, props25, props26, props27, props28, props29];
+        const items13 = [props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props, props1, props2, props3];
         items12[1] = items13;
-        const items14 = [props30, props31, props32, props33, props34, props35, props36, props37];
+        const items14 = [props4, props5, props6, props7, props8, props9, props10, props11];
         items12[2] = items14;
-        let mapped = items12.map((item, index) => item.filter((item, index) => set.has(item)));
-        return render(mapped.filter((item, index) => item.length > 0));
+        let mapped = items12.map((arr) => arr.filter((arg0) => set.has(arg0)));
+        return render(mapped.filter((arg0) => arg0.length > 0));
       }
-      let canReportUserResult = null != user;
-      if (canReportUserResult) {
-        canReportUserResult = tmp8(tmp3[69]).canReportUser(user);
+      props = null != user;
+      if (props) {
+        props = tmp7;
+        props = tmp2;
+        props = tmp8(tmp3[69]).canReportUser(user);
         const tmp8Result12 = tmp8(tmp3[69]);
       }
-      if (canReportUserResult) {
-        canReportUserResult = tmp8(tmp3[69]).canReportMessage(message);
+      if (props) {
+        props = tmp7;
+        props = tmp2;
+        props = tmp8(tmp3[69]).canReportMessage(message);
         const tmp8Result13 = tmp8(tmp3[69]);
       }
-      if (canReportUserResult) {
-        items10.unshift(props33);
+      if (props) {
+        props = items10.unshift(props7);
       }
       tmp68 = isMatch;
     } catch (err) {

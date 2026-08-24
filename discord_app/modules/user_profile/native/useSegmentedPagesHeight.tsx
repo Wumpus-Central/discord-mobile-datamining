@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/useSegmentedPagesHeight.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let closure_5 = { code: "function useSegmentedPagesHeightTsx1(){const{pageHeights,visiblePageRange,fillHeight}=this.__closure;var _heights$lo,_heights$hi;const heights=pageHeights.get();const[lo,hi]=visiblePageRange.get();const contentHeight=Math.max((_heights$lo=heights[lo])!==null&&_heights$lo!==void 0?_heights$lo:0,(_heights$hi=heights[hi])!==null&&_heights$hi!==void 0?_heights$hi:0);const height=Math.max(contentHeight,fillHeight);return height>0?{height:height}:{};}" };
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/useSegmentedPagesHeight.tsx");
 
 export const usePageHeights = function usePageHeights() {
   let obj = sharedValue(4115);
@@ -47,7 +47,7 @@ export const usePagerFillHeight = function usePagerFillHeight() {
           if (diff > 0) {
             num = diff;
           }
-          callback(num);
+          closure_2(num);
         });
       }
     }, items)
@@ -59,7 +59,8 @@ export const usePagesHeightStyle = function usePagesHeightStyle(segmentedControl
   if (fillHeight === undefined) {
     num = 0;
   }
-  const visiblePageRange = segmentedControlState.visiblePageRange;
+  let visiblePageRange;
+  visiblePageRange = segmentedControlState.visiblePageRange;
   const fn = function u() {
     const value = pageHeights.get();
     const tmp2 = closure_1_3(visiblePageRange.get(), 2);

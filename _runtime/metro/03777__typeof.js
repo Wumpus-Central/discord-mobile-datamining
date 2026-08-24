@@ -1,6 +1,31 @@
 // _runtime/metro/03777__typeof.js
 import Parser2 from "../03778_Parser.js";
 
+let _createSuperInternal = function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      function _typeof(arg0) {
+        return typeof arg0;
+      }
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+};
 let store = function _setPrototypeOf(EraParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
@@ -28,7 +53,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 const Parser = Parser2.Parser;
-let _createSuperInternal;
+_createSuperInternal = undefined;
 class EraParser {
   constructor() {
     if (this instanceof closure_1) {
@@ -120,6 +145,7 @@ EraParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
   store(EraParser, Parser);
 }
+_createSuperInternal = EraParser;
 let num = 0;
 store = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -210,6 +236,7 @@ if (0 < items.length) {
   do {
     let tmp5 = items[num];
     let flag = tmp5.enumerable;
+    let tmp6 = num;
     if (!flag) {
       flag = false;
     }

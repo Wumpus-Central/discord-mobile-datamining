@@ -3,13 +3,13 @@ import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtil
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ME from "../../Constants.tsx";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 ({ Endpoints: c4, PaymentGateways: c5, PaymentSourceTypes: closure_6 } = ME);
 let c7 = null;
 let c8 = null;
 let c9 = null;
-if (obj132.isDesktop()) {
+if (set.isDesktop()) {
   let _window = window;
   let obj = { getReturnUrlPrefix: null, open: null };
   obj[0] = function getReturnUrlPrefix() {
@@ -82,6 +82,6 @@ obj = {
   }
 };
 const braintreeStore = new BraintreeStore(dispatcherDefault, obj);
-const result = obj132.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
+const result = set.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
 
 export default braintreeStore;

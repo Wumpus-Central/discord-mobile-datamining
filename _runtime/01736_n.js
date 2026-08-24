@@ -1,25 +1,26 @@
 // _runtime/01736_n.js
 import { isValidLayoutAnimationProp } from "01694_isValidLayoutAnimationProp.js";
-const require = fn;
+import { checkIfConfigIsValid } from "01737_checkIfConfigIsValid.js";
+const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_springTs2(){const{userConfig,checkIfConfigIsValid,underDampedSpringCalculations,criticallyDampedSpringCalculations,isAnimationTerminatingCalculation,calculateNewMassToMatchDuration,initialCalculations,scaleZetaToMatchClamps,toValue,callback,getReduceMotionForAnimation}=this.__closure;var _userConfig,_userConfig2;const defaultConfig={damping:10,mass:1,stiffness:100,overshootClamping:false,restDisplacementThreshold:0.01,restSpeedThreshold:2,velocity:0,duration:2000,dampingRatio:0.5,reduceMotion:undefined,clamp:undefined};const config={...defaultConfig,...userConfig,useDuration:!!((_userConfig=userConfig)!==null&&_userConfig!==void 0&&_userConfig.duration||(_userConfig2=userConfig)!==null&&_userConfig2!==void 0&&_userConfig2.dampingRatio),skipAnimation:false};config.skipAnimation=!checkIfConfigIsValid(config);if(config.duration===0){config.skipAnimation=true;}function springOnFrame(animation,now){const{toValue:toValue,startTimestamp:startTimestamp,current:current}=animation;const timeFromStart=now-startTimestamp;if(config.useDuration&&timeFromStart>=config.duration){animation.current=toValue;animation.lastTimestamp=0;return true;}if(config.skipAnimation){animation.current=toValue;animation.lastTimestamp=0;return true;}const{lastTimestamp:lastTimestamp,velocity:velocity}=animation;const deltaTime=Math.min(Math.max(now-lastTimestamp,0),64);animation.lastTimestamp=now;const t=deltaTime/1000;const v0=-velocity;const x0=toValue-current;const{zeta:zeta,omega0:omega0,omega1:omega1}=animation;const{position:newPosition,velocity:newVelocity}=zeta<1?underDampedSpringCalculations(animation,{zeta:zeta,v0:v0,x0:x0,omega0:omega0,omega1:omega1,t:t}):criticallyDampedSpringCalculations(animation,{v0:v0,x0:x0,omega0:omega0,t:t});animation.current=newPosition;animation.velocity=newVelocity;const{isOvershooting:isOvershooting,isVelocity:isVelocity,isDisplacement:isDisplacement}=isAnimationTerminatingCalculation(animation,config);const springIsNotInMove=isOvershooting||isVelocity&&isDisplacement;if(!config.useDuration&&springIsNotInMove){animation.velocity=0;animation.current=toValue;animation.lastTimestamp=0;return true;}return false;}function isTriggeredTwice(previousAnimation,animation){return(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.lastTimestamp)&&(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.startTimestamp)&&(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.toValue)===animation.toValue&&(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.duration)===animation.duration&&(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.dampingRatio)===animation.dampingRatio;}function onStart(animation,value,now,previousAnimation){animation.current=value;animation.startValue=value;let mass=config.mass;const triggeredTwice=isTriggeredTwice(previousAnimation,animation);const duration=config.duration;const x0=triggeredTwice?previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.startValue:Number(animation.toValue)-value;if(previousAnimation){animation.velocity=(triggeredTwice?previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.velocity:(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.velocity)+config.velocity)||0;}else{animation.velocity=config.velocity||0;}const toValueNum=Number(animation.toValue);if(toValueNum>value&&animation.velocity<0||toValueNum<value&&animation.velocity>0){animation.velocity=0;}if(triggeredTwice){animation.zeta=(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.zeta)||0;animation.omega0=(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.omega0)||0;animation.omega1=(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.omega1)||0;}else{if(config.useDuration){const actualDuration=triggeredTwice?duration-(((previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.lastTimestamp)||0)-((previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.startTimestamp)||0)):duration;config.duration=actualDuration;mass=calculateNewMassToMatchDuration(x0,config,animation.velocity);}const{zeta:zeta,omega0:omega0,omega1:omega1}=initialCalculations(mass,config);animation.zeta=zeta;animation.omega0=omega0;animation.omega1=omega1;if(config.clamp!==undefined){animation.zeta=scaleZetaToMatchClamps(animation,config.clamp);}}animation.lastTimestamp=(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.lastTimestamp)||now;animation.startTimestamp=triggeredTwice?(previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.startTimestamp)||now:now;}return{onFrame:springOnFrame,onStart:onStart,toValue:toValue,velocity:config.velocity||0,current:toValue,startValue:0,callback:callback,lastTimestamp:0,startTimestamp:0,zeta:0,omega0:0,omega1:0,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}" };
-fn = function n(toValue, userConfig, callback) {
+let fn = function n(toValue, userConfig, callback) {
   const _require = toValue;
   dependencyMap = userConfig;
   closure_2 = callback;
-  isValidLayoutAnimationProp;
+  let obj = _isValidLayoutAnimationProp;
   const fn = function u() {
     let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "call", clamp: "hd" };
     const merged = Object.assign(userConfig);
     let duration;
     if (userConfig != null) {
-      duration = userConfig.duration;
+      duration = tmp.duration;
     }
     let tmp4 = !duration;
     if (!duration) {
       let dampingRatio;
-      if (userConfig != null) {
-        dampingRatio = userConfig.dampingRatio;
+      if (tmp != null) {
+        dampingRatio = tmp.dampingRatio;
       }
       tmp4 = !dampingRatio;
     }
@@ -58,10 +59,10 @@ fn = function n(toValue, userConfig, callback) {
             obj[3] = omega0;
             obj[4] = tmp7;
             obj[5] = result;
-            let result1 = obj(userConfig[1]).underDampedSpringCalculations(toValue, obj);
-            const obj3 = obj(userConfig[1]);
+            let result1 = obj(closure_1_1[1]).underDampedSpringCalculations(toValue, obj);
+            const obj3 = obj(closure_1_1[1]);
           } else {
-            obj(userConfig[1]);
+            obj = obj(closure_1_1[1]);
             obj = { v0: null, x0: null, omega0: null, t: null };
             obj[0] = tmp5;
             obj[1] = diff;
@@ -70,7 +71,7 @@ fn = function n(toValue, userConfig, callback) {
             result1 = obj.criticallyDampedSpringCalculations(toValue, obj);
           }
           ({ position: toValue.current, velocity: toValue.velocity } = result1);
-          const result2 = obj(userConfig[1]).isAnimationTerminatingCalculation(toValue, tmp2);
+          const result2 = obj(closure_1_1[1]).isAnimationTerminatingCalculation(toValue, tmp2);
           ({ isOvershooting, isVelocity } = result2);
           if (!isOvershooting) {
             if (isVelocity) {
@@ -218,16 +219,16 @@ fn = function n(toValue, userConfig, callback) {
               diff1 = duration - (num5 - num6);
             }
             tmp.duration = diff1;
-            obj = obj(userConfig[1]);
+            obj = obj(closure_1_1[1]);
             mass = obj.calculateNewMassToMatchDuration(diff, tmp, toValue.velocity);
           }
-          const obj2 = obj(userConfig[1]);
-          ({ zeta: toValue.zeta, omega0: toValue.omega0, omega1: toValue.omega1 } = obj(userConfig[1]).initialCalculations(mass, tmp));
+          const obj2 = obj(closure_1_1[1]);
+          ({ zeta: toValue.zeta, omega0: toValue.omega0, omega1: toValue.omega1 } = obj(closure_1_1[1]).initialCalculations(mass, tmp));
           if (undefined !== tmp.clamp) {
-            toValue.zeta = obj(userConfig[1]).scaleZetaToMatchClamps(toValue, tmp.clamp);
-            const obj3 = obj(userConfig[1]);
+            toValue.zeta = obj(closure_1_1[1]).scaleZetaToMatchClamps(toValue, tmp.clamp);
+            const obj3 = obj(closure_1_1[1]);
           }
-          const initialCalculationsResult = obj(userConfig[1]).initialCalculations(mass, tmp);
+          const initialCalculationsResult = obj(closure_1_1[1]).initialCalculations(mass, tmp);
         }
         let lastTimestamp1;
         if (lastTimestamp != null) {
@@ -269,10 +270,13 @@ fn = function n(toValue, userConfig, callback) {
     obj[4] = obj;
     obj[6] = closure_2;
     let obj2 = toValue(userConfig[1]);
+    const tmp6 = toValue;
+    const tmp7 = userConfig;
+    const tmp8 = obj;
     obj[12] = toValue(userConfig[0]).getReduceMotionForAnimation(obj.reduceMotion);
     return obj;
   };
-  let obj = { userConfig, checkIfConfigIsValid: require("01737_checkIfConfigIsValid.js").checkIfConfigIsValid, underDampedSpringCalculations: require("01737_checkIfConfigIsValid.js").underDampedSpringCalculations, criticallyDampedSpringCalculations: require("01737_checkIfConfigIsValid.js").criticallyDampedSpringCalculations, isAnimationTerminatingCalculation: require("01737_checkIfConfigIsValid.js").isAnimationTerminatingCalculation, calculateNewMassToMatchDuration: require("01737_checkIfConfigIsValid.js").calculateNewMassToMatchDuration, initialCalculations: require("01737_checkIfConfigIsValid.js").initialCalculations, scaleZetaToMatchClamps: require("01737_checkIfConfigIsValid.js").scaleZetaToMatchClamps, toValue, callback, getReduceMotionForAnimation: require("01694_isValidLayoutAnimationProp.js").getReduceMotionForAnimation };
+  obj = { userConfig, checkIfConfigIsValid: _checkIfConfigIsValid.checkIfConfigIsValid, underDampedSpringCalculations: _checkIfConfigIsValid.underDampedSpringCalculations, criticallyDampedSpringCalculations: _checkIfConfigIsValid.criticallyDampedSpringCalculations, isAnimationTerminatingCalculation: _checkIfConfigIsValid.isAnimationTerminatingCalculation, calculateNewMassToMatchDuration: _checkIfConfigIsValid.calculateNewMassToMatchDuration, initialCalculations: _checkIfConfigIsValid.initialCalculations, scaleZetaToMatchClamps: _checkIfConfigIsValid.scaleZetaToMatchClamps, toValue, callback, getReduceMotionForAnimation: _isValidLayoutAnimationProp.getReduceMotionForAnimation };
   fn.__closure = obj;
   fn.__workletHash = 3229069592929;
   fn.__initData = closure_2;

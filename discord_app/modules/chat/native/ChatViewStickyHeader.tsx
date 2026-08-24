@@ -7,12 +7,12 @@ import StrangerDangerWarningBannerDefault from "../../self_mod/stranger_danger/n
 import InappropriateConversationWarningBannerDefault from "../../self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx";
 import useUnreadSettingNoticeDefault from "../../notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx";
 import OptInChannelBannerDefault from "../../messages/native/ChatBanner.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { LOCATION_CONTEXT_MOBILE } from "../../self_mod/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   ({ channelId, senderId } = arg0);
   let obj = useStrangerDangerWarning;
@@ -48,6 +48,7 @@ let c4 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScrollToNewMessages, ref) => {
   const channel = handleScrollToNewMessages.channel;
+  importDefault = undefined;
   const tmp = callback(importAllResult.useState(false), 2);
   importDefault = tmp[1];
   ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
@@ -87,8 +88,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
   items[2] = tmp13;
   items[3] = callback2(OptInChannelBannerDefault, { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
   obj1[0] = items;
-  return callback(closure_7, obj1);
+  return closure_8(closure_7, obj1);
 }));
-const result = require("obj132").fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
 export default memoResult;

@@ -2,11 +2,11 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
 import useFavoritesAccess from "../FavoritesHooks.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { Routes } from "../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
 
 export default function useFavoritesGuildHeaderAction() {
   let obj = useFavoritesAccess;

@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { MAX_TIMEOUT_MS } from "../../../Constants.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");
 
 export default function useAvatarDecorationIfNotExpired(arg0) {
   closure_0 = arg0;
@@ -14,26 +14,28 @@ export default function useAvatarDecorationIfNotExpired(arg0) {
   React = React.useRef(null);
   const items = [arg0];
   const effect = React.useEffect(() => {
-    function maybeScheduleExpirationCheck(arg0) {
+    function maybeScheduleExpirationCheck() {
       if (null != maybeScheduleExpirationCheck) {
-        if ("expiresAt" in maybeScheduleExpirationCheck) {
-          if (null != maybeScheduleExpirationCheck.expiresAt) {
-            const result = maybeScheduleExpirationCheck(first[3]).isAvatarDecorationExpired(maybeScheduleExpirationCheck);
+        if ("expiresAt" in tmp) {
+          if (null != tmp.expiresAt) {
+            const result = maybeScheduleExpirationCheck(first[3]).isAvatarDecorationExpired(tmp);
             closure_1_2(result);
             const _Date = Date;
-            const result1 = 1000 * maybeScheduleExpirationCheck.expiresAt;
+            const result1 = 1000 * tmp.expiresAt;
             const diff = result1 - Date.now();
             if (!result) {
               if (0 < diff) {
-                const timeout = new maybeScheduleExpirationCheck(first[4]).Timeout();
+                const timeout = new tmp3(tmp4[4]).Timeout();
                 const _Math = Math;
-                timeout.start(Math.min(MAX_TIMEOUT_MS, diff), () => {
+                timeout.start(Math.min(closure_2_4, diff), () => {
                   callback();
                 });
                 closure_1_3.current = timeout;
               }
             }
             const obj = maybeScheduleExpirationCheck(first[3]);
+            tmp3 = maybeScheduleExpirationCheck;
+            tmp4 = first;
           }
         }
       }

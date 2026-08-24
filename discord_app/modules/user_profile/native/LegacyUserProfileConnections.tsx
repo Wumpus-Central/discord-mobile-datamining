@@ -2,17 +2,18 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
-import createdAt from "../../../records/UserRecord.tsx";
-import initialize from "../../../stores/StreamerModeStore.tsx";
-import createUserWidgetFromServer from "../UserProfileStore.tsx";
+import closure_6 from "../../user_settings/LocaleStore.tsx";
+import closure_7 from "../../../records/UserRecord.tsx";
+import closure_8 from "../../../stores/StreamerModeStore.tsx";
+import closure_9 from "../UserProfileStore.tsx";
 import ME from "../../../Constants.tsx";
 import { MetadataFields } from "../../connections/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 class ConnectedUserAccount {
   constructor(arg0) {
     account = global.account;
@@ -201,15 +202,15 @@ class ConnectedUserAccount {
       }, items2);
       callback1 = obj19.useCallback(() => {
         if (null != platformUserUrl) {
-          account(_undefined[27]);
-          let obj = { href: null, trusted: null, onConfirm: null };
+          let obj = account(_undefined[27]);
+          obj = { href: null, trusted: null, onConfirm: null };
           obj[0] = tmp;
           obj[1] = account.type !== closure_1_11.DOMAIN;
           obj[2] = function onConfirm() {
-            account(closure_1_2[28]);
-            const obj = { platform_type: type.type, other_user_id: closure_1 };
+            let obj = closure_1_0(closure_1_2[28]);
+            obj = { platform_type: type.type, other_user_id: closure_1 };
             obj.trackWithMetadata(closure_1_10.CONNECTED_ACCOUNT_VIEWED, obj);
-            userId(closure_1_2[29]).openURL(closure_3);
+            closure_1_1(closure_1_2[29]).openURL(closure_3);
           };
           obj.handleClick(obj);
         }
@@ -355,14 +356,14 @@ class ConnectedApplicationUserRoleAccount {
             if (null != applicationRoleConnection.application.bot) {
               obj = { style: null, user: null, size: null, guildId: "Array" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
-              const tmp12 = new closure_1_7(applicationRoleConnection.application.bot);
+              const tmp12 = new closure_1_7(tmp4.application.bot);
               obj[1] = tmp12;
-              obj[2] = applicationRoleConnection(dependencyMap[17]).AvatarSizes.SIZE_16;
-              tmp5 = closure_1_14(applicationRoleConnection(dependencyMap[17]).Avatar, obj);
+              obj[2] = applicationRoleConnection(closure_1_2[17]).AvatarSizes.SIZE_16;
+              tmp5 = closure_1_14(applicationRoleConnection(closure_1_2[17]).Avatar, obj);
             }
             const items = [tmp5, ];
-            obj = { variant: "text-xs/normal", color: "text-default", children: applicationRoleConnection.application.name };
-            items[1] = closure_1_14(applicationRoleConnection(dependencyMap[31]).Text, obj);
+            obj = { variant: "text-xs/normal", color: "text-default", children: tmp4.application.name };
+            items[1] = closure_1_14(applicationRoleConnection(closure_1_2[31]).Text, obj);
             obj[1] = items;
             return closure_1_15(closure_1_5, obj);
           }
@@ -382,18 +383,23 @@ let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, PlatformTypes: unpackModuleId, ThemeTypes: closure_12 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let obj = { paddingHorizontal: 10, paddingVertical: require("semanticColor").FORM_ROW_VERTICAL_PADDING / 2 };
-const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+obj = { connectedAccountContainer: obj, connectedAccount: { flexDirection: "row", alignItems: "center" }, connectedAccountNameContainer: { flex: 1, marginLeft: 8 }, connectedAccountName: { flexDirection: "row", alignItems: "center" }, connectedAccountNameText: null, connectedAccountNameCreatedAtText: null, connectedAccountOpenLink: null, connectedAccountOpenHide: null, verifiedCheckContainer: null, verifiedCheck: null, connectedAccountChildren: null, metadataItem: null, appConnectionNameContainer: null, connectedAccountPoweredByContainer: null, connectedAccountPoweredByAvatar: null, connectedAccountPoweredByText: null };
+obj = { paddingHorizontal: 10, paddingVertical: require("semanticColor").FORM_ROW_VERTICAL_PADDING / 2 };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[4] = createCacheKey;
 obj[5] = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 let items = [{ rotate: "135deg" }];
 obj[6] = { height: 24, width: 24, transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj3 = { height: 24, width: 24, transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[7] = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[8] = { marginLeft: 4, height: 16, width: 16 };
 obj[9] = { position: "absolute", left: 0, top: 0 };
 obj[10] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" };
+let obj4 = { alignSelf: "flex-start", margin: 4, height: 16, width: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[11] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[12] = { flex: 1, flexDirection: "row", alignItems: "center", marginTop: 4 };
+let obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[13] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
 obj[14] = { marginRight: 4 };
 obj[15] = { marginTop: -4, alignItems: "center", flexDirection: "row" };
@@ -402,11 +408,13 @@ let closure_18 = importAllResult.memo(ConnectedUserAccount);
 let closure_19 = importAllResult.memo(ConnectedApplicationUserRoleAccount);
 let closure_20 = [];
 let closure_21 = [];
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/LegacyUserProfileConnections.tsx");
+let obj6 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, marginTop: 12 };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/LegacyUserProfileConnections.tsx");
 
 export default function LegacyUserProfileConnections(user) {
   user = user.user;
   let id = user;
+  importDefault = undefined;
   let obj = id(theme[33]);
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getUserProfile(id.id));
@@ -444,28 +452,33 @@ export default function LegacyUserProfileConnections(user) {
     }
     return connectedAccounts;
   }, items3);
+  id = undefined;
+  importDefault = undefined;
+  theme = undefined;
   let tmpResult = tmp(tmp2[32]);
-  tmpResult.useThemeContext().theme;
+  importDefault = tmpResult.useThemeContext().theme;
   tmpResult = tmp(tmp2[33]);
   const items4 = [closure_6];
-  tmpResult.useStateFromStores(items4, () => closure_6.locale);
-  const mapped = memo.map((item, index) => {
-    { children: closure_1_14(closure_1_19, obj) };
-    obj = { applicationRoleConnection: item, theme: c1, locale: theme, style: id };
-    return closure_1_14(React.Fragment, obj, index);
+  theme = tmpResult.useStateFromStores(items4, () => closure_6.locale);
+  const mapped = memo.map((applicationRoleConnection) => {
+    obj = { children: closure_1_14(closure_1_19, obj) };
+    obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };
+    return closure_1_14(React.Fragment, obj, arg1);
   });
   id = user.id;
   importDefault = undefined;
   theme = undefined;
   importAllResult = undefined;
+  closure_4 = undefined;
   theme = id(theme[32]).useThemeContext().theme;
+  const obj3 = importAllResult;
   const tmpResult1 = id(theme[32]);
   const items5 = [closure_6];
   importAllResult = id(theme[33]).useStateFromStores(items5, () => closure_6.locale);
   const tmpResult2 = id(theme[33]);
   closure_4 = id(theme[34]).usePlatformAllowed({ forUserProfile: true });
-  const found = memo1.filter((item, index) => {
-    const value = _undefined(theme[14]).get(item.type);
+  const found = memo1.filter((type) => {
+    const value = _undefined(theme[14]).get(type.type);
     let tmp2 = null != value;
     if (tmp2) {
       tmp2 = callback(value);
@@ -496,8 +509,10 @@ export default function LegacyUserProfileConnections(user) {
       obj1[2] = tmp8;
       items6[1] = callback(importDefault(tmp2[35]), obj1);
       obj[0] = items6;
-      tmp17Result = callback(closure_16, obj);
+      tmp17Result = closure_15(closure_16, obj);
       const tmp16 = importDefault(tmp2[35]);
+      const tmp17 = closure_15;
+      const tmp18 = closure_16;
     }
   }
   return tmp17Result;
@@ -506,14 +521,14 @@ export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
   const _require = arg1;
-  const theme = require("../../../../discord_common/js/packages/design/native.tsx").useThemeContext().theme;
-  const obj = ManaContext;
+  const theme = _ManaContext.useThemeContext().theme;
+  const obj = _ManaContext;
   const items = [closure_6];
-  dependencyMap = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_6.locale);
-  return arr.map((item, index) => {
-    { children: closure_1_14(closure_1_19, obj) };
-    obj = { applicationRoleConnection: item, theme: c1, locale: theme, style: id };
-    return closure_1_14(React.Fragment, obj, index);
+  dependencyMap = _initialize.useStateFromStores(items, () => closure_6.locale);
+  return arr.map((applicationRoleConnection) => {
+    obj = { children: closure_1_14(closure_1_19, obj) };
+    obj = { applicationRoleConnection, theme: c1, locale: theme, style: id };
+    return closure_1_14(React.Fragment, obj, arg1);
   });
 };
 export const useConnectedAccountItems = function useConnectedAccountItems(arr) {
@@ -525,17 +540,17 @@ export const useConnectedAccountItems = function useConnectedAccountItems(arr) {
   closure_3 = _require(theme[33]).useStateFromStores(items, () => closure_6.locale);
   const obj2 = _require(theme[33]);
   closure_4 = _require(theme[34]).usePlatformAllowed({ forUserProfile: true });
-  const found = arr.filter((item, index) => {
-    const value = _undefined(theme[14]).get(item.type);
+  const found = arr.filter((type) => {
+    const value = _undefined(theme[14]).get(type.type);
     let tmp2 = null != value;
     if (tmp2) {
       tmp2 = callback(value);
     }
     return tmp2;
   });
-  return found.map((item, index) => {
-    { children: closure_1_14(closure_1_18, obj) };
-    obj = { account: item, theme, locale: React, userId: closure_0, style: closure_1 };
-    return closure_1_14(React.Fragment, obj, index);
+  return found.map((account) => {
+    obj = { children: closure_1_14(closure_1_18, obj) };
+    obj = { account, theme, locale: React, userId: closure_0, style: closure_1 };
+    return closure_1_14(React.Fragment, obj, arg1);
   });
 };

@@ -1,12 +1,12 @@
 // discord_app/modules/safety_flows/native/OverviewScreen.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" }, title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 } });
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
 
 export default function OverviewScreen() {
   let tmp = callback2();
@@ -16,7 +16,7 @@ export default function OverviewScreen() {
   const navigation = obj1.useNavigation();
   const items = [task, navigation];
   const callback = React.useCallback(() => {
-    const screensForTaskType = task(dependencyMap[5]).getScreensForTaskType(task.task_type);
+    const screensForTaskType = task(closure_1_2[5]).getScreensForTaskType(task.task_type);
     let tmp = null != screensForTaskType;
     if (tmp) {
       tmp = screensForTaskType.length > 0;
@@ -27,9 +27,8 @@ export default function OverviewScreen() {
     if (tmp) {
       navigation.push(screensForTaskType[0]);
     }
-    const obj = task(dependencyMap[5]);
   }, items);
-  { spacing: navigation(712).space.PX_16, style: tmp.content, children: null };
+  obj = { spacing: navigation(712).space.PX_16, style: tmp.content, children: null };
   obj = { variant: "display-lg", style: tmp.title, children: null };
   const intl = task(1236).intl;
   obj[2] = intl.string(navigation(2597).RRamMH);
@@ -44,9 +43,9 @@ export default function OverviewScreen() {
   if (flow_context != null) {
     const tasks = flow_context.tasks;
     if (tasks != null) {
-      mapped = tasks.map((item, index) => {
-        const obj = { tip: task(17084).TASK_TYPE_TO_TITLE[item.task_type], index: index + 1 };
-        return callback(navigation(6692), obj, item.task_type);
+      mapped = tasks.map((task_type) => {
+        const obj = { tip: task(17084).TASK_TYPE_TO_TITLE[task_type.task_type], index: arg1 + 1 };
+        return callback(navigation(6692), obj, task_type.task_type);
       });
     }
   }
@@ -58,9 +57,9 @@ export default function OverviewScreen() {
   obj5[2] = intl3.string(navigation(2597)["0TnUrG"]);
   items2[1] = callback(task(4734).Text, obj5);
   obj2[1] = items2;
-  items1[2] = callback(task(4733).Stack, obj2);
+  items1[2] = closure_5(task(4733).Stack, obj2);
   obj[2] = items1;
-  obj4[0] = callback(task(4733).Stack, obj);
+  obj4[0] = closure_5(task(4733).Stack, obj);
   const items3 = [callback(task(5445).ModalContent, obj4), ];
   const obj6 = { children: null };
   const items4 = [callback(navigation(17091), {}), ];
@@ -70,7 +69,7 @@ export default function OverviewScreen() {
   obj7[2] = callback;
   items4[1] = callback(task(11964).ModalActionButton, obj7);
   obj6[0] = items4;
-  items3[1] = callback(task(11114).ModalFooter, obj6);
+  items3[1] = closure_5(task(11114).ModalFooter, obj6);
   obj3[0] = items3;
-  return callback(task(5440).ModalScreen, obj3);
+  return closure_5(task(5440).ModalScreen, obj3);
 };

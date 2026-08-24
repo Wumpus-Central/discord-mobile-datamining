@@ -1,11 +1,11 @@
 // discord_app/modules/guild_themes/native/useGuildThemeNuxTrigger.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import useGuildThemeNuxTriggerDefault from "../useGuildThemeNuxTrigger.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import setContent from "../../action_sheet/native/ActionSheetStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../action_sheet/native/ActionSheetStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(arg0) {
   const items = [closure_4];

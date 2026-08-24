@@ -1,8 +1,8 @@
 // discord_common/js/packages/shallow-equal/shallowEqual.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
 let closure_0 = {};
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
 
 export default function shallowEqual(arg0, arg1, arr) {
   let tmp = arg3;
@@ -25,6 +25,7 @@ export default function shallowEqual(arg0, arg1, arr) {
           if (0 < keys.length) {
             while (true) {
               let tmp4 = keys[num];
+              let tmp5 = num;
               if (arg0[tmp4] !== arg1[tmp4]) {
                 if (null == arr) {
                   break;
@@ -50,5 +51,5 @@ export const areArraysShallowEqual = function areArraysShallowEqual(items, curre
     tmp = closure_0;
   }
   ({ logCallback, shouldWarnLargeObjects } = tmp);
-  return null != current && items.length === current.length && items.every((item, index) => table[index] === item);
+  return null != current && items.length === current.length && items.every((arg0, arg1) => table[arg1] === arg0);
 };

@@ -3,12 +3,13 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import "createToggle";
+import closure_3 from "../../../experiments/apex/ApexExperimentStore.tsx";
+import closure_4 from "../../../../stores/AuthenticationStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.s3amTp);
@@ -47,6 +48,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
 
 export default createToggle;

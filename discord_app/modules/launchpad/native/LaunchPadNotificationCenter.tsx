@@ -9,6 +9,6 @@ const memoResult = importAllResult.memo(function NotificationsContent() {
   const tmp = callback();
   return jsx(goBackDefault, { style: callback().wrapper, nestedInLaunchPad: true });
 });
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");
 
 export default memoResult;

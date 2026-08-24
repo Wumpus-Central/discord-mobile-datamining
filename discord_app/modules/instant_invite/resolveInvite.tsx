@@ -1,23 +1,23 @@
 // discord_app/modules/instant_invite/resolveInvite.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
 import InviteSendStates from "Constants.tsx";
 import ME from "../../Constants.tsx";
 import { readSnowflake } from "InviteCodeUtils.tsx";
 
-const require = fn;
+const require = arg1;
 ({ InviteTargetTypes: c5, InviteTypes: closure_6 } = InviteSendStates);
 ({ Endpoints: error, AnalyticEvents: closure_8, LoggingInviteTypes: c9, AbortCodes: c10 } = ME);
 const map = new Map();
-let result = require("obj132").fileFinishedImporting("modules/instant_invite/resolveInvite.tsx");
+let result = require("set").fileFinishedImporting("modules/instant_invite/resolveInvite.tsx");
 
 export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   const _require = inviteKey;
   importDefault = arg1;
   dependencyMap = inviteInstanceId;
-  let obj = readSnowflake;
+  let obj = _readSnowflake;
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
@@ -30,7 +30,7 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   obj[1] = inviteInstanceId;
   obj1.track(constants.INVITE_OPENED, obj);
   if (map.has(inviteKey)) {
-    return map.get(inviteKey);
+    return obj4.get(inviteKey);
   } else {
     let inputValue;
     if (inviteInstanceId != null) {
@@ -61,8 +61,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       if (body != null) {
         code = body.code;
       }
-      inviteKey(inviteInstanceId[9]);
-      const obj = { resolved: ok.ok, guild_id: null, channel_id: null, channel_type: null, inviter_id: null, code: null, input_value: null, location: null, authenticated: null, size_total: null, size_online: null, destination_user_id: null, invite_type: null, user_banned: null, user_is_member: null };
+      let obj = inviteKey(inviteInstanceId[9]);
+      obj = { resolved: ok.ok, guild_id: null, channel_id: null, channel_type: null, inviter_id: null, code: null, input_value: null, location: null, authenticated: null, size_total: null, size_online: null, destination_user_id: null, invite_type: null, user_banned: null, user_is_member: null };
       let id;
       if (body != null) {
         const guild = body.guild;
@@ -131,9 +131,9 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
           const inviteType = inviteKey(inviteInstanceId[4]).getInviteType(body);
           if (closure_1_6.FRIEND === inviteType) {
             STREAM = closure_1_9.FRIEND_INVITE;
-          } else if (closure_1_6.GROUP_DM === inviteType) {
+          } else if (tmp16.GROUP_DM === inviteType) {
             STREAM = closure_1_9.GDM_INVITE;
-          } else if (closure_1_6.GUILD === inviteType) {
+          } else if (tmp16.GUILD === inviteType) {
             STREAM = closure_1_9.SERVER_INVITE;
           } else {
             const _String = String;
@@ -157,8 +157,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
     obj1[3] = obj2;
     const value = _modDef5227.get(obj1);
     const tmp4Result = _modDef5227;
-    const cleanupPromise = value.then((result) => {
-      const body = result.body;
+    const cleanupPromise = value.then((body) => {
+      body = body.body;
       if (null != callback) {
         let id = null;
         if (null != body.guild) {
@@ -205,9 +205,9 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
             const inviteType = inviteKey(tmp27[4]).getInviteType(body);
             if (closure_1_6.FRIEND === inviteType) {
               STREAM = closure_1_9.FRIEND_INVITE;
-            } else if (closure_1_6.GROUP_DM === inviteType) {
+            } else if (tmp15.GROUP_DM === inviteType) {
               STREAM = closure_1_9.GDM_INVITE;
-            } else if (closure_1_6.GUILD === inviteType) {
+            } else if (tmp15.GUILD === inviteType) {
               STREAM = closure_1_9.SERVER_INVITE;
             } else {
               const _String = String;
@@ -273,10 +273,11 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       obj = { invite: null, code: closure_0, banned: tmp };
       return obj;
     }).finally(() => {
-      map.delete(closure_0);
+      closure_1_11.delete(closure_0);
     });
-    const result1 = map.set(inviteKey, cleanupPromise);
+    const result1 = obj4.set(inviteKey, cleanupPromise);
     return cleanupPromise;
   }
   tmp = _require;
+  const tmp4 = importDefault;
 };

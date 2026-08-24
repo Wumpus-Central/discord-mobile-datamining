@@ -7,11 +7,14 @@ export default (arg0, arg1, arg2) => {
   const arr = _mod13714(arg1);
   for (let num = 0; num < arr.length; num = num + 1) {
     let tmp3 = arr[num];
+    let tmp4 = require;
+    let tmp5 = dependencyMap;
     let tmp6 = call(arg0, tmp3);
+    let tmp7 = num;
     if (!tmp6) {
       let tmp8 = arg2;
       if (arg2) {
-        tmp8 = call(arg2, tmp3);
+        tmp8 = tmp4(13696)(arg2, tmp3);
       }
       tmp6 = tmp8;
     }

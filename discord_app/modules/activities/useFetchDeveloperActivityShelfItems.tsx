@@ -1,10 +1,10 @@
 // discord_app/modules/activities/useFetchDeveloperActivityShelfItems.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import initialize from "DeveloperActivityShelfStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "DeveloperActivityShelfStore.tsx";
 import { DevShelfFetchState } from "DeveloperActivityShelfStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperActivityShelfItems() {
   isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(setting[2]).useIsActivitiesEnabledForCurrentPlatform();
@@ -20,7 +20,7 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
       tmp = setting;
     }
     if (tmp) {
-      tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
+      tmp = stateFromStores === closure_1_4.INITIALIZED;
     }
     if (tmp) {
       const developerApplications = isActivitiesEnabledForCurrentPlatform(setting[5]).fetchDeveloperApplications();

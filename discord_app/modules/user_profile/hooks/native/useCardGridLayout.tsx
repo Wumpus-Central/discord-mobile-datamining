@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useCardGridLayout.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import ARBITRARY_LARGE_OFFSET from "../../native/Constants.tsx";
 
 const PROFILE_SIDE_PADDING = ARBITRARY_LARGE_OFFSET.PROFILE_SIDE_PADDING;
-let result = obj132.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
+let result = set.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
 
 export default function useCardGridLayout() {
   let obj = arg0;

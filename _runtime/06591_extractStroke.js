@@ -1,9 +1,5 @@
 // _runtime/06591_extractStroke.js
-import extractOpacityDefault from "06577_extractOpacity.js";
-import extractBrushDefault from "06589_extractBrush.js";
-import extractLengthListDefault from "06592_extractLengthList.js";
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 let closure_2 = { butt: 0, square: 2, round: 1 };
 let closure_3 = { miter: 0, bevel: 2, round: 1 };
@@ -11,16 +7,16 @@ let closure_4 = { none: 0, default: 0, nonScalingStroke: 1, "non-scaling-stroke"
 arg5.default = function extractStroke(arg0, arg1, arr) {
   ({ stroke, strokeOpacity, strokeLinecap, strokeLinejoin, strokeDasharray, strokeWidth, strokeDashoffset, strokeMiterlimit, vectorEffect } = arg1);
   if (null != stroke) {
-    arr = arr.push("stroke");
-    arg0.stroke = extractBrushDefault(stroke);
+    arr.push("stroke");
+    arg0.stroke = module(6589)(stroke);
   }
   if (null != strokeWidth) {
-    arr = arr.push("strokeWidth");
+    arr.push("strokeWidth");
     arg0.strokeWidth = strokeWidth;
   }
   if (null != strokeOpacity) {
     arr.push("strokeOpacity");
-    arg0.strokeOpacity = extractOpacityDefault(strokeOpacity);
+    arg0.strokeOpacity = module(6577)(strokeOpacity);
   }
   if (null != strokeDasharray) {
     arr.push("strokeDasharray");
@@ -28,7 +24,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
     if (strokeDasharray) {
       tmp9 = null;
       if ("none" !== strokeDasharray) {
-        tmp9 = extractLengthListDefault(strokeDasharray);
+        tmp9 = module(6592)(strokeDasharray);
       }
     }
     let combined = tmp9;
@@ -47,6 +43,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
       tmp14 = null;
       if (strokeDashoffset) {
         tmp14 = +strokeDashoffset || 0;
+        const tmp15 = +strokeDashoffset || 0;
       }
     }
     arg0.strokeDashoffset = tmp14;

@@ -1,9 +1,10 @@
 // discord_common/js/shared/shared-constants/ConsoleCommands.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const obj = { ALL: new Set(["connect_voice"]) };
-const set = new Set(["connect_voice"]);
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleCommands.tsx");
+const obj = { ALL: null };
+let set = new Set(["connect_voice"]);
+obj[0] = set;
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleCommands.tsx");
 
 export const ConsoleCommands = { CONNECT_VOICE: "connect_voice" };
 export const ConsoleCommandsSets = obj;

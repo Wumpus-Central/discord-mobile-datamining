@@ -2,13 +2,13 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableCard from "../../../design/components/Card/native/Card.native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function MotionOptionButton(isSelected) {
   isSelected = isSelected.isSelected;
   ({ label, onPress } = isSelected);
@@ -26,25 +26,31 @@ function MotionOptionButton(isSelected) {
   }
   obj[2] = str;
   obj[4] = { checked: isSelected };
-  obj[5] = callback(Text.Text, { variant: "text-md/medium", color: "text-default", children: label });
-  return callback(PressableCard.Card, obj);
+  obj[5] = closure_6(Text.Text, { variant: "text-md/medium", color: "text-default", children: label });
+  return closure_6(PressableCard.Card, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { content: null, previewRow: null, buttonWrapper: null, optionCard: null, optionCardSelected: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignSelf: "center", gap: ThemesDefault.space.PX_8 };
+let obj1 = { flexDirection: "row", alignSelf: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { flex: 1, height: 64, alignItems: "center", justifyContent: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { borderColor: ThemesDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx");
+let obj3 = { borderColor: ThemesDefault.colors.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE, borderWidth: 2 };
+const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimationPickerSheet.tsx");
 
 export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   onChange = onChange.onChange;
+  let first;
+  dependencyMap = undefined;
   ({ emojis, initialAnimation } = onChange);
   const tmp = callback4();
   const tmp2 = callback(React.useState(initialAnimation), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   dependencyMap = tmp2[1];
   let obj = { value: null, label: null };
   const intl = onChange(1236).intl;
@@ -73,20 +79,20 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const items1 = [callback2(View, obj3), , ];
   const obj6 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
-  obj6[1] = items2.map((item, index) => closure_1_6(onChange(4733).Stack, {
+  obj6[1] = items2.map((arr) => closure_1_6(onChange(4733).Stack, {
     direction: "horizontal",
     spacing: 8,
-    children: item.map((item, index) => {
-      closure_0 = item;
+    children: arr.map((label) => {
+      closure_0 = label;
       return closure_1_6(closure_1_9, {
-        label: item.label,
-        isSelected: closure_1 === item.value,
+        label: label.label,
+        isSelected: closure_1 === label.value,
         onPress() {
-          return closure_1_2(item.value);
+          return closure_1_2(label.value);
         }
-      }, item.label);
+      }, label.label);
     })
-  }, index));
+  }, arg1));
   items1[1] = callback2(onChange(4733).Stack, obj6);
   const obj7 = { style: tmp.buttonWrapper, children: null };
   const obj8 = {

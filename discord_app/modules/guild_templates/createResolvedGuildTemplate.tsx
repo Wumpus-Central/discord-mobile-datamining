@@ -1,9 +1,9 @@
 // discord_app/modules/guild_templates/createResolvedGuildTemplate.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GuildTemplatesConstants.tsx";
 
 const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
-const result = obj132.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
+const result = set.fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");
 
 export default function createResolvedGuildTemplate(code) {
   const obj = { code: code.code, state: GuildTemplateStates.RESOLVED, name: code.name, description: null, creatorId: null, creator: null, createdAt: null, updatedAt: null, sourceGuildId: null, serializedSourceGuild: null, usageCount: null, isDirty: null };

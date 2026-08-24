@@ -3,10 +3,10 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import setFontSize from "../../../a11y/AccessibilityActionCreators.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
-import "createToggle";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 function useValue() {
   const items = [closure_3];
   return initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
@@ -14,7 +14,7 @@ function useValue() {
 function onValueChange(enabled) {
   const result = setFontSize.setDisplayNameStylesEnabled(enabled);
 }
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxyDefault["2gFUEw"]);
@@ -24,7 +24,7 @@ let createToggle = {
   onValueChange
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
 
 export default createToggle;
 export { useValue };

@@ -1,6 +1,6 @@
 // discord_app/components_native/common/SequencedLottieAnimationView.tsx
 import _isNativeReflectConstructDefault from "../../../_runtime/07131__isNativeReflectConstruct.js";
-import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
@@ -43,6 +43,7 @@ prototype["playScene"] = function playScene(nextScene) {
   let tmp3 = null == this.animationRef;
   if (!tmp3) {
     tmp3 = nextScene !== self.currentScene && tmp.BEG === tmp2.BEG && tmp.END === tmp2.END;
+    const tmp4 = nextScene !== self.currentScene && tmp.BEG === tmp2.BEG && tmp.END === tmp2.END;
   }
   if (!tmp3) {
     const animationRef = self.animationRef;
@@ -66,7 +67,8 @@ prototype["render"] = function render() {
     obj[0] = source.w / source.h;
     tmp4 = obj;
   }
-  const items = [tmp4, style];
+  obj = { style: items, children: null };
+  items = [tmp4, style];
   obj = { source, style: items1 };
   items1 = [tmp4, style];
   const tmp = callback(props, closure_2);
@@ -76,6 +78,6 @@ prototype["render"] = function render() {
   return <View source={source} style={items1} />;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };
-const result = require("obj132").fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
 
 export default SequencedLottieAnimationView;

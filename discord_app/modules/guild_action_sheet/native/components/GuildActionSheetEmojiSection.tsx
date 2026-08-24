@@ -1,29 +1,34 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getEmojiToGroupId from "../../../emojis/EmojiStore.tsx";
-import handleThemeChange from "../../../user_settings/ThemeStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../emojis/EmojiStore.tsx";
+import closure_7 from "../../../user_settings/ThemeStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ UpsellTypes: c9, AnalyticsSections: c10, Fonts } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.TEXT_SUBTLE };
+createCacheKey = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
+createCacheKey = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
 createCacheKey[3] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", padding: 4 };
 createCacheKey[4] = { width: 24, height: 24 };
+let obj1 = { color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
 createCacheKey[5] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx");
+let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
+let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx");
 
 export default function GuildActionSheetEmojiSection(guildId) {
   guildId = guildId.guildId;
+  importDefault = undefined;
+  let first;
   let callback;
   let stateFromStores;
   let num;
@@ -33,7 +38,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
   importDefault = tmp;
   let obj = stateFromStores;
   const tmp2 = callback(stateFromStores.useState(false), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   callback = tmp2[1];
   obj1 = guildId(first[10]);
   let items = [analyticsLocations];
@@ -117,12 +122,12 @@ export default function GuildActionSheetEmojiSection(guildId) {
       obj1[0] = tmp.header;
       obj2 = { style: null };
       obj2[0] = tmp.dotSeparator;
-      const items4 = [callback(num, obj2), , ];
+      const items4 = [tmp20(num, obj2), , ];
       obj3 = { source: null, color: null, size: null };
       obj3[0] = tmp6(tmp5[23]);
       obj3[1] = tmp18;
       obj3[2] = tmp4(tmp5[22]).Icon.Sizes.SMALL;
-      items4[1] = callback(tmp4(tmp5[22]).Icon, obj3);
+      items4[1] = tmp20(tmp4(tmp5[22]).Icon, obj3);
       obj4 = { style: null, children: null };
       const items5 = [tmp.premiumTitle, ];
       const obj5 = { color: null };
@@ -131,33 +136,47 @@ export default function GuildActionSheetEmojiSection(guildId) {
       obj4[0] = items5;
       const intl2 = tmp4(tmp5[20]).intl;
       obj4[1] = intl2.string(tmp4(tmp5[20]).t.p1j56s);
-      items4[2] = callback(tmp4(tmp5[22]).LegacyText, obj4);
+      items4[2] = tmp20(tmp4(tmp5[22]).LegacyText, obj4);
       obj1[1] = items4;
       obj[2] = callback2(num, obj1);
-      tmp20Result = callback(tmp4(tmp5[21]).PressableOpacity, obj);
+      tmp20Result = tmp20(tmp4(tmp5[21]).PressableOpacity, obj);
     }
     obj[1] = tmp20Result;
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.emojiContainer;
     const items6 = [
-      substr.map((item, index) => {
-          closure_0 = item;
-          const items = [lib.emoji, ];
-          let obj = { margin: num };
+      substr.map((accessibilityLabel) => {
+          closure_0 = accessibilityLabel;
+          let obj = {
+            accessibilityRole: "image",
+            accessibilityLabel: accessibilityLabel.name,
+            onPress() {
+              const result = guildId(first[24]).triggerHapticFeedback(callback(first[25]).IMPACT_LIGHT);
+              const obj = guildId(first[24]);
+              guildId(first[26]).presentEmoji(closure_0);
+              if (!closure_1_2) {
+                closure_1_3(true);
+              }
+            },
+            children: null
+          };
+          obj = { resizeMode: "contain", style: items, placeholder: null, source: null };
+          items = [lib.emoji, ];
+          obj = { margin: num };
           items[1] = obj;
           const tmp4 = lib(first[27]);
           if (obj4.isThemeDark(lib2.theme)) {
-            let tmp3Result = lib(first[28]);
+            let tmp3Result = tmp3(tmp2[28]);
           } else {
-            tmp3Result = lib(first[29]);
+            tmp3Result = tmp3(tmp2[29]);
           }
           obj[2] = tmp3Result;
           obj1 = { uri: null };
-          tmp3Result = lib(first[30]);
-          obj1[0] = tmp3Result.getEmojiURL({ id: item.id, animated: item.animated, size: 48 });
+          tmp3Result = tmp3(tmp2[30]);
+          obj1[0] = tmp3Result.getEmojiURL({ id: accessibilityLabel.id, animated: accessibilityLabel.animated, size: 48 });
           obj[3] = obj1;
           obj[3] = closure_1_11(tmp4, obj);
-          return closure_1_11(guildId(first[21]).PressableOpacity, obj, item.id);
+          return closure_1_11(guildId(first[21]).PressableOpacity, obj, accessibilityLabel.id);
         }),
 
     ];
@@ -179,13 +198,15 @@ export default function GuildActionSheetEmojiSection(guildId) {
       obj8[0] = items7;
       let _HermesInternal = HermesInternal;
       obj8[1] = "+" + bound;
-      obj7[3] = callback(tmp4(tmp5[22]).LegacyText, obj8);
-      tmp20Result = callback(tmp4(tmp5[21]).PressableOpacity, obj7, -1);
+      obj7[3] = tmp20(tmp4(tmp5[22]).LegacyText, obj8);
+      tmp20Result = tmp20(tmp4(tmp5[21]).PressableOpacity, obj7, -1);
     }
     items6[1] = tmp20Result;
     obj6[1] = items6;
     obj[2] = callback2(num, obj6);
-    tmp20Result1 = callback(tmp4(tmp5[19]).RowGroup, obj);
+    tmp20Result1 = tmp20(tmp4(tmp5[19]).RowGroup, obj);
+    const tmp24 = callback2;
+    const tmp25 = num;
   }
   return tmp20Result1;
 };

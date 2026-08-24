@@ -1,20 +1,23 @@
 // discord_app/modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const sum = require("AppLauncherBackButton").BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
-let createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: null, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: APP_LAUNCHER_BUILT_IN_SECTION_ICON.SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
+let obj1 = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: APP_LAUNCHER_BUILT_IN_SECTION_ICON.SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
 createCacheKey[3] = { width: 72, height: 72, borderRadius: ThemesDefault.radii.xl };
+let obj2 = { width: 72, height: 72, borderRadius: ThemesDefault.radii.xl };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[5] = { textAlign: "center", pointerEvents: "none", flexGrow: 1, marginHorizontal: 8 };
 let items = [{ rotate: "180deg" }];
@@ -24,7 +27,8 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function AppLauncherCommandViewHeaderTsx1(){const{interpolate,scrollOffsetY,TOTAL_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[0,1],'clamp'),transform:[{translateY:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[12,0],'clamp')}]};}" };
 let closure_11 = { code: "function AppLauncherCommandViewHeaderTsx2(){const{APP_ICON_SIZE,APP_ICON_BORDER_WIDTH,DEFAULT_CONTENT_PADDING,interpolate,scrollOffsetY,TOTAL_SCROLL_RANGE}=this.__closure;return{transform:[{translateX:-APP_ICON_SIZE/2-APP_ICON_BORDER_WIDTH+DEFAULT_CONTENT_PADDING},{translateY:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[0,-APP_ICON_SIZE/2],'clamp')},{scale:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[1,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[1,0],'clamp')};}" };
 let closure_12 = { code: "function AppLauncherCommandViewHeaderTsx3(){const{interpolate,scrollOffsetY,TOTAL_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[0,0.5],'clamp')};}" };
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx");
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx");
 
 export const COLLAPSED_HEADER_HEIGHT = 56;
 export const EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT = sum + -16;
@@ -39,7 +43,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
     if (section != null) {
       application = section.application;
     }
-    return scrollOffsetY(dependencyMap[7]).getAppLauncherIconSource(application);
+    return scrollOffsetY(closure_1_2[7]).getAppLauncherIconSource(application);
   }, items);
   let obj = scrollOffsetY(4115);
   class A {
@@ -114,12 +118,14 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const animatedStyle2 = obj4.useAnimatedStyle(N);
   obj1 = { interpolate: scrollOffsetY(4115).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE: closure_8 };
   let str = scrollOffsetY(4097).useToken(section(712).colors.BACKGROUND_BASE_LOW);
+  let tmp10 = memo;
   const obj7 = scrollOffsetY(4097);
   if (typeof memo !== "number") {
     let uri;
     if (memo != null) {
       uri = memo.uri;
     }
+    tmp10 = uri;
   }
   if (str == null) {
     str = "";
@@ -162,5 +168,5 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const items6 = [tmp.appIconMask, animatedStyle1];
   items4[4] = tmp16(section(4115).View, { style: items6, children: tmp15 });
   obj4[1] = items4;
-  return callback(View, obj4);
+  return closure_7(View, obj4);
 };

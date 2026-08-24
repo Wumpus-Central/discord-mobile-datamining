@@ -12,15 +12,16 @@ import GuildProfileBackground from "GuildProfileView.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/RestrictedGuildProfileView.tsx");
 
 export default function RestrictedGuildProfileView() {
   let obj = GuildProfileBackground;
   const styles = obj.useStyles();
   obj1 = map;
+  obj = { style: styles.container, children: null };
   const token = obj1.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWEST);
   obj = { style: styles.colorBanner, start: null, end: null, colors: null };
   const tmp2 = useThemeDefault();
@@ -32,6 +33,7 @@ export default function RestrictedGuildProfileView() {
   obj1 = { style: styles.header, children: null };
   const obj2 = { style: styles.avatarBackground, children: null };
   const obj3 = { size: null, value: "?", selected: false, textStyle: null };
+  const tmp4 = LinearGradientDefault;
   obj3[0] = GuildIconSizes.GuildIconSizes.XXLARGE;
   obj3[3] = styles.restrictedAcronym;
   obj2[1] = callback(GuildIconSizesDefault, obj3);

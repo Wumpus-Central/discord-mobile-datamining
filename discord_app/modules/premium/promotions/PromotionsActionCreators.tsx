@@ -1,14 +1,14 @@
 // discord_app/modules/premium/promotions/PromotionsActionCreators.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
-import createFromServer from "../../../records/PromotionRecord.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import createEmptyPromotionsByType from "PromotionsStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
+import closure_5 from "../../../records/PromotionRecord.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
+import closure_7 from "PromotionsStore.tsx";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "../PremiumConstants.tsx";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function fetchActivePromotions() {
   const self = this;
   const apply = _fetchActivePromotions.apply;
@@ -45,9 +45,9 @@ function _fetchActivePromotions() {
       if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
-          throw arr;
+          throw arg1;
         } else if (arg0 !== 2) {
-          let lib = arr;
+          let lib = arg1;
           callback = closure_7.consumedInboundPromotionId;
           if (!closure_7.hasFetchedConsumedInboundPromotionId) {
             obj1 = lib(promotion_id[10]);
@@ -60,18 +60,18 @@ function _fetchActivePromotions() {
         }
       } else if (arg0 === 1) {
         c6 = 3;
-        throw arr;
+        throw arg1;
       } else if (arg0 === 2) {
         locale = 0;
         c6 = 3;
         const obj = { value: null, done: true };
-        obj[0] = arr;
+        obj[0] = arg1;
         return obj;
       } else {
-        arr.find((item, index) => {
-          let tmp = null != item.promotion_id;
+        promotion_id = arg1.find((promotion_id) => {
+          let tmp = null != promotion_id.promotion_id;
           if (tmp) {
-            tmp = true === item.consumed;
+            tmp = true === promotion_id.consumed;
           }
           return tmp;
         });
@@ -93,7 +93,7 @@ function _fetchActivePromotions() {
       locale = 0;
     }
     locale = 0;
-    return arr;
+    return arg1;
   });
   closure_11 = tmp;
   const apply = tmp.apply;
@@ -110,7 +110,7 @@ function dismissOutboundPromotionNotice() {
   if (null != lastDismissedOutboundPromotionStartDate) {
     const PreloadedUserSettingsActionCreators = lastDismissedOutboundPromotionStartDate(1374).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("userContent", (arg0) => {
-      const StringValue = lastDismissedOutboundPromotionStartDate(dependencyMap[12]).StringValue;
+      const StringValue = lastDismissedOutboundPromotionStartDate(closure_1_2[12]).StringValue;
       arg0.lastDismissedOutboundPromotionStartDate = StringValue.create({ value: lastDismissedOutboundPromotionStartDate });
     }, lastDismissedOutboundPromotionStartDate(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
   }
@@ -133,10 +133,10 @@ function _fetchActiveBogoPromotion() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw body;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = body;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -147,15 +147,15 @@ function _fetchActiveBogoPromotion() {
         if (0 === locale) {
           if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = body;
+            obj[0] = arg1;
             return obj;
           } else {
             const callback = tmp3;
-            body = tmp7;
+            let body = tmp7;
             body = undefined;
             if (!closure_1_7.isFetchingActiveBogoPromotion) {
               c3 = 1;
@@ -181,9 +181,9 @@ function _fetchActiveBogoPromotion() {
             obj3.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
           } else if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 !== 2) {
-            body = body.body;
+            body = arg1.body;
             obj = callback(709);
             obj4 = { type: "ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS", activePromotion: null };
             obj4[1] = c5.createFromServer(body);
@@ -193,7 +193,7 @@ function _fetchActiveBogoPromotion() {
           c3 = 0;
           c5 = 3;
           const obj5 = { value: null, done: true };
-          obj5[0] = body;
+          obj5[0] = arg1;
           return obj5;
         }
         c5 = 3;
@@ -247,9 +247,9 @@ function _fetchClaimedOutboundPromotionCodes() {
       locale = 3;
     } else if (arg0 === 1) {
       locale = 3;
-      throw body;
+      throw arg1;
     } else if (arg0 !== 2) {
-      body = body.body;
+      const body = arg1.body;
       callback = body.map(callback(7930).claimedOutboundPromotionCodeFromServer);
       const obj = callback2(709);
       const obj4 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: null };
@@ -258,7 +258,7 @@ function _fetchClaimedOutboundPromotionCodes() {
       dependencyMap = 0;
     }
     dependencyMap = 0;
-    return body;
+    return arg1;
   });
   closure_13 = tmp;
   const apply = tmp.apply;
@@ -270,10 +270,11 @@ function _fetchClaimedOutboundPromotionCodes() {
   return applyArgumentsResult;
 }
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
-  const obj = { type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode };
+  let obj = dispatcherDefault;
+  obj = { type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode };
   obj.dispatch(obj);
 }
-const result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsActionCreators.tsx");
 
 export default {
   fetchActivePromotions,

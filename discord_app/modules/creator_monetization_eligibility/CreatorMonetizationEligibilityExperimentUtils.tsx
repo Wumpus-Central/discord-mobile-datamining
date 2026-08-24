@@ -1,12 +1,13 @@
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import handlePaymentSourceCreateEnd from "../../stores/billing/BillingInfoStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
+import closure_3 from "../../stores/billing/BillingInfoStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
-const set = new Set(["US"]);
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
+require = arg1;
+let set = new Set(["US"]);
+const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx");
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
   const items = [closure_2, closure_3];

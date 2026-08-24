@@ -1,7 +1,7 @@
 // discord_app/modules/action_sheet/native/ActionSheetConstants.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
+const result = set.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
 
 export const ACTION_SHEET_START_HEIGHT_RATIO = 0.6;
 export const ACTION_SHEET_MAX_DYNAMIC_CONTENT_SIZE_RATIO = 0.85;

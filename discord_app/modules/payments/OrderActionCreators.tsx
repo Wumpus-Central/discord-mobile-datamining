@@ -1,10 +1,10 @@
 // discord_app/modules/payments/OrderActionCreators.tsx
 import timestampDefault from "../debug/Logger.tsx";
 import setDefault from "../../errors/BillingError.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _signOrder() {
   const self = this;
   let tmp = callback((arg0) => {
@@ -365,7 +365,7 @@ const prototype = function OrderProcessingPendingError() {
 class prototype extends tmp4 {
 }
 const tmp2 = new timestampDefault("OrderActionCreators");
-let result = require("obj132").fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
 
 export { OrderSigningFailedWithConstraintsError };
 export const OrderProcessingPendingError = prototype;

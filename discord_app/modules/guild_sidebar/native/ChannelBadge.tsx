@@ -1,19 +1,17 @@
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import shortenAndLocalizeNumber from "../../../utils/NumberUtils.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
 import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
 import MentionsBadgeDefault from "MentionsBadge.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
+import closure_4 from "../../user_settings/LocaleStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_6 = createCacheKey.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
 
 export default function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
@@ -51,10 +49,10 @@ export default function ChannelBadge(arg0) {
             const obj2 = { style: null, children: null };
             obj2[0] = tmp.channelInfoContainer;
             const obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-            obj3[2] = shortenAndLocalizeNumber.humanizeValue(postsWithUnreadsCount, stateFromStores);
-            obj2[1] = jsx(Text.Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
+            obj3[2] = tmp2(1898).humanizeValue(postsWithUnreadsCount, stateFromStores);
+            obj2[1] = jsx(tmp2(4734).Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
             tmp5 = <View style={null}>{null}</View>;
-            const tmp2Result = shortenAndLocalizeNumber;
+            const tmp2Result = tmp2(1898);
           }
         }
       }

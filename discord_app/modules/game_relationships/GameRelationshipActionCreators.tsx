@@ -1,11 +1,11 @@
 // discord_app/modules/game_relationships/GameRelationshipActionCreators.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import V6OrEarlierAPIError from "../../errors/index.tsx";
-import obj132Default from "../../actions/AlertActionCreators.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import setDefault from "../../actions/AlertActionCreators.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function showRequestFailedAlert(arg0) {
   const aPIError = new V6OrEarlierAPIError.APIError(arg0);
   let anyErrorMessage = aPIError.getAnyErrorMessage();
@@ -13,11 +13,11 @@ function showRequestFailedAlert(arg0) {
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["328j/I"]);
   if (null == anyErrorMessage) {
-    const intl2 = getSystemLocale.intl;
-    anyErrorMessage = intl2.string(getSystemLocale.t.fEptJP);
+    const intl2 = tmp(1236).intl;
+    anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
   }
   obj[1] = anyErrorMessage;
-  obj132Default.show(obj);
+  setDefault.show(obj);
 }
 function deleteGameRelationship() {
   const self = this;
@@ -327,7 +327,7 @@ function _cancelGameFriendRequest() {
   return applyArgumentsResult;
 }
 ({ Endpoints: c4, RelationshipTypes: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/game_relationships/GameRelationshipActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipActionCreators.tsx");
 
 export default {
   removeGameFriend(arg0) {
@@ -341,30 +341,30 @@ export default {
     return applyArgumentsResult;
   },
   acceptGameFriendRequest(arg0) {
-    function onSuccess(dependencyMap) {
+    function onSuccess(arg0) {
 
     }
     ({ userId, applicationId } = arg0);
     const HTTP = onSuccess(530).HTTP;
     let obj = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
     const putResult = HTTP.put({ url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false });
-    return HTTP.put({ url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false }).then((result) => {
-      const AccessibilityAnnouncer = onSuccess(dependencyMap[6]).AccessibilityAnnouncer;
-      const intl = onSuccess(dependencyMap[4]).intl;
-      AccessibilityAnnouncer.announce(intl.string(onSuccess(dependencyMap[4]).t.taJiuc));
-    }).catch((error) => {
-      const aPIError = new onSuccess(4273).APIError(error);
+    return HTTP.put({ url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false }).then(() => {
+      const AccessibilityAnnouncer = onSuccess(closure_1_2[6]).AccessibilityAnnouncer;
+      const intl = onSuccess(closure_1_2[4]).intl;
+      AccessibilityAnnouncer.announce(intl.string(onSuccess(closure_1_2[4]).t.taJiuc));
+    }).catch((arg0) => {
+      const aPIError = new onSuccess(4273).APIError(arg0);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1236).intl;
       obj[0] = intl.string(onSuccess(1236).t["328j/I"]);
       if (null == anyErrorMessage) {
-        const intl2 = onSuccess(1236).intl;
-        anyErrorMessage = intl2.string(onSuccess(1236).t.fEptJP);
+        const intl2 = tmp(1236).intl;
+        anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
       }
       obj[1] = anyErrorMessage;
       callback(4827).show(obj);
-      return Promise.reject(error);
+      return Promise.reject(arg0);
     });
   },
   cancelGameFriendRequest(arg0) {

@@ -59,7 +59,7 @@ function createIntegerConversion(exponent, unsigned) {
           }
         }
         const _HermesInternal2 = HermesInternal;
-        const combined = "is outside the accepted range of " + closure_0 + " to " + closure_1 + ", inclusive";
+        const combined = "is outside the accepted range of " + tmp21 + " to " + closure_1 + ", inclusive";
         let str11 = "Value";
         if (obj) {
           str11 = "Value";
@@ -126,13 +126,13 @@ function createIntegerConversion(exponent, unsigned) {
             }
             let sum = result;
             if (num10 !== num9) {
-              sum = result + closure_3;
+              sum = result + tmp9;
             }
             let diff = sum;
             if (closure_2) {
               diff = sum;
               if (sum >= closure_4) {
-                diff = sum - closure_3;
+                diff = sum - tmp9;
               }
             }
             let tmp8 = diff;
@@ -180,14 +180,14 @@ unsigned_long_long.void = () => {
 
 };
 unsigned_long_long.boolean = (arg0) => arg0;
-unsigned_long_long.byte = require("00008_Deque.js");
-unsigned_long_long.octet = require("00008_Deque.js");
-unsigned_long_long.short = require("../discord_app/utils/checkEnv.tsx");
-unsigned_long_long["unsigned short"] = require("../discord_app/utils/checkEnv.tsx");
-unsigned_long_long.long = require("metro/00032__slicedToArray.js");
-unsigned_long_long["unsigned long"] = require("metro/00032__slicedToArray.js");
-unsigned_long_long["long long"] = require("00064_sizesDiffer.js");
-unsigned_long_long["unsigned long long"] = require("00064_sizesDiffer.js");
+unsigned_long_long.byte = require("module_8");
+unsigned_long_long.octet = require("module_8");
+unsigned_long_long.short = require("module_16");
+unsigned_long_long["unsigned short"] = require("module_16");
+unsigned_long_long.long = require("module_32");
+unsigned_long_long["unsigned long"] = require("module_32");
+unsigned_long_long["long long"] = require("module_64");
+unsigned_long_long["unsigned long long"] = require("module_64");
 unsigned_long_long.double = (arg0, context) => {
   if (Number.isFinite(+arg0)) {
     return tmp;
@@ -310,6 +310,7 @@ unsigned_long_long.USVString = (arg0, arg1) => {
   if (0 < DOMStringResult.length) {
     while (true) {
       let charCodeAtResult = DOMStringResult.charCodeAt(num);
+      let tmp2 = num;
       if (charCodeAtResult >= 55296) {
         if (charCodeAtResult <= 57343) {
           if (56320 <= charCodeAtResult) {
@@ -383,7 +384,7 @@ unsigned_long_long.object = (arg0, context) => {
     return arg0;
   }
 };
-Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
+let get = Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
 unsigned_long_long.ArrayBuffer = (arg0, context) => {
   if (isArrayBuffer(arg0)) {
     return arg0;
@@ -400,7 +401,7 @@ unsigned_long_long.ArrayBuffer = (arg0, context) => {
     throw typeError;
   }
 };
-const get = Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
+get = Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
 unsigned_long_long.DataView = (arg0, arg1) => {
   try {
     const call = get.call;
@@ -417,8 +418,12 @@ unsigned_long_long.DataView = (arg0, arg1) => {
   }
 };
 let items = [Int8Array, Int16Array, Int32Array, Uint8Array, Uint16Array, Uint32Array, Uint8ClampedArray, Float32Array, Float64Array];
-const item = items.forEach((item, index) => {
-  const name = item.name;
+const item = items.forEach((name) => {
+  name = name.name;
+  let str = "a";
+  if (obj.test(name)) {
+    str = "an";
+  }
   name[name] = (arg0, context) => {
     if (ArrayBuffer.isView(arg0)) {
       if (arg0.constructor.name === name) {

@@ -1,20 +1,20 @@
 // discord_app/modules/icymi/native/ICYMIMessageRow.tsx
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import updateUserGuildSettingsInternal from "../../../stores/UserGuildSettingsStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import closure_8 from "../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "../../../stores/UserStore.tsx";
 import { ITEM_PADDING } from "DesignConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createICYMIStyles from "createICYMIStyles.tsx";
 
-require = fn;
+require = arg1;
 class MessageRowContent {
   constructor(arg0) {
     message = global.message;
@@ -47,11 +47,12 @@ class MessageRowContent {
     memo = closure_3.useMemo(() => {
       let tmp2 = 1 !== message.embeds.length;
       if (!tmp2) {
-        tmp2 = message.attachments.length > 0;
+        tmp2 = tmp.attachments.length > 0;
       }
       let tmp3 = !tmp2;
       if (!tmp2) {
-        tmp3 = message.embeds[0].type === closure_1_13.GIFV && message.embeds[0].url === message.content;
+        tmp3 = tmp.embeds[0].type === closure_1_13.GIFV && tmp.embeds[0].url === tmp.content;
+        const tmp5 = tmp.embeds[0].type === closure_1_13.GIFV && tmp.embeds[0].url === tmp.content;
       }
       return tmp3;
     }, items1);
@@ -60,8 +61,8 @@ class MessageRowContent {
     items2 = [, ];
     items2[0] = tmp.messagePreview;
     tmp10 = null;
-    everyResult = attachments.every((item, index) => {
-      const content_type = item.content_type;
+    everyResult = attachments.every((content_type) => {
+      content_type = content_type.content_type;
       let startsWithResult;
       if (content_type != null) {
         startsWithResult = content_type.startsWith("audio/");
@@ -204,20 +205,22 @@ let c3 = importAllResult;
 const PX_12 = ThemesDefault.space.PX_12;
 const PX_8 = ThemesDefault.space.PX_8;
 let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
-  let obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: ThemesDefault.space.PX_8 };
+  let obj = { pressable: null, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
+  obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: ThemesDefault.space.PX_8 };
   obj[0] = obj;
-  let obj2 = obj132;
+  let obj2 = set;
   let num = 0;
   if (obj2.isAndroid()) {
     num = -2;
   }
-  obj = { marginTop: num, borderRadius: ThemesDefault.radii.md, gap: 0 };
+  obj = { marginTop: num, borderRadius: tmp(712).radii.md, gap: 0 };
   obj[1] = obj;
   obj[2] = { gap: ThemesDefault.space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, maxHeight: 132 };
   obj2 = { flexDirection: "row", gap: PX_8, overflow: "hidden" };
   obj[3] = obj2;
   obj[4] = { paddingLeft: paddingLeft.inset, paddingBottom: paddingLeft.margin };
   obj[5] = { marginRight: paddingLeft.margin };
+  obj1 = { gap: ThemesDefault.space.PX_8, marginHorizontal: paddingLeft.margin, padding: PX_12, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, maxHeight: 132 };
   obj[6] = { marginTop: ThemesDefault.space.PX_8, marginBottom: paddingLeft.margin, gap: ThemesDefault.space.PX_8, paddingHorizontal: paddingLeft.margin, marginLeft: paddingLeft.inset };
   return obj;
 });
@@ -238,12 +241,12 @@ let closure_21 = importAllResult.memo((message) => {
   const effect = importAllResult.useEffect(() => {
     let id;
     if (guild != null) {
-      id = guild.id;
+      id = tmp.id;
     }
     if (null != id) {
       let id1;
-      if (guild != null) {
-        id1 = guild.id;
+      if (tmp != null) {
+        id1 = tmp.id;
       }
       const membersById = channel(guild[24]).requestMembersById(id1, message.author.id);
       const obj = channel(guild[24]);
@@ -325,21 +328,22 @@ let closure_21 = importAllResult.memo((message) => {
   }
   items5[2] = tmp20Result;
   obj[7] = items5;
-  const items6 = [callback(message(guild[32]).PressableHighlight, obj), ];
+  const items6 = [closure_15(message(guild[32]).PressableHighlight, obj), ];
   const tmpResult1 = message(guild[33]);
   items6[1] = callback(View, { style: tmp10.footer, children: callback(tmp15(guild[34]), obj4) });
   obj[9] = items6;
-  return callback(tmp16, obj);
+  return closure_15(tmp16, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIMessageRow.tsx");
 
 export default function MessageRowWrapper(arg0) {
   let gravityMessage;
+  let stateFromStores;
   ({ message, messageContext, visible } = arg0);
   let obj = gravityMessage(9056);
   gravityMessage = obj.useGravityMessage(message);
   const items = [closure_5];
-  const stateFromStores = gravityMessage(589).useStateFromStores(items, () => closure_1_5.getChannel(gravityMessage.getChannelId()));
+  stateFromStores = gravityMessage(589).useStateFromStores(items, () => closure_1_5.getChannel(gravityMessage.getChannelId()));
   const obj2 = gravityMessage(589);
   const items1 = [closure_7];
   const stateFromStores1 = gravityMessage(589).useStateFromStores(items1, () => {

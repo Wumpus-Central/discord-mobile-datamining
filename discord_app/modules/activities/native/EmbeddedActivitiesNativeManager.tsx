@@ -10,19 +10,18 @@ import _runPrimaryAppCommandOrJoinEmbeddedActivity from "../EmbeddedActivitiesAc
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import getShelfItemTrackingPropertiesDefault from "../EmbeddedActivitiesManager.tsx";
 import NativeModulesDefault from "../../device/ThermalUtils.native.tsx";
-import _modDef8748 from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
 import registerAssetDefault from "../../../../_runtime/08764_registerAsset.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
-import participantFromServer from "../EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
+import closure_6 from "../EmbeddedActivitiesStore.tsx";
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
 import WebView from "../../../../_runtime/06304_WebView.js";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 function postMessageToWebView() {
   const self = this;
   const apply = _postMessageToWebView.apply;
@@ -72,7 +71,7 @@ function _postMessageToWebView() {
 ({ AnalyticEvents: closure_8, ComponentActions: c9 } = ME);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
 let nativeEventEmitter = null;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   nativeEventEmitter = new require("get ActivityIndicator").NativeEventEmitter(enforcingDefault);
 }
 getShelfItemTrackingPropertiesDefault;
@@ -117,7 +116,6 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
           obj[1] = selfEmbeddedActivityForLocation.applicationId;
           self.leaveActivity(obj);
         }
-        tmp3 = null != selfEmbeddedActivityForLocation && null != connectedActivityLocation;
       });
     }
     self.lifecycleSubscription = addListenerResult;
@@ -146,12 +144,12 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
           tmp14 = null != iframeId;
         }
         if (tmp14) {
-          let obj = _modDef8748;
+          let obj = closure_1_1(closure_1_2[14]);
           obj = { type: null, origin: null, iframeId: null };
-          obj[0] = TransportTypes.POST_MESSAGE;
+          obj[0] = closure_1_10.POST_MESSAGE;
           obj[1] = url;
           obj[2] = iframeId;
-          obj.handleMessage(parsed, obj, postMessageToWebView);
+          obj.handleMessage(parsed, obj, closure_1_13);
         }
       } catch (tmp22) {
         const _SyntaxError = SyntaxError;
@@ -175,11 +173,12 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
               obj[1] = tmp28;
               self.leaveActivity(obj);
               obj1 = { body: null, confirmText: null };
-              const intl = self(dependencyMap[16]).intl;
-              obj1[0] = intl.string(self(dependencyMap[16]).t.tYBBWz);
-              const intl2 = self(dependencyMap[16]).intl;
-              obj1[1] = intl2.string(self(dependencyMap[16]).t.BddRzS);
-              _modDef4656.show(obj1);
+              const intl = self(closure_1_2[16]).intl;
+              obj1[0] = intl.string(self(closure_1_2[16]).t.tYBBWz);
+              const intl2 = self(closure_1_2[16]).intl;
+              obj1[1] = intl2.string(self(closure_1_2[16]).t.BddRzS);
+              closure_1_1(closure_1_2[15]).show(obj1);
+              const obj4 = closure_1_1(closure_1_2[15]);
             }
           }
         } else {
@@ -210,6 +209,7 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
         applicationId = selfEmbeddedActivityForLocation.applicationId;
       }
       const obj2 = self(table[18]);
+      const tmp9 = callback;
       obj = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
       let guild_id;
       if (basicChannel != null) {
@@ -219,21 +219,20 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
       obj[5] = mediaSessionId.getMediaSessionId();
       callback(table[19]).track(constants.ACTIVITY_DEVICE_THERMAL_STATE_CHANGED, obj);
       const obj3 = callback(table[19]);
-      callback(table[20]).dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
-      let tmp3Result = self(table[21]);
+      tmp9(table[20]).dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
+      let tmp3Result = tmp3(tmp4[21]);
       let tmp14 = null != compositeInstanceId;
       const thermalState = tmp3Result.getThermalState();
       if (tmp14) {
         tmp14 = null != applicationId;
       }
       if (tmp14) {
-        tmp14 = thermalState >= self(table[21]).ThermalStates.SERIOUS;
+        tmp14 = thermalState >= tmp3(tmp4[21]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        tmp3Result = self(table[22]);
+        tmp3Result = tmp3(tmp4[22]);
         const respondToSeriousThermalState = tmp3Result.requestRespondToSeriousThermalState();
       }
-      const tmp9Result = callback(table[20]);
     });
     return;
   }
@@ -258,21 +257,24 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
 const prototype = EmbeddedActivitiesNativeManager.prototype;
 prototype["showErrorModal"] = function showErrorModal(reason, id) {
   ({ code, message } = reason);
-  const obj = { title: null, body: null };
+  let obj = _modDef4656;
+  obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  const obj = { title: null, body: null };
+  let obj = _modDef4656;
+  obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.PtobXW);
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  const obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
+  let obj = dispatcherDefault2;
+  obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.JfA7IK);
   obj[2] = registerAssetDefault;
@@ -295,6 +297,7 @@ prototype["leaveActivity"] = function leaveActivity(arg0) {
   let isNotNullishResult = null != _location;
   if (isNotNullishResult) {
     isNotNullishResult = isDiscordFrontendDevelopment.isNotNullish(applicationId);
+    const obj = isDiscordFrontendDevelopment;
   }
   if (isNotNullishResult) {
     let tmp5 = null != releaseWebViewResult;
@@ -303,7 +306,6 @@ prototype["leaveActivity"] = function leaveActivity(arg0) {
     }
     const result = self.clearEmbeddedActivityState(_location, applicationId, tmp5);
   }
-  releaseWebViewResult = this.releaseWebView();
 };
 prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   if (arg0 == null) {
@@ -311,7 +313,8 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = { location: _location, applicationId, showFeedback };
+  let obj = _runPrimaryAppCommandOrJoinEmbeddedActivity;
+  obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
   obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };
   dispatcherDefault.dispatch(obj);
@@ -334,7 +337,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   }
 };
 const embeddedActivitiesNativeManager = new EmbeddedActivitiesNativeManager();
-let result = obj132.fileFinishedImporting("modules/activities/native/EmbeddedActivitiesNativeManager.tsx");
+let result = set.fileFinishedImporting("modules/activities/native/EmbeddedActivitiesNativeManager.tsx");
 
 export default embeddedActivitiesNativeManager;
 export const EMBEDDED_ACTIVITY_WEB_VIEW_KEY = "EMBEDDED_ACTIVITY_WEB_VIEW_KEY";

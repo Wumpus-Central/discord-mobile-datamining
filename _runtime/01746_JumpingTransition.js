@@ -12,7 +12,9 @@ arg5.JumpingTransition = function JumpingTransition(name) {
   } else {
     diff = -translateY + result;
   }
-  const obj = { transform: null, easing: null };
+  let obj = { name, style: null, duration: 300 };
+  obj = { 0: null, 50: null, 100: null };
+  obj = { transform: null, easing: null };
   const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
   obj[0] = items;
   obj[1] = linear.Easing.exp;

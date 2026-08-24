@@ -2,7 +2,7 @@
 import useIsHubRealNamePromptShowingDefault from "../../hub/useIsHubRealNamePromptShowing.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 class ChatViewPopups {
   constructor(arg0) {
     guildId = global.guildId;
@@ -29,10 +29,10 @@ class ChatViewPopups {
             return false;
           };
           ref(11834).open(obj);
-          ref.current = true;
+          tmp.current = true;
           const obj3 = ref(11834);
         } else if (showWelcomeModal) {
-          guildId(11826);
+          obj = guildId(11826);
           obj = { guildId: null, onHide: null };
           obj[0] = guildId;
           obj[1] = function onHide() {
@@ -40,7 +40,7 @@ class ChatViewPopups {
             return false;
           };
           const result = obj.openWelcomeActionSheet(obj);
-          ref.current = true;
+          tmp.current = true;
         }
       }
     }, items);
@@ -49,7 +49,7 @@ class ChatViewPopups {
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(ChatViewPopups);
-let result = require("obj132").fileFinishedImporting("modules/chat/native/ChatViewPopups.tsx");
+let result = require("set").fileFinishedImporting("modules/chat/native/ChatViewPopups.tsx");
 
 export default memoResult;
 export { ChatViewPopups };

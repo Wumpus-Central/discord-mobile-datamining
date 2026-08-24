@@ -1,11 +1,11 @@
 // discord_app/stores/RTCRegionStore.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../utils/Durations.tsx";
+import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
-const HOUR = obj132Default.Millis.HOUR;
+const HOUR = setDefault.Millis.HOUR;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class RTCRegionStore extends DeviceSettingsStore {
 }
@@ -88,6 +88,6 @@ obj = {
   }
 };
 const rTCRegionStore = new RTCRegionStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("stores/RTCRegionStore.tsx");
+const result = require("set").fileFinishedImporting("stores/RTCRegionStore.tsx");
 
 export default rTCRegionStore;

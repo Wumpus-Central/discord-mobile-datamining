@@ -8,18 +8,20 @@ import getGuildBadgeSourceDefault from "../../../guild/native/GuildBadge.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ExpressionSourceGuildRecord as closure_4 } from "../../../emojis/records/ExpressionSourceRecord.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm, marginRight: 12 };
+createCacheKey = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
+createCacheKey = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm, marginRight: 12 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "column" };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginRight: 32 };
 createCacheKey[5] = { marginRight: 8 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 4 };
 createCacheKey[7] = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj1 = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[8] = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 class ExpressionGuildDetails {
@@ -97,7 +99,7 @@ class ExpressionGuildDetails {
               obj13 = { style: null, onPress: null, children: null };
               obj13[0] = tmp.joinGuildButton;
               obj13[1] = function onPress() {
-                return guild(dependencyMap[12]).handleJoinGuild(guild.id);
+                return guild(closure_1_2[12]).handleJoinGuild(guild.id);
               };
               obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
               intl3 = require("getSystemLocale").intl;
@@ -139,7 +141,8 @@ class ExpressionGuildDetails {
     return;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
+let obj2 = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
+const result = require("set").fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
 
 export default ExpressionGuildDetails;
 export { ExpressionGuildDetails };

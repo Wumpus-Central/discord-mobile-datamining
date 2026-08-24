@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { GUILD_FEATURE_TO_PERK } from "../constants/GuildPowerupsConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
 export default function useGuildPowerupLevelPerks(arg0) {
   closure_0 = arg0;
@@ -17,7 +17,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
   let items = [arg0, includeEmojis, includeStickers, includeSoundboards];
   return includeSoundboards.useMemo(() => {
     const items = [];
-    const lib = GUILD_FEATURE_TO_PERK();
+    const lib = closure_1_4();
     if (includeEmojis) {
       let obj = { perkIcon: null, description: null };
       obj[0] = lib(includeStickers[2]).PerkIcons.EMOJI;
@@ -49,7 +49,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
       items.push(obj2);
     }
     const features = lib.features.features;
-    const mapped = features.map((item, index) => table[item]);
+    const mapped = features.map((arg0) => table[arg0]);
     return items.concat(mapped.filter(lib(includeStickers[5]).isNotNullish));
   }, items);
 };

@@ -2,10 +2,10 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../request_to_stream/RequestToStream.messages.js";
 import getNickname from "../../../utils/NicknameUtils.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 import { ActivityActionTypes } from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
   if (author.author.id === id1) {
     if (isPrivate.isPrivate()) {
@@ -59,7 +59,7 @@ function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
     return formatToPlainString3Result;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
 
 export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
   if (ActivityActionTypes.LISTEN === arg1) {
@@ -67,23 +67,23 @@ export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
     let obj = { name: null };
     obj[0] = arg0;
     return intl5.formatToPlainString(getSystemLocale.t["/8czH4"], obj);
-  } else if (ActivityActionTypes.WATCH === arg1) {
+  } else if (tmp.WATCH === arg1) {
     const intl4 = getSystemLocale.intl;
     obj = { name: null };
     obj[0] = arg0;
     return intl4.formatToPlainString(getSystemLocale.t.BBJXVk, obj);
-  } else if (ActivityActionTypes.JOIN === arg1) {
+  } else if (tmp.JOIN === arg1) {
     let stringResult;
     if (!arg2) {
       const intl3 = getSystemLocale.intl;
       stringResult = intl3.string(getSystemLocale.t.pkq6Vq);
     }
     return stringResult;
-  } else if (ActivityActionTypes.STREAM_REQUEST === arg1) {
+  } else if (tmp.STREAM_REQUEST === arg1) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(messagesProxyDefault.DKHhec);
   } else {
-    const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
+    const JOIN_REQUEST = tmp.JOIN_REQUEST;
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Ckxb6j);
   }
@@ -97,6 +97,7 @@ export const getRequestToStreamText = function getRequestToStreamText(author, gu
     const obj = { username: null };
     obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, author.author);
     stringResult = intl.formatToPlainString(messagesProxyDefault["d/qbC0"], obj);
+    const obj2 = getNickname;
   }
   return stringResult;
 };
@@ -108,9 +109,9 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
     type = activity.type;
   }
   if (ActivityActionTypes.LISTEN !== type) {
-    if (ActivityActionTypes.WATCH !== type) {
-      if (ActivityActionTypes.JOIN !== type) {
-        if (ActivityActionTypes.STREAM_REQUEST === type) {
+    if (tmp2.WATCH !== type) {
+      if (tmp2.JOIN !== type) {
+        if (tmp2.STREAM_REQUEST === type) {
           if (activity.author.id === id1) {
             const intl2 = getSystemLocale.intl;
             let stringResult = intl2.string(messagesProxyDefault["8B3U5O"]);
@@ -119,10 +120,11 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
             const obj = { username: null };
             obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, activity.author);
             stringResult = intl.formatToPlainString(messagesProxyDefault["d/qbC0"], obj);
+            const obj2 = getNickname;
           }
           return stringResult;
         } else {
-          const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
+          const JOIN_REQUEST = tmp2.JOIN_REQUEST;
           return getAskToJoinText(activity, name_override, guild_id, id1, true);
         }
       }

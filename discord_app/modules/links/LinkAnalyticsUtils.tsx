@@ -1,5 +1,5 @@
 // discord_app/modules/links/LinkAnalyticsUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
@@ -8,9 +8,9 @@ import ME2 from "LinkUtils.tsx";
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };
 const items = [
-  (substr) => {
+  (arr) => {
     let SERVER_INVITE = null;
-    if (obj.isInvite(substr)) {
+    if (obj.isInvite(arr)) {
       SERVER_INVITE = constants.SERVER_INVITE;
     }
     return SERVER_INVITE;
@@ -37,6 +37,7 @@ const items = [
         }
         UNKNOWN = constants.UNKNOWN;
       }
+      const obj2 = ME2;
     }
   },
   (arg0) => {
@@ -47,7 +48,7 @@ const items = [
     return DISCOVERY;
   }
 ];
-const result = obj132.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
+const result = set.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
 
 export default {
   trackDiscordLinkClicked(guildId) {
@@ -86,7 +87,9 @@ export default {
               const iter = dependencyMap[Symbol.iterator]();
               while (iter !== undefined) {
                 let tmp2 = iter.next()(closure_1);
+                let tmp3 = tmp2;
                 if (null != tmp2) {
+                  let tmp4 = iter;
                   iter.return();
                   return tmp2;
                 }
@@ -111,6 +114,7 @@ export default {
         }
         UNKNOWN = constants.UNKNOWN;
       }
+      const tmp = importDefault;
     }
   },
   trackAnnouncementMessageLinkClicked(arg0) {

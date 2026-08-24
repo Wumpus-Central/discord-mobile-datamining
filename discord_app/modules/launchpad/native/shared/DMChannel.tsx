@@ -5,9 +5,10 @@ import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
-let obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
+obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[1] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
@@ -39,14 +40,15 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   const tmp4 = flag(16196)();
   const fontScale = channel(4751).useFontScale();
   tmp2Result = tmp2(16197);
-  const items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
+  obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
+  items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = {
     onPress: importAllResult.useCallback(() => {
-      channel(dependencyMap[3]);
-      const obj = { navigationReplace: flag };
+      let obj = channel(closure_1_2[3]);
+      obj = { navigationReplace: flag };
       obj.transitionToChannel(channel.id, obj);
     }, items1),
-    onLongPress: importAllResult.useCallback(() => channel(dependencyMap[4]).openChannelLongPressActionSheet(channel.id), items2)
+    onLongPress: importAllResult.useCallback(() => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id), items2)
   };
   items1 = [channel.id, flag];
   items2 = [channel.id];
@@ -61,8 +63,8 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     obj3[1] = tmp7;
     obj3[2] = str;
     obj3[3] = muted;
-    obj3[4] = channel(4071).ChannelListLayoutTypes.COMPACT;
-    tmp11Result = jsx(channel(10050).ChannelRowPreview, { channel: null, message: null, color: null, muted: null, layout: null });
+    obj3[4] = tmp5(4071).ChannelListLayoutTypes.COMPACT;
+    tmp11Result = tmp11(tmp5(10050).ChannelRowPreview, obj3);
   }
   obj1[6] = tmp11Result;
   obj1[7] = extractTimestampResult;
@@ -71,13 +73,13 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   obj.children = flag(16209)(obj1);
   return tmp2Result(jsx(channel(5433).PressableHighlight, {
     onPress: importAllResult.useCallback(() => {
-      channel(dependencyMap[3]);
-      const obj = { navigationReplace: flag };
+      let obj = channel(closure_1_2[3]);
+      obj = { navigationReplace: flag };
       obj.transitionToChannel(channel.id, obj);
     }, items1),
-    onLongPress: importAllResult.useCallback(() => channel(dependencyMap[4]).openChannelLongPressActionSheet(channel.id), items2)
+    onLongPress: importAllResult.useCallback(() => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id), items2)
   }));
 });
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
 
 export default memoResult;

@@ -2,11 +2,11 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getNextShownUpcomingEventNoticeType from "GuildScheduledEventUtils.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import scheduledEventSort from "GuildScheduledEventStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "GuildScheduledEventStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ GuildScheduledEventStatus: c4, UpcomingGuildEventNoticeTypes: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
 let closure_6 = {};
 let closure_7 = {};
@@ -95,6 +95,6 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
     obj[guildEventId.guildEventId] = Date.now();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
 
 export default upcomingEventNoticesStore;

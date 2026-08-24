@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx
-import obj132Default from "../../../../core/native/NativeView.tsx";
+import setDefault from "../../../../core/native/NativeView.tsx";
 import BrokenImageDefault from "../../../../image/native/BrokenImage.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
@@ -14,6 +14,7 @@ let closure_6 = createCacheKey.createStyles((aspectRatio) => {
 });
 const memoResult = importAllResult.memo(function ActivityShelfItemBackground(aspectRatio) {
   ({ imageBackground, accessibilityLabel } = aspectRatio);
+  importDefault = undefined;
   const tmp = callback2(aspectRatio.aspectRatio);
   const tmp2 = callback(importAllResult.useState(false), 2);
   importDefault = tmp2[1];
@@ -36,18 +37,20 @@ const memoResult = importAllResult.memo(function ActivityShelfItemBackground(asp
           }
           obj[4] = accessibilityLabel;
           obj[1] = <Image onError={null} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />;
-          let tmp9Result = jsx(obj132Default, { onError: null, source: null, style: null, accessibilityRole: "image", accessibilityLabel: null });
+          let tmp9Result = tmp9(setDefault, obj);
+          const tmp12 = setDefault;
+          const tmp13 = Image;
         }
       }
       obj = { style: null };
       obj[0] = tmp.previewImage;
-      tmp9Result = jsx(obj132Default, { style: null });
+      tmp9Result = jsx(setDefault, { style: null });
     }
     return tmp9Result;
   }
   const obj2 = { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) };
-  tmp9Result = jsx(obj132Default, { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) });
+  tmp9Result = jsx(setDefault, { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) });
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
 
 export default memoResult;

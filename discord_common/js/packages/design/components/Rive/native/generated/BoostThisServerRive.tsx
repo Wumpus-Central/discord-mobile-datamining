@@ -1,11 +1,11 @@
 // discord_common/js/packages/design/components/Rive/native/generated/BoostThisServerRive.tsx
 import BaseRive from "../BaseRive.tsx";
 import getDerivedStateFromError from "../RiveErrorBoundary.tsx";
-import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { "Boost Server": { reducedMotion: "boolean" }, "Boost Crystal": { reducedMotion: "boolean" }, "Crystal Side B": {}, "Crystal Side A": {}, "Boost Saved": { reducedMotion: "boolean" } };
@@ -48,7 +48,7 @@ let closure_10 = importAllResult.forwardRef(function BoostThisServerRiveInner(de
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = <tmp />;
+      tmp2 = closure_1_6(tmp, obj);
     }
     return tmp2;
   }, items);
@@ -57,11 +57,12 @@ let closure_10 = importAllResult.forwardRef(function BoostThisServerRiveInner(de
   return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function BoostThisServerRiveWithBoundary(fallback, ref) {
-  const obj = { ref };
+  let obj = { fallback: fallback.fallback, children: null };
+  obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={ref} />;
+  obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BoostThisServerRive.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BoostThisServerRive.tsx");
 
 export const BoostThisServerRive = forwardRefResult;

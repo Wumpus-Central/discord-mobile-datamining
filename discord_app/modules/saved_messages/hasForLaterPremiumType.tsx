@@ -1,11 +1,11 @@
 // discord_app/modules/saved_messages/hasForLaterPremiumType.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");
 
 export default function hasForLaterPremiumType() {
   currentUser = currentUser.getCurrentUser();

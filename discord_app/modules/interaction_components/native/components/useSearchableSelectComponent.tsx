@@ -1,9 +1,9 @@
 // discord_app/modules/interaction_components/native/components/useSearchableSelectComponent.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/interaction_components/native/components/useSearchableSelectComponent.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/interaction_components/native/components/useSearchableSelectComponent.tsx");
 
 export default function useSearchableSelectComponent(selectActionComponent) {
   selectActionComponent = selectActionComponent.selectActionComponent;
@@ -11,16 +11,19 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   const onSubmit = selectActionComponent.onSubmit;
   let first;
   let React;
+  let first1;
+  closure_6 = undefined;
+  closure_7 = undefined;
   ({ containerId, guildId } = selectActionComponent);
   const tmp = first(React.useState(""), 2);
   first = tmp[0];
   let obj = selectActionComponent(onSubmit[2]);
   React = obj.getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
-  const tmp3 = first(React.useState(() => new Map(closure_4.map((item, index) => {
-    const items = [item.value, item];
+  const tmp3 = first(React.useState(() => new Map(closure_4.map((value) => {
+    const items = [value.value, value];
     return items;
   }))), 2);
-  const first1 = tmp3[0];
+  first1 = tmp3[0];
   closure_6 = tmp3[1];
   let items = [first, queryOptions];
   closure_7 = selectActionComponent.maxValues > 1;

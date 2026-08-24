@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 function _getAppStoreOverlayContent() {
   const self = this;
   let tmp = callback((arg0, arg1) => {
@@ -98,7 +98,7 @@ function _getAppStoreOverlayContent() {
                   items.push(obj);
                 }
                 const screenshots = closure_2.screenshots;
-                const found = screenshots.filter((item, index) => "" !== item);
+                const found = screenshots.filter((arg0) => "" !== arg0);
                 obj1 = { title: closure_2.name, subtitle: closure_2.category, description: closure_2.description, iconUrl: closure_2.icon, headerUrl: header_image, stats: null, media: null, storeUrl: null, appId: null };
                 header_image = closure_2.header_image;
                 let tmp12;
@@ -108,7 +108,7 @@ function _getAppStoreOverlayContent() {
                 obj1[5] = tmp12;
                 let mapped;
                 if (found.length > 0) {
-                  mapped = found.map((item, index) => ({ type: "screenshot", url: item }));
+                  mapped = found.map((url) => ({ type: "screenshot", url }));
                 }
                 obj1[6] = mapped;
                 obj1[7] = closure_1;
@@ -119,7 +119,7 @@ function _getAppStoreOverlayContent() {
                   obj1[8] = storeAppId;
                   return obj1;
                 }
-                storeAppId = storeAppId.storeAppId;
+                storeAppId = closure_0.storeAppId;
               })(closure_2, callback, table);
             }
             c4 = 0;
@@ -148,9 +148,9 @@ function _getAppStoreOverlayContent() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayContent.tsx");
 
-export const getAppStoreOverlayContent = function getAppStoreOverlayContent(inlineStoreParamsFromCta, url) {
+export const getAppStoreOverlayContent = function getAppStoreOverlayContent(arg0, url) {
   const self = this;
   const apply = _getAppStoreOverlayContent.apply;
   if (typeof apply === "unknown") {

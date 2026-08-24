@@ -1,40 +1,40 @@
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useGuildEventsDefault from "../../useGuildScheduledEvents.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import generateOldThreadCutoff from "../../../../stores/ReadStateStore.tsx";
-import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ReadStateStore.tsx";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
 import { ReadStateTypes } from "../../../read_states/ReadStateConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
 export default function useEventsButtonProps(id) {
   const _require = id;
-  let obj = initialize;
+  let obj = _initialize;
   const items = [closure_4];
   const items1 = [id.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, ReadStateTypes.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, ReadStateTypes.GUILD_EVENT) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
   const items2 = [closure_5];
-  const eventsMuted = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
+  const eventsMuted = _initialize.useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
   const arr4 = useGuildEventsDefault(id.id);
   const items3 = [id];
   const items4 = [id.id];
   const handlePress = React.useCallback(() => {
     if (obj.shouldShowMembershipVerificationGate(id.id)) {
-      let tmpResult = id(dependencyMap[7]);
-      let result = tmpResult.openMemberVerificationModal(id.id);
+      let tmpResult = tmp(tmp2[7]);
+      let result = tmpResult.openMemberVerificationModal(tmp3.id);
     } else {
-      tmpResult = id(dependencyMap[8]);
-      result = tmpResult.openGuildEventListActionSheet(id);
+      tmpResult = tmp(tmp2[8]);
+      result = tmpResult.openGuildEventListActionSheet(tmp3);
     }
     return result;
   }, items3);
   const handleLongPress = React.useCallback(() => {
-    const obj = { guildId: id.id };
-    obj.openLazy(id(dependencyMap[11])(dependencyMap[10], dependencyMap.paths), "UpcomingEventsLongPress-" + id.id, obj);
+    let obj = closure_1_1(closure_1_2[9]);
+    obj = { guildId: id.id };
+    obj.openLazy(id(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1236).intl;

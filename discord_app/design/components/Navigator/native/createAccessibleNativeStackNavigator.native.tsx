@@ -1,9 +1,9 @@
 // discord_app/design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx
 import createStandardNavigationFactories from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function AccessibleNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
@@ -14,19 +14,27 @@ function AccessibleNativeStackNavigator(arg0) {
   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
   accessibilityNativeStackOptions = descriptors(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();
   const items = [descriptors, accessibilityNativeStackOptions];
+  obj = { children: null };
   const memo = React.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
       return descriptors;
     } else {
       let obj = {};
       for (const key10006 in descriptors) {
+        let tmp12 = key10006;
+        let tmp13 = descriptors;
         let tmp14 = descriptors[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
           obj = {};
+          let tmp2 = obj;
+          let tmp3 = tmp14;
           let merged = Object.assign(tmp14);
           obj = {};
+          let tmp5 = obj;
           let merged1 = Object.assign(tmp14.options);
+          let tmp7 = accessibilityNativeStackOptions;
+          let tmp8 = obj;
           let merged2 = Object.assign(accessibilityNativeStackOptions);
           obj.options = obj;
           tmp10 = obj;
@@ -46,7 +54,7 @@ function AccessibleNativeStackNavigator(arg0) {
   obj[0] = jsx(descriptors(accessibilityNativeStackOptions[4]).NativeStackView, {});
   return <NavigationContent />;
 }
-const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
 
 export default function createAccessibleNativeStackNavigator(arg0) {
   return createStandardNavigationFactories.createNavigatorFactory(AccessibleNativeStackNavigator)(arg0);
@@ -61,13 +69,20 @@ export const useAccessibilityPatchedDescriptors = function useAccessibilityPatch
     } else {
       let obj = {};
       for (const key10006 in descriptors) {
+        let tmp12 = key10006;
+        let tmp13 = descriptors;
         let tmp14 = descriptors[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
           obj = {};
+          let tmp2 = obj;
+          let tmp3 = tmp14;
           let merged = Object.assign(tmp14);
           obj = {};
+          let tmp5 = obj;
           let merged1 = Object.assign(tmp14.options);
+          let tmp7 = accessibilityNativeStackOptions;
+          let tmp8 = obj;
           let merged2 = Object.assign(accessibilityNativeStackOptions);
           obj.options = obj;
           tmp10 = obj;

@@ -1,19 +1,21 @@
 // discord_app/design/components/Tooltip/native/useTooltip.native.tsx
 import timestampDefault from "../../../../modules/debug/Logger.tsx";
 import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import { add } from "../../Layers/native/LayerContext.native.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_7 = new timestampDefault("useTooltip.native");
 const tmp2 = new timestampDefault("useTooltip.native");
-const result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/useTooltip.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltip.native.tsx");
 
 export const useTooltip = function useTooltip(ref, memo) {
-  context1.useRef(ref(callback[5]).v4());
+  ref = context1.useRef(ref(callback[5]).v4());
   ref = memo;
+  importDefault = undefined;
   const context = context1.useContext(ref(callback[6]).LayerContext);
   importDefault = context;
   if (null == context) {
@@ -28,6 +30,11 @@ export const useTooltip = function useTooltip(ref, memo) {
     set.add(arg0, ref2(ref(callback[7]).AnimatedTooltip, obj));
   }, items);
   importDefault = ref;
+  closure_3 = undefined;
+  closure_4 = undefined;
+  context1 = undefined;
+  closure_6 = undefined;
+  callback1 = undefined;
   const tmp8 = importDefault(callback[8])();
   closure_3 = tmp8;
   closure_4 = obj.useRef(tmp8);
@@ -38,7 +45,7 @@ export const useTooltip = function useTooltip(ref, memo) {
     current = current.current;
     return () => {
       if (null != current) {
-        context1.remove(tmp);
+        closure_1_5.remove(tmp);
       }
       current.current = null;
     };
@@ -124,14 +131,14 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const tmp = useWindowDimensionsDefault();
   closure_3 = tmp;
   closure_4 = context.useRef(tmp);
-  context = context.useContext(require("../../Layers/native/LayerContext.native.tsx").LayerContext);
+  context = context.useContext(_add.LayerContext);
   closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {
     current = current.current;
     return () => {
       if (null != current) {
-        context1.remove(tmp);
+        closure_1_5.remove(tmp);
       }
       current.current = null;
     };

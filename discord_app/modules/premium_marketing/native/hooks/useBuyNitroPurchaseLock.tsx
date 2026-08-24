@@ -1,8 +1,8 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx
-import updateProduct from "../../../../stores/native/IAPStore.android.tsx";
+import closure_2 from "../../../../stores/native/IAPStore.android.tsx";
 import keys from "../../../../../_runtime/00644_keys.js";
 
-const require = fn;
+const require = arg1;
 let closure_3 = keys.create(() => ({ isLocked: false, hasCompletedInitialLoad: false }));
 keys = {
   begin(TableRowGroup, arg1) {
@@ -29,7 +29,7 @@ keys = {
     store.setState({ hasCompletedInitialLoad: promotionMarketingComponent });
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
 
 export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocked() {
   let stateFromStores = store((hasCompletedInitialLoad) => {

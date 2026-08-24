@@ -1,17 +1,14 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx
-import DISCORD_EPOCHDefault from "../../../../../../../../utils/SnowflakeUtils.tsx";
 import ThemesDefault from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import getAvatarURLDefault from "../../../../../../../../utils/AvatarUtils.tsx";
-import getDevicePixelRatioDefault from "../../../../../../../../utils/getDevicePixelRatio.native.tsx";
 import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
-import _slicedToArray from "../../../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import _getSystemLocale from "../../../../../../../user_settings/LocaleStore.tsx";
+import closure_3 from "../../../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../../user_settings/LocaleStore.tsx";
 import { CodedLinkExtendedType } from "../CodedLinksConstants.tsx";
 import { GuildFeatures } from "../../../../../../../../Constants.tsx";
 import { InviteTypes } from "../../../../../../../instant_invite/Constants.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
 
 export const createGuildProfileInvite = function createGuildProfileInvite(invite, closure_2) {
   const tmp3 = getEmbedThemeColorsDefault(closure_2);
@@ -52,7 +49,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
     icon = guildProfileFromInvite.icon;
   }
   if (null != icon) {
-    let tmpResult = getAvatarURLDefault;
+    let tmpResult = tmp(1435);
     obj = { id: null, icon: null, canAnimate: true, size: 128 };
     ({ id: obj8[0], icon: obj8[1] } = guildProfileFromInvite);
     const guildIconURL = tmpResult.getGuildIconURL(obj);
@@ -79,10 +76,10 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
       customBanner = guildProfileFromInvite.customBanner;
     }
     if (null != customBanner) {
-      tmpResult = getAvatarURLDefault;
+      tmpResult = tmp(1435);
       obj = { id: null, splash: null, size: null };
       ({ id: obj10[0], customBanner: obj10[1] } = guildProfileFromInvite);
-      obj[2] = 400 * getDevicePixelRatioDefault();
+      obj[2] = 400 * tmp(1896)();
       const guildDiscoverySplashURL = tmpResult.getGuildDiscoverySplashURL(obj);
       tmp20 = guildDiscoverySplashURL;
     }
@@ -151,10 +148,11 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   if (guildProfileFromInvite != null) {
     const traits = guildProfileFromInvite.traits;
     if (traits != null) {
-      found = traits.filter((item, index) => {
-        let tmp = null != item;
+      found = traits.filter((label) => {
+        let tmp = null != label;
         if (tmp) {
-          tmp = item.label.trim().length > 0;
+          tmp = label.label.trim().length > 0;
+          const str = label.label;
         }
         return tmp;
       });
@@ -163,12 +161,12 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   let formatToPlainStringResult2;
   if (null != guildProfileFromInvite) {
     const tmp4Result5 = tmp4(4372);
-    const establishedDate = tmp4Result5.getEstablishedDate(DISCORD_EPOCHDefault.extractTimestamp(guildProfileFromInvite.id), locale.locale);
+    const establishedDate = tmp4Result5.getEstablishedDate(tmp(11).extractTimestamp(guildProfileFromInvite.id), locale.locale);
     const intl8 = tmp4(1236).intl;
     const obj3 = { createdAtDate: null };
     obj3[0] = establishedDate;
     formatToPlainStringResult2 = intl8.formatToPlainString(tmp4(1236).t.zb2Q56, obj3);
-    const tmpResult1 = DISCORD_EPOCHDefault;
+    const tmpResult1 = tmp(11);
   }
   let mapped;
   if (null != invite.roles) {
@@ -178,17 +176,17 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
         const items = [];
         HermesBuiltin.arraySpread(invite.roles, 0);
         const sorted = items.sort(tmp4(1987).sortInviteRoles);
-        mapped = sorted.map((item, index) => {
-          let obj = id(dependencyMap[20]);
-          const result = obj.inviteRoleToDisplayData(id, item);
-          obj1 = id(dependencyMap[21]);
+        mapped = sorted.map((color) => {
+          let obj = id(closure_1_2[20]);
+          const result = obj.inviteRoleToDisplayData(id, color);
+          obj1 = id(closure_1_2[21]);
           let roleIconData = obj1.getRoleIconData(result, 16);
           if (roleIconData == null) {
             roleIconData = {};
           }
           ({ customIconSrc, unicodeEmoji } = roleIconData);
-          let tmpResult = id(dependencyMap[22]);
-          let num = item.color;
+          let tmpResult = tmp(tmp2[22]);
+          let num = color.color;
           if (num == null) {
             num = 0;
           }
@@ -200,15 +198,15 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
               surrogates = unicodeEmoji.surrogates;
             }
             obj[1] = surrogates;
-            obj[2] = item.name;
-            const intl = id(dependencyMap[15]).intl;
+            obj[2] = color.name;
+            const intl = tmp(tmp2[15]).intl;
             obj = { name: null };
-            obj[0] = item.name;
-            obj[4] = intl.formatToPlainString(id(dependencyMap[15]).t["9+YWrE"], obj);
+            obj[0] = color.name;
+            obj[4] = intl.formatToPlainString(tmp(tmp2[15]).t["9+YWrE"], obj);
             const tmp5 = obj;
           }
-          obj1 = { id: item.id, name: item.name, color: null, roleIcon: null };
-          tmpResult = id(dependencyMap[23]);
+          obj1 = { id: color.id, name: color.name, color: null, roleIcon: null };
+          tmpResult = tmp(tmp2[23]);
           obj1[2] = tmpResult.processColorOrThrow(tmpResult.int2hex(num));
           obj1[3] = tmp5;
           return obj1;

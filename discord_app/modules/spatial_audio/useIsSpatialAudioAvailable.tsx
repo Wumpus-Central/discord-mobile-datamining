@@ -1,13 +1,14 @@
 // discord_app/modules/spatial_audio/useIsSpatialAudioAvailable.tsx
 import apexExperimentDefault from "../voice_panel/SpatialAudioForVoiceExperiment.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
 import { Features } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/spatial_audio/useIsSpatialAudioAvailable.tsx");
 
 export default function useIsSpatialAudioAvailable(location) {
-  const obj = { location };
+  let obj = apexExperimentDefault;
+  obj = { location };
   let enabled = obj.useConfig(obj).enabled;
   const items = [closure_3];
   if (enabled) {
@@ -16,7 +17,8 @@ export default function useIsSpatialAudioAvailable(location) {
   return enabled;
 };
 export const isSpatialAudioAvailable = function isSpatialAudioAvailable(RTCConnectionStore) {
-  const obj = { location: RTCConnectionStore };
+  let obj = apexExperimentDefault;
+  obj = { location: RTCConnectionStore };
   let enabled = obj.getConfig(obj).enabled;
   if (enabled) {
     enabled = closure_3.supports(Features.SPATIAL_AUDIO);

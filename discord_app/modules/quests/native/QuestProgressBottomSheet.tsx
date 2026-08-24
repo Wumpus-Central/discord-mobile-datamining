@@ -3,17 +3,17 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import registerAssetDefault from "../../../../_runtime/09416_registerAsset.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import map from "../../frames/FramesStore.tsx";
-import initializeState from "../QuestStore.tsx";
+import closure_7 from "../../frames/FramesStore.tsx";
+import closure_8 from "../QuestStore.tsx";
 import { QuestsExperimentLocations } from "../QuestConstants.tsx";
 import { ActivityPanelModes } from "../../activities/panel/ActivityPanelConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function contextMenuButton(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
@@ -41,6 +41,7 @@ function QuestProgressBottomSheet(quest) {
   let tmpResult = tmp(10684);
   const questTaskDetails = tmpResult.useQuestTaskDetails(quest);
   const intl = tmp(1236).intl;
+  obj = { questName: quest.config.messages.questName };
   const tmp7 = claim(11231);
   tmpResult = tmp(10954);
   obj = { quest, taskDetails: questTaskDetails, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: tmp(6719).QuestContent.RUNNING_ACTIVITY };
@@ -60,6 +61,7 @@ function QuestProgressBottomSheet(quest) {
     tmp14 = null == claimedAt;
   }
   const formatToPlainStringResult = intl.formatToPlainString(quest(1236).t.EAYZAr, obj);
+  const tmp11 = QuestsExperimentLocations;
   const isQuestAccessSuspended = quest(10684).useIsQuestAccessSuspended();
   const tmpResult1 = quest(10684);
   obj1 = { quest, questContent: tmp(6719).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: tmp(6719).QuestContent.RUNNING_ACTIVITY };
@@ -100,7 +102,7 @@ function QuestProgressBottomSheet(quest) {
             table = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = claim();
+            obj1[0] = closure_1_1();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -115,8 +117,8 @@ function QuestProgressBottomSheet(quest) {
           if (arg1) {
             mainFrame = closure_1_7.getMainFrame();
             if (null != mainFrame) {
-              obj = claim(table[23]);
-              obj.updateFramePanelMode(quest.id, closure_1_10.PIP);
+              obj = closure_1_1(table[23]);
+              obj.updateFramePanelMode(closure_1_0.id, closure_1_10.PIP);
             }
           }
           c3 = 3;
@@ -129,24 +131,23 @@ function QuestProgressBottomSheet(quest) {
     }
   }), items);
   let callback1 = React.useCallback(() => {
-    let obj = claim(dependencyMap[24]);
+    let obj = claim(closure_1_2[24]);
     obj.hideActionSheet();
     const mainFrame = closure_1_7.getMainFrame();
     if (null != mainFrame) {
-      claim(dependencyMap[23]).updateFramePanelMode(mainFrame.id, ActivityPanelModes.PIP);
-      const tmpResult = claim(dependencyMap[23]);
+      claim(tmp2[23]).updateFramePanelMode(mainFrame.id, closure_1_10.PIP);
+      const tmpResult = claim(tmp2[23]);
     }
-    obj = { scrollToQuestId: quest.id, fromContent: quest(dependencyMap[12]).QuestContent.QUEST_BOTTOM_SHEET };
-    quest(dependencyMap[25]).openQuestHome(obj);
-    const obj3 = quest(dependencyMap[25]);
+    obj = { scrollToQuestId: quest.id, fromContent: quest(tmp2[12]).QuestContent.QUEST_BOTTOM_SHEET };
+    quest(closure_1_2[25]).openQuestHome(obj);
   }, items1);
   const items2 = [quest.id];
   const callback2 = React.useCallback(() => {
-    let obj = claim(dependencyMap[24]);
+    let obj = claim(closure_1_2[24]);
     obj.hideActionSheet();
     obj = { message: null };
-    const obj2 = quest(dependencyMap[26]);
-    obj[0] = quest(dependencyMap[27]).getQuestUrl(quest.id);
+    const obj2 = quest(closure_1_2[26]);
+    obj[0] = quest(closure_1_2[27]).getQuestUrl(quest.id);
     obj2.showShareActionSheet(obj);
   }, items2);
   callback3 = React.useCallback(() => {
@@ -155,7 +156,7 @@ function QuestProgressBottomSheet(quest) {
   obj2 = { style: tmp4.heroContainer, children: null };
   let tmp24 = null != url;
   if (tmp24) {
-    let obj3 = { source: null, style: null };
+    const obj3 = { source: null, style: null };
     const obj4 = { uri: null };
     obj4[0] = url;
     obj3[0] = obj4;
@@ -190,15 +191,15 @@ function QuestProgressBottomSheet(quest) {
   const intl2 = tmp(1236).intl;
   obj9[4] = intl2.string(quest(1236).t.RDE0Sc);
   const items5 = [callback2(quest(8035).IconButton, obj9), ];
-  const obj10 = { quest, showShareLink: true, location: QuestsExperimentLocations.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
+  const obj10 = { quest, showShareLink: true, location: tmp11.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
   const tmpResult2 = quest(14474);
   obj10[3] = quest(6719).QuestContent.RUNNING_ACTIVITY;
   obj10[4] = contextMenuButton;
   items5[1] = callback2(claim(14504), obj10);
   obj8[1] = items5;
-  items3[3] = callback(closure_5, obj8);
+  items3[3] = closure_12(closure_5, obj8);
   obj2[1] = items3;
-  const items6 = [callback(closure_5, obj2), ];
+  const items6 = [closure_12(closure_5, obj2), ];
   const obj11 = { style: tmp4.contentContainer, children: null };
   const obj12 = { direction: "vertical", spacing: claim(712).space.PX_8, style: tmp4.textContainer, children: null };
   let str = "heading-lg/bold";
@@ -215,7 +216,7 @@ function QuestProgressBottomSheet(quest) {
   obj13[3] = questsInstructionsToWinReward;
   items7[1] = callback2(quest(4734).Text, obj13);
   obj12[3] = items7;
-  const items8 = [callback(quest(4733).Stack, obj12), ];
+  const items8 = [closure_12(quest(4733).Stack, obj12), ];
   const obj14 = { direction: "vertical", spacing: claim(712).space.PX_12, style: tmp4.buttonsContainer, children: null };
   const intl3 = tmp(1236).intl;
   const t = tmp(1236).t;
@@ -248,16 +249,17 @@ function QuestProgressBottomSheet(quest) {
   obj17[2] = callback3;
   items9[1] = callback2(quest(4745).Button, obj17);
   obj14[3] = items9;
-  items8[1] = callback(quest(4733).Stack, obj14);
+  items8[1] = closure_12(quest(4733).Stack, obj14);
   obj11[1] = items8;
-  items6[1] = callback(closure_5, obj11);
+  items6[1] = closure_12(closure_5, obj11);
   obj16[2] = items6;
-  return callback(quest(6950).BottomSheet, obj16);
+  return closure_12(quest(6950).BottomSheet, obj16);
 }
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles((arg0) => {
-  let obj = { display: "flex", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+  let obj = { contentContainer: null, heroContainer: null, heroImg: null, heroGradient: null, gameTileContainer: null, contextMenuContainer: null, textContainer: null, questDescription: null, buttonsContainer: null };
+  obj = { display: "flex", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   let num = 140;
   if (arg0) {
@@ -266,7 +268,7 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   obj = { height: num, position: "relative", marginBottom: null };
   let num2 = 0;
   if (!arg0) {
-    num2 = 52 + ThemesDefault.space.PX_8;
+    num2 = 52 + tmp(712).space.PX_8;
   }
   obj[2] = num2;
   obj[1] = obj;
@@ -282,31 +284,33 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   obj[3] = obj2;
   let num4 = -52;
   if (arg0) {
-    num4 = ThemesDefault.space.PX_12;
+    num4 = tmp(712).space.PX_12;
   }
   obj[4] = { position: "absolute", bottom: num4, left: 0, right: 0, alignItems: "center" };
   obj[5] = { position: "absolute", top: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_16, alignItems: "center" };
   let PX_16;
   if (!arg0) {
-    PX_16 = ThemesDefault.space.PX_16;
+    PX_16 = tmp(712).space.PX_16;
   }
+  const obj3 = { position: "absolute", top: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_16, alignItems: "center" };
   obj[6] = { alignItems: "center", paddingTop: PX_16, gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_16, textAlign: "center" };
   obj[7] = { textAlign: "center" };
   let PX_161;
   if (!arg0) {
-    PX_161 = ThemesDefault.space.PX_16;
+    PX_161 = tmp(712).space.PX_16;
   }
   obj[8] = { paddingTop: PX_161 };
   return obj;
 });
 let closure_14 = createCacheKey.createStyleProperties(() => ({ gradientEnd: ThemesDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT }));
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestProgressBottomSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestProgressBottomSheet.tsx");
 
 export default function QuestProgressBottomSheetConnected(questId) {
   questId = questId.questId;
+  let stateFromStores;
   let obj = questId(589);
   const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getQuest(questId));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getQuest(questId));
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = { overrideVisibility: true, questOrQuests: null, questContent: null, sourceQuestContent: null, children: null };
@@ -314,7 +318,7 @@ export default function QuestProgressBottomSheetConnected(questId) {
     obj[2] = tmp(6719).QuestContent.RUNNING_ACTIVITY;
     obj[3] = tmp(6719).QuestContent.RUNNING_ACTIVITY;
     obj[4] = function children() {
-      return closure_1_11(QuestProgressBottomSheet, { quest: stateFromStores });
+      return closure_1_11(closure_1_16, { quest: stateFromStores });
     };
     tmp4 = callback2(tmp(10957).QuestContentImpressionTrackerNative, obj);
   }

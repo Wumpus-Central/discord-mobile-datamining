@@ -4,23 +4,24 @@ import set from "../../../../../discord_common/js/shared/shared-constants/Messag
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 import _fetchUserOffer from "../../UserOfferActionCreators.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../../../messages/setupLoadFromMessageManagerHandlers.tsx";
-import reset from "../../../../stores/billing/SubscriptionStore.tsx";
-import emitChanges from "../../../../stores/billing/UserOfferStore.tsx";
+import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../../../stores/billing/UserOfferStore.tsx";
 
-require = fn;
+require = arg1;
 function handleReferralMessages(type) {
   if (type.type === set.MessageTypes.PREMIUM_REFERRAL) {
     if (null != type.content) {
       if (obj3.isProbablyAValidSnowflake(type.content)) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
-        const tmp9Result = DISCORD_EPOCHDefault;
+        const tmp9Result = tmp9(11);
         if (tmp6) {
           const userOffer = _fetchUserOffer.fetchUserOffer("ReferralMessageManager");
           const tmpResult = _fetchUserOffer;
         }
-        tmp6 = null == premiumTypeSubscription && closure_4.shouldFetchReferralOffer(DISCORD_EPOCHDefault.extractTimestamp(type.content));
+        tmp6 = null == premiumTypeSubscription && closure_4.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }
       obj3 = DISCORD_EPOCHDefault;
+      tmp9 = importDefault;
     }
   }
 }
@@ -36,6 +37,6 @@ class ReferralMessageManager extends tmp6 {
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ReferralMessageManager, importDefault);
 // ThrowIfThisInitialized (0x7c)
 setupLoadFromMessageManagerHandlersDefault(tmp, handleReferralMessages);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/referrals/ReferralMessageManager.tsx");
 
 export default tmp;

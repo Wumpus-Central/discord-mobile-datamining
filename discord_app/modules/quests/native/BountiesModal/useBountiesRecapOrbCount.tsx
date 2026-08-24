@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 function getRecapOrbCountFromPullProgress(arg0, arg1) {
   if (arg1 > 0) {
     const _Number = Number;
@@ -20,7 +20,7 @@ getRecapOrbCountFromPullProgress.__workletHash = 14295638108053;
 getRecapOrbCountFromPullProgress.__initData = { code: "function getRecapOrbCountFromPullProgress_useBountiesRecapOrbCountTsx1(progress,targetOrbAmount){if(targetOrbAmount<=0||!Number.isFinite(targetOrbAmount)){return 0;}const clampedProgress=Math.min(1,Math.max(0,progress));return Math.round(clampedProgress*targetOrbAmount);}" };
 let closure_5 = { code: "function useBountiesRecapOrbCountTsx2(){const{enabled,recapRevealHeight,getRevealProgress,scrollY,lastBountyScrollOffset,RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS,getRecapOrbCountFromPullProgress,targetOrbAmount}=this.__closure;if(!enabled||recapRevealHeight<=0){return{count:0,revealed:false};}const pullProgress=getRevealProgress(scrollY.get(),lastBountyScrollOffset,recapRevealHeight)/RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS;if(pullProgress<=0.1){return{count:0,revealed:false};}return{count:getRecapOrbCountFromPullProgress(pullProgress,targetOrbAmount),revealed:true};}" };
 let closure_6 = { code: "function useBountiesRecapOrbCountTsx3({count:count,revealed:revealed}){const{runOnJS,resetDisplayCount,setDisplayCountMonotonic}=this.__closure;if(!revealed){runOnJS(resetDisplayCount)();return;}runOnJS(setDisplayCountMonotonic)(count);}" };
-let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
 
 export { getRecapOrbCountFromPullProgress };
 export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scrollY) {
@@ -30,8 +30,10 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
   const targetOrbAmount = scrollY.targetOrbAmount;
   const enabled = scrollY.enabled;
   c5 = undefined;
+  let callback;
+  let callback1;
   [tmp2, c5] = recapRevealHeight(targetOrbAmount.useState(0), 2);
-  const callback = targetOrbAmount.useCallback((arg0) => {
+  callback = targetOrbAmount.useCallback((arg0) => {
     closure_0 = arg0;
     _undefined((arg0) => {
       let tmp = arg0;
@@ -41,10 +43,10 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
       return tmp;
     });
   }, []);
-  const callback1 = targetOrbAmount.useCallback(() => {
+  callback1 = targetOrbAmount.useCallback(() => {
     _undefined(0);
   }, []);
-  scrollY(lastBountyScrollOffset[2]);
+  let obj = scrollY(lastBountyScrollOffset[2]);
   const fn = function b() {
     if (enabled) {
       if (recapRevealHeight > 0) {
@@ -59,11 +61,11 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
           if (targetOrbAmount > 0) {
             const _Number = Number;
             num2 = 0;
-            if (Number.isFinite(targetOrbAmount)) {
+            if (Number.isFinite(tmp9)) {
               const _Math = Math;
               const _Math2 = Math;
               const _Math3 = Math;
-              num2 = Math.round(Math.min(1, Math.max(0, result)) * targetOrbAmount);
+              num2 = Math.round(Math.min(1, Math.max(0, result)) * tmp9);
             }
           }
           obj = { count: null, revealed: true };
@@ -74,7 +76,7 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
     }
     return { count: 0, revealed: false };
   };
-  let obj = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[3]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: 0.95, getRecapOrbCountFromPullProgress: enabled, targetOrbAmount };
+  obj = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[3]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: 0.95, getRecapOrbCountFromPullProgress: enabled, targetOrbAmount };
   fn.__closure = obj;
   fn.__workletHash = 2855285055570;
   fn.__initData = c5;
@@ -86,7 +88,6 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
     } else {
       runOnJS(callback1)();
     }
-    const tmp = scrollY(lastBountyScrollOffset[2]);
   };
   obj = { runOnJS: scrollY(lastBountyScrollOffset[2]).runOnJS, resetDisplayCount: callback1, setDisplayCountMonotonic: callback };
   fn2.__closure = obj;

@@ -1,10 +1,10 @@
 // _runtime/01598_createStandardNavigationFactories.js
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "00019_noop.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 import { BaseNavigationContainer } from "01503_BaseNavigationContainer.js";
 
-const require = fn;
+const require = arg1;
 let closure_2 = ["children", "id", "initialRouteName", "layout", "screenLayout", "screenListeners", "screenOptions", "UNSTABLE_routeNamesChangeBehavior", "UNSTABLE_router"];
 
 export const createStandardNavigationFactories = function createStandardNavigationFactories(arg0, arg1, arg2) {
@@ -26,7 +26,7 @@ export const createStandardNavigationFactories = function createStandardNavigati
     throw error1;
   } else {
     let obj = { createNavigator: null, createScreen: null };
-    obj[0] = require("01503_BaseNavigationContainer.js").createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
+    obj[0] = _BaseNavigationContainer.createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
       let obj = callback(1503);
       navigationBuilder = obj.useNavigationBuilder(navigationBuilder, UNSTABLE_routeNamesChangeBehavior);
       dependencyMap = callback(1599).useBuildHref();
@@ -34,11 +34,11 @@ export const createStandardNavigationFactories = function createStandardNavigati
       let flag = tmp2.useMemoArray;
       if (!("preloadedRoutes" in navigationBuilder.state)) {
         let routes = navigationBuilder.state.routes;
-        const flagResult = flag(routes.map((item, index) => {
-          const tmp = callback(item.name, item.params);
-          const items = [{ key: item.key, name: item.name, params: item.params, href: tmp }, ];
+        const flagResult = flag(routes.map((key) => {
+          const tmp = callback(key.name, key.params);
+          const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }, ];
           const items1 = [, , , ];
-          ({ key: arr2[0], name: arr2[1], params: arr2[2] } = item);
+          ({ key: arr2[0], name: arr2[1], params: arr2[2] } = key);
           items1[3] = tmp;
           items[1] = items1;
           return items;
@@ -54,10 +54,9 @@ export const createStandardNavigationFactories = function createStandardNavigati
       }
       routes = navigationBuilder.state.routes;
       routes = routes.concat(navigationBuilder.state.preloadedRoutes);
-      const obj2 = callback(1599);
     });
-    let obj2 = BaseNavigationContainer;
-    obj[1] = require("01503_BaseNavigationContainer.js").createScreenFactory();
+    const obj2 = _BaseNavigationContainer;
+    obj[1] = _BaseNavigationContainer.createScreenFactory();
     return obj;
   }
 };

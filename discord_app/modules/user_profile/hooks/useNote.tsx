@@ -1,10 +1,11 @@
 // discord_app/modules/user_profile/hooks/useNote.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import getNote from "../notes/NoteStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../notes/NoteStore.tsx";
 import { Endpoints } from "../../../Constants.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchNote() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -108,12 +109,12 @@ function _fetchNote() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
 
 export default function useNote(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getNote(closure_0));
+  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getNote(closure_0));
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {

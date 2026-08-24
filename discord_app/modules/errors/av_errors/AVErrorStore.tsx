@@ -2,9 +2,9 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import areSetsEqual from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
-require = fn;
+require = arg1;
 function isAVErrorContextOfType(type, CAMERA_SEND_LOW_FPS) {
   return type.type === CAMERA_SEND_LOW_FPS;
 }
@@ -36,13 +36,17 @@ prototype["getActiveErrorsOfType"] = function getActiveErrorsOfType(CAMERA_SEND_
   } else {
     const tmp3 = value[Symbol.iterator]();
     while (tmp3 !== undefined) {
+      let tmp7 = map;
       value = map.get(tmp5);
       let tmp9 = value;
       let tmp10 = null != value;
       if (tmp10) {
+        let tmp11 = isAVErrorContextOfType;
+        let tmp12 = value;
         tmp10 = isAVErrorContextOfType(tmp9, CAMERA_SEND_LOW_FPS);
       }
       if (tmp10) {
+        let tmp13 = value;
         let arr = items.push(tmp9);
       }
       continue;
@@ -73,14 +77,20 @@ const aVErrorStore = new AVErrorStore(dispatcherDefault, {
         const entries = activeErrors.entries();
         const tmp24 = entries[Symbol.iterator]();
         while (tmp24 !== undefined) {
+          let tmp29 = callback;
           let tmp30 = callback(tmp27, 2);
           [tmp31, tmp32] = tmp30;
+          let tmp34 = map1;
+          let tmp33 = tmp32;
           let items = map1.get(tmp32.type);
           if (items == null) {
             items = [];
           }
+          let tmp35 = tmp31;
           let arr = items.push(tmp31);
-          let result = map1.set(tmp32.type, items);
+          let tmp37 = map1;
+          let tmp38 = tmp32;
+          let result = map1.set(tmp33.type, items);
           continue;
         }
       }
@@ -90,6 +100,6 @@ const aVErrorStore = new AVErrorStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/errors/av_errors/AVErrorStore.tsx");
+let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorStore.tsx");
 
 export default aVErrorStore;

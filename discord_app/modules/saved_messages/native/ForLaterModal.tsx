@@ -6,34 +6,39 @@ import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import keyExtractorDefault from "ForLaterScreen.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { Background } from "../../../../_runtime/06319_Background.js";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
+import { SavedMessageSortTypes } from "../SavedMessagesTypes.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
+createCacheKey = { modal: null, headerLeftContainer: null, headerRightContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_16 };
+const obj1 = { paddingLeft: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
+const obj2 = { paddingRight: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
 
 export default function ForLaterModal(type) {
   type = type.type;
   let _require;
   const tmp = callback();
-  const intl = require("../../../intl/index.native.tsx").intl;
-  if (type === require("../SavedMessagesTypes.tsx").SavedMessageSortTypes.REMINDER) {
-    let aUXxzT = tmp4(1236).t.aUXxzT;
+  const intl = _getSystemLocale.intl;
+  if (type === _SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
   } else {
-    aUXxzT = tmp4(1236).t["2pAkDA"];
   }
-  const stringResult = intl.string(aUXxzT);
+  const stringResult = intl.string(_2pAkDA);
   _require = stringResult;
-  let obj = {
+  let obj = { style: tmp.modal, children: null };
+  obj = {
     title: stringResult,
     headerTitle() {
-      return closure_1_4(_undefined(dependencyMap[9]).GenericHeaderTitle, { title: _undefined });
+      return closure_1_4(_undefined(closure_1_2[9]).GenericHeaderTitle, { title: _undefined });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,
@@ -50,9 +55,9 @@ export default function ForLaterModal(type) {
   tmp4Result = tmp4(6314);
   obj[4] = tmp4Result.getHeaderCloseButton(_modDef5260.pop);
   ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [callback(require("../../../../_runtime/06319_Background.js").Header, obj), ];
+  const items = [closure_4(_Background.Header, obj), ];
   obj = { type, onClose: _modDef5260.pop };
-  items[1] = callback(keyExtractorDefault, obj, type);
+  items[1] = closure_4(keyExtractorDefault, obj, type);
   obj[1] = items;
-  return callback2(View, obj);
+  return closure_5(View, obj);
 };

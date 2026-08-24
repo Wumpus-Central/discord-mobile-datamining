@@ -1,21 +1,19 @@
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
-import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
 import getPlatformUserUrlDefault from "../../../../lib/Platforms.tsx";
-import _modDef8874 from "../../GuildSettingsActionCreators.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleFormInit from "../../GuildSettingsStore.tsx";
+import closure_6 from "../../GuildSettingsStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-let require = fn;
+let require = arg1;
 ({ ActivityIndicator: c3, Image: c4, View: c5 } = get_ActivityIndicator);
 ({ GuildSettingsSections: error, HelpdeskArticles: closure_8, PlatformTypes: c9, UserSettingsSections: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = { form: null, trailingWrapper: null, platformIcon: null };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { width: 24, height: 24 };
@@ -31,39 +29,39 @@ class IntegrationItem extends Component {
       guild = props.guild;
       const integration = props.integration;
       if (!integration.syncing) {
-        const setState = tmp.setState;
+        const setState = guild.setState;
         if (integration.enabled) {
           setState({ enabled: false });
           let showResult = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, confirmColor: null };
-          const intl = applyArgumentsResult(dependencyMap[15]).intl;
-          showResult[0] = intl.string(applyArgumentsResult(dependencyMap[15]).t.emx3lN);
+          const intl = applyArgumentsResult(closure_1_2[15]).intl;
+          showResult[0] = intl.string(applyArgumentsResult(closure_1_2[15]).t.emx3lN);
           if ("youtube" === integration.type) {
-            const intl3 = applyArgumentsResult(dependencyMap[15]).intl;
-            let stringResult = intl3.string(applyArgumentsResult(dependencyMap[15]).t.anKQWU);
+            const intl3 = tmp9(closure_1_2[15]).intl;
+            let stringResult = intl3.string(tmp9(closure_1_2[15]).t.anKQWU);
           } else {
-            const intl2 = applyArgumentsResult(dependencyMap[15]).intl;
-            stringResult = intl2.string(applyArgumentsResult(dependencyMap[15]).t["BW/xtn"]);
+            const intl2 = tmp9(closure_1_2[15]).intl;
+            stringResult = intl2.string(tmp9(closure_1_2[15]).t["BW/xtn"]);
           }
           showResult[1] = stringResult;
-          const intl4 = applyArgumentsResult(dependencyMap[15]).intl;
-          showResult[2] = intl4.string(applyArgumentsResult(dependencyMap[15]).t.R9GHya);
-          const intl5 = applyArgumentsResult(dependencyMap[15]).intl;
-          showResult[3] = intl5.string(applyArgumentsResult(dependencyMap[15]).t["ETE/oC"]);
+          const intl4 = tmp9(closure_1_2[15]).intl;
+          showResult[2] = intl4.string(applyArgumentsResult(closure_1_2[15]).t.R9GHya);
+          const intl5 = tmp9(closure_1_2[15]).intl;
+          showResult[3] = intl5.string(applyArgumentsResult(closure_1_2[15]).t["ETE/oC"]);
           showResult[4] = function onConfirm() {
-            return _modDef8874.disableIntegration(guild.id, integration.id);
+            return closure_2_1(closure_2_2[16]).disableIntegration(guild.id, integration.id);
           };
           showResult[5] = function onCancel() {
             return guild.setState({ enabled: true });
           };
-          showResult[6] = componentDidMountDefault.Colors.RED;
-          showResult = _modDef4656.show(showResult);
+          showResult[6] = closure_1_1(closure_1_2[18]).Colors.RED;
+          showResult = closure_1_1(closure_1_2[17]).show(showResult);
+          const obj2 = closure_1_1(closure_1_2[17]);
         } else {
           setState({ enabled: true });
-          showResult = _modDef8874;
+          showResult = closure_1_1(closure_1_2[16]);
           showResult.enableIntegration(guild.id, integration.type, integration.id);
         }
       }
-      tmp = guild;
     };
     return applyArgumentsResult;
   }
@@ -119,10 +117,10 @@ IntegrationItem.prototype["render"] = function render() {
       obj[0] = styles.trailingWrapper;
       let syncing = integration.syncing;
       if (syncing) {
-        syncing = callback(closure_3, { animating: true, size: "small" });
+        syncing = tmp17(closure_3, { animating: true, size: "small" });
       }
       obj[1] = syncing;
-      obj[2] = callback(closure_5, obj);
+      obj[2] = closure_11(closure_5, obj);
       obj[3] = integration.enabled && !integration.syncing;
       obj[4] = null;
       let enabled = integration.enabled;
@@ -139,7 +137,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      const items = [callback(tmp(6291).TableRow, obj), ];
+      const items = [closure_11(tmp(6291).TableRow, obj), ];
       const obj2 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj2[0] = Boolean(self.state.enabled);
@@ -147,35 +145,42 @@ IntegrationItem.prototype["render"] = function render() {
       obj2[2] = self.handleToggleEnabled;
       const intl = tmp(1236).intl;
       obj2[3] = intl.string(tmp(1236).t.vQC6vR);
-      items[1] = callback(tmp(7178).TableSwitchRow, obj2);
+      items[1] = closure_11(tmp(7178).TableSwitchRow, obj2);
       obj1[1] = items;
-      return callback2(tmp(6286).TableRowGroup, obj1);
+      return closure_12(tmp(6286).TableRowGroup, obj1);
     } else {
-      tmp(1435);
-      const tmpResult = tmp(1363);
-      const icon = { source: null, style: null };
+      let tmpResult = tmp(1435);
+      tmpResult = tmp(1363);
+      let icon = value.icon;
+      icon = { source: null, style: null };
       icon[0] = tmpResult.makeSource(tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon[1] = styles.platformIcon;
-      callback(closure_4, icon);
+      closure_11(closure_4, icon);
+      const tmp12 = closure_11;
+      const tmp13 = closure_4;
       const tmp14 = tmpResult.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
     return null;
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationPlatform.tsx");
 
 export default function GuildSettingsModalIntegrationPlatform(platformType) {
   platformType = platformType.platformType;
   const closeGuildSettings = platformType.closeGuildSettings;
+  dependencyMap = undefined;
+  let navigation;
+  let submitting;
   c5 = undefined;
   guild = undefined;
+  closure_7 = undefined;
   function onSave() {
     if (null != guild) {
-      closeGuildSettings(8874);
-      const obj = { features: null };
-      obj[0] = guild.features;
-      obj.saveGuild(guild.id, obj);
+      let obj = closeGuildSettings(8874);
+      obj = { features: null };
+      obj[0] = tmp.features;
+      obj.saveGuild(tmp.id, obj);
     }
   }
   let obj = platformType(4097);
@@ -183,18 +188,18 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   const tmp5 = callback();
   dependencyMap = tmp5;
   obj1 = platformType(1500);
-  const navigation = obj1.useNavigation();
+  navigation = obj1.useNavigation();
   let obj3 = platformType(589);
   const items = [guild];
   const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => ({ guild: guild.getGuild(), submitting: guild.isSubmitting(), hasChanges: guild.hasChanges() }));
-  const submitting = stateFromStoresObject.submitting;
+  submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
   closure_7 = closeGuildSettings(4310)();
   let obj4 = platformType(589);
   const items1 = [guild];
   const stateFromStores = obj4.useStateFromStores(items1, () => guild.getProps().integrations);
   if (stateFromStores != null) {
-    const found = stateFromStores.filter((item, index) => item.type === platformType);
+    const found = stateFromStores.filter((type) => type.type === platformType);
   }
   if (null == guild) {
     return null;
@@ -213,8 +218,8 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     }
     function onConectTap() {
       closeGuildSettings();
-      platformType(7360);
-      const obj = { screen: closure_1_10.CONNECTIONS, isRootScreen: true };
+      let obj = platformType(7360);
+      obj = { screen: closure_1_10.CONNECTIONS, isRootScreen: true };
       obj.openUserSettings(obj);
     }
     obj[1] = name;
@@ -259,28 +264,28 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     obj3[1] = tmp3(712).space.PX_24;
     let mapped;
     if (found != null) {
-      mapped = found.map((item, index) => {
-        closure_0 = index;
-        return closure_1_11(IntegrationItem, {
+      mapped = found.map((id) => {
+        closure_0 = arg1;
+        return closure_1_11(closure_1_15, {
           guild,
           theme: closure_7,
-          integration: item,
+          integration: id,
           styles: closure_2,
           onPress() {
-            navigation.push(constants.INTEGRATION_SETTINGS, { integrationId: closure_0 });
+            closure_1_3.push(constants.INTEGRATION_SETTINGS, { integrationId: closure_0 });
           }
-        }, item.id);
+        }, id.id);
       });
     }
     const obj5 = { children: null };
     const items2 = [mapped, ];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj6[2] = formatResult;
-    items2[1] = callback(tmp(4734).Text, obj6);
+    items2[1] = closure_11(tmp(4734).Text, obj6);
     obj3[2] = items2;
-    obj2[2] = callback2(tmp(4733).Stack, obj3);
-    const items3 = [callback(tmp(8083).Form, obj2), callback(tmp(6550).NavScrim, {})];
+    obj2[2] = closure_12(tmp(4733).Stack, obj3);
+    const items3 = [closure_11(tmp(8083).Form, obj2), closure_11(tmp(6550).NavScrim, {})];
     obj5[0] = items3;
-    return callback2(closure_13, obj5);
+    return closure_12(closure_13, obj5);
   }
 };

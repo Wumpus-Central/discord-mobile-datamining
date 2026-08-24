@@ -34,6 +34,7 @@ export default function eachYearOfInterval(arg0) {
     defaultResult1.setMonth(0, 1);
     if (defaultResult1.getTime() <= time) {
       do {
+        let tmp11 = _typeof;
         let arr = items.push(_typeof.default(defaultResult1));
         let setFullYearResult = defaultResult1.setFullYear(defaultResult1.getFullYear() + 1);
         time1 = defaultResult1.getTime();

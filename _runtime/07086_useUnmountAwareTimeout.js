@@ -1,5 +1,5 @@
 // _runtime/07086_useUnmountAwareTimeout.js
-import _slicedToArray from "metro/07041__slicedToArray.js";
+import closure_1 from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
 
 ({ useCallback: obj1, useEffect: c3, useState: c4 } = noop);
@@ -8,7 +8,7 @@ export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
   const first = callback(callback4(() => new Set()), 1)[0];
   const items = [first];
   callback3(() => () => {
-    const item = closure_0.forEach((item, index) => closure_0.clearTimeout(item));
+    const item = closure_0.forEach((arg0) => closure_0.clearTimeout(arg0));
     closure_0.clear();
   }, items);
   const items1 = [first];
@@ -26,7 +26,7 @@ export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFr
   const first = callback(callback4(() => new Set()), 1)[0];
   const items = [first];
   callback3(() => () => {
-    const item = closure_0.forEach((item, index) => cancelAnimationFrame(item));
+    const item = closure_0.forEach((closure_0) => cancelAnimationFrame(closure_0));
     closure_0.clear();
   }, items);
   const items1 = [first];

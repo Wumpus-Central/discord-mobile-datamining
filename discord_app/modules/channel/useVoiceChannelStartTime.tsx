@@ -1,12 +1,12 @@
 // discord_app/modules/channel/useVoiceChannelStartTime.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
-import handleConnectionOpen from "../../stores/GuildAvailabilityStore.tsx";
-import _toTimestampMs from "VoiceChannelStartTimeStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../gateway/GatewayConnectionStore.tsx";
+import closure_4 from "../../stores/GuildAvailabilityStore.tsx";
+import closure_5 from "VoiceChannelStartTimeStore.tsx";
 import { ChannelTypes } from "../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
 
 export const useStartTime = function useStartTime(channel) {
   const _require = channel;

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/InputModeSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import closure_2 from "../../../../stores/MediaEngineStore.tsx";
 import { InputModes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["pS+K2L"]);
@@ -14,11 +14,11 @@ let createToggle = {
   useTrailing: function useInputModeSettingTrailing() {
     const items = [closure_2];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
-      const intl2 = getSystemLocale.intl;
-      let stringResult = intl2.string(getSystemLocale.t.Q8gkVL);
+      const intl2 = tmp(1236).intl;
+      let stringResult = intl2.string(tmp(1236).t.Q8gkVL);
     } else {
-      const intl = getSystemLocale.intl;
-      stringResult = intl.string(getSystemLocale.t.cHCEOJ);
+      const intl = tmp(1236).intl;
+      stringResult = intl.string(tmp(1236).t.cHCEOJ);
     }
     return stringResult;
   },
@@ -30,6 +30,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");
 
 export default createToggle;

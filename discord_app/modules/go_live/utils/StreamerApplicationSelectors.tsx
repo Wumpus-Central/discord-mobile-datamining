@@ -1,10 +1,11 @@
 // discord_app/modules/go_live/utils/StreamerApplicationSelectors.tsx
 import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
-import sortActivity from "../../../stores/PresenceStore.tsx";
+import closure_3 from "../../../stores/PresenceStore.tsx";
 import { ActivityTypes } from "../../../Constants.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
   if (tmp) {
@@ -23,7 +24,7 @@ function streamApplicationEqualityCheck(arg0, arg1) {
   }
   return tmp;
 }
-const result = require("obj132").fileFinishedImporting("modules/go_live/utils/StreamerApplicationSelectors.tsx");
+const result = require("set").fileFinishedImporting("modules/go_live/utils/StreamerApplicationSelectors.tsx");
 
 export const getStreamerActivityByUserId = function getStreamerActivityByUserId(id, closure_1_10) {
   return closure_1_10.findActivity(id, _findPlayingActivity);
@@ -36,12 +37,12 @@ export const getStreamerActivity = function getStreamerActivity(ownerId, findAct
   return findActivityResult;
 };
 export const getStreamerApplication = function getStreamerApplication(closure_0, closure_1_3) {
-  if (null == _require) {
+  if (null == closure_0) {
     return null;
   } else {
     let findActivityResult = null;
-    if (null != _require) {
-      findActivityResult = closure_1_3.findActivity(_require.ownerId, _findPlayingActivity);
+    if (null != closure_0) {
+      findActivityResult = closure_1_3.findActivity(closure_0.ownerId, _findPlayingActivity);
     }
     let tmp4 = null;
     if (null != findActivityResult) {
@@ -56,13 +57,13 @@ export const useGetStreamApplication = function useGetStreamApplication(stream) 
   const _require = stream;
   const items = [closure_3];
   const items1 = [stream];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let obj = closure_1_3;
     let tmp2 = null;
-    if (null != stream) {
+    if (null != closure_0) {
       let findActivityResult = null;
-      if (null != stream) {
-        findActivityResult = obj.findActivity(stream.ownerId, _findPlayingActivity);
+      if (null != tmp) {
+        findActivityResult = obj.findActivity(tmp.ownerId, closure_1_5);
       }
       let tmp5 = null;
       if (null != findActivityResult) {

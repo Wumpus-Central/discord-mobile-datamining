@@ -2,54 +2,44 @@
 import serializeDefault from "../../tti_analytics/TTITracker.tsx";
 import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../../_runtime/00012_apply.js";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
-import isPremiumAtLeast from "../../../utils/PremiumTypeUtils.tsx";
-import PermissionOverwriteType from "../../../flow/Server.tsx";
 import isCommunicationDisabled from "../../guild_communication_disabled/CommunicationDisabledUtils.tsx";
-import MAX_REACTIONS from "../../reactions/ReactionUtils.tsx";
 import presentAddedFriendToast from "../../toast/native/ToastUtils.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import HapticFeedbackTypes from "../../haptics/HapticUtils.native.tsx";
 import IMPACT_LIGHTDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import flattenComponents from "../../interaction_components/InteractionComponentUtils.tsx";
 import urlMatchesFileExtension from "../MediaFormatTesters.tsx";
-import allowChannelAccess from "../../../utils/ChannelUtils.tsx";
 import ContentHarmTypeChannel from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
-import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
 import QuestsVisibleMessagesChangedSource from "../../quests/QuestTypes.tsx";
 import shouldShowMembershipVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
-import _copy from "../../../utils/ClipboardUtils.native.tsx";
 import trackInviteDefault from "../../../actions/MessageActionCreators.tsx";
-import ReactionTypes2 from "../MessageReactionsTypes.tsx";
 import checkReactionResponse from "../../reactions/ReactionActionCreators.tsx";
 import patchThreadDefault from "../../threads/ThreadActionCreators.tsx";
 import trackForumChannelSeenBatch from "../../forums/tracking/Tracking.tsx";
-import openMemberVerificationModal from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import registerAssetDefault from "../../../../_runtime/10455_registerAsset.js";
-import handleOutOfSuperReactions from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import ChatScrollPositionDefault from "../../chat/native/NativeChatUtils.tsx";
 import _manuallyStartConsoleQuest from "../../quests/QuestActionCreators.tsx";
 import getVoiceInviteEmbedRenderInfo from "MessageImpressionAnalyticsHelpers.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { updateShouldShowJumpToPresentButton as closure_5 } from "../../chat_input/native/useChatBottomManagerUIStore.tsx";
-import processMessage from "../../replies/ReferencedMessageStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import recomputeGuild from "../../../stores/GuildVerificationStore.tsx";
-import reinjectEphemerals from "../../../stores/MessageStore.tsx";
-import handleConnectionInfoChange from "../../../stores/NetworkStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
-import generateOldThreadCutoff from "../../../stores/ReadStateStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_6 from "../../replies/ReferencedMessageStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/GuildVerificationStore.tsx";
+import closure_10 from "../../../stores/MessageStore.tsx";
+import closure_11 from "../../../stores/NetworkStore.tsx";
+import closure_12 from "../../../stores/PermissionStore.tsx";
+import closure_13 from "../../../stores/ReadStateStore.tsx";
+import closure_14 from "../../../stores/UserStore.tsx";
 import Changeset from "renderer/RowGeneratorConstants.tsx";
 import ME from "../../../Constants.tsx";
+import { GuildThemeSourcePreference } from "../../../flow/Client.tsx";
 
-require = fn;
+require = arg1;
 function getVisibleMessages(arg0) {
   ({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, chatManager } = arg0);
   if (null != firstVisibleMessageRowIndex) {
@@ -63,7 +53,9 @@ function getVisibleMessages(arg0) {
               if (firstVisibleMessageRowIndex >= lastVisibleMessageRowIndex) {
                 do {
                   let tmp2 = chatManager._rows[diff];
+                  let tmp3 = diff;
                   if (null != tmp2) {
+                    let tmp10 = constants;
                     if (tmp2.type === constants.MESSAGE) {
                       let message = tmp2.message;
                       let id;
@@ -80,6 +72,7 @@ function getVisibleMessages(arg0) {
                         } else {
                           num = firstVisibleMessagePercentVisible;
                         }
+                        let tmp6 = message;
                         message = message.getMessage(tmp, tmp2.message.id);
                         if (null != message) {
                           let obj = { message: null, percentVisible: null, state: null };
@@ -149,7 +142,7 @@ function _handleTapNavBar() {
                 if (!isNearTop) {
                   obj1 = closure_1_1(table[36]);
                   if (null == closure_1_23(messages, obj1.castChannelIdAsMessageId(channel.id))) {
-                    let tmp10Result = closure_1_1(tmp11[45]);
+                    let tmp10Result = tmp10(tmp11[45]);
                     obj1 = { channelId: null, jump: null, limit: null };
                     obj1[0] = channel.id;
                     const obj2 = { messageId: null, flash: false };
@@ -162,7 +155,7 @@ function _handleTapNavBar() {
                     obj3[0] = tmp10Result.fetchMessages(obj1);
                     return obj3;
                   } else {
-                    tmp10Result = closure_1_1(tmp11[36]);
+                    tmp10Result = tmp10(tmp11[36]);
                     const findMessageIndexResult = findMessageIndex(tmp10Result.castChannelIdAsMessageId(channel.id));
                     if (null == findMessageIndexResult) {
                       c3 = 3;
@@ -170,10 +163,10 @@ function _handleTapNavBar() {
                     } else {
                       const obj4 = { animated: null };
                       obj4[0] = !useReducedMotion;
-                      closure_1_1(tmp11[44]).scrollTo(chatRef.current, findMessageIndexResult, obj4);
+                      tmp10(tmp11[44]).scrollTo(chatRef.current, findMessageIndexResult, obj4);
                       const _setTimeout2 = setTimeout;
                       const timerId = setTimeout(() => _undefined(!useReducedMotion), 10 * findMessageIndexResult);
-                      const tmp10Result1 = closure_1_1(tmp11[44]);
+                      const tmp10Result1 = tmp10(tmp11[44]);
                     }
                   }
                 }
@@ -214,9 +207,11 @@ function parseVoiceStateChannelIdSummary(prop) {
       const parts = prop.split("|");
       const iter = parts[Symbol.iterator]();
       while (iter !== undefined) {
+        let tmp5 = callback;
         let tmp6 = callback(str4.split(":"), 2);
         [tmp7, tmp9] = tmp6;
         if (null != tmp7) {
+          let tmp10 = tmp7;
           let str5 = tmp9;
           if (tmp9 == null) {
             str5 = "";
@@ -232,7 +227,7 @@ function parseVoiceStateChannelIdSummary(prop) {
 }
 ({ RowType: closure_15, Changeset: closure_16 } = Changeset);
 ({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/messages/native/MessagesUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/MessagesUtils.tsx");
 
 export const getLongPressSelectedMedia = function getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpResult, componentMediaIndex) {
   let obj = message;
@@ -262,10 +257,10 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       obj[1] = tmp13;
       let str3 = "video";
       if (!obj9.isVideoFile(tmp13.filename)) {
-        let tmp18Result = urlMatchesFileExtension;
+        let tmp18Result = tmp18(4811);
         let str4 = "audio";
         if (!tmp18Result.isAudioFile(tmp13.filename)) {
-          tmp18Result = urlMatchesFileExtension;
+          tmp18Result = tmp18(4811);
           let str5 = "file";
           if (tmp18Result.isImageFile(tmp13.filename)) {
             str5 = "image";
@@ -346,10 +341,11 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     if (null == tmpResult) {
       return null;
     } else {
+      const obj12 = flattenComponents;
       const value = flattenComponents.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
-      } else if (value.type === PermissionOverwriteType.ComponentType.MEDIA_GALLERY) {
+      } else if (value.type === tmp20(1954).ComponentType.MEDIA_GALLERY) {
         if (null == componentMediaIndex) {
           return null;
         } else if (null == value.items[componentMediaIndex]) {
@@ -426,9 +422,10 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   const result1 = obj1.isMemberCommunicationDisabled(member);
   if (channel.isArchivedLockedThread()) {
     const obj15 = dispatcherDefault;
-    const intl = getSystemLocale.intl;
+    const tmp36 = importDefault;
+    const intl = tmp12(1236).intl;
     const string = intl.string;
-    let t = getSystemLocale.t;
+    let t = tmp12(1236).t;
     if (isForumPostResult) {
       let stringResult = string(t.EJQrFq);
     } else {
@@ -436,24 +433,24 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = registerAssetDefault;
+    tmp36Result = tmp36(10455);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
       if (true === !reaction.me_burst) {
-        let tmp12Result = isPremiumAtLeast;
+        let tmp12Result = tmp12(1945);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = handleOutOfSuperReactions;
+          tmp12Result = tmp12(10456);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = ReactionTypes2.ReactionTypes;
+    const ReactionTypes = tmp12(7510).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
-      const result2 = HapticFeedbackTypes.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
-      const tmp12Result2 = HapticFeedbackTypes;
+      const result2 = tmp12(4343).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
+      const tmp12Result2 = tmp12(4343);
       obj = { channelId: null, messageId: null, emoji: null, location: null, options: null };
       obj[0] = channel.id;
       obj[1] = messageId;
@@ -462,19 +459,18 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      checkReactionResponse.removeReaction(obj);
-      const tmp12Result3 = checkReactionResponse;
+      tmp12(7511).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = checkReactionResponse;
+            const tmp12Result4 = tmp12(7511);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
             if (!flag) {
-              const result3 = HapticFeedbackTypes.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
-              const tmp12Result5 = HapticFeedbackTypes;
+              const result3 = tmp12(4343).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
+              const tmp12Result5 = tmp12(4343);
             }
           }
         }
@@ -482,14 +478,14 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return openMemberVerificationModal.openMemberVerificationModal(guildId1);
+          return tmp12(8522).openMemberVerificationModal(guildId1);
         }
       }
     }
-    tmp12Result1 = MAX_REACTIONS;
+    tmp12Result1 = tmp12(4032);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = handleOutOfSuperReactions;
+    const tmp12Result7 = tmp12(10456);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
@@ -521,29 +517,30 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   let obj = { postId: id, location };
   const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = collectGuildAnalyticsMetadata;
+    let tmp4Result = tmp4(5042);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
   }
-  tmp4Result = HapticFeedbackTypes;
+  tmp4Result = tmp4(4343);
   const result1 = tmp4Result.triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = _copy;
+    const tmp4Result1 = tmp4(7167);
     let result2;
     if (true === flag) {
       result2 = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id);
       const tmp9Result = DISCORD_EPOCHDefault;
     }
-    tmp4Result1.copy(allowChannelAccess.getChannelPermalink(guildId, id, result2));
-    const tmp4Result2 = allowChannelAccess;
+    tmp4Result1.copy(tmp4(4979).getChannelPermalink(guildId, id, result2));
+    const tmp4Result2 = tmp4(4979);
   } else {
-    const tmp4Result3 = _copy;
-    tmp4Result3.copy(allowChannelAccess.getChannelLinkToCopy(channel, channel1));
-    const tmp4Result4 = allowChannelAccess;
+    const tmp4Result3 = tmp4(7167);
+    tmp4Result3.copy(tmp4(4979).getChannelLinkToCopy(channel, channel1));
+    const tmp4Result4 = tmp4(4979);
   }
+  const obj2 = trackForumChannelSeenBatch;
+  const tmp9 = importDefault;
   presentAddedFriendToast.presentLinkCopied();
-  const tmp4Result5 = presentAddedFriendToast;
 };
 export const findMessageIndex = function findMessageIndex(previousRows, ChatTTITracker) {
   if (null != ChatTTITracker) {
@@ -555,6 +552,7 @@ export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(isForu
   let isForumPostResult = isForumPost.isForumPost();
   if (isForumPostResult) {
     isForumPostResult = DISCORD_EPOCHDefault.castChannelIdAsMessageId(id) === jumpTargetId.jumpTargetId;
+    const obj = DISCORD_EPOCHDefault;
   }
   if (isForumPostResult) {
     isForumPostResult = !arg3;
@@ -576,12 +574,13 @@ export const startOrCancelChannelLatestMessagesLoad = function startOrCancelChan
   tracker2.cancel();
 };
 export const recordTimings = function recordTimings(channelId, closure_0) {
-  const mapped = _require.map((item, index) => item.id);
-  let hasFetched = _require.hasFetched;
+  const mapped = closure_0.map((id) => id.id);
+  let hasFetched = closure_0.hasFetched;
   if (!hasFetched) {
-    hasFetched = _require.ready && !_require.cached;
+    hasFetched = closure_0.ready && !closure_0.cached;
+    const tmp2 = closure_0.ready && !closure_0.cached;
   }
-  serializeDefault.recordMessageRender(channelId, mapped, hasFetched, _require.hasMoreAfter);
+  serializeDefault.recordMessageRender(channelId, mapped, hasFetched, closure_0.hasMoreAfter);
 };
 export const findMessageIndexInRows = function findMessageIndexInRows(ChatTTITracker, previousRows) {
   if (null != ChatTTITracker) {
@@ -594,7 +593,11 @@ export const isLoadingAtTop = function isLoadingAtTop(arg0, arg1) {
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
+      let tmp6 = nextResult;
+      let tmp7 = constants2;
       if (nextResult.changeType === constants2.INSERT) {
+        let num = 1;
+        let tmp9 = iter;
         let tmp8 = nextResult.index <= 1;
         iter.return();
         return tmp8;
@@ -606,7 +609,7 @@ export const isLoadingAtTop = function isLoadingAtTop(arg0, arg1) {
   }
 };
 export const handleTapTableView = function handleTapTableView(current) {
-  let isIOSResult = obj132.isIOS();
+  let isIOSResult = set2.isIOS();
   if (isIOSResult) {
     isIOSResult = arg1 !== KeyboardTypes.KeyboardTypes.SYSTEM;
   }
@@ -618,7 +621,8 @@ export const handleTapTableView = function handleTapTableView(current) {
   }
 };
 export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinishedAnalytics(playWallTimeMs) {
-  const obj = { play_time_sec: playWallTimeMs.playWallTimeMs / 1000, play_wall_time_ms: playWallTimeMs.playWallTimeMs, first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000), stall_count: playWallTimeMs.stallCount, stall_ms: playWallTimeMs.stallMs, seek_count: playWallTimeMs.seekCount, seek_waiting_ms: null, media_source: playWallTimeMs.mediaSource, mime_type: null, file_size: null, file_duration_sec: null, connection_type: null, effective_connection_speed: null, service_provider: null };
+  let obj = expandEventPropertiesDefault;
+  obj = { play_time_sec: playWallTimeMs.playWallTimeMs / 1000, play_wall_time_ms: playWallTimeMs.playWallTimeMs, first_play_waiting_ms: Math.min(playWallTimeMs.firstPlayWaitingMs, 600000), stall_count: playWallTimeMs.stallCount, stall_ms: playWallTimeMs.stallMs, seek_count: playWallTimeMs.seekCount, seek_waiting_ms: null, media_source: playWallTimeMs.mediaSource, mime_type: null, file_size: null, file_duration_sec: null, connection_type: null, effective_connection_speed: null, service_provider: null };
   let mimeType = null;
   if (null != playWallTimeMs.mimeType) {
     mimeType = null;
@@ -633,12 +637,12 @@ export const handleMediaPlayFinishedAnalytics = function handleMediaPlayFinished
   obj[13] = store2.getServiceProvider();
   obj.track(constants3.MEDIA_PLAY_FINISHED, obj);
 };
-export const scrollToBottom = function scrollToBottom(current, arg1, fn) {
+export const scrollToBottom = function scrollToBottom(current) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
   }
-  fn({ eventTimestamp: Date.now(), isAtBottom: true });
+  arg2({ eventTimestamp: Date.now(), isAtBottom: true });
   const obj = { eventTimestamp: Date.now(), isAtBottom: true };
   if (flag) {
     flag = !arg1;
@@ -669,6 +673,7 @@ export const scrollToTopMessage = function scrollToTopMessage(current, getPrevio
   const previousRows = getPreviousRows.getPreviousRows();
   if (previousRows.length > 0) {
     ChatScrollPositionDefault.scrollTo(current.current, previousRows.length - 1);
+    const obj = ChatScrollPositionDefault;
   }
 };
 export const canAddNewReactions = function canAddNewReactions(isPrivate) {
@@ -681,10 +686,11 @@ export const canAddNewReactions = function canAddNewReactions(isPrivate) {
   }
   return canResult;
 };
-export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore, fn) {
-  fn(true);
+export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore) {
+  arg2(true);
   if (tmp2) {
-    const obj = { channelId: null, before: null, limit: null };
+    let obj = trackInviteDefault;
+    obj = { channelId: null, before: null, limit: null };
     obj[0] = arg0;
     const firstResult = hasMoreBefore.first();
     let id;
@@ -695,12 +701,12 @@ export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore, fn) {
     obj[2] = closure_21;
     const messages = obj.fetchMessages(obj);
   }
-  tmp2 = hasMoreBefore.hasMoreBefore && !hasMoreBefore.loadingMore;
 };
-export const loadMoreAfter = function loadMoreAfter(arg0, hasMoreAfter, fn) {
-  fn(true);
+export const loadMoreAfter = function loadMoreAfter(arg0, hasMoreAfter) {
+  arg2(true);
   if (tmp2) {
-    const obj = { channelId: null, after: null, limit: null };
+    let obj = trackInviteDefault;
+    obj = { channelId: null, after: null, limit: null };
     obj[0] = arg0;
     const lastResult = hasMoreAfter.last();
     let id;
@@ -711,21 +717,20 @@ export const loadMoreAfter = function loadMoreAfter(arg0, hasMoreAfter, fn) {
     obj[2] = closure_21;
     const messages = obj.fetchMessages(obj);
   }
-  tmp2 = hasMoreAfter.hasMoreAfter && !hasMoreAfter.loadingMore;
 };
-export const clearRows = function clearRows(current, clear, arg2, arg3, fn) {
-  fn({ animated: false, hasHandledScroll: false, isNearBottom: false, isAtBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, pendingUpdatesQueue: [], _loaded: false, animatingStickerMessageId: null });
+export const clearRows = function clearRows(current, clear) {
+  arg4({ animated: false, hasHandledScroll: false, isNearBottom: false, isAtBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, pendingUpdatesQueue: [], _loaded: false, animatingStickerMessageId: null });
   clear.clear();
   callback3(arg2, arg3, false);
   ChatScrollPositionDefault.clearRows(current.current);
 };
-export const handleFirstLayout = function handleFirstLayout(fn, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  fn({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
+export const handleFirstLayout = function handleFirstLayout(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
 };
-export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(fn, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  fn({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
+export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
 };
-export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, fn) {
+export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, arg2) {
   const items = [arg0];
   const set = new Set(items);
   if (null != arg1) {
@@ -735,7 +740,7 @@ export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1
   if (arg1 !== arg0) {
     tmp2 = arg0;
   }
-  fn({ forceRender: true, updateMessageIds: set });
+  arg2({ forceRender: true, updateMessageIds: set });
   return tmp2;
 };
 export const handleTapNavBar = function handleTapNavBar() {
@@ -748,7 +753,7 @@ export const handleTapNavBar = function handleTapNavBar() {
   }
   return applyArgumentsResult;
 };
-export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id, fn) {
+export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id) {
   if (null == jumpReturnTargetId.jumpReturnTargetId) {
     if (!jumpReturnTargetId.loadingMore) {
       if (jumpReturnTargetId.hasMoreAfter) {
@@ -757,11 +762,13 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id, fn) 
         obj[1] = closure_21;
         obj[2] = { present: true };
         const messages = trackInviteDefault.fetchMessages(obj);
+        const obj3 = trackInviteDefault;
       } else {
-        fn();
+        arg2();
       }
     }
   } else {
+    obj = trackInviteDefault;
     obj = { channelId: null, messageId: null, flash: true };
     obj[0] = id.id;
     obj[1] = jumpReturnTargetId;
@@ -771,7 +778,8 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id, fn) 
 export const scrollToNewMessages = function scrollToNewMessages(channel) {
   channel = channel.channel;
   let id = closure_13.ackMessageId(channel.id);
-  const obj = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
+  let obj = trackInviteDefault;
+  obj = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
   if (id == null) {
     id = channel.id;
   }
@@ -802,10 +810,11 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
   } else {
     updateRows({});
   }
-  const mapped = messages.map((item, index) => item.id);
+  const mapped = messages.map((id) => id.id);
   let hasFetched = messages.hasFetched;
   if (!hasFetched) {
     hasFetched = messages.ready && !messages.cached;
+    const tmp10 = messages.ready && !messages.cached;
   }
   oldestUnreadMessageId(scrollToMessageId[39]).recordMessageRender(channelId, mapped, hasFetched, messages.hasMoreAfter);
 };
@@ -818,7 +827,7 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
   closure_4 = undefined !== updateRowsEnabled && updateRowsEnabled;
   let INSTANT = jumpType.jumpType;
   if (undefined === INSTANT) {
-    INSTANT = require("../../../flow/Client.tsx").JumpType.INSTANT;
+    INSTANT = _GuildThemeSourcePreference.JumpType.INSTANT;
   }
   if (null != arg0) {
     const _setTimeout = setTimeout;
@@ -829,10 +838,10 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
           let flag = false;
           if (c4) {
             let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, overrideScrollJumpType: null, isRescrolling: true };
-            obj[0] = scrollToMessageId;
-            obj[1] = scrollToMessageId;
+            obj[0] = tmp;
+            obj[1] = tmp;
             obj[2] = INSTANT;
-            obj[3] = scrollToMessageId;
+            obj[3] = tmp;
             obj[4] = scrollToMessageId(findMessageIndex[47]).JumpType.INSTANT;
             updateRows(obj);
             flag = true;
@@ -891,10 +900,10 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
               let flag = false;
               if (c4) {
                 let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, overrideScrollJumpType: null, isRescrolling: true };
-                obj[0] = scrollToMessageId;
-                obj[1] = scrollToMessageId;
+                obj[0] = tmp;
+                obj[1] = tmp;
                 obj[2] = INSTANT;
-                obj[3] = scrollToMessageId;
+                obj[3] = tmp;
                 obj[4] = scrollToMessageId(findMessageIndex[47]).JumpType.INSTANT;
                 updateRows(obj);
                 flag = true;
@@ -917,8 +926,8 @@ export const scrollToMessageIdWithRescroll = function scrollToMessageIdWithRescr
     if (tmp6) {
       const _setTimeout = setTimeout;
       const timerId1 = setTimeout(() => {
-        chatRef(findMessageIndex[44]);
-        const obj = { animated: updateRows, highlight: chatRef === scrollToMessageId };
+        let obj = chatRef(findMessageIndex[44]);
+        obj = { animated: updateRows, highlight: chatRef === scrollToMessageId };
         obj.scrollIntoView(findMessageIndex.current, c4, obj);
       }, 5);
     } else {
@@ -958,6 +967,7 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
             const result3 = obj6.handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel);
             const obj7 = getVoiceInviteEmbedRenderInfo;
             const result4 = obj7.handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel);
+            const obj2 = _manuallyStartConsoleQuest;
           }
         }
       }
@@ -966,12 +976,12 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
 };
 export const getVoiceStateChannelSummaryFromVoiceStates = function getVoiceStateChannelSummaryFromVoiceStates(voiceStates) {
   const entries = Object.entries(voiceStates);
-  const found = entries.filter((item, index) => {
-    [, tmp] = item;
+  const found = entries.filter((arg0) => {
+    [, tmp] = arg0;
     return false !== tmp.discoverable;
   });
-  const mapped = found.map((item, index) => {
-    [tmp, tmp2] = item;
+  const mapped = found.map((arg0) => {
+    [tmp, tmp2] = arg0;
     let str = tmp2.channelId;
     if (str == null) {
       str = "";
@@ -987,9 +997,11 @@ export const getVoiceChannelIdChangedAuthorIds = function getVoiceChannelIdChang
   const set = new Set();
   const items = [...obj.keys(), ...obj2.keys()];
   for (const item10032 of set1) {
+    let tmp2 = item10032;
     let value = obj.get(item10032);
     if (value !== obj2.get(item10032)) {
-      let addResult = set.add(item10032);
+      let tmp4 = item10032;
+      let addResult = set.add(tmp2);
     }
     continue;
   }

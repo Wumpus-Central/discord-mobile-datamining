@@ -28,10 +28,10 @@ export default function isGeneratorFunction(fn) {
             return false;
           }
         })();
-        closure_2 = tmp6 && getProto(tmp6);
-        const tmp7 = tmp6 && getProto(tmp6);
+        closure_2 = tmp6 && tmp3(546)(tmp6);
+        const tmp7 = tmp6 && tmp3(546)(tmp6);
       }
-      return getProto(fn) === closure_2;
+      return tmp3(546)(fn) === closure_2;
     } else {
       return false;
     }

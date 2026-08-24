@@ -2,29 +2,29 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import expandEventPropertiesDefault from "AnalyticsUtils.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
-import obj132Default from "ValidationUtils.tsx";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
 import ME from "../Constants.tsx";
 
-require = fn;
-function validateDiscordTag(substr) {
+require = arg1;
+function validateDiscordTag(arr) {
   let stringResult = null;
-  if (!regex3.test(substr)) {
-    if (!substr.includes("#")) {
-      const tmp4 = callback(substr.split("#"), 2);
+  if (!regex3.test(arr)) {
+    if (!arr.includes("#")) {
+      const tmp4 = callback(arr.split("#"), 2);
       let str2 = tmp4[1];
-      const obj = { reason: "Invalid Username", query: null, discrim_len: null, username_len: null, is_email_like: null, is_invite_like: null, is_num_only: null };
-      obj[1] = substr;
+      let obj = expandEventPropertiesDefault;
+      obj = { reason: "Invalid Username", query: null, discrim_len: null, username_len: null, is_email_like: null, is_invite_like: null, is_num_only: null };
+      obj[1] = arr;
       if (str2 == null) {
         str2 = "";
       }
       obj[2] = str2.length;
       obj[3] = tmp4[0].length;
-      let tmp5Result = obj132Default;
-      obj[4] = tmp5Result.isEmail(substr);
-      tmp5Result = obj132Default;
-      obj[5] = tmp5Result.isInvite(substr);
-      obj[6] = regex.test(substr);
+      let tmp5Result = tmp5(8781);
+      obj[4] = tmp5Result.isEmail(arr);
+      tmp5Result = tmp5(8781);
+      obj[5] = tmp5Result.isInvite(arr);
+      obj[6] = regex.test(arr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);
       const intl = getSystemLocale.intl;
       stringResult = intl.string(getSystemLocale.t.paDJBM);
@@ -40,26 +40,26 @@ function humanizeAbortCode(arg0, substr) {
     const obj = { discordTag: null };
     obj[0] = substr;
     return intl7.format(getSystemLocale.t.Oxe6Ur, obj);
-  } else if (constants.TOO_MANY_FRIENDS === arg0) {
+  } else if (tmp.TOO_MANY_FRIENDS === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t.tnBalD);
-  } else if (constants.RELATIONSHIP_ALREADY_FRIENDS === arg0) {
+  } else if (tmp.RELATIONSHIP_ALREADY_FRIENDS === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.VNLneq);
   } else {
-    if (constants.USER_QUARANTINED !== arg0) {
-      if (constants.USER_FRIEND_REQUEST_LIMITED_ACCESS !== arg0) {
-        if (constants.TOO_MANY_BLOCKED_USERS === arg0) {
+    if (tmp.USER_QUARANTINED !== arg0) {
+      if (tmp.USER_FRIEND_REQUEST_LIMITED_ACCESS !== arg0) {
+        if (tmp.TOO_MANY_BLOCKED_USERS === arg0) {
           const intl3 = getSystemLocale.intl;
           return intl3.string(getSystemLocale.t.sIGo1i);
-        } else if (constants.TOO_MANY_PENDING_OUTGOING === arg0) {
+        } else if (tmp.TOO_MANY_PENDING_OUTGOING === arg0) {
           const intl2 = getSystemLocale.intl;
           return intl2.string(getSystemLocale.t.k1K15p);
         } else {
-          if (constants.RELATIONSHIP_INCOMING_BLOCKED !== arg0) {
-            if (constants.RELATIONSHIP_INVALID_SELF !== arg0) {
-              if (constants.RELATIONSHIP_INVALUD_USER_BOT !== arg0) {
-                const RELATIONSHIP_INVALID_DISCORD_TAG = constants.RELATIONSHIP_INVALID_DISCORD_TAG;
+          if (tmp.RELATIONSHIP_INCOMING_BLOCKED !== arg0) {
+            if (tmp.RELATIONSHIP_INVALID_SELF !== arg0) {
+              if (tmp.RELATIONSHIP_INVALUD_USER_BOT !== arg0) {
+                const RELATIONSHIP_INVALID_DISCORD_TAG = tmp.RELATIONSHIP_INVALID_DISCORD_TAG;
               }
             }
           }
@@ -76,11 +76,11 @@ function humanizeAbortCode(arg0, substr) {
 const re6 = /^\d+$/;
 const re7 = /^(.+?@.+?\..+?|.+?#\d{4})$/;
 const re8 = /^[a-zA-Z0-9_\\.]+$/;
-const result = require("obj132").fileFinishedImporting("utils/FriendsUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/FriendsUtils.tsx");
 
 export { validateDiscordTag };
-export const isValidDiscordTag = function isValidDiscordTag(substr) {
-  return null == validateDiscordTag(substr);
+export const isValidDiscordTag = function isValidDiscordTag(arr) {
+  return null == validateDiscordTag(arr);
 };
 export { humanizeAbortCode };
 export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, substr) {

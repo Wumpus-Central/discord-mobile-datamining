@@ -1,5 +1,5 @@
 // _runtime/01619_useLinkTo.js
-import noop from "00019_noop.js";
+import closure_2 from "00019_noop.js";
 
 const require = arg1;
 
@@ -13,7 +13,8 @@ export const useLinkTo = function useLinkTo() {
       error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
       throw error;
     } else {
-      context.dispatch(buildAction(arg0));
+      obj.dispatch(buildAction(arg0));
     }
+    obj = context;
   }, items);
 };

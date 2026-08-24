@@ -1,6 +1,7 @@
 // _runtime/01810_eulerToQuaternion.js
 import isWorkletFunction from "01679_isWorkletFunction.js";
 import noop from "00019_noop.js";
+import { isReanimated3 } from "01698_isReanimated3.js";
 
 ({ useEffect: obj1, useMemo: c3, useRef: c4 } = noop);
 function eulerToQuaternion(arg0, arg1, arg2) {
@@ -23,12 +24,12 @@ function adjustRotationToInterfaceOrientation(pitch) {
     pitch.roll = -pitch;
     const _Math2 = Math;
     pitch.yaw = yaw - Math.PI / 2;
-  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_270) {
     pitch.pitch = -roll;
     pitch.roll = pitch;
     const _Math = Math;
     pitch.yaw = yaw + Math.PI / 2;
-  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_180) {
     pitch.pitch = pitch.pitch * -1;
     pitch.roll = pitch.roll * -1;
     pitch.yaw = pitch.yaw * -1;
@@ -56,10 +57,10 @@ function adjustVectorToInterfaceOrientation(arg0) {
   if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_90) {
     arg0.x = -y;
     arg0.y = x;
-  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_270) {
     arg0.x = y;
     arg0.y = -x;
-  } else if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === tmp(1679).InterfaceOrientation.ROTATION_180) {
     arg0.x = arg0.x * -1;
     arg0.y = arg0.y * -1;
   }
@@ -121,7 +122,7 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
   }, items);
   const callback = tmp13;
   obj = {
-    sensor: require("01698_isReanimated3.js").initializeSensor(arg0, tmp13),
+    sensor: _isReanimated3.initializeSensor(arg0, tmp13),
     unregister() {
 
     },
@@ -144,45 +145,44 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     sensor = ref2.current.sensor;
     const adjustToInterfaceOrientation = ref2.current.config.adjustToInterfaceOrientation;
     const obj2 = callback(ref[2]);
-    const fn = function n(pitch) {
+    const fn = function n(arg0) {
       if (adjustToInterfaceOrientation) {
         if (sensor === sensor(adjustToInterfaceOrientation[1]).SensorType.ROTATION) {
-          adjustRotationToInterfaceOrientation(pitch);
+          closure_2_6(arg0);
         } else {
-          if (typeof adjustVectorToInterfaceOrientation !== "function") {
+          if (typeof closure_2_7 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          ({ interfaceOrientation, x, y } = pitch);
+          ({ interfaceOrientation, x, y } = arg0);
           if (interfaceOrientation === sensor(adjustToInterfaceOrientation[1]).InterfaceOrientation.ROTATION_90) {
-            pitch.x = -y;
-            pitch.y = x;
+            arg0.x = -y;
+            arg0.y = x;
           } else if (interfaceOrientation === sensor(adjustToInterfaceOrientation[1]).InterfaceOrientation.ROTATION_270) {
-            pitch.x = y;
-            pitch.y = -x;
+            arg0.x = y;
+            arg0.y = -x;
           } else if (interfaceOrientation === sensor(adjustToInterfaceOrientation[1]).InterfaceOrientation.ROTATION_180) {
-            pitch.x = pitch.x * -1;
-            pitch.y = pitch.y * -1;
+            arg0.x = arg0.x * -1;
+            arg0.y = arg0.y * -1;
           }
         }
       }
-      sensor.value = pitch;
+      sensor.value = arg0;
       sensor(adjustToInterfaceOrientation[3]).callMicrotasks();
-      const obj = sensor(adjustToInterfaceOrientation[3]);
     };
-    obj = { adjustToInterfaceOrientation, sensorType: sensor, SensorType: callback(ref[1]).SensorType, adjustRotationToInterfaceOrientation, adjustVectorToInterfaceOrientation, sensorData: sensor, callMicrotasks: callback(ref[3]).callMicrotasks };
+    obj = { adjustToInterfaceOrientation, sensorType: sensor, SensorType: callback(ref[1]).SensorType, adjustRotationToInterfaceOrientation: closure_1_6, adjustVectorToInterfaceOrientation: closure_1_7, sensorData: sensor, callMicrotasks: callback(ref[3]).callMicrotasks };
     fn.__closure = obj;
     fn.__workletHash = 6807952122364;
     fn.__initData = closure_1_8;
     const registerSensorResult = callback(ref[2]).registerSensor(sensor, closure_2, fn);
     closure_2 = registerSensorResult;
     if (-1 !== registerSensorResult) {
-      ref2.current.unregister = () => sensor(adjustToInterfaceOrientation[2]).unregisterSensor(closure_2);
-      ref2.current.isAvailable = true;
+      tmp.current.unregister = () => sensor(adjustToInterfaceOrientation[2]).unregisterSensor(closure_2);
+      tmp.current.isAvailable = true;
     } else {
-      ref2.current.unregister = () => {
+      tmp.current.unregister = () => {
 
       };
-      ref2.current.isAvailable = false;
+      tmp.current.isAvailable = false;
     }
     return () => {
       const current = ref.current;

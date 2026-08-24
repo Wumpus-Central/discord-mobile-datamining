@@ -4,29 +4,32 @@ import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/exper
 import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function Divider() {
   return callback(View, { style: callback2().rowDivider });
 }
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: c5, CARD_PADDING } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-const createCacheKey = { marginBottom: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey = { title: null, titleContent: null, text: null, rowDivider: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { flexShrink: 1 };
+let obj1 = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP, marginRight: -CARD_PADDING };
 createCacheKey[4] = { flexDirection: "column", paddingVertical: 20 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP };
 createCacheKey[6] = { flex: 1, lineHeight: CARD_ROWS_ICON_SIZE };
 createCacheKey[7] = { marginHorizontal: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
+let obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: CARD_ROWS_ICON_SIZE + CARD_ROWS_COLUMN_GAP, marginRight: -CARD_PADDING };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");
 
 export default function UserProfileCard(arg0) {
   ({ title, trailingAction } = arg0);
@@ -59,18 +62,19 @@ export default function UserProfileCard(arg0) {
       }
       obj1[3] = str2;
       obj1[5] = title;
-      items1[1] = callback(Text.Text, obj1);
+      items1[1] = closure_6(Text.Text, obj1);
       items1[2] = titleIcon;
       obj[1] = items1;
-      tmp5Result = callback2(View, obj);
+      tmp5Result = tmp5(tmp6, obj);
+      const tmp10 = closure_6;
     }
     const items2 = [tmp5Result, trailingAction];
     obj[1] = items2;
-    tmp5Result = callback2(View, obj);
+    tmp5Result = tmp5(tmp6, obj);
   }
   const items3 = [tmp5Result, children];
   obj.children = items3;
-  return callback2(View, obj);
+  return closure_7(View, obj);
 };
 export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   ({ label, sublabel, hint, isDestructive, labelColor, arrow } = arg0);
@@ -87,7 +91,9 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
   if (isDestructive) {
     str2 = "text-feedback-critical";
   }
-  const obj = { size: closure_5, color: str };
+  let obj = { style: tmp.row, accessibilityRole: "button", accessibilityLabel: label, disabled, onPress, children: null };
+  obj = { style: tmp.rowLabel, children: null };
+  obj = { size: closure_5, color: str };
   const items = [callback(icon, obj), , , ];
   if (labelColor == null) {
     labelColor = str2;
@@ -98,27 +104,28 @@ export const UserProfileFormRow = function UserProfileFormRow(arg0) {
     const obj2 = { size: null, color: null };
     obj2[0] = closure_5;
     obj2[1] = str;
-    tmp6Result = callback(hint, obj2);
+    tmp6Result = tmp6(hint, obj2);
   }
   items[2] = tmp6Result;
   if (tmp6Result) {
-    tmp6Result = callback(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
+    tmp6Result = tmp6(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "sm" });
   }
   items[3] = tmp6Result;
   obj[1] = items;
-  const items1 = [callback2(View, obj), ];
+  const items1 = [closure_7(View, obj), ];
   let tmp6Result1 = null != sublabel;
   if (tmp6Result1) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.rowSublabel;
     obj3[1] = sublabel;
-    tmp6Result1 = callback(View, obj3);
+    tmp6Result1 = tmp6(tmp5, obj3);
   }
   items1[1] = tmp6Result1;
   obj[5] = items1;
-  return callback2(PressableBase.PressableOpacity, obj);
+  return closure_7(PressableBase.PressableOpacity, obj);
 };
 export const UserProfileCardRows = function UserProfileCardRows(children) {
+  closure_0 = undefined;
   closure_0 = useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileCardRows");
   const Children = React.Children;
   return callback(closure_8, {
@@ -127,7 +134,7 @@ export const UserProfileCardRows = function UserProfileCardRows(children) {
       if (!closure_0) {
         tmp2 = null;
         if (0 !== arg1) {
-          tmp2 = closure_1_6(Divider, {});
+          tmp2 = closure_1_6(closure_1_10, {});
         }
       }
       const children = [tmp2, arg0];

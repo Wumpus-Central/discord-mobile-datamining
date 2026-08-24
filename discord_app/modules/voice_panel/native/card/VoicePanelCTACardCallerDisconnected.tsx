@@ -1,20 +1,21 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
+obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj[0] = obj;
 obj[1] = { flexDirection: "row", gap: 24 };
-const createCacheKey = { width: 80, height: 80, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
+createCacheKey = { width: 80, height: 80, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
 obj[2] = createCacheKey;
 obj[3] = { width: 80, height: 80 };
 obj[4] = { opacity: 0.2 };
@@ -53,10 +54,11 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     items[2] = first(id[10]).getName(undefined, channelId, user1);
     return items;
   }, items1), 3);
-  tmp(tmp2[11]);
+  obj = { style: tmp3.container, children: null };
+  let tmpResult = tmp(tmp2[11]);
   obj = { style: tmp3.avatarContainer, children: null };
   let tmp16Result = null != tmp9;
-  const tmpResult = tmp(tmp2[11]);
+  tmpResult = tmp(tmp2[11]);
   if (tmp16Result) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.avatarWrapper;
@@ -71,7 +73,7 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     obj3[0] = tmp19;
     obj3[1] = tmp3.avatar;
     obj1[1] = callback2(tmp(tmp2[12]), obj3);
-    tmp16Result = callback2(tmpResult1, obj1);
+    tmp16Result = tmp16(tmpResult1, obj1);
     const tmpResult2 = tmp(tmp2[12]);
   }
   const items2 = [tmp16Result, ];
@@ -92,12 +94,12 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
     ({ avatar: arr5[0], disconnectedAvatar: arr5[1] } = tmp3);
     obj6[1] = items3;
     obj4[1] = callback2(tmp(tmp2[12]), obj6);
-    tmp21Result = callback2(tmpResult3, obj4);
+    tmp21Result = tmp21(tmpResult3, obj4);
     const tmpResult4 = tmp(tmp2[12]);
   }
   items2[1] = tmp21Result;
   obj[1] = items2;
-  const items4 = [callback(tmpResult, obj), ];
+  const items4 = [closure_9(tmpResult, obj), ];
   const obj7 = { style: tmp3.textContainer, children: null };
   const tmp8 = callback(obj.useStateFromStoresArray(items, () => {
     const user = closure_1_7.getUser(id);
@@ -131,10 +133,10 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   }
   items5[1] = tmp26Result;
   obj7[1] = items5;
-  items4[1] = callback(first(id[11]), obj7);
+  items4[1] = closure_9(first(id[11]), obj7);
   obj[1] = items4;
-  return callback(tmpResult, obj);
+  return closure_9(tmpResult, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx");
 
 export default memoResult;

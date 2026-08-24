@@ -4,9 +4,9 @@ import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "../CollectiblesShopConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
 
 export const FRACTIONAL_NITRO_COIN_SIZE = { CARD: 80, CHECKOUT: 45, COLLECTED_SHEET: 68 };
 export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllustration(resizeMode) {

@@ -1,22 +1,23 @@
 // discord_app/modules/reanimated/native/useStateFromSharedValue.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let c4 = 9999999;
 const map = new Map();
 let closure_6 = { code: "function useStateFromSharedValueTsx1(id,listener,sharedValue){const{runOnJS}=this.__closure;sharedValue.addListener(id,function(value){return runOnJS(listener)(value);});}" };
 let closure_7 = { code: "function useStateFromSharedValueTsx2(id,sharedValue){sharedValue.removeListener(id);}" };
-let result = require("obj132").fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
+let result = require("set").fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
 
 export default function useStateFromSharedValue(arg0) {
+  closure_0 = arg0;
   const tmp = callback(React.useState(() => closure_0.get()), 2);
   closure_0 = arg0;
   closure_1 = tmp2;
   const items = [arg0, tmp[1]];
   const layoutEffect = React.useLayoutEffect(() => {
-    let obj = map;
-    let value = map.get(set);
+    let obj = closure_1_5;
+    let value = closure_1_5.get(set);
     if (value == null) {
       const _Set = Set;
       set = new Set();
@@ -25,8 +26,9 @@ export default function useStateFromSharedValue(arg0) {
       obj[1] = set;
       obj[2] = function valueListener(arg0) {
         closure_0 = arg0;
-        set(callback[2]).batchUpdates(() => {
+        set(closure_1_1[2]).batchUpdates(() => {
           for (const item10005 of closure_0) {
+            let tmp = closure_0;
             let item10005Result = item10005(closure_0);
             continue;
           }
@@ -64,7 +66,7 @@ export default function useStateFromSharedValue(arg0) {
         fn.__workletHash = 15997703035823;
         fn.__initData = closure_2_7;
         set(callback[3]).runOnUI(fn)(set.listenerId, set);
-        map.delete(set);
+        closure_2_5.delete(set);
         const obj = set(callback[3]);
       }
     };
@@ -72,6 +74,7 @@ export default function useStateFromSharedValue(arg0) {
   return tmp[0];
 };
 export const useDerivedStateFromSharedValue = function useDerivedStateFromSharedValue(activeIndex, stateFromStores) {
+  closure_0 = activeIndex;
   let callback = stateFromStores;
   [tmp2, closure_2] = callback(React.useState(() => callback(activeIndex.get(), undefined)), 2);
   React = React.useRef(stateFromStores);
@@ -85,8 +88,8 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
   closure_0 = activeIndex;
   const items = [activeIndex, callback];
   const layoutEffect1 = React.useLayoutEffect(() => {
-    let obj = map;
-    let value = map.get(set);
+    let obj = closure_1_5;
+    let value = closure_1_5.get(set);
     if (value == null) {
       const _Set = Set;
       set = new Set();
@@ -95,8 +98,9 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
       obj[1] = set;
       obj[2] = function valueListener(arg0) {
         closure_0 = arg0;
-        set(callback[2]).batchUpdates(() => {
+        set(closure_1_1[2]).batchUpdates(() => {
           for (const item10005 of closure_0) {
+            let tmp = closure_0;
             let item10005Result = item10005(closure_0);
             continue;
           }
@@ -134,7 +138,7 @@ export const useDerivedStateFromSharedValue = function useDerivedStateFromShared
         fn.__workletHash = 15997703035823;
         fn.__initData = closure_2_7;
         set(callback[3]).runOnUI(fn)(set.listenerId, set);
-        map.delete(set);
+        closure_2_5.delete(set);
         const obj = set(callback[3]);
       }
     };

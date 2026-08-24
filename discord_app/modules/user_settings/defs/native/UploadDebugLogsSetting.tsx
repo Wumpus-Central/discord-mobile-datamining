@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/UploadDebugLogsSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { DebugLogCategory } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import keys from "../../../../../_runtime/00644_keys.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 function _handleUploadDebugLogSettingPress() {
   const self = this;
   const tmp = callback(function*() {
@@ -152,6 +152,6 @@ keys = {
   }
 };
 keys = createToggle.createPressable(keys);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
 
 export default keys;

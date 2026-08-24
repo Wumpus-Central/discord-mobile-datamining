@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/distributorStoreUrls.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const discord7937464 = "discord7937464";
 let c1 = "www.xbox.com";
 const msxbox = "msxbox";
-const result = obj132.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
 
 export const XBOX_DISCORD_OCID = "discord7937464";
 export const XBOX_GAME_PASS_STORE_HOSTNAME = "www.xbox.com";

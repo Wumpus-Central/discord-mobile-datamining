@@ -1,9 +1,9 @@
 // discord_app/modules/device/DeviceState.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import _getDeviceState from "native/DeviceState.tsx";
 import ThermalState from "constants/DeviceState.tsx";
 
-const result = obj132.fileFinishedImporting("modules/device/DeviceState.tsx");
+const result = set.fileFinishedImporting("modules/device/DeviceState.tsx");
 
 export const DeviceState = ThermalState.DeviceState;
 export const ThermalState = ThermalState.ThermalState;

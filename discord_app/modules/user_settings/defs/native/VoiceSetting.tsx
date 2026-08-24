@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/VoiceSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import closure_2 from "../../../../stores/MediaEngineStore.tsx";
 import ME from "../../../../Constants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { KrispLogo } from "../../voice/native/SettingsVoiceScreen.tsx";
 
-require = fn;
+require = arg1;
 ({ InputModes: c3, UserSettingsSections } = ME);
-{
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.K3lovD);
@@ -17,11 +17,11 @@ require = fn;
   useTrailing: function useVoiceSettingTrailing() {
     const items = [closure_2];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
-      const intl2 = getSystemLocale.intl;
-      let stringResult = intl2.string(getSystemLocale.t.Q8gkVL);
+      const intl2 = tmp(1236).intl;
+      let stringResult = intl2.string(tmp(1236).t.Q8gkVL);
     } else {
-      const intl = getSystemLocale.intl;
-      stringResult = intl.string(getSystemLocale.t.cHCEOJ);
+      const intl = tmp(1236).intl;
+      stringResult = intl.string(tmp(1236).t.cHCEOJ);
     }
     return stringResult;
   },
@@ -35,10 +35,10 @@ require = fn;
 createToggle = {
   route: UserSettingsSections.VOICE,
   getComponent() {
-    return KrispLogo /* KrispLogo */.default;
+    return KrispLogo.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
 
 export default createToggle;

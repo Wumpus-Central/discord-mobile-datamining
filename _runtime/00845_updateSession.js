@@ -26,6 +26,7 @@ function updateSession(ipAddress) {
   let timestamp = obj.timestamp;
   if (!timestamp) {
     timestamp = dateTimestampInSeconds.timestampInSeconds();
+    const obj2 = dateTimestampInSeconds;
   }
   ipAddress.timestamp = timestamp;
   if (obj.abnormal_mechanism) {
@@ -95,6 +96,7 @@ function updateSession(ipAddress) {
       let sid = obj.sid;
     } else {
       sid = addContextToFrame.uuid4();
+      const obj3 = addContextToFrame;
     }
     ipAddress.sid = sid;
   }

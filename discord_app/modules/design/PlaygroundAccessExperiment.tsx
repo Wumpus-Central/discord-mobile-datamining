@@ -1,13 +1,13 @@
 // discord_app/modules/design/PlaygroundAccessExperiment.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import "ApexExperiment";
+import closure_2 from "../../stores/UserStore.tsx";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
-require = fn;
-const ApexExperiment = { 1: null };
+require = arg1;
+ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: ApexExperiment });
-const result = require("obj132").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
 
 export default apexExperiment;
 export const usePlaygroundAccessExperiment = function usePlaygroundAccessExperiment(design_systems_settings) {

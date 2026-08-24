@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_terms/LazyPromiseInitializer.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
+const result = set.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
 class LazyPromiseInitializer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -23,17 +23,18 @@ prototype["get"] = function get() {
   return this.val;
 };
 prototype["ensureLoaded"] = function ensureLoaded() {
-  const self = this;
+  let self = this;
+  self = this;
   if (!this.loaded) {
     if (!self.loading) {
       if (undefined !== self.param) {
         const param = self.param;
         self.loading = true;
-        self.loader(param).then((result) => {
+        self.loader(param).then((arg0) => {
           if (param === self.param) {
-            self.val = result;
-            self.loading = false;
-            self.loaded = true;
+            tmp.val = arg0;
+            tmp.loading = false;
+            tmp.loaded = true;
           }
         });
         const loaderResult = self.loader(param);

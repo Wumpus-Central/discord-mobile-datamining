@@ -1,25 +1,24 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef6798 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import registerAssetDefault from "../../../../../_runtime/11551_registerAsset.js";
-import registerAssetDefault2 from "../../../../../_runtime/11552_registerAsset.js";
-import openGuildActionSheetDefault from "../../../guild_action_sheet/native/openGuildActionSheet.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../stores/UserGuildSettingsStore.tsx";
 import { AnalyticsSections } from "../../../../Constants.tsx";
+import { BellIcon } from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
+import { EnvelopeIcon } from "../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
+import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getMuteTimeOptions } from "../../../notifications/NotificationUtils.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildMenuItems.tsx");
 
 export default function getGuildsBarGuildMenuItems(arg0) {
   const _require = arg0;
-  let obj = getMuteTimeOptions;
+  let obj = _getMuteTimeOptions;
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
-  obj = { IconComponent: require("../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx").EnvelopeIcon, label: null, action: null };
-  const intl = require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl.string(require("../../../../intl/index.native.tsx").t.e6RscS);
+  obj = { IconComponent: _EnvelopeIcon.EnvelopeIcon, label: null, action: null };
+  const intl = _getSystemLocale.intl;
+  obj[1] = intl.string(_getSystemLocale.t.e6RscS);
   obj[2] = function action() {
     return closure_1_3(function*() {
       if (paths === 2) {
@@ -77,20 +76,20 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     })();
   };
   let items = [obj, , ];
-  obj = { IconComponent: require("../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx").BellIcon, label: null, action: null };
-  const intl2 = require("../../../../intl/index.native.tsx").intl;
-  obj[1] = intl2.string(require("../../../../intl/index.native.tsx").t.HcoRu0);
+  obj = { IconComponent: _BellIcon.BellIcon, label: null, action: null };
+  const intl2 = _getSystemLocale.intl;
+  obj[1] = intl2.string(_getSystemLocale.t.HcoRu0);
   obj[2] = function action() {
-    _modDef6798.open(closure_0);
+    closure_1_1(closure_1_2[10]).open(closure_0);
   };
   items[1] = obj;
-  obj1 = { IconComponent: require("../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx").SettingsIcon, label: null, action: null };
-  const intl3 = require("../../../../intl/index.native.tsx").intl;
-  obj1[1] = intl3.string(require("../../../../intl/index.native.tsx").t.PdRCRg);
+  obj1 = { IconComponent: _SettingsIcon.SettingsIcon, label: null, action: null };
+  const intl3 = _getSystemLocale.intl;
+  obj1[1] = intl3.string(_getSystemLocale.t.PdRCRg);
   obj1[2] = function action() {
     const guild = closure_1_4.getGuild(closure_0);
     if (null != guild) {
-      openGuildActionSheetDefault(guild);
+      closure_1_1(closure_1_2[12])(guild);
     }
   };
   items[2] = obj1;
@@ -98,22 +97,24 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = registerAssetDefault2;
+      obj2[0] = tmp5(11552);
       const intl5 = tmp(1236).intl;
       obj2[1] = intl5.string(tmp(1236).t.De0BTC);
       obj2[2] = function action() {
         if (null != callback) {
-          const result = _modDef6798.updateGuildNotificationSettings(tmp, { muted: false }, callback(dependencyMap[17]).NotificationLabels.Unmuted);
+          const result = closure_1_1(closure_1_2[10]).updateGuildNotificationSettings(tmp, { muted: false }, callback(closure_1_2[17]).NotificationLabels.Unmuted);
+          const obj = closure_1_1(closure_1_2[10]);
         }
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = registerAssetDefault;
+      obj2[0] = tmp5(11551);
       const intl4 = tmp(1236).intl;
       obj2[1] = intl4.string(tmp(1236).t.vRzp7P);
       obj2[2] = function action() {
-        const obj = { guildId: callback };
-        obj.openLazy(callback(dependencyMap[8])(dependencyMap[15], dependencyMap.paths), "muteSettings" + callback, obj);
+        let obj = closure_1_1(closure_1_2[14]);
+        obj = { guildId: callback };
+        obj.openLazy(callback(closure_1_2[8])(closure_1_2[15], closure_1_2.paths), "muteSettings" + callback, obj);
       };
       splice(1, 0, obj2);
     }

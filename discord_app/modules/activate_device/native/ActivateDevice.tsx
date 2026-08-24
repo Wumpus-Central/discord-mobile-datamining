@@ -1,32 +1,38 @@
 // discord_app/modules/activate_device/native/ActivateDevice.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c5, ImageBackground: closure_6, ActivityIndicator: error, ScrollView: closure_8 } = get_ActivityIndicator);
-const createCacheKey = { marginVertical: 0, resizeMode: "cover", backgroundColor: ThemesDefault.colors.TEXT_BRAND };
+createCacheKey = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
+createCacheKey = { marginVertical: 0, resizeMode: "cover", backgroundColor: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, justifyContent: "center", alignItems: "center" };
 createCacheKey[3] = { maxWidth: 480, backgroundColor: ThemesDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
 createCacheKey[4] = { alignSelf: "stretch", flexGrow: 0 };
 createCacheKey[5] = { flexDirection: "column", gap: 16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
+let obj1 = { maxWidth: 480, backgroundColor: ThemesDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
 
 export const ActivateDevice = (onClose) => {
   onClose = onClose.onClose;
+  let first;
+  importDefault = undefined;
+  let first1;
   let callback;
   let deviceCodeAuthorizeCallback;
   const tmp = callback2();
   const tmp2 = callback(deviceCodeAuthorizeCallback.useState({ type: "user-code-input", usePrefilledCode: true }), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   importDefault = tmp4;
   const tmp5 = callback(deviceCodeAuthorizeCallback.useState(null), 2);
-  const first1 = tmp5[0];
+  first1 = tmp5[0];
+  callback = tmp5[1];
   let obj = first(first1[6]);
   const activateDeviceStepTracking = obj.useActivateDeviceStepTracking(first);
   let items = [tmp2[1]];
@@ -56,8 +62,8 @@ export const ActivateDevice = (onClose) => {
       isTrustedName: true,
       isEmbeddedFlow: true,
       withBackPressHandler: false,
-      callbackWithoutPost(callback) {
-        return deviceCodeAuthorizeCallback(closure_0, callback);
+      callbackWithoutPost(arg0) {
+        return closure_1_4(closure_0, arg0);
       }
     };
     first(first1[8]).openOAuth2Modal(obj);
@@ -67,11 +73,11 @@ export const ActivateDevice = (onClose) => {
       const userCodeData = first.userCodeData;
       const items = [first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        callback2(callback(first1[10]));
+        callback2(callback(tmp2[10]));
       } else {
         const scopes = userCodeData.scopes;
-        if (scopes.some((item, index) => callback(table[11]).isSocialLayerUmbrellaScope(item))) {
-          callback2(callback(first1[12]));
+        if (scopes.some((arg0) => callback(table[11]).isSocialLayerUmbrellaScope(arg0))) {
+          callback2(callback(tmp2[12]));
         }
       }
     }
@@ -94,6 +100,7 @@ export const ActivateDevice = (onClose) => {
     obj[1] = callback3;
     obj[2] = onClose;
     let tmp21Result = jsx(tmp7(tmp8[14]).UserCodeInput, { prefilledUserCode: null, onUserCodeAccepted: null, onClose: null });
+    const tmp21 = jsx;
   } else if ("authorization" === type) {
     tmp21Result = <closure_7 animating />;
   } else if ("success" === type) {

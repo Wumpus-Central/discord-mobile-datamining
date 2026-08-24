@@ -3,9 +3,9 @@ import { getPolyfill } from "04396_getPolyfill.js";
 import { defineProperty } from "04415_defineProperty.js";
 
 export default function shimArrayPrototypeMap() {
-  const tmp = getPolyfill();
+  const tmp = _getPolyfill();
   _require = tmp;
-  defineProperty(Array.prototype, { map: tmp }, {
+  _defineProperty(Array.prototype, { map: tmp }, {
     map() {
       return Array.prototype.map !== closure_0;
     }

@@ -4,9 +4,10 @@ import renderElement from "../00114_renderElement.js";
 import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
-require = fn;
+require = arg1;
 noopAll;
-let obj = { keyboardDismissMode: true, drawerBackgroundColor: require("result").colorAttribute, drawerPosition: true, drawerWidth: true, drawerLockMode: true, statusBarBackgroundColor: require("result").colorAttribute };
+let obj = { uiViewClassName: "AndroidDrawerLayout", directEventTypes: { topDrawerSlide: { registrationName: "onDrawerSlide" }, topDrawerStateChanged: { registrationName: "onDrawerStateChanged" }, topDrawerOpen: { registrationName: "onDrawerOpen" }, topDrawerClose: { registrationName: "onDrawerClose" } }, validAttributes: null };
+obj = { keyboardDismissMode: true, drawerBackgroundColor: require("result").colorAttribute, drawerPosition: true, drawerWidth: true, drawerLockMode: true, statusBarBackgroundColor: require("result").colorAttribute };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onDrawerSlide: true, onDrawerStateChanged: true, onDrawerOpen: true, onDrawerClose: true }));
 obj[2] = obj;
 obj = {

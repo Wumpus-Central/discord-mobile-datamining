@@ -1,8 +1,5 @@
 // _runtime/04941_parseTags.js
-import getCreationDateDefault from "04942_getCreationDate.js";
-import _modDef4943 from "metro/04943__.js";
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 function parseTags(byteLength, size, sum) {
   let items;
@@ -14,13 +11,16 @@ function parseTags(byteLength, size, sum) {
     if (tmp < byteLength.byteLength) {
       while (true) {
         let encoding = tmp23;
+        let tmp3 = tmp;
         if (byteLength.getUint8(tmp) !== 28) {
           obj = { tag: null, tagSize: 0 };
         } else {
           let uint16 = byteLength.getUint16(tmp + 1);
           let uint161 = byteLength.getUint16(tmp + 3);
           if (!arg3) {
-            if (!getCreationDateDefault.iptc[uint16]) {
+            let tmp4 = module;
+            let tmp5 = dependencyMap;
+            if (!module(4942).iptc[uint16]) {
               obj = { tag: "Array", tagSize: 0 };
               obj[1] = uint161;
             }
@@ -31,8 +31,11 @@ function parseTags(byteLength, size, sum) {
           }
           obj = { id: null, name: null, value: null, description: null };
           obj[0] = uint16;
-          obj3 = getCreationDateDefault.iptc[uint16];
+          let tmp8 = module;
+          let tmp9 = dependencyMap;
+          obj3 = module(4942).iptc[uint16];
           if (obj3) {
+            let tmp11 = obj3;
             if (typeof obj3 !== "string") {
               break;
             } else {
@@ -44,14 +47,19 @@ function parseTags(byteLength, size, sum) {
           }
           obj[1] = combined;
           obj[2] = items;
-          obj[3] = getTagDescription(getCreationDateDefault.iptc[uint16], items, obj, encoding);
-          let tmp17 = getCreationDateDefault.iptc[uint16] && getCreationDateDefault.iptc[uint16].repeatable;
+          let tmp13 = getTagDescription;
+          let num2 = 0;
+          let tmp14 = items;
+          let tmp15 = obj;
+          let tmp16 = encoding;
+          obj[3] = getTagDescription(tmp8(4942).iptc[uint16], items, obj, encoding);
+          let tmp17 = tmp8(4942).iptc[uint16] && tmp8(4942).iptc[uint16].repeatable;
           if (tmp17) {
             obj.repeatable = true;
           }
-          let tmp18 = getCreationDateDefault.iptc[uint16] && undefined !== getCreationDateDefault.iptc[uint16].encoding_name;
+          let tmp18 = tmp8(4942).iptc[uint16] && undefined !== tmp8(4942).iptc[uint16].encoding_name;
           if (tmp18) {
-            let obj4 = getCreationDateDefault.iptc[uint16];
+            let obj4 = tmp8(4942).iptc[uint16];
             obj.encoding = obj4.encoding_name(items);
           }
           obj1 = { tag: null, tagSize: null };
@@ -122,8 +130,8 @@ function getTagDescription(description, items, arg2, encoding) {
       }
       return tmp;
     })(description, items)) {
-      const decoder = _modDef4943;
-      decodeResult = decoder.decode(encoding, items);
+      decodeResult = module(4943).decode(encoding, items);
+      const obj = module(4943);
     }
     return decodeResult;
   } else {

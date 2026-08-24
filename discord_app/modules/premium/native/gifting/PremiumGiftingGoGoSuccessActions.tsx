@@ -1,31 +1,33 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import createEmptyPromotionsByType from "../../promotions/PromotionsStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../promotions/PromotionsStore.tsx";
 import { AnalyticsSections } from "../../../../Constants.tsx";
 import { CollectiblesMobileShopScreen as closure_6 } from "../../../collectibles/CollectiblesShopConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles(() => {
-  const obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  let obj = { promoDetails: null };
+  obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   obj[0] = obj;
   return obj;
 });
-let result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
 
 export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   giftCode = giftCode.giftCode;
   let onClose;
+  let prePurchaseGiftingBadgeProgress;
   let navigation;
   let enabled;
   let giftCodeURL;
   let obj = onClose(navigation[7]);
   const nativeGiftContext = obj.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
   obj1 = onClose(navigation[8]);
   let items = [giftCodeURL];
   const stateFromStores = obj1.useStateFromStores(items, () => {
@@ -65,9 +67,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   }, items1);
   const items3 = [onClose];
   const callback1 = enabled.useCallback(() => {
-    onClose(navigation[15]);
-    let obj = { url: giftCodeURL };
-    obj.showShareActionSheet(obj, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
+    let obj = onClose(navigation[15]);
+    obj = { url: giftCodeURL };
+    obj.showShareActionSheet(obj, closure_1_5.PREMIUM_GIFT_SUCCESS_MODAL);
     let tmp4 = enabled;
     if (enabled) {
       tmp4 = null != prePurchaseGiftingBadgeProgress;
@@ -81,8 +83,8 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   let tmp16 = null != stateFromStores;
   callback2 = enabled.useCallback(() => {
     onClose();
-    onClose(navigation[16]);
-    const obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
+    let obj = onClose(navigation[16]);
+    obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
     const items = [prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL];
     obj[1] = items;
     obj[2] = closure_1_6.ORBS;
@@ -123,9 +125,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
       let obj3 = obj1;
     }
     obj2 = { children: null };
-    items4[2] = tmp21(tmp22, obj3);
+    items4[2] = callback(tmp22, obj3);
     obj2[0] = items4;
-    return callback(closure_8, obj2);
+    return closure_9(closure_8, obj2);
   }
   let str = "secondary";
   if (null == giftCode) {
@@ -135,6 +137,4 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   const intl4 = tmp2(tmp3[19]).intl;
   obj3[2] = intl4.string(onClose(navigation[19]).t.fYfGgK);
   obj3[3] = callback2;
-  const obj5 = prePurchaseGiftingBadgeProgress(navigation[12]);
-  tmp21 = callback;
 };

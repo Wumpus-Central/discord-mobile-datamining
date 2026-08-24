@@ -1,8 +1,8 @@
 // _runtime/07061_useRecyclerViewManager.js
-import _slicedToArray from "metro/07041__slicedToArray.js";
+import closure_2 from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useMemo: c4, useState: c5 } = noop);
 
 export const useRecyclerViewManager = (data) => {

@@ -3,16 +3,16 @@ import timestampDefault from "../debug/Logger.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import FetchStatus from "RemoteFetchData.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../gateway/GatewayConnectionStore.tsx";
 import { isThread } from "../../records/ChannelRecord.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import initialize from "MessagePreviewStore.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "MessagePreviewStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 let closure_11 = new timestampDefault("MessagePreviewManager");
 initializeDefault;
 class MessagePreviewManager extends tmp3 {
@@ -83,13 +83,16 @@ class MessagePreviewManager extends tmp3 {
           }
         } else {
           while (true) {
+            let num = 2;
             c8 = 2;
             let tmp4 = c7;
             if (0 === c7) {
               if (arg0 === 1) {
+                let num11 = 3;
                 c8 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
+                let num10 = 3;
                 c8 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
@@ -106,65 +109,124 @@ class MessagePreviewManager extends tmp3 {
                 c3 = undefined;
                 c4 = undefined;
                 c7 = 1;
+                let num9 = 1;
                 c8 = 1;
                 return { value: "ct", done: true };
               }
             } else {
               if (1 === tmp4) {
                 if (arg0 === 1) {
+                  let num7 = 3;
                   c8 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
+                  let num6 = 3;
                   c8 = 3;
                   obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
-                } else if (closure_1_5.isConnected()) {
-                  if (!closure_0.remoteTicking) {
-                    if (closure_0 <= 5) {
-                      closure_0.tickQueued = false;
-                      c6 = 1;
-                      closure_0.remoteTicking = true;
-                      remote = closure_0.remote;
-                      tmp25 = remote[Symbol.iterator]();
-                      if (tmp25 === undefined) {
-                        let cleanupResult = closure_0.cleanup();
-                        closure_0.remoteTicking = false;
-                        c6 = 0;
-                      } else {
-                        c6 = 2;
-                        dependencyMap = callback(tmp25, 2);
-                        callback = 32;
-                        closure_4 = 5;
-                        if (null == callback) {
-                          let dms = closure_0.fetchDms(closure_4);
+                } else {
+                  let tmp47 = c4;
+                  let tmp48 = closure_1_5;
+                  let tmp49 = c4;
+                  let tmp50 = closure_0;
+                  if (closure_1_5.isConnected()) {
+                    if (!tmp50.remoteTicking) {
+                      let tmp21 = c3;
+                      let tmp22 = closure_0;
+                      if (closure_0 <= 5) {
+                        let tmp51 = c4;
+                        let tmp52 = closure_0;
+                        closure_0.tickQueued = false;
+                        let tmp53 = c4;
+                        c6 = 1;
+                        let tmp54 = closure_0;
+                        closure_0.remoteTicking = true;
+                        let tmp55 = closure_0;
+                        remote = closure_0.remote;
+                        let tmp56 = remote;
+                        tmp25 = remote[Symbol.iterator]();
+                        let tmp23 = remote;
+                        let tmp24 = tmp25;
+                        if (tmp25 === undefined) {
+                          let tmp37 = c4;
+                          let tmp38 = closure_0;
+                          let cleanupResult = closure_0.cleanup();
+                          let tmp40 = closure_0;
+                          closure_0.remoteTicking = false;
+                          c6 = 0;
                         } else {
-                          let guilds = closure_0.fetchGuilds(callback, closure_4);
+                          let tmp57 = c3;
+                          let tmp58 = c4;
+                          c6 = 2;
+                          let tmp59 = callback;
+                          let tmp60 = tmp25;
+                          dependencyMap = callback(tmp25, 2);
+                          let tmp61 = dependencyMap;
+                          callback = 32;
+                          let tmp62 = dependencyMap;
+                          closure_4 = 5;
+                          let tmp63 = callback;
+                          if (null == callback) {
+                            let tmp32 = c3;
+                            let tmp33 = c4;
+                            let tmp34 = closure_0;
+                            let tmp35 = closure_4;
+                            let dms = closure_0.fetchDms(closure_4);
+                          } else {
+                            let tmp26 = c3;
+                            let tmp27 = c4;
+                            let tmp28 = closure_0;
+                            let tmp29 = callback;
+                            let tmp30 = closure_4;
+                            let guilds = closure_0.fetchGuilds(callback, closure_4);
+                          }
+                          c7 = 4;
+                          let num4 = 1;
+                          c8 = 1;
                         }
-                        c7 = 4;
-                        c8 = 1;
                       }
                     }
+                  } else {
+                    tmp50.tickQueued = true;
                   }
-                } else {
-                  closure_0.tickQueued = true;
                 }
               } else if (2 === tmp4) {
+                let tmp9 = c3;
+                let tmp10 = c4;
+                let tmp11 = closure_5;
+                let tmp12 = closure_5;
                 c6 = 0;
+                let tmp13 = closure_1_11;
+                let tmp14 = num8;
+                let tmp15 = closure_5;
                 let _HermesInternal = HermesInternal;
+                let str = "couldn't fetch message previews (attempt: ";
+                let str2 = ", error: ";
+                let str3 = ")";
                 let logResult = closure_1_11.log("couldn't fetch message previews (attempt: " + num8 + ", error: " + closure_5 + ")");
+                let tmp17 = num8;
                 num8.remoteTicking = false;
+                let tmp18 = num8;
+                let tmp19 = num8;
                 let remoteTickResult = num8.remoteTick(num8 + 1);
               } else if (3 === tmp4) {
+                let tmp6 = closure_5;
+                let tmp7 = closure_5;
                 c6 = 1;
+                let tmp8 = tmp25;
                 tmp25.return();
                 throw closure_5;
               } else if (arg0 === 1) {
+                let num3 = 3;
                 c8 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
+                c6 = 1;
+                let tmp5 = tmp25;
                 tmp25.return();
                 c6 = 0;
+                let num2 = 3;
                 c8 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
@@ -172,6 +234,7 @@ class MessagePreviewManager extends tmp3 {
               } else {
                 c6 = 1;
               }
+              let num5 = 3;
               c8 = 3;
             }
           }
@@ -238,20 +301,20 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
             let id = tmp6;
             id = undefined;
             closure_1 = undefined;
-            if (closure_1_9.isLocalFetchNeeded(guild_id)) {
-              const localFetching4 = self.localFetching;
-              if (!localFetching4.has(guild_id)) {
+            if (closure_1_9.isLocalFetchNeeded(closure_1_0)) {
+              const localFetching4 = closure_1_1.localFetching;
+              if (!localFetching4.has(closure_1_0)) {
                 c3 = 2;
                 const _HermesInternal2 = HermesInternal;
-                closure_1_11.verbose("fetching local previews (via: database, guild_id: " + guild_id + ")");
-                const localFetching5 = self.localFetching;
-                localFetching5.add(guild_id);
+                closure_1_11.verbose("fetching local previews (via: database, guild_id: " + closure_1_0 + ")");
+                const localFetching5 = closure_1_1.localFetching;
+                localFetching5.add(closure_1_0);
                 id = closure_1_7.getId();
-                let obj3 = self(1955);
+                let obj3 = closure_1_1(1955);
                 const messagesResult = obj3.messages();
                 let mostRecents;
                 if (messagesResult != null) {
-                  mostRecents = messagesResult.getMostRecents(guild_id);
+                  mostRecents = messagesResult.getMostRecents(closure_1_0);
                 }
                 c4 = 3;
                 c5 = 1;
@@ -272,8 +335,8 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
-            const localFetching = self.localFetching;
-            localFetching.delete(guild_id);
+            const localFetching = closure_1_1.localFetching;
+            localFetching.delete(closure_1_0);
             c5 = 3;
             const obj2 = { value: null, done: true };
             obj2[0] = arg1;
@@ -285,11 +348,11 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
               tmp14 = id === closure_1_7.getId();
             }
             if (tmp14) {
-              obj = self(709);
+              obj = closure_1_1(709);
               obj3 = { type: "MESSAGE_PREVIEWS_LOCALLY_LOADED", guildId: null, messages: null };
               obj3[1] = id;
-              obj3[2] = closure_1.map((item, index) => {
-                [tmp, tmp2] = item;
+              obj3[2] = closure_1.map((arg0) => {
+                [tmp, tmp2] = arg0;
                 const items = [tmp, tmp2.message];
                 return items;
               });
@@ -298,12 +361,12 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
             c3 = 1;
           }
           c3 = 0;
-          const localFetching2 = self.localFetching;
-          localFetching2.delete(guild_id);
+          const localFetching2 = closure_1_1.localFetching;
+          localFetching2.delete(closure_1_0);
         }
         c3 = 0;
-        const localFetching3 = self.localFetching;
-        localFetching3.delete(guild_id);
+        const localFetching3 = closure_1_1.localFetching;
+        localFetching3.delete(closure_1_0);
         throw dependencyMap;
       } catch (tmp56) {
         dependencyMap = tmp56;
@@ -347,10 +410,10 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -361,15 +424,15 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
               closure_1 = tmp5;
-              body = tmp2;
+              let body = tmp2;
               body = undefined;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + closure_1_0.join(", ") + ")");
@@ -387,14 +450,14 @@ prototype["fetchDms"] = function fetchDms(closure_4) {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c3 = 3;
             const obj4 = { value: null, done: true };
-            obj4[0] = body;
+            obj4[0] = arg1;
             return obj4;
           } else {
-            body = body.body;
+            body = arg1.body;
             obj = closure_1_1(709);
             const obj5 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: null };
             obj5[2] = body;
@@ -435,15 +498,16 @@ prototype["getOrCreate"] = function getOrCreate(arg0) {
 };
 prototype["cleanup"] = function cleanup() {
   while (tmp !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     [tmp5, obj] = tmp4;
     if (obj.empty()) {
       let remote = this.remote;
+      let tmp6 = tmp5;
       let deleteResult = remote.delete(tmp5);
     }
     continue;
   }
-  tmp = this.remote[Symbol.iterator]();
 };
 prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental() {
   const result = this.handleConnectionResumed(false);
@@ -545,7 +609,7 @@ prototype["handleThreadListSync"] = function handleThreadListSync(guildId) {
 };
 const messagePreviewManager = new MessagePreviewManager();
 const tmp2 = new timestampDefault("MessagePreviewManager");
-let result = require("obj132").fileFinishedImporting("modules/message_previews/MessagePreviewManager.tsx");
+let result = require("set").fileFinishedImporting("modules/message_previews/MessagePreviewManager.tsx");
 
 export default messagePreviewManager;
 export { MessagePreviewManager };

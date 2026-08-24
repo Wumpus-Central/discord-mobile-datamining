@@ -1,20 +1,20 @@
 // discord_app/modules/animations/native/DeprecatedLayoutAnimation.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import obj1322 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
-import "module_150";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
 import obj from "../../../../_runtime/00150__isNativeReflectConstruct.js";
 
 ({ Keyboard: obj1, LayoutAnimation } = get_ActivityIndicator);
-const result = obj132.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
+const result = set.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
 
 export const CONFIG_GUILD_FOLDER_OPACITY = obj;
 export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = closure_4.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = obj1322.isAndroid();
+    useReducedMotion = set2.isAndroid();
+    const obj = set2;
   }
   if (!useReducedMotion) {
     if (null != duration) {
@@ -30,7 +30,7 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = obj1322;
+    let obj = set2;
     if (!obj.isAndroid()) {
       obj = { duration: null };
       obj[0] = keyboardDuration;
@@ -40,10 +40,10 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
   obj = { duration: keyboardDuration, update: obj1 };
   let useReducedMotion = closure_4.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = obj1322.isAndroid();
+    useReducedMotion = set2.isAndroid();
+    const obj6 = set2;
   }
   if (!useReducedMotion) {
     LayoutAnimation.configureNext(obj);
   }
-  obj1 = { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard };
 };

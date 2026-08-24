@@ -1,14 +1,15 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx
 import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
 
 export default function _default(parents) {
   parents = parents.parents;
+  importDefault = undefined;
   const tmp = callback(React.useState(false), 2);
   importDefault = tmp[1];
   [][0] = parents;

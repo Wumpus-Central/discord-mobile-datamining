@@ -1,9 +1,9 @@
 // discord_app/modules/debug/getLogMetadata.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getConstantsAll from "../../utils/native/ClientInfoUtils.tsx";
 import DCDDeviceManager from "../../utils/native/DeviceUtils.tsx";
 
-const result = obj132.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
+const result = set.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {
   let obj = getConstantsAll;
@@ -13,7 +13,9 @@ export default function getLogMetadata() {
   const date = new Date();
   obj[6] = getConstantsAll.getBuildNumberLabel();
   obj[7] = DeviceVendorID;
+  const obj4 = getConstantsAll;
   obj[8] = DCDDeviceManager.getDeviceInfo();
+  const obj5 = DCDDeviceManager;
   obj[9] = DCDDeviceManager.getSystemVersion();
   return obj;
 };

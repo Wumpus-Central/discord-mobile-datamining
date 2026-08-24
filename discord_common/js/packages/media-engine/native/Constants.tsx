@@ -1,9 +1,9 @@
 // discord_common/js/packages/media-engine/native/Constants.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import DesktopSources from "../Constants.tsx";
 
 const InputModes = DesktopSources.InputModes;
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");
 
 export const AudioSubsystems = DesktopSources.AudioSubsystems;
 export const DeviceTypes = DesktopSources.DeviceTypes;

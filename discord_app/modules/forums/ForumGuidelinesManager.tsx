@@ -2,7 +2,7 @@
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 
-require = fn;
+require = arg1;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";
 initializeDefault;
 class ForumGuidelinesManager extends tmp2 {
@@ -39,6 +39,6 @@ prototype["hasSeen"] = function hasSeen(arg0) {
   return seenForumGuidelines.has(arg0);
 };
 const forumGuidelinesManager = new ForumGuidelinesManager();
-let result = require("obj132").fileFinishedImporting("modules/forums/ForumGuidelinesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/ForumGuidelinesManager.tsx");
 
 export default forumGuidelinesManager;

@@ -27,6 +27,8 @@ export default function chunk(arg0, arg1, arg2) {
       let num5 = 0;
       if (0 < num3) {
         do {
+          let tmp11 = require;
+          let tmp12 = dependencyMap;
           let sum = num4 + 1;
           sum1 = num5 + num;
           ArrayResult[num4] = baseSlice(arg0, num5, sum1);

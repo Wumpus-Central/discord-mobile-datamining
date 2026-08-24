@@ -1,7 +1,7 @@
 // discord_assets/assets/premium/tiered_tenure_badging/mobile_opal_badge_large.png.js
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_opal_badge_large.png.js");
+const result = set.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_opal_badge_large.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/21312175f3abb2d0143e5b32fed7c0a0e003d5b04fd6d5410def14168a596994.png";
 export const metadata = { fileBytes: 159503 };

@@ -4,9 +4,10 @@ import renderElement from "../00114_renderElement.js";
 import weakSet from "../00106_weakSet.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
-require = fn;
+require = arg1;
 noopAll;
-let obj = { disabled: true, enabled: true, thumbColor: require("result").colorAttribute, trackColorForFalse: require("result").colorAttribute, trackColorForTrue: require("result").colorAttribute, value: true, on: true, thumbTintColor: require("result").colorAttribute, trackTintColor: require("result").colorAttribute };
+let obj = { uiViewClassName: "AndroidSwitch", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } } }, validAttributes: null };
+obj = { disabled: true, enabled: true, thumbColor: require("result").colorAttribute, trackColorForFalse: require("result").colorAttribute, trackColorForTrue: require("result").colorAttribute, value: true, on: true, thumbTintColor: require("result").colorAttribute, trackTintColor: require("result").colorAttribute };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onChange: true }));
 obj[2] = obj;
 obj = {

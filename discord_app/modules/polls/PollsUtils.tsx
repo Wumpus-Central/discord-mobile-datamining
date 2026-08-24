@@ -1,18 +1,18 @@
 // discord_app/modules/polls/PollsUtils.tsx
 import v1 from "../../../_runtime/00514_v1.js";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import cssValueToNumber from "../../../discord_common/js/shared/utils/StringUtils.tsx";
 import useNullableMessageAuthor from "../messages/useMessageAuthor.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import reactionKey from "../../stores/MessageReactionsStore.tsx";
-import reinjectEphemerals from "../../stores/MessageStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/MessageReactionsStore.tsx";
+import closure_5 from "../../stores/MessageStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
 import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
 import ME from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
   reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7510).ReactionTypes.VOTE);
@@ -31,16 +31,18 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
   if (items == null) {
     items = [];
   }
+  const obj = { id, name: "", animated: false };
+  const tmp2 = closure_9;
   const tmp5 = guildId(12);
   const tmp5Result = guildId(12)(Array.from(items));
   const rejectResult = guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id));
-  const takeResult = guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id)).take(closure_9);
-  return guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id)).take(closure_9).map((item, index) => {
+  const takeResult = guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id)).take(tmp2);
+  return guildId(12)(Array.from(items)).reject((id) => blockedOrIgnored.isBlockedOrIgnored(id.id)).take(tmp2).map((arg0) => {
     let id;
     if (channel != null) {
       id = channel.id;
     }
-    return guildId(dependencyMap[16]).getName(guildId, id, item);
+    return guildId(closure_1_2[16]).getName(guildId, id, arg0);
   }).value();
 }
 function formatVoterTooltipText(arr, arg1) {
@@ -68,6 +70,7 @@ function formatVoterTooltipText(arr, arg1) {
       const intl4 = getSystemLocale.intl;
       [obj4[0], obj4[1]] = first;
       formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale.t["O5+f5c"], { a: null, b: null });
+      obj1 = { a: null, b: null };
     }
   } else if (3 === first.length) {
     if (bound > 0) {
@@ -91,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
 }
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: c9 } = POLL_ATTACHMENT_FOLDER);
 ({ ChannelTypesSets: c10, Permissions: unpackModuleId } = ME);
-const result = require("obj132").fileFinishedImporting("modules/polls/PollsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
   const obj = { text: "Array", image: "ct", localCreationAnswerId: v1.v4() };
@@ -107,6 +110,7 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
   const iter = message.reactions[Symbol.iterator]();
   while (iter !== undefined) {
     if (null == iter.next().me_vote) {
+      let tmp = iter;
       iter.return();
       let flag = true;
       return true;
@@ -117,19 +121,21 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
 export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channel) {
   const _require = channel;
   const items = [closure_6];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
-      tmp = channel.id !== channel(dependencyMap[9]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      tmp = obj.id !== channel(closure_1_2[9]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp) {
       const POLLS = closure_1_10.POLLS;
-      let hasItem = POLLS.has(channel.type);
+      let hasItem = POLLS.has(obj.type);
       if (hasItem) {
-        let isPrivateResult = channel.isPrivate();
+        let isPrivateResult = obj.isPrivate();
         if (!isPrivateResult) {
-          isPrivateResult = closure_1_6.can(closure_1_11.SEND_MESSAGES, channel) && closure_1_6.can(closure_1_11.SEND_POLLS, channel);
-          const tmp8 = closure_1_6.can(closure_1_11.SEND_MESSAGES, channel) && closure_1_6.can(closure_1_11.SEND_POLLS, channel);
+          isPrivateResult = closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
+          const obj2 = closure_1_6;
+          const tmp7 = closure_1_11;
+          const tmp8 = closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
         }
         hasItem = isPrivateResult;
       }
@@ -139,11 +145,11 @@ export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channe
   });
 };
 export const isPollCreationEmpty = function isPollCreationEmpty(c4, answers) {
-  let tmp = 0 === length.length;
+  let tmp = 0 === c4.length;
   if (tmp) {
-    tmp = null == answers.find((item, index) => {
+    tmp = null == answers.find((text) => {
       let trimmed;
-      if (item.text != null) {
+      if (text.text != null) {
         trimmed = str.trim();
       }
       let tmp2 = null != trimmed;
@@ -182,7 +188,7 @@ export const isIncompleteAnswer = function isIncompleteAnswer(text) {
 };
 export const createPollExpiryTimestamp = function createPollExpiryTimestamp(arg0) {
   const timestamp = Date.now();
-  return new Date(timestamp + arg0 * obj132Default.Millis.HOUR).toISOString();
+  return new Date(timestamp + arg0 * setDefault.Millis.HOUR).toISOString();
 };
 export const createPollServerDataFromCreateRequest = function createPollServerDataFromCreateRequest(poll) {
   if (null != poll) {
@@ -190,14 +196,14 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
     if (poll != null) {
       const answers = poll.answers;
       if (answers != null) {
-        mapped = answers.map((item, index) => {
-          const poll_media = item.poll_media;
+        mapped = answers.map((poll_media) => {
+          poll_media = poll_media.poll_media;
           let emoji;
           if (poll_media != null) {
             emoji = poll_media.emoji;
           }
           let obj = {};
-          const merged = Object.assign(item.poll_media);
+          const merged = Object.assign(poll_media.poll_media);
           let tmp3;
           if (null != emoji) {
             obj = { id: null, name: null };
@@ -210,8 +216,8 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
           }
           obj.emoji = tmp3;
           obj = {};
-          const merged1 = Object.assign(item);
-          obj.answer_id = index + 1;
+          const merged1 = Object.assign(poll_media);
+          obj.answer_id = arg1 + 1;
           obj.poll_media = obj;
           return obj;
         });
@@ -226,7 +232,7 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
       const _Date = Date;
       const _Date2 = Date;
       const timestamp = Date.now();
-      const date = new Date(timestamp + poll.duration * obj132Default.Millis.HOUR);
+      const date = new Date(timestamp + poll.duration * setDefault.Millis.HOUR);
       str = date.toISOString();
     }
     let obj = {};
@@ -258,7 +264,7 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   if (first != null) {
     const fields = first.fields;
     if (fields != null) {
-      const found = fields.find((item, index) => "poll_question_text" === item.rawName);
+      const found = fields.find((rawName) => "poll_question_text" === rawName.rawName);
       if (found != null) {
         str = found.rawValue;
       }
@@ -269,10 +275,10 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   }
   let truncateTextResult = str;
   if (null != closure_8) {
-    truncateTextResult = cssValueToNumber.truncateText(str, closure_8);
-    const tmpResult = cssValueToNumber;
+    truncateTextResult = tmp(1904).truncateText(str, tmp4);
+    const tmpResult = tmp(1904);
   }
-  const intl = getSystemLocale.intl;
+  const intl = tmp(1236).intl;
   obj = { username: messageAuthor.nick, title: truncateTextResult };
   return intl.format(getSystemLocale.t.Vn97Ka, obj);
 };
@@ -285,7 +291,7 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     if (first != null) {
       const fields = first.fields;
       if (fields != null) {
-        const found = fields.find((item, index) => "poll_question_text" === item.rawName);
+        const found = fields.find((rawName) => "poll_question_text" === rawName.rawName);
         if (found != null) {
           str = found.rawValue;
         }
@@ -296,10 +302,10 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     }
     let truncateTextResult = str;
     if (null != closure_8) {
-      truncateTextResult = cssValueToNumber.truncateText(str, closure_8);
-      const tmp2Result = cssValueToNumber;
+      truncateTextResult = tmp2(1904).truncateText(str, tmp5);
+      const tmp2Result = tmp2(1904);
     }
-    const intl = getSystemLocale.intl;
+    const intl = tmp2(1236).intl;
     obj = { username: null, title: null };
     obj[0] = messageAuthor.nick;
     obj[1] = truncateTextResult;
@@ -309,8 +315,8 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
   }
 };
 export const getTotalVotes = function getTotalVotes(reactions) {
-  return reactions.reduce((acc, item, index) => {
-    const count_details = item.count_details;
+  return reactions.reduce((arg0, count_details) => {
+    count_details = count_details.count_details;
     let num;
     if (count_details != null) {
       num = count_details.vote;
@@ -318,7 +324,7 @@ export const getTotalVotes = function getTotalVotes(reactions) {
     if (num == null) {
       num = 0;
     }
-    return acc + num;
+    return arg0 + num;
   }, 0);
 };
 export { getSampleOfVoterUsernamesForAnswer };

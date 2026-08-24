@@ -1,32 +1,37 @@
 // discord_app/modules/auth/native/components/VerifyPhone.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { doesRegistrationHaveIdentityType as closure_6 } from "../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import { Links } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import { SingleCodeInput } from "../../../phone/native/CodeField.tsx";
+import { NavigatorWithCaptchaHook } from "Auth.tsx";
 
-const require = fn;
+const require = arg1;
 ({ authStateToRegisterTransitionStep: error, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/VerifyPhone.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/VerifyPhone.tsx");
 
 export default function VerifyPhone(phone) {
   phone = phone.phone;
   let _require = phone;
   const onPhoneTokenReceived = phone.onPhoneTokenReceived;
   ({ onClose: dependencyMap, onBail } = phone);
+  let callback;
   let React;
   c6 = undefined;
-  let callback;
+  let callback2;
+  let context;
+  callback = undefined;
   ({ title, description, sourceState } = phone);
   const tmp = callback(React.useState(false), 2);
   callback = tmp[1];
   [tmp3, c5] = callback(React.useState(null), 2);
   let tmp2 = callback(React.useState(null), 2);
   [tmp5, c6] = callback(React.useState(false), 2);
-  const callback2 = React.useRef(false);
-  const context = React.useContext(require("Auth.tsx").TrackRegistrationContext);
+  callback2 = React.useRef(false);
+  context = React.useContext(_NavigatorWithCaptchaHook.TrackRegistrationContext);
   const tmp4 = callback(React.useState(false), 2);
   onPhoneTokenReceived(15228)(callback2(sourceState));
   const items = [context];
@@ -45,7 +50,8 @@ export default function VerifyPhone(phone) {
     }
     return tmpResult;
   });
-  onBail((arg0) => {
+  _require = undefined;
+  _require = onBail((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -60,7 +66,7 @@ export default function VerifyPhone(phone) {
         obj1[1] = callback.SUBMITTED;
         closure_1_8(obj1);
       }
-      let obj4 = onPhoneTokenReceived(dependencyMap[10]);
+      let obj4 = onPhoneTokenReceived(closure_2_2[10]);
       yield obj4.verifyPhone(callback, token, false);
       if (1 === tmp7) {
         v0 = 0;
@@ -79,13 +85,14 @@ export default function VerifyPhone(phone) {
           message = body.message;
         }
         if (!message) {
-          const intl = callback(dependencyMap[11]).intl;
+          const intl = callback(closure_2_2[11]).intl;
           obj4 = { statusPageURL: null };
-          obj4[0] = Links.STATUS;
-          message = intl.format(callback(dependencyMap[11]).t.aTVNes, obj4);
+          obj4[0] = closure_2_10.STATUS;
+          message = intl.format(callback(closure_2_2[11]).t.aTVNes, obj4);
         }
         c5(message);
         v02 = 3;
+        const tmp28 = c5;
       } else if (arg0 === 1) {
         v02 = 3;
         throw token;
@@ -110,6 +117,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items1);
+  _require = undefined;
   _require = onBail((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -146,7 +154,7 @@ export default function VerifyPhone(phone) {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(closure_0);
+              obj1[0] = closure_1_9(closure_0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -187,13 +195,13 @@ export default function VerifyPhone(phone) {
     if (null != onBail) {
       const obj = { onBail: null };
       obj[0] = tmp;
-      tmp2 = jsx(onPhoneTokenReceived(dependencyMap[13]), { onBail: null });
+      tmp2 = closure_1_11(onPhoneTokenReceived(closure_1_2[13]), obj);
     }
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
   const tmp7 = onPhoneTokenReceived(15228);
-  obj[4] = require("../../../phone/native/CodeField.tsx").CodeType.NUMERIC;
+  obj[4] = _SingleCodeInput.CodeType.NUMERIC;
   obj[5] = memo;
   obj[6] = tmp5;
   obj[7] = tmp[0];

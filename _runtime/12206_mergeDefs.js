@@ -26,11 +26,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -43,6 +45,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -179,9 +182,9 @@ if (self2) {
       }
       return regExp;
     };
-    exports.uuid4 = require("../discord_common/js/packages/logger/Logger.tsx");
-    exports.uuid6 = require("../discord_common/js/packages/logger/LoggerPIIRestrictedObjects.tsx");
-    exports.uuid7 = require("../discord_app/modules/debug/LogAggregator.tsx");
+    exports.uuid4 = require("module_4");
+    exports.uuid6 = require("module_6");
+    exports.uuid7 = require("module_7");
     exports.email = /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\-]*\.)+[A-Za-z]{2,}$/;
     exports.html5Email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     exports.rfc5322Email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

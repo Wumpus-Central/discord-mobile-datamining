@@ -1,12 +1,12 @@
 // discord_app/modules/image/usePreloadedAsset.native.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../a11y/AccessibilityStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { obj132 } from "../../utils/PlatformUtils.tsx";
+import { set } from "../../utils/PlatformUtils.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/image/usePreloadedAsset.native.tsx");
 
 export default function usePreloadedAsset(arg0) {
   const _require = arg0;
@@ -22,13 +22,14 @@ export default function usePreloadedAsset(arg0) {
   if (num === undefined) {
     num = 2000;
   }
+  dependencyMap = undefined;
   let callback;
   let combined;
   c5 = undefined;
   const items = [c5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => _undefined.useReducedMotion);
-  let obj2 = initialize;
-  const tmp3 = require("../../utils/PlatformUtils.tsx").isAndroid() && flag && !stateFromStores;
+  const stateFromStores = _initialize.useStateFromStores(items, () => _undefined.useReducedMotion);
+  let obj2 = _initialize;
+  const tmp3 = _set.isAndroid() && flag && !stateFromStores;
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
@@ -40,7 +41,7 @@ export default function usePreloadedAsset(arg0) {
     str = "apng";
   }
   combined = "" + str + ":" + arg0;
-  const obj3 = obj132;
+  const obj3 = _set;
   const obj4 = combined;
   [tmp9, c5] = callback(combined.useState(null), 2);
   let status = "skipped";
@@ -68,7 +69,7 @@ export default function usePreloadedAsset(arg0) {
           if (!c0) {
             c0 = true;
             const obj = { key: null, status: "timed-out" };
-            obj[0] = combined;
+            obj[0] = closure_1_4;
             closure_1_5(obj);
           }
         }, timeout);
@@ -77,18 +78,18 @@ export default function usePreloadedAsset(arg0) {
             let preloadResult = num(16171).preload(tmp);
             const obj2 = num(16171);
           }
-          preloadResult.then((result) => {
+          preloadResult.then(() => {
             if (!c0) {
               c0 = true;
               const obj = { key: null, status: "preloaded" };
-              obj[0] = combined;
+              obj[0] = closure_1_4;
               closure_1_5(obj);
             }
           }, () => {
             if (!c0) {
               c0 = true;
               const obj = { key: null, status: "skipped" };
-              obj[0] = combined;
+              obj[0] = closure_1_4;
               closure_1_5(obj);
             }
           });
@@ -99,6 +100,7 @@ export default function usePreloadedAsset(arg0) {
         }
         preloadResult = num(5449).preload(tmp, timeout + 1000);
         let obj = num(5449);
+        const tmp4 = timeout;
       }
     }
   }, items1);

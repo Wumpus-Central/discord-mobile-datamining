@@ -1,10 +1,9 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapLink.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import AbortCodes from "../../../threads/ThreadConstants.tsx";
-import set from "../../../channel/ChannelConstants.tsx";
+import set2 from "../../../channel/ChannelConstants.tsx";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../../app_launcher/native/AppLauncherNativeConstants.tsx";
 import parseQueryDefault from "../../../../utils/native/parseURL.tsx";
-import InviteTypes from "../../../instant_invite/InviteTypeUtils.tsx";
 import str2 from "../../../push_notifications/PushNotificationConstants.tsx";
 import getIndexKey from "../../../application_commands/ApplicationCommandIndexStore.tsx";
 import isLinkTrusted from "../../../../utils/MaskedLinkUtils.tsx";
@@ -12,15 +11,14 @@ import _mod9096 from "../../../game_profile/GameProfileActionCreators.native.tsx
 import GameProfileEmbedAction from "../../../game_profile/GameProfileAnalyticUtils.tsx";
 import isAlertOrActionSheetOpen from "../../../../components_native/chat/isAlertOrActionSheetOpen.tsx";
 import isLinkTrusted2 from "../../../markup/MarkupReactLinkUtils.tsx";
-import handleAcceptEventInstantInviteDefault from "../../../guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx";
-import addApplication from "../../../applications/ApplicationStore.tsx";
-import handleMessageSendFailedAutomod from "../../../guild_automod/GuildAutomodMessageStore.tsx";
-import handleQuickSwitcherUpdate from "../../../summaries/SummaryStore.tsx";
-import createdAt from "../../../../records/UserRecord.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import updateInvite from "../../../../stores/InviteStore.tsx";
-import reinjectEphemerals from "../../../../stores/MessageStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../../applications/ApplicationStore.tsx";
+import closure_5 from "../../../guild_automod/GuildAutomodMessageStore.tsx";
+import closure_6 from "../../../summaries/SummaryStore.tsx";
+import closure_7 from "../../../../records/UserRecord.tsx";
+import closure_8 from "../../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../../stores/InviteStore.tsx";
+import closure_10 from "../../../../stores/MessageStore.tsx";
+import closure_11 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 
 function handleMessagesTapURLLink(data, channelId) {
@@ -43,17 +41,19 @@ function handleMessagesTapURLLink(data, channelId) {
             invite = invite.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !InviteTypes.isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = InviteTypes;
+              num = !tmp2(4369).isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = tmp2(4369);
             }
             if (!num) {
-              handleAcceptEventInstantInviteDefault(invite);
+              tmp4(10801)(invite);
               num = 0;
             }
             flag2 = !num;
           }
         }
+        tmp4 = importDefault;
       }
+      tmp2 = require;
     }
     if (!flag2) {
       const payload2 = parseQueryDefault(data.url).payload;
@@ -90,14 +90,16 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = isLinkTrusted2.isLinkTrusted(data.node);
-        const tmp19Result = isLinkTrusted2;
+        isLinkTrustedResult = tmp19(10800).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(10800);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
       obj1[3] = channelId;
       isLinkTrusted.handleClick(obj1);
       flag = true;
+      const obj5 = isLinkTrusted;
+      tmp19 = require;
     }
   }
   return flag;
@@ -105,10 +107,10 @@ function handleMessagesTapURLLink(data, channelId) {
 const getSection = getIndexKey.getSection;
 ({ AnalyticsLocations: closure_12, LinkingTypes: map1, Routes: closure_14 } = ME);
 const AppLauncherRouteName = APP_LAUNCHER_BUILT_IN_SECTION_ICON.AppLauncherRouteName;
-const StaticChannelRoute = set.StaticChannelRoute;
+const StaticChannelRoute = set2.StaticChannelRoute;
 const NotificationTypes = str2.NotificationTypes;
 let closure_18 = AbortCodes.OpenThreadAnalyticsLocations;
-const result = obj132.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapLink.tsx");
 
 export { handleMessagesTapURLLink };
 export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData) {
@@ -119,12 +121,22 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     if (messageChannel != null) {
       id = messageChannel.id;
     }
-    if (!handleMessagesTapURLLink(data, id)) {
+    if (!tmp4(data, id)) {
       if (null != data.action) {
-        const action = data.action;
+        if (chatInputRef != null) {
+          const current = chatInputRef.current;
+          if (current != null) {
+            let flag = data.addSpace;
+            if (flag == null) {
+              flag = true;
+            }
+            current.insertText(data.text, null, flag);
+          }
+        }
       }
     }
+    tmp4 = handleMessagesTapURLLink;
   } else {
-    isAlertOrActionSheetOpen;
+    const obj = isAlertOrActionSheetOpen;
   }
 };

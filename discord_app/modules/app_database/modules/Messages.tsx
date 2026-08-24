@@ -1,16 +1,17 @@
 // discord_app/modules/app_database/modules/Messages.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import itemsDefault from "../DatabaseDaos.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import _handleConnectionOpen from "../../gateway/GatewayConnectionStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import handleSelectedChannelStoreChanged from "messages/SaveableChannelsStore.tsx";
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "messages/SaveableChannelsStore.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
-let obj132 = fn;
+let set = arg1;
 let closure_8 = new timestampDefault("Messages");
-const prototype = function ChannelHistory(arr) {
+let prototype;
+prototype = function ChannelHistory(arr) {
   const obj = Object.create(new.target.prototype);
   obj[1] = [];
   obj[2] = [];
@@ -24,21 +25,21 @@ const prototype = function ChannelHistory(arr) {
     let everyResult = arr.length > 0;
     [tmp6, tmp7] = callback2(prototype.computeUsersAndMembers(arr), 2);
     if (everyResult) {
-      everyResult = arr.every((item, index) => item.connectionId === connectionId);
+      everyResult = arr.every((connectionId) => connectionId.connectionId === connectionId);
     }
     if (everyResult) {
       obj.connectionId = connectionId;
     }
     obj.users = tmp6;
     obj.members = tmp7;
-    obj.messages = arr.map((item, index) => item.message);
+    obj.messages = arr.map((message) => message.message);
     const tmp5 = callback2(prototype.computeUsersAndMembers(arr), 2);
   }
   return obj;
 }.prototype;
 prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const self = this;
-  const result = obj132(5000).requireSortedDescending(arr);
+  const result = set(5000).requireSortedDescending(arr);
   const map = new Map();
   map1 = new Map();
   const iter = arr[Symbol.iterator]();
@@ -51,23 +52,27 @@ prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const items = [Array.from(map.values()), Array.from(map1.values())];
   return items;
 };
-prototype["addIntoMap"] = function addIntoMap(map, members, fn) {
+prototype["addIntoMap"] = function addIntoMap(map, members, arg2) {
   const iter = members[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = fn(nextResult);
+    let tmp3 = arg2(nextResult);
     let tmp4 = tmp3;
     let value = map.get(tmp3);
     let tmp7 = null == value;
     if (!tmp7) {
+      let tmp8 = value;
       let incomplete = tmp6.incomplete;
       if (incomplete) {
+        let tmp9 = nextResult;
         incomplete = !tmp2.incomplete;
       }
       tmp7 = incomplete;
     }
     if (tmp7) {
+      let tmp10 = tmp3;
+      let tmp11 = nextResult;
       let result = map.set(tmp4, tmp2);
     }
     continue;
@@ -111,9 +116,10 @@ prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, closure_1_9) 
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  const callback = prototype;
+  const callback = closure_1_9;
   return callback(function*() {
     closure_1 = tmp5;
+    closure_0 = tmp2;
     const obj2 = closure_1_1(table[7]);
     closure_0 = yield obj2.messages(closure_1_0).getLatest(closure_1_1, table, c3);
     return new closure_1_9(closure_0);
@@ -206,14 +212,14 @@ prototype2["handleMessageCreate"] = function handleMessageCreate(optimistic, dat
       const self2 = this;
       this.upsertOne(optimistic.guildId, optimistic.channelId, optimistic.message, database);
     }
-    obj = obj132(5075);
+    obj = set(5075);
   }
 };
 prototype2["handleMessageUpdate"] = function handleMessageUpdate(message, database) {
   let isReadableChannelIdResult = null != message.message.id && null != message.message.channel_id;
   if (isReadableChannelIdResult) {
-    isReadableChannelIdResult = obj132(5075).isReadableChannelId(message.message.channel_id);
-    const obj = obj132(5075);
+    isReadableChannelIdResult = set(5075).isReadableChannelId(message.message.channel_id);
+    const obj = set(5075);
   }
   if (isReadableChannelIdResult) {
     message = message.message;
@@ -229,9 +235,16 @@ prototype2["handleMessageUpdate"] = function handleMessageUpdate(message, databa
 prototype2["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded(guildId, database) {
   const self = this;
   for (const item10009 of tmp) {
-    let obj = obj132(5075);
+    let tmp2 = item10009;
+    let tmp3 = set;
+    let tmp4 = dependencyMap;
+    let obj = set(5075);
     if (obj.isReadableChannelId(item10009.channel_id)) {
-      let insertStaleResult = self.insertStale(arg0.guildId, item10009.channel_id, item10009, arg1);
+      let tmp5 = item10009;
+      let tmp6 = self;
+      let tmp7 = tmp2;
+      let tmp8 = arg1;
+      let insertStaleResult = self.insertStale(arg0.guildId, tmp2.channel_id, item10009, arg1);
     }
     continue;
   }
@@ -252,7 +265,7 @@ prototype2["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(cha
       }
       self.upsertMany(basicChannel.guild_id, channelId.channelId, channelId.messages, database);
     }
-    obj = obj132(5075);
+    obj = set(5075);
   }
 };
 prototype2["handleMessageDelete"] = function handleMessageDelete(id) {
@@ -265,6 +278,9 @@ prototype2["handleMessageDelete"] = function handleMessageDelete(id) {
 prototype2["handleMessageDeleteBulk"] = function handleMessageDeleteBulk(guildId) {
   const self = this;
   for (const item10008 of tmp) {
+    let tmp2 = self;
+    let tmp3 = item10008;
+    let tmp4 = arg1;
     let deleteOneResult = self.deleteOne(arg0.guildId, arg0.channelId, item10008, arg1);
     continue;
   }
@@ -282,16 +298,18 @@ prototype2["resetInMemoryState"] = function resetInMemoryState() {
 
 };
 prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009, database) {
+  const obj = itemsDefault;
   const result = closure_5.lastTimeConnectedChanged();
-  const KvMessage = obj132(5081).KvMessage;
+  const KvMessage = set(5081).KvMessage;
   const messagesTransactionResult = itemsDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), obj132(1956).ConflictOptions.Skip);
+  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), set(1956).ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = itemsDefault.messagesTransaction(database);
   const result = closure_5.lastTimeConnectedChanged();
-  const KvMessage = obj132(5081).KvMessage;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), obj132(1956).ConflictOptions.Replace);
+  const KvMessage = set(5081).KvMessage;
+  const obj = itemsDefault;
+  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), set(1956).ConflictOptions.Replace);
   messagesTransactionResult.trimChannel(guildId, channelId, closure_7.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
@@ -300,7 +318,14 @@ prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, da
   const iter = messages[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let KvMessage = obj132(5081).KvMessage;
+    let tmp3 = set;
+    let tmp4 = dependencyMap;
+    let KvMessage = set(5081).KvMessage;
+    let tmp5 = KvMessage;
+    let tmp6 = guild_id;
+    let tmp7 = channelId;
+    let tmp8 = nextResult;
+    let tmp9 = result;
     let putResult = messagesTransactionResult.put(guild_id, channelId, KvMessage.fromMessage(guild_id, channelId, nextResult, result));
     continue;
   }
@@ -316,9 +341,9 @@ prototype2["replaceChannel"] = function replaceChannel(arg0, channelId, arr, dat
   if (arr.length > saveLimitResult) {
     substr = arr.slice(arr.length - saveLimitResult);
   }
-  messagesTransactionResult.replaceChannel(arg0, channelId, substr.map((item, index) => {
+  messagesTransactionResult.replaceChannel(arg0, channelId, substr.map((nextResult) => {
     const KvMessage = callback(table[9]).KvMessage;
-    return KvMessage.fromMessage(callback, closure_1, item, table);
+    return KvMessage.fromMessage(callback, closure_1, nextResult, table);
   }));
   messagesTransactionResult.trimChannel(arg0, channelId, closure_7.saveLimit(channelId));
 };
@@ -360,13 +385,13 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
             message = undefined;
             closure_2 = undefined;
             if (null != user.id) {
-              obj1 = channel_id(user[7]);
+              obj1 = closure_1_1(user[7]);
               const messagesResult = obj1.messages(database.database);
               c0 = messagesResult;
               closure_2 = 1;
               database = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = messagesResult.get(guildId, channel_id, user.id);
+              obj1[0] = messagesResult.get(closure_1_0, closure_1_1, user.id);
               return obj1;
             } else {
               closure_1_8.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
@@ -380,7 +405,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
           message = arg1;
           closure_2 = closure_1_5.lastTimeConnectedChanged();
           if (null != message) {
-            const KvMessage = guildId(user[9]).KvMessage;
+            const KvMessage = closure_1_0(user[9]).KvMessage;
             const obj2 = {};
             const merged = Object.assign(message.message);
             const merged1 = Object.assign(closure_2);
@@ -399,16 +424,19 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
   })();
 };
 prototype2["deleteOne"] = function deleteOne(arg0, arg1, arg2, database) {
+  const obj = itemsDefault;
   itemsDefault.messagesTransaction(database).deleteMessage(arg0, arg1, arg2);
 };
 prototype2["deleteChannel"] = function deleteChannel(arg0, arg1, database) {
+  const obj = itemsDefault;
   itemsDefault.messagesTransaction(database).deleteChannel(arg0, arg1);
 };
 prototype2["deleteGuild"] = function deleteGuild(arg0, database) {
+  const obj = itemsDefault;
   itemsDefault.messagesTransaction(database).deleteGuild(arg0);
 };
-obj132 = Object.create(Messages.prototype);
-obj132.actions = {
+set = Object.create(Messages.prototype);
+set.actions = {
   CHANNEL_DELETE(arg0, arg1) {
     return obj.handleChannelDelete(arg0, arg1);
   },
@@ -434,9 +462,9 @@ obj132.actions = {
     return obj.handleMessageUpdate(arg0, arg1);
   }
 };
-let result = obj132.fileFinishedImporting("modules/app_database/modules/Messages.tsx");
+let result = set.fileFinishedImporting("modules/app_database/modules/Messages.tsx");
 
-export default obj132;
+export default set;
 export const ChannelHistory = prototype;
 export const isLikelyNotDelta = function isLikelyNotDelta(author) {
   return null != author.author && null != author.content && null != author.mentions && null != author.timestamp;

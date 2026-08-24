@@ -1,9 +1,9 @@
 // discord_app/modules/notifications/friend_online/FriendOnlineTimerStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../../utils/Durations.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 
-const HOUR = obj132Default.Millis.HOUR;
+const HOUR = setDefault.Millis.HOUR;
 let obj = { lastReportedAtMs: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class FriendOnlineTimerStore extends PersistedStore {
@@ -39,6 +39,6 @@ obj = {
   }
 };
 const friendOnlineTimerStore = new FriendOnlineTimerStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
 
 export default friendOnlineTimerStore;

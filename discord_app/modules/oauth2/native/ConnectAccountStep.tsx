@@ -1,34 +1,37 @@
 // discord_app/modules/oauth2/native/ConnectAccountStep.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import getAvatarURL from "../../../utils/AvatarUtils.tsx";
-import useThemeDefault from "../../../hooks/useTheme.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import addApplication from "../../applications/ApplicationStore.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_5 from "../../applications/ApplicationStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
+createCacheKey = { container: { flexDirection: "column", gap: 16, width: "100%" }, header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 }, headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 }, card: null, cardName: null, cardInfo: null, platformIcon: null, platformIconSmall: null, infoNotice: null, infoText: null, divider: null };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 1, minWidth: 0 };
 createCacheKey[5] = { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 };
 createCacheKey[6] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
+let obj1 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[7] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
+let obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[8] = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[9] = { flex: 1 };
+let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[10] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
+let obj4 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
 
 export default function ConnectAccountStep(clientId) {
   clientId = clientId.clientId;
@@ -72,7 +75,7 @@ export default function ConnectAccountStep(clientId) {
     }
     const items3 = [clientId];
     const effect = React.useEffect(() => {
-      const application = platformType(dependencyMap[13]).fetchApplication(clientId);
+      const application = platformType(closure_1_2[13]).fetchApplication(clientId);
     }, items3);
     obj = { style: null, children: null };
     obj[0] = tmp.container;
@@ -116,7 +119,7 @@ export default function ConnectAccountStep(clientId) {
       const obj11 = { source: null, style: null, disableColor: true };
       obj11[0] = null;
       obj11[1] = tmp.platformIcon;
-      tmp16Result = callback(tmp5(1297).Icon, obj11);
+      tmp16Result = tmp16(tmp5(1297).Icon, obj11);
     }
     const items7 = [tmp16Result, , ];
     const obj12 = { variant: "text-md/medium", style: null, color: "text-default", children: null };
@@ -125,7 +128,7 @@ export default function ConnectAccountStep(clientId) {
     items7[1] = callback(tmp5(4734).Text, obj12);
     const obj13 = { variant: "primary", size: "sm", onPress: null, text: null };
     obj13[2] = function onPress() {
-      platformType(dependencyMap[19])({ platformType, location: "OAuth2 Connect Account Step" });
+      platformType(closure_1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
     };
     const intl3 = tmp5(1236).intl;
     obj13[3] = intl3.string(tmp5(1236).t.S0W8Z5);
@@ -150,12 +153,11 @@ export default function ConnectAccountStep(clientId) {
     obj[1] = items6;
     return callback2(View, obj);
   } else {
-    tmp5(1435);
-    const tmp5Result = tmp5(1363);
+    let tmp5Result = tmp5(1435);
+    tmp5Result = tmp5(1363);
     const icon = value.icon;
     const source = tmp5Result.makeSource(tmp5Result.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
-  tmp4 = platformType(4310)();
 };
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);
@@ -179,7 +181,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
       const obj3 = { source: null, style: null, disableColor: true };
       obj3[0] = null;
       obj3[1] = tmp.platformIconSmall;
-      tmp10Result = callback(Button.Icon, obj3);
+      tmp10Result = tmp10(tmp11(1297).Icon, obj3);
     }
     const items1 = [tmp10Result, , ];
     const obj4 = { style: null, children: null };
@@ -188,21 +190,21 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj5[2] = connectedAccount.name;
     const items2 = [callback(Text.Text, obj5), ];
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl2 = getSystemLocale.intl;
+    const intl2 = tmp11(1236).intl;
     const obj7 = { platformName: null, connectedAccountId: null };
     obj7[0] = platformName;
     obj7[1] = connectedAccount.id;
     obj6[2] = intl2.format(getSystemLocale.t.Dkd7sE, obj7);
     items2[1] = callback(Text.Text, obj6);
     obj4[1] = items2;
-    items1[1] = callback(View, obj4);
+    items1[1] = closure_9(View, obj4);
     const obj8 = { color: null, size: "sm" };
     obj8[0] = ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE;
     items1[2] = callback(CheckmarkLargeIcon.CheckmarkLargeIcon, obj8);
     obj2[1] = items1;
-    items[1] = callback(View, obj2);
+    items[1] = closure_9(View, obj2);
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
-    const intl3 = getSystemLocale.intl;
+    const intl3 = tmp11(1236).intl;
     const obj10 = { applicationName: null };
     obj10[0] = applicationName;
     obj9[2] = intl3.format(getSystemLocale.t.pyRNXJ, obj10);
@@ -211,12 +213,11 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj11[0] = tmp.divider;
     items[3] = callback(View, obj11);
     obj[1] = items;
-    return callback(View, obj);
+    return closure_9(View, obj);
   } else {
     obj1 = getAvatarURL;
     obj2 = AccessibilityAnnouncer;
     const icon = value.icon;
     const source = obj1.makeSource(obj2.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
   }
-  tmp4 = useThemeDefault();
 };

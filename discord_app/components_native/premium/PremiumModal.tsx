@@ -3,9 +3,9 @@ import noopAll from "../../../_runtime/00019_noop.js";
 import { UserSettingsSections } from "../../Constants.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("components_native/premium/PremiumModal.tsx");
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumModal.tsx");
 
 export default function PremiumModal(arg0) {
   ({ initialRoute, onClose } = arg0);
@@ -13,8 +13,9 @@ export default function PremiumModal(arg0) {
   if (initialRoute == null) {
     initialRoute = giftRecipientId.PREMIUM;
   }
-  { value: onClose(onBack[10])(analyticsLocations).analyticsLocations, children: null };
-  let obj = {};
+  let obj = { value: onClose(onBack[10])(analyticsLocations).analyticsLocations, children: null };
+  obj = { screens: null, initialRouteName: null };
+  obj = {};
   obj1 = { title: null, headerLeft: null, render: null };
   const intl = analyticsLocation(tmp[3]).intl;
   obj1[0] = intl.string(analyticsLocation(onBack[3]).t.lpNrPu);

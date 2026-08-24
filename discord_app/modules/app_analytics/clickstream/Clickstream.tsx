@@ -3,11 +3,11 @@ import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import clickstreamExperimentEnabled from "ClickstreamExperiment.tsx";
 import getClickstreamDrainEvent from "ClickstreamEvents.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/RTCConnectionStore.tsx";
 
-require = fn;
+require = arg1;
 function isClickstreamEnabled(flag) {
   if (flag === undefined) {
     flag = true;
@@ -18,7 +18,9 @@ function isClickstreamEnabled(flag) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
+    const obj = DISCORD_EPOCHDefault;
     closure_8 = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
+    const obj2 = clickstreamExperimentEnabled;
   }
   return closure_8;
 }
@@ -27,24 +29,28 @@ function drainClickstream(flag) {
     flag = true;
   }
   if (isClickstreamEnabled(flag)) {
-    const tmp3 = map[Symbol.iterator]();
+    const tmp3 = obj[Symbol.iterator]();
     while (tmp3 !== undefined) {
+      let tmp7 = callback;
       let tmp8 = callback(tmp5, 2);
       let first = tmp8[0];
+      let tmp10 = importDefault;
+      let tmp11 = dependencyMap;
       let obj2 = expandEventPropertiesDefault;
+      let tmp12 = require;
       let obj3 = getClickstreamDrainEvent;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
       continue;
     }
     map.clear();
   } else {
-    map.clear();
+    obj.clear();
   }
 }
 const map = new Map();
 let c7 = -1;
 let c8 = false;
-let result = require("obj132").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
+let result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTREAM, arg1) {
   let obj = DISCORD_EPOCHDefault;
@@ -57,9 +63,9 @@ export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTRE
   c8 = result;
   if (result) {
     if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {
-      const result1 = map.set(GUILD_VIEWED_CLICKSTREAM, []);
+      const result1 = obj3.set(GUILD_VIEWED_CLICKSTREAM, []);
     }
-    const value = map.get(GUILD_VIEWED_CLICKSTREAM);
+    const value = obj3.get(GUILD_VIEWED_CLICKSTREAM);
     if (value != null) {
       obj = { timestamp: null, rtc_state: null };
       const _Date = Date;

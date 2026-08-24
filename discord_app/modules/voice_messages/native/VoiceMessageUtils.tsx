@@ -1,19 +1,19 @@
 // discord_app/modules/voice_messages/native/VoiceMessageUtils.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import HapticFeedbackTypes2 from "../../haptics/HapticUtils.native.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
 import downsampleWaveformDefault from "../downsampleWaveform.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
 import VoiceMessageRecordingStatus from "VoiceMessagesUIStore.tsx";
 import VoiceMessageAnimationState from "../VoiceMessageConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
 
-require = fn;
+require = arg1;
 function _startAudioRecording() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -134,17 +134,18 @@ function stopAndGetAudioRecording() {
   callback4(null);
   callback5(null);
   const waveform = store.getState().waveform;
-  const mapped = waveform.map((item, index) => {
-    [tmp] = item;
+  const mapped = waveform.map((arg0) => {
+    [tmp] = arg0;
     return tmp;
   });
   let arr3 = mapped;
   if (mapped.length > closure_16) {
     arr3 = downsampleWaveformDefault(mapped, tmp3);
   }
-  const mapped1 = arr3.map((item, index) => Math.min(item, closure_13));
+  const mapped1 = arr3.map((arg0) => Math.min(arg0, closure_13));
   const uint8Array = new Uint8Array(mapped1);
   closure_0 = byteLengthDefault.fromByteArray(uint8Array);
+  const obj = byteLengthDefault;
   return new Promise((arg0) => {
     closure_0 = arg0;
     const mediaEngine = closure_1_4.getMediaEngine();
@@ -334,14 +335,14 @@ let closure_21 = importDefaultResult.throttle((arg0) => {
     }
   }
 }, 100);
-let result = require("obj132").fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_messages/native/VoiceMessageUtils.tsx");
 
 export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
   if (arg0.length > closure_16) {
     arr = downsampleWaveformDefault(arg0, tmp);
   }
-  const mapped = arr.map((item, index) => Math.min(item, closure_13));
+  const mapped = arr.map((arg0) => Math.min(arg0, closure_13));
   const uint8Array = new Uint8Array(mapped);
   return byteLengthDefault.fromByteArray(uint8Array);
 };
@@ -366,10 +367,11 @@ export const endAudioRecording = function endAudioRecording() {
   return applyArgumentsResult;
 };
 export { stopAndCacheAudioRecording };
-export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, c4) {
-  if (null != c4) {
-    const obj = { recording_start_timestamp: null, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
-    obj[0] = c4;
+export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCELLED_DURATION, durationSecs, first) {
+  if (null != first) {
+    let obj = expandEventPropertiesDefault;
+    obj = { recording_start_timestamp: null, recording_stop_timestamp: null, duration_secs: null, result: null, initialize_secs: null };
+    obj[0] = first;
     const _Date = Date;
     obj[1] = Date.now();
     obj[2] = durationSecs;
@@ -381,6 +383,7 @@ export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCEL
 };
 export const triggerHaptic = function triggerHaptic() {
   const obj = HapticFeedbackTypes2;
+  const obj2 = set;
   const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;
-  const result = obj.triggerHapticFeedback(obj132.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
+  const result = obj.triggerHapticFeedback(set.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
 };

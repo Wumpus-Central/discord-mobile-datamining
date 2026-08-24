@@ -1,28 +1,29 @@
 // discord_app/modules/hub/useIsHubRealNamePromptShowing.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import initialize from "../guild/GuildPromptsStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../guild/GuildPromptsStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 import { GuildPrompts } from "../guild/Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 
 export default function useIsHubRealNamePromptShowing(arg0) {
   const _require = arg0;
   const items = [closure_6, closure_4, closure_7, closure_5];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const guild = closure_1_6.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(GuildFeatures.HUB);
+      hasItem = features.has(closure_1_8.HUB);
     }
     if (true !== hasItem) {
       return null;
-    } else if (true === closure_1_4.hasViewedPrompt(GuildPrompts.REAL_NAME_PROMPT, guild.id)) {
+    } else if (true === closure_1_4.hasViewedPrompt(closure_1_9.REAL_NAME_PROMPT, guild.id)) {
       return null;
     } else {
       const currentUser = closure_1_7.getCurrentUser();
@@ -50,8 +51,8 @@ export default function useIsHubRealNamePromptShowing(arg0) {
     }
     if (tmp2) {
       if (!stateFromStores) {
-        stateFromStores(dependencyMap[8]).viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
-        const obj = stateFromStores(dependencyMap[8]);
+        stateFromStores(closure_1_2[8]).viewPrompt(closure_1_9.REAL_NAME_PROMPT, closure_0);
+        const obj = stateFromStores(closure_1_2[8]);
       }
     }
   }, items1);

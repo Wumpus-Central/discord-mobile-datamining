@@ -5,7 +5,7 @@ import { NodeType } from "SettingRendererConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 const memoResult = importAllResult.memo(function SettingLayout(node) {
   node = node.node;
   const type = node.type;
@@ -19,6 +19,6 @@ const memoResult = importAllResult.memo(function SettingLayout(node) {
     return jsx(SettingSegmentedControlDefault, { node: null });
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
 
 export default memoResult;

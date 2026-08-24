@@ -3,7 +3,8 @@ import toJSDefault from "../lib/Record.tsx";
 import { Routes } from "../Constants.tsx";
 
 toJSDefault;
-const prototype = function LinkRecord(arg0) {
+let prototype;
+prototype = function LinkRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, path: tmp.path, inviteCode: tmp.inviteCode } = arg0);
@@ -32,7 +33,7 @@ prototype["fromInviteCode"] = function fromInviteCode(code) {
   tmp4.inviteCode = code;
   return tmp4;
 };
-const result = require("obj132").fileFinishedImporting("records/LinkRecord.tsx");
+const result = require("set").fileFinishedImporting("records/LinkRecord.tsx");
 
 export default prototype;
 export const LinkRecord = prototype;

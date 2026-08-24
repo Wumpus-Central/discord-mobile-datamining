@@ -2,12 +2,12 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
 import maybeFetchCollectiblesForInvoicesDefault from "FamilyCenterActionCreators.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { getCountryCodeByAlpha2 } from "../i18n/CountryCodeUtils.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 import items from "FamilyCenterConstants.tsx";
 
-let prototype = fn;
+let prototype = arg1;
 function freshTeenActivityWithMap() {
   const map = new Map();
   const result = map.set(TeenActionDisplayType.USER_ADD, new Map());
@@ -33,36 +33,38 @@ function handleFetchStart() {
 function handleInitialLoad(arg0) {
   ({ linkedUsers, familyCenterTeenActivity, ageGroup } = arg0);
   ({ actions, guilds, totals, spendingLimit, monthlyPurchases, invoices, gifts, teenId: c10, rangeStartId: c11 } = familyCenterTeenActivity);
+  closure_0 = undefined;
   ({ topUserActivities, topGuildActivities, totalSpendAmount, totalSpendCurrency } = familyCenterTeenActivity);
   const tmp = freshTeenActivityWithMap();
   closure_0 = tmp;
-  const item = actions.forEach((item, index) => {
-    const value = lib.get(item.display_type);
+  const item = actions.forEach((display_type) => {
+    const value = lib.get(display_type.display_type);
     if (!tmp) {
-      const result = value.set(item.event_id, item);
+      const result = value.set(display_type.event_id, display_type);
     }
   });
   closure_14 = tmp;
-  closure_32 = guilds.reduce((acc, item, index) => {
-    const merged = Object.assign(acc);
-    const obj = {};
-    const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(item));
-    let num = item.approximate_member_count;
+  closure_32 = guilds.reduce((arg0, approximate_member_count) => {
+    let obj = {};
+    const merged = Object.assign(arg0);
+    obj = {};
+    const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+    let num = approximate_member_count.approximate_member_count;
     if (num == null) {
       num = 0;
     }
     obj.approximateMemberCount = num;
-    obj[item.id] = obj;
+    obj[approximate_member_count.id] = obj;
     return obj;
   }, closure_32);
   if (linkedUsers === undefined) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    let reduced = linkedUsers.reduce((acc, item, index) => {
+    let reduced = linkedUsers.reduce((arg0, user_id) => {
       const obj = {};
-      const merged = Object.assign(acc);
-      obj[item.user_id] = item;
+      const merged = Object.assign(arg0);
+      obj[user_id.user_id] = user_id;
       return obj;
     }, {});
   } else {
@@ -70,27 +72,27 @@ function handleInitialLoad(arg0) {
   }
   c13 = true;
   if (null != invoices) {
-    closure_29 = invoices.reduce((acc, item, index) => {
-      if (null != item.invoice_items) {
-        if (item.invoice_items.length > 0) {
-          ({ sku_id, subscription_plan_id } = item.invoice_items[0]);
+    closure_29 = invoices.reduce((arg0, invoice_items) => {
+      if (null != invoice_items.invoice_items) {
+        if (invoice_items.invoice_items.length > 0) {
+          ({ sku_id, subscription_plan_id } = invoice_items.invoice_items[0]);
           if (!tmp) {
             const obj = { sku_id: null, subscription_plan_id: null, total: null, currency: null };
             obj[0] = sku_id;
             obj[1] = subscription_plan_id;
-            ({ total: obj[2], currency: obj[3] } = item);
-            acc[item.id] = obj;
+            ({ total: obj[2], currency: obj[3] } = invoice_items);
+            arg0[invoice_items.id] = obj;
           }
           tmp = null == sku_id && null == subscription_plan_id;
         }
       }
-      return acc;
+      return arg0;
     }, {});
   }
   if (null != gifts) {
-    closure_30 = gifts.reduce((acc, item, index) => {
-      acc[item.entitlement_id] = item;
-      return acc;
+    closure_30 = gifts.reduce((arg0, entitlement_id) => {
+      arg0[entitlement_id.entitlement_id] = entitlement_id;
+      return arg0;
     }, {});
   }
   if (spendingLimit == null) {
@@ -112,10 +114,10 @@ function handleLinkedUserFetch(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    let reduced = linkedUsers.reduce((acc, item, index) => {
+    let reduced = linkedUsers.reduce((arg0, user_id) => {
       const obj = {};
-      const merged = Object.assign(acc);
-      obj[item.user_id] = item;
+      const merged = Object.assign(arg0);
+      obj[user_id.user_id] = user_id;
       return obj;
     }, {});
   } else {
@@ -129,10 +131,10 @@ function handleRequestLinkSuccess(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    let reduced = linkedUsers.reduce((acc, item, index) => {
+    let reduced = linkedUsers.reduce((arg0, user_id) => {
       const obj = {};
-      const merged = Object.assign(acc);
-      obj[item.user_id] = item;
+      const merged = Object.assign(arg0);
+      obj[user_id.user_id] = user_id;
       return obj;
     }, {});
   } else {
@@ -146,50 +148,52 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
     return false;
   } else {
     ({ actions, totals, guilds, invoices, gifts, spendingLimit, monthlyPurchases, teenId: c10, rangeStartId: c11 } = familyCenterTeenActivity);
+    closure_0 = undefined;
     ({ topUserActivities, topGuildActivities, totalSpendAmount, totalSpendCurrency } = familyCenterTeenActivity);
     const tmp7 = freshTeenActivityWithMap();
     closure_0 = tmp7;
-    const item = actions.forEach((item, index) => {
-      const value = lib.get(item.display_type);
+    const item = actions.forEach((display_type) => {
+      const value = lib.get(display_type.display_type);
       if (!tmp) {
-        const result = value.set(item.event_id, item);
+        const result = value.set(display_type.event_id, display_type);
       }
     });
     closure_14 = tmp7;
-    closure_32 = guilds.reduce((acc, item, index) => {
-      const merged = Object.assign(acc);
-      const obj = {};
-      const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(item));
-      let num = item.approximate_member_count;
+    closure_32 = guilds.reduce((arg0, approximate_member_count) => {
+      let obj = {};
+      const merged = Object.assign(arg0);
+      obj = {};
+      const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
       }
       obj.approximateMemberCount = num;
-      obj[item.id] = obj;
+      obj[approximate_member_count.id] = obj;
       return obj;
     }, closure_32);
     if (null != invoices) {
-      closure_29 = invoices.reduce((acc, item, index) => {
-        if (null != item.invoice_items) {
-          if (item.invoice_items.length > 0) {
-            ({ sku_id, subscription_plan_id } = item.invoice_items[0]);
+      closure_29 = invoices.reduce((arg0, invoice_items) => {
+        if (null != invoice_items.invoice_items) {
+          if (invoice_items.invoice_items.length > 0) {
+            ({ sku_id, subscription_plan_id } = invoice_items.invoice_items[0]);
             if (!tmp) {
               const obj = { sku_id: null, subscription_plan_id: null, total: null, currency: null };
               obj[0] = sku_id;
               obj[1] = subscription_plan_id;
-              ({ total: obj[2], currency: obj[3] } = item);
-              acc[item.id] = obj;
+              ({ total: obj[2], currency: obj[3] } = invoice_items);
+              arg0[invoice_items.id] = obj;
             }
             tmp = null == sku_id && null == subscription_plan_id;
           }
         }
-        return acc;
+        return arg0;
       }, {});
     }
     if (null != gifts) {
-      closure_30 = gifts.reduce((acc, item, index) => {
-        acc[item.entitlement_id] = item;
-        return acc;
+      closure_30 = gifts.reduce((arg0, entitlement_id) => {
+        arg0[entitlement_id.entitlement_id] = entitlement_id;
+        return arg0;
       }, {});
     }
     c20 = false;
@@ -206,22 +210,23 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
 function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
   ({ actions, guilds } = familyCenterTeenActivity.familyCenterTeenActivity);
   closure_0 = closure_14;
-  const item = actions.forEach((item, index) => {
-    const value = lib.get(item.display_type);
+  const item = actions.forEach((display_type) => {
+    const value = lib.get(display_type.display_type);
     if (!tmp) {
-      const result = value.set(item.event_id, item);
+      const result = value.set(display_type.event_id, display_type);
     }
   });
-  closure_32 = guilds.reduce((acc, item, index) => {
-    const merged = Object.assign(acc);
-    const obj = {};
-    const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(item));
-    let num = item.approximate_member_count;
+  closure_32 = guilds.reduce((arg0, approximate_member_count) => {
+    let obj = {};
+    const merged = Object.assign(arg0);
+    obj = {};
+    const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+    let num = approximate_member_count.approximate_member_count;
     if (num == null) {
       num = 0;
     }
     obj.approximateMemberCount = num;
-    obj[item.id] = obj;
+    obj[approximate_member_count.id] = obj;
     return obj;
   }, closure_32);
 }
@@ -231,10 +236,10 @@ function handleUserLinkStatusUpdate(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    let reduced = linkedUsers.reduce((acc, item, index) => {
+    let reduced = linkedUsers.reduce((arg0, user_id) => {
       const obj = {};
-      const merged = Object.assign(acc);
-      obj[item.user_id] = item;
+      const merged = Object.assign(arg0);
+      obj[user_id.user_id] = user_id;
       return obj;
     }, {});
   } else {
@@ -248,10 +253,10 @@ function handleUserLinkRemove(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    let reduced = linkedUsers.reduce((acc, item, index) => {
+    let reduced = linkedUsers.reduce((arg0, user_id) => {
       const obj = {};
-      const merged = Object.assign(acc);
-      obj[item.user_id] = item;
+      const merged = Object.assign(arg0);
+      obj[user_id.user_id] = user_id;
       return obj;
     }, {});
   } else {
@@ -273,10 +278,11 @@ function handleCurrentUserUpdate(user) {
   } else {
     users = authStore.getUsers();
     let linked_users = user.linked_users;
-    if (linked_users.some((item, index) => undefined === table[item.user_id])) {
+    if (linked_users.some((arg0) => undefined === table[arg0.user_id])) {
       const _Object = Object;
       if (user.linked_users.length > Object.keys(reduced).length) {
         const linkedUsers = maybeFetchCollectiblesForInvoicesDefault.fetchLinkedUsers();
+        const obj2 = maybeFetchCollectiblesForInvoicesDefault;
       }
     }
     linked_users = user.linked_users;
@@ -284,10 +290,10 @@ function handleCurrentUserUpdate(user) {
       linked_users = [];
     }
     if (linked_users.length > 0) {
-      reduced = linked_users.reduce((acc, item, index) => {
+      reduced = linked_users.reduce((arg0, user_id) => {
         const obj = {};
-        const merged = Object.assign(acc);
-        obj[item.user_id] = item;
+        const merged = Object.assign(arg0);
+        obj[user_id.user_id] = user_id;
         return obj;
       }, {});
     } else {
@@ -305,10 +311,10 @@ function handleConnectionOpen(linkedUsers) {
       linkedUsers = [];
     }
     if (linkedUsers.length > 0) {
-      let reduced = linkedUsers.reduce((acc, item, index) => {
+      let reduced = linkedUsers.reduce((arg0, user_id) => {
         const obj = {};
-        const merged = Object.assign(acc);
-        obj[item.user_id] = item;
+        const merged = Object.assign(arg0);
+        obj[user_id.user_id] = user_id;
         return obj;
       }, {});
     } else {
@@ -462,10 +468,10 @@ prototype["loadCache"] = function loadCache() {
       linkedUsers = [];
     }
     if (linkedUsers.length > 0) {
-      let reduced = linkedUsers.reduce((acc, item, index) => {
+      let reduced = linkedUsers.reduce((arg0, user_id) => {
         const obj = {};
-        const merged = Object.assign(acc);
-        obj[item.user_id] = item;
+        const merged = Object.assign(arg0);
+        obj[user_id.user_id] = user_id;
         return obj;
       }, {});
     } else {
@@ -473,25 +479,27 @@ prototype["loadCache"] = function loadCache() {
     }
     c13 = true;
     const guilds = snapshot.guilds;
-    closure_32 = guilds.reduce((acc, item, index) => {
-      const merged = Object.assign(acc);
-      const obj = {};
-      const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(item));
-      let num = item.approximate_member_count;
+    closure_32 = guilds.reduce((arg0, approximate_member_count) => {
+      let obj = {};
+      const merged = Object.assign(arg0);
+      obj = {};
+      const merged1 = Object.assign(lib(1430).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count));
+      let num = approximate_member_count.approximate_member_count;
       if (num == null) {
         num = 0;
       }
       obj.approximateMemberCount = num;
-      obj[item.id] = obj;
+      obj[approximate_member_count.id] = obj;
       return obj;
     }, closure_32);
     const teenActivity = snapshot.teenActivity;
+    closure_0 = undefined;
     const tmp4 = freshTeenActivityWithMap();
     closure_0 = tmp4;
-    const item = teenActivity.forEach((item, index) => {
-      const value = lib.get(item.display_type);
+    const item = teenActivity.forEach((display_type) => {
+      const value = lib.get(display_type.display_type);
       if (!tmp) {
-        const result = value.set(item.event_id, item);
+        const result = value.set(display_type.event_id, display_type);
       }
     });
     closure_14 = tmp4;
@@ -505,14 +513,14 @@ prototype["loadCache"] = function loadCache() {
     obj[TeenActionDisplayType.TOTAL_VOICE_MINUTES] = 0;
     obj[TeenActionDisplayType.PURCHASES] = 0;
     obj[TeenActionDisplayType.GIFTS] = 0;
-    snapshot = teenActivityTotals.reduce((acc, item, index) => {
-      [tmp2, tmp3] = callback(item.split(":"), 2);
+    snapshot = teenActivityTotals.reduce((arg0, str) => {
+      [tmp2, tmp3] = callback(str.split(":"), 2);
       let obj = lib(5363);
       const result = obj.displayTypeFromString(tmp2);
-      let tmp5 = acc;
+      let tmp5 = arg0;
       if (undefined !== result) {
         obj = {};
-        const merged = Object.assign(acc);
+        const merged = Object.assign(arg0);
         const _parseInt = parseInt;
         obj[result] = parseInt(tmp3, 10);
         tmp5 = obj;
@@ -522,15 +530,16 @@ prototype["loadCache"] = function loadCache() {
   }
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
-  const obj = { linkedUsers: Object.values(closure_12), teenActivityTotals: null, teenActivity: null, guilds: null };
+  let obj = { version: FamilyCenterStore.LATEST_SNAPSHOT_VERSION, data: null };
+  obj = { linkedUsers: Object.values(closure_12), teenActivityTotals: null, teenActivity: null, guilds: null };
   const entries = Object.entries(closure_15);
-  obj[1] = entries.map((item, index) => {
-    [tmp, tmp2] = item;
+  obj[1] = entries.map((arg0) => {
+    [tmp, tmp2] = arg0;
     return "" + tmp + ":" + tmp2;
   });
   let items = [];
-  const item = closure_14.forEach((item, index) => {
-    items = [...Array.from(item.values())];
+  const item = closure_14.forEach((arr) => {
+    items = [...Array.from(arr.values())];
     items.push.apply(items);
   });
   obj[2] = items;
@@ -559,6 +568,7 @@ prototype["getRangeStartTimestamp"] = function getRangeStartTimestamp() {
   let extractTimestampResult = null;
   if (null != c11) {
     extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(c11);
+    const obj = DISCORD_EPOCHDefault;
   }
   return extractTimestampResult;
 };
@@ -575,7 +585,7 @@ prototype["getActionsForDisplayType"] = function getActionsForDisplayType(aPIErr
 prototype["getTotalForDisplayType"] = function getTotalForDisplayType(closure_0) {
   return table2[closure_0];
 };
-prototype["getLinkCode"] = function getLinkCode(dependencyMap) {
+prototype["getLinkCode"] = function getLinkCode(arg0) {
   return c16;
 };
 prototype["getLinkCodeExpiresAt"] = function getLinkCodeExpiresAt() {
@@ -620,15 +630,22 @@ prototype["getTotalGiftValue"] = function getTotalGiftValue() {
   let flag = false;
   const values = Object.values(closure_30);
   for (const item10014 of values) {
+    let tmp3 = item10014;
     if (null != item10014.price) {
+      let tmp4 = currency;
       if (null != currency) {
-        if (item10014.price.currency !== currency) {
+        let tmp5 = item10014;
+        let tmp6 = currency;
+        if (tmp3.price.currency !== currency) {
+          let tmp9 = obj;
           obj.return();
           return null;
         }
       }
-      currency = item10014.price.currency;
-      num = num + item10014.price.amount;
+      let tmp7 = item10014;
+      currency = tmp3.price.currency;
+      let tmp8 = num;
+      num = num + tmp3.price.amount;
       flag = true;
     }
     continue;
@@ -664,6 +681,7 @@ prototype["canRefetch"] = function canRefetch() {
   let tmp = null === c21;
   if (!tmp) {
     tmp = DISCORD_EPOCHDefault.age(c21) > closure_6;
+    const obj = DISCORD_EPOCHDefault;
   }
   return tmp;
 };
@@ -710,6 +728,6 @@ obj[13] = handleSetLocationMetadata;
 obj[14] = reset;
 prototype = new prototype(obj, tmp2, tmp, PURCHASES, pathname, _location2, handleConnectionOpen, CACHE_LOADED_LAZY, handleInitialLoad, handleFetchStart, handleLinkedUserFetch, handleTeenActivityFetch);
 // ThrowIfThisInitialized (0x7c)
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterStore.tsx");
+let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterStore.tsx");
 
 export default prototype;

@@ -1,16 +1,16 @@
 // discord_app/modules/launchpad/native/shared/SimpleGuild.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { getGuildIconSource } from "../../../../records/GuildRecord.tsx";
-import updateGuildUnreadSentinel from "../../../../stores/GuildReadStateStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/GuildReadStateStore.tsx";
+import closure_7 from "../../../../stores/GuildStore.tsx";
 import { ME } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_10 = createCacheKey.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
 
 export default function SimpleGuild(guildId) {
   guildId = guildId.guildId;
@@ -60,29 +60,30 @@ export default function SimpleGuild(guildId) {
   ({ containerSizeStyle, containerStyles } = tmp12);
   const memo = badge2.useMemo(() => {
     if ("" === str) {
-      return str;
+      return tmp;
     } else {
       if (null == badge2) {
         if (true === unread2) {
           const intl2 = guildId(unread2[13]).intl;
           let obj = { guildName: null };
-          obj[0] = str;
+          obj[0] = tmp;
           let formatToPlainStringResult = intl2.formatToPlainString(guildId(unread2[13]).t.lzqe42, obj);
         } else {
           const intl = guildId(unread2[13]).intl;
           obj = { guildName: null, mentions: null };
-          obj[0] = str;
-          obj[1] = badge2;
+          obj[0] = tmp;
+          obj[1] = tmp17;
           formatToPlainStringResult = intl.formatToPlainString(guildId(unread2[13]).t["/uzRss"], obj);
         }
       }
       const intl3 = guildId(unread2[13]).intl;
       obj = { guildName: null, mentions: null };
-      obj[0] = str;
+      obj[0] = tmp;
       obj[1] = badge2;
       formatToPlainStringResult = intl3.formatToPlainString(guildId(unread2[13]).t["/uzRss"], obj);
     }
   }, items3);
+  const tmp11 = animated ? tmp7Result.SimpleGuildContainerAnimated : tmp7Result.SimpleGuildContainer;
   const tmp6 = str(unread2[9])();
   const activityIndicatorState = guildId(unread2[14]).useActivityIndicatorState(guildId);
   let tmp15 = unread2;
@@ -105,6 +106,7 @@ export default function SimpleGuild(guildId) {
       tmp18 = !tmp15;
     }
     tmp17Result = getGuildIconSource(stateFromStores, containerSize, tmp18);
+    const tmp17 = getGuildIconSource;
   }
   if (null !== tmp17Result) {
     if (typeof tmp17Result === "object") {
@@ -144,9 +146,10 @@ export default function SimpleGuild(guildId) {
         let colors = tmp4(tmp5[16]).colors;
         obj1 = { color: null };
         obj1[0] = flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-        colors = jsx(tmp7(tmp5[15]).ChatIcon, { color: null });
+        colors = tmp20(tmp7(tmp5[15]).ChatIcon, obj1);
         obj[1] = colors;
-        let tmp20Result = <View style={null}>{null}</View>;
+        let tmp20Result = tmp20(View, obj);
+        const tmp27 = View;
       } else {
         if (tmp15) {
           let num4 = 13;
@@ -175,7 +178,7 @@ export default function SimpleGuild(guildId) {
           }
           obj2[10] = num7;
           obj2[12] = iconStroke.color;
-          tmp20Result = <tmp4Result cutoutBottomRightSize={null} cutoutBottomRightInsetX={6} cutoutBottomRightInsetY={7} cutoutTopRightSize={null} cutoutTopRightInsetX={8} cutoutTopRightInsetY={8} imageSize={null} imageSource={null} imageBorderRadius={null} imageBackgroundColor={null} clipOuterAmount={null} borderStroke={1} borderStrokeColor={null} />;
+          tmp20Result = tmp20(tmp4Result, obj2);
         } else {
           const obj3 = { guild: null, size: null, selected: null, animate: null, TABS_altDefaultBackground: null, style: null };
           obj3[0] = stateFromStores;
@@ -189,13 +192,12 @@ export default function SimpleGuild(guildId) {
             tmp24 = containerSizeStyle;
           }
           obj3[5] = tmp24;
-          tmp20Result = <tmp4Result guild={null} size={null} selected={null} animate={null} TABS_altDefaultBackground={null} style={null} />;
+          tmp20Result = tmp20(tmp4Result, obj3);
         }
         obj[16] = tmp20Result;
-        return <tmp11 {...obj} />;
+        return tmp20(tmp11, obj);
       }
     }
   }
   tmp19 = null != tmp17Result;
-  const tmp7Result1 = guildId(unread2[14]);
 };

@@ -14,9 +14,9 @@ arg5.setPlatformObject = function setPlatformObject(importDefaultResultResult, s
     }
   }
 };
-arg5.isPlatformObject = function isPlatformObject(source) {
-  return closure_0 in source;
+arg5.isPlatformObject = function isPlatformObject(style) {
+  return closure_0 in style;
 };
-arg5.getPlatformObjectClone = function getPlatformObjectClone(source) {
-  return source[closure_1];
+arg5.getPlatformObjectClone = function getPlatformObjectClone(style) {
+  return style[closure_1];
 };

@@ -1,15 +1,13 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import computeAffectedGuilds from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
 import useIsInActivityPrivacyCopyExperiment from "../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import "createToggle";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.vpgck1);
@@ -51,20 +49,21 @@ let createToggle = {
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
     let obj = useIsInActivityPrivacyCopyExperiment;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = computeAffectedGuilds;
+      let tmp2Result = tmp2(14208);
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = computeAffectedGuilds;
+        tmp2Result = tmp2(14208);
         const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15050, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(2007)(15050, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
 
 export default createToggle;

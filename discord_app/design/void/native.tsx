@@ -1,5 +1,5 @@
 // discord_app/design/void/native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import STATUS_PADDING from "Status/native/StatusConstants.tsx";
 import PX_16 from "BadgeConstants/native/BadgeConstants.tsx";
 import getTextStyles from "Button/native/Button.tsx";
@@ -64,7 +64,7 @@ import BadgeColors from "Badges/native/Badges.tsx";
 import EmptyState from "RefreshEmptyState/native/RefreshEmptyState.tsx";
 import EmptyStateDefault2 from "RefreshEmptyState/native/RefreshEmptyState.tsx";
 
-const result = obj132.fileFinishedImporting("design/void/native.tsx");
+const result = set.fileFinishedImporting("design/void/native.tsx");
 
 export const Button = getTextStylesDefault;
 export const BUTTON_CORNER_RADIUS = getTextStyles.BUTTON_CORNER_RADIUS;

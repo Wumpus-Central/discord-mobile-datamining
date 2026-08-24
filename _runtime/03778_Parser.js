@@ -45,6 +45,7 @@ const items = [
 for (let num = 0; num < items.length; num = num + 1) {
   let tmp3 = items[num];
   let flag = tmp3.enumerable;
+  let tmp4 = num;
   if (!flag) {
     flag = false;
   }

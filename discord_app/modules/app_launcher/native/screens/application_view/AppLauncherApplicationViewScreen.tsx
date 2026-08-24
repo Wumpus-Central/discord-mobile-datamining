@@ -1,22 +1,24 @@
 // discord_app/modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getIndexKey from "../../../../application_commands/ApplicationCommandIndexStore.tsx";
+import closure_6 from "../../../../application_commands/ApplicationCommandIndexStore.tsx";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
 import { BuiltInSectionId } from "../../../../application_commands/ApplicationCommandConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function AppLauncherApplicationViewScreenInner(application) {
   application = application.application;
   ({ initiallyExpanded, expandBottomSheet } = application);
   let bottomSheetExpandReasonRef;
+  let chatInputRef;
+  closure_4 = undefined;
   initiallyExpanded = undefined;
   ({ context, lockableScrollableContentOffsetY, installOnDemand, sectionName, onPressBack, onActivityItemSelected, entrypoint, onCommandExecuted } = application);
   const requiredAppLauncherContext = application(bottomSheetExpandReasonRef[7]).useRequiredAppLauncherContext();
   bottomSheetExpandReasonRef = requiredAppLauncherContext.bottomSheetExpandReasonRef;
-  const chatInputRef = requiredAppLauncherContext.chatInputRef;
+  chatInputRef = requiredAppLauncherContext.chatInputRef;
   const tmp5 = expandBottomSheet(bottomSheetExpandReasonRef[8])();
   closure_4 = tmp5;
   if (initiallyExpanded == null) {
@@ -27,7 +29,7 @@ function AppLauncherApplicationViewScreenInner(application) {
   const items1 = [tmp5, initiallyExpanded, expandBottomSheet, bottomSheetExpandReasonRef];
   const onAauth2Cancel = chatInputRef.useCallback(() => {
     const current = chatInputRef.current;
-    { type: application(bottomSheetExpandReasonRef[10]).KeyboardTypes.APP_LAUNCHER, context: obj };
+    obj = { type: application(bottomSheetExpandReasonRef[10]).KeyboardTypes.APP_LAUNCHER, context: obj };
     obj = { initialRouteName: closure_1_7.APPLICATION_VIEW, application };
     current.openCustomKeyboard(obj);
   }, items);
@@ -48,7 +50,7 @@ function AppLauncherApplicationViewScreenInner(application) {
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 ({ AppLauncherRouteName: error, SCREEN_BACKGROUND_COLOR } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
 let closure_10 = createCacheKey.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
 
 export default function AppLauncherApplicationViewScreen(route) {
   const params = route.route.params;
@@ -57,33 +59,34 @@ export default function AppLauncherApplicationViewScreen(route) {
   const navigation = route.navigation;
   c4 = undefined;
   c5 = undefined;
+  let id;
   ({ applicationId, initiallyExpanded, sectionName, expandBottomSheet, onCommandExecuted } = params);
   let obj = require(installOnDemand[7]);
   const requiredAppLauncherContext = obj.useRequiredAppLauncherContext();
   ({ chatInputRef: c4, keyboardCloseReasonRef: c5 } = requiredAppLauncherContext);
   ({ entrypoint, onActivityItemSelected } = requiredAppLauncherContext);
-  let id;
+  id = undefined;
   if (application != null) {
     id = application.id;
   }
   if (id == null) {
     id = applicationId;
   }
-  let tmpResult = require(tmp2[12]);
+  let tmpResult = tmp(tmp2[12]);
   let tmp7 = null;
   if (id !== BuiltInSectionId.BUILT_IN) {
     tmp7 = id;
   }
   const getOrFetchApplication = tmpResult.useGetOrFetchApplication(tmp7);
   if (id === BuiltInSectionId.BUILT_IN) {
-    let FAKE_BUILT_IN_APP = require(tmp2[9]).FAKE_BUILT_IN_APP;
+    let FAKE_BUILT_IN_APP = tmp(tmp2[9]).FAKE_BUILT_IN_APP;
   } else {
     FAKE_BUILT_IN_APP = getOrFetchApplication;
     if (getOrFetchApplication == null) {
       FAKE_BUILT_IN_APP = application;
     }
   }
-  tmpResult = require(tmp2[13]);
+  tmpResult = tmp(tmp2[13]);
   const items = [id, context, installOnDemand];
   const sharedValue = tmpResult.useSharedValue(0);
   const effect = navigation.useEffect(() => {
@@ -115,7 +118,7 @@ export default function AppLauncherApplicationViewScreen(route) {
       if (navigation.canGoBack()) {
         arr = arr.pop();
       } else {
-        c5.current = require(installOnDemand[7]).AppLauncherKeyboardCloseReason.BACK;
+        c5.current = closure_1_0(installOnDemand[7]).AppLauncherKeyboardCloseReason.BACK;
         const current = _undefined.current;
         if (current != null) {
           current.closeCustomKeyboard();
@@ -126,14 +129,14 @@ export default function AppLauncherApplicationViewScreen(route) {
     obj[8] = entrypoint;
     obj[9] = expandBottomSheet;
     obj[10] = onCommandExecuted;
-    let tmp11Result = <AppLauncherApplicationViewScreenInner context={null} application={null} lockableScrollableContentOffsetY={null} initiallyExpanded={null} installOnDemand={null} sectionName={null} onPressBack={null} onActivityItemSelected={null} entrypoint={null} expandBottomSheet={null} onCommandExecuted={null} />;
+    let tmp11Result = tmp11(AppLauncherApplicationViewScreenInner, obj);
   } else {
     obj1 = { style: null, children: null };
     const obj2 = { paddingTop: null };
-    obj2[0] = require(tmp2[14]).EXPANDED_HEADER_HEIGHT;
+    obj2[0] = tmp(tmp2[14]).EXPANDED_HEADER_HEIGHT;
     obj1[0] = obj2;
-    obj1[1] = <c4 />;
-    tmp11Result = <tmp12 style={null}>{null}</tmp12>;
+    obj1[1] = tmp11(c4, {});
+    tmp11Result = tmp11(tmp12, obj1);
   }
   obj[1] = tmp11Result;
   return <c5 style={callback().container}>{null}</c5>;

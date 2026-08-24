@@ -1,7 +1,7 @@
 // discord_app/lib/rateLimit.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("lib/rateLimit.tsx");
+const result = set.fileFinishedImporting("lib/rateLimit.tsx");
 
 export default function rateLimit(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -37,7 +37,7 @@ export default function rateLimit(arg0, arg1, arg2) {
       HermesBuiltin.apply(items1, undefined);
     } else {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => wrapper(...items), arr2[0] - timestamp);
+      timeout = setTimeout(() => closure_1_5(...items), arr2[0] - timestamp);
     }
   }
   return wrapper;

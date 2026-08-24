@@ -10,7 +10,7 @@ obj.on("add", () => {
   }
 });
 const tmp2 = new timestampDefault("codedLinkQueue");
-const result = require("obj132").fileFinishedImporting("modules/coded_links/codedLinkQueue.tsx");
+const result = require("set").fileFinishedImporting("modules/coded_links/codedLinkQueue.tsx");
 
 export const queueMessageLinkFetch = function queueMessageLinkFetch(arg0) {
   obj.add(arg0);

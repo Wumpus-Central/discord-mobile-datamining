@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx
-import obj132 from "../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../_runtime/00002_set.js";
 import ME from "../../../../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../../../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
 
 export const trackYouTabAvatarPress = function trackYouTabAvatarPress() {
   expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_AVATAR_PRESS);

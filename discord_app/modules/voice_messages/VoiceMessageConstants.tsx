@@ -1,7 +1,7 @@
 // discord_app/modules/voice_messages/VoiceMessageConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/voice_messages/VoiceMessageConstants.tsx");
+const result = set.fileFinishedImporting("modules/voice_messages/VoiceMessageConstants.tsx");
 
 export const VoiceMessageAnimationState = { SENDING: 0, [0]: "SENDING", CANCELLING: 1, [1]: "CANCELLING", LOCKING: 2, [2]: "LOCKING", LOCKED: 3, [3]: "LOCKED" };
 export const VOICE_RECORDING_MIN_DB = -100;

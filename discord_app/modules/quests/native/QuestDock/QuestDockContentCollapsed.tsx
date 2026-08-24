@@ -5,9 +5,10 @@ import { QUEST_DOCK_MODE_CHANGE_PHYSICS as closure_5 } from "QuestDockConstants.
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
-let obj = {};
+let obj = { questDockContentCollapsed: null };
+obj = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 obj.bottom = undefined;
 obj.zIndex = 2;
@@ -23,11 +24,11 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
   }
   hideOnExpand = tmp;
   const activeQuestDockMode = importAllResult.useContext(hideOnExpand(14448).QuestDockGestureContext).activeQuestDockMode;
-  hideOnExpand(4115);
+  let obj = hideOnExpand(4115);
   const fn = function l() {
-    let obj = hideOnExpand(dependencyMap[8]);
+    let obj = hideOnExpand(closure_1_2[8]);
     let num = 1;
-    if (activeQuestDockMode.get() !== QuestDockMode.COLLAPSED) {
+    if (activeQuestDockMode.get() !== closure_1_4.COLLAPSED) {
       num = 1;
       if (hideOnExpand) {
         num = 0;
@@ -36,7 +37,7 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     obj = { opacity: obj.withSpring(num, closure_1_5) };
     return obj;
   };
-  let obj = { withSpring: hideOnExpand(4744).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
+  obj = { withSpring: hideOnExpand(4744).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_5 };
   fn.__closure = obj;
   fn.__workletHash = 13361221764426;
   fn.__initData = closure_8;
@@ -62,6 +63,6 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
   const style = [tmp2.questDockContentCollapsed, animatedStyle];
   return jsx(activeQuestDockMode(8125), { style, animatedProps, children: children.children });
 });
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentCollapsed.tsx");
 
 export default memoResult;

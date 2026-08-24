@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/GuildEventModalConstants.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");
 
 export const CREATE_GUILD_EVENT_MODAL_KEY = "create-guild-event-modal";
 export const START_EVENT_MODAL_KEY = "start-event-modal";

@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import setFontSize from "../../../a11y/AccessibilityActionCreators.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
-import "createToggle";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 function useRoleColorSettingValue() {
   const items = [closure_3];
   return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
@@ -31,7 +31,7 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uSOPWm);
@@ -42,7 +42,7 @@ let createToggle = {
   useOptions: useRoleColorSettingOptions
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
 
 export default createToggle;
 export { useRoleColorSettingValue };

@@ -1,20 +1,21 @@
 // discord_app/modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, buttonWrapper: { width: "100%" } });
-const result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
+const result = require("set").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
 
 export default function ExistingUserAgeGateConfirm(age) {
   const onConfirm = age.onConfirm;
+  importDefault = undefined;
   dependencyMap = undefined;
   function _handleConfirm() {
     const self = this;
@@ -30,15 +31,15 @@ export default function ExistingUserAgeGateConfirm(age) {
         c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
-        throw shouldShowError;
+        throw arg1;
       } else if (arg0 !== 2) {
-        if (shouldShowError.shouldShowError) {
+        if (arg1.shouldShowError) {
           arr = arr.pop();
         }
         c3 = 0;
       }
       c3 = 0;
-      return shouldShowError;
+      return arg1;
     });
     closure_3 = tmp;
     const apply = tmp.apply;
@@ -53,6 +54,7 @@ export default function ExistingUserAgeGateConfirm(age) {
   let obj = onConfirm(1500);
   importDefault = obj.useNavigation();
   [tmp3, c2] = callback(React.useState(false), 2);
+  obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = onConfirm(1236).intl;
   obj[3] = intl.format(onConfirm(1236).t.wumolR, { age: age.age });

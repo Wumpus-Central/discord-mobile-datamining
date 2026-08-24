@@ -3,12 +3,12 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getWindowId from "../../utils/web/WindowIdUtils.tsx";
-import promise from "../../utils/AnalyticsUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 let c3 = null;
 const map = new Map();
-const set = new Set();
+let set = new Set();
 const Store = initializeDefault.Store;
 class WindowStore extends Store {
 }
@@ -48,9 +48,9 @@ prototype["isVisible"] = function isVisible() {
 };
 prototype["getFocusedWindowId"] = function getFocusedWindowId() {
   c0 = null;
-  const item = map.forEach((item, index) => {
-    if (item.focused) {
-      closure_0 = index;
+  const item = map.forEach((focused) => {
+    if (focused.focused) {
+      closure_0 = arg1;
     }
   });
   return c0;
@@ -93,7 +93,8 @@ const windowStore = new WindowStore(dispatcherDefault, {
   WINDOW_INIT: function handleWindowInit(isElementFullscreen) {
     _modDef38(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
     const focused = isElementFullscreen.focused;
-    const obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };
+    obj = { windowSize: obj, isElementFullscreen: isElementFullscreen.isElementFullscreen, focused, visible: isElementFullscreen.visible };
+    obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };
     const result = map.set(isElementFullscreen.windowId, obj);
     if (focused) {
       const windowId = isElementFullscreen.windowId;
@@ -161,6 +162,7 @@ const windowStore = new WindowStore(dispatcherDefault, {
       obj.windowSize = { width: null, height: null };
       const result = obj.set(windowId.windowId, obj);
       flag = true;
+      obj1 = { width: null, height: null };
     }
     return flag;
   },
@@ -193,11 +195,11 @@ const windowStore = new WindowStore(dispatcherDefault, {
     return flag;
   }
 });
-require("expandEventProperties").then((result) => {
-  result = result.addExtraAnalyticsDecorator(() => {
+require("expandEventProperties").then((addExtraAnalyticsDecorator) => {
+  const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator(() => {
 
   });
 });
-let result = require("obj132").fileFinishedImporting("stores/web/WindowStore.tsx");
+let result = set.fileFinishedImporting("stores/web/WindowStore.tsx");
 
 export default windowStore;

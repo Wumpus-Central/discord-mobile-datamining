@@ -1,13 +1,12 @@
 // discord_app/modules/messages/MosaicMediaType.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import urlMatchesFileExtension from "MediaFormatTesters.tsx";
-import set from "PlaintextFilePreviewHelpers.tsx";
+import set2 from "PlaintextFilePreviewHelpers.tsx";
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;
-const result = obj132.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
+const result = set.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
 
 export function isVisualMedia(arg0) {
   let tmp = "IMAGE" === arg0;
@@ -31,12 +30,12 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
           if (height > 0) {
             let str3 = "IMAGE";
             if (!obj2.isImageFile(filename)) {
-              let tmp5Result = urlMatchesFileExtension;
+              let tmp5Result = tmp5(4811);
               let str5 = "INVALID";
               if (tmp5Result.isVideoFile(filename)) {
                 str5 = "INVALID";
                 if (null != proxy_url.proxy_url) {
-                  tmp5Result = hasFlag;
+                  tmp5Result = tmp5(1403);
                   let num2 = proxy_url.flags;
                   if (num2 == null) {
                     num2 = 0;
@@ -69,7 +68,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     if (obj.isPlaintextPreviewableFile(filename)) {
       str2 = "PLAINTEXT_PREVIEW";
     }
-    obj = set;
+    obj = set2;
   }
   str = str2;
 };
@@ -85,9 +84,10 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             if (tmpResult.isVideoContentType(contentType)) {
               return "VIDEO";
             }
-            tmpResult = urlMatchesFileExtension;
+            tmpResult = tmp(4811);
           }
           obj = urlMatchesFileExtension;
+          tmp = require;
         }
       }
     }

@@ -1,44 +1,44 @@
 // discord_app/modules/guild_scheduled_events/useInterestedEventUsers.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set2 from "../../../_runtime/00002_set.js";
 import noop from "../../../_runtime/00019_noop.js";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
-import scheduledEventSort from "GuildScheduledEventStore.tsx";
+import closure_3 from "GuildScheduledEventStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const useMemo = noop.useMemo;
 let closure_4 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventUserResponses;
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");
+const result = set2.fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");
 
 export default function useInterestedEventUsers(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   let items = [stateFromStoresArray1];
   const items1 = [arg0];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, null)), items1);
-  const obj = initialize;
+  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, null)), items1);
+  const obj = _initialize;
   const items2 = [stateFromStoresArray1];
   const items3 = [arg0, arg1];
-  stateFromStoresArray1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, closure_1)), items3);
+  stateFromStoresArray1 = _initialize.useStateFromStoresArray(items2, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, closure_1)), items3);
   const items4 = [stateFromStoresArray, stateFromStoresArray1];
   return stateFromStoresArray(() => {
-    function addUserToAllInterested(item, index) {
-      if (!set.has(item.user_id)) {
-        items.push(item);
-        set.add(item.user_id);
+    function addUserToAllInterested(user_id) {
+      if (!set.has(user_id.user_id)) {
+        items.push(user_id);
+        set.add(user_id.user_id);
       }
     }
-    closure_0 = stateFromStoresArray1.reduce((acc, item, index) => {
-      acc[item.user_id] = item;
-      return acc;
+    closure_0 = stateFromStoresArray1.reduce((arg0, user_id) => {
+      arg0[user_id.user_id] = user_id;
+      return arg0;
     }, {});
-    const found = items.filter((item, index) => {
+    const found = items.filter((arg0) => {
       let tmp2 = null == tmp;
       if (!tmp2) {
         tmp2 = tmp.response === closure_1_4.INTERESTED;
       }
       return tmp2;
     });
-    const found1 = stateFromStoresArray1.filter((item, index) => item.response === constants.INTERESTED);
+    const found1 = stateFromStoresArray1.filter((response) => response.response === constants.INTERESTED);
     const set = new Set();
     items = [];
     const item = found.forEach(addUserToAllInterested);

@@ -7,14 +7,15 @@ import ClydeIcon from "../../../design/components/Icon/native/redesign/generated
 import AppIconDefault from "AppIcon.tsx";
 import { getIconById } from "AppIconConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { borderRadius: ThemesDefault.radii.round };
+createCacheKey = { icon: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/app_icons/native/SettingsItemAppIcon.tsx");
 
 export default function SettingsItemAppIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;
@@ -24,6 +25,7 @@ export default function SettingsItemAppIcon(color) {
   let obj = fetchCurrentAppIcon;
   const currentAppIcon = obj.useCurrentAppIcon();
   const tmp3 = callback();
+  const tmp4 = require;
   if (currentAppIcon !== FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT) {
     if (null != tmp7) {
       obj = { style: null, id: null, size: 32 };
@@ -34,5 +36,4 @@ export default function SettingsItemAppIcon(color) {
     return tmp11;
   }
   tmp11 = jsx(ClydeIcon.ClydeIcon, { color: INTERACTIVE_ICON_DEFAULT });
-  tmp7 = getIconById(currentAppIcon);
 };

@@ -1,10 +1,10 @@
 // discord_app/modules/in_app_reports/trackInAppReportsFeedback.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/in_app_reports/trackInAppReportsFeedback.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/trackInAppReportsFeedback.tsx");
 
 export default function trackInAppReportsFeedback(dont_show_again) {
   let reportId = dont_show_again.reportId;

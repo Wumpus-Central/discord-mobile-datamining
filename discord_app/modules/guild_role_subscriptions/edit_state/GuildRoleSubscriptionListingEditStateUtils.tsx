@@ -1,36 +1,40 @@
 // discord_app/modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx
 import useSubscriptionRoleDefault from "../useSubscriptionRole.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import getEmojiToGroupId from "../../emojis/EmojiStore.tsx";
-import makeGroupListingIndexSubscriptionListingTag from "../GuildRoleSubscriptionsStore.tsx";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../_runtime/00019_noop.js";
+import closure_7 from "../../emojis/EmojiStore.tsx";
+import closure_8 from "../GuildRoleSubscriptionsStore.tsx";
 import AllChannelAccessOptions from "GuildRoleSubscriptionEditStore.tsx";
 import { GuildRoleSubscriptionBenefitTypes as closure_11 } from "../GuildRoleSubscriptionsConstants.tsx";
 import ME from "../../../Constants.tsx";
 import { SubscriptionIntervalTypes } from "../../premium/PremiumConstants.tsx";
+import set from "../../../../_runtime/00002_set.js";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import { useFetchListingsForGuild } from "../GuildRoleSubscriptionsHooks.tsx";
 
-const require = fn;
+const require = arg1;
 function getRoleEmojis(arr) {
   closure_0 = arg1;
   if (0 === arr.length) {
     return set;
   } else {
-    const found = arr.filter((item, index) => {
-      const roles = item.roles;
+    const found = arr.filter((roles) => {
+      roles = roles.roles;
       return roles.includes(id);
     });
     const _Set = Set;
-    set = new Set(found.map((item, index) => item.id));
+    set = new Set(found.map((id) => id.id));
     return set;
   }
 }
 function clearEditState(NEW_LISTING_EDIT_STATE_ID) {
   const _require = NEW_LISTING_EDIT_STATE_ID;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_10.setState((listings) => {
-      const obj = {};
+      let obj = { listings: null };
+      obj = {};
       const merged = Object.assign(listings.listings);
       obj[closure_0] = listings.listings.nonexistantEditStateId;
       obj[0] = obj;
@@ -181,11 +185,11 @@ function _updateListingPeripheralsFromEditState() {
                   const items3 = [];
                   HermesBuiltin.arraySpread(tierEmojiIds, 0);
                   closure_14 = obj7.difference(items2, items3);
-                  closure_15 = closure_13.map((item, index) => {
-                    const customEmojiById = roleIcon.getCustomEmojiById(item);
+                  closure_15 = closure_13.map((emojiId) => {
+                    const customEmojiById = roleIcon.getCustomEmojiById(emojiId);
                     if (null != customEmojiById) {
-                      _undefined(9406);
-                      const obj = { guildId: null, emojiId: null, roles: null };
+                      let obj = _undefined(9406);
+                      obj = { guildId: null, emojiId: null, roles: null };
                       obj[0] = _undefined;
                       obj[1] = customEmojiById.id;
                       const items = [];
@@ -194,11 +198,11 @@ function _updateListingPeripheralsFromEditState() {
                       return obj.updateEmoji(obj);
                     }
                   });
-                  closure_16 = closure_14.map((item, index) => {
-                    const customEmojiById = roleIcon.getCustomEmojiById(item);
+                  closure_16 = closure_14.map((emojiId) => {
+                    const customEmojiById = roleIcon.getCustomEmojiById(emojiId);
                     if (null != customEmojiById) {
                       const roles = customEmojiById.roles;
-                      const found = roles.filter((item, index) => item !== closure_3);
+                      const found = roles.filter((arg0) => arg0 !== closure_3);
                       if (found.length > 0) {
                         let obj = { guildId: null, emojiId: null, roles: null };
                         obj[0] = _undefined;
@@ -451,7 +455,7 @@ function _createListingFromEditState() {
 let closure_15 = [];
 let closure_16 = [];
 let set = new Set();
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx");
 
 export const useListingEditState = function useListingEditState(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -468,7 +472,7 @@ export const useListingEditState = function useListingEditState(arg0, arg1, arg2
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -476,7 +480,7 @@ export const useListingEditState = function useListingEditState(arg0, arg1, arg2
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items);
@@ -499,7 +503,8 @@ export const useClearEditStateOnUnmount = function useClearEditStateOnUnmount(ar
   const effect = React.useEffect(() => () => {
     closure_1_0(closure_1_3[19]).batchUpdates(() => {
       closure_1_10.setState((listings) => {
-        const obj = {};
+        let obj = { listings: null };
+        obj = {};
         const merged = Object.assign(listings.listings);
         obj[closure_0] = listings.listings.nonexistantEditStateId;
         obj[0] = obj;
@@ -510,7 +515,7 @@ export const useClearEditStateOnUnmount = function useClearEditStateOnUnmount(ar
 };
 export const useName = function useName(arg0) {
   let _require = arg0;
-  let name = (closure_3) => {
+  let name = (name) => {
     let str;
     if (name != null) {
       str = name.name;
@@ -521,12 +526,15 @@ export const useName = function useName(arg0) {
     return str;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  let memo = stateFromStores;
   const tmp2 = name(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
-  let memo = React.useMemo(() => callback(c2), items1);
+  memo = React.useMemo(() => callback(c2), items1);
   _require = arg0;
   name = "name";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, arg0, "name", memo];
@@ -537,7 +545,7 @@ export const useName = function useName(arg0) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -545,7 +553,7 @@ export const useName = function useName(arg0) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -564,10 +572,10 @@ export const useName = function useName(arg0) {
 };
 export const usePriceTier = function usePriceTier(editStateId) {
   let _require = editStateId;
-  let priceTier = (closure_3) => {
+  let priceTier = (arg0) => {
     let price;
-    if (subscription_plans != null) {
-      const first = subscription_plans.subscription_plans[0];
+    if (arg0 != null) {
+      const first = arg0.subscription_plans[0];
       if (first != null) {
         price = first.price;
       }
@@ -575,12 +583,15 @@ export const usePriceTier = function usePriceTier(editStateId) {
     return price;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  let memo = stateFromStores;
   const tmp2 = priceTier(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
-  let memo = React.useMemo(() => callback(c2), items1);
+  memo = React.useMemo(() => callback(c2), items1);
   _require = editStateId;
   priceTier = "priceTier";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, editStateId, "priceTier", memo];
@@ -591,7 +602,7 @@ export const usePriceTier = function usePriceTier(editStateId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -599,7 +610,7 @@ export const usePriceTier = function usePriceTier(editStateId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -618,7 +629,7 @@ export const usePriceTier = function usePriceTier(editStateId) {
 };
 export const useDescription = function useDescription(arg0) {
   let _require = arg0;
-  let description = (closure_3) => {
+  let description = (description) => {
     let str;
     if (description != null) {
       str = description.description;
@@ -629,12 +640,15 @@ export const useDescription = function useDescription(arg0) {
     return str;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  let memo = stateFromStores;
   const tmp2 = description(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
-  let memo = React.useMemo(() => callback(c2), items1);
+  memo = React.useMemo(() => callback(c2), items1);
   _require = arg0;
   description = "description";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, arg0, "description", memo];
@@ -645,7 +659,7 @@ export const useDescription = function useDescription(arg0) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -653,7 +667,7 @@ export const useDescription = function useDescription(arg0) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -672,22 +686,25 @@ export const useDescription = function useDescription(arg0) {
 };
 export const useImage = function useImage(editStateId, arg1) {
   let _require = editStateId;
-  let image = (closure_3) => {
-    let image_asset;
-    if (closure_3 != null) {
-      image_asset = closure_3.image_asset;
+  let image = (image_asset) => {
+    image_asset = undefined;
+    if (image_asset != null) {
+      image_asset = image_asset.image_asset;
     }
     if (null != image_asset) {
-      return editStateId(table[11]).getAssetURL(closure_3.application_id, closure_3.image_asset, editStateId);
+      return editStateId(table[11]).getAssetURL(image_asset.application_id, image_asset.image_asset, editStateId);
     }
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  let memo = stateFromStores;
   const tmp2 = image(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
-  let memo = React.useMemo(() => callback(c2), items1);
+  memo = React.useMemo(() => callback(c2), items1);
   _require = editStateId;
   image = "image";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, editStateId, "image", memo];
@@ -698,7 +715,7 @@ export const useImage = function useImage(editStateId, arg1) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -706,7 +723,7 @@ export const useImage = function useImage(editStateId, arg1) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -725,15 +742,15 @@ export const useImage = function useImage(editStateId, arg1) {
 };
 export const useApplicationId = function useApplicationId(listingId) {
   const _require = listingId;
-  const f95029 = (closure_3) => {
-    let application_id;
+  const f95029 = (application_id) => {
+    application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
     }
     return application_id;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
   const tmp2 = f95029(7127)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
@@ -741,22 +758,24 @@ export const useApplicationId = function useApplicationId(listingId) {
 };
 export const useRoleIcon = function useRoleIcon(arg0, arg1) {
   const tmp = roleIcon(14575)(arg1, arg0);
+  closure_0 = tmp;
   const items = [tmp];
   let memo = React.useMemo(() => {
     let icon;
     if (closure_0 != null) {
-      icon = closure_0.icon;
+      icon = tmp.icon;
     }
     const obj = { icon, unicodeEmoji: null };
     let unicodeEmoji;
     if (closure_0 != null) {
-      unicodeEmoji = closure_0.unicodeEmoji;
+      unicodeEmoji = tmp.unicodeEmoji;
     }
     obj[1] = unicodeEmoji;
     return obj;
   }, items);
   closure_0 = arg0;
   roleIcon = "roleIcon";
+  dependencyMap = undefined;
   const tmp3 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp3;
   const items1 = [tmp3, arg0, "roleIcon", memo];
@@ -767,7 +786,7 @@ export const useRoleIcon = function useRoleIcon(arg0, arg1) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -775,7 +794,7 @@ export const useRoleIcon = function useRoleIcon(arg0, arg1) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items1);
@@ -821,20 +840,20 @@ export const useRole = function useRole(listingId, guildId) {
     const obj = {};
     const merged = Object.assign(DEFAULT_PREVIEW_ROLE);
     if (undefined !== dependencyMap) {
-      let str = dependencyMap.icon;
+      let str = tmp4.icon;
       if (str == null) {
         str = "";
       }
       obj.icon = str;
-      let str2 = dependencyMap.unicodeEmoji;
+      let str2 = tmp4.unicodeEmoji;
       if (str2 == null) {
         str2 = "";
       }
       obj.unicodeEmoji = str2;
     }
     if (undefined !== closure_2) {
-      obj.color = closure_2;
-      obj.colorString = listingId(688).int2hex(closure_2);
+      obj.color = tmp5;
+      obj.colorString = listingId(688).int2hex(tmp5);
       const obj2 = listingId(688);
     }
     return obj;
@@ -842,6 +861,7 @@ export const useRole = function useRole(listingId, guildId) {
 };
 export const useRoleColor = function useRoleColor(editStateId, guildId) {
   const tmp = roleColor(14575)(guildId, editStateId);
+  closure_0 = tmp;
   const items = [tmp];
   let memo = React.useMemo(() => {
     let color;
@@ -855,6 +875,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
   }, items);
   closure_0 = editStateId;
   roleColor = "roleColor";
+  dependencyMap = undefined;
   const tmp3 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp3;
   const items1 = [tmp3, editStateId, "roleColor", memo];
@@ -865,7 +886,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -873,7 +894,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items1);
@@ -892,18 +913,20 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
 };
 export const useChannelAccessFormat = function useChannelAccessFormat(editStateId, guildId) {
   const tmp = channelAccessFormat(14575)(guildId, editStateId);
+  closure_0 = tmp;
   const items = [tmp];
   let memo = React.useMemo(() => {
     if (null == editStateId) {
       let SOME_CHANNELS_ACCESS = closure_1_9.SOME_CHANNELS_ACCESS;
     } else {
-      SOME_CHANNELS_ACCESS = editStateId(table[15]).hasViewChannelPermission(tmp) ? closure_1_9.ALL_CHANNELS_ACCESS : closure_1_9.SOME_CHANNELS_ACCESS;
+      SOME_CHANNELS_ACCESS = editStateId(table[15]).hasViewChannelPermission(tmp) ? tmp4.ALL_CHANNELS_ACCESS : tmp4.SOME_CHANNELS_ACCESS;
       const obj = editStateId(table[15]);
     }
     return SOME_CHANNELS_ACCESS;
   }, items);
   closure_0 = editStateId;
   channelAccessFormat = "channelAccessFormat";
+  dependencyMap = undefined;
   const tmp3 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp3;
   const items1 = [tmp3, editStateId, "channelAccessFormat", memo];
@@ -914,7 +937,7 @@ export const useChannelAccessFormat = function useChannelAccessFormat(editStateI
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -922,7 +945,7 @@ export const useChannelAccessFormat = function useChannelAccessFormat(editStateI
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items1);
@@ -941,7 +964,7 @@ export const useChannelAccessFormat = function useChannelAccessFormat(editStateI
 };
 export const useChannelBenefits = function useChannelBenefits(listingId) {
   let _require = listingId;
-  let channelBenefits = (closure_3) => {
+  let channelBenefits = (role_benefits) => {
     if (null == role_benefits) {
       let found = closure_15;
     } else {
@@ -951,12 +974,15 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
     return found;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  let memo = stateFromStores;
   const tmp2 = channelBenefits(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
-  let memo = React.useMemo(() => callback(c2), items1);
+  memo = React.useMemo(() => callback(c2), items1);
   _require = listingId;
   channelBenefits = "channelBenefits";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, listingId, "channelBenefits", memo];
@@ -967,7 +993,7 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -975,7 +1001,7 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -994,7 +1020,7 @@ export const useChannelBenefits = function useChannelBenefits(listingId) {
 };
 export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
   let _require = listingId;
-  let intangibleBenefits = (closure_3) => {
+  let intangibleBenefits = (role_benefits) => {
     if (null == role_benefits) {
       let found = closure_16;
     } else {
@@ -1004,12 +1030,15 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
     return found;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  let memo = stateFromStores;
   const tmp2 = intangibleBenefits(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
-  let memo = React.useMemo(() => callback(c2), items1);
+  memo = React.useMemo(() => callback(c2), items1);
   _require = listingId;
   intangibleBenefits = "intangibleBenefits";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, listingId, "intangibleBenefits", memo];
@@ -1020,7 +1049,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -1028,7 +1057,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -1048,11 +1077,13 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
 export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   let _require = guildId;
   const tmp = tierEmojiIds(14575)(guildId, listingId);
+  tierEmojiIds = tmp;
   const items = [closure_7];
   const items1 = [guildId];
-  const stateFromStoresArray = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => closure_1_7.getGuildEmoji(closure_0), items1);
+  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => closure_1_7.getGuildEmoji(closure_0), items1);
+  let memo = stateFromStoresArray;
   const items2 = [stateFromStoresArray, tmp];
-  let memo = React.useMemo(() => {
+  memo = React.useMemo(() => {
     if (null == tierEmojiIds) {
       set = closure_1_17;
     } else {
@@ -1060,18 +1091,20 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
       if (0 === memo.length) {
         set = closure_1_17;
       } else {
-        const found = memo.filter((item, index) => {
-          const roles = item.roles;
+        const found = arr.filter((roles) => {
+          roles = roles.roles;
           return roles.includes(id);
         });
         const _Set = Set;
-        set = new Set(found.map((item, index) => item.id));
+        set = new Set(found.map((id) => id.id));
       }
+      arr = memo;
     }
     return set;
   }, items2);
   _require = listingId;
   tierEmojiIds = "tierEmojiIds";
+  dependencyMap = undefined;
   const tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items3 = [tmp4, listingId, "tierEmojiIds", memo];
@@ -1082,7 +1115,7 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -1090,7 +1123,7 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items3);
@@ -1108,9 +1141,9 @@ export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   return items4;
 };
 export const useTrialInterval = function useTrialInterval(editStateId) {
-  const subscriptionTrial = require("../GuildRoleSubscriptionsHooks.tsx").useSubscriptionTrial(editStateId);
+  const subscriptionTrial = _useFetchListingsForGuild.useSubscriptionTrial(editStateId);
   let active_trial;
-  const obj = useFetchListingsForGuild;
+  const obj = _useFetchListingsForGuild;
   if (subscriptionTrial != null) {
     active_trial = subscriptionTrial.active_trial;
   }
@@ -1133,7 +1166,7 @@ export const useTrialInterval = function useTrialInterval(editStateId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -1141,7 +1174,7 @@ export const useTrialInterval = function useTrialInterval(editStateId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items);
@@ -1159,7 +1192,7 @@ export const useTrialInterval = function useTrialInterval(editStateId) {
   return items1;
 };
 export const useTrialLimit = function useTrialLimit(editStateId) {
-  const subscriptionTrial = require("../GuildRoleSubscriptionsHooks.tsx").useSubscriptionTrial(editStateId);
+  const subscriptionTrial = _useFetchListingsForGuild.useSubscriptionTrial(editStateId);
   let prop;
   if (subscriptionTrial != null) {
     prop = subscriptionTrial.max_num_active_trial_users;
@@ -1179,7 +1212,7 @@ export const useTrialLimit = function useTrialLimit(editStateId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -1187,7 +1220,7 @@ export const useTrialLimit = function useTrialLimit(editStateId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items);
@@ -1204,8 +1237,8 @@ export const useTrialLimit = function useTrialLimit(editStateId) {
   const items1 = [prop, callback];
   return items1;
 };
-export const useHasChanges = function useHasChanges(arg0) {
-  closure_0 = arg0;
+export const useHasChanges = function useHasChanges(first) {
+  closure_0 = first;
   return callback3((arg0) => undefined !== arg0.listings[closure_0]);
 };
 export const useHasChangesForEditStateIds = function useHasChangesForEditStateIds(arg0) {
@@ -1213,6 +1246,7 @@ export const useHasChangesForEditStateIds = function useHasChangesForEditStateId
   return callback3((arg0) => {
     for (const item10006 of closure_0) {
       if (undefined !== arg0.listings[item10006]) {
+        let tmp = obj;
         obj.return();
         let flag = true;
         return true;
@@ -1223,21 +1257,24 @@ export const useHasChangesForEditStateIds = function useHasChangesForEditStateId
 };
 export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
   let _require = listingId;
-  let first = (closure_3) => {
+  let first = (arg0) => {
     first = undefined;
-    if (subscription_plans != null) {
-      first = subscription_plans.subscription_plans[0];
+    if (arg0 != null) {
+      first = arg0.subscription_plans[0];
     }
     return first;
   };
   const items = [closure_8];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
+  c2 = stateFromStores;
   let tmp2 = first(7127)(() => first);
+  dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   const memo = React.useMemo(() => callback(c2), items1);
   _require = listingId;
   first = "priceTier";
   c2 = undefined;
+  dependencyMap = undefined;
   let tmp4 = callback3((setListing) => setListing.setListing);
   dependencyMap = tmp4;
   const items2 = [tmp4, listingId, "priceTier", undefined];
@@ -1248,7 +1285,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       if (typeof closure_0 === "function") {
         let tmp4;
         if (arg0 != null) {
-          tmp4 = arg0[first];
+          tmp4 = arg0[closure_1_1];
         }
         if (tmp4 == null) {
           tmp4 = closure_1_2;
@@ -1256,7 +1293,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
         tmpResult = tmp(tmp4);
       }
       const obj = {};
-      obj[first] = tmpResult;
+      obj[closure_1_1] = tmpResult;
       return Object.assign({}, arg0, obj);
     });
   }, items2);
@@ -1290,7 +1327,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       const obj = { price: num, currency: null, interval: null, interval_count: null, id: null };
       let currency;
       if (listingId != null) {
-        currency = listingId.currency;
+        currency = tmp2.currency;
       }
       if (currency == null) {
         currency = closure_1_12.USD;
@@ -1298,15 +1335,15 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       obj[1] = currency;
       let interval;
       if (listingId != null) {
-        interval = listingId.interval;
+        interval = tmp2.interval;
       }
       if (interval == null) {
-        interval = SubscriptionIntervalTypes.MONTH;
+        interval = closure_1_14.MONTH;
       }
       obj[2] = interval;
       let num2;
       if (listingId != null) {
-        num2 = listingId.interval_count;
+        num2 = tmp2.interval_count;
       }
       if (num2 == null) {
         num2 = 1;
@@ -1314,7 +1351,7 @@ export const useSubscriptionPlan = function useSubscriptionPlan(listingId) {
       obj[3] = num2;
       let str;
       if (listingId != null) {
-        str = listingId.id;
+        str = tmp2.id;
       }
       if (str == null) {
         str = "";
@@ -1330,6 +1367,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
   [tmp2, closure_0] = callback2(React.useState(false), 2);
   const tmp3 = callback2(React.useState(), 2);
   closure_1 = tmp3[1];
+  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     let id = 0;
@@ -1393,7 +1431,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               callback(true);
               closure_1_1(undefined);
               if (null != closure_2_6) {
-                callback2(dependencyMap[20])(null != closure_1_2, "groupListingId is null");
+                callback2(closure_2_3[20])(null != closure_1_2, "groupListingId is null");
                 const obj2 = { guildId: null, editStateId: null, groupListingId: null };
                 obj2[0] = callback;
                 obj2[1] = id;
@@ -1433,8 +1471,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                   if (null != channelBenefits) {
                     const benefits = subscriptionListing.role_benefits.benefits;
                     const benefits1 = subscriptionListing.role_benefits.benefits;
-                    const found = benefits.filter(_undefined(_undefined4[16]).isChannelBenefit);
-                    const found1 = benefits1.filter(_undefined(_undefined4[16]).isIntangibleBenefit);
+                    const found = benefits.filter(_undefined(tmp2[16]).isChannelBenefit);
+                    const found1 = benefits1.filter(_undefined(tmp2[16]).isIntangibleBenefit);
                     if (channelBenefits == null) {
                       channelBenefits = found;
                     }
@@ -1452,8 +1490,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                     obj[1] = groupListingId;
                     obj[2] = editStateId;
                     obj[3] = obj;
-                    subscriptionListing = _undefined3(_undefined4[22]).updateSubscriptionListing(obj);
-                    const obj3 = _undefined3(_undefined4[22]);
+                    subscriptionListing = _undefined3(tmp2[22]).updateSubscriptionListing(obj);
+                    const obj3 = _undefined3(tmp2[22]);
                   }
                   return subscriptionListing;
                 })(obj2);
@@ -1462,8 +1500,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                 const obj4 = { guildId: null, editStateId: null, groupListingId: null, onBeforeDispatchNewListing: null };
                 obj4[0] = callback;
                 obj4[1] = closure_2_5;
-                obj4[2] = importAll;
-                obj4[3] = dependencyMap;
+                obj4[2] = closure_2_2;
+                obj4[3] = closure_2_3;
                 c5 = 5;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
@@ -1554,7 +1592,7 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
               obj[0] = arg1;
               return obj;
             } else {
-              clearEditState(c5);
+              closure_2_19(c5);
               c4 = 0;
               callback(false);
               c6 = 3;
@@ -1605,7 +1643,11 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
   if (arg2 === undefined) {
     obj = { includeSoftDeleted: false };
   }
-  let subscriptionListingsForGroup = require("../GuildRoleSubscriptionsHooks.tsx").useSubscriptionListingsForGroup(groupListingId, obj);
+  let subscriptionListingsForGroup;
+  closure_2 = undefined;
+  dependencyMap = undefined;
+  closure_4 = undefined;
+  subscriptionListingsForGroup = _useFetchListingsForGuild.useSubscriptionListingsForGroup(groupListingId, obj);
   const tmp2 = callback3((arg0) => arg0.editStateIdsForGroup[closure_0]);
   closure_2 = tmp2;
   const tmp3 = callback3((setEditStateIdsForGroup) => setEditStateIdsForGroup.setEditStateIdsForGroup);
@@ -1614,7 +1656,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
   closure_4 = tmp4;
   obj = {
     editStateIds: React.useMemo(() => {
-      const items = [...subscriptionListingsForGroup.map((item, index) => item.id)];
+      const items = [...subscriptionListingsForGroup.map((id) => id.id)];
       let items1 = closure_2;
       if (closure_2 == null) {
         items1 = [];
@@ -1648,13 +1690,13 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
         return items1;
       });
       listings = listings.listings;
-      const item = listings.forEach((item, index) => {
-        closure_0 = item;
+      const item = listings.forEach((arg0) => {
+        closure_0 = arg0;
         closure_1_4(closure_1, () => {
-          { name: item.name, description: item.description, priceTier: item.price_tier, image: item.image, intangibleBenefits: item.additional_perks, channelBenefits: channels.map((item, index) => ({ ref_id: item.id, ref_type: constants.CHANNEL, description: item.description, name: item.name, emoji_name: item.emoji_name })), roleIcon: obj, roleColor: item.role_color, usedTemplate: item.category };
-          channels = item.channels;
+          obj = { name: closure_0.name, description: closure_0.description, priceTier: closure_0.price_tier, image: closure_0.image, intangibleBenefits: closure_0.additional_perks, channelBenefits: channels.map((id) => ({ ref_id: id.id, ref_type: constants.CHANNEL, description: id.description, name: id.name, emoji_name: id.emoji_name })), roleIcon: obj, roleColor: closure_0.role_color, usedTemplate: closure_0.category };
+          channels = closure_0.channels;
           obj = { unicodeEmoji: "Array", icon: 0 };
-          obj[1] = item.image;
+          obj[1] = closure_0.image;
           return obj;
         });
       });
@@ -1667,7 +1709,7 @@ export const useEditStateIds = function useEditStateIds(groupListingId, guildId,
         if (arg0 == null) {
           items = [];
         }
-        return items.filter((item, index) => item !== closure_0);
+        return items.filter((arg0) => arg0 !== closure_0);
       });
     }, items3)
   };

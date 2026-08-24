@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
 export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
@@ -31,6 +31,7 @@ export default function GuildPowerupsMultiPerkCard(guildId) {
       badge = badge.badge;
       obj[7] = badge;
       jsx(listing(11740), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
+      const tmp6 = jsx;
     }
   }
   return tmp5;

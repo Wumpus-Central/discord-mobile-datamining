@@ -17,6 +17,6 @@ let prototype = function IAPManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
 
 export default prototype;

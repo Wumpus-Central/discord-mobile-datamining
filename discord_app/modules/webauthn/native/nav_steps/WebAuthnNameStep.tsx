@@ -4,21 +4,23 @@ import Button from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { WebAuthnScreens } from "../../WebAuthnConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ margin: { margin: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
+const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
 
 export default function WebAuthnNameStep(arg0) {
   ({ ticket: require, credential: importDefault, name } = arg0);
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let callback;
   let first;
   function _onPress() {
@@ -129,10 +131,11 @@ export default function WebAuthnNameStep(arg0) {
   }
   const tmp5Result = callback(first.useState(name), 2);
   first = tmp5Result[0];
+  obj = { children: null };
   obj = { showTopContainer: false, value: first, onChange: tmp5Result[1], style: tmp.margin, error: tmp8, title: null, placeholder: null, disabled: null, clearButtonVisibility: null, autoFocus: true, showBorder: true, required: true, large: true };
-  let intl = getSystemLocale.intl;
+  let intl = tmp2(1236).intl;
   obj[5] = intl.string(getSystemLocale.t["Jzd+z/"]);
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp2(1236).intl;
   obj[6] = intl2.string(getSystemLocale.t["I/sJtJ"]);
   obj[7] = tmp6[0];
   obj[8] = Button.ClearButtonVisibility.WITH_CONTENT;
@@ -153,7 +156,7 @@ export default function WebAuthnNameStep(arg0) {
     disabled: null,
     size: "lg"
   };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp2(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t["5dyZ1S"]);
   obj2[2] = "" === first;
   obj1[1] = callback2(Button2.Button, obj2);

@@ -1,19 +1,20 @@
 // discord_app/design/components/TableRow/native/TableRadioGroup.native.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const context = importAllResult.createContext({ selectedValue: null, onSelect: require("ME").NOOP });
-const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
 
 export const TableRadioGroupContext = context;
 export const TableRadioGroup = function TableRadioGroup(arg0) {
   ({ value, defaultValue, onChange } = arg0);
+  let callback;
   importAllResult = undefined;
   jsx = undefined;
-  let callback;
+  callback = undefined;
   dependencyMap = tmp;
   let obj = importAllResult;
   let tmp2 = null;
@@ -57,7 +58,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }
   }, items1);
   const items2 = [tmp4, callback];
-  { value: obj.useMemo(() => ({ selectedValue: c3, onSelect: callback }), items2), children: null };
+  obj = { value: obj.useMemo(() => ({ selectedValue: c3, onSelect: callback }), items2), children: null };
   obj = {
     accessibilityRole: "radiogroup",
     accessibilityLabel,

@@ -2,22 +2,23 @@
 import goBack from "../tabs/notifications/Notifications.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
-import handleConnectionOpen2 from "../../../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../../../stores/SelectedGuildStore.tsx";
 import { YouBarNavigatorScreens } from "../MainTabsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
 import { ICYMINavigator } from "../../../icymi/native/navigator/ICYMINavigator.tsx";
+import { Guilds } from "../tabs/guilds/Guilds.tsx";
 
-require = fn;
+require = arg1;
 function getGuildsComponent() {
-  return require("../tabs/guilds/Guilds.tsx").default;
+  return Guilds.default;
 }
 function getNotificationsComponent() {
   return goBack.ThemedNotifications;
 }
 function getICYMIComponent() {
-  return ICYMINavigator /* ICYMINavigator */.default;
+  return ICYMINavigator.default;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
@@ -58,9 +59,9 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
       screenOptions: memo,
       children: obj.useMemo(() => {
         let obj = {
-          name: YouBarNavigatorScreens.GUILDS,
+          name: closure_1_8.GUILDS,
           initialParams: current,
-          getComponent: getGuildsComponent,
+          getComponent: closure_1_13,
           options() {
             const merged = Object.assign(closure_2);
             return {};
@@ -70,19 +71,19 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
         let tmp3Result = null;
         if (iCYMIEnabled) {
           obj = { name: null, getComponent: null, options: null };
-          obj[0] = YouBarNavigatorScreens.ICYMI;
-          obj[1] = getICYMIComponent;
+          obj[0] = tmp5.ICYMI;
+          obj[1] = closure_1_15;
           obj[2] = function options() {
             const merged = Object.assign(closure_2);
             return {};
           };
-          tmp3Result = closure_1_9(closure_1_12.Screen, obj);
+          tmp3Result = tmp3(tmp4.Screen, obj);
         }
         obj = { children: null };
         items[1] = tmp3Result;
         items[2] = closure_1_9(closure_1_12.Screen, {
-          name: YouBarNavigatorScreens.NOTIFICATIONS,
-          getComponent: getNotificationsComponent,
+          name: closure_1_8.NOTIFICATIONS,
+          getComponent: closure_1_14,
           options() {
             const merged = Object.assign(closure_2);
             return {};
@@ -97,6 +98,6 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
   obj[1] = callback(current(accessibilityNativeStackOptions[14]).LayerScope, obj1);
   return callback(closure_5, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
 
 export default memoResult;

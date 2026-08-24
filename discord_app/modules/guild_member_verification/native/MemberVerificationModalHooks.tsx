@@ -1,12 +1,13 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import map from "InitialMemberVerificationStore.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "InitialMemberVerificationStore.tsx";
 import { setInitialVerification } from "InitialMemberVerificationStore.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 
 export const useSetInitialVerificationEffect = function useSetInitialVerificationEffect(guildId) {
   let _require = guildId;
@@ -44,7 +45,7 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
   const items3 = [guildId];
   const effect1 = React.useEffect(() => {
     if (null == ref.current.initial) {
-      setInitialVerification(closure_0, tmp);
+      closure_1_5(closure_0, tmp);
     }
   }, items3);
   return obj.initial;
@@ -77,5 +78,5 @@ export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
   const items = [closure_4];
   const items1 = [id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
 };

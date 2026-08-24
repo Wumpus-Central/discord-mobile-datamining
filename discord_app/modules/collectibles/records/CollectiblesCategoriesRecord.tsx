@@ -1,13 +1,14 @@
 // discord_app/modules/collectibles/records/CollectiblesCategoriesRecord.tsx
-import fromServer from "../../storefront/records/StorefrontCollectionRecord.tsx";
-import fromServer2 from "CollectiblesCategoryRecord.tsx";
+import closure_0 from "../../storefront/records/StorefrontCollectionRecord.tsx";
+import closure_1 from "CollectiblesCategoryRecord.tsx";
 
-const prototype = function CollectiblesCategoriesRecord(categories) {
+let prototype;
+prototype = function CollectiblesCategoriesRecord(categories) {
   const obj = Object.create(new.target.prototype);
   categories = categories.categories;
-  obj.categories = categories.map((item, index) => closure_1.fromServer(item));
+  obj.categories = categories.map((arg0) => closure_1.fromServer(arg0));
   const collections = categories.collections;
-  obj.collections = collections.map((item, index) => closure_0.fromServer(item));
+  obj.collections = collections.map((arg0) => closure_0.fromServer(arg0));
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(categories) {
@@ -16,11 +17,11 @@ prototype["fromServer"] = function fromServer(categories) {
   }
   const obj = Object.create(prototype.prototype);
   categories = categories.categories;
-  obj.categories = categories.map((item, index) => closure_1.fromServer(item));
+  obj.categories = categories.map((arg0) => closure_1.fromServer(arg0));
   const collections = categories.collections;
-  obj.collections = collections.map((item, index) => closure_0.fromServer(item));
+  obj.collections = collections.map((arg0) => closure_0.fromServer(arg0));
   return obj;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoriesRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoriesRecord.tsx");
 
 export const CollectiblesCategoriesRecord = prototype;

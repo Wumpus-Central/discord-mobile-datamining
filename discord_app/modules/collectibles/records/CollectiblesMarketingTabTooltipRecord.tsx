@@ -1,8 +1,9 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingTabTooltipRecord.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import CollectiblesMarketingType from "../../../../discord_common/js/shared/shared-constants/CollectiblesMarketingType.tsx";
 
-const prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {
+let prototype;
+prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = CollectiblesMarketingType.CollectiblesMarketingType.TAB_TOOLTIP;
   ({ title: tmp.title, body: tmp.body, asset: tmp.asset, dismissibleContent: tmp.dismissibleContent, version: tmp.version, refTargetBackground: tmp.refTargetBackground, badgeIcon: tmp.badgeIcon, badgeText: tmp.badgeText, showHoverGradient: tmp.showHoverGradient } = arg0);
@@ -20,6 +21,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ title: tmp3.title, body: tmp3.body, asset: tmp3.asset, dismissibleContent: tmp3.dismissibleContent, version: tmp3.version, refTargetBackground: tmp3.refTargetBackground, badgeIcon: tmp3.badgeIcon, badgeText: tmp3.badgeText, showHoverGradient: tmp3.showHoverGradient } = obj);
   return obj;
 };
-const result = obj132.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingTabTooltipRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingTabTooltipRecord.tsx");
 
 export default prototype;

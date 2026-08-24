@@ -1,7 +1,7 @@
 // discord_common/js/packages/kv-storage/js/types/index.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
 
 export const TableId = { Kv: "kv", KvCache: "kv_cache", Messages: "messages" };
 export const MAXIMUM_KEY_BITS = 5;

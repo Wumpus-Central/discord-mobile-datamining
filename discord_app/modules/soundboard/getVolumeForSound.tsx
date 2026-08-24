@@ -1,10 +1,10 @@
 // discord_app/modules/soundboard/getVolumeForSound.tsx
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import perceptualToAmplitude from "../../utils/PerceptualVolumeUtils.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
+import closure_2 from "../../stores/MediaEngineStore.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");
 
 export default function getVolumeForSound(arg0, USER) {
   let tmp = USER;

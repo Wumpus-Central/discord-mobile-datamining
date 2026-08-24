@@ -2,16 +2,16 @@
 let length;
 let closure_0 = function _createForOfIteratorHelper(iterable) {
   closure_0 = iterable;
-  let prop = typeof Symbol !== "undefined";
+  iterable = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
-    prop = iterable[Symbol.iterator];
+    iterable = iterable[Symbol.iterator];
   }
-  if (!prop) {
-    prop = iterable[Symbol.iterator];
+  if (!iterable) {
+    iterable = iterable[Symbol.iterator];
   }
-  let arr = prop;
-  if (prop) {
+  let arr = iterable;
+  if (iterable) {
     c4 = true;
     c5 = false;
     let obj = { s: null, n: null, e: null, f: null };
@@ -80,8 +80,8 @@ let closure_0 = function _createForOfIteratorHelper(iterable) {
               return;
             }
           }
-          let name = tmp4;
-          if (tmp5) {
+          let name = tmp3;
+          if (tmp4) {
             name = iterable.constructor.name;
           }
           if ("Map" !== name) {
@@ -110,7 +110,7 @@ let closure_0 = function _createForOfIteratorHelper(iterable) {
           }
           const _Array3 = Array;
           arr = Array.from(iterable);
-          tmp5 = "Object" === tmp4 && iterable.constructor;
+          tmp4 = "Object" === tmp3 && iterable.constructor;
         }
       }
       if (!arr) {

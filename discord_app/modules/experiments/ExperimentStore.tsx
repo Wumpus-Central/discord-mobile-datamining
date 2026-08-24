@@ -8,12 +8,12 @@ import MurmurHashV3Default from "../../../_runtime/01217_MurmurHashV3.js";
 import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
 import Version from "../build_overrides/BuildOverrideUtils.tsx";
 import isInRange from "GuildFilters.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
 import ExperimentBuckets from "ExperimentConstants.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function getHash(arg0) {
   if (undefined === dependencyMap8[arg0]) {
     const v3Result = MurmurHashV3Default.v3(arg0);
@@ -76,6 +76,7 @@ function getTrackExposureExperimentHash(descriptor) {
       const v3Result = MurmurHashV3Default.v3(combined);
       tmp16[combined] = v3Result;
       tmp17 = v3Result;
+      const obj2 = MurmurHashV3Default;
     }
     return tmp17;
   } else if (tmp.GUILD === type) {
@@ -86,6 +87,7 @@ function getTrackExposureExperimentHash(descriptor) {
       const v3Result1 = MurmurHashV3Default.v3(combined1);
       tmp9[combined1] = v3Result1;
       tmp10 = v3Result1;
+      const obj = MurmurHashV3Default;
     }
     return tmp10;
   } else {
@@ -151,11 +153,11 @@ function trackExposure(arg0) {
               obj.context_guild_id = context.guildId;
             }
             if (tmp4) {
-              let EXPERIMENT_USER_TRIGGERED = constants.EXPERIMENT_USER_TRIGGERED_FALLBACK;
-              let tmp36 = constants;
+              let EXPERIMENT_USER_TRIGGERED = tmp35.EXPERIMENT_USER_TRIGGERED_FALLBACK;
+              let tmp36 = tmp35;
             } else {
-              EXPERIMENT_USER_TRIGGERED = constants.EXPERIMENT_USER_TRIGGERED;
-              tmp36 = constants;
+              EXPERIMENT_USER_TRIGGERED = tmp35.EXPERIMENT_USER_TRIGGERED;
+              tmp36 = tmp35;
             }
             if (flag) {
               obj = {};
@@ -167,18 +169,20 @@ function trackExposure(arg0) {
               obj1 = { flush: false, fingerprint: null };
               obj1[1] = fingerprint;
               expandEventPropertiesDefault.track(tmp36.EXPERIMENT_USER_TRIGGERED_IGNORED, obj, obj1);
+              const obj11 = expandEventPropertiesDefault;
             } else {
               const obj2 = { flush: true, fingerprint: null };
               obj2[1] = fingerprint;
               expandEventPropertiesDefault.track(EXPERIMENT_USER_TRIGGERED, obj, obj2);
+              const obj8 = expandEventPropertiesDefault;
             }
           } else if (tmp22.GUILD === type) {
             if (tmp4) {
-              let EXPERIMENT_GUILD_TRIGGERED = constants.EXPERIMENT_GUILD_TRIGGERED_FALLBACK;
-              let tmp23 = constants;
+              let EXPERIMENT_GUILD_TRIGGERED = tmp60.EXPERIMENT_GUILD_TRIGGERED_FALLBACK;
+              let tmp23 = tmp60;
             } else {
-              EXPERIMENT_GUILD_TRIGGERED = constants.EXPERIMENT_GUILD_TRIGGERED;
-              tmp23 = constants;
+              EXPERIMENT_GUILD_TRIGGERED = tmp60.EXPERIMENT_GUILD_TRIGGERED;
+              tmp23 = tmp60;
             }
             obj = { name: null, revision: null, bucket: null, guild_id: null, location: null, location_stack: null, hash_result: null, excluded: null, exposure_type: null, assignment_source: null, assignment_session_id: null, assignment_loaded_from_cache: null, holdout_name: null, holdout_revision: null, holdout_bucket: null };
             obj[0] = experimentId;
@@ -196,7 +200,8 @@ function trackExposure(arg0) {
               obj3.current_session_id = store.getSessionId();
               obj3.current_fingerprint = store.getFingerprint();
               obj3.current_source = closure_20.source;
-              const obj4 = { flush: false, fingerprint: null };
+              let obj4 = expandEventPropertiesDefault;
+              obj4 = { flush: false, fingerprint: null };
               obj4[1] = fingerprint;
               obj4.track(tmp23.EXPERIMENT_GUILD_TRIGGERED_IGNORED, obj3, obj4);
             } else {
@@ -212,13 +217,15 @@ function trackExposure(arg0) {
             const obj6 = { time: null, hash: null };
             const _Date2 = Date;
             obj6[0] = Date.now();
-            obj6[1] = getTrackExposureExperimentHash(descriptor);
-            dependencyMap[getTrackExposureExperimentKey(experimentId, descriptor, _location, tmp4)] = obj6;
+            obj6[1] = tmp11(descriptor);
+            dependencyMap[tmp5(experimentId, descriptor, _location, tmp4)] = obj6;
             saveTrackedExposureExperiments(dependencyMap);
-            const tmp5Result = getTrackExposureExperimentKey(experimentId, descriptor, _location, tmp4);
+            const tmp5Result = tmp5(experimentId, descriptor, _location, tmp4);
           }
         }
       }
+      tmp11 = getTrackExposureExperimentHash;
+      tmp5 = getTrackExposureExperimentKey;
     }
   }
 }
@@ -239,7 +246,10 @@ function _loadOverrides(arg0) {
     const iter = arg0[Symbol.iterator]();
     while (iter !== undefined) {
       ({ b, k } = nextResult);
+      let tmp5 = k;
+      let tmp6 = k;
       for (const item10015 of k) {
+        let tmp7 = b;
         obj[item10015] = b;
         continue;
       }
@@ -252,9 +262,9 @@ function _loadPopulation(arg0) {
   [arr, arr2] = callback(arg0, 2);
   const tmp = callback(arg0, 2);
   return {
-    buckets: arr.map((item, index) => {
-      [tmp, arr] = item;
-      return { bucket: tmp, positions: arr.map((item, index) => ({ start: item.s, end: item.e })) };
+    buckets: arr.map((arg0) => {
+      [tmp, arr] = arg0;
+      return { bucket: tmp, positions: arr.map((s) => ({ start: s.s, end: s.e })) };
     }),
     filters: arr2.map(_loadGuildFilter),
     rawFilterData: arr2
@@ -272,6 +282,7 @@ function handleLoadedExperiments(type) {
       num = 0;
     }
     tmp = (num & constants5.STAFF) === constants5.STAFF || null != user.personal_connection_id;
+    const tmp4 = (num & constants5.STAFF) === constants5.STAFF || null != user.personal_connection_id;
   }
   if (tmp) {
     c26 = true;
@@ -281,7 +292,7 @@ function handleLoadedExperiments(type) {
     tmp5 = "ready_payload" === obj.source;
   }
   if (tmp5) {
-    str4(fingerprint[8]);
+    obj = str4(fingerprint[8]);
     obj = { fingerprint: null, current_snapshot_source: null, current_snapshot_session_id: null, current_snapshot_fingerprint: null };
     obj[0] = type.fingerprint;
     obj[1] = obj.source;
@@ -328,19 +339,19 @@ function handleLoadedExperiments(type) {
     obj[2] = str3;
     obj[3] = str4;
     obj[4] = fingerprint;
-    const item = experiments.forEach((item, index) => {
-      [tmp, tmp2, tmp3, tmp4, tmp5, num, tmp6, tmp7, tmp8, tmp9, tmp10] = item;
+    const item = experiments.forEach((arg0) => {
+      [tmp, tmp2, tmp3, tmp4, tmp5, num, tmp6, tmp7, tmp8, tmp9, tmp10] = arg0;
       obj = { type: "user", revision: tmp2, population: tmp5, bucket: tmp3, override: 0 === tmp4, hashResult: num, aaMode: 1 === tmp6, triggerDebuggingEnabled: 1 === tmp7, assignmentSource: source, sessionId, loadedFromCache: c3, fingerprint, holdoutName: tmp8, holdoutRevision: tmp9, holdoutBucket: tmp10 };
       loadedUserExperiments[tmp] = obj;
     });
     if (null != guildExperiments) {
-      const item1 = guildExperiments.forEach((item, index) => {
-        [tmp, tmp2, tmp3, arr, tmp4, arr2, tmp5, tmp6, tmp7, tmp8] = item;
-        obj = { hashKey: tmp2, revision: tmp3, populations: arr.map(_loadPopulation), overrides: _loadOverrides(tmp4), overridesFormatted: null, holdoutName: null, holdoutControlBucket: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, fingerprint: null };
+      const item1 = guildExperiments.forEach((arg0) => {
+        [tmp, tmp2, tmp3, arr, tmp4, arr2, tmp5, tmp6, tmp7, tmp8] = arg0;
+        obj = { hashKey: tmp2, revision: tmp3, populations: arr.map(closure_1_35), overrides: closure_1_34(tmp4), overridesFormatted: null, holdoutName: null, holdoutControlBucket: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, fingerprint: null };
         if (items == null) {
           items = [];
         }
-        obj[4] = items.map((item, index) => item.map(closure_35));
+        obj[4] = items.map((arr) => arr.map(closure_35));
         obj[5] = tmp5;
         obj[6] = tmp6;
         obj[7] = 1 === tmp7;
@@ -355,17 +366,21 @@ function handleLoadedExperiments(type) {
   }
   c16 = true;
 }
-function computeGuildExperimentBucketFromPopulationsOrNull(closure_9, item10027, result) {
+function computeGuildExperimentBucketFromPopulationsOrNull(guildId, item10027, result) {
   closure_0 = result;
   const iter = item10027[Symbol.iterator]();
   while (iter !== undefined) {
     ({ buckets, filters } = nextResult);
     let flag = true;
     if (null != filters) {
+      let tmp3 = tmp2;
+      let tmp4 = filters;
       for (const item10023 of filters) {
         if (null != item10023) {
+          let tmp6 = item10023;
           if (!tmp5(arg0)) {
             flag = false;
+            let tmp7 = obj;
             obj.return();
             break;
           }
@@ -374,38 +389,45 @@ function computeGuildExperimentBucketFromPopulationsOrNull(closure_9, item10027,
         continue;
       }
     }
+    let tmp8 = flag;
     if (flag) {
-      let found = buckets.find((item, index) => {
-        const positions = item.positions;
-        return positions.some((item, index) => closure_0 >= item.start && closure_0 < item.end);
+      let tmp9 = buckets;
+      let found = buckets.find((positions) => {
+        positions = positions.positions;
+        return positions.some((start) => closure_0 >= start.start && closure_0 < start.end);
       });
+      let tmp11 = found;
       if (null != found) {
         let CONTROL = found.bucket;
       } else {
+        let tmp12 = constants;
         CONTROL = constants.CONTROL;
       }
+      let tmp13 = CONTROL;
+      let tmp14 = constants;
       let tmp15 = null;
       if (CONTROL !== constants.NOT_ELIGIBLE) {
         tmp15 = CONTROL;
       }
+      let tmp16 = iter;
       iter.return();
       return tmp15;
     }
   }
   return null;
 }
-function computeGuildExperimentDescriptor(closure_9, holdoutName) {
+function computeGuildExperimentDescriptor(guildId, holdoutName) {
   const tmp2 = dependencyMap4["" + getHash(0, holdoutName)];
   if (null == tmp2) {
     return null;
   } else {
     const triggerDebuggingEnabled = tmp2.triggerDebuggingEnabled;
-    if (null != tmp2.overrides[closure_9]) {
+    if (null != tmp2.overrides[guildId]) {
       let tmp29 = null;
       if (tmp34 !== constants.NOT_ELIGIBLE) {
         let obj = { type: null, guildId: null, revision: null, bucket: null, override: true, hashResult: -1, triggerDebuggingEnabled: null };
         obj[0] = constants2.GUILD;
-        obj[1] = closure_9;
+        obj[1] = guildId;
         obj[2] = tmp32;
         obj[3] = tmp34;
         obj[6] = triggerDebuggingEnabled;
@@ -418,27 +440,31 @@ function computeGuildExperimentDescriptor(closure_9, holdoutName) {
         hashKey = holdoutName;
       }
       const _HermesInternal = HermesInternal;
-      const result = getHash("" + hashKey + ":" + closure_9) % 10000;
+      const result = getHash("" + hashKey + ":" + guildId) % 10000;
       let overridesFormatted = tmp2.overridesFormatted;
       if (overridesFormatted == null) {
         overridesFormatted = [];
       }
       for (const item10027 of overridesFormatted) {
+        let tmp7 = computeGuildExperimentBucketFromPopulationsOrNull;
         let tmp8 = computeGuildExperimentBucketFromPopulationsOrNull(arg0, item10027, result);
         if (null !== tmp8) {
           obj = { type: null, guildId: null, revision: null, bucket: null, override: true, hashResult: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null };
+          let tmp10 = constants2;
           obj[0] = constants2.GUILD;
           obj[1] = arg0;
           obj[2] = tmp2.revision;
+          let tmp11 = tmp8;
           obj[3] = tmp9;
           obj[5] = result;
           obj[6] = triggerDebuggingEnabled;
           ({ assignmentSource: obj2[7], sessionId: obj2[8], loadedFromCache: obj2[9] } = tmp2);
+          let tmp12 = obj;
           obj.return();
           return obj;
         }
       }
-      const tmp14 = computeGuildExperimentBucketFromPopulationsOrNull(closure_9, tmp2.populations, result);
+      const tmp14 = computeGuildExperimentBucketFromPopulationsOrNull(guildId, tmp2.populations, result);
       if (null == tmp14) {
         return null;
       } else {
@@ -448,7 +474,7 @@ function computeGuildExperimentDescriptor(closure_9, holdoutName) {
           if (null != tmp2.holdoutControlBucket) {
             tmp16 = null;
             if (tmp2.holdoutName !== holdoutName) {
-              const tmp18 = computeGuildExperimentDescriptor(closure_9, tmp2.holdoutName);
+              const tmp18 = computeGuildExperimentDescriptor(guildId, tmp2.holdoutName);
               let bucket;
               if (tmp18 != null) {
                 bucket = tmp18.bucket;
@@ -474,7 +500,7 @@ function computeGuildExperimentDescriptor(closure_9, holdoutName) {
         }
         const obj2 = { type: null, guildId: null, revision: null, bucket: null, hashResult: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, holdoutName: null, holdoutRevision: null, holdoutBucket: null };
         obj2[0] = constants2.GUILD;
-        obj2[1] = closure_9;
+        obj2[1] = guildId;
         obj2[2] = tmp2.revision;
         obj2[3] = tmp14;
         obj2[4] = result;
@@ -504,12 +530,17 @@ function computeGuildExperimentDescriptor(closure_9, holdoutName) {
 function processGuildExperimentPopulationFromCache(loadedGuildExperiments) {
   let obj = {};
   for (const key10006 in arg0) {
+    let tmp8 = key10006;
     obj = {};
+    let tmp9 = obj;
     let merged = Object.assign(arg0[key10006]);
     obj[key10006] = obj;
     let populations = obj[key10006].populations;
+    let tmp11 = populations;
+    let tmp = populations;
     for (const item10008 of populations) {
       let rawFilterData = item10008.rawFilterData;
+      let tmp2 = _loadGuildFilter;
       item10008.filters = rawFilterData.map(_loadGuildFilter);
       continue;
     }
@@ -517,9 +548,14 @@ function processGuildExperimentPopulationFromCache(loadedGuildExperiments) {
     if (overridesFormatted == null) {
       overridesFormatted = [];
     }
+    let tmp3 = overridesFormatted;
+    let tmp4 = overridesFormatted;
     for (const item10020 of overridesFormatted) {
+      let tmp5 = item10020;
+      let tmp6 = item10020;
       for (const item10025 of item10020) {
         let rawFilterData1 = item10025.rawFilterData;
+        let tmp7 = _loadGuildFilter;
         item10025.filters = rawFilterData1.map(_loadGuildFilter);
         continue;
       }
@@ -537,6 +573,7 @@ function handleOverlayInitialize(arg0) {
       num = 0;
     }
     tmp = (num & constants5.STAFF) === constants5.STAFF || null != user.personal_connection_id;
+    const tmp4 = (num & constants5.STAFF) === constants5.STAFF || null != user.personal_connection_id;
   }
   if (tmp) {
     c26 = true;
@@ -555,11 +592,11 @@ function handleLogout(isSwitchingAccount) {
   const Storage = Storage5.Storage;
   Storage.remove(c11);
   if (!isSwitchingAccount.isSwitchingAccount) {
-    const Storage2 = Storage5.Storage;
+    const Storage2 = tmp(595).Storage;
     Storage2.remove(exerimentOverrides);
-    const Storage3 = Storage5.Storage;
+    const Storage3 = tmp(595).Storage;
     Storage3.remove(userExperimentOverrides);
-    const Storage4 = Storage5.Storage;
+    const Storage4 = tmp(595).Storage;
     Storage4.remove(guildExperimentOverrides);
     closure_24 = {};
     closure_25 = {};
@@ -585,13 +622,13 @@ function loadLocalOverrides() {
     obj = {};
   }
   const items = [obj, , ];
-  const Storage2 = Storage5.Storage;
+  const Storage2 = tmp3(595).Storage;
   let value = Storage2.get(userExperimentOverrides);
   if (value == null) {
     value = {};
   }
   items[1] = value;
-  const Storage3 = Storage5.Storage;
+  const Storage3 = tmp3(595).Storage;
   let value1 = Storage3.get(guildExperimentOverrides);
   if (value1 == null) {
     value1 = {};
@@ -603,22 +640,38 @@ function loadLocalOverrides() {
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp7 = nextResult;
     for (const key10045 in nextResult) {
+      let tmp25 = key10045;
+      let tmp26 = key10045;
+      let tmp27 = nextResult;
       let tmp28 = tmp6[key10045];
       let tmp29 = tmp28;
       if (null != tmp28) {
+        let tmp30 = tmp28;
         if (null != tmp29.bucket) {
+          let tmp8 = tmp28;
           if (true === tmp29.override) {
+            let tmp9 = tmp28;
             if (!tmp29.fromCookie) {
+              let tmp10 = tmp28;
               let type = tmp29.type;
               if (constants2.USER === type) {
-                closure_24[key10045] = tmp29;
+                let tmp17 = closure_24;
+                let tmp18 = tmp25;
+                let tmp19 = tmp28;
+                closure_24[tmp26] = tmp29;
                 continue;
               } else {
                 if (tmp11.GUILD === type) {
-                  closure_25[key10045] = tmp29;
+                  let tmp14 = closure_25;
+                  let tmp15 = tmp25;
+                  let tmp16 = tmp28;
+                  closure_25[tmp26] = tmp29;
                   continue;
                 } else {
+                  let tmp12 = nextResult;
+                  let tmp13 = tmp25;
                   delete tmp2[tmp];
                   flag = true;
                   continue;
@@ -631,41 +684,22 @@ function loadLocalOverrides() {
           }
         }
       }
+      let tmp20 = nextResult;
+      let tmp21 = tmp25;
       delete tmp2[tmp];
       flag = true;
       continue;
     }
     continue;
   }
+  const obj4 = applyDefault;
   if (tmp22) {
     saveExperimentOverrides();
   }
-  tmp22 = (function loadCookieOverrides() {
-    let obj = callback(table[6]);
-    const buildOverrideExperiments = obj.getBuildOverrideExperiments();
-    let flag = false;
-    let flag2 = false;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      flag2 = flag;
-      while (keys[tmp] !== undefined) {
-        obj = { type: null, revision: 1, population: 0, override: true, fromCookie: true, assignmentSource: "override", bucket: null };
-        obj[0] = constants.USER;
-        obj[6] = buildOverrideExperiments[tmp4];
-        closure_24[tmp4] = obj;
-        obj = { type: null, revision: 1, override: true, fromCookie: true, assignmentSource: "override", bucket: null };
-        obj[0] = constants.GUILD;
-        obj[5] = buildOverrideExperiments[tmp4];
-        closure_25[tmp4] = obj;
-        flag = true;
-        continue;
-      }
-    }
-    return flag2;
-  })() || flag;
 }
 function saveExperimentOverrides() {
   try {
+    let tmp4 = dependencyMap;
     const Storage = Storage5.Storage;
     const result = Storage.set(userExperimentOverrides, closure_24);
     try {
@@ -678,7 +712,9 @@ function saveExperimentOverrides() {
     }
   } catch (tmp8) {
     logger.error("Error saving user experiment overrides, unsaved data will be lost", tmp8);
+    tmp4 = dependencyMap;
     expandEventPropertiesDefault.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveExperimentOverrides" });
+    const obj = expandEventPropertiesDefault;
   }
 }
 function saveTrackedExposureExperiments(closure_17) {
@@ -690,6 +726,7 @@ function saveTrackedExposureExperiments(closure_17) {
   } catch (tmp6) {
     logger.error("Error saving tracked exposure experiments, unsaved data will be lost", tmp6);
     expandEventPropertiesDefault.track(constants4.EXPERIMENT_SAVE_EXPOSURE_FAILED, { module: "discord_app", call: "ExperimentStore.saveTrackedExposureExperiments" });
+    const obj2 = expandEventPropertiesDefault;
   }
 }
 function handleExperimentOverrideBucket(skipCleanup) {
@@ -730,10 +767,15 @@ function handleExperimentOverrideBucket(skipCleanup) {
     if (!skipCleanup.skipCleanup) {
       const items = [obj1, obj];
       for (const item10037 of items) {
+        let tmp24 = item10037;
         for (const key10041 in item10037) {
+          let tmp30 = key10041;
+          let tmp31 = dependencyMap2;
           if (null != dependencyMap2[key10041]) {
             continue;
           } else {
+            let tmp25 = obj1;
+            let tmp26 = tmp29;
             delete tmp4[tmp3];
             continue;
           }
@@ -747,9 +789,12 @@ function handleExperimentOverrideBucket(skipCleanup) {
 }
 function handleGuildChange(arg0) {
   for (const key10007 in closure_23) {
+    let tmp5 = key10007;
+    let tmp6 = callback;
     if (tmp3.id !== callback(key10007.split(":"), 1)[0]) {
       continue;
     } else {
+      let tmp4 = closure_23;
       delete tmp[tmp2];
       continue;
     }
@@ -803,6 +848,8 @@ prototype["initialize"] = function initialize() {
       if (keys !== undefined) {
         flag2 = flag;
         while (keys[tmp] !== undefined) {
+          let tmp19 = tmp10;
+          let tmp20 = c29;
           if (timestamp - e[tmp10].time <= c29) {
             continue;
           } else {
@@ -832,14 +879,14 @@ prototype["loadCache"] = function loadCache() {
       closure_22 = processGuildExperimentPopulationFromCache(snapshot.loadedGuildExperiments);
       const _Object = Object;
       let values = Object.values(loadedUserExperiments);
-      const item = values.forEach((item, index) => {
-        item.loadedFromCache = true;
+      const item = values.forEach((arg0) => {
+        arg0.loadedFromCache = true;
         return true;
       });
       const _Object2 = Object;
       values = Object.values(closure_22);
-      const item1 = values.forEach((item, index) => {
-        item.loadedFromCache = true;
+      const item1 = values.forEach((arg0) => {
+        arg0.loadedFromCache = true;
         return true;
       });
     } else {
@@ -857,19 +904,19 @@ prototype["loadCache"] = function loadCache() {
       obj[2] = source;
       obj[3] = sessionId;
       obj[4] = fingerprint;
-      const item2 = rawUserExperiments.forEach((item, index) => {
-        [tmp, tmp2, tmp3, tmp4, tmp5, num, tmp6, tmp7, tmp8, tmp9, tmp10] = item;
+      const item2 = rawUserExperiments.forEach((arg0) => {
+        [tmp, tmp2, tmp3, tmp4, tmp5, num, tmp6, tmp7, tmp8, tmp9, tmp10] = arg0;
         obj = { type: "user", revision: tmp2, population: tmp5, bucket: tmp3, override: 0 === tmp4, hashResult: num, aaMode: 1 === tmp6, triggerDebuggingEnabled: 1 === tmp7, assignmentSource: source, sessionId, loadedFromCache: c3, fingerprint, holdoutName: tmp8, holdoutRevision: tmp9, holdoutBucket: tmp10 };
         loadedUserExperiments[tmp] = obj;
       });
       if (null != rawGuildExperiments) {
-        const item3 = rawGuildExperiments.forEach((item, index) => {
-          [tmp, tmp2, tmp3, arr, tmp4, arr2, tmp5, tmp6, tmp7, tmp8] = item;
-          obj = { hashKey: tmp2, revision: tmp3, populations: arr.map(_loadPopulation), overrides: _loadOverrides(tmp4), overridesFormatted: null, holdoutName: null, holdoutControlBucket: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, fingerprint: null };
+        const item3 = rawGuildExperiments.forEach((arg0) => {
+          [tmp, tmp2, tmp3, arr, tmp4, arr2, tmp5, tmp6, tmp7, tmp8] = arg0;
+          obj = { hashKey: tmp2, revision: tmp3, populations: arr.map(closure_1_35), overrides: closure_1_34(tmp4), overridesFormatted: null, holdoutName: null, holdoutControlBucket: null, aaMode: null, triggerDebuggingEnabled: null, assignmentSource: null, sessionId: null, loadedFromCache: null, fingerprint: null };
           if (items == null) {
             items = [];
           }
-          obj[4] = items.map((item, index) => item.map(closure_35));
+          obj[4] = items.map((arr) => arr.map(closure_35));
           obj[5] = tmp5;
           obj[6] = tmp6;
           obj[7] = 1 === tmp7;
@@ -885,7 +932,8 @@ prototype["loadCache"] = function loadCache() {
   }
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
-  const obj = {};
+  let obj = { version: ExperimentStore.LATEST_SNAPSHOT_VERSION, data: null };
+  obj = {};
   const merged = Object.assign(closure_20);
   obj[1] = obj;
   return obj;
@@ -910,6 +958,7 @@ prototype["getUserExperimentDescriptor"] = function getUserExperimentDescriptor(
     const v3Result = MurmurHashV3Default.v3(id);
     tmp4[id] = v3Result;
     tmp5 = v3Result;
+    const obj = MurmurHashV3Default;
   }
   return dependencyMap3["" + tmp5];
 };
@@ -962,8 +1011,9 @@ prototype["getLoadedUserExperiment"] = function getLoadedUserExperiment(name) {
     const v3Result = MurmurHashV3Default.v3(name);
     tmp2[name] = v3Result;
     tmp3 = v3Result;
+    const obj = MurmurHashV3Default;
   }
-  return table[tmp3];
+  return closure_21[tmp3];
 };
 prototype["getLoadedGuildExperiment"] = function getLoadedGuildExperiment(id) {
   let tmp3 = dependencyMap8[id];
@@ -971,18 +1021,19 @@ prototype["getLoadedGuildExperiment"] = function getLoadedGuildExperiment(id) {
     const v3Result = MurmurHashV3Default.v3(id);
     tmp2[id] = v3Result;
     tmp3 = v3Result;
+    const obj = MurmurHashV3Default;
   }
-  return table2[tmp3];
+  return closure_22[tmp3];
 };
 prototype["getRecentExposures"] = function getRecentExposures(GUILD, id) {
   closure_0 = "" + GUILD + "|" + id + "|";
   const entries = Object.entries(closure_17);
-  const found = entries.filter((item, index) => {
-    [obj] = item;
+  const found = entries.filter((arg0) => {
+    [obj] = arg0;
     return obj.startsWith(closure_0);
   });
-  return found.map((item, index) => {
-    [str, ] = item;
+  return found.map((arg0) => {
+    [str, ] = arg0;
     const items = [str.replace(closure_0, ""), tmp];
     return items;
   });
@@ -1014,29 +1065,34 @@ prototype["getExperimentOverrideDescriptor"] = function getExperimentOverrideDes
 };
 prototype["getAllExperimentAssignments"] = function getAllExperimentAssignments() {
   let obj = {};
+  obj = {};
   const keys = Object.keys(closure_19);
-  const item = keys.forEach((item, index) => {
-    const combined = "" + item;
+  const item = keys.forEach((arg0) => {
+    const combined = "" + arg0;
     let tmp4 = closure_1_27[combined];
     if (undefined === tmp4) {
-      obj = MurmurHashV3Default;
+      obj = closure_1_1(closure_1_2[7]);
       const v3Result = obj.v3(combined);
       tmp3[combined] = v3Result;
       tmp4 = v3Result;
     }
-    obj[tmp4] = item;
+    obj[tmp4] = arg0;
   });
   for (const key10013 in closure_21) {
+    let tmp3 = key10013;
     let tmp4 = obj[key10013];
     if (null == tmp4) {
       continue;
     } else {
+      let tmp2 = dependencyMap3;
       obj[tmp4] = dependencyMap3[key10013].bucket;
       continue;
     }
     continue;
   }
   for (const key10019 in closure_23) {
+    let tmp5 = key10019;
+    let tmp6 = dependencyMap5;
     let tmp7 = dependencyMap5[key10019];
     if (null == tmp7) {
       continue;
@@ -1051,10 +1107,14 @@ prototype["getAllExperimentAssignments"] = function getAllExperimentAssignments(
 prototype["getSerializedState"] = function getSerializedState() {
   let obj = {};
   for (const key10005 in closure_22) {
+    let tmp2 = key10005;
     let _JSON = JSON;
     let _JSON2 = JSON;
+    let tmp3 = dependencyMap4;
     obj[key10005] = JSON.parse(JSON.stringify(dependencyMap4[key10005]));
     let populations = obj[key10005].populations;
+    let tmp4 = populations;
+    let tmp = populations;
     for (const item10007 of populations) {
       item10007.filters = [];
       continue;
@@ -1079,8 +1139,9 @@ ExperimentStore.LATEST_SNAPSHOT_VERSION = 1;
 hasExperimentTrackedExposure = new hasExperimentTrackedExposure({ LOGOUT: handleLogout, LOGIN_SUCCESS: handleLogin, CONNECTION_OPEN: handleLoadedExperiments, EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments, OVERLAY_INITIALIZE: handleOverlayInitialize, EXPERIMENTS_FETCH_FAILURE: handleFetchFailure, EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket, GUILD_CREATE: handleGuildChange, GUILD_UPDATE: handleGuildChange }, require("dispatcher").DispatchBand.Early, tmp, Object, prototype, "hasExperimentTrackedExposure", handleLogout, handleLogin, handleLoadedExperiments, handleOverlayInitialize, handleFetchFailure, ExperimentStore);
 // ThrowIfThisInitialized (0x7c)
 hasExperimentTrackedExposure.trackExposure = trackExposure;
-const tmp6 = new timestampDefault("ExperimentStore");
-let result = require("obj132").fileFinishedImporting("modules/experiments/ExperimentStore.tsx");
+let obj = { LOGOUT: handleLogout, LOGIN_SUCCESS: handleLogin, CONNECTION_OPEN: handleLoadedExperiments, EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments, OVERLAY_INITIALIZE: handleOverlayInitialize, EXPERIMENTS_FETCH_FAILURE: handleFetchFailure, EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket, GUILD_CREATE: handleGuildChange, GUILD_UPDATE: handleGuildChange };
+let tmp6 = new timestampDefault("ExperimentStore");
+let result = require("set").fileFinishedImporting("modules/experiments/ExperimentStore.tsx");
 
 export default hasExperimentTrackedExposure;
 export const registerExperiment = function registerExperiment(experimentId) {

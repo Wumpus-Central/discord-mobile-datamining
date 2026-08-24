@@ -1,19 +1,18 @@
 // discord_app/modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import getRRule from "ScheduleUtils.tsx";
 import useEventException from "../useEventException.tsx";
 import useEventSchedule from "../useEventSchedule.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import scheduledEventSort from "../GuildScheduledEventStore.tsx";
+import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import closure_3 from "../GuildScheduledEventStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ GuildScheduledEventUserResponses: c4, GuildScheduledEventStatusDone: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
 let obj = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
 
 export const getExistingRsvp = function getExistingRsvp(closure_1_0, closure_1_1) {
-  return store2.getRsvp(require, dependencyMap, store.getId());
+  return store2.getRsvp(closure_1_0, closure_1_1, store.getId());
 };
 export const ResponseOptions = obj;
 export const getResponseOptions = function getResponseOptions() {
@@ -34,13 +33,14 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
   const guildScheduledEvent = store2.getGuildScheduledEvent(eventId);
   if (null != guildScheduledEvent) {
     const eventException = useEventException.getEventException(recurrenceId, eventId);
+    const obj4 = useEventException;
     let scheduled_start_time;
     if (guildScheduledEvent != null) {
       scheduled_start_time = guildScheduledEvent.scheduled_start_time;
     }
     let recurrenceStatus = null;
     if (null != scheduled_start_time) {
-      let tmp33Result = getRRule;
+      let tmp33Result = tmp33(8785);
       let scheduled_start_time1;
       if (guildScheduledEvent != null) {
         scheduled_start_time1 = guildScheduledEvent.scheduled_start_time;
@@ -50,7 +50,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     if (null == recurrenceStatus) {
       if (recurrenceId == null) {
-        tmp33Result = getRRule;
+        tmp33Result = tmp33(8785);
         recurrenceId = tmp33Result.getNextRecurrenceIdInEvent(guildScheduledEvent);
       }
       let tmp12 = recurrenceId;

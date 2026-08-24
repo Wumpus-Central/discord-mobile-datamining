@@ -1,28 +1,31 @@
 // discord_app/modules/verification/native/components/Overview.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleRequiredAction from "../../../../stores/UserRequiredActionStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/UserRequiredActionStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../utils/HelpdeskUtils.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Endpoints: error, VerificationModalScenes: closure_8, VerificationTypes: c9, HelpdeskArticles } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, containerInner: null, title: null, body: null, blocks: null, verificationType: null, button: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, padding: 20, justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { marginTop: 20, fontSize: 17, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj1 = { marginTop: 20, fontSize: 17, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[3] = { marginTop: 4, marginBottom: 20, fontSize: 14, textAlign: "center", color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = { width: "60%", justifyContent: "center" };
 createCacheKey[5] = { marginBottom: 20 };
 createCacheKey[6] = { marginBottom: 20, marginHorizontal: 20, alignSelf: "center" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { marginTop: 4, marginBottom: 20, fontSize: 14, textAlign: "center", color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 const articleURL = importDefaultResult.getArticleURL(HelpdeskArticles.VERIFICATION_FAQ);
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/Overview.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/Overview.tsx");
 
 export default function Overview() {
   const tmp = callback3();
@@ -37,52 +40,54 @@ export default function Overview() {
   navigation = obj1.useNavigation();
   stateFromStores(navigation[12])(_require(navigation[12]).BackPressHandler.minimize);
   const items1 = [navigation, stateFromStores, tmp.verificationType];
+  obj = { style: tmp.container, children: null };
   obj = { style: tmp.containerInner, children: null };
   const callback = React.useCallback(() => closure_1_10(closure_1_11, {
-    children: stateFromStores.map((item, index) => {
-      const verificationType = item;
-      if (item === closure_1_9.CAPTCHA) {
+    children: stateFromStores.map((arg0) => {
+      const verificationType = arg0;
+      if (arg0 === closure_1_9.CAPTCHA) {
         let obj = { text: null, onPress: null, grow: true };
-        const intl = closure_1_0(navigation[14]).intl;
-        obj[0] = intl.string(closure_1_0(navigation[14]).t["3413d0"]);
+        const intl = closure_1_0(closure_1_2[14]).intl;
+        obj[0] = intl.string(closure_1_0(closure_1_2[14]).t["3413d0"]);
         obj[1] = function onPress() {
           let obj = callback(table[15]);
-          callback(table[15]).showCaptcha().then((result) => {
+          callback(table[15]).showCaptcha().then((captcha_key) => {
             const HTTP = callback(table[16]).HTTP;
-            const obj = { captcha_key: result };
+            obj = { url: constants.CAPTCHA, body: obj, oldFormErrors: true, rejectWithError: true };
+            obj = { captcha_key };
             HTTP.post(obj);
           });
         };
-        let tmp4 = closure_1_10(closure_1_0(navigation[13]).Button, obj);
+        let tmp4 = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj);
       } else {
         obj = { style: null, children: null };
         obj[0] = verificationType.verificationType;
         obj = { text: null, onPress: null, grow: true };
-        obj[0] = stateFromStores(navigation[10]).getButtonTitle(item);
+        obj[0] = closure_1_1(closure_1_2[10]).getButtonTitle(arg0);
         obj[1] = function onPress() {
           let tmp4 = closure_0 !== closure_2_9.EMAIL_OR_PHONE;
           if (tmp4) {
-            tmp4 = closure_0 !== closure_2_9.EMAIL;
+            tmp4 = tmp2 !== tmp3.EMAIL;
           }
           if (tmp4) {
-            tmp4 = closure_0 !== closure_2_9.REVERIFY_EMAIL;
+            tmp4 = tmp2 !== tmp3.REVERIFY_EMAIL;
           }
           if (tmp4) {
-            const StackActions = closure_2_0(navigation[18]).StackActions;
+            const StackActions = closure_2_0(closure_2_2[18]).StackActions;
             closure_1_2.dispatch(StackActions.push(closure_2_8.ADD_PHONE));
           } else {
-            closure_2_0(navigation[17]).accountDetailsInit();
+            closure_2_0(closure_2_2[17]).accountDetailsInit();
             const currentUser = closure_2_6.getCurrentUser();
             let email;
             if (currentUser != null) {
               email = currentUser.email;
             }
-            const obj = closure_2_0(navigation[17]);
+            const obj = closure_2_0(closure_2_2[17]);
           }
         };
-        obj[1] = closure_1_10(closure_1_0(navigation[13]).Button, obj);
-        tmp4 = closure_1_10(closure_1_4, obj, item);
-        const obj4 = stateFromStores(navigation[10]);
+        obj[1] = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj);
+        tmp4 = closure_1_10(closure_1_4, obj, arg0);
+        const obj4 = closure_1_1(closure_1_2[10]);
       }
       return tmp4;
     })
@@ -95,6 +100,7 @@ export default function Overview() {
   const intl2 = _require(navigation[14]).intl;
   obj2[2] = intl2.format(_require(navigation[14]).t["0rqMV5"], { helpCenterURL: closure_14 });
   items2[1] = callback(_require(navigation[19]).Text, obj2);
+  const obj3 = { helpCenterURL: closure_14 };
   let tmp4 = stateFromStores(navigation[12]);
   items2[2] = callback(View, { style: tmp.blocks, children: callback() });
   obj[1] = items2;

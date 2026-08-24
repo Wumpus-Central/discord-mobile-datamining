@@ -1,17 +1,17 @@
 // discord_app/modules/profile_customization/useOpenProfileSettings.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import noop from "../../../_runtime/00019_noop.js";
 import ME from "../../Constants.tsx";
 import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
 import mergeGuildAvatarDefault from "../../stores/UserStore.tsx";
-import zustandStore from "ProfileCustomizationNavigationStore.tsx";
+import closure_3 from "ProfileCustomizationNavigationStore.tsx";
 import handleFormOpen from "../user_profile/UserProfileSettingsStore.tsx";
 
 noop.useCallback;
 mergeGuildAvatarDefault;
 const UserSettingsSections = ME.UserSettingsSections;
 let closure_5 = MAX_FAVORITES.ProfileCustomizationSubsection;
-const result = obj132.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
+const result = set.fileFinishedImporting("modules/profile_customization/useOpenProfileSettings.tsx");
 
 export default function useOpenProfileSettings() {
   let obj = arg0;
@@ -24,7 +24,7 @@ export default function useOpenProfileSettings() {
   return useCallback(() => {
     if (null != guild) {
       let obj = guild(scrollPosition[7]);
-      const guildIdentitySettings = obj.initGuildIdentitySettings(guild.id);
+      const guildIdentitySettings = obj.initGuildIdentitySettings(tmp.id);
     }
     if (null != guild) {
       let USER_PROFILE = closure_1_5.GUILD;
@@ -33,7 +33,7 @@ export default function useOpenProfileSettings() {
     }
     obj = { subsection: USER_PROFILE, scrollPosition };
     closure_1_3.setState(obj);
-    obj = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION };
+    obj = { screen: closure_1_4.PROFILE_CUSTOMIZATION };
     guild(scrollPosition[8]).openUserSettings(obj);
   }, items);
 };

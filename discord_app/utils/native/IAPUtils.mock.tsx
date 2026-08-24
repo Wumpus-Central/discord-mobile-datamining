@@ -1,8 +1,8 @@
 // discord_app/utils/native/IAPUtils.mock.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import items from "../../modules/billing/native/iapProducts.tsx";
 
-const result = obj132.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
+const result = set.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {
   loadProducts() {

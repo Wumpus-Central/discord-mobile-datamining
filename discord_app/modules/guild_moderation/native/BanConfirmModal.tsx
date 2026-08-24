@@ -2,9 +2,9 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_moderation/native/BanConfirmModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_moderation/native/BanConfirmModal.tsx");
 
 export default function BanConfirmModal(onBeforeGoBack) {
   ({ guildId: require, userId: importDefault } = onBeforeGoBack);
@@ -14,7 +14,7 @@ export default function BanConfirmModal(onBeforeGoBack) {
   const intl = require(onGoBack[4]).intl;
   obj[1] = intl.string(require(onGoBack[4]).t.R3QeLQ);
   obj[2] = function render() {
-    return jsx(importDefault(onGoBack[5]), { onBan: onGoBack, guildId: closure_0, userId: closure_1 });
+    return closure_1_3(closure_1_1(onGoBack[5]), { onBan: onGoBack, guildId: closure_0, userId: closure_1 });
   };
   return jsx(importDefault(onGoBack[3]), { screenKey: "ban", title: null, render: null });
 };

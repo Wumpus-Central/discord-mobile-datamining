@@ -1,14 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import sortActivity from "../../../../../stores/PresenceStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../../../stores/UserStore.tsx";
 import { HappeningNowCardTrackingType as closure_7 } from "HappeningNowConstants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const LARGE = require("Button").AvatarSizes.LARGE;
 let closure_11 = createCacheKey.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
@@ -20,21 +20,23 @@ const memoResult = importAllResult.memo((index) => {
   if (flag === undefined) {
     flag = false;
   }
+  let analyticsLocations;
+  let stateFromStores;
   let status;
-  const analyticsLocations = userId(guildId[9])().analyticsLocations;
+  analyticsLocations = userId(guildId[9])().analyticsLocations;
   let obj = index(guildId[10]);
   let items = [closure_6];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(userId), items1);
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(userId), items1);
   const items2 = [index, guildId, userId, stateFromStores, analyticsLocations];
   const callback = analyticsLocations.useCallback(() => {
-    userId(guildId[11]);
-    const obj = { order: index, guild_id: guildId, type: closure_1_7.INDIVIDUAL_USER_CARD, highlighted_user_ids: items };
+    let obj = userId(guildId[11]);
+    obj = { order: index, guild_id: guildId, type: closure_1_7.INDIVIDUAL_USER_CARD, highlighted_user_ids: items };
     items = [userId];
-    obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
+    obj.track(closure_1_8.ACTIVITY_CARD_CLICKED, obj);
     if (null != stateFromStores) {
-      index(guildId[13])(guildId[12], guildId.paths).then((result) => result.default({ userId: id.id, localUser: id, sourceAnalyticsLocations: closure_3 }));
-      const promise = index(guildId[13])(guildId[12], guildId.paths);
+      index(tmp[13])(tmp[12], tmp.paths).then((arg0) => arg0.default({ userId: id.id, localUser: id, sourceAnalyticsLocations: closure_3 }));
+      const promise = index(tmp[13])(tmp[12], tmp.paths);
     }
   }, items2);
   obj1 = index(guildId[10]);
@@ -45,10 +47,10 @@ const memoResult = importAllResult.memo((index) => {
       let obj = {};
     } else {
       obj = { status: null, activities: null, isMobileOnline: null, isVROnline: null };
-      obj[0] = status.getStatus(stateFromStores.id, guildId);
-      obj[1] = status.getActivities(stateFromStores.id, guildId);
-      obj[2] = status.isMobileOnline(stateFromStores.id);
-      obj[3] = status.isVROnline(stateFromStores.id);
+      obj[0] = status.getStatus(tmp.id, guildId);
+      obj[1] = status.getActivities(tmp.id, guildId);
+      obj[2] = status.isMobileOnline(tmp.id);
+      obj[3] = status.isVROnline(tmp.id);
     }
     return obj;
   }, items4);
@@ -88,6 +90,6 @@ const memoResult = importAllResult.memo((index) => {
   }
   tmp = callback();
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
 
 export default memoResult;

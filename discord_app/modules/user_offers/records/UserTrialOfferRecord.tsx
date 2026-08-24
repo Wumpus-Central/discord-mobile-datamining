@@ -1,6 +1,6 @@
 // discord_app/modules/user_offers/records/UserTrialOfferRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
-import createFromServer from "../../billing/records/SubscriptionTrialRecord.tsx";
+import closure_0 from "../../billing/records/SubscriptionTrialRecord.tsx";
 
 toJSDefault;
 let UserTrialOfferRecord;
@@ -106,6 +106,6 @@ prototype["hasExpired"] = function hasExpired() {
 prototype["isRedeemed"] = function isRedeemed() {
   return null != this.redeemedAt;
 };
-const result = require("obj132").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/user_offers/records/UserTrialOfferRecord.tsx");
 
 export default UserTrialOfferRecord;

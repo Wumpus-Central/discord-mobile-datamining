@@ -1,10 +1,10 @@
 // discord_app/modules/badges/BadgeCustomization.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 let items = [BadgeId.BadgeId.STAFF];
 let set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/badges/BadgeCustomization.tsx");
+const result = set.fileFinishedImporting("modules/badges/BadgeCustomization.tsx");
 
 export const NON_CUSTOMIZABLE_BADGE_IDS = set;
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
@@ -19,10 +19,10 @@ export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeH
 };
 export const getHideableBadges = function getHideableBadges(memo, unhideableBadgeIds) {
   closure_0 = unhideableBadgeIds;
-  const found = memo.filter((item, index) => {
-    let owned = item.owned;
+  const found = memo.filter((owned) => {
+    owned = owned.owned;
     if (owned) {
-      owned = !unhideableBadgeIds.has(item.badge_id);
+      owned = !unhideableBadgeIds.has(owned.badge_id);
     }
     return owned;
   });

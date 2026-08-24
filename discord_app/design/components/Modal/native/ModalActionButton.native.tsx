@@ -5,11 +5,11 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ spacer: { marginTop: 12 } });
-const result = require("obj132").fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");
 
 export const ModalActionButton = function ModalActionButton(variant) {
   variant = variant.variant;
@@ -20,6 +20,7 @@ export const ModalActionButton = function ModalActionButton(variant) {
     obj[0] = tmp2.spacer;
     tmp5 = callback(View, obj);
   }
+  obj = { children: null };
   const items = [tmp5, ];
   obj = {};
   const merged1 = Object.assign(merged);
@@ -27,5 +28,5 @@ export const ModalActionButton = function ModalActionButton(variant) {
   obj.size = "lg";
   items[1] = callback(Button.Button, obj);
   obj[0] = items;
-  return callback(closure_4, obj);
+  return closure_5(closure_4, obj);
 };

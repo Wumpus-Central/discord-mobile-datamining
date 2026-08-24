@@ -2,13 +2,13 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import XSmallBoldIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
 import _startAudioRecording from "../VoiceMessageUtils.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import setContent from "../../../action_sheet/native/ActionSheetStore.tsx";
-import getState from "../../../replies/PendingReplyStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_9 from "../../../replies/PendingReplyStore.tsx";
+import closure_10 from "../../../../stores/ChannelStore.tsx";
 import VoiceMessageRecordingStatus from "../VoiceMessagesUIStore.tsx";
 import VoiceMessageAnimationState from "../../VoiceMessageConstants.tsx";
 import ME from "../../../../Constants.tsx";
@@ -16,22 +16,25 @@ import { MessageSendLocation } from "../../../messages/MessageConstants.tsx";
 import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import "createCacheKey";
+import { LegacyBaseButton } from "../../../../../_runtime/06377_LegacyBaseButton.js";
+import { MicrophoneIcon } from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import { coerceMainRoute } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
-require = fn;
+require = arg1;
 function VoiceMessageRecordingCancelledToastIcon() {
-  { style: callback().icon, "aria-hidden": true, children: null };
-  const obj = { color: ThemesDefault.colors.WHITE, size: "xs" };
+  let obj = { style: callback().icon, "aria-hidden": true, children: null };
+  obj = { color: ThemesDefault.colors.WHITE, size: "xs" };
   obj[2] = jsx(XSmallBoldIcon.XSmallBoldIcon, { color: ThemesDefault.colors.WHITE, size: "xs" });
   return <closure_6 color={ThemesDefault.colors.WHITE} size="xs" />;
 }
 function triggerHapticGuarded() {
   if (state.getState().showRecordingOverlay) {
     _startAudioRecording.triggerHaptic();
+    const obj = _startAudioRecording;
   }
 }
 let c5 = importAllResult;
@@ -39,7 +42,8 @@ let c5 = importAllResult;
 ({ setIsVoiceMessageButtonMounted: unpackModuleId, setIsUsingHoldGesture: closure_12, setVoiceMessageAnimationState: map1, showVoiceMessagesTooltip: closure_14, useVoiceMessagesUIStore: closure_15, setShowRecordingOverlay: closure_16, hideVoiceMessagesTooltip: closure_17 } = VoiceMessageRecordingStatus);
 ({ VoiceMessageAnimationState: closure_18, VOICE_RECORDING_MIN_DURATION_MILLIS: closure_19 } = VoiceMessageAnimationState);
 ({ ComponentActions: closure_20, ComponentActionsKeyed: closure_21, MessageFlags: closure_22 } = ME);
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_4 };
+let obj = { icon: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.round, padding: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_4 };
 obj[0] = obj;
 let closure_26 = createCacheKey.createStyles(obj);
 createCacheKey = { themedChatInput: { backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG } };
@@ -48,26 +52,38 @@ let closure_30 = { code: "function VoiceMessageButtonTsx1(newValue){const{voiceM
 let closure_31 = { code: "function VoiceMessageButtonTsx2(){const{runOnJS,handleFinalize}=this.__closure;runOnJS(handleFinalize)();}" };
 let closure_32 = { code: "function VoiceMessageButtonTsx3(e){const{isGestureActiveValue,LOCK_THRESHOLD,cancelThresholdX,handleUpdateValue,VoiceMessageAnimationState}=this.__closure;if(!isGestureActiveValue.get())return;if(e.translationY<=-LOCK_THRESHOLD&&e.absoluteX>=cancelThresholdX){handleUpdateValue(VoiceMessageAnimationState.LOCKING);}else if(e.absoluteX<cancelThresholdX){handleUpdateValue(VoiceMessageAnimationState.CANCELLING);}else if(e.absoluteX>=cancelThresholdX){handleUpdateValue(VoiceMessageAnimationState.SENDING);}}" };
 let closure_33 = { code: "function VoiceMessageButtonTsx4(e){const{isGestureActiveValue,runOnJS,setIsUsingHoldGesture,voiceMessageAnimationState,VoiceMessageAnimationState,startRecording}=this.__closure;if(e.numberOfTouches>1)return;if(isGestureActiveValue.get())return;runOnJS(setIsUsingHoldGesture)(true);voiceMessageAnimationState.set([VoiceMessageAnimationState.SENDING,VoiceMessageAnimationState.SENDING]);runOnJS(startRecording)();}" };
+let obj2 = { backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG };
 const memoResult = importAllResult.memo((disabled) => {
   disabled = disabled.disabled;
   let _require = disabled;
   const channelId = disabled.channelId;
+  let sharedValue1 = channelId;
+  dependencyMap = undefined;
+  let sharedValue;
   let first;
   importAllResult = undefined;
+  closure_6 = undefined;
+  let currentState;
+  closure_8 = undefined;
+  closure_9 = undefined;
+  let callback;
+  let callback1;
   let callback2;
   let callback3;
   c14 = undefined;
-  let obj = useIsMobileVisualRefreshExperimentEnabled;
-  obj1 = useGradientBottom;
+  let obj = _useIsMobileVisualRefreshExperimentEnabled;
+  obj1 = _useGradientBottom;
   const clientThemesOverride = obj1.useClientThemesOverride(callback2().themedChatInput);
   const tmp3 = state((voiceMessageAnimationState) => voiceMessageAnimationState.voiceMessageAnimationState);
   dependencyMap = tmp3;
   let tmp = callback2();
-  const sharedValue = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(0);
+  sharedValue = _ReanimatedRexport.useSharedValue(0);
+  _require = undefined;
+  sharedValue1 = undefined;
   let ref = importAllResult.useRef(false);
   _require = ref;
-  let obj3 = ReanimatedRexport;
-  const sharedValue1 = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(false);
+  let obj3 = _ReanimatedRexport;
+  sharedValue1 = _ReanimatedRexport.useSharedValue(false);
   let items = [ref, sharedValue1];
   const items1 = [
     ref,
@@ -81,10 +97,11 @@ const memoResult = importAllResult.memo((disabled) => {
   first = tmp7[0];
   importAllResult = tmp9;
   closure_6 = tmp10;
-  const currentState = importAllResult.useRef(true);
+  currentState = importAllResult.useRef(true);
   closure_8 = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
   const tmp11 = sharedValue1(10718)();
+  _require = undefined;
   _require = sharedValue((arg0) => {
     closure_0 = arg0;
     c3 = 0;
@@ -202,11 +219,11 @@ const memoResult = importAllResult.memo((disabled) => {
                 obj7[3] = [];
                 const obj8 = { flags: null, location: null, attachmentsToUpload: null, onAttachmentUploadError: null };
                 obj8[0] = closure_2_22.IS_VOICE_MESSAGE;
-                obj8[1] = MessageSendLocation.VOICE_MESSAGE;
+                obj8[1] = closure_2_23.VOICE_MESSAGE;
                 obj8[2] = items;
                 obj8[3] = function onAttachmentUploadError(file, code, reason) {
-                  _undefined(table[28]);
-                  const obj = { file, guildId: _undefined2.getGuildId(), analyticsLocations: [], code, reason };
+                  let obj = _undefined(table[28]);
+                  obj = { file, guildId: _undefined2.getGuildId(), analyticsLocations: [], code, reason };
                   const result = obj.handleUploadMessageAttachmentsErrors(obj);
                 };
                 const merged = Object.assign(sendMessageOptionsForReply);
@@ -229,7 +246,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return iter;
   });
   const items2 = [channelId, tmp7[2]];
-  const callback = importAllResult.useCallback(function() {
+  callback = importAllResult.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -255,9 +272,9 @@ const memoResult = importAllResult.memo((disabled) => {
     };
   }, []);
   const effect2 = importAllResult.useEffect(() => {
-    closure_0 = closure_7.addEventListener("change", (event) => {
-      const current = ref.current;
-      let tmp5 = "active" !== event;
+    closure_0 = closure_7.addEventListener("change", (current) => {
+      current = ref.current;
+      let tmp5 = "active" !== current;
       if (!tmp5) {
         let tmp6 = "inactive" !== current;
         if (tmp6) {
@@ -269,17 +286,17 @@ const memoResult = importAllResult.memo((disabled) => {
         tmp5 = ref2.current !== lib(closure_1_2[24]).VoiceMessageRecordingResult.CANCELLED_ON_BACKGROUND;
       }
       if (!tmp5) {
-        sharedValue1(closure_1_2[31]);
-        const obj = { key: "VOICE_MESSAGE_CANCELLED_ON_BACKGROUND", content: null, icon: null, position: "bottom" };
-        const intl = lib(closure_1_2[32]).intl;
-        obj[1] = intl.string(lib(closure_1_2[32]).t.JM7Y2D);
+        let obj = closure_1_1(tmp4[31]);
+        obj = { key: "VOICE_MESSAGE_CANCELLED_ON_BACKGROUND", content: null, icon: null, position: "bottom" };
+        const intl = tmp3(tmp4[32]).intl;
+        obj[1] = intl.string(tmp3(tmp4[32]).t.JM7Y2D);
         obj[2] = function icon() {
           return callback(closure_27, {});
         };
         obj.open(obj);
         ref2.current = null;
       }
-      ref.current = event;
+      ref.current = current;
     });
     return () => {
       lib.remove();
@@ -306,9 +323,9 @@ const memoResult = importAllResult.memo((disabled) => {
       }
     };
   }, items4);
-  let obj4 = ReanimatedRexport;
+  let obj4 = _ReanimatedRexport;
   const items5 = [first, tmp7[2], channelId];
-  const isModalOpen = require("../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx").useIsModalOpen();
+  const isModalOpen = _coerceMainRoute.useIsModalOpen();
   const effect4 = importAllResult.useEffect(() => {
     function cancel() {
       const self = this;
@@ -361,7 +378,7 @@ const memoResult = importAllResult.memo((disabled) => {
                   }
                 }
                 closure_1_6(false);
-                let obj2 = cancel(handleActionSheetChange[18]);
+                let obj2 = closure_2_0(closure_2_2[18]);
                 c2 = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -373,8 +390,8 @@ const memoResult = importAllResult.memo((disabled) => {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_0 = arg1;
-              obj = cancel(handleActionSheetChange[18]);
-              const result = obj.emitVoiceMessageRecorded(cancel(handleActionSheetChange[24]).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_0.data.durationSecs, closure_0.startTimeMillis);
+              obj = closure_2_0(closure_2_2[18]);
+              const result = obj.emitVoiceMessageRecorded(closure_2_0(closure_2_2[24]).VoiceMessageRecordingResult.CANCELLED_GESTURE_CONFLICT, closure_0.data.durationSecs, closure_0.startTimeMillis);
             }
             c3 = 3;
             obj2 = { value: null, done: true };
@@ -409,7 +426,6 @@ const memoResult = importAllResult.memo((disabled) => {
       } else {
         cancel();
       }
-      const obj = cancel(handleActionSheetChange[33]);
     }
     cancel();
     let result = closure_8.addReactChangeListener(handleActionSheetChange);
@@ -423,7 +439,6 @@ const memoResult = importAllResult.memo((disabled) => {
       if (rootNavigationRef != null) {
         rootNavigationRef.removeListener("state", handleNavigationChange);
       }
-      const obj = cancel(handleActionSheetChange[34]);
     };
   }, items5);
   const items6 = [sharedValue, isModalOpen];
@@ -431,7 +446,7 @@ const memoResult = importAllResult.memo((disabled) => {
     callback3({ currWaveHeight: sharedValue });
   }, items6);
   const items7 = [first, tmp7[2], channelId];
-  const callback1 = importAllResult.useCallback(sharedValue(function*() {
+  callback1 = importAllResult.useCallback(sharedValue(function*() {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -464,11 +479,11 @@ const memoResult = importAllResult.memo((disabled) => {
             state = undefined;
             if (!(function isNormalModalOpen() {
               if (obj.isModalOpen()) {
-                let tmpResult = callback(tmp54[16]);
+                let tmpResult = tmp(tmp2[16]);
                 const openModalKey = tmpResult.getOpenModalKey();
                 let tmp5 = null == openModalKey;
                 if (!tmp5) {
-                  tmpResult = callback(tmp54[17]);
+                  tmpResult = tmp(tmp2[17]);
                   tmp5 = !tmpResult.isVoiceChannelModalKey(openModalKey);
                 }
                 return tmp5;
@@ -479,14 +494,14 @@ const memoResult = importAllResult.memo((disabled) => {
             })()) {
               if (closure_1_7.current) {
                 if (!closure_1_8.isOpen()) {
-                  if (null != callback.getChannel(sharedValue1)) {
+                  if (null != closure_1_10.getChannel(closure_1_1)) {
                     closure_1_6(true);
                     const ComponentDispatch = closure_1_0(closure_1_2[30]).ComponentDispatch;
                     ComponentDispatch.dispatch(closure_1_20.VOICE_MESSAGE_BUTTON_PRESSED);
                     ref = 2;
                     c5 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = sharedValue1(closure_1_2[35]).requestPermission(closure_1_24.AUDIO);
+                    obj1[0] = closure_1_1(closure_1_2[35]).requestPermission(closure_1_24.AUDIO);
                     return obj1;
                   }
                 }
@@ -582,7 +597,7 @@ const memoResult = importAllResult.memo((disabled) => {
       return;
     }
   }
-  obj = { voiceMessageAnimationState: tmp3, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, triggerHapticGuarded };
+  obj = { voiceMessageAnimationState: tmp3, runOnJS: _ReanimatedRexport.runOnJS, triggerHapticGuarded };
   Z.__closure = obj;
   Z.__workletHash = 9127775028714;
   Z.__initData = closure_30;
@@ -595,27 +610,27 @@ const memoResult = importAllResult.memo((disabled) => {
       const tmp6 = store.get()[1];
       if (closure_1_18.SENDING === tmp6) {
         callback({ isCancelling: false });
-      } else if (closure_1_18.CANCELLING === tmp6) {
+      } else if (tmp7.CANCELLING === tmp6) {
         callback({ isCancelling: true });
-      } else if (closure_1_18.LOCKING === tmp6) {
+      } else if (tmp7.LOCKING === tmp6) {
         callback2(false);
         const items = [, ];
-        ({ LOCKING: arr[0], LOCKED: arr[1] } = closure_1_18);
-        const result = store.set(items);
-        callback(store[19]).runOnJS(triggerHapticGuarded)();
-        const obj4 = callback(store[19]);
+        ({ LOCKING: arr[0], LOCKED: arr[1] } = tmp7);
+        const result = obj2.set(items);
+        callback(store[19]).runOnJS(closure_1_29)();
       } else {
         callback(store[18]).endAudioRecording();
         const obj3 = callback(store[18]);
       }
+      obj2 = store;
     } else {
       callback(store[18]).endAudioRecording();
       const obj = callback(store[18]);
     }
   }, items9);
-  let obj5 = coerceMainRoute;
+  let obj5 = _coerceMainRoute;
   const tmp23 = sharedValue1(8866);
-  let intl = require("../../../../intl/index.native.tsx").intl;
+  let intl = _getSystemLocale.intl;
   const tmp24 = sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -647,7 +662,7 @@ const memoResult = importAllResult.memo((disabled) => {
             c1 = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = callback1();
+            obj1[0] = closure_1_11();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -659,7 +674,7 @@ const memoResult = importAllResult.memo((disabled) => {
           obj[0] = arg1;
           return obj;
         } else {
-          callback2(false);
+          closure_1_12(false);
           const items = [, ];
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
@@ -706,7 +721,7 @@ const memoResult = importAllResult.memo((disabled) => {
             c1 = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = callback1();
+            obj1[0] = closure_1_11();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -718,7 +733,7 @@ const memoResult = importAllResult.memo((disabled) => {
           obj[0] = arg1;
           return obj;
         } else {
-          callback2(false);
+          closure_1_12(false);
           const items = [, ];
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
@@ -730,7 +745,7 @@ const memoResult = importAllResult.memo((disabled) => {
         throw tmp12;
       }
     }
-  }), intl.string(require("../../../../intl/index.native.tsx").t.lwy6aX)));
+  }), intl.string(_getSystemLocale.t.lwy6aX)));
   const memo = importAllResult.useMemo(() => {
     const Gesture = callback(store[38]).Gesture;
     const PanResult = Gesture.Pan();
@@ -741,7 +756,7 @@ const memoResult = importAllResult.memo((disabled) => {
         value = store.get();
       }
       if (!value) {
-        closure_1_0(closure_1_2[19]).runOnJS(callback2)(true);
+        closure_1_0(closure_1_2[19]).runOnJS(closure_1_12)(true);
         const items = [, ];
         ({ SENDING: arr[0], SENDING: arr[1] } = closure_1_18);
         const result = closure_2.set(items);
@@ -816,7 +831,7 @@ const memoResult = importAllResult.memo((disabled) => {
             c1 = 1;
             c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = callback1();
+            obj1[0] = closure_1_11();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -828,7 +843,7 @@ const memoResult = importAllResult.memo((disabled) => {
           obj[0] = arg1;
           return obj;
         } else {
-          callback2(false);
+          closure_1_12(false);
           const items = [, ];
           ({ LOCKED: arr[0], LOCKED: arr[1] } = closure_1_18);
           const result = c2.set(items);
@@ -840,10 +855,10 @@ const memoResult = importAllResult.memo((disabled) => {
         throw tmp12;
       }
     }
-  }), intl.string(require("../../../../intl/index.native.tsx").t.lwy6aX));
-  obj1[1] = require("../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx").MicrophoneIcon;
-  const intl2 = require("../../../../intl/index.native.tsx").intl;
-  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx").t.lwy6aX);
+  }), intl.string(_getSystemLocale.t.lwy6aX));
+  obj1[1] = _MicrophoneIcon.MicrophoneIcon;
+  const intl2 = _getSystemLocale.intl;
+  obj1[3] = intl2.string(_getSystemLocale.t.lwy6aX);
   obj1[4] = accessibilityActions;
   obj1[5] = onAccessibilityAction;
   obj1[6] = disabled;
@@ -853,8 +868,8 @@ const memoResult = importAllResult.memo((disabled) => {
   }
   obj1[7] = tmp30;
   obj[1] = jsx(sharedValue1(11402), { ref: sharedValue1(11421)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null, style: null });
-  return jsx(require("../../../../../_runtime/06377_LegacyBaseButton.js").GestureDetector, { gesture: memo, children: null });
+  return jsx(_LegacyBaseButton.GestureDetector, { gesture: memo, children: null });
 });
-let result = require("obj132").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");
 
 export default memoResult;

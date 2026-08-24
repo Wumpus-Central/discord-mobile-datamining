@@ -1,10 +1,10 @@
 // discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import CreatorMonetizationApplicationState from "CreatorMonetizationEligibilityConstants.tsx";
 
 let closure_2 = CreatorMonetizationApplicationState.CreatorMonetizationApplicationState;
-const result = obj132.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
+const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
   let state;

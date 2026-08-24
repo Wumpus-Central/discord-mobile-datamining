@@ -1,9 +1,9 @@
 // _runtime/09703__isNativeReflectConstruct.js
 import _asyncLoop from "09699__asyncLoop.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import c3 from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
 const HMAC = require;
@@ -98,7 +98,7 @@ class HMAC {
       }
       oHash = tmp3Result.oHash;
       updateResult2 = oHash.update(uint8Array);
-      fillResult = require("../discord_app/index.native.tsx");
+      fillResult = require("module_0");
       return tmp3Result;
     }
   }

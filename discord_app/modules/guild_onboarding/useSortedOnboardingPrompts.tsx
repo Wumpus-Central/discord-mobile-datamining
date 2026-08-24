@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding/useSortedOnboardingPrompts.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import handleUpdate from "GuildOnboardingPromptsStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "GuildOnboardingPromptsStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
 
 export default function useSortedOnboardingPrompts(arg0) {
   const _require = arg0;
@@ -11,6 +11,7 @@ export default function useSortedOnboardingPrompts(arg0) {
   stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () => closure_1_3.getEnabledOnboardingPrompts(closure_0));
   let items1 = [stateFromStoresArray];
   return React.useMemo(() => {
+    let arr5;
     const items = [];
     const items1 = [];
     const items2 = [];
@@ -21,14 +22,17 @@ export default function useSortedOnboardingPrompts(arg0) {
     let num3 = 0;
     if (0 < stateFromStoresArray.length) {
       do {
+        arr5 = stateFromStoresArray;
         let tmp2 = stateFromStoresArray[num];
+        let tmp3 = num;
+        let tmp4 = num2;
         if (tmp2.isNew) {
           let arr = items.push(tmp2);
           let sum = num2;
         } else if (tmp2.hasNewAnswers) {
           arr = items1.push(tmp2);
           let options = tmp2.options;
-          sum = num2 + options.filter((item, index) => item.isUnseen).length;
+          sum = num2 + options.filter((isUnseen) => isUnseen.isUnseen).length;
         } else if (tmp2.inOnboarding) {
           let arr1 = items3.push(tmp2);
           sum = num2;
@@ -39,8 +43,8 @@ export default function useSortedOnboardingPrompts(arg0) {
         num = num + 1;
         num2 = sum;
         num3 = sum;
-        tmp = stateFromStoresArray;
-      } while (num < stateFromStoresArray.length);
+        tmp = arr5;
+      } while (num < arr5.length);
     }
     return { onboardingPromptsRaw: tmp, newOnboardingPrompts: items, onboardingPromptsWithNewAnswers: items1, newAnswersCount: num3, onboardingPrompts: items2.concat(items3) };
   }, items1);

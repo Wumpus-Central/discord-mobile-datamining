@@ -1,16 +1,17 @@
 // discord_app/intl/util.tsx
-import noop from "../../_runtime/00019_noop.js";
+import closure_2 from "../../_runtime/00019_noop.js";
 import { items } from "../../_runtime/01296_items.js";
+import { messagesProxy } from "messages/en-US.messages.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("intl/util.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
-  _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/01296_items.js").filter((item, index) => item.enabled);
-  const mapped = found.map((item, index) => {
-    const code = item.code;
-    const obj = { value: code, name: item.name, localizedName: null };
+  _require = _messagesProxy.default;
+  const found = _items.filter((enabled) => enabled.enabled);
+  const mapped = found.map((code) => {
+    code = code.code;
+    const obj = { value: code, name: code.name, localizedName: null };
     const obj2 = dependencyMap(closure_1_1[2]);
     obj[2] = dependencyMap[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
@@ -32,13 +33,13 @@ export const getAvailableLocales = function getAvailableLocales() {
 export const getLanguages = function getLanguages() {
   return items;
 };
-export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
-  const found = parts(1296).filter((item, index) => item.enabled);
-  const mapped = found.map((item, index) => item.code);
-  if (mapped.includes(Language)) {
-    return Language;
+export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
+  const found = parts(1296).filter((enabled) => enabled.enabled);
+  const mapped = found.map((code) => code.code);
+  if (mapped.includes(str)) {
+    return str;
   } else {
-    parts = Language.split("-");
+    parts = str.split("-");
     const first = parts[0];
     if (mapped.includes(parts[0])) {
       let found2 = first;
@@ -46,7 +47,7 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
       if ("zh" === first) {
         if (parts.length > 1) {
           if ("Hant" === parts[1]) {
-            let found1 = mapped.find((item, index) => "zh-TW" === item);
+            let found1 = mapped.find((arg0) => "zh-TW" === arg0);
             if (found1 == null) {
               found1 = arg1;
             }
@@ -54,7 +55,7 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
           }
         }
       }
-      found2 = mapped.find((item, index) => item.split("-")[0] === parts[0]);
+      found2 = mapped.find((arg0) => arg0.split("-")[0] === parts[0]);
       if (found2 == null) {
         found2 = arg1;
       }

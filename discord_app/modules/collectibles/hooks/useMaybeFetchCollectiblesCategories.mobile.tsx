@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared.tsx";
-import getUserAgnosticState from "../../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_2 from "../../devtools/dev_settings/DevSettingsStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
 
 export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   paymentGateway = undefined;

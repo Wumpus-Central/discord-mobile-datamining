@@ -1,23 +1,23 @@
 // discord_app/modules/permissions/useManageResourcePermissions.tsx
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 import VIEW_CHANNEL from "../guild_scheduled_events/PermissionsConstants.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
 
-const require = fn;
-function canManageResource(arg0, closure_4, canResult1, c0) {
+const require = arg1;
+function canManageResource(arg0, arg1, arg2, arg3) {
   let creator_id = arg0;
   let tmp = null != arg0;
   if (tmp) {
-    if (canResult1) {
+    if (arg2) {
       tmp = tmp3;
     } else {
-      let id = closure_4;
-      let tmp4 = c0;
+      let id = arg1;
+      let tmp4 = arg3;
       if ("creator_id" in creator_id) {
         if (tmp4) {
           tmp4 = null != id;
@@ -72,7 +72,7 @@ let closure_11 = {
     return false;
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
+const result = require("set").fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
 
 export const attachChannelPermissions = function attachChannelPermissions(channel) {
   if (null == channel) {
@@ -87,13 +87,14 @@ export const attachChannelPermissions = function attachChannelPermissions(channe
       tmp = closure_9;
     }
     const items1 = [fromStringAll.combine(tmp, Permissions.CREATE_EVENTS), ];
+    const obj = fromStringAll;
     items1[1] = fromStringAll.combine(tmp, Permissions.MANAGE_EVENTS);
     return items1;
   }
 };
 export const useManageResourcePermissions = function useManageResourcePermissions(channel) {
   const _require = channel;
-  let obj = fromGuildPropertiesWithAdditionalFields;
+  let obj = _fromGuildPropertiesWithAdditionalFields;
   if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
@@ -110,13 +111,15 @@ export const useManageResourcePermissions = function useManageResourcePermission
       tmp4 = closure_9;
     }
     items2 = [fromStringAll.combine(tmp4, Permissions.CREATE_EVENTS), ];
+    const obj2 = fromStringAll;
     items2[1] = fromStringAll.combine(tmp4, Permissions.MANAGE_EVENTS);
+    const obj3 = fromStringAll;
   }
   [importAll, dependencyMap] = first(items2, 2);
   let tmpResult = tmp(589);
   const items3 = [closure_5];
   const tmp10 = first(tmpResult.useStateFromStoresArray(items3, () => {
-    const items = [closure_5.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0), closure_5.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1, closure_0), closure_5.can(closure_2, closure_0)];
+    const items = [closure_5.can(closure_1_10.CREATE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1_10.MANAGE_GUILD_EXPRESSIONS, closure_0), closure_5.can(closure_1, closure_0), closure_5.can(closure_2, closure_0)];
     return items;
   }), 4);
   first = tmp10[0];
@@ -128,7 +131,7 @@ export const useManageResourcePermissions = function useManageResourcePermission
   stateFromStores = tmpResult.useStateFromStores(items4, () => currentUser.getCurrentUser());
   const items5 = [first, tmp10[1], stateFromStores];
   const items6 = [tmp10[3], tmp10[2], stateFromStores];
-  const callback = React.useCallback((arg0) => canManageResource(arg0, stateFromStores, closure_4, first), items5);
+  const callback = React.useCallback((arg0) => closure_1_12(arg0, stateFromStores, closure_4, first), items5);
   if (null == channel) {
     obj = closure_11;
   } else {
@@ -196,10 +199,10 @@ export const getManageResourcePermissions = function getManageResourcePermission
     obj[2] = canResult1;
     obj[3] = canResult3;
     obj[4] = function canManageGuildExpression(arg0) {
-      return canManageResource(arg0, closure_4, canResult1, c0);
+      return closure_1_12(arg0, closure_4, canResult1, c0);
     };
     obj[5] = function canManageGuildEvent(arg0) {
-      return canManageResource(arg0, closure_4, canResult3, canResult2);
+      return closure_1_12(arg0, closure_4, canResult3, canResult2);
     };
   }
   return obj;

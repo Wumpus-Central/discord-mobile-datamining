@@ -8,20 +8,22 @@ import getErrorMessageFromErrorCode from "../GuildSettingsVanityURLUtils.tsx";
 import _modDef16865 from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
 import registerAssetDefault from "../../../../../../_runtime/16866_registerAsset.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import FormStates from "../../../../../stores/ChangeVanityURLModalStore.tsx";
-import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
-import handleFormInit from "../../../GuildSettingsStore.tsx";
+import closure_5 from "../../../../../stores/ChangeVanityURLModalStore.tsx";
+import closure_6 from "../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../GuildSettingsStore.tsx";
 import { GuildFeatures } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-const createCacheKey = { flex: 1, justifyContent: "space-between", paddingTop: ThemesDefault.space.PX_32 };
+createCacheKey = { wrapper: null, section: null, hints: null, center: null, image: null };
+createCacheKey = { flex: 1, justifyContent: "space-between", paddingTop: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_12 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { alignItems: "center", flexDirection: "column" };
 createCacheKey[4] = { width: 135, height: 183, marginBottom: 27 };
@@ -37,22 +39,22 @@ class GuildSettingsModalVanityURL extends PureComponent {
     }
     applyArgumentsResult.state = { isEditing: false, vanityURLCode: str };
     applyArgumentsResult.handleStartEditing = function handleStartEditing() {
-      _modDef16865.openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      closure_1_1(closure_1_2[12]).openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
       applyArgumentsResult.setState({ isEditing: true });
     };
     applyArgumentsResult.handleChange = function handleChange(vanityURLCode) {
       applyArgumentsResult.setState({ vanityURLCode });
     };
     applyArgumentsResult.handleCancel = function handleCancel() {
-      return new Promise((fn) => {
+      return new Promise((arg0) => {
         closure_1_1(closure_1_2[12]).closeModal();
         state.setState({ isEditing: false });
-        fn(true);
+        arg0(true);
       });
     };
     applyArgumentsResult.handleSave = function handleSave() {
       applyArgumentsResult.setState({ isEditing: false });
-      _modDef16865.changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      closure_1_1(closure_1_2[12]).changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
     };
     return applyArgumentsResult;
   }
@@ -99,14 +101,14 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     } else {
       fn2 = isEditing ? (() => {
         const obj = { onPress: self.handleSave, text: null };
-        const intl = self(dependencyMap[11]).intl;
-        obj[1] = intl.string(self(dependencyMap[11]).t["R3BPH+"]);
-        return closure_1_9(self(dependencyMap[10]).HeaderActionButton, obj);
+        const intl = self(closure_1_2[11]).intl;
+        obj[1] = intl.string(self(closure_1_2[11]).t["R3BPH+"]);
+        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
       }) : (() => {
         const obj = { onPress: self.handleStartEditing, text: null };
-        const intl = self(dependencyMap[11]).intl;
-        obj[1] = intl.string(self(dependencyMap[11]).t.bt75uw);
-        return closure_1_9(self(dependencyMap[10]).HeaderActionButton, obj);
+        const intl = self(closure_1_2[11]).intl;
+        obj[1] = intl.string(self(closure_1_2[11]).t.bt75uw);
+        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
       });
     }
     setOptionsResult[1] = fn2;
@@ -122,8 +124,9 @@ prototype["render"] = function render() {
   ({ isEditing, vanityURLCode } = this.state);
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
+      let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl6 = getSystemLocale.intl;
-      let obj = { url: null };
+      obj = { url: null };
       obj[0] = getInviteURLDefault(vanityURLCode);
       obj[2] = intl6.format(getSystemLocale.t.FcGpNU, obj);
       const tmp24 = getInviteURLDefault(vanityURLCode);
@@ -178,16 +181,16 @@ prototype["render"] = function render() {
     items2[2] = callback(Text.Text, obj7);
     if (tmp17Result) {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl5 = getSystemLocale.intl;
-      obj8[2] = intl5.string(getSystemLocale.t.o3kmm3);
-      tmp17Result = callback(Text.Text, obj8);
+      const intl5 = tmp18(1236).intl;
+      obj8[2] = intl5.string(tmp18(1236).t.o3kmm3);
+      tmp17Result = tmp17(tmp18(4734).Text, obj8);
     }
     items2[3] = tmp17Result;
     items2[4] = tmp;
     obj4[1] = items2;
-    items1[1] = callback(closure_3, obj4);
+    items1[1] = closure_10(closure_3, obj4);
     obj2[1] = items1;
-    const items3 = [callback(closure_3, obj2), ];
+    const items3 = [closure_10(closure_3, obj2), ];
     const obj9 = { style: null, children: null };
     obj9[0] = styles.center;
     const obj10 = { source: null, style: null, resizeMode: "contain" };
@@ -196,7 +199,7 @@ prototype["render"] = function render() {
     obj9[1] = callback(closure_4, obj10);
     items3[1] = callback(closure_3, obj9);
     obj1[1] = items3;
-    return callback(closure_3, obj1);
+    return closure_10(closure_3, obj1);
   } else if ("" !== vanityURLCode) {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
@@ -205,7 +208,8 @@ prototype["render"] = function render() {
     combined = intl.string(getSystemLocale.t["FaXGO/"]);
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
+let obj2 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
 
 export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   guildId = guildId.guildId;
@@ -226,6 +230,7 @@ export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   });
   let tmp10 = null;
   if (null != stateFromStores) {
+    obj = { children: null };
     obj = { guild: null, vanityURLCode: null, submitting: null, errorDetails: null, navigation: null, styles: null, contentContainerStyle: null };
     obj[0] = stateFromStores;
     obj[1] = stateFromStores1;

@@ -17,12 +17,15 @@ export default function processTransformOrigin(str) {
       while (true) {
         str = match[0];
         let formatted = str.toLowerCase();
+        let tmp3 = num4;
         let sum = num4 + 1;
         if ("left" !== formatted) {
           if ("right" !== formatted) {
             if ("top" !== formatted) {
               if ("bottom" !== formatted) {
                 if ("center" === formatted) {
+                  let tmp5 = importDefault;
+                  let tmp6 = dependencyMap;
                   let tmp7 = _modDef38(2 !== num4, "Transform-origin value %s cannot be used for z-position", str);
                   items[num4] = "50%";
                   let num = sum;
@@ -36,6 +39,8 @@ export default function processTransformOrigin(str) {
                 }
               }
             }
+            let tmp8 = importDefault;
+            let tmp9 = dependencyMap;
             let tmp10 = _modDef38(2 !== num4, "Transform-origin %s can only be used for y-position", str);
             let num2 = "100%";
             if ("top" === formatted) {
@@ -44,6 +49,7 @@ export default function processTransformOrigin(str) {
             items[1] = num2;
             num = sum;
             if (0 === num4) {
+              let tmp20 = regex;
               let match1 = regex.exec(str);
               tmp = items;
               if (null == match1) {
@@ -61,13 +67,14 @@ export default function processTransformOrigin(str) {
                   items[0] = "50%";
                   num = 2;
                 } else {
-                  let tmp11 = _modDef38(false, "Could not parse transform-origin: %s", str);
+                  let tmp11 = tmp8(38)(false, "Could not parse transform-origin: %s", str);
                   num = 2;
                 }
               }
             }
             break;
           }
+          let tmp15 = regex;
           match = regex.exec(str);
           num4 = num;
           tmp = items;
@@ -75,6 +82,8 @@ export default function processTransformOrigin(str) {
             break;
           }
         }
+        let tmp12 = importDefault;
+        let tmp13 = dependencyMap;
         let tmp14 = _modDef38(0 === num4, "Transform-origin %s can only be used for x-position", str);
         let num3 = "100%";
         if ("left" === formatted) {

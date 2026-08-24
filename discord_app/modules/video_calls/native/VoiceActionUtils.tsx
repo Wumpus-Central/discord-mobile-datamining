@@ -1,12 +1,12 @@
 // discord_app/modules/video_calls/native/VoiceActionUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import _handleToggleVideo from "../../voice_calls/native/CallsUtils.tsx";
 
 function NOOP() {
 
 }
 const obj = { SERVER_MUTE: 0, [0]: "SERVER_MUTE", SUPPRESS: 1, [1]: "SUPPRESS", SELF_MUTE: 2, [2]: "SELF_MUTE", NONE: 3, [3]: "NONE" };
-const result = obj132.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
+const result = set.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
 export const DominantMuteState = obj;
 export const createMuteHandler = function createMuteHandler(muteStates, stateFromStores) {
@@ -16,7 +16,7 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   }
   let dominantMuteState = obj.NONE;
   if (muteStates.selfMute) {
-    dominantMuteState = obj.SELF_MUTE;
+    dominantMuteState = tmp.SELF_MUTE;
   }
   if (flag) {
     let onPress = NOOP;
@@ -25,11 +25,11 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   }
   if (muteStates.suppress) {
     onPress = _handleToggleVideo.showSuppressedAlert;
-    dominantMuteState = obj.SUPPRESS;
+    dominantMuteState = tmp.SUPPRESS;
   }
   if (muteStates.mute) {
     onPress = _handleToggleVideo.showServerMuteAlert;
-    dominantMuteState = obj.SERVER_MUTE;
+    dominantMuteState = tmp.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };

@@ -6,20 +6,22 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = { card: null };
+createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
 
 export const NotificationSettingsMuteBanner = function NotificationSettingsMuteBanner(children) {
   let obj = { style: null, children: null };
   const items = [children.style, callback3().card];
   obj[0] = items;
+  obj = { style: { flex: 1, marginRight: 8 }, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: children.title };
   const items1 = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
   obj[1] = items1;

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/isMessageMentioned.tsx
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_0 from "../../stores/ChannelStore.tsx";
+import closure_1 from "../../stores/GuildMemberStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
 
 function isMentioned(suppressRoles) {
   ({ userId, mentionUsers, mentionRoles, suppressEveryone } = suppressRoles);
@@ -36,9 +36,9 @@ function isMentioned(suppressRoles) {
               return false;
             } else {
               member = member.getMember(guildId, userId);
-              return null != member && mentionRoles.some((item, index) => {
+              return null != member && mentionRoles.some((arg0) => {
                 const roles = member.roles;
-                return roles.includes(item);
+                return roles.includes(arg0);
               });
             }
           }
@@ -48,7 +48,7 @@ function isMentioned(suppressRoles) {
     return false;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/isMessageMentioned.tsx");
 
 export default function isMessageMentioned(suppressRoles) {
   ({ message, suppressEveryone } = suppressRoles);
@@ -79,7 +79,7 @@ export const isRawMessageMentioned = function isRawMessageMentioned(suppressRole
   const mentions = rawMessage.mentions;
   let mapped;
   if (mentions != null) {
-    mapped = mentions.map((item, index) => item.id);
+    mapped = mentions.map((id) => id.id);
   }
   if (mapped == null) {
     mapped = [];

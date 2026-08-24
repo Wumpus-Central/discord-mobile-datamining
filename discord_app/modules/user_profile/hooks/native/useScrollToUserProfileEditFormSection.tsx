@@ -1,18 +1,19 @@
 // discord_app/modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { findNodeHandle } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
-import zustandStore from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
 
 export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   ref = ref.useRef({});
   const items = [closure_4];
-  closure_3 = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  closure_3 = _initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = ref.useEffect(() => {
     let tmp2 = null != closure_1;
     if (tmp2) {

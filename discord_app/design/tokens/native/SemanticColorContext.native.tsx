@@ -1,12 +1,10 @@
 // discord_app/design/tokens/native/SemanticColorContext.native.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 import nDefault from "../../../../_runtime/00689_n.js";
-import getNodeText from "../../utils/native.tsx";
 import getGradientThemeFromFlags from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
 import getGradientColorByPercentage from "../../../modules/client_themes/native/ClientThemesUtils.tsx";
 
-const result = obj132.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
+const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(themeContext) {
   let obj = getGradientThemeFromFlags;
@@ -19,9 +17,9 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
-      let tmpResult = int2hslRaw;
+      let tmpResult = tmp(688);
       const int2hexResult = tmpResult.int2hex(primaryColor2);
-      tmpResult = int2hslRaw;
+      tmpResult = tmp(688);
       if (secondaryColor == null) {
         secondaryColor = primaryColor2;
       }
@@ -45,7 +43,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       obj[6] = int2hexResult1;
       obj[1] = obj;
       tmp9 = obj;
-      tmpResult1 = getNodeText;
+      tmpResult1 = tmp(4099);
     }
     gradientThemeMetadata = tmp9;
   }

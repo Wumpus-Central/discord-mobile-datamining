@@ -4,8 +4,9 @@ import toError from "../00184_toError.js";
 import _isNativeReflectConstruct from "../00189__isNativeReflectConstruct.js";
 
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
+  const _default = _isNativeReflectConstruct.default;
   let closure_1 = toError.default;
-  const result = _isNativeReflectConstruct.default.installConsoleErrorReporter();
+  const result = _default.installConsoleErrorReporter();
   if (!global.__fbDisableExceptionsManager) {
     _mod47.default.setGlobalHandler((arg0, arg1) => {
       try {
@@ -18,5 +19,4 @@ if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
     });
     const _default2 = _mod47.default;
   }
-  const _default = _isNativeReflectConstruct.default;
 }

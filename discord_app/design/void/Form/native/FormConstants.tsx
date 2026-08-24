@@ -1,14 +1,14 @@
 // discord_app/design/void/Form/native/FormConstants.tsx
-import obj1322 from "../../../../utils/PlatformUtils.tsx";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityAnnouncer from "../../../shared.tsx";
-import handleThemeChange from "../../../../modules/user_settings/ThemeStore.tsx";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import closure_2 from "../../../../modules/user_settings/ThemeStore.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import DCDDeviceManager from "../../../../utils/native/DeviceUtils.tsx";
 
-require = fn;
+require = arg1;
 let num = 24;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num = 32;
 }
 const internal = ThemesDefault.internal;
@@ -19,7 +19,7 @@ const systemVersionMajor = DCDDeviceManager.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});
 const map = new Map();
-let result = obj132.fileFinishedImporting("design/void/Form/native/FormConstants.tsx");
+let result = set.fileFinishedImporting("design/void/Form/native/FormConstants.tsx");
 
 export const FORM_ROW_VERTICAL_PADDING = num;
 export const RIPPLE_DARK_COLOR = semanticColor;
@@ -29,7 +29,7 @@ export const TitleStyleType = { DEFAULT: "default", ANDROID_NO_BORDER: "no_borde
 export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);
-  let obj = obj1322;
+  let obj = set2;
   if (obj.isAndroid()) {
     if (null != color) {
       const sum = "" + color.toString() + cornerRadius + radius + tmp5;
@@ -45,9 +45,10 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
         obj[3] = cornerRadius;
         obj[4] = tmp5;
         const frozen = Object.freeze(obj);
-        const result = map.set(sum, frozen);
+        const result = obj3.set(sum, frozen);
         return frozen;
       }
+      obj3 = map;
     } else {
       AccessibilityAnnouncer.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
       const tmpResult = AccessibilityAnnouncer;

@@ -1,14 +1,15 @@
 // discord_app/modules/stage_channels/native/components/MediaTile.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import closure_4 from "../../../calls/ChannelRTCStore.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-let obj = { flex: 1, borderRadius: ThemesDefault.radii.sm };
+const require = arg1;
+let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: null };
+obj = { flex: 1, borderRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
@@ -47,6 +48,6 @@ const memoResult = importAllResult.memo((channel) => {
   }
   return tmp8;
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
 
 export default memoResult;

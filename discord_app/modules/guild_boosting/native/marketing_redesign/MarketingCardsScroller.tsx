@@ -1,20 +1,21 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 const previous = "previous";
 const next = "next";
-let obj = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
+let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
+obj = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
 obj[1] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.56);
 obj[2] = ThemesDefault.radii.round;
 let items = [{ translateY: -22 }];
@@ -31,6 +32,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
       let tmp3 = null == velocity;
       if (!tmp3) {
         tmp3 = 0 === velocity.x && 0 === velocity.y;
+        const tmp4 = 0 === velocity.x && 0 === velocity.y;
       }
       if (tmp3) {
         if (onScrollingChange != null) {
@@ -66,7 +68,7 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   const items2 = [stateFromStores];
   const memo = importAllResult.useMemo(() => {
     const array = new Array(itemCount);
-    return array.fill(0).map((item, index) => index * closure_4);
+    return array.fill(0).map((arg0, arg1) => arg1 * closure_4);
   }, items1);
   const effect = importAllResult.useEffect(() => {
     closure_9.current = stateFromStores;
@@ -97,7 +99,8 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   const items4 = [callback];
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ scrollToIndex: callback }), items4);
   const items5 = [tmp18Result, tmp18Result];
-  const items6 = [initialIndex.style, tmp.wrapper];
+  obj = { style: items6, children: null };
+  items6 = [initialIndex.style, tmp.wrapper];
   obj = {
     accessibilityActions: importAllResult.useMemo(() => {
       const items = [];
@@ -191,6 +194,6 @@ const forwardRefResult = importAllResult.forwardRef((initialIndex, ref) => {
   obj[1] = items7;
   return closure_9(first, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
 
 export const MarketingCardsScroller = forwardRefResult;

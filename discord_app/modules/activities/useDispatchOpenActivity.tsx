@@ -1,11 +1,12 @@
 // discord_app/modules/activities/useDispatchOpenActivity.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");
 
 export default function useDispatchOpenActivity(connectedEmbeddedActivity) {
   connectedEmbeddedActivity = connectedEmbeddedActivity.connectedEmbeddedActivity;
   let applicationId;
+  applicationId = undefined;
   if (connectedEmbeddedActivity != null) {
     applicationId = connectedEmbeddedActivity.applicationId;
   }
@@ -16,8 +17,8 @@ export default function useDispatchOpenActivity(connectedEmbeddedActivity) {
       tmp2 = null != applicationId;
     }
     if (tmp2) {
-      connectedEmbeddedActivity(applicationId[1]);
-      const obj = { type: "EMBEDDED_ACTIVITY_OPEN", location: null, applicationId: null };
+      let obj = connectedEmbeddedActivity(applicationId[1]);
+      obj = { type: "EMBEDDED_ACTIVITY_OPEN", location: null, applicationId: null };
       obj[1] = connectedEmbeddedActivity.location;
       obj[2] = applicationId;
       obj.dispatch(obj);

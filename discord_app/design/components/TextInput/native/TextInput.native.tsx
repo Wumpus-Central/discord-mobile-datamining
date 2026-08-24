@@ -4,7 +4,7 @@ import Input from "../../Input/native/Input.native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   ({ label, accessibilityLabel, status } = errorMessage);
   const id = importAllResult.useId();
@@ -44,6 +44,6 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   obj.children = jsx(TextField.TextField, { ref });
   return jsx(Input.Input, { ref });
 });
-const result = require("obj132").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
 
 export const TextInput = forwardRefResult;

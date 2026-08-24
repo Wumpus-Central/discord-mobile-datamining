@@ -2,20 +2,20 @@
 import timestampDefault from "../debug/Logger.tsx";
 import prettyPrintTrace_ from "GatewaySocketAnalytics.tsx";
 import CLOSEDDefault from "ConnectionState.tsx";
-import flushDefault from "ActionBatcher.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DispatcherWorkConstants.tsx";
+import set from "../../../_runtime/00002_set.js";
+import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 
-require = fn;
+require = arg1;
 let closure_5 = new timestampDefault("GatewaySocket");
-const set = new Set(["INITIAL_GUILD", "READY"]);
+let set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
 const set2 = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
 const set3 = new Set(["READY", "INITIAL_GUILD", "READY_SUPPLEMENTAL", "RESUMED", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATE", "VOICE_SERVER_UPDATE", "RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "RTC_CONNECTION_CLIENT_CONNECT", "RTC_CONNECTION_PING", "MEDIA_SESSION_JOINED", "MEDIA_ENGINE_PERMISSION", "SESSIONS_REPLACE", "STREAM_CREATE", "STREAM_SERVER_UPDATE", "STREAM_DELETE", "STREAM_UPDATE"]);
 let closure_10 = { NotStarted: 0, [0]: "NotStarted", Loading: 1, [1]: "Loading", Loaded: 2, [2]: "Loaded" };
 let closure_11 = {};
-const tmp2 = new timestampDefault("GatewaySocket");
-let result = require("obj132").fileFinishedImporting("modules/gateway/GatewaySocketDispatcher.tsx");
+let result = set.fileFinishedImporting("modules/gateway/GatewaySocketDispatcher.tsx");
 class GatewaySocketDispatcher {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -42,6 +42,7 @@ class GatewaySocketDispatcher {
             const sum = num4 + 1;
             num2 = sum;
             while (sum < obj.queue.length) {
+              let tmp7 = closure_1_10;
               num4 = sum;
               num2 = sum;
               obj = tmp6;
@@ -59,7 +60,7 @@ class GatewaySocketDispatcher {
           const dispatchMultipleResult = obj.dispatchMultiple(spliceResult, arg0);
           if (dispatchMultipleResult) {
             const telemetry = obj.scheduler.telemetry;
-            telemetry.timeEnd(obj(dependencyMap[5]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+            telemetry.timeEnd(obj(closure_1_2[5]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
           }
           const _performance2 = performance;
           const diff = performance.now() - nowResult;
@@ -95,8 +96,11 @@ prototype["processFirstQueuedDispatch"] = function processFirstQueuedDispatch(se
         while (self.queue.length > 0) {
           if (!set.has(self.queue[0].type)) {
             break;
-          } else if (self.queue[0].status !== closure_10.Loaded) {
-            break;
+          } else {
+            let tmp3 = closure_10;
+            if (self.queue[0].status !== closure_10.Loaded) {
+              break;
+            }
           }
         }
       }
@@ -132,7 +136,8 @@ prototype["receiveDispatch"] = function receiveDispatch(d, type, arg2) {
   }
 };
 prototype["maybePreload"] = function maybePreload(item10007) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_0 = item10007;
   if (this.paused) {
     if (!set.has(item10007.type)) {
@@ -145,11 +150,11 @@ prototype["maybePreload"] = function maybePreload(item10007) {
     if (dispatchHandler != null) {
       preloadResult = dispatchHandler.preload(item10007.data);
     }
-    item10007.status = null == preloadResult ? closure_10.Loaded : closure_10.Loading;
+    item10007.status = null == preloadResult ? tmp2.Loaded : tmp2.Loading;
     item10007.preloadPromise = preloadResult;
     if (null != preloadResult) {
-      preloadResult.then((result) => {
-        item10007.preloadedData = result;
+      preloadResult.then((preloadedData) => {
+        item10007.preloadedData = preloadedData;
         item10007.status = closure_1_10.Loaded;
         self.scheduleFlush(item10007.type);
       }).catch((error) => {
@@ -195,7 +200,8 @@ prototype["getIsRequestIdleCallbackEnabled"] = function getIsRequestIdleCallback
   return this.scheduler.isRequestIdleCallbackEnabled;
 };
 prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
-  const self = this;
+  let self = this;
+  self = this;
   importDefault = items;
   dependencyMap = arg1;
   if (0 === items.length) {
@@ -204,7 +210,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
     const none = "none";
     c4 = false;
     const telemetry2 = self.scheduler.telemetry;
-    telemetry2.measure(require("WorkSchedulerTelemetry.tsx").WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
+    telemetry2.measure(_WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
     try {
       closure_5 = [];
       if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
@@ -215,31 +221,39 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       const Emitter2 = tmp2(589).Emitter;
       Emitter2.batched(() => {
         let arr;
+        let obj;
         let sum;
+        let tmp6;
         let num = 0;
         if (0 < items.length) {
           while (true) {
             arr = items;
             let tmp = items[num];
             let type = tmp.type;
+            let tmp3 = num;
             if (!hasItem) {
-              hasItem = set2.has(tmp.type);
+              let tmp4 = closure_1_8;
+              hasItem = closure_1_8.has(tmp.type);
             }
             let _performance = performance;
             let nowResult = performance.now();
+            tmp6 = self;
             let dispatchOneResult = self.dispatchOne(tmp);
             let _performance2 = performance;
             closure_0 = performance.now() - nowResult;
             type = tmp.type;
             items = closure_1_11[type];
             let tmp8 = closure_0;
+            let tmp9 = closure_1_11;
             if (items == null) {
               items = [0, 0];
             }
+            let tmp10 = none;
             let tmp11 = none(items, 2);
             let tmp12 = tmp11[1];
             let items1 = [(tmp11[0] * tmp12 + tmp8) / (tmp12 + 1), tmp12 + 1];
-            closure_1_11[type] = items1;
+            tmp9[type] = items1;
+            obj = dependencyMap;
             let flag = false;
             if (null != dependencyMap) {
               let diff = arr.length - 1;
@@ -248,8 +262,8 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
                 tmp14 = arr[num + 1];
               }
               let num2;
-              if (dependencyMap != null) {
-                num2 = dependencyMap.timeRemaining();
+              if (obj != null) {
+                num2 = obj.timeRemaining();
               }
               if (num2 == null) {
                 num2 = 0;
@@ -258,7 +272,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
               if (tmp14 != null) {
                 type = tmp14.type;
               }
-              let tmp16 = null != dependencyMap && num2 <= 0 && arr[num].type !== type && num !== diff;
+              let tmp16 = null != obj && num2 <= 0 && arr[num].type !== type && num !== diff;
               flag = tmp16;
             }
             sum = num + 1;
@@ -270,13 +284,12 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
           }
           closure_5 = arr.slice(sum);
           if (tmp18) {
-            const telemetry = self.scheduler.telemetry;
-            telemetry.timeTrack(v0(13200).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, dependencyMap.timeSinceExpiration);
+            const telemetry = tmp6.scheduler.telemetry;
+            telemetry.timeTrack(v0(13200).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
           }
-          tmp18 = null != dependencyMap && dependencyMap.timeRemaining() <= 0;
+          tmp18 = null != obj && obj.timeRemaining() <= 0;
         }
         items(13203).flush();
-        const obj2 = items(13203);
       });
       if (c4) {
         const Emitter3 = tmp2(589).Emitter;
@@ -298,7 +311,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       }
     } catch (tmp18) {
       const socket = tmp.socket;
-      const obj = { error: null, action: null };
+      let obj = { error: null, action: null };
       obj[0] = tmp18;
       obj[1] = none;
       const result = socket.resetSocketOnDispatchError(obj);
@@ -311,7 +324,7 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   ({ data, type, compressionAnalytics, preloadedData } = arg0);
   const nowResult = performance.now();
   if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
-    flushDefault.flush(type, data);
+    tmp2(13203).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
@@ -320,6 +333,8 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
       }
       const tmp11Result = prettyPrintTrace_;
       const result = tmp11Result.logReadyPayloadReceived(self.socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics);
+      const obj6 = prettyPrintTrace_;
+      const tmp11 = require;
     } else if ("RESUMED" === type) {
       const dispatchHandler1 = self.getDispatchHandler(type);
       if (dispatchHandler1 != null) {
@@ -328,19 +343,20 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
       prettyPrintTrace_.logResumeAnalytics(self.resumeAnalytics);
       const socket = self.socket;
       const result1 = socket.handleResumeDispatched();
+      const obj4 = prettyPrintTrace_;
       self.resumeAnalytics = prettyPrintTrace_.createResumeAnalytics();
+      const obj5 = prettyPrintTrace_;
     } else {
       const dispatchHandler2 = self.getDispatchHandler(type);
       if (dispatchHandler2 != null) {
         dispatchHandler2.dispatch(data, type, preloadedData);
       }
     }
-    if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
+    if (self.socket.connectionState === tmp2(13202).RESUMING) {
       const resumeAnalytics3 = self.resumeAnalytics;
       const _performance = performance;
       resumeAnalytics3.dispatchTime = resumeAnalytics3.dispatchTime + (performance.now() - nowResult);
     }
-    const tmp2Result = flushDefault;
   } else {
     const diff = nowResult - self.resumeAnalytics.lastUpdateTime;
     if (0 === self.resumeAnalytics.numEvents) {

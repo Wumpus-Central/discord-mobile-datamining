@@ -3,9 +3,9 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
 import getHermesInstrumentedStatsSummaryDefault from "../../../utils/ProcessUtils.native.tsx";
 import shouldRunDefault from "channels/ZoomedInTelemetry.tsx";
-import initialize from "../../experiments/apex/ApexExperimentStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import getState from "../../../stores/native/AppStateStore.tsx";
+import closure_2 from "../../experiments/apex/ApexExperimentStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/native/AppStateStore.tsx";
 import { AppStates } from "../../../Constants.tsx";
 
 initializeDefault;
@@ -32,18 +32,20 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
     shouldRunResult = shouldRunDefault.shouldRun();
+    const obj = shouldRunDefault;
   }
   const result = getHermesInstrumentedStatsSummaryDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = shouldRunDefault;
+    let tmp6Result = tmp6(13558);
     tmp6Result.start();
   } else {
-    tmp6Result = shouldRunDefault;
+    tmp6Result = tmp6(13558);
     tmp6Result.stop();
   }
 };
 prototype["_initialize"] = function _initialize() {
-  const self = this;
+  let self = this;
+  self = this;
   if (!this._initialized) {
     self._initialized = true;
     const subscription = self(709).subscribe("LOGOUT", self._handleLogout);
@@ -68,13 +70,13 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = shouldRunDefault;
+  let tmpResult = tmp(13558);
   tmpResult.stop();
-  tmpResult = getHermesInstrumentedStatsSummaryDefault;
+  tmpResult = tmp(5422);
   const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
 };
 const telemetryRingLifecycleImpl = new TelemetryRingLifecycleImpl();
-let result = require("obj132").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
+let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
 
 export default telemetryRingLifecycleImpl;

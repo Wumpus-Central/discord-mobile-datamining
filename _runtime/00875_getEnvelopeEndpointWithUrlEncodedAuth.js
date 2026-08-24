@@ -70,6 +70,7 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
     if (keys !== undefined) {
       tmp16 = combined1;
       while (keys[tmp] !== undefined) {
+        let tmp22 = tmp19;
         if ("dsn" === tmp19) {
           continue;
         } else {
@@ -121,4 +122,6 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
   } else {
     return "";
   }
+  const obj = dsnFromString;
+  const tmp2 = require;
 };

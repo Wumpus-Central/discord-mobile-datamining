@@ -1,14 +1,14 @@
 // discord_app/modules/safety_flows/native/tasks/AgeVerificationScreen.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { Pressable } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_8 = createCacheKey.createStyles({ helpLink: { textAlign: "center" } });
-let result = require("obj132").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
 
 export default function AgeVerificationScreen() {
   const memo = React.useMemo(() => memo(stateFromStores[6]).v4(), []);

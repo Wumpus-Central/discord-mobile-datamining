@@ -1,9 +1,9 @@
 // _runtime/00150__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00131__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { NativeDOMCxx } from "00139_NativeDOMCxx.js";
 
@@ -67,7 +67,7 @@ const items = [
       const nativeTextReference = ReadOnlyCharacterData(136).getNativeTextReference(this);
       let str = "";
       if (null != nativeTextReference) {
-        str = require("00139_NativeDOMCxx.js").getTextContent(nativeTextReference);
+        str = NativeDOMCxx.getTextContent(nativeTextReference);
         const obj2 = NativeDOMCxx;
       }
       return str;

@@ -1,12 +1,12 @@
 // _runtime/00162__isNativeReflectConstruct.js
 import nullthrowsDefault from "00070_nullthrows.js";
 import NativePerformanceCxxDefault from "00154_NativePerformanceCxx.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_1 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
-import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00096__get.js";
+import closure_5 from "00090__classPrivateFieldBase.js";
 import importDefaultResult2 from "00091__classPrivateFieldKey.js";
 import importDefaultResult1 from "00098__inherits.js";
 
@@ -104,7 +104,8 @@ let items = [
   {
     key: "toJSON",
     value: function toJSON() {
-      const self = this;
+      let self = this;
+      self = this;
       const tmp = callback3(callback2(self.prototype), "toJSON", this);
       closure_1 = tmp;
       let fn = tmp;

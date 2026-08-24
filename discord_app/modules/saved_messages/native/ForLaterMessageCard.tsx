@@ -1,15 +1,15 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import registerAssetDefault from "../../../../_runtime/04334_registerAsset.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../../../stores/PermissionStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 class ForLaterDeletedMessageCard {
   constructor(arg0) {
     savedMessage = global.savedMessage;
@@ -41,7 +41,7 @@ class ForLaterDeletedMessageCard {
     obj3[1] = intl3.string(require("getSystemLocale").t.SvXS1Z);
     obj3[3] = require("registerAsset");
     obj3[4] = function onPress() {
-      return savedMessage(dependencyMap[14]).removeSavedMessage(savedMessage.saveData);
+      return savedMessage(closure_1_2[14]).removeSavedMessage(savedMessage.saveData);
     };
     obj2[1] = tmp5(require("IconButton").IconButton, obj3);
     items1[2] = tmp5(View, obj2);
@@ -52,9 +52,10 @@ class ForLaterDeletedMessageCard {
 let c4 = importAllResult;
 ({ AnalyticEvents: error, ChannelTypes: closure_8, Permissions: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, messagePreview: null, deletedCard: null, deletedText: null, deletedActionButton: null };
+obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 obj[1] = obj;
-const createCacheKey = { marginHorizontal: -16, marginTop: -9, marginBottom: -16, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
+createCacheKey = { marginHorizontal: -16, marginTop: -9, marginBottom: -16, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
 obj[2] = createCacheKey;
 obj[3] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[4] = { flex: 1 };
@@ -63,9 +64,10 @@ let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
+  let savedMessageChannel;
   let tmp = callback3();
   let obj = savedMessage(10880);
-  const savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
+  savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   callback = importAllResult.useCallback(callback(function*() {
     if (message === 2) {
@@ -224,17 +226,17 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
       if (obj1.useStateFromStores(items1, () => {
         let type;
         if (savedMessageChannel != null) {
-          type = savedMessageChannel.type;
+          type = obj.type;
         }
         let tmp2 = type === closure_1_8.UNKNOWN;
         if (!tmp2) {
           let isPrivateResult;
-          if (savedMessageChannel != null) {
-            isPrivateResult = savedMessageChannel.isPrivate();
+          if (obj != null) {
+            isPrivateResult = obj.isPrivate();
           }
           let canResult = isPrivateResult;
           if (!canResult) {
-            canResult = closure_1_6.can(closure_1_9.VIEW_CHANNEL, savedMessageChannel);
+            canResult = closure_1_6.can(closure_1_9.VIEW_CHANNEL, obj);
           }
           tmp2 = canResult;
         }
@@ -254,7 +256,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           obj1[0] = savedMessage;
           obj1[1] = throttledNow;
           obj1[2] = tmp8;
-          tmp6Result = callback2(tmp2(12728).ForLaterCardReminderHeader, obj1);
+          tmp6Result = tmp6(tmp2(12728).ForLaterCardReminderHeader, obj1);
         }
         const items2 = [tmp6Result, , , ];
         let obj2 = { channel: null, actions: null };
@@ -275,13 +277,13 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
         obj4[1] = callback2(tmp2(12730).ForLaterMessageRow, obj5);
         items2[3] = callback2(View, obj4);
         obj[5] = items2;
-        return callback(tmp2(6292).Card, obj);
+        return closure_11(tmp2(6292).Card, obj);
       }
     }
   }
   return callback2(ForLaterDeletedMessageCard, { savedMessage });
 });
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageCard.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageCard.tsx");
 
 export default memoResult;
 export { ForLaterDeletedMessageCard };

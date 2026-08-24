@@ -1,22 +1,23 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPip.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import reinjectEphemerals from "../../../stores/MessageStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_8 from "../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../stores/MessageStore.tsx";
+import closure_10 from "../../../stores/RelationshipStore.tsx";
+import closure_11 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { SquarePIPReferenceDimensions } from "../../voice_panel/native/pip/VoicePanelPIPConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function MediaInfo(message) {
   message = message.message;
   const activeMediaPlayerSource = message.activeMediaPlayerSource;
   let first;
+  dependencyMap = undefined;
   let first1;
   let React;
   ({ isVoiceMessage, isControlVisible } = message);
@@ -84,7 +85,7 @@ function MediaInfo(message) {
           obj2[0] = { flex: 1 };
           const obj3 = { spacing: 20, speed: 0.2, children: null };
           obj3[2] = tmp14;
-          const items3 = [callback2(tmp2(16439).Marquee, obj3), ];
+          const items3 = [tmp13(tmp2(16439).Marquee, obj3), ];
           const obj4 = { start: null, end: null, locations: null, colors: null, style: null };
           obj4[0] = { x: 0, y: 0 };
           obj4[1] = { x: 1, y: 0 };
@@ -92,20 +93,20 @@ function MediaInfo(message) {
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj4[3] = items4;
           obj4[4] = tmp.infoContainerGradient;
-          items3[1] = callback2(tmp4(4756), obj4);
+          items3[1] = tmp13(tmp4(4756), obj4);
           obj2[1] = items3;
-          tmp16Result = callback2(closure_7, obj2);
+          tmp16Result = tmp16(tmp15, obj2);
         }
         const items5 = [tmp16Result, ];
         let tmp13Result = null != stateFromStores;
         if (tmp13Result) {
           const obj5 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
           obj5[3] = stateFromStores;
-          tmp13Result = callback2(tmp2(4734).Text, obj5);
+          tmp13Result = tmp13(tmp2(4734).Text, obj5);
         }
         items5[1] = tmp13Result;
         obj1[1] = items5;
-        obj[3] = callback2(closure_7, obj1);
+        obj[3] = closure_16(closure_7, obj1);
         return callback2(closure_7, obj);
       }
     }
@@ -120,24 +121,26 @@ function PiPControls(message) {
   const items = [message];
   const callback = React.useCallback(() => {
     if (null != message) {
-      if (null != message.channel_id) {
-        if (null != message.id) {
-          const obj = visible(dependencyMap[19]);
-          obj.trackJump(message.channel_id, message.id, "Media PIP", {});
-          const channel = closure_1_8.getChannel(message.channel_id);
+      if (null != tmp.channel_id) {
+        if (null != tmp.id) {
+          const obj = visible(closure_1_2[19]);
+          obj.trackJump(tmp.channel_id, tmp.id, "Media PIP", {});
+          const channel = closure_1_8.getChannel(tmp.channel_id);
           let guildId;
           if (channel != null) {
             guildId = channel.getGuildId();
           }
-          visible(dependencyMap[20])(closure_1_14.CHANNEL(guildId, message.channel_id, message.id), { navigationReplace: true, openChannel: true });
-          const tmp6Result = visible(dependencyMap[20]);
+          visible(closure_1_2[20])(closure_1_14.CHANNEL(guildId, tmp.channel_id, tmp.id), { navigationReplace: true, openChannel: true });
+          const tmp6 = visible;
+          const tmp6Result = visible(closure_1_2[20]);
+          const tmp7 = closure_1_2;
         }
       }
     }
   }, items);
-  message(4115);
+  let obj = message(4115);
   const fn = function c() {
-    let obj = message(dependencyMap[22]);
+    let obj = message(closure_1_2[22]);
     let num = 0;
     if (visible) {
       num = 1;
@@ -145,7 +148,7 @@ function PiPControls(message) {
     obj = { opacity: obj.withTiming(num, { duration: 200 }) };
     return obj;
   };
-  let obj = { withTiming: message(4664).withTiming, visible };
+  obj = { withTiming: message(4664).withTiming, visible };
   fn.__closure = obj;
   fn.__workletHash = 3641278982291;
   fn.__initData = closure_19;
@@ -182,6 +185,7 @@ function PiPControls(message) {
 ({ Easing: c5, StyleSheet, TouchableOpacity: closure_6, View: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = ME);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
+createCacheKey = { container: createCacheKey, pipControls: null, pipButton: null, dismissButton: null, backButton: null, infoContainer: null, infoContainerGradient: null, infoContent: null, actionContainer: null, playPauseButton: null, progressBar: null };
 createCacheKey = { justifyContent: "center", alignItems: "center", height: SquarePIPReferenceDimensions.height, width: SquarePIPReferenceDimensions.width };
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -196,6 +200,8 @@ const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[6] = {};
 createCacheKey[7] = { justifyContent: "center", alignItems: "center", alignSelf: "stretch", marginHorizontal: 4 };
 createCacheKey[8] = { justifyContent: "center", alignItems: "center", width: 48, height: 48, zIndex: 100 };
+let obj2 = { position: "absolute", top: 8, padding: 8, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+let obj3 = {};
 createCacheKey[9] = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let obj5 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
@@ -204,7 +210,8 @@ obj5.alignItems = "center";
 createCacheKey[10] = obj5;
 let closure_17 = createCacheKey.createStyles(createCacheKey);
 let closure_19 = { code: "function MediaPlaybackPipTsx1(){const{withTiming,visible}=this.__closure;return{opacity:withTiming(visible?1:0,{duration:200})};}" };
-let result = require("obj132").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPip.tsx");
+let obj4 = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPip.tsx");
 
 export default function MediaPlaybackPip() {
   let tmp = callback4();
@@ -224,10 +231,10 @@ export default function MediaPlaybackPip() {
   const stateFromStores = progress(mediaSourceMessage[13]).useStateFromStores(items, () => {
     let channelId;
     if (callback != null) {
-      channelId = callback.channelId;
+      channelId = tmp.channelId;
     }
     if (callback != null) {
-      const messageId = callback.messageId;
+      const messageId = tmp.messageId;
     }
     let message = null;
     if (null != channelId) {
@@ -251,6 +258,7 @@ export default function MediaPlaybackPip() {
   }
   React = tmp9;
   progress = activeMediaPlayerSource;
+  callback = progress;
   callback = obj.useRef(null);
   const items2 = [progress, activeMediaPlayerSource, mediaSourceMessage];
   const effect = obj.useEffect(() => {
@@ -269,14 +277,14 @@ export default function MediaPlaybackPip() {
       obj[0] = callback;
       obj[1] = progress;
       obj[2] = mediaSourceMessage;
-      ref.current = obj;
+      tmp.current = obj;
     }
-    let tmp9 = null != ref.current;
+    let tmp9 = null != tmp.current;
     if (tmp9) {
       tmp9 = null != callback;
     }
     if (tmp9) {
-      ref.current.finalProgress = callback;
+      tmp.current.finalProgress = callback;
     }
   }, items2);
   const effect1 = obj.useEffect(() => {
@@ -356,7 +364,6 @@ export default function MediaPlaybackPip() {
       date = new Date();
       obj[8] = date.toISOString();
       callback(mediaSourceMessage[27]).track(closure_2_12.MEDIA_PIP_ENDED, obj);
-      const obj5 = callback(mediaSourceMessage[27]);
     };
   }, []);
   const tmp12 = callback(obj.useState(false), 2);
@@ -422,17 +429,17 @@ export default function MediaPlaybackPip() {
   const items8 = [mediaSourceMessage, activeMediaPlayerSource, hasFlagResult, first];
   const memo = obj.useMemo(() => {
     if (progress) {
-      let PlayIcon = progress(mediaSourceMessage[31]).PauseIcon;
-      let tmp4 = mediaSourceMessage;
+      let PlayIcon = tmp2(tmp3[31]).PauseIcon;
+      let tmp4 = tmp3;
     } else {
-      PlayIcon = progress(mediaSourceMessage[32]).PlayIcon;
-      tmp4 = mediaSourceMessage;
+      PlayIcon = tmp2(tmp3[32]).PlayIcon;
+      tmp4 = tmp3;
     }
     return closure_1_15(PlayIcon, { color: callback(tmp4[11]).colors.WHITE, size: "md" });
   }, items7);
   const items9 = [mediaSourceMessage, callback, first, hasFlagResult];
-  const memo1 = obj.useMemo(() => closure_1_15(MediaInfo, { message: closure_3, activeMediaPlayerSource: callback, isVoiceMessage: closure_4, isControlVisible: first }), items8);
-  const memo2 = obj.useMemo(() => closure_1_15(PiPControls, { message: closure_3, handleClosePip: callback, visible: first, isVoiceMessage: closure_4 }), items9);
+  const memo1 = obj.useMemo(() => closure_1_15(closure_1_18, { message: closure_3, activeMediaPlayerSource: callback, isVoiceMessage: closure_4, isControlVisible: first }), items8);
+  const memo2 = obj.useMemo(() => closure_1_15(closure_1_20, { message: closure_3, handleClosePip: callback, visible: first, isVoiceMessage: closure_4 }), items9);
   const intl = tmp3(tmp4[23]).intl;
   const string = intl.string;
   const t = tmp3(tmp4[23]).t;
@@ -457,6 +464,21 @@ export default function MediaPlaybackPip() {
   if (null != progress) {
     num3 = progress.duration - progress.time;
   }
+  obj = {
+    style: tmp.container,
+    activeOpacity: 1,
+    onPress() {
+      let tmp = !progress;
+      if (!progress) {
+        tmp = first;
+      }
+      if (!tmp) {
+        callback(!first);
+      }
+    },
+    accessible: false,
+    children: null
+  };
   const items10 = [memo2, memo1, ];
   obj = { style: tmp.actionContainer, children: null };
   obj1 = { style: tmp.progressBar, size: 48, width: 2, prefill: num, easing: first.out(first.linear), duration: null, fill: null, rotation: 0, lineCap: "round", ref: null, tintColor: null, backgroundColor: null };
@@ -475,16 +497,16 @@ export default function MediaPlaybackPip() {
   obj1[10] = tmp3Result.useToken(callback(mediaSourceMessage[11]).colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
   tmp3Result = tmp3(tmp4[12]);
   obj1[11] = tmp3Result.useToken(callback(mediaSourceMessage[11]).colors.BACKGROUND_MOD_MUTED);
-  const items11 = [callback(progress(mediaSourceMessage[33]).AnimatedCircularProgress, obj1), ];
+  const items11 = [closure_15(progress(mediaSourceMessage[33]).AnimatedCircularProgress, obj1), ];
   obj2 = { style: tmp.playPauseButton, onPress: callback1, accessibilityRole: "button", accessibilityLabel: null, children: null };
   if (isPlaying) {
     stringResult = string2Result;
   }
   obj2[3] = stringResult;
   obj2[4] = memo;
-  items11[1] = callback(closure_6, obj2);
+  items11[1] = closure_15(closure_6, obj2);
   obj[1] = items11;
-  items10[2] = callback2(dismissPanel, obj);
+  items10[2] = closure_16(dismissPanel, obj);
   obj[4] = items10;
-  return callback2(closure_6, obj);
+  return closure_16(closure_6, obj);
 };

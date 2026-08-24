@@ -1,32 +1,24 @@
 // discord_app/lib/getOnClick.tsx
-import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
 import createGuildRecordFromRustDefault from "../stores/GuildStore.tsx";
-import _openURLDefault from "openURL.tsx";
 import scheduledEventSortDefault from "../modules/guild_scheduled_events/GuildScheduledEventStore.tsx";
-import _modDef4770 from "../actions/ChannelActionCreators.tsx";
 import reinjectEphemeralsDefault from "../stores/MessageStore.tsx";
-import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import handleUserSettingsStoreUpdateDefault from "../modules/slayer_storefront/SocialLayerStorefrontStore.tsx";
-import _safeTransitionToDefault from "../modules/links/safeTransitionTo.native.tsx";
-import getEmbeddedActivitiesManagerDefault from "../modules/activities/utils/getEmbeddedActivitiesManager.native.tsx";
-import _handleUsePrimaryEntryPointAppCommandDefault from "../modules/activities/handleUsePrimaryEntryPointAppCommand.tsx";
-import _modDef12416 from "../modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import addApplication from "../modules/applications/ApplicationStore.tsx";
-import fetchFingerprint from "../stores/AuthenticationStore.tsx";
-import trackCommunicationDisabled from "../stores/GuildMemberStore.tsx";
-import updateInvite from "../stores/InviteStore.tsx";
-import handleConnectionOpen from "../stores/SelectedChannelStore.tsx";
-import handleConnectionOpen2 from "../stores/SelectedGuildStore.tsx";
-import insertUnsortedGuilds from "../stores/SortedGuildStore.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../modules/applications/ApplicationStore.tsx";
+import closure_6 from "../stores/AuthenticationStore.tsx";
+import closure_7 from "../stores/GuildMemberStore.tsx";
+import closure_8 from "../stores/InviteStore.tsx";
+import closure_9 from "../stores/SelectedChannelStore.tsx";
+import closure_10 from "../stores/SelectedGuildStore.tsx";
+import closure_11 from "../stores/SortedGuildStore.tsx";
 import ME from "../Constants.tsx";
 import items from "../modules/collectibles/CollectiblesShopConstants.tsx";
 import { isGameShopPath } from "../modules/slayer_storefront/SocialLayerStorefrontConstants.tsx";
 import { trimTrailingPunctuation } from "../modules/coded_links/findCodedLinks.tsx";
 
-const require = fn;
+const require = arg1;
 function openInviteModal() {
   const self = this;
   const apply = _openInviteModal.apply;
@@ -195,7 +187,7 @@ function _handleInviteCodedLink() {
                               }
                               set = new Set(flattenedGuildIds);
                               roles = invite2.roles;
-                              id = roles.some((item, index) => !set.has(item.id));
+                              id = roles.some((id) => !set.has(id.id));
                             }
                           }
                         }
@@ -292,7 +284,7 @@ reinjectEphemeralsDefault;
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = items);
 let obj = { skipExtensionCheck: "Array", analyticsLocations: 0 };
 obj[1] = [];
-let result = require("obj132").fileFinishedImporting("lib/getOnClick.tsx");
+let result = require("set").fileFinishedImporting("lib/getOnClick.tsx");
 
 export default function getOnClick(url) {
   const _require = url;
@@ -301,8 +293,10 @@ export default function getOnClick(url) {
     tmp = obj;
   }
   ({ analyticsLocations: importDefault, messageId: dependencyMap, channelId } = tmp);
+  c3 = undefined;
   pathname = undefined;
-  obj = trimTrailingPunctuation;
+  obj = undefined;
+  obj = _trimTrailingPunctuation;
   const findCodedLinkResult = obj.findCodedLink(url);
   c3 = findCodedLinkResult;
   if (null != findCodedLinkResult) {
@@ -329,13 +323,13 @@ export default function getOnClick(url) {
         preventDefault.preventDefault();
       }
       const code = _undefined.code;
-      if (_undefined.type !== url(dependencyMap[25]).CodedLinkType.APP_DIRECTORY_PROFILE) {
-        if (_undefined.type !== url(dependencyMap[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
-          let result = url(dependencyMap[26]).parseStorefrontSkuCodedLink(code);
+      if (_undefined.type !== url(closure_1_2[25]).CodedLinkType.APP_DIRECTORY_PROFILE) {
+        if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
+          let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
             result = { applicationId: "r", skuId: "accessibilityRole" };
           }
-          const tmp3Result = url(dependencyMap[26]);
+          const tmp3Result = tmp3(tmp4[26]);
         }
         ({ applicationId, skuId } = result);
         const guildId = closure_1_10.getGuildId();
@@ -344,9 +338,10 @@ export default function getOnClick(url) {
           obj[0] = applicationId;
           obj[2] = guildId;
           obj[3] = closure_1_9.getChannelId();
-          expandEventPropertiesDefault.track(closure_1_12.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, obj);
+          closure_1_1(tmp4[28]).track(closure_1_12.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, obj);
+          const obj3 = closure_1_1(tmp4[28]);
         }
-        _openURLDefault(url);
+        closure_1_1(tmp4[27])(url);
         return true;
       }
       result = { applicationId: code, skuId: "a" };
@@ -365,8 +360,8 @@ export default function getOnClick(url) {
         let searchParams = uRL.searchParams;
         let value = searchParams.get("referrer_id");
         closure_2 = value;
-        _undefined = getEmbeddedActivitiesManagerDefault();
-        obj = url(dependencyMap[30]);
+        _undefined = closure_1_1(closure_1_2[29])();
+        obj = url(closure_1_2[30]);
         const playInContext = obj.getPlayInContext(code);
         const currentChannelId = playInContext.currentChannelId;
         ({ instanceId: obj, isCurrentlyInInstance } = playInContext);
@@ -379,7 +374,8 @@ export default function getOnClick(url) {
             let searchParams2 = uRL.searchParams;
             const searchParams3 = uRL.searchParams;
             value = searchParams2.get("link_id");
-            const customActivityLinkParams = tmp7(dependencyMap[31]).getCustomActivityLinkParams(code, value, searchParams3.get("custom_id"));
+            const customActivityLinkParams = tmp7(tmp6[31]).getCustomActivityLinkParams(code, value, searchParams3.get("custom_id"));
+            url = undefined;
             url = pathname((arg0) => {
               closure_0 = arg0;
               c3 = 0;
@@ -440,7 +436,7 @@ export default function getOnClick(url) {
                         c3 = 2;
                         c4 = 1;
                         const obj3 = { value: null, done: false };
-                        obj3[0] = callback(dependencyMap[32]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj2);
+                        obj3[0] = callback(closure_3_2[32]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj2);
                         return obj3;
                       }
                     } else if (arg0 === 1) {
@@ -464,8 +460,8 @@ export default function getOnClick(url) {
               iter.next();
               return iter;
             });
-            const tmp7Result = tmp7(dependencyMap[31]);
-            customActivityLinkParams.then(function(result) {
+            const tmp7Result = tmp7(tmp6[31]);
+            customActivityLinkParams.then(function() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -474,11 +470,11 @@ export default function getOnClick(url) {
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            }).catch((error) => {
+            }).catch(() => {
 
             });
             flag2 = true;
-            const nextPromise = customActivityLinkParams.then(function(result) {
+            const nextPromise = customActivityLinkParams.then(function() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -502,7 +498,8 @@ export default function getOnClick(url) {
           if (flag) {
             obj = { recipientIds: null };
             obj[0] = id;
-            const tmp5Result = _modDef4770;
+            const tmp5Result = tmp5(tmp6[33]);
+            url = undefined;
             url = pathname((arg0) => {
               closure_0 = arg0;
               c3 = 0;
@@ -543,7 +540,7 @@ export default function getOnClick(url) {
                         c3 = 1;
                         c4 = 1;
                         obj1 = { value: null, done: false };
-                        obj1[0] = callback(dependencyMap[31]).getCustomActivityLinkParams(callback, value, searchParams2.get("custom_id"));
+                        obj1[0] = callback(closure_3_2[31]).getCustomActivityLinkParams(callback, value, searchParams2.get("custom_id"));
                         return obj1;
                       }
                     } else if (arg0 === 1) {
@@ -562,7 +559,7 @@ export default function getOnClick(url) {
                       obj2[2] = uRL;
                       obj2[3] = customId;
                       obj2[4] = closure_1_2;
-                      _handleUsePrimaryEntryPointAppCommandDefault(obj2);
+                      closure_3_1(closure_3_2[34])(obj2);
                       c4 = 3;
                       return { value: "HermesInternal", done: "HermesInternal" };
                     }
@@ -573,8 +570,8 @@ export default function getOnClick(url) {
                 }
               })();
             });
-            const openPrivateChannelResult = _modDef4770.openPrivateChannel(obj);
-            _modDef4770.openPrivateChannel(obj).then(function(result) {
+            const openPrivateChannelResult = tmp5(tmp6[33]).openPrivateChannel(obj);
+            tmp5(tmp6[33]).openPrivateChannel(obj).then(function() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -583,11 +580,11 @@ export default function getOnClick(url) {
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            }).catch((error) => {
+            }).catch(() => {
 
             });
             flag = true;
-            const nextPromise1 = _modDef4770.openPrivateChannel(obj).then(function(result) {
+            const nextPromise1 = tmp5(tmp6[33]).openPrivateChannel(obj).then(function() {
               const self = this;
               const apply = closure_0.apply;
               if (typeof apply === "unknown") {
@@ -600,6 +597,7 @@ export default function getOnClick(url) {
           }
           return flag;
         }
+        tmp5 = closure_1_1;
         tmp7 = url;
       };
     }
@@ -611,9 +609,10 @@ export default function getOnClick(url) {
           preventDefault.preventDefault();
         }
         [closure_0, closure_1] = _undefined(_undefined.code.split("-"), 2);
+        const str = _undefined.code;
         const tmp2 = _undefined(_undefined.code.split("-"), 2);
-        url(dependencyMap[20])(dependencyMap[35], dependencyMap.paths).then((result) => {
-          result.openGuildProductLink(closure_0, closure_1);
+        url(closure_1_2[20])(closure_1_2[35], closure_1_2.paths).then((openGuildProductLink) => {
+          openGuildProductLink.openGuildProductLink(closure_0, closure_1);
         });
         return true;
       };
@@ -625,8 +624,9 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
+        const str = _undefined.code;
         const tmp2 = _undefined(_undefined.code.split("-"), 2);
-        const result = url(dependencyMap[36]).openSocialLayerStorefrontProductDetailsModal({ skuId: _undefined(_undefined.code.split("-"), 2)[0], analyticsLocations: closure_1 });
+        const result = url(closure_1_2[36]).openSocialLayerStorefrontProductDetailsModal({ skuId: _undefined(_undefined.code.split("-"), 2)[0], analyticsLocations: closure_1 });
         return true;
       };
     }
@@ -637,8 +637,9 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
+        const str = _undefined.code;
         const tmp2 = _undefined(_undefined.code.split("-"), 2);
-        const result = url(dependencyMap[36]).openSocialLayerStorefrontProductDetailsModal({ skuId: _undefined(_undefined.code.split("-"), 2)[0], analyticsLocations: closure_1 });
+        const result = url(closure_1_2[36]).openSocialLayerStorefrontProductDetailsModal({ skuId: _undefined(_undefined.code.split("-"), 2)[0], analyticsLocations: closure_1 });
         return true;
       };
     }
@@ -651,7 +652,7 @@ export default function getOnClick(url) {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          obj = isDiscordProxiedAssetUrlDefault;
+          obj = closure_1_1(closure_1_2[38]);
           let toURLSafeResult = obj.toURLSafe(_undefined.url);
           if (toURLSafeResult == null) {
             toURLSafeResult = {};
@@ -662,8 +663,8 @@ export default function getOnClick(url) {
           if (null != search) {
             const _URLSearchParams = URLSearchParams;
             const uRLSearchParams = new URLSearchParams(search);
-            uRLSearchParams.get("sort");
-            const value = uRLSearchParams.get("filter");
+            let value = uRLSearchParams.get("sort");
+            value = uRLSearchParams.get("filter");
             tmp4 = value;
             tmp5 = value;
           }
@@ -676,8 +677,8 @@ export default function getOnClick(url) {
             tmp4 = null;
           }
           obj[2] = tmp4;
-          obj[3] = url(dependencyMap[40]).QuestContent.QUEST_SHARE_LINK;
-          url(dependencyMap[39]).openQuestHome(obj);
+          obj[3] = url(closure_1_2[40]).QuestContent.QUEST_SHARE_LINK;
+          url(closure_1_2[39]).openQuestHome(obj);
           return true;
         };
       }
@@ -689,9 +690,9 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        const enabled = url(dependencyMap[41]).isVirtualCurrencyEnabled().enabled;
-        obj = url(dependencyMap[41]);
-        url(dependencyMap[20])(dependencyMap[42], dependencyMap.paths).then((result) => {
+        const enabled = url(closure_1_2[41]).isVirtualCurrencyEnabled().enabled;
+        obj = url(closure_1_2[41]);
+        url(closure_1_2[20])(closure_1_2[42], closure_1_2.paths).then((openCollectiblesShopMobile) => {
           const tmp3 = callback(closure_1_3.code.split("-"), 2)[1];
           if (enabled) {
             if (tmp2 === closure_2_14.ORBS) {
@@ -706,10 +707,9 @@ export default function getOnClick(url) {
               tmp9 = tmp3;
             }
             obj[3] = tmp9;
-            result = result.openCollectiblesShopMobile(obj);
+            const result = openCollectiblesShopMobile.openCollectiblesShopMobile(obj);
           }
-          ORBS = tmp4 ? closure_2_15.SHOP_ALL : closure_2_15.FEATURED_PAGE;
-          const tmp = callback(closure_1_3.code.split("-"), 2);
+          ORBS = tmp4 ? tmp6.SHOP_ALL : tmp6.FEATURED_PAGE;
         });
         return true;
       };
@@ -721,14 +721,14 @@ export default function getOnClick(url) {
   }
   ({ host, hostname, pathname } = toURLSafeResult);
   ({ search, hash } = toURLSafeResult);
-  let tmp5Result = isDiscordProxiedAssetUrlDefault;
+  let tmp5Result = tmp5(1487);
   let tmp6 = hostname;
   if (hostname == null) {
     tmp6 = null;
   }
   let isDiscordHostnameResult = tmp5Result.isDiscordHostname(tmp6);
   if (!isDiscordHostnameResult) {
-    tmp5Result = isDiscordProxiedAssetUrlDefault;
+    tmp5Result = tmp5(1487);
     if (host == null) {
       host = null;
     }
@@ -764,11 +764,11 @@ export default function getOnClick(url) {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          _safeTransitionToDefault(pathname, obj);
+          closure_1_1(closure_1_2[22])(pathname, obj);
           return true;
         };
       }
-      tmp5Result1 = isDiscordProxiedAssetUrlDefault;
+      tmp5Result1 = tmp5(1487);
     }
   }
   if (null != findCodedLinkResult) {
@@ -777,9 +777,10 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
+        obj = closure_1_1(closure_1_2[43]);
         obj = { application_id: _undefined.code };
         obj.trackWithMetadata(closure_1_12.APP_OAUTH2_LINK_EMBED_URL_CLICKED, obj);
-        _openURLDefault(closure_0);
+        closure_1_1(closure_1_2[27])(closure_0);
         return true;
       };
     }
@@ -793,7 +794,7 @@ export default function getOnClick(url) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        _modDef12416.show(closure_0);
+        closure_1_1(closure_1_2[46]).show(closure_0);
         return true;
       };
     }

@@ -1,39 +1,45 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EmojiCategoryTypes } from "../../../EmojiPickerConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ CATEGORY_ICON_RIPPLE_CONFIG: error, CATEGORY_ICON_SIZE, NODE_SIZE } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.ICON_TRANSPARENT };
+obj = { itemInner: obj, fadedItem: null, activeItem: null, guildItem: null, lockContainer: null, lock: null };
+obj = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.ICON_TRANSPARENT };
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[3] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
+let obj2 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[4] = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+let obj3 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj[5] = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = { code: "function EmojiPickerCategoriesItemTsx1(){const{withTiming,categoryIndexActive,index,timingStandard,styleColorActive,styleColorTransparent}=this.__closure;return{opacity:withTiming(categoryIndexActive.get()===index?1:0.5,timingStandard),backgroundColor:categoryIndexActive.get()===index?styleColorActive:styleColorTransparent};}" };
 let closure_12 = { code: "function EmojiPickerCategoriesItemTsx2(){const{categoryIndexActive,index}=this.__closure;return categoryIndexActive.get()===index;}" };
 let closure_13 = { code: "function EmojiPickerCategoriesItemTsx3(active,prev){const{runOnJS,setIsSelected}=this.__closure;if(active!==prev){runOnJS(setIsSelected)(active);}}" };
+let obj4 = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(category) {
   category = category.category;
   const categoryIndexActive = category.categoryIndexActive;
   const handlePressCategory = category.handlePressCategory;
   const index = category.index;
   let locked = category.locked;
+  let backgroundColor;
+  let backgroundColor2;
   EmojiCategoryTypes = undefined;
   ({ loadingStyle, style } = category);
   const tmp = callback();
-  const backgroundColor = tmp.activeItem.backgroundColor;
-  const backgroundColor2 = tmp.fadedItem.backgroundColor;
+  backgroundColor = tmp.activeItem.backgroundColor;
+  backgroundColor2 = tmp.fadedItem.backgroundColor;
   let obj = category(handlePressCategory[8]);
   class T {
     constructor() {
@@ -99,12 +105,12 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(categ
     obj3[1] = loadingStyle;
     obj3[2] = tmp2(tmp3[12]).GuildIconSizes.XSMALL;
     obj3[3] = tmp.guildItem;
-    let tmp9Result = callback(tmp12(tmp3[12]), obj3);
+    let tmp9Result = tmp9(tmp12(tmp3[12]), obj3);
     const tmp12Result = tmp12(tmp3[12]);
   } else {
     const obj4 = { id: null };
     obj4[0] = category.id;
-    tmp9Result = callback(tmp12(tmp3[13]), obj4);
+    tmp9Result = tmp9(tmp12(tmp3[13]), obj4);
   }
   const items2 = [tmp9Result, ];
   if (locked) {
@@ -112,14 +118,14 @@ const memoResult = importAllResult.memo(function EmojiPickerCategoriesItem(categ
     obj5[0] = tmp.lockContainer;
     const obj6 = { style: null };
     obj6[0] = tmp.lock;
-    obj5[1] = callback(tmp2(tmp3[14]).LockIcon, obj6);
-    locked = callback(backgroundColor2, obj5);
+    obj5[1] = tmp9(tmp2(tmp3[14]).LockIcon, obj6);
+    locked = tmp9(backgroundColor2, obj5);
   }
   items2[1] = locked;
   obj2[1] = items2;
-  obj1[6] = callback2(categoryIndexActive(handlePressCategory[8]).View, obj2);
-  return callback(category(handlePressCategory[11]).PressableOpacity, obj1);
+  obj1[6] = closure_9(categoryIndexActive(handlePressCategory[8]).View, obj2);
+  return closure_8(category(handlePressCategory[11]).PressableOpacity, obj1);
 });
-const result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx");
 
 export default memoResult;

@@ -1,7 +1,7 @@
 // discord_app/modules/fastest_list/useFastestListSections.android.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/fastest_list/useFastestListSections.android.tsx");
+const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListSections.android.tsx");
 
 export default function useFastestListSections(fastestListId) {
   fastestListId = fastestListId.fastestListId;
@@ -24,6 +24,7 @@ export default function useFastestListSections(fastestListId) {
   if (num4 === undefined) {
     num4 = 0;
   }
+  closure_8 = undefined;
   const tmp = fastestListId(itemSize[1])(() => {
     c0 = 0;
     return {
@@ -45,7 +46,7 @@ export default function useFastestListSections(fastestListId) {
     }
     let str;
     if (keyExtractor != null) {
-      str = keyExtractor(fastestListId(itemSize[2]).LIST_FOOTER, 0, 0);
+      str = tmp4(fastestListId(itemSize[2]).LIST_FOOTER, 0, 0);
     }
     if (str == null) {
       str = "";
@@ -56,7 +57,7 @@ export default function useFastestListSections(fastestListId) {
     }
     let str2;
     if (keyExtractor != null) {
-      str2 = keyExtractor(fastestListId(itemSize[2]).LIST_HEADER, 0, 0);
+      str2 = tmp4(fastestListId(itemSize[2]).LIST_HEADER, 0, 0);
     }
     if (str2 == null) {
       str2 = "";
@@ -74,7 +75,7 @@ export default function useFastestListSections(fastestListId) {
     const items3 = [];
     if (typeof itemSize === "number") {
       obj = { sizes: null };
-      const items4 = [itemSize];
+      const items4 = [tmp];
       obj[0] = items4;
       items3.push(obj);
     }
@@ -104,57 +105,76 @@ export default function useFastestListSections(fastestListId) {
         obj[12] = items6;
         obj[13] = typeof tmp11 === "number";
         obj[14] = items;
-        obj[15] = typeof itemSize === "number";
+        obj[15] = typeof tmp === "number";
         obj[16] = items3;
         return obj;
       }
     }
-    for (let num3 = 0; num3 < sections.length; num3 = num3 + 1) {
-      if (typeof tmp10 !== "number") {
-        let arr5 = items5.push(num3(num3));
-      }
-      if (typeof tmp11 !== "number") {
-        let arr6 = items6.push(num4(num3));
-      }
-      if (!tmp12) {
-        let str4 = keyExtractor(fastestListId(itemSize[2]).SECTION_HEADER, num3, 0);
-        if (str4 == null) {
-          str4 = "";
+    num3 = 0;
+    if (0 < sections.length) {
+      do {
+        let tmp16 = num3;
+        if (typeof tmp10 !== "number") {
+          let tmp42 = num3;
+          let arr5 = items5.push(num3(num3));
         }
-        let arr7 = items1.push(str4);
-        let str5 = keyExtractor(fastestListId(itemSize[2]).SECTION_FOOTER, num3, 0);
-        if (str5 == null) {
-          str5 = "";
-        }
-        let arr8 = items2.push(str5);
-      }
-      if (typeof itemSize !== "number") {
-        let tmp25 = sections[num3];
-        if (typeof itemSize !== "number") {
-          obj1 = { sizes: null };
-          obj1[0] = [];
-          let arr9 = items3.push(obj1);
+        if (typeof tmp11 !== "number") {
+          let tmp44 = num4;
+          let arr6 = items6.push(num4(num3));
         }
         if (!tmp12) {
-          let obj2 = { keys: null };
-          obj2[0] = [];
-          let arr10 = items.push(obj2);
+          let tmp18 = fastestListId;
+          let tmp19 = itemSize;
+          let tmp17 = keyExtractor;
+          let str4 = keyExtractor(fastestListId(itemSize[2]).SECTION_HEADER, num3, 0);
+          if (str4 == null) {
+            str4 = "";
+          }
+          let arr7 = items1.push(str4);
+          let tmp21 = fastestListId;
+          let tmp22 = itemSize;
+          let str5 = tmp17(fastestListId(itemSize[2]).SECTION_FOOTER, num3, 0);
+          if (str5 == null) {
+            str5 = "";
+          }
+          let arr8 = items2.push(str5);
         }
-        for (let num4 = 0; num4 < tmp25; num4 = num4 + 1) {
-          if (typeof itemSize !== "number") {
-            let sizes = items3[num3].sizes;
-            let arr11 = sizes.push(itemSize(num3, num4));
+        if (typeof tmp !== "number") {
+          let tmp24 = sections;
+          let tmp25 = sections[num3];
+          if (typeof tmp !== "number") {
+            obj1 = { sizes: null };
+            obj1[0] = [];
+            let arr9 = items3.push(obj1);
           }
           if (!tmp12) {
-            let keys = items[num3].keys;
-            let str6 = keyExtractor(fastestListId(itemSize[2]).ITEM, num3, num4);
-            if (str6 == null) {
-              str6 = "";
+            let obj2 = { keys: null };
+            obj2[0] = [];
+            let arr10 = items.push(obj2);
+          }
+          for (let num4 = 0; num4 < tmp25; num4 = num4 + 1) {
+            let tmp27 = num4;
+            if (typeof tmp !== "number") {
+              let sizes = items3[num3].sizes;
+              let tmp47 = itemSize;
+              let arr11 = sizes.push(itemSize(num3, num4));
             }
-            let arr12 = keys.push(str6);
+            if (!tmp12) {
+              let keys = items[num3].keys;
+              let tmp28 = keyExtractor;
+              let tmp29 = fastestListId;
+              let tmp30 = itemSize;
+              let str6 = keyExtractor(fastestListId(itemSize[2]).ITEM, num3, num4);
+              if (str6 == null) {
+                str6 = "";
+              }
+              let arr12 = keys.push(str6);
+            }
           }
         }
-      }
+        num3 = num3 + 1;
+        let tmp32 = sections;
+      } while (num3 < sections.length);
     }
   }, items);
   let items1 = [tmp, memo];

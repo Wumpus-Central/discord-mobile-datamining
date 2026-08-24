@@ -1,8 +1,8 @@
 // discord_app/modules/gif_picker/GifProvider.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/gif_picker/GifProvider.tsx");
+const result = set.fileFinishedImporting("modules/gif_picker/GifProvider.tsx");
 
 export const GIF_PROVIDER = "klipy";
 export const GIF_PROVIDER_EMBED_NAME = "Klipy";

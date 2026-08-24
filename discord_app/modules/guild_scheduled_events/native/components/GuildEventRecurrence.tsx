@@ -1,27 +1,31 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import scheduledEventSort from "../../GuildScheduledEventStore.tsx";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
+import closure_7 from "../../GuildScheduledEventStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, borderRadius: ThemesDefault.radii.xs };
+createCacheKey = { container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 }, active: null, actions: null, secondarySmallButton: null, secondarySmallIcon: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignItems: "center", flexDirection: "row", flexShrink: 0 };
 createCacheKey[4] = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: ThemesDefault.radii.xs };
+let obj1 = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[5] = { tintColor: ThemesDefault.colors.TEXT_STRONG };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx");
+let obj2 = { tintColor: ThemesDefault.colors.TEXT_STRONG };
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx");
 
 export default function GuildEventRecurrence(recurrenceId) {
   recurrenceId = recurrenceId.recurrenceId;
   const guildEventId = recurrenceId.guildEventId;
   ({ onPress: dependencyMap, isActive } = recurrenceId);
+  let stateFromStores;
   let stateFromStores1;
   closure_5 = undefined;
   c6 = undefined;
@@ -29,7 +33,7 @@ export default function GuildEventRecurrence(recurrenceId) {
   const tmp = callback2();
   let obj = recurrenceId(589);
   const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => guildScheduledEvent.getGuildScheduledEvent(guildEventId));
+  stateFromStores = obj.useStateFromStores(items, () => guildScheduledEvent.getGuildScheduledEvent(guildEventId));
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -71,8 +75,8 @@ export default function GuildEventRecurrence(recurrenceId) {
   const memo = stateFromStores.useMemo(() => {
     let eventTimeData = null;
     if (null != c6) {
-      eventTimeData = recurrenceId(dependencyMap[12]).getEventTimeData(tmp);
-      const obj = recurrenceId(dependencyMap[12]);
+      eventTimeData = recurrenceId(closure_1_2[12]).getEventTimeData(tmp);
+      const obj = recurrenceId(closure_1_2[12]);
     }
     return eventTimeData;
   }, items3);
@@ -129,7 +133,7 @@ export default function GuildEventRecurrence(recurrenceId) {
       const obj4 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
       const intl2 = tmp2(1236).intl;
       obj4[2] = intl2.string(tmp2(1236).t.fyBVRm);
-      tmp21Result = callback(tmp2(4734).Text, obj4);
+      tmp21Result = tmp21(tmp2(4734).Text, obj4);
     }
     const items6 = [tmp21Result, ];
     const obj5 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -140,8 +144,8 @@ export default function GuildEventRecurrence(recurrenceId) {
       if (null != stateFromStores) {
         stopPropagation.stopPropagation();
         if (null != stateFromStores1) {
-          const result = recurrenceId(dependencyMap[17]).showGuildEventModeratorActionSheet(tmp, closure_5, recurrenceId);
-          const obj = recurrenceId(dependencyMap[17]);
+          const result = recurrenceId(closure_1_2[17]).showGuildEventModeratorActionSheet(tmp, closure_5, recurrenceId);
+          const obj = recurrenceId(closure_1_2[17]);
         }
       }
     };
@@ -153,9 +157,9 @@ export default function GuildEventRecurrence(recurrenceId) {
     obj5[5] = callback(tmp2(1297).Icon, obj6);
     items6[1] = callback(tmp2(5433).PressableOpacity, obj5);
     obj3[1] = items6;
-    items5[1] = callback(stateFromStores1, obj3);
+    items5[1] = closure_9(stateFromStores1, obj3);
     obj[1] = items5;
-    return callback(stateFromStores1, obj);
+    return closure_9(stateFromStores1, obj);
   }
   const tmp2Result2 = recurrenceId(8791);
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/routing/RouteConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import items2 from "../collectibles/CollectiblesShopConstants.tsx";
 import CONFERENCE_MODE_ENABLED from "../conference_mode/ConferenceModeConstants.tsx";
 import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "../global_discovery_apps/GlobalDiscoveryAppsConstants.tsx";
@@ -236,13 +236,13 @@ obj[38] = function INVITE_LOGIN(arg0) {
 obj[39] = function INVITE_REGISTER(arg0) {
   return "/invite/" + arg0 + "/register";
 };
-obj[40] = function INVITE_PROXY(targetChannelId, targetMessageId) {
+obj[40] = function INVITE_PROXY(arg0, targetMessageId) {
   if (null != targetMessageId) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "/invite-proxy/" + targetChannelId + "?messageId=" + targetMessageId;
+    let combined = "/invite-proxy/" + arg0 + "?messageId=" + targetMessageId;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "/invite-proxy/" + targetChannelId;
+    combined = "/invite-proxy/" + arg0;
   }
   return combined;
 };
@@ -556,8 +556,8 @@ obj[131] = function COLLECTIBLES_SHOP_PRODUCT_DETAIL(arg0) {
 obj[132] = function COLLECTIBLES_SHOP_LAYOUT(arg0) {
   return "/shop/layout/" + arg0;
 };
-obj[135] = function CHANNEL_SUMMARIES(callback) {
-  return "/channels/" + callback + "/summaries";
+obj[135] = function CHANNEL_SUMMARIES(arg0) {
+  return "/channels/" + arg0 + "/summaries";
 };
 obj[136] = function CHANNEL_SUMMARY(channelId, id) {
   return "/channels/" + channelId + "/summaries/" + id;
@@ -585,7 +585,7 @@ obj[145] = function QUEST_PREVIEW_TOOL_2(arg0) {
 };
 const frozen = Object.freeze(obj);
 const wrapPathsResult = getAuthenticationPath.wrapPaths(frozen, [":", "?", "@"]);
-const result = obj132.fileFinishedImporting("modules/routing/RouteConstants.tsx");
+const result = set.fileFinishedImporting("modules/routing/RouteConstants.tsx");
 
 export const ME = "@me";
 export const FAVORITES = "@favorites";

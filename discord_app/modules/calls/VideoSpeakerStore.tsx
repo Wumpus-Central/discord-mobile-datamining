@@ -2,15 +2,15 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
-import reset from "../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
-import anyoneHasFlagInContext from "../../stores/SpeakingStore.tsx";
-import getParticipants from "ChannelRTCStore.tsx";
+import closure_4 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../stores/MediaEngineStore.tsx";
+import closure_7 from "../../stores/SpeakingStore.tsx";
+import closure_8 from "ChannelRTCStore.tsx";
 import { ParticipantTypes } from "CallConstants.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
-require = fn;
+require = arg1;
 function updateSpeaker(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
@@ -74,6 +74,7 @@ function updateSpeaker(arg0) {
         if (!result1) {
           tmp21 = id;
         }
+        const obj2 = isStreamKey;
       }
     }
     tmp2 = tmp21;
@@ -89,13 +90,23 @@ function updateSpeaker(arg0) {
       while (iter !== undefined) {
         let tmp34 = nextResult;
         if (nextResult.user.id !== id1) {
+          let tmp67 = localVideoDisabled;
+          let tmp68 = nextResult;
           if (!localVideoDisabled.isLocalVideoDisabled(tmp34.user.id)) {
+            let tmp35 = closure_8;
+            let tmp36 = closure_8;
+            let tmp37 = closure_2;
+            let tmp38 = nextResult;
             if (!closure_8.isParticipantPoppedOut(closure_2, tmp34.id)) {
+              let tmp39 = nextResult;
               let arr = items.push(tmp34.user.id);
+              let tmp41 = speakingDuration;
               speakingDuration = speakingDuration.getSpeakingDuration(tmp34.user.id, timestamp);
               if (0 !== speakingDuration) {
                 obj = { userId: null, duration: null };
+                let tmp44 = nextResult;
                 obj[0] = tmp34.user.id;
+                let tmp45 = speakingDuration;
                 obj[1] = tmp43;
                 arr = items1.push(obj);
               }
@@ -106,8 +117,11 @@ function updateSpeaker(arg0) {
       }
       for (const item10094 of items1) {
         let duration = item10094.duration;
+        let tmp49 = tmp;
         let tmp50 = null == tmp;
         if (!tmp50) {
+          let tmp51 = duration;
+          let tmp52 = tmp;
           tmp50 = duration < tmp;
         }
         if (tmp50) {
@@ -145,9 +159,9 @@ prototype["initialize"] = function initialize() {
   const items = [closure_8, closure_4];
   this.syncWith(items, handleChannelRTCUpdate);
 };
-prototype["getSpeaker"] = function getSpeaker(c0) {
-  if (closure_2 !== c0) {
-    closure_2 = c0;
+prototype["getSpeaker"] = function getSpeaker(arg0) {
+  if (closure_2 !== arg0) {
+    closure_2 = arg0;
     c3 = null;
     updateSpeaker(false);
   }
@@ -159,6 +173,7 @@ prototype["getSpeaker"] = function getSpeaker(c0) {
 };
 VideoSpeakerStoreClass.displayName = "VideoSpeakerStore";
 const videoSpeakerStoreClass = new VideoSpeakerStoreClass(dispatcherDefault, { AUDIO_SET_LOCAL_VIDEO_DISABLED: handleChannelRTCUpdate });
-let result = require("obj132").fileFinishedImporting("modules/calls/VideoSpeakerStore.tsx");
+let obj = { AUDIO_SET_LOCAL_VIDEO_DISABLED: handleChannelRTCUpdate };
+let result = require("set").fileFinishedImporting("modules/calls/VideoSpeakerStore.tsx");
 
 export default videoSpeakerStoreClass;

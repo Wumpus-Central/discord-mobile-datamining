@@ -1,14 +1,14 @@
 // discord_app/modules/message_request/hooks/useMessageRequestActions.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import createUserWidgetFromServer from "../../user_profile/UserProfileStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../user_profile/UserProfileStore.tsx";
 import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "../MessageRequestConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-let require = fn;
+let require = arg1;
 ({ MessageRequestAnalyticsAction: error, BATCH_REJECT_LIMIT: closure_8 } = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL);
-let result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
+let result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
 
 export const useMessageRequestActions = function useMessageRequestActions(user) {
   user = user.user;
@@ -20,6 +20,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
   let React;
   c6 = undefined;
   c7 = undefined;
+  closure_8 = undefined;
   let isUserProfileLoading;
   let acceptMessageRequest;
   let tmp = onAcceptSuccess(onRejectSuccess[6])();
@@ -40,7 +41,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     tmp11 = isUserProfileLoading;
   }
   isUserProfileLoading = tmp11;
-  onError((arg0) => {
+  require = undefined;
+  require = onError((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -75,7 +77,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (isUserProfileLoading) {
+              if (closure_1_9) {
                 c6 = 3;
               } else {
                 v0(true);
@@ -93,7 +95,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               v0 = 1;
               closure_1 = closure_3;
               aPIError = new callback(onRejectSuccess[8]).APIError(closure_1);
-              if (onError != null) {
+              if (closure_1_3 != null) {
                 tmp27(callback);
               }
             } else if (arg0 === 1) {
@@ -108,8 +110,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               return obj;
             } else {
               closure_1_7(true);
-              if (onAcceptSuccess != null) {
-                onAcceptSuccess();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               v0 = 1;
             }
@@ -144,7 +146,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items);
-  onError((arg0) => {
+  require = undefined;
+  require = onError((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -179,7 +182,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (isUserProfileLoading) {
+              if (closure_1_9) {
                 c6 = 3;
               } else {
                 v0(true);
@@ -197,7 +200,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               c4 = 1;
               closure_1 = closure_3;
               aPIError = new callback(onRejectSuccess[8]).APIError(closure_1);
-              if (onError != null) {
+              if (closure_1_3 != null) {
                 tmp27(callback);
               }
             } else if (arg0 === 1) {
@@ -238,6 +241,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     })();
   });
   const items1 = [tmp11, onRejectSuccess, onError];
+  require = undefined;
   const rejectMessageRequest = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -248,7 +252,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items1);
-  onError((arg0) => {
+  require = onError((arg0) => {
     closure_0 = arg0;
     c7 = 0;
     c8 = 0;
@@ -269,13 +273,16 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         }
       } else {
         while (true) {
+          let num = 2;
           v0 = 2;
           let tmp4 = c7;
           if (0 === c7) {
             if (arg0 === 1) {
+              let num7 = 3;
               v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
+              let num6 = 3;
               v0 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
@@ -285,27 +292,48 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               closure_3 = tmp4;
               c0 = undefined;
               let aPIError;
-              if (isUserProfileLoading) {
+              let tmp60 = closure_1_9;
+              if (closure_1_9) {
+                let num5 = 3;
                 v0 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
+                let tmp29 = closure_1_5;
                 let tmp30 = closure_1_5(true);
+                let tmp31 = onAcceptSuccess;
+                let tmp32 = onRejectSuccess;
+                let tmp33 = closure_8;
                 let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp59, closure_8);
                 c6 = 2;
                 closure_2 = tmp34;
+                let tmp35 = tmp34;
+                closure_2 = tmp34;
                 aPIError = tmp34[Symbol.iterator]();
+                let tmp36 = closure_2;
+                let tmp37 = aPIError;
                 if (aPIError === undefined) {
+                  let tmp44 = closure_4;
+                  let tmp45 = v0;
                   let tmp46 = v0(true);
                   if (closure_1_2 != null) {
                     let tmp47 = closure_1_2();
                   }
+                  c6 = 1;
                   c6 = 0;
+                  let tmp48 = closure_4;
+                  let tmp49 = closure_1_5;
                   let tmp50 = closure_1_5(false);
                 } else {
+                  let tmp39 = closure_3;
+                  let tmp40 = closure_4;
                   c6 = 3;
                   let callback = tmp38;
-                  callback(onRejectSuccess[7]);
+                  let tmp41 = callback;
+                  let tmp42 = onRejectSuccess;
+                  obj1 = callback(onRejectSuccess[7]);
+                  let tmp43 = callback;
                   c7 = 4;
+                  let num4 = 1;
                   v0 = 1;
                   obj1 = { value: null, done: false };
                   obj1[0] = obj1.rejectMessageRequestBatch(callback);
@@ -315,23 +343,44 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             }
           } else if (1 !== tmp4) {
             if (2 === tmp4) {
+              let tmp12 = closure_3;
+              let tmp13 = closure_4;
+              let tmp14 = closure_5;
+              let tmp15 = closure_5;
               c6 = 1;
               closure_2 = closure_5;
+              let tmp16 = callback;
+              let tmp17 = onRejectSuccess;
+              let tmp18 = closure_2;
+              let tmp19 = new.target;
+              let tmp20 = new.target;
               aPIError = new callback(onRejectSuccess[8]).APIError(closure_2);
-              if (onError != null) {
+              let tmp22 = aPIError;
+              if (closure_1_3 != null) {
+                let tmp56 = closure_3;
+                let tmp57 = closure_1_1;
                 let tmp23Result = tmp23(closure_1_1);
               }
             } else if (3 === tmp4) {
+              let tmp9 = closure_5;
+              let tmp10 = closure_5;
               c6 = 2;
+              let tmp11 = aPIError;
               aPIError.return();
               throw closure_5;
             } else if (arg0 === 1) {
+              let num3 = 3;
               v0 = 3;
               throw arg1;
             } else if (arg0 === 2) {
+              c6 = 2;
+              let tmp5 = aPIError;
               aPIError.return();
               c6 = 0;
+              let tmp6 = closure_4;
+              let tmp7 = closure_1_5;
               let tmp8 = closure_1_5(false);
+              let num2 = 3;
               v0 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
@@ -340,7 +389,11 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               c6 = 2;
             }
           }
+          let tmp24 = closure_4;
+          let tmp25 = closure_5;
+          let tmp26 = closure_5;
           c6 = 0;
+          let tmp27 = closure_1_5;
           let tmp28 = closure_1_5(false);
           throw closure_5;
         }
@@ -348,6 +401,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     })();
   });
   const items2 = [tmp11, onRejectSuccess, onError];
+  require = undefined;
   const rejectAll = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -394,7 +448,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               let _onConfirm = tmp6;
               _onConfirm = function _onConfirm() {
                 const self = this;
-                const tmp = onError(function*() {
+                const tmp = closure_2_3(function*() {
                   if (c1 === 2) {
                     c1 = 3;
                     HermesBuiltin.throwTypeError();
@@ -422,7 +476,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                           return obj;
                         } else {
                           if (null != closure_1_0) {
-                            const mutualGuilds = closure_2_6.getMutualGuilds(closure_1_0.id);
+                            const mutualGuilds = closure_2_6.getMutualGuilds(tmp22.id);
                             let mapped;
                             if (mutualGuilds != null) {
                               mapped = mutualGuilds.map(() => { ... });
@@ -442,7 +496,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                           obj1[2] = closure_0;
                           let id;
                           if (closure_1_0 != null) {
-                            id = closure_1_0.id;
+                            id = tmp22.id;
                           }
                           obj1[3] = id;
                           obj1.track(closure_2_9.MESSAGE_REQUEST_ACTION, obj1);
@@ -479,7 +533,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                 }
                 return applyArgumentsResult;
               };
-              if (!isUserProfileLoading) {
+              if (!closure_1_9) {
                 obj1 = callback;
                 mutualGuilds(true);
                 c4 = 2;
@@ -528,28 +582,28 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             return applyArgumentsResult;
           };
           obj2[2] = function onCancel() {
-            if (null != user) {
-              mutualGuilds = mutualGuilds.getMutualGuilds(user.id);
+            if (null != closure_0) {
+              mutualGuilds = mutualGuilds.getMutualGuilds(tmp.id);
               let mapped;
               if (mutualGuilds != null) {
-                mapped = mutualGuilds.map((item, index) => item.guild.id);
+                mapped = mutualGuilds.map((guild) => guild.guild.id);
               }
               let items = mapped;
             } else {
               items = [];
             }
-            onAcceptSuccess(onRejectSuccess[11]);
-            const obj = { action: closure_2_7.DISMISS_CONFIRMATION_PROMPT, channel_id: user, mutual_guild_ids: null, other_user_id: null };
+            let obj = closure_2_1(closure_2_2[11]);
+            obj = { action: closure_2_7.DISMISS_CONFIRMATION_PROMPT, channel_id: closure_0, mutual_guild_ids: null, other_user_id: null };
             if (items == null) {
               items = [];
             }
             obj[2] = items;
             let id;
-            if (user != null) {
-              id = user.id;
+            if (closure_0 != null) {
+              id = tmp.id;
             }
             obj[3] = id;
-            obj.track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj);
+            obj.track(closure_2_9.MESSAGE_REQUEST_ACTION, obj);
           };
           const result = obj2.openAcceptMessageRequestConfirmModal(obj2);
         } catch (tmp34) {
@@ -594,13 +648,12 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         let obj = lib(onRejectSuccess[14]);
         const result = obj.submitHamReportForFirstDM(closure_1);
       }
-      acceptMessageRequest(lib.id);
+      closure_1_10(lib.id);
       obj = { action: constants.ACCEPT_HAM_CONFIRMATION_PROMPT, channel_id: lib.id, is_dont_show_again_checked: arg1, non_spam_retraining_opt_in: setting };
       onAcceptSuccess(onRejectSuccess[11]).track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj);
       if (null != callback) {
         callback();
       }
-      const obj2 = onAcceptSuccess(onRejectSuccess[11]);
     }
     let NonSpamRetrainingOptIn = tmp38(onRejectSuccess[13]).NonSpamRetrainingOptIn;
     const setting = NonSpamRetrainingOptIn.getSetting();
@@ -609,16 +662,15 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
       obj[0] = arg0;
       obj[1] = onConfirm;
       obj[2] = function onCancel() {
-        onAcceptSuccess(onRejectSuccess[11]);
-        const obj = { action: constants.DISMISS_HAM_CONFIRMATION_PROMPT, channel_id: lib.id };
+        let obj = onAcceptSuccess(onRejectSuccess[11]);
+        obj = { action: constants.DISMISS_HAM_CONFIRMATION_PROMPT, channel_id: lib.id };
         obj.track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj);
       };
-      let result = tmp(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
-      const tmpResult = tmp(onRejectSuccess[12]);
+      let result = arg0(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
+      const tmpResult = arg0(onRejectSuccess[12]);
     } else {
       onConfirm(setting);
     }
-    tmp = arg0;
   }, items4);
   if (tmp) {
     acceptMessageRequest = callback3;

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/QuestUtmStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import keys from "../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0) => {
@@ -13,6 +13,6 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
+const result = set.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 
 export default obj;

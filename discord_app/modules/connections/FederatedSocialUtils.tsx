@@ -1,15 +1,16 @@
 // discord_app/modules/connections/FederatedSocialUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 
 const PlatformTypes = ME.PlatformTypes;
-const result = obj132.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
+const result = set.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
 
-export const validateHandle = function validateHandle(arg0, platformType) {
+export const validateHandle = function validateHandle(first, platformType) {
   if (platformType === PlatformTypes.MASTODON) {
-    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(arg0);
+    const isMatch = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i.test(first);
+    const obj = /^@?[a-z0-9_]+([.-]+[a-z0-9_]+)*@[^@]+\.[^.@]{2,}$/i;
   }
-  return /^.+\.[^.@]{2,}$/.test(arg0);
+  return /^.+\.[^.@]{2,}$/.test(first);
 };
 export const getExampleHandle = function getExampleHandle(platformType) {
   let str = "@example@mastodon.social";

@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/utils/CollectiblesPerfLogging.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/collectibles/utils/CollectiblesPerfLogging.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesPerfLogging.tsx");
 
 export const CollectiblesShopPerfCheckpoint = { SHOP_MOUNTED: "shop_mounted", CATEGORIES_FETCH_STARTED: "categories_fetch_started", CATEGORIES_FETCH_COMPLETED: "categories_fetch_completed", SHOP_HOME_FETCH_STARTED: "shop_home_fetch_started", SHOP_HOME_FETCH_COMPLETED: "shop_home_fetch_completed", SHOP_RENDERED: "shop_rendered" };
 export const trackShopPerf = function trackShopPerf(arg0) {

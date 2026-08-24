@@ -1,6 +1,6 @@
 // _runtime/01312_binaryReadOptions.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const BinaryReader = require;
@@ -65,16 +65,18 @@ let items = [
           } while (tmp14);
         }
       } else {
-        if (BinaryReader(1311).WireType.Bit64 === arg0) {
+        if (tmp(1311).WireType.Bit64 === arg0) {
           self.pos = self.pos + 4;
-        } else if (BinaryReader(1311).WireType.Bit32 !== arg0) {
-          if (BinaryReader(1311).WireType.LengthDelimited === arg0) {
+        } else if (tmp(1311).WireType.Bit32 !== arg0) {
+          if (tmp(1311).WireType.LengthDelimited === arg0) {
             self.pos = self.pos + self.uint32();
-          } else if (BinaryReader(1311).WireType.StartGroup === arg0) {
+          } else if (tmp(1311).WireType.StartGroup === arg0) {
             const tmp8 = self.tag()[1];
-            if (tmp8 !== BinaryReader(1311).WireType.EndGroup) {
+            if (tmp8 !== tmp(1311).WireType.EndGroup) {
               do {
                 let skipResult = self.skip(self.tag()[1]);
+                let tmp10 = BinaryReader;
+                let tmp11 = dependencyMap;
                 EndGroup = BinaryReader(1311).WireType.EndGroup;
               } while (tmp8 !== EndGroup);
             }
@@ -129,7 +131,7 @@ let items = [
   {
     key: "sint64",
     value: function sint64() {
-      [tmp2, tmp3] = _slicedToArray(this.varint64(), 2);
+      [tmp2, tmp3] = callback(this.varint64(), 2);
       const pbLong = new BinaryReader(1314).PbLong((tmp2 >>> 1 | (1 & tmp3) << 31) ^ tmp4, tmp3 >>> 1 ^ tmp4);
       return pbLong;
     }
@@ -137,7 +139,7 @@ let items = [
   {
     key: "bool",
     value: function bool() {
-      const tmp = _slicedToArray(this.varint64(), 2);
+      const tmp = callback(this.varint64(), 2);
       return 0 !== tmp[0] || 0 !== tmp[1];
     }
   },

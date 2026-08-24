@@ -1,24 +1,26 @@
 // discord_app/modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import calculateAppliedBoosts from "../GuildPowerupsStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildPowerupsStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import set from "../../../../../_runtime/00002_set.js";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
 let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), require("VANITY_URL_POWERUP_SKU_ID").VANITY_URL_POWERUP_SKU_ID];
-const set = new Set(items);
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
 
 export default function useMarketablePowerupPerks(arg0) {
   const _require = arg0;
   let items = [closure_4];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     const stateForGuild = closure_1_4.getStateForGuild(closure_0);
     let tmp2;
     if (stateForGuild != null) {
       const powerupCatalog = stateForGuild.powerupCatalog;
       if (powerupCatalog != null) {
-        tmp2 = powerupCatalog[GuildPowerupType.PERK];
+        tmp2 = powerupCatalog[closure_1_5.PERK];
       }
     }
     return tmp2;
@@ -35,6 +37,6 @@ export default function useMarketablePowerupPerks(arg0) {
     if (null != closure_2) {
       items1.push(tmp);
     }
-    return items1.filter((item, index) => !set.has(item.skuId));
+    return items1.filter((skuId) => !set.has(skuId.skuId));
   }, items1);
 };

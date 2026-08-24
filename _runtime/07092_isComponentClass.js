@@ -1,11 +1,11 @@
 // _runtime/07092_isComponentClass.js
-import noop from "00019_noop.js";
+import closure_0 from "00019_noop.js";
 
 
-export const isComponentClass = (renderScrollComponent) => {
-  let BooleanResult = typeof renderScrollComponent === "function";
-  if (typeof renderScrollComponent === "function") {
-    const prototype = renderScrollComponent.prototype;
+export const isComponentClass = (fn) => {
+  let BooleanResult = typeof fn === "function";
+  if (typeof fn === "function") {
+    const prototype = fn.prototype;
     let isReactComponent;
     if (prototype != null) {
       isReactComponent = prototype.isReactComponent;
@@ -14,12 +14,12 @@ export const isComponentClass = (renderScrollComponent) => {
   }
   return BooleanResult;
 };
-export const getValidComponent = (backdropComponent1) => {
-  let tmp = backdropComponent1;
-  if (!validElement.isValidElement(backdropComponent1)) {
+export const getValidComponent = (icon) => {
+  let tmp = icon;
+  if (!validElement.isValidElement(icon)) {
     let element = null;
-    if (null != backdropComponent1) {
-      element = <backdropComponent1 />;
+    if (null != icon) {
+      element = validElement.createElement(icon);
     }
     tmp = element;
   }

@@ -7,25 +7,27 @@ import isPremiumAtLeast from "../../utils/PremiumTypeUtils.tsx";
 import tDefault from "../../../_runtime/03975_t.js";
 import regExp from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import regExpDefault from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../records/MessageRecord.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 import { MessageFlags } from "../../Constants.tsx";
 import { PremiumTypes } from "../premium/PremiumConstants.tsx";
 import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "../../../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx";
-import "ApexExperiment";
+import ApexExperiment from "../experiments/apex/index.tsx";
 
-require = fn;
+require = arg1;
 ({ MAX_SCHEDULED_MESSAGES_PER_USER: closure_8, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    tmp2 = require("../../../_runtime/metro/00038__.js")(null != fn.limit, "Config is missing scheduled message limit");
+    tmp2 = require("module_38")(null != arg1.limit, "Config is missing scheduled message limit");
     obj.enabled = global;
-    obj.limit = fn.limit;
+    obj.limit = arg1.limit;
     return obj;
   }
 }
-const ApexExperiment = Object.create(ScheduledMessagesConfig.prototype);
+ApexExperiment = { name: "2026-08-scheduled-messages", kind: "user", defaultConfig: null, variations: null };
+ApexExperiment = Object.create(ScheduledMessagesConfig.prototype);
 _modDef38(true, "Config is missing scheduled message limit");
 ApexExperiment.enabled = false;
 ApexExperiment.limit = 0;
@@ -58,7 +60,7 @@ obj1[2] = (arg0) => {
 ApexExperiment[3] = obj1;
 let closure_11 = ApexExperiment.createApexExperiment(ApexExperiment);
 const tmp3 = new timestampDefault("Scheduled Messages");
-const result = require("obj132").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
 
 export const scheduledMessageLogger = tmp3;
 export const parseContentAndFlagsForSilentMessage = function parseContentAndFlagsForSilentMessage(arg0) {
@@ -72,6 +74,7 @@ export const parseContentAndFlagsForSilentMessage = function parseContentAndFlag
     }
     items[1] = hasFlag.addFlag(flags, MessageFlags.SUPPRESS_NOTIFICATIONS);
     let tmp4 = items;
+    const obj = hasFlag;
   } else {
     items[0] = content;
     let num = flags;
@@ -113,7 +116,8 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
   return addResult2;
 };
 export const getScheduledMessagesLimit = function getScheduledMessagesLimit(location) {
-  const obj = { location };
+  let obj = isPremiumAtLeast;
+  obj = { location };
   const config = store.getConfig(obj);
   if (!config.enabled) {
     return 0;
@@ -128,13 +132,14 @@ export const useScheduledMessagesLimit = function useScheduledMessagesLimit(loca
   }
 };
 export const convertServerScheduledMessageSend = function convertServerScheduledMessageSend(body) {
+  obj = { userId: body.user_id, scheduledMessageId: body.scheduled_message_id, sendAtTimestamp: body.send_at_timestamp, scheduledMessage: obj, state: body.state, attachmentUploads: null, record: null };
   const scheduled_message = body.scheduled_message;
-  let obj = { channelId: scheduled_message.channel_id, content: scheduled_message.content, type: scheduled_message.type, flags: scheduled_message.flags, messageReference: scheduled_message.message_reference };
+  obj = { channelId: scheduled_message.channel_id, content: scheduled_message.content, type: scheduled_message.type, flags: scheduled_message.flags, messageReference: scheduled_message.message_reference };
   let attachment_uploads = body.attachment_uploads;
   if (attachment_uploads == null) {
     attachment_uploads = [];
   }
-  obj[5] = attachment_uploads.map((item, index) => ({ filename: item.filename, uploadedFilename: item.uploaded_filename, description: item.description, title: item.title }));
+  obj[5] = attachment_uploads.map((filename) => ({ filename: filename.filename, uploadedFilename: filename.uploaded_filename, description: filename.description, title: filename.title }));
   obj = { id: body.scheduled_message_id, content: body.scheduled_message.content, author: authStore.getUser(body.user_id), timestamp: tDefault(body.send_at_timestamp).toDate(), channel_id: body.scheduled_message.channel_id };
   const obj4 = tDefault(body.send_at_timestamp);
   obj[6] = new closure_4(obj);

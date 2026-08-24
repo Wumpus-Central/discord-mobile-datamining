@@ -4,11 +4,11 @@ import create from "../../../../discord_common/js/packages/protos/discord_protos
 import explicitContentFromProto from "../UserSettings.tsx";
 import isFeatureAgeGated from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
 import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "../privacy_and_safety/DMSafetyConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
@@ -18,6 +18,7 @@ export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilte
   const setting1 = ExplicitContentFilter.useSetting();
   const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
   const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);
   if (setting !== create.DmSpamFilterV2.DEFAULT_UNSET) {
     return setting;
@@ -29,10 +30,10 @@ export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilte
     if (false !== nsfwAllowed) {
       let FRIENDS_AND_NON_FRIENDS = closure_3.get(setting1);
       if (FRIENDS_AND_NON_FRIENDS == null) {
-        FRIENDS_AND_NON_FRIENDS = create.DmSpamFilterV2.NON_FRIENDS;
+        FRIENDS_AND_NON_FRIENDS = tmp(1306).DmSpamFilterV2.NON_FRIENDS;
       }
     }
-    DmSpamFilterV2 = create.DmSpamFilterV2;
+    DmSpamFilterV2 = tmp(1306).DmSpamFilterV2;
     FRIENDS_AND_NON_FRIENDS = DmSpamFilterV2.FRIENDS_AND_NON_FRIENDS;
   }
 };

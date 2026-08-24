@@ -1,33 +1,37 @@
 // discord_app/modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c4, useMemo: c5 } = noop);
 ({ AnalyticEvents: error, UserSettingsSections: closure_8 } = ME);
-const createCacheKey = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
+createCacheKey = { ggContainer: null, noneIcon: null };
+createCacheKey = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
+let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileDisplayNameStylesEditButton.tsx");
 
 export default function UserProfileDisplayNameStylesEditButton(user) {
   user = user.user;
   const guildId = user.guildId;
   const isTryItOut = user.isTryItOut;
+  let callback;
+  let nativeStackNavigation;
   let callback2;
   closure_6 = undefined;
   let displayNameStylesEffectConfig;
   const tmp = callback3();
-  const callback = tmp;
+  callback = tmp;
   let obj = user(isTryItOut[8]);
-  const nativeStackNavigation = obj.useNativeStackNavigation();
+  nativeStackNavigation = obj.useNativeStackNavigation();
   obj1 = user(isTryItOut[9]);
   const isDisplayNameStylesFlywheelSettersEnabled = obj1.useIsDisplayNameStylesFlywheelSettersEnabled("UserProfileDisplayNameStylesEditButton");
   if (isDisplayNameStylesFlywheelSettersEnabled) {
@@ -80,14 +84,14 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
     obj.track(displayNameStylesEffectConfig.DISPLAY_NAME_STYLES_FROM_SETTINGS);
     obj = { guildId, isTryItOut };
     nativeStackNavigation.navigate(closure_1_8.DISPLAY_NAME_STYLES, obj);
-    callback(ContentDismissActionType.TAKE_ACTION);
+    callback(closure_1_9.TAKE_ACTION);
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
       let obj = { source: null, style: null };
       obj[0] = guildId(isTryItOut[20]);
       obj[1] = closure_3.noneIcon;
-      let tmp10 = jsx(user(isTryItOut[19]).Icon, { source: null, style: null });
+      let tmp10 = closure_1_10(user(isTryItOut[19]).Icon, obj);
     } else {
       obj = { style: null, children: null };
       obj[0] = closure_3.ggContainer;
@@ -95,8 +99,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
       obj[0] = user.id;
       obj[1] = guildId;
       obj[3] = tmp;
-      obj[1] = jsx(guildId(isTryItOut[21]), { userId: null, guildId: null, userName: "Gg", pendingDisplayNameStyles: null, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" });
-      tmp10 = <closure_6 userId={null} guildId={null} userName="Gg" pendingDisplayNameStyles={null} ignoreDisabledStylesSetting variant="heading-xl/semibold" />;
+      obj[1] = closure_1_10(guildId(isTryItOut[21]), obj);
+      tmp10 = closure_1_10(closure_6, obj);
     }
     return tmp10;
   }, items4);
@@ -113,8 +117,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
     let tmp3Result = null;
     if (null != closure_6) {
       let colors;
-      if (closure_6 != null) {
-        colors = closure_6.colors;
+      if (tmp != null) {
+        colors = tmp.colors;
       }
       if (colors == null) {
         colors = [];
@@ -122,11 +126,12 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
       const obj = { colors: null, effectId: null };
       obj[0] = colors;
       let effectId;
-      if (closure_6 != null) {
-        effectId = closure_6.effectId;
+      if (tmp != null) {
+        effectId = tmp.effectId;
       }
       obj[1] = effectId;
-      tmp3Result = jsx(guildId(isTryItOut[22]), { colors: null, effectId: null });
+      tmp3Result = closure_1_10(guildId(isTryItOut[22]), obj);
+      const tmp3 = closure_1_10;
       const tmp6 = guildId(isTryItOut[22]);
     }
     return tmp3Result;

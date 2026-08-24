@@ -1,36 +1,40 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
+const require = arg1;
+createCacheKey = { connectButton: null, connectText: null };
+createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingLeft: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelConnectButton.tsx");
 
 export default function ConnectButton(props) {
+  let _require;
   let channelId;
   let guildId;
   let canConnect;
+  let isAtMaxCapacity;
+  let isChannelContentGated;
   let isChannelSpoilerGated;
   const tmp = isChannelSpoilerGated();
-  const _require = tmp;
+  _require = tmp;
   let obj = canConnect;
   const context = canConnect.useContext(channelId(guildId[5]));
   channelId = context.channelId;
   guildId = context.guildId;
   const tmp5 = channelId(guildId[6])(channelId);
   canConnect = tmp5.canConnect;
-  const isAtMaxCapacity = tmp5.isAtMaxCapacity;
+  isAtMaxCapacity = tmp5.isAtMaxCapacity;
   const items = [isAtMaxCapacity];
   const stateFromStores = _require(guildId[7]).useStateFromStores(items, () => isAtMaxCapacity.getChannel(channelId));
   const obj2 = _require(guildId[7]);
   const tmp2 = channelId;
-  let isChannelContentGated = _require(guildId[8]).useIsChannelContentGated(stateFromStores);
+  isChannelContentGated = _require(guildId[8]).useIsChannelContentGated(stateFromStores);
   if (isChannelContentGated) {
     isChannelContentGated = null != guildId;
   }

@@ -4,17 +4,18 @@ import isBlurDisabledDefault from "../modules/visual_effect_view/native/VisualEf
 import _modDef8986 from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
 import QRCodeDefault from "../../_runtime/12374_QRCode.js";
 import registerAsset from "../../_runtime/12388_registerAsset.js";
-import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 let closure_3 = ["style", "text", "blur", "accessibilityLabel"];
 ({ View: c5, Image: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { display: "flex", alignSelf: "flex-start", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs };
+createCacheKey = { qrCode: null, qrCodeContainer: null, qrCodeOverlay: null, "size-40": null, "size-60": null };
+createCacheKey = { display: "flex", alignSelf: "flex-start", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", alignSelf: "flex-start", alignItems: "center", justifyContent: "center", position: "relative" };
 createCacheKey[2] = { display: "flex", alignItems: "center", justifyContent: "center" };
@@ -34,19 +35,22 @@ QRCode.prototype["render"] = function render() {
   let obj = { accessible: null != accessibilityLabel, accessibilityRole: "image", accessibilityLabel, style: items, children: null };
   let tmp3Result = null;
   items = [callback3(this.context).qrCode, { backgroundColor: tmp2.bgColor }, style];
+  obj = { style: obj, children: null };
   obj = { position: "relative", width: tmp2.size, height: tmp2.size };
   obj1 = { value: text, level: "M" };
   const tmp = callback3(this.context);
+  const tmp6 = closure_9;
+  const tmp7 = importDefault;
   const merged = Object.assign(tmp2);
   const items1 = [callback2(QRCodeDefault, obj1), ];
   if (blur) {
     const obj2 = { style: null, blurTheme: "dark" };
     obj2[0] = closure_7.absoluteFill;
-    tmp3Result = callback2(isBlurDisabledDefault, obj2);
+    tmp3Result = tmp3(isBlurDisabledDefault, obj2);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
-  obj[4] = callback(closure_5, obj);
+  obj[4] = tmp6(closure_5, obj);
   return callback2(closure_5, obj);
 };
 QRCode.contextType = require("ManaContext").ThemeContext;
@@ -61,7 +65,8 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   if (SIZE_40 == null) {
     SIZE_40 = obj1.SIZE_40;
   }
-  let obj = {};
+  let obj = { style: tmp.qrCodeContainer, children: null };
+  obj = {};
   const merged = Object.assign(this.props);
   obj.blur = false;
   const items = [callback2(QRCode, obj), , ];
@@ -78,11 +83,11 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   }
   items[2] = tmp6Result;
   obj[1] = items;
-  return callback(closure_5, obj);
+  return closure_9(closure_5, obj);
 };
 QRCodeWithOverlay.contextType = require("ManaContext").ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
-const result = require("obj132").fileFinishedImporting("components_native/QRCode.tsx");
+const result = require("set").fileFinishedImporting("components_native/QRCode.tsx");
 
 export default QRCode;
 export const QRCodeOverlaySizes = obj1;

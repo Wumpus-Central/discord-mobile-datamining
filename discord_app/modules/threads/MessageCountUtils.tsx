@@ -1,5 +1,5 @@
 // discord_app/modules/threads/MessageCountUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import AbortCodes from "ThreadConstants.tsx";
@@ -34,7 +34,7 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
   return stringResult;
 }
 ({ MAX_THREAD_MESSAGE_COUNT: c3, MAX_THREAD_MESSAGE_COUNT_OLD: c4 } = AbortCodes);
-const result = obj132.fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
+const result = set.fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
 
 export const shouldUseOldMaxMessageCount = function shouldUseOldMaxMessageCount(arg0) {
   return DISCORD_EPOCHDefault.compare("992549565104128000", arg0) > -1;

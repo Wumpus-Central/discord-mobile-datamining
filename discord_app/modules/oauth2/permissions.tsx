@@ -1,6 +1,5 @@
 // discord_app/modules/oauth2/permissions.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
-import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
@@ -222,26 +221,26 @@ const obj = {
   }
 };
 ({ ADMINISTRATOR, MANAGE_GUILD, MANAGE_ROLES, MANAGE_CHANNELS, KICK_MEMBERS, BAN_MEMBERS, CREATE_INSTANT_INVITE, MANAGE_NICKNAMES, CHANGE_NICKNAME, MANAGE_GUILD_EXPRESSIONS, CREATE_GUILD_EXPRESSIONS, MANAGE_WEBHOOKS, VIEW_AUDIT_LOG, VIEW_CHANNEL, SEND_MESSAGES, SEND_TTS_MESSAGES, MANAGE_MESSAGES, EMBED_LINKS, ATTACH_FILES, READ_MESSAGE_HISTORY, MENTION_EVERYONE, ADD_REACTIONS, USE_EXTERNAL_EMOJIS, USE_EXTERNAL_STICKERS, USE_APPLICATION_COMMANDS, SEND_VOICE_MESSAGES, CONNECT, SPEAK, MUTE_MEMBERS, DEAFEN_MEMBERS, MOVE_MEMBERS, USE_VAD, PRIORITY_SPEAKER, CREATE_PUBLIC_THREADS, CREATE_PRIVATE_THREADS, SEND_MESSAGES_IN_THREADS, MANAGE_THREADS, MANAGE_EVENTS, CREATE_EVENTS, MODERATE_MEMBERS, REQUEST_TO_SPEAK, VIEW_GUILD_ANALYTICS, VIEW_CREATOR_MONETIZATION_ANALYTICS, STREAM, USE_EMBEDDED_ACTIVITIES, USE_SOUNDBOARD, USE_EXTERNAL_SOUNDS, SET_VOICE_CHANNEL_STATUS, SEND_POLLS, USE_EXTERNAL_APPS, PIN_MESSAGES, BYPASS_SLOWMODE, MANAGE_OFFICIAL_MESSAGES } = Permissions);
-const result = obj132.fileFinishedImporting("modules/oauth2/permissions.tsx");
+const result = set.fileFinishedImporting("modules/oauth2/permissions.tsx");
 
 export const OrderedPermissions = items;
 export const containsDisallowedPermission = function containsDisallowedPermission(memo4) {
   closure_0 = memo4;
   const values = Object.values(Permissions);
-  return values.some((item, index) => {
-    let hasItem = fromStringAll.has(closure_0, item);
+  return values.some((arg0) => {
+    let hasItem = closure_1_1(closure_1_2[1]).has(closure_0, arg0);
     if (hasItem) {
-      hasItem = !items.includes(item);
+      hasItem = !closure_1_4.includes(arg0);
     }
     return hasItem;
   });
 };
-export const getPermissionName = function getPermissionName(item) {
-  const tmp = obj[item.toString(item)];
+export const getPermissionName = function getPermissionName(arg0) {
+  const tmp = obj[arg0.toString(arg0)];
   if (null == tmp) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Unknown permission. Did you provide a _single_ bit flag? Perm: " + item);
+    error = new Error("Unknown permission. Did you provide a _single_ bit flag? Perm: " + arg0);
     throw error;
   } else {
     return tmp();

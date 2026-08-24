@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/DiscordWordmarkLogo-2x.png.js
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordWordmarkLogo-2x.png.js");
+const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordWordmarkLogo-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/45ed32a773bddd2a994bbaa20cd49260ce7dadbc7c6b19d9e48768354b5aeec1.png";
 export const metadata = { fileBytes: 2892 };

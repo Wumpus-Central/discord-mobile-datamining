@@ -1,17 +1,17 @@
 // discord_app/modules/calls/ChannelCallManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import importDefaultResult from "../soundpacks/SoundpackStore.tsx";
-import callConnect from "../../stores/CallStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import DesktopNotificationTypes from "../../stores/NotificationSettingsStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import initialize from "../../stores/StreamerModeStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
-import getVoiceStatesForGuild from "../../stores/views/SortedVoiceStateStore.tsx";
-import getParticipants from "ChannelRTCStore.tsx";
+import closure_3 from "../../stores/CallStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/NotificationSettingsStore.tsx";
+import closure_6 from "../../stores/SelectedChannelStore.tsx";
+import closure_7 from "../../stores/StreamerModeStore.tsx";
+import closure_8 from "../../stores/VoiceStateStore.tsx";
+import closure_9 from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_10 from "ChannelRTCStore.tsx";
 import createSoundForPack from "../sound_playback/SoundUtils.tsx";
 
-let require = fn;
+let require = arg1;
 let closure_11 = createSoundForPack.createSoundForPack("call_calling", importDefaultResult.getSoundpack());
 initializeDefault;
 // CreatePrivateName (0x9e)
@@ -68,36 +68,36 @@ class ChannelCallManager extends tmp2 {
           guild_id = null;
         }
         const calls = closure_1_3.getCalls();
-        let someResult = calls.some((item, index) => {
-          let tmp = item.ringing.length > 0;
+        let someResult = calls.some((ringing) => {
+          let tmp = ringing.ringing.length > 0;
           if (tmp) {
-            tmp = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null) === item.channelId;
+            tmp = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null) === ringing.channelId;
           }
           return tmp;
         });
         if (!someResult) {
           // GetOwnPrivateBySym (0x65)
-          someResult = importDefault.size > 0;
+          someResult = closure_1_12.size > 0;
         }
         applyArgumentsResult._handleRing(someResult, guild_id);
       };
       applyArgumentsResult.handleGuildRingStart = function handleGuildRingStart(arg0) {
         ({ ringing, guildId } = arg0);
-        const item = ringing.forEach((item, index) => {
+        const item = ringing.forEach((arg0) => {
           // GetOwnPrivateBySym (0x65)
-          obj.add(item);
+          obj.add(arg0);
         });
         // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(importDefault.size > 0, guildId);
+        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
       };
       applyArgumentsResult.handleGuildRingStop = function handleGuildRingStop(arg0) {
         ({ ringing, guildId } = arg0);
-        const item = ringing.forEach((item, index) => {
+        const item = ringing.forEach((arg0) => {
           // GetOwnPrivateBySym (0x65)
-          obj.delete(item);
+          obj.delete(arg0);
         });
         // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(importDefault.size > 0, guildId);
+        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
       };
       applyArgumentsResult.handleChannelRTCStoreChange = function handleChannelRTCStoreChange() {
         const voiceChannelId = closure_1_6.getVoiceChannelId();
@@ -115,7 +115,7 @@ class ChannelCallManager extends tmp2 {
             // GetOwnPrivateBySym (0x65)
             const items = [];
             HermesBuiltin.arraySpread(tmp2, 0);
-            const set1 = new Set(items.filter((item, index) => !set.has(item)));
+            const set1 = new Set(items.filter((arg0) => !set.has(arg0)));
             if (set1.size > 0) {
               const forEach = set1.forEach;
               const item = forEach((arg0) => {
@@ -141,6 +141,6 @@ ChannelCallManager.prototype["_initialize"] = function _initialize() {
   this.stores = result4.set(closure_2, this.handleSoundpackUpdate);
 };
 const channelCallManager = new ChannelCallManager();
-let result = require("obj132").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
+let result = require("set").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
 
 export default channelCallManager;

@@ -1,17 +1,17 @@
 // discord_app/modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import getActiveStageChannelIds from "../stage_channels/StageChannelParticipantStore.tsx";
-import handleStageInstanceCreateOrUpdate from "../stage_channels/StageInstanceStore.tsx";
-import reset from "../../stores/ApplicationStreamingStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import getVoiceStatesForGuild from "../../stores/views/SortedVoiceStateStore.tsx";
-import initialize from "LiveChannelNoticesStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../stage_channels/StageChannelParticipantStore.tsx";
+import closure_5 from "../stage_channels/StageInstanceStore.tsx";
+import closure_6 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "../../stores/views/SortedVoiceStateStore.tsx";
+import closure_10 from "LiveChannelNoticesStore.tsx";
 import { GuildScheduledEventEntityTypes as closure_11 } from "GuildScheduledEventsConstants.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");
 
 export const useGuildHasLiveChannelNotice = function useGuildHasLiveChannelNotice(id) {
   const first = stateFromStores(guildActiveEvent[10])(id)[0];
@@ -60,7 +60,7 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   const stateFromStores = activeEventOrStageInstanceChannel(stateFromStores2[11]).useStateFromStores(items, () => {
     let canResult = null != activeEventOrStageInstanceChannel;
     if (canResult) {
-      canResult = closure_1_8.can(Permissions.CONNECT, tmp);
+      canResult = closure_1_8.can(closure_1_12.CONNECT, tmp);
     }
     return canResult;
   });
@@ -84,7 +84,7 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   const tmp8 = activeEventOrStageInstanceChannel(stateFromStores2[14]).useActualStageSpeakerCount(id) > 0;
   let tmpResult = tmp(tmp2[11]);
   const items3 = [closure_9];
-  tmpResult.useStateFromStores(items3, () => {
+  stateFromStores2 = tmpResult.useStateFromStores(items3, () => {
     let tmp2 = null != activeEventOrStageInstanceChannel;
     if (tmp2) {
       tmp2 = closure_1_9.getVoiceStatesForChannel(tmp).length > 0;
@@ -126,6 +126,4 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   if (tmp10) {
     flag = stateFromStores2;
   }
-  const obj5 = activeEventOrStageInstanceChannel(stateFromStores2[14]);
-  tmp10 = null != activeEventOrStageInstanceChannel && null != guildActiveEvent;
 };

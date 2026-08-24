@@ -2,15 +2,15 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import componentDidMountDefault from "../../../../components_native/common/Alert.tsx";
-import obj132Default from "../../../../actions/AlertActionCreators.tsx";
+import setDefault from "../../../../actions/AlertActionCreators.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import handleRequestSuccess from "../../../../actions/ConsentActionCreators.tsx";
-import hasConsented from "../../../../stores/ConsentStore.tsx";
+import closure_3 from "../../../../stores/ConsentStore.tsx";
 import { Consents } from "../../../../Constants.tsx";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XuADY2);
@@ -23,10 +23,12 @@ let createToggle = {
   onValueChange: function handleUsageStatisticsChange(arg0) {
     if (arg0) {
       let items = [Consents.USAGE_STATISTICS];
-      handleRequestSuccess.setConsents(items, []).catch((error) => callback(14213).showDataPrivacyRateLimitAlert(error.message));
+      const obj3 = handleRequestSuccess;
+      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14213).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
-      const obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
+      let obj = setDefault;
+      obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t.OdPCbN);
       const intl2 = getSystemLocale.intl;
@@ -48,6 +50,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/UseDataToImproveDiscordSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UseDataToImproveDiscordSetting.tsx");
 
 export default createToggle;

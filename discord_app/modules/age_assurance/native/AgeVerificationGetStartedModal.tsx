@@ -1,15 +1,16 @@
 // discord_app/modules/age_assurance/native/AgeVerificationGetStartedModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
+const require = arg1;
+createCacheKey = { headerStyle: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };
-let result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationGetStartedModal.tsx");
 
 export default function AgeVerificationGetStartedModal(entryPoint) {
   entryPoint = entryPoint.entryPoint;
@@ -21,9 +22,11 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
   const classificationId = entryPoint.classificationId;
   const onComplete = entryPoint.onComplete;
   let callback;
+  let memo;
+  let memo2;
   const tmp = callback();
   callback = tmp;
-  const memo = classificationId.useMemo(() => entryPoint(flag[10]).v4(), []);
+  memo = classificationId.useMemo(() => entryPoint(flag[10]).v4(), []);
   const items = [tmp, memo, classificationId, onComplete, entryPoint];
   const items1 = [flag, isRetry];
   const memo1 = classificationId.useMemo(() => {
@@ -41,7 +44,8 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
         callback2();
       }
     }
-    let obj = {
+    let obj = {};
+    obj = {
       headerStyle: closeModalWithOnComplete.headerStyle,
       headerTitle() {
         return null;
@@ -96,7 +100,7 @@ export default function AgeVerificationGetStartedModal(entryPoint) {
     obj[memo.GOOGLE_WALLET_VERIFICATION] = obj2;
     return obj;
   }, items);
-  const memo2 = classificationId.useMemo(() => {
+  memo2 = classificationId.useMemo(() => {
     if (flag) {
       let EXPRESSIVE_PRIMARY = entryPoint(flag[11]).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY;
     } else {

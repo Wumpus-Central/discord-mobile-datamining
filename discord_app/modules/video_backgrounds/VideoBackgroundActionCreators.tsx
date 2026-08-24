@@ -1,11 +1,11 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchVideoFilterAssets() {
   const self = this;
   const tmp = callback(function*() {
@@ -360,7 +360,7 @@ function _saveLastUsedBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
 
 export const fetchVideoFilterAssets = function fetchVideoFilterAssets() {
   const self = this;
@@ -395,7 +395,8 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
 export { saveLastUsedBackgroundOption };
 export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) {
   if (closure_4.isSupported()) {
-    const obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
+    let obj = dispatcherDefault;
+    obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
     obj[1] = arg0;
     obj.dispatch(obj);
   }
@@ -403,6 +404,7 @@ export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) 
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {
   if (closure_4.isSupported()) {
     dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+    const obj = dispatcherDefault;
   }
 };
 export const errorApplyingMediaFilterSettings = function errorApplyingMediaFilterSettings() {

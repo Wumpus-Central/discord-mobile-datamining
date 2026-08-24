@@ -1,5 +1,5 @@
 // _runtime/04298_ref.js
-import noop from "00019_noop.js";
+import closure_0 from "00019_noop.js";
 import shallowEqual from "04299_shallowEqual.js";
 
 if (shallowEqual) {
@@ -12,6 +12,10 @@ if (shallowEqual) {
 let closure_2 = {};
 
 export default (arg0, arg1) => {
+  let tmp = arg1;
+  if (undefined === arg1) {
+    tmp = closure_1;
+  }
   ref = ref.useRef(closure_2);
   let current = ref.current;
   closure_1 = current;

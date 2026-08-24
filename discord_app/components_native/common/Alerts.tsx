@@ -6,18 +6,18 @@ import _modDef6551 from "../../modules/keyboard/native/KeyboardAwareView.tsx";
 import getStoresDefault from "../../lib/ModalRegistry.tsx";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../modules/a11y/AccessibilityStore.tsx";
+import closure_8 from "../../modules/a11y/AccessibilityStore.tsx";
 import importDefaultResult from "../../stores/PermissionSpeakStore.tsx";
 import importDefaultResult1 from "../../stores/PermissionVADStore.tsx";
 import importDefaultResult2 from "../../stores/SurveyStore.tsx";
-import getAlert from "../../stores/native/AlertStore.tsx";
+import closure_12 from "../../stores/native/AlertStore.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 import { MobileSurvey } from "../MobileSurvey.tsx";
 import { render } from "../warnings/Suppressed.tsx";
 import { render } from "../warnings/VADPermission.tsx";
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Animated: c5, Easing: closure_6, TouchableWithoutFeedback: error } = get_ActivityIndicator);
@@ -30,7 +30,7 @@ let obj = {
     return importDefaultResult.shouldShowWarning();
   },
   getComponent() {
-    return render /* render */.default;
+    return render.default;
   }
 };
 items = [importDefaultResult];
@@ -42,7 +42,7 @@ obj = {
     return importDefaultResult1.shouldShowWarning();
   },
   getComponent() {
-    return render /* render */.default;
+    return render.default;
   }
 };
 items2 = [importDefaultResult1];
@@ -55,7 +55,7 @@ items1[2] = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return MobileSurvey /* MobileSurvey */.default;
+    return MobileSurvey.default;
   }
 };
 let closure_15 = new getStoresDefault(items1);
@@ -90,28 +90,29 @@ class AlertWrapper extends PureComponent {
       scale.setValue(1);
     };
     applyArgumentsResult.componentWillEnter = function componentWillEnter(arg0) {
-      const obj = { toValue: 1, easing: closure_1_6.linear, duration: 250, useNativeDriver: true };
+      let obj = closure_1_5;
+      obj = { toValue: 1, easing: closure_1_6.linear, duration: 250, useNativeDriver: true };
       const items = [closure_1_5.timing(applyArgumentsResult.state.opacity, obj)];
       if (!applyArgumentsResult.props.useReducedMotion) {
         items.push(obj.spring(applyArgumentsResult.state.scale, { toValue: 1, useNativeDriver: true }));
       }
       obj.parallel(items).start(arg0);
-      const parallelResult = obj.parallel(items);
     };
     applyArgumentsResult.componentWillLeave = function componentWillLeave(arg0) {
-      let obj = { toValue: 0, easing: closure_1_6.linear, duration: 100, useNativeDriver: true };
+      let obj = closure_1_5;
+      obj = { toValue: 0, easing: closure_1_6.linear, duration: 100, useNativeDriver: true };
       const items = [closure_1_5.timing(applyArgumentsResult.state.opacity, obj)];
       if (!applyArgumentsResult.props.useReducedMotion) {
         obj = { toValue: 0, easing: null, duration: 100, useNativeDriver: true };
-        obj[1] = closure_1_6.in(closure_1_6.ease);
+        obj[1] = obj3.in(obj3.ease);
         items.push(obj.timing(applyArgumentsResult.state.scale, obj));
       }
       obj.parallel(items).start(arg0);
-      const parallelResult = obj.parallel(items);
     };
     applyArgumentsResult.handleRequestClose = function handleRequestClose() {
       if (applyArgumentsResult.props.isDismissable) {
-        _modDef4656.close();
+        closure_1_1(closure_1_2[15]).close();
+        const obj = closure_1_1(closure_1_2[15]);
       }
     };
     return applyArgumentsResult;
@@ -125,8 +126,10 @@ AlertWrapper.prototype["render"] = function render() {
     str = "alerts-component";
   }
   const props = self.props;
+  let obj = { onClose: _modDef4656.close };
   ({ opacity, scale } = self.state);
-  const obj = { style: items, children: null };
+  obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
+  obj = { style: items, children: null };
   items = [StyleSheet.absoluteFill, tmp.alertContentWrapper];
   obj1 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", accessible: false, onPress: self.handleRequestClose, children: null };
   const items1 = [tmp.alertWrapper, self.props.style, { opacity }];
@@ -141,6 +144,16 @@ AlertWrapper.prototype["render"] = function render() {
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
 let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "HermesInternal", props: "r" });
+let obj1 = {
+  stores: items3,
+  center: true,
+  isOpen() {
+    return null != importDefaultResult2.getCurrentSurvey();
+  },
+  getComponent() {
+    return MobileSurvey.default;
+  }
+};
 const tmp7 = new getStoresDefault(items1);
 const memoResult = importAllResult.memo(function Alerts() {
   const _require = renderAlert.useRef(closure_18);
@@ -215,6 +228,6 @@ const memoResult = importAllResult.memo(function Alerts() {
   obj = { component: tmp(tmp2[22]).TransitionGroupOverlayView, style: StyleSheet.absoluteFill, children: tmp9 };
   return callback(_require(stateFromStores[21]).TransitionGroup, obj);
 });
-const result = require("obj132").fileFinishedImporting("components_native/common/Alerts.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/Alerts.tsx");
 
 export default memoResult;

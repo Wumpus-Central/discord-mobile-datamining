@@ -1,16 +1,16 @@
 // discord_app/modules/js_watchdog/native/JSWatchdogManager.android.tsx
 import timestampDefault from "../../debug/Logger.tsx";
-import obj132Default from "../../../utils/Durations.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import getDeviceMetadata from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ AppStates: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = new timestampDefault("JSWatchdogManager");
-const HALF_SECOND = obj132Default.Millis.HALF_SECOND;
+const HALF_SECOND = setDefault.Millis.HALF_SECOND;
 initializeDefault;
 class JSWatchdogManager extends tmp4 {
   constructor() {
@@ -232,12 +232,12 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = 0;
             closure_0 = undefined;
             c1 = undefined;
-            if (null == self._timeoutId) {
+            if (null == closure_1_0._timeoutId) {
               if (null != checkForStallReportResult(16625)) {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = self.getCurrentSessionId();
+                obj1[0] = closure_1_0.getCurrentSessionId();
                 return obj1;
               }
             }
@@ -259,10 +259,10 @@ prototype["startWatchdog"] = function startWatchdog() {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
                 if (null != checkForStallReportResult) {
-                  closure_0.reportStall(checkForStallReportResult, self, true, -1);
+                  closure_0.reportStall(checkForStallReportResult, closure_1_0, true, -1);
                 }
               }
-              self.ping(true);
+              closure_1_0.ping(true);
             }
           }
         }
@@ -284,15 +284,16 @@ prototype["stopWatchdog"] = function stopWatchdog() {
   this._timeoutId = null;
 };
 prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsReportsRemaining) {
-  const obj = {};
+  let obj = expandEventPropertiesDefault;
+  obj = {};
   const merged = Object.assign(getDeviceMetadata.getDeviceMetadata());
   obj.version = 1;
-  obj.stall_time = importDefault.stallTime;
+  obj.stall_time = c1.stallTime;
   obj.is_previous = is_previous;
   obj.reports_remaining = _analyticsReportsRemaining;
   let sessionId = null;
-  if (importDefault.sessionId !== c0) {
-    sessionId = importDefault.sessionId;
+  if (c1.sessionId !== c0) {
+    sessionId = c1.sessionId;
   }
   obj.stall_session_id = sessionId;
   obj.trace = null;
@@ -330,17 +331,17 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             closure_1 = tmp5;
             closure_0 = tmp2;
             closure_0 = undefined;
-            if (null != self._cachedSession) {
-              obj1 = self(5063);
-              if (!obj1.isSessionExpired(self._cachedSession)) {
-                const uuid = self._cachedSession.uuid;
+            if (null != closure_1_0._cachedSession) {
+              obj1 = closure_1_0(5063);
+              if (!obj1.isSessionExpired(closure_1_0._cachedSession)) {
+                const uuid = closure_1_0._cachedSession.uuid;
                 c3 = 3;
               }
             }
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = self(5054).getSession();
+            obj1[0] = closure_1_0(5054).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -368,6 +369,6 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
 };
 const jSWatchdogManager = new JSWatchdogManager();
 const tmp3 = new timestampDefault("JSWatchdogManager");
-let result = require("obj132").fileFinishedImporting("modules/js_watchdog/native/JSWatchdogManager.android.tsx");
+let result = require("set").fileFinishedImporting("modules/js_watchdog/native/JSWatchdogManager.android.tsx");
 
 export default jSWatchdogManager;

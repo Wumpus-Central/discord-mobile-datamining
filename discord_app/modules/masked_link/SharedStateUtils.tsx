@@ -1,9 +1,9 @@
 // discord_app/modules/masked_link/SharedStateUtils.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/masked_link/SharedStateUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/masked_link/SharedStateUtils.tsx");
 
 export const useUrlParts = function useUrlParts(url) {
   closure_0 = url;
@@ -27,9 +27,10 @@ export const useModalState = function useModalState(url) {
   const onConfirm = url.onConfirm;
   const onCancel = url.onCancel;
   const onClose = url.onClose;
+  let first;
   let obj = onCancel;
   const tmp = onConfirm(onCancel.useState(false), 2);
-  const first = tmp[0];
+  first = tmp[0];
   const items = [str];
   const memo = onCancel.useMemo(() => {
     const obj = { protocol: str(trustUrl[2]).getProtocol(str), hostname: null };

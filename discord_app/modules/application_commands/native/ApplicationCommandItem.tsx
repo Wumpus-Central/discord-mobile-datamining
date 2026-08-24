@@ -1,16 +1,17 @@
 // discord_app/modules/application_commands/native/ApplicationCommandItem.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../../stores/GuildMemberStore.tsx";
 import { AUTOCOMPLETE_ROW_HEIGHT } from "ApplicationCommandsConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
+  let obj = { applicationCommandItem: null, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
+  obj = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
   obj[1] = obj;
@@ -19,7 +20,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[4] = { paddingLeft: 16, marginLeft: "auto" };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ApplicationCommandItem.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandItem.tsx");
 
 export default function ApplicationCommandItem(highlighted) {
   ({ command, section } = highlighted);
@@ -40,10 +41,10 @@ export default function ApplicationCommandItem(highlighted) {
     if (null != closure_1) {
       let botId;
       if (section != null) {
-        botId = section.botId;
+        botId = tmp2.botId;
       }
       if (null != botId) {
-        return closure_1_5.getMember(tmp, section.botId);
+        return closure_1_5.getMember(tmp, tmp2.botId);
       }
     }
   });
@@ -58,7 +59,8 @@ export default function ApplicationCommandItem(highlighted) {
   } else if (section != null) {
     name = section.name;
   }
-  const intl = section(tmp2[11]).intl;
+  obj = { accessibilityLabel: null, style: null, accessibilityRole: "button", onPress: null, children: null };
+  const intl = tmp(tmp2[11]).intl;
   obj = { applicationName: name, commandDescription: command.displayDescription, commandName: command.displayName };
   obj[0] = intl.formatToPlainString(section(stateFromStores[11]).t.eo8b3e, obj);
   obj1 = {};
@@ -79,8 +81,8 @@ export default function ApplicationCommandItem(highlighted) {
   const obj3 = { style: tmp3.applicationCommandDescriptionWrapper, children: null };
   const items3 = [callback(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), callback(section(stateFromStores[13]).Text, { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: command.displayDescription })];
   obj3[1] = items3;
-  items2[1] = callback(View, obj3);
+  items2[1] = closure_8(View, obj3);
   items2[2] = callback(section(stateFromStores[13]).Text, { style: tmp3.applicationCommandSectionName, variant: "eyebrow", color: "text-muted", children: name });
   obj[4] = items2;
-  return callback(section(stateFromStores[10]).PressableOpacity, obj);
+  return closure_8(section(stateFromStores[10]).PressableOpacity, obj);
 };

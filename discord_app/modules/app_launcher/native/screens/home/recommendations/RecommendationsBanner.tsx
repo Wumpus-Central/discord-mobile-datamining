@@ -7,17 +7,18 @@ import UserProfileBannerDefault from "../../../../../user_profile/native/UserPro
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createdAt from "../../../../../../records/UserRecord.tsx";
+import closure_5 from "../../../../../../records/UserRecord.tsx";
 import ME from "../../../../../../Constants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: error } = ME);
 let closure_9 = createCacheKey.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
+  importDefault = undefined;
   let obj = heroMediaDimensions(9565);
   obj1 = heroMediaDimensions(11260);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
@@ -26,8 +27,10 @@ let closure_10 = importAllResult.memo((applicationId) => {
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];
   const memo = importAllResult.useMemo(() => {
-    const obj = { translateY: (closure_1_6 - heroMediaDimensions.height) / 2 };
-    const items = [obj];
+    obj = { imageStyle: obj, imageSource: null };
+    obj = { backgroundColor: "black", height: heroMediaDimensions.height, width: heroMediaDimensions.width, transform: items };
+    obj = { translateY: (closure_1_6 - heroMediaDimensions.height) / 2 };
+    items = [obj];
     let tmp2;
     if (null != url.url) {
       obj1 = { uri: null };
@@ -59,6 +62,8 @@ let closure_11 = importAllResult.memo((applicationBot) => {
   if (id == null) {
     id = closure_7;
   }
+  const tmp = importDefault;
+  const tmp3 = useDisplayProfileDefault;
   const obj = { displayProfile: useDisplayProfileDefault(id), user: null };
   const tmp3Result = useDisplayProfileDefault(id);
   const tmpResult = UserProfileBannerDefault;
@@ -105,6 +110,6 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   }
   return tmp11;
 });
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx");
 
 export default memoResult;

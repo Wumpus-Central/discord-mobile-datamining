@@ -1,7 +1,8 @@
 // discord_app/modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import createExecutable from "../../../records/ApplicationRecord.tsx";
+import closure_0 from "../../../records/ApplicationRecord.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_2 = {};
@@ -35,10 +36,10 @@ prototype["getApplicationFetchState"] = function getApplicationFetchState(closur
 prototype["getApplicationFetchStates"] = function getApplicationFetchStates() {
   return closure_3;
 };
-prototype["isInvalidApplication"] = function isInvalidApplication(callback) {
-  let hasItem = null != callback;
+prototype["isInvalidApplication"] = function isInvalidApplication(arg0) {
+  let hasItem = null != arg0;
   if (hasItem) {
-    hasItem = set.has(callback);
+    hasItem = set.has(arg0);
   }
   return hasItem;
 };
@@ -91,7 +92,7 @@ obj = {
   }
 };
 const applicationDirectoryApplicationsStore = new ApplicationDirectoryApplicationsStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx");
+const result = set.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryApplicationsStore.tsx");
 
 export default applicationDirectoryApplicationsStore;
 export const FetchState = obj;

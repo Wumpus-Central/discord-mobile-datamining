@@ -1,9 +1,9 @@
 // discord_app/modules/quests/lib/getQuestLogger.tsx
 import timestampDefault from "../../debug/Logger.tsx";
-import refreshSourceMapCookie from "../../../stores/DeveloperOptionsStore.tsx";
+import closure_2 from "../../../stores/DeveloperOptionsStore.tsx";
 import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
 export const getQuestLogger = function getQuestLogger(getQuestLogger) {
   let obj = getQuestLogger;

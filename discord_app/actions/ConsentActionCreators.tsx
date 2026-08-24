@@ -1,5 +1,5 @@
 // discord_app/actions/ConsentActionCreators.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
@@ -7,7 +7,9 @@ import getSystemLocale from "../intl/index.native.tsx";
 
 function handleRequestSuccess(body) {
   if (tmp) {
-    const obj = {};
+    let obj = dispatcherDefault;
+    obj = { type: "UPDATE_CONSENTS", consents: null };
+    obj = {};
     const merged = Object.assign(body.body);
     obj[1] = obj;
     obj.dispatch(obj);
@@ -35,7 +37,7 @@ function handleRequestFailure(status) {
   message = intl.string(getSystemLocale.t.cvJdtg);
 }
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("actions/ConsentActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
   const HTTP = sendRequest.HTTP;
@@ -48,7 +50,9 @@ export const fetchConsents = function fetchConsents() {
 };
 export const setConsents = function setConsents(items, items2) {
   const HTTP = sendRequest.HTTP;
-  const obj = { grant: items, revoke: items2 };
+  obj = { url: Endpoints.SETTINGS_CONSENT, body: obj, oldFormErrors: true, rejectWithError: null };
+  obj = { grant: items, revoke: items2 };
   obj[3] = sendRequest.rejectWithMigratedError();
+  const obj3 = sendRequest;
   return HTTP.post(obj).then(handleRequestSuccess, handleRequestFailure);
 };

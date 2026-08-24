@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/useBotProfileCommands.tsx
 import findCommandInSectionAll from "../application_commands/ApplicationCommandQueryApi.tsx";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
 export default function useBotProfileCommands(channel) {
   let obj = findCommandInSectionAll;
@@ -14,14 +14,14 @@ export default function useBotProfileCommands(channel) {
     commands: React.useMemo(() => {
       let found;
       if (commands != null) {
-        found = commands.filter((item, index) => {
-          let tmp = true !== item.nsfw;
+        found = commands.filter((nsfw) => {
+          let tmp = true !== nsfw.nsfw;
           if (tmp) {
-            const options = item.options;
+            const options = nsfw.options;
             let found;
             if (options != null) {
-              found = options.find((item, index) => {
-                const type = item.type;
+              found = options.find((type) => {
+                type = type.type;
                 return type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND || type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
               });
             }

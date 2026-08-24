@@ -1,11 +1,11 @@
 // discord_app/utils/URLUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
 import applyDefault from "../../_runtime/00012_apply.js";
 import ME from "../Constants.tsx";
 import isDiscordFrontendDevelopment from "GlobalUtils.tsx";
 import isDiscordProxiedAssetUrlDefault from "URLUtils.tsx";
+import ipDefault from "../../_runtime/01488_ip.js";
 import UrlAll from "../../_runtime/01489_Url.js";
-import importDefaultResult from "../../_runtime/01488_ip.js";
+import set from "../../_runtime/00002_set.js";
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {
   if (tmp) {
@@ -32,6 +32,7 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
           isMatch = regex3.test(url.hostname);
         }
         tmp9 = isMatch;
+        const obj = isDiscordFrontendDevelopment;
       }
       return tmp9;
     }
@@ -44,11 +45,13 @@ const Routes = ME.Routes;
 const re5 = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i;
 const re6 = /^.*\.discordapp\.net$/;
 const re7 = /^.*\.media\.discordapp\.net$/;
-const set = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com", "static.klipy.com", "media.giphy.com", "i.giphy.com"]);
-const regExp = new RegExp("(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|" + importDefaultResult.v4().source + "|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s\"]*)?", "ig");
+let set = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com", "static.klipy.com", "media.giphy.com", "i.giphy.com"]);
+const regExp = new RegExp("(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|" + ipDefault.v4().source + "|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s\"]*)?", "ig");
 const items = [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST];
 const set1 = new Set(items);
-let obj = {
+let result = set.fileFinishedImporting("utils/URLUtils.tsx");
+
+export default {
   URL_REGEX: regExp,
   makeUrl(BILLING_LOGIN_HANDOFF, arg1) {
     if (arg1 == null) {
@@ -131,6 +134,7 @@ let obj = {
           return true;
         }
       }
+      const obj = isDiscordProxiedAssetUrlDefault;
     }
     return false;
   },
@@ -143,6 +147,7 @@ let obj = {
         tmp4 = "discord:" === protocol;
       }
       tmp = tmp4;
+      const obj = UrlAll;
     }
     return tmp;
   },
@@ -151,6 +156,7 @@ let obj = {
     if (tmp) {
       const _window = window;
       tmp = UrlAll.parse(src).hostname === window.GLOBAL_ENV.CDN_HOST;
+      const obj = UrlAll;
     }
     return tmp;
   },
@@ -180,6 +186,7 @@ let obj = {
           tmp5 = isMatch;
         }
         tmp9 = tmp5;
+        const obj = isDiscordFrontendDevelopment;
       }
       return tmp9;
     }
@@ -222,8 +229,10 @@ let obj = {
           tmp9 = isMatch;
         }
         tmp4 = tmp9;
+        const obj2 = isDiscordFrontendDevelopment;
       }
       flag = tmp4;
+      const obj = isDiscordProxiedAssetUrlDefault;
     }
     let tmp13 = flag;
     if (!tmp13) {
@@ -237,6 +246,7 @@ let obj = {
             hasItem = set.has(toURLSafeResult1.hostname);
           }
           flag2 = hasItem;
+          const obj3 = isDiscordProxiedAssetUrlDefault;
         }
         tmp17 = flag2;
       }
@@ -264,6 +274,7 @@ let obj = {
           flag = true;
         }
       }
+      const obj = isDiscordProxiedAssetUrlDefault;
     }
     if (!flag) {
       let tmp8 = null != url;
@@ -274,6 +285,7 @@ let obj = {
           tmp11 = "discord:" === protocol;
         }
         tmp8 = tmp11;
+        const obj2 = UrlAll;
       }
       flag = tmp8;
     }
@@ -291,11 +303,13 @@ let obj = {
     return UrlAll.format(arg0);
   },
   formatPathWithQuery(pathname) {
-    const obj = { pathname, query: applyDefault.pickBy(arg1) };
+    let obj = UrlAll;
+    obj = { pathname, query: applyDefault.pickBy(arg1) };
     return obj.format(obj);
   },
   formatSearch(arg0) {
-    const obj = { query: applyDefault.pickBy(arg0) };
+    let obj = UrlAll;
+    obj = { query: applyDefault.pickBy(arg0) };
     return obj.format(obj);
   },
   safeParseWithQuery(target) {
@@ -314,15 +328,12 @@ let obj = {
       return null;
     }
   },
-  safeDecodeURIComponent(parts) {
+  safeDecodeURIComponent(hash) {
     try {
       const _decodeURIComponent = decodeURIComponent;
-      return decodeURIComponent(parts);
+      return decodeURIComponent(hash);
     } catch (err) {
       return null;
     }
   }
 };
-let result = obj132.fileFinishedImporting("utils/URLUtils.tsx");
-
-export default obj;

@@ -1,9 +1,9 @@
 // discord_app/modules/quests/lib/AssetUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../../utils/URLUtils.tsx";
 import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
-import set from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
+import set2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import metadataDefault from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
 import metadataDefault2 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
@@ -14,7 +14,7 @@ import metadataDefault5 from "../../../../discord_assets/assets/orbs/reward_tile
 import metadataDefault6 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
 import QuestsExperimentLocations from "../QuestConstants.tsx";
 
-function resolveAsset(id, questBarHeroVideo, theme) {
+function resolveAsset(id, questBarHeroVideo) {
   if (questBarHeroVideo.startsWith("blob:")) {
     const parts = questBarHeroVideo.split("?", 1);
     let atResult = parts.at(0);
@@ -26,17 +26,17 @@ function resolveAsset(id, questBarHeroVideo, theme) {
     const _HermesInternal3 = HermesInternal;
     combined = "" + closure_3 + questBarHeroVideo;
   } else {
-    theme = undefined;
-    if (theme != null) {
-      theme = theme.theme;
+    let theme;
+    if (arg2 != null) {
+      theme = arg2.theme;
     }
     let str3 = "";
     if (null != theme) {
       const _HermesInternal = HermesInternal;
-      str3 = "/" + theme.theme;
+      str3 = "/" + arg2.theme;
     }
     const _HermesInternal2 = HermesInternal;
-    combined = "" + closure_4 + id + str3 + "/" + questBarHeroVideo;
+    combined = "" + tmp + id + str3 + "/" + questBarHeroVideo;
   }
   const tmp16 = getMimetype(questBarHeroVideo);
   obj = { url: combined, mimetype: tmp16, isAnimated: null };
@@ -397,8 +397,8 @@ function getAssetUrlWithMediaProxyQueryParams(assetUrl, arg1) {
   if (assetUrl.startsWith("blob:")) {
     return assetUrl;
   } else {
-    isDiscordProxiedAssetUrlDefault.toURLSafe(assetUrl);
-    let str = assetUrl;
+    let str = isDiscordProxiedAssetUrlDefault.toURLSafe(assetUrl);
+    str = assetUrl;
     if (null != str) {
       if (null != size.format) {
         const searchParams = str.searchParams;
@@ -427,8 +427,8 @@ function convertVideoToFirstFrameImageWithMediaProxy(assetUrl, width) {
   if (assetUrl.startsWith("blob:")) {
     return assetUrl;
   } else {
-    isDiscordProxiedAssetUrlDefault.toURLSafe(assetUrl);
-    let str = null;
+    let str = isDiscordProxiedAssetUrlDefault.toURLSafe(assetUrl);
+    str = null;
     if (null != str) {
       const searchParams = str.searchParams;
       const result = searchParams.set("format", "webp");
@@ -454,11 +454,14 @@ let closure_5 = ME.MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp3 = /\.([a-zA-Z0-9]+)$/;
 const re6 = tmp3;
 const items = ["video/mp4", "video/webm"];
-let obj = { VIDEO: "url", THUMBNAIL: "thumbnail", CAPTION: "caption", TRANSCRIPT: "transcript" };
+let obj = { HERO: "hero", HERO_IMAGE: "hero_image", HERO_VIDEO: "hero_video", QUEST_BAR_HERO: "quest_bar_hero", QUEST_BAR_HERO_VIDEO: "quest_bar_hero_video", QUEST_BAR_HERO_IMAGE: "quest_bar_hero_image", REWARD: "reward", REWARD_IMAGE: "reward_image", GAME_TILE: "game_tile", LOGO_TYPE: "logo_type", COSPONSOR_LOGO_TYPE: "cosponsor_logo_type", VIDEO_PLAYER_VIDEO: "video_player_video", VIDEO_PLAYER_VIDEO_LOW_RES: "video_player_video_low_res", VIDEO_PLAYER_VIDEO_HLS: "video_player_video_hls", VIDEO_PLAYER_THUMBNAIL: "video_player_thumbnail", VIDEO_PLAYER_CAPTION: "video_player_caption", VIDEO_PLAYER_TRANSCRIPT: "video_player_transcript" };
+obj = { VIDEO: "video", VIDEO_LOW_RES: "videoLowRes", VIDEO_HLS: "videoHls" };
+obj = { VIDEO: "url", THUMBNAIL: "thumbnail", CAPTION: "caption", TRANSCRIPT: "transcript" };
 let obj1 = { TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_3: 3, [3]: "TIER_3", TIER_4: 4, [4]: "TIER_4" };
 let closure_10 = { [obj.VIDEO_PLAYER_VIDEO]: { variant: obj.VIDEO, property: obj.VIDEO }, [obj.VIDEO_PLAYER_VIDEO_LOW_RES]: { variant: obj.VIDEO_LOW_RES, property: obj.VIDEO }, [obj.VIDEO_PLAYER_VIDEO_HLS]: { variant: obj.VIDEO_HLS, property: obj.VIDEO }, [obj.VIDEO_PLAYER_THUMBNAIL]: { variant: obj.VIDEO, property: obj.THUMBNAIL }, [obj.VIDEO_PLAYER_CAPTION]: { variant: obj.VIDEO, property: obj.CAPTION }, [obj.VIDEO_PLAYER_TRANSCRIPT]: { variant: obj.VIDEO, property: obj.TRANSCRIPT } };
+const obj8 = { [TIER_1]: metadataDefault, [TIER_2]: metadataDefault2, [TIER_3]: metadataDefault3, [TIER_4]: metadataDefault4 };
 ({ TIER_1, TIER_2, TIER_3, TIER_4 } = obj1);
-let result = obj132.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
+let result = set.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
 
 export const EXTENSION_RE = tmp3;
 export const ANIMATED_MIMETYPES = items;
@@ -608,7 +611,7 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
       }
     }
     if ("taskConfigV2" in quest.config) {
-      const FirstPartyQuestTaskTypes = set.FirstPartyQuestTaskTypes;
+      const FirstPartyQuestTaskTypes = set2.FirstPartyQuestTaskTypes;
       const tmp5 = quest.config.taskConfigV2.tasks[flag ? FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE : FirstPartyQuestTaskTypes.WATCH_VIDEO];
       let tmp9;
       if (tmp5 != null) {
@@ -626,6 +629,11 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
       return null;
     }
   }
+  let tmp32;
+  if (flag2) {
+    tmp32 = DARK;
+  }
+  const tmp31Result = resolveAsset(quest.id, asset, { theme: tmp32 });
   if (!flag) {
     let tmp34 = tmp31Result;
   } else {
@@ -642,7 +650,7 @@ export const buildUrl = function buildUrl(arg0, str, theme) {
     }
     return atResult;
   } else {
-    if ("/".includes("/")) {
+    if (str.includes("/")) {
       const _HermesInternal3 = HermesInternal;
       let combined = "" + closure_3 + str;
     } else {
@@ -656,7 +664,7 @@ export const buildUrl = function buildUrl(arg0, str, theme) {
         str3 = "/" + theme.theme;
       }
       const _HermesInternal2 = HermesInternal;
-      combined = "" + closure_4 + arg0 + str3 + "/" + str;
+      combined = "" + tmp + arg0 + str3 + "/" + str;
     }
     return combined;
   }

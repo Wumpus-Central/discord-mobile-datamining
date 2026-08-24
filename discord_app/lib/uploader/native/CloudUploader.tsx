@@ -1,13 +1,12 @@
 // discord_app/lib/uploader/native/CloudUploader.tsx
 import timestampDefault from "../../../modules/debug/Logger.tsx";
-import applyDefault from "../../../../_runtime/00012_apply.js";
 import _fileSizeDefault from "../UploaderBase.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import MESSAGE_GROUP_SPACING from "../../../modules/messages/MessageConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 ({ AbortCodes: c4, NOOP: c5 } = ME);
 ({ DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE: closure_6, FileUploadErrorTypes: error } = MESSAGE_GROUP_SPACING);
@@ -27,11 +26,12 @@ class CloudUploader extends tmp7 {
 }
 const prototype = CloudUploader.prototype;
 prototype["uploadFiles"] = function uploadFiles(c3) {
+  let self = this;
   closure_1 = c3;
   function _superprop_getUpload() {
     return super.upload;
   }
-  const self = this;
+  self = this;
   return self(function*() {
     if (store === 2) {
       store = 3;
@@ -60,19 +60,23 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
             return obj;
           } else {
             closure_3 = tmp4;
-            let promise = tmp8;
+            c2 = tmp8;
             closure_0 = undefined;
             let files;
-            promise = undefined;
+            c2 = undefined;
             closure_3 = undefined;
             closure_4 = undefined;
             c5 = undefined;
             c6 = undefined;
             store = undefined;
-            closure_0 = closure_1_1(_superprop_getUpload[6]).backgroundTaskIdentifierInvalid;
-            closure_1_0.once("start", closure_1_3(function*() {
-              if (c2 === 2) {
-                c2 = 3;
+            let onceResult = closure_1_1;
+            onceResult = closure_1_2;
+            closure_0 = closure_1_1(closure_1_2[6]).backgroundTaskIdentifierInvalid;
+            onceResult = closure_1_0;
+            onceResult = closure_1_3;
+            onceResult = closure_1_0.once("start", closure_1_3(function*() {
+              if (dependencyMap === 2) {
+                dependencyMap = 3;
                 HermesBuiltin.throwTypeError();
               } else if (tmp4 === 3) {
                 if (arg0 === 1) {
@@ -86,62 +90,66 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                 }
               } else {
                 try {
-                  c2 = 2;
+                  dependencyMap = 2;
                   if (0 === length) {
                     if (arg0 === 1) {
-                      c2 = 3;
+                      dependencyMap = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
-                      c2 = 3;
+                      dependencyMap = 3;
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
                     } else {
                       let callback = tmp2;
                       obj1 = { title: null, content: null };
-                      const intl = callback(promise[7]).intl;
-                      obj1[0] = intl.string(callback(promise[7]).t["B/HSDd"]);
-                      const intl2 = callback(promise[7]).intl;
+                      const intl = callback(1236).intl;
+                      obj1[0] = intl.string(callback(1236).t["B/HSDd"]);
+                      const intl2 = callback(1236).intl;
                       const obj2 = { count: null };
                       obj2[0] = length.length;
-                      obj1[1] = intl2.formatToPlainString(callback(promise[7]).t.D0noUt, obj2);
-                      c2 = 1;
+                      obj1[1] = intl2.formatToPlainString(callback(1236).t.D0noUt, obj2);
+                      dependencyMap = 1;
                       const obj3 = { value: null, done: false };
-                      obj3[0] = files(promise[6]).startBackgroundTask(obj1);
+                      obj3[0] = files(7503).startBackgroundTask(obj1);
                       return obj3;
                     }
                   } else if (arg0 === 1) {
-                    c2 = 3;
+                    dependencyMap = 3;
                     throw arg1;
                   } else if (arg0 === 2) {
-                    c2 = 3;
+                    dependencyMap = 3;
                     const obj4 = { value: null, done: true };
                     obj4[0] = arg1;
                     return obj4;
                   } else {
                     callback = arg1;
                     if (closure_1_0._aborted) {
-                      obj = files(promise[6]);
+                      obj = files(7503);
                       obj.endBackgroundTask(closure_1_0);
                     }
-                    c2 = 3;
+                    dependencyMap = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp13) {
-                  c2 = tmp;
+                  dependencyMap = tmp;
                   throw tmp13;
                 }
               }
             }));
             function onCompleteTask() {
-              closure_2_1(_superprop_getUpload[6]).endBackgroundTask(closure_0);
+              closure_2_1(closure_2_2[6]).endBackgroundTask(closure_0);
               closure_0.removeListener("complete", files);
               closure_0.removeListener("error", files);
             }
             files = onCompleteTask;
-            closure_1_0.once("error", onCompleteTask);
-            closure_1_0.once("complete", onCompleteTask);
-            promise = new Promise((arg0, arg1) => {
+            onceResult = closure_1_0;
+            onceResult = closure_1_0.once("error", onCompleteTask);
+            onceResult = closure_1_0;
+            onceResult = closure_1_0.once("complete", onCompleteTask);
+            onceResult = new.target;
+            onceResult = new.target;
+            onceResult = new Promise((arg0, arg1) => {
               closure_0 = arg0;
               closure_1 = arg1;
               closure_0.once("error", (file, code, responseBody, reason) => {
@@ -153,20 +161,23 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                 }
               });
             });
+            c2 = onceResult;
             c5 = 1;
+            onceResult = closure_1_0;
             let arr = closure_1_1;
             closure_1_0.files = closure_1_1;
-            let tmp65 = _superprop_getUpload();
+            onceResult = closure_1_2;
+            let tmp65 = closure_1_2();
             const call = tmp65.call;
             let getKestrelConfig = closure_1_0;
             if (typeof call === "unknown") {
               tmp65(arr);
             } else {
-              call(getKestrelConfig, arr);
+              onceResult = call(getKestrelConfig, arr);
             }
             closure_1_0._file.attachmentsCount = arr.length;
             closure_1_0._handleStart(undefined);
-            tmp65 = closure_1_0(_superprop_getUpload[8]);
+            tmp65 = closure_1_0(closure_1_2[8]);
             getKestrelConfig = tmp65.getKestrelConfig;
             closure_3 = getKestrelConfig({ location: "CloudUploader.native.uploadFiles" });
             closure_4 = 0;
@@ -182,7 +193,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
           closure_0._handleException(logger);
           store = 3;
           obj1 = { value: null, done: true };
-          obj1[0] = _superprop_getUpload;
+          obj1[0] = closure_1_2;
           return obj1;
         } else if (2 === tmp8) {
           c5 = 1;
@@ -204,11 +215,23 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
           const prop = closure_0.preCompressionFileSizes;
           arr = prop.push(c6);
           c5.preCompressionSize = c6;
+          onceResult = c6;
           closure_4 = closure_4 + c6;
+          onceResult = closure_0;
+          onceResult = closure_4;
           closure_0._file.totalPreCompressionSize = closure_4;
+          onceResult = closure_0;
+          onceResult = closure_4;
           closure_0._file.currentSize = closure_4;
-          store = closure_1_0(_superprop_getUpload[10]).getUploadTarget(c5.item.target);
+          onceResult = closure_1_0;
+          onceResult = closure_1_2;
+          onceResult = c5;
+          store = closure_1_0(closure_1_2[10]).getUploadTarget(c5.item.target);
+          onceResult = c6;
           const _Math = Math;
+          onceResult = store;
+          onceResult = c5;
+          onceResult = c6;
           if (c6 > Math.max(store.getMaxFileSize(c5.channelId), c6)) {
             let obj3 = { code: null, reason: null };
             obj3[0] = closure_1_4.ENTITY_TOO_LARGE;
@@ -221,11 +244,13 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
             c5 = 0;
             store = 3;
             const obj5 = { value: null, done: true };
-            obj5[0] = _superprop_getUpload;
+            obj5[0] = closure_1_2;
             return obj5;
           } else {
+            onceResult = c2;
+            onceResult = closure_1_3;
             if (closure_1_3.enabled) {
-              obj = closure_1_0(_superprop_getUpload[8]);
+              obj = closure_1_0(closure_1_2[8]);
               if (c6 > obj.getEffectiveKestrelLimit(closure_1_3, store.getMaxFileSize(c5.channelId))) {
                 const obj6 = { code: null, reason: null };
                 obj6[0] = closure_1_4.ENTITY_TOO_LARGE;
@@ -238,7 +263,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                 c5 = 0;
                 store = 3;
                 const obj8 = { value: null, done: true };
-                obj8[0] = _superprop_getUpload;
+                obj8[0] = closure_1_2;
                 return obj8;
               }
             }
@@ -254,26 +279,26 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
               c5 = 0;
               store = 3;
               const obj11 = { value: null, done: true };
-              obj11[0] = _superprop_getUpload;
+              obj11[0] = closure_1_2;
               return obj11;
             } else {
               c5 = 1;
               if (closure_0 === undefined) {
                 const _HermesInternal2 = HermesInternal;
                 logger.log("" + closure_1_0.id + " queued");
-                closure_1_1(_superprop_getUpload[11]).enqueue(() => {
+                closure_1_1(closure_1_2[11]).enqueue(() => {
                   closure_0.startUpload();
                   return closure_0;
                 });
                 c5 = 0;
                 store = 3;
                 let obj12 = { value: null, done: true };
-                obj12[0] = promise;
+                obj12[0] = c2;
                 return obj12;
               } else {
                 c5 = 2;
                 c5 = tmp69;
-                obj12 = closure_1_0(_superprop_getUpload[9]);
+                obj12 = closure_1_0(closure_1_2[9]);
                 c6 = 3;
                 store = 1;
                 const obj13 = { value: null, done: false };
@@ -282,7 +307,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
               }
             }
           }
-          const obj19 = closure_1_0(_superprop_getUpload[10]);
+          const obj19 = closure_1_0(closure_1_2[10]);
         }
       } catch (tmp83) {
         closure_4 = tmp83;
@@ -292,7 +317,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
         } else if (tmp2 === tmp85) {
           c6 = tmp2;
         } else {
-          c6 = tmp;
+          c6 = onceResult;
         }
       }
     }
@@ -362,10 +387,10 @@ prototype["startUpload"] = function startUpload() {
               return obj2;
             } else if (0 !== lib.files.length) {
               const files = lib.files;
-              if (files.every((item, index) => item.status === callback(tmp59[14]).CloudUploadStatus.COMPLETED)) {
+              if (files.every((status) => status.status === callback(tmp59[14]).CloudUploadStatus.COMPLETED)) {
                 const items = lib._file.items;
                 if (items != null) {
-                  const item = items.forEach((item, index) => {
+                  const item = items.forEach((item) => {
                     item.item.progress = 100;
                   });
                 }
@@ -430,9 +455,9 @@ prototype["startUpload"] = function startUpload() {
 };
 prototype["observeCompressionProgress"] = function observeCompressionProgress(files) {
   const self = this;
-  let item = files.forEach((item, index) => {
+  let item = files.forEach((item) => {
     item = item.item;
-    if (item.platform === self(dependencyMap[15]).UploadPlatform.REACT_NATIVE) {
+    if (item.platform === self(closure_1_2[15]).UploadPlatform.REACT_NATIVE) {
       item.compressionProgress = 0;
       const uploadItems = self.uploadItems;
       const result = uploadItems.set(item.uri, item);
@@ -449,7 +474,7 @@ prototype["observeCompressionProgress"] = function observeCompressionProgress(fi
       const uploadItems3 = obj.uploadItems;
       const items = [];
       HermesBuiltin.arraySpread(uploadItems3.values(), 0);
-      const meanByResult = applyDefault.meanBy(items, "compressionProgress");
+      const meanByResult = closure_1_1(closure_1_2[16]).meanBy(items, "compressionProgress");
       if (meanByResult >= 100) {
         const mediaEventSubscriptions = obj.mediaEventSubscriptions;
         const value = mediaEventSubscriptions.get(obj._file.id);
@@ -462,7 +487,7 @@ prototype["observeCompressionProgress"] = function observeCompressionProgress(fi
         uploadItems4.clear();
         const items1 = obj._file.items;
         if (items1 != null) {
-          const item = items1.forEach((item, index) => {
+          const item = items1.forEach((item) => {
             item.item.compressionProgress = 100;
           });
         }
@@ -477,10 +502,11 @@ prototype["observeCompressionProgress"] = function observeCompressionProgress(fi
         obj._file = obj;
       }
       obj.emit("compression-progress", obj._file);
+      const obj2 = closure_1_1(closure_1_2[16]);
     }
   }));
 };
 const tmp5 = new timestampDefault("CloudUploader(Native).tsx");
-let result = require("obj132").fileFinishedImporting("lib/uploader/native/CloudUploader.tsx");
+let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploader.tsx");
 
 export default CloudUploader;

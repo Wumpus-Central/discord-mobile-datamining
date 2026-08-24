@@ -48,7 +48,8 @@ arg5.navigate = function navigate() {
 arg5.navigateDeprecated = function navigateDeprecated() {
   const items = [...arguments];
   if (typeof items[0] === "string") {
-    let obj = { name: null, params: null };
+    let obj = { type: "NAVIGATE_DEPRECATED", payload: null };
+    obj = { name: null, params: null };
     [obj3[0], obj3[1]] = items;
     obj[1] = obj;
     return obj;

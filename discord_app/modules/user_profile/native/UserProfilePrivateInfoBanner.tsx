@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfilePrivateInfoBanner.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
@@ -9,10 +9,11 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
-let obj = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj = { banner: null };
+obj = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
 
 export default function UserProfilePrivateInfoBanner(username) {
   const containerBackground = username.containerBackground;
@@ -23,6 +24,7 @@ export default function UserProfilePrivateInfoBanner(username) {
     obj[0] = containerBackground;
     tmp3 = obj;
   }
+  obj = { style: items, children: null };
   items[1] = tmp3;
   obj = { variant: "text-sm/normal", children: null };
   const intl = getSystemLocale.intl;

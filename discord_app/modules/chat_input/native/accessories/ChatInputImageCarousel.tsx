@@ -1,15 +1,16 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputImageCarousel.tsx
-import handleInit from "../../../application_commands/ApplicationCommandStore.tsx";
+import closure_3 from "../../../application_commands/ApplicationCommandStore.tsx";
 import { DraftType } from "../../../../stores/DraftStore.tsx";
-import map from "../../../../stores/UploadAttachmentStore.tsx";
+import closure_5 from "../../../../stores/UploadAttachmentStore.tsx";
 import { useChatShowingAutoComplete as closure_6 } from "../useChatBottomManagerUIStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUpload) {
   canUpload = canUpload.canUpload;
   const channelId = canUpload.channelId;
+  dependencyMap = undefined;
   let tmp = callback(canUpload.screenIndex);
   dependencyMap = tmp;
   let obj = canUpload(589);
@@ -22,8 +23,9 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
       if (canUpload) {
         uploads = null;
         if (null == closure_1_3.getActiveCommand(channelId)) {
-          uploads = closure_1_5.getUploads(channelId, DraftType.ChannelMessage);
+          uploads = closure_1_5.getUploads(tmp5, closure_1_4.ChannelMessage);
         }
+        tmp5 = channelId;
       }
       tmp = uploads;
     }
@@ -38,6 +40,6 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
   }
   return tmp4;
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
 
 export default memoResult;

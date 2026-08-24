@@ -41,7 +41,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
       throw reanimatedError;
     }
   }
-  obj = isJest;
+  obj = _isJest;
   tmp = _require;
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
@@ -49,7 +49,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
     const ReanimatedModule = callback(table[3]).ReanimatedModule;
     return ReanimatedModule.getViewProp(closure_0, callback, table, (str) => {
       if (typeof str === "string") {
-        if ("error:" === "error:".substr(0, 6)) {
+        if ("error:" === str.substr(0, 6)) {
           callback2(str);
         }
       }
@@ -118,25 +118,25 @@ export const unsubscribeFromKeyboardEvents = function unsubscribeFromKeyboardEve
 export const registerSensor = function registerSensor(arg0, arg1, arg2) {
   if (!global.__sensorContainer) {
     const sensorContainer = new SensorContainer.SensorContainer();
-    global.__sensorContainer = sensorContainer;
+    tmp.__sensorContainer = sensorContainer;
   }
-  const __sensorContainer = global.__sensorContainer;
+  const __sensorContainer = tmp.__sensorContainer;
   return __sensorContainer.registerSensor(arg0, arg1, freezeObjectInDev.makeShareableCloneRecursive(arg2));
 };
 export const initializeSensor = function initializeSensor(arg0, arg1) {
   if (!global.__sensorContainer) {
     const sensorContainer = new SensorContainer.SensorContainer();
-    global.__sensorContainer = sensorContainer;
+    tmp.__sensorContainer = sensorContainer;
   }
-  const __sensorContainer = global.__sensorContainer;
+  const __sensorContainer = tmp.__sensorContainer;
   return __sensorContainer.initializeSensor(arg0, arg1);
 };
 export const unregisterSensor = function unregisterSensor(arg0) {
   if (!global.__sensorContainer) {
     const sensorContainer = new SensorContainer.SensorContainer();
-    global.__sensorContainer = sensorContainer;
+    tmp.__sensorContainer = sensorContainer;
   }
-  const __sensorContainer = global.__sensorContainer;
+  const __sensorContainer = tmp.__sensorContainer;
   return __sensorContainer.unregisterSensor(arg0);
 };
 export const enableLayoutAnimations = function enableLayoutAnimations(enableLayoutAnimations) {

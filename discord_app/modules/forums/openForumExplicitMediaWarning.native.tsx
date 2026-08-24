@@ -1,18 +1,19 @@
 // discord_app/modules/forums/openForumExplicitMediaWarning.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import _modDef4656 from "../../actions/native/AlertActionCreators.tsx";
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");
+const result = set.fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");
 
 export default function openForumExplicitMediaWarning(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  let obj = {
+  let obj = _modDef4656;
+  obj = {
     importer() {
-      return callback(dependencyMap[3])(dependencyMap[2], dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      return callback(closure_1_2[3])(closure_1_2[2], closure_1_2.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);

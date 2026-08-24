@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/StageChannelHeightHooks.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import useStageBlockedUsersCount from "useStageBlockedUsersCount.tsx";
 
-const result = obj132.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
 
 export const CALL_ACTION_BAR_HEIGHT = 112;
 export const useGetStageRTCPanelHeight = function useGetStageRTCPanelHeight(stateFromStores) {

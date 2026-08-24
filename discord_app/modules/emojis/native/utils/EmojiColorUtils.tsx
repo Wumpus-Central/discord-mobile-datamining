@@ -1,6 +1,6 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
 import privDefault from "../../../../../_runtime/01405_priv.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_0 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 function _getEmojiCacheKey(name) {
@@ -233,7 +233,7 @@ function _getEmojiDominantColors() {
 }
 let closure_2 = new privDefault(100);
 const tmp2 = new privDefault(100);
-let result = require("obj132").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
 
 export const getEmojiDominantColors = function getEmojiDominantColors(arg0) {
   const self = this;

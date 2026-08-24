@@ -1,12 +1,12 @@
 // discord_app/modules/bug_reporter/native/BugReportManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import refreshSourceMapCookie from "../../../stores/DeveloperOptionsStore.tsx";
+import closure_6 from "../../../stores/DeveloperOptionsStore.tsx";
 import { InAppNotificationTypes } from "../../../Constants.tsx";
 import { NativePermissionStatus } from "../../native_permissions/NativePermissionConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function showNotification(uri) {
   function _getAndroidScreenshot() {
     const self = this;
@@ -287,6 +287,6 @@ prototype["initBugReporter"] = function initBugReporter() {
   })();
 };
 const bugReportManager = new BugReportManager();
-const result = require("obj132").fileFinishedImporting("modules/bug_reporter/native/BugReportManager.tsx");
+const result = require("set").fileFinishedImporting("modules/bug_reporter/native/BugReportManager.tsx");
 
 export default bugReportManager;

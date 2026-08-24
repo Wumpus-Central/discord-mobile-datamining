@@ -1,13 +1,12 @@
 // discord_app/modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import isFeatureAgeGated from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import SettingsDefaultFeature from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import noop from "../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../stores/UserStore.tsx";
 import { HelpdeskArticles } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function resolveGoreSettingWithDefaults(isFriend) {
   ({ setting, isDm } = isFriend);
   if (isDm === undefined) {
@@ -33,10 +32,10 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = create.ExplicitContentRedaction.BLOCK;
+        let BLUR2 = tmp4(1306).ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = create.ExplicitContentRedaction;
+    ExplicitContentRedaction = tmp4(1306).ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -48,11 +47,15 @@ function resolveGoreSettingWithDefaults(isFriend) {
       if (isDm === undefined) {
         flag5 = false;
       }
+      let flag6 = flag;
+      if (flag === undefined) {
+        flag6 = false;
+      }
       if (!flag5) {
-        const ExplicitContentRedaction3 = create.ExplicitContentRedaction;
+        const ExplicitContentRedaction3 = tmp4(1306).ExplicitContentRedaction;
         let BLUR = flag5 ? ExplicitContentRedaction3.BLOCK : ExplicitContentRedaction3.BLUR;
       }
-      BLUR = create.ExplicitContentRedaction.BLUR;
+      BLUR = tmp4(1306).ExplicitContentRedaction.BLUR;
     } else {
       let flag3 = isDm;
       if (isDm === undefined) {
@@ -64,17 +67,16 @@ function resolveGoreSettingWithDefaults(isFriend) {
       }
       if (flag3) {
         if (flag4) {
-          let SHOW = create.ExplicitContentRedaction.SHOW;
+          let SHOW = tmp4(1306).ExplicitContentRedaction.SHOW;
         }
         return SHOW;
       }
-      const ExplicitContentRedaction2 = create.ExplicitContentRedaction;
+      const ExplicitContentRedaction2 = tmp4(1306).ExplicitContentRedaction;
       SHOW = flag3 ? ExplicitContentRedaction2.BLOCK : ExplicitContentRedaction2.SHOW;
     }
   }
-  obj = isFeatureAgeGated;
 }
-const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
 
 export { resolveGoreSettingWithDefaults };
 export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSettingWithDefaultsForTeen(isDm) {
@@ -125,7 +127,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   if (setting != null) {
     goreContentGuilds = setting.goreContentGuilds;
   }
-  let obj = { goreContentGuilds: resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  let obj = { goreContentGuilds: tmp4({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
   let prop;
   if (setting != null) {
     prop = setting.goreContentNonFriendDm;

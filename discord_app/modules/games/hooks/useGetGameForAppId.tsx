@@ -1,12 +1,13 @@
 // discord_app/modules/games/hooks/useGetGameForAppId.tsx
 import importDefaultResult1 from "useGame.tsx";
 import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import handleLoadMessages from "../GameStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../GameStore.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { importDefaultResult1 } from "useGame.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
 
 export default function useGetGameForAppId(applicationId) {
   let obj = useGetOrFetchApplications;
@@ -33,15 +34,15 @@ export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStore
   const _require = tmp;
   const items = [tmp];
   memo = React.useMemo(() => {
-    const found = lib.filter(lib(dependencyMap[4]).isNotNullish);
-    const mapped = found.map((item, index) => item.getCanonicalGameId());
-    return mapped.filter(lib(dependencyMap[4]).isNotNullish);
+    const found = lib.filter(lib(closure_1_2[4]).isNotNullish);
+    const mapped = found.map((getCanonicalGameId) => getCanonicalGameId.getCanonicalGameId());
+    return mapped.filter(lib(closure_1_2[4]).isNotNullish);
   }, items);
-  const games = require("useGame.tsx").useGames(memo);
-  const obj = importDefaultResult1;
+  const games = _importDefaultResult1.useGames(memo);
+  const obj = _importDefaultResult1;
   const items1 = [closure_4];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
-    const mapped = memo.map((item, index) => game.getGame(item));
-    return mapped.filter(lib(dependencyMap[4]).isNotNullish);
+  return _initialize.useStateFromStoresArray(items1, () => {
+    const mapped = memo.map((closure_0) => game.getGame(closure_0));
+    return mapped.filter(lib(closure_1_2[4]).isNotNullish);
   });
 };

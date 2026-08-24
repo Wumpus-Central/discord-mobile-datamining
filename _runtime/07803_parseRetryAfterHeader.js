@@ -1,5 +1,5 @@
 // _runtime/07803_parseRetryAfterHeader.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_0 from "metro/00032__slicedToArray.js";
 
 function parseRetryAfterHeader(arg0) {
   let timestamp = arg1;
@@ -49,50 +49,61 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
   if (headers) {
     str = headers["x-sentry-rate-limits"];
   }
-  let prop = headers;
+  retry_after = headers;
   if (headers) {
-    prop = headers["retry-after"];
+    retry_after = headers["retry-after"];
   }
   if (str) {
     const parts = str.trim().split(",");
     const iter = parts[Symbol.iterator]();
     const str2 = str.trim();
     while (iter !== undefined) {
-      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
-      let str9 = tmp12[1];
-      let str10 = tmp12[4];
+      let tmp10 = callback;
+      let tmp11 = callback(str8.split(":", 5), 5);
+      let str9 = tmp11[1];
+      let str10 = tmp11[4];
       let _parseInt = parseInt;
-      let parsed = parseInt(tmp12[0], 10);
+      let parsed = parseInt(tmp11[0], 10);
+      let tmp13 = parsed;
       let _isNaN = isNaN;
       let num6 = 60;
       if (!isNaN(parsed)) {
         num6 = parsed;
       }
       let result = 1000 * num6;
+      let tmp15 = str9;
       if (str9) {
+        let tmp17 = str9;
         let parts1 = str9.split(";");
+        let tmp19 = parts1;
+        let tmp20 = parts1;
         for (const item10065 of parts1) {
-          let tmp23 = "metric_bucket" === item10065;
-          if (tmp23) {
-            tmp23 = str10;
+          let tmp22 = "metric_bucket" === item10065;
+          let tmp21 = item10065;
+          if (tmp22) {
+            tmp22 = str10;
           }
-          if (tmp23) {
+          if (tmp22) {
+            let tmp23 = str10;
             let parts2 = str10.split(";");
-            tmp23 = !parts2.includes("custom");
+            tmp22 = !parts2.includes("custom");
           }
-          if (!tmp23) {
-            obj[item10065] = timestamp + result;
+          if (!tmp22) {
+            let tmp24 = item10065;
+            let tmp25 = result;
+            obj[tmp21] = timestamp + result;
           }
           continue;
         }
       } else {
+        let tmp16 = result;
         obj.all = timestamp + result;
       }
       continue;
     }
     str8 = iter.next();
-  } else if (prop) {
-    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
+  } else if (retry_after) {
+    obj.all = timestamp + parseRetryAfterHeader(retry_after, timestamp);
   } else if (429 === headers.statusCode) {
     obj.all = timestamp + 60000;
   }

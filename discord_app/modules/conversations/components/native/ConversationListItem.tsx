@@ -2,20 +2,21 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import removePendingListFetch from "../../ConversationsStore.tsx";
+import closure_5 from "../../ConversationsStore.tsx";
 import { MOBILE_PREVIEW_MESSAGE_COUNT as closure_6 } from "../../ConversationConstants.tsx";
 import { VerticalGradient } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function ConversationListItemBase(conversation) {
   conversation = conversation.conversation;
+  let navigation;
   let token;
   let stateFromStores;
   const tmp = callback3();
   let obj = conversation(token[8]);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   obj1 = conversation(token[9]);
   token = obj1.useToken(navigation(token[7]).colors.BACKGROUND_SURFACE_HIGH);
   let items = [token];
@@ -51,6 +52,7 @@ function ConversationListItemBase(conversation) {
     obj = { channelId: conversation.channelId, conversationId: conversation.id, isFocusMode: false };
     const result = ConversationsAnalytics.trackTopicsUnitClicked(obj);
   }, items4);
+  obj = { style: tmp.card, onPress: callback, accessibilityLabel: conversation.title, children: null };
   obj = { style: tmp.headerContainer, children: null };
   obj1 = { variant: "text-md/semibold", color: "text-default", lineClamp: 1, style: tmp.title, children: conversation.title };
   const items5 = [callback(conversation(token[16]).Text, obj1), ];
@@ -64,22 +66,21 @@ function ConversationListItemBase(conversation) {
   if (null == memo1) {
     let mapped = tmp11(tmp4(tmp2[18]), {});
   } else {
-    mapped = memo1.map((item, index) => {
-      if (!item.blocked) {
-        if (!item.ignored) {
+    mapped = memo1.map((blocked) => {
+      if (!blocked.blocked) {
+        if (!blocked.ignored) {
           const obj = { message: null, guildId: null, channelId: null };
-          obj[0] = item;
+          obj[0] = blocked;
           ({ guildId: obj[1], channelId: obj[2] } = conversation);
-          let tmp6Result = closure_1_8(navigation(token[20]), obj, item.id);
+          let tmp6Result = closure_1_8(navigation(token[20]), obj, blocked.id);
         }
         return tmp6Result;
       }
       let str = "ignored";
-      if (item.blocked) {
+      if (blocked.blocked) {
         str = "blocked";
       }
-      tmp6Result = closure_1_8(navigation(token[19]), { reason: str }, item.id);
-      const tmp7 = navigation(token[19]);
+      tmp6Result = closure_1_8(navigation(token[19]), { reason: str }, blocked.id);
     });
   }
   obj4[1] = mapped;
@@ -91,15 +92,18 @@ function ConversationListItemBase(conversation) {
 let c3 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = [0, 0.8];
-let obj = { marginBottom: ThemesDefault.space.PX_12, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 232, overflow: "hidden" };
+let obj = { card: null, title: null, timestamp: null, headerContainer: null, previews: null, bottomFade: null };
+obj = { marginBottom: ThemesDefault.space.PX_12, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 232, overflow: "hidden" };
 obj[0] = obj;
 obj[1] = { flexShrink: 1, minWidth: 0 };
 obj[2] = { flexShrink: 0 };
-const createCacheKey = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
 obj[3] = createCacheKey;
 obj[4] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
 obj[5] = { position: "absolute", left: 0, right: 0, bottom: -ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_64, zIndex: 1 };
 let closure_11 = createCacheKey.createStyles(obj);
+const obj3 = { position: "absolute", left: 0, right: 0, bottom: -ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_64, zIndex: 1 };
 const memoResult = importAllResult.memo(function ConversationListItem(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
@@ -122,6 +126,6 @@ const memoResult = importAllResult.memo(function ConversationListItem(channelId)
   }
   return tmp2;
 });
-let result = require("obj132").fileFinishedImporting("modules/conversations/components/native/ConversationListItem.tsx");
+let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationListItem.tsx");
 
 export default memoResult;

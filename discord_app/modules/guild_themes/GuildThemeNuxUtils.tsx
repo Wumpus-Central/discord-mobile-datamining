@@ -1,9 +1,9 @@
 // discord_app/modules/guild_themes/GuildThemeNuxUtils.tsx
 import GuildThemeSourcePreference2 from "../../flow/Client.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
 
-require = fn;
+require = arg1;
 function _saveGuildThemeNuxPreference() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -96,14 +96,14 @@ function _saveGuildThemeNuxPreference() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/guild_themes/GuildThemeNuxUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeNuxUtils.tsx");
 
 export const getInitialGuildThemeNuxSelection = function getInitialGuildThemeNuxSelection() {
   defaultGuildThemePreference = defaultGuildThemePreference.getDefaultGuildThemePreference();
   if (defaultGuildThemePreference === GuildThemeSourcePreference2.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = GuildThemeSourcePreference2.GuildThemeSourcePreference.PERSONAL;
+    let GUILD = tmp2(4306).GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = GuildThemeSourcePreference2.GuildThemeSourcePreference.GUILD;
+    GUILD = tmp2(4306).GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };

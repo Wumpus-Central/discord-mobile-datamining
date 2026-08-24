@@ -2,20 +2,18 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
-import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
-import useCanCurrentUserSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import setContent from "../../../action_sheet/native/ActionSheetStore.tsx";
-import handleStageInstanceCreateOrUpdate from "../../StageInstanceStore.tsx";
+import closure_8 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_9 from "../../StageInstanceStore.tsx";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 class StageChannelRaiseHandAck {
   constructor(arg0) {
     channel = global.channel;
@@ -132,9 +130,9 @@ class StageChannelRaiseHandAck {
     stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getStageInstanceByChannel(channel.id), items1);
     closure_2 = stateFromStores;
     tmp8 = require("useMountLayoutEffect")(() => {
-      _undefined(_undefined2[14]);
+      let obj = _undefined(_undefined2[14]);
       const intl = channel(_undefined2[8]).intl;
-      let obj = { channelName: _undefined, channelTopic: null };
+      obj = { channelName: _undefined, channelTopic: null };
       let topic;
       if (stateFromStores != null) {
         topic = stateFromStores.topic;
@@ -258,25 +256,37 @@ class StageChannelRaiseHandAck {
   }
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey = { invitedContainer: null, icon: null, activeSpeakerIcon: null, activeStageIcon: null, topic: null, channel: null, invitedHeaderText: null, noticeContainer: null, row: null, buttonWrapper: null, declineButtonPill: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginEnd: ThemesDefault.space.PX_8, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
+let obj1 = { marginEnd: ThemesDefault.space.PX_8, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[2] = { marginEnd: ThemesDefault.space.PX_8, tintColor: ThemesDefault.colors.WHITE };
+let obj2 = { marginEnd: ThemesDefault.space.PX_8, tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[3] = { marginEnd: ThemesDefault.space.PX_8, tintColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+let obj3 = { marginEnd: ThemesDefault.space.PX_8, tintColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 createCacheKey[4] = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let obj4 = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 createCacheKey[5] = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
+let obj5 = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
 createCacheKey[6] = { color: ThemesDefault.colors.WHITE, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
+let obj6 = { color: ThemesDefault.colors.WHITE, fontSize: 14, fontFamily: Fonts.PRIMARY_MEDIUM };
 createCacheKey[7] = { alignItems: "center", justifyContent: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: -8, paddingBottom: ThemesDefault.space.PX_4 };
+let obj7 = { alignItems: "center", justifyContent: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: -8, paddingBottom: ThemesDefault.space.PX_4 };
 createCacheKey[8] = { alignItems: "center", justifyContent: "center", flexDirection: "row", width: "100%", gap: ThemesDefault.space.PX_4 };
+let obj8 = { alignItems: "center", justifyContent: "center", flexDirection: "row", width: "100%", gap: ThemesDefault.space.PX_4 };
 createCacheKey[9] = { flexGrow: 1, margin: ThemesDefault.space.PX_8 };
+let obj9 = { flexGrow: 1, margin: ThemesDefault.space.PX_8 };
 createCacheKey[10] = { borderColor: ThemesDefault.colors.WHITE };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/GlobalStageChannelStatus.tsx");
+let obj10 = { borderColor: ThemesDefault.colors.WHITE };
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/GlobalStageChannelStatus.tsx");
 
 export default function GlobalStageChannelStatus(arg0) {
   ({ channel, guild } = arg0);
-  const tmp = callback3();
   let id;
+  const tmp = callback3();
+  id = undefined;
   if (channel != null) {
     id = channel.id;
   }
@@ -286,7 +296,7 @@ export default function GlobalStageChannelStatus(arg0) {
     stringResult = intl.string(id(1236).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
-  let invitedHeaderText = useCanCurrentUserSpeakInChannelDefault(id);
+  let invitedHeaderText = tmp3(10526)(id);
   let obj = id(589);
   const items = [closure_9];
   const items1 = [id];
@@ -322,7 +332,7 @@ export default function GlobalStageChannelStatus(arg0) {
           obj[0] = tmp.noticeContainer;
           obj1 = { animated: true, barStyle: null };
           obj1[1] = str;
-          const items2 = [callback2(componentDidMountDefault, obj1), , ];
+          const items2 = [callback2(tmp3(8032), obj1), , ];
           const obj2 = { style: null, size: null, source: null };
           obj2[0] = activeSpeakerIcon;
           obj2[1] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
@@ -345,7 +355,7 @@ export default function GlobalStageChannelStatus(arg0) {
             }
             items4[1] = tmp17;
             obj3[1] = items4;
-            tmp13Result = callback(tmp8(1297).LegacyText, obj3);
+            tmp13Result = tmp13(tmp8(1297).LegacyText, obj3);
           }
           const items5 = [tmp13Result, ];
           let tmp15Result = !tmp12;
@@ -358,14 +368,16 @@ export default function GlobalStageChannelStatus(arg0) {
             items6[1] = invitedHeaderText;
             obj4[0] = items6;
             obj4[1] = combined;
-            tmp15Result = callback2(tmp8(1297).LegacyText, obj4);
+            tmp15Result = tmp15(tmp8(1297).LegacyText, obj4);
           }
           const obj5 = { numberOfLines: 1, children: null };
           items5[1] = tmp15Result;
           obj5[1] = items5;
-          items2[2] = callback(tmp8(1297).LegacyText, obj5);
+          items2[2] = closure_11(tmp8(1297).LegacyText, obj5);
           obj[1] = items2;
-          tmp13Result = callback(View, obj);
+          tmp13Result = tmp13(View, obj);
+          const tmp14 = View;
+          tmp15 = callback2;
         }
         return tmp13Result;
       }

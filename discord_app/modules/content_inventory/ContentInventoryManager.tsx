@@ -1,21 +1,22 @@
 // discord_app/modules/content_inventory/ContentInventoryManager.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import mapDefault from "../../stores/web/WindowStore.tsx";
 import apexExperiment from "ContentInventoryExperiments.tsx";
 import ContentInventoryFeature from "../../../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
-import set from "../../stores/ConnectedAccountsStore.tsx";
-import checkIdleAFK from "../../stores/IdleStore.tsx";
-import updateImpressionCaches from "ContentInventoryPersistedStore.tsx";
-import map from "ContentInventoryStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../gateway/GatewayConnectionStore.tsx";
+import closure_5 from "../../stores/ConnectedAccountsStore.tsx";
+import closure_6 from "../../stores/IdleStore.tsx";
+import closure_7 from "ContentInventoryPersistedStore.tsx";
+import closure_8 from "ContentInventoryStore.tsx";
 import { ContentInventoryFeedKey } from "ContentInventoryConstants.tsx";
 import { PlatformTypes } from "../../Constants.tsx";
 import apply from "../../../_runtime/00012_apply.js";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function getBackoffJitter() {
   let num = arg0;
   if (arg0 === undefined) {
@@ -24,7 +25,8 @@ function getBackoffJitter() {
   return Math.random() * (num + 1) * closure_11;
 }
 function setFeedState(feedId, state) {
-  const obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId, state };
+  let obj = dispatcherDefault;
+  obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId, state };
   obj.dispatch(obj);
 }
 function canFetch(GLOBAL_FEED) {
@@ -68,19 +70,20 @@ function scheduleNextFetch() {
     num = 0;
   }
   if (num <= 0) {
-    let obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: null, state: null };
-    obj[1] = GLOBAL_FEED;
+    let obj = dispatcherDefault;
+    obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: null, state: null };
+    obj[1] = tmp;
     obj[2] = { loading: false };
     obj.dispatch(obj);
-    const value = map.get(GLOBAL_FEED);
+    const value = map.get(tmp);
     if (undefined !== value) {
       const _clearTimeout = clearTimeout;
       clearTimeout(value);
-      map.delete(GLOBAL_FEED);
+      obj3.delete(tmp);
     }
     let flag = false;
-    if (!set.has(GLOBAL_FEED)) {
-      if (GLOBAL_FEED !== ContentInventoryFeedKey.GAME_PROFILE_FEED) {
+    if (!set.has(tmp)) {
+      if (tmp !== ContentInventoryFeedKey.GAME_PROFILE_FEED) {
         flag = true;
         {
           flag = false;
@@ -109,7 +112,7 @@ function scheduleNextFetch() {
       }
     }
     if (flag) {
-      const feed = store2.getFeed(GLOBAL_FEED);
+      const feed = store2.getFeed(tmp);
       let prop;
       if (feed != null) {
         prop = feed.refresh_stale_inbox_after_ms;
@@ -148,14 +151,15 @@ function scheduleNextFetch() {
         const date2 = new Date(Date.now() + sum);
         obj[1] = date2;
         obj1 = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: null, state: null };
-        obj1[1] = GLOBAL_FEED;
+        obj1[1] = tmp;
         obj1[2] = obj;
-        dispatcherDefault.dispatch(obj1);
+        tmp2(709).dispatch(obj1);
         const _setTimeout = setTimeout;
-        const result = map.set(GLOBAL_FEED, setTimeout(() => callback2({ feedId: closure_12, feature: callback(table[14]).ContentInventoryFeature.INBOX }), sum));
-        const tmp2Result = dispatcherDefault;
+        const result = obj3.set(tmp, setTimeout(() => callback2({ feedId: closure_12, feature: callback(table[14]).ContentInventoryFeature.INBOX }), sum));
+        const tmp2Result = tmp2(709);
       }
     }
+    tmp2 = importDefault;
   }
 }
 function fetchInventory(arg0) {
@@ -332,7 +336,8 @@ function handlePostConnectionOpen() {
   scheduleNextFetch();
 }
 function handleConnectionClosed() {
-  const obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: GLOBAL_FEED, state: { loading: false } };
+  let obj = dispatcherDefault;
+  obj = { type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: GLOBAL_FEED, state: { loading: false } };
   obj.dispatch(obj);
   const value = map.get(GLOBAL_FEED);
   if (undefined !== value) {
@@ -388,11 +393,11 @@ function handleFetchGameProfileFeed() {
   fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: ContentInventoryFeature.ContentInventoryFeature.GAME_PROFILE });
 }
 mapDefault;
-let closure_11 = 2 * obj132Default.Millis.MINUTE;
+let closure_11 = 2 * setDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
-let closure_13 = 15 * obj132Default.Millis.MINUTE;
+let closure_13 = 15 * setDefault.Millis.MINUTE;
 const map = new Map();
-const set = new Set();
+let set = new Set();
 const map1 = new Map();
 let c17 = null;
 let closure_18 = apply.debounce(require("_getMyContentInventory").postTrackToContentInventory, 3000, { trailing: true });
@@ -405,6 +410,6 @@ let prototype = function ContentInventoryManager() {
 class prototype extends tmp6 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryManager.tsx");
+let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryManager.tsx");
 
 export default prototype;

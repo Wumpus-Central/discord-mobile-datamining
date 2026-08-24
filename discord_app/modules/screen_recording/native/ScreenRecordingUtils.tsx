@@ -1,9 +1,9 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingUtils.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { useScreenRecordingStore } from "ScreenRecordingStore.tsx";
 
-const require = fn;
+const require = arg1;
 function _getLatestVideo() {
   const self = this;
   const tmp = callback(function*() {
@@ -322,10 +322,10 @@ function _stopRecordingProcess() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw success;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = success;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -336,11 +336,11 @@ function _stopRecordingProcess() {
         if (0 === state) {
           if (arg0 === 1) {
             c5 = 3;
-            throw success;
+            throw arg1;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = success;
+            obj[0] = arg1;
             return obj;
           } else {
             const callback = tmp3;
@@ -366,15 +366,15 @@ function _stopRecordingProcess() {
           return { value: false, done: true };
         } else if (arg0 === 1) {
           c5 = 3;
-          throw success;
+          throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           obj3 = { value: null, done: true };
-          obj3[0] = success;
+          obj3[0] = arg1;
           return obj3;
         } else {
-          let flag = success.success;
+          let flag = arg1.success;
           if (!flag) {
             obj = callback(4827);
             obj.show({ title: "Error", body: "Failed to stop screen recording, but not error" });
@@ -417,306 +417,362 @@ function _submitBugReportWithScreenRecording() {
     return (function*(arg0, features) {
       if (c10 === 2) {
         c10 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw features;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = features;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        try {
-          c10 = 2;
-          if (0 === c9) {
-            if (arg0 === 1) {
-              c10 = 3;
-              throw features;
-            } else if (arg0 === 2) {
-              c10 = 3;
-              obj = { value: null, done: true };
-              obj[0] = features;
-              return obj;
-            } else {
-              closure_6 = tmp3;
-              closure_5 = tmp5;
-              let uri;
-              closure_3 = undefined;
-              let obj14;
-              closure_5 = undefined;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              c8 = undefined;
-              c9 = undefined;
-              c10 = undefined;
-              closure_11 = undefined;
-              closure_12 = undefined;
-              closure_13 = undefined;
-              let obj13;
-              c8 = 1;
-              const currentSurveyId = closure_1_4.getState().currentSurveyId;
-              if (null != currentSurveyId) {
-                if ("" !== currentSurveyId) {
-                  const surveyConfig = lib(closure_1_2[5]).getSurveyConfig(currentSurveyId);
-                  uri = surveyConfig;
-                  if (null == surveyConfig) {
-                    lib2(closure_1_2[3]).show({ title: "Submission Failed", body: "Survey configuration not found" });
-                    c8 = 0;
-                    c10 = 3;
-                    obj1 = { value: null, done: true };
-                    obj1[0] = undefined;
-                    return obj1;
-                  } else {
-                    c9 = 2;
-                    c10 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = lib(closure_1_2[9]).fetchBugReportConfig();
-                    return obj2;
-                  }
-                  const obj31 = lib(closure_1_2[5]);
-                }
-              }
-              lib2(closure_1_2[3]).show({ title: "Submission Failed", body: "No survey selected" });
-              c8 = 0;
-              c10 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = undefined;
-              return obj3;
-            }
+        throwTypeErrorResult = features;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp6;
+        throwTypeErrorResult = null;
+        throwTypeErrorResult = globalThis;
+        if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw features;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = features;
+            return obj;
           } else {
-            if (1 === tmp8) {
-              c8 = 0;
-              lib2(closure_1_2[3]).show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
-              c10 = 3;
-              const obj20 = lib2(closure_1_2[3]);
-            } else if (2 === tmp8) {
+            return { value: "HermesInternal", done: "HermesInternal" };
+          }
+        } else {
+          try {
+            c10 = 2;
+            if (0 === c9) {
               if (arg0 === 1) {
                 c10 = 3;
                 throw features;
               } else if (arg0 === 2) {
+                c10 = 3;
+                obj = { value: null, done: true };
+                obj[0] = features;
+                return obj;
+              } else {
+                c6 = tmp3;
+                closure_5 = tmp5;
+                throwTypeErrorResult = lib;
+                throwTypeErrorResult = lib2;
+                let uri;
+                closure_3 = undefined;
+                let obj14;
+                closure_5 = undefined;
+                c6 = undefined;
+                closure_7 = undefined;
+                c8 = undefined;
+                c9 = undefined;
+                c10 = undefined;
+                closure_11 = undefined;
+                c12 = undefined;
+                closure_13 = undefined;
+                let obj13;
+                c8 = 1;
+                throwTypeErrorResult = closure_1_4;
+                const currentSurveyId = closure_1_4.getState().currentSurveyId;
+                if (null != currentSurveyId) {
+                  if ("" !== currentSurveyId) {
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = closure_1_2;
+                    throwTypeErrorResult = lib(closure_1_2[5]).getSurveyConfig(currentSurveyId);
+                    uri = throwTypeErrorResult;
+                    if (null == throwTypeErrorResult) {
+                      throwTypeErrorResult = lib2;
+                      throwTypeErrorResult = closure_1_2;
+                      throwTypeErrorResult = lib2(closure_1_2[3]).show({ title: "Submission Failed", body: "Survey configuration not found" });
+                      c8 = 0;
+                      c10 = 3;
+                      obj1 = { value: null, done: true };
+                      obj1[0] = undefined;
+                      return obj1;
+                    } else {
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = closure_1_2;
+                      c9 = 2;
+                      c10 = 1;
+                      const obj2 = { value: null, done: false };
+                      obj2[0] = lib(closure_1_2[9]).fetchBugReportConfig();
+                      return obj2;
+                    }
+                    const obj31 = lib(closure_1_2[5]);
+                  }
+                }
+                throwTypeErrorResult = lib2;
+                throwTypeErrorResult = closure_1_2;
+                throwTypeErrorResult = lib2(closure_1_2[3]).show({ title: "Submission Failed", body: "No survey selected" });
                 c8 = 0;
                 c10 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = features;
-                return obj4;
-              } else {
-                features = features.features;
-                closure_3 = features.find((item, index) => {
-                  let hasItem;
-                  if (item.name != null) {
-                    const formatted = str.toLowerCase();
-                    hasItem = formatted.includes(uri.uploadConfig.featureName.toLowerCase());
-                  }
-                  if (!hasItem) {
-                    let hasItem1;
-                    if (item.squad != null) {
-                      const formatted1 = str3.toLowerCase();
-                      hasItem1 = formatted1.includes(uri.uploadConfig.squadName.toLowerCase());
-                    }
-                    hasItem = hasItem1;
-                  }
-                  return hasItem;
-                });
-                obj14 = [];
-                c9 = 3;
-                c10 = 1;
-                let obj5 = { value: null, done: false };
-                obj5[0] = (function getLatestVideo() {
-                  const self = this;
-                  const apply = closure_7.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })();
-                return obj5;
+                const obj3 = { value: null, done: true };
+                obj3[0] = undefined;
+                return obj3;
               }
             } else {
-              if (3 === tmp8) {
+              if (1 === tmp8) {
+                c8 = 0;
+                lib2(closure_1_2[3]).show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
+                c10 = 3;
+                const obj20 = lib2(closure_1_2[3]);
+              } else if (2 === tmp8) {
                 if (arg0 === 1) {
                   c10 = 3;
                   throw features;
                 } else if (arg0 === 2) {
                   c8 = 0;
                   c10 = 3;
-                  const obj6 = { value: null, done: true };
-                  obj6[0] = features;
-                  return obj6;
+                  const obj4 = { value: null, done: true };
+                  obj4[0] = features;
+                  return obj4;
                 } else {
-                  closure_5 = features;
-                  if (null != closure_5) {
-                    const id = closure_5.node.id;
-                    uri = id;
-                    let tmp152 = lib2(uri[10]);
-                    if (id == null) {
-                      uri = closure_5.node.image.uri;
+                  features = features.features;
+                  closure_3 = features.find((name) => {
+                    let hasItem;
+                    if (name.name != null) {
+                      const formatted = str.toLowerCase();
+                      hasItem = formatted.includes(uri.uploadConfig.featureName.toLowerCase());
+                      const str2 = uri.uploadConfig.featureName;
                     }
-                    let obj7 = { id: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
-                    obj7[0] = uri;
-                    obj7[1] = closure_5.node.image.uri;
-                    obj7[2] = closure_5.node.image.uri;
-                    obj7[3] = closure_5.node.image.mimeType;
-                    obj7[4] = closure_5.node.image.width;
-                    obj7[5] = closure_5.node.image.height;
-                    obj7[6] = closure_5.node.image.filename;
-                    obj7[7] = closure_5.node.image.playableDuration;
-                    obj7[8] = lib(uri[10]).UploadPlatform.REACT_NATIVE;
-                    tmp152 = new tmp152(obj7);
-                    closure_6 = tmp152;
-                    let arr = obj14.push(closure_6);
-                  }
-                  if (null != lib2) {
-                    if ("" !== lib2) {
-                      const parts = lib2.split("/");
-                      arr = parts.pop();
-                      closure_3 = arr;
-                      if (arr == null) {
-                        const _Date = Date;
-                        const _HermesInternal = HermesInternal;
-                        closure_3 = "audio_" + Date.now() + ".wav";
+                    if (!hasItem) {
+                      let hasItem1;
+                      if (name.squad != null) {
+                        const formatted1 = str3.toLowerCase();
+                        hasItem1 = formatted1.includes(uri.uploadConfig.squadName.toLowerCase());
+                        const str4 = uri.uploadConfig.squadName;
                       }
-                      closure_7 = closure_3;
-                      const obj8 = { id: null, uri: null, originalUri: null, mimeType: "audio/wav", filename: null, platform: null };
-                      const _Date2 = Date;
-                      let tmp63 = lib2(uri[10]);
-                      const _HermesInternal2 = HermesInternal;
-                      obj8[0] = "audio_" + Date.now();
-                      const _HermesInternal3 = HermesInternal;
-                      obj8[1] = "file://" + lib2;
-                      const _HermesInternal4 = HermesInternal;
-                      obj8[2] = "file://" + lib2;
-                      obj8[4] = closure_7;
-                      obj8[5] = lib(uri[10]).UploadPlatform.REACT_NATIVE;
-                      tmp63 = new tmp63(obj8);
-                      c8 = tmp63;
-                      obj14.push(c8);
+                      hasItem = hasItem1;
                     }
-                  }
-                  if (undefined !== lib) {
-                    if (lib.length > 0) {
-                      c9 = (function formatTranscription(closure_0) {
-                        const obj = { generated: new Date().toISOString(), totalSegments: closure_0.length, segments: closure_0.map((item, index) => ({ text: item.text, startTime: item.startTime, duration: item.duration })) };
-                        return JSON.stringify(obj, null, 2);
-                      })(lib);
-                      const _Date3 = Date;
-                      const _HermesInternal5 = HermesInternal;
-                      c10 = "transcription_" + Date.now() + ".json";
-                      obj14 = lib(uri[11]);
-                      c9 = 4;
-                      c10 = 1;
-                      const obj9 = { value: null, done: false };
-                      obj9[0] = obj14.writeFile("cache", c10, c9, "utf8");
-                      return obj9;
-                    }
-                  }
-                  obj13 = lib(uri[12]);
-                  const attachments = obj13.getAttachments(obj14);
-                  c9 = 5;
+                    return hasItem;
+                  });
+                  obj14 = [];
+                  c9 = 3;
                   c10 = 1;
+                  let obj5 = { value: null, done: false };
+                  obj5[0] = (function getLatestVideo() {
+                    const self = this;
+                    const apply = closure_7.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })();
+                  return obj5;
                 }
-              } else if (4 === tmp8) {
-                if (arg0 === 1) {
+              } else {
+                if (3 === tmp8) {
+                  if (arg0 === 1) {
+                    c10 = 3;
+                    throw features;
+                  } else if (arg0 === 2) {
+                    c8 = 0;
+                    c10 = 3;
+                    const obj6 = { value: null, done: true };
+                    obj6[0] = features;
+                    return obj6;
+                  } else {
+                    throwTypeErrorResult = closure_5;
+                    closure_5 = features;
+                    throwTypeErrorResult = closure_5;
+                    if (null != closure_5) {
+                      throwTypeErrorResult = closure_5;
+                      throwTypeErrorResult = c6;
+                      throwTypeErrorResult = lib2;
+                      throwTypeErrorResult = uri;
+                      throwTypeErrorResult = closure_5;
+                      const id = closure_5.node.id;
+                      uri = id;
+                      throwTypeErrorResult = lib2(uri[10]);
+                      if (id == null) {
+                        uri = closure_5.node.image.uri;
+                      }
+                      let obj7 = { id: null, uri: null, originalUri: null, mimeType: null, width: null, height: null, filename: null, playableDuration: null, platform: null };
+                      obj7[0] = uri;
+                      obj7[1] = closure_5.node.image.uri;
+                      obj7[2] = closure_5.node.image.uri;
+                      obj7[3] = closure_5.node.image.mimeType;
+                      obj7[4] = closure_5.node.image.width;
+                      obj7[5] = closure_5.node.image.height;
+                      obj7[6] = closure_5.node.image.filename;
+                      obj7[7] = closure_5.node.image.playableDuration;
+                      obj7[8] = lib(uri[10]).UploadPlatform.REACT_NATIVE;
+                      throwTypeErrorResult = new throwTypeErrorResult(obj7);
+                      c6 = throwTypeErrorResult;
+                      obj14.push(c6);
+                    }
+                    if (null != lib2) {
+                      throwTypeErrorResult = closure_5;
+                      throwTypeErrorResult = lib2;
+                      if ("" !== lib2) {
+                        throwTypeErrorResult = lib2;
+                        const parts = lib2.split("/");
+                        throwTypeErrorResult = parts.pop();
+                        closure_3 = throwTypeErrorResult;
+                        if (throwTypeErrorResult == null) {
+                          const _Date = Date;
+                          const _HermesInternal = HermesInternal;
+                          closure_3 = "audio_" + Date.now() + ".wav";
+                        }
+                        closure_7 = closure_3;
+                        const obj8 = { id: null, uri: null, originalUri: null, mimeType: "audio/wav", filename: null, platform: null };
+                        const _Date2 = Date;
+                        let tmp63 = lib2(uri[10]);
+                        const _HermesInternal2 = HermesInternal;
+                        obj8[0] = "audio_" + Date.now();
+                        const _HermesInternal3 = HermesInternal;
+                        obj8[1] = "file://" + lib2;
+                        const _HermesInternal4 = HermesInternal;
+                        obj8[2] = "file://" + lib2;
+                        obj8[4] = closure_7;
+                        obj8[5] = lib(uri[10]).UploadPlatform.REACT_NATIVE;
+                        tmp63 = new tmp63(obj8);
+                        c8 = tmp63;
+                        obj14.push(c8);
+                      }
+                    }
+                    if (undefined !== lib) {
+                      if (lib.length > 0) {
+                        c9 = (function formatTranscription(closure_0) {
+                          const obj = { generated: new Date().toISOString(), totalSegments: closure_0.length, segments: closure_0.map((text) => ({ text: text.text, startTime: text.startTime, duration: text.duration })) };
+                          return JSON.stringify(obj, null, 2);
+                        })(lib);
+                        const _Date3 = Date;
+                        const _HermesInternal5 = HermesInternal;
+                        c10 = "transcription_" + Date.now() + ".json";
+                        obj14 = lib(uri[11]);
+                        c9 = 4;
+                        c10 = 1;
+                        const obj9 = { value: null, done: false };
+                        obj9[0] = obj14.writeFile("cache", c10, c9, "utf8");
+                        return obj9;
+                      }
+                    }
+                    obj13 = lib(uri[12]);
+                    const attachments = obj13.getAttachments(obj14);
+                    c9 = 5;
+                    c10 = 1;
+                  }
+                } else if (4 === tmp8) {
+                  if (arg0 === 1) {
+                    c10 = 3;
+                    throw features;
+                  } else if (arg0 !== 2) {
+                    throwTypeErrorResult = closure_5;
+                    closure_11 = features;
+                    throwTypeErrorResult = closure_11;
+                    if (null != closure_11) {
+                      throwTypeErrorResult = closure_5;
+                      throwTypeErrorResult = closure_11;
+                      if ("" !== closure_11) {
+                        throwTypeErrorResult = c6;
+                        throwTypeErrorResult = lib2;
+                        throwTypeErrorResult = uri;
+                        const obj10 = { id: null, uri: null, originalUri: null, mimeType: "application/json", filename: null, platform: null };
+                        const _Date4 = Date;
+                        throwTypeErrorResult = lib2(uri[10]);
+                        const _HermesInternal6 = HermesInternal;
+                        obj10[0] = "transcription_" + Date.now();
+                        throwTypeErrorResult = closure_11;
+                        obj10[1] = closure_11;
+                        throwTypeErrorResult = closure_11;
+                        obj10[2] = closure_11;
+                        throwTypeErrorResult = c10;
+                        obj10[4] = c10;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = uri;
+                        obj10[5] = lib(uri[10]).UploadPlatform.REACT_NATIVE;
+                        throwTypeErrorResult = new.target;
+                        throwTypeErrorResult = new.target;
+                        throwTypeErrorResult = obj10;
+                        throwTypeErrorResult = new throwTypeErrorResult(obj10);
+                        c12 = throwTypeErrorResult;
+                        throwTypeErrorResult = obj14;
+                        throwTypeErrorResult = c12;
+                        throwTypeErrorResult = obj14.push(c12);
+                      }
+                    }
+                  }
+                } else if (5 === tmp8) {
+                  if (arg0 === 1) {
+                    c10 = 3;
+                    throw features;
+                  } else if (arg0 === 2) {
+                    c8 = 0;
+                    c10 = 3;
+                    const obj11 = { value: null, done: true };
+                    obj11[0] = features;
+                    return obj11;
+                  } else {
+                    throwTypeErrorResult = closure_5;
+                    closure_13 = features;
+                    throwTypeErrorResult = closure_13;
+                    if (null == closure_13) {
+                      obj7 = lib2(uri[3]);
+                      obj7.show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
+                      c8 = 0;
+                      c10 = 3;
+                      const obj12 = { value: null, done: true };
+                      obj12[0] = undefined;
+                      return obj12;
+                    } else {
+                      throwTypeErrorResult = closure_5;
+                      obj13 = { name: null, description: null, priority: null, feature: null, url: "" };
+                      throwTypeErrorResult = uri;
+                      obj13[0] = uri.uploadConfig.reportTitle;
+                      throwTypeErrorResult = uri;
+                      obj13[1] = uri.uploadConfig.reportDescription;
+                      throwTypeErrorResult = uri;
+                      obj13[2] = uri.uploadConfig.priority;
+                      throwTypeErrorResult = closure_3;
+                      obj14 = closure_3;
+                      if (closure_3 == null) {
+                        obj14 = { name: null, squad: null, asana_inbox_id: "Array" };
+                        obj14[0] = uri.uploadConfig.featureName;
+                        obj14[1] = uri.uploadConfig.squadName;
+                      }
+                      obj13[3] = obj14;
+                      obj5 = lib(uri[9]);
+                      c9 = 6;
+                      c10 = 1;
+                      const obj15 = { value: null, done: false };
+                      obj15[0] = obj5.submitReport(obj13, { overridePlatformInformation: false }, closure_13);
+                      return obj15;
+                    }
+                  }
+                } else if (arg0 === 1) {
                   c10 = 3;
                   throw features;
                 } else if (arg0 !== 2) {
-                  closure_11 = features;
-                  if (null != closure_11) {
-                    if ("" !== closure_11) {
-                      const obj10 = { id: null, uri: null, originalUri: null, mimeType: "application/json", filename: null, platform: null };
-                      const _Date4 = Date;
-                      let tmp132 = lib2(uri[10]);
-                      const _HermesInternal6 = HermesInternal;
-                      obj10[0] = "transcription_" + Date.now();
-                      obj10[1] = closure_11;
-                      obj10[2] = closure_11;
-                      obj10[4] = c10;
-                      obj10[5] = lib(uri[10]).UploadPlatform.REACT_NATIVE;
-                      tmp132 = new tmp132(obj10);
-                      closure_12 = tmp132;
-                      obj14.push(closure_12);
-                    }
-                  }
-                }
-              } else if (5 === tmp8) {
-                if (arg0 === 1) {
-                  c10 = 3;
-                  throw features;
-                } else if (arg0 === 2) {
-                  c8 = 0;
-                  c10 = 3;
-                  const obj11 = { value: null, done: true };
-                  obj11[0] = features;
-                  return obj11;
-                } else {
-                  closure_13 = features;
-                  if (null == closure_13) {
-                    obj7 = lib2(uri[3]);
-                    obj7.show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
-                    c8 = 0;
-                    c10 = 3;
-                    const obj12 = { value: null, done: true };
-                    obj12[0] = undefined;
-                    return obj12;
+                  if (features.ok) {
+                    obj1 = lib2(uri[3]);
+                    const obj16 = { title: null, body: null };
+                    obj16[0] = uri.uploadConfig.successTitle;
+                    obj16[1] = uri.uploadConfig.successMessage;
+                    obj1.show(obj16);
                   } else {
-                    obj13 = { name: null, description: null, priority: null, feature: null, url: "" };
-                    obj13[0] = uri.uploadConfig.reportTitle;
-                    obj13[1] = uri.uploadConfig.reportDescription;
-                    obj13[2] = uri.uploadConfig.priority;
-                    obj14 = closure_3;
-                    if (closure_3 == null) {
-                      obj14 = { name: null, squad: null, asana_inbox_id: "Array" };
-                      obj14[0] = uri.uploadConfig.featureName;
-                      obj14[1] = uri.uploadConfig.squadName;
-                    }
-                    obj13[3] = obj14;
-                    obj5 = lib(uri[9]);
-                    c9 = 6;
-                    c10 = 1;
-                    const obj15 = { value: null, done: false };
-                    obj15[0] = obj5.submitReport(obj13, { overridePlatformInformation: false }, closure_13);
-                    return obj15;
+                    obj = lib2(uri[3]);
+                    obj.show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
                   }
-                }
-              } else if (arg0 === 1) {
-                c10 = 3;
-                throw features;
-              } else if (arg0 !== 2) {
-                if (features.ok) {
-                  obj1 = lib2(uri[3]);
-                  const obj16 = { title: null, body: null };
-                  obj16[0] = uri.uploadConfig.successTitle;
-                  obj16[1] = uri.uploadConfig.successMessage;
-                  obj1.show(obj16);
-                } else {
-                  obj = lib2(uri[3]);
-                  obj.show({ title: "Submission Failed", body: "Something went wrong and there's no way to fix it. Thanks anyway!" });
+                  c8 = 0;
                 }
                 c8 = 0;
+                c10 = 3;
+                const obj17 = { value: null, done: true };
+                obj17[0] = features;
+                return obj17;
               }
               c8 = 0;
               c10 = 3;
-              const obj17 = { value: null, done: true };
-              obj17[0] = features;
-              return obj17;
+              const obj18 = { value: null, done: true };
+              obj18[0] = features;
+              return obj18;
             }
-            c8 = 0;
-            c10 = 3;
-            const obj18 = { value: null, done: true };
-            obj18[0] = features;
-            return obj18;
-          }
-        } catch (tmp108) {
-          closure_7 = tmp108;
-          if (tmp4 === c8) {
-            c10 = tmp2;
-            throw tmp108;
-          } else {
-            c9 = tmp;
+          } catch (throwTypeErrorResult) {
+            closure_7 = throwTypeErrorResult;
+            throwTypeErrorResult = c8;
+            if (tmp4 === c8) {
+              throwTypeErrorResult = tmp2;
+              c10 = tmp2;
+              throw throwTypeErrorResult;
+            } else {
+              c9 = throwTypeErrorResult;
+            }
           }
         }
       }
@@ -797,13 +853,13 @@ function _handleStopAndSend() {
                             return obj;
                           } else {
                             closure_0 = tmp4;
-                            if (saved != null) {
+                            if (closure_1_0 != null) {
                               tmp9();
                             }
                             c1 = 1;
                             c2 = 1;
                             obj1 = { value: null, done: false };
-                            obj1[0] = (function submitBugReportWithScreenRecording() { ... })(saved.timestampedTranscription, saved.audioFilePath);
+                            obj1[0] = (function submitBugReportWithScreenRecording() { ... })(closure_1_0.timestampedTranscription, closure_1_0.audioFilePath);
                             return obj1;
                           }
                         } else if (arg0 === 1) {
@@ -918,13 +974,13 @@ function _handleRecordingPhase() {
             styles = obj3.getWindowDimensions();
             let width = styles.width;
             height = styles.height;
-            callback2(styles[4]);
+            let obj4 = callback2(styles[4]);
             obj3 = { width: null, height: null, bitrate: 50000, frameRate: 15 };
             obj3[0] = width;
             obj3[1] = height;
             width = 2;
             height = 1;
-            const obj4 = { value: null, done: false };
+            obj4 = { value: null, done: false };
             obj4[0] = obj4.setRecordingQuality(obj3);
             return obj4;
           } else {
@@ -978,7 +1034,7 @@ function _handleRecordingPhase() {
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
 const DCDPhotos = NativeModules.DCDPhotos;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDScreenRecordingManager);
-const result = require("obj132").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingUtils.tsx");
 
 export const handleStopAndSend = function handleStopAndSend() {
   const self = this;

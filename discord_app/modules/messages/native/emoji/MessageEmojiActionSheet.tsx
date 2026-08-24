@@ -1,31 +1,40 @@
 // discord_app/modules/messages/native/emoji/MessageEmojiActionSheet.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import EmojiDefault from "StandardEmojiContent.tsx";
 import CustomEmojiContentDefault from "CustomEmojiContent.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import { v1 } from "../../../../../_runtime/00514_v1.js";
+import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { useEmojiAndSource } from "../../../emojis/hooks/useEmojiAndSource.tsx";
 
-const require = fn;
+const require = arg1;
 function MessageStandardEmojiActionSheet(emojiNode) {
   let _require;
-  let obj = v1;
+  let obj = _v1;
   const v4Result = obj.v4();
   _require = v4Result;
+  obj = {
+    startExpanded: true,
+    onDismiss() {
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { nonce: c0 };
+      obj.track(closure_1_4.CLOSE_POPOUT, obj);
+    },
+    children: null
+  };
   obj = { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) };
-  obj[2] = <View style={callback().contentWrapper}>{jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result })}</View>;
-  return jsx(require("../../../../design/components/Sheet/native/BottomSheet.native.tsx").BottomSheet, { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) });
+  obj[2] = <View style={callback().contentWrapper}>{jsx(EmojiDefault, { emojiNode: arg0.emojiNode, nonce: v4Result })}</View>;
+  return jsx(_Background.BottomSheet, { style: callback().contentWrapper, children: jsx(EmojiDefault, { emojiNode: emojiNode.emojiNode, nonce: v4Result }) });
 }
 function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   let _require;
-  useEmojiAndSource;
-  let obj = { emojiId: emojiNode.id };
+  let obj = _useEmojiAndSource;
+  obj = { emojiId: emojiNode.id };
   const emojiAndSource = obj.useEmojiAndSource(obj);
   if (emojiAndSource.isFetching) {
     return null;
@@ -34,8 +43,9 @@ function MessageCustomEmojiActionSheet(emojiNode) {
     _require = v4Result;
     obj = { startExpanded: true, onDismiss: null, children: null };
     obj[1] = function onDismiss() {
-      const obj = { nonce: c0 };
-      obj.track(AnalyticEvents.CLOSE_POPOUT, obj);
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { nonce: c0 };
+      obj.track(closure_1_4.CLOSE_POPOUT, obj);
     };
     obj1 = { style: null, children: null };
     obj1[0] = tmp.contentWrapper;
@@ -55,22 +65,22 @@ function MessageCustomEmojiActionSheet(emojiNode) {
 }
 noopAll;
 let num = 0;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num = 16;
 }
 let closure_6 = createCacheKey.createStyles({ contentWrapper: { paddingHorizontal: 16, paddingBottom: num } });
-const result = obj132.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/emoji/MessageEmojiActionSheet.tsx");
 
 export default function MessageEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   if ("surrogate" in emojiNode) {
     let obj = { emojiNode: null };
     obj[0] = emojiNode;
-    let tmpResult = <MessageStandardEmojiActionSheet emojiNode={null} />;
+    let tmpResult = tmp(MessageStandardEmojiActionSheet, obj);
   } else {
     obj = { emojiNode: null };
     obj[0] = emojiNode;
-    tmpResult = <MessageCustomEmojiActionSheet emojiNode={null} />;
+    tmpResult = tmp(MessageCustomEmojiActionSheet, obj);
   }
   return tmpResult;
 };

@@ -1,7 +1,7 @@
 // discord_app/flow/Server.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("flow/Server.tsx");
+const result = set.fileFinishedImporting("flow/Server.tsx");
 
 export const PermissionOverwriteType = { ROLE: 0, [0]: "ROLE", MEMBER: 1, [1]: "MEMBER" };
 export const GuildBoostUpsellType = { FIRST_BOOSTER: 0, [0]: "FIRST_BOOSTER" };

@@ -1,22 +1,22 @@
 // discord_app/stores/ActivityTrackingStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
-import obj132Default from "../utils/Durations.tsx";
+import setDefault from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import removeExecutablePathPrefix from "../modules/game_detection/GameAnalyticsUtils.tsx";
 import _modDef10673 from "../actions/ActivitiesActionCreators.tsx";
-import initialize from "../modules/game_detection/RunningGameStore.native.tsx";
-import handleConnectionClosedOrResumed from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import fetchFingerprint from "AuthenticationStore.tsx";
-import gameFromServer from "DetectableGameStore.tsx";
-import setLibraryApplications from "LibraryApplicationStore.tsx";
-import createRTCConnection from "RTCConnectionStore.tsx";
-import handleConnectionOpen from "SelectedChannelStore.tsx";
+import closure_3 from "../modules/game_detection/RunningGameStore.native.tsx";
+import closure_4 from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "AuthenticationStore.tsx";
+import closure_6 from "DetectableGameStore.tsx";
+import closure_7 from "LibraryApplicationStore.tsx";
+import closure_8 from "RTCConnectionStore.tsx";
+import closure_9 from "SelectedChannelStore.tsx";
 import { Distributors } from "../Constants.tsx";
 import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 
-require = fn;
+require = arg1;
 function stopActivity(applicationId, flag) {
   if (flag === undefined) {
     flag = true;
@@ -47,7 +47,7 @@ function updateActivity(applicationId) {
   if (num > closure_12 + closure_13) {
     num = 0;
   }
-  obj = getComboId;
+  obj = _getComboId;
   const result = obj.shouldShareApplicationActivity(applicationId.applicationId, closure_7);
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   sessionId = sessionId.getSessionId();
@@ -73,7 +73,7 @@ function updateActivity(applicationId) {
     const interval = new tmp3(4259).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
-      updateActivity(closure_0);
+      closure_1_18(closure_0);
     });
   }
   if (!flag) {
@@ -92,31 +92,43 @@ function handleRunningGamesChange(flag) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
+    let tmp4 = closure_6;
     let findGameResult = closure_6.findGame(nextResult);
     let tmp6 = findGameResult;
     if (null != findGameResult) {
+      let tmp19 = findGameResult;
       let addResult = set.add(tmp6.id);
+      let tmp21 = obj;
       if (!(tmp6.id in obj)) {
         obj = { applicationId: null, updatedAt: null, distributor: null, exePath: null };
+        let tmp8 = findGameResult;
         obj[0] = tmp6.id;
         let _Date = Date;
+        let tmp7 = updateActivity;
         obj[1] = Date.now();
+        let tmp9 = nextResult;
         obj[2] = tmp3.distributor;
+        let tmp10 = require;
+        let tmp11 = dependencyMap;
         let obj3 = removeExecutablePathPrefix;
         let str = tmp3.exePath;
         if (str == null) {
           str = "";
         }
         obj[3] = obj3.removeExecutablePathPrefix(str);
-        let tmp7Result = updateActivity(obj);
+        let tmp7Result = tmp7(obj);
       }
     }
     continue;
   }
   const keys = Object.keys(obj);
   for (const item10052 of keys) {
+    let tmp14 = item10052;
     if (!set.has(item10052)) {
-      let tmp18 = stopActivity(obj[item10052], flag);
+      let tmp15 = stopActivity;
+      let tmp16 = obj;
+      let tmp17 = item10052;
+      let tmp18 = stopActivity(obj[tmp14], flag);
     }
     continue;
   }
@@ -124,15 +136,16 @@ function handleRunningGamesChange(flag) {
 function handleLogout() {
   const keys = Object.keys(obj);
   while (tmp2 !== undefined) {
+    let tmp4 = stopActivity;
+    let tmp5 = obj;
     let tmp6 = stopActivity(obj[tmp3]);
     continue;
   }
   c16 = false;
-  tmp2 = keys[Symbol.iterator]();
 }
 const ActivityTrackingStore = "ActivityTrackingStore";
-let closure_12 = 30 * obj132Default.Millis.MINUTE;
-let closure_13 = 5 * obj132Default.Millis.MINUTE;
+let closure_12 = 30 * setDefault.Millis.MINUTE;
+let closure_13 = 5 * setDefault.Millis.MINUTE;
 let obj = Storage.get("ActivityTrackingStore");
 if (obj == null) {
   obj = {};
@@ -164,6 +177,8 @@ obj = {
       const keys = Object.keys(obj);
       const tmp5 = keys[Symbol.iterator]();
       while (tmp5 !== undefined) {
+        let tmp9 = updateActivity;
+        let tmp10 = obj;
         let tmp11 = updateActivity(obj[tmp7]);
         continue;
       }
@@ -198,6 +213,6 @@ obj = {
   }
 };
 const activityTrackingStore = new ActivityTrackingStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("stores/ActivityTrackingStore.tsx");
+let result = require("set").fileFinishedImporting("stores/ActivityTrackingStore.tsx");
 
 export default activityTrackingStore;

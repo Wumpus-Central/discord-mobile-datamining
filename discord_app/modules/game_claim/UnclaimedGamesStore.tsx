@@ -37,8 +37,8 @@ prototype["getGuildIdsWithUnclaimedGames"] = function getGuildIdsWithUnclaimedGa
   } else {
     const _Object = Object;
     const keys = Object.keys(closure_0);
-    return keys.filter((item, index) => {
-      let items = table[item];
+    return keys.filter((arg0) => {
+      let items = table[arg0];
       if (items == null) {
         items = [];
       }
@@ -55,6 +55,6 @@ const unclaimedGamesStore = new UnclaimedGamesStore(dispatcherDefault, {
     guildIdToGameIds = guildIdToGameIds.guildIdToGameIds;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/game_claim/UnclaimedGamesStore.tsx");
+const result = require("set").fileFinishedImporting("modules/game_claim/UnclaimedGamesStore.tsx");
 
 export default unclaimedGamesStore;

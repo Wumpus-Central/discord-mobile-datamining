@@ -1,11 +1,10 @@
 // discord_app/modules/guests/GuestUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import GuildMemberFlags2 from "../guild_member/GuildMemberConstants.tsx";
-import set from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 
 const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
-const result = obj132.fileFinishedImporting("modules/guests/GuestUtils.tsx");
+const result = set.fileFinishedImporting("modules/guests/GuestUtils.tsx");
 
 export default {
   canAcceptInvite(items, guild) {
@@ -28,10 +27,11 @@ export default {
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = hasFlag.hasFlag(num2, set.GuildInviteFlags.IS_GUEST_INVITE);
-        const tmp2Result = hasFlag;
+        hasFlagResult1 = tmp2(1403).hasFlag(num2, tmp2(8056).GuildInviteFlags.IS_GUEST_INVITE);
+        const tmp2Result = tmp2(1403);
       }
       tmp = hasFlagResult1;
+      const obj2 = hasFlag;
     }
     return tmp;
   }

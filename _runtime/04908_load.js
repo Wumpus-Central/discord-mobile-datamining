@@ -112,7 +112,7 @@ function load(response, then) {
                     if (arg0) {
                       closure_2_1(arg0);
                     } else {
-                      obj.close(allocResult, () => { ... });
+                      closure_2_2.close(allocResult, () => { ... });
                     }
                   });
                 }
@@ -121,8 +121,8 @@ function load(response, then) {
           });
         });
       }
-      nextPromise = resolved.then((result) => {
-        let buffer = result;
+      nextPromise = resolved.then((response) => {
+        let buffer = response;
         if ((function isNodeBuffer(response) {
           try {
             const _Buffer = Buffer;
@@ -130,12 +130,12 @@ function load(response, then) {
           } catch (err) {
             return false;
           }
-        })(result)) {
+        })(response)) {
           const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array(result);
+          const uint8Array = new Uint8Array(response);
           buffer = uint8Array.buffer;
         }
-        return loadView((function getDataView(buffer) {
+        return closure_1_3((function getDataView(buffer) {
           try {
             const _DataView = DataView;
             const dataView = new DataView(buffer);
@@ -163,8 +163,8 @@ function load(response, then) {
         fileReader.onerror = () => callback2(fileReader.error);
         const asArrayBuffer = fileReader.readAsArrayBuffer(closure_0);
       });
-      let nextPromise1 = promise.then((result) => {
-        let buffer = result;
+      let nextPromise1 = promise.then((response) => {
+        let buffer = response;
         if ((function isNodeBuffer(response) {
           try {
             const _Buffer = Buffer;
@@ -172,12 +172,12 @@ function load(response, then) {
           } catch (err) {
             return false;
           }
-        })(result)) {
+        })(response)) {
           const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array(result);
+          const uint8Array = new Uint8Array(response);
           buffer = uint8Array.buffer;
         }
-        return loadView((function getDataView(buffer) {
+        return closure_1_3((function getDataView(buffer) {
           try {
             const _DataView = DataView;
             const dataView = new DataView(buffer);
@@ -247,14 +247,21 @@ function loadView(byteLength, then) {
         if (!readTags[combined]) {
           continue;
         } else {
+          let tmp24 = nextResult;
           let tmp23 = closure_1;
           if (closure_1[tmp20]) {
+            let tmp27 = flag;
+            let tmp28 = addPngTextTags;
             let obj2 = flag(addPngTextTags[1]);
+            let tmp29 = closure_1;
+            let tmp30 = combined;
             let objectAssignResult = obj2.objectAssign({}, closure_1.exif, readTags[tmp22]);
           } else {
+            let tmp25 = combined;
             objectAssignResult = readTags[tmp22];
           }
           tmp23[tmp20] = objectAssignResult;
+          let tmp31 = combined;
           delete tmp3[tmp4];
         }
       }
@@ -270,6 +277,8 @@ function loadView(byteLength, then) {
         const obj4 = flag(addPngTextTags[1]);
       }
       closure_1.pngText = objectAssignResult1;
+      const tmp32 = closure_1;
+      const tmp37 = closure_1;
     } else {
       const obj = flag(addPngTextTags[1]);
       const tmp8 = readTags.__exif || {};
@@ -326,8 +335,8 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_EXIF) {
     flag6 = flag5;
     if (undefined !== tiffHeaderOffset) {
-      const tmp6Result1 = tmp6(tmp7[7]);
-      ({ tags, byteOrder } = tmp6(tmp7[7]).read(byteLength, tiffHeaderOffset, flag3));
+      let readResult2 = tmp6(tmp7[7]).read(byteLength, tiffHeaderOffset, flag3);
+      ({ tags, byteOrder } = readResult2);
       if (tags.Thumbnail) {
         importDefault.Thumbnail = tags.Thumbnail;
         delete tmp[tmp3];
@@ -526,7 +535,7 @@ function loadView(byteLength, then) {
         delete tmp3[tmp];
         flag6 = true;
       }
-      const readResult2 = tmp6(tmp7[7]).read(byteLength, tiffHeaderOffset, flag3);
+      const tmp6Result1 = tmp6(tmp7[7]);
     }
   }
   let flag7 = flag6;
@@ -583,11 +592,11 @@ function loadView(byteLength, then) {
       if (isArray3) {
         const readResult11 = tmp6(tmp7[11]).read(byteLength, iccChunks, flag2);
         if (readResult11 instanceof Promise) {
-          items1.push(readResult11.then(function addIccTags(result) {
+          items1.push(readResult11.then(function addIccTags(icc) {
             if (flag) {
-              closure_1.icc = result;
+              closure_1.icc = icc;
             } else {
-              closure_1 = flag(addPngTextTags[1]).objectAssign({}, closure_1, result);
+              closure_1 = flag(addPngTextTags[1]).objectAssign({}, closure_1, icc);
               const obj = flag(addPngTextTags[1]);
             }
           }));
@@ -628,18 +637,19 @@ function loadView(byteLength, then) {
     if (tmp6(tmp7[4]).USE_PNG_FILE) {
       flag11 = flag10;
       if (undefined !== pngHeaderOffset) {
-        const readResult13 = tmp6(tmp7[15]).read(byteLength, pngHeaderOffset);
+        readResult2 = tmp6(tmp7[15]).read(byteLength, pngHeaderOffset);
         if (flag) {
-          let objectAssignResult = readResult13;
+          let objectAssignResult = readResult2;
           if (importDefault.png) {
-            objectAssignResult = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult13);
+            objectAssignResult = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult2);
             const obj32 = flag(tmp7[1]);
           }
           importDefault.png = objectAssignResult;
-          importDefault.pngFile = readResult13;
+          importDefault.pngFile = readResult2;
           flag11 = true;
+          const tmp84 = importDefault;
         } else {
-          importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult13);
+          importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
           flag11 = true;
           const obj31 = flag(tmp7[1]);
         }
@@ -652,11 +662,11 @@ function loadView(byteLength, then) {
     flag12 = flag11;
     if (undefined !== pngTextChunks) {
       const tmp6Result13 = tmp6(tmp7[16]);
-      const readResult14 = tmp6Result13.read(byteLength, pngTextChunks, flag2, flag3);
-      addPngTextTags(readResult14.readTags);
+      const readResult13 = tmp6Result13.read(byteLength, pngTextChunks, flag2, flag3);
+      addPngTextTags(readResult13.readTags);
       flag12 = true;
-      if (readResult14.readTagsPromise) {
-        items1.push(readTagsPromise.then((result) => result.forEach(addPngTextTags)));
+      if (readResult13.readTagsPromise) {
+        items1.push(readTagsPromise.then((arr) => arr.forEach(addPngTextTags)));
         flag12 = true;
       }
     }
@@ -665,17 +675,19 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_PNG) {
     flag13 = flag12;
     if (undefined !== pngChunkOffsets) {
-      const readResult15 = tmp6(tmp7[17]).read(byteLength, pngChunkOffsets);
+      readResult2 = tmp6(tmp7[17]).read(byteLength, pngChunkOffsets);
       if (flag) {
-        objectAssignResult = readResult15;
         if (importDefault.png) {
-          objectAssignResult = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult15);
+          readResult2 = flag;
+          readResult2 = importDefault;
+          readResult2 = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult2);
           const obj35 = flag(tmp7[1]);
         }
-        importDefault.png = objectAssignResult;
+        importDefault.png = readResult2;
         flag13 = true;
+        const tmp99 = importDefault;
       } else {
-        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult15);
+        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
         flag13 = true;
         const obj34 = flag(tmp7[1]);
       }
@@ -686,17 +698,21 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_WEBP) {
     flag14 = flag13;
     if (undefined !== vp8xChunkOffset) {
-      const readResult16 = tmp6(tmp7[18]).read(byteLength, vp8xChunkOffset);
+      readResult2 = tmp6(tmp7[18]).read(byteLength, vp8xChunkOffset);
       if (flag) {
-        let objectAssignResult1 = readResult16;
+        readResult2 = importDefault;
         if (importDefault.riff) {
-          objectAssignResult1 = flag(tmp7[1]).objectAssign({}, importDefault.riff, readResult16);
+          readResult2 = flag;
+          readResult2 = importDefault;
+          readResult2 = flag(tmp7[1]).objectAssign({}, importDefault.riff, readResult2);
           const obj37 = flag(tmp7[1]);
         }
-        importDefault.riff = objectAssignResult1;
+        readResult2.riff = readResult2;
         flag14 = true;
       } else {
-        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult16);
+        readResult2 = flag;
+        readResult2 = importDefault;
+        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
         flag14 = true;
         const obj36 = flag(tmp7[1]);
       }
@@ -707,17 +723,21 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_GIF) {
     flag15 = flag14;
     if (undefined !== gifHeaderOffset) {
-      const readResult17 = tmp6(tmp7[19]).read(byteLength, gifHeaderOffset);
+      readResult2 = tmp6(tmp7[19]).read(byteLength, gifHeaderOffset);
       if (flag) {
-        let objectAssignResult2 = readResult17;
+        readResult2 = importDefault;
         if (importDefault.gif) {
-          objectAssignResult2 = flag(tmp7[1]).objectAssign({}, importDefault.gif, readResult17);
+          readResult2 = flag;
+          readResult2 = importDefault;
+          readResult2 = flag(tmp7[1]).objectAssign({}, importDefault.gif, readResult2);
           const obj39 = flag(tmp7[1]);
         }
-        importDefault.gif = objectAssignResult2;
+        readResult2.gif = readResult2;
         flag15 = true;
       } else {
-        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult17);
+        readResult2 = flag;
+        readResult2 = importDefault;
+        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
         flag15 = true;
         const obj38 = flag(tmp7[1]);
       }
@@ -725,49 +745,59 @@ function loadView(byteLength, then) {
     }
   }
   const parseAppMarkersResult = importDefault(addPngTextTags[3]).parseAppMarkers(byteLength, flag2);
-  value = tmp6(tmp7[20]).get(importDefault, flag);
-  if (value) {
+  readResult2 = tmp6(tmp7[20]).get(importDefault, flag);
+  if (readResult2) {
     if (flag) {
-      importDefault.composite = value;
+      readResult2 = importDefault;
+      importDefault.composite = readResult2;
     } else {
-      importDefault = flag(tmp7[1]).objectAssign({}, importDefault, value);
+      readResult2 = flag;
+      readResult2 = importDefault;
+      importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
       const obj41 = flag(tmp7[1]);
     }
   }
-  let value1 = (tmp6(tmp7[4]).USE_JPEG || tmp6(tmp7[4]).USE_WEBP) && tmp6(tmp7[4]).USE_EXIF && tmp6(tmp7[4]).USE_THUMBNAIL;
-  if (value1) {
-    value1 = tmp6(tmp7[21]).get(byteLength, importDefault.Thumbnail, tiffHeaderOffset);
+  readResult2 = (tmp6(tmp7[4]).USE_JPEG || tmp6(tmp7[4]).USE_WEBP) && tmp6(tmp7[4]).USE_EXIF && tmp6(tmp7[4]).USE_THUMBNAIL;
+  if (readResult2) {
+    readResult2 = importDefault;
+    readResult2 = tmp6(tmp7[21]).get(byteLength, importDefault.Thumbnail, tiffHeaderOffset);
     const tmp6Result18 = tmp6(tmp7[21]);
   }
-  if (value1) {
-    importDefault.Thumbnail = value1;
+  if (readResult2) {
+    importDefault.Thumbnail = readResult2;
     flag15 = true;
   } else {
     delete tmp2[tmp4];
   }
   if (fileType) {
+    readResult2 = importDefault;
     if (flag) {
-      if (!tmp121.file) {
+      if (!readResult2.file) {
+        readResult2 = importDefault;
         importDefault.file = {};
       }
+      readResult2 = importDefault;
       importDefault.file.FileType = fileType;
       flag15 = true;
     } else {
-      tmp121.FileType = fileType;
+      readResult2.FileType = fileType;
       flag15 = true;
     }
   }
   if (flag15) {
     if (flag2) {
-      let nextPromise = Promise.all(items1).then((result) => closure_1);
+      readResult2 = globalThis;
+      readResult2 = Promise.all(items1).then(() => closure_1);
       const allPromises = Promise.all(items1);
     } else {
-      nextPromise = importDefault;
+      readResult2 = importDefault;
     }
-    return nextPromise;
+    return readResult2;
   } else {
-    const metadataMissingError = new tmp6(tmp7[0]).MetadataMissingError();
-    throw metadataMissingError;
+    readResult2 = new.target;
+    readResult2 = new.target;
+    readResult2 = new tmp6(tmp7[0]).MetadataMissingError();
+    throw readResult2;
   }
   const tmp6Result17 = tmp6(tmp7[20]);
 }

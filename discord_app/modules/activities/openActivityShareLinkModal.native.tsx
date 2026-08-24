@@ -1,11 +1,11 @@
 // discord_app/modules/activities/openActivityShareLinkModal.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
 import getBestActiveInput from "../../utils/native/ChatInputUtils.tsx";
 import _modDef5260 from "../../actions/ModalActionCreators.tsx";
 
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
-const result = obj132.fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
+const result = set.fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
 
 export const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 export const openActivityShareLinkModal = function openActivityShareLinkModal(arg0) {

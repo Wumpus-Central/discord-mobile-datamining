@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/DesignIds.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/DesignIds.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/DesignIds.tsx");
 
 export const DesignIds = { CLASSIC_IA: 0, [0]: "CLASSIC_IA", DESIGN_IA: 1, [1]: "DESIGN_IA", DESIGN_TABS_IA: 2, [2]: "DESIGN_TABS_IA", YOU_BAR_IA: 3, [3]: "YOU_BAR_IA" };

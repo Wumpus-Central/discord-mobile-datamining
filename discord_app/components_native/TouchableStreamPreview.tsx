@@ -1,21 +1,21 @@
 // discord_app/components_native/TouchableStreamPreview.tsx
 import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../_runtime/00019_noop.js";
+import closure_3 from "../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../modules/game_console/GameConsoleStore.tsx";
-import reset from "../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../stores/PermissionStore.tsx";
-import updateVoiceState from "../stores/VoiceStateStore.tsx";
+import closure_5 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_6 from "../stores/ApplicationStreamingStore.tsx";
+import closure_7 from "../stores/AuthenticationStore.tsx";
+import closure_8 from "../stores/ChannelStore.tsx";
+import closure_9 from "../stores/GuildStore.tsx";
+import closure_10 from "../stores/PermissionStore.tsx";
+import closure_11 from "../stores/VoiceStateStore.tsx";
 import { Permissions } from "../Constants.tsx";
 import { jsx } from "../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 import hexToRgba from "../utils/ColorUtils.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function StreamPreviewContainer(disableTransition) {
   disableTransition = disableTransition.disableTransition;
   const onPress = disableTransition.onPress;
@@ -28,7 +28,7 @@ function StreamPreviewContainer(disableTransition) {
   const stateFromStores = obj1.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId());
   let obj2 = disableTransition(stream[15]);
   const items1 = [closure_10];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => !closure_1_10.can(Permissions.CONNECT, channel));
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => !closure_1_10.can(closure_1_12.CONNECT, channel));
   const isChannelFullResult = obj.isChannelFull(channel, closure_11, closure_9);
   const items2 = [closure_11];
   let stateFromStores2 = disableTransition(stream[15]).useStateFromStores(items2, () => closure_1_11.isInChannel(channel.id));
@@ -75,20 +75,20 @@ function StreamPreviewContainer(disableTransition) {
   callback = channel.useCallback(() => {
     const voiceChannel = onPress(stream[17]).selectVoiceChannel(stream.channelId);
     const obj = onPress(stream[17]);
+    const tmp5 = disableTransition;
     disableTransition(stream[18]).watchStream(stream);
     if (disableTransition) {
-      let tmpResult = onPress(stream[20]);
+      let tmpResult = tmp(tmp2[20]);
       const result = tmpResult.rebuildRTCActiveChannels();
     } else {
-      onPress(stream[19])(stream);
+      tmp(tmp2[19])(tmp3);
     }
-    tmpResult = onPress(stream[20]);
+    tmpResult = tmp(tmp2[20]);
     const obj2 = disableTransition(stream[18]);
-    const participant = tmpResult.selectParticipant(stream.channelId, disableTransition(stream[21]).encodeStreamKey(stream));
+    const participant = tmpResult.selectParticipant(tmp3.channelId, tmp5(stream[21]).encodeStreamKey(tmp3));
     if (onPress != null) {
       onPress();
     }
-    const tmp5Result = disableTransition(stream[21]);
   }, items5);
   onPress(stream[22])(() => {
     if (channel.isGuildStageVoice()) {
@@ -96,7 +96,8 @@ function StreamPreviewContainer(disableTransition) {
       const obj = disableTransition(stream[18]);
     }
   });
-  const items6 = [tmp.touchable, disableTransition.style];
+  obj = { stream, ctaText: stringResult1, style: items6, onPress: callback, disabled: flag, children: null };
+  items6 = [tmp.touchable, disableTransition.style];
   obj = { style: tmp.ctaWrapper, children: null };
   obj1 = { style: tmp.ctaBackground, children: null };
   const obj5 = disableTransition(stream[15]);
@@ -107,7 +108,8 @@ function StreamPreviewContainer(disableTransition) {
   return jsx(onPress(stream[23]), { style: tmp.ctaWrapper, children: null });
 }
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
-const createCacheKey = {};
+createCacheKey = { touchable: { borderRadius: 5, overflow: "hidden" }, ctaWrapper: null, ctaBackground: null, ctaText: null };
+createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
@@ -116,15 +118,16 @@ createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };
 createCacheKey[3] = { lineHeight: 20 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("components_native/TouchableStreamPreview.tsx");
+let obj1 = { height: 40, paddingHorizontal: 16, borderRadius: 20, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, justifyContent: "center", alignItems: "center" };
+let result = require("set").fileFinishedImporting("components_native/TouchableStreamPreview.tsx");
 
 export default function VoiceChannelSettingsStreamPreview(arg0) {
   const _require = arg0;
-  let obj = initialize;
+  let obj = _initialize;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getStreamForUser(closure_0.userId, closure_0.guildId));
   const items1 = [closure_8];
-  const stateFromStores1 = require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     let channel = null;
     if (null != stateFromStores) {
       channel = closure_1_8.getChannel(tmp.channelId);

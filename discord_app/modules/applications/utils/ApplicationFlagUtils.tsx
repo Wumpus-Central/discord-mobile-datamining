@@ -1,17 +1,18 @@
 // discord_app/modules/applications/utils/ApplicationFlagUtils.tsx
 import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import createExecutable from "../../../records/ApplicationRecord.tsx";
+import closure_2 from "../../../records/ApplicationRecord.tsx";
 
 function getApplicationFlags(application) {
   if (null == application) {
-    const deserializer2 = fromStringAll;
-    let flags = deserializer2.deserialize(0);
+    let flags = fromStringAll.deserialize(0);
+    const obj2 = fromStringAll;
   } else {
     let tmp5 = null != application;
     if (tmp5) {
       let tmp2 = application instanceof closure_2;
       if (!tmp2) {
         tmp2 = "flags" in application && typeof application.flags === "bigint";
+        const tmp3 = "flags" in application && typeof application.flags === "bigint";
       }
       if (!tmp2) {
         let tmp4 = "flags" in application && null != application.flags && typeof application.flags === "object";
@@ -25,7 +26,6 @@ function getApplicationFlags(application) {
     if (tmp5) {
       flags = application.flags;
     } else {
-      const deserializer = fromStringAll;
       let num = application.flags_new;
       if (num == null) {
         num = application.flags;
@@ -33,12 +33,13 @@ function getApplicationFlags(application) {
       if (num == null) {
         num = 0;
       }
-      flags = deserializer.deserialize(num);
+      flags = fromStringAll.deserialize(num);
+      const obj = fromStringAll;
     }
   }
   return flags;
 }
-const result = require("obj132").fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
 
 export { getApplicationFlags };
 export const hasApplicationFlag = function hasApplicationFlag(application, EMBEDDED) {

@@ -1,15 +1,17 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import _modDef11481 from "GuildDirectoryEditDescriptionModalActionCreators.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 
-const require = fn;
+const require = arg1;
 function GuildDirectoryEditDescription(entry) {
   entry = entry.entry;
-  function _onSubmit(dependencyMap) {
+  function _onSubmit(arg0) {
     const self = this;
     const tmp = closure_1_4((arg0, arg1) => {
       closure_0 = arg0;
@@ -82,7 +84,9 @@ function GuildDirectoryEditDescription(entry) {
     return applyArgumentsResult;
   }
   let tmp = callback3();
-  let obj = { style: tmp.header, children: null };
+  let obj = { top: true, style: tmp.safeArea, children: null };
+  obj = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
+  obj = { style: tmp.header, children: null };
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = entry(1236).intl;
   obj1[4] = intl.format(entry(1236).t.w9tsNk, { guildName: entry.name });
@@ -115,30 +119,33 @@ function GuildDirectoryEditDescription(entry) {
 noopAll;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
+createCacheKey = { safeArea: null, container: null, title: null, header: null };
+createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[3] = { alignItems: "center", justifyContent: "center", padding: 16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 const EDIT_DESCRIPTION = "EDIT_DESCRIPTION";
-const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionModal.tsx");
 
 export default function GuildDirectoryEditDescriptionModal(arg0) {
+  let obj = { screens: null, initialRouteName: null };
   const _require = arg0;
-  const obj = {
+  obj = {};
+  obj = {
     fullscreen: true,
-    headerLeft: require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(_modDef11481.close),
+    headerLeft: _HeaderBackImage.getHeaderCloseButton(_modDef11481.close),
     headerTitle() {
       return null;
     },
     render() {
       const merged = Object.assign(closure_0);
-      return closure_1_7(GuildDirectoryEditDescription, {});
+      return closure_1_7(closure_1_10, {});
     }
   };
   obj[EDIT_DESCRIPTION] = obj;
   obj[0] = obj;
   obj[1] = EDIT_DESCRIPTION;
-  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
+  return callback(_NavigationStack.Navigator, obj);
 };

@@ -1,18 +1,17 @@
 // discord_app/modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import registerAssetDefault from "../../../../../../_runtime/07989_registerAsset.js";
-import frozen from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import createReferralTrialEmbedRedesign from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
 import createReferralTrialEmbedRedeemable from "../row_data/embeds/ReferralTrialEmbed.tsx";
-import emitChanges from "../../../../premium/ReferralTrialStore.tsx";
-import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
-import "createCacheKey";
+import closure_3 from "../../../../premium/ReferralTrialStore.tsx";
+import closure_4 from "../../../../../stores/AuthenticationStore.tsx";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
-const createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+require = arg1;
+createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
 let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx");
 
 export const createReferralSystemMessage = function createReferralSystemMessage(message) {
   ({ message, theme } = message);
@@ -36,10 +35,11 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = callback(theme);
-        obj.iconUrl = frozen.getAssetUriForEmbed(registerAssetDefault);
+        obj.iconUrl = tmp8(8171).getAssetUriForEmbed(registerAssetDefault);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
+      tmp8 = require;
     } else {
       const obj6 = createReferralTrialEmbedRedesign;
       const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer);
@@ -50,11 +50,12 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = callback(theme);
-        obj.iconUrl = frozen.getAssetUriForEmbed(registerAssetDefault);
+        obj.iconUrl = tmp23(8171).getAssetUriForEmbed(registerAssetDefault);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;
       }
+      tmp23 = require;
     }
   }
 };

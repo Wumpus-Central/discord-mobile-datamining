@@ -1,5 +1,5 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import GuildFeatures from "../../../PremiumConstants.tsx";
 import registerAssetDefault from "../../../../../../_runtime/09471_registerAsset.js";
 import metadataDefault from "../../../../../../discord_assets/assets/premium/tiered_tenure_badging/mobile_bronze_badge_medium.png.js";
@@ -27,17 +27,24 @@ import metadataDefault15 from "../../../../../../discord_assets/assets/premium/t
 import metadataDefault16 from "../../../../../../discord_assets/assets/premium/tiered_tenure_badging/mobile_opal_badge_large.png.js";
 
 const TieredTenureBadge = GuildFeatures.TieredTenureBadge;
-let obj = { small: registerAssetDefault, medium: metadataDefault, large: metadataDefault2 };
+let obj = {};
+obj = { small: registerAssetDefault, medium: metadataDefault, large: metadataDefault2 };
 obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = obj;
 obj = { small: registerAssetDefault2, medium: metadataDefault3, large: metadataDefault4 };
 obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = obj;
 obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: registerAssetDefault3, medium: metadataDefault5, large: metadataDefault6 };
+const obj1 = { small: registerAssetDefault3, medium: metadataDefault5, large: metadataDefault6 };
 obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: registerAssetDefault4, medium: metadataDefault7, large: metadataDefault8 };
+const obj2 = { small: registerAssetDefault4, medium: metadataDefault7, large: metadataDefault8 };
 obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: registerAssetDefault5, medium: metadataDefault9, large: metadataDefault10 };
+const obj3 = { small: registerAssetDefault5, medium: metadataDefault9, large: metadataDefault10 };
 obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: registerAssetDefault6, medium: metadataDefault11, large: metadataDefault12 };
+const obj4 = { small: registerAssetDefault6, medium: metadataDefault11, large: metadataDefault12 };
 obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: registerAssetDefault7, medium: metadataDefault13, large: metadataDefault14 };
+const obj5 = { small: registerAssetDefault7, medium: metadataDefault13, large: metadataDefault14 };
 obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: registerAssetDefault8, medium: metadataDefault15, large: metadataDefault16 };
-const result = obj132.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx");
+const obj6 = { small: registerAssetDefault8, medium: metadataDefault15, large: metadataDefault16 };
+const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx");
 
 export const useMobileTenureBadgeImages = function useMobileTenureBadgeImages(id) {
   let tmp = null;

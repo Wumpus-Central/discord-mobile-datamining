@@ -1,6 +1,6 @@
 // discord_app/stores/native/MobileVoiceOverlayStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
-import obj1322 from "../../utils/PlatformUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
+import set2 from "../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
@@ -26,7 +26,7 @@ prototype["initialize"] = function initialize(enabled) {
   }
 };
 prototype["getEnabled"] = function getEnabled() {
-  let isAndroidResult = obj1322.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;
@@ -40,16 +40,17 @@ MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
 const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(dispatcherDefault, {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    const obj = { enabled: enabled.enabled };
+    let obj = expandEventPropertiesDefault;
+    obj = { enabled: enabled.enabled };
     obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
     enabled = enabled.enabled;
   }
 });
-const result = obj132.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
+const result = set.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
 
 export default mobileVoiceOverlayStore;
 export const isMobileOverlaySupported = function isMobileOverlaySupported() {
-  let isAndroidResult = obj1322.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;

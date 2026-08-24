@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
-import generateOldThreadCutoff from "../../../../stores/ReadStateStore.tsx";
+import closure_2 from "../../../../stores/ReadStateStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 
 export default function trackVoicePanelTabOpened(arg0, tab, source) {
   let obj = closure_2;

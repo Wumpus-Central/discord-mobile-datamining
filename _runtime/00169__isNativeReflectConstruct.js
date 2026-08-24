@@ -1,11 +1,11 @@
 // _runtime/00169__isNativeReflectConstruct.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "00098__inherits.js";
 
-let PerformanceMeasureTemplate = fn;
+let PerformanceMeasureTemplate = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,8 +32,8 @@ class PerformanceMarkTemplate {
     tmp2 = closure_2(this, PerformanceMeasureTemplate);
     obj = { name: global, startTime: null, duration: 0 };
     startTime = undefined;
-    if (fn != null) {
-      startTime = fn.startTime;
+    if (arg1 != null) {
+      startTime = arg1.startTime;
     }
     if (startTime == null) {
       tmp4 = PerformanceMeasureTemplate;
@@ -56,8 +56,8 @@ class PerformanceMarkTemplate {
     }
     tmp7Result = tmp7(self, constructResult);
     detail = undefined;
-    if (fn != null) {
-      detail = fn.detail;
+    if (arg1 != null) {
+      detail = arg1.detail;
     }
     if (detail == null) {
       detail = null;
@@ -79,8 +79,8 @@ class PerformanceMark {
   constructor(arg0, arg1) {
     obj = { __entryType: "mark", __name: global };
     startTime = undefined;
-    if (fn != null) {
-      startTime = fn.startTime;
+    if (arg1 != null) {
+      startTime = arg1.startTime;
     }
     if (startTime == null) {
       tmp2 = PerformanceMeasureTemplate;
@@ -91,8 +91,8 @@ class PerformanceMark {
     obj.__startTime = startTime;
     obj.__duration = 0;
     detail = undefined;
-    if (fn != null) {
-      detail = fn.detail;
+    if (arg1 != null) {
+      detail = arg1.detail;
     }
     if (detail == null) {
       detail = null;

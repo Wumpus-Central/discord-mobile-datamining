@@ -1,7 +1,7 @@
 // discord_app/modules/auth/getAuthenticationErrorsFromAPIError.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
+const result = set.fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
 
 export const getAuthenticationErrorsFromAPIError = function getAuthenticationErrorsFromAPIError(c6) {
   const obj = { error_code: c6.code };

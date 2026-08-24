@@ -2,10 +2,10 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import setFontSize from "../../../a11y/AccessibilityActionCreators.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
-import "createToggle";
+import closure_2 from "../../../a11y/AccessibilityStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
+require = arg1;
 function useShowLinkDecorationsSettingValue() {
   const items = [closure_2];
   return initialize.useStateFromStores(items, () => obj.alwaysShowLinkDecorations);
@@ -13,7 +13,7 @@ function useShowLinkDecorationsSettingValue() {
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = setFontSize.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-let createToggle = {
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.OLZFB8);
@@ -23,7 +23,7 @@ let createToggle = {
   onValueChange: onShowLinkDecorationsValueChange
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
 
 export default createToggle;
 export { useShowLinkDecorationsSettingValue };

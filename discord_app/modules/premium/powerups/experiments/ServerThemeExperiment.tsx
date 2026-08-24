@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/experiments/ServerThemeExperiment.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import apexExperiment from "ServerThemeApexShadowExperiment.tsx";
 import createExperiment from "../../../experiments/index.tsx";
@@ -7,7 +7,7 @@ import createExperiment from "../../../experiments/index.tsx";
 const EMPTY_STRING_SNOWFLAKE_ID = ME.EMPTY_STRING_SNOWFLAKE_ID;
 const items = [{ id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false } }, { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false } }];
 let experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_server_theme", label: "Server Theme", defaultConfig: { enabled: false, inExperiment: false, gatesApex: false }, treatments: items });
-const result = obj132.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
 
 export const ServerThemeExperiment = experiment;
 export const getServerThemeEnabled = function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
@@ -25,6 +25,7 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
   }
   if (!currentConfig.inExperiment) {
     enabled = config.gatesApex && tmp4;
+    const tmp5 = config.gatesApex && tmp4;
   }
   return enabled;
 };
@@ -43,6 +44,7 @@ export const useServerThemeEnabled = function useServerThemeEnabled(guildId, use
     let tmp6 = null != guildId;
     if (tmp6) {
       tmp6 = tmp5 && tmp4;
+      const tmp7 = tmp5 && tmp4;
     }
     enabled = tmp6;
   }

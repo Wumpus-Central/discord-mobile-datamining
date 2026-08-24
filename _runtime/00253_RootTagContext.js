@@ -3,7 +3,7 @@ import noopAll from "00019_noop.js";
 
 noopAll;
 
-export const RootTagContext = require("../discord_app/index.native.tsx");
+export const RootTagContext = require("module_0");
 export function createRootTag(rootTag) {
   return rootTag;
 }

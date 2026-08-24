@@ -1,24 +1,26 @@
 // discord_app/modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx
-import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../Constants.tsx";
 import EventActionType from "../../../nuf/native/components/notification/NotificationPermissionConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: c5, NOOP: closure_6 } = ME);
 ({ EventActionLocation: error, EventActionType: closure_8, NotificationNudgeAnalyticsAction: c9, NotificationNudgeSurface: c10 } = EventActionType);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, cardContent: null, iconCircle: null, body: null };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
 createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
+let obj2 = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = callback3();
@@ -27,7 +29,8 @@ export default function NotificationPermissionSettingsHeader() {
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
     if (canSeePushNotificationNudge) {
-      const obj = { action: null, prompt_type: null };
+      let obj = closure_1_1(closure_1_2[8]);
+      obj = { action: null, prompt_type: null };
       obj[0] = closure_1_9.IMPRESSION;
       obj[1] = closure_1_10.NOTIFICATION_SETTINGS_PERMISSION_HEADER;
       obj.track(closure_1_5.CONTEXTUAL_REMINDER_ACTION, obj);

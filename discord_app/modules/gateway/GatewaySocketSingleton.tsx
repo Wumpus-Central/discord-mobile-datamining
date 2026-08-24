@@ -3,13 +3,13 @@ import timestampDefault from "../debug/Logger.tsx";
 import setRequestedByAll from "RequestGatewaySocket.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import obj132Default from "../../lib/DiscordNative.tsx";
+import setDefault from "../../lib/DiscordNative.tsx";
 import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 import noopDefault from "GatewaySocket.tsx";
 import getInitialStateDefault from "LocalPresenceStateManager.tsx";
 import guildIdDefault from "LocalVoiceStateManager.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 import importDefaultResult from "../../utils/NetworkUtils.tsx";
 
 let closure_4 = new timestampDefault("ConnectionStore");
@@ -18,6 +18,7 @@ const tmp3 = new getInitialStateDefault(obj);
 let closure_6 = tmp3;
 const tmp2 = new timestampDefault("ConnectionStore");
 obj.handleIdentify = () => {
+  obj = token;
   token = token.getToken();
   obj = { hasToken: null != token };
   closure_4.verbose("handleIdentify called", obj);
@@ -29,9 +30,11 @@ obj.handleIdentify = () => {
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
     obj1 = {};
+    const obj5 = _modDef10501;
     const merged = Object.assign(expandEventPropertiesDefault.getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;
+    const obj8 = expandEventPropertiesDefault;
     obj1.gateway_connect_reasons = setRequestedByAll.describeConnectionReasons();
     if (null != installationForTracking) {
       const obj2 = { installation_id: null };
@@ -46,8 +49,8 @@ obj.handleIdentify = () => {
     return obj;
   }
 };
-if (obj132.isDesktop()) {
-  const powerMonitor = obj132Default.powerMonitor;
+if (set.isDesktop()) {
+  const powerMonitor = setDefault.powerMonitor;
   powerMonitor.on("resume", () => {
     obj.expeditedHeartbeat(5000, "power monitor resumed");
   });
@@ -67,7 +70,7 @@ obj.on("close", (arg0) => {
   ({ code, reason } = arg0);
   dispatcherDefault.dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
 });
-const result = obj132.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
+const result = set.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
 
 export const socket = obj;
 export const localPresenceState = tmp3;

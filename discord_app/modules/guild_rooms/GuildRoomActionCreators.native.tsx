@@ -1,6 +1,5 @@
 // discord_app/modules/guild_rooms/GuildRoomActionCreators.native.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import obj132 from "../../../_runtime/00002_obj132.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _guildRoomConnect() {
   const self = this;
@@ -72,8 +71,9 @@ function _guildRoomUpdate() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.native.tsx");
 for (const key10024 in require("_guildRoomConnect")) {
+  let tmp3 = key10024;
   arg5[key10024] = require("_guildRoomConnect")[key10024];
   continue;
 }

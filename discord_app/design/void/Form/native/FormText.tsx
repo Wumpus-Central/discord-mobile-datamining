@@ -6,9 +6,10 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 let closure_3 = createCacheKey.createStyles((arg0) => {
-  let obj = { color: result2.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+  let obj = { primary: null, text: null };
+  obj = { color: result2.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
   obj[0] = obj;
   let num = 16;
   if ("small" === arg0) {
@@ -23,14 +24,19 @@ let closure_3 = createCacheKey.createStyles((arg0) => {
   obj[1] = obj;
   return obj;
 });
-let obj = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
+let obj = { BRAND: null, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
+obj = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 obj[0] = obj;
 createCacheKey = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 obj[1] = createCacheKey;
 obj[2] = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
+const obj2 = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
 obj[3] = { color: ThemesDefault.unsafe_rawColors.YELLOW_300 };
+const obj3 = { color: ThemesDefault.unsafe_rawColors.YELLOW_300 };
 obj[4] = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+const obj4 = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
 obj[5] = { color: ThemesDefault.unsafe_rawColors.WHITE };
+const obj5 = { color: ThemesDefault.unsafe_rawColors.WHITE };
 const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   let str = size.size;
   if (str === undefined) {
@@ -49,7 +55,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   obj[2] = size.children;
   return jsx(Button.LegacyText, { ref, style: null, children: null });
 });
-const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormText.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormText.tsx");
 
 export default forwardRefResult;
 export const FormTextColors = obj;

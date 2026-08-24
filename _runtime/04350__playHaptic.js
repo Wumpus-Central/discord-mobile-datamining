@@ -1,5 +1,5 @@
 // _runtime/04350__playHaptic.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 
 function _playHaptic() {
@@ -38,12 +38,16 @@ function _playHaptic() {
             if (obj.isEnabled()) {
               c2 = 3;
               obj1 = { value: null, done: true };
-              obj1[0] = callback(table[2]).triggerPattern(callback, table);
+              obj1[0] = tmp6(tmp7[2]).triggerPattern(tmp4, tmp5);
               return obj1;
             } else {
               c2 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             }
+            tmp4 = callback;
+            tmp5 = table;
+            tmp6 = callback;
+            tmp7 = table;
           }
         } catch (tmp8) {
           c2 = tmp;

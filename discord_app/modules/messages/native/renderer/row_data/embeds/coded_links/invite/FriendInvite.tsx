@@ -1,16 +1,14 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
-import obj132 from "../../../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import getSystemLocale from "../../../../../../../../intl/index.native.tsx";
-import getAvatarURLDefault from "../../../../../../../../utils/AvatarUtils.tsx";
-import nameFromUserDefault from "../../../../../../../../utils/UserUtils.tsx";
 import InviteSendStates from "../../../../../../../instant_invite/Constants.tsx";
 import getEmbedThemeColorsDefault from "../../getEmbedThemeColors.tsx";
-import markAllUserIdListsStale from "../../../../../../../../stores/RelationshipStore.tsx";
+import closure_4 from "../../../../../../../../stores/RelationshipStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
 
 export const createFriendInvite = function createFriendInvite(inviter) {
   ({ colors, baseColors } = getEmbedThemeColorsDefault(arg3));
@@ -19,10 +17,10 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.eQyu1F);
-    let tmp5 = require;
+    let tmp5 = tmp4;
   } else {
     str = string(t.PYJHW6);
-    tmp5 = require;
+    tmp5 = tmp4;
   }
   let str2 = "";
   if (null != inviter.inviter) {
@@ -30,7 +28,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = nameFromUserDefault;
+    let tmpResult = tmp(4219);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;
@@ -44,7 +42,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str4 = "";
   if (null != inviter.inviter) {
-    tmpResult = getAvatarURLDefault;
+    tmpResult = tmp(1435);
     str4 = Image.resolveAssetSource(tmpResult.getUserAvatarSource(inviter.inviter)).uri;
   }
   const inviter2 = inviter.inviter;

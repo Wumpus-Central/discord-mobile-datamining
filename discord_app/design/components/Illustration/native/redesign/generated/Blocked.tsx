@@ -5,12 +5,13 @@ import getIllustrationSource from "../../index.tsx";
 import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Blocked.tsx");
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Blocked.tsx");
 
 export const getBlockedSource = function getBlockedSource(theme) {
-  const obj = {
+  let obj = getIllustrationSource;
+  obj = {
     dark() {
       return callback(14160);
     },
@@ -24,7 +25,8 @@ export const getBlockedSource = function getBlockedSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useBlockedSource = function useBlockedSource() {
-  const obj = {
+  let obj = AccessibilityAnnouncer;
+  obj = {
     dark() {
       return callback(14160);
     },
@@ -38,7 +40,19 @@ export const useBlockedSource = function useBlockedSource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const Blocked = function Blocked(arg0) {
-  const obj = {};
+  let obj = AccessibilityAnnouncer;
+  obj = {
+    dark() {
+      return callback(14160);
+    },
+    darker() {
+      return callback(14161);
+    },
+    light() {
+      return callback(14162);
+    }
+  };
+  obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

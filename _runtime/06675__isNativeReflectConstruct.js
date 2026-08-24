@@ -3,13 +3,13 @@ import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06676___INTERNAL_VIEW_CONFIG.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Use = fn;
+const Use = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -74,11 +74,13 @@ const items = [
         const _console = console;
         console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
       }
-      const obj = {
+      let obj = { href: tmp4, x, y, width, height };
+      obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
+      const tmp7 = __INTERNAL_VIEW_CONFIGDefault;
       const merged = Object.assign(self(6586).withoutXY(this, props));
       const merged1 = Object.assign(obj);
       obj.children = children;

@@ -1,8 +1,7 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import getUploadFileSizeSum from "../../../../utils/FileUtils.tsx";
 import Changeset from "RowGeneratorConstants.tsx";
 import frozen from "EmbedUtils.tsx";
 import registerAssetDefault from "../../../../../_runtime/08365_registerAsset.js";
@@ -10,7 +9,7 @@ import registerAssetDefault2 from "../../../../../_runtime/08366_registerAsset.j
 
 const MessageFailureState = Changeset.MessageFailureState;
 const MessageEmbedTypes = ME.MessageEmbedTypes;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
 
 export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   ({ uploaderFile, colors } = useAttachmentUploadPreview);
@@ -24,6 +23,7 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       obj[4] = colors.failedMessageBodyTextColor;
       colors = frozen.getAssetUriForEmbed;
       obj[5] = colors(registerAssetDefault2);
+      const tmp14 = frozen;
     } else {
       obj = { type: null, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
       obj[0] = MessageEmbedTypes.TEXT;
@@ -35,11 +35,12 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       let str = "";
       if (0 !== uploaderFile.currentSize) {
         const _HermesInternal = HermesInternal;
-        str = " (" + getUploadFileSizeSum.sizeString(uploaderFile.currentSize) + ")";
-        const tmp6Result = getUploadFileSizeSum;
+        str = " (" + tmp6(4834).sizeString(uploaderFile.currentSize) + ")";
+        const tmp6Result = tmp6(4834);
       }
       obj[3] = "" + str;
       obj[4] = colors.embedBodyTextColor;
+      tmp6 = require;
     }
   } else {
     obj = { type: null, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null };

@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/rows/Separator.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import isDiscordFrontendDevelopment from "../../../../../utils/GlobalUtils.tsx";
 import Changeset from "../RowGeneratorConstants.tsx";
@@ -7,7 +7,8 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 ({ RowType: obj1, SeparatorType: c3 } = Changeset);
 let closure_4 = createCacheKey.createNativeStyleProperties({ dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND });
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/rows/Separator.tsx");
+let obj = { dayColor: ThemesDefault.colors.TEXT_MUTED, unreadTextColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_TEXT, unreadBorderColor: ThemesDefault.colors.MOBILE_CHAT_NEW_MESSAGE_BORDER, summaryColor: ThemesDefault.colors.TEXT_BRAND };
+const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/Separator.tsx");
 
 export const generateSeparatorRowData = function generateSeparatorRowData(text, theme) {
   ({ rowType, changeType } = text);
@@ -20,7 +21,7 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     obj[3] = text.text;
     obj[4] = changeType;
     return obj;
-  } else if (constants2.UNREAD === rowType) {
+  } else if (tmp2.UNREAD === rowType) {
     obj = { type: null, id: null, color: null, borderColor: null, changeType: null, text: null };
     obj[0] = constants.SEPARATOR;
     obj[1] = rowType;
@@ -33,7 +34,7 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     obj[4] = changeType;
     obj[5] = text.text;
     return obj;
-  } else if (constants2.SUMMARY === rowType) {
+  } else if (tmp2.SUMMARY === rowType) {
     const summary = text.summary;
     obj1 = { type: null, id: null, color: null, text: null, summary: null, isBeforeContent: null, changeType: null };
     obj1[0] = constants.SEPARATOR;

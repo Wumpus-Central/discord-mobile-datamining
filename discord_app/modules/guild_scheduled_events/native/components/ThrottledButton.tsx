@@ -1,9 +1,9 @@
 // discord_app/modules/guild_scheduled_events/native/components/ThrottledButton.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
 
 export default function ThrottledButton(throttleMs) {
   let num = throttleMs.throttleMs;
@@ -16,68 +16,76 @@ export default function ThrottledButton(throttleMs) {
   if (num === undefined) {
     num = 500;
   }
+  onPressOut = num;
+  dependencyMap = undefined;
   dependencyMap = React.useRef(null);
   const effect = React.useEffect(() => () => clearTimeout(ref.current), []);
   const obj = {};
   const merged1 = Object.assign(merged);
+  onPressOut = onPress;
   obj.onPress = (arg0) => {
-    let tmp2 = null != callback;
+    let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = null === closure_1_1.current;
     }
     if (tmp2) {
-      callback(arg0);
+      closure_0(arg0);
       const _setTimeout = setTimeout;
       closure_1_1.current = setTimeout(() => {
         closure_1.current = null;
-      }, callback);
+      }, closure_0);
     }
   };
   onPressOut = onPressIn;
   obj.onPressIn = (arg0) => {
-    let tmp2 = null != callback;
+    let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = null === closure_1_1.current;
     }
     if (tmp2) {
-      callback(arg0);
+      closure_0(arg0);
       const _setTimeout = setTimeout;
       closure_1_1.current = setTimeout(() => {
         closure_1.current = null;
-      }, callback);
+      }, closure_0);
     }
   };
   obj.onPressOut = (arg0) => {
-    let tmp2 = null != callback;
+    let tmp2 = null != closure_0;
     if (tmp2) {
       tmp2 = null === closure_1_1.current;
     }
     if (tmp2) {
-      callback(arg0);
+      closure_0(arg0);
       const _setTimeout = setTimeout;
       closure_1_1.current = setTimeout(() => {
         closure_1.current = null;
-      }, callback);
+      }, closure_0);
     }
   };
   return jsx(onPressOut(4745).Button, {});
 };
 export const useThrottledActionHandler = function useThrottledActionHandler() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 500;
+  }
+  closure_1 = undefined;
   closure_1 = React.useRef(null);
   const effect = React.useEffect(() => () => clearTimeout(ref.current), []);
   return (arg0) => {
     closure_0 = arg0;
     return (arg0) => {
-      let tmp2 = null != callback;
+      let tmp2 = null != closure_0;
       if (tmp2) {
         tmp2 = null === closure_1_1.current;
       }
       if (tmp2) {
-        callback(arg0);
+        closure_0(arg0);
         const _setTimeout = setTimeout;
         closure_1_1.current = setTimeout(() => {
           closure_1.current = null;
-        }, callback);
+        }, closure_0);
       }
     };
   };

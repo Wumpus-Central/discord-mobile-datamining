@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_7 from "../../../parent_tools/FamilyCenterStore.tsx";
+import closure_8 from "../../../../stores/UserStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { AgeGateSource } from "../../../age_gate/AgeGateConstants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import items from "../../../parent_tools/FamilyCenterConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function FamilyCenterLoading() {
   const tmp = callback3();
   return callback2(Stack.Stack, { justify: "center", align: "center", style: callback3().loadingContainer, children: callback2(closure_6, {}) });
@@ -39,6 +39,7 @@ function FamilyCenter() {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
   let obj3 = familyCenterInitialized(8799);
+  obj = { items: null, onPageChange: null, pageWidth: null, defaultIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = familyCenterInitialized(1236).intl;
   obj[0] = intl.string(isLoading(2335).bdBmqy);
@@ -68,14 +69,14 @@ function FamilyCenter() {
     if (familyCenterInitialized) {
       if (dependencyMap) {
         ({ ageGroup, numOfAcceptedRequests, selectedTab, selectedTeenId } = ref.current);
-        isLoading(698);
-        let obj = { is_considered_adult: null, num_of_accepted_links: null, selected_teen_id: null, initial_page: null, source: null };
+        let obj = isLoading(698);
+        obj = { is_considered_adult: null, num_of_accepted_links: null, selected_teen_id: null, initial_page: null, source: null };
         obj[0] = "adult" === ageGroup;
         obj[1] = numOfAcceptedRequests;
         obj[2] = selectedTeenId;
         obj[3] = closure_1_13[selectedTab];
         obj[4] = closure_1_12.SETTINGS;
-        obj.track(AnalyticEvents.FAMILY_CENTER_VIEWED, obj);
+        obj.track(closure_1_9.FAMILY_CENTER_VIEWED, obj);
         obj = { name: null };
         obj[0] = familyCenterInitialized(5011).MetricEvents.FAMILY_CENTER_VIEW;
         isLoading(5006).increment(obj);
@@ -84,8 +85,8 @@ function FamilyCenter() {
     }
   }, items2);
   isLoading(4761)(() => {
-    familyCenterInitialized(4196);
-    const obj = { dismissAction: ContentDismissActionType.AUTO, forceTrack: true };
+    let obj = familyCenterInitialized(4196);
+    obj = { dismissAction: closure_1_11.AUTO, forceTrack: true };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(familyCenterInitialized(1377).DismissibleContent.FAMILY_CENTER_NEW_BADGE, obj);
     let canRefetchResult = !isLoading;
     if (!isLoading) {
@@ -110,31 +111,31 @@ function FamilyCenter() {
   const items3 = [callback2(closure_5, { style: tmp.segmentedControlContainer, children: callback2(familyCenterInitialized(10096).SegmentedControl, { state: segmentedControlState }) }), ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
-    let tmp14Result = callback2(FamilyCenterLoading, {});
+    let tmp14Result = tmp14(FamilyCenterLoading, {});
   } else {
     const obj7 = { state: null };
     obj7[0] = segmentedControlState;
-    tmp14Result = callback2(tmp4(11785).SegmentedControlPages, obj7);
+    tmp14Result = tmp14(tmp4(11785).SegmentedControlPages, obj7);
   }
   obj6[1] = tmp14Result;
-  obj6 = callback2(tmp23, obj6);
+  obj6 = tmp14(tmp23, obj6);
   items3[1] = obj6;
   obj4[2] = items3;
-  obj4 = callback(tmp23, obj4);
+  obj4 = closure_16(tmp23, obj4);
   obj3[1] = obj4;
-  tmp14Result = callback2(tmp4(7139).AnalyticsLocationProvider, obj3);
-  const obj5 = { style: tmp.segmentedControlContainer, children: callback2(familyCenterInitialized(10096).SegmentedControl, { state: segmentedControlState }) };
+  tmp14Result = tmp14(tmp4(7139).AnalyticsLocationProvider, obj3);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_12, FamilyCenterSubPageAnalyticsIds: map1, FamilyCenterSubPages } = items);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 items = [, ];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { container: { display: "flex", flex: 1 }, segmentedControlContainer: null, loadingContainer: null };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { minHeight: "100%" };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/UserSettingsFamilyCenter.tsx");
 
 export default function FamilyCenterContainer() {
   return callback2(FamilyCenter, {});

@@ -5,19 +5,18 @@ import Button from "../../../design/void/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import registerAssetDefault from "../../../../_runtime/08578_registerAsset.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
-import handleChanged from "../../../stores/DraftStore.tsx";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../stores/DraftStore.tsx";
 import { DraftType } from "../../../stores/DraftStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
   onCancelReplying = onCancelReplying.onCancelReplying;
   obj = useIsMobileVisualRefreshExperimentEnabled;
@@ -31,14 +30,14 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj[0] = tmp3.contextBarRow;
     obj = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", style: null, children: null };
     obj[3] = tmp3.floatingReplyTextWrapper;
-    const intl3 = getSystemLocale.intl;
-    obj[4] = intl3.string(getSystemLocale.t["5IEsGx"]);
-    const items = [callback(Text.Text, obj), ];
+    const intl3 = tmp(1236).intl;
+    obj[4] = intl3.string(tmp(1236).t["5IEsGx"]);
+    const items = [callback(tmp(4734).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.floatingRightActions;
     obj2 = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
-    const intl4 = getSystemLocale.intl;
-    obj2[2] = intl4.string(getSystemLocale.t.jSnJGT);
+    const intl4 = tmp(1236).intl;
+    obj2[2] = intl4.string(tmp(1236).t.jSnJGT);
     let tmp13;
     if (bound > 0) {
       tmp13 = bound;
@@ -46,34 +45,34 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
     obj2[3] = tmp13;
     obj2[4] = onCancelReplying;
     const obj3 = { source: null, size: null, style: null };
-    obj3[0] = registerAssetDefault;
-    obj3[1] = Button.Icon.Sizes.CUSTOM;
+    obj3[0] = tmp4(8578);
+    obj3[1] = tmp(1297).Icon.Sizes.CUSTOM;
     obj3[2] = tmp3.floatingCloseIcon;
-    obj2[5] = callback(Button.Icon, obj3);
-    obj1[1] = callback(PressableBase.PressableOpacity, obj2);
+    obj2[5] = callback(tmp(1297).Icon, obj3);
+    obj1[1] = callback(tmp(5433).PressableOpacity, obj2);
     items[1] = callback(closure_5, obj1);
     obj[1] = items;
-    let tmp7Result = callback2(closure_5, obj);
+    let tmp7Result = tmp7(tmp11, obj);
   } else {
     const obj4 = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    const intl = getSystemLocale.intl;
-    obj4[2] = intl.string(getSystemLocale.t.jSnJGT);
+    const intl = tmp(1236).intl;
+    obj4[2] = intl.string(tmp(1236).t.jSnJGT);
     obj4[3] = onCancelReplying;
     obj4[4] = tmp3.contextBarRow;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.contextCancelIconWrapper;
     const obj6 = { source: null, size: null };
-    obj6[0] = registerAssetDefault;
-    obj6[1] = Button.Icon.Sizes.SMALL_20;
-    obj5[1] = callback(Button.Icon, obj6);
+    obj6[0] = tmp4(8578);
+    obj6[1] = tmp(1297).Icon.Sizes.SMALL_20;
+    obj5[1] = callback(tmp(1297).Icon, obj6);
     const items1 = [callback(closure_5, obj5), ];
     const obj7 = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", style: null, children: null };
     obj7[3] = tmp3.contextButtonText;
-    const intl2 = getSystemLocale.intl;
-    obj7[4] = intl2.string(getSystemLocale.t["5IEsGx"]);
-    items1[1] = callback(Text.Text, obj7);
+    const intl2 = tmp(1236).intl;
+    obj7[4] = intl2.string(tmp(1236).t["5IEsGx"]);
+    items1[1] = callback(tmp(4734).Text, obj7);
     obj4[5] = items1;
-    tmp7Result = callback2(PressableBase.PressableOpacity, obj4);
+    tmp7Result = tmp7(tmp(5433).PressableOpacity, obj4);
   }
   return tmp7Result;
 }
@@ -100,7 +99,7 @@ class ChatInputReplyBar {
     tmp5 = closure_1;
     token = tmpResult.useToken(require("Themes").modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
     tmpResult1 = require("map");
-    bound = require("../../../index.native.tsx");
+    bound = require("module_0");
     tmpResult2 = require("initialize");
     items = [];
     items[0] = closure_6;
@@ -175,6 +174,9 @@ class ChatInputReplyBar {
             items[1] = closure_1_12(pendingReply(colorString[12]).Text, obj, arg1);
             obj2[0] = items;
             let tmp3Result = closure_1_13(closure_1_14, obj2);
+            const tmp15 = closure_1_12;
+            const tmp8 = closure_1_13;
+            const tmp9 = closure_1_14;
           }
           return tmp3Result;
         }
@@ -245,6 +247,9 @@ class ChatInputReplyBar {
             items[1] = closure_1_12(pendingReply(colorString[12]).Text, obj, arg1);
             obj2[0] = items;
             let tmp3Result = closure_1_13(closure_1_14, obj2);
+            const tmp15 = closure_1_12;
+            const tmp8 = closure_1_13;
+            const tmp9 = closure_1_14;
           }
           return tmp3Result;
         }
@@ -419,11 +424,11 @@ function ChatInputEditBar(onCancelEditing) {
   }
   obj[2] = str2;
   obj[3] = chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText;
-  const intl = getSystemLocale.intl;
+  const intl = tmp(1236).intl;
   obj[4] = intl.string(getSystemLocale.t.rtNXxN);
-  let tmp7Result = callback(Text.Text, obj);
+  let tmp7Result = tmp7(Text.Text, obj);
   obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp(1236).intl;
   obj[1] = intl2.string(getSystemLocale.t.qv9j1K);
   let tmp9;
   if (chatInputFloating) {
@@ -439,15 +444,15 @@ function ChatInputEditBar(onCancelEditing) {
   obj[4] = prop;
   obj[5] = onCancelEditing.onCancelEditing;
   obj1 = { source: registerAssetDefault, size: null, style: null };
-  const Sizes = Button.Icon.Sizes;
+  const Sizes = tmp(1297).Icon.Sizes;
   obj1[1] = chatInputFloating ? Sizes.CUSTOM : Sizes.SMALL_20;
   let floatingCloseIcon;
   if (chatInputFloating) {
     floatingCloseIcon = tmp3.floatingCloseIcon;
   }
   obj1[2] = floatingCloseIcon;
-  obj[6] = callback(Button.Icon, obj1);
-  tmp7Result = callback(PressableBase.PressableOpacity, obj);
+  obj[6] = closure_12(Button.Icon, obj1);
+  tmp7Result = tmp7(tmp(5433).PressableOpacity, obj);
   obj2 = { style: tmp3.contextBarRow, children: null };
   const obj3 = { children: null };
   const items = [, ];
@@ -456,7 +461,7 @@ function ChatInputEditBar(onCancelEditing) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp3.floatingRightActions;
     obj4[1] = tmp7Result;
-    items[1] = callback(closure_5, obj4);
+    items[1] = tmp7(tmp13, obj4);
     obj3[0] = items;
     let tmp16 = obj3;
   } else {
@@ -465,8 +470,8 @@ function ChatInputEditBar(onCancelEditing) {
     obj3[0] = items;
     tmp16 = obj3;
   }
-  obj2[1] = callback2(closure_14, tmp16);
-  return callback(closure_5, obj2);
+  obj2[1] = closure_13(closure_14, tmp16);
+  return closure_12(closure_5, obj2);
 }
 function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj = useIsMobileVisualRefreshExperimentEnabled;
@@ -487,12 +492,12 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   }
   obj[2] = str2;
   obj[3] = chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText;
-  const intl = getSystemLocale.intl;
+  const intl = tmp(1236).intl;
   obj = { timestamp: new Date(scheduledTimestamp.scheduledTimestamp).valueOf() };
   obj[4] = intl.formatToPlainString(getSystemLocale.t.ZN3tIx, obj);
-  let tmp7Result = callback(Text.Text, obj);
+  let tmp7Result = tmp7(Text.Text, obj);
   obj1 = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp(1236).intl;
   obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
   let tmp9;
   if (chatInputFloating) {
@@ -508,15 +513,15 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj1[4] = prop;
   obj1[5] = scheduledTimestamp.onCancelScheduling;
   obj2 = { source: registerAssetDefault, size: null, style: null };
-  const Sizes = Button.Icon.Sizes;
+  const Sizes = tmp(1297).Icon.Sizes;
   obj2[1] = chatInputFloating ? Sizes.CUSTOM : Sizes.SMALL_20;
   let floatingCloseIcon;
   if (chatInputFloating) {
     floatingCloseIcon = tmp3.floatingCloseIcon;
   }
   obj2[2] = floatingCloseIcon;
-  obj1[6] = callback(Button.Icon, obj2);
-  tmp7Result = callback(PressableBase.PressableOpacity, obj1);
+  obj1[6] = closure_12(Button.Icon, obj2);
+  tmp7Result = tmp7(tmp(5433).PressableOpacity, obj1);
   const obj3 = { style: tmp3.contextBarRow, children: null };
   const obj4 = { children: null };
   const items = [, ];
@@ -525,7 +530,7 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp3.floatingRightActions;
     obj5[1] = tmp7Result;
-    items[1] = callback(closure_5, obj5);
+    items[1] = tmp7(tmp13, obj5);
     obj4[0] = items;
     let tmp16 = obj4;
   } else {
@@ -534,8 +539,8 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
     obj4[0] = items;
     tmp16 = obj4;
   }
-  obj3[1] = callback2(closure_14, tmp16);
-  return callback(closure_5, obj3);
+  obj3[1] = closure_13(closure_14, tmp16);
+  return closure_12(closure_5, obj3);
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
@@ -550,6 +555,7 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   return { contextBar: { backgroundColor } };
 });
 let closure_17 = createCacheKey.createStyles(() => {
+  obj = { contextBarRow: null, floatingReplyTextWrapper: null, contextCancelIconWrapper: null, contextButtonText: null, floatingContextBar: null, replyMentionButton: null, replyMentionButtonActive: null, replyMentionIcon: null, replyMentionIconActive: null, floatingRightActions: null, floatingMentionGroup: null, floatingDivider: null, floatingCloseIcon: null };
   obj = { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: ThemesDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: ThemesDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP };
   obj[0] = obj;
   obj[1] = { flexShrink: 1, minWidth: 0 };
@@ -559,11 +565,15 @@ let closure_17 = createCacheKey.createStyles(() => {
   obj[4] = obj;
   obj[5] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 10 };
   obj[6] = { color: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
+  obj1 = { color: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
   obj[7] = { width: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: ThemesDefault.colors.TEXT_MUTED, marginRight: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT };
+  const obj2 = { width: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: ThemesDefault.colors.TEXT_MUTED, marginRight: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT };
   obj[8] = { tintColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
   obj[9] = { flexGrow: 1, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "flex-end", gap: 8 };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: 2 };
+  const obj3 = { tintColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
   obj[11] = { width: closure_4.hairlineWidth, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  const obj4 = { width: closure_4.hairlineWidth, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[12] = { width: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, height: ThemesDefault.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE, tintColor: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT };
   return obj;
 });
@@ -571,6 +581,7 @@ let closure_22 = { code: "function ChatInputContextBarTsx1(){const{stylesBackgro
 let closure_23 = { code: "function ChatInputContextBarTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
 let closure_24 = importAllResult.forwardRef((children, ref) => {
   let floatingContextBar;
+  let backgroundColor;
   let num;
   let sharedValue;
   ref = undefined;
@@ -578,7 +589,7 @@ let closure_24 = importAllResult.forwardRef((children, ref) => {
   const gradientValue = floatingContextBar(num[22]).useGradientValue(floatingContextBar(num[22]).GradientPercentage.END);
   obj = floatingContextBar(num[22]);
   floatingContextBar = floatingContextBar(num[10]).useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
-  const backgroundColor = callback2(gradientValue).contextBar.backgroundColor;
+  backgroundColor = callback2(gradientValue).contextBar.backgroundColor;
   num = 40;
   const obj2 = floatingContextBar(num[10]);
   if (floatingContextBar) {
@@ -613,21 +624,21 @@ let closure_24 = importAllResult.forwardRef((children, ref) => {
   }, items);
   const imperativeHandle = sharedValue.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      const result = store.set(floatingContextBar(num[24]).withTiming(closure_2, closure_1_15));
+      const result = store.set(closure_1_0(closure_1_2[24]).withTiming(closure_2, closure_1_15));
     },
     componentDidEnter() {
-      const result = store.set(floatingContextBar(num[24]).withTiming(closure_2, closure_1_15));
+      const result = store.set(closure_1_0(closure_1_2[24]).withTiming(closure_2, closure_1_15));
     },
     componentWillLeave(current) {
       closure_4.current = current;
-      floatingContextBar(num[24]);
+      obj = closure_1_0(closure_1_2[24]);
       const fn = function n(arg0) {
         if (arg0) {
           closure_1_0(closure_1_2[23]).runOnJS(closure_5)();
           obj = closure_1_0(closure_1_2[23]);
         }
       };
-      obj = { runOnJS: floatingContextBar(num[23]).runOnJS, handleTransitionFinished: closure_5 };
+      obj = { runOnJS: closure_1_0(closure_1_2[23]).runOnJS, handleTransitionFinished: closure_5 };
       fn.__closure = obj;
       fn.__workletHash = 10908592279914;
       fn.__initData = closure_1_23;
@@ -639,7 +650,7 @@ let closure_24 = importAllResult.forwardRef((children, ref) => {
     floatingContextBar = tmp4.floatingContextBar;
   }
   style[1] = floatingContextBar;
-  return callback(backgroundColor(num[23]).View, { style, children: children.children });
+  return closure_12(backgroundColor(num[23]).View, { style, children: children.children });
 });
 const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
   channel = channel.channel;
@@ -655,43 +666,45 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
     },
     onCancelReplying() {
       if (null != closure_2) {
-        channel(pendingReply[25]).deletePendingReply(id.id);
-        const obj3 = channel(pendingReply[25]);
+        closure_1_0(closure_1_2[25]).deletePendingReply(id.id);
+        const obj3 = closure_1_0(closure_1_2[25]);
         const tmp10 = id;
+        const tmp8 = closure_1_0;
+        const tmp9 = closure_1_2;
         id = undefined;
-        if (closure_2 != null) {
-          id = closure_2.message.id;
+        if (tmp != null) {
+          id = tmp.message.id;
         }
         obj = { message_id: null, channel_id: null, guild_id: null, context_action: "reply", reason: null, is_own_message: null };
         obj[0] = id;
         ({ id: obj[1], guild_id: obj[2] } = tmp10);
-        const obj4 = chatInputRef(pendingReply[26]);
-        obj[4] = channel(pendingReply[27]).getContextBarCancelReason("reply", "cancel");
+        const obj4 = closure_1_1(closure_1_2[26]);
+        obj[4] = tmp8(tmp9[27]).getContextBarCancelReason("reply", "cancel");
         const currentUser = closure_1_9.getCurrentUser();
         let id1;
         if (currentUser != null) {
           id1 = currentUser.id;
         }
         let id2;
-        if (closure_2 != null) {
-          id2 = closure_2.message.author.id;
+        if (tmp != null) {
+          id2 = tmp.message.author.id;
         }
         obj[5] = id1 === id2;
         obj4.track(closure_1_10.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
-        const tmp8Result = channel(pendingReply[27]);
+        const tmp8Result = tmp8(tmp9[27]);
       }
     },
     onTapContextBarReply() {
       if (null != closure_2) {
-        channel = closure_2.channel;
-        closure_1_0(pendingReply[28]).transitionTo(closure_1_11.CHANNEL(channel.getGuildId(), closure_2.channel.id, closure_2.message.id));
-        obj = closure_1_0(pendingReply[28]);
+        channel = tmp.channel;
+        closure_1_0(closure_1_2[28]).transitionTo(closure_1_11.CHANNEL(channel.getGuildId(), tmp.channel.id, tmp.message.id));
+        obj = closure_1_0(closure_1_2[28]);
       }
     },
     onToggleReplyMention() {
       if (null != closure_2) {
-        const result = channel(pendingReply[25]).setPendingReplyShouldMention(closure_2.channel.id, !closure_2.shouldMention);
-        obj = channel(pendingReply[25]);
+        const result = closure_1_0(closure_1_2[25]).setPendingReplyShouldMention(tmp.channel.id, !tmp.shouldMention);
+        obj = closure_1_0(closure_1_2[25]);
       }
     }
   }), items);
@@ -746,16 +759,16 @@ const memoResult = importAllResult.memo(function ChatInputContextBar(channel) {
     const obj7 = { scheduledTimestamp: null, onCancelScheduling: null };
     obj7[0] = stateFromStores.scheduledTimestamp;
     obj7[1] = function onCancelScheduling() {
-      return chatInputRef(pendingReply[31]).clearDraft(channel.id, DraftType.ScheduledMessage);
+      return chatInputRef(pendingReply[31]).clearDraft(channel.id, closure_1_8.ScheduledMessage);
     };
     obj6[0] = callback(ChatInputScheduledMessageBar, obj7);
     tmp20 = callback(closure_24, obj6);
   }
   items2[3] = tmp20;
   obj[1] = items2;
-  return callback2(channel(pendingReply[30]).TransitionGroup, obj);
+  return closure_13(channel(pendingReply[30]).TransitionGroup, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/ChatInputContextBar.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputContextBar.tsx");
 
 export default memoResult;
 export { ChatInputReplyBar };

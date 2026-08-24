@@ -2,9 +2,9 @@
 import TableId from "../types/index.tsx";
 import open from "../raw/Host.tsx";
 import logger from "../raw/Runtime.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = fn;
+require = arg1;
 let Database;
 class Database {
   constructor(arg0) {
@@ -80,10 +80,11 @@ prototype["disable"] = function disable(arg0) {
   }
   return resolved;
 };
-prototype["execute"] = function execute(table, type) {
+prototype["execute"] = function execute(table) {
   const self = this;
   importDefault = table;
-  const _require = type;
+  let type = arg1;
+  const _require = arg1;
   if (null == this.raw) {
     const _Error = Error;
     const _HermesInternal2 = HermesInternal;
@@ -118,7 +119,7 @@ prototype["execute"] = function execute(table, type) {
       const _HermesInternal = HermesInternal;
       function callback() {
         const Runtime = callback(self[3]).Runtime;
-        type = callback;
+        let type = callback;
         if (callback == null) {
           type = table.type;
         }
@@ -190,10 +191,10 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
       HermesBuiltin.throwTypeError();
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw lastState;
+        throw arg1;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = lastState;
+        obj[0] = arg1;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -204,31 +205,34 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
         if (0 === c1) {
           if (arg0 === 1) {
             table = 3;
-            throw lastState;
+            throw arg1;
           } else if (arg0 === 2) {
             table = 3;
             obj = { value: null, done: true };
-            obj[0] = lastState;
+            obj[0] = arg1;
             return obj;
-          } else if (null == self.raw) {
-            const Closed = self(table[2]).DatabaseState.Closed;
-            table = 3;
           } else {
-            c1 = 1;
-            table = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = self.execute({ type: "db.state" });
-            return obj1;
+            const obj5 = closure_1_0;
+            if (null == closure_1_0.raw) {
+              const Closed = closure_1_0(table[2]).DatabaseState.Closed;
+              table = 3;
+            } else {
+              c1 = 1;
+              table = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = obj5.execute({ type: "db.state" });
+              return obj1;
+            }
           }
         } else if (arg0 === 1) {
           table = 3;
-          throw lastState;
+          throw arg1;
         } else if (arg0 !== 2) {
-          self.lastState = lastState;
+          obj5.lastState = arg1;
         }
         table = 3;
         obj = { value: null, done: true };
-        obj[0] = lastState;
+        obj[0] = arg1;
         return obj;
       } catch (tmp9) {
         table = tmp;
@@ -240,7 +244,7 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
 prototype["state"] = function state() {
   return this.lastState;
 };
-prototype["transaction"] = function transaction(fn) {
+prototype["transaction"] = function transaction(arg0, arg1) {
   const self = this;
   closure_1 = arg1;
   if (typeof DatabaseTransaction !== "function") {
@@ -249,8 +253,8 @@ prototype["transaction"] = function transaction(fn) {
   let obj = Object.create(DatabaseTransaction.prototype);
   obj.database = this;
   obj.operations = [];
-  const resolved = Promise.resolve(fn(obj));
-  return resolved.then((result) => {
+  const resolved = Promise.resolve(arg0(obj));
+  return resolved.then(() => {
     if (obj.operations.length > 0) {
       obj = { type: "db.transaction", operations: null };
       obj[1] = obj.complete();
@@ -285,7 +289,7 @@ prototype2["complete"] = function complete() {
 prototype2["toString"] = function toString() {
   return "[DatabaseTransaction " + this.database.handle + ": " + this.operations.length + " ops]";
 };
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Database.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Database.tsx");
 
 export { Database };
 export { DatabaseTransaction };

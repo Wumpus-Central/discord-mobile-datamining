@@ -3,15 +3,15 @@ import initializeDefault from "../../../../../discord_common/js/packages/flux/in
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import SearchTokenTypes from "../../SearchUtils.tsx";
 import isCompleteDefault from "SearchQueryTagManager.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import MessageEmbedTypes from "../../SearchConstants.tsx";
 import { SearchFilterAddLocations } from "../tracking/TrackingConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import areArraysShallowlyEqual from "../../../../utils/FunctionUtils.tsx";
 
-require = fn;
+require = arg1;
 ({ EMPTY_SEARCH_QUERY_STRING: closure_6, SearchQueryTagTypes: error } = MessageEmbedTypes);
 ({ SearchTokenTypes: c9, SearchTypes: c10 } = ME);
 const prototype = function SearchQueryStateManager(type) {
@@ -26,9 +26,9 @@ const prototype = function SearchQueryStateManager(type) {
     const queryString = tagsManager.getQueryString(flag);
     if (0 !== queryString.length) {
       const _HermesInternal = HermesInternal;
-      let textInputValue = "" + queryString + " " + obj.textInputValue;
+      let textInputValue = "" + queryString + " " + tmp.textInputValue;
     } else {
-      textInputValue = obj.textInputValue;
+      textInputValue = tmp.textInputValue;
     }
     return textInputValue;
   };
@@ -51,12 +51,13 @@ const prototype = function SearchQueryStateManager(type) {
     const isExplicitSearchSubmitted = obj.isExplicitSearchSubmitted;
     let tmp2 = !isExplicitSearchSubmitted;
     if (!isExplicitSearchSubmitted) {
-      let tmp3 = 0 === obj.textInputValue.trim().length;
+      let tmp3 = 0 === tmp.textInputValue.trim().length;
       if (tmp3) {
-        const tagsManager = obj.tagsManager;
+        const tagsManager = tmp.tagsManager;
         tmp3 = !tagsManager.hasUserAddedTags();
       }
       tmp2 = tmp3;
+      const str = tmp.textInputValue;
     }
     return tmp2;
   };
@@ -132,9 +133,9 @@ const prototype = function SearchQueryStateManager(type) {
   };
   obj.restoreDraftTextInputValue = function restoreDraftTextInputValue() {
     if (null != obj.draftTextInputValue) {
-      obj.textInputValue = obj.draftTextInputValue;
-      obj.textInputChangedFromInput = false;
-      obj.draftTextInputValue = null;
+      tmp.textInputValue = tmp.draftTextInputValue;
+      tmp.textInputChangedFromInput = false;
+      tmp.draftTextInputValue = null;
     }
   };
   obj.reset = function reset() {
@@ -329,7 +330,7 @@ areArraysShallowlyEqual = {
   }
 };
 const nativeSearchQueryStore = new NativeSearchQueryStore(dispatcherDefault, areArraysShallowlyEqual);
-let result = require("obj132").fileFinishedImporting("modules/search/native/stores/SearchQueryStore.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchQueryStore.tsx");
 
 export default nativeSearchQueryStore;
 export const SearchQueryStateManager = prototype;

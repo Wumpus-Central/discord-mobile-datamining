@@ -1,5 +1,5 @@
 // _runtime/16632_PriorityQueue.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const PriorityQueue = require;
@@ -46,8 +46,8 @@ const items = [
     value: function filter(arg0) {
       closure_0 = arg0;
       const _queue = this._queue;
-      const found = _queue.filter((item, index) => item.priority === priority.priority);
-      return found.map((item, index) => item.run);
+      const found = _queue.filter((priority) => priority.priority === priority.priority);
+      return found.map((run) => run.run);
     }
   },
   {

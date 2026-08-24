@@ -1,10 +1,11 @@
 // discord_app/modules/wishlists/records/PremiumWishlistItemRecord.tsx
 import fromServerDefault from "BaseWishlistItemRecord.tsx";
-import createFromServer from "../../skus/SKURecord.tsx";
+import closure_0 from "../../skus/SKURecord.tsx";
 import { SKUProductLines } from "../../../Constants.tsx";
 
 fromServerDefault;
-const prototype = function PremiumWishlistItemRecord(sku) {
+let prototype;
+prototype = function PremiumWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   tmp.skuProductLine = SKUProductLines.PREMIUM;
@@ -50,10 +51,11 @@ prototype["fromSKU"] = function fromSKU(id) {
     tmp9.skuProductLine = SKUProductLines.PREMIUM;
     tmp9.sku = obj.sku;
     tmp = tmp9;
+    const tmp2 = prototype;
   }
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/wishlists/records/PremiumWishlistItemRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/records/PremiumWishlistItemRecord.tsx");
 
 export default prototype;
 export const isPremiumWishlistItemRecord = function isPremiumWishlistItemRecord(arg0) {

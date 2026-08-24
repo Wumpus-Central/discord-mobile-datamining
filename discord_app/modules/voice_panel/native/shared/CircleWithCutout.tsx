@@ -6,7 +6,7 @@ import { PixelRatio } from "../../../../../_runtime/00017_get_ActivityIndicator.
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = PixelRatio.get();
 const memoResult = importAllResult.memo(function CircleWithCutout(arg0) {
@@ -41,8 +41,9 @@ const memoResult = importAllResult.memo(function CircleWithCutout(arg0) {
     diff = 2 * result - result1;
     tmp8 = result1;
   }
+  obj = { height: result2, width: result2, style: { transform: items }, children: null };
   obj = { scale: 1 / num };
-  const items = [obj];
+  items = [obj];
   obj1 = { children: null };
   const obj2 = { id: "mask", children: null };
   const items1 = [callback(inlineStyles.Rect, { width: result2, height: result2, fill: "white" }), callback(inlineStyles.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" })];
@@ -59,7 +60,7 @@ const memoResult = importAllResult.memo(function CircleWithCutout(arg0) {
   obj[3] = items2;
   return callback2(inlineStylesDefault, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
 
 export default memoResult;
 export const getBadgeLeft = require("CircleWithCutout").getBadgeLeft;

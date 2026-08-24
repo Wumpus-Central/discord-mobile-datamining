@@ -1,15 +1,16 @@
 // discord_app/modules/icymi/native/createICYMIStyles.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import { createCacheKey } from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
 
 export const createICYMIStyles = function createICYMIStyles(createCacheKey) {
-  _require = require("../../../design/components/Styles/native/createStyles.tsx").createStyles(createCacheKey);
+  _require = _createCacheKey.createStyles(createCacheKey);
   return () => {
     const items = [...arguments];
     const useContext = closure_1_2.useContext;
-    const items1 = [useContext(callback(dependencyMap[2]).ICYMIContext), ...items];
+    const items1 = [useContext(callback(closure_1_1[2]).ICYMIContext), ...items];
     return callback(...items);
   };
 };

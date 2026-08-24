@@ -1,28 +1,28 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx
-import obj132Default from "../../../../utils/Durations.tsx";
+import setDefault from "../../../../utils/Durations.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import QuestDockMode2 from "QuestDockStore.tsx";
+import closure_3 from "QuestDockStore.tsx";
 import { QuestDockMode } from "../../QuestConstants.tsx";
 import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QuestDockConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
-const require = fn;
-const SECOND = obj132Default.Millis.SECOND;
+const require = arg1;
+const SECOND = setDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };
 obj[0] = createFakeSharedValue.createFakeSharedValue(QuestDockMode.COLLAPSED);
-obj[1] = function setRestingQuestDockMode(callback) {
+obj[1] = function setRestingQuestDockMode(COLLAPSED) {
 
 };
 obj[2] = createFakeSharedValue.createFakeSharedValue(null);
-obj[3] = require("../../../../index.native.tsx");
+obj[3] = require("module_0");
 let context = importAllResult.createContext(obj);
-let closure_9 = obj132.isAndroid();
+let closure_9 = set.isAndroid();
 let closure_10 = { code: "function QuestDockExternalCoordinationContextTsx1(){const{restingQuestDockMode}=this.__closure;return restingQuestDockMode.get();}" };
 let closure_11 = { code: "function QuestDockExternalCoordinationContextTsx2(nextMode,prevMode){const{runOnJS,cancelReopenQuestDock}=this.__closure;if(nextMode!==prevMode){runOnJS(cancelReopenQuestDock)();}}" };
 let closure_12 = { code: "function QuestDockExternalCoordinationContextTsx3(contentOffsetY,contentHeight,layoutHeight){const{isScrollHandlerEnabled,restingQuestDockMode,QuestDockMode,lastContentOffsetY,lastScrollEventSourceId,id,runOnJS,cancelReopenQuestDock,IS_ANDROID,scheduleReopenQuestDock,setRestingQuestDockMode,QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD}=this.__closure;if(!isScrollHandlerEnabled.get())return;if(restingQuestDockMode.get()===QuestDockMode.SOFT_DISMISSED||restingQuestDockMode.get()===QuestDockMode.EXPANDED){return;}const lastContentOffsetYValue=lastContentOffsetY.get();lastContentOffsetY.set(contentOffsetY);if(lastContentOffsetYValue===contentOffsetY)return;const lastSourceId=lastScrollEventSourceId.get();if(id!=='guilds'){lastScrollEventSourceId.set(id);}const isFirstScrollEvent=id!=='guilds'&&id!==lastSourceId;if(isFirstScrollEvent)return;const isOverscrollingAtTop=contentOffsetY<0&&lastContentOffsetYValue<0;if(isOverscrollingAtTop){runOnJS(cancelReopenQuestDock)();return;}const hasLayoutData=layoutHeight!=null&&contentHeight!=null;const isOverscrollingAtBottom=hasLayoutData&&contentOffsetY+layoutHeight>=contentHeight;if(isOverscrollingAtBottom)return;const isScrolledToTop=contentOffsetY<=0&&(IS_ANDROID||lastContentOffsetYValue<=0);if(isScrolledToTop&&restingQuestDockMode.get()===QuestDockMode.CLOSED){if(IS_ANDROID){runOnJS(scheduleReopenQuestDock)();}else{runOnJS(setRestingQuestDockMode)(QuestDockMode.COLLAPSED);}return;}const isScrollingDown=contentOffsetY>lastContentOffsetYValue&&contentOffsetY>0&&lastContentOffsetYValue>0;const isScrollingUp=contentOffsetY<lastContentOffsetYValue;const scrollDistance=Math.abs(lastContentOffsetYValue-contentOffsetY);if(isScrollingDown&&restingQuestDockMode.get()===QuestDockMode.COLLAPSED){runOnJS(setRestingQuestDockMode)(QuestDockMode.CLOSED);}else if(isScrollingUp&&restingQuestDockMode.get()===QuestDockMode.CLOSED&&scrollDistance>=QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD){runOnJS(scheduleReopenQuestDock)();}}" };
-let result = obj132.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx");
+let result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx");
 
 export const QuestDockExternalCoordinationContext = context;
 export const QuestDockExternalCoordinationContextProvider = importAllResult.memo(function QuestDockExternalCoordinationContextProviderInner(children) {
@@ -31,37 +31,42 @@ export const QuestDockExternalCoordinationContextProvider = importAllResult.memo
   sharedValue1 = sharedValue(sharedValue1[7]).useSharedValue(0);
   let obj2 = sharedValue(sharedValue1[7]);
   const obj3 = sharedValue(sharedValue1[7]);
-  const sharedValue2 = obj3.useSharedValue(sharedValue(sharedValue1[8]).isSoftDismissed(callback.questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED);
+  const sharedValue2 = obj3.useSharedValue(sharedValue(sharedValue1[8]).isSoftDismissed(callback.questDockSoftDismissedAt) ? tmp3.SOFT_DISMISSED : tmp3.COLLAPSED);
   const items = [sharedValue2, sharedValue1];
   callback = sharedValue2.useCallback((mode) => {
     const result = sharedValue1.set(0);
     if (sharedValue2.get() !== mode) {
       const result1 = sharedValue2.set(mode);
     }
-    if (mode !== QuestDockMode.RESET_TO_PREVIOUS) {
+    if (mode !== closure_1_4.RESET_TO_PREVIOUS) {
       const result2 = sharedValue(sharedValue1[9]).updatePrevRestingQuestDockMode(mode);
       const obj2 = sharedValue(sharedValue1[9]);
     }
   }, items);
   const items1 = [sharedValue, sharedValue2, callback, sharedValue1];
   obj = { value: sharedValue2.useMemo(() => ({ lastScrollEventSourceId: sharedValue, restingQuestDockMode: sharedValue2, setRestingQuestDockMode: callback, questDockOffset: sharedValue1 }), items1), children: children.children };
-  return <context.Provider value={sharedValue2.useMemo(() => ({ lastScrollEventSourceId: sharedValue, restingQuestDockMode: sharedValue2, setRestingQuestDockMode: callback, questDockOffset: sharedValue1 }), items1)}>{children.children}</context.Provider>;
+  return <context.Provider value={sharedValue2.useMemo(() => ({ lastScrollEventSourceId: sharedValue, restingQuestDockMode: sharedValue2, setRestingQuestDockMode: callback, questDockOffset: sharedValue1 }), items1)}>{arg0.children}</context.Provider>;
 });
 export const useExternalScrollEventHandler = function useExternalScrollEventHandler(id) {
   id = id.id;
+  let setRestingQuestDockMode;
   let restingQuestDockMode;
+  let lastScrollEventSourceId;
+  closure_4 = undefined;
+  let callback;
+  let callback1;
   let sharedValue;
   let sharedValue1;
   context = restingQuestDockMode.useContext(sharedValue1);
-  const setRestingQuestDockMode = context.setRestingQuestDockMode;
+  setRestingQuestDockMode = context.setRestingQuestDockMode;
   restingQuestDockMode = context.restingQuestDockMode;
-  const lastScrollEventSourceId = context.lastScrollEventSourceId;
+  lastScrollEventSourceId = context.lastScrollEventSourceId;
   closure_4 = restingQuestDockMode.useRef(-1);
   const items = [setRestingQuestDockMode, restingQuestDockMode];
-  const callback = restingQuestDockMode.useCallback(() => {
+  callback = restingQuestDockMode.useCallback(() => {
     if (-1 !== ref.current) {
       const _window = window;
-      window.clearTimeout(ref.current);
+      window.clearTimeout(tmp.current);
     }
     ref.current = window.setTimeout(() => {
       if (closure_2.get() !== closure_1_4.EXPANDED) {
@@ -69,7 +74,7 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
       }
     }, 500);
   }, items);
-  const callback1 = restingQuestDockMode.useCallback(() => {
+  callback1 = restingQuestDockMode.useCallback(() => {
     if (-1 !== ref.current) {
       const _window = window;
       window.clearTimeout(tmp.current);

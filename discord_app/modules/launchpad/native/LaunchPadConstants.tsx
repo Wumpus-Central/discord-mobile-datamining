@@ -1,12 +1,12 @@
 // discord_app/modules/launchpad/native/LaunchPadConstants.tsx
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
 const Dimensions = get_ActivityIndicator.Dimensions;
 const size = Dimensions.get("screen");
 let num = 24;
-if (!obj132.isAndroid()) {
+if (!set.isAndroid()) {
   const _module1 = DCDDeviceManager;
   let num2 = 13;
   if (!_module1.isIpadOS()) {
@@ -15,7 +15,7 @@ if (!obj132.isAndroid()) {
   }
   num = num2;
 }
-const result = obj132.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
+const result = set.fileFinishedImporting("modules/launchpad/native/LaunchPadConstants.tsx");
 
 export const LAUNCH_PAD_SPRING_CONFIG = { damping: 20, stiffness: 280, mass: 0.5, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 export const LAUNCH_PAD_PULL_TAB_HEIGHT = 96;

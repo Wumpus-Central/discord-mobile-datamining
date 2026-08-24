@@ -1,11 +1,11 @@
 // discord_app/design/components/mana-assets/native/generated/LavaIllocon.native.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/LavaIllocon-2x.png.js";
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/LavaIllocon.native.tsx");
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LavaIllocon.native.tsx");
 
 export const LavaIllocon = function LavaIllocon(size) {
   let num = size.size;
@@ -13,7 +13,8 @@ export const LavaIllocon = function LavaIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  const obj = { uri: metadataDefault };
+  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  obj = { uri: metadataDefault };
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;

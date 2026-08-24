@@ -1,9 +1,9 @@
 // discord_app/utils/TrackedHTTPUtils.tsx
-import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_3 from "../../_runtime/metro/00109__objectWithoutProperties.js";
 
-const require = fn;
+const require = arg1;
 let closure_2 = ["trackedActionData"];
-const result = require("obj132").fileFinishedImporting("utils/TrackedHTTPUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/TrackedHTTPUtils.tsx");
 
 export default {
   get(trackedActionData) {
@@ -19,31 +19,31 @@ export default {
       del = arg0;
       closure_1 = arg1;
       const promise = del(closure_2);
-      del(closure_2).then((result) => {
+      del(closure_2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(result);
+          properties = obj.properties(status);
         }
-        obj = { status_code: result.status };
+        obj = { status_code: status.status };
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        callback(result);
-      }).catch((error) => {
+        callback(status);
+      }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(error);
+          properties = obj.properties(status);
         }
-        obj = { status_code: error.status, error_code: null, error_message: null };
-        const body = error.body;
+        obj = { status_code: status.status, error_code: null, error_message: null };
+        const body = status.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         obj[1] = code;
-        const body2 = error.body;
+        const body2 = status.body;
         let message;
         if (body2 != null) {
           message = body2.message;
@@ -52,11 +52,11 @@ export default {
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        lib(error);
+        lib(status);
       });
     });
   },
-  post(trackedActionData) {
+  post(trackedActionData, responseHandler) {
     post = post(trackedActionData[2]).HTTP.post;
     trackedActionData = undefined;
     closure_2 = undefined;
@@ -69,31 +69,31 @@ export default {
       del = arg0;
       closure_1 = arg1;
       const promise = del(closure_2);
-      del(closure_2).then((result) => {
+      del(closure_2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(result);
+          properties = obj.properties(status);
         }
-        obj = { status_code: result.status };
+        obj = { status_code: status.status };
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        callback(result);
-      }).catch((error) => {
+        callback(status);
+      }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(error);
+          properties = obj.properties(status);
         }
-        obj = { status_code: error.status, error_code: null, error_message: null };
-        const body = error.body;
+        obj = { status_code: status.status, error_code: null, error_message: null };
+        const body = status.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         obj[1] = code;
-        const body2 = error.body;
+        const body2 = status.body;
         let message;
         if (body2 != null) {
           message = body2.message;
@@ -102,7 +102,7 @@ export default {
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        lib(error);
+        lib(status);
       });
     });
   },
@@ -119,31 +119,31 @@ export default {
       del = arg0;
       closure_1 = arg1;
       const promise = del(closure_2);
-      del(closure_2).then((result) => {
+      del(closure_2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(result);
+          properties = obj.properties(status);
         }
-        obj = { status_code: result.status };
+        obj = { status_code: status.status };
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        callback(result);
-      }).catch((error) => {
+        callback(status);
+      }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(error);
+          properties = obj.properties(status);
         }
-        obj = { status_code: error.status, error_code: null, error_message: null };
-        const body = error.body;
+        obj = { status_code: status.status, error_code: null, error_message: null };
+        const body = status.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         obj[1] = code;
-        const body2 = error.body;
+        const body2 = status.body;
         let message;
         if (body2 != null) {
           message = body2.message;
@@ -152,7 +152,7 @@ export default {
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        lib(error);
+        lib(status);
       });
     });
   },
@@ -169,31 +169,31 @@ export default {
       del = arg0;
       closure_1 = arg1;
       const promise = del(closure_2);
-      del(closure_2).then((result) => {
+      del(closure_2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(result);
+          properties = obj.properties(status);
         }
-        obj = { status_code: result.status };
+        obj = { status_code: status.status };
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        callback(result);
-      }).catch((error) => {
+        callback(status);
+      }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(error);
+          properties = obj.properties(status);
         }
-        obj = { status_code: error.status, error_code: null, error_message: null };
-        const body = error.body;
+        obj = { status_code: status.status, error_code: null, error_message: null };
+        const body = status.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         obj[1] = code;
-        const body2 = error.body;
+        const body2 = status.body;
         let message;
         if (body2 != null) {
           message = body2.message;
@@ -202,7 +202,7 @@ export default {
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        lib(error);
+        lib(status);
       });
     });
   },
@@ -219,31 +219,31 @@ export default {
       del = arg0;
       closure_1 = arg1;
       const promise = del(closure_2);
-      del(closure_2).then((result) => {
+      del(closure_2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(result);
+          properties = obj.properties(status);
         }
-        obj = { status_code: result.status };
+        obj = { status_code: status.status };
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        callback(result);
-      }).catch((error) => {
+        callback(status);
+      }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
         if (typeof lib.properties === "function") {
-          properties = obj.properties(error);
+          properties = obj.properties(status);
         }
-        obj = { status_code: error.status, error_code: null, error_message: null };
-        const body = error.body;
+        obj = { status_code: status.status, error_code: null, error_message: null };
+        const body = status.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         obj[1] = code;
-        const body2 = error.body;
+        const body2 = status.body;
         let message;
         if (body2 != null) {
           message = body2.message;
@@ -252,7 +252,7 @@ export default {
         const merged = Object.assign(closure_1_3);
         const merged1 = Object.assign(properties);
         del(trackedActionData[1]).trackNetworkAction(obj.event, obj);
-        lib(error);
+        lib(status);
       });
     });
   }

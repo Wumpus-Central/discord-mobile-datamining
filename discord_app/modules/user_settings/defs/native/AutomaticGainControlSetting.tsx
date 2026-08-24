@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AutomaticGainControlSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
-import "createToggle";
+import closure_2 from "../../../../stores/MediaEngineStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.cUMdH0);
@@ -22,6 +22,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AutomaticGainControlSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AutomaticGainControlSetting.tsx");
 
 export default createToggle;

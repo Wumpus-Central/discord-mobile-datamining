@@ -6,7 +6,7 @@ function _get() {
       const _Reflect = Reflect;
       let fn = get.bind();
     }
-    module.exports = fn;
+    tmp.exports = fn;
     const apply = fn.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(null);

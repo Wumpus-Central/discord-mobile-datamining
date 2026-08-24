@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 class InappropriateConversationBlockAndReportAlert {
   constructor(arg0) {
     channelId = global.channelId;
@@ -21,8 +21,8 @@ class InappropriateConversationBlockAndReportAlert {
     items[2] = senderId;
     items[3] = warningType;
     callback = senderId.useCallback((cta) => {
-      channelId(warningType[2]);
-      const obj = { channelId, warningId, senderId, warningType, cta };
+      let obj = channelId(warningType[2]);
+      obj = { channelId, warningId, senderId, warningType, cta };
       obj.trackCtaEvent(obj);
     }, items);
     closure_8 = callback;
@@ -59,7 +59,7 @@ class InappropriateConversationBlockAndReportAlert {
     return analyticsBlockContext(tmp5, obj);
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
 
 export default InappropriateConversationBlockAndReportAlert;
 export { InappropriateConversationBlockAndReportAlert };

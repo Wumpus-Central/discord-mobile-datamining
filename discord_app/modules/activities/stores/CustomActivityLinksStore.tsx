@@ -1,7 +1,7 @@
 // discord_app/modules/activities/stores/CustomActivityLinksStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import getAssetURL from "../records/CustomActivityLinkRecord.tsx";
+import closure_0 from "../records/CustomActivityLinkRecord.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
@@ -21,12 +21,11 @@ const customActivityLinksStore = new CustomActivityLinksStore(dispatcherDefault,
       dependencyMap[applicationId] = Object.create(null);
     }
     dependencyMap[applicationId][link.link_id] = new closure_0(link);
-    const tmp3 = new closure_0(link);
   },
   LOGOUT: function handleLogout() {
     closure_1 = {};
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
 
 export default customActivityLinksStore;

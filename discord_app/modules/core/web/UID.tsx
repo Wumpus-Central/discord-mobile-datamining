@@ -1,9 +1,9 @@
 // discord_app/modules/core/web/UID.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import uniqueIdDefault from "../../../../_runtime/05261_uniqueId.js";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
 
-const result = obj132.fileFinishedImporting("modules/core/web/UID.tsx");
+const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {
   let str = arg0;

@@ -1,17 +1,16 @@
 // discord_app/modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx
-import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import UnreadIndicatorDefault from "GuildsBarAnimatedItemWrapper.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../../stores/SelectedGuildStore.tsx";
 import ME from "../../../Constants.tsx";
 import { PremiumUpsellTypes } from "../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function _handleCreateJoinGuildPress() {
   const self = this;
   const tmp = callback(function*() {
@@ -129,13 +128,13 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
     stateFromStores = obj1.useStateFromStores(items, () => guildId.getGuildId() === closure_8);
   }
   const items1 = [enabled];
+  obj = { style: tmp4.stretch, children: null };
   const memo = importAllResult.useMemo(() => ({
     onPress() {
       if (closure_0) {
         if (!obj.isAtGuildCapAndNonPremium()) {
           closure_1_1(closure_1_2[18])(closure_1_8);
         }
-        obj = enabled(closure_1_2[11]);
       }
       (function handleCreateJoinGuildPress() {
         const self = this;
@@ -152,6 +151,7 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   obj = { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "userIdRange", label: null, expandedChildren: "League of Legends", children: null };
   let tmp12 = !tmp3;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
+  const tmp10 = View;
   if (!tmp3) {
     tmp12 = !stateFromStores;
   }
@@ -161,12 +161,12 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   const intl = tmp5(1236).intl;
   obj[6] = intl.string(enabled(1236).t.l5WIbf);
   obj[7] = jsx(enabled(15616).HomeDrawerAddServerRowExpandedChildren, {});
-  const colors = ThemesDefault.colors;
+  const colors = tmp(712).colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
   obj[8] = jsx(enabled(9545).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
   obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: null, unread: false, styles: null, overState: "y", config: "userIdRange", label: null, expandedChildren: "League of Legends", children: null });
-  return <View selected={stateFromStores} circle={null} unread={false} styles={null} overState="y" config="userIdRange" label={null} expandedChildren="League of Legends">{null}</View>;
+  return <tmp10 selected={stateFromStores} circle={null} unread={false} styles={null} overState="y" config="userIdRange" label={null} expandedChildren="League of Legends">{null}</tmp10>;
 });
-let result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 
 export default memoResult;

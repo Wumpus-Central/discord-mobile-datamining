@@ -1,26 +1,29 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkSuccess.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { XboxLinkModalScenes } from "XboxLinkConstants.tsx";
 import XBOX_URL_BASE from "../../../../../game_console/GameConsoleConstants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Image: c5, View: closure_6, Linking: error, Pressable: closure_8 } = get_ActivityIndicator);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: unpackModuleId, XBOX_URL_BASE: closure_12 } = XBOX_URL_BASE);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { alignItems: "center", alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: ThemesDefault.radii.sm, flexDirection: "row" };
+createCacheKey = { image: { width: 58, height: 85, marginBottom: 24 }, getApp: null, appLogoBox: null, appLogo: null, getAppTitle: null, icon: null, externalLinkIcon: null };
+createCacheKey = { alignItems: "center", alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: ThemesDefault.radii.sm, flexDirection: "row" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 12, width: 40, height: 40, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX };
 createCacheKey[3] = { width: 32, height: 32 };
 createCacheKey[4] = { flex: 1 };
 createCacheKey[5] = { marginLeft: 8 };
+let obj1 = { marginRight: 12, width: 40, height: 40, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX };
 createCacheKey[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkSuccess.tsx");
+let obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkSuccess.tsx");
 
 export default function XboxLinkDiscordSuccess() {
   const tmp = callback3();
@@ -47,10 +50,11 @@ export default function XboxLinkDiscordSuccess() {
   obj1 = first(navigation[10]);
   navigation = obj1.useNavigation();
   const items1 = [navigation];
+  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   obj1 = { source: null, style: null };
   const callback1 = React.useCallback(() => {
-    navigation.push(XboxLinkModalScenes.EDUCATION);
+    navigation.push(closure_1_9.EDUCATION);
   }, items1);
   obj1[0] = importDefault(navigation[11]);
   obj1[1] = tmp.image;
@@ -81,20 +85,20 @@ export default function XboxLinkDiscordSuccess() {
     const obj8 = { source: null, style: null };
     obj8[0] = tmp15(tmp3[15]);
     obj8[1] = tmp.icon;
-    let tmp13Result = callback2(closure_5, obj8);
+    let tmp13Result = tmp13(closure_5, obj8);
   } else {
     const obj9 = { source: null, size: null, color: null, style: null };
     obj9[0] = tmp15(tmp3[17]);
     obj9[1] = tmp2(tmp3[16]).Icon.Sizes.SMALL;
     obj9[2] = tmp.externalLinkIcon.color;
     obj9[3] = tmp.icon;
-    tmp13Result = callback2(tmp2(tmp3[16]).Icon, obj9);
+    tmp13Result = tmp13(tmp2(tmp3[16]).Icon, obj9);
   }
   items3[2] = tmp13Result;
   obj4[2] = items3;
-  items2[3] = callback(closure_8, obj4);
+  items2[3] = closure_14(closure_8, obj4);
   obj[1] = items2;
-  const items4 = [callback(closure_6, obj), ];
+  const items4 = [closure_14(closure_6, obj), ];
   const obj10 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj11 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj12 = { size: "lg", variant: "primary", text: null, onPress: null };
@@ -105,5 +109,5 @@ export default function XboxLinkDiscordSuccess() {
   obj10[2] = callback2(closure_6, obj11);
   items4[1] = callback2(first(navigation[18]).SafeAreaPaddingView, obj10);
   obj[1] = items4;
-  return callback(closure_6, obj);
+  return closure_14(closure_6, obj);
 };

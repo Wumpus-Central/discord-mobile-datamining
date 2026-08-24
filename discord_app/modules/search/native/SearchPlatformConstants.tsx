@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/SearchPlatformConstants.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import LINKING_WHITELIST from "../../links/native/LinkingWhitelist.tsx";
 import FacebookNeutralIcon from "../../../design/components/Icon/native/redesign/generated/FacebookNeutralIcon.tsx";
 import InstagramNeutralIcon from "../../../design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx";
@@ -14,8 +14,10 @@ items[1] = obj;
 obj = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.instagram.regex, Icon: InstagramNeutralIcon.InstagramNeutralIcon };
 items[2] = obj;
 items[3] = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.facebook.regex, Icon: FacebookNeutralIcon.FacebookNeutralIcon };
+const obj1 = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.facebook.regex, Icon: FacebookNeutralIcon.FacebookNeutralIcon };
 items[4] = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.youtube.regex, Icon: YoutubeNeutralIcon.YoutubeNeutralIcon };
-const result = obj132.fileFinishedImporting("modules/search/native/SearchPlatformConstants.tsx");
+const obj2 = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.youtube.regex, Icon: YoutubeNeutralIcon.YoutubeNeutralIcon };
+const result = set.fileFinishedImporting("modules/search/native/SearchPlatformConstants.tsx");
 
 export const SEARCH_TEXT_INPUT_DEBOUNCE_TIME = 500;
 export const EMPTY_MEDIA_RESULTS = [];

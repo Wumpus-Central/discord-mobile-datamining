@@ -6,35 +6,36 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import sortByMatchScore from "../autocompleter/index.tsx";
 import sortByMatchScoreDefault from "../autocompleter/index.tsx";
 import createAutocompleterResultForChannelIdDefault from "../autocompleter/createAutocompleterResultForChannelId.tsx";
-import set from "../games/autocomplete/GameAutocompleteStore.tsx";
-import rebuild from "../threads/ActiveJoinedThreadsStore.tsx";
-import handleThemeChange from "../user_settings/ThemeStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleChanged from "../../stores/DraftStore.tsx";
+import closure_4 from "../games/autocomplete/GameAutocompleteStore.tsx";
+import closure_5 from "../threads/ActiveJoinedThreadsStore.tsx";
+import closure_6 from "../user_settings/ThemeStore.tsx";
+import closure_7 from "../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "../../stores/DraftStore.tsx";
 import { DraftType } from "../../stores/DraftStore.tsx";
-import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_11 from "../../stores/GuildChannelStore.tsx";
 import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
-import handleConnectionOpen2 from "../../stores/SelectedChannelStore.tsx";
-import handleConnectionOpen3 from "../../stores/SelectedGuildStore.tsx";
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
+import closure_13 from "../../stores/GuildMemberStore.tsx";
+import closure_14 from "../../stores/GuildStore.tsx";
+import closure_15 from "../../stores/PermissionStore.tsx";
+import closure_16 from "../../stores/ReadStateStore.tsx";
+import closure_17 from "../../stores/SelectedChannelStore.tsx";
+import closure_18 from "../../stores/SelectedGuildStore.tsx";
+import closure_19 from "../../stores/UserGuildSettingsStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function handleConnectionOpen() {
   let tmp = store3.getGuildCount() >= 3;
   if (!tmp) {
     tmp = applyDefault.size(mutablePrivateChannels.getMutablePrivateChannels()) >= 20;
+    const obj = applyDefault;
   }
   closure_25 = tmp;
   closure_30 = [];
 }
-function generateResultFromId(closure_31) {
-  const tmp = createAutocompleterResultForChannelIdDefault(closure_31);
+function generateResultFromId(arg0) {
+  const tmp = createAutocompleterResultForChannelIdDefault(arg0);
   let tmp2 = null;
   if (null != tmp) {
     if (null == c26) {
@@ -52,18 +53,18 @@ function generateInitialResults() {
   if (channelId(set[15]).AutocompleterResultTypes.USER === c26) {
     importDefault = store2.getId();
     const recentlyTalked = importDefault(tmp5[18]).getRecentlyTalked(channelId, 100);
-    return recentlyTalked.filter((item, index) => item.record.id !== closure_1);
-  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.APPLICATION === c26) {
+    return recentlyTalked.filter((record) => record.record.id !== closure_1);
+  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.APPLICATION === tmp3) {
     return importDefault(tmp5[18]).queryApplications({ query: "", limit: 100, fuzzy: true });
-  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GAME_PROFILE === c26) {
+  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GAME_PROFILE === tmp3) {
     return [];
-  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GUILD === c26) {
+  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.GUILD === tmp3) {
     return importDefault(tmp5[18]).queryGuilds({ query: "", limit: 100, fuzzy: true });
-  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.TEXT_CHANNEL === c26) {
+  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.TEXT_CHANNEL === tmp3) {
     obj = { query: "", guildId: null, limit: 100, fuzzy: true, allowEmptyQueries: true };
     obj[1] = obj.getGuildId();
     return importDefault(tmp5[18]).queryChannels(obj);
-  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.VOICE_CHANNEL === c26) {
+  } else if (tmp4(tmp5[15]).AutocompleterResultTypes.VOICE_CHANNEL === tmp3) {
     obj = { query: "", guildId: null, limit: 100, fuzzy: true, filter: null, type: null, allowEmptyQueries: true };
     obj[1] = obj.getGuildId();
     obj[4] = function filter() {
@@ -75,35 +76,46 @@ function generateInitialResults() {
     const _Set = Set;
     set = new Set();
     let items = [];
-    for (let num = 1; num < closure_31.length; num = num + 1) {
-      let tmp8 = generateResultFromId(closure_31[num]);
-      if (null != tmp8) {
-        let tmp46 = channelId;
-        let tmp47 = set;
-        let canResult = tmp8.type !== channelId(set[15]).AutocompleterResultTypes.TEXT_CHANNEL;
-        if (canResult) {
-          canResult = tmp8.type !== tmp46(tmp47[15]).AutocompleterResultTypes.VOICE_CHANNEL;
-        }
-        if (!canResult) {
-          canResult = closure_15.can(constants.VIEW_CHANNEL, tmp8.record);
-        }
-        if (canResult) {
-          let arr = items.push(tmp8);
-          if (set.size < 3) {
-            let addResult = set.add(closure_31[num]);
+    let num = 1;
+    if (1 < closure_31.length) {
+      do {
+        let tmp6 = generateResultFromId;
+        let tmp7 = closure_31;
+        let tmp8 = generateResultFromId(closure_31[num]);
+        let tmp9 = num;
+        if (null != tmp8) {
+          let tmp46 = channelId;
+          let tmp47 = set;
+          let canResult = tmp8.type !== channelId(set[15]).AutocompleterResultTypes.TEXT_CHANNEL;
+          if (canResult) {
+            canResult = tmp8.type !== tmp46(tmp47[15]).AutocompleterResultTypes.VOICE_CHANNEL;
+          }
+          if (!canResult) {
+            let tmp11 = closure_15;
+            let tmp12 = constants;
+            canResult = closure_15.can(constants.VIEW_CHANNEL, tmp8.record);
+          }
+          if (canResult) {
+            let arr = items.push(tmp8);
+            if (set.size < 3) {
+              let tmp14 = closure_31;
+              let addResult = set.add(closure_31[num]);
+            }
           }
         }
-      }
+        num = num + 1;
+        let tmp16 = closure_31;
+      } while (num < closure_31.length);
     }
     const items1 = [];
     let arr1 = (function getDrafts(arg0) {
       closure_0 = arg0;
       const items = [];
       recentlyEditedDrafts = recentlyEditedDrafts.getRecentlyEditedDrafts(ChannelMessage.ChannelMessage);
-      const item = recentlyEditedDrafts.forEach((item, index) => {
-        channelId = item.channelId;
+      const item = recentlyEditedDrafts.forEach((channelId) => {
+        channelId = channelId.channelId;
         if (!callback(channelId)) {
-          const tmp3 = items(set[17])(channelId);
+          const tmp3 = items(closure_1_2[17])(channelId);
           let tmp5 = null;
           if (null != tmp3) {
             if (null == closure_1_26) {
@@ -117,6 +129,7 @@ function generateInitialResults() {
             obj[0] = tmp5;
             obj[1] = channelId;
             items.push(obj);
+            const tmp12 = callback;
           }
         }
       });
@@ -139,10 +152,10 @@ function generateInitialResults() {
       const obj12 = channelId(set[15]);
     }
     mentionChannelIds = mentionChannelIds.getMentionChannelIds();
-    const found = mentionChannelIds.filter((item, index) => {
-      let tmp = item !== channelId;
+    const found = mentionChannelIds.filter((arg0) => {
+      let tmp = arg0 !== channelId;
       if (tmp) {
-        tmp = !set.has(item);
+        tmp = !set.has(arg0);
       }
       return tmp;
     });
@@ -151,7 +164,9 @@ function generateInitialResults() {
     if (0 <= diff) {
       do {
         let tmp22 = found[diff];
+        let tmp23 = diff;
         if (null != tmp22) {
+          let tmp24 = generateResultFromId;
           let tmp25 = generateResultFromId(tmp22);
           if (null != tmp25) {
             obj1 = { channelId: null, result: null };
@@ -178,17 +193,17 @@ function generateInitialResults() {
     let combined = items1;
     if (null != guildId) {
       selectableChannelIds = selectableChannelIds.getSelectableChannelIds(guildId);
-      const found1 = selectableChannelIds.filter((item, index) => {
-        const channel = closure_1_8.getChannel(item);
+      const found1 = selectableChannelIds.filter((id) => {
+        const channel = closure_1_8.getChannel(id);
         let hasItem = null == channel;
         if (!hasItem) {
-          hasItem = item === channelId;
+          hasItem = id === channelId;
         }
         if (!hasItem) {
-          hasItem = set.has(item);
+          hasItem = set.has(id);
         }
         if (!hasItem) {
-          hasItem = closure_1_19.isChannelMuted(channel.guild_id, item);
+          hasItem = closure_1_19.isChannelMuted(channel.guild_id, id);
         }
         if (!hasItem) {
           let isChannelMutedResult = null != channel.parent_id;
@@ -204,8 +219,8 @@ function generateInitialResults() {
         }
         return hasImportantUnread;
       });
-      const mapped = found1.map((item, index) => {
-        const tmp = callback(set[17])(item);
+      const mapped = found1.map((arg0) => {
+        const tmp = callback(set[17])(arg0);
         let tmp2 = null;
         if (null != tmp) {
           if (null == closure_26) {
@@ -219,24 +234,31 @@ function generateInitialResults() {
       const found2 = mapped.filter(channelId(set[21]).isNotNullish);
       const _Object = Object;
       const values = Object.values(activeJoinedUnreadThreadsForGuild.getActiveJoinedUnreadThreadsForGuild(guildId));
-      let item = values.forEach((item, index) => {
+      let item = values.forEach((obj) => {
         for (const key10004 in arg0) {
+          let tmp8 = key10004;
+          let tmp9 = callback;
+          let tmp10 = set;
           let tmp11 = callback(set[17])(key10004);
           let tmp3 = null;
           if (null != tmp11) {
+            let tmp = closure_1_26;
             if (null == closure_1_26) {
               tmp3 = tmp11;
             } else {
+              let tmp2 = closure_1_26;
               tmp3 = null;
             }
           }
           let hasItem = null == tmp3;
           if (!hasItem) {
+            let tmp5 = set;
             hasItem = set.has(tmp3.record.id);
           }
           if (hasItem) {
             continue;
           } else {
+            let tmp6 = found2;
             let arr = found2.push(tmp3);
             continue;
           }
@@ -292,7 +314,7 @@ function handleQuickSwitcherShow(arg0) {
     }
     const obj = { frecencyBoosters: true, blacklist: null, allowSnowflake: true };
     obj[1] = set;
-    tmp13 = new tmp13(handleUserSearchUpdate, items1, num, obj, 100);
+    tmp13 = new tmp13(tmp14, items1, num, obj, 100);
   }
   store = tmp13;
   c28 = null;
@@ -343,36 +365,41 @@ function handleUserSearchUpdate(arg0, str) {
       let items = arr;
       const DOWNResult = DOWN(7593);
     } else {
-      if (DOWN(7593).AutocompleterResultTypes.TEXT_CHANNEL === c26) {
+      if (DOWN(7593).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
         const intl5 = DOWN(1236).intl;
         arr = arr.unshift(DOWN(7593).createHeaderResult(intl5.string(DOWN(1236).t.W26k4V)));
         items = arr;
+        items = arr;
         const DOWNResult1 = DOWN(7593);
-      } else if (DOWN(7593).AutocompleterResultTypes.VOICE_CHANNEL === c26) {
+      } else if (DOWN(7593).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
         const intl4 = DOWN(1236).intl;
         arr.unshift(DOWN(7593).createHeaderResult(intl4.string(DOWN(1236).t.zUoI5C)));
         items = arr;
+        items = arr;
         const DOWNResult2 = DOWN(7593);
-      } else if (DOWN(7593).AutocompleterResultTypes.GUILD === c26) {
+      } else if (DOWN(7593).AutocompleterResultTypes.GUILD === tmp7) {
         const intl3 = DOWN(1236).intl;
         arr.unshift(DOWN(7593).createHeaderResult(intl3.string(DOWN(1236).t.olADPs)));
         items = arr;
+        items = arr;
         const DOWNResult3 = DOWN(7593);
-      } else if (DOWN(7593).AutocompleterResultTypes.APPLICATION === c26) {
+      } else if (DOWN(7593).AutocompleterResultTypes.APPLICATION === tmp7) {
         const intl2 = DOWN(1236).intl;
         arr.unshift(DOWN(7593).createHeaderResult(intl2.string(DOWN(1236).t.VwK1ld)));
         items = arr;
+        items = arr;
         const DOWNResult4 = DOWN(7593);
-      } else if (DOWN(7593).AutocompleterResultTypes.GAME_PROFILE === c26) {
+      } else if (DOWN(7593).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
         const intl = DOWN(1236).intl;
         arr.unshift(DOWN(7593).createHeaderResult(intl.string(DOWN(1236).t.gEp2SG)));
         items = arr;
+        items = arr;
         const DOWNResult5 = DOWN(7593);
       } else {
-        const found = arr.filter((item, index) => item.type === callback(7593).AutocompleterResultTypes.GAME_PROFILE);
+        const found = arr.filter((type) => type.type === callback(7593).AutocompleterResultTypes.GAME_PROFILE);
         const substr = found.slice(0, 3);
         items = [];
-        HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((item, index) => item.type !== callback(7593).AutocompleterResultTypes.GAME_PROFILE), 0));
+        HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(7593).AutocompleterResultTypes.GAME_PROFILE), 0));
       }
       if (str !== str) {
         const _Math = Math;
@@ -453,19 +480,19 @@ prototype["getResultTotals"] = function getResultTotals(GROUP_DM) {
     return 0;
   } else if (null == GROUP_DM) {
     const results = store.results;
-    let reduced = results.reduce((acc, item, index) => {
-      let sum = acc;
-      if (item.type !== GROUP_DM(table[15]).AutocompleterResultTypes.HEADER) {
-        sum = acc + 1;
+    let reduced = results.reduce((arg0, type) => {
+      let sum = arg0;
+      if (type.type !== GROUP_DM(table[15]).AutocompleterResultTypes.HEADER) {
+        sum = arg0 + 1;
       }
       return sum;
     }, 0);
   } else {
     const results1 = store.results;
-    reduced = results1.reduce((acc, item, index) => {
-      let sum = acc;
-      if (item.type === closure_0) {
-        sum = acc + 1;
+    reduced = results1.reduce((arg0, type) => {
+      let sum = arg0;
+      if (type.type === closure_0) {
+        sum = arg0 + 1;
       }
       return sum;
     }, 0);
@@ -544,17 +571,19 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
         const guildId = store4.getGuildId();
         if (queryMode === sortByMatchScore.AutocompleterResultTypes.USER) {
           if (null != guildId) {
-            const obj = { guild: null, friends: true };
+            let obj = { userFilters: null };
+            obj = { guild: null, friends: true };
             obj[0] = guildId;
             obj[0] = obj;
             store.setOptions(obj, true);
           }
         }
-        if (queryMode === sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL) {
+        if (queryMode === tmp7(7593).AutocompleterResultTypes.VOICE_CHANNEL) {
           store.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
           store.setOptions({ userFilters: null, voiceChannelGuildFilter: "a" }, true);
         }
+        tmp7 = require;
       }
       if (queryMode === sortByMatchScore.AutocompleterResultTypes.USER) {
         let guildId1 = store4.getGuildId();
@@ -584,7 +613,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
     if (null == channelId) {
       return false;
     } else {
-      found = found.filter((item, index) => item !== channelId);
+      found = found.filter((arg0) => arg0 !== channelId);
       found.unshift(channelId);
       if (found.length > 8) {
         found.length = 8;
@@ -594,7 +623,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
   GAME_AUTOCOMPLETE_FETCH_SUCCESS: handleGameAutocompleteSettled,
   GAME_AUTOCOMPLETE_FETCH_FAILURE: handleGameAutocompleteSettled
 });
-let result = require("obj132").fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
+let result = require("set").fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
 
 export default quickSwitcherStoreClass;
 export { generateResultFromId };

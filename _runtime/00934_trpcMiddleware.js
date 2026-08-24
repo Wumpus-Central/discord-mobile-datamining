@@ -1,11 +1,12 @@
 // _runtime/00934_trpcMiddleware.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = { mechanism: { handled: false, type: "auto.rpc.trpc.middleware" } };
 
 export const trpcMiddleware = function trpcMiddleware() {
-  closure_0 = asyncGeneratorStep((arg0) => {
+  closure_0 = undefined;
+  closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -45,7 +46,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               closure_3 = undefined;
               path = path.path;
               ({ next: c1, rawInput, getRawInput } = path);
-              const client = lib(dependencyMap[2]).getClient();
+              const client = lib(closure_2_1[2]).getClient();
               let options;
               if (client != null) {
                 options = client.getOptions();
@@ -53,7 +54,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               obj1 = { procedure_path: null, procedure_type: null };
               obj1[0] = path;
               obj1[1] = path.type;
-              let obj2 = lib(dependencyMap[3]);
+              let obj3 = lib(closure_2_1[3]);
               let normalizeDepth;
               if (options != null) {
                 normalizeDepth = options.normalizeDepth;
@@ -62,7 +63,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               if (normalizeDepth == null) {
                 c1 = 5;
               }
-              const result = obj2.addNonEnumerableProperty(obj1, "__sentry_override_normalization_depth__", 1 + c1);
+              const result = obj3.addNonEnumerableProperty(obj1, "__sentry_override_normalization_depth__", 1 + c1);
               if (undefined !== lib.attachRpcInput) {
                 let sendDefaultPii = lib.attachRpcInput;
               } else if (options != null) {
@@ -70,21 +71,21 @@ export const trpcMiddleware = function trpcMiddleware() {
               }
               if (sendDefaultPii) {
                 if (undefined !== rawInput) {
-                  const normalizer2 = lib(dependencyMap[4]);
-                  obj1.input = normalizer2.normalize(rawInput);
+                  obj1.input = lib(closure_2_1[4]).normalize(rawInput);
+                  const obj5 = lib(closure_2_1[4]);
                 }
                 if (undefined !== getRawInput) {
                   if (typeof getRawInput === "function") {
                     c4 = 1;
                     c5 = 2;
                     c6 = 1;
-                    obj2 = { value: null, done: false };
+                    let obj2 = { value: null, done: false };
                     obj2[0] = getRawInput();
                     return obj2;
                   }
                 }
               }
-              const obj8 = lib(dependencyMap[2]);
+              const obj10 = lib(closure_2_1[2]);
             }
           } else {
             if (1 === tmp7) {
@@ -94,20 +95,21 @@ export const trpcMiddleware = function trpcMiddleware() {
               throw arg1;
             } else if (arg0 !== 2) {
               closure_3 = arg1;
-              const normalizer = lib(dependencyMap[4]);
-              obj1.input = normalizer.normalize(closure_3);
+              obj = lib(closure_2_1[4]);
+              obj1.input = obj.normalize(closure_3);
               c4 = 0;
             }
             c4 = 0;
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
           }
-          lib(dependencyMap[2]).withIsolationScope((setContext) => {
+          lib(closure_2_1[2]).withIsolationScope((setContext) => {
             setContext.setContext("trpc", obj1);
-            path(closure_2_1[5]);
-            let obj = { name: "trpc/" + path, op: "rpc.server", attributes: { [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" }, forceTransaction: path.forceTransaction };
+            let obj = path(closure_2_1[5]);
+            obj = { name: "trpc/" + path, op: "rpc.server", attributes: { [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_2_0(closure_2_1[6]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" }, forceTransaction: path.forceTransaction };
+            path = undefined;
             path = closure_2_2((arg0) => {
               closure_0 = arg0;
               c5 = 0;
@@ -127,7 +129,7 @@ export const trpcMiddleware = function trpcMiddleware() {
             });
           });
           c6 = 3;
-          const obj4 = lib(dependencyMap[2]);
+          const obj6 = lib(closure_2_1[2]);
         } catch (tmp27) {
           if (tmp4 === c4) {
             c6 = tmp2;

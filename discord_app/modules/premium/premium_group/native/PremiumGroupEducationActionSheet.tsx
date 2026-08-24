@@ -1,5 +1,5 @@
 // discord_app/modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
@@ -14,17 +14,20 @@ import createCacheKey from "../../../../design/components/Styles/native/createSt
 const View = get_ActivityIndicator.View;
 const HELP_CENTER_LINK = SubscriptionStatusTypes.HELP_CENTER_LINK;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
+let obj = { container: { marginTop: 32, marginHorizontal: 30 }, aboutContainer: null, warningIcon: null, aboutTextContainer: null, helpdeskText: null };
+obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
 obj[1] = obj;
 obj[2] = { margin: 16 };
 obj[3] = { justifyContent: "center", flex: 1, marginRight: 30 };
 obj[4] = { textAlign: "center", marginBottom: 24 };
 let closure_7 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
 
 export default function PremiumGroupEducationActionSheet(children) {
   const tmp = callback3();
-  const obj = { style: tmp.aboutContainer, children: null };
+  let obj = { children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { style: tmp.aboutContainer, children: null };
   const items = [callback(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
   obj[1] = items;
   const items1 = [callback2(View, obj), ];

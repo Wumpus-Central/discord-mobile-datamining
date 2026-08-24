@@ -190,15 +190,15 @@ class RequestBase {
         closure_1 = arg1;
         _self.on("abort", () => {
           if (!lib._maxRetries) {
-            if (lib.timedout) {
-              if (lib.timedoutError) {
-                lib(lib.timedoutError);
+            if (tmp.timedout) {
+              if (tmp.timedoutError) {
+                lib(tmp.timedoutError);
               }
             }
             const _Error = Error;
             error = new Error("Aborted");
             error.code = "ABORTED";
-            ({ status: tmp5.status, method: tmp5.method, url: tmp5.url } = lib);
+            ({ status: tmp5.status, method: tmp5.method, url: tmp5.url } = tmp);
             lib(error);
           }
         });
@@ -397,12 +397,12 @@ class RequestBase {
       if (self.req) {
         tmp2 = closure_0;
         tmp3 = closure_1;
-        obj = require("metro/00576__.js");
+        obj = require("module_576");
         tmp4 = globalThis;
         _process = process;
         str = "v13.0.0";
         if (obj.gte(process.version, "v13.0.0")) {
-          tmp2Result = require("metro/00576__.js");
+          tmp2Result = require("module_576");
           _process2 = process;
           str2 = "v14.0.0";
           if (tmp2Result.lt(process.version, "v14.0.0")) {
@@ -493,20 +493,20 @@ class RequestBase {
     tmp3 = closure_1;
     obj = require("_createForOfIteratorHelper");
     isObjectResult = obj.isObject(global);
-    prop = this._header["content-type"];
+    content_type = this._header["content-type"];
     if (this._formData) {
-      tmp36 = globalThis;
+      tmp35 = globalThis;
       _Error4 = Error;
-      tmp37 = new.target;
+      tmp36 = new.target;
       str11 = ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()";
-      tmp38 = new.target;
+      tmp37 = new.target;
       error = new Error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
-      tmp40 = error;
+      tmp39 = error;
       throw error;
     } else {
       if (isObjectResult) {
         if (!self._data) {
-          tmp6 = globalThis;
+          tmp5 = globalThis;
           _Array = Array;
           if (Array.isArray(global)) {
             self._data = [];
@@ -517,33 +517,33 @@ class RequestBase {
         if (isObjectResult) {
           tmp2Result = require("_createForOfIteratorHelper");
           if (tmp2Result.isObject(self._data)) {
-            tmp19 = global;
-            tmp13 = prop;
+            tmp18 = global;
+            tmp12 = content_type;
             keys = Object.keys();
             if (keys !== undefined) {
-              tmp13 = prop;
-              tmp21 = keys[tmp];
-              while (tmp21 !== undefined) {
-                tmp41 = tmp21;
-                if (typeof global[tmp21] === "bigint") {
-                  if (!global[tmp21].toJSON) {
-                    tmp22 = globalThis;
+              tmp12 = content_type;
+              tmp20 = keys[tmp];
+              while (tmp20 !== undefined) {
+                tmp40 = tmp20;
+                if (typeof global[tmp20] === "bigint") {
+                  if (!global[tmp20].toJSON) {
+                    tmp21 = globalThis;
                     _Error2 = Error;
-                    tmp23 = new.target;
+                    tmp22 = new.target;
                     str8 = "Cannot serialize BigInt value to json";
-                    tmp24 = new.target;
+                    tmp23 = new.target;
                     error1 = new Error("Cannot serialize BigInt value to json");
-                    tmp26 = error1;
+                    tmp25 = error1;
                     throw error1;
                   }
                 }
-                tmp27 = closure_0;
-                tmp28 = closure_1;
+                tmp26 = closure_0;
+                tmp27 = closure_1;
                 obj3 = require("_createForOfIteratorHelper");
-                if (!obj3.hasOwn(global, tmp21)) {
+                if (!obj3.hasOwn(global, tmp20)) {
                   continue;
                 } else {
-                  self._data[tmp21] = global[tmp21];
+                  self._data[tmp20] = global[tmp20];
                   continue;
                 }
                 continue;
@@ -555,7 +555,7 @@ class RequestBase {
             _isHostResult = self._isHost(global);
           }
           if (!_isHostResult) {
-            _isHostResult = tmp13;
+            _isHostResult = tmp12;
           }
           if (!_isHostResult) {
             str9 = "json";
@@ -564,16 +564,16 @@ class RequestBase {
           return self;
         }
         if (typeof global === "bigint") {
-          tmp14 = globalThis;
+          tmp13 = globalThis;
           _Error = Error;
-          tmp15 = new.target;
+          tmp14 = new.target;
           str7 = "Cannot send value of type BigInt";
-          tmp16 = new.target;
+          tmp15 = new.target;
           error2 = new Error("Cannot send value of type BigInt");
-          tmp18 = error2;
+          tmp17 = error2;
           throw error2;
         } else if (typeof global === "string") {
-          if (!prop) {
+          if (!content_type) {
             str = "form";
             typeResult1 = self.type("form");
           }
@@ -587,7 +587,7 @@ class RequestBase {
           if ("application/x-www-form-urlencoded" === trimmed) {
             combined = global;
             if (self._data) {
-              tmp12 = globalThis;
+              tmp11 = globalThis;
               _HermesInternal = HermesInternal;
               str5 = "&";
               str6 = "";
@@ -595,26 +595,26 @@ class RequestBase {
             }
             sum = combined;
           } else {
-            tmp9 = self._data || "";
-            sum = tmp9 + global;
+            tmp8 = self._data || "";
+            sum = tmp8 + global;
           }
           self._data = sum;
-          tmp13 = trimmed;
+          tmp12 = trimmed;
         } else {
           self._data = global;
-          tmp13 = prop;
+          tmp12 = content_type;
         }
       }
       if (global) {
         if (self._data) {
           if (self._isHost(self._data)) {
-            tmp31 = globalThis;
+            tmp30 = globalThis;
             _Error3 = Error;
-            tmp32 = new.target;
+            tmp31 = new.target;
             str10 = "Can't merge these send calls";
-            tmp33 = new.target;
+            tmp32 = new.target;
             error3 = new Error("Can't merge these send calls");
-            tmp35 = error3;
+            tmp34 = error3;
             throw error3;
           }
         }
@@ -655,7 +655,7 @@ class RequestBase {
           sorted1 = parts.sort();
         }
         url2 = self.url;
-        str2 = require("../discord_app/index.native.tsx") + str2;
+        str2 = require("module_0") + str2;
         self.url = str2 + parts.join("&");
       }
     }

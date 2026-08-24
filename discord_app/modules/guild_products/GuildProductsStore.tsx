@@ -1,14 +1,14 @@
 // discord_app/modules/guild_products/GuildProductsStore.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
-let closure_6 = 10 * obj132Default.Millis.MINUTE;
+let closure_6 = 10 * setDefault.Millis.MINUTE;
 const secondaryIndexMap = new require("version").SecondaryIndexMap((guild_id) => {
   const items = ["guild:" + guild_id.guild_id];
   if (guild_id.published) {
@@ -81,17 +81,17 @@ obj = {
     guildId = guildId.guildId;
     closure_3[guildId] = obj.FETCHING;
     const items = [...secondaryIndexMap.values("guild:" + guildId)];
-    const item = items.forEach((item, index) => {
-      set.delete(item.id);
+    const item = items.forEach((id) => {
+      set.delete(id.id);
     });
   },
   GUILD_PRODUCTS_FETCH_SUCCESS: function handleFetchProductsSuccess(arg0) {
     ({ guildId, products } = arg0);
     closure_3[guildId] = obj.FETCHED;
     closure_5[guildId] = Date.now();
-    const item = products.forEach((item, index) => {
-      const result = closure_7.set(item.id, item);
-      closure_4[item.id] = constants.FETCHED;
+    const item = products.forEach((id) => {
+      const result = closure_7.set(id.id, id);
+      closure_4[id.id] = constants.FETCHED;
     });
   },
   GUILD_PRODUCTS_FETCH_FAILURE: function handleFetchProductsFailure(guildId) {
@@ -125,7 +125,7 @@ obj = {
   }
 };
 const guildProductsStore = new GuildProductsStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("modules/guild_products/GuildProductsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsStore.tsx");
 
 export default guildProductsStore;
 export const FetchState = obj;

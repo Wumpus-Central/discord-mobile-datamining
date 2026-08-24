@@ -1,8 +1,8 @@
 // _runtime/06666__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import Stop from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 function _isNativeReflectConstruct() {

@@ -2,14 +2,14 @@
 import registerAssetDefault from "../../../../../../_runtime/11948_registerAsset.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
 import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsConstants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { SearchNavigatorScreens } from "../../../../search/native/components/navigator/SearchNavigatorConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createNativeStackNavigator from "../../../../../../_runtime/09931_createNativeStackNavigator.js";
 
-const require = fn;
+const require = arg1;
 function ConnectedCreateThreadHeaderButton(channelId) {
   channelId = channelId.channelId;
   let obj = channelId(647);
@@ -53,6 +53,7 @@ const memoResult = importAllResult.memo((route) => {
     DETAILS = constants.DETAILS;
   }
   let channelSettingsScreensStyles;
+  let guildId;
   let obj = channelSettingsScreensStyles;
   const items = [channelId, DETAILS, source];
   const effect = channelSettingsScreensStyles.useEffect(() => {
@@ -64,7 +65,7 @@ const memoResult = importAllResult.memo((route) => {
       obj[2] = channel.type;
       obj[3] = DETAILS;
       obj[4] = source;
-      source(DETAILS[14]).track(AnalyticEvents.CHANNEL_SIDEBAR_VIEWED, obj);
+      source(DETAILS[14]).track(closure_1_7.CHANNEL_SIDEBAR_VIEWED, obj);
       const obj2 = source(DETAILS[14]);
     }
   }, items);
@@ -78,7 +79,7 @@ const memoResult = importAllResult.memo((route) => {
   let obj2 = channelId(DETAILS[16]);
   const accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
   channel = channel.getChannel(channelId);
-  let guildId;
+  guildId = undefined;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
@@ -107,7 +108,8 @@ const memoResult = importAllResult.memo((route) => {
     return tmp2;
   });
   const rect = source(tmp4[19])();
-  const items3 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj = { style: items3, children: null };
+  items3 = [channelSettingsScreensStyles.container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = { id: "channel-details-navigator", screenOptions: null, initialRouteName: null, children: null };
   obj1 = { headerTitle: tmp3(tmp4[11]).renderGenericTitle, headerTitleAlign: "center" };
   let merged = Object.assign(accessibilityNativeStackOptions);
@@ -129,14 +131,14 @@ const memoResult = importAllResult.memo((route) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            route(8492);
-            const obj = {};
+            let obj = route(8492);
+            obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(500).isAndroid();
             return obj.renderHeader(obj);
           },
           headerTitle() {
-            return closure_1_9(source(DETAILS[22]), { channelId: route.params.channelId });
+            return closure_1_9(closure_1_1(closure_1_2[22]), { channelId: route.params.channelId });
           },
           headerLeft: route(DETAILS[11]).getRenderBackImage(route.navigation)
         };
@@ -155,10 +157,10 @@ const memoResult = importAllResult.memo((route) => {
         const intl = channelId(DETAILS[12]).intl;
         obj[0] = intl.string(channelId(DETAILS[12]).t["mp1N/2"]);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = channelId(DETAILS[11]);
+          let tmpResult = tmp(tmp2[11]);
           let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
         } else {
-          tmpResult = channelId(DETAILS[11]);
+          tmpResult = tmp(tmp2[11]);
           renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
         }
         obj[1] = renderModalCloseImage;
@@ -177,10 +179,10 @@ const memoResult = importAllResult.memo((route) => {
         const intl = channelId(DETAILS[12]).intl;
         obj[0] = intl.string(channelId(DETAILS[12]).t.w4m945);
         if (DETAILS === navigation.route.name) {
-          let tmpResult = channelId(DETAILS[11]);
+          let tmpResult = tmp(tmp2[11]);
           let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
         } else {
-          tmpResult = channelId(DETAILS[11]);
+          tmpResult = tmp(tmp2[11]);
           renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
         }
         obj[1] = renderModalCloseImage;
@@ -202,10 +204,10 @@ const memoResult = importAllResult.memo((route) => {
     const intl = channelId(DETAILS[12]).intl;
     obj[0] = intl.string(channelId(DETAILS[12]).t.B2panI);
     if (DETAILS === route.name) {
-      let tmpResult = channelId(DETAILS[11]);
+      let tmpResult = tmp(tmp2[11]);
       let renderModalCloseImage = tmpResult.getRenderModalCloseImage(navigation);
     } else {
-      tmpResult = channelId(DETAILS[11]);
+      tmpResult = tmp(tmp2[11]);
       renderModalCloseImage = tmpResult.getRenderModalBackImage(navigation);
     }
     obj[1] = renderModalCloseImage;
@@ -219,8 +221,8 @@ const memoResult = importAllResult.memo((route) => {
   };
   items4[4] = callback(closure_12.Screen, obj6);
   const entries = Object.entries(memo1);
-  items4[5] = entries.map((item, index) => {
-    [tmp, ] = item;
+  items4[5] = entries.map((arg0) => {
+    [tmp, ] = arg0;
     return closure_1_9(closure_1_12.Screen, {
       name: tmp,
       options(navigation) {
@@ -249,6 +251,6 @@ const memoResult = importAllResult.memo((route) => {
   obj[1] = callback2(closure_12.Navigator, obj);
   return callback(guildId, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx");
 
 export default memoResult;

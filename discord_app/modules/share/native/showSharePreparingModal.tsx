@@ -1,16 +1,17 @@
 // discord_app/modules/share/native/showSharePreparingModal.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import SHARE_PREPARING_MODAL_KEY2 from "SharePreparingModalConstants.tsx";
 
 const SHARE_PREPARING_MODAL_KEY = SHARE_PREPARING_MODAL_KEY2.SHARE_PREPARING_MODAL_KEY;
-const result = obj132.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");
+const result = set.fileFinishedImporting("modules/share/native/showSharePreparingModal.tsx");
 
 export const showSharePreparingModal = function showSharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
+  let timeout;
   c1 = false;
-  const timeout = setTimeout(() => {
-    callback(paths[1]);
-    let obj = {
+  timeout = setTimeout(() => {
+    let obj = callback(paths[1]);
+    obj = {
       onCancel() {
         if (!c1) {
           c1 = true;
@@ -22,7 +23,7 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
         }
       }
     };
-    obj.pushLazy(onCancel(paths[3])(paths[2], paths.paths), obj, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then((result) => {
+    obj.pushLazy(onCancel(paths[3])(paths[2], paths.paths), obj, closure_1_3, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (closure_1) {
         closure_1_1(closure_1_2[1]).popWithKey(closure_1_3);
         const obj = closure_1_1(closure_1_2[1]);
@@ -34,7 +35,7 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
       callback = true;
       const _clearTimeout = clearTimeout;
       clearTimeout(paths);
-      callback(paths[1]).popWithKey(SHARE_PREPARING_MODAL_KEY);
+      callback(paths[1]).popWithKey(closure_1_3);
       const obj = callback(paths[1]);
     }
   };

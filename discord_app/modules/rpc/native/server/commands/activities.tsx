@@ -2,15 +2,17 @@
 import prototypeDefault from "../../../RPCError.tsx";
 import showInstantInviteActionSheet from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import RPC_SCOPE_CONFIG from "../../../Constants.tsx";
 import ME from "../../../../../Constants.tsx";
 import { NativePermissionTypes } from "../../../../native_permissions/NativePermissionConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
 ({ InstantInviteSources: c4, RPCCommands, RPCErrors: c5 } = ME);
 let obj = {};
+obj = { scope: null, handler: null };
+obj = {};
 const items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
@@ -29,8 +31,8 @@ obj[1] = function handler(socket) {
     const id = socket.application.id;
     obj[1] = id;
     const result1 = showInstantInviteActionSheet.showInstantInviteActionSheet(tmp4, obj);
-    const tmpResult = showInstantInviteActionSheet;
   }
+  const tmp = require;
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = obj;
 let obj1 = { scope: null, handler: null };
@@ -73,7 +75,7 @@ obj1[1] = function handler(socket) {
             id = undefined;
             c2 = undefined;
             c3 = undefined;
-            id = socket.application.id;
+            id = closure_1_0.application.id;
             if (null == id) {
               obj1 = { errorCode: null };
               obj1[0] = closure_1_5.INVALID_COMMAND;
@@ -96,7 +98,7 @@ obj1[1] = function handler(socket) {
                 c2 = 1;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = permission.catch((error) => {
+                obj3[0] = permission.catch(() => {
                   throw new id(table[6])({ errorCode: constants.UNKNOWN_ERROR }, "Failed requesting photo permissions");
                 });
                 return obj3;
@@ -116,12 +118,12 @@ obj1[1] = function handler(socket) {
             c2 = 2;
             c3 = 1;
             const obj5 = { value: null, done: false };
-            obj5[0] = closure_1_1(tmp87[10]).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 });
+            obj5[0] = tmp86(tmp87[10]).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 });
             return obj5;
           } else {
             const obj6 = { errorCode: null };
             obj6[0] = closure_1_5.UNKNOWN_ERROR;
-            const tmp42 = new closure_1_1(tmp87[6])(obj6, "Missing photo permissions");
+            const tmp42 = new tmp86(tmp87[6])(obj6, "Missing photo permissions");
             throw tmp42;
           }
         } else if (2 === tmp6) {
@@ -148,7 +150,7 @@ obj1[1] = function handler(socket) {
               c2 = 3;
               c3 = 1;
               const obj10 = { value: null, done: false };
-              obj10[0] = socket(closure_2[11]).uploadImageAttachment(id, id, obj9);
+              obj10[0] = closure_1_0(closure_2[11]).uploadImageAttachment(id, id, obj9);
               return obj10;
             }
           }
@@ -189,6 +191,6 @@ obj1[1] = function handler(socket) {
   })();
 };
 obj[RPCCommands.INITIATE_IMAGE_UPLOAD] = obj1;
-let result = require("obj132").fileFinishedImporting("modules/rpc/native/server/commands/activities.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/native/server/commands/activities.tsx");
 
 export default obj;

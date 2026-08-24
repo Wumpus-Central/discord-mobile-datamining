@@ -1,10 +1,10 @@
 // discord_app/modules/premium/ProductCatalog.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import timestampDefault from "../debug/Logger.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import EntitlementFeatureNames from "../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import getUserMaxFileSize from "../../utils/PremiumFeatureUtils.tsx";
-import obj132Default from "SKUListing.tsx";
+import setDefault from "SKUListing.tsx";
 import apexExperimentDefault from "experiments/DenormalizedPerksReadExperiment.tsx";
 import GuildFeatures from "PremiumConstants.tsx";
 import importDefaultResult1 from "PremiumSKUFeature.tsx";
@@ -859,6 +859,7 @@ const object12 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.VIDE
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
+closure_0 = object12;
 importDefaultResult1 = new importDefaultResult1(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, getUserMaxFileSize.getUserMaxFileSize);
 closure_0 = undefined;
 const object13 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
@@ -1039,13 +1040,13 @@ closure_0 = tmp29;
 let obj = {};
 const items = [object, object, object1, tmp, object12, tmp28, tmp29, tmp2];
 const tmp35 = new timestampDefault("ProductCatalog.tsx");
-obj[PremiumSubscriptionSKUs.TIER_0] = new obj132Default(PremiumSubscriptionSKUs.TIER_0, items);
+obj[PremiumSubscriptionSKUs.TIER_0] = new setDefault(PremiumSubscriptionSKUs.TIER_0, items);
 const items1 = [object, object, object5, object6, tmp, tmp3, object9, tmp5, tmp28, tmp29, tmp2];
-const tmp67 = new obj132Default(PremiumSubscriptionSKUs.TIER_0, items);
-obj[PremiumSubscriptionSKUs.TIER_1] = new obj132Default(PremiumSubscriptionSKUs.TIER_1, items1);
+const tmp67 = new setDefault(PremiumSubscriptionSKUs.TIER_0, items);
+obj[PremiumSubscriptionSKUs.TIER_1] = new setDefault(PremiumSubscriptionSKUs.TIER_1, items1);
 const items2 = [object, object, object1, object2, object3, object5, object6, object7, tmp, tmp, object8, tmp3, tmp4, object9, object10, tmp5, tmp6, tmp7, object12, object13, object14, tmp28, tmp29, tmp2, tmp1, object11, object4, tmp29];
-const tmp68 = new obj132Default(PremiumSubscriptionSKUs.TIER_1, items1);
-obj[PremiumSubscriptionSKUs.TIER_2] = new obj132Default(PremiumSubscriptionSKUs.TIER_2, items2);
+const tmp68 = new setDefault(PremiumSubscriptionSKUs.TIER_1, items1);
+obj[PremiumSubscriptionSKUs.TIER_2] = new setDefault(PremiumSubscriptionSKUs.TIER_2, items2);
 const frozen = Object.freeze(obj);
 const items3 = [tmp3, tmp4];
 const items4 = [tmp29];
@@ -1099,8 +1100,8 @@ items6[22] = items28;
 const items29 = [tmp28, create.Perk.INCREASED_VIDEO_UPLOAD_QUALITY];
 items6[23] = items29;
 const map = new Map(items6);
-const tmp69 = new obj132Default(PremiumSubscriptionSKUs.TIER_2, items2);
-const result = obj132.fileFinishedImporting("modules/premium/ProductCatalog.tsx");
+const tmp69 = new setDefault(PremiumSubscriptionSKUs.TIER_2, items2);
+const result = set.fileFinishedImporting("modules/premium/ProductCatalog.tsx");
 
 export const ANIMATED_EMOJIS = object;
 export const EMOJIS_EVERYWHERE = object;
@@ -1166,12 +1167,13 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
-        const tmp9Result = callback(1938);
-        if (config === callback(13443).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        const tmp9Result = tmp9(1938);
+        if (config === tmp9(13443).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;
       }
+      const obj = apexExperimentDefault;
     }
   }
   return COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);

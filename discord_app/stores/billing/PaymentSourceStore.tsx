@@ -1,7 +1,7 @@
 // discord_app/stores/billing/PaymentSourceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import createFromServer from "../../records/PaymentSourceRecord.tsx";
+import closure_0 from "../../records/PaymentSourceRecord.tsx";
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;
@@ -79,9 +79,13 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     closure_1 = {};
     let id = null;
     for (const item10009 of paymentSources) {
+      let tmp2 = closure_1;
+      let tmp3 = closure_0;
+      let tmp = item10009;
       closure_1[item10009.id] = closure_0.createFromServer(item10009);
       if (item10009.default) {
-        id = item10009.id;
+        let tmp4 = item10009;
+        id = tmp.id;
       }
       continue;
     }
@@ -113,6 +117,6 @@ const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
     c3 = false;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
+const result = require("set").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
 
 export default paymentSourceStore;

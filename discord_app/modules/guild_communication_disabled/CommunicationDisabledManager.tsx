@@ -1,11 +1,11 @@
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isCommunicationDisabled from "CommunicationDisabledUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import trackCommunicationDisabled2 from "../../stores/GuildMemberStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 
 function clearGuildMemberTimeout(closure_2, closure_1) {
   member = member.getMember(closure_2, closure_1);
@@ -48,6 +48,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         obj1 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
         dispatcherDefault.dispatch(obj1);
+        const obj4 = dispatcherDefault;
       }
       obj6 = isCommunicationDisabled;
     }
@@ -68,13 +69,12 @@ prototype["_initialize"] = function _initialize() {
   const interval = setInterval(() => {
     communicationDisabledUserMap = communicationDisabledUserMap.getCommunicationDisabledUserMap();
     const keys = Object.keys(communicationDisabledUserMap);
-    const item = keys.forEach((item, index) => {
-      const tmp = closure_1_3(item);
-      const tmp2 = closure_1_4(item);
-      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[item])) {
+    const item = keys.forEach((arg0) => {
+      const tmp = closure_1_3(arg0);
+      const tmp2 = closure_1_4(arg0);
+      if (!obj.isCommunicationDisabled(communicationDisabledUserMap[arg0])) {
         closure_1_8(tmp, tmp2);
       }
-      obj = communicationDisabledUserMap(closure_1_2[2]);
     });
   }, 10000);
 };
@@ -82,6 +82,6 @@ prototype["_terminate"] = function _terminate() {
   clearInterval(c7);
 };
 const communicationDisabledManager = new CommunicationDisabledManager();
-const result = obj132.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
+const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
 
 export default communicationDisabledManager;

@@ -1,17 +1,19 @@
 // discord_app/modules/soundboard/useCustomJoinSound.tsx
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
 import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "SoundboardConstants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 let obj = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
-const result = require("obj132").fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
+const result = require("set").fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
 
 export const CustomSoundType = obj;
 export const useCustomJoinSound = function useCustomJoinSound(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
-    let guilds;
+  return _initialize.useStateFromStores(items, () => {
+    let guilds = closure_1_2.settings.guilds;
+    guilds = undefined;
     if (guilds != null) {
       guilds = guilds.guilds;
     }
@@ -42,7 +44,8 @@ export const useCustomJoinSound = function useCustomJoinSound(arg0) {
   });
 };
 export const getCustomJoinSound = function getCustomJoinSound(currentUser) {
-  let guilds;
+  let guilds = settings.settings.guilds;
+  guilds = undefined;
   if (guilds != null) {
     guilds = guilds.guilds;
   }

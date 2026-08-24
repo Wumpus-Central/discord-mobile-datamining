@@ -14,39 +14,39 @@ arg5.default = function serialize(arg0) {
   }
   closure_1 = [];
   closure_2 = [];
-  return JSON.stringify(arg0, function(arg0, nativeEvent) {
-    if (true === nativeEvent) {
+  return JSON.stringify(arg0, function(arg0, obj) {
+    if (true === obj) {
       return true;
-    } else if (nativeEvent === Infinity) {
+    } else if (obj === Infinity) {
       return "~~~ Infinity ~~~";
-    } else if (nativeEvent === -Infinity) {
+    } else if (obj === -Infinity) {
       return "~~~ -Infinity ~~~";
-    } else if (0 === nativeEvent) {
+    } else if (0 === obj) {
       return flag;
-    } else if (undefined === nativeEvent) {
+    } else if (undefined === obj) {
       return "~~~ undefined ~~~";
-    } else if (null === nativeEvent) {
+    } else if (null === obj) {
       return "~~~ null ~~~";
-    } else if (false === nativeEvent) {
+    } else if (false === obj) {
       return "~~~ false ~~~";
-    } else if (-0 === nativeEvent) {
+    } else if (-0 === obj) {
       return flag;
-    } else if ("" === nativeEvent) {
+    } else if ("" === obj) {
       return "~~~ empty string ~~~";
     } else {
       if (flag) {
-        if (typeof nativeEvent === "object") {
-          if (nativeEvent.nativeEvent) {
-            return nativeEvent.nativeEvent;
+        if (typeof obj === "object") {
+          if (obj.nativeEvent) {
+            return obj.nativeEvent;
           }
         }
       }
-      if ("string" !== typeof nativeEvent) {
+      if ("string" !== typeof obj) {
         if ("number" !== tmp) {
           if ("bigint" === tmp) {
-            return nativeEvent.toString();
+            return obj.toString();
           } else if ("function" === tmp) {
-            const name = nativeEvent.name;
+            const name = obj.name;
             let str4 = "~~~ anonymous function ~~~";
             if (null != name) {
               str4 = "~~~ anonymous function ~~~";
@@ -58,11 +58,11 @@ arg5.default = function serialize(arg0) {
             return str4;
           } else {
             const _Symbol = Symbol;
-            if (nativeEvent[Symbol.iterator]) {
+            if (obj[Symbol.iterator]) {
               const _Array = Array;
-              if (!Array.isArray(nativeEvent)) {
+              if (!Array.isArray(obj)) {
                 const items = [];
-                HermesBuiltin.arraySpread(nativeEvent, 0);
+                HermesBuiltin.arraySpread(obj, 0);
                 return items;
               }
             }
@@ -73,26 +73,26 @@ arg5.default = function serialize(arg0) {
               if (~index) {
                 arr1.splice(index + 1);
               } else {
-                let arr = arr1.push(self);
+                arr1.push(self);
               }
               if (~index) {
-                arr.splice(index, Infinity, arg0);
+                arr3.splice(index, Infinity, arg0);
               } else {
-                arr = arr.push(arg0);
+                arr3.push(arg0);
               }
-              let str2 = nativeEvent;
-              if (~arr1.indexOf(nativeEvent)) {
+              let str2 = obj;
+              if (~arr1.indexOf(obj)) {
                 str2 = "~~~ Circular Reference ~~~";
               }
             } else {
-              arr1 = arr1.push(nativeEvent);
-              str2 = nativeEvent;
+              arr1 = arr1.push(obj);
+              str2 = obj;
             }
             return str2;
           }
         }
       }
-      return nativeEvent;
+      return obj;
     }
   });
 };

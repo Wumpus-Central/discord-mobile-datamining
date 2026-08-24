@@ -6,9 +6,9 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class OrbOnboardingPill {
   constructor(arg0) {
     flag = global.accessible;
@@ -38,10 +38,11 @@ class OrbOnboardingPill {
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-const createCacheKey = { height: 36, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
+createCacheKey = { container: null };
+createCacheKey = { height: 36, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
+const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
 
 export default OrbOnboardingPill;
 export { OrbOnboardingPill };

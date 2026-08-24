@@ -1,24 +1,26 @@
 // discord_app/modules/rpc/server/commands/setActivity.tsx
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import StatusDisplayTypes from "../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
-import addApplication from "../../../applications/ApplicationStore.tsx";
+import closure_3 from "../../../applications/ApplicationStore.tsx";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import ME from "../../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ TransportTypes: c4, RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);
 ({ ActivityGamePlatforms: c5, ActivityPartyPrivacy: closure_6, ActivityTypes: error, AnalyticEvents: closure_8, RPCErrors: c9 } = ME);
 let closure_10 = ["1402418171662569542"];
 let obj = {};
+obj = { scope: null, validation: null, handler: null };
+obj = {};
 let items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(number) {
-  createRpcJoiSchemaObjectDefault(number);
-  let obj = { pid: null, activity: null };
+  let obj = createRpcJoiSchemaObjectDefault(number);
+  obj = { pid: null, activity: null };
   const requiredResult = obj.required();
   obj[0] = number.number().min(0);
-  createRpcJoiSchemaObjectDefault(number);
+  let obj4 = createRpcJoiSchemaObjectDefault(number);
   obj = { name: null, state: null, state_url: null, details: null, details_url: null, timestamps: null, assets: null, party: null, secrets: null, buttons: null, instance: null, supported_platforms: null, type: null, status_display_type: null };
   const numberResult = number.number();
   const stringResult = number.string();
@@ -86,7 +88,7 @@ obj[1] = function validation(number) {
   obj3[2] = number.number().default(constants.PRIVATE).valid(items);
   obj[7] = obj41.keys(obj3);
   const defaultResult = number.number().default(constants.PRIVATE);
-  const obj4 = { match: null, join: null, spectate: null };
+  obj4 = { match: null, join: null, spectate: null };
   const obj49 = createRpcJoiSchemaObjectDefault(number);
   const stringResult13 = number.string();
   obj4[0] = number.string().min(2).max(128);
@@ -196,8 +198,10 @@ obj[2] = function handler(socket) {
       }
       if (null != secrets) {
         const values = pid(tmp25[10]).values(secrets);
-        const found = values.filter((item, index) => item);
+        const found = values.filter((arg0) => arg0);
         if (null != party2) {
+          let keys = tmp97;
+          keys = tmp24;
           let tmp98Result = tmp98(tmp25[10]);
           const items1 = [party2.id];
           if (tmp98Result.intersection(found, items1).length > 0) {
@@ -225,13 +229,14 @@ obj[2] = function handler(socket) {
       }
       const obj4 = {};
       if (null != buttons) {
-        obj4.button_urls = buttons.map((item, index) => item.url);
-        activity.buttons = buttons.map((item, index) => item.label);
+        obj4.button_urls = buttons.map((url) => url.url);
+        activity.buttons = buttons.map((label) => label.label);
       }
       activity.metadata = obj4;
       if (null != timestamps) {
+        keys = globalThis;
         const _Object = Object;
-        const keys = Object.keys(timestamps);
+        keys = Object.keys(timestamps);
         const iter = keys[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
@@ -240,7 +245,12 @@ obj[2] = function handler(socket) {
           let str6 = Date.now();
           let str7 = timestamps[nextResult];
           if (str6.toString().length - str7.toString().length > 2) {
+            let tmp51 = nextResult;
             let _Math = Math;
+            let tmp52 = pid;
+            let tmp53 = pid;
+            let tmp54 = activity;
+            let tmp55 = activity;
             timestamps[tmp50] = Math.floor(timestamps[tmp50] * pid(activity[11]).Millis.SECOND);
           }
           continue;
@@ -261,8 +271,8 @@ obj[2] = function handler(socket) {
         error = new Error();
         throw error;
       }
-      return resolved.then((result) => {
-        [tmp5, tmp6, tmp7] = result;
+      return resolved.then((arg0) => {
+        [tmp5, tmp6, tmp7] = arg0;
         if (null != assets) {
           if (null != tmp5) {
             tmp8.large_image = tmp5;
@@ -281,8 +291,8 @@ obj[2] = function handler(socket) {
           }
         }
         if (isSocketConnected()) {
-          pid(activity[7]);
-          let obj = { type: "LOCAL_ACTIVITY_UPDATE", socketId: null, pid: null, activity: null, partyPrivacy: null };
+          let obj = pid(activity[7]);
+          obj = { type: "LOCAL_ACTIVITY_UPDATE", socketId: null, pid: null, activity: null, partyPrivacy: null };
           obj[1] = socket.id;
           obj[2] = pid;
           obj[3] = activity;
@@ -296,14 +306,14 @@ obj[2] = function handler(socket) {
             details = "";
           }
           obj[4] = details;
-          let str4 = activity.state;
+          let str4 = tmp13.state;
           if (str4 == null) {
             str4 = "";
           }
           obj[5] = str4;
-          let tmp16 = null != activity.state_url || null != activity.details_url;
+          let tmp16 = null != tmp13.state_url || null != tmp13.details_url;
           if (!tmp16) {
-            assets = activity.assets;
+            assets = tmp13.assets;
             let large_url;
             if (assets != null) {
               large_url = assets.large_url;
@@ -311,7 +321,7 @@ obj[2] = function handler(socket) {
             tmp16 = null != large_url;
           }
           if (!tmp16) {
-            const assets2 = activity.assets;
+            const assets2 = tmp13.assets;
             let small_url;
             if (assets2 != null) {
               small_url = assets2.small_url;
@@ -325,6 +335,7 @@ obj[2] = function handler(socket) {
           }
           if (null != tmp8) {
             obj.has_images = tmp8.large_image || tmp8.small_image || tmp8.invite_cover_image;
+            const tmp19 = tmp8.large_image || tmp8.small_image || tmp8.invite_cover_image;
           }
           if (null != party) {
             let tmp20;
@@ -351,6 +362,6 @@ obj[2] = function handler(socket) {
   }
 };
 obj[ME.RPCCommands.SET_ACTIVITY] = obj;
-const result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
 
 export default obj;

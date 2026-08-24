@@ -13,15 +13,16 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
   } else if ("scientific" === notation) {
     return floorResult.toNumber();
   } else if ("engineering" === notation) {
-    floorResult = floorResult.div(3).floor();
     const divResult = floorResult.div(3);
-    return floorResult.times(3).toNumber();
+    floorResult = floorResult.div(3).floor();
+    return floorResult.div(3).floor().times(3).toNumber();
   } else {
     getMultiInternalSlots.invariant("compact" === notation, "Invalid notation");
     if ("currency" === style.style) {
       let str = "name";
       if ("name" !== tmp11) {
         let short = dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]].short;
+        const tmp2 = dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]];
       }
       if (short) {
         str = digitsToString.default.pow(10, floorResult).toString();
@@ -39,6 +40,7 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
             let num4 = 0;
             if ("0" !== short[keys[index]].other) {
               num4 = arr2.length - short[arr2].other.match(/0+/)[0].length;
+              const str5 = short[arr2].other;
             }
             return num4;
           }

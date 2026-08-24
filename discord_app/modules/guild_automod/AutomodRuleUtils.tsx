@@ -3,13 +3,13 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import buildCommand from "../application_commands/ApplicationCommandUtils.tsx";
 import AutomodTriggerType from "AutomodTriggerConfigs.tsx";
 import getRuleDefaultActionsFromConfig from "AutomodActionUtils.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
 import { getRuleCountByTriggerType } from "AutomodStore.tsx";
 import AutomodEventType from "Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ AutomodTriggerType: c4, MAX_KEYWORDS_PER_KEYWORD_FILTER: c5, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6, MAX_CHARACTERS_PER_KEYWORD: error, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: c9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: unpackModuleId, AutomodEventType: closure_12 } = AutomodEventType);
-const result = require("obj132").fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
 
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
@@ -57,7 +57,8 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerT
   return triggerType === constants.USER_PROFILE;
 };
 export const createDefaultRule = function createDefaultRule(arg0, arg1) {
-  const obj = { id: null, name: null, guildId: null, eventType: null, triggerType: null, triggerMetadata: null, enabled: true, creatorId: null, actions: null, position: 0, exemptChannels: null, exemptRoles: null };
+  let obj = AutomodTriggerType.triggerConfigs[arg1];
+  obj = { id: null, name: null, guildId: null, eventType: null, triggerType: null, triggerMetadata: null, enabled: true, creatorId: null, actions: null, position: 0, exemptChannels: null, exemptRoles: null };
   const defaultTriggerMetadataForTriggerType = AutomodTriggerType.getDefaultTriggerMetadataForTriggerType(arg1, arg0);
   obj[0] = "" + arg0 + "-" + arg1 + "-new-rule";
   obj[1] = obj.getDefaultRuleName();
@@ -66,7 +67,9 @@ export const createDefaultRule = function createDefaultRule(arg0, arg1) {
   obj[4] = arg1;
   obj[5] = defaultTriggerMetadataForTriggerType;
   obj[7] = id.getId();
+  const obj2 = AutomodTriggerType;
   obj[8] = getRuleDefaultActionsFromConfig.getRuleDefaultActionsFromConfig(obj);
+  const obj4 = getRuleDefaultActionsFromConfig;
   obj[10] = new Set();
   const set = new Set();
   obj[11] = new Set();
@@ -77,8 +80,8 @@ export const createDefaultRule = function createDefaultRule(arg0, arg1) {
   }
   if (obj5.isSnowflake(str)) {
     const _Error = Error;
-    const intl = getSystemLocale.intl;
-    error = new Error(intl.string(getSystemLocale.t["A/nX8D"]));
+    const intl = tmp(1236).intl;
+    error = new Error(intl.string(tmp(1236).t["A/nX8D"]));
     throw error;
   } else {
     const tmp7 = getRuleCountByTriggerType(arg0, arg1);
@@ -99,9 +102,9 @@ export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
     error = new Error(intl.formatToPlainString(getSystemLocale.t.mee4qd, obj));
     throw error;
   } else {
-    const item = arr.forEach((item, index) => {
+    const item = arr.forEach((keyword) => {
       const intl = callback(1236).intl;
-      const invalidKeywordError = new callback(7608).InvalidKeywordError(intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword: item, max: closure_7, min: closure_8 }));
+      const invalidKeywordError = new callback(7608).InvalidKeywordError(intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }));
       throw invalidKeywordError;
     });
   }
@@ -115,9 +118,9 @@ export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThro
     error = new Error(intl.formatToPlainString(getSystemLocale.t.tDjhF1, obj));
     throw error;
   } else {
-    const item = arr.forEach((item, index) => {
+    const item = arr.forEach((regex) => {
       const intl = callback(1236).intl;
-      const invalidRegexPatternError = new callback(7608).InvalidRegexPatternError(intl.formatToPlainString(callback(1236).t.WR0m9w, { regex: item, max: closure_10, min: closure_9 }));
+      const invalidRegexPatternError = new callback(7608).InvalidRegexPatternError(intl.formatToPlainString(callback(1236).t.WR0m9w, { regex, max: closure_10, min: closure_9 }));
       throw invalidRegexPatternError;
     });
   }
@@ -152,9 +155,9 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       const error1 = new Error(intl3.formatToPlainString(getSystemLocale.t.mee4qd, obj));
       throw error1;
     } else {
-      const item = keywordFilter.forEach((item, index) => {
+      const item = keywordFilter.forEach((keyword) => {
         const intl = callback(1236).intl;
-        const invalidKeywordError = new callback(7608).InvalidKeywordError(intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword: item, max: closure_7, min: closure_8 }));
+        const invalidKeywordError = new callback(7608).InvalidKeywordError(intl.formatToPlainString(callback(1236).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }));
         throw invalidKeywordError;
       });
       if (regexPatterns.length > closure_6) {
@@ -165,9 +168,9 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
         const error2 = new Error(intl2.formatToPlainString(getSystemLocale.t.tDjhF1, obj));
         throw error2;
       } else {
-        const item1 = regexPatterns.forEach((item, index) => {
+        const item1 = regexPatterns.forEach((regex) => {
           const intl = callback(1236).intl;
-          const invalidRegexPatternError = new callback(7608).InvalidRegexPatternError(intl.formatToPlainString(callback(1236).t.WR0m9w, { regex: item, max: closure_10, min: closure_9 }));
+          const invalidRegexPatternError = new callback(7608).InvalidRegexPatternError(intl.formatToPlainString(callback(1236).t.WR0m9w, { regex, max: closure_10, min: closure_9 }));
           throw invalidRegexPatternError;
         });
       }
@@ -206,13 +209,13 @@ export const actionTypeToName = function actionTypeToName(arg0) {
   if (constants2.BLOCK_MESSAGE === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.d1ab8n);
-  } else if (constants2.FLAG_TO_CHANNEL === arg0) {
+  } else if (tmp.FLAG_TO_CHANNEL === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t["Y+VmvU"]);
-  } else if (constants2.USER_COMMUNICATION_DISABLED === arg0) {
+  } else if (tmp.USER_COMMUNICATION_DISABLED === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["6WPxY2"]);
-  } else if (constants2.QUARANTINE_USER === arg0) {
+  } else if (tmp.QUARANTINE_USER === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.NPO8ee);
   } else {
@@ -224,16 +227,16 @@ export const triggerTypeToName = function triggerTypeToName(newValue) {
   if (constants.KEYWORD === newValue) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t.ffR2cM);
-  } else if (constants.ML_SPAM === newValue) {
+  } else if (tmp.ML_SPAM === newValue) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["puF/Os"]);
-  } else if (constants.DEFAULT_KEYWORD_LIST === newValue) {
+  } else if (tmp.DEFAULT_KEYWORD_LIST === newValue) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.LnGhZv);
-  } else if (constants.MENTION_SPAM === newValue) {
+  } else if (tmp.MENTION_SPAM === newValue) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.pX7i6n);
-  } else if (constants.USER_PROFILE === newValue) {
+  } else if (tmp.USER_PROFILE === newValue) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.q1L2v8);
   } else {

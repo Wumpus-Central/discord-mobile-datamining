@@ -5,19 +5,20 @@ import registerAssetDefault from "../../../../_runtime/07919_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SubscriptionStatusTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ Linking: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { padding: 8, margin: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { container: null, textContainer: null, icon: null, text: null };
+createCacheKey = { padding: 8, margin: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row" };
 createCacheKey[2] = { marginRight: 4 };
 createCacheKey[3] = { marginBottom: 8, flex: 1 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/SubscriptionAccountHoldNotice.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/SubscriptionAccountHoldNotice.tsx");
 
 export default function SubscriptionAccountHoldNotice(subscription) {
   subscription = subscription.subscription;
@@ -47,7 +48,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
     const intl2 = subscription(1236).intl;
     obj3[1] = intl2.string(subscription(1236).t.VJmUNy);
     obj3[2] = function onPress() {
-      return closure_1_3.openURL(subscription(dependencyMap[10]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
+      return closure_1_3.openURL(subscription(closure_1_2[10]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
     };
     items1[1] = callback(subscription(4745).Button, obj3);
     obj[1] = items1;

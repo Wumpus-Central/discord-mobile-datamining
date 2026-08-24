@@ -1,11 +1,11 @@
 // discord_app/modules/stickers/StickersPersistedStore.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import DEFAULT_FRECENCYDefault from "../../lib/Frecency.tsx";
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
-import loadSavedGuildStickers from "StickersStore.tsx";
+import closure_2 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "StickersStore.tsx";
 import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 
 function handleStickersStoreUpdate() {
@@ -28,7 +28,7 @@ function handleUserSettingsProtoStoreChange() {
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
       const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((item, index) => item > 0);
+      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
       return obj;
     }), closure_5.pendingUsages);
   }
@@ -80,10 +80,10 @@ obj = {
   STICKER_TRACK_USAGE: function handleStickersUsage(stickerIds) {
     stickerIds = stickerIds.stickerIds;
     if (stickerIds != null) {
-      const item = stickerIds.forEach((item, index) => {
-        closure_6.track(item);
+      const item = stickerIds.forEach((key) => {
+        closure_6.track(key);
         pendingUsages = pendingUsages.pendingUsages;
-        pendingUsages.push({ key: item, timestamp: Date.now() });
+        pendingUsages.push({ key, timestamp: Date.now() });
       });
     }
     if (stickerById.isLoaded) {
@@ -101,7 +101,7 @@ obj = {
 };
 const stickersPersistedStore = new StickersPersistedStore(dispatcherDefault, obj);
 const tmp2 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("obj132").fileFinishedImporting("modules/stickers/StickersPersistedStore.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/StickersPersistedStore.tsx");
 
 export default stickersPersistedStore;
-export const STICKER_PACK_NEW_TIMESTAMP_THRESHOLD = obj132Default.Millis.DAY;
+export const STICKER_PACK_NEW_TIMESTAMP_THRESHOLD = setDefault.Millis.DAY;

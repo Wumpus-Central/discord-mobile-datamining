@@ -2,13 +2,13 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import Button from "../../../../../design/void/native.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_2 from "../../../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
 
 export default function GiftingRewardPreviewAvatar(asset) {
   let obj = initialize;

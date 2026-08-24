@@ -1,13 +1,13 @@
 // discord_app/modules/messages/useReactionPermissions.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import initialize from "../lurker_mode/LurkingStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import recomputeGuild from "../../stores/GuildVerificationStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../lurker_mode/LurkingStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildVerificationStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 
 export default function useReactionPermissions(guild_id) {
   const _require = guild_id;
@@ -51,7 +51,7 @@ export default function useReactionPermissions(guild_id) {
   const stateFromStores3 = _require(stateFromStores[6]).useStateFromStores(items6, () => {
     let canResult = stateFromStores;
     if (stateFromStores) {
-      canResult = closure_1_7.can(Permissions.ADD_REACTIONS, closure_0);
+      canResult = closure_1_7.can(closure_1_8.ADD_REACTIONS, closure_0);
     }
     return canResult;
   }, items7);
@@ -62,6 +62,7 @@ export default function useReactionPermissions(guild_id) {
   if (null == guild_id) {
     obj = { disableReactionReads: true, disableReactionCreates: true, disableReactionUpdates: true, isLurking: false, isGuest: false, isPendingMember: false };
   } else {
+    obj = {};
     obj = { channel: null, canChat: null, renderReactions: true, canAddNewReactions: null, isLurking: null, communicationDisabled: null, isActiveChannelOrUnarchivableThread: null, isAutomodQuarantined: null };
     obj[0] = guild_id;
     obj[1] = stateFromStores;

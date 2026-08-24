@@ -4,21 +4,24 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ContactSyncModes from "../ContactSyncModalStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ setAllowEmail: c3, setAllowPhone: c4, setAllowSync: c5, useContactSyncModalStore: closure_6 } = ContactSyncModes);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
+createCacheKey = { container: null, formRow: null, syncRow: null, formText: null, info: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[2] = { marginTop: 24 };
+let obj1 = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let obj2 = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettingsActionSheet.tsx");
+let obj3 = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettingsActionSheet.tsx");
 
 export default function ContactSyncSettingsActionSheet() {
   const tmp = callback4();
@@ -30,9 +33,11 @@ export default function ContactSyncSettingsActionSheet() {
     tmp3 = allowEmail;
   }
   allowEmail = tmp3;
-  const items = [, ];
+  let obj = { style: tmp.container, children: null };
+  obj = { DEPRECATED_style: items, label: null, onPress: null, trailing: null };
+  items = [, ];
   ({ formRow: arr[0], syncRow: arr[1] } = tmp);
-  const obj = { style: tmp.formText, text: null };
+  obj = { style: tmp.formText, text: null };
   const intl = allowPhone(allowEmail[8]).intl;
   obj[1] = intl.string(allowPhone(allowEmail[8]).t.a5QL24);
   obj[1] = callback2(allowPhone(allowEmail[7]).FormRow.Label, obj);

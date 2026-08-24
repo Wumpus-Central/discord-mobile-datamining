@@ -11,17 +11,18 @@ import TableSwitchRow from "../../../../../design/components/TableRow/native/Tab
 import FormSwitch from "../../../../../design/components/Forms/native/FormSwitch.native.tsx";
 import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
 import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getUserAgnosticState from "../../../dev_settings/DevSettingsStore.tsx";
+import closure_4 from "../../../dev_settings/DevSettingsStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { wrap: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsShopScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsShopScreen.tsx");
 
 export default function DevToolsShopScreen() {
   let obj = initialize;
@@ -37,6 +38,8 @@ export default function DevToolsShopScreen() {
   const items3 = [closure_4];
   const stateFromStores3 = obj3.useStateFromStores(items3, () => store.get("bypass_google_sku_sync"));
   const tmp = callback3();
+  const tmp6 = useToggleDismissibleContentDismissStateDefault;
+  obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
   obj = { paddingVertical: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom };
   ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING));
   obj[1] = obj;

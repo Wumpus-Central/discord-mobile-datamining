@@ -1,33 +1,36 @@
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx
 import BumpingFistsSpotIllustration from "../../../../design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { UserProfileThemeTypes } from "../../../user_profile/native/Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ShopThisLookMarketingCoachmarkImage() {
   return <View style={callback().imageContainer}>{jsx(BumpingFistsSpotIllustration.BumpingFistsSpotIllustration, { width: 100, height: 56, resizeMode: "contain" })}</View>;
 }
 let closure_7 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
-let result = require("obj132").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");
 
 export default function ShopThisLookMarketingCoachmark(visible) {
   visible = visible.visible;
   const onDismiss = visible.onDismiss;
   const onPress = visible.onPress;
+  closure_3 = undefined;
+  let callback;
+  let callback1;
   closure_3 = onPress.useRef(false);
   const items = [onDismiss, onPress];
-  const callback = onPress.useCallback(() => {
+  callback = onPress.useCallback(() => {
     closure_3.current = true;
     const result = visible(onDismiss[7]).trackShopThisLookMenuAction(visible(onDismiss[7]).ShopThisLookMenuAction.COACHMARK_CTA_CLICKED, callback1.ACTION_SHEET);
     onDismiss(callback.TAKE_ACTION);
     onPress();
   }, items);
   const items1 = [onDismiss];
-  const callback1 = onPress.useCallback(() => {
+  callback1 = onPress.useCallback(() => {
     closure_3.current = true;
     onDismiss(callback.USER_DISMISS);
   }, items1);
@@ -40,11 +43,10 @@ export default function ShopThisLookMarketingCoachmark(visible) {
   }, items2);
   const items3 = [visible, onDismiss];
   const effect1 = onPress.useEffect(() => visible ? (() => {
-    const result = visible(onDismiss[7]).trackShopThisLookMenuAction(visible(onDismiss[7]).ShopThisLookMenuAction.COACHMARK_DISMISSED, callback1.ACTION_SHEET);
+    const result = closure_1_0(closure_1_1[7]).trackShopThisLookMenuAction(closure_1_0(closure_1_1[7]).ShopThisLookMenuAction.COACHMARK_DISMISSED, closure_1_5.ACTION_SHEET);
     if (!ref.current) {
       callback(closure_1_4.AUTO_DISMISS);
     }
-    const obj = visible(onDismiss[7]);
   }) : undefined, items3);
   const items4 = [visible, callback, callback1];
   const memo = onPress.useMemo(() => {

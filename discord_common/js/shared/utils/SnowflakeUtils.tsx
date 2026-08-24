@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/SnowflakeUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import IntegerDefault from "../../../../_runtime/00014_Integer.js";
 
 function extractTimestamp(arg0) {
@@ -7,7 +7,7 @@ function extractTimestamp(arg0) {
 }
 let c2 = 1420070400000;
 let c3 = 4095;
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
 class SnowflakeSequence {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -54,6 +54,7 @@ export const fromTimestampWithSequence = function fromTimestampWithSequence(arg0
   if (diff > 0) {
     num = diff;
   }
+  const tmp2 = IntegerDefault;
   const tmp2Result = IntegerDefault(num);
   const shiftLeftResult = IntegerDefault(num).shiftLeft(22);
   return IntegerDefault(num).shiftLeft(22).add(next.next()).toString();

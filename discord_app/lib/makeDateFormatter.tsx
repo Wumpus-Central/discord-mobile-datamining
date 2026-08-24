@@ -1,5 +1,5 @@
 // discord_app/lib/makeDateFormatter.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import { __DiscordCreateDateFormatter } from "../modules/system_date_format/SystemDateFormatter.native.tsx";
 
 function defaultMeridiem(arg0, arg1, arg2) {
@@ -132,7 +132,7 @@ function getLocaleData() {
   obj[9] = week;
   return obj;
 }
-let result = obj132.fileFinishedImporting("lib/makeDateFormatter.tsx");
+let result = set.fileFinishedImporting("lib/makeDateFormatter.tsx");
 
 export default function makeFormatter(str) {
   let flag = arg2;
@@ -148,11 +148,11 @@ export default function makeFormatter(str) {
   _require = tmp;
   let result = undefined === arg1 && !flag;
   if (result) {
-    result = undefined !== require("../modules/system_date_format/SystemDateFormatter.native.tsx").makeFormatter;
+    result = undefined !== ___DiscordCreateDateFormatter.makeFormatter;
   }
   if (result) {
-    result = require("../modules/system_date_format/SystemDateFormatter.native.tsx").supportsSystemDateFormatter();
-    const obj = __DiscordCreateDateFormatter;
+    result = ___DiscordCreateDateFormatter.supportsSystemDateFormatter();
+    const obj = ___DiscordCreateDateFormatter;
   }
   let replaced = str;
   if (!result) {
@@ -197,6 +197,21 @@ export default function makeFormatter(str) {
   const items = [];
   while (replaced.length > 0) {
     let charAtResult = str.charAt(0);
+    let tmp19 = tmp8;
+    let tmp20 = tmp9;
+    let tmp21 = tmp10;
+    let tmp22 = tmp11;
+    let tmp23 = tmp12;
+    let tmp24 = tmp13;
+    let tmp25 = flag2;
+    let tmp26 = flag3;
+    let tmp27 = tmp14;
+    let tmp28 = tmp15;
+    let tmp29 = tmp16;
+    let tmp30 = tmp17;
+    let tmp31 = str;
+    let tmp32 = flag2;
+    let tmp33 = flag3;
   }
   // // eliminated: always false
   // // eliminated: always false

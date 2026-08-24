@@ -3,7 +3,6 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
 import computeChannelNameDefault from "../../../channel/useChannelName.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -14,37 +13,38 @@ import idDefault from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
 import OnGoingCallTimerDefault from "../components/OngoingCallTimer.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import closure_4 from "../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/PermissionStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function PrivateChannelSubtitle(channel) {
   channel = channel.channel;
   const tmp = callback2();
   const state = idDefault(channel.id).state;
-  let obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
+  let obj = { style: tmp.subtitleWrapper, children: null };
+  obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
   const items = [callback(OngoingCallStatusLabelDefault, obj), , ];
   let tmp6Result = state === id.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
     obj[0] = tmp.subtitle;
-    tmp6Result = callback(Text.Text, obj);
+    tmp6Result = tmp6(tmp7(4734).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === id.CallStates.CONNECTED;
+  tmp6Result = state === tmp7(12675).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;
     obj1[1] = tmp.subtitle;
-    tmp6Result = callback(OnGoingCallTimerDefault, obj1);
+    tmp6Result = tmp6(OnGoingCallTimerDefault, obj1);
   }
   items[2] = tmp6Result;
   obj[1] = items;
-  return callback(View, obj);
+  return closure_11(View, obj);
 }
 class VoiceChannelHeader {
   constructor(arg0) {
@@ -75,8 +75,8 @@ class VoiceChannelHeader {
       E = null;
       if (!tmp6) {
         E = () => {
-          channel(dependencyMap[16]);
-          const obj = { source: closure_1_9.VOICE_CHANNEL, targetApplicationId: null };
+          let obj = channel(closure_1_2[16]);
+          obj = { source: closure_1_9.VOICE_CHANNEL, targetApplicationId: null };
           let applicationId;
           if (applicationId != null) {
             applicationId = applicationId.applicationId;
@@ -167,12 +167,14 @@ class IconButton {
 noopAll;
 ({ Permissions: error, AnalyticsPages: closure_8, InstantInviteSources: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { flexDirection: "row", tintColor: ThemesDefault.colors.WHITE };
+createCacheKey = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: null, subtitle: null, subtitleWrapper: null };
+createCacheKey = { flexDirection: "row", tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { fontSize: 12, lineHeight: 16, color: ThemesDefault.colors.WHITE };
 createCacheKey[4] = { flexDirection: "row" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx");
+let obj1 = { fontSize: 12, lineHeight: 16, color: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceChannelHeader.tsx");
 
 export default VoiceChannelHeader;
 export { VoiceChannelHeader };

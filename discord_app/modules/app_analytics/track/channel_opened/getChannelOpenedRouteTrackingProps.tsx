@@ -1,10 +1,10 @@
 // discord_app/modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx
 import transitionTo from "../../../routing/router_utils.tsx";
 import collectThreadMetadata from "../../ThreadAnalyticsUtils.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../../stores/ChannelStore.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
   let obj = collectThreadMetadata;

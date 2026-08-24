@@ -6,22 +6,26 @@ import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/ex
 import messagesProxyDefault from "../../../client_themes/intl/ClientThemes.messages.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useActiveThemeType from "../../../client_themes/native/useActiveTheme.tsx";
-import isSyncedModeThemesEnabled from "../../../client_themes/ClientThemesBackgroundStore.tsx";
+import closure_3 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 import { ActiveThemeType } from "../../ThemeConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import { SettingsAppearanceScreen } from "../../appearance/native/SettingsAppearanceScreen.tsx";
 
-require = fn;
+require = arg1;
 function useAppearanceSettingTrailing() {
+  const tmp = importDefault;
   const tmp3 = useThemeDefault();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("AppearanceSettingTrailing");
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
+  const obj = initialize;
   const themeName = getThemeForColor.getThemeName(tmp3, tmp4);
+  const obj2 = getThemeForColor;
   const activeThemeType = useActiveThemeType.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
-    const intl2 = getSystemLocale.intl;
+    const intl2 = tmp5(1236).intl;
     return intl2.string(messagesProxyDefault.KSBBpC);
-  } else if (ActiveThemeType.CLIENT === activeThemeType) {
+  } else if (tmp9.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
       const getName = stateFromStores.getName;
@@ -33,14 +37,15 @@ function useAppearanceSettingTrailing() {
       name = themeName;
     }
     return name;
-  } else if (ActiveThemeType.SYSTEM === activeThemeType) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.wFpwSk);
+  } else if (tmp9.SYSTEM === activeThemeType) {
+    const intl = tmp5(1236).intl;
+    return intl.string(tmp5(1236).t.wFpwSk);
   } else {
-    return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
+    return tmp9.DEFAULT === activeThemeType ? themeName : undefined;
   }
+  const obj3 = useActiveThemeType;
 }
-{
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["iHH+ky"]);
@@ -53,11 +58,11 @@ function useAppearanceSettingTrailing() {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
-    return require("../../appearance/native/SettingsAppearanceScreen.tsx").default;
+    return SettingsAppearanceScreen.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
 
 export default createToggle;
 export { useAppearanceSettingTrailing };

@@ -1,37 +1,46 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleConnectionOpen from "../../../../ChannelSafetyWarningsStore.tsx";
+import closure_6 from "../../../../ChannelSafetyWarningsStore.tsx";
 import { SafetyWarningFeedbackTypes as closure_7 } from "../../../../ChannelSafetyWarningsStore.tsx";
 import LOCATION_CONTEXT_MOBILE from "../../../../Constants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: c9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = LOCATION_CONTEXT_MOBILE);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { flexDirection: "row", marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
+createCacheKey = { container: { flexDirection: "column", alignItems: "center" }, buttonsContainer: null, buttonsBackground: null, buttonsBackgroundInactive: null, buttonsBackgroundActive: null, buttonIconInactive: null, buttonIconActive: null, toastContainer: null };
+createCacheKey = { flexDirection: "row", marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+let obj1 = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[4] = { borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR };
+let obj3 = { borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, backgroundColor: FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR };
 createCacheKey[5] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj4 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[7] = { paddingHorizontal: 8, paddingVertical: 12 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx");
+let obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx");
 
 export default function WasThisHelpfulSection(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;
+  let React;
+  let stateFromStores;
+  closure_5 = undefined;
   const tmp = callback2();
-  const React = tmp;
+  React = tmp;
   let obj = channelId(senderId[7]);
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannelSafetyWarning(channelId, warningId));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannelSafetyWarning(channelId, warningId));
   const items1 = [stateFromStores];
   const memo = React.useMemo(() => {
     let feedback_type;
@@ -53,7 +62,7 @@ export default function WasThisHelpfulSection(channelId) {
     let obj = channelId(senderId[8]);
     const result = obj.setChannelSafetyWarningFeedback(channelId, warningId, feedbackType);
     obj = { key: feedbackType === closure_1_7.UPVOTE ? closure_1_10 : closure_1_8, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
-    const intl = channelId(senderId[10]).intl;
+    const intl = tmp(tmp2[10]).intl;
     obj[1] = intl.string(channelId(senderId[10]).t["gd/Yqs"]);
     obj[2] = warningId(senderId[11]);
     obj[3] = channelId(senderId[12]).ShieldIcon;
@@ -61,7 +70,10 @@ export default function WasThisHelpfulSection(channelId) {
     obj[5] = toastContainer.toastContainer;
     warningId(senderId[9]).open(obj);
     const obj2 = warningId(senderId[9]);
-    obj = { channelId, warningId, senderId, warningType: null, cta: null };
+    const tmp3 = channelId;
+    const tmp4 = warningId;
+    const tmp6 = warningId;
+    obj = { channelId: tmp3, warningId: tmp4, senderId, warningType: null, cta: null };
     let type;
     if (stateFromStores != null) {
       type = stateFromStores.type;
@@ -69,8 +81,8 @@ export default function WasThisHelpfulSection(channelId) {
     obj[3] = type;
     obj[4] = arg1;
     channelId(senderId[13]).trackCtaEvent(obj);
-    const tmpResult = channelId(senderId[13]);
   }, items3);
+  obj = { style: tmp.container, children: null };
   obj = { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: null };
   let intl = channelId(senderId[10]).intl;
   obj[2] = intl.string(channelId(senderId[10]).t.L84yVm);
@@ -121,7 +133,7 @@ export default function WasThisHelpfulSection(channelId) {
   obj4[4] = callback(channelId(senderId[15]).Icon, obj5);
   items6[1] = callback(stateFromStores, obj4);
   obj1[1] = items6;
-  items4[1] = callback(closure_5, obj1);
+  items4[1] = closure_12(closure_5, obj1);
   obj[1] = items4;
-  return callback(closure_5, obj);
+  return closure_12(closure_5, obj);
 };

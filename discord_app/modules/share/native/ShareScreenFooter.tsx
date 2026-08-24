@@ -6,9 +6,9 @@ import ShareFooterLayoutDefault from "ShareFooterLayout.tsx";
 import ShareChatInputDefault from "ShareChatInput.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
+const result = require("set").fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
 
 export default function ShareScreenFooter(arg0) {
   ({ setText, canSend, isSending, onSend, disabled } = arg0);
@@ -19,6 +19,7 @@ export default function ShareScreenFooter(arg0) {
   let obj = useShareChatInputActions;
   const shareChatInputActions = obj.useShareChatInputActions(setText, undefined, appEntryKey);
   ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } = shareChatInputActions);
+  obj = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
   obj = { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null };
   let tmp6 = !canSend;
   if (canSend) {

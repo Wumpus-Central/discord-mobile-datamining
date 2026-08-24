@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import noop from "../../../../../_runtime/00019_noop.js";
-import get from "../../../wishlists/WishlistStore.tsx";
+import closure_4 from "../../../wishlists/WishlistStore.tsx";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
-const result = obj132.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
 
 export default function useTrackUserProfileWishlistView(wishlistId) {
   wishlistId = wishlistId.wishlistId;
@@ -15,6 +15,7 @@ export default function useTrackUserProfileWishlistView(wishlistId) {
     flag = true;
   }
   let stateFromStores;
+  closure_5 = undefined;
   const items = [stateFromStores];
   stateFromStores = wishlistId(onAction[2]).useStateFromStores(items, () => stateFromStores.isFetching(wishlistId));
   closure_5 = flag(false);
@@ -31,6 +32,8 @@ export default function useTrackUserProfileWishlistView(wishlistId) {
         obj[2] = productLines;
         onAction(obj);
         ref.current = true;
+        const tmp3 = onAction;
+        const tmp5 = productLines;
       }
     } else {
       ref.current = false;

@@ -4,12 +4,13 @@ import addCompilerSafeGetAndSet from "01691_addCompilerSafeGetAndSet.js";
 import resolvePath from "01693_resolvePath.js";
 import isJest from "01657_isJest.js";
 import runWorkletOnJS from "01661_runWorkletOnJS.js";
+import { isWorkletFunction } from "01679_isWorkletFunction.js";
 
 isJest = isJest.isAndroid();
 function startObservingProgress(arg0, addListener) {
   closure_0 = arg0;
   const _require = addListener;
-  dependencyMap = arg2 === require("01679_isWorkletFunction.js").LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+  dependencyMap = arg2 === _isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
   addListener.addListener(arg0 + 1000000000, () => {
     set._notifyAboutProgress(set, set2.value, closure_2);
   });
@@ -32,11 +33,11 @@ stopObservingProgress.__initData = { code: "function stopObservingProgress_Pnpm_
 function createLayoutAnimationManager() {
   let map = new Map();
   map1 = new Map();
-  function startActually(arg0, arg1, closure_0, fn) {
+  function startActually(arg0, arg1, arg2, arg3) {
     map = arg0;
     map1 = arg1;
     if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-      const tmp6 = fn(closure_0);
+      let tmp6 = arg3(arg2);
       closure_2 = tmp6;
       let animations = tmp6.animations;
       let obj = map;
@@ -51,30 +52,32 @@ function createLayoutAnimationManager() {
       value = map1.get(arg0);
       let mutableUI = value;
       if (undefined === value) {
-        let tmpResult = tmp(startActually[2]);
+        let tmpResult = tmp(tmp2[2]);
         mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
         const result1 = obj3.set(arg0, mutableUI);
         value = mutableUI;
       } else {
-        if (typeof stopObservingProgress !== "function") {
+        if (typeof closure_1_5 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);
         map._notifyAboutEnd(arg0, false);
         value._value = tmp6.initialValues;
       }
-      tmpResult = tmp(startActually[3]);
+      tmpResult = tmp(tmp2[3]);
       const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
       withStyleAnimationResult.callback = (arg0) => {
         if (arg0) {
           set.delete(set);
           set2.delete(set);
-          if (typeof stopObservingProgress !== "function") {
+          if (typeof closure_2_5 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           mutableUI.removeListener(set + 1000000000);
           map._notifyAboutEnd(set, set2 === map1(startActually[1]).LayoutAnimationType.EXITING);
+          const obj = mutableUI;
           const tmp10 = set2 === map1(startActually[1]).LayoutAnimationType.EXITING;
+          const tmp6 = set2;
         }
         if (callback.callback) {
           let tmp14 = undefined !== arg0;
@@ -84,12 +87,12 @@ function createLayoutAnimationManager() {
           callback.callback(tmp14);
         }
       };
-      if (typeof startObservingProgress !== "function") {
+      if (typeof closure_1_4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       map = arg0;
       map1 = value;
-      closure_2 = arg1 === tmp(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+      closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
       value.addListener(arg0 + 1000000000, () => {
         set._notifyAboutProgress(set, set2.value, closure_2);
       });
@@ -97,7 +100,7 @@ function createLayoutAnimationManager() {
       obj3 = map1;
     } else {
       const ProgressTransitionRegister = map.ProgressTransitionRegister;
-      ProgressTransitionRegister.onTransitionStart(arg0, closure_0);
+      ProgressTransitionRegister.onTransitionStart(arg0, arg2);
     }
   }
   if (isJest) {
@@ -116,7 +119,7 @@ function createLayoutAnimationManager() {
     stop(arg0) {
       const value = map1.get(arg0);
       if (value) {
-        if (typeof stopObservingProgress !== "function") {
+        if (typeof closure_1_5 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);
@@ -135,11 +138,11 @@ const fn = function t() {
   }
   const map = new Map();
   map1 = new Map();
-  function startActually(arg0, arg1, closure_0, fn) {
+  function startActually(arg0, arg1, arg2, arg3) {
     map = arg0;
     map1 = arg1;
     if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-      const tmp6 = fn(closure_0);
+      let tmp6 = arg3(arg2);
       closure_2 = tmp6;
       let animations = tmp6.animations;
       let obj = map;
@@ -154,30 +157,32 @@ const fn = function t() {
       value = map1.get(arg0);
       let mutableUI = value;
       if (undefined === value) {
-        let tmpResult = tmp(startActually[2]);
+        let tmpResult = tmp(tmp2[2]);
         mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
         const result1 = obj3.set(arg0, mutableUI);
         value = mutableUI;
       } else {
-        if (typeof stopObservingProgress !== "function") {
+        if (typeof closure_1_5 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);
         map._notifyAboutEnd(arg0, false);
         value._value = tmp6.initialValues;
       }
-      tmpResult = tmp(startActually[3]);
+      tmpResult = tmp(tmp2[3]);
       const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
       withStyleAnimationResult.callback = (arg0) => {
         if (arg0) {
           set.delete(set);
           set2.delete(set);
-          if (typeof stopObservingProgress !== "function") {
+          if (typeof closure_2_5 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           mutableUI.removeListener(set + 1000000000);
           map._notifyAboutEnd(set, set2 === map1(startActually[1]).LayoutAnimationType.EXITING);
+          const obj = mutableUI;
           const tmp10 = set2 === map1(startActually[1]).LayoutAnimationType.EXITING;
+          const tmp6 = set2;
         }
         if (callback.callback) {
           let tmp14 = undefined !== arg0;
@@ -187,12 +192,12 @@ const fn = function t() {
           callback.callback(tmp14);
         }
       };
-      if (typeof startObservingProgress !== "function") {
+      if (typeof closure_1_4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       map = arg0;
       map1 = value;
-      closure_2 = arg1 === tmp(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+      closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
       value.addListener(arg0 + 1000000000, () => {
         set._notifyAboutProgress(set, set2.value, closure_2);
       });
@@ -200,7 +205,7 @@ const fn = function t() {
       obj3 = map1;
     } else {
       const ProgressTransitionRegister = map.ProgressTransitionRegister;
-      ProgressTransitionRegister.onTransitionStart(arg0, closure_0);
+      ProgressTransitionRegister.onTransitionStart(arg0, arg2);
     }
   }
   if (isJest) {
@@ -219,7 +224,7 @@ const fn = function t() {
     stop(arg0) {
       const value = map1.get(arg0);
       if (value) {
-        if (typeof stopObservingProgress !== "function") {
+        if (typeof closure_1_5 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);

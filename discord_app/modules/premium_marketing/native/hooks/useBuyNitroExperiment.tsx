@@ -1,11 +1,11 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { usePremiumPlanPurchasedStore as closure_5 } from "../../../premium/native/PremiumPlanPurchasedStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");
 
 export const useBuyNitroExperiment = function useBuyNitroExperiment(isNitroHomeSurface) {
   isNitroHomeSurface = isNitroHomeSurface.isNitroHomeSurface;

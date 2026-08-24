@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/message_parsers/MessageSearchResultParser.tsx
-import hasFlag from "../../../../records/MessageRecord.tsx";
+import closure_2 from "../../../../records/MessageRecord.tsx";
 import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "../../SearchConstants.tsx";
 import { SearchTokenTypes } from "../../SearchUtils.tsx";
 
-const require = fn;
+const require = arg1;
 require("CachedSearchResultParser").CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
@@ -22,7 +22,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
       const _Set = Set;
       set = new Set(set(table[4]).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item, index) => set(closure_1_1[4]).shouldHighlight(item, set));
+      const found = parts.find((arg0) => set(closure_1_1[4]).shouldHighlight(arg0, set));
       if (null == found) {
         return null;
       } else {
@@ -55,28 +55,28 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           tmp18.content = truncateMessageResult;
           return tmp18;
         } else {
-          const obj5 = lib(dependencyMap[5]);
-          const mapped = lib(dependencyMap[5]).chain(content.embeds).map((item, index) => {
+          const obj5 = lib(closure_1_1[5]);
+          const mapped = lib(closure_1_1[5]).chain(content.embeds).map((rawTitle) => {
             let obj = closure_0;
-            const truncateMessageResult = closure_0.truncateMessage(item.rawTitle, closure_0.tokenizedQueryContent, closure_0.lineClamp);
+            const truncateMessageResult = closure_0.truncateMessage(rawTitle.rawTitle, closure_0.tokenizedQueryContent, closure_0.lineClamp);
             if (null != truncateMessageResult) {
               obj = { truncated: null, index: null, contentType: "title" };
               obj[0] = truncateMessageResult;
-              obj[1] = index;
+              obj[1] = arg1;
             } else {
               let rawDescription;
-              if (!closure_1_3.has(item.type)) {
-                rawDescription = item.rawDescription;
+              if (!closure_1_3.has(rawTitle.type)) {
+                rawDescription = rawTitle.rawDescription;
               }
-              obj = { truncated: null, index: null, contentType: "description" };
-              obj[0] = obj.truncateMessage(rawDescription, obj.tokenizedQueryContent, obj.lineClamp);
-              obj[1] = index;
               const truncateMessageResult1 = obj.truncateMessage(rawDescription, obj.tokenizedQueryContent, obj.lineClamp);
+              obj = { truncated: null, index: null, contentType: "description" };
+              obj[0] = truncateMessageResult1;
+              obj[1] = arg1;
             }
             return obj;
           });
-          const chainResult = lib(dependencyMap[5]).chain(content.embeds);
-          const valueResult = mapped.find((item, index) => null != item.truncated).value();
+          const chainResult = lib(closure_1_1[5]).chain(content.embeds);
+          const valueResult = mapped.find((truncated) => null != truncated.truncated).value();
           if (null != valueResult) {
             const tmp5 = new closure_1_2(content);
             const items = [];
@@ -98,17 +98,17 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           } else {
             return content;
           }
-          const iter = mapped.find((item, index) => null != item.truncated);
+          const iter = mapped.find((truncated) => null != truncated.truncated);
         }
       }
     }
     return content;
   };
-  let obj = SearchTokenTypes;
-  const tokenizeQueryResult = require("../../SearchUtils.tsx").tokenizeQuery(searchQueryString);
-  const searchQueryFromTokens = require("../../SearchUtils.tsx").getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = SearchTokenTypes;
-  const str = require("../../SearchUtils.tsx").getQueryContentString(searchQueryFromTokens);
+  let obj = _SearchTokenTypes;
+  const tokenizeQueryResult = _SearchTokenTypes.tokenizeQuery(searchQueryString);
+  const searchQueryFromTokens = _SearchTokenTypes.getSearchQueryFromTokens(tokenizeQueryResult);
+  const obj2 = _SearchTokenTypes;
+  const str = _SearchTokenTypes.getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {
     str2 = str.trim();
@@ -122,6 +122,6 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
 }.prototype;
 class prototype extends CachedSearchResultParser {
 }
-const result = require("obj132").fileFinishedImporting("modules/search/native/message_parsers/MessageSearchResultParser.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/message_parsers/MessageSearchResultParser.tsx");
 
 export default prototype;

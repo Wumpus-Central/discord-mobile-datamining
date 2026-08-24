@@ -5,12 +5,12 @@ import PressableBase from "../../../../design/void/Pressables/native/Pressables.
 import StaffBadgeIcon from "../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx";
 import VisualEffectViewOverrideOverlay_Default from "../../../visual_effect_view/native/overrides/VEVOO.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import initialize from "../../DevToolsSettingsStore.tsx";
+import closure_4 from "../../DevToolsSettingsStore.tsx";
 import { DEV_WIDGET_SIZE } from "../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function DraggableContainer(children) {
   const x = children.x;
   const _require = x;
@@ -23,15 +23,19 @@ function DraggableContainer(children) {
     num = 0;
   }
   const onChangePosition = children.onChangePosition;
+  let sharedValue;
+  let sharedValue1;
+  closure_8 = undefined;
+  let callback3;
   let callback;
   let obj = _require(contentWidth[6]);
-  const sharedValue = obj.useSharedValue(x.get());
+  sharedValue = obj.useSharedValue(x.get());
   obj1 = _require(contentWidth[6]);
-  const sharedValue1 = obj1.useSharedValue(y.get());
+  sharedValue1 = obj1.useSharedValue(y.get());
   const tmp4 = importDefault(contentWidth[7])();
   closure_8 = tmp4;
   const tmp5 = importDefault(contentWidth[8])();
-  const callback3 = tmp5;
+  callback3 = tmp5;
   class P {
     constructor(arg0, arg1) {
       value = closure_9.get();
@@ -122,7 +126,8 @@ function DraggableContainer(children) {
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: ThemesDefault.radii.xl };
+let obj = { widgetContainer: { position: "absolute" }, widget: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: ThemesDefault.radii.xl };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
@@ -143,12 +148,13 @@ let closure_16 = importAllResult.memo(() => {
     children: callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" })
   });
 });
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
   let obj = _mod4115;
   const sharedValue = obj.useSharedValue(closure_4.devWidgetPosition.x);
   const sharedValue1 = _mod4115.useSharedValue(closure_4.devWidgetPosition.y);
+  obj = { children: null };
   const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
@@ -157,8 +163,8 @@ export default function DevWidget() {
     contentHeight: DEV_WIDGET_SIZE,
     dragBoundsPadding: ThemesDefault.space.PX_4,
     onChangePosition(devWidgetPosition) {
-      callback(table[16]);
-      const obj = { devWidgetPosition };
+      let obj = callback(table[16]);
+      obj = { devWidgetPosition };
       return obj.updateDevToolsSettings(obj);
     },
     children: callback(closure_16, {})

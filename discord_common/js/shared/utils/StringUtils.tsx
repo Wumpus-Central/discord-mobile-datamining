@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/StringUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import set from "DOMUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "DOMUtils.tsx";
 import { 01905__ } from "../../../../_runtime/metro/01905__.js";
 
 const re2 = /[\u0300-\u036f]/g;
@@ -9,61 +9,60 @@ if (null == String.prototype.normalize) {
   let fn = (arg0) => arg0;
 } else {
   fn = (str) => {
-    str = str.normalize("NFD");
-    const normalizer = str.replace(closure_2, "");
-    return normalizer.normalize("NFC");
+    const replaced = str.normalize("NFD").replace(closure_2, "");
+    return replaced.normalize("NFC");
   };
 }
 if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    _require = 01905__;
+    _require = _01905__;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
-    const item = items.forEach((item, index) => {
-      let tmp2 = table[item];
+    const item = items.forEach((arg0) => {
+      let tmp2 = table[arg0];
       if (tmp2 == null) {
-        tmp2 = item;
+        tmp2 = arg0;
       }
       closure_1 = closure_1 + tmp2;
     });
     return dependencyMap.normalize("NFD").toLocaleLowerCase();
   };
 }
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
 
-export const cssValueToNumber = set.cssValueToNumber;
-export const upperCaseFirstChar = function upperCaseFirstChar(item) {
-  let str = "";
-  if (null != item) {
-    const formatted = item.charAt(0).toUpperCase();
+export const cssValueToNumber = set2.cssValueToNumber;
+export const upperCaseFirstChar = function upperCaseFirstChar(str) {
+  str = "";
+  if (null != str) {
+    const formatted = str.charAt(0).toUpperCase();
     const _HermesInternal = HermesInternal;
-    str = "" + formatted + item.slice(1);
-    const str2 = item.charAt(0);
+    str = "" + formatted + str.slice(1);
+    const str2 = str.charAt(0);
   }
   return str;
 };
-export const truncateText = (name, closure_8) => {
+export const truncateText = (arg0, arg1) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
   }
-  let concat = name;
+  let concat = arg0;
   let str2 = "";
-  if (null != name) {
+  if (null != arg0) {
     str2 = "";
-    if (null != closure_8) {
-      if (concat.length <= closure_8) {
+    if (null != arg1) {
+      if (concat.length <= arg1) {
         str2 = concat;
       } else {
         if (regex.test(concat)) {
           const items = [];
           HermesBuiltin.arraySpread(concat, 0);
-          const substr = items.slice(0, closure_8 - str.length);
+          const substr = items.slice(0, arg1 - str.length);
           let str3 = substr.join("");
         } else {
-          str3 = concat.substring(0, closure_8 - str.length);
+          str3 = concat.substring(0, arg1 - str.length);
         }
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;

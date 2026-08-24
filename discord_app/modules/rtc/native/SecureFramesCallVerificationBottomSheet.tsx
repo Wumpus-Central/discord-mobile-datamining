@@ -1,12 +1,12 @@
 // discord_app/modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx
 import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/RTCConnectionStore.tsx";
 import { AnalyticsSections } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
 
 export default function SecureFramesCallVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
@@ -22,11 +22,11 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
     return epochAuthenticator;
   });
   const callback = React.useCallback((message) => {
-    channelId(dependencyMap[5]);
-    let obj = { channelId };
+    let obj = channelId(closure_1_2[5]);
+    obj = { channelId };
     const result = obj.trackE2EECallVerificationShareClicked(obj);
     obj = { message };
-    channelId(dependencyMap[6]).showShareActionSheet(obj, AnalyticsSections.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
+    channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
   obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   const intl = channelId(1236).intl;
@@ -35,6 +35,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj[1] = intl2.string(channelId(1236).t["MPp7+C"]);
   const intl3 = channelId(1236).intl;
   obj = { helpArticle: null };
+  const tmp3 = SecureFramesVerificationBottomSheetDefault;
   obj[0] = channelId(9708).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1236).t.wKxADe, obj);
   obj[3] = stateFromStores;

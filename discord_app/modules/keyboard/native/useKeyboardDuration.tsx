@@ -1,9 +1,9 @@
 // discord_app/modules/keyboard/native/useKeyboardDuration.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import context from "../../window/native/AppEntryKeyContext.tsx";
 import computeEntryStateDefault from "KeyboardUIStore.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
+const result = set.fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
 
 export const getKeyboardDuration = function getKeyboardDuration() {
   let DEFAULT_APP_ENTRY_KEY = arg0;
@@ -13,6 +13,7 @@ export const getKeyboardDuration = function getKeyboardDuration() {
   let num = 300;
   if (!obj.isAndroid()) {
     num = computeEntryStateDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardDuration;
+    const obj2 = computeEntryStateDefault;
   }
   return num;
 };

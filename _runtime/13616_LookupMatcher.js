@@ -4,7 +4,7 @@ import BestAvailableLocale from "13620_BestAvailableLocale.js";
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
+arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {
   const obj = { locale: "" };
   let num = 0;
   if (0 < arg1.length) {
@@ -19,6 +19,6 @@ arg5.LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
     }
     return obj;
   }
-  obj.locale = fn();
+  obj.locale = arg2();
   return obj;
 };

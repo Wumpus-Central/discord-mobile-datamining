@@ -1,17 +1,19 @@
 // discord_app/modules/user_settings/defs/native/ShowDevWidgetSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import updateDevToolsSettings from "../../../devtools/DevToolsActionCreators.tsx";
-import "createToggle";
+import closure_2 from "../../../devtools/DevToolsSettingsStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     return "Show Dev Tools Widget";
   },
   parent: null,
   IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    const obj = { showDevWidget };
+    let obj = updateDevToolsSettings;
+    obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
   },
   useValue: function useShowDevWidgetSettingToggleValue() {
@@ -21,6 +23,6 @@ let createToggle = {
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");
 
 export default createToggle;

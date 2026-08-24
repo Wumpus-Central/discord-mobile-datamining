@@ -4,22 +4,25 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation.android.tsx";
 import NativeGiftContextProvider from "../../../payments/native/NativeGiftContext.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
+createCacheKey = { title: null, description: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
+let obj1 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
 
 export default function PremiumGiftDMSuccessBody() {
   const tmp = callback3();
-  let obj = { children: null };
+  let obj = NativeGiftContextProvider;
+  obj = { children: null };
   obj = { children: callback(PremiumGiftBackgroundAnimationDefault, { giftStyle: obj.useNativeGiftContext().giftStyle }) };
   const items = [callback(View, obj), , ];
   obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };

@@ -4,22 +4,22 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import SvgComponentDefault from "GuildProfileEmptyStateSvg.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
-let result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
 
 export default function GuildProfileEmptyState() {
   const tmp = callback4();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
+  obj = { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
   obj = { style: tmp.image };
   const items = [callback2(closure_5, obj), , , , ];
   obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

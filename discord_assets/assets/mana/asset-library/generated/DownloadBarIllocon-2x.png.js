@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js");
+const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DownloadBarIllocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/88401def2676ea7fc94d20ed0878ffa552e573539d5de5bc31bd2d5b53490771.png";
 export const metadata = { fileBytes: 575 };

@@ -3,10 +3,10 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import closure_6 from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import participantFromServer from "../../EmbeddedActivitiesStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../EmbeddedActivitiesStore.tsx";
 import { ActivityLayoutMode } from "../../Constants.tsx";
 import ActivityPanelModes from "../ActivityPanelConstants.tsx";
 import { DEFAULT_PORTRAIT_LETTERBOX_CONFIG as closure_15 } from "ActivityPanelNativeConstants.tsx";
@@ -15,8 +15,9 @@ import { PIP_WINDOW_OFFSET } from "../../../panels/morphable/native/MorphablePan
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import Button from "../../../../design/void/native.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 class BaseActivityPanelPIPView {
   constructor(arg0) {
     transitionState = global.transitionState;
@@ -60,7 +61,7 @@ class BaseActivityPanelPIPView {
     }, items1);
     tmp8 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
     closure_10 = tmp8;
-    obj3 = require("../../../reanimated/ReanimatedRexport.tsx");
+    obj3 = require("module_4115");
     class J {
       constructor() {
         point = pipState.get();
@@ -90,18 +91,18 @@ class BaseActivityPanelPIPView {
               flag = false;
             }
             if (flag) {
-              flag = closure_0 === transitionState(stateFromStores[22]).TransitionStates.YEETED;
+              flag = closure_0 === closure_1_0(closure_1_2[22]).TransitionStates.YEETED;
             }
             if (flag) {
-              transitionState(stateFromStores[20]).runOnJS(closure_1)();
-              const obj = transitionState(stateFromStores[20]);
+              closure_1_0(closure_1_2[20]).runOnJS(closure_1)();
+              const obj = closure_1_0(closure_1_2[20]);
             }
           };
           obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
           tmp13 = transitionState;
           obj1[0] = transitionState;
           obj1[1] = require("wrapChildrenDefault").TransitionStates;
-          obj1[2] = require("../../../reanimated/ReanimatedRexport.tsx").runOnJS;
+          obj1[2] = require("module_4115").runOnJS;
           tmp14 = transitionCleanUp;
           obj1[3] = transitionCleanUp;
           transitionComplete.__closure = obj1;
@@ -170,7 +171,7 @@ class BaseActivityPanelPIPView {
         return;
       }
     }
-    obj = { pipState, getClampedPIPPosition: require("MIN_PIP_TOSS_VELOCITY").getClampedPIPPosition, ACTIVITY_PIP_SIZE: closure_10, windowDimensions: tmp3, safeArea: tmp4, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp8, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, transitionCleanUp, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_19, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: height, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_13 };
+    obj = { pipState, getClampedPIPPosition: require("MIN_PIP_TOSS_VELOCITY").getClampedPIPPosition, ACTIVITY_PIP_SIZE: closure_10, windowDimensions: tmp3, safeArea: tmp4, pipAvoidanceSpecs, wrapperOffset, disableHorizontalSafeAreas: tmp8, shown, reduceMotion: stateFromStores, PIP_WINDOW_OFFSET, transitionState, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4115").runOnJS, transitionCleanUp, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_19, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: height, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_13 };
     J.__closure = obj;
     J.__workletHash = 14326479117867;
     J.__initData = closure_21;
@@ -184,14 +185,14 @@ class BaseActivityPanelPIPView {
     items2[1] = height;
     class W {
       constructor() {
-        obj = require("../../../reanimated/ReanimatedRexport.tsx");
+        obj = require("module_4115");
         tmp = obj.runOnJS(setMode)(width.PANEL);
         return;
       }
     }
     obj2 = { runOnJS: null, setMode: null, ActivityPanelModes: null };
     memo = closure_3.useMemo(() => ({ width, height, pointerEvents: "none" }), items2);
-    obj2[0] = require("../../../reanimated/ReanimatedRexport.tsx").runOnJS;
+    obj2[0] = require("module_4115").runOnJS;
     obj2[1] = setMode;
     obj2[2] = width;
     W.__closure = obj2;
@@ -216,7 +217,7 @@ class BaseActivityPanelPIPView {
       const items = [{ name: "activate" }];
       obj[3] = items;
       obj[4] = function onAccessibilityAction() {
-        callback(width.PANEL);
+        callback(closure_1_11.PANEL);
       };
       return obj;
     }, items4);
@@ -243,7 +244,7 @@ class BaseActivityPanelPIPView {
     obj7[1] = tmp15Result;
     obj6[1] = tmp15(tmp17, obj7);
     obj5.children = tmp15(require("LegacyBaseButton").GestureDetector, obj6);
-    obj4[1] = tmp15(require("../../../reanimated/ReanimatedRexport.tsx").View, obj5);
+    obj4[1] = tmp15(require("module_4115").View, obj5);
     return tmp15(require("ManaContext").ThemeContextProvider, obj4);
   }
 }
@@ -252,7 +253,8 @@ let ACTIVITY_PIP_SIZE = ActivityPanelModes.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: unpackModuleId, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelModes);
 let closure_19 = { duration: 300 };
 const boxShadowStyle = Button.generateBoxShadowStyle(require("Button").EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-let obj = { borderRadius: ThemesDefault.radii.lg };
+let obj = { wrapper: null, mask: null };
+obj = { borderRadius: ThemesDefault.radii.lg };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
 obj[0] = obj;
@@ -269,17 +271,18 @@ const memoResult = importAllResult.memo((transitionState) => {
   const transitionCleanUp = transitionState.transitionCleanUp;
   dependencyMap = undefined;
   activity = undefined;
+  let applicationId;
   let stateFromStores;
   let stateFromStores1;
   let memo;
   const items = [closure_8];
-  const stateFromStoresObject = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
     const connectedActivityLocation = store.getConnectedActivityLocation();
     const obj = { channelId: lib(_undefined[30]).getEmbeddedActivityLocationChannelId(connectedActivityLocation), activity: store.getSelfEmbeddedActivityForLocation(connectedActivityLocation) };
     return obj;
   });
   ({ channelId: c2, activity } = stateFromStoresObject);
-  let applicationId;
+  applicationId = undefined;
   if (activity != null) {
     applicationId = activity.applicationId;
   }
@@ -295,6 +298,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   tmpResult = tmp(589);
   const items2 = [memo];
   stateFromStores1 = tmpResult.useStateFromStores(items2, () => memo.getChannel(c2));
+  _require = undefined;
   const tmp8 = transitionCleanUp(1629)();
   _require = tmp8;
   const items3 = [tmp8.right];
@@ -306,18 +310,19 @@ const memoResult = importAllResult.memo((transitionState) => {
     if (num == null) {
       num = 0;
     }
-    const obj = { disable: false, override: Math.max(closure_1_14, num) };
+    let obj = { right: null };
+    obj = { disable: false, override: Math.max(closure_1_14, num) };
     obj[0] = obj;
     return obj;
   }, items3);
   const items4 = [activity, stateFromStores1, memo, stateFromStores, transitionCleanUp, transitionState];
   return activity.useMemo(() => {
-    { transitionState: closure_0, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: null != activity, context: transitionCleanUp(_undefined[31]), children: jsx(transitionCleanUp(_undefined[32]), obj) };
-    obj = { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig: closure_1_15, landscapeSafeAreasConfig: memo };
-    return <BaseActivityPanelPIPView channel={stateFromStores1} layoutMode={ActivityLayoutMode.PIP} portraitSafeAreasConfig={closure_1_15} landscapeSafeAreasConfig={memo} />;
+    obj = { transitionState: closure_0, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: null != activity, context: transitionCleanUp(_undefined[31]), children: closure_1_18(transitionCleanUp(_undefined[32]), obj) };
+    obj = { channel: stateFromStores1, layoutMode: closure_1_9.PIP, portraitSafeAreasConfig: closure_1_15, landscapeSafeAreasConfig: memo };
+    return closure_1_18(closure_1_24, obj);
   }, items4);
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
 
 export default memoResult;
 export const useBaseActivityPanelPIPView = function useBaseActivityPanelPIPView() {
@@ -333,7 +338,8 @@ export const useBaseActivityPanelPIPView = function useBaseActivityPanelPIPView(
       if (num == null) {
         num = 0;
       }
-      const obj = { disable: false, override: Math.max(closure_1_14, num) };
+      let obj = { right: null };
+      obj = { disable: false, override: Math.max(closure_1_14, num) };
       obj[0] = obj;
       return obj;
     }, items)

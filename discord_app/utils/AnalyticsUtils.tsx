@@ -6,9 +6,9 @@ import _modDef1208 from "SentryUtils.native.tsx";
 import getHermesInstrumentedStatsSummaryDefault from "ProcessUtils.native.tsx";
 import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "../modules/errors/CommonSentryInitUtils.tsx";
 import MEAll from "AnalyticsSchema.tsx";
-import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_6 from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import withEqualityFn from "../modules/app_analytics/ImpressionStore.tsx";
-import refreshSourceMapCookie from "../stores/DeveloperOptionsStore.tsx";
+import closure_9 from "../stores/DeveloperOptionsStore.tsx";
 import ME from "../Constants.tsx";
 import { AccessibilityFeatureFlags } from "../modules/a11y/AccessibilityConstants.tsx";
 import { ApplicationTypes } from "../modules/applications/ApplicationConstants.tsx";
@@ -17,7 +17,7 @@ import importAllResult from "../../_runtime/00019_noop.js";
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import importAllResult1 from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
-require = fn;
+require = arg1;
 function expandEventProperties(arg0) {
   let obj = arg0;
   if (arg0 == null) {
@@ -27,13 +27,16 @@ function expandEventProperties(arg0) {
   if (null == obj.location) {
     if (null == obj.source) {
       tmp.client_performance_cpu = getHermesInstrumentedStatsSummaryDefault.getCurrentCPUUsagePercent();
+      const obj6 = getHermesInstrumentedStatsSummaryDefault;
       tmp.client_performance_memory = getHermesInstrumentedStatsSummaryDefault.getCurrentMemoryUsageKB();
+      const obj7 = getHermesInstrumentedStatsSummaryDefault;
       tmp.cpu_core_count = getHermesInstrumentedStatsSummaryDefault.getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
       tmp.rendered_locale = obj2(1236).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
+      const obj8 = getHermesInstrumentedStatsSummaryDefault;
       const processUptime = getHermesInstrumentedStatsSummaryDefault.getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
@@ -61,7 +64,7 @@ function expandEventProperties(arg0) {
       }
       tmp.utm_content = utm_content;
       tmp.launch_signature = launchSignature;
-      const item = arr.forEach((item, index) => item(obj2));
+      const item = arr.forEach((arg0) => arg0(obj2));
       return tmp;
     } else {
       const source = obj.source;
@@ -112,7 +115,8 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
 function addBreadcrumb(arg0) {
   const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS2.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
-    const obj = { category: "analytics", message: null };
+    let obj = _modDef1208;
+    obj = { category: "analytics", message: null };
     obj[1] = arg0;
     obj.addBreadcrumb(obj);
   }
@@ -141,7 +145,7 @@ function debugLogEvent(name, result) {
 }
 const result = importAllResult1.extendSuperProperties({ launch_signature: launchSignature });
 let closure_20 = [];
-{
+obj = {
   [AnalyticEvents.APP_OPENED]: obj,
   [AnalyticEvents.APP_BACKGROUND]: isBlockedDomain,
   [AnalyticEvents.ACK_MESSAGES]: (location_object_type) => {
@@ -183,8 +187,8 @@ let closure_20 = [];
   [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj24,
   [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj25,
   [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj26,
-  [fn(503).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj27,
-  [fn(503).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj28,
+  [arg1(503).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj27,
+  [arg1(503).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj28,
   [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj29,
   [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj30,
   [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj31,
@@ -648,6 +652,7 @@ obj9 = {
 let closure_22 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 let c24 = false;
 let closure_25 = {};
+const obj57 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
 let closure_26 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const obj59 = {};
 let merged = Object.assign(importAllResult1);
@@ -666,10 +671,11 @@ obj59.track = function track(arg0, arg1) {
     if (null != arg1) {
       const _Array = Array;
       if (Array.isArray(table[arg0])) {
-        table[arg0].push(arg1);
+        tmp3[arg0].push(arg1);
+        const arr2 = tmp3[arg0];
       } else {
         const items = [arg1];
-        table[arg0] = items;
+        tmp3[arg0] = items;
       }
     }
   }
@@ -693,7 +699,8 @@ obj59.track = function track(arg0, arg1) {
   obj = { flush: obj.flush, fingerprint: obj.fingerprint };
   return callback4(arg0, tmp5, obj);
 };
-const result1 = require("obj132").fileFinishedImporting("utils/AnalyticsUtils.tsx");
+const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+const result1 = require("set").fileFinishedImporting("utils/AnalyticsUtils.tsx");
 
 export default obj59;
 export const AnalyticsContext = context;
@@ -720,7 +727,7 @@ export function getAnalyticsEventsRecording() {
 }
 export const clearAnalyticsEventsRecording = function clearAnalyticsEventsRecording() {
   const keys = Object.keys(closure_25);
-  const item = keys.forEach((item, index) => {
+  const item = keys.forEach((arg0) => {
     delete tmp2[tmp];
   });
 };
@@ -728,9 +735,9 @@ export const isGameApplicationType = function isGameApplicationType(arg0) {
   return arg0 === ApplicationTypes.GAME || arg0 === ApplicationTypes.DEPRECATED_GAME;
 };
 export const trackNetworkAction = function trackNetworkAction(event, arg1) {
-  { location: callback3() };
+  let obj = { location: callback3() };
   const merged = Object.assign(arg1);
-  const obj = { type: "action" };
+  obj = { type: "action" };
   const merged1 = Object.assign(arg1);
   callback2(event, obj);
   const tmp2 = expandEventProperties(obj);

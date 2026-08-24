@@ -26,5 +26,5 @@ export const EnsureSingleNavigator = function EnsureSingleNavigator(children) {
         tmp.current = undefined;
       }
     }
-  }), [])}>{children.children}</context.Provider>;
+  }), [])}>{arg0.children}</context.Provider>;
 };

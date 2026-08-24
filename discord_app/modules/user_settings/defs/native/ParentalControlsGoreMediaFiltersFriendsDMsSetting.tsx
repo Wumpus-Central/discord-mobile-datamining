@@ -2,11 +2,11 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import redactionSettingToRenderedString from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
-import "createToggle";
+import closure_2 from "../../../parent_tools/FamilyCenterStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle: function getTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["+uI23H"]);
@@ -28,15 +28,15 @@ let createToggle = {
   onPress: function onGoreContentFriendsDmOnPress() {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      selectedTeenId(14185);
-      let obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
+      let obj = selectedTeenId(14185);
+      obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1236).intl;
       obj[0] = intl.string(selectedTeenId(1236).t["16/3Bi"]);
       const intl2 = selectedTeenId(1236).intl;
       obj[1] = intl2.string(selectedTeenId(1236).t["+uI23H"]);
       obj[2] = function handlePress(goreContentFriendDm) {
-        selectedTeenId(dependencyMap[4]);
-        const obj = { goreContentFriendDm };
+        let obj = selectedTeenId(closure_1_1[4]);
+        obj = { goreContentFriendDm };
         return obj.updateGoreContentSetting(selectedTeenId, obj);
       };
       obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
@@ -49,6 +49,6 @@ let createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersFriendsDMsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersFriendsDMsSetting.tsx");
 
 export default createToggle;

@@ -4,10 +4,10 @@ import noop from "00019_noop.js";
 const useRef = noop.useRef;
 let closure_1 = {};
 
-export default function useLazyValue(fn) {
+export default function useLazyValue(arg0) {
   const tmp = useRef(closure_1);
   if (tmp.current === closure_1) {
-    tmp.current = fn();
+    tmp.current = arg0();
   }
   return tmp.current;
 };

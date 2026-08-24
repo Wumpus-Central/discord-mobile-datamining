@@ -1,18 +1,20 @@
 // discord_app/modules/chat_input/native/ChatFloatingNavButton.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Image: c4, Pressable: c5 } = get_ActivityIndicator);
-const createCacheKey = { height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
+createCacheKey = { pill: null, icon: null };
+createCacheKey = { height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE, height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function ChatFloatingNavButtonTsx1(){const{withSpring,interpolateColor,pressed,bgColor,pressedBgColor,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[bgColor,pressedBgColor]),ON_PRESS_SPRING,'animate-always')};}" };
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/ChatFloatingNavButton.tsx");
+let obj1 = { width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE, height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE };
+let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatFloatingNavButton.tsx");
 
 export default function ChatFloatingNavButton(arg0) {
   let sharedValue;

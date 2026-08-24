@@ -7,9 +7,9 @@ import TwoWayLinkError from "../TwoWayLinkError.tsx";
 import { CrunchyrollLinkModalScenes as closure_2 } from "CrunchyrollLinkConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
 
 export default function CrunchyrollLinkDiscordError(onClose) {
   let obj = useNavigation;

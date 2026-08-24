@@ -1,6 +1,5 @@
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
-import getSystemLocale from "../../intl/index.native.tsx";
+import set from "../../../_runtime/00002_set.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import hasFlag from "../../records/MessageRecord.tsx";
 import formatExpirationLabel from "../polls/chat/useFormattedExpirationLabel.tsx";
@@ -8,16 +7,16 @@ import formatExpirationLabel from "../polls/chat/useFormattedExpirationLabel.tsx
 const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;
 const re5 = /^https?:\/\/\S+$/;
-let result = obj132.fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
+let result = set.fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
 
 export const toAnnouncementMessages = function toAnnouncementMessages(messages) {
-  return messages.map((item, index) => {
+  return messages.map((reactions) => {
     let obj = found4(found6[5]);
-    const tmp2Result = found5(found6[4])(obj.createMessageRecord(item));
+    const tmp2Result = found5(found6[4])(obj.createMessageRecord(reactions));
     if (callback(tmp2Result)) {
       const components = tmp2Result.components;
-      const found = components.filter((item, index) => item.type === found4(found6[1]).ComponentType.TEXT_DISPLAY);
-      const mapped = found.map((item, index) => item.content);
+      const found = components.filter((type) => type.type === found4(found6[1]).ComponentType.TEXT_DISPLAY);
+      const mapped = found.map((content) => content.content);
       let joined = mapped.join("\n");
     } else {
       const content = tmp2Result.content;
@@ -49,7 +48,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
     }
     if (callback(tmp2Result)) {
       const components1 = tmp2Result.components;
-      const found1 = components1.find((item, index) => item.type === found4(found6[1]).ComponentType.MEDIA_GALLERY);
+      const found1 = components1.find((type) => type.type === found4(found6[1]).ComponentType.MEDIA_GALLERY);
       let media;
       if (found1 != null) {
         const first1 = found1.items[0];
@@ -69,7 +68,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
           obj.sourceMetadata = obj;
           let result = obj;
         }
-        index = joined.indexOf("\n");
+        const index = joined.indexOf("\n");
         let str9 = joined;
         if (-1 !== index) {
           str9 = joined.slice(0, index);
@@ -85,22 +84,23 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
           }
           obj1[1] = str11;
           let obj2 = obj1;
+          const str10 = match[1];
         } else {
           obj2 = { body: null };
           obj2[0] = joined;
         }
-        const reactions = item.reactions;
+        reactions = reactions.reactions;
         let num5;
         ({ title, body } = obj2);
         if (reactions != null) {
-          num5 = reactions.reduce((acc, item, index) => acc + item.count, 0);
+          num5 = reactions.reduce((arg0, count) => arg0 + count.count, 0);
         }
         if (num5 == null) {
           num5 = 0;
         }
         let tmp32;
         if (joined !== tmp2Result.content) {
-          if (!callback(tmp2Result)) {
+          if (!tmp5(tmp2Result)) {
             const first2 = tmp2Result.embeds[0];
             let tmp34;
             if (null != first2) {
@@ -167,7 +167,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         obj4[2] = title;
         obj4[3] = body;
         obj4[4] = joined;
-        obj4[5] = item.timestamp;
+        obj4[5] = reactions.timestamp;
         obj4[6] = num5;
         obj4[7] = tmp32;
         obj4[8] = tmp2Result.poll;
@@ -175,19 +175,19 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
       }
     }
     const attachments = tmp2Result.attachments;
-    const found2 = attachments.find((item, index) => found4(found6[3]).isImageContentType(item.content_type));
+    const found2 = attachments.find((content_type) => found4(found6[3]).isImageContentType(content_type.content_type));
     if (null != found2) {
       tmp3Result = tmp3(tmp[2]);
       result = tmp3Result.messageAttachmentToMediaItem(found2, tmp2Result);
     } else {
       const attachments1 = tmp2Result.attachments;
-      const found3 = attachments1.find((item, index) => found4(found6[3]).isVideoContentType(item.content_type));
+      const found3 = attachments1.find((content_type) => found4(found6[3]).isVideoContentType(content_type.content_type));
       if (null != found3) {
         result = tmp3(tmp[2]).messageAttachmentToMediaItem(found3, tmp2Result);
         const tmp3Result1 = tmp3(tmp[2]);
       } else {
         let embeds = tmp2Result.embeds;
-        found4 = embeds.find((item, index) => null != item.video && null != item.thumbnail);
+        found4 = embeds.find((video) => null != video.video && null != video.thumbnail);
         let thumbnail;
         if (found4 != null) {
           thumbnail = found4.thumbnail;
@@ -197,13 +197,13 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
           obj5[0] = tmp2Result;
           const obj6 = { type: "embed", embedIndex: null };
           const embeds3 = tmp2Result.embeds;
-          obj6[1] = embeds3.findIndex((item, index) => item === found4);
+          obj6[1] = embeds3.findIndex((arg0) => arg0 === found4);
           obj5[1] = obj6;
           result = tmp3(tmp[2]).embedMediaToMediaItem(found4.thumbnail, obj5, "IMAGE");
           const tmp3Result2 = tmp3(tmp[2]);
         } else {
           const embeds1 = tmp2Result.embeds;
-          found5 = embeds1.find((item, index) => null != item.image);
+          found5 = embeds1.find((image) => null != image.image);
           let image;
           if (found5 != null) {
             image = found5.image;
@@ -213,13 +213,13 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
             obj7[0] = tmp2Result;
             const obj8 = { type: "embed", embedIndex: null };
             let embeds2 = tmp2Result.embeds;
-            obj8[1] = embeds2.findIndex((item, index) => item === found5);
+            obj8[1] = embeds2.findIndex((arg0) => arg0 === found5);
             obj7[1] = obj8;
             result = tmp3(tmp[2]).embedMediaToMediaItem(found5.image, obj7, "IMAGE");
             const tmp3Result3 = tmp3(tmp[2]);
           } else {
             embeds2 = tmp2Result.embeds;
-            found6 = embeds2.find((item, index) => null != item.thumbnail);
+            found6 = embeds2.find((thumbnail) => null != thumbnail.thumbnail);
             let thumbnail1;
             if (found6 != null) {
               thumbnail1 = found6.thumbnail;
@@ -229,7 +229,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
               obj9[0] = tmp2Result;
               const obj10 = { type: "embed", embedIndex: null };
               embeds = tmp2Result.embeds;
-              obj10[1] = embeds.findIndex((item, index) => item === found6);
+              obj10[1] = embeds.findIndex((arg0) => arg0 === found6);
               obj9[1] = obj10;
               result = tmp3(tmp[2]).embedMediaToMediaItem(found6.thumbnail, obj9, "IMAGE");
               const tmp3Result4 = tmp3(tmp[2]);
@@ -238,20 +238,19 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
       }
     }
-    const tmp2 = found5(found6[4]);
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   let result = formatExpirationLabel.formatExpirationLabel(poll.expiry);
   if (result == null) {
-    const intl = getSystemLocale.intl;
-    result = intl.string(getSystemLocale.t["e+J3JZ"]);
+    const intl = tmp(1236).intl;
+    result = intl.string(tmp(1236).t["e+J3JZ"]);
   }
   return result;
 };
 export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
-  isDiscordProxiedAssetUrlDefault.toURLSafe(proxyUrl);
-  let str = null;
+  let str = isDiscordProxiedAssetUrlDefault.toURLSafe(proxyUrl);
+  str = null;
   if (null != str) {
     const searchParams = str.searchParams;
     searchParams.append("format", "webp");

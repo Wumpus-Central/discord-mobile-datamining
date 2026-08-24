@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/hooks/useCardLayout.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import CollectiblesShopCardInternalV2 from "../CollectiblesShopCardV2.tsx";
 
-let result = obj132.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
+let result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 
 export const useCardLayout = function useCardLayout() {
   const width = useWindowDimensionsDefault().width;
@@ -27,18 +27,18 @@ export const useCardLayout = function useCardLayout() {
       const _Math = Math;
       let bound = Math.max(4, diff1);
     } else {
-      bound = 2 * CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP;
+      bound = 2 * tmp2(9172).COLLECTIBLES_SHOP_CARD_GAP;
     }
-    const result1 = (width - (bound + CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP * diff)) / num;
-    let tmp10 = require;
+    const result1 = (width - (bound + tmp2(9172).COLLECTIBLES_SHOP_CARD_GAP * diff)) / num;
+    let tmp10 = tmp2;
     let tmp11 = result1;
     let tmp12 = num;
-    let tmp14 = require;
+    let tmp14 = tmp2;
     if (result1 > CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_MAX_WIDTH) {
       let tmp19 = num;
-      tmp10 = require;
+      tmp10 = tmp2;
       tmp11 = result1;
-      tmp14 = require;
+      tmp14 = tmp2;
       tmp12 = num;
       if (num < num2) {
         const sum = tmp19 + 1;
@@ -49,9 +49,11 @@ export const useCardLayout = function useCardLayout() {
         tmp14 = require;
         while (result2 > CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_MAX_WIDTH) {
           tmp19 = sum;
-          tmp10 = require;
+          let tmp9 = tmp17;
+          tmp10 = tmp16;
           tmp11 = result2;
-          tmp14 = require;
+          let tmp13 = tmp17;
+          tmp14 = tmp16;
           tmp12 = sum;
           if (sum >= num2) {
             break;

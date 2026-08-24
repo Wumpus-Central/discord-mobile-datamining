@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import map from "../../../collectibles/CollectiblesPurchaseStore.tsx";
-import updateGiftCode from "../../../../stores/GiftCodeStore.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../collectibles/CollectiblesPurchaseStore.tsx";
+import closure_4 from "../../../../stores/GiftCodeStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   const _require = arg0;

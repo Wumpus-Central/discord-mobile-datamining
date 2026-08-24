@@ -1,15 +1,15 @@
 // discord_app/modules/notification_center/getNotificationCenterItemBody.tsx
-import scheduledEventSort from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import closure_3 from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import { isGuildEventEnded } from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/RelationshipStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: c9 } = ME);
 const re10 = /[\\`*_~|<>[\]:]/g;
-const result = require("obj132").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
+const result = require("set").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
 
 export default function getNotificationCenterItemBody(arg0) {
   ({ item, renderApplication } = arg0);
@@ -146,6 +146,7 @@ export default function getNotificationCenterItemBody(arg0) {
       str9 = "";
     }
     formatResult = str9;
+    const tmp28 = isGuildEventEnded;
     tmp28Result = isGuildEventEnded(guildScheduledEvent);
   } else if (tmp7(4802).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
     if (null != applicationId) {

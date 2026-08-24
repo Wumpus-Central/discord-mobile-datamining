@@ -1,9 +1,9 @@
 // discord_app/modules/libdiscore/FluxApi.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 
 isBlockedDomain = isBlockedDomain.getFluxApi();
-const result = obj132.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
+const result = set.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
 
 export const FLUX_API = isBlockedDomain;
 export const hasFluxApi = function hasFluxApi() {

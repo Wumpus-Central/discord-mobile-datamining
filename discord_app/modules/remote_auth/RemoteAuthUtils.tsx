@@ -1,7 +1,7 @@
 // discord_app/modules/remote_auth/RemoteAuthUtils.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import createdAt from "../../records/UserRecord.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../records/UserRecord.tsx";
 
 function _decodeEncodedUserRecord() {
   const self = this;
@@ -15,8 +15,7 @@ function _decodeEncodedUserRecord() {
       dependencyMap = tmp5;
       let callback = table;
       const obj2 = callback(table[3]);
-      yield obj2.decryptEncodedCiphertext(callback, callback);
-      callback = str;
+      callback = yield obj2.decryptEncodedCiphertext(callback, callback);
       table = str.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
       if (null == table) {
         const _Error = Error;
@@ -48,7 +47,7 @@ function _decodeEncodedUserRecord() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/remote_auth/RemoteAuthUtils.tsx");
 
 export const decodeEncodedUserRecord = function decodeEncodedUserRecord(arg0, closure_6) {
   const self = this;

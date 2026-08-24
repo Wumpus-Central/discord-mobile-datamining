@@ -4,12 +4,12 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import _modDef4656 from "../../../actions/native/AlertActionCreators.tsx";
 import apexExperimentDefault from "MobileGoLiveUpsellExperiment.tsx";
 import updateRegionDefault from "../ApplicationStreamingManager.tsx";
-import ApplicationStreamPresets from "../../../stores/ApplicationStreamingSettingsStore.tsx";
+import closure_3 from "../../../stores/ApplicationStreamingSettingsStore.tsx";
 import { ApplicationStreamPresets } from "../StreamSettingsConstants.tsx";
 import { MediaEngineContextTypes } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
 let obj = new timestampDefault("ApplicationStreamingManager");
 obj.enableNativeLogger(true);
@@ -18,10 +18,11 @@ class ApplicationStreamingManager extends tmp4 {
 }
 const prototype = ApplicationStreamingManager.prototype;
 prototype["platformShowStreamFull"] = function platformShowStreamFull() {
+  obj = _modDef4656;
   obj = {
     importer() {
-      return callback(paths[9])(paths[8], paths.paths).then((result) => {
-        closure_0 = result.default;
+      return callback(paths[9])(paths[8], paths.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const merged = Object.assign(arg0);
           return closure_1_6(closure_0, {});
@@ -44,6 +45,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
     setGoLiveSource = setGoLiveSource(9654).setGoLiveSource;
+    obj = { desktopSettings: null, qualityOptions: null, context: null };
     obj = { sourceId: null, sound: null };
     obj[0] = sourceId;
     obj[1] = soundshareEnabled;
@@ -61,10 +63,10 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");
   }
 };
-prototype["platformHandleVoiceStateUpdate"] = function platformHandleVoiceStateUpdate(item) {
+prototype["platformHandleVoiceStateUpdate"] = function platformHandleVoiceStateUpdate(arg0) {
 
 };
 const applicationStreamingManager = new ApplicationStreamingManager();
-const result = require("obj132").fileFinishedImporting("modules/go_live/native/ApplicationStreamingManager.tsx");
+const result = require("set").fileFinishedImporting("modules/go_live/native/ApplicationStreamingManager.tsx");
 
 export default applicationStreamingManager;

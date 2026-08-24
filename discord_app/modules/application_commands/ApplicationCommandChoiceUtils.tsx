@@ -1,9 +1,9 @@
 // discord_app/modules/application_commands/ApplicationCommandChoiceUtils.tsx
-import handleInit from "ApplicationCommandAutocompleteStore.tsx";
+import closure_0 from "ApplicationCommandAutocompleteStore.tsx";
 import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
 
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: obj1 } = TRUE_OPTION_NAME);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");
 
 export const toChoiceBooleanValue = function toChoiceBooleanValue(trimmed) {
   const formatted = trimmed.toLowerCase();
@@ -15,7 +15,7 @@ export const findChoiceStringValue = function findChoiceStringValue(choices, clo
   closure_0 = closure_27;
   let value;
   if (choices != null) {
-    const iter = choices.find((item, index) => item.displayName === closure_0);
+    const iter = choices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
       value = iter.value;
     }
@@ -26,7 +26,7 @@ export const findChoiceNumberValue = function findChoiceNumberValue(choices, tri
   closure_0 = trimmed;
   let value;
   if (choices != null) {
-    const iter = choices.find((item, index) => item.displayName === closure_0);
+    const iter = choices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
       value = iter.value;
     }
@@ -38,7 +38,7 @@ export const findAutocompleteChoiceStringValue = function findAutocompleteChoice
   store = closure_27;
   let value;
   if (autocompleteLastChoices != null) {
-    const iter = autocompleteLastChoices.find((item, index) => item.displayName === closure_0);
+    const iter = autocompleteLastChoices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
       value = iter.value;
     }
@@ -54,7 +54,7 @@ export const findAutocompleteChoiceNumberValue = function findAutocompleteChoice
   store = trimmed;
   let value;
   if (autocompleteLastChoices != null) {
-    const iter = autocompleteLastChoices.find((item, index) => item.displayName === closure_0);
+    const iter = autocompleteLastChoices.find((displayName) => displayName.displayName === closure_0);
     if (iter != null) {
       value = iter.value;
     }

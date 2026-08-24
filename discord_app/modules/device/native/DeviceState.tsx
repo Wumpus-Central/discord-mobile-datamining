@@ -1,9 +1,9 @@
 // discord_app/modules/device/native/DeviceState.tsx
 import timestampDefault from "../../debug/Logger.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 function _getDeviceState() {
   const self = this;
   const tmp = callback(() => {
@@ -117,7 +117,7 @@ function _getDeviceState() {
 }
 const tmp2 = new timestampDefault("native/DeviceState.tsx");
 let closure_4 = tmp2;
-const result = require("obj132").fileFinishedImporting("modules/device/native/DeviceState.tsx");
+const result = require("set").fileFinishedImporting("modules/device/native/DeviceState.tsx");
 
 export const logger = tmp2;
 export const getDeviceState = function getDeviceState(arg0) {

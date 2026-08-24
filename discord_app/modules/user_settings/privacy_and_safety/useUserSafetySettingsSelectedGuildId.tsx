@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import closure_2 from "../../../stores/GuildStore.tsx";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "UserSettingsSafetySelectedGuildStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: c4 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/useUserSafetySettingsSelectedGuildId.tsx");
 
 export const useUserSafetySettingsSelectedGuildId = function useUserSafetySettingsSelectedGuildId() {
   return callback().selectedGuildId;

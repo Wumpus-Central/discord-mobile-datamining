@@ -7,18 +7,19 @@ import useThermalState from "../../device/useThermalState.tsx";
 import useThermalStateDefault from "../../device/useThermalState.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsxs: c4, jsx: c5 } = jsxProd);
-const createCacheKey = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
+createCacheKey = { container: null, row: null };
+createCacheKey = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
 createCacheKey[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.7);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
 
 export default function ActivitiesDebugOverlay() {
   const tmp = callback3();
@@ -28,14 +29,14 @@ export default function ActivitiesDebugOverlay() {
   if (useThermalState.ThermalStates.UNHANDLED !== tmp4) {
     str = "text-feedback-positive";
     str2 = "nominal";
-    if (useThermalState.ThermalStates.NOMINAL !== tmp4) {
+    if (tmp5(8763).ThermalStates.NOMINAL !== tmp4) {
       str = "text-feedback-warning";
       str2 = "fair";
-      if (useThermalState.ThermalStates.FAIR !== tmp4) {
+      if (tmp5(8763).ThermalStates.FAIR !== tmp4) {
         str2 = "serious";
         str = "text-feedback-critical";
-        if (useThermalState.ThermalStates.SERIOUS !== tmp4) {
-          if (useThermalState.ThermalStates.CRITICAL === tmp4) {
+        if (tmp5(8763).ThermalStates.SERIOUS !== tmp4) {
+          if (tmp5(8763).ThermalStates.CRITICAL === tmp4) {
             str2 = "critical";
             str = "text-feedback-critical";
           }
@@ -44,8 +45,9 @@ export default function ActivitiesDebugOverlay() {
     }
   }
   const rect = useSafeAreaInsetsDefault();
-  const items = [tmp.container, ];
-  let obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
+  let obj = { style: items, pointerEvents: "none", children: null };
+  items = [tmp.container, ];
+  obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
   items[1] = obj;
   obj = { style: tmp.row, children: null };
   const items1 = [callback(Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(Text.Text, { variant: "text-md/normal", color: str, children: str2 })];

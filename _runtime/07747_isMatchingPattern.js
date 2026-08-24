@@ -12,11 +12,11 @@ arg5.isMatchingPattern = function isMatchingPattern(arr, test) {
   if (!isStringResult) {
     return isStringResult;
   } else {
-    let tmpResult = isInstanceOf;
+    let tmpResult = tmp(7745);
     if (tmpResult.isRegExp(test)) {
       let isMatch = test.test(arr);
     } else {
-      tmpResult = isInstanceOf;
+      tmpResult = tmp(7745);
       isMatch = tmpResult.isString(test);
       if (isMatch) {
         if (flag) {
@@ -97,27 +97,29 @@ arg5.stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
   if (arg2 === undefined) {
     flag = false;
   }
-  return items.some((item, index) => {
+  return items.some((test) => {
+    if (flag === undefined) {
+      flag = false;
+    }
     const isStringResult = callback(flag[0]).isString(callback);
     if (!isStringResult) {
       return isStringResult;
     } else {
-      let tmpResult = callback(tmp2[0]);
-      if (tmpResult.isRegExp(item)) {
-        let isMatch = item.test(callback);
+      let tmpResult = tmp(tmp2[0]);
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(obj);
       } else {
-        tmpResult = callback(tmp2[0]);
-        isMatch = tmpResult.isString(item);
+        tmpResult = tmp(tmp2[0]);
+        isMatch = tmpResult.isString(test);
         if (isMatch) {
           if (flag) {
-            let hasItem = callback === item;
+            let hasItem = obj === test;
           } else {
-            hasItem = callback.includes(item);
+            hasItem = obj.includes(test);
           }
         }
       }
     }
-    const obj2 = callback(flag[0]);
   });
 };
 arg5.truncate = function truncate(str) {

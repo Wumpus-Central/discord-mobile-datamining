@@ -1,5 +1,5 @@
 // _runtime/01525_useKeyedChildListeners.js
-import noop from "00019_noop.js";
+import closure_0 from "00019_noop.js";
 
 
 export const useKeyedChildListeners = function useKeyedChildListeners() {

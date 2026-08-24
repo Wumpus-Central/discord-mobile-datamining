@@ -2,18 +2,18 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
-import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
-import prototype from "../../stores/SearchQueryStore.tsx";
+import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../../../stores/UserStore.tsx";
+import closure_9 from "../../stores/SearchQueryStore.tsx";
 import MessageEmbedTypes from "../../../SearchConstants.tsx";
 import { SearchFilterAddLocations } from "../../tracking/TrackingConstants.tsx";
 import { SearchTypes } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: unpackModuleId } = MessageEmbedTypes);
 let closure_15 = createCacheKey.createStyles((arg0, minHeight) => {
@@ -47,13 +47,14 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
   const memo = ref.useMemo(() => stateFromStores.map(searchContext(stateFromStores[18]).toSearchBarTag), items2);
   const memo1 = ref.useMemo(() => {
     if (0 !== stateFromStores.length) {
-      const mapped = stateFromStores.map((item, index) => item.text);
+      const mapped = arr.map((text) => text.text);
       const joined = mapped.join(", ");
       const intl = searchContext(stateFromStores[13]).intl;
       const obj = { text: null };
       obj[0] = joined;
       return intl.formatToPlainString(searchContext(stateFromStores[13]).t["0zoRaK"], obj);
     }
+    arr = stateFromStores;
   }, items3);
   ref = ref.useRef(null);
   let obj2 = searchContext(stateFromStores[15]);
@@ -62,10 +63,10 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
   const stateFromStores1 = searchContext(stateFromStores[15]).useStateFromStores(items4, () => {
     const type = searchContext.type;
     const channelIds = closure_1_9.getChannelIds(searchContext);
-    if (SearchTypes.GUILD_CHANNEL !== type) {
-      if (SearchTypes.GUILD !== type) {
-        if (SearchTypes.CHANNEL === type) {
-          const channel = closure_1_5.getChannel(searchContext.channelId);
+    if (closure_1_13.GUILD_CHANNEL !== type) {
+      if (tmp3.GUILD !== type) {
+        if (tmp3.CHANNEL === type) {
+          const channel = closure_1_5.getChannel(tmp.channelId);
           if (null == channel) {
             const intl4 = searchContext(stateFromStores[13]).intl;
             let stringResult = intl4.string(searchContext(stateFromStores[13]).t["5h0QOP"]);
@@ -78,7 +79,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
             stringResult = intl3.formatToPlainString(searchContext(stateFromStores[13]).t.LDpotA, obj);
           }
           return stringResult;
-        } else if (SearchTypes.DMS === type) {
+        } else if (tmp3.DMS === type) {
           const intl2 = searchContext(stateFromStores[13]).intl;
           return intl2.string(searchContext(stateFromStores[13]).t.m7OrlR);
         } else {
@@ -88,7 +89,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
       }
     }
     if (0 === channelIds.size) {
-      const guild = closure_1_6.getGuild(searchContext.guildId);
+      const guild = closure_1_6.getGuild(tmp.guildId);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -201,15 +202,17 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
         setTextInputValue.setTextInputValue(closure_0, true);
       });
       const obj2 = setSuggestionsDismissed(stateFromStores[19]);
+      const tmp2 = setSuggestionsDismissed;
+      const tmp3 = stateFromStores;
       const result = setSuggestionsDismissed(stateFromStores[18]).syncAutocompleteDebounced(tmp);
-      if (!closure_1_9.isAutocompleteVisible(tmp)) {
-        const tmp2Result = setSuggestionsDismissed(stateFromStores[18]);
+      if (!obj.isAutocompleteVisible(tmp)) {
+        const tmp2Result = tmp2(tmp3[18]);
         if (isInitialSearchQueryResult) {
           const initialMessages = tmp2Result.fetchInitialMessages(tmp);
         } else {
           const initialMessagesDebounced = tmp2Result.fetchInitialMessagesDebounced(tmp);
         }
-        isInitialSearchQueryResult = closure_1_9.isInitialSearchQuery(tmp);
+        isInitialSearchQueryResult = obj.isInitialSearchQuery(tmp);
       }
       const obj3 = setSuggestionsDismissed(stateFromStores[18]);
     }
@@ -230,9 +233,9 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
         obj = { searchContext: null, searchTokenType: null, isDefault: null };
         obj[0] = tmp;
         obj[1] = tmp2.searchTokenType;
-        obj[2] = tmp2.location === SearchFilterAddLocations.CLIENT_AUTO_ADD;
-        let result = setSuggestionsDismissed(stateFromStores[21]).trackSearchFilterRemove(obj);
-        const obj2 = setSuggestionsDismissed(stateFromStores[21]);
+        obj[2] = tmp2.location === closure_1_12.CLIENT_AUTO_ADD;
+        let result = setSuggestionsDismissed(tmp15[21]).trackSearchFilterRemove(obj);
+        const obj2 = setSuggestionsDismissed(tmp15[21]);
       }
       setSuggestionsDismissed(stateFromStores[19]).updateSearchQuery(tmp, (removeTag) => {
         removeTag.removeTag(closure_0);
@@ -241,11 +244,12 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
         }
       });
       const obj4 = setSuggestionsDismissed(stateFromStores[19]);
+      const tmp6 = setSuggestionsDismissed;
       const result1 = setSuggestionsDismissed(stateFromStores[18]).syncAutocompleteDebounced(tmp);
       const queryString = obj.getQueryString(tmp);
       const obj5 = setSuggestionsDismissed(stateFromStores[18]);
       if (queryString !== searchResultsQuery) {
-        const tmp6Result = setSuggestionsDismissed(stateFromStores[18]);
+        const tmp6Result = tmp6(tmp15[18]);
         if (tmp11) {
           const initialMessages = tmp6Result.fetchInitialMessages(tmp);
         } else {
@@ -265,31 +269,31 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
       result = "" !== trimmed;
     }
     if (result) {
-      result = searchContext(stateFromStores[22]).isValidFilterAnswerForSubmit(prefixTag.searchTokenType, trimmed);
-      const obj2 = searchContext(stateFromStores[22]);
+      result = closure_1_0(closure_1_2[22]).isValidFilterAnswerForSubmit(prefixTag.searchTokenType, trimmed);
+      const obj2 = closure_1_0(closure_1_2[22]);
     }
     if (result) {
-      setSuggestionsDismissed(stateFromStores[19]).updateSearchQuery(tmp2, (setTextInputValue) => {
+      closure_1_1(closure_1_2[19]).updateSearchQuery(tmp2, (setTextInputValue) => {
         setTextInputValue.setTextInputValue("");
         setTextInputValue.addTag({ type: closure_1_11.ANSWER, text: trimmed });
         const result = setTextInputValue.restoreDraftTextInputValue();
       });
-      const obj3 = setSuggestionsDismissed(stateFromStores[19]);
+      const obj3 = closure_1_1(closure_1_2[19]);
       obj = { searchContext: null, searchTokenType: null, location: null };
       obj[0] = tmp2;
       ({ searchTokenType: obj5[1], location: obj5[2] } = prefixTag);
-      setSuggestionsDismissed(stateFromStores[21]).trackSearchFilterAdd(obj);
-      const obj4 = setSuggestionsDismissed(stateFromStores[21]);
+      closure_1_1(closure_1_2[21]).trackSearchFilterAdd(obj);
+      const obj4 = closure_1_1(closure_1_2[21]);
     }
     if (!obj.isQueryStringEmpty(trimmed)) {
-      setSuggestionsDismissed(stateFromStores[19]).updateSearchQuery(tmp2, (markExplicitSearchSubmitted) => markExplicitSearchSubmitted.markExplicitSearchSubmitted());
-      const obj6 = setSuggestionsDismissed(stateFromStores[19]);
-      const initialMessages = setSuggestionsDismissed(stateFromStores[18]).fetchInitialMessages(tmp2);
-      const obj7 = setSuggestionsDismissed(stateFromStores[18]);
+      closure_1_1(closure_1_2[19]).updateSearchQuery(tmp2, (markExplicitSearchSubmitted) => markExplicitSearchSubmitted.markExplicitSearchSubmitted());
+      const obj6 = closure_1_1(closure_1_2[19]);
+      const initialMessages = closure_1_1(closure_1_2[18]).fetchInitialMessages(tmp2);
+      const obj7 = closure_1_1(closure_1_2[18]);
     }
-    const str = closure_1_9.getTextInputValue(trimmed);
   }, items9);
   textInputValue = textInputValue.getTextInputValue(searchContext);
+  obj = { ref, accessibilityHint: memo1, autoFocus: true, defaultValue: textInputValue, style: tmp2.searchBar, tags: memo, icon: null, onChangeText: null, onRemove: null, placeholder: null, onSubmitEditing: null, leadingFade: true, horizontal: true, autoClearInputOnTagAdd: false };
   obj = { style: tmp2.icon, children: null };
   let obj3 = searchContext(stateFromStores[15]);
   obj[1] = jsx(setSuggestionsDismissed(stateFromStores[24]), { searchContext });
@@ -300,6 +304,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((searchContex
   obj[10] = memo2;
   return jsx(setSuggestionsDismissed(stateFromStores[23]), { style: tmp2.icon, children: null });
 }));
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/SearchBar.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/SearchBar.tsx");
 
 export default memoResult;

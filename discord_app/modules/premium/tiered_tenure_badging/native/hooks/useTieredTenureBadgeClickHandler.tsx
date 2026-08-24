@@ -1,20 +1,21 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx
-import noop from "../../../../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/UserStore.tsx";
 import { PremiumTypes } from "../../../PremiumConstants.tsx";
 import { DEFAULT_PREMIUM_BADGE_ID } from "../../Constants.tsx";
 import ME from "../../../../../Constants.tsx";
 import { UserProfileThemeTypes } from "../../../../user_profile/native/Constants.tsx";
+import { useIsPremiumSubscriber } from "../../../useIsPremiumSubscriber.tsx";
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: error, UserSettingsSections: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useTieredTenureBadgeClickHandler.tsx");
 
 export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeClickHandler(id, userId, themeType) {
   const _require = id;
   closure_1 = userId;
   dependencyMap = themeType;
-  let isPremiumSubscriber = require("../../../useIsPremiumSubscriber.tsx").useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  let isPremiumSubscriber = _useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "string";
   if (typeof id === "string") {
     let tmpResult = tmp(5381);
@@ -42,7 +43,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   let callback = null;
   if (tmp4) {
     callback = isPremiumSubscriber.useCallback(() => {
-      if (themeType === UserProfileThemeTypes.YOU_SCREEN) {
+      if (themeType === closure_1_9.YOU_SCREEN) {
         let obj = { screen: null };
         obj[0] = closure_1_8.PREMIUM;
         id(themeType[9]).openUserSettings(obj);
@@ -50,7 +51,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
         const obj3 = id(themeType[9]);
       } else {
         tmp2 = themeType;
-        userId(themeType[10]);
+        obj = userId(themeType[10]);
         const tmp4 = id(themeType[12])(themeType[11], themeType.paths);
         obj = { userId: null };
         obj[0] = userId;

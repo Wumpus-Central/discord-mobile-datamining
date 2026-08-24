@@ -1,14 +1,14 @@
 // discord_app/modules/summaries/SummaryActionCreators.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../_runtime/00019_noop.js";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleQuickSwitcherUpdate from "SummaryStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../gateway/GatewayConnectionStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "SummaryStore.tsx";
 import { Routes } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function fetchSummary(c1, c4) {
   const self = this;
   const apply = _fetchSummary.apply;
@@ -66,7 +66,7 @@ function _fetchSummary() {
                 timestamp = Date.now();
                 let obj3 = callback2(closure_1_2[7]);
                 obj1 = { type: "REQUEST_CHANNEL_SUMMARY", channelId: null, summaryId: null, requestedAt: null };
-                obj1[1] = callback;
+                obj1[1] = tmp47;
                 obj1[2] = tmp48;
                 obj1[3] = timestamp;
                 obj3.dispatch(obj1);
@@ -75,7 +75,7 @@ function _fetchSummary() {
                 c5 = 1;
                 const HTTP = callback(closure_1_2[8]).HTTP;
                 const obj2 = { url: null, rejectWithError: false };
-                obj2[0] = closure_1_8.CHANNEL_SUMMARY(callback, tmp48);
+                obj2[0] = closure_1_8.CHANNEL_SUMMARY(tmp47, tmp48);
                 c6 = 2;
                 c7 = 1;
                 obj3 = { value: null, done: false };
@@ -194,7 +194,7 @@ function _fetchSummaries() {
                 callback2 = timestamp;
                 let obj4 = closure_1_1(closure_1_2[7]);
                 obj1 = { type: "REQUEST_CHANNEL_SUMMARIES", channelId: null, requestedAt: null };
-                obj1[1] = callback;
+                obj1[1] = tmp55;
                 obj1[2] = timestamp;
                 obj4.dispatch(obj1);
                 dependencyMap = undefined;
@@ -202,7 +202,7 @@ function _fetchSummaries() {
                 c6 = 1;
                 const HTTP = callback(closure_1_2[8]).HTTP;
                 let obj2 = { url: null, rejectWithError: false };
-                obj2[0] = c8.CHANNEL_SUMMARIES(callback);
+                obj2[0] = c8.CHANNEL_SUMMARIES(tmp55);
                 c7 = 2;
                 c8 = 1;
                 const obj3 = { value: null, done: false };
@@ -289,7 +289,8 @@ function _fetchSummaries() {
 }
 function setHighlightedSummary(channelId) {
   let tmp = arg1;
-  const obj = { type: "SET_HIGHLIGHTED_SUMMARY", channelId, summaryId: null };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_HIGHLIGHTED_SUMMARY", channelId, summaryId: null };
   if (arg1 == null) {
     tmp = null;
   }
@@ -301,13 +302,13 @@ function setSelectedSummary(c1, c4) {
   if (tmp2) {
     fetchSummary(c1, tmp);
   }
-  const obj = { type: "SET_SELECTED_SUMMARY", channelId: c1, summaryId: null };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_SELECTED_SUMMARY", channelId: c1, summaryId: null };
   if (tmp == null) {
     tmp = null;
   }
   obj[2] = tmp;
   obj.dispatch(obj);
-  tmp2 = null != c1 && null != tmp;
 }
 function updateVisibleMessages(arg0, arg1) {
   let tmp = arg0;
@@ -324,7 +325,8 @@ function updateVisibleMessages(arg0, arg1) {
   obj.dispatch(obj);
 }
 function setSummaryFeedback(summary, rating) {
-  const obj = { type: "SET_SUMMARY_FEEDBACK", summary, rating };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_SUMMARY_FEEDBACK", summary, rating };
   obj.dispatch(obj);
 }
 function fetchChannelAffinities() {
@@ -547,13 +549,13 @@ function _fetchSummariesBulk() {
               obj3[0] = flag;
               obj3[1] = dependencyMap;
               const combined = substr.concat(c7.defaultChannelIds(obj3));
-              const found = combined.filter((item, index) => {
-                const channel = summaries.getChannel(item);
+              const found = combined.filter((arg0) => {
+                const channel = summaries.getChannel(arg0);
                 return substr(table[11]).canSeeChannelSummaries(channel, false, true);
               });
-              const found1 = found.filter((item, index) => {
+              const found1 = found.filter((arg0) => {
                 const timestamp = Date.now();
-                const statusResult = tmp.status(item);
+                const statusResult = tmp.status(arg0);
                 let fetching;
                 if (statusResult != null) {
                   fetching = statusResult.fetching;
@@ -666,9 +668,10 @@ function useChannelSummaries(channelIds) {
   if (channelIds === undefined) {
     channelIds = [];
   }
+  let stateFromStores;
   let memo;
   const items = [closure_5];
-  const stateFromStores = channelIds(memo[12]).useStateFromStores(items, () => connected.isConnected());
+  stateFromStores = channelIds(memo[12]).useStateFromStores(items, () => connected.isConnected());
   const items1 = [channelIds];
   memo = React.useMemo(() => channelIds.join(","), items1);
   const items2 = [memo, stateFromStores];
@@ -832,10 +835,10 @@ function _deleteSummary() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = 30 * obj132Default.Millis.SECOND;
+let closure_9 = 30 * setDefault.Millis.SECOND;
 let closure_10 = {};
 let closure_11 = {};
-const result = require("obj132").fileFinishedImporting("modules/summaries/SummaryActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/summaries/SummaryActionCreators.tsx");
 
 export default { setSummaryFeedback, updateVisibleMessages, setSelectedSummary, setHighlightedSummary, fetchSummaries, fetchSummariesBulk, useChannelSummaries, deleteSummary };
 export { fetchSummary };
@@ -848,14 +851,14 @@ export { setSelectedSummary };
 export { updateVisibleMessages };
 export const stopPolling = function stopPolling(arg0) {
   if (null == table[arg0]) {
-    table[arg0] = 0;
+    tmp[arg0] = 0;
   }
   table[arg0] = table[arg0] + -1;
   if (table[arg0] <= 0) {
-    if (null == table[arg0]) {
-      table[arg0] = 0;
+    if (null == tmp[arg0]) {
+      tmp[arg0] = 0;
     }
-    table[arg0] = table[arg0];
+    tmp[arg0] = tmp[arg0];
     const _clearInterval = clearInterval;
     clearInterval(table2[arg0]);
   }
@@ -868,9 +871,10 @@ export const useMaybeFetchChannelAffinitiesAndSummaries = function useMaybeFetch
   if (arg0 === undefined) {
     items = [];
   }
+  let stateFromStores;
   let memo;
   const items1 = [closure_5];
-  const stateFromStores = items(memo[12]).useStateFromStores(items1, () => connected.isConnected());
+  stateFromStores = items(memo[12]).useStateFromStores(items1, () => connected.isConnected());
   const items2 = [items];
   memo = React.useMemo(() => channelIds.join(","), items2);
   const items3 = [memo, stateFromStores];

@@ -1,5 +1,5 @@
 // discord_common/js/packages/discord-native-types/DiscordNative.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
 class SystemServiceNotAvailableError extends Error {
   constructor() {
@@ -9,7 +9,7 @@ class SystemServiceNotAvailableError extends Error {
     return tmp;
   }
 }
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");
 
 export { SystemServiceNotAvailableError };
 export const StoredCrashInformation = { HasRTCConnection: 0, [0]: "HasRTCConnection", IsSendingVideo: 1, [1]: "IsSendingVideo", IsSendingStream: 2, [2]: "IsSendingStream", IsReceivingVideo: 3, [3]: "IsReceivingVideo", IsReceivingStream: 4, [4]: "IsReceivingStream", VideoMediaSessionId: 5, [5]: "VideoMediaSessionId", StreamMediaSessionId: 6, [6]: "StreamMediaSessionId", IntentionalCrashReason: 7, [7]: "IntentionalCrashReason" };

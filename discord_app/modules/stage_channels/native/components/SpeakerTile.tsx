@@ -3,13 +3,13 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import StageTileSize2 from "../../StageTileTypes.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };
@@ -25,10 +25,14 @@ obj5[8] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.3);
 obj[6] = obj5;
 obj1 = { height: obj.FULL };
 obj3 = { height: obj.THIRD };
+let obj4 = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
 obj[7] = { color: ThemesDefault.colors.WHITE };
+let obj6 = { color: ThemesDefault.colors.WHITE };
 obj[8] = { borderRadius: ThemesDefault.radii.sm, width: 16, height: 16, justifyContent: "center", alignItems: "center", marginEnd: 4 };
+let obj7 = { borderRadius: ThemesDefault.radii.sm, width: 16, height: 16, justifyContent: "center", alignItems: "center", marginEnd: 4 };
 obj[9] = { backgroundColor: ThemesDefault.colors.WHITE };
 const styles = createCacheKey.createStyles(obj);
+let obj8 = { backgroundColor: ThemesDefault.colors.WHITE };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const participant = channel.participant;
@@ -51,6 +55,7 @@ const memoResult = importAllResult.memo((channel) => {
         tmp10Result = ignored;
       }
       const tmp9 = tmp2(tmp3[13])(channel, stateFromStores);
+      obj = { accessibilityLabel: null, accessibilityRole: "button", style: null, onPress: null, children: null };
       const intl = tmp4(tmp3[15]).intl;
       obj = { name: null };
       obj[0] = tmp9;
@@ -95,17 +100,17 @@ const memoResult = importAllResult.memo((channel) => {
           obj6 = { opacity: 0.5 };
         }
         obj5[6] = obj6;
-        const items6 = [callback(tmp2(tmp3[16]), obj5), , ];
+        const items6 = [closure_7(tmp2(tmp3[16]), obj5), , ];
         const obj7 = { userId: null, channelId: null };
         obj7[0] = user.id;
         obj7[1] = channel.id;
-        items6[1] = callback(tmp4(tmp3[18]).VoiceStatus, obj7);
+        items6[1] = closure_7(tmp4(tmp3[18]).VoiceStatus, obj7);
         const obj8 = { userId: null, channelId: null };
         obj8[0] = user.id;
         obj8[1] = channel.id;
-        items6[2] = callback(tmp4(tmp3[18]).ModeratorStatus, obj8);
+        items6[2] = closure_7(tmp4(tmp3[18]).ModeratorStatus, obj8);
         obj4[1] = items6;
-        const items7 = [callback2(View, obj4), ];
+        const items7 = [tmp10(View, obj4), ];
         const obj9 = { style: null, children: null };
         obj9[0] = tmp.nameplateContainer;
         if (tmp10Result) {
@@ -122,34 +127,34 @@ const memoResult = importAllResult.memo((channel) => {
             obj11[0] = tmp2(tmp3[19]);
             obj11[1] = tmp4(tmp3[17]).Icon.Sizes.EXTRA_SMALL;
             obj11[2] = tmp2(tmp3[6]).unsafe_rawColors.RED_400;
-            blocked = callback(tmp4(tmp3[17]).Icon, obj11);
+            blocked = tmp13(tmp4(tmp3[17]).Icon, obj11);
           }
           const items9 = [blocked, ];
           if (ignored) {
             const obj12 = { source: null, size: null };
             obj12[0] = tmp2(tmp3[20]);
             obj12[1] = tmp4(tmp3[17]).Icon.Sizes.EXTRA_SMALL;
-            ignored = callback(tmp4(tmp3[17]).Icon, obj12);
+            ignored = tmp13(tmp4(tmp3[17]).Icon, obj12);
           }
           items9[1] = ignored;
           obj10[1] = items9;
-          tmp10Result = callback2(View, obj10);
+          tmp10Result = tmp10(tmp12, obj10);
         }
         const items10 = [tmp10Result, ];
         const obj13 = { lineClamp: 1, style: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
         obj13[1] = tmp.nameplateText;
         obj13[4] = tmp9;
-        items10[1] = callback(tmp4(tmp3[21]).Text, obj13);
+        items10[1] = closure_7(tmp4(tmp3[21]).Text, obj13);
         obj9[1] = items10;
-        items7[1] = callback2(View, obj9);
+        items7[1] = tmp10(View, obj9);
         obj[4] = items7;
-        return callback2(tmp4(tmp3[14]).PressableOpacity, obj);
+        return tmp10(tmp4(tmp3[14]).PressableOpacity, obj);
       }
     }
   }
   return null;
 });
-const result2 = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTile.tsx");
+const result2 = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTile.tsx");
 
 export default memoResult;
 export const SPEAKER_TILE_HEIGHTS = obj;
@@ -164,6 +169,7 @@ export const getSizeStyle = function getSizeStyle(size, speakerTileStyles) {
   } else {
     return speakerTileStyles.third;
   }
+  const tmp = require;
 };
 export const getTileWidthStyle = function getTileWidthStyle(arg0, arg1, arg2) {
   const StageTileSize = StageTileSize2.StageTileSize;

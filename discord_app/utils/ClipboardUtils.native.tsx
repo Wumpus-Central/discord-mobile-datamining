@@ -1,6 +1,6 @@
 // discord_app/utils/ClipboardUtils.native.tsx
 import useClipboardDefault from "../../_runtime/07168_useClipboard.js";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
 function _copy() {
   const self = this;
@@ -75,7 +75,7 @@ function _copy() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("utils/ClipboardUtils.native.tsx");
+const result = require("set").fileFinishedImporting("utils/ClipboardUtils.native.tsx");
 
 export const SUPPORTS_COPY = true;
 export const copy = function copy() {

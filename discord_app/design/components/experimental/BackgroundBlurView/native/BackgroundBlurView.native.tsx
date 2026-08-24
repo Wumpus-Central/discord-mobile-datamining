@@ -5,7 +5,7 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { position: "relative", overflow: "hidden" } });
 const forwardRefResult = importAllResult.forwardRef(function BackgroundBlurViewComponent(arg0, ref) {
@@ -31,8 +31,8 @@ const forwardRefResult = importAllResult.forwardRef(function BackgroundBlurViewC
   }
   const items1 = [tmp9, children];
   obj.children = items1;
-  return callback(View, obj);
+  return closure_4(View, obj);
 });
-const result = require("obj132").fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurView.native.tsx");
 
 export const BackgroundBlurView = forwardRefResult;

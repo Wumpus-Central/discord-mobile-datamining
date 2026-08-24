@@ -1,12 +1,14 @@
 // discord_app/modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import flattenDefault from "../../../../_runtime/04622_flatten.js";
 
 function matchesDeep(item10014, item10021) {
   if (Array.isArray(item10014)) {
     const obj2 = item10014[Symbol.iterator]();
     while (obj2 !== undefined) {
+      let tmp10 = matchesDeep;
       if (matchesDeep(tmp8, item10021)) {
+        let tmp11 = obj2;
         obj2.return();
         let flag3 = true;
         return true;
@@ -18,7 +20,9 @@ function matchesDeep(item10014, item10021) {
         const _Object = Object;
         const values = Object.values(item10014);
         for (const item10014 of values) {
+          let tmp4 = matchesDeep;
           if (matchesDeep(item10014, arg1)) {
+            let tmp5 = obj;
             obj.return();
             let flag2 = true;
             return true;
@@ -36,7 +40,7 @@ function matchesDeep(item10014, item10021) {
   return false;
 }
 const re2 = /^(\d{4}-\d{1,2})/;
-const result = obj132.fileFinishedImporting("modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx");
 
 export const getExperimentDateFromId = function getExperimentDateFromId(arg0) {
   const match = regex.exec(arg0);
@@ -47,8 +51,8 @@ export const getExperimentDateFromId = function getExperimentDateFromId(arg0) {
   return tmp2;
 };
 export const getEntries = function getEntries(arg0) {
-  return Array.from(Object.entries(arg0)).map((item, index) => {
-    [tmp, tmp2] = item;
+  return Array.from(Object.entries(arg0)).map((arg0) => {
+    [tmp, tmp2] = arg0;
     return { id, experiment };
   });
 };
@@ -61,12 +65,12 @@ export const sortEntries = function sortEntries(entries, memo1) {
     if (id != null) {
       id = id.id;
     }
-    if (null != memo1[id]) {
+    if (null != closure_0[id]) {
       let id1;
       if (id2 != null) {
         id1 = id2.id;
       }
-      if (null == memo1[id1]) {
+      if (null == tmp[id1]) {
         return -1;
       }
     }
@@ -74,12 +78,12 @@ export const sortEntries = function sortEntries(entries, memo1) {
     if (id != null) {
       id2 = id.id;
     }
-    if (null == memo1[id2]) {
+    if (null == closure_0[id2]) {
       let id3;
       if (id2 != null) {
         id3 = id2.id;
       }
-      if (null != memo1[id3]) {
+      if (null != tmp[id3]) {
         return 1;
       }
     }
@@ -107,7 +111,7 @@ export const sortEntries = function sortEntries(entries, memo1) {
 };
 export const getBestMatches = function getBestMatches(arg0, str) {
   const parts = str.split(/\s+/g);
-  const found = parts.filter((item, index) => "" !== item);
+  const found = parts.filter((arg0) => "" !== arg0);
   if (0 === found.length) {
     return arg0;
   } else {
@@ -117,22 +121,32 @@ export const getBestMatches = function getBestMatches(arg0, str) {
     while (iter !== undefined) {
       let tmp4 = nextResult;
       let num = 0;
+      let tmp5 = found;
+      let tmp6 = found;
       for (const item10021 of found) {
+        let tmp7 = matchesDeep;
+        let tmp8 = nextResult;
         if (matchesDeep(tmp4, item10021)) {
+          let tmp9 = num;
           num = num + 1;
         }
         continue;
       }
+      let tmp10 = num;
       if (0 !== num) {
+        let tmp11 = num;
         if (null == items[num]) {
+          let tmp12 = num;
           items[num] = [];
         }
+        let tmp13 = num;
         let arr3 = items[num];
+        let tmp14 = nextResult;
         let arr = arr3.push(tmp4);
       }
       continue;
     }
-    const found1 = items.filter((item, index) => undefined !== item);
+    const found1 = items.filter((arg0) => undefined !== arg0);
     return flattenDefault(found1.reverse());
   }
 };

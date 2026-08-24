@@ -1,10 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import getRoleMemberCount from "../guild_settings/GuildRoleMemberCountStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../guild_settings/GuildRoleMemberCountStore.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_5 = {};
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useGuildRoleMemberCounts.tsx");
 
 export default function useGuildRoleMemberCounts(arg0) {
   const _require = arg0;
@@ -14,7 +15,7 @@ export default function useGuildRoleMemberCounts(arg0) {
   }
   const items = [closure_4];
   const items1 = [arg0, num];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getRoleMemberCount(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getRoleMemberCount(closure_0));
   const effect = React.useEffect(() => {
     if (null != closure_0) {
       let tmp4 = null != tmp3;
@@ -27,10 +28,11 @@ export default function useGuildRoleMemberCounts(arg0) {
       }
       if (!tmp4) {
         const _Date2 = Date;
-        closure_1_5[closure_0] = Date.now();
-        const memberCounts = num(dependencyMap[3]).fetchMemberCounts(closure_0);
-        const obj = num(dependencyMap[3]);
+        tmp2[tmp] = Date.now();
+        const memberCounts = num(closure_1_2[3]).fetchMemberCounts(tmp);
+        const obj = num(closure_1_2[3]);
       }
+      tmp2 = closure_1_5;
     }
   }, items1);
   return stateFromStores;

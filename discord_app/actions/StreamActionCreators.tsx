@@ -6,25 +6,23 @@ import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import _modDef4770 from "ChannelActionCreators.tsx";
 import _modDef4975 from "SelectedChannelActionCreators.tsx";
 import allowChannelAccess from "../utils/ChannelUtils.tsx";
-import _modDef8666 from "ChannelRTCActionCreators.tsx";
 import isPremiumResolution from "../utils/StreamQualityUtils.tsx";
-import _guildRoomConnect from "../modules/guild_rooms/GuildRoomActionCreators.native.tsx";
 import transitionToStreamDefault from "../modules/go_live/utils/transitionToStream.native.tsx";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import set from "../modules/game_console/GameConsoleStore.tsx";
-import initialize from "../modules/popout-window/PopoutWindowStore.native.tsx";
-import reset from "../stores/ApplicationStreamPreviewStore.tsx";
-import reset2 from "../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../stores/GuildStore.tsx";
-import handleConnectionOpen from "../stores/SelectedChannelStore.tsx";
-import updateVoiceState from "../stores/VoiceStateStore.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_5 from "../modules/popout-window/PopoutWindowStore.native.tsx";
+import closure_6 from "../stores/ApplicationStreamPreviewStore.tsx";
+import closure_7 from "../stores/ApplicationStreamingStore.tsx";
+import closure_8 from "../stores/AuthenticationStore.tsx";
+import closure_9 from "../stores/ChannelStore.tsx";
+import closure_10 from "../stores/GuildStore.tsx";
+import closure_11 from "../stores/SelectedChannelStore.tsx";
+import closure_12 from "../stores/VoiceStateStore.tsx";
 import ME from "../Constants.tsx";
 import { StreamTypes } from "../modules/go_live/Constants.tsx";
 import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
 
-require = fn;
+require = arg1;
 function watchStream(stream, forceMultiple) {
   if (null == remoteSessionId.getRemoteSessionId()) {
     ({ guildId, channelId } = stream);
@@ -36,15 +34,18 @@ function watchStream(stream, forceMultiple) {
       }
       if (!forceMultiple) {
         const allActiveStreamsForChannel = authStore.getAllActiveStreamsForChannel(channelId);
-        forceMultiple = allActiveStreamsForChannel.filter((item, index) => item.ownerId !== id.getId()).length >= MAX_VALUE;
+        forceMultiple = allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
+      const obj2 = isStreamKey;
+      const tmp12 = require;
+      const tmp18 = importDefault;
       let obj = { type: "STREAM_WATCH", streamKey: null, allowMultiple: null };
       obj[1] = encodeStreamKeyResult;
       obj[2] = forceMultiple;
       dispatcherDefault.dispatch(obj);
       if (null != guildId) {
-        const result = _guildRoomConnect.maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
-        const tmp12Result = _guildRoomConnect;
+        const result = tmp12(9862).maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
+        const tmp12Result = tmp12(9862);
       }
       let forceFocus;
       if (forceMultiple != null) {
@@ -62,17 +63,20 @@ function watchStream(stream, forceMultiple) {
         tmp22 = forceMultiple;
       }
       if (!tmp22) {
-        const participant = _modDef8666.selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = _modDef8666;
+        const participant = tmp18(8666).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(8666);
       }
+      const obj3 = dispatcherDefault;
     } else {
       const channel = store.getChannel(channelId);
       _modDef38(null != channel, "Cannot join a null voice channel");
       const isInChannelResult = closure_12.isInChannel(channelId);
+      let isChannelFullResult = !isInChannelResult;
       if (!isInChannelResult) {
         obj = allowChannelAccess;
-        obj.isChannelFull(channel, closure_12, closure_10);
+        isChannelFullResult = obj.isChannelFull(channel, tmp6, closure_10);
       }
+      tmp6 = closure_12;
     }
   }
 }
@@ -244,7 +248,7 @@ function _notifyStreamStart() {
   return applyArgumentsResult;
 }
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = ME);
-let result = require("obj132").fileFinishedImporting("actions/StreamActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/StreamActionCreators.tsx");
 
 export const startStream = function startStream(guildId, channelId) {
   let obj = dispatcherDefault;
@@ -265,7 +269,8 @@ export const setStreamPaused = function setStreamPaused(currentUserActiveStream,
 };
 export { watchStream };
 export const toggleSelfStreamHidden = function toggleSelfStreamHidden(channelId, selfStreamHidden) {
-  const obj = { type: "STREAM_UPDATE_SELF_HIDDEN", channelId, selfStreamHidden };
+  let obj = dispatcherDefault;
+  obj = { type: "STREAM_UPDATE_SELF_HIDDEN", channelId, selfStreamHidden };
   obj.dispatch(obj);
 };
 export const watchStreamAndTransitionToStream = function watchStreamAndTransitionToStream(stream, forceMultiple) {
@@ -283,9 +288,12 @@ export const watchStreamAndTransitionToStream = function watchStreamAndTransitio
     const channel = store.getChannel(channelId);
     _modDef38(null != channel, "Cannot join a null voice channel");
     const isInChannelResult = closure_12.isInChannel(channelId);
+    let isChannelFullResult = !isInChannelResult;
     if (!isInChannelResult) {
-      allowChannelAccess.isChannelFull(channel, closure_12, closure_10);
+      isChannelFullResult = allowChannelAccess.isChannelFull(channel, tmp6, closure_10);
+      const obj = allowChannelAccess;
     }
+    tmp6 = closure_12;
   }
 };
 export const stopStream = function stopStream(streamKey) {
@@ -301,7 +309,8 @@ export const stopStream = function stopStream(streamKey) {
     if (flag === undefined) {
       flag = true;
     }
-    let obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
+    let obj = dispatcherDefault;
+    obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
     obj[1] = streamKey;
     obj[2] = flag;
     obj.dispatch(obj);
@@ -314,7 +323,8 @@ export const closeStream = function closeStream(encodeStreamKeyResult1, arg1) {
   if (arg1 === undefined) {
     flag = true;
   }
-  const obj = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult1, canShowFeedback: flag };
+  let obj = dispatcherDefault;
+  obj = { type: "STREAM_CLOSE", streamKey: encodeStreamKeyResult1, canShowFeedback: flag };
   obj.dispatch(obj);
 };
 export const fetchStreamPreview = function fetchStreamPreview(closure_0, closure_1, closure_2) {
@@ -328,7 +338,8 @@ export const fetchStreamPreview = function fetchStreamPreview(closure_0, closure
   return applyArgumentsResult;
 };
 export const setLayout = function setLayout(layout) {
-  const obj = { type: "STREAM_LAYOUT_UPDATE", layout };
+  let obj = dispatcherDefault;
+  obj = { type: "STREAM_LAYOUT_UPDATE", layout };
   obj.dispatch(obj);
 };
 export const notifyStreamStart = function notifyStreamStart() {
@@ -352,7 +363,7 @@ export const updateStreamSettings = function updateStreamSettings(noTrack) {
 };
 export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = sendRequest.HTTP;
-  { url: closure_13.STREAM(encodeStreamKeyResult), body: obj, oldFormErrors: true, rejectWithError: true };
+  obj = { url: closure_13.STREAM(encodeStreamKeyResult), body: obj, oldFormErrors: true, rejectWithError: true };
   obj = { region: preferredRegion };
   HTTP.patch(obj);
 };
@@ -370,54 +381,61 @@ export const stopOwnStream = function stopOwnStream(arg0) {
     if (flag === undefined) {
       flag = true;
     }
-    let obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
+    let obj = dispatcherDefault;
+    obj = { type: "STREAM_CLOSE", streamKey: null, canShowFeedback: null };
     obj[1] = encodeStreamKeyResult;
     obj[2] = flag;
     obj.dispatch(obj);
+    const obj5 = isStreamKey;
     obj = { type: "STREAM_STOP", streamKey: null, appContext: null };
     obj[1] = encodeStreamKeyResult;
     obj[2] = constants.APP;
     dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
   }
 };
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {
   const _require = arg0;
   id = id.getId();
-  importDefault = require("../modules/go_live/utils/StreamKeyUtils.tsx").decodeStreamKey(streamKey);
+  importDefault = _isStreamKey.decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
     _modDef4975.disconnect();
+    const obj2 = _modDef4975;
   }
-  let obj = isStreamKey;
+  let obj = _isStreamKey;
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
   _modDef4770.addRecipient(arg0, id, undefined, () => {
-    const tmp = callback(dependencyMap[26]);
+    const tmp = callback(closure_1_2[26]);
     const call = tmp.call;
     const fn = () => {
       const channelId = closure_1.channelId;
       if (null == closure_1.guildId) {
-        closure_1_18(closure_1, undefined);
+        closure_1_18(tmp, undefined);
         let windowOpen = closure_1_5.getWindowOpen(closure_1_15.CHANNEL_CALL_POPOUT);
         if (windowOpen) {
           windowOpen = closure_1_11.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1_1(closure_1_2[18])(closure_1);
+          closure_1_1(closure_1_2[18])(tmp);
         }
       } else {
         const channel = closure_1_9.getChannel(channelId);
         closure_1_1(closure_1_2[14])(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = closure_1_12.isInChannel(channelId);
+        let isChannelFullResult = !isInChannelResult;
         if (!isInChannelResult) {
-          closure_1_0(closure_1_2[15]).isChannelFull(channel, closure_1_12, closure_1_10);
-          const obj = closure_1_0(closure_1_2[15]);
+          isChannelFullResult = closure_1_0(tmp5[15]).isChannelFull(channel, tmp7, closure_1_10);
+          const obj = closure_1_0(tmp5[15]);
         }
+        tmp5 = closure_1_2;
+        tmp7 = closure_1_12;
       }
     };
     if (typeof call === "unknown") {
       tmp(false, false, null, fn);
     } else {
-      call(closure_0, false, false, null, fn);
+      call(tmp2, false, false, null, fn);
     }
   });
 };

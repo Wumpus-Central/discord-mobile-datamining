@@ -1,24 +1,27 @@
 // discord_app/modules/verification/native/components/ChangeEmailCollectReasons.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../../stores/UserStore.tsx";
 import ChangeEmailReasons from "../../VerificationConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ CHANGE_EMAIL_REASONS_ORDER: error, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = ChangeEmailReasons);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { background: null, container: null, radioGroup: null, title: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
 createCacheKey[3] = { textAlign: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
+let obj2 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
 
 export default function ChangeEmailCollectReasons(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
@@ -34,20 +37,20 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
   const items1 = [navigation, changeEmailReason];
   const items2 = [setChangeEmailReason];
   const callback = callback1.useCallback(() => {
-    setChangeEmailReason(navigation[10]);
-    const obj = { change_email_reason_enum: changeEmailReason };
-    obj.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, obj);
+    let obj = setChangeEmailReason(navigation[10]);
+    obj = { change_email_reason_enum: changeEmailReason };
+    obj.track(closure_1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, obj);
     if (null != changeEmailReason) {
       if (closure_1_8.has(changeEmailReason)) {
-        navigation.push(changeEmailReason(navigation[11]).VerificationModalScenes.CHANGE_EMAIL_WARNING);
+        navigation.push(changeEmailReason(tmp[11]).VerificationModalScenes.CHANGE_EMAIL_WARNING);
       }
     }
     navigation.push(changeEmailReason(navigation[11]).VerificationModalScenes.ENTER_EMAIL);
   }, items1);
   callback1 = callback1.useCallback((change_email_reason_enum) => {
-    setChangeEmailReason(navigation[10]);
-    const obj = { change_email_reason_enum };
-    obj.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, obj);
+    let obj = setChangeEmailReason(navigation[10]);
+    obj = { change_email_reason_enum };
+    obj.track(closure_1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, obj);
     setChangeEmailReason(change_email_reason_enum);
   }, items2);
   const items3 = [changeEmailReason, callback1];

@@ -1,12 +1,11 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsCardFooter.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../GuildPowerups.messages.js";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
@@ -136,7 +135,7 @@ class GuildPowerupCardFooterCost {
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { justifyContent: "space-between" }, inline: { flexDirection: "row", alignItems: "center", gap: 2 } });
-const result = obj132.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCardFooter.tsx");
 
 export { GuildPowerupCardFooterActive };
 export { GuildPowerupCardFooterExpiring };
@@ -144,10 +143,11 @@ export { GuildPowerupCardFooterRemoving };
 export { GuildPowerupCardFooterStatus };
 export { GuildPowerupCardFooterCost };
 export const GuildPowerupsCardFooter = function GuildPowerupsCardFooter(status) {
-  const items = [, , ];
+  let obj = { style: items, children: null };
+  items = [, , ];
   ({ inline: arr[0], container: arr[1] } = callback3());
   items[2] = status.style;
-  const obj = { cost: status.cost, costDecorator: status.costDecorator };
+  obj = { cost: status.cost, costDecorator: status.costDecorator };
   const items1 = [callback(GuildPowerupCardFooterCost, obj), callback(GuildPowerupCardFooterStatus, { status: status.status })];
   obj[1] = items1;
   return callback2(View, obj);

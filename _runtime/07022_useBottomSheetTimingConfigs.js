@@ -10,12 +10,12 @@ export const useBottomSheetTimingConfigs = (arg0) => {
   return useMemo(() => {
     let ANIMATION_EASING = lib.easing;
     if (!ANIMATION_EASING) {
-      ANIMATION_EASING = lib(dependencyMap[1]).ANIMATION_EASING;
+      ANIMATION_EASING = lib(closure_1_1[1]).ANIMATION_EASING;
     }
     const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = lib.duration;
+    let ANIMATION_DURATION = tmp.duration;
     if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = lib(dependencyMap[1]).ANIMATION_DURATION;
+      ANIMATION_DURATION = lib(closure_1_1[1]).ANIMATION_DURATION;
     }
     obj[1] = ANIMATION_DURATION;
     obj[2] = lib.reduceMotion;

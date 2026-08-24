@@ -1,37 +1,45 @@
 // discord_app/modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
-import getEmojiToGroupId from "../../emojis/EmojiStore.tsx";
-import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../emojis/EmojiStore.tsx";
+import closure_8 from "../../../stores/SelectedGuildStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { alignItems: "center", paddingTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
+createCacheKey = { header: null, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
+createCacheKey = { alignItems: "center", paddingTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xl, borderWidth: 4, borderColor: ThemesDefault.colors.BORDER_STRONG, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { width: 50, height: 50 };
 createCacheKey[3] = { fontSize: 24, lineHeight: 50, textAlign: "center" };
 createCacheKey[4] = { fontSize: 24, lineHeight: 50 };
 createCacheKey[5] = { height: 24, width: 24 };
+let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xl, borderWidth: 4, borderColor: ThemesDefault.colors.BORDER_STRONG, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+let obj2 = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
 createCacheKey[7] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx");
+let obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx");
 
 export default function ReactionEmojiOptionsActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   ({ reaction, canRemoveReactions } = channelId);
+  closure_2 = undefined;
+  let emoji;
+  let stateFromStores1;
+  let isFavoriteEmoji;
   let emojiURL;
   let callback;
   let callback1;
   const tmp = callback3();
   closure_2 = tmp;
-  const emoji = reaction.emoji;
+  emoji = reaction.emoji;
   const DeveloperMode = channelId(emoji[8]).DeveloperMode;
   let tidaWebformEnabled = DeveloperMode.useSetting();
   let obj = messageId(emoji[9]);
@@ -41,7 +49,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   let obj2 = channelId(emoji[10]);
   const items1 = [callback];
   const items2 = [emoji.id];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+  stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let customEmojiById = null;
     if (null != emoji.id) {
       customEmojiById = callback.getCustomEmojiById(tmp.id);
@@ -49,7 +57,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     return customEmojiById;
   }, items2);
   let obj3 = channelId(emoji[11]);
-  const isFavoriteEmoji = obj3.useIsFavoriteEmoji(stateFromStores, stateFromStores1);
+  isFavoriteEmoji = obj3.useIsFavoriteEmoji(stateFromStores, stateFromStores1);
   let obj4 = channelId(emoji[10]);
   const items3 = [emojiURL];
   const stateFromStores2 = obj4.useStateFromStores(items3, () => emojiURL.useReducedMotion);
@@ -79,16 +87,16 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     const obj = {};
     const merged = Object.assign(lib.starIcon);
     if (arg0) {
-      const merged1 = Object.assign(lib.starIconSelected);
+      const merged1 = Object.assign(tmp.starIconSelected);
       let style = obj;
     } else {
-      const merged2 = Object.assign(lib.starIconUnselected);
+      const merged2 = Object.assign(tmp.starIconUnselected);
       style = obj;
     }
     if (arg0) {
-      let StarOutlineIcon = channelId(emoji[14]).StarIcon;
+      let StarOutlineIcon = tmp9(tmp10[14]).StarIcon;
     } else {
-      StarOutlineIcon = channelId(emoji[15]).StarOutlineIcon;
+      StarOutlineIcon = tmp9(tmp10[15]).StarOutlineIcon;
     }
     return closure_1_9(StarOutlineIcon, { style });
   }, items4);
@@ -99,20 +107,20 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     if (null != stateFromStores1) {
       function content() {
         const obj = { style: { marginLeft: 8, marginTop: 2 }, variant: "text-md/bold", children: null };
-        const intl = channelId(emoji[17]).intl;
+        const intl = closure_1_0(closure_1_3[17]).intl;
         const string = intl.string;
-        const t = channelId(emoji[17]).t;
+        const t = closure_1_0(closure_1_3[17]).t;
         if (closure_5) {
           let stringResult = string(t.in1rga);
         } else {
           stringResult = string(t.mE2e8A);
         }
         obj[2] = stringResult;
-        return closure_1_9(channelId(emoji[16]).Text, obj);
+        return closure_1_9(closure_1_0(closure_1_3[16]).Text, obj);
       }
       const obj5 = channelId(emoji[18]);
       if (isFavoriteEmoji) {
-        obj5.unfavoriteEmoji(stateFromStores1);
+        obj5.unfavoriteEmoji(tmp2);
         let obj = { key: "EMOJI_UNFAVORITED", icon: null, content: null };
         obj[1] = function icon() {
           return callback(false);
@@ -121,8 +129,8 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
         messageId(emoji[19]).open(obj);
         const obj3 = messageId(emoji[19]);
       } else {
-        obj5.favoriteEmoji(stateFromStores1);
-        messageId(emoji[19]);
+        obj5.favoriteEmoji(tmp2);
+        obj = messageId(emoji[19]);
         obj = { key: "EMOJI_FAVORITED", icon: null, content: null };
         obj[1] = function icon() {
           return callback(true);

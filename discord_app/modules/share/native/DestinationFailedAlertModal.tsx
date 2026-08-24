@@ -1,7 +1,6 @@
 // discord_app/modules/share/native/DestinationFailedAlertModal.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import nameFromUserDefault from "../../../utils/UserUtils.tsx";
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
@@ -9,20 +8,21 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import computeChannelNameDefault from "../../channel/useChannelName.tsx";
 import FacepileGroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import sortActivity from "../../../stores/PresenceStore.tsx";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PresenceStore.tsx";
+import closure_7 from "../../../stores/RelationshipStore.tsx";
+import closure_8 from "../../../stores/UserStore.tsx";
 import { StatusTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function FailedGroupDMRow(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = { size: null, channel: null };
+  let obj = { style: tmp.row, children: null };
+  obj = { size: null, channel: null };
   const tmp2 = computeChannelNameDefault(channel);
   obj[0] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel;
@@ -57,16 +57,19 @@ function FailedUserRow(user) {
     obj[4] = tmp7;
     obj[5] = tmp2(1297).AvatarSizes.XSMALL;
     obj[6] = user.avatarDecoration;
-    const items2 = [callback(tmp2(1297).Avatar, obj), ];
+    const items2 = [closure_10(tmp2(1297).Avatar, obj), ];
     obj1 = { style: null, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     obj1[0] = tmp.label;
     if (stateFromStores == null) {
       stateFromStores = nameFromUserDefault.getName(user);
+      const obj6 = nameFromUserDefault;
     }
     obj1[4] = stateFromStores;
-    items2[1] = callback(tmp2(4734).Text, obj1);
+    items2[1] = closure_10(tmp2(4734).Text, obj1);
     obj[1] = items2;
-    tmp9Result = callback2(View, obj);
+    tmp9Result = closure_11(View, obj);
+    const tmp10 = View;
+    const tmp9 = closure_11;
   }
   return tmp9Result;
 }
@@ -82,6 +85,7 @@ function FailedChannelRow(channel) {
     }
     return closure_1_5.getGuild(guild_id);
   });
+  obj = { style: tmp.row, children: null };
   obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(11966).GuildIconWithChannelTypeSizes.SMALL_32 };
   const items1 = [callback(channel(11966).GuildIconWithChannelType, obj), ];
   const tmp3 = computeChannelNameDefault(channel);
@@ -96,12 +100,12 @@ function FailedDestinationRow(destination) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let channel = null;
     if ("channel" === destination.type) {
-      channel = closure_1_4.getChannel(destination.id);
+      channel = closure_1_4.getChannel(tmp.id);
     }
     const obj = { channel, user: null };
     let user = null;
     if ("user" === destination.type) {
-      user = closure_1_8.getUser(destination.id);
+      user = closure_1_8.getUser(tmp.id);
     }
     obj[1] = user;
     return obj;
@@ -131,36 +135,39 @@ function FailedDestinationRow(destination) {
 }
 noopAll;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-const createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.lg, paddingVertical: ThemesDefault.space.PX_8 };
+createCacheKey = { container: null, row: null, label: null };
+createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.lg, paddingVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, height: 40, marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { flexShrink: 1 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/share/native/DestinationFailedAlertModal.tsx");
+let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, height: 40, marginHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/share/native/DestinationFailedAlertModal.tsx");
 
 export default function DestinationFailedAlertModal(arg0) {
   ({ failedDestinations, onRetry } = arg0);
   ({ title, content } = arg0);
-  let obj = { style: callback3().container, children: failedDestinations.map((item, index) => callback(closure_17, { destination: item }, index)) };
+  let obj = { title, content, extraContent: null, actions: null };
+  obj = { style: callback3().container, children: failedDestinations.map((destination) => callback(closure_17, { destination }, arg1)) };
   obj[2] = callback(View, obj);
   if (null != onRetry) {
     obj = { children: null };
     obj1 = { variant: "primary", onPress: null, text: null };
     obj1[1] = onRetry;
-    const intl2 = getSystemLocale.intl;
-    obj1[2] = intl2.string(getSystemLocale.t["5911Lb"]);
-    const items = [callback(getAlertModalItemKey.AlertActionButton, obj1, "confirm"), ];
+    const intl2 = tmp3(1236).intl;
+    obj1[2] = intl2.string(tmp3(1236).t["5911Lb"]);
+    const items = [tmp2(tmp3(4660).AlertActionButton, obj1, "confirm"), ];
     const obj2 = { variant: "secondary", text: null };
-    const intl3 = getSystemLocale.intl;
-    obj2[1] = intl3.string(getSystemLocale.t.WAI6xu);
-    items[1] = callback(getAlertModalItemKey.AlertActionButton, obj2, "cancel");
+    const intl3 = tmp3(1236).intl;
+    obj2[1] = intl3.string(tmp3(1236).t.WAI6xu);
+    items[1] = tmp2(tmp3(4660).AlertActionButton, obj2, "cancel");
     obj[0] = items;
     let tmp2Result = callback2(closure_12, obj);
   } else {
     const obj3 = { variant: "primary", text: null };
-    const intl = getSystemLocale.intl;
-    obj3[1] = intl.string(getSystemLocale.t.BddRzS);
-    tmp2Result = callback(getAlertModalItemKey.AlertActionButton, obj3, "confirm");
+    const intl = tmp3(1236).intl;
+    obj3[1] = intl.string(tmp3(1236).t.BddRzS);
+    tmp2Result = tmp2(tmp3(4660).AlertActionButton, obj3, "confirm");
   }
   obj[3] = callback(getAlertModalItemKey.AlertActions, { children: tmp2Result });
   return callback(getAlertModalItemKey.AlertModal, obj);

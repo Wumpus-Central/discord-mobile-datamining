@@ -1,16 +1,16 @@
 // discord_app/modules/nuf/native/components/NUFGuildTemplates.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import initialize from "../../../../stores/DefaultRouteStore.tsx";
+import closure_6 from "../../../../stores/DefaultRouteStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { GuildTemplateId } from "../../../create_guild/CreateGuildConstants.tsx";
 import NUXGuildTemplatesAnalytics from "../../../create_guild/native/CreateGuildConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function onCreateGuild() {
   const self = this;
   const apply = _onCreateGuild.apply;
@@ -142,11 +142,11 @@ function _onCreateServer() {
                 c4 = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_15(closure_1);
+                obj1[0] = closure_1_15(tmp14);
                 return obj1;
               } else {
                 const obj2 = { guildId: null };
-                obj2[0] = closure_1;
+                obj2[0] = tmp14;
                 arr = arr.push(closure_1_11.CHANNEL_PROMPT, obj2);
               }
             }
@@ -180,11 +180,12 @@ function _onCreateServer() {
 ({ AnalyticEvents: error, AnalyticsSections: closure_8, NOOP: c9 } = ME);
 ({ CreateGuildModalStates: unpackModuleId, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = NUXGuildTemplatesAnalytics);
 let obj = { impression_group: require("encodeProperties").ImpressionGroups.GUILD_ADD_FLOW };
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
 
 export default function NUFGuildTemplates() {
   obj = {
     screens: React.useMemo(() => {
+      obj = {};
       obj = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_LANDING,
         impressionProperties: closure_18,
@@ -367,6 +368,7 @@ export default function NUFGuildTemplates() {
   obj[3] = constants.GUILD_TEMPLATES;
   return jsx(NavigationStack.Navigator, {
     screens: React.useMemo(() => {
+      obj = {};
       obj = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_LANDING,
         impressionProperties: closure_18,

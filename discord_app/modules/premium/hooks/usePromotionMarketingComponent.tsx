@@ -1,11 +1,11 @@
 // discord_app/modules/premium/hooks/usePromotionMarketingComponent.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import emitChanges from "../../../stores/billing/UserOfferStore.tsx";
-import createEmptyPromotionsByType from "../promotions/PromotionsStore.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/billing/UserOfferStore.tsx";
+import closure_5 from "../promotions/PromotionsStore.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
 
 export const usePromotionMarketingComponent = function usePromotionMarketingComponent(PREMIUM_TAB) {
   const _require = PREMIUM_TAB;
@@ -18,7 +18,7 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
     if (null == marketingComponentByType) {
       return null;
     } else {
-      const promotionByTypeAndId = closure_1_5.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
+      const promotionByTypeAndId = obj.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
       let trialId;
       if (promotionByTypeAndId != null) {
         trialId = promotionByTypeAndId.trialId;
@@ -29,6 +29,7 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
       }
       return marketingComponentByType;
     }
+    obj = closure_1_5;
   });
   const obj2 = _require(stateFromStores[5]);
   const items1 = [closure_5];
@@ -48,9 +49,9 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
   }
   const obj3 = _require(stateFromStores[5]);
   [tmp6, closure_3] = endDate(React.useState(false), 2);
-  closure_4 = React.useRef(null);
+  closure_4 = obj.useRef(null);
   const items2 = [endDate];
-  const effect1 = React.useEffect(() => {
+  const effect1 = obj.useEffect(() => {
     if (null != endDate) {
       const _Date = Date;
       const time = endDate.getTime();

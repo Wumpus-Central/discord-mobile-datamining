@@ -3,25 +3,26 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
 import { GuildTagBadgeSize } from "../GuildTagConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
+let obj = { container: null, tag: null };
+obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
 obj[0] = obj;
 let num = 16;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num = 14;
 }
 createCacheKey = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
 let str;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   str = "center";
 }
 createCacheKey[1] = str;
@@ -63,13 +64,15 @@ const memoResult1 = importAllResult.memo((textVariant) => {
   if (badgeSize === undefined) {
     badgeSize = GuildTagBadgeSize.SIZE_12;
   }
+  closure_6 = undefined;
   function renderContent() {
     let tmp4 = closure_1;
     if (null != closure_1) {
-      tmp4 = closure_1;
-      if (typeof closure_1 === "string") {
-        let obj = { uri: null };
-        obj[0] = closure_1;
+      tmp4 = tmp3;
+      if (typeof tmp3 === "string") {
+        let obj = { source: null, size: null };
+        obj = { uri: null };
+        obj[0] = tmp3;
         obj[0] = obj;
         obj[1] = badgeSize;
         tmp4 = closure_1_8(closure_1_12, obj);
@@ -78,7 +81,7 @@ const memoResult1 = importAllResult.memo((textVariant) => {
     obj = { children: null };
     const items = [tmp4, ];
     const items1 = [tag.tag, closure_4];
-    items[1] = closure_1_8(require(str[9]).Text, { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: items1, children: closure_0 });
+    items[1] = closure_1_8(closure_1_0(str[9]).Text, { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: items1, children: closure_0 });
     obj[0] = items;
     return closure_1_10(closure_1_9, obj);
   }
@@ -104,7 +107,7 @@ const memoResult1 = importAllResult.memo((textVariant) => {
   }
   return tmp5;
 });
-const result = obj132.fileFinishedImporting("modules/guild_tag/native/GuildTag.tsx");
+const result = set.fileFinishedImporting("modules/guild_tag/native/GuildTag.tsx");
 
 export default importAllResult.memo((primaryGuild) => {
   primaryGuild = primaryGuild.primaryGuild;
@@ -149,8 +152,10 @@ export default importAllResult.memo((primaryGuild) => {
         tmp13 = tmp6;
       }
       obj.onPress = tmp13;
-      tmp8Result = callback(memoResult1, obj);
+      tmp8Result = closure_8(memoResult1, obj);
       const tmp3Result = primaryGuild(guildId[12]);
+      const tmp8 = closure_8;
+      const tmp9 = memoResult1;
     }
   }
   return tmp8Result;

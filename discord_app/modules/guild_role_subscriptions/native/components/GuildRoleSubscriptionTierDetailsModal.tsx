@@ -4,21 +4,18 @@ import Button from "../../../../design/void/native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
 import stylesDefault from "FormStyles.tsx";
-import useFetchListingsForGuild from "../../GuildRoleSubscriptionsHooks.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import useRoleSubscriptionSettingsDisabled from "../../RoleSubscriptionSettingsDisabledContext.tsx";
 import pickImage from "FormImagePicker.tsx";
-import pickImageDefault from "FormImagePicker.tsx";
 import HeaderDefault from "GuildRoleSubscriptionTierEditStep.tsx";
 import useEditStateContext from "../../edit_state/EditStateContextProvider.tsx";
 import FormPriceTierDefault from "FormPriceTier.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
 import { UPLOAD_MEDIUM_SIZE } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 function Content() {
   const tmp3 = stylesDefault();
   let obj = useEditStateContext;
@@ -41,23 +38,23 @@ function Content() {
     obj[0] = tmp10;
     tmp17 = obj;
   }
-  let tmp4Result = useFetchListingsForGuild;
+  let tmp4Result = tmp4(14558);
   const subscriptionListing = tmp4Result.useSubscriptionListing(editStateId);
   let published;
   if (subscriptionListing != null) {
     published = subscriptionListing.published;
   }
   let tmp20 = true === published;
-  tmp4Result = useRoleSubscriptionSettingsDisabled;
+  tmp4Result = tmp4(16945);
   const roleSubscriptionSettingsDisabled = tmp4Result.useRoleSubscriptionSettingsDisabled();
   obj = { style: tmp3.header, children: null };
-  let tmpResult = FormHeaderDefault;
-  const intl = getSystemLocale.intl;
+  let tmpResult = tmp(8913);
+  const intl = tmp4(1236).intl;
   obj[1] = intl.string(getSystemLocale.t["6XpbbR"]);
   const items = [callback2(tmpResult, obj), , , , , , , ];
   obj1 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
-  tmpResult = pickImageDefault;
-  const intl2 = getSystemLocale.intl;
+  tmpResult = tmp(16951);
+  const intl2 = tmp4(1236).intl;
   obj1[0] = intl2.string(getSystemLocale.t.pNZfgG);
   obj1[1] = tmp17;
   obj1[2] = UPLOAD_MEDIUM_SIZE;
@@ -69,11 +66,14 @@ function Content() {
   items[1] = callback2(tmpResult, obj1);
   obj2 = { style: tmp3.header, children: null };
   const tmp14 = callback(obj4.useDescription(editStateId), 2);
-  const intl3 = getSystemLocale.intl;
+  const tmp22 = closure_11;
+  const tmp23 = closure_10;
+  const tmp24 = callback2;
+  const intl3 = tmp4(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t.rJ6Oad);
   items[2] = callback2(FormHeaderDefault, obj2);
   obj3 = { style: tmp3.textInput, showTopContainer: false, multiline: false, maxLength: closure_7, value: tmp7, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null, disabled: null };
-  const intl4 = getSystemLocale.intl;
+  const intl4 = tmp4(1236).intl;
   obj3[5] = intl4.string(getSystemLocale.t["i4/g+E"]);
   obj3[6] = tmp8;
   obj3[8] = Button.ClearButtonVisibility.WITH_CONTENT;
@@ -81,18 +81,18 @@ function Content() {
   items[3] = callback2(Form.FormInput, obj3);
   obj4 = { style: tmp3.header, children: null };
   const tmpResult1 = FormHeaderDefault;
-  const intl5 = getSystemLocale.intl;
+  const intl5 = tmp4(1236).intl;
   obj4[1] = intl5.string(getSystemLocale.t["74JctW"]);
   items[4] = callback2(FormHeaderDefault, obj4);
   const obj5 = { style: tmp3.textInput, showTopContainer: false, multiline: true, maxLength: closure_6, numberOfLines: 3, value: tmp15, placeholder: null, onChange: null, disabled: null };
-  const intl6 = getSystemLocale.intl;
+  const intl6 = tmp4(1236).intl;
   obj5[6] = intl6.string(getSystemLocale.t["3YHwoG"]);
   obj5[7] = tmp16;
   obj5[8] = roleSubscriptionSettingsDisabled;
   items[5] = callback2(Form.FormInput, obj5);
   const obj6 = { style: tmp3.header, children: null };
   const tmpResult2 = FormHeaderDefault;
-  const intl7 = getSystemLocale.intl;
+  const intl7 = tmp4(1236).intl;
   obj6[1] = intl7.string(getSystemLocale.t.CrRVAx);
   items[6] = callback2(FormHeaderDefault, obj6);
   const tmpResult3 = FormHeaderDefault;
@@ -101,14 +101,14 @@ function Content() {
   }
   const obj7 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
   const obj8 = { children: null };
-  items[7] = callback2(FormPriceTierDefault, obj7);
+  items[7] = tmp24(FormPriceTierDefault, obj7);
   obj8[0] = items;
-  return callback(closure_10, obj8);
+  return tmp22(tmp23, obj8);
 }
 ({ GuildRoleSubscriptionsTierScenes: c5, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_6, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: error } = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 const memoResult = importAllResult.memo(() => callback2(Content, {}));
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   let obj = useEditStateContext;
@@ -128,9 +128,9 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   }
   obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
   obj5 = getRoleEmojisAll;
-  const intl = getSystemLocale.intl;
+  const intl = tmp(1236).intl;
   obj[0] = intl.string(getSystemLocale.t.o3pHas);
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp(1236).intl;
   obj[1] = intl2.string(getSystemLocale.t.oOOME5);
   obj[2] = tmp3;
   obj[3] = constants.CHANNEL_BENEFITS;

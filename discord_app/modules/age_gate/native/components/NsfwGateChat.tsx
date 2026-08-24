@@ -6,22 +6,25 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import registerAssetDefault from "../../../../../_runtime/11837_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey = { container: null, border: null, description: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = { marginTop: 16, textAlign: "center" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
+const obj1 = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
 
 export default function NsfwGateChat() {
   const tmp = callback3();
-  let obj = { style: tmp.border };
+  let obj = { children: null };
+  obj = { style: tmp.border };
   const items = [callback(closure_3, obj), ];
   obj = { style: tmp.container, children: null };
   const items1 = [callback(closure_4, { source: registerAssetDefault }), ];

@@ -1,19 +1,26 @@
 // discord_common/js/packages/http-utils/V8APIError.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 function convertStringArrayToSkemaErrorItems(arr) {
-  return arr.map((item, index) => ({ code: "UNKNOWN", message: item }));
+  return arr.map((message) => ({ code: "UNKNOWN", message }));
 }
 function convertOldFormError(captcha_key) {
   let obj = {};
   const entries = Object.entries(captcha_key);
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     [tmp6, tmp8] = tmp5;
     if ("_misc" !== tmp6) {
-      obj = { _errors: convertStringArrayToSkemaErrorItems(tmp8) };
+      obj = {};
+      let tmp11 = convertStringArrayToSkemaErrorItems;
+      let tmp12 = tmp8;
+      obj._errors = convertStringArrayToSkemaErrorItems(tmp8);
+      let tmp13 = tmp6;
       obj[tmp7] = obj;
     } else {
+      let tmp9 = convertStringArrayToSkemaErrorItems;
+      let tmp10 = tmp8;
       obj._errors = convertStringArrayToSkemaErrorItems(tmp8);
     }
     continue;
@@ -28,10 +35,10 @@ class APIError extends Error {
       str = "An unexpected error occurred.";
     }
     if (typeof global === "string") {
-      tmp4 = fn;
+      tmp4 = arg1;
       obj = { message: null, code: null };
       obj[0] = global;
-      obj[1] = fn;
+      obj[1] = arg1;
     } else {
       tmp6 = null;
       if (null == global.body) {
@@ -115,11 +122,13 @@ prototype["getFieldErrors"] = function getFieldErrors(ASSET) {
   const errors = this.errors;
   let tmp = errors;
   if (arr.length > 0) {
+    let tmp3 = errors;
     tmp = errors;
     if (null != errors) {
       const spliceResult = arr.splice(1);
       tmp = tmp4;
       while (spliceResult.length > 0) {
+        tmp3 = tmp4;
         arr = spliceResult;
         tmp = tmp4;
         if (null == tmp4) {
@@ -154,18 +163,18 @@ prototype["getAllFieldErrorsUnder"] = function getAllFieldErrorsUnder(errors) {
   if (undefined !== errors) {
     let _Object = Object;
     let entries = Object.entries(errors);
-    let item = entries.forEach((item, index) => {
-      [tmp, tmp2] = item;
+    let item = entries.forEach((arg0) => {
+      [tmp, tmp2] = arg0;
       if ("_errors" !== tmp) {
         const _Object = Object;
         const entries = Object.entries(self.getAllFieldErrorsUnder(tmp2));
-        item = entries.forEach((item, index) => {
-          [tmp, tmp2] = item;
+        const item = entries.forEach((arg0) => {
+          [tmp, tmp2] = arg0;
           if (tmp === self) {
-            obj[closure_0] = tmp2;
+            closure_1_0[closure_0] = tmp2;
           } else {
             const _HermesInternal = HermesInternal;
-            obj["" + closure_0 + "." + tmp] = tmp2;
+            closure_1_0["" + closure_0 + "." + tmp] = tmp2;
           }
         });
       }
@@ -212,7 +221,7 @@ prototype["getAnyErrorMessageAndField"] = function getAnyErrorMessageAndField() 
   }
   return null;
 };
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/http-utils/V8APIError.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/http-utils/V8APIError.tsx");
 
 export const INVALID_FORM_BODY_ERROR_CODE = 50035;
 export const ROOT_FORM_ERRORS_KEY = "__root_errors";

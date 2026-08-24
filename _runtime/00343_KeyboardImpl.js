@@ -1,6 +1,6 @@
 // _runtime/00343_KeyboardImpl.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const KeyboardImpl = importDefault;
 class KeyboardImpl {
@@ -65,14 +65,14 @@ const items = [
         tmp = 0 !== duration;
       }
       if (tmp) {
-        KeyboardImpl(342);
-        let obj = { duration: null, update: null };
+        let obj = KeyboardImpl(342);
+        obj = { duration: null, update: null };
         obj[0] = duration;
         obj = { duration: null, type: null };
         obj[0] = duration;
         let str = null != easing;
         if (str) {
-          str = KeyboardImpl(342).Types[easing];
+          str = tmp2(342).Types[easing];
         }
         if (!str) {
           str = "keyboard";
@@ -80,6 +80,7 @@ const items = [
         obj[1] = str;
         obj[1] = obj;
         obj.configureNext(obj);
+        tmp2 = KeyboardImpl;
       }
     }
   }

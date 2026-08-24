@@ -1,33 +1,35 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/ChannelStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { MuteUntilSeconds } from "../../../user_settings/UserSettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
 
 export default function MuteUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
   let dMFromUserId;
+  let stateFromStores;
+  dMFromUserId = undefined;
   dMFromUserId = dMFromUserId.getDMFromUserId(user.id);
   let obj = user(reportId[6]);
   const items = [dMFromUserId];
   const items1 = [channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId), items1);
+  stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId), items1);
   const items2 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
+      guild_id = tmp.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = stateFromStores.id;
+      id = tmp.id;
     }
     return channelId(reportId[7]).getName(guild_id, id, user);
   }, items2);
@@ -41,6 +43,7 @@ export default function MuteUserElement(user) {
   const items4 = [dMFromUserId, channelId, user, reportId];
   let tmp9 = null;
   if (null != user) {
+    obj = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
     const intl = tmp2(tmp3[12]).intl;
     obj = { username: null };
     obj[0] = memo;

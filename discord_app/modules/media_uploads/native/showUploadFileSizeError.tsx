@@ -1,15 +1,15 @@
 // discord_app/modules/media_uploads/native/showUploadFileSizeError.tsx
-import CHANNEL_SIDEBAR_WIDTH from "../../user_settings/UnsyncedUserSettingsStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { FileUploadErrorTypes } from "../../messages/MessageConstants.tsx";
 import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
 ({ PremiumTypes: closure_8, PremiumUserLimits: c9, PremiumUpsellTypes: c10 } = GuildFeatures);
 let closure_11 = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
-let result = require("obj132").fileFinishedImporting("modules/media_uploads/native/showUploadFileSizeError.tsx");
+let result = require("set").fileFinishedImporting("modules/media_uploads/native/showUploadFileSizeError.tsx");
 
 export default function showUploadFileSizeError(arg0) {
   ({ file, maxSize, analyticsLocations, errorReason } = arg0);
@@ -29,18 +29,20 @@ export default function showUploadFileSizeError(arg0) {
   items1 = [];
   if (null != file.items) {
     const items2 = file.items;
-    const item = items2.forEach((item, index) => {
-      let num = item.postCompressionSize;
+    const item = items2.forEach((postCompressionSize) => {
+      let num = postCompressionSize.postCompressionSize;
       if (num == null) {
         num = 0;
       }
       items.push(num);
-      items1.push(item.preCompressionSize);
+      items1.push(postCompressionSize.preCompressionSize);
     });
   }
   tmp2Result = tmp2(4876);
   const kestrelConfig = tmp2Result.getKestrelConfig({ location: "native.showUploadFileSizeError" });
   const tmp2Result1 = items(5042);
+  const tmp4 = TIER_2;
+  const tmp8 = constants;
   obj = { guildId, channelId: null, userIndividualFileSizeLimit: null, numAttachments: null, preCompressionFileSizes: null, preCompressionAggregateSize: null, postCompressionFileSizes: null, postCompressionAggregateSize: null, attachmentMimeTypes: null, errorType: null, kestrelVariant: null };
   const tmp2Result2 = items(8469);
   obj[1] = items(8470).getUploaderChannelId(file);
@@ -78,7 +80,7 @@ export default function showUploadFileSizeError(arg0) {
   }
   let tmp22 = isPremiumExactlyResult;
   if (!isPremiumExactlyResult) {
-    tmp22 = num > table[TIER_2.TIER_2].fileSize;
+    tmp22 = num > table[tmp4.TIER_2].fileSize;
   }
   if (!tmp22) {
     tmp22 = num > tmp2(4830).MAX_TOTAL_ATTACHMENT_SIZE;
@@ -87,16 +89,16 @@ export default function showUploadFileSizeError(arg0) {
     tmp22 = tmp21;
   }
   if (!tmp22) {
-    tmp22 = errorReason === FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
+    tmp22 = errorReason === tmp20.ERROR_SOURCE_UNKNOWN;
   }
   const tmp2Result4 = items(4876);
-  obj = { alert_type: tmp22 ? constants.OVER_MAX_SIZE : constants.NITRO_UPSELL, num_attachments: file.attachmentsCount, total_attachment_size: file.currentSize, has_image: file.hasImage, has_video: file.hasVideo, is_premium: isPremiumExactlyResult, image_compression_quality: null, image_compression_setting_enabled: null };
+  obj = { alert_type: tmp22 ? tmp24.OVER_MAX_SIZE : tmp24.NITRO_UPSELL, num_attachments: file.attachmentsCount, total_attachment_size: file.currentSize, has_image: file.hasImage, has_video: file.hasVideo, is_premium: isPremiumExactlyResult, image_compression_quality: null, image_compression_setting_enabled: null };
   const tmp2Result5 = items(5042);
   obj[6] = items(4838).getImageCompressionQuality();
   obj[7] = dataSavingMode.dataSavingMode;
-  tmp2Result5.trackWithMetadata(constants.FILE_UPLOAD_ALERT_VIEWED, obj);
+  tmp2Result5.trackWithMetadata(tmp8.FILE_UPLOAD_ALERT_VIEWED, obj);
   if (tmp22) {
-    if (errorReason === FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN) {
+    if (errorReason === tmp20.ERROR_SOURCE_UNKNOWN) {
       const intl4 = tmp2(1236).intl;
       let stringResult = intl4.string(tmp2(1236).t.B3vFdU);
       const intl5 = tmp2(1236).intl;
@@ -145,7 +147,5 @@ export default function showUploadFileSizeError(arg0) {
     obj4[3] = obj6;
     obj4[4] = num;
     const result = items1(8471).handleShowUpsellAlert(obj4);
-    const obj12 = items1(8471);
   }
-  const tmp2Result6 = items(4838);
 };

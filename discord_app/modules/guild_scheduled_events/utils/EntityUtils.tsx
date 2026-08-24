@@ -1,9 +1,9 @@
 // discord_app/modules/guild_scheduled_events/utils/EntityUtils.tsx
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import closure_0 from "../../../stores/ChannelStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../GuildScheduledEventsConstants.tsx";
 
 ({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: obj1 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
 
 export const getChannelFromEvent = function getChannelFromEvent(entity_type) {
   let tmp2 = entity_type.entity_type in closure_2;

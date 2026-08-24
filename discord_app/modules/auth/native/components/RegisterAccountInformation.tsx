@@ -1,19 +1,15 @@
 // discord_app/modules/auth/native/components/RegisterAccountInformation.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
-import _modDef6551 from "../../../keyboard/native/KeyboardAwareView.tsx";
-import LabelDefault from "../../../../design/void/Form/native/FreeFormErrorLabel.tsx";
 import useWideAuthViewDefault from "../useWideAuthView.tsx";
-import AuthFormViewDefault from "AuthFormView.tsx";
 import useInitialRegistrationStepDefault from "../useInitialRegistrationStep.tsx";
-import useAuthFlowBackHandlerDefault from "utils/useAuthFlowBackHandler.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import hasConsented from "../../../../stores/ConsentStore.tsx";
-import updateInvite from "../../../../stores/InviteStore.tsx";
-import getDisplayedInviteCode from "../../../../stores/native/DisplayedInviteStore.tsx";
+import closure_8 from "../../../../stores/ConsentStore.tsx";
+import closure_9 from "../../../../stores/InviteStore.tsx";
+import closure_10 from "../../../../stores/native/DisplayedInviteStore.tsx";
 import useRegistrationUIStore from "../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import { AuthStates } from "../../../../Constants.tsx";
@@ -21,13 +17,14 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { LinearTransition, Easing } from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ setRegistrationErrors: unpackModuleId, updateRegistrationOptions: closure_12, useRegistrationUIStore: map1 } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationTransitionActionTypes);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = createCacheKey.createStyles((arg0) => {
-  const obj = { marginTop: ThemesDefault.space.PX_24 };
+  let obj = { container: null, password: null, button: null, errors: null, page: null };
+  obj = { marginTop: ThemesDefault.space.PX_24 };
   obj[0] = obj;
   obj[1] = { marginTop: 24 };
   let num = 50;
@@ -40,9 +37,9 @@ let closure_19 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 createCacheKey = { layout: null };
-createCacheKey[0] = require("../../../../../_runtime/00300_get_BatchedBridge.js");
-const easingResult = LinearTransition.easing(Easing.inOut(require("../../../reanimated/ReanimatedRexport.tsx").Easing.quad));
-let result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
+createCacheKey[0] = require("module_300");
+const easingResult = LinearTransition.easing(Easing.inOut(require("module_4115").Easing.quad));
+let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
 
 export default function RegisterAccountInformation() {
   function _handleSubmit() {
@@ -158,6 +155,7 @@ export default function RegisterAccountInformation() {
   }
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = callback4(tmp3);
+  let obj = React;
   context = React.useContext(context(15210).TrackRegistrationContext);
   let tmp8 = callback2((submitting) => submitting.submitting);
   const tmp7 = callback2((registrationOptions) => registrationOptions.registrationOptions);
@@ -175,14 +173,14 @@ export default function RegisterAccountInformation() {
     }
     return invite;
   });
-  const tmp9 = callback(React.useState(false), 2);
+  const ref = React.useRef(null);
   let obj3 = context(15235);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
   ({ password, validatePassword: closure_4, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
   let obj4 = context(15237);
   const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({ transitionToNextStepOrSubmit: closure_5, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
-  let obj = {};
+  obj = {};
   ({ usernameStatus, setUsername } = usernameRegistrationStep);
   const merged = Object.assign(tmp7);
   obj.username = username;
@@ -216,8 +214,8 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  let tmpResult = useAuthFlowBackHandlerDefault;
-  const ref = React.useRef(null);
+  let tmpResult = tmp(15228);
+  const tmp9 = callback(React.useState(false), 2);
   tmpResult(context(15211).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
@@ -231,7 +229,7 @@ export default function RegisterAccountInformation() {
     }
   }, []);
   obj1 = { headerText: null, children: null };
-  tmpResult = AuthFormViewDefault;
+  tmpResult = tmp(8609);
   const intl2 = tmp5(1236).intl;
   obj1[0] = intl2.string(context(1236).t.jec90v);
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
@@ -265,21 +263,21 @@ export default function RegisterAccountInformation() {
       const obj8 = { style: null, children: null };
       obj8[0] = tmp4.errors;
       obj8[1] = tmp11.message;
-      tmp27Result = callback3(LabelDefault, obj8);
+      tmp27Result = tmp27(tmp(8579), obj8);
     }
   }
   items5[1] = tmp27Result;
   obj6.children = items5;
-  items4[2] = callback(_modDef4115.View, obj6);
+  items4[2] = closure_18(_modDef4115.View, obj6);
   obj2[2] = items4;
-  obj1[1] = callback(obj, obj2);
-  tmp27Result = callback3(tmpResult, obj1);
+  obj1[1] = closure_18(obj, obj2);
+  tmp27Result = tmp27(tmpResult, obj1);
   let tmp27Result1 = tmp27Result;
   if (!tmp3) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp4.page;
     obj9[1] = tmp27Result;
-    tmp27Result1 = callback3(_modDef6551, obj9);
+    tmp27Result1 = tmp27(tmp(6551), obj9);
   }
   return tmp27Result1;
 };

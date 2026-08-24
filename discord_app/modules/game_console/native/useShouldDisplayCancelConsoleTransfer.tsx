@@ -1,8 +1,8 @@
 // discord_app/modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx");
 
 export default function useShouldDisplayCancelConsoleTransfer(arg0) {
   const callback = arg0;
@@ -33,7 +33,7 @@ export default function useShouldDisplayCancelConsoleTransfer(arg0) {
             const _Date = Date;
             tmp3 = Date.now() - tmp2.startedAt > 6000;
           }
-          return callback(tmp3);
+          return closure_1(tmp3);
         }, 6000 - (Date.now() - tmp.startedAt));
         return () => {
           clearTimeout(closure_0);

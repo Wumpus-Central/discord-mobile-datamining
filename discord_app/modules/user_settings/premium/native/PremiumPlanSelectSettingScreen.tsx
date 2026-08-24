@@ -4,9 +4,9 @@ import useSettingNavigationRoute from "../../core/native/useSettingNavigationRou
 import BoostPurchaseNitroBannerDefault from "../../../premium/native/PremiumPlanSelect.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
   let obj = useSettingNavigationRoute;

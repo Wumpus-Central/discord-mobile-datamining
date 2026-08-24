@@ -1,9 +1,9 @@
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
 import v1 from "../../../_runtime/00514_v1.js";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function _createHandoffToken() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -88,7 +88,7 @@ function _createHandoffToken() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
 
 export default {
   generateNonce() {

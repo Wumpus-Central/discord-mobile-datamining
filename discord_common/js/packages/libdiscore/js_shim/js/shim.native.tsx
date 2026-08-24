@@ -1,9 +1,9 @@
 // discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import LIBDISCORE_JSI from "../../mobile/js/index.tsx";
 import _initLibdiscore from "initLibdiscore.native.tsx";
 
-let result = obj132.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;

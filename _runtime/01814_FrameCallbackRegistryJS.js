@@ -2,7 +2,8 @@
 import _createClassDefault from "metro/00042__createClass.js";
 import isReanimated3 from "01698_isReanimated3.js";
 import t from "01815_t.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import { isReanimated3 } from "01698_isReanimated3.js";
 
 const FrameCallbackRegistryJS = global;
 require = arg1;
@@ -25,19 +26,20 @@ const items = [
       closure_0 = arg0;
       if (arg0) {
         const self = this;
+        const nextCallbackId = this.nextCallbackId;
         this.nextCallbackId = this.nextCallbackId + 1;
-        nextCallbackId(1698);
+        let obj = nextCallbackId(1698);
         const fn = function c() {
           const result = obj._frameCallbackRegistry.registerFrameCallback(obj, nextCallbackId);
         };
-        const obj = { callback: null, callbackId: null };
+        obj = { callback: null, callbackId: null };
         obj[0] = arg0;
-        obj[1] = this.nextCallbackId;
+        obj[1] = nextCallbackId;
         fn.__closure = obj;
         fn.__workletHash = 11361563554462;
         fn.__initData = closure_4;
         obj.runOnUI(fn)();
-        return this.nextCallbackId;
+        return nextCallbackId;
       } else {
         return -1;
       }
@@ -67,7 +69,7 @@ const items = [
       fn.__closure = { callbackId, state };
       fn.__workletHash = 5244475777443;
       fn.__initData = closure_6;
-      require("01698_isReanimated3.js").runOnUI(fn)();
+      _isReanimated3.runOnUI(fn)();
     }
   }
 ];

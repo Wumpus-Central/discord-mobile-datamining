@@ -1,6 +1,6 @@
 // _runtime/13153_LRUCache.js
 import _createClass from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import LRUCache from "metro/00041__classCallCheck.js";
 
 class LRUCache {
   constructor() {
@@ -11,7 +11,6 @@ class LRUCache {
     return;
   }
 }
-_classCallCheck = LRUCache;
 const items = [
   {
     key: "get",

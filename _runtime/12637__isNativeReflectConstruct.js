@@ -1,15 +1,15 @@
 // _runtime/12637__isNativeReflectConstruct.js
 import emptyFunctionDefault from "04205_emptyFunction.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
 import { jsx } from "react/00021_jsxProd.js";
 import importDefaultResult2 from "00019_noop.js";
 
-let Link = fn;
+let Link = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -80,9 +80,9 @@ let obj = {
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.onPress = function onPress(arg0) {
-          return self.handlePress(arg0, closure_0);
+          return closure_1_2.handlePress(arg0, closure_0);
         };
-        return <closure_1 />;
+        return closure_1_7(closure_1, obj);
       }
     });
   }

@@ -8,14 +8,16 @@ import CollectiblesShopInternal from "../../../collectibles/native/CollectiblesS
 import { CollectiblesMobileShopScreen as closure_3 } from "../../../collectibles/CollectiblesShopConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
   let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
+  const obj2 = useShopOrientationLock;
+  const tmp = require;
   const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;

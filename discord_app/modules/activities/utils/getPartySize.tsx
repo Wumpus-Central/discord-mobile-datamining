@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getPartySize.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
 
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");
 
 export const getPartySize = function getPartySize(activity) {
   if (null != activity) {

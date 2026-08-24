@@ -1,6 +1,6 @@
 // _runtime/00367__assertNativeAnimatedModule.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const AnimatedNode = importDefault;
 let c3 = 1;
@@ -125,9 +125,10 @@ const items = [
   {
     key: "__callListeners",
     value: function __callListeners(value) {
+      const obj = { value };
       const _listeners = this._listeners;
-      const item = _listeners.forEach((item, index) => {
-        item(obj);
+      const item = _listeners.forEach((arg0) => {
+        arg0(obj);
       });
     }
   },
@@ -159,6 +160,7 @@ const items = [
         const animatedNode = API.createAnimatedNode(newNodeTag, __getNativeConfigResult);
         __nativeTag = newNodeTag;
         const obj2 = AnimatedNode(357);
+        const tmp4 = AnimatedNode;
       }
       return __nativeTag;
     }

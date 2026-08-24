@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx");
 
 export const CollectiblesSKUSourceType = { SHOP: 1, [1]: "SHOP", QUEST: 2, [2]: "QUEST", PREMIUM_PROMOTION: 3, [3]: "PREMIUM_PROMOTION", REWARD: 4, [4]: "REWARD", INTERNAL: 5, [5]: "INTERNAL" };

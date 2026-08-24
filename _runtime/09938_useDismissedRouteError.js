@@ -1,6 +1,6 @@
 // _runtime/09938_useDismissedRouteError.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import closure_0 from "metro/00032__slicedToArray.js";
+import closure_1 from "00019_noop.js";
 
 
 export const useDismissedRouteError = function useDismissedRouteError(state) {
@@ -9,7 +9,7 @@ export const useDismissedRouteError = function useDismissedRouteError(state) {
   let tmp3 = null;
   if (first) {
     const routes = state.routes;
-    const found = routes.find((item, index) => item.key === first);
+    const found = routes.find((key) => key.key === first);
     name = undefined;
     if (found != null) {
       name = found.name;

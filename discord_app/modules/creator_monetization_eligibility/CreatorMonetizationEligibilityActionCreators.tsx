@@ -1,10 +1,10 @@
 // discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 import { ApplicationTypes } from "../applications/ApplicationConstants.tsx";
 
-require = fn;
+require = arg1;
 function _createCreatorMonetizationEnableRequest() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -412,7 +412,7 @@ function _removeMonetization() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx");
 
 export const createCreatorMonetizationEnableRequest = function createCreatorMonetizationEnableRequest(arg0) {
   const self = this;
@@ -434,7 +434,7 @@ export const getCreatorMonetizationEligibility = function getCreatorMonetization
   }
   return applyArgumentsResult;
 };
-export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms(closure_1_0, arg1) {
+export const acceptCreatorMonetizationTerms = function acceptCreatorMonetizationTerms(arg0, arg1) {
   const self = this;
   const apply = _acceptCreatorMonetizationTerms.apply;
   if (typeof apply === "unknown") {
@@ -444,7 +444,7 @@ export const acceptCreatorMonetizationTerms = function acceptCreatorMonetization
   }
   return applyArgumentsResult;
 };
-export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2(closure_1_0) {
+export const acceptCreatorMonetizationTermsV2 = function acceptCreatorMonetizationTermsV2(arg0) {
   const self = this;
   const apply = _acceptCreatorMonetizationTermsV.apply;
   if (typeof apply === "unknown") {

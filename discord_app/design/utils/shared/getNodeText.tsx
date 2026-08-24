@@ -1,7 +1,7 @@
 // discord_app/design/utils/shared/getNodeText.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("design/utils/shared/getNodeText.tsx");
+const result = require("set").fileFinishedImporting("design/utils/shared/getNodeText.tsx");
 function getNodeText(children) {
   let mapped = children;
   let tmp = children;

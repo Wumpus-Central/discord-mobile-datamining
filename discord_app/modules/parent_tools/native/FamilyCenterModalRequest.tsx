@@ -14,20 +14,17 @@ import ModalContent from "../../../design/components/Modal/native/ModalContent.n
 import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
-import registerAssetDefault from "../../../../_runtime/08143_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10756_registerAsset.js";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
 import items from "../FamilyCenterConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import HeaderBackImage from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 
-require = fn;
+require = arg1;
 class FamilyCenterModalRequestConfirm {
   constructor(arg0) {
     userId = global.userId;
@@ -206,7 +203,7 @@ class FamilyCenterModalRequestConfirm {
     obj23 = { variant: "secondary", size: "lg", text: null, onPress: null };
     intl6 = require("getSystemLocale").intl;
     obj23[2] = intl6.string(require("getSystemLocale").t["ETE/oC"]);
-    obj23[3] = require("../../../actions/ModalActionCreators.tsx").pop;
+    obj23[3] = require("module_5260").pop;
     items10[1] = tmp19(require("Button").Button, obj23);
     obj21[0] = items10;
     obj20[0] = tmp10(require("ButtonGroup").ButtonGroup, obj21);
@@ -230,7 +227,7 @@ class FamilyCenterModalRequestSuccess {
     }, []);
     if (null === stateFromStores) {
       tmp6 = closure_1;
-      arr2 = require("../../../actions/ModalActionCreators.tsx");
+      arr2 = require("module_5260");
       arr = arr2.pop();
     }
     tmp8 = jsxs;
@@ -288,7 +285,7 @@ class FamilyCenterModalRequestError {
       let arr = callback(table[26]);
       arr = arr.pop();
     }, []);
-    tmp9 = require("../../../../_runtime/metro/00038__.js")(null != stateFromStores, "User must be logged in to see this modal.");
+    tmp9 = require("module_38")(null != stateFromStores, "User must be logged in to see this modal.");
     obj3 = closure_9[global.failureCode];
     tmp10 = tmp6;
     obj = { isAdult: tmp10, email: null };
@@ -344,6 +341,7 @@ class FamilyCenterModalRequestError {
 }
 function FamilyCenterPrereqLoading(arg0) {
   ({ userId: require, linkCode: importDefault } = arg0);
+  dependencyMap = undefined;
   let obj = useNavigation;
   dependencyMap = obj.useNavigation();
   const effect = React.useEffect(() => {
@@ -437,6 +435,7 @@ function FamilyCenterPrereqLoading(arg0) {
       c0 = true;
     };
   }, []);
+  obj = { children: null };
   obj = { style: callback6().container, children: callback(ActivityIndicator.ActivityIndicator, {}) };
   obj[0] = callback(closure_6, obj);
   return callback(ModalScreen.ModalScreen, obj);
@@ -445,7 +444,9 @@ function FamilyCenterPrereqScreen(primaryButton) {
   primaryButton = primaryButton.primaryButton;
   ({ title, description } = primaryButton);
   const tmp = callback7();
-  const obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title };
+  let obj = { children: null };
+  obj = { style: tmp.content, children: null };
+  obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title };
   const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: description })];
   obj[1] = items;
   const items1 = [callback2(closure_6, obj), callback(ModalFooter.ModalFooter, { children: callback(Button2.Button, obj3) })];
@@ -456,11 +457,13 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   teenIdentity = teenIdentity.teenIdentity;
   const tmp = callback8();
   let navigation;
+  let stateFromStores;
+  dependencyMap = undefined;
   let obj = navigation(1500);
   navigation = obj.useNavigation();
   obj1 = navigation(647);
   const items = [closure_7];
-  const stateFromStores = obj1.useStateFromStores(items, () => {
+  stateFromStores = obj1.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -487,10 +490,11 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     }
   }, items1);
   const callback = React.useCallback(() => {
-    stateFromStores(5428);
-    const obj = { entryPoint: navigation(5254).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
+    let obj = stateFromStores(5428);
+    obj = { entryPoint: navigation(5254).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
+  obj = { style: tmp.content, children: null };
   obj = { style: tmp.art, children: callback(navigation(5447).FamilyShieldSpotIllustration, {}) };
   const items2 = [callback(closure_6, obj), , ];
   obj1 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
@@ -517,7 +521,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   obj3[3] = intl2.format(stateFromStores(2335)["0o3yg8"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   items2[2] = callback(navigation(4734).Text, obj3);
   obj[1] = items2;
-  const items3 = [callback2(closure_6, obj), ];
+  const items3 = [closure_13(closure_6, obj), ];
   const obj4 = { children: null };
   const obj5 = { children: null };
   const obj6 = { variant: "primary", text: null, onPress: null };
@@ -533,10 +537,10 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   };
   items4[1] = callback(navigation(4745).Button, obj7);
   obj5[0] = items4;
-  obj4[0] = callback2(navigation(6687).ButtonGroup, obj5);
+  obj4[0] = closure_13(navigation(6687).ButtonGroup, obj5);
   items3[1] = callback(navigation(11114).ModalFooter, obj4);
   obj2[0] = items3;
-  return callback2(navigation(5440).ModalScreen, obj2);
+  return closure_13(navigation(5440).ModalScreen, obj2);
 }
 function FamilyCenterVerifyingScreen() {
   let obj = navigation(stateFromStores[8]);
@@ -570,10 +574,11 @@ function FamilyCenterVerifyingScreen() {
   const items2 = [navigation];
   const effect1 = React.useEffect(() => {
     const timeout = setTimeout(() => {
-      const replaced = lib.replace(lib(stateFromStores[11]).FamilyCenterModalRequestSections.ERROR, { failureCode: closure_1_10.GENERIC_ERROR });
+      const replaced = lib.replace(lib(closure_1_2[11]).FamilyCenterModalRequestSections.ERROR, { failureCode: closure_1_10.GENERIC_ERROR });
     }, closure_1_8);
     return () => clearTimeout(closure_0);
   }, items2);
+  obj = { children: null };
   obj = { style: tmp.container, children: callback(navigation(stateFromStores[32]).ActivityIndicator, {}) };
   obj[0] = callback(closure_6, obj);
   return callback(navigation(stateFromStores[14]).ModalScreen, obj);
@@ -623,8 +628,8 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   }, items1);
   obj = { title: null, description: null, primaryButton: null };
   const callback = React.useCallback(() => {
-    stateFromStores(5428);
-    const obj = { entryPoint: navigation(5254).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
+    let obj = stateFromStores(5428);
+    obj = { entryPoint: navigation(5254).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
   const intl = navigation(1236).intl;
@@ -641,38 +646,51 @@ function FamilyCenterPrereqMustBeAdultScreen() {
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT: closure_8, FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES: c9, FamilyCenterFailureCode: c10, FamilyCenterIconType: unpackModuleId } = items);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = { headerText: null, art: null, connectionHeader: null, headerIcons: null, ellipseGroup: null, ellipse: null, title: null, teenName: null, consent: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 165, height: 119 };
 createCacheKey[2] = { alignItems: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj1 = { alignItems: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "center", alignSelf: "center", padding: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { flexDirection: "row", alignItems: "center", justifyContent: "center", alignSelf: "center", padding: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { flexDirection: "row", marginHorizontal: ThemesDefault.space.PX_12 };
+let obj3 = { flexDirection: "row", marginHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[5] = { width: 4, height: 4, marginHorizontal: 2, backgroundColor: ThemesDefault.colors.ICON_MUTED, borderRadius: ThemesDefault.radii.round };
 createCacheKey[6] = { textAlign: "center" };
+let obj4 = { width: 4, height: 4, marginHorizontal: 2, backgroundColor: ThemesDefault.colors.ICON_MUTED, borderRadius: ThemesDefault.radii.round };
 createCacheKey[7] = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
+let obj5 = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
 createCacheKey[8] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
 let obj7 = { content: null, textWrapper: null, header: null, description: null, illustration: null };
+let obj6 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 obj7[0] = { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 obj7[1] = { alignItems: "center" };
 createCacheKey = { marginBottom: ThemesDefault.space.PX_8 };
 obj7[2] = createCacheKey;
 obj7[3] = { textAlign: "center" };
+let obj8 = { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 obj7[4] = { position: "absolute", bottom: "100%", left: 0, right: 0, alignItems: "center", paddingBottom: ThemesDefault.space.PX_24 };
 let closure_17 = createCacheKey.createStyles(obj7);
 let obj11 = { header: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, ring: null, iconContainer: null, positive: null, negative: null };
+let obj10 = { position: "absolute", bottom: "100%", left: 0, right: 0, alignItems: "center", paddingBottom: ThemesDefault.space.PX_24 };
 obj11[2] = { display: "flex", justifyContent: "center", alignItems: "center", height: 64, width: 64, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24 };
+let obj12 = { display: "flex", justifyContent: "center", alignItems: "center", height: 64, width: 64, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24 };
 obj11[3] = { display: "flex", justifyContent: "center", alignItems: "center", height: 48, width: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
 createCacheKey = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
 obj11[4] = createCacheKey;
+let obj13 = { display: "flex", justifyContent: "center", alignItems: "center", height: 48, width: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
 obj11[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
 let closure_19 = createCacheKey.createStyles(obj11);
 let closure_21 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 let obj16 = { content: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 32 }, title: null, description: null };
+let obj15 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
 obj16[1] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
 obj16[2] = { textAlign: "center" };
 let closure_23 = createCacheKey.createStyles(obj16);
 let obj18 = { content: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 32 }, art: null, title: null, description: null };
+let obj17 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
 obj18[1] = { marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
 obj18[2] = createCacheKey;
@@ -683,7 +701,8 @@ createCacheKey[1] = HeaderBackImage.getHeaderCloseButton(_modDef5260.pop);
 createCacheKey[2] = function headerTitle() {
   return null;
 };
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalRequest.tsx");
+let obj19 = { marginBottom: ThemesDefault.space.PX_24 };
+let result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalRequest.tsx");
 
 export default function FamilyCenterRequestModal(userId) {
   userId = userId.userId;
@@ -692,30 +711,31 @@ export default function FamilyCenterRequestModal(userId) {
   const items = [linkCode, userId];
   const memo = React.useMemo(() => {
     let obj = {};
-    const merged = Object.assign(createCacheKey);
+    obj = {};
+    const merged = Object.assign(closure_1_30);
     obj.render = function render() {
       return closure_1_12(closure_1_22, { userId: closure_0, linkCode: closure_1 });
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.PREREQ_LOADING] = obj;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.PREREQ_LOADING] = obj;
     obj = {};
-    const merged1 = Object.assign(createCacheKey);
+    const merged1 = Object.assign(closure_1_30);
     obj.render = function render(teenIdentity) {
       teenIdentity = undefined;
       if (teenIdentity != null) {
         teenIdentity = teenIdentity.teenIdentity;
       }
-      return callback(closure_26, { teenIdentity });
+      return closure_12(closure_26, { teenIdentity });
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.CONFIRM_AGE] = obj;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.CONFIRM_AGE] = obj;
     obj1 = {};
-    const merged2 = Object.assign(createCacheKey);
+    const merged2 = Object.assign(closure_1_30);
     obj1.render = function render() {
       return callback(closure_27, {});
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.VERIFYING] = obj1;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.VERIFYING] = obj1;
     const obj2 = { headerLeft: null, headerShown: true, headerTitle: null, render: null };
-    let obj5 = userId(dependencyMap[38]);
-    obj2[0] = obj5.getHeaderCloseButton(linkCode(dependencyMap[26]).pop);
+    let obj5 = userId(closure_1_2[38]);
+    obj2[0] = obj5.getHeaderCloseButton(linkCode(closure_1_2[26]).pop);
     obj2[2] = function headerTitle() {
       return null;
     };
@@ -728,22 +748,22 @@ export default function FamilyCenterRequestModal(userId) {
       obj[2] = teenIdentity;
       return closure_1_12(closure_1_16, obj);
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.REQUEST] = obj2;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.REQUEST] = obj2;
     const obj3 = {};
-    const merged3 = Object.assign(createCacheKey);
+    const merged3 = Object.assign(closure_1_30);
     obj3.render = function render() {
       return callback(closure_28, {});
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.INVALID_CODE] = obj3;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.INVALID_CODE] = obj3;
     const obj4 = {};
-    const merged4 = Object.assign(createCacheKey);
+    const merged4 = Object.assign(closure_1_30);
     obj4.render = function render() {
       return callback(closure_29, {});
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.MUST_BE_ADULT] = obj4;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.MUST_BE_ADULT] = obj4;
     obj5 = {
       headerShown: true,
-      headerLeft: userId(dependencyMap[38]).getHeaderCloseButton(linkCode(dependencyMap[26]).pop),
+      headerLeft: userId(closure_1_2[38]).getHeaderCloseButton(linkCode(closure_1_2[26]).pop),
       headerTitle() {
         return null;
       },
@@ -751,24 +771,24 @@ export default function FamilyCenterRequestModal(userId) {
         return callback(closure_18, {});
       }
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.SENT] = obj5;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.SENT] = obj5;
     const obj6 = { headerShown: true, headerLeft: null, headerTitle: null, render: null };
-    const obj10 = userId(dependencyMap[38]);
-    obj6[1] = userId(dependencyMap[38]).getHeaderCloseButton(linkCode(dependencyMap[26]).pop);
+    const obj10 = userId(closure_1_2[38]);
+    obj6[1] = userId(closure_1_2[38]).getHeaderCloseButton(linkCode(closure_1_2[26]).pop);
     obj6[2] = function headerTitle() {
       return null;
     };
     obj6[3] = function render(failureCode) {
       return callback(closure_20, { failureCode: failureCode.failureCode });
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.ERROR] = obj6;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.ERROR] = obj6;
     const obj7 = { fullscreen: true, headerLeft: null, render: null };
-    const obj12 = userId(dependencyMap[38]);
-    obj7[1] = userId(dependencyMap[38]).getHeaderCloseButton(linkCode(dependencyMap[26]).pop);
+    const obj12 = userId(closure_1_2[38]);
+    obj7[1] = userId(closure_1_2[38]).getHeaderCloseButton(linkCode(closure_1_2[26]).pop);
     obj7[2] = function render() {
       return callback(closure_20, { failureCode: constants.INELIGIBLE_FOR_FAMILY_CENTER });
     };
-    obj[userId(dependencyMap[11]).FamilyCenterModalRequestSections.TEEN_SCAN] = obj7;
+    obj[userId(closure_1_2[11]).FamilyCenterModalRequestSections.TEEN_SCAN] = obj7;
     return obj;
   }, items);
   const FamilyCenterModalRequestSections = userId(11103).FamilyCenterModalRequestSections;

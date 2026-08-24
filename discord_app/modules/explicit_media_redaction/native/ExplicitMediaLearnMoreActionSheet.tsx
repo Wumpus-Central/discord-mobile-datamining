@@ -1,42 +1,52 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "../ExplicitMediaRedactionConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24, justifyContent: "center" };
+createCacheKey = { container: null, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj1 = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8, alignItems: "center" };
+let obj2 = { marginBottom: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[4] = { textAlign: "center" };
+let obj3 = { marginBottom: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[5] = { gap: ThemesDefault.space.PX_8 };
+let obj4 = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx");
+let obj5 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx");
 
 export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const attachmentId = channelId.attachmentId;
   const embedId = channelId.embedId;
+  let isVerifiedTeen;
+  let shouldAgeVerifyForExplicitMedia;
+  let memo;
+  let callback;
   let tmp = callback2();
   const tmp3 = messageId(attachmentId[7])();
   let obj = channelId(attachmentId[8]);
-  const isVerifiedTeen = obj.useIsVerifiedTeen();
+  isVerifiedTeen = obj.useIsVerifiedTeen();
   obj1 = channelId(attachmentId[9]);
-  const shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
+  shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
   let intl = channelId(attachmentId[10]).intl;
   let intl2 = channelId(attachmentId[10]).intl;
   let stringResult1 = intl2.string(channelId(attachmentId[10]).t["5e0geG"]);
   const items = [isVerifiedTeen, shouldAgeVerifyForExplicitMedia];
-  const memo = embedId.useMemo(() => {
+  memo = embedId.useMemo(() => {
     let tmp = isVerifiedTeen;
     if (isVerifiedTeen) {
       tmp = shouldAgeVerifyForExplicitMedia;
@@ -44,15 +54,15 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     return tmp;
   }, items);
   const items1 = [channelId, messageId];
-  const callback = embedId.useCallback((action) => {
-    channelId(attachmentId[9]);
-    const obj = { action, channelId, messageId };
+  callback = embedId.useCallback((action) => {
+    let obj = channelId(attachmentId[9]);
+    obj = { action, channelId, messageId };
     const result = obj.trackMediaRedactionAction(obj);
   }, items1);
   const items2 = [channelId, messageId];
   const effect = embedId.useEffect(() => {
-    channelId(attachmentId[9]);
-    const obj = { action: channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId, messageId };
+    let obj = channelId(attachmentId[9]);
+    obj = { action: channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId, messageId };
     const result = obj.trackMediaRedactionAction(obj);
   }, items2);
   const items3 = [memo, shouldAgeVerifyForExplicitMedia, callback, channelId, messageId, attachmentId, embedId];
@@ -61,9 +71,9 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
       const intl2 = channelId(attachmentId[10]).intl;
       let obj = { handleOnHelpUrlHook: null };
       obj[0] = function handleOnHelpUrlHook() {
-        const obj = messageId(attachmentId[15]);
-        obj.openUrl(messageId(attachmentId[14]).getArticleURL(memo.TIGGER_PAWTECT_LEARN_MORE));
-        callback(channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+        const obj = closure_1_1(closure_1_2[15]);
+        obj.openUrl(closure_1_1(closure_1_2[14]).getArticleURL(closure_1_6.TIGGER_PAWTECT_LEARN_MORE));
+        callback(closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
       };
       let formatResult = intl2.format(channelId(attachmentId[10]).t["TGqx+i"], obj);
     } else {
@@ -72,17 +82,18 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
         const intl = channelId(attachmentId[10]).intl;
         obj = { handleFalsePositiveHook: null };
         obj[0] = function handleFalsePositiveHook() {
-          let obj = messageId(attachmentId[12]);
+          let obj = closure_1_1(closure_1_2[12]);
           obj.hideActionSheet();
-          callback(channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+          callback(closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
           obj = { channelId: closure_0, messageId: closure_1, attachmentId: closure_2, embedId: closure_3 };
-          messageId(attachmentId[12]).openLazy(channelId(attachmentId[18])(attachmentId[17], attachmentId.paths), shouldAgeVerifyForExplicitMedia, obj);
+          closure_1_1(closure_1_2[12]).openLazy(closure_1_0(closure_1_2[18])(closure_1_2[17], closure_1_2.paths), closure_1_5, obj);
         };
         formatResult = intl.format(channelId(attachmentId[10]).t.Ge0HUi, obj);
       }
     }
     return formatResult;
   }, items3);
+  obj = { style: tmp.container, children: null };
   obj = { style: tmp.art, children: callback(channelId(attachmentId[20]).ShieldSpotIllustration, { height: 120, width: 120 }) };
   const items4 = [callback(isVerifiedTeen, obj), , ];
   obj1 = { style: tmp.info, children: null };
@@ -104,15 +115,15 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   obj3[3] = stringResult1;
   items5[1] = callback(channelId(attachmentId[21]).Text, obj3);
   obj1[1] = items5;
-  items4[1] = callback(isVerifiedTeen, obj1);
+  items4[1] = closure_9(isVerifiedTeen, obj1);
   const obj4 = { style: tmp.buttonsContainer, children: null };
   const obj5 = { variant: "primary", size: "md", text: null, onPress: null };
   if (memo) {
     obj5[2] = stringResult;
     obj5[3] = function handleAgeVerifyButtonPress() {
       callback(channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY);
-      messageId(attachmentId[15]);
-      const obj = { entryPoint: channelId(attachmentId[16]).AgeVerificationModalEntryPoint.SENSITIVE_MEDIA_LEARN_MORE };
+      let obj = messageId(attachmentId[15]);
+      obj = { entryPoint: channelId(attachmentId[16]).AgeVerificationModalEntryPoint.SENSITIVE_MEDIA_LEARN_MORE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
       messageId(attachmentId[12]).hideActionSheet();
     };
@@ -124,8 +135,8 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     if (tmp3) {
       function handleNavigateToSettingsButtonPress() {
         callback(channelId(attachmentId[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS);
-        channelId(attachmentId[11]);
-        const obj = { screen: callback.CONTENT_AND_SOCIAL };
+        let obj = channelId(attachmentId[11]);
+        obj = { screen: callback.CONTENT_AND_SOCIAL };
         obj.openUserSettings(obj);
         messageId(attachmentId[12]).hideActionSheet();
       }
@@ -155,8 +166,8 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   stringResult = intl.string(channelId(attachmentId[10]).t["9KiIz6"]);
   items6[2] = callback(channelId(attachmentId[21]).Text, { style: tmp.linkSubtext, variant: "text-sm/medium", color: "text-muted", children: callback1() });
   obj4[1] = items6;
-  items4[2] = callback(isVerifiedTeen, obj4);
+  items4[2] = closure_9(isVerifiedTeen, obj4);
   obj[1] = items4;
-  obj6[1] = callback(isVerifiedTeen, obj);
+  obj6[1] = closure_9(isVerifiedTeen, obj);
   return callback(channelId(attachmentId[19]).BottomSheet, obj6);
 };

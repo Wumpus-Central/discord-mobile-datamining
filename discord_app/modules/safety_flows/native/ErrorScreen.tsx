@@ -1,19 +1,21 @@
 // discord_app/modules/safety_flows/native/ErrorScreen.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_16, alignItems: "center" };
+createCacheKey = { container: null, buttonContainer: null };
+createCacheKey = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_16, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
+let obj1 = { marginTop: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
 
 export default function ErrorScreen() {
   function _handleRetry() {
@@ -107,6 +109,7 @@ export default function ErrorScreen() {
   let obj = _require(_handleRetry[7]);
   closure_1 = obj.useNavigation();
   const tmp2 = callback4();
+  obj = { style: tmp2.container, children: null };
   obj = { variant: "heading-lg/semibold", children: null };
   const intl = _require(_handleRetry[11]).intl;
   obj[1] = intl.string(_require(_handleRetry[11]).t.c6kn6F);

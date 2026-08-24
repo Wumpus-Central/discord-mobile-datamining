@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import calculateAppliedBoosts from "../GuildPowerupsStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../GuildPowerupsStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ GuildPowerupType: closure_6, POWERUPS_INCLUDED_IN_LEVEL: error, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_8 } = BoostedGuildTiers);
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useAvailableBoostCountForPowerup.tsx");
 
 export default function useAvailableBoostCountForPowerup(arg0, arg1) {
   const _require = arg0;
@@ -19,24 +19,24 @@ export default function useAvailableBoostCountForPowerup(arg0, arg1) {
   const items2 = [arg1, stateFromStores1];
   const memo = React.useMemo(() => {
     if (null != closure_1) {
-      if (closure_1.type === closure_1_6.LEVEL) {
+      if (tmp.type === closure_1_6.LEVEL) {
         if (null != stateFromStores1) {
           const callback = tmp9;
-          if (null == closure_1_8[closure_1.skuId]) {
+          if (null == closure_1_8[tmp.skuId]) {
             let items = [];
           } else {
             const _Object = Object;
             const entries = Object.entries(closure_1_7);
-            const found = entries.filter((item, index) => {
-              [tmp, tmp2] = item;
+            const found = entries.filter((arg0) => {
+              [tmp, tmp2] = arg0;
               let tmp3 = tmp2 === closure_0;
               if (tmp3) {
-                tmp3 = null != stateFromStores1.unlockedPowerups[tmp];
+                tmp3 = null != closure_1_2.unlockedPowerups[tmp];
               }
               return tmp3;
             });
-            const mapped = found.map((item, index) => {
-              [tmp] = item;
+            const mapped = found.map((arg0) => {
+              [tmp] = arg0;
               return allPowerups.allPowerups[tmp];
             });
             items = mapped.filter(callback(stateFromStores1[6]).isNotNullish);
@@ -49,7 +49,7 @@ export default function useAvailableBoostCountForPowerup(arg0, arg1) {
   }, items2);
   let num;
   if (memo != null) {
-    num = memo.reduce((acc, item, index) => acc + item.cost, 0);
+    num = memo.reduce((arg0, cost) => arg0 + cost.cost, 0);
   }
   let num3;
   if (stateFromStores != null) {

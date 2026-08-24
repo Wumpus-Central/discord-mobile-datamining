@@ -1,18 +1,19 @@
 // discord_app/modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
+let obj = { list: null, searchBar: null, sectionHeader: null };
+obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[0] = obj;
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
 let closure_8 = createCacheKey.createStyles(obj);
@@ -31,20 +32,21 @@ let closure_10 = importAllResult.memo((item) => {
   let obj = item(10130);
   const featureId = obj.getFeatureId(item);
   const featureId1 = item(10130).getFeatureId(feature);
-  {
+  obj = {
     start,
     end,
     label: item.name,
     onPress() {
       setFeature(item);
-      setFeature(dependencyMap[9]).hideActionSheet();
+      setFeature(closure_1_2[9]).hideActionSheet();
     },
     trailing: callback(item(8102).FormRadio, obj)
   };
   obj = { selected: featureId === featureId1 };
   return callback(item(6291).TableRow, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
+const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
+const result = require("set").fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");
 
 export default function BugReporterFeatureActionSheet(features) {
   features = features.features;
@@ -52,20 +54,21 @@ export default function BugReporterFeatureActionSheet(features) {
   const setFeature = features.setFeature;
   let first;
   let items;
+  closure_5 = undefined;
   let tmp = callback3();
   const tmp2 = first(items.useState(""), 2);
   first = tmp2[0];
   items = [features, first];
   const memo = items.useMemo(() => {
-    const found = features.filter((item, index) => {
-      let tmp = null != item.asana_inbox_id;
+    const found = features.filter((asana_inbox_id) => {
+      let tmp = null != asana_inbox_id.asana_inbox_id;
       if (tmp) {
-        let isEmptyResult = feature(setFeature[12]).isEmpty(closure_3);
+        let isEmptyResult = closure_1_1(closure_1_2[12]).isEmpty(closure_3);
         if (!isEmptyResult) {
-          let tmp2Result = feature(setFeature[13]);
+          let tmp2Result = tmp2(tmp3[13]);
           let str3;
-          const formatted = closure_3.toLowerCase();
-          if (item.name != null) {
+          const formatted = str.toLowerCase();
+          if (asana_inbox_id.name != null) {
             str3 = str2.toLowerCase();
           }
           if (str3 == null) {
@@ -74,10 +77,10 @@ export default function BugReporterFeatureActionSheet(features) {
           isEmptyResult = tmp2Result(formatted, str3);
         }
         if (!isEmptyResult) {
-          tmp2Result = feature(setFeature[13]);
+          tmp2Result = tmp2(tmp3[13]);
           let str5;
-          const formatted1 = closure_3.toLowerCase();
-          if (item.squad != null) {
+          const formatted1 = str.toLowerCase();
+          if (asana_inbox_id.squad != null) {
             str5 = str4.toLowerCase();
           }
           if (str5 == null) {
@@ -86,19 +89,19 @@ export default function BugReporterFeatureActionSheet(features) {
           isEmptyResult = tmp2Result(formatted1, str5);
         }
         tmp = isEmptyResult;
-        const obj = feature(setFeature[12]);
+        const obj = closure_1_1(closure_1_2[12]);
       }
       return tmp;
     });
     let obj = feature(setFeature[12]);
     const entries = Object.entries(obj.groupBy(found, (squad) => squad.squad));
     obj = { items: null, sections: null };
-    const mapped = entries.map((item, index) => {
-      [, arr] = item;
+    const mapped = entries.map((arg0) => {
+      [, arr] = arg0;
       return arr.length;
     });
-    obj[0] = entries.map((item, index) => {
-      [tmp, tmp2] = item;
+    obj[0] = entries.map((arg0) => {
+      [tmp, tmp2] = arg0;
       return { title, data };
     });
     obj[1] = mapped;
@@ -111,7 +114,8 @@ export default function BugReporterFeatureActionSheet(features) {
   const items2 = [tmp6, items];
   const callback = items.useCallback((arg0, arg1) => closure_1_6(closure_1_10, { item: items[arg0].data[arg1], feature, setFeature, start: 0 === arg1, end: arg1 === items[arg0].data.length - 1 }), items1);
   const callback1 = items.useCallback((arg0) => closure_1_6(closure_1_9, { title: items[arg0].title, height: closure_5 }), items2);
-  let obj = { title: null };
+  let obj = { scrollable: true, startExpanded: true, header: null, children: null };
+  obj = { title: null };
   const intl = features(setFeature[18]).intl;
   obj[0] = intl.string(features(setFeature[18]).t["77VVd8"]);
   obj[2] = callback(features(setFeature[17]).BottomSheetTitleHeader, obj);

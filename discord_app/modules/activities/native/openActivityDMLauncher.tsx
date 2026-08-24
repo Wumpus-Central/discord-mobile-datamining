@@ -1,8 +1,8 @@
 // discord_app/modules/activities/native/openActivityDMLauncher.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { AppLauncherRouteName } from "../../app_launcher/native/AppLauncherNativeConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function _openActivityDMLauncher() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
@@ -188,7 +188,7 @@ function _openActivityDMLauncher() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 
 export default function openActivityDMLauncher() {
   const self = this;

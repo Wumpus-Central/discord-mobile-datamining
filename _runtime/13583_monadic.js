@@ -1,8 +1,8 @@
 // _runtime/13583_monadic.js
-function monadic(call, get, fn, closure_1_2) {
-  let tmp2 = strategyDefault;
+function monadic(call, get, arg2, g_v) {
+  let tmp2 = g_v;
   if (!tmp) {
-    tmp2 = fn(strategyDefault);
+    tmp2 = arg2(g_v);
   }
   const value = get.get(tmp2);
   if (undefined !== value) {
@@ -11,18 +11,18 @@ function monadic(call, get, fn, closure_1_2) {
     const self = this;
     let result = call;
     call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(strategyDefault) : call(self, strategyDefault);
+    const tmp6 = typeof call === "unknown" ? result(g_v) : call(self, g_v);
     result = get.set(tmp2, tmp6);
   }
 }
-function variadic(apply, get, fn) {
+function variadic(apply, get) {
   const call = slice.call;
   if (typeof call === "unknown") {
     let substr = slice(3);
   } else {
     substr = call(arguments, 3);
   }
-  const tmp3 = fn(substr);
+  const tmp3 = arg2(substr);
   let value = get.get(tmp3);
   if (undefined === value) {
     const self = this;
@@ -34,7 +34,7 @@ function variadic(apply, get, fn) {
 }
 function strategyDefault(c165, cache) {
   cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
+  return 1 === c165.length ? monadic : variadic.bind(this, c165, cache.create(), cache.serializer);
 }
 arg5.strategies = undefined;
 arg5.memoize = function memoize(arg0, cache) {

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/TimestampHourCycleSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import "createToggle";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.dyamEI);
@@ -39,6 +39,6 @@ let createToggle = {
   usePredicate: require("__DiscordCreateDateFormatter").supportsSystemDateFormatter
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");
 
 export default createToggle;

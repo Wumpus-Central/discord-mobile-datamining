@@ -14,8 +14,8 @@ class PseudoMap {
           }
           _Array = Array;
           if (Array.isArray(global)) {
-            item = global.forEach(function(item, index) {
-              const result = this.set(item[0], item[1]);
+            item = global.forEach(function(arg0) {
+              const result = this.set(arg0[0], arg0[1]);
             }, self);
           } else {
             _TypeError2 = TypeError;
@@ -27,8 +27,8 @@ class PseudoMap {
             throw typeError;
           }
         }
-        item1 = global.forEach(function(item, index) {
-          const result = this.set(index, item);
+        item1 = global.forEach(function(arg0, arg1) {
+          const result = this.set(arg1, arg0);
         }, self);
       }
       return;
@@ -53,16 +53,17 @@ class PseudoMap {
     }
     self = tmp;
     keys = Object.keys(self._data);
-    item = keys.forEach(function(item, index) {
-      if ("size" !== item) {
+    item = keys.forEach(function(arg0) {
+      if ("size" !== arg0) {
         self = this;
-        const call = callback.call;
-        const value = this._data[item].value;
+        const call = closure_0.call;
+        const value = this._data[arg0].value;
         if (typeof call === "unknown") {
-          callback(value, key);
+          tmp(value, key);
         } else {
           call(tmp2, value, key);
         }
+        tmp = closure_0;
         tmp2 = self;
       }
     }, self);

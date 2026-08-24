@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/ContentInventoryConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
+const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
 
 export const ContentInventoryFeedKey = { GLOBAL_FEED: "global feed", GAME_PROFILE_FEED: "game profile feed" };
 export const ContentInventorySurfaceTypes = { GUILD_MEMBER_LIST: 1, [1]: "GUILD_MEMBER_LIST" };

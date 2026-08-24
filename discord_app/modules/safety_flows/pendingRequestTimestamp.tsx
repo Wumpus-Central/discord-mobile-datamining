@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/pendingRequestTimestamp.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "SafetyFlows.messages.js";
 import getEmptyActivityFormatter from "../parent_tools/FamilyCenterUtils.tsx";
@@ -16,7 +16,7 @@ function SENT_TIMESTAMP_FORMATTER() {
   obj[5] = messagesProxyDefault.q6jzya;
   return obj;
 }
-const result = obj132.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
+const result = set.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
 
 export const formatPendingRequestSentText = function formatPendingRequestSentText(created_at) {
   return getEmptyActivityFormatter.formatLinkTimestamp(Date.parse(created_at), SENT_TIMESTAMP_FORMATTER);

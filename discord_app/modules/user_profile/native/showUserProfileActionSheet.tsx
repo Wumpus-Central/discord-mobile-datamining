@@ -2,18 +2,20 @@
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
 
-require = fn;
+require = arg1;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   const timestamp = Date.now();
   const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = closure_5.isBlocked(ignoreBlockedSpeedBump.userId);
+    const isIgnoredResult = closure_5.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
+      let obj = ACTION_SHEET_HEIGHT_HALFDefault;
       const _HermesInternal = HermesInternal;
-      let obj = {};
+      obj = {};
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
       const merged = Object.assign(ignoreBlockedSpeedBump);
       let str2 = "ignore";
@@ -22,10 +24,8 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       }
       obj.speedBumpType = str2;
       obj.openedAt = timestamp;
-      obj.openLazy(asyncRequireImpl(8930, dependencyMap.paths), combined, obj);
-      const tmp8 = asyncRequireImpl(8930, dependencyMap.paths);
+      obj.openLazy(tmp2(2007)(8930, tmp3.paths), combined, obj);
     }
-    isIgnoredResult = closure_5.isIgnored(ignoreBlockedSpeedBump.userId);
   }
   const tmp15 = asyncRequireImpl(8943, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
@@ -35,7 +35,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp15, combined1, obj, "replaceAll");
 }
 require("processCallbacks").addPostConnectionCallback;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
 export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(id) {

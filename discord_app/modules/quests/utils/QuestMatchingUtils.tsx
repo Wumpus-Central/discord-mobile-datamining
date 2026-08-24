@@ -1,13 +1,13 @@
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
 import getQuestDeliveryDataForPlacement from "QuestDataUtils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import addApplication from "../../applications/ApplicationStore.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../applications/ApplicationStore.tsx";
 import QuestsExperimentLocations from "../QuestConstants.tsx";
 import { ActivityGamePlatforms } from "../../../Constants.tsx";
 import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "../../activities/Constants.tsx";
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 
-require = fn;
+require = arg1;
 function questMatchesActivity(arg0, id) {
   let formatted = arg0;
   let tmp2 = null;
@@ -33,8 +33,8 @@ function questMatchesActivity(arg0, id) {
             const application_id = formatted.application_id;
             const allApplicationIds = application_id(7476).getAllApplicationIds(id);
             const obj = application_id(7476);
-            tmp13 = tmp2 != allApplicationIds && allApplicationIds.some((item, index) => item === closure_0);
-            const tmp16 = tmp2 != allApplicationIds && allApplicationIds.some((item, index) => item === closure_0);
+            tmp13 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
+            const tmp16 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
           }
           tmp10 = tmp13;
         }
@@ -49,23 +49,33 @@ function questMatchesActivity(arg0, id) {
       tmp2 = tmp2 != application;
       if (tmp2) {
         tmp2 = formatted === application.name.toLowerCase();
+        const str2 = application.name;
       }
       flag = tmp2;
     }
     tmp10 = flag;
     const obj3 = application_id(7476);
+    const str = formatted.name;
   }
 }
 function getQuestByActivity(result, arg1) {
   const obj = result[Symbol.iterator]();
   while (obj !== undefined) {
+    let tmp2 = callback;
     let tmp3 = callback(tmp, 2);
     [r10011, tmp4] = tmp3;
+    let tmp5 = tmp4;
+    let tmp6 = questMatchesActivity;
     if (questMatchesActivity(arg1, tmp4)) {
+      let tmp7 = require;
+      let tmp8 = dependencyMap;
       let obj2 = getQuestDeliveryDataForPlacement;
-      if (!obj2.isQuestExpired(tmp4)) {
+      let tmp9 = tmp4;
+      if (!obj2.isQuestExpired(tmp5)) {
+        let tmp10 = tmp4;
+        let tmp11 = obj;
         obj.return();
-        return tmp4;
+        return tmp5;
       }
     }
     continue;
@@ -73,46 +83,53 @@ function getQuestByActivity(result, arg1) {
 }
 function questMatchesApplicationId(arg0, quest) {
   const _require = arg0;
-  const allApplicationIds = require("QuestTaskUtils.tsx").getAllApplicationIds(quest);
-  const obj = getApplicationIdsByTaskTypes;
-  return null != allApplicationIds && allApplicationIds.some((item, index) => item === closure_0);
+  const allApplicationIds = _getApplicationIdsByTaskTypes.getAllApplicationIds(quest);
+  const obj = _getApplicationIdsByTaskTypes;
+  return null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
 }
 ({ DISCORD_APPLICATION_ID: c4, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: c5, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_6 } = QuestsExperimentLocations);
-const result = require("obj132").fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
 export { questMatchesActivity };
 export { getQuestByActivity };
 export const getQuestByApplicationId = function getQuestByApplicationId(arg0, arg1) {
   const obj = arg0[Symbol.iterator]();
   while (obj !== undefined) {
+    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     [r10013, tmp5] = tmp4;
+    let tmp7 = questMatchesApplicationId;
+    let tmp6 = tmp5;
     if (questMatchesApplicationId(arg1, tmp5)) {
+      let tmp8 = require;
+      let tmp9 = dependencyMap;
       let obj2 = getQuestDeliveryDataForPlacement;
-      if (!obj2.isQuestExpired(tmp5)) {
+      let tmp10 = tmp5;
+      if (!obj2.isQuestExpired(tmp6)) {
+        let tmp = tmp5;
+        let tmp11 = obj;
         obj.return();
         break;
       }
-      return tmp5;
+      return tmp;
     }
     continue;
   }
 };
 export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQuestsByApplicationId(arr) {
   closure_0 = arg1;
-  arr = Array.from(arr.values());
-  return arr.filter((item, index) => {
-    let obj = callback(dependencyMap[5]);
-    const allApplicationIds = obj.getAllApplicationIds(item);
-    let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((item, index) => item === closure_0);
+  return Array.from(arr.values()).filter((quest) => {
+    let obj = callback(closure_1_1[5]);
+    const allApplicationIds = obj.getAllApplicationIds(quest);
+    let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
     if (hasPlayOnDesktopTaskResult) {
-      let tmpResult = callback(dependencyMap[6]);
-      hasPlayOnDesktopTaskResult = !tmpResult.isQuestExpired(item);
+      let tmpResult = tmp(tmp2[6]);
+      hasPlayOnDesktopTaskResult = !tmpResult.isQuestExpired(quest);
     }
     if (hasPlayOnDesktopTaskResult) {
-      tmpResult = callback(dependencyMap[5]);
+      tmpResult = tmp(tmp2[5]);
       obj = { quest: null };
-      obj[0] = item;
+      obj[0] = quest;
       hasPlayOnDesktopTaskResult = tmpResult.hasPlayOnDesktopTask(obj);
     }
     return hasPlayOnDesktopTaskResult;
@@ -123,8 +140,11 @@ export const getQuestsFromActivities = function getQuestsFromActivities(result, 
     if (null != result) {
       const obj = memo1[Symbol.iterator]();
       while (obj !== undefined) {
+        let tmp6 = getQuestByActivity;
         let tmp7 = getQuestByActivity(result, tmp4);
+        let tmp8 = tmp7;
         if (null != tmp7) {
+          let tmp9 = obj;
           obj.return();
           return tmp7;
         }
@@ -144,16 +164,16 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
     let items = [];
   } else {
     const _Array = Array;
-    items = Array.from(quests.values()).filter((item, index) => {
-      const activityApplicationId = applicationId(flag[5]).getActivityApplicationId(item);
-      let canLaunchActivityResult = null != item;
+    items = Array.from(quests.values()).filter((userStatus) => {
+      const activityApplicationId = applicationId(flag[5]).getActivityApplicationId(userStatus);
+      let canLaunchActivityResult = null != userStatus;
       if (canLaunchActivityResult) {
-        let tmpResult = applicationId(flag[7]);
-        canLaunchActivityResult = tmpResult.canLaunchActivity(item);
+        let tmpResult = tmp(tmp2[7]);
+        canLaunchActivityResult = tmpResult.canLaunchActivity(userStatus);
       }
       if (canLaunchActivityResult) {
-        tmpResult = applicationId(flag[6]);
-        canLaunchActivityResult = !tmpResult.isQuestExpired(item);
+        tmpResult = tmp(tmp2[6]);
+        canLaunchActivityResult = !tmpResult.isQuestExpired(userStatus);
       }
       if (canLaunchActivityResult) {
         canLaunchActivityResult = activityApplicationId === applicationId;
@@ -162,20 +182,22 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
         canLaunchActivityResult = activityApplicationId !== closure_1_4;
       }
       if (canLaunchActivityResult) {
-        const userStatus = item.userStatus;
+        userStatus = userStatus.userStatus;
         let completedAt;
         if (userStatus != null) {
           completedAt = userStatus.completedAt;
         }
         canLaunchActivityResult = null == completedAt || flag;
+        const tmp8 = null == completedAt || flag;
       }
       if (canLaunchActivityResult) {
-        const userStatus2 = item.userStatus;
+        const userStatus2 = userStatus.userStatus;
         let enrolledAt;
         if (userStatus2 != null) {
           enrolledAt = userStatus2.enrolledAt;
         }
         canLaunchActivityResult = null == enrolledAt || flag;
+        const tmp10 = null == enrolledAt || flag;
       }
       return canLaunchActivityResult;
     });

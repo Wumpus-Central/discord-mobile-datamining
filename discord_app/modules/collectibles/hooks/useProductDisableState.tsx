@@ -1,11 +1,10 @@
 // discord_app/modules/collectibles/hooks/useProductDisableState.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import set from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import reset from "../../../stores/billing/SubscriptionStore.tsx";
+import closure_2 from "../../../stores/billing/SubscriptionStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
   let obj = initialize;
@@ -24,8 +23,8 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     obj[0] = stateFromStores;
     let stringResult = null;
     if (stateFromStores) {
-      const intl = getSystemLocale.intl;
-      stringResult = intl.string(getSystemLocale.t.NbveHD);
+      const intl = tmp(1236).intl;
+      stringResult = intl.string(tmp(1236).t.NbveHD);
     }
     obj[1] = stringResult;
   } else {

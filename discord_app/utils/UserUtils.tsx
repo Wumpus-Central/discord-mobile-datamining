@@ -1,10 +1,12 @@
 // discord_app/utils/UserUtils.tsx
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
-import mergeGuildAvatar from "../stores/UserStore.tsx";
+import closure_2 from "../stores/StreamerModeStore.tsx";
+import closure_3 from "../stores/UserStore.tsx";
 import ME from "../Constants.tsx";
+import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function nameFromUser(primary1) {
   const global_name = primary1.global_name;
   let tmp = null != global_name;
@@ -80,6 +82,7 @@ function useName(username) {
     }
     return combined;
   }
+  const obj = initialize;
 }
 function getGlobalName(user) {
   if (null != user) {
@@ -120,6 +123,7 @@ function getFormattedName(inviter, arg1) {
         hidePersonalInformation = closure_2.hidePersonalInformation;
       }
       let username = presentUserTag(inviter, obj, hidePersonalInformation);
+      const tmp9 = presentUserTag;
     } else {
       username = inviter.username;
       if (username == null) {
@@ -175,29 +179,29 @@ function humanizeStatus(DND, arg1) {
       stringResult = string(t.WbGtnH);
     }
     return stringResult;
-  } else if (constants.OFFLINE === DND) {
+  } else if (tmp3.OFFLINE === DND) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.Vv0abJ);
-  } else if (constants.IDLE === DND) {
+  } else if (tmp3.IDLE === DND) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.qWbtVU);
-  } else if (constants.DND === DND) {
+  } else if (tmp3.DND === DND) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.jaNpQH);
-  } else if (constants.INVISIBLE === DND) {
+  } else if (tmp3.INVISIBLE === DND) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.bg24HO);
-  } else if (constants.STREAMING === DND) {
+  } else if (tmp3.STREAMING === DND) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XKYej5);
   } else {
-    const UNKNOWN = constants.UNKNOWN;
+    const UNKNOWN = tmp3.UNKNOWN;
     return null;
   }
   tmp = undefined !== isMobile && isMobile;
   tmp2 = undefined !== isVR && isVR;
 }
-function presentUserTag(username, identifiable, hidePersonalInformation) {
+function presentUserTag(username, identifiable, arg2) {
   if (null == username) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.sKdZ6U);
@@ -210,7 +214,7 @@ function presentUserTag(username, identifiable, hidePersonalInformation) {
     if (tmp) {
       let flag = false;
       if ("always" !== identifiable.identifiable) {
-        flag = hidePersonalInformation;
+        flag = arg2;
         if ("never" === identifiable.identifiable) {
           flag = true;
         }
@@ -264,13 +268,13 @@ function useUserTag(user) {
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return require("../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
-      if (closure_0.isPrivate()) {
+      if (obj.isPrivate()) {
         user = null;
-        if (closure_0.isDM()) {
-          user = closure_1_3.getUser(closure_0.getRecipientId());
+        if (obj.isDM()) {
+          user = closure_1_3.getUser(obj.getRecipientId());
         }
       }
       return user;
@@ -285,7 +289,7 @@ function getUserIsStaff() {
 let c6 = 86400000;
 let c7 = "???";
 let closure_8 = { mode: "full", decoration: "never", identifiable: "auto" };
-const result = require("obj132").fileFinishedImporting("utils/UserUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/UserUtils.tsx");
 
 export default {
   getName,

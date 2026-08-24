@@ -1,9 +1,9 @@
 // discord_app/modules/phone/PhoneOrEmailUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
 let obj = { PHONE: "phone", EMAIL: "email" };
 const re1 = /^[-() \d]+$/;
-const result = obj132.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
+const result = set.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
 
 export const PhoneOrEmailSelectorForceMode = obj;
 export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelector(forceMode, value) {

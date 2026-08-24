@@ -1,25 +1,29 @@
 // discord_app/modules/guild_member_verification/native/components/GuildMemberDashChannelRow.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import ME from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ GuildFeatures: c4, Routes: c5 } = ME);
-const createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+createCacheKey = { container: null, badge: null, badgeText: null };
+createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_DEFAULT };
+const obj1 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_DEFAULT };
 createCacheKey[2] = { color: ThemesDefault.colors.BADGE_TEXT_DEFAULT };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/GuildMemberDashChannelRow.tsx");
+let obj2 = { color: ThemesDefault.colors.BADGE_TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/GuildMemberDashChannelRow.tsx");
 
 export default function GuildMemberDashChannelRow(arg0) {
   ({ guild, selected } = arg0);
+  let id;
   let hasItem;
   const tmp = callback();
-  const id = guild.id;
+  id = guild.id;
   let obj = id(15477);
   let num = obj.useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
@@ -30,16 +34,16 @@ export default function GuildMemberDashChannelRow(arg0) {
   const items = [guild.features, id, hasItem];
   const effect = React.useEffect(() => {
     if (hasItem) {
-      hasItem(dependencyMap[8]);
-      const obj = { guildId: null, status: null };
+      let obj = hasItem(closure_1_2[8]);
+      obj = { guildId: null, status: null };
       obj[0] = id;
-      obj[1] = id(dependencyMap[9]).GuildJoinRequestApplicationStatuses.SUBMITTED;
+      obj[1] = id(closure_1_2[9]).GuildJoinRequestApplicationStatuses.SUBMITTED;
       const guildJoinRequests = obj.fetchGuildJoinRequests(obj);
     }
   }, items);
   const items1 = [id];
   callback = React.useCallback(() => {
-    id(dependencyMap[10]).transitionTo(closure_1_5.CHANNEL(id, StaticChannelRoute.MEMBER_SAFETY));
+    id(closure_1_2[10]).transitionTo(closure_1_5.CHANNEL(id, closure_1_6.MEMBER_SAFETY));
   }, items1);
   const ChannelModes = tmp2(11553).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
@@ -60,7 +64,7 @@ export default function GuildMemberDashChannelRow(arg0) {
     const obj2 = { style: null, textStyle: null, value: null };
     ({ badge: obj5[0], badgeText: obj5[1] } = tmp);
     obj2[2] = num;
-    tmp8Result = jsx(tmp2(1297).Badge, { style: null, textStyle: null, value: null });
+    tmp8Result = tmp8(tmp2(1297).Badge, obj2);
   }
   obj[8] = tmp8Result;
   return <tmp9 name={null} mode={null} />;

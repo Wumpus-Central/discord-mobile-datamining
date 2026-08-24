@@ -2,7 +2,7 @@
 import toJSDefault from "../lib/Record.tsx";
 
 toJSDefault;
-const result = require("obj132").fileFinishedImporting("records/VoiceStateRecord.tsx");
+const result = require("set").fileFinishedImporting("records/VoiceStateRecord.tsx");
 class VoiceStateRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new VoiceStateRecord(tmp, new.target);

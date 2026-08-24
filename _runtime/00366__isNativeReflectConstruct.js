@@ -3,9 +3,9 @@ import _inheritsDefault from "00098__inherits.js";
 import setDefault from "00357_set.js";
 import _assertNativeAnimatedModuleDefault from "00367__assertNativeAnimatedModule.js";
 import AnimatedWithChildren from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 function _isNativeReflectConstruct() {
@@ -63,6 +63,7 @@ let items = [
           for (let num3 = 0; num3 < length; num3 = num3 + 1) {
             let obj = _children[num3];
             let __makeNativeResult = obj.__makeNative(arg0);
+            let tmp2 = connectAnimatedNodes;
             let __getNativeTagResult = self.__getNativeTag();
             let tmp4 = connectAnimatedNodes(__getNativeTagResult, obj.__getNativeTag());
           }
@@ -124,7 +125,8 @@ let items = [
   {
     key: "__callListeners",
     value: function __callListeners(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback2(callback(self.prototype), "__callListeners", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -137,6 +139,7 @@ let items = [
         if (0 < _children.length) {
           do {
             let obj = _children[num];
+            let tmp2 = num;
             if (obj.__getValue) {
               let __callListenersResult = obj.__callListeners(obj.__getValue());
             }

@@ -3,11 +3,11 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {
   let flag = shiny.shiny;
   ({ loading, onPress, text } = shiny);
@@ -21,6 +21,7 @@ const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {
   let obj = initialize;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  obj = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
   obj = { color: ThemesDefault.colors.WHITE, size: "sm" };
   obj[4] = jsx(NitroWheelIcon.NitroWheelIcon, { color: ThemesDefault.colors.WHITE, size: "sm" });
   if (flag) {
@@ -29,6 +30,6 @@ const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {
   obj[6] = flag;
   return jsx(Button.Button, { color: ThemesDefault.colors.WHITE, size: "sm" });
 });
-const result = require("obj132").fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
 
 export default memoResult;

@@ -1,28 +1,28 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import renderDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import ApplicationRejectedNoticeDefault from "GuildSettingsRoleSubscriptionContainer.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleFormInit from "../../../guild_settings/GuildSettingsStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import makeGroupListingIndexSubscriptionListingTag from "../../GuildRoleSubscriptionsStore.tsx";
+import closure_9 from "../../../guild_settings/GuildSettingsStore.tsx";
+import closure_10 from "../../../../stores/GuildStore.tsx";
+import closure_11 from "../../GuildRoleSubscriptionsStore.tsx";
 import { MAX_SUBSCRIPTION_TIERS } from "../../GuildRoleSubscriptionsConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { SubscriptionIntervalTypes } from "../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function DraftBadge() {
   const tmp = callback4();
-  const obj = { style: tmp.draftBadgeLabel, variant: "text-xs/semibold", children: null };
+  let obj = { style: tmp.draftBadge, children: null };
+  obj = { style: tmp.draftBadgeLabel, variant: "text-xs/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.vosPk5);
   obj[1] = callback2(Text.Text, obj);
@@ -30,7 +30,8 @@ function DraftBadge() {
 }
 function ArchivedBadge() {
   const tmp = callback4();
-  const obj = { style: tmp.archiveBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
+  let obj = { style: tmp.archiveBadge, children: null };
+  obj = { style: tmp.archiveBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.nhbtEl);
   obj[1] = callback2(Text.Text, obj);
@@ -38,7 +39,8 @@ function ArchivedBadge() {
 }
 function UnsavedBadge() {
   const tmp = callback4();
-  const obj = { style: tmp.unsavedBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
+  let obj = { style: tmp.unsavedBadge, children: null };
+  obj = { style: tmp.unsavedBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.aiwXeq);
   obj[1] = callback2(Text.Text, obj);
@@ -56,7 +58,7 @@ function Row(disabled) {
     disabled = tmp.disabled;
   }
   style[1] = disabled;
-  return callback(renderDefault, { style, accessibilityRole: "button", onPress, onLongPress, disabled, children });
+  return closure_17(renderDefault, { style, accessibilityRole: "button", onPress, onLongPress, disabled, children });
 }
 function EditListingButton(editStateId) {
   editStateId = editStateId.editStateId;
@@ -98,8 +100,9 @@ function EditListingButton(editStateId) {
     obj = { onPress: null, onLongPress: null, children: null };
     obj[0] = editStateId.onPress;
     obj[1] = function onLongPress() {
-      const obj = { editStateId, guildId: closure_1, groupListingId: closure_2 };
-      obj.openLazy(editStateId(dependencyMap[14])(dependencyMap[13], dependencyMap.paths), "TierArchiveOrDelete", obj);
+      let obj = closure_1_1(closure_1_3[12]);
+      obj = { editStateId, guildId: closure_1, groupListingId: closure_2 };
+      obj.openLazy(editStateId(closure_1_3[14])(closure_1_3[13], closure_1_3.paths), "TierArchiveOrDelete", obj);
     };
     tmp11Result = null != first1;
     if (tmp11Result) {
@@ -108,42 +111,42 @@ function EditListingButton(editStateId) {
       obj1 = { uri: null };
       obj1[0] = first1;
       obj[2] = obj1;
-      tmp11Result = callback(preloadDefault, obj);
+      tmp11Result = tmp11(preloadDefault, obj);
     }
     const items1 = [tmp11Result, , ];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.tierColumn;
     obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj3[2] = callback(obj1.useName(editStateId), 1)[0];
-    const items2 = [callback(tmp2(4734).Text, obj3), ];
+    const items2 = [closure_17(tmp2(4734).Text, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.detailsRow;
     if (tmp11Result) {
-      tmp11Result = callback(DraftBadge, {});
+      tmp11Result = tmp11(DraftBadge, {});
     }
     const items3 = [tmp11Result, , , ];
     if (flag2) {
-      flag2 = callback(ArchivedBadge, {});
+      flag2 = tmp11(ArchivedBadge, {});
     }
     let tmp11Result1 = undefined === stateFromStores;
     items3[1] = flag2;
     if (tmp11Result1) {
-      tmp11Result1 = callback(UnsavedBadge, {});
+      tmp11Result1 = tmp11(UnsavedBadge, {});
     }
     const obj5 = { children: null };
     items3[2] = tmp11Result1;
     const obj6 = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj6[0] = tmp.tierPrice;
     obj6[3] = "";
-    items3[3] = callback(tmp2(4734).Text, obj6);
+    items3[3] = closure_17(tmp2(4734).Text, obj6);
     obj4[1] = items3;
-    items2[1] = callback2(closure_7, obj4);
+    items2[1] = closure_18(closure_7, obj4);
     obj2[1] = items2;
-    items1[1] = callback2(closure_7, obj2);
-    items1[2] = callback(tmp2(9925).PencilIcon, {});
+    items1[1] = closure_18(closure_7, obj2);
+    items1[2] = closure_17(tmp2(9925).PencilIcon, {});
     obj[2] = items1;
-    obj5[0] = callback2(Row, obj);
-    return callback(closure_7, obj5);
+    obj5[0] = closure_18(Row, obj);
+    return closure_17(closure_7, obj5);
   } else if (null != first2) {
     const intl = tmp2(1236).intl;
     const obj7 = { price: null, interval: null };
@@ -166,34 +169,40 @@ function EditListingButton(editStateId) {
 }
 function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
   guildId = guildId.guildId;
+  let navigation;
+  let guildEligibleForTierTemplates;
   let first;
+  let first1;
+  let editStateIds;
+  let first2;
+  closure_7 = undefined;
   let callback;
   let stateFromStores;
   let tmp = callback4();
   let obj = guildId(first[26]);
-  const navigation = obj.useNavigation();
+  navigation = obj.useNavigation();
   obj1 = guildId(first[27]);
   const groupListingsFetchContext = obj1.useGroupListingsFetchContext();
   let obj2 = guildId(first[28]);
   const roleSubscriptionSettingsDisabled = obj2.useRoleSubscriptionSettingsDisabled();
   let obj3 = guildId(first[29]);
-  const guildEligibleForTierTemplates = obj3.useGuildEligibleForTierTemplates(guildId);
+  guildEligibleForTierTemplates = obj3.useGuildEligibleForTierTemplates(guildId);
   let obj4 = guildId(first[30]);
   const groupListingsForGuild = obj4.useGroupListingsForGuild(guildId);
   first = groupListingsForGuild[0];
-  const first1 = groupListingsForGuild.map((item, index) => item.id)[0];
+  first1 = groupListingsForGuild.map((id) => id.id)[0];
   let obj5 = guildEligibleForTierTemplates(first[21]);
-  const editStateIds = obj5.useEditStateIds(first1, guildId, { includeSoftDeleted: true }).editStateIds;
+  editStateIds = obj5.useEditStateIds(first1, guildId, { includeSoftDeleted: true }).editStateIds;
   let obj6 = editStateIds;
   const tmp12 = first1(editStateIds.useState({}), 2);
-  const first2 = tmp12[0];
+  first2 = tmp12[0];
   closure_7 = tmp12[1];
   const items = [editStateIds, first2];
   const memo = editStateIds.useMemo(() => {
-    const mapped = editStateIds.map((item, index) => {
-      let tmp = table[item];
+    const mapped = editStateIds.map((arg0) => {
+      let tmp = table[arg0];
       if (tmp == null) {
-        tmp = item;
+        tmp = arg0;
       }
       return tmp;
     });
@@ -219,7 +228,7 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
   items1[3] = id;
   callback = editStateIds.useCallback(() => {
     if (guildEligibleForTierTemplates) {
-      let tmpResult = guildEligibleForTierTemplates(first[33]);
+      let tmpResult = tmp(tmp2[33]);
       let obj = { guildId: null, groupListingId: null };
       obj[0] = guildId;
       let id;
@@ -228,8 +237,9 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
       }
       obj[1] = id;
       const result = tmpResult.pushTierTemplateSelectionScene(navigation, obj);
+      const tmp7 = navigation;
     } else {
-      tmpResult = guildEligibleForTierTemplates(first[34]);
+      tmpResult = tmp(tmp2[34]);
       obj = { guildId: null, groupListingId: null, onAfterTierCreation: null };
       obj[0] = guildId;
       let id1;
@@ -255,19 +265,19 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
   if (groupListingsFetchContext) {
     let mapped;
     if (memo != null) {
-      mapped = memo.map((item, index) => {
-        closure_0 = item;
-        return closure_1_17(EditListingButton, {
-          editStateId: item,
+      mapped = memo.map((editStateId) => {
+        closure_0 = editStateId;
+        return closure_1_17(closure_1_24, {
+          editStateId,
           guildId: closure_0,
           groupListingId: first1,
           onPress() {
             const guild = closure_1_10.getGuild(closure_0);
-            navigation(first[35])(null != guild, "guild must not be null");
-            let obj = guildEligibleForTierTemplates(first[33]);
+            closure_1_1(closure_1_3[35])(null != guild, "guild must not be null");
+            let obj = closure_1_2(closure_1_3[33]);
             let id;
-            if (first != null) {
-              id = first.id;
+            if (closure_1_3 != null) {
+              id = closure_1_3.id;
             }
             obj = {
               groupListingId: id,
@@ -283,9 +293,9 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
                 });
               }
             };
-            obj.pushTierEditScene(navigation, obj);
+            obj.pushTierEditScene(closure_1_1, obj);
           }
-        }, item);
+        }, editStateId);
       });
     }
     obj = { style: null, children: null };
@@ -336,15 +346,20 @@ function GuildSettingsRoleSubscriptionsTiersInner(guildId) {
 ({ ActivityIndicator: closure_6, View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 };
+createCacheKey = { container: { height: "100%" }, tierManagementDescription: { marginBottom: 16, paddingHorizontal: 16 }, tierManagementButton: null, tierColumn: null, tierIcon: null, tierPrice: null, draftBadge: null, draftBadgeLabel: null, archiveBadge: null, archiveBadgeLabel: null, unsavedBadge: null, unsavedBadgeLabel: null, detailsRow: null, createTierLabel: null, spinner: null, disabled: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, flexDirection: "row", alignItems: "center", alignSelf: "stretch", justifyContent: "flex-start", height: 72, padding: 16, marginHorizontal: 16, marginBottom: 8 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "column", justifyContent: "center", alignItems: "flex-start", flex: 1 };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
 createCacheKey[5] = { marginStart: 6 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: 20, marginEnd: 12, height: 40, width: 40 };
 createCacheKey[6] = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
+let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
 createCacheKey[7] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860, textTransform: "uppercase" };
+let obj3 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_860, textTransform: "uppercase" };
 createCacheKey[8] = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
 createCacheKey[9] = { textTransform: "uppercase" };
+let obj4 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
 createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
 createCacheKey[11] = { textTransform: "uppercase" };
 createCacheKey[12] = { flexDirection: "row", alignItems: "center", marginTop: 3 };
@@ -352,7 +367,8 @@ createCacheKey[13] = { marginStart: 12 };
 createCacheKey[14] = { marginTop: 12 };
 createCacheKey[15] = { opacity: 0.5 };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx");
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4 };
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx");
 
 export default function GuildSettingsRoleSubscriptionsTiers(guildId) {
   guildId = guildId.guildId;

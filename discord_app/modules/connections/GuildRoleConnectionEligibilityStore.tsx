@@ -19,6 +19,6 @@ const guildRoleConnectionEligibilityStore = new GuildRoleConnectionEligibilitySt
     const result = map.set(roleId.roleId, roleId.roleConnectionEligibility);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/connections/GuildRoleConnectionEligibilityStore.tsx");
+let result = require("set").fileFinishedImporting("modules/connections/GuildRoleConnectionEligibilityStore.tsx");
 
 export default guildRoleConnectionEligibilityStore;

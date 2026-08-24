@@ -1,7 +1,8 @@
 // discord_app/modules/application_account_linking/AccountLinkStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import recomputeFromAppTokens from "../oauth2/AuthorizedAppsStore.tsx";
+import closure_0 from "../oauth2/AuthorizedAppsStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const map = new Map();
 let set = new Set();
@@ -32,12 +33,11 @@ const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
       obj[2] = applicationId.accountLinkCallbacks;
       const result = map.set(applicationId.applicationId, obj);
     }
-    tmp = null == newestTokenForApplication.getNewestTokenForApplication(applicationId.applicationId) && null != applicationId.accountLinkCallbacks;
   },
   ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function handleSetGloballyDisabledFlows(flows) {
     set = new Set(flows.flows);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
+let result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");
 
 export default accountLinkStore;

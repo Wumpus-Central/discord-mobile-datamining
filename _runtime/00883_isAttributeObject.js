@@ -1,5 +1,5 @@
 // _runtime/00883_isAttributeObject.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_0 from "metro/00032__slicedToArray.js";
 
 function isAttributeObject(obj) {
   let hasItem = typeof obj === "object";
@@ -90,16 +90,21 @@ export const serializeAttributes = function serializeAttributes(attributes, flag
   if (flag === undefined) {
     flag = false;
   }
-  let obj = {};
+  let obj = attributes;
+  obj = {};
   if (attributes == null) {
     obj = {};
   }
   const entries = Object.entries(obj);
   while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
+    let tmp4 = callback;
+    let tmp5 = callback(tmp3, 2);
     let first = tmp5[0];
+    let tmp7 = attributeValueToTypedAttributeValue;
     let tmp8 = attributeValueToTypedAttributeValue(tmp5[1], flag);
     if (tmp8) {
+      let tmp10 = first;
+      let tmp11 = tmp8;
       obj[first] = tmp9;
     }
     continue;

@@ -36,6 +36,9 @@ const obj = {
       if (0 < touchBank.length) {
         while (true) {
           tmp2 = touchBank[num];
+          let tmp3 = num;
+          let tmp4 = num2;
+          let tmp5 = num3;
           let tmp6 = num2;
           let tmp7 = num3;
           if (null != tmp2) {

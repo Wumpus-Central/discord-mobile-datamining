@@ -1,9 +1,9 @@
 // _runtime/01287__isNativeReflectConstruct.js
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
 import _isNativeReflectConstruct2 from "01288__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import MarkdownBuilder from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -37,7 +37,6 @@ function formatToMarkdownString(_1Ww0Hi, arg1) {
   }
   return first;
 }
-_possibleConstructorReturn;
 let closure_4 = {
   $b(join) {
     return "**" + join.join("") + "**";
@@ -81,7 +80,6 @@ class MarkdownBuilder {
     return tmp3Result;
   }
 }
-_classCallCheck = MarkdownBuilder;
 _inherits(MarkdownBuilder, _isNativeReflectConstruct2.StringBuilder);
 const items = [
   {

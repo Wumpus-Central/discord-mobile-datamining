@@ -1,17 +1,17 @@
 // discord_app/modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import AbortCodes from "../../ThreadConstants.tsx";
-import patchThreadDefault from "../../ThreadActionCreators.tsx";
 
 let closure_3 = AbortCodes.getThreadNotificationOptions;
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx");
+const result = set.fileFinishedImporting("modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx");
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
   let obj = channel(10022);
   const threadNotificationSetting = obj.useThreadNotificationSetting(channel);
+  obj = { header: null, children: null };
   obj = { title: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.h850Ss);
@@ -20,7 +20,8 @@ export default function ThreadNotificationsBottomSheet(channel) {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
-      const obj = { flags };
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { flags };
       return obj.setNotificationSettings(channel, obj);
     },
     accessibilityLabel: null,
@@ -28,15 +29,16 @@ export default function ThreadNotificationsBottomSheet(channel) {
   };
   const intl2 = channel(1236).intl;
   obj1[3] = intl2.string(channel(1236).t.h850Ss);
-  obj1[4] = callback().map((item, index) => {
-    const setting = item.setting;
-    return callback(channel(table[8]).TableRadioRow, { value: setting, label: item.label }, "" + setting);
+  obj1[4] = callback().map((label) => {
+    const setting = label.setting;
+    return callback(channel(table[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
   obj[1] = jsx(channel(8101).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
-      const obj = { flags };
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { flags };
       return obj.setNotificationSettings(channel, obj);
     },
     accessibilityLabel: null,

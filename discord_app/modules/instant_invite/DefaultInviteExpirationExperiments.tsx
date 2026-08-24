@@ -1,10 +1,10 @@
 // discord_app/modules/instant_invite/DefaultInviteExpirationExperiments.tsx
 import isGuildMemberDefault from "../../utils/InstantInviteUtils.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
 import ME from "../../Constants.tsx";
 import createExperiment from "../experiments/index.tsx";
 
-const require = fn;
+const require = arg1;
 function getDefaultInviteExpiration(arg0) {
   ({ guild, experimentConfig } = arg0);
   let hasItem;
@@ -50,7 +50,7 @@ const items = [{ id: 1, label: "14 days", config: { defaultMaxAge: 1209600 } }, 
 let experiment = createExperiment.createExperiment({ kind: "guild", id: "2025-08_default_invite_expiration_guild", label: "Default Invite Expiration Guild", defaultConfig: { defaultMaxAge: 604800 }, treatments: items });
 const items1 = [{ id: 1, label: "14 days", config: { defaultMaxAge: 1209600 } }, { id: 2, label: "30 days", config: { defaultMaxAge: 2592000 } }, { id: 3, label: "60 days", config: { defaultMaxAge: 5184000 } }];
 let experiment1 = createExperiment.createExperiment({ kind: "guild", id: "2026-05_default_invite_expiration_guild_web", label: "Default Invite Expiration Guild Web", defaultConfig: { defaultMaxAge: 604800 }, treatments: items1 });
-const result = require("obj132").fileFinishedImporting("modules/instant_invite/DefaultInviteExpirationExperiments.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/DefaultInviteExpirationExperiments.tsx");
 
 export const DEFAULT_MAX_AGE = value;
 export const DefaultInviteExpirationGuildExperiment = experiment;

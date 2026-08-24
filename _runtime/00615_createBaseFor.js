@@ -2,13 +2,16 @@
 
 export default function createBaseFor(arg0) {
   closure_0 = arg0;
-  return (arg0, fn, fn2) => {
+  return (arg0, arg1, arg2) => {
     const ObjectResult = Object(arg0);
-    const arr = fn2(arg0);
+    const arr = arg2(arg0);
     let diff = tmp2 - 1;
     let num = -1;
     if (+arr.length) {
       while (true) {
+        let tmp4 = closure_0;
+        let tmp5 = diff;
+        let tmp6 = num;
         let sum = num;
         let tmp8 = diff;
         if (!closure_0) {
@@ -16,7 +19,7 @@ export default function createBaseFor(arg0) {
           tmp8 = sum;
         }
         let tmp9 = arr[tmp8];
-        if (false === fn(ObjectResult[tmp9], tmp9, ObjectResult)) {
+        if (false === arg1(ObjectResult[tmp9], tmp9, ObjectResult)) {
           break;
         } else {
           let tmp10 = +diff;

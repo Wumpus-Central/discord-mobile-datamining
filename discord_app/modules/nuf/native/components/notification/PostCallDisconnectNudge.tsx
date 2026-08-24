@@ -1,19 +1,19 @@
 // discord_app/modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import handleConnectionOpen from "../../../../../stores/SelectedChannelStore.tsx";
-import updateVoiceState from "../../../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../../../../stores/VoiceStateStore.tsx";
 import { PermissionPromptType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 import EventActionType from "NotificationPermissionConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: c9 } = EventActionType);
 let c11 = "post-call-disconnect-nudge-key";
 let closure_12 = { cooldownDurationMs: 604800000 };
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx");
 
 export default function PostCallDisconnectNudge(arg0) {
   ({ markAsDismissed, onHide } = arg0);
@@ -53,7 +53,7 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
     if (tmp2) {
       tmp2 = current === stateFromStores1;
     }
-    callback(tmp2);
+    closure_3(tmp2);
   }, items2);
   const obj4 = stateFromStores(589);
   const obj5 = first;
@@ -75,7 +75,7 @@ export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() 
   const effect1 = obj5.useEffect(() => {
     if (null != first) {
       let obj = stateFromStores(ref[14]);
-      const result = obj.setPushPermissionReactivationSeen(PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET);
+      const result = obj.setPushPermissionReactivationSeen(closure_1_7.CALL_DISCONNECT_BOTTOM_SHEET);
       obj = { markAsDismissed: null };
       obj[0] = closure_5;
       stateFromStores1(ref[15]).openLazy(stateFromStores(ref[17])(ref[16], ref.paths), closure_1_11, obj);

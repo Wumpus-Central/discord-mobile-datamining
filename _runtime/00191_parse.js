@@ -9,18 +9,19 @@ const re6 = /^\s*(?:([^@]*)(?:\((.*?)\))?@)?(\S.*?):(\d+)(?::(\d+))?\s*$/i;
 const re7 = /^\s*at (?:((?:\[object object\])?[^\\/]+(?: \[as \S+\])?) )?\(?(.*?):(\d+)(?::(\d+))?\)?\s*$/i;
 arg5.parse = function parse(str) {
   let parts = str.split("\n");
-  return parts.reduce((acc, item, index) => {
-    const match = regex.exec(item);
+  return parts.reduce((arr) => {
+    const match = regex.exec(arg1);
     let tmp2 = null;
     if (match) {
       let tmp3 = match[2];
       if (tmp3) {
-        let arr = match[2];
+        arr = match[2];
         tmp3 = 0 === arr.indexOf("native");
       }
       let tmp4 = match[2];
       if (tmp4) {
         tmp4 = 0 === match[2].indexOf("eval");
+        const arr2 = match[2];
       }
       const match1 = regex2.exec(match[2]);
       if (tmp4) {
@@ -58,7 +59,7 @@ arg5.parse = function parse(str) {
       tmp2 = obj;
     }
     if (!tmp2) {
-      const match2 = regex3.exec(item);
+      const match2 = regex3.exec(arg1);
       let tmp12 = null;
       if (match2) {
         obj = { file: null, methodName: null, arguments: null, lineNumber: null, column: null };
@@ -76,12 +77,13 @@ arg5.parse = function parse(str) {
       tmp2 = tmp12;
     }
     if (!tmp2) {
-      const match3 = regex4.exec(item);
+      const match3 = regex4.exec(arg1);
       let tmp16 = null;
       if (match3) {
         let tmp17 = match3[3];
         if (tmp17) {
           tmp17 = match3[3].indexOf(" > eval") > -1;
+          const arr5 = match3[3];
         }
         const match4 = regex5.exec(match3[3]);
         if (tmp17) {
@@ -97,6 +99,7 @@ arg5.parse = function parse(str) {
         obj[1] = match3[1] || closure_0;
         if (match3[2]) {
           let parts = match3[2].split(",");
+          const str4 = match3[2];
         } else {
           parts = [];
         }
@@ -116,7 +119,7 @@ arg5.parse = function parse(str) {
       tmp2 = tmp16;
     }
     if (!tmp2) {
-      const match5 = regex7.exec(item);
+      const match5 = regex7.exec(arg1);
       let tmp24 = null;
       if (match5) {
         obj1 = { file: null, methodName: null, arguments: null, lineNumber: null, column: null };
@@ -134,7 +137,7 @@ arg5.parse = function parse(str) {
       tmp2 = tmp24;
     }
     if (!tmp2) {
-      const match6 = regex6.exec(item);
+      const match6 = regex6.exec(arg1);
       let tmp28 = null;
       if (match6) {
         const obj2 = { file: null, methodName: null, arguments: null, lineNumber: null, column: null };
@@ -152,8 +155,8 @@ arg5.parse = function parse(str) {
       tmp2 = tmp28;
     }
     if (tmp2) {
-      arr = acc.push(tmp2);
+      arr = arr.push(tmp2);
     }
-    return acc;
+    return arr;
   }, []);
 };

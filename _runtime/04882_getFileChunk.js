@@ -30,11 +30,11 @@ arg5.getFileChunk = function getFileChunk(fileChunk, chunkSize) {
     }
   }
   const arr = Array.from(uint8Array.slice(0, num));
-  if (arr.every((item, index) => {
-    let tmp = typeof item === "number";
-    if (typeof item === "number") {
+  if (arr.every((num) => {
+    let tmp = typeof num === "number";
+    if (typeof num === "number") {
       const _isNaN = isNaN;
-      tmp = !isNaN(item);
+      tmp = !isNaN(num);
     }
     return tmp;
   })) {
@@ -56,7 +56,7 @@ function fetchFromObject(FileTypes, arr) {
 }
 arg5.fetchFromObject = fetchFromObject;
 arg5.findMatroskaDocTypeElements = function findMatroskaDocTypeElements(fileChunk) {
-  const mapped = fileChunk.map((item, index) => String.fromCharCode(item));
+  const mapped = fileChunk.map((arg0) => String.fromCharCode(arg0));
   const joined = mapped.join("");
   let str = "webm";
   if (!joined.includes("webm")) {
@@ -73,9 +73,11 @@ arg5.isftypStringIncluded = function isftypStringIncluded(fileChunk) {
   let num = 0;
   if (0 < fileChunk.length - items.length) {
     while (true) {
+      let tmp = num;
       let num2 = 0;
       let flag = true;
       if (0 < items.length) {
+        let tmp2 = num2;
         flag = false;
         while (fileChunk[num + num2] === items[num2]) {
           let sum = num2 + 1;
@@ -98,9 +100,9 @@ arg5.isftypStringIncluded = function isftypStringIncluded(fileChunk) {
 };
 arg5.isFlvStringIncluded = function isFlvStringIncluded(fileChunk) {
   const substr = fileChunk.slice(0, 3);
-  const decoder = new TextDecoder();
+  const textDecoder = new TextDecoder();
   const uint8Array = new Uint8Array(substr);
-  return decoder.decode(uint8Array).includes("FLV");
+  return textDecoder.decode(uint8Array).includes("FLV");
 };
 arg5.isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(arg0) {
   let tmp2 = 224 === tmp;
@@ -111,12 +113,12 @@ arg5.isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(ar
 };
 arg5.isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
   const substr = fileChunk.slice(4, 12);
-  const mapped = substr.map((item, index) => String.fromCharCode(item));
+  const mapped = substr.map((arg0) => String.fromCharCode(arg0));
   return "ftypavif" === mapped.join("");
 };
 arg5.isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
-  const mapped = fileChunk.map((item, index) => String.fromCharCode(item));
+  const mapped = fileChunk.map((arg0) => String.fromCharCode(arg0));
   closure_0 = mapped.join("");
   const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
-  return items.some((item, index) => closure_0.includes(item));
+  return items.some((arg0) => closure_0.includes(arg0));
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/frames/FramesStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
@@ -38,8 +38,12 @@ prototype["getAllFrames"] = function getAllFrames() {
 prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
   const values = map.values();
   for (const item10009 of values) {
+    let tmp3 = callback2;
+    let tmp2 = item10009;
     if (callback2(item10009)) {
-      if (item10009.data.iframeId === arg0) {
+      let tmp4 = item10009;
+      if (tmp2.data.iframeId === arg0) {
+        let tmp5 = obj;
         obj.return();
         return item10009;
       }
@@ -121,6 +125,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
@@ -145,6 +150,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
@@ -169,6 +175,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           const data = value.data;
           obj = {};
@@ -201,6 +208,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
@@ -225,6 +233,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
@@ -249,6 +258,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
@@ -273,6 +283,7 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
       if (tmp4) {
         let flag2 = value.data.iframeId === tmp;
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
@@ -291,17 +302,18 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != c10) {
       let obj = map;
-      const value = map.get(c10);
+      const value = map.get(tmp);
       let tmp5 = callback2(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
+          obj = {};
           const merged = Object.assign(value);
           obj = {};
           const merged1 = Object.assign(value.data);
           obj.layoutMode = constants2.PIP;
           obj.data = obj;
-          const result = obj.set(c10, obj);
+          const result = obj.set(tmp, obj);
           flag2 = true;
         }
         tmp5 = flag2;
@@ -311,6 +323,6 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     return flag;
   }
 });
-let result = obj132.fileFinishedImporting("modules/frames/FramesStore.tsx");
+let result = set.fileFinishedImporting("modules/frames/FramesStore.tsx");
 
 export default framesStoreClass;

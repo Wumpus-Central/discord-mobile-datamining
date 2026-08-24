@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/hooks/useLatch.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");
 
 export default function useLatch(arg0) {
   const React = arg0;

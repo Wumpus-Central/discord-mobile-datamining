@@ -1,9 +1,10 @@
 // discord_app/modules/experiments/devtools/ExperimentDevToolsUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import trackExposureToExperiment from "../ExperimentManager.tsx";
 import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/experiment.tsx";
 
-const result = obj132.fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
+const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: create.Variation_Type.OVERRIDE };
+const result = set.fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
 
 export const getExperimentVariantsForDevTools = function getExperimentVariantsForDevTools(experiment) {
   if (experiment.system !== trackExposureToExperiment.ExperimentSystem.APEX) {

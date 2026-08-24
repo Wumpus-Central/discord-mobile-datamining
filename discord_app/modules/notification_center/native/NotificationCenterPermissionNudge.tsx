@@ -1,28 +1,30 @@
 // discord_app/modules/notification_center/native/NotificationCenterPermissionNudge.tsx
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import apexExperimentDefault from "../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import EventActionType from "../../nuf/native/components/notification/NotificationPermissionConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import { _requestPushNotificationPermission } from "../../nuf/native/NotificationPermissionUtil.tsx";
 
-const require = fn;
+const require = arg1;
 function NotificationCenterBannerImpl(onDismiss) {
   onDismiss = onDismiss.onDismiss;
   const tmp = callback6();
   callback3(() => {
-    callback(698);
-    const obj = { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
+    let obj = callback(698);
+    obj = { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     obj.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
   }, []);
-  let obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
+  let obj = { style: tmp.container, children: null };
+  obj = { style: tmp.iconContainer, children: null };
+  obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
   obj[1] = callback4(onDismiss(10001).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   obj1 = { style: tmp.contentContainer, children: null };
@@ -50,7 +52,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   items[1] = callback5(View, obj1);
   const obj7 = {
     onPress() {
-      const obj = { action: closure_1_12.DISMISS, prompt_type: closure_1_13.NOTIFICATION_CENTER_BANNER };
+      let obj = closure_1_1(closure_1_2[9]);
+      obj = { action: closure_1_12.DISMISS, prompt_type: closure_1_13.NOTIFICATION_CENTER_BANNER };
       obj.track(closure_1_7.CONTEXTUAL_REMINDER_ACTION, obj);
       onDismiss();
     },
@@ -70,18 +73,21 @@ function NotificationCenterBannerImpl(onDismiss) {
 ({ AnalyticEvents: error, NOOP: closure_8 } = ME);
 ({ EventActionType: c10, EventActionLocation: unpackModuleId, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = EventActionType);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createCacheKey = { flexDirection: "row", paddingLeft: 24, paddingRight: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", borderBottomWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, gap: 16 };
+createCacheKey = { container: null, contentContainer: null, iconContainer: null, ctaButton: null };
+createCacheKey = { flexDirection: "row", paddingLeft: 24, paddingRight: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", borderBottomWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, gap: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
+let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
 createCacheKey[3] = { alignSelf: "flex-start", marginTop: ThemesDefault.space.PX_12 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
+let obj2 = { alignSelf: "flex-start", marginTop: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
 
 export default function NotificationCenterPermissionNudge() {
   let obj = apexExperimentDefault;
-  const canSeePushNotificationNudge = require("../../nuf/native/NotificationPermissionUtil.tsx").useCanSeePushNotificationNudge();
-  const obj2 = _requestPushNotificationPermission;
+  const canSeePushNotificationNudge = __requestPushNotificationPermission.useCanSeePushNotificationNudge();
+  const obj2 = __requestPushNotificationPermission;
   let prop = null;
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
@@ -89,12 +95,12 @@ export default function NotificationCenterPermissionNudge() {
       prop = tmp2(1377).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
-  const tmp5 = callback(require("../../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
+  const tmp5 = callback(_useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
   _require = tmp6;
   const items = [tmp5[1]];
-  const obj3 = useSelectedDismissibleContent;
+  const obj3 = _useSelectedDismissibleContent;
   let tmp8 = null;
-  if (tmp5[0] === require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
+  if (tmp5[0] === _DismissibleContent.DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
     obj = { onDismiss: null };
     obj[0] = tmp7;
     tmp8 = callback4(NotificationCenterBannerImpl, obj);

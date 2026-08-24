@@ -1,16 +1,16 @@
 // discord_app/modules/applications/native/AppInteractionInfoActionSheet.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import createdAt from "../../../records/UserRecord.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_5 from "../../../records/UserRecord.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
-const result = require("obj132").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
 
 export default function AppInteractionInfoActionSheet(message) {
   message = message.message;
@@ -154,9 +154,9 @@ export default function AppInteractionInfoActionSheet(message) {
     obj18[2] = intl3.string(tmp10(1236).t["04gxNg"]);
     items11[1] = callback(tmp10(4734).Text, obj18);
     obj16[1] = items11;
-    items10[1] = callback2(id, obj16);
+    items10[1] = tmp31(id, obj16);
     obj14[1] = items10;
-    obj13[1] = callback2(id, obj14);
+    obj13[1] = tmp31(id, obj14);
     tmp32 = callback(tmp10(5433).PressableOpacity, obj13);
   }
   items9[1] = tmp32;

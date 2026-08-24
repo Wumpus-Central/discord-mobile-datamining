@@ -1,18 +1,18 @@
 // discord_app/modules/guild_home/useActiveChannels.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
-import set from "../channel/ChannelConstants.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
-import truncateOldMessageData from "ActiveChannelsStore.tsx";
+import set2 from "../channel/ChannelConstants.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_6 from "ActiveChannelsStore.tsx";
 
 const isTextChannel = createChannelRecord.isTextChannel;
 const Permissions = ME.Permissions;
-const ChannelFlags = set.ChannelFlags;
-const result = obj132.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
+const ChannelFlags = set2.ChannelFlags;
+const result = set.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
 
 export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   let tmp = arg1;
@@ -30,27 +30,27 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
     items = [];
   }
   mutedChannels = obj2.getMutedChannels(guildId);
-  const mapped = items.map((item, index) => store.getChannel(item));
+  const mapped = items.map((arg0) => store.getChannel(arg0));
   const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
-  return found.filter((item, index) => {
+  return found.filter((hasFlag) => {
     let hasFlagResult;
-    if (item != null) {
-      hasFlagResult = item.hasFlag(ChannelFlags.ACTIVE_CHANNELS_REMOVED);
+    if (hasFlag != null) {
+      hasFlagResult = hasFlag.hasFlag(closure_1_8.ACTIVE_CHANNELS_REMOVED);
     }
     if (hasFlagResult) {
       return false;
-    } else if (set(item.type)) {
-      if (set.has(item.id)) {
+    } else if (set(hasFlag.type)) {
+      if (set.has(hasFlag.id)) {
         return false;
       } else {
-        if (null != item.parent_id) {
-          if (set.has(item.parent_id)) {
+        if (null != hasFlag.parent_id) {
+          if (obj.has(hasFlag.parent_id)) {
             return false;
           }
         }
-        if (closure_1.can(Permissions.VIEW_CHANNEL, item)) {
-          const channel = store.getChannel(item.parent_id);
-          const isThreadResult = item.isThread();
+        if (closure_1.can(closure_1_7.VIEW_CHANNEL, hasFlag)) {
+          const channel = store.getChannel(hasFlag.parent_id);
+          const isThreadResult = hasFlag.isThread();
           let tmp8 = !isThreadResult;
           if (isThreadResult) {
             tmp8 = null == channel;
@@ -58,7 +58,7 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
           if (!tmp8) {
             let hasFlagResult1;
             if (channel != null) {
-              hasFlagResult1 = channel.hasFlag(ChannelFlags.ACTIVE_CHANNELS_REMOVED);
+              hasFlagResult1 = channel.hasFlag(closure_1_8.ACTIVE_CHANNELS_REMOVED);
             }
             tmp8 = !hasFlagResult1;
           }
@@ -67,6 +67,7 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
           return false;
         }
       }
+      obj = set;
     } else {
       return false;
     }

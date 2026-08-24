@@ -1,9 +1,9 @@
 // discord_app/modules/activities/utils/hasRichActivity.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
-const result = obj132.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");
 
 export default function hasRichActivity(type) {
   let tmp = null != type;
@@ -16,6 +16,7 @@ export default function hasRichActivity(type) {
       let tmp4 = null != type.assets;
       if (tmp4) {
         tmp4 = null != type.assets.large_image || null != type.assets.small_text;
+        const tmp5 = null != type.assets.large_image || null != type.assets.small_text;
       }
       tmp3 = tmp4;
     }

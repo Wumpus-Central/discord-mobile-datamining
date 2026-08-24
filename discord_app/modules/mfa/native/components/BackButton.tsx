@@ -1,13 +1,14 @@
 // discord_app/modules/mfa/native/components/BackButton.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import MFAButtonDefault from "button.tsx";
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
+const result = set.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
 
 export default function BackButton(props) {
   props = props.props;
+  importDefault = undefined;
   let obj = props(1500);
   importDefault = obj.useNavigation();
   obj = { variant: "secondary", text: null, onPress: null };

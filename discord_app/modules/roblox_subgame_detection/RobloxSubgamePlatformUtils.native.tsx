@@ -1,8 +1,8 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
 
 export default {
   getRobloxSubgameURL(closure_0) {

@@ -9,7 +9,9 @@ function resolve() {
   let str2 = "";
   if (-1 <= diff) {
     while (true) {
+      let tmp2 = diff;
       let tmp3 = flag;
+      let tmp4 = str;
       let str3 = "/";
       if (0 <= diff) {
         str3 = items[diff];
@@ -42,13 +44,15 @@ function resolve() {
     str4 = "/";
   }
   const parts = str2.split("/");
-  const found = parts.filter((item, index) => item);
+  const found = parts.filter((arg0) => arg0);
   let diff2 = found.length - 1;
   let num = 0;
   let num2 = 0;
   if (0 <= diff2) {
     do {
       let tmp8 = found[diff2];
+      let tmp9 = diff2;
+      let tmp10 = num;
       if ("." === tmp8) {
         let spliceResult = found.splice(diff2, 1);
         let sum = num;
@@ -83,13 +87,15 @@ function normalizePath(str) {
   let tmp14;
   const substr = str.slice(-1);
   const parts = str.split("/");
-  const found = parts.filter((item, index) => item);
+  const found = parts.filter((arg0) => arg0);
   let diff = found.length - 1;
   let num = 0;
   let num2 = 0;
   if (0 <= diff) {
     do {
       let tmp4 = found[diff];
+      let tmp5 = diff;
+      let tmp6 = num;
       if ("." === tmp4) {
         let spliceResult = found.splice(diff, 1);
         let sum = num;

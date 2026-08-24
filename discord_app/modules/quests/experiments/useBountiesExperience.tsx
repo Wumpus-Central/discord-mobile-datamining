@@ -1,10 +1,10 @@
 // discord_app/modules/quests/experiments/useBountiesExperience.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import apexExperiment from "BountiesVerticalScrollExperiment.tsx";
 import apexExperiment2 from "BountiesStage1Experiment.tsx";
 import apexExperiment3 from "QuestHomeBountiesExperiment.tsx";
 
-const result = obj132.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
+const result = set.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {
   const BountiesVerticalScrollExperiment = apexExperiment.BountiesVerticalScrollExperiment;

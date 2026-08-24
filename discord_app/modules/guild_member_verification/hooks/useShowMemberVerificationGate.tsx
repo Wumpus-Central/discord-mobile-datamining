@@ -1,10 +1,11 @@
 // discord_app/modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx
 import isValidFormResponse from "../MemberVerificationUtils.tsx";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function shouldShowMembershipVerificationGate(guildId, items) {
   let tmp = items;
   if (items === undefined) {
@@ -31,22 +32,23 @@ function shouldShowMembershipVerificationGate(guildId, items) {
     }
     if (flag) {
       flag = isValidFormResponse.guildHasVerificationGate(guild);
+      const obj4 = isValidFormResponse;
     }
     return flag;
   }
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
   const _require = guild_id;
   let items = [closure_3, closure_4, closure_2];
   const items1 = [guild_id];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
       const items = [closure_1_3, closure_1_4, closure_1_2];
-      tmp2 = shouldShowMembershipVerificationGate(tmp, items);
+      tmp2 = closure_1_5(tmp, items);
     }
     return tmp2;
   }, items1);

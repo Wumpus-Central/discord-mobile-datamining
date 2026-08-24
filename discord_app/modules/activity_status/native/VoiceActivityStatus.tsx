@@ -6,11 +6,11 @@ import UserProfileVoiceActivityIconDefault from "../../user_profile/native/UserP
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("obj132").fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");
 
 export default function VoiceActivityStatus(hideText) {
   ({ channel, textStyle, maxFontSizeMultiplier, hideIcon } = hideText);
@@ -35,7 +35,7 @@ export default function VoiceActivityStatus(hideText) {
       obj = { children: null };
       items1[1] = tmp9;
       obj[0] = items1;
-      let tmp3Result = callback(closure_4, obj);
+      let tmp3Result = tmp3(tmp4, obj);
     } else {
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
@@ -48,10 +48,10 @@ export default function VoiceActivityStatus(hideText) {
           const t = getSystemLocale.t;
           if (isGuildStageVoiceResult) {
             obj[2] = string(t.QygGCN);
-            let tmp11Result = callback(tmp14, obj);
+            let tmp11Result = tmp11(tmp14, obj);
           } else {
             obj[2] = string(t.msxteM);
-            tmp11Result = callback(tmp14, obj);
+            tmp11Result = tmp11(tmp14, obj);
           }
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
@@ -63,7 +63,10 @@ export default function VoiceActivityStatus(hideText) {
       maxFontSizeMultiplier = getSystemLocale.intl;
       obj1[2] = maxFontSizeMultiplier.string(getSystemLocale.t["9FaEzi"]);
       tmp11Result = callback(ActivityStatusTextDefault, obj1);
+      const tmp20 = ActivityStatusTextDefault;
     }
+    tmp3 = closure_5;
+    tmp4 = closure_4;
   } else {
     tmp3Result = null;
   }

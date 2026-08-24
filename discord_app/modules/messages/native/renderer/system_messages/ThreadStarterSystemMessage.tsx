@@ -2,12 +2,12 @@
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import processMessage from "../../../../replies/ReferencedMessageStore.tsx";
+import closure_3 from "../../../../replies/ReferencedMessageStore.tsx";
 import { ReferencedMessageState } from "../../../../replies/ReferencedMessageStore.tsx";
 import { MessageTypes } from "../../../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");
 
 export const createThreadStarterSystemMessage = function createThreadStarterSystemMessage(message) {
   message = message.message;

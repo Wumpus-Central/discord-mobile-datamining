@@ -1,12 +1,13 @@
 // discord_app/modules/soundboard/canChannelUseSoundboard.tsx
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
 import ME from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
+const result = require("set").fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
 
 export default function canChannelUseSoundboard(type) {
   if (null == type) {
@@ -41,16 +42,16 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let flag = false;
-    if (null != guildVoiceOrThread) {
+    if (null != closure_0) {
       const CALLABLE = closure_1_5.CALLABLE;
       flag = true;
-      if (!CALLABLE.has(guildVoiceOrThread.type)) {
-        const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, guildVoiceOrThread);
-        const canResult1 = closure_1_3.can(closure_1_6.SPEAK, guildVoiceOrThread);
-        flag = guildVoiceOrThread.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, guildVoiceOrThread);
-        const tmp6 = guildVoiceOrThread.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, guildVoiceOrThread);
+      if (!CALLABLE.has(obj.type)) {
+        const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, obj);
+        const canResult1 = closure_1_3.can(closure_1_6.SPEAK, obj);
+        flag = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
+        const tmp6 = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
       }
     }
     return flag;

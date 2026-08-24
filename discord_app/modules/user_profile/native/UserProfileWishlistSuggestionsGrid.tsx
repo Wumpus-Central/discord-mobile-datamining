@@ -1,26 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfileWishlistSuggestionsGrid.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import useIsMobileWishlistSuggestionsEnabled from "../../wishlists/experiments/MobileWishlistSuggestionsExperiment.tsx";
 import useCardGridLayoutDefault from "../hooks/native/useCardGridLayout.tsx";
 import useWishlistSuggestionsDismissibleContentDefault from "../hooks/useWishlistSuggestionsDismissibleContent.tsx";
-import AddToWishlistGridDefault from "../../wishlists/native/AddToWishlistGrid.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
-import get from "../../wishlists/WishlistStore.tsx";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../wishlists/WishlistStore.tsx";
 import { TrackUserProfileWishlistActions as closure_7 } from "../Constants.tsx";
 import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
 import { SKUProductLines } from "../../../Constants.tsx";
 import { CollectiblesMobileShopScreen as closure_11 } from "../../collectibles/CollectiblesShopConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function UserProfileWishlistSuggestionsGridContent(arg0) {
   ({ userId, wishlistId } = arg0);
   ({ containerWidth, maxWidth } = arg0);
@@ -48,6 +44,7 @@ function UserProfileWishlistSuggestionsGridContent(arg0) {
     tmp4 = null != stateFromStores1;
   }
   obj[2] = tmp4;
+  const tmp3 = useWishlistSuggestionsDismissibleContentDefault;
   let tmp8 = null;
   if (tmp3Result.isVisible) {
     obj = { userId: null, wishlistId: null, wishlist: null, containerWidth: null, maxWidth: null, isDismissible: null, markAsDismissed: null };
@@ -69,6 +66,7 @@ function WishlistSuggestionsGridContents(arg0) {
   const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileWishlistSuggestionsGridContent");
   let obj = stateFromStores(8934);
   const trackUserProfileWishlistAction = obj.useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
+  stateFromStores = trackUserProfileWishlistAction;
   const tmp5 = callback2();
   stateFromStores = undefined;
   obj1 = stateFromStores(589);
@@ -76,20 +74,21 @@ function WishlistSuggestionsGridContents(arg0) {
   stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let items1 = [stateFromStores];
   const memo = React.useMemo(() => {
-    const ReduceMotion = stateFromStores(dependencyMap[29]).ReduceMotion;
+    const ReduceMotion = stateFromStores(closure_1_2[29]).ReduceMotion;
     const tmp = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
     const obj = { entering: null, exiting: null, layout: null };
-    const FadeInDown = stateFromStores(dependencyMap[29]).FadeInDown;
+    const FadeInDown = stateFromStores(closure_1_2[29]).FadeInDown;
     obj[0] = FadeInDown.reduceMotion(tmp);
-    const FadeOutDown = stateFromStores(dependencyMap[29]).FadeOutDown;
+    const FadeOutDown = stateFromStores(closure_1_2[29]).FadeOutDown;
     obj[1] = FadeOutDown.reduceMotion(tmp);
-    const LinearTransition = stateFromStores(dependencyMap[29]).LinearTransition;
+    const LinearTransition = stateFromStores(closure_1_2[29]).LinearTransition;
     const springifyResult = LinearTransition.springify();
     const massResult = LinearTransition.springify().mass(0.8);
     const dampingResult = LinearTransition.springify().mass(0.8).damping(100);
     obj[2] = LinearTransition.springify().mass(0.8).damping(100).stiffness(300).reduceMotion(tmp);
     return obj;
   }, items1);
+  obj = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap: closure_9 };
   const analyticsLocations = contextDefault().analyticsLocations;
   let obj3 = stateFromStores(12324);
   obj = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: stateFromStores(9185).WishlistFetchSource.USER_PROFILE };
@@ -97,15 +96,16 @@ function WishlistSuggestionsGridContents(arg0) {
   const items3 = [trackUserProfileWishlistAction];
   const callback = React.useCallback(() => {
     let obj = { action: closure_1_7.PRESS_ADD_WISHLIST_ITEM, productLines: new Set(items) };
-    items = [SKUProductLines.COLLECTIBLES];
+    items = [closure_1_10.COLLECTIBLES];
     stateFromStores(obj);
     const set = new Set(items);
-    ACTION_SHEET_HEIGHT_HALFDefault.hideAllActionSheets();
-    obj = { analyticsSource: QUICK_SWITCHERDefault.USER_PROFILE_WISHLIST, analyticsLocations: null, screen: null };
-    const items1 = [QUICK_SWITCHERDefault.USER_PROFILE_WISHLIST];
+    closure_1_1(closure_1_2[22]).hideAllActionSheets();
+    const obj2 = closure_1_1(closure_1_2[22]);
+    obj = { analyticsSource: closure_1_1(closure_1_2[24]).USER_PROFILE_WISHLIST, analyticsLocations: null, screen: null };
+    const items1 = [closure_1_1(closure_1_2[24]).USER_PROFILE_WISHLIST];
     obj[1] = items1;
     obj[2] = closure_1_11.FEATURED_PAGE;
-    const result = stateFromStores(dependencyMap[23]).openCollectiblesShopMobile(obj);
+    const result = stateFromStores(closure_1_2[23]).openCollectiblesShopMobile(obj);
   }, items3);
   if (0 === items2.length) {
     obj1 = { style: null, children: null };
@@ -165,7 +165,7 @@ function WishlistSuggestionsGridContents(arg0) {
     obj8[3] = str4;
     const obj9 = { size: "sm", variant: "icon-only", icon: null, onPress: null, accessibilityLabel: null };
     const obj10 = { size: "sm", color: null };
-    obj10[1] = ThemesDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT;
+    obj10[1] = tmp(712).colors.CONTROL_ICON_ONLY_ICON_DEFAULT;
     obj9[2] = callback(tmp4(6368).XSmallIcon, obj10);
     obj9[3] = markAsDismissed;
     const intl2 = tmp4(1236).intl;
@@ -173,13 +173,13 @@ function WishlistSuggestionsGridContents(arg0) {
     obj8[4] = callback(tmp4(8035).IconButton, obj9);
     items4[1] = callback(View, obj8);
     obj6[1] = items4;
-    const items6 = [callback(View, obj6), , ];
+    const items6 = [closure_13(View, obj6), , ];
     const obj11 = { items: null, wishlist: null, analyticsLocations: null, cardSize: null };
     obj11[0] = items2;
     obj11[1] = wishlist;
     obj11[2] = analyticsLocations;
     obj11[3] = useCardGridLayoutDefault(obj).cardWidth;
-    items6[1] = callback(AddToWishlistGridDefault, obj11);
+    items6[1] = callback(tmp(12327), obj11);
     const obj12 = { style: null, children: null };
     obj12[0] = tmp5.shopButtonContainer;
     const obj13 = { size: "md", variant: "secondary", icon: null, text: null, onPress: null };
@@ -190,7 +190,7 @@ function WishlistSuggestionsGridContents(arg0) {
     obj12[1] = callback(tmp4(4745).Button, obj13);
     items6[2] = callback(View, obj12);
     obj5[4] = items6;
-    obj3[1] = callback(_modDef4115.View, obj5);
+    obj3[1] = closure_13(tmp(4115).View, obj5);
     tmp13Result = tmp13(tmp4(12326).WishlistAnalyticsProvider, obj3);
   }
   return tmp13Result;
@@ -198,14 +198,18 @@ function WishlistSuggestionsGridContents(arg0) {
 ({ PROFILE_SIDE_PADDING: closure_8, WISHLIST_SUGGESTION_CARD_GAP: c9 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
-const createCacheKey = { marginTop: ThemesDefault.space.PX_16, padding: PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, background: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { container: null, headerRow: null, dismissButton: null, hiddenDismissButton: null, shopButtonContainer: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, padding: PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, background: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
+let obj1 = { width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { marginVertical: -ThemesDefault.space.PX_10 };
 createCacheKey[3] = { opacity: 0 };
+let obj2 = { marginVertical: -ThemesDefault.space.PX_10 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, marginHorizontal: "auto" };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileWishlistSuggestionsGrid.tsx");
+let obj3 = { marginTop: ThemesDefault.space.PX_16, marginHorizontal: "auto" };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWishlistSuggestionsGrid.tsx");
 
 export default function UserProfileWishlistSuggestionsGrid(arg0) {
   let obj = useIsMobileWishlistSuggestionsEnabled;

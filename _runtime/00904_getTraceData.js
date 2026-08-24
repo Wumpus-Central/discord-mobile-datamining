@@ -19,6 +19,7 @@ arg5.getTraceData = function getTraceData() {
   let client = obj.client;
   if (!client) {
     client = getClient.getClient();
+    const obj2 = getClient;
   }
   let tmp3 = require;
   let spanToTraceparentHeader = dependencyMap;

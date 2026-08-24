@@ -26,11 +26,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -43,6 +45,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -59,9 +62,9 @@ if (self2) {
       closure_1 = { regex: "Eingabe", email: "E-Mail-Adresse", url: "URL", emoji: "Emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-Datum und -Uhrzeit", date: "ISO-Datum", time: "ISO-Uhrzeit", duration: "ISO-Dauer", ipv4: "IPv4-Adresse", ipv6: "IPv6-Adresse", cidrv4: "IPv4-Bereich", cidrv6: "IPv6-Bereich", base64: "Base64-codierter String", base64url: "Base64-URL-codierter String", json_string: "JSON-String", e164: "E.164-Nummer", jwt: "JWT", template_literal: "Eingabe" };
       closure_2 = { nan: "NaN", number: "Zahl", array: "Array" };
       return {
-        localeError: (code) => {
-          let str = code.code;
-          switch (str) {
+        localeError: (arg0) => {
+          const combined = "Ung\u00FCltiger Wert in " + tmp.origin;
+          switch (combined) {
             case "t":
             break;
             case "to":
@@ -623,145 +626,43 @@ if (self2) {
             case "SEMANTIC_ATTRIBUTE_SENTRY_SOURCE":
             break;
             case "BOT_HTTP_INTERACTIONS":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp52 = closure_2[parsedTypeResult];
-              if (tmp52 == null) {
-                tmp52 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Ung\u00FCltige Eingabe: erwartet instanceof " + code.expected + ", erhalten " + tmp52;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Ung\u00FCltige Eingabe: erwartet " + expected + ", erhalten " + tmp52;
-              }
-              return combined;
+            break;
             case "H":
             break;
             case "HT":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Ung\u00FCltige Eingabe: erwartet " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 = "Ung\u00FCltige Option: erwartet eine von " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
+            break;
             case "TP":
             break;
             case "P":
-              let str29 = "<";
-              if (code.inclusive) {
-                str29 = "<=";
-              }
-              let tmp31 = dependencyMap[code.origin];
-              if (tmp31 == null) {
-                tmp31 = null;
-              }
-              let str30 = code.origin;
-              if (tmp31) {
-                if (str30 == null) {
-                  str30 = "Wert";
-                }
-                str = code.maximum.toString();
-                let str37 = tmp31.unit;
-                if (str37 == null) {
-                  str37 = "Elemente";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "Zu gro\u00DF: erwartet, dass " + str30 + " " + str29 + str + " " + str37 + " hat";
-              } else {
-                let str31 = str30;
-                if (str30 == null) {
-                  str31 = "Wert";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "Zu gro\u00DF: erwartet, dass " + str31 + " " + str29 + code.maximum.toString() + " ist";
-              }
-              return combined2;
+            break;
             case "INTERACTIONS":
             break;
             case "NSFW_SPACE_WARNING_MODAL_CLICKED":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp19 = dependencyMap[code.origin];
-              if (tmp19 == null) {
-                tmp19 = null;
-              }
-              ({ origin, minimum } = code);
-              const str1 = minimum.toString();
-              if (tmp19) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str1 + " " + tmp19.unit + " hat";
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str1 + " ist";
-              }
-              return combined3;
+            break;
             case "rm":
             break;
             case "m":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined4 = "Ung\u00FCltiger String: muss mit \"" + code.prefix + "\" beginnen";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                combined4 = "Ung\u00FCltiger String: muss mit \"" + code.suffix + "\" enden";
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = "Ung\u00FCltiger String: muss \"" + code.includes + "\" enthalten";
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "Ung\u00FCltiger String: muss dem Muster " + code.pattern + " entsprechen";
-              } else {
-                let format = table[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Ung\u00FCltig: " + format;
-              }
-              return combined4;
+            break;
             case "me":
             break;
             case "mes":
-              const _HermesInternal4 = HermesInternal;
-              str = "Ung\u00FCltige Zahl: muss ein Vielfaches von ";
-              return `Ungültige Zahl: muss ein Vielfaches von ` + code.divisor + " sein";
+            break;
             case "I":
             break;
             case "InternalCard":
-              let tmp5 = code.keys.length > 1;
-              let str4 = "Unbekannter Schl\u00FCssel";
-              if (tmp5) {
-                str4 = "Unbekannte Schl\u00FCssel";
-              }
-              let joinValuesResult = closure_2.joinValues(code.keys, ", ");
-              let _HermesInternal3 = HermesInternal;
-              str = "" + str4 + ": " + joinValuesResult;
-              return str;
+            break;
             case "ter":
             break;
             case "na":
-              let _HermesInternal2 = HermesInternal;
-              let combined5 = "Ung\u00FCltiger Schl\u00FCssel in " + code.origin;
-              return combined5;
+            break;
             case "al":
             break;
             case "CardA11yWrapper":
-              return "Ung\u00FCltige Eingabe";
+            break;
             case "perGuildMaxCount":
             break;
             case "getChannelIcon":
-              let _HermesInternal = HermesInternal;
-              let combined6 = "Ung\u00FCltiger Wert in " + code.origin;
-              return combined6;
+            break;
             case "getChannelIconComponent":
             break;
             case "getChannelIconComponentWithGuild":
@@ -1315,21 +1216,11 @@ if (self2) {
             case "ms":
             break;
             case "bysecond":
-              tmp5 = code.keys.length > 1;
-              str4 = "Unbekannter Schl\u00FCssel";
-              if (tmp5) {
-                str4 = "Unbekannte Schl\u00FCssel";
-              }
-              joinValuesResult = closure_2.joinValues(code.keys, ", ");
-              _HermesInternal3 = HermesInternal;
-              str = "" + str4 + ": " + joinValuesResult;
-              return str;
+            break;
             case "second_place":
             break;
             case "second_place_medal":
-              _HermesInternal2 = HermesInternal;
-              combined5 = "Ung\u00FCltiger Schl\u00FCssel in " + code.origin;
-              return combined5;
+            break;
             case "preferredPaymentMethods":
             break;
             case "paypalPreferred":
@@ -1337,9 +1228,7 @@ if (self2) {
             case "venmoPreferred":
             break;
             case "GuildEntityDao":
-              _HermesInternal = HermesInternal;
-              combined6 = "Ung\u00FCltiger Wert in " + code.origin;
-              return combined6;
+            break;
             case "EntityDao":
             break;
             case "Dao":
@@ -1349,7 +1238,7 @@ if (self2) {
             case "_initialPropsMap":
             break;
             case "initialProps":
-            break;
+              return combined;
             case "app":
             break;
             case "application":
@@ -1949,21 +1838,11 @@ if (self2) {
             case "exp":
             break;
             case "expo":
-              tmp5 = code.keys.length > 1;
-              str4 = "Unbekannter Schl\u00FCssel";
-              if (tmp5) {
-                str4 = "Unbekannte Schl\u00FCssel";
-              }
-              joinValuesResult = closure_2.joinValues(code.keys, ", ");
-              _HermesInternal3 = HermesInternal;
-              str = "" + str4 + ": " + joinValuesResult;
-              return str;
+            break;
             case "port":
             break;
             case "rtsState":
-              _HermesInternal2 = HermesInternal;
-              combined5 = "Ung\u00FCltiger Schl\u00FCssel in " + code.origin;
-              return combined5;
+            break;
             case "ts":
             break;
             case "fil":
@@ -1971,9 +1850,7 @@ if (self2) {
             case "file":
             break;
             case "F":
-              _HermesInternal = HermesInternal;
-              combined6 = "Ung\u00FCltiger Wert in " + code.origin;
-              return combined6;
+            break;
             case "Finish":
             break;
             case "he":

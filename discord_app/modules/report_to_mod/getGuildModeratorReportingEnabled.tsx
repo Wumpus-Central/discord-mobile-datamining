@@ -1,7 +1,7 @@
 // discord_app/modules/report_to_mod/getGuildModeratorReportingEnabled.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");
+const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");
 
 export default function getGuildModeratorReportingEnabled(moderatorReporting) {
   moderatorReporting = moderatorReporting.moderatorReporting;

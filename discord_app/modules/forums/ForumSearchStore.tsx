@@ -1,7 +1,7 @@
 // discord_app/modules/forums/ForumSearchStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_0 from "../../stores/ChannelStore.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
@@ -64,7 +64,7 @@ const forumSearchStore = new ForumSearchStore(dispatcherDefault, {
       const results = tmp2.results;
       let found;
       if (results != null) {
-        found = results.filter((item, index) => channel.id !== item);
+        found = results.filter((arg0) => channel.id !== arg0);
       }
       obj.results = found;
       dependencyMap[parent_id] = obj;
@@ -157,6 +157,6 @@ const forumSearchStore = new ForumSearchStore(dispatcherDefault, {
     return tmp4;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/forums/ForumSearchStore.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumSearchStore.tsx");
 
 export default forumSearchStore;

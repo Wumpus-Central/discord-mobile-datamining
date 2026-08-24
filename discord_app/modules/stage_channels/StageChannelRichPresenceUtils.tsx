@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/StageChannelRichPresenceUtils.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import buildStageChannelUserRoles from "StageChannelRoleStore.tsx";
+import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../stores/AuthenticationStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "StageChannelRoleStore.tsx";
 import { STAGE_APPLICATION_ID } from "StageChannelsConstants.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 
@@ -34,7 +34,7 @@ function unpackStageChannelParty(c17) {
   }
 }
 let c7 = "stage:";
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
 
 export const packStageChannelPartyId = function packStageChannelPartyId(channel, stageInstanceByChannel) {
   let num = 0;
@@ -51,10 +51,11 @@ export const packStageChannelPartyId = function packStageChannelPartyId(channel,
     }
     const features2 = guild.features;
     let tmp4 = tmp3;
-    if (features2.has(GuildFeatures.VERIFIED)) {
+    if (features2.has(tmp2.VERIFIED)) {
       tmp4 = tmp3 | 4;
     }
     str = tmp4;
+    tmp2 = GuildFeatures;
   }
   return "" + c7 + channel.guild_id + ":" + channel.id + ":" + str.toString(16) + ":" + stageInstanceByChannel.id;
 };

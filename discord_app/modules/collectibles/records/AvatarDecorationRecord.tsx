@@ -2,9 +2,10 @@
 import fromServerDefault from "BaseCollectiblesItemRecord.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-require = fn;
+require = arg1;
 fromServerDefault;
-const prototype = function AvatarDecorationRecord(arg0) {
+let prototype;
+prototype = function AvatarDecorationRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
   tmp2.type = CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION;
@@ -27,9 +28,9 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ asset: tmp4.asset, label: tmp4.label } = obj);
   return tmp;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/AvatarDecorationRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/AvatarDecorationRecord.tsx");
 
 export default prototype;
-export const isAvatarDecorationRecord = function isAvatarDecorationRecord(collectiblesItem) {
-  return collectiblesItem instanceof prototype;
+export const isAvatarDecorationRecord = function isAvatarDecorationRecord(first) {
+  return first instanceof prototype;
 };

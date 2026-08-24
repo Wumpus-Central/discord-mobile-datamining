@@ -32,11 +32,11 @@ arg5.createValueIterator = function createValueIterator(arg0) {
           } else {
             closure_1 = tmp2;
             closure_1 = 0;
-            if (closure_1 < length.length) {
+            if (closure_1 < closure_0.length) {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = length[closure_1];
+              obj1[0] = closure_0[closure_1];
               return obj1;
             } else {
               c3 = 3;
@@ -92,7 +92,7 @@ arg5.createKeyIterator = function createKeyIterator(arg0) {
           } else {
             closure_1 = tmp2;
             closure_1 = 0;
-            if (closure_1 < length.length) {
+            if (closure_1 < closure_0.length) {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -152,8 +152,8 @@ arg5.createEntriesIterator = function createEntriesIterator(arg0) {
           } else {
             closure_1 = tmp2;
             closure_1 = 0;
-            if (closure_1 < length.length) {
-              const items = [closure_1, length[closure_1]];
+            if (closure_1 < closure_0.length) {
+              const items = [closure_1, closure_0[closure_1]];
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };

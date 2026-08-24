@@ -2,23 +2,23 @@
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import getEmojiUnavailableReasonDefault from "../../utils/EmojiUtils.tsx";
 import createEmptyState from "slate/SlateUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import getEmojiToGroupId from "../emojis/EmojiStore.tsx";
-import rebuild from "../threads/ActiveJoinedThreadsStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../emojis/EmojiStore.tsx";
+import closure_5 from "../threads/ActiveJoinedThreadsStore.tsx";
+import closure_6 from "../../stores/ChannelStore.tsx";
+import closure_7 from "../../stores/GuildChannelStore.tsx";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "../../stores/GuildChannelStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_9 from "../../stores/GuildMemberStore.tsx";
+import closure_10 from "../../stores/GuildRoleStore.tsx";
+import closure_11 from "../../stores/GuildStore.tsx";
+import closure_12 from "../../stores/PermissionStore.tsx";
+import closure_13 from "../../stores/RelationshipStore.tsx";
+import closure_14 from "../../stores/UserStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 import { EmojiIntention } from "../emojis/EmojiConstants.tsx";
 
-require = fn;
-function resolvePlaintextInlineVoid(text, id, id2, intention) {
+require = arg1;
+function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
   let obj = intention;
   if (intention == null) {
     obj = {};
@@ -27,24 +27,26 @@ function resolvePlaintextInlineVoid(text, id, id2, intention) {
   const allowRoles = obj.allowRoles;
   let first = text[0];
   if ("@" === first) {
-    return (function resolveUserOrRole(arr, id, id2, arg3, arg4) {
+    return (function resolveUserOrRole(arr, throwTypeErrorResult, id, arg3, arg4) {
       let tmp = callback3(arr.slice(1).split("#", 2), 2);
       const first = tmp[0];
       closure_1 = tmp3;
       let guild = null;
-      if (null != id) {
-        guild = guild.getGuild(id);
+      if (null != throwTypeErrorResult) {
+        guild = guild.getGuild(throwTypeErrorResult);
       }
       if (arg4) {
         if (null == tmp3) {
           if (null != guild) {
             sortedRoles = sortedRoles.getSortedRoles(guild.id);
             for (const item10028 of sortedRoles) {
+              let tmp10 = item10028;
               if (first === item10028.name) {
                 let obj = { type: "roleMention", roleId: null, children: null };
                 obj[1] = item10028.id;
                 let items = [{ text: "" }];
                 obj[2] = items;
+                let tmp11 = obj;
                 obj.return();
                 return obj;
               }
@@ -54,8 +56,8 @@ function resolvePlaintextInlineVoid(text, id, id2, intention) {
       }
       if (arg3) {
         let channel = null;
-        if (null != id2) {
-          channel = channel.getChannel(id2);
+        if (null != id) {
+          channel = channel.getChannel(id);
         }
         if (null == channel) {
           return null;
@@ -63,31 +65,31 @@ function resolvePlaintextInlineVoid(text, id, id2, intention) {
           if (channel.isPrivate()) {
             let recipients = channel.recipients;
           } else {
-            members = members.getMembers(id);
-            recipients = members.map((item, index) => item.userId);
+            members = members.getMembers(throwTypeErrorResult);
+            recipients = members.map((userId) => userId.userId);
           }
-          const mapped = recipients.map((item, index) => user.getUser(item));
-          const found = mapped.filter((item, index) => {
-            let tmp = undefined !== item;
+          const mapped = recipients.map((arg0) => user.getUser(arg0));
+          const found = mapped.filter((username) => {
+            let tmp = undefined !== username;
             if (tmp) {
               let str = closure_1;
               let flag = {}.requireExact;
               if (flag === undefined) {
                 flag = false;
               }
-              let tmp4 = null != item;
+              let tmp4 = null != username;
               if (tmp4) {
-                const username = item.username;
+                username = username.username;
                 if (flag) {
-                  let startsWithResult = username === first;
+                  let startsWithResult = username === tmp2;
                 } else {
-                  startsWithResult = username.startsWith(first);
+                  startsWithResult = username.startsWith(tmp2);
                 }
                 if (startsWithResult) {
                   if (str == null) {
                     str = "0";
                   }
-                  startsWithResult = item.discriminator === str;
+                  startsWithResult = username.discriminator === str;
                 }
                 tmp4 = startsWithResult;
               }
@@ -108,18 +110,18 @@ function resolvePlaintextInlineVoid(text, id, id2, intention) {
         }
       }
       return null;
-    })(text, id, id2, tmp, tmp2);
+    })(text, throwTypeErrorResult, id, tmp, tmp2);
   } else if (":" === first) {
     const EMOJI_NAME_RE = parseRawEmojiObjectDefault.EMOJI_NAME_RE;
     const match = EMOJI_NAME_RE.exec(text);
     let tmp7 = null;
     if (null != match) {
-      disambiguatedEmojiContext = disambiguatedEmojiContext.getDisambiguatedEmojiContext(id);
+      disambiguatedEmojiContext = disambiguatedEmojiContext.getDisambiguatedEmojiContext(throwTypeErrorResult);
       const customEmoji = disambiguatedEmojiContext.getCustomEmoji();
       let obj2 = customEmoji.get(match[1]);
       let channel = null;
-      if (null != id2) {
-        channel = channel.getChannel(id2);
+      if (null != id) {
+        channel = channel.getChannel(id);
       }
       tmp7 = null;
       if (null != obj2) {
@@ -149,14 +151,15 @@ function resolvePlaintextInlineVoid(text, id, id2, intention) {
     }
     return tmp7;
   } else if ("#" === first) {
-    return (function resolveChannel(arr, id) {
-      if (null == id) {
+    return (function resolveChannel(arr, throwTypeErrorResult) {
+      if (null == throwTypeErrorResult) {
         return null;
       } else {
         if (arr.length > 3) {
           if ("\"" === arr[1]) {
-            textChannelNameDisambiguations = textChannelNameDisambiguations.getTextChannelNameDisambiguations(id);
-            const num = callback2(11).keys(textChannelNameDisambiguations);
+            let num = 1;
+            textChannelNameDisambiguations = textChannelNameDisambiguations.getTextChannelNameDisambiguations(throwTypeErrorResult);
+            num = callback2(11).keys(textChannelNameDisambiguations);
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
@@ -165,7 +168,7 @@ function resolvePlaintextInlineVoid(text, id, id2, intention) {
         }
         const substr = arr.slice(1);
       }
-    })(text, id);
+    })(text, throwTypeErrorResult);
   } else {
     return null;
   }
@@ -194,14 +197,15 @@ function matchesUser(arg0, arg1, username, requireExact) {
   }
   return tmp;
 }
-const result = require("obj132").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
-export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, id, id2, intention) {
-  const tmp = resolvePlaintextInlineVoid(text, id, id2, intention);
+export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, throwTypeErrorResult, id, intention) {
+  const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention);
   let voidToOptionValueResult = null;
   if (null != tmp) {
     voidToOptionValueResult = createEmptyState.voidToOptionValue(tmp);
+    const obj = createEmptyState;
   }
   return voidToOptionValueResult;
 };

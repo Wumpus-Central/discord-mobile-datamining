@@ -2,11 +2,12 @@
 import ME from "../../Constants.tsx";
 import enforcing from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetricMonitorModule.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
+let obj = require;
 const Endpoints = ME.Endpoints;
-const set = new Set(["darwin", "linux", "win32", "ios", "android"]);
-let obj = { COUNT: "count", DISTRIBUTION: "distribution" };
+let set = new Set(["darwin", "linux", "win32", "ios", "android"]);
+obj = { COUNT: "count", DISTRIBUTION: "distribution" };
 class MonitoringAgent {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -19,7 +20,7 @@ class MonitoringAgent {
     tmp3 = closure_1;
     tmp4 = require("get ActivityIndicator");
     ({ NativeModules, NativeEventEmitter } = tmp4);
-    obj = require("obj132");
+    obj = require("set");
     if (obj.isAndroid()) {
       MetricMonitor = require("enforcing").default;
     } else {
@@ -37,9 +38,9 @@ prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUN
   let tags = name.tags;
   obj = { name: name.name, type: COUNT, tags: obj(5010).getGlobalTagsArray() };
   if (null != tags) {
-    const item = tags.forEach((item, index) => {
+    const item = tags.forEach((arg0) => {
       const tags = obj.tags;
-      tags.push(item);
+      tags.push(arg0);
     });
   }
   let tmpResult = tmp(500);
@@ -108,7 +109,8 @@ prototype["distribution"] = function distribution(name, value) {
   }
 };
 prototype["_flush"] = function _flush() {
-  const self = this;
+  let self = this;
+  self = this;
   if (this._metrics.length > 0) {
     let items = [];
     HermesBuiltin.arraySpread(self._metrics, 0);
@@ -119,11 +121,11 @@ prototype["_flush"] = function _flush() {
     obj[0] = items;
     obj[1] = { built_at: "1786771171113", build_number: "6244" };
     obj[1] = obj;
-    HTTP.post(obj).catch((error) => {
+    HTTP.post(obj).catch(() => {
       if (self._metrics.length + items.length < 100) {
         items = [];
-        HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(self._metrics, 0));
-        self._metrics = items;
+        HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(tmp._metrics, 0));
+        tmp._metrics = items;
       }
     });
     const postResult = HTTP.post(obj);
@@ -136,7 +138,7 @@ obj._intervalId = setInterval(() => {
   obj._flush();
 }, 120000);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   let MetricMonitor = enforcing.default;
 } else {
   MetricMonitor = NativeModules.MetricMonitor;
@@ -145,7 +147,7 @@ let nativeEventEmitter = new NativeEventEmitter(MetricMonitor);
 nativeEventEmitter.addListener("logMetric", (arg0) => {
   obj.increment(arg0, false);
 });
-const result = obj132.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
+const result = set.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
 
 export default obj;
 export const MetricType = obj;

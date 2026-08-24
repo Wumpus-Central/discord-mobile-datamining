@@ -1,10 +1,10 @@
 // discord_app/modules/applications/installApplicationOnDemandIfNeeded.native.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import createExecutable from "../../records/ApplicationRecord.tsx";
-import addApplication from "ApplicationStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../records/ApplicationRecord.tsx";
+import closure_4 from "ApplicationStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _installApplicationOnDemandIfNeeded() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -131,13 +131,14 @@ function _installApplicationOnDemandIfNeeded() {
                 callback(location) {
                   if (null != location.location) {
                     if (null != closure_1_3) {
-                      callback(table[7]);
-                      const obj = { application_id: null, location: null, section_name: null, source: null };
+                      let obj = callback(table[7]);
+                      obj = { application_id: null, location: null, section_name: null, source: null };
                       obj[0] = callback;
-                      ({ location: obj2[1], sectionName: obj2[2], entrypoint: obj2[3] } = closure_1_3);
+                      ({ location: obj2[1], sectionName: obj2[2], entrypoint: obj2[3] } = tmp3);
                       obj.trackWithMetadata(obj.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
                     }
                     callback({ isAuthorized: true });
+                    tmp3 = closure_1_3;
                   } else {
                     callback({ isAuthorized: false });
                   }
@@ -168,7 +169,7 @@ function _installApplicationOnDemandIfNeeded() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 
 export const installApplicationOnDemandIfNeeded = function installApplicationOnDemandIfNeeded(arg0) {
   const self = this;

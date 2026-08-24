@@ -2,20 +2,20 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import useToggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleConnectionClosedOrResumed from "../../../../user_settings/UserSettingsProtoStore.tsx";
-import handleModifyingAppliedBoostStart from "../../../../../stores/AppliedGuildBoostStore.tsx";
-import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
-import handleConnectionOpen from "../../../../../stores/SelectedGuildStore.tsx";
+import closure_7 from "../../../../user_settings/UserSettingsProtoStore.tsx";
+import closure_8 from "../../../../../stores/AppliedGuildBoostStore.tsx";
+import closure_9 from "../../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../../stores/SelectedGuildStore.tsx";
 import items from "../../../DevToolsGuildPowerupsConstants.tsx";
 import { Endpoints } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
-function setWarningBoosts(stateFromStores, closure_2, arg2) {
+require = arg1;
+function setWarningBoosts() {
   const self = this;
   const apply = _setWarningBoosts.apply;
   if (typeof apply === "unknown") {
@@ -66,7 +66,7 @@ function _setWarningBoosts() {
               obj1 = { url: null, body: null, rejectWithError: true };
               obj1[0] = closure_1_17.APPLIED_BOOST_MODIFY_END_DATE;
               const obj2 = { applied_boost_ids: null, ends_at: null };
-              obj2[0] = lib.map((item, index) => item.id);
+              obj2[0] = lib.map((id) => id.id);
               let addResult = null;
               if (!dependencyMap) {
                 let obj3 = lib(3975)();
@@ -194,13 +194,13 @@ function GuildDCSwitchRow(dc) {
   const items = [dc, guildId];
   const callback = React.useCallback((arg0) => {
     if (arg0) {
-      let tmpResult = dc(dependencyMap[18]);
+      let tmpResult = tmp(tmp2[18]);
       const result = tmpResult.markContentAsDismissed(dc, guildId, false);
     } else {
-      tmpResult = dc(dependencyMap[19]);
-      const result1 = tmpResult.removeDismissedRecurringContent(dc(dependencyMap[20]).DismissibleContent.GUILD_POWERUP_NOTIFICATION);
-      const result2 = dc(dependencyMap[18]).unmarkContentAsDismissed(dc, guildId);
-      const obj2 = dc(dependencyMap[18]);
+      tmpResult = tmp(tmp2[19]);
+      const result1 = tmpResult.removeDismissedRecurringContent(dc(closure_1_2[20]).DismissibleContent.GUILD_POWERUP_NOTIFICATION);
+      const result2 = dc(closure_1_2[18]).unmarkContentAsDismissed(dc, guildId);
+      const obj2 = dc(closure_1_2[18]);
     }
   }, items);
   return callback4(dc(7178).TableSwitchRow, { label: callback2(dc), value: dc.isDismissed, onValueChange: callback });
@@ -208,12 +208,15 @@ function GuildDCSwitchRow(dc) {
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ GUILD_DCS: unpackModuleId, SERVER_TAG_GUILD_DCS: closure_12, USER_DCS: map1, VANITY_URL_POWERUP_DCS: closure_14, getGuildDCString: closure_15, getUserDCString: closure_16 } = items);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { container: null, scrollContainer: null, noGuildContainer: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+let obj1 = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { flex: 1, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_32 };
 let closure_20 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx");
+let obj2 = { flex: 1, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_32 };
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsScreen.tsx");
 
 export default function DevToolsGuildPowerupsScreen() {
   const tmp = callback5();
@@ -238,11 +241,11 @@ export default function DevToolsGuildPowerupsScreen() {
   const items2 = [closure_7];
   importDefault = obj2.useStateFromStoresArray(items2, () => {
     const items = [...closure_1_12];
-    return items.filter((item, index) => {
+    return items.filter((GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK) => {
       let isContentDismissedResult = null != closure_0;
       if (isContentDismissedResult) {
-        isContentDismissedResult = stateFromStores(closure_1_2[18]).isContentDismissed(item, tmp);
-        const obj = stateFromStores(closure_1_2[18]);
+        isContentDismissedResult = closure_1_0(closure_1_2[18]).isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, tmp);
+        const obj = closure_1_0(closure_1_2[18]);
       }
       return isContentDismissedResult;
     });
@@ -292,27 +295,27 @@ export default function DevToolsGuildPowerupsScreen() {
     const obj4 = { title: "Warning State", hasIcons: false, children: null };
     const obj5 = { label: "Set Half Boosts expiring in 1 day", onPress: null };
     obj5[1] = function onPress() {
-      return setWarningBoosts(stateFromStores, arr.slice(Math.floor(arr.length / 2)), false);
+      return closure_1_21(stateFromStores, arr.slice(Math.floor(arr.length / 2)), false);
     };
     const items7 = [callback4(tmp5(6291).TableRow, obj5), ];
     const obj6 = { label: "Reset End Date", onPress: null };
     obj6[1] = function onPress() {
-      return setWarningBoosts(stateFromStores, closure_2, true);
+      return closure_1_21(stateFromStores, closure_2, true);
     };
     items7[1] = callback4(tmp5(6291).TableRow, obj6);
     obj4[2] = items7;
-    items6[1] = callback(tmp5(6286).TableRowGroup, obj4);
+    items6[1] = closure_19(tmp5(6286).TableRowGroup, obj4);
     const obj7 = { title: "User Level DCs", hasIcons: false, children: null };
-    obj7[2] = closure_13.map((item, index) => callback(closure_24, { dc: item }, item));
+    obj7[2] = closure_13.map((dc) => callback(closure_24, { dc }, dc));
     items6[2] = callback4(tmp5(6286).TableRowGroup, obj7);
     const obj8 = { title: "Guild Level DCs", hasIcons: false, children: null };
-    obj8[2] = closure_11.map((item, index) => closure_1_18(GuildDCSwitchRow, { dc: item, guildId: stateFromStores, isDismissed: closure_1.includes(item) }, item));
+    obj8[2] = closure_11.map((dc) => closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc));
     items6[3] = callback4(tmp5(6286).TableRowGroup, obj8);
     const obj9 = { title: "Server Tag Guild Level DCs", hasIcons: false, children: null };
-    obj9[2] = closure_12.map((item, index) => closure_1_18(GuildDCSwitchRow, { dc: item, guildId: stateFromStores, isDismissed: closure_1.includes(item) }, item));
+    obj9[2] = closure_12.map((dc) => closure_1_18(closure_1_25, { dc, guildId: stateFromStores, isDismissed: closure_1.includes(dc) }, dc));
     items6[4] = callback4(tmp5(6286).TableRowGroup, obj9);
     const obj10 = { title: "Powerup Rollback DCs", hasIcons: false, children: null };
-    obj10[2] = closure_14.map((item, index) => callback(closure_24, { dc: item }, item));
+    obj10[2] = closure_14.map((dc) => callback(closure_24, { dc }, dc));
     items6[5] = callback4(tmp5(6286).TableRowGroup, obj10);
     const obj11 = { title: "System Messages", hasIcons: false, children: null };
     const obj12 = { label: "Send Powerups System Message", onPress: null };
@@ -331,7 +334,8 @@ export default function DevToolsGuildPowerupsScreen() {
     obj11[2] = callback4(tmp5(6291).TableRow, obj12);
     items6[6] = callback4(tmp5(6286).TableRowGroup, obj11);
     obj[2] = items6;
-    tmp16Result = callback(closure_5, obj);
+    tmp16Result = tmp16(closure_5, obj);
+    const tmp17 = closure_5;
   }
   return tmp16Result;
 };

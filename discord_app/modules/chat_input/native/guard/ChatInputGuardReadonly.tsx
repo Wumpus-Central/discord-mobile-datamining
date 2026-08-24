@@ -1,19 +1,19 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardReadonly.tsx
 import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
 import { isTextChannel } from "../../../../records/ChannelRecord.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import comparator from "../../../../stores/GuildChannelStore.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildChannelStore.tsx";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "../../../../stores/GuildChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
-import generateOldThreadCutoff from "../../../../stores/ReadStateStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/RelationshipStore.tsx";
+import closure_10 from "../../../../stores/UserStore.tsx";
 import { TextAreaCta } from "../ChatInputConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 function sortChannelsByLastMessageId(id, id2) {
   const obj = DISCORD_EPOCHDefault;
   return obj.compare(closure_8.lastMessageId(id2.id), closure_8.lastMessageId(id.id));
@@ -45,24 +45,25 @@ const memoResult = importAllResult.memo(function ChatInputGuardReadonly(guildId)
   tmpResult = tmp(tmp2[12]);
   const items1 = [closure_5];
   stateFromStoresArray = tmpResult.useStateFromStoresArray(items1, () => {
-    const mapped = closure_1_5.getChannels(guildId)[closure_1_6].map((item, index) => item.channel);
-    return mapped.sort(sortChannelsByLastMessageId);
+    const mapped = closure_1_5.getChannels(guildId)[closure_1_6].map((channel) => channel.channel);
+    return mapped.sort(closure_1_15);
   });
   const items2 = [closure_7];
   const items3 = [stateFromStoresArray];
   stateFromStoresArray1 = guildId(stateFromStores[12]).useStateFromStoresArray(items2, () => {
     const found = stateFromStoresArray.filter(guildId(stateFromStores[13]).isNotNullish);
-    const found1 = found.filter((item, index) => callback(item.type));
-    return found1.filter((item, index) => closure_7.can(constants.SEND_MESSAGES, item));
+    const found1 = found.filter((type) => callback(type.type));
+    return found1.filter((arg0) => closure_7.can(constants.SEND_MESSAGES, arg0));
   }, items3);
   if (null != stateFromStores) {
+    obj = { text: null, handlePress: null };
     const intl2 = tmp(tmp2[14]).intl;
     obj = { channelName: null };
     obj[0] = tmp(tmp2[15]).computeChannelName(stateFromStores, closure_10, closure_9);
     obj[0] = intl2.formatToPlainString(tmp(tmp2[14]).t.q1krfU, obj);
     obj[1] = function handlePress() {
-      lib(stateFromStores[16]);
-      const obj = { cta_type: TextAreaCta.CHANNEL_LINK };
+      let obj = lib(stateFromStores[16]);
+      obj = { cta_type: closure_1_11.CHANNEL_LINK };
       obj.trackWithMetadata(closure_1_12.TEXT_AREA_CTA_CLICKED, obj);
       guildId(stateFromStores[17]).transitionToGuild(guildId, stateFromStores.id);
     };
@@ -73,8 +74,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardReadonly(guildId)
     const intl = tmp(tmp2[14]).intl;
     obj1[0] = intl.string(tmp(tmp2[14]).t["gHD/nZ"]);
     obj1[1] = function handlePress() {
-      lib(stateFromStores[16]);
-      const obj = { cta_type: TextAreaCta.CHANNEL_LIST };
+      let obj = lib(stateFromStores[16]);
+      obj = { cta_type: closure_1_11.CHANNEL_LIST };
       obj.trackWithMetadata(closure_1_12.TEXT_AREA_CTA_CLICKED, obj);
       guildId(stateFromStores[17]).transitionToGuild(guildId, undefined);
     };
@@ -91,8 +92,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardReadonly(guildId)
     obj3[0] = str;
     obj2[0] = intl4.formatToPlainString(tmp(tmp2[14]).t.q1krfU, obj3);
     obj2[1] = function handlePress() {
-      lib(stateFromStores[16]);
-      const obj = { cta_type: TextAreaCta.CHANNEL_LINK };
+      let obj = lib(stateFromStores[16]);
+      obj = { cta_type: closure_1_11.CHANNEL_LINK };
       obj.trackWithMetadata(closure_1_12.TEXT_AREA_CTA_CLICKED, obj);
       guildId(stateFromStores[17]).transitionToGuild(guildId, stateFromStoresArray1[0].id);
     };
@@ -105,6 +106,6 @@ const memoResult = importAllResult.memo(function ChatInputGuardReadonly(guildId)
   obj4[3] = text;
   return jsx(importDefault(stateFromStores[19]), { type: "simple-action", actionOnPress: handlePress, actionLabel: null, message: null });
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReadonly.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReadonly.tsx");
 
 export default memoResult;

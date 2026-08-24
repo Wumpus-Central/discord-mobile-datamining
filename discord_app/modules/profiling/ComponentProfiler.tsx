@@ -1,5 +1,5 @@
 // discord_app/modules/profiling/ComponentProfiler.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_0 from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 class StatCollector {
@@ -31,27 +31,28 @@ Object.defineProperty(prototype, "mean", {
 });
 let closure_3 = {};
 let c4 = true;
-const result = require("obj132").fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
+const result = require("set").fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
 export default function ComponentProfiler(arg0) {
   ({ id, children } = arg0);
   return <React.Profiler id={id} onRender={React.useCallback((arg0, arg1, arg2) => {
     if (closure_4) {
       if (!(arg0 in dependencyMap)) {
-        if (typeof ctor !== "function") {
+        if (typeof closure_2 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const obj = { mount: null, update: null, nestedUpdate: null };
-        obj[0] = Object.create(ctor.prototype);
-        if (typeof ctor !== "function") {
+        obj[0] = Object.create(closure_2.prototype);
+        if (typeof closure_2 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj[1] = Object.create(ctor.prototype);
-        if (typeof ctor !== "function") {
+        obj[1] = Object.create(closure_2.prototype);
+        if (typeof closure_2 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj[2] = Object.create(ctor.prototype);
+        obj[2] = Object.create(closure_2.prototype);
         dependencyMap[arg0] = obj;
+        const tmp3 = dependencyMap;
       }
       if ("mount" === arg1) {
         const mount = dependencyMap[arg0].mount;
@@ -129,8 +130,8 @@ export const serializeComponentRenderAverages = function serializeComponentRende
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}`;
     const entries = Object.entries(closure_3);
     str = `Component Render Stats (microseconds):
-  ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((item, index) => {
-      [arr, tmp] = item;
+  ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((arg0) => {
+      [arr, tmp] = arg0;
       let num = 20;
       if (arr.length <= 20) {
         num = arr.length;

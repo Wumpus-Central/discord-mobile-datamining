@@ -1,13 +1,13 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaCarousel.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_7 from "../../../a11y/AccessibilityStore.tsx";
 import { NOOP } from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function AppStoreOverlayScreenshotItem(index) {
   index = index.index;
   const mediaViewerSources = index.mediaViewerSources;
@@ -20,8 +20,8 @@ function AppStoreOverlayScreenshotItem(index) {
     ref,
     style: tmp.mediaItem,
     onPress: ref.useCallback(() => {
-      index(onGetGamePress[7]);
-      const obj = { initialSources: mediaViewerSources, initialIndex: index, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress };
+      let obj = index(onGetGamePress[7]);
+      obj = { initialSources: mediaViewerSources, initialIndex: index, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress };
       const result = obj.openAppStoreOverlayMediaModal(obj);
     }, items),
     accessibilityLabel: null,
@@ -29,6 +29,7 @@ function AppStoreOverlayScreenshotItem(index) {
   };
   const intl = index(onGetGamePress[8]).intl;
   obj[3] = intl.string(index(onGetGamePress[8]).t.lWDPcO);
+  obj = { source: obj, style: tmp.media, resizeMode: "cover", accessibilityIgnoresInvertColors: true };
   obj = { uri: index.media.url };
   obj[4] = callback(mediaViewerSources(onGetGamePress[9]), obj);
   return callback(closure_4, obj);
@@ -38,6 +39,7 @@ function AppStoreOverlayTrailerItem(mediaViewerSources) {
   mediaViewerSources = mediaViewerSources.mediaViewerSources;
   const onGetGamePress = mediaViewerSources.onGetGamePress;
   let ref;
+  closure_4 = undefined;
   const tmp = callback3();
   ref = ref.useRef(null);
   closure_4 = ref.useRef(0);
@@ -56,8 +58,8 @@ function AppStoreOverlayTrailerItem(mediaViewerSources) {
     ref,
     style: tmp.mediaItem,
     onPress: ref.useCallback(() => {
-      index(onGetGamePress[7]);
-      const obj = { initialSources: mediaViewerSources, initialIndex: index, initialIndexVideoStartTime: ref.current, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress };
+      let obj = index(onGetGamePress[7]);
+      obj = { initialSources: mediaViewerSources, initialIndex: index, initialIndexVideoStartTime: ref.current, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress };
       const result = obj.openAppStoreOverlayMediaModal(obj);
     }, items1),
     accessibilityLabel: null,
@@ -94,9 +96,11 @@ function AppStoreOverlayMediaCarouselItem(arg0) {
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let c11 = 1080;
 let c12 = 1920;
-const createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
+createCacheKey = { carousel: null, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
+createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
+let obj1 = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { width: 166, height: 289, borderRadius: ThemesDefault.space.PX_16, overflow: "hidden", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[3] = {};
@@ -106,33 +110,36 @@ obj4.alignItems = "center";
 obj4.justifyContent = "center";
 createCacheKey[4] = obj4;
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaCarousel.tsx");
+const obj2 = { width: 166, height: 289, borderRadius: ThemesDefault.space.PX_16, overflow: "hidden", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
+const obj3 = {};
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaCarousel.tsx");
 
 export default function AppStoreOverlayMediaCarousel(media) {
   media = media.media;
   const onGetGamePress = media.onGetGamePress;
+  closure_2 = undefined;
   const items = [media];
-  closure_2 = React.useMemo(() => media.map((item, index) => {
-    if ("trailer" === item.type) {
+  closure_2 = React.useMemo(() => media.map((type) => {
+    if ("trailer" === type.type) {
       let obj = { uri: null, mediaIndex: null, width: null, height: null, videoURI: null, thumbnail: null, accessoryType: "embed", disableDownload: true };
-      obj[0] = item.url;
-      obj[1] = index;
+      obj[0] = type.url;
+      obj[1] = arg1;
       obj[2] = closure_11;
       obj[3] = closure_12;
-      obj[4] = item.url;
+      obj[4] = type.url;
       let tmp6;
-      if (null != item.posterUrl) {
+      if (null != type.posterUrl) {
         obj = { width: null, height: null, uri: null };
         obj[0] = tmp3;
         obj[1] = tmp4;
-        obj[2] = item.posterUrl;
+        obj[2] = type.posterUrl;
         tmp6 = obj;
       }
       obj[5] = tmp6;
     } else {
       obj = { uri: null, mediaIndex: null, width: null, height: null, accessoryType: "embed", disableDownload: true };
-      obj[0] = item.url;
-      obj[1] = index;
+      obj[0] = type.url;
+      obj[1] = arg1;
       obj[2] = closure_11;
       obj[3] = closure_12;
     }
@@ -142,7 +149,7 @@ export default function AppStoreOverlayMediaCarousel(media) {
   if (0 !== media.length) {
     let obj = { horizontal: true, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, children: null };
     ({ carousel: obj[3], carouselContent: obj[4] } = tmp);
-    obj[5] = media.map((item, index) => closure_1_9(AppStoreOverlayMediaCarouselItem, { media: item, index, mediaViewerSources: closure_2, onGetGamePress }, "" + item.type + "-" + index));
+    obj[5] = media.map((media, index) => closure_1_9(closure_1_16, { media, index, mediaViewerSources: closure_2, onGetGamePress }, "" + media.type + "-" + index));
     tmp2 = callback(closure_5, obj);
   }
   return tmp2;

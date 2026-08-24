@@ -1,21 +1,23 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandRootScreen.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
 import TRUE_OPTION_NAME from "../ApplicationCommandConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: c9 } = TRUE_OPTION_NAME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { content: null, sectionHeader: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
+let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
 
 export default function ContextMenuCommandRootScreen(navigation) {
   navigation = navigation.navigation;
@@ -24,6 +26,8 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const commandTargetId = params.commandTargetId;
   const onPressAppCommand = params.onPressAppCommand;
   const onClose = params.onClose;
+  let stateFromStores;
+  closure_6 = undefined;
   closure_7 = undefined;
   let commands;
   let commandsByActiveSection;
@@ -40,7 +44,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   let scaledTextLineHeight;
   let obj = navigation(onPressAppCommand[8]);
   let items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => guild.getGuild(channel.guild_id));
+  stateFromStores = obj.useStateFromStores(items, () => guild.getGuild(channel.guild_id));
   obj1 = stateFromStores;
   closure_6 = stateFromStores.useRef(false);
   const tmp4 = onClose(stateFromStores.useState(""), 2);
@@ -77,8 +81,8 @@ export default function ContextMenuCommandRootScreen(navigation) {
   let items3 = [sectionDescriptors];
   sections = obj1.useMemo(() => {
     sections = {};
-    const item = sectionDescriptors.forEach((item, index) => {
-      sections[item.id] = item;
+    const item = sectionDescriptors.forEach((id) => {
+      sections[id.id] = id;
     });
     return { sections };
   }, items3).sections;
@@ -88,7 +92,8 @@ export default function ContextMenuCommandRootScreen(navigation) {
       tmp();
     }
     closure_6.current = true;
-    const obj = { channel, guild: stateFromStores };
+    obj = { command, optionValues: {}, context: obj, commandTargetId };
+    obj = { channel, guild: stateFromStores };
     channel(onPressAppCommand[11])(obj);
     let parent = navigation.getParent();
     if (parent == null) {
@@ -99,7 +104,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   let items5 = [commandsByActiveSection, navigation, callback];
   callback1 = obj1.useCallback((section) => {
     navigation = section;
-    const found = commandsByActiveSection.find((item, index) => item.section.id === section.id);
+    const found = commandsByActiveSection.find((section) => section.section.id === section.id);
     let data;
     if (found != null) {
       data = found.data;
@@ -113,19 +118,19 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const memo = obj1.useMemo(() => {
     if (!loading) {
       if (0 !== commands.length) {
-        const found = commandsByActiveSection.find((item, index) => item.section.id === constants.FRECENCY);
-        const found1 = commandsByActiveSection.filter((item, index) => item.section.id !== constants.FRECENCY);
+        const found = commandsByActiveSection.find((section) => section.section.id === constants.FRECENCY);
+        const found1 = commandsByActiveSection.filter((section) => section.section.id !== constants.FRECENCY);
         let mapped;
         if (found != null) {
           const data = found.data;
-          mapped = data.map((item, index) => ({ type: "command", command: item }));
+          mapped = data.map((command) => ({ type: "command", command }));
         }
         if (mapped == null) {
           mapped = [];
         }
         const obj = { frecencyItems: null, appItems: null };
         obj[0] = mapped;
-        obj[1] = found1.map((item, index) => ({ type: "app", section: item.section }));
+        obj[1] = found1.map((section) => ({ type: "app", section: section.section }));
         return obj;
       }
     }
@@ -146,7 +151,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
         const items3 = [items2];
         return items3;
       } else if (closure_7) {
-        const items4 = [arr.map((item, index) => ({ type: "command", command: item }))];
+        const items4 = [arr.map((command) => ({ type: "command", command }))];
         return items4;
       } else {
         const items5 = [];
@@ -161,7 +166,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
     }
   }, items7);
   const items8 = [memo1];
-  const memo2 = obj1.useMemo(() => memo1.map((item, index) => item.length), items8);
+  const memo2 = obj1.useMemo(() => memo1.map((arg0) => arg0.length), items8);
   const tmp18 = callback();
   closure_18 = tmp18;
   c19 = "text-sm/semibold";
@@ -209,7 +214,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
       obj1 = { item: null, onPress: null, section: null, start: null, end: null };
       obj1[0] = tmp.command;
       obj1[1] = function onPress() {
-        return callback(closure_0.command);
+        return closure_1_13(closure_0.command);
       };
       obj1[2] = sections[tmp.command.applicationId];
       obj1[3] = tmp2;
@@ -219,7 +224,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
       obj = { section: null, onPress: null, start: null, end: null };
       obj[0] = tmp.section;
       obj[1] = function onPress() {
-        return callback1(closure_0.section);
+        return closure_1_14(closure_0.section);
       };
       obj[2] = tmp2;
       obj[3] = tmp3;
@@ -264,6 +269,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
     obj3[2] = intl.string(tmp(tmp2[15]).t.m1UwbP);
     obj1[1] = sectionDescriptors(tmp(tmp2[18]).SearchField, obj3);
     tmp27Result = tmp27(closure_6, obj1);
+    const tmp28 = closure_6;
   }
   const obj4 = { children: null };
   const items13 = [tmp27Result, ];

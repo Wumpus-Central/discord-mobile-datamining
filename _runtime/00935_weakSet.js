@@ -1,5 +1,5 @@
 // _runtime/00935_weakSet.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakSet = new WeakSet();
@@ -36,7 +36,8 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
       obj[1] = recordOutputs;
       tmpResult = tmp(822);
       tmpResult.fill(arg0, "connect", (arg0) => {
-        closure_0 = asyncGeneratorStep(function(arg0) {
+        closure_0 = arg0;
+        closure_0 = closure_1_2(function(arg0) {
           const self = this;
           closure_1 = arg0;
           closure_2 = [...arguments].slice();
@@ -108,13 +109,13 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
                   return obj3;
                 } else {
                   closure_2 = arg1;
-                  const result = obj(dependencyMap[4]).wrapTransportOnMessage(closure_0, closure_0);
-                  const obj7 = obj(dependencyMap[4]);
-                  obj(dependencyMap[4]).wrapTransportSend(closure_0, closure_0);
-                  const obj8 = obj(dependencyMap[4]);
-                  obj(dependencyMap[4]).wrapTransportOnClose(closure_0);
-                  const obj9 = obj(dependencyMap[4]);
-                  obj(dependencyMap[4]).wrapTransportError(closure_0);
+                  const result = obj(closure_3_1[4]).wrapTransportOnMessage(closure_0, closure_0);
+                  const obj7 = obj(closure_3_1[4]);
+                  obj(closure_3_1[4]).wrapTransportSend(closure_0, closure_0);
+                  const obj8 = obj(closure_3_1[4]);
+                  obj(closure_3_1[4]).wrapTransportOnClose(closure_0);
+                  const obj9 = obj(closure_3_1[4]);
+                  obj(closure_3_1[4]).wrapTransportError(closure_0);
                   c7 = 3;
                   obj = { value: null, done: true };
                   obj[0] = closure_2;

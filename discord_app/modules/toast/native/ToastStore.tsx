@@ -29,6 +29,6 @@ const toastStore = new ToastStore(dispatcherDefault, {
     c0 = null;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/toast/native/ToastStore.tsx");
+const result = require("set").fileFinishedImporting("modules/toast/native/ToastStore.tsx");
 
 export default toastStore;

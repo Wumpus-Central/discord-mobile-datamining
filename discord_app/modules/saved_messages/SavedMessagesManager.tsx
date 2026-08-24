@@ -1,8 +1,8 @@
 // discord_app/modules/saved_messages/SavedMessagesManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-let require = fn;
+let require = arg1;
 function _refreshSavedMessages() {
   const self = this;
   const tmp = callback(function*() {
@@ -96,6 +96,6 @@ let prototype = function SavedMessagesManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("obj132").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
 
 export default prototype;

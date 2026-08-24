@@ -4,12 +4,12 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Button from "../../../../design/void/native.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function ComparisonRow(entry) {
   entry = entry.entry;
   const tmp = callback3();
@@ -17,8 +17,8 @@ function ComparisonRow(entry) {
   const combined = "" + entry.color;
   let redesignVariant = null;
   if (entry.look !== Button.ButtonLooks.LINK) {
-    redesignVariant = Button.getRedesignVariant(entry.color);
-    const tmp4Result = Button;
+    redesignVariant = tmp4(1297).getRedesignVariant(entry.color);
+    const tmp4Result = tmp4(1297);
   }
   items = [tmp.comparisonRow, ];
   let darkBg = hasItem;
@@ -39,7 +39,7 @@ function ComparisonRow(entry) {
   }
   items1[2] = str2;
   obj[2] = items1;
-  const items2 = [callback(Text.Text, obj), ];
+  const items2 = [closure_4(Text.Text, obj), ];
   obj1 = { style: tmp.comparisonButtons, children: null };
   const obj2 = { style: tmp.comparisonSide, children: null };
   const items3 = [callback2(Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "legacy" }), ];
@@ -47,7 +47,7 @@ function ComparisonRow(entry) {
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (entry.look === Button.ButtonLooks.FILLED) {
+    if (entry.look === tmp4(1297).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -57,31 +57,31 @@ function ComparisonRow(entry) {
   };
   items3[1] = callback2(Button.Button, obj3);
   obj2[1] = items3;
-  const items4 = [callback(closure_3, obj2), ];
+  const items4 = [closure_4(closure_3, obj2), ];
   if (null != redesignVariant) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.comparisonSide;
-    const items5 = [callback2(Text.Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
+    const items5 = [tmp9(tmp4(4734).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
     const obj5 = { variant: null, size: "md", text: null, onPress: null };
     obj5[0] = redesignVariant;
     obj5[2] = redesignVariant;
     obj5[3] = function onPress() {
 
     };
-    items5[1] = callback2(Button2.Button, obj5);
+    items5[1] = tmp9(tmp4(4745).Button, obj5);
     obj4[1] = items5;
-    let tmp9Result = callback(closure_3, obj4);
+    let tmp9Result = tmp7(tmp8, obj4);
   } else {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.comparisonSide;
-    obj6[1] = callback2(Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
-    tmp9Result = callback2(closure_3, obj6);
+    obj6[1] = tmp9(tmp4(4734).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
+    tmp9Result = tmp9(tmp8, obj6);
   }
   items4[1] = tmp9Result;
   obj1[1] = items4;
-  items2[1] = callback(closure_3, obj1);
+  items2[1] = closure_4(closure_3, obj1);
   obj[1] = items2;
-  return callback(closure_3, obj);
+  return closure_4(closure_3, obj);
 }
 function ComboRow(combo) {
   combo = combo.combo;
@@ -105,12 +105,12 @@ function ComboRow(combo) {
     str2 = "text-default";
   }
   const items1 = [combined, " (", combo.count, ")"];
-  const items2 = [callback(Text.Text, { variant: "text-xs/medium", color: str2, children: items1 }), ];
+  const items2 = [closure_4(Text.Text, { variant: "text-xs/medium", color: str2, children: items1 }), ];
   obj = { look: combo.look, color: combo.color, size: combo.size, shrink: combo.shrink, text: combined, textStyle: null, onPress: null };
   let darkText = null;
   if (hasItem) {
     darkText = null;
-    if (combo.look === Button.ButtonLooks.FILLED) {
+    if (combo.look === tmp6(1297).ButtonLooks.FILLED) {
       darkText = tmp.darkText;
     }
   }
@@ -118,9 +118,9 @@ function ComboRow(combo) {
   obj[6] = function onPress() {
 
   };
-  items2[1] = callback2(Button.Button, obj);
+  items2[1] = closure_5(Button.Button, obj);
   obj[1] = items2;
-  return callback(closure_3, obj);
+  return closure_4(closure_3, obj);
 }
 noopAll;
 ({ ScrollView: obj1, View: c3 } = get_ActivityIndicator);
@@ -211,16 +211,21 @@ let set = new Set(items1);
 const obj39 = { comboRow: null, darkText: null, darkBg: null, comparisonRow: null, comparisonButtons: null, comparisonSide: null, container: null, header: null };
 const obj38 = { look: require("Button").ButtonLooks.OUTLINED, color: require("Button").ButtonColors.WHITE, size: require("Button").ButtonSizes.SMALL, shrink: false, count: 1 };
 obj39[0] = { gap: 4, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_4 };
-const createCacheKey = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
+createCacheKey = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
 obj39[1] = createCacheKey;
+const obj40 = { gap: 4, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_4 };
 obj39[2] = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600, borderRadius: ThemesDefault.radii.sm, marginHorizontal: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8 };
+const obj42 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600, borderRadius: ThemesDefault.radii.sm, marginHorizontal: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8 };
 obj39[3] = { gap: 4, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_8 };
+const obj43 = { gap: 4, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_8 };
 obj39[4] = { flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "flex-end" };
 obj39[5] = { flex: 1, gap: 2 };
+const obj44 = { flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "flex-end" };
 obj39[6] = { paddingBottom: ThemesDefault.space.PX_48 };
+const obj45 = { paddingBottom: ThemesDefault.space.PX_48 };
 obj39[7] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(obj39);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemLegacyButton.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemLegacyButton.tsx");
 
 export default function UserSettingsDesignSystemLegacyButton() {
   const tmp = callback3();
@@ -233,9 +238,12 @@ export default function UserSettingsDesignSystemLegacyButton() {
       let tmp3 = look;
       let tmp2 = nextResult;
       if (null == obj[look]) {
+        let tmp4 = look;
         obj[tmp3] = [];
       }
+      let tmp5 = look;
       let arr = obj[tmp3];
+      let tmp6 = nextResult;
       arr = arr.push(tmp2);
       continue;
     }
@@ -253,8 +261,10 @@ export default function UserSettingsDesignSystemLegacyButton() {
       let combined = "" + nextResult.look + "/" + nextResult.color;
       let tmp5 = combined;
       if (!set.has(combined)) {
+        let tmp6 = combined;
         let addResult = set.add(tmp5);
         let obj = { look: null, color: null };
+        let tmp8 = nextResult;
         ({ look: obj2[0], color: obj2[1] } = tmp3);
         let arr = items.push(obj);
       }
@@ -266,29 +276,32 @@ export default function UserSettingsDesignSystemLegacyButton() {
   while (iter !== undefined) {
     let tmp5 = nextResult;
     if (null == obj[nextResult.look]) {
+      let tmp6 = nextResult;
       obj[tmp5.look] = [];
     }
+    let tmp7 = nextResult;
     let arr = obj[tmp5.look];
     arr = arr.push(tmp5);
     continue;
   }
+  obj = { style: tmp.container, children: null };
   obj = { spacing: 4, style: tmp.header, children: null };
   items = [callback2(Text.Text, { variant: "heading-xl/bold", children: "Migration Mapping" }), callback2(Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "Legacy (uikit-native) \u2192 Mana side-by-side" })];
   obj[2] = items;
   const items1 = [callback(Stack.Stack, obj), , , ];
   const entries = Object.entries(obj);
-  items1[1] = entries.map((item, index) => {
-    [tmp, arr] = item;
-    return callback2(callback(8083).FormSection, { title: tmp, children: arr.map((item, index) => callback(closure_8, { entry: item }, index)) }, "cmp-" + tmp);
+  items1[1] = entries.map((arg0) => {
+    [tmp, arr] = arg0;
+    return callback2(callback(8083).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
   });
   obj1 = { spacing: 4, style: tmp.header, children: null };
   const items2 = [callback2(Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
   obj1[2] = items2;
   items1[2] = callback(Stack.Stack, obj1);
   const entries1 = Object.entries(tmp2);
-  items1[3] = entries1.map((item, index) => {
-    [tmp, arr] = item;
-    return callback2(callback(8083).FormSection, { title: "" + tmp + " (" + arr.reduce((acc, item, index) => acc + item.count, 0) + " usages)", children: arr.map((item, index) => callback(closure_9, { combo: item }, index)) }, tmp);
+  items1[3] = entries1.map((arg0) => {
+    [tmp, arr] = arg0;
+    return callback2(callback(8083).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
   });
   obj[1] = items1;
   return callback(closure_2, obj);

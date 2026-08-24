@@ -2,7 +2,7 @@
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import _openSafetyFlow from "openSafetyFlow.native.tsx";
 
-require = fn;
+require = arg1;
 function handleConnectionOpenSupplemental() {
   _openSafetyFlow.openSafetyFlow();
 }
@@ -21,6 +21,6 @@ let prototype = function SafetyFlowsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
 
 export default prototype;

@@ -2,12 +2,13 @@
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function GIFFavButton(source) {
   source = source.source;
+  let uri;
   let isFavoriteGIF;
-  let uri = source.isGIFV ? source.embedURI : source.sourceURI;
+  uri = source.isGIFV ? source.embedURI : source.sourceURI;
   if (uri == null) {
     uri = source.uri;
   }
@@ -20,7 +21,7 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
   items[7] = uri;
   const callback = importAllResult.useCallback(() => {
     if (isFavoriteGIF) {
-      let tmpResult = source(isFavoriteGIF[3]);
+      let tmpResult = tmp(tmp2[3]);
       tmpResult.removeFavoriteGIF(uri);
       let obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
       const intl2 = source(isFavoriteGIF[5]).intl;
@@ -29,7 +30,7 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
       uri(isFavoriteGIF[4]).open(obj);
       const obj8 = uri(isFavoriteGIF[4]);
     } else {
-      tmpResult = source(isFavoriteGIF[7]);
+      tmpResult = tmp(tmp2[7]);
       obj = { providerName: null, thumbnail: null };
       ({ embedProviderName: obj2[0], thumbnail: obj2[1] } = source);
       const gIFThumbnailForFavorite = tmpResult.getGIFThumbnailForFavorite(obj);
@@ -72,14 +73,13 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
     obj = { color: null, size: "md" };
     YELLOW_300 = tmp5(YELLOW_300[12]).unsafe_rawColors.YELLOW_300;
     obj[0] = YELLOW_300;
-    let tmp4Result = <StarIcon color={null} size="md" />;
+    let tmp4Result = tmp4(StarIcon, obj);
   } else {
-    tmp4Result = jsx(StarIcon(YELLOW_300[13]).StarOutlineIcon, { color: "interactive-text-default", size: "md" });
+    tmp4Result = tmp4(StarIcon(YELLOW_300[13]).StarOutlineIcon, { color: "interactive-text-default", size: "md" });
   }
   obj[2] = tmp4Result;
-  tmp4Result = jsx(uri(YELLOW_300[10]), { accessibilityLabel: stringResult, onPress: callback, icon: null });
-  const tmp6 = uri(YELLOW_300[10]);
+  tmp4Result = tmp4(uri(YELLOW_300[10]), obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx");
 
 export default memoResult;

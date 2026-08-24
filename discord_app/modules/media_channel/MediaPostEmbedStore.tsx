@@ -51,7 +51,7 @@ obj = {
   }
 };
 const mediaPostEmbedStore = new MediaPostEmbedStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
+const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
 
 export default mediaPostEmbedStore;
 export const FetchState = obj;

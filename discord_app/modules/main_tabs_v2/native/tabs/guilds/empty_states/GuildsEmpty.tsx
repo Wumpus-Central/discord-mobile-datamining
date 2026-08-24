@@ -6,17 +6,17 @@ import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import _modDef11881 from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
 import registerAssetDefault from "../../../../../../../_runtime/15533_registerAsset.js";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import fetchFingerprint from "../../../../../../stores/AuthenticationStore.tsx";
-import createGuildRecordFromRust from "../../../../../../stores/GuildStore.tsx";
-import handleConnectionOpen from "../../../../../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../../../../../stores/AuthenticationStore.tsx";
+import closure_9 from "../../../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../../../stores/SelectedGuildStore.tsx";
 import ME from "../../../../../../Constants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function handleJoinGuild() {
   const result = _modDef11881.openGuildJoinServerScreen();
 }
@@ -77,17 +77,22 @@ let c4 = importAllResult;
 ({ Image: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ ME: unpackModuleId, MOBILE_GUILD_UPSELL_LIST: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { borderTopLeftRadius: ThemesDefault.radii.xxl, borderTopRightRadius: ThemesDefault.radii.sm };
+let obj = { scrollView: null, header: null, headerTitle: null, scrollViewContentContainer: null, headerInner: null, content: null, illustrationWrapper: null, illustration: null, buttonContainer: null, textWrapper: null, headerText: null, text: null };
+obj = { borderTopLeftRadius: ThemesDefault.radii.xxl, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
-const createCacheKey = { zIndex: 100, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { zIndex: 100, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj[1] = createCacheKey;
 obj[2] = { height: 56, marginLeft: 16, marginRight: 8, flexDirection: "row", alignItems: "center" };
 obj[3] = { flexGrow: 2, justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[4] = { flex: 1, flexDirection: "row", alignItems: "center" };
+let obj2 = { flexGrow: 2, justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[5] = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj[6] = { width: "100%", paddingHorizontal: 36 };
+let obj3 = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj[7] = { resizeMode: "contain", alignSelf: "center", marginBottom: ThemesDefault.space.PX_24 };
+let obj4 = { resizeMode: "contain", alignSelf: "center", marginBottom: ThemesDefault.space.PX_24 };
 obj[8] = { paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj5 = { paddingBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[9] = { marginHorizontal: ThemesDefault.space.PX_16, marginVertical: ThemesDefault.space.PX_24 };
 let obj7 = {};
 const merged = Object.assign(require("Text").TextStyleSheet["heading-md/bold"]);
@@ -96,6 +101,7 @@ obj7.marginBottom = 8;
 obj[10] = obj7;
 obj[11] = { textAlign: "center" };
 let closure_15 = createCacheKey.createStyles(obj);
+let obj6 = { marginHorizontal: ThemesDefault.space.PX_16, marginVertical: ThemesDefault.space.PX_24 };
 const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   let navigation;
   selectedGuildId = undefined;
@@ -117,31 +123,33 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
       if (null != closure_0) {
-        if (selectedGuildId !== closure_1_11) {
-          if (!obj3.isFavoritesGuildId(selectedGuildId)) {
-            if (selectedGuildId !== closure_1_12) {
-              let guild = closure_1_9.getGuild(selectedGuildId);
+        if (tmp !== closure_1_11) {
+          if (!obj3.isFavoritesGuildId(tmp)) {
+            if (tmp !== closure_1_12) {
+              let guild = closure_1_9.getGuild(tmp);
               if (guild == null) {
-                guild = closure_1_9.getGuild(closure_1_10.getGuildId());
+                guild = obj4.getGuild(closure_1_10.getGuildId());
               }
               if (guild == null) {
-                guild = closure_1_9.getGuild(closure_1_10.getLastSelectedGuildId());
+                guild = obj4.getGuild(closure_1_10.getLastSelectedGuildId());
               }
               if (guild == null) {
-                const guilds = closure_1_9.getGuilds();
-                guild = guilds[closure_1_9.getGuildIds(closure_1_9)[0]];
+                const guilds = obj4.getGuilds();
+                guild = guilds[obj4.getGuildIds(obj4)[0]];
               }
               if (null != guild) {
-                closure_0 = closure_1_3(navigation(dependencyMap[21]).getInitialGuildState(guild.id, undefined, false), 2)[1];
+                closure_0 = closure_1_3(tmp10(tmp11[21]).getInitialGuildState(guild.id, undefined, false), 2)[1];
                 obj2.dispatch(() => {
                   const CommonActions = callback(closure_1_2[16]).CommonActions;
                   return CommonActions.reset(callback);
                 });
-                const tmp10Result = navigation(dependencyMap[21]);
+                const tmp10Result = tmp10(tmp11[21]);
               }
             }
           }
-          obj3 = navigation(dependencyMap[20]);
+          obj3 = navigation(closure_1_2[20]);
+          tmp10 = navigation;
+          tmp11 = closure_1_2;
         }
       }
       obj2 = closure_0;
@@ -175,11 +183,15 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     obj5[0] = tmp18;
     items3[1] = callback(GuildsEmptyContent, obj5);
     obj[1] = items3;
-    tmp14Result = callback(closure_6, obj);
+    tmp14Result = closure_14(closure_6, obj);
+    const tmp14 = closure_14;
+    const tmp15 = closure_6;
+    const tmp16 = callback;
+    const tmp17 = GuildsEmptyContent;
   }
   return tmp14Result;
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx");
 
 export default memoResult;
 export { GuildsEmptyContent };

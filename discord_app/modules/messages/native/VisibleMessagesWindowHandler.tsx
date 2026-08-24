@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/VisibleMessagesWindowHandler.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import Changeset from "renderer/RowGeneratorConstants.tsx";
 
 const RowType = Changeset.RowType;
-const result = obj132.fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");
 
 export default function VisibleMessagesWindowHandler() {
   let obj = Object.create(new.target.prototype);
@@ -29,19 +29,24 @@ export default function VisibleMessagesWindowHandler() {
         if (firstVisibleMessageRowIndex >= 0) {
           while (true) {
             let tmp3 = rows[diff];
+            let tmp4 = diff;
             let id;
             if (null != tmp3) {
               if ("rowType" in tmp3) {
+                let tmp8 = obj;
                 if (tmp3.rowType === obj.MESSAGE) {
                   id = tmp3.message.id;
                 }
-              } else if (tmp3.type === obj.MESSAGE) {
-                let message = tmp3.message;
-                let id1;
-                if (message != null) {
-                  id1 = message.id;
+              } else {
+                let tmp6 = obj;
+                if (tmp3.type === obj.MESSAGE) {
+                  let message = tmp3.message;
+                  let id1;
+                  if (message != null) {
+                    id1 = message.id;
+                  }
+                  id = id1;
                 }
-                id = id1;
               }
             }
             tmp2 = id;
@@ -64,19 +69,24 @@ export default function VisibleMessagesWindowHandler() {
         if (lastVisibleMessageRowIndex < rows.length) {
           while (true) {
             let tmp11 = rows[tmp10];
+            let tmp12 = tmp10;
             let id2;
             if (null != tmp11) {
               if ("rowType" in tmp11) {
+                let tmp16 = obj;
                 if (tmp11.rowType === obj.MESSAGE) {
                   id2 = tmp11.message.id;
                 }
-              } else if (tmp11.type === obj.MESSAGE) {
-                let message2 = tmp11.message;
-                let id3;
-                if (message2 != null) {
-                  id3 = message2.id;
+              } else {
+                let tmp14 = obj;
+                if (tmp11.type === obj.MESSAGE) {
+                  let message2 = tmp11.message;
+                  let id3;
+                  if (message2 != null) {
+                    id3 = message2.id;
+                  }
+                  id2 = id3;
                 }
-                id2 = id3;
               }
             }
             tmp9 = id2;
@@ -103,19 +113,24 @@ export default function VisibleMessagesWindowHandler() {
           if (sum1 < rows.length) {
             while (true) {
               let tmp21 = rows[sum1];
+              let tmp22 = sum1;
               let id4;
               if (null != tmp21) {
                 if ("rowType" in tmp21) {
+                  let tmp26 = obj;
                   if (tmp21.rowType === obj.MESSAGE) {
                     id4 = tmp21.message.id;
                   }
-                } else if (tmp21.type === obj.MESSAGE) {
-                  let message3 = tmp21.message;
-                  let id5;
-                  if (message3 != null) {
-                    id5 = message3.id;
+                } else {
+                  let tmp24 = obj;
+                  if (tmp21.type === obj.MESSAGE) {
+                    let message3 = tmp21.message;
+                    let id5;
+                    if (message3 != null) {
+                      id5 = message3.id;
+                    }
+                    id4 = id5;
                   }
-                  id4 = id5;
                 }
               }
               tmp18 = id4;

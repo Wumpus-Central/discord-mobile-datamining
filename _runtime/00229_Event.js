@@ -64,7 +64,8 @@ function getWrapper(prototypeOf) {
             }
           }
           const _Object5 = Object;
-          let obj = { value: null, configurable: true, writable: true };
+          let obj = { constructor: null };
+          obj = { value: null, configurable: true, writable: true };
           obj[0] = CustomEvent;
           obj[0] = obj;
           CustomEvent.prototype = Object.create(tmp9.prototype, obj);
@@ -249,7 +250,7 @@ class EventTarget {
               closure_0 = tmp16;
               obj2 = { get: null, set: null, configurable: true, enumerable: true };
               obj2[0] = function get() {
-                const value = weakMap2.get(this);
+                const value = closure_1_6.get(this);
                 if (null == value) {
                   const _TypeError = TypeError;
                   const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -270,11 +271,12 @@ class EventTarget {
                 let tmp2 = typeof fn === "function";
                 if (typeof fn !== "function") {
                   tmp2 = null !== tmp && typeof tmp === "object";
+                  const tmp3 = null !== tmp && typeof tmp === "object";
                 }
                 if (!tmp2) {
                   tmp = null;
                 }
-                let value = weakMap2.get(this);
+                let value = closure_1_6.get(this);
                 if (null == value) {
                   const _TypeError = TypeError;
                   const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -286,15 +288,19 @@ class EventTarget {
                   let tmp12 = null;
                   if (null != value) {
                     do {
+                      let tmp4 = iter;
+                      let tmp5 = tmp11;
                       let tmp6 = iter;
                       if (3 === iter.listenerType) {
                         if (null !== tmp11) {
                           tmp11.next = iter.next;
                           tmp6 = tmp11;
                         } else if (null !== iter.next) {
+                          let tmp9 = closure_0;
                           let result = value.set(closure_0, iter.next);
                           tmp6 = tmp11;
                         } else {
+                          let tmp7 = closure_0;
                           let deleteResult = value.delete(closure_0);
                           tmp6 = tmp11;
                         }
@@ -381,7 +387,7 @@ class EventTarget {
             closure_0 = tmp14;
             obj4 = { get: null, set: null, configurable: true, enumerable: true };
             obj4[0] = function get() {
-              const value = weakMap2.get(this);
+              const value = closure_1_6.get(this);
               if (null == value) {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -402,11 +408,12 @@ class EventTarget {
               let tmp2 = typeof fn === "function";
               if (typeof fn !== "function") {
                 tmp2 = null !== tmp && typeof tmp === "object";
+                const tmp3 = null !== tmp && typeof tmp === "object";
               }
               if (!tmp2) {
                 tmp = null;
               }
-              let value = weakMap2.get(this);
+              let value = closure_1_6.get(this);
               if (null == value) {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -418,15 +425,19 @@ class EventTarget {
                 let tmp12 = null;
                 if (null != value) {
                   do {
+                    let tmp4 = iter;
+                    let tmp5 = tmp11;
                     let tmp6 = iter;
                     if (3 === iter.listenerType) {
                       if (null !== tmp11) {
                         tmp11.next = iter.next;
                         tmp6 = tmp11;
                       } else if (null !== iter.next) {
+                        let tmp9 = closure_0;
                         let result = value.set(closure_0, iter.next);
                         tmp6 = tmp11;
                       } else {
+                        let tmp7 = closure_0;
                         let deleteResult = value.delete(closure_0);
                         tmp6 = tmp11;
                       }
@@ -766,7 +777,7 @@ if (tmp4) {
 }
 const weakMap2 = new WeakMap();
 EventTarget.prototype = {
-  addEventListener(arg0, fn, capture) {
+  addEventListener(arg0, fn, obj) {
     if (null != fn) {
       if (typeof fn !== "function") {
         if (!tmp) {
@@ -783,29 +794,29 @@ EventTarget.prototype = {
         const typeError1 = new TypeError("'this' is expected an EventTarget object, but got another value.");
         throw typeError1;
       } else {
-        let BooleanResult1 = null !== capture && typeof capture === "object";
+        let BooleanResult1 = null !== obj && typeof obj === "object";
         const _Boolean = Boolean;
         if (BooleanResult1) {
-          let _BooleanResult = _Boolean(capture.capture);
+          let _BooleanResult = _Boolean(obj.capture);
         } else {
-          _BooleanResult = _Boolean(capture);
+          _BooleanResult = _Boolean(obj);
         }
         let num = 2;
         if (_BooleanResult) {
           num = 1;
         }
-        const obj = { listener: null, listenerType: null, passive: null, once: null, next: null };
+        obj = { listener: null, listenerType: null, passive: null, once: null, next: null };
         obj[0] = fn;
         obj[1] = num;
         let BooleanResult = BooleanResult1;
         if (BooleanResult1) {
           const _Boolean2 = Boolean;
-          BooleanResult = Boolean(capture.passive);
+          BooleanResult = Boolean(obj.passive);
         }
         obj[2] = BooleanResult;
         if (BooleanResult1) {
           const _Boolean3 = Boolean;
-          BooleanResult1 = Boolean(capture.once);
+          BooleanResult1 = Boolean(obj.once);
         }
         obj[3] = BooleanResult1;
         value = value.get(arg0);
@@ -831,7 +842,7 @@ EventTarget.prototype = {
       }
     }
   },
-  removeEventListener(arg0, arg1, capture) {
+  removeEventListener(arg0, arg1, obj) {
     if (null != arg1) {
       const self = this;
       let value = weakMap2.get(this);
@@ -842,9 +853,9 @@ EventTarget.prototype = {
       } else {
         const _Boolean = Boolean;
         if (tmp) {
-          let _BooleanResult = _Boolean(capture.capture);
+          let _BooleanResult = _Boolean(obj.capture);
         } else {
-          _BooleanResult = _Boolean(capture);
+          _BooleanResult = _Boolean(obj);
         }
         let num = 2;
         if (_BooleanResult) {
@@ -855,6 +866,7 @@ EventTarget.prototype = {
         let tmp6 = null;
         if (null != value) {
           while (true) {
+            let tmp8 = tmp6;
             let tmp7 = iter;
             if (iter.listener === arg1) {
               if (iter.listenerType === num) {
@@ -873,7 +885,7 @@ EventTarget.prototype = {
             value.delete(arg0);
           }
         }
-        tmp = null !== capture && typeof capture === "object";
+        tmp = null !== obj && typeof obj === "object";
       }
     }
   },
@@ -941,6 +953,7 @@ EventTarget.prototype = {
               iter = iter.next;
               tmp17 = tmp4;
             }
+            const tmp7 = setPassiveListener;
           }
           setPassiveListener(tmp24, null);
           (function setEventPhase(arg0, arg1) {
@@ -1049,7 +1062,7 @@ function defineEventAttribute(prototype, abort) {
   closure_0 = abort;
   Object.defineProperty(prototype, "on" + abort, {
     get() {
-      const value = weakMap2.get(this);
+      const value = closure_1_6.get(this);
       if (null == value) {
         const _TypeError = TypeError;
         const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -1070,11 +1083,12 @@ function defineEventAttribute(prototype, abort) {
       let tmp2 = typeof fn === "function";
       if (typeof fn !== "function") {
         tmp2 = null !== tmp && typeof tmp === "object";
+        const tmp3 = null !== tmp && typeof tmp === "object";
       }
       if (!tmp2) {
         tmp = null;
       }
-      let value = weakMap2.get(this);
+      let value = closure_1_6.get(this);
       if (null == value) {
         const _TypeError = TypeError;
         const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
@@ -1086,15 +1100,19 @@ function defineEventAttribute(prototype, abort) {
         let tmp12 = null;
         if (null != value) {
           do {
+            let tmp4 = iter;
+            let tmp5 = tmp11;
             let tmp6 = iter;
             if (3 === iter.listenerType) {
               if (null !== tmp11) {
                 tmp11.next = iter.next;
                 tmp6 = tmp11;
               } else if (null !== iter.next) {
+                let tmp9 = closure_0;
                 let result = value.set(closure_0, iter.next);
                 tmp6 = tmp11;
               } else {
+                let tmp7 = closure_0;
                 let deleteResult = value.delete(closure_0);
                 tmp6 = tmp11;
               }

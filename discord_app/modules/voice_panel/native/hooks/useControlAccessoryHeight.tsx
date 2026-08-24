@@ -1,9 +1,9 @@
 // discord_app/modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function useControlAccessoryHeightTsx1(){const{consoleStatusHeight,floatingCTAHeight}=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();}" };
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
 
 export default function useControlAccessoryHeight() {
   const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[1])).channelId;

@@ -1,14 +1,15 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockStore.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import QuestsExperimentLocations from "../../QuestConstants.tsx";
 import QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED from "QuestDockUtils.tsx";
 
 const QuestDockMode = QuestsExperimentLocations.QuestDockMode;
+let c5 = false;
 let COLLAPSED = QuestDockMode.COLLAPSED;
 let c3 = null;
-let c5 = false;
+c5 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class QuestDockStore extends PersistedStore {
 }
@@ -16,7 +17,8 @@ const prototype = QuestDockStore.prototype;
 prototype["initialize"] = function initialize(questDockSoftDismissedAt) {
   if (null != questDockSoftDismissedAt) {
     questDockSoftDismissedAt = questDockSoftDismissedAt.questDockSoftDismissedAt;
-    closure_2 = QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED.isSoftDismissed(questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED;
+    closure_2 = QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED.isSoftDismissed(questDockSoftDismissedAt) ? tmp4.SOFT_DISMISSED : tmp4.COLLAPSED;
+    const obj = QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED;
   }
 };
 prototype["getState"] = function getState() {
@@ -62,6 +64,6 @@ const questDockStore = new QuestDockStore(dispatcherDefault, {
     isEligibleToBeVisible = isEligibleToBeVisible.isEligibleToBeVisible;
   }
 });
-const result = obj132.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockStore.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockStore.tsx");
 
 export default questDockStore;

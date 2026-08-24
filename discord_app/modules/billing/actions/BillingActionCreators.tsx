@@ -3,17 +3,16 @@ import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPU
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import performRedirect from "HandleConfirmPaymentRegistry.tsx";
-import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import createFromServer from "../../../records/PaymentSourceRecord.tsx";
-import handlePaymentSourceCreateEnd from "../../../stores/billing/BillingInfoStore.tsx";
-import reset from "../../../stores/billing/SubscriptionStore.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "../../../records/PaymentSourceRecord.tsx";
+import closure_7 from "../../../stores/billing/BillingInfoStore.tsx";
+import closure_8 from "../../../stores/billing/SubscriptionStore.tsx";
 import ME from "../../../Constants.tsx";
 import { UserLazyPerkSyncLevels } from "../../../components/billing/BillingConstants.tsx";
 import sum from "../../../../discord_common/js/shared/Constants.tsx";
-import obj132 from "../../../../_runtime/00002_obj132.js";
 
-require = fn;
+require = arg1;
 function _deletePaymentSource() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -268,8 +267,8 @@ function _fetchPaymentSources() {
               const value = HTTP.get(obj1);
               c0 = value;
               closure_1_1(closure_1_2[8]).wait(() => {
-                callback(tmp26[8]);
-                const obj = { type: "BILLING_PAYMENT_SOURCES_FETCH_START", request: c0 };
+                let obj = callback(tmp26[8]);
+                obj = { type: "BILLING_PAYMENT_SOURCES_FETCH_START", request: c0 };
                 return obj.dispatch(obj);
               });
               c4 = 2;
@@ -852,6 +851,7 @@ function _fetchMostRecentSubscription() {
     closure_1_1(closure_1_2[8]).wait(() => {
       tmp3(tmp27[8]).dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
     });
+    c3 = 1;
     const HTTP = closure_1_0(closure_1_2[9]).HTTP;
     obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
     obj1[0] = closure_1_10.BILLING_SUBSCRIPTIONS;
@@ -900,225 +900,257 @@ function _createSubscription() {
     const iter = (function*(arg0, gateway_checkout_context) {
       if (c11 === 2) {
         c11 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw gateway_checkout_context;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = gateway_checkout_context;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        try {
-          c11 = 2;
-          if (0 === c10) {
-            if (arg0 === 1) {
-              c11 = 3;
-              throw gateway_checkout_context;
-            } else if (arg0 === 2) {
-              c11 = 3;
-              obj = { value: null, done: true };
-              obj[0] = gateway_checkout_context;
-              return obj;
-            } else {
-              c6 = tmp2;
-              c7 = tmp6;
-              let lib;
-              let lib2;
-              obj14 = undefined;
-              obj13 = undefined;
-              post = undefined;
-              HTTP = undefined;
-              c6 = undefined;
-              c7 = undefined;
-              c8 = undefined;
-              c9 = undefined;
-              ({ items: closure_0, paymentSource: c1, trialId: obj14, code: obj13, currency: post, metadata: HTTP, referralCode: c6, loadId: c7, expectedInvoicePrice: c8, expectedRenewalPrice: c9 } = lib);
-              c10 = undefined;
-              c11 = undefined;
-              closure_12 = undefined;
-              let billingError;
-              c10 = 1;
-              c11 = 1;
-              return { value: "ct", done: true };
-            }
+        throwTypeErrorResult = gateway_checkout_context;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp4;
+        throwTypeErrorResult = null;
+        if (tmp5 === 3) {
+          if (arg0 === 1) {
+            throw gateway_checkout_context;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = gateway_checkout_context;
+            return obj;
           } else {
-            if (1 === tmp6) {
+            return { value: "HermesInternal", done: "HermesInternal" };
+          }
+        } else {
+          try {
+            c11 = 2;
+            if (0 === c10) {
               if (arg0 === 1) {
                 c11 = 3;
                 throw gateway_checkout_context;
               } else if (arg0 === 2) {
                 c11 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = gateway_checkout_context;
-                return obj1;
+                obj = { value: null, done: true };
+                obj[0] = gateway_checkout_context;
+                return obj;
               } else {
-                lib2(obj14[8]).dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
-                const obj26 = lib2(obj14[8]);
-                lib = lib(obj14[13]).coerceExistingItemsToNewItemInterval(lib);
-                c10 = null;
-                if (null != lib2) {
-                  if (set.has(lib2.type)) {
-                    c10 = 2;
-                    c11 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = lib(obj14[14]).popupBridgeState(lib2.type);
-                    return obj2;
-                  }
-                }
-                const obj27 = lib(obj14[13]);
+                c6 = tmp2;
+                c7 = tmp6;
+                let lib;
+                let lib2;
+                obj14 = undefined;
+                obj13 = undefined;
+                post = undefined;
+                HTTP = undefined;
+                c6 = undefined;
+                c7 = undefined;
+                c8 = undefined;
+                c9 = undefined;
+                throwTypeErrorResult = lib;
+                ({ items: closure_0, paymentSource: c1, trialId: obj14, code: obj13, currency: post, metadata: HTTP, referralCode: c6, loadId: c7, expectedInvoicePrice: c8, expectedRenewalPrice: c9 } = lib);
+                c10 = undefined;
+                c11 = undefined;
+                closure_12 = undefined;
+                let billingError;
+                c10 = 1;
+                c11 = 1;
+                return { value: "ct", done: true };
               }
             } else {
-              if (2 === tmp6) {
+              if (1 === tmp6) {
                 if (arg0 === 1) {
                   c11 = 3;
                   throw gateway_checkout_context;
                 } else if (arg0 === 2) {
                   c11 = 3;
-                  const obj3 = { value: null, done: true };
-                  obj3[0] = gateway_checkout_context;
-                  return obj3;
+                  obj1 = { value: null, done: true };
+                  obj1[0] = gateway_checkout_context;
+                  return obj1;
                 } else {
-                  c11 = gateway_checkout_context;
-                  let obj12 = lib(obj14[9]);
-                  lib2 = c11;
-                  const aPIBaseURL = obj12.getAPIBaseURL();
-                  if (c11 == null) {
-                    lib2 = "";
+                  throwTypeErrorResult = c7;
+                  throwTypeErrorResult = c6;
+                  throwTypeErrorResult = lib2;
+                  throwTypeErrorResult = obj14;
+                  throwTypeErrorResult = lib2(obj14[8]).dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = obj14;
+                  const obj26 = lib2(obj14[8]);
+                  throwTypeErrorResult = lib;
+                  lib = lib(obj14[13]).coerceExistingItemsToNewItemInterval(lib);
+                  c10 = null;
+                  throwTypeErrorResult = lib2;
+                  if (null != lib2) {
+                    if (set.has(lib2.type)) {
+                      throwTypeErrorResult = c6;
+                      throwTypeErrorResult = lib;
+                      throwTypeErrorResult = obj14;
+                      throwTypeErrorResult = lib2;
+                      c10 = 2;
+                      c11 = 1;
+                      const obj2 = { value: null, done: false };
+                      obj2[0] = lib(obj14[14]).popupBridgeState(lib2.type);
+                      return obj2;
+                    }
                   }
-                  c10 = aPIBaseURL + c10.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(lib2.type, lib2, "success");
+                  const obj27 = lib(obj14[13]);
                 }
-              } else if (3 === tmp6) {
-                c8 = 0;
-                closure_14 = c9;
-                if (closure_14 instanceof lib(obj14[10]).BillingError) {
-                  billingError = closure_14;
-                } else {
-                  billingError = new lib(obj14[10]).BillingError(closure_14);
-                }
-                let obj8 = lib2(obj14[8]);
-                const obj4 = { type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: null };
-                obj4[1] = billingError;
-                obj8.dispatch(obj4);
-                if (billingError.code !== lib(obj14[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
-                  throw billingError;
-                } else if (closure_14.body.payment_id) {
-                  c11 = 3;
-                  const obj5 = { value: null, done: true };
-                  obj5[0] = callback(closure_14.body, lib2);
-                  return obj5;
-                } else {
-                  let obj10 = lib(obj14[14]);
-                  throw obj10.dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
-                }
-              } else if (4 === tmp6) {
-                if (arg0 === 1) {
-                  c11 = 3;
-                  throw gateway_checkout_context;
-                } else {
-                  let tmp14 = gateway_checkout_context;
-                  if (arg0 === 2) {
+              } else {
+                if (2 === tmp6) {
+                  if (arg0 === 1) {
+                    c11 = 3;
+                    throw gateway_checkout_context;
+                  } else if (arg0 === 2) {
+                    c11 = 3;
+                    const obj3 = { value: null, done: true };
+                    obj3[0] = gateway_checkout_context;
+                    return obj3;
+                  } else {
+                    c11 = gateway_checkout_context;
+                    let obj12 = lib(obj14[9]);
+                    lib2 = c11;
+                    const aPIBaseURL = obj12.getAPIBaseURL();
+                    if (c11 == null) {
+                      lib2 = "";
+                    }
+                    c10 = aPIBaseURL + c10.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(lib2.type, lib2, "success");
+                  }
+                } else if (3 === tmp6) {
+                  c8 = 0;
+                  closure_14 = c9;
+                  if (closure_14 instanceof lib(obj14[10]).BillingError) {
+                    billingError = closure_14;
+                  } else {
+                    billingError = new lib(obj14[10]).BillingError(closure_14);
+                  }
+                  let obj8 = lib2(obj14[8]);
+                  const obj4 = { type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: null };
+                  obj4[1] = billingError;
+                  obj8.dispatch(obj4);
+                  if (billingError.code !== lib(obj14[11]).ErrorCodes.CONFIRMATION_REQUIRED) {
+                    throw billingError;
+                  } else if (closure_14.body.payment_id) {
+                    c11 = 3;
+                    const obj5 = { value: null, done: true };
+                    obj5[0] = callback(closure_14.body, lib2);
+                    return obj5;
+                  } else {
+                    let obj10 = lib(obj14[14]);
+                    throw obj10.dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
+                  }
+                } else if (4 === tmp6) {
+                  if (arg0 === 1) {
+                    c11 = 3;
+                    throw gateway_checkout_context;
+                  } else {
+                    let tmp14 = gateway_checkout_context;
+                    if (arg0 === 2) {
+                      c8 = 0;
+                      c11 = 3;
+                      const obj6 = { value: null, done: true };
+                      obj6[0] = gateway_checkout_context;
+                      return obj6;
+                    }
+                  }
+                } else if (5 === tmp6) {
+                  if (arg0 === 1) {
+                    c11 = 3;
+                    throw gateway_checkout_context;
+                  } else if (arg0 === 2) {
                     c8 = 0;
                     c11 = 3;
-                    const obj6 = { value: null, done: true };
-                    obj6[0] = gateway_checkout_context;
-                    return obj6;
+                    const obj7 = { value: null, done: true };
+                    obj7[0] = gateway_checkout_context;
+                    return obj7;
+                  } else {
+                    throwTypeErrorResult = obj14;
+                    throwTypeErrorResult = obj13;
+                    throwTypeErrorResult = post;
+                    throwTypeErrorResult = HTTP;
+                    throwTypeErrorResult = c7;
+                    throwTypeErrorResult = c6;
+                    obj14.gateway_checkout_context = gateway_checkout_context;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = obj14;
+                    obj14.purchase_token = lib(obj14[17]).getPurchaseToken();
+                    throwTypeErrorResult = c6;
+                    obj14.referral_code = c6;
+                    throwTypeErrorResult = c7;
+                    obj14.load_id = c7;
+                    throwTypeErrorResult = c8;
+                    obj14.expected_invoice_price = c8;
+                    throwTypeErrorResult = c9;
+                    obj14.expected_renewal_price = c9;
+                    obj13.body = obj14;
+                    obj13.oldFormErrors = true;
+                    obj13.rejectWithError = false;
+                    c10 = 6;
+                    c11 = 1;
+                    obj8 = { value: null, done: false };
+                    obj8[0] = post(obj13);
+                    return obj8;
                   }
-                }
-              } else if (5 === tmp6) {
-                if (arg0 === 1) {
+                } else if (arg0 === 1) {
                   c11 = 3;
                   throw gateway_checkout_context;
                 } else if (arg0 === 2) {
                   c8 = 0;
                   c11 = 3;
-                  const obj7 = { value: null, done: true };
-                  obj7[0] = gateway_checkout_context;
-                  return obj7;
+                  const obj9 = { value: null, done: true };
+                  obj9[0] = gateway_checkout_context;
+                  return obj9;
                 } else {
-                  obj14.gateway_checkout_context = gateway_checkout_context;
-                  obj14.purchase_token = lib(obj14[17]).getPurchaseToken();
-                  obj14.referral_code = c6;
-                  obj14.load_id = c7;
-                  obj14.expected_invoice_price = c8;
-                  obj14.expected_renewal_price = c9;
-                  obj13.body = obj14;
-                  obj13.oldFormErrors = true;
-                  obj13.rejectWithError = false;
-                  c10 = 6;
-                  c11 = 1;
-                  obj8 = { value: null, done: false };
-                  obj8[0] = post(obj13);
-                  return obj8;
+                  closure_12 = gateway_checkout_context;
+                  obj = lib2(obj14[8]);
+                  obj10 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: null };
+                  obj10[1] = closure_12.body;
+                  obj.dispatch(obj10);
+                  const obj11 = { subscription: null, redirectConfirmation: false };
+                  obj11[0] = closure_12.body;
+                  c8 = 0;
+                  c11 = 3;
+                  obj12 = { value: null, done: true };
+                  obj12[0] = obj11;
+                  return obj12;
                 }
-              } else if (arg0 === 1) {
-                c11 = 3;
-                throw gateway_checkout_context;
-              } else if (arg0 === 2) {
-                c8 = 0;
-                c11 = 3;
-                const obj9 = { value: null, done: true };
-                obj9[0] = gateway_checkout_context;
-                return obj9;
-              } else {
-                closure_12 = gateway_checkout_context;
-                obj = lib2(obj14[8]);
-                obj10 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: null };
-                obj10[1] = closure_12.body;
-                obj.dispatch(obj10);
-                const obj11 = { subscription: null, redirectConfirmation: false };
-                obj11[0] = closure_12.body;
-                c8 = 0;
-                c11 = 3;
-                obj12 = { value: null, done: true };
-                obj12[0] = obj11;
-                return obj12;
+                obj14.payment_source_token = tmp14;
+                obj14.trial_id = obj14;
+                obj14.return_url = c10;
+                obj14.code = obj13;
+                if (null != lib2) {
+                  let USD = post;
+                } else {
+                  USD = constants.USD;
+                }
+                obj14.currency = USD;
+                obj14.metadata = HTTP;
+                const gatewayCheckoutContext = lib(obj14[16]).createGatewayCheckoutContext(lib2);
+                c10 = 5;
+                c11 = 1;
+                const obj17 = lib(obj14[16]);
               }
-              obj14.payment_source_token = tmp14;
-              obj14.trial_id = obj14;
-              obj14.return_url = c10;
-              obj14.code = obj13;
+              c8 = 1;
+              HTTP = lib(obj14[9]).HTTP;
+              post = HTTP.post;
+              obj13 = { url: c10.BILLING_SUBSCRIPTIONS };
+              obj14 = { items: lib.map((planId) => ({ plan_id: planId.planId, quantity: planId.quantity })) };
+              let id = null;
               if (null != lib2) {
-                let USD = post;
-              } else {
-                USD = constants.USD;
+                id = lib2.id;
               }
-              obj14.currency = USD;
-              obj14.metadata = HTTP;
-              const gatewayCheckoutContext = lib(obj14[16]).createGatewayCheckoutContext(lib2);
-              c10 = 5;
-              c11 = 1;
-              const obj17 = lib(obj14[16]);
+              obj14.payment_source_id = id;
+              tmp14 = null;
+              if (null != lib2) {
+                c10 = 4;
+                c11 = 1;
+                const obj15 = { value: null, done: false };
+                obj15[0] = lib(obj14[15]).createPaymentSourceToken(lib2);
+                return obj15;
+              }
             }
-            c8 = 1;
-            HTTP = lib(obj14[9]).HTTP;
-            post = HTTP.post;
-            obj13 = { url: c10.BILLING_SUBSCRIPTIONS };
-            obj14 = { items: lib.map((item, index) => ({ plan_id: item.planId, quantity: item.quantity })) };
-            let id = null;
-            if (null != lib2) {
-              id = lib2.id;
+          } catch (throwTypeErrorResult) {
+            c9 = throwTypeErrorResult;
+            throwTypeErrorResult = c8;
+            if (tmp3 === c8) {
+              c11 = throwTypeErrorResult;
+              throw throwTypeErrorResult;
+            } else {
+              c10 = throwTypeErrorResult;
             }
-            obj14.payment_source_id = id;
-            tmp14 = null;
-            if (null != lib2) {
-              c10 = 4;
-              c11 = 1;
-              const obj15 = { value: null, done: false };
-              obj15[0] = lib(obj14[15]).createPaymentSourceToken(lib2);
-              return obj15;
-            }
-          }
-        } catch (tmp104) {
-          c9 = tmp104;
-          if (tmp3 === c8) {
-            c11 = tmp;
-            throw tmp104;
-          } else {
-            c10 = tmp;
           }
         }
       }
@@ -1163,7 +1195,7 @@ function _payInvoiceManually() {
       } else {
         try {
           c15 = 2;
-          if (0 === c14) {
+          if (0 === dispatchResult1) {
             if (arg0 === 1) {
               c15 = 3;
               throw arg1;
@@ -1175,16 +1207,21 @@ function _payInvoiceManually() {
             } else {
               closure_10 = tmp3;
               closure_11 = tmp5;
+              dispatchResult1 = lib;
+              dispatchResult1 = callback;
+              dispatchResult1 = closure_2;
+              dispatchResult1 = closure_3;
+              dispatchResult1 = closure_4;
               let obj11;
               let obj10;
               let post;
               closure_5 = null;
               if (null != closure_2) {
-                if (closure_1_18.has(closure_2.type)) {
-                  c14 = 1;
+                if (closure_1_18.has(dispatchResult1.type)) {
+                  dispatchResult1 = 1;
                   c15 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = lib(closure_2[14]).popupBridgeState(closure_2.type);
+                  obj1[0] = lib(closure_2[14]).popupBridgeState(dispatchResult1.type);
                   return obj1;
                 }
               }
@@ -1258,11 +1295,17 @@ function _payInvoiceManually() {
               return obj6;
             } else {
               obj10 = arg1;
+              dispatchResult1 = callback;
+              dispatchResult1 = closure_2;
               obj7 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: null };
+              dispatchResult1 = obj10;
               obj7[1] = obj10.body;
-              callback(closure_2[8]).dispatch(obj7);
+              dispatchResult1 = callback(closure_2[8]).dispatch(obj7);
               const obj8 = { subscription: null, redirectConfirmation: null };
+              dispatchResult1 = obj10;
               obj8[0] = obj10.body;
+              dispatchResult1 = set;
+              dispatchResult1 = closure_2;
               obj8[1] = set.has(closure_2.type);
               set = 0;
               c15 = 3;
@@ -1279,7 +1322,7 @@ function _payInvoiceManually() {
             obj10.body = obj11;
             obj10.oldFormErrors = true;
             obj10.rejectWithError = false;
-            c14 = 4;
+            dispatchResult1 = 4;
             c15 = 1;
             const obj9 = { value: null, done: false };
             obj9[0] = post(obj10);
@@ -1297,7 +1340,7 @@ function _payInvoiceManually() {
           obj11.payment_source_id = id;
           tmp9 = null;
           if (null != closure_2) {
-            c14 = 3;
+            dispatchResult1 = 3;
             c15 = 1;
             const obj12 = { value: null, done: false };
             obj12[0] = lib(closure_2[15]).createPaymentSourceToken(closure_2);
@@ -1308,8 +1351,6 @@ function _payInvoiceManually() {
           if (tmp4 === set) {
             c15 = tmp2;
             throw tmp89;
-          } else {
-            c14 = tmp;
           }
         }
       }
@@ -1333,7 +1374,6 @@ function handlePaymentConfirmation(body, paymentSource) {
     return confirmPaymentResult;
   }
   confirmPaymentResult = new performRedirect.StripePaymentConfirmationHandler(paymentSource, body).confirmPayment();
-  const stripePaymentConfirmationHandler = new performRedirect.StripePaymentConfirmationHandler(paymentSource, body);
 }
 function _redirectedPaymentSucceeded() {
   const self = this;
@@ -1343,6 +1383,7 @@ function _redirectedPaymentSucceeded() {
     c4 = 0;
     return (function*(arg0) {
       closure_2 = tmp5;
+      closure_1 = tmp2;
       closure_1 = yield closure_1_25(callback);
       if (closure_1 != null) {
         let body = closure_1.body;
@@ -1486,7 +1527,7 @@ function _cancelSubscription() {
   }
   return applyArgumentsResult;
 }
-function updateSubscription(currency, arg1, arg2, itemPlansTotalServerPrice, closure_1_6, arg5) {
+function updateSubscription(items, arg1, arg2, itemPlansTotalServerPrice, arg4, arg5) {
   const self = this;
   const apply = _updateSubscription.apply;
   if (typeof apply === "unknown") {
@@ -1512,204 +1553,233 @@ function _updateSubscription() {
     return (function*(arg0, gateway_checkout_context) {
       if (c14 === 2) {
         c14 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw gateway_checkout_context;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = gateway_checkout_context;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        try {
-          c14 = 2;
-          if (0 === c13) {
-            if (arg0 === 1) {
-              c14 = 3;
-              throw gateway_checkout_context;
-            } else if (arg0 === 2) {
-              c14 = 3;
-              obj = { value: null, done: true };
-              obj[0] = gateway_checkout_context;
-              return obj;
-            } else {
-              let billingError = tmp3;
-              closure_9 = tmp5;
-              c7 = undefined;
-              closure_8 = undefined;
-              closure_9 = undefined;
-              billingError = undefined;
-              lib2(709).dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
-              c11 = 1;
-              obj1 = {};
-              closure_8 = obj1;
-              ({ status: obj28.status, paymentSource } = lib2);
-              let id;
-              if (paymentSource != null) {
-                id = paymentSource.id;
-              }
-              obj1.payment_source_id = id;
-              let tmp52 = null;
-              if (null != lib2.paymentSource) {
-                c13 = 2;
-                c14 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = lib(4469).createPaymentSourceToken(lib2.paymentSource);
-                return obj2;
-              }
-              const obj27 = lib2(709);
-            }
-          } else if (1 === tmp8) {
-            c11 = 0;
-            c11 = closure_12;
-            if (c11 instanceof lib(4273).BillingError) {
-              billingError = c11;
-            } else {
-              billingError = new lib(4273).BillingError(c11);
-            }
-            let obj15 = lib2(709);
-            const obj3 = { type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: null };
-            obj3[1] = billingError;
-            obj15.dispatch(obj3);
-            if (billingError.code !== lib(4061).ErrorCodes.CONFIRMATION_REQUIRED) {
-              throw billingError;
-            } else if (c11.body.payment_id) {
-              c14 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = callback(c11.body, lib2.paymentSource);
-              return obj4;
-            } else {
-              throw lib(4467).dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
-            }
-          } else if (2 === tmp8) {
-            if (arg0 === 1) {
-              c14 = 3;
-              throw gateway_checkout_context;
-            } else {
-              tmp52 = gateway_checkout_context;
-              if (arg0 === 2) {
-                c11 = 0;
-                c14 = 3;
-                let obj5 = { value: null, done: true };
-                obj5[0] = gateway_checkout_context;
-                return obj5;
-              }
-            }
+        throwTypeErrorResult = gateway_checkout_context;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp6;
+        throwTypeErrorResult = null;
+        if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw gateway_checkout_context;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = gateway_checkout_context;
+            return obj;
           } else {
-            if (3 === tmp8) {
-              if (arg0 === 1) {
-                c14 = 3;
-                throw gateway_checkout_context;
-              } else if (arg0 === 2) {
-                c11 = 0;
-                c14 = 3;
-                const obj6 = { value: null, done: true };
-                obj6[0] = gateway_checkout_context;
-                return obj6;
-              } else {
-                closure_8.gateway_checkout_context = gateway_checkout_context;
-                closure_8.load_id = closure_6;
-                closure_8.pause_duration = lib2.pauseDuration;
-                closure_8.purchase_token = lib(4475).getPurchaseToken();
-                closure_8.expected_invoice_price = dependencyMap;
-                closure_8.expected_renewal_price = closure_3;
-                c7 = closure_8;
-                if (null != lib2.paymentSource) {
-                  if (set.has(lib2.paymentSource.type)) {
-                    let obj11 = lib(4467);
-                    c13 = 4;
-                    c14 = 1;
-                    let obj7 = { value: null, done: false };
-                    obj7[0] = obj11.popupBridgeState(lib2.paymentSource.type);
-                    return obj7;
-                  }
-                }
-                const obj26 = lib(4475);
-              }
-            } else if (4 === tmp8) {
-              if (arg0 === 1) {
-                c14 = 3;
-                throw gateway_checkout_context;
-              } else if (arg0 === 2) {
-                c11 = 0;
-                c14 = 3;
-                const obj8 = { value: null, done: true };
-                obj8[0] = gateway_checkout_context;
-                return obj8;
-              } else {
-                closure_8 = gateway_checkout_context;
-                obj5 = lib(530);
-                c7 = closure_8;
-                const aPIBaseURL = obj5.getAPIBaseURL();
-                if (closure_8 == null) {
-                  c7 = "";
-                }
-                c7.return_url = aPIBaseURL + billingError.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(lib2.paymentSource.type, c7, "success");
-              }
-            } else if (arg0 === 1) {
-              c14 = 3;
-              throw gateway_checkout_context;
-            } else if (arg0 === 2) {
-              c11 = 0;
-              c14 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = gateway_checkout_context;
-              return obj9;
-            } else {
-              closure_9 = gateway_checkout_context;
-              obj = lib2(709);
-              const obj10 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: null };
-              obj10[1] = closure_9.body;
-              obj.dispatch(obj10);
-              obj11 = { subscription: null, redirectConfirmation: false };
-              obj11[0] = closure_9.body;
-              c11 = 0;
-              c14 = 3;
-              const obj12 = { value: null, done: true };
-              obj12[0] = obj11;
-              return obj12;
-            }
-            if (null != lib2.items) {
-              obj7 = lib(4039);
-              const result = obj7.coerceExistingItemsToNewItemInterval(lib2.items);
-              c7.items = result.map((item, index) => {
-                const obj = {};
-                const merged = Object.assign(Object.assign(item, Object.create(null)));
-                obj.plan_id = item.planId;
-                return obj;
-              });
-            }
-            const HTTP = lib(530).HTTP;
-            const obj13 = { url: null, query: null, body: null, oldFormErrors: true, rejectWithError: false };
-            obj13[0] = billingError.BILLING_SUBSCRIPTION(lib.id);
-            const obj14 = { location: null, location_stack: null };
-            obj14[0] = closure_5;
-            obj14[1] = closure_4;
-            obj13[1] = obj14;
-            obj13[2] = c7;
-            c13 = 5;
-            c14 = 1;
-            obj15 = { value: null, done: false };
-            obj15[0] = HTTP.patch(obj13);
-            return obj15;
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
-          closure_8.payment_source_token = tmp52;
-          closure_8.currency = lib2.currency;
-          c13 = 3;
-          c14 = 1;
-          const obj16 = { value: null, done: false };
-          obj16[0] = lib(4054).createGatewayCheckoutContext(lib2.paymentSource);
-          return obj16;
-        } catch (tmp99) {
-          closure_12 = tmp99;
-          if (tmp4 === c11) {
-            c14 = tmp2;
-            throw tmp99;
-          } else {
-            c13 = tmp;
+        } else {
+          try {
+            c14 = 2;
+            if (0 === c13) {
+              if (arg0 === 1) {
+                c14 = 3;
+                throw gateway_checkout_context;
+              } else if (arg0 === 2) {
+                c14 = 3;
+                obj = { value: null, done: true };
+                obj[0] = gateway_checkout_context;
+                return obj;
+              } else {
+                let billingError = tmp3;
+                closure_9 = tmp5;
+                throwTypeErrorResult = lib;
+                throwTypeErrorResult = lib2;
+                throwTypeErrorResult = dependencyMap;
+                throwTypeErrorResult = closure_3;
+                throwTypeErrorResult = closure_4;
+                throwTypeErrorResult = closure_5;
+                throwTypeErrorResult = closure_6;
+                c7 = undefined;
+                closure_8 = undefined;
+                closure_9 = undefined;
+                billingError = undefined;
+                throwTypeErrorResult = lib2;
+                throwTypeErrorResult = dependencyMap;
+                throwTypeErrorResult = lib2(709).dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
+                c11 = 1;
+                obj1 = {};
+                closure_8 = obj1;
+                ({ status: obj28.status, paymentSource } = lib2);
+                let id;
+                if (paymentSource != null) {
+                  id = paymentSource.id;
+                }
+                obj1.payment_source_id = id;
+                let tmp52 = null;
+                if (null != throwTypeErrorResult.paymentSource) {
+                  c13 = 2;
+                  c14 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = lib(4469).createPaymentSourceToken(throwTypeErrorResult.paymentSource);
+                  return obj2;
+                }
+                const obj27 = lib2(709);
+              }
+            } else if (1 === tmp8) {
+              c11 = 0;
+              c11 = closure_12;
+              if (c11 instanceof lib(4273).BillingError) {
+                billingError = c11;
+              } else {
+                billingError = new lib(4273).BillingError(c11);
+              }
+              let obj15 = lib2(709);
+              const obj3 = { type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: null };
+              obj3[1] = billingError;
+              obj15.dispatch(obj3);
+              if (billingError.code !== lib(4061).ErrorCodes.CONFIRMATION_REQUIRED) {
+                throw billingError;
+              } else if (c11.body.payment_id) {
+                c14 = 3;
+                const obj4 = { value: null, done: true };
+                obj4[0] = callback(c11.body, lib2.paymentSource);
+                return obj4;
+              } else {
+                throw lib(4467).dispatchConfirmationError("payment id cannot be null on redirected confirmations.");
+              }
+            } else if (2 === tmp8) {
+              if (arg0 === 1) {
+                c14 = 3;
+                throw gateway_checkout_context;
+              } else {
+                tmp52 = gateway_checkout_context;
+                if (arg0 === 2) {
+                  c11 = 0;
+                  c14 = 3;
+                  let obj5 = { value: null, done: true };
+                  obj5[0] = gateway_checkout_context;
+                  return obj5;
+                }
+              }
+            } else {
+              if (3 === tmp8) {
+                if (arg0 === 1) {
+                  c14 = 3;
+                  throw gateway_checkout_context;
+                } else if (arg0 === 2) {
+                  c11 = 0;
+                  c14 = 3;
+                  const obj6 = { value: null, done: true };
+                  obj6[0] = gateway_checkout_context;
+                  return obj6;
+                } else {
+                  throwTypeErrorResult = closure_8;
+                  throwTypeErrorResult = closure_9;
+                  throwTypeErrorResult = billingError;
+                  closure_8.gateway_checkout_context = gateway_checkout_context;
+                  throwTypeErrorResult = closure_6;
+                  closure_8.load_id = closure_6;
+                  throwTypeErrorResult = lib2;
+                  closure_8.pause_duration = lib2.pauseDuration;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = dependencyMap;
+                  closure_8.purchase_token = lib(4475).getPurchaseToken();
+                  throwTypeErrorResult = dependencyMap;
+                  closure_8.expected_invoice_price = dependencyMap;
+                  throwTypeErrorResult = closure_3;
+                  closure_8.expected_renewal_price = closure_3;
+                  c7 = closure_8;
+                  throwTypeErrorResult = lib2;
+                  if (null != lib2.paymentSource) {
+                    if (set.has(lib2.paymentSource.type)) {
+                      let obj11 = lib(4467);
+                      c13 = 4;
+                      c14 = 1;
+                      let obj7 = { value: null, done: false };
+                      obj7[0] = obj11.popupBridgeState(lib2.paymentSource.type);
+                      return obj7;
+                    }
+                  }
+                  const obj26 = lib(4475);
+                }
+              } else if (4 === tmp8) {
+                if (arg0 === 1) {
+                  c14 = 3;
+                  throw gateway_checkout_context;
+                } else if (arg0 === 2) {
+                  c11 = 0;
+                  c14 = 3;
+                  const obj8 = { value: null, done: true };
+                  obj8[0] = gateway_checkout_context;
+                  return obj8;
+                } else {
+                  closure_8 = gateway_checkout_context;
+                  obj5 = lib(530);
+                  c7 = closure_8;
+                  const aPIBaseURL = obj5.getAPIBaseURL();
+                  if (closure_8 == null) {
+                    c7 = "";
+                  }
+                  c7.return_url = aPIBaseURL + billingError.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(lib2.paymentSource.type, c7, "success");
+                  const tmp18 = c7;
+                }
+              } else if (arg0 === 1) {
+                c14 = 3;
+                throw gateway_checkout_context;
+              } else if (arg0 === 2) {
+                c11 = 0;
+                c14 = 3;
+                const obj9 = { value: null, done: true };
+                obj9[0] = gateway_checkout_context;
+                return obj9;
+              } else {
+                closure_9 = gateway_checkout_context;
+                obj = lib2(709);
+                const obj10 = { type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: null };
+                obj10[1] = closure_9.body;
+                obj.dispatch(obj10);
+                obj11 = { subscription: null, redirectConfirmation: false };
+                obj11[0] = closure_9.body;
+                c11 = 0;
+                c14 = 3;
+                const obj12 = { value: null, done: true };
+                obj12[0] = obj11;
+                return obj12;
+              }
+              if (null != lib2.items) {
+                obj7 = lib(4039);
+                const result = obj7.coerceExistingItemsToNewItemInterval(lib2.items);
+                c7.items = result.map((planId) => {
+                  const obj = {};
+                  const merged = Object.assign(Object.assign(planId, Object.create(null)));
+                  obj.plan_id = planId.planId;
+                  return obj;
+                });
+              }
+              const HTTP = lib(530).HTTP;
+              const obj13 = { url: null, query: null, body: null, oldFormErrors: true, rejectWithError: false };
+              obj13[0] = billingError.BILLING_SUBSCRIPTION(lib.id);
+              const obj14 = { location: null, location_stack: null };
+              obj14[0] = closure_5;
+              obj14[1] = closure_4;
+              obj13[1] = obj14;
+              obj13[2] = c7;
+              c13 = 5;
+              c14 = 1;
+              obj15 = { value: null, done: false };
+              obj15[0] = HTTP.patch(obj13);
+              return obj15;
+            }
+            closure_8.payment_source_token = tmp52;
+            closure_8.currency = lib2.currency;
+            c13 = 3;
+            c14 = 1;
+            const obj16 = { value: null, done: false };
+            obj16[0] = lib(4054).createGatewayCheckoutContext(lib2.paymentSource);
+            return obj16;
+          } catch (tmp99) {
+            throwTypeErrorResult = tmp99;
+            closure_12 = tmp99;
+            throwTypeErrorResult = c11;
+            if (tmp4 === c11) {
+              throwTypeErrorResult = tmp2;
+              c14 = tmp2;
+              throw tmp99;
+            } else {
+              c13 = throwTypeErrorResult;
+            }
           }
         }
       }
@@ -1866,8 +1936,8 @@ function _fetchIpCountryCode() {
               callback = HTTP.get(obj3);
               let obj8 = callback(body[8]);
               obj8.wait(() => {
-                callback(table[8]);
-                const obj = { type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request: callback };
+                let obj = callback(table[8]);
+                obj = { type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request: callback };
                 return obj.dispatch(obj);
               });
               c5 = 3;
@@ -2003,8 +2073,8 @@ function _fetchIpLocation() {
               callback = HTTP.get(obj3);
               let obj8 = callback(closure_2[8]);
               obj8.wait(() => {
-                callback(table[8]);
-                const obj = { type: "BILLING_IP_LOCATION_FETCH_START", request: callback };
+                let obj = callback(table[8]);
+                obj = { type: "BILLING_IP_LOCATION_FETCH_START", request: callback };
                 return obj.dispatch(obj);
               });
               message = 3;
@@ -2284,12 +2354,14 @@ function _redeemUserDiscountOffer() {
 let closure_3 = ["line1", "line2", "postalCode"];
 ({ AnalyticEvents: c9, Endpoints: c10, PaymentGateways: unpackModuleId, REDIRECTED_PAYMENT_SOURCES: closure_12, SubscriptionStatusTypes: map1 } = ME);
 ({ ADYEN_PAYMENT_SOURCES: closure_15, CurrencyCodes: closure_16, PaymentStatusTypes: closure_17, PREPAID_PAYMENT_SOURCES: closure_18, SubscriptionTypes: closure_19 } = sum);
-let result = require("obj132").fileFinishedImporting("modules/billing/actions/BillingActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/billing/actions/BillingActionCreators.tsx");
 for (const key10070 in require("_getClientSecret")) {
+  let tmp5 = key10070;
   arg5[key10070] = require("_getClientSecret")[key10070];
   continue;
 }
 for (const key10074 in require("_validatePaymentSourceBillingAddress")) {
+  let tmp6 = key10074;
   arg5[key10074] = require("_validatePaymentSourceBillingAddress")[key10074];
   continue;
 }
@@ -2426,13 +2498,15 @@ export const cancelSubscription = function cancelSubscription(id, c4) {
   }
   return applyArgumentsResult;
 };
-export const deleteRenewalMutation = function deleteRenewalMutation(currency, closure_1_6) {
-  const obj = { amount: 0, currency: currency.currency };
-  return updateSubscription(currency, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(currency.items, currency.currency, currency.paymentSourceId), closure_1_6);
+export const deleteRenewalMutation = function deleteRenewalMutation(items) {
+  let obj = { items: items.items };
+  obj = { amount: 0, currency: items.currency };
+  return updateSubscription(items, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId), arg1);
 };
 export { updateSubscription };
 export const resubscribeToSubscription = function resubscribeToSubscription(currency, closure_1_6, id) {
-  const obj = { amount: 0, currency: currency.currency };
+  let obj = { status: constants.ACTIVE, paymentSource: id, currency: arg3 };
+  obj = { amount: 0, currency: currency.currency };
   id = undefined;
   ({ items, currency } = currency);
   if (id != null) {
@@ -2440,18 +2514,20 @@ export const resubscribeToSubscription = function resubscribeToSubscription(curr
   }
   return updateSubscription(currency, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(items, currency, id), closure_1_6, arg4);
 };
-export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice, closure_1_6) {
+export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice) {
   let obj = getPremiumPlanItem;
   obj = { status: constants.ACTIVE, items: obj.getItemsWithUpsertedPremiumPlanId(renewalMutations, basePlanId) };
-  return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, closure_1_6, arg5);
+  return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, arg4, arg5);
 };
-export const changeSubscriptionCurrency = function changeSubscriptionCurrency(currency, currency, itemPlansTotalServerPrice, closure_1_6) {
-  const obj = { amount: 0, currency: currency.toLowerCase() };
-  return updateSubscription(currency, obj, obj, itemPlansTotalServerPrice, closure_1_6, arg4);
+export const changeSubscriptionCurrency = function changeSubscriptionCurrency(items, currency, itemPlansTotalServerPrice) {
+  let obj = { currency };
+  obj = { amount: 0, currency: currency.toLowerCase() };
+  return updateSubscription(items, obj, obj, itemPlansTotalServerPrice, arg3, arg4);
 };
-export const changePaymentSource = function changePaymentSource(currency, paymentSource, currency, closure_1_6) {
-  const obj = { amount: 0, currency: currency.currency };
-  return updateSubscription(currency, obj, obj, currency, closure_1_6, arg4);
+export const changePaymentSource = function changePaymentSource(items, paymentSource, currency) {
+  let obj = { paymentSource };
+  obj = { amount: 0, currency: currency.currency };
+  return updateSubscription(items, obj, obj, currency, arg3, arg4);
 };
 export const clearUpdatePaymentSourceError = function clearUpdatePaymentSourceError() {
   dispatcherDefault.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });
@@ -2482,10 +2558,11 @@ export const popupBridgeCallback = function popupBridgeCallback(paymentSourceTyp
   obj.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_START", paymentSourceType });
   const HTTP = paymentSourceType(530).HTTP;
   obj = { url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType), body: { state, path, query, insecure }, oldFormErrors: true, rejectWithError: false };
-  return HTTP.post(obj).then((result) => {
-    const obj = { type: "BILLING_POPUP_BRIDGE_CALLBACK_END", paymentSourceType };
+  return HTTP.post(obj).then((arg0) => {
+    let obj = closure_1_1(closure_1_2[8]);
+    obj = { type: "BILLING_POPUP_BRIDGE_CALLBACK_END", paymentSourceType };
     obj.dispatch(obj);
-    return result;
+    return arg0;
   });
 };
 export const fetchIpCountryCode = function fetchIpCountryCode() {
@@ -2508,8 +2585,8 @@ export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchP
   const HTTP = sendRequest.HTTP;
   obj = { url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
-  value.then((result) => {
-    const body = result.body;
+  value.then((body) => {
+    body = body.body;
     if (null != body) {
       let store_country = body.store_country;
       if (store_country == null) {
@@ -2539,11 +2616,12 @@ export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchP
       obj1[1] = error;
       obj.dispatch(obj1);
     }
-  }).catch((error) => {
-    if (!(error instanceof Error)) {
+  }).catch((arg0) => {
+    error = arg0;
+    if (!(arg0 instanceof Error)) {
       const _Error = Error;
       const _String = String;
-      error = new Error(String(error));
+      error = new Error(String(arg0));
     }
     callback(709).dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL", error });
   });
@@ -2565,7 +2643,8 @@ export const resetSubscriptionStore = function resetSubscriptionStore() {
   dispatcherDefault.dispatch({ type: "BILLING_SUBSCRIPTION_RESET" });
 };
 export const startBrowserCheckout = function startBrowserCheckout(loadId) {
-  const obj = { type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED", loadId };
+  let obj = dispatcherDefault;
+  obj = { type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED", loadId };
   obj.dispatch(obj);
 };
 export const redeemReactivationOffer = function redeemReactivationOffer() {

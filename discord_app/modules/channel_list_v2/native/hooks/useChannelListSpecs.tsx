@@ -1,10 +1,10 @@
 // discord_app/modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import hairlineWidth from "../RedesignChannelListConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ STICKY_BANNER_ASPECT_RATIO: c4, BANNER_MAX_HEIGHT_PERCENTAGE: c5 } = hairlineWidth);
-const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
   redesignGuildHeaderHeight = redesignGuildHeaderHeight(15395).useRedesignGuildHeaderHeight(banner);

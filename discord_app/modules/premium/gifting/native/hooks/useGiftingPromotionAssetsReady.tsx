@@ -1,9 +1,9 @@
 // discord_app/modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import useThemeAndReducedMotionAwareAssetUrl from "../../../promotions/MarketingComponentHooks.tsx";
 import usePreloadedAssetDefault from "../../../../image/usePreloadedAsset.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
+const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default function useGiftingPromotionAssetsReady(asset, asset2) {
   let obj = useThemeAndReducedMotionAwareAssetUrl;

@@ -1,8 +1,8 @@
 // discord_app/modules/application_account_linking/native/startAuthorizationNoHook.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _startAuthorizationNoHook() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -101,7 +101,7 @@ function _startAuthorizationNoHook() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 
 export const startAuthorizationNoHook = function startAuthorizationNoHook(application, items) {
   const self = this;

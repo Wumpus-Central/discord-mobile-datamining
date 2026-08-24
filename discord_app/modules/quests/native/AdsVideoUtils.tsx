@@ -1,9 +1,9 @@
 // discord_app/modules/quests/native/AdsVideoUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import obj1322 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
+import set2 from "../../../utils/PlatformUtils.tsx";
 
 let closure_2 = [-1000, -1003, -1004, -1008];
-const result = obj132.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 
 export const isSourceError = function isSourceError(error) {
   if (error != null) {
@@ -19,7 +19,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = obj1322.isIOS();
+    isIOSResult = set2.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -27,7 +27,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = obj1322;
+    const tmpResult = set2;
   }
   return isIOSResult;
 };

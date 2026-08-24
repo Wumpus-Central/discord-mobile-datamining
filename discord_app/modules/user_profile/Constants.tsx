@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/Constants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("modules/user_profile/Constants.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
 export const getBadgeName = function getBadgeName(arg0) {
@@ -22,14 +22,14 @@ export const TrackUserProfileActivityActions = { VIEW_ACTIVITY_CARD: "VIEW_ACTIV
 export const TrackUserProfileEditActions = { PRESS_ADD_GAME: "PRESS_ADD_GAME", GAME_SEARCH_SESSION_STARTED: "GAME_SEARCH_SESSION_STARTED", GAME_SEARCH_SESSION_ENDED: "GAME_SEARCH_SESSION_ENDED", GAME_ADDED: "GAME_ADDED", GAME_REMOVED: "GAME_REMOVED", CLIP_REMOVED: "CLIP_REMOVED", CLIP_TITLE_EDITED: "CLIP_TITLE_EDITED", PRESS_ADD_WIDGET: "PRESS_ADD_WIDGET", WIDGET_ADDED: "WIDGET_ADDED", WIDGET_REMOVED: "WIDGET_REMOVED", PRESS_ADD_TAG: "PRESS_ADD_TAG", TAG_ADDED: "TAG_ADDED", TAG_REMOVED: "TAG_REMOVED", PRESS_ADD_COMMENTARY: "PRESS_ADD_COMMENTARY", COMMENTARY_EDITED: "COMMENTARY_EDITED" };
 export const TrackUserProfileWishlistActions = { WISHLIST_ITEM_CLICKED: "WISHLIST_ITEM_CLICKED", WISHLIST_TOGGLE_PRIVATE: "WISHLIST_TOGGLE_PRIVATE", WISHLIST_TOGGLE_PUBLIC: "WISHLIST_TOGGLE_PUBLIC", PRESS_WISHLIST_BREADCRUMB_CARD: "PRESS_WISHLIST_BREADCRUMB_CARD", PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD: "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD", VIEW_WISHLIST: "VIEW_WISHLIST", PRESS_EDIT_WISHLIST: "PRESS_EDIT_WISHLIST", PRESS_ADD_WISHLIST_ITEM: "PRESS_ADD_WISHLIST_ITEM" };
 export const TrackUserProfileUi = { USER_PROFILE: "USER_PROFILE", PROFILE_FRAME: "PROFILE_FRAME" };
-export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(icon) {
+export const getBadgeAssetFromCDN = function getBadgeAssetFromCDN(arg0) {
   if (null != CDN_HOST) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "https://" + CDN_HOST + "/badge-icons/" + icon + ".png";
+    let combined = "https://" + CDN_HOST + "/badge-icons/" + arg0 + ".png";
   } else {
     const _location = location;
     const _HermesInternal = HermesInternal;
-    combined = "" + location.protocol + tmp + Endpoints.BADGE_ICON(icon);
+    combined = "" + location.protocol + tmp + Endpoints.BADGE_ICON(arg0);
   }
   return combined;
 };

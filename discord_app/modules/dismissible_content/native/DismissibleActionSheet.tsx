@@ -1,14 +1,14 @@
 // discord_app/modules/dismissible_content/native/DismissibleActionSheet.tsx
 import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");
 
 export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
   importDefault = arg0;
   useMountLayoutEffectDefault(() => {
-    lib(dependencyMap[2]);
-    const obj = {};
+    let obj = lib(closure_1_1[2]);
+    obj = {};
     const merged = Object.assign(lib);
     obj.markAsDismissed = function markAsDismissed(arg0) {
       closure_1_0(closure_1_1[2]).hideActionSheet(closure_0.actionSheetKey);
@@ -20,10 +20,9 @@ export const DismissibleActionSheet = function DismissibleActionSheet(arg0) {
   ({ actionSheetKey: arr[0], hideSheetOnUnmount: arr[1] } = arg0);
   const effect = React.useEffect(() => () => {
     if (tmp2) {
-      closure_1_0(closure_1_1[2]).hideActionSheet(hideSheetOnUnmount.actionSheetKey);
+      closure_1_0(closure_1_1[2]).hideActionSheet(tmp.actionSheetKey);
       const obj = closure_1_0(closure_1_1[2]);
     }
-    tmp2 = null != hideSheetOnUnmount.hideSheetOnUnmount && hideSheetOnUnmount.hideSheetOnUnmount;
   }, items);
   return null;
 };

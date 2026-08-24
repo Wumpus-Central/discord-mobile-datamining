@@ -1,21 +1,22 @@
 // discord_app/modules/activities/useIsActivityFocused.tsx
 import sortKey from "../calls/ChannelRTCParticipants.tsx";
-import getParticipants from "../calls/ChannelRTCStore.tsx";
-import participantFromServer from "EmbeddedActivitiesStore.tsx";
+import closure_2 from "../calls/ChannelRTCStore.tsx";
+import closure_3 from "EmbeddedActivitiesStore.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/useIsActivityFocused.tsx");
 
 export default function useIsActivityFocused(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const selectedParticipant = closure_1_2.getSelectedParticipant(callback);
     const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
     let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
     if (tmp3) {
-      callback(dependencyMap[2]);
-      const obj = { applicationId: null, instanceId: null };
+      let obj = callback(closure_1_1[2]);
+      obj = { applicationId: null, instanceId: null };
       obj[0] = currentEmbeddedActivity.applicationId;
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
@@ -33,7 +34,8 @@ export const isActivityFocused = function isActivityFocused(channelId) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    const obj = { applicationId: null, instanceId: null };
+    let obj = sortKey;
+    obj = { applicationId: null, instanceId: null };
     obj[0] = currentEmbeddedActivity.applicationId;
     let compositeInstanceId;
     if (currentEmbeddedActivity != null) {

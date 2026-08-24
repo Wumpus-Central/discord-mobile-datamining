@@ -3,17 +3,17 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getPremiumPlanItem from "../../utils/PremiumUtils.tsx";
 import apexExperiment from "../../modules/premium/experiments/PremiumOfferReminderExperiment.tsx";
-import createFromServer from "../../modules/billing/records/DiscountRecord.tsx";
-import emitChanges from "../../modules/premium/ReferralTrialStore.tsx";
-import createFromServer2 from "../../modules/user_offers/records/UserDiscountOfferRecord.tsx";
-import createFromServer3 from "../../modules/user_offers/records/UserTrialOfferRecord.tsx";
-import mergeGuildAvatar from "../UserStore.tsx";
-import addEntitlement from "../game_store/EntitlementStore.tsx";
-import reset from "SubscriptionStore.tsx";
+import closure_2 from "../../modules/billing/records/DiscountRecord.tsx";
+import closure_3 from "../../modules/premium/ReferralTrialStore.tsx";
+import closure_4 from "../../modules/user_offers/records/UserDiscountOfferRecord.tsx";
+import closure_5 from "../../modules/user_offers/records/UserTrialOfferRecord.tsx";
+import closure_6 from "../UserStore.tsx";
+import closure_7 from "../game_store/EntitlementStore.tsx";
+import closure_8 from "SubscriptionStore.tsx";
 import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 
-require = fn;
+require = arg1;
 function emitChanges() {
   return true;
 }
@@ -65,14 +65,14 @@ function handleSubscriptionStoreUpdate() {
   } else {
     if (null != obj.userDiscountOffers[closure_11]) {
       obj = {};
-      obj[closure_11] = obj.userDiscountOffers[closure_11];
+      obj[tmp3] = obj.userDiscountOffers[tmp3];
       obj.userDiscountOffers = obj;
       obj.userTrialOffers = {};
     } else if (null == obj.userDiscountOffers[closure_12]) {
       obj.userDiscountOffers = {};
     }
     obj = {};
-    obj[closure_12] = obj.userDiscountOffers[closure_12];
+    obj[tmp5] = obj.userDiscountOffers[tmp5];
     obj.userDiscountOffers = obj;
   }
 }
@@ -99,8 +99,8 @@ prototype["initialize"] = function initialize(userTrialOffers) {
       userTrialOffers = {};
     }
     const entries = Object.entries(userTrialOffers);
-    obj.userTrialOffers = Object.fromEntries(entries.map((item, index) => {
-      [tmp, tmp2] = item;
+    obj.userTrialOffers = Object.fromEntries(entries.map((arg0) => {
+      [tmp, tmp2] = arg0;
       const items = [tmp, ];
       obj = closure_5;
       if (tmp2 instanceof closure_5) {
@@ -131,8 +131,8 @@ prototype["initialize"] = function initialize(userTrialOffers) {
       userDiscountOffers = {};
     }
     const entries1 = Object.entries(userDiscountOffers);
-    obj.userDiscountOffers = Object.fromEntries(entries1.map((item, index) => {
-      [tmp, tmp2] = item;
+    obj.userDiscountOffers = Object.fromEntries(entries1.map((arg0) => {
+      [tmp, tmp2] = arg0;
       const items = [tmp, callback(tmp2)];
       return items;
     }));
@@ -163,7 +163,10 @@ prototype["getAnyOfUserTrialOfferId"] = function getAnyOfUserTrialOfferId(arg0) 
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let tmp3 = obj;
     if (null != obj.userTrialOffers[nextResult]) {
+      let tmp4 = iter;
       iter.return();
       return nextResult;
     }
@@ -210,16 +213,18 @@ prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminde
   let result = !hasItem;
   if (hasItem) {
     result = apexExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
+    obj = apexExperiment;
   }
   return result;
 };
 prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpiringTrialOffersForReminder(items) {
-  const self = this;
+  let self = this;
+  self = this;
   dependencyMap = items;
   let values = Object.values(closure_14);
-  const _require = values.map((item, index) => item.id);
+  const _require = values.map((id) => id.id);
   const currentUser = authStore.getCurrentUser();
-  obj = getPremiumPlanItem;
+  obj = _getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
       items = [];
@@ -227,27 +232,27 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
     return items;
   }
   values = Object.values(obj.userTrialOffers);
-  items = values.filter((item, index) => {
-    let hasItem = lib.includes(item.trialId);
+  items = values.filter((trialId) => {
+    let hasItem = lib.includes(trialId.trialId);
     if (hasItem) {
-      hasItem = null != item.expiresAt;
+      hasItem = null != trialId.expiresAt;
     }
     if (hasItem) {
-      hasItem = null != item.subscriptionTrial;
+      hasItem = null != trialId.subscriptionTrial;
     }
     if (hasItem) {
-      hasItem = items.includes(item.subscriptionTrial.skuId);
+      hasItem = items.includes(trialId.subscriptionTrial.skuId);
     }
     if (hasItem) {
-      const expiresAt = item.expiresAt;
+      const expiresAt = trialId.expiresAt;
       const _Date = Date;
       const time = expiresAt.getTime();
       const timestamp = Date.now();
-      hasItem = time < timestamp + lib(items[10]).getOfferNoticeThreshold(item);
+      hasItem = time < timestamp + lib(items[10]).getOfferNoticeThreshold(trialId);
       obj = lib(items[10]);
     }
     if (hasItem) {
-      hasItem = self.shouldShowTrialOfferReminder(item);
+      hasItem = self.shouldShowTrialOfferReminder(trialId);
     }
     return hasItem;
   });
@@ -257,11 +262,13 @@ prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferR
   let result = !hasItem;
   if (hasItem) {
     result = apexExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
+    obj = apexExperiment;
   }
   return result;
 };
 prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpiringDiscountOffersForReminder(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
   obj = _require(self[10]);
@@ -272,22 +279,22 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
     return items;
   }
   const values = Object.values(obj.userDiscountOffers);
-  items = values.filter((item, index) => {
-    let someResult = null != item.expiresAt && null != item.discount;
+  items = values.filter((expiresAt) => {
+    let someResult = null != expiresAt.expiresAt && null != expiresAt.discount;
     if (someResult) {
-      const planIds = item.discount.planIds;
-      someResult = planIds.some((item, index) => closure_0.includes(closure_1_13[item].skuId));
+      const planIds = expiresAt.discount.planIds;
+      someResult = planIds.some((arg0) => closure_0.includes(closure_1_13[arg0].skuId));
     }
     if (someResult) {
-      const expiresAt = item.expiresAt;
+      expiresAt = expiresAt.expiresAt;
       const _Date = Date;
       const time = expiresAt.getTime();
       const timestamp = Date.now();
-      someResult = time < timestamp + callback(self[10]).getOfferNoticeThreshold(item);
+      someResult = time < timestamp + callback(self[10]).getOfferNoticeThreshold(expiresAt);
       obj = callback(self[10]);
     }
     if (someResult) {
-      someResult = self.shouldShowDiscountOfferReminder(item);
+      someResult = self.shouldShowDiscountOfferReminder(expiresAt);
     }
     return someResult;
   });
@@ -295,7 +302,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
 prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = getPremiumPlanItem;
+  obj = _getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
@@ -304,10 +311,10 @@ prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
     return items;
   }
   const values = Object.values(obj.userTrialOffers);
-  items = values.filter((item, index) => {
-    let hasItem = closure_0.includes(item.trialId);
+  items = values.filter((trialId) => {
+    let hasItem = closure_0.includes(trialId.trialId);
     if (hasItem) {
-      hasItem = null != item.expiresAt;
+      hasItem = null != trialId.expiresAt;
     }
     return hasItem;
   });
@@ -327,11 +334,11 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
     userDiscountOffers = {};
   }
   const values = Object.values(userDiscountOffers);
-  items = values.filter((item, index) => {
-    const hasAcknowledgedResult = item.hasAcknowledged();
+  items = values.filter((hasAcknowledged) => {
+    const hasAcknowledgedResult = hasAcknowledged.hasAcknowledged();
     let tmp2 = !hasAcknowledgedResult;
     if (!hasAcknowledgedResult) {
-      tmp2 = !closure_9.includes(item.discountId);
+      tmp2 = !closure_9.includes(hasAcknowledged.discountId);
     }
     return tmp2;
   });
@@ -339,7 +346,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
 prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = getPremiumPlanItem;
+  obj = _getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
@@ -348,21 +355,21 @@ prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
     return items;
   }
   const values = Object.values(obj.userTrialOffers);
-  items = values.filter((item, index) => {
-    let hasItem = closure_0.includes(item.trialId);
+  items = values.filter((trialId) => {
+    let hasItem = closure_0.includes(trialId.trialId);
     if (hasItem) {
-      hasItem = null == item.expiresAt;
+      hasItem = null == trialId.expiresAt;
     }
     return hasItem;
   });
 };
 prototype["hasAnyUnexpiredOffer"] = function hasAnyUnexpiredOffer() {
   const values = Object.values(obj.userTrialOffers);
-  return values.some((item, index) => !item.hasExpired());
+  return values.some((hasExpired) => !hasExpired.hasExpired());
 };
 prototype["hasAnyUnexpiredDiscountOffer"] = function hasAnyUnexpiredDiscountOffer() {
   const values = Object.values(obj.userDiscountOffers);
-  return values.some((item, index) => !item.hasExpired());
+  return values.some((hasExpired) => !hasExpired.hasExpired());
 };
 prototype["canFractionalPremiumUserUseOffer"] = function canFractionalPremiumUserUseOffer() {
   let result = fractionalPremiumActive.isFractionalPremiumActive({ excludeReverseTrial: true });
@@ -445,8 +452,8 @@ let items = [
       const _Object = Object;
       const _Object2 = Object;
       const entries = Object.entries(userDiscountOffers.userDiscountOffers);
-      obj.userDiscountOffers = Object.fromEntries(entries.map((item, index) => {
-        [tmp, tmp2] = item;
+      obj.userDiscountOffers = Object.fromEntries(entries.map((arg0) => {
+        [tmp, tmp2] = arg0;
         const items = [tmp, callback(tmp2)];
         return items;
       }));
@@ -486,7 +493,6 @@ obj = {
     obj.userOffersLastFetchedAtDate = Date.now();
     obj.isFetching = false;
     obj.lastFetchSuccessful = true;
-    tmp = null == userTrialOffer && null == userDiscountOffer;
   },
   BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function handleUserOfferAcknowledgedSuccess(arg0) {
     ({ userTrialOffer, userDiscount, userDiscountOffer } = arg0);
@@ -516,12 +522,12 @@ obj = {
   BILLING_USER_OFFER_REDEEMED: function handleUserOfferRedeemed(offerId) {
     offerId = offerId.offerId;
     const keys = Object.keys(obj.userDiscountOffers);
-    if (null != keys.find((item, index) => obj.userDiscountOffers[item].id === offerId)) {
+    if (null != keys.find((arg0) => closure_1_17.userDiscountOffers[arg0].id === offerId)) {
       const userDiscountOffers = obj.userDiscountOffers;
       delete tmp3[tmp4];
     }
     const keys1 = Object.keys(obj.userTrialOffers);
-    if (null != keys1.find((item, index) => obj.userTrialOffers[item].id === offerId)) {
+    if (null != keys1.find((arg0) => closure_1_17.userTrialOffers[arg0].id === offerId)) {
       const userTrialOffers = obj.userTrialOffers;
       delete tmp[tmp2];
     }
@@ -538,6 +544,6 @@ obj = {
   }
 };
 const userOfferStore = new UserOfferStore(dispatcherDefault, obj);
-let result = require("obj132").fileFinishedImporting("stores/billing/UserOfferStore.tsx");
+let result = require("set").fileFinishedImporting("stores/billing/UserOfferStore.tsx");
 
 export default userOfferStore;

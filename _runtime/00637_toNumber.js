@@ -1,7 +1,5 @@
 // _runtime/00637_toNumber.js
-import isObject from "00606_isObject.js";
 import isSymbol from "00638_isSymbol.js";
-import baseTrim from "00639_baseTrim.js";
 
 const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;
@@ -14,13 +12,13 @@ export default function toNumber(num) {
     return NaN;
   } else {
     let tmp = num;
-    if (isObject(num)) {
+    if (tmp10(606)(num)) {
       let valueOfResult = num;
       if (typeof num.valueOf === "function") {
         valueOfResult = num.valueOf();
       }
       let text = valueOfResult;
-      if (isObject(valueOfResult)) {
+      if (tmp10(606)(valueOfResult)) {
         text = `${tmp2}`;
       }
       tmp = text;
@@ -32,7 +30,7 @@ export default function toNumber(num) {
       }
       return tmp9;
     } else {
-      const arr = baseTrim(tmp);
+      const arr = tmp10(639)(tmp);
       const isMatch = regex2.test(arr);
       if (!isMatch) {
         if (!regex3.test(arr)) {
@@ -49,6 +47,7 @@ export default function toNumber(num) {
         num3 = 2;
       }
       num = parseInt(substr, num3);
+      const tmp7 = parseInt;
     }
   }
 };

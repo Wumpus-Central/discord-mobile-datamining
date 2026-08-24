@@ -1,11 +1,11 @@
 // discord_app/modules/game_server/hooks/useGameServerPerk.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import handleGameServerInstanceCreated from "../GameServerStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../GameServerStore.tsx";
 import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "../GameServerConstants.tsx";
 import { GuildPowerupType } from "../../premium/powerups/constants/GuildPowerupsConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
 export default function useGameServerPerk(guildId) {
   const _require = guildId;
@@ -33,7 +33,7 @@ export default function useGameServerPerk(guildId) {
         obj[2] = intl2.format(gameServerEnabled(stateFromStores[8])["+UqyGU"], obj);
         obj[3] = tmp2;
         obj[4] = [];
-        obj[5] = GuildPowerupType.PERK;
+        obj[5] = closure_1_6.PERK;
         obj[6] = gameServerEnabled(stateFromStores[9]);
         obj[7] = gameServerEnabled(stateFromStores[9]);
         tmp = obj;

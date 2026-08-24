@@ -1,15 +1,16 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { GuildScheduledEventEntityTypes as closure_7 } from "../../GuildScheduledEventsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const require = arg1;
+let obj = { cardStyle: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((guild) => {
@@ -17,7 +18,9 @@ const memoResult = importAllResult.memo((guild) => {
   let PREVIEW = guild;
   ({ onCloseModal: importDefault, initialGuildEvent } = guild);
   let first;
+  closure_4 = undefined;
   let first1;
+  jsx = undefined;
   function _handleSave() {
     const self = this;
     const tmp = callback(function*() {
@@ -108,17 +111,16 @@ const memoResult = importAllResult.memo((guild) => {
     if (first1) {
       let id;
       if (initialGuildEvent != null) {
-        id = initialGuildEvent.id;
+        id = tmp3.id;
       }
       if (null != id) {
-        let saveEventResult = importDefault(first[10]).saveEvent(initialGuildEvent.id, first, PREVIEW.id);
-        const obj3 = importDefault(first[10]);
+        let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
+        const obj3 = closure_1_1(tmp[10]);
       }
       return saveEventResult;
     }
     const obj = initialGuildEvent(first[9]);
-    saveEventResult = importDefault(first[10]).createGuildEvent(first, PREVIEW.id);
-    const obj2 = importDefault(first[10]);
+    saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
   }), 2);
   jsx = {
     guild,
@@ -167,6 +169,7 @@ const memoResult = importAllResult.memo((guild) => {
       });
     }
   };
+  obj = {};
   obj = { title: "", customNavbar: null, headerLeft: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR;
   obj[1] = () => jsx(EditGuildEventModalNavbarDefault, { screen: PREVIEW, onClose: closure_1_1 });
@@ -175,13 +178,13 @@ const memoResult = importAllResult.memo((guild) => {
   };
   obj[3] = function render() {
     const obj = {};
-    const merged = Object.assign(callback);
+    const merged = Object.assign(closure_8);
     let id;
     if (initialGuildEvent != null) {
       id = initialGuildEvent.id;
     }
     obj.guildEventId = id;
-    return callback(importDefault(first[16]), obj);
+    return closure_8(closure_1_1(first[16]), obj);
   };
   obj[PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR] = obj;
   obj1 = { title: "", customNavbar: null, render: null, fullscreen: true };
@@ -189,7 +192,7 @@ const memoResult = importAllResult.memo((guild) => {
   obj1[1] = () => jsx(EditGuildEventModalNavbarDefault, { screen: PREVIEW, onClose: closure_1_1 });
   obj1[2] = function render() {
     const merged = Object.assign(callback2);
-    return callback2(importDefault(first[17]), {});
+    return callback2(closure_1_1(first[17]), {});
   };
   obj[PREVIEW(first[7]).EditGuildEventScreens.DETAILS] = obj1;
   let obj2 = { title: "", customNavbar: null, render: null, fullscreen: true };
@@ -197,7 +200,7 @@ const memoResult = importAllResult.memo((guild) => {
   obj2[1] = () => jsx(EditGuildEventModalNavbarDefault, { screen: PREVIEW, onClose: closure_1_1 });
   obj2[2] = function render() {
     const merged = Object.assign(callback2);
-    return callback2(importDefault(first[18]), {});
+    return callback2(closure_1_1(first[18]), {});
   };
   obj[PREVIEW(first[7]).EditGuildEventScreens.PREVIEW] = obj2;
   const tmp5 = first1(importDefault(first[8])(() => {
@@ -205,17 +208,16 @@ const memoResult = importAllResult.memo((guild) => {
     if (first1) {
       let id;
       if (initialGuildEvent != null) {
-        id = initialGuildEvent.id;
+        id = tmp3.id;
       }
       if (null != id) {
-        let saveEventResult = importDefault(first[10]).saveEvent(initialGuildEvent.id, first, PREVIEW.id);
-        const obj3 = importDefault(first[10]);
+        let saveEventResult = closure_1_1(tmp[10]).saveEvent(tmp3.id, first, PREVIEW.id);
+        const obj3 = closure_1_1(tmp[10]);
       }
       return saveEventResult;
     }
     const obj = initialGuildEvent(first[9]);
-    saveEventResult = importDefault(first[10]).createGuildEvent(first, PREVIEW.id);
-    const obj2 = importDefault(first[10]);
+    saveEventResult = closure_1_1(first[10]).createGuildEvent(first, PREVIEW.id);
   }), 2);
   return jsx(PREVIEW(first[19]).Navigator, {
     screens: obj,
@@ -238,6 +240,6 @@ const memoResult = importAllResult.memo((guild) => {
     cardStyle: tmp.cardStyle
   });
 });
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx");
 
 export default memoResult;

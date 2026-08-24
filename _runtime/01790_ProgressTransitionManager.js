@@ -2,13 +2,14 @@
 import isJest2 from "01657_isJest.js";
 import t from "01665_t.js";
 import isReanimated3 from "01698_isReanimated3.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import isJest from "01657_isJest.js";
+import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
 
 const ProgressTransitionManager = global;
-require = fn;
+require = arg1;
 let closure_4 = { code: "function pnpm_ProgressTransitionManagerTs1(){const{viewTag,progressAnimation}=this.__closure;global.ProgressTransitionRegister.addProgressAnimation(viewTag,progressAnimation);}" };
 let closure_5 = { code: "function pnpm_ProgressTransitionManagerTs2(){const{viewTag,isUnmounting}=this.__closure;global.ProgressTransitionRegister.removeProgressAnimation(viewTag,isUnmounting);}" };
 let closure_6 = { code: "function pnpm_ProgressTransitionManagerTs3(event){const{lastProgressValue}=this.__closure;const progress=event.progress;if(progress===lastProgressValue){return;}lastProgressValue=progress;global.ProgressTransitionRegister.frame(progress);}" };
@@ -34,7 +35,7 @@ let obj = {
     fn.__closure = { viewTag, progressAnimation };
     fn.__workletHash = 1345064651573;
     fn.__initData = closure_4;
-    require("01661_runWorkletOnJS.js").runOnUIImmediately(fn)();
+    _runWorkletOnJS.runOnUIImmediately(fn)();
     const result = this.registerEventHandlers();
   }
 };
@@ -66,6 +67,7 @@ const items = [
       if (!this._eventHandler.isRegistered) {
         _eventHandler.isRegistered = true;
         c0 = -1;
+        let obj = isReanimated3;
         const fn = function o(progress) {
           progress = progress.progress;
           if (progress !== progress) {
@@ -73,7 +75,7 @@ const items = [
             ProgressTransitionRegister.frame(progress);
           }
         };
-        const obj = { lastProgressValue: null };
+        obj = { lastProgressValue: null };
         obj[0] = c0;
         fn.__closure = obj;
         fn.__workletHash = 1831800135022;
@@ -87,6 +89,7 @@ const items = [
         fn2.__workletHash = 10114828892519;
         fn2.__initData = closure_7;
         _eventHandler.onAppear = isReanimated3.registerEventHandler(fn2, "onAppear");
+        const obj3 = isReanimated3;
         const fn3 = function n() {
           const ProgressTransitionRegister = v1.ProgressTransitionRegister;
           const result = ProgressTransitionRegister.onAndroidFinishTransitioning();
@@ -95,6 +98,7 @@ const items = [
         fn3.__workletHash = 13733013860161;
         fn3.__initData = closure_8;
         _eventHandler.onDisappear = isReanimated3.registerEventHandler(fn3, "onFinishTransitioning");
+        const obj4 = isReanimated3;
       }
     }
   },
@@ -107,18 +111,22 @@ const items = [
         if (-1 !== this._eventHandler.onTransitionProgress) {
           const result = isReanimated3.unregisterEventHandler(_eventHandler.onTransitionProgress);
           _eventHandler.onTransitionProgress = -1;
+          const obj = isReanimated3;
         }
         if (-1 !== this._eventHandler.onAppear) {
           const result1 = isReanimated3.unregisterEventHandler(_eventHandler.onAppear);
           _eventHandler.onAppear = -1;
+          const obj2 = isReanimated3;
         }
         if (-1 !== this._eventHandler.onDisappear) {
           const result2 = isReanimated3.unregisterEventHandler(_eventHandler.onDisappear);
           _eventHandler.onDisappear = -1;
+          const obj3 = isReanimated3;
         }
         if (-1 !== this._eventHandler.onSwipeDismiss) {
           const result3 = isReanimated3.unregisterEventHandler(_eventHandler.onSwipeDismiss);
           _eventHandler.onSwipeDismiss = -1;
+          const obj4 = isReanimated3;
         }
       }
     }
@@ -152,17 +160,22 @@ function createProgressTransitionRegister() {
         map.delete(arg0);
       }
     },
-    onTransitionStart(arg0, closure_0) {
+    onTransitionStart(arg0, arg1) {
       closure_4 = c5;
-      const result = map1.set(arg0, closure_0);
+      const result = map1.set(arg0, arg1);
       set.add(arg0);
       obj.frame(0);
     },
     frame(arg0) {
       for (const item10008 of set) {
+        let tmp = item10008;
+        let tmp2 = map;
         let value = map.get(item10008);
         if (value) {
-          let tmp4Result = tmp4(item10008, map1.get(item10008), arg0);
+          let tmp5 = value;
+          let tmp6 = item10008;
+          let tmp7 = map1;
+          let tmp4Result = tmp4(tmp, map1.get(tmp), arg0);
         }
         continue;
       }
@@ -183,6 +196,7 @@ function createProgressTransitionRegister() {
           c5 = false;
         } else {
           for (const item10012 of tmp) {
+            let tmp7 = map;
             let _notifyAboutEndResult = map._notifyAboutEnd(item10012, flag);
             continue;
           }
@@ -191,7 +205,9 @@ function createProgressTransitionRegister() {
             map1.clear();
             if (set1.size > 0) {
               for (const item10030 of tmp14) {
+                let tmp17 = map;
                 let deleteResult = map.delete(item10030);
+                let tmp19 = map;
                 let _notifyAboutEndResult1 = map._notifyAboutEnd(item10030, flag);
                 continue;
               }
@@ -216,6 +232,7 @@ if (isJest.shouldBeUseWeb()) {
       throw reanimatedError;
     }
     obj = isJest2;
+    const tmp = require;
   }
   const _Proxy = Proxy;
   obj = { get: null, set: null };
@@ -231,12 +248,13 @@ if (isJest.shouldBeUseWeb()) {
       throw reanimatedError;
     }
     obj = isJest2;
+    const tmp = require;
   };
   const proxy = new Proxy({}, obj);
   global.ProgressTransitionRegister = proxy;
 } else {
   obj = { code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}" };
-  fn = function n(arg0) {
+  let fn = function n() {
     if (typeof createProgressTransitionRegister !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -267,17 +285,22 @@ if (isJest.shouldBeUseWeb()) {
           map.delete(arg0);
         }
       },
-      onTransitionStart(arg0, closure_0) {
+      onTransitionStart(arg0, arg1) {
         closure_4 = c5;
-        const result = map1.set(arg0, closure_0);
+        const result = map1.set(arg0, arg1);
         set.add(arg0);
         obj.frame(0);
       },
       frame(arg0) {
         for (const item10008 of set) {
+          let tmp = item10008;
+          let tmp2 = map;
           let value = map.get(item10008);
           if (value) {
-            let tmp4Result = tmp4(item10008, map1.get(item10008), arg0);
+            let tmp5 = value;
+            let tmp6 = item10008;
+            let tmp7 = map1;
+            let tmp4Result = tmp4(tmp, map1.get(tmp), arg0);
           }
           continue;
         }
@@ -298,6 +321,7 @@ if (isJest.shouldBeUseWeb()) {
             c5 = false;
           } else {
             for (const item10012 of tmp) {
+              let tmp7 = map;
               let _notifyAboutEndResult = map._notifyAboutEnd(item10012, flag);
               continue;
             }
@@ -306,7 +330,9 @@ if (isJest.shouldBeUseWeb()) {
               map1.clear();
               if (set1.size > 0) {
                 for (const item10030 of tmp14) {
+                  let tmp17 = map;
                   let deleteResult = map.delete(item10030);
+                  let tmp19 = map;
                   let _notifyAboutEndResult1 = map._notifyAboutEnd(item10030, flag);
                   continue;
                 }

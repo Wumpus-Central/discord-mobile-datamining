@@ -1,7 +1,7 @@
 // discord_app/design/components/Tooltip/native/MeasurementUtils.native.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-function retryMeasurements(closure_0, arg1, arg2, arg3) {
+function retryMeasurements() {
   const self = this;
   const apply = _retryMeasurements.apply;
   if (typeof apply === "unknown") {
@@ -80,10 +80,10 @@ function _retryMeasurements() {
               c10 = 1;
               const obj3 = { value: null, done: false };
               obj3[0] = (function measure(closure_0) {
-                return new Promise((arg0, fn) => {
-                  closure_1 = fn;
+                return new Promise((arg0, arg1) => {
+                  closure_1 = arg1;
                   if (null == ref.current) {
-                    return fn();
+                    return arg1();
                   } else {
                     const current = tmp.current;
                     current.measureInWindow(() => { ... });
@@ -148,10 +148,10 @@ function _retryMeasurements() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/MeasurementUtils.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Tooltip/native/MeasurementUtils.native.tsx");
 
 export const getMeasurements = function getMeasurements(closure_1_1, closure_0) {
-  closure_0 = dependencyMap;
+  closure_0 = closure_1_1;
   let flag = closure_0;
   if (closure_0 === undefined) {
     flag = false;
@@ -161,6 +161,6 @@ export const getMeasurements = function getMeasurements(closure_1_1, closure_0) 
     if (flag) {
       obj = { x: 0, y: 0, width: 0, height: 0 };
     }
-    retryMeasurements(closure_0, arg0, arg1, obj);
+    closure_1_3(closure_0, arg0, arg1, obj);
   });
 };

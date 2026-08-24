@@ -1,5 +1,25 @@
 // _runtime/metro/04936__.js
-const obj = {
+obj = { 0: obj, 1: obj, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: "GPSSatellites", 9: null, 10: null, 11: "GPSDOP", 12: null, 13: "GPSSpeed", 14: null, 15: "GPSTrack", 16: null, 17: "GPSImgDirection", 18: "GPSMapDatum", 19: null, 20: null, 21: null, 22: null, 23: null, 24: "GPSDestBearing", 25: null, 26: "GPSDestDistance", 27: null, 28: null, 29: "GPSDateStamp", 30: null, 31: "GPSHPositioningError" };
+obj = {
+  name: "GPSVersionID",
+  description(arg0) {
+    let str = "Unknown";
+    if (2 === arg0[0]) {
+      str = "Unknown";
+      if (2 === arg0[1]) {
+        str = "Unknown";
+        if (0 === arg0[2]) {
+          str = "Unknown";
+          if (0 === arg0[3]) {
+            str = "Version 2.2";
+          }
+        }
+      }
+    }
+    return str;
+  }
+};
+obj = {
   name: "GPSLatitudeRef",
   description(join) {
     const joined = join.join("");
@@ -55,8 +75,8 @@ obj[6] = {
 obj[7] = {
   name: "GPSTimeStamp",
   description(arr) {
-    const mapped = arr.map((item, index) => {
-      [tmp, tmp2] = item;
+    const mapped = arr.map((arg0) => {
+      [tmp, tmp2] = arg0;
       const result = tmp / tmp2;
       let combined = result;
       if (obj.test("" + result)) {

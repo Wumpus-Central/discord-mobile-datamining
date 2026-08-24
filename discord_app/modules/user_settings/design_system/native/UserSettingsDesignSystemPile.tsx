@@ -7,7 +7,7 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function SampleCard(arg0) {
   ({ title, noScroll, children } = arg0);
   const tmp3 = callback(Stack.Stack, { spacing: 16, children });
@@ -21,7 +21,7 @@ function SampleCard(arg0) {
   }
   items[1] = tmp2Result;
   obj[1] = items;
-  return callback(PressableCard.Card, obj);
+  return closure_6(PressableCard.Card, obj);
 }
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
@@ -31,136 +31,145 @@ let items = [require("Button").AvatarSizes.XSMALL, require("Button").AvatarSizes
 let items1 = [require("GuildIconSizes").GuildIconSizes.XSMALL, require("GuildIconSizes").GuildIconSizes.SMALL_32, require("GuildIconSizes").GuildIconSizes.NORMAL, require("GuildIconSizes").GuildIconSizes.LARGE, require("GuildIconSizes").GuildIconSizes.XLARGE];
 let closure_10 = ["Clyde", "Phibi", "Cap"];
 let closure_11 = ["test", "cats", "Evil Marcus", "robot overlords", "not a bug", "O M G"];
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemPile.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemPile.tsx");
 
 export default function UserSettingsDesignSystemPile() {
-  { style: callback3().container, children: null };
-  let obj = {
+  let obj = { children: null };
+  obj = { style: callback3().container, children: null };
+  obj = {
     title: "Avatar Pile",
-    children: items.map((item, index) => {
-      const callback = item;
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      const callback = children;
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
-      obj = { size: item, names: closure_10, totalCount: callback(1438).DEFAULT_AVATARS.length, children: null };
+      obj = { size: children, names: closure_10, totalCount: callback(1438).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = callback(1438).DEFAULT_AVATARS;
-      obj[3] = DEFAULT_AVATARS.map((item, index) => closure_1_5(item(closure_1_2[4]).Avatar, { source: item, size: item }, index));
+      obj[3] = DEFAULT_AVATARS.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
       items[1] = callback2(callback(12124).AvatarPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   };
   items = [callback(SampleCard, obj), , , , , ];
   items[1] = callback(SampleCard, {
     title: "Avatar Pile (with overflow)",
-    children: items.map((item, index) => {
-      const callback = item;
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      const callback = children;
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
-      obj = { size: item, names: closure_10, totalCount: 9500, children: null };
+      obj = { size: children, names: closure_10, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = callback(1438).DEFAULT_AVATARS;
-      obj[3] = DEFAULT_AVATARS.map((item, index) => closure_1_5(item(closure_1_2[4]).Avatar, { source: item, size: item }, index));
+      obj[3] = DEFAULT_AVATARS.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
       items[1] = callback2(callback(12124).AvatarPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   });
   obj1 = {
     title: "Avatar Pile (with overflow)",
-    children: items.map((item, index) => {
-      const callback = item;
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      const callback = children;
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
-      obj = { size: item, names: closure_10, totalCount: 9500, children: null };
+      obj = { size: children, names: closure_10, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = callback(1438).DEFAULT_AVATARS;
-      obj[3] = DEFAULT_AVATARS.map((item, index) => closure_1_5(item(closure_1_2[4]).Avatar, { source: item, size: item }, index));
+      obj[3] = DEFAULT_AVATARS.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
       items[1] = callback2(callback(12124).AvatarPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   };
   items[2] = callback(SampleCard, {
     title: "Avatar Duo Pile",
-    children: items.map((item, index) => {
-      const callback = item;
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      const callback = children;
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
-      obj = { size: item, names: arr.slice(0, 2), children: null };
+      obj = { size: children, names: arr.slice(0, 2), children: null };
       const DEFAULT_AVATARS = callback(1438).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
-      obj[2] = substr.map((item, index) => closure_1_5(item(closure_1_2[4]).Avatar, { source: item, size: item }, index));
+      obj[2] = substr.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
       items[1] = callback2(callback(13541).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   });
   const obj2 = {
     title: "Avatar Duo Pile",
-    children: items.map((item, index) => {
-      const callback = item;
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      const callback = children;
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
-      obj = { size: item, names: arr.slice(0, 2), children: null };
+      obj = { size: children, names: arr.slice(0, 2), children: null };
       const DEFAULT_AVATARS = callback(1438).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
-      obj[2] = substr.map((item, index) => closure_1_5(item(closure_1_2[4]).Avatar, { source: item, size: item }, index));
+      obj[2] = substr.map((source) => closure_1_5(children(closure_1_2[4]).Avatar, { source, size: children }, arg1));
       items[1] = callback2(callback(13541).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   };
   items[3] = callback(SampleCard, {
     title: "Avatar Duo Pile (different sizes)",
-    children: items.map((item, index) => {
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
       obj = { size: null, names: null, children: null };
-      items1 = [item, callback(1297).AvatarSizes.NORMAL];
+      items1 = [children, callback(1297).AvatarSizes.NORMAL];
       obj[0] = items1;
       obj[1] = arr.slice(0, 2);
-      const items2 = [callback2(callback(1297).Avatar, { source: callback(1438).DEFAULT_AVATARS[0], size: item }), ];
-      obj1 = { source: callback(1438).DEFAULT_AVATARS[0], size: item };
+      const items2 = [callback2(callback(1297).Avatar, { source: callback(1438).DEFAULT_AVATARS[0], size: children }), ];
+      obj1 = { source: callback(1438).DEFAULT_AVATARS[0], size: children };
       items2[1] = callback2(callback(1297).Avatar, { source: callback(1438).DEFAULT_AVATARS[1], size: callback(1297).AvatarSizes.NORMAL });
       obj[2] = items2;
       items[1] = callback3(callback(13541).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   });
   const obj3 = {
     title: "Avatar Duo Pile (different sizes)",
-    children: items.map((item, index) => {
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item };
+    children: items.map((children) => {
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children };
       items = [callback2(callback(4734).Text, obj), ];
       obj = { size: null, names: null, children: null };
-      items1 = [item, callback(1297).AvatarSizes.NORMAL];
+      items1 = [children, callback(1297).AvatarSizes.NORMAL];
       obj[0] = items1;
       obj[1] = arr.slice(0, 2);
-      const items2 = [callback2(callback(1297).Avatar, { source: callback(1438).DEFAULT_AVATARS[0], size: item }), ];
-      obj1 = { source: callback(1438).DEFAULT_AVATARS[0], size: item };
+      const items2 = [callback2(callback(1297).Avatar, { source: callback(1438).DEFAULT_AVATARS[0], size: children }), ];
+      obj1 = { source: callback(1438).DEFAULT_AVATARS[0], size: children };
       items2[1] = callback2(callback(1297).Avatar, { source: callback(1438).DEFAULT_AVATARS[1], size: callback(1297).AvatarSizes.NORMAL });
       obj[2] = items2;
       items[1] = callback3(callback(13541).AvatarDuoPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, children);
     })
   };
   items[4] = callback(SampleCard, {
     title: "Guild Icon Pile (with overflow)",
-    children: items1.map((item, index) => {
-      const callback = item;
-      let obj = { variant: "text-md/medium", color: "text-subtle", children: item.toLowerCase() };
+    children: items1.map((size) => {
+      const callback = size;
+      let obj = { children: null };
+      obj = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
       items = [callback2(callback(4734).Text, obj), ];
-      obj = { size: item, names: closure_11, totalCount: 128, children: closure_11.map((item, index) => closure_1_5(closure_1_1(closure_1_2[5]), { value: item, size: closure_0 }, index)) };
+      obj = { size, names: closure_11, totalCount: 128, children: closure_11.map((value) => closure_1_5(closure_1_1(closure_1_2[5]), { value, size: closure_0 }, arg1)) };
       items[1] = callback2(callback(11787).GuildIconPile, obj);
       obj[0] = items;
-      return callback3(callback(4733).Stack, obj, item);
+      return callback3(callback(4733).Stack, obj, size);
     })
   });
   const obj5 = { title: "Weird Piles", noScroll: true, children: null };
   items1 = [callback2(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: ["These examples explore the edge cases of the underlying ", "<Pile>", " component and aren't recommended uses."] }), ];
   let items2 = [[1, 1], [0.5, 0.5], [null, 0.5], [0.5, null], [0, 0.5], [0.5, 0], [0, 0]];
-  items1[1] = items2.map((item, index) => {
-    [tmp, tmp2] = item;
+  items1[1] = items2.map((arg0) => {
+    [tmp, tmp2] = arg0;
     let str = tmp;
     if (tmp == null) {
       str = "null";
@@ -170,30 +179,31 @@ export default function UserSettingsDesignSystemPile() {
     if (tmp2 == null) {
       str2 = "null";
     }
+    let obj = { children: null };
     items[3] = str2;
-    items1 = [callback(callback(4734).Text, { variant: "text-md/medium", color: "text-subtle", children: items }), , ];
-    let obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
-    let tmp4Result = callback(11790);
+    items1 = [closure_6(callback(4734).Text, { variant: "text-md/medium", color: "text-subtle", children: items }), , ];
+    obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
+    let tmp4Result = tmp4(11790);
     obj[0] = tmp4Result.getListSummaryLabel(closure_10, callback(1438).DEFAULT_AVATARS.length);
     obj[1] = callback(8402).CutoutShape.Circle;
     obj[4] = tmp;
     obj[5] = tmp2;
-    const DEFAULT_AVATARS = callback(1438).DEFAULT_AVATARS;
-    obj[6] = DEFAULT_AVATARS.map((item, index) => callback3(callback(1297).Avatar, { source: item, size: callback(1297).AvatarSizes.LARGE_48 }, index));
+    const DEFAULT_AVATARS = tmp4(1438).DEFAULT_AVATARS;
+    obj[6] = DEFAULT_AVATARS.map((source) => callback3(callback(1297).Avatar, { source, size: callback(1297).AvatarSizes.LARGE_48 }, arg1));
     items1[1] = callback2(callback(11788).Pile, obj);
     obj = { "aria-label": null, shape: null, size: 48, gap: 2, depthX: null, depthY: null, children: null };
-    tmp4Result = callback(11790);
+    tmp4Result = tmp4(11790);
     obj[0] = tmp4Result.getListSummaryLabel(closure_11, closure_11.length);
     obj[1] = callback(8402).CutoutShape.RoundedRect;
     obj[4] = tmp;
     obj[5] = tmp2;
-    obj[6] = closure_11.map((item, index) => {
-      const obj = { value: item, size: callback(7188).GuildIconSizes.LARGE };
-      return callback3(callback2(7188), obj, index);
+    obj[6] = closure_11.map((value) => {
+      const obj = { value, size: callback(7188).GuildIconSizes.LARGE };
+      return callback3(callback2(7188), obj, arg1);
     });
     items1[2] = callback2(callback(11788).Pile, obj);
     obj[0] = items1;
-    return callback(callback(4733).Stack, obj, "" + tmp + "," + tmp2);
+    return closure_6(callback(4733).Stack, obj, "" + tmp + "," + tmp2);
   });
   obj5[2] = items1;
   items[5] = callback2(SampleCard, obj5);

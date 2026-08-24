@@ -11,9 +11,9 @@ export default function getRawTag(arg0) {
   let tmp = closure_0;
   const call = closure_0.call;
   if (typeof call === "unknown") {
-    tmp(toStringTag);
+    tmp(tmp2);
   } else {
-    call(arg0, toStringTag);
+    call(arg0, tmp2);
   }
-  tmp = arg0[toStringTag];
+  tmp = arg0[tmp2];
 };

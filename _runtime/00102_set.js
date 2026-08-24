@@ -5,8 +5,8 @@ const set = new Set(["gif", "heic", "heif", "jpeg", "jpg", "ktx", "png", "webp",
 export default {
   getAndroidResourceFolderName(asset, arg1) {
     if (set.has(asset.type)) {
-      if (arg1.toString() in table) {
-        let text = table[arg1.toString(arg1)];
+      if (arg1.toString() in closure_0) {
+        let text = tmp2[arg1.toString(arg1)];
       } else {
         const _Number = Number;
         if (Number.isFinite(arg1)) {
@@ -28,7 +28,7 @@ export default {
         const _JSON2 = JSON;
         const text2 = `${`Don't know which android drawable suffix to use for scale: ${arg1}`}
     Asset: ${JSON.stringify(asset, null, "\t")}`;
-        const error1 = new Error(text2 + "\nPossible scales are:" + JSON.stringify(table, null, "\t"));
+        const error1 = new Error(text2 + "\nPossible scales are:" + JSON.stringify(tmp2, null, "\t"));
         throw error1;
       }
     } else {
@@ -41,6 +41,7 @@ export default {
     if (httpServerLocation.startsWith("/")) {
       substr = httpServerLocation.slice(1);
     }
+    const str = `${tmp}/${asset.name}`;
     const str2 = `${tmp}/${asset.name}`.toLowerCase();
     const str3 = `${tmp}/${asset.name}`.toLowerCase().replace(/\//g, "_");
     return `${tmp}/${asset.name}`.toLowerCase().replace(/\//g, "_").replace(/([^a-z0-9_])/g, "").replace(/^(?:assets|assetsunstable_path)_/, "");

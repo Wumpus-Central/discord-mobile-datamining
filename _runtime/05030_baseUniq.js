@@ -1,34 +1,29 @@
 // _runtime/05030_baseUniq.js
-import SetCache from "00782_SetCache.js";
-import cacheHas from "00786_cacheHas.js";
-import setToArray from "00790_setToArray.js";
 import arrayIncludes from "05031_arrayIncludes.js";
-import arrayIncludesWith from "05035_arrayIncludesWith.js";
-import _mod5036 from "metro/05036__.js";
 
 
-export default function baseUniq(arg0, fn) {
+export default function baseUniq(arg0, arg1, arg2) {
   let tmpResult = arrayIncludes;
   const items = [];
   if (arg2) {
-    tmpResult = arrayIncludesWith;
+    tmpResult = tmp(5035);
     let flag = false;
     let items1 = items;
   } else if (length >= 200) {
     let tmp4 = null;
-    if (!fn) {
-      tmp4 = _mod5036(arg0);
+    if (!arg1) {
+      tmp4 = tmp(5036)(arg0);
     }
     if (tmp4) {
-      return setToArray(tmp4);
+      return tmp(790)(tmp4);
     } else {
-      tmpResult = cacheHas;
-      items1 = new SetCache();
+      tmpResult = tmp(786);
+      items1 = new tmp(782)();
       flag = false;
     }
   } else {
     items1 = items;
-    if (fn) {
+    if (arg1) {
       items1 = [];
     }
     flag = true;
@@ -37,9 +32,10 @@ export default function baseUniq(arg0, fn) {
   if (0 < arg0.length) {
     while (true) {
       let tmp7 = arg0[num2];
+      let tmp8 = num2;
       let tmp9 = tmp7;
-      if (fn) {
-        tmp9 = fn(tmp7);
+      if (arg1) {
+        tmp9 = arg1(tmp7);
       }
       if (arg2) {
         let num3 = tmp7;
@@ -51,11 +47,12 @@ export default function baseUniq(arg0, fn) {
           let tmp12 = +items1.length;
           let diff = tmp12 - 1;
           if (!tmp12) {
-            if (fn) {
+            if (arg1) {
               let arr = items1.push(tmp9);
             }
             arr = items.push(num3);
           } else {
+            let tmp14 = diff;
             while (items1[diff] !== tmp9) {
               let tmp15 = +diff;
               diff = tmp15 - 1;

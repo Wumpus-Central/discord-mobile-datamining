@@ -15,6 +15,8 @@ arg5.onLCP = (arg0) => {
     const visibilityWatcher = obj.getVisibilityWatcher();
     const metric = callback(obj[2]).initMetric("LCP");
     let obj2 = callback(obj[2]);
+    const tmp = callback;
+    let tmp3 = obj;
     closure_3 = callback(obj[3]).initUnique(visibilityWatcher, callback(obj[4]).LCPEntryManager);
     function handleEntries(arr) {
       let substr = arr;
@@ -25,20 +27,27 @@ arg5.onLCP = (arg0) => {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp3 = nextResult;
+        let tmp4 = closure_3;
         let _processEntryResult = closure_3._processEntry(nextResult);
+        let tmp6 = closure_1;
         if (nextResult.startTime < closure_1.firstHiddenTime) {
+          let tmp7 = metric;
           let _Math = Math;
+          let tmp8 = nextResult;
+          let tmp9 = callback;
+          let tmp10 = obj;
           obj = callback(obj[5]);
           metric.value = Math.max(tmp3.startTime - obj.getActivationStart(), 0);
           items = [tmp3];
           metric.entries = items;
+          let tmp11 = callback;
           let tmp12 = callback();
         }
         continue;
       }
     }
     const obj3 = callback(obj[3]);
-    const tmp6 = visibilityWatcher;
+    let tmp6 = visibilityWatcher;
     const observeResult = callback(obj[6]).observe("largest-contentful-paint", handleEntries);
     closure_5 = observeResult;
     if (observeResult) {
@@ -60,11 +69,14 @@ arg5.onLCP = (arg0) => {
       }
       items = ["keydown", "click", "visibilitychange"];
       for (const item10048 of items) {
+        let tmp15 = callback;
+        let tmp16 = callback;
+        let tmp17 = obj;
+        let tmp18 = obj;
         let obj7 = callback(obj[10]);
         let addPageListenerResult = obj7.addPageListener(item10048, stopListeningWrapper, { capture: true });
         continue;
       }
     }
-    const obj4 = callback(obj[6]);
   });
 };

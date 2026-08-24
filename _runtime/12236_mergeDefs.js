@@ -26,11 +26,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -43,6 +45,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -60,14 +63,33 @@ if (self2) {
       closure_2 = { nan: "NaN", number: "skai\u010Dius", bigint: "sveikasis skai\u010Dius", string: "eilut\u0117", boolean: "login\u0117 reik\u0161m\u0117", undefined: "neapibr\u0117\u017Eta reik\u0161m\u0117", function: "funkcija", symbol: "simbolis", array: "masyvas", object: "objektas", null: "nulin\u0117 reik\u0161m\u0117" };
       return {
         localeError: (code) => {
-          code = code.code;
-          switch (code) {
+          switch (code.code) {
             case "t":
             break;
             case "to":
             break;
             case "Date":
-            break;
+              let str = dependencyMap[code.origin];
+              if (str == null) {
+                str = code.origin;
+              }
+              let tmp3 = closure_1_3;
+              if (str == null) {
+                str = code.origin;
+              }
+              if (str == null) {
+                str = "reik\u0161m\u0117";
+              }
+              if (typeof tmp3 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              let str2 = str.charAt(0);
+              let formatted = str2.toUpperCase();
+              let substr = str.slice(1);
+              let sum = formatted + substr;
+              let _HermesInternal = HermesInternal;
+              let combined = "" + sum + " turi klaiding\u0105 \u012Fvest\u012F";
+              return combined;
             case "TypeError":
             break;
             case "Error":
@@ -471,7 +493,27 @@ if (self2) {
             case "scales":
             break;
             case "shapes":
-            break;
+              str = dependencyMap[code.origin];
+              if (str == null) {
+                str = code.origin;
+              }
+              tmp3 = closure_1_3;
+              if (str == null) {
+                str = code.origin;
+              }
+              if (str == null) {
+                str = "reik\u0161m\u0117";
+              }
+              if (typeof tmp3 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              str2 = str.charAt(0);
+              formatted = str2.toUpperCase();
+              substr = str.slice(1);
+              sum = formatted + substr;
+              _HermesInternal = HermesInternal;
+              combined = "" + sum + " turi klaiding\u0105 \u012Fvest\u012F";
+              return combined;
             case "sk":
             break;
             case "skuId":
@@ -855,7 +897,27 @@ if (self2) {
             case "ThermalState":
             break;
             case "leading":
-            break;
+              str = dependencyMap[code.origin];
+              if (str == null) {
+                str = code.origin;
+              }
+              tmp3 = closure_1_3;
+              if (str == null) {
+                str = code.origin;
+              }
+              if (str == null) {
+                str = "reik\u0161m\u0117";
+              }
+              if (typeof tmp3 !== "function") {
+                HermesBuiltin.throwTypeError();
+              }
+              str2 = str.charAt(0);
+              formatted = str2.toUpperCase();
+              substr = str.slice(1);
+              sum = formatted + substr;
+              _HermesInternal = HermesInternal;
+              combined = "" + sum + " turi klaiding\u0105 \u012Fvest\u012F";
+              return combined;
             case "leadingFade":
             break;
             case "FadeIn":
@@ -1081,294 +1143,43 @@ if (self2) {
             case "kl":
             break;
             case "let":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp84 = closure_2[parsedTypeResult];
-              if (tmp84 == null) {
-                tmp84 = parsedTypeResult;
-              }
-              if (obj3.test(code.expected)) {
-                const _HermesInternal14 = HermesInternal;
-                let combined = "Gautas tipas " + tmp84 + ", o tik\u0117tasi - instanceof " + code.expected;
-              } else {
-                const _HermesInternal13 = HermesInternal;
-                combined = "Gautas tipas " + tmp84 + ", o tik\u0117tasi - " + expected;
-              }
-              return combined;
+            break;
             case "Hash":
             break;
             case "sh":
-              if (1 === code.values.length) {
-                const _HermesInternal12 = HermesInternal;
-                let combined1 = "Privalo b\u016Bti " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal11 = HermesInternal;
-                combined1 = "Privalo b\u016Bti vienas i\u0161 " + closure_2.joinValues(code.values, "|") + " pasirinkim\u0173";
-              }
-              return combined1;
+            break;
             case "MOCK_PERKS":
             break;
             case "PERKS_PURCHASABLE":
-              let str45 = closure_2[code.origin];
-              if (str45 == null) {
-                str45 = code.origin;
-              }
-              const _Number2 = Number;
-              const _Math2 = Math;
-              const absolute = Math.abs(Number(code.maximum));
-              const result = absolute % 10;
-              const result1 = absolute % 100;
-              if (11 > result1) {
-                let str46 = "many";
-                if (0 !== result) {
-                  let str47 = "few";
-                  if (1 === result) {
-                    str47 = "one";
-                  }
-                  str46 = str47;
-                }
-              } else {
-                str46 = "many";
-              }
-              let flag2 = code.inclusive;
-              if (flag2 == null) {
-                flag2 = false;
-              }
-              let tmp55 = dependencyMap[code.origin];
-              if (tmp55 == null) {
-                tmp55 = null;
-              }
-              let tmp56 = tmp55;
-              if (null !== tmp55) {
-                let obj = { unit: null, verb: null };
-                obj[0] = tmp55.unit[str46];
-                let str48 = "notInclusive";
-                if (flag2) {
-                  str48 = "inclusive";
-                }
-                obj[1] = tmp55.verb.smaller[str48];
-                tmp56 = obj;
-              }
-              let verb;
-              if (tmp56 != null) {
-                verb = tmp56.verb;
-              }
-              if (verb) {
-                if (str45 == null) {
-                  str45 = code.origin;
-                }
-                if (str45 == null) {
-                  str45 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                const formatted = str45.charAt(0).toUpperCase();
-                const sum = formatted + str45.slice(1);
-                const verb2 = tmp56.verb;
-                let str = code.maximum.toString();
-                let str60 = tmp56.unit;
-                if (str60 == null) {
-                  str60 = "element\u0173";
-                }
-                const _HermesInternal10 = HermesInternal;
-                return "" + sum + " " + verb2 + " " + str + " " + str60;
-              } else {
-                let str49 = "ma\u017Eesnis kaip";
-                if (code.inclusive) {
-                  str49 = "ne didesnis kaip";
-                }
-                let str50 = str45;
-                if (str45 == null) {
-                  str50 = code.origin;
-                }
-                if (str50 == null) {
-                  str50 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                const formatted1 = str50.charAt(0).toUpperCase();
-                const sum1 = formatted1 + str50.slice(1);
-                const str1 = code.maximum.toString();
-                let unit;
-                if (tmp56 != null) {
-                  unit = tmp56.unit;
-                }
-                const _HermesInternal9 = HermesInternal;
-                return "" + sum1 + " turi b\u016Bti " + str49 + " " + str1 + " " + unit;
-              }
             break;
             case "PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO":
             break;
             case "FORUM_CHANNEL_FOOTER":
-              let str24 = closure_2[code.origin];
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              code = globalThis;
-              const _Number = Number;
-              const _Math = Math;
-              const absolute1 = Math.abs(Number(code.minimum));
-              const result2 = absolute1 % 10;
-              const result3 = absolute1 % 100;
-              if (11 > result3) {
-                let str25 = "many";
-                if (0 !== result2) {
-                  let str26 = "few";
-                  if (1 === result2) {
-                    str26 = "one";
-                  }
-                  str25 = str26;
-                }
-              } else {
-                str25 = "many";
-              }
-              let flag = code.inclusive;
-              if (flag == null) {
-                flag = false;
-              }
-              let tmp28 = dependencyMap[code.origin];
-              if (tmp28 == null) {
-                tmp28 = null;
-              }
-              let tmp29 = tmp28;
-              if (null !== tmp28) {
-                obj = { unit: null, verb: null };
-                obj[0] = tmp28.unit[str25];
-                let str27 = "notInclusive";
-                if (flag) {
-                  str27 = "inclusive";
-                }
-                obj[1] = tmp28.verb.bigger[str27];
-                tmp29 = obj;
-              }
-              let verb1;
-              if (tmp29 != null) {
-                verb1 = tmp29.verb;
-              }
-              if (verb1) {
-                if (str24 == null) {
-                  str24 = code.origin;
-                }
-                if (str24 == null) {
-                  str24 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                const formatted2 = str24.charAt(0).toUpperCase();
-                const sum2 = formatted2 + str24.slice(1);
-                verb = tmp29.verb;
-                let str2 = code.minimum.toString();
-                let str39 = tmp29.unit;
-                if (str39 == null) {
-                  str39 = "element\u0173";
-                }
-                return "" + sum2 + " " + verb + " " + str2 + " " + str39;
-              } else {
-                let str28 = "didesnis kaip";
-                if (code.inclusive) {
-                  str28 = "ne ma\u017Eesnis kaip";
-                }
-                let str29 = str24;
-                if (str24 == null) {
-                  str29 = code.origin;
-                }
-                if (str29 == null) {
-                  str29 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                const formatted3 = str29.charAt(0).toUpperCase();
-                const sum3 = formatted3 + str29.slice(1);
-                let str3 = code.minimum.toString();
-                let unit1;
-                if (tmp29 != null) {
-                  unit1 = tmp29.unit;
-                }
-                return "" + sum3 + " turi b\u016Bti " + str28 + " " + str3 + " " + unit1;
-              }
             break;
             case "FOOTER_UPSELL":
             break;
             case "LuNsNf":
-              if ("starts_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                let combined2 = "Eilut\u0117 privalo prasid\u0117ti \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined2 = "Eilut\u0117 privalo pasibaigti \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined2 = "Eilut\u0117 privalo \u012Ftraukti \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal5 = HermesInternal;
-                combined2 = "Eilut\u0117 privalo atitikti " + code.pattern;
-              } else {
-                let format = table[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal4 = HermesInternal;
-                combined2 = "Neteisingas " + format;
-              }
-              return combined2;
+            break;
             case "Nfvo72":
             break;
             case "flag_de":
-              const _HermesInternal3 = HermesInternal;
-              return "Skai\u010Dius privalo b\u016Bti " + code.divisor + " kartotinis.";
+            break;
             case "de":
             break;
             case "desired":
-              let str6 = "as";
-              let str7 = "as";
-              if (code.keys.length > 1) {
-                str7 = "i";
-              }
-              if (code.keys.length > 1) {
-                str6 = "ai";
-              }
-              const _HermesInternal2 = HermesInternal;
-              return "Neatpa\u017Eint" + str7 + " rakt" + str6 + ": " + closure_2.joinValues(code.keys, ", ");
+            break;
             case "es":
             break;
             case "si":
-              return "Rastas klaidingas raktas";
+            break;
             case "sir":
             break;
             case "red":
-              return "Klaidinga \u012Fvestis";
+            break;
             case "redBoxV2Android":
             break;
             case "ComponentRegistry":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              let tmp3 = capitalizeFirstCharacter;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              let formatted4 = str2.toUpperCase();
-              let substr = str.slice(1);
-              let sum4 = formatted4 + substr;
-              let _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              let combined3 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined3;
+            break;
             case "dist":
             break;
             case "distance":
@@ -1974,28 +1785,7 @@ if (self2) {
             case "ver":
             break;
             case "renderCommunicationDisabled":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              tmp3 = capitalizeFirstCharacter;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              formatted4 = str2.toUpperCase();
-              substr = str.slice(1);
-              sum4 = formatted4 + substr;
-              _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              combined3 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined3;
+            break;
             case "PremiumMarketingComponentProperties":
             break;
             case "LhlgY9":
@@ -2601,28 +2391,7 @@ if (self2) {
             case "ho":
             break;
             case "hod":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              tmp3 = capitalizeFirstCharacter;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              formatted4 = str2.toUpperCase();
-              substr = str.slice(1);
-              sum4 = formatted4 + substr;
-              _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              combined3 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined3;
+            break;
             case "dob":
             break;
             case "obj":
@@ -3314,28 +3083,7 @@ if (self2) {
             case "lue":
             break;
             case "__await":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              tmp3 = capitalizeFirstCharacter;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              formatted4 = str2.toUpperCase();
-              substr = str.slice(1);
-              sum4 = formatted4 + substr;
-              _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              combined3 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined3;
+            break;
             case "__awaiter":
             break;
             case "getClampedPIPPosition":
@@ -3939,28 +3687,7 @@ if (self2) {
             case "ZodCodec":
             break;
             case "Code":
-              str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              tmp3 = capitalizeFirstCharacter;
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof tmp3 !== "function") {
-                HermesBuiltin.throwTypeError();
-              }
-              str2 = str.charAt(0);
-              formatted4 = str2.toUpperCase();
-              substr = str.slice(1);
-              sum4 = formatted4 + substr;
-              _HermesInternal = HermesInternal;
-              str3 = " turi klaiding\u0105 \u012Fvest\u012F";
-              combined3 = "" + sum4 + " turi klaiding\u0105 \u012Fvest\u012F";
-              return combined3;
+            break;
             case "dec":
             break;
             case "decay":
@@ -4098,7 +3825,7 @@ if (self2) {
             case "loadingIcon":
             break;
             case "contentTypes":
-              return "Rastas klaidingas raktas";
+            break;
             case "suggestedWishlistGamesIds":
             break;
             case "repeat_one":

@@ -1,11 +1,11 @@
 // _runtime/00127_DOMRectList.js
 import _createClassDefault from "metro/00042__createClass.js";
 import _classPrivateFieldKeyDefault from "00091__classPrivateFieldKey.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "00090__classPrivateFieldBase.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
-const DOMRectList = fn;
+const DOMRectList = arg1;
 let closure_4 = _classPrivateFieldKeyDefault("length");
 class DOMRectList {
   constructor(arg0) {

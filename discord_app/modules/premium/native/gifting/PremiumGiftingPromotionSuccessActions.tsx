@@ -1,26 +1,33 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { isAvatarDecorationRecord, isNameplateRecord } from "../../../collectibles/records/AvatarDecorationRecord.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
+createCacheKey = { container: null, nameplateContainer: null, nameplateWrapper: null, singleAvatarContainer: null };
+createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let obj1 = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[3] = { flexDirection: "row", paddingRight: 15, justifyContent: "center", alignItems: "center", marginLeft: 5 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
+let obj2 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
   purchase = purchase.purchase;
   let onClose;
+  let prePurchaseGiftingBadgeProgress;
   let navigation;
+  let enabled;
+  c4 = undefined;
+  let callback;
   let tmp = callback2();
   let obj = onClose(navigation[8]);
   const items = [closure_7];
@@ -28,17 +35,17 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   obj1 = onClose(navigation[9]);
   const nativeGiftContext = obj1.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
   let obj2 = onClose(navigation[10]);
   navigation = obj2.useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[11]).GiftingBadgeExperiment;
-  const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
+  enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
   let obj3 = onClose(navigation[12]);
   const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(purchase.skuId);
   const product = fetchCollectiblesProduct.product;
   c4 = product;
   const items1 = [enabled, prePurchaseGiftingBadgeProgress, navigation];
-  const callback = enabled.useCallback(() => {
+  callback = enabled.useCallback(() => {
     let tmp = enabled;
     if (enabled) {
       tmp = null != prePurchaseGiftingBadgeProgress;
@@ -88,7 +95,7 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
     obj3[1] = callback(tmp2(tmp3[17]).Avatar, obj4);
     items3[1] = callback(tmp12, obj3);
     obj[1] = items3;
-    let tmp11Result = callback(tmp12, obj);
+    let tmp11Result = tmp11(tmp12, obj);
     const tmp2Result = tmp2(tmp3[16]);
   } else if (callback(first)) {
     const obj5 = { size: null, asset: null };
@@ -105,5 +112,5 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   obj6[3] = callback1;
   items4[1] = callback(onClose(navigation[19]).Button, obj6);
   obj[1] = items4;
-  return callback(c4, obj);
+  return closure_9(c4, obj);
 };

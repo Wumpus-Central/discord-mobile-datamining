@@ -1,6 +1,6 @@
 // _runtime/07063_RVEngagedIndicesTrackerImpl.js
 import _createClassDefault from "metro/07051__createClass.js";
-import _classCallCheck from "metro/07050__classCallCheck.js";
+import closure_2 from "metro/07050__classCallCheck.js";
 
 const RVEngagedIndicesTrackerImpl = arg1;
 class RVEngagedIndicesTrackerImpl {
@@ -86,6 +86,9 @@ let items = [
       let num5 = 0;
       if (0 < this.velocityHistory.length) {
         do {
+          let tmp = num;
+          let tmp2 = num2;
+          let tmp3 = num3;
           if (self.velocityHistory[num] > 0) {
             let sum = num3 + 1;
             let sum1 = num2;

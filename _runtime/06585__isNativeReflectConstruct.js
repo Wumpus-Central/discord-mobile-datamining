@@ -1,17 +1,16 @@
 // _runtime/06585__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import appendTransformPropsDefault from "06579_appendTransformProps.js";
 import extractPropsDefault from "06586_extractProps.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06594___INTERNAL_VIEW_CONFIG.js";
 import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-let closure_0 = fn;
+let closure_0 = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -55,7 +54,7 @@ class G {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
+        tmp = closure_1_1(closure_1_2[7])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
@@ -80,6 +79,7 @@ let items = [
       const propsAndStylesResult = obj.propsAndStyles(props);
       const tmp5 = extractPropsDefault(propsAndStylesResult, this);
       const obj2 = self(6593);
+      const tmp4 = importDefault;
       if (typeof hasProps !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -98,7 +98,6 @@ let items = [
         return jsx(__INTERNAL_VIEW_CONFIGDefault, { ref: null });
       }
       flag = false;
-      extractFontResult = self(6593).extractFont(propsAndStylesResult);
     }
   }
 ];

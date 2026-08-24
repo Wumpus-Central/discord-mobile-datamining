@@ -3,14 +3,14 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import useBackPressHandlerDefault from "../../routing/native/useBackPressHandler.tsx";
 import ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import useIsInRestrictedHoursDefault from "../hooks/useIsInRestrictedHours.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_6 from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function RestrictedHoursLogoutBlockingLayer(visible) {
   let tmp2 = null;
   if (visible.visible) {
@@ -25,6 +25,8 @@ function RestrictedHoursScreen(visible) {
   const onLogin = visible.onLogin;
   let sharedValue;
   let sharedValue1;
+  let sharedValue2;
+  let sharedValue3;
   const tmp = callback4();
   ({ top, bottom } = sharedValue(sharedValue1[8])());
   const tmp5 = sharedValue(sharedValue1[9])();
@@ -46,13 +48,13 @@ function RestrictedHoursScreen(visible) {
   let obj2 = onLogin(sharedValue1[11]);
   sharedValue1 = obj2.useSharedValue(0);
   let obj3 = onLogin(sharedValue1[11]);
-  const sharedValue2 = obj3.useSharedValue(0);
+  sharedValue2 = obj3.useSharedValue(0);
   let obj4 = onLogin(sharedValue1[11]);
-  const sharedValue3 = obj4.useSharedValue(0.9);
+  sharedValue3 = obj4.useSharedValue(0.9);
   const items1 = [sharedValue, sharedValue1, sharedValue2, sharedValue3];
   const effect = sharedValue3.useEffect(() => {
-    onLogin(sharedValue1[12]);
-    let obj = { duration: 3000, easing: null };
+    let obj = onLogin(sharedValue1[12]);
+    obj = { duration: 3000, easing: null };
     const Easing = onLogin(sharedValue1[11]).Easing;
     obj[1] = Easing.bezier(0.24, 0.27, 0.58, 1);
     const result = sharedValue.set(obj.withTiming(1, obj));
@@ -98,8 +100,8 @@ function RestrictedHoursScreen(visible) {
   const animatedStyle1 = obj6.useAnimatedStyle(O);
   let obj7 = onLogin(sharedValue1[11]);
   const fn = function z() {
-    { opacity: sharedValue2.get(), transform: null };
-    const obj = { scale: sharedValue3.get() };
+    let obj = { opacity: sharedValue2.get(), transform: null };
+    obj = { scale: sharedValue3.get() };
     const items = [obj];
     obj[1] = items;
     return obj;
@@ -154,7 +156,8 @@ function RestrictedHoursScreen(visible) {
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = "rgb(0, 3, 40)";
-const createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey = { container: null, backgroundFill: null, assetLayers: null, sunbeamGradient: null, riveContainer: null, content: null, description: null, footer: null, logoutBlockingLayer: null };
+createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -170,6 +173,8 @@ createCacheKey[3] = {};
 createCacheKey[4] = { width: "100%", maxWidth: 523, height: 300 };
 createCacheKey[5] = { alignItems: "center", width: "100%", gap: ThemesDefault.space.PX_16, zIndex: 2 };
 createCacheKey[6] = { textAlign: "center" };
+let obj3 = {};
+let obj4 = { alignItems: "center", width: "100%", gap: ThemesDefault.space.PX_16, zIndex: 2 };
 createCacheKey[7] = { position: "absolute", bottom: ThemesDefault.space.PX_32, alignSelf: "center", zIndex: 2 };
 let obj6 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
@@ -183,12 +188,13 @@ let closure_11 = { MAIN: "main" };
 let closure_13 = { code: "function RestrictedHoursModalTsx1(){const{backgroundOpacity}=this.__closure;return{opacity:backgroundOpacity.get()};}" };
 let closure_14 = { code: "function RestrictedHoursModalTsx2(){const{gradientOpacity}=this.__closure;return{opacity:gradientOpacity.get()};}" };
 let closure_15 = { code: "function RestrictedHoursModalTsx3(){const{contentOpacity,contentScale}=this.__closure;return{opacity:contentOpacity.get(),transform:[{scale:contentScale.get()}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/native/RestrictedHoursModal.tsx");
+let obj5 = { position: "absolute", bottom: ThemesDefault.space.PX_32, alignSelf: "center", zIndex: 2 };
+let result = require("set").fileFinishedImporting("modules/parent_tools/native/RestrictedHoursModal.tsx");
 
 export default function RestrictedHoursModal() {
   const tmp = useIsInRestrictedHoursDefault();
   let callback = tmp;
-  React.useRef(false);
+  importDefault = React.useRef(false);
   dependencyMap = React.useRef(true);
   const effect = React.useEffect(() => {
     closure_2.current = true;

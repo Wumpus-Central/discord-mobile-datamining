@@ -1,22 +1,21 @@
 // discord_app/modules/stage_channels/StageChannelParticipants.tsx
 import version from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
 import getParticipantUserKeyDefault from "../calls/getParticipantUserKey.tsx";
 import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState.tsx";
 import getHighestHoistedRole from "useGuildMemberDisplayRole.tsx";
-import reset from "../../stores/ApplicationStreamingStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleConnectionReset from "../../stores/GuildMemberRequesterStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../stores/ApplicationStreamingStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildMemberRequesterStore.tsx";
+import closure_6 from "../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
+import closure_9 from "../../stores/VoiceStateStore.tsx";
 import { getComparator } from "../../stores/views/SortedVoiceStateStore.tsx";
-import buildStageChannelUserRoles from "StageChannelRoleStore.tsx";
-import handleStageInstanceCreateOrUpdate from "StageInstanceStore.tsx";
+import closure_11 from "StageChannelRoleStore.tsx";
+import closure_12 from "StageInstanceStore.tsx";
 
-require = fn;
+require = arg1;
 function sortKey(speaker) {
   ({ role, connectedOn, voiceState } = speaker);
   let str = "\u0001";
@@ -90,8 +89,9 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-let obj = { VOICE: "VOICE", STREAM: "STREAM" };
-let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
+let obj = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
+obj = { VOICE: "VOICE", STREAM: "STREAM" };
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
 class StageChannelParticipants {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -151,6 +151,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj[2] = nick;
       obj[3] = getComparator(voiceStateForChannel, nick);
       obj[4] = voiceStateForChannel;
+      const obj3 = getNicknameDefault;
       obj[5] = getHighestHoistedRole.getHighestHoistedRole(self.guildId, userId);
       obj[6] = speaker.isSpeaker(userId, self.channelId);
       obj[7] = member1;
@@ -170,7 +171,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       const merged = Object.assign(obj);
       obj.type = obj.VOICE;
       obj.id = user.id;
-      let tmp11Result = useAudienceRequestToSpeakState;
+      let tmp11Result = tmp11(4981);
       obj.rtsState = tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel);
       items.push(obj);
       streamForUser = streamForUser.getStreamForUser(userId, self.guildId);
@@ -179,12 +180,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       }
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
-          tmp11Result = isStreamKey;
+          tmp11Result = tmp11(4531);
           obj1 = {};
           const merged1 = Object.assign(obj);
           obj1.id = tmp11Result.encodeStreamKey(streamForUser);
           obj1.type = obj.STREAM;
-          obj1.rtsState = useAudienceRequestToSpeakState.RequestToSpeakStates.NONE;
+          obj1.rtsState = tmp11(4981).RequestToSpeakStates.NONE;
           items.push(obj1);
           const encodeStreamKeyResult = tmp11Result.encodeStreamKey(streamForUser);
         }
@@ -203,25 +204,24 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   if (flag) {
     if (arr != null) {
-      const item = arr.forEach((item, index) => {
+      const item = arr.forEach((id) => {
         const _participantsIndex = self._participantsIndex;
-        _participantsIndex.delete(item.id);
+        _participantsIndex.delete(id.id);
         const _requestToSpeakIndex = self._requestToSpeakIndex;
-        _requestToSpeakIndex.delete(item.id);
+        _requestToSpeakIndex.delete(id.id);
       });
     }
-    const item1 = result.forEach((item, index) => {
+    const item1 = result.forEach((id) => {
       const _participantsIndex = self._participantsIndex;
-      const result = _participantsIndex.set(item.id, item);
-      if (item.id === callback) {
-        const rtsState = item.rtsState;
+      const result = _participantsIndex.set(id.id, id);
+      if (id.id === callback) {
+        const rtsState = id.rtsState;
         if (tmp6) {
-          const _requestToSpeakIndex2 = self._requestToSpeakIndex;
-          const result1 = _requestToSpeakIndex2.set(callback, item);
+          const _requestToSpeakIndex2 = tmp._requestToSpeakIndex;
+          const result1 = _requestToSpeakIndex2.set(tmp3, id);
         }
-        tmp6 = rtsState === callback(dependencyMap[11]).RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === callback(dependencyMap[11]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
       }
-      const _requestToSpeakIndex = self._requestToSpeakIndex;
+      const _requestToSpeakIndex = tmp._requestToSpeakIndex;
       _requestToSpeakIndex.delete(callback);
     });
     this.participants[arg0] = result;
@@ -230,7 +230,8 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   return flag;
 };
 prototype["rebuild"] = function rebuild() {
-  const self = this;
+  let self = this;
+  self = this;
   const channel = store.getChannel(this.channelId);
   if (null != channel) {
     if (channel.isGuildStageVoice()) {
@@ -242,7 +243,7 @@ prototype["rebuild"] = function rebuild() {
       const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.clear();
       self.participants = {};
-      const item = set.forEach((item, index) => self.updateParticipant(item));
+      const item = set.forEach((arg0) => self.updateParticipant(arg0));
       return true;
     }
   }

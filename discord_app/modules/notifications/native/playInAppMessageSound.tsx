@@ -1,14 +1,13 @@
 // discord_app/modules/notifications/native/playInAppMessageSound.tsx
 import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
-import createSoundForPack from "../../sound_playback/SoundUtils.tsx";
-import DesktopNotificationTypes from "../../../stores/NotificationSettingsStore.tsx";
+import closure_2 from "../../../stores/NotificationSettingsStore.tsx";
 import { isInAppMessageSoundsEnabled as closure_3 } from "InAppMessageSoundsStore.tsx";
 import { InAppNotificationTypes } from "../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 const message1 = "message1";
 let c6 = 0;
-const result = require("obj132").fileFinishedImporting("modules/notifications/native/playInAppMessageSound.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/native/playInAppMessageSound.tsx");
 
 export const playInAppMessageSound = function playInAppMessageSound(notification) {
   if (notification.type === InAppNotificationTypes.MESSAGE) {
@@ -18,12 +17,14 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           const timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            createSoundForPack.playSound(message1, 0.4);
-            const tmp8Result = createSoundForPack;
+            tmp8(10040).playSound(tmp3, 0.4);
+            const tmp8Result = tmp8(10040);
           }
         }
+        tmp3 = message1;
       }
     }
     obj2 = isMetaQuest;
+    tmp8 = require;
   }
 };

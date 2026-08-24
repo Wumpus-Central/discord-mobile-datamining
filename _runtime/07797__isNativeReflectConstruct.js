@@ -1,11 +1,11 @@
 // _runtime/07797__isNativeReflectConstruct.js
 import isErrorEvent from "07793_isErrorEvent.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import c4 from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import closure_6 from "metro/00096__get.js";
 import _inherits from "00098__inherits.js";
 import __SENTRY_DEBUG__ from "metro/07737___SENTRY_DEBUG__.js";
 import dateTimestampInSeconds from "07752_dateTimestampInSeconds.js";
@@ -91,7 +91,7 @@ let items = [
           const obj = ServerRuntimeClient(7765);
         }
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "captureException", self);
+      let fn = callback4(callback3(self.prototype), "captureException", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -126,7 +126,7 @@ let items = [
           tmp = type.type || "exception";
         }
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", self);
+      let fn = callback4(callback3(self.prototype), "captureEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -142,7 +142,7 @@ let items = [
         const _sessionFlusher = self._sessionFlusher;
         _sessionFlusher.close();
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "close", self);
+      let fn = callback4(callback3(self.prototype), "close", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -159,10 +159,10 @@ let items = [
         const obj = { release: null, environment: null };
         obj[0] = release;
         obj[1] = tmp;
-        const sessionFlusher = new ServerRuntimeClient(7791).SessionFlusher(self, obj);
+        const sessionFlusher = new tmp2(7791).SessionFlusher(self, obj);
         self._sessionFlusher = sessionFlusher;
-      } else if (ServerRuntimeClient(7766).DEBUG_BUILD) {
-        const logger = ServerRuntimeClient(7738).logger;
+      } else if (tmp2(7766).DEBUG_BUILD) {
+        const logger = tmp2(7738).logger;
         logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
       }
     }
@@ -190,7 +190,7 @@ let items = [
             ({ schedule: obj3[0], checkinMargin: obj3[1], maxRuntime: obj3[2], timezone: obj3[3], failureIssueThreshold: obj3[4], recoveryThreshold: obj3[5] } = arg1);
             obj.monitor_config = obj;
           }
-          [tmp9, tmp10] = _slicedToArray(self._getTraceInfoFromScope(arg2), 2);
+          [tmp9, tmp10] = callback(self._getTraceInfoFromScope(arg2), 2);
           if (tmp10) {
             obj1 = { trace: null };
             obj1[0] = tmp10;
@@ -223,9 +223,12 @@ let items = [
       if (this._sessionFlusher) {
         const _sessionFlusher = this._sessionFlusher;
         const result = _sessionFlusher.incrementSessionStatusCount();
-      } else if (ServerRuntimeClient(7766).DEBUG_BUILD) {
-        const logger = ServerRuntimeClient(7738).logger;
-        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
+      } else {
+        if (ServerRuntimeClient(7766).DEBUG_BUILD) {
+          const logger = tmp(7738).logger;
+          logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
+        }
+        tmp = ServerRuntimeClient;
       }
     }
   },
@@ -241,11 +244,12 @@ let items = [
         const merged = Object.assign(platform.contexts);
         obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
         platform.contexts = obj;
+        const tmp3 = platform.contexts || {};
       }
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
+      let fn = callback4(callback3(self.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -259,10 +263,10 @@ let items = [
       if (arg0) {
         const _getSpanForScopeResult = ServerRuntimeClient(7760)._getSpanForScope(arg0);
         if (_getSpanForScopeResult) {
-          let tmpResult = ServerRuntimeClient(7743);
+          let tmpResult = tmp(7743);
           let spanToTraceContextResult = tmpResult.spanToTraceContext(_getSpanForScopeResult);
         } else {
-          tmpResult = ServerRuntimeClient(7765);
+          tmpResult = tmp(7765);
           spanToTraceContextResult = tmpResult.getTraceContextFromScope(arg0);
         }
         const tmpResult1 = ServerRuntimeClient(7774);

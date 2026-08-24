@@ -1,10 +1,11 @@
 // discord_app/experiments/ChannelSummariesExperiment.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
-import set from "../modules/channel/ChannelConstants.tsx";
+import set from "../../_runtime/00002_set.js";
+import set2 from "../modules/channel/ChannelConstants.tsx";
 import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
 import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
-import createGuildRecordFromRust from "../stores/GuildStore.tsx";
+import closure_3 from "../stores/GuildStore.tsx";
 import ME from "../Constants.tsx";
+import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 function canSeeChannelSummaries(channel, flag, arg2) {
   if (flag === undefined) {
@@ -27,6 +28,7 @@ function canSeeChannelSummaries(channel, flag, arg2) {
       }
       const guild = store.getGuild(str);
       const SUMMARIZEABLE = constants.SUMMARIZEABLE;
+      const tmp4 = null != guild && guild.rulesChannelId === channel.id;
       const tmp6 = isGuildNSFW(guild);
       flag4 = SUMMARIZEABLE.has(channel.type) && !channel.isNSFW() && !(null != guild && guild.rulesChannelId === channel.id) && !isGuildNSFW(guild);
       const tmp8 = SUMMARIZEABLE.has(channel.type) && !channel.isNSFW() && !(null != guild && guild.rulesChannelId === channel.id) && !isGuildNSFW(guild);
@@ -50,6 +52,7 @@ function canSeeChannelSummaries(channel, flag, arg2) {
             let isFavoritesGuildIdResult = id === closure_4;
             if (!isFavoritesGuildIdResult) {
               isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id);
+              const obj = getFavoritesAwareGuildName;
             }
             tmp15 = isFavoritesGuildIdResult;
           }
@@ -61,10 +64,11 @@ function canSeeChannelSummaries(channel, flag, arg2) {
               hasItem = !flag2;
               if (flag2) {
                 const features2 = guild1.features;
-                hasItem = features2.has(constants2.SUMMARIES_ENABLED_BY_USER);
+                hasItem = features2.has(tmp21.SUMMARIES_ENABLED_BY_USER);
               }
             }
             tmp20 = hasItem;
+            tmp21 = constants2;
           }
           tmp14 = tmp20;
         }
@@ -78,8 +82,8 @@ function canSeeChannelSummaries(channel, flag, arg2) {
 }
 const isGuildNSFW = GuildNSFWContentLevel.isGuildNSFW;
 ({ ME: c4, ChannelTypesSets: c5, GuildFeatures: closure_6, EMPTY_STRING_SNOWFLAKE_ID: error } = ME);
-const ChannelFlags = set.ChannelFlags;
-const result = obj132.fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
+const ChannelFlags = set2.ChannelFlags;
+const result = set.fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
 
 export const channelEligibleForSummaries = function channelEligibleForSummaries(channel) {
   return canSeeChannelSummaries(channel, true, false);
@@ -98,6 +102,7 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
       let isFavoritesGuildIdResult = id === closure_4;
       if (!isFavoritesGuildIdResult) {
         isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id);
+        const obj = getFavoritesAwareGuildName;
       }
       tmp2 = isFavoritesGuildIdResult;
     }
@@ -109,10 +114,11 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
         hasItem = !flag;
         if (flag) {
           const features2 = guild.features;
-          hasItem = features2.has(constants2.SUMMARIES_ENABLED_BY_USER);
+          hasItem = features2.has(tmp8.SUMMARIES_ENABLED_BY_USER);
         }
       }
       tmp7 = hasItem;
+      tmp8 = constants2;
     }
     tmp = tmp7;
   }
@@ -128,7 +134,7 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
   const _require = arg0;
   const items = [closure_3];
   const items1 = [arg0];
-  return require("../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
+  return _defaultAreStatesEqual.useStateFromStores(items, () => {
     let id;
     if (lib != null) {
       id = lib.id;
@@ -144,8 +150,8 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
       if (tmp5) {
         let isFavoritesGuildIdResult = id === closure_1_4;
         if (!isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = lib(dependencyMap[4]).isFavoritesGuildId(id);
-          const obj = lib(dependencyMap[4]);
+          isFavoritesGuildIdResult = lib(closure_1_1[4]).isFavoritesGuildId(id);
+          const obj = lib(closure_1_1[4]);
         }
         tmp5 = isFavoritesGuildIdResult;
       }

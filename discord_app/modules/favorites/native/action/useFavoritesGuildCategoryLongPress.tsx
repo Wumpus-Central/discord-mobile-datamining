@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx
 import getFavoritesAwareGuildName from "../../FavoritesUtils.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { ChannelTypes } from "../../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
 
 export default function useFavoritesGuildCategoryLongPress(getGuildId) {
   let isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(getGuildId.getGuildId());
@@ -18,10 +18,10 @@ export default function useFavoritesGuildCategoryLongPress(getGuildId) {
     let tmp = null;
     if (closure_0) {
       const obj = { label: null, perform: null };
-      const intl = isFavoritesGuildIdResult(dependencyMap[3]).intl;
-      obj[0] = intl.string(isFavoritesGuildIdResult(dependencyMap[3]).t.Xm41aV);
+      const intl = isFavoritesGuildIdResult(closure_1_2[3]).intl;
+      obj[0] = intl.string(isFavoritesGuildIdResult(closure_1_2[3]).t.Xm41aV);
       obj[1] = function perform() {
-        return id(closure_1_2[4])(closure_1);
+        return closure_1_1(closure_1_2[4])(closure_1);
       };
       tmp = obj;
     }

@@ -1,27 +1,28 @@
 // discord_app/modules/forwarding/canForwardMessage.tsx
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import isSubscriptionGated from "../channel/GatedChannelStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../channel/GatedChannelStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
-function canForwardMessage(state, closure_1_5, closure_1_2, closure_1_3, closure_1_4) {
-  let obj = closure_1_5;
-  if (closure_1_5 === undefined) {
+require = arg1;
+function canForwardMessage(state) {
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = closure_5;
   }
-  let obj2 = closure_1_2;
-  if (closure_1_2 === undefined) {
+  let obj2 = arg2;
+  if (arg2 === undefined) {
     obj2 = closure_2;
   }
-  let obj3 = closure_1_3;
-  if (closure_1_3 === undefined) {
+  let obj3 = arg3;
+  if (arg3 === undefined) {
     obj3 = closure_3;
   }
-  let obj4 = closure_1_4;
-  if (closure_1_4 === undefined) {
+  let obj4 = arg4;
+  if (arg4 === undefined) {
     obj4 = closure_4;
   }
   if (null == state) {
@@ -49,6 +50,7 @@ function canForwardMessage(state, closure_1_5, closure_1_2, closure_1_3, closure
     }
     if (hasItem) {
       hasItem = 0 === hasFlag.removeFlag(state.flags, closure_10);
+      const obj5 = hasFlag;
     }
     if (hasItem) {
       const channel = obj3.getChannel(state.channel_id);
@@ -95,11 +97,11 @@ function canForwardMessage(state, closure_1_5, closure_1_2, closure_1_3, closure
 }
 ({ GuildFeatures: closure_6, MessageFlags, MessageStates: error, MessageTypesSets: closure_8, Permissions: c9 } = ME);
 let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL | MessageFlags.IS_SCHEDULED;
-const result = require("obj132").fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 
 export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
   const _require = message;
   const items = [closure_5, closure_2, closure_3, closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => canForwardMessage(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4));
+  return _initialize.useStateFromStores(items, () => closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4));
 };

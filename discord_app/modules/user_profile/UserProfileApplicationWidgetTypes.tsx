@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileApplicationWidgetTypes.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 
 let ApplicationWidget;
@@ -15,7 +15,8 @@ class ApplicationWidget {
 }
 const prototype = ApplicationWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  const obj = { type: this.type, application_id: this.applicationId };
+  obj = { id: this.id, data: obj };
+  obj = { type: this.type, application_id: this.applicationId };
   return obj;
 };
 prototype["isUpdatable"] = function isUpdatable() {
@@ -44,7 +45,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type, applicationId: this.applicationId };
 };
-const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
 
 export { ApplicationWidget };
 export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId) {

@@ -1,12 +1,11 @@
 // _runtime/01791_SharedTransition.js
 import _createClassDefault from "metro/00042__createClass.js";
 import isWorkletFunction from "01679_isWorkletFunction.js";
-import isValidLayoutAnimationProp from "01694_isValidLayoutAnimationProp.js";
 import updateLayoutAnimations from "01768_updateLayoutAnimations.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 
 const SharedTransition = global;
-require = fn;
+require = arg1;
 let closure_4 = ["width", "height", "originX", "originY", "transform", "borderRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderBottomLeftRadius", "borderBottomRightRadius"];
 let closure_5 = { code: "function pnpm_SharedTransitionTs1(viewTag,values,progress){const{progressAnimationCallback}=this.__closure;const newStyles=progressAnimationCallback(values,progress);global._notifyAboutProgress(viewTag,newStyles,true);}" };
 let closure_6 = { code: "function pnpm_SharedTransitionTs2(values){const{animationFactory,SUPPORTED_PROPS,withTiming,reduceMotion,transitionDuration}=this.__closure;let animations={};const initialValues={};if(animationFactory){animations=animationFactory(values);for(const key in animations){if(!SUPPORTED_PROPS.includes(key)){throw new ReanimatedError(\"The prop '\"+key+\"' is not supported yet.\");}}}else{for(const propName of SUPPORTED_PROPS){if(propName==='transform'){const matrix=values.targetTransformMatrix;animations.transformMatrix=withTiming(matrix,{reduceMotion:reduceMotion,duration:transitionDuration});}else{const capitalizedPropName=\"\"+propName.charAt(0).toUpperCase()+propName.slice(1);const keyToTargetValue=\"target\"+capitalizedPropName;animations[propName]=withTiming(values[keyToTargetValue],{reduceMotion:reduceMotion,duration:transitionDuration});}}}for(const propName in animations){if(propName==='transform'){initialValues.transformMatrix=values.currentTransformMatrix;}else{const capitalizedPropName=propName.charAt(0).toUpperCase()+propName.slice(1);const keyToCurrentValue=\"current\"+capitalizedPropName;initialValues[propName]=values[keyToCurrentValue];}}return{initialValues:initialValues,animations:animations};}" };
@@ -98,7 +97,6 @@ const items = [
         _progressTransitionManager = SharedTransition._progressTransitionManager;
         _progressTransitionManager.addProgressAnimation(componentViewTag, progressAnimation);
       }
-      obj2 = isValidLayoutAnimationProp;
     }
   },
   {
@@ -108,14 +106,13 @@ const items = [
         flag = false;
       }
       if (this._defaultTransitionType === isWorkletFunction.SharedTransitionType.ANIMATION) {
-        let SHARED_ELEMENT_TRANSITION_PROGRESS = isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+        let SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1679).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
       } else {
-        SHARED_ELEMENT_TRANSITION_PROGRESS = isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
+        SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1679).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
       }
       const result = updateLayoutAnimations.updateLayoutAnimations(componentViewTag, SHARED_ELEMENT_TRANSITION_PROGRESS, undefined, undefined, flag);
       const _progressTransitionManager = SharedTransition._progressTransitionManager;
       const result1 = _progressTransitionManager.removeProgressAnimation(componentViewTag, flag);
-      const tmpResult = updateLayoutAnimations;
     }
   },
   {
@@ -154,40 +151,61 @@ const items = [
         let obj = {};
         if (_customAnimationFactory) {
           const tmp20 = _customAnimationFactory(targetTransformMatrix);
+          let tmp3 = tmp20;
           let animations = tmp20;
           const keys = Object.keys();
           if (keys !== undefined) {
             animations = tmp20;
             while (keys[tmp] !== undefined) {
+              let tmp31 = tmp22;
+              let tmp32 = closure_1_4;
               if (closure_1_4.includes(tmp22)) {
                 continue;
               } else {
+                let tmp23 = _transitionDuration;
+                let tmp24 = _reduceMotion;
+                let tmp25 = globalThis;
                 let _HermesInternal2 = HermesInternal;
+                let str5 = "' is not supported yet.";
+                let str6 = "The prop '";
+                let tmp26 = new.target;
+                let tmp27 = new.target;
                 let reanimatedError = new _transitionDuration(_reduceMotion[5]).ReanimatedError("The prop '" + tmp22 + "' is not supported yet.");
+                let tmp29 = reanimatedError;
                 throw reanimatedError;
               }
             }
           }
         } else {
+          tmp3 = closure_1_4;
           const iter = closure_1_4[Symbol.iterator]();
           const nextResult = iter.next();
           animations = obj;
           while (iter !== undefined) {
             let str3 = nextResult;
             if ("transform" === nextResult) {
+              let tmp16 = _transitionDuration;
+              let tmp17 = _reduceMotion;
               let obj4 = _transitionDuration(_reduceMotion[6]);
               obj = { reduceMotion: null, duration: null };
+              let tmp18 = _reduceMotion;
               obj[0] = _reduceMotion;
+              let tmp19 = _transitionDuration;
               obj[1] = _transitionDuration;
               obj.transformMatrix = obj4.withTiming(targetTransformMatrix.targetTransformMatrix, obj);
             } else {
+              let tmp9 = nextResult;
               let str4 = str3.charAt(0);
               let formatted = str4.toUpperCase();
               let _HermesInternal = HermesInternal;
+              let tmp12 = _transitionDuration;
+              let tmp13 = _reduceMotion;
               let combined = "target" + formatted + str3.slice(1);
               obj1 = _transitionDuration(_reduceMotion[6]);
               obj = { reduceMotion: null, duration: null };
+              let tmp14 = _reduceMotion;
               obj[0] = _reduceMotion;
+              let tmp15 = _transitionDuration;
               obj[1] = _transitionDuration;
               obj[str3] = obj1.withTiming(targetTransformMatrix[combined], obj);
             }
@@ -196,6 +214,7 @@ const items = [
         }
         obj1 = {};
         for (const key10075 in animations) {
+          let tmp33 = key10075;
           if ("transform" === key10075) {
             obj1.transformMatrix = arg0.currentTransformMatrix;
             continue;
@@ -232,16 +251,25 @@ const items = [
             if ("transform" === nextResult) {
               ({ currentTransformMatrix, targetTransformMatrix } = arg1);
               let _Array = Array;
+              let tmp8 = new.target;
+              let tmp9 = new.target;
+              let num = 9;
               let array = new Array(9);
               let tmp11 = array;
               let num2 = 0;
               do {
+                let tmp12 = array;
+                let tmp13 = num2;
+                let tmp14 = targetTransformMatrix;
+                let tmp15 = currentTransformMatrix;
                 tmp11[num2] = arg2 * (targetTransformMatrix[num2] - currentTransformMatrix[num2]) + currentTransformMatrix[num2];
                 sum = num2 + 1;
                 num2 = sum;
               } while (sum < 9);
+              let tmp17 = array;
               obj.transformMatrix = tmp11;
             } else {
+              let tmp3 = nextResult;
               let str2 = str.charAt(0);
               let formatted = str2.toUpperCase();
               let sum1 = formatted + str.slice(1);

@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/hooks/useVisibleUserProfileConnectionsAndAppIdentities.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useVisibleUserProfileConnectionsAndAppIdentities.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useVisibleUserProfileConnectionsAndAppIdentities.tsx");
 
 export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const filteredAppIdentities = importDefault(memo[1])(arg0).filteredAppIdentities;
@@ -12,7 +12,7 @@ export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   memo = found.useMemo(() => {
     let mapped;
     if (filteredAppIdentities != null) {
-      mapped = filteredAppIdentities.map((item, index) => item.application_id);
+      mapped = filteredAppIdentities.map((application_id) => application_id.application_id);
     }
     if (mapped == null) {
       mapped = [];
@@ -28,14 +28,14 @@ export default function useVisibleUserProfileConnectionsAndAppIdentities(arg0) {
   const items3 = [tmp, memo];
   return {
     appIdentities: found.useMemo(() => {
-      const mapped = filteredAppIdentities.map((item, index) => {
-        closure_0 = item;
-        return { identity: item, application: closure_3.find((item, index) => item.id === item.application_id) };
+      const mapped = filteredAppIdentities.map((identity) => {
+        closure_0 = identity;
+        return { identity, application: closure_3.find((id) => id.id === identity.application_id) };
       });
-      return mapped.filter((item, index) => null != item.application);
+      return mapped.filter((application) => null != application.application);
     }, items2),
-    connections: found.useMemo(() => closure_1.filter((item, index) => {
-      const value = closure_1_1(memo[5]).get(item.type);
+    connections: found.useMemo(() => closure_1.filter((type) => {
+      const value = closure_1_1(closure_1_2[5]).get(type.type);
       let migrationExperimentEnabled;
       if (value != null) {
         const migrationData = value.migrationData;

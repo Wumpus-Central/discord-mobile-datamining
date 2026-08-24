@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/account/native/showUserSettingsInputAlert.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
 
 export default function showUserSettingsInputAlert(arg0) {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
   closure_3 = Object.assign(arg0, Object.create(null));
-  let obj = {
+  let obj = _modDef4656;
+  obj = {
     importer() {
-      return asyncRequireImpl(dependencyMap[3], dependencyMap.paths).then((result) => {
-        closure_0 = result.default;
+      return closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);

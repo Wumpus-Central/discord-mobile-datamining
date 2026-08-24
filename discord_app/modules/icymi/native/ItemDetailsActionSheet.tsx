@@ -2,31 +2,25 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Button from "../../../design/void/native.tsx";
 import computeChannelNameDefault from "../../channel/useChannelName.tsx";
 import useDesignToggleDefault from "../../devtools/design_toggles/useDesignToggle.tsx";
-import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
-import generateHydrationId from "../ICYMIUtils.tsx";
-import ActionSheetIconHeader from "../../../design/components/Sheet/native/ActionSheetIconHeader.native.tsx";
-import ContentSettingsControl from "custom_scores/ICYMIContentSettingControl.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import filterStaffGuild from "../ICYMIStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../ICYMIStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey = { divider: null };
+createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
 
 export default function ItemDetailsActionSheet(arg0) {
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
@@ -45,18 +39,19 @@ export default function ItemDetailsActionSheet(arg0) {
     }
     return dehydratedItem;
   });
+  const tmp5 = importDefault;
   const tmp6 = computeChannelNameDefault(stateFromStores, true);
   if (null != stateFromStores1) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
-    obj[1] = GuildIconSizes.GuildIconSizes.LARGE;
+    obj[1] = tmp(7188).GuildIconSizes.LARGE;
     let tmp9 = callback(GuildIconSizesDefault, obj);
     const tmp5Result = GuildIconSizesDefault;
   } else if (null != stateFromStores) {
     obj = { size: null, channel: null };
-    obj[0] = Button.AvatarSizes.LARGE;
+    obj[0] = tmp(1297).AvatarSizes.LARGE;
     obj[1] = stateFromStores;
-    tmp9 = callback(Button.Avatar, obj);
+    tmp9 = callback(tmp(1297).Avatar, obj);
   }
   let result = null != stateFromStores;
   const tmp8 = useDesignToggleDefault("show_icymi_debug_scores");
@@ -64,8 +59,8 @@ export default function ItemDetailsActionSheet(arg0) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = generateHydrationId.isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = generateHydrationId;
+    result = tmp(9056).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(9056);
   }
   obj1 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -75,14 +70,14 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: callback(ActionSheetIconHeader.ActionSheetIconHeader, obj1), children: null };
+  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10516).ActionSheetIconHeader, obj1), children: null };
   obj1[2] = str;
   let tmp16Result = result;
   if (result) {
     const obj3 = { channel: null, guild: null };
     obj3[0] = stateFromStores;
     obj3[1] = stateFromStores1;
-    tmp16Result = callback(ContentSettingsControl.ChannelScoreSettings, obj3);
+    tmp16Result = tmp16(tmp(15715).ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -90,15 +85,16 @@ export default function ItemDetailsActionSheet(arg0) {
     if (result) {
       const obj4 = { style: null };
       obj4[0] = tmp13.divider;
-      result = callback(View, obj4);
+      result = tmp16(View, obj4);
     }
     const obj5 = { children: null };
     const items4 = [result, ];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
-    items4[1] = callback(ContentSettingsControl.GuildScoreSettings, obj6);
+    items4[1] = tmp16(tmp(15715).GuildScoreSettings, obj6);
     obj5[0] = items4;
-    tmp15Result = callback(closure_8, obj5);
+    tmp15Result = tmp15(closure_8, obj5);
+    const tmp19 = closure_8;
   }
   items3[1] = tmp15Result;
   tmp16Result = null;
@@ -110,11 +106,11 @@ export default function ItemDetailsActionSheet(arg0) {
       obj8[0] = `Total Score: ${tmp7.score}`;
       const _JSON = JSON;
       obj8[1] = JSON.stringify(stateFromStores2.score_components);
-      obj7[2] = callback(TableRowInner.TableRow, obj8);
-      tmp16Result = callback(TableRowGroupTitle.TableRowGroup, obj7);
+      obj7[2] = tmp16(tmp(6291).TableRow, obj8);
+      tmp16Result = tmp16(tmp(6286).TableRowGroup, obj7);
     }
   }
   items3[2] = tmp16Result;
   obj2[3] = items3;
-  return callback(ActionSheet.ActionSheet, obj2);
+  return closure_9(ActionSheet.ActionSheet, obj2);
 };

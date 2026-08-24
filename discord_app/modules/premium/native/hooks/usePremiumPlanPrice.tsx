@@ -1,12 +1,12 @@
 // discord_app/modules/premium/native/hooks/usePremiumPlanPrice.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import addSubscriptionPlan from "../../../../stores/billing/SubscriptionPlanStore.tsx";
-import reset from "../../../../stores/billing/SubscriptionStore.tsx";
-import updateProduct from "../../../../stores/native/IAPStore.android.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/billing/SubscriptionPlanStore.tsx";
+import closure_5 from "../../../../stores/billing/SubscriptionStore.tsx";
+import closure_6 from "../../../../stores/native/IAPStore.android.tsx";
 import { PaymentGateways } from "../../../../../discord_common/js/shared/Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
 
 export default function usePremiumPlanPrice(arg0) {
   const _require = arg0;
@@ -66,21 +66,21 @@ export default function usePremiumPlanPrice(arg0) {
   const effect = React.useEffect(() => {
     if (closure_4) {
       if (priceState !== callback(priceState[8]).PriceStates.PRICE_AVAILABLE) {
-        if (priceState === callback(priceState[8]).PriceStates.MISMATCHING_COUNTRIES) {
+        if (tmp === tmp2(tmp3[8]).PriceStates.MISMATCHING_COUNTRIES) {
           let country;
           if (storeFront != null) {
-            country = storeFront.country;
+            country = tmp6.country;
           }
           if (null != country) {
             if (!closure_5.pending) {
               if (!isIOSResult.isFetchingForPremiumSKUs()) {
-                if (closure_5.fails < 3) {
-                  country = storeFront.country;
-                  closure_5.fail(() => {
+                if (obj.fails < 3) {
+                  country = tmp6.country;
+                  obj.fail(() => {
                     if (!isIOSResult.isFetchingForPremiumSKUs()) {
                       const obj = country(priceState[13]);
-                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
-                      premiumSubscriptionPlans.catch((error) => {
+                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, closure_2_7.APPLE_ADVANCED_COMMERCE);
+                      premiumSubscriptionPlans.catch(() => {
 
                       });
                     }
@@ -101,7 +101,9 @@ export default function usePremiumPlanPrice(arg0) {
   if (tmp5 == arg0) {
     return null;
   } else if (isIOSResult) {
+    let tmp14 = null;
     if (priceState === formatPrice(amount[8]).PriceStates.PRICE_AVAILABLE) {
+      tmp14 = null;
       if (tmp5 != price) {
         obj = { price: null, currency: null, countryCode: null, priceString: null, source: "API" };
         ({ amount: obj7[0], currency: obj7[1] } = price);
@@ -116,19 +118,25 @@ export default function usePremiumPlanPrice(arg0) {
         amount = price.amount;
         price = formatPrice(amount, price.currency);
         obj[3] = price;
+        tmp14 = obj;
       }
     }
-  } else if (tmp5 != stateFromStores2) {
-    obj = { price: null, currency: null, countryCode: null, priceString: null, source: "IAP" };
-    ({ price: obj6[0], currencyCode: obj6[1] } = stateFromStores2);
-    let country1;
-    if (storeFront != tmp5) {
-      country1 = storeFront.country;
+    let tmp12 = tmp14;
+  } else {
+    tmp12 = null;
+    if (tmp5 != stateFromStores2) {
+      obj = { price: null, currency: null, countryCode: null, priceString: null, source: "IAP" };
+      ({ price: obj6[0], currencyCode: obj6[1] } = stateFromStores2);
+      let country1;
+      if (storeFront != tmp5) {
+        country1 = storeFront.country;
+      }
+      if (country1 == tmp5) {
+        country1 = stateFromStores2.countryCode;
+      }
+      obj[2] = country1;
+      obj[3] = stateFromStores2.priceString;
+      tmp12 = obj;
     }
-    if (country1 == tmp5) {
-      country1 = stateFromStores2.countryCode;
-    }
-    obj[2] = country1;
-    obj[3] = stateFromStores2.priceString;
   }
 };

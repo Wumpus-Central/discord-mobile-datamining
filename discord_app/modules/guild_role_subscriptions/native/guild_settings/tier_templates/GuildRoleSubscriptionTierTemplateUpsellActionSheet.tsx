@@ -6,20 +6,21 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import Background from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import getIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ GuildSettingsSections: error, GuildSettingsSubsections: closure_8 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
+createCacheKey = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { marginTop: 16, alignItems: "center" };
@@ -28,7 +29,8 @@ createCacheKey[4] = { marginTop: 12, textAlign: "center" };
 createCacheKey[5] = { marginTop: 32 };
 createCacheKey[6] = { marginBottom: 8 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
+let obj1 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
 
 export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
@@ -43,6 +45,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const items1 = [markAsDismissed];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => () => callback(closure_1_9.UNKNOWN), items1);
+  obj = { startExpanded: true, children: null };
   obj = {
     style: tmp.container,
     onLayout(nativeEvent) {
@@ -51,7 +54,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
       if (closure_3) {
         result = diff / 2;
       }
-      _undefined(result);
+      c2(result);
     },
     children: null
   };
@@ -79,7 +82,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj8[0] = intl4.string(getSystemLocale.t.BQq86h);
   obj8[1] = function onPress() {
     markAsDismissed(_undefined[16]).open(closure_0, closure_1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, closure_1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
-    markAsDismissed(ContentDismissActionType.UNKNOWN);
+    markAsDismissed(closure_1_9.UNKNOWN);
   };
   obj7[1] = callback2(Button.Button, obj8);
   const items5 = [callback2(View, obj7), ];

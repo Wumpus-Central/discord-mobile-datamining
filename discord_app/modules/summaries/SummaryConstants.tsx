@@ -1,11 +1,11 @@
 // discord_app/modules/summaries/SummaryConstants.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-require = fn;
+require = arg1;
 let obj = { DUPLICATED: "DUPLICATED", TOO_GENERIC: "TOO_GENERIC", TOO_MANY: "TOO_MANY", INACCURATE: "INACCURATE", NOT_USEFUL: "NOT_USEFUL", OTHER: "OTHER" };
-const result = 5 * obj132Default.Millis.SECOND;
-const result1 = require("obj132").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
+const result = 5 * setDefault.Millis.SECOND;
+const result1 = require("set").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
 
 export const SUMMARY_POLL_INTERVAL = result;
 export const SummariesSidebarToggledSource = { TOOLBAR_BUTTON: "toolbar button", PILL: "pill" };

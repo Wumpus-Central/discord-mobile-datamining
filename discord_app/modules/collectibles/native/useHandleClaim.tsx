@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/native/useHandleClaim.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 
-let require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
+let require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
 
 export const useHandleClaim = function useHandleClaim(product) {
   product = product.product;

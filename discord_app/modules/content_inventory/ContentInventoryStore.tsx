@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isMatchingListeningActivity from "matchUtils.tsx";
 
-require = fn;
+require = arg1;
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -44,14 +44,14 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
   if (null != feed) {
     if (null != activity) {
       const entries = feed.entries;
-      const reduced = entries.reduce((acc, item, index) => {
-        if (item.content.author_id === closure_0) {
+      const reduced = entries.reduce((arg0, content) => {
+        if (content.content.author_id === closure_0) {
           const items = [];
-          items[HermesBuiltin.arraySpread(acc, 0)] = item.content;
+          items[HermesBuiltin.arraySpread(arg0, 0)] = content.content;
           let items1 = items;
         } else {
           items1 = [];
-          HermesBuiltin.arraySpread(acc, 0);
+          HermesBuiltin.arraySpread(arg0, 0);
         }
         return items1;
       }, []);
@@ -90,6 +90,6 @@ const contentInventoryStore = new ContentInventoryStore(dispatcherDefault, {
     closure_6 = !closure_6;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
+let result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
 
 export default contentInventoryStore;

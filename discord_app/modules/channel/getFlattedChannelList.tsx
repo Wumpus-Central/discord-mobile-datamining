@@ -1,22 +1,22 @@
 // discord_app/modules/channel/getFlattedChannelList.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 
-const result = obj132.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
+const result = set.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
 export default function getFlattenedChannelList(arg0, arg1) {
   importDefault = arg1;
   let fn = arg2;
   if (arg2 === undefined) {
-    fn = function l(item, index) {
+    fn = function l() {
       return true;
     };
   }
-  const mapped = applyDefault(arg0).map((item, index) => {
-    if ("null" === item.channel.id) {
-      let items = dependencyMap[item.channel.id];
+  const mapped = applyDefault(arg0).map((channel) => {
+    if ("null" === channel.channel.id) {
+      let items = dependencyMap[channel.channel.id];
     } else {
-      items = [item, dependencyMap[item.channel.id]];
+      items = [channel, dependencyMap[channel.channel.id]];
     }
     return items;
   });

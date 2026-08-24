@@ -11,8 +11,9 @@ const memoResult = memo(forwardRef((onFocus, ref) => {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
   const merged = Object.assign(onFocus, Object.create(null));
+  let shouldHandleKeyboardEvents;
   let obj = onFocus(onBlur[2]);
-  const shouldHandleKeyboardEvents = obj.useBottomSheetInternal().shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = obj.useBottomSheetInternal().shouldHandleKeyboardEvents;
   const items = [onFocus, shouldHandleKeyboardEvents];
   const items1 = [onBlur, shouldHandleKeyboardEvents];
   const items2 = [shouldHandleKeyboardEvents];

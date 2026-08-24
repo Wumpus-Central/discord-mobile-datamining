@@ -1,11 +1,11 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useUserIsTeen from "../../hooks/useUserIsTeen.tsx";
-import handleConnectionClosedOrResumed from "../../../user_settings/UserSettingsProtoStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_2 from "../../../user_settings/UserSettingsProtoStore.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
 
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();
@@ -23,7 +23,9 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
+  const obj2 = initialize;
   let userIsTeen = useUserIsTeen.useUserIsTeen();
+  const obj3 = useUserIsTeen;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

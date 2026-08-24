@@ -1,21 +1,23 @@
 // discord_app/modules/threads/useGetThreadDraftSettings.tsx
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import handleChanged from "../../stores/DraftStore.tsx";
+import closure_3 from "../../stores/DraftStore.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/threads/useGetThreadDraftSettings.tsx");
 
 export default function useGetThreadDraftSettings(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      let threadSettings = closure_1_3.getThreadSettings(closure_0);
+      let threadSettings = closure_1_3.getThreadSettings(tmp);
       if (threadSettings == null) {
-        threadSettings = closure_1_3.getThreadDraftWithParentMessageId(DISCORD_EPOCHDefault.castChannelIdAsMessageId(closure_0));
+        threadSettings = obj.getThreadDraftWithParentMessageId(closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp));
+        const obj2 = closure_1_1(closure_1_2[2]);
       }
       tmp2 = threadSettings;
+      obj = closure_1_3;
     }
     return tmp2;
   });
@@ -23,14 +25,16 @@ export default function useGetThreadDraftSettings(arg0) {
 export const useHasThreadDraft = function useHasThreadDraft(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let threadSettings = closure_1_3.getThreadSettings(closure_0);
+      let threadSettings = closure_1_3.getThreadSettings(tmp);
       if (threadSettings == null) {
-        threadSettings = closure_1_3.getThreadDraftWithParentMessageId(DISCORD_EPOCHDefault.castChannelIdAsMessageId(closure_0));
+        threadSettings = obj.getThreadDraftWithParentMessageId(closure_1_1(closure_1_2[2]).castChannelIdAsMessageId(tmp));
+        const obj2 = closure_1_1(closure_1_2[2]);
       }
       tmp2 = null != threadSettings;
+      obj = closure_1_3;
     }
     return tmp2;
   });

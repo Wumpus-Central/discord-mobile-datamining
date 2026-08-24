@@ -1,19 +1,19 @@
 // discord_app/modules/main_app_window/web/AppWindowContext.tsx
 import getWindowId2 from "../../../utils/web/WindowIdUtils.tsx";
 import INTERACTION_EVENTS from "../../../utils/web/WindowInteractingUtils.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import getWindowId from "../../../utils/web/WindowIdUtils.tsx";
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 let componentDispatcher = new require("ComponentDispatcher").ComponentDispatcher();
-let obj = { appContext: require("ME").AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
+const obj = { appContext: require("ME").AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
 obj[3] = getWindowId.getMainWindowId();
 const context = importAllResult.createContext(obj);
 const map = new Map();
-let result = require("obj132").fileFinishedImporting("modules/main_app_window/web/AppWindowContext.tsx");
+let result = require("set").fileFinishedImporting("modules/main_app_window/web/AppWindowContext.tsx");
 
 export default context;
 export const MainWindowDispatch = componentDispatcher;
@@ -88,16 +88,18 @@ export const AppWindowContextProvider = function AppWindowContextProvider(childr
   ({ appContext, renderWindow } = children);
   let first;
   importAllResult = undefined;
+  let memo;
+  let redux;
   const tmp = first(importAllResult.useState(appContext(renderWindow[5]).getWindowId(renderWindow)), 2);
   first = tmp[0];
   importAllResult = tmp[1];
-  const memo = importAllResult.useMemo(() => {
+  memo = importAllResult.useMemo(() => {
     const componentDispatcher = new appContext(renderWindow[4]).ComponentDispatcher();
     return componentDispatcher;
   }, []);
   const items = [appContext, renderWindow, memo, first];
   const value = importAllResult.useMemo(() => ({ appContext, renderWindow, windowDispatch: memo, windowId: first }), items);
-  const redux = value;
+  redux = value;
   const items1 = [renderWindow, first];
   const effect = importAllResult.useEffect(() => {
     if (null == first) {
@@ -109,19 +111,18 @@ export const AppWindowContextProvider = function AppWindowContextProvider(childr
           const _clearInterval = clearInterval;
           clearInterval(closure_0);
         }
-        const obj = appContext(renderWindow[5]);
       }, 10);
       return () => clearInterval(closure_0);
     }
   }, items1);
   const items2 = [value, renderWindow, first];
   const effect1 = importAllResult.useEffect(() => {
-    function handleUnload(event) {
+    function handleUnload() {
       closure_1_6.delete(closure_2);
     }
-    const result = map.set(first, c5);
+    const result = closure_1_6.set(first, c5);
     const listener = renderWindow.addEventListener("unload", handleUnload);
-    return () => renderWindow.removeEventListener("unload", handleUnload);
+    return () => closure_1_1.removeEventListener("unload", handleUnload);
   }, items2);
   return memo(redux.Provider, { value, children: children.children });
 };

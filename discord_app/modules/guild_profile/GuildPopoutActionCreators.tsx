@@ -1,8 +1,8 @@
 // discord_app/modules/guild_profile/GuildPopoutActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchGuildForPopout() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -52,7 +52,7 @@ function _fetchGuildForPopout() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/guild_profile/GuildPopoutActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_profile/GuildPopoutActionCreators.tsx");
 
 export const fetchGuildForPopout = function fetchGuildForPopout(id) {
   const self = this;

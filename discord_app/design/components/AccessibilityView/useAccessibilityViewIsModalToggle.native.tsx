@@ -1,7 +1,7 @@
 // discord_app/design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 
-let result = require("obj132").fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
 
 export default function useAccessibilityViewIsModalToggle(accessibilityViewIsModal) {
   let flag = accessibilityViewIsModal.accessibilityViewIsModal;
@@ -10,9 +10,10 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
   }
   const nativeID = accessibilityViewIsModal.nativeID;
   let React;
+  let callback;
   React = React.useRef(undefined);
   let items = [flag, nativeID];
-  const callback = React.useCallback(() => {
+  callback = React.useCallback(() => {
     let tmp = arg0;
     if (arg0 === undefined) {
       tmp = flag;
@@ -22,9 +23,9 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
         const _Error = Error;
         error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
         throw error;
-      } else if (ref.current !== nativeID) {
-        ref.current = nativeID;
-        const items = [nativeID];
+      } else if (ref.current !== tmp6) {
+        ref.current = tmp6;
+        const items = [tmp6];
         const result = flag(nativeID[1]).enableAccessibilityFocusLock(items);
         const obj2 = flag(nativeID[1]);
       }

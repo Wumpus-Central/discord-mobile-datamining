@@ -1,10 +1,10 @@
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { MIDJOURNEY_GUILD_ID } from "MidjourneyOnboardingConstants.tsx";
 import { Routes } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 initializeDefault;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
@@ -43,16 +43,17 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             return obj;
           } else {
             const id = tmp2;
-            if (obj6.isEligibleForMidjourneyRedirect(channel)) {
+            if (obj6.isEligibleForMidjourneyRedirect(closure_1_0)) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = channel(13319).hasRedirectedToGuild(closure_1_4);
+              obj1[0] = tmp22(13319).hasRedirectedToGuild(closure_1_4);
               return obj1;
             } else {
               dependencyMap = 3;
             }
-            obj6 = channel(13319);
+            obj6 = closure_1_0(13319);
+            tmp22 = closure_1_0;
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -73,6 +74,6 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
   })();
 };
 const midjourneyOnboardingManager = new MidjourneyOnboardingManager();
-const result = require("obj132").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx");
+const result = require("set").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingManager.tsx");
 
 export default midjourneyOnboardingManager;

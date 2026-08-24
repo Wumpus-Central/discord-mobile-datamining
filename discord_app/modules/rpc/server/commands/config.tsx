@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/server/commands/config.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
@@ -8,14 +8,14 @@ import ME from "../../../../Constants.tsx";
 
 ({ TransportTypes: obj1, RPC_AUTHENTICATED_SCOPE } = RPC_SCOPE_CONFIG);
 const RPCErrors = ME.RPCErrors;
-const result = obj132.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
+const result = set.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
 
 export default {
   [ME.RPCCommands.SET_CONFIG]: {
     scope: RPC_AUTHENTICATED_SCOPE,
     validation(boolean) {
-      createRpcJoiSchemaObjectDefault(boolean);
-      const obj = { use_interactive_pip: boolean.boolean() };
+      let obj = createRpcJoiSchemaObjectDefault(boolean);
+      obj = { use_interactive_pip: boolean.boolean() };
       return obj.required().keys(obj);
     },
     handler(socket) {

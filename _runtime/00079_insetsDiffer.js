@@ -12,6 +12,7 @@ arg5.default = function insetsDiffer(arg0, arg1) {
   let tmp = rect !== rect2;
   if (tmp) {
     tmp = rect.top !== rect2.top || rect.left !== rect2.left || rect.right !== rect2.right || rect.bottom !== rect2.bottom;
+    const tmp2 = rect.top !== rect2.top || rect.left !== rect2.left || rect.right !== rect2.right || rect.bottom !== rect2.bottom;
   }
   return tmp;
 };

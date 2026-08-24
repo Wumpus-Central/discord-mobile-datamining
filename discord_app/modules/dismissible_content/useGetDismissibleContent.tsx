@@ -1,16 +1,16 @@
 // discord_app/modules/dismissible_content/useGetDismissibleContent.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import noop from "../../../_runtime/00019_noop.js";
-import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedGuildStore.tsx";
-import set from "DismissibleContentFrameworkStore.tsx";
-import withContent from "DismissibleContentShownStateStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/UserSettingsProtoStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "DismissibleContentFrameworkStore.tsx";
+import closure_7 from "DismissibleContentShownStateStore.tsx";
 import { removeCandidateContent } from "DismissibleContentShownStateStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import { UserSettingsTypes } from "../user_settings/UserSettingsConstants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed, cooldownDurationMs) {
   let tmp;
   if (null != lastDismissedAtMs) {
@@ -50,6 +50,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   let hasLoadedResult = closure_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS);
   if (!hasLoadedResult) {
     hasLoadedResult = null != tmp && null != numTimesDismissed;
+    const tmp9 = null != tmp && null != numTimesDismissed;
   }
   if (hasLoadedResult) {
     hasLoadedResult = arg0;
@@ -59,6 +60,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   if (hasLoadedResult) {
     hasLoadedResult = null == tmp || timestamp >= num;
+    const tmp10 = null == tmp || timestamp >= num;
   }
   if (hasLoadedResult) {
     hasLoadedResult = tmp7;
@@ -66,7 +68,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   return hasLoadedResult;
 }
 let closure_11 = {};
-let result = require("obj132").fileFinishedImporting("modules/dismissible_content/useGetDismissibleContent.tsx");
+let result = require("set").fileFinishedImporting("modules/dismissible_content/useGetDismissibleContent.tsx");
 
 export const useGetDismissibleContent = function useGetDismissibleContent(items3, APP_LAUNCHER_ONBOARDING) {
   let found1 = APP_LAUNCHER_ONBOARDING;
@@ -79,18 +81,19 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
     }
     return dismissedContents;
   });
+  let stateFromStores1 = stateFromStores;
   let obj = found1(589);
   const items1 = [anyOverlayRenderingLocked];
-  const stateFromStores1 = found1(589).useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores1 = found1(589).useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   dependencyMap = stateFromStores1;
   const obj2 = found1(589);
   const newUserDismissibleContent = found1(4218).useNewUserDismissibleContent(items3);
   found1 = null;
   if (closure_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
-    const found = newUserDismissibleContent.find((item, index) => {
+    const found = newUserDismissibleContent.find((closure_0) => {
       let tmp2 = null == stateFromStores1;
       if (!tmp2) {
-        tmp2 = !found1(APP_LAUNCHER_ONBOARDING[13]).hasBit(tmp, item);
+        tmp2 = !found1(APP_LAUNCHER_ONBOARDING[13]).hasBit(tmp, closure_0);
         const obj = found1(APP_LAUNCHER_ONBOARDING[13]);
       }
       return tmp2;
@@ -100,7 +103,7 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   } else {
     tmp5 = null;
     if (null != stateFromStores) {
-      found1 = newUserDismissibleContent.find((item, index) => !found1(APP_LAUNCHER_ONBOARDING[13]).hasBit(stateFromStores1, item));
+      found1 = newUserDismissibleContent.find((closure_0) => !found1(APP_LAUNCHER_ONBOARDING[13]).hasBit(stateFromStores1, closure_0));
       tmp5 = found1;
     }
   }
@@ -134,14 +137,14 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   items3 = [tmp5, APP_LAUNCHER_ONBOARDING, stateFromStores3, anyOverlayRenderingLocked, undefined, stateFromStores2, undefined];
   const effect = found1.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -158,7 +161,7 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -166,13 +169,13 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -188,8 +191,8 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   const items5 = [tmp5, APP_LAUNCHER_ONBOARDING, stateFromStores1];
   items4[1] = found1.useCallback((arg0, arg1) => {
     if (null != found1) {
-      found1(APP_LAUNCHER_ONBOARDING[14]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = found1(APP_LAUNCHER_ONBOARDING[14]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = found1;
       obj[2] = APP_LAUNCHER_ONBOARDING;
@@ -200,9 +203,11 @@ export const useGetDismissibleContent = function useGetDismissibleContent(items3
   return items4;
 };
 export const useGetVersionedDismissibleContent = function useGetVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName) {
-  let _require = COLLECTIBLES_SHOP_ENTRY_MARKETING;
+  let _require = latestVersion;
+  let stateFromStores = groupName;
+  _require = COLLECTIBLES_SHOP_ENTRY_MARKETING;
   const items = [closure_4];
-  const lastDismissedVersion = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const lastDismissedVersion = _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
       const userContent = newSnowflakeId.settings.userContent;
@@ -220,16 +225,17 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
     }
     return tmp2;
   }).lastDismissedVersion;
-  let obj = initialize;
+  let obj = _initialize;
+  const obj2 = closure_4;
   const items1 = [anyOverlayRenderingLocked];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   dependencyMap = stateFromStores;
   let React = null;
   let tmp4 = null;
   if (null != COLLECTIBLES_SHOP_ENTRY_MARKETING) {
     let tmpResult = tmp(4218);
     let result = tmpResult.disableNewUserDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING);
-    if (closure_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+    if (obj2.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       let tmp9 = null;
       if (!result) {
         if (null == lastDismissedVersion) {
@@ -258,7 +264,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   _require = tmp4;
   dependencyMap = groupName;
   React = latestVersion;
-  const obj3 = initialize;
+  const obj3 = _initialize;
   tmpResult = tmp(7368);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp10 = ref((currentlyShown) => {
@@ -269,12 +275,12 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
     }
     return hasItem;
   });
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = initialize;
+  const tmpResult1 = _initialize;
   const items2 = [stateFromStores1];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -286,14 +292,14 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   const items3 = [tmp4, groupName, stateFromStores2, anyOverlayRenderingLocked, latestVersion, stateFromStores1, undefined];
   const effect = React.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -310,7 +316,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -318,13 +324,13 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -340,8 +346,8 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
   const items5 = [tmp4, groupName, stateFromStores, latestVersion];
   items4[1] = React.useCallback((arg0, arg1) => {
     if (null != closure_3) {
-      COLLECTIBLES_SHOP_ENTRY_MARKETING(groupName[11]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null, version: null };
+      let obj = COLLECTIBLES_SHOP_ENTRY_MARKETING(groupName[11]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null, version: null };
       obj[0] = arg0;
       obj[1] = stateFromStores;
       obj[2] = groupName;
@@ -355,7 +361,7 @@ export const useGetVersionedDismissibleContent = function useGetVersionedDismiss
 export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurringDismissibleContent(prop, closure_12, groupName) {
   let _require = prop;
   const items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
       const userContent = newSnowflakeId.settings.userContent;
@@ -374,9 +380,9 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     return tmp2;
   });
   ({ lastDismissedAtMs, numTimesDismissed } = stateFromStores);
-  let obj = initialize;
+  let obj = _initialize;
   const items1 = [anyOverlayRenderingLocked];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   dependencyMap = null;
   let tmp5 = null;
   if (null != prop) {
@@ -390,7 +396,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   }
   _require = tmp5;
   dependencyMap = groupName;
-  const obj2 = initialize;
+  const obj2 = _initialize;
   tmpResult = tmp(7368);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp11 = ref((currentlyShown) => {
@@ -401,12 +407,12 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
     }
     return hasItem;
   });
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores2 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = initialize;
+  const tmpResult1 = _initialize;
   const items2 = [stateFromStores2];
-  const stateFromStores3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores3 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -418,14 +424,14 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   const items3 = [tmp5, groupName, stateFromStores3, anyOverlayRenderingLocked, undefined, stateFromStores2, undefined];
   const effect = React.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -442,7 +448,7 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -450,13 +456,13 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -472,8 +478,8 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   const items5 = [tmp5, groupName, stateFromStores1];
   items4[1] = React.useCallback((arg0, arg1) => {
     if (null != groupName) {
-      prop(groupName[11]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = prop(groupName[11]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = prop;
       obj[2] = stateFromStores1;
@@ -484,9 +490,11 @@ export const useGetTimeRecurringDismissibleContent = function useGetTimeRecurrin
   return items4;
 };
 export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName) {
-  let _require = prop;
+  let _require = newSnowflakeId;
+  let stateFromStores = groupName;
+  _require = prop;
   const items = [closure_4];
-  const lastDismissedObjectId = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const lastDismissedObjectId = _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null !== closure_0) {
       const userContent = newSnowflakeId.settings.userContent;
@@ -504,10 +512,10 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
     }
     return tmp2;
   }).lastDismissedObjectId;
-  let obj = initialize;
+  let obj = _initialize;
   const obj2 = closure_4;
   const items1 = [anyOverlayRenderingLocked];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores = _initialize.useStateFromStores(items1, () => anyOverlayRenderingLocked.getGuildId());
   dependencyMap = stateFromStores;
   let React = null;
   let tmp4 = null;
@@ -520,8 +528,8 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
         if (null == lastDismissedObjectId) {
           tmp10 = prop;
         } else {
-          stateFromStores(11);
           tmp10 = null;
+          const obj6 = stateFromStores(11);
         }
       }
       React = tmp10;
@@ -545,7 +553,7 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   _require = tmp4;
   dependencyMap = groupName;
   closure_4 = newSnowflakeId;
-  const obj3 = initialize;
+  const obj3 = _initialize;
   tmpResult = tmp(7368);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp12 = ref((currentlyShown) => {
@@ -556,12 +564,12 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
     }
     return hasItem;
   });
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = initialize;
+  const tmpResult1 = _initialize;
   const items2 = [stateFromStores1];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -573,14 +581,14 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   const items3 = [tmp4, groupName, stateFromStores2, anyOverlayRenderingLocked, undefined, stateFromStores1, newSnowflakeId];
   const effect = React.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -597,7 +605,7 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -605,13 +613,13 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -627,8 +635,8 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   const items5 = [tmp4, groupName, stateFromStores, newSnowflakeId];
   items4[1] = React.useCallback((arg0, arg1) => {
     if (null != closure_3) {
-      prop(groupName[11]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = prop(groupName[11]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = stateFromStores;
       obj[2] = groupName;
@@ -638,19 +646,19 @@ export const useGetSnowflakeBoundDismissibleContent = function useGetSnowflakeBo
   }, items5);
   return items4;
 };
-export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(closure_0, arg1, current, arg3) {
+export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGetSnowflakeBoundGuildDismissibleContent_UNSAFE(prop, arg1, current, arg3) {
   let _require = arg1;
   importDefault = current;
   dependencyMap = arg3;
   const items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => guildDismissedContentState.getGuildDismissedContentState(closure_1));
+  const stateFromStores = _initialize.useStateFromStores(items, () => guildDismissedContentState.getGuildDismissedContentState(closure_1));
   let tmp4 = null;
-  if (null != closure_0) {
+  if (null != prop) {
     let tmp5 = null;
     if (null != stateFromStores) {
       let tmp6;
       if (stateFromStores != null) {
-        tmp6 = stateFromStores[closure_0];
+        tmp6 = stateFromStores[prop];
       }
       tmp5 = tmp6;
     }
@@ -661,17 +669,17 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   }
   let React = null;
   let tmp7 = null;
-  if (null != closure_0) {
+  if (null != prop) {
     let tmpResult = tmp(4218);
-    let result = tmpResult.disableNewUserDismissibleContent(closure_0);
+    let result = tmpResult.disableNewUserDismissibleContent(prop);
     if (obj2.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       let tmp13 = null;
       if (!result) {
         if (null == lastDismissedObjectId) {
-          tmp13 = closure_0;
+          tmp13 = prop;
         } else {
-          DISCORD_EPOCHDefault;
           tmp13 = null;
+          const obj5 = DISCORD_EPOCHDefault;
         }
       }
       React = tmp13;
@@ -683,7 +691,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
         if (!result) {
           tmp11 = null;
           if (1 === obj4.compare(arg1, lastDismissedObjectId)) {
-            tmp11 = closure_0;
+            tmp11 = prop;
           }
           obj4 = DISCORD_EPOCHDefault;
         }
@@ -696,7 +704,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   importDefault = current;
   dependencyMap = arg3;
   closure_4 = arg1;
-  let obj = initialize;
+  let obj = _initialize;
   obj2 = closure_4;
   tmpResult = tmp(7368);
   const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
@@ -708,12 +716,12 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
     }
     return hasItem;
   });
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = initialize;
+  const tmpResult1 = _initialize;
   const items1 = [stateFromStores1];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -725,14 +733,14 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   const items2 = [tmp7, arg3, stateFromStores2, anyOverlayRenderingLocked, undefined, stateFromStores1, arg1];
   const effect = React.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -749,7 +757,7 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -757,13 +765,13 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -779,21 +787,22 @@ export const useGetSnowflakeBoundGuildDismissibleContent_UNSAFE = function useGe
   const items4 = [tmp7, arg3, current, arg1];
   items3[1] = React.useCallback((arg0, arg1) => {
     if (null != closure_3) {
-      callback(table[14]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = prop(table[14]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = table;
       obj[2] = closure_1;
       obj[3] = arg1;
-      const result = obj.UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(closure_3, callback, closure_1, obj);
+      const result = obj.UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(tmp, prop, closure_1, obj);
     }
   }, items4);
   return items3;
 };
 export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useGetTimeRecurringSnowflakeBoundDismissibleContent(contentType, timeRecurringConfig, newSnowflakeId, groupName) {
   let _require = newSnowflakeId;
+  let stateFromStores = groupName;
   const items = [anyOverlayRenderingLocked];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => anyOverlayRenderingLocked.getGuildId());
+  stateFromStores = _initialize.useStateFromStores(items, () => anyOverlayRenderingLocked.getGuildId());
   dependencyMap = stateFromStores;
   let React = null;
   let result = null == contentType;
@@ -809,7 +818,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
   _require = tmp6;
   dependencyMap = groupName;
   closure_4 = newSnowflakeId;
-  let obj = initialize;
+  let obj = _initialize;
   tmpResult = tmp(7368);
   anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp7 = ref((currentlyShown) => {
@@ -820,12 +829,12 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
     }
     return hasItem;
   });
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = initialize;
+  const tmpResult1 = _initialize;
   const items1 = [stateFromStores1];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -837,14 +846,14 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
   const items2 = [tmp6, groupName, stateFromStores2, anyOverlayRenderingLocked, undefined, stateFromStores1, newSnowflakeId];
   const effect = React.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -861,7 +870,7 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -869,13 +878,13 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -891,8 +900,8 @@ export const useGetTimeRecurringSnowflakeBoundDismissibleContent = function useG
   const items4 = [tmp6, groupName, stateFromStores, newSnowflakeId];
   items3[1] = React.useCallback((arg0, arg1) => {
     if (null != closure_3) {
-      contentType(groupName[11]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = contentType(groupName[11]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = stateFromStores;
       obj[2] = groupName;
@@ -912,10 +921,10 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   const newUserDismissibleContent = found1(4218).useNewUserDismissibleContent(items4);
   found1 = null;
   if (closure_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
-    const found = newUserDismissibleContent.find((item, index) => {
-      let tmp2 = null == CHANNEL_NOTICES || null == CHANNEL_NOTICES[item];
+    const found = newUserDismissibleContent.find((arg0) => {
+      let tmp2 = null == closure_2 || null == tmp[arg0];
       if (!tmp2) {
-        tmp2 = false === CHANNEL_NOTICES[item].dismissed;
+        tmp2 = false === tmp[arg0].dismissed;
       }
       return tmp2;
     });
@@ -924,10 +933,10 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   } else {
     tmp4 = null;
     if (null != stateFromStores) {
-      found1 = newUserDismissibleContent.find((item, index) => {
-        let tmp = null == CHANNEL_NOTICES[item];
+      found1 = newUserDismissibleContent.find((arg0) => {
+        let tmp = null == CHANNEL_NOTICES[arg0];
         if (!tmp) {
-          tmp = false === CHANNEL_NOTICES[item].dismissed;
+          tmp = false === CHANNEL_NOTICES[arg0].dismissed;
         }
         return tmp;
       });
@@ -965,14 +974,14 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   const items2 = [tmp4, CHANNEL_NOTICES, stateFromStores2, anyOverlayRenderingLocked, undefined, stateFromStores1, undefined];
   const effect = found1.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -989,7 +998,7 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -997,13 +1006,13 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -1019,8 +1028,8 @@ export const useGetSingleUseGuildDismissibleContent_UNSAFE = function useGetSing
   items4 = [tmp4, CHANNEL_NOTICES, current];
   items3[1] = found1.useCallback((arg0, arg1) => {
     if (null != found1) {
-      found1(CHANNEL_NOTICES[14]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = found1(CHANNEL_NOTICES[14]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = closure_1;
       obj[2] = found1;
@@ -1034,7 +1043,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
   let _require = current;
   closure_1 = GUILD_HEADER_TOOLTIPS;
   const items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getGuildDismissedContentState(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getGuildDismissedContentState(closure_0));
   let tmp4 = null;
   if (null != prop) {
     let tmp5 = null;
@@ -1069,7 +1078,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
   _require = tmp7;
   closure_1 = current;
   dependencyMap = GUILD_HEADER_TOOLTIPS;
-  let obj = initialize;
+  let obj = _initialize;
   tmpResult = tmp(7368);
   const anyOverlayRenderingLocked = tmpResult.useAnyOverlayRenderingLocked();
   const tmp16 = ref((currentlyShown) => {
@@ -1080,12 +1089,12 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
     }
     return hasItem;
   });
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores([], () => {
+  const stateFromStores1 = _initialize.useStateFromStores([], () => {
 
   });
-  const tmpResult1 = initialize;
+  const tmpResult1 = _initialize;
   const items1 = [stateFromStores1];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items1, () => {
     let hasUserHitDCCapResult = null != closure_0;
     if (hasUserHitDCCapResult) {
       hasUserHitDCCapResult = stateFromStores1.hasUserHitDCCap(tmp, closure_1);
@@ -1097,14 +1106,14 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
   const items2 = [tmp7, GUILD_HEADER_TOOLTIPS, stateFromStores2, anyOverlayRenderingLocked, undefined, stateFromStores1, undefined];
   const effect = React.useEffect(() => {
     if (null != prop) {
-      if (!closure_1_4.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
+      if (!closure_1_4.hasLoaded(closure_1_10.PRELOADED_USER_SETTINGS)) {
         current = ref.current;
         let tmp6 = GUILD_HEADER_TOOLTIPS;
         let tmp7 = closure_3;
         let tmp8 = closure_4;
-        current(GUILD_HEADER_TOOLTIPS[7]);
-        let obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
-        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[prop];
+        let obj = current(GUILD_HEADER_TOOLTIPS[7]);
+        obj = { content_type: null, group_name: null, latest_version: null, guild_id: null, snowflake_id: null };
+        obj[0] = prop(GUILD_HEADER_TOOLTIPS[8]).DismissibleContent[tmp];
         if (GUILD_HEADER_TOOLTIPS == null) {
           tmp6 = null;
         }
@@ -1121,7 +1130,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
           tmp8 = null;
         }
         obj[4] = tmp8;
-        obj.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
+        obj.track(closure_1_9.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj);
       }
       const obj3 = prop(GUILD_HEADER_TOOLTIPS[11]);
       obj = { groupName: null, guildId: null, version: null, snowflakeId: null };
@@ -1129,13 +1138,13 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
       obj[1] = ref.current;
       obj[2] = closure_3;
       obj[3] = closure_4;
-      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(prop, obj, anyOverlayRenderingLocked, stateFromStores1);
+      const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(tmp, obj, anyOverlayRenderingLocked, stateFromStores1);
       return () => {
         if (null != closure_0) {
           const obj = { content: null, groupName: null };
           obj[0] = tmp;
           obj[1] = closure_2;
-          closure_1_8(obj, !stateFromStores1.hasUserHitDCCap());
+          closure_1_8(obj, !closure_1_6.hasUserHitDCCap());
         }
       };
     }
@@ -1151,8 +1160,8 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
   const items4 = [tmp7, GUILD_HEADER_TOOLTIPS, current];
   items3[1] = React.useCallback((arg0, arg1) => {
     if (null != GUILD_HEADER_TOOLTIPS) {
-      prop(GUILD_HEADER_TOOLTIPS[14]);
-      const obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
+      let obj = prop(GUILD_HEADER_TOOLTIPS[14]);
+      obj = { dismissAction: null, groupName: null, guildId: null, forceTrack: null };
       obj[0] = arg0;
       obj[1] = closure_1;
       obj[2] = prop;
@@ -1164,7 +1173,7 @@ export const useGetTimeRecurringGuildDismissibleContent_UNSAFE = function useGet
 };
 export const useDangerouslyPeekDismissibleContents = function useDangerouslyPeekDismissibleContents(items1) {
   const items = [closure_4];
-  _require = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  _require = _initialize.useStateFromStores(items, () => {
     const userContent = settings.settings.userContent;
     let dismissedContents;
     if (userContent != null) {
@@ -1172,11 +1181,11 @@ export const useDangerouslyPeekDismissibleContents = function useDangerouslyPeek
     }
     return dismissedContents;
   });
-  return items1.filter((item, index) => {
+  return items1.filter((closure_0) => {
     let tmp2 = null != callback;
     if (tmp2) {
-      tmp2 = !callback(dependencyMap[13]).hasBit(tmp, item);
-      const obj = callback(dependencyMap[13]);
+      tmp2 = !callback(closure_1_2[13]).hasBit(tmp, closure_0);
+      const obj = callback(closure_1_2[13]);
     }
     return tmp2;
   });

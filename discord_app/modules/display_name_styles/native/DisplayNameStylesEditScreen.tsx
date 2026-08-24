@@ -1,16 +1,16 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_8 from "../../a11y/AccessibilityStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_11 } from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function ApplyButton(onPress) {
   onPress = onPress.onPress;
   const visible = onPress.visible;
@@ -47,21 +47,21 @@ function ApplyButton(onPress) {
     const obj = { position: "absolute", bottom: 0, left: 0, right: 0, marginHorizontal: visible(stateFromStores[10]).space.PX_16, flexDirection: "column", justifyContent: "flex-end", transform: null, opacity: null };
     let withSpringResult = num2;
     if (!stateFromStores) {
-      withSpringResult = onPress(stateFromStores[54]).withSpring(num2, closure_1_11);
-      const obj2 = onPress(stateFromStores[54]);
+      withSpringResult = onPress(tmp2[54]).withSpring(num2, closure_1_11);
+      const obj2 = onPress(tmp2[54]);
     }
     items = [{ translateY: withSpringResult }, ];
     let withSpringResult1 = num3;
     if (!stateFromStores) {
-      withSpringResult1 = onPress(stateFromStores[54]).withSpring(num3, closure_1_11);
-      const obj3 = onPress(stateFromStores[54]);
+      withSpringResult1 = onPress(tmp2[54]).withSpring(num3, closure_1_11);
+      const obj3 = onPress(tmp2[54]);
     }
     items[1] = { scale: withSpringResult1 };
     obj[7] = items;
     let withSpringResult2 = num;
     if (!stateFromStores) {
-      withSpringResult2 = onPress(stateFromStores[54]).withSpring(num, closure_1_11);
-      const obj4 = onPress(stateFromStores[54]);
+      withSpringResult2 = onPress(tmp2[54]).withSpring(num, closure_1_11);
+      const obj4 = onPress(tmp2[54]);
     }
     obj[8] = withSpringResult2;
     return obj;
@@ -88,24 +88,33 @@ function ApplyButton(onPress) {
 ({ View: c5, ScrollView: closure_6, Pressable: error } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [require("DisplayNameEffect").DisplayNameEffect.GRADIENT, require("DisplayNameEffect").DisplayNameEffect.GUMMY, require("DisplayNameEffect").DisplayNameEffect.PRISM];
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
+let obj1 = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md };
 createCacheKey[3] = { padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+let obj3 = { padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[4] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj4 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[5] = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
+let obj5 = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
 createCacheKey[6] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, flexShrink: 0 };
+let obj6 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, flexShrink: 0 };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[8] = { marginVertical: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_MUTED, gap: ThemesDefault.space.PX_16 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
 let closure_16 = { code: "function DisplayNameStylesEditScreenTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}" };
 let closure_17 = { code: "function DisplayNameStylesEditScreenTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };
-let result = require("obj132").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx");
+let obj8 = { marginVertical: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_MUTED, gap: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx");
 
 export default function DisplayNameStylesEditScreen() {
   let tmp = callback2();
-  let tmp3 = isTryItOut;
+  const tmp3 = isTryItOut;
   let obj = navigation(isTryItOut[11]);
   const route = obj.useRoute();
   obj1 = navigation(isTryItOut[11]);
@@ -180,11 +189,12 @@ export default function DisplayNameStylesEditScreen() {
     }
     tmp16Result = tmp16(tmp25(first2), 2);
     const first3 = tmp16Result[0];
-    const tmp16Result1 = tmp16(obj7.useState(() => Object.fromEntries(first3.map((item, index) => {
-      items = [item, ];
+    callback2 = tmp16Result[1];
+    const tmp16Result1 = tmp16(obj7.useState(() => Object.fromEntries(first3.map((arg0) => {
+      items = [arg0, ];
       let tmp = length;
       if (length.length <= 0) {
-        tmp = table[item];
+        tmp = table[arg0];
       }
       items[1] = tmp;
       return items;
@@ -218,26 +228,28 @@ export default function DisplayNameStylesEditScreen() {
     const memo1 = obj7.useMemo(() => {
       let fontId;
       if (closure_5 != null) {
-        fontId = closure_5.fontId;
+        fontId = tmp2.fontId;
       }
       let tmp4 = first !== fontId;
       if (!tmp4) {
         let effectId;
-        if (closure_5 != null) {
-          effectId = closure_5.effectId;
+        if (tmp2 != null) {
+          effectId = tmp2.effectId;
         }
         tmp4 = first1 !== effectId;
+        const tmp5 = first1;
       }
       if (!tmp4) {
         colors = undefined;
-        if (closure_5 != null) {
-          colors = closure_5.colors;
+        if (tmp2 != null) {
+          colors = tmp2.colors;
         }
         if (colors == null) {
           colors = [];
         }
         tmp4 = !navigation(isTryItOut[22]).areArraysShallowEqual(memo, colors);
         const obj = navigation(isTryItOut[22]);
+        const tmp9 = memo;
       }
       return tmp4;
     }, items2);
@@ -273,29 +285,28 @@ export default function DisplayNameStylesEditScreen() {
       callback(randomDisplayNameStyles.fontId);
       currentUser(effectId);
       const obj = navigation(isTryItOut[18]);
+      const tmp = isTryItOut;
       if (obj2.getEffectColorCount(effectId) > 1) {
         callback(effectId, colors);
       } else {
         callback2(colors[0]);
       }
       obj2 = navigation(isTryItOut[18]);
-      guildId(isTryItOut[27]).track(constants.DISPLAY_NAME_STYLES_SURPRISE_ME);
-      const obj3 = guildId(isTryItOut[27]);
+      guildId(tmp[27]).track(constants.DISPLAY_NAME_STYLES_SURPRISE_ME);
     }, items3);
     const items5 = [guildId, navigation];
     callback2 = obj7.useCallback(() => {
       const result = navigation(isTryItOut[28]).triggerHapticFeedback(navigation(isTryItOut[28]).HapticFeedbackTypes.IMPACT_MEDIUM);
       if (isTryItOut) {
-        let tmpResult = navigation(isTryItOut[29]);
+        let tmpResult = tmp(tmp2[29]);
         const result1 = tmpResult.setTryItOutDisplayNameStyles(null);
       } else {
-        tmpResult = navigation(isTryItOut[30]);
+        tmpResult = tmp(tmp2[30]);
         tmpResult.setPendingChanges({ displayNameStyles: null });
       }
       const obj = navigation(isTryItOut[28]);
       guildId(isTryItOut[27]).track(constants.DISPLAY_NAME_STYLES_REMOVED);
       navigation.goBack();
-      const obj4 = guildId(isTryItOut[27]);
     }, items4);
     const items6 = [first, displayNameStylesPendingName, showFontsBadge, dismissFontsBadge];
     const callback3 = obj7.useCallback(() => {
@@ -311,8 +322,8 @@ export default function DisplayNameStylesEditScreen() {
       if (showFontsBadge) {
         dismissFontsBadge();
       }
-      guildId(isTryItOut[31]);
-      const obj = { selectedFontId: first, onSelectFont: closure_7, displayName: displayNameStylesPendingName };
+      let obj = guildId(isTryItOut[31]);
+      obj = { selectedFontId: first, onSelectFont: closure_7, displayName: displayNameStylesPendingName };
       obj.openLazy(navigation(isTryItOut[33])(isTryItOut[32], isTryItOut.paths), "DisplayNameStylesFontPickerSheet", obj);
     }, items6);
     if (stateFromStores != null) {
@@ -333,36 +344,35 @@ export default function DisplayNameStylesEditScreen() {
       }
       obj = { userId: id, selectedEffectId: first1, onSelectEffect: closure_9 };
       obj.openLazy(navigation(isTryItOut[33])(isTryItOut[34], isTryItOut.paths), "DisplayNameStylesEffectPickerSheet", obj);
-      const tmp3 = navigation(isTryItOut[33])(isTryItOut[34], isTryItOut.paths);
     }, items7);
     const callback6 = obj7.useCallback(() => {
       if (first1 === navigation(isTryItOut[8]).DisplayNameEffect.GUMMY) {
         let obj = { selectedColors: null, onSelectColors: null };
         obj[0] = memo;
         obj[1] = function onSelectColors(arg0) {
-          return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
+          return callback(closure_1_0(closure_1_2[8]).DisplayNameEffect.GUMMY, arg0);
         };
-        guildId(isTryItOut[31]).openLazy(navigation(isTryItOut[33])(isTryItOut[35], isTryItOut.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
-        const obj3 = guildId(isTryItOut[31]);
+        guildId(tmp3[31]).openLazy(tmp2(tmp3[33])(tmp3[35], tmp3.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
+        const obj3 = guildId(tmp3[31]);
       } else {
-        const openLazy = guildId(isTryItOut[31]).openLazy;
-        const tmp2Result = navigation(isTryItOut[33]);
+        const openLazy = guildId(tmp3[31]).openLazy;
+        const tmp2Result = tmp2(tmp3[33]);
         if (closure_10) {
           obj = { selectedColors: null, selectedEffectId: null, onSelectColors: null };
           obj[0] = memo;
-          obj[1] = first1;
+          obj[1] = tmp;
           obj[2] = function onSelectColors(arg0) {
             return callback(closure_8, arg0);
           };
-          openLazy(tmp2Result(isTryItOut[36], isTryItOut.paths), "DisplayNameStylesGradientPickerSheet", obj);
+          openLazy(tmp2Result(tmp3[36], tmp3.paths), "DisplayNameStylesGradientPickerSheet", obj);
         } else {
           obj = { selectedColor: null, selectedEffectId: null, onSelectColor: null };
           obj[0] = first3;
-          obj[1] = first1;
+          obj[1] = tmp;
           obj[2] = closure_15;
-          openLazy(tmp2Result(isTryItOut[37], isTryItOut.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(tmp3[37], tmp3.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
-        const tmp14 = guildId(isTryItOut[31]);
+        const tmp14 = guildId(tmp3[31]);
       }
     }, items8);
     const intl = tmp2(tmp3[38]).intl;
@@ -375,7 +385,7 @@ export default function DisplayNameStylesEditScreen() {
       obj2[0] = { overrideSettings: true };
       let obj3 = { style: null, children: null };
       obj3[0] = tmp.container;
-      let obj4 = {};
+      const obj4 = {};
       let merged = Object.assign(tmp.contentContainer);
       let num = 0;
       if (memo1) {
@@ -488,7 +498,7 @@ export default function DisplayNameStylesEditScreen() {
       }
       const obj21 = { variant: null, color: "text-subtle", lineClamp: 1, children: null };
       obj21[0] = str13;
-      const mapped = memo.map((item, index) => navigation(isTryItOut[47]).int2hex(item));
+      const mapped = memo.map((color) => navigation(isTryItOut[47]).int2hex(color));
       obj21[3] = mapped.join(", ");
       items19[1] = closure_12(tmp2(tmp3[44]).Text, obj21);
       obj19[1] = items19;
@@ -526,6 +536,7 @@ export default function DisplayNameStylesEditScreen() {
       let tmp47Result1 = null != guildId;
       if (tmp47Result1) {
         tmp47Result1 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
+        const tmp70 = null != guildDisplayNameStyles || null != pendingDisplayNameStyles;
       }
       if (tmp47Result1) {
         const obj27 = { text: null, onPress: null, variant: "tertiary", size: "lg", grow: true, icon: null, iconPosition: "start" };
@@ -548,6 +559,7 @@ export default function DisplayNameStylesEditScreen() {
       obj2[1] = colors(closure_5, obj3);
       obj1[1] = closure_12(tmp2(tmp3[41]).DisplayNameStylesContext.Provider, obj2);
       tmp47Result2 = tmp47(tmp2(tmp3[40]).ThemeContextProvider, obj1);
+      const tmp50 = first;
     }
     return tmp47Result2;
   }

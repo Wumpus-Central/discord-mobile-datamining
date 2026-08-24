@@ -1,14 +1,15 @@
 // discord_app/design/components/Styles/native/createStyles.tsx
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set2 from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSemanticColorContextFromThemeContext from "../../../tokens/native/SemanticColorContext.native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { processColor } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../../modules/a11y/AccessibilityStore.tsx";
-import isSyncedModeThemesEnabled from "../../../../modules/client_themes/ClientThemesBackgroundStore.tsx";
+import closure_5 from "../../../../modules/a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../modules/client_themes/ClientThemesBackgroundStore.tsx";
+import set from "../../../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function createCacheKey(context) {
   const items = [...arguments];
   return items.join("");
@@ -17,13 +18,16 @@ function parseThemedStyles(obj, enabledExperiments) {
   ({ theme, saturation, contrast } = enabledExperiments);
   obj = {};
   for (const key10022 in arg0) {
+    let tmp20 = key10022;
     let obj6 = arg0[key10022];
     let hasOwnPropertyResult;
     if (obj6 != null) {
+      let tmp2 = closure_8;
       hasOwnPropertyResult = obj6.hasOwnProperty(closure_8);
     }
     let obj2 = obj6;
     if (hasOwnPropertyResult) {
+      let tmp4 = closure_8;
       obj2 = obj6[closure_8](arg1);
     }
     let hasOwnPropertyResult1;
@@ -33,7 +37,9 @@ function parseThemedStyles(obj, enabledExperiments) {
     if (hasOwnPropertyResult1) {
       obj = { theme: null, isAndroid: null, enabledExperiments: null, density: null };
       obj[0] = theme;
-      let obj5 = obj132;
+      let tmp18 = require;
+      let tmp19 = dependencyMap;
+      let obj5 = set2;
       obj[1] = obj5.isAndroid();
       enabledExperiments = arg1.enabledExperiments;
       if (enabledExperiments == null) {
@@ -48,11 +54,14 @@ function parseThemedStyles(obj, enabledExperiments) {
       obj[key10022] = obj2.resolve(obj);
       continue;
     } else {
+      let tmp6 = importDefault;
+      let tmp7 = dependencyMap;
       let internal = ThemesDefault.internal;
       if (internal.isSemanticColor(obj2)) {
+        let tmp16 = require;
         let obj3 = getSemanticColorContextFromThemeContext;
         let semanticColorContextFromThemeContext = obj3.getSemanticColorContextFromThemeContext(arg1);
-        let internal4 = ThemesDefault.internal;
+        let internal4 = tmp6(712).internal;
         obj[key10022] = internal4.resolveSemanticColor(theme, obj2, semanticColorContextFromThemeContext);
         continue;
       } else {
@@ -75,12 +84,17 @@ function parseThemedStyles(obj, enabledExperiments) {
               }
               let result = obj2;
               if (tmp) {
-                let internal2 = ThemesDefault.internal;
+                let internal2 = tmp6(712).internal;
                 result = internal2.adjustColorSaturation(obj2, saturation, str);
               }
               let adjustColorContrastResult = result;
               if (1 !== contrast) {
-                let internal3 = ThemesDefault.internal;
+                let internal3 = tmp6(712).internal;
+                let tmp11 = internal3;
+                let tmp12 = result;
+                let tmp13 = contrast;
+                let tmp14 = str;
+                let tmp15 = theme;
                 adjustColorContrastResult = internal3.adjustColorContrast(result, contrast, str, theme);
               }
               tmp8 = adjustColorContrastResult;
@@ -98,11 +112,11 @@ function parseThemedStyles(obj, enabledExperiments) {
   }
   return obj;
 }
-new Set(["backgroundColor", "borderBottomColor", "borderColor", "borderEndColor", "borderLeftColor", "borderRightColor", "borderStartColor", "borderTopColor", "color", "outlineColor", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "elevation", "textDecorationColor", "textShadowColor", "tintColor"]);
+let set = new Set(["backgroundColor", "borderBottomColor", "borderColor", "borderEndColor", "borderLeftColor", "borderRightColor", "borderStartColor", "borderTopColor", "color", "outlineColor", "shadowColor", "shadowOffset", "shadowOpacity", "shadowRadius", "elevation", "textDecorationColor", "textShadowColor", "tintColor"]);
 let closure_8 = Symbol.for("dynamicToken");
 let closure_10 = ["light", "darker", "midnight"];
 let closure_11 = { code: "function createStylesTsx1(){const{resolvedStyles,withTiming,interpolateColor,themeIndex,stops,timingStandard}=this.__closure;const result={};for(const propertyName in resolvedStyles){const value=resolvedStyles[propertyName];if(Array.isArray(value)){result[propertyName]=withTiming(interpolateColor(themeIndex.get(),stops,value),timingStandard);}else{result[propertyName]=value;}}return result;}" };
-let result = require("obj132").fileFinishedImporting("design/components/Styles/native/createStyles.tsx");
+let result = set.fileFinishedImporting("design/components/Styles/native/createStyles.tsx");
 
 export const experimental_createToken = function experimental_createToken(arg0) {
   closure_0 = arg0;
@@ -114,8 +128,10 @@ export const createStyles = function createStyles(createCacheKey) {
   closure_2 = typeof createCacheKey === "function";
   return () => {
     let items = [...arguments];
-    let obj = createCacheKey(table[4]);
-    const themeContext = obj.useThemeContext();
+    let themeContext;
+    let obj;
+    obj = createCacheKey(table[4]);
+    themeContext = obj.useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp2 = closure_1_7();
@@ -134,10 +150,10 @@ export const createStyles = function createStyles(createCacheKey) {
       }
       const _Object = Object;
       const _Object2 = Object;
-      Object.defineProperties(obj, Object.fromEntries(keys.map((item, index) => {
-        closure_0 = item;
+      Object.defineProperties(obj, Object.fromEntries(keys.map((arg0) => {
+        closure_0 = arg0;
         items = [
-          item,
+          arg0,
           {
             configurable: true,
             enumerable: true,
@@ -149,7 +165,7 @@ export const createStyles = function createStyles(createCacheKey) {
               } else {
                 applyResult = tmp2;
               }
-              const tmpResult = parseThemedStyles(applyResult[closure_0], themeContext);
+              const tmpResult = closure_3_9(applyResult[closure_0], closure_1_1);
               Object.defineProperty(closure_1_2, closure_0, { value: tmpResult, enumerable: true });
               return tmpResult;
             }
@@ -168,7 +184,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
   const map = new Map();
   return (key) => {
     createCacheKey = key;
-    const FALLBACK_THEME_CONTEXT_VALUE = createCacheKey(dependencyMap[4]).FALLBACK_THEME_CONTEXT_VALUE;
+    const FALLBACK_THEME_CONTEXT_VALUE = createCacheKey(closure_1_2[4]).FALLBACK_THEME_CONTEXT_VALUE;
     const value = obj.get(key.key);
     if (null != value) {
       return value;
@@ -178,16 +194,16 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
       const keys = Object.keys(createCacheKey);
       const _Object2 = Object;
       const _Object3 = Object;
-      Object.defineProperties(obj, Object.fromEntries(keys.map((item, index) => {
-        closure_0 = item;
+      Object.defineProperties(obj, Object.fromEntries(keys.map((arg0) => {
+        closure_0 = arg0;
         const items = [
-          item,
+          arg0,
           {
             configurable: true,
             enumerable: true,
             get() {
-              const tmp = parseThemedStyles(item[item], item);
-              Object.defineProperty(obj, item, { value: tmp, enumerable: true });
+              const tmp = closure_3_9(table[table], table);
+              Object.defineProperty(closure_1_1, table, { value: tmp, enumerable: true });
               return tmp;
             }
           }
@@ -200,14 +216,14 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
   };
 };
 export const useLegacyClassComponentStyles = function useLegacyClassComponentStyles(closure_17) {
-  return callback(ManaContext.useThemeContext());
+  return closure_17(ManaContext.useThemeContext());
 };
 export const createStyleProperties = function createStyleProperties(createCacheKey) {
   closure_0 = createCacheKey;
   const map = new Map();
   return () => {
     const items = [...arguments];
-    const themeContext = createCacheKey(dependencyMap[4]).useThemeContext();
+    const themeContext = createCacheKey(closure_1_2[4]).useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp2 = closure_1_7();
@@ -221,11 +237,12 @@ export const createStyleProperties = function createStyleProperties(createCacheK
         HermesBuiltin.arraySpread(items, 0);
         applyResult = HermesBuiltin.apply(items2, undefined);
       }
-      const tmp4Result = parseThemedStyles(applyResult, themeContext);
-      const result = map.set(tmp2, tmp4Result);
+      const tmp4Result = closure_1_9(applyResult, themeContext);
+      const result = obj2.set(tmp2, tmp4Result);
       return tmp4Result;
     }
-    const obj = createCacheKey(dependencyMap[4]);
+    const obj = createCacheKey(closure_1_2[4]);
+    obj2 = map;
   };
 };
 export const processColorOrThrow = function processColorOrThrow(arg0) {
@@ -244,7 +261,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
   const map = new Map();
   return (theme) => {
     const substr = [...arguments].slice();
-    let obj = createCacheKey(dependencyMap[11]);
+    let obj = createCacheKey(closure_1_2[11]);
     let customBackgroundGradient = obj.getCustomBackgroundGradient();
     if (customBackgroundGradient == null) {
       customBackgroundGradient = closure_1_6.gradientPreset;
@@ -254,7 +271,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
     }
     if (null == customBackgroundGradient) {
       const items = [];
-      let tmp2Result = createCacheKey(dependencyMap[12]);
+      let tmp2Result = tmp2(tmp3[12]);
       if (tmp2Result.isMobileVisualRefreshEnabled("createFakeThemedContext")) {
         items.push("mobile-visual-refresh");
       }
@@ -263,7 +280,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
         tmp8 = items;
       }
       obj = {};
-      const merged = Object.assign(createCacheKey(dependencyMap[4]).FALLBACK_THEME_CONTEXT_VALUE);
+      const merged = Object.assign(tmp2(tmp3[4]).FALLBACK_THEME_CONTEXT_VALUE);
       obj.flags = 0;
       obj.saturation = closure_1_5.saturation;
       obj.theme = theme;
@@ -288,14 +305,21 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
           arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
           applyResult1 = HermesBuiltin.apply(items2, undefined);
         }
-        const tmp34Result = parseThemedStyles(applyResult1, obj);
+        const tmp34Result = closure_1_9(applyResult1, obj);
         for (const key10073 in tmp34Result) {
+          let tmp41 = key10073;
           let tmp42 = tmp34Result[key10073];
-          let tmp44 = processColor(tmp42);
+          let tmp43 = closure_1_4;
+          let tmp44 = closure_1_4(tmp42);
           if (null == tmp44) {
             let _Error = Error;
             let _HermesInternal = HermesInternal;
+            let str4 = "\"";
+            let str5 = "Unable to parse color: \"";
+            let tmp28 = new.target;
+            let tmp29 = new.target;
             error = new Error("Unable to parse color: \"" + tmp42 + "\"");
+            let tmp31 = error;
             throw error;
           } else {
             tmp34Result[key10073] = tmp44;
@@ -306,11 +330,11 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
         return tmp34Result;
       }
     } else {
-      tmp2Result = createCacheKey(dependencyMap[4]);
+      tmp2Result = tmp2(tmp3[4]);
       if ("light" === customBackgroundGradient.theme) {
-        let MOBILE_DARK_GRADIENT_THEME_ENABLED = createCacheKey(dependencyMap[4]).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
+        let MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(tmp3[4]).ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED;
       } else {
-        MOBILE_DARK_GRADIENT_THEME_ENABLED = createCacheKey(dependencyMap[4]).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
+        MOBILE_DARK_GRADIENT_THEME_ENABLED = tmp2(tmp3[4]).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED;
       }
       tmp2Result.setThemeFlag(0, MOBILE_DARK_GRADIENT_THEME_ENABLED);
     }
@@ -322,10 +346,14 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
     arr = closure_10;
   }
   closure_3 = undefined;
+  let map;
   items = [];
   let obj = {};
   for (const key10007 in arg0) {
+    let tmp3 = key10007;
     let tmp4 = arg0[key10007];
+    let tmp5 = items;
+    let tmp6 = obj;
     let internal = items(obj[6]).internal;
     if (internal.isSemanticColor(tmp4)) {
       let items1 = [key10007, tmp4];
@@ -337,8 +365,8 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
     }
     continue;
   }
-  closure_3 = arr.map((item, index) => index);
-  new Map();
+  closure_3 = arr.map((arg0, arg1) => arg1);
+  map = new Map();
   return (themeIndex) => {
     let callback;
     closure_0 = themeIndex;
@@ -403,13 +431,14 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       }
       function _loop(arg0) {
         themeIndex = arg0;
-        closure_1[closure_3] = themeIndex.map((item, index) => {
+        closure_1[closure_3] = themeIndex.map((theme) => {
           const internal = items(obj[6]).internal;
-          return internal.resolveSemanticColor(item, closure_0, closure_1_2);
+          return internal.resolveSemanticColor(theme, closure_0, closure_1_2);
         });
       }
       const tmp9 = items[Symbol.iterator]();
       while (tmp9 !== undefined) {
+        let tmp13 = callback;
         let tmp14 = callback(tmp11, 2);
         callback = tmp14[0];
         let _loopResult = _loop(tmp14[1]);
@@ -417,6 +446,7 @@ export const createAnimatedThemedStyles = function createAnimatedThemedStyles(cr
       }
       const result = obj.set(themeContext.key, obj);
       tmp3 = obj;
+      let tmp7 = items;
     }
     obj = tmp3;
     class S {

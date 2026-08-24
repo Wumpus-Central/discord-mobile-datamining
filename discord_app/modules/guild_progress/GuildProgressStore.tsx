@@ -2,9 +2,9 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
 import { Steps } from "GuildProgressConstants.tsx";
 
 function completeStep(guild_id, CHANNEL) {
@@ -33,7 +33,7 @@ prototype["initialize"] = function initialize(arg0) {
   closure_6 = {};
   if (null != arg0) {
     const keys = DISCORD_EPOCHDefault.keys(arg0);
-    const item = keys.forEach((item, index) => {
+    const item = keys.forEach((arg0) => {
       let tmp2 = null != tmp;
       if (tmp2) {
         const _Symbol = Symbol;
@@ -42,9 +42,10 @@ prototype["initialize"] = function initialize(arg0) {
       if (tmp2) {
         const _Set = Set;
         const set = new Set(tmp);
-        closure_6[item] = set;
+        closure_6[arg0] = set;
       }
     });
+    const obj = DISCORD_EPOCHDefault;
   }
 };
 prototype["getProgress"] = function getProgress(arg0) {
@@ -66,13 +67,12 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const items = [];
     const keys = items(11).keys(closure_6);
-    const item = keys.forEach((item, index) => {
-      if (obj.has(Steps.COMPLETED)) {
-        items.push(item);
+    const item = keys.forEach((arg0) => {
+      if (obj.has(closure_1_5.COMPLETED)) {
+        items.push(arg0);
       }
-      obj = closure_1_6[item];
     });
-    const item1 = items.forEach((item, index) => {
+    const item1 = items.forEach((arg0) => {
       const DISMISSED = constants.DISMISSED;
       let tmp = null != obj;
       if (tmp) {
@@ -81,7 +81,7 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
         if (!hasItem) {
           const _Set = Set;
           const set = new Set(obj.add(DISMISSED));
-          table[item] = set;
+          table[arg0] = set;
           flag = true;
         }
         tmp = flag;
@@ -98,8 +98,8 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
     }
     if (!obj.has(Steps.COMPLETED)) {
       dependencyMap[guildId].delete(Steps.DISMISSED);
+      const obj2 = dependencyMap[guildId];
     }
-    obj = dependencyMap[guildId];
   },
   GUILD_PROGRESS_COMPLETED_SEEN: function handleCompletedSeen(guildId) {
     guildId = guildId.guildId;
@@ -141,9 +141,11 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
       if (tmp3) {
         if (null != guild.icon) {
           dependencyMap[guild.id].add(Steps.AVATAR);
+          const obj = dependencyMap[guild.id];
         }
         if (guild.member_count > 1) {
           dependencyMap[guild.id].add(Steps.INVITE);
+          const obj2 = dependencyMap[guild.id];
         }
       }
     }
@@ -181,12 +183,18 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
       let tmp2 = nextResult;
       let tmp3 = null != nextResult;
       if (tmp3) {
+        let tmp4 = nextResult;
         tmp3 = null != tmp2.guild_id;
       }
       if (tmp3) {
+        let tmp5 = dependencyMap;
+        let tmp6 = nextResult;
         tmp3 = null != dependencyMap[tmp2.guild_id];
       }
       if (tmp3) {
+        let tmp7 = completeStep;
+        let tmp8 = nextResult;
+        let tmp9 = Steps;
         tmp3 = false !== completeStep(tmp2.guild_id, Steps.CHANNEL);
       }
       if (tmp3) {
@@ -283,6 +291,6 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
     return tmp2;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_progress/GuildProgressStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_progress/GuildProgressStore.tsx");
 
 export default guildProgressStore;

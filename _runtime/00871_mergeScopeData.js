@@ -12,9 +12,13 @@ function mergeScopeData(extra) {
   let obj = merge;
   extra.extra = obj.merge(extra.extra, extra, 1);
   extra.tags = merge.merge(extra.tags, tags, 1);
+  const obj2 = merge;
   extra.attributes = merge.merge(extra.attributes, attributes, 1);
+  const obj3 = merge;
   extra.user = merge.merge(extra.user, user, 1);
+  const obj4 = merge;
   extra.contexts = merge.merge(extra.contexts, contexts, 1);
+  const obj5 = merge;
   extra.sdkProcessingMetadata = merge.merge(extra.sdkProcessingMetadata, sdkProcessingMetadata, 2);
   if (level) {
     extra.level = level;
@@ -93,10 +97,13 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     const merged8 = Object.assign(extra.contexts);
     extra.contexts = obj2;
     const obj3 = { dynamicSamplingContext: null };
+    const obj6 = spanToJSON;
     obj3[0] = getDynamicSamplingContextFromSpan.getDynamicSamplingContextFromSpan(span);
     const merged9 = Object.assign(extra.sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj3;
+    const obj8 = getDynamicSamplingContextFromSpan;
     const rootSpan = spanToJSON.getRootSpan(span);
+    const obj9 = spanToJSON;
     const description = spanToJSON.spanToJSON(rootSpan).description;
     let tmp31 = description;
     if (description) {
@@ -108,6 +115,7 @@ arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {
     if (tmp31) {
       extra.transaction = description;
     }
+    const obj10 = spanToJSON;
   }
   if (extra.fingerprint) {
     const _Array = Array;

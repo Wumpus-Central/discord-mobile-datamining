@@ -231,8 +231,8 @@ function hwbToRgb(arg0, arg1, arg2) {
 hwbToRgb.__closure = { hue2rgb };
 hwbToRgb.__workletHash = 16684751503669;
 hwbToRgb.__initData = { code: "function hwbToRgb_Pnpm_ColorsTs3(h,w,b){const{hue2rgb}=this.__closure;if(w+b>=1){const gray=Math.round(w*255/(w+b));return gray<<24|gray<<16|gray<<8;}const red=hue2rgb(0,1,h+1/3)*(1-w-b)+w;const green=hue2rgb(0,1,h)*(1-w-b)+w;const blue=hue2rgb(0,1,h-1/3)*(1-w-b)+w;return Math.round(red*255)<<24|Math.round(green*255)<<16|Math.round(blue*255)<<8;}" };
-function parse255(match) {
-  const parsed = Number.parseInt(match, 10);
+function parse255(joined) {
+  const parsed = Number.parseInt(joined, 10);
   let num = 0;
   if (parsed >= 0) {
     let num2 = 255;
@@ -319,173 +319,208 @@ function normalizeColor(num) {
       if (match) {
         const _Number27 = Number;
         match = Number.parseInt(`${tmp73[1]}ff`, 16);
+        let tmp6 = match >>> 0;
       } else if (undefined !== shareable[num]) {
+        tmp6 = shareable[num];
       } else {
-        const rgb = obj.rgb;
+        const rgb = tmp77.rgb;
         const match1 = rgb.exec(num);
         if (match1) {
           if (typeof parse255 !== "function") {
-            HermesBuiltin.throwTypeError();
+            let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Number24 = Number;
           const parsed = Number.parseInt(match1[1], 10);
+          let num81 = 0;
           if (parsed >= 0) {
             let num82 = 255;
             if (parsed <= 255) {
               num82 = parsed;
             }
+            num81 = num82;
           }
           if (typeof parse255 !== "function") {
-            HermesBuiltin.throwTypeError();
+            throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Number25 = Number;
           const parsed1 = Number.parseInt(match1[2], 10);
+          let num84 = 0;
           if (parsed1 >= 0) {
             let num85 = 255;
             if (parsed1 <= 255) {
               num85 = parsed1;
             }
+            num84 = num85;
           }
           if (typeof parse255 !== "function") {
-            HermesBuiltin.throwTypeError();
+            throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Number26 = Number;
           const parsed2 = Number.parseInt(match1[3], 10);
+          let num87 = 0;
           if (parsed2 >= 0) {
             let num88 = 255;
             if (parsed2 <= 255) {
               num88 = parsed2;
             }
+            num87 = num88;
           }
+          tmp6 = (num81 << 24 | num84 << 16 | num87 << 8 | 255) >>> 0;
+          const tmp68 = num81 << 24;
+          const tmp70 = num84 << 16;
         } else {
-          const rgba = obj.rgba;
+          const rgba = tmp77.rgba;
           num = rgba.exec(num);
           if (num) {
             if (undefined !== num[6]) {
               if (typeof parse255 !== "function") {
-                HermesBuiltin.throwTypeError();
+                throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const _Number21 = Number;
               const parsed3 = Number.parseInt(num[6], 10);
+              let num67 = 0;
               if (parsed3 >= 0) {
                 let num68 = 255;
                 if (parsed3 <= 255) {
                   num68 = parsed3;
                 }
+                num67 = num68;
               }
               if (typeof parse255 !== "function") {
-                HermesBuiltin.throwTypeError();
+                throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const _Number22 = Number;
               const parsed4 = Number.parseInt(num[7], 10);
+              let num70 = 0;
               if (parsed4 >= 0) {
                 let num71 = 255;
                 if (parsed4 <= 255) {
                   num71 = parsed4;
                 }
+                num70 = num71;
               }
               if (typeof parse255 !== "function") {
-                HermesBuiltin.throwTypeError();
+                throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const _Number23 = Number;
               const parsed5 = Number.parseInt(num[8], 10);
+              let num73 = 0;
               if (parsed5 >= 0) {
                 let num74 = 255;
                 if (parsed5 <= 255) {
                   num74 = parsed5;
                 }
+                num73 = num74;
               }
               if (typeof parse1 !== "function") {
-                HermesBuiltin.throwTypeError();
+                throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               num = Number;
               const parsed6 = Number.parseFloat(num[9]);
+              let num76 = 0;
               if (parsed6 >= 0) {
                 num = 255;
                 if (parsed6 <= 1) {
                   const _Math4 = Math;
                   num = Math.round(255 * parsed6);
                 }
+                num76 = num;
               }
+              let tmp53 = (num67 << 24 | num70 << 16 | num73 << 8 | num76) >>> 0;
+              const tmp57 = num67 << 24;
+              const tmp59 = num70 << 16;
+              const tmp61 = num73 << 8;
             } else {
               if (typeof parse255 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number17 = Number;
               const parsed7 = Number.parseInt(num[2], 10);
+              let num52 = 0;
               if (parsed7 >= 0) {
                 let num53 = 255;
                 if (parsed7 <= 255) {
                   num53 = parsed7;
                 }
+                num52 = num53;
               }
               if (typeof parse255 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number18 = Number;
               const parsed8 = Number.parseInt(num[3], 10);
+              let num55 = 0;
               if (parsed8 >= 0) {
                 let num56 = 255;
                 if (parsed8 <= 255) {
                   num56 = parsed8;
                 }
+                num55 = num56;
               }
               if (typeof parse255 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number19 = Number;
               const parsed9 = Number.parseInt(num[4], 10);
+              let num58 = 0;
               if (parsed9 >= 0) {
                 let num59 = 255;
                 if (parsed9 <= 255) {
                   num59 = parsed9;
                 }
+                num58 = num59;
               }
               if (typeof parse1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number20 = Number;
               const parsed10 = Number.parseFloat(num[5]);
+              let num61 = 0;
               if (parsed10 >= 0) {
                 let num64 = 255;
                 if (parsed10 <= 1) {
                   const _Math3 = Math;
                   num64 = Math.round(255 * parsed10);
                 }
+                num61 = num64;
               }
+              tmp53 = (num52 << 24 | num55 << 16 | num58 << 8 | num61) >>> 0;
+              const tmp46 = num52 << 24;
+              const tmp48 = num55 << 16;
+              const tmp50 = num58 << 8;
             }
           } else {
-            const hex3 = obj.hex3;
-            const match2 = hex3.exec(num);
-            if (match2) {
+            const hex3 = tmp77.hex3;
+            throwTypeErrorResult = hex3.exec(num);
+            if (throwTypeErrorResult) {
               const _Number16 = Number;
-              let tmp6 = Number.parseInt(`${tmp[1]}${tmp[1]}${tmp[2]}${tmp[2]}${tmp[3]}${tmp[3]}ff`, 16) >>> 0;
+              tmp6 = Number.parseInt(`${tmp[1]}${tmp[1]}${tmp[2]}${tmp[2]}${tmp[3]}${tmp[3]}ff`, 16) >>> 0;
             } else {
-              const hex8 = obj.hex8;
-              const match3 = hex8.exec(num);
-              if (match3) {
+              const hex8 = tmp77.hex8;
+              const match2 = hex8.exec(num);
+              if (match2) {
                 const _Number15 = Number;
-                tmp6 = Number.parseInt(match3[1], 16) >>> 0;
+                tmp6 = Number.parseInt(match2[1], 16) >>> 0;
               } else {
-                const hex4 = obj.hex4;
-                const match4 = hex4.exec(num);
-                if (match4) {
+                const hex4 = tmp77.hex4;
+                const match3 = hex4.exec(num);
+                if (match3) {
                   const _Number14 = Number;
-                  tmp6 = Number.parseInt(match4[1] + match4[1] + match4[2] + match4[2] + match4[3] + match4[3] + match4[4] + match4[4], 16) >>> 0;
+                  tmp6 = Number.parseInt(match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4], 16) >>> 0;
                 } else {
-                  const hsl = obj.hsl;
-                  const match5 = hsl.exec(num);
-                  if (match5) {
+                  const hsl = tmp77.hsl;
+                  const match4 = hsl.exec(num);
+                  if (match4) {
                     if (typeof parse360 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _Number11 = Number;
-                    const result = Number.parseFloat(match5[1]) % 360;
+                    const result = Number.parseFloat(match4[1]) % 360;
                     if (typeof parsePercentage !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _Number12 = Number;
-                    const parsed11 = Number.parseFloat(match5[2]);
+                    const parsed11 = Number.parseFloat(match4[2]);
                     let num37 = 0;
                     if (parsed11 >= 0) {
                       let num39 = 1;
@@ -494,11 +529,11 @@ function normalizeColor(num) {
                       }
                       num37 = num39;
                     }
-                    if (typeof parsePercentage !== "function") {
+                    if (typeof tmp38 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _Number13 = Number;
-                    const parsed12 = Number.parseFloat(match5[3]);
+                    const parsed12 = Number.parseFloat(match4[3]);
                     let num40 = 0;
                     if (parsed12 >= 0) {
                       let num42 = 1;
@@ -508,8 +543,10 @@ function normalizeColor(num) {
                       num40 = num42;
                     }
                     tmp6 = (255 | hslToRgb((result + 360) % 360 / 360, num37, num40)) >>> 0;
+                    const tmp34 = hslToRgb;
+                    tmp38 = parsePercentage;
                   } else {
-                    const hsla = obj.hsla;
+                    const hsla = tmp77.hsla;
                     let num2 = hsla.exec(num);
                     if (num2) {
                       if (undefined !== num2[6]) {
@@ -531,7 +568,7 @@ function normalizeColor(num) {
                           }
                           num26 = num28;
                         }
-                        if (typeof parsePercentage !== "function") {
+                        if (typeof tmp27 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number10 = Number;
@@ -559,7 +596,9 @@ function normalizeColor(num) {
                           num32 = num2;
                         }
                         let tmp22 = (hslToRgb((result1 + 360) % 360 / 360, num26, num29) | num32) >>> 0;
+                        const tmp23 = hslToRgb;
                         const tmp23Result = hslToRgb((result1 + 360) % 360 / 360, num26, num29);
+                        tmp27 = parsePercentage;
                       } else {
                         if (typeof parse360 !== "function") {
                           HermesBuiltin.throwTypeError();
@@ -579,7 +618,7 @@ function normalizeColor(num) {
                           }
                           num14 = num16;
                         }
-                        if (typeof parsePercentage !== "function") {
+                        if (typeof tmp16 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number6 = Number;
@@ -607,22 +646,25 @@ function normalizeColor(num) {
                           num20 = num23;
                         }
                         tmp22 = (hslToRgb((result2 + 360) % 360 / 360, num14, num17) | num20) >>> 0;
+                        tmp16 = parsePercentage;
+                        const tmp82 = hslToRgb;
                         const tmp82Result = hslToRgb((result2 + 360) % 360 / 360, num14, num17);
                       }
                     } else {
-                      const hwb = obj.hwb;
-                      const match6 = hwb.exec(num);
-                      if (match6) {
+                      const hwb = tmp77.hwb;
+                      const match5 = hwb.exec(num);
+                      tmp6 = null;
+                      if (match5) {
                         if (typeof parse360 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number = Number;
-                        const result3 = Number.parseFloat(match6[1]) % 360;
+                        const result3 = Number.parseFloat(match5[1]) % 360;
                         if (typeof parsePercentage !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number2 = Number;
-                        const parsed19 = Number.parseFloat(match6[2]);
+                        const parsed19 = Number.parseFloat(match5[2]);
                         let num5 = 0;
                         if (parsed19 >= 0) {
                           let num7 = 1;
@@ -631,11 +673,11 @@ function normalizeColor(num) {
                           }
                           num5 = num7;
                         }
-                        if (typeof parsePercentage !== "function") {
+                        if (typeof tmp11 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number3 = Number;
-                        const parsed20 = Number.parseFloat(match6[3]);
+                        const parsed20 = Number.parseFloat(match5[3]);
                         let num8 = 0;
                         if (parsed20 >= 0) {
                           let num10 = 1;
@@ -645,6 +687,8 @@ function normalizeColor(num) {
                           num8 = num10;
                         }
                         tmp6 = (255 | hwbToRgb((result3 + 360) % 360 / 360, num5, num8)) >>> 0;
+                        tmp11 = parsePercentage;
+                        const tmp7 = hwbToRgb;
                       }
                     }
                   }
@@ -661,26 +705,26 @@ function normalizeColor(num) {
 normalizeColor.__closure = { MATCHERS: obj, names: shareable, parse255, parse1, hslToRgb, parse360, parsePercentage, hwbToRgb };
 normalizeColor.__workletHash = 13656798455904;
 normalizeColor.__initData = { code: "function normalizeColor_Pnpm_ColorsTs9(color){const{MATCHERS,names,parse255,parse1,hslToRgb,parse360,parsePercentage,hwbToRgb}=this.__closure;if(typeof color==='number'){if(color>>>0===color&&color>=0&&color<=0xffffffff){return color;}return null;}if(typeof color!=='string'){return null;}let match;if(match=MATCHERS.hex6.exec(color)){return Number.parseInt(match[1]+'ff',16)>>>0;}if(names[color]!==undefined){return names[color];}if(match=MATCHERS.rgb.exec(color)){return((parse255(match[1])<<24|parse255(match[2])<<16|parse255(match[3])<<8|0x000000ff)>>>0);}if(match=MATCHERS.rgba.exec(color)){if(match[6]!==undefined){return(parse255(match[6])<<24|parse255(match[7])<<16|parse255(match[8])<<8|parse1(match[9]))>>>0;}return(parse255(match[2])<<24|parse255(match[3])<<16|parse255(match[4])<<8|parse1(match[5]))>>>0;}if(match=MATCHERS.hex3.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+'ff',16)>>>0;}if(match=MATCHERS.hex8.exec(color)){return Number.parseInt(match[1],16)>>>0;}if(match=MATCHERS.hex4.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+match[4]+match[4],16)>>>0;}if(match=MATCHERS.hsl.exec(color)){return(hslToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}if(match=MATCHERS.hsla.exec(color)){if(match[6]!==undefined){return(hslToRgb(parse360(match[6]),parsePercentage(match[7]),parsePercentage(match[8]))|parse1(match[9]))>>>0;}return(hslToRgb(parse360(match[2]),parsePercentage(match[3]),parsePercentage(match[4]))|parse1(match[5]))>>>0;}if(match=MATCHERS.hwb.exec(color)){return(hwbToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}return null;}" };
-const fn = function t(dependencyMap) {
-  return (dependencyMap >> 24 & 255) / 255;
+const fn = function t(arg0) {
+  return (arg0 >> 24 & 255) / 255;
 };
 fn.__closure = {};
 fn.__workletHash = 5651263271273;
 fn.__initData = { code: "function pnpm_ColorsTs10(c){return(c>>24&255)/255;}" };
-const fn2 = function n(processColorResult) {
-  return processColorResult >> 16 & 255;
+const fn2 = function n(arg0) {
+  return arg0 >> 16 & 255;
 };
 fn2.__closure = {};
 fn2.__workletHash = 10831766115157;
 fn2.__initData = { code: "function pnpm_ColorsTs11(c){return c>>16&255;}" };
-const fn3 = function a(processColorResult) {
-  return processColorResult >> 8 & 255;
+const fn3 = function a(arg0) {
+  return arg0 >> 8 & 255;
 };
 fn3.__closure = {};
 fn3.__workletHash = 3551227549865;
 fn3.__initData = { code: "function pnpm_ColorsTs12(c){return c>>8&255;}" };
-const fn4 = function l(processColorResult) {
-  return 255 & processColorResult;
+const fn4 = function l(arg0) {
+  return 255 & arg0;
 };
 fn4.__closure = {};
 fn4.__workletHash = 8634480727248;
@@ -790,40 +834,40 @@ class HSVtoRGB {
 HSVtoRGB.__closure = {};
 HSVtoRGB.__workletHash = 5232397720804;
 HSVtoRGB.__initData = { code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}" };
-const fn6 = function c(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3) {
+const fn6 = function c(arg0, arg1, arg2, arg3) {
   if (typeof HSVtoRGB !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const rounded = Math.floor(6 * interpolateResult);
-  const diff = 6 * interpolateResult - rounded;
-  const result = interpolateResult2 * (1 - interpolateResult1);
-  const result1 = interpolateResult2 * (1 - diff * interpolateResult1);
-  const result2 = interpolateResult2 * (1 - (1 - diff) * interpolateResult1);
+  const rounded = Math.floor(6 * arg0);
+  const diff = 6 * arg0 - rounded;
+  const result = arg2 * (1 - arg1);
+  const result1 = arg2 * (1 - diff * arg1);
+  const result2 = arg2 * (1 - (1 - diff) * arg1);
   const result3 = rounded % 6;
   if (0 === result3) {
     let tmp7 = result;
     let tmp8 = result2;
-    let tmp9 = interpolateResult2;
+    let tmp9 = arg2;
   } else if (1 === result3) {
     tmp7 = result;
-    tmp8 = interpolateResult2;
+    tmp8 = arg2;
     tmp9 = result1;
   } else if (2 === result3) {
     tmp7 = result2;
-    tmp8 = interpolateResult2;
+    tmp8 = arg2;
     tmp9 = result;
   } else if (3 === result3) {
-    tmp7 = interpolateResult2;
+    tmp7 = arg2;
     tmp8 = result1;
     tmp9 = result;
   } else if (4 === result3) {
-    tmp7 = interpolateResult2;
+    tmp7 = arg2;
     tmp8 = result;
     tmp9 = result2;
   } else if (5 === result3) {
     tmp7 = result1;
     tmp8 = result;
-    tmp9 = interpolateResult2;
+    tmp9 = arg2;
   }
   const rounded1 = Math.round(255 * tmp9);
   const rounded2 = Math.round(255 * tmp8);
@@ -831,8 +875,8 @@ const fn6 = function c(interpolateResult, interpolateResult1, interpolateResult2
   if (typeof fn5 !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let num5 = interpolateResult3;
-  if (interpolateResult3 === undefined) {
+  let num5 = arg3;
+  if (arg3 === undefined) {
     num5 = 1;
   }
   let num6 = 0;
@@ -844,13 +888,13 @@ const fn6 = function c(interpolateResult, interpolateResult1, interpolateResult2
 fn6.__closure = { HSVtoRGB, rgbaColor: fn5 };
 fn6.__workletHash = 16564231422584;
 fn6.__initData = { code: "function pnpm_ColorsTs17(h,s,v,a){const{HSVtoRGB,rgbaColor}=this.__closure;const{r:r,g:g,b:b}=HSVtoRGB(h,s,v);return rgbaColor(r,g,b,a);}" };
-function processColorInitially(semantic) {
-  if (null == semantic) {
-    return semantic;
+function processColorInitially(arr) {
+  if (null == arr) {
+    return arr;
   } else {
-    let tmp = semantic;
-    if (typeof semantic !== "number") {
-      const tmp3 = normalizeColor(semantic);
+    let tmp = arr;
+    if (typeof arr !== "number") {
+      const tmp3 = normalizeColor(arr);
       if (null != tmp3) {
         tmp = tmp3;
         if (typeof tmp3 !== "number") {
@@ -925,24 +969,26 @@ processColor.__workletHash = 850613387330;
 processColor.__initData = { code: "function processColor_Pnpm_ColorsTs20(color){const{processColorInitially,IS_ANDROID}=this.__closure;let normalizedColor=processColorInitially(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}if(IS_ANDROID){normalizedColor=normalizedColor|0x0;}return normalizedColor;}" };
 function processColorsInProps(obj) {
   for (const key10007 in arg0) {
+    let tmp13 = key10007;
+    let tmp14 = shareable1;
     if (shareable1.includes(key10007)) {
       let _Array = Array;
       if (Array.isArray(arg0[key10007])) {
         let arr = arg0[key10007];
-        arg0[key10007] = arr.map((item, index) => {
+        arg0[key10007] = arr.map((num) => {
           if (typeof closure_16 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (typeof closure_14 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          let tmp = item;
-          if (null != item) {
-            let tmp2 = item;
-            if (typeof item === "number") {
+          let tmp = num;
+          if (null != num) {
+            let tmp2 = num;
+            if (typeof num === "number") {
               tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
             } else {
-              const tmp9 = callback(item);
+              const tmp9 = callback(num);
               if (null != tmp9) {
                 tmp = null;
                 tmp2 = tmp9;
@@ -965,20 +1011,29 @@ function processColorsInProps(obj) {
         });
         continue;
       } else {
+        let tmp12 = processColor;
         arg0[key10007] = processColor(arg0[key10007]);
         continue;
       }
       continue;
     } else {
+      let tmp = shareable2;
       if (!shareable2[key10007]) {
         continue;
       } else {
         let tmp2 = arg0[key10007];
+        let tmp3 = tmp2;
+        let tmp4 = tmp2;
         for (const item10014 of tmp2) {
+          let tmp5 = item10014;
+          let tmp6 = shareable2;
           let tmp7 = shareable2[key10007];
           let tmp8 = tmp7;
           if (undefined !== item10014[tmp7]) {
-            item10014[tmp8] = processColor(item10014[tmp8]);
+            let tmp9 = item10014;
+            let tmp10 = tmp7;
+            let tmp11 = processColor;
+            tmp5[tmp8] = processColor(tmp5[tmp8]);
           }
           continue;
         }

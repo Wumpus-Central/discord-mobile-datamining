@@ -1,19 +1,19 @@
 // discord_app/design/components/Button/native/useToggleButtonProps.native.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
+const result = set.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
 
-export const useToggleButtonProps = function useToggleButtonProps(on, checked) {
+export const useToggleButtonProps = function useToggleButtonProps(on, first) {
   const obj = {};
-  const merged = Object.assign(checked ? on.on : on.off);
+  const merged = Object.assign(first ? on.on : on.off);
   obj.accessibilityRole = "togglebutton";
-  obj.accessibilityState = { checked };
+  obj.accessibilityState = { checked: first };
   return obj;
 };
-export const useToggleIconButtonProps = function useToggleIconButtonProps(on, checked) {
+export const useToggleIconButtonProps = function useToggleIconButtonProps(on, first) {
   const obj = {};
-  const merged = Object.assign(checked ? on.on : on.off);
+  const merged = Object.assign(first ? on.on : on.off);
   obj.accessibilityRole = "togglebutton";
-  obj.accessibilityState = { checked };
+  obj.accessibilityState = { checked: first };
   return obj;
 };

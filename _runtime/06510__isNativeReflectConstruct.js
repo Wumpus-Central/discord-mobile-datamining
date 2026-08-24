@@ -1,14 +1,14 @@
 // _runtime/06510__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { Animated } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const GenericTouchable = fn;
+const GenericTouchable = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -56,34 +56,35 @@ class GenericTouchable {
       const pointerInside = nativeEvent.nativeEvent.pointerInside;
       if (lib.pointerInside !== pointerInside) {
         if (pointerInside) {
-          lib.onMoveIn();
+          obj.onMoveIn();
         } else {
-          lib.onMoveOut();
+          obj.onMoveOut();
         }
       }
       lib.pointerInside = pointerInside;
     };
     tmp3Result.onHandlerStateChange = (nativeEvent) => {
       const state = nativeEvent.nativeEvent.state;
-      if (state !== lib(dependencyMap[8]).State.CANCELLED) {
-        if (state !== lib(dependencyMap[8]).State.FAILED) {
-          if (state === lib(dependencyMap[8]).State.BEGAN) {
-            if (lib.STATE === obj.UNDETERMINED) {
-              lib.handlePressIn();
+      if (state !== lib(closure_1_1[8]).State.CANCELLED) {
+        if (state !== tmp(tmp2[8]).State.FAILED) {
+          if (state === tmp(tmp2[8]).State.BEGAN) {
+            if (lib.STATE === closure_1_8.UNDETERMINED) {
+              obj.handlePressIn();
             }
+            obj = lib;
           }
-          if (state === lib(dependencyMap[8]).State.END) {
+          if (state === tmp(tmp2[8]).State.END) {
             const longPressDetected = lib.longPressDetected;
             let tmp5 = !longPressDetected;
             if (!longPressDetected) {
-              tmp5 = lib.STATE !== obj.MOVED_OUTSIDE;
+              tmp5 = obj2.STATE !== closure_1_8.MOVED_OUTSIDE;
             }
             if (tmp5) {
-              tmp5 = undefined === lib.pressOutTimeout;
+              tmp5 = undefined === obj2.pressOutTimeout;
             }
-            const result = lib.handleGoToUndetermined();
+            const result = obj2.handleGoToUndetermined();
             if (tmp5) {
-              const props = lib.props;
+              const props = obj2.props;
               const onPress = props.onPress;
               if (onPress != null) {
                 onPress();
@@ -92,7 +93,7 @@ class GenericTouchable {
           }
         }
       }
-      lib.moveToState(obj.UNDETERMINED);
+      lib.moveToState(closure_1_8.UNDETERMINED);
     };
     tmp3Result.onLongPressDetected = () => {
       lib.longPressDetected = true;
@@ -109,11 +110,12 @@ _inheritsDefault(GenericTouchable, require("noop").Component);
 obj = {
   key: "handlePressIn",
   value: function handlePressIn() {
-    const self = this;
+    let self = this;
+    self = this;
     if (this.props.delayPressIn) {
       const _setTimeout = setTimeout;
       self.pressInTimeout = setTimeout(() => {
-        self.moveToState(obj.BEGAN);
+        self.moveToState(closure_1_8.BEGAN);
         self.pressInTimeout = undefined;
       }, self.props.delayPressIn);
     } else {
@@ -122,6 +124,8 @@ obj = {
     if (self.props.onLongPress) {
       const _setTimeout2 = setTimeout;
       self.longPressTimeout = setTimeout(self.onLongPressDetected, (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0));
+      const tmp4 = self.props.delayPressIn || 0;
+      const tmp5 = self.props.delayLongPress || 0;
     }
   }
 };
@@ -130,13 +134,14 @@ let items = [
   {
     key: "handleMoveOutside",
     value: function handleMoveOutside() {
-      const self = this;
+      let self = this;
+      self = this;
       if (this.props.delayPressOut) {
         let pressOutTimeout = self.pressOutTimeout;
         if (!pressOutTimeout) {
           const _setTimeout = setTimeout;
           pressOutTimeout = setTimeout(() => {
-            self.moveToState(obj.MOVED_OUTSIDE);
+            self.moveToState(closure_1_8.MOVED_OUTSIDE);
             self.pressOutTimeout = undefined;
           }, self.props.delayPressOut);
         }
@@ -149,20 +154,21 @@ let items = [
   {
     key: "handleGoToUndetermined",
     value: function handleGoToUndetermined() {
-      const self = this;
+      let self = this;
+      self = this;
       clearTimeout(this.pressOutTimeout);
       if (this.props.delayPressOut) {
         const _setTimeout = setTimeout;
         self.pressOutTimeout = setTimeout(() => {
-          if (self.STATE === obj.UNDETERMINED) {
-            self.moveToState(obj.BEGAN);
+          if (self.STATE === closure_1_8.UNDETERMINED) {
+            obj.moveToState(tmp.BEGAN);
           }
-          self.moveToState(obj.UNDETERMINED);
+          self.moveToState(closure_1_8.UNDETERMINED);
           self.pressOutTimeout = undefined;
         }, self.props.delayPressOut);
       } else {
         if (self.STATE === obj.UNDETERMINED) {
-          self.moveToState(obj.BEGAN);
+          self.moveToState(tmp2.BEGAN);
         }
         self.moveToState(obj.UNDETERMINED);
       }
@@ -197,15 +203,15 @@ let items = [
           if (onPressIn != null) {
             onPressIn();
           }
-        } else if (BEGAN === obj.MOVED_OUTSIDE) {
+        } else if (BEGAN === tmp10.MOVED_OUTSIDE) {
           const props2 = self.props;
           const onPressOut2 = props2.onPressOut;
           if (onPressOut2 != null) {
             onPressOut2();
           }
-        } else if (BEGAN === obj.UNDETERMINED) {
+        } else if (BEGAN === tmp10.UNDETERMINED) {
           self.reset();
-          if (self.STATE === obj.BEGAN) {
+          if (self.STATE === tmp10.BEGAN) {
             const props = self.props;
             const onPressOut = props.onPressOut;
             if (onPressOut != null) {
@@ -262,6 +268,7 @@ let items = [
       } else {
         hitSlop = self.props.hitSlop;
       }
+      obj = { accessible: false !== self.props.accessible, accessibilityLabel: self.props.accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityRole: self.props.accessibilityRole, accessibilityState: self.props.accessibilityState, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, nativeID: self.props.nativeID, onLayout: self.props.onLayout };
       obj = { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null };
       let onHandlerStateChange;
       if (!self.props.disabled) {

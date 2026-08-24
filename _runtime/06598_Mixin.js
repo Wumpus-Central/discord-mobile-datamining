@@ -12,8 +12,9 @@ obj.touchableHandleStartShouldSetResponder = function touchableHandleStartShould
   if (onStartShouldSetResponder) {
     let result = onStartShouldSetResponder(arg0);
   } else {
-    const call = callback.call;
-    result = typeof call === "unknown" ? callback(arg0) : call(self, arg0);
+    const call = closure_1.call;
+    result = typeof call === "unknown" ? closure_1(arg0) : call(self, arg0);
+    const tmp = closure_1;
   }
   return result;
 };
@@ -23,8 +24,9 @@ obj.touchableHandleResponderTerminationRequest = function touchableHandleRespond
   if (onResponderTerminationRequest) {
     let result = onResponderTerminationRequest(arg0);
   } else {
-    const call = callback2.call;
-    result = typeof call === "unknown" ? callback2(arg0) : call(self, arg0);
+    const call = closure_2.call;
+    result = typeof call === "unknown" ? closure_2(arg0) : call(self, arg0);
+    const tmp = closure_2;
   }
   return result;
 };
@@ -34,8 +36,9 @@ obj.touchableHandleResponderGrant = function touchableHandleResponderGrant(arg0)
   if (onResponderGrant) {
     let onResponderGrantResult = onResponderGrant(arg0);
   } else {
-    const call = callback3.call;
-    onResponderGrantResult = typeof call === "unknown" ? callback3(arg0) : call(self, arg0);
+    const call = closure_3.call;
+    onResponderGrantResult = typeof call === "unknown" ? closure_3(arg0) : call(self, arg0);
+    const tmp = closure_3;
   }
   return onResponderGrantResult;
 };
@@ -45,8 +48,9 @@ obj.touchableHandleResponderMove = function touchableHandleResponderMove(arg0) {
   if (onResponderMove) {
     let onResponderMoveResult = onResponderMove(arg0);
   } else {
-    const call = callback4.call;
-    onResponderMoveResult = typeof call === "unknown" ? callback4(arg0) : call(self, arg0);
+    const call = closure_4.call;
+    onResponderMoveResult = typeof call === "unknown" ? closure_4(arg0) : call(self, arg0);
+    const tmp = closure_4;
   }
   return onResponderMoveResult;
 };
@@ -56,8 +60,9 @@ obj.touchableHandleResponderRelease = function touchableHandleResponderRelease(a
   if (onResponderRelease) {
     let onResponderReleaseResult = onResponderRelease(arg0);
   } else {
-    const call = callback5.call;
-    onResponderReleaseResult = typeof call === "unknown" ? callback5(arg0) : call(self, arg0);
+    const call = closure_5.call;
+    onResponderReleaseResult = typeof call === "unknown" ? closure_5(arg0) : call(self, arg0);
+    const tmp = closure_5;
   }
   return onResponderReleaseResult;
 };
@@ -67,8 +72,9 @@ obj.touchableHandleResponderTerminate = function touchableHandleResponderTermina
   if (onResponderTerminate) {
     let onResponderTerminateResult = onResponderTerminate(arg0);
   } else {
-    const call = callback6.call;
-    onResponderTerminateResult = typeof call === "unknown" ? callback6(arg0) : call(self, arg0);
+    const call = closure_6.call;
+    onResponderTerminateResult = typeof call === "unknown" ? closure_6(arg0) : call(self, arg0);
+    const tmp = closure_6;
   }
   return onResponderTerminateResult;
 };
@@ -120,16 +126,24 @@ obj.touchableGetPressOutDelayMS = function touchableGetPressOutDelayMS() {
   return this.props.delayPressOut || 0;
 };
 const keys = Object.keys(obj);
-let closure_10 = keys.map((item, index) => obj[item]);
+let closure_10 = keys.map((arg0) => obj[arg0]);
 
 export default (self) => {
-  for (let num = 0; num < length; num = num + 1) {
-    obj = table[num];
-    let bindResult = obj;
-    if (typeof obj === "function") {
-      bindResult = obj.bind(self);
-    }
-    self[keys[num]] = bindResult;
+  let num = 0;
+  if (0 < length) {
+    do {
+      let tmp = keys;
+      let tmp2 = table;
+      obj = table[num];
+      let tmp3 = num;
+      let bindResult = obj;
+      if (typeof obj === "function") {
+        bindResult = obj.bind(self);
+      }
+      self[keys[num]] = bindResult;
+      num = num + 1;
+      let tmp5 = length;
+    } while (num < length);
   }
   self.state = callback();
 };

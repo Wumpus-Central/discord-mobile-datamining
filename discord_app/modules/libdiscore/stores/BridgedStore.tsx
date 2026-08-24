@@ -1,15 +1,15 @@
 // discord_app/modules/libdiscore/stores/BridgedStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import fluxApi from "../FluxApi.tsx";
 
-const result = obj132.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
+const result = set.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
-export const ensureValidMode = function ensureValidMode(typescript) {
+export const ensureValidMode = function ensureValidMode(arg0) {
   let str = "typescript";
-  if ("typescript" === typescript) {
-    str = typescript;
+  if ("typescript" === arg0) {
+    str = arg0;
   } else {
-    fluxApi;
+    const obj = fluxApi;
   }
   return str;
 };

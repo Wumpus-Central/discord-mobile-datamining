@@ -10,11 +10,13 @@ noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ leftContainer: { zIndex: 2, height: 106, width: 102, position: "absolute" }, landingImageLeft: { left: 58, top: -92 }, rightContainer: { position: "absolute", height: 113, width: 103 }, landingImageRight: { left: 134, top: -99 } });
-const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingImage.tsx");
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingImage.tsx");
 
 export default function ContactSyncLandingImage() {
   const tmp = callback3();
-  const obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: registerAssetDefault };
+  let obj = { children: null };
+  obj = { style: tmp.leftContainer, children: null };
+  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: registerAssetDefault };
   obj[1] = callback(closure_2, obj);
   const items = [callback(closure_3, obj), ];
   obj1 = { style: tmp.rightContainer, children: callback(closure_2, { resizeMode: "contain", style: tmp.landingImageRight, source: registerAssetDefault2 }) };

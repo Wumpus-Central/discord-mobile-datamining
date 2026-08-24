@@ -1,6 +1,6 @@
 // _runtime/01181_makeNativeTransport.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const NativeTransport = arg1;
 function makeNativeTransport() {
@@ -33,9 +33,9 @@ const items = [
       closure_0 = arg0;
       const _buffer = this._buffer;
       return _buffer.add(() => {
-        const NATIVE = callback(dependencyMap[3]).NATIVE;
+        const NATIVE = callback(closure_1_1[3]).NATIVE;
         return NATIVE.sendEnvelope(callback);
-      }).then((result) => ({}));
+      }).then(() => ({}));
     }
   },
   {

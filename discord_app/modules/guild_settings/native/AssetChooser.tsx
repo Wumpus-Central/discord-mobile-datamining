@@ -1,24 +1,25 @@
 // discord_app/modules/guild_settings/native/AssetChooser.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import Button from "../../../design/void/native.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import registerAssetDefault from "../../../../_runtime/16753_registerAsset.js";
 import registerAssetDefault2 from "../../../../_runtime/16754_registerAsset.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UPLOAD_MEDIUM_SIZE } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ View: c4, Image: c5, ImageBackground: closure_6, TouchableWithoutFeedback: error } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { width: "100%", height: 192, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
+createCacheKey = { width: "100%", height: 192, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { position: "absolute", bottom: 10, right: 10, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
 createCacheKey[3] = { width: 16, height: 16 };
+let obj1 = { position: "absolute", bottom: 10, right: 10, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
 createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, color: ThemesDefault.unsafe_rawColors.BLUE_345 };
 let closure_12 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -32,10 +33,10 @@ class AssetChooser extends PureComponent {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw base64;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = base64;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -46,14 +47,14 @@ class AssetChooser extends PureComponent {
           if (0 === table) {
             if (arg0 === 1) {
               c3 = 3;
-              throw base64;
+              throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = base64;
+              obj[0] = arg1;
               return obj;
             } else {
-              base64 = tmp2;
+              let base64 = tmp2;
               obj2 = undefined;
               base64 = undefined;
               ({ size, onChooseAsset: obj2 } = closure_1_0.props);
@@ -76,14 +77,14 @@ class AssetChooser extends PureComponent {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw base64;
+            throw arg1;
           } else if (arg0 === 2) {
             c3 = 3;
             obj = { value: null, done: true };
-            obj[0] = base64;
+            obj[0] = arg1;
             return obj;
           } else {
-            base64 = base64.base64;
+            base64 = arg1.base64;
             if (null != base64) {
               if (obj2 != null) {
                 tmp10(base64);
@@ -142,12 +143,12 @@ prototype["render"] = function render() {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
     obj1[1] = registerAssetDefault2;
-    obj[1] = callback(closure_5, obj1);
-    tmp5Result = callback(closure_4, obj);
+    obj[1] = tmp5(closure_5, obj1);
+    tmp5Result = tmp5(closure_4, obj);
   }
   obj[2] = tmp5Result;
-  obj[5] = callback(closure_6, obj);
-  const children = [callback(PressableBase.PressableOpacity, obj), ];
+  obj[5] = closure_9(closure_6, obj);
+  const children = [closure_9(PressableBase.PressableOpacity, obj), ];
   tmp5Result = null;
   if (null != source) {
     tmp5Result = null;
@@ -156,16 +157,17 @@ prototype["render"] = function render() {
       obj2[1] = this.handleRemoveAsset;
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.remove;
-      const intl2 = getSystemLocale.intl;
-      obj3[1] = intl2.string(getSystemLocale.t.N86XcP);
-      obj2[2] = callback(Button.LegacyText, obj3);
-      tmp5Result = callback(closure_7, obj2);
+      const intl2 = tmp6(1236).intl;
+      obj3[1] = intl2.string(tmp6(1236).t.N86XcP);
+      obj2[2] = tmp5(tmp6(1297).LegacyText, obj3);
+      tmp5Result = tmp5(closure_7, obj2);
     }
   }
   children[1] = tmp5Result;
-  return callback2(closure_10, { children });
+  return closure_11(closure_10, { children });
 };
 AssetChooser.contextType = require("ManaContext").ThemeContext;
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
+let obj2 = { marginTop: 8, fontSize: 14, lineHeight: 18, color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 
 export default AssetChooser;

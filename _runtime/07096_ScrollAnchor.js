@@ -1,18 +1,19 @@
 // _runtime/07096_ScrollAnchor.js
 import noopDefault from "00019_noop.js";
-import _slicedToArray from "metro/07041__slicedToArray.js";
+import closure_2 from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ useImperativeHandle: c3, useMemo: c4, useState: c5 } = noop);
 noopDefault;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
+  let first;
   let callback;
   const tmp = callback(callback4(1000000), 2);
-  const first = tmp[0];
+  first = tmp[0];
   callback = tmp[1];
   callback2(horizontal.scrollAnchorRef, () => ({
     scrollBy(diff) {
@@ -32,6 +33,6 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
       num2 = first;
     }
     style[3] = num2;
-    return jsx(horizontal(first[3]).CompatView, { style });
+    return closure_1_6(horizontal(first[3]).CompatView, { style });
   }, items);
 };

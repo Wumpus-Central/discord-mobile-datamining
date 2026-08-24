@@ -1,10 +1,10 @@
 // discord_app/modules/message_request/hooks/useMutualGuilds.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import createUserWidgetFromServer from "../../user_profile/UserProfileStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMutualGuilds.tsx");
 
 export const useMutualGuildsForMessageRequests = function useMutualGuildsForMessageRequests(userId) {
   const _require = userId;
@@ -16,7 +16,7 @@ export const useMutualGuildsForMessageRequests = function useMutualGuildsForMess
     const mutualGuilds = closure_1_4.getMutualGuilds(closure_0);
     let mapped;
     if (mutualGuilds != null) {
-      mapped = mutualGuilds.map((item, index) => item.guild);
+      mapped = mutualGuilds.map((guild) => guild.guild);
     }
     if (mapped == null) {
       mapped = [];
@@ -33,7 +33,7 @@ export const useMutualGuildsForMessageRequests = function useMutualGuildsForMess
       tmp = null == closure_1_4.getMutualGuilds(closure_0);
     }
     if (tmp) {
-      stateFromStores(stateFromStoresArray[4]).wait(() => stateFromStores(stateFromStoresArray[5])(closure_0, undefined, { withMutualGuilds: true }));
+      stateFromStores(stateFromStoresArray[4]).wait(() => closure_1_1(closure_1_2[5])(closure_0, undefined, { withMutualGuilds: true }));
       const obj = stateFromStores(stateFromStoresArray[4]);
     }
   }, items2);

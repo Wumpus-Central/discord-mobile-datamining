@@ -1,12 +1,11 @@
 // discord_app/modules/premium/hooks/useGeoForUser.native.tsx
-import _deletePaymentSourceAll from "../../billing/actions/BillingActionCreators.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import handlePaymentSourceCreateEnd from "../../../stores/billing/BillingInfoStore.tsx";
-import updateProduct from "../../../stores/native/IAPStore.android.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/billing/BillingInfoStore.tsx";
+import closure_6 from "../../../stores/native/IAPStore.android.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
 
 export default function useGeoForUser() {
   let obj = stateFromStores2(589);
@@ -31,7 +30,8 @@ export default function useGeoForUser() {
       tmp = !closure_1_5.ipLocationLoaded;
     }
     if (tmp) {
-      const ipLocation = _deletePaymentSourceAll.fetchIpLocation();
+      const ipLocation = closure_1_1(closure_1_2[6]).fetchIpLocation();
+      const obj = closure_1_1(closure_1_2[6]);
     }
   }, items3);
   obj = { defaultBillingCountryCode: stateFromStores, ipCountryCode: null, ipSubdivisionCode: null };

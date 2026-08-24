@@ -1,11 +1,11 @@
 // discord_app/modules/wishlists/WishlistStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import _modDef1208 from "../../utils/SentryUtils.native.tsx";
 import createUserWidgetFromServer from "../user_profile/UserProfileStore.tsx";
 import fromServer from "records/WishlistRecord.tsx";
-import fromServer2 from "records/WishlistRecord.tsx";
+import closure_5 from "records/WishlistRecord.tsx";
 
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: c4 } = fromServer);
 let closure_6 = {};
@@ -52,8 +52,8 @@ prototype["hasError"] = function hasError(arg0) {
 prototype["getError"] = function getError(arg0) {
   return this.get(arg0).error;
 };
-prototype["getUpdatedAt"] = function getUpdatedAt(wishlistId) {
-  return this.get(wishlistId).updatedAt;
+prototype["getUpdatedAt"] = function getUpdatedAt(arg0) {
+  return this.get(arg0).updatedAt;
 };
 prototype["getLastFetchedAt"] = function getLastFetchedAt(arg0) {
   return this.get(arg0).lastFetchedAt;
@@ -125,7 +125,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       obj[0] = tmp2.data.id;
       obj[1] = tmp2.data.userId;
       const items = tmp2.data.items;
-      obj[2] = items.filter((item, index) => item.skuId !== closure_0);
+      obj[2] = items.filter((skuId) => skuId.skuId !== closure_0);
       obj[3] = tmp2.data.applications;
       const tmp7 = new closure_5(obj);
       tmp2.data = tmp7;
@@ -220,9 +220,8 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     if (tmp2) {
       dependencyMap[firstWishlistId].updatedAt = undefined;
     }
-    const _default = createUserWidgetFromServer.default;
   }
 });
-const result = obj132.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
+const result = set.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
 
 export default wishlistStore;

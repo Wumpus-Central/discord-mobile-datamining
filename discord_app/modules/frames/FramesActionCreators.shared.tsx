@@ -2,12 +2,12 @@
 import dispatcherDefault from "../../Dispatcher.tsx";
 import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
 import getFramesManagerDefault from "utils/getFramesManager.native.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import map from "FramesStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "FramesStore.tsx";
 import FrameLayoutModes from "FramesConstants.tsx";
 import { ActivityPanelModes } from "../activities/panel/ActivityPanelConstants.tsx";
 
-require = fn;
+require = arg1;
 function _launchFrame() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -198,9 +198,11 @@ function clearMainFrameSlot() {
       obj[1] = id;
       obj[2] = ActivityPanelModes.PANEL;
       dispatcherDefault.dispatch(obj);
+      const obj4 = dispatcherDefault;
       obj1 = { type: "FRAME_CLEAR_MAIN_SLOT", frameId: null };
       obj1[1] = mainFrame.id;
       dispatcherDefault.dispatch(obj1);
+      const obj6 = dispatcherDefault;
     }
   }
 }
@@ -208,7 +210,8 @@ function updateFrameLayoutMode(frameId) {
   frameId = frameId.frameId;
   const frame = store.getFrame(frameId);
   if (null != frame) {
-    const obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
+    let obj = dispatcherDefault;
+    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
     obj[1] = frame.applicationId;
     obj[2] = frameId;
     obj[3] = frameId.layoutMode;
@@ -263,7 +266,7 @@ function _refreshProxyTicket() {
                 applicationId = frame.applicationId;
                 obj1 = { type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: null, frameId: null, refreshing: true };
                 obj1[1] = applicationId;
-                obj1[2] = callback;
+                obj1[2] = tmp78;
                 closure_1_1(closure_1_2[5]).dispatch(obj1);
                 frame = 2;
                 const obj20 = closure_1_1(closure_1_2[5]);
@@ -273,6 +276,7 @@ function _refreshProxyTicket() {
                 obj2[0] = callback(closure_1_2[6]).createProxyTicket(applicationId, closure_1_7(frame.surface));
                 return obj2;
               }
+              tmp78 = callback;
             }
           } else if (1 === tmp9) {
             frame = 0;
@@ -373,7 +377,7 @@ function _refreshProxyTicket() {
   return applyArgumentsResult;
 }
 ({ FrameIntent: c5, FrameLayoutModes: closure_6, getChannelIdForSurface: error, getFrameIntentForSurface: closure_8, makeFrameId: c9 } = FrameLayoutModes);
-let result = require("obj132").fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
+let result = require("set").fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
 export const launchFrame = function launchFrame(closure_0) {
   const self = this;
@@ -400,20 +404,24 @@ export const promoteFrame = function promoteFrame(closure_0) {
   if (tmp) {
     const result = leaveCurrentEmbeddedActivity.leaveCurrentEmbeddedActivity();
     clearMainFrameSlot();
+    const obj2 = leaveCurrentEmbeddedActivity;
     obj = { type: "FRAME_PROMOTE", frameId: null };
     obj[1] = closure_0;
     dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
   }
 };
 export { updateFrameLayoutMode };
 export const updateFramePanelMode = function updateFramePanelMode(id, PIP) {
-  const obj = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP };
+  let obj = dispatcherDefault;
+  obj = { type: "FRAME_SET_PANEL_MODE", frameId: id, activityPanelMode: PIP };
   obj.dispatch(obj);
 };
 export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
   const frame = store.getFrame(frameId);
   if (null != frame) {
-    let obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
+    let obj = dispatcherDefault;
+    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: null, frameId: null, layoutMode: null };
     obj[1] = frame.applicationId;
     obj[2] = frameId;
     obj[3] = constants2.FOCUSED;
@@ -423,11 +431,13 @@ export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
   dispatcherDefault.dispatch(obj);
 };
 export const attachFrameIframe = function attachFrameIframe(frameId, iframeId) {
-  const obj = { type: "FRAME_IFRAME_MOUNT", frameId, iframeId };
+  let obj = dispatcherDefault;
+  obj = { type: "FRAME_IFRAME_MOUNT", frameId, iframeId };
   obj.dispatch(obj);
 };
 export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
-  const obj = { type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId };
+  let obj = dispatcherDefault;
+  obj = { type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId };
   obj.dispatch(obj);
 };
 export const refreshProxyTicket = function refreshProxyTicket() {

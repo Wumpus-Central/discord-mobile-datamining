@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
+const result = set.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
 
 export const VoicePanelControlsModes = { FLOATING_DEFAULT: "floating-default", DRAWER: "drawer", HIDDEN: "hidden", RESET: "reset" };
 export const CONTROLS_HEIGHT_PTT = 112;

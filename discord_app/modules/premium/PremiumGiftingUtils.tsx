@@ -1,9 +1,9 @@
 // discord_app/modules/premium/PremiumGiftingUtils.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/ChannelStore.tsx";
 import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function _sendGiftMessage() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -28,8 +28,8 @@ function _sendGiftMessage() {
       const obj2 = lib(closure_1_2[3]);
       obj1 = { recipientIds: null };
       obj1[0] = tmp40.id;
-      lib = yield obj2.openPrivateChannel(obj1).then((result) => {
-        channel = channel.getChannel(result);
+      lib = yield obj2.openPrivateChannel(obj1).then((arg0) => {
+        channel = channel.getChannel(arg0);
         callback(table[4])(null != channel, "PrivateChannel is null");
         if (null == channel) {
           const _Error = Error;
@@ -57,7 +57,7 @@ function _sendGiftMessage() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/premium/PremiumGiftingUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/PremiumGiftingUtils.tsx");
 
 export const AnimationState = { ACTION: "action", LOOP: "loop", IDLE: "idle" };
 export const sendGiftMessage = function sendGiftMessage() {

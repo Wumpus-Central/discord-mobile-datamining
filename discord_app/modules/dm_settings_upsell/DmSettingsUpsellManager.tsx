@@ -1,5 +1,5 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
@@ -18,7 +18,7 @@ DmSettingsUpsellManager.prototype["handleDmSettingsUpsellShow"] = function handl
   const result = _modDef16554.openDmSettingsUpsellModal(guildId.guildId);
 };
 const dmSettingsUpsellManager = new DmSettingsUpsellManager();
-let result = obj132.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
+let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
 
 export default dmSettingsUpsellManager;
 export const acknowledgeDmSettingsUpsell = function acknowledgeDmSettingsUpsell(guildId) {

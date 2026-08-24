@@ -8,10 +8,10 @@ function unprocessProps(styleProps) {
   const result = r.unprocessColorsInProps(styleProps);
   if (Array.isArray(styleProps.boxShadow)) {
     const boxShadow = styleProps.boxShadow;
-    styleProps.boxShadow = boxShadow.map((item, index) => {
+    styleProps.boxShadow = boxShadow.map((color) => {
       const obj = {};
-      const merged = Object.assign(item);
-      obj.color = callback(table[1]).unprocessColor(item.color);
+      const merged = Object.assign(color);
+      obj.color = callback(table[1]).unprocessColor(color.color);
       return obj;
     });
   }
@@ -51,8 +51,10 @@ let obj = {
       let viewsMap = this.viewsMap;
       let tmp3 = styleProps;
       let value = viewsMap.get(nextResult.viewTag);
+      let tmp4 = unprocessProps;
       let tmp5 = unprocessProps(styleProps);
       if (value != null) {
+        let tmp6 = styleProps;
         let result = value._syncStylePropsBackToReact(tmp3);
       }
       continue;

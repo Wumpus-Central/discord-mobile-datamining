@@ -1,6 +1,6 @@
 // _runtime/06539_CardContent.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import closure_0 from "metro/00032__slicedToArray.js";
+import closure_1 from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
@@ -33,7 +33,7 @@ export const CardContent = function CardContent(layout) {
               element = <style />;
             }
             element.id = "__react-navigation-stack-mobile-chrome-viewport-fix";
-            function updateStyle(event) {
+            function updateStyle() {
               const items = [":root { --vh: " + 0.01 * window.innerHeight + "px; }", "body { height: calc(var(--vh, 1vh) * 100); }"];
               element.textContent = items.join("\n");
             }

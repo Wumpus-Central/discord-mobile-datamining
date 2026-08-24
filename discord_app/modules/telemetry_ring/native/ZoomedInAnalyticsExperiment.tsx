@@ -1,11 +1,11 @@
 // discord_app/modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-12-zoomed-analytics", defaultConfig: { enabled: false }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx");
+const result = set.fileFinishedImporting("modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx");
 
 export default apexExperiment;
 export const isZoomedExperimentEnabled = function isZoomedExperimentEnabled() {

@@ -13,14 +13,14 @@ import AvatarDecorationSampleV2Default from "../../collectibles/native/AvatarDec
 import filterLayerDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
 import NameplateCardPreviewDefault from "../../collectibles/nameplates/native/NameplateCardPreview.tsx";
 import SlayerStorefrontItemCardDefault from "../../slayer_storefront/native/SlayerStorefrontItemCard.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { transformSKUToCollectiblesItem as closure_5 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
 import { SKUProductLines } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class CollectiblesPreview {
   constructor(arg0) {
     ({ collectiblesItemData, size } = global);
@@ -200,18 +200,21 @@ class PremiumSKUPreview {
   }
 }
 let closure_8 = createCacheKey.createStyles((width, height) => {
-  const obj = { scaleX: width / SourceIcon.DEFAULT_ITEM_SIZE };
+  let obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
+  obj = { width: SourceIcon.DEFAULT_ITEM_SIZE, height: SourceIcon.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
+  obj = { scaleX: width / SourceIcon.DEFAULT_ITEM_SIZE };
   const items = [obj, { scaleY: height / SourceIcon.DEFAULT_ITEM_SIZE }];
   obj[4] = items;
   obj[1] = obj;
   obj[2] = { paddingTop: 20 };
   obj[3] = { width, height };
+  obj1 = { scaleY: height / SourceIcon.DEFAULT_ITEM_SIZE };
   obj[4] = { padding: ThemesDefault.space.PX_8 };
   obj[5] = { width, height };
   return obj;
 });
 createCacheKey = { width: require("SourceIcon").DEFAULT_ITEM_SIZE, height: require("SourceIcon").DEFAULT_ITEM_SIZE };
-const result = require("obj132").fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 
 export default function SKUPreview(arg0) {
   ({ sku, size } = arg0);
@@ -224,20 +227,20 @@ export default function SKUPreview(arg0) {
     obj[0] = sku;
     obj[1] = size;
     return <CollectiblesSKUPreview sku={null} size={null} />;
-  } else if (SKUProductLines.SOCIAL_LAYER_GAME_ITEM === productLine) {
+  } else if (tmp3.SOCIAL_LAYER_GAME_ITEM === productLine) {
     obj = { sku: null, size: null };
     obj[0] = sku;
     obj[1] = size;
     return <SocialLayerStorefrontSKUPreview sku={null} size={null} />;
-  } else if (SKUProductLines.PREMIUM === productLine) {
+  } else if (tmp3.PREMIUM === productLine) {
     obj1 = { size: null };
     obj1[0] = size;
     return <PremiumSKUPreview size={null} />;
   } else {
-    if (SKUProductLines.APPLICATION !== productLine) {
-      if (SKUProductLines.BOOST !== productLine) {
-        if (SKUProductLines.GUILD_ROLE !== productLine) {
-          if (SKUProductLines.GUILD_PRODUCT !== productLine) {
+    if (tmp3.APPLICATION !== productLine) {
+      if (tmp3.BOOST !== productLine) {
+        if (tmp3.GUILD_ROLE !== productLine) {
+          if (tmp3.GUILD_PRODUCT !== productLine) {
             obj = isDiscordFrontendDevelopment;
             obj.assertNever(sku.productLine);
           }

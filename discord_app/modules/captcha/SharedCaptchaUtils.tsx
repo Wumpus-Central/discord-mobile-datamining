@@ -1,5 +1,5 @@
 // discord_app/modules/captcha/SharedCaptchaUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS from "CaptchaConstants.tsx";
 import useCaptchaStore from "CaptchaStore.tsx";
 
@@ -12,11 +12,12 @@ const prototype = function CaptchaCancelError() {
 }.prototype;
 class prototype extends Error {
 }
-const result = obj132.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
+const result = set.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
 
 export const CaptchaError = { CANCEL: "cancel", ERROR: "error", EXPIRED: "expired" };
 export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromResponse(body) {
-  const obj = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
+  let obj = { captchaService: body.captcha_service, sitekey: body.captcha_sitekey, captchaSessionId: body.captcha_session_id, options: null };
+  obj = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
   let flag = body.should_serve_invisible;
   if (flag == null) {
     flag = false;

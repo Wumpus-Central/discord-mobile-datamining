@@ -1,7 +1,8 @@
 // discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import fromDatabaseTransaction from "Table.tsx";
 import TableId from "../types/index.tsx";
+import { TableId } from "../types/index.tsx";
 
 let GuildEntityDao;
 class GuildEntityDao {
@@ -81,7 +82,7 @@ prototype["put"] = function put(arg0, arg1) {
   dependencyMap = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = require("../types/index.tsx").ConflictOptions.Replace;
+    Replace = _TableId.ConflictOptions.Replace;
   }
   return this.transaction((put) => put.put(closure_0, closure_1, Replace), "" + this.prefix + " put");
 };
@@ -90,7 +91,7 @@ prototype["putAll"] = function putAll(arg0, arg1) {
   dependencyMap = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = require("../types/index.tsx").ConflictOptions.Replace;
+    Replace = _TableId.ConflictOptions.Replace;
   }
   return this.transaction((putAll) => putAll.putAll(closure_0, closure_1, Replace), "" + this.prefix + " putAll");
 };
@@ -113,12 +114,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof GuildEntityDaoTransaction !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(GuildEntityDaoTransaction.prototype);
+    const obj = Object.create(closure_1_3.prototype);
     obj.transaction = transaction;
-    return callback(obj);
+    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
@@ -185,10 +186,10 @@ prototype2["putAll"] = function putAll(arg0, arr) {
   const _require = arg0;
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = require("../types/index.tsx").ConflictOptions.Replace;
+    Replace = _TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  return transaction.putAll(arr.map((item, index) => GuildEntityDao.cell(closure_0, item, null)), Replace);
+  return transaction.putAll(arr.map((arg0) => closure_1_2.cell(closure_0, arg0, null)), Replace);
 };
 prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
   this.delete(arg0);
@@ -218,7 +219,7 @@ prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
   const transaction = this.transaction;
   return transaction.deleteGeneration([], arg0, arg1);
 };
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
 
 export { GuildEntityDao };
 export { GuildEntityDaoTransaction };

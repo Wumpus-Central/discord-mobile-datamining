@@ -1,37 +1,36 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx
-import obj132Default from "../../../utils/Durations.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/SlayerStorefront.messages.js";
 import tDefault from "../../../../_runtime/03975_t.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 
-require = fn;
-function getLimitedOfferTimeLeft(closure_0) {
-  if (null == closure_0) {
+require = arg1;
+function getLimitedOfferTimeLeft(arg0) {
+  if (null == arg0) {
     return null;
   } else {
-    const diffResult = tDefault(closure_0).diff(tDefault(), "seconds");
+    const diffResult = tDefault(arg0).diff(tDefault(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
       const obj = { days: null, hours: null, minutes: null, seconds: null };
       const _Math = Math;
-      obj[0] = Math.floor(diffResult / obj132Default.Seconds.DAY);
+      obj[0] = Math.floor(diffResult / tmp5(687).Seconds.DAY);
       const _Math2 = Math;
-      const result = diffResult % obj132Default.Seconds.DAY;
-      obj[1] = Math.floor(result / obj132Default.Seconds.HOUR);
+      const result = diffResult % tmp5(687).Seconds.DAY;
+      obj[1] = Math.floor(result / tmp5(687).Seconds.HOUR);
       const _Math3 = Math;
-      const result1 = diffResult % obj132Default.Seconds.HOUR;
-      obj[2] = Math.floor(result1 / obj132Default.Seconds.MINUTE);
-      obj[3] = diffResult % obj132Default.Seconds.MINUTE;
+      const result1 = diffResult % tmp5(687).Seconds.HOUR;
+      obj[2] = Math.floor(result1 / tmp5(687).Seconds.MINUTE);
+      obj[3] = diffResult % tmp5(687).Seconds.MINUTE;
       tmp4 = obj;
     }
     return tmp4;
   }
 }
-function formatLimitedOfferTimeLeft(closure_0) {
-  const tmp = getLimitedOfferTimeLeft(closure_0);
+function formatLimitedOfferTimeLeft(arg0) {
+  const tmp = getLimitedOfferTimeLeft(arg0);
   if (null == tmp) {
     return null;
   } else {
@@ -56,16 +55,16 @@ function formatLimitedOfferTimeLeft(closure_0) {
     return formatToPlainStringResult;
   }
 }
-let result = require("obj132").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/SlayerStorefrontTimeUtils.tsx");
 
 export { getLimitedOfferTimeLeft };
 export { formatLimitedOfferTimeLeft };
 export const useTickingFormattedLimitedOfferTimeLeft = function useTickingFormattedLimitedOfferTimeLeft(endDate) {
   closure_0 = endDate;
-  const tmp = callback(React.useState(() => formatLimitedOfferTimeLeft(closure_0)), 2);
+  const tmp = callback(React.useState(() => closure_1_6(closure_0)), 2);
   importDefault = tmp[1];
   useIntervalDefault(() => {
-    callback(formatLimitedOfferTimeLeft(closure_0));
+    callback(closure_1_6(closure_0));
   }, 1000);
   return tmp[0];
 };

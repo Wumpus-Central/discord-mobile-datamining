@@ -1,9 +1,9 @@
 // discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
 
-let result = obj132.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
+let result = set.fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
 export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1, asset_id, width) {
   if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -16,9 +16,11 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
     const _URL = URL;
     const _HermesInternal = HermesInternal;
     str5 = new URL("" + sendRequest.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
+    const obj = sendRequest;
   }
   if (null != width) {
     const searchParams = str5.searchParams;
+    const obj2 = handleImageLoad;
     const result = searchParams.set("size", handleImageLoad.getBestMediaProxySize(width).toString());
     const str11 = handleImageLoad.getBestMediaProxySize(width);
   }

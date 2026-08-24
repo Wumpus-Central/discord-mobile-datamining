@@ -1,26 +1,27 @@
 // discord_app/modules/lobbies/LobbyUtils.tsx
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/lobbies/LobbyUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/lobbies/LobbyUtils.tsx");
 
-export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(closure_2, closure_0) {
+export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(channel, closure_0) {
   let obj = closure_0;
   if (closure_0 === undefined) {
-    obj = linkedLobby;
+    obj = closure_2;
   }
-  let tmp = null != linkedLobby;
+  let tmp = null != channel;
   if (tmp) {
-    let canResult = null != linkedLobby.linkedLobby;
+    let canResult = null != channel.linkedLobby;
     if (canResult) {
-      canResult = obj.can(Permissions.MANAGE_CHANNELS, linkedLobby);
+      canResult = obj.can(Permissions.MANAGE_CHANNELS, channel);
     }
     if (canResult) {
-      canResult = obj.can(Permissions.VIEW_CHANNEL, linkedLobby);
+      canResult = obj.can(Permissions.VIEW_CHANNEL, channel);
     }
     if (canResult) {
-      canResult = obj.can(Permissions.SEND_MESSAGES, linkedLobby);
+      canResult = obj.can(Permissions.SEND_MESSAGES, channel);
     }
     tmp = canResult;
   }
@@ -29,19 +30,19 @@ export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(closure_2, c
 export const useCanUnlinkLobbyChannel = function useCanUnlinkLobbyChannel(channel) {
   const _require = channel;
   const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
-      let tmp3 = null != linkedLobby;
+      let tmp3 = null != tmp;
       if (tmp3) {
-        let canResult = null != linkedLobby.linkedLobby;
+        let canResult = null != tmp.linkedLobby;
         if (canResult) {
-          canResult = closure_1_2.can(Permissions.MANAGE_CHANNELS, linkedLobby);
+          canResult = obj.can(closure_1_3.MANAGE_CHANNELS, tmp);
         }
         if (canResult) {
-          canResult = closure_1_2.can(Permissions.VIEW_CHANNEL, linkedLobby);
+          canResult = obj.can(closure_1_3.VIEW_CHANNEL, tmp);
         }
         if (canResult) {
-          canResult = closure_1_2.can(Permissions.SEND_MESSAGES, linkedLobby);
+          canResult = obj.can(closure_1_3.SEND_MESSAGES, tmp);
         }
         tmp3 = canResult;
       }

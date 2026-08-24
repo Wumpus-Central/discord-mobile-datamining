@@ -1,23 +1,23 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx
 import dispatcherDefault from "../../../../../../../Dispatcher.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
-import _slicedToArray from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { Image } from "../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import participantFromServer from "../../../../../../activities/EmbeddedActivitiesStore.tsx";
-import handleFetchEmbeddedActivityShelfSuccess from "../../../../../../applications/ApplicationAssetsStore.tsx";
+import closure_5 from "../../../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_6 from "../../../../../../applications/ApplicationAssetsStore.tsx";
 import { FetchState } from "../../../../../../applications/ApplicationAssetsStore.tsx";
-import addApplication from "../../../../../../applications/ApplicationStore.tsx";
-import fetchFingerprint from "../../../../../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../../../../../stores/ChannelStore.tsx";
-import updateInvite from "../../../../../../../stores/InviteStore.tsx";
-import markAllUserIdListsStale from "../../../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../../../stores/UserStore.tsx";
+import closure_8 from "../../../../../../applications/ApplicationStore.tsx";
+import closure_9 from "../../../../../../../stores/AuthenticationStore.tsx";
+import closure_10 from "../../../../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../../../../stores/InviteStore.tsx";
+import closure_12 from "../../../../../../../stores/RelationshipStore.tsx";
+import closure_13 from "../../../../../../../stores/UserStore.tsx";
 import { CodedLinkExtendedType } from "CodedLinksConstants.tsx";
 import { InviteTargetTypes } from "../../../../../../instant_invite/Constants.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_16 = ["embedded_cover"];
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
 
 export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivityInviteEmbed(inviteCode) {
   let id;
@@ -29,7 +29,8 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
     if (invite.target_type === InviteTargetTypes.EMBEDDED_APPLICATION) {
       if (null != target_application) {
         if (null == application.getApplication(target_application.id)) {
-          let obj = { type: "APPLICATION_UPDATE", application: null };
+          let obj = dispatcherDefault;
+          obj = { type: "APPLICATION_UPDATE", application: null };
           obj[1] = target_application;
           obj.dispatch(obj);
         }
@@ -91,7 +92,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           let tmp30 = null != id;
           if (tmp30) {
             embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(id);
-            const found = embeddedActivitiesForChannel.find((item, index) => item.applicationId === id);
+            const found = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === id);
             let hasItem;
             if (found != null) {
               const userIds = found.userIds;

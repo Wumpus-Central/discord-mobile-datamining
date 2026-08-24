@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/ActionBatcher.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
 let ActionBatcher;
 class ActionBatcher {
@@ -27,11 +27,13 @@ ActionBatcher["flush"] = function flush(arg0, arg1) {
     if (tmp2) {
       let shouldFlushResult = null == arg0;
       if (!shouldFlushResult) {
+        let tmp4 = nextResult;
         shouldFlushResult = obj.shouldFlush(arg0, arg1);
       }
       tmp2 = shouldFlushResult;
     }
     if (tmp2) {
+      let tmp5 = nextResult;
       let flushResult = obj.flush();
     }
     continue;
@@ -51,6 +53,6 @@ ActionBatcher.prototype["flush"] = function flush() {
   }
 };
 ActionBatcher.batchers = [];
-const result = obj132.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
+const result = set.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
 
 export default ActionBatcher;

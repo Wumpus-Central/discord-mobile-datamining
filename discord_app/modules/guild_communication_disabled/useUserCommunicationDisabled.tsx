@@ -1,23 +1,24 @@
 // discord_app/modules/guild_communication_disabled/useUserCommunicationDisabled.tsx
 import isCommunicationDisabled from "CommunicationDisabledUtils.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/UserStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
 
 export default function useUserCommunicationDisabled(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   const items = [closure_2];
   const items1 = [arg1, arg0];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
-      if (null != id) {
-        member = closure_1_2.getMember(tmp2, id);
+      if (null != tmp) {
+        member = closure_1_2.getMember(tmp2, tmp);
       }
     }
     return member;
@@ -30,8 +31,9 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
     prop = null;
   }
   const items2 = [prop, ];
-  const obj = initialize;
-  items2[1] = require("CommunicationDisabledUtils.tsx").isMemberCommunicationDisabled(stateFromStores);
+  const obj = _initialize;
+  const tmp = _require;
+  items2[1] = _isCommunicationDisabled.isMemberCommunicationDisabled(stateFromStores);
   return items2;
 };
 export const useCurrentUserCommunicationDisabled = function useCurrentUserCommunicationDisabled(guild_id) {
@@ -49,8 +51,8 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     let member = null;
     if (null != closure_1) {
       member = null;
-      if (null != id) {
-        member = closure_1_2.getMember(tmp2, id);
+      if (null != tmp) {
+        member = closure_1_2.getMember(tmp2, tmp);
       }
     }
     return member;
@@ -72,7 +74,7 @@ export const userCommunicationDisabled = function userCommunicationDisabled(id, 
   if (null != guildId) {
     member = null;
     if (null != id) {
-      member = member.getMember(guildId, id);
+      member = closure_2.getMember(guildId, id);
     }
   }
   let prop;

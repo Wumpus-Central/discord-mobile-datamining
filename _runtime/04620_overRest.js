@@ -16,6 +16,7 @@ export default function overRest(arg0, arg1, arg2) {
     let num = 0;
     if (0 < tmp2) {
       do {
+        let tmp4 = table;
         ArrayResult[num] = arguments[table + num];
         num = num + 1;
         tmp = table;

@@ -1,7 +1,7 @@
 // discord_app/intl/preloader.tsx
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 function _preloadAllIntlMessageFiles() {
   const self = this;
   const tmp = callback(function*() {
@@ -51,7 +51,7 @@ function _preloadAllIntlMessageFiles() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("intl/preloader.tsx");
+const result = require("set").fileFinishedImporting("intl/preloader.tsx");
 
 export const preloadAllIntlMessageFiles = function preloadAllIntlMessageFiles() {
   const self = this;

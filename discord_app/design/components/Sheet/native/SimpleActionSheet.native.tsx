@@ -1,12 +1,10 @@
 // discord_app/design/components/Sheet/native/SimpleActionSheet.native.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import RedesignBottomSheetTitleHeaderBase from "BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "ActionSheet.native.tsx";
-import ActionSheetCloseButton from "ActionSheetCloseButton.native.tsx";
 import ActionSheetRowIcon from "ActionSheetRow.native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 class SimpleActionSheet {
   constructor(arg0) {
     ({ hideActionSheet, header, options } = global);
@@ -32,14 +30,14 @@ class SimpleActionSheet {
     items[0] = tmp5Result1;
     obj2 = {
       hasIcons: global.hasIcons,
-      children: options.map((item, index) => {
-            ({ icon, IconComponent, onPress: closure_0 } = item);
-            ({ label, isDestructive } = item);
+      children: options.map((arg0, arg1) => {
+            ({ icon, IconComponent, onPress: closure_0 } = arg0);
+            ({ label, isDestructive } = arg0);
             if (null != icon) {
               let obj = { source: null, IconComponent: null };
               obj[0] = icon;
               obj[1] = IconComponent;
-              const tmp = closure_1_2(ActionSheetRowIcon.ActionSheetRow.Icon, obj);
+              const tmp = closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow.Icon, obj);
             }
             obj = { icon: tmp, variant: null, label: null, onPress: null };
             let str = "default";
@@ -52,7 +50,7 @@ class SimpleActionSheet {
               closure_1_0();
               callback();
             };
-            return closure_1_2(ActionSheetRowIcon.ActionSheetRow, obj, index);
+            return closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow, obj, arg1);
           })
     };
     items[1] = jsx(require("ActionSheetRowIcon").ActionSheetRow.Group, obj2);
@@ -62,7 +60,7 @@ class SimpleActionSheet {
 }
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/SimpleActionSheet.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/SimpleActionSheet.native.tsx");
 
 export default SimpleActionSheet;
 export { SimpleActionSheet };

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx
-import computeRolesForGuild from "SubscriptionRoleStore.tsx";
+import closure_0 from "SubscriptionRoleStore.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");
 
 export const isRoleSubscriptionEmoji = function isRoleSubscriptionEmoji(roles, id) {
   roles = undefined;
@@ -13,58 +13,58 @@ export const isRoleSubscriptionEmoji = function isRoleSubscriptionEmoji(roles, i
       if (null != id) {
         authStore = authStore.getSubscriptionRoles(id);
         roles = roles.roles;
-        return roles.some((item, index) => set.has(item));
+        return roles.some((arg0) => set.has(arg0));
       }
     }
   }
   return false;
 };
-export const isPurchasableRoleSubscriptionEmoji = function isPurchasableRoleSubscriptionEmoji(customEmojiFromJoinedGuild) {
+export const isPurchasableRoleSubscriptionEmoji = function isPurchasableRoleSubscriptionEmoji(emoji) {
   let roles;
-  if (customEmojiFromJoinedGuild != null) {
-    roles = customEmojiFromJoinedGuild.roles;
+  if (emoji != null) {
+    roles = emoji.roles;
   }
   if (null != roles) {
-    if (0 !== customEmojiFromJoinedGuild.roles.length) {
-      if (null != customEmojiFromJoinedGuild.guildId) {
-        authStore = authStore.getPurchasableSubscriptionRoles(customEmojiFromJoinedGuild.guildId);
-        roles = customEmojiFromJoinedGuild.roles;
-        return roles.some((item, index) => set.has(item));
+    if (0 !== emoji.roles.length) {
+      if (null != emoji.guildId) {
+        authStore = authStore.getPurchasableSubscriptionRoles(emoji.guildId);
+        roles = emoji.roles;
+        return roles.some((arg0) => set.has(arg0));
       }
     }
   }
   return false;
 };
-export const isUnusableRoleSubscriptionEmoji = function isUnusableRoleSubscriptionEmoji(customEmojiFromJoinedGuild, guildId) {
+export const isUnusableRoleSubscriptionEmoji = function isUnusableRoleSubscriptionEmoji(emoji, guildId) {
   let roles;
-  if (customEmojiFromJoinedGuild != null) {
-    roles = customEmojiFromJoinedGuild.roles;
+  if (emoji != null) {
+    roles = emoji.roles;
   }
   if (null != roles) {
-    if (0 !== customEmojiFromJoinedGuild.roles.length) {
-      if (null != customEmojiFromJoinedGuild.guildId) {
+    if (0 !== emoji.roles.length) {
+      if (null != emoji.guildId) {
         let roles1;
-        if (customEmojiFromJoinedGuild != null) {
-          roles1 = customEmojiFromJoinedGuild.roles;
+        if (emoji != null) {
+          roles1 = emoji.roles;
         }
         let flag2 = false;
         if (null != roles1) {
           flag2 = false;
-          if (0 !== customEmojiFromJoinedGuild.roles.length) {
+          if (0 !== emoji.roles.length) {
             flag2 = false;
-            if (null != customEmojiFromJoinedGuild.guildId) {
-              authStore = authStore.getPurchasableSubscriptionRoles(customEmojiFromJoinedGuild.guildId);
-              roles = customEmojiFromJoinedGuild.roles;
-              flag2 = roles.some((item, index) => set.has(item));
+            if (null != emoji.guildId) {
+              authStore = authStore.getPurchasableSubscriptionRoles(emoji.guildId);
+              roles = emoji.roles;
+              flag2 = roles.some((arg0) => set.has(arg0));
             }
           }
         }
         if (flag2) {
-          authStore = authStore.getUserSubscriptionRoles(customEmojiFromJoinedGuild.guildId);
-          const roles2 = customEmojiFromJoinedGuild.roles;
-          let userIsAdmin = guildId === customEmojiFromJoinedGuild.guildId;
+          authStore = authStore.getUserSubscriptionRoles(emoji.guildId);
+          const roles2 = emoji.roles;
+          let userIsAdmin = guildId === emoji.guildId;
           if (userIsAdmin) {
-            userIsAdmin = obj.getUserIsAdmin(customEmojiFromJoinedGuild.guildId);
+            userIsAdmin = obj.getUserIsAdmin(emoji.guildId);
           }
           if (!someResult) {
             if (!userIsAdmin) {
@@ -72,7 +72,7 @@ export const isUnusableRoleSubscriptionEmoji = function isUnusableRoleSubscripti
             }
           }
           obj = authStore;
-          someResult = roles2.some((item, index) => set.has(item));
+          someResult = roles2.some((arg0) => set.has(arg0));
         }
         return false;
       }

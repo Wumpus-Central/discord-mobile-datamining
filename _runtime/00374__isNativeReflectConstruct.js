@@ -3,10 +3,10 @@ import normalizeColorDefault from "00051_normalizeColor.js";
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00356__isNativeReflectConstruct.js";
 import _isNativeReflectConstructDefault2 from "00366__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import closure_6 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 let AnimatedColor = arg1;
@@ -189,7 +189,8 @@ let items = [
   {
     key: "setValue",
     value: function setValue(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       importDefault = false;
       if (this.__isNative) {
         const API = importDefault(self[9]).API;
@@ -204,32 +205,32 @@ let items = [
       const result1 = self._withSuspendedCallbacks(() => {
         let tmp2 = closure_0;
         if (closure_0) {
-          tmp2 = typeof closure_0.r === "number";
+          tmp2 = typeof tmp.r === "number";
         }
         if (tmp2) {
-          tmp2 = typeof closure_0.g === "number";
+          tmp2 = typeof tmp.g === "number";
         }
         if (tmp2) {
-          tmp2 = typeof closure_0.b === "number";
+          tmp2 = typeof tmp.b === "number";
         }
         if (tmp2) {
-          tmp2 = typeof closure_0.a === "number";
+          tmp2 = typeof tmp.a === "number";
         }
         if (tmp2) {
-          const r = self.r;
-          r.setValue(closure_0.r);
-          const g = self.g;
-          g.setValue(closure_0.g);
-          const b = self.b;
-          b.setValue(closure_0.b);
-          const a = self.a;
-          a.setValue(closure_0.a);
-          if (null != self.nativeColor) {
-            self.nativeColor = null;
+          const r = tmp3.r;
+          r.setValue(tmp.r);
+          const g = tmp3.g;
+          g.setValue(tmp.g);
+          const b = tmp3.b;
+          b.setValue(tmp.b);
+          const a = tmp3.a;
+          a.setValue(tmp.a);
+          if (null != tmp3.nativeColor) {
+            tmp3.nativeColor = null;
             c1 = true;
           }
-        } else if (self.nativeColor !== closure_0) {
-          self.nativeColor = closure_0;
+        } else if (tmp3.nativeColor !== tmp) {
+          tmp3.nativeColor = tmp;
           c1 = true;
         }
       });
@@ -289,7 +290,7 @@ let items = [
   },
   {
     key: "stopAnimation",
-    value: function stopAnimation(fn) {
+    value: function stopAnimation(arg0) {
       const self = this;
       const r = this.r;
       r.stopAnimation();
@@ -299,14 +300,14 @@ let items = [
       b.stopAnimation();
       const a = this.a;
       a.stopAnimation();
-      if (fn) {
-        fn(self.__getValue());
+      if (arg0) {
+        arg0(self.__getValue());
       }
     }
   },
   {
     key: "resetAnimation",
-    value: function resetAnimation(fn) {
+    value: function resetAnimation(arg0) {
       const self = this;
       const r = this.r;
       r.resetAnimation();
@@ -316,8 +317,8 @@ let items = [
       b.resetAnimation();
       const a = this.a;
       a.resetAnimation();
-      if (fn) {
-        fn(self.__getValue());
+      if (arg0) {
+        arg0(self.__getValue());
       }
     }
   },
@@ -352,7 +353,8 @@ let items = [
       const a = this.a;
       a.__addChild(this);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__attach", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -371,7 +373,8 @@ let items = [
       const a = this.a;
       a.__removeChild(this);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__detach", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -380,9 +383,9 @@ let items = [
   },
   {
     key: "_withSuspendedCallbacks",
-    value: function _withSuspendedCallbacks(fn) {
+    value: function _withSuspendedCallbacks(arg0) {
       this._suspendCallbacks = this._suspendCallbacks + 1;
-      fn();
+      arg0();
       this._suspendCallbacks = this._suspendCallbacks - 1;
     }
   },
@@ -412,7 +415,8 @@ let items = [
       const a = this.a;
       a.__makeNative(arg0);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__makeNative", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

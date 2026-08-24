@@ -1,15 +1,16 @@
 // discord_app/modules/hub/HubUnreadUtils.tsx
-import isFetching from "../directory_channels/GuildDirectoryStore.tsx";
-import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
+import closure_3 from "../directory_channels/GuildDirectoryStore.tsx";
+import closure_4 from "../../stores/ReadStateStore.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export const useHubUnreadCount = function useHubUnreadCount(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_4];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     if (null == callback) {
       return 0;
     } else {
@@ -24,12 +25,12 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
         }
         const values = Object.values(directoryEntries);
         const _Math = Math;
-        const found = values.filter((item, index) => {
-          const time = new Date(item.createdAt).getTime();
-          const date = new Date(item.createdAt);
+        const found = values.filter((createdAt) => {
+          const time = new Date(createdAt.createdAt).getTime();
+          const date = new Date(createdAt.createdAt);
           return time > closure_1_1(closure_1_2[3]).extractTimestamp(closure_0);
         });
-        return Math.min(callback(dependencyMap[4]).MAX_CATEGORY_SERVERS, found.length);
+        return Math.min(callback(closure_1_2[4]).MAX_CATEGORY_SERVERS, found.length);
       }
     }
   }, items1);

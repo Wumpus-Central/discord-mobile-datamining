@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/UserOfferManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import emitChanges from "../../../stores/billing/UserOfferStore.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/billing/UserOfferStore.tsx";
 import { PaymentGateways } from "../../../../discord_common/js/shared/Constants.tsx";
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 let prototype = function UserOfferManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -24,14 +24,14 @@ let prototype = function UserOfferManager() {
     }
     let isPremiumResult = null == currentUser || !currentUser.verified;
     if (!isPremiumResult) {
-      let tmp2Result = applyArgumentsResult(table[5]);
+      let tmp2Result = tmp2(tmp3[5]);
       isPremiumResult = tmp2Result.isPremium(currentUser);
     }
     if (!isPremiumResult) {
       isPremiumResult = fetchingOffer.isFetchingOffer();
     }
     if (!isPremiumResult) {
-      tmp2Result = applyArgumentsResult(table[6]);
+      tmp2Result = tmp2(tmp3[6]);
       const userOffer = tmp2Result.fetchUserOffer("MobilePremiumOfferManager", true, tmp4);
     }
   };
@@ -40,6 +40,6 @@ let prototype = function UserOfferManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
 
 export default prototype;

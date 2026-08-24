@@ -1,10 +1,10 @@
 // discord_app/experiments/SwipeToReplyExperiment.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import LAUNCH_PAD_SPRING_CONFIG from "../modules/launchpad/native/LaunchPadConstants.tsx";
 import useLaunchPadTypeDefault from "../modules/launchpad/native/useLaunchPadType.tsx";
 
 const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
-const result = obj132.fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");
+const result = set.fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");
 
 export const useIsMessageSwipeActionsEnabled = function useIsMessageSwipeActionsEnabled() {
   const tmp = useLaunchPadTypeDefault() === LaunchPadTypes.GESTURE_FULL;

@@ -11,7 +11,7 @@ export const useViewRefHandler = function useViewRefHandler(current, detectorUpd
     if (null !== viewRef) {
       current.viewRef = viewRef;
       if (-1 === current.previousViewTag) {
-        current.previousViewTag = current(detectorUpdater[1])(current.viewRef);
+        tmp.previousViewTag = current(detectorUpdater[1])(tmp.viewRef);
       }
       if (!current.firstRender) {
         detectorUpdater(true);

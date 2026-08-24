@@ -1,10 +1,10 @@
 // discord_app/modules/guilds_bar/GuildsTree.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import apply from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 
 let obj = { ROOT: "root", FOLDER: "folder", GUILD: "guild" };
-const result = obj132.fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
+const result = set.fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
 class GuildsTree {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -20,36 +20,41 @@ prototype["getSnapshot"] = function getSnapshot() {
   const self = this;
   obj = {};
   for (const key10005 in this.nodes) {
+    let tmp = key10005;
     let tmp2 = self.nodes[key10005];
     obj = {};
+    let tmp3 = obj;
+    let tmp4 = tmp2;
     let merged = Object.assign(tmp2);
     obj.children = undefined;
     let children = tmp2.children;
-    obj.childrenIds = children.map((item, index) => item.id);
+    obj.childrenIds = children.map((id) => id.id);
     obj[key10005] = obj;
     continue;
   }
-  obj = { rootChildrenIds: children1.map((item, index) => item.id), nodes: obj };
+  obj = { rootChildrenIds: children1.map((id) => id.id), nodes: obj };
   children1 = self.root.children;
   return obj;
 };
 prototype["loadSnapshot"] = function loadSnapshot(tree) {
-  const self = this;
+  let self = this;
+  self = this;
   this.nodes = tree.nodes;
   for (const key10006 in this.nodes) {
+    let tmp3 = key10006;
     let tmp4 = self.nodes[key10006];
     if (!("childrenIds" in tmp4)) {
       continue;
     } else {
       let childrenIds = tmp4.childrenIds;
-      tmp4.children = childrenIds.map((item, index) => self.nodes[item]);
+      tmp4.children = childrenIds.map((arg0) => self.nodes[arg0]);
       delete tmp2[tmp];
       continue;
     }
     continue;
   }
   const rootChildrenIds = tree.rootChildrenIds;
-  self.root.children = rootChildrenIds.map((item, index) => self.nodes[item]);
+  self.root.children = rootChildrenIds.map((arg0) => self.nodes[arg0]);
   self.version = self.version + 1;
 };
 prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
@@ -71,6 +76,8 @@ prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
     tmp7 = root.type === tmp6.FOLDER;
   }
   _modDef38(!tmp7, "[GUILDS TREE] Tried moving a folder (" + node.id + ") inside of another folder (" + root.id + ")");
+  const tmp3 = importDefault;
+  const tmp5 = _modDef38;
   _modDef38(index >= 0, "[GUILDS TREE] target node (" + node1.id + ") did not exist within its specified parent (" + node1.parentId + ")");
   let num = 0;
   if (flag) {
@@ -92,13 +99,13 @@ prototype["moveInto"] = function moveInto(node, c0, flag) {
   this._pluckNode(node);
   let num = 0;
   if (flag) {
-    num = _require.children.length;
+    num = c0.children.length;
   }
   const items = [...c0.children];
-  _require.children = items;
-  const children = _require.children;
+  c0.children = items;
+  const children = c0.children;
   children.splice(num, 0, node);
-  node.parentId = _require.id;
+  node.parentId = c0.id;
   self.version = self.version + 1;
   return self;
 };
@@ -196,38 +203,38 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
     items1 = [];
   } else {
     const children = root.children;
-    const mapped = children.map((item, index) => {
-      if (item.type === constants.GUILD) {
-        let items = [item];
+    const mapped = children.map((type) => {
+      if (type.type === constants.GUILD) {
+        let items = [type];
         let items1 = items;
-      } else if (null == item.children) {
+      } else if (null == type.children) {
         items1 = [];
       } else {
-        let children = item.children;
-        let mapped = children.map((item, index) => {
-          if (item.type === constants.GUILD) {
-            let items = [item];
+        let children = type.children;
+        let mapped = children.map((type) => {
+          if (type.type === constants.GUILD) {
+            let items = [type];
             let items1 = items;
-          } else if (null == item.children) {
+          } else if (null == type.children) {
             items1 = [];
           } else {
-            let children = item.children;
-            let mapped = children.map((item, index) => {
-              if (item.type === constants.GUILD) {
-                let items = [item];
+            let children = type.children;
+            let mapped = children.map((type) => {
+              if (type.type === constants.GUILD) {
+                let items = [type];
                 let items1 = items;
-              } else if (null == item.children) {
+              } else if (null == type.children) {
                 items1 = [];
               } else {
-                let children = item.children;
-                let mapped = children.map((item, index) => {
-                  if (item.type === constants.GUILD) {
-                    let items = [item];
+                let children = type.children;
+                let mapped = children.map((type) => {
+                  if (type.type === constants.GUILD) {
+                    let items = [type];
                     let items1 = items;
-                  } else if (null == item.children) {
+                  } else if (null == type.children) {
                     items1 = [];
                   } else {
-                    let children = item.children;
+                    let children = type.children;
                     let mapped = children.map(() => { ... });
                     items1 = mapped.flat();
                   }
@@ -259,8 +266,10 @@ prototype["_pluckNode"] = function _pluckNode(parentId) {
   }
   _modDef38(null != root, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which doesn't exist in the tree");
   const children = root.children;
+  const tmp = _modDef38;
+  const tmp2 = null != root;
   _modDef38(null != children, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which contains no children");
-  root.children = children.filter((item, index) => item !== closure_0);
+  root.children = children.filter((arg0) => arg0 !== closure_0);
   parentId.parentId = undefined;
   self.version = self.version + 1;
 };

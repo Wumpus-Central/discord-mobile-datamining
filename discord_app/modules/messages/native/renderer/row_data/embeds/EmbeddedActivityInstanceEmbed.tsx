@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx
-import participantFromServer from "../../../../../activities/EmbeddedActivitiesStore.tsx";
-import addApplication from "../../../../../applications/ApplicationStore.tsx";
-import fetchFingerprint from "../../../../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../../../../stores/ChannelStore.tsx";
-import sortActivity from "../../../../../../stores/PresenceStore.tsx";
-import mergeGuildAvatar from "../../../../../../stores/UserStore.tsx";
+import closure_2 from "../../../../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../../../../applications/ApplicationStore.tsx";
+import closure_4 from "../../../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../../../../stores/PresenceStore.tsx";
+import closure_7 from "../../../../../../stores/UserStore.tsx";
 import { CodedLinkExtendedType } from "coded_links/CodedLinksConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
 
 export const createActivityInstanceEmbed = function createActivityInstanceEmbed(message) {
   ({ application, activityInstance } = message);
@@ -39,7 +39,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             str = "";
           }
           embeddedActivitiesForChannelIncludingHidden = embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(str);
-          const found = embeddedActivitiesForChannelIncludingHidden.find((item, index) => item.applicationId === id.id);
+          const found = embeddedActivitiesForChannelIncludingHidden.find((applicationId) => applicationId.applicationId === id.id);
           const currentEmbeddedActivity = obj4.getCurrentEmbeddedActivity();
           let tmp5Result = tmp5(12767);
           let obj = { activity: null, applicationId: null, guildId: null, channelId: null };
@@ -57,7 +57,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           }
           let stringResult = null;
           if (null != value) {
-            const findActivityResult = closure_6.findActivity(value, (application_id) => application_id.application_id === id);
+            const findActivityResult = obj8.findActivity(value, (application_id) => application_id.application_id === id);
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -135,6 +135,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           obj2[4] = str2;
           obj2[8] = appIconSrc;
           obj13 = application;
+          obj8 = closure_6;
           const tmp5Result1 = tmp5(11129);
           const obj3 = { applicationId: null, referrerId: null };
           obj3[0] = application.id;

@@ -1,9 +1,9 @@
 // _runtime/01884_t.js
 import cancelAnimation from "01654_cancelAnimation.js";
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
-fn = function t(arg0) {
+const fn = function t(arg0, arg1, arg2) {
   let interpolateResult = arg0;
   if (0 !== arg2) {
     interpolateResult = arg0;
@@ -12,6 +12,7 @@ fn = function t(arg0) {
       const _Math = Math;
       const items1 = [0, Math.max(arg1 - arg2, 0)];
       interpolateResult = cancelAnimation.interpolate(arg0, items, items1);
+      const obj = cancelAnimation;
     }
   }
   return interpolateResult;

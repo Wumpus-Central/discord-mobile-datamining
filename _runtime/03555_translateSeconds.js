@@ -27,9 +27,11 @@ function translate(arg0, arg1, arg2, arg3) {
     if (!arg1) {
       const sum = text + parts[0];
     }
+    const str7 = dependencyMap[arg2];
   } else if (arg1) {
     if (arg3) {
       let sum1 = text + dependencyMap[arg2].split("_")[1];
+      const str5 = dependencyMap[arg2];
     } else {
       const result = arg0 % 10;
       let tmp8 = result === 0;
@@ -42,6 +44,7 @@ function translate(arg0, arg1, arg2, arg3) {
       }
       const parts1 = dependencyMap[arg2].split("_");
       sum1 = text + (tmp8 ? parts1[1] : parts1[2]);
+      const str3 = dependencyMap[arg2];
     }
   } else {
     const result1 = arg0 % 10;

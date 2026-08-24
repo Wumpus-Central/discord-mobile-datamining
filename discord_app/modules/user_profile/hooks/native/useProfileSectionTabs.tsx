@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/hooks/native/useProfileSectionTabs.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../../_runtime/00019_noop.js";
 import { UserProfileSections } from "../../Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
 export function useProfileTabIndices(arg0, arg1) {
   let num = -1;
@@ -26,13 +26,14 @@ export const useProfileSectionTabs = function useProfileSectionTabs(boardTabInde
   ({ initialUserProfileSection: closure_0, wishlistTabIndex } = boardTabIndex);
   boardTabIndex = boardTabIndex.boardTabIndex;
   const onTabChange = boardTabIndex.onTabChange;
+  c4 = undefined;
   let num2;
   let obj = wishlistTabIndex;
   [tmp2, tmp3] = callback(wishlistTabIndex.useState(() => {
     if (boardTabIndex.WISHLIST === closure_0) {
-      return boardTabIndex.WISHLIST;
+      return tmp2.WISHLIST;
     } else {
-      return boardTabIndex.WIDGETS === tmp ? boardTabIndex.WIDGETS : boardTabIndex.MAIN;
+      return tmp2.WIDGETS === tmp ? tmp2.WIDGETS : tmp2.MAIN;
     }
   }), 2);
   c4 = tmp3;

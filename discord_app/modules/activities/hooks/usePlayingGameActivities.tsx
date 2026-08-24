@@ -1,12 +1,12 @@
 // discord_app/modules/activities/hooks/usePlayingGameActivities.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import sortActivity from "../../../stores/PresenceStore.tsx";
-import filterPlayingActivities from "../../../stores/SelfPresenceStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../stores/SelfPresenceStore.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_7 = [];
-const result = require("obj132").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
 
 export default function usePlayingGameActivities(arg0, arg1) {
   const _require = arg0;
@@ -15,8 +15,9 @@ export default function usePlayingGameActivities(arg0, arg1) {
   if (arg2 === undefined) {
     flag = true;
   }
+  let stateFromStores;
   const items = [closure_6, closure_5, closure_4];
-  const stateFromStores = _require(flag[4]).useStateFromStores(items, () => {
+  stateFromStores = _require(flag[4]).useStateFromStores(items, () => {
     if (flag) {
       if (closure_1_4.getId() === closure_0) {
         let activities = closure_1_6.getActivities();

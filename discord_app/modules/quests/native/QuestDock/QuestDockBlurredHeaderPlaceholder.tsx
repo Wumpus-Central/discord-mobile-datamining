@@ -4,19 +4,20 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import { QuestDockMode } from "../../QuestConstants.tsx";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QUEST_DOCK_COLLAPSED_HEIGHT);
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let obj = {};
+let obj = { image: null, overlay: null };
+obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.height = QUEST_DOCK_EXPANDED_HEIGHT;
 obj.top = -QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED;
 obj[0] = obj;
-const createCacheKey = {};
+createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = "rgba(38, 39, 50, 0.3)";
 createCacheKey.height = QUEST_DOCK_EXPANDED_HEIGHT;
@@ -58,6 +59,6 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   obj[0] = items2;
   return callback2(closure_8, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx");
 
 export default memoResult;

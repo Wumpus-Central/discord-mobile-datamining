@@ -1,31 +1,32 @@
 // discord_app/modules/game_server/OwnedGameServersStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import str11 from "GameServerConstants.tsx";
 
 function handleGameServerUpsert(gameServer) {
+  gameServer = gameServer.gameServer;
   gameServer = undefined;
   if (null == gameServer.guildId) {
-    if (-1 === mapped.findIndex((item, index) => item.id === gameServer.id)) {
+    if (-1 === mapped.findIndex((id) => id.id === gameServer.id)) {
       const items = [];
       items[HermesBuiltin.arraySpread(mapped, 0)] = gameServer;
       mapped = items;
     } else {
-      mapped = mapped.map((item, index) => {
-        let tmp2 = item;
-        if (item.id === gameServer.id) {
-          let tmp4 = gameServer;
-          if (null == gameServer.subscription_id) {
+      mapped = mapped.map((id) => {
+        let tmp2 = id;
+        if (id.id === gameServer.id) {
+          let tmp4 = tmp;
+          if (null == tmp.subscription_id) {
             let subscription_id;
-            if (item != null) {
-              subscription_id = item.subscription_id;
+            if (id != null) {
+              subscription_id = id.subscription_id;
             }
-            tmp4 = gameServer;
+            tmp4 = tmp;
             if (null != subscription_id) {
               const obj = {};
-              const merged = Object.assign(gameServer);
-              obj.subscription_id = item.subscription_id;
+              const merged = Object.assign(tmp);
+              obj.subscription_id = id.subscription_id;
               tmp4 = obj;
             }
           }
@@ -56,19 +57,19 @@ const ownedGameServersStore = new OwnedGameServersStore(dispatcherDefault, {
   },
   GAME_SERVER_FETCH_MY_SERVERS_SUCCESS: function handleFetchMyServersSuccess(arg0) {
     ({ gameServers, maxServers } = arg0);
-    closure_1 = gameServers.map((item, index) => {
-      closure_0 = item;
-      const found = closure_1.find((item, index) => item.id === item.id);
-      let tmp2 = item;
-      if (null == item.subscription_id) {
-        let subscription_id;
+    closure_1 = gameServers.map((subscription_id) => {
+      closure_0 = subscription_id;
+      const found = closure_1.find((id) => id.id === subscription_id.id);
+      let tmp2 = subscription_id;
+      if (null == subscription_id.subscription_id) {
+        subscription_id = undefined;
         if (found != null) {
           subscription_id = found.subscription_id;
         }
-        tmp2 = item;
+        tmp2 = subscription_id;
         if (null != subscription_id) {
           const obj = {};
-          const merged = Object.assign(item);
+          const merged = Object.assign(subscription_id);
           obj.subscription_id = found.subscription_id;
           tmp2 = obj;
         }
@@ -84,10 +85,10 @@ const ownedGameServersStore = new OwnedGameServersStore(dispatcherDefault, {
   GAME_SERVER_DELETE: function handleGameServerDeleted(gameServerId) {
     gameServerId = gameServerId.gameServerId;
     if (null == gameServerId.guildId) {
-      closure_1 = closure_1.filter((item, index) => item.id !== gameServerId);
+      closure_1 = closure_1.filter((id) => id.id !== gameServerId);
     }
   }
 });
-const result = obj132.fileFinishedImporting("modules/game_server/OwnedGameServersStore.tsx");
+const result = set.fileFinishedImporting("modules/game_server/OwnedGameServersStore.tsx");
 
 export default ownedGameServersStore;

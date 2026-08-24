@@ -2,15 +2,15 @@
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import _modDef11922 from "../../hub/native/components/HubEmailConnectionModalActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ContactSyncModes from "../../contact_sync/native/ContactSyncModalStore.tsx";
-import set from "../../../stores/ConnectedAccountsStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_8 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
 import { NUF_DISCOVERABILITY_MODAL_KEY as closure_10 } from "../NUFConstants.tsx";
 import { PlatformTypes } from "../../../Constants.tsx";
 import { IN_APP_GUILD_TEMPLATES_MODAL_KEY as closure_12 } from "../../create_guild/native/CreateGuildConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function _startContactSyncForDiscoverability() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -57,11 +57,11 @@ function _startContactSyncForDiscoverability() {
                 error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
-                closure_1_6(callback);
+                closure_1_6(tmp31);
                 let obj4 = closure_1_1(11857);
                 obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
-                obj1[1] = callback;
+                obj1[1] = tmp31;
                 dependencyMap = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
@@ -115,7 +115,7 @@ function _startContactSyncForDiscoverability() {
   return applyArgumentsResult;
 }
 ({ setAllowEmail: c4, setAllowSync: c5, setName: closure_6, useContactSyncModalStore: error } = ContactSyncModes);
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
 export const startOnboarding = function startOnboarding() {
   dispatcherDefault.dispatch({ type: "ONBOARDING_START" });
@@ -138,7 +138,8 @@ export const transitionToNUFGuildTemplatesModal = function transitionToNUFGuildT
   closure_0 = SLIDE_IN;
   _modDef5260.pushLazy(callback(function*() {
     closure_1 = tmp5;
-    yield SLIDE_IN(paths[10])(paths[9], paths.paths);
+    closure_0 = tmp2;
+    yield closure_1_0(paths[10])(paths[9], paths.paths);
     closure_0 = arg1.default;
     const obj = { animation: null };
     obj[0] = closure_0;
@@ -151,7 +152,8 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = {
+  let obj = _modDef11922;
+  obj = {
     onCloseExtra(arg0) {
       if (arg0) {
         const result = callback(11925).setNewUserFlowCompleted();
@@ -168,8 +170,9 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
 export const openDiscoverabilityModal = function openDiscoverabilityModal() {
   _modDef5260.pushLazy(callback(function*() {
     closure_1 = tmp5;
+    let callback = tmp2;
     yield closure_1_0(paths[10])(paths[13], paths.paths);
-    const callback = arg1.default;
+    callback = arg1.default;
     const obj = { animation: null };
     obj[0] = callback(paths[14]).ModalAnimation.SLIDE_IN_OUT;
     callback.modalConfig = obj;

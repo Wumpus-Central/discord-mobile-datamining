@@ -1,14 +1,14 @@
 // discord_app/modules/app_database/stores/FileSystemStore.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../../utils/Durations.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import itemsDefault from "../DatabaseDaos.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_0 = importDefault;
 let closure_3 = new timestampDefault("FileSystemStore");
-const result = 10 * obj132Default.Millis.MINUTE;
+const result = 10 * setDefault.Millis.MINUTE;
 let c4 = result;
 const Store = initializeDefault.Store;
 class FileSystemStore extends Store {
@@ -79,12 +79,12 @@ function refresh() {
             closure_1 = undefined;
             closure_2 = undefined;
             c3 = undefined;
-            const databaseResult = self(closure_1_1[5]).database();
+            const databaseResult = closure_1_0(closure_1_1[5]).database();
             let catchPromise;
             if (databaseResult != null) {
               const fsInfoResult = databaseResult.fsInfo();
               if (fsInfoResult != null) {
-                catchPromise = fsInfoResult.catch((error) => logger.warn("couldn't get fs info", error));
+                catchPromise = fsInfoResult.catch((arg0) => logger.warn("couldn't get fs info", arg0));
               }
             }
             closure_2 = 1;
@@ -164,7 +164,15 @@ tmp.isLowDisk = false;
 tmp.refresh();
 tmp.waitFor(itemsDefault);
 let timerId = setInterval(() => obj.refresh(), result);
+let obj = {
+  APP_STATE_UPDATE(arg0) {
+    return obj.handleAppStateUpdate(arg0);
+  },
+  POST_CONNECTION_OPEN() {
+    return obj.handlePostConnectionOpen();
+  }
+};
 const tmp4 = new timestampDefault("FileSystemStore");
-const result1 = require("obj132").fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");
+const result1 = require("set").fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");
 
 export default tmp;

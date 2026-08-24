@@ -1,8 +1,8 @@
 // discord_app/modules/media_channel/MediaPostThumbnailUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import urlMatchesFileExtension from "../messages/MediaFormatTesters.tsx";
 
-const result = obj132.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
+const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;
 export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
@@ -29,8 +29,8 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     const _HermesInternal = HermesInternal;
     let combined = "" + coverImage + "?format=webp";
   } else {
-    urlMatchesFileExtension;
     combined = coverImage;
+    const tmpResult = urlMatchesFileExtension;
   }
   return combined;
 };

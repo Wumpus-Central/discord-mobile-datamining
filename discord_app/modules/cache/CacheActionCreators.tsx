@@ -1,8 +1,8 @@
 // discord_app/modules/cache/CacheActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { ChannelLoader } from "../../stores/ChannelStore.tsx";
-import handleClearCaches from "CacheStore.tsx";
+import closure_4 from "CacheStore.tsx";
 
 function _writeCaches() {
   const self = this;
@@ -116,7 +116,7 @@ function _writeCaches() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/cache/CacheActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/cache/CacheActionCreators.tsx");
 
 export const writeCaches = function writeCaches(arg0) {
   const self = this;

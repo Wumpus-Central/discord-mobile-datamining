@@ -5,7 +5,7 @@ import isBlurDisabledDefault from "VisualEffectView.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 const forwardRefResult = importAllResult.forwardRef(function VisualEffectViewThemed(arg0, ref) {
   let obj = AccessibilityAnnouncer;
   let str = "dark";
@@ -13,10 +13,11 @@ const forwardRefResult = importAllResult.forwardRef(function VisualEffectViewThe
     str = "light";
   }
   obj = { ref, blurTheme: str };
+  const tmp = importDefault;
   tmp3 = useThemeDefault();
   const merged = Object.assign(arg0);
   return jsx(isBlurDisabledDefault, { ref, blurTheme: str });
 });
-const result = require("obj132").fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewThemed.tsx");
+const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewThemed.tsx");
 
 export default forwardRefResult;

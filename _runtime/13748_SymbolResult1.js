@@ -36,13 +36,13 @@ export default {
   },
   wrapperSymbol: SymbolResult,
   implSymbol: SymbolResult1,
-  getSameObject(self, searchParams, fn) {
+  getSameObject(self, searchParams, arg2) {
     if (!self[closure_2]) {
       const _Object = Object;
-      self[closure_2] = Object.create(null);
+      self[tmp] = Object.create(null);
     }
     if (!(searchParams in self[closure_2])) {
-      self[closure_2][searchParams] = fn();
+      self[tmp][searchParams] = arg2();
     }
     return self[closure_2][searchParams];
   },

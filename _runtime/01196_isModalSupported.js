@@ -1,6 +1,5 @@
 // _runtime/01196_isModalSupported.js
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
-import RN_GLOBAL_OBJ2 from "00816_RN_GLOBAL_OBJ.js";
 import TurboModuleRegistry from "00997_TurboModuleRegistry.js";
 import isHermesEnabled from "01002_isHermesEnabled.js";
 
@@ -58,7 +57,7 @@ export const isNativeDriverSupportedForColorAnimations = function isNativeDriver
   }
   return flag;
 };
-export const isValidEmail = (trimmed1) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed1);
+export const isValidEmail = (arg0) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(arg0);
 export const base64ToUint8Array = (closure_0) => {
   if (typeof atob === "function") {
     if (obj.isWeb()) {
@@ -66,7 +65,7 @@ export const base64ToUint8Array = (closure_0) => {
       const _Uint8Array = Uint8Array;
       const items = [];
       HermesBuiltin.arraySpread(atob(closure_0), 0);
-      const uint8Array = new Uint8Array(items.map((item, index) => item.charCodeAt(0)));
+      const uint8Array = new Uint8Array(items.map((str) => str.charCodeAt(0)));
       return uint8Array;
     }
     obj = isHermesEnabled;
@@ -74,14 +73,13 @@ export const base64ToUint8Array = (closure_0) => {
   error = new Error("atob is not available in this environment.");
   throw error;
 };
-export const feedbackAlertDialog = (errorTitle, captureScreenshotError) => {
+export const feedbackAlertDialog = (Alert) => {
   if (obj.isWeb()) {
-    if (undefined !== RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.alert) {
-      const RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
+    if (undefined !== tmp(816).RN_GLOBAL_OBJ.alert) {
+      const RN_GLOBAL_OBJ = tmp(816).RN_GLOBAL_OBJ;
       const _HermesInternal = HermesInternal;
-      RN_GLOBAL_OBJ.alert("" + errorTitle + "\n" + captureScreenshotError);
+      RN_GLOBAL_OBJ.alert("" + Alert + "\n" + arg1);
     }
   }
-  Alert.alert(errorTitle, captureScreenshotError);
-  obj = isHermesEnabled;
+  Alert.alert(Alert, arg1);
 };

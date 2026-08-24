@@ -3,18 +3,18 @@ import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import preloadDefault from "FastImage.tsx";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/rtn-codegen/js/ImageWithThumbhashPlaceholderNativeComponent.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 ({ View: obj1, requireNativeComponent } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let closure_4 = { flex: 1 };
 let obj = { THUMBHASH: 1, [1]: "THUMBHASH" };
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDImageWithThumbhashPlaceholderView");
 }
-const result = obj132.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
+const result = set.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
 
 export const ImagePlaceholderVersions = obj;
 export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
@@ -33,6 +33,7 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
     }
     return tmp4;
   }
+  obj = { style };
   const merged2 = Object.assign(merged);
   obj = { style: closure_4, resizeMode: "cover", source: { uri }, alt };
   obj.children = jsx(preloadDefault, { style: closure_4, resizeMode: "cover", source: { uri }, alt });

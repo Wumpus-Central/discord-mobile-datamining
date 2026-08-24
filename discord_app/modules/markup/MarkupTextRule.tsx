@@ -6,7 +6,7 @@ const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+
 const obj = {};
 const merged = Object.assign(tDefault.defaultRules.text);
 obj.match = t.anyScopeRegex(tmp2);
-const result = require("obj132").fileFinishedImporting("modules/markup/MarkupTextRule.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/MarkupTextRule.tsx");
 
 export default obj;
 export const textRegexp = tmp2;

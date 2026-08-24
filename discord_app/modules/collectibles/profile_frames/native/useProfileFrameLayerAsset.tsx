@@ -1,32 +1,33 @@
 // discord_app/modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 ({ Image: c4, PixelRatio: c5 } = get_ActivityIndicator);
 const map = new Map();
-let result = require("obj132").fileFinishedImporting("modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx");
 
 export default function useProfileFrameLayerAsset(width) {
   width = width.width;
   let collectiblesItemAssetUrl;
+  dependencyMap = undefined;
   ({ skuId, layer } = width);
-  collectiblesItemAssetUrl(1901);
-  const obj = { skuId, assetFormat: collectiblesItemAssetUrl(1901).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
+  let obj = collectiblesItemAssetUrl(1901);
+  obj = { skuId, assetFormat: collectiblesItemAssetUrl(1901).CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
   collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl(obj);
   dependencyMap = callback(React.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   const items = [collectiblesItemAssetUrl];
   const effect = React.useEffect(() => {
     let hasItem = null == collectiblesItemAssetUrl;
     if (!hasItem) {
-      hasItem = "" === collectiblesItemAssetUrl;
+      hasItem = "" === tmp;
     }
     if (!hasItem) {
-      hasItem = map.has(collectiblesItemAssetUrl);
+      hasItem = closure_1_6.has(tmp);
     }
     if (!hasItem) {
-      const size = closure_1_4.getSize(collectiblesItemAssetUrl, (arg0, arg1) => {
+      const size = closure_1_4.getSize(tmp, (arg0, arg1) => {
         if (arg0 > 0) {
           const result = closure_1_6.set(closure_0, arg1 / arg0);
           callback();

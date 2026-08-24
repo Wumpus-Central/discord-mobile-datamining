@@ -1,17 +1,17 @@
 // discord_app/modules/devtools/native/useSortedDevToolsScreens.tsx
 import updateDevToolsSettings from "../DevToolsActionCreators.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import initialize from "../DevToolsSettingsStore.tsx";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../DevToolsSettingsStore.tsx";
 
-require = fn;
+require = arg1;
 function getSortedDevToolsScreens() {
   let sortedScreenKeys;
   {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
   const entries = Object.entries(sortedScreenKeys(13949).DevToolsScreens);
-  const found = entries.filter((item, index) => {
-    [, obj] = item;
+  const found = entries.filter((arg0) => {
+    [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
   });
   return found.sort((arg0, arg1) => {
@@ -35,18 +35,18 @@ function getSortedDevToolsScreens() {
     return num2;
   });
 }
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
 export default function useSortedDevToolsScreens() {
   const items = [closure_3];
-  sortedScreenKeys(589).useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
+  sortedScreenKeys = sortedScreenKeys(589).useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   sortedScreenKeys = undefined;
   if (sortedScreenKeys === undefined) {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
   const entries = Object.entries(sortedScreenKeys(13949).DevToolsScreens);
-  const found = entries.filter((item, index) => {
-    [, obj] = item;
+  const found = entries.filter((arg0) => {
+    [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
   });
   return found.sort((arg0, arg1) => {
@@ -74,9 +74,11 @@ export const updateSortOrder = function updateSortOrder(closure_0, down) {
   const items = [...closure_3.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let first = callback(tmp3, 1)[0];
     let tmp6 = first;
     if (!items.includes(first)) {
+      let tmp7 = first;
       let arr = items.push(tmp6);
     }
     continue;

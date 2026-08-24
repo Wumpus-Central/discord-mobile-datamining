@@ -1,8 +1,8 @@
 // _runtime/10432__pickDirectory.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 function _pickDirectory() {
   const self = this;
   const tmp = callback((arg0) => {

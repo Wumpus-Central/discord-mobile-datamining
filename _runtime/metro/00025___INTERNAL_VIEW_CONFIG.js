@@ -2,7 +2,8 @@
 import result from "../00026_result.js";
 import setRuntimeConfigProvider from "../00065_setRuntimeConfigProvider.js";
 
-const obj = { styleAttr: true, typeAttr: true, indeterminate: true, progress: true, animating: true, color: result.colorAttribute, testID: true };
+let obj = { uiViewClassName: "AndroidProgressBar", validAttributes: null };
+obj = { styleAttr: true, typeAttr: true, indeterminate: true, progress: true, animating: true, color: result.colorAttribute, testID: true };
 obj[1] = obj;
 
 export default setRuntimeConfigProvider.get("AndroidProgressBar", () => obj);

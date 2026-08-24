@@ -1,7 +1,7 @@
 // _runtime/00088_Dimensions.js
 import EventEmitterDefault from "00089_EventEmitter.js";
 import getConstantsDefault from "00100_getConstants.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00092__isNativeReflectConstruct.js";
 
@@ -60,6 +60,13 @@ const items = [
   }
 ];
 const importDefaultResultResult = importDefaultResult(Dimensions, null, items);
+let obj = {
+  key: "get",
+  value: function get(arg0) {
+    Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
+    return dependencyMap[arg0];
+  }
+};
 const tmp3 = new EventEmitterDefault();
 importDefaultResult1.addListener("didUpdateDimensions", (arg0) => {
   const result = importDefaultResultResult.set(arg0);

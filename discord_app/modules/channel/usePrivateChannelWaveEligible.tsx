@@ -1,45 +1,46 @@
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
-import reinjectEphemerals from "../../stores/MessageStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import closure_3 from "../../stores/MessageStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
 import { ChannelFlags } from "ChannelConstants.tsx";
 import { MessageTypes } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { resetCache } from "../../utils/DateUtils.tsx";
+import { useStrangerDangerWarning } from "../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
 
 export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligible(isDM, arg1) {
   const _require = isDM;
   let tmp = isDM.isDM() && !isDM.isSystemDM();
   if (tmp) {
     const rawRecipients = isDM.rawRecipients;
-    tmp = !rawRecipients.some((item, index) => item.bot);
+    tmp = !rawRecipients.some((bot) => bot.bot);
   }
   let recipientId = null;
   if (tmp) {
     recipientId = isDM.getRecipientId();
   }
   const items = [closure_4];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let isFriendResult = null != recipientId;
     if (isFriendResult) {
       isFriendResult = closure_1_4.isFriend(tmp);
     }
     return isFriendResult;
   });
-  const obj = initialize;
+  const obj = _initialize;
   const items1 = [closure_4];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     let isIgnoredResult = null != recipientId;
     if (isIgnoredResult) {
       isIgnoredResult = closure_1_4.isIgnored(tmp);
     }
     return isIgnoredResult;
   });
-  const obj2 = initialize;
+  const obj2 = _initialize;
   const items2 = [closure_3];
-  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
     const messages = closure_1_3.getMessages(isDM.id);
     let tmp = 1 === messages.length;
     if (tmp) {
@@ -48,21 +49,21 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
       if (firstResult != null) {
         type = firstResult.type;
       }
-      tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
+      tmp = type === closure_1_6.FRIEND_REQUEST_ACCEPTED;
     }
     return tmp;
   });
   let hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj3 = initialize;
+  const obj3 = _initialize;
   const items3 = [closure_3];
-  const stateFromStores3 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => closure_1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
-  const obj4 = initialize;
+  const stateFromStores3 = _initialize.useStateFromStores(items3, () => closure_1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
+  const obj4 = _initialize;
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
-  const obj6 = resetCache;
+  const obj6 = _resetCache;
   const tmp9 = recipientId(3975)();
   const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3975)(), recipientId(3975)(extractTimestampResult), 1814400000);
-  const strangerDangerWarning = require("../self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx").useStrangerDangerWarning(isDM.id);
+  const strangerDangerWarning = _useStrangerDangerWarning.useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;
   }

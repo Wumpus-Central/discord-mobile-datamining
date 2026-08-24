@@ -1,19 +1,19 @@
 // discord_app/modules/voice_calls/native/AudioSessionModeManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import handleVoiceChannelSelect from "../VoicePermissionManager.tsx";
-import participantFromServer from "../../activities/EmbeddedActivitiesStore.tsx";
-import buildStageChannelUserRoles from "../../stage_channels/StageChannelRoleStore.tsx";
-import reset from "../../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
-import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
-import getState from "../../../stores/native/AppStateStore.tsx";
+import closure_2 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_3 from "../../stage_channels/StageChannelRoleStore.tsx";
+import closure_4 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../../stores/VoiceStateStore.tsx";
+import closure_10 from "../../../stores/native/AppStateStore.tsx";
 import { AppStates } from "../../../Constants.tsx";
-import obj132 from "../../../utils/PlatformUtils.tsx";
+import set from "../../../utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 function handleAVAudioSessionMode() {
   channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
   if (null == channel) {
@@ -32,10 +32,10 @@ function handleAVAudioSessionMode() {
         const AVAudioSessionMode = VoiceEngine.AVAudioSessionMode;
         if (obj.shouldImmediatelyRequestVoicePermissions(id.getId(), channel.id)) {
           VIDEO = AVAudioSessionMode.VOICE;
-          obj2 = VoiceEngine;
+          obj2 = tmp9;
         } else {
           VIDEO = AVAudioSessionMode.LISTEN;
-          obj2 = VoiceEngine;
+          obj2 = tmp9;
         }
         obj = handleVoiceChannelSelect;
       }
@@ -51,13 +51,13 @@ function handleAVAudioSessionMode() {
     const result = obj2.setAVAudioSessionMode(VIDEO);
   }
 }
-if (obj132.isAndroid()) {
-  obj132 = { setAVAudioSessionMode: null, AVAudioSessionMode: null };
-  obj132[0] = function setAVAudioSessionMode(VIDEO) {
+if (set.isAndroid()) {
+  set = { setAVAudioSessionMode: null, AVAudioSessionMode: null };
+  set[0] = function setAVAudioSessionMode(VIDEO) {
 
   };
-  obj132[1] = { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" };
-  let VoiceEngine = obj132;
+  set[1] = { VOICE: "AVAudioSessionModeVoiceChat", VIDEO: "AVAudioSessionModeVideoChat", LISTEN: "AVAudioSessionModeSpokenAudio", DEFAULT: "AVAudioSessionModeDefault" };
+  let VoiceEngine = set;
 } else {
   VoiceEngine = require("get ActivityIndicator").NativeModules.VoiceEngine;
 }
@@ -75,6 +75,6 @@ let prototype = function AudioSessionModeManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
+let result = set.fileFinishedImporting("modules/voice_calls/native/AudioSessionModeManager.tsx");
 
 export default prototype;

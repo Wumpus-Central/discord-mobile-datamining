@@ -1,7 +1,7 @@
 // _runtime/00946_extractPromptResultAttributes.js
 import isJsonRpcNotification from "00936_isJsonRpcNotification.js";
 import _mod940 from "metro/00940__.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -28,12 +28,12 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
               const _HermesInternal = HermesInternal;
               str = "mcp.prompt.result." + closure_2;
             }
-            const role = closure_3.role;
+            const role = tmp3.role;
             if (typeof role !== "string") {
-              if (tmpResult.isValidContentItem(closure_3.content)) {
-                let text = closure_3.content;
+              if (tmpResult.isValidContentItem(tmp3.content)) {
+                let text = tmp3.content;
                 if (typeof text.text === "string") {
-                  if (1 === messages.length) {
+                  if (1 === arr.length) {
                     const _HermesInternal5 = HermesInternal;
                     let combined = "" + str + ".message_content";
                   } else {
@@ -44,9 +44,8 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
                   obj[combined] = text;
                 }
               }
-              tmpResult = tmp(messages[2]);
             } else {
-              if (1 === messages.length) {
+              if (1 === arr.length) {
                 const _HermesInternal3 = HermesInternal;
                 let combined1 = "" + str + ".message_" + "role";
               } else {
@@ -58,13 +57,13 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
           } else {
             return 1;
           }
-          tmp = obj;
         }
         const entries = messages.entries();
         const tmp8 = entries[Symbol.iterator]();
         while (tmp8 !== undefined) {
-          let tmp13 = _slicedToArray(tmp10, 2);
-          [_slicedToArray, closure_3] = tmp13;
+          let tmp12 = callback;
+          let tmp13 = callback(tmp10, 2);
+          [closure_2, closure_3] = tmp13;
           let _loop2Result = _loop2();
           continue;
         }
@@ -93,35 +92,35 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
               const _HermesInternal = HermesInternal;
               str = "mcp.tool.result." + closure_3;
             }
-            if (typeof closure_4.type === "string") {
+            if (typeof tmp3.type === "string") {
               const _HermesInternal2 = HermesInternal;
-              obj["" + str + ".content_type"] = closure_4.type;
+              obj["" + str + ".content_type"] = tmp3.type;
             }
             if (table) {
-              const mimeType = closure_4.mimeType;
+              const mimeType = tmp3.mimeType;
               if (typeof mimeType === "string") {
                 const _HermesInternal3 = HermesInternal;
                 obj["" + str + "." + "mime_type"] = mimeType;
               }
-              const uri = closure_4.uri;
+              const uri = tmp3.uri;
               if (typeof uri === "string") {
                 const _HermesInternal4 = HermesInternal;
                 obj["" + str + "." + "uri"] = uri;
               }
-              const name = closure_4.name;
+              const name = tmp3.name;
               if (typeof name === "string") {
                 const _HermesInternal5 = HermesInternal;
                 obj["" + str + "." + "name"] = name;
               }
-              if (typeof closure_4.text === "string") {
+              if (typeof tmp3.text === "string") {
                 const _HermesInternal6 = HermesInternal;
-                obj["" + str + ".content"] = closure_4.text;
+                obj["" + str + ".content"] = tmp3.text;
               }
-              if (typeof closure_4.data === "string") {
+              if (typeof tmp3.data === "string") {
                 const _HermesInternal7 = HermesInternal;
-                obj["" + str + ".data_size"] = closure_4.data.length;
+                obj["" + str + ".data_size"] = tmp3.data.length;
               }
-              const resource = closure_4.resource;
+              const resource = tmp3.resource;
               if (tmpResult.isValidContentItem(resource)) {
                 const uri2 = resource.uri;
                 if (typeof uri2 === "string") {
@@ -134,14 +133,17 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
                   obj["" + str + "." + "resource_mime_type"] = mimeType2;
                 }
               }
-              tmpResult = content(table[2]);
+              tmpResult = tmp(tmp2[2]);
             }
           } else {
             return 1;
           }
+          tmp = content;
+          tmp2 = table;
         }
         const entries = content.entries();
         while (tmp2 !== undefined) {
+          let tmp4 = obj;
           let tmp5 = obj(tmp3, 2);
           [closure_3, closure_4] = tmp5;
           let _loopResult = _loop();
@@ -159,4 +161,5 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
   } else {
     return {};
   }
+  let tmp = require;
 };

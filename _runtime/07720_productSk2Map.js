@@ -40,6 +40,7 @@ arg5.subscriptionSk2Map = (subscription) => {
     const introductoryOffer2 = subscription.introductoryOffer;
     if (introductoryOffer2 != null) {
       formatted1 = introductoryOffer2.paymentMode.toUpperCase();
+      const str2 = introductoryOffer2.paymentMode;
     }
   }
   obj[11] = formatted1;

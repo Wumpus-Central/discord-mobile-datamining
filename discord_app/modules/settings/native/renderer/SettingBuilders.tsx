@@ -1,9 +1,9 @@
 // discord_app/modules/settings/native/renderer/SettingBuilders.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
 
 const NodeType = GUILD_SELECT_ALL_SERVERS_OPTION_ID.NodeType;
-const result = obj132.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
+const result = set.fileFinishedImporting("modules/settings/native/renderer/SettingBuilders.tsx");
 
 export const createToggle = function createToggle(createToggle) {
   const merged = Object.assign(createToggle);

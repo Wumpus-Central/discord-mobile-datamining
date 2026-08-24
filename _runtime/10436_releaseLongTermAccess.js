@@ -1,7 +1,8 @@
 // _runtime/10436_releaseLongTermAccess.js
 import importDefaultResult from "00005_asyncGeneratorStep.js";
 
-importDefaultResult((arg0) => {
+let closure_0 = arg1;
+closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c1 = 0;
   return (function*(arg0) {
@@ -43,7 +44,7 @@ importDefaultResult((arg0) => {
     }
   })();
 });
-let closure_0 = importDefaultResult((arg0) => {
+closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c1 = 0;
   return (function*(arg0) {

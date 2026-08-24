@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/useIsCarouselInView.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
 
 export default function useIsCarouselInView() {
   const containerRef = React.useRef(null);

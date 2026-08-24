@@ -1,8 +1,8 @@
 // discord_app/modules/content_classification/ContentClassificationReference.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import isAgeRestrictedContentClassification from "utils.tsx";
 
-let result = obj132.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
+let result = set.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 
 export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(contentClassification) {
   let loaded;
@@ -12,6 +12,7 @@ export const isAgeRestrictedClassificationReference = function isAgeRestrictedCl
   let result = !loaded;
   if (loaded) {
     result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.data);
+    const obj = isAgeRestrictedContentClassification;
   }
   return result;
 };

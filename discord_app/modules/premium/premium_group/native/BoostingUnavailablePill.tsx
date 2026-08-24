@@ -1,5 +1,5 @@
 // discord_app/modules/premium/premium_group/native/BoostingUnavailablePill.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
@@ -12,25 +12,30 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 function handlePress() {
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+  obj = { aboutText: null };
   const intl = getSystemLocale.intl;
-  const obj = { premiumGroupProductName: callback() };
+  obj = { premiumGroupProductName: callback() };
   obj[0] = intl.formatToPlainString(messagesProxyDefault["5xN/C1"], obj);
   obj.openLazy(asyncRequireImpl(12947, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let closure_5 = SubscriptionStatusTypes.getPremiumGroupProductName;
 const jsx = jsxProd.jsx;
-let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
+let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
 obj[0] = obj;
 obj[1] = { flex: 1, justifyContent: "center" };
 obj[2] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/premium/premium_group/native/BoostingUnavailablePill.tsx");
+const result = set.fileFinishedImporting("modules/premium/premium_group/native/BoostingUnavailablePill.tsx");
 
 export default function BoostingUnavailablePill(style) {
   const tmp = callback2();
-  const items = [tmp.premiumGroupBanner, style.style];
-  const obj = { style: tmp.pgUnavailable, children: null };
+  let obj = { activeOpacity: 0.7, onPress: handlePress, children: null };
+  obj = { style: items, children: null };
+  items = [tmp.premiumGroupBanner, style.style];
+  obj = { style: tmp.pgUnavailable, children: null };
   obj1 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t["5nrJDO"]);

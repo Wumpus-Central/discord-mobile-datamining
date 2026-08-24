@@ -1,48 +1,40 @@
 // discord_app/modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx
-import applyDefault from "../../../../_runtime/00012_apply.js";
-import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/void/native.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import getAvatarURL from "../../../utils/AvatarUtils.tsx";
-import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
 import computeChannelNameDefault from "../../channel/useChannelName.tsx";
 import getPlatformUserUrlDefault from "../../../lib/Platforms.tsx";
-import callbackDefault from "../../../actions/ConnectedAccountsActionCreators.tsx";
 import officialApplicationIds2 from "../ConnectionsUtils.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
-import getBotLabelDefault from "../../applications/native/BotTag.tsx";
-import registerAssetDefault from "../../../../_runtime/10455_registerAsset.js";
-import registerAssetDefault2 from "../../../../_runtime/10756_registerAsset.js";
-import registerAssetDefault3 from "../../../../_runtime/10757_registerAsset.js";
-import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import recomputeFromAppTokens from "../../oauth2/AuthorizedAppsStore.tsx";
-import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
-import createdAt from "../../../records/UserRecord.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import set from "../../../stores/ConnectedAccountsStore.tsx";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import closure_9 from "../../oauth2/AuthorizedAppsStore.tsx";
+import closure_10 from "../../user_settings/LocaleStore.tsx";
+import closure_11 from "../../../records/UserRecord.tsx";
+import closure_12 from "../../../stores/AuthenticationStore.tsx";
+import closure_13 from "../../../stores/ChannelStore.tsx";
+import closure_14 from "../../../stores/ConnectedAccountsStore.tsx";
+import closure_15 from "../../../stores/GuildMemberStore.tsx";
+import closure_16 from "../../../stores/PermissionStore.tsx";
 import OperatorTypes from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function PlatformIcon(platformType) {
   const tmp = callback4();
   let obj = getPlatformUserUrlDefault;
   const value = obj.get(platformType.platformType);
   const tmp3 = useThemeDefault();
+  const tmp5 = require;
   const obj2 = getAvatarURL;
   const icon = value.icon;
   const source = obj2.makeSource(AccessibilityAnnouncer.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
@@ -61,13 +53,15 @@ function ChannelName(channel) {
     obj = { source: null, style: null };
     obj[0] = channelIcon;
     obj[1] = tmp.channelNameIcon;
-    tmp8 = callback2(Button.Icon, obj);
+    tmp8 = callback2(tmp2(1297).Icon, obj);
   }
   const items1 = [tmp8, ];
   const tmp5 = computeChannelNameDefault(channel);
+  const tmp6 = closure_30;
+  const tmp7 = closure_8;
   items1[1] = callback2(Text.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: computeChannelNameDefault(channel) });
   obj[1] = items1;
-  return callback2(closure_8, obj);
+  return tmp6(tmp7, obj);
 }
 function ConnectionsCheck(result) {
   ({ connectionType, connectionMetadataField, operator, value, description } = result);
@@ -85,7 +79,7 @@ function ConnectionsCheck(result) {
         let formatResult = intl.format(getSystemLocale.t["2p7dA3"], obj);
       } else {
         formatResult = description;
-        if (tmp17.GREATER_THAN === operator) {
+        if (tmp16.GREATER_THAN === operator) {
           const intl2 = getSystemLocale.intl;
           obj = { description: null, count: null };
           obj[0] = description;
@@ -97,20 +91,16 @@ function ConnectionsCheck(result) {
       }
     } else {
       if (constants2.EQUAL === operator) {
-        let tmp12 = connectionType === constants3.PAYPAL;
-        if (tmp12) {
-          tmp12 = connectionMetadataField === constants.PAYPAL_VERIFIED;
+        let tmp11 = connectionType === constants3.PAYPAL;
+        if (tmp11) {
+          tmp11 = connectionMetadataField === constants.PAYPAL_VERIFIED;
         }
-        let v0BlpbA = getSystemLocale.t["0BlpbA"];
-        if (tmp12) {
-          v0BlpbA = getSystemLocale.t.dcSDhW;
+        if (tmp11) {
         }
-      } else if (constants2.NOT_EQUAL === operator) {
-        v0BlpbA = getSystemLocale.t.otcpTN;
-      } else if (constants2.LESS_THAN === operator) {
-        v0BlpbA = getSystemLocale.t.Ef35xs;
-      } else if (constants2.GREATER_THAN === operator) {
-        v0BlpbA = getSystemLocale.t["8W9OXU"];
+        tmp8 = require;
+      } else if (tmp26.NOT_EQUAL === operator) {
+      } else if (tmp26.LESS_THAN === operator) {
+      } else if (tmp26.GREATER_THAN === operator) {
       } else {
         return null;
       }
@@ -119,11 +109,11 @@ function ConnectionsCheck(result) {
       obj1[0] = connectionType;
       obj1[1] = connectionMetadataField;
       obj1[2] = operator;
-      obj1[3] = v0BlpbA;
+      obj1[3] = _8W9OXU;
       obj1[4] = value;
       formatResult = obj.getConnectionsCheckText(obj1);
     }
-    let tmp22Result = null;
+    let tmp21Result = null;
     if (null != formatResult) {
       let str = "text-feedback-critical";
       if (result.result) {
@@ -133,26 +123,32 @@ function ConnectionsCheck(result) {
       obj2[1] = str;
       obj2[2] = tmp.connectionsCheck;
       obj2[3] = formatResult;
-      tmp22Result = callback(Text.Text, obj2);
+      tmp21Result = closure_29(Text.Text, obj2);
+      const tmp21 = closure_29;
     }
-    return tmp22Result;
+    return tmp21Result;
   }
 }
 function IdentityConnectionsCheckGroup(eligibilityState) {
   eligibilityState = eligibilityState.eligibilityState;
   const onAttempted = eligibilityState.onAttempted;
   const onIdentityAuthorize = eligibilityState.onIdentityAuthorize;
+  let canStartAuthorization;
+  let startAuthorization;
+  let React;
+  let identity_connected_account_type;
+  let identity_auth_required_scopes;
   let application;
   c9 = undefined;
   const tmp = callback4();
   let obj = eligibilityState(onIdentityAuthorize[27]);
   const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(eligibilityState.application_id);
-  const tmp6 = onAttempted(onIdentityAuthorize[28])(getOrFetchApplicationBatched);
-  const canStartAuthorization = tmp6.canStartAuthorization;
-  const startAuthorization = tmp6.startAuthorization;
-  let React = canStartAuthorization;
-  const identity_connected_account_type = eligibilityState.identity_connected_account_type;
-  const identity_auth_required_scopes = eligibilityState.identity_auth_required_scopes;
+  let tmp6 = onAttempted(onIdentityAuthorize[28])(getOrFetchApplicationBatched);
+  canStartAuthorization = tmp6.canStartAuthorization;
+  startAuthorization = tmp6.startAuthorization;
+  React = canStartAuthorization;
+  identity_connected_account_type = eligibilityState.identity_connected_account_type;
+  identity_auth_required_scopes = eligibilityState.identity_auth_required_scopes;
   let flag = canStartAuthorization;
   if (!canStartAuthorization) {
     flag = canStartAuthorization;
@@ -176,11 +172,11 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
   const memo = React.useMemo(() => {
     let bot;
     if (application != null) {
-      bot = application.bot;
+      bot = tmp.bot;
     }
     let tmp3 = null;
     if (null != bot) {
-      tmp3 = new closure_1_11(application.bot);
+      tmp3 = new closure_1_11(tmp.bot);
     }
     return tmp3;
   }, items);
@@ -197,20 +193,20 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj = { source: null, style: null };
     obj[0] = tmp5(tmp3[30]);
     obj[1] = tmp.connectionsChecksGroupCheckmark;
-    let tmp13Result = callback2(tmp2(tmp3[21]).Icon, obj);
-    let tmp15 = callback2;
+    let tmp13Result = tmp13(tmp2(tmp3[21]).Icon, obj);
+    let tmp15 = tmp13;
   } else if (flag) {
     obj1 = { source: null, style: null };
     obj1[0] = tmp5(tmp3[31]);
     obj1[1] = tmp.connectionsChecksGroupCaret;
-    tmp13Result = callback2(tmp2(tmp3[21]).Icon, obj1);
-    tmp15 = callback2;
+    tmp13Result = tmp13(tmp2(tmp3[21]).Icon, obj1);
+    tmp15 = tmp13;
   } else {
     obj2 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp2(tmp3[25]).intl;
     obj2[2] = intl.string(tmp2(tmp3[25]).t.cEts68);
-    tmp13Result = callback2(tmp2(tmp3[24]).Text, obj2);
-    tmp15 = callback2;
+    tmp13Result = tmp13(tmp2(tmp3[24]).Text, obj2);
+    tmp15 = tmp13;
   }
   const items1 = [result, flag, canStartAuthorization, startAuthorization, onAttempted, onIdentityAuthorize, , , , ];
   ({ connection_type: arr2[6], application_id: arr2[7] } = eligibilityState);
@@ -222,7 +218,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
         let someResult = null != identity_connected_account_type;
         if (someResult) {
           const accounts = closure_1_14.getAccounts();
-          someResult = accounts.some((item, index) => item.type === closure_6);
+          someResult = accounts.some((type) => type.type === closure_6);
         }
         let connection_type = null;
         if (!someResult) {
@@ -238,22 +234,23 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
           obj[0] = ["Verified Roles Connect Accounts Modal"];
           startAuthorization(obj);
         } else {
-          let tmp13 = null != identity_connected_account_type;
+          let tmp13 = null != tmp2;
           if (tmp13) {
             tmp13 = null != identity_auth_required_scopes;
           }
           if (tmp13) {
-            tmp13 = null != eligibilityState.application_id;
+            tmp13 = null != tmp9.application_id;
           }
           if (tmp13) {
             obj = { applicationId: null, scopes: null, connectedAccountProvider: null, wasAlreadyConnected: null };
-            obj[0] = eligibilityState.application_id;
+            obj[0] = tmp9.application_id;
             obj[1] = identity_auth_required_scopes;
-            obj[2] = identity_connected_account_type;
+            obj[2] = tmp2;
             obj[3] = someResult;
             onIdentityAuthorize(obj);
           }
         }
+        const tmp6 = onAttempted;
       }
     }
   }, items1);
@@ -307,7 +304,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7[2] = name;
     const items4 = [tmp15(tmp2(tmp3[24]).Text, obj7), tmp10];
     obj6[1] = items4;
-    const items5 = [callback2(application, obj6), ];
+    const items5 = [closure_30(application, obj6), ];
     tmp15Result = null;
     if (!flag) {
       tmp15Result = null;
@@ -321,10 +318,11 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     }
     items5[1] = tmp15Result;
     obj5[1] = items5;
-    items3[1] = callback2(application, obj5);
+    items3[1] = closure_30(application, obj5);
     items3[2] = tmp13Result;
     obj3[4] = items3;
-    tmp18Result = callback2(identity_auth_required_scopes, obj3);
+    tmp18Result = tmp18(identity_auth_required_scopes, obj3);
+    const tmp19 = identity_auth_required_scopes;
   }
   return tmp18Result;
 }
@@ -332,6 +330,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
   eligibilityStatesGroups = eligibilityStatesGroups.eligibilityStatesGroups;
   ({ onPlatformAttempt: importDefault, onPlatformConnect: dependencyMap, onPlatformConnected } = eligibilityStatesGroups);
   ({ onPlatformIdentityAuthorize: closure_4, initialAttemptedPlatformType, initialAttemptedApplicationId } = eligibilityStatesGroups);
+  let React;
   c6 = undefined;
   c7 = undefined;
   c8 = undefined;
@@ -343,7 +342,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
   let memo;
   let memo1;
   closure_16 = undefined;
-  const React = callback4();
+  React = callback4();
   let obj = React;
   [c6, c7] = callback(React.useState({}), 2);
   let tmp2 = callback(React.useState({}), 2);
@@ -351,19 +350,19 @@ function ConnectionsChecks(eligibilityStatesGroups) {
   if (initialAttemptedPlatformType == null) {
     initialAttemptedPlatformType = null;
   }
-  let tmpResult = callback(React.useState(initialAttemptedPlatformType), 2);
+  let tmpResult = tmp(React.useState(initialAttemptedPlatformType), 2);
   first = tmpResult[0];
   closure_11 = tmpResult[1];
   if (initialAttemptedApplicationId == null) {
     initialAttemptedApplicationId = null;
   }
-  tmpResult = callback(obj.useState(initialAttemptedApplicationId), 2);
+  tmpResult = tmp(obj.useState(initialAttemptedApplicationId), 2);
   first1 = tmpResult[0];
   closure_13 = tmpResult[1];
   let items = [eligibilityStatesGroups];
-  memo = obj.useMemo(() => applyDefault.flatten(eligibilityStatesGroups), items);
+  memo = obj.useMemo(() => closure_1_1(closure_1_2[32]).flatten(eligibilityStatesGroups), items);
   let items1 = [memo];
-  memo1 = obj.useMemo(() => applyDefault.groupBy(memo, (application_id) => {
+  memo1 = obj.useMemo(() => closure_1_1(closure_1_2[32]).groupBy(memo, (application_id) => {
     let str = "";
     if (null != application_id.application_id) {
       const _HermesInternal = HermesInternal;
@@ -384,7 +383,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       const _HermesInternal2 = HermesInternal;
       const arr = memo1["" + tmp + str2];
       if (null != arr) {
-        if (arr.every((item, index) => item.result)) {
+        if (arr.every((result) => result.result)) {
           first = arr[0];
           let prop;
           if (first != null) {
@@ -393,7 +392,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
           if (prop == null) {
             prop = tmp;
           }
-          const found = arr.find((item, index) => null != item.application);
+          const found = arr.find((application) => null != application.application);
           let application;
           if (found != null) {
             application = found.application;
@@ -404,6 +403,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
           onPlatformConnected(prop, application);
         }
       }
+      const tmp10 = memo1;
     }
   }, items3);
   let tmp3 = callback(React.useState(0), 2);
@@ -411,8 +411,8 @@ function ConnectionsChecks(eligibilityStatesGroups) {
   obj = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
-    const everyResult = memo1[arg0].every((item, index) => item.result);
-    const everyResult1 = memo1[arg1].every((item, index) => item.result);
+    const everyResult = memo1[arg0].every((result) => result.result);
+    const everyResult1 = memo1[arg1].every((result) => result.result);
     if (true !== everyResult) {
       let num2 = 0;
       if (false === everyResult) {
@@ -427,28 +427,28 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
     return num;
   });
-  obj[0] = sorted.map((item, index) => {
-    if (item.startsWith("" + closure_1_20 + ":")) {
+  obj[0] = sorted.map((str) => {
+    if (str.startsWith("" + closure_1_20 + ":")) {
       if (null != arr[0]) {
         let obj = { eligibilityState: null, onAttempted: null, onIdentityAuthorize: null };
         obj[0] = arr[0];
-        obj[1] = function onAttempted(onIdentityAuthorize, application_id) {
-          callback(onIdentityAuthorize);
-          callback2(application_id);
-          if (null != onIdentityAuthorize) {
+        obj[1] = function onAttempted(arg0) {
+          callback(arg0);
+          callback2(arg1);
+          if (null != arg0) {
             value();
           }
         };
         obj[2] = closure_4;
-        return closure_1_29(IdentityConnectionsCheckGroup, obj, item);
+        return closure_1_29(closure_1_36, obj, str);
       }
     }
-    const found = arr.find((item, index) => null == item.operator);
-    const found1 = arr.filter((item, index) => null != item.operator);
-    const tmp3 = (null == found || found.result) && found1.every((item, index) => item.result);
-    const found2 = arr.find((item, index) => null != item.application);
-    obj = getPlatformUserUrlDefault;
-    const value = obj.get(item);
+    const found = arr.find((operator) => null == operator.operator);
+    const found1 = arr.filter((operator) => null != operator.operator);
+    const tmp3 = (null == found || found.result) && found1.every((result) => result.result);
+    const found2 = arr.find((application) => null != application.application);
+    obj = closure_1_1(closure_1_2[18]);
+    const value = obj.get(str);
     closure_1 = value;
     let application;
     if (found2 != null) {
@@ -462,8 +462,8 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     if (null != bot) {
       tmp11 = new closure_11(application.bot);
     }
-    const officialApplicationIds = eligibilityStatesGroups(dependencyMap[26]).officialApplicationIds;
-    let str;
+    const officialApplicationIds = eligibilityStatesGroups(tmp6[26]).officialApplicationIds;
+    str = undefined;
     if (application != null) {
       str = application.id;
     }
@@ -487,28 +487,28 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
     if (tmp3) {
       obj = { source: null, style: null };
-      obj[0] = registerAssetDefault2;
+      obj[0] = tmp5(tmp6[30]);
       obj[1] = closure_5.connectionsChecksGroupCheckmark;
-      let tmp22Result = closure_1_29(tmp15(dependencyMap[21]).Icon, obj);
-      let tmp24 = closure_1_29;
+      let tmp22Result = tmp22(tmp15(tmp6[21]).Icon, obj);
+      let tmp24 = tmp22;
     } else if (tmp20) {
       obj1 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-      const intl2 = tmp15(dependencyMap[25]).intl;
-      obj1[2] = intl2.string(tmp15(dependencyMap[25]).t["5911Lb"]);
-      tmp22Result = closure_1_29(tmp15(dependencyMap[24]).Text, obj1);
-      tmp24 = closure_1_29;
+      const intl2 = tmp15(tmp6[25]).intl;
+      obj1[2] = intl2.string(tmp15(tmp6[25]).t["5911Lb"]);
+      tmp22Result = tmp22(tmp15(tmp6[24]).Text, obj1);
+      tmp24 = tmp22;
     } else if (tmp8) {
       const obj2 = { source: null, style: null };
-      obj2[0] = registerAssetDefault3;
+      obj2[0] = tmp5(tmp6[31]);
       obj2[1] = closure_5.connectionsChecksGroupCaret;
-      tmp22Result = closure_1_29(tmp15(dependencyMap[21]).Icon, obj2);
-      tmp24 = closure_1_29;
+      tmp22Result = tmp22(tmp15(tmp6[21]).Icon, obj2);
+      tmp24 = tmp22;
     } else {
       const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
-      const intl = tmp15(dependencyMap[25]).intl;
-      obj3[2] = intl.string(tmp15(dependencyMap[25]).t.cEts68);
-      tmp22Result = closure_1_29(tmp15(dependencyMap[24]).Text, obj3);
-      tmp24 = closure_1_29;
+      const intl = tmp15(tmp6[25]).intl;
+      obj3[2] = intl.string(tmp15(tmp6[25]).t.cEts68);
+      tmp22Result = tmp22(tmp15(tmp6[24]).Text, obj3);
+      tmp24 = tmp22;
     }
     let type1;
     if (value != null) {
@@ -516,8 +516,8 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
     let tmp28;
     if (type1 === closure_1_21.STEAM) {
-      const intl3 = tmp15(dependencyMap[25]).intl;
-      const stringResult = intl3.string(tmp15(dependencyMap[25]).t.NcZh6K);
+      const intl3 = tmp15(tmp6[25]).intl;
+      const stringResult = intl3.string(tmp15(tmp6[25]).t.NcZh6K);
       eligibilityStatesGroups = stringResult;
       tmp28 = stringResult;
     }
@@ -526,23 +526,23 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       obj4[0] = closure_5.botTag;
       obj4[1] = closure_1_28;
       obj4[2] = closure_16;
-      let tmp24Result = tmp24(OfficialConnectionIconDefault, obj4);
+      let tmp24Result = tmp24(tmp5(tmp6[34]), obj4);
     } else if (null != tmp11) {
       const obj5 = { style: null, verified: null };
       obj5[0] = closure_5.botTag;
       obj5[1] = tmp11.isVerifiedBot();
-      tmp24Result = tmp24(getBotLabelDefault, obj5);
-      const tmp5Result = getBotLabelDefault;
+      tmp24Result = tmp24(tmp5(tmp6[29]), obj5);
+      const tmp5Result = tmp5(tmp6[29]);
     }
     const items = [closure_5.connectionsChecksGroup, , ];
     let prop = null;
     if (tmp3) {
-      prop = closure_5.connectionsChecksGroupPassed;
+      prop = tmp38.connectionsChecksGroupPassed;
     }
     items[1] = prop;
     let prop1 = null;
     if (!(null == value || value.enabled)) {
-      prop1 = closure_5.connectionsChecksGroupPlatformDisabled;
+      prop1 = tmp38.connectionsChecksGroupPlatformDisabled;
     }
     const obj6 = { accessibilityRole: "button", style: items, disabled: null, onPress: null, children: null };
     items[2] = prop1;
@@ -584,11 +584,11 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp24Result = null;
       if (tmp20) {
         const obj7 = { style: null, children: null };
-        obj7[0] = closure_5.connectionsChecksGroupRequirementsNotMet;
+        obj7[0] = tmp38.connectionsChecksGroupRequirementsNotMet;
         const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", children: null };
-        const intl4 = tmp15(dependencyMap[25]).intl;
-        obj8[2] = intl4.string(tmp15(dependencyMap[25]).t.UB3hKo);
-        obj7[1] = tmp24(tmp15(dependencyMap[24]).Text, obj8);
+        const intl4 = tmp15(tmp6[25]).intl;
+        obj8[2] = intl4.string(tmp15(tmp6[25]).t.UB3hKo);
+        obj7[1] = tmp24(tmp15(tmp6[24]).Text, obj8);
         tmp24Result = tmp24(c8, obj7);
       }
     }
@@ -597,16 +597,16 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     if (null != value) {
       const obj9 = { platformType: null };
       obj9[0] = value.type;
-      tmp24Result1 = tmp24(PlatformIcon, obj9);
+      tmp24Result1 = tmp24(closure_1_33, obj9);
     }
     items1[1] = tmp24Result1;
     let tmp24Result2 = null;
     if (null != tmp11) {
       const obj10 = { style: null, user: null, size: null, guildId: "Array" };
-      obj10[0] = closure_5.appIcon;
+      obj10[0] = tmp38.appIcon;
       obj10[1] = tmp11;
-      obj10[2] = tmp15(dependencyMap[21]).AvatarSizes.XSMALL;
-      tmp24Result2 = tmp24(tmp15(dependencyMap[21]).Avatar, obj10);
+      obj10[2] = tmp15(tmp6[21]).AvatarSizes.XSMALL;
+      tmp24Result2 = tmp24(tmp15(tmp6[21]).Avatar, obj10);
     }
     items1[2] = tmp24Result2;
     const obj11 = { style: closure_5.connectionsChecksGroupTextContainer, children: null };
@@ -622,29 +622,30 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       }
       name = name1;
     }
-    const items2 = [tmp24(eligibilityStatesGroups(dependencyMap[24]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }), tmp24Result, ];
+    const items2 = [tmp24(eligibilityStatesGroups(closure_1_2[24]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: name }), tmp24Result, ];
     let tmp24Result3 = null;
     if (null != tmp28) {
       const obj13 = { onPress: null, children: null };
       obj13[0] = function onPress() {
-        _modDef38(null != closure_0, "tooltip is null");
-        const obj = { key: "CONNECTIONS_STEAM_TOOLTIP", icon: registerAssetDefault, content: closure_0 };
+        closure_2_1(closure_2_2[35])(null != closure_0, "tooltip is null");
+        let obj = closure_2_1(closure_2_2[36]);
+        obj = { key: "CONNECTIONS_STEAM_TOOLTIP", icon: closure_2_1(closure_2_2[37]), content: closure_0 };
         obj.open(obj);
       };
       const obj14 = { source: null, size: null, style: null };
-      obj14[0] = registerAssetDefault;
-      obj14[1] = tmp15(dependencyMap[21]).Icon.Sizes.SMALL_20;
-      obj14[2] = closure_5.connectionsChecksGroupTextNameInfoIcon;
-      obj13[1] = tmp24(tmp15(dependencyMap[21]).Icon, obj14);
-      tmp24Result3 = tmp24(c7, obj13);
+      obj14[0] = tmp5(tmp6[37]);
+      obj14[1] = tmp15(tmp6[21]).Icon.Sizes.SMALL_20;
+      obj14[2] = tmp38.connectionsChecksGroupTextNameInfoIcon;
+      obj13[1] = tmp24(tmp15(tmp6[21]).Icon, obj14);
+      tmp24Result3 = tmp24(tmp37, obj13);
     }
     items2[2] = tmp24Result3;
     obj12[1] = items2;
     const items3 = [
       closure_1_30(c8, obj12),
-      found1.map((item, index) => {
-        ({ connection_metadata_field, operator, value } = item);
-        ({ connection_type, result, description } = item);
+      found1.map((arg0) => {
+        ({ connection_metadata_field, operator, value } = arg0);
+        ({ connection_type, result, description } = arg0);
         value(application[35])(null != connectionMetadataField, "connectionMetadataField is null");
         value(application[35])(null != operator, "operator is null");
         value(application[35])(null != value, "value is null");
@@ -655,7 +656,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[3] = closure_1_30(c8, obj11);
     items1[4] = tmp22Result;
     obj6[4] = items1;
-    return closure_1_30(c7, obj6, item);
+    return closure_1_30(c7, obj6, str);
   });
   return callback2(closure_31, obj);
 }
@@ -665,6 +666,9 @@ function ConnectedUserAccountOptions(account) {
   c3 = undefined;
   let callback;
   let first;
+  closure_6 = undefined;
+  let first1;
+  closure_8 = undefined;
   const tmp = callback4();
   [tmp3, c3] = callback(first.useState(account.friendSync), 2);
   const tmp4 = callback(first.useState(account.showActivity), 2);
@@ -673,7 +677,7 @@ function ConnectedUserAccountOptions(account) {
   first = tmp5[0];
   closure_6 = tmp5[1];
   const tmp7 = callback(first.useState(1 === account.visibility), 2);
-  const first1 = tmp7[0];
+  first1 = tmp7[0];
   closure_8 = tmp7[1];
   useMountLayoutEffectDefault(() => {
     callback(!first1);
@@ -689,7 +693,7 @@ function ConnectedUserAccountOptions(account) {
     obj[1] = tmp3;
     obj[2] = function onValueChange(closure_0) {
       _undefined(closure_0);
-      callbackDefault.setFriendSync(account.type, account.id, closure_0);
+      closure_1_1(closure_1_2[40]).setFriendSync(account.type, account.id, closure_0);
     };
     tmp12 = callback2(account(8083).FormSwitchRow, obj);
   }
@@ -703,7 +707,7 @@ function ConnectedUserAccountOptions(account) {
     obj[1] = tmp4[0];
     obj[2] = function onValueChange(closure_0) {
       callback3(closure_0);
-      callbackDefault.setShowActivity(account.type, account.id, closure_0);
+      closure_1_1(closure_1_2[40]).setShowActivity(account.type, account.id, closure_0);
     };
     tmp15 = callback2(account(8083).FormSwitchRow, obj);
   }
@@ -722,7 +726,7 @@ function ConnectedUserAccountOptions(account) {
       if (arg0) {
         num = 1;
       }
-      const result = callbackDefault.setMetadataVisibility(type, id, num);
+      const result = closure_1_1(closure_1_2[40]).setMetadataVisibility(type, id, num);
     };
     tmp18 = callback2(account(8083).FormSwitchRow, obj2);
   }
@@ -739,7 +743,7 @@ function ConnectedUserAccountOptions(account) {
     if (arg0) {
       num = 1;
     }
-    callbackDefault.setVisibility(type, id, num);
+    closure_1_1(closure_1_2[40]).setVisibility(type, id, num);
   };
   const items = [callback2(account(8083).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3[1] = items;
@@ -749,19 +753,26 @@ function ConnectedUserAccountOptions(account) {
 ({ MetadataFields: closure_17, OperatorTypes: closure_18, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_19, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_20 } = OperatorTypes);
 ({ PlatformTypes: closure_21, UserSettingsSections: closure_22, AnalyticEvents: closure_23, MarketingURLs: closure_24, FRIEND_SYNC_PLATFORM_TYPES: closure_25, ACTIVITY_PLATFORM_TYPES: closure_26, Permissions: closure_27, EMPTY_STRING_SNOWFLAKE_ID: closure_28 } = ME);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
-const createCacheKey = { flexDirection: "row", borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
+createCacheKey = { container: { padding: 12 }, connectionsChecksGroups: { marginTop: 16, flexDirection: "column" }, connectionsChecksGroup: null, connectionsChecksGroupPassed: null, connectionsChecksGroupPlatformDisabled: null, connectionsChecksGroupRequirementsNotMet: null, connectionsChecksGroupTextContainer: null, connectionsChecksGroupTextNameContainer: null, connectionsChecksGroupTextNameInfoIcon: null, connectionsChecksGroupCheckmark: null, connectionsChecksGroupCaret: null, connectionsCheck: null, platformIcon: null, channelName: null, channelNameIcon: null, channelNameText: null, header: null, content: null, footerText: null, accountConnectedContainer: null, accountConnectedPreview: null, accountConnectedPreviewConnectedUserAccount: null, accountConnectedPrivacy: null, accountConnectedPrivacyOptionsContainer: null, roleGranted: null, roleGrantedName: null, verifiedIcon: null, channelsGranted: null, manageConnectionsButton: null, loading: null, appIcon: null, botTag: null };
+createCacheKey = { flexDirection: "row", borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 16, paddingVertical: 20, marginBottom: 16, width: "100%", alignItems: "center", position: "relative" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj1 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj2 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[5] = { paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, position: "absolute", top: -8, right: 20 };
 createCacheKey[6] = { flex: 1 };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center" };
+let obj3 = { paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, position: "absolute", top: -8, right: 20 };
 createCacheKey[8] = { marginLeft: 4, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
+let obj4 = { marginLeft: 4, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
 createCacheKey[9] = { tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE, width: 24, height: 24 };
+let obj5 = { tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE, width: 24, height: 24 };
 createCacheKey[10] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 24, height: 24 };
 createCacheKey[11] = { marginTop: 4 };
 createCacheKey[12] = { width: 24, height: 24, marginRight: 12 };
 createCacheKey[13] = { flexDirection: "row", alignItems: "center", marginBottom: 4 };
+let obj6 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 24, height: 24 };
 createCacheKey[14] = { tintColor: ThemesDefault.colors.TEXT_MUTED, marginRight: 8, width: 24, height: 24 };
 createCacheKey[15] = { overflow: "hidden" };
 createCacheKey[16] = { flexDirection: "row", width: "100%", alignItems: "center", marginBottom: 8 };
@@ -769,12 +780,16 @@ createCacheKey[17] = { width: "100%" };
 createCacheKey[18] = { marginBottom: 16 };
 createCacheKey[19] = { flexDirection: "column", alignItems: "flex-start", marginVertical: 24 };
 createCacheKey[20] = { width: "100%" };
+let obj7 = { tintColor: ThemesDefault.colors.TEXT_MUTED, marginRight: 8, width: 24, height: 24 };
 createCacheKey[21] = { marginTop: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[22] = { marginTop: 16, width: "100%" };
+let obj8 = { marginTop: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[23] = { marginTop: 8, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, padding: 8, flexDirection: "column" };
+let obj9 = { marginTop: 8, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, padding: 8, flexDirection: "column" };
 createCacheKey[24] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: 12, paddingHorizontal: 8, borderTopStartRadius: 4, borderTopEndRadius: 4, marginTop: 16 };
 createCacheKey[25] = { overflow: "hidden", marginRight: 24 };
 createCacheKey[26] = { marginRight: 8 };
+let obj10 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: 12, paddingHorizontal: 8, borderTopStartRadius: 4, borderTopEndRadius: 4, marginTop: 16 };
 createCacheKey[27] = { flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, padding: 16, borderBottomStartRadius: 4, borderBottomEndRadius: 4, marginBottom: 24 };
 createCacheKey[28] = { marginTop: 8 };
 createCacheKey[29] = { marginTop: 24, marginBottom: 32, alignSelf: "center" };
@@ -782,7 +797,8 @@ createCacheKey[30] = { marginRight: 8 };
 createCacheKey[31] = { marginLeft: 4 };
 let closure_32 = createCacheKey.createStyles(createCacheKey);
 let closure_39 = { CHECKS_REQUIRED: 0, [0]: "CHECKS_REQUIRED", ACCOUNT_CONNECTED: 1, [1]: "ACCOUNT_CONNECTED", ROLE_GRANTED: 2, [2]: "ROLE_GRANTED" };
-let result = require("obj132").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx");
+let obj11 = { flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, padding: 16, borderBottomStartRadius: 4, borderBottomEndRadius: 4, marginBottom: 24 };
+let result = require("set").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsConnectAccountsActionSheet.tsx");
 class GuildRoleConnectionsConnectAccountsActionSheet {
   constructor(arg0) {
     guildId = global.guildId;
@@ -943,11 +959,11 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     items5[0] = closure_10;
     stateFromStores5 = obj6.useStateFromStores(items5, () => lib.locale);
     values = Object.values(stateFromStores4);
-    found = values.filter((item, index) => {
-      let hasItem = _undefined2.can(closure_1_27.VIEW_CHANNEL, item) && _undefined2.can(closure_1_27.SEND_MESSAGES, item);
+    found = values.filter((arg0) => {
+      let hasItem = _undefined2.can(closure_1_27.VIEW_CHANNEL, arg0) && _undefined2.can(closure_1_27.SEND_MESSAGES, arg0);
       if (hasItem) {
-        hasItem = role(initialAttemptedPlatformType[42])(item).includes(role);
-        const obj2 = role(initialAttemptedPlatformType[42])(item);
+        hasItem = role(initialAttemptedPlatformType[42])(arg0).includes(role);
+        const obj2 = role(initialAttemptedPlatformType[42])(arg0);
       }
       return hasItem;
     });
@@ -959,9 +975,9 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     items6[3] = stateFromStores1;
     effect = closure_5.useEffect(() => {
       const guildRoleConnectionsEligibility = role(initialAttemptedPlatformType[43]).fetchGuildRoleConnectionsEligibility(guildId, role.id);
-      guildRoleConnectionsEligibility.then((result) => {
-        callback(result);
-        callback2(result.some((item, index) => item.every((item, index) => item.result)));
+      guildRoleConnectionsEligibility.then((arr) => {
+        callback(arr);
+        callback2(arr.some((arr) => arr.every((result) => result.result)));
         callback3(false);
       });
     }, items6);
@@ -971,8 +987,8 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     items7[2] = guildId;
     effect1 = closure_5.useEffect(() => {
       if (null == initialAttemptedPlatformType) {
-        role(initialAttemptedPlatformType[44]);
-        const obj = { role_id: null };
+        let obj = role(initialAttemptedPlatformType[44]);
+        obj = { role_id: null };
         obj[0] = role.id;
         const merged = Object.assign(guildId(initialAttemptedPlatformType[45]).collectGuildAnalyticsMetadata(guildId));
         obj.track(closure_1_23.PASSPORT_CHALLENGE_VIEWED, obj);
@@ -1024,7 +1040,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
       tmp36Result = tmp36(tmp38, obj1);
     } else if (tmp2.ACCOUNT_CONNECTED === tmp4) {
       str = "lastPlatformConnected is null";
-      tmp40 = require("../../../../_runtime/metro/00038__.js")(null != first1, "lastPlatformConnected is null");
+      tmp40 = require("module_38")(null != first1, "lastPlatformConnected is null");
       tmp28Result = require("getPlatformUserUrl");
       value = tmp28Result.get(first1);
       name = undefined;
@@ -1105,8 +1121,8 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           obj8 = { roleName: null };
           obj8[0] = role.name;
           handlePlatformAttempt = function handlePlatformAttempt() {
-            role(initialAttemptedPlatformType[44]);
-            const obj = { role_id: role.id };
+            let obj = role(initialAttemptedPlatformType[44]);
+            obj = { role_id: role.id };
             const merged = Object.assign(guildId(initialAttemptedPlatformType[45]).collectGuildAnalyticsMetadata(guildId));
             obj.track(closure_1_23.PASSPORT_CHALLENGE_STARTED, obj);
           };
@@ -1119,21 +1135,21 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
               onClose() {
                 let id;
                 if (lib != null) {
-                  id = lib.id;
+                  id = tmp2.id;
                 }
                 if (id == null) {
                   id = null;
                 }
                 let prop;
                 if (lib != null) {
-                  prop = lib.role_connections_verification_url;
+                  prop = tmp2.role_connections_verification_url;
                 }
-                lib(initialAttemptedPlatformType[46]);
-                let obj = { default: closure_1_40 };
+                let obj = lib(closure_1_2[46]);
+                obj = { default: closure_1_40 };
                 const resolved = Promise.resolve(obj);
-                obj = { role: lib, guildId: platformType, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
+                obj = { role: lib, guildId: platformType, initialAttemptedPlatformType: tmp, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(initialAttemptedPlatformType[48]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(lib.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(closure_1_2[48]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(lib.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -1141,7 +1157,6 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj[4] = { overrideUrl: prop }.overrideUrl;
                 obj[5] = closure_1_4;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj);
-                const obj3 = platformType(initialAttemptedPlatformType[48]);
               },
               overrideUrl: null
             };
@@ -1155,10 +1170,11 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           handlePlatformIdentityAuthorize = function handlePlatformIdentityAuthorize(applicationId) {
             applicationId = applicationId.applicationId;
             const wasAlreadyConnected = applicationId.wasAlreadyConnected;
+            let combined;
             ({ scopes, connectedAccountProvider } = applicationId);
             let obj = role(initialAttemptedPlatformType[46]);
             obj.hideActionSheet();
-            const combined = "OAuth2AuthorizeModal-" + applicationId;
+            combined = "OAuth2AuthorizeModal-" + applicationId;
             function handleModalClose(key) {
               if (key.key === combined) {
                 role(initialAttemptedPlatformType[50]).unsubscribe("MODAL_POP", handleModalClose);
@@ -1166,11 +1182,12 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 if (!wasAlreadyConnected) {
                   tmp = _handleAssignRole;
                 }
-                wasAlreadyConnected(combined[46]);
-                let obj = { default: null };
+                let obj = wasAlreadyConnected(combined[46]);
+                obj = { default: null };
                 obj[0] = closure_1_40;
                 const resolved = Promise.resolve(obj);
                 const obj5 = role(initialAttemptedPlatformType[50]);
+                const tmp2 = applicationId;
                 obj = { role: null, guildId: null, initialAttemptedPlatformType: null, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 obj[0] = wasAlreadyConnected;
                 obj[1] = applicationId;
@@ -1178,7 +1195,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 let tmp13 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = applicationId(combined[48]).makeGuildRoleConnectionsConnectAccountsActionSheetKey(wasAlreadyConnected.id);
                 if (null != tmp) {
-                  tmp13 = applicationId;
+                  tmp13 = tmp2;
                 }
                 obj[3] = tmp13;
                 obj[4] = {}.overrideUrl;
@@ -1209,13 +1226,13 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             if (null != arg1) {
               const userApplicationRoleConnections = guildId(initialAttemptedPlatformType[55]).fetchUserApplicationRoleConnections();
               const obj = guildId(initialAttemptedPlatformType[55]);
-              userApplicationRoleConnections.then((result) => {
-                callback(result);
-              }).catch((error) => {
+              userApplicationRoleConnections.then((arg0) => {
+                callback(arg0);
+              }).catch(() => {
 
               });
-              const nextPromise = userApplicationRoleConnections.then((result) => {
-                callback(result);
+              const nextPromise = userApplicationRoleConnections.then((arg0) => {
+                callback(arg0);
               });
             }
           };
@@ -1271,16 +1288,16 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     } else {
       if (tmp2.ACCOUNT_CONNECTED === tmp4) {
         str2 = "lastPlatformConnected is null";
-        tmp44 = require("../../../../_runtime/metro/00038__.js")(null != first1, "lastPlatformConnected is null");
-        found1 = stateFromStores.find((item, index) => first1 === item.type);
+        tmp44 = require("module_38")(null != first1, "lastPlatformConnected is null");
+        found1 = stateFromStores.find((type) => first1 === type.type);
         found2 = undefined;
         if (arr6 != null) {
-          found2 = arr6.find((item, index) => {
+          found2 = arr6.find((application) => {
             let id;
             if (first2 != null) {
               id = first2.id;
             }
-            return item.application.id === id;
+            return application.application.id === id;
           });
         }
         obj14 = { style: null, children: null };
@@ -1396,7 +1413,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
           items18[0] = tmp37(tmp38, obj31);
           obj34 = { style: null, children: null };
           obj34[0] = tmp.channelsGranted;
-          obj34[1] = found.map((item, index) => callback(closure_34, { channel: item }, item.id));
+          obj34[1] = found.map((channel) => callback(closure_34, { channel }, channel.id));
           items18[1] = tmp36(tmp38, obj34);
           obj30[1] = items18;
           tmp37Result1 = tmp37(tmp38, obj30);
@@ -1439,7 +1456,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
         flag = undefined;
         if (arr != null) {
           flatResult = arr.flat();
-          flag = flatResult.some((item, index) => null == item.application_id);
+          flag = flatResult.some((application_id) => null == application_id.application_id);
         }
         if (flag == null) {
           flag = false;

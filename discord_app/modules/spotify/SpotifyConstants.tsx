@@ -1,10 +1,11 @@
 // discord_app/modules/spotify/SpotifyConstants.tsx
 import getPlatformUserUrlDefault from "../../lib/Platforms.tsx";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
 const spotify = "spotify";
 let c1 = "spotify:";
-const obj = {
+let obj = { TRACK: "track", ARTIST: "artist", ALBUM: "album", PLAYLIST: "playlist", EPISODE: "episode", SHOW: "show" };
+obj = {
   PROFILE: "" + "https://api.spotify.com/v1" + "/me",
   NOTIFICATIONS_PLAYER: "" + "https://api.spotify.com/v1" + "/me/notifications/player",
   PLAYER: "" + "https://api.spotify.com/v1" + "/me/player",
@@ -27,7 +28,7 @@ const obj = {
     }
     return "https://open.spotify.com/embed" + arg0 + "?utm_source=discord&utm_medium=" + str;
   },
-  PLAYER_OPEN(TRACK, sync_id, arg2, mobile) {
+  PLAYER_OPEN(TRACK, album_id, arg2, mobile) {
     let flag = arg2;
     if (arg2 === undefined) {
       flag = true;
@@ -37,12 +38,13 @@ const obj = {
       str = "desktop";
     }
     const encodeURIComponentResult = encodeURIComponent(TRACK);
+    const tmp = spotify;
     let str2 = "";
     if (flag) {
       const _HermesInternal = HermesInternal;
       str2 = "?utm_source=discord&utm_medium=" + str;
     }
-    return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
+    return "" + tmp + ":" + encodeURIComponentResult + ":" + encodeURIComponent(album_id) + str2;
   },
   PREMIUM_SITE: "https://www.spotify.com/premium/" + "?utm_source=discord&utm_medium=" + "desktop",
   INSTALL_ATTRIBUTION(Identifier) {
@@ -52,12 +54,12 @@ const obj = {
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
 };
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";
 }
 obj[12] = str;
 const frozen = Object.freeze(obj);
-const result = obj132.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
+const result = set.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx");
 
 export const SPOTIFY_APP_PROTOCOL = "spotify";
 export const SPOTIFY_PARTY_PREFIX = "spotify:";
@@ -78,7 +80,7 @@ export const getSpotifyResourceType = function getSpotifyResourceType(str) {
     return null;
   } else if ("track" === str) {
     return obj.TRACK;
-  } else if ("artist" === "artist") {
+  } else if ("artist" === str) {
     return obj.ARTIST;
   } else if ("album" === str) {
     return obj.ALBUM;

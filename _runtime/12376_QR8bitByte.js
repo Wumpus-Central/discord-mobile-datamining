@@ -3,7 +3,7 @@ import _mod12377 from "metro/12377__.js";
 
 class QR8bitByte {
   constructor(arg0) {
-    obj = { mode: require("metro/12377__.js").MODE_8BIT_BYTE, data: global };
+    obj = { mode: require("module_12377").MODE_8BIT_BYTE, data: global };
     return;
   }
 }

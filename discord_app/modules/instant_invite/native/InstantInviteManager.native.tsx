@@ -1,7 +1,7 @@
 // discord_app/modules/instant_invite/native/InstantInviteManager.native.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 let prototype = function InstantInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -12,8 +12,8 @@ let prototype = function InstantInviteManager() {
     }
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
-    callback(4094);
-    const obj = { key: "GROUP_DM_ADD_ERROR", content: null };
+    let obj = callback(4094);
+    obj = { key: "GROUP_DM_ADD_ERROR", content: null };
     const intl = applyArgumentsResult(1236).intl;
     obj[1] = intl.string(applyArgumentsResult(1236).t["N/9OFy"]);
     obj.open(obj);
@@ -23,6 +23,6 @@ let prototype = function InstantInviteManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
 
 export default prototype;

@@ -1,5 +1,5 @@
 // discord_app/design/native.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import AccessibilityAnnouncer from "../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import updateAccessibilityAnnouncerLiveRegionMessage from "../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncerLiveRegion.native.tsx";
 import context from "../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
@@ -97,7 +97,7 @@ import StickyWrapper from "components/Sticky/native/StickyWrapper.native.tsx";
 import ModalFooter from "components/Modal/native/ModalFooter.native.tsx";
 import Modal from "components/Modal/native/Modal.native.tsx";
 import defaultCountFormatter from "components/Tabs/native/Tabs.native.tsx";
-import SegmentedControlPagesNative from "components/SegmentedControl/native/SegmentedControlPages.native.tsx";
+import SegmentedControlPage from "components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import GuildIconPile from "components/Pile/native/GuildIconPile.native.tsx";
 import Pile from "components/Pile/native/Pile.native.tsx";
 import map2 from "components/Pile/native/PileOverflow.native.tsx";
@@ -134,7 +134,7 @@ import ContextMenuItem from "components/ContextMenu/native/ContextMenuItem.nativ
 import getItemKey from "components/ContextMenu/native/ContextMenuContainer.native.tsx";
 import Toast from "components/Toast/native/Toast.native.tsx";
 import GhostInput from "components/TextInput/native/GhostInput.native.tsx";
-import obj1322 from "components/Coachmark/native/CoachmarkConstants.native.tsx";
+import set2 from "components/Coachmark/native/CoachmarkConstants.native.tsx";
 import useAccessibilityNativeStackFocusTracking from "components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx";
 import AccessibleNativeStackNavigator from "components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx";
 import AccessibleNativeStackNavigatorDefault from "components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx";
@@ -144,7 +144,7 @@ import ModalDisclaimer from "components/Modal/native/ModalDisclaimer.native.tsx"
 import AvatarDuoPile from "components/Pile/native/AvatarDuoPile.native.tsx";
 import Slider from "components/Slider/native/Slider.native.tsx";
 
-const result = obj132.fileFinishedImporting("design/native.tsx");
+const result = set.fileFinishedImporting("design/native.tsx");
 
 export const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
 export const AccessibilityAnnouncerLiveRegion = updateAccessibilityAnnouncerLiveRegionMessage.AccessibilityAnnouncerLiveRegion;
@@ -334,8 +334,8 @@ export const Card = PressableCard.Card;
 export const CardProps = PressableCard.CardProps;
 export const SegmentedControl = SegmentedControl.SegmentedControl;
 export const SegmentedControlProps = SegmentedControl.SegmentedControlProps;
-export const SegmentedControlPages = SegmentedControlPagesNative.SegmentedControlPages;
-export const SegmentedControlPagesProps = SegmentedControlPagesNative.SegmentedControlPagesProps;
+export const SegmentedControlPages = SegmentedControlPage.SegmentedControlPages;
+export const SegmentedControlPagesProps = SegmentedControlPage.SegmentedControlPagesProps;
 export const useSegmentedControlState = useSegmentedControlState.useSegmentedControlState;
 export const SegmentedControlState = useSegmentedControlState.SegmentedControlState;
 export const SegmentedControlItem = useSegmentedControlState.SegmentedControlItem;
@@ -372,7 +372,7 @@ export const SplitTextInputProps = SplitTextInput.SplitTextInputProps;
 export const useTooltip = useTooltip.useTooltip;
 export const BaseTooltipProps = tooltipEnterExitAnimation.BaseTooltipProps;
 export const useCoachmark = useCoachmark.useCoachmark;
-export const BaseCoachmarkProps = obj1322.BaseCoachmarkProps;
+export const BaseCoachmarkProps = set2.BaseCoachmarkProps;
 export const ExpressiveGradient = ExpressiveGradient.ExpressiveGradient;
 export const LayerContext = add.LayerContext;
 export const LayerScope = Layer.LayerScope;

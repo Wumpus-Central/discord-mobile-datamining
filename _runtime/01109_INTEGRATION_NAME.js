@@ -11,8 +11,8 @@ export const registerWebWorker = function registerWebWorker(self) {
   let obj = { _sentryMessage: true, _sentryDebugIds, _sentryModuleMetadata };
   _sentryModuleMetadata = _self._sentryModuleMetadata;
   _self.postMessage(obj);
-  const listener = _self.addEventListener("unhandledrejection", (event) => {
-    const obj = { reason: _self(dependencyMap[3])._getUnhandledRejectionError(event), filename: null };
+  const listener = _self.addEventListener("unhandledrejection", (reason) => {
+    const obj = { reason: _self(closure_1_1[3])._getUnhandledRejectionError(reason), filename: null };
     const _location = _self.location;
     let href;
     if (_location != null) {
@@ -20,17 +20,15 @@ export const registerWebWorker = function registerWebWorker(self) {
     }
     obj[1] = href;
     _self.postMessage({ _sentryMessage: true, _sentryWorkerError: obj });
-    if (_self(dependencyMap[1]).DEBUG_BUILD) {
-      const debug = _self(dependencyMap[0]).debug;
+    if (_self(closure_1_1[1]).DEBUG_BUILD) {
+      const debug = tmp(tmp2[0]).debug;
       debug.log("[Sentry Worker] Forwarding unhandled rejection to parent", obj);
     }
-    const obj2 = _self(dependencyMap[3]);
   });
   if (_self(1072).DEBUG_BUILD) {
-    let debug = tmp3(817).debug;
+    let debug = _self(817).debug;
     debug.log("[Sentry Worker] Registered worker with unhandled rejection handling");
   }
-  tmp3 = _self;
 };
 export const webWorkerIntegration = registerSpanErrorInstrumentation.defineIntegration((worker) => {
   worker = worker.worker;
@@ -42,9 +40,9 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
         const items = [worker];
         arr = items;
       }
-      const item = arr.forEach((item, index) => {
-        const listener = item.addEventListener("message", (event) => {
-          const data = event.data;
+      const item = arr.forEach((addEventListener) => {
+        const listener = addEventListener.addEventListener("message", (data) => {
+          data = data.data;
           let obj = callback(table[0]);
           let flag = false;
           if (obj.isPlainObject(data)) {
@@ -56,66 +54,65 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
                 }
               }
               if ("_sentryDebugIds" in data) {
-                let tmpResult = callback(table[0]);
+                let tmpResult = tmp(tmp2[0]);
                 if (!tmpResult.isPlainObject(data._sentryDebugIds)) {
                   flag = false;
                 }
               }
               if ("_sentryModuleMetadata" in data) {
-                tmpResult = callback(table[0]);
+                tmpResult = tmp(tmp2[0]);
                 if (!tmpResult.isPlainObject(data._sentryModuleMetadata)) {
                   flag = false;
                 }
               }
               flag = true;
-              if (tmp26) {
+              if ("_sentryWorkerError" in data) {
                 flag = true;
                 if (!tmpResult1.isPlainObject(data._sentryWorkerError)) {
                   flag = false;
                 }
-                tmpResult1 = callback(table[0]);
+                tmpResult1 = tmp(tmp2[0]);
               }
-              tmp26 = "_sentryWorkerError" in data;
             }
           }
           if (flag) {
-            const result = event.stopImmediatePropagation();
-            if (event.data._sentryDebugIds) {
-              if (callback(table[1]).DEBUG_BUILD) {
-                const debug = callback(table[0]).debug;
-                debug.log("Sentry debugId web worker message received", event.data);
+            const result = data.stopImmediatePropagation();
+            if (data.data._sentryDebugIds) {
+              if (tmp(tmp2[1]).DEBUG_BUILD) {
+                const debug = tmp(tmp2[0]).debug;
+                debug.log("Sentry debugId web worker message received", data.data);
               }
               obj = {};
-              const merged = Object.assign(event.data._sentryDebugIds);
-              const merged1 = Object.assign(callback(table[2]).WINDOW._sentryDebugIds);
-              callback(table[2]).WINDOW._sentryDebugIds = obj;
+              const merged = Object.assign(data.data._sentryDebugIds);
+              const merged1 = Object.assign(tmp(tmp2[2]).WINDOW._sentryDebugIds);
+              tmp(tmp2[2]).WINDOW._sentryDebugIds = obj;
             }
-            if (event.data._sentryModuleMetadata) {
-              if (callback(table[1]).DEBUG_BUILD) {
-                const debug2 = callback(table[0]).debug;
-                debug2.log("Sentry module metadata web worker message received", event.data);
+            if (data.data._sentryModuleMetadata) {
+              if (tmp(tmp2[1]).DEBUG_BUILD) {
+                const debug2 = tmp(tmp2[0]).debug;
+                debug2.log("Sentry module metadata web worker message received", data.data);
               }
               obj = {};
-              const merged2 = Object.assign(event.data._sentryModuleMetadata);
-              const merged3 = Object.assign(callback(table[2]).WINDOW._sentryModuleMetadata);
-              callback(table[2]).WINDOW._sentryModuleMetadata = obj;
+              const merged2 = Object.assign(data.data._sentryModuleMetadata);
+              const merged3 = Object.assign(tmp(tmp2[2]).WINDOW._sentryModuleMetadata);
+              tmp(tmp2[2]).WINDOW._sentryModuleMetadata = obj;
             }
-            if (event.data._sentryWorkerError) {
-              if (callback(table[1]).DEBUG_BUILD) {
-                const debug3 = callback(table[0]).debug;
-                debug3.log("Sentry worker rejection message received", event.data._sentryWorkerError);
+            if (data.data._sentryWorkerError) {
+              if (tmp(tmp2[1]).DEBUG_BUILD) {
+                const debug3 = tmp(tmp2[0]).debug;
+                debug3.log("Sentry worker rejection message received", data.data._sentryWorkerError);
               }
-              const _sentryWorkerError = event.data._sentryWorkerError;
-              const client = callback(table[0]).getClient();
+              const _sentryWorkerError = data.data._sentryWorkerError;
+              const client = tmp(tmp2[0]).getClient();
               if (client) {
                 const stackParser = client.getOptions().stackParser;
                 const attachStacktrace = client.getOptions().attachStacktrace;
                 const reason = _sentryWorkerError.reason;
                 if (tmpResult3.isPrimitive(reason)) {
-                  let result1 = callback(table[3])._eventFromRejectionWithPrimitive(reason);
-                  const tmpResult4 = callback(table[3]);
+                  let result1 = tmp(tmp2[3])._eventFromRejectionWithPrimitive(reason);
+                  const tmpResult4 = tmp(tmp2[3]);
                 } else {
-                  const tmpResult5 = callback(table[4]);
+                  const tmpResult5 = tmp(tmp2[4]);
                   result1 = tmpResult5.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
                 }
                 result1.level = "error";
@@ -127,26 +124,26 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
                   obj1.worker = obj2;
                   result1.contexts = obj1;
                 }
-                tmpResult3 = callback(table[0]);
+                tmpResult3 = tmp(tmp2[0]);
                 const obj3 = { originalException: null, mechanism: null };
                 obj3[0] = reason;
                 obj3[1] = { handled: false, type: "auto.browser.web_worker.onunhandledrejection" };
-                callback(table[0]).captureEvent(result1, obj3);
-                if (callback(table[1]).DEBUG_BUILD) {
-                  const debug4 = callback(table[0]).debug;
+                tmp(tmp2[0]).captureEvent(result1, obj3);
+                if (tmp(tmp2[1]).DEBUG_BUILD) {
+                  const debug4 = tmp(tmp2[0]).debug;
                   debug4.log("Captured worker unhandled rejection", reason);
                 }
-                const tmpResult6 = callback(table[0]);
+                const tmpResult6 = tmp(tmp2[0]);
               }
-              const tmpResult2 = callback(table[0]);
+              const tmpResult2 = tmp(tmp2[0]);
             }
           }
         });
       });
     },
     addWorker(addEventListener) {
-      const listener = addEventListener.addEventListener("message", (event) => {
-        const data = event.data;
+      const listener = addEventListener.addEventListener("message", (data) => {
+        data = data.data;
         let obj = callback(table[0]);
         let flag = false;
         if (obj.isPlainObject(data)) {
@@ -158,66 +155,65 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               }
             }
             if ("_sentryDebugIds" in data) {
-              let tmpResult = callback(table[0]);
+              let tmpResult = tmp(tmp2[0]);
               if (!tmpResult.isPlainObject(data._sentryDebugIds)) {
                 flag = false;
               }
             }
             if ("_sentryModuleMetadata" in data) {
-              tmpResult = callback(table[0]);
+              tmpResult = tmp(tmp2[0]);
               if (!tmpResult.isPlainObject(data._sentryModuleMetadata)) {
                 flag = false;
               }
             }
             flag = true;
-            if (tmp26) {
+            if ("_sentryWorkerError" in data) {
               flag = true;
               if (!tmpResult1.isPlainObject(data._sentryWorkerError)) {
                 flag = false;
               }
-              tmpResult1 = callback(table[0]);
+              tmpResult1 = tmp(tmp2[0]);
             }
-            tmp26 = "_sentryWorkerError" in data;
           }
         }
         if (flag) {
-          const result = event.stopImmediatePropagation();
-          if (event.data._sentryDebugIds) {
-            if (callback(table[1]).DEBUG_BUILD) {
-              const debug = callback(table[0]).debug;
-              debug.log("Sentry debugId web worker message received", event.data);
+          const result = data.stopImmediatePropagation();
+          if (data.data._sentryDebugIds) {
+            if (tmp(tmp2[1]).DEBUG_BUILD) {
+              const debug = tmp(tmp2[0]).debug;
+              debug.log("Sentry debugId web worker message received", data.data);
             }
             obj = {};
-            const merged = Object.assign(event.data._sentryDebugIds);
-            const merged1 = Object.assign(callback(table[2]).WINDOW._sentryDebugIds);
-            callback(table[2]).WINDOW._sentryDebugIds = obj;
+            const merged = Object.assign(data.data._sentryDebugIds);
+            const merged1 = Object.assign(tmp(tmp2[2]).WINDOW._sentryDebugIds);
+            tmp(tmp2[2]).WINDOW._sentryDebugIds = obj;
           }
-          if (event.data._sentryModuleMetadata) {
-            if (callback(table[1]).DEBUG_BUILD) {
-              const debug2 = callback(table[0]).debug;
-              debug2.log("Sentry module metadata web worker message received", event.data);
+          if (data.data._sentryModuleMetadata) {
+            if (tmp(tmp2[1]).DEBUG_BUILD) {
+              const debug2 = tmp(tmp2[0]).debug;
+              debug2.log("Sentry module metadata web worker message received", data.data);
             }
             obj = {};
-            const merged2 = Object.assign(event.data._sentryModuleMetadata);
-            const merged3 = Object.assign(callback(table[2]).WINDOW._sentryModuleMetadata);
-            callback(table[2]).WINDOW._sentryModuleMetadata = obj;
+            const merged2 = Object.assign(data.data._sentryModuleMetadata);
+            const merged3 = Object.assign(tmp(tmp2[2]).WINDOW._sentryModuleMetadata);
+            tmp(tmp2[2]).WINDOW._sentryModuleMetadata = obj;
           }
-          if (event.data._sentryWorkerError) {
-            if (callback(table[1]).DEBUG_BUILD) {
-              const debug3 = callback(table[0]).debug;
-              debug3.log("Sentry worker rejection message received", event.data._sentryWorkerError);
+          if (data.data._sentryWorkerError) {
+            if (tmp(tmp2[1]).DEBUG_BUILD) {
+              const debug3 = tmp(tmp2[0]).debug;
+              debug3.log("Sentry worker rejection message received", data.data._sentryWorkerError);
             }
-            const _sentryWorkerError = event.data._sentryWorkerError;
-            const client = callback(table[0]).getClient();
+            const _sentryWorkerError = data.data._sentryWorkerError;
+            const client = tmp(tmp2[0]).getClient();
             if (client) {
               const stackParser = client.getOptions().stackParser;
               const attachStacktrace = client.getOptions().attachStacktrace;
               const reason = _sentryWorkerError.reason;
               if (tmpResult3.isPrimitive(reason)) {
-                let result1 = callback(table[3])._eventFromRejectionWithPrimitive(reason);
-                const tmpResult4 = callback(table[3]);
+                let result1 = tmp(tmp2[3])._eventFromRejectionWithPrimitive(reason);
+                const tmpResult4 = tmp(tmp2[3]);
               } else {
-                const tmpResult5 = callback(table[4]);
+                const tmpResult5 = tmp(tmp2[4]);
                 result1 = tmpResult5.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
               }
               result1.level = "error";
@@ -229,18 +225,18 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
                 obj1.worker = obj2;
                 result1.contexts = obj1;
               }
-              tmpResult3 = callback(table[0]);
+              tmpResult3 = tmp(tmp2[0]);
               const obj3 = { originalException: null, mechanism: null };
               obj3[0] = reason;
               obj3[1] = { handled: false, type: "auto.browser.web_worker.onunhandledrejection" };
-              callback(table[0]).captureEvent(result1, obj3);
-              if (callback(table[1]).DEBUG_BUILD) {
-                const debug4 = callback(table[0]).debug;
+              tmp(tmp2[0]).captureEvent(result1, obj3);
+              if (tmp(tmp2[1]).DEBUG_BUILD) {
+                const debug4 = tmp(tmp2[0]).debug;
                 debug4.log("Captured worker unhandled rejection", reason);
               }
-              const tmpResult6 = callback(table[0]);
+              const tmpResult6 = tmp(tmp2[0]);
             }
-            const tmpResult2 = callback(table[0]);
+            const tmpResult2 = tmp(tmp2[0]);
           }
         }
       });

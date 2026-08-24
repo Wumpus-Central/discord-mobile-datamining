@@ -1,12 +1,12 @@
 // discord_app/modules/media_keyboard/native/showMediaKeyboardActionSheet.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const MEDIA_KEYBOARD_ACTION_SHEET = "MEDIA_KEYBOARD_ACTION_SHEET";
-let result = obj132.fileFinishedImporting("modules/media_keyboard/native/showMediaKeyboardActionSheet.tsx");
+let result = set.fileFinishedImporting("modules/media_keyboard/native/showMediaKeyboardActionSheet.tsx");
 
 export const hideMediaKeyboardActionSheet = function hideMediaKeyboardActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(MEDIA_KEYBOARD_ACTION_SHEET);

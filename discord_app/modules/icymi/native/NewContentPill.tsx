@@ -4,17 +4,19 @@ import GuildIconSizes from "../../guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import SolidCutout from "../../../design/components/Icon/native/ClipView.tsx";
 import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import filterStaffGuild from "../ICYMIStore.tsx";
+import closure_7 from "../../../stores/GuildStore.tsx";
+import closure_8 from "../ICYMIStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function CutoutGuildIcon(guild) {
-  const obj = { shape: null, x: 18, y: -4, width: 32, height: 32, cornerRadius: null };
+  let obj = { style: { width: 24, height: 24 }, children: null };
+  obj = { cutouts: null, children: null };
+  obj = { shape: null, x: 18, y: -4, width: 32, height: 32, cornerRadius: null };
   const tmp = callback2();
   obj[0] = SolidCutout.CutoutShape.RoundedRect;
   obj[5] = ThemesDefault.radii.md;
@@ -30,7 +32,8 @@ function CutoutGuildIcon(guild) {
 }
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = { container: null, guildIconBG: null, refreshMorePillContainer: null };
+createCacheKey = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[2] = { position: "absolute", top: 0, left: 0, height: 32, width: "100%", zIndex: 100 };
@@ -38,13 +41,17 @@ let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
 let closure_14 = { code: "function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,'respect-motion-settings')};}" };
 let closure_15 = { code: "function NewContentPillTsx2(){const{showingPill}=this.__closure;return{pointerEvents:showingPill?'box-none':'none'};}" };
-const result = require("obj132").fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const result = require("set").fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
 
 export default function NewContentPill(onPress) {
   onPress = onPress.onPress;
   const isRefreshing = onPress.isRefreshing;
   let stateFromStoresArray;
+  let stateFromStores;
   let first;
+  closure_5 = undefined;
+  closure_6 = undefined;
   closure_7 = undefined;
   let first1;
   let isFocused;
@@ -56,7 +63,7 @@ export default function NewContentPill(onPress) {
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => first1.getNewUnreadDehydratedItems());
   obj1 = onPress(stateFromStoresArray[10]);
   const items1 = [first1];
-  const stateFromStores = obj1.useStateFromStores(items1, () => first1.hasNewContent(), []);
+  stateFromStores = obj1.useStateFromStores(items1, () => first1.hasNewContent(), []);
   let obj2 = first;
   const tmp7 = stateFromStores(first.useState(stateFromStoresArray), 2);
   first = tmp7[0];
@@ -64,14 +71,14 @@ export default function NewContentPill(onPress) {
   const items2 = [first];
   closure_6 = first.useMemo(() => {
     const items = [];
-    const item = first.forEach((item, index) => {
+    const item = first.forEach((data) => {
       let arr = items;
-      if (items.length < items(stateFromStoresArray[12]).MIN_ITEMS_FOR_NEW_PILL) {
-        const tmpResult = items(stateFromStoresArray[13]);
+      if (items.length < items(closure_1_2[12]).MIN_ITEMS_FOR_NEW_PILL) {
+        const tmpResult = items(closure_1_2[13]);
         if (tmp4) {
-          arr = arr.push(item.data.guild_id);
+          arr = arr.push(data.data.guild_id);
         }
-        tmp4 = items(stateFromStoresArray[13]).isGuildItem(item) && !arr.includes(item.data.guild_id);
+        tmp4 = items(closure_1_2[13]).isGuildItem(data) && !arr.includes(data.data.guild_id);
       }
     });
     return items;
@@ -79,7 +86,7 @@ export default function NewContentPill(onPress) {
   let obj3 = onPress(stateFromStoresArray[10]);
   const items3 = [closure_7];
   const stateFromStoresArray1 = obj3.useStateFromStoresArray(items3, () => {
-    const mapped = closure_6.map((item, index) => guild.getGuild(item));
+    const mapped = closure_6.map((arg0) => guild.getGuild(arg0));
     return mapped.filter(Boolean);
   });
   const tmp11 = stateFromStores(first.useState(false), 2);
@@ -190,23 +197,23 @@ export default function NewContentPill(onPress) {
     if (isRefreshing) {
       const tmp21 = closure_5;
       const tmp2Result2 = tmp2(tmp3[21]);
-      tmp9(tmp3[7]).unsafe_rawColors;
+      let unsafe_rawColors = tmp9(tmp3[7]).unsafe_rawColors;
       const isThemeDarkResult = tmp2(tmp3[21]).isThemeDark(tmp10);
-      const unsafe_rawColors = { color: null };
+      unsafe_rawColors = { color: null };
       unsafe_rawColors[0] = tmp2(tmp3[21]).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
       tmp30Result = tmp30(tmp21, unsafe_rawColors);
       const tmp23 = tmp2(tmp3[21]).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
       const items10 = [tmp30(tmp2(tmp3[18]).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
-      items10[1] = substr.map((item, index) => {
+      items10[1] = substr.map((guild) => {
         let num = 4;
-        if (index > 0) {
+        if (arg1 > 0) {
           num = -2;
         }
-        { style: { marginLeft: num }, children: isFocused(closure_13, obj) };
-        obj = { guild: item };
-        return isFocused(closure_6, obj, item.id);
+        obj = { style: { marginLeft: num }, children: tmp(closure_13, obj) };
+        obj = { guild };
+        return isFocused(closure_6, obj, guild.id);
       });
       let num2 = 4;
       if (stateFromStoresArray1.length > 1) {
@@ -225,6 +232,7 @@ export default function NewContentPill(onPress) {
       obj4[2] = items10;
       obj3[2] = tmp31(tmp32, obj4);
       tmp30Result = tmp30(tmp9(tmp3[14]).View, obj3);
+      const tmp25 = closure_6;
       const tmp9Result = tmp9(tmp3[9]);
     }
     tmp31 = first2;

@@ -1,11 +1,11 @@
 // discord_app/modules/group_dm/native/GroupDMAvatar.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 class FacepileGroupDMAvatar {
   constructor(arg0) {
     ({ size, animate, users, sources, pileSizeOverride } = global);
@@ -43,6 +43,7 @@ class FacepileGroupDMAvatar {
       const diff = callback - result - table;
       const sqrtResult1 = Math.sqrt(2 * Math.pow(diff, 2));
       const sum1 = -sqrtResult - (sum - sqrtResult) - sqrtResult1 + (sqrtResult1 - diff);
+      obj = { nativeCutouts: null };
       obj = { shape: callback(table[6]).CutoutShape.Circle, x: table - result1 - sum1, y: table - result1 - sum1, size: result1 };
       const items = [obj];
       obj[0] = items;
@@ -91,7 +92,7 @@ obj[require("Button").AvatarSizes.XSMALL] = require("Button").AvatarSizes.SIZE_1
 obj[require("Button").AvatarSizes.SIZE_16] = require("Button").AvatarSizes.XXSMALL_10;
 obj[require("Button").AvatarSizes.NORMAL] = require("Button").AvatarSizes.XSMALL;
 let closure_8 = createCacheKey.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
-let result = require("obj132").fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
+let result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
 
 export default function GroupDMAvatar(pileSizeOverride) {
   ({ style, channel } = pileSizeOverride);
@@ -100,8 +101,8 @@ export default function GroupDMAvatar(pileSizeOverride) {
   const items = [closure_4];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
-    const mapped = recipients.map((item, index) => user.getUser(item));
-    return mapped.filter(channel(dependencyMap[8]).isNotNullish);
+    const mapped = recipients.map((arg0) => user.getUser(arg0));
+    return mapped.filter(channel(closure_1_1[8]).isNotNullish);
   });
   if (null == channel.icon) {
     if (0 !== channel.recipients.length) {
@@ -115,7 +116,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
           obj[6] = animate;
           obj[7] = accessible;
           obj[8] = accessibilityLabel;
-          let tmp5 = callback(channel(1297).Avatar, obj);
+          let tmp5 = callback(tmp(1297).Avatar, obj);
         } else {
           obj = { status: null, style: null, size: null, animate: null, users: null, pileSizeOverride: null, accessible: null, accessibilityLabel: null };
           obj[0] = status;
@@ -132,6 +133,6 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = callback(channel(1297).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
+  tmp5 = callback(tmp(1297).Avatar, { autoStatusCutout: true, status, style, size, channel, animate, accessible, accessibilityLabel });
 };
 export { FacepileGroupDMAvatar };

@@ -1,10 +1,10 @@
 // discord_app/lib/VoiceDuration.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set2 from "../../_runtime/00002_set.js";
 import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 
 let closure_2 = [1, 100, 1000, 10000];
 let closure_3 = [100, 500, 1000, 5000];
-let result = obj132.fileFinishedImporting("lib/VoiceDuration.tsx");
+let result = set2.fileFinishedImporting("lib/VoiceDuration.tsx");
 class VoiceDuration {
   constructor(arg0, arg1) {
     TimeStampProducer = importDefault;
@@ -46,7 +46,8 @@ class VoiceDuration {
 }
 const prototype = VoiceDuration.prototype;
 prototype["start"] = function start(flag, flag2) {
-  const self = this;
+  let self = this;
+  self = this;
   if (flag === undefined) {
     flag = false;
   }
@@ -83,9 +84,9 @@ prototype["start"] = function start(flag, flag2) {
   const connection = self.connection;
   connection.on(self(4584).BaseConnectionEvent.Speaking, (arg0, arg1) => {
     if (self.userId === arg0) {
-      self.onSpeaking(0 !== arg1);
+      obj.onSpeaking(0 !== arg1);
     } else {
-      self.onListening(0 !== arg1, arg0);
+      obj.onListening(0 !== arg1, arg0);
     }
   });
   self.onMuted(flag);
@@ -169,14 +170,14 @@ prototype["computeSpeakingDurationMilestones"] = function computeSpeakingDuratio
     if (null != lastStartTime2) {
       const speaking = this.speaking;
       closure_0 = speaking.elapsed().asMilliseconds();
-      const found = closure_2.filter((item, index) => {
+      const found = closure_2.filter((arg0) => {
         const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
-        return !timesUntilSpeakingDurationMilestonesMs.has(item);
+        return !timesUntilSpeakingDurationMilestonesMs.has(arg0);
       });
-      const found1 = found.filter((item, index) => closure_0 >= item);
-      const item = found1.forEach((item, index) => {
+      const found1 = found.filter((arg0) => closure_0 >= arg0);
+      const item = found1.forEach((arg0) => {
         const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
-        const result = timesUntilSpeakingDurationMilestonesMs.set(item, closure_2 - closure_1 + item - closure_3);
+        const result = timesUntilSpeakingDurationMilestonesMs.set(arg0, closure_2 - closure_1 + arg0 - closure_3);
       });
       const elapsedResult = speaking.elapsed();
     }
@@ -188,22 +189,22 @@ prototype["addSpeechChunk"] = function addSpeechChunk() {
   if (null != lastStartTime) {
     const timestampProducer = this.timestampProducer;
     closure_0 = timestampProducer.now() - lastStartTime;
-    const found = closure_3.filter((item, index) => closure_0 >= item);
-    const item = found.forEach((item, index) => {
+    const found = closure_3.filter((arg0) => closure_0 >= arg0);
+    const item = found.forEach((arg0) => {
       const speakingMinimumChunks = self.speakingMinimumChunks;
-      let num = speakingMinimumChunks.get(item);
+      let num = speakingMinimumChunks.get(arg0);
       if (num == null) {
         num = 0;
       }
-      const speakingMinimumChunks2 = self.speakingMinimumChunks;
-      const result = speakingMinimumChunks2.set(item, num + closure_0);
-      const speakingMinimumChunkCounts = self.speakingMinimumChunkCounts;
-      let num2 = speakingMinimumChunkCounts.get(item);
+      const speakingMinimumChunks2 = tmp.speakingMinimumChunks;
+      const result = speakingMinimumChunks2.set(arg0, num + closure_0);
+      const speakingMinimumChunkCounts = tmp.speakingMinimumChunkCounts;
+      let num2 = speakingMinimumChunkCounts.get(arg0);
       if (num2 == null) {
         num2 = 0;
       }
-      const speakingMinimumChunkCounts2 = self.speakingMinimumChunkCounts;
-      const result1 = speakingMinimumChunkCounts2.set(item, num2 + 1);
+      const speakingMinimumChunkCounts2 = tmp.speakingMinimumChunkCounts;
+      const result1 = speakingMinimumChunkCounts2.set(arg0, num2 + 1);
     });
   }
 };
@@ -230,11 +231,13 @@ prototype["stop"] = function stop() {
   const speakingDurationMilestones = this.computeSpeakingDurationMilestones(this.connected.lastStartTime, this.speaking.lastStartTime, this.speaking.lastElapsed);
 };
 prototype["getDurationStats"] = function getDurationStats() {
-  const self = this;
+  let self = this;
+  self = this;
   const lastStartTime = this.speaking.lastStartTime;
   const timestampProducer = this.timestampProducer;
+  let num = 0;
   if (null != lastStartTime) {
-    let num = timestampProducer.now() - lastStartTime;
+    num = timestampProducer.now() - lastStartTime;
   }
   const speakingDurationMilestones = self.computeSpeakingDurationMilestones(self.connected.lastStartTime, self.speaking.lastStartTime, self.speaking.lastElapsed);
   let obj = { duration_listening_ms: listening.elapsed().asMilliseconds(), duration_speaking_ms: null, duration_participation_ms: null, duration_connected_ms: null, duration_muted_ms: null, duration_deafened_ms: null, duration_noise_cancellation_enabled_ms: null, duration_spatial_ms: null, speech_event_count: null };
@@ -259,48 +262,48 @@ prototype["getDurationStats"] = function getDurationStats() {
   const spatialAudio = self.spatialAudio;
   obj[7] = spatialAudio.totalDuration();
   obj[8] = self.speechEventCount;
-  const found = closure_2.filter((item, index) => {
+  const found = closure_2.filter((arg0) => {
     const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
-    return timesUntilSpeakingDurationMilestonesMs.has(item);
+    return timesUntilSpeakingDurationMilestonesMs.has(arg0);
   });
-  let merged = Object.assign(found.reduce((acc, item, index) => {
+  let merged = Object.assign(found.reduce((arg0, arg1) => {
     const obj = {};
-    const merged = Object.assign(acc);
+    const merged = Object.assign(arg0);
     const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
-    const combined = "time_to_first_" + item + "ms_speech_ms";
-    obj[combined] = timesUntilSpeakingDurationMilestonesMs.get(item);
+    const combined = "time_to_first_" + arg1 + "ms_speech_ms";
+    obj[combined] = timesUntilSpeakingDurationMilestonesMs.get(arg1);
     return obj;
   }, {}));
-  const found1 = closure_3.filter((item, index) => {
+  const found1 = closure_3.filter((arg0) => {
     const speakingMinimumChunks = self.speakingMinimumChunks;
-    let hasItem = speakingMinimumChunks.has(item);
+    let hasItem = speakingMinimumChunks.has(arg0);
     if (!hasItem) {
-      hasItem = num >= item;
+      hasItem = num >= arg0;
     }
     return hasItem;
   });
-  const merged1 = Object.assign(found1.reduce((acc, item, index) => {
+  const merged1 = Object.assign(found1.reduce((arg0, arg1) => {
     const obj = {};
-    const merged = Object.assign(acc);
+    const merged = Object.assign(arg0);
     const speakingMinimumChunks = self.speakingMinimumChunks;
-    const combined = "duration_speaking_gte_" + item + "ms_ms";
-    num = speakingMinimumChunks.get(item);
+    const combined = "duration_speaking_gte_" + arg1 + "ms_ms";
+    num = speakingMinimumChunks.get(arg1);
     if (num == null) {
       num = 0;
     }
     let num2 = 0;
-    if (num >= item) {
+    if (num >= arg1) {
       num2 = tmp4;
     }
     obj[combined] = num + num2;
     const speakingMinimumChunkCounts = self.speakingMinimumChunkCounts;
-    const combined1 = "speech_event_count_gte_" + item + "ms";
-    let num3 = speakingMinimumChunkCounts.get(item);
+    const combined1 = "speech_event_count_gte_" + arg1 + "ms";
+    let num3 = speakingMinimumChunkCounts.get(arg1);
     if (num3 == null) {
       num3 = 0;
     }
     let num4 = 0;
-    if (num >= item) {
+    if (num >= arg1) {
       num4 = 1;
     }
     obj[combined1] = num3 + num4;

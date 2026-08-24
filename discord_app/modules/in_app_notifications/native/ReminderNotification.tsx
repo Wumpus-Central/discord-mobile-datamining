@@ -1,24 +1,22 @@
 // discord_app/modules/in_app_notifications/native/ReminderNotification.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
 import NativeMessagePreviewContentDefault from "MessagePreviewText.tsx";
 import LocationTextDefault from "MessageNotificationHeader.tsx";
 import VideoBadge from "MediaPreviewRightAccessory.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/ChannelStore.tsx";
+import closure_6 from "../../../stores/GuildStore.tsx";
+import set from "InAppNotificationConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "InAppNotificationConstants.tsx";
 
-require = fn;
+require = arg1;
 function NotificationAvatar(arg0) {
   ({ user, guildId } = arg0);
   const tmp = callback3();
@@ -69,14 +67,13 @@ function NotificationBody(channel) {
     obj1 = { children: null };
     items2[1] = tmp14;
     obj1[0] = items2;
-    return callback(closure_12, obj1);
+    return closure_11(closure_12, obj1);
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight: closure_7 };
   tmp14 = callback(NativeMessagePreviewContentDefault, obj2);
-  const tmpResult = channel(10029);
 }
 let c3 = importAllResult;
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = require("set"));
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = set);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 }, avatarContainer: { position: "relative" }, rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } });
 let obj = { direction: require("Button").CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
@@ -94,7 +91,9 @@ let closure_16 = importAllResult.memo((message) => {
   }
   return tmp4;
 });
-const memoResult = importAllResult.memo(function ReminderNotification(notification) {
+const result = set.fileFinishedImporting("modules/in_app_notifications/native/ReminderNotification.tsx");
+
+export default importAllResult.memo(function ReminderNotification(notification) {
   notification = notification.notification;
   const channel = notification.channel;
   const message = notification.savedMessage.message;
@@ -108,17 +107,14 @@ const memoResult = importAllResult.memo(function ReminderNotification(notificati
     return obj;
   }, []);
   const callback = importAllResult.useCallback(() => {
-    obj = _modDef5260;
+    obj = closure_1_1(closure_1_2[21]);
     obj.popAll();
-    notification(dependencyMap[22]).showForLaterModal(notification(dependencyMap[23]).SavedMessageSortTypes.REMINDER);
+    notification(closure_1_2[22]).showForLaterModal(notification(closure_1_2[23]).SavedMessageSortTypes.REMINDER);
     ({ savedMessage, author } = notification);
-    const obj2 = notification(dependencyMap[22]);
+    const obj2 = notification(closure_1_2[22]);
     obj = { message_id: savedMessage.saveData.messageId, message_author_id: author.id, notification_type: "IN_APP" };
-    expandEventPropertiesDefault.track(AnalyticEvents.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
+    closure_1_1(closure_1_2[24]).track(closure_1_9.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
   }, items);
   obj = { icon: callback(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: callback(closure_16, { message }), children: callback(NotificationBody, { channel, message }) };
   return callback(notification(10113).NotificationPressable, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/ReminderNotification.tsx");
-
-export default memoResult;

@@ -9,14 +9,15 @@ import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj = { container: null };
+obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function HomeChannelHeader() {
-  { style: callback3().container, children: null };
-  let obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, disableColor: true };
+  let obj = { style: callback3().container, children: null };
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, disableColor: true };
   const items = [callback(Button.Icon, obj), ];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = getSystemLocale.intl;
@@ -25,6 +26,6 @@ const memoResult = importAllResult.memo(function HomeChannelHeader() {
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
 
 export default memoResult;

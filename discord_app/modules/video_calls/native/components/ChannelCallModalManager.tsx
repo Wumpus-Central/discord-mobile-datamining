@@ -1,10 +1,9 @@
 // discord_app/modules/video_calls/native/components/ChannelCallModalManager.tsx
-import dispatcherDefault from "../../../../Dispatcher.tsx";
 import initializeDefault from "../../../../lib/LifecycleManager.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
-import updateVoiceState from "../../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../stores/VoiceStateStore.tsx";
 
-let require = fn;
+let require = arg1;
 initializeDefault;
 class ChannelCallModalManager extends tmp2 {
   constructor() {
@@ -19,13 +18,13 @@ class ChannelCallModalManager extends tmp2 {
         isInChannelResult = closure_1_4.isInChannel(channel.id, currentUser.id);
       }
       if (tmp4) {
-        dispatcherDefault.wait(() => {
+        closure_1_1(closure_1_2[3]).wait(() => {
           const result = channel(closure_1_2[4]).dismissVoiceChannelScreens(channel);
         });
         obj.terminate();
+        const obj2 = closure_1_1(closure_1_2[3]);
       }
       channel.inVoiceChannel = isInChannelResult;
-      tmp4 = null != channel && channel.inVoiceChannel && channel.inVoiceChannel !== isInChannelResult;
     };
     return applyArgumentsResult;
   }
@@ -46,6 +45,6 @@ prototype["_terminate"] = function _terminate() {
   closure_4.removeChangeListener(this.handleCloseModal);
 };
 const channelCallModalManager = new ChannelCallModalManager();
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModalManager.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModalManager.tsx");
 
 export default channelCallModalManager;

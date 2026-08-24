@@ -1,9 +1,9 @@
 // discord_app/lib/NetworkTtlCache.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
 let closure_0 = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
 let obj = { IDLE: "idle", LOADING: "loading", VALID: "valid", STALE: "stale", ERROR: "error" };
-const result = obj132.fileFinishedImporting("lib/NetworkTtlCache.tsx");
+const result = set.fileFinishedImporting("lib/NetworkTtlCache.tsx");
 class NetworkTtlCache {
   constructor() {
     obj = global;
@@ -21,10 +21,10 @@ class NetworkTtlCache {
   }
 }
 const prototype = NetworkTtlCache.prototype;
-prototype["setTtl"] = function setTtl(c6) {
-  this.ttlMs = c6;
+prototype["setTtl"] = function setTtl(ttlMs) {
+  this.ttlMs = ttlMs;
 };
-prototype["setLoading"] = function setLoading(onComplete) {
+prototype["setLoading"] = function setLoading(arg0) {
   this.fetchState = constants.LOADING;
 };
 prototype["setValue"] = function setValue(value) {
@@ -89,11 +89,11 @@ prototype["getStatus"] = function getStatus() {
   const fetchState = this.fetchState;
   if (constants.IDLE === fetchState) {
     return obj.IDLE;
-  } else if (constants.LOADING === fetchState) {
+  } else if (tmp.LOADING === fetchState) {
     return obj.LOADING;
-  } else if (constants.ERROR === fetchState) {
+  } else if (tmp.ERROR === fetchState) {
     return obj.ERROR;
-  } else if (constants.SUCCESS === fetchState) {
+  } else if (tmp.SUCCESS === fetchState) {
     return self.isExpired() ? obj.STALE : obj.VALID;
   }
 };

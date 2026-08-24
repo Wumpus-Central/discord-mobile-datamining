@@ -1,5 +1,5 @@
 // _runtime/12208_Doc.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import Doc from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 class Doc {
@@ -17,33 +17,33 @@ class Doc {
     return;
   }
 }
-_classCallCheck = Doc;
 let items = [
   {
     key: "indented",
-    value: function indented(fn) {
+    value: function indented(arg0) {
       this.indent = this.indent + 1;
-      fn(this);
+      arg0(this);
       this.indent = this.indent - 1;
     }
   },
   {
     key: "write",
     value: function write(fn) {
-      const self = this;
+      let self = this;
+      self = this;
       if (typeof fn === "function") {
         fn(self, { execution: "sync" });
         fn(self, { execution: "async" });
       } else {
         const parts = fn.split("\n");
-        const found = parts.filter((item, index) => item);
+        const found = parts.filter((arg0) => arg0);
         const _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(found.map((item, index) => item.length - item.trimStart().length), 0);
+        HermesBuiltin.arraySpread(found.map((str) => str.length - str.trimStart().length), 0);
         const _Math2 = Math;
         closure_0 = HermesBuiltin.apply(items, Math);
-        const mapped = found.map((item, index) => item.slice(closure_0));
-        const mapped1 = mapped.map((item, index) => " ".repeat(2 * self.indent) + item);
+        const mapped = found.map((arr) => arr.slice(closure_0));
+        const mapped1 = mapped.map((arg0) => " ".repeat(2 * self.indent) + arg0);
         for (const item10003 of mapped1) {
           let content = self.content;
           let arr = content.push(item10003);
@@ -67,7 +67,7 @@ let items = [
       if (content == null) {
         content = [""];
       }
-      const items1 = [...content.map((item, index) => "  " + item)];
+      const items1 = [...content.map((arg0) => "  " + arg0)];
       items[tmp] = items1.join("\n");
       return Function(...args);
     }

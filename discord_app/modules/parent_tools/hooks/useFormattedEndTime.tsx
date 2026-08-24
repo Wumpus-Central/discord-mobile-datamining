@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/hooks/useFormattedEndTime.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
 
 export default function useFormattedEndTime() {
   const items = [closure_2];

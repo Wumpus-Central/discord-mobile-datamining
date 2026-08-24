@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import _trackAppBackgrounded from "BasicWorkScheduler.tsx";
@@ -23,7 +23,8 @@ class DispatcherWorkScheduler extends BasicWorkScheduler {
 }
 const prototype = DispatcherWorkScheduler.prototype;
 prototype["_queueIdleCallback"] = function _queueIdleCallback() {
-  const self = this;
+  let self = this;
+  self = this;
   if (this._enableRequestIdleCallback) {
     if (!self._criticalWorkScheduled) {
       const _performance = performance;
@@ -45,7 +46,7 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
     self._flushIdleHandler = null;
   }
 };
-let result = obj132.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
+let result = set.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
 export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
   if (typeof DispatcherWorkScheduler !== "function") {

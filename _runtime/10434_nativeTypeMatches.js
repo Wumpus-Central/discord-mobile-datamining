@@ -4,20 +4,20 @@ function nativeTypeMatches(arg0, arg1) {
 }
 arg5.safeValidate = (arr, nativeType) => {
   nativeType = nativeType.nativeType;
-  return arr.some((item, index) => {
+  return arr.some((str) => {
     if (typeof nativeType !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let flag = true;
-    if (item !== nativeType) {
+    if (str !== nativeType) {
       flag = true;
-      if ("*/*" !== item) {
+      if ("*/*" !== str) {
         flag = false;
-        if (null !== nativeType) {
+        if (null !== obj) {
           flag = false;
-          if (item.endsWith("/*")) {
+          if (str.endsWith("/*")) {
             flag = false;
-            if (nativeType.startsWith(item.slice(0, -2))) {
+            if (obj.startsWith(str.slice(0, -2))) {
               flag = true;
             }
           }

@@ -2,9 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
-require = fn;
+require = arg1;
 let c3 = 86400000;
 let c4 = null;
 let c5 = null;
@@ -26,7 +26,7 @@ Object.defineProperty(prototype, "loading", {
   set: undefined
 });
 Object.defineProperty(prototype, "methods", {
-  get: function methods(initiateAgeVerification) {
+  get: function methods(arg0) {
     return c4;
   },
   set: undefined
@@ -63,9 +63,9 @@ prototype["getReactiveCheckPassed"] = function getReactiveCheckPassed() {
 prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
   let tmp2 = "passed" !== unchecked;
   if (tmp2) {
-    let tmp3 = "suppress" !== unchecked;
+    let tmp3 = "suppress" !== tmp;
     if (tmp3) {
-      let tmp4 = "miss" === unchecked;
+      let tmp4 = "miss" === tmp;
       if (tmp4) {
         tmp4 = null != c9;
       }
@@ -194,6 +194,6 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     c6 = null;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
+let result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
 
 export default ageVerificationStore;

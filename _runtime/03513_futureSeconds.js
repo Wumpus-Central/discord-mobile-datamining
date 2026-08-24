@@ -17,7 +17,14 @@ function futureMonths(str) {
 function futureYears(str) {
   return str.replace(/(vuosi|vuotta)/, "vuoden");
 }
-const obj = {
+let obj = {
+  one: "puoli minuuttia",
+  other: "puoli minuuttia",
+  futureTense(one) {
+    return "puolen minuutin";
+  }
+};
+obj = {
   one: "p\u00E4iv\u00E4",
   other: "{{count}} p\u00E4iv\u00E4\u00E4",
   futureTense: function futureDays(str) {
@@ -32,6 +39,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
   } else {
     const _String = String;
     one = obj.other.replace("{{count}}", String(arg1));
+    const str = obj.other;
   }
   let tmp2 = one;
   if (null != addSuffix) {

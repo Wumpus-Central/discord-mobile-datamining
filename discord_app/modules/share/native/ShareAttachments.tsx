@@ -1,45 +1,52 @@
 // discord_app/modules/share/native/ShareAttachments.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../reanimated/ReanimatedRexport.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
-{ duration: 300, easing: require("Button").STANDARD_EASING };
-let obj = { containerRevamp: null, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
+let obj = { duration: 300, easing: require("Button").STANDARD_EASING };
+obj = { containerRevamp: null, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 obj[0] = { marginHorizontal: -ThemesDefault.space.PX_16 };
-const createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
+let obj1 = { marginHorizontal: -ThemesDefault.space.PX_16 };
 obj[2] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[3] = { height: 60, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
 obj[4] = { width: 50, position: "absolute", left: 0, top: 0, bottom: 0, zIndex: 100 };
 obj[5] = { width: 50, position: "absolute", right: 0, top: 0, bottom: 0, zIndex: 100 };
+const obj4 = { height: 60, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
 obj[6] = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function ShareAttachmentsTsx1(){const{withTiming,contentOffset,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()<=0?0:1,GRADIENT_EASING_CONFIG)};}" };
 let closure_11 = { code: "function ShareAttachmentsTsx2(){const{withTiming,contentOffset,layoutWidth,contentWidth,GRADIENT_EASING_CONFIG}=this.__closure;return{opacity:withTiming(contentOffset.get()+layoutWidth.get()>=contentWidth.get()?0:1,GRADIENT_EASING_CONFIG)};}" };
 let closure_12 = { code: "function ShareAttachmentsTsx3(event){const{contentOffset,contentWidth,layoutWidth}=this.__closure;contentOffset.set(event.contentOffset.x);contentWidth.set(event.contentSize.width);layoutWidth.set(event.layoutMeasurement.width);}" };
-let result = require("obj132").fileFinishedImporting("modules/share/native/ShareAttachments.tsx");
+const obj5 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let result = require("set").fileFinishedImporting("modules/share/native/ShareAttachments.tsx");
 
 export default function ShareAttachments(arg0) {
   ({ attachments, isRevamp } = arg0);
   if (isRevamp === undefined) {
     isRevamp = false;
   }
+  let _require;
+  let sharedValue;
   let sharedValue1;
+  let sharedValue2;
   let tmp = callback2();
-  const _require = tmp;
+  _require = tmp;
   obj = _require(sharedValue1[3]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   obj1 = _require(sharedValue1[3]);
   sharedValue1 = obj1.useSharedValue(0);
   let obj2 = _require(sharedValue1[3]);
-  const sharedValue2 = obj2.useSharedValue(0);
+  sharedValue2 = obj2.useSharedValue(0);
   let obj3 = _require(sharedValue1[3]);
   const fn = function y() {
     obj = lib(sharedValue1[8]);
@@ -142,19 +149,23 @@ export default function ShareAttachments(arg0) {
     tmp19[4] = callback1;
     const intl = tmp2(tmp3[10]).intl;
     tmp19[8] = intl.string(tmp2(tmp3[10]).t.RhtzFe);
-    tmp19[9] = attachments.map((item, index) => {
-      obj = { uri: item.uri, width: 60, height: 60, isImage: null, isVideo: null, fileName: null, showPlayOnVideoPreview: true };
+    tmp19[9] = attachments.map((uri) => {
+      obj = { style: lib.attachmentPreview, children: null };
+      obj = { uri: uri.uri, width: 60, height: 60, isImage: null, isVideo: null, fileName: null, showPlayOnVideoPreview: true };
       const tmp = sharedValue(sharedValue1[11]);
-      obj[3] = lib(sharedValue1[12]).isImage(item.uri, item.mimeType);
+      obj[3] = lib(sharedValue1[12]).isImage(uri.uri, uri.mimeType);
       const obj3 = lib(sharedValue1[12]);
-      obj[4] = lib(sharedValue1[12]).isVideo(item.uri, item.mimeType);
-      obj[5] = item.name;
+      obj[4] = lib(sharedValue1[12]).isVideo(uri.uri, uri.mimeType);
+      obj[5] = uri.name;
       obj[1] = closure_1_5(tmp, obj);
-      return closure_1_5(View, obj, index);
+      return closure_1_5(closure_1_4, obj, arg1);
     });
     items5[2] = callback(sharedValue(tmp3[3]).ScrollView, tmp19);
     obj1[1] = items5;
-    tmp20Result = callback(View, obj1);
+    tmp20Result = closure_6(View, obj1);
+    const tmp15 = callback;
+    const tmp20 = closure_6;
+    const tmp21 = View;
   }
   return tmp20Result;
 };

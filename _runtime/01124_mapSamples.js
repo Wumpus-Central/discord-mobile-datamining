@@ -24,14 +24,24 @@ function mapSamples(samples) {
       let result = 1000 * (Number(nextResult.ts) - NumberResult);
       let obj4 = result;
       if (result >= tmp) {
+        let tmp18 = require;
+        let tmp19 = dependencyMap;
         let debug2 = registerSpanErrorInstrumentation.debug;
+        let tmp20 = result;
         let _HermesInternal = HermesInternal;
+        let str2 = "ns.";
+        let str3 = "ns greater than the max elapsed time ";
+        let str4 = "[Profiling] Sample has elapsed time since start ";
+        let tmp21 = tmp;
         let warnResult = debug2.warn("[Profiling] Sample has elapsed time since start " + obj4 + "ns greater than the max elapsed time " + tmp + "ns.");
+        let tmp23 = iter;
         iter.return();
         break;
       } else {
         let obj = { stack_id: null, thread_id: null, elapsed_since_start_ns: null };
+        let tmp15 = nextResult;
         ({ sf: obj5[0], tid: obj5[1] } = tmp11);
+        let tmp16 = result;
         obj[2] = obj4.toFixed(0);
         let arr = items.push(obj);
         continue;
@@ -79,6 +89,7 @@ function parseHermesJSStackFrame(category) {
     const index = name.indexOf("(");
     if (-1 !== index) {
       name = category.name.substring(0, index) || undefined;
+      const str2 = category.name;
       const tmp2 = category.name.substring(0, index) || undefined;
     } else {
       name = category.name;
@@ -114,6 +125,7 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
       const frames = [];
       const hermesStackFrameIdToSentryFrameIdMap = new Map();
       for (const key10011 in arg0) {
+        let tmp6 = key10011;
         let _Object = Object;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
@@ -130,6 +142,7 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
           } else {
             let _Number = Number;
             let result = hermesStackFrameIdToSentryFrameIdMap.set(Number(key10011), frames.length);
+            let tmp4 = callback;
             let arr = frames.push(callback(tmp2));
             continue;
           }
@@ -150,21 +163,28 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
         let tmp3 = nextResult;
         if (undefined !== nextResult) {
           do {
+            let tmp4 = tmp3;
             let value = hermesStackFrameIdToSentryFrameIdMap.get(tmp3);
             if (undefined !== value) {
+              let tmp7 = items1;
+              let tmp8 = value;
               let arr = items1.push(tmp6);
             }
+            let tmp10 = tmp3;
             let tmp11 = stackFrames[tmp3];
             let tmp12 = tmp11;
             parent = undefined;
             if (null !== tmp11) {
+              let tmp14 = tmp11;
               if (undefined !== tmp12) {
+                let tmp15 = tmp11;
                 parent = tmp12.parent;
               }
             }
             tmp3 = parent;
           } while (undefined !== parent);
         }
+        let tmp16 = items1;
         arr = stacks.push(items1);
         continue;
       }
@@ -177,11 +197,16 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
       let tmp4 = nextResult;
       let value = hermesStackToSentryStackMap.get(nextResult.stack_id);
       if (undefined === value) {
+        let tmp9 = require;
+        let tmp10 = dependencyMap;
         let debug = registerSpanErrorInstrumentation.debug;
+        let tmp11 = nextResult;
         let _HermesInternal = HermesInternal;
         let errorResult = debug.error("[Profiling] Hermes Stack ID " + tmp4.stack_id + " not found when mapping to Sentry Stack ID.");
         tmp4.stack_id = -1;
       } else {
+        let tmp7 = nextResult;
+        let tmp8 = value;
         tmp4.stack_id = tmp6;
       }
       continue;

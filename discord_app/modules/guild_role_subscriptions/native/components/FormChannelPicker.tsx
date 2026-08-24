@@ -1,14 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
 
 export default function FormChannelPicker(channelId) {
   channelId = channelId.channelId;
@@ -30,8 +30,8 @@ export default function FormChannelPicker(channelId) {
     style: items2,
     accessibilityRole: "link",
     onPress() {
-      importDefault(stateFromStores[8]);
-      const obj = { guildId: closure_1, selectedChannelId: null, onChannelSelected: null };
+      let obj = closure_1_1(stateFromStores[8]);
+      obj = { guildId: closure_1, selectedChannelId: null, onChannelSelected: null };
       let id;
       if (stateFromStores != null) {
         id = stateFromStores.id;
@@ -45,6 +45,7 @@ export default function FormChannelPicker(channelId) {
   items2 = [tmp4.container, importDefault(stateFromStores[4])().textInput];
   let tmp10 = null;
   const tmp3 = importDefault(stateFromStores[4])();
+  const tmp8 = closure_5;
   if (null != stateFromStores) {
     let TextIcon = tmp5(tmp2[11]).getChannelIconComponent(stateFromStores);
     if (TextIcon == null) {
@@ -69,5 +70,5 @@ export default function FormChannelPicker(channelId) {
   const tmpResult = importDefault(stateFromStores[7]);
   items3[2] = callback(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: importDefault(stateFromStores[16]) });
   obj[3] = items3;
-  return callback(tmpResult, obj);
+  return tmp8(tmpResult, obj);
 };

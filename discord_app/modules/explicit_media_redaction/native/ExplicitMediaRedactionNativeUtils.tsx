@@ -3,17 +3,13 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import redactionSettingToRenderedString from "../ExplicitMediaRedactionUtils.tsx";
 import getEligibleHarmTypesConfigsForContext from "../ObscuredMediaUtils.tsx";
-import ContentHarmTypeChannel from "../ExplicitMediaRedactionModels.tsx";
-import AgeVerificationModalEntryPoint from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import openIncodeAgeVerificationModalDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "../ExplicitMediaRedactionConstants.tsx";
 import { SearchMediaTypes } from "../../search/SearchConstants.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
 
 export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilterPress(arg0) {
   ({ handlePress: require, excluded } = arg0);
@@ -37,13 +33,14 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(getSystemLocale.t["5k5OFp"]);
     obj[2] = function onPress() {
-      let obj = redactionSettingToRenderedString;
+      let obj = closure_1_0(closure_1_2[5]);
       if (obj.shouldAgeVerifyForExplicitMedia()) {
         obj = { entryPoint: null };
-        obj[0] = AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
-        const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
+        obj[0] = tmp(tmp2[7]).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+        const result = closure_1_1(tmp2[6]).showAgeVerificationGetStartedModal(obj);
+        const obj2 = closure_1_1(tmp2[6]);
       } else {
-        callback(create.ExplicitContentRedaction.SHOW);
+        callback(tmp(tmp2[3]).ExplicitContentRedaction.SHOW);
       }
     };
     items.push(obj);
@@ -58,7 +55,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t.S49Uad);
     obj[2] = function onPress() {
-      callback(create.ExplicitContentRedaction.BLUR);
+      callback(closure_1_0(closure_1_2[3]).ExplicitContentRedaction.BLUR);
     };
     items.push(obj);
   }
@@ -72,7 +69,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     const intl3 = getSystemLocale.intl;
     obj[1] = intl3.string(getSystemLocale.t["D/157Y"]);
     obj[2] = function onPress() {
-      callback(create.ExplicitContentRedaction.BLOCK);
+      callback(closure_1_0(closure_1_2[3]).ExplicitContentRedaction.BLOCK);
     };
     items.push(obj);
   }
@@ -88,34 +85,35 @@ export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMe
     } else {
       if (media.type === SearchMediaTypes.ATTACHMENT) {
         let obj = { type: null, media: null };
-        obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.Attachment;
+        obj[0] = tmp4(5022).ObscuredMediaTypes.Attachment;
         obj[1] = media.attachment;
         let tmp = obj;
-      } else if (media.type === SearchMediaTypes.EMBED) {
+      } else if (media.type === tmp8.EMBED) {
         obj = { type: null, media: null };
-        obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.Embed;
+        obj[0] = tmp4(5022).ObscuredMediaTypes.Embed;
         obj[1] = media.embed;
         tmp = obj;
       } else {
         tmp = null;
-        if (media.type === SearchMediaTypes.COMPONENT) {
+        if (media.type === tmp8.COMPONENT) {
           obj = { type: null, media: null };
-          obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia;
+          obj[0] = tmp4(5022).ObscuredMediaTypes.GenericMedia;
           obj[1] = media.unfurledMediaItem;
           tmp = obj;
         }
       }
       let tmp2 = null != tmp;
       if (tmp2) {
-        let tmp4Result = getEligibleHarmTypesConfigsForContext;
+        let tmp4Result = tmp4(5019);
         let result = tmp4Result.isMediaObscuredForHarmTypes(tmp, enabledHarmTypesForMessage);
         if (result) {
-          tmp4Result = redactionSettingToRenderedString;
+          tmp4Result = tmp4(5001);
           result = tmp4Result.shouldAgeVerifyForExplicitMedia();
         }
         tmp2 = result;
       }
       return tmp2;
     }
+    const obj5 = getEligibleHarmTypesConfigsForContext;
   }
 };

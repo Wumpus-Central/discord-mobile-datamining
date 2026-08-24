@@ -1,6 +1,6 @@
 // _runtime/00316_ChildListCollection.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const ChildListCollection = importDefault;
 class ChildListCollection {
@@ -53,10 +53,12 @@ let items = [
   },
   {
     key: "forEach",
-    value: function forEach(fn) {
+    value: function forEach(arg0) {
       const _cellKeyToChildren = this._cellKeyToChildren;
       const values = _cellKeyToChildren.values();
       for (const item10009 of values) {
+        let tmp2 = item10009;
+        let tmp3 = item10009;
         for (const item10014 of item10009) {
           let tmp4 = arg0(item10014);
           continue;
@@ -67,7 +69,7 @@ let items = [
   },
   {
     key: "forEachInCell",
-    value: function forEachInCell(closure_0, fn) {
+    value: function forEachInCell(closure_0, arg1) {
       const _cellKeyToChildren = this._cellKeyToChildren;
       let items = _cellKeyToChildren.get(closure_0);
       if (items == null) {
@@ -81,7 +83,7 @@ let items = [
   },
   {
     key: "anyInCell",
-    value: function anyInCell(value, fn) {
+    value: function anyInCell(value, arg1) {
       const _cellKeyToChildren = this._cellKeyToChildren;
       let items = _cellKeyToChildren.get(value);
       if (items == null) {
@@ -89,6 +91,7 @@ let items = [
       }
       for (const item10011 of items) {
         if (arg1(item10011)) {
+          let tmp = obj;
           obj.return();
           let flag = true;
           return true;

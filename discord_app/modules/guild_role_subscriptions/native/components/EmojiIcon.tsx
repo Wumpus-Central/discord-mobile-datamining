@@ -1,15 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import registerAssetDefault from "../../../../../_runtime/09355_registerAsset.js";
 import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
 
 export default function EmojiIcon(size) {
   let num = size.size;
@@ -30,12 +29,14 @@ export default function EmojiIcon(size) {
   if (null == emojiByIdOrName) {
     let tmp4 = null;
     if (flag) {
+      obj = { resizeMode: "contain", style: null, source: null };
       obj = { width: null, height: null };
       obj[0] = num;
       obj[1] = num;
       obj[1] = obj;
       obj[2] = registerAssetDefault;
       tmp4 = jsx(preloadDefault, { width: null, height: null });
+      const tmp7 = preloadDefault;
     }
     let tmp8Result = tmp4;
   } else {
@@ -68,13 +69,16 @@ export default function EmojiIcon(size) {
       const obj4 = { id: null, animated: null, size: null };
       ({ id: obj4[0], animated: obj4[1] } = emojiByIdOrName);
       obj4[2] = num;
-      let url = getAvatarURLDefault.getEmojiURL(obj4);
-      const tmp9Result = getAvatarURLDefault;
+      let url = tmp9(1435).getEmojiURL(obj4);
+      const tmp9Result = tmp9(1435);
     } else {
       url = emojiByIdOrName.url;
     }
     obj1[4] = url;
     tmp8Result = jsx(EmojiDefault, { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
+    const tmp10 = EmojiDefault;
+    const tmp8 = jsx;
+    tmp9 = importDefault;
   }
   return tmp8Result;
 };

@@ -19,10 +19,10 @@ import create16 from "plan_select_card_banner.tsx";
 import create17 from "billing_settings_banner.tsx";
 import create18 from "shop_nagbar.tsx";
 import create19 from "admin_editor_test_component.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = fn;
+require = arg1;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , , , , , , , , , , , ];
@@ -206,8 +206,9 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
+  let obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -221,9 +222,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.isDefaultBase = pos.bool();
   }
   return obj;
 };
@@ -365,6 +366,6 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
   return tag;
 };
 const premiumMarketingComponentPropertiesType = new PremiumMarketingComponentProperties$Type();
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx");
 
 export const PremiumMarketingComponentProperties = premiumMarketingComponentPropertiesType;

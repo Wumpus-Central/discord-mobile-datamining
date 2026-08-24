@@ -9,6 +9,7 @@ export const reportingObserverIntegration = registerSpanErrorInstrumentation.def
   if (arg0 === undefined) {
     obj = {};
   }
+  closure_0 = undefined;
   function handler(arg0) {
     if (map.has(obj.getClient())) {
       function _loop(iter) {
@@ -19,23 +20,26 @@ export const reportingObserverIntegration = registerSpanErrorInstrumentation.def
           const combined = "ReportingObserver [" + iter.type + "]";
           if (iter.body) {
             const obj = {};
-            for (const key10019 in tmp.body) {
+            for (const key10019 in iter.body) {
+              let tmp10 = key10019;
+              let tmp11 = iter;
               obj[key10019] = iter.body[key10019];
               continue;
             }
             setExtra.setExtra("body", obj);
             if ("crash" === iter.type) {
-              const body = iter.body;
+              const body = tmp5.body;
               const items = [body.crashId || "", body.reason || ""];
               const str5 = items.join(" ");
+              const tmp7 = body.crashId || "";
               str = items.join(" ").trim() || "No details available";
               const tmp8 = items.join(" ").trim() || "No details available";
             } else {
-              str = iter.body.message || "No details available";
+              str = tmp5.body.message || "No details available";
+              const tmp6 = tmp5.body.message || "No details available";
             }
           }
           iter(closure_1_1[0]).captureMessage("" + combined + ": " + str);
-          const obj2 = iter(closure_1_1[0]);
         });
       }
       const iter = arg0[Symbol.iterator]();

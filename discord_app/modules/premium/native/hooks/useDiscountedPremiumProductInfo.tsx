@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import updateProduct from "../../../../stores/native/IAPStore.android.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../stores/native/IAPStore.android.tsx";
 import { CurrencyCodes } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx");
 
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   const _require = premiumDiscountOffer;
@@ -23,10 +23,10 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
       if (planIds == null) {
         planIds = [];
       }
-      return items3.find((item, index) => planIds.includes(item.basePlanId));
+      return items3.find((basePlanId) => planIds.includes(basePlanId.basePlanId));
     }
   }, items);
-  let obj = initialize;
+  let obj = _initialize;
   const items1 = [stateFromStores];
   const items2 = [memo];
   stateFromStores = obj.useStateFromStores(items1, () => {
@@ -45,25 +45,26 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
           const tmp8 = premiumDiscountOffer(items3[4]).DiscountIdToProductOfferId[tmp.discountId];
           let tmp2;
           if (tmp8 != null) {
-            tmp2 = tmp8[stateFromStores.identifier];
+            tmp2 = tmp8[tmp5.identifier];
           }
           premiumDiscountOffer = tmp2;
           if (null == tmp2) {
             return null;
           } else {
-            if (str2.toUpperCase() in CurrencyCodes) {
-              let USD = stateFromStores.currencyCode.toLowerCase();
+            if (str2.toUpperCase() in closure_1_4) {
+              let USD = tmp5.currencyCode.toLowerCase();
+              const str = tmp5.currencyCode;
             } else {
               USD = tmp9.USD;
             }
-            if (null != stateFromStores.subscriptionOffers) {
-              const subscriptionOffers = stateFromStores.subscriptionOffers;
-              const found = subscriptionOffers.find((item, index) => item.offerId === closure_0);
+            if (null != tmp5.subscriptionOffers) {
+              const subscriptionOffers = tmp5.subscriptionOffers;
+              const found = subscriptionOffers.find((offerId) => offerId.offerId === closure_0);
               if (null != found) {
                 if (null != found.pricingPhases) {
                   if (found.pricingPhases.length > 0) {
                     const result = found.pricingPhases[0].price / 100;
-                    return tmp6(items3[5]).formatPrice(result, USD, { convertToMajorUnits: false });
+                    return tmp6(tmp7[5]).formatPrice(result, USD, { convertToMajorUnits: false });
                   }
                 }
               }
@@ -71,6 +72,7 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
             return null;
           }
           tmp6 = premiumDiscountOffer;
+          tmp7 = items3;
         }
       }
       return null;

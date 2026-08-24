@@ -1,8 +1,8 @@
 // discord_app/modules/channel/ChannelMuteUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import tDefault from "../../../_runtime/03975_t.js";
 
-const result = obj132.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
+const result = set.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 
 export const getMuteSettings = function getMuteSettings(selected_time_window) {
   const mute_config = { selected_time_window, end_time: null };

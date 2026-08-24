@@ -40,4 +40,5 @@ export default function isKey(num) {
     }
     return tmp5;
   }
+  const tmp = require;
 };

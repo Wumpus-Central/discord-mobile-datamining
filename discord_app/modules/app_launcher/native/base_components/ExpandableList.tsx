@@ -1,28 +1,29 @@
 // discord_app/modules/app_launcher/native/base_components/ExpandableList.tsx
 import _modDef4115 from "../../../reanimated/ReanimatedRexport.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
 let closure_11 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
 
-export default function ExpandableList(onExpand) {
-  const items = onExpand.items;
+export default function ExpandableList(items) {
+  items = items.items;
   let memo1 = items;
-  onExpand = onExpand.onExpand;
+  const onExpand = items.onExpand;
   importDefault = onExpand;
-  ({ onExpandCTAPress: dependencyMap, expandedOverride } = onExpand);
-  ({ showsExpandCTAOverride, disableExpanding: closure_4, title } = onExpand);
-  closure_6 = undefined;
+  ({ onExpandCTAPress: dependencyMap, expandedOverride } = items);
+  ({ showsExpandCTAOverride, disableExpanding: closure_4, title } = items);
   let first;
+  closure_6 = undefined;
+  first = undefined;
   let bound;
   let sharedValue;
   let sharedValue1;
@@ -127,12 +128,12 @@ export default function ExpandableList(onExpand) {
   }
   memo1 = memo;
   importDefault = tmp18;
-  obj1[1] = memo.map((item, index) => {
+  obj1[1] = memo.map((arg0, arg1) => {
     let isLastRow = closure_1;
     if (isLastRow) {
-      isLastRow = index === memo1.length - 1;
+      isLastRow = arg1 === memo1.length - 1;
     }
-    return item({ isLastRow });
+    return arg0({ isLastRow });
   });
   const items6 = [closure_6(first, obj1), ];
   let tmp16Result = memo1.length > 0;
@@ -144,12 +145,12 @@ export default function ExpandableList(onExpand) {
     obj2[1] = !first;
     obj2[2] = "no-hide-descendants";
     importDefault = !showsExpandCTAOverride;
-    obj2[3] = memo1.map((item, index) => {
+    obj2[3] = memo1.map((arg0, arg1) => {
       let isLastRow = closure_1;
       if (isLastRow) {
-        isLastRow = index === memo1.length - 1;
+        isLastRow = arg1 === memo1.length - 1;
       }
-      return item({ isLastRow });
+      return arg0({ isLastRow });
     });
     tmp16Result = tmp16(tmp17, obj2);
   }

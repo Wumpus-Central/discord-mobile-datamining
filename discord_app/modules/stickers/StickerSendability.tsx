@@ -2,16 +2,18 @@
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import getStickerExtensionFromFormatType from "StickersUtils.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import parseServerPackSticker from "StickersPackStore.tsx";
+import closure_4 from "../../stores/GuildMemberStore.tsx";
+import closure_5 from "StickersPackStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function getStickerSendability(stickerById, closure_1_3, channel) {
-  if (null == dependencyMap) {
+  if (null == closure_1_3) {
     return obj.NONSENDABLE;
   } else {
-    const result = getPremiumPlanItemDefault.canUseCustomStickersEverywhere(dependencyMap);
+    const result = getPremiumPlanItemDefault.canUseCustomStickersEverywhere(closure_1_3);
+    const obj4 = getPremiumPlanItemDefault;
+    const tmp22 = require;
     if (obj5.isStandardSticker(stickerById)) {
       if (null == stickerPack.getStickerPack(stickerById.pack_id)) {
         let SENDABLE2 = obj.NONSENDABLE;
@@ -32,7 +34,7 @@ function getStickerSendability(stickerById, closure_1_3, channel) {
             if (null != channel.guild_id) {
               obj = { permission: null, user: null, context: null };
               obj[0] = Permissions.USE_EXTERNAL_STICKERS;
-              obj[1] = dependencyMap;
+              obj[1] = closure_1_3;
               obj[2] = channel;
               if (!obj2.can(obj)) {
                 const NONSENDABLE = obj.NONSENDABLE;
@@ -50,10 +52,10 @@ function getStickerSendability(stickerById, closure_1_3, channel) {
   }
 }
 let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };
-let result = require("obj132").fileFinishedImporting("modules/stickers/StickerSendability.tsx");
+let result = require("set").fileFinishedImporting("modules/stickers/StickerSendability.tsx");
 
 export const StickerSendability = obj;
 export { getStickerSendability };
-export const isSendableSticker = function isSendableSticker(closure_0, currentUser, channel) {
-  return getStickerSendability(closure_0, currentUser, channel) === obj.SENDABLE;
+export const isSendableSticker = function isSendableSticker(id, currentUser, channel) {
+  return getStickerSendability(id, currentUser, channel) === obj.SENDABLE;
 };

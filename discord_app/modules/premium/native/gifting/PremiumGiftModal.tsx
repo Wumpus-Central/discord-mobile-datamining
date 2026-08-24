@@ -2,18 +2,20 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-let obj = { [PLAN_SELECT]: require("PaymentFlowStep").PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: require("PaymentFlowStep").PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: require("PaymentFlowStep").PaymentFlowStep.PLAN_SELECT, [SUCCESS]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM };
+const require = arg1;
+let obj = { PLAN_SELECT: "PremiumGiftPlanSelect", REWARD_SELECT: "GiftingSKUSelect", CUSTOMIZATION: "PremiumGiftCustomization", SUCCESS: "PremiumGiftSuccess", GIFTING_BADGE: "GiftingBadgePostPurchase" };
+obj = { [PLAN_SELECT]: require("PaymentFlowStep").PaymentFlowStep.SKU_SELECT, [REWARD_SELECT]: require("PaymentFlowStep").PaymentFlowStep.REWARD_SKU_SELECT, [CUSTOMIZATION]: require("PaymentFlowStep").PaymentFlowStep.PLAN_SELECT, [SUCCESS]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM, [GIFTING_BADGE]: require("PaymentFlowStep").PaymentFlowStep.CONFIRM };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = obj);
 obj = { header: { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
 let closure_9 = createCacheKey.createStyles(obj);
-const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftModal.tsx");
 
 export default function PremiumGiftModal(analyticsLocations) {
   ({ recipientUserId, premiumType, analyticsLocation } = analyticsLocations);
@@ -22,15 +24,16 @@ export default function PremiumGiftModal(analyticsLocations) {
   importDefault = analyticsLocations;
   ({ initialRoute, onDismiss } = analyticsLocations);
   dependencyMap = onDismiss;
+  let callback;
   closure_4 = undefined;
   ({ planInterval, order } = analyticsLocations);
   const tmp3 = useInitialValueDefault(() => recipientUserId(_undefined2[21]).v4());
-  let callback = tmp3;
+  callback = tmp3;
   obj = closure_4;
   let items = [tmp3, analyticsLocation, analyticsLocations];
   if (initialRoute != null) {
     const items1 = [onDismiss];
-    obj.useCallback(() => {
+    callback = obj.useCallback(() => {
       let arr = _undefined(_undefined2[22]);
       arr = arr.pop();
       if (_undefined2 != null) {
@@ -91,7 +94,7 @@ export default function PremiumGiftModal(analyticsLocations) {
           }
           isLoadingWishlist = tmp7;
         }
-        return jsx(_undefined(_undefined2[11]), { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist });
+        return closure_1_6(_undefined(_undefined2[11]), { shouldUseDMWishlistGiftingDesign: false, isLoadingWishlist });
       };
     }
     obj2 = {};
@@ -141,8 +144,8 @@ export default function PremiumGiftModal(analyticsLocations) {
     obj6[4] = function render(currentProgress) {
       return callback2(_undefined(_undefined2[16]), {
         currentProgress: currentProgress.currentProgress,
-        onSendGift(dependencyMap) {
-          callback(10295);
+        onSendGift(arg0) {
+          obj = callback(10295);
           obj = { analyticsLocations: null };
           const items = [callback2(7159).GIFTING_BADGE_POST_PURCHASE];
           obj[0] = items;
@@ -173,19 +176,19 @@ export default function PremiumGiftModal(analyticsLocations) {
       obj10[1] = obj2;
       obj10[2] = function onStateChange(arg0) {
         if (null != arg0) {
-          callback(obj[arg0.routes[arg0.index].name]);
+          callback(closure_1_8[arg0.routes[arg0.index].name]);
         }
       };
-      obj9[1] = jsx(tmp11(6312).Navigator, { initialRouteName: null, screens: null, onStateChange: null });
-      obj8[7] = <tmpResult currentStep={null}>{null}</tmpResult>;
-      obj7[1] = jsx(tmp11(9625).NativeGiftContextProvider, { basePurchaseAnalytics: null, recipientUserId: null, onClose: null, setCurrentAnalyticsStep: null, premiumType: null, planInterval: null, initialOrder: null, children: null });
-      let tmp23Result = jsx(tmp11(7139).AnalyticsLocationProvider, { value: null, children: null });
+      obj9[1] = tmp23(tmp11(6312).Navigator, obj10);
+      obj8[7] = tmp23(tmpResult, obj9);
+      obj7[1] = tmp23(tmp11(9625).NativeGiftContextProvider, obj8);
+      let tmp23Result = tmp23(tmp11(7139).AnalyticsLocationProvider, obj7);
     } else {
       const obj11 = { title: null };
       tmpResult = tmp(9593);
       const intl3 = tmp11(1236).intl;
       obj11[0] = intl3.string(tmp11(1236).t["JCFN/y"]);
-      tmp23Result = <tmpResult title={null} />;
+      tmp23Result = tmp23(tmpResult, obj11);
     }
     return tmp23Result;
   } else if (null != premiumType) {

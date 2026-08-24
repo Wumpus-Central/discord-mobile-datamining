@@ -2,16 +2,17 @@
 import timestampDefault from "../debug/Logger.tsx";
 import _modDef1208 from "../../utils/SentryUtils.native.tsx";
 import items6 from "libdiscoreExperiments.tsx";
-import getUserAgnosticState from "../devtools/dev_settings/DevSettingsStore.tsx";
+import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
 import importDefaultResult from "../emojis/RawGuildEmojiStore.tsx";
 import importDefaultResult1 from "../stickers/GuildStickersStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
 import importDefaultResult2 from "../user_profile/notes/NoteStore.tsx";
 import importDefaultResult3 from "../../stores/GuildRoleStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import importDefaultResult4 from "../../stores/GuildStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 let closure_6 = new timestampDefault("DispatcherBridge");
 let items = [importDefaultResult2, importDefaultResult4, importDefaultResult3, importDefaultResult, importDefaultResult1];
 let closure_7 = {
@@ -34,7 +35,7 @@ let closure_7 = {
     return { guilds: guilds.guilds };
   }
 };
-const set = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
+let set = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
 _instance_members_initializer_DispatcherBridge_ = function() {
   this.tokenToStore = new Map();
   this.disabledFromFatalError = false;
@@ -124,10 +125,15 @@ class DispatcherBridge {
                 ({ metrics, storeResults } = iter.value);
                 const items = [];
                 for (const item10056 of storeResults) {
+                  let tmp19 = item10056;
                   if (null != item10056.error) {
-                    let handleStoreErrorResult = obj.handleStoreError(item10056, arg0.type);
+                    let tmp22 = obj;
+                    let tmp23 = obj;
+                    let tmp24 = item10056;
+                    let handleStoreErrorResult = obj.handleStoreError(tmp19, arg0.type);
                   } else {
-                    let arr = items.push(item10056);
+                    let tmp20 = item10056;
+                    let arr = items.push(tmp19);
                   }
                   continue;
                 }
@@ -142,6 +148,8 @@ class DispatcherBridge {
                   continue;
                 }
                 for (const item10082 of items) {
+                  let tmp32 = obj;
+                  let tmp33 = obj;
                   let withStoreTokenResult = obj.withStoreToken(item10082.storeToken, arg0.type, (doEmitChanges) => {
                     doEmitChanges.doEmitChanges(closure_0);
                   });
@@ -152,41 +160,41 @@ class DispatcherBridge {
                     const items1 = [obj];
                     HermesBuiltin.arraySpread(metrics.timings, 1);
                     if (_default.get("libdiscore_verbose_telemetry_logging")) {
-                      let mapped = items1.map((item, index) => " - " + item.kind + ": " + item.durationMillis + "ms");
+                      let mapped = items1.map((kind) => " - " + kind.kind + ": " + kind.durationMillis + "ms");
                       const items2 = ["Timings", mapped.join("\n")];
                       const items3 = [items2, , ];
                       const mutations = metrics.mutations;
-                      const mapped1 = mutations.map((item, index) => {
-                        const entries = Object.entries(item.metrics);
-                        const found = entries.filter((item, index) => {
-                          [, tmp] = item;
+                      const mapped1 = mutations.map((metrics) => {
+                        const entries = Object.entries(metrics.metrics);
+                        const found = entries.filter((arg0) => {
+                          [, tmp] = arg0;
                           return 0 !== tmp;
                         });
-                        const mapped = found.map((item, index) => {
-                          [tmp, tmp2] = item;
+                        const mapped = found.map((arg0) => {
+                          [tmp, tmp2] = arg0;
                           return " - " + tmp + ": " + tmp2;
                         });
-                        return " * Record Type: " + item.recordType + "\n" + mapped.join("\n");
+                        return " * Record Type: " + metrics.recordType + "\n" + mapped.join("\n");
                       });
                       const items4 = ["Mutations", mapped1.join("\n")];
                       items3[1] = items4;
                       const memory = metrics.memory;
-                      const mapped2 = memory.map((item, index) => {
-                        const entries = Object.entries(item.statistics);
-                        const mapped = entries.map((item, index) => {
-                          [tmp, tmp2] = item;
+                      const mapped2 = memory.map((statistics) => {
+                        const entries = Object.entries(statistics.statistics);
+                        const mapped = entries.map((arg0) => {
+                          [tmp, tmp2] = arg0;
                           return " - " + tmp + ": " + JSON.stringify(tmp2);
                         });
-                        return " * Record Type: " + item.recordType + "\n" + mapped.join("\n");
+                        return " * Record Type: " + statistics.recordType + "\n" + mapped.join("\n");
                       });
                       const items5 = ["Memory Usage", mapped2.join("\n")];
                       items3[2] = items5;
-                      let found = items3.filter((item, index) => {
-                        [, arr] = item;
+                      let found = items3.filter((arg0) => {
+                        [, arr] = arg0;
                         return arr.length > 0;
                       });
-                      const mapped3 = found.map((item, index) => {
-                        [tmp, tmp2] = item;
+                      const mapped3 = found.map((arg0) => {
+                        [tmp, tmp2] = arg0;
                         return "" + tmp + ":\n" + tmp2;
                       });
                       const _HermesInternal = HermesInternal;
@@ -201,7 +209,7 @@ class DispatcherBridge {
                     obj1[3] = JSON.stringify(metrics.mutations);
                     const _JSON5 = JSON;
                     obj1[4] = JSON.stringify(metrics.memory);
-                    FLUX_API(actionHandler[11]).track(AnalyticEvents.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, obj1);
+                    FLUX_API(actionHandler[11]).track(closure_1_5.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, obj1);
                     const TelemetryExperiment2 = obj(actionHandler[10]).TelemetryExperiment;
                     TelemetryExperiment2.didEmit();
                     const obj8 = FLUX_API(actionHandler[11]);
@@ -217,8 +225,8 @@ class DispatcherBridge {
           obj2 = require("dispatcher");
           _Object = Object;
           tmp25 = closure_0;
-          fromEntriesResult = Object.fromEntries(registeredActionTypes.map((item, index) => {
-            const items = [item, actionHandler];
+          fromEntriesResult = Object.fromEntries(registeredActionTypes.map((arg0) => {
+            const items = [arg0, actionHandler];
             return items;
           }));
           str17 = "LibDiscoreDispatcherBridge";
@@ -234,8 +242,8 @@ class DispatcherBridge {
               closure_0 = Date.now();
               const result = FLUX_API.flushReplicationStates();
               if (result != null) {
-                result.then((result) => {
-                  if (result) {
+                result.then((arg0) => {
+                  if (arg0) {
                     const _Date = Date;
                     const _HermesInternal = HermesInternal;
                     closure_1_6.info("Successfully flushed replication states in " + Date.now() - closure_0 + "ms");
@@ -263,8 +271,9 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
   const self = this;
   error = new Error(error);
   const result = this.hasAnyAuthoritativeStore();
+  let obj = logger;
   logger.error("Fatal dispatch error for action", type, "hasAuthoritativeStore:", result, error);
-  const obj = { actionType: type, hasAuthoritativeStore: result };
+  obj = { actionType: type, hasAuthoritativeStore: result };
   _modDef1208.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
   if (result) {
     const result1 = items6.clearLibdiscoreExperimentCache();
@@ -279,6 +288,7 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
       continue;
     }
   }
+  const obj2 = _modDef1208;
 };
 prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   const tokenToStore = this.tokenToStore;
@@ -306,6 +316,7 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
     if ("libdiscore" === mode) {
       const result = items6.clearLibdiscoreExperimentCache();
       let error1 = error;
+      const obj5 = items6;
     } else {
       const _Error = Error;
       const _HermesInternal3 = HermesInternal;
@@ -314,19 +325,22 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
     throw error1;
   } else {
     const _HermesInternal2 = HermesInternal;
-    logger.warn("Store: " + name + " had unexpected error in Rust implementation, disabling moving forward");
+    obj2.warn("Store: " + name + " had unexpected error in Rust implementation, disabling moving forward");
     if (value != null) {
       const result1 = value.disableDualReadValidation();
     }
   }
+  const obj = { actionType: type, storeName: name, storeMode: mode };
+  obj2 = logger;
+  const obj3 = _modDef1208;
 };
-prototype["withStoreToken"] = function withStoreToken(storeToken, type, fn) {
+prototype["withStoreToken"] = function withStoreToken(storeToken, type, arg2) {
   const tokenToStore = this.tokenToStore;
   const value = tokenToStore.get(storeToken);
   if (null == value) {
     logger.warn("When dispatching action", type, "we got a store token", storeToken, "that is unknown");
   } else {
-    fn(value);
+    arg2(value);
   }
 };
 prototype["hasAnyAuthoritativeStore"] = function hasAnyAuthoritativeStore() {
@@ -335,6 +349,7 @@ prototype["hasAnyAuthoritativeStore"] = function hasAnyAuthoritativeStore() {
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
     if ("libdiscore" === nextResult.getMode()) {
+      let tmp2 = iter;
       iter.return();
       let flag = true;
       return true;
@@ -342,8 +357,7 @@ prototype["hasAnyAuthoritativeStore"] = function hasAnyAuthoritativeStore() {
   }
   return false;
 };
-const dispatcherBridge = new DispatcherBridge(items.filter((item, index) => set.has(item.getMode())));
-const tmp7 = new timestampDefault("DispatcherBridge");
-let result = require("obj132").fileFinishedImporting("modules/libdiscore/DispatcherBridge.tsx");
+const dispatcherBridge = new DispatcherBridge(items.filter((getMode) => set.has(getMode.getMode())));
+let result = set.fileFinishedImporting("modules/libdiscore/DispatcherBridge.tsx");
 
 export default dispatcherBridge;

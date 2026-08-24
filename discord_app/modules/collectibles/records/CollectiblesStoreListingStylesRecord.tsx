@@ -1,9 +1,10 @@
 // discord_app/modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
 
-const require = fn;
+const require = arg1;
 toJSDefault;
-const prototype = function CollectiblesStoreListingStylesRecord(arg0) {
+let prototype;
+prototype = function CollectiblesStoreListingStylesRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ backgroundColors: tmp.backgroundColors, buttonColors: tmp.buttonColors, confettiColors: tmp.confettiColors } = arg0);
@@ -13,17 +14,17 @@ class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   ({ background_colors, button_colors, confetti_colors } = arg0);
-  const mapped = background_colors.map((item, index) => {
+  const mapped = background_colors.map((color) => {
     const tmp = callback2(5311);
-    return tmp(callback(688).int2hex(item));
+    return tmp(callback(688).int2hex(color));
   });
-  const mapped1 = button_colors.map((item, index) => {
+  const mapped1 = button_colors.map((color) => {
     const tmp = callback2(5311);
-    return tmp(callback(688).int2hex(item));
+    return tmp(callback(688).int2hex(color));
   });
-  const mapped2 = confetti_colors.map((item, index) => {
+  const mapped2 = confetti_colors.map((color) => {
     const tmp = callback2(5311);
-    return tmp(callback(688).int2hex(item));
+    return tmp(callback(688).int2hex(color));
   });
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
@@ -35,6 +36,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp5.confettiColors = mapped2;
   return tmp5;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
 
 export default prototype;

@@ -1,17 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DesignSystemSheetsSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { DemoActionSheet } from "../../design_system/native/UserSettingsDesignSystemSheets.tsx";
 
-const obj = {
+obj = {
+  useTitle() {
+    return "Sheets";
+  },
+  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: obj
+};
+obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_SHEETS,
   getComponent() {
-    return DemoActionSheet /* DemoActionSheet */.default;
+    return DemoActionSheet.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemSheetsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemSheetsSetting.tsx");
 
 export default route;

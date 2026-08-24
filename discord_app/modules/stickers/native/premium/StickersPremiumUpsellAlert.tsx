@@ -7,15 +7,15 @@ import PressableBase from "../../../../design/void/Pressables/native/Pressables.
 import registerAssetDefault from "../../../../../_runtime/10239_registerAsset.js";
 import registerAssetDefault2 from "../../../../../_runtime/10240_registerAsset.js";
 import registerAssetDefault3 from "../../../../../_runtime/10241_registerAsset.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import updateProduct from "../../../../stores/native/IAPStore.android.tsx";
+import closure_7 from "../../../../stores/native/IAPStore.android.tsx";
 import ME from "../../../../Constants.tsx";
 import GuildFeatures from "../../../premium/PremiumConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function PerkRow(perk) {
   perk = perk.perk;
   const tmp = callback2();
@@ -24,13 +24,14 @@ function PerkRow(perk) {
   if (perk.isLastPerk) {
     lastPerkRow = tmp.lastPerkRow;
   }
+  let obj = { style: items, children: null };
   items[1] = lastPerkRow;
-  let obj = { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color };
+  obj = { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color };
   const items1 = [callback(Button.Icon, obj), ];
   obj = { style: tmp.perkText, variant: "text-md/medium", color: "interactive-text-active", children: perk.description() };
   items1[1] = callback(Text.Text, obj);
   obj[1] = items1;
-  return callback(closure_4, obj);
+  return closure_15(closure_4, obj);
 }
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_8, AnalyticsSections: c9, AnalyticsObjects: c10 } = ME);
@@ -63,14 +64,15 @@ obj = {
 };
 items[2] = obj;
 let obj1 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, marginTop: 16, marginBottom: 0, paddingHorizontal: 12, paddingVertical: 8, width: "100%" }, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
-const createCacheKey = { paddingVertical: 10, borderBottomColor: ThemesDefault.unsafe_rawColors.PRIMARY_560, borderBottomWidth: 1, flexDirection: "row", alignItems: "center" };
+createCacheKey = { paddingVertical: 10, borderBottomColor: ThemesDefault.unsafe_rawColors.PRIMARY_560, borderBottomWidth: 1, flexDirection: "row", alignItems: "center" };
 obj1[6] = createCacheKey;
 obj1[7] = { borderBottomWidth: 0 };
 obj1[8] = { width: 24, marginRight: 20 };
 obj1[9] = { lineHeight: 20, flexShrink: 1 };
 obj1[10] = { marginBottom: 12 };
 let closure_17 = createCacheKey.createStyles(obj1);
-const result = require("obj132").fileFinishedImporting("modules/stickers/native/premium/StickersPremiumUpsellAlert.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, marginTop: 16, marginBottom: 0, paddingHorizontal: 12, paddingVertical: 8, width: "100%" };
+const result = require("set").fileFinishedImporting("modules/stickers/native/premium/StickersPremiumUpsellAlert.tsx");
 
 export default function StickersPremiumUpsellAlert(arg0) {
   ({ onClose, analyticsLocation: require } = arg0);
@@ -95,14 +97,15 @@ export default function StickersPremiumUpsellAlert(arg0) {
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t.o3Tnif);
   obj[3] = function onConfirm() {
-    analyticsLocations(dependencyMap[20]);
-    const obj = {};
+    let obj = analyticsLocations(closure_1_2[20]);
+    obj = { location: null };
+    obj = {};
     const merged = Object.assign(closure_0);
     obj.section = closure_1_9.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
     obj.object = closure_1_10.BUTTON_CTA;
     obj[0] = obj;
     obj.track(closure_1_8.PREMIUM_PROMOTION_OPENED, obj);
-    analyticsLocations(dependencyMap[21])({ analyticsLocations });
+    analyticsLocations(closure_1_2[21])({ analyticsLocations });
   };
   obj[4] = onClose;
   obj[5] = onClose;
@@ -113,6 +116,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   }
   items[1] = shortHeightAlert;
   obj[6] = items;
+  obj = { style: tmp.closeContainer, children: null };
   obj = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
   const tmp3Result = analyticsLocations(4763);
   obj[3] = callback(Button.Icon, { source: analyticsLocations(8143) });
@@ -128,7 +132,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj1 = { source: analyticsLocations(8143) };
   const items2 = [callback(closure_5, { source: analyticsLocations(10242), style: tmp.imageHeader }), , ];
   const obj4 = { style: tmp.description, variant: "text-md/medium", children: null };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp9(1236).intl;
   if (priceString == null) {
     priceString = closure_13;
   }
@@ -136,10 +140,11 @@ export default function StickersPremiumUpsellAlert(arg0) {
   obj4[2] = intl3.format(getSystemLocale.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = callback(Text.Text, obj4);
   const obj3 = { source: analyticsLocations(10242), style: tmp.imageHeader };
-  items2[2] = callback(closure_4, { style: tmp.perks, children: items.map((item, index) => callback(closure_18, { perk: item, isLastPerk: index === length.length - 1 }, index)) });
+  const tmp13 = closure_6;
+  items2[2] = callback(closure_4, { style: tmp.perks, children: items.map((perk) => callback(closure_18, { perk, isLastPerk: arg1 === length.length - 1 }, arg1)) });
   obj2[2] = items2;
-  obj5[0] = callback(closure_4, obj2);
-  items1[1] = callback(closure_6, obj5);
+  obj5[0] = closure_15(closure_4, obj2);
+  items1[1] = callback(tmp13, obj5);
   obj[7] = items1;
-  return callback(tmp3Result, obj);
+  return closure_15(tmp3Result, obj);
 };

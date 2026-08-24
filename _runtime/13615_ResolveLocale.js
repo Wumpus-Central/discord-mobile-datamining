@@ -1,22 +1,22 @@
 // _runtime/13615_ResolveLocale.js
 const require = arg1;
 const dependencyMap = arg6;
-arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, arg3, arg4, fn) {
+arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
   let str;
   if ("lookup" === localeMatcher.localeMatcher) {
     const _Array2 = Array;
-    let LookupMatcherResult = str(13616).LookupMatcher(Array.from(arg0), arg1, fn);
+    let LookupMatcherResult = str(13616).LookupMatcher(Array.from(arg0), arg1, arg5);
     let tmp5 = str;
     let tmp7 = str;
   } else {
     const _Array = Array;
     tmp5 = str;
     tmp7 = str;
-    LookupMatcherResult = str(13621).BestFitMatcher(Array.from(arg0), arg1, fn);
+    LookupMatcherResult = str(13621).BestFitMatcher(Array.from(arg0), arg1, arg5);
   }
   if (null == LookupMatcherResult) {
     let obj = { locale: null, extension: "" };
-    obj[0] = fn();
+    obj[0] = arg5();
     LookupMatcherResult = obj;
   }
   const locale = LookupMatcherResult.locale;
@@ -31,6 +31,7 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, arg3, arg
   if (0 < arg3.length) {
     do {
       str = arg3[num];
+      let tmp13 = num;
       let items1;
       if (null != tmp12) {
         items1 = tmp12[str];
@@ -39,17 +40,19 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, arg3, arg
         items1 = [];
       }
       let tmp14 = str;
+      let tmp15 = dependencyMap;
       let _Array3 = Array;
       let concat = "keyLocaleData for ".concat;
       let isArray = Array.isArray(items1);
       let invariantResult = str(13617).invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
       let first = items1[0];
       let tmp19 = undefined === first;
+      let tmp20 = items1;
       if (!tmp19) {
         tmp19 = typeof first === "string";
       }
       let invariantResult1 = str(13617).invariant(tmp19, "value must be a string or undefined");
-      let iter = keywords.find((item, index) => item.key === str);
+      let iter = keywords.find((key) => key.key === str);
       let tmp22;
       let str2 = first;
       if (iter) {
@@ -96,6 +99,7 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, arg3, arg
       }
       obj[str] = str2;
       num = num + 1;
+      let tmp4 = tmp15;
       tmp5 = tmp14;
     } while (num < arg3.length);
   }

@@ -1,6 +1,5 @@
 // discord_app/modules/connections/native/OfficialConnectionIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
 import useRoleIcon from "../../guild_boosting/native/RoleIconUtils.tsx";
@@ -11,19 +10,20 @@ import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ DEFAULT_ROLE_COLOR_HEX: c4, EMPTY_STRING_SNOWFLAKE_ID: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
-const result = require("obj132").fileFinishedImporting("modules/connections/native/OfficialConnectionIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/native/OfficialConnectionIcon.tsx");
 
 export default function OfficialConnectionIcon(arg0) {
   ({ role, roleId, roleColor, size, style } = arg0);
   ({ guildId, displayRoleIcon } = arg0);
   const tmp = callback3();
+  let obj = { width: size, height: size };
   obj1 = useRoleIcon;
-  let obj = { guildId, roleId: null, size: null };
+  obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
     if (role != null) {
@@ -57,15 +57,17 @@ export default function OfficialConnectionIcon(arg0) {
     roleColor = closure_4;
   }
   let PRIMARY_630 = ThemesDefault.unsafe_rawColors.WHITE;
-  const tmp2Result = int2hslRaw;
+  let tmp2Result = tmp2(688);
+  tmp2Result = tmp2(688);
   if (tmp2Result.getDarkness(hex2intResult) < 0.3) {
-    PRIMARY_630 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
+    PRIMARY_630 = tmp7(712).unsafe_rawColors.PRIMARY_630;
   }
   obj1 = { style: items1, children: null };
   items1 = [style, obj];
   hex2intResult = tmp2Result.hex2int(roleColor);
   const items2 = [tmp.verifiedCheck, obj];
   const items3 = [callback(Button.Icon, { style: items2, size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault, color: roleColor }), ];
+  const obj2 = { style: items2, size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault, color: roleColor };
   const items4 = [tmp.verifiedCheck, obj];
   items3[1] = callback(Button.Icon, { style: items4, size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault2, color: PRIMARY_630 });
   obj1[1] = items3;

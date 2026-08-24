@@ -3,8 +3,9 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_1 = { mediaType: "photo", videoQuality: "high", quality: 1, maxWidth: 0, maxHeight: 0, includeBase64: false, cameraType: "back", selectionLimit: 1, saveToPhotos: false, durationLimit: 0, includeExtra: false };
-for (const key10017 in require("metro/04854__.js")) {
-  arg5[key10017] = require("metro/04854__.js")[key10017];
+for (const key10017 in require("module_4854")) {
+  let tmp2 = key10017;
+  arg5[key10017] = require("module_4854")[key10017];
   continue;
 }
 

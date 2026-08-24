@@ -1,18 +1,18 @@
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
   const items = [closure_3, closure_2];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
-    return guildsArray.filter((item, index) => {
-      selfMember = selfMember.getSelfMember(item.id);
-      let guildSupportsTagsResult = callback(table[3]).guildSupportsTags(item);
+    return guildsArray.filter((id) => {
+      selfMember = selfMember.getSelfMember(id.id);
+      let guildSupportsTagsResult = callback(table[3]).guildSupportsTags(id);
       if (guildSupportsTagsResult) {
         let joinedAt;
         if (selfMember != null) {
@@ -24,7 +24,7 @@ export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWit
         guildSupportsTagsResult = true !== selfMember.isPending;
       }
       if (guildSupportsTagsResult) {
-        const profile = item.profile;
+        const profile = id.profile;
         let tag;
         if (profile != null) {
           tag = profile.tag;

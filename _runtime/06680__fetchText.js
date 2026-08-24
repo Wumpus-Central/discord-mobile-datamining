@@ -1,9 +1,9 @@
 // _runtime/06680__fetchText.js
 import Buffer from "00511_Buffer.js";
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 
-require = fn;
+require = arg1;
 function _fetchText() {
   let self = this;
   const tmp = callback((arg0) => {
@@ -39,11 +39,11 @@ function _fetchText() {
             obj = { value: null, done: true };
             obj[0] = null;
             return obj;
-          } else if (closure_0.startsWith("data:image/svg+xml;utf8")) {
-            let tmp4 = (function dataUriToXml(closure_0) {
+          } else if (obj4.startsWith("data:image/svg+xml;utf8")) {
+            let tmp4 = (function dataUriToXml(arg0) {
               try {
                 const _decodeURIComponent = decodeURIComponent;
-                const parts = decodeURIComponent(closure_0).split(",");
+                const parts = decodeURIComponent(arg0).split(",");
                 const substr = parts.slice(1);
                 return substr.join(",");
               } catch (tmp3) {
@@ -52,11 +52,11 @@ function _fetchText() {
                 error = new Error("Decoding " + tmp + " failed with error: " + tmp3);
                 throw error;
               }
-            })(closure_0);
-          } else if (closure_0.startsWith("data:image/svg+xml;base64")) {
-            tmp4 = closure_1_4(closure_0);
+            })(obj4);
+          } else if (obj4.startsWith("data:image/svg+xml;base64")) {
+            tmp4 = closure_1_4(obj4);
           } else {
-            tmp4 = (function fetchUriData(closure_0) {
+            tmp4 = (function fetchUriData(arg0) {
               const self = this;
               const apply = closure_5.apply;
               if (typeof apply === "unknown") {
@@ -65,7 +65,7 @@ function _fetchText() {
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            })(closure_0);
+            })(obj4);
           }
         } catch (tmp7) {
           c1 = tmp;

@@ -1,10 +1,9 @@
 // discord_app/modules/applications/disclosures.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function _getDisclosures() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -111,7 +110,7 @@ function _ackDisclosures() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/applications/disclosures.tsx");
+let result = require("set").fileFinishedImporting("modules/applications/disclosures.tsx");
 
 export const ApplicationDisclosure = require("create").ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures(closure_0) {
@@ -134,13 +133,13 @@ export const ackDisclosures = function ackDisclosures(closure_0, closure_1_50) {
   }
   return applyArgumentsResult;
 };
-export const getTextForDisclosure = function getTextForDisclosure(item) {
-  if (create.ApplicationDisclosureType.IP_LOCATION === item) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t["6wPmjo"]);
-  } else if (create.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === item) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/uOMKZ"]);
+export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
+  if (create.ApplicationDisclosureType.IP_LOCATION === toFixed) {
+    const intl2 = tmp(1236).intl;
+    return intl2.string(tmp(1236).t["6wPmjo"]);
+  } else if (tmp(9769).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
+    const intl = tmp(1236).intl;
+    return intl.string(tmp(1236).t["/uOMKZ"]);
   } else {
     return null;
   }

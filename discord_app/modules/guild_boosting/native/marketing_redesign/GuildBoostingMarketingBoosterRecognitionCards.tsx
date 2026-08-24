@@ -13,13 +13,14 @@ import registerAssetDefault3 from "../../../../../_runtime/13031_registerAsset.j
 import registerAssetDefault4 from "../../../../../_runtime/13032_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function Card(arg0) {
   const tmp = callback3();
-  const obj = { size: "lg", color: ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
+  let obj = { style: tmp.card, children: null };
+  obj = { style: tmp.iconContainer, children: null };
+  obj = { size: "lg", color: ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
   ({ IconComponent, children } = arg0);
   obj[1] = callback(IconComponent, obj);
   const items = [callback(View, obj), callback(Text.Text, { style: tmp.description, variant: "text-sm/medium", children })];
@@ -28,17 +29,19 @@ function Card(arg0) {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let createCacheKey = { minHeight: 124, width: 172, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 };
+createCacheKey = { card: null, description: null, iconContainer: null };
+createCacheKey = { minHeight: 124, width: 172, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { height: 30, marginBottom: 10 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = createCacheKey.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
-const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
 
 export default function GuildBoostingMarketingBoosterRecognitionCards() {
   const tmp = callback4();
-  let obj = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
+  let obj = { style: tmp.container, children: null };
+  obj = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.IzKs3o);
   const items = [callback(Text.Heading, obj), ];

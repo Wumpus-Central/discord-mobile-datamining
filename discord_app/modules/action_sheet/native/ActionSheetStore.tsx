@@ -141,7 +141,7 @@ const actionSheetStore = new ActionSheetStore(dispatcherDefault, {
     if (null == key.key) {
       array = array.slice(0, -1);
     }
-    array = array.filter((item, index) => item.key !== closure_0);
+    array = array.filter((key) => key.key !== closure_0);
   },
   HIDE_ALL_ACTION_SHEETS: function handleHideAllActionSheets() {
     closure_0 = [];
@@ -151,19 +151,19 @@ const actionSheetStore = new ActionSheetStore(dispatcherDefault, {
     if (null == QuickSwitcher) {
       array = array.slice(0, -1);
     }
-    array = array.filter((item, index) => item.key !== closure_0);
+    array = array.filter((key) => key.key !== closure_0);
   },
   SET_ACTION_SHEET_Z_INDEX: function handleSetActionSheetZIndex(zIndex) {
     zIndex = zIndex.zIndex;
   },
   RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY: function handleResetActionSheetsForAppEntryKey(appEntryKey) {
     let found = appEntryKey.appEntryKey;
-    found = found.filter((item, index) => item.appEntryKey !== found);
+    found = found.filter((appEntryKey) => appEntryKey.appEntryKey !== found);
     if (found.length === found.length) {
       return false;
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/action_sheet/native/ActionSheetStore.tsx");
+const result = require("set").fileFinishedImporting("modules/action_sheet/native/ActionSheetStore.tsx");
 
 export default actionSheetStore;

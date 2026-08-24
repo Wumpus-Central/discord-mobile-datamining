@@ -1,24 +1,28 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import initialize from "../../../native_menu/native/NativeMenuStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../native_menu/native/NativeMenuStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-let closure_6 = obj132.isAndroid();
-obj132 = {};
+const require = arg1;
+let closure_6 = set.isAndroid();
+set = { androidContainer: { flex: 1 }, iosContainer: null };
+set = {};
 let merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
-obj132[1] = obj132;
-let closure_7 = createCacheKey.createStyles(obj132);
+set[1] = set;
+let closure_7 = createCacheKey.createStyles(set);
 let closure_8 = { code: "function MediaKeyboardAccessoriesContainerTsx1(){const{animateOnMount,initialLayout,animatedIndex,initialPosition,animatedPosition,interpolate,IS_ANDROID}=this.__closure;const animatedMountDisabledAndNotInitialLayout=!animateOnMount&&!initialLayout.get();const animatedSheetIndexOrDefault=animatedMountDisabledAndNotInitialLayout?0:Math.min(animatedIndex.get(),0);const animatedSheetPositionOrDefault=animatedMountDisabledAndNotInitialLayout?initialPosition:animatedPosition.get();const transform=[{translateY:interpolate(animatedSheetIndexOrDefault,[-1,0],[100,0])}];if(IS_ANDROID){return{marginTop:animatedSheetPositionOrDefault,transform:transform};}return{top:animatedSheetPositionOrDefault,transform:transform};}" };
-let result = obj132.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx");
+let result = set.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx");
 
 export default function MediaKeyboardAccessoriesContainer(children) {
   const animatedIndex = children.animatedIndex;
   const animatedPosition = children.animatedPosition;
   const animateOnMount = children.animateOnMount;
   const initialPosition = children.initialPosition;
+  closure_4 = undefined;
+  closure_5 = undefined;
+  let sharedValue;
   let tmp = callback();
   closure_4 = tmp;
   let items = [tmp];
@@ -30,7 +34,7 @@ export default function MediaKeyboardAccessoriesContainer(children) {
   }, items);
   closure_5 = initialPosition.useRef(false);
   let obj = animatedIndex(animateOnMount[6]);
-  const sharedValue = obj.useSharedValue(false);
+  sharedValue = obj.useSharedValue(false);
   const items1 = [sharedValue];
   const onLayout = initialPosition.useCallback(() => {
     if (!ref.current) {

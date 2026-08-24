@@ -1,10 +1,10 @@
 // _runtime/10344_PaginationItem.js
 import noopDefault from "00019_noop.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00109__objectWithoutProperties.js";
 import { Pressable } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["width", "height", "borderRadius", "backgroundColor"];
 let closure_4 = ["width", "height", "borderRadius", "backgroundColor"];
 noopDefault;
@@ -119,6 +119,7 @@ export const PaginationItem = (animValue) => {
     }
     const items = [0, 1, 2];
     obj = { width: null, height: null, borderRadius: null, backgroundColor: null };
+    const tmp = size;
     tmpResult = size(size2, count);
     const items1 = [width2, width, width];
     obj[0] = iter(activeDotStyle[4]).interpolate(absolute, items, items1, iter(activeDotStyle[4]).Extrapolation.CLAMP);

@@ -1,10 +1,10 @@
 // discord_app/modules/media_engine/BandwidthEstimationExperiment.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import createExperiment from "../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Golive Simulcast without prober 720p@500k", config: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/", simulcastEnabled: true } }, { id: 2, label: "Golive Simulcast 720p@500k", config: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe", simulcastEnabled: true } }, { id: 3, label: "Golive with pacing", config: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer", simulcastEnabled: false } }, { id: 4, label: "Golive with pacing and probing", config: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe", simulcastEnabled: false } }, { id: 5, label: "Golive Simulcast 720p@750k", config: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-750k", simulcastEnabled: true } }, { id: 6, label: "Golive Simulcast 720p@1000k", config: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-1000k", simulcastEnabled: true } }];
 let closure_0 = createExperiment.createExperiment({ kind: "user", id: "2024-06_rtc_pacer__simulcast", label: "RTC Pacer & Golive Simulcast", defaultConfig: { enabled: true, fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/", simulcastEnabled: false }, treatments: items });
-const result = obj132.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_engine/BandwidthEstimationExperiment.tsx");
 
 export default {
   getConfig(autoTrackExposure, arr) {
@@ -23,6 +23,7 @@ export default {
         if (arg1.includes(item10010)) {
           continue;
         } else {
+          let tmp4 = obj;
           obj.return();
           let flag = false;
           return false;
@@ -38,7 +39,8 @@ export default {
       found = null;
       if ("bandwidth_estimation" === parts[0]) {
         const parts1 = parts[1].split(",");
-        found = parts1.filter((item, index) => 0 !== item.length);
+        found = parts1.filter((arg0) => 0 !== arg0.length);
+        const str2 = parts[1];
       }
     }
     return found;

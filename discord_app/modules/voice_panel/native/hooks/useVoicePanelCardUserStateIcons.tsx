@@ -1,16 +1,17 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx
 import dismissPanelDefault from "../VoicePanelStateContext.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
-import updateVoiceState from "../../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_5 from "../../../../stores/VoiceStateStore.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import { useEnsureSyncedChannelVoiceStates } from "../../../voice_calls/RTCConnectionDesyncHooks.tsx";
 import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
 
-const require = fn;
+const require = arg1;
 let obj = { STREAM_ICON: "STREAM_ICON", USER_VIDEO_ICON: "USER_VIDEO_ICON", MUTE_DEAFEN_ICON: "MUTE_DEAFEN_ICON", USER_DISCONNECTED_ICON: "DISCONNECTED_ICON", SPEAKER_MUTE_ICON: "SPEAKER_MUTE_ICON" };
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelCardUserStateIcons.tsx");
 
 export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   const _require = arg0;
@@ -34,7 +35,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   if (arg0 === stateFromStores.USER) {
     tmp6 = id;
   }
-  muteDeafenIconState = require("../utils/VoiceStateIconUtils.tsx").useMuteDeafenIconState(tmp6, guildId);
+  muteDeafenIconState = _isStableVoiceStateEqual.useMuteDeafenIconState(tmp6, guildId);
   let tmp4Result = tmp4(9678);
   let tmp8;
   if (arg0 === stateFromStores.USER) {
@@ -44,10 +45,10 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   tmp4Result = tmp4(647);
   let items = [muteDeafenIconState];
   stateFromStores = tmp4Result.useStateFromStores(items, () => muteDeafenIconState.isConnected());
-  let obj2 = isStableVoiceStateEqual;
+  let obj2 = _isStableVoiceStateEqual;
   let items1 = [videoIconState];
   const items2 = [tmp, id];
-  stateFromStores1 = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
+  stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
     let voicePlatformForChannel = null;
     if (null != c2) {
       voicePlatformForChannel = null;
@@ -70,14 +71,14 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
   if (showTileVolumeIndicator) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
   }
-  const tmp4Result1 = defaultAreStatesEqual;
-  isRTCDisconnectedUIVisible = require("../../../voice_calls/RTCConnectionDesyncHooks.tsx").useIsRTCDisconnectedUIVisible(tmp, id);
+  const tmp4Result1 = _defaultAreStatesEqual;
+  isRTCDisconnectedUIVisible = _useEnsureSyncedChannelVoiceStates.useIsRTCDisconnectedUIVisible(tmp, id);
   const items3 = [setShowFloatingCTA];
   callback = obj.useCallback(() => {
     setShowFloatingCTA(callback(_null[12]).OverrideFloatingCTA.BAD_CONNECTION);
   }, items3);
   callback1 = obj.useCallback(() => {
-    id(_null[13]);
+    obj = id(_null[13]);
     obj = {
       key: "user-disconnected-indicator",
       icon() {
@@ -98,7 +99,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
           obj = { type: null, onPress: null };
           obj[0] = showTileVolumeIndicator.SPEAKER_MUTE_ICON;
           obj[1] = function onPress() {
-            id(closure_1_2[13]);
+            obj = closure_1_1(closure_1_2[13]);
             obj = { key: "" + closure_1 + "-stream-status", content: null };
             const intl = closure_1_0(closure_1_2[16]).intl;
             obj[1] = intl.string(closure_1_0(closure_1_2[16]).t.Q8Uzof);
@@ -123,14 +124,14 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
         }
         let tmp8 = null != videoIconState;
         if (tmp8) {
-          tmp8 = videoIconState !== callback(_null[6]).VideoIconState.VIDEO_ACTIVE;
+          tmp8 = tmp6 !== callback(_null[6]).VideoIconState.VIDEO_ACTIVE;
         }
         if (tmp8) {
           obj1 = { type: null, videoIconState: null, onPress: null };
           obj1[0] = showTileVolumeIndicator.USER_VIDEO_ICON;
-          obj1[1] = videoIconState;
+          obj1[1] = tmp6;
           let tmp14;
-          if (videoIconState === callback(_null[6]).VideoIconState.VIDEO_DISABLED_LOCAL_AUTO) {
+          if (tmp6 === callback(_null[6]).VideoIconState.VIDEO_DISABLED_LOCAL_AUTO) {
             tmp14 = callback;
           }
           obj1[2] = tmp14;
@@ -146,42 +147,42 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
               obj = { key: null, content: null };
               const _HermesInternal4 = HermesInternal;
               obj[0] = "" + closure_1 + "-status";
-              const intl4 = closure_1_0(closure_1_2[16]).intl;
-              obj[1] = intl4.string(closure_1_0(closure_1_2[16]).t.btxSdB);
-              id(closure_1_2[13]).open(obj);
-              const obj7 = id(closure_1_2[13]);
-            } else if (closure_1_0(closure_1_2[6]).MuteDeafenIconState.DEAFENED === closure_4) {
+              const intl4 = tmp2(tmp3[16]).intl;
+              obj[1] = intl4.string(tmp2(tmp3[16]).t.btxSdB);
+              closure_1_1(tmp3[13]).open(obj);
+              const obj7 = closure_1_1(tmp3[13]);
+            } else if (tmp2(tmp3[6]).MuteDeafenIconState.DEAFENED === tmp) {
               obj = { key: null, content: null };
               const _HermesInternal3 = HermesInternal;
               obj[0] = "" + closure_1 + "-status";
-              const intl3 = closure_1_0(closure_1_2[16]).intl;
-              obj[1] = intl3.string(closure_1_0(closure_1_2[16]).t.NjmiOL);
-              id(closure_1_2[13]).open(obj);
-              const obj5 = id(closure_1_2[13]);
-            } else if (closure_1_0(closure_1_2[6]).MuteDeafenIconState.MUTED_SERVER === closure_4) {
-              let obj2 = id(closure_1_2[13]);
+              const intl3 = tmp2(tmp3[16]).intl;
+              obj[1] = intl3.string(tmp2(tmp3[16]).t.NjmiOL);
+              closure_1_1(tmp3[13]).open(obj);
+              const obj5 = closure_1_1(tmp3[13]);
+            } else if (tmp2(tmp3[6]).MuteDeafenIconState.MUTED_SERVER === tmp) {
+              let obj2 = closure_1_1(tmp3[13]);
               obj1 = { key: null, content: null };
               const _HermesInternal2 = HermesInternal;
               obj1[0] = "" + closure_1 + "-status";
-              const intl2 = closure_1_0(closure_1_2[16]).intl;
-              obj1[1] = intl2.string(closure_1_0(closure_1_2[16]).t.uLddbQ);
+              const intl2 = tmp2(tmp3[16]).intl;
+              obj1[1] = intl2.string(tmp2(tmp3[16]).t.uLddbQ);
               obj2.open(obj1);
-            } else if (closure_1_0(closure_1_2[6]).MuteDeafenIconState.MUTED_LOCAL === closure_4) {
-              obj = id(closure_1_2[13]);
+            } else if (tmp2(tmp3[6]).MuteDeafenIconState.MUTED_LOCAL === tmp) {
+              obj = closure_1_1(tmp3[13]);
               obj2 = { key: null, content: null };
               const _HermesInternal = HermesInternal;
               obj2[0] = "" + closure_1 + "-status";
-              const intl = closure_1_0(closure_1_2[16]).intl;
-              obj2[1] = intl.string(closure_1_0(closure_1_2[16]).t.Q8Uzof);
+              const intl = tmp2(tmp3[16]).intl;
+              obj2[1] = intl.string(tmp2(tmp3[16]).t.Q8Uzof);
               obj.open(obj2);
-            } else if (closure_1_0(closure_1_2[6]).MuteDeafenIconState.MUTED === closure_4) {
+            } else if (tmp2(tmp3[6]).MuteDeafenIconState.MUTED === tmp) {
               const obj3 = { key: null, content: null };
               const _HermesInternal5 = HermesInternal;
               obj3[0] = "" + closure_1 + "-status";
-              const intl5 = closure_1_0(closure_1_2[16]).intl;
-              obj3[1] = intl5.string(closure_1_0(closure_1_2[16]).t.tjtv3P);
-              id(closure_1_2[13]).open(obj3);
-              const obj9 = id(closure_1_2[13]);
+              const intl5 = tmp2(tmp3[16]).intl;
+              obj3[1] = intl5.string(tmp2(tmp3[16]).t.tjtv3P);
+              closure_1_1(tmp3[13]).open(obj3);
+              const obj9 = closure_1_1(tmp3[13]);
             }
           };
           items1.push(obj2);

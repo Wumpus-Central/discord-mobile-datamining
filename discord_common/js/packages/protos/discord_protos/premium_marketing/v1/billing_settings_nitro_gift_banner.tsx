@@ -3,10 +3,10 @@ import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
 import create from "../../common/v1/localized_string.tsx";
 import create2 from "gradient.tsx";
 import create3 from "theme_aware_asset.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = fn;
+require = arg1;
 class BillingSettingsNitroGiftBanner$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , ];
@@ -71,8 +71,9 @@ class BillingSettingsNitroGiftBanner$Type extends MessageType {
 }
 let prototype = BillingSettingsNitroGiftBanner$Type.prototype;
 prototype["create"] = function create(arr) {
+  let obj = { assetUrl: "", header: "", body: "", backgroundAssetUrl: "", textColor: "", additionalTerms: "" };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -86,9 +87,10 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const LocalizedString = create.LocalizedString;
+    obj.additionalTermsLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.additionalTermsLocalized);
   }
   return obj;
 };
@@ -223,6 +225,6 @@ items[11] = {
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsNitroGiftBanner", items, tmp, T, BillingSettingsNitroGiftBanner$Type, prototype, items);
 // ThrowIfThisInitialized (0x7c)
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_nitro_gift_banner.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/billing_settings_nitro_gift_banner.tsx");
 
 export const BillingSettingsNitroGiftBanner = prototype;

@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../../../actions/ModalActionCreators.tsx";
 
 let c3 = 0;
-const result = obj132.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
 
 export default function openGuildPowerupsModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.create(null));

@@ -7,29 +7,31 @@ import LinearGradientDefault from "../../../../../../_runtime/04756_LinearGradie
 import AnimatedRenderItemDefault from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
+import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../reanimated/ReanimatedRexport.tsx";
+import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
+import { SUBTLE_SPRING } from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 
-require = fn;
+require = arg1;
 function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   theme = theme.theme;
   let analyticsLocations;
   const tmp = callback3();
-  theme(4115);
+  let obj = theme(4115);
   const fn = function l() {
     let num = 1;
     if (theme.theme === closure_1_9.LIGHT) {
       num = 0.5;
     }
     const obj = {};
-    const merged = Object.assign(StyleSheet.absoluteFillObject);
-    obj.opacity = theme(dependencyMap[7]).withSpring(num, theme(dependencyMap[8]).springStandard);
+    const merged = Object.assign(closure_1_4.absoluteFillObject);
+    obj.opacity = theme(closure_1_2[7]).withSpring(num, theme(closure_1_2[8]).springStandard);
     return obj;
   };
-  let obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4744).withSpring, springStandard: theme(4748).springStandard };
+  obj = { theme, ThemeTypes: closure_9, StyleSheet, withSpring: theme(4744).withSpring, springStandard: theme(4748).springStandard };
   fn.__closure = obj;
   fn.__workletHash = 16911565077998;
   fn.__initData = closure_18;
@@ -38,11 +40,11 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   const items = [analyticsLocations];
   obj = { style: tmp.nitroUpsell, children: null };
   const callback = importAllResult.useCallback(() => {
-    { premiumFeatureCardOrder: theme(dependencyMap[14]).PremiumFeatureCardOrder.TIER_2_LEADING, analyticsLocation: null, analyticsLocations: null };
-    const obj = { page: closure_1_7.USER_SETTINGS, section: closure_1_8.SETTINGS_CLIENT_THEMES };
+    let obj = { premiumFeatureCardOrder: theme(closure_1_2[14]).PremiumFeatureCardOrder.TIER_2_LEADING, analyticsLocation: null, analyticsLocations: null };
+    obj = { page: closure_1_7.USER_SETTINGS, section: closure_1_8.SETTINGS_CLIENT_THEMES };
     obj[1] = obj;
     obj[2] = analyticsLocations;
-    analyticsLocations(dependencyMap[13])(obj);
+    analyticsLocations(closure_1_2[13])(obj);
   }, items);
   const items1 = [callback(closure_12, { style: animatedStyle, importantForAccessibility: "no-hide-descendants", colors: closure_13 }), ];
   const obj2 = { text: null, icon: null, variant: "active", onPress: null, size: "md" };
@@ -72,7 +74,7 @@ animationEntering.__initData = { code: "function animationEntering_SettingsAppea
 let closure_15 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx3(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
 function animationExiting(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: require("../../../../../design/animation/reanimated/spring/spring.tsx").withSpring(value, require("../../../../../design/animation/reanimated/spring/springPresets.tsx").springStandard, "respect-motion-settings", fn) };
+  const obj = { opacity: _CONFIG_NEVER_ANIMATE.withSpring(value, _SUBTLE_SPRING.springStandard, "respect-motion-settings", fn) };
   fn = function s(arg0) {
     if (closure_0 != null) {
       tmp(arg0);
@@ -101,6 +103,7 @@ obj1[0] = obj2;
 obj1[1] = { height: ThemesDefault.space.PX_16, width: ThemesDefault.space.PX_16 };
 let closure_17 = createCacheKey.createStyles(obj1);
 let closure_18 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx4(){const{theme,ThemeTypes,StyleSheet,withSpring,springStandard}=this.__closure;const opacity=theme.theme===ThemeTypes.LIGHT?0.5:1;return{...StyleSheet.absoluteFillObject,opacity:withSpring(opacity,springStandard)};}" };
+const obj3 = { height: ThemesDefault.space.PX_16, width: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function SettingsAppearanceChannelListPreviewNitroUpsell(visible) {
   let obj = initialize;
   const items = [closure_6];
@@ -111,10 +114,10 @@ const memoResult = importAllResult.memo(function SettingsAppearanceChannelListPr
     if (null != arg0) {
       obj = {};
       const merged = Object.assign(arg0);
-      tmpResult = callback(closure_19, obj);
+      tmpResult = tmp(closure_19, obj);
     }
     obj[2] = tmpResult;
-    return callback(callback(table[5]).View, obj);
+    return closure_10(callback(table[5]).View, obj);
   }, []);
   obj = { useReducedMotion: stateFromStores, item: null, entering: null, exiting: null, renderItem: null };
   let tmp5;
@@ -125,8 +128,8 @@ const memoResult = importAllResult.memo(function SettingsAppearanceChannelListPr
   obj[2] = animationEntering;
   obj[3] = animationExiting;
   obj[4] = callback;
-  return callback(AnimatedRenderItemDefault, obj);
+  return closure_10(AnimatedRenderItemDefault, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelListPreviewNitroUpsell.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceChannelListPreviewNitroUpsell.tsx");
 
 export default memoResult;

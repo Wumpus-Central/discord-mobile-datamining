@@ -1,6 +1,7 @@
 // discord_app/modules/message_request/MessageRequestStore.tsx
 import clearAllDefault from "../../stores/MobileCacheSnapshotStore.tsx";
 import prototype from "../../stores/ChannelStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function processChannel(isMessageRequest) {
   let tmp = isMessageRequest.isMessageRequest && !isMessageRequest.isSpam;
@@ -34,8 +35,8 @@ function handleConnectionOpen() {
   set.clear();
   set1.clear();
   const values = Object.values(prototype.getMutablePrivateChannels());
-  const item = values.forEach((item, index) => {
-    callback(item);
+  const item = values.forEach((arg0) => {
+    callback(arg0);
   });
   c3 = true;
 }
@@ -47,10 +48,10 @@ function handleChannelCreate(channel) {
 }
 function handleChannelUpdates(arg0) {
   while (tmp !== undefined) {
+    let tmp3 = processChannel;
     let tmp4 = processChannel(tmp2);
     continue;
   }
-  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;
@@ -63,7 +64,7 @@ function handleChannelDelete(channel) {
 }
 function handleOverlayInitialize(messageRequestChannelIds) {
   const prop = messageRequestChannelIds.messageRequestChannelIds;
-  const item = prop.forEach((item, index) => set.add(item));
+  const item = prop.forEach((arg0) => set.add(arg0));
 }
 clearAllDefault;
 let set = new Set();
@@ -137,6 +138,6 @@ obj[6] = handleChannelDelete;
 obj[7] = handleMessageRequestAcceptOptimistic;
 prototype = new prototype(obj, tmp2, tmp, Object, defineProperty, CACHE_LOADED_LAZY, handleOverlayInitialize, handleChannelCreate, handleChannelUpdates);
 // ThrowIfThisInitialized (0x7c)
-const result = require("obj132").fileFinishedImporting("modules/message_request/MessageRequestStore.tsx");
+const result = set.fileFinishedImporting("modules/message_request/MessageRequestStore.tsx");
 
 export default prototype;

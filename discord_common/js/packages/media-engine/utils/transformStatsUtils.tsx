@@ -1,7 +1,7 @@
 // discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");
 
 export const formatSinkWantStat = function formatSinkWantStat(id, ssrc, arg2) {
   let str = id[ssrc];

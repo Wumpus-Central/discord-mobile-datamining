@@ -5,10 +5,10 @@ import Button from "../../../../design/void/native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
-const result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
 
 export default function RegistrationBailoutButton(onBail) {
   const obj = { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null };

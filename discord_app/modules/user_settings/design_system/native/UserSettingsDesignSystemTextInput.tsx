@@ -17,13 +17,13 @@ import Input from "../../../../design/components/Input/native/Input.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
 import SplitTextInput from "../../../../design/components/SplitTextInput/native/SplitTextInput.native.tsx";
 import GhostInput from "../../../../design/components/TextInput/native/GhostInput.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function Sample(children) {
   const tmp = callback4();
   return callback2(PressableCard.Card, { shadow: "low", style: callback4().sample, children: callback2(Stack.Stack, { spacing: 24, children: children.children }) });
@@ -54,9 +54,9 @@ function InputUsername(defaultValue) {
     if (arr.includes(" ")) {
       str = "error";
     }
-    callback(str);
+    closure_0(str);
   };
-  return callback(TextInput.TextInput, obj);
+  return closure_6(TextInput.TextInput, obj);
 }
 function GhostInputUsername(defaultValue) {
   defaultValue = defaultValue.defaultValue;
@@ -82,21 +82,25 @@ function GhostInputUsername(defaultValue) {
     if (arr.includes(" ")) {
       str = "error";
     }
-    callback(str);
+    closure_0(str);
   };
-  return callback(GhostInput.GhostInput, obj);
+  return closure_6(GhostInput.GhostInput, obj);
 }
 function GhostInputActionSheet() {
+  let obj = { children: null };
   const items = [callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "Ghost Input - Centered" }), ];
-  const obj = { children: callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters" }) };
+  obj = { style: { padding: 12 }, children: null };
+  obj = { children: callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters" }) };
   obj[1] = callback2(Sample, obj);
   items[1] = callback2(Stack.Stack, obj);
   obj[0] = items;
   return callback3(Background.BottomSheet, obj);
 }
 function GhostInputActionSheetLeftAligned() {
+  let obj = { children: null };
   const items = [callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" }), ];
-  const obj = { children: callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", isCentered: false, size: "md" }) };
+  obj = { style: { padding: 12 }, children: null };
+  obj = { children: callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", isCentered: false, size: "md" }) };
   obj[1] = callback2(Sample, obj);
   items[1] = callback2(Stack.Stack, obj);
   obj[0] = items;
@@ -126,19 +130,21 @@ function CustomAttachmentExample() {
     if (arr.includes(" ")) {
       str = "error";
     }
-    callback(str);
+    closure_0(str);
   };
-  return callback(TextInput.TextInput, obj);
+  return closure_6(TextInput.TextInput, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl };
+createCacheKey = { container: { padding: 16 }, sample: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
 
 export default function UserSettingsDesignSystemTextInput() {
-  { spacing: 24, style: callback4().container, children: null };
-  const obj = { children: null };
+  let obj = { children: null };
+  obj = { spacing: 24, style: callback4().container, children: null };
+  obj = { children: null };
   const items = [callback2(TextInput.TextInput, { label: "Input Label", placeholder: "Placeholder text", description: "Descriptions give context for the input.", errorMessage: "Error messages communicate invalid states." }), callback2(TextArea.TextArea, { label: "Text Area", maxLength: 100, placeholder: "Multiline inputs use TextArea" }), callback2(TextInput.TextInput, { label: "Password", secureTextEntry: true, placeholder: "Password", isClearable: true }), callback2(TextInput.TextInput, { label: "Required Field", placeholder: "Placeholder", description: "Required inputs are indicated with an asterisk.", required: true })];
   obj[0] = items;
   const items1 = [callback3(Sample, obj), callback2(Text.Text, { variant: "heading-lg/bold", children: "Sizing" }), callback2(Text.Text, { variant: "text-md/normal", children: "All inputs except TextArea accept a size prop, either sm, md, or lg. By default, inputs will use the large variant." }), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
@@ -151,14 +157,17 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj2 = { children: null };
   const tmp = callback4();
   const items3 = [callback2(TextInput.TextInput, { label: "Leading icon", leadingIcon: TextIcon.TextIcon }), , , ];
+  const obj3 = { label: "Leading icon", leadingIcon: TextIcon.TextIcon };
   items3[1] = callback2(TextInput.TextInput, { label: "Trailing icon", trailingIcon: TextIcon.TextIcon });
   items3[2] = callback2(TextInput.TextInput, { label: "Leading text", leadingText: "To:" });
+  const obj4 = { label: "Trailing icon", trailingIcon: TextIcon.TextIcon };
   items3[3] = callback2(TextInput.TextInput, { label: "Combination", leadingText: "To:", trailingIcon: AtIcon.AtIcon });
   obj2[0] = items3;
   items1[6] = callback3(Sample, obj2);
   items1[7] = callback2(Text.Text, { variant: "text-md/normal", children: "Text attachments should be kept as short as possible to preserve space for the user to see their input value while editing." });
   items1[8] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Pressable Attachments" });
   items1[9] = callback2(Text.Text, { variant: "text-md/normal", children: "Inputs do not allow custom nodes to be passed as leading or trailing attachments, but they can be made interactive by passing `*PressableProps` respectively. If given, the attachment will be wrapped by a Pressable and have the props passed to it." });
+  const obj5 = { label: "Combination", leadingText: "To:", trailingIcon: AtIcon.AtIcon };
   items1[10] = callback2(Sample, { children: callback2(CustomAttachmentExample, {}) });
   items1[11] = callback2(Text.Text, { variant: "text-md/normal", children: "Note that the props do not allow for changing the styling of the pressable. Styling is instead handled by the Input itself." });
   items1[12] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Rounding" });

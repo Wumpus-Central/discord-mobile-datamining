@@ -7,7 +7,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createLegacyClassComponentStyles({ progressCircle: { alignItems: "center", justifyContent: "center" }, circle: { position: "absolute", width: "100%", height: "100%" }, circleOverlay: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center" } });
 const Component = importAllResult.Component;
@@ -24,7 +24,7 @@ prototype["renderCircle"] = function renderCircle() {
   const tmp = callback2(this.context);
   obj[0] = "0 0 " + size + " " + size;
   obj[1] = tmp.circle;
-  { fill: "none", cx: size / 2, cy: size / 2, r: result, strokeWidth, strokeLinecap: "round", transform: "rotate(-90 " + size / 2 + " " + size / 2 + ")", stroke: props.color, style: obj };
+  obj = { fill: "none", cx: size / 2, cy: size / 2, r: result, strokeWidth, strokeLinecap: "round", transform: "rotate(-90 " + size / 2 + " " + size / 2 + ")", stroke: props.color, style: obj };
   obj = { strokeDasharray: result1, strokeDashoffset: (1 - bound / 100) * result1 };
   obj[2] = callback(inlineStyles.Circle, obj);
   return callback(inlineStylesDefault, obj);
@@ -41,15 +41,15 @@ prototype["render"] = function render() {
     obj = { style: null, children: null };
     obj[0] = tmp.circleOverlay;
     obj[1] = children;
-    tmp4 = callback(View, obj);
+    tmp4 = callback(tmp3, obj);
   }
   items1[1] = tmp4;
   obj[1] = items1;
-  return callback(View, obj);
+  return closure_5(View, obj);
 };
 ProgressCircle.contextType = require("ManaContext").ThemeContext;
 createCacheKey = { size: 20, strokeWidth: 0.9, color: ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PINK };
 ProgressCircle.defaultProps = createCacheKey;
-let result = require("obj132").fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/components/ProgressCircle.tsx");
 
 export default ProgressCircle;

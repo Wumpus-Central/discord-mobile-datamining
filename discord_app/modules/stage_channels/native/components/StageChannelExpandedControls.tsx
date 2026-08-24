@@ -3,16 +3,17 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useChannelVideoLimitDefault from "../../../video_calls/useChannelVideoLimit.tsx";
 import useCanCurrentUserSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import reset from "../../../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_4 from "../../../../stores/ApplicationStreamingStore.tsx";
+import closure_5 from "../../../../stores/AuthenticationStore.tsx";
+import closure_6 from "../../../../stores/GuildStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-let obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
+const require = arg1;
+let obj = { container: null };
+obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
 obj[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
 obj[1] = ThemesDefault.radii.sm;
 obj[0] = obj;
@@ -21,6 +22,7 @@ const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   importDefault = undefined;
   const tmp = callback();
+  const tmp2 = importDefault;
   let obj = channel(8675);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   obj1 = channel(589);
@@ -50,7 +52,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj[0] = channel;
     let tmp12 = stateFromStoresArray.length > 0;
     if (tmp12) {
-      tmp12 = null == stateFromStoresArray.find((item, index) => item.ownerId === closure_1);
+      tmp12 = null == stateFromStoresArray.find((ownerId) => ownerId.ownerId === closure_1);
     }
     if (!tmp12) {
       let reachedLimit = !stageHasMedia;
@@ -60,14 +62,14 @@ const memoResult = importAllResult.memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj[1] = tmp12;
-    items5.push(jsx(tmp5(12575).ScreenshareButton, { channel: null, disabled: null }));
+    items5.push(tmp9(tmp5(12575).ScreenshareButton, obj));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
   items5.push(jsx(channel(12575).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
   items5.push(jsx(channel(12575).DeafenButton, { channel }));
-  obj1 = { style: tmp.container, children: items5.map((item, index) => callback(closure_3, { children: item }, index)) };
-  return <View style={tmp.container}>{items5.map((item, index) => callback(closure_3, { children: item }, index))}</View>;
+  obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
+  return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
 });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
 
 export default memoResult;

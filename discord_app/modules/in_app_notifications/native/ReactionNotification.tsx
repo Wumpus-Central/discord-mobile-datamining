@@ -7,17 +7,16 @@ import GuildIconSizesDefault from "../../guild/native/GuildIcon.tsx";
 import FacepileGroupDMAvatarDefault from "../../group_dm/native/GroupDMAvatar.tsx";
 import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
 import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
-import PreviewIcon from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import set from "InAppNotificationConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import set from "InAppNotificationConstants.tsx";
 
-require = fn;
+require = arg1;
 function ReactionNotificationBody(arg0) {
   ({ secondaryText, messagePreview } = arg0);
   ({ text, hasMessageContent } = arg0);
@@ -32,7 +31,7 @@ function ReactionNotificationBody(arg0) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
     obj[2] = closure_7;
     obj[3] = secondaryText;
-    tmp8Result = callback(Text.Text, obj);
+    tmp8Result = tmp8(tmp2(4734).Text, obj);
   }
   children[1] = tmp8Result;
   tmp8Result = null;
@@ -44,11 +43,11 @@ function ReactionNotificationBody(arg0) {
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
       obj1[5] = gradientColors;
-      tmp8Result = callback(PreviewIcon.NativeChannelRowPreview, obj1);
+      tmp8Result = tmp8(tmp2(10050).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
-  return callback(closure_11, { children });
+  return closure_12(closure_11, { children });
 }
 function ReactionNotificationBodyWrapper(arg0) {
   ({ message, reaction, reactionCount } = arg0);
@@ -60,6 +59,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   let tmp3 = null != message.content;
   if (tmp3) {
     tmp3 = "" !== message.content.trim();
+    const str = message.content;
   }
   if (tmp3) {
     tmp3 = !tmp;
@@ -76,39 +76,39 @@ function ReactionNotificationBodyWrapper(arg0) {
   const callback = React.useCallback(() => {
     let name;
     if (reaction != null) {
-      name = reaction.emoji.name;
+      name = tmp.emoji.name;
     }
     if (null == name) {
       return null;
     } else {
       let name1;
-      if (reaction != null) {
-        name1 = reaction.emoji.name;
+      if (tmp != null) {
+        name1 = tmp.emoji.name;
       }
       if (null != name1) {
         let id;
-        if (reaction != null) {
-          id = reaction.emoji.id;
+        if (tmp != null) {
+          id = tmp.emoji.id;
         }
         if (null == id) {
           let obj = { style: null, variant: "text-sm/normal", children: null };
           obj[0] = italic.italic;
-          obj[2] = reaction.emoji.name;
-          return closure_1_10(message(4734).Text, obj, reaction.emoji.name);
+          obj[2] = tmp.emoji.name;
+          return closure_1_10(message(4734).Text, obj, tmp.emoji.name);
         }
       }
       let id1;
-      if (reaction != null) {
-        id1 = reaction.emoji.id;
+      if (tmp != null) {
+        id1 = tmp.emoji.id;
       }
       let emojiURL;
       if (null != id1) {
-        reaction(1435);
+        obj = reaction(1435);
         obj = { id: null, animated: null, size: null };
-        obj[0] = reaction.emoji.id;
+        obj[0] = tmp.emoji.id;
         let animated = setting;
         if (setting) {
-          animated = reaction.emoji.animated;
+          animated = tmp.emoji.animated;
         }
         obj[1] = animated;
         obj[2] = message(10159).DEFAULT_EMOJI_SIZE;
@@ -117,7 +117,7 @@ function ReactionNotificationBodyWrapper(arg0) {
       obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
       ({ textEmoji: obj3[0], imageEmoji: obj3[1] } = italic);
       obj1[2] = emojiURL;
-      obj1[3] = reaction.emoji.name;
+      obj1[3] = tmp.emoji.name;
       return closure_1_10(reaction(6930), obj1);
     }
   }, items);
@@ -125,12 +125,13 @@ function ReactionNotificationBodyWrapper(arg0) {
   const memo = React.useMemo(() => {
     if (0 !== previewableMedia.length) {
       if (!dependencyMap) {
-        if (1 === previewableMedia.length) {
-          const first = previewableMedia[0];
+        if (1 === arr.length) {
+          const first = arr[0];
           const type = first.type;
           if (message(10070).PreviewableMediaTypes.IMAGE === type) {
+            let obj = { text: null, secondaryText: null };
             const intl11 = message(1236).intl;
-            let obj = { emojiHook: null };
+            obj = { emojiHook: null };
             obj[0] = callback;
             obj[0] = intl11.format(message(1236).t.I7mNcA, obj);
             return obj;
@@ -197,12 +198,12 @@ function ReactionNotificationBodyWrapper(arg0) {
           const intl = message(1236).intl;
           obj = { emojiHook: null, count: null };
           obj[0] = callback;
-          obj[1] = previewableMedia.length;
-          const everyResult = previewableMedia.every((item, index) => item.type === callback(table[10]).PreviewableMediaTypes.FILE);
+          obj[1] = arr.length;
+          const everyResult = arr.every((type) => type.type === callback(table[10]).PreviewableMediaTypes.FILE);
           const intl2 = message(1236).intl;
           const obj17 = { emojiHook: null, count: null };
           obj17[0] = callback;
-          obj17[1] = previewableMedia.length;
+          obj17[1] = arr.length;
           let formatResult1 = intl2.format(message(1236).t.UNRyki, obj17);
           if (everyResult) {
             formatResult1 = formatResult;
@@ -235,6 +236,7 @@ function ReactionNotificationBodyWrapper(arg0) {
     message = obj2.useGetInitialMessagePreview({ message });
   }
   if (renderAnnouncementText) {
+    obj = { text: null };
     let intl2 = tmp5(1236).intl;
     obj = { count: null };
     obj[0] = reactionCount;
@@ -276,6 +278,7 @@ function ReactorNotificationIcon(notification) {
       obj[0] = channel;
       obj[1] = Button.AvatarSizes.NORMAL;
       let tmp8Result = callback(FacepileGroupDMAvatarDefault, obj);
+      const tmp15 = FacepileGroupDMAvatarDefault;
     }
     return tmp8Result;
   }
@@ -289,19 +292,21 @@ function ReactorNotificationIcon(notification) {
     obj[1] = id;
     obj[2] = Button.AvatarSizes.NORMAL;
     tmp8Result = callback(Button.Avatar, obj);
+    const tmp8 = callback;
+    const tmp9 = require;
   } else {
     obj = { guild: null, size: null, style: null };
     obj[0] = guild;
     obj[1] = GuildIconSizes.GuildIconSizes.NORMAL;
     obj[2] = tmp.guildIcon;
     tmp8Result = callback(GuildIconSizesDefault, obj);
+    const tmp5 = GuildIconSizesDefault;
   }
-  tmp = callback2();
 }
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = require("set"));
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
 ({ ChannelTypes: closure_8, MessageEmbedTypes: c9 } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let createCacheKey = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
+createCacheKey = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
 let tmp5;
 if (!PlatformTypes.isIOS()) {
   let items = [{ translateY: 2 }];
@@ -316,19 +321,24 @@ createCacheKey[4] = { fontStyle: "italic", fontFamily: str };
 createCacheKey = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[5] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/ReactionNotification.tsx");
+let result = set.fileFinishedImporting("modules/in_app_notifications/native/ReactionNotification.tsx");
 
 export default function ReactionNotification(notification) {
   notification = notification.notification;
+  let channel;
+  let guild;
+  let parentChannel;
+  let id;
+  id = undefined;
   let message;
   c7 = undefined;
   let constants;
   let userAuthor;
   const tmp = callback2();
-  const channel = notification.channel;
-  const guild = notification.guild;
-  const parentChannel = notification.parentChannel;
-  let id;
+  channel = notification.channel;
+  guild = notification.guild;
+  parentChannel = notification.parentChannel;
+  id = undefined;
   if (guild != null) {
     id = guild.id;
   }
@@ -399,6 +409,7 @@ export default function ReactionNotification(notification) {
       obj[1] = colorStrings;
       obj[2] = tmp.newContainerRoleDot;
       tmp13Result = callback(tmp3(tmp4[22]).RoleDot, obj);
+      const tmp13 = callback;
     }
   }
   const items2 = [channel, parentChannel, guild, userAuthor, tmp6, result];
@@ -410,8 +421,8 @@ export default function ReactionNotification(notification) {
   }, items2);
   const items4 = [id];
   callback = obj1.useCallback(() => {
-    notification(guild[17]);
-    const obj = { type: notification.type, dismissReason: "notification_clicked", guildId: id, channelId: id, messageId: message.id, inAppNotificationId: notification.inAppNotificationId };
+    let obj = notification(guild[17]);
+    obj = { type: notification.type, dismissReason: "notification_clicked", guildId: id, channelId: id, messageId: message.id, inAppNotificationId: notification.inAppNotificationId };
     obj.trackDismissed(obj);
     channel(guild[27]).popAll();
     const obj3 = channel(guild[27]);
@@ -420,8 +431,8 @@ export default function ReactionNotification(notification) {
     channel(guild[29]).clearNotification();
   }, items3);
   const callback1 = obj1.useCallback(() => {
-    channel(guild[27]);
-    const obj = { channelId: id };
+    let obj = channel(guild[27]);
+    obj = { channelId: id };
     return obj.pushLazy(notification(guild[31])(guild[30], guild.paths), obj);
   }, items4);
   obj = { icon: callback(ReactorNotificationIcon, { notification, isMilestone: result }), accessoryLabelNode: tmp13Result, header: memo1, onPress: callback, onSettingsPress: callback1, notification, rightAccessory: callback(tmp3(tmp4[33]).MediaPreviewRightAccessory, { message }), children: null };

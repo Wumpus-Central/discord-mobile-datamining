@@ -1,9 +1,9 @@
 // _runtime/13761_GetOption.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _createClass from "metro/00042__createClass.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00042__createClass.js";
 
 let require = arg1;
-function GetOption(obj, arg1, arg2, join) {
+function GetOption(obj, arg1, arg2, arr) {
   if (typeof obj !== "object") {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("Options must be an object");
@@ -28,12 +28,12 @@ function GetOption(obj, arg1, arg2, join) {
         require = StringResult;
         tmp5 = StringResult;
       }
-      if (join.filter((item, index) => item == closure_0).length) {
+      if (arr.filter((arg0) => arg0 == closure_0).length) {
         return tmp5;
       } else {
         const _RangeError = RangeError;
         const _HermesInternal = HermesInternal;
-        const rangeError = new RangeError("" + tmp5 + " is not within " + join.join(", "));
+        const rangeError = new RangeError("" + tmp5 + " is not within " + arr.join(", "));
         throw rangeError;
       }
     } else {
@@ -44,10 +44,10 @@ function GetOption(obj, arg1, arg2, join) {
 function memoize(arg0, cache) {
   return cache.strategy ? cache.strategy : strategyDefault(arg0, { cache: cache.cache || closure_10, serializer: cache.serializer || serializerDefault });
 }
-function monadic(call, get, fn, closure_1_2) {
-  let tmp2 = closure_1_2;
+function monadic(call, get, arg2, g_v) {
+  let tmp2 = g_v;
   if (!tmp) {
-    tmp2 = fn(closure_1_2);
+    tmp2 = arg2(g_v);
   }
   const value = get.get(tmp2);
   if (undefined !== value) {
@@ -56,18 +56,18 @@ function monadic(call, get, fn, closure_1_2) {
     const self = this;
     let result = call;
     call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(closure_1_2) : call(self, closure_1_2);
+    const tmp6 = typeof call === "unknown" ? result(g_v) : call(self, g_v);
     result = get.set(tmp2, tmp6);
   }
 }
-function variadic(apply, get, fn) {
+function variadic(apply, get) {
   const call = slice.call;
   if (typeof call === "unknown") {
     let substr = slice(3);
   } else {
     substr = call(arguments, 3);
   }
-  const tmp3 = fn(substr);
+  const tmp3 = arg2(substr);
   let value = get.get(tmp3);
   if (undefined === value) {
     const self = this;
@@ -79,7 +79,7 @@ function variadic(apply, get, fn) {
 }
 function strategyDefault(c165, cache) {
   cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
+  return 1 === c165.length ? monadic : variadic.bind(this, c165, cache.create(), cache.serializer);
 }
 function isLiteralPart(type) {
   return "literal" === type.type;
@@ -93,7 +93,7 @@ function invariant(arg0, arg1) {
     throw _Error;
   }
 }
-function validateInstance(arg0, format) {
+function validateInstance(arg0, arg1) {
   if (!(arg0 instanceof obj)) {
     const _TypeError = TypeError;
     const _String = String;
@@ -125,10 +125,11 @@ function stringListFromIterable(obj) {
     return items;
   }
 }
-function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
+function createPartsFromList(__INTERNAL_SLOT_MAP__, self) {
   if (0 === arg2.length) {
     return [];
   } else if (2 === length) {
+    obj = { 0: null, 1: null };
     obj = { type: "element", value: null };
     obj[1] = arg2[0];
     obj[0] = obj;
@@ -137,13 +138,14 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
     obj[1] = obj1;
     return deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
       const substr = [...arguments].slice();
+      c0 = undefined;
       const value = __INTERNAL_SLOT_MAP__.get(self);
       c0 = value;
       if (value) {
         const _Object = Object;
-        return substr.reduce((acc, item, index) => {
-          acc[item] = _undefined[item];
-          return acc;
+        return substr.reduce((arg0, arg1) => {
+          arg0[arg1] = _undefined[arg1];
+          return arg0;
         }, Object.create(null));
       } else {
         const _TypeError = TypeError;
@@ -160,7 +162,10 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
     let tmp6 = obj2;
     if (0 <= diff) {
       do {
+        let tmp2 = diff;
+        let tmp3 = tmpResult;
         let str = "templateStart";
+        let tmp = deconstructPattern;
         if (0 !== diff) {
           let str2 = "templateEnd";
           if (diff < length - 2) {
@@ -173,15 +178,16 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
         obj3[1] = arg2[diff];
         obj[0] = obj3;
         obj[1] = tmpResult;
-        tmpResult = deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
+        tmpResult = tmp((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
           const substr = [...arguments].slice();
+          c0 = undefined;
           const value = __INTERNAL_SLOT_MAP__.get(self);
           c0 = value;
           if (value) {
             const _Object = Object;
-            return substr.reduce((acc, item, index) => {
-              acc[item] = _undefined[item];
-              return acc;
+            return substr.reduce((arg0, arg1) => {
+              arg0[arg1] = _undefined[arg1];
+              return arg0;
             }, Object.create(null));
           } else {
             const _TypeError = TypeError;
@@ -242,12 +248,16 @@ function deconstructPattern(templatePair, arg1) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let type = nextResult.type;
+    let tmp3 = isLiteralPart;
     let iter2 = nextResult;
     if (isLiteralPart(nextResult)) {
       obj = { type: "literal", value: null };
+      let tmp19 = nextResult;
       obj[1] = iter2.value;
       let arr = items.push(obj);
     } else {
+      let tmp4 = invariant;
+      let tmp5 = type;
       let _HermesInternal = HermesInternal;
       let tmp6 = type in arg1;
       let tmp7 = invariant(tmp6, "" + type + " is missing from placables");
@@ -257,7 +267,13 @@ function deconstructPattern(templatePair, arg1) {
       let push = items.push;
       if (Array.isArray(tmp8)) {
         let items1 = [];
+        let tmp12 = items1;
+        let tmp13 = tmp9;
+        let num = 0;
         let arraySpreadResult = HermesBuiltin.arraySpread(tmp10, 0);
+        let tmp15 = push;
+        let tmp16 = items1;
+        let tmp17 = items;
         let applyResult = HermesBuiltin.apply(items1, items);
       } else {
         arr = push(tmp9);
@@ -453,11 +469,12 @@ let obj = (() => {
   obj = {
     key: "format",
     value: function format(arg0) {
-      validateInstance(this, "format");
+      closure_1_13(this, "format");
       let str = "";
-      const iter = createPartsFromList(ListFormat.__INTERNAL_SLOT_MAP__, this, stringListFromIterable(arg0));
+      const iter = closure_1_15(ListFormat.__INTERNAL_SLOT_MAP__, this, closure_1_14(arg0));
       if (Array.isArray(iter)) {
         for (const item10023 of iter) {
+          let tmp4 = str;
           str = `${item10023.value}`;
           continue;
         }
@@ -472,12 +489,14 @@ let obj = (() => {
     {
       key: "formatToParts",
       value: function formatToParts(arg0) {
-        validateInstance(this, "format");
-        const tmp2 = createPartsFromList(ListFormat.__INTERNAL_SLOT_MAP__, this, stringListFromIterable(arg0));
+        closure_1_13(this, "format");
+        const tmp2 = closure_1_15(ListFormat.__INTERNAL_SLOT_MAP__, this, closure_1_14(arg0));
         if (Array.isArray(tmp2)) {
           const items = [];
           for (const item10022 of tmp2) {
             obj = {};
+            let tmp5 = obj;
+            let tmp6 = item10022;
             let merged = Object.assign(item10022);
             let arr = items.push(obj);
             continue;
@@ -497,13 +516,14 @@ let obj = (() => {
           obj = { locale: null, type: null, style: null };
           obj[0] = (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
             const substr = [...arguments].slice();
+            c0 = undefined;
             const value = __INTERNAL_SLOT_MAP__.get(self);
             c0 = value;
             if (value) {
               const _Object = Object;
-              return substr.reduce((acc, item, index) => {
-                acc[item] = _undefined[item];
-                return acc;
+              return substr.reduce((arg0, arg1) => {
+                arg0[arg1] = _undefined[arg1];
+                return arg0;
               }, Object.create(null));
             } else {
               const _TypeError = TypeError;
@@ -514,13 +534,14 @@ let obj = (() => {
           })(ListFormat.__INTERNAL_SLOT_MAP__, self, "locale").locale;
           obj[1] = (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
             const substr = [...arguments].slice();
+            c0 = undefined;
             const value = __INTERNAL_SLOT_MAP__.get(self);
             c0 = value;
             if (value) {
               const _Object = Object;
-              return substr.reduce((acc, item, index) => {
-                acc[item] = _undefined[item];
-                return acc;
+              return substr.reduce((arg0, arg1) => {
+                arg0[arg1] = _undefined[arg1];
+                return arg0;
               }, Object.create(null));
             } else {
               const _TypeError = TypeError;
@@ -531,13 +552,14 @@ let obj = (() => {
           })(ListFormat.__INTERNAL_SLOT_MAP__, self, "type").type;
           obj[2] = (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, locale) {
             const substr = [...arguments].slice();
+            c0 = undefined;
             const value = __INTERNAL_SLOT_MAP__.get(self);
             c0 = value;
             if (value) {
               const _Object = Object;
-              return substr.reduce((acc, item, index) => {
-                acc[item] = _undefined[item];
-                return acc;
+              return substr.reduce((arg0, arg1) => {
+                arg0[arg1] = _undefined[arg1];
+                return arg0;
               }, Object.create(null));
             } else {
               const _TypeError = TypeError;
@@ -571,7 +593,7 @@ let obj = (() => {
           tmp2(Object(arg1), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
         }
       }
-      return ListFormat(dependencyMap[2]).LookupSupportedLocales(Array.from(ListFormat.availableLocales), canonicalLocales);
+      return ListFormat(closure_1_1[2]).LookupSupportedLocales(Array.from(ListFormat.availableLocales), canonicalLocales);
     }
   };
   let items1 = [
@@ -584,22 +606,27 @@ let obj = (() => {
         while (iter !== undefined) {
           ({ data, locale } = nextResult);
           let _Intl = Intl;
+          let tmp2 = new.target;
+          let tmp3 = new.target;
+          let tmp4 = locale;
           locale = new Intl.Locale(locale);
+          let tmp5 = locale;
           let str = locale.minimize();
           str = str.toString();
           ListFormat.localeData[str] = data;
           ListFormat.localeData[locale] = data;
           let availableLocales = ListFormat.availableLocales;
           let tmp7 = str;
+          let tmp8 = ListFormat;
           let addResult = availableLocales.add(str);
           let availableLocales2 = ListFormat.availableLocales;
           let addResult1 = availableLocales2.add(locale);
           if (!ListFormat.__defaultLocale) {
-            ListFormat.__defaultLocale = tmp7;
+            let tmp11 = str;
+            tmp8.__defaultLocale = tmp7;
           }
           continue;
         }
-        nextResult = iter.next();
       }
     },
     {

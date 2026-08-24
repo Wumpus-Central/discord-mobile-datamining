@@ -1,11 +1,11 @@
 // discord_app/modules/emojis/EmojiConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
 const obj = { REACTION: 0, [0]: "REACTION", STATUS: 1, [1]: "STATUS", COMMUNITY_CONTENT: 2, [2]: "COMMUNITY_CONTENT", CHAT: 3, [3]: "CHAT", GUILD_STICKER_RELATED_EMOJI: 4, [4]: "GUILD_STICKER_RELATED_EMOJI", GUILD_ROLE_BENEFIT_EMOJI: 5, [5]: "GUILD_ROLE_BENEFIT_EMOJI", SOUNDBOARD: 6, [6]: "SOUNDBOARD", VOICE_CHANNEL_TOPIC: 7, [7]: "VOICE_CHANNEL_TOPIC", GIFT: 8, [8]: "GIFT", AUTO_SUGGESTION: 9, [9]: "AUTO_SUGGESTION", POLLS: 10, [10]: "POLLS", PROFILE: 11, [11]: "PROFILE", GUILD_PROFILE: 12, [12]: "GUILD_PROFILE", DEFAULT_REACT_EMOJI: 13, [13]: "DEFAULT_REACT_EMOJI", NO_CUSTOM_EMOJI: 14, [14]: "NO_CUSTOM_EMOJI", TYPING_INDICATOR: 15, [15]: "TYPING_INDICATOR" };
 const items = [, , , , ];
 ({ COMMUNITY_CONTENT: arr[0], GUILD_STICKER_RELATED_EMOJI: arr[1], GUILD_ROLE_BENEFIT_EMOJI: arr[2], SOUNDBOARD: arr[3], GIFT: arr[4] } = obj);
-const set = new Set(items);
-const result = obj132.fileFinishedImporting("modules/emojis/EmojiConstants.tsx");
+let set = new Set(items);
+const result = set.fileFinishedImporting("modules/emojis/EmojiConstants.tsx");
 
 export const DEFAULT_EMOJI_SLOTS = 50;
 export const EMOJI_MAX_SLOTS_MORE = 200;

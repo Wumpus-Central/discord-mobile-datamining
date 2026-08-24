@@ -1,21 +1,21 @@
 // discord_app/modules/devtools/native/components/DevToolsLazy.tsx
 import enforcingDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import init from "../../../../stores/DeveloperExperimentStore.tsx";
-import initialize from "../../DevToolsSettingsStore.tsx";
+import closure_5 from "../../../../stores/DeveloperExperimentStore.tsx";
+import closure_6 from "../../DevToolsSettingsStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
-const require = fn;
-if (obj132.isAndroid()) {
+const require = arg1;
+if (set.isAndroid()) {
   let keyModifierControl = enforcingDefault.getConstants().keyModifierControl;
   const importDefaultResult = enforcingDefault;
 } else {
   keyModifierControl = NativeModules.KeyCommandsView.keyModifierControl;
 }
-obj132 = {
+set = {
   input: "o",
   modifierFlags: keyModifierControl,
   eventName: "keyCommandShowDevTools",
@@ -27,10 +27,10 @@ obj132 = {
         HermesBuiltin.throwTypeError();
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw navigateToDevTools;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = navigateToDevTools;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -41,11 +41,11 @@ obj132 = {
           if (0 === paths) {
             if (arg0 === 1) {
               v0 = 3;
-              throw navigateToDevTools;
+              throw arg1;
             } else if (arg0 === 2) {
               v0 = 3;
               obj = { value: null, done: true };
-              obj[0] = navigateToDevTools;
+              obj[0] = arg1;
               return obj;
             } else {
               paths = 1;
@@ -56,14 +56,14 @@ obj132 = {
             }
           } else if (arg0 === 1) {
             v0 = 3;
-            throw navigateToDevTools;
+            throw arg1;
           } else if (arg0 === 2) {
             v0 = 3;
             obj = { value: null, done: true };
-            obj[0] = navigateToDevTools;
+            obj[0] = arg1;
             return obj;
           } else {
-            navigateToDevTools.navigateToDevTools();
+            arg1.navigateToDevTools();
             v0 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -75,13 +75,13 @@ obj132 = {
     })();
   }
 };
-let items = [obj132];
-let result = obj132.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
+let items = [set];
+let result = set.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
 
 export default function DevToolsLazy() {
   items = [closure_5];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => isDeveloper.isDeveloper);
-  let obj = stateFromStores(589);
+  const obj = stateFromStores(589);
   const tmp = stateFromStores;
   const items1 = [closure_6];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => showDevWidget.showDevWidget);
@@ -94,7 +94,6 @@ export default function DevToolsLazy() {
         }
       });
     }
-    obj = stateFromStores(dependencyMap[6]);
   });
   const obj2 = stateFromStores(589);
   const keyCommands = stateFromStores(13940).useKeyCommands(stateFromStores ? items : []);

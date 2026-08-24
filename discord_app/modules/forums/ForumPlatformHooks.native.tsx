@@ -1,15 +1,16 @@
 // discord_app/modules/forums/ForumPlatformHooks.native.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
 
 export default {
   useForumChannelSeenManager(guildId) {
     guildId = guildId.guildId;
     const channelId = guildId.channelId;
+    let ref;
     let callback;
-    const ref = callback.useRef(null);
+    ref = callback.useRef(null);
     const items = [channelId];
     callback = callback.useCallback(() => {
       const rootNavigationRef = guildId(ref[1]).getRootNavigationRef();
@@ -28,7 +29,6 @@ export default {
           const tmpResult = guildId(ref[2]);
         }
       }
-      const obj = guildId(ref[1]);
     }, items);
     const effect = callback.useEffect(() => {
       const rootNavigationRef = guildId(ref[1]).getRootNavigationRef();
@@ -36,11 +36,10 @@ export default {
         if (rootNavigationRef.isReady()) {
           rootNavigationRef.addListener("state", callback);
           return () => {
-            rootNavigationRef.removeListener("state", callback);
+            rootNavigationRef.removeListener("state", closure_1_3);
           };
         }
       }
-      const obj = guildId(ref[1]);
     });
     const items1 = [channelId, guildId, callback];
     const layoutEffect = callback.useLayoutEffect(() => {

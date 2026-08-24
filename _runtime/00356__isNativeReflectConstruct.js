@@ -1,10 +1,10 @@
 // _runtime/00356__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00366__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import closure_5 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 let AnimatedValue = importDefault;
@@ -78,7 +78,8 @@ let items = [
   {
     key: "__detach",
     value: function __detach() {
-      const self = this;
+      let self = this;
+      self = this;
       if (this.__isNative) {
         const API = AnimatedValue(357).API;
         const value = API.getValue(self.__getNativeTag(), (arg0) => {
@@ -86,7 +87,8 @@ let items = [
         });
       }
       self.stopAnimation();
-      let fn = callback3(callback2(self.prototype), "__detach", self);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__detach", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -102,7 +104,8 @@ let items = [
   {
     key: "__makeNative",
     value: function __makeNative(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -117,7 +120,8 @@ let items = [
   {
     key: "addListener",
     value: function addListener(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "addListener", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -133,7 +137,8 @@ let items = [
   {
     key: "removeListener",
     value: function removeListener(arg0) {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "removeListener", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -156,7 +161,8 @@ let items = [
   {
     key: "removeAllListeners",
     value: function removeAllListeners() {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "removeAllListeners", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
@@ -174,7 +180,8 @@ let items = [
   {
     key: "__ensureUpdateSubscriptionExists",
     value: function __ensureUpdateSubscriptionExists() {
-      const self = this;
+      let self = this;
+      self = this;
       if (null == this._updateSubscription) {
         const __getNativeTagResult = self.__getNativeTag();
         dependencyMap = __getNativeTagResult;
@@ -264,7 +271,7 @@ let items = [
   },
   {
     key: "stopAnimation",
-    value: function stopAnimation(fn) {
+    value: function stopAnimation(arg0) {
       const self = this;
       this.stopTracking();
       if (this._animation) {
@@ -272,12 +279,12 @@ let items = [
         _animation.stop();
       }
       self._animation = null;
-      if (fn) {
+      if (arg0) {
         if (self.__isNative) {
           const API = AnimatedValue(357).API;
-          const value = API.getValue(self.__getNativeTag(), fn);
+          const value = API.getValue(self.__getNativeTag(), arg0);
         } else {
-          fn(self.__getValue());
+          arg0(self.__getValue());
         }
       }
     }
@@ -312,7 +319,8 @@ let items = [
   {
     key: "animate",
     value: function animate(_animation) {
-      const self = this;
+      let self = this;
+      self = this;
       closure_0 = arg1;
       if (this._animation) {
         _animation = self._animation;
@@ -366,12 +374,12 @@ let items = [
         } else {
           const _Set = Set;
           const set = new Set();
-          function findAnimatedStyles(item, index) {
-            if (typeof item.update === "function") {
-              set.add(item);
+          function findAnimatedStyles(update) {
+            if (typeof update.update === "function") {
+              set.add(update);
             } else {
-              item = item.__getChildren().forEach(findAnimatedStyles);
-              const __getChildrenResult = item.__getChildren();
+              const item = update.__getChildren().forEach(findAnimatedStyles);
+              const __getChildrenResult = update.__getChildren();
             }
           }
           if (typeof self.update === "function") {
@@ -380,7 +388,7 @@ let items = [
             let item = self.__getChildren().forEach(findAnimatedStyles);
             let __getChildrenResult = self.__getChildren();
           }
-          const item1 = set.forEach((item, index) => item.update());
+          const item1 = set.forEach((update) => update.update());
         }
       }
     }
@@ -396,12 +404,12 @@ let items = [
 export default importDefaultResult(AnimatedValue, items);
 export const flushValue = function flushValue(self) {
   const set = new Set();
-  function findAnimatedStyles(item, index) {
-    if (typeof item.update === "function") {
-      set.add(item);
+  function findAnimatedStyles(update) {
+    if (typeof update.update === "function") {
+      set.add(update);
     } else {
-      item = item.__getChildren().forEach(findAnimatedStyles);
-      const __getChildrenResult = item.__getChildren();
+      const item = update.__getChildren().forEach(findAnimatedStyles);
+      const __getChildrenResult = update.__getChildren();
     }
   }
   if (typeof self.update === "function") {
@@ -410,5 +418,5 @@ export const flushValue = function flushValue(self) {
     const item = self.__getChildren().forEach(findAnimatedStyles);
     const __getChildrenResult = self.__getChildren();
   }
-  const item1 = set.forEach((item, index) => item.update());
+  const item1 = set.forEach((update) => update.update());
 };

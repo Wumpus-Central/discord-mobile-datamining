@@ -1,7 +1,8 @@
 // _runtime/01715_FlipInData.js
 import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
-let obj = { 0: { transform: items }, 100: null };
+obj = { FlipInYRight: { name: "FlipInYRight", style: obj, duration: 0.3 }, FlipInYLeft: { name: "FlipInYLeft", style: obj, duration: 0.3 }, FlipInXUp: { name: "FlipInXUp", style: obj1, duration: 0.3 }, FlipInXDown: { name: "FlipInXDown", style: obj2, duration: 0.3 }, FlipInEasyX: { name: "FlipInEasyX", style: obj3, duration: 0.3 }, FlipInEasyY: { name: "FlipInEasyY", style: obj4, duration: 0.3 } };
+obj = { 0: { transform: items }, 100: null };
 items = [{ perspective: "500px", rotateY: "90deg", translateX: "100%" }];
 const items1 = [{ perspective: "500px", rotateY: "0deg", translateX: "0%" }];
 obj[100] = { transform: items1 };
@@ -9,19 +10,19 @@ obj = { 0: { transform: items2 }, 100: null };
 items2 = [{ perspective: "500px", rotateY: "-90deg", translateX: "-100%" }];
 const items3 = [{ perspective: "500px", rotateY: "0deg", translateX: "0%" }];
 obj[100] = { transform: items3 };
-const obj1 = { 0: { transform: items4 }, 100: null };
+obj1 = { 0: { transform: items4 }, 100: null };
 items4 = [{ perspective: "500px", rotateX: "90deg", translateY: "-100%" }];
 const items5 = [{ perspective: "500px", rotateX: "0deg", translateY: "0%" }];
 obj1[100] = { transform: items5 };
-const obj2 = { 0: { transform: items6 }, 100: null };
+obj2 = { 0: { transform: items6 }, 100: null };
 items6 = [{ perspective: "500px", rotateX: "-90deg", translateY: "100%" }];
 const items7 = [{ perspective: "500px", rotateX: "0deg", translateY: "0%" }];
 obj2[100] = { transform: items7 };
-const obj3 = { 0: { transform: items8 }, 100: null };
+obj3 = { 0: { transform: items8 }, 100: null };
 items8 = [{ perspective: "500px", rotateX: "90deg" }];
 const items9 = [{ perspective: "500px", rotateX: "0deg" }];
 obj3[100] = { transform: items9 };
-const obj4 = { 0: { transform: items10 }, 100: null };
+obj4 = { 0: { transform: items10 }, 100: null };
 items10 = [{ perspective: "500px", rotateY: "90deg" }];
 const items11 = [{ perspective: "500px", rotateY: "0deg" }];
 obj4[100] = { transform: items11 };

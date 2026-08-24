@@ -5,17 +5,19 @@ import isPremiumAtLeast from "../../../utils/PremiumTypeUtils.tsx";
 import apexExperiment from "../experiments/CollectiblesProfileFramesExperiment.tsx";
 import apexExperiment2 from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
 import apexExperimentDefault from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");
 
 export default function useCanPurchaseFrames(location) {
   let obj = apexExperiment;
   let isProfileFramesEnabled = obj.useIsProfileFramesEnabled(location);
   obj = { location };
   const bucket = apexExperimentDefault.useConfig(obj).bucket;
+  const obj2 = apexExperimentDefault;
+  const tmp = require;
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -35,6 +37,7 @@ export default function useCanPurchaseFrames(location) {
   let tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
   if (!tmp5) {
     tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    const tmp6 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
   }
   if (isProfileFramesEnabled) {
     isProfileFramesEnabled = tmp5;

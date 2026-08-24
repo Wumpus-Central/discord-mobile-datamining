@@ -1,20 +1,21 @@
 // discord_app/modules/forwarding/ForwardDestinationUtils.tsx
 import canBypassSlowmodeHelper from "../chat/SlowmodeUtils.tsx";
-import noop from "../../../_runtime/00019_noop.js";
-import loadSavedGuildStickers from "../stickers/StickersStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../stickers/StickersStore.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_8 from "../../stores/ChannelStore.tsx";
+import closure_9 from "../../stores/PermissionStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
 
-require = fn;
+require = arg1;
 ({ ChannelRecordBase: c5, isGuildChannelType: closure_6, createChannelRecord: error } = createChannelRecord);
 ({ MessageFlags: closure_12, Permissions: map1 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
   const mapped = selectedDestinations.map(found(7591).getChannelIdFromDestinationId);
@@ -27,16 +28,16 @@ export const useSelectedDestinationChannel = function useSelectedDestinationChan
     let tmp = stateFromStores;
     if (stateFromStores == null) {
       const obj = { id: "1", type: null };
-      obj[1] = found(dependencyMap[11]).ChannelTypes.DM;
+      obj[1] = found(closure_1_2[11]).ChannelTypes.DM;
       tmp = closure_1_7(obj);
     }
     return tmp;
   }, items2);
 };
-export const getDestinationIsUnavailable = function getDestinationIsUnavailable(components, channel, type, fn) {
+export const getDestinationIsUnavailable = function getDestinationIsUnavailable(components, channel, type) {
   const _require = type;
-  if (null != fn) {
-    const tmp2 = fn(type);
+  if (null != arg3) {
+    const tmp2 = arg3(type);
     if (null != tmp2) {
       return tmp2;
     }
@@ -44,19 +45,19 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
   if (null != components) {
     let tmp5 = components.components.length > 0;
     if (tmp5) {
-      tmp5 = components.components[0].type === require("../../flow/Server.tsx").ComponentType.CHECKPOINT_CARD;
+      tmp5 = components.components[0].type === _PermissionOverwriteType.ComponentType.CHECKPOINT_CARD;
     }
     let tmp6 = components.messageSnapshots.length > 0;
     if (tmp6) {
       let message = components.messageSnapshots[0].message;
       let tmp7 = message.components.length > 0;
       if (tmp7) {
-        tmp7 = message.components[0].type === require("../../flow/Server.tsx").ComponentType.CHECKPOINT_CARD;
+        tmp7 = message.components[0].type === _PermissionOverwriteType.ComponentType.CHECKPOINT_CARD;
       }
       tmp6 = tmp7;
     }
     if (null != channel) {
-      let obj = shouldShowAgeGateForVoiceChannel;
+      let obj = _shouldShowAgeGateForVoiceChannel;
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
           let tmp11Result = tmp11(5252);
@@ -104,18 +105,19 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4823).getMessageStickers(components), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(messageSnapshots3.flatMap((item, index) => type(table[12]).getMessageStickers(item.message)), arraySpreadResult);
+          arraySpreadResult = HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(table[12]).getMessageStickers(message.message)), arraySpreadResult);
           if (items.length > 0) {
             if (!closure_9.can(constants2.USE_EXTERNAL_STICKERS, type)) {
-              if (items.some((item, index) => {
-                const stickerById = closure_1_4.getStickerById(item.id);
+              if (items.some((id) => {
+                const stickerById = closure_1_4.getStickerById(id.id);
                 let isGuildStickerResult = null != stickerById;
                 if (isGuildStickerResult) {
-                  isGuildStickerResult = type(dependencyMap[12]).isGuildSticker(stickerById);
-                  const obj = type(dependencyMap[12]);
+                  isGuildStickerResult = type(closure_1_2[12]).isGuildSticker(stickerById);
+                  const obj = type(closure_1_2[12]);
                 }
                 if (isGuildStickerResult) {
                   isGuildStickerResult = stickerById.guild_id !== type.guild_id || undefined;
+                  const tmp6 = stickerById.guild_id !== type.guild_id || undefined;
                 }
                 return isGuildStickerResult;
               })) {
@@ -149,6 +151,7 @@ export const isRatelimitedInChannel = function isRatelimitedInChannel(channel, c
   }
   if (tmp) {
     tmp = !canBypassSlowmodeHelper.canBypassSlowmodeHelper(channel, closure_1_6);
+    const obj = canBypassSlowmodeHelper;
   }
   return tmp;
 };
@@ -156,10 +159,10 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
   const _require = arg0;
   const items = [closure_11, closure_8, closure_10];
   const items1 = [arg0];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const mapped = lib.map((item, index) => {
-      const id = item.id;
-      if ("user" === item.type) {
+  return _initialize.useStateFromStoresArray(items, () => {
+    const mapped = lib.map((id) => {
+      id = id.id;
+      if ("user" === id.type) {
         user = user.getUser(id);
         let tmp13 = null;
         if (null != user) {
@@ -181,36 +184,36 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         return channelName;
       }
     });
-    return mapped.filter(lib(dependencyMap[9]).isNotNullish);
+    return mapped.filter(lib(closure_1_2[9]).isNotNullish);
   }, items1);
 };
 export const useDestinationNamesWithSlowmode = function useDestinationNamesWithSlowmode(selectedDestinations) {
   const _require = selectedDestinations;
   const items = [closure_8, closure_9];
   const items1 = [selectedDestinations];
-  const stateFromStoresArray = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
-    const mapped = selectedDestinations.map((item, index) => {
+  const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
+    const mapped = selectedDestinations.map((type) => {
       let channel = null;
-      if ("channel" === item.type) {
+      if ("channel" === type.type) {
         channel = channel.getChannel(tmp);
       }
       return channel;
     });
-    const found = mapped.filter(selectedDestinations(dependencyMap[9]).isNotNullish);
-    return found.filter((item, index) => {
-      let tmp2 = null != item.rateLimitPerUser;
+    const found = mapped.filter(selectedDestinations(closure_1_2[9]).isNotNullish);
+    return found.filter((rateLimitPerUser) => {
+      let tmp2 = null != rateLimitPerUser.rateLimitPerUser;
       if (tmp2) {
-        tmp2 = item.rateLimitPerUser > 0;
+        tmp2 = rateLimitPerUser.rateLimitPerUser > 0;
       }
       if (tmp2) {
-        tmp2 = !callback(table[17]).canBypassSlowmodeHelper(item, closure_9);
+        tmp2 = !callback(table[17]).canBypassSlowmodeHelper(rateLimitPerUser, closure_9);
         const obj = callback(table[17]);
       }
       return tmp2;
     });
   }, items1);
-  let obj = initialize;
+  let obj = _initialize;
   const items2 = [closure_11, closure_10];
   const items3 = [stateFromStoresArray];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => stateFromStoresArray.map((item, index) => callback(table[19]).computeChannelName(item, closure_11, closure_10, true)), items3);
+  return _initialize.useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, closure_11, closure_10, true)), items3);
 };

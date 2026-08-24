@@ -2,10 +2,10 @@
 import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
 import LinearGradientDefault from "04758_LinearGradient.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
@@ -141,6 +141,9 @@ let items = [
       obj = { style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, colors: null, startPoint: null, endPoint: null, locations: null, useAngle: null, angleCenter: null, angle: null, borderRadii: null };
       let mapped = colors;
       const tmp = callback(props, closure_3);
+      const tmp14 = closure_13;
+      const tmp15 = closure_11;
+      const tmp17 = closure_12;
       if (!LinearGradient.RN$Bridgeless) {
         mapped = colors.map(closure_9);
       }
@@ -168,6 +171,7 @@ let items = [
         console.warn("LinearGradient '" + "end" + "' property should be an object with fields 'x' and 'y', Array type is deprecated.");
         [obj4[0], obj4[1]] = end;
         tmp24 = { x: null, y: null };
+        obj1 = { x: null, y: null };
       }
       obj[3] = tmp24;
       let substr = null;
@@ -186,13 +190,14 @@ let items = [
         console.warn("LinearGradient '" + "angleCenter" + "' property should be an object with fields 'x' and 'y', Array type is deprecated.");
         [obj5[0], obj5[1]] = angleCenter;
         tmp27 = { x: null, y: null };
+        const obj2 = { x: null, y: null };
       }
       obj[6] = tmp27;
       obj[7] = angle;
       obj[8] = items;
-      const items1 = [callback2(LinearGradientDefault, obj), children];
+      const items1 = [tmp17(LinearGradientDefault, obj), children];
       obj.children = items1;
-      return callback3(closure_11, obj);
+      return tmp14(tmp15, obj);
     }
   }
 ];

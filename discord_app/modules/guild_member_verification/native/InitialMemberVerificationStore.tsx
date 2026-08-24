@@ -26,10 +26,11 @@ const initialMemberVerificationStore = new InitialMemberVerificationStore(dispat
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
 
 export default initialMemberVerificationStore;
 export const setInitialVerification = function setInitialVerification(guildId, state) {
-  const obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
+  let obj = dispatcherDefault;
+  obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
   obj.dispatch(obj);
 };

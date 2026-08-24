@@ -2,6 +2,10 @@
 arg5.default = undefined;
 let closure_0 = { url: "http://localhost:8081" };
 arg5.default = () => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
   return () => {
     closure_0 = Object.assign({}, obj, closure_0);
     obj = {

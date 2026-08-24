@@ -1,14 +1,14 @@
 // discord_app/modules/game_console/native/GameConsoleAlert.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../GameConsoleStore.tsx";
+import closure_4 from "../GameConsoleStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");
 
 export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorCodeMessage) {
   ({ body, dismissCallback } = errorCodeMessage);
@@ -33,13 +33,13 @@ export const SelfDismissibleAlertBody = function SelfDismissibleAlertBody(errorC
     ({ body: arr3[0], alertBody: arr3[1] } = tmp);
     obj[2] = items2;
     obj[3] = body;
-    const items3 = [callback(dismissCallback(tmp3[6]).Text, obj), ];
+    const items3 = [callback(tmp2(tmp3[6]).Text, obj), ];
     obj1 = { maxFontSizeMultiplier: 1, variant: "text-md/normal", style: null, children: null };
     const items4 = [, ];
     ({ body: arr5[0], errorCodeText: arr5[1] } = tmp);
     obj1[2] = items4;
     obj1[3] = errorCodeMessage;
-    items3[1] = callback(dismissCallback(tmp3[6]).Text, obj1);
+    items3[1] = callback(tmp2(tmp3[6]).Text, obj1);
     obj[1] = items3;
     tmp6 = callback2(View, obj);
   }

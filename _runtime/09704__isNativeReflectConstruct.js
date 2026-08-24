@@ -1,10 +1,10 @@
 // _runtime/09704__isNativeReflectConstruct.js
 import _asyncLoop from "09699__asyncLoop.js";
 import _isNativeReflectConstruct2 from "09705__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import c3 from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
 let SHA224 = require;
@@ -89,14 +89,18 @@ let items = [
       let tmp29;
       let num = 0;
       do {
+        let tmp2 = uint32Array2;
         uint32Array2[num] = getUint32.getUint32(sum, false);
         num = num + 1;
         sum = sum + 4;
         num2 = 16;
       } while (num < 16);
       do {
+        let tmp3 = uint32Array2;
         let tmp4 = uint32Array2[num2 - 15];
         let tmp5 = uint32Array2[num2 - 2];
+        let tmp6 = SHA224;
+        let tmp7 = dependencyMap;
         let rotrResult = SHA224(9699).rotr(tmp4, 7);
         let tmp9 = rotrResult ^ SHA224(9699).rotr(tmp4, 18) ^ tmp4 >>> 3;
         let rotrResult1 = SHA224(9699).rotr(tmp5, 17);
@@ -107,9 +111,13 @@ let items = [
       ({ A, B, C, D, E, F, G, H } = this);
       let num3 = 0;
       do {
+        let tmp11 = SHA224;
+        let tmp12 = dependencyMap;
         let rotrResult2 = SHA224(9699).rotr(E, 6);
         let tmp14 = rotrResult2 ^ SHA224(9699).rotr(E, 11);
         let sum1 = H + (tmp14 ^ SHA224(9699).rotr(E, 25));
+        let tmp16 = uint32Array;
+        let tmp17 = uint32Array2;
         let tmp18 = sum1 + SHA224(9705).Chi(E, F, G) + uint32Array[num3] + uint32Array2[num3] | 0;
         let rotrResult3 = SHA224(9699).rotr(A, 2);
         let tmp20 = rotrResult3 ^ SHA224(9699).rotr(A, 13);

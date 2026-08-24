@@ -2,9 +2,9 @@
 import timestampDefault from "../../../debug/Logger.tsx";
 import Storage2 from "../../../../../discord_common/js/packages/storage/Storage.tsx";
 import appendDefault from "BaseTelemetryChannel.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-require = fn;
+require = arg1;
 appendDefault;
 class BaseTelemetryExportChannel extends tmp2 {
   constructor() {
@@ -31,7 +31,8 @@ prototype["initialize"] = function initialize() {
   }
 };
 prototype["reset"] = function reset() {
-  const self = this;
+  let self = this;
+  self = this;
   this.stop();
   if (!this._resetting) {
     self._resetting = true;
@@ -47,7 +48,8 @@ prototype["reset"] = function reset() {
   }
 };
 prototype["start"] = function start() {
-  const self = this;
+  let self = this;
+  self = this;
   let shouldRunResult = this.shouldRun();
   if (shouldRunResult) {
     shouldRunResult = null == self._timer;
@@ -144,19 +146,20 @@ prototype["_clearAckedEndOffset"] = function _clearAckedEndOffset() {
   Storage.remove(this.getAckedEndOffsetStorageKey());
 };
 prototype["_kick"] = function _kick(arg0) {
-  const self = this;
+  let self = this;
+  self = this;
   if (this.shouldRun()) {
     if (null == self._inflight) {
       const _drainOnceResult = self._drainOnce(arg0);
-      self._inflight = self._drainOnce(arg0).catch((error) => {
+      self._inflight = self._drainOnce(arg0).catch((arg0) => {
         const _logger = self._logger;
-        _logger.warn("TelemetryRing export failed", error);
+        _logger.warn("TelemetryRing export failed", arg0);
       }).finally(() => {
         self._inflight = null;
       });
-      const catchPromise = self._drainOnce(arg0).catch((error) => {
+      const catchPromise = self._drainOnce(arg0).catch((arg0) => {
         const _logger = self._logger;
-        _logger.warn("TelemetryRing export failed", error);
+        _logger.warn("TelemetryRing export failed", arg0);
       });
     }
     let _inflight = self._inflight;
@@ -170,12 +173,12 @@ prototype["_drainOnce"] = function _drainOnce(arg0) {
   const self = this;
   return callback(function*() {
     closure_0 = tmp2;
-    const budget = self.getBudget(closure_1_0.mode);
-    const _readAckedEndOffsetResult = self._readAckedEndOffset();
+    const budget = closure_1_1.getBudget(closure_1_0.mode);
+    const _readAckedEndOffsetResult = closure_1_1._readAckedEndOffset();
     if (_readAckedEndOffsetResult >= 0) {
       const tmp27 = _readAckedEndOffsetResult;
     }
-    yield self._collectPages(budget, tmp27);
+    yield closure_1_1._collectPages(budget, tmp27);
     if (1 === tmp5) {
       if (arg0 === 1) {
         c3 = 3;
@@ -293,7 +296,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
         nextBeforeOffset = 1;
         c3 = 1;
         const obj4 = { value: null, done: false };
-        obj4[0] = nextBeforeOffset.snapshot(nextBeforeOffset, budget, closure_1_1);
+        obj4[0] = nextBeforeOffset.snapshot(nextBeforeOffset, closure_1_0, closure_1_1);
         return obj4;
       } catch (tmp15) {
         c3 = tmp;
@@ -400,6 +403,6 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
     }
   })();
 };
-let result = require("obj132").fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx");
 
 export default BaseTelemetryExportChannel;

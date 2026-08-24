@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/utils/AppLauncherPlayUtils.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 function _launchActivityInBotDM() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -136,7 +136,7 @@ function _launchActivityInBotDM() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
 
 export const launchActivityInBotDM = function launchActivityInBotDM(arg0) {
   const self = this;

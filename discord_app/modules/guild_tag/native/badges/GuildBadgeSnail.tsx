@@ -4,7 +4,7 @@ import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = ["#7E1B1B", "#C7531A"];
@@ -13,7 +13,7 @@ let items = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }];
 let closure_7 = ["#B86F00", "#E6D23B"];
 let closure_8 = [0.5, 0.75];
 const items1 = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }];
-const result = require("obj132").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSnail.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSnail.tsx");
 
 export const GuildBadgeSnail = function GuildBadgeSnail(width) {
   let num = width.width;
@@ -26,7 +26,8 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
   }
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.create(null));
-  let obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: dependencyMap, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
+  let obj = getTransformedBadgeColors;
+  obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: closure_7, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
   obj = {};
@@ -41,7 +42,7 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     tmp9 = secondaryColorsTransformed[1];
   }
   if (tmp9 == null) {
-    tmp9 = dependencyMap[1];
+    tmp9 = tmp4[1];
   }
   items[5] = callback(inlineStyles.Path, { d: "M5 15h-1v-1h1v1ZM4 14h-1v-1h1v1ZM3 13H2v-1h1v1ZM3 5h2v1h1v2H2v4H1V6h1V2h1v3Z", fill: tmp9 });
   let first;
@@ -49,10 +50,10 @@ export const GuildBadgeSnail = function GuildBadgeSnail(width) {
     first = secondaryColorsTransformed[0];
   }
   if (first == null) {
-    first = dependencyMap[0];
+    first = tmp4[0];
   }
   items[6] = callback(inlineStyles.Path, { d: "M5 13h1v1h-1v-1ZM7 15h-2v-1h2v1ZM15 14v1h-2v-1h2ZM3 9h1v1h1v4h-1v-1h-1v-1H2V8h1v1ZM5 4h-1v-1h1v1ZM6 3h-1V2h1v1ZM7 2h-1V1h1v1Z", fill: first });
   items[7] = callback(inlineStyles.Path, { d: "M13 15h2v-1h1v2H4v-1h3v-1h6v1ZM4 15h-1v-1h1v1ZM3 14H2v-1h1v1ZM7 14h-1v-1h1v1ZM15 14h-2v-1h1v-1h1v2ZM2 13H1v-1h1v1ZM6 13h-1v-1h1v1ZM1 12H0V5h1v7ZM16 12h-1V6h1v6ZM6 9h-1v1h-1v-1h-1v-1h3v1ZM5 1h1V0h2v2h-1V1h-1v1h-1v1h-1v1h1v-1h1V2h1v1h6v1H6v1h1v3h-1v-2h-1v-1h-2V2h1V1h-1V0h2v1ZM15 6h-1v-1h1v1ZM2 5H1V2h1v3ZM14 5h-1v-1h1v1ZM3 2H2V1h1v1Z", fill: "black" });
   obj.children = items;
-  return callback(inlineStyles.Svg, obj);
+  return closure_3(inlineStyles.Svg, obj);
 };

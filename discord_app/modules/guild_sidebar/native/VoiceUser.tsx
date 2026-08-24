@@ -1,23 +1,24 @@
 // discord_app/modules/guild_sidebar/native/VoiceUser.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import participantFromServer from "../../activities/EmbeddedActivitiesStore.tsx";
-import getParticipants from "../../calls/ChannelRTCStore.tsx";
-import reset from "../../../stores/ApplicationStreamingStore.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
-import handleUpdate from "../../../stores/SessionsStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../calls/ChannelRTCStore.tsx";
+import closure_5 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../stores/SessionsStore.tsx";
+import closure_9 from "../../../stores/VoiceStateStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
 
 export default function VoiceUserConnected(channel) {
   channel = channel.channel;
   const user = channel.user;
   const sessionId = channel.sessionId;
   ({ selfVideo, mute } = channel);
+  closure_3 = undefined;
   let obj = id;
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
   const tmp = id.getId() === user.id;
@@ -67,8 +68,8 @@ export default function VoiceUserConnected(channel) {
   const items6 = [user.id, channel.id];
   const stateFromStores3 = tmp2Result.useStateFromStores(items5, () => {
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
-    return embeddedActivitiesForChannel.find((item, index) => {
-      const userIds = item.userIds;
+    return embeddedActivitiesForChannel.find((userIds) => {
+      userIds = userIds.userIds;
       return userIds.has(id.id);
     });
   }, items6);
@@ -80,6 +81,7 @@ export default function VoiceUserConnected(channel) {
   });
   obj = { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null };
   const obj5 = channel(sessionId[9]);
+  const tmp11 = jsx;
   if (!mute) {
     mute = suppress;
   }
@@ -103,5 +105,5 @@ export default function VoiceUserConnected(channel) {
   obj[15] = isGuest;
   obj[16] = stateFromStores2;
   obj[17] = stateFromStores4;
-  return jsx(user(sessionId[10]), { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null });
+  return tmp11(user(sessionId[10]), obj);
 };

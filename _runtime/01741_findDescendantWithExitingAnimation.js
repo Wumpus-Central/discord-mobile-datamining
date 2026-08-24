@@ -2,33 +2,34 @@
 import isJest from "01657_isJest.js";
 import addLogBoxLog from "01658_addLogBoxLog.js";
 import t from "01665_t.js";
+import { weakMap } from "01740_weakMap.js";
 
 require = arg1;
 let dependencyMap = arg6;
-function findDescendantWithExitingAnimation(arr, appendChild) {
+function findDescendantWithExitingAnimation(isDummy, appendChild) {
   let length;
-  if (arr instanceof globalThis.HTMLElement) {
-    let isDummy = arr.isDummy;
+  if (isDummy instanceof globalThis.HTMLElement) {
+    isDummy = isDummy.isDummy;
     if (isDummy) {
-      isDummy = undefined === arr.removedAfterAnimation;
+      isDummy = undefined === isDummy.removedAfterAnimation;
     }
     if (isDummy) {
-      const _require = arr;
+      const _require = isDummy;
       dependencyMap = appendChild;
-      const snapshots = require("01740_weakMap.js").snapshots;
-      const value = snapshots.get(arr);
+      const snapshots = _weakMap.snapshots;
+      const value = snapshots.get(isDummy);
       if (value) {
-        arr.removedAfterAnimation = true;
-        appendChild.appendChild(arr);
-        tmp2(1740).setElementPosition(arr, value);
-        const onanimationend = arr.onanimationend;
-        arr.onanimationend = function(arg0) {
+        isDummy.removedAfterAnimation = true;
+        appendChild.appendChild(isDummy);
+        tmp2(1740).setElementPosition(isDummy, value);
+        const onanimationend = isDummy.onanimationend;
+        isDummy.onanimationend = function(arg0) {
           appendChild.removeChild(closure_0);
           if (onanimationend != null) {
             const self = this;
-            const call = onanimationend.call;
+            const call = tmp2.call;
             if (typeof call === "unknown") {
-              onanimationend(arg0);
+              tmp2(arg0);
             } else {
               call(self, arg0);
             }
@@ -41,10 +42,11 @@ function findDescendantWithExitingAnimation(arr, appendChild) {
       }
     }
     const _Array = Array;
-    arr = Array.from(arr.children);
+    const arr = Array.from(isDummy.children);
     let num3 = 0;
     if (0 < arr.length) {
       do {
+        let tmp8 = findDescendantWithExitingAnimation;
         let tmp9 = findDescendantWithExitingAnimation(arr[num3], appendChild);
         num3 = num3 + 1;
         length = arr.length;
@@ -63,16 +65,20 @@ arg5.configureWebLayoutAnimations = function configureWebLayoutAnimations() {
     if (null === document.getElementById(ReanimatedPredefinedWebAnimationsStyle)) {
       const _document2 = document;
       const element = <style />;
-      element.id = ReanimatedPredefinedWebAnimationsStyle;
+      element.id = tmp2;
       element.onload = () => {
         if (element.sheet) {
           for (const key10016 in tmp(tmp2[2]).Animations) {
+            let tmp4 = key10016;
+            let tmp5 = element;
             let sheet = element.sheet;
-            let insertRuleResult = sheet.insertRule(element(dependencyMap[2]).Animations[key10016].style);
+            let tmp6 = element;
+            let tmp7 = closure_1_1;
+            let insertRuleResult = sheet.insertRule(element(closure_1_1[2]).Animations[key10016].style);
             continue;
           }
         } else {
-          const logger = element(dependencyMap[1]).logger;
+          const logger = tmp(tmp2[1]).logger;
           logger.error("Failed to create layout animations stylesheet.");
         }
       };
@@ -84,8 +90,8 @@ arg5.configureWebLayoutAnimations = function configureWebLayoutAnimations() {
       const _document5 = document;
       head2.appendChild(element1);
     }
+    tmp2 = ReanimatedPredefinedWebAnimationsStyle;
   }
-  obj = element(1657);
 };
 arg5.insertWebAnimation = function insertWebAnimation(name, result) {
   if (obj.isWindowAvailable()) {
@@ -111,7 +117,6 @@ arg5.insertWebAnimation = function insertWebAnimation(name, result) {
       logger.error("Failed to create layout animations stylesheet.");
     }
   }
-  obj = isJest;
 };
 arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName, arg1, arg2) {
   closure_0 = animationName;
@@ -119,8 +124,8 @@ arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName,
   const timerId = setTimeout(() => {
     if (obj.isWindowAvailable()) {
       const _document = document;
-      const element = document.getElementById(ReanimatedCustomWebAnimationsStyle);
-      let sum = map.get(animationName);
+      const element = document.getElementById(closure_1_3);
+      let sum = closure_1_4.get(tmp);
       if (undefined === sum) {
         const reanimatedError = new animationName(1665).ReanimatedError("Failed to obtain animation index.");
         throw reanimatedError;
@@ -131,25 +136,26 @@ arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName,
           sheet.deleteRule(sum);
         }
         closure_1_5.splice(sum, 1);
-        map.delete(animationName);
+        obj2.delete(tmp);
         if (sum < closure_1_5.length) {
-          const value = map.get(closure_1_5[sum]);
+          const value = closure_1_4.get(closure_1_5[sum]);
           while (undefined !== value) {
-            let result = map.set(closure_1_5[sum], value - 1);
+            let result = closure_1_4.set(arr[sum], value - 1);
             sum = sum + 1;
           }
           const reanimatedError1 = new animationName(1665).ReanimatedError("Failed to obtain animation index.");
           throw reanimatedError1;
         }
       }
+      obj2 = closure_1_4;
     }
-    obj = animationName(1657);
   }, Math.max(5 * arg1 * 1000, arg1 + 160));
 };
 arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
   let isWindowAvailableResult = !c6;
   if (!c6) {
     isWindowAvailableResult = isJest.isWindowAvailable();
+    const obj = isJest;
   }
   if (isWindowAvailableResult) {
     c6 = true;
@@ -159,12 +165,15 @@ arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
         let str = "__reactFiber";
         const keys = Object.keys(target);
         for (const item10012 of keys) {
+          let tmp2 = item10012;
           if (item10012.startsWith("__reactFiber")) {
             str = item10012;
+            let tmp3 = obj;
             obj.return();
             break;
           }
           let tmp4 = arg0[str];
+          let tmp5 = null;
           let navigation;
           if (tmp4 != null) {
             let child = tmp4.child;
@@ -181,6 +190,7 @@ arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
         let num = 0;
         if (0 < tmp.removedNodes.length) {
           do {
+            let tmp2 = callback;
             let tmp3 = callback(tmp.removedNodes[num], tmp.target);
             num = num + 1;
             length = tmp.removedNodes.length;

@@ -1,5 +1,5 @@
 // discord_app/errors/APIError.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../Constants.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
@@ -26,6 +26,6 @@ const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
 }.prototype;
 class prototype extends V8APIError {
 }
-const result = obj132.fileFinishedImporting("errors/APIError.tsx");
+const result = set.fileFinishedImporting("errors/APIError.tsx");
 
 export default prototype;

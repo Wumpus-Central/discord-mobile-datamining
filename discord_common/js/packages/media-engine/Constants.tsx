@@ -1,8 +1,8 @@
 // discord_common/js/packages/media-engine/Constants.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import SystemServiceNotAvailableError from "../discord-native-types/DiscordNative.tsx";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
 
 export const DesktopSources = SystemServiceNotAvailableError.DesktopSources;
 export const MediaEngineContextTypes = { DEFAULT: "default", STREAM: "stream" };

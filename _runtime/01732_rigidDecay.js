@@ -1,7 +1,7 @@
 // _runtime/01732_rigidDecay.js
 import isValidRubberBandConfig from "01730_isValidRubberBandConfig.js";
 
-require = fn;
+require = arg1;
 const dependencyMap = arg6;
 function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
   initialVelocity = initialVelocity.initialVelocity;

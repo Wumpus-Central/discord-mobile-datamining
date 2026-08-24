@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
@@ -26,6 +26,22 @@ const pressable = createToggle.createPressable({
   withArrow: true,
   usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
+const obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(messagesProxyDefault["bD//cU"]);
+  },
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
+  useDescription() {
+    const intl = getSystemLocale.intl;
+    return intl.string(messagesProxyDefault.Gn0SAj);
+  },
+  onPress() {
+    useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));
+  },
+  withArrow: true,
+  usePredicate: useAgeVerificationRunner.useShowAssignedAgeGroupSettings
+};
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupResetSetting.tsx");
 
 export default pressable;

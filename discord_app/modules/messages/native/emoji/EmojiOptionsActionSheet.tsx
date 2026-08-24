@@ -1,22 +1,23 @@
 // discord_app/modules/messages/native/emoji/EmojiOptionsActionSheet.tsx
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/messages/native/emoji/EmojiOptionsActionSheet.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/messages/native/emoji/EmojiOptionsActionSheet.tsx");
 
 export default function EmojiOptionsActionSheet(emojiSrc) {
   emojiSrc = emojiSrc.emojiSrc;
   const items = [emojiSrc];
   const callback = React.useCallback(() => {
-    emojiSrc(dependencyMap[2]).copy(emojiSrc);
-    const obj = emojiSrc(dependencyMap[2]);
-    const result = emojiSrc(dependencyMap[3]).presentCopiedToClipboard();
-    const obj2 = emojiSrc(dependencyMap[3]);
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+    emojiSrc(closure_1_2[2]).copy(emojiSrc);
+    const obj = emojiSrc(closure_1_2[2]);
+    const result = emojiSrc(closure_1_2[3]).presentCopiedToClipboard();
+    const obj2 = emojiSrc(closure_1_2[3]);
+    closure_1_1(closure_1_2[4]).hideActionSheet();
   }, items);
-  let obj = { icon: jsx(emojiSrc(4318).LinkIcon, {}), label: null, onPress: null };
+  let obj = { children: null };
+  obj = { hasIcons: true, children: null };
+  obj = { icon: jsx(emojiSrc(4318).LinkIcon, {}), label: null, onPress: null };
   const intl = emojiSrc(1236).intl;
   obj[1] = intl.string(emojiSrc(1236).t.cIoudn);
   obj[2] = callback;

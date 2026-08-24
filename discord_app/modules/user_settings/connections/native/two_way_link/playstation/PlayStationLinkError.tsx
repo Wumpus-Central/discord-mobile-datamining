@@ -8,9 +8,9 @@ import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkConstant
 import { AbortCodes } from "../../../../../../Constants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
 
 export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   ({ onClose, errorCode } = arg0);
@@ -18,14 +18,14 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   const navigation = obj.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   if (errorCode === AbortCodes.UNDER_MINIMUM_AGE) {
-    const intl2 = getSystemLocale.intl;
-    let stringResult = intl2.string(getSystemLocale.t["3dIn2A"]);
+    const intl2 = tmp(1236).intl;
+    let stringResult = intl2.string(tmp(1236).t["3dIn2A"]);
   } else {
-    const intl = getSystemLocale.intl;
-    stringResult = intl.string(getSystemLocale.t.qE9nqE);
+    const intl = tmp(1236).intl;
+    stringResult = intl.string(tmp(1236).t.qE9nqE);
   }
   obj = { title: null, body: null, onClose: null, onRetry: null };
-  const intl3 = getSystemLocale.intl;
+  const intl3 = tmp(1236).intl;
   obj[0] = intl3.string(getSystemLocale.t.eY3qHd);
   obj[1] = stringResult;
   obj[2] = onClose;

@@ -5,16 +5,18 @@ import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey = { image: { width: "100%" }, content: null, description: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
+const obj1 = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
 
 export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -23,6 +25,16 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   let obj = markAsDismissed(7688);
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
+  obj = {
+    ref: bottomSheetRef,
+    startExpanded: true,
+    onDismiss() {
+      return markAsDismissed(closure_1_4.UNKNOWN);
+    },
+    handleDisabled: true,
+    header: null,
+    children: null
+  };
   obj = { children: null };
   const items = [callback(preloadDefault, { source: imageSource, style: tmp.image }), callback(markAsDismissed(7124).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj[0] = items;

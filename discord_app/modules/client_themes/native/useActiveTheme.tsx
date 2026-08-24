@@ -1,18 +1,20 @@
 // discord_app/modules/client_themes/native/useActiveTheme.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import getGuildIdFromNavigationStateDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
-import CHANNEL_SIDEBAR_WIDTH from "../../user_settings/UnsyncedUserSettingsStore.tsx";
-import isSyncedModeThemesEnabled from "../ClientThemesBackgroundStore.tsx";
-import reset from "CustomThemeMobileStore.tsx";
+import closure_3 from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_4 from "../ClientThemesBackgroundStore.tsx";
+import closure_5 from "CustomThemeMobileStore.tsx";
 import SystemThemeState from "../../user_settings/ThemeConstants.tsx";
 
-require = fn;
+require = arg1;
 function useActiveThemeType() {
   const items = [closure_5];
   const stateFromStores = initialize.useStateFromStores(items, () => closure_5.hasCustomTheme());
+  const obj = initialize;
   const items1 = [closure_4];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);
   const tmp3 = getGuildIdFromNavigationStateDefault();
+  const obj2 = initialize;
   const items2 = [closure_3];
   let type;
   const stateFromStores2 = initialize.useStateFromStores(items2, () => useSystemTheme.useSystemTheme);
@@ -41,7 +43,7 @@ function useActiveThemeType() {
   return DEFAULT;
 }
 ({ SystemThemeState: closure_6, ActiveThemeType: error } = SystemThemeState);
-const result = require("obj132").fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");
+const result = require("set").fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");
 
 export const useIsCustomThemeActive = function useIsCustomThemeActive() {
   return useActiveThemeType() === constants2.CUSTOM;

@@ -1,24 +1,27 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
 import ME from "../../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ AnalyticsPages: c4, AnalyticsSections: c5 } = ME);
 let obj = { NONE: "NONE", STANDARD: "STANDARD", KRISP: "KRISP" };
-let result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
 export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
+  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   const result = obj.setAutomaticGainControl(arg0, obj);
 };
 export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
+  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setEchoCancellation(arg0, obj);
 };
 export const handleNoiseSuppressionChange = function handleNoiseSuppressionChange(arg0) {
   ({ KRISP, STANDARD } = obj);
+  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setNoiseCancellation(arg0 === KRISP, obj);
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
@@ -44,10 +47,9 @@ export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppre
     const noiseSuppression = store.getNoiseSuppression();
     const noiseCancellation = store.getNoiseCancellation();
     if (noiseCancellation) {
-      obj.getNoiseCancellationDeferredToSystem(store) ? constants.NONE : constants.KRISP;
+      obj.getNoiseCancellationDeferredToSystem(store) ? tmp3.NONE : tmp3.KRISP;
     } else {
-      return noiseSuppression ? constants.STANDARD : constants.NONE;
+      return noiseSuppression ? tmp3.STANDARD : tmp3.NONE;
     }
-    obj = callback(table[3]);
   });
 };

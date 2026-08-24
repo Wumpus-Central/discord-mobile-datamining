@@ -1,19 +1,20 @@
 // discord_app/modules/applications/getApplicationFromBotUserId.tsx
-import createUserWidgetFromServer from "../user_profile/UserProfileStore.tsx";
+import closure_2 from "../user_profile/UserProfileStore.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");
 
 export default function useGetApplicationFromBotUserId(arg0) {
   const _require = arg0;
   const items = [closure_2];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let tmp = closure_0;
     let tmp2;
     if (null !== closure_0) {
       if (tmp == null) {
-        tmp = EMPTY_STRING_SNOWFLAKE_ID;
+        tmp = closure_1_3;
       }
       const userProfile = closure_1_2.getUserProfile(tmp);
       let application;

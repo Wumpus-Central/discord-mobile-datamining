@@ -2,11 +2,11 @@
 import _fetchUserEntitlementsAll from "../../../../actions/EntitlementActionCreators.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import validateTransportType from "../../helpers/validateTransportType.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import ME from "../../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function getSubscriptionSkusViaListings() {
   const self = this;
   const apply = _getSubscriptionSkusViaListings.apply;
@@ -25,7 +25,8 @@ function _getSubscriptionSkusViaListings() {
     c3 = 0;
     c4 = 0;
     return (function*(arg0, arg1) {
-      let found = closure_1.filter((item, index) => item.type === constants.SUBSCRIPTION_GROUP);
+      closure_2 = tmp2;
+      let found = closure_1.filter((type) => type.type === constants.SUBSCRIPTION_GROUP);
       closure_2 = yield Promise.all(found.map((() => {
         closure_0 = v3((arg0) => {
           closure_0 = arg0;
@@ -44,28 +45,28 @@ function _getSubscriptionSkusViaListings() {
           return applyArgumentsResult;
         };
       })()));
-      let item = closure_2.forEach((item, index) => {
-        if (null == item) {
+      let item = closure_2.forEach((subscription_listings) => {
+        if (null == subscription_listings) {
           return null;
         } else {
-          const prop = item.subscription_listings;
+          const prop = subscription_listings.subscription_listings;
           if (null == prop) {
             return null;
           } else {
             const items = [];
-            item = prop.forEach((item, index) => {
-              closure_0 = item;
-              const subscription_plans = item.subscription_plans;
-              item = subscription_plans.forEach(() => { ... });
+            let item = prop.forEach((subscription_plans) => {
+              closure_0 = subscription_plans;
+              subscription_plans = subscription_plans.subscription_plans;
+              const item = subscription_plans.forEach(() => { ... });
             });
-            let found = items.filter((item, index) => {
-              let price;
-              if (item != null) {
-                price = item.price;
+            let found = items.filter((price) => {
+              price = undefined;
+              if (price != null) {
+                price = price.price;
               }
               return null != price;
             });
-            const item1 = found.forEach((item, index) => arr.push(item));
+            const item1 = found.forEach((arg0) => arr.push(arg0));
           }
         }
       });
@@ -202,15 +203,15 @@ function _getSkusHandler() {
             } else {
               closure_4 = arg1;
               closure_2 = 0;
-              const found = closure_4.filter((item, index) => item.sku.type !== constants.SUBSCRIPTION_GROUP);
-              const mapped = found.map((item, index) => item.sku);
+              const found = closure_4.filter((sku) => sku.sku.type !== constants.SUBSCRIPTION_GROUP);
+              const mapped = found.map((sku) => sku.sku);
               const items = [];
               dependencyMap = items;
-              closure_2 = HermesBuiltin.arraySpread(mapped.filter((item, index) => null != item.price), closure_2);
+              closure_2 = HermesBuiltin.arraySpread(mapped.filter((price) => null != price.price), closure_2);
               constants = 5;
               c7 = 1;
               const obj8 = { value: null, done: false };
-              obj8[0] = callback2(callback, closure_4.map((item, index) => item.sku));
+              obj8[0] = callback2(callback, closure_4.map((sku) => sku.sku));
               return obj8;
             }
           } else if (4 === tmp5) {
@@ -226,7 +227,7 @@ function _getSkusHandler() {
               dependencyMap = arg1;
               callback = 0;
               const items1 = [];
-              const arraySpreadResult = HermesBuiltin.arraySpread(closure_2.filter((item, index) => null != item.price), callback);
+              const arraySpreadResult = HermesBuiltin.arraySpread(closure_2.filter((price) => null != price.price), callback);
               callback = arraySpreadResult;
               callback = HermesBuiltin.arraySpread(dependencyMap, arraySpreadResult);
               c7 = 3;
@@ -285,20 +286,30 @@ function getEntitlementsHandler(socket) {
 ({ CurrencyCodes: c5, RPCCommands, RPCErrors: closure_6, SKUTypes: error } = ME);
 let items = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 let obj = {
+  [RPC_SCOPE_CONFIG.ANY]: items2,
+  handler(arg0) {
+    closure_0 = arg0;
+    return callback(function*() {
+      closure_0 = {};
+      closure_0.skus = yield closure_1_10(closure_1_0);
+      return closure_0;
+    })();
+  }
+};
+items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj = {
   [RPC_SCOPE_CONFIG.ANY]: items3,
   handler(arg0) {
     closure_0 = arg0;
     return callback(function*() {
       closure_0 = {};
-      yield closure_1_12(closure_1_0);
-      closure_0.entitlements = entitlements;
+      closure_0.entitlements = yield closure_1_12(closure_1_0);
       return closure_0;
     })();
   }
 };
 items3 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-let result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/store.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/commands/store.tsx");
 
 export default { [RPCCommands.GET_SKUS]: { [RPC_SCOPE_CONFIG.ANY]: items, handler: getSkusHandler }, [RPCCommands.GET_ENTITLEMENTS]: { [RPC_SCOPE_CONFIG.ANY]: items1, handler: getEntitlementsHandler }, [RPCCommands.GET_SKUS_EMBEDDED]: obj, [RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: obj };

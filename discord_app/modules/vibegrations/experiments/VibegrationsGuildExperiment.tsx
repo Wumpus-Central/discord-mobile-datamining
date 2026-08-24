@@ -1,11 +1,11 @@
 // discord_app/modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const EMPTY_STRING_SNOWFLAKE_ID = ME.EMPTY_STRING_SNOWFLAKE_ID;
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = obj132.fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");
+const result = set.fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");
 
 export const useIsVibegrationsGuildEnabled = function useIsVibegrationsGuildEnabled(location) {
   let guildId = location.guildId;

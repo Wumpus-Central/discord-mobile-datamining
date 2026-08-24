@@ -1,25 +1,24 @@
 // discord_app/modules/messages/BackgroundTaskManager.native.tsx
-import obj1322 from "../../utils/PlatformUtils.tsx";
+import set2 from "../../utils/PlatformUtils.tsx";
 import initializeDefault from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
-import ServiceNotificationPriority from "../foreground_service/mobile/ForegroundServiceManagerTypes.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 function startBackgroundTask(arg0) {
-  let obj = obj1322;
+  let obj = set2;
   if (obj.isAndroid()) {
     if (null == arg0) {
-      const promise = new Promise((fn) => fn(closure_5));
+      const promise = new Promise((arg0) => arg0(closure_5));
       return promise;
     } else {
       ({ title, content } = arg0);
       obj = { title: null, content: null, priority: null, type: null, usesGateway: false };
       obj[0] = title;
       obj[1] = content;
-      obj[2] = ServiceNotificationPriority.ServiceNotificationPriority.MEDIUM;
-      obj[3] = ServiceNotificationPriority.ServiceNotificationType.FILE_UPLOAD;
+      obj[2] = tmp(7505).ServiceNotificationPriority.MEDIUM;
+      obj[3] = tmp(7505).ServiceNotificationType.FILE_UPLOAD;
       return initializeDefault.addServiceHandler(obj);
     }
   } else {
@@ -28,18 +27,19 @@ function startBackgroundTask(arg0) {
   }
 }
 let num = -1;
-if (!obj132.isAndroid()) {
+if (!set.isAndroid()) {
   num = NativeModules.DCDBackgroundTaskManager.backgroundTaskIdentifierInvalid;
 }
 function endBackgroundTask(c7) {
   if (c7 !== num) {
     if (obj.isAndroid()) {
       initializeDefault.removeServiceHandler(c7);
+      const obj2 = initializeDefault;
     } else {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
       DCDBackgroundTaskManager.endBackgroundTask(c7);
     }
-    obj = obj1322;
+    obj = set2;
   }
 }
 function backgroundify(arg0, arg1) {
@@ -106,11 +106,11 @@ function backgroundify(arg0, arg1) {
             if (callback !== c5) {
               const obj = callback(tmp18[2]);
               if (obj.isAndroid()) {
-                tmp18(tmp18[3]).removeServiceHandler(callback);
-                const obj2 = tmp18(tmp18[3]);
+                tmp3(tmp3[3]).removeServiceHandler(tmp);
+                const obj2 = tmp3(tmp3[3]);
               } else {
                 const DCDBackgroundTaskManager = obj.DCDBackgroundTaskManager;
-                DCDBackgroundTaskManager.endBackgroundTask(callback);
+                DCDBackgroundTaskManager.endBackgroundTask(tmp);
               }
             }
           });
@@ -128,7 +128,7 @@ function backgroundify(arg0, arg1) {
     }
   });
 }
-const result = obj132.fileFinishedImporting("modules/messages/BackgroundTaskManager.native.tsx");
+const result = set.fileFinishedImporting("modules/messages/BackgroundTaskManager.native.tsx");
 
 export default { backgroundTaskIdentifierInvalid: num, backgroundify, startBackgroundTask, endBackgroundTask };
 export const backgroundTaskIdentifierInvalid = num;

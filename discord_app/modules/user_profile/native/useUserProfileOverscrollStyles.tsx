@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/native/useUserProfileOverscrollStyles.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_6 = { code: "function useUserProfileOverscrollStylesTsx1(){const{position}=this.__closure;return position.get()<=0;}" };
 let closure_7 = { code: "function useUserProfileOverscrollStylesTsx2(){const{isNegativeScrollPosition,position}=this.__closure;const transform=isNegativeScrollPosition.get()?[{translateY:position.get()}]:[];return{transform:transform};}" };
 let closure_8 = { code: "function useUserProfileOverscrollStylesTsx3(){const{interpolate,position,minScrollPosition,SCALE_FACTOR,translateOnScale,isNegativeScrollPosition}=this.__closure;const scale=interpolate(position.get(),[minScrollPosition,0],[SCALE_FACTOR,1]);const translateY=interpolate(position.get(),[minScrollPosition,0],[translateOnScale,0]);const transform=isNegativeScrollPosition.get()?[{scale:scale},{translateY:translateY}]:[];return{transform:transform};}" };
@@ -11,17 +11,18 @@ let closure_9 = { code: "function useUserProfileOverscrollStylesTsx4(){const{isN
 let closure_10 = { code: "function useUserProfileOverscrollStylesTsx5(){const{clamp,interpolate,position,windowHeight,coefficient}=this.__closure;return{blurAmount:clamp(interpolate(position.get(),[0,-windowHeight*coefficient],[0,1]),0,1)};}" };
 let closure_11 = { code: "function useUserProfileOverscrollStylesTsx6(){const{position}=this.__closure;return position.get()<0;}" };
 let closure_12 = { code: "function useUserProfileOverscrollStylesTsx7(result,previous){const{runOnJS,setShowBlur}=this.__closure;return result!==previous&&runOnJS(setShowBlur)(result);}" };
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/useUserProfileOverscrollStyles.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/useUserProfileOverscrollStyles.tsx");
 
 export default function useUserProfileOverscrollStyles(arg0) {
   ({ scrollPosition, bannerHeight } = arg0);
+  let height;
   let stateFromStores;
   scrollPosition = undefined;
   let callback;
   let React;
   let derivedValue;
   closure_6 = undefined;
-  const height = stateFromStores(scrollPosition[3])().height;
+  height = stateFromStores(scrollPosition[3])().height;
   let obj = height(scrollPosition[4]);
   let items = [derivedValue];
   stateFromStores = obj.useStateFromStores(items, () => {

@@ -1,21 +1,24 @@
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", padding: 12 };
+const require = arg1;
+createCacheKey = { container: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", padding: 12 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
 
 export default function AppLauncherChoicesOption(option) {
   option = option.option;
   ({ initialValue: importDefault, onSelect } = option);
   const onOpenChoicesSheet = option.onOpenChoicesSheet;
   const onDismissChoicesSheet = option.onDismissChoicesSheet;
+  let first;
+  let callback;
   ({ style, autoFocus, hasError } = option);
   const tmp3 = onOpenChoicesSheet(onDismissChoicesSheet.useState(() => {
     if (null != type) {
@@ -23,20 +26,21 @@ export default function AppLauncherChoicesOption(option) {
         const choices = option.choices;
         let found;
         if (choices != null) {
-          found = choices.find((item, index) => item.displayName === text.text);
+          found = choices.find((displayName) => displayName.displayName === text.text);
         }
         if (null != found) {
           const obj = { choice: null, index: null };
           obj[0] = found;
-          const choices1 = option.choices;
+          const choices1 = tmp.choices;
           obj[1] = choices1.indexOf(found);
           return obj;
         }
+        tmp = option;
       }
     }
   }), 2);
-  const first = tmp3[0];
-  let callback = tmp3[1];
+  first = tmp3[0];
+  callback = tmp3[1];
   const items = [onDismissChoicesSheet, onOpenChoicesSheet, onSelect, option, ];
   let index;
   if (first != null) {
@@ -49,7 +53,7 @@ export default function AppLauncherChoicesOption(option) {
     const result = obj.dismissGlobalKeyboard();
     obj = { option, initChoiceIndex: null, onChoiceSelect: null, onDismiss: null };
     let index;
-    const obj2 = importDefault(onSelect[6]);
+    const obj2 = closure_1_1(onSelect[6]);
     if (first != null) {
       index = first.index;
     }

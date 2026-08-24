@@ -2,19 +2,18 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import fetchApplication from "../../applications/ApplicationActionCreators.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRowIcon from "../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import _submitHamReportForFirstDM from "../ReportModals.tsx";
-import addApplication from "../../applications/ApplicationStore.tsx";
+import closure_3 from "../../applications/ApplicationStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function ReportAppProfile(arg0) {
   ({ user: require, contextualGuildId: importDefault, onSubmit: dependencyMap, appContext: closure_3 } = arg0);
-  let obj = { variant: "heading-md/semibold", children: null };
+  let obj = { label: null, subLabel: null, onPress: null, arrow: true };
+  obj = { variant: "heading-md/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.eyEkG1);
   obj[0] = callback(Text.Text, obj);
@@ -23,18 +22,21 @@ function ReportAppProfile(arg0) {
   obj[1] = intl2.string(getSystemLocale.t.ptItsj);
   obj[1] = callback(Text.Text, obj);
   obj[2] = function onPress() {
-    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(BotReportChooser);
-    const result = _submitHamReportForFirstDM.showReportModalForUser(closure_0, closure_1, closure_2, closure_3);
+    closure_1_1(closure_1_2[7]).hideActionSheet(closure_1_6);
+    const obj = closure_1_1(closure_1_2[7]);
+    const result = closure_1_0(closure_1_2[8]).showReportModalForUser(closure_0, closure_1, closure_2, closure_3);
   };
   return callback(ActionSheetRowIcon.ActionSheetRow, obj);
 }
 function ReportAppBehavior(arg0) {
   ({ user: require, entrypoint: importDefault, contextualGuildId: dependencyMap, contextualChannelId: closure_3, onSubmit: closure_4, appContext: closure_5 } = arg0);
+  let data;
   let obj = initialize;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getAppIdForBotUserId(id.id));
   obj1 = fetchApplication;
-  const data = obj1.useApplication(stateFromStores).data;
+  data = obj1.useApplication(stateFromStores).data;
+  obj = { label: null, subLabel: null, onPress: null, arrow: true, disabled: null };
   obj = { variant: "heading-md/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.atP0yX);
@@ -45,7 +47,7 @@ function ReportAppBehavior(arg0) {
   obj[1] = callback(Text.Text, obj1);
   obj[2] = function onPress() {
     if (null != data) {
-      let obj = ACTION_SHEET_HEIGHT_HALFDefault;
+      let obj = closure_1_1(closure_1_2[7]);
       obj.hideActionSheet(data);
       obj = { application: null, entrypoint: null, contextualGuildId: null, contextualChannelId: null, onSubmit: null, appContext: null };
       obj[0] = tmp;
@@ -54,7 +56,8 @@ function ReportAppBehavior(arg0) {
       obj[3] = closure_3;
       obj[4] = closure_4;
       obj[5] = closure_5;
-      const result = _submitHamReportForFirstDM.showReportModalForApp(obj);
+      const result = closure_1_0(closure_1_2[8]).showReportModalForApp(obj);
+      const obj2 = closure_1_0(closure_1_2[8]);
     }
   };
   obj[4] = null == data;
@@ -63,10 +66,11 @@ function ReportAppBehavior(arg0) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const BotReportChooser = "BotReportChooser";
-let result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/BotReportChooser.tsx");
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/BotReportChooser.tsx");
 
 export default function BotReportChooser(arg0) {
-  let obj = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
+  let obj = { header: null, children: null };
+  obj = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.Bd10bR);
   obj[0] = callback(Text.Text, obj);

@@ -1,7 +1,8 @@
 // _runtime/01718_SlideInData.js
 import convertAnimationObjectToKeyframes from "01712_convertAnimationObjectToKeyframes.js";
 
-let obj = { 0: { transform: items }, 100: null };
+obj = { SlideInRight: { name: "SlideInRight", style: obj, duration: 0.3 }, SlideInLeft: { name: "SlideInLeft", style: obj, duration: 0.3 }, SlideInUp: { name: "SlideInUp", style: obj1, duration: 0.3 }, SlideInDown: { name: "SlideInDown", style: obj2, duration: 0.3 } };
+obj = { 0: { transform: items }, 100: null };
 items = [{ translateX: "100vw" }];
 const items1 = [{ translateX: "0%" }];
 obj[100] = { transform: items1 };
@@ -9,11 +10,11 @@ obj = { 0: { transform: items2 }, 100: null };
 items2 = [{ translateX: "-100vw" }];
 const items3 = [{ translateX: "0%" }];
 obj[100] = { transform: items3 };
-const obj1 = { 0: { transform: items4 }, 100: null };
+obj1 = { 0: { transform: items4 }, 100: null };
 items4 = [{ translateY: "-100vh" }];
 const items5 = [{ translateY: "0%" }];
 obj1[100] = { transform: items5 };
-const obj2 = { 0: { transform: items6 }, 100: null };
+obj2 = { 0: { transform: items6 }, 100: null };
 items6 = [{ translateY: "100vh" }];
 const items7 = [{ translateY: "0%" }];
 obj2[100] = { transform: items7 };

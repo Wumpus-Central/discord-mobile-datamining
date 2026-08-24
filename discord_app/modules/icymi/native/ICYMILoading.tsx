@@ -3,17 +3,19 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
 import useChatPlaceholderAnimatedStylesDefault from "../../chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx";
 import Separator from "ICYMIShared.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createICYMIStyles from "createICYMIStyles.tsx";
 
-require = fn;
+require = arg1;
 function ICYMILoadingItem() {
   const tmp = callback3();
   const tmp2 = useChatPlaceholderAnimatedStylesDefault({ visible: true, animated: true });
   const memo = React.useMemo(() => ({ avatarTitle: Math.floor(10 * Math.random()), title: Math.floor(10 * Math.random()), subtitle: Math.floor(10 * Math.random()) }), []);
-  const obj = { style: tmp.avatarRow, children: null };
+  let obj = { children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { style: tmp.avatarRow, children: null };
   ({ avatarTitle, title, subtitle } = memo);
   const items = [, , ];
   ({ backgroundColor: arr[0], avatar: arr[1] } = tmp);
@@ -62,7 +64,8 @@ function ICYMILoadingItem() {
 }
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
-  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  let obj = { backgroundColor: null, container: null, avatarRow: null, avatar: null, avatarTitle: null, title: null, subtitle: null, image: null, separator: null };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   obj[0] = obj;
   obj[1] = { padding: marginBottom.margin };
   obj[2] = { flexDirection: "row", alignItems: "center", marginBottom: marginBottom.margin };
@@ -70,12 +73,14 @@ let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
   obj[3] = obj;
   obj[4] = { height: 18, borderRadius: 10, flexShrink: 1 };
   obj[5] = { height: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_12, borderRadius: 10, flexShrink: 1 };
+  obj1 = { height: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_12, borderRadius: 10, flexShrink: 1 };
   obj[6] = { height: ThemesDefault.space.PX_16, marginBottom: marginBottom.margin, borderRadius: 10, flexShrink: 1 };
+  const obj2 = { height: ThemesDefault.space.PX_16, marginBottom: marginBottom.margin, borderRadius: 10, flexShrink: 1 };
   obj[7] = { width: "100%", height: 240, borderRadius: ThemesDefault.radii.lg };
   obj[8] = {};
   return obj;
 });
-let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMILoading.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMILoading.tsx");
 
 export const ICYMILoading = function ICYMILoading() {
   const obj = { children: null };

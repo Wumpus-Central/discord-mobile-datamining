@@ -5,16 +5,19 @@ import TableRowInner from "../../../../design/components/TableRow/native/TableRo
 import usePlaceholderWidth from "../hooks/usePlaceholderSize.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
+createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
 
 export default function PlaceholderAppRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -30,6 +33,7 @@ export default function PlaceholderAppRow(isFirstRow) {
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
   obj1 = usePlaceholderWidth;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
+  obj = { icon: <View {...obj} />, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingAppIcon };
   obj1 = { style: null };
   const items = [tmp.loadingTextPlaceholder, { width: "" + placeholderWidth + "%" }];

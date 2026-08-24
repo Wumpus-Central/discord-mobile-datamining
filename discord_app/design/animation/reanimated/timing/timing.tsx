@@ -1,5 +1,5 @@
 // discord_app/design/animation/reanimated/timing/timing.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import _mod4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE from "../ReanimatedConstants.tsx";
 import mutable from "../AccessibilityPreferencesSharedValue.native.tsx";
@@ -20,7 +20,7 @@ function withTiming(value, timingStandard, fn, fn2) {
       }
       obj = {};
       const merged = Object.assign(obj);
-      obj.reduceMotion = _mod4115.ReduceMotion.Never;
+      obj.reduceMotion = tmp(4115).ReduceMotion.Never;
       tmp7 = obj;
     }
     let tmp5 = tmp7;
@@ -32,6 +32,7 @@ function withTiming(value, timingStandard, fn, fn2) {
 withTiming.__closure = { accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE_TIMING, ReduceMotion: _mod4115.ReduceMotion, REAwithTiming: _mod4115.withTiming };
 withTiming.__workletHash = 6710776253444;
 withTiming.__initData = { code: "function withTiming_timingTsx1(toValue,config,shouldAnimate='respect-motion-settings',callback){const{accessibilityPreferencesSharedValue,CONFIG_NEVER_ANIMATE_TIMING,ReduceMotion,REAwithTiming}=this.__closure;const reducedMotionEnabled=accessibilityPreferencesSharedValue.get().reduceMotion;const animate=shouldAnimate==='animate-always'||shouldAnimate==='respect-motion-settings'&&!reducedMotionEnabled;const configForRea=!animate?CONFIG_NEVER_ANIMATE_TIMING:shouldAnimate==='animate-always'?{...(config!==null&&config!==void 0?config:{}),reduceMotion:ReduceMotion.Never}:config;return REAwithTiming(toValue,configForRea,callback);}" };
-const result = obj132.fileFinishedImporting("design/animation/reanimated/timing/timing.tsx");
+let obj = { accessibilityPreferencesSharedValue: mutable.accessibilityPreferencesSharedValue, CONFIG_NEVER_ANIMATE_TIMING, ReduceMotion: _mod4115.ReduceMotion, REAwithTiming: _mod4115.withTiming };
+const result = set.fileFinishedImporting("design/animation/reanimated/timing/timing.tsx");
 
 export { withTiming };

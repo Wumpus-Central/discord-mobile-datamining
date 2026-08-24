@@ -3,10 +3,10 @@ import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
 import create2 from "../../common/v1/localized_string.tsx";
 import create3 from "help_article.tsx";
 import create4 from "cta_button.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5 } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = fn;
+require = arg1;
 class FeatureCard$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , ];
@@ -54,8 +54,9 @@ class FeatureCard$Type extends MessageType {
 }
 const prototype = FeatureCard$Type.prototype;
 prototype["create"] = function create(arr) {
+  let obj = { header: "", pill: "", body: "", imageLink: "", imageLinkLightTheme: "" };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -72,6 +73,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -85,30 +87,65 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         obj.imageLinkLightTheme = pos.string();
       } else if (6 === tmp5) {
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
         let LocalizedString3 = create2.LocalizedString;
+        let tmp39 = LocalizedString3;
+        let tmp40 = pos;
+        let tmp41 = readUnknownField;
         obj.headerLocalized = LocalizedString3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
       } else if (7 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let LocalizedString2 = create2.LocalizedString;
+        let tmp34 = LocalizedString2;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.pillLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.pillLocalized);
       } else if (8 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let LocalizedString = create2.LocalizedString;
+        let tmp29 = LocalizedString;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.bodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.bodyLocalized);
       } else if (9 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let HelpArticle = create3.HelpArticle;
+        let tmp24 = HelpArticle;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.helpArticle = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticle);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -226,8 +263,9 @@ class Variant1Storage$Type extends MessageType2 {
 }
 const prototype2 = Variant1Storage$Type.prototype;
 prototype2["create"] = function create(arr) {
+  let obj = { heroArtLocalizedVideoLinksDarkTheme: {}, heroArtLocalizedVideoLinksLightTheme: {}, heroArtVideoSubtitleLinks: {} };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -244,6 +282,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -255,16 +294,31 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -279,8 +333,10 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
+      let tmp4 = callback;
       let tmp5 = callback(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
+      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -313,8 +369,10 @@ prototype2["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
+      let tmp4 = callback;
       let tmp5 = callback(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
+      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -347,8 +405,10 @@ prototype2["binaryReadMap3"] = function binaryReadMap3(arg0, pos) {
   let str2;
   if (pos.pos < sum) {
     while (true) {
+      let tmp4 = callback;
       let tmp5 = callback(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
+      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -380,6 +440,8 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.LengthDelimited);
@@ -391,6 +453,8 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   }
   const keys1 = Object.keys(heroArtLocalizedVideoLinksDarkTheme.heroArtLocalizedVideoLinksLightTheme);
   for (const item10053 of keys1) {
+    let tmp7 = require;
+    let tmp8 = dependencyMap;
     let tagResult3 = arg1.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult3.fork();
     let tagResult4 = forkResult1.tag(1, _mod1307.WireType.LengthDelimited);
@@ -404,6 +468,8 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(heroArtLocalize
   const iter2 = keys2[Symbol.iterator]();
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
+    let tmp12 = require;
+    let tmp13 = dependencyMap;
     let tagResult6 = tag.tag(3, _mod1307.WireType.LengthDelimited);
     let forkResult2 = tagResult6.fork();
     let tagResult7 = forkResult2.tag(1, _mod1307.WireType.LengthDelimited);
@@ -440,8 +506,9 @@ class Subtitle$Type extends MessageType3 {
 }
 const prototype3 = Subtitle$Type.prototype;
 prototype3["create"] = function create(arr) {
+  let obj = { link: "", locale: "", isDefault: false };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -458,6 +525,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -469,16 +537,31 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -511,7 +594,7 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(link, tag, writ
   return tag;
 };
 const items2 = [{ no: 1, name: "link", kind: "scalar", T: 9 }, { no: 2, name: "locale", kind: "scalar", T: 9 }, { no: 3, name: "is_default", kind: "scalar", T: 8 }];
-const variant1StorageType = new Variant1Storage$Type("discord_protos.premium_marketing.v1.Subtitle", items2, tmp5, tmp4, Subtitle$Type, "create", "internalBinaryRead", "internalBinaryWrite", Variant1Storage$Type, items2, tmp, fn, dependencyMap, object);
+const variant1StorageType = new Variant1Storage$Type("discord_protos.premium_marketing.v1.Subtitle", items2, tmp5, tmp4, Subtitle$Type, "create", "internalBinaryRead", "internalBinaryWrite", Variant1Storage$Type, items2, tmp, arg1, dependencyMap, object);
 // ThrowIfThisInitialized (0x7c)
 class Disclaimer$Type extends MessageType4 {
   constructor() {
@@ -540,8 +623,9 @@ class Disclaimer$Type extends MessageType4 {
 }
 const prototype4 = Disclaimer$Type.prototype;
 prototype4["create"] = function create(arr) {
+  let obj = { disclaimerText: "" };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -558,29 +642,55 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.disclaimerText = pos.string();
       } else if (2 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let HelpArticle = create3.HelpArticle;
+        let tmp29 = HelpArticle;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.disclaimerHelpArticle = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disclaimerHelpArticle);
       } else if (3 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let LocalizedString = create2.LocalizedString;
+        let tmp24 = LocalizedString;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.disclaimerTextLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disclaimerTextLocalized);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -635,7 +745,7 @@ const items3 = [
     }
   }
 ];
-const subtitleType = new Subtitle$Type("discord_protos.premium_marketing.v1.Disclaimer", items3, tmp5, Disclaimer$Type, Subtitle$Type, "create", "internalBinaryRead", "internalBinaryWrite", items3, new.target, tmp, fn, dependencyMap, object, tmp2);
+const subtitleType = new Subtitle$Type("discord_protos.premium_marketing.v1.Disclaimer", items3, tmp5, Disclaimer$Type, Subtitle$Type, "create", "internalBinaryRead", "internalBinaryWrite", items3, new.target, tmp, arg1, dependencyMap, object, tmp2);
 // ThrowIfThisInitialized (0x7c)
 class AnnouncementModalVariant1Properties$Type extends MessageType5 {
   constructor() {
@@ -731,8 +841,9 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
 }
 const prototype5 = AnnouncementModalVariant1Properties$Type.prototype;
 prototype5["create"] = function create(arr) {
+  let obj = { header: "", subheader: "", videoLink: "", helpArticleId: "", featureCards: [], heroArtVideoLinkLightTheme: "", heroArtImageLinkDarkTheme: "", heroArtImageLinkLightTheme: "", modalTopPill: "", heroArtVideoSubtitles: [], dismissKey: "", body: "" };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -746,9 +857,9 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.body = pos.string();
   }
   return obj;
 };
@@ -774,6 +885,9 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   let num5 = 0;
   if (0 < header.featureCards.length) {
     do {
+      let tmp13 = object;
+      let tmp14 = require;
+      let tmp15 = dependencyMap;
       let tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
       let internalBinaryWriteResult = object.internalBinaryWrite(header.featureCards[num5], tagResult4.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
@@ -806,6 +920,9 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   let num11 = 0;
   if (0 < header.heroArtVideoSubtitles.length) {
     do {
+      let tmp32 = variant1StorageType;
+      let tmp33 = require;
+      let tmp34 = dependencyMap;
       let tagResult10 = tag.tag(13, _mod1307.WireType.LengthDelimited);
       let internalBinaryWriteResult2 = variant1StorageType.internalBinaryWrite(header.heroArtVideoSubtitles[num11], tagResult10.fork(), writeUnknownFields);
       let joined2 = internalBinaryWriteResult2.join();
@@ -866,7 +983,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
   return tag;
 };
 const announcementModalVariant1PropertiesType = new AnnouncementModalVariant1Properties$Type();
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/announcement_modal_variant_1_properties.tsx");
 
 export const FeatureCard = object;
 export const Variant1Storage = tmp2;

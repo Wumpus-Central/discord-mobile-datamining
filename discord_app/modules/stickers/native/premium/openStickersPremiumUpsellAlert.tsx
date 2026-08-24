@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function _openStickersPremiumUpsellAlert() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -66,8 +66,8 @@ function _openStickersPremiumUpsellAlert() {
             obj = callback2(table[7]);
             const obj4 = { importer: null };
             obj4[0] = function importer() {
-              return callback(tmp2[9])(tmp2[8], tmp2.paths).then((result) => {
-                closure_0 = result.default;
+              return callback(tmp2[9])(tmp2[8], tmp2.paths).then((arg0) => {
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             };
@@ -93,7 +93,7 @@ function _openStickersPremiumUpsellAlert() {
 }
 noopAll;
 ({ AnalyticEvents: c4, AnalyticsSections: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx");
 
 export default function openStickersPremiumUpsellAlert() {
   const self = this;

@@ -3,7 +3,12 @@ import t from "03975_t.js";
 
 const fn = function n(moment) {
   function translate(arg0, arg1, arg2, arg3) {
-
+    if (tmp) {
+      let str = " \u00E9v";
+    } else {
+      str = " \u00E9ve";
+    }
+    return tmp3 + str;
   }
   function week(arg0) {
     let str = "[m\u00FAlt] ";
@@ -13,7 +18,7 @@ const fn = function n(moment) {
     return str + "[" + dependencyMap[this.day(this)] + "] LT[-kor]";
   }
   closure_0 = "vas\u00E1rnap h\u00E9tf\u0151n kedden szerd\u00E1n cs\u00FCt\u00F6rt\u00F6k\u00F6n p\u00E9nteken szombaton".split(" ");
-  {
+  obj = {
     months: "janu\u00E1r_febru\u00E1r_m\u00E1rcius_\u00E1prilis_m\u00E1jus_j\u00FAnius_j\u00FAlius_augusztus_szeptember_okt\u00F3ber_november_december".split("_"),
     monthsShort: "jan_feb_m\u00E1rc_\u00E1pr_m\u00E1j_j\u00FAn_j\u00FAl_aug_szept_okt_nov_dec".split("_"),
     weekdays: "vas\u00E1rnap_h\u00E9tf\u0151_kedd_szerda_cs\u00FCt\u00F6rt\u00F6k_p\u00E9ntek_szombat".split("_"),
@@ -22,8 +27,7 @@ const fn = function n(moment) {
     longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY. MMMM D.", LLL: "YYYY. MMMM D. H:mm", LLLL: "YYYY. MMMM D., dddd H:mm" },
     meridiemParse: /de|du/i,
     isPM(str) {
-      str = str.charAt(1);
-      return "u" === str.toLowerCase();
+      return "u" === str.charAt(1).toLowerCase();
     },
     meridiem(arg0, arg1, arg2) {
       if (arg0 < 12) {

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/DataUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/guild_automod/DataUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_automod/DataUtils.tsx");
 
 export const _transformMetadataToCamelCase = function _transformMetadataToCamelCase(body) {
   closure_0 = body;
@@ -9,74 +9,74 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
   if (null != body) {
     const _Object = Object;
     const keys = Object.keys(body);
-    reduced = keys.reduce((acc, item, index) => {
-      let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(item);
-      if (typeof table[item] === "object") {
+    reduced = keys.reduce((arg0, key10009) => {
+      let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(key10009);
+      if (typeof table[key10009] === "object") {
         let _Array = Array;
-        if (!Array.isArray(tmp2[item])) {
+        if (!Array.isArray(tmp2[key10009])) {
           table = tmp3;
           let reduced = tmp3;
-          if (null != tmp2[item]) {
+          if (null != tmp2[key10009]) {
             let _Object = Object;
             let keys = Object.keys(tmp3);
-            reduced = keys.reduce((acc, item, index) => {
-              let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(item);
-              if (typeof table[item] === "object") {
+            reduced = keys.reduce((arg0, key10009) => {
+              let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(key10009);
+              if (typeof table[key10009] === "object") {
                 let _Array = Array;
-                if (!Array.isArray(tmp2[item])) {
+                if (!Array.isArray(tmp2[key10009])) {
                   table = tmp3;
                   let reduced = tmp3;
-                  if (null != tmp2[item]) {
+                  if (null != tmp2[key10009]) {
                     let _Object = Object;
                     let keys = Object.keys(tmp3);
-                    reduced = keys.reduce((acc, item, index) => {
-                      let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(item);
-                      if (typeof table[item] === "object") {
+                    reduced = keys.reduce((arg0, key10009) => {
+                      let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(key10009);
+                      if (typeof table[key10009] === "object") {
                         let _Array = Array;
-                        if (!Array.isArray(tmp2[item])) {
+                        if (!Array.isArray(tmp2[key10009])) {
                           table = tmp3;
                           let reduced = tmp3;
-                          if (null != tmp2[item]) {
+                          if (null != tmp2[key10009]) {
                             let _Object = Object;
                             let keys = Object.keys(tmp3);
-                            reduced = keys.reduce((acc, item, index) => {
-                              let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(item);
-                              if (typeof table[item] === "object") {
+                            reduced = keys.reduce((arg0, key10009) => {
+                              let camelCaseResult = closure_1_0(closure_1_1[0]).camelCase(key10009);
+                              if (typeof table[key10009] === "object") {
                                 let _Array = Array;
-                                if (!Array.isArray(tmp2[item])) {
+                                if (!Array.isArray(tmp2[key10009])) {
                                   table = tmp3;
                                   let reduced = tmp3;
-                                  if (null != tmp2[item]) {
+                                  if (null != tmp2[key10009]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
                                     reduced = keys.reduce(() => { ... }, {});
                                   }
-                                  acc[camelCaseResult] = reduced;
+                                  arg0[camelCaseResult] = reduced;
                                 }
-                                return acc;
+                                return arg0;
                               }
-                              acc[camelCaseResult] = table[item];
+                              arg0[camelCaseResult] = table[key10009];
                             }, {});
                           }
-                          acc[camelCaseResult] = reduced;
+                          arg0[camelCaseResult] = reduced;
                         }
-                        return acc;
+                        return arg0;
                       }
-                      acc[camelCaseResult] = table[item];
+                      arg0[camelCaseResult] = table[key10009];
                     }, {});
                   }
-                  acc[camelCaseResult] = reduced;
+                  arg0[camelCaseResult] = reduced;
                 }
-                return acc;
+                return arg0;
               }
-              acc[camelCaseResult] = table[item];
+              arg0[camelCaseResult] = table[key10009];
             }, {});
           }
-          acc[camelCaseResult] = reduced;
+          arg0[camelCaseResult] = reduced;
         }
-        return acc;
+        return arg0;
       }
-      acc[camelCaseResult] = table[item];
+      arg0[camelCaseResult] = table[key10009];
     }, {});
   }
   return reduced;
@@ -87,78 +87,78 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
   if (null != metadata) {
     const _Object = Object;
     const keys = Object.keys(metadata);
-    reduced = keys.reduce((acc, item, index) => {
-      let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(item);
-      if (typeof table[item] === "object") {
+    reduced = keys.reduce((arg0, arg1) => {
+      let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(arg1);
+      if (typeof table[arg1] === "object") {
         let _Array = Array;
-        if (!Array.isArray(tmp2[item])) {
+        if (!Array.isArray(tmp2[arg1])) {
           table = tmp3;
           let reduced = tmp3;
-          if (null != tmp2[item]) {
+          if (null != tmp2[arg1]) {
             let _Object = Object;
             let keys = Object.keys(tmp3);
-            reduced = keys.reduce((acc, item, index) => {
-              let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(item);
-              if (typeof table[item] === "object") {
+            reduced = keys.reduce((arg0, arg1) => {
+              let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(arg1);
+              if (typeof table[arg1] === "object") {
                 let _Array = Array;
-                if (!Array.isArray(tmp2[item])) {
+                if (!Array.isArray(tmp2[arg1])) {
                   table = tmp3;
                   let reduced = tmp3;
-                  if (null != tmp2[item]) {
+                  if (null != tmp2[arg1]) {
                     let _Object = Object;
                     let keys = Object.keys(tmp3);
-                    reduced = keys.reduce((acc, item, index) => {
-                      let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(item);
-                      if (typeof table[item] === "object") {
+                    reduced = keys.reduce((arg0, arg1) => {
+                      let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(arg1);
+                      if (typeof table[arg1] === "object") {
                         let _Array = Array;
-                        if (!Array.isArray(tmp2[item])) {
+                        if (!Array.isArray(tmp2[arg1])) {
                           table = tmp3;
                           let reduced = tmp3;
-                          if (null != tmp2[item]) {
+                          if (null != tmp2[arg1]) {
                             let _Object = Object;
                             let keys = Object.keys(tmp3);
-                            reduced = keys.reduce((acc, item, index) => {
-                              let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(item);
-                              if (typeof table[item] === "object") {
+                            reduced = keys.reduce((arg0, arg1) => {
+                              let snakeCaseResult = closure_1_0(closure_1_1[0]).snakeCase(arg1);
+                              if (typeof table[arg1] === "object") {
                                 let _Array = Array;
-                                if (!Array.isArray(tmp2[item])) {
+                                if (!Array.isArray(tmp2[arg1])) {
                                   table = tmp3;
                                   let reduced = tmp3;
-                                  if (null != tmp2[item]) {
+                                  if (null != tmp2[arg1]) {
                                     let _Object = Object;
                                     let keys = Object.keys(tmp3);
                                     reduced = keys.reduce(() => { ... }, {});
                                   }
-                                  acc[snakeCaseResult] = reduced;
+                                  arg0[snakeCaseResult] = reduced;
                                 }
-                                acc[snakeCaseResult] = tmp2[item];
-                                return acc;
+                                arg0[snakeCaseResult] = tmp2[arg1];
+                                return arg0;
                               }
-                              acc[snakeCaseResult] = table[item];
+                              arg0[snakeCaseResult] = table[arg1];
                             }, {});
                           }
-                          acc[snakeCaseResult] = reduced;
+                          arg0[snakeCaseResult] = reduced;
                         }
-                        acc[snakeCaseResult] = tmp2[item];
-                        return acc;
+                        arg0[snakeCaseResult] = tmp2[arg1];
+                        return arg0;
                       }
-                      acc[snakeCaseResult] = table[item];
+                      arg0[snakeCaseResult] = table[arg1];
                     }, {});
                   }
-                  acc[snakeCaseResult] = reduced;
+                  arg0[snakeCaseResult] = reduced;
                 }
-                acc[snakeCaseResult] = tmp2[item];
-                return acc;
+                arg0[snakeCaseResult] = tmp2[arg1];
+                return arg0;
               }
-              acc[snakeCaseResult] = table[item];
+              arg0[snakeCaseResult] = table[arg1];
             }, {});
           }
-          acc[snakeCaseResult] = reduced;
+          arg0[snakeCaseResult] = reduced;
         }
-        acc[snakeCaseResult] = tmp2[item];
-        return acc;
+        arg0[snakeCaseResult] = tmp2[arg1];
+        return arg0;
       }
-      acc[snakeCaseResult] = table[item];
+      arg0[snakeCaseResult] = table[arg1];
     }, {});
   }
   return reduced;

@@ -1,5 +1,5 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardConstants.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 
@@ -16,7 +16,7 @@ if (isMetaQuest.isMetaQuest()) {
   obj[3] = ThemesDefault.space.PX_4;
   obj[4] = ThemesDefault.space.PX_4;
 }
-const result = obj132.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
+const result = set.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
 export const DRAG_HANDLE = obj;
 export const HEADER_HANDLE_HEIGHT = obj.slotHeight;

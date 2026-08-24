@@ -1,9 +1,9 @@
 // discord_app/modules/connections/RoleConnectionRequirementUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import OperatorTypes2 from "Constants.tsx";
 
 const OperatorTypes = OperatorTypes2.OperatorTypes;
-const result = obj132.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");
+const result = set.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");
 
 export const realizedOperatorFor = function realizedOperatorFor(operator) {
   let GREATER_THAN = operator;

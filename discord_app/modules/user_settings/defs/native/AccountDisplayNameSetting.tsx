@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AccountDisplayNameSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_2 from "../../../../stores/UserStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCustomizationSettingScreen.tsx";
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["9AjdkD"]);
@@ -28,10 +28,10 @@ require = fn;
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
+    return ProfileCustomizationSubsection.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
 
 export default createToggle;

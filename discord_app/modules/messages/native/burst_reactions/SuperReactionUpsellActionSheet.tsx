@@ -1,17 +1,18 @@
 // discord_app/modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import { AnalyticsPages } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 let closure_8 = require("DismissibleContent").DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
 let items = [require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset"), require("registerAsset")];
-const createCacheKey = {};
+createCacheKey = { fill: null, nitroIcon: null, description: null };
+createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.flex = 1;
 createCacheKey.alignItems = "center";
@@ -21,13 +22,15 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
 createCacheKey[2] = { paddingHorizontal: 16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx");
+const obj1 = { tintColor: ThemesDefault.colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx");
 
 export default function SuperReactionCoachmarkActionSheet(onDismiss) {
+  let _require;
   let analyticsLocations;
   let obj;
   const tmp = callback();
-  const _require = tmp;
+  _require = tmp;
   analyticsLocations = analyticsLocations(obj[15])().analyticsLocations;
   obj = { page: AnalyticsPages.PREMIUM_UPSELL_BURST_REACTIONS };
   items = [closure_5];
@@ -53,7 +56,7 @@ export default function SuperReactionCoachmarkActionSheet(onDismiss) {
     obj[5] = intl3.string(tmp4(tmp3[24]).t.sEAnVH);
     obj[6] = function primaryButtonIcon() {
       obj = { style: lib.nitroIcon };
-      return jsx(lib(obj[26]).NitroWheel, { style: lib.nitroIcon });
+      return closure_1_7(lib(obj[26]).NitroWheel, obj);
     };
     obj[7] = function onPrimaryButtonPress() {
       obj = analyticsLocations(obj[27]);

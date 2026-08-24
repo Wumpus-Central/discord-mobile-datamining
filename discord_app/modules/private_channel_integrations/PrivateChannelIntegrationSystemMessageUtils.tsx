@@ -1,11 +1,11 @@
 // discord_app/modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 import ME from "../../Constants.tsx";
 
 ({ HelpdeskArticles: c3, NOOP: c4 } = ME);
-const result = obj132.fileFinishedImporting("modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx");
+const result = set.fileFinishedImporting("modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx");
 
 export const getPrivateChannelIntegrationAddedSystemMessageContent = function getPrivateChannelIntegrationAddedSystemMessageContent(applicationNameHook) {
   ({ application, username, usernameHook } = applicationNameHook);
@@ -25,6 +25,7 @@ export const getPrivateChannelIntegrationAddedSystemMessageContent = function ge
     obj[3] = applicationNameHook;
     obj[4] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     let formatResult = intl2.format(getSystemLocale.t.J8SaGy, obj);
+    const obj4 = combinedDefault;
   } else {
     const intl = getSystemLocale.intl;
     obj = { username: null, usernameHook: null, helpCenterLink: null };
@@ -32,6 +33,7 @@ export const getPrivateChannelIntegrationAddedSystemMessageContent = function ge
     obj[1] = usernameHook;
     obj[2] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     formatResult = intl.format(getSystemLocale.t["+6V2sd"], obj);
+    const obj2 = combinedDefault;
   }
   return formatResult;
 };
@@ -53,6 +55,7 @@ export const getPrivateChannelIntegrationRemovedSystemMessageContent = function 
     obj[3] = applicationNameHook;
     obj[4] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     let formatResult = intl2.format(getSystemLocale.t.eGCDak, obj);
+    const obj4 = combinedDefault;
   } else {
     const intl = getSystemLocale.intl;
     obj = { username: null, usernameHook: null, helpCenterLink: null };
@@ -60,6 +63,7 @@ export const getPrivateChannelIntegrationRemovedSystemMessageContent = function 
     obj[1] = usernameHook;
     obj[2] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     formatResult = intl.format(getSystemLocale.t.sAX6rs, obj);
+    const obj2 = combinedDefault;
   }
   return formatResult;
 };
@@ -77,6 +81,7 @@ export const getPrivateChannelIntegrationAddedSystemMessageASTContent = function
     obj[0] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[5] = obj;
     let formatToPartsResult = intl.formatToParts(getSystemLocale.t["8r+Z+I"], obj);
+    const obj3 = combinedDefault;
   } else {
     const intl2 = getSystemLocale.intl;
     obj = { username: null, usernameOnClick: null, medium: null, helpCenterLink: null };
@@ -87,6 +92,7 @@ export const getPrivateChannelIntegrationAddedSystemMessageASTContent = function
     obj1[0] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[3] = obj1;
     formatToPartsResult = intl2.formatToParts(getSystemLocale.t.ojysqe, obj);
+    const obj6 = combinedDefault;
   }
   return formatToPartsResult;
 };
@@ -104,6 +110,7 @@ export const getPrivateChannelIntegrationRemovedSystemMessageASTContent = functi
     obj[0] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[5] = obj;
     let formatToPartsResult = intl.formatToParts(getSystemLocale.t.zmc0mq, obj);
+    const obj3 = combinedDefault;
   } else {
     const intl2 = getSystemLocale.intl;
     obj = { username: null, usernameOnClick: null, medium: null, helpCenterLink: null };
@@ -114,6 +121,7 @@ export const getPrivateChannelIntegrationRemovedSystemMessageASTContent = functi
     obj1[0] = combinedDefault.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[3] = obj1;
     formatToPartsResult = intl2.formatToParts(getSystemLocale.t["x2CN/Z"], obj);
+    const obj6 = combinedDefault;
   }
   return formatToPartsResult;
 };

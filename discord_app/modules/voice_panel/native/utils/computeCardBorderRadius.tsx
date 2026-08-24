@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/utils/computeCardBorderRadius.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;
@@ -26,6 +26,6 @@ const fn = function o(arg0) {
 fn.__closure = { VoicePanelModes, DEFAULT_BORDER_RADIUS_PIP };
 fn.__workletHash = 10593808953118;
 fn.__initData = { code: "function computeCardBorderRadius_computeCardBorderRadiusTsx1({id:id,mode:mode,focused:focused,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}){const{VoicePanelModes,DEFAULT_BORDER_RADIUS_PIP}=this.__closure;if(mode===VoicePanelModes.PANEL){if(focused!=null){if(focused===id){return 0;}else if(isSelf){return DEFAULT_BORDER_RADIUS_PIP;}}return defaultBorderRadius;}if(mode===VoicePanelModes.PIP){return DEFAULT_BORDER_RADIUS_PIP;}return defaultBorderRadius;}" };
-const result = obj132.fileFinishedImporting("modules/voice_panel/native/utils/computeCardBorderRadius.tsx");
+const result = set.fileFinishedImporting("modules/voice_panel/native/utils/computeCardBorderRadius.tsx");
 
 export default fn;

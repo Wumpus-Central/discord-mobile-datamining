@@ -17,8 +17,9 @@ import useTransitionProgressDefault from "04705_useTransitionProgress.js";
 import TabsHostDefault from "04706_TabsHost.js";
 import RNSModule from "04671_RNSModule.js";
 
-for (const key10015 in require("metro/04672__.js")) {
-  arg5[key10015] = require("metro/04672__.js")[key10015];
+for (const key10015 in require("module_4672")) {
+  let tmp3 = key10015;
+  arg5[key10015] = require("module_4672")[key10015];
   continue;
 }
 

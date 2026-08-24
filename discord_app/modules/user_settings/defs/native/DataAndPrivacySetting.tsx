@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/DataAndPrivacySetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { DataAndPrivacySettings } from "../../privacy_and_safety/native/DataAndPrivacyScreen.tsx";
 
-require = fn;
-{
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.OAuOHD);
@@ -25,10 +25,10 @@ require = fn;
 createToggle = {
   route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
   getComponent() {
-    return DataAndPrivacySettings /* DataAndPrivacySettings */.default;
+    return DataAndPrivacySettings.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
 
 export default createToggle;

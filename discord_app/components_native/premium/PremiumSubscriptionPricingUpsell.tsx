@@ -2,20 +2,20 @@
 import getSystemLocale from "../../intl/index.native.tsx";
 import Text from "../../design/components/Text/native/Text.tsx";
 import getSubscriptionPlansLoaded from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../modules/user_settings/LocaleStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import addSubscriptionPlan from "../../stores/billing/SubscriptionPlanStore.tsx";
-import reset from "../../stores/billing/SubscriptionStore.tsx";
-import updateProduct from "../../stores/native/IAPStore.android.tsx";
+import closure_6 from "../../modules/user_settings/LocaleStore.tsx";
+import closure_7 from "../../stores/UserStore.tsx";
+import closure_8 from "../../stores/billing/SubscriptionPlanStore.tsx";
+import closure_9 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_10 from "../../stores/native/IAPStore.android.tsx";
 import { CurrencyCodes } from "../../Constants.tsx";
 import GuildFeatures from "../../modules/premium/PremiumConstants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function PricingSubheadingCopy() {
   let tmp = callback3();
   const _require = tmp;
@@ -63,6 +63,7 @@ function PricingSubheadingCopy() {
       if (null != tmp12) {
         if (tmp12 != null) {
           const formatted = tmp12.currencyCode.toLowerCase();
+          const str = tmp12.currencyCode;
         }
         if (tmp12 != null) {
           const price = tmp12.price;
@@ -174,7 +175,7 @@ function PricingSubheadingCopy() {
               obj6[0] = closure_16;
               obj6[1] = tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100);
               obj5[2] = intl5.format(tmp2(tmp3[22]).t["ZikTt+"], obj6);
-              const items5 = [callback(tmp2(tmp3[18]).Text, obj5), tmp31Result];
+              const items5 = [tmp31(tmp2(tmp3[18]).Text, obj5), tmp31Result];
               obj4[0] = items5;
               let tmp34 = callback2(closure_19, obj4);
               const tmp2Result7 = tmp2(tmp3[23]);
@@ -193,7 +194,7 @@ function PricingSubheadingCopy() {
             const obj9 = { discountPercent: null };
             obj9[0] = tmp2(tmp3[23]).formatPercent(stateFromStores1, closure_17 / 100);
             obj8[2] = intl4.format(tmp2(tmp3[22]).t.XVMAKU, obj9);
-            const items6 = [callback(tmp2(tmp3[18]).Text, obj8), tmp31Result];
+            const items6 = [tmp31(tmp2(tmp3[18]).Text, obj8), tmp31Result];
             obj7[0] = items6;
             tmp34 = callback2(closure_19, obj7);
             const tmp2Result8 = tmp2(tmp3[23]);
@@ -209,11 +210,12 @@ function PricingSubheadingCopy() {
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = GuildFeatures);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 let closure_21 = createCacheKey.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
-let result = require("obj132").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
+let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = callback3();
-  let obj = { style: tmp.pricingSection, children: null };
+  let obj = getSubscriptionPlansLoaded;
+  obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
@@ -225,5 +227,5 @@ export default function PremiumSubscriptionPricingUpsell() {
   }
   items[1] = tmp5Result;
   obj[1] = items;
-  return callback(View, obj);
+  return closure_20(View, obj);
 };

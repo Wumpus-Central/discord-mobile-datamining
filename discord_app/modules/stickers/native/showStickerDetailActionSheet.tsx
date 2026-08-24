@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/native/showStickerDetailActionSheet.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
-const result = obj132.fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
 
 export const hideStickerDetailActionSheet = function hideStickerDetailActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(sticker_detail_action_sheet);

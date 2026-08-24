@@ -409,26 +409,29 @@ export default function GetIntrinsic(str, flag) {
   let tmp48;
   if (typeof str === "string") {
     if (0 !== str.length) {
+      let throwTypeErrorResult = flag;
       if (arguments.length > 1) {
         if (typeof flag !== "boolean") {
-          const tmp100 = new items(541)("\"allowMissing\" argument must be a boolean");
-          throw tmp100;
+          throwTypeErrorResult = new items(541)("\"allowMissing\" argument must be a boolean");
+          throw throwTypeErrorResult;
         }
       }
+      throwTypeErrorResult = callback5;
       if (null === callback5(/^%?[^%]*%?$/, str)) {
         const tmp94 = new items(562)("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
         throw tmp94;
       } else {
-        const tmp105 = callback4(str, 0, 1);
-        const tmp106 = callback4(str, -1);
-        if ("%" === tmp105) {
-          if ("%" !== tmp106) {
+        throwTypeErrorResult = callback4;
+        throwTypeErrorResult = callback4(str, 0, 1);
+        throwTypeErrorResult = callback4(str, -1);
+        if ("%" === throwTypeErrorResult) {
+          if ("%" !== throwTypeErrorResult) {
             const tmp88 = new items(562)("invalid intrinsic syntax, expected closing `%`");
             throw tmp88;
           }
         }
-        if ("%" === tmp106) {
-          if ("%" !== tmp105) {
+        if ("%" === throwTypeErrorResult) {
+          if ("%" !== throwTypeErrorResult) {
             const tmp82 = new items(562)("invalid intrinsic syntax, expected opening `%`");
             throw tmp82;
           }
@@ -451,16 +454,16 @@ export default function GetIntrinsic(str, flag) {
         }
         const text = `%${str}`;
         if (typeof getBaseIntrinsic !== "function") {
-          HermesBuiltin.throwTypeError();
+          throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         const text1 = `${tmp7}%`;
         let text2 = text1;
         if (items(573)(obj, `${tmp7}%`)) {
-          const tmp14 = obj[`${tmp7}%`];
+          const tmp14 = tmp11[`${tmp7}%`];
           text2 = `${"%" + tmp14[0]}%`;
         }
         if (items(573)(obj, text2)) {
-          if (obj[text2] !== obj) {
+          if (tmp15[text2] !== obj) {
             if (undefined === tmp23) {
               if (!flag) {
                 const _HermesInternal2 = HermesInternal;
@@ -481,9 +484,14 @@ export default function GetIntrinsic(str, flag) {
             if (1 < items.length) {
               do {
                 let tmp45 = items[num];
+                let tmp46 = callback4;
                 tmp47 = callback4(tmp45, 0, 1);
                 tmp48 = callback4(tmp45, -1);
+                let tmp49 = flag;
+                let tmp50 = num;
                 let flag3 = flag2;
+                let tmp51 = tmp43;
+                let tmp52 = str;
                 if ("\"" !== tmp47) {
                   if ("'" !== tmp47) {
                     if ("`" !== tmp47) {
@@ -496,8 +504,10 @@ export default function GetIntrinsic(str, flag) {
                         let _HermesInternal3 = HermesInternal;
                         let combined = "%" + text3 + "%";
                         let tmp56 = items;
+                        let tmp57 = dependencyMap;
+                        let tmp58 = obj;
                         if (items(573)(obj, combined)) {
-                          let tmp60 = obj[combined];
+                          let tmp60 = tmp58[combined];
                           let tmp59 = flag;
                         } else {
                           tmp59 = flag;
@@ -513,6 +523,8 @@ export default function GetIntrinsic(str, flag) {
                                       if (!("originalValue" in tmp67.get)) {
                                         let get = tmp67.get;
                                       }
+                                      let tmp69 = get;
+                                      let tmp70 = tmp68;
                                     }
                                   }
                                   get = tmp43[tmp45];
@@ -527,12 +539,17 @@ export default function GetIntrinsic(str, flag) {
                               tmp59 = tmp65;
                               tmp60 = tmp66;
                               if (tmp71) {
-                                obj[combined] = tmp66;
+                                tmp58[combined] = tmp66;
                                 tmp59 = tmp65;
                                 tmp60 = tmp66;
                               }
                             } else if (!flag) {
+                              let str19 = "base intrinsic for ";
+                              let tmp61 = new.target;
+                              let str20 = " exists, but the property is not available.";
+                              let tmp62 = new.target;
                               let tmp63 = new tmp56(541)("base intrinsic for " + str + " exists, but the property is not available.");
+                              let tmp64 = tmp63;
                               throw tmp63;
                             }
                           }
@@ -553,8 +570,9 @@ export default function GetIntrinsic(str, flag) {
             }
             return tmp44;
           } else {
+            throwTypeErrorResult = doEval;
             if (typeof doEval !== "function") {
-              HermesBuiltin.throwTypeError();
+              throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
             if ("%AsyncFunction%" === text2) {
               let prototype = getEvalledConstructor("async function () {}");
@@ -565,12 +583,13 @@ export default function GetIntrinsic(str, flag) {
                 prototype = getEvalledConstructor("async function* () {}");
               } else if ("%AsyncGenerator%" !== text2) {
                 if ("%AsyncIteratorPrototype%" === text2) {
-                  const tmp111 = doEval("%AsyncGeneratorFunction%");
+                  throwTypeErrorResult = doEval;
+                  throwTypeErrorResult = doEval("%AsyncGeneratorFunction%");
                   prototype = undefined;
-                  if (tmp111) {
-                    prototype = tmp111.prototype;
+                  if (throwTypeErrorResult) {
+                    prototype = throwTypeErrorResult.prototype;
                   }
-                  obj["%AsyncGenerator%"] = prototype;
+                  tmp15["%AsyncGenerator%"] = prototype;
                   let tmp9Result1 = prototype;
                   if (prototype) {
                     tmp9Result1 = tmp9(546);
@@ -581,20 +600,22 @@ export default function GetIntrinsic(str, flag) {
                 }
               }
               const tmp28 = getEvalledConstructor("async function* () {}");
-              obj["%AsyncGeneratorFunction%"] = tmp28;
+              tmp15["%AsyncGeneratorFunction%"] = tmp28;
               if (tmp28) {
                 prototype = tmp28.prototype;
               }
             }
-            obj[text2] = prototype;
+            tmp15[text2] = prototype;
           }
         } else {
           const _HermesInternal = HermesInternal;
           const tmp9Result21 = new tmp9(562)("intrinsic " + text1 + " does not exist!");
           throw tmp9Result21;
         }
+        tmp11 = obj;
       }
     }
   }
-  throw new items(541)("intrinsic name must be a non-empty string");
+  throwTypeErrorResult = new items(541)("intrinsic name must be a non-empty string");
+  throw throwTypeErrorResult;
 };

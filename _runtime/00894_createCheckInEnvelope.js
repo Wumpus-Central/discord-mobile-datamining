@@ -23,6 +23,7 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
   }
   if (tmp2) {
     obj.dsn = dsnFromString.dsnToString(arg4);
+    const obj4 = dsnFromString;
   }
   if (trace) {
     obj.trace = trace;

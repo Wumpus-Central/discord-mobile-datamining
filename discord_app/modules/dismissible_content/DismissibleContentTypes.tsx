@@ -1,14 +1,14 @@
 // discord_app/modules/dismissible_content/DismissibleContentTypes.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import DismissibleContent from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 
-function isSingleUseDismissibleContent(item, index) {
-  let hasItem = items1.includes(item);
+function isSingleUseDismissibleContent(item10020) {
+  let hasItem = items1.includes(item10020);
   if (!hasItem) {
-    hasItem = items.includes(item);
+    hasItem = items.includes(item10020);
   }
   if (!hasItem) {
-    hasItem = items2.includes(item);
+    hasItem = items2.includes(item10020);
   }
   return !hasItem;
 }
@@ -19,10 +19,10 @@ const items3 = [DismissibleContent.DismissibleContent.GAME_SHOP_NEW_BADGE, Dismi
 const items4 = [DismissibleContent.DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, DismissibleContent.DismissibleContent.GAME_SERVER_HOSTING_NEW_BADGE, DismissibleContent.DismissibleContent.GAME_SERVER_HOSTING_NEW_COACHMARK, DismissibleContent.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK_V2, DismissibleContent.DismissibleContent.GAME_CLAIM_COACHMARK, DismissibleContent.DismissibleContent.FIRST_BOOSTER_UPSELL, DismissibleContent.DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER, DismissibleContent.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION];
 const items5 = [DismissibleContent.DismissibleContent.BOOST_TO_UNLOCK_COACHMARK, DismissibleContent.DismissibleContent.EXPIRING_POWERUP_COACHMARK, DismissibleContent.DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD];
 const keys = Object.keys(DismissibleContent.DismissibleContent);
-const mapped = keys.map((item, index) => parseInt(item));
-const found = mapped.filter((item, index) => !isNaN(item));
+const mapped = keys.map((joined) => parseInt(joined));
+const found = mapped.filter((arg0) => !isNaN(arg0));
 const found1 = found.filter(isSingleUseDismissibleContent);
-const result = obj132.fileFinishedImporting("modules/dismissible_content/DismissibleContentTypes.tsx");
+const result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentTypes.tsx");
 
 export const versionedDismissibleContents = items;
 export const timeRecurringDismissibleContents = items1;
@@ -50,14 +50,14 @@ export const isRecurringDismissibleContent = function isRecurringDismissibleCont
   return hasItem;
 };
 export { isSingleUseDismissibleContent };
-export const isSingleUseGuildDismissibleContent = function isSingleUseGuildDismissibleContent(closure_0) {
-  return items4.includes(closure_0);
+export const isSingleUseGuildDismissibleContent = function isSingleUseGuildDismissibleContent(GDM_INVITE_REMINDER) {
+  return items4.includes(GDM_INVITE_REMINDER);
 };
-export const isTimeRecurringGuildDismissibleContent = function isTimeRecurringGuildDismissibleContent(closure_0) {
-  return items5.includes(closure_0);
+export const isTimeRecurringGuildDismissibleContent = function isTimeRecurringGuildDismissibleContent(GDM_INVITE_REMINDER) {
+  return items5.includes(GDM_INVITE_REMINDER);
 };
-export const isSnowflakeBoundGuildDismissibleContent = function isSnowflakeBoundGuildDismissibleContent(closure_0) {
-  return items3.includes(closure_0);
+export const isSnowflakeBoundGuildDismissibleContent = function isSnowflakeBoundGuildDismissibleContent(GDM_INVITE_REMINDER) {
+  return items3.includes(GDM_INVITE_REMINDER);
 };
 export const isGuildDismissibleContent = function isGuildDismissibleContent(dismissibleContent) {
   let hasItem = items4.includes(dismissibleContent);

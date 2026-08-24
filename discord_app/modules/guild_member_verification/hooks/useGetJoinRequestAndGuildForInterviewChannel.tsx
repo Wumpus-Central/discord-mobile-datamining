@@ -1,22 +1,22 @@
 // discord_app/modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
-import updateSubmittedGuildJoinRequestTotal from "../GuildJoinRequestStore.tsx";
-import handleGatewayJoinRequestUpdate from "../UserGuildJoinRequestStore.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../stores/GuildStore.tsx";
+import closure_6 from "../../../stores/PermissionStore.tsx";
+import closure_7 from "../GuildJoinRequestStore.tsx";
+import closure_8 from "../UserGuildJoinRequestStore.tsx";
 import { Permissions } from "../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestAndGuildForInterviewChannel.tsx");
 
 export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   [tmp2, require] = callback(joinRequest.useState(false), 2);
   const tmp3 = callback(joinRequest.useState(false), 2);
   const first = tmp3[0];
   dependencyMap = tmp3[1];
-  let tmp = callback(joinRequest.useState(false), 2);
+  const tmp = callback(joinRequest.useState(false), 2);
   const castResult = first(11).cast(id);
   callback = castResult;
   let obj = first(11);
@@ -34,7 +34,7 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
       obj[0] = request;
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_1_6.can(Permissions.KICK_MEMBERS, guild);
+        canResult = closure_1_6.can(closure_1_9.KICK_MEMBERS, guild);
       }
       obj[1] = canResult;
       obj[2] = guild;
@@ -50,7 +50,6 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
       const requestToJoinGuilds = first(8537).fetchRequestToJoinGuilds();
       const obj = first(8537);
     }
-    tmp = null != joinRequestGuild || first;
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {

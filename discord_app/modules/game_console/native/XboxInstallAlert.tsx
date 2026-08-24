@@ -2,34 +2,35 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import componentDidMountDefault from "../../../components_native/common/Alert.tsx";
-import registerAssetDefault from "../../../../_runtime/09841_registerAsset.js";
 import XBOX_URL_BASE from "../GameConsoleConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: c4 } = XBOX_URL_BASE);
-const createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
+createCacheKey = { externalLinkIcon: null };
+createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
 
 export default function XboxInstallAlert(arg0) {
   const _require = callback();
   let obj = {};
   const merged = Object.assign(arg0);
-  const intl = require("../../../intl/index.native.tsx").intl;
-  obj.title = intl.string(require("../../../intl/index.native.tsx").t["12Kx2v"]);
-  const intl2 = require("../../../intl/index.native.tsx").intl;
-  obj.body = intl2.string(require("../../../intl/index.native.tsx").t.msZW3j);
-  const intl3 = require("../../../intl/index.native.tsx").intl;
-  obj.confirmText = intl3.string(require("../../../intl/index.native.tsx").t["n+VrqG"]);
-  const intl4 = require("../../../intl/index.native.tsx").intl;
-  obj.cancelText = intl4.string(require("../../../intl/index.native.tsx").t.kYaBOg);
+  const intl = _getSystemLocale.intl;
+  obj.title = intl.string(_getSystemLocale.t["12Kx2v"]);
+  const intl2 = _getSystemLocale.intl;
+  obj.body = intl2.string(_getSystemLocale.t.msZW3j);
+  const intl3 = _getSystemLocale.intl;
+  obj.confirmText = intl3.string(_getSystemLocale.t["n+VrqG"]);
+  const intl4 = _getSystemLocale.intl;
+  obj.cancelText = intl4.string(_getSystemLocale.t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(lib(dependencyMap[7]).Icon, { source: registerAssetDefault, style: lib.externalLinkIcon });
+    return closure_1_5(lib(closure_1_2[7]).Icon, { source: closure_1_1(closure_1_2[8]), style: lib.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = lib(500);
@@ -40,7 +41,6 @@ export default function XboxInstallAlert(arg0) {
     } else {
       openURL(closure_4);
     }
-    const tmp2 = callback(4090);
   };
   return jsx(componentDidMountDefault, {});
 };

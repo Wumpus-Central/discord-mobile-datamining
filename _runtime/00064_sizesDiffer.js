@@ -12,6 +12,7 @@ arg5.default = function sizesDiffer(arg0, arg1) {
   let tmp = size !== size2;
   if (tmp) {
     tmp = size.width !== size2.width || size.height !== size2.height;
+    const tmp2 = size.width !== size2.width || size.height !== size2.height;
   }
   return tmp;
 };

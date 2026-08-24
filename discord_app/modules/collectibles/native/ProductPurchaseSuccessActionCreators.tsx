@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 const ShopProductPurchaseSuccessModal = "ShopProductPurchaseSuccessModal";
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
 
 export default {
   open(closure_0) {

@@ -2,13 +2,13 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useCheckboxA11yNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import _modDef6937 from "../../Form/native/FormRow.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NOOP } from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function RadioEmpty(size) {
   let MEDIUM = size.size;
   const style = [callback2().radioIcon, , ];
@@ -18,7 +18,7 @@ function RadioEmpty(size) {
   obj = { width: 2 * MEDIUM, height: 2 * MEDIUM, padding: dependencyMap[MEDIUM] };
   style[1] = obj;
   style[2] = size.style;
-  return callback(View, { style });
+  return closure_6(View, { style });
 }
 function RadioSelected(style) {
   ({ size, active } = style);
@@ -41,8 +41,8 @@ function RadioSelected(style) {
     size = obj.MEDIUM;
   }
   items1[1] = { width: size, height: size };
-  obj[1] = callback(View, { style: items1 });
-  return callback(View, obj);
+  obj[1] = closure_6(View, { style: items1 });
+  return closure_6(View, obj);
 }
 class RadioIndicator {
   constructor(arg0) {
@@ -137,7 +137,7 @@ class RadioItem {
       obj1[2] = tmp.collapsibleStyle;
       obj1[3] = function children(onPress) {
         onPress = onPress.onPress;
-        return onPress(RadioBar, {
+        return onPress(closure_1_14, {
           option: onPress,
           checked,
           style,
@@ -231,10 +231,10 @@ class RadioGroup {
     closure_10 = undefined;
     closure_10 = closure_10();
     obj = {
-      children: options.map((item, index) => {
-            obj = { option: item, checked: closure_0 === item.value, style: null, size: null, disabled: null, onPress: null, indicatorLeft: null, showIndicator: null };
+      children: options.map((option) => {
+            obj = { option, checked: closure_0 === option.value, style: null, size: null, disabled: null, onPress: null, indicatorLeft: null, showIndicator: null };
             const items = [closure_2, ];
-            if (index === options.length - 1) {
+            if (arg1 === options.length - 1) {
               obj = { marginBottom: 0 };
             } else {
               obj = flag2 ? { marginBottom: 8 } : {};
@@ -246,18 +246,18 @@ class RadioGroup {
             obj[5] = onChange;
             obj[6] = flag3;
             obj[7] = flag4;
-            const children = [flag3(RadioItem, obj, "radio-option-" + JSON.stringify(item.value) + "-" + index), ];
+            const children = [flag3(closure_1_15, obj, "radio-option-" + JSON.stringify(option.value) + "-" + arg1), ];
             let tmp2Result = null;
-            if (index !== options.length - 1) {
+            if (arg1 !== options.length - 1) {
               tmp2Result = null;
               if (flag5) {
                 obj = { style: null };
                 obj[0] = divider.divider;
-                tmp2Result = flag3(flag, obj);
+                tmp2Result = tmp2(flag, obj);
               }
             }
             children[1] = tmp2Result;
-            return flag4(size.Fragment, { children }, "radio-option-" + JSON.stringify(item.value) + "-" + index);
+            return flag4(size.Fragment, { children }, "radio-option-" + JSON.stringify(option.value) + "-" + arg1);
           })
     };
     return c6(c4, obj);
@@ -266,21 +266,27 @@ class RadioGroup {
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { SMALL: 8, [8]: "SMALL", MEDIUM: 10, [10]: "MEDIUM", LARGE: 12, [12]: "LARGE" };
 let closure_9 = { [obj.SMALL]: 2, [obj.MEDIUM]: 3, [obj.LARGE]: 4 };
+obj = { radioIcon: null, radioIconSelected: null, radioTick: null, disabled: null, divider: null, collapsibleStyle: null, collapsibleBackgroundSelected: null, collapsibleBackground: null, collapsibleContainer: null };
 obj = { flex: 0, marginRight: 8, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.colors.TEXT_MUTED, borderWidth: 2 };
 obj[0] = obj;
-const createCacheKey = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+createCacheKey = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[1] = createCacheKey;
 obj[2] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
 obj[3] = { opacity: 0.3 };
+const obj2 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
 obj[4] = { height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
+const obj3 = { height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
 obj[5] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const obj4 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[8] = { paddingVertical: 4, paddingHorizontal: 12 };
 let closure_10 = createCacheKey.createStyles(obj);
 RadioIndicator.Sizes = obj;
 RadioGroup.Sizes = obj;
-const result = require("obj132").fileFinishedImporting("design/void/RadioGroup/native/RadioGroup.tsx");
+const obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const result = require("set").fileFinishedImporting("design/void/RadioGroup/native/RadioGroup.tsx");
 
 export default RadioGroup;
 export { RadioIndicator };

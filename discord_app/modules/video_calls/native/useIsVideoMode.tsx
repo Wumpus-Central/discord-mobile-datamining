@@ -1,13 +1,13 @@
 // discord_app/modules/video_calls/native/useIsVideoMode.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import reset from "../../../stores/ApplicationStreamingStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
-import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_2 from "../../../stores/ApplicationStreamingStore.tsx";
+import closure_3 from "../../../stores/ChannelStore.tsx";
+import closure_4 from "../../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
+import closure_6 from "../../../stores/VoiceStateStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
 
 export default function useIsVideoMode() {
   const items = [closure_3, closure_5, closure_4, closure_6, closure_2];
@@ -15,8 +15,8 @@ export default function useIsVideoMode() {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let tmp2 = null != channel;
     if (tmp2) {
-      tmp2 = allActiveStreams.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || videoEnabled.isVideoEnabled();
-      const tmp3 = allActiveStreams.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || videoEnabled.isVideoEnabled();
+      tmp2 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
+      const tmp3 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
     }
     return tmp2;
   });

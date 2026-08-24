@@ -5,13 +5,14 @@ import useAlertStore from "../../../design/components/AlertModal/native/useAlert
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function ConfirmStartCall(onConfirm) {
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.HlAPoq);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["cRW4D/"]);
+  obj = { children: null };
   obj = { variant: "active", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.rimG2R);
@@ -27,9 +28,10 @@ function ConfirmStartCall(onConfirm) {
 }
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
 
 export const confirmStartCall = function confirmStartCall(fn) {
-  const obj = { onConfirm: fn };
+  let obj = useAlertStore;
+  obj = { onConfirm: fn };
   obj.openAlert("start-voice-call", callback(ConfirmStartCall, obj));
 };

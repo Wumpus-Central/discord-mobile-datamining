@@ -1,8 +1,8 @@
 // discord_app/modules/payments/records/OrderRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
 import { BaseInvoiceRecord } from "../../../records/InvoiceRecord.tsx";
-import createFromServer from "CheckoutContextRecord.tsx";
-import createFromServer2 from "SubscriptionFacetRecord.tsx";
+import closure_1 from "CheckoutContextRecord.tsx";
+import closure_2 from "SubscriptionFacetRecord.tsx";
 import { PaymentGateways } from "../../../../discord_common/js/shared/Constants.tsx";
 
 toJSDefault;
@@ -153,7 +153,7 @@ prototype["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedCon
   }
   return reason_code;
 };
-const result = require("obj132").fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
 
 export default OrderRecord;
 export { BillingFacetRecord };

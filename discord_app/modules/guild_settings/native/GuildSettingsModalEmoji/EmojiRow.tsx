@@ -1,36 +1,39 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_8 from "../../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c5, Image: closure_6, Pressable: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const createCacheKey = { paddingVertical: 4, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
+createCacheKey = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: null, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
+createCacheKey = { paddingVertical: 4, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createCacheKey[2] = createCacheKey;
 let num = 4;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num = 0;
 }
 createCacheKey[3] = { padding: num, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createCacheKey[4] = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
 let num2;
-if (obj132.isAndroid()) {
+if (set.isAndroid()) {
   num2 = 0;
 }
+let obj1 = { padding: num, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createCacheKey[5] = { fontSize: 16, padding: num2, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[6] = { width: 4 };
-obj132 = { fontSize: 13, color: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[7] = obj132;
+set = { fontSize: 13, color: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[7] = set;
 createCacheKey[8] = { width: 30, height: 30, resizeMode: "contain" };
+let obj2 = { fontSize: 16, padding: num2, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[9] = { paddingLeft: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", height: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = obj132.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx");
+let result = set.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx");
 
 export const EmojiRow = function EmojiRow(guildId) {
   guildId = guildId.guildId;
@@ -42,6 +45,8 @@ export const EmojiRow = function EmojiRow(guildId) {
   const onSelectRolesForEmoji = guildId.onSelectRolesForEmoji;
   let first;
   let React;
+  closure_5 = undefined;
+  let callback;
   ({ start, end } = guildId);
   const tmp = callback2();
   const tmp2 = first(React.useState(emoji.name), 2);
@@ -55,7 +60,7 @@ export const EmojiRow = function EmojiRow(guildId) {
   obj1 = guildId(onSelectRolesForEmoji[9]);
   const items1 = [guildId, emoji, onSelectRolesForEmoji];
   const result = obj1.useManageResourcePermissions(stateFromStores).canManageGuildExpression(emoji);
-  const callback = React.useCallback(() => {
+  callback = React.useCallback(() => {
     emoji(onSelectRolesForEmoji[12])({
       guildId,
       emoji,
@@ -73,15 +78,15 @@ export const EmojiRow = function EmojiRow(guildId) {
     } else {
       callback2(true);
     }
-    obj = guildId(onSelectRolesForEmoji[13]);
   }, items2);
   callback2 = React.useCallback(() => {
     callback();
   }, items3);
+  obj = { icon: null, trailing: null, label: null, disabled: null, onPress: null, onLongPress: null, start: null, end: null };
   obj = {
     onPress() {
-      emoji(onSelectRolesForEmoji[17]);
-      const obj = { key: "EMOJI_DISABLED", content: null };
+      let obj = emoji(onSelectRolesForEmoji[17]);
+      obj = { key: "EMOJI_DISABLED", content: null };
       const intl = guildId(onSelectRolesForEmoji[18]).intl;
       obj[1] = intl.string(guildId(onSelectRolesForEmoji[18]).t.KUzI73);
       obj.open(obj);
@@ -111,7 +116,7 @@ export const EmojiRow = function EmojiRow(guildId) {
   const obj7 = { numberOfLines: 1, style: tmp.username, children: emoji(onSelectRolesForEmoji[21]).getUserTag(emoji.user) };
   items4[1] = callback(guildId(onSelectRolesForEmoji[15]).LegacyText, obj7);
   obj5[1] = items4;
-  const items5 = [callback(closure_5, obj5), , ];
+  const items5 = [closure_10(closure_5, obj5), , ];
   obj8 = { user: emoji.user, guildId, size: tmp5(tmp6[15]).AvatarSizes.XSMALL };
   items5[1] = callback(guildId(onSelectRolesForEmoji[15]).Avatar, obj8);
   tmp12Result = null;
@@ -127,15 +132,15 @@ export const EmojiRow = function EmojiRow(guildId) {
   }
   items5[2] = tmp12Result;
   obj4[1] = items5;
-  obj[1] = callback(closure_5, obj4);
+  obj[1] = closure_10(closure_5, obj4);
   if (tmp4[0]) {
     if (result) {
       const obj11 = { style: null, children: null };
       obj11[0] = tmp.activeNameContainer;
       function handleNameBlur() {
         if (first !== emoji.name) {
-          guildId(onSelectRolesForEmoji[10]);
-          const obj = { guildId: null, emojiId: null, name: null };
+          let obj = guildId(onSelectRolesForEmoji[10]);
+          obj = { guildId: null, emojiId: null, name: null };
           obj[0] = guildId;
           obj[1] = tmp2.id;
           obj[2] = emoji(onSelectRolesForEmoji[11]).sanitizeEmojiName(tmp);
@@ -168,6 +173,5 @@ export const EmojiRow = function EmojiRow(guildId) {
   const obj13 = { style: tmp.nameContainer, children: null };
   const items7 = [callback(guildId(onSelectRolesForEmoji[14]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" }), callback(guildId(onSelectRolesForEmoji[14]).Text, { lineClamp: 1, style: tmp.emojiText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: first }), callback(guildId(onSelectRolesForEmoji[14]).Text, { style: tmp.colon, variant: "text-md/medium", color: "text-muted", children: ":" })];
   obj13[1] = items7;
-  tmp12Result1 = callback(tmp16, obj13);
-  const tmp13Result = emoji(onSelectRolesForEmoji[21]);
+  tmp12Result1 = tmp15(tmp16, obj13);
 };

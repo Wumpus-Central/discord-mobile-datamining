@@ -1,12 +1,13 @@
 // discord_app/modules/video_calls/useMuteStates.tsx
-import initialize from "../impersonate/ImpersonateStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_2 from "../impersonate/ImpersonateStore.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/MediaEngineStore.tsx";
+import closure_5 from "../../stores/PermissionStore.tsx";
+import closure_6 from "../../stores/VoiceStateStore.tsx";
 import { Permissions } from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function getMuteStates(voiceStateStore) {
   ({ channel, authenticationStore } = voiceStateStore);
   if (authenticationStore === undefined) {
@@ -60,11 +61,11 @@ function getMuteStates(voiceStateStore) {
   obj[2] = flag;
   return obj;
 }
-const result = require("obj132").fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
 export default function useMuteStates(arg0) {
   const _require = arg0;
   const items = [closure_3, closure_6, closure_4, closure_5, closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => getMuteStates({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
+  return _initialize.useStateFromStoresObject(items, () => closure_1_8({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
 };
 export { getMuteStates };

@@ -1,20 +1,21 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx
 import _modDef11531 from "../../../../tracking/Tracking.tsx";
-import noop from "../../../../../../../../_runtime/00019_noop.js";
-import handleReaction from "../../../../../SearchMessageStore.tsx";
-import prototype from "../../../../stores/SearchQueryStore.tsx";
+import closure_3 from "../../../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../SearchMessageStore.tsx";
+import closure_5 from "../../../../stores/SearchQueryStore.tsx";
 import { SearchResultContentEntityTypes as closure_6 } from "../../../../tracking/TrackingConstants.tsx";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
 
 export default function BaseMessagesScreen(data) {
   data = data.data;
   const searchContext = data.searchContext;
   const tab = data.tab;
   const isFocused = data.isFocused;
-  let isNextPageLoading;
+  let isNextPageLoading = data.isFirstPageLoading;
+  isNextPageLoading = undefined;
   let isHistoricalIndexing;
   let documentsIndexed;
   let hasError;
@@ -111,7 +112,8 @@ export const trackMessageItemPress = function trackMessageItemPress(messageId) {
   messageId = messageId.messageId;
   ({ searchContext, channelId, index } = messageId);
   message = message.getMessage(messageId);
-  const obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
+  let obj = _modDef11531;
+  obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
   let id;
   if (message != null) {
     const author = message.author;

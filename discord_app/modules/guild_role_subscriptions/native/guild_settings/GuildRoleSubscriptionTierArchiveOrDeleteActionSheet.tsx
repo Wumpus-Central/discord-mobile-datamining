@@ -12,17 +12,18 @@ import BottomSheetModal from "../../../../../_runtime/06952_BottomSheetModal.js"
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
+createCacheKey = { container: null, cancel: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionTierArchiveOrDeleteActionSheet.tsx");
 
 export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(groupListingId) {
   groupListingId = groupListingId.groupListingId;
@@ -32,9 +33,10 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   const tmp4 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId);
   let deleting = tmp4.deleting;
   ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, archiving } = tmp4);
-  { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
+  let obj = { style: tmp.container, children: null };
+  obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const items = [callback(Text.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(Button.Spacer, { size: 12 }), callback(Text.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(Button.Spacer, { size: 24 }), , , ];
-  const obj = { text: buttonText, variant: "destructive", grow: true, onPress: handleArchiveOrDelete, disabled: null };
+  obj = { text: buttonText, variant: "destructive", grow: true, onPress: handleArchiveOrDelete, disabled: null };
   if (!deleting) {
     deleting = archiving;
   }
@@ -51,12 +53,12 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
     children: null
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp6(1236).intl;
   obj3[2] = intl.string(getSystemLocale.t["ETE/oC"]);
   obj2[3] = callback(Text.Text, obj3);
   items[6] = callback(closure_3, obj2);
   obj[1] = items;
-  obj[1] = callback(BottomSheetModal.BottomSheetScrollView, obj);
+  obj[1] = closure_6(BottomSheetModal.BottomSheetScrollView, obj);
   obj1[1] = callback(closure_4, obj);
   return callback(Background.BottomSheet, obj1);
 };

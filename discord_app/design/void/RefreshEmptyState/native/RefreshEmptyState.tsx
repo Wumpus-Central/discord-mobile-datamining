@@ -7,10 +7,10 @@ import _modDef8115 from "../../LegacyText/native/LegacyText.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../modules/rebrand/native/TextStyles.tsx";
 
-require = fn;
+require = arg1;
 class EmptyState {
   constructor(arg0) {
     ({ source, title, callToAction } = global);
@@ -47,7 +47,7 @@ class EmptyState {
       items3[1] = titleStyle;
       obj1[0] = items3;
       obj1[1] = title;
-      tmp7 = jsx(require("../../LegacyText/native/LegacyText.tsx"), obj1);
+      tmp7 = jsx(require("module_8115"), obj1);
     }
     items2[1] = tmp7;
     tmp11 = jsx;
@@ -55,7 +55,7 @@ class EmptyState {
     items4 = [, ];
     items4[0] = tmp.body;
     items4[1] = bodyStyle;
-    items2[2] = jsx(require("../../LegacyText/native/LegacyText.tsx"), { style: items4, children: body });
+    items2[2] = jsx(require("module_8115"), { style: items4, children: body });
     tmp11Result = null;
     if (null != callToAction) {
       obj2 = { style: null, children: null };
@@ -74,7 +74,8 @@ class EmptyState {
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = {};
+createCacheKey = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
+createCacheKey = {};
 let merged = Object.assign(importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
 createCacheKey.textAlign = "center";
 createCacheKey.marginBottom = 8;
@@ -87,7 +88,7 @@ createCacheKey[3] = { marginBottom: 32 };
 createCacheKey[4] = { alignSelf: "center", marginTop: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("obj132").fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
+const result = require("set").fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
 
 export default EmptyState;
 export const ThemedEmptyState = function ThemedEmptyState(darkSource) {

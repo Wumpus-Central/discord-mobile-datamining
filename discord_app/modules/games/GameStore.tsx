@@ -2,30 +2,30 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
-import getOfficialApplicationId from "GameRecord.tsx";
+import closure_2 from "GameRecord.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 function handleLoadMessages(messages) {
   messages = messages.messages;
-  return messages.reduce((acc, item, index) => {
+  return messages.reduce((arg0, mention_games) => {
     c0 = false;
-    const mention_games = item.mention_games;
+    mention_games = mention_games.mention_games;
     if (mention_games != null) {
-      item = mention_games.forEach((item, index) => {
+      const item = mention_games.forEach((game_flags) => {
         if (tmp) {
-          if (!closure_1_3.has(item.id)) {
-            const tmp8 = new closure_1_2(item);
-            const result = closure_1_3.set(item.id, tmp8);
+          if (!closure_1_3.has(game_flags.id)) {
+            const tmp8 = new closure_1_2(game_flags);
+            const result = closure_1_3.set(game_flags.id, tmp8);
             c0 = true;
-            closure_1_6.delete(item.id);
-            closure_1_5.delete(item.id);
+            closure_1_6.delete(game_flags.id);
+            closure_1_5.delete(game_flags.id);
           }
         }
-        tmp = "game_flags" in item && typeof item.game_flags === "number";
       });
     }
     let tmp2 = c0;
     if (!c0) {
-      tmp2 = acc;
+      tmp2 = arg0;
     }
     return tmp2;
   }, false);
@@ -33,24 +33,23 @@ function handleLoadMessages(messages) {
 function handleLoadSearchResults(data) {
   data = data.data;
   c0 = false;
-  let item = data.forEach((item, index) => {
-    const messages = item.messages;
-    item = messages.forEach((item, index) => {
-      item = item.forEach((item, index) => {
+  let item = data.forEach((messages) => {
+    messages = messages.messages;
+    let item = messages.forEach((arr) => {
+      let item = arr.forEach((mention_games) => {
         closure_0 = false;
-        const mention_games = item.mention_games;
+        mention_games = mention_games.mention_games;
         if (mention_games != null) {
-          item = mention_games.forEach((item, index) => {
+          const item = mention_games.forEach((game_flags) => {
             if (tmp) {
-              if (!closure_1_3.has(item.id)) {
-                const tmp8 = new closure_1_2(item);
-                const result = closure_1_3.set(item.id, tmp8);
+              if (!closure_1_3.has(game_flags.id)) {
+                const tmp8 = new closure_1_2(game_flags);
+                const result = closure_1_3.set(game_flags.id, tmp8);
                 c0 = true;
-                closure_1_6.delete(item.id);
-                closure_1_5.delete(item.id);
+                closure_1_6.delete(game_flags.id);
+                closure_1_5.delete(game_flags.id);
               }
             }
-            tmp = "game_flags" in item && typeof item.game_flags === "number";
           });
         }
         let tmp2 = closure_0;
@@ -67,17 +66,16 @@ function handleIncomingMessage(message) {
   c0 = false;
   const mention_games = message.message.mention_games;
   if (mention_games != null) {
-    const item = mention_games.forEach((item, index) => {
+    const item = mention_games.forEach((game_flags) => {
       if (tmp) {
-        if (!closure_1_3.has(item.id)) {
-          const tmp8 = new closure_1_2(item);
-          const result = closure_1_3.set(item.id, tmp8);
+        if (!closure_1_3.has(game_flags.id)) {
+          const tmp8 = new closure_1_2(game_flags);
+          const result = closure_1_3.set(game_flags.id, tmp8);
           c0 = true;
-          closure_1_6.delete(item.id);
-          closure_1_5.delete(item.id);
+          closure_1_6.delete(game_flags.id);
+          closure_1_5.delete(game_flags.id);
         }
       }
-      tmp = "game_flags" in item && typeof item.game_flags === "number";
     });
   }
   return c0;
@@ -97,10 +95,10 @@ prototype["isFetching"] = function isFetching(arg0) {
   }
   return hasItem;
 };
-prototype["didFetchingFail"] = function didFetchingFail(item) {
-  let hasItem = null != item;
+prototype["didFetchingFail"] = function didFetchingFail(closure_0) {
+  let hasItem = null != closure_0;
   if (hasItem) {
-    hasItem = set1.has(item);
+    hasItem = set1.has(closure_0);
   }
   return hasItem;
 };
@@ -111,10 +109,10 @@ prototype["getGame"] = function getGame(closure_0) {
   }
   return value;
 };
-prototype["hasNoData"] = function hasNoData(item) {
-  let hasItem = null != item;
+prototype["hasNoData"] = function hasNoData(closure_0) {
+  let hasItem = null != closure_0;
   if (hasItem) {
-    hasItem = set2.has(item);
+    hasItem = set2.has(closure_0);
   }
   return hasItem;
 };
@@ -133,12 +131,13 @@ prototype["getCoverImageUrl"] = function getCoverImageUrl(arg0, size) {
   } else if (null == size) {
     return tmp;
   } else {
-    isDiscordProxiedAssetUrlDefault.toURLSafe(tmp);
-    let str = tmp;
+    let str = isDiscordProxiedAssetUrlDefault.toURLSafe(tmp);
+    str = tmp;
     if (null != str) {
       const searchParams = str.searchParams;
       const result = searchParams.set("size", size.size.toString());
       str = str.toString();
+      const str2 = size.size;
     }
     return str;
   }
@@ -153,37 +152,38 @@ const gameStore = new GameStore(dispatcherDefault, {
   },
   GAME_FETCH: function handleFetch(gameIds) {
     gameIds = gameIds.gameIds;
-    const item = gameIds.forEach((item, index) => {
-      set.add(item);
-      set2.delete(item);
+    const item = gameIds.forEach((arg0) => {
+      set.add(arg0);
+      set2.delete(arg0);
     });
   },
   GAME_FETCH_CANCELLED: function handleFetchCancelled(gameIds) {
     gameIds = gameIds.gameIds;
-    const item = gameIds.forEach((item, index) => set.delete(item));
+    const item = gameIds.forEach((arg0) => set.delete(arg0));
   },
   GAME_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ gameIds, games } = arg0);
+    set = undefined;
     set = new Set(gameIds);
-    const item = gameIds.forEach((item, index) => {
-      set2.delete(item);
-      set3.delete(item);
+    const item = gameIds.forEach((arg0) => {
+      set2.delete(arg0);
+      set3.delete(arg0);
     });
-    const item1 = games.forEach((item, index) => {
-      set.delete(item.id);
-      const result = map.set(item.id, new closure_1_2(item));
+    const item1 = games.forEach((id) => {
+      set.delete(id.id);
+      const result = closure_1_3.set(id.id, new closure_1_2(id));
     });
-    const item2 = set.forEach((item, index) => {
-      if (!set.has(item)) {
-        set4.add(item);
+    const item2 = set.forEach((arg0) => {
+      if (!set.has(arg0)) {
+        set4.add(arg0);
       }
     });
   },
   GAME_FETCH_FAILURE: function handleFetchFailure(gameIds) {
     gameIds = gameIds.gameIds;
-    const item = gameIds.forEach((item, index) => {
-      set.delete(item);
-      set2.add(item);
+    const item = gameIds.forEach((arg0) => {
+      set.delete(arg0);
+      set2.add(arg0);
     });
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
@@ -194,26 +194,25 @@ const gameStore = new GameStore(dispatcherDefault, {
   CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
     messages = messages.messages;
     const combined = messages.concat(messages.messageReferences);
-    return combined.reduce((acc, item, index) => {
+    return combined.reduce((arg0, mention_games) => {
       c0 = false;
-      const mention_games = item.mention_games;
+      mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        item = mention_games.forEach((item, index) => {
+        const item = mention_games.forEach((game_flags) => {
           if (tmp) {
-            if (!closure_1_3.has(item.id)) {
-              const tmp8 = new closure_1_2(item);
-              const result = closure_1_3.set(item.id, tmp8);
+            if (!closure_1_3.has(game_flags.id)) {
+              const tmp8 = new closure_1_2(game_flags);
+              const result = closure_1_3.set(game_flags.id, tmp8);
               c0 = true;
-              closure_1_6.delete(item.id);
-              closure_1_5.delete(item.id);
+              closure_1_6.delete(game_flags.id);
+              closure_1_5.delete(game_flags.id);
             }
           }
-          tmp = "game_flags" in item && typeof item.game_flags === "number";
         });
       }
       let tmp2 = c0;
       if (!c0) {
-        tmp2 = acc;
+        tmp2 = arg0;
       }
       return tmp2;
     }, false);
@@ -221,24 +220,23 @@ const gameStore = new GameStore(dispatcherDefault, {
   CONVERSATIONS_FETCH_SUCCESS: function handleConversationsFetchSuccess(rawConversations) {
     rawConversations = rawConversations.rawConversations;
     c0 = false;
-    let item = rawConversations.forEach((item, index) => {
-      const messages = item.messages;
+    let item = rawConversations.forEach((messages) => {
+      messages = messages.messages;
       if (messages != null) {
-        item = messages.forEach((item, index) => {
+        let item = messages.forEach((mention_games) => {
           closure_0 = false;
-          const mention_games = item.mention_games;
+          mention_games = mention_games.mention_games;
           if (mention_games != null) {
-            item = mention_games.forEach((item, index) => {
+            const item = mention_games.forEach((game_flags) => {
               if (tmp) {
-                if (!closure_1_3.has(item.id)) {
-                  const tmp8 = new closure_1_2(item);
-                  const result = closure_1_3.set(item.id, tmp8);
+                if (!closure_1_3.has(game_flags.id)) {
+                  const tmp8 = new closure_1_2(game_flags);
+                  const result = closure_1_3.set(game_flags.id, tmp8);
                   c0 = true;
-                  closure_1_6.delete(item.id);
-                  closure_1_5.delete(item.id);
+                  closure_1_6.delete(game_flags.id);
+                  closure_1_5.delete(game_flags.id);
                 }
               }
-              tmp = "game_flags" in item && typeof item.game_flags === "number";
             });
           }
           let tmp2 = closure_0;
@@ -253,26 +251,25 @@ const gameStore = new GameStore(dispatcherDefault, {
   },
   LOAD_PINNED_MESSAGES_SUCCESS: function handleLoadPinnedMessages(pins) {
     pins = pins.pins;
-    return pins.reduce((acc, item, index) => {
+    return pins.reduce((arg0, message) => {
       c0 = false;
-      const mention_games = item.message.mention_games;
+      const mention_games = message.message.mention_games;
       if (mention_games != null) {
-        item = mention_games.forEach((item, index) => {
+        const item = mention_games.forEach((game_flags) => {
           if (tmp) {
-            if (!closure_1_3.has(item.id)) {
-              const tmp8 = new closure_1_2(item);
-              const result = closure_1_3.set(item.id, tmp8);
+            if (!closure_1_3.has(game_flags.id)) {
+              const tmp8 = new closure_1_2(game_flags);
+              const result = closure_1_3.set(game_flags.id, tmp8);
               c0 = true;
-              closure_1_6.delete(item.id);
-              closure_1_5.delete(item.id);
+              closure_1_6.delete(game_flags.id);
+              closure_1_5.delete(game_flags.id);
             }
           }
-          tmp = "game_flags" in item && typeof item.game_flags === "number";
         });
       }
       let tmp2 = c0;
       if (!c0) {
-        tmp2 = acc;
+        tmp2 = arg0;
       }
       return tmp2;
     }, false);
@@ -282,26 +279,25 @@ const gameStore = new GameStore(dispatcherDefault, {
     if (mostRecentMessages == null) {
       mostRecentMessages = [];
     }
-    return mostRecentMessages.reduce((acc, item, index) => {
+    return mostRecentMessages.reduce((arg0, mention_games) => {
       c0 = false;
-      const mention_games = item.mention_games;
+      mention_games = mention_games.mention_games;
       if (mention_games != null) {
-        item = mention_games.forEach((item, index) => {
+        const item = mention_games.forEach((game_flags) => {
           if (tmp) {
-            if (!closure_1_3.has(item.id)) {
-              const tmp8 = new closure_1_2(item);
-              const result = closure_1_3.set(item.id, tmp8);
+            if (!closure_1_3.has(game_flags.id)) {
+              const tmp8 = new closure_1_2(game_flags);
+              const result = closure_1_3.set(game_flags.id, tmp8);
               c0 = true;
-              closure_1_6.delete(item.id);
-              closure_1_5.delete(item.id);
+              closure_1_6.delete(game_flags.id);
+              closure_1_5.delete(game_flags.id);
             }
           }
-          tmp = "game_flags" in item && typeof item.game_flags === "number";
         });
       }
       let tmp2 = c0;
       if (!c0) {
-        tmp2 = acc;
+        tmp2 = arg0;
       }
       return tmp2;
     }, false);
@@ -311,23 +307,22 @@ const gameStore = new GameStore(dispatcherDefault, {
   LOAD_FORUM_POSTS: function handleLoadForumPosts(threads) {
     c0 = false;
     const values = Object.values(threads.threads);
-    let item = values.forEach((item, index) => {
-      ({ first_message, most_recent_message } = item);
+    let item = values.forEach((arg0) => {
+      ({ first_message, most_recent_message } = arg0);
       if (null != first_message) {
         closure_0 = false;
         const mention_games = first_message.mention_games;
         if (mention_games != null) {
-          item = mention_games.forEach((item, index) => {
+          const item = mention_games.forEach((game_flags) => {
             if (tmp) {
-              if (!closure_1_3.has(item.id)) {
-                const tmp8 = new closure_1_2(item);
-                const result = closure_1_3.set(item.id, tmp8);
+              if (!closure_1_3.has(game_flags.id)) {
+                const tmp8 = new closure_1_2(game_flags);
+                const result = closure_1_3.set(game_flags.id, tmp8);
                 c0 = true;
-                closure_1_6.delete(item.id);
-                closure_1_5.delete(item.id);
+                closure_1_6.delete(game_flags.id);
+                closure_1_5.delete(game_flags.id);
               }
             }
-            tmp = "game_flags" in item && typeof item.game_flags === "number";
           });
         }
         let tmp2 = closure_0;
@@ -340,17 +335,16 @@ const gameStore = new GameStore(dispatcherDefault, {
         closure_0 = false;
         const mention_games1 = most_recent_message.mention_games;
         if (mention_games1 != null) {
-          const item1 = mention_games1.forEach((item, index) => {
+          const item1 = mention_games1.forEach((game_flags) => {
             if (tmp) {
-              if (!closure_1_3.has(item.id)) {
-                const tmp8 = new closure_1_2(item);
-                const result = closure_1_3.set(item.id, tmp8);
+              if (!closure_1_3.has(game_flags.id)) {
+                const tmp8 = new closure_1_2(game_flags);
+                const result = closure_1_3.set(game_flags.id, tmp8);
                 c0 = true;
-                closure_1_6.delete(item.id);
-                closure_1_5.delete(item.id);
+                closure_1_6.delete(game_flags.id);
+                closure_1_5.delete(game_flags.id);
               }
             }
-            tmp = "game_flags" in item && typeof item.game_flags === "number";
           });
         }
         let tmp4 = closure_0;
@@ -365,23 +359,22 @@ const gameStore = new GameStore(dispatcherDefault, {
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
     supplementalData = supplementalData.supplementalData;
     c0 = false;
-    let item = supplementalData.forEach((item, index) => {
-      const message_preview = item.message_preview;
+    let item = supplementalData.forEach((message_preview) => {
+      message_preview = message_preview.message_preview;
       if (null != message_preview) {
         closure_0 = false;
         const mention_games = message_preview.mention_games;
         if (mention_games != null) {
-          item = mention_games.forEach((item, index) => {
+          const item = mention_games.forEach((game_flags) => {
             if (tmp) {
-              if (!closure_1_3.has(item.id)) {
-                const tmp8 = new closure_1_2(item);
-                const result = closure_1_3.set(item.id, tmp8);
+              if (!closure_1_3.has(game_flags.id)) {
+                const tmp8 = new closure_1_2(game_flags);
+                const result = closure_1_3.set(game_flags.id, tmp8);
                 c0 = true;
-                closure_1_6.delete(item.id);
-                closure_1_5.delete(item.id);
+                closure_1_6.delete(game_flags.id);
+                closure_1_5.delete(game_flags.id);
               }
             }
-            tmp = "game_flags" in item && typeof item.game_flags === "number";
           });
         }
         let tmp2 = closure_0;
@@ -396,22 +389,21 @@ const gameStore = new GameStore(dispatcherDefault, {
   LOAD_ICYMI_HYDRATED: function handleLoadICYMIHydratedItems(messageItems) {
     messageItems = messageItems.messageItems;
     c0 = false;
-    let item = messageItems.forEach((item, index) => {
-      if (null != item.message) {
+    let item = messageItems.forEach((message) => {
+      if (null != message.message) {
         closure_0 = false;
-        const mention_games = item.message.mention_games;
+        const mention_games = message.message.mention_games;
         if (mention_games != null) {
-          item = mention_games.forEach((item, index) => {
+          const item = mention_games.forEach((game_flags) => {
             if (tmp) {
-              if (!closure_1_3.has(item.id)) {
-                const tmp8 = new closure_1_2(item);
-                const result = closure_1_3.set(item.id, tmp8);
+              if (!closure_1_3.has(game_flags.id)) {
+                const tmp8 = new closure_1_2(game_flags);
+                const result = closure_1_3.set(game_flags.id, tmp8);
                 c0 = true;
-                closure_1_6.delete(item.id);
-                closure_1_5.delete(item.id);
+                closure_1_6.delete(game_flags.id);
+                closure_1_5.delete(game_flags.id);
               }
             }
-            tmp = "game_flags" in item && typeof item.game_flags === "number";
           });
         }
         let tmp2 = closure_0;
@@ -424,6 +416,6 @@ const gameStore = new GameStore(dispatcherDefault, {
     return c0;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/games/GameStore.tsx");
+let result = set.fileFinishedImporting("modules/games/GameStore.tsx");
 
 export default gameStore;

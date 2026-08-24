@@ -1,23 +1,24 @@
 // discord_app/modules/media_viewer/native/components/MediaModalLoader.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = {};
+let obj = { loader: null, loaderIndicator: null, loaderText: null };
+obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.flex = 1;
 obj.alignItems = "center";
 obj.justifyContent = "center";
 obj.backgroundColor = "rgba(0, 0, 0, 0.7)";
 obj[0] = obj;
-const createCacheKey = { marginTop: ThemesDefault.space.PX_12 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_12 };
 obj[1] = createCacheKey;
 obj[2] = { textAlign: "center" };
 let closure_9 = createCacheKey.createStyles(obj);
@@ -35,6 +36,7 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
   let first;
   importAllResult = undefined;
   c5 = undefined;
+  closure_6 = undefined;
   const tmp2 = callback2();
   const tmp5 = first(importAllResult.useState(closure_10.None), 2);
   first = tmp5[0];
@@ -60,11 +62,11 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
       if (onLoadStart != null) {
         tmp9();
       }
-    } else if (closure_1_10.Error === first) {
+    } else if (tmp2.Error === tmp) {
       if (onError != null) {
         tmp6();
       }
-    } else if (closure_1_10.Loaded === first) {
+    } else if (tmp2.Loaded === tmp) {
       if (onLoad != null) {
         tmp3();
       }
@@ -107,14 +109,15 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
         const _Math = Math;
         const items4 = [Math.round(tmp8), "%"];
         obj[3] = items4;
-        tmp28Result = callback(onLoadStart(onError[6]).Text, obj);
+        tmp28Result = tmp28(onLoadStart(onError[6]).Text, obj);
       }
       const items5 = [tmp28Result, ];
       const obj3 = { color: "white", style: null, size: "large" };
       obj3[1] = tmp2.loaderIndicator;
       items5[1] = tmp29(closure_6, obj3);
       obj2[1] = items5;
-      tmp28Result = callback(c5, obj2);
+      tmp28Result = tmp28(c5, obj2);
+      const tmp33 = c5;
     }
     const obj4 = { children: null };
     items2[1] = tmp28Result;
@@ -124,10 +127,10 @@ const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
     obj5[2] = source;
     items2[2] = callback(onLoad(onError[8]), obj5);
     obj4[0] = items2;
-    tmp28Result1 = callback(importAllResult.Fragment, obj4);
+    tmp28Result1 = tmp28(importAllResult.Fragment, obj4);
   }
   return tmp28Result1;
 });
-const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoader.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoader.tsx");
 
 export default memoResult;

@@ -20,20 +20,21 @@ arg5.onINP = (arg0) => {
         const interactionCountPolyfill = obj.initInteractionCountPolyfill();
         const metric = callback(obj[3]).initMetric("INP");
         const obj2 = callback(obj[3]);
-        const tmp = callback;
+        let tmp = callback;
         const tmp2 = obj;
         closure_2 = callback(obj[4]).initUnique(metric, callback(obj[5]).InteractionManager);
         function handleEntries(arg0) {
           const callback = arg0;
           callback(metric[6]).whenIdleOrHidden(() => {
             for (const item10005 of closure_0) {
+              let tmp = closure_1_2;
               let _processEntryResult = closure_1_2._processEntry(item10005);
               continue;
             }
             const result = closure_1_2._estimateP98LongestInteraction();
             let tmp4 = result;
             if (result) {
-              tmp4 = result._latency !== metric.value;
+              tmp4 = result._latency !== closure_1_1.value;
             }
             if (tmp4) {
               ({ _latency: closure_1_1.value, entries: closure_1_1.entries } = result);
@@ -61,13 +62,14 @@ arg5.onINP = (arg0) => {
             const takeRecordsResult = observeResult.takeRecords();
             callback(metric[6]).whenIdleOrHidden(() => {
               for (const item10005 of closure_0) {
+                let tmp = closure_1_2;
                 let _processEntryResult = closure_1_2._processEntry(item10005);
                 continue;
               }
               const result = closure_1_2._estimateP98LongestInteraction();
               let tmp4 = result;
               if (result) {
-                tmp4 = result._latency !== metric.value;
+                tmp4 = result._latency !== closure_1_1.value;
               }
               if (tmp4) {
                 ({ _latency: closure_1_1.value, entries: closure_1_1.entries } = result);

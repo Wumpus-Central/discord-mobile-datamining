@@ -1,5 +1,5 @@
 // discord_app/errors/index.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import setDefault from "BillingError.tsx";
 import prototypeDefault from "V6OrEarlierAPIError.tsx";
 import prototypeDefault2 from "APIError.tsx";
@@ -10,7 +10,7 @@ import prototypeDefault4 from "ClientOutdatedAcceptGiftError.tsx";
 import displayMessage from "UploadVoiceDebugLogsError.tsx";
 import displayMessageDefault2 from "UploadVoiceDebugLogsError.tsx";
 
-const result = obj132.fileFinishedImporting("errors/index.tsx");
+const result = set.fileFinishedImporting("errors/index.tsx");
 
 export const V6OrEarlierAPIError = prototypeDefault;
 export const APIError = prototypeDefault2;

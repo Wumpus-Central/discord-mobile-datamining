@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/GatewaySocketAnalytics.tsx
 import isTracingDefault from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_5 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_6 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
 function prettyPrintTrace_(calls, arg1) {
@@ -17,6 +17,10 @@ function prettyPrintTrace_(calls, arg1) {
       do {
         let sum = num + 1;
         let _HermesInternal = HermesInternal;
+        let str = "\n";
+        let tmp2 = arg1;
+        let str2 = ": ";
+        let tmp4 = prettyPrintTrace_;
         let text = `${"\n" + arg1 + calls[num] + ": " + calls[tmp].micros / 1000}`;
         str3 = `${"\n" + arg1 + calls[num] + ": " + calls[tmp].micros / 1000}${prettyPrintTrace_(calls[tmp].calls, arg1 + "|  ")}`;
         num = num + 2;
@@ -27,7 +31,7 @@ function prettyPrintTrace_(calls, arg1) {
     return str4;
   }
 }
-function eachTraceCall(calls, fn) {
+function eachTraceCall(calls, arg1) {
   let length;
   if (null != calls) {
     if (calls.length > 0) {
@@ -35,8 +39,9 @@ function eachTraceCall(calls, fn) {
       if (0 < calls.length) {
         do {
           let tmp = calls[num4 + 1];
-          let tmp2 = fn(calls[num4], tmp.micros);
-          let tmp4 = eachTraceCall(tmp.calls, fn);
+          let tmp2 = arg1(calls[num4], tmp.micros);
+          let tmp3 = eachTraceCall;
+          let tmp4 = eachTraceCall(tmp.calls, arg1);
           num4 = num4 + 2;
           length = calls.length;
         } while (num4 < length);
@@ -48,7 +53,7 @@ let closure_2 = ["guilds", "merged_presences", "merged_members", "read_state", "
 let closure_3 = ["features"];
 let closure_4 = ["threads", "guild_scheduled_events"];
 ({ AnalyticEvents: error, ChannelTypes: closure_8 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");
+let result = require("set").fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");
 
 export function reportDevtoolsEvent() {
 
@@ -104,22 +109,23 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
     num2 = 0;
   }
   isTracingDefault.addDetail("server_time(ms)", num2);
+  obj = {};
   const merged = Object.assign(compressionAnalytics);
   const merged1 = Object.assign(tmp);
   const guilds = data.guilds;
   importDefault = 0;
   dependencyMap = 0;
-  let item = guilds.forEach((item, index) => {
-    if (!item.unavailable) {
-      if ("partial" === item.data_mode) {
-        let channels = item.partial_updates.channels;
+  let item = guilds.forEach((unavailable) => {
+    if (!unavailable.unavailable) {
+      if ("partial" === unavailable.data_mode) {
+        let channels = unavailable.partial_updates.channels;
       } else {
-        channels = item.channels;
+        channels = unavailable.channels;
       }
       if (tmp2) {
-        item = channels.forEach((item, index) => {
+        const item = channels.forEach((type) => {
           closure_1 = closure_1 + 1;
-          if (item.type === closure_1_8.GUILD_CATEGORY) {
+          if (type.type === closure_1_8.GUILD_CATEGORY) {
             closure_0 = closure_0 + 1;
           }
         });
@@ -156,11 +162,11 @@ export const getConnectionPath = function getConnectionPath(_trace) {
     if (_trace != null) {
       first = _trace[0];
     }
-    const tmp3 = (function prettyPrintTrace(arg0) {
+    const tmp3 = (function prettyPrintTrace(first) {
       let tmp = null;
-      if (null != arg0) {
+      if (null != first) {
         const _JSON = JSON;
-        const parsed = JSON.parse(arg0);
+        const parsed = JSON.parse(first);
         let str2 = "";
         if (null != parsed) {
           let num5 = 0;
@@ -170,7 +176,11 @@ export const getConnectionPath = function getConnectionPath(_trace) {
             do {
               let sum = num5 + 1;
               let _HermesInternal = HermesInternal;
+              let str9 = "\n";
+              let str10 = "";
+              let str11 = ": ";
               let calls = parsed[sum].calls;
+              let tmp5 = num5;
               let str12 = "";
               let text = `${"\n" + "" + arr[num5] + ": " + arr[tmp3].micros / 1000}`;
               if (null != calls) {
@@ -181,6 +191,10 @@ export const getConnectionPath = function getConnectionPath(_trace) {
                   do {
                     let sum1 = num6 + 1;
                     let _HermesInternal2 = HermesInternal;
+                    let str15 = "\n";
+                    let str16 = "|  ";
+                    let str17 = ": ";
+                    let tmp8 = callback;
                     let text1 = `${"\n" + "|  " + arr2[num6] + ": " + arr2[tmp6].micros / 1000}`;
                     str13 = `${"\n" + "|  " + arr2[num6] + ": " + arr2[tmp6].micros / 1000}${closure_9(arr2[tmp6].calls, "|  |  ")}`;
                     num6 = num6 + 2;
@@ -229,9 +243,9 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
     items5 = [];
     const items6 = [];
     const items7 = [];
-    const item = guilds.forEach((item, index) => {
-      partial_updates = item;
-      if (!item.unavailable) {
+    const item = guilds.forEach((unavailable) => {
+      partial_updates = unavailable;
+      if (!unavailable.unavailable) {
         let properties = partial_updates.properties;
         if (properties == null) {
           properties = {};
@@ -343,7 +357,8 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
 };
 export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
   ({ socket, altGateway, now } = gatewayUrl);
-  const obj = { num_failed_connect_attempts: socket.failedConnectAttempts, gateway_url: gatewayUrl.gatewayUrl, assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(), did_fall_back_from_alt_gateway: altGateway.getDidFallBack(), is_reconnect: socket.hasConnectedOnce, is_fast_connect: socket.isFastConnect, duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime, duration_ms_since_connect_attempt_start: now - socket.connectionStartTime };
+  let obj = expandEventPropertiesDefault;
+  obj = { num_failed_connect_attempts: socket.failedConnectAttempts, gateway_url: gatewayUrl.gatewayUrl, assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(), did_fall_back_from_alt_gateway: altGateway.getDidFallBack(), is_reconnect: socket.hasConnectedOnce, is_fast_connect: socket.isFastConnect, duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime, duration_ms_since_connect_attempt_start: now - socket.connectionStartTime };
   obj.track(constants.GATEWAY_CONNECTED, obj, { logEventProperties: true });
 };
 export const createResumeAnalytics = function createResumeAnalytics(arg0) {
@@ -380,5 +395,6 @@ export const logResumeAnalytics = function logResumeAnalytics(resumeAnalytics) {
     const _Math6 = Math;
     obj[6] = Math.floor(resumeAnalytics.dispatchTime);
     expandEventPropertiesDefault.track(constants.CONNECTION_RESUMED, obj, { logEventProperties: true });
+    const obj2 = expandEventPropertiesDefault;
   }
 };

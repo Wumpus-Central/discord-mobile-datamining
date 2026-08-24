@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/utils/mappers.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
 
 export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId) {
   if (typeof skuId.skuId !== "string") {

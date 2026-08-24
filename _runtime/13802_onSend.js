@@ -1,10 +1,14 @@
 // _runtime/13802_onSend.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const re3 = /^(image)\/.*$/i;
 let closure_4 = {};
 
 export default () => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
   return (arg0) => {
     closure_0 = arg0;
     function onSend(data, _url) {
@@ -34,8 +38,8 @@ export default () => {
         if (num2 > -1) {
           obj = {};
           const parts = _url.substr(num2 + 1).split("&");
-          const item = parts.forEach((item, index) => {
-            [tmp2, str] = _skipReactotron(item.split("="), 2);
+          const item = parts.forEach((str) => {
+            [tmp2, str] = _skipReactotron(str.split("="), 2);
             let tmp3 = tmp2;
             if (tmp2) {
               tmp3 = undefined !== str;
@@ -44,7 +48,6 @@ export default () => {
               const _decodeURIComponent = decodeURIComponent;
               obj[tmp2] = decodeURIComponent(str.replace(/\+/g, " "));
             }
-            const tmp = _skipReactotron(item.split("="), 2);
           });
           tmp2 = obj;
           const str2 = _url.substr(num2 + 1);
@@ -70,6 +73,7 @@ export default () => {
         let str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["content-type"];
         if (!str4) {
           str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
+          const tmp6 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
         }
         if (!str4) {
           str4 = "";
@@ -90,7 +94,6 @@ export default () => {
             tmp5Result = tmp5();
           }
           closure_0.apiResponse(obj, obj, tmp5Result);
-          tmp2 = _skipReactotron.responseHeaders || null;
         }
         if (typeof _bodyBlob === "string") {
           if (!str4) {
@@ -103,7 +106,7 @@ export default () => {
                 if (_bodyBlob) {
                   const _FileReader2 = FileReader;
                   const fileReader = new FileReader();
-                  function brListener(event) {
+                  function brListener() {
                     sendResponse(fileReader.result);
                     const removed = fileReader.removeEventListener("loadend", brListener);
                   }
@@ -116,6 +119,7 @@ export default () => {
           }
         }
         sendResponse("");
+        const tmp4 = table;
       }
     }
     const merged = Object.assign({}, closure_1_4, closure_0);

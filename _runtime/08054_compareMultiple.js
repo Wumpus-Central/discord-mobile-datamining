@@ -6,7 +6,7 @@ export default function compareMultiple(criteria, index) {
   criteria = criteria.criteria;
   let num = 0;
   let num2 = 1;
-  if (0 < length) {
+  if (0 < criteria.length) {
     const tmp5 = compareAscending(criteria[num], tmp[num]);
     while (!tmp5) {
       num = num + num2;

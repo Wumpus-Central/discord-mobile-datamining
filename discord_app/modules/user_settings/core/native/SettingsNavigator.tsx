@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/core/native/SettingsNavigator.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../LocaleStore.tsx";
-import zustandStore from "../../UserSettingSearchStore.tsx";
+import closure_6 from "../../LocaleStore.tsx";
+import closure_7 from "../../UserSettingSearchStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function LeftAlignedHeaderTitle(children) {
   const tmp = callback3();
   return callback(Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: callback3().headerContainer, children: children.title });
@@ -20,11 +20,12 @@ let c4 = importAllResult;
 ({ AnalyticsPages: closure_8, UserSettingsSections: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createNativeStackNavigator.createNativeStackNavigator();
-let obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj = { statusBarSpacer: null, headerContainer: null, backIcon: null };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[0] = obj;
 createNativeStackNavigator = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
 obj[1] = createNativeStackNavigator;
-const createCacheKey = { borderRadius: ThemesDefault.radii.round, marginTop: ThemesDefault.space.PX_8 };
+createCacheKey = { borderRadius: ThemesDefault.radii.round, marginTop: ThemesDefault.space.PX_8 };
 obj[2] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
@@ -57,6 +58,7 @@ const memoResult = importAllResult.memo(() => {
   const items = [screen];
   const effect = importAllResult.useEffect(() => {
     obj = callback(params[14]);
+    obj = { destinationPane: screen, source: obj };
     obj = { page: constants.USER_SETTINGS };
     const result = obj.trackUserSettingsPaneViewed(obj);
   }, items);
@@ -91,6 +93,7 @@ const memoResult = importAllResult.memo(() => {
   closure_7 = importAllResult.useCallback((arg0) => {
     closure_0 = arg0;
     return () => {
+      obj = { collapsable: false, children: null };
       obj = {
         onPress() {
           return navigation.goBack();
@@ -144,8 +147,8 @@ const memoResult = importAllResult.memo(() => {
     style: tmp.statusBarSpacer,
     accessible: false,
     onAccessibilityEscape() {
-      if (navigation.canGoBack()) {
-        navigation.goBack();
+      if (closure_4.canGoBack()) {
+        closure_4.goBack();
       }
     },
     children: null
@@ -178,8 +181,8 @@ const memoResult = importAllResult.memo(() => {
         return callback(params[29]).default;
       }
     }),
-    memo.map((item, index) => {
-      [tmp, tmp2] = item;
+    memo.map((arg0) => {
+      [tmp, tmp2] = arg0;
       obj = {
         name: tmp2.route,
         options(navigation) {
@@ -218,6 +221,6 @@ const memoResult = importAllResult.memo(() => {
   obj[1] = items5;
   return callback2(_require(params[16]).AnalyticsLocationProvider, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/user_settings/core/native/SettingsNavigator.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/core/native/SettingsNavigator.tsx");
 
 export default memoResult;

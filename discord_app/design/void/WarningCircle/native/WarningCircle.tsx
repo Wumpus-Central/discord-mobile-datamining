@@ -3,9 +3,9 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
+const result = require("set").fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
 
 export default function WarningCircle(width) {
   let num = width.width;

@@ -3,19 +3,14 @@ import noopAll from "../../../_runtime/00019_noop.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import useGuildAppliedBoostCountDefault from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
-import GuildIconSizesDefault from "../../modules/guild/native/GuildIcon.tsx";
-import dispatcherDefault from "../../actions/UserSettingsModalActionCreators.tsx";
-import renderDefault from "../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import registerAssetDefault from "../../../_runtime/10240_registerAsset.js";
-import BoostedGuildTierProgressCircleDefault from "../../modules/premium/native/BoostedGuildTierProgressCircle.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import insertUnsortedGuilds from "../../stores/SortedGuildStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/SortedGuildStore.tsx";
 import { NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING as closure_7 } from "../../Constants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function GuildBoostingGuildListItem(guildId) {
   guildId = guildId.guildId;
   const tmp = callback3();
@@ -31,13 +26,14 @@ function GuildBoostingGuildListItem(guildId) {
     obj = { style: null, activeOpacity: 0.5, accessibilityRole: "button", onPress: null, children: null };
     obj[0] = tmp.guildCard;
     obj[3] = function onPress() {
-      guildId(dependencyMap[12]).transitionToGuild(guildId, { state: { shouldShowSubscribeTooltip: true } });
-      const obj = guildId(dependencyMap[12]);
-      dispatcherDefault.close();
+      guildId(closure_1_2[12]).transitionToGuild(guildId, { state: { shouldShowSubscribeTooltip: true } });
+      const obj = guildId(closure_1_2[12]);
+      closure_1_1(closure_1_2[13]).close();
     };
+    let tmp2Result = tmp2(8910);
     obj = { guild: null, size: null, style: null, selected: false };
     obj[0] = stateFromStores;
-    const tmp2Result = GuildIconSizesDefault;
+    tmp2Result = tmp2(7188);
     obj[1] = tmp5(7188).GuildIconSizes.LARGE;
     obj[2] = tmp.guildIcon;
     const items1 = [callback(tmp2Result, obj), , ];
@@ -49,7 +45,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.subscriptionInfo;
     const obj4 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
-    obj4[0] = registerAssetDefault;
+    obj4[0] = tmp2(10240);
     obj4[1] = tmp.premiumGuildImage;
     const items3 = [callback(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
@@ -65,7 +61,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj7 = { guild: null, theme: null };
     obj7[0] = stateFromStores;
     obj7[1] = tmp4;
-    items1[2] = callback(BoostedGuildTierProgressCircleDefault, obj7);
+    items1[2] = callback(tmp2(12938), obj7);
     obj[4] = items1;
     tmp9 = callback2(tmp2Result, obj);
   }
@@ -74,14 +70,15 @@ function GuildBoostingGuildListItem(guildId) {
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { padding: 12, paddingLeft: 16, borderRadius: ThemesDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { guildCard: null, guildIcon: null, guildCardDescription: null, subscriptionInfo: null, premiumGuildImage: null };
+createCacheKey = { padding: 12, paddingLeft: 16, borderRadius: ThemesDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 16 };
 createCacheKey[2] = { flex: 1 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { width: 18, height: 12, marginLeft: -5 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("components_native/premium/GuildBoostingGuildList.tsx");
+const result = require("set").fileFinishedImporting("components_native/premium/GuildBoostingGuildList.tsx");
 
 export default function GuildBoostingGuildList(guildCount) {
   guildCount = guildCount.guildCount;
@@ -93,6 +90,6 @@ export default function GuildBoostingGuildList(guildCount) {
   const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
   obj = { style: guildCount.style, children: null };
   const substr = stateFromStores.slice(0, guildCount);
-  obj[1] = substr.map((item, index) => callback(closure_11, { guildId: item }, item));
+  obj[1] = substr.map((guildId) => callback(closure_11, { guildId }, guildId));
   return callback(closure_3, obj);
 };

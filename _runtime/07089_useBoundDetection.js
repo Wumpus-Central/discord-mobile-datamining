@@ -1,5 +1,6 @@
 // _runtime/07089_useBoundDetection.js
 import noop from "00019_noop.js";
+import { useUnmountAwareTimeout } from "07086_useUnmountAwareTimeout.js";
 
 ({ useCallback: obj1, useEffect: c3, useMemo: c4, useRef: c5 } = noop);
 
@@ -11,7 +12,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const callback3 = callback4(false);
   callback4 = callback4(Date.now());
   const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = require("07086_useUnmountAwareTimeout.js").useUnmountAwareAnimationFrame().requestAnimationFrame;
+  const _requestAnimationFrame = _useUnmountAwareTimeout.useUnmountAwareAnimationFrame().requestAnimationFrame;
   let num = 0;
   if (recyclerViewManager.hasLayout()) {
     num = recyclerViewManager.getWindowSize().height;
@@ -32,7 +33,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
   const checkBounds = callback(() => {
     closure_5.current = Date.now();
-    const props = store.props;
+    const props = closure_0.props;
     ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } = props);
     let num;
     if (maintainVisibleContentPosition != null) {
@@ -41,12 +42,12 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
     if (num == null) {
       num = -1;
     }
-    if (store.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = store.getAbsoluteLastScrollOffset();
-      const size = store.getChildContainerDimensions();
-      const size2 = store.getWindowSize();
+    if (closure_0.getIsFirstLayoutComplete()) {
+      const absoluteLastScrollOffset = obj.getAbsoluteLastScrollOffset();
+      const size = obj.getChildContainerDimensions();
+      const size2 = obj.getWindowSize();
       const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + store.firstItemOffset;
+      const sum = (tmp2 ? size.width : size.height) + obj.firstItemOffset;
       if (tmp3 > 0) {
         if (onEndReached) {
           if (onEndReachedThreshold == null) {
@@ -90,7 +91,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
     }
   }, items);
   const tmp2 = callback(() => {
-    let current = store.isOffsetProjectionEnabled;
+    let current = closure_0.isOffsetProjectionEnabled;
     if (current) {
       current = ref3.current;
     }

@@ -483,6 +483,7 @@ export default {
       const sum3 = str3 + addLeadingZeros.default(Math.floor(absolute2 / 60), 2);
       return sum3 + addLeadingZeros.default(absolute2 % 60, 2);
     }
+    const obj = _originalDate._originalDate || arg0;
   },
   x(arg0, arg1, arg2, _originalDate) {
     const timezoneOffset = _originalDate._originalDate || arg0.getTimezoneOffset();
@@ -530,6 +531,7 @@ export default {
       const sum3 = str3 + addLeadingZeros.default(Math.floor(absolute2 / 60), 2);
       return sum3 + addLeadingZeros.default(absolute2 % 60, 2);
     }
+    const obj = _originalDate._originalDate || arg0;
   },
   O(arg0, arg1, arg2, _originalDate) {
     const timezoneOffset = _originalDate._originalDate || arg0.getTimezoneOffset();

@@ -1,9 +1,9 @@
 // discord_app/modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
 
 export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   let flag = forceMaxHeight.forceMaxHeight;
@@ -16,11 +16,12 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   }
   importDefault = undefined;
   let minimum;
+  let maximum;
   const tmp2 = importDefault(minimum[6])({ ignoreKeyboard: true });
   importDefault = tmp2;
   let tmp3 = importDefault(minimum[7])();
   minimum = tmp3.minimum;
-  const maximum = tmp3.maximum;
+  maximum = tmp3.maximum;
   let items = [flag, maximum, minimum];
   ({ initialPosition, animateOnMount } = importDefault(minimum[8])(() => {
     let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
@@ -28,11 +29,11 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
     if (!obj2.isAndroid()) {
       tmp3 = obj;
       if (!closure_1_4.useReducedMotion) {
-        let tmpResult = flag(minimum[3]);
+        let tmpResult = tmp(tmp2[3]);
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = flag(minimum[4]);
+          tmpResult = tmp(tmp2[4]);
           const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
-          if (keyboardTypePrevious === flag(minimum[5]).KeyboardTypes.SYSTEM) {
+          if (keyboardTypePrevious === tmp(tmp2[5]).KeyboardTypes.SYSTEM) {
             obj = { animateOnMount: true };
           }
         }
@@ -58,11 +59,11 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
     if (!obj2.isAndroid()) {
       tmp3 = obj;
       if (!closure_1_4.useReducedMotion) {
-        let tmpResult = flag(minimum[3]);
+        let tmpResult = tmp(tmp2[3]);
         if (0 === tmpResult.getSystemKeyboardHeight()) {
-          tmpResult = flag(minimum[4]);
+          tmpResult = tmp(tmp2[4]);
           const keyboardTypePrevious = tmpResult.getKeyboardTypePrevious();
-          if (keyboardTypePrevious === flag(minimum[5]).KeyboardTypes.SYSTEM) {
+          if (keyboardTypePrevious === tmp(tmp2[5]).KeyboardTypes.SYSTEM) {
             obj = { animateOnMount: true };
           }
         }

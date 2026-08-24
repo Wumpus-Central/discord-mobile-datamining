@@ -1,8 +1,8 @@
 // discord_app/modules/applications/ApplicationInteractionInfoUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 
-const result = obj132.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
+const result = set.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
 export const canViewInteractionInfo = function canViewInteractionInfo(message) {
   return null != message.interactionMetadata;

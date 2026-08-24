@@ -1,20 +1,20 @@
 // discord_app/modules/saved_messages/native/useForLaterCoachmark.tsx
 import registerAssetDefault from "../../../../_runtime/12732_registerAsset.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function CoachmarkImg() {
   const obj = { source: registerAssetDefault, style: callback2().imageContainer };
   return <Image source={registerAssetDefault} style={callback2().imageContainer} />;
 }
 let closure_8 = require("DismissibleContent").DismissibleContent.FOR_LATER_NOTIFICATIONS_COACHMARK;
 let closure_9 = createCacheKey.createStyles({ imageContainer: { width: 100, height: 80 } });
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/native/useForLaterCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/native/useForLaterCoachmark.tsx");
 
 export default function useForLaterCoachmark(targetRef) {
   if (obj.useIsForLaterExperimentOn("forLaterCoachmark")) {
@@ -30,10 +30,10 @@ export default function useForLaterCoachmark(targetRef) {
   const items2 = [tmp4[1], first];
   const memo = React.useMemo(() => {
     const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
-    const intl = first(dependencyMap[10]).intl;
-    obj[0] = intl.string(first(dependencyMap[10]).t.qPbFK2);
-    const intl2 = first(dependencyMap[10]).intl;
-    obj[1] = intl2.string(first(dependencyMap[10]).t.URrJq1);
+    const intl = first(closure_1_2[10]).intl;
+    obj[0] = intl.string(first(closure_1_2[10]).t.qPbFK2);
+    const intl2 = first(closure_1_2[10]).intl;
+    obj[1] = intl2.string(first(closure_1_2[10]).t.URrJq1);
     obj[3] = first === closure_1_8;
     obj[4] = function onDismiss() {
       callback(closure_1_6.USER_DISMISS);

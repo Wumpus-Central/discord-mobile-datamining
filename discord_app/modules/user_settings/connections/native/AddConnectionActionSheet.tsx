@@ -1,10 +1,11 @@
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import items2 from "../../../user_application_identity/UserApplicationIdentityConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import Button from "../../../../design/void/native.tsx";
+import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
 function AddApplicationIdentityTableRow(application) {
@@ -16,14 +17,14 @@ function AddApplicationIdentityTableRow(application) {
   const tmp2 = analyticsLocations(7142)(application);
   analyticsLocations = analyticsLocations(7139)(analyticsLocations(7159).ACTION_SHEET).analyticsLocations;
   const tmp3 = analyticsLocations(7139);
-  let obj = Button;
-  const iconSource = application.getIconSource(obj.getIconSize(require("../../../../design/void/native.tsx").IconSizes.LARGE));
+  let obj = _Button;
+  const iconSource = application.getIconSource(obj.getIconSize(_Button.IconSizes.LARGE));
   obj = {
     start,
     end,
     label: application.name,
     onPress() {
-      let obj = analyticsLocations(dependencyMap[14]);
+      let obj = analyticsLocations(closure_1_2[14]);
       obj.hideActionSheet();
       obj = { analyticsLocations };
       _undefined(obj);
@@ -37,62 +38,77 @@ function AddApplicationIdentityTableRow(application) {
     obj = { source: null, style: null, disableColor: true };
     obj[0] = iconSource;
     obj[1] = tmp4.icon;
-    tmp7Result = callback(tmp5(1297).Icon, obj);
+    tmp7Result = tmp7(tmp5(1297).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow.Arrow, {});
+  obj[5] = closure_5(_TableRowInner.TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return callback(require("../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, obj, application.id);
+  return closure_5(_TableRowInner.TableRow, obj, application.id);
 }
 const AnalyticsLocations = ME.AnalyticsLocations;
 let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { borderRadius: null };
+let obj = { list: { paddingHorizontal: 16 }, icon: null };
+obj = { borderRadius: null };
 obj[0] = Button.getIconSize(Button.Icon.Sizes.LARGE);
 obj[1] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
 
 export default function AddConnectionActionSheet() {
   const _require = found(found1[5])();
   let obj = _require(found1[7]);
   const platforms = obj.usePlatforms();
-  found = platforms.filter((item, index) => {
-    let tmp = null == item.migrationData;
+  found = platforms.filter((migrationData) => {
+    let tmp = null == migrationData.migrationData;
     if (!tmp) {
-      const migrationData = item.migrationData;
+      migrationData = migrationData.migrationData;
       tmp = !migrationData.getMigrationExperimentEnabled("AddConnectionActionSheet");
     }
     return tmp;
   });
   let tmp = callback4();
   const tmp2 = found(found1[8]);
-  found1 = found(found1[8])(callback("AddConnectionActionSheet")).filter((item, index) => null != item);
+  found1 = found(found1[8])(callback("AddConnectionActionSheet")).filter((arg0) => null != arg0);
+  obj = { scrollable: true, startExpanded: true, header: null, children: null };
   obj = { title: null };
   const intl = _require(found1[11]).intl;
   obj[0] = intl.string(_require(found1[11]).t.Zhcj9X);
   obj[2] = callback2(_require(found1[10]).BottomSheetTitleHeader, obj);
   obj1 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
   const items = [
-    found1.map((item, index) => {
-      const obj = { application: item, start: 0 === index, end: null };
-      let tmp3 = index === found1.length - 1;
+    found1.map((application) => {
+      const obj = { application, start: 0 === arg1, end: null };
+      let tmp3 = arg1 === found1.length - 1;
       if (tmp3) {
         tmp3 = 0 === found.length;
       }
       obj[2] = tmp3;
-      return closure_1_5(AddApplicationIdentityTableRow, obj, item.id);
+      return closure_1_5(closure_1_8, obj, application.id);
     }),
-    found.map((item, index) => {
-      const type = item.type;
-      const icon = item.icon;
-      let tmp4 = 0 === index;
+    found.map((label) => {
+      const type = label.type;
+      const icon = label.icon;
+      let tmp4 = 0 === arg1;
       if (tmp4) {
         tmp4 = 0 === found1.length;
       }
-      callback(found1[16]);
-      const tmp2Result = callback(found1[17]);
-      let obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(type) ? icon.darkPNG : icon.lightPNG), disableColor: true };
+      let obj = {
+        start: tmp4,
+        end: arg1 === found.length - 1,
+        label: label.name,
+        onPress() {
+          let obj = closure_1_1(closure_1_2[14]);
+          obj.hideActionSheet();
+          obj = { platformType: type, location: closure_1_3.USER_SETTINGS };
+          closure_1_1(closure_1_2[15])(obj);
+        },
+        icon: null,
+        trailing: null
+      };
+      let tmp2Result = tmp2(tmp3[16]);
+      tmp2Result = tmp2(tmp3[17]);
+      obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(type) ? icon.darkPNG : icon.lightPNG), disableColor: true };
       obj[4] = closure_1_5(callback(found1[4]).Icon, obj);
       obj[5] = closure_1_5(callback(found1[13]).TableRow.Arrow, {});
       return closure_1_5(callback(found1[13]).TableRow, obj, type);

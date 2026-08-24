@@ -13,6 +13,7 @@ arg5.onTTFB = (arg0) => {
     obj = {};
   }
   let fn;
+  dependencyMap = undefined;
   const metric = fn(1044).initMetric("TTFB");
   fn = metric;
   const obj2 = fn(1044);
@@ -20,7 +21,7 @@ arg5.onTTFB = (arg0) => {
   if (typeof whenReady !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  fn = (closure_1) => {
+  fn = (arg0) => {
     const navigationEntry = fn(1043).getNavigationEntry();
     if (navigationEntry) {
       const _Math = Math;
@@ -30,7 +31,6 @@ arg5.onTTFB = (arg0) => {
       dependencyMap(true);
       const tmpResult = fn(1042);
     }
-    const obj = fn(1043);
   };
   const _document = tmp(1039).WINDOW.document;
   let prerendering;
@@ -49,7 +49,7 @@ arg5.onTTFB = (arg0) => {
         prerendering = _document.prerendering;
       }
       if (prerendering) {
-        tmp2(closure_1_1[1]).whenActivated(() => {
+        tmp2(tmp3[1]).whenActivated(() => {
           if (typeof closure_1_3 !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -60,7 +60,7 @@ arg5.onTTFB = (arg0) => {
             prerendering = _document.prerendering;
           }
           if (prerendering) {
-            tmp2(closure_1_1[1]).whenActivated(() => {
+            tmp2(tmp3[1]).whenActivated(() => {
               if (typeof closure_1_3 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
@@ -71,7 +71,7 @@ arg5.onTTFB = (arg0) => {
                 prerendering = _document.prerendering;
               }
               if (prerendering) {
-                tmp2(closure_1_1[1]).whenActivated(() => {
+                tmp2(tmp3[1]).whenActivated(() => {
                   if (typeof closure_1_3 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
@@ -82,10 +82,10 @@ arg5.onTTFB = (arg0) => {
                     prerendering = _document.prerendering;
                   }
                   if (prerendering) {
-                    tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                    const tmp2Result = tmp2(closure_1_1[1]);
+                    tmp2(tmp3[1]).whenActivated(() => { ... });
+                    const tmp2Result = tmp2(tmp3[1]);
                   } else {
-                    const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                    const _document2 = tmp2(tmp3[0]).WINDOW.document;
                     let readyState;
                     if (_document2 != null) {
                       readyState = _document2.readyState;
@@ -98,15 +98,15 @@ arg5.onTTFB = (arg0) => {
                     }
                   }
                 });
-                const tmp2Result = tmp2(closure_1_1[1]);
+                const tmp2Result = tmp2(tmp3[1]);
               } else {
-                const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                const _document2 = tmp2(tmp3[0]).WINDOW.document;
                 let readyState;
                 if (_document2 != null) {
                   readyState = _document2.readyState;
                 }
                 if ("complete" !== readyState) {
-                  const listener = globalThis.addEventListener("load", (event) => {
+                  const listener = globalThis.addEventListener("load", () => {
                     if (typeof closure_1_3 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
@@ -117,10 +117,10 @@ arg5.onTTFB = (arg0) => {
                       prerendering = _document.prerendering;
                     }
                     if (prerendering) {
-                      closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                      let tmp2Result = closure_1_0(closure_1_1[1]);
+                      tmp2(tmp3[1]).whenActivated(() => { ... });
+                      let tmp2Result = tmp2(tmp3[1]);
                     } else {
-                      let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                      let _document2 = tmp2(tmp3[0]).WINDOW.document;
                       let readyState;
                       if (_document2 != null) {
                         readyState = _document2.readyState;
@@ -139,15 +139,15 @@ arg5.onTTFB = (arg0) => {
                 }
               }
             });
-            const tmp2Result = tmp2(closure_1_1[1]);
+            const tmp2Result = tmp2(tmp3[1]);
           } else {
-            const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+            const _document2 = tmp2(tmp3[0]).WINDOW.document;
             let readyState;
             if (_document2 != null) {
               readyState = _document2.readyState;
             }
             if ("complete" !== readyState) {
-              const listener = globalThis.addEventListener("load", (event) => {
+              const listener = globalThis.addEventListener("load", () => {
                 if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
@@ -158,7 +158,7 @@ arg5.onTTFB = (arg0) => {
                   prerendering = _document.prerendering;
                 }
                 if (prerendering) {
-                  closure_1_0(closure_1_1[1]).whenActivated(() => {
+                  tmp2(tmp3[1]).whenActivated(() => {
                     if (typeof closure_1_3 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
@@ -169,10 +169,10 @@ arg5.onTTFB = (arg0) => {
                       prerendering = _document.prerendering;
                     }
                     if (prerendering) {
-                      tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                      const tmp2Result = tmp2(closure_1_1[1]);
+                      tmp2(tmp3[1]).whenActivated(() => { ... });
+                      const tmp2Result = tmp2(tmp3[1]);
                     } else {
-                      const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                      const _document2 = tmp2(tmp3[0]).WINDOW.document;
                       let readyState;
                       if (_document2 != null) {
                         readyState = _document2.readyState;
@@ -185,15 +185,15 @@ arg5.onTTFB = (arg0) => {
                       }
                     }
                   });
-                  let tmp2Result = closure_1_0(closure_1_1[1]);
+                  let tmp2Result = tmp2(tmp3[1]);
                 } else {
-                  let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                  let _document2 = tmp2(tmp3[0]).WINDOW.document;
                   let readyState;
                   if (_document2 != null) {
                     readyState = _document2.readyState;
                   }
                   if ("complete" !== readyState) {
-                    let listener = globalThis.addEventListener("load", (event) => {
+                    let listener = globalThis.addEventListener("load", () => {
                       if (typeof closure_1_3 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -204,10 +204,10 @@ arg5.onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                        let tmp2Result = closure_1_0(closure_1_1[1]);
+                        tmp2(tmp3[1]).whenActivated(() => { ... });
+                        let tmp2Result = tmp2(tmp3[1]);
                       } else {
-                        let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                        let _document2 = tmp2(tmp3[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -232,15 +232,15 @@ arg5.onTTFB = (arg0) => {
             }
           }
         });
-        const tmp2Result = tmp2(closure_1_1[1]);
+        const tmp2Result = tmp2(tmp3[1]);
       } else {
-        const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+        const _document2 = tmp2(tmp3[0]).WINDOW.document;
         let readyState;
         if (_document2 != null) {
           readyState = _document2.readyState;
         }
         if ("complete" !== readyState) {
-          const listener = globalThis.addEventListener("load", (event) => {
+          const listener = globalThis.addEventListener("load", () => {
             if (typeof closure_1_3 !== "function") {
               HermesBuiltin.throwTypeError();
             }
@@ -251,7 +251,7 @@ arg5.onTTFB = (arg0) => {
               prerendering = _document.prerendering;
             }
             if (prerendering) {
-              closure_1_0(closure_1_1[1]).whenActivated(() => {
+              tmp2(tmp3[1]).whenActivated(() => {
                 if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
@@ -262,7 +262,7 @@ arg5.onTTFB = (arg0) => {
                   prerendering = _document.prerendering;
                 }
                 if (prerendering) {
-                  tmp2(closure_1_1[1]).whenActivated(() => {
+                  tmp2(tmp3[1]).whenActivated(() => {
                     if (typeof closure_1_3 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
@@ -273,10 +273,10 @@ arg5.onTTFB = (arg0) => {
                       prerendering = _document.prerendering;
                     }
                     if (prerendering) {
-                      tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                      const tmp2Result = tmp2(closure_1_1[1]);
+                      tmp2(tmp3[1]).whenActivated(() => { ... });
+                      const tmp2Result = tmp2(tmp3[1]);
                     } else {
-                      const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                      const _document2 = tmp2(tmp3[0]).WINDOW.document;
                       let readyState;
                       if (_document2 != null) {
                         readyState = _document2.readyState;
@@ -289,15 +289,15 @@ arg5.onTTFB = (arg0) => {
                       }
                     }
                   });
-                  const tmp2Result = tmp2(closure_1_1[1]);
+                  const tmp2Result = tmp2(tmp3[1]);
                 } else {
-                  const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                  const _document2 = tmp2(tmp3[0]).WINDOW.document;
                   let readyState;
                   if (_document2 != null) {
                     readyState = _document2.readyState;
                   }
                   if ("complete" !== readyState) {
-                    const listener = globalThis.addEventListener("load", (event) => {
+                    const listener = globalThis.addEventListener("load", () => {
                       if (typeof closure_1_3 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -308,10 +308,10 @@ arg5.onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                        let tmp2Result = closure_1_0(closure_1_1[1]);
+                        tmp2(tmp3[1]).whenActivated(() => { ... });
+                        let tmp2Result = tmp2(tmp3[1]);
                       } else {
-                        let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                        let _document2 = tmp2(tmp3[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -330,15 +330,15 @@ arg5.onTTFB = (arg0) => {
                   }
                 }
               });
-              let tmp2Result = closure_1_0(closure_1_1[1]);
+              let tmp2Result = tmp2(tmp3[1]);
             } else {
-              let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+              let _document2 = tmp2(tmp3[0]).WINDOW.document;
               let readyState;
               if (_document2 != null) {
                 readyState = _document2.readyState;
               }
               if ("complete" !== readyState) {
-                let listener = globalThis.addEventListener("load", (event) => {
+                let listener = globalThis.addEventListener("load", () => {
                   if (typeof closure_1_3 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
@@ -349,7 +349,7 @@ arg5.onTTFB = (arg0) => {
                     prerendering = _document.prerendering;
                   }
                   if (prerendering) {
-                    closure_1_0(closure_1_1[1]).whenActivated(() => {
+                    tmp2(tmp3[1]).whenActivated(() => {
                       if (typeof closure_1_3 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -360,10 +360,10 @@ arg5.onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                        const tmp2Result = tmp2(closure_1_1[1]);
+                        tmp2(tmp3[1]).whenActivated(() => { ... });
+                        const tmp2Result = tmp2(tmp3[1]);
                       } else {
-                        const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                        const _document2 = tmp2(tmp3[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -376,15 +376,15 @@ arg5.onTTFB = (arg0) => {
                         }
                       }
                     });
-                    let tmp2Result = closure_1_0(closure_1_1[1]);
+                    let tmp2Result = tmp2(tmp3[1]);
                   } else {
-                    let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                    let _document2 = tmp2(tmp3[0]).WINDOW.document;
                     let readyState;
                     if (_document2 != null) {
                       readyState = _document2.readyState;
                     }
                     if ("complete" !== readyState) {
-                      let listener = globalThis.addEventListener("load", (event) => {
+                      let listener = globalThis.addEventListener("load", () => {
                         if (typeof closure_1_3 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
@@ -395,10 +395,10 @@ arg5.onTTFB = (arg0) => {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                          let tmp2Result = closure_1_0(closure_1_1[1]);
+                          tmp2(tmp3[1]).whenActivated(() => { ... });
+                          let tmp2Result = tmp2(tmp3[1]);
                         } else {
-                          let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                          let _document2 = tmp2(tmp3[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -437,7 +437,7 @@ arg5.onTTFB = (arg0) => {
       readyState = _document2.readyState;
     }
     if ("complete" !== readyState) {
-      const listener = globalThis.addEventListener("load", (event) => {
+      const listener = globalThis.addEventListener("load", () => {
         if (typeof closure_1_3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
@@ -448,7 +448,7 @@ arg5.onTTFB = (arg0) => {
           prerendering = _document.prerendering;
         }
         if (prerendering) {
-          closure_1_0(closure_1_1[1]).whenActivated(() => {
+          tmp2(tmp3[1]).whenActivated(() => {
             if (typeof closure_1_3 !== "function") {
               HermesBuiltin.throwTypeError();
             }
@@ -459,7 +459,7 @@ arg5.onTTFB = (arg0) => {
               prerendering = _document.prerendering;
             }
             if (prerendering) {
-              tmp2(closure_1_1[1]).whenActivated(() => {
+              tmp2(tmp3[1]).whenActivated(() => {
                 if (typeof closure_1_3 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
@@ -470,7 +470,7 @@ arg5.onTTFB = (arg0) => {
                   prerendering = _document.prerendering;
                 }
                 if (prerendering) {
-                  tmp2(closure_1_1[1]).whenActivated(() => {
+                  tmp2(tmp3[1]).whenActivated(() => {
                     if (typeof closure_1_3 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
@@ -481,10 +481,10 @@ arg5.onTTFB = (arg0) => {
                       prerendering = _document.prerendering;
                     }
                     if (prerendering) {
-                      tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                      const tmp2Result = tmp2(closure_1_1[1]);
+                      tmp2(tmp3[1]).whenActivated(() => { ... });
+                      const tmp2Result = tmp2(tmp3[1]);
                     } else {
-                      const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                      const _document2 = tmp2(tmp3[0]).WINDOW.document;
                       let readyState;
                       if (_document2 != null) {
                         readyState = _document2.readyState;
@@ -497,15 +497,15 @@ arg5.onTTFB = (arg0) => {
                       }
                     }
                   });
-                  const tmp2Result = tmp2(closure_1_1[1]);
+                  const tmp2Result = tmp2(tmp3[1]);
                 } else {
-                  const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                  const _document2 = tmp2(tmp3[0]).WINDOW.document;
                   let readyState;
                   if (_document2 != null) {
                     readyState = _document2.readyState;
                   }
                   if ("complete" !== readyState) {
-                    const listener = globalThis.addEventListener("load", (event) => {
+                    const listener = globalThis.addEventListener("load", () => {
                       if (typeof closure_1_3 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -516,10 +516,10 @@ arg5.onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                        let tmp2Result = closure_1_0(closure_1_1[1]);
+                        tmp2(tmp3[1]).whenActivated(() => { ... });
+                        let tmp2Result = tmp2(tmp3[1]);
                       } else {
-                        let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                        let _document2 = tmp2(tmp3[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -538,15 +538,15 @@ arg5.onTTFB = (arg0) => {
                   }
                 }
               });
-              const tmp2Result = tmp2(closure_1_1[1]);
+              const tmp2Result = tmp2(tmp3[1]);
             } else {
-              const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+              const _document2 = tmp2(tmp3[0]).WINDOW.document;
               let readyState;
               if (_document2 != null) {
                 readyState = _document2.readyState;
               }
               if ("complete" !== readyState) {
-                const listener = globalThis.addEventListener("load", (event) => {
+                const listener = globalThis.addEventListener("load", () => {
                   if (typeof closure_1_3 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
@@ -557,7 +557,7 @@ arg5.onTTFB = (arg0) => {
                     prerendering = _document.prerendering;
                   }
                   if (prerendering) {
-                    closure_1_0(closure_1_1[1]).whenActivated(() => {
+                    tmp2(tmp3[1]).whenActivated(() => {
                       if (typeof closure_1_3 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -568,10 +568,10 @@ arg5.onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                        const tmp2Result = tmp2(closure_1_1[1]);
+                        tmp2(tmp3[1]).whenActivated(() => { ... });
+                        const tmp2Result = tmp2(tmp3[1]);
                       } else {
-                        const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                        const _document2 = tmp2(tmp3[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -584,15 +584,15 @@ arg5.onTTFB = (arg0) => {
                         }
                       }
                     });
-                    let tmp2Result = closure_1_0(closure_1_1[1]);
+                    let tmp2Result = tmp2(tmp3[1]);
                   } else {
-                    let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                    let _document2 = tmp2(tmp3[0]).WINDOW.document;
                     let readyState;
                     if (_document2 != null) {
                       readyState = _document2.readyState;
                     }
                     if ("complete" !== readyState) {
-                      let listener = globalThis.addEventListener("load", (event) => {
+                      let listener = globalThis.addEventListener("load", () => {
                         if (typeof closure_1_3 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
@@ -603,10 +603,10 @@ arg5.onTTFB = (arg0) => {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                          let tmp2Result = closure_1_0(closure_1_1[1]);
+                          tmp2(tmp3[1]).whenActivated(() => { ... });
+                          let tmp2Result = tmp2(tmp3[1]);
                         } else {
-                          let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                          let _document2 = tmp2(tmp3[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -631,15 +631,15 @@ arg5.onTTFB = (arg0) => {
               }
             }
           });
-          let tmp2Result = closure_1_0(closure_1_1[1]);
+          let tmp2Result = tmp2(tmp3[1]);
         } else {
-          let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+          let _document2 = tmp2(tmp3[0]).WINDOW.document;
           let readyState;
           if (_document2 != null) {
             readyState = _document2.readyState;
           }
           if ("complete" !== readyState) {
-            let listener = globalThis.addEventListener("load", (event) => {
+            let listener = globalThis.addEventListener("load", () => {
               if (typeof closure_1_3 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
@@ -650,7 +650,7 @@ arg5.onTTFB = (arg0) => {
                 prerendering = _document.prerendering;
               }
               if (prerendering) {
-                closure_1_0(closure_1_1[1]).whenActivated(() => {
+                tmp2(tmp3[1]).whenActivated(() => {
                   if (typeof closure_1_3 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
@@ -661,7 +661,7 @@ arg5.onTTFB = (arg0) => {
                     prerendering = _document.prerendering;
                   }
                   if (prerendering) {
-                    tmp2(closure_1_1[1]).whenActivated(() => {
+                    tmp2(tmp3[1]).whenActivated(() => {
                       if (typeof closure_1_3 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -672,10 +672,10 @@ arg5.onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                        const tmp2Result = tmp2(closure_1_1[1]);
+                        tmp2(tmp3[1]).whenActivated(() => { ... });
+                        const tmp2Result = tmp2(tmp3[1]);
                       } else {
-                        const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                        const _document2 = tmp2(tmp3[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -688,15 +688,15 @@ arg5.onTTFB = (arg0) => {
                         }
                       }
                     });
-                    const tmp2Result = tmp2(closure_1_1[1]);
+                    const tmp2Result = tmp2(tmp3[1]);
                   } else {
-                    const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                    const _document2 = tmp2(tmp3[0]).WINDOW.document;
                     let readyState;
                     if (_document2 != null) {
                       readyState = _document2.readyState;
                     }
                     if ("complete" !== readyState) {
-                      const listener = globalThis.addEventListener("load", (event) => {
+                      const listener = globalThis.addEventListener("load", () => {
                         if (typeof closure_1_3 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
@@ -707,10 +707,10 @@ arg5.onTTFB = (arg0) => {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                          let tmp2Result = closure_1_0(closure_1_1[1]);
+                          tmp2(tmp3[1]).whenActivated(() => { ... });
+                          let tmp2Result = tmp2(tmp3[1]);
                         } else {
-                          let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                          let _document2 = tmp2(tmp3[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -729,15 +729,15 @@ arg5.onTTFB = (arg0) => {
                     }
                   }
                 });
-                let tmp2Result = closure_1_0(closure_1_1[1]);
+                let tmp2Result = tmp2(tmp3[1]);
               } else {
-                let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                let _document2 = tmp2(tmp3[0]).WINDOW.document;
                 let readyState;
                 if (_document2 != null) {
                   readyState = _document2.readyState;
                 }
                 if ("complete" !== readyState) {
-                  let listener = globalThis.addEventListener("load", (event) => {
+                  let listener = globalThis.addEventListener("load", () => {
                     if (typeof closure_1_3 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
@@ -748,7 +748,7 @@ arg5.onTTFB = (arg0) => {
                       prerendering = _document.prerendering;
                     }
                     if (prerendering) {
-                      closure_1_0(closure_1_1[1]).whenActivated(() => {
+                      tmp2(tmp3[1]).whenActivated(() => {
                         if (typeof closure_1_3 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
@@ -759,10 +759,10 @@ arg5.onTTFB = (arg0) => {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          tmp2(closure_1_1[1]).whenActivated(() => { ... });
-                          const tmp2Result = tmp2(closure_1_1[1]);
+                          tmp2(tmp3[1]).whenActivated(() => { ... });
+                          const tmp2Result = tmp2(tmp3[1]);
                         } else {
-                          const _document2 = tmp2(closure_1_1[0]).WINDOW.document;
+                          const _document2 = tmp2(tmp3[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -775,15 +775,15 @@ arg5.onTTFB = (arg0) => {
                           }
                         }
                       });
-                      let tmp2Result = closure_1_0(closure_1_1[1]);
+                      let tmp2Result = tmp2(tmp3[1]);
                     } else {
-                      let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                      let _document2 = tmp2(tmp3[0]).WINDOW.document;
                       let readyState;
                       if (_document2 != null) {
                         readyState = _document2.readyState;
                       }
                       if ("complete" !== readyState) {
-                        let listener = globalThis.addEventListener("load", (event) => {
+                        let listener = globalThis.addEventListener("load", () => {
                           if (typeof closure_1_3 !== "function") {
                             HermesBuiltin.throwTypeError();
                           }
@@ -794,10 +794,10 @@ arg5.onTTFB = (arg0) => {
                             prerendering = _document.prerendering;
                           }
                           if (prerendering) {
-                            closure_1_0(closure_1_1[1]).whenActivated(() => { ... });
-                            let tmp2Result = closure_1_0(closure_1_1[1]);
+                            tmp2(tmp3[1]).whenActivated(() => { ... });
+                            let tmp2Result = tmp2(tmp3[1]);
                           } else {
-                            let _document2 = closure_1_0(closure_1_1[0]).WINDOW.document;
+                            let _document2 = tmp2(tmp3[0]).WINDOW.document;
                             let readyState;
                             if (_document2 != null) {
                               readyState = _document2.readyState;

@@ -1,6 +1,5 @@
 // _runtime/00081_resolveAssetSource.js
 import _mod84 from "metro/00084__.js";
-import AssetSourceResolver from "00085_AssetSourceResolver.js";
 import pickScale from "00086_pickScale.js";
 
 function resolveAssetSource(source) {
@@ -8,7 +7,7 @@ function resolveAssetSource(source) {
     if (typeof source !== "object") {
       const assetByID = _mod84.getAssetByID(source);
       if (assetByID) {
-        const _default = new AssetSourceResolver.default((function getDevServerURL() {
+        const _default = new tmp12(85).default((function getDevServerURL() {
           let tmp = first;
           if (undefined === first) {
             if (null == scriptURL) {
@@ -54,7 +53,9 @@ function resolveAssetSource(source) {
         if (closure_6) {
           for (const item10021 of tmp6) {
             let item10021Result = item10021(_default);
+            let tmp10 = item10021Result;
             if (null != item10021Result) {
+              let tmp11 = obj2;
               obj2.return();
               return item10021Result;
             }
@@ -64,6 +65,8 @@ function resolveAssetSource(source) {
       } else {
         return null;
       }
+      const obj3 = _mod84;
+      tmp12 = require;
     }
   }
   return source;

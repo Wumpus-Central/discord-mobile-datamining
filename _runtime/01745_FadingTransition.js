@@ -1,7 +1,9 @@
 // _runtime/01745_FadingTransition.js
 arg5.FadingTransition = function FadingTransition(name) {
   ({ translateX, translateY, scaleX, scaleY } = arg1);
-  const obj = { opacity: 1, transform: null };
+  let obj = { name, style: null, duration: 300 };
+  obj = { 0: null, 20: null, 60: null, 100: null };
+  obj = { opacity: 1, transform: null };
   const items = [{ translateX: "" + translateX + "px", translateY: "" + translateY + "px", scale: "" + scaleX + "," + scaleY }];
   obj[1] = items;
   obj[0] = obj;

@@ -1,23 +1,25 @@
 // discord_app/modules/guild_settings/native/EmojiOverflowActionSheet.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ header: { paddingHorizontal: 8, flexDirection: "row", alignItems: "center", gap: 16 }, emojiImage: { width: 30, height: 30, resizeMode: "contain" } });
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/EmojiOverflowActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/EmojiOverflowActionSheet.tsx");
 
 export default function EmojiOverflowActionSheet(emoji) {
   emoji = emoji.emoji;
   ({ guildId: importAll, onSelectRolesForEmoji } = emoji);
   ({ onEdit: closure_3, onClose } = emoji);
   const tmp = callback4();
-  const obj = { uri: null };
+  let obj = { style: tmp.header, children: null };
+  obj = { style: tmp.emojiImage, source: null };
+  obj = { uri: null };
   let obj3 = importAll(onSelectRolesForEmoji[6]);
   obj[0] = obj3.getEmojiURL({ id: emoji.id, animated: emoji.animated, size: 48 });
   obj[1] = obj;
@@ -47,27 +49,27 @@ export default function EmojiOverflowActionSheet(emoji) {
   let tmp5Result = null;
   if (null != onSelectRolesForEmoji) {
     const obj7 = { icon: null, label: null, onPress: null };
-    obj7[0] = callback2(tmp3(onSelectRolesForEmoji[13]).PencilIcon, {});
+    obj7[0] = tmp5(tmp3(tmp4[13]).PencilIcon, {});
     const obj8 = { variant: "text-md/semibold", children: null };
-    const intl3 = tmp3(onSelectRolesForEmoji[11]).intl;
-    obj8[1] = intl3.string(tmp3(onSelectRolesForEmoji[11]).t["+riKdA"]);
-    obj7[1] = callback2(tmp3(onSelectRolesForEmoji[7]).Text, obj8);
+    const intl3 = tmp3(tmp4[11]).intl;
+    obj8[1] = intl3.string(tmp3(tmp4[11]).t["+riKdA"]);
+    obj7[1] = tmp5(tmp3(tmp4[7]).Text, obj8);
     obj7[2] = callback(function*() {
       closure_2 = tmp3;
       let v0 = 1;
-      yield onSelectRolesForEmoji(emoji);
+      yield closure_1_2(closure_1_0);
       if (1 === tmp7) {
         v0 = 0;
         closure_1 = closure_3;
-        if (closure_1 instanceof emoji(onSelectRolesForEmoji[14]).APIError) {
+        if (closure_1 instanceof closure_1_0(closure_1_2[14]).APIError) {
           const anyErrorMessage = closure_1_1.getAnyErrorMessage();
           let id = anyErrorMessage;
           if (anyErrorMessage == null) {
-            const intl = emoji(onSelectRolesForEmoji[11]).intl;
-            id = intl.string(emoji(onSelectRolesForEmoji[11]).t.R0RpRX);
+            const intl = closure_1_0(closure_1_2[11]).intl;
+            id = intl.string(closure_1_0(closure_1_2[11]).t.R0RpRX);
           }
-          emoji(onSelectRolesForEmoji[15]).presentError(id);
-          const obj6 = emoji(onSelectRolesForEmoji[15]);
+          closure_1_0(closure_1_2[15]).presentError(id);
+          const obj6 = closure_1_0(closure_1_2[15]);
         }
         v0();
         c6 = 3;
@@ -83,7 +85,7 @@ export default function EmojiOverflowActionSheet(emoji) {
           return obj2;
         } else {
           id = arg1;
-          obj1 = emoji(onSelectRolesForEmoji[12]);
+          obj1 = closure_1_0(closure_1_2[12]);
           const obj3 = { guildId: null, emojiId: null, roles: null };
           obj3[0] = closure_1;
           obj3[1] = id.id;
@@ -103,14 +105,14 @@ export default function EmojiOverflowActionSheet(emoji) {
       v0 = 0;
       return arg1;
     });
-    tmp5Result = callback2(tmp3(onSelectRolesForEmoji[9]).TableRow, obj7);
+    tmp5Result = tmp5(tmp3(tmp4[9]).TableRow, obj7);
   }
   const obj9 = { children: null };
   const obj10 = { hasIcons: true, children: null };
   items2[2] = tmp5Result;
   const obj11 = { icon: callback2(emoji(onSelectRolesForEmoji[16]).XSmallIcon, {}), label: null, onPress: null };
   const obj12 = { variant: "text-md/semibold", children: null };
-  const intl4 = tmp3(onSelectRolesForEmoji[11]).intl;
+  const intl4 = tmp3(tmp4[11]).intl;
   obj12[1] = intl4.string(emoji(onSelectRolesForEmoji[11]).t["ETE/oC"]);
   obj11[1] = callback2(emoji(onSelectRolesForEmoji[7]).Text, obj12);
   obj11[2] = onClose;

@@ -1,5 +1,5 @@
 // discord_app/stores/billing/BillingInfoStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
@@ -240,6 +240,6 @@ const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
     countryCode = countryCode.countryCode;
   }
 });
-const result = obj132.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
+const result = set.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
 
 export default billingInfoStore;

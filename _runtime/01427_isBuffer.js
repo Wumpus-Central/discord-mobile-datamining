@@ -1,18 +1,18 @@
 // _runtime/01427_isBuffer.js
 
-export default function isBuffer(copy) {
-  let tmp = copy;
-  if (copy) {
-    tmp = typeof copy === "object";
+export default function isBuffer(obj) {
+  let tmp = obj;
+  if (obj) {
+    tmp = typeof obj === "object";
   }
   if (tmp) {
-    tmp = typeof copy.copy === "function";
+    tmp = typeof obj.copy === "function";
   }
   if (tmp) {
-    tmp = typeof copy.fill === "function";
+    tmp = typeof obj.fill === "function";
   }
   if (tmp) {
-    tmp = typeof copy.readUInt8 === "function";
+    tmp = typeof obj.readUInt8 === "function";
   }
   return tmp;
 };

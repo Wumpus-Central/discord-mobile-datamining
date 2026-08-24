@@ -1,13 +1,14 @@
 // discord_app/modules/reactions/canReactToMessage.tsx
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import isCommunicationDisabled from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import recomputeGuild from "../../stores/GuildVerificationStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/GuildMemberStore.tsx";
+import closure_3 from "../../stores/GuildVerificationStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function canReactToMessageInternal(state, getGuildId, items) {
   [obj, obj2, obj3, obj4] = items;
   const guildId = getGuildId.getGuildId();
@@ -41,14 +42,16 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   if (canResult) {
     canResult = !hasFlag.hasFlag(state.flags, constants4.EPHEMERAL);
+    const obj5 = hasFlag;
   }
   if (canResult) {
     canResult = !isCommunicationDisabled.isMemberCommunicationDisabled(member);
+    const obj6 = isCommunicationDisabled;
   }
   return canResult;
 }
 ({ Permissions: closure_6, MessageStates: error, MessageTypes: closure_8, MessageFlags: c9 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
 export const canReactToMessage = function canReactToMessage(message, channel) {
   const items = [closure_5, closure_2, closure_3, closure_4];
@@ -58,8 +61,8 @@ export const useCanReactToMessage = function useCanReactToMessage(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   let items = [closure_5, closure_2, closure_3, closure_4];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_2, closure_1_3, closure_1_4];
-    return canReactToMessageInternal(closure_0, closure_1, items);
+    return closure_1_10(closure_0, closure_1, items);
   });
 };

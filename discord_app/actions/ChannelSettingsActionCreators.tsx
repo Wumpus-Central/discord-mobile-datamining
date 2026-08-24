@@ -2,14 +2,15 @@
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import normalizeChannelPropertyForCompare from "../stores/ChannelSettingsStore.tsx";
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../stores/ChannelSettingsStore.tsx";
+import closure_5 from "../stores/ChannelStore.tsx";
 import ME from "../Constants.tsx";
 
-require = fn;
+require = arg1;
 function init(channelId, location, subsection) {
-  const obj = { type: "CHANNEL_SETTINGS_INIT", channelId, location, subsection };
+  let obj = dispatcherDefault;
+  obj = { type: "CHANNEL_SETTINGS_INIT", channelId, location, subsection };
   obj.dispatch(obj);
 }
 function open(arg0, arg1, arg2) {
@@ -30,6 +31,7 @@ function open(arg0, arg1, arg2) {
       obj[0] = arg0;
       obj[1] = OVERVIEW;
       rootNavigationRef.navigate("sidebar", obj);
+      const obj3 = dispatcherDefault;
     }
   }
 }
@@ -37,11 +39,13 @@ function close() {
   dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
 function setSection(section) {
-  const obj = { type: "CHANNEL_SETTINGS_SET_SECTION", section };
+  let obj = dispatcherDefault;
+  obj = { type: "CHANNEL_SETTINGS_SET_SECTION", section };
   obj.dispatch(obj);
 }
 function selectPermissionOverwrite(overwriteId) {
-  const obj = { type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId };
+  let obj = dispatcherDefault;
+  obj = { type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId };
   obj.dispatch(obj);
 }
 function updateChannel(arg0) {
@@ -195,7 +199,7 @@ function _saveChannel() {
             obj5[18] = tmp8;
             let mapped;
             if (c20 != null) {
-              mapped = arr.map((item, index) => ({ id: item.id, name: item.name, emoji_id: item.emojiId, emoji_name: item.emojiName, moderated: item.moderated }));
+              mapped = arr.map((id) => ({ id: id.id, name: id.name, emoji_id: id.emojiId, emoji_name: id.emojiName, moderated: id.moderated }));
             }
             obj5[19] = mapped;
             obj5[20] = c21;
@@ -217,8 +221,8 @@ function _saveChannel() {
             HTTP = then(obj4);
             then = HTTP.then;
             obj4 = then((arg0) => {
-              _undefined(_undefined2[4]);
-              const obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: closure_0 };
+              let obj = _undefined(_undefined2[4]);
+              obj = { type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: closure_0 };
               obj.dispatch(obj);
               let guildId;
               if (closure_26 != null) {
@@ -228,9 +232,10 @@ function _saveChannel() {
               if (!tmp5) {
                 let isThreadResult;
                 if (closure_26 != null) {
-                  isThreadResult = closure_26.isThread();
+                  isThreadResult = obj4.isThread();
                 }
                 tmp5 = isThreadResult;
+                obj4 = closure_26;
               }
               if (!tmp5) {
                 const result = _undefined(_undefined2[8]).checkGuildTemplateDirty(guildId);
@@ -238,8 +243,8 @@ function _saveChannel() {
               }
               return arg0;
             }, (body) => {
-              _undefined(_undefined2[4]);
-              const obj = { type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: body.body };
+              let obj = _undefined(_undefined2[4]);
+              obj = { type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: body.body };
               obj.dispatch(obj);
               return body;
             });
@@ -369,7 +374,7 @@ function _deleteChannel() {
 }
 function updateVoiceChannelStatus(arg0, status) {
   const HTTP = sendRequest.HTTP;
-  { url: closure_6.UPDATE_VOICE_CHANNEL_STATUS(arg0), body: obj, rejectWithError: null };
+  obj = { url: closure_6.UPDATE_VOICE_CHANNEL_STATUS(arg0), body: obj, rejectWithError: null };
   obj = { status };
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
@@ -379,7 +384,7 @@ function removeLinkedLobby(closure_1_0) {
   return HTTP.del({ url: closure_6.CHANNEL_LINKED_LOBBY(closure_1_0), rejectWithError: true });
 }
 ({ Endpoints: closure_6, Layers, ChannelSettingsSections: error } = ME);
-let result = require("obj132").fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");
 
 export default { init, open, close, setSection, selectPermissionOverwrite, updateChannel, saveChannel, deleteChannel, updateVoiceChannelStatus, removeLinkedLobby };
 export { init };

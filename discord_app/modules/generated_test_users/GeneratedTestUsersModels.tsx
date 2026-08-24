@@ -24,6 +24,6 @@ GeneratedTestPoolRecord.prototype["setPassword"] = function setPassword(closure_
   this.password = closure_0;
   return this;
 };
-const result = require("obj132").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersModels.tsx");
+const result = require("set").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersModels.tsx");
 
 export { GeneratedTestPoolRecord };

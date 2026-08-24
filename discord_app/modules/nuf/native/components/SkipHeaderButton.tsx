@@ -4,15 +4,16 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import GenericHeaderTitle from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { button: null, insideNavigatorButton: null };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingRight: 16 };
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/SkipHeaderButton.tsx");
 
 export default function SkipHeaderButton(label) {
   const tmp = callback();

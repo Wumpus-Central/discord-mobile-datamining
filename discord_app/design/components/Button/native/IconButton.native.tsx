@@ -7,7 +7,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles((arg0) => {
   const labelPressable = { paddingBottom: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
@@ -55,6 +55,6 @@ const forwardRefResult = importAllResult.forwardRef((grow) => {
   }
   return tmp9;
 });
-const result = require("obj132").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
 
 export const IconButton = forwardRefResult;

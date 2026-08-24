@@ -1,9 +1,9 @@
 // discord_app/modules/group_dm/getGroupDMRecipientLimit.tsx
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_0 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_1, MAX_GROUP_DM_STAFF_PARTICIPANTS: obj1 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/group_dm/getGroupDMRecipientLimit.tsx");
+const result = require("set").fileFinishedImporting("modules/group_dm/getGroupDMRecipientLimit.tsx");
 
 export default function getGroupDMRecipientLimit(userLimit) {
   currentUser = currentUser.getCurrentUser();

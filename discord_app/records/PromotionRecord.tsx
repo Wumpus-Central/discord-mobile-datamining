@@ -1,10 +1,10 @@
 // discord_app/records/PromotionRecord.tsx
 import hasFlag from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import toJSDefault from "../lib/Record.tsx";
-import createFromServer from "../modules/premium/promotions/MarketingComponentRecord.tsx";
+import closure_2 from "../modules/premium/promotions/MarketingComponentRecord.tsx";
 import { CountryListMode } from "../modules/premium/promotions/constants.tsx";
 
-require = fn;
+require = arg1;
 toJSDefault;
 let PromotionRecord;
 class PromotionRecord extends tmp2 {
@@ -117,7 +117,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   if (marketing_components == null) {
     marketing_components = [];
   }
-  obj[20] = marketing_components.map((item, index) => closure_1_2.createFromServer(item, { startDate: date, endDate: date1 }));
+  obj[20] = marketing_components.map((arg0) => closure_1_2.createFromServer(arg0, { startDate: date, endDate: date1 }));
   const metadata = id.metadata;
   let reward_sku_ids;
   if (metadata != null) {
@@ -165,13 +165,13 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
 };
 Object.defineProperty(prototype, "isBogo", {
   get: function isBogo() {
-    return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.BOGO;
+    return this.promotionType === CountryListMode.PromotionTypes.BOGO;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMarketingMoment", {
   get: function isMarketingMoment() {
-    return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.MARKETING_MOMENT;
+    return this.promotionType === CountryListMode.PromotionTypes.MARKETING_MOMENT;
   },
   set: undefined
 });
@@ -186,15 +186,15 @@ prototype["hasFlag"] = function hasFlag(arg0) {
 };
 prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
   const self = this;
-  if (this.countryListMode === CountryListMode /* CountryListMode */.CountryListMode.ALLOWLIST) {
+  if (this.countryListMode === CountryListMode.CountryListMode.ALLOWLIST) {
     const allowedCountries = self.allowedCountries;
     return !allowedCountries.includes(arg0);
   } else {
     const promotionType = self.promotionType;
-    if (CountryListMode /* CountryListMode */.PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
-      if (CountryListMode /* CountryListMode */.PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
-        if (CountryListMode /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
-          if (CountryListMode /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
+    if (tmp(7656).PromotionTypes.THIRD_PARTY_INBOUND !== promotionType) {
+      if (tmp(7656).PromotionTypes.THIRD_PARTY_DIRECT_FULFILLMENT !== promotionType) {
+        if (tmp(7656).PromotionTypes.THIRD_PARTY_OUTBOUND !== promotionType) {
+          if (tmp(7656).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING !== promotionType) {
             return false;
           }
         }
@@ -206,6 +206,6 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return inboundRestrictedCountries.includes(arg0);
   }
 };
-const result = require("obj132").fileFinishedImporting("records/PromotionRecord.tsx");
+const result = require("set").fileFinishedImporting("records/PromotionRecord.tsx");
 
 export default PromotionRecord;

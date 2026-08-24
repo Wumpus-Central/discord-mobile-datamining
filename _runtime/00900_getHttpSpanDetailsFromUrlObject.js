@@ -1,7 +1,5 @@
 // _runtime/00900_getHttpSpanDetailsFromUrlObject.js
-import _mod839 from "metro/00839__.js";
-
-require = arg1;
+const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUrlObject(hash, arg1, arg2, method) {
@@ -13,14 +11,15 @@ arg5.getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUrlObject(
       str2 = "http.route";
     }
     obj[str2] = str;
-    obj[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
+    obj[tmp(839).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
   }
   method = undefined;
   if (method != null) {
     method = method.method;
   }
   if (method) {
-    obj[_mod839.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] = method.method.toUpperCase();
+    obj[tmp(839).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] = method.method.toUpperCase();
+    const str5 = method.method;
   }
   if (hash) {
     if (hash.search) {
@@ -32,11 +31,11 @@ arg5.getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUrlObject(
     if (hash.pathname) {
       obj["url.path"] = hash.pathname;
       if ("/" === hash.pathname) {
-        obj[_mod839.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
+        obj[tmp(839).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
       }
     }
     if (!("isRelative" in hash)) {
-      obj[_mod839.SEMANTIC_ATTRIBUTE_URL_FULL] = hash.href;
+      obj[tmp(839).SEMANTIC_ATTRIBUTE_URL_FULL] = hash.href;
       if (hash.port) {
         obj["url.port"] = hash.port;
       }

@@ -5,7 +5,7 @@ import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 import { DatePickerAndroid } from "08831_getStyle.js";
 
-require = fn;
+require = arg1;
 ({ Appearance: obj1, Platform, Text } = get_ActivityIndicator);
 function getTheme(arg0) {
 
@@ -36,14 +36,15 @@ export default noopDefault.memo((theme) => {
     let str = theme.theme;
   } else {
     str = "auto";
-    if (store) {
-      const colorScheme = store.getColorScheme();
+    if (closure_2) {
+      const colorScheme = obj3.getColorScheme();
       let tmp9;
       if (null !== colorScheme) {
         tmp9 = colorScheme;
       }
       str = tmp9;
     }
+    obj3 = closure_2;
   }
   let str2 = "white";
   let str3 = "white";
@@ -55,28 +56,29 @@ export default noopDefault.memo((theme) => {
     str3 = str5;
   }
   obj.textColor = colorToHex.colorToHex(str3);
-  let tmp4Result = colorToHex;
+  let tmp4Result = tmp4(8835);
   if (typeof getDividerColor !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (theme.dividerColor) {
     let dividerColor = theme.dividerColor;
   } else {
-    if (typeof getTheme !== "function") {
+    if (typeof tmp6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (theme.theme) {
       let str6 = theme.theme;
     } else {
       str6 = "auto";
-      if (store) {
-        const colorScheme1 = store.getColorScheme();
+      if (closure_2) {
+        const colorScheme1 = obj5.getColorScheme();
         let tmp12;
         if (null !== colorScheme1) {
           tmp12 = colorScheme1;
         }
         str6 = tmp12;
       }
+      obj5 = closure_2;
     }
     dividerColor = str2;
     if ("dark" !== str6) {
@@ -88,28 +90,29 @@ export default noopDefault.memo((theme) => {
     }
   }
   obj.dividerColor = tmp4Result.colorToHex(dividerColor);
-  tmp4Result = colorToHex;
+  tmp4Result = tmp4(8835);
   if (typeof getButtonColor !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (theme.buttonColor) {
     str2 = theme.buttonColor;
   } else {
-    if (typeof getTheme !== "function") {
+    if (typeof tmp6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (theme.theme) {
       let str9 = theme.theme;
     } else {
       str9 = "auto";
-      if (store) {
-        const colorScheme2 = store.getColorScheme();
+      if (closure_2) {
+        const colorScheme2 = obj7.getColorScheme();
         let tmp15;
         if (null !== colorScheme2) {
           tmp15 = colorScheme2;
         }
         str9 = tmp15;
       }
+      obj7 = closure_2;
     }
     if ("dark" !== str9) {
       let str11;
@@ -127,14 +130,15 @@ export default noopDefault.memo((theme) => {
     let str12 = theme.theme;
   } else {
     str12 = "auto";
-    if (store) {
-      const colorScheme3 = store.getColorScheme();
+    if (closure_2) {
+      const colorScheme3 = obj8.getColorScheme();
       let tmp18;
       if (null !== colorScheme3) {
         tmp18 = colorScheme3;
       }
       str12 = tmp18;
     }
+    obj8 = closure_2;
   }
   obj.theme = str12;
   if (typeof getTitle !== "function") {
@@ -176,6 +180,7 @@ export default noopDefault.memo((theme) => {
   obj.mode = str19;
   if (null != theme.timeZoneOffsetInMinutes) {
     str13 = theme.timeZoneOffsetInMinutes.toString();
+    const str20 = theme.timeZoneOffsetInMinutes;
   }
   obj.timeZoneOffsetInMinutes = str13;
   return <DatePickerAndroid />;

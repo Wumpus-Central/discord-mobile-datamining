@@ -8,10 +8,10 @@ import registerAsset3 from "../../../../../../../_runtime/09122_registerAsset.js
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
 
 export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor) {
   ({ style, color } = secondaryColor);
@@ -27,7 +27,8 @@ export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor
     str2 = "#fff";
   }
   const merged = Object.assign(secondaryColor, Object.create(null));
-  let obj = { source: registerAsset, color, style };
+  let obj = { children: null };
+  obj = { source: registerAsset, color, style };
   const merged1 = Object.assign(merged);
   const items = [callback(BaseIconImage.BaseIconImage, obj), , ];
   obj = { source: registerAsset2, color: str, style: items2 };

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx
-import comparator from "../../stores/GuildChannelStore.tsx";
+import closure_2 from "../../stores/GuildChannelStore.tsx";
 import { GUILD_VOCAL_CHANNELS_KEY } from "../../stores/GuildChannelStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_4 from "../../stores/PermissionStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
 
 export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartStageIn(guild) {
   let id;
@@ -16,20 +16,21 @@ export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartSt
   }
   const items = [closure_2, closure_4];
   const items1 = [id];
-  return id(589).useStateFromStoresArray(items, () => closure_1_2.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].reduce((acc, item, index) => {
-    const channel = item.channel;
+  return id(589).useStateFromStoresArray(items, () => closure_1_2.getChannels(id)[closure_1_3].reduce((arr, channel) => {
+    channel = channel.channel;
     if (channel.isGuildStageVoice()) {
-      const channel2 = item.channel;
+      const channel2 = channel.channel;
       if (closure_4 !== undefined) {
         let canResult = channel2.isGuildStageVoice();
         if (canResult) {
-          canResult = closure_4.can(callback(table[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
+          canResult = obj.can(callback(table[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
         }
         if (canResult) {
-          acc.push(channel);
+          arr.push(channel);
         }
       }
+      obj = closure_4;
     }
-    return acc;
+    return arr;
   }, []), items1);
 };

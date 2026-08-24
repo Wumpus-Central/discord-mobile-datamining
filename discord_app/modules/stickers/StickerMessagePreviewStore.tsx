@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/StickerMessagePreviewStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import handleChanged from "../../stores/DraftStore.tsx";
@@ -29,6 +29,6 @@ const stickerMessagePreviewStore = new StickerMessagePreviewStore(dispatcherDefa
     closure_2 = {};
   }
 });
-const result = obj132.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
+const result = set.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
 
 export default stickerMessagePreviewStore;

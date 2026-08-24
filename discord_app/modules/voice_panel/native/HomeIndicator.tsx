@@ -3,7 +3,7 @@ import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.
 import keys from "../../../../_runtime/00644_keys.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
+const require = arg1;
 keys = keys.create(() => ({ autoHideHomeIndicator: false }));
 let HomeIndicator;
 const Component = importAllResult.Component;
@@ -69,7 +69,6 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
       const DCDHomeIndicator2 = tmp5.DCDHomeIndicator;
       const result1 = DCDHomeIndicator2.setPrefersDeferringSystemGestures(tmp2);
     }
-    obj3 = callback(500);
   });
 };
 prototype["componentDidMount"] = function componentDidMount() {
@@ -88,7 +87,7 @@ prototype["render"] = function render() {
 HomeIndicator.defaultProps = { prefersHidden: false, prefersDeferringSystemGestures: false };
 HomeIndicator._propsStack = [];
 HomeIndicator._updateImmediate = null;
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/HomeIndicator.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/HomeIndicator.tsx");
 
 export default HomeIndicator;
 export const useHomeIndicatorStore = keys;

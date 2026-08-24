@@ -1,10 +1,10 @@
 // _runtime/16439_AnimatedChild.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00032__slicedToArray.js";
 import importAllResult from "00019_noop.js";
 import { StyleSheet, View } from "00017_get_ActivityIndicator.js";
 import jsxProd from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = { code: "function pnpm_indexTsx1(){const{index,textWidth,spacing,anim}=this.__closure;return{position:'absolute',left:index*(textWidth.value+spacing),transform:[{translateX:-(anim.value%(textWidth.value+spacing))}]};}" };
@@ -14,8 +14,9 @@ function AnimatedChild(children) {
   const textWidth = children.textWidth;
   const spacing = children.spacing;
   const fn = function c() {
-    const obj = { translateX: -anim.value % (textWidth.value + spacing) };
-    const items = [obj];
+    let obj = { position: "absolute", left: index * (textWidth.value + spacing), transform: items };
+    obj = { translateX: -anim.value % (textWidth.value + spacing) };
+    items = [obj];
     return obj;
   };
   fn.__closure = { index, textWidth, spacing, anim };
@@ -40,14 +41,18 @@ export const Marquee = importAllResult.memo((speed) => {
   if (num2 === undefined) {
     num2 = 0;
   }
+  let sharedValue;
+  let sharedValue1;
+  c5 = undefined;
+  let sharedValue2;
   let obj = num(num2[4]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   obj1 = num(num2[4]);
-  const sharedValue1 = obj1.useSharedValue(0);
+  sharedValue1 = obj1.useSharedValue(0);
   [tmp4, tmp5] = sharedValue(sharedValue1.useState(0), 2);
   c5 = tmp5;
   let obj2 = num(num2[4]);
-  const sharedValue2 = obj2.useSharedValue(0);
+  sharedValue2 = obj2.useSharedValue(0);
   let obj3 = num(num2[4]);
   const fn = function w() {
     sharedValue2.value = sharedValue2.value + num;
@@ -108,11 +113,11 @@ export const Marquee = importAllResult.memo((speed) => {
     const _Array = Array;
     const items1 = [];
     HermesBuiltin.arraySpread(Array(tmp4).keys(), 0);
-    mapped = items1.map((item, index) => sharedValue2(AnimatedChild, { index: item, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children }, "clone-" + item));
+    mapped = items1.map((index) => sharedValue2(closure_1_9, { index, anim: sharedValue2, textWidth: sharedValue1, spacing: num2, children }, "clone-" + index));
     const ArrayResult = Array(tmp4);
   }
   items[1] = mapped;
   obj1[2] = items;
-  obj[3] = callback(children(num2[4]).View, obj1);
+  obj[3] = closure_7(children(num2[4]).View, obj1);
   return sharedValue2(children(num2[4]).View, obj);
 });

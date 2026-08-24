@@ -3,16 +3,16 @@ import PlatformTypes from "../../../discord_common/js/shared/utils/PlatformUtils
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import useSKUPrice from "../storefront/StorefrontUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import createUserWidgetFromServer from "../user_profile/UserProfileStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import handlePaymentSourceCreateEnd from "../../stores/billing/BillingInfoStore.tsx";
-import fromServer from "records/WishlistRecommendationRecord.tsx";
-import fromServer2 from "records/WishlistRecord.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_profile/UserProfileStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "../../stores/billing/BillingInfoStore.tsx";
+import closure_7 from "records/WishlistRecommendationRecord.tsx";
+import closure_8 from "records/WishlistRecord.tsx";
 import { getWishlistSkuIds } from "records/WishlistRecord.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function extraWishlistParams() {
   const obj = {};
   if (null != closure_6.ipCountryCode) {
@@ -30,14 +30,15 @@ function extraWishlistParams() {
 }
 function maybeDispatchAdditionalActions(wishlist_items) {
   wishlist_items = wishlist_items.wishlist_items;
-  const mapped = wishlist_items.map((item, index) => item.sku);
+  const mapped = wishlist_items.map((sku) => sku.sku);
   const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   let obj = dispatcherDefault;
   obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: found });
   const storefront_pricing = wishlist_items.storefront_pricing;
   if (null != storefront_pricing) {
+    obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
     obj = { type: "skus", skuIds: null };
-    obj[1] = found.map((item, index) => item.id);
+    obj[1] = found.map((id) => id.id);
     obj[1] = obj;
     const tmp3Result = dispatcherDefault;
     obj[2] = useSKUPrice.transformStorefrontPricesServer(storefront_pricing);
@@ -46,25 +47,25 @@ function maybeDispatchAdditionalActions(wishlist_items) {
   }
 }
 ({ AnalyticEvents: c10, Endpoints: unpackModuleId, PaymentGateways: closure_12 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/wishlists/WishlistActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/WishlistActionCreators.tsx");
 
 export default {
-  fetchWishlist(wishlistId, stateFromStores, USER_PROFILE) {
-    closure_0 = wishlistId;
+  fetchWishlist(arg0, stateFromStores, USER_PROFILE) {
+    closure_0 = arg0;
     closure_1 = stateFromStores;
     closure_2 = USER_PROFILE;
     return callback(function*() {
       closure_2 = tmp3;
       obj1 = { type: "WISHLIST_FETCH_START", wishlistId: null };
-      obj1[1] = wishlistId;
-      stateFromStores(closure_1_2[9]).dispatch(obj1);
+      obj1[1] = closure_1_0;
+      closure_1_1(closure_1_2[9]).dispatch(obj1);
       c4 = 1;
-      const HTTP = wishlistId(closure_1_2[11]).HTTP;
+      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
       const obj2 = { url: null, query: null, rejectWithError: true };
-      obj2[0] = closure_1_11.USER_WISHLIST(wishlistId);
+      obj2[0] = closure_1_11.USER_WISHLIST(closure_1_0);
       USER_PROFILE = closure_1_2;
       if (closure_1_2 == null) {
-        USER_PROFILE = wishlistId(closure_1_2[12]).WishlistFetchSource.USER_PROFILE;
+        USER_PROFILE = closure_1_0(closure_1_2[12]).WishlistFetchSource.USER_PROFILE;
       }
       const obj3 = { source: null };
       obj3[0] = USER_PROFILE;
@@ -73,13 +74,13 @@ export default {
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c4 = 0;
-        const obj4 = stateFromStores(closure_1_2[9]);
+        const obj4 = closure_1_1(closure_1_2[9]);
         const obj5 = { type: "WISHLIST_FETCH_FAILURE", wishlistId: null, error: null };
         obj5[1] = USER_PROFILE;
-        const aPIError = new wishlistId(closure_1_2[14]).APIError(closure_3);
+        const aPIError = new closure_1_0(closure_1_2[14]).APIError(closure_3);
         obj5[2] = aPIError;
         obj4.dispatch(obj5);
-        let obj6 = stateFromStores(closure_1_2[13]);
+        let obj6 = closure_1_1(closure_1_2[13]);
         obj6.captureException(closure_3);
         c6 = 3;
       } else if (arg0 === 1) {
@@ -93,13 +94,13 @@ export default {
           wishlist_items = body.wishlist_items;
         }
         if (null == wishlist_items) {
-          const obj = stateFromStores(closure_1_2[13]);
+          const obj = closure_1_1(closure_1_2[13]);
           obj.captureMessage("Wishlist items not found in response");
         }
         body = USER_PROFILE.body;
         closure_1_14(body);
         closure_2 = closure_1_8.fromServer(body);
-        obj1 = stateFromStores(closure_1_2[9]);
+        obj1 = closure_1_1(closure_1_2[9]);
         obj6 = { type: "WISHLIST_FETCH_SUCCESS", wishlistId: null, wishlistData: null, updatedAt: null };
         obj6[1] = USER_PROFILE;
         obj6[2] = closure_2;
@@ -112,18 +113,18 @@ export default {
     })();
   },
   addSkuToWishlist(closure_1_1, closure_1_2) {
-    closure_0 = importDefault;
-    closure_1 = dependencyMap;
+    closure_0 = closure_1_1;
+    closure_1 = closure_1_2;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp8 === 3) {
         if (arg0 === 1) {
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -134,14 +135,14 @@ export default {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c5 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
-              body = tmp4;
+              let body = tmp4;
               closure_0 = tmp9;
               body = undefined;
               let user;
@@ -176,16 +177,16 @@ export default {
             if (2 === tmp9) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw body;
+                throw arg1;
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
                 const obj5 = { value: null, done: true };
-                obj5[0] = body;
+                obj5[0] = arg1;
                 return obj5;
               } else {
-                closure_0 = body;
-                body = body.body;
+                closure_0 = arg1;
+                body = arg1.body;
                 closure_1_14(body);
                 user = closure_1_8.fromServer(body);
                 const obj6 = { type: "WISHLIST_ADD_SKU_SUCCESS", wishlistId: null, skuId: null, wishlistData: null };
@@ -215,14 +216,14 @@ export default {
                   c3 = 0;
                 } else if (arg0 === 1) {
                   c5 = 3;
-                  throw body;
+                  throw arg1;
                 } else if (arg0 !== 2) {
                   c3 = 0;
                 }
                 c3 = 0;
                 c5 = 3;
                 obj = { value: null, done: true };
-                obj[0] = body;
+                obj[0] = arg1;
                 return obj;
               }
               c5 = 3;
@@ -261,7 +262,7 @@ export default {
   },
   removeSkuFromWishlist(wishlistId, closure_1_1, analyticsLocations) {
     closure_0 = wishlistId;
-    closure_1 = importDefault;
+    closure_1 = closure_1_1;
     closure_2 = analyticsLocations;
     return callback(function*() {
       if (c5 === 2) {
@@ -269,10 +270,10 @@ export default {
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -283,26 +284,26 @@ export default {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c5 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
               let id = tmp3;
-              body = tmp7;
+              let body = tmp7;
               body = undefined;
               id = undefined;
               closure_2 = undefined;
               obj1 = { type: "WISHLIST_REMOVE_SKU_START", wishlistId: null, skuId: null };
-              obj1[1] = wishlistId;
+              obj1[1] = closure_1_0;
               obj1[2] = closure_1_1;
-              closure_1_1(analyticsLocations[9]).dispatch(obj1);
+              closure_1_1(closure_1_2[9]).dispatch(obj1);
               c3 = 1;
-              const HTTP = wishlistId(analyticsLocations[11]).HTTP;
+              const HTTP = closure_1_0(closure_1_2[11]).HTTP;
               const obj2 = { url: null, query: null, rejectWithError: true };
-              obj2[0] = closure_1_11.USER_WISHLIST_ITEM(wishlistId, closure_1_1);
+              obj2[0] = closure_1_11.USER_WISHLIST_ITEM(closure_1_0, closure_1_1);
               const obj3 = {};
               const merged = Object.assign(closure_1_13());
               obj2[1] = obj3;
@@ -315,11 +316,11 @@ export default {
           } else if (1 === tmp7) {
             c3 = 0;
             closure_3 = closure_2;
-            obj1 = closure_1_1(analyticsLocations[9]);
+            obj1 = closure_1_1(closure_1_2[9]);
             const obj5 = { type: "WISHLIST_REMOVE_SKU_FAILURE", wishlistId: null, skuId: null, error: null };
             obj5[1] = body;
             obj5[2] = id;
-            const aPIError = new wishlistId(analyticsLocations[14]).APIError(closure_3);
+            const aPIError = new closure_1_0(closure_1_2[14]).APIError(closure_3);
             obj5[3] = aPIError;
             obj1.dispatch(obj5);
             throw closure_3;
@@ -327,18 +328,18 @@ export default {
             if (2 === tmp7) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw body;
+                throw arg1;
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
                 obj = { value: null, done: true };
-                obj[0] = body;
+                obj[0] = arg1;
                 return obj;
               } else {
-                body = body.body;
+                body = arg1.body;
                 closure_1_14(body);
                 id = closure_1_8.fromServer(body);
-                let obj6 = closure_1_1(analyticsLocations[9]);
+                let obj6 = closure_1_1(closure_1_2[9]);
                 obj6 = { type: "WISHLIST_REMOVE_SKU_SUCCESS", wishlistId: null, skuId: null, wishlistData: null };
                 obj6[1] = body;
                 obj6[2] = id;
@@ -352,9 +353,9 @@ export default {
                   obj7[2] = id;
                   obj7[3] = closure_2;
                   obj7[4] = closure_2;
-                  closure_1_1(analyticsLocations[15]).track(closure_1_10.WISHLIST_UPDATED, obj7);
+                  closure_1_1(closure_1_2[15]).track(closure_1_10.WISHLIST_UPDATED, obj7);
                   c3 = 1;
-                  const obj9 = closure_1_1(analyticsLocations[15]);
+                  const obj9 = closure_1_1(closure_1_2[15]);
                 }
               }
             } else {
@@ -386,10 +387,10 @@ export default {
         HermesBuiltin.throwTypeError();
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
-          throw body;
+          throw arg1;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = body;
+          obj[0] = arg1;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -400,11 +401,11 @@ export default {
           if (0 === currentUser) {
             if (arg0 === 1) {
               c6 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
               closure_2 = tmp3;
@@ -415,9 +416,9 @@ export default {
               if (null != currentUser) {
                 c3 = 1;
                 callback = closure_1_14;
-                const HTTP = wishlistId(closure_1_2[11]).HTTP;
+                const HTTP = closure_1_0(closure_1_2[11]).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: true };
-                obj1[0] = closure_1_11.USER_WISHLIST_PATCH(wishlistId);
+                obj1[0] = closure_1_11.USER_WISHLIST_PATCH(closure_1_0);
                 const obj2 = { visibility: null };
                 obj2[0] = callback2;
                 const merged = Object.assign(closure_1_13());
@@ -437,7 +438,7 @@ export default {
             obj3 = callback2(closure_1_2[9]);
             const obj4 = { type: "WISHLIST_UPDATE_VISIBILITY_FAILURE", wishlistId: null, error: null };
             obj4[1] = callback;
-            const aPIError = new wishlistId(closure_1_2[14]).APIError(callback2);
+            const aPIError = new closure_1_0(closure_1_2[14]).APIError(callback2);
             obj4[2] = aPIError;
             obj3.dispatch(obj4);
             throw callback2;
@@ -446,12 +447,12 @@ export default {
               c3 = 1;
             } else if (arg0 === 1) {
               c6 = 3;
-              throw body;
+              throw arg1;
             } else if (arg0 === 2) {
               c3 = 0;
               c6 = 3;
               obj = { value: null, done: true };
-              obj[0] = body;
+              obj[0] = arg1;
               return obj;
             } else {
               c3 = 1;
@@ -460,15 +461,15 @@ export default {
           }
           if (arg0 === 1) {
             c6 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
             c6 = 3;
             const obj5 = { value: null, done: true };
-            obj5[0] = body;
+            obj5[0] = arg1;
             return obj5;
           } else {
-            callback(body.body);
+            callback(arg1.body);
             const obj6 = { type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: null, visibility: null };
             obj6[1] = callback;
             obj6[2] = callback2;
@@ -478,7 +479,7 @@ export default {
             currentUser = 4;
             c6 = 1;
             const obj7 = { value: null, done: false };
-            obj7[0] = wishlistId(closure_1_2[16]).fetchProfile(wishlistId.id);
+            obj7[0] = closure_1_0(closure_1_2[16]).fetchProfile(closure_1_0.id);
             return obj7;
           }
         } catch (tmp34) {
@@ -535,9 +536,9 @@ export default {
         if (2 === tmp7) {
           if (arg0 === 1) {
             c5 = 3;
-            throw body;
+            throw arg1;
           } else if (arg0 !== 2) {
-            body = body.body;
+            body = arg1.body;
             closure_1_14(body);
             closure_1 = closure_1_8.fromServer(body);
             const obj6 = { type: "WISHLIST_REORDER_SUCCESS", wishlistId: null, wishlistData: null };
@@ -545,6 +546,7 @@ export default {
             obj6[2] = closure_1;
             closure_1_1(closure_1_2[9]).dispatch(obj6);
             if (null != c5) {
+              c3 = 2;
               closure_2 = closure_1_9(closure_1);
               const obj = closure_1_1(closure_1_2[15]);
               const obj7 = { wishlist_id: null, action_type: "REORDER", sku_id: null, sku_ids: null, location_stack: null };
@@ -563,12 +565,16 @@ export default {
         c3 = 0;
       }
       c3 = 0;
-      return body;
+      return arg1;
     })();
   },
-  fetchWishlistRecommendations(memo3, applicationIds, stateFromStores1) {
-    closure_0 = memo3;
-    closure_1 = applicationIds;
+  fetchWishlistRecommendations(arg0, arg1, stateFromStores1) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    let num = stateFromStores1;
+    if (stateFromStores1 === undefined) {
+      num = 20;
+    }
     let flag = arg3;
     if (arg3 === undefined) {
       flag = true;
@@ -576,26 +582,26 @@ export default {
     return flag(function*() {
       closure_1 = tmp3;
       obj1 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: null, applicationIds: null };
-      obj1[1] = applicationIds;
-      obj1[2] = memo3;
-      applicationIds(num[9]).dispatch(obj1);
+      obj1[1] = closure_1_1;
+      obj1[2] = closure_1_0;
+      closure_1_1(closure_1_2[9]).dispatch(obj1);
       c3 = 1;
-      const HTTP = memo3(num[11]).HTTP;
+      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
       let obj2 = { url: null, query: null, rejectWithError: true };
       obj2[0] = closure_1_11.USER_WISHLIST_RECOMMENDATIONS;
       const obj3 = { application_ids: null, user_ids: null, max_recommendations: null, localize: null };
-      obj3[0] = memo3;
-      obj3[1] = applicationIds;
-      obj3[2] = num;
+      obj3[0] = closure_1_0;
+      obj3[1] = closure_1_1;
+      obj3[2] = closure_1_2;
       obj3[3] = c3;
       const merged = Object.assign(closure_1_13());
       obj2[1] = obj3;
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c3 = 0;
-        obj1 = applicationIds(num[13]);
+        obj1 = closure_1_1(closure_1_2[13]);
         obj1.captureException(closure_2);
-        obj2 = applicationIds(num[9]);
+        obj2 = closure_1_1(closure_1_2[9]);
         let obj5 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: null, applicationIds: null };
         obj5[1] = closure_1;
         obj5[2] = body;
@@ -603,21 +609,22 @@ export default {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw body;
+        throw arg1;
       } else if (arg0 !== 2) {
-        body = body.body;
+        body = arg1.body;
         (function maybeDispatchAdditionalActionsForRecommendation(body) {
           let obj = callback(tmp21[9]);
           obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body.skus });
           ({ storefront_pricing, skus } = body);
           if (null != storefront_pricing) {
+            obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
             obj = { type: "skus", skuIds: null };
-            obj[1] = skus.map((item, index) => item.id);
+            obj[1] = skus.map((id) => id.id);
             obj[1] = obj;
-            const tmpResult = callback(tmp21[9]);
-            obj[2] = body(tmp21[10]).transformStorefrontPricesServer(storefront_pricing);
+            const tmpResult = callback(tmp2[9]);
+            obj[2] = body(tmp2[10]).transformStorefrontPricesServer(storefront_pricing);
             tmpResult.dispatch(obj);
-            const obj5 = body(tmp21[10]);
+            const obj5 = body(tmp2[10]);
           }
         })(body);
         closure_1 = closure_1_7.fromServer(body);
@@ -625,12 +632,12 @@ export default {
         obj6[1] = closure_1;
         obj6[2] = body;
         obj6[3] = closure_1;
-        applicationIds(num[9]).dispatch(obj6);
+        closure_1_1(closure_1_2[9]).dispatch(obj6);
         c3 = 0;
-        const obj8 = applicationIds(num[9]);
+        const obj8 = closure_1_1(closure_1_2[9]);
       }
       c3 = 0;
-      return body;
+      return arg1;
     })();
   }
 };

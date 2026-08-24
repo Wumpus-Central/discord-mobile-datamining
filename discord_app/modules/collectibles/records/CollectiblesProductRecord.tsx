@@ -1,13 +1,14 @@
 // discord_app/modules/collectibles/records/CollectiblesProductRecord.tsx
 import getPricesFromServerDefault from "../../skus/utils/getPricesFromServer.tsx";
 import fromServerDefault from "CollectiblesStoreListingRecord.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import fromServer from "CollectiblesBundledProductRecord.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "CollectiblesBundledProductRecord.tsx";
 import createCollectiblesItemsFromServerResponse from "CollectiblesItemRecord.tsx";
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "../CollectiblesShopConstants.tsx";
 import ME from "../../../Constants.tsx";
+import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-const require = fn;
+const require = arg1;
 ({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } = createCollectiblesItemsFromServerResponse);
 fromServerDefault;
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: c9 } = ME);
@@ -36,7 +37,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   }
   obj.premiumType = tmp8;
   obj.categorySkuId = category_sku_id;
-  obj.isCategoryReward = closure_7.some((item, index) => item.rewardSkuId === merged.sku_id);
+  obj.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === merged.sku_id);
   obj.prices = getPricesFromServerDefault(prices);
   obj.items = callback(merged.items);
   let mapped;
@@ -79,7 +80,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
     if (null != collectibles) {
       if (skus.skus.length > 1) {
-        let type = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
+        let type = _CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
       } else {
         type = collectibles.type;
       }
@@ -87,19 +88,21 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       if (obj == null) {
         obj = {};
       }
+      let items = obj.items;
       obj = { storeListingId: null, skuId: null, name: null, summary: null, styles: null, type: null, premiumType: null, items: null, categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, variants: null, googleSkuIds: null, eligibleOffers: "r", isFirstParty: "r", bundledProducts: "isArray" };
       ({ id: obj2[0], id: obj2[1] } = first);
       ({ name: obj2[2], summary: obj2[3], primaryCollectionStyles: obj2[4] } = skus);
       obj[5] = type;
-      let items = closure_8;
-      let premiumType = null;
+      let premiumType = collectibles.premiumType;
+      items = closure_8;
+      premiumType = null;
       if (premiumType !== closure_8) {
         premiumType = collectibles.premiumType;
       }
       obj[6] = premiumType;
       if (items == null) {
         items = [obj.item];
-        items = items.filter((item, index) => null != item);
+        items = items.filter((arg0) => null != arg0);
       }
       obj[7] = items;
       let str = skus.primaryCollectionId;
@@ -110,16 +113,16 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         str = "";
       }
       obj[8] = str;
-      obj[9] = closure_7.some((item, index) => item.rewardSkuId === first.id);
+      obj[9] = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === first.id);
       ({ prices: obj2[10], previewAssetPaths } = first);
       obj[11] = previewAssetPaths;
-      let str2 = require("../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx").CollectiblesItemType.VARIANTS_GROUP;
+      let str2 = _CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
       let found;
       if (type === str2) {
         skus = skus.skus;
-        str2 = skus.map((item, index) => {
-          skus = item;
-          const tenantMetadata = item.tenantMetadata;
+        str2 = skus.map((tenantMetadata) => {
+          skus = tenantMetadata;
+          tenantMetadata = tenantMetadata.tenantMetadata;
           let collectibles;
           if (tenantMetadata != null) {
             collectibles = tenantMetadata.collectibles;
@@ -127,12 +130,12 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           if (null == collectibles) {
             return null;
           } else {
-            let obj = closure_1_6(item);
+            let obj = closure_1_6(tenantMetadata);
             if (obj == null) {
               obj = {};
             }
             ({ items, item } = obj);
-            first = closure_1_3(item.selectedOptions, 1)[0];
+            first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
             obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "accessibilityRole", items: "apply", categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
             obj[0] = skus.name;
             obj[1] = first.id;
@@ -149,7 +152,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               str2 = "";
             }
             obj[3] = str2;
-            ({ id: obj2[4], id: obj2[5], name: obj2[6], summary: obj2[7] } = item);
+            ({ id: obj2[4], id: obj2[5], name: obj2[6], summary: obj2[7] } = tenantMetadata);
             ({ type: obj2[9], premiumType } = collectibles);
             items = closure_1_8;
             premiumType = null;
@@ -159,7 +162,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             obj[10] = premiumType;
             if (items == null) {
               items = [item];
-              item = (item, index) => null != item;
+              item = (arg0) => null != arg0;
               items = items.filter(item);
             }
             obj[11] = items;
@@ -171,10 +174,10 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               str3 = "";
             }
             obj[12] = str3;
-            obj[13] = closure_1_7.some((item, index) => item.rewardSkuId === item.id);
-            ({ prices: obj2[14], previewAssetPaths } = item);
+            obj[13] = closure_1_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
+            ({ prices: obj2[14], previewAssetPaths } = tenantMetadata);
             obj[15] = previewAssetPaths;
-            let googleSkuIds = item.googleSkuIds;
+            let googleSkuIds = tenantMetadata.googleSkuIds;
             if (googleSkuIds == null) {
               obj = {};
               obj[closure_1_9.MOBILE] = "";
@@ -192,7 +195,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             return tmp16;
           }
         });
-        found = str2.filter((item, index) => null != item);
+        found = str2.filter((arg0) => null != arg0);
       }
       obj[12] = found;
       let googleSkuIds = first.googleSkuIds;
@@ -208,8 +211,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       const bundledSkus = first.bundledSkus;
       let found1;
       if (bundledSkus != null) {
-        const mapped = bundledSkus.map((item, index) => {
-          const tenantMetadata = item.tenantMetadata;
+        const mapped = bundledSkus.map((tenantMetadata) => {
+          tenantMetadata = tenantMetadata.tenantMetadata;
           let collectibles;
           if (tenantMetadata != null) {
             collectibles = tenantMetadata.collectibles;
@@ -224,12 +227,12 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               premiumType = collectibles.premiumType;
             }
             obj[1] = premiumType;
-            ({ name: obj[2], id: obj[3], summary: obj[4], prices: obj[5] } = item);
+            ({ name: obj[2], id: obj[3], summary: obj[4], prices: obj[5] } = tenantMetadata);
             tmp3 = new tmp3(obj);
           }
           return tmp3;
         });
-        found1 = mapped.filter((item, index) => null != item);
+        found1 = mapped.filter((arg0) => null != arg0);
       }
       obj[16] = found1;
       if (typeof CollectiblesProductRecord !== "function") {
@@ -242,7 +245,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
     }
   }
 };
-const prototype = function CollectiblesVariantProductRecord(arg0) {
+let prototype;
+prototype = function CollectiblesVariantProductRecord(arg0) {
   const tmp = new prototype(arg0, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue } = arg0);
@@ -252,8 +256,8 @@ class prototype extends CollectiblesProductRecord {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   ({ base_variant_name, base_variant_sku_id, variant_label, variant_value } = arg0);
-  Object.create(null);
-  const obj = {};
+  let obj = Object.create(null);
+  obj = {};
   let tmp2 = prototype;
   const fromServerResult = super.fromServer(Object.assign(arg0, obj));
   const merged = Object.assign(fromServerResult);
@@ -269,7 +273,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ baseVariantName: tmp5.baseVariantName, baseVariantSkuId: tmp5.baseVariantSkuId, variantLabel: tmp5.variantLabel, variantValue: tmp5.variantValue } = obj);
   return tmp2;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");
 
 export default CollectiblesProductRecord;
 export const CollectiblesVariantProductRecord = prototype;

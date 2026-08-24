@@ -1,18 +1,18 @@
 // discord_app/modules/polls/useCreatePollFormData.tsx
 import getPollVoteEventPropertiesDefault from "PollsActionCreators.tsx";
 import useRequestDefault from "../../hooks/useRequest.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../_runtime/00019_noop.js";
 import POLL_ATTACHMENT_FOLDER from "PollsConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function createPollCreationImageForMedia(mediaURL, status) {
   const mediaAttachmentState = { status, mediaURL };
   return { mediaAttachmentState, emoji: "Array", stickerId: "text" };
 }
 ({ MAX_NUMBER_OF_ANSWERS_PER_POLL: error, MIN_NUMBER_OF_ANSWERS_PER_POLL: closure_8, PollDurations: c9 } = POLL_ATTACHMENT_FOLDER);
-let result = require("obj132").fileFinishedImporting("modules/polls/useCreatePollFormData.tsx");
+let result = require("set").fileFinishedImporting("modules/polls/useCreatePollFormData.tsx");
 
 export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion) {
   closure_0 = id;
@@ -26,9 +26,9 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
     if (initialQuestion != null) {
       const initialAnswers = initialQuestion.initialAnswers;
       if (initialAnswers != null) {
-        mapped = initialAnswers.map((item, index) => {
+        mapped = initialAnswers.map((arg0) => {
           const merged = Object.assign(callback(table[4]).generateEmptyPollAnswer());
-          const merged1 = Object.assign(item);
+          const merged1 = Object.assign(arg0);
           return {};
         });
       }
@@ -68,9 +68,9 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
   [tmp12, closure_11] = first(obj.useState({}), 2);
   const tmpResult3 = first(obj.useState(false), 2);
   closure_12 = tmp14;
-  const found = first.filter((item, index) => callback(initialQuestion[4]).isAnswerFilled(item));
+  const found = first.filter((text) => callback(initialQuestion[4]).isAnswerFilled(text));
   let tmp15 = first1.length > 0;
-  const found1 = first.filter((item, index) => callback(initialQuestion[4]).isIncompleteAnswer(item));
+  const found1 = first.filter((text) => callback(initialQuestion[4]).isIncompleteAnswer(text));
   if (tmp15) {
     tmp15 = found.length >= closure_8;
   }
@@ -137,6 +137,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       const obj2 = callback(initialQuestion[8]);
     }
   }, items);
+  closure_0 = undefined;
   closure_0 = id((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -174,7 +175,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
               dependencyMap = tmp3;
               const callback = closure_1;
               closure_1 = callback2;
-              callback3(callback, closure_1);
+              closure_1_19(callback, closure_1);
               closure_1_18(first3(callback2, callback(11381).PollMediaUploadAttachmentStatus.PREPARING), closure_1);
               table = 1;
               c6 = 1;
@@ -221,7 +222,8 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
   const callback5 = obj.useCallback((arg0, arg1, arg2) => {
     const objectURL = URL.createObjectURL(arg2);
     callback3(arg0, arg1);
-    let obj = { status: callback(initialQuestion[9]).PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
+    let obj = { mediaAttachmentState: null, emoji: "Array", stickerId: "text" };
+    obj = { status: callback(initialQuestion[9]).PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
     obj[0] = obj;
     callback2(obj, arg1);
     const result = callback2(initialQuestion[7]).handlePollMediaAttachmentAdd(arg0, first[arg1].localCreationAnswerId, arg2);
@@ -275,7 +277,7 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
     }
   }, items5);
   const effect = obj.useEffect(() => () => {
-    const result = closure_1_2(initialQuestion[7]).removeAllPollUploadAttachments(closure_4);
+    const result = closure_1_2(closure_1_3[7]).removeAllPollUploadAttachments(closure_4);
   }, items6);
   const items7 = [first, first1];
   const callback10 = obj.useCallback(() => {
@@ -286,21 +288,21 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
       let intl = callback(initialQuestion[10]).intl;
       obj.question = intl.string(callback(initialQuestion[10]).t.gPX3oI);
     }
-    if (first.filter((item, index) => callback(table[4]).isAnswerFilled(item)).length < closure_8) {
+    if (first.filter((text) => callback(table[4]).isAnswerFilled(text)).length < closure_8) {
       c0 = false;
       let _HermesInternal = HermesInternal;
-      let combined = "answer-" + first[0].localCreationAnswerId;
+      let combined = "answer-" + arr[0].localCreationAnswerId;
       const intl2 = callback(initialQuestion[10]).intl;
       obj[combined] = intl2.string(callback(initialQuestion[10]).t.fYvzEX);
     }
-    const item = first.forEach((item, index) => {
-      obj = callback(initialQuestion[4]);
-      if (obj.isIncompleteAnswer(item)) {
+    const item = arr.forEach((localCreationAnswerId) => {
+      obj = callback(closure_1_3[4]);
+      if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         callback = false;
         const _HermesInternal = HermesInternal;
-        const combined = "answer-" + item.localCreationAnswerId;
-        const intl = tmp(initialQuestion[10]).intl;
-        obj[combined] = intl.string(tmp(initialQuestion[10]).t["8Qqkc+"]);
+        const combined = "answer-" + localCreationAnswerId.localCreationAnswerId;
+        const intl = tmp(tmp2[10]).intl;
+        obj[combined] = intl.string(tmp(tmp2[10]).t["8Qqkc+"]);
       }
     });
     callback5(obj);
@@ -337,16 +339,16 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
           } else {
             obj1 = { channel: null, question: null, answers: null, allowMultiSelect: null, duration: null, layout: null, onClose: null };
             obj1[0] = v0;
-            obj1[1] = first1;
-            obj1[2] = found;
-            obj1[3] = first2;
-            obj1[4] = first3;
-            obj1[5] = v0(initialQuestion[11]).PollLayoutTypes.DEFAULT;
+            obj1[1] = closure_1_7;
+            obj1[2] = closure_1_13;
+            obj1[3] = closure_1_9;
+            obj1[4] = closure_1_10;
+            obj1[5] = v0(closure_1_3[11]).PollLayoutTypes.DEFAULT;
             obj1[6] = c1;
             c1 = 1;
             v0 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = first4(obj1);
+            obj2[0] = closure_1_14(obj1);
             return obj2;
           }
         } else if (arg0 === 1) {

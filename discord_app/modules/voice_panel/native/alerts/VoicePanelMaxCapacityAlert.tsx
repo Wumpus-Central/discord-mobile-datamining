@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import VoicePanelLockedIconDefault from "VoicePanelLockedIcon.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");
 
 export default function VoicePanelMaxCapacityAlert(channelId) {
   channelId = channelId.channelId;

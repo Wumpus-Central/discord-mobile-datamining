@@ -1,7 +1,7 @@
 // discord_app/modules/connections/GuildRoleConnectionsConfigurationStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_0 from "../../stores/GuildStore.tsx";
 
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -20,6 +20,6 @@ const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigura
     const result = map.set(roleId.roleId, roleId.roleConnectionConfigurations);
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
+let result = require("set").fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
 
 export default guildRoleConnectionsConfigurationStore;

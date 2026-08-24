@@ -1,19 +1,20 @@
 // discord_app/modules/debug/serializePushNotifcationLogs.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
+import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
 ({ DEVICE_TOKEN: obj1, DEVICE_VOIP_TOKEN: c3 } = ME);
-const result = obj132.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
+const result = set.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
 
 export default function serializePushNotificationLogs(arr) {
   const _require = arg1;
   if (0 === arr.length) {
     return "No logs";
   } else {
-    const Storage = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    Storage.get(closure_2);
-    const Storage2 = require("../../../discord_common/js/packages/storage/Storage.tsx").Storage;
-    const value = Storage2.get(closure_3);
+    const Storage = _Storage.Storage;
+    let value = Storage.get(closure_2);
+    const Storage2 = _Storage.Storage;
+    value = Storage2.get(closure_3);
     let str2 = "";
     if (null != value) {
       let _HermesInternal = HermesInternal;
@@ -24,19 +25,19 @@ export default function serializePushNotificationLogs(arr) {
       let _HermesInternal2 = HermesInternal;
       str3 = "Device Voip Token: " + value;
     }
-    const mapped = arr.map((item, index) => {
+    const mapped = arr.map((silent) => {
       let str = "Displayed";
-      if (item.silent) {
+      if (silent.silent) {
         str = "Silent";
       }
       if (closure_0) {
         const _HermesInternal2 = HermesInternal;
-        let combined = "" + item.channelId + " - " + item.messageId;
+        let combined = "" + silent.channelId + " - " + silent.messageId;
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "" + item.title + " - " + item.content;
+        combined = "" + silent.title + " - " + silent.content;
       }
-      return "" + new Date(item.receivedTimestamp).toISOString() + " [" + item.type + "] " + str + " - " + combined;
+      return "" + new Date(silent.receivedTimestamp).toISOString() + " [" + silent.type + "] " + str + " - " + combined;
     });
     const _HermesInternal3 = HermesInternal;
     return "" + str2 + "\n" + str3 + "\n\n" + mapped.join("\n");

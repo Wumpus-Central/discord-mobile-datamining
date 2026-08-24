@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/EditUserProfileAvatar.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ editIcon: { position: "absolute", right: -3 } });
 let closure_8 = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/EditUserProfileAvatar.tsx");
 
 export default function EditUserProfileAvatar(user) {
   user = user.user;
@@ -26,6 +26,7 @@ export default function EditUserProfileAvatar(user) {
     flag3 = false;
   }
   const size = user.size;
+  let analyticsLocations;
   closure_4 = undefined;
   let pendingAvatar;
   setPendingAvatar = undefined;
@@ -35,7 +36,7 @@ export default function EditUserProfileAvatar(user) {
   closure_10 = undefined;
   let sharedValue;
   let tmp = avatarDecoration();
-  const analyticsLocations = flag2(flag3[4])(flag2(flag3[5]).EDIT_AVATAR).analyticsLocations;
+  analyticsLocations = flag2(flag3[4])(flag2(flag3[5]).EDIT_AVATAR).analyticsLocations;
   let obj = flag2(flag3[6]);
   const canUseAnimatedAvatarResult = obj.canUseAnimatedAvatar(user);
   let tmp6 = !canUseAnimatedAvatarResult;
@@ -57,27 +58,27 @@ export default function EditUserProfileAvatar(user) {
   closure_8 = tmp10;
   let items = [user, analyticsLocations, pendingAvatar, setPendingAvatar, tmp10, tmp6, avatarDecoration, flag2];
   callback = analyticsLocations.useCallback(() => {
-    flag2(flag3[10]);
-    let obj = {
+    let obj = flag2(flag3[10]);
+    obj = {
       showAnimatedAvatarUpsell: closure_4,
       handleRemoveAvatarSelect() {
-        flag2(flag3[10]).hideActionSheet();
+        closure_1_1(closure_1_2[10]).hideActionSheet();
         callback(null);
       },
       handleUploadAvatarSelect: closure_8,
       handleUploadGIFAvatarSelect() {
-        let obj = flag2(flag3[10]);
+        let obj = closure_1_1(closure_1_2[10]);
         obj.hideActionSheet();
         obj = { profileAssetType: null, selectionContext: null };
-        const obj2 = flag2(flag3[10]);
-        obj[0] = user(flag3[14]).ProfileAssetType.AVATAR;
-        const GIFSelectionContext = user(flag3[14]).GIFSelectionContext;
+        const obj2 = closure_1_1(closure_1_2[10]);
+        obj[0] = closure_1_0(closure_1_2[14]).ProfileAssetType.AVATAR;
+        const GIFSelectionContext = closure_1_0(closure_1_2[14]).GIFSelectionContext;
         obj[1] = closure_1 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
-        obj2.openLazy(user(flag3[12])(flag3[13], flag3.paths), "Select GIF Avatar", obj);
+        obj2.openLazy(closure_1_0(closure_1_2[12])(closure_1_2[13], closure_1_2.paths), "Select GIF Avatar", obj);
       },
       handleEditAvatarDecorationSelect() {
-        user(flag3[15]);
-        const obj = { user: closure_0, currentAvatarDecoration: closure_7, analyticsLocations: closure_3 };
+        let obj = closure_1_0(closure_1_2[15]);
+        obj = { user: closure_0, currentAvatarDecoration: closure_7, analyticsLocations: closure_3 };
         const result = obj.openAvatarDecorationActionSheet(obj);
       },
       showRemoveAvatar: null
@@ -105,7 +106,8 @@ export default function EditUserProfileAvatar(user) {
   sharedValue = tmp8Result.useSharedValue(0);
   const tmp4 = flag2(flag3[4]);
   const fn = function z() {
-    const obj = { rotateZ: "" + sharedValue.get() + "deg" };
+    let obj = { transform: null };
+    obj = { rotateZ: "" + sharedValue.get() + "deg" };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -116,12 +118,12 @@ export default function EditUserProfileAvatar(user) {
   const items3 = [sharedValue];
   const animatedStyle = user(flag3[18]).useAnimatedStyle(fn);
   const effect1 = analyticsLocations.useEffect(() => {
-    user(flag3[18]);
-    const obj = { duration: 3000, easing: null };
+    let obj = user(flag3[18]);
+    obj = { duration: 3000, easing: null };
     const Easing = user(flag3[18]).Easing;
     obj[1] = Easing.inOut(user(flag3[18]).Easing.quad);
     const result = sharedValue.set(obj.withRepeat(user(flag3[19]).withTiming(360, obj), -1));
-    return () => user(flag3[18]).cancelAnimation(closure_11);
+    return () => closure_1_0(closure_1_2[18]).cancelAnimation(closure_11);
   }, items3);
   const tmp18 = pendingAvatar(flag2(flag3[20]), { style: avatarStyle, user, pendingAvatarSrc, pendingAvatarDecoration, statusStyle, disableStatus: flag, size });
   obj = { style, disabled, onPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };

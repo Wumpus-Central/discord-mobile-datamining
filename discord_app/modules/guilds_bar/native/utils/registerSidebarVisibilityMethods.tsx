@@ -1,13 +1,13 @@
 // discord_app/modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set2 from "../../../../../_runtime/00002_set.js";
 import insertUnsortedGuilds from "../../../../stores/SortedGuildStore.tsx";
 import SidebarVisibilityMethodStore from "../../../guild_sidebar/SidebarVisibilityMethodStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import insertUnsortedGuilds2 from "../../../../stores/SortedGuildStore.tsx";
+import closure_2 from "../../../../stores/GuildStore.tsx";
+import closure_3 from "../../../../stores/SortedGuildStore.tsx";
 
 ({ setGetVisibleChannelIds: c0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
 const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
-const result = obj132.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
+const result = set2.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
 
 export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(listProps) {
   const current = listProps.current;
@@ -23,11 +23,11 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
         const guildsTree = closure_1_3.getGuildsTree();
         const _Set = Set;
         const set = new Set();
-        let item = items.forEach((item, index) => {
-          let forEach = node.getNode(item.recyclerKey);
+        let item = items.forEach((recyclerKey) => {
+          let forEach = node.getNode(recyclerKey.recyclerKey);
           if (undefined !== forEach) {
-            const layoutStart = item.layoutStart;
-            let tmp2 = layoutStart + item.layoutSize >= closure_0;
+            const layoutStart = recyclerKey.layoutStart;
+            let tmp2 = layoutStart + recyclerKey.layoutSize >= closure_0;
             if (tmp2) {
               tmp2 = layoutStart <= tmp + containerSize;
             }
@@ -38,7 +38,7 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
                 children = [forEach];
               }
               forEach = children.forEach;
-              item = forEach((type) => {
+              const item = forEach((type) => {
                 let tmp = type.type === closure_1_4.GUILD;
                 if (tmp) {
                   tmp = type.id in closure_2;
@@ -68,17 +68,17 @@ export const registerFastListChannelVisibilityMethod = function registerFastList
         const scrollPosition = obj.getScrollPosition();
         containerSize = obj.containerSize;
         const items1 = [];
-        const item = items.forEach((item, index) => {
+        const item = items.forEach((section) => {
           try {
             try {
-              channelFromSectionRow = channelFromSectionRow.getChannelFromSectionRow(item.section, item.item);
+              channelFromSectionRow = channelFromSectionRow.getChannelFromSectionRow(section.section, section.item);
               let channel;
               if (channelFromSectionRow != null) {
                 channel = channelFromSectionRow.channel;
               }
               if (null != channel) {
-                const layoutStart = item.layoutStart;
-                let tmp12 = layoutStart + item.layoutSize >= channelFromSectionRow;
+                const layoutStart = section.layoutStart;
+                let tmp12 = layoutStart + section.layoutSize >= channelFromSectionRow;
                 if (tmp12) {
                   tmp12 = layoutStart <= tmp11 + containerSize;
                 }

@@ -1,10 +1,10 @@
 // discord_app/modules/routing/native/useBackPressHandler.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 ({ BackHandler: c3, NativeModules: c4 } = get_ActivityIndicator);
-const result = require("obj132").fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
+const result = require("set").fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
 
 export default function useBackPressHandler(stateFromStores) {
   closure_0 = stateFromStores;
@@ -21,11 +21,10 @@ export default function useBackPressHandler(stateFromStores) {
   const effect = React.useEffect(() => {
     if (!obj.isIOS()) {
       if (flag) {
-        stateFromStores = closure_1_3.addEventListener("hardwareBackPress", (event) => ref.current());
+        stateFromStores = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
         return () => closure_0.remove();
       }
     }
-    obj = stateFromStores(flag[2]);
   }, items);
 };
 export const BackPressHandler = {

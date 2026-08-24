@@ -4,9 +4,9 @@ import TableRowInner from "../../../../../../design/components/TableRow/native/T
 import useFrameMonitorDefault from "useFrameMonitor.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
 
 export default function ScrollBenchmark(subLabel) {
   let str = subLabel.subLabel;

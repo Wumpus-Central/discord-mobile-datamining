@@ -1,29 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfileActivityBadges.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
-import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
-import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import calculateTimestampDurations from "../../content_inventory/utils.tsx";
-import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import TvIcon from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
-import MusicIcon from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import TopicsIcon from "../../../design/components/Icon/native/redesign/generated/TopicsIcon.tsx";
-import HourglassIcon from "../../../design/components/Icon/native/redesign/generated/HourglassIcon.tsx";
 import useTimestampTickedNow from "../../content_inventory/memberlist/useTimestampTickedNow.tsx";
 import shouldShowActivityTimeBarDefault from "../utils/shouldShowActivityTimeBar.tsx";
-import ActiveTimestamp from "../../icymi/native/content_inventory/Badges.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ActivityTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
 
 export const TimestampBadge = function TimestampBadge(activity) {
   activity = activity.activity;
@@ -63,20 +54,20 @@ export const TimestampBadge = function TimestampBadge(activity) {
         flag2 = false;
       }
       if (flag2) {
-        let GameControllerIcon = HourglassIcon.HourglassIcon;
-      } else if (isEmbeddedActivityDefault(activity)) {
-        GameControllerIcon = AppsIcon.AppsIcon;
+        let GameControllerIcon = tmp2(11400).HourglassIcon;
+      } else if (tmp10(7259)(activity)) {
+        GameControllerIcon = tmp2(7974).AppsIcon;
       } else if (activity.type === ActivityTypes.WATCHING) {
-        GameControllerIcon = TvIcon.TvIcon;
+        GameControllerIcon = tmp2(9899).TvIcon;
       } else if (activity.type === tmp6.LISTENING) {
-        GameControllerIcon = MusicIcon.MusicIcon;
+        GameControllerIcon = tmp2(9904).MusicIcon;
       } else {
-        GameControllerIcon = GameControllerIcon2.GameControllerIcon;
+        GameControllerIcon = tmp2(9430).GameControllerIcon;
       }
       obj = { style: null, children: null };
       obj[0] = tmp.container;
       obj = { size: "xxs", color: null };
-      obj[1] = ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE;
+      obj[1] = tmp10(712).colors.TEXT_FEEDBACK_POSITIVE;
       const items = [callback(GameControllerIcon, obj), ];
       obj1 = { entry: null, style: null };
       const obj2 = { start: null, end: null, isCountDown: null };
@@ -85,7 +76,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
       obj2[2] = flag;
       obj1[0] = obj2;
       obj1[1] = tmp.bold;
-      items[1] = callback(ActiveTimestamp.ActiveTimestamp, obj1);
+      items[1] = callback(tmp2(12105).ActiveTimestamp, obj1);
       obj[1] = items;
       return callback2(View, obj);
     }
@@ -103,10 +94,10 @@ export const PartyBadge = function PartyBadge(activity) {
         obj[0] = tmp.container;
         obj = { size: "xxs", color: null };
         obj[1] = ThemesDefault.colors.TEXT_MUTED;
-        const items = [callback(GroupIcon.GroupIcon, obj), ];
+        const items = [callback(tmp9(6884).GroupIcon, obj), ];
         obj = { variant: "text-sm/medium", color: "text-muted", children: null };
         obj[2] = richGameStateBadgeText;
-        items[1] = callback(Text.Text, obj);
+        items[1] = callback(tmp9(4734).Text, obj);
         obj[1] = items;
         tmp8 = callback2(View, obj);
       }
@@ -129,10 +120,10 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
     obj[0] = tmp.container;
     obj = { size: "xxs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items = [callback(TopicsIcon.TopicsIcon, obj), ];
+    const items = [callback(tmp2(10840).TopicsIcon, obj), ];
     obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj1[2] = episodeBadgeText;
-    items[1] = callback(Text.Text, obj1);
+    items[1] = callback(tmp2(4734).Text, obj1);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }

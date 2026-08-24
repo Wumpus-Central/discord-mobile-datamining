@@ -1,21 +1,18 @@
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
 import noopAll from "../../../../../../../_runtime/00019_noop.js";
-import initialize from "../../../../../../../discord_common/js/packages/flux/index.tsx";
-import getSystemLocale from "../../../../../../intl/index.native.tsx";
-import useGetOrFetchApplications from "../../../../../applications/useGetOrFetchApplications.tsx";
 import useDefaultAppLauncherWidth from "../../../hooks/useDefaultAppLauncherWidth.tsx";
 import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import getPreviewVideoAssetUrlDefault from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../../a11y/AccessibilityStore.tsx";
 import { DEFAULT_CONTENT_PADDING } from "../../../AppLauncherNativeConstants.tsx";
 import { ACTION_SHEET_MAX_WIDTH } from "../../../../../action_sheet/native/ActionSheetConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_7 = createCacheKey.createStyles({ mediaBackground: { backgroundColor: "black" } });
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");
 
 export default function HeroMedia(width) {
   ({ applicationId, containerHeight } = width);
@@ -33,10 +30,10 @@ export default function HeroMedia(width) {
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
   const rounded = Math.floor(9 * diff / 16);
   const tmp13 = useEmbeddedActivityBackgroundDefault({ applicationId, size: diff, names: ["embedded_cover"] });
-  let tmp2Result = initialize;
+  let tmp2Result = tmp2(589);
   const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = useGetOrFetchApplications;
+  tmp2Result = tmp2(7145);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {
@@ -66,7 +63,7 @@ export default function HeroMedia(width) {
         obj[3] = rounded;
         obj[4] = diff;
         obj[5] = tmp13.url;
-        const intl = getSystemLocale.intl;
+        const intl = tmp2(1236).intl;
         let str3;
         if (getOrFetchApplication != null) {
           str3 = getOrFetchApplication.name;
@@ -76,7 +73,7 @@ export default function HeroMedia(width) {
         }
         obj1 = { applicationName: null };
         obj1[0] = str3;
-        obj[7] = intl.formatToPlainString(getSystemLocale.t["Af+EQD"], obj1);
+        obj[7] = intl.formatToPlainString(tmp2(1236).t["Af+EQD"], obj1);
         const items1 = [tmp.mediaBackground, , ];
         const obj2 = { maxHeight: null };
         obj2[0] = rounded;
@@ -93,7 +90,7 @@ export default function HeroMedia(width) {
         items1[2] = tmp20;
         obj[8] = items1;
         obj[9] = tmp.mediaBackground;
-        tmp21Result = <tmp22 {...obj} />;
+        tmp21Result = tmp21(tmp22, obj);
       }
       let str2 = tmp13.url;
       if (str2 == null) {
@@ -101,6 +98,7 @@ export default function HeroMedia(width) {
       }
       obj5 = { uri: null };
       obj5[0] = str2;
+      tmp21 = jsx;
     }
   }
   return tmp21Result;

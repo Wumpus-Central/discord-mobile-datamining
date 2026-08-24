@@ -1,33 +1,40 @@
 // _runtime/01748_addTransformToKeepPosition.js
 import TransitionType from "01710_TransitionType.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
-function addTransformToKeepPosition(style, style2, headerResult, arg3) {
+function addTransformToKeepPosition(style, style2, props, arg3) {
   const entries = Object.entries(style2);
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
+    let tmp8 = tmp7;
     if (undefined !== tmp7.transform) {
-      let transform = tmp7.transform;
-      let arr = transform.unshift(headerResult);
+      let tmp10 = tmp7;
+      let transform = tmp8.transform;
+      let arr = transform.unshift(props);
     } else {
-      let items = [headerResult];
-      tmp7.transform = items;
+      let tmp9 = tmp7;
+      let items = [props];
+      tmp8.transform = items;
     }
     let _parseInt = parseInt;
+    let tmp12 = tmp6;
     let result = parseInt(tmp6) / 2;
     if (arg3) {
       let _Math = Math;
+      let tmp16 = result;
       let bound = Math.min(result, 49);
     } else {
+      let tmp14 = result;
       bound = result + 50;
     }
     let _HermesInternal = HermesInternal;
-    style["" + bound] = tmp7;
+    let tmp17 = tmp7;
+    style["" + bound] = tmp8;
     continue;
   }
-  tmp2 = entries[Symbol.iterator]();
 }
 
 export const EntryExitTransition = function EntryExitTransition(name, translateX) {
@@ -50,15 +57,16 @@ export const EntryExitTransition = function EntryExitTransition(name, translateX
       const result3 = map.set(51, 1);
     }
     while (tmp6 !== undefined) {
+      let tmp8 = callback;
       let tmp9 = callback(tmp7, 2);
       let first = tmp9[0];
       let obj = {};
+      let tmp11 = obj;
       let merged = Object.assign(style[first]);
       obj.opacity = tmp9[1];
       style[first] = obj;
       continue;
     }
-    tmp6 = map[Symbol.iterator]();
   })(obj.style);
   return obj;
 };

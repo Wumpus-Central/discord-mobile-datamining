@@ -1,8 +1,8 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 
-const result = 2 * obj132Default.Millis.DAY;
-const result1 = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx");
+const result = 2 * setDefault.Millis.DAY;
+const result1 = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx");
 
 export const UNUSUAL_DM_COMPARISON_DELTA = result;
 export const createMemberSearchCursor = function createMemberSearchCursor(joinedAt) {

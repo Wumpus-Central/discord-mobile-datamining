@@ -2,16 +2,16 @@
 import processColorDefault from "00050_processColor.js";
 import _inheritsDefault from "00098__inherits.js";
 import isActiveSignalDefault from "00292_isActiveSignal.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importAllResult from "00019_noop.js";
 import { cloneElement } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const TouchableNativeFeedback = fn;
+const TouchableNativeFeedback = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -62,7 +62,8 @@ let items = [
   {
     key: "_createPressabilityConfig",
     value: function _createPressabilityConfig() {
-      const self = this;
+      let self = this;
+      self = this;
       let disabled = this.props["aria-disabled"];
       if (disabled == null) {
         const accessibilityState = self.props.accessibilityState;
@@ -116,7 +117,6 @@ let items = [
         const Commands = TouchableNativeFeedback(112).Commands;
         Commands.setPressed(result, arg0);
       }
-      const obj = TouchableNativeFeedback(114);
     }
   },
   {
@@ -137,7 +137,6 @@ let items = [
         }
         Commands.hotspotUpdate(result, locationX, locationY);
       }
-      const obj = TouchableNativeFeedback(114);
     }
   },
   {
@@ -150,103 +149,103 @@ let items = [
       const pressability = this.state.pressability;
       const eventHandlers = pressability.getEventHandlers();
       ({ onBlur, onFocus } = eventHandlers);
-      let prop = this.props["aria-busy"];
-      if (prop == null) {
+      aria_busy = this.props["aria-busy"];
+      if (aria_busy == null) {
         const accessibilityState = self.props.accessibilityState;
         let busy;
         if (accessibilityState != null) {
           busy = accessibilityState.busy;
         }
-        prop = busy;
+        aria_busy = busy;
       }
-      let obj = { busy: prop, checked: null, disabled: null, expanded: null, selected: null };
-      let prop1 = self.props["aria-checked"];
-      if (prop1 == null) {
+      let obj = { busy: aria_busy, checked: null, disabled: null, expanded: null, selected: null };
+      aria_checked = self.props["aria-checked"];
+      if (aria_checked == null) {
         const accessibilityState2 = self.props.accessibilityState;
         let checked;
         if (accessibilityState2 != null) {
           checked = accessibilityState2.checked;
         }
-        prop1 = checked;
+        aria_checked = checked;
       }
-      obj[1] = prop1;
-      let prop2 = self.props["aria-disabled"];
-      if (prop2 == null) {
+      obj[1] = aria_checked;
+      aria_disabled = self.props["aria-disabled"];
+      if (aria_disabled == null) {
         const accessibilityState3 = self.props.accessibilityState;
         let disabled;
         if (accessibilityState3 != null) {
           disabled = accessibilityState3.disabled;
         }
-        prop2 = disabled;
+        aria_disabled = disabled;
       }
-      obj[2] = prop2;
-      let prop3 = self.props["aria-expanded"];
-      if (prop3 == null) {
+      obj[2] = aria_disabled;
+      aria_expanded = self.props["aria-expanded"];
+      if (aria_expanded == null) {
         const accessibilityState4 = self.props.accessibilityState;
         let expanded;
         if (accessibilityState4 != null) {
           expanded = accessibilityState4.expanded;
         }
-        prop3 = expanded;
+        aria_expanded = expanded;
       }
-      obj[3] = prop3;
-      let prop4 = self.props["aria-selected"];
-      if (prop4 == null) {
+      obj[3] = aria_expanded;
+      aria_selected = self.props["aria-selected"];
+      if (aria_selected == null) {
         const accessibilityState5 = self.props.accessibilityState;
         let selected;
         if (accessibilityState5 != null) {
           selected = accessibilityState5.selected;
         }
-        prop4 = selected;
+        aria_selected = selected;
       }
-      obj[4] = prop4;
-      let tmp14 = obj;
+      obj[4] = aria_selected;
+      let tmp9 = obj;
       if (null != self.props.disabled) {
         obj = {};
         const merged = Object.assign(obj);
         obj.disabled = self.props.disabled;
-        tmp14 = obj;
+        tmp9 = obj;
       }
-      let prop5 = self.props["aria-valuemax"];
-      if (prop5 == null) {
+      aria_valuemax = self.props["aria-valuemax"];
+      if (aria_valuemax == null) {
         const accessibilityValue = self.props.accessibilityValue;
         let max;
         if (accessibilityValue != null) {
           max = accessibilityValue.max;
         }
-        prop5 = max;
+        aria_valuemax = max;
       }
-      obj = { max: prop5, min: null, now: null, text: null };
-      let prop6 = self.props["aria-valuemin"];
-      if (prop6 == null) {
+      obj = { max: aria_valuemax, min: null, now: null, text: null };
+      aria_valuemin = self.props["aria-valuemin"];
+      if (aria_valuemin == null) {
         const accessibilityValue2 = self.props.accessibilityValue;
         let min;
         if (accessibilityValue2 != null) {
           min = accessibilityValue2.min;
         }
-        prop6 = min;
+        aria_valuemin = min;
       }
-      obj[1] = prop6;
-      let prop7 = self.props["aria-valuenow"];
-      if (prop7 == null) {
+      obj[1] = aria_valuemin;
+      aria_valuenow = self.props["aria-valuenow"];
+      if (aria_valuenow == null) {
         const accessibilityValue3 = self.props.accessibilityValue;
         let now;
         if (accessibilityValue3 != null) {
           now = accessibilityValue3.now;
         }
-        prop7 = now;
+        aria_valuenow = now;
       }
-      obj[2] = prop7;
-      let prop8 = self.props["aria-valuetext"];
-      if (prop8 == null) {
+      obj[2] = aria_valuenow;
+      aria_valuetext = self.props["aria-valuetext"];
+      if (aria_valuetext == null) {
         const accessibilityValue4 = self.props.accessibilityValue;
         let text;
         if (accessibilityValue4 != null) {
           text = accessibilityValue4.text;
         }
-        prop8 = text;
+        aria_valuetext = text;
       }
-      obj[3] = prop8;
+      obj[3] = aria_valuetext;
       let str = "none";
       if ("off" !== self.props["aria-live"]) {
         let accessibilityLiveRegion = self.props["aria-live"];
@@ -282,7 +281,7 @@ let items = [
         obj1.accessibilityLanguage = self.props.accessibilityLanguage;
         obj1.accessibilityLabel = accessibilityLabel;
         obj1.accessibilityRole = self.props.accessibilityRole;
-        obj1.accessibilityState = tmp14;
+        obj1.accessibilityState = tmp9;
         obj1.accessibilityActions = self.props.accessibilityActions;
         obj1.onAccessibilityAction = self.props.onAccessibilityAction;
         obj1.accessibilityValue = obj;
@@ -322,7 +321,6 @@ let items = [
         return HermesBuiltin.apply(items1, undefined);
       }
       obj3 = { nativeBackgroundAndroid: background };
-      const tmp3 = callback(eventHandlers, closure_3);
     }
   },
   {

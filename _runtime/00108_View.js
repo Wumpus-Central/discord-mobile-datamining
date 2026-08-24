@@ -3,7 +3,7 @@ import noopAll from "00019_noop.js";
 import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
 import noopDefault from "00111_noop.js";
 import CommandsDefault from "00112_Commands.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
 import { use } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
@@ -137,7 +137,7 @@ const forwardRefResult = noopAll.forwardRef(function View_withRef(arg0, ref) {
     if (tmp45) {
       const obj2 = { value: false, children: null };
       obj2[1] = tmp30Result;
-      return jsx(noopDefault, { value: false, children: null });
+      return tmp30(tmp43(111), obj2);
     } else {
       return tmp30Result;
     }

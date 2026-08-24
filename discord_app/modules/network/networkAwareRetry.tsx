@@ -1,8 +1,8 @@
 // discord_app/modules/network/networkAwareRetry.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
 
-const require = fn;
+const require = arg1;
 function _networkAwareRetry() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -160,7 +160,7 @@ function _networkAwareRetry() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/network/networkAwareRetry.tsx");
+const result = require("set").fileFinishedImporting("modules/network/networkAwareRetry.tsx");
 
 export default function networkAwareRetry() {
   const self = this;

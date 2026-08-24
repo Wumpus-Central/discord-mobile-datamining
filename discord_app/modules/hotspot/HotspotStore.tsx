@@ -1,9 +1,9 @@
 // discord_app/modules/hotspot/HotspotStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import CONFERENCE_MODE_ENABLED2 from "../conference_mode/ConferenceModeConstants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import get from "../../utils/ProcessArgs.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
 let set = new Set();
@@ -92,6 +92,6 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     }
   }
 });
-const result = obj132.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
+const result = set.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
 
 export default hotspotStore;

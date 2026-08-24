@@ -1,11 +1,11 @@
 // discord_app/modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
-const result = obj132.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
+const result = set.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
 export default function ForwardStaffToNonStaffWarningModal(arg0) {
   ({ onConfirm, onBack } = arg0);
@@ -14,6 +14,7 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   obj[0] = intl.string(getSystemLocale.t.YrV3I9);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.MXSMtl);
+  obj = { children: null };
   obj = { text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.X7eUJq);

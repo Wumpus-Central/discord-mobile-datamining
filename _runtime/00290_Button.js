@@ -5,7 +5,7 @@ import ViewDefault from "00108_View.js";
 import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
 import useTextPressabilityDefault from "00298_useTextPressability.js";
 import { jsx } from "react/00021_jsxProd.js";
-import _isNativeReflectConstruct from "00291__isNativeReflectConstruct.js";
+import closure_3 from "00291__isNativeReflectConstruct.js";
 
 noopAll;
 class Button {
@@ -79,7 +79,7 @@ class Button {
     }
     tmp22 = closure_0;
     tmp23 = closure_1;
-    tmp24 = require("metro/00038__.js")(typeof title === "string", "The title prop of a Button must be a string");
+    tmp24 = require("module_38")(typeof title === "string", "The title prop of a Button must be a string");
     tmp26 = jsx;
     obj2 = { accessible, accessibilityActions, onAccessibilityAction, accessibilityLabel: null, accessibilityHint: null, accessibilityLanguage: null, accessibilityRole: "button", accessibilityState: null, importantForAccessibility: null, hasTVPreferredFocus: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, testID: null, disabled: null, onPress: null, touchSoundDisabled: null, ref: null, children: null };
     formatted = title.toUpperCase();

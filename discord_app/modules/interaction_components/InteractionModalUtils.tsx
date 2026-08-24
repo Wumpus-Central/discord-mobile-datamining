@@ -1,79 +1,76 @@
 // discord_app/modules/interaction_components/InteractionModalUtils.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
-import PermissionOverwriteType from "../../flow/Server.tsx";
 import isInteractionComponent from "ComponentStateContext.tsx";
-import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../_runtime/00019_noop.js";
+import closure_6 from "../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../stores/ChannelStore.tsx";
 import { DraftType } from "../../stores/DraftStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedGuildStore.tsx";
-import map from "../../stores/UploadAttachmentStore.tsx";
-import getModalState from "InteractionModalStore.tsx";
+import closure_9 from "../../stores/GuildMemberStore.tsx";
+import closure_10 from "../../stores/SelectedGuildStore.tsx";
+import closure_11 from "../../stores/UploadAttachmentStore.tsx";
+import closure_12 from "InteractionModalStore.tsx";
 import { InteractionModalState } from "InteractionModalStore.tsx";
-import getInteractionComponentStates from "LocalInteractionComponentStateStore.tsx";
+import closure_14 from "LocalInteractionComponentStateStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function getData(arg0, arr) {
   closure_0 = arg0;
   closure_1 = arg2;
-  return arr.map((item, index) => {
-    let type = item.type;
+  return arr.map((type) => {
+    type = type.type;
     if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
       let obj = { type: null, components: null };
-      obj[0] = item.type;
-      let components = item.components;
-      obj[1] = components.map((item, index) => {
-        let type = item.type;
+      obj[0] = type.type;
+      let components = type.components;
+      obj[1] = components.map((type) => {
+        type = type.type;
         if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
           let obj = { type: null, components: null };
-          obj[0] = item.type;
-          let components = item.components;
-          obj[1] = components.map((item, index) => {
-            let type = item.type;
+          obj[0] = type.type;
+          let components = type.components;
+          obj[1] = components.map((type) => {
+            type = type.type;
             if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
               let obj = { type: null, components: null };
-              obj[0] = item.type;
-              let components = item.components;
-              obj[1] = components.map((item, index) => {
-                let type = item.type;
+              obj[0] = type.type;
+              let components = type.components;
+              obj[1] = components.map((type) => {
+                type = type.type;
                 if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                   let obj = { type: null, components: null };
-                  obj[0] = item.type;
-                  let components = item.components;
+                  obj[0] = type.type;
+                  let components = type.components;
                   obj[1] = components.map(() => { ... });
                   return obj;
-                } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                  let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                  let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   obj = { type: null, custom_id: null, value: null };
-                  ({ type: obj9[0], customId: obj9[1] } = item);
+                  ({ type: obj9[0], customId: obj9[1] } = type);
                   type = undefined;
                   if (iter3 != null) {
                     type = iter3.type;
                   }
                   let value = null;
-                  if (type === item.type) {
+                  if (type === type.type) {
                     value = iter3.value;
                   }
                   obj[2] = value;
                   return obj;
-                } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                  let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                  let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   let type1;
                   if (interactionComponentState != null) {
                     type1 = interactionComponentState.type;
                   }
                   let uploadIds = null;
-                  if (type1 === item.type) {
+                  if (type1 === type.type) {
                     uploadIds = interactionComponentState.uploadIds;
                   }
                   let obj1 = { type: null, custom_id: null, values: null };
-                  ({ type: obj8[0], customId: obj8[1] } = item);
+                  ({ type: obj8[0], customId: obj8[1] } = type);
                   let mapped;
                   if (uploadIds != null) {
                     mapped = uploadIds.map(() => { ... });
@@ -83,89 +80,89 @@ function getData(arg0, arr) {
                   }
                   obj1[2] = mapped;
                   return obj1;
-                } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                  let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                  let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   let obj2 = { type: null, custom_id: null, values: null };
-                  ({ type: obj7[0], customId: obj7[1] } = item);
+                  ({ type: obj7[0], customId: obj7[1] } = type);
                   let type2;
                   if (interactionComponentState1 != null) {
                     type2 = interactionComponentState1.type;
                   }
                   let values = null;
-                  if (type2 === item.type) {
+                  if (type2 === type.type) {
                     values = interactionComponentState1.values;
                   }
                   obj2[2] = values;
                   return obj2;
                 } else {
-                  if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                    if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                      if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                        if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                          if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                  if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                    if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                      if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                        if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                          if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                             let obj3 = { type: null };
-                            obj3[0] = item.type;
+                            obj3[0] = type.type;
                             return obj3;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                          } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                             let obj4 = { type: null, component: null };
-                            obj4[0] = item.type;
-                            let items = [item.component];
+                            obj4[0] = type.type;
+                            let items = [type.component];
                             obj4[1] = items.map(() => { ... })[0];
                             return obj4;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                            let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                            let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj5 = { type: null, custom_id: null, value: null };
-                            ({ type: obj3[0], customId: obj3[1] } = item);
+                            ({ type: obj3[0], customId: obj3[1] } = type);
                             let type3;
                             if (iter2 != null) {
                               type3 = iter2.type;
                             }
                             value = null;
-                            if (type3 === item.type) {
+                            if (type3 === type.type) {
                               value = iter2.value;
                             }
                             obj5[2] = value;
                             return obj5;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                            let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                            let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj6 = { type: null, custom_id: null, values: null };
-                            ({ type: obj2[0], customId: obj2[1] } = item);
+                            ({ type: obj2[0], customId: obj2[1] } = type);
                             let type4;
                             if (interactionComponentState2 != null) {
                               type4 = interactionComponentState2.type;
                             }
                             values = null;
-                            if (type4 === item.type) {
+                            if (type4 === type.type) {
                               values = interactionComponentState2.values;
                             }
                             obj6[2] = values;
                             return obj6;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                            let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                            let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
-                            ({ type: obj[0], customId: obj[1] } = item);
+                            ({ type: obj[0], customId: obj[1] } = type);
                             let type5;
                             if (iter != null) {
                               type5 = iter.type;
                             }
-                            obj[2] = type5 === item.type && iter.value;
+                            obj[2] = type5 === type.type && iter.value;
                             return obj;
                           } else {
-                            closure_1_1(closure_1_2[23])(false, "unreachable");
+                            closure_1_1(tmp2[23])(false, "unreachable");
                           }
                         }
                       }
                     }
                   }
-                  let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   let obj7 = { type: null, custom_id: null, values: null };
-                  ({ type: obj6[0], customId: obj6[1] } = item);
+                  ({ type: obj6[0], customId: obj6[1] } = type);
                   let type6;
                   if (interactionComponentState3 != null) {
                     type6 = interactionComponentState3.type;
                   }
                   let mapped1 = null;
-                  if (type6 === item.type) {
+                  if (type6 === type.type) {
                     let selectedOptions = interactionComponentState3.selectedOptions;
                     mapped1 = selectedOptions.map(() => { ... });
                   }
@@ -174,36 +171,36 @@ function getData(arg0, arr) {
                 }
               });
               return obj;
-            } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-              let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+            } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+              let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
               obj = { type: null, custom_id: null, value: null };
-              ({ type: obj9[0], customId: obj9[1] } = item);
+              ({ type: obj9[0], customId: obj9[1] } = type);
               type = undefined;
               if (iter3 != null) {
                 type = iter3.type;
               }
               let value = null;
-              if (type === item.type) {
+              if (type === type.type) {
                 value = iter3.value;
               }
               obj[2] = value;
               return obj;
-            } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-              let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+            } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+              let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
               let type1;
               if (interactionComponentState != null) {
                 type1 = interactionComponentState.type;
               }
               let uploadIds = null;
-              if (type1 === item.type) {
+              if (type1 === type.type) {
                 uploadIds = interactionComponentState.uploadIds;
               }
               let obj1 = { type: null, custom_id: null, values: null };
-              ({ type: obj8[0], customId: obj8[1] } = item);
+              ({ type: obj8[0], customId: obj8[1] } = type);
               let mapped;
               if (uploadIds != null) {
-                mapped = uploadIds.map((item, index) => {
-                  closure_0 = item;
+                mapped = uploadIds.map((arg0) => {
+                  closure_0 = arg0;
                   uploads = uploads.uploads;
                   return uploads.findIndex(() => { ... });
                 });
@@ -213,67 +210,67 @@ function getData(arg0, arr) {
               }
               obj1[2] = mapped;
               return obj1;
-            } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-              let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+            } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+              let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
               let obj2 = { type: null, custom_id: null, values: null };
-              ({ type: obj7[0], customId: obj7[1] } = item);
+              ({ type: obj7[0], customId: obj7[1] } = type);
               let type2;
               if (interactionComponentState1 != null) {
                 type2 = interactionComponentState1.type;
               }
               let values = null;
-              if (type2 === item.type) {
+              if (type2 === type.type) {
                 values = interactionComponentState1.values;
               }
               obj2[2] = values;
               return obj2;
             } else {
-              if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                  if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                    if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                      if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+              if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                  if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                    if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                      if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                         let obj3 = { type: null };
-                        obj3[0] = item.type;
+                        obj3[0] = type.type;
                         return obj3;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                      } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                         let obj4 = { type: null, component: null };
-                        obj4[0] = item.type;
-                        let items = [item.component];
-                        obj4[1] = items.map((item, index) => {
-                          let type = item.type;
+                        obj4[0] = type.type;
+                        let items = [type.component];
+                        obj4[1] = items.map((type) => {
+                          type = type.type;
                           if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                             let obj = { type: null, components: null };
-                            obj[0] = item.type;
-                            let components = item.components;
+                            obj[0] = type.type;
+                            let components = type.components;
                             obj[1] = components.map(() => { ... });
                             return obj;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
-                            ({ type: obj9[0], customId: obj9[1] } = item);
+                            ({ type: obj9[0], customId: obj9[1] } = type);
                             type = undefined;
                             if (iter3 != null) {
                               type = iter3.type;
                             }
                             let value = null;
-                            if (type === item.type) {
+                            if (type === type.type) {
                               value = iter3.value;
                             }
                             obj[2] = value;
                             return obj;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let type1;
                             if (interactionComponentState != null) {
                               type1 = interactionComponentState.type;
                             }
                             let uploadIds = null;
-                            if (type1 === item.type) {
+                            if (type1 === type.type) {
                               uploadIds = interactionComponentState.uploadIds;
                             }
                             let obj1 = { type: null, custom_id: null, values: null };
-                            ({ type: obj8[0], customId: obj8[1] } = item);
+                            ({ type: obj8[0], customId: obj8[1] } = type);
                             let mapped;
                             if (uploadIds != null) {
                               mapped = uploadIds.map(() => { ... });
@@ -283,89 +280,89 @@ function getData(arg0, arr) {
                             }
                             obj1[2] = mapped;
                             return obj1;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj2 = { type: null, custom_id: null, values: null };
-                            ({ type: obj7[0], customId: obj7[1] } = item);
+                            ({ type: obj7[0], customId: obj7[1] } = type);
                             let type2;
                             if (interactionComponentState1 != null) {
                               type2 = interactionComponentState1.type;
                             }
                             let values = null;
-                            if (type2 === item.type) {
+                            if (type2 === type.type) {
                               values = interactionComponentState1.values;
                             }
                             obj2[2] = values;
                             return obj2;
                           } else {
-                            if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                              if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                  if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                    if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                            if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                              if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                  if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                    if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                       let obj3 = { type: null };
-                                      obj3[0] = item.type;
+                                      obj3[0] = type.type;
                                       return obj3;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                    } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                       let obj4 = { type: null, component: null };
-                                      obj4[0] = item.type;
-                                      let items = [item.component];
+                                      obj4[0] = type.type;
+                                      let items = [type.component];
                                       obj4[1] = items.map(() => { ... })[0];
                                       return obj4;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj5 = { type: null, custom_id: null, value: null };
-                                      ({ type: obj3[0], customId: obj3[1] } = item);
+                                      ({ type: obj3[0], customId: obj3[1] } = type);
                                       let type3;
                                       if (iter2 != null) {
                                         type3 = iter2.type;
                                       }
                                       value = null;
-                                      if (type3 === item.type) {
+                                      if (type3 === type.type) {
                                         value = iter2.value;
                                       }
                                       obj5[2] = value;
                                       return obj5;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj6 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj2[0], customId: obj2[1] } = item);
+                                      ({ type: obj2[0], customId: obj2[1] } = type);
                                       let type4;
                                       if (interactionComponentState2 != null) {
                                         type4 = interactionComponentState2.type;
                                       }
                                       values = null;
-                                      if (type4 === item.type) {
+                                      if (type4 === type.type) {
                                         values = interactionComponentState2.values;
                                       }
                                       obj6[2] = values;
                                       return obj6;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                      let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                      let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
-                                      ({ type: obj[0], customId: obj[1] } = item);
+                                      ({ type: obj[0], customId: obj[1] } = type);
                                       let type5;
                                       if (iter != null) {
                                         type5 = iter.type;
                                       }
-                                      obj[2] = type5 === item.type && iter.value;
+                                      obj[2] = type5 === type.type && iter.value;
                                       return obj;
                                     } else {
-                                      closure_1_1(closure_1_2[23])(false, "unreachable");
+                                      closure_1_1(tmp2[23])(false, "unreachable");
                                     }
                                   }
                                 }
                               }
                             }
-                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj7 = { type: null, custom_id: null, values: null };
-                            ({ type: obj6[0], customId: obj6[1] } = item);
+                            ({ type: obj6[0], customId: obj6[1] } = type);
                             let type6;
                             if (interactionComponentState3 != null) {
                               type6 = interactionComponentState3.type;
                             }
                             let mapped1 = null;
-                            if (type6 === item.type) {
+                            if (type6 === type.type) {
                               let selectedOptions = interactionComponentState3.selectedOptions;
                               mapped1 = selectedOptions.map(() => { ... });
                             }
@@ -374,100 +371,100 @@ function getData(arg0, arr) {
                           }
                         })[0];
                         return obj4;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                        let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                        let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj5 = { type: null, custom_id: null, value: null };
-                        ({ type: obj3[0], customId: obj3[1] } = item);
+                        ({ type: obj3[0], customId: obj3[1] } = type);
                         let type3;
                         if (iter2 != null) {
                           type3 = iter2.type;
                         }
                         value = null;
-                        if (type3 === item.type) {
+                        if (type3 === type.type) {
                           value = iter2.value;
                         }
                         obj5[2] = value;
                         return obj5;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                        let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                        let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj6 = { type: null, custom_id: null, values: null };
-                        ({ type: obj2[0], customId: obj2[1] } = item);
+                        ({ type: obj2[0], customId: obj2[1] } = type);
                         let type4;
                         if (interactionComponentState2 != null) {
                           type4 = interactionComponentState2.type;
                         }
                         values = null;
-                        if (type4 === item.type) {
+                        if (type4 === type.type) {
                           values = interactionComponentState2.values;
                         }
                         obj6[2] = values;
                         return obj6;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                        let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                        let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         obj = { type: null, custom_id: null, value: null };
-                        ({ type: obj[0], customId: obj[1] } = item);
+                        ({ type: obj[0], customId: obj[1] } = type);
                         let type5;
                         if (iter != null) {
                           type5 = iter.type;
                         }
-                        obj[2] = type5 === item.type && iter.value;
+                        obj[2] = type5 === type.type && iter.value;
                         return obj;
                       } else {
-                        closure_1_1(closure_1_2[23])(false, "unreachable");
+                        closure_1_1(tmp2[23])(false, "unreachable");
                       }
                     }
                   }
                 }
               }
-              let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+              let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
               let obj7 = { type: null, custom_id: null, values: null };
-              ({ type: obj6[0], customId: obj6[1] } = item);
+              ({ type: obj6[0], customId: obj6[1] } = type);
               let type6;
               if (interactionComponentState3 != null) {
                 type6 = interactionComponentState3.type;
               }
               let mapped1 = null;
-              if (type6 === item.type) {
+              if (type6 === type.type) {
                 let selectedOptions = interactionComponentState3.selectedOptions;
-                mapped1 = selectedOptions.map((item, index) => item.value);
+                mapped1 = selectedOptions.map((value) => value.value);
               }
               obj7[2] = mapped1;
               return obj7;
             }
           });
           return obj;
-        } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-          let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+        } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+          let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
           obj = { type: null, custom_id: null, value: null };
-          ({ type: obj9[0], customId: obj9[1] } = item);
+          ({ type: obj9[0], customId: obj9[1] } = type);
           type = undefined;
           if (iter3 != null) {
             type = iter3.type;
           }
           let value = null;
-          if (type === item.type) {
+          if (type === type.type) {
             value = iter3.value;
           }
           obj[2] = value;
           return obj;
-        } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-          let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+        } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+          let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
           let type1;
           if (interactionComponentState != null) {
             type1 = interactionComponentState.type;
           }
           let uploadIds = null;
-          if (type1 === item.type) {
+          if (type1 === type.type) {
             uploadIds = interactionComponentState.uploadIds;
           }
           let obj1 = { type: null, custom_id: null, values: null };
-          ({ type: obj8[0], customId: obj8[1] } = item);
+          ({ type: obj8[0], customId: obj8[1] } = type);
           let mapped;
           if (uploadIds != null) {
-            mapped = uploadIds.map((item, index) => {
-              closure_0 = item;
+            mapped = uploadIds.map((arg0) => {
+              closure_0 = arg0;
               uploads = uploads.uploads;
-              return uploads.findIndex((item, index) => item.id === closure_0);
+              return uploads.findIndex((id) => id.id === closure_0);
             });
           }
           if (mapped == null) {
@@ -475,73 +472,73 @@ function getData(arg0, arr) {
           }
           obj1[2] = mapped;
           return obj1;
-        } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-          let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+        } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+          let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
           let obj2 = { type: null, custom_id: null, values: null };
-          ({ type: obj7[0], customId: obj7[1] } = item);
+          ({ type: obj7[0], customId: obj7[1] } = type);
           let type2;
           if (interactionComponentState1 != null) {
             type2 = interactionComponentState1.type;
           }
           let values = null;
-          if (type2 === item.type) {
+          if (type2 === type.type) {
             values = interactionComponentState1.values;
           }
           obj2[2] = values;
           return obj2;
         } else {
-          if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-            if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-              if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                  if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+          if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+            if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+              if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                  if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                     let obj3 = { type: null };
-                    obj3[0] = item.type;
+                    obj3[0] = type.type;
                     return obj3;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                  } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                     let obj4 = { type: null, component: null };
-                    obj4[0] = item.type;
-                    let items = [item.component];
-                    obj4[1] = items.map((item, index) => {
-                      let type = item.type;
+                    obj4[0] = type.type;
+                    let items = [type.component];
+                    obj4[1] = items.map((type) => {
+                      type = type.type;
                       if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                         let obj = { type: null, components: null };
-                        obj[0] = item.type;
-                        let components = item.components;
-                        obj[1] = components.map((item, index) => {
-                          let type = item.type;
+                        obj[0] = type.type;
+                        let components = type.components;
+                        obj[1] = components.map((type) => {
+                          type = type.type;
                           if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                             let obj = { type: null, components: null };
-                            obj[0] = item.type;
-                            let components = item.components;
+                            obj[0] = type.type;
+                            let components = type.components;
                             obj[1] = components.map(() => { ... });
                             return obj;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
-                            ({ type: obj9[0], customId: obj9[1] } = item);
+                            ({ type: obj9[0], customId: obj9[1] } = type);
                             type = undefined;
                             if (iter3 != null) {
                               type = iter3.type;
                             }
                             let value = null;
-                            if (type === item.type) {
+                            if (type === type.type) {
                               value = iter3.value;
                             }
                             obj[2] = value;
                             return obj;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let type1;
                             if (interactionComponentState != null) {
                               type1 = interactionComponentState.type;
                             }
                             let uploadIds = null;
-                            if (type1 === item.type) {
+                            if (type1 === type.type) {
                               uploadIds = interactionComponentState.uploadIds;
                             }
                             let obj1 = { type: null, custom_id: null, values: null };
-                            ({ type: obj8[0], customId: obj8[1] } = item);
+                            ({ type: obj8[0], customId: obj8[1] } = type);
                             let mapped;
                             if (uploadIds != null) {
                               mapped = uploadIds.map(() => { ... });
@@ -551,89 +548,89 @@ function getData(arg0, arr) {
                             }
                             obj1[2] = mapped;
                             return obj1;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj2 = { type: null, custom_id: null, values: null };
-                            ({ type: obj7[0], customId: obj7[1] } = item);
+                            ({ type: obj7[0], customId: obj7[1] } = type);
                             let type2;
                             if (interactionComponentState1 != null) {
                               type2 = interactionComponentState1.type;
                             }
                             let values = null;
-                            if (type2 === item.type) {
+                            if (type2 === type.type) {
                               values = interactionComponentState1.values;
                             }
                             obj2[2] = values;
                             return obj2;
                           } else {
-                            if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                              if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                  if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                    if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                            if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                              if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                  if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                    if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                       let obj3 = { type: null };
-                                      obj3[0] = item.type;
+                                      obj3[0] = type.type;
                                       return obj3;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                    } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                       let obj4 = { type: null, component: null };
-                                      obj4[0] = item.type;
-                                      let items = [item.component];
+                                      obj4[0] = type.type;
+                                      let items = [type.component];
                                       obj4[1] = items.map(() => { ... })[0];
                                       return obj4;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj5 = { type: null, custom_id: null, value: null };
-                                      ({ type: obj3[0], customId: obj3[1] } = item);
+                                      ({ type: obj3[0], customId: obj3[1] } = type);
                                       let type3;
                                       if (iter2 != null) {
                                         type3 = iter2.type;
                                       }
                                       value = null;
-                                      if (type3 === item.type) {
+                                      if (type3 === type.type) {
                                         value = iter2.value;
                                       }
                                       obj5[2] = value;
                                       return obj5;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj6 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj2[0], customId: obj2[1] } = item);
+                                      ({ type: obj2[0], customId: obj2[1] } = type);
                                       let type4;
                                       if (interactionComponentState2 != null) {
                                         type4 = interactionComponentState2.type;
                                       }
                                       values = null;
-                                      if (type4 === item.type) {
+                                      if (type4 === type.type) {
                                         values = interactionComponentState2.values;
                                       }
                                       obj6[2] = values;
                                       return obj6;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                      let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                      let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
-                                      ({ type: obj[0], customId: obj[1] } = item);
+                                      ({ type: obj[0], customId: obj[1] } = type);
                                       let type5;
                                       if (iter != null) {
                                         type5 = iter.type;
                                       }
-                                      obj[2] = type5 === item.type && iter.value;
+                                      obj[2] = type5 === type.type && iter.value;
                                       return obj;
                                     } else {
-                                      closure_1_1(closure_1_2[23])(false, "unreachable");
+                                      closure_1_1(tmp2[23])(false, "unreachable");
                                     }
                                   }
                                 }
                               }
                             }
-                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj7 = { type: null, custom_id: null, values: null };
-                            ({ type: obj6[0], customId: obj6[1] } = item);
+                            ({ type: obj6[0], customId: obj6[1] } = type);
                             let type6;
                             if (interactionComponentState3 != null) {
                               type6 = interactionComponentState3.type;
                             }
                             let mapped1 = null;
-                            if (type6 === item.type) {
+                            if (type6 === type.type) {
                               let selectedOptions = interactionComponentState3.selectedOptions;
                               mapped1 = selectedOptions.map(() => { ... });
                             }
@@ -642,36 +639,36 @@ function getData(arg0, arr) {
                           }
                         });
                         return obj;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                        let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                        let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         obj = { type: null, custom_id: null, value: null };
-                        ({ type: obj9[0], customId: obj9[1] } = item);
+                        ({ type: obj9[0], customId: obj9[1] } = type);
                         type = undefined;
                         if (iter3 != null) {
                           type = iter3.type;
                         }
                         let value = null;
-                        if (type === item.type) {
+                        if (type === type.type) {
                           value = iter3.value;
                         }
                         obj[2] = value;
                         return obj;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                        let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                        let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let type1;
                         if (interactionComponentState != null) {
                           type1 = interactionComponentState.type;
                         }
                         let uploadIds = null;
-                        if (type1 === item.type) {
+                        if (type1 === type.type) {
                           uploadIds = interactionComponentState.uploadIds;
                         }
                         let obj1 = { type: null, custom_id: null, values: null };
-                        ({ type: obj8[0], customId: obj8[1] } = item);
+                        ({ type: obj8[0], customId: obj8[1] } = type);
                         let mapped;
                         if (uploadIds != null) {
-                          mapped = uploadIds.map((item, index) => {
-                            closure_0 = item;
+                          mapped = uploadIds.map((arg0) => {
+                            closure_0 = arg0;
                             uploads = uploads.uploads;
                             return uploads.findIndex(() => { ... });
                           });
@@ -681,67 +678,67 @@ function getData(arg0, arr) {
                         }
                         obj1[2] = mapped;
                         return obj1;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                        let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                        let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj2 = { type: null, custom_id: null, values: null };
-                        ({ type: obj7[0], customId: obj7[1] } = item);
+                        ({ type: obj7[0], customId: obj7[1] } = type);
                         let type2;
                         if (interactionComponentState1 != null) {
                           type2 = interactionComponentState1.type;
                         }
                         let values = null;
-                        if (type2 === item.type) {
+                        if (type2 === type.type) {
                           values = interactionComponentState1.values;
                         }
                         obj2[2] = values;
                         return obj2;
                       } else {
-                        if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                          if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                            if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                              if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                        if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                          if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                            if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                              if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                   let obj3 = { type: null };
-                                  obj3[0] = item.type;
+                                  obj3[0] = type.type;
                                   return obj3;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                   let obj4 = { type: null, component: null };
-                                  obj4[0] = item.type;
-                                  let items = [item.component];
-                                  obj4[1] = items.map((item, index) => {
-                                    let type = item.type;
+                                  obj4[0] = type.type;
+                                  let items = [type.component];
+                                  obj4[1] = items.map((type) => {
+                                    type = type.type;
                                     if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                       let obj = { type: null, components: null };
-                                      obj[0] = item.type;
-                                      let components = item.components;
+                                      obj[0] = type.type;
+                                      let components = type.components;
                                       obj[1] = components.map(() => { ... });
                                       return obj;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
-                                      ({ type: obj9[0], customId: obj9[1] } = item);
+                                      ({ type: obj9[0], customId: obj9[1] } = type);
                                       type = undefined;
                                       if (iter3 != null) {
                                         type = iter3.type;
                                       }
                                       let value = null;
-                                      if (type === item.type) {
+                                      if (type === type.type) {
                                         value = iter3.value;
                                       }
                                       obj[2] = value;
                                       return obj;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let type1;
                                       if (interactionComponentState != null) {
                                         type1 = interactionComponentState.type;
                                       }
                                       let uploadIds = null;
-                                      if (type1 === item.type) {
+                                      if (type1 === type.type) {
                                         uploadIds = interactionComponentState.uploadIds;
                                       }
                                       let obj1 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj8[0], customId: obj8[1] } = item);
+                                      ({ type: obj8[0], customId: obj8[1] } = type);
                                       let mapped;
                                       if (uploadIds != null) {
                                         mapped = uploadIds.map(() => { ... });
@@ -751,89 +748,89 @@ function getData(arg0, arr) {
                                       }
                                       obj1[2] = mapped;
                                       return obj1;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj2 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj7[0], customId: obj7[1] } = item);
+                                      ({ type: obj7[0], customId: obj7[1] } = type);
                                       let type2;
                                       if (interactionComponentState1 != null) {
                                         type2 = interactionComponentState1.type;
                                       }
                                       let values = null;
-                                      if (type2 === item.type) {
+                                      if (type2 === type.type) {
                                         values = interactionComponentState1.values;
                                       }
                                       obj2[2] = values;
                                       return obj2;
                                     } else {
-                                      if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                                        if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                          if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                            if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                              if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                                      if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                                        if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                          if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                            if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                              if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                                 let obj3 = { type: null };
-                                                obj3[0] = item.type;
+                                                obj3[0] = type.type;
                                                 return obj3;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                              } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                                 let obj4 = { type: null, component: null };
-                                                obj4[0] = item.type;
-                                                let items = [item.component];
+                                                obj4[0] = type.type;
+                                                let items = [type.component];
                                                 obj4[1] = items.map(() => { ... })[0];
                                                 return obj4;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj5 = { type: null, custom_id: null, value: null };
-                                                ({ type: obj3[0], customId: obj3[1] } = item);
+                                                ({ type: obj3[0], customId: obj3[1] } = type);
                                                 let type3;
                                                 if (iter2 != null) {
                                                   type3 = iter2.type;
                                                 }
                                                 value = null;
-                                                if (type3 === item.type) {
+                                                if (type3 === type.type) {
                                                   value = iter2.value;
                                                 }
                                                 obj5[2] = value;
                                                 return obj5;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj6 = { type: null, custom_id: null, values: null };
-                                                ({ type: obj2[0], customId: obj2[1] } = item);
+                                                ({ type: obj2[0], customId: obj2[1] } = type);
                                                 let type4;
                                                 if (interactionComponentState2 != null) {
                                                   type4 = interactionComponentState2.type;
                                                 }
                                                 values = null;
-                                                if (type4 === item.type) {
+                                                if (type4 === type.type) {
                                                   values = interactionComponentState2.values;
                                                 }
                                                 obj6[2] = values;
                                                 return obj6;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                                let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
-                                                ({ type: obj[0], customId: obj[1] } = item);
+                                                ({ type: obj[0], customId: obj[1] } = type);
                                                 let type5;
                                                 if (iter != null) {
                                                   type5 = iter.type;
                                                 }
-                                                obj[2] = type5 === item.type && iter.value;
+                                                obj[2] = type5 === type.type && iter.value;
                                                 return obj;
                                               } else {
-                                                closure_1_1(closure_1_2[23])(false, "unreachable");
+                                                closure_1_1(tmp2[23])(false, "unreachable");
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj7 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj6[0], customId: obj6[1] } = item);
+                                      ({ type: obj6[0], customId: obj6[1] } = type);
                                       let type6;
                                       if (interactionComponentState3 != null) {
                                         type6 = interactionComponentState3.type;
                                       }
                                       let mapped1 = null;
-                                      if (type6 === item.type) {
+                                      if (type6 === type.type) {
                                         let selectedOptions = interactionComponentState3.selectedOptions;
                                         mapped1 = selectedOptions.map(() => { ... });
                                       }
@@ -842,162 +839,162 @@ function getData(arg0, arr) {
                                     }
                                   })[0];
                                   return obj4;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                  let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                  let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj5 = { type: null, custom_id: null, value: null };
-                                  ({ type: obj3[0], customId: obj3[1] } = item);
+                                  ({ type: obj3[0], customId: obj3[1] } = type);
                                   let type3;
                                   if (iter2 != null) {
                                     type3 = iter2.type;
                                   }
                                   value = null;
-                                  if (type3 === item.type) {
+                                  if (type3 === type.type) {
                                     value = iter2.value;
                                   }
                                   obj5[2] = value;
                                   return obj5;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                  let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                  let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj6 = { type: null, custom_id: null, values: null };
-                                  ({ type: obj2[0], customId: obj2[1] } = item);
+                                  ({ type: obj2[0], customId: obj2[1] } = type);
                                   let type4;
                                   if (interactionComponentState2 != null) {
                                     type4 = interactionComponentState2.type;
                                   }
                                   values = null;
-                                  if (type4 === item.type) {
+                                  if (type4 === type.type) {
                                     values = interactionComponentState2.values;
                                   }
                                   obj6[2] = values;
                                   return obj6;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                  let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                  let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   obj = { type: null, custom_id: null, value: null };
-                                  ({ type: obj[0], customId: obj[1] } = item);
+                                  ({ type: obj[0], customId: obj[1] } = type);
                                   let type5;
                                   if (iter != null) {
                                     type5 = iter.type;
                                   }
-                                  obj[2] = type5 === item.type && iter.value;
+                                  obj[2] = type5 === type.type && iter.value;
                                   return obj;
                                 } else {
-                                  closure_1_1(closure_1_2[23])(false, "unreachable");
+                                  closure_1_1(tmp2[23])(false, "unreachable");
                                 }
                               }
                             }
                           }
                         }
-                        let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                        let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj7 = { type: null, custom_id: null, values: null };
-                        ({ type: obj6[0], customId: obj6[1] } = item);
+                        ({ type: obj6[0], customId: obj6[1] } = type);
                         let type6;
                         if (interactionComponentState3 != null) {
                           type6 = interactionComponentState3.type;
                         }
                         let mapped1 = null;
-                        if (type6 === item.type) {
+                        if (type6 === type.type) {
                           let selectedOptions = interactionComponentState3.selectedOptions;
-                          mapped1 = selectedOptions.map((item, index) => item.value);
+                          mapped1 = selectedOptions.map((value) => value.value);
                         }
                         obj7[2] = mapped1;
                         return obj7;
                       }
                     })[0];
                     return obj4;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                    let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                    let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj5 = { type: null, custom_id: null, value: null };
-                    ({ type: obj3[0], customId: obj3[1] } = item);
+                    ({ type: obj3[0], customId: obj3[1] } = type);
                     let type3;
                     if (iter2 != null) {
                       type3 = iter2.type;
                     }
                     value = null;
-                    if (type3 === item.type) {
+                    if (type3 === type.type) {
                       value = iter2.value;
                     }
                     obj5[2] = value;
                     return obj5;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                    let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                    let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj6 = { type: null, custom_id: null, values: null };
-                    ({ type: obj2[0], customId: obj2[1] } = item);
+                    ({ type: obj2[0], customId: obj2[1] } = type);
                     let type4;
                     if (interactionComponentState2 != null) {
                       type4 = interactionComponentState2.type;
                     }
                     values = null;
-                    if (type4 === item.type) {
+                    if (type4 === type.type) {
                       values = interactionComponentState2.values;
                     }
                     obj6[2] = values;
                     return obj6;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                    let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                    let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     obj = { type: null, custom_id: null, value: null };
-                    ({ type: obj[0], customId: obj[1] } = item);
+                    ({ type: obj[0], customId: obj[1] } = type);
                     let type5;
                     if (iter != null) {
                       type5 = iter.type;
                     }
-                    obj[2] = type5 === item.type && iter.value;
+                    obj[2] = type5 === type.type && iter.value;
                     return obj;
                   } else {
-                    closure_1_1(closure_1_2[23])(false, "unreachable");
+                    closure_1_1(tmp2[23])(false, "unreachable");
                   }
                 }
               }
             }
           }
-          let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+          let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
           let obj7 = { type: null, custom_id: null, values: null };
-          ({ type: obj6[0], customId: obj6[1] } = item);
+          ({ type: obj6[0], customId: obj6[1] } = type);
           let type6;
           if (interactionComponentState3 != null) {
             type6 = interactionComponentState3.type;
           }
           let mapped1 = null;
-          if (type6 === item.type) {
+          if (type6 === type.type) {
             let selectedOptions = interactionComponentState3.selectedOptions;
-            mapped1 = selectedOptions.map((item, index) => item.value);
+            mapped1 = selectedOptions.map((value) => value.value);
           }
           obj7[2] = mapped1;
           return obj7;
         }
       });
       return obj;
-    } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-      let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+    } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
       obj = { type: null, custom_id: null, value: null };
-      ({ type: obj9[0], customId: obj9[1] } = item);
+      ({ type: obj9[0], customId: obj9[1] } = type);
       type = undefined;
       if (iter3 != null) {
         type = iter3.type;
       }
       let value = null;
-      if (type === item.type) {
+      if (type === type.type) {
         value = iter3.value;
       }
       obj[2] = value;
       return obj;
-    } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+    } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
       let type1;
       if (interactionComponentState != null) {
         type1 = interactionComponentState.type;
       }
       let uploadIds = null;
-      if (type1 === item.type) {
+      if (type1 === type.type) {
         uploadIds = interactionComponentState.uploadIds;
       }
       let obj1 = { type: null, custom_id: null, values: null };
-      ({ type: obj8[0], customId: obj8[1] } = item);
+      ({ type: obj8[0], customId: obj8[1] } = type);
       let mapped;
       if (uploadIds != null) {
-        mapped = uploadIds.map((item, index) => {
-          closure_0 = item;
+        mapped = uploadIds.map((arg0) => {
+          closure_0 = arg0;
           uploads = uploads.uploads;
-          return uploads.findIndex((item, index) => item.id === closure_0);
+          return uploads.findIndex((id) => id.id === closure_0);
         });
       }
       if (mapped == null) {
@@ -1005,79 +1002,79 @@ function getData(arg0, arr) {
       }
       obj1[2] = mapped;
       return obj1;
-    } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+    } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
       let obj2 = { type: null, custom_id: null, values: null };
-      ({ type: obj7[0], customId: obj7[1] } = item);
+      ({ type: obj7[0], customId: obj7[1] } = type);
       let type2;
       if (interactionComponentState1 != null) {
         type2 = interactionComponentState1.type;
       }
       let values = null;
-      if (type2 === item.type) {
+      if (type2 === type.type) {
         values = interactionComponentState1.values;
       }
       obj2[2] = values;
       return obj2;
     } else {
-      if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-        if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-          if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-            if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-              if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+      if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+        if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+          if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+            if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+              if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                 let obj3 = { type: null };
-                obj3[0] = item.type;
+                obj3[0] = type.type;
                 return obj3;
-              } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+              } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                 let obj4 = { type: null, component: null };
-                obj4[0] = item.type;
-                let items = [item.component];
-                obj4[1] = items.map((item, index) => {
-                  let type = item.type;
+                obj4[0] = type.type;
+                let items = [type.component];
+                obj4[1] = items.map((type) => {
+                  type = type.type;
                   if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                     let obj = { type: null, components: null };
-                    obj[0] = item.type;
-                    let components = item.components;
-                    obj[1] = components.map((item, index) => {
-                      let type = item.type;
+                    obj[0] = type.type;
+                    let components = type.components;
+                    obj[1] = components.map((type) => {
+                      type = type.type;
                       if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                         let obj = { type: null, components: null };
-                        obj[0] = item.type;
-                        let components = item.components;
-                        obj[1] = components.map((item, index) => {
-                          let type = item.type;
+                        obj[0] = type.type;
+                        let components = type.components;
+                        obj[1] = components.map((type) => {
+                          type = type.type;
                           if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                             let obj = { type: null, components: null };
-                            obj[0] = item.type;
-                            let components = item.components;
+                            obj[0] = type.type;
+                            let components = type.components;
                             obj[1] = components.map(() => { ... });
                             return obj;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
-                            ({ type: obj9[0], customId: obj9[1] } = item);
+                            ({ type: obj9[0], customId: obj9[1] } = type);
                             type = undefined;
                             if (iter3 != null) {
                               type = iter3.type;
                             }
                             let value = null;
-                            if (type === item.type) {
+                            if (type === type.type) {
                               value = iter3.value;
                             }
                             obj[2] = value;
                             return obj;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let type1;
                             if (interactionComponentState != null) {
                               type1 = interactionComponentState.type;
                             }
                             let uploadIds = null;
-                            if (type1 === item.type) {
+                            if (type1 === type.type) {
                               uploadIds = interactionComponentState.uploadIds;
                             }
                             let obj1 = { type: null, custom_id: null, values: null };
-                            ({ type: obj8[0], customId: obj8[1] } = item);
+                            ({ type: obj8[0], customId: obj8[1] } = type);
                             let mapped;
                             if (uploadIds != null) {
                               mapped = uploadIds.map(() => { ... });
@@ -1087,89 +1084,89 @@ function getData(arg0, arr) {
                             }
                             obj1[2] = mapped;
                             return obj1;
-                          } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                          } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj2 = { type: null, custom_id: null, values: null };
-                            ({ type: obj7[0], customId: obj7[1] } = item);
+                            ({ type: obj7[0], customId: obj7[1] } = type);
                             let type2;
                             if (interactionComponentState1 != null) {
                               type2 = interactionComponentState1.type;
                             }
                             let values = null;
-                            if (type2 === item.type) {
+                            if (type2 === type.type) {
                               values = interactionComponentState1.values;
                             }
                             obj2[2] = values;
                             return obj2;
                           } else {
-                            if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                              if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                  if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                    if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                            if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                              if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                  if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                    if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                       let obj3 = { type: null };
-                                      obj3[0] = item.type;
+                                      obj3[0] = type.type;
                                       return obj3;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                    } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                       let obj4 = { type: null, component: null };
-                                      obj4[0] = item.type;
-                                      let items = [item.component];
+                                      obj4[0] = type.type;
+                                      let items = [type.component];
                                       obj4[1] = items.map(() => { ... })[0];
                                       return obj4;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj5 = { type: null, custom_id: null, value: null };
-                                      ({ type: obj3[0], customId: obj3[1] } = item);
+                                      ({ type: obj3[0], customId: obj3[1] } = type);
                                       let type3;
                                       if (iter2 != null) {
                                         type3 = iter2.type;
                                       }
                                       value = null;
-                                      if (type3 === item.type) {
+                                      if (type3 === type.type) {
                                         value = iter2.value;
                                       }
                                       obj5[2] = value;
                                       return obj5;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj6 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj2[0], customId: obj2[1] } = item);
+                                      ({ type: obj2[0], customId: obj2[1] } = type);
                                       let type4;
                                       if (interactionComponentState2 != null) {
                                         type4 = interactionComponentState2.type;
                                       }
                                       values = null;
-                                      if (type4 === item.type) {
+                                      if (type4 === type.type) {
                                         values = interactionComponentState2.values;
                                       }
                                       obj6[2] = values;
                                       return obj6;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                      let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                      let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
-                                      ({ type: obj[0], customId: obj[1] } = item);
+                                      ({ type: obj[0], customId: obj[1] } = type);
                                       let type5;
                                       if (iter != null) {
                                         type5 = iter.type;
                                       }
-                                      obj[2] = type5 === item.type && iter.value;
+                                      obj[2] = type5 === type.type && iter.value;
                                       return obj;
                                     } else {
-                                      closure_1_1(closure_1_2[23])(false, "unreachable");
+                                      closure_1_1(tmp2[23])(false, "unreachable");
                                     }
                                   }
                                 }
                               }
                             }
-                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj7 = { type: null, custom_id: null, values: null };
-                            ({ type: obj6[0], customId: obj6[1] } = item);
+                            ({ type: obj6[0], customId: obj6[1] } = type);
                             let type6;
                             if (interactionComponentState3 != null) {
                               type6 = interactionComponentState3.type;
                             }
                             let mapped1 = null;
-                            if (type6 === item.type) {
+                            if (type6 === type.type) {
                               let selectedOptions = interactionComponentState3.selectedOptions;
                               mapped1 = selectedOptions.map(() => { ... });
                             }
@@ -1178,36 +1175,36 @@ function getData(arg0, arr) {
                           }
                         });
                         return obj;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                        let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                        let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         obj = { type: null, custom_id: null, value: null };
-                        ({ type: obj9[0], customId: obj9[1] } = item);
+                        ({ type: obj9[0], customId: obj9[1] } = type);
                         type = undefined;
                         if (iter3 != null) {
                           type = iter3.type;
                         }
                         let value = null;
-                        if (type === item.type) {
+                        if (type === type.type) {
                           value = iter3.value;
                         }
                         obj[2] = value;
                         return obj;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                        let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                        let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let type1;
                         if (interactionComponentState != null) {
                           type1 = interactionComponentState.type;
                         }
                         let uploadIds = null;
-                        if (type1 === item.type) {
+                        if (type1 === type.type) {
                           uploadIds = interactionComponentState.uploadIds;
                         }
                         let obj1 = { type: null, custom_id: null, values: null };
-                        ({ type: obj8[0], customId: obj8[1] } = item);
+                        ({ type: obj8[0], customId: obj8[1] } = type);
                         let mapped;
                         if (uploadIds != null) {
-                          mapped = uploadIds.map((item, index) => {
-                            closure_0 = item;
+                          mapped = uploadIds.map((arg0) => {
+                            closure_0 = arg0;
                             uploads = uploads.uploads;
                             return uploads.findIndex(() => { ... });
                           });
@@ -1217,67 +1214,67 @@ function getData(arg0, arr) {
                         }
                         obj1[2] = mapped;
                         return obj1;
-                      } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                        let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                      } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                        let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj2 = { type: null, custom_id: null, values: null };
-                        ({ type: obj7[0], customId: obj7[1] } = item);
+                        ({ type: obj7[0], customId: obj7[1] } = type);
                         let type2;
                         if (interactionComponentState1 != null) {
                           type2 = interactionComponentState1.type;
                         }
                         let values = null;
-                        if (type2 === item.type) {
+                        if (type2 === type.type) {
                           values = interactionComponentState1.values;
                         }
                         obj2[2] = values;
                         return obj2;
                       } else {
-                        if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                          if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                            if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                              if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                        if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                          if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                            if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                              if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                   let obj3 = { type: null };
-                                  obj3[0] = item.type;
+                                  obj3[0] = type.type;
                                   return obj3;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                   let obj4 = { type: null, component: null };
-                                  obj4[0] = item.type;
-                                  let items = [item.component];
-                                  obj4[1] = items.map((item, index) => {
-                                    let type = item.type;
+                                  obj4[0] = type.type;
+                                  let items = [type.component];
+                                  obj4[1] = items.map((type) => {
+                                    type = type.type;
                                     if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                       let obj = { type: null, components: null };
-                                      obj[0] = item.type;
-                                      let components = item.components;
+                                      obj[0] = type.type;
+                                      let components = type.components;
                                       obj[1] = components.map(() => { ... });
                                       return obj;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
-                                      ({ type: obj9[0], customId: obj9[1] } = item);
+                                      ({ type: obj9[0], customId: obj9[1] } = type);
                                       type = undefined;
                                       if (iter3 != null) {
                                         type = iter3.type;
                                       }
                                       let value = null;
-                                      if (type === item.type) {
+                                      if (type === type.type) {
                                         value = iter3.value;
                                       }
                                       obj[2] = value;
                                       return obj;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let type1;
                                       if (interactionComponentState != null) {
                                         type1 = interactionComponentState.type;
                                       }
                                       let uploadIds = null;
-                                      if (type1 === item.type) {
+                                      if (type1 === type.type) {
                                         uploadIds = interactionComponentState.uploadIds;
                                       }
                                       let obj1 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj8[0], customId: obj8[1] } = item);
+                                      ({ type: obj8[0], customId: obj8[1] } = type);
                                       let mapped;
                                       if (uploadIds != null) {
                                         mapped = uploadIds.map(() => { ... });
@@ -1287,89 +1284,89 @@ function getData(arg0, arr) {
                                       }
                                       obj1[2] = mapped;
                                       return obj1;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj2 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj7[0], customId: obj7[1] } = item);
+                                      ({ type: obj7[0], customId: obj7[1] } = type);
                                       let type2;
                                       if (interactionComponentState1 != null) {
                                         type2 = interactionComponentState1.type;
                                       }
                                       let values = null;
-                                      if (type2 === item.type) {
+                                      if (type2 === type.type) {
                                         values = interactionComponentState1.values;
                                       }
                                       obj2[2] = values;
                                       return obj2;
                                     } else {
-                                      if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                                        if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                          if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                            if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                              if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                                      if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                                        if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                          if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                            if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                              if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                                 let obj3 = { type: null };
-                                                obj3[0] = item.type;
+                                                obj3[0] = type.type;
                                                 return obj3;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                              } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                                 let obj4 = { type: null, component: null };
-                                                obj4[0] = item.type;
-                                                let items = [item.component];
+                                                obj4[0] = type.type;
+                                                let items = [type.component];
                                                 obj4[1] = items.map(() => { ... })[0];
                                                 return obj4;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj5 = { type: null, custom_id: null, value: null };
-                                                ({ type: obj3[0], customId: obj3[1] } = item);
+                                                ({ type: obj3[0], customId: obj3[1] } = type);
                                                 let type3;
                                                 if (iter2 != null) {
                                                   type3 = iter2.type;
                                                 }
                                                 value = null;
-                                                if (type3 === item.type) {
+                                                if (type3 === type.type) {
                                                   value = iter2.value;
                                                 }
                                                 obj5[2] = value;
                                                 return obj5;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj6 = { type: null, custom_id: null, values: null };
-                                                ({ type: obj2[0], customId: obj2[1] } = item);
+                                                ({ type: obj2[0], customId: obj2[1] } = type);
                                                 let type4;
                                                 if (interactionComponentState2 != null) {
                                                   type4 = interactionComponentState2.type;
                                                 }
                                                 values = null;
-                                                if (type4 === item.type) {
+                                                if (type4 === type.type) {
                                                   values = interactionComponentState2.values;
                                                 }
                                                 obj6[2] = values;
                                                 return obj6;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                                let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
-                                                ({ type: obj[0], customId: obj[1] } = item);
+                                                ({ type: obj[0], customId: obj[1] } = type);
                                                 let type5;
                                                 if (iter != null) {
                                                   type5 = iter.type;
                                                 }
-                                                obj[2] = type5 === item.type && iter.value;
+                                                obj[2] = type5 === type.type && iter.value;
                                                 return obj;
                                               } else {
-                                                closure_1_1(closure_1_2[23])(false, "unreachable");
+                                                closure_1_1(tmp2[23])(false, "unreachable");
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj7 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj6[0], customId: obj6[1] } = item);
+                                      ({ type: obj6[0], customId: obj6[1] } = type);
                                       let type6;
                                       if (interactionComponentState3 != null) {
                                         type6 = interactionComponentState3.type;
                                       }
                                       let mapped1 = null;
-                                      if (type6 === item.type) {
+                                      if (type6 === type.type) {
                                         let selectedOptions = interactionComponentState3.selectedOptions;
                                         mapped1 = selectedOptions.map(() => { ... });
                                       }
@@ -1378,100 +1375,100 @@ function getData(arg0, arr) {
                                     }
                                   })[0];
                                   return obj4;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                  let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                  let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj5 = { type: null, custom_id: null, value: null };
-                                  ({ type: obj3[0], customId: obj3[1] } = item);
+                                  ({ type: obj3[0], customId: obj3[1] } = type);
                                   let type3;
                                   if (iter2 != null) {
                                     type3 = iter2.type;
                                   }
                                   value = null;
-                                  if (type3 === item.type) {
+                                  if (type3 === type.type) {
                                     value = iter2.value;
                                   }
                                   obj5[2] = value;
                                   return obj5;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                  let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                  let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj6 = { type: null, custom_id: null, values: null };
-                                  ({ type: obj2[0], customId: obj2[1] } = item);
+                                  ({ type: obj2[0], customId: obj2[1] } = type);
                                   let type4;
                                   if (interactionComponentState2 != null) {
                                     type4 = interactionComponentState2.type;
                                   }
                                   values = null;
-                                  if (type4 === item.type) {
+                                  if (type4 === type.type) {
                                     values = interactionComponentState2.values;
                                   }
                                   obj6[2] = values;
                                   return obj6;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                  let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                  let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   obj = { type: null, custom_id: null, value: null };
-                                  ({ type: obj[0], customId: obj[1] } = item);
+                                  ({ type: obj[0], customId: obj[1] } = type);
                                   let type5;
                                   if (iter != null) {
                                     type5 = iter.type;
                                   }
-                                  obj[2] = type5 === item.type && iter.value;
+                                  obj[2] = type5 === type.type && iter.value;
                                   return obj;
                                 } else {
-                                  closure_1_1(closure_1_2[23])(false, "unreachable");
+                                  closure_1_1(tmp2[23])(false, "unreachable");
                                 }
                               }
                             }
                           }
                         }
-                        let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                        let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj7 = { type: null, custom_id: null, values: null };
-                        ({ type: obj6[0], customId: obj6[1] } = item);
+                        ({ type: obj6[0], customId: obj6[1] } = type);
                         let type6;
                         if (interactionComponentState3 != null) {
                           type6 = interactionComponentState3.type;
                         }
                         let mapped1 = null;
-                        if (type6 === item.type) {
+                        if (type6 === type.type) {
                           let selectedOptions = interactionComponentState3.selectedOptions;
-                          mapped1 = selectedOptions.map((item, index) => item.value);
+                          mapped1 = selectedOptions.map((value) => value.value);
                         }
                         obj7[2] = mapped1;
                         return obj7;
                       }
                     });
                     return obj;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                    let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                    let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     obj = { type: null, custom_id: null, value: null };
-                    ({ type: obj9[0], customId: obj9[1] } = item);
+                    ({ type: obj9[0], customId: obj9[1] } = type);
                     type = undefined;
                     if (iter3 != null) {
                       type = iter3.type;
                     }
                     let value = null;
-                    if (type === item.type) {
+                    if (type === type.type) {
                       value = iter3.value;
                     }
                     obj[2] = value;
                     return obj;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                    let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                    let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let type1;
                     if (interactionComponentState != null) {
                       type1 = interactionComponentState.type;
                     }
                     let uploadIds = null;
-                    if (type1 === item.type) {
+                    if (type1 === type.type) {
                       uploadIds = interactionComponentState.uploadIds;
                     }
                     let obj1 = { type: null, custom_id: null, values: null };
-                    ({ type: obj8[0], customId: obj8[1] } = item);
+                    ({ type: obj8[0], customId: obj8[1] } = type);
                     let mapped;
                     if (uploadIds != null) {
-                      mapped = uploadIds.map((item, index) => {
-                        closure_0 = item;
+                      mapped = uploadIds.map((arg0) => {
+                        closure_0 = arg0;
                         uploads = uploads.uploads;
-                        return uploads.findIndex((item, index) => item.id === closure_0);
+                        return uploads.findIndex((id) => id.id === closure_0);
                       });
                     }
                     if (mapped == null) {
@@ -1479,73 +1476,73 @@ function getData(arg0, arr) {
                     }
                     obj1[2] = mapped;
                     return obj1;
-                  } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                    let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                  } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                    let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj2 = { type: null, custom_id: null, values: null };
-                    ({ type: obj7[0], customId: obj7[1] } = item);
+                    ({ type: obj7[0], customId: obj7[1] } = type);
                     let type2;
                     if (interactionComponentState1 != null) {
                       type2 = interactionComponentState1.type;
                     }
                     let values = null;
-                    if (type2 === item.type) {
+                    if (type2 === type.type) {
                       values = interactionComponentState1.values;
                     }
                     obj2[2] = values;
                     return obj2;
                   } else {
-                    if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                      if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                        if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                          if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                            if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                    if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                      if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                        if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                          if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                            if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                               let obj3 = { type: null };
-                              obj3[0] = item.type;
+                              obj3[0] = type.type;
                               return obj3;
-                            } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                            } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                               let obj4 = { type: null, component: null };
-                              obj4[0] = item.type;
-                              let items = [item.component];
-                              obj4[1] = items.map((item, index) => {
-                                let type = item.type;
+                              obj4[0] = type.type;
+                              let items = [type.component];
+                              obj4[1] = items.map((type) => {
+                                type = type.type;
                                 if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                   let obj = { type: null, components: null };
-                                  obj[0] = item.type;
-                                  let components = item.components;
-                                  obj[1] = components.map((item, index) => {
-                                    let type = item.type;
+                                  obj[0] = type.type;
+                                  let components = type.components;
+                                  obj[1] = components.map((type) => {
+                                    type = type.type;
                                     if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                       let obj = { type: null, components: null };
-                                      obj[0] = item.type;
-                                      let components = item.components;
+                                      obj[0] = type.type;
+                                      let components = type.components;
                                       obj[1] = components.map(() => { ... });
                                       return obj;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
-                                      ({ type: obj9[0], customId: obj9[1] } = item);
+                                      ({ type: obj9[0], customId: obj9[1] } = type);
                                       type = undefined;
                                       if (iter3 != null) {
                                         type = iter3.type;
                                       }
                                       let value = null;
-                                      if (type === item.type) {
+                                      if (type === type.type) {
                                         value = iter3.value;
                                       }
                                       obj[2] = value;
                                       return obj;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let type1;
                                       if (interactionComponentState != null) {
                                         type1 = interactionComponentState.type;
                                       }
                                       let uploadIds = null;
-                                      if (type1 === item.type) {
+                                      if (type1 === type.type) {
                                         uploadIds = interactionComponentState.uploadIds;
                                       }
                                       let obj1 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj8[0], customId: obj8[1] } = item);
+                                      ({ type: obj8[0], customId: obj8[1] } = type);
                                       let mapped;
                                       if (uploadIds != null) {
                                         mapped = uploadIds.map(() => { ... });
@@ -1555,89 +1552,89 @@ function getData(arg0, arr) {
                                       }
                                       obj1[2] = mapped;
                                       return obj1;
-                                    } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                    } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj2 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj7[0], customId: obj7[1] } = item);
+                                      ({ type: obj7[0], customId: obj7[1] } = type);
                                       let type2;
                                       if (interactionComponentState1 != null) {
                                         type2 = interactionComponentState1.type;
                                       }
                                       let values = null;
-                                      if (type2 === item.type) {
+                                      if (type2 === type.type) {
                                         values = interactionComponentState1.values;
                                       }
                                       obj2[2] = values;
                                       return obj2;
                                     } else {
-                                      if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                                        if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                          if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                            if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                              if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                                      if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                                        if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                          if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                            if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                              if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                                 let obj3 = { type: null };
-                                                obj3[0] = item.type;
+                                                obj3[0] = type.type;
                                                 return obj3;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                              } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                                 let obj4 = { type: null, component: null };
-                                                obj4[0] = item.type;
-                                                let items = [item.component];
+                                                obj4[0] = type.type;
+                                                let items = [type.component];
                                                 obj4[1] = items.map(() => { ... })[0];
                                                 return obj4;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj5 = { type: null, custom_id: null, value: null };
-                                                ({ type: obj3[0], customId: obj3[1] } = item);
+                                                ({ type: obj3[0], customId: obj3[1] } = type);
                                                 let type3;
                                                 if (iter2 != null) {
                                                   type3 = iter2.type;
                                                 }
                                                 value = null;
-                                                if (type3 === item.type) {
+                                                if (type3 === type.type) {
                                                   value = iter2.value;
                                                 }
                                                 obj5[2] = value;
                                                 return obj5;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj6 = { type: null, custom_id: null, values: null };
-                                                ({ type: obj2[0], customId: obj2[1] } = item);
+                                                ({ type: obj2[0], customId: obj2[1] } = type);
                                                 let type4;
                                                 if (interactionComponentState2 != null) {
                                                   type4 = interactionComponentState2.type;
                                                 }
                                                 values = null;
-                                                if (type4 === item.type) {
+                                                if (type4 === type.type) {
                                                   values = interactionComponentState2.values;
                                                 }
                                                 obj6[2] = values;
                                                 return obj6;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                                let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
-                                                ({ type: obj[0], customId: obj[1] } = item);
+                                                ({ type: obj[0], customId: obj[1] } = type);
                                                 let type5;
                                                 if (iter != null) {
                                                   type5 = iter.type;
                                                 }
-                                                obj[2] = type5 === item.type && iter.value;
+                                                obj[2] = type5 === type.type && iter.value;
                                                 return obj;
                                               } else {
-                                                closure_1_1(closure_1_2[23])(false, "unreachable");
+                                                closure_1_1(tmp2[23])(false, "unreachable");
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj7 = { type: null, custom_id: null, values: null };
-                                      ({ type: obj6[0], customId: obj6[1] } = item);
+                                      ({ type: obj6[0], customId: obj6[1] } = type);
                                       let type6;
                                       if (interactionComponentState3 != null) {
                                         type6 = interactionComponentState3.type;
                                       }
                                       let mapped1 = null;
-                                      if (type6 === item.type) {
+                                      if (type6 === type.type) {
                                         let selectedOptions = interactionComponentState3.selectedOptions;
                                         mapped1 = selectedOptions.map(() => { ... });
                                       }
@@ -1646,36 +1643,36 @@ function getData(arg0, arr) {
                                     }
                                   });
                                   return obj;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                                  let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                                  let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   obj = { type: null, custom_id: null, value: null };
-                                  ({ type: obj9[0], customId: obj9[1] } = item);
+                                  ({ type: obj9[0], customId: obj9[1] } = type);
                                   type = undefined;
                                   if (iter3 != null) {
                                     type = iter3.type;
                                   }
                                   let value = null;
-                                  if (type === item.type) {
+                                  if (type === type.type) {
                                     value = iter3.value;
                                   }
                                   obj[2] = value;
                                   return obj;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                                  let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                                  let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let type1;
                                   if (interactionComponentState != null) {
                                     type1 = interactionComponentState.type;
                                   }
                                   let uploadIds = null;
-                                  if (type1 === item.type) {
+                                  if (type1 === type.type) {
                                     uploadIds = interactionComponentState.uploadIds;
                                   }
                                   let obj1 = { type: null, custom_id: null, values: null };
-                                  ({ type: obj8[0], customId: obj8[1] } = item);
+                                  ({ type: obj8[0], customId: obj8[1] } = type);
                                   let mapped;
                                   if (uploadIds != null) {
-                                    mapped = uploadIds.map((item, index) => {
-                                      closure_0 = item;
+                                    mapped = uploadIds.map((arg0) => {
+                                      closure_0 = arg0;
                                       uploads = uploads.uploads;
                                       return uploads.findIndex(() => { ... });
                                     });
@@ -1685,67 +1682,67 @@ function getData(arg0, arr) {
                                   }
                                   obj1[2] = mapped;
                                   return obj1;
-                                } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                                  let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                                  let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj2 = { type: null, custom_id: null, values: null };
-                                  ({ type: obj7[0], customId: obj7[1] } = item);
+                                  ({ type: obj7[0], customId: obj7[1] } = type);
                                   let type2;
                                   if (interactionComponentState1 != null) {
                                     type2 = interactionComponentState1.type;
                                   }
                                   let values = null;
-                                  if (type2 === item.type) {
+                                  if (type2 === type.type) {
                                     values = interactionComponentState1.values;
                                   }
                                   obj2[2] = values;
                                   return obj2;
                                 } else {
-                                  if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                                    if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                      if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                        if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                          if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                                  if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                                    if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                      if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                        if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                          if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                             let obj3 = { type: null };
-                                            obj3[0] = item.type;
+                                            obj3[0] = type.type;
                                             return obj3;
-                                          } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                          } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                             let obj4 = { type: null, component: null };
-                                            obj4[0] = item.type;
-                                            let items = [item.component];
-                                            obj4[1] = items.map((item, index) => {
-                                              let type = item.type;
+                                            obj4[0] = type.type;
+                                            let items = [type.component];
+                                            obj4[1] = items.map((type) => {
+                                              type = type.type;
                                               if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                                 let obj = { type: null, components: null };
-                                                obj[0] = item.type;
-                                                let components = item.components;
+                                                obj[0] = type.type;
+                                                let components = type.components;
                                                 obj[1] = components.map(() => { ... });
                                                 return obj;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_INPUT === type) {
-                                                let iter3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
+                                                let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
-                                                ({ type: obj9[0], customId: obj9[1] } = item);
+                                                ({ type: obj9[0], customId: obj9[1] } = type);
                                                 type = undefined;
                                                 if (iter3 != null) {
                                                   type = iter3.type;
                                                 }
                                                 let value = null;
-                                                if (type === item.type) {
+                                                if (type === type.type) {
                                                   value = iter3.value;
                                                 }
                                                 obj[2] = value;
                                                 return obj;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.FILE_UPLOAD === type) {
-                                                let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
+                                                let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let type1;
                                                 if (interactionComponentState != null) {
                                                   type1 = interactionComponentState.type;
                                                 }
                                                 let uploadIds = null;
-                                                if (type1 === item.type) {
+                                                if (type1 === type.type) {
                                                   uploadIds = interactionComponentState.uploadIds;
                                                 }
                                                 let obj1 = { type: null, custom_id: null, values: null };
-                                                ({ type: obj8[0], customId: obj8[1] } = item);
+                                                ({ type: obj8[0], customId: obj8[1] } = type);
                                                 let mapped;
                                                 if (uploadIds != null) {
                                                   mapped = uploadIds.map(() => { ... });
@@ -1755,89 +1752,89 @@ function getData(arg0, arr) {
                                                 }
                                                 obj1[2] = mapped;
                                                 return obj1;
-                                              } else if (closure_1_0(closure_1_2[13]).ComponentType.STRING_SELECT === type) {
-                                                let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                              } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
+                                                let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj2 = { type: null, custom_id: null, values: null };
-                                                ({ type: obj7[0], customId: obj7[1] } = item);
+                                                ({ type: obj7[0], customId: obj7[1] } = type);
                                                 let type2;
                                                 if (interactionComponentState1 != null) {
                                                   type2 = interactionComponentState1.type;
                                                 }
                                                 let values = null;
-                                                if (type2 === item.type) {
+                                                if (type2 === type.type) {
                                                   values = interactionComponentState1.values;
                                                 }
                                                 obj2[2] = values;
                                                 return obj2;
                                               } else {
-                                                if (closure_1_0(closure_1_2[13]).ComponentType.USER_SELECT !== type) {
-                                                  if (closure_1_0(closure_1_2[13]).ComponentType.ROLE_SELECT !== type) {
-                                                    if (closure_1_0(closure_1_2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
-                                                      if (closure_1_0(closure_1_2[13]).ComponentType.CHANNEL_SELECT !== type) {
-                                                        if (closure_1_0(closure_1_2[13]).ComponentType.TEXT_DISPLAY === type) {
+                                                if (tmp(tmp2[13]).ComponentType.USER_SELECT !== type) {
+                                                  if (tmp(tmp2[13]).ComponentType.ROLE_SELECT !== type) {
+                                                    if (tmp(tmp2[13]).ComponentType.MENTIONABLE_SELECT !== type) {
+                                                      if (tmp(tmp2[13]).ComponentType.CHANNEL_SELECT !== type) {
+                                                        if (tmp(tmp2[13]).ComponentType.TEXT_DISPLAY === type) {
                                                           let obj3 = { type: null };
-                                                          obj3[0] = item.type;
+                                                          obj3[0] = type.type;
                                                           return obj3;
-                                                        } else if (closure_1_0(closure_1_2[13]).ComponentType.LABEL === type) {
+                                                        } else if (tmp(tmp2[13]).ComponentType.LABEL === type) {
                                                           let obj4 = { type: null, component: null };
-                                                          obj4[0] = item.type;
-                                                          let items = [item.component];
+                                                          obj4[0] = type.type;
+                                                          let items = [type.component];
                                                           obj4[1] = items.map(() => { ... })[0];
                                                           return obj4;
-                                                        } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                                          let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                                        } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                                          let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                           let obj5 = { type: null, custom_id: null, value: null };
-                                                          ({ type: obj3[0], customId: obj3[1] } = item);
+                                                          ({ type: obj3[0], customId: obj3[1] } = type);
                                                           let type3;
                                                           if (iter2 != null) {
                                                             type3 = iter2.type;
                                                           }
                                                           value = null;
-                                                          if (type3 === item.type) {
+                                                          if (type3 === type.type) {
                                                             value = iter2.value;
                                                           }
                                                           obj5[2] = value;
                                                           return obj5;
-                                                        } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                          let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                                        } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                                          let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                           let obj6 = { type: null, custom_id: null, values: null };
-                                                          ({ type: obj2[0], customId: obj2[1] } = item);
+                                                          ({ type: obj2[0], customId: obj2[1] } = type);
                                                           let type4;
                                                           if (interactionComponentState2 != null) {
                                                             type4 = interactionComponentState2.type;
                                                           }
                                                           values = null;
-                                                          if (type4 === item.type) {
+                                                          if (type4 === type.type) {
                                                             values = interactionComponentState2.values;
                                                           }
                                                           obj6[2] = values;
                                                           return obj6;
-                                                        } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                                          let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                                        } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                                          let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                           obj = { type: null, custom_id: null, value: null };
-                                                          ({ type: obj[0], customId: obj[1] } = item);
+                                                          ({ type: obj[0], customId: obj[1] } = type);
                                                           let type5;
                                                           if (iter != null) {
                                                             type5 = iter.type;
                                                           }
-                                                          obj[2] = type5 === item.type && iter.value;
+                                                          obj[2] = type5 === type.type && iter.value;
                                                           return obj;
                                                         } else {
-                                                          closure_1_1(closure_1_2[23])(false, "unreachable");
+                                                          closure_1_1(tmp2[23])(false, "unreachable");
                                                         }
                                                       }
                                                     }
                                                   }
                                                 }
-                                                let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                                let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj7 = { type: null, custom_id: null, values: null };
-                                                ({ type: obj6[0], customId: obj6[1] } = item);
+                                                ({ type: obj6[0], customId: obj6[1] } = type);
                                                 let type6;
                                                 if (interactionComponentState3 != null) {
                                                   type6 = interactionComponentState3.type;
                                                 }
                                                 let mapped1 = null;
-                                                if (type6 === item.type) {
+                                                if (type6 === type.type) {
                                                   let selectedOptions = interactionComponentState3.selectedOptions;
                                                   mapped1 = selectedOptions.map(() => { ... });
                                                 }
@@ -1846,186 +1843,186 @@ function getData(arg0, arr) {
                                               }
                                             })[0];
                                             return obj4;
-                                          } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                                            let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                          } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                                            let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                             let obj5 = { type: null, custom_id: null, value: null };
-                                            ({ type: obj3[0], customId: obj3[1] } = item);
+                                            ({ type: obj3[0], customId: obj3[1] } = type);
                                             let type3;
                                             if (iter2 != null) {
                                               type3 = iter2.type;
                                             }
                                             value = null;
-                                            if (type3 === item.type) {
+                                            if (type3 === type.type) {
                                               value = iter2.value;
                                             }
                                             obj5[2] = value;
                                             return obj5;
-                                          } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                            let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                          } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                                            let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                             let obj6 = { type: null, custom_id: null, values: null };
-                                            ({ type: obj2[0], customId: obj2[1] } = item);
+                                            ({ type: obj2[0], customId: obj2[1] } = type);
                                             let type4;
                                             if (interactionComponentState2 != null) {
                                               type4 = interactionComponentState2.type;
                                             }
                                             values = null;
-                                            if (type4 === item.type) {
+                                            if (type4 === type.type) {
                                               values = interactionComponentState2.values;
                                             }
                                             obj6[2] = values;
                                             return obj6;
-                                          } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                                            let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                          } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                                            let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                             obj = { type: null, custom_id: null, value: null };
-                                            ({ type: obj[0], customId: obj[1] } = item);
+                                            ({ type: obj[0], customId: obj[1] } = type);
                                             let type5;
                                             if (iter != null) {
                                               type5 = iter.type;
                                             }
-                                            obj[2] = type5 === item.type && iter.value;
+                                            obj[2] = type5 === type.type && iter.value;
                                             return obj;
                                           } else {
-                                            closure_1_1(closure_1_2[23])(false, "unreachable");
+                                            closure_1_1(tmp2[23])(false, "unreachable");
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                                  let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj7 = { type: null, custom_id: null, values: null };
-                                  ({ type: obj6[0], customId: obj6[1] } = item);
+                                  ({ type: obj6[0], customId: obj6[1] } = type);
                                   let type6;
                                   if (interactionComponentState3 != null) {
                                     type6 = interactionComponentState3.type;
                                   }
                                   let mapped1 = null;
-                                  if (type6 === item.type) {
+                                  if (type6 === type.type) {
                                     let selectedOptions = interactionComponentState3.selectedOptions;
-                                    mapped1 = selectedOptions.map((item, index) => item.value);
+                                    mapped1 = selectedOptions.map((value) => value.value);
                                   }
                                   obj7[2] = mapped1;
                                   return obj7;
                                 }
                               })[0];
                               return obj4;
-                            } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                              let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                            } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                              let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                               let obj5 = { type: null, custom_id: null, value: null };
-                              ({ type: obj3[0], customId: obj3[1] } = item);
+                              ({ type: obj3[0], customId: obj3[1] } = type);
                               let type3;
                               if (iter2 != null) {
                                 type3 = iter2.type;
                               }
                               value = null;
-                              if (type3 === item.type) {
+                              if (type3 === type.type) {
                                 value = iter2.value;
                               }
                               obj5[2] = value;
                               return obj5;
-                            } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                              let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                            } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                              let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                               let obj6 = { type: null, custom_id: null, values: null };
-                              ({ type: obj2[0], customId: obj2[1] } = item);
+                              ({ type: obj2[0], customId: obj2[1] } = type);
                               let type4;
                               if (interactionComponentState2 != null) {
                                 type4 = interactionComponentState2.type;
                               }
                               values = null;
-                              if (type4 === item.type) {
+                              if (type4 === type.type) {
                                 values = interactionComponentState2.values;
                               }
                               obj6[2] = values;
                               return obj6;
-                            } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                              let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                            } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                              let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                               obj = { type: null, custom_id: null, value: null };
-                              ({ type: obj[0], customId: obj[1] } = item);
+                              ({ type: obj[0], customId: obj[1] } = type);
                               let type5;
                               if (iter != null) {
                                 type5 = iter.type;
                               }
-                              obj[2] = type5 === item.type && iter.value;
+                              obj[2] = type5 === type.type && iter.value;
                               return obj;
                             } else {
-                              closure_1_1(closure_1_2[23])(false, "unreachable");
+                              closure_1_1(tmp2[23])(false, "unreachable");
                             }
                           }
                         }
                       }
                     }
-                    let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+                    let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj7 = { type: null, custom_id: null, values: null };
-                    ({ type: obj6[0], customId: obj6[1] } = item);
+                    ({ type: obj6[0], customId: obj6[1] } = type);
                     let type6;
                     if (interactionComponentState3 != null) {
                       type6 = interactionComponentState3.type;
                     }
                     let mapped1 = null;
-                    if (type6 === item.type) {
+                    if (type6 === type.type) {
                       let selectedOptions = interactionComponentState3.selectedOptions;
-                      mapped1 = selectedOptions.map((item, index) => item.value);
+                      mapped1 = selectedOptions.map((value) => value.value);
                     }
                     obj7[2] = mapped1;
                     return obj7;
                   }
                 })[0];
                 return obj4;
-              } else if (closure_1_0(closure_1_2[13]).ComponentType.RADIO_GROUP === type) {
-                let iter2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+              } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
+                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                 let obj5 = { type: null, custom_id: null, value: null };
-                ({ type: obj3[0], customId: obj3[1] } = item);
+                ({ type: obj3[0], customId: obj3[1] } = type);
                 let type3;
                 if (iter2 != null) {
                   type3 = iter2.type;
                 }
                 value = null;
-                if (type3 === item.type) {
+                if (type3 === type.type) {
                   value = iter2.value;
                 }
                 obj5[2] = value;
                 return obj5;
-              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
+                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                 let obj6 = { type: null, custom_id: null, values: null };
-                ({ type: obj2[0], customId: obj2[1] } = item);
+                ({ type: obj2[0], customId: obj2[1] } = type);
                 let type4;
                 if (interactionComponentState2 != null) {
                   type4 = interactionComponentState2.type;
                 }
                 values = null;
-                if (type4 === item.type) {
+                if (type4 === type.type) {
                   values = interactionComponentState2.values;
                 }
                 obj6[2] = values;
                 return obj6;
-              } else if (closure_1_0(closure_1_2[13]).ComponentType.CHECKBOX === type) {
-                let iter = closure_1_14.getInteractionComponentState(closure_0, item.id);
+              } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
+                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                 obj = { type: null, custom_id: null, value: null };
-                ({ type: obj[0], customId: obj[1] } = item);
+                ({ type: obj[0], customId: obj[1] } = type);
                 let type5;
                 if (iter != null) {
                   type5 = iter.type;
                 }
-                obj[2] = type5 === item.type && iter.value;
+                obj[2] = type5 === type.type && iter.value;
                 return obj;
               } else {
-                closure_1_1(closure_1_2[23])(false, "unreachable");
+                closure_1_1(tmp2[23])(false, "unreachable");
               }
             }
           }
         }
       }
-      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, item.id);
+      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
       let obj7 = { type: null, custom_id: null, values: null };
-      ({ type: obj6[0], customId: obj6[1] } = item);
+      ({ type: obj6[0], customId: obj6[1] } = type);
       let type6;
       if (interactionComponentState3 != null) {
         type6 = interactionComponentState3.type;
       }
       let mapped1 = null;
-      if (type6 === item.type) {
+      if (type6 === type.type) {
         let selectedOptions = interactionComponentState3.selectedOptions;
-        mapped1 = selectedOptions.map((item, index) => item.value);
+        mapped1 = selectedOptions.map((value) => value.value);
       }
       obj7[2] = mapped1;
       return obj7;
@@ -2035,8 +2032,8 @@ function getData(arg0, arr) {
 function getUploadsForModal(id) {
   closure_0 = arg1;
   uploads = uploads.getUploads(id, DraftType.InteractionModal);
-  return uploads.filter((item, index) => {
-    const result = callback(customId[24]).deserializeComponentUploadId(item.id);
+  return uploads.filter((id) => {
+    const result = callback(closure_1_2[24]).deserializeComponentUploadId(id.id);
     let containerId;
     if (result != null) {
       containerId = result.containerId;
@@ -2101,9 +2098,9 @@ function _submitModal() {
               arr = closure_1_17(channelId, lib.customId);
               let tmp7;
               if (arr.length > 0) {
-                tmp7 = callback(table[25])(arr);
+                tmp7 = callback(tmp30[25])(arr);
               }
-              obj1 = lib(table[26]);
+              obj1 = lib(tmp30[26]);
               obj1 = { data: null, preflight: null };
               const obj2 = { interactionType: null, applicationId: null };
               obj2[0] = lib(table[13]).InteractionTypes.MODAL_SUBMIT;
@@ -2126,15 +2123,15 @@ function _submitModal() {
             obj[0] = arg1;
             return obj;
           } else {
-            closure_5 = arr.map((item, index) => lib(4830).getAttachmentPayload(item, index));
+            closure_5 = arr.map((closure_0, closure_1) => lib(4830).getAttachmentPayload(closure_0, closure_1));
             const obj4 = { uploads: null };
             obj4[0] = arr;
             c6 = callback2(lib.customId, lib.components, obj4);
             function send() {
               if (null != channel) {
                 let aborted;
-                if (aborted != null) {
-                  aborted = aborted.aborted;
+                if (closure_1 != null) {
+                  aborted = tmp13.aborted;
                 }
                 if (!aborted) {
                   const HTTP = lib(530).HTTP;
@@ -2156,11 +2153,11 @@ function _submitModal() {
                   obj[5] = sessionId.getSessionId();
                   obj[6] = dependencyMap;
                   obj[1] = obj;
-                  obj[2] = aborted;
-                  HTTP.post(obj).catch((error) => {
-                    if (429 === error.status) {
+                  obj[2] = tmp13;
+                  HTTP.post(obj).catch((status) => {
+                    if (429 === status.status) {
                       const _setTimeout = setTimeout;
-                      const timerId = setTimeout(closure_7, error.body.retry_after * closure_1_1(closure_1_2[29]).Millis.SECOND);
+                      const timerId = setTimeout(closure_7, status.body.retry_after * closure_1_1(closure_1_2[29]).Millis.SECOND);
                     } else {
                       closure_1_0(closure_1_2[26]).setFailed(closure_2);
                       const obj = closure_1_0(closure_1_2[26]);
@@ -2190,7 +2187,7 @@ function _submitModal() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
 
 export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id) {
   const componentStateContext = isInteractionComponent.useComponentStateContext();
@@ -2205,13 +2202,14 @@ export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id
   if (first != null) {
     type = first.type;
   }
-  let tmp6 = type === PermissionOverwriteType.ComponentType.ACTION_ROW && first.components[0].id === id;
+  let tmp6 = type === tmp(1954).ComponentType.ACTION_ROW && first.components[0].id === id;
   if (!tmp6) {
     let type1;
     if (first != null) {
       type1 = first.type;
     }
-    tmp6 = type1 === PermissionOverwriteType.ComponentType.LABEL && first.component.id === id;
+    tmp6 = type1 === tmp(1954).ComponentType.LABEL && first.component.id === id;
+    const tmp8 = type1 === tmp(1954).ComponentType.LABEL && first.component.id === id;
   }
   return tmp6;
 };
@@ -2266,23 +2264,24 @@ export const useModalState = function useModalState(channelId) {
             closure_1_6(null);
             if ((function validate(closure_1_8) {
               c0 = true;
-              const item = closure_1_8.forEach((item, index) => {
-                if (!item()) {
+              const item = closure_1_8.forEach((arg0) => {
+                if (!arg0()) {
                   c0 = false;
                 }
               });
               return c0;
             })(closure_1_8)) {
-              obj1 = v0(customId[19]);
+              obj1 = v0(closure_1_2[19]);
               const _Date = Date;
               const fromTimestampResult = obj1.fromTimestamp(Date.now());
-              closure_1_6(fromTimestampResult);
+              tmp22(fromTimestampResult);
               v0 = 1;
               c0 = 1;
               obj1 = { value: null, done: false };
               obj1[0] = closure_1_18(c0, closure_1_3, fromTimestampResult);
               return obj1;
             }
+            tmp22 = closure_1_6;
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -2302,26 +2301,26 @@ export const useModalState = function useModalState(channelId) {
     }
   }), items2);
   const effect = first.useEffect(() => {
-    if (stateFromStores === InteractionModalState.SUCCEEDED) {
-      callback(customId[20]);
-      const obj = { type: "CLEAR_INTERACTION_MODAL_STATE", customId: null };
+    if (stateFromStores === closure_1_13.SUCCEEDED) {
+      let obj = callback(customId[20]);
+      obj = { type: "CLEAR_INTERACTION_MODAL_STATE", customId: null };
       obj[1] = customId;
       obj.dispatch(obj);
       application = customId;
       const uploads = closure_1_11.getUploads(application.channelId, closure_8.InteractionModal);
-      const found = uploads.filter((item, index) => {
-        const result = callback(customId[24]).deserializeComponentUploadId(item.id);
+      const found = uploads.filter((id) => {
+        const result = callback(closure_1_2[24]).deserializeComponentUploadId(id.id);
         let containerId;
         if (result != null) {
           containerId = result.containerId;
         }
         return containerId === callback;
       });
-      callback(customId[21]).removeFiles(application.channelId, found.map((item, index) => item.id), closure_8.InteractionModal);
+      callback(customId[21]).removeFiles(application.channelId, found.map((id) => id.id), closure_8.InteractionModal);
       callback();
       const obj3 = callback(customId[21]);
     }
-    if (stateFromStores === InteractionModalState.ERRORED) {
+    if (stateFromStores === closure_1_13.ERRORED) {
       const intl = application(customId[22]).intl;
       callback2(intl.string(application(customId[22]).t.uJgdEu));
     }
@@ -2336,10 +2335,11 @@ export const useModalState = function useModalState(channelId) {
         member = closure_1_9.getMember(guildId, tmp3.bot.id);
       }
     }
-    let obj = { id: application.id, icon: application.icon, botIconFirst: true, bot: null, guildMember: null };
+    let obj = closure_1_1(closure_1_2[14]);
+    obj = { id: application.id, icon: application.icon, botIconFirst: true, bot: null, guildMember: null };
     let bot;
     if (null != member) {
-      bot = application.bot;
+      bot = tmp7.bot;
     }
     obj = { applicationIconURL: obj.getApplicationIconURL(obj), applicationName: null, applicationBaseUrl: null };
     obj[3] = bot;
@@ -2350,13 +2350,13 @@ export const useModalState = function useModalState(channelId) {
     }
     if (null != nick) {
       let name = member.nick;
-    } else if (null != application.bot) {
-      name = application.bot.username;
+    } else if (null != tmp7.bot) {
+      name = tmp7.bot.username;
     } else {
-      name = application.name;
+      name = tmp7.name;
     }
     obj[1] = name;
-    obj[2] = getURLForApplicationDefault(application.id);
+    obj[2] = closure_1_1(closure_1_2[15])(application.id);
     return obj;
   }, items4);
   obj = { components: channelId.components, applicationIconURL: memo.applicationIconURL, applicationName: memo.applicationName, submissionState: stateFromStores, error: tmp3, validators: tmp10, validationErrors: tmp7, setValidationErrors: tmp8, onSubmit: callback };
@@ -2374,10 +2374,11 @@ export const useIframeModalState = function useIframeModalState(channelId) {
         member = closure_1_9.getMember(guildId, tmp3.bot.id);
       }
     }
-    let obj = { id: application.id, icon: application.icon, botIconFirst: true, bot: null, guildMember: null };
+    let obj = closure_1_1(closure_1_2[14]);
+    obj = { id: application.id, icon: application.icon, botIconFirst: true, bot: null, guildMember: null };
     let bot;
     if (null != member) {
-      bot = application.bot;
+      bot = tmp7.bot;
     }
     obj = { applicationIconURL: obj.getApplicationIconURL(obj), applicationName: null, applicationBaseUrl: null };
     obj[3] = bot;
@@ -2388,13 +2389,13 @@ export const useIframeModalState = function useIframeModalState(channelId) {
     }
     if (null != nick) {
       let name = member.nick;
-    } else if (null != application.bot) {
-      name = application.bot.username;
+    } else if (null != tmp7.bot) {
+      name = tmp7.bot.username;
     } else {
-      name = application.name;
+      name = tmp7.name;
     }
     obj[1] = name;
-    obj[2] = getURLForApplicationDefault(application.id);
+    obj[2] = closure_1_1(closure_1_2[15])(application.id);
     return obj;
   }, items);
   const applicationBaseUrl = memo.applicationBaseUrl;

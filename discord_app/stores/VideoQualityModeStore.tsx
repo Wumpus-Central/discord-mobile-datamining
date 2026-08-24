@@ -1,5 +1,5 @@
 // discord_app/stores/VideoQualityModeStore.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
@@ -9,7 +9,7 @@ const Store = initializeDefault.Store;
 class VideoQualityModeStore extends Store {
 }
 Object.defineProperty(VideoQualityModeStore.prototype, "mode", {
-  get: function mode(closure_3, arg1) {
+  get: function mode(activeIndex, arg1) {
     return AUTO;
   },
   set: undefined
@@ -20,6 +20,6 @@ const videoQualityModeStore = new VideoQualityModeStore(dispatcherDefault, {
     mode = mode.mode;
   }
 });
-const result = obj132.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
+const result = set.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
 
 export default videoQualityModeStore;

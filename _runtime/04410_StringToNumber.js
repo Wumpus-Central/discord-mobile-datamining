@@ -22,7 +22,7 @@ class StringToNumber {
       tmp15 = new.target;
       str = "Assertion failed: `argument` is not a String";
       tmp16 = new.target;
-      tmp17 = new require("metro/00541__.js")("Assertion failed: `argument` is not a String");
+      tmp17 = new require("module_541")("Assertion failed: `argument` is not a String");
       tmp18 = tmp17;
       throw tmp17;
     } else {

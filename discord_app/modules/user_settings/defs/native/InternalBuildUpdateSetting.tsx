@@ -1,16 +1,14 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import tDefault from "../../../../../_runtime/03975_t.js";
-import DownloadIcon from "../../../../design/components/Icon/native/redesign/generated/DownloadIcon.tsx";
 import _checkForNewerBuildAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
-import RefreshIcon2 from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import useStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
-import checkForNewerBuild from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
+import closure_4 from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     return "Internal Build Update";
   },
@@ -18,9 +16,9 @@ let createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [closure_4];
     if (obj.useStateFromStores(items, () => null !== closure_4.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = DownloadIcon.DownloadIcon;
+      let RefreshIcon = tmp(4324).DownloadIcon;
     } else {
-      RefreshIcon = RefreshIcon2.RefreshIcon;
+      RefreshIcon = tmp(13952).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -34,6 +32,7 @@ let createToggle = {
       }
       return build;
     });
+    const obj = initialize;
     const items1 = [closure_4];
     const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_4.latestFetchedBuild().lastCheck);
     if (null != stateFromStores) {
@@ -50,12 +49,14 @@ let createToggle = {
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
+    const obj = useStaffOrDeveloperSettingPredicate;
     return closure_4.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = closure_4.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
       _checkForNewerBuildAll.openBuildInstaller(newBuild);
+      const obj2 = _checkForNewerBuildAll;
     } else {
       closure_4.checkForNewerBuild();
     }
@@ -63,6 +64,6 @@ let createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx");
 
 export default createToggle;

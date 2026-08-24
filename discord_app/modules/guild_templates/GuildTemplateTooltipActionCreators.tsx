@@ -1,10 +1,10 @@
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 
 export default {
   checkGuildTemplateDirty(closure_0) {
@@ -66,7 +66,8 @@ export default {
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    const obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
+    let obj = dispatcherDefault;
+    obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
     obj.dispatch(obj);
   },
   hideGuildTemplatePromotionTooltip() {

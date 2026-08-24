@@ -1,10 +1,10 @@
 // discord_app/modules/message_previews/useLatestChannelMessage.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { useEffect } from "../../../_runtime/00019_noop.js";
-import initialize from "MessagePreviewStore.tsx";
+import closure_5 from "MessagePreviewStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
 
 export default function useLatestChannelMessage(arg0) {
   let flag = arg1;

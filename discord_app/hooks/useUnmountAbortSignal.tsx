@@ -1,8 +1,9 @@
 // discord_app/hooks/useUnmountAbortSignal.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import useInitialValueDefault from "useInitialValue.tsx";
+import { useMountLayoutEffect } from "useMountEffect.tsx";
 
-const result = obj132.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
+const result = set.fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
 export default function useUnmountAbortSignal() {
   const tmp = useInitialValueDefault(() => {
@@ -10,7 +11,7 @@ export default function useUnmountAbortSignal() {
     return abortController;
   });
   const _require = tmp;
-  const unmountEffect = require("useMountEffect.tsx").useUnmountEffect(() => {
+  const unmountEffect = _useMountLayoutEffect.useUnmountEffect(() => {
     closure_0.abort();
   });
   return tmp.signal;
@@ -22,7 +23,7 @@ export const useUnmountAbortSignalWithDelay = function useUnmountAbortSignalWith
     return abortController;
   });
   importDefault = tmp;
-  const unmountEffect = require("useMountEffect.tsx").useUnmountEffect(() => {
+  const unmountEffect = _useMountLayoutEffect.useUnmountEffect(() => {
     const timerId = setTimeout(() => {
       closure_1.abort();
     }, closure_0);

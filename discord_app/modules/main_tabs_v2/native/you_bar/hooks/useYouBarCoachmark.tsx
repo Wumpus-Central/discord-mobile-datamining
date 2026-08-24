@@ -1,28 +1,30 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import handleConnectionOpen from "../../../../../stores/SelectedGuildStore.tsx";
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../stores/SelectedGuildStore.tsx";
 import { ContentDismissActionType } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_6 = [];
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");
 
 export const useYouBarCoachmark = function useYouBarCoachmark(isQuestRendered) {
   isQuestRendered = isQuestRendered.isQuestRendered;
   const visibleContent = isQuestRendered;
   let markAsDismissed;
+  let isFocused;
+  let stateFromStores;
   const animatedRef = visibleContent(markAsDismissed[6]).useAnimatedRef();
   let obj = visibleContent(markAsDismissed[6]);
   const isInPrivateProfilesExperiment = visibleContent(markAsDismissed[7]).useIsInPrivateProfilesExperiment("PrivateProfileCoachmark");
   markAsDismissed = isInPrivateProfilesExperiment;
   const obj2 = visibleContent(markAsDismissed[7]);
-  const isFocused = visibleContent(markAsDismissed[8]).useIsFocused();
+  isFocused = visibleContent(markAsDismissed[8]).useIsFocused();
   const obj3 = visibleContent(markAsDismissed[8]);
   let items = [closure_4];
-  const stateFromStores = visibleContent(markAsDismissed[9]).useStateFromStores(items, () => {
-    visibleContent(markAsDismissed[10]);
-    const obj = { from: "authed", unit: visibleContent(markAsDismissed[11]).TimeUnits.DAYS };
+  stateFromStores = visibleContent(markAsDismissed[9]).useStateFromStores(items, () => {
+    let obj = visibleContent(markAsDismissed[10]);
+    obj = { from: "authed", unit: visibleContent(markAsDismissed[11]).TimeUnits.DAYS };
     const tmp = obj.getFirstInstallTimeElapsed(obj) >= 10;
     return null != guildId.getGuildId() && obj.getFirstInstallTimeElapsed(obj) >= 10;
   });

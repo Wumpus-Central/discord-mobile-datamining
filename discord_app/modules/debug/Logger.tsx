@@ -1,5 +1,5 @@
 // discord_app/modules/debug/Logger.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import reportAll from "LogAggregator.tsx";
 import log from "../../../discord_common/js/packages/logger/Logger.tsx";
 
@@ -18,6 +18,6 @@ log.setLogFn((name) => {
   const items1 = [name, arg1, arg2, ...substr];
   log.defaultLogFn.apply(items1);
 });
-let result = obj132.fileFinishedImporting("modules/debug/Logger.tsx");
+let result = set.fileFinishedImporting("modules/debug/Logger.tsx");
 
 export default log.Logger;

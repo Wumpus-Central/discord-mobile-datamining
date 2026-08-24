@@ -3,24 +3,23 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import map from "../../../../design/tokens/native/useToken.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import context2 from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import ClydeIcon from "../../../../design/components/Icon/native/redesign/generated/ClydeIcon.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import useHighlightSettingItem from "hooks/useHighlightSettingItem.tsx";
 import _modDef15061 from "SettingListItemHighlight.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import _getSystemLocale from "../../../user_settings/LocaleStore.tsx";
-import zustandStore from "../../../user_settings/UserSettingSearchStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_9 from "../../../user_settings/LocaleStore.tsx";
+import closure_10 from "../../../user_settings/UserSettingSearchStore.tsx";
+import closure_11 from "../../../../stores/GuildStore.tsx";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "SettingRendererConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class GuildSelectDefaultIcon {
   constructor(arg0) {
     str = global.size;
@@ -69,7 +68,8 @@ function SettingSearchResultIcon(IconComponent) {
   IconComponent = IconComponent.IconComponent;
   map;
   if (null == IconComponent) {
-    let obj = { width: null };
+    let obj = { style: null };
+    obj = { width: null };
     obj[0] = tmp4;
     obj[0] = obj;
     let tmp6 = callback3(View, obj);
@@ -85,12 +85,15 @@ function RouteSettingSearchResult(setting) {
   setting = setting.setting;
   const index = setting.index;
   const total = setting.total;
+  let stackNavigation;
+  let screen;
+  let preNavigationAction;
   ({ IconComponent, breadcrumbs } = setting);
   let obj = title(index[13]);
-  const stackNavigation = obj.useStackNavigation();
-  const screen = settingData.screen;
+  stackNavigation = obj.useStackNavigation();
+  screen = settingData.screen;
   const usePreNavigationAction = settingData.usePreNavigationAction;
-  let preNavigationAction;
+  preNavigationAction = undefined;
   if (usePreNavigationAction != null) {
     preNavigationAction = usePreNavigationAction();
   }
@@ -112,12 +115,13 @@ function PressableSettingSearchResult(setting) {
   setting = setting.setting;
   const index = setting.index;
   const total = setting.total;
-  const onPress = settingData.onPress;
+  let onPress;
+  onPress = settingData.onPress;
   const items = [setting, title, index, total, onPress];
   ({ IconComponent, breadcrumbs } = setting);
   const callback = importAllResult.useCallback(() => {
-    title(index[39]);
-    const obj = { setting, title, searchResultPosition: index, numSearchResults: total };
+    let obj = title(index[39]);
+    obj = { setting, title, searchResultPosition: index, numSearchResults: total };
     const result = obj.trackSettingSearchResultPress(obj);
     const result1 = title(index[40]).dismissGlobalKeyboard();
     onPress();
@@ -129,8 +133,9 @@ function StaticSettingSearchResult(title) {
   const setting = title.setting;
   const index = title.index;
   const total = title.total;
-  const useTrailing = title.settingData.useTrailing;
   let trailing;
+  const useTrailing = title.settingData.useTrailing;
+  trailing = undefined;
   ({ IconComponent, breadcrumbs } = title);
   if (useTrailing != null) {
     trailing = useTrailing();
@@ -138,8 +143,8 @@ function StaticSettingSearchResult(title) {
   const items = [index, setting, trailing, title, total];
   const callback = importAllResult.useCallback(() => {
     if (null != trailing) {
-      title(index[39]);
-      const obj = { setting: null, title: null, searchResultPosition: null, numSearchResults: null };
+      let obj = title(index[39]);
+      obj = { setting: null, title: null, searchResultPosition: null, numSearchResults: null };
       obj[0] = setting;
       obj[1] = title;
       obj[2] = index;
@@ -157,18 +162,18 @@ function StaticSettingSearchResult(title) {
     tmp6 = callback;
   }
   obj[1] = tmp6;
-  obj[2] = callback(SettingSearchResultIcon, { IconComponent });
-  obj[3] = callback(SettingSearchResultBreadcrumbs, { breadcrumbs });
+  obj[2] = closure_14(SettingSearchResultIcon, { IconComponent });
+  obj[3] = closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs });
   let tmp3Result = null;
   if (null != trailing) {
     obj = { text: null };
     obj[0] = trailing;
-    tmp3Result = callback(title(index[12]).TableRow.TrailingText, obj);
+    tmp3Result = tmp3(title(index[12]).TableRow.TrailingText, obj);
   }
   obj[4] = tmp3Result;
   obj[5] = 0 === index;
   obj[6] = index === total - 1;
-  return callback(title(index[12]).TableRow, obj);
+  return closure_14(title(index[12]).TableRow, obj);
 }
 function SettingSearchResultPlaceholder(arg0) {
   ({ start, end } = arg0);
@@ -185,11 +190,12 @@ let closure_4 = ["settingData"];
 let error = importAllResult;
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
+let obj = { slider: null, sliderTitle: null, radioSettingHighlight: null, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
+obj = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 obj[1] = { flexDirection: "row", justifyContent: "space-between" };
 obj[2] = { top: 26 };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
 obj[3] = createCacheKey;
 obj[4] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 let obj2 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], height: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32], borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
@@ -198,10 +204,11 @@ let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo((arg0) => {
   ({ useTrailing, usePreNavigationAction, screen } = arg0);
   ({ useDescription, useIsDisabled, IconComponent } = arg0);
+  let stackNavigation;
   let preNavigationAction;
   ({ useTitle, variant, start, end } = arg0);
   let obj = screen(preNavigationAction[13]);
-  const stackNavigation = obj.useStackNavigation();
+  stackNavigation = obj.useStackNavigation();
   preNavigationAction = undefined;
   const title = useTitle();
   if (usePreNavigationAction != null) {
@@ -221,8 +228,8 @@ let closure_18 = importAllResult.memo((arg0) => {
   }
   const items = [stackNavigation, screen, preNavigationAction];
   const callback = importAllResult.useCallback(() => {
-    screen(preNavigationAction[14]);
-    const obj = { navigation: stackNavigation, screen, preNavigationAction };
+    let obj = screen(preNavigationAction[14]);
+    obj = { navigation: stackNavigation, screen, preNavigationAction };
     const result = obj.onRouteSettingOnPress(obj);
   }, items);
   obj = { label: title, subLabel: description, disabled: isDisabled, arrow: true, variant, icon: null, trailing: null, onPress: null, start: null, end: null };
@@ -230,7 +237,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   if (null != IconComponent) {
     obj = { IconComponent: null };
     obj[0] = IconComponent;
-    tmp10Result = callback(screen(tmp2[12]).TableRow.Icon, obj);
+    tmp10Result = tmp10(tmp(tmp2[12]).TableRow.Icon, obj);
   }
   obj[5] = tmp10Result;
   let tmp12 = null;
@@ -241,7 +248,7 @@ let closure_18 = importAllResult.memo((arg0) => {
       if (typeof trailing === "string") {
         obj1 = { text: null };
         obj1[0] = trailing;
-        tmp10Result = callback(screen(tmp2[12]).TableRow.TrailingText, obj1);
+        tmp10Result = tmp10(tmp(tmp2[12]).TableRow.TrailingText, obj1);
       }
       tmp13 = tmp10Result;
     }
@@ -251,12 +258,14 @@ let closure_18 = importAllResult.memo((arg0) => {
   obj[7] = callback;
   obj[8] = start;
   obj[9] = end;
-  return callback(screen(preNavigationAction[12]).TableRow, obj);
+  return closure_14(screen(preNavigationAction[12]).TableRow, obj);
 });
 let closure_20 = importAllResult.memo((useSelectedGuildId) => {
   const merged = Object.assign(useSelectedGuildId, Object.create(null));
+  let selectedGuildId;
+  closure_1 = undefined;
   dependencyMap = undefined;
-  const selectedGuildId = useSelectedGuildId.useSelectedGuildId();
+  selectedGuildId = useSelectedGuildId.useSelectedGuildId();
   let obj = selectedGuildId(589);
   const items = [closure_11];
   closure_1 = obj.useStateFromStores(items, () => closure_1_11.getGuild(selectedGuildId));
@@ -286,7 +295,7 @@ let closure_20 = importAllResult.memo((useSelectedGuildId) => {
   obj.withArrow = true;
   obj.IconComponent = importAllResult.memo(() => {
     if (null == callback) {
-      let tmp7 = closure_1_14(GuildSelectDefaultIcon, {});
+      let tmp7 = closure_1_14(closure_1_19, {});
     } else {
       const obj = { size: null, guild: null };
       obj[0] = selectedGuildId(_undefined[18]).GuildIconSizes.SMALL_32;
@@ -322,7 +331,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp10Result = callback(TableRowInner.TableRow.Icon, obj);
+    tmp10Result = tmp10(tmp(6291).TableRow.Icon, obj);
   }
   obj[4] = tmp10Result;
   obj[5] = onPress;
@@ -333,22 +342,22 @@ let closure_21 = importAllResult.memo((arg0) => {
     if (typeof trailing === "string") {
       obj1 = { text: null };
       obj1[0] = trailing;
-      tmp10Result = callback(TableRowInner.TableRow.TrailingText, obj1);
+      tmp10Result = tmp10(tmp(6291).TableRow.TrailingText, obj1);
     }
     tmp12 = tmp10Result;
   }
   obj[7] = tmp12;
   obj[8] = start;
   obj[9] = end;
-  const children = [callback(TableRowInner.TableRow, obj), ];
+  const children = [closure_14(TableRowInner.TableRow, obj), ];
   if (highlightSettingItem) {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = callback(_modDef15061, obj2);
+    highlightSettingItem = tmp10(_modDef15061, obj2);
   }
   children[1] = highlightSettingItem;
-  return callback2(closure_15, { children });
+  return closure_16(closure_15, { children });
 });
 let closure_22 = importAllResult.memo((arg0) => {
   ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
@@ -371,7 +380,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp8Result = callback(TableRowInner.TableRow.Icon, obj);
+    tmp8Result = tmp8(tmp(6291).TableRow.Icon, obj);
   }
   obj[2] = tmp8Result;
   obj[3] = value;
@@ -380,22 +389,22 @@ let closure_22 = importAllResult.memo((arg0) => {
   obj[6] = onValueChange;
   obj[7] = start;
   obj[8] = end;
-  tmp8Result = callback(TableSwitchRow.TableSwitchRow, obj);
+  tmp8Result = tmp8(tmp(7178).TableSwitchRow, obj);
   let tmp8Result1 = tmp8Result;
   if (true === hasIcon) {
     obj1 = { children: null };
     obj1[0] = tmp8Result;
-    tmp8Result1 = callback(ForceSwitchIcons, obj1);
+    tmp8Result1 = tmp8(ForceSwitchIcons, obj1);
   }
   const children = [tmp8Result1, ];
   if (highlightSettingItem) {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = callback(_modDef15061, obj2);
+    highlightSettingItem = tmp8(_modDef15061, obj2);
   }
   children[1] = highlightSettingItem;
-  return callback2(closure_15, { children });
+  return closure_16(closure_15, { children });
 });
 let closure_24 = importAllResult.memo((arg0) => {
   ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
@@ -414,14 +423,14 @@ let closure_24 = importAllResult.memo((arg0) => {
     defaultValue: combined,
     onChange: onValueChange,
     hasIcons: false,
-    children: options.map((item, index) => {
-      if (typeof item.value === "number") {
+    children: options.map((label) => {
+      if (typeof label.value === "number") {
         const _HermesInternal = HermesInternal;
-        let combined = "" + item.value;
+        let combined = "" + label.value;
       } else {
-        combined = item.value;
+        combined = label.value;
       }
-      return callback2(callback(table[24]).TableRadioRow, { value: combined, label: item.label, subLabel: item.subLabel, disabled: item.disabled }, item.value);
+      return callback2(callback(table[24]).TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled }, label.value);
     })
   };
   const children = [callback3(context2.TableRadioGroup, obj, combined), ];
@@ -431,7 +440,7 @@ let closure_24 = importAllResult.memo((arg0) => {
     highlightSettingItem = callback3(_modDef15061, obj);
   }
   children[1] = highlightSettingItem;
-  return callback2(closure_15, { children });
+  return closure_16(closure_15, { children });
 });
 let closure_25 = importAllResult.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
@@ -455,10 +464,10 @@ let closure_25 = importAllResult.memo((arg0) => {
   const items = [trailing];
   const callback = importAllResult.useCallback(() => {
     if (null != trailing) {
-      trailing(dependencyMap[25]).copy(tmp);
-      const obj = trailing(dependencyMap[25]);
-      const result = trailing(dependencyMap[26]).presentCopiedToClipboard();
-      const obj2 = trailing(dependencyMap[26]);
+      trailing(closure_1_2[25]).copy(tmp);
+      const obj = trailing(closure_1_2[25]);
+      const result = trailing(closure_1_2[26]).presentCopiedToClipboard();
+      const obj2 = trailing(closure_1_2[26]);
     }
   }, items);
   obj = { label: title, subLabel: description, onPress: null, variant: null, disabled: null, icon: null, trailing: null, start: null, end: null };
@@ -474,27 +483,27 @@ let closure_25 = importAllResult.memo((arg0) => {
     obj = { IconComponent: null, variant: null };
     obj[0] = IconComponent;
     obj[1] = variant;
-    tmp11Result = callback(tmp(6291).TableRow.Icon, obj);
+    tmp11Result = tmp11(tmp(6291).TableRow.Icon, obj);
   }
   obj[5] = tmp11Result;
   tmp11Result = null;
   if (null != trailing) {
     obj1 = { text: null };
     obj1[0] = trailing;
-    tmp11Result = callback(tmp(6291).TableRow.TrailingText, obj1);
+    tmp11Result = tmp11(tmp(6291).TableRow.TrailingText, obj1);
   }
   obj[6] = tmp11Result;
   obj[7] = start;
   obj[8] = end;
-  const children = [callback(trailing(6291).TableRow, obj), ];
+  const children = [closure_14(trailing(6291).TableRow, obj), ];
   if (highlightSettingItem) {
     let obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = callback(_modDef15061, obj2);
+    highlightSettingItem = tmp11(_modDef15061, obj2);
   }
   children[1] = highlightSettingItem;
-  return callback2(closure_15, { children });
+  return closure_16(closure_15, { children });
 });
 let closure_26 = importAllResult.memo((arg0) => {
   ({ useValue, start, end } = arg0);
@@ -506,6 +515,7 @@ let closure_26 = importAllResult.memo((arg0) => {
   if (useValue != null) {
     value = useValue();
   }
+  obj = { label: title, start, end, subLabel: null };
   obj = { style: callback5().slider, children: callback3(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange }) };
   obj[3] = callback3(View, obj);
   const children = [callback3(TableRowInner.TableRow, obj), ];
@@ -516,10 +526,12 @@ let closure_26 = importAllResult.memo((arg0) => {
     highlightSettingItem = callback3(_modDef15061, obj1);
   }
   children[1] = highlightSettingItem;
-  return callback2(closure_15, { children });
+  return closure_16(closure_15, { children });
 });
 let closure_27 = importAllResult.memo((useTrailing) => {
   useTrailing = useTrailing.useTrailing;
+  let onSlidingComplete;
+  let num;
   let num2;
   let num4;
   let num3;
@@ -533,9 +545,9 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   ({ start, end, useProps } = useTrailing);
   const title = useTrailing.useTitle();
   const props = useProps();
-  const onSlidingComplete = props.onSlidingComplete;
+  onSlidingComplete = props.onSlidingComplete;
   const step = props.step;
-  let num = 0.1;
+  num = 0.1;
   if (undefined !== step) {
     num = step;
   }
@@ -557,6 +569,7 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   }
   onValueChange = props.onValueChange;
   const tmp3 = callback2(props, num4);
+  callback2 = tmp3;
   const tmp4 = callback5();
   let obj = onSlidingComplete(num2[15]);
   const items = [c9];
@@ -611,6 +624,7 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   if (useTrailing != null) {
     trailing = useTrailing();
   }
+  obj = { start, end, shadow: "none", border: "none", children: null };
   obj = { style: tmp4.sliderTitle, children: null };
   const items7 = [callback3(onSlidingComplete(num2[32]).Text, { variant: "text-md/semibold", children: title }), trailing];
   obj[1] = items7;
@@ -661,7 +675,8 @@ let closure_27 = importAllResult.memo((useTrailing) => {
   obj[4] = callback4(onSlidingComplete(num2[31]).Stack, obj4);
   return callback3(onSlidingComplete(num2[30]).Card, obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
+let obj3 = { height: 20, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
 
 export { GuildSelectDefaultIcon };
 export const renderSettingItem = function renderSettingItem(item) {
@@ -674,46 +689,46 @@ export const renderSettingItem = function renderSettingItem(item) {
     obj.start = start;
     obj.end = end;
     return callback3(closure_20, obj);
-  } else if (constants.ROUTE === type) {
+  } else if (tmp.ROUTE === type) {
     obj = {};
     const merged1 = Object.assign(settingData);
     obj.start = start;
     obj.end = end;
     return callback3(closure_18, obj);
-  } else if (constants.PRESSABLE === type) {
+  } else if (tmp.PRESSABLE === type) {
     obj1 = {};
     const merged2 = Object.assign(settingData);
     obj1.start = start;
     obj1.end = end;
     obj1.setting = setting;
     return callback3(closure_21, obj1);
-  } else if (constants.TOGGLE === type) {
+  } else if (tmp.TOGGLE === type) {
     const obj2 = {};
     const merged3 = Object.assign(settingData);
     obj2.start = start;
     obj2.end = end;
     obj2.setting = setting;
     return callback3(closure_22, obj2);
-  } else if (constants.STATIC === type) {
+  } else if (tmp.STATIC === type) {
     const obj3 = {};
     const merged4 = Object.assign(settingData);
     obj3.start = start;
     obj3.end = end;
     obj3.setting = setting;
     return callback3(closure_25, obj3);
-  } else if (constants.VOLUME_SLIDER === type) {
+  } else if (tmp.VOLUME_SLIDER === type) {
     const obj4 = {};
     const merged5 = Object.assign(settingData);
     obj4.start = start;
     obj4.end = end;
     obj4.setting = setting;
     return callback3(closure_26, obj4);
-  } else if (constants.RADIO === type) {
+  } else if (tmp.RADIO === type) {
     const obj5 = {};
     const merged6 = Object.assign(settingData);
     obj5.setting = setting;
     return callback3(closure_24, obj5);
-  } else if (constants.SLIDER === type) {
+  } else if (tmp.SLIDER === type) {
     obj = {};
     const merged7 = Object.assign(settingData);
     obj.start = start;
@@ -731,12 +746,12 @@ export const renderSettingSearchResultItem = function renderSettingSearchResultI
     obj[0] = settingData;
     const merged = Object.assign(tmp);
     return callback3(RouteSettingSearchResult, obj);
-  } else if (constants.PRESSABLE === type) {
+  } else if (tmp2.PRESSABLE === type) {
     obj = { settingData: null };
     obj[0] = settingData;
     const merged1 = Object.assign(tmp);
     return callback3(PressableSettingSearchResult, obj);
-  } else if (constants.STATIC === type) {
+  } else if (tmp2.STATIC === type) {
     obj = { settingData: null };
     obj[0] = settingData;
     const merged2 = Object.assign(tmp);

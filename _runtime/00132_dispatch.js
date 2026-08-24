@@ -1,14 +1,12 @@
 // _runtime/00132_dispatch.js
-import javaScriptFlagGetterAll from "00027_javaScriptFlagGetter.js";
 import EventDefault from "00133_Event.js";
 import SymbolResult1 from "00134_SymbolResult1.js";
-import SymbolResult2 from "00135_SymbolResult2.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
 const EventTarget = global;
-require = fn;
+require = arg1;
 function dispatch(self, bubbles) {
   setEventDispatchFlag(bubbles, true);
   let arr = (function getEventPath(self) {
@@ -17,33 +15,53 @@ function dispatch(self, bubbles) {
     if (null != self) {
       do {
         let arr = items.push(tmp);
+        let tmp3 = callback;
+        let tmp4 = table;
         tmp = tmp[callback(undefined, table[4]).EVENT_TARGET_GET_THE_PARENT_KEY]();
       } while (null != tmp);
     }
     return items;
   })(self);
   SymbolResult1.setComposedPath(bubbles, arr);
+  const obj = SymbolResult1;
+  const tmp2 = require;
+  let tmp3 = require;
+  let tmp4 = dependencyMap;
   SymbolResult1.setTarget(bubbles, self);
   let diff = arr.length - 1;
   if (0 <= diff) {
     if (!tmp3Result.getStopPropagationFlag(bubbles)) {
       while (true) {
         let tmp9 = arr[diff];
+        let tmp12 = dependencyMap;
+        let tmp13 = dependencyMap;
+        let tmp10 = require;
+        let tmp11 = require;
         let obj3 = SymbolResult1;
+        let tmp14 = diff;
         if (tmp9 === self) {
+          let tmp18 = importDefault;
           let tmp16 = importDefault;
+          let tmp19 = tmp12;
           let CAPTURING_PHASE = EventDefault.AT_TARGET;
         } else {
+          let tmp15 = importDefault;
           tmp16 = importDefault;
+          let tmp17 = tmp12;
           CAPTURING_PHASE = EventDefault.CAPTURING_PHASE;
         }
         let setEventPhaseResult = obj3.setEventPhase(bubbles, CAPTURING_PHASE);
+        let tmp21 = invoke;
+        let tmp22 = tmp16;
+        let tmp23 = tmp12;
         let tmp24 = invoke(tmp9, bubbles, tmp16(133).CAPTURING_PHASE);
         let diff1 = diff - 1;
         if (0 > diff1) {
           break;
         } else {
-          let tmp11Result = SymbolResult1;
+          let tmp26 = tmp10;
+          let tmp27 = tmp12;
+          let tmp11Result = tmp11(134);
           diff = diff1;
           if (tmp11Result.getStopPropagationFlag(bubbles)) {
             break;
@@ -54,36 +72,63 @@ function dispatch(self, bubbles) {
     tmp3Result = SymbolResult1;
   }
   for (const item10062 of arr) {
+    let tmp28 = item10062;
+    let tmp31 = dependencyMap;
+    let tmp32 = dependencyMap;
+    let tmp29 = require;
+    let tmp30 = require;
     let obj6 = SymbolResult1;
     if (obj6.getStopPropagationFlag(arg1)) {
+      let tmp49 = obj5;
       obj5.return();
       break;
     } else {
       if (!arg1.bubbles) {
-        if (item10062 !== arg0) {
+        let tmp33 = item10062;
+        if (tmp28 !== arg0) {
+          let tmp34 = obj5;
           obj5.return();
           break;
         }
         break;
       }
-      let tmp30Result = SymbolResult1;
-      if (item10062 === arg0) {
+      let tmp35 = tmp29;
+      let tmp36 = tmp31;
+      let tmp30Result = tmp30(134);
+      let tmp37 = item10062;
+      if (tmp28 === arg0) {
+        let tmp41 = importDefault;
         let tmp39 = importDefault;
+        let tmp42 = tmp31;
         let BUBBLING_PHASE = EventDefault.AT_TARGET;
       } else {
+        let tmp38 = importDefault;
         tmp39 = importDefault;
+        let tmp40 = tmp31;
         BUBBLING_PHASE = EventDefault.BUBBLING_PHASE;
       }
       let setEventPhaseResult1 = tmp30Result.setEventPhase(arg1, BUBBLING_PHASE);
-      let tmp48 = invoke(item10062, arg1, tmp39(133).BUBBLING_PHASE);
+      let tmp44 = invoke;
+      let tmp45 = item10062;
+      let tmp46 = tmp39;
+      let tmp47 = tmp31;
+      let tmp48 = invoke(tmp28, arg1, tmp39(133).BUBBLING_PHASE);
       continue;
     }
+    let tmp50 = require;
+    let tmp51 = require;
+    let tmp52 = dependencyMap;
+    let tmp53 = dependencyMap;
     let obj8 = SymbolResult1;
+    let tmp54 = importDefault;
+    let tmp55 = importDefault;
     let setEventPhaseResult2 = obj8.setEventPhase(arg1, EventDefault.NONE);
     let obj9 = SymbolResult1;
+    let tmp57 = null;
     let setCurrentTargetResult = obj9.setCurrentTarget(arg1, null);
     let obj10 = SymbolResult1;
     let setComposedPathResult1 = obj10.setComposedPath(arg1, []);
+    let tmp60 = setEventDispatchFlag;
     let flag = false;
     let tmp61 = setEventDispatchFlag(arg1, false);
     let obj11 = SymbolResult1;
@@ -97,7 +142,7 @@ function invoke(arg0, type) {
   let obj = SymbolResult1;
   obj.setCurrentTarget(type, arg0);
   if (obj2.enableNativeEventTargetEventDispatching()) {
-    const tmp14 = arg0[SymbolResult2.EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
+    const tmp14 = arg0[tmp5(undefined, 135).EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
     const obj4 = getListenersForPhase(arg0, tmp3);
     let value;
     if (obj4 != null) {
@@ -130,7 +175,6 @@ function invoke(arg0, type) {
       arr1 = Array.from(value.values());
     }
   }
-  obj2 = javaScriptFlagGetterAll;
 }
 function getListenersForPhase(arg0, arg1) {
   if (arg1) {
@@ -217,10 +261,10 @@ let obj = {
               const result1 = value.set(fn, obj);
               c2 = value;
               if (null != tmp7) {
-                const listener = tmp7.addEventListener("abort", (event) => {
-                  _undefined.removed = true;
+                const listener = tmp7.addEventListener("abort", () => {
+                  obj.removed = true;
                   if (_undefined.get(closure_0) === _undefined) {
-                    _undefined.delete(closure_0);
+                    obj.delete(closure_0);
                   }
                 }, { once: true });
               }

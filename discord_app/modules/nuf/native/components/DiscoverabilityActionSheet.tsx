@@ -1,23 +1,26 @@
 // discord_app/modules/nuf/native/components/DiscoverabilityActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ContactSyncModes from "../../../contact_sync/native/ContactSyncModalStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ useContactSyncModalStore: c4, setAllowSync: c5, setAllowPhone: closure_6, setAllowEmail: error } = ContactSyncModes);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
+createCacheKey = { container: null, formRow: null, syncRow: null, formText: null, info: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[2] = { marginTop: 24 };
+let obj1 = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let obj2 = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
+let obj3 = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
 
 export default function DiscoverabilityActionSheet() {
   const tmp = callback4();
@@ -38,12 +41,14 @@ export default function DiscoverabilityActionSheet() {
   const callback1 = allowEmail.useCallback(() => {
     closure_1_6(!allowPhone);
   }, items1);
+  let obj = { style: tmp.container, children: null };
   const callback2 = allowEmail.useCallback(() => {
     closure_1_7(!allowEmail);
   }, items2);
-  const items3 = [, ];
+  obj = { DEPRECATED_style: items3, label: null, onPress: null, trailing: null };
+  items3 = [, ];
   ({ formRow: arr4[0], syncRow: arr4[1] } = tmp);
-  const obj = { style: tmp.formText, text: null };
+  obj = { style: tmp.formText, text: null };
   const intl = allowPhone(allowEmail[8]).intl;
   obj[1] = intl.string(allowPhone(allowEmail[8]).t.gMUgpv);
   obj[1] = callback2(allowPhone(allowEmail[7]).FormRow.Label, obj);

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
 
@@ -7,7 +7,7 @@ const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
 const items = [{ interval: SubscriptionIntervalTypes.DAY, interval_count: 1 }, { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 }];
 const combined = "https://" + sum.PRIMARY_DOMAIN + "/creators";
 const frozen = Object.freeze({ MUST_READ_ARTICLES: "https://discord.com/creators/5-must-read-articles-for-beginners", CREATOR_TO_ADMIN_101: "https://discord.com/creators/creator-to-server-admin-101", CREATOR_TO_ADMIN_201: "https://discord.com/creators/creator-to-server-admin-201" });
-const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx");
 
 export const MAX_SUBSCRIPTION_TIERS = 3;
 export const MAX_SUBSCRIPTION_TIER_NAME_LENGTH = 100;

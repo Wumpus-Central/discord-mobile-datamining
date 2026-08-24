@@ -1,21 +1,22 @@
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModal.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 
-const result = obj132.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
+const result = set.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
-export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_1_8, arg1) {
-  const _require = closure_1_8;
+export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4, arg1) {
+  const _require = closure_4;
   importDefault = arg1;
-  const obj = {};
+  let obj = _modDef5260;
+  obj = {};
   const merged = Object.assign(arg1);
   obj.onDismissed = function onDismissed() {
-    lib(dependencyMap[0]).popWithKey(closure_0);
+    lib(closure_1_2[0]).popWithKey(closure_0);
     const onDismissed = lib.onDismissed;
     if (onDismissed != null) {
       onDismissed();
     }
   };
-  obj.pushLazy(asyncRequireImpl(7281, dependencyMap.paths), obj, closure_1_8, { animation: "none" });
+  obj.pushLazy(_asyncRequireImpl(7281, dependencyMap.paths), obj, closure_4, { animation: "none" });
 };

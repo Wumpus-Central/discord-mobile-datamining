@@ -2,14 +2,14 @@
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import keysSorter from "../../../_runtime/04376_keysSorter.js";
 import WebUserSettings from "UserSettingsKeys.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import { UserSettingsPath } from "UserSettingsConstants.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ AnalyticEvents: c5, Routes: closure_6 } = ME);
 const re7 = /[_\s]|%20/g;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/UserSettingsURLUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsURLUtils.tsx");
 
 export const settingsPathToRoute = function settingsPathToRoute(ACCOUNT) {
   const parts = ACCOUNT.split("/");
@@ -22,7 +22,9 @@ export const trackParseSettingsUrl = function trackParseSettingsUrl(path) {
     obj[0] = path;
     obj[1] = arg1;
     expandEventPropertiesDefault.track(constants.USER_SETTINGS_URL_PARSED, obj);
+    const obj3 = expandEventPropertiesDefault;
   } else {
+    obj = expandEventPropertiesDefault;
     obj = { user_settings_url_origin: null, user_settings_url_path: null };
     obj[0] = arg1;
     obj[1] = path;
@@ -55,7 +57,7 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   }
   if (tmp8 == null) {
     const _Object = Object;
-    values = Object.values(UserSettingsPath);
+    values = Object.values(tmp5);
     let tmp9;
     if (values.includes(str5)) {
       tmp9 = obj[str5];
@@ -64,6 +66,8 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   }
   obj = { target: tmp8, path: joined, params: null };
   const str = path.split("?")[0];
+  tmp5 = UserSettingsPath;
+  const tmp6 = require;
   if (search == null) {
     const _location = location;
     search = location.search;

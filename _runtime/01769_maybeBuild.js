@@ -1,5 +1,5 @@
 // _runtime/01769_maybeBuild.js
-arg5.maybeBuild = function maybeBuild(build, style, displayName) {
+arg5.maybeBuild = function maybeBuild(build, arg1, displayName) {
   let buildResult = build;
   if ("build" in build) {
     buildResult = build;

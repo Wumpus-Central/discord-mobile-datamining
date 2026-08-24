@@ -3,10 +3,10 @@ import _inheritsDefault from "00098__inherits.js";
 import bezier from "00364_bezier.js";
 import _readOnlyErrorDefault from "metro/00377__readOnlyError.js";
 import AnimationDefault from "00379_Animation.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import closure_7 from "metro/00096__get.js";
 import importDefaultResult1 from "metro/00042__createClass.js";
 
 const TimingAnimation = global;
@@ -95,6 +95,8 @@ let items = [
     key: "start",
     value: function start(_fromValue, _onUpdate, arg2, arg3, self) {
       self = this;
+      closure_1 = this;
+      self = this;
       const tmp = callback3(callback2(self.prototype), "start", this);
       closure_1 = tmp;
       let fn = tmp;
@@ -110,12 +112,12 @@ let items = [
         self._timeout = setTimeout(function start() {
           closure_1._startTime = Date.now();
           if (!closure_1.__startAnimationIfNative(self)) {
-            if (0 === closure_1._duration) {
-              closure_1._onUpdate(closure_1._toValue);
-              closure_1.__notifyAnimationEnd({ finished: true });
+            if (0 === obj._duration) {
+              obj._onUpdate(obj._toValue);
+              obj.__notifyAnimationEnd({ finished: true });
             } else {
               const _requestAnimationFrame = requestAnimationFrame;
-              closure_1._animationFrame = requestAnimationFrame(() => closure_1.onUpdate());
+              obj._animationFrame = requestAnimationFrame(() => closure_1.onUpdate());
             }
           }
         }, self._delay);
@@ -161,7 +163,8 @@ let items = [
   {
     key: "stop",
     value: function stop() {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);

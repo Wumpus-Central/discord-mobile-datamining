@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 
-require = fn;
+require = arg1;
 const MaintenanceStore = "MaintenanceStore";
 let c3 = null;
 let c4 = null;
@@ -41,8 +41,8 @@ prototype["getScheduledMaintenance"] = function getScheduledMaintenance() {
         const _Date = Date;
         const _Date2 = Date;
         const timestamp = Date.now();
-        tmp3 = null;
         const date = new Date(scheduled_until);
+        tmp3 = null;
       }
     }
   }
@@ -69,6 +69,6 @@ const maintenanceStore = new MaintenanceStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/StatusPageStore.tsx");
+let result = require("set").fileFinishedImporting("stores/StatusPageStore.tsx");
 
 export default maintenanceStore;

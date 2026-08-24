@@ -1,10 +1,10 @@
 // discord_app/modules/webauthn/native/UserSettingsWebAuthn.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { WebAuthnScreens } from "../WebAuthnConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
 
 export default function UserSettingsWebAuthn(showNav) {
   ({ navigation: require, initialRouteName } = showNav);

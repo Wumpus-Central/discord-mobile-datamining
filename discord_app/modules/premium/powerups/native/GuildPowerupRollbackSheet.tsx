@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
 
 export default function GuildPowerupRollbackSheet(arg0) {
   ({ header, body, ctaText, onCtaPress, onDismiss } = arg0);

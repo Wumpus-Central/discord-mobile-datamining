@@ -1,9 +1,9 @@
 // discord_app/modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx
 import sampleWithUserId from "../app_analytics/sampleWithUserId.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
 
 export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeatSkipped() {
   currentUser = currentUser.getCurrentUser();
@@ -12,6 +12,7 @@ export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeat
     let isStaffResult = currentUser.isStaff();
     if (!isStaffResult) {
       isStaffResult = sampleWithUserId.sampleWithUserId(currentUser.id, 0.02);
+      const obj2 = sampleWithUserId;
     }
     tmp = isStaffResult;
   }

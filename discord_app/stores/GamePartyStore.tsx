@@ -2,17 +2,17 @@
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import fetchFingerprint from "AuthenticationStore.tsx";
-import markAllUserIdListsStale from "RelationshipStore.tsx";
-import filterPlayingActivities from "SelfPresenceStore.tsx";
+import closure_2 from "AuthenticationStore.tsx";
+import closure_3 from "RelationshipStore.tsx";
+import closure_4 from "SelfPresenceStore.tsx";
 import ME from "../Constants.tsx";
 
 function updateParty(closure_6, id, activities, status) {
-  const found = activities.find((item, index) => {
-    let BooleanResult = null != item.party;
+  const found = activities.find((party) => {
+    let BooleanResult = null != party.party;
     if (BooleanResult) {
       const _Boolean = Boolean;
-      BooleanResult = Boolean(item.party.id);
+      BooleanResult = Boolean(party.party.id);
     }
     return BooleanResult;
   });
@@ -105,6 +105,8 @@ function handleGuildCreate(guild) {
   guild = guild.guild;
   let flag = false;
   for (const item10009 of tmp) {
+    let tmp2 = updateParty;
+    let num = 0;
     if (false !== updateParty(guild.id, item10009.user.id, item10009.activities, item10009.status)) {
       flag = true;
     }
@@ -119,7 +121,7 @@ function handleLocalPresenceUpdate() {
 function handleRelationshipAddOrUpdate(relationship) {
   relationship = relationship.relationship;
   if (!closure_3.isBlocked(relationship.id)) {
-    if (!closure_3.isIgnored(relationship.id)) {
+    if (!obj.isIgnored(relationship.id)) {
       return false;
     }
   }
@@ -128,14 +130,17 @@ function handleRelationshipAddOrUpdate(relationship) {
   } else {
     const values = applyDefault.values(tmp);
     for (const item10025 of values) {
+      let tmp7 = map;
       let value = map.get(item10025);
       let obj3 = value;
       if (null != value) {
+        let tmp9 = value;
         let deleteResult = obj3.delete(relationship.id);
       }
       continue;
     }
   }
+  obj = closure_3;
 }
 ({ StatusTypes: c5, ME: closure_6 } = ME);
 let closure_7 = {};
@@ -175,6 +180,12 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
       ({ user, status, activities } = nextResult);
       let tmp3 = null != user;
       if (tmp3) {
+        let tmp4 = updateParty;
+        let tmp5 = closure_6;
+        let tmp6 = user;
+        let tmp7 = activities;
+        let tmp8 = status;
+        let num = 0;
         tmp3 = false !== updateParty(closure_6, tmp2.id, activities, status);
       }
       if (tmp3) {
@@ -183,6 +194,7 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
       continue;
     }
     for (const item10032 of guilds) {
+      let tmp9 = handleGuildCreate;
       let obj = { guild: null };
       obj[0] = item10032;
       if (false !== handleGuildCreate(obj)) {
@@ -195,9 +207,10 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(parties) {
     parties = parties.parties;
     map = new Map();
+    const obj = {};
     const merged = Object.assign(parties.userParties);
     const keys = Object.keys(parties);
-    const item = keys.forEach((item, index) => map.set(item, new Set(parties[item])));
+    const item = keys.forEach((arg0) => map.set(arg0, new Set(parties[arg0])));
   },
   GUILD_CREATE: handleGuildCreate,
   PRESENCES_REPLACE: function handlePresenceReplace(arg0) {
@@ -207,6 +220,10 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
       ({ user, activities } = nextResult);
       let tmp3 = null != user;
       if (tmp3) {
+        let tmp4 = updateParty;
+        let tmp5 = closure_6;
+        let tmp6 = user;
+        let tmp7 = activities;
         tmp3 = false !== updateParty(closure_6, tmp2.id, activities);
       }
       if (tmp3) {
@@ -218,24 +235,24 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
   },
   PRESENCE_UPDATES: function handlePresenceUpdates(updates) {
     updates = updates.updates;
-    const mapped = updates.map((item, index) => {
-      ({ guildId, status, activities } = item);
+    const mapped = updates.map((user) => {
+      ({ guildId, status, activities } = user);
       if (guildId == null) {
         guildId = closure_6;
       }
-      return callback(guildId, item.user.id, activities, status);
+      return closure_9(guildId, user.user.id, activities, status);
     });
-    return mapped.some((item, index) => item);
+    return mapped.some((arg0) => arg0);
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(members) {
     members = members.members;
-    const mapped = members.map((item, index) => item.presence);
+    const mapped = members.map((presence) => presence.presence);
     const guildId = members.guildId;
     c1 = false;
-    const item = mapped.forEach((item, index) => {
-      let tmp = null != item;
+    const item = mapped.forEach((user) => {
+      let tmp = null != user;
       if (tmp) {
-        tmp = updateParty(closure_0, item.user.id, item.activities, item.status);
+        tmp = closure_1_9(closure_0, user.user.id, user.activities, user.status);
       }
       if (tmp) {
         c1 = true;
@@ -247,13 +264,13 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
     addedMembers = addedMembers.addedMembers;
     let tmp2 = null != addedMembers;
     if (tmp2) {
-      const mapped = addedMembers.map((item, index) => item.presence);
+      const mapped = addedMembers.map((presence) => presence.presence);
       importDefault = tmp;
       c1 = false;
-      const item = mapped.forEach((item, index) => {
-        let tmp = null != item;
+      const item = mapped.forEach((user) => {
+        let tmp = null != user;
         if (tmp) {
-          tmp = updateParty(closure_0, item.user.id, item.activities, item.status);
+          tmp = closure_1_9(closure_0, user.user.id, user.activities, user.status);
         }
         if (tmp) {
           c1 = true;
@@ -272,9 +289,11 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
     } else {
       const values = applyDefault.values(tmp);
       for (const item10017 of values) {
+        let tmp7 = map;
         let value = map.get(item10017);
         let obj2 = value;
         if (null != value) {
+          let tmp9 = value;
           let addResult = obj2.add(relationship.id);
         }
         continue;
@@ -282,6 +301,6 @@ const gamePartyStore = new GamePartyStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/GamePartyStore.tsx");
+let result = require("set").fileFinishedImporting("stores/GamePartyStore.tsx");
 
 export default gamePartyStore;

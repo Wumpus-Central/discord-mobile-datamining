@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/core/native/openUserSettings.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import handleFormClose from "../../../../stores/UserSettingsAccountStore.tsx";
 
 const UserSettingsSections = ME.UserSettingsSections;
-const result = obj132.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen, fn) => {
+export const openUserSettings = (screen) => {
   let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp2) {
@@ -23,9 +23,9 @@ export const openUserSettings = (screen, fn) => {
     obj[1] = screen;
     dispatcherDefault.dispatch(obj);
     rootNavigationRef.navigate("settings", screen);
-    if (fn != null) {
-      fn();
+    if (arg1 != null) {
+      arg1();
     }
+    const obj3 = dispatcherDefault;
   }
-  tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
 };

@@ -1,11 +1,11 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
 
 export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUseStateFromStores() {
   let obj = first(str[3]);

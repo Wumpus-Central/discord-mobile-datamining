@@ -1,14 +1,15 @@
 // discord_app/modules/activities/utils/getEmbeddedActivityLaunchability.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_2 from "../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/PermissionStore.tsx";
+import closure_5 from "../../../stores/VoiceStateStore.tsx";
 import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "../Constants.tsx";
 import { Permissions } from "../../../Constants.tsx";
+import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
+require = arg1;
 function getEmbeddedActivityLaunchability(arg0) {
   ({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore } = arg0);
   const channel = ChannelStore.getChannel(channelId);
@@ -57,7 +58,7 @@ function getEmbeddedActivityLaunchability(arg0) {
   }
 }
 const obj = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL" };
-const result = require("obj132").fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
 
 export const EmbeddedActivityLaunchability = obj;
 export { getEmbeddedActivityLaunchability };
@@ -68,7 +69,7 @@ export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaun
   const _require = channelId;
   const items = [closure_2, closure_3, closure_4, closure_5];
   const items1 = [channelId];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => getEmbeddedActivityLaunchability({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
+  return _initialize.useStateFromStores(items, () => closure_1_9({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {

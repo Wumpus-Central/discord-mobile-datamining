@@ -1,5 +1,5 @@
 // discord_app/modules/quests/ConsoleQuestUIStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import keys from "../../../_runtime/00644_keys.js";
 
 let closure_0 = [];
@@ -23,7 +23,7 @@ let obj = keys.create((arg0, arg1) => {
           errorHintsByQuestId.delete(closure_0);
         } else {
           const items = [];
-          HermesBuiltin.arraySpread(length, 0);
+          HermesBuiltin.arraySpread(arr, 0);
           const result = errorHintsByQuestId.set(closure_0, items);
         }
         return { errorHintsByQuestId };
@@ -44,13 +44,14 @@ let obj = keys.create((arg0, arg1) => {
         if (errorHintsByQuestId.has(closure_0)) {
           const _Map = Map;
           const map = new Map(errorHintsByQuestId.errorHintsByQuestId);
-          map.delete(closure_0);
+          map.delete(tmp);
           const obj = { errorHintsByQuestId: null };
           obj[0] = map;
           return obj;
         } else {
           return errorHintsByQuestId;
         }
+        tmp = closure_0;
       });
     },
     clearErrorHintsByType(arg0, arg1) {
@@ -62,16 +63,16 @@ let obj = keys.create((arg0, arg1) => {
         if (null == value) {
           return errorHintsByQuestId;
         } else {
-          const found = value.filter((item, index) => item.type !== closure_1);
+          const found = value.filter((type) => type.type !== closure_1);
           if (found.length === value.length) {
             return errorHintsByQuestId;
           } else {
             const _Map = Map;
             const map = new Map(errorHintsByQuestId.errorHintsByQuestId);
             if (0 === found.length) {
-              map.delete(closure_0);
+              map.delete(tmp);
             } else {
-              const result = map.set(closure_0, found);
+              const result = map.set(tmp, found);
             }
             const obj = { errorHintsByQuestId: null };
             obj[0] = map;
@@ -87,7 +88,7 @@ let obj = keys.create((arg0, arg1) => {
   };
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/quests/ConsoleQuestUIStore.tsx");
+let result = set.fileFinishedImporting("modules/quests/ConsoleQuestUIStore.tsx");
 
 export default obj;
 export const useConsoleQuestUIStore = obj;

@@ -1,6 +1,6 @@
 // discord_app/modules/autocompleter/native/UserSearch.worker.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../../../_runtime/00002_set.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;
@@ -16,7 +16,7 @@ class UserSearchWorker extends NativeEventEmitter {
     tmp.handleCallback = function handleCallback(arg0) {
       let handlers = arg0;
       handlers = handlers.handlers;
-      const item = handlers.forEach((item, index) => item({ data: closure_0 }));
+      const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
     };
     return tmp;
   }
@@ -62,14 +62,14 @@ prototype["terminate"] = function terminate() {
 tmp = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
-tmp.handlers = new Set();
+let set = new Set();
+tmp.handlers = set;
 tmp.subscription = null;
 tmp.handleCallback = function handleCallback(arg0) {
   let handlers = arg0;
   handlers = handlers.handlers;
-  const item = handlers.forEach((item, index) => item({ data: closure_0 }));
+  const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
 };
-const set = new Set();
-const result = obj132.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
+const result = set.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
 
 export default tmp;

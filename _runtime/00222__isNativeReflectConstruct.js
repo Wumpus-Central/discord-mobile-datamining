@@ -1,9 +1,9 @@
 // _runtime/00222__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import BlobDefault from "00203_Blob.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const File = arg1;
@@ -32,7 +32,7 @@ class File {
     tmp = File;
     tmp2 = closure_2(this, File);
     tmp4 = null != global;
-    tmp3 = require("metro/00038__.js");
+    tmp3 = require("module_38");
     if (tmp4) {
       tmp4 = null != arg1;
     }

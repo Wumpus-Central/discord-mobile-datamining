@@ -1,8 +1,8 @@
 // discord_app/utils/native/SupportUtils.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _getSystemLocale from "../../modules/user_settings/LocaleStore.tsx";
+import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../modules/user_settings/LocaleStore.tsx";
 
-const require = fn;
+const require = arg1;
 function _emailSupport() {
   const self = this;
   const tmp = callback(function*() {
@@ -81,7 +81,7 @@ function _emailSupport() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("utils/native/SupportUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/native/SupportUtils.tsx");
 
 export const emailSupport = function emailSupport() {
   const self = this;

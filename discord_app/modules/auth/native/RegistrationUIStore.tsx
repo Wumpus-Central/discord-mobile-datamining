@@ -1,15 +1,16 @@
 // discord_app/modules/auth/native/RegistrationUIStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessibilityRole" }));
-const result = obj132.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
+const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export const useRegistrationUIStore = obj;
 export const setRegistrationErrors = function setRegistrationErrors(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_2.setState({ errors: closure_0 });
   });
 };
@@ -27,6 +28,7 @@ export const updateRegistrationOptions = function updateRegistrationOptions(arg0
   const registrationOptions = obj.getState().registrationOptions;
   obj = _require(registrationOptions[1]);
   obj.batchUpdates(() => {
+    obj = { registrationOptions: null };
     obj = {};
     const merged = Object.assign(registrationOptions);
     const merged1 = Object.assign(closure_0);
@@ -41,7 +43,7 @@ export const resetRegistration = function resetRegistration() {
 };
 export const setSubmitting = function setSubmitting(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_2.setState({ errors: {}, submitting: closure_0 });
   });
 };

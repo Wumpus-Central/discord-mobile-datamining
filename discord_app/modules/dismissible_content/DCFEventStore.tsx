@@ -26,7 +26,7 @@ obj = {
   }
 };
 const dCFEventStore = new DCFEventStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/dismissible_content/DCFEventStore.tsx");
+const result = require("set").fileFinishedImporting("modules/dismissible_content/DCFEventStore.tsx");
 
 export default dCFEventStore;
 export const DCFEventTypes = obj;

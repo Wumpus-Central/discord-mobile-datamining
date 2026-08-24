@@ -1,25 +1,25 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardLurking.tsx
-import _startLurkingAll from "../../../../utils/GuildDiscoveryUtils.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import initialize from "../../../lurker_mode/LurkingStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../lurker_mode/LurkingStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
 import { TextAreaCta } from "../ChatInputConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ AnalyticEvents: closure_8, JoinGuildSources: c9 } = ME);
 const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) {
   channel = channel.channel;
-  let guildId = channel.getGuildId();
+  let guildId;
+  guildId = channel.getGuildId();
   let obj = channel(589);
   const items = [closure_5];
   const items1 = [guildId];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let isLurkingResult = null != guildId;
     if (isLurkingResult) {
-      isLurkingResult = closure_1_5.isLurking(guildId);
+      isLurkingResult = closure_1_5.isLurking(tmp);
     }
     return { isLurking: isLurkingResult, lurkingSource: closure_1_5.getLurkingSourceForGuild(guildId) };
   }, items1);
@@ -32,12 +32,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
   const items3 = [guildId];
   const callback1 = importAllResult.useCallback(() => {
     if (null != guildId) {
-      guildId(dependencyMap[8]);
-      const obj = { cta_type: null };
-      obj[0] = TextAreaCta.FOLLOW_ANNOUNCEMENT;
+      let obj = guildId(closure_1_3[8]);
+      obj = { cta_type: null };
+      obj[0] = closure_1_7.FOLLOW_ANNOUNCEMENT;
       obj.trackWithMetadata(closure_1_8.TEXT_AREA_CTA_CLICKED, obj);
-      const result = channel(dependencyMap[9]).showChannelFollowingActionSheet(channel.id, tmp);
-      const obj3 = channel(dependencyMap[9]);
+      const result = channel(closure_1_3[9]).showChannelFollowingActionSheet(channel.id, tmp);
+      const obj3 = channel(closure_1_3[9]);
     }
   }, items2);
   const callback2 = importAllResult.useCallback(() => {
@@ -51,19 +51,21 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
         channel = closure_1_6.getChannel(lurkingSourceForGuild.directoryChannelId);
         if (null != channel) {
           guildId = channel.getGuildId();
-          const result = channel(dependencyMap[10]).setHubProgressActionComplete(guildId, channel(dependencyMap[11]).HubProgressStep.JOIN_GUILD);
-          const obj2 = channel(dependencyMap[10]);
+          const result = channel(closure_1_3[10]).setHubProgressActionComplete(guildId, channel(closure_1_3[11]).HubProgressStep.JOIN_GUILD);
+          const obj2 = channel(closure_1_3[10]);
         }
       }
-      const result1 = _startLurkingAll.trackGuildJoinClicked(tmp);
+      const result1 = closure_1_2(closure_1_3[12]).trackGuildJoinClicked(tmp);
+      const obj3 = closure_1_2(closure_1_3[12]);
+      const tmp3 = closure_1_9;
       let obj = { cta_type: null };
-      obj[0] = TextAreaCta.JOIN_GUILD;
-      guildId(dependencyMap[8]).trackWithMetadata(closure_1_8.TEXT_AREA_CTA_CLICKED, obj);
-      const obj4 = guildId(dependencyMap[8]);
+      obj[0] = closure_1_7.JOIN_GUILD;
+      guildId(closure_1_3[8]).trackWithMetadata(closure_1_8.TEXT_AREA_CTA_CLICKED, obj);
+      const obj4 = guildId(closure_1_3[8]);
       obj = { source: null };
-      obj[0] = closure_1_9.CHAT_INPUT_BLOCKER;
-      guildId(dependencyMap[13]).joinGuild(tmp, obj);
-      const obj6 = guildId(dependencyMap[13]);
+      obj[0] = tmp3.CHAT_INPUT_BLOCKER;
+      guildId(closure_1_3[13]).joinGuild(tmp, obj);
+      const obj6 = guildId(closure_1_3[13]);
     }
   }, items3);
   let type;
@@ -111,10 +113,11 @@ const memoResult = importAllResult.memo(function ChatInputGuardLurking(channel) 
       obj1[3] = callback2;
     }
     tmp15Result = jsx(guildId(11616), obj1);
+    const tmp15 = jsx;
     const tmp17 = guildId(11616);
   }
   return tmp15Result;
 });
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardLurking.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardLurking.tsx");
 
 export default memoResult;

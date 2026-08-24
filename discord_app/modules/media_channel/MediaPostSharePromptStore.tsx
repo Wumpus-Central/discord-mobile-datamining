@@ -3,11 +3,12 @@ import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost.tsx";
-import isSubscriptionGated from "../channel/GatedChannelStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../channel/GatedChannelStore.tsx";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 let set = new Set();
 const Store = initializeDefault.Store;
 class MediaPostSharePromptStore extends Store {
@@ -40,6 +41,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
             if (null != channel.parent_id) {
               if (channelGated.isChannelGated(channel.guild_id, channel.parent_id)) {
                 set.add(DISCORD_EPOCHDefault.castMessageIdAsChannelId(isPushNotification.message.id));
+                const obj = DISCORD_EPOCHDefault;
               }
             }
           }
@@ -55,6 +57,6 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
     set.clear();
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
+const result = set.fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
 
 export default mediaPostSharePromptStore;

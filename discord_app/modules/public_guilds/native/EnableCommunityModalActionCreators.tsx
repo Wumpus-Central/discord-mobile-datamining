@@ -1,10 +1,10 @@
 // discord_app/modules/public_guilds/native/EnableCommunityModalActionCreators.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
-const result = obj132.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/public_guilds/native/EnableCommunityModalActionCreators.tsx");
 
 export default {
   open() {

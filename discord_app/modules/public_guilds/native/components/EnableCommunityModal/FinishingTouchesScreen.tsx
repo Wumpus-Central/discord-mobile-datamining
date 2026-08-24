@@ -1,20 +1,19 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/FinishingTouchesScreen.tsx
-import applyOverwritesAll from "../../../../../utils/PermissionUtils.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleFormInit from "../../../../guild_settings/GuildSettingsStore.tsx";
-import createGuildRoleRecordFromRust from "../../../../../stores/GuildRoleStore.tsx";
+import closure_8 from "../../../../guild_settings/GuildSettingsStore.tsx";
+import closure_9 from "../../../../../stores/GuildRoleStore.tsx";
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "../../../PublicGuildsConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ Image: closure_6, View: error } = get_ActivityIndicator);
 ({ CREATE_NEW_CHANNEL_VALUE: c10, MODERATOR_PERMISSIONS: unpackModuleId, MODERATOR_PERMISSIONS_FLAG: closure_12 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);
 ({ GuildFeatures: map1, HelpdeskArticles: closure_14, UserNotificationSettings: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/FinishingTouchesScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/FinishingTouchesScreen.tsx");
 
 export default function FinishingTouchesScreen() {
   let obj = React;
@@ -31,7 +30,7 @@ export default function FinishingTouchesScreen() {
   first = callback(React.useState(prop), 1)[0];
   const tmp9 = callback(obj.useState(false), 2);
   const first1 = tmp9[0];
-  [tmp12, tmp13] = callback(obj.useState(!closure_11.some((item, index) => applyOverwritesAll.canEveryone(item, guild))), 2);
+  [tmp12, tmp13] = callback(obj.useState(!closure_11.some((VIEW_CHANNEL) => closure_1_2(closure_1_3[11]).canEveryone(VIEW_CHANNEL, guild))), 2);
   const first2 = callback(obj.useState(tmp12), 1)[0];
   let prop1;
   if (guild != null) {
@@ -48,15 +47,15 @@ export default function FinishingTouchesScreen() {
       if (prop !== closure_1_15.ONLY_MENTIONS) {
         let obj = { defaultMessageNotifications: null };
         obj[0] = tmp4.ONLY_MENTIONS;
-        first(dependencyMap[12]).updateGuild(obj);
-        const obj3 = first(dependencyMap[12]);
+        first(closure_1_3[12]).updateGuild(obj);
+        const obj3 = first(closure_1_3[12]);
       }
     }
     if (!tmp) {
       tmp = null == first;
     }
     if (!tmp) {
-      first(dependencyMap[12]);
+      obj = first(closure_1_3[12]);
       obj = { defaultMessageNotifications: null };
       obj[0] = first;
       obj.updateGuild(obj);
@@ -98,7 +97,8 @@ export default function FinishingTouchesScreen() {
       const obj5 = first(8874);
     }
   }, []);
-  const tmp11 = callback(obj.useState(!closure_11.some((item, index) => applyOverwritesAll.canEveryone(item, guild))), 2);
+  const tmp11 = callback(obj.useState(!closure_11.some((VIEW_CHANNEL) => closure_1_2(closure_1_3[11]).canEveryone(VIEW_CHANNEL, guild))), 2);
+  const tmp8 = constants2;
   const tmp19 = first(16887)();
   const enableCommunitySharedStyles = guild(16886).useEnableCommunitySharedStyles();
   obj = { headerRef: ref, currentStep: tmp2(16884).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
@@ -136,7 +136,7 @@ export default function FinishingTouchesScreen() {
     prop2 = guild.defaultMessageNotifications;
   }
   const obj9 = { hasIcons: false, children: null };
-  obj7[1] = prop2 === constants2.ONLY_MENTIONS;
+  obj7[1] = prop2 === tmp8.ONLY_MENTIONS;
   obj7[2] = first === constants2.ONLY_MENTIONS;
   obj7[3] = callback;
   obj6[1] = callback2(guild(7178).TableSwitchRow, obj7);
@@ -172,6 +172,16 @@ export default function FinishingTouchesScreen() {
   const obj15 = { style: enableCommunitySharedStyles.formHint, variant: "text-xs/medium", color: "text-subtle", children: null };
   const intl9 = tmp2(1236).intl;
   const obj16 = { communityGuidelines: null, typesOfGuilds: null };
+  const obj12 = {
+    infoHook() {
+      return null;
+    }
+  };
+  const obj8 = {
+    infoHook() {
+      return null;
+    }
+  };
   const tmp2Result = guild(16886);
   obj16[0] = first(1993).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
   const tmp4Result1 = first(1993);

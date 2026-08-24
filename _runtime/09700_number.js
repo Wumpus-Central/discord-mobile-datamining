@@ -36,14 +36,14 @@ function bytes(obj) {
     throw error1;
   }
 }
-function hash(create) {
-  if (typeof create === "function") {
-    if (typeof create.create === "function") {
-      const outputLen = create.outputLen;
+function hash(fn) {
+  if (typeof fn === "function") {
+    if (typeof fn.create === "function") {
+      const outputLen = fn.outputLen;
       const _Number2 = Number;
       if (Number.isSafeInteger(outputLen)) {
         if (outputLen >= 0) {
-          const blockLen = create.blockLen;
+          const blockLen = fn.blockLen;
           const _Number = Number;
           const _Error = Error;
           const _HermesInternal = HermesInternal;

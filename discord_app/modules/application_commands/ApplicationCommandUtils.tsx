@@ -1,8 +1,7 @@
 // discord_app/modules/application_commands/ApplicationCommandUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import IntegerDefault from "../../../_runtime/00014_Integer.js";
-import _modDef38 from "../../../_runtime/metro/00038__.js";
 import sum2 from "../../../discord_common/js/shared/Constants.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
@@ -12,8 +11,8 @@ import commandPermissions from "../guild_settings/integrations/permission/Integr
 import ApplicationCommandSectionType from "ApplicationCommandTypes.tsx";
 import TRUE_OPTION_NAME from "ApplicationCommandConstants.tsx";
 import ME from "../../Constants.tsx";
-import deserializer from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import deserializeResult from "../../index.native.tsx";
+import importAllResult from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
 function buildCommand(arg0) {
   ({ rootCommand, command, subCommandPath } = arg0);
@@ -28,12 +27,12 @@ function buildCommand(arg0) {
     if (subCommandPath == null) {
       items = [];
     }
-    const mapped = items.map((item, index) => item.name);
+    const mapped = items.map((name) => name.name);
     let items1 = subCommandPath;
     if (subCommandPath == null) {
       items1 = [];
     }
-    const mapped1 = items1.map((item, index) => item.displayName);
+    const mapped1 = items1.map((displayName) => displayName.displayName);
     obj = { version: null, guildId: null, id: null, untranslatedName: null, serverLocalizedName: null, applicationId: null, type: null, inputType: null, untranslatedDescription: null, options: null, rootCommand: null, subCommandPath: null, defaultMemberPermissions: null, dmPermission: null, permissions: null, displayName: null, displayDescription: null, nsfw: null, contexts: null, integration_types: null, global_popularity_rank: null, handler: null };
     ({ version: obj3[0], guild_id: obj3[1] } = rootCommand);
     const items2 = [rootCommand.id];
@@ -53,233 +52,249 @@ function buildCommand(arg0) {
     ({ description: obj3[8], options } = command);
     let mapped2;
     if (options != null) {
-      mapped2 = options.map((item, index) => {
+      mapped2 = options.map((choices) => {
         let obj = {};
-        let merged = Object.assign(item);
-        let choices = item.choices;
+        let merged = Object.assign(choices);
+        choices = choices.choices;
         let mapped;
         if (choices != null) {
-          mapped = choices.map((item, index) => {
+          mapped = choices.map((name_localized) => {
             const obj = {};
-            const merged = Object.assign(item);
-            let name = item.name_localized;
+            const merged = Object.assign(name_localized);
+            let name = name_localized.name_localized;
             if (name == null) {
-              name = item.name;
+              name = name_localized.name;
             }
             obj.displayName = name;
             return obj;
           });
         }
         obj.choices = mapped;
-        let options = item.options;
+        let options = choices.options;
         let mapped1;
         if (options != null) {
-          mapped1 = options.map((item, index) => {
+          mapped1 = options.map((choices) => {
             let obj = {};
-            let merged = Object.assign(item);
-            let choices = item.choices;
+            let merged = Object.assign(choices);
+            choices = choices.choices;
             let mapped;
             if (choices != null) {
-              mapped = choices.map((item, index) => {
+              mapped = choices.map((name_localized) => {
                 const obj = {};
-                const merged = Object.assign(item);
-                let name = item.name_localized;
+                const merged = Object.assign(name_localized);
+                let name = name_localized.name_localized;
                 if (name == null) {
-                  name = item.name;
+                  name = name_localized.name;
                 }
                 obj.displayName = name;
                 return obj;
               });
             }
             obj.choices = mapped;
-            let options = item.options;
+            let options = choices.options;
             let mapped1;
             if (options != null) {
-              mapped1 = options.map((item, index) => {
+              mapped1 = options.map((choices) => {
                 let obj = {};
-                let merged = Object.assign(item);
-                let choices = item.choices;
+                let merged = Object.assign(choices);
+                choices = choices.choices;
                 let mapped;
                 if (choices != null) {
-                  mapped = choices.map((item, index) => {
+                  mapped = choices.map((name_localized) => {
                     const obj = {};
-                    const merged = Object.assign(item);
-                    let name = item.name_localized;
+                    const merged = Object.assign(name_localized);
+                    let name = name_localized.name_localized;
                     if (name == null) {
-                      name = item.name;
+                      name = name_localized.name;
                     }
                     obj.displayName = name;
                     return obj;
                   });
                 }
                 obj.choices = mapped;
-                let options = item.options;
+                let options = choices.options;
                 let mapped1;
                 if (options != null) {
-                  mapped1 = options.map((item, index) => {
+                  mapped1 = options.map((choices) => {
                     let obj = {};
-                    let merged = Object.assign(item);
-                    let choices = item.choices;
+                    let merged = Object.assign(choices);
+                    choices = choices.choices;
                     let mapped;
                     if (choices != null) {
                       mapped = choices.map(() => { ... });
                     }
                     obj.choices = mapped;
-                    let options = item.options;
+                    let options = choices.options;
                     let mapped1;
                     if (options != null) {
                       mapped1 = options.map(() => { ... });
                     }
                     obj.options = mapped1;
-                    ({ name_localized: obj.serverLocalizedName, name_localized } = item);
+                    ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
                     if (name_localized == null) {
-                      name_localized = item.name;
+                      name_localized = choices.name;
                     }
                     obj.displayName = name_localized;
-                    let description = item.description_localized;
+                    let description = choices.description_localized;
                     if (description == null) {
-                      description = item.description;
+                      description = choices.description;
                     }
                     obj.displayDescription = description;
-                    if (item.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
-                      if ("channel_types" in item) {
+                    if (choices.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
+                      if ("channel_types" in choices) {
                         obj = {};
                         let merged1 = Object.assign(obj);
-                        obj.channelTypes = item.channel_types;
+                        obj.channelTypes = choices.channel_types;
                       }
                       return obj;
                     }
-                    if (item.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
+                    if (choices.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
                       obj = {};
                       let merged2 = Object.assign(obj);
-                      ({ min_value: obj2.minValue, max_value: obj2.maxValue } = item);
+                      ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
                     }
-                    if (item.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
-                      if (item.type === callback(table[6]).ApplicationCommandOptionType.ATTACHMENT) {
-                        if ("file_types" in item) {
+                    if (choices.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
+                      let tmp9 = obj;
+                      if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+                        tmp9 = obj;
+                        if ("file_types" in choices) {
                           let obj1 = {};
                           let merged3 = Object.assign(obj);
-                          obj1.fileTypes = item.file_types;
+                          obj1.fileTypes = choices.file_types;
+                          tmp9 = obj1;
                         }
                       }
                     }
                     let obj2 = {};
                     let merged4 = Object.assign(obj);
-                    ({ min_length: obj4.minLength, max_length: obj4.maxLength } = item);
+                    ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+                    tmp9 = obj2;
                   });
                 }
                 obj.options = mapped1;
-                ({ name_localized: obj.serverLocalizedName, name_localized } = item);
+                ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
                 if (name_localized == null) {
-                  name_localized = item.name;
+                  name_localized = choices.name;
                 }
                 obj.displayName = name_localized;
-                let description = item.description_localized;
+                let description = choices.description_localized;
                 if (description == null) {
-                  description = item.description;
+                  description = choices.description;
                 }
                 obj.displayDescription = description;
-                if (item.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
-                  if ("channel_types" in item) {
+                if (choices.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
+                  if ("channel_types" in choices) {
                     obj = {};
                     let merged1 = Object.assign(obj);
-                    obj.channelTypes = item.channel_types;
+                    obj.channelTypes = choices.channel_types;
                   }
                   return obj;
                 }
-                if (item.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
+                if (choices.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
                   obj = {};
                   let merged2 = Object.assign(obj);
-                  ({ min_value: obj2.minValue, max_value: obj2.maxValue } = item);
+                  ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
                 }
-                if (item.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
-                  if (item.type === callback(table[6]).ApplicationCommandOptionType.ATTACHMENT) {
-                    if ("file_types" in item) {
+                if (choices.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
+                  let tmp9 = obj;
+                  if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+                    tmp9 = obj;
+                    if ("file_types" in choices) {
                       let obj1 = {};
                       let merged3 = Object.assign(obj);
-                      obj1.fileTypes = item.file_types;
+                      obj1.fileTypes = choices.file_types;
+                      tmp9 = obj1;
                     }
                   }
                 }
                 let obj2 = {};
                 let merged4 = Object.assign(obj);
-                ({ min_length: obj4.minLength, max_length: obj4.maxLength } = item);
+                ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+                tmp9 = obj2;
               });
             }
             obj.options = mapped1;
-            ({ name_localized: obj.serverLocalizedName, name_localized } = item);
+            ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
             if (name_localized == null) {
-              name_localized = item.name;
+              name_localized = choices.name;
             }
             obj.displayName = name_localized;
-            let description = item.description_localized;
+            let description = choices.description_localized;
             if (description == null) {
-              description = item.description;
+              description = choices.description;
             }
             obj.displayDescription = description;
-            if (item.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
-              if ("channel_types" in item) {
+            if (choices.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
+              if ("channel_types" in choices) {
                 obj = {};
                 let merged1 = Object.assign(obj);
-                obj.channelTypes = item.channel_types;
+                obj.channelTypes = choices.channel_types;
               }
               return obj;
             }
-            if (item.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
+            if (choices.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
               obj = {};
               let merged2 = Object.assign(obj);
-              ({ min_value: obj2.minValue, max_value: obj2.maxValue } = item);
+              ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
             }
-            if (item.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
-              if (item.type === callback(table[6]).ApplicationCommandOptionType.ATTACHMENT) {
-                if ("file_types" in item) {
+            if (choices.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
+              let tmp9 = obj;
+              if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+                tmp9 = obj;
+                if ("file_types" in choices) {
                   let obj1 = {};
                   let merged3 = Object.assign(obj);
-                  obj1.fileTypes = item.file_types;
+                  obj1.fileTypes = choices.file_types;
+                  tmp9 = obj1;
                 }
               }
             }
             let obj2 = {};
             let merged4 = Object.assign(obj);
-            ({ min_length: obj4.minLength, max_length: obj4.maxLength } = item);
+            ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+            tmp9 = obj2;
           });
         }
         obj.options = mapped1;
-        ({ name_localized: obj.serverLocalizedName, name_localized } = item);
+        ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
         if (name_localized == null) {
-          name_localized = item.name;
+          name_localized = choices.name;
         }
         obj.displayName = name_localized;
-        let description = item.description_localized;
+        let description = choices.description_localized;
         if (description == null) {
-          description = item.description;
+          description = choices.description;
         }
         obj.displayDescription = description;
-        if (item.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
-          if ("channel_types" in item) {
+        if (choices.type === callback(table[6]).ApplicationCommandOptionType.CHANNEL) {
+          if ("channel_types" in choices) {
             obj = {};
             let merged1 = Object.assign(obj);
-            obj.channelTypes = item.channel_types;
+            obj.channelTypes = choices.channel_types;
           }
           return obj;
         }
-        if (item.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
+        if (choices.type === callback(table[6]).ApplicationCommandOptionType.NUMBER) {
           obj = {};
           let merged2 = Object.assign(obj);
-          ({ min_value: obj2.minValue, max_value: obj2.maxValue } = item);
+          ({ min_value: obj2.minValue, max_value: obj2.maxValue } = choices);
         }
-        if (item.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
-          if (item.type === callback(table[6]).ApplicationCommandOptionType.ATTACHMENT) {
-            if ("file_types" in item) {
+        if (choices.type !== callback(table[6]).ApplicationCommandOptionType.STRING) {
+          let tmp9 = obj;
+          if (choices.type === tmp4(tmp5[6]).ApplicationCommandOptionType.ATTACHMENT) {
+            tmp9 = obj;
+            if ("file_types" in choices) {
               let obj1 = {};
               let merged3 = Object.assign(obj);
-              obj1.fileTypes = item.file_types;
+              obj1.fileTypes = choices.file_types;
+              tmp9 = obj1;
             }
           }
         }
         let obj2 = {};
         let merged4 = Object.assign(obj);
-        ({ min_length: obj4.minLength, max_length: obj4.maxLength } = item);
+        ({ min_length: obj4.minLength, max_length: obj4.maxLength } = choices);
+        tmp9 = obj2;
       });
     }
     obj[9] = mapped2;
@@ -287,7 +302,8 @@ function buildCommand(arg0) {
     obj[11] = subCommandPath;
     deserializeResult = undefined;
     if (null != rootCommand.default_member_permissions) {
-      deserializeResult = deserializer.deserialize(rootCommand.default_member_permissions);
+      deserializeResult = importAllResult.deserialize(rootCommand.default_member_permissions);
+      const obj4 = importAllResult;
     }
     obj[12] = deserializeResult;
     obj[13] = rootCommand.dm_permission;
@@ -309,12 +325,13 @@ function buildCommand(arg0) {
   } else if (useKeyedPermissions) {
     const keyPermissionsResult = obj(5247).keyPermissions(rootCommand.permissions);
     obj = keyPermissionsResult;
+    obj = keyPermissionsResult;
     const obj2 = obj(5247);
   } else {
     obj = {};
     const permissions = rootCommand.permissions;
-    const item = permissions.forEach((item, index) => {
-      obj[item.id] = item;
+    const item = permissions.forEach((id) => {
+      obj[id.id] = id;
     });
   }
 }
@@ -329,36 +346,43 @@ function buildSubCommands(arg0) {
     obj[4] = useKeyedPermissions;
     const items = [buildCommand(obj)];
     return items;
-  } else if (command.type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
-    if (command.type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
-      obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
-      obj[0] = rootCommand;
-      obj[1] = command;
-      obj[2] = applicationId;
-      obj[3] = subCommandPath;
-      obj[4] = useKeyedPermissions;
-      const items1 = [buildCommand(obj)];
-      return items1;
+  } else {
+    if (command.type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
+      if (command.type !== tmp(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+        obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
+        obj[0] = rootCommand;
+        obj[1] = command;
+        obj[2] = applicationId;
+        obj[3] = subCommandPath;
+        obj[4] = useKeyedPermissions;
+        const items1 = [buildCommand(obj)];
+        return items1;
+      }
     }
+    tmp = require;
   }
   const items2 = [];
   if (null == command.options) {
     return items2;
   } else {
     const options = command.options;
-    const found = options.filter((item, index) => item.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
+    const found = options.filter((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;
       obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
       obj[0] = rootCommand;
       obj[1] = found[num3];
       obj[2] = applicationId;
+      let tmp7 = num3;
       let items3 = subCommandPath;
+      let tmp6 = buildSubCommands;
       if (subCommandPath == null) {
         items3 = [];
       }
       obj1 = { name: null, type: null, displayName: null };
       obj1[0] = found[num3].name;
+      let tmp8 = require;
+      let tmp9 = dependencyMap;
       obj1[1] = PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND_GROUP;
       let name = found[num3].name_localized;
       if (name == null) {
@@ -369,22 +393,31 @@ function buildSubCommands(arg0) {
       obj[3] = items3.concat(items4);
       obj[4] = useKeyedPermissions;
       let items5 = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(buildSubCommands(obj), 0);
+      let tmp10 = items5;
+      let num2 = 0;
+      let arraySpreadResult = HermesBuiltin.arraySpread(tmp6(obj), 0);
+      let tmp12 = push;
+      let tmp13 = items5;
+      let tmp14 = items2;
       let applyResult = HermesBuiltin.apply(items5, items2);
     }
     const options1 = command.options;
-    const found1 = options1.filter((item, index) => item.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
+    const found1 = options1.filter((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
     for (let num4 = 0; num4 < found1.length; num4 = num4 + 1) {
       let obj2 = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
       obj2[0] = rootCommand;
       obj2[1] = found1[num4];
       obj2[2] = applicationId;
+      let tmp17 = num4;
       let items6 = subCommandPath;
+      let tmp16 = buildCommand;
       if (subCommandPath == null) {
         items6 = [];
       }
       let obj3 = { name: null, type: null, displayName: null };
       obj3[0] = found1[num4].name;
+      let tmp18 = require;
+      let tmp19 = dependencyMap;
       obj3[1] = PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND;
       let name2 = found1[num4].name_localized;
       if (name2 == null) {
@@ -394,7 +427,7 @@ function buildSubCommands(arg0) {
       let items7 = [obj3];
       obj2[3] = items6.concat(items7);
       obj2[4] = useKeyedPermissions;
-      let arr = items2.push(buildCommand(obj2));
+      let arr = items2.push(tmp16(obj2));
     }
     if (tmp21) {
       const obj4 = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
@@ -418,11 +451,15 @@ function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
     const roles = selfMember.roles;
     const obj4 = roles[Symbol.iterator]();
     while (obj4 !== undefined) {
+      let tmp5 = require;
+      let tmp6 = dependencyMap;
       let obj2 = commandPermissions;
       let tmp7 = commandLevelPermissions[obj2.toPermissionKey(obj2, tmp3, ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE)];
       if (null != tmp7) {
         flag = true;
+        let tmp9 = tmp7;
         if (tmp8.permission) {
+          let tmp10 = obj4;
           obj4.return();
           return true;
         }
@@ -447,28 +484,28 @@ const DraftType = handleChanged.DraftType;
 ({ BuiltInSectionId: closure_6, SUB_COMMAND_KEY_SEPARATOR: error } = TRUE_OPTION_NAME);
 ({ AnalyticEvents: closure_8, ID_REGEX: c9 } = ME);
 const Permissions = sum2.Permissions;
-let result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandUtils.tsx");
+let result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandUtils.tsx");
 
 export { buildCommand };
-export const buildApplicationCommands = function buildApplicationCommands(uniqByResult, arg1) {
+export const buildApplicationCommands = function buildApplicationCommands(application_commands, arg1) {
   closure_0 = arg1;
-  return applyDefault.flatMap(uniqByResult, (id) => {
-    _modDef38(null != id.id, "Missing command id");
+  return applyDefault.flatMap(application_commands, (id) => {
+    closure_1_1(closure_1_3[10])(null != id.id, "Missing command id");
     const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: "<string:1124074245>" };
     obj[4] = closure_0;
-    return buildSubCommands(obj);
+    return closure_1_12(obj);
   });
 };
 export const applicationPermissionsList = function applicationPermissionsList(arr) {
   let reduced;
   if (arr != null) {
-    reduced = arr.reduce((acc, item, index) => {
-      if (null != item.applicationCommandPermissions) {
+    reduced = arr.reduce((arr, applicationCommandPermissions) => {
+      if (null != applicationCommandPermissions.applicationCommandPermissions) {
         const obj = { id: null, permissions: null };
-        ({ id: obj[0], applicationCommandPermissions: obj[1] } = item);
-        acc.push(obj);
+        ({ id: obj[0], applicationCommandPermissions: obj[1] } = applicationCommandPermissions);
+        arr.push(obj);
       }
-      return acc;
+      return arr;
     }, []);
   }
   return reduced;
@@ -480,31 +517,31 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
   closure_0 = regExp;
   importDefault = closure_4;
   const items = [];
-  const item = applyDefault(contextCommands).forEach((item, index) => {
-    let isMatch = regex.test(item.displayName);
+  const item = applyDefault(contextCommands).forEach((displayName) => {
+    let isMatch = regex.test(displayName.displayName);
     if (isMatch) {
-      let predicateResult = null == item.predicate;
+      let predicateResult = null == displayName.predicate;
       if (!predicateResult) {
-        predicateResult = item.predicate(closure_1);
+        predicateResult = displayName.predicate(closure_1);
       }
       isMatch = predicateResult;
     }
     if (isMatch) {
-      items.push(item);
+      items.push(displayName);
     }
   });
   return items.slice(0, arg3);
 };
-export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(activeOption) {
-  let tmp3 = activeOption.type === PermissionOverwriteType.ApplicationCommandOptionType.USER;
+export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
+  let tmp3 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = activeOption.type === PermissionOverwriteType.ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = option.type === tmp(1954).ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = activeOption.type === PermissionOverwriteType.ApplicationCommandOptionType.ROLE;
+  let tmp4 = option.type === tmp(1954).ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = activeOption.type === PermissionOverwriteType.ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = option.type === tmp(1954).ApplicationCommandOptionType.MENTIONABLE;
   }
-  const tmp5 = activeOption.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING;
+  const tmp5 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
   if (!tmp5) {
     tmp6 = tmp4;
@@ -512,7 +549,7 @@ export const getApplicationCommandOptionQueryOptions = function getApplicationCo
   const obj = { canMentionEveryone: tmp6, canMentionHere: tmp5, canMentionChannels: null, canMentionUsers: null, canMentionRoles: null, canMentionAnyGuildUser: null, canMentionNonMentionableRoles: null, canMentionOtherGlobals: null };
   let tmp7 = tmp5;
   if (!tmp5) {
-    tmp7 = activeOption.type === PermissionOverwriteType.ApplicationCommandOptionType.CHANNEL;
+    tmp7 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.CHANNEL;
   }
   obj[2] = tmp7;
   let tmp8 = tmp5;
@@ -543,11 +580,13 @@ export const canUseApplicationCommands = function canUseApplicationCommands(can,
     } else if (isMultiUserDM.isDM()) {
       let canResult = !isMultiUserDM.isSystemDM();
     } else if (isMultiUserDM.isArchivedLockedThread()) {
-      canResult = can.can(deserializer.combine(Permissions.USE_APPLICATION_COMMANDS, Permissions.MANAGE_THREADS), isMultiUserDM);
+      canResult = can.can(importAllResult.combine(Permissions.USE_APPLICATION_COMMANDS, Permissions.MANAGE_THREADS), isMultiUserDM);
+      const obj2 = importAllResult;
     } else {
       canResult = isReadableType(isMultiUserDM.type);
       if (canResult) {
-        canResult = can.can(deserializer.combine(Permissions.USE_APPLICATION_COMMANDS, Permissions.SEND_MESSAGES), isMultiUserDM);
+        canResult = can.can(importAllResult.combine(Permissions.USE_APPLICATION_COMMANDS, Permissions.SEND_MESSAGES), isMultiUserDM);
+        const obj = importAllResult;
       }
     }
   }
@@ -574,12 +613,13 @@ export const hasAccess = function hasAccess(arg0) {
       if (!tmp7) {
         let tmp9 = null == defaultMemberPermissions;
         if (!tmp9) {
-          const equalsResult = deserializer.equals(defaultMemberPermissions, closure_13);
+          const equalsResult = importAllResult.equals(defaultMemberPermissions, closure_13);
           let canResult = !equalsResult;
           if (!equalsResult) {
             canResult = PermissionStore.can(defaultMemberPermissions, guild);
           }
           tmp9 = canResult;
+          const obj = importAllResult;
         }
         tmp8 = tmp9;
       }
@@ -596,10 +636,10 @@ export const getCommandAttachmentDraftType = function getCommandAttachmentDraftT
   }
 };
 export const getCommandTriggerSection = function getCommandTriggerSection(closure_3) {
-  if (null != dependencyMap) {
-    if (dependencyMap.id === constants.BUILT_IN) {
+  if (null != closure_3) {
+    if (closure_3.id === constants.BUILT_IN) {
       let APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.BUILT_IN;
-    } else if (dependencyMap.id === tmp.FRECENCY) {
+    } else if (closure_3.id === tmp.FRECENCY) {
       APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.FRECENCY;
     } else {
       APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.APP;
@@ -637,7 +677,7 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
   ({ id, options } = parsed);
   let found;
   if (interactionOptions != null) {
-    found = interactionOptions.find((item, index) => item.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
+    found = interactionOptions.find((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND_GROUP);
   }
   let sum = id;
   if (null != found) {
@@ -647,7 +687,7 @@ export const extractInteractionDataProps = function extractInteractionDataProps(
   }
   let found1;
   if (interactionOptions != null) {
-    found1 = interactionOptions.find((item, index) => item.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
+    found1 = interactionOptions.find((type) => type.type === callback(1954).ApplicationCommandOptionType.SUB_COMMAND);
   }
   let commandKey = sum;
   if (null != found1) {

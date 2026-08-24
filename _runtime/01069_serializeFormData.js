@@ -1,10 +1,10 @@
 // _runtime/01069_serializeFormData.js
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 import __SENTRY_DEBUG__ from "metro/01035___SENTRY_DEBUG__.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
-function serializeFormData(size) {
-  return new URLSearchParams(size).toString();
+function serializeFormData(fetchRequestArgBody) {
+  return new URLSearchParams(fetchRequestArgBody).toString();
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("sentry__originalRequestBody");
@@ -80,12 +80,12 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     const str = xhr.getAllResponseHeaders();
     if (str) {
       const parts = str.split("\r\n");
-      let reduced = parts.reduce((acc, item, index) => {
-        [str, tmp2] = callback(item.split(": "), 2);
+      let reduced = parts.reduce((arg0, str) => {
+        [str, tmp2] = callback(str.split(": "), 2);
         if (tmp2) {
-          acc[str.toLowerCase()] = tmp2;
+          arg0[str.toLowerCase()] = tmp2;
         }
-        return acc;
+        return arg0;
       }, {});
     } else {
       reduced = {};

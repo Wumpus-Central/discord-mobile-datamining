@@ -3,21 +3,21 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import AccessibilityAnnouncer from "../../design/shared.tsx";
 import getPlatformUserUrlDefault from "../../lib/Platforms.tsx";
 import PlatformTypes from "../connections/ConnectionsHooks.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function createFetchKeys(arg0, arr) {
   closure_0 = arg0;
-  return arr.map((item, index) => closure_0 + item);
+  return arr.map((arg0) => closure_0 + arg0);
 }
 function getUserIdFromFetchKey(arg0) {
   return arg0.split("-")[1];
 }
 function updateFetchRequests(arr) {
   closure_0 = arg1;
-  const item = arr.forEach((item, index) => {
-    closure_1_5[item] = closure_0;
+  const item = arr.forEach((arg0) => {
+    closure_1_5[arg0] = closure_0;
   });
 }
 function _transformFetchMemberSupplementalResponse(userId) {
@@ -70,7 +70,7 @@ function _fetchMemberSupplemental() {
               const tmp53 = v0(callback, closure_1);
               closure_1 = tmp53;
               arr2 = (function getFetchchableUsers(arr) {
-                const found = arr.filter((item, index) => table[item] <= constants.UNFETCHED);
+                const found = arr.filter((arg0) => table[arg0] <= constants.UNFETCHED);
                 return found.map(closure_8);
               })(tmp53);
               if (0 === arr2.length) {
@@ -83,7 +83,7 @@ function _fetchMemberSupplemental() {
                 c5 = 1;
                 const HTTP = callback(closure_1_2[7]).HTTP;
                 const obj2 = { url: null, body: null, rejectWithError: true };
-                obj2[0] = closure_1_4.MEMBER_SAFETY_SUPPLEMENTAL(callback);
+                obj2[0] = closure_1_4.MEMBER_SAFETY_SUPPLEMENTAL(tmp50);
                 const obj3 = { user_ids: null };
                 obj3[0] = arr2;
                 obj2[1] = obj3;
@@ -93,6 +93,7 @@ function _fetchMemberSupplemental() {
                 obj4[0] = HTTP.post(obj2);
                 return obj4;
               }
+              tmp50 = callback;
             }
           } else if (1 === tmp7) {
             c5 = 0;
@@ -117,9 +118,9 @@ function _fetchMemberSupplemental() {
               const body = closure_3.body;
               closure_4 = body.map(closure_12);
               c5 = [];
-              const item = closure_4.forEach((item, index) => arr.push(item.userId));
+              const item = closure_4.forEach((userId) => arr.push(userId.userId));
               constants = v0(callback, c5);
-              v0 = v0(callback, arr2.filter((item, index) => !arr.includes(item)));
+              v0 = v0(callback, arr2.filter((arg0) => !arr.includes(arg0)));
               callback2(constants, constants.SUCCEEDED);
               callback2(v0, constants.FAILED);
               c5 = 0;
@@ -159,13 +160,14 @@ function _fetchMemberSupplemental() {
 }
 let closure_5 = {};
 let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
-let obj = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
-const result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
+let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
+obj = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
+const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
 export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
   closure_0 = guildId;
-  const item = memberIds.forEach((item, index) => {
-    closure_1_5[closure_0 + item] = closure_1_6.SUCCEEDED;
+  const item = memberIds.forEach((arg0) => {
+    closure_1_5[closure_0 + arg0] = closure_1_6.SUCCEEDED;
   });
 };
 export const JoinSourceType = obj;
@@ -238,9 +240,10 @@ export const useGetIntegrationIconString = function useGetIntegrationIconString(
     ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj);
     tmp5 = null;
     if (items.includes(arg0)) {
+      let str = value.icon;
       const _HermesInternal = HermesInternal;
       const tmp2Result = AccessibilityAnnouncer;
-      const str = "url('";
+      str = "url('";
       const combined = "url('" + AccessibilityAnnouncer.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
       const tmp7 = AccessibilityAnnouncer.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
     }

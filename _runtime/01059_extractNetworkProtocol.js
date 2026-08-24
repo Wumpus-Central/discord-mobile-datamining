@@ -1,8 +1,9 @@
 // _runtime/01059_extractNetworkProtocol.js
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 import WINDOW from "01039_WINDOW.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
+import { onHidden } from "01060_onHidden.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -15,28 +16,38 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("/" === nextResult) {
-      let tmp9 = _slicedToArray(nextHopProtocol.split("/"), 2);
+      let tmp8 = callback;
+      let num = 2;
+      let tmp9 = callback(nextHopProtocol.split("/"), 2);
       [str, str2] = tmp9;
+      let tmp10 = iter;
       iter.return();
       break;
     } else {
       let _isNaN = isNaN;
       let _Number = Number;
+      let tmp3 = nextResult;
+      let tmp4 = str3;
       if (isNaN(Number(tmp2))) {
+        let tmp7 = nextResult;
         str3 = `${tmp2}`;
         continue;
       } else {
         let str4 = "http";
+        let str5 = "h";
         if ("h" !== `${tmp2}`) {
           str4 = str3;
         }
         str = str4;
+        let tmp5 = str3;
         str2 = nextHopProtocol.split(str3)[1];
+        let tmp6 = iter;
         iter.return();
         break;
       }
       break;
     }
+    let tmp11 = str3;
     if (str3 === nextHopProtocol) {
       str = str3;
     }
@@ -60,7 +71,7 @@ export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
 export const listenForWebVitalReportEvents = function listenForWebVitalReportEvents(on, arg1) {
   const _require = arg1;
   c2 = false;
-  require("01060_onHidden.js").onHidden(() => {
+  _onHidden.onHidden(() => {
     let tmp = !c2;
     if (!c2) {
       tmp = closure_1;
@@ -103,7 +114,7 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     HermesBuiltin.throwTypeError();
   } else {
     closure_2 = Object.assign(arg3, undefined);
-    const start_timestamp = require("00817_registerSpanErrorInstrumentation.js").spanToJSON(activeSpan).start_timestamp;
+    const start_timestamp = _registerSpanErrorInstrumentation.spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
       tmp = start_timestamp > sum;
@@ -114,10 +125,11 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     if (tmp) {
       activeSpan.updateStartTime(sum);
     }
-    const obj2 = registerSpanErrorInstrumentation;
-    return require("00817_registerSpanErrorInstrumentation.js").withActiveSpan(activeSpan, () => {
-      sum(sum1[1]);
-      const obj = { startTime: sum };
+    const obj2 = _registerSpanErrorInstrumentation;
+    const tmp6 = _require;
+    return _registerSpanErrorInstrumentation.withActiveSpan(activeSpan, () => {
+      let obj = sum(sum1[1]);
+      obj = { startTime: sum };
       const merged = Object.assign(closure_2);
       const startInactiveSpanResult = obj.startInactiveSpan(obj);
       if (startInactiveSpanResult) {
@@ -138,11 +150,11 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     if (integrationByName != null) {
       const replayId = integrationByName.getReplayId();
     }
-    let tmpResult = registerSpanErrorInstrumentation;
+    let tmpResult = tmp(817);
     const currentScope = tmpResult.getCurrentScope();
     const user = currentScope.getUser();
     if (undefined !== user) {
-      const tmp8 = user.email || user.id || user.ip_address;
+      const tmp9 = user.email || user.id || user.ip_address;
     }
     try {
       const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
@@ -153,7 +165,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
       obj[3] = profile_id;
       obj[4] = replayId;
       obj[5] = transaction;
-      const _navigator = WINDOW.WINDOW.navigator;
+      const _navigator = tmp(1039).WINDOW.navigator;
       let userAgent;
       if (_navigator != null) {
         userAgent = _navigator.userAgent;
@@ -165,7 +177,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
       }
       obj[7] = str2;
       const merged = Object.assign(attributes);
-      tmpResult = registerSpanErrorInstrumentation;
+      tmpResult = tmp(817);
       obj = { name: null, attributes: null, startTime: null, experimental: null };
       obj[0] = name;
       obj[1] = obj;

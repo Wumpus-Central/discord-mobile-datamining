@@ -1,12 +1,10 @@
 // _runtime/00999_getDevServer.js
-import getConstantsDefault from "00082_getConstants.js";
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function getDevServer() {
   let str = first;
   if (undefined === first) {
-    let obj = getConstantsDefault;
+    let obj = module(82);
     let str2 = obj.getConstants().scriptURL;
     const match = str2.match(/^https?:\/\/.*?\//);
     first = null;

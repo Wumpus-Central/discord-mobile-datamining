@@ -1,11 +1,11 @@
 // _runtime/06620__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "06610__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import noop from "00019_noop.js";
+import closure_5 from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 
 const FeDropShadow = importDefault;
@@ -60,9 +60,10 @@ let obj = {
     if (undefined !== _in) {
       str = _in;
     }
+    let obj = { children: null };
     ({ dx, dy, result } = props);
     const items = [callback3(FeDropShadow(6621), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(6623), { dx, dy, result: "offsetblur" }), , , ];
-    let obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
     items[2] = callback3(FeDropShadow(6625), obj);
     items[3] = callback3(FeDropShadow(6614), { in2: "offsetblur", operator: "in" });
     obj = { result, children: null };

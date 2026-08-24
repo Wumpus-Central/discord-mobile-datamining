@@ -2,21 +2,18 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import useEmbeddedAppsDefault from "../../activities/useEmbeddedAppsForChannel.tsx";
 import ActiveTimestamp from "../../icymi/native/content_inventory/Badges.tsx";
-import SubscriptionGatedChannelIconDefault from "../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import showChannelBadgeDefault from "../showChannelBadge.tsx";
-import ChannelBadgeDefault from "ChannelBadge.tsx";
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities.tsx";
 import useStartTime from "../../channel/useVoiceChannelStartTime.tsx";
-import guildHasCommunity from "../../recent_channels/NewChannelsStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
-import generateOldThreadCutoff from "../../../stores/ReadStateStore.tsx";
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../recent_channels/NewChannelsStore.tsx";
+import closure_4 from "../../../stores/GuildStore.tsx";
+import closure_5 from "../../../stores/PermissionStore.tsx";
+import closure_6 from "../../../stores/ReadStateStore.tsx";
+import closure_7 from "../../../stores/VoiceStateStore.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function LimitAndDurationInfo(channel) {
   channel = channel.channel;
   ({ voiceStatesCount, selected } = channel);
@@ -25,10 +22,10 @@ function LimitAndDurationInfo(channel) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let isGuildStageVoiceResult = channel.isGuildStageVoice();
     if (isGuildStageVoiceResult) {
-      let obj = channel(dependencyMap[19]);
-      isGuildStageVoiceResult = obj.getStageHasMedia(channel.id);
+      let obj = channel(closure_1_2[19]);
+      isGuildStageVoiceResult = obj.getStageHasMedia(tmp.id);
     }
-    obj = { isLocked: !closure_1_5.can(closure_1_9.CONNECT, channel), hasVideo: closure_1_7.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
+    obj = { isLocked: !closure_1_5.can(closure_1_9.CONNECT, tmp), hasVideo: closure_1_7.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
     return obj;
   });
   ({ hasVideo, hasMedia } = stateFromStoresObject);
@@ -47,11 +44,11 @@ function LimitAndDurationInfo(channel) {
     }
     obj[1] = hasVideo;
     obj[2] = channel;
-    let tmp6Result = jsx(channel(15381).ConnectedUserLimit, { userCount: null, video: null, channel: null });
+    let tmp6Result = tmp6(channel(15381).ConnectedUserLimit, obj);
   } else {
     obj1 = { channel: null };
     obj1[0] = channel;
-    tmp6Result = <DurationInfo channel={null} />;
+    tmp6Result = tmp6(DurationInfo, obj1);
   }
   return tmp6Result;
 }
@@ -60,6 +57,7 @@ function DurationInfo(channel) {
   const startTime = obj.useStartTime(channel.channel);
   let tmp5 = null;
   if (null != startTime) {
+    obj = { entry: null, style: null };
     obj = { start: null };
     obj[0] = startTime;
     obj[0] = obj;
@@ -70,9 +68,9 @@ function DurationInfo(channel) {
 }
 noopAll;
 ({ GuildFeatures: closure_8, Permissions: c9, Fonts } = ME);
-const createCacheKey = { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 };
+createCacheKey = { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 };
 let closure_11 = createCacheKey.createStyles({ activeTimestamp: createCacheKey });
-const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
 
 export default function ChannelInfo(channel) {
   channel = channel.channel;
@@ -95,8 +93,9 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(ChannelBadgeDefault, { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
-    const tmp4Result = ChannelBadgeDefault;
+    let tmp11Result = jsx(tmp4(15489), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
+    const tmp16 = jsx;
+    const tmp4Result = tmp4(15489);
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -120,7 +119,7 @@ export default function ChannelInfo(channel) {
           obj = { embeddedApps: null, muted: null };
           obj[0] = tmp5;
           obj[1] = muted;
-          tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: null, muted: null });
+          tmp11Result = jsx(tmp4(15492), { embeddedApps: null, muted: null });
         }
       }
     }
@@ -129,7 +128,7 @@ export default function ChannelInfo(channel) {
         if (isSubscriptionGated) {
           obj1 = { locked: null };
           obj1[0] = needSubscriptionToAccess;
-          tmp11Result = jsx(SubscriptionGatedChannelIconDefault, { locked: null });
+          tmp11Result = jsx(tmp4(15380), { locked: null });
         }
       }
     }
@@ -149,6 +148,8 @@ export default function ChannelInfo(channel) {
         obj2[1] = num;
         obj2[2] = channel.isChannelSelected;
         tmp11Result = <LimitAndDurationInfo channel={null} voiceStatesCount={null} selected={null} />;
+        const tmp11 = jsx;
+        const tmp12 = LimitAndDurationInfo;
       }
     }
   }

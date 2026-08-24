@@ -13,17 +13,23 @@ let closure_8 = { code: "function pnpm_useKeyboardTs3(result){const{temporaryCac
 export const useKeyboard = (includeBottomOffset) => {
   includeBottomOffset = includeBottomOffset.includeBottomOffset;
   let shouldHandleKeyboardEvents;
+  let state;
+  let height;
+  let animationEasing;
+  let animationDuration;
+  let sharedValue5;
+  let workletCallback;
   let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
   shouldHandleKeyboardEvents = obj.useSharedValue(false);
-  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
+  state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
   const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
+  height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
   const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
+  animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
   const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
+  animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
   const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
+  sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
   const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
   const fn = function v(value, arg1, value2, value3) {
     value = arg1;
@@ -34,7 +40,7 @@ export const useKeyboard = (includeBottomOffset) => {
       }
     }
     if (value !== includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN) {
-      value = height.value;
+      value = iter.value;
     }
     height.value = value;
     let tmp5 = arg4;
@@ -42,7 +48,7 @@ export const useKeyboard = (includeBottomOffset) => {
       tmp5 = includeBottomOffset;
     }
     if (tmp5) {
-      height.value = height.value + arg4;
+      iter.value = iter.value + arg4;
     }
     animationDuration.value = value2;
     animationEasing.value = value3;
@@ -53,7 +59,7 @@ export const useKeyboard = (includeBottomOffset) => {
   fn.__closure = obj;
   fn.__workletHash = 7905199978020;
   fn.__initData = sharedValue5;
-  const workletCallback = includeBottomOffset(shouldHandleKeyboardEvents[2]).useWorkletCallback(fn, []);
+  workletCallback = includeBottomOffset(shouldHandleKeyboardEvents[2]).useWorkletCallback(fn, []);
   let items = [workletCallback];
   state(() => {
     closure_0 = height.addListener(animationEasing, (endCoordinates) => {

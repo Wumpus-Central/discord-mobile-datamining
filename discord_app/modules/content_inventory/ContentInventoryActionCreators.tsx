@@ -3,14 +3,14 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import QUICK_SWITCHERDefault from "../app_analytics/AnalyticsLocation.tsx";
 import showUserProfileAll from "ContentInventoryPlatformActionCreators.native.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import handleConnectionOpen2 from "../../stores/SelectedGuildStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import updateImpressionCaches from "ContentInventoryPersistedStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/SelectedChannelStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
+import closure_7 from "ContentInventoryPersistedStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
   let obj = dispatcherDefault;
@@ -45,6 +45,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       }
       showUserProfileResult[3] = items1;
       showUserProfileResult = showUserProfileAll.showUserProfile(showUserProfileResult);
+      const obj2 = showUserProfileAll;
     }
   }
 };

@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import nDefault from "../../../../../_runtime/00689_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
 import { Gradients } from "../../../colors/native/ColorConstants.tsx";
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const createCacheKey = { display: "flex", borderRadius: ThemesDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
+createCacheKey = { cardContainer: null };
+createCacheKey = { display: "flex", borderRadius: ThemesDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 
 export default function PremiumFeaturesBackground(opacity) {
   let num = opacity.opacity;
@@ -29,9 +29,9 @@ export default function PremiumFeaturesBackground(opacity) {
   }
   let mapped = PREMIUM_TIER_0;
   if (num < 1) {
-    mapped = PREMIUM_TIER_0.map((item, index) => {
-      const obj = nDefault(item);
-      return nDefault(item).alpha(num).hex();
+    mapped = PREMIUM_TIER_0.map((arg0) => {
+      const obj = closure_1_1(closure_1_2[6])(arg0);
+      return closure_1_1(closure_1_2[6])(arg0).alpha(num).hex();
     });
   }
   let obj = { style: items, colors: mapped, start: null, end: null };

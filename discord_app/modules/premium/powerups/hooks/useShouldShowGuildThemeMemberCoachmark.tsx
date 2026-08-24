@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import useGuildAppliedBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
 import apexExperiment from "../experiments/ServerThemeUserExperiment.tsx";
@@ -8,12 +8,14 @@ import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.
 import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled.tsx";
 
 let closure_3 = BoostedGuildTiers.GUILD_THEME_POWERUP_BOOST_PRICE;
-const result = obj132.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 
 export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
   const tmp = useHasAllocateBoostPermissionDefault(guildId);
   let serverThemeEnabled = experiment.useServerThemeEnabled(guildId, "useShouldShowGuildThemeMemberCoachmark");
+  const obj = experiment;
   const serverThemeUserEnabled = apexExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
+  const obj2 = apexExperiment;
   const tmp4 = useIsGuildThemePerkEnabledDefault(guildId);
   const isLoading = useGuildAppliedBoostCountDefault(guildId).isLoading;
   let tmp7 = !isLoading;

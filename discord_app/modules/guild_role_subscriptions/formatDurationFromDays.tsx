@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/formatDurationFromDays.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 
 export default function formatDurationFromDays(days) {
   if (days > 0) {

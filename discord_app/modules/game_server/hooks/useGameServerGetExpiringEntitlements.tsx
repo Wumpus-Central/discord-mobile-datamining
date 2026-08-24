@@ -1,9 +1,9 @@
 // discord_app/modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import handleGameServerInstanceCreated from "../GameServerStore.tsx";
+import closure_2 from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../GameServerStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
   const _require = arg0;

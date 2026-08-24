@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/scaleProfileFrame.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-let result = obj132.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
+let result = set.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
 
 export default function scaleProfileFrame(innerWidth) {
   const result = arg1 / innerWidth.innerWidth;

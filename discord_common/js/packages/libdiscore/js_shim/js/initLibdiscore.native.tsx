@@ -1,5 +1,5 @@
 // discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_0 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import importAllResult from "../../mobile/js/timers.tsx";
 
@@ -50,7 +50,7 @@ function _initLibdiscore() {
   return applyArgumentsResult;
 }
 const result = importAllResult.registerTimerPolyfills();
-const result1 = require("obj132").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
+const result1 = require("set").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
 
 export const isLibdiscoreInitialized = function isLibdiscoreInitialized() {
   return undefined !== NativeModules.LibDiscoreModule;

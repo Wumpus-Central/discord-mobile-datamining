@@ -1,21 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfileActionSheet.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
-import handleFormOpen from "../UserProfileSettingsStore.tsx";
+import closure_7 from "../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
+import closure_10 from "../UserProfileSettingsStore.tsx";
 import { UserProfileThemeTypes } from "Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function UseAnimatedPosition(animatedPosition) {
   animatedPosition = animatedPosition.animatedPosition;
-  const animatedPosition2 = animatedPosition(6952).useBottomSheet().animatedPosition;
+  let animatedPosition2;
+  animatedPosition2 = animatedPosition(6952).useBottomSheet().animatedPosition;
   const obj = animatedPosition(6952);
   const fn = function n() {
     return animatedPosition2.get();
@@ -36,16 +37,17 @@ function ActionSheetAlignedView(children) {
   const animatedPosition = children.animatedPosition;
   const animatedIndex = children.animatedIndex;
   const safeAreaTop = children.safeAreaTop;
-  animatedPosition(safeAreaTop[13]);
+  let obj = animatedPosition(safeAreaTop[13]);
   const fn = function c() {
-    const obj = { translateY: animatedPosition.get() + safeAreaTop };
+    let obj = { transform: null, opacity: null };
+    obj = { translateY: animatedPosition.get() + safeAreaTop };
     const items = [obj];
     obj[0] = items;
     const value = animatedIndex.get();
     obj[1] = animatedPosition(safeAreaTop[13]).interpolate(value, [-1, 0], [0, 1], animatedPosition(safeAreaTop[13]).Extrapolation.CLAMP);
     return obj;
   };
-  let obj = { animatedPosition, safeAreaTop, interpolate: animatedPosition(safeAreaTop[13]).interpolate, animatedIndex, Extrapolation: animatedPosition(safeAreaTop[13]).Extrapolation };
+  obj = { animatedPosition, safeAreaTop, interpolate: animatedPosition(safeAreaTop[13]).interpolate, animatedIndex, Extrapolation: animatedPosition(safeAreaTop[13]).Extrapolation };
   fn.__closure = obj;
   fn.__workletHash = 16546700050596;
   fn.__initData = closure_22;
@@ -80,6 +82,10 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
   if (prop === undefined) {
     prop = [];
   }
+  let sharedValue;
+  let sharedValue1;
+  let top;
+  let stateFromStores;
   let guild_id;
   let stateFromStores2;
   UserProfileThemeTypes = undefined;
@@ -105,13 +111,13 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
   let tmp = pendingAvatarDecoration();
   const tmp3 = onClose;
   let obj = userId(onClose[13]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   obj1 = userId(onClose[13]);
-  const sharedValue1 = obj1.useSharedValue(-1);
-  const top = channelId(onClose[14])().top;
+  sharedValue1 = obj1.useSharedValue(-1);
+  top = channelId(onClose[14])().top;
   let obj2 = userId(onClose[15]);
   let items = [guild_id];
-  const stateFromStores = obj2.useStateFromStores(items, () => guild_id.getUser(userId));
+  stateFromStores = obj2.useStateFromStores(items, () => guild_id.getUser(userId));
   let obj4 = userId(onClose[15]);
   const items1 = [top];
   const items2 = [channelId];
@@ -158,31 +164,31 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
   const memo = prop.useMemo(() => {
     closure_0 = sharedValue2;
     return (arg0, arg1, arg2) => {
-      let obj = callback(onClose[12]);
+      let obj = callback(closure_1_2[12]);
       const scrollEventsHandlersDefault = obj.useScrollEventsHandlersDefault(arg0, arg1, arg2);
-      const animatedScrollableState = callback(onClose[12]).useBottomSheetInternal().animatedScrollableState;
+      const animatedScrollableState = callback(closure_1_2[12]).useBottomSheetInternal().animatedScrollableState;
       const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-      const obj2 = callback(onClose[12]);
+      const obj2 = callback(closure_1_2[12]);
       const fn = function s(contentOffset) {
         if (handleOnScroll != null) {
           tmp(contentOffset, arg1);
         }
         const value = animatedScrollableState.get();
         let num = 0;
-        if (value !== animatedScrollableState(onClose[12]).SCROLLABLE_STATE.LOCKED) {
+        if (value !== animatedScrollableState(closure_2_2[12]).SCROLLABLE_STATE.LOCKED) {
           num = contentOffset.contentOffset.y;
         }
         const result = animatedScrollableState.set(num);
       };
-      obj = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: callback(onClose[12]).SCROLLABLE_STATE };
+      obj = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: callback(closure_1_2[12]).SCROLLABLE_STATE };
       fn.__closure = obj;
       fn.__workletHash = 13254130622789;
       fn.__initData = closure_1_24;
       const items = [handleOnScroll, animatedScrollableState];
       obj = {};
-      const obj3 = callback(onClose[13]);
+      const obj3 = callback(closure_1_2[13]);
       const merged = Object.assign(scrollEventsHandlersDefault);
-      obj.handleOnScroll = callback(onClose[13]).useWorkletCallback(fn, items);
+      obj.handleOnScroll = callback(closure_1_2[13]).useWorkletCallback(fn, items);
       return obj;
     };
   }, items5);
@@ -257,6 +263,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
     const tmp2Result6 = tmp2(tmp3[25]);
     if (flag) {
       tmp39 = guild_id;
+      const tmp40 = guild_id;
     }
     tmp6(tmp3[26])(userId, tmp39, isShopThisLookMobileEnabled);
     const items7 = [tmp6Result2Result, sharedValue, top, sharedValue1, first1];
@@ -357,6 +364,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           const avatarURL = obj.getAvatarURL(guild_id, 80);
           obj[5] = channelId;
           channelId(onClose[42])(obj.id, avatarURL, obj);
+          const tmp10 = channelId;
           const tmp7 = channelId(onClose[42]);
         }
       }, items11);
@@ -424,7 +432,6 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           channelId(onClose[43]).track(analyticsLocations.OPEN_MODAL, obj);
           const tmp3Result = channelId(onClose[43]);
         }
-        atResult = prop.at(-1);
       }, items13);
       const items14 = [onClose];
       const effect4 = obj7.useEffect(() => () => {
@@ -495,7 +502,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         obj4[0] = first1(tmp2(tmp3[49]).EmptyState, obj5);
         obj3[5] = first1(tmp2(tmp3[48]).BottomSheet, obj4);
         obj2[1] = first1(tmp2(tmp3[21]).UserProfileAnalyticsProvider, obj3);
-        let tmp100Result3 = tmp96(tmp2(tmp3[17]).AnalyticsLocationProvider, obj2);
+        let tmp99Result3 = tmp95(tmp2(tmp3[17]).AnalyticsLocationProvider, obj2);
       } else {
         const obj6 = { theme: null, primaryColor: null, secondaryColor: null, children: null };
         obj6[0] = theme;
@@ -503,6 +510,7 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         obj6[2] = secondaryColor;
         obj7 = { value: null, children: null };
         obj7[0] = analyticsLocations;
+        tmp = closure_17;
         const obj8 = { value: null, openedAt: null, fetchStartedAt: null, fetchEndedAt: null, isLoaded: null, children: null };
         obj8[0] = createUserProfileAnalyticsContext;
         obj8[1] = openedAt;
@@ -527,13 +535,13 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         obj9[5] = tmp.noPadding;
         obj9[6] = memo1;
         obj9[7] = sharedValue1;
-        let tmp100Result = null != tmp6Result2Result;
-        if (tmp100Result) {
+        let tmp99Result = null != tmp6Result2Result;
+        if (tmp99Result) {
           const obj10 = { animatedPosition: null };
           obj10[0] = sharedValue;
-          tmp100Result = tmp100(createUserProfileAnalyticsContext, obj10);
+          tmp99Result = tmp99(createUserProfileAnalyticsContext, obj10);
         }
-        const items16 = [tmp100Result, , , ];
+        const items16 = [tmp99Result, , , ];
         const obj11 = { gradientHeight: null, bannerHeight: null };
         obj11[0] = diff;
         obj11[1] = tmp50;
@@ -567,14 +575,14 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         obj15[7] = memo3;
         obj15[8] = ref;
         obj15[9] = isPreviewingChanges;
-        obj15[10] = function navigateToShop(closure_2, arg1) {
-          userId(onClose[55]);
-          const obj = { screen: first.COLLECTIBLES_SHOP, onClose: handleUserSettingsClose };
+        obj15[10] = function navigateToShop(initialTab, arg1) {
+          let obj = userId(onClose[55]);
+          obj = { screen: first.COLLECTIBLES_SHOP, onClose: handleUserSettingsClose };
           return obj.openUserSettings(obj);
         };
-        obj15[11] = function navigateToPremium(gradientSecondaryBackground) {
-          userId(onClose[55]);
-          const obj = { screen: first.PREMIUM, onClose: handleUserSettingsClose };
+        obj15[11] = function navigateToPremium(arg0) {
+          let obj = userId(onClose[55]);
+          obj = { screen: first.PREMIUM, onClose: handleUserSettingsClose };
           return obj.openUserSettings(obj);
         };
         obj15[12] = function showUserProfileActionSheetWithParams() {
@@ -591,22 +599,22 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
         if (stateFromStores.isNonUserBot()) {
           const obj16 = {};
           let merged = Object.assign(obj15);
-          tmp100Result = tmp100(tmp6(tmp3[56]), obj16);
+          tmp99Result = tmp99(tmp6(tmp3[56]), obj16);
           const tmp6Result5 = tmp6(tmp3[56]);
         } else if (stateFromStores.bot) {
           const obj17 = {};
           const merged1 = Object.assign(obj15);
-          tmp100Result = tmp100(tmp6(tmp3[57]), obj17);
+          tmp99Result = tmp99(tmp6(tmp3[57]), obj17);
           const tmp6Result6 = tmp6(tmp3[57]);
         } else {
           const obj18 = {};
           const merged2 = Object.assign(obj15);
-          tmp100Result = tmp100(tmp6(tmp3[58]), obj18);
+          tmp99Result = tmp99(tmp6(tmp3[58]), obj18);
           const tmp6Result7 = tmp6(tmp3[58]);
         }
-        const items17 = [tmp100Result, ];
-        let tmp100Result1 = null != tmp43Result;
-        if (tmp100Result1) {
+        const items17 = [tmp99Result, ];
+        let tmp99Result1 = null != tmp43Result;
+        if (tmp99Result1) {
           const obj19 = { style: null, pointerEvents: "none", children: null };
           const items18 = [tmp.profileEffect, , ];
           const obj20 = { height: null };
@@ -616,29 +624,29 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           obj19[0] = items18;
           const obj21 = { skuId: null, bannerAdjustment: 0 };
           obj21[0] = tmp43Result.skuId;
-          obj19[2] = tmp100(tmp6(tmp3[59]), obj21);
-          tmp100Result1 = tmp100(tmp6(tmp3[13]).View, obj19);
+          obj19[2] = tmp99(tmp6(tmp3[59]), obj21);
+          tmp99Result1 = tmp99(tmp6(tmp3[13]).View, obj19);
         }
         const obj22 = { children: null };
-        items17[1] = tmp100Result1;
+        items17[1] = tmp99Result1;
         obj14[2] = items17;
-        obj22[0] = closure_17(sharedValue1, obj14);
+        obj22[0] = tmp(sharedValue1, obj14);
         obj12[5] = first1(sharedValue1, obj22);
         items16[2] = first1(tmp2(tmp3[12]).BottomSheetScrollView, obj12);
-        let tmp100Result2 = null == tmp6Result2Result;
-        if (tmp100Result2) {
+        let tmp99Result2 = null == tmp6Result2Result;
+        if (tmp99Result2) {
           const obj23 = { variant: "floating", tabStyle: null, onPress: null };
           const obj24 = { backgroundColor: null };
           obj24[0] = token;
           obj23[1] = obj24;
           obj23[2] = bottomSheetClose;
-          tmp100Result2 = tmp100(tmp2(tmp3[60]).ActionSheetHeaderBar, obj23);
+          tmp99Result2 = tmp99(tmp2(tmp3[60]).ActionSheetHeaderBar, obj23);
         }
-        items16[3] = tmp100Result2;
+        items16[3] = tmp99Result2;
         obj9[8] = items16;
-        const items19 = [closure_17(tmp2(tmp3[48]).BottomSheet, obj9), , ];
-        let tmp101Result = null != tmp6Result2Result;
-        if (tmp101Result) {
+        const items19 = [tmp(tmp2(tmp3[48]).BottomSheet, obj9), , ];
+        let tmpResult = null != tmp6Result2Result;
+        if (tmpResult) {
           const obj25 = { animatedPosition: null, safeAreaTop: null, animatedIndex: null, children: null };
           obj25[0] = sharedValue;
           obj25[1] = top;
@@ -648,41 +656,41 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
           obj26[1] = UserProfileThemeTypes.ACTION_SHEET;
           obj26[2] = tmp2(tmp3[28]).ProfileFrameLayerOrder.FRONT;
           obj26[3] = first1;
-          const items20 = [tmp100(tmp6(tmp3[27]), obj26), ];
+          const items20 = [tmp99(tmp6(tmp3[27]), obj26), ];
           const obj27 = { variant: "floating", tabStyle: null, onPress: null };
           const obj28 = { backgroundColor: null };
           obj28[0] = token;
           obj27[1] = obj28;
           obj27[2] = bottomSheetClose;
-          items20[1] = tmp100(tmp2(tmp3[60]).ActionSheetHeaderBar, obj27);
+          items20[1] = tmp99(tmp2(tmp3[60]).ActionSheetHeaderBar, obj27);
           obj25[3] = items20;
-          tmp101Result = tmp101(width, obj25);
+          tmpResult = tmp(width, obj25);
           const tmp6Result8 = tmp6(tmp3[27]);
         }
-        items19[1] = tmp101Result;
+        items19[1] = tmpResult;
         if (!isPreviewingChanges) {
           items19[2] = isPreviewingChanges;
           obj8[5] = items19;
-          obj7[1] = tmp101(tmp2(tmp3[21]).UserProfileAnalyticsProvider, obj8);
-          obj6[3] = tmp100(tmp2(tmp3[17]).AnalyticsLocationProvider, obj7);
-          tmp100Result3 = tmp100(tmp2(tmp3[52]).ThemeContextProvider, obj6);
+          obj7[1] = tmp(tmp2(tmp3[21]).UserProfileAnalyticsProvider, obj8);
+          obj6[3] = tmp99(tmp2(tmp3[17]).AnalyticsLocationProvider, obj7);
+          tmp99Result3 = tmp99(tmp2(tmp3[52]).ThemeContextProvider, obj6);
         } else {
           const obj29 = { theme: null, primaryColor: null, secondaryColor: null, children: null };
           obj29[0] = tmp53;
           const intl = tmp2(tmp3[51]).intl;
           if (setting === tmp2(tmp3[62]).ProfileVisibility.FRIENDS_ONLY) {
-            let mNZcD8 = tmp2(tmp3[51]).t.mNZcD8;
+            wSnI_0 = tmp2(tmp3[51]).t.mNZcD8;
           } else {
-            mNZcD8 = tmp2(tmp3[51]).t["wSnI/0"];
+            wSnI_0 = tmp2(tmp3[51]).t["wSnI/0"];
           }
           const obj30 = { text: null, isExpanded: true };
-          obj30[0] = intl.string(mNZcD8);
-          obj29[3] = tmp100(tmp2(tmp3[61]).ActionSheetBackdropToast, obj30);
-          tmp100(tmp2(tmp3[52]).ThemeContextProvider, obj29);
+          obj30[0] = intl.string(wSnI_0);
+          obj29[3] = tmp99(tmp2(tmp3[61]).ActionSheetBackdropToast, obj30);
+          tmp99(tmp2(tmp3[52]).ThemeContextProvider, obj29);
         }
         tmp2Result10 = tmp2(tmp3[54]);
       }
-      return tmp100Result3;
+      return tmp99Result3;
     }
     if (tmp6ResultResult != null) {
       const profileEffect = tmp6ResultResult.profileEffect;
@@ -699,6 +707,6 @@ const memoResult = importAllResult.memo(function UserProfileActionSheet(userId) 
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActionSheet.tsx");
 
 export default memoResult;

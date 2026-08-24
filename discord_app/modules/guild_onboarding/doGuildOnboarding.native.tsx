@@ -1,16 +1,14 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
-import _modDef5260 from "../../actions/ModalActionCreators.tsx";
 import _mod6786 from "../../../_runtime/metro/06786__.js";
-import _updateOnboardingResponsesDefault from "GuildOnboardingActionCreators.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import handleConnectionOpen from "../../stores/SelectedGuildStore.tsx";
-import shouldShowOnboarding from "GuildOnboardingStore.tsx";
+import closure_5 from "../../stores/SelectedGuildStore.tsx";
+import closure_6 from "GuildOnboardingStore.tsx";
 import { GUILD_ONBOARDING_MODAL_KEY as closure_7 } from "native/GuildOnboardingConstants.tsx";
 import ME from "../../Constants.tsx";
 import { waitForOnboardingCompletion } from "doGuildOnboardingHelpers.tsx";
 
-require = fn;
+require = arg1;
 function getBaseAnimationData() {
   return JSON.parse(JSON.stringify(_mod6786));
 }
@@ -294,41 +292,41 @@ function _fetchLandingAsset() {
 }
 function openAndWaitForOnboarding(arg0) {
   const _require = arg0;
-  const result = require("doGuildOnboardingHelpers.tsx").waitForOnboardingCompletion(arg0);
-  result.then((result) => {
+  const result = _waitForOnboardingCompletion.waitForOnboardingCompletion(arg0);
+  result.then(() => {
     if (null != closure_1_11[closure_0]) {
       tmp4();
     }
     delete tmp[tmp2];
-    _updateOnboardingResponsesDefault.finishOnboarding(closure_0);
+    closure_1_1(closure_1_2[15]).finishOnboarding(closure_0);
   });
-  let obj = waitForOnboardingCompletion;
+  let obj = _waitForOnboardingCompletion;
   return new Promise((arg0) => {
     if (null == closure_1_11[callback]) {
-      tmp[callback] = arg0;
+      tmp[tmp2] = arg0;
     }
-    let obj = {
-      guildId: callback,
+    let obj = closure_1_1(closure_1_2[8]);
+    obj = {
+      guildId: tmp2,
       backShouldLeaveGuild: true,
       onFinish() {
 
       },
-      landingAnimation: closure_1_12[callback],
+      landingAnimation: closure_1_12[tmp2],
       isFirstOpen: true
     };
-    obj.pushLazy(callback(dependencyMap[17])(dependencyMap[16], dependencyMap.paths), obj, closure_1_7).then((result) => {
+    obj.pushLazy(callback(closure_1_2[17])(closure_1_2[16], closure_1_2.paths), obj, closure_1_7).then(() => {
       if (closure_1_5.getGuildId() !== closure_0) {
         closure_1_0(closure_1_2[18]).transitionTo(closure_1_9.CHANNEL(tmp));
         const obj = closure_1_0(closure_1_2[18]);
       }
     });
-    const pushLazyResult = obj.pushLazy(callback(dependencyMap[17])(dependencyMap[16], dependencyMap.paths), obj, closure_1_7);
   });
 }
 ({ GuildFeatures: closure_8, Routes: c9 } = ME);
 let closure_11 = {};
 let closure_12 = {};
-let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/doGuildOnboarding.native.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding/doGuildOnboarding.native.tsx");
 
 export default function doGuildOnboarding() {
   const self = this;

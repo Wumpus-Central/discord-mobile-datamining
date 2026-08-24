@@ -7,7 +7,7 @@ class PerformanceEntry {
   constructor(arg0, arg1) {
     tmp = PerformanceEntry(this, PerformanceEntry);
     this.__entryType = global;
-    ({ name: this.__name, startTime: this.__startTime, duration: this.__duration } = fn);
+    ({ name: this.__name, startTime: this.__startTime, duration: this.__duration } = arg1);
     return;
   }
 }

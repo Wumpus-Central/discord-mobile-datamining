@@ -2,16 +2,16 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isStreamKey from "../go_live/utils/StreamKeyUtils.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import initialize from "../../stores/StreamRTCConnectionStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/StreamRTCConnectionStore.tsx";
 
-require = fn;
-function updateAveragedStatsHelper(version, arr, arg2, arr, arr2) {
+require = arg1;
+function updateAveragedStatsHelper(arg0, arg1, arg2, arr, arr2) {
   let tmp = arg2;
-  const found = arr.find((item, index) => "video" === item.type);
+  const found = arr.find((type) => "video" === type.type);
   if (null == arg2) {
     const obj = { packetsSentOrReceived: 0, packetsLost: 0, packetLossRate: 0, frameRate: 0, resolution: 0, entropy: 0, numDatapoints: 0, frameRateAggregated: 0, resolutionAggregated: 0, entropyAggregated: 0, minVersion: null };
-    obj[10] = version;
+    obj[10] = arg0;
     tmp = obj;
   }
   if (null == found) {
@@ -67,10 +67,10 @@ function updateAveragedStatsHelper(version, arr, arg2, arr, arr2) {
     tmp.entropyAggregated = tmp.entropyAggregated + num7;
     let found1;
     if (arr2 != null) {
-      found1 = arr2.find((item, index) => "video" === item.type);
+      found1 = arr2.find((type) => "video" === type.type);
     }
     if (null != found1) {
-      if (arr >= tmp.minVersion) {
+      if (arg1 >= tmp.minVersion) {
         tmp.numDatapoints = tmp.numDatapoints - 1;
         if ("packetsSent" in found1) {
           let num11 = found1.packetsSent;
@@ -132,9 +132,9 @@ function updateAveragedStatsHelper(version, arr, arg2, arr, arr2) {
     tmp.packetsLost = num3;
   }
 }
-function updateAveragedStats(closure_5, arg1, version, version2) {
-  if (null == dependencyMap2[arg1]) {
-    dependencyMap2[arg1] = {};
+function updateAveragedStats(arg0, arg1, version, version2) {
+  if (null == arg0[arg1]) {
+    arg0[arg1] = {};
   }
   id = id.getId();
   let num;
@@ -148,24 +148,34 @@ function updateAveragedStats(closure_5, arg1, version, version2) {
   if (version2 != null) {
     outbound = version2.stats.rtp.outbound;
   }
-  dependencyMap2[arg1][id] = updateAveragedStatsHelper(version.version, num, dependencyMap2[arg1][id], version.stats.rtp.outbound, outbound);
+  arg0[arg1][id] = updateAveragedStatsHelper(version.version, num, arg0[arg1][id], version.stats.rtp.outbound, outbound);
   const keys = Object.keys(version.stats.rtp.inbound);
   for (const item10043 of keys) {
+    let tmp5 = item10043;
     version = arg2.version;
     let num2;
+    let tmp6 = updateAveragedStatsHelper;
     if (arg3 != null) {
       num2 = arg3.version;
     }
     if (num2 == null) {
       num2 = 0;
     }
-    let tmp8 = arg0[arg1][item10043];
-    let tmp9 = arg2.stats.rtp.inbound[item10043];
+    let tmp7 = item10043;
+    let tmp8 = arg0[arg1][tmp5];
+    let tmp9 = arg2.stats.rtp.inbound[tmp5];
     let tmp10;
     if (arg3 != null) {
-      tmp10 = arg3.stats.rtp.inbound[item10043];
+      let tmp11 = item10043;
+      tmp10 = arg3.stats.rtp.inbound[tmp5];
     }
-    arg0[arg1][item10043] = updateAveragedStatsHelper(version, num2, tmp8, tmp9, tmp10);
+    let num3 = 0;
+    let tmp12 = version;
+    let tmp13 = num2;
+    let tmp14 = tmp8;
+    let tmp15 = tmp9;
+    let tmp16 = tmp10;
+    arg0[arg1][item10043] = tmp6(version, num2, tmp8, tmp9, tmp10);
     continue;
   }
 }
@@ -257,22 +267,41 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
       let prop = nextResult.mediaEngineConnectionId;
       let tmp3 = prop;
       if (0 !== prop.length) {
+        let tmp26 = prop;
+        let tmp27 = nextResult;
         {}[tmp3] = tmp2;
-        if (!(tmp3 in dependencyMap)) {
-          dependencyMap[tmp3] = [];
+        let tmp28 = closure_4;
+        if (!(tmp3 in closure_4)) {
+          let tmp4 = prop;
+          tmp28[tmp3] = [];
         }
-        let arr2 = dependencyMap[tmp3];
-        arr2.push(tmp2);
-        let arr;
-        if (dependencyMap[tmp3].length > 30) {
-          let arr3 = dependencyMap[tmp3];
+        let tmp5 = prop;
+        let arr2 = tmp28[tmp3];
+        let tmp6 = nextResult;
+        let arr = arr2.push(tmp2);
+        arr = undefined;
+        if (tmp28[tmp3].length > 30) {
+          let tmp9 = prop;
+          let arr3 = tmp28[tmp3];
           arr = arr3.shift();
         }
+        let tmp10 = updateAveragedStats;
+        let tmp11 = closure_6;
+        let tmp14 = getStatsHistoryAtIndex;
         let tmp12 = prop;
         let tmp13 = nextResult;
         let tmp15 = getStatsHistoryAtIndex(tmp3, 15);
-        updateAveragedStats(closure_6, tmp12, tmp13, tmp15);
-        let tmp10Result = updateAveragedStats(closure_5, tmp3, tmp2, arr);
+        let num = 0;
+        let tmp16 = tmp11;
+        let tmp17 = tmp3;
+        let tmp18 = tmp2;
+        let tmp19 = tmp15;
+        let tmp10Result = tmp10(tmp11, tmp12, tmp13, tmp15);
+        let tmp21 = closure_5;
+        let tmp22 = prop;
+        let tmp23 = nextResult;
+        let tmp24 = arr;
+        tmp10Result = tmp10(closure_5, tmp3, tmp2, arr);
       }
       continue;
     }
@@ -337,6 +366,6 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/media_engine/MediaEngineStatsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/media_engine/MediaEngineStatsStore.tsx");
 
 export default mediaEngineStatsStore;

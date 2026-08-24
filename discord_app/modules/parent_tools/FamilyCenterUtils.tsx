@@ -3,14 +3,14 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "FamilyCenter.messages.js";
 import tDefault from "../../../_runtime/03975_t.js";
 import maybeFetchCollectiblesForInvoicesDefault from "FamilyCenterActionCreators.tsx";
-import freshTeenActivityWithMap from "FamilyCenterStore.tsx";
+import closure_3 from "FamilyCenterStore.tsx";
 import items from "FamilyCenterConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: closure_8, UserLinkType: c9 } = items);
 let c10 = 86400;
 let c11 = 172800;
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.tsx");
 
 export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
@@ -28,15 +28,15 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   const tmp4 = messagesProxyDefault;
   if (arg0) {
     obj[0] = string(tmp4["2AtcIs"]);
-    const intl3 = getSystemLocale.intl;
-    obj[1] = intl3.string(messagesProxyDefault.stOECr);
-    obj[2] = messagesProxyDefault.n8n5Ba;
+    const intl3 = tmp(1236).intl;
+    obj[1] = intl3.string(tmp3(2335).stOECr);
+    obj[2] = tmp3(2335).n8n5Ba;
     let tmp5 = obj;
   } else {
     obj[0] = string(tmp4.g1ZX6m);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(messagesProxyDefault.s3qSVt);
-    obj[2] = messagesProxyDefault.f1UJiC;
+    const intl2 = tmp(1236).intl;
+    obj[1] = intl2.string(tmp3(2335).s3qSVt);
+    obj[2] = tmp3(2335).f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
@@ -67,35 +67,35 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
   let obj = tDefault();
   const diffResult = obj.diff(tDefault(arg0), "s");
-  const time = SENT_TIMESTAMP_FORMATTER();
+  const tmp3 = SENT_TIMESTAMP_FORMATTER();
   tDefault(arg0);
   if (diffResult < 60) {
-    let yesterday = time.seconds;
+    let yesterday = tmp3.seconds;
   } else if (diffResult < 3600) {
     const intl4 = getSystemLocale.intl;
     obj = { count: null };
     const _Math3 = Math;
     obj[0] = Math.floor(diffResult / 60);
-    yesterday = intl4.formatToPlainString(time.minutes, obj);
+    yesterday = intl4.formatToPlainString(tmp3.minutes, obj);
   } else if (diffResult < c10) {
     const intl3 = getSystemLocale.intl;
     obj = { count: null };
     const _Math2 = Math;
     obj[0] = Math.floor(diffResult / 3600);
-    yesterday = intl3.formatToPlainString(time.hours, obj);
+    yesterday = intl3.formatToPlainString(tmp3.hours, obj);
   } else if (diffResult < c11) {
-    yesterday = time.yesterday;
+    yesterday = tmp3.yesterday;
   } else if (diffResult < 604800) {
     const intl2 = getSystemLocale.intl;
     obj1 = { count: null };
     const _Math = Math;
-    obj1[0] = Math.floor(diffResult / tmp12);
-    yesterday = intl2.formatToPlainString(time.days, obj1);
+    obj1[0] = Math.floor(diffResult / tmp13);
+    yesterday = intl2.formatToPlainString(tmp3.days, obj1);
   } else {
     const intl = getSystemLocale.intl;
     const obj2 = { date: null };
-    obj2[0] = tmp4;
-    yesterday = intl.formatToPlainString(time.date, obj2);
+    obj2[0] = tmp5;
+    yesterday = intl.formatToPlainString(tmp3.date, obj2);
   }
   return yesterday;
 };
@@ -114,7 +114,9 @@ export const isGift = function isGift(action) {
 export const displayTypeFromString = function displayTypeFromString(arg0) {
   const values = Object.values(closure_7);
   for (const item10011 of values) {
+    let tmp2 = item10011;
     if (item10011.toString() === arg0) {
+      let tmp3 = obj;
       obj.return();
       return item10011;
     }
@@ -155,27 +157,28 @@ export const formatTotalTime = function formatTotalTime(arg0) {
 };
 export const getOrFetchLinkedUsers = function getOrFetchLinkedUsers() {
   if (authStore.getAreLinkedUsersProcessed()) {
-    return authStore.getLinkedUsers();
+    return obj.getLinkedUsers();
   } else {
     const linkedUsers = maybeFetchCollectiblesForInvoicesDefault.fetchLinkedUsers();
   }
+  obj = authStore;
 };
 export const hasActiveParentLinks = function hasActiveParentLinks() {
   const values = Object.values(authStore.getLinkedUsers());
-  return values.some((item, index) => {
-    let tmp = item.link_status === constants.ACTIVE;
+  return values.some((link_status) => {
+    let tmp = link_status.link_status === constants.ACTIVE;
     if (tmp) {
-      tmp = item.link_type === constants2.PARENT;
+      tmp = link_status.link_type === constants2.PARENT;
     }
     return tmp;
   });
 };
 export const isParentallyControlled = function isParentallyControlled() {
   const values = Object.values(authStore.getLinkedUsers());
-  return values.some((item, index) => {
-    let tmp = item.link_status === constants.ACTIVE;
+  return values.some((link_status) => {
+    let tmp = link_status.link_status === constants.ACTIVE;
     if (tmp) {
-      tmp = item.link_type === constants2.PARENT;
+      tmp = link_status.link_type === constants2.PARENT;
     }
     return tmp;
   });

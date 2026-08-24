@@ -8,9 +8,9 @@ import useGuildPowerupOnShowMoreDefault from "hooks/useGuildPowerupOnShowMore.ts
 import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
 
 export default function GuildPowerupsSinglePerkCard(badge) {
   ({ guildId, powerup } = badge);
@@ -21,6 +21,7 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   const tmp2 = useGuildPowerupRollbackEnabledDefault(guildId, powerup, "GuildPowerupsSinglePerkCard");
   obj = { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: null, status: null, onPress: null, badge: null };
   const tmp4 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
+  const tmp5 = jsx;
   if (str == null) {
     str = "";
   }
@@ -28,5 +29,5 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   obj[4] = calculatePowerupCardStatus;
   obj[5] = tmp4;
   obj[6] = badge.badge;
-  return jsx(GuildPowerupsPerkCardDefault, { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: null, status: null, onPress: null, badge: null });
+  return tmp5(GuildPowerupsPerkCardDefault, obj);
 };

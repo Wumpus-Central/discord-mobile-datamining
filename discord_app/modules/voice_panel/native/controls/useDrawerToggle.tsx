@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/useDrawerToggle.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { VoicePanelControlsModes } from "VoicePanelControlsConstants.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_5 = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
 
 export default function useDrawerToggle(arg0) {
   const _require = arg0;
@@ -12,11 +12,11 @@ export default function useDrawerToggle(arg0) {
   controlsSpecs = context.controlsSpecs;
   connected = context.connected;
   dismissPanel = context.dismissPanel;
-  _require(connected[3]);
+  let obj = _require(connected[3]);
   const fn = function l() {
-    return controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER;
+    return controlsSpecs.get().mode === closure_1_4.DRAWER;
   };
-  let obj = { controlsSpecs, VoicePanelControlsModes };
+  obj = { controlsSpecs, VoicePanelControlsModes };
   fn.__closure = obj;
   fn.__workletHash = 900483810235;
   fn.__initData = closure_5;
@@ -24,7 +24,7 @@ export default function useDrawerToggle(arg0) {
   const tmp3 = controlsSpecs(connected[4])(derivedValue);
   const items = [arg0, dismissPanel, connected, controlsSpecs];
   const callback = dismissPanel.useCallback(() => {
-    if (controlsSpecs.get().mode === VoicePanelControlsModes.DRAWER) {
+    if (controlsSpecs.get().mode === closure_1_4.DRAWER) {
       dismissPanel();
     } else {
       const value = connected.get();
@@ -32,6 +32,7 @@ export default function useDrawerToggle(arg0) {
       const obj = { tab: "settings", source: null };
       obj[1] = value ? VoicePanelTabAnalyticsSources.CONNECTED_BUTTON : VoicePanelTabAnalyticsSources.PREJOIN_BUTTON;
       callback(obj);
+      const tmp = callback;
     }
   }, items);
   obj = { isDrawerOpen: tmp3, handlePress: callback, accessibilityLabel: null, ariaHidden: null };

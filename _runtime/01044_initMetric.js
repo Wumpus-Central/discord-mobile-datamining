@@ -1,8 +1,5 @@
 // _runtime/01044_initMetric.js
-import WINDOW from "01039_WINDOW.js";
-import getActivationStart from "01042_getActivationStart.js";
 import getNavigationEntry from "01043_getNavigationEntry.js";
-import generateUniqueID from "01045_generateUniqueID.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -17,17 +14,17 @@ arg5.initMetric = (name) => {
   let str = "navigate";
   let str2 = "navigate";
   if (navigationEntry) {
-    const _document = WINDOW.WINDOW.document;
+    const _document = tmp(1039).WINDOW.document;
     let prerendering;
     if (_document != null) {
       prerendering = _document.prerendering;
     }
     let str4 = "prerender";
     if (!prerendering) {
-      let tmpResult = getActivationStart;
+      let tmpResult = tmp(1042);
       str4 = "prerender";
       if (tmpResult.getActivationStart() <= 0) {
-        const _document2 = WINDOW.WINDOW.document;
+        const _document2 = tmp(1039).WINDOW.document;
         let wasDiscarded;
         if (_document2 != null) {
           wasDiscarded = _document2.wasDiscarded;
@@ -36,6 +33,7 @@ arg5.initMetric = (name) => {
         if (!wasDiscarded) {
           if (navigationEntry.type) {
             str = navigationEntry.type.replace(/_/g, "-");
+            const str6 = navigationEntry.type;
           }
           str5 = str;
         }
@@ -45,7 +43,7 @@ arg5.initMetric = (name) => {
     str2 = str4;
   }
   obj = { name, value: num, rating: "good", delta: 0, entries: [], id: null, navigationType: null };
-  tmpResult = generateUniqueID;
+  tmpResult = tmp(1045);
   obj[5] = tmpResult.generateUniqueID();
   obj[6] = str2;
   return obj;

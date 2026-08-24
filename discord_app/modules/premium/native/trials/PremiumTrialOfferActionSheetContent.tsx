@@ -1,7 +1,6 @@
 // discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
@@ -15,9 +14,10 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
+let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
+obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
 obj[0] = obj;
 obj[1] = { marginVertical: 6, width: "100%", height: 48 };
 obj[2] = { width: "100%", textAlign: "center" };
@@ -62,24 +62,25 @@ const memoResult = importAllResult.memo(function PremiumTrialOfferActionSheetCon
     if (subscriptionTrial != null) {
       skuId1 = subscriptionTrial.skuId;
     }
-    displayNameFromSku = getPremiumPlanItem.getDisplayNameFromSku(skuId1);
-    const tmp3Result = getPremiumPlanItem;
+    displayNameFromSku = tmp3(4039).getDisplayNameFromSku(skuId1);
+    const tmp3Result = tmp3(4039);
   }
   obj3[3] = intl7.formatToPlainString(getSystemLocale.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
   items1[1] = callback(Text.Text, obj3);
   items1[2] = callback(PremiumPerksListDefault, { perks: items });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
-  const intl8 = getSystemLocale.intl;
+  const intl8 = tmp3(1236).intl;
   obj5[1] = intl8.formatToPlainString(getSystemLocale.t.xASjq5, { duration: intervalDuration });
   obj5[2] = onConfirm.onConfirm;
   const obj2 = { style: tmp.heroIllustrationContainer, children: callback(AccountAgeTier10LargeBadge.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) };
+  const tmp5 = closure_5;
   obj5[4] = callback(NitroWheelIcon.NitroWheelIcon, { size: "md", color: ThemesDefault.unsafe_rawColors.WHITE });
   obj4[1] = callback(Button.Button, obj5);
   items1[3] = callback(View, obj4);
   obj1[1] = items1;
-  return callback(View, obj1);
+  return tmp5(View, obj1);
 });
-const result = require("obj132").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
 
 export default memoResult;

@@ -1,16 +1,16 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
-import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
-import updateVoiceState from "../../../../stores/VoiceStateStore.tsx";
-import getVoiceStatesForGuild from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../calls/ChannelRTCStore.tsx";
+import closure_6 from "../../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_9 from "../../../../stores/VoiceStateStore.tsx";
+import closure_10 from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 import { RTCConnectionStates } from "../../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function getMemoizedParticipant(type, get) {
   const combined = "" + type.type + "-" + type.id;
   let value = get.get(combined);
@@ -22,7 +22,7 @@ function getMemoizedParticipant(type, get) {
 }
 ({ VoicePanelCardItemType: unpackModuleId, VoicePanelCTACard: closure_12 } = VoicePanelModes);
 let closure_14 = [];
-let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx");
 
 export default function useVoicePanelCards(arg0, arg1) {
   const _require = arg0;
@@ -70,16 +70,23 @@ export default function useVoicePanelCards(arg0, arg1) {
       let items1 = [];
       const tmp18 = items[Symbol.iterator]();
       while (tmp18 !== undefined) {
+        let tmp22 = closure_1_15;
         let obj = { type: null, id: null };
+        let tmp23 = closure_1_11;
         obj[0] = closure_1_11.PARTICIPANT;
         obj[1] = tmp20.id;
-        let tmp25 = getMemoizedParticipant(obj, first);
+        let tmp24 = first;
+        let tmp25 = closure_1_15(obj, first);
+        let tmp26 = flag;
         if (flag) {
+          let tmp27 = tmp25;
+          let tmp28 = id;
           if (tmp25.id === id) {
             tmp = tmp25;
             continue;
           }
         }
+        let tmp29 = tmp25;
         let arr1 = items1.push(tmp25);
       }
       if (null != tmp) {
@@ -96,7 +103,7 @@ export default function useVoicePanelCards(arg0, arg1) {
         obj = { type: null, id: null };
         obj[0] = closure_1_11.CTA;
         obj[1] = closure_1_12.CALLER_DISCONNECTED;
-        items1.push(getMemoizedParticipant(obj, first));
+        items1.push(closure_1_15(obj, first));
       }
       if (voiceParticipantsHidden) {
         voiceParticipantsHidden = 0 === items.length;
@@ -105,7 +112,7 @@ export default function useVoicePanelCards(arg0, arg1) {
         obj = { type: null, id: null };
         obj[0] = closure_1_11.CTA;
         obj[1] = closure_1_12.NO_VIDEO_PARTICIPANTS;
-        items1.push(getMemoizedParticipant(obj, first));
+        items1.push(closure_1_15(obj, first));
       }
       if (items1.length <= 0) {
         items1 = closure_1_14;
@@ -113,12 +120,12 @@ export default function useVoicePanelCards(arg0, arg1) {
       return items1;
     } else {
       const voiceStatesForChannelAlt = closure_1_10.getVoiceStatesForChannelAlt(closure_0, closure_1);
-      let mapped = voiceStatesForChannelAlt.map((item, index) => {
-        const obj = { type: closure_1_11.PARTICIPANT, id: item.user.id };
+      let mapped = voiceStatesForChannelAlt.map((id) => {
+        const obj = { type: closure_1_11.PARTICIPANT, id: id.user.id };
         const combined = "" + obj.type + "-" + obj.id;
-        let value = store.get(combined);
+        let value = closure_5.get(combined);
         if (null == value) {
-          const result = store.set(combined, obj);
+          const result = closure_5.set(combined, obj);
           value = obj;
         }
         return value;
@@ -157,26 +164,35 @@ export const useChunkedParticipants = function useChunkedParticipants(channelId,
           let start = closure_1.start;
           if (start <= closure_1.end) {
             do {
+              let tmp = chunk;
               let push = items.push;
               let _Array = Array;
               let items1 = [];
+              let tmp2 = items1;
+              let num = 0;
               let arraySpreadResult = HermesBuiltin.arraySpread(Array.from(chunk.getChunk(start)), 0);
+              let tmp4 = push;
+              let tmp5 = items1;
+              let tmp6 = items;
               let applyResult = HermesBuiltin.apply(items1, items);
               start = start + 1;
+              let tmp8 = closure_1;
               end = closure_1.end;
             } while (start <= end);
           }
           return items;
         })());
         for (const item10013 of set) {
-          let arr = items.push(getMemoizedParticipant(item10013, first));
+          let tmp7 = closure_1_15;
+          let tmp8 = first;
+          let arr = items.push(closure_1_15(item10013, first));
           continue;
         }
         if (tmp12) {
           const obj = { type: null, id: null };
           obj[0] = closure_1_11.CTA;
           obj[1] = closure_1_12.NO_VIDEO_PARTICIPANTS;
-          items.push(getMemoizedParticipant(obj, first));
+          items.push(closure_1_15(obj, first));
         }
         if (items.length <= 0) {
           items = closure_1_14;

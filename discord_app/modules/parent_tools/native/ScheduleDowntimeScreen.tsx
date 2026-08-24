@@ -5,16 +5,16 @@ import Button2 from "../../../design/void/native.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
 import { UserSettingsSections } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function OverlappingSchedulesWarning(conflictingEntries) {
   conflictingEntries = conflictingEntries.conflictingEntries;
   let tmp = null;
@@ -22,14 +22,15 @@ function OverlappingSchedulesWarning(conflictingEntries) {
     let obj = { messageType: null, borderRadius: null, children: null };
     obj[0] = Button2.HelpMessageTypes.WARNING;
     obj[1] = ThemesDefault.radii.md;
+    obj = { spacing: 8, children: null };
     obj = { variant: "text-sm/medium", children: null };
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(messagesProxyDefault["26A0Df"]);
     const items = [callback2(Text.Text, obj), ];
     obj1 = { spacing: 4, children: null };
-    obj1[1] = conflictingEntries.map((item, index) => {
-      const dayLabel = item.dayLabel;
-      return callback2(callback(table[14]).Text, { variant: "text-sm/medium", children: "" + dayLabel + "  " + item.timeRange }, dayLabel);
+    obj1[1] = conflictingEntries.map((dayLabel) => {
+      dayLabel = dayLabel.dayLabel;
+      return callback2(callback(table[14]).Text, { variant: "text-sm/medium", children: "" + dayLabel + "  " + dayLabel.timeRange }, dayLabel);
     });
     items[1] = callback2(Stack.Stack, obj1);
     obj[1] = items;
@@ -40,17 +41,24 @@ function OverlappingSchedulesWarning(conflictingEntries) {
 }
 ({ View: closure_6, Pressable: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
+createCacheKey = { container: { flex: 1 }, scrollContent: null, section: null, sectionHeader: null, daysContainer: null, dayButton: null, dayButtonSelected: null, overlapWarningContent: null, footer: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
+let obj1 = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { gap: ThemesDefault.space.PX_4 };
+let obj2 = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { flex: 1, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderWidth: 1, borderColor: "transparent" };
 createCacheKey[6] = { backgroundColor: "rgba(88, 101, 242, 0.16)", borderColor: "rgba(88, 101, 242, 1)" };
+let obj4 = { flex: 1, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderWidth: 1, borderColor: "transparent" };
 createCacheKey[7] = { marginTop: ThemesDefault.space.PX_24 };
+let obj5 = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[8] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/native/ScheduleDowntimeScreen.tsx");
+let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/parent_tools/native/ScheduleDowntimeScreen.tsx");
 
 export default function ScheduleDowntimeScreen() {
   function _handleSubmit() {
@@ -97,22 +105,22 @@ export default function ScheduleDowntimeScreen() {
                 if (closure_1_6) {
                   let ruleId;
                   if (closure_1_2 != null) {
-                    ruleId = closure_1_2.ruleId;
+                    ruleId = tmp34.ruleId;
                   }
                   if (null != ruleId) {
-                    let tmp27Result = closure_1_0(closure_1_2[22]);
+                    let tmp27Result = tmp27(tmp28[22]);
                     navigation = 3;
                     c4 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = tmp27Result.updateRestrictedScheduleRule(closure_1_5, closure_1_2.ruleId, obj1);
+                    obj2[0] = tmp27Result.updateRestrictedScheduleRule(tmp46, tmp34.ruleId, obj1);
                     return obj2;
                   }
                 }
-                tmp27Result = closure_1_0(closure_1_2[22]);
+                tmp27Result = tmp27(tmp28[22]);
                 navigation = 2;
                 c4 = 1;
                 obj3 = { value: null, done: false };
-                obj3[0] = tmp27Result.addRestrictedScheduleRule(closure_1_5, obj1);
+                obj3[0] = tmp27Result.addRestrictedScheduleRule(tmp46, obj1);
                 return obj3;
               } else {
                 c4 = 3;
@@ -280,7 +288,7 @@ export default function ScheduleDowntimeScreen() {
         ruleId = rule.ruleId;
       }
       if (null != ruleId) {
-        let found = stateFromStores.filter((item, index) => item.ruleId !== ruleId.ruleId);
+        let found = stateFromStores.filter((ruleId) => ruleId.ruleId !== ruleId.ruleId);
       }
       return found;
     }
@@ -350,7 +358,7 @@ export default function ScheduleDowntimeScreen() {
           c5 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          const user = stateFromStores.getUser(c5);
+          const user = closure_1_9.getUser(c5);
           let rules;
           if (user != null) {
             const restrictedSchedule = user.restrictedSchedule;
@@ -363,7 +371,7 @@ export default function ScheduleDowntimeScreen() {
             length = [];
           }
           if (0 === length.length) {
-            navigation.navigate(first1.FAMILY_CENTER);
+            navigation.navigate(closure_1_10.FAMILY_CENTER);
           } else {
             navigation.goBack();
           }
@@ -393,12 +401,12 @@ export default function ScheduleDowntimeScreen() {
       let obj = { headerRight: null };
       obj[0] = function headerRight() {
         let obj = { onPress: closure_19, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 8, disabled: null, children: null };
-        const intl = closure_1_0(rule[15]).intl;
-        obj[2] = intl.string(closure_1_0(rule[15]).t.oyYWHE);
+        const intl = closure_1_0(closure_1_2[15]).intl;
+        obj[2] = intl.string(closure_1_0(closure_1_2[15]).t.oyYWHE);
         obj[4] = closure_16;
-        obj = { color: stackNavigation(rule[11]).colors.ICON_FEEDBACK_CRITICAL, size: "md" };
-        obj[5] = closure_1_11(closure_1_0(rule[23]).TrashIcon, obj);
-        return closure_1_11(first, obj);
+        obj = { color: closure_1_1(closure_1_2[11]).colors.ICON_FEEDBACK_CRITICAL, size: "md" };
+        obj[5] = closure_1_11(closure_1_0(closure_1_2[23]).TrashIcon, obj);
+        return closure_1_11(closure_1_7, obj);
       };
       stackNavigation.setOptions(obj);
     }
@@ -459,7 +467,7 @@ export default function ScheduleDowntimeScreen() {
           c5 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          const user = stateFromStores.getUser(c5);
+          const user = closure_1_9.getUser(c5);
           let rules;
           if (user != null) {
             const restrictedSchedule = user.restrictedSchedule;
@@ -472,7 +480,7 @@ export default function ScheduleDowntimeScreen() {
             length = [];
           }
           if (0 === length.length) {
-            navigation.navigate(first1.FAMILY_CENTER);
+            navigation.navigate(closure_1_10.FAMILY_CENTER);
           } else {
             navigation.goBack();
           }
@@ -555,13 +563,13 @@ export default function ScheduleDowntimeScreen() {
       const intl = lib(rule[15]).intl;
       const f111372 = (first1) => {
         callback(first1);
-        let obj = f111372(rule[19]);
+        let obj = f111372(closure_1_2[19]);
         const result = (obj.timeToMinutes(first1) + 540) % 1440;
         obj = { hours: Math.floor(result / 60), minutes: result % 60 };
         callback2(obj);
       };
-      stackNavigation(rule[7]);
-      let obj = { title: intl.string(stackNavigation(rule[16])["8bLRt0"]), mode: "time", startDate: null, onSubmit: null };
+      let obj = stackNavigation(rule[7]);
+      obj = { title: intl.string(stackNavigation(rule[16])["8bLRt0"]), mode: "time", startDate: null, onSubmit: null };
       const stringResult = intl.string(stackNavigation(rule[16])["8bLRt0"]);
       const tmp2 = lib(rule[9])(rule[8], rule.paths);
       obj[2] = new Date(2025, 0, 1, first1.hours, first1.minutes, 0, 0);
@@ -582,8 +590,8 @@ export default function ScheduleDowntimeScreen() {
     obj12[3] = function handleEndTimePress() {
       const intl = lib(rule[15]).intl;
       lib = closure_13;
-      stackNavigation(rule[7]);
-      const obj = { title: intl.string(stackNavigation(rule[16])["+JkWJV"]), mode: "time", startDate: null, onSubmit: null };
+      let obj = stackNavigation(rule[7]);
+      obj = { title: intl.string(stackNavigation(rule[16])["+JkWJV"]), mode: "time", startDate: null, onSubmit: null };
       const stringResult = intl.string(stackNavigation(rule[16])["+JkWJV"]);
       const tmp2 = lib(rule[9])(rule[8], rule.paths);
       obj[2] = new Date(2025, 0, 1, first2.hours, first2.minutes, 0, 0);
@@ -613,9 +621,9 @@ export default function ScheduleDowntimeScreen() {
     const obj18 = { style: null, children: null };
     obj18[0] = tmp.daysContainer;
     const DAYS_ORDERED = tmp2(stringResult[19]).DAYS_ORDERED;
-    obj18[1] = DAYS_ORDERED.map((item, index) => {
-      const lib = item;
-      const hasItem = first3.has(item);
+    obj18[1] = DAYS_ORDERED.map((arg0, arg1) => {
+      const lib = arg0;
+      const hasItem = first3.has(arg0);
       const items = [lib.dayButton, ];
       let dayButtonSelected = hasItem;
       if (hasItem) {
@@ -627,16 +635,16 @@ export default function ScheduleDowntimeScreen() {
           closure_1_15((items) => {
             const set = new Set(items);
             if (set.has(closure_0)) {
-              set.delete(closure_0);
+              set.delete(tmp);
             } else {
-              set.add(closure_0);
+              set.add(tmp);
             }
             return set;
           });
         },
         accessibilityRole: "button",
         accessibilityState: { selected: hasItem },
-        accessibilityLabel: dependencyMap[index],
+        accessibilityLabel: dependencyMap[arg1],
         children: null
       };
       items[1] = dayButtonSelected;
@@ -644,9 +652,9 @@ export default function ScheduleDowntimeScreen() {
       if (hasItem) {
         str = "control-secondary-text-default";
       }
-      obj = { variant: "text-sm/semibold", color: str, children: dependencyMap[index] };
-      obj[5] = callback(lib(rule[14]).Text, obj);
-      return callback(first, obj, item);
+      obj = { variant: "text-sm/semibold", color: str, children: dependencyMap[arg1] };
+      obj[5] = closure_11(lib(rule[14]).Text, obj);
+      return closure_11(first, obj, arg0);
     });
     items9[1] = callback2(closure_6, obj18);
     tmp43Result = memo2.conflictingEntries.length > 0;

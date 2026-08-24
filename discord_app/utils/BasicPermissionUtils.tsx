@@ -1,8 +1,8 @@
 // discord_app/utils/BasicPermissionUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import fromStringAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
-const result = obj132.fileFinishedImporting("utils/BasicPermissionUtils.tsx");
+const result = set.fileFinishedImporting("utils/BasicPermissionUtils.tsx");
 const prototype = function BasicPermissionUtils() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -15,8 +15,8 @@ prototype["asBasicFlag"] = function asBasicFlag(permissions) {
 prototype["asBigFlag"] = function asBigFlag(VIEW_CHANNEL) {
   const self = this;
   if (!Object.hasOwn(this.cache, VIEW_CHANNEL)) {
-    const deserializer = fromStringAll;
-    self.cache[VIEW_CHANNEL] = deserializer.deserialize(VIEW_CHANNEL);
+    self.cache[VIEW_CHANNEL] = fromStringAll.deserialize(VIEW_CHANNEL);
+    const obj = fromStringAll;
   }
   return self.cache[VIEW_CHANNEL];
 };

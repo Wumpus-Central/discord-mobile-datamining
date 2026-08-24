@@ -1,10 +1,10 @@
 // discord_app/modules/experiments/apex/ApexActionCreators.tsx
-import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import initialize from "ApexExperimentStore.tsx";
+import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_6 from "ApexExperimentStore.tsx";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchApexExperimentsMetadata() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -32,9 +32,9 @@ function _fetchApexExperimentsMetadata() {
         throw body;
       } else if (arg0 !== 2) {
         const experiments = body.body.experiments;
-        callback = experiments.map((item, index) => {
-          const variants = item.variants;
-          return { id: item.id, name: item.name, title: item.title, revision: item.revision, unitType: item.unit_type, variants: variants.map((item, index) => ({ id: item.id, label: item.label, type: item.type })) };
+        callback = experiments.map((id) => {
+          const variants = id.variants;
+          return { id: id.id, name: id.name, title: id.title, revision: id.revision, unitType: id.unit_type, variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })) };
         });
         const obj = callback2(709);
         const obj4 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: null };
@@ -93,10 +93,10 @@ function _fetchUserExperimentAssignments() {
               let lib = tmp7;
               lib = undefined;
               if (!fetching.isFetching(callback)) {
-                if (!obj15.hasLoaded(callback)) {
+                if (!obj15.hasLoaded(tmp48)) {
                   let obj7 = closure_1_1(closure_1_2[5]);
                   obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: null };
-                  obj1[1] = callback;
+                  obj1[1] = tmp48;
                   obj7.dispatch(obj1);
                   c4 = 1;
                   const HTTP = callback(closure_1_2[4]).HTTP;
@@ -177,8 +177,8 @@ function _fetchInstallationExperiments() {
     c6 = 0;
     c4 = 0;
     return (function*(arg0) {
-      if (fetching === 2) {
-        fetching = 3;
+      if (c6 === 2) {
+        c6 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -192,13 +192,13 @@ function _fetchInstallationExperiments() {
         }
       } else {
         try {
-          fetching = 2;
+          c6 = 2;
           if (0 === c5) {
             if (arg0 === 1) {
-              fetching = 3;
+              c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              fetching = 3;
+              c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -210,8 +210,8 @@ function _fetchInstallationExperiments() {
               installation = undefined;
               closure_3 = undefined;
               if (null == lib) {
-                let obj5 = fetching;
-                if (!fetching.isFetching(lib(closure_1_2[7]).INSTALLATION_UNIT_ID)) {
+                let obj5 = c6;
+                if (!c6.isFetching(lib(closure_1_2[7]).INSTALLATION_UNIT_ID)) {
                   if (!obj5.hasLoaded(lib(closure_1_2[7]).INSTALLATION_UNIT_ID)) {
                     let obj6 = closure_1_1(closure_1_2[5]);
                     obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: null };
@@ -225,7 +225,7 @@ function _fetchInstallationExperiments() {
                     obj3[0] = lib(closure_1_2[6]).Experiment_Surface.APP;
                     obj2[1] = obj3;
                     c5 = 2;
-                    fetching = 1;
+                    c6 = 1;
                     const obj4 = { value: null, done: false };
                     obj4[0] = HTTP.get(obj2);
                     return obj4;
@@ -241,7 +241,7 @@ function _fetchInstallationExperiments() {
               obj5[1] = lib(installation[7]).INSTALLATION_UNIT_ID;
               obj3.dispatch(obj5);
             } else if (arg0 === 1) {
-              fetching = 3;
+              c6 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
@@ -256,14 +256,13 @@ function _fetchInstallationExperiments() {
                 const Emitter = body(installation[8]).Emitter;
                 Emitter.batched(() => {
                   if (installation) {
-                    body(installation[5]);
-                    let obj = { type: "INSTALLATION_ID", installation: null };
+                    let obj = body(installation[5]);
+                    obj = { type: "INSTALLATION_ID", installation: null };
                     obj[1] = installation;
                     obj.dispatch(obj);
                   }
                   obj = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: callback(installation[7]).INSTALLATION_UNIT_ID, experiments: closure_3 };
                   body(installation[5]).dispatch(obj);
-                  const obj3 = body(installation[5]);
                 });
               } else {
                 obj = body(installation[5]);
@@ -274,16 +273,16 @@ function _fetchInstallationExperiments() {
               v0 = 0;
             }
             v0 = 0;
-            fetching = 3;
+            c6 = 3;
             const obj7 = { value: null, done: true };
             obj7[0] = arg1;
             return obj7;
           }
-          fetching = 3;
+          c6 = 3;
         } catch (tmp47) {
           closure_3 = tmp47;
           if (tmp4 === v0) {
-            fetching = tmp2;
+            c6 = tmp2;
             throw tmp47;
           } else {
             c5 = tmp;
@@ -302,7 +301,7 @@ function _fetchInstallationExperiments() {
   return applyArgumentsResult;
 }
 let closure_3 = ["installation"];
-const result = require("obj132").fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
 
 export const fetchApexExperimentsMetadata = function fetchApexExperimentsMetadata(APP) {
   const self = this;

@@ -1,8 +1,8 @@
 // discord_app/modules/polls/PollsHttpApi.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _submitPollVote() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -216,7 +216,7 @@ function _endPollEarly() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
 
 export const submitPollVote = function submitPollVote(arg0) {
   const self = this;

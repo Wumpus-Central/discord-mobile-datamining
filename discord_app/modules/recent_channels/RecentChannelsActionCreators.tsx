@@ -1,8 +1,8 @@
 // discord_app/modules/recent_channels/RecentChannelsActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _bulkClearRecents() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -83,7 +83,7 @@ function _bulkClearRecents() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
 
 export const bulkClearRecents = function bulkClearRecents(closure_0, closure_1) {
   const self = this;

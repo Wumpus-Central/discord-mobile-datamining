@@ -1,22 +1,25 @@
 // discord_app/modules/verification/native/components/PhoneVerificationModal.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import AddPhoneDefault from "AddPhone.tsx";
-import VerifyPhoneDefault from "VerifyPhone.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { VerificationModalScenes } from "../../../../Constants.tsx";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "../../../phone/PhoneConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
+import { encodeProperties } from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
+import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
 
 export default function PhoneVerificationModal(onClose) {
+  let obj = { screens: null, initialRouteName: null, headerBackTitle: null };
   const _require = onClose;
-  let obj = { headerTitle: require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle(), headerLeft: null, render: null };
-  const obj4 = HeaderBackImage;
-  obj[1] = require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderCloseButton(onClose.onClose);
+  obj = {};
+  obj = { headerTitle: _HeaderBackImage.getHeaderNoTitle(), headerLeft: null, render: null };
+  const obj4 = _HeaderBackImage;
+  obj[1] = _HeaderBackImage.getHeaderCloseButton(onClose.onClose);
   obj[2] = function render(reason) {
     onClose = reason;
     closure_1 = arg1;
@@ -31,7 +34,7 @@ export default function PhoneVerificationModal(onClose) {
     }
     obj.reason = reason;
     obj.onComplete = function onComplete(phone) {
-      return arr.push(VerificationModalScenes.VERIFY_PHONE, {
+      return arr.push(closure_2_4.VERIFY_PHONE, {
         phone,
         onVerified(arg0) {
           closure_0 = arg0;
@@ -45,13 +48,13 @@ export default function PhoneVerificationModal(onClose) {
       };
     }
     obj.onDeletePhone = fn;
-    return jsx(AddPhoneDefault, {});
+    return closure_1_6(closure_1_1(closure_1_2[6]), obj);
   };
   obj[VerificationModalScenes.ADD_PHONE] = obj;
   obj1 = { headerTitle: null, impressionName: null, render: null };
-  const obj5 = HeaderBackImage;
-  obj1[0] = require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
-  obj1[1] = require("../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.USER_VERIFY_PHONE;
+  const obj5 = _HeaderBackImage;
+  obj1[0] = _HeaderBackImage.getHeaderNoTitle();
+  obj1[1] = _encodeProperties.ImpressionNames.USER_VERIFY_PHONE;
   obj1[2] = function render(arg0, arg1) {
     closure_0 = arg1;
     let obj = {};
@@ -147,14 +150,14 @@ export default function PhoneVerificationModal(onClose) {
       obj[2] = function onSuccess() {
         callback(table[8]).popWithKey(closure_5);
       };
-      arr = arr.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
+      arr = arr.push(closure_2_4.VERIFY_PASSWORD, obj);
     };
-    return jsx(VerifyPhoneDefault, {});
+    return closure_1_6(closure_1_1(closure_1_2[10]), obj);
   };
   obj[VerificationModalScenes.VERIFY_PHONE] = obj1;
   let obj2 = { headerTitle: null, render: null };
-  const obj7 = HeaderBackImage;
-  obj2[0] = require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle();
+  const obj7 = _HeaderBackImage;
+  obj2[0] = _HeaderBackImage.getHeaderNoTitle();
   obj2[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return callback2(callback(table[11]), {});
@@ -162,7 +165,7 @@ export default function PhoneVerificationModal(onClose) {
   obj[VerificationModalScenes.VERIFY_PASSWORD] = obj2;
   obj[0] = obj;
   obj[1] = VerificationModalScenes.ADD_PHONE;
-  const intl = require("../../../../intl/index.native.tsx").intl;
-  obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
-  return jsx(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, { headerTitle: require("../../../../design/components/Navigator/native/NavigatorHeader.native.tsx").getHeaderNoTitle(), headerLeft: null, render: null });
+  const intl = _getSystemLocale.intl;
+  obj[2] = intl.string(_getSystemLocale.t["13/7kX"]);
+  return jsx(_NavigationStack.Navigator, { headerTitle: _HeaderBackImage.getHeaderNoTitle(), headerLeft: null, render: null });
 };

@@ -2,12 +2,12 @@
 import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import getEmbeddedActivityLocationChannelId from "../activities/utils/embeddedActivityLocationUtils.tsx";
 import isVoiceEmbeddedActivityDefault from "../activities/utils/isVoiceEmbeddedActivity.tsx";
-import participantFromServer from "../activities/EmbeddedActivitiesStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../activities/EmbeddedActivitiesStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
 import { ChatOverlays } from "ChatOverlayConstants.tsx";
 import { ActivityPanelModes } from "../activities/panel/ActivityPanelConstants.tsx";
 
-require = fn;
+require = arg1;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: items };
 items = [, , ];
@@ -25,7 +25,7 @@ obj[ActivityPanelModes.PIP] = items3;
 const items4 = [, , ];
 ({ NEW_MESSAGES: arr5[0], OPT_IN_CHANNEL: arr5[1], SUMMARIES: arr5[2] } = ChatOverlays);
 obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
-const result = require("obj132").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
   obj = defaultAreStatesEqual;

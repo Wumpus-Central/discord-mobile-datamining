@@ -1,13 +1,14 @@
 // discord_app/modules/user_settings/UserGuildSettingsManager.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import incrementVersion from "../../stores/CategoryCollapseStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../stores/CategoryCollapseStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
 import ME from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function handleConnectionOpen() {
+  const obj = {};
   const merged = Object.assign(store.getCollapsedCategories());
 }
 function scheduleSync() {
@@ -60,15 +61,15 @@ function _saveUserGuildSettings() {
             } else {
               let tmp7 = null;
               if (null != callback) {
-                if (callback !== closure_1_7) {
-                  if (tmp7 != table) {
-                    closure_2 = callback;
-                    if (callback == tmp7) {
-                      closure_2 = closure_1_7;
+                if (tmp19 !== closure_1_7) {
+                  if (tmp7 != tmp20) {
+                    closure_2 = tmp19;
+                    if (tmp19 == tmp7) {
+                      closure_2 = tmp5;
                     }
                     obj1 = {};
                     tmp7 = closure_2;
-                    obj1[closure_2] = table;
+                    obj1[closure_2] = tmp20;
                     let obj2 = obj1;
                   } else {
                     obj2 = {};
@@ -76,7 +77,9 @@ function _saveUserGuildSettings() {
                   closure_1_15(obj2);
                   c4 = 2;
                   c3 = 1;
+                  const tmp6 = closure_1_15;
                 }
+                tmp5 = closure_1_7;
               }
               const HTTP = callback(table[5]).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: false };
@@ -179,6 +182,8 @@ function _saveUserGuildSettingsBulk() {
                 const obj = {};
                 collapsedCategories = collapsedCategories.getCollapsedCategories();
                 for (const key10007 in collapsedCategories) {
+                  let tmp2 = key10007;
+                  let tmp3 = dependencyMap;
                   if (collapsedCategories[key10007] === dependencyMap[key10007]) {
                     continue;
                   } else {
@@ -188,6 +193,8 @@ function _saveUserGuildSettingsBulk() {
                   continue;
                 }
                 for (const key10010 in closure_8) {
+                  let tmp4 = key10010;
+                  let tmp5 = dependencyMap;
                   if (collapsedCategories[key10010] === dependencyMap[key10010]) {
                     continue;
                   } else {
@@ -214,11 +221,17 @@ function _saveUserGuildSettingsBulk() {
                 let flag = tmp34;
                 tmp12 = flag;
                 while (table[closure_3] !== undefined) {
+                  let tmp48 = tmp13;
                   closure_5 = tmp13;
+                  let tmp49 = tmp10;
                   closure_4 = tmp10;
+                  let tmp50 = tmp9;
                   closure_3 = tmp9;
+                  let tmp51 = tmp8;
                   closure_2 = tmp8;
+                  let tmp52 = tmp7;
                   table = tmp7;
+                  let tmp53 = closure_1_4;
                   let channel = closure_1_4.getChannel(tmp13);
                   let tmp14 = null != channel;
                   if (tmp14) {
@@ -228,16 +241,17 @@ function _saveUserGuildSettingsBulk() {
                   if (!tmp14) {
                     continue;
                   } else {
-                    if (!(channel.guild_id in callback)) {
-                      callback[channel.guild_id] = {};
+                    if (!(channel.guild_id in tmp30)) {
+                      tmp30[channel.guild_id] = {};
                     }
-                    if (null == callback[channel.guild_id].channel_overrides) {
-                      callback[channel.guild_id].channel_overrides = {};
+                    if (null == tmp30[channel.guild_id].channel_overrides) {
+                      tmp30[channel.guild_id].channel_overrides = {};
                     }
                     obj1 = {};
-                    let merged = Object.assign(callback[channel.guild_id].channel_overrides[channel.id]);
+                    let tmp15 = obj1;
+                    let merged = Object.assign(tmp30[channel.guild_id].channel_overrides[channel.id]);
                     obj1.collapsed = channel.id in collapsedCategories;
-                    callback[channel.guild_id].channel_overrides[channel.id] = obj1;
+                    tmp30[channel.guild_id].channel_overrides[channel.id] = obj1;
                     flag = true;
                     continue;
                   }
@@ -250,13 +264,14 @@ function _saveUserGuildSettingsBulk() {
                 table = tmp7;
               }
               if (tmp12) {
+                obj2 = {};
                 const merged1 = Object.assign(collapsedCategories);
                 delete tmp3[tmp2];
                 const HTTP = callback(closure_1_1[5]).HTTP;
                 const obj3 = { url: null, body: null, rejectWithError: false };
                 obj3[0] = closure_1_5.USER_GUILD_SETTINGS_BULK;
                 const obj4 = { guilds: null };
-                obj4[0] = callback;
+                obj4[0] = tmp30;
                 obj3[1] = obj4;
                 c7 = 1;
                 c6 = 1;
@@ -296,12 +311,13 @@ function _saveUserGuildSettingsBulk() {
   return applyArgumentsResult;
 }
 function handleUserGuildSettingsFullUpdate() {
+  const obj = {};
   const merged = Object.assign(store.getCollapsedCategories());
 }
 ({ Endpoints: c5, FAVORITES: closure_6, ME: error } = ME);
 let closure_8 = {};
 let c9 = 0;
-let closure_10 = 15 * obj132Default.Millis.SECOND;
+let closure_10 = 15 * setDefault.Millis.SECOND;
 initializeDefault;
 let prototype = function UserGuildSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -313,6 +329,6 @@ let prototype = function UserGuildSettingsManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/user_settings/UserGuildSettingsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserGuildSettingsManager.tsx");
 
 export default prototype;

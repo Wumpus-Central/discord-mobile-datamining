@@ -1,7 +1,8 @@
 // discord_app/modules/polls/PollsInteractionStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import identity from "../../../_runtime/00700_identity.js";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_3 = {};
 let closure_4 = identity.createWithEqualityFn((arg0) => {
@@ -13,16 +14,18 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
       const callback = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
-      callback(dependencyMap[1]).batchUpdates(() => {
+      callback(closure_1_2[1]).batchUpdates(() => {
         callback((pollsByChannelId) => {
           let tmp4;
           if (pollsByChannelId.pollsByChannelId[closure_0] != null) {
             tmp4 = tmp3[closure_1];
           }
-          const tmpResult = callback(tmp4);
+          const tmpResult = closure_2(tmp4);
+          let obj = { pollsByChannelId: null, pollsByMessageId: null };
+          obj = {};
           const merged = Object.assign(pollsByChannelId.pollsByChannelId);
-          const obj = {};
-          const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[closure_0]);
+          obj = {};
+          const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[tmp2]);
           obj[closure_1] = tmpResult;
           obj[closure_0] = obj;
           obj[0] = obj;
@@ -36,16 +39,16 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
     }
   };
 });
-const result = obj132.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
+const result = set.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
 
 export const useMessagePollInteractions = function useMessagePollInteractions(arg0) {
   closure_0 = arg0;
   return store((arg0) => {
     closure_0 = arg0;
     const obj = {};
-    const item = closure_0.forEach((item, index) => {
-      if (null != pollsByMessageId.pollsByMessageId[item]) {
-        obj[item] = tmp;
+    const item = closure_0.forEach((arg0) => {
+      if (null != pollsByMessageId.pollsByMessageId[arg0]) {
+        obj[arg0] = tmp;
       }
     });
     return obj;
@@ -63,7 +66,7 @@ export const useChannelPollInteractions = function useChannelPollInteractions(ar
 };
 export const clearChannelPollState = function clearChannelPollState(arg0) {
   const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
       pollsByMessageId = undefined;
@@ -75,7 +78,7 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
       const keys = pollsByMessageId.keys(tmp3);
       pollsByMessageId = {};
       const merged = Object.assign(pollsByMessageId);
-      const item = keys.forEach((item, index) => {
+      const item = keys.forEach((arg0) => {
         delete tmp2[tmp];
       });
       const merged1 = Object.assign(pollsByChannelId);
@@ -87,7 +90,7 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
 export const clearPollState = function clearPollState(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState((arg0) => {
       ({ pollsByChannelId, pollsByMessageId } = arg0);
       let obj = pollsByChannelId[closure_0];

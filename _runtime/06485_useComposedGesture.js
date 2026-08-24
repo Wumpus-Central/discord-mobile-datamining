@@ -3,11 +3,11 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.useComposedGesture = function useComposedGesture(arg0) {
   const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((item, index) => {
-    if (obj.isComposedGesture(item)) {
-      let handlerTags = item.handlerTags;
+  const flatMapResult = substr.flatMap((handlerTags) => {
+    if (obj.isComposedGesture(handlerTags)) {
+      handlerTags = handlerTags.handlerTags;
     } else {
-      handlerTags = [item.handlerTag];
+      handlerTags = [handlerTags.handlerTag];
     }
     return handlerTags;
   });
@@ -19,8 +19,8 @@ arg5.useComposedGesture = function useComposedGesture(arg0) {
     throw error;
   } else {
     obj = { shouldUseReanimatedDetector: null, dispatchesAnimatedEvents: null };
-    obj[0] = substr.some((item, index) => item.config.shouldUseReanimatedDetector);
-    obj[1] = substr.some((item, index) => item.config.dispatchesAnimatedEvents);
+    obj[0] = substr.some((config) => config.config.shouldUseReanimatedDetector);
+    obj[1] = substr.some((config) => config.config.dispatchesAnimatedEvents);
     if (obj.shouldUseReanimatedDetector) {
       if (obj.dispatchesAnimatedEvents) {
         const _Error = Error;
@@ -32,9 +32,9 @@ arg5.useComposedGesture = function useComposedGesture(arg0) {
     const Reanimated = tmp2(6420).Reanimated;
     let composedEventHandler;
     if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((item, index) => item.detectorCallbacks.reanimatedEventHandler || null));
+      composedEventHandler = Reanimated.useComposedEventHandler(substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
     }
-    const found = substr.filter((item, index) => undefined !== item.detectorCallbacks.animatedEventHandler);
+    const found = substr.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
     let animatedEventHandler;
     if (found.length > 0) {
       animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
@@ -47,6 +47,7 @@ arg5.useComposedGesture = function useComposedGesture(arg0) {
     obj1[0] = function jsEventHandler(arg0, arg1) {
       for (const item10007 of substr) {
         if (item10007.detectorCallbacks.jsEventHandler) {
+          let tmp2 = item10007;
           let detectorCallbacks = tmp.detectorCallbacks;
           let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
         }

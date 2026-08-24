@@ -3,9 +3,7 @@ import assign from "13208_assign.js";
 import ZStream from "13210_ZStream.js";
 import _mod13212 from "metro/13212__.js";
 import assign2 from "13216_assign.js";
-import InflateState from "13218_InflateState.js";
 import _mod13221 from "metro/13221__.js";
-import GZheader from "13222_GZheader.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -83,12 +81,12 @@ class Inflate {
       self.strm.avail_out = 0;
       tmp4Result = require("InflateState");
       inflateInit2Result = tmp4Result.inflateInit2(self.strm, options.windowBits);
-      if (inflateInit2Result !== require("metro/13221__.js").Z_OK) {
+      if (inflateInit2Result !== require("module_13221").Z_OK) {
         tmp19 = globalThis;
         _Error = Error;
         tmp20 = new.target;
         tmp21 = new.target;
-        error = new Error(require("metro/13212__.js")[inflateInit2Result]);
+        error = new Error(require("module_13212")[inflateInit2Result]);
         tmp23 = error;
         throw error;
       } else {
@@ -152,11 +150,11 @@ class Inflate {
         if (true === arg1) {
           tmp5 = closure_0;
           tmp6 = closure_1;
-          Z_NO_FLUSH = require("metro/13221__.js").Z_FINISH;
+          Z_NO_FLUSH = require("module_13221").Z_FINISH;
         } else {
           tmp3 = closure_0;
           tmp4 = closure_1;
-          Z_NO_FLUSH = require("metro/13221__.js").Z_NO_FLUSH;
+          Z_NO_FLUSH = require("module_13221").Z_NO_FLUSH;
         }
         tmp7 = Z_NO_FLUSH;
       }
@@ -172,7 +170,7 @@ class Inflate {
     self = this;
     tmp = closure_0;
     tmp2 = closure_1;
-    if (arg0 === require("metro/13221__.js").Z_OK) {
+    if (arg0 === require("module_13221").Z_OK) {
       str = "string";
       if ("string" === self.options.to) {
         chunks = self.chunks;

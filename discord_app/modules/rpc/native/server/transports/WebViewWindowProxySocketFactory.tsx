@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
+const result = set.fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
 
 export default function _default(logger) {
   logger = logger.logger;
@@ -15,7 +15,7 @@ export default function _default(logger) {
     postClose,
     onSendingToRPCClient(arg0, id) {
       const combined = "Socket Emit: " + id;
-      logger.info(combined, logger(dependencyMap[1])(arg0));
+      logger.info(combined, logger(closure_1_1[1])(arg0));
     }
   });
 };

@@ -1,10 +1,10 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "../ChatInputConstants.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");
 
 export default function useChatInputFloatingWidth(expanded) {
   expanded = expanded.expanded;
@@ -35,7 +35,6 @@ export default function useChatInputFloatingWidth(expanded) {
       num2 = 1;
     }
     const result1 = sharedValue.set(expanded(collapsedWidth[3]).withTiming(num2, num, "respect-motion-settings"));
-    const obj = expanded(collapsedWidth[3]);
   }, items);
   obj = { animatedStyle: expanded(collapsedWidth[2]).useAnimatedStyle(fn) };
   fn = function p() {

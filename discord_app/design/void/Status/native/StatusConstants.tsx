@@ -1,7 +1,7 @@
 // discord_app/design/void/Status/native/StatusConstants.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("design/void/Status/native/StatusConstants.tsx");
+const result = set.fileFinishedImporting("design/void/Status/native/StatusConstants.tsx");
 
 export const STATUS_PADDING = 3;
 export const StatusSizes = { XSMALL: 6, SMALL: 8, REFRESH_MEDIUM_10: 10, MEDIUM: 12, LARGE: 16, XLARGE: 24 };

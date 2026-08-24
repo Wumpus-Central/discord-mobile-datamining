@@ -2,7 +2,6 @@
 import _mod9029 from "09029__.js";
 import _mod9037 from "09037__.js";
 import flattenStyle from "../09030_flattenStyle.js";
-import "emptyFunction";
 import emptyFunction from "../04205_emptyFunction.js";
 
 let obj = {};

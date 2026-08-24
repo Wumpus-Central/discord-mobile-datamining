@@ -1,12 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
-import obj132 from "../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import getSystemLocale from "../../../../../intl/index.native.tsx";
 import GenericHeaderTitle from "../HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 
 const jsx = jsxProd.jsx;
-const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
 
 export default function PressableNavigatorModalIcon(onPress) {
   let goBack = onPress.onPress;
@@ -18,15 +17,15 @@ export default function PressableNavigatorModalIcon(onPress) {
     str = "back";
   }
   let obj = { source: importDefault(tmp6 ? 8496 : 8500), onPress: goBack, accessibilityLabel: null };
-  const intl = getSystemLocale.intl;
+  const intl = tmp5(1236).intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = tmp5(1236).t;
   if ("back" === str) {
     let stringResult = string(t["13/7kX"]);
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: jsx(GenericHeaderTitle.HeaderIconButton, { source: importDefault(tmp6 ? 8496 : 8500), onPress: goBack, accessibilityLabel: null }) };
+  obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
   obj[2] = stringResult;
-  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: jsx(GenericHeaderTitle.HeaderIconButton, { source: importDefault(tmp6 ? 8496 : 8500), onPress: goBack, accessibilityLabel: null }) });
+  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
 };

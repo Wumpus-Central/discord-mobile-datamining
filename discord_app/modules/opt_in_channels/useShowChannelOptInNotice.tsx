@@ -1,11 +1,11 @@
 // discord_app/modules/opt_in_channels/useShowChannelOptInNotice.tsx
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
+import closure_2 from "../../stores/UserGuildSettingsStore.tsx";
 import { NULL_STRING_GUILD_ID } from "../../Constants.tsx";
 import { ChannelFlags } from "../channel/ChannelConstants.tsx";
 import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");
 
 export default function useShowChannelOptInNotice(getGuildId) {
   const _require = getGuildId;
@@ -13,7 +13,7 @@ export default function useShowChannelOptInNotice(getGuildId) {
   if (getGuildId != null) {
     guildId = getGuildId.getGuildId();
   }
-  let optInEnabledForGuild = require("isOptInEnabled.tsx").useOptInEnabledForGuild(null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID);
+  let optInEnabledForGuild = _useOptInEnabledForGuild.useOptInEnabledForGuild(null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID);
   let tmpResult = tmp(589);
   const items = [closure_2];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
@@ -49,5 +49,5 @@ export default function useShowChannelOptInNotice(getGuildId) {
     }
     return optInEnabledForGuild;
   }
-  const obj = useOptInEnabledForGuild;
+  const obj = _useOptInEnabledForGuild;
 };

@@ -1,14 +1,16 @@
 // discord_app/modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
-import obj132Default from "../../../utils/Durations.tsx";
+import set from "../../../../_runtime/00002_set.js";
+import setDefault from "../../../utils/Durations.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
-let obj = { questFetchJitterMs: 5 * obj132Default.Millis.SECOND, questHomeHeroJitterMs: 5 * obj132Default.Millis.SECOND };
+let obj = { questFetchJitterMs: 5 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * setDefault.Millis.SECOND };
+obj = { name: "2026-06-quest-fetch-reconnect-jitter", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null };
-obj[1] = { questFetchJitterMs: 60 * obj132Default.Millis.SECOND, questHomeHeroJitterMs: 60 * obj132Default.Millis.SECOND };
+obj[1] = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = obj132.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
+const obj1 = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
+const result = set.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
 
 export default apexExperiment;
 export const DEFAULT_QUEST_FETCH_JITTER_CONFIG = obj;

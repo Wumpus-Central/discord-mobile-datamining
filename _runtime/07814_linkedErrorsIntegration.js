@@ -7,6 +7,8 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
   if (arg0 === undefined) {
     obj = {};
   }
+  closure_0 = undefined;
+  closure_1 = undefined;
   closure_0 = obj.limit || 5;
   closure_1 = obj.key || "cause";
   obj = {

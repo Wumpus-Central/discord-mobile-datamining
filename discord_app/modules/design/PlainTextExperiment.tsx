@@ -1,11 +1,11 @@
 // discord_app/modules/design/PlainTextExperiment.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-react-native-plain-text", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = obj132.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
+const result = set.fileFinishedImporting("modules/design/PlainTextExperiment.tsx");
 
 export const usePlainTextExperiment = function usePlainTextExperiment(RootThemeContextProvider) {
   return closure_0.useConfig({ location: RootThemeContextProvider }).enabled;

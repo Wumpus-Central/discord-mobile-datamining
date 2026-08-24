@@ -10,7 +10,7 @@ import StageChannelCallListDefault from "StageChannelCallList.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function StageChannelCallBackground(arg0) {
   ({ children, channelId } = arg0);
   let obj = useStageActionBarAnimation;
@@ -24,12 +24,13 @@ function StageChannelCallBackground(arg0) {
 noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");
 
 export default function StageChannelCallView(channel) {
   channel = channel.channel;
+  let obj = { children: null };
   const items = [callback(componentDidMountDefault, { animated: true, barStyle: "light-content" }), ];
-  const obj = { channelId: channel.id, children: callback(StageChannelCallListDefault, { channel }) };
+  obj = { channelId: channel.id, children: callback(StageChannelCallListDefault, { channel }) };
   items[1] = callback(StageChannelCallBackground, obj);
   obj[0] = items;
   return callback2(closure_4, obj);

@@ -5,15 +5,16 @@ import useIOSCompletionStates from "../GuildProgressUtils.tsx";
 import renderCircleDefault from "../../../premium/native/components/ProgressCircle.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { color: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: null };
+createCacheKey = { color: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressCircle.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressCircle.tsx");
 
 export default function GuildProgressCircle(size) {
   let num = size.size;
@@ -22,7 +23,8 @@ export default function GuildProgressCircle(size) {
     num = 32;
   }
   const tmp = callback3();
-  let obj = { style: items, children: null };
+  let obj = { width: num, height: num, borderRadius: num / 2 };
+  obj = { style: items, children: null };
   items = [tmp.wrapper, style, obj];
   obj = { style: items1, size: num, strokeWidth: 4, percent: 100, color: null };
   items1 = [tmp.circle, obj];

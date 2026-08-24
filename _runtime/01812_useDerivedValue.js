@@ -33,8 +33,8 @@ export const useDerivedValue = function useDerivedValue(fn, items) {
     arr2.push(fn.__workletHash);
   }
   if (null === tmp.current) {
-    tmp2(tmp3[2]);
-    const tmp2Result = tmp2(tmp3[3]);
+    let tmp2Result = tmp2(tmp3[2]);
+    tmp2Result = tmp2(tmp3[3]);
     tmp.current = tmp2Result.makeMutable(tmp2Result.initialUpdaterRun(fn));
   }
   const current = tmp.current;

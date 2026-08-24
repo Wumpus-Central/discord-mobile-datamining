@@ -1,7 +1,7 @@
 // discord_app/modules/video_calls/native/components/Constants.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
+const result = set.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
 
 export const PIP_GESTURE_ACTIVE_OFFSET = 2;
 export const SWIPE_TO_CHAT_ACTIVE_OFFSET = 16;

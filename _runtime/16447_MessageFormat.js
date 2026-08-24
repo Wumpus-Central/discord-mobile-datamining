@@ -3,7 +3,6 @@ import extend2 from "16449_extend.js";
 import SyntaxError from "16450_SyntaxError.js";
 import StringFormat from "16452_StringFormat.js";
 import extend from "16448_extend.js";
-import "extend";
 
 class MessageFormat {
   constructor(arg0, arg1, arg2) {

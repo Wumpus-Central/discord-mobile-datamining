@@ -4,21 +4,21 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../age_assurance/AgeAssurance.messages.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function SettingsAgeGroupHeader() {
-  { style: callback3().headerContainer, children: null };
+  let obj = { style: callback3().headerContainer, children: null };
   const callback = React.useCallback(() => {
     const obj = callback(5428);
     obj.openUrl(callback(1993).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
-  let obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.PY4MA0);
   const items = [callback(Text.Text, obj), ];
@@ -30,15 +30,17 @@ function SettingsAgeGroupHeader() {
   return callback2(View, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-const createCacheKey = { gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = { headerContainer: null };
+createCacheKey = { gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
   const node = React.useMemo(() => {
-    callback(10669);
-    const obj = { label: null, settings: null };
+    let obj = callback(10669);
+    obj = { sections: null, ListHeaderComponent: null };
+    obj = { label: null, settings: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback2(2853)["5Mi5TE"]);
     const items = [, ];

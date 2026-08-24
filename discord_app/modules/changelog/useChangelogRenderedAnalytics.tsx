@@ -1,12 +1,12 @@
 // discord_app/modules/changelog/useChangelogRenderedAnalytics.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import _getSystemLocale from "../user_settings/LocaleStore.tsx";
-import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
-import handleUserSettingsProtoStoreChange from "ChangelogStore.tsx";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "../../stores/ReadStateStore.tsx";
+import closure_6 from "ChangelogStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");
 
 export default function useChangelogRenderedAnalytics(arg0) {
   const _require = arg0;
@@ -64,8 +64,8 @@ export default function useChangelogRenderedAnalytics(arg0) {
       tmp = null != stateFromStores1;
     }
     if (tmp) {
-      callback(stateFromStores[9]);
-      const obj = { change_log_id: null, unread_count: null };
+      let obj = callback(stateFromStores[9]);
+      obj = { change_log_id: null, unread_count: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "" + stateFromStores1.date + ":" + stateFromStores1.revision;
       obj[1] = ref2.current;
@@ -78,19 +78,19 @@ export default function useChangelogRenderedAnalytics(arg0) {
     return () => {
       let tmp = closure_1_4;
       if (closure_1_4) {
-        tmp = null != stateFromStores1;
+        tmp = null != closure_1_3;
       }
       if (tmp) {
         tmp = null != current;
       }
       if (tmp) {
-        callback(stateFromStores[9]);
-        const obj = { seconds_open: null, change_log_id: null, unread_count: null };
+        let obj = callback(stateFromStores[9]);
+        obj = { seconds_open: null, change_log_id: null, unread_count: null };
         const _Math = Math;
         const _Date = Date;
         obj[0] = Math.round((Date.now() - current) / 1000);
         const _HermesInternal = HermesInternal;
-        obj[1] = "" + stateFromStores1.date + ":" + stateFromStores1.revision;
+        obj[1] = "" + closure_1_3.date + ":" + closure_1_3.revision;
         obj[2] = closure_1_7.current;
         obj.track(constants.CHANGE_LOG_CLOSED, obj);
         closure_1_5.current = 0;

@@ -1,37 +1,37 @@
 // discord_app/modules/calls/useCanRing.tsx
 import experimentDefault from "../voice_calls/GuildVoiceRingingExperiment.tsx";
 import getChannelRoleSubscriptionStatusDefault from "../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import callConnect from "../../stores/CallStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import recomputeGuild from "../../stores/GuildVerificationStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import sortActivity from "../../stores/PresenceStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../stores/AuthenticationStore.tsx";
+import closure_4 from "../../stores/CallStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../stores/GuildVerificationStore.tsx";
+import closure_8 from "../../stores/PermissionStore.tsx";
+import closure_9 from "../../stores/PresenceStore.tsx";
+import closure_10 from "../../stores/RelationshipStore.tsx";
+import closure_11 from "../../stores/VoiceStateStore.tsx";
 import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-function useCanRingToGuildVoiceChannel(user, useCanRing, stateFromStores) {
+const require = arg1;
+function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStores) {
   const _require = user;
-  let str = useCanRing;
-  if (useCanRing === undefined) {
+  let str = DisconnectedUserRow;
+  if (DisconnectedUserRow === undefined) {
     str = "useCanRingToGuildVoiceChannel";
   }
   importDefault = stateFromStores;
   const items = [closure_8];
-  stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  stateFromStores = _initialize.useStateFromStores(items, () => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
-      tmp2 = stateFromStores(dependencyMap[12])(tmp, closure_1_8);
+      tmp2 = stateFromStores(closure_1_2[12])(tmp, closure_1_8);
     }
     return tmp2;
   });
-  const obj = initialize;
+  const obj = _initialize;
   const items1 = [closure_6, closure_7];
-  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -47,7 +47,8 @@ function useCanRingToGuildVoiceChannel(user, useCanRing, stateFromStores) {
     }
   });
   let id;
-  const obj2 = initialize;
+  const obj2 = _initialize;
+  const tmp4 = importDefault;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
@@ -75,7 +76,7 @@ function useCanRingToGuildVoiceChannel(user, useCanRing, stateFromStores) {
   return enabled;
 }
 ({ ChannelTypes: closure_12, ChannelTypesSets: map1, StatusTypes: closure_14 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/calls/useCanRing.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/useCanRing.tsx");
 
 export const useCanRing = function useCanRing(user, DisconnectedUserRow, selectedVoiceChannelId) {
   const _require = user;
@@ -145,7 +146,8 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
     call = call.getCall(channel.id);
     return null != call && null != call.messageId && !call.isCallUnavailable(channel.id);
   } else if (tmp === tmp2) {
-    const obj = { guildId: null, location: "ring" };
+    let obj = experimentDefault;
+    obj = { guildId: null, location: "ring" };
     obj[0] = channel.guild_id;
     let enabled = obj.getCurrentConfig(obj).enabled;
     voiceState = voiceState.getVoiceState(channel.guild_id, id.getId());

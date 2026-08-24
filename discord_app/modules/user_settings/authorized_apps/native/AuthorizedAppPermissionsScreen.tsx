@@ -4,9 +4,9 @@ import useSettingNavigationRoute from "../../core/native/useSettingNavigationRou
 import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppPermissionsScreen.tsx");
 
 export default function AuthorizedAppPermissionsScreen() {
   let obj = useSettingNavigationRoute;

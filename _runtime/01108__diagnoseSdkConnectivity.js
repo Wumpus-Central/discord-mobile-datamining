@@ -1,9 +1,9 @@
 // _runtime/01108__diagnoseSdkConnectivity.js
-import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+import closure_2 from "00005_asyncGeneratorStep.js";
 
 function _diagnoseSdkConnectivity() {
   const self = this;
-  const tmp = asyncGeneratorStep(function*() {
+  const tmp = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
       HermesBuiltin.throwTypeError();

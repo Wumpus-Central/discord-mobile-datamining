@@ -1,19 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx
 import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
-import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
-import useAudienceRequestToSpeakState from "../../../../stage_channels/useAudienceRequestToSpeakState.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
-import createCommonMessageDefault from "createCommonMessage.tsx";
-import getActiveStageChannelIds from "../../../../stage_channels/StageChannelParticipantStore.tsx";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
+import closure_3 from "../../../../stage_channels/StageChannelParticipantStore.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/PermissionStore.tsx";
 import ME from "../../../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: closure_8, Permissions: c9 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -40,35 +36,36 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === tmp(4981).RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
-  const intl = getSystemLocale.intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
+  const intl = tmp(1236).intl;
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8187)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
-  const intl2 = getSystemLocale.intl;
+  const intl2 = tmp(1236).intl;
   obj[2] = intl2.string(getSystemLocale.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {
       obj1 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
-      const intl3 = getSystemLocale.intl;
+      const intl3 = tmp(1236).intl;
       const obj2 = { handleDelete: null };
       const obj3 = { action: "bindDismissMessage", message: null };
       obj3[1] = message;
       obj2[0] = obj3;
-      obj1[0] = intl3.formatToParts(getSystemLocale.t["qDAX++"], obj2);
-      obj1[1] = combinedDefault.getArticleURL(constants.EPHEMERAL_MESSAGES);
-      const intl4 = getSystemLocale.intl;
-      obj1[2] = intl4.string(getSystemLocale.t.htHOrp);
+      obj1[0] = intl3.formatToParts(tmp(1236).t["qDAX++"], obj2);
+      obj1[1] = tmp6(1993).getArticleURL(constants.EPHEMERAL_MESSAGES);
+      const intl4 = tmp(1236).intl;
+      obj1[2] = intl4.string(tmp(1236).t.htHOrp);
       tmp10 = obj1;
-      const tmp6Result = combinedDefault;
+      const tmp6Result = tmp6(1993);
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(createCommonMessageDefault(roleStyle));
+  const merged = Object.assign(tmp6(8188)(roleStyle));
   return obj;
 };

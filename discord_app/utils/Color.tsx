@@ -1,8 +1,9 @@
 // discord_app/utils/Color.tsx
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_0 from "../../_runtime/metro/00032__slicedToArray.js";
 
 function hslToRgb(alpha) {
   const hue = alpha.hue;
+  closure_0 = undefined;
   const result = alpha.lightness / 255;
   const result1 = alpha.saturation / 255;
   const result2 = (1 - Math.abs(2 * result - 1)) * result1;
@@ -26,7 +27,7 @@ function hslToRgb(alpha) {
   } else {
     items5 = [result2, 0, result3];
   }
-  const mapped = items5.map((item, index) => Math.round(255 * (item + closure_0)));
+  const mapped = items5.map((arg0) => Math.round(255 * (arg0 + closure_0)));
   return { red: mapped[0], green: mapped[1], blue: mapped[2], alpha: alpha.alpha };
 }
 const re2 = /^#[0-9a-f]{3,8}$/i;
@@ -36,7 +37,7 @@ class Color {
   constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
     obj.red = global;
-    obj.green = fn;
+    obj.green = arg1;
     obj.blue = importDefault;
     obj.alpha = importAll;
     return obj;
@@ -86,6 +87,7 @@ Color["parseRgbString"] = function parseRgbString(arg0) {
     obj.blue = 0;
     obj.alpha = 0;
     let parseColorFnStringResult = obj;
+    const tmp2 = Color;
   } else {
     const self = this;
     parseColorFnStringResult = this.parseColorFnString(arg0);
@@ -139,32 +141,33 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
     match = [];
   }
   const tmp = str(match, 3);
-  if (null != tmp[1]) {
+  str = tmp[1];
+  if (null != str) {
     if (null != str2) {
       const parts = str2.split(/\s*[,/\s]\s*/);
-      const mapped = parts.map((item, index) => item.replace(",", "").trim());
-      const found = mapped.filter((item, index) => "" !== item);
-      const mapped1 = found.map((item, index) => {
-        if (obj.test(item)) {
-          if (3 === index) {
+      const mapped = parts.map((str) => str.replace(",", "").trim());
+      const found = mapped.filter((arg0) => "" !== arg0);
+      const mapped1 = found.map((arg0, arg1) => {
+        if (obj.test(arg0)) {
+          if (3 === arg1) {
             const _parseFloat5 = parseFloat;
-            let result = parseFloat(item) / 100;
+            let result = parseFloat(arg0) / 100;
           } else {
             const _parseFloat4 = parseFloat;
-            result = 255 * parseFloat(item) / 100;
+            result = 255 * parseFloat(arg0) / 100;
           }
         } else {
-          if ("h" !== str[index]) {
+          if ("h" !== str[arg1]) {
             const _parseFloat = parseFloat;
-            let parsed = parseFloat(item);
+            let parsed = parseFloat(arg0);
           } else {
-            if (obj2.test(item)) {
+            if (obj2.test(arg0)) {
               const _parseFloat3 = parseFloat;
-              parsed = 360 * parseFloat(item);
+              parsed = 360 * parseFloat(arg0);
             } else {
-              if (obj3.test(item)) {
+              if (obj3.test(arg0)) {
                 const _parseFloat2 = parseFloat;
-                parsed = 57.3 * parseFloat(item);
+                parsed = 57.3 * parseFloat(arg0);
               }
               obj3 = /rad$/;
             }
@@ -195,7 +198,7 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
         if (typeof Color !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = Object.create(Color.prototype);
+        obj = Object.create(tmp3.prototype);
         obj.red = tmp4;
         obj.green = tmp5;
         obj.blue = tmp6;
@@ -269,7 +272,7 @@ prototype["getRelativeLuminance"] = function getRelativeLuminance() {
   }
   return result4 + result6 + 0.0722 * result7;
 };
-let result = require("obj132").fileFinishedImporting("utils/Color.tsx");
+let result = require("set").fileFinishedImporting("utils/Color.tsx");
 
 export default Color;
 export { hslToRgb };

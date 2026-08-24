@@ -4,61 +4,69 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import ThemeDarkIcon from "../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx";
 import ThemeLightIcon from "../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
 import ThemeMidnightIcon from "../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import isSyncedModeThemesEnabled from "../../../client_themes/ClientThemesBackgroundStore.tsx";
-import reset from "../../../client_themes/native/CustomThemeMobileStore.tsx";
-import initialize from "../../SelectivelySyncedUserSettingsStore.tsx";
-import handleThemeChange from "../../ThemeStore.tsx";
-import CHANNEL_SIDEBAR_WIDTH from "../../UnsyncedUserSettingsStore.tsx";
+import closure_6 from "../../../client_themes/ClientThemesBackgroundStore.tsx";
+import closure_7 from "../../../client_themes/native/CustomThemeMobileStore.tsx";
+import closure_8 from "../../SelectivelySyncedUserSettingsStore.tsx";
+import closure_9 from "../../ThemeStore.tsx";
+import closure_10 from "../../UnsyncedUserSettingsStore.tsx";
 import SystemThemeState from "../../ThemeConstants.tsx";
 import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 ({ SystemTheme: unpackModuleId, SystemThemeState: closure_12 } = SystemThemeState);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_24, marginBottom: null };
+createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_24, marginBottom: null };
 let num = 0;
-if (!obj132.isIOS()) {
+if (!set.isIOS()) {
   num = ThemesDefault.space.PX_16;
 }
 createCacheKey = { container: createCacheKey, landscapeContainer: { flexDirection: "row", gap: ThemesDefault.space.PX_16 }, landscapePreview: { flex: 1 }, landscapeSelector: { flex: 1, justifyContent: "center", overflow: "hidden" }, segmentedControlContainer: num, textCentered: null };
-obj132 = { width: "100%", gap: ThemesDefault.space.PX_16, alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
-createCacheKey[4] = obj132;
+set = { width: "100%", gap: ThemesDefault.space.PX_16, alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[4] = set;
 createCacheKey[5] = { textAlign: "center" };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
 let items = [, , , ];
 ({ LIGHT: arr[0], DARKER: arr[1], MIDNIGHT: arr[2], DARK: arr[3] } = ThemeTypes);
-let closure_19 = items.map((item, index) => {
+let closure_19 = items.map((theme) => {
   const internal = ThemesDefault.internal;
-  return internal.resolveSemanticColor(item, ThemesDefault.colors.CARD_SECONDARY_BG);
+  return internal.resolveSemanticColor(theme, ThemesDefault.colors.CARD_SECONDARY_BG);
 });
-let closure_20 = items.map((item, index) => index);
+let closure_20 = items.map((arg0, arg1) => arg1);
+let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
 let closure_21 = createCacheKey.createAnimatedThemedStyles({ backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW }, items);
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_22 = createCacheKey.createAnimatedThemedStyles({ backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE }, items);
+let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_23 = createCacheKey.createAnimatedThemedStyles({ backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG }, items);
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let closure_24 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_25 = createCacheKey.createAnimatedThemedStyles({ backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH }, items);
 createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_26 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
+let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_27 = createCacheKey.createAnimatedThemedStyles({ color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, items);
 createCacheKey = { color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_28 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
+let obj9 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_29 = createCacheKey.createAnimatedThemedStyles({ color: ThemesDefault.colors.TEXT_MUTED }, items);
 createCacheKey = { borderColor: ThemesDefault.colors.BORDER_MUTED };
 let closure_30 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
+let obj11 = { color: ThemesDefault.colors.TEXT_MUTED };
 let closure_31 = createCacheKey.createAnimatedThemedStyles({ borderColor: ThemesDefault.colors.BORDER_STRONG }, items);
 createCacheKey = { borderColor: ThemesDefault.colors.BORDER_NORMAL };
 let closure_32 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
+let obj13 = { borderColor: ThemesDefault.colors.BORDER_STRONG };
 let closure_33 = createCacheKey.createAnimatedThemedStyles({ tintColor: ThemesDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON }, items);
 createCacheKey = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_34 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
+const obj15 = { tintColor: ThemesDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON };
 let closure_35 = createCacheKey.createAnimatedThemedStyles({ tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT }, items);
 createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 let closure_36 = createCacheKey.createAnimatedThemedStyles(createCacheKey, items);
@@ -97,23 +105,29 @@ function ThemePicker(defaultIndex) {
   const onSaveTheme = defaultIndex.onSaveTheme;
   const isRefreshEnabled = defaultIndex.isRefreshEnabled;
   const mode = defaultIndex.mode;
+  let navigation;
+  let analyticsLocations;
+  let first;
+  closure_13 = undefined;
   let callback;
+  let callback2;
   c16 = undefined;
   let stateFromStores;
   c18 = undefined;
   let activeIndex;
   let activeIndex2;
   let memo2;
+  obj1 = undefined;
   let callback1;
-  let callback2;
+  callback2 = undefined;
   ({ deviceHeight, themeSelector, hasMidnightNux } = defaultIndex);
   let tmp = stateFromStores();
   let obj = defaultIndex(isPreview[28]);
-  const navigation = obj.useNavigation();
-  const analyticsLocations = mobileThemes(isPreview[29])(mobileThemes(isPreview[30]).CLIENT_THEMES_THEME_SELECTOR).analyticsLocations;
+  navigation = obj.useNavigation();
+  analyticsLocations = mobileThemes(isPreview[29])(mobileThemes(isPreview[30]).CLIENT_THEMES_THEME_SELECTOR).analyticsLocations;
   obj1 = canGoBack;
   const tmp9 = isSynced(canGoBack.useState(defaultIndex), 2);
-  const first = tmp9[0];
+  first = tmp9[0];
   closure_13 = tmp9[1];
   let obj2 = defaultIndex(isPreview[25]);
   let str = "dark-content";
@@ -139,11 +153,11 @@ function ThemePicker(defaultIndex) {
       }
       return index;
     }
-    index = _undefined2.findIndex((item, index) => item === theme.theme);
+    index = _undefined2.findIndex((arg0) => arg0 === theme.theme);
   }, items);
   tmp3Result = tmp3(tmp4[20]);
   const items1 = [mode];
-  stateFromStores = tmp3Result.useStateFromStores(items1, () => defaultIndex(isPreview[25]).isThemeLight(mode.systemTheme) ? constants.LIGHT : constants.DARKER);
+  stateFromStores = tmp3Result.useStateFromStores(items1, () => defaultIndex(isPreview[25]).isThemeLight(mode.systemTheme) ? closure_13.LIGHT : closure_13.DARKER);
   const tmp7 = mobileThemes(isPreview[29]);
   [tmp22, tmp23] = isSynced(obj1.useState(memo1), 2);
   c18 = tmp23;
@@ -238,9 +252,9 @@ function ThemePicker(defaultIndex) {
   const items2 = [first, "nitro" === themeSelector, activeIndex2, onSaveTheme, mobileThemes, isSynced, analyticsLocations, navigation, mode];
   callback1 = obj1.useCallback(() => {
     if (closure_15) {
-      let tmp3 = mobileThemes[first];
+      let tmp3 = tmp[first];
     } else {
-      tmp3 = mobileThemes[activeIndex2.get(activeIndex2)];
+      tmp3 = tmp[activeIndex2.get(activeIndex2)];
     }
     if (null != mode) {
       const result = defaultIndex(isPreview[27]).handleSaveSyncedModeTheme(tmp3, tmp5, analyticsLocations);
@@ -312,8 +326,8 @@ function ThemePicker(defaultIndex) {
           obj[0] = tmp4;
           obj = { navigation: null };
           obj[0] = closure_10;
-          obj[1] = closure_1_14(mobileThemes(isPreview[39]), obj);
-          return closure_1_14(callback(isPreview[38]).ThemeContextProvider, obj);
+          obj[1] = closure_1_14(closure_1_1(closure_1_2[39]), obj);
+          return closure_1_14(callback(closure_1_2[38]).ThemeContextProvider, obj);
         } else {
           return null;
         }
@@ -322,11 +336,11 @@ function ThemePicker(defaultIndex) {
         const obj = { animated: true, variant: "redesign/heading-18/bold", style: textNormal.textNormal, children: null };
         let stringResult = closure_6;
         if (closure_6 == null) {
-          const intl = callback(isPreview[15]).intl;
-          stringResult = intl.string(callback(isPreview[15]).t.XAS5Pi);
+          const intl = tmp2(tmp3[15]).intl;
+          stringResult = intl.string(tmp2(tmp3[15]).t.XAS5Pi);
         }
         obj[3] = stringResult;
-        return closure_1_14(callback(isPreview[40]).Text, obj);
+        return closure_1_14(callback(closure_1_2[40]).Text, obj);
       },
       headerTitleAlign: "center",
       headerRight: null
@@ -334,17 +348,18 @@ function ThemePicker(defaultIndex) {
     let fn2;
     if (hasSaveButton) {
       fn2 = () => {
-        let obj = closure_0;
-        items = [obj1.textBrand, ];
+        let obj = { hitSlop: 8, disabled: closure_0, onPress: closure_1_23, children: null };
+        obj = closure_0;
+        items = [closure_1_22.textBrand, ];
         if (closure_0) {
           obj = { opacity: 0.4 };
         }
         obj = { animated: true, variant: "text-md/semibold", style: items, children: null };
         items[1] = obj;
-        const intl = defaultIndex(isPreview[15]).intl;
+        const intl = tmp2(tmp3[15]).intl;
         obj[3] = intl.string(defaultIndex(isPreview[15]).t.i4jeWR);
-        obj[3] = callback(defaultIndex(isPreview[40]).Text, obj);
-        return callback(defaultIndex(isPreview[41]).PressableOpacity, obj);
+        obj[3] = c14(defaultIndex(isPreview[40]).Text, obj);
+        return c14(defaultIndex(isPreview[41]).PressableOpacity, obj);
       };
     }
     obj[6] = fn2;
@@ -426,8 +441,7 @@ function ThemePicker(defaultIndex) {
     if (DARKER === lib.LIGHT) {
       str = "dark-content";
     }
-    _undefined(str);
-    tmp4 = DARKER !== lib.DARK || isRefreshEnabled;
+    c14(str);
   }, items9);
   const memo3 = obj1.useMemo(tmp6(tmp4[46]), []);
   const obj7 = { themes: mobileThemes, themeIndex: first, animatedStyles: obj1, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
@@ -488,7 +502,7 @@ function ThemePicker(defaultIndex) {
   obj8[1] = items11;
   return callback2(mobileThemes(isPreview[33]).View, obj8);
 }
-let result = obj132.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceThemePickerScreen.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceThemePickerScreen.tsx");
 
 export default function ConnectedThemePicker(canGoBack) {
   let flag = canGoBack.canGoBack;
@@ -513,6 +527,7 @@ export default function ConnectedThemePicker(canGoBack) {
   userPreset = undefined;
   c3 = undefined;
   let React;
+  let allMobileThemes;
   closure_6 = undefined;
   let memo;
   let memo1;
@@ -524,7 +539,7 @@ export default function ConnectedThemePicker(canGoBack) {
   ({ usingSystemTheme: c1, userPreset } = stateFromStoresObject);
   ({ userTheme: c3, hasCustomTheme: c4, isSynced, isPreview } = stateFromStoresObject);
   const tmp = importDefault(userPreset[19])();
-  const allMobileThemes = mode(userPreset[21]).useAllMobileThemes(mode);
+  allMobileThemes = mode(userPreset[21]).useAllMobileThemes(mode);
   const tmp4 = importDefault(userPreset[22])("SettingsAppearanceThemePickerScreen");
   closure_6 = tmp4;
   const items1 = [userPreset, allMobileThemes];
@@ -534,10 +549,10 @@ export default function ConnectedThemePicker(canGoBack) {
       id = userPreset.id;
     }
     closure_0 = id === mode(userPreset[23]).BackgroundGradientPresetId.EASTER_EGG;
-    return allMobileThemes.filter((item, index) => {
-      let tmp3 = item.type !== callback(userPreset[24]).ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+    return allMobileThemes.filter((type) => {
+      let tmp3 = type.type !== callback(closure_1_2[24]).ClientThemeType.BACKGROUND_GRADIENT_PRESET;
       if (!tmp3) {
-        tmp3 = item.id !== callback(userPreset[23]).BackgroundGradientPresetId.EASTER_EGG;
+        tmp3 = type.id !== callback(closure_1_2[23]).BackgroundGradientPresetId.EASTER_EGG;
       }
       if (!tmp3) {
         tmp3 = callback;
@@ -548,11 +563,11 @@ export default function ConnectedThemePicker(canGoBack) {
   const items2 = [memo, tmp4];
   memo1 = React.useMemo(() => {
     if (closure_6) {
-      items = memo;
+      items = arr;
     } else {
       items = [, ];
-      [arr2[1], arr2[0]] = memo;
-      HermesBuiltin.arraySpread(memo.slice(2), 2);
+      [arr2[1], arr2[0]] = arr;
+      HermesBuiltin.arraySpread(arr.slice(2), 2);
     }
     return items;
   }, items2);
@@ -561,17 +576,16 @@ export default function ConnectedThemePicker(canGoBack) {
     if (null == mode) {
       let found = memo1;
     } else {
-      found = memo1.filter((item, index) => {
-        let theme = item;
-        if ("system" === item.theme) {
+      found = memo1.filter((theme) => {
+        if ("system" === theme.theme) {
           return tmp;
         } else if (closure_0 === closure_1_11.DARK) {
           theme = theme.theme;
-          let isThemeDarkResult = mode(userPreset[25]).isThemeDark(theme);
-          const obj2 = mode(userPreset[25]);
+          let isThemeDarkResult = closure_1_0(closure_1_2[25]).isThemeDark(theme);
+          const obj2 = closure_1_0(closure_1_2[25]);
         } else {
-          isThemeDarkResult = mode(userPreset[25]).isThemeLight(theme.theme);
-          const obj = mode(userPreset[25]);
+          isThemeDarkResult = closure_1_0(closure_1_2[25]).isThemeLight(theme.theme);
+          const obj = closure_1_0(closure_1_2[25]);
         }
       });
     }

@@ -5,13 +5,13 @@ import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.
 import Text from "../../../design/components/Text/native/Text.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import _modDef8575 from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import NUXGuildTemplatesAnalytics from "../../create_guild/native/CreateGuildConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 class OrSeparator {
   constructor() {
     tmp = closure_11();
@@ -32,12 +32,16 @@ class OrSeparator {
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: closure_6, CreateGuildModalStates: error } = NUXGuildTemplatesAnalytics);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-const createCacheKey = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
+createCacheKey = { growSpacing: null, container: null, textInput: null, innerSeparator: null, separator: null, orText: null, header: null, description: null, exampleText: null };
+createCacheKey = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+let obj1 = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg };
+let obj2 = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[3] = { height: 1, flexGrow: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[4] = { paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+let obj3 = { height: 1, flexGrow: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[5] = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_8, textTransform: "uppercase" };
 createCacheKey[6] = { textAlign: "center" };
 createCacheKey[7] = { textAlign: "center", marginTop: 8, marginBottom: 32 };
@@ -45,7 +49,8 @@ createCacheKey[8] = { marginTop: 8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let items = ["https://discord.gg/hTKzmak", "hTKzmak", "https://discord.gg/wumpus-friends"];
 let closure_13 = items[0];
-const result = require("obj132").fileFinishedImporting("modules/accept_invite/native/JoinServer.tsx");
+let obj4 = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_8, textTransform: "uppercase" };
+const result = require("set").fileFinishedImporting("modules/accept_invite/native/JoinServer.tsx");
 
 export default function JoinServer(arg0) {
   ({ onDone, submitting } = arg0);
@@ -55,6 +60,7 @@ export default function JoinServer(arg0) {
   let obj = navigation(1500);
   navigation = obj.useNavigation();
   items = [navigation];
+  obj = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
   obj = { paddingBottom: null };
   const callback = React.useCallback(() => {
@@ -77,7 +83,7 @@ export default function JoinServer(arg0) {
     obj3[3] = intl2.string(tmp4(1236).t.lVvN3A);
     items2[1] = callback(tmp4(4734).Text, obj3);
     obj1[0] = items2;
-    tmp7Result = callback(closure_10, obj1);
+    tmp7Result = tmp7(closure_10, obj1);
   }
   const obj4 = { children: null };
   const items3 = [tmp7Result, , ];
@@ -105,7 +111,7 @@ export default function JoinServer(arg0) {
   });
   items3[2] = callback(navigation(4734).Text, obj6);
   obj4[0] = items3;
-  const items4 = [callback(closure_4, obj4), ];
+  const items4 = [closure_9(closure_4, obj4), ];
   const obj8 = { children: null };
   const items5 = [callback(closure_4, { style: tmp.growSpacing }), , , ];
   const obj10 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
@@ -126,8 +132,8 @@ export default function JoinServer(arg0) {
   obj11[4] = callback;
   items5[3] = callback(navigation(4745).Button, obj11);
   obj8[0] = items5;
-  items4[1] = callback(closure_10, obj8);
+  items4[1] = closure_9(closure_10, obj8);
   obj[2] = items4;
-  return callback(closure_5, obj);
+  return closure_9(closure_5, obj);
 };
 export { OrSeparator };

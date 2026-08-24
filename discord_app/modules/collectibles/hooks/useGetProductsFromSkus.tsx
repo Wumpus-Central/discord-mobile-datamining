@@ -1,19 +1,18 @@
 // discord_app/modules/collectibles/hooks/useGetProductsFromSkus.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import uniqByDefault from "../../../../_runtime/14427_uniqBy.js";
-import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
+import closure_4 from "../CollectiblesCategoryStore.tsx";
 
 noop.useCallback;
-const result = obj132.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/hooks/useGetProductsFromSkus.tsx");
 
 export default function useGetProductsFromSkus() {
   const items = [closure_4];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => products.products);
   const items1 = [stateFromStores];
   return useCallback((arr) => {
-    const mapped = arr.map((item, index) => {
-      const value = closure_0.get(item);
+    const mapped = arr.map((arg0) => {
+      const value = closure_0.get(arg0);
       let productByStoreListingId = value;
       if (null != value) {
         productByStoreListingId = value;
@@ -23,6 +22,6 @@ export default function useGetProductsFromSkus() {
       }
       return productByStoreListingId;
     });
-    return uniqByDefault(mapped.filter((item, index) => null != item), "storeListingId");
+    return closure_1_1(closure_1_2[3])(mapped.filter((arg0) => null != arg0), "storeListingId");
   }, items1);
 };

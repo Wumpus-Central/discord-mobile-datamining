@@ -25,8 +25,8 @@ prototype["isGuildFetching"] = function isGuildFetching(arg0) {
   }
   return tmp2;
 };
-prototype["getGuildOrStatus"] = function getGuildOrStatus(callback) {
-  return dependencyMap[callback];
+prototype["getGuildOrStatus"] = function getGuildOrStatus(arg0) {
+  return dependencyMap[arg0];
 };
 prototype["getVersion"] = function getVersion() {
   return c0;
@@ -46,6 +46,6 @@ const basicGuildStore = new BasicGuildStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
 
 export default basicGuildStore;

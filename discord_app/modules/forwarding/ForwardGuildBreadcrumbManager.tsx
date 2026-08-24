@@ -1,5 +1,5 @@
 // discord_app/modules/forwarding/ForwardGuildBreadcrumbManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
@@ -15,6 +15,7 @@ function fetchForwardReferencedGuilds(message_reference) {
     const guild_id = message_reference.message_reference.guild_id;
     if (null != guild_id) {
       const basicGuild = _fetchBasicGuild.fetchBasicGuild(guild_id);
+      const obj = _fetchBasicGuild;
     }
   }
 }
@@ -31,6 +32,6 @@ class ForwardGuildBreadcrumbManager extends tmp6 {
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
 // ThrowIfThisInitialized (0x7c)
 setupLoadFromMessageManagerHandlersDefault(tmp, fetchForwardReferencedGuilds);
-const result = obj132.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
+const result = set.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
 
 export default tmp;

@@ -1,19 +1,20 @@
 // discord_app/modules/guild_onboarding/native/ProviderConnectionCard.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/ProviderConnectionCard.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ProviderConnectionCard.tsx");
 
 export default function ProviderConnectionCard(connection) {
   connection = connection.connection;
   const guildId = connection.guildId;
   const _location = connection.location;
+  let callback;
   let startConnection;
   const tmp3 = guildId(_location[4])();
-  let callback = tmp3;
+  callback = tmp3;
   let stringResult = null;
   if (null != connection.provider_id) {
     let value = tmp(tmp2[5]).get(connection.provider_id);
@@ -66,9 +67,9 @@ export default function ProviderConnectionCard(connection) {
             } else {
               obj1 = {};
               const obj5 = v0(698);
-              const merged = Object.assign(connection(5042).collectGuildAnalyticsMetadata(v0));
+              const merged = Object.assign(closure_1_0(5042).collectGuildAnalyticsMetadata(v0));
               obj1.connection_type = "provider";
-              const provider_id = connection.provider_id;
+              const provider_id = closure_1_0.provider_id;
               c0 = provider_id;
               if (provider_id == null) {
                 c0 = undefined;
@@ -79,7 +80,7 @@ export default function ProviderConnectionCard(connection) {
               dependencyMap = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = startConnection("Guild Onboarding");
+              obj2[0] = closure_1_4("Guild Onboarding");
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -113,7 +114,7 @@ export default function ProviderConnectionCard(connection) {
           obj = { source: null, style: null, disableColor: true };
           obj[0] = source;
           obj[1] = { width: 32, height: 32 };
-          return jsx(connection(_location[13]).Icon, { source: null, style: null, disableColor: true });
+          return closure_1_6(connection(_location[13]).Icon, obj);
         } else {
           icon = value.icon;
           connection(_location[12]).isThemeDark(closure_3) ? icon.darkPNG : icon.lightPNG;
@@ -121,7 +122,7 @@ export default function ProviderConnectionCard(connection) {
         }
         obj2 = connection(_location[11]);
       } else {
-        return jsx(connection(_location[14]).LinkIcon, { size: "lg", color: "text-subtle" });
+        return closure_1_6(connection(_location[14]).LinkIcon, { size: "lg", color: "text-subtle" });
       }
     }, items1);
     let obj = { displayName: null, description: null, icon: null, isLoading: null, isConnected: null, canConnect: null, onConnect: null };

@@ -1,22 +1,24 @@
 // discord_app/modules/game_profile/native/components/GameProfileSummary.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, Pressable: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { flexDirection: "column" } });
-const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
 
 export default function GameProfileSummary(arg0) {
   ({ game, trackAction } = arg0);
+  let first;
   let callback;
   let first1;
+  closure_4 = undefined;
   const tmp2 = callback(first1.useState(false), 2);
-  const first = tmp2[0];
+  first = tmp2[0];
   callback = tmp2[1];
   const tmp4 = callback(first1.useState(null), 2);
   first1 = tmp4[0];
@@ -56,7 +58,7 @@ export default function GameProfileSummary(arg0) {
     obj[2] = num;
     obj[3] = callback;
     obj[4] = summaryLocalized;
-    const items2 = [callback(trackAction(first[7]).Text, obj), ];
+    const items2 = [closure_6(trackAction(first[7]).Text, obj), ];
     let tmp13Result = null;
     if (first1) {
       obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -64,12 +66,12 @@ export default function GameProfileSummary(arg0) {
       obj[2] = stringResult;
       obj1 = { variant: "text-md/medium", color: "text-brand", children: null };
       obj1[2] = stringResult;
-      obj[3] = callback(trackAction(tmp17[7]).Text, obj1);
-      tmp13Result = callback(closure_5, obj);
+      obj[3] = tmp13(tmp16(tmp17[7]).Text, obj1);
+      tmp13Result = tmp13(closure_5, obj);
     }
     items2[1] = tmp13Result;
     obj[1] = items2;
-    return callback2(closure_4, obj);
+    return closure_7(closure_4, obj);
   }
   tmp = callback2();
 };

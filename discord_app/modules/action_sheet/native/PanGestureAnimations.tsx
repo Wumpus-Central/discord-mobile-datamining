@@ -1,10 +1,11 @@
 // discord_app/modules/action_sheet/native/PanGestureAnimations.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import Button from "../../../design/void/native.tsx";
 import CONFIG_NEVER_ANIMATE_TIMING from "../../../design/animation/reanimated/timing/timing.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
 
-let obj = { duration: 500, easing: Button.STANDARD_EASING };
+let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
+obj = { duration: 500, easing: Button.STANDARD_EASING };
 let closure_4 = { code: "function getSortedByMeasure_PanGestureAnimationsTsx2(array,measure){const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}" };
 function getNearestValue(arg0, arg1) {
   closure_0 = arg1;
@@ -12,7 +13,8 @@ function getNearestValue(arg0, arg1) {
   if (arg2 === undefined) {
     num = 0;
   }
-  let num2 = -1;
+  let num2;
+  num2 = -1;
   if (num >= 0) {
     let num3 = 0;
     if (num > 0) {
@@ -61,11 +63,11 @@ function getNearestValue(arg0, arg1) {
       return num;
     });
     if (0 !== num2) {
-      let found = sorted.find((item, index) => {
+      let found = sorted.find((arg0) => {
         if (num2 < 0) {
-          let tmp2 = closure_0 > item;
+          let tmp2 = closure_0 > arg0;
         } else {
-          tmp2 = closure_0 < item;
+          tmp2 = closure_0 < arg0;
         }
         return tmp2;
       });
@@ -112,7 +114,8 @@ let closure_8 = { code: "function PanGestureAnimationsTsx5(){const{isGestureInPr
 let closure_9 = { code: "function PanGestureAnimationsTsx6(event,success){const{start,translate,snapPositions,velocity,swipeVelocityThreshold,getNearestValue,withPanGestureSpring,withPanGestureTiming,onEnd}=this.__closure;start.set(translate.get());if(snapPositions!=null){var _onEnd;const swipeVelocity=Math.abs(velocity.get())>swipeVelocityThreshold?velocity.get():0;const snapPoint=getNearestValue(snapPositions.get(),translate.get(),swipeVelocity);if(swipeVelocity!==0){translate.set(withPanGestureSpring(snapPoint,velocity.get()));}else{translate.set(withPanGestureTiming(snapPoint));}(_onEnd=onEnd)===null||_onEnd===void 0||_onEnd(event,{success:success,destination:snapPoint,startPosition:start.get()});}}" };
 let closure_10 = { code: "function PanGestureAnimationsTsx7(event){const{start,vertical,lowerBounds,upperBounds,velocity,translate,onChange}=this.__closure;var _onChange;const{velocityY:velocityY,translationY:translationY,velocityX:velocityX,translationX:translationX}=event;let next=start.get()+(vertical?translationY:translationX);if(lowerBounds!=null&&next<lowerBounds){next=lowerBounds;}else if(upperBounds!=null&&next>upperBounds){next=upperBounds;}velocity.set(vertical?velocityY:velocityX);translate.set(next);(_onChange=onChange)===null||_onChange===void 0||_onChange(event,{destination:translate.get(),startPosition:start.get()});}" };
 let closure_11 = { code: "function PanGestureAnimationsTsx8(event){const{start,translate,velocity,isGestureInProgress,onStart}=this.__closure;var _onStart;start.set(translate.get());velocity.set(0);if(isGestureInProgress!=null){isGestureInProgress.set(true);}(_onStart=onStart)===null||_onStart===void 0||_onStart(event,{destination:start.get(),startPosition:start.get()});}" };
-let result = obj132.fileFinishedImporting("modules/action_sheet/native/PanGestureAnimations.tsx");
+const obj1 = { TIMING_CONFIG: obj, withTiming: CONFIG_NEVER_ANIMATE_TIMING.withTiming };
+let result = set.fileFinishedImporting("modules/action_sheet/native/PanGestureAnimations.tsx");
 
 export default function usePanGesture(lowerBounds) {
   lowerBounds = lowerBounds.lowerBounds;
@@ -131,9 +134,11 @@ export default function usePanGesture(lowerBounds) {
     flag = true;
   }
   const isGestureInProgress = lowerBounds.isGestureInProgress;
+  let sharedValue;
+  let sharedValue1;
   obj = lowerBounds(upperBounds[3]);
-  const sharedValue = obj.useSharedValue(0);
-  const sharedValue1 = lowerBounds(upperBounds[3]).useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
+  sharedValue1 = lowerBounds(upperBounds[3]).useSharedValue(0);
   const Gesture = lowerBounds(upperBounds[4]).Gesture;
   const obj2 = lowerBounds(upperBounds[3]);
   class N {

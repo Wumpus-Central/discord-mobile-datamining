@@ -1,26 +1,32 @@
 // discord_app/modules/app_startup/StartupProfiler.tsx
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import obj132 from "../../../_runtime/00002_obj132.js";
 
-let obj = {};
+let obj = { App: "App", AppContainer: "AppContainer", MainNavigator: "MainNavigator", StackNavigator: "StackNavigator", MainTabs: "MainTabs", MainDrawers: "MainDrawers", PrivateChannels: "PrivateChannels", Members: "Members", LeftPanel: "LeftPanel", Guilds: "Guilds", Channels: "Channels", RightPanel: "RightPanel", CenterPanel: "CenterPanel", Channel: "Channel", ChatView: "ChatView", Messages: "Messages" };
+obj = {};
 function setLevels(obj, arg1) {
   for (const key10006 in arg0) {
+    let tmp = key10006;
+    let tmp2 = obj;
     obj[key10006] = arg1;
+    let tmp3 = setLevels;
     let tmp4 = setLevels(arg0[key10006], arg1 + " ");
     continue;
   }
 }
 obj = { [obj.App]: { [obj.AppContainer]: { [obj.MainNavigator]: { [obj.StackNavigator]: { [obj.MainTabs]: { [obj.MainDrawers]: { [obj.LeftPanel]: { [obj.Guilds]: {}, [obj.Channels]: {} }, [obj.RightPanel]: { [obj.Members]: {} }, [obj.CenterPanel]: { [obj.Channel]: { [obj.ChatView]: { [obj.Messages]: {} } } } } } } } } } };
 for (const key10073 in obj) {
+  let tmp5 = key10073;
   obj[key10073] = "";
   let tmp6 = obj[key10073];
+  let tmp7 = tmp6;
   let keys = Object.keys();
   if (keys === undefined) {
     continue;
   } else {
     let tmp3 = keys[tmp];
     while (tmp3 !== undefined) {
+      let tmp9 = tmp3;
       obj[tmp3] = " ";
       let setLevelsResult = setLevels(tmp6[tmp3], "  ");
       continue;
@@ -28,7 +34,7 @@ for (const key10073 in obj) {
   }
   continue;
 }
-const result = require("obj132").fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
+const result = require("set").fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
 
 export default function StartupProfiler(children) {
   const profile = children.profile;
@@ -37,12 +43,12 @@ export default function StartupProfiler(children) {
   obj = {
     id: profile,
     onRender(arg0, arg1, arg2) {
-      profile(dependencyMap[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
+      profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
     },
     children: children.children
   };
   return <Profiler.Profiler id={profile} onRender={function onRender(arg0, arg1, arg2) {
-    profile(dependencyMap[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
-  }}>{children.children}</Profiler.Profiler>;
+    profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
+  }}>{arg0.children}</Profiler.Profiler>;
 };
 export const Profiles = obj;

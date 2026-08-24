@@ -4,16 +4,17 @@ import map from "../../../../design/tokens/native/useToken.tsx";
 import TwinButtons from "../../../../design/components/experimental/native.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = {};
+let obj = { wrapper: null, border: null };
+obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = obj;
-const createCacheKey = {};
+createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderWidth = 1;
 createCacheKey.borderColor = ThemesDefault.colors.BORDER_SUBTLE;
@@ -34,7 +35,7 @@ const memoResult = importAllResult.memo(function VoicePanelVisualEffectViewInner
     tmp5 = token;
   }
   obj[1] = tmp5;
-  const tmp4Result = callback(TwinButtons.BackgroundBlurFill, obj);
+  const tmp4Result = closure_4(TwinButtons.BackgroundBlurFill, obj);
   let tmp7 = tmp4Result;
   if (tmp3) {
     obj = { style: null, children: null };
@@ -42,12 +43,12 @@ const memoResult = importAllResult.memo(function VoicePanelVisualEffectViewInner
     const items = [tmp4Result, ];
     obj1 = { style: null };
     obj1[0] = tmp2.border;
-    items[1] = callback(closure_3, obj1);
+    items[1] = tmp4(closure_3, obj1);
     obj[1] = items;
     tmp7 = callback(closure_3, obj);
   }
   return tmp7;
 });
-const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx");
 
 export const VoicePanelVisualEffectView = memoResult;

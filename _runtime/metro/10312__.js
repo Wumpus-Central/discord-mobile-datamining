@@ -7,7 +7,7 @@ import context from "../10321_context.js";
 import CarouselLayout from "../10322_CarouselLayout.js";
 import { jsx } from "../react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 
 export default noopDefault.forwardRef((defaultIndex, ref) => {
   let obj = useInitProps;

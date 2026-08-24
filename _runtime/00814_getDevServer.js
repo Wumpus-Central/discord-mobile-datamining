@@ -30,12 +30,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -55,8 +55,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -70,13 +70,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -113,8 +113,8 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
           obj[0] = arg1;
           return obj;
         } else {
-          const promise = new Promise((fn) => {
-            closure_0 = fn;
+          const promise = new Promise((arg0) => {
+            closure_0 = arg0;
             try {
               let obj = v3(closure_1_1[0]);
               const stealthXhr = obj.createStealthXhr();
@@ -135,17 +135,17 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
                   stealthXhr.send(JSON.stringify(obj));
                   stealthXhr.onreadystatechange = () => {
                     if (stealthXhr.readyState === callback(closure_2_1[0]).XHR_READYSTATE_DONE) {
-                      if (200 !== stealthXhr.status) {
+                      if (200 !== tmp2.status) {
                         callback(callback);
                       }
                       try {
                         const _JSON = JSON;
-                        const parsed = JSON.parse(stealthXhr.responseText);
+                        const parsed = JSON.parse(tmp2.responseText);
                         const _Array = Array;
                         if (Array.isArray(parsed.stack)) {
-                          callback(parsed.stack);
+                          tmp9(parsed.stack);
                         } else {
-                          callback(callback);
+                          tmp9(callback);
                         }
                       } catch (err) {
                         callback(callback);
@@ -158,10 +158,10 @@ arg5.fetchSourceContext = function fetchSourceContext(c4) {
                 } else {
                   const debug = v3(closure_1_1[1]).debug;
                   debug.error("Could not fetch source context. No dev server URL found.");
-                  fn(closure_0);
+                  arg0(closure_0);
                 }
               } else {
-                fn(closure_0);
+                arg0(closure_0);
               }
             } catch (tmp21) {
               const debug2 = v3(closure_1_1[1]).debug;
@@ -190,6 +190,7 @@ arg5.parseErrorStack = function parseErrorStack(arg0) {
     error = new Error("React Native Devtools not available.");
     throw error;
   }
+  const tmp = require;
 };
 arg5.symbolicateStackTrace = function symbolicateStackTrace(arg0, arg1) {
   if (TurboModuleRegistry.ReactNativeLibraries.Devtools) {
@@ -200,5 +201,6 @@ arg5.symbolicateStackTrace = function symbolicateStackTrace(arg0, arg1) {
     error = new Error("React Native Devtools not available.");
     throw error;
   }
+  const tmp = require;
 };
 arg5.getDevServer = getDevServer;

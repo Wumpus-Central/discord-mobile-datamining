@@ -3,7 +3,7 @@ import getConstantsAll from "../../utils/native/ClientInfoUtils.tsx";
 import importDefaultResult from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
 
 const isMetaQuestResult = importDefaultResult.isMetaQuest();
-const result = require("obj132").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
+const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
   return importDefaultResult.isMetaQuest();

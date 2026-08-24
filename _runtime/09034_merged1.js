@@ -2,7 +2,8 @@
 import colorPropType from "09025_colorPropType.js";
 import emptyFunction from "04205_emptyFunction.js";
 
-const obj = { width: emptyFunction.number, height: emptyFunction.number };
+let obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+obj = { width: emptyFunction.number, height: emptyFunction.number };
 obj[1] = emptyFunction.shape(obj);
 obj[2] = emptyFunction.number;
 obj[3] = emptyFunction.number;

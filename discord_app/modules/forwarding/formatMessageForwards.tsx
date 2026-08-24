@@ -1,27 +1,25 @@
 // discord_app/modules/forwarding/formatMessageForwards.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import resetCache from "../../utils/DateUtils.tsx";
-import computeChannelName from "../channel/useChannelName.tsx";
 import isForwardMessageDefault from "isForwardMessage.tsx";
-import getGuild from "../guild/BasicGuildStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../guild/BasicGuildStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
+import closure_6 from "../../stores/PermissionStore.tsx";
+import closure_7 from "../../stores/RelationshipStore.tsx";
+import closure_8 from "../../stores/UserStore.tsx";
 
-require = fn;
+require = arg1;
 class MessageForward {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     obj.parentMessage = global;
-    obj.messageSnapshot = fn;
+    obj.messageSnapshot = arg1;
     obj.snapshotIndex = importDefault;
     return obj;
   }
 }
-MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, closure_7, arg3, arg4, Image) {
+MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, closure_7, arg3, arg4, maxSettingsForPreset) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = closure_4;
@@ -42,8 +40,8 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
   if (arg4 === undefined) {
     obj2 = closure_5;
   }
-  let obj3 = Image;
-  if (Image === undefined) {
+  let obj3 = maxSettingsForPreset;
+  if (maxSettingsForPreset === undefined) {
     obj3 = closure_3;
   }
   ({ snapshotIndex, parentMessage } = this);
@@ -77,28 +75,29 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           ({ id: obj22[0], icon: obj22[2] } = guild);
           obj1[1] = getAvatarURLDefault.getGuildIconURL(obj2);
           obj1[2] = result;
-          const intl3 = getSystemLocale.intl;
+          const intl3 = tmp3(1236).intl;
           obj3 = { origin: null, timestamp: null };
           obj3[0] = guild.name;
           obj3[1] = result;
-          obj1[3] = intl3.formatToPlainString(getSystemLocale.t["+l04BN"], obj3);
+          obj1[3] = intl3.formatToPlainString(tmp3(1236).t["+l04BN"], obj3);
           obj[1] = obj1;
+          const obj21 = getAvatarURLDefault;
         }
         return obj;
       } else {
         if (obj1.can(channel1.accessPermissions, channel1)) {
           obj4 = { snapshotIndex: null, footerInfo: null };
           obj4[0] = snapshotIndex;
-          const tmp3Result = computeChannelName;
+          const tmp3Result = tmp3(4984);
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj5 = { originLabel: null, timestampLabel: null, accessibilityLabel: null };
           obj5[0] = channelName;
           obj5[1] = result;
-          const intl = getSystemLocale.intl;
+          const intl = tmp3(1236).intl;
           const obj6 = { origin: null, timestamp: null };
           obj6[0] = channelName;
           obj6[1] = result;
-          obj5[2] = intl.formatToPlainString(getSystemLocale.t["+l04BN"], obj6);
+          obj5[2] = intl.formatToPlainString(tmp3(1236).t["+l04BN"], obj6);
           obj4[1] = obj5;
           let obj7 = obj4;
         } else {
@@ -135,17 +134,19 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
       ({ id: obj18[0], icon: obj18[2] } = guild1);
       obj11[1] = getAvatarURLDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
       obj11[2] = result;
-      const intl2 = getSystemLocale.intl;
+      const intl2 = tmp3(1236).intl;
       const obj13 = { origin: null, timestamp: null };
       obj13[0] = guild1.name;
       obj13[1] = result;
-      obj11[3] = intl2.formatToPlainString(getSystemLocale.t["+l04BN"], obj13);
+      obj11[3] = intl2.formatToPlainString(tmp3(1236).t["+l04BN"], obj13);
       obj10[1] = obj11;
+      const obj12 = { id: null, size: 16, icon: null, canAnimate: false };
+      const obj17 = getAvatarURLDefault;
     }
     return obj10;
   }
 };
-let result = require("obj132").fileFinishedImporting("modules/forwarding/formatMessageForwards.tsx");
+let result = require("set").fileFinishedImporting("modules/forwarding/formatMessageForwards.tsx");
 
 export { MessageForward };
 export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForwardForMessage(message) {

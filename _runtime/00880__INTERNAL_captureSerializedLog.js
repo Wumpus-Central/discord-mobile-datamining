@@ -1,13 +1,14 @@
 // _runtime/00880__INTERNAL_captureSerializedLog.js
 import getGlobalSingleton from "00825_getGlobalSingleton.js";
 import createLogContainerEnvelopeItem from "00884_createLogContainerEnvelopeItem.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 function _INTERNAL_captureSerializedLog(closure_0) {
   const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
+  const obj = getGlobalSingleton;
   const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
@@ -33,23 +34,25 @@ function _INTERNAL_flushLogsBuffer(closure_0, value) {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    items = globalSingleton.get(_require);
+    items = globalSingleton.get(closure_0);
+    const obj = getGlobalSingleton;
   }
   if (items == null) {
     items = [];
   }
   if (0 !== items.length) {
-    const options = _require.getOptions();
+    const options = closure_0.getOptions();
     const obj3 = createLogContainerEnvelopeItem;
     ({ _metadata, tunnel } = options);
-    const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, _require.getDsn());
+    const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, closure_0.getDsn());
     const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    const result = globalSingleton1.set(_require, []);
-    _require.emit("flushLogs");
-    _require.sendEnvelope(logEnvelope);
+    const result = globalSingleton1.set(closure_0, []);
+    closure_0.emit("flushLogs");
+    closure_0.sendEnvelope(logEnvelope);
+    const obj4 = getGlobalSingleton;
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -65,6 +68,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
     tmp3 = _INTERNAL_captureSerializedLog;
   }
   beforeSendLog = undefined;
+  obj = undefined;
   obj = undefined;
   let client;
   if (currentScope != null) {
@@ -93,6 +97,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp21 = !id;
       if (id) {
         tmp21 = obj["user.id"] && true;
+        const tmp22 = obj["user.id"] && true;
       }
       if (!tmp21) {
         obj["user.id"] = id;
@@ -100,6 +105,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp23 = !email;
       if (email) {
         tmp23 = obj["user.email"] && true;
+        const tmp24 = obj["user.email"] && true;
       }
       if (!tmp23) {
         obj["user.email"] = email;
@@ -107,6 +113,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp25 = !username;
       if (username) {
         tmp25 = obj["user.name"] && true;
+        const tmp26 = obj["user.name"] && true;
       }
       if (!tmp25) {
         obj["user.name"] = username;
@@ -114,6 +121,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp27 = !release;
       if (release) {
         tmp27 = obj["sentry.release"] && false;
+        const tmp28 = obj["sentry.release"] && false;
       }
       if (!tmp27) {
         obj["sentry.release"] = release;
@@ -121,6 +129,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp29 = !environment;
       if (environment) {
         tmp29 = obj["sentry.environment"] && false;
+        const tmp30 = obj["sentry.environment"] && false;
       }
       if (!tmp29) {
         obj["sentry.environment"] = environment;
@@ -137,6 +146,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp32 = !name;
       if (name) {
         tmp32 = obj["sentry.sdk.name"] && false;
+        const tmp33 = obj["sentry.sdk.name"] && false;
       }
       if (!tmp32) {
         obj["sentry.sdk.name"] = name;
@@ -144,6 +154,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp34 = !version;
       if (version) {
         tmp34 = obj["sentry.sdk.version"] && false;
+        const tmp35 = obj["sentry.sdk.version"] && false;
       }
       if (!tmp34) {
         obj["sentry.sdk.version"] = version;
@@ -156,6 +167,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp37 = !replayId;
       if (replayId) {
         tmp37 = obj["sentry.replay_id"] && false;
+        const tmp38 = obj["sentry.replay_id"] && false;
       }
       if (!tmp37) {
         obj["sentry.replay_id"] = replayId;
@@ -187,8 +199,8 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
         if (length) {
           obj["sentry.message.template"] = __sentry_template_string__;
         }
-        const item = __sentry_template_values__.forEach((item, index) => {
-          obj["sentry.message.parameter." + index] = item;
+        const item = __sentry_template_values__.forEach((arg0, arg1) => {
+          obj["sentry.message.parameter." + arg1] = arg0;
         });
       }
       tmp12Result2 = tmp12(tmp13[6]);
@@ -200,6 +212,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       let tmp44 = !spanId;
       if (spanId) {
         tmp44 = obj["sentry.trace.parent_span_id"] && false;
+        const tmp45 = obj["sentry.trace.parent_span_id"] && false;
       }
       if (!tmp44) {
         obj["sentry.trace.parent_span_id"] = spanId;

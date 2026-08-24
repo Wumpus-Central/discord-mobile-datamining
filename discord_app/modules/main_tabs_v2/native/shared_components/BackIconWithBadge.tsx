@@ -3,15 +3,15 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Button from "../../../../design/void/native.tsx";
 import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
 import ArrowLargeLeftIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import updateGuildUnreadSentinel from "../../../../stores/GuildReadStateStore.tsx";
+import closure_5 from "../../../../stores/GuildReadStateStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 
-require = fn;
+require = arg1;
 function IconWithBadge(includeNotificationsCount) {
   let flag = includeNotificationsCount.includeNotificationsCount;
   if (flag === undefined) {
@@ -20,7 +20,7 @@ function IconWithBadge(includeNotificationsCount) {
   let _require;
   let memo;
   const tmp = callback2();
-  let obj = initialize;
+  let obj = _initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let num = 0;
@@ -36,23 +36,23 @@ function IconWithBadge(includeNotificationsCount) {
   const items1 = [sum];
   memo = React.useMemo(() => {
     if (_undefined < 10) {
-      let BADGE_SIZE = _undefined(dependencyMap[8]).BADGE_SIZE;
+      let BADGE_SIZE = _undefined(closure_1_2[8]).BADGE_SIZE;
     } else {
-      BADGE_SIZE = _undefined(dependencyMap[8]).BADGE_SIZE + 8;
+      BADGE_SIZE = _undefined(closure_1_2[8]).BADGE_SIZE + 8;
     }
     return BADGE_SIZE;
   }, items1);
   const items2 = [sum, memo];
   const memo1 = React.useMemo(() => {
     if (0 !== _undefined) {
-      const BADGE_PADDING = _undefined(dependencyMap[8]).BADGE_PADDING;
+      const BADGE_PADDING = _undefined(closure_1_2[8]).BADGE_PADDING;
       const obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
-      obj[0] = _undefined(dependencyMap[9]).CutoutShape.RoundedRect;
+      obj[0] = _undefined(closure_1_2[9]).CutoutShape.RoundedRect;
       obj[1] = 12 - BADGE_PADDING;
       obj[2] = 16 - BADGE_PADDING;
       obj[3] = memo + 2 * BADGE_PADDING;
-      obj[4] = _undefined(dependencyMap[8]).BADGE_SIZE + 2 * BADGE_PADDING;
-      obj[5] = (_undefined(dependencyMap[8]).BADGE_SIZE + 2 * BADGE_PADDING) / 2;
+      obj[4] = _undefined(closure_1_2[8]).BADGE_SIZE + 2 * BADGE_PADDING;
+      obj[5] = (_undefined(closure_1_2[8]).BADGE_SIZE + 2 * BADGE_PADDING) / 2;
       return obj;
     }
   }, items2);
@@ -62,7 +62,9 @@ function IconWithBadge(includeNotificationsCount) {
   }
   obj = { style: obj, children: null };
   obj1 = { style: tmp.backIcon, children: null };
-  tmp2Result = PlatformTypes;
+  const tmp11 = closure_7;
+  tmp2Result = _PlatformTypes;
+  const tmp5 = memo;
   if (null != memo1) {
     const items3 = [memo1];
     let items4 = items3;
@@ -70,26 +72,27 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const tmp5Result = memo(8402);
-  const items5 = [callback(tmp5Result, { cutouts: items4, children: callback(includeNotificationsCount.Icon, obj3) }), ];
+  const items5 = [closure_6(tmp5Result, { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, obj3) }), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.badgeWrapper;
     const obj5 = { value: null, maxValue: 99 };
     obj5[0] = sum;
-    obj4[1] = callback(tmp2(1297).Badge, obj5);
-    tmp9Result = callback(View, obj4);
+    obj4[1] = tmp9(tmp2(1297).Badge, obj5);
+    tmp9Result = tmp9(tmp10, obj4);
   }
   items5[1] = tmp9Result;
   obj1[1] = items5;
-  obj[1] = callback2(View, obj1);
-  return callback(View, obj);
+  obj[1] = tmp11(View, obj1);
+  return closure_6(View, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: null };
+createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 createCacheKey[2] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/BackIconWithBadge.tsx");
 
 export const BACK_ICON_WITH_BADGE_HIT_SLOP = { top: 8, bottom: 8, left: 8, right: 8 };
 export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navigation) {
@@ -107,7 +110,7 @@ export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navi
     obj[1] = tmp3(6368).XSmallIcon;
     tmp5 = obj;
   }
-  return callback(IconWithBadge, tmp5);
+  return closure_6(IconWithBadge, tmp5);
 };
 export const LeftBackIconWithBadge = function LeftBackIconWithBadge(includeNotificationsCount) {
   let flag = includeNotificationsCount.includeNotificationsCount;
@@ -128,5 +131,5 @@ export const CloseIconWithBadgeOnSide = function CloseIconWithBadgeOnSide(count)
   }
   items[1] = tmp3Result;
   obj[1] = items;
-  return callback2(View, obj);
+  return closure_7(View, obj);
 };

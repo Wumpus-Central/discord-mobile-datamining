@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/api/Shopfront.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _search() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -119,7 +119,7 @@ function _search() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/collectibles/api/Shopfront.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/api/Shopfront.tsx");
 
 export const search = function search() {
   const self = this;

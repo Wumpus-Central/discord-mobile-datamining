@@ -4,19 +4,19 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import ComponentDispatcher from "../utils/ComponentDispatchUtils.tsx";
 import SidebarType from "../modules/sidebar/SidebarActionTypes.tsx";
-import getHash from "../modules/experiments/ExperimentStore.tsx";
-import handleReaction from "../modules/search/SearchMessageStore.tsx";
-import ensureGuildLoaded from "ChannelStore.tsx";
-import createGuildRecordFromRust from "GuildStore.tsx";
-import getUncachedChannelPermissions from "PermissionStore.tsx";
-import handleConnectionOpen from "SelectedChannelStore.tsx";
-import handleConnectionOpen2 from "SelectedGuildStore.tsx";
-import mergeGuildAvatar from "UserStore.tsx";
+import closure_3 from "../modules/experiments/ExperimentStore.tsx";
+import closure_4 from "../modules/search/SearchMessageStore.tsx";
+import closure_5 from "ChannelStore.tsx";
+import closure_6 from "GuildStore.tsx";
+import closure_7 from "PermissionStore.tsx";
+import closure_8 from "SelectedChannelStore.tsx";
+import closure_9 from "SelectedGuildStore.tsx";
+import closure_10 from "UserStore.tsx";
 import ME from "../Constants.tsx";
-import { Permissions } from "../../discord_common/js/shared/Constants.tsx";
 import set from "../modules/channel/ChannelConstants.tsx";
+import { Permissions } from "../../discord_common/js/shared/Constants.tsx";
 
-require = fn;
+require = arg1;
 function handlePermissionsChange() {
   let flag = false;
   let flag2 = false;
@@ -24,16 +24,24 @@ function handlePermissionsChange() {
   if (keys !== undefined) {
     flag2 = flag;
     while (keys[tmp] !== undefined) {
+      let tmp13 = tmp6;
+      let tmp14 = dependencyMap;
       let tmp15 = dependencyMap[tmp6];
+      let tmp16 = require;
+      let tmp17 = dependencyMap;
       if (tmp15.type === SidebarType.SidebarType.VIEW_THREAD) {
+        let tmp7 = channel;
         channel = channel.getChannel(tmp15.channelId);
         let canResult = null != channel;
         if (canResult) {
+          let tmp10 = closure_7;
+          let tmp11 = Permissions;
           canResult = closure_7.can(Permissions.VIEW_CHANNEL, channel);
         }
         if (canResult) {
           continue;
         } else {
+          let tmp12 = dependencyMap;
           delete tmp2[tmp3];
           flag = true;
           continue;
@@ -57,7 +65,7 @@ function setIsSearchSidebarOpen() {
   }
 }
 ({ ChannelSections: unpackModuleId, ComponentActions: closure_12 } = ME);
-({ isStaticChannelRoute: map1, buildGuildStaticChannelId: closure_14 } = require("set"));
+({ isStaticChannelRoute: map1, buildGuildStaticChannelId: closure_14 } = set);
 let c16 = false;
 let c17 = false;
 let c18 = false;
@@ -134,7 +142,7 @@ prototype["getSection"] = function getSection(arg0, arg1) {
     } else if (c16) {
       MEMBERS = constants.MEMBERS;
     } else {
-      MEMBERS = c18 ? constants.CONVERSATIONS : constants.NONE;
+      MEMBERS = c18 ? tmp15.CONVERSATIONS : tmp15.NONE;
     }
   }
 };
@@ -185,7 +193,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== SidebarType.SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(4972).SidebarType.VIEW_CHANNEL) {
           channelId = null;
         }
         tmp9 = channelId;
@@ -216,7 +224,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== SidebarType.SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(4972).SidebarType.VIEW_CHANNEL) {
           let tmp12 = null;
         }
         tmp9 = tmp12;
@@ -674,9 +682,13 @@ const channelSectionStore = new ChannelSectionStore(dispatcherDefault, {
       if (keys !== undefined) {
         flag2 = flag;
         while (keys[tmp] !== undefined) {
+          let tmp16 = tmp11;
+          let tmp17 = dependencyMap;
           let tmp18 = dependencyMap[tmp11];
           let tmp14 = null != tmp18;
           if (tmp14) {
+            let tmp12 = require;
+            let tmp13 = dependencyMap;
             tmp14 = tmp18.type === SidebarType.SidebarType.VIEW_CHANNEL;
           }
           if (tmp14) {
@@ -685,6 +697,7 @@ const channelSectionStore = new ChannelSectionStore(dispatcherDefault, {
           if (!tmp14) {
             continue;
           } else {
+            let tmp15 = dependencyMap;
             delete tmp4[tmp5];
             flag = true;
             continue;
@@ -694,6 +707,7 @@ const channelSectionStore = new ChannelSectionStore(dispatcherDefault, {
       }
       return flag2;
     }
+    const tmp6 = dependencyMap;
   },
   CHANNEL_SELECT: function handleChannelSelect() {
     if (tmp) {
@@ -741,7 +755,7 @@ const channelSectionStore = new ChannelSectionStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("obj132").fileFinishedImporting("stores/ChannelSectionStore.tsx");
+const result = set.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 
 export default channelSectionStore;
 export const MESSAGE_REQUESTS_BASE_CHANNEL_ID = "message_requests";

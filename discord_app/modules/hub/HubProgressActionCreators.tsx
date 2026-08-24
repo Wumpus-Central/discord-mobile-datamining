@@ -1,10 +1,11 @@
 // discord_app/modules/hub/HubProgressActionCreators.tsx
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
 import { HUB_PROGRESS_STEP_ORDER } from "HubProgressBarConstants.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
+import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
 export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, JOIN_GUILD) {
   if (null != guildId) {
@@ -19,10 +20,14 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
       const result = items(1374).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
-          let obj = callback(dependencyMap[4]);
+          let tmp = item10008;
+          let tmp2 = callback;
+          let tmp3 = closure_1_1;
+          let obj = callback(closure_1_1[4]);
           if (!obj.hasFlag(arg0.hubProgress, item10008)) {
-            let tmp2Result = callback(dependencyMap[4]);
-            arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, item10008);
+            let tmp2Result = tmp2(tmp3[4]);
+            let tmp4 = item10008;
+            arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, tmp);
             flag = true;
           }
           continue;
@@ -35,17 +40,21 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
 };
 export const skipHubProgress = function skipHubProgress(id) {
   const _require = HUB_PROGRESS_STEP_ORDER;
-  const result = require("../user_settings/UserSettingsProtoActionCreators.tsx").updateUserGuildSettings(id, (hubProgress) => {
+  const result = _updateUserGuildSettings.updateUserGuildSettings(id, (hubProgress) => {
     let flag = false;
     for (const item10008 of closure_0) {
-      let obj = callback(dependencyMap[4]);
+      let tmp = item10008;
+      let tmp2 = callback;
+      let tmp3 = closure_1_1;
+      let obj = callback(closure_1_1[4]);
       if (!obj.hasFlag(arg0.hubProgress, item10008)) {
-        let tmp2Result = callback(dependencyMap[4]);
-        arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, item10008);
+        let tmp2Result = tmp2(tmp3[4]);
+        let tmp4 = item10008;
+        arg0.hubProgress = tmp2Result.addFlag(arg0.hubProgress, tmp);
         flag = true;
       }
       continue;
     }
     return flag;
-  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

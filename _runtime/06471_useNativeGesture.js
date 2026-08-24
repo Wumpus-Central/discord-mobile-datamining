@@ -12,5 +12,6 @@ arg5.useNativeGesture = function useNativeGesture(gestureHandlerProps) {
     tmp = closure_2;
   }
   const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp);
+  const obj = isGestureEnabled;
   return useGesture.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
 };

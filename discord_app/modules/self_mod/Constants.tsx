@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/Constants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/self_mod/Constants.tsx");
+const result = set.fileFinishedImporting("modules/self_mod/Constants.tsx");
 
 export const LOCATION_CONTEXT_MOBILE = "SAFETY_WARNING_BANNER_MOBILE";
 export const LOCATION_CONTEXT_WEB = "SAFETY_WARNING_BANNER_WEB";

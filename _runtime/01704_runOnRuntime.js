@@ -12,23 +12,23 @@ function runOnRuntime(arg0, arg1) {
   closure_1 = arg1;
   return globalThis._WORKLET ? (() => {
     const items = [...arguments];
-    callback(dependencyMap[2]);
+    let obj = callback(closure_1_2[2]);
     const fn = function u() {
       closure_1_1(...items);
     };
-    const obj = { worklet: callback, args: items };
+    obj = { worklet: callback, args: items };
     fn.__closure = obj;
     fn.__workletHash = 1376644884193;
     fn.__initData = closure_1_4;
     return closure_0._scheduleOnRuntime(items, obj.makeShareableCloneOnUIRecursive(fn));
   }) : (() => {
     const items = [...arguments];
-    const ReanimatedModule = callback(dependencyMap[1]).ReanimatedModule;
-    callback(dependencyMap[2]);
+    const ReanimatedModule = callback(closure_1_2[1]).ReanimatedModule;
+    let obj = callback(closure_1_2[2]);
     const fn = function l() {
       closure_1_1(...items);
     };
-    const obj = { worklet: callback, args: items };
+    obj = { worklet: callback, args: items };
     fn.__closure = obj;
     fn.__workletHash = 10918069222950;
     fn.__initData = closure_1_5;
@@ -42,20 +42,20 @@ runOnRuntime.__initData = { code: "function runOnRuntime_Pnpm_runtimesTs2(workle
 export const createWorkletRuntime = function createWorkletRuntime(arg0, initializer) {
   closure_0 = initializer;
   const ReanimatedModule = __reanimatedLoggerConfig(1662).ReanimatedModule;
-  __reanimatedLoggerConfig(1684);
+  let obj = __reanimatedLoggerConfig(1684);
   const fn = function l() {
-    const result = __reanimatedLoggerConfig(dependencyMap[3]).registerReanimatedError();
-    const obj = __reanimatedLoggerConfig(dependencyMap[3]);
-    __reanimatedLoggerConfig(dependencyMap[4]).registerLoggerConfig(__reanimatedLoggerConfig);
-    const obj2 = __reanimatedLoggerConfig(dependencyMap[4]);
-    __reanimatedLoggerConfig(dependencyMap[5]).setupCallGuard();
-    const obj3 = __reanimatedLoggerConfig(dependencyMap[5]);
-    __reanimatedLoggerConfig(dependencyMap[5]).setupConsole();
+    const result = __reanimatedLoggerConfig(closure_1_2[3]).registerReanimatedError();
+    const obj = __reanimatedLoggerConfig(closure_1_2[3]);
+    __reanimatedLoggerConfig(closure_1_2[4]).registerLoggerConfig(__reanimatedLoggerConfig);
+    const obj2 = __reanimatedLoggerConfig(closure_1_2[4]);
+    __reanimatedLoggerConfig(closure_1_2[5]).setupCallGuard();
+    const obj3 = __reanimatedLoggerConfig(closure_1_2[5]);
+    __reanimatedLoggerConfig(closure_1_2[5]).setupConsole();
     if (initializer != null) {
       initializer();
     }
   };
-  let obj = { registerReanimatedError: __reanimatedLoggerConfig(1665).registerReanimatedError, registerLoggerConfig: __reanimatedLoggerConfig(1658).registerLoggerConfig, config: globalThis.__reanimatedLoggerConfig, setupCallGuard: __reanimatedLoggerConfig(1656).setupCallGuard, setupConsole: __reanimatedLoggerConfig(1656).setupConsole, initializer };
+  obj = { registerReanimatedError: __reanimatedLoggerConfig(1665).registerReanimatedError, registerLoggerConfig: __reanimatedLoggerConfig(1658).registerLoggerConfig, config: globalThis.__reanimatedLoggerConfig, setupCallGuard: __reanimatedLoggerConfig(1656).setupCallGuard, setupConsole: __reanimatedLoggerConfig(1656).setupConsole, initializer };
   fn.__closure = obj;
   fn.__workletHash = 8531807001072;
   fn.__initData = closure_3;

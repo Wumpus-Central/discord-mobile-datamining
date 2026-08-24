@@ -15,12 +15,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -40,8 +40,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -55,13 +55,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -86,7 +86,7 @@ arg5.mobileReplayIntegration = () => {
   function updateCachedReplayId(arg0, arg1, arg2, arg3) {
     closure_1 = arg0;
   }
-  let obj = isHermesEnabled;
+  let obj = _isHermesEnabled;
   if (obj.isExpoGo()) {
     let debug = tmp2(817).debug;
     let _HermesInternal = HermesInternal;
@@ -112,7 +112,7 @@ arg5.mobileReplayIntegration = () => {
       obj[0] = MobileReplay;
       obj[1] = function setup(on) {
         if (obj.hasHooks(on)) {
-          let NATIVE = callback(_null[2]).NATIVE;
+          let NATIVE = tmp(tmp2[2]).NATIVE;
           let currentReplayId = NATIVE.getCurrentReplayId();
           on.on("createDsc", (replay_id) => {
             if (!replay_id.replay_id) {
@@ -145,9 +145,8 @@ arg5.mobileReplayIntegration = () => {
               attributes.attributes.replay_id = tmp;
             }
           });
-          on.on("beforeAddBreadcrumb", callback(_null[5]).enrichXhrBreadcrumbsForMobileReplay);
+          on.on("beforeAddBreadcrumb", tmp(tmp2[5]).enrichXhrBreadcrumbsForMobileReplay);
         }
-        obj = callback(_null[4]);
       };
       obj[2] = function processEvent(arg0, arg1) {
         closure_0 = arg0;
@@ -195,7 +194,7 @@ arg5.mobileReplayIntegration = () => {
                     if (closure_1_0.exception.values.length > 0) {
                       if (closure_1_0.beforeErrorSampling) {
                         c3 = 1;
-                        if (false === closure_1_0.beforeErrorSampling(closure_1_0, closure_1_1)) {
+                        if (false === obj7.beforeErrorSampling(closure_1_0, closure_1_1)) {
                           const debug5 = lib(817).debug;
                           const _HermesInternal5 = HermesInternal;
                           debug5.log("[Sentry] " + closure_2_3 + " not sent; beforeErrorSampling conditions not met for event " + closure_1_0.event_id + ".");
@@ -208,6 +207,7 @@ arg5.mobileReplayIntegration = () => {
                           c3 = 0;
                         }
                       }
+                      obj7 = closure_1_0;
                     }
                   }
                   c5 = 3;
@@ -246,6 +246,7 @@ arg5.mobileReplayIntegration = () => {
                   obj4[0] = lib;
                   lib.contexts.replay = Object.assign(Object.assign({}, lib.contexts.replay), obj4);
                   c5 = 3;
+                  const tmp46 = lib;
                 } else {
                   const NATIVE = lib(1001).NATIVE;
                   dependencyMap = NATIVE.getCurrentReplayId();
@@ -270,6 +271,7 @@ arg5.mobileReplayIntegration = () => {
                 const obj5 = { replay_id: null };
                 obj5[0] = dependencyMap;
                 lib.contexts.replay = Object.assign(Object.assign({}, lib.contexts.replay), obj5);
+                const tmp30 = lib;
               }
               const NATIVE2 = lib(1001).NATIVE;
               isHardCrashResult = lib(1013).isHardCrash(closure_1_0);

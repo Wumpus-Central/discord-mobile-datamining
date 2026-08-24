@@ -1,9 +1,9 @@
 // discord_app/actions/RTCLatencyTestActionCreators.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 
-const result = obj132.fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
 
 export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(arg0) {
   const HTTP = sendRequest.HTTP;
@@ -11,6 +11,7 @@ export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(ar
   return HTTP.get(obj);
 };
 export const completeRTCLatencyTest = function completeRTCLatencyTest(latencyRankedRegions, mapped) {
-  const obj = { type: "RTC_LATENCY_TEST_COMPLETE", latencyRankedRegions, geoRankedRegions: mapped };
+  let obj = dispatcherDefault;
+  obj = { type: "RTC_LATENCY_TEST_COMPLETE", latencyRankedRegions, geoRankedRegions: mapped };
   obj.dispatch(obj);
 };

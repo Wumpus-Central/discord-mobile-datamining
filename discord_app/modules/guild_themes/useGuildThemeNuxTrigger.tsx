@@ -1,10 +1,10 @@
 // discord_app/modules/guild_themes/useGuildThemeNuxTrigger.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
 import { DismissibleContentGroupName as closure_4 } from "../dismissible_content/DismissibleContentConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
   const _require = guildId;
@@ -48,7 +48,7 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
                 }
               }
             }));
-            resolved.catch((error) => {
+            resolved.catch(() => {
               closure_5.current = false;
             });
           }, 2000);

@@ -3,8 +3,8 @@ import useIsNewMemberDefault from "../guild_onboarding_home/useIsNewMember.tsx";
 import useCanSeeEventsInChannelListDefault from "../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
 import useHasAllocateBoostPermissionDefault from "../premium/powerups/hooks/useHasAllocateBoostPermission.tsx";
 import useTotalPossibleBoostCountDefault from "../premium/powerups/hooks/useTotalPossibleBoostCount.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import handleSettingsLoadSuccess from "../guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx";
 import { ChannelListGuildActionRow } from "GuildSidebarConstants.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
@@ -23,53 +23,54 @@ import { apexExperiment } from "../premium/powerups/experiments/MobileBoostProgr
 import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 import { vibegrationsAppIdFromTopic } from "../vibegrations/lib/VibegrationsUtils.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
 
 export default function useGuildActionRows(id) {
   const _require = id;
   const tmp2 = useCanSeeEventsInChannelListDefault(id.id);
   const tmp3 = _require;
-  let canReviewGuildMemberApplications = require("../guild_member_verification/canReviewGuildMemberApplications.tsx").useCanReviewGuildMemberApplications(id.id);
-  const obj = canReviewGuildMemberApplications;
-  const showRoleSubscriptionsInChannelList = require("../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx").useShowRoleSubscriptionsInChannelList(id.id);
-  const obj2 = computeCanEveryoneInGuildSeeRoleSubscriptions;
-  const guildShopVisibleInGuild = require("../creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx").useGuildShopVisibleInGuild(id);
-  const obj3 = useGuildShopVisibleInGuild;
-  const result = require("../slayer_storefront/SlayerStorefrontUtils.tsx").hasSocialLayerStorefront(id);
-  const obj4 = getPrice;
-  const canSeeOnboardingHome = require("../guild_onboarding_home/OnboardingHomeUtils.tsx").useCanSeeOnboardingHome(id.id);
-  const obj5 = useCanSeeOnboardingHome;
+  let canReviewGuildMemberApplications = _canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(id.id);
+  const obj = _canReviewGuildMemberApplications;
+  const showRoleSubscriptionsInChannelList = _computeCanEveryoneInGuildSeeRoleSubscriptions.useShowRoleSubscriptionsInChannelList(id.id);
+  const obj2 = _computeCanEveryoneInGuildSeeRoleSubscriptions;
+  const guildShopVisibleInGuild = _useGuildShopVisibleInGuild.useGuildShopVisibleInGuild(id);
+  const obj3 = _useGuildShopVisibleInGuild;
+  const result = _getPrice.hasSocialLayerStorefront(id);
+  const obj4 = _getPrice;
+  const canSeeOnboardingHome = _useCanSeeOnboardingHome.useCanSeeOnboardingHome(id.id);
+  const obj5 = _useCanSeeOnboardingHome;
   const items = [closure_4];
   const items1 = [id.id];
-  const stateFromStores = require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_4.getNewMemberActions(id.id), items1);
-  const obj6 = defaultAreStatesEqual;
-  const canManageVibegrations = require("../vibegrations/lib/VibegrationsUtils.tsx").useCanManageVibegrations(id, "useGuildActionRows");
-  const obj7 = vibegrationsAppIdFromTopic;
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_4.getNewMemberActions(id.id), items1);
+  const obj6 = _defaultAreStatesEqual;
+  const canManageVibegrations = _vibegrationsAppIdFromTopic.useCanManageVibegrations(id, "useGuildActionRows");
+  const obj7 = _vibegrationsAppIdFromTopic;
   const tmp10 = useIsNewMemberDefault(id.id);
-  const allActionsCompleted = require("../guild_onboarding_home/MemberActionUtils.tsx").useAllActionsCompleted(id.id);
-  const obj8 = useMemberActionsForChannel;
-  const canAccessMemberSafetyPage = require("../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx").useCanAccessMemberSafetyPage(id.id);
-  const obj9 = getContextForPermission;
+  const allActionsCompleted = _useMemberActionsForChannel.useAllActionsCompleted(id.id);
+  const obj8 = _useMemberActionsForChannel;
+  const canAccessMemberSafetyPage = _getContextForPermission.useCanAccessMemberSafetyPage(id.id);
+  const obj9 = _getContextForPermission;
   const features = id.features;
-  const canUseGuildSpace = require("../guild_space/canUseGuildSpace.tsx").useCanUseGuildSpace(id, "useGuildActionRows");
+  const canUseGuildSpace = _isGuildSpaceAdmin.useCanUseGuildSpace(id, "useGuildActionRows");
   const hasItem = features.has(GuildFeatures.HUB);
   ({ features: features2, features: features3 } = id);
   const hasItem1 = features2.has(GuildFeatures.COMMUNITY);
   const hasItem2 = features3.has(GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-  const obj10 = isGuildSpaceAdmin;
+  const obj10 = _isGuildSpaceAdmin;
+  const tmp14 = GuildFeatures;
   const tmp18 = useHasAllocateBoostPermissionDefault(id.id);
-  const mobileBoostProgressBarEnabled = require("../premium/powerups/experiments/MobileBoostProgressBarExperiment.tsx").useMobileBoostProgressBarEnabled("useGuildActionRows");
-  const obj11 = apexExperiment;
+  const mobileBoostProgressBarEnabled = _apexExperiment.useMobileBoostProgressBarEnabled("useGuildActionRows");
+  const obj11 = _apexExperiment;
   const tmp20 = useTotalPossibleBoostCountDefault(id);
-  const isGuildOfficialMessagesEnabled = require("../messages/GuildOfficialMessageUtils.tsx").useIsGuildOfficialMessagesEnabled(id.id, "useGuildActionRows");
-  const obj12 = useCanManageGuildOfficialMessages;
-  const gameServerEnabled = require("../game_server/GameServerExperiment.tsx").useGameServerEnabled(id.id, "useGuildActionRows");
+  const isGuildOfficialMessagesEnabled = _useCanManageGuildOfficialMessages.useIsGuildOfficialMessagesEnabled(id.id, "useGuildActionRows");
+  const obj12 = _useCanManageGuildOfficialMessages;
+  const gameServerEnabled = _experiment.useGameServerEnabled(id.id, "useGuildActionRows");
   const features4 = id.features;
   const hasItem3 = features4.has(GuildFeatures.GAME_SERVERS);
-  const obj13 = experiment;
-  const isGameServerTabAlwaysOnEnabled = require("../game_server/experiments/GameServerTabAlwaysOnExperiment.tsx").useIsGameServerTabAlwaysOnEnabled("useGuildActionRows");
-  useSelectedDismissibleContent;
+  const obj13 = _experiment;
+  const isGameServerTabAlwaysOnEnabled = _useIsGameServerTabAlwaysOnEnabled.useIsGameServerTabAlwaysOnEnabled("useGuildActionRows");
+  _useSelectedDismissibleContent;
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
@@ -117,7 +118,7 @@ export default function useGuildActionRows(id) {
               }
               if (canReviewGuildMemberApplications) {
                 const features5 = id.features;
-                canReviewGuildMemberApplications = features5.has(GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+                canReviewGuildMemberApplications = features5.has(tmp14.MEMBER_VERIFICATION_MANUAL_APPROVAL);
               }
               if (canReviewGuildMemberApplications) {
                 items3.push(ChannelListGuildActionRow.GUILD_MOD_DASH_MEMBER_SAFETY);
@@ -153,5 +154,4 @@ export default function useGuildActionRows(id) {
     }
   }
   items2 = [];
-  const obj14 = useIsGameServerTabAlwaysOnEnabled;
 };

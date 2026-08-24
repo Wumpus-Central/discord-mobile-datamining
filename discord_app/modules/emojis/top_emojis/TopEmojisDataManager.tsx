@@ -1,10 +1,10 @@
 // discord_app/modules/emojis/top_emojis/TopEmojisDataManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import maybeFetchTopEmojisByGuild from "TopEmojisUtils.tsx";
-import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
+import closure_2 from "../../../stores/SelectedGuildStore.tsx";
 import { EmojiInteractionPoint } from "../EmojiConstants.tsx";
 
-require = fn;
+require = arg1;
 initializeDefault;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
@@ -18,9 +18,10 @@ TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction
   if (items.includes(interaction.interaction)) {
     guildId = guildId.getGuildId();
     const result = maybeFetchTopEmojisByGuild.maybeFetchTopEmojisByGuild(guildId);
+    const obj = maybeFetchTopEmojisByGuild;
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();
-let result = require("obj132").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
+let result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
 
 export default topEmojisDataManager;

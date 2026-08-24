@@ -3,8 +3,9 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import privDefault from "../../../../_runtime/01405_priv.js";
 import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GameAutocompleteUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 let closure_2 = new privDefault({ max: 100 });
 let set = new Set();
 const tmp2 = new privDefault({ max: 100 });
@@ -82,6 +83,7 @@ const gameAutocompleteStore = new GameAutocompleteStore(dispatcherDefault, {
     set.delete(query);
     const result = navigation.set(query, results);
     for (const item10013 of results) {
+      let tmp3 = navigation2;
       let result1 = navigation2.set(item10013.id, item10013);
       continue;
     }
@@ -90,7 +92,6 @@ const gameAutocompleteStore = new GameAutocompleteStore(dispatcherDefault, {
     set.delete(query.query);
   }
 });
-let tmp4 = new privDefault({ max: 500 });
-let result = require("obj132").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteStore.tsx");
+let result = set.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteStore.tsx");
 
 export default gameAutocompleteStore;

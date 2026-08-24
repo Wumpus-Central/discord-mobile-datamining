@@ -1,25 +1,26 @@
 // discord_app/modules/age_gate/native/components/NsfwGateGuild.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_6 from "../../../../stores/GuildMemberStore.tsx";
+import closure_7 from "../../../../stores/UserStore.tsx";
 import { NsfwGateSource } from "Constants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: c9, HelpdeskArticles: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, header: null, description: null, image: null };
+createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[2] = { textAlign: "center", marginBottom: 16 };
 createCacheKey[3] = { marginBottom: 16 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuild.tsx");
+const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuild.tsx");
 
 export default function NsfwGateGuild(guildId) {
   guildId = guildId.guildId;
@@ -36,30 +37,31 @@ export default function NsfwGateGuild(guildId) {
   currentUser = currentUser.getCurrentUser();
   const items = [guildId, currentUser];
   const effect = React.useEffect(() => {
-    currentUser(dependencyMap[11]);
-    const obj = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
+    let obj = currentUser(closure_1_2[11]);
+    obj = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
     let id;
     if (currentUser != null) {
-      id = currentUser.id;
+      id = tmp3.id;
     }
     obj[1] = id;
     let id1;
     if (currentUser != null) {
-      id1 = currentUser.id;
+      id1 = tmp3.id;
     }
     obj[2] = closure_1_6.isMember(guildId, id1);
     let nsfwAllowed;
     if (currentUser != null) {
-      nsfwAllowed = currentUser.nsfwAllowed;
+      nsfwAllowed = tmp3.nsfwAllowed;
     }
     if (nsfwAllowed) {
-      nsfwAllowed = guildId(dependencyMap[12]).getViewNsfwGuildsOrDefault();
-      const obj3 = guildId(dependencyMap[12]);
+      nsfwAllowed = guildId(closure_1_2[12]).getViewNsfwGuildsOrDefault();
+      const obj3 = guildId(closure_1_2[12]);
     }
     obj[3] = nsfwAllowed;
-    obj[4] = NsfwGateSource.MODAL;
+    obj[4] = closure_1_8.MODAL;
     obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
+  obj = { style: tmp.container, children: null };
   const items1 = [callback(currentUser(8612), {}), , , , , ];
   obj = { source: currentUser(9349), style: tmp.image };
   items1[1] = callback(closure_5, obj);
@@ -67,6 +69,7 @@ export default function NsfwGateGuild(guildId) {
   items1[2] = callback(guildId(4734).Text, obj1);
   items1[3] = callback(guildId(4734).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
   const formatResult = intl3.format(guildId(1236).t.Z12LNW, obj);
+  const obj2 = { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 };
   items1[4] = callback(guildId(4734).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: intl3.format(guildId(1236).t.Z12LNW, obj) });
   const obj4 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1236).intl;

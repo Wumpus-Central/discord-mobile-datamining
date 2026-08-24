@@ -3,7 +3,7 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
 const forwardRefResult = importAllResult.forwardRef((action, ref) => {
@@ -16,8 +16,9 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
     disabled = false;
   }
   action = action.action;
+  let menuClose;
   const tmp = callback();
-  const menuClose = importAllResult.useContext(action(13494).MenuContext).menuClose;
+  menuClose = importAllResult.useContext(action(13494).MenuContext).menuClose;
   if (null != IconComponent) {
     let tmp3 = <IconComponent size="sm" />;
   } else {
@@ -51,7 +52,7 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
     obj = { text: null, style: null };
     obj[0] = label;
     obj[1] = tmp.formLabel;
-    tmp7Result = jsx(menuClose(6940), { text: null, style: null });
+    tmp7Result = tmp7(menuClose(6940), obj);
   }
   obj[6] = tmp7Result;
   obj[7] = function onPress() {
@@ -60,6 +61,6 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
   };
   return jsx(menuClose(6937), { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
 });
-const result = require("obj132").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
+const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
 
 export const MenuItem = forwardRefResult;

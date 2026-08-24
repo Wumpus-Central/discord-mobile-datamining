@@ -1,17 +1,18 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/RelationshipStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
 export default function IgnoreUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
+  let stateFromStores;
   let obj = user(reportId[5]);
   const items = [closure_5];
   const items1 = [user];
@@ -20,22 +21,23 @@ export default function IgnoreUserElement(user) {
   obj1 = user(reportId[5]);
   const items2 = [closure_4];
   const items3 = [channelId];
-  const stateFromStores = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
+  stateFromStores = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
   const items4 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
+      guild_id = tmp.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = stateFromStores.id;
+      id = tmp.id;
     }
     return channelId(reportId[6]).getName(guild_id, id, user);
   }, items4);
   const items5 = [user, reportId, channelId];
   let tmp8Result = null;
   if (null != user) {
+    obj = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
     const intl = tmp(tmp2[10]).intl;
     obj = { username: null };
     obj[0] = memo;
@@ -52,7 +54,7 @@ export default function IgnoreUserElement(user) {
     obj[3] = isIgnored;
     obj[4] = tmp6;
     obj[5] = jsx(tmp(tmp2[11]).EyeSlashIcon, {});
-    tmp8Result = jsx(channelId(tmp2[9]), { username: null });
+    tmp8Result = tmp8(channelId(tmp2[9]), obj);
     const tmp10 = channelId(tmp2[9]);
   }
   return tmp8Result;

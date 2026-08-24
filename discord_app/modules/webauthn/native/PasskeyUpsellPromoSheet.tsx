@@ -1,13 +1,13 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellPromoSheet.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let result = require("obj132").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default function PasswordlessUpsellPromoSheet() {
   function onRegisterSuccess(closure_0) {
@@ -40,18 +40,18 @@ export default function PasswordlessUpsellPromoSheet() {
   obj = {
     size: "lg",
     onPress() {
-      let obj = importDefault(onRegisterSuccess[10]);
-      obj.markDismissed(ContentDismissActionType.TAKE_ACTION);
+      let obj = closure_1_1(onRegisterSuccess[10]);
+      obj.markDismissed(closure_1_6.TAKE_ACTION);
       obj = { setRegistering: closure_1, setError: closure_0, onRegisterSuccess };
-      importDefault(onRegisterSuccess[13]).registerPasskey(obj);
+      closure_1_1(onRegisterSuccess[13]).registerPasskey(obj);
     },
     text: null,
     loading: null,
     disabled: null
   };
-  const intl3 = require(tmp3[8]).intl;
+  const intl3 = tmp2(tmp3[8]).intl;
   const string2 = intl3.string;
-  const t2 = require(tmp3[8]).t;
+  const t2 = tmp2(tmp3[8]).t;
   if (tmp7) {
     let string2Result = string2(t2.wePEBF);
   } else {
@@ -72,9 +72,9 @@ export default function PasswordlessUpsellPromoSheet() {
     text: null,
     disabled: null
   };
-  const intl4 = require(tmp3[8]).intl;
+  const intl4 = tmp2(tmp3[8]).intl;
   const string3 = intl4.string;
-  const t3 = require(tmp3[8]).t;
+  const t3 = tmp2(tmp3[8]).t;
   if (tmp7) {
     let string3Result = string3(t3.wePEBF);
   } else {
@@ -85,7 +85,7 @@ export default function PasswordlessUpsellPromoSheet() {
   obj1[4] = tmp7;
   items[1] = callback2(require(onRegisterSuccess[12]).Button, obj1);
   obj2[0] = items;
-  obj[4] = callback(require(onRegisterSuccess[11]).ButtonGroup, obj2);
+  obj[4] = closure_8(require(onRegisterSuccess[11]).ButtonGroup, obj2);
   return callback2(require(onRegisterSuccess[7]).PromoSheet, obj);
 };
 export const PASSWORDLESS_UPSELL_MODAL_KEY = "PASSWORDLESS_UPSELL_MODAL_KEY";

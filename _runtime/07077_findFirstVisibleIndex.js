@@ -11,6 +11,7 @@ arg5.findFirstVisibleIndex = function findFirstVisibleIndex(layouts, bound1, hor
       let size = layouts[rounded];
       let tmp3 = num;
       let diff1 = diff;
+      let tmp5 = num3;
       let tmp6 = horizontal ? size.x : size.y;
       if (tmp6 < bound1) {
         if (tmp6 + (horizontal ? size.width : size.height) <= bound1) {
@@ -44,6 +45,7 @@ arg5.findLastVisibleIndex = function findLastVisibleIndex(layouts, arg1, horizon
       let rounded = Math.floor((num3 + diff) / 2);
       let size = layouts[rounded];
       let tmp3 = num;
+      let tmp4 = diff;
       sum = num3;
       let tmp6 = horizontal ? size.x : size.y;
       if (horizontal) {

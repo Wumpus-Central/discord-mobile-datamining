@@ -3,17 +3,18 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
+createCacheKey = { text: null };
+createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
 createCacheKey[1] = hexToRgba.hexOpacityToRgba(ThemesDefault.unsafe_rawColors.YELLOW_300, 0.3);
 createCacheKey[2] = ThemesDefault.colors.TEXT_STRONG;
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
 
 export default function HighlightText(children) {
   const tmp = callback();

@@ -4,10 +4,10 @@ import _inheritsDefault from "00098__inherits.js";
 import _readOnlyErrorDefault from "metro/00377__readOnlyError.js";
 import fromOrigamiTensionAndFrictionAll from "00378_fromOrigamiTensionAndFriction.js";
 import AnimationDefault from "00379_Animation.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_4 from "metro/00041__classCallCheck.js";
+import closure_5 from "metro/00093__possibleConstructorReturn.js";
+import closure_6 from "00095__getPrototypeOf.js";
+import closure_7 from "metro/00096__get.js";
 import importDefaultResult1 from "metro/00042__createClass.js";
 
 const SpringAnimation = global;
@@ -104,7 +104,7 @@ class SpringAnimation {
           tmp10 = closure_1;
           tmp11 = closure_3;
           tmp13 = undefined === global.tension;
-          tmp12 = require("metro/00038__.js");
+          tmp12 = require("module_38");
           if (tmp13) {
             tmp13 = undefined === global.friction;
           }
@@ -138,17 +138,17 @@ class SpringAnimation {
         tmp21 = closure_1;
         num14 = 0;
         str2 = "Stiffness value must be greater than 0";
-        tmp22 = require("metro/00038__.js")(tmp3Result._stiffness > 0, "Stiffness value must be greater than 0");
+        tmp22 = require("module_38")(tmp3Result._stiffness > 0, "Stiffness value must be greater than 0");
         str3 = "Damping value must be greater than 0";
-        tmp23 = require("metro/00038__.js")(tmp3Result._damping > 0, "Damping value must be greater than 0");
+        tmp23 = require("module_38")(tmp3Result._damping > 0, "Damping value must be greater than 0");
         str4 = "Mass value must be greater than 0";
-        tmp24 = require("metro/00038__.js")(tmp3Result._mass > 0, "Mass value must be greater than 0");
+        tmp24 = require("module_38")(tmp3Result._mass > 0, "Mass value must be greater than 0");
         return tmp3Result;
       }
     }
     tmp17 = closure_3;
     tmp19 = undefined === global.bounciness;
-    tmp18 = require("metro/00038__.js");
+    tmp18 = require("module_38");
     if (tmp19) {
       tmp19 = undefined === global.speed;
     }
@@ -198,6 +198,8 @@ let items = [
   {
     key: "start",
     value: function start(_startPosition, _onUpdate, arg2, getInternalState, self) {
+      self = this;
+      closure_1 = this;
       self = this;
       const tmp2 = callback3(callback2(self.prototype), "start", this);
       closure_1 = tmp2;
@@ -302,6 +304,10 @@ let items = [
             self._onUpdate(self._toValue);
           }
           self.__notifyAnimationEnd({ finished: true });
+        } else if (self._startPosition < self._toValue) {
+          let tmp19 = diff1 > self._toValue;
+        } else {
+          tmp19 = diff1 < self._toValue;
         }
       }
     }
@@ -309,7 +315,8 @@ let items = [
   {
     key: "stop",
     value: function stop() {
-      const self = this;
+      let self = this;
+      self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);

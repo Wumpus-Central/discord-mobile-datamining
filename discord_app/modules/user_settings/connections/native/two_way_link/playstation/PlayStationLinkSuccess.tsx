@@ -4,20 +4,21 @@ import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import styles from "../TwoWayLinkStyles.tsx";
-import noop from "../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
 
 export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
+  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
   const items = [callback(closure_4, { source: React.useMemo(() => ({ uri: callback(table[5]) }), []), style: callback3().image }), , ];

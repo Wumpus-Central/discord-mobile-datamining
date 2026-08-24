@@ -1,7 +1,6 @@
 // discord_app/modules/routing/native/BackPressManager.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import computeEntryState from "../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
@@ -14,10 +13,10 @@ function handleBackPress() {
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
-    obj[0] = KeyboardTypes.KeyboardTypes.SYSTEM;
-    computeEntryState.setKeyboardType(obj);
+    obj[0] = tmp(1627).KeyboardTypes.SYSTEM;
+    tmp(1498).setKeyboardType(obj);
     flag = true;
-    const tmpResult = computeEntryState;
+    const tmpResult = tmp(1498);
   }
   return flag;
 }
@@ -42,6 +41,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const backPressManager = new BackPressManager();
-let result = obj132.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
+let result = set.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
 
 export default backPressManager;

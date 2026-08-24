@@ -1,5 +1,5 @@
 // discord_app/stores/HookErrorStore.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
@@ -24,6 +24,6 @@ const hookErrorStore = new HookErrorStore(dispatcherDefault, {
     closure_1[MediaEngineHookTypes.SOUND] = { errorMessage: errorMessage.errorMessage, errorCode: errorMessage.errorCode };
   }
 });
-const result = obj132.fileFinishedImporting("stores/HookErrorStore.tsx");
+const result = set.fileFinishedImporting("stores/HookErrorStore.tsx");
 
 export default hookErrorStore;

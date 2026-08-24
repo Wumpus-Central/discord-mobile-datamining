@@ -1,6 +1,6 @@
 // discord_app/modules/conversations/components/native/ConversationNavigator.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
@@ -8,27 +8,27 @@ import GenericHeaderTitle from "../../../main_tabs_v2/native/shared_components/H
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createNativeStackNavigator from "../../../../../_runtime/09931_createNativeStackNavigator.js";
 
-require = fn;
+require = arg1;
 function HeaderWithBorder(arg0) {
   let obj = map;
   const token = obj.useToken(ThemesDefault.colors.BORDER_SUBTLE);
   obj = {};
   const merged = Object.assign(arg0);
   const obj2 = GenericHeaderTitle;
-  obj.shouldHandleSafeArea = obj132.isAndroid();
+  obj.shouldHandleSafeArea = set.isAndroid();
   obj.style = { borderColor: token };
   return obj2.renderHeader(obj);
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_6 = createNativeStackNavigator.createNativeStackNavigator();
-const result = require("obj132").fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
+const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
 
 export default function ConversationNavigator(route) {
   const params = route.route.params;
   const channelId = params.channelId;
   let obj = channelId(6312);
-  { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
+  obj = { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
   obj = {
     initialParams: { channelId, guildId: params.guildId },
     name: channelId(12688).ConversationNavigatorScreens.LIST,
@@ -38,11 +38,11 @@ export default function ConversationNavigator(route) {
           const merged = Object.assign(arg0);
           return callback(closure_5, {});
         },
-        headerLeft: channelId(dependencyMap[4]).getRenderBackImage(navigation.navigation),
+        headerLeft: channelId(closure_1_2[4]).getRenderBackImage(navigation.navigation),
         headerTitle() {
           const obj = { channelId: closure_0, title: null };
-          const intl = channelId(closure_1_2[10]).intl;
-          obj[1] = intl.string(channelId(closure_1_2[10]).t.T3WBRp);
+          const intl = closure_1_0(closure_1_2[10]).intl;
+          obj[1] = intl.string(closure_1_0(closure_1_2[10]).t.T3WBRp);
           return closure_1_3(closure_1_1(closure_1_2[9]), obj);
         }
       };

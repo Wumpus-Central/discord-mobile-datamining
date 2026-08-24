@@ -13,7 +13,10 @@ function _extends() {
   let tmp = Object.assign || ((arg0) => {
     for (let num = 1; num < arguments.length; num = num + 1) {
       let tmp = arguments[num];
+      let tmp2 = tmp;
+      let tmp3 = num;
       for (const key10012 in tmp) {
+        let tmp5 = key10012;
         let _Object = Object;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
@@ -51,6 +54,9 @@ function _setPrototypeOf(arg0, Component) {
     };
   }
   return fn(arg0, Component);
+}
+function noop() {
+
 }
 if (noop) {
   if (typeof noop === "object") {
@@ -138,6 +144,7 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
               return closure_0;
             },
         set(arg0, arg1) {
+              closure_0 = arg1;
               closure_0 = arg0;
               const item = arr.forEach(() => { ... });
             }
@@ -225,6 +232,7 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
     const self = this;
     if (this.context[closure_2]) {
       self.context[tmp].on(self.onUpdate);
+      const obj = self.context[tmp];
     }
     let observedBits = self.props.observedBits;
     if (null == observedBits) {
@@ -236,11 +244,13 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
     const self = this;
     if (this.context[closure_2]) {
       self.context[tmp].off(self.onUpdate);
+      const obj = self.context[tmp];
     }
   };
   prototype2.getValue = function() {
     if (this.context[closure_2]) {
       let value = this.context[tmp].get();
+      const obj = this.context[tmp];
     } else {
       value = Component2;
     }
@@ -315,14 +325,14 @@ function matchPath(pathname, arg1) {
   closure_3 = undefined !== sensitive && sensitive;
   const items = [];
   const combined = items.concat(tmp2.path);
-  return combined.reduce((acc, item, index) => {
-    if (!item) {
-      if ("" !== item) {
+  return combined.reduce((arg0, arg1) => {
+    if (!arg1) {
+      if ("" !== arg1) {
         return null;
       }
     }
-    if (acc) {
-      return acc;
+    if (arg0) {
+      return arg0;
     } else {
       let obj = { end: null, strict: null, sensitive: null };
       obj[0] = closure_1;
@@ -335,16 +345,16 @@ function matchPath(pathname, arg1) {
         tmp6[sum] = obj;
         tmp7 = obj;
       }
-      if (tmp7[item]) {
-        let tmp10 = tmp7[item];
+      if (tmp7[arg1]) {
+        let tmp10 = tmp7[arg1];
       } else {
         const items = [];
         obj = { regexp: null, keys: null };
-        obj[0] = closure_1_5(item, items, obj);
+        obj[0] = closure_1_5(arg1, items, obj);
         obj[1] = items;
         tmp10 = obj;
         if (closure_18 < 10000) {
-          tmp7[item] = obj;
+          tmp7[arg1] = obj;
           closure_18 = closure_18 + 1;
           tmp10 = obj;
         }
@@ -354,18 +364,18 @@ function matchPath(pathname, arg1) {
       if (match) {
         const first = match[0];
         closure_0 = match.slice(1);
-        if (!closure_1) {
+        if (!tmp2) {
           obj1 = { path: null, url: null, isExact: null, params: null };
-          obj1[0] = item;
+          obj1[0] = arg1;
           let str2 = "/";
-          if ("/" !== item) {
+          if ("/" !== arg1) {
             str2 = first;
           }
           obj1[1] = str2;
           obj1[2] = tmp15;
-          obj1[3] = keys.reduce((acc, item, index) => {
-            acc[item.name] = table[index];
-            return acc;
+          obj1[3] = keys.reduce((arg0, name) => {
+            arg0[name.name] = table[arg2];
+            return arg0;
           }, {});
           let tmp16 = obj1;
         } else {
@@ -375,6 +385,8 @@ function matchPath(pathname, arg1) {
       } else {
         return null;
       }
+      const tmp12 = closure_0;
+      tmp2 = closure_1;
     }
   }, null);
 }
@@ -418,7 +430,8 @@ t.prototype.constructor = t;
 _setPrototypeOf(t, Component);
 let prototype = t.prototype;
 prototype.componentDidMount = function() {
-  const self = this;
+  let self = this;
+  self = this;
   this._isMounted = true;
   if (this.unlisten) {
     self.unlisten();
@@ -449,7 +462,8 @@ prototype.componentWillUnmount = function() {
   }
 };
 prototype.render = function() {
-  let obj = { history: this.props.history, location: this.state.location, match: closure_1.computeRootMatch(this.state.location.pathname), staticContext: this.props.staticContext };
+  let obj = { value: null };
+  obj = { history: this.props.history, location: this.state.location, match: closure_1.computeRootMatch(this.state.location.pathname), staticContext: this.props.staticContext };
   obj[0] = obj;
   let children = this.props.children;
   if (!children) {
@@ -575,7 +589,7 @@ class e {
     self = this;
     return closure_2.createElement(closure_12.Consumer, null, (location) => {
       if (!location) {
-        invariant(false);
+        closure_1_4(false);
       }
       let obj = { location: tmp4, match: null };
       let props = tmp3.props;
@@ -613,14 +627,14 @@ class e {
         closure_3 = undefined !== sensitive && sensitive;
         const items = [];
         const combined = items.concat(tmp7.path);
-        match = combined.reduce((acc, item, index) => {
-          if (!item) {
-            if ("" !== item) {
+        match = combined.reduce((arg0, arg1) => {
+          if (!arg1) {
+            if ("" !== arg1) {
               return null;
             }
           }
-          if (acc) {
-            return acc;
+          if (arg0) {
+            return arg0;
           } else {
             let obj = { end: null, strict: null, sensitive: null };
             obj[0] = closure_1;
@@ -633,16 +647,16 @@ class e {
               tmp6[sum] = obj;
               tmp7 = obj;
             }
-            if (tmp7[item]) {
-              let tmp10 = tmp7[item];
+            if (tmp7[arg1]) {
+              let tmp10 = tmp7[arg1];
             } else {
               const items = [];
               obj = { regexp: null, keys: null };
-              obj[0] = closure_1_5(item, items, obj);
+              obj[0] = closure_1_5(arg1, items, obj);
               obj[1] = items;
               tmp10 = obj;
               if (closure_18 < 10000) {
-                tmp7[item] = obj;
+                tmp7[arg1] = obj;
                 closure_18 = closure_18 + 1;
                 tmp10 = obj;
               }
@@ -652,18 +666,18 @@ class e {
             if (match) {
               const first = match[0];
               closure_0 = match.slice(1);
-              if (!closure_1) {
+              if (!tmp2) {
                 obj1 = { path: null, url: null, isExact: null, params: null };
-                obj1[0] = item;
+                obj1[0] = arg1;
                 let str2 = "/";
-                if ("/" !== item) {
+                if ("/" !== arg1) {
                   str2 = first;
                 }
                 obj1[1] = str2;
                 obj1[2] = tmp15;
-                obj1[3] = keys.reduce((acc, item, index) => {
-                  acc[item.name] = table[index];
-                  return acc;
+                obj1[3] = keys.reduce((arg0, name) => {
+                  arg0[name.name] = table[arg2];
+                  return arg0;
                 }, {});
                 let tmp16 = obj1;
               } else {
@@ -673,17 +687,19 @@ class e {
             } else {
               return null;
             }
+            const tmp12 = closure_0;
+            tmp2 = closure_1;
           }
         }, null);
       } else {
         match = location.match;
       }
       obj[1] = match;
-      const tmp5Result = _extends({}, location, obj);
+      const tmp5Result = closure_1_7({}, location, obj);
       ({ children, component, render } = pathname.props);
       let isArray = Array.isArray(children);
       if (isArray) {
-        const Children = noop.Children;
+        const Children = closure_1_2.Children;
         isArray = 0 === Children.count(children);
       }
       let tmp12 = children;
@@ -765,6 +781,7 @@ prototype3.navigateTo = function(tmp4Result, action) {
     const obj = { pathname: null };
     obj[0] = text + _location.pathname;
     tmp5Result = _extends({}, _location, obj);
+    const tmp5 = _extends;
   }
   context.location = tmp5Result;
   _location = context.location;
@@ -774,7 +791,6 @@ prototype3.navigateTo = function(tmp4Result, action) {
     const tmpResult = Component6(closure_1[7]);
   }
   context.url = path;
-  const obj2 = Component6(closure_1[7]);
 };
 prototype3.render = function() {
   const self = this;
@@ -802,6 +818,7 @@ prototype3.render = function() {
     const keys = Object.keys(props);
     for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
       let tmp2 = keys[num3];
+      let tmp3 = num3;
       if (0 > items.indexOf(tmp2)) {
         obj[tmp2] = props[tmp2];
       }
@@ -843,6 +860,7 @@ prototype3.render = function() {
       const obj2 = { pathname: null };
       obj2[0] = _location.pathname.substr(text.length);
       tmp7 = _extends({}, _location, obj2);
+      const str3 = _location.pathname;
     }
     tmp5 = tmp7;
   }
@@ -884,14 +902,14 @@ class e {
     return closure_2.createElement(closure_12.Consumer, null, (location) => {
       const _self = location;
       if (!location) {
-        invariant(false);
+        closure_1_4(false);
       }
       let _location = _self.props.location;
       if (!_location) {
         _location = location.location;
       }
-      let obj = noop;
-      const Children = noop.Children;
+      let obj = closure_1_2;
+      const Children = closure_1_2.Children;
       const item = Children.forEach(_self.props.children, (icon) => {
         if (null == match) {
           path = icon;
@@ -902,9 +920,10 @@ class e {
               let obj = { path: null };
               obj[0] = reduce;
               obj = closure_1_7({}, path.props, obj);
+              pathname = pathname.pathname;
               closure_1 = undefined;
               match = undefined;
-              let pathname;
+              pathname = undefined;
               if (undefined === obj) {
                 obj = {};
               }
@@ -922,19 +941,20 @@ class e {
               ({ path, exact } = tmp5);
               closure_1 = undefined !== exact && exact;
               const strict = tmp5.strict;
+              match = undefined !== strict && strict;
               const sensitive = tmp5.sensitive;
               pathname = undefined !== sensitive && sensitive;
               let items = [];
               const combined = items.concat(path);
               reduce = combined.reduce;
-              match = reduce((acc, item, index) => {
-                if (!item) {
-                  if ("" !== item) {
+              match = reduce((arg0, arg1) => {
+                if (!arg1) {
+                  if ("" !== arg1) {
                     return null;
                   }
                 }
-                if (acc) {
-                  return acc;
+                if (arg0) {
+                  return arg0;
                 } else {
                   let obj = { end: null, strict: null, sensitive: null };
                   obj[0] = closure_1;
@@ -947,16 +967,16 @@ class e {
                     tmp6[sum] = obj;
                     tmp7 = obj;
                   }
-                  if (tmp7[item]) {
-                    let tmp10 = tmp7[item];
+                  if (tmp7[arg1]) {
+                    let tmp10 = tmp7[arg1];
                   } else {
                     const items = [];
                     obj = { regexp: null, keys: null };
-                    obj[0] = closure_1_5(item, items, obj);
+                    obj[0] = closure_1_5(arg1, items, obj);
                     obj[1] = items;
                     tmp10 = obj;
                     if (closure_18 < 10000) {
-                      tmp7[item] = obj;
+                      tmp7[arg1] = obj;
                       closure_18 = closure_18 + 1;
                       tmp10 = obj;
                     }
@@ -966,18 +986,18 @@ class e {
                   if (match) {
                     const first = match[0];
                     closure_0 = match.slice(1);
-                    if (!closure_1) {
+                    if (!tmp2) {
                       obj1 = { path: null, url: null, isExact: null, params: null };
-                      obj1[0] = item;
+                      obj1[0] = arg1;
                       let str2 = "/";
-                      if ("/" !== item) {
+                      if ("/" !== arg1) {
                         str2 = first;
                       }
                       obj1[1] = str2;
                       obj1[2] = tmp15;
-                      obj1[3] = keys.reduce((acc, item, index) => {
-                        acc[item.name] = table[index];
-                        return acc;
+                      obj1[3] = keys.reduce((arg0, name) => {
+                        arg0[name.name] = table[arg2];
+                        return arg0;
                       }, {});
                       let tmp16 = obj1;
                     } else {
@@ -987,6 +1007,8 @@ class e {
                   } else {
                     return null;
                   }
+                  const tmp12 = closure_0;
+                  tmp2 = closure_1;
                 }
               }, null);
             } else {
@@ -1017,7 +1039,7 @@ export const Prompt = function Prompt(arg0) {
   closure_1 = undefined === when || when;
   return <redux2.Consumer>{(staticContext) => {
     if (!staticContext) {
-      invariant(false);
+      closure_1_4(false);
     }
     if (closure_1) {
       if (!staticContext.staticContext) {
@@ -1047,12 +1069,12 @@ export const Redirect = function Redirect(arg0) {
   noop = undefined !== push && push;
   return <redux2.Consumer>{(history) => {
     if (!history) {
-      invariant(false);
+      closure_1_4(false);
     }
     history = history.history;
     const tmp3 = React ? history.push : history.replace;
     closure_0 = tmp3;
-    Component6(closure_1_1[7]);
+    closure_1_0(closure_1_1[7]);
     let tmp6 = closure_0;
     if (closure_0) {
       if (typeof tmp7 === "string") {
@@ -1072,7 +1094,7 @@ export const Redirect = function Redirect(arg0) {
           if (closure_1_15[str3]) {
             let tmp20 = obj[str3];
           } else {
-            const compileResult = parse.compile(str3);
+            const compileResult = closure_1_5.compile(str3);
             tmp20 = compileResult;
             if (closure_16 < 10000) {
               obj[str3] = compileResult;
@@ -1095,13 +1117,13 @@ export const Redirect = function Redirect(arg0) {
         if ("/" === str) {
           obj = { pathname: null };
           obj[0] = str;
-          tmp30Result = _extends({}, tmp7, obj);
+          tmp30Result = tmp30({}, tmp7, obj);
         } else {
           obj1 = closure_1_15;
           if (closure_1_15[str]) {
             let tmp13 = obj1[str];
           } else {
-            const compileResult1 = parse.compile(str);
+            const compileResult1 = closure_1_5.compile(str);
             tmp13 = compileResult1;
             if (closure_16 < 10000) {
               obj1[str] = compileResult1;
@@ -1112,6 +1134,7 @@ export const Redirect = function Redirect(arg0) {
           obj1 = { pretty: true };
           tmp13(params1, obj1);
         }
+        tmp30 = closure_1_7;
       }
     } else {
       const tmp5Result = tmp5(tmp7);
@@ -1120,7 +1143,7 @@ export const Redirect = function Redirect(arg0) {
         tmp3(tmp5Result);
         let element = null;
       } else {
-        let obj2 = { onMount: null, onUpdate: null, to: null };
+        const obj2 = { onMount: null, onUpdate: null, to: null };
         obj2[0] = function onMount() {
           callback(closure_1);
         };
@@ -1131,7 +1154,6 @@ export const Redirect = function Redirect(arg0) {
           if (!obj2.locationsAreEqual(_location, closure_1_7({}, dependencyMap, obj))) {
             callback(dependencyMap);
           }
-          obj2 = callback(1223);
         };
         obj2[2] = tmp7;
         element = <closure_1_14 onMount={null} onUpdate={null} to={null} />;
@@ -1190,14 +1212,14 @@ export const useRouteMatch = function useRouteMatch(Routes) {
     closure_3 = undefined !== sensitive && sensitive;
     const items = [];
     const combined = items.concat(tmp2.path);
-    match = combined.reduce((acc, item, index) => {
-      if (!item) {
-        if ("" !== item) {
+    match = combined.reduce((arg0, arg1) => {
+      if (!arg1) {
+        if ("" !== arg1) {
           return null;
         }
       }
-      if (acc) {
-        return acc;
+      if (arg0) {
+        return arg0;
       } else {
         let obj = { end: null, strict: null, sensitive: null };
         obj[0] = closure_1;
@@ -1210,16 +1232,16 @@ export const useRouteMatch = function useRouteMatch(Routes) {
           tmp6[sum] = obj;
           tmp7 = obj;
         }
-        if (tmp7[item]) {
-          let tmp10 = tmp7[item];
+        if (tmp7[arg1]) {
+          let tmp10 = tmp7[arg1];
         } else {
           const items = [];
           obj = { regexp: null, keys: null };
-          obj[0] = closure_1_5(item, items, obj);
+          obj[0] = closure_1_5(arg1, items, obj);
           obj[1] = items;
           tmp10 = obj;
           if (closure_18 < 10000) {
-            tmp7[item] = obj;
+            tmp7[arg1] = obj;
             closure_18 = closure_18 + 1;
             tmp10 = obj;
           }
@@ -1229,18 +1251,18 @@ export const useRouteMatch = function useRouteMatch(Routes) {
         if (match) {
           const first = match[0];
           closure_0 = match.slice(1);
-          if (!closure_1) {
+          if (!tmp2) {
             obj1 = { path: null, url: null, isExact: null, params: null };
-            obj1[0] = item;
+            obj1[0] = arg1;
             let str2 = "/";
-            if ("/" !== item) {
+            if ("/" !== arg1) {
               str2 = first;
             }
             obj1[1] = str2;
             obj1[2] = tmp15;
-            obj1[3] = keys.reduce((acc, item, index) => {
-              acc[item.name] = table[index];
-              return acc;
+            obj1[3] = keys.reduce((arg0, name) => {
+              arg0[name.name] = table[arg2];
+              return arg0;
             }, {});
             let tmp16 = obj1;
           } else {
@@ -1250,6 +1272,8 @@ export const useRouteMatch = function useRouteMatch(Routes) {
         } else {
           return null;
         }
+        const tmp12 = closure_0;
+        tmp2 = closure_1;
       }
     }, null);
   }
@@ -1268,6 +1292,7 @@ export const withRouter = function withRouter(displayName) {
       const keys = Object.keys(wrappedComponentRef);
       for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
         let tmp2 = keys[num3];
+        let tmp3 = num3;
         if (0 > items.indexOf(tmp2)) {
           obj[tmp2] = wrappedComponentRef[tmp2];
         }
@@ -1275,10 +1300,10 @@ export const withRouter = function withRouter(displayName) {
     }
     return <closure_1_12.Consumer>{(arg0) => {
       if (!arg0) {
-        invariant(false);
+        closure_2_4(false);
       }
       obj = { ref: wrappedComponentRef };
-      return <wrappedComponentRef {......_extends({}, obj, arg0, obj)} />;
+      return <wrappedComponentRef {......closure_2_7({}, obj, arg0, obj)} />;
     }}</closure_1_12.Consumer>;
   };
   fn.displayName = `withRouter(${displayName.displayName || displayName.name})`;

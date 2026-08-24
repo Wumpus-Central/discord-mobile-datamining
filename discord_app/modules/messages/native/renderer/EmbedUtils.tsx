@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/EmbedUtils.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
+import set from "../../../../../_runtime/00002_set.js";
 
 const Image = get_ActivityIndicator.Image;
-const frozen = Object.freeze(new Set(["YouTube", "TikTok"]));
-const set = new Set(["YouTube", "TikTok"]);
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
+let set = new Set(["YouTube", "TikTok"]);
+const frozen = Object.freeze(set);
+const result = set.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
 
 export const getAssetUriForEmbed = function getAssetUriForEmbed(Image) {
   return Image.resolveAssetSource(Image).uri;

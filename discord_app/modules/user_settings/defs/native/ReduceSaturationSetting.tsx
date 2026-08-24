@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/ReduceSaturationSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["5PWWCY"]);
@@ -21,6 +21,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createSlider(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ReduceSaturationSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ReduceSaturationSetting.tsx");
 
 export default createToggle;

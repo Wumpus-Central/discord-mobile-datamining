@@ -1,5 +1,5 @@
 // discord_app/modules/messages/SendMessageOptionsStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import MESSAGE_GROUP_SPACING from "MessageConstants.tsx";
@@ -25,6 +25,7 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
       }
       obj.location = OTHER;
       closure_1[message.id] = obj;
+      const tmp3 = closure_1;
     }
     let tmp8 = null != message.nonce && message.nonce !== message.id;
     if (tmp8) {
@@ -36,6 +37,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
     }
   }
 });
-const result = obj132.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
+const result = set.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
 
 export default sendMessageOptionsStore;

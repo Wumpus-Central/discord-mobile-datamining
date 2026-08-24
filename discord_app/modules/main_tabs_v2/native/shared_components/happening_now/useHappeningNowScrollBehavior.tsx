@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowScrollBehavior.tsx");
 
 export default function useHappeningNowScrollBehavior(arg0, arg1) {
   const callback = arg0;
@@ -40,6 +40,8 @@ export const useHappeningNowScrollSnapping = function useHappeningNowScrollSnapp
   if (0 < num) {
     do {
       let current2 = listRef.current;
+      let tmp = num2;
+      let tmp2 = num3;
       let num4;
       if (current2 != null) {
         let layout = current2.getLayout(num2);

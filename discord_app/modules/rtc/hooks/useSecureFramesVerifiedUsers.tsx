@@ -1,8 +1,9 @@
 // discord_app/modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import closure_2 from "../VerifiedKeyStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
 export const useSecureFramesVerifiedUserIds = function useSecureFramesVerifiedUserIds() {
   const items = [closure_2];

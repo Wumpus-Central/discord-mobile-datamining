@@ -1,6 +1,6 @@
 // discord_app/modules/hub/HubUtils.native.tsx
 import _modDef11922 from "native/components/HubEmailConnectionModalActionCreators.tsx";
-import updateInvite from "../../stores/InviteStore.tsx";
+import closure_2 from "../../stores/InviteStore.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
 
 let closure_3 = importDefaultResult.throttle((code) => {
@@ -12,6 +12,6 @@ const obj = {
     callback(invite);
   }
 };
-const result = require("obj132").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
 
 export default obj;

@@ -1,13 +1,16 @@
 // _runtime/11064_arrayAggregator.js
 
-export default function arrayAggregator(height, fn, fn2, closure_0) {
+export default function arrayAggregator(arg0, arg1, arg2, arg3) {
   let num = 0;
-  if (null != height) {
-    num = height.length;
+  if (null != arg0) {
+    num = arg0.length;
   }
   for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-    let tmp = height[num2];
-    let tmp5 = fn(closure_0, tmp, fn2(tmp), height);
+    let tmp = arg0[num2];
+    let tmp2 = arg3;
+    let tmp3 = tmp;
+    let tmp4 = arg0;
+    let tmp5 = arg1(arg3, tmp, arg2(tmp), arg0);
   }
-  return closure_0;
+  return arg3;
 };

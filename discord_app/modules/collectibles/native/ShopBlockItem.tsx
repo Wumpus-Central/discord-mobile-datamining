@@ -1,25 +1,27 @@
 // discord_app/modules/collectibles/native/ShopBlockItem.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
+import closure_5 from "../CollectiblesCategoryStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
+const require = arg1;
+createCacheKey = { shopBlockSpacing: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/ShopBlockItem.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopBlockItem.tsx");
 
 export default function _default(block) {
   block = block.block;
   ({ screen, preferVCPrice } = block);
+  let stateFromStores;
   let stateFromStores1;
   const tmp = callback();
   let obj = block(stateFromStores1[6]);
   const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_5.categories);
+  stateFromStores = obj.useStateFromStores(items, () => closure_5.categories);
   obj1 = block(stateFromStores1[6]);
   const items1 = [closure_5];
   stateFromStores1 = obj1.useStateFromStores(items1, () => closure_5.products);
@@ -27,10 +29,10 @@ export default function _default(block) {
   const memo = React.useMemo(() => {
     if (block.type === block(stateFromStores1[7]).ShopBlockType.HERO) {
       const _HermesInternal3 = HermesInternal;
-      let combined = "hero-" + block.categoryStoreListingId;
-    } else if (block.type === block(stateFromStores1[7]).ShopBlockType.REWARD_HERO) {
+      let combined = "hero-" + tmp.categoryStoreListingId;
+    } else if (tmp.type === block(stateFromStores1[7]).ShopBlockType.REWARD_HERO) {
       const _HermesInternal2 = HermesInternal;
-      combined = "reward-hero-" + block.categoryStoreListingId;
+      combined = "reward-hero-" + tmp.categoryStoreListingId;
     } else {
       const _HermesInternal = HermesInternal;
       combined = "" + stateFromStores.size + "-" + stateFromStores1.size;

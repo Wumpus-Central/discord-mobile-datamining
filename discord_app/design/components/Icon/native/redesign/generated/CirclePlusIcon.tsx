@@ -7,10 +7,10 @@ import registerAsset2 from "../../../../../../../_runtime/09547_registerAsset.js
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx");
 
 export const CirclePlusIcon = function CirclePlusIcon(color) {
   ({ style, secondaryColor } = color);
@@ -22,7 +22,8 @@ export const CirclePlusIcon = function CirclePlusIcon(color) {
     INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   const merged = Object.assign(color, Object.create(null));
-  let obj = { source: registerAsset, color: secondaryColor, style };
+  let obj = { children: null };
+  obj = { source: registerAsset, color: secondaryColor, style };
   const merged1 = Object.assign(merged);
   const items = [callback(BaseIconImage.BaseIconImage, obj), ];
   obj = { source: registerAsset2, color: INTERACTIVE_ICON_DEFAULT, style: items2 };

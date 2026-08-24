@@ -1,9 +1,9 @@
 // discord_app/modules/threads/ThreadMembersStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
 
 function updateFromGuild(threads) {
   threads = threads.threads;
@@ -26,6 +26,7 @@ function updateFromThread(type) {
       }
       obj[3] = memberIdsPreview;
       dependencyMap[type.id] = obj;
+      const tmp2 = dependencyMap;
     }
     if (null != type.memberCount) {
       tmp5.memberCount = type.memberCount;
@@ -53,6 +54,7 @@ function handleThreadCreateOrUpdate(channel) {
       }
       obj[3] = memberIdsPreview;
       dependencyMap[channel.id] = obj;
+      const tmp2 = dependencyMap;
     }
     if (null != channel.memberCount) {
       tmp5.memberCount = channel.memberCount;
@@ -70,15 +72,19 @@ function handleLoadArchivedThreadsSuccess(threads) {
 function handleSearchMessagesSuccess(data) {
   data = data.data;
   c0 = false;
-  let item = data.forEach((item, index) => {
-    ({ threads, messages } = item);
-    item = messages.forEach((item, index) => {
-      item = item.forEach((item, index) => {
-        const thread = item.thread;
+  let item = data.forEach((arg0) => {
+    ({ threads, messages } = arg0);
+    let item = messages.forEach((arr) => {
+      const item = arr.forEach((thread) => {
+        thread = thread.thread;
+        let flag = false;
         if (null != thread) {
+          flag = false;
           if (!(thread.id in closure_1_4)) {
             const channel = closure_1_3.getChannel(thread.id);
+            flag = false;
             if (null != channel) {
+              flag = true;
               if (closure_1_2.has(channel.type)) {
                 if (!(channel.id in closure_1_4)) {
                   const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
@@ -93,12 +99,15 @@ function handleSearchMessagesSuccess(data) {
                   }
                   obj[3] = memberIdsPreview;
                   closure_1_4[channel.id] = obj;
+                  const tmp6 = closure_1_4;
                 }
                 if (null != channel.memberCount) {
                   tmp8.memberCount = channel.memberCount;
                 }
+                flag = true;
                 if (null != channel.memberIdsPreview) {
                   tmp8.memberIdsPreview = channel.memberIdsPreview;
+                  flag = true;
                 }
               }
             }
@@ -106,11 +115,15 @@ function handleSearchMessagesSuccess(data) {
         }
       });
     });
-    const item1 = threads.forEach((item, index) => {
-      if (null != item) {
-        if (!(item.id in closure_1_4)) {
-          const channel = closure_1_3.getChannel(item.id);
+    const item1 = threads.forEach((id) => {
+      let flag = false;
+      if (null != id) {
+        flag = false;
+        if (!(id.id in closure_1_4)) {
+          const channel = closure_1_3.getChannel(id.id);
+          flag = false;
           if (null != channel) {
+            flag = true;
             if (closure_1_2.has(channel.type)) {
               if (!(channel.id in closure_1_4)) {
                 const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
@@ -125,12 +138,15 @@ function handleSearchMessagesSuccess(data) {
                 }
                 obj[3] = memberIdsPreview;
                 closure_1_4[channel.id] = obj;
+                const tmp6 = closure_1_4;
               }
               if (null != channel.memberCount) {
                 tmp8.memberCount = channel.memberCount;
               }
+              flag = true;
               if (null != channel.memberIdsPreview) {
                 tmp8.memberIdsPreview = channel.memberIdsPreview;
+                flag = true;
               }
             }
           }
@@ -159,6 +175,7 @@ function updateFromServerThread(id) {
             }
             obj[3] = memberIdsPreview;
             dependencyMap[channel.id] = obj;
+            const tmp4 = dependencyMap;
           }
           if (null != channel.memberCount) {
             tmp6.memberCount = channel.memberCount;
@@ -213,6 +230,7 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
     const item = guilds.forEach(updateFromGuild);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(threadMembers) {
+    const obj = {};
     const merged = Object.assign(threadMembers.threadMembers);
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
@@ -255,6 +273,7 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(arg0) {
     let flag = false;
     for (const item10007 of tmp) {
+      let tmp2 = updateFromServerThread;
       let tmp3 = updateFromServerThread(item10007.thread);
       if (!tmp3) {
         tmp3 = flag;
@@ -265,6 +284,6 @@ const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = obj132.fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
+const result = set.fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
 
 export default threadMembersStore;

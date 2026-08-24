@@ -3,32 +3,32 @@ import int2hslRaw from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import nDefault from "../../../_runtime/00689_n.js";
 import DisplayNameEffect from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import items3 from "DisplayNameStylesConstants.tsx";
 import { int2hslRaw } from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
-require = fn;
+require = arg1;
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: c4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: c5, FLYWHEEL_EFFECTS: closure_6, FLYWHEEL_FONTS: error, getColorPresetsForEffect: closure_8 } = items3);
 let items = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
-let result = require("obj132").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
 
 export const getEffectColorCount = function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
-  } else if (DisplayNameEffect.DisplayNameEffect.GUMMY === effectId) {
+  } else if (tmp(1935).DisplayNameEffect.GUMMY === effectId) {
     return 4;
-  } else if (DisplayNameEffect.DisplayNameEffect.PRISM === effectId) {
+  } else if (tmp(1935).DisplayNameEffect.PRISM === effectId) {
     return 5;
   } else {
     return 1;
   }
 };
-export const generateColorVariants = function generateColorVariants(displayNameStylesAccessibleColors) {
-  let obj = nDefault(displayNameStylesAccessibleColors);
+export const generateColorVariants = function generateColorVariants(first) {
+  let obj = nDefault(first);
   const alphaResult = obj.alpha(1);
   const value = alphaResult.get("hsl.l");
   const bound = Math.min(1, 1.2 * alphaResult.get("hsl.s"));
-  obj = { main: displayNameStylesAccessibleColors, light1: null, light2: null, dark1: null, dark2: null, toonStroke: null, neonStroke: null };
+  obj = { main: first, light1: null, light2: null, dark1: null, dark2: null, toonStroke: null, neonStroke: null };
   const bound1 = Math.min(0.6, value + 0.1);
   const result = alphaResult.set("hsl.l", Math.min(1, 1.2 * value));
   obj[1] = result.hex();
@@ -51,8 +51,8 @@ export const wrapHue = function wrapHue(h) {
 export const GUMMY_STRIPES = items;
 export const buildGummyColors = function buildGummyColors(closure_1_11) {
   const tmp = nDefault;
-  let obj = int2hslRaw;
-  const tmp3 = callback(tmp(require("../../../discord_common/js/shared/utils/ColorUtils.tsx").int2hex(unpackModuleId)).hsl(), 3);
+  let obj = _int2hslRaw;
+  const tmp3 = callback(tmp(_int2hslRaw.int2hex(closure_1_11)).hsl(), 3);
   const first = tmp3[0];
   let num = 0;
   if (!Number.isNaN(first)) {
@@ -60,17 +60,21 @@ export const buildGummyColors = function buildGummyColors(closure_1_11) {
   }
   items = [num, tmp3[1], tmp3[2]];
   _require = callback(items, 1)[0];
-  return items.map((item, index) => {
-    ({ hueShift, saturation, lightness } = item);
-    return nDefault.hsl(((closure_0 + hueShift) % 360 + 360) % 360, saturation, lightness).num();
+  return items.map((arg0) => {
+    ({ hueShift, saturation, lightness } = arg0);
+    const obj = closure_1_1(closure_1_2[3]);
+    return closure_1_1(closure_1_2[3]).hsl(((closure_0 + hueShift) % 360 + 360) % 360, saturation, lightness).num();
   });
 };
 export const rebuildGummySourceColor = function rebuildGummySourceColor(selectedColors) {
   const first = selectedColors[0];
   if (null == first) {
+    const obj3 = nDefault;
     return nDefault.hsl(0, closure_5, closure_4).num();
   } else {
+    const tmp10 = importDefault;
     const tmp12 = nDefault;
+    const obj5 = int2hslRaw;
     const tmp15 = callback(tmp12(int2hslRaw.int2hex(first)).hsl(), 3);
     const first1 = tmp15[0];
     const _Number = Number;
@@ -81,11 +85,13 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     items = [num, tmp15[1], tmp15[2]];
     const result = (callback(items, 1)[0] - items[0].hueShift) % 360;
     const tmp12Result = tmp12(int2hslRaw.int2hex(first));
-    const tmp10Result = nDefault;
-    return nDefault.hsl((result + 360) % 360, closure_5, closure_4).num();
+    const tmp14 = callback;
+    const tmp10Result = tmp10(689);
+    return tmp10(689).hsl((result + 360) % 360, closure_5, closure_4).num();
   }
 };
 export const hueToGummyColor = function hueToGummyColor(sharedValue) {
+  const obj = nDefault;
   return nDefault.hsl(sharedValue, closure_5, closure_4).num();
 };
 export const parseServerDisplayNameStyles = function parseServerDisplayNameStyles(display_name_styles) {

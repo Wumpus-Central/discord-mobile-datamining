@@ -5,23 +5,25 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { useChannelCallStore } from "../ChannelCallStore.tsx";
 import PIP_GESTURE_ACTIVE_OFFSET from "Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ PAN_GESTURE_FAIL_OFFSET_Y: c5, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = PIP_GESTURE_ACTIVE_OFFSET);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BLACK };
+createCacheKey = { background: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = { code: "function GestureContainerTsx1({velocityY:velocityY}){const{position,THRESHOLD_VELOCITY,runOnJS,ModalActionCreators,withTiming,DECELERATED_EASING}=this.__closure;if(position.get()===1||velocityY>THRESHOLD_VELOCITY){runOnJS(ModalActionCreators.pop)();}else{position.set(withTiming(0,{duration:300,easing:DECELERATED_EASING}));}}" };
 let closure_10 = { code: "function GestureContainerTsx2({translationY:translationY}){const{THRESHOLD_TRANSLATE,position}=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);}" };
 let closure_11 = { code: "function GestureContainerTsx3(){const{interpolate,position,height}=this.__closure;return{flex:1,transform:[{translateY:interpolate(position.get(),[0,1],[0,height*0.06])},{scale:interpolate(position.get(),[0,1],[1,0.9])}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/GestureContainer.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/GestureContainer.tsx");
 
 export default function GestureContainer(children) {
+  let height;
   let sharedValue;
   const tmp = callback();
-  const height = sharedValue(1494)().height;
+  height = sharedValue(1494)().height;
   let obj = height(4115);
   sharedValue = obj.useSharedValue(0);
   const Gesture = height(6377).Gesture;
@@ -42,13 +44,12 @@ export default function GestureContainer(children) {
     if (1 !== sharedValue.get()) {
       if (velocityY.velocityY <= 500) {
         obj = { duration: 300, easing: null };
-        obj[1] = height(dependencyMap[12]).DECELERATED_EASING;
-        const result = obj.set(height(dependencyMap[11]).withTiming(0, obj));
-        const obj2 = height(dependencyMap[11]);
+        obj[1] = height(closure_1_2[12]).DECELERATED_EASING;
+        const result = obj.set(height(closure_1_2[11]).withTiming(0, obj));
+        const obj2 = height(closure_1_2[11]);
       }
     }
-    height(dependencyMap[8]).runOnJS(sharedValue(dependencyMap[10]).pop)();
-    const obj4 = height(dependencyMap[8]);
+    height(closure_1_2[8]).runOnJS(sharedValue(closure_1_2[10]).pop)();
   };
   obj = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4115).runOnJS, ModalActionCreators: sharedValue(5260), withTiming: height(4664).withTiming, DECELERATED_EASING: height(1297).DECELERATED_EASING };
   fn.__closure = obj;
@@ -61,12 +62,13 @@ export default function GestureContainer(children) {
   const activeOffsetYResult = Gesture.Pan().enabled(tmp2).onUpdate(S).onEnd(fn).activeOffsetY(items);
   const failOffsetXResult = Gesture.Pan().enabled(tmp2).onUpdate(S).onEnd(fn).activeOffsetY(items).failOffsetX(items1);
   const fn2 = function p() {
-    let obj = { translateY: height(dependencyMap[8]).interpolate(sharedValue.get(), [0, 1], items) };
+    let obj = { flex: 1, transform: null };
+    obj = { translateY: height(closure_1_2[8]).interpolate(sharedValue.get(), [0, 1], items) };
     items = [0, 0.06 * height];
     const items1 = [obj, ];
     obj = { scale: null };
-    const obj3 = height(dependencyMap[8]);
-    obj[0] = height(dependencyMap[8]).interpolate(sharedValue.get(), [0, 1], [1, 0.9]);
+    const obj3 = height(closure_1_2[8]);
+    obj[0] = height(closure_1_2[8]).interpolate(sharedValue.get(), [0, 1], [1, 0.9]);
     items1[1] = obj;
     obj[1] = items1;
     return obj;

@@ -3,19 +3,19 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../../_runtime/metro/04704___INTERNAL_VIEW_CONFIG.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 
 noopAll;
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 let FullWindowOverlay = View;
-if (obj132.isIOS()) {
+if (set.isIOS()) {
   FullWindowOverlay = require("enableScreens").FullWindowOverlay;
 }
-if (obj132.isIOS()) {
+if (set.isIOS()) {
   View = __INTERNAL_VIEW_CONFIGDefault;
 }
-const result = obj132.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
+const result = set.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
 
 export default FullWindowOverlay;
 export const TransitionGroupOverlayView = function TransitionGroupOverlayView(children) {

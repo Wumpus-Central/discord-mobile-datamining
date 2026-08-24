@@ -1,10 +1,9 @@
 // discord_app/modules/systrace/native/installSystrace.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import obj1322 from "../../../utils/PlatformUtils.tsx";
 
 const Systrace = get_ActivityIndicator.Systrace;
-const result = obj132.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
+const result = set.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
 
 export const installSystrace = function installSystrace() {
   if (obj.isAndroid()) {
@@ -71,5 +70,4 @@ export const installSystrace = function installSystrace() {
       }
     };
   }
-  obj = obj1322;
 };

@@ -6,7 +6,7 @@ let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
 
 export default function regexTester(arg0) {
   const _require = arg0;
-  if (isRegex(arg0)) {
+  if (_isRegex(arg0)) {
     return function test(arg0) {
       return null !== closure_1_2(closure_0, arg0);
     };

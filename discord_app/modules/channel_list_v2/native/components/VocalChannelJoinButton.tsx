@@ -2,13 +2,13 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
-import updateVoiceState from "../../../../stores/VoiceStateStore.tsx";
+import closure_6 from "../../../../stores/PermissionStore.tsx";
+import closure_7 from "../../../../stores/VoiceStateStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, Pressable: c5 } = get_ActivityIndicator);
 ({ NOOP: closure_8, Permissions: c9 } = ME);
@@ -32,9 +32,10 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   }
   obj = { joinButton: obj, joinButtonContent: { width: "auto", alignItems: "center" }, joinButtonIconActive: null, joinButtonIconInactive: null, joinButtonText: null };
   obj[12] = str;
-  obj = { tintColor: ThemesDefault.colors.WHITE };
+  obj = { tintColor: tmp(712).colors.WHITE };
   obj[2] = obj;
   obj[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   let num3 = 0;
   if (obj5.isAndroid()) {
     num3 = -2;
@@ -74,7 +75,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   const memo = importAllResult.useMemo(() => {
     let found;
     if (voiceStates != null) {
-      found = voiceStates.find((item, index) => item.voiceState.selfStream);
+      found = voiceStates.find((voiceState) => voiceState.voiceState.selfStream);
     }
     return null != found;
   }, items2);
@@ -116,9 +117,11 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
       connectedUserLimitFormatted = intl2.string(VJlc0S);
     }
     obj1[4] = connectedUserLimitFormatted;
-    obj[1] = jsx(tmp3(4734).Text, { style: null, color: "interactive-text-default", variant: "text-xs/semibold", lineClamp: 1, children: null });
-    obj[7] = <closure_4 style={null}>{null}</closure_4>;
-    let tmp17Result = <closure_5 style={null}>{null}</closure_5>;
+    obj[1] = tmp17(tmp3(4734).Text, obj1);
+    obj[7] = tmp17(closure_4, obj);
+    let tmp17Result = tmp17(closure_5, obj);
+    const tmp26 = closure_5;
+    const tmp28 = closure_4;
   } else if (tmp15) {
     obj2 = { text: null, icon: null, size: "sm", variant: null, onPress: null, pointerEvents: "none", accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" };
     obj2[0] = connectedUserLimitFormatted;
@@ -135,7 +138,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
         }
         obj3 = { size: "xs", style: null };
         obj3[1] = items3;
-        tmp17Result = <VoiceNormalIcon size="xs" style={null} />;
+        tmp17Result = tmp17(VoiceNormalIcon, obj3);
       }
       joinButtonIconActive = joinButtonText.joinButtonIconActive;
     }
@@ -146,7 +149,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
     }
     obj2[3] = str2;
     obj2[4] = closure_8;
-    tmp17Result = <tmp18 text={null} icon={null} size="sm" variant={null} onPress={null} pointerEvents="none" accessible={false} accessibilityElementsHidden importantForAccessibility="no" />;
+    tmp17Result = tmp17(tmp18, obj2);
   } else {
     const intl = tmp3(1236).intl;
     let str = intl.string;
@@ -159,8 +162,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result1 = channel(11461);
 });
-const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx");
 
 export default memoResult;

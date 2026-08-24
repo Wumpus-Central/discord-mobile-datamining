@@ -1,18 +1,16 @@
 // discord_app/modules/game_console/getXboxURIForChannel.tsx
-import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
 import computeChannelName from "../channel/useChannelName.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
+import closure_3 from "../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 import XBOX_URL_BASE from "GameConsoleConstants.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ XBOX_HANDOFF_SEARCH_PARAMS: closure_6, XBOX_URL_BASE: error } = XBOX_URL_BASE);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: c9 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");
 
 export default function getXboxURIForChannel(channelId) {
   ({ nonce, forQRCode } = arg1);
@@ -28,19 +26,19 @@ export default function getXboxURIForChannel(channelId) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = getSystemLocale.intl;
-    name = intl.string(getSystemLocale.t.LJpTRF);
+    const intl = tmp5(1236).intl;
+    name = intl.string(tmp5(1236).t.LJpTRF);
   }
   obj[3] = name;
   obj[4] = closure_3.isSelfMute();
   obj[5] = closure_3.isSelfDeaf();
   obj[6] = nonce;
-  const str = callback(obj);
+  const str = closure_6(obj);
   if (forQRCode) {
-    const aPIBaseURL = sendRequest.getAPIBaseURL();
+    const aPIBaseURL = tmp5(530).getAPIBaseURL();
     const _HermesInternal2 = HermesInternal;
     let combined = "" + aPIBaseURL + constants.XBOX_HANDOFF + "?" + str.toString();
-    const tmp5Result = sendRequest;
+    const tmp5Result = tmp5(530);
   } else {
     const _HermesInternal = HermesInternal;
     combined = "" + closure_7 + "?" + str.toString();

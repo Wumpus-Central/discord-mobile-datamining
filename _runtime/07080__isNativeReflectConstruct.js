@@ -1,9 +1,9 @@
 // _runtime/07080__isNativeReflectConstruct.js
 import _inheritsDefault from "07074__inherits.js";
 import RVLinearLayoutManagerImpl from "metro/07050__classCallCheck.js";
-import _possibleConstructorReturn from "metro/07069__possibleConstructorReturn.js";
-import _getPrototypeOf from "07071__getPrototypeOf.js";
-import _get from "metro/07072__get.js";
+import closure_1 from "metro/07069__possibleConstructorReturn.js";
+import closure_2 from "07071__getPrototypeOf.js";
+import closure_3 from "metro/07072__get.js";
 import importDefaultResult from "metro/07051__createClass.js";
 
 function _isNativeReflectConstruct() {
@@ -31,7 +31,7 @@ class RVLinearLayoutManagerImpl {
     tmp = RVLinearLayoutManagerImpl(this, RVLinearLayoutManagerImpl);
     items = [, ];
     items[0] = global;
-    items[1] = fn;
+    items[1] = arg1;
     tmp2 = closure_2;
     obj = closure_2(RVLinearLayoutManagerImpl);
     tmp3 = closure_1;
@@ -56,8 +56,10 @@ let items = [
   {
     key: "updateLayoutParams",
     value: function updateLayoutParams(windowSize) {
-      const self = this;
-      let fn = callback2(callback(self.prototype), "updateLayoutParams", this);
+      let self = this;
+      self = this;
+      let fn;
+      fn = callback2(callback(self.prototype), "updateLayoutParams", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -84,13 +86,16 @@ let items = [
         let tmp2 = self.layouts[nextResult.index];
         let tmp3 = tmp2;
         if (self.horizontal) {
+          let tmp4 = dimensions;
           let boundedSize = dimensions.width;
         } else {
           boundedSize = self.boundedSize;
         }
         tmp2.width = boundedSize;
+        let tmp5 = tmp2;
         tmp3.isHeightMeasured = true;
         tmp3.isWidthMeasured = true;
+        let tmp6 = dimensions;
         tmp3.height = dimensions.height;
         continue;
       }
@@ -162,6 +167,8 @@ let items = [
         }
         let tmp4 = tmp2.height > num;
         if (tmp4) {
+          let tmp5 = tmp2;
+          let tmp6 = tmp;
           let num2;
           if (tmp != null) {
             num2 = tmp.height;
@@ -185,10 +192,14 @@ let items = [
           }
           const layouts = self.layouts;
           for (const item10035 of layouts) {
+            let tmp10 = item10035;
             if (num3 > 0) {
-              item10035.height = tmp.height;
+              let tmp11 = item10035;
+              let tmp12 = tmp;
+              tmp10.height = tmp.height;
             }
-            item10035.minHeight = num3;
+            let tmp13 = item10035;
+            tmp10.minHeight = num3;
             continue;
           }
           tmp.minHeight = 0;
@@ -206,6 +217,7 @@ let items = [
       if (arg0 <= arg1) {
         do {
           let layout = self.getLayout(sum);
+          let tmp3 = sum;
           if (0 === sum) {
             layout.x = 0;
             layout.y = 0;

@@ -4,12 +4,12 @@ import SolidCutout from "../../Icon/native/ClipView.tsx";
 import Pile from "Pile.native.tsx";
 import map from "PileOverflow.native.tsx";
 import getListSummaryLabel from "../../../../utils/ListUtils.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("design/components/Pile/native/GuildIconPile.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Pile/native/GuildIconPile.native.tsx");
 
 export const GuildIconPile = function GuildIconPile(arg0) {
   ({ totalCount, children } = arg0);
@@ -34,5 +34,5 @@ export const GuildIconPile = function GuildIconPile(arg0) {
   }
   items[1] = tmp6;
   obj[5] = items;
-  return callback(Pile.Pile, obj);
+  return closure_4(Pile.Pile, obj);
 };

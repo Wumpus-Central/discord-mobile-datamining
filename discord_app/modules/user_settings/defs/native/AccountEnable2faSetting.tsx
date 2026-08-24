@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/AccountEnable2faSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import obj132Default from "../../../../actions/AlertActionCreators.tsx";
+import setDefault from "../../../../actions/AlertActionCreators.tsx";
 import useIs2FAEnabled from "../../account/native/SettingsAccountUtils.tsx";
 import _modDef14138 from "../../account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
-import "createToggle";
+import closure_3 from "../../../../stores/UserStore.tsx";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.cDgKte);
@@ -30,7 +30,7 @@ let createToggle = {
     obj[0] = intl.string(getSystemLocale.t.v740sh);
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t.uggF7o);
-    obj132Default.show(obj);
+    setDefault.show(obj);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
@@ -38,6 +38,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
 
 export default createToggle;

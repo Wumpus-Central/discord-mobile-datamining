@@ -1,11 +1,11 @@
 // discord_app/modules/channel_list_v2/native/ChannelListUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import collectGuildAnalyticsMetadataDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import computeSubtitle from "../../guild_sidebar/ChannelListState.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
 
 export const isFavoritesSection = function isFavoritesSection(arg0, favoritesSectionNumber) {
   return arg0 === favoritesSectionNumber.favoritesSectionNumber;

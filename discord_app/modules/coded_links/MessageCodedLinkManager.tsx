@@ -2,11 +2,11 @@
 import trimTrailingPunctuationDefault from "findCodedLinks.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import setupLoadFromMessageManagerHandlersDefault from "../messages/setupLoadFromMessageManagerHandlers.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import handleGuildTemplateResolveSuccess from "../guild_templates/GuildTemplateStore.tsx";
-import updateInvite from "../../stores/InviteStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../guild_templates/GuildTemplateStore.tsx";
+import closure_5 from "../../stores/InviteStore.tsx";
 
-const require = fn;
+const require = arg1;
 function resolveMessageCodedLinks(content) {
   const arr = trimTrailingPunctuationDefault(content.content);
   let tmp = null != arr;
@@ -14,10 +14,10 @@ function resolveMessageCodedLinks(content) {
     tmp = 0 !== arr.length;
   }
   if (tmp) {
-    const item = arr.forEach((item, index) => {
-      ({ type, code } = item);
+    const item = arr.forEach((arg0) => {
+      ({ type, code } = arg0);
       if (code(table[4]).CodedLinkType.INVITE === type) {
-        let tmpResult = code(table[5]);
+        let tmpResult = tmp(tmp2[5]);
         const result = tmpResult.queueMessageLinkFetch(callback(function*() {
           if (c0 === 2) {
             c0 = 3;
@@ -72,8 +72,8 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-      } else if (code(table[4]).CodedLinkType.TEMPLATE === type) {
-        tmpResult = code(table[5]);
+      } else if (tmp(tmp2[4]).CodedLinkType.TEMPLATE === type) {
+        tmpResult = tmp(tmp2[5]);
         const result1 = tmpResult.queueMessageLinkFetch(callback(function*() {
           if (c0 === 2) {
             c0 = 3;
@@ -128,28 +128,28 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-      } else if (code(table[4]).CodedLinkType.BUILD_OVERRIDE !== type) {
-        if (code(table[4]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
-          if (code(table[4]).CodedLinkType.EVENT !== type) {
-            if (code(table[4]).CodedLinkType.CHANNEL_LINK !== type) {
-              if (code(table[4]).CodedLinkType.ACTIVITY_BOOKMARK !== type) {
-                if (code(table[4]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
-                  if (code(table[4]).CodedLinkType.GUILD_PRODUCT !== type) {
-                    if (code(table[4]).CodedLinkType.SERVER_SHOP !== type) {
-                      if (code(table[4]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
-                        if (code(table[4]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
-                          if (code(table[4]).CodedLinkType.QUESTS_EMBED !== type) {
-                            if (code(table[4]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-                              if (code(table[4]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
-                                if (code(table[4]).CodedLinkType.APP_OAUTH2_LINK !== type) {
-                                  if (code(table[4]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
-                                    if (code(table[4]).CodedLinkType.EXPERIMENT !== type) {
-                                      if (code(table[4]).CodedLinkType.GAME_PROFILE !== type) {
-                                        if (code(table[4]).CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                          if (code(table[4]).CodedLinkType.USER_PROFILE !== type) {
-                                            if (code(table[4]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                              const embedApplication = code(table[8]).getEmbedApplication(code);
-                                              const tmpResult1 = code(table[8]);
+      } else if (tmp(tmp2[4]).CodedLinkType.BUILD_OVERRIDE !== type) {
+        if (tmp(tmp2[4]).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
+          if (tmp(tmp2[4]).CodedLinkType.EVENT !== type) {
+            if (tmp(tmp2[4]).CodedLinkType.CHANNEL_LINK !== type) {
+              if (tmp(tmp2[4]).CodedLinkType.ACTIVITY_BOOKMARK !== type) {
+                if (tmp(tmp2[4]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE !== type) {
+                  if (tmp(tmp2[4]).CodedLinkType.GUILD_PRODUCT !== type) {
+                    if (tmp(tmp2[4]).CodedLinkType.SERVER_SHOP !== type) {
+                      if (tmp(tmp2[4]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                        if (tmp(tmp2[4]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                          if (tmp(tmp2[4]).CodedLinkType.QUESTS_EMBED !== type) {
+                            if (tmp(tmp2[4]).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+                              if (tmp(tmp2[4]).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
+                                if (tmp(tmp2[4]).CodedLinkType.APP_OAUTH2_LINK !== type) {
+                                  if (tmp(tmp2[4]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                                    if (tmp(tmp2[4]).CodedLinkType.EXPERIMENT !== type) {
+                                      if (tmp(tmp2[4]).CodedLinkType.GAME_PROFILE !== type) {
+                                        if (tmp(tmp2[4]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                                          if (tmp(tmp2[4]).CodedLinkType.USER_PROFILE !== type) {
+                                            if (tmp(tmp2[4]).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
+                                              const embedApplication = tmp(tmp2[8]).getEmbedApplication(code);
+                                              const tmpResult1 = tmp(tmp2[8]);
                                             } else {
                                               const _Error = Error;
                                               const _HermesInternal = HermesInternal;
@@ -189,6 +189,6 @@ class MessageCodedLinkManager extends tmp6 {
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, MessageCodedLinkManager, importDefault);
 // ThrowIfThisInitialized (0x7c)
 setupLoadFromMessageManagerHandlersDefault(tmp, resolveMessageCodedLinks);
-let result = require("obj132").fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
+let result = require("set").fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
 
 export default tmp;

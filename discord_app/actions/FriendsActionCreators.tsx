@@ -1,12 +1,12 @@
 // discord_app/actions/FriendsActionCreators.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import trackFriendsListClickedDefault from "../modules/app_analytics/track/friends_list_viewed/trackFriendListClicked.tsx";
 
 const Routes = ME.Routes;
-const result = obj132.fileFinishedImporting("actions/FriendsActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 
 export default {
   transitionToSection(PENDING, arg1) {
@@ -23,6 +23,8 @@ export default {
       const tmpResult = transitionTo;
     }
     obj2 = transitionTo;
+    const tmp = require;
+    const tmp5 = importDefault;
     obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
     dispatcherDefault.dispatch(obj);
     if (flag) {
@@ -32,11 +34,13 @@ export default {
     }
   },
   setSection(section) {
-    const obj = { type: "FRIENDS_SET_SECTION", section };
+    let obj = dispatcherDefault;
+    obj = { type: "FRIENDS_SET_SECTION", section };
     obj.dispatch(obj);
   },
   setInitialSection(section) {
-    const obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
+    let obj = dispatcherDefault;
+    obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
     obj.dispatch(obj);
   }
 };

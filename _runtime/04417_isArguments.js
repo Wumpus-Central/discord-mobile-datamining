@@ -20,9 +20,9 @@ if (Object.keys) {
 
   };
   if (typeof call2 === "unknown") {
-    propertyIsEnumerable("prototype");
+    let propertyIsEnumerableResult1 = propertyIsEnumerable("prototype");
   } else {
-    call2(fn, "prototype");
+    propertyIsEnumerableResult1 = call2(fn, "prototype");
   }
   let closure_5 = ["toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "constructor"];
   function equalsConstructorPrototype(arg0) {
@@ -40,12 +40,15 @@ if (Object.keys) {
     } else {
       const _window5 = window;
       for (const key10002 in window) {
+        let tmp7 = key10002;
         try {
+          let tmp = table;
           if (!table["$" + key10002]) {
+            let tmp2 = hasOwnProperty;
             let call = hasOwnProperty.call;
             let _window = window;
             if (typeof call === "unknown") {
-              let callResult = hasOwnProperty(key10002);
+              let callResult = tmp2(key10002);
             } else {
               callResult = call(_window, key10002);
             }
@@ -55,6 +58,7 @@ if (Object.keys) {
                 let _window3 = window;
                 if (typeof window[key10002] === "object") {
                   try {
+                    let tmp4 = equalsConstructorPrototype;
                     let _window4 = window;
                     let tmp5 = equalsConstructorPrototype(window[key10002]);
                   } catch (err) {
@@ -98,7 +102,7 @@ if (Object.keys) {
       if (tmp) {
         if (obj.length > 0) {
           const call3 = hasOwnProperty.call;
-          if (!(typeof call3 === "unknown" ? hasOwnProperty(0) : call3(obj, 0))) {
+          if (!(typeof call3 === "unknown" ? tmp13(0) : call3(obj, 0))) {
             let num3 = 0;
             if (0 < obj.length) {
               do {
@@ -109,6 +113,7 @@ if (Object.keys) {
               } while (num3 < length);
             }
           }
+          tmp13 = hasOwnProperty;
         }
       }
       if (tmp3) {
@@ -137,28 +142,34 @@ if (Object.keys) {
             }
             return callback(arg0);
           })(obj);
-          if (0 < length.length) {
+          if (0 < closure_5.length) {
             while (true) {
+              let tmp28 = num7;
               let tmp29 = tmp26;
               if (tmp26) {
-                tmp29 = "constructor" === length[num7];
+                let tmp30 = closure_5;
+                tmp29 = "constructor" === closure_5[num7];
               }
               if (!tmp29) {
                 break;
               } else {
                 if (!tmp29) {
-                  let arr1 = items.push(length[num7]);
+                  let tmp35 = closure_5;
+                  let arr1 = items.push(closure_5[num7]);
                 }
                 num7 = num7 + 1;
+                let tmp37 = closure_5;
               }
             }
             const call5 = hasOwnProperty.call;
-            !(typeof call5 === "unknown" ? hasOwnProperty(length[num7]) : call5(obj, length[num7]));
+            !(typeof call5 === "unknown" ? hasOwnProperty(closure_5[num7]) : call5(obj, closure_5[num7]));
+            const tmp31 = hasOwnProperty;
           }
         }
         return items;
       }
       for (const key10045 in arg0) {
+        let tmp38 = key10045;
         let tmp18 = tmp12;
         if (tmp12) {
           tmp18 = "prototype" === key10045;
@@ -173,12 +184,14 @@ if (Object.keys) {
           }
           continue;
         } else {
+          let tmp19 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
           if (typeof call4 === "unknown") {
-            let call4Result = hasOwnProperty(key10045);
+            let call4Result = tmp19(key10045);
           } else {
             call4Result = call4(arg0, key10045);
           }
+          let tmp21 = !call4Result;
         }
       }
     } else {
@@ -186,7 +199,6 @@ if (Object.keys) {
       str = "[object String]";
       const tmp4 = typeof call2 === "unknown" ? str() : call2(obj);
     }
-    const tmp2 = typeof call === "unknown" ? str() : call(obj);
   }
   obj = { toString: null };
 }

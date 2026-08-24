@@ -2,14 +2,15 @@
 import importAllResult from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 
 export const ServerContainer = importAllResult.forwardRef(function ServerContainer(arg0, fn) {
+  let obj;
   ({ children, location: _location } = arg0);
   const effect = importAllResult.useEffect(() => {
     console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
   }, []);
-  let obj = {};
+  obj = {};
   if (fn) {
     obj = { getCurrentOptions: null };
     obj[0] = function getCurrentOptions() {

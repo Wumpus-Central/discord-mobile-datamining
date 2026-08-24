@@ -23,6 +23,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
     } else {
       const _String = String;
       one = standalone.other.replace("{{count}}", String(arg1));
+      const str = standalone.other;
     }
   }
   standalone = dependencyMap[arg0].standalone;

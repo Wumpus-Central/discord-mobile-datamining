@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import addSubscriptionPlan from "../../stores/billing/SubscriptionPlanStore.tsx";
-import reset from "../../stores/billing/SubscriptionStore.tsx";
-import makeGroupListingIndexSubscriptionListingTag from "GuildRoleSubscriptionsStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../stores/billing/SubscriptionPlanStore.tsx";
+import closure_4 from "../../stores/billing/SubscriptionStore.tsx";
+import closure_5 from "GuildRoleSubscriptionsStore.tsx";
 import { SubscriptionTypes } from "../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx");
 
 export default function useActiveSubscriptionListingForGroup(arg0) {
   const _require = arg0;
@@ -21,9 +21,14 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
       const _Object = Object;
       const values = Object.values(tmp);
       for (const item10012 of values) {
+        let tmp6 = item10012;
+        let tmp7 = soft_deleted;
         if (item10012.type === soft_deleted.GUILD) {
+          let tmp8 = callback;
+          let tmp9 = stateFromStores;
           let obj2 = callback(stateFromStores[6]);
-          obj[obj2.getRoleSubscriptionPlanId(item10012)] = item10012;
+          let tmp10 = item10012;
+          obj[obj2.getRoleSubscriptionPlanId(tmp6)] = tmp6;
         }
         continue;
       }
@@ -49,16 +54,22 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
       prop = [];
     }
     for (const item10017 of prop) {
+      let tmp6 = activeSubscriptionPlanFromStore;
       let subscriptionListing = activeSubscriptionPlanFromStore.getSubscriptionListing(item10017);
+      let tmp8 = subscriptionListing;
       id = undefined;
       if (subscriptionListing != null) {
         id = subscriptionListing.subscription_plans[0].id;
       }
       if (null != id) {
+        let tmp11 = table;
+        let tmp12 = id;
         let tmp13 = table[tmp10];
+        let tmp14 = tmp13;
         if (null != tmp13) {
           tmp2 = tmp13;
           let tmp = subscriptionListing;
+          let tmp15 = obj;
           obj.return();
           break;
         }

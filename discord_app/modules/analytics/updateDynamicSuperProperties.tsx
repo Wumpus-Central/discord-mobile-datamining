@@ -1,10 +1,10 @@
 // discord_app/modules/analytics/updateDynamicSuperProperties.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import trackHeartbeat from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
 import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 
-let result = obj132.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
   let obj = trackHeartbeat;
@@ -22,6 +22,8 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj.client_heartbeat_session_id = uuid;
   }
+  const obj2 = encodeProperties;
+  const tmp = require;
   const state = _modDef10501.getState();
   let client_app_state;
   if (superProperties != null) {

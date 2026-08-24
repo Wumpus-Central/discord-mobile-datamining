@@ -1,14 +1,14 @@
 // discord_app/modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import ME from "../../../Constants.tsx";
 import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "../../../stores/UserStore.tsx";
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 let items = [, , , , ];
 ({ CREATOR_MONETIZABLE_PROVISIONAL: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_WHITEGLOVE: arr[2], CREATOR_MONETIZABLE_DISABLED: arr[3], CREATOR_MONETIZABLE_RESTRICTED: arr[4] } = ME.GuildFeatures);
-const result = obj132.fileFinishedImporting("modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx");
+const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/feature_education/OnboardingV2Utils.tsx");
 
 export const useCanSeeCreatorMonetizationOnboardingV2Upsell = function useCanSeeCreatorMonetizationOnboardingV2Upsell(id) {
   const _require = id;

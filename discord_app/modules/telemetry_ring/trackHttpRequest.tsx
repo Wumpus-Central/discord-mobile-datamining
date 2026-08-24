@@ -1,12 +1,11 @@
 // discord_app/modules/telemetry_ring/trackHttpRequest.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import apexExperiment from "HttpRequestSampleExperiment.tsx";
 import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest.android.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = obj132.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
+const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 
 export default function trackHttpRequest(url) {
   let obj = {};
@@ -26,5 +25,4 @@ export default function trackHttpRequest(url) {
     expandEventPropertiesDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
     const tmp3Result = expandEventPropertiesDefault;
   }
-  obj2 = apexExperiment;
 };

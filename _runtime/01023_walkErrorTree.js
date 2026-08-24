@@ -1,17 +1,17 @@
 // _runtime/01023_walkErrorTree.js
 const require = arg1;
 const dependencyMap = arg6;
-function walkErrorTree(stackParser, table, originalException, callback, items2, items3) {
-  let exceptions = items2;
-  if (items2 === undefined) {
+function walkErrorTree(arg0, arg1, arg2, arg3) {
+  let exceptions = arg4;
+  if (arg4 === undefined) {
     exceptions = [];
   }
-  let debugImages = items3;
-  if (items3 === undefined) {
+  let debugImages = arg5;
+  if (arg5 === undefined) {
     debugImages = [];
   }
-  if (originalException[callback]) {
-    if (exceptions.length + 1 < table) {
+  if (arg2[arg3]) {
+    if (exceptions.length + 1 < arg1) {
       if (obj12.isString(tmp)) {
         let obj = { value: null };
         obj[0] = tmp;
@@ -28,17 +28,17 @@ function walkErrorTree(stackParser, table, originalException, callback, items2, 
         ({ name: obj8[0], message: obj8[1] } = tmp);
         obj1 = { frames: null };
         const stackElements = tmp.stackElements;
-        const mapped = stackElements.map((item, index) => {
-          const obj = { platform: "java", module: item.className, filename: item.fileName, lineno: null, function: null, in_app: null };
+        const mapped = stackElements.map((className) => {
+          const obj = { platform: "java", module: className.className, filename: className.fileName, lineno: null, function: null, in_app: null };
           let lineNumber;
-          if (item.lineNumber >= 0) {
-            lineNumber = item.lineNumber;
+          if (className.lineNumber >= 0) {
+            lineNumber = className.lineNumber;
           }
           obj[3] = lineNumber;
-          obj[4] = item.methodName;
+          obj[4] = className.methodName;
           let tmp3 = null === nativePackageName;
           if (!tmp3) {
-            const className = item.className;
+            className = className.className;
             tmp3 = !className.startsWith(tmp2);
           }
           obj[5] = !tmp3;
@@ -77,7 +77,7 @@ function walkErrorTree(stackParser, table, originalException, callback, items2, 
         const _Error = Error;
         if (tmp28Result.isInstanceOf(tmp, Error)) {
           tmp28Result = tmp28(1024);
-          exceptionFromErrorResult = tmp28Result.exceptionFromError(stackParser, originalException[callback]);
+          exceptionFromErrorResult = tmp28Result.exceptionFromError(arg0, arg2[arg3]);
         } else {
           if (tmp28Result1.isPlainObject(tmp)) {
             let name;
@@ -100,15 +100,15 @@ function walkErrorTree(stackParser, table, originalException, callback, items2, 
           tmp28Result1 = tmp28(817);
         }
       }
-      items2 = [];
+      const items2 = [];
       items2[HermesBuiltin.arraySpread(exceptions, 0)] = exceptionFromErrorResult;
-      items3 = [];
+      const items3 = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(debugImages, 0);
       if (!items4) {
         items4 = [];
       }
       arraySpreadResult = HermesBuiltin.arraySpread(items4, arraySpreadResult);
-      return walkErrorTree(stackParser, table, tmp, callback, items2, items3);
+      return walkErrorTree(arg0, arg1, tmp, arg3, items2, items3);
     }
   }
   return { exceptions, debugImages };
@@ -119,6 +119,8 @@ arg5.nativeLinkedErrorsIntegration = () => {
   if (arg0 === undefined) {
     obj = {};
   }
+  closure_0 = undefined;
+  closure_1 = undefined;
   closure_0 = obj.key || "cause";
   closure_1 = obj.limit || 5;
   obj = {
@@ -138,7 +140,7 @@ arg5.nativeLinkedErrorsIntegration = () => {
         if (originalException) {
           const _Error = Error;
           if (obj.isInstanceOf(originalException.originalException, Error)) {
-            ({ exceptions, debugImages } = walkErrorTree(getOptions.getOptions().stackParser, table, originalException.originalException, callback));
+            ({ exceptions, debugImages } = closure_1_2(getOptions.getOptions().stackParser, tmp, originalException.originalException, tmp2));
             const items = [];
             HermesBuiltin.arraySpread(exceptions, HermesBuiltin.arraySpread(exception.exception.values, 0));
             exception.exception.values = items;
@@ -156,7 +158,7 @@ arg5.nativeLinkedErrorsIntegration = () => {
             const items1 = [];
             HermesBuiltin.arraySpread(debugImages, 0);
             HermesBuiltin.apply(items1, images1);
-            const tmp12 = walkErrorTree(getOptions.getOptions().stackParser, table, originalException.originalException, callback);
+            const tmp12 = closure_1_2(getOptions.getOptions().stackParser, tmp, originalException.originalException, tmp2);
           }
           obj = callback(table[0]);
         }

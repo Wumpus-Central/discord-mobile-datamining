@@ -1,12 +1,11 @@
 // discord_app/modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx
-import dispatcherDefault from "../../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import initialize from "../AgeVerificationStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../AgeVerificationStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx");
 
 export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2() {
   [tmp2, closure_0] = callback2(callback.useState(() => {
@@ -29,6 +28,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
   const tmp6 = callback2(callback.useState(false), 2);
   callback = tmp6[1];
   callback2 = callback.useRef(true);
+  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -116,12 +116,13 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               const obj3 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: null, footerMessage: null };
               obj3[1] = lib.methods;
               obj3[2] = lib.footerMessage;
-              dispatcherDefault.dispatch(obj3);
+              closure_2_1(709).dispatch(obj3);
               if (c4.current) {
                 lib(lib.methods);
                 closure_1_1(lib.footerMessage);
               }
               c4 = 1;
+              const obj7 = closure_2_1(709);
             }
             c4 = 0;
             if (c4.current) {

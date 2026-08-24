@@ -30,11 +30,12 @@ fillInDefaultValues.__workletHash = 2470118803733;
 fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_useRotationGestureTs2(event){event.rotationChange=0;}" };
 const map = new Map();
 let closure_6 = {};
-arg5.useRotationGesture = function useRotationGesture(closure_6) {
-  let tmp = closure_6;
-  if (closure_6 === undefined) {
+arg5.useRotationGesture = function useRotationGesture(gestureHandlerProps) {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
     tmp = closure_6;
   }
   const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformRotationProps);
+  const obj = isGestureEnabled;
   return useGesture.useGesture(ComposedGestureName.SingleGestureName.Rotation, clonedAndRemappedConfig);
 };

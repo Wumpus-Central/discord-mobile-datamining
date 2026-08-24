@@ -1,5 +1,5 @@
 // discord_app/modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
 const tmp2 = keys.create()((arg0) => {
@@ -19,7 +19,7 @@ const tmp2 = keys.create()((arg0) => {
       if (null != str) {
         recommendationApplicationIds = str.split(",");
       }
-      return callback({ recommendationApplicationIds });
+      return closure_0({ recommendationApplicationIds });
     },
     overrideNitroEligibilityForSocialLayerStorefront: false,
     setOverrideNitroEligibilityForSocialLayerStorefront(overrideNitroEligibilityForSocialLayerStorefront) {
@@ -31,6 +31,6 @@ const tmp2 = keys.create()((arg0) => {
     }
   };
 });
-const result = obj132.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
+const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
 
 export const useSlayerStorefrontDevOverrideStore = tmp2;

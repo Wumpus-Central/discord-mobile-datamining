@@ -1,13 +1,13 @@
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import addSku from "../../../stores/game_store/SKUStore.tsx";
+import closure_3 from "../../../stores/game_store/SKUStore.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ AnalyticEvents: c4, PaymentGateways: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontGiftModal.tsx");
 
 export default function SocialLayerStorefrontGiftModal(skuId) {
   skuId = skuId.skuId;
@@ -26,17 +26,17 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
   analyticsLocations2 = tmp4(items2).analyticsLocations;
   obj1 = skuId(applicationId[7]);
   if (obj1.isIOS()) {
-    let GOOGLE = constants.APPLE_ADVANCED_COMMERCE;
-    let APPLE_ADVANCED_COMMERCE = constants;
+    let GOOGLE = tmp6.APPLE_ADVANCED_COMMERCE;
+    let APPLE_ADVANCED_COMMERCE = tmp6;
   } else {
-    GOOGLE = constants.GOOGLE;
-    APPLE_ADVANCED_COMMERCE = constants;
+    GOOGLE = tmp6.GOOGLE;
+    APPLE_ADVANCED_COMMERCE = tmp6;
   }
   const GiftACOMOrderExperiment = tmp(tmp8Result[8]).GiftACOMOrderExperiment;
   let closeSocialLayerStorefrontGiftModal = GiftACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontGiftModal" }).enabled;
   tmp3(tmp8Result[9])(() => {
-    giftingOrigin(applicationId[10]);
-    const obj = { location_stack: analyticsLocations2, type: skuId(applicationId[11]).SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY, sku_id: skuId, application_id: null };
+    let obj = giftingOrigin(applicationId[10]);
+    obj = { location_stack: analyticsLocations2, type: skuId(applicationId[11]).SOCIAL_LAYER_STOREFRONT_GIFT_MODAL_KEY, sku_id: skuId, application_id: null };
     applicationId = undefined;
     if (applicationId != null) {
       applicationId = applicationId.applicationId;
@@ -74,27 +74,26 @@ export default function SocialLayerStorefrontGiftModal(skuId) {
       obj1[6] = function validateRecipient(navigation, arg1) {
         return Promise.resolve(true);
       };
-      giftingOrigin = function renderProductDetails(applicationId) {
-        return jsx(giftingOrigin(applicationId[18]), { sku: applicationId });
+      giftingOrigin = function renderProductDetails(arg0) {
+        return closure_1_6(giftingOrigin(applicationId[18]), { sku: applicationId });
       };
       obj1[7] = giftingOrigin;
       obj1[8] = function renderPurchaseSection(arg0) {
         ({ isPurchaseDisabled, giftOptions } = arg0);
-        return jsx(giftingOrigin(applicationId[19]), { skuId, sku: applicationId, isPurchaseDisabled, giftOptions, giftingOrigin, analyticsLocations: analyticsLocations2 });
+        return closure_1_6(giftingOrigin(applicationId[19]), { skuId, sku: applicationId, isPurchaseDisabled, giftOptions, giftingOrigin, analyticsLocations: analyticsLocations2 });
       };
-      tmp8Result = <tmp3 skuId={null} applicationId={null} analyticsLocations={null} lockedRecipientUser={null} onGiftModalDismiss={null} giftingOrigin={null} validateRecipient={null} renderProductDetails={null} renderPurchaseSection={null} />;
+      tmp8Result = tmp8(tmp3, obj1);
       obj[6] = tmp8Result;
-      obj[2] = <tmp3Result key={skuId} paymentGateway={null} orderRequired={null} skuIds={null} isGift activeSubscription={null} onOrderRetryCancellation={null}>{null}</tmp3Result>;
-      tmp8Result = jsx(tmp(tmp8Result[15]).NativePaymentContextProvider, { paymentGateway: null, orderRequired: null, skuIds: null, isGift: true, activeSubscription: null, onOrderRetryCancellation: null, children: null });
+      obj[2] = tmp8(tmp3Result, obj, skuId);
+      tmp8Result = tmp8(tmp(tmp8Result[15]).NativePaymentContextProvider, obj);
     } else {
       const obj2 = { onDismiss: null, title: null };
       obj2[0] = onGiftModalDismiss;
       tmp3Result = tmp3(tmp8Result[13]);
       const intl = tmp(tmp8Result[14]).intl;
       obj2[1] = intl.string(tmp(tmp8Result[14]).t["JCFN/y"]);
-      tmp8Result = <tmp3Result onDismiss={null} title={null} />;
+      tmp8Result = tmp8(tmp3Result, obj2);
     }
     tmpResult = tmp(tmp8Result[12]);
   }
-  const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
 };

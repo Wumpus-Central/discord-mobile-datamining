@@ -1,8 +1,8 @@
 // discord_app/intl/locale-data/formatjs.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
 
-const result = obj132.fileFinishedImporting("intl/locale-data/formatjs.tsx");
+const result = set.fileFinishedImporting("intl/locale-data/formatjs.tsx");
 
 export const formatjsLocales = {
   bg() {

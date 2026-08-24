@@ -11,7 +11,7 @@ arg5.useOnProgressChange = function useOnProgressChange(autoFillData) {
   const rawDataLength = autoFillData.rawDataLength;
   const onProgressChange = autoFillData.onProgressChange;
   closure_6 = tmp;
-  autoFillData(loop[0]);
+  let obj = autoFillData(loop[0]);
   const fn = function n() {
     return offsetX.value;
   };
@@ -19,31 +19,31 @@ arg5.useOnProgressChange = function useOnProgressChange(autoFillData) {
   fn.__workletHash = 355184931449;
   fn.__initData = offsetX;
   const fn2 = function u(value) {
-    autoFillData(loop[1]);
-    const obj = { value, rawDataLength, size, autoFillData, loop };
+    let obj = autoFillData(loop[1]);
+    obj = { value, rawDataLength, size, autoFillData, loop };
     const result = obj.computedOffsetXValueWithAutoFillData(obj);
     let bound = result;
     if (!loop) {
       const _Math = Math;
       const _Math2 = Math;
-      const result1 = -rawDataLength - 1 * size;
+      const result1 = -tmp3 - 1 * tmp4;
       bound = Math.max(result1, Math.min(result, 0));
     }
-    const absolute = Math.abs(bound / size);
+    const absolute = Math.abs(bound / tmp4);
     let diff = absolute;
     if (bound > 0) {
-      diff = rawDataLength - absolute;
+      diff = tmp3 - absolute;
     }
     if (onProgressChange) {
       if (closure_6) {
-        autoFillData(loop[0]).runOnJS(onProgressChange)(bound, diff);
+        autoFillData(loop[0]).runOnJS(tmp11)(bound, diff);
         const tmpResult = autoFillData(loop[0]);
       } else {
-        onProgressChange.value = diff;
+        tmp11.value = diff;
       }
     }
   };
-  let obj = { computedOffsetXValueWithAutoFillData: autoFillData(loop[1]).computedOffsetXValueWithAutoFillData, rawDataLength, size, autoFillData, loop, onProgressChange, isFunc: tmp, runOnJS: autoFillData(loop[0]).runOnJS };
+  obj = { computedOffsetXValueWithAutoFillData: autoFillData(loop[1]).computedOffsetXValueWithAutoFillData, rawDataLength, size, autoFillData, loop, onProgressChange, isFunc: tmp, runOnJS: autoFillData(loop[0]).runOnJS };
   fn2.__closure = obj;
   fn2.__workletHash = 12473781608319;
   fn2.__initData = size;

@@ -1,11 +1,9 @@
 // _runtime/metro/07069__possibleConstructorReturn.js
-import _typeof from "07054__typeof.js";
 import _assertThisInitialized from "../07070__assertThisInitialized.js";
 
 
 export default function _possibleConstructorReturn(arg0, fn) {
   if (fn) {
-    _typeof;
     return fn;
   }
   if (undefined !== fn) {

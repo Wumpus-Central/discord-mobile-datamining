@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import create from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import redactionSettingToRenderedString from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -24,14 +24,15 @@ const pressable = createToggle.createPressable({
     return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
   },
   onPress: function onObscuredContentGuildsOnPress() {
+    let obj = resolveExplicitContentSettingWithDefaults;
     const intl = getSystemLocale.intl;
     const stringResult = intl.string(getSystemLocale.t.GYpoAq);
-    let obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
+    obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["FP+a42"]);
     obj[2] = function handlePress(explicitContentGuilds) {
-      callback(table[5]);
-      const obj = { explicitContentGuilds };
+      let obj = callback(table[5]);
+      obj = { explicitContentGuilds };
       return obj.updateExplicitContentSetting(obj);
     };
     const items = [create.ExplicitContentRedaction.BLOCK];
@@ -50,12 +51,13 @@ const pressable = createToggle.createPressable({
   },
   useIsDisabled() {
     let userIsTeen = useUserIsTeen.useUserIsTeen();
+    const obj = useUserIsTeen;
     if (!userIsTeen) {
       userIsTeen = obj2.useIsParentallyControlled();
     }
     return userIsTeen;
   }
 });
-let result = obj132.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
 
 export default pressable;

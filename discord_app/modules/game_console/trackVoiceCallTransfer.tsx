@@ -1,11 +1,11 @@
 // discord_app/modules/game_console/trackVoiceCallTransfer.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
-import handleUpdate from "../../stores/SessionsStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "../../stores/SessionsStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
+const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
 export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
   let obj = expandEventPropertiesDefault;

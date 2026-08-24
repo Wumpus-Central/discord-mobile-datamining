@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/ShopCategory.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { CollectiblesMobileShopScreen as closure_5 } from "../CollectiblesShopConstants.tsx";
 import { UserSettingsSections } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function Spacing() {
   return callback(View, { style: { width: 12 } });
 }
@@ -16,39 +16,49 @@ function HeaderAndFooterSpacing() {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const sum = 100 + require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_HEIGHT;
-const createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: 24, height: sum };
+createCacheKey = { categoryContainer: null, categoryHeader: null, categoryHeaderBorderDark: null, categoryHeaderBorderLight: null, imageBackground: null, viewAllIcon: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: 24, height: sum };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
+let obj1 = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
 createCacheKey[2] = { borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_660 };
+let obj2 = { borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_660 };
 createCacheKey[3] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[4] = { top: 0, bottom: 0, left: 0, right: 0, position: "absolute" };
+let obj3 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: ThemesDefault.radii.round };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/collectibles/native/ShopCategory.tsx");
+let obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: ThemesDefault.radii.round };
+let result = require("set").fileFinishedImporting("modules/collectibles/native/ShopCategory.tsx");
 
 export const CATEGORY_CONTAINER_HEIGHT = sum;
 export const CATEGORY_CONTAINER_BOTTOM_MARGIN = 24;
 export const ShopCategory = function ShopCategory(category) {
   category = category.category;
   let analyticsLocations;
+  dependencyMap = undefined;
+  let unpublishedAt;
+  let filteredAndSortedProducts;
   initialProductSkuId = undefined;
+  let initialVariantIndex;
+  let ref;
   let collectiblesAnalyticsContext;
   ({ index, isDarkTheme } = category);
   analyticsLocations = analyticsLocations(7139)().analyticsLocations;
   const tmp3 = callback2();
   let obj = category(1500);
   dependencyMap = obj.useNavigation();
-  const unpublishedAt = category.unpublishedAt;
+  unpublishedAt = category.unpublishedAt;
   obj1 = category(14428);
   obj = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const filteredAndSortedProducts = obj1.useFilteredAndSortedProducts(obj);
+  filteredAndSortedProducts = obj1.useFilteredAndSortedProducts(obj);
   const mobileBannerUrl = category.mobileBannerUrl;
   let obj3 = category(14955);
   const collectiblesShopDeepLinkProps = obj3.useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
-  const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
+  initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   let obj4 = unpublishedAt;
-  const ref = unpublishedAt.useRef(null);
+  ref = unpublishedAt.useRef(null);
   let obj5 = category(8029);
   let items = [category.storeListingId];
   const recyclingState = obj5.useRecyclingState(null, items, () => {
@@ -69,7 +79,7 @@ export const ShopCategory = function ShopCategory(category) {
   const effect = obj4.useEffect(() => {
     let found = null;
     if (null != initialProductSkuId) {
-      found = filteredAndSortedProducts.find((item, index) => item.skuId === closure_5);
+      found = filteredAndSortedProducts.find((skuId) => skuId.skuId === closure_5);
     }
     if (null != found) {
       let obj = analyticsLocations(navigation[15]);
@@ -81,12 +91,14 @@ export const ShopCategory = function ShopCategory(category) {
       obj[3] = collectiblesAnalyticsContext;
       const result = category(navigation[16]).openProductDetailsActionSheet(obj);
       const obj2 = category(navigation[16]);
+      const tmp9 = collectiblesAnalyticsContext;
     }
   }, items1);
   const items2 = [unpublishedAt];
   const callback = obj4.useCallback((arg0) => {
     ({ item, index } = arg0);
-    const obj = { product: item, unpublishedAt };
+    let obj = { newValue: { tilePosition: index }, children: null };
+    obj = { product: item, unpublishedAt };
     obj[1] = ref(analyticsLocations(navigation[5]), obj);
     return ref(category(navigation[14]).CollectiblesAnalyticsProvider, obj);
   }, items2);

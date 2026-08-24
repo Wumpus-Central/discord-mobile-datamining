@@ -1,24 +1,24 @@
 // discord_app/design/components/Menu/native/Menu.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _mod4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NOOP } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 let c4 = importAllResult;
 ({ ScrollView: c5, StyleSheet } = get_ActivityIndicator);
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-{ duration: 250, easing: require("STANDARD_EASING").STANDARD_EASING };
-let obj = { backdrop: null, menu: null };
+let obj = { duration: 250, easing: require("STANDARD_EASING").STANDARD_EASING };
+obj = { backdrop: null, menu: null };
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.zIndex = 1;
 obj[0] = obj1;
-const createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, width: 220 };
+createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, width: 220 };
 obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const context = importAllResult.createContext({ menuClose: NOOP, menuDismiss: NOOP });
@@ -29,14 +29,14 @@ function measureButtonRef(arg0, arg1) {
     const tmpResult = _mod4115;
   }
 }
-measureButtonRef.__closure = { measure: require("../../../../modules/reanimated/ReanimatedRexport.tsx").measure, runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS };
+measureButtonRef.__closure = { measure: require("module_4115").measure, runOnJS: require("module_4115").runOnJS };
 measureButtonRef.__workletHash = 15651320687527;
 measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
 let closure_13 = { code: "function MenuTsx2(){const{runOnJS,openMenuCallback}=this.__closure;return runOnJS(openMenuCallback)();}" };
 let closure_14 = { code: "function MenuTsx3(){const{runOnJS,closeMenuCallback}=this.__closure;return runOnJS(closeMenuCallback)();}" };
 let closure_15 = { code: "function MenuTsx4(){const{visible,useReducedMotion,interpolate,dirX,size,offsetAnimated,dirY}=this.__closure;var _offsetAnimated,_offsetAnimated$get,_offsetAnimated2,_offsetAnimated$get2;return{opacity:visible.get(),transform:useReducedMotion?[]:[{translateX:interpolate(visible.get(),[0,1],[(dirX==='left'?-1:1)*size.get().width/4,((_offsetAnimated=offsetAnimated)===null||_offsetAnimated===void 0||(_offsetAnimated=_offsetAnimated.get())===null||_offsetAnimated===void 0?void 0:_offsetAnimated.x)!=null?(_offsetAnimated$get=offsetAnimated.get())===null||_offsetAnimated$get===void 0?void 0:_offsetAnimated$get.x:0])},{translateY:interpolate(visible.get(),[0,1],[(dirY==='top'?-1:1)*size.get().height/4,((_offsetAnimated2=offsetAnimated)===null||_offsetAnimated2===void 0||(_offsetAnimated2=_offsetAnimated2.get())===null||_offsetAnimated2===void 0?void 0:_offsetAnimated2.y)!=null?(_offsetAnimated$get2=offsetAnimated.get())===null||_offsetAnimated$get2===void 0?void 0:_offsetAnimated$get2.y:0])},{scale:visible.get()/2+0.5}]};}" };
-let obj3 = { measure: require("../../../../modules/reanimated/ReanimatedRexport.tsx").measure, runOnJS: require("../../../../modules/reanimated/ReanimatedRexport.tsx").runOnJS };
-let result = require("obj132").fileFinishedImporting("design/components/Menu/native/Menu.tsx");
+let obj3 = { measure: require("module_4115").measure, runOnJS: require("module_4115").runOnJS };
+let result = require("set").fileFinishedImporting("design/components/Menu/native/Menu.tsx");
 
 export const MENU_OFFSET = 10;
 export const MenuContext = context;
@@ -52,46 +52,49 @@ export const Menu = function Menu(toggleButtonRef) {
   }
   ({ offset, offsetAnimated } = toggleButtonRef);
   let enabled;
+  let callback;
   let size2;
+  closure_5 = undefined;
+  let sharedValue;
+  let sharedValue1;
   onClose = undefined;
   let callback2;
   let redux;
   function openMenuCallback() {
     obj = toggleButtonRef(enabled[12]);
     if (obj.isAndroid()) {
-      const AccessibilityAnnouncer = toggleButtonRef(enabled[13]).AccessibilityAnnouncer;
-      const intl = toggleButtonRef(enabled[14]).intl;
-      AccessibilityAnnouncer.announce(intl.string(toggleButtonRef(enabled[14]).t.ZqK0uI));
+      const AccessibilityAnnouncer = tmp(tmp2[13]).AccessibilityAnnouncer;
+      const intl = tmp(tmp2[14]).intl;
+      AccessibilityAnnouncer.announce(intl.string(tmp(tmp2[14]).t.ZqK0uI));
     }
     obj = { ref: closure_3 };
     const result = toggleButtonRef(enabled[15]).setAccessibilityFocus(obj);
-    const tmpResult = toggleButtonRef(enabled[15]);
   }
   ({ style, children } = toggleButtonRef);
-  const tmp = callback2();
+  let tmp = callback2();
   enabled = size2.useContext(toggleButtonRef(enabled[9]).AccessibilityPreferencesContext).reducedMotion.enabled;
   const rect = offsetAnimated(enabled[10])();
   const size = offsetAnimated(enabled[11])();
-  const callback = size2.useRef(null);
+  callback = size2.useRef(null);
   const tmp7 = callback(size2.useState(null), 2);
   size2 = tmp7[0];
   closure_5 = tmp7[1];
   obj = toggleButtonRef(enabled[8]);
-  const sharedValue = obj.useSharedValue(0);
+  sharedValue = obj.useSharedValue(0);
   obj1 = toggleButtonRef(enabled[8]);
-  const sharedValue1 = obj1.useSharedValue({ width: 0, height: 0 });
+  sharedValue1 = obj1.useSharedValue({ width: 0, height: 0 });
   let items = [toggleButtonRef, size2];
   const layoutEffect = size2.useLayoutEffect(() => {
     let current;
     if (toggleButtonRef != null) {
-      current = toggleButtonRef.current;
+      current = tmp.current;
     }
     let tmp3 = null != current;
     if (tmp3) {
       tmp3 = null == size2;
     }
     if (tmp3) {
-      toggleButtonRef(enabled[8]).runOnUI(measureButtonRef)(toggleButtonRef, closure_5);
+      toggleButtonRef(enabled[8]).runOnUI(closure_1_12)(tmp, closure_5);
       obj = toggleButtonRef(enabled[8]);
     }
   }, items);
@@ -178,11 +181,11 @@ export const Menu = function Menu(toggleButtonRef) {
     sum5 = tmp19 + num6;
   }
   function handleDismiss() {
-    toggleButtonRef(enabled[15]);
+    obj = toggleButtonRef(enabled[15]);
     obj = { ref: toggleButtonRef };
     const result = obj.setAccessibilityFocus(obj);
     const fn = function t() {
-      return toggleButtonRef(enabled[8]).runOnJS(closure_9)();
+      return closure_1_0(closure_1_2[8]).runOnJS(closure_9)();
     };
     obj = { runOnJS: toggleButtonRef(enabled[8]).runOnJS, closeMenuCallback: onClose };
     fn.__closure = obj;
@@ -196,9 +199,9 @@ export const Menu = function Menu(toggleButtonRef) {
   obj.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
   let items1 = [obj, str9, str12];
   function handleClose() {
-    toggleButtonRef(enabled[16]);
+    obj = toggleButtonRef(enabled[16]);
     const fn = function t() {
-      return toggleButtonRef(enabled[8]).runOnJS(closure_9)();
+      return closure_1_0(closure_1_2[8]).runOnJS(closure_9)();
     };
     obj = { runOnJS: toggleButtonRef(enabled[8]).runOnJS, closeMenuCallback: onClose };
     fn.__closure = obj;
@@ -308,7 +311,7 @@ export const Menu = function Menu(toggleButtonRef) {
       obj = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
       const result = sharedValue1.set(obj);
       const fn = function n() {
-        return toggleButtonRef(enabled[8]).runOnJS(closure_8)();
+        return closure_1_0(closure_1_2[8]).runOnJS(closure_8)();
       };
       obj = { runOnJS: toggleButtonRef(enabled[8]).runOnJS, openMenuCallback };
       fn.__closure = obj;
@@ -320,8 +323,9 @@ export const Menu = function Menu(toggleButtonRef) {
   };
   items3 = [tmp.menu, boxShadowStyle, tmp6Result[0], animatedStyle, style];
   let obj3 = { children: null };
-  const tmp2 = size2;
+  let tmp2 = size2;
   const tmp5Result = offsetAnimated(enabled[18]);
+  const tmp6 = callback;
   const Children = tmp2.Children;
   obj3[0] = sharedValue1(redux.Provider, {
     value: { menuClose: handleClose, menuDismiss: handleDismiss },

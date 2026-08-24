@@ -1,8 +1,10 @@
 // _runtime/01179_mergeOutcomes.js
 arg5.mergeOutcomes = function mergeOutcomes(_outcomesBuffer, _clearOutcomesResult) {
   const items = [...arguments];
-  const map = new Map();
-  function process(reason) {
+  let map;
+  let process;
+  map = new Map();
+  process = function process(reason) {
     const combined = "" + reason.reason + ":" + reason.category;
     const value = map.get(combined);
     if (value) {
@@ -10,8 +12,8 @@ arg5.mergeOutcomes = function mergeOutcomes(_outcomesBuffer, _clearOutcomesResul
     } else {
       const result = map.set(combined, reason);
     }
-  }
-  const item = items.forEach((item, index) => item.forEach(process));
+  };
+  const item = items.forEach((arr) => arr.forEach(process));
   const items1 = [...map.values()];
   return items1;
 };

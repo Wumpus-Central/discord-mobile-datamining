@@ -1,7 +1,7 @@
 // _runtime/06609_extractFeFlood.js
 import extractOpacityDefault from "06577_extractOpacity.js";
 import extractBrushDefault from "06589_extractBrush.js";
-import noop from "00019_noop.js";
+import closure_2 from "00019_noop.js";
 
 const re3 = /\s+/;
 let obj = { type: 0, payload: require("get ActivityIndicator").processColor("black") };
@@ -19,128 +19,134 @@ export default function extractFeFlood(arg0) {
   }
   return obj;
 };
-export const extractFilter = (props) => ({ x: props.x, y: props.y, width: props.width, height: props.height, result: props.result });
-export const extractIn = (props) => {
-  if (props.in) {
+export const extractFilter = (arg0) => ({ x: arg0.x, y: arg0.y, width: arg0.width, height: arg0.height, result: arg0.result });
+export const extractIn = (arg0) => {
+  if (arg0.in) {
     obj = { in1: null };
-    obj[0] = props.in;
+    obj[0] = arg0.in;
   } else {
     obj = {};
   }
   return obj;
 };
-export const extractFeBlend = (props) => {
+export const extractFeBlend = (in2) => {
   obj = {};
-  if (props.in2) {
-    obj.in2 = props.in2;
+  if (in2.in2) {
+    obj.in2 = in2.in2;
   }
-  if (props.mode) {
-    obj.mode = props.mode;
+  if (in2.mode) {
+    obj.mode = in2.mode;
   }
   return obj;
 };
-export const extractFeColorMatrix = (props) => {
+export const extractFeColorMatrix = (type) => {
   obj = {};
-  if (undefined !== props.values) {
+  if (undefined !== type.values) {
     const _Array = Array;
-    const values = props.values;
-    if (Array.isArray(props.values)) {
-      obj.values = values.map((item, index) => {
-        let parsed = item;
-        if (typeof item !== "number") {
+    const values = type.values;
+    if (Array.isArray(type.values)) {
+      obj.values = values.map((num) => {
+        let parsed = num;
+        if (typeof num !== "number") {
           const _parseFloat = parseFloat;
-          parsed = parseFloat(item);
+          parsed = parseFloat(num);
         }
         return parsed;
       });
     } else if (typeof values === "number") {
-      const items = [props.values];
+      const items = [type.values];
       obj.values = items;
-    } else if (typeof props.values === "string") {
-      const parts = props.values.split(closure_3);
+    } else if (typeof type.values === "string") {
+      const parts = type.values.split(closure_3);
       let _parseFloat = parseFloat;
       const mapped = parts.map(parseFloat);
-      obj.values = mapped.filter((item, index) => !isNaN(item));
+      obj.values = mapped.filter((arg0) => !isNaN(arg0));
+      const str = type.values;
     } else {
       const _console = console;
       console.warn("Invalid value for FeColorMatrix `values` prop");
     }
   }
-  if (props.type) {
-    obj.type = props.type;
+  if (type.type) {
+    obj.type = type.type;
   }
   return obj;
 };
-export const extractFeComposite = (props) => {
-  closure_0 = props;
-  obj = { in1: props.in || "", in2: tmp2, operator1: tmp3 };
+export const extractFeComposite = (arg0) => {
+  closure_0 = arg0;
+  obj = { in1: arg0.in || "", in2: tmp2, operator1: tmp3 };
   const items = ["k1", "k2", "k3", "k4"];
-  const item = items.forEach((item, index) => {
-    if (undefined !== props[item]) {
+  const item = items.forEach((arg0) => {
+    if (undefined !== table[arg0]) {
       const _Number = Number;
-      obj[item] = Number(tmp[item]) || 0;
-      const tmp4 = Number(tmp[item]) || 0;
+      obj[arg0] = Number(tmp[arg0]) || 0;
+      const tmp2 = obj;
+      const tmp4 = Number(tmp[arg0]) || 0;
     }
   });
   return obj;
 };
-export const extractFeGaussianBlur = (props) => {
+export const extractFeGaussianBlur = (stdDeviation) => {
   obj = {};
-  if (Array.isArray(props.stdDeviation)) {
+  if (Array.isArray(stdDeviation.stdDeviation)) {
     const _Number5 = Number;
-    obj.stdDeviationX = Number(props.stdDeviation[0]) || 0;
+    obj.stdDeviationX = Number(stdDeviation.stdDeviation[0]) || 0;
     const _Number6 = Number;
-    const tmp7 = Number(props.stdDeviation[0]) || 0;
-    obj.stdDeviationY = Number(props.stdDeviation[1]) || 0;
-    const tmp8 = Number(props.stdDeviation[1]) || 0;
+    const tmp7 = Number(stdDeviation.stdDeviation[0]) || 0;
+    obj.stdDeviationY = Number(stdDeviation.stdDeviation[1]) || 0;
+    const tmp8 = Number(stdDeviation.stdDeviation[1]) || 0;
   } else {
-    if (typeof props.stdDeviation === "string") {
+    if (typeof stdDeviation.stdDeviation === "string") {
       if (str2.match(closure_3)) {
-        const parts = props.stdDeviation.split(closure_3);
+        const parts = stdDeviation.stdDeviation.split(tmp9);
         const _Number3 = Number;
         obj.stdDeviationX = Number(parts[0]) || 0;
         const _Number4 = Number;
+        const str = stdDeviation.stdDeviation;
         const tmp5 = Number(parts[0]) || 0;
         obj.stdDeviationY = Number(parts[1]) || 0;
         const tmp6 = Number(parts[1]) || 0;
       }
-      str2 = props.stdDeviation;
+      str2 = stdDeviation.stdDeviation;
+      tmp9 = closure_3;
     }
-    const stdDeviation = props.stdDeviation;
+    stdDeviation = stdDeviation.stdDeviation;
     let tmp = typeof stdDeviation === "number";
     if (typeof stdDeviation !== "number") {
-      const stdDeviation2 = props.stdDeviation;
+      const stdDeviation2 = stdDeviation.stdDeviation;
       let tmp10 = typeof stdDeviation2 === "string";
       if (typeof stdDeviation2 === "string") {
-        tmp10 = !props.stdDeviation.match(closure_3);
+        tmp10 = !stdDeviation.stdDeviation.match(closure_3);
+        const str3 = stdDeviation.stdDeviation;
       }
       tmp = tmp10;
     }
     if (tmp) {
       const _Number = Number;
-      obj.stdDeviationX = Number(props.stdDeviation) || 0;
+      obj.stdDeviationX = Number(stdDeviation.stdDeviation) || 0;
       const _Number2 = Number;
-      const tmp2 = Number(props.stdDeviation) || 0;
-      obj.stdDeviationY = Number(props.stdDeviation) || 0;
-      const tmp3 = Number(props.stdDeviation) || 0;
+      const tmp2 = Number(stdDeviation.stdDeviation) || 0;
+      obj.stdDeviationY = Number(stdDeviation.stdDeviation) || 0;
+      const tmp3 = Number(stdDeviation.stdDeviation) || 0;
     }
   }
-  if (props.edgeMode) {
-    obj.edgeMode = props.edgeMode;
+  if (stdDeviation.edgeMode) {
+    obj.edgeMode = stdDeviation.edgeMode;
   }
   return obj;
 };
-export const extractFeMerge = (props, arg1) => {
+export const extractFeMerge = (children) => {
   closure_0 = arg1;
-  if (props.children) {
+  if (children.children) {
     const Children = React.Children;
-    let mapped = Children.map(props.children, (arg0) => closure_1_2.cloneElement(arg0, { parent: closure_0 }));
+    let mapped = Children.map(children.children, (arg0) => closure_1_2.cloneElement(arg0, { parent: closure_0 }));
   } else {
     mapped = [];
   }
   const nodes = [];
   for (let num = 0; num < length; num = num + 1) {
     let str = mapped[num].props.in;
+    let tmp2 = num;
     if (!str) {
       str = "";
     }

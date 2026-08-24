@@ -1,10 +1,10 @@
 // discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
 import ME from "../../Constants.tsx";
 
 ({ GuildFeatures: obj1, ME: c3 } = ME);
-const result = obj132.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
+const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
   let isFavoritesGuildIdResult = null == id;
@@ -13,6 +13,7 @@ export default function guildHasOnboardingHome(id) {
   }
   if (!isFavoritesGuildIdResult) {
     isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
+    const obj = getFavoritesAwareGuildName;
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

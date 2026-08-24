@@ -1,12 +1,12 @@
 // discord_app/modules/collectibles/native/hooks/useVirtualCurrencyData.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
 
 export const useVirtualCurrencyData = function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
-  productOrbPrice(balance[1]);
-  let obj = { product, hasShopDiscount: canUseShopDiscountsResult };
+  let obj = productOrbPrice(balance[1]);
+  obj = { product, hasShopDiscount: canUseShopDiscountsResult };
   productOrbPrice = obj.getProductOrbPrice(obj);
   balance = productOrbPrice(balance[2]).useFetchVirtualCurrencyBalance().balance;
   const items = [productOrbPrice, balance];

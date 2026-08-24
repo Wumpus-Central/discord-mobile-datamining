@@ -5,10 +5,10 @@ import getRootNavigationRef from "../main_tabs_v2/RootNavigationRef.native.tsx";
 import handlePermissionsChangeDefault from "../../stores/ChannelSectionStore.tsx";
 import { isGuildHomeChannel } from "../channel/ChannelConstants.tsx";
 
-require = fn;
+require = arg1;
 handlePermissionsChangeDefault;
 handleConnectionOpenDefault;
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
 
 export default function isSelectedFromHomeChannel(id) {
   let coerceChannelRouteResult1;
@@ -31,12 +31,15 @@ export default function isSelectedFromHomeChannel(id) {
             if (index >= 0) {
               while (true) {
                 let tmp4 = state.routes[index];
+                let tmp5 = index;
                 if (null != tmp4) {
+                  let tmp6 = require;
+                  let tmp7 = dependencyMap;
                   let obj3 = coerceMainRoute;
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
-                      let tmp6Result = coerceMainRoute;
+                      let tmp6Result = tmp6(4229);
                       coerceChannelRouteResult1 = tmp6Result.coerceChannelRoute(state.routes[index - 1]);
                       if (null != coerceChannelRouteResult1) {
                         break;

@@ -4,27 +4,30 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import transitionTo from "../routing/router_utils.tsx";
 import ImpersonateType from "ImpersonateTypes.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import comparator from "../../stores/GuildChannelStore.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
-import initialize from "ImpersonateStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
+import closure_4 from "../../stores/GuildChannelStore.tsx";
+import closure_5 from "../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../stores/GuildRoleStore.tsx";
+import closure_7 from "../../stores/PermissionStore.tsx";
+import closure_8 from "../../stores/SelectedChannelStore.tsx";
+import closure_9 from "../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "ImpersonateStore.tsx";
 import ME from "../../Constants.tsx";
 import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
 
-require = fn;
+require = arg1;
 function updateImpersonating(closure_0, type) {
   data = data.getData(closure_0);
   if (tmp2) {
-    let obj = { num_roles: null };
+    let obj = expandEventPropertiesDefault;
+    obj = { num_roles: null };
     const _Object = Object;
     obj[0] = Object.keys(data.roles).length;
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(closure_0));
     obj.is_viewing_as_member = data.type === ImpersonateType.ImpersonateType.NEW_MEMBER;
     obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
+    const obj3 = collectGuildAnalyticsMetadata;
+    const tmp7 = require;
     obj = { type: "IMPERSONATE_UPDATE", guildId: null, data: null };
     obj[1] = closure_0;
     obj1 = {};
@@ -37,22 +40,25 @@ function updateImpersonating(closure_0, type) {
       if (!closure_7.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = store.getDefaultChannel(closure_0);
         if (null != defaultChannel) {
-          transitionTo.transitionTo(closure_12.CHANNEL(closure_0, defaultChannel.id));
-          const tmp7Result = transitionTo;
+          tmp7(1222).transitionTo(closure_12.CHANNEL(closure_0, defaultChannel.id));
+          const tmp7Result = tmp7(1222);
         }
       }
     }
+    const obj4 = dispatcherDefault;
   }
-  tmp2 = null != data && data.type === type.type;
 }
 ({ Permissions: unpackModuleId, Routes: closure_12, AnalyticEvents: map1 } = ME);
-let result = require("obj132").fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
 export const startImpersonating = function startImpersonating(guildId, data) {
-  let obj = { num_roles: Object.keys(data.roles).length };
+  let obj = expandEventPropertiesDefault;
+  obj = { num_roles: Object.keys(data.roles).length };
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.is_viewing_as_member = data.type === ImpersonateType.ImpersonateType.NEW_MEMBER;
   obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
+  const obj3 = collectGuildAnalyticsMetadata;
+  const tmp2 = require;
   obj = { type: "IMPERSONATE_UPDATE", guildId, data };
   dispatcherDefault.dispatch(obj);
   const channelId = store2.getChannelId(guildId);
@@ -68,13 +74,14 @@ export const startImpersonating = function startImpersonating(guildId, data) {
 };
 export { updateImpersonating };
 export const stopImpersonating = function stopImpersonating(guildId) {
-  const obj = { type: "IMPERSONATE_STOP", guildId };
+  let obj = dispatcherDefault;
+  obj = { type: "IMPERSONATE_STOP", guildId };
   obj.dispatch(obj);
 };
 export const updateImpersonatedChannels = function updateImpersonatedChannels(guildId1, items1, items2) {
   const set = new Set(optedInChannels.getOptedInChannels(guildId1));
-  const item = items1.forEach((item, index) => set.add(item));
-  const item1 = items2.forEach((item, index) => set.delete(item));
+  const item = items1.forEach((arg0) => set.add(arg0));
+  const item1 = items2.forEach((arg0) => set.delete(arg0));
   updateImpersonating(guildId1, { type: set(1988).ImpersonateType.NEW_MEMBER, optInChannels: set });
 };
 export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId, c2) {
@@ -87,22 +94,22 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
       set = selfMember;
       if (null == selfMember) {
         return false;
-      } else if (closure_2.some((item, index) => {
+      } else if (closure_2.some((arg0) => {
         const roles = set.roles;
-        return !roles.includes(item);
+        return !roles.includes(arg0);
       })) {
         return true;
       } else {
         items = [];
         let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_4.getSelectableChannelIds(tmp), 0);
         arraySpreadResult = HermesBuiltin.arraySpread(closure_1_4.getVocalChannelIds(tmp), arraySpreadResult);
-        const found = items.filter((item, index) => !closure_1.includes(item));
+        const found = items.filter((arg0) => !closure_1.includes(arg0));
         if (found.length > 0) {
           const items1 = [];
           const _Set = Set;
           set = new Set(closure_1_9.getOptedInChannels(tmp));
-          const item = found.forEach((item, index) => set.add(item));
-          const item1 = items1.forEach((item, index) => set.delete(item));
+          const item = found.forEach((arg0) => set.add(arg0));
+          const item1 = items1.forEach((arg0) => set.delete(arg0));
           const obj = { type: null, optInChannels: null };
           obj[0] = guildId(closure_2[12]).ImpersonateType.NEW_MEMBER;
           obj[1] = set;

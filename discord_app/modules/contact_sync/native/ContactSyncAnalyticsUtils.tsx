@@ -1,18 +1,18 @@
 // discord_app/modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import trackNUFStep from "../../nuf/native/NewUserAnalyticsUtils.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 import { getIsOnboarding } from "ContactSyncModalStore.tsx";
 import { ContactPermissions } from "ContactSyncConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { _uploadContacts } from "ContactSyncUtils.tsx";
 
-require = fn;
+require = arg1;
 let obj = { INITIALIZED: "Flow Initialized", LANDING: "Landing", PERMISSION_REQUESTED: "Contacts Permission Requested", NAME_INPUT: "Name Input", SUGGESTIONS_RESULTS: "Suggestions Results", CONTACT_INVITES: "Contact Invites", ADD_PHONE_NUMBER: "Add Phone Number", VERIFY_PHONE_NUMBER: "Verify Phone Number", PASSWORD_CONFIRM: "Password Confirmation", COMPLETE: "Complete" };
 let c8 = null;
 let c9 = 0;
 const Onboarding = "Onboarding";
-let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx");
 
 export const Steps = obj;
 export const CONTACT_SYNC_ONBOARDING_LOCATION = "Onboarding";
@@ -26,18 +26,18 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     phone = currentUser.phone;
   }
   closure_1 = null != phone;
-  obj = _uploadContacts;
+  obj = __uploadContacts;
   const result = obj.checkContactPermissions();
-  result.then((result) => {
+  result.then((arg0) => {
     let tmp = null;
-    if (result !== ContactPermissions.NOT_DETERMINED) {
+    if (arg0 !== closure_1_5.NOT_DETERMINED) {
       let str = "denied";
-      if (result === ContactPermissions.AUTHORIZED) {
+      if (arg0 === closure_1_5.AUTHORIZED) {
         str = "accepted";
       }
       tmp = str;
     }
-    callback(dependencyMap[5]);
+    obj = callback(closure_1_2[5]);
     obj = {};
     const merged = Object.assign(closure_0);
     obj.flow_type = "Contact Sync";
@@ -47,13 +47,14 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     obj.seconds_on_from_step = 0;
     obj.has_phone_number = callback;
     obj.mobile_contacts_permission = tmp;
-    obj.track(AnalyticEvents.CONTACT_SYNC_FLOW_KEY, obj);
+    obj.track(closure_1_6.CONTACT_SYNC_FLOW_KEY, obj);
   });
 };
 export const trackFlowStep = function trackFlowStep(LANDING, skip, back, location) {
   const tmp = getIsOnboarding();
   const timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
+  obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(location);
   if (tmp) {
@@ -73,11 +74,13 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
     obj = { skip: null };
     obj[0] = skip;
     trackNUFStep.trackNUFStep(closure_8, LANDING, obj);
+    const obj3 = trackNUFStep;
   }
   closure_8 = LANDING;
 };
 export const trackFlowEnd = function trackFlowEnd(flag, location) {
   const timestamp = Date.now();
+  obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(location);
   if (tmp) {

@@ -49,12 +49,15 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
     let items = [];
   } else {
     const items1 = [];
+    items = obj.items;
     let num9 = 0;
     items = items1;
     if (0 < uint16) {
       while (true) {
         obj = { extents: null };
         obj[0] = [];
+        let tmp9 = num9;
+        let tmp10 = items;
         if (uint8 < 2) {
           let uint161 = getUint8.getUint16(items);
         } else if (2 === uint8) {
@@ -77,6 +80,8 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
           if (8 === baseOffset) {
             let _console = console;
             let warnResult = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+            let tmp17 = require;
+            let tmp18 = dependencyMap;
             let obj4 = get64BitValue;
             num4 = obj4.get64BitValue(getUint8, sum4);
           }
@@ -86,8 +91,11 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
         obj.extentCount = getUint8.getUint16(sum5);
         let sum6 = sum5 + obj.item.extentCount;
         let num5 = 0;
+        let tmp21 = sum6;
         if (0 < obj.extentCount) {
           while (true) {
+            let tmp22 = num5;
+            let tmp23 = sum6;
             if (tmp2) {
               if (tmp7 > 0) {
                 break;
@@ -102,6 +110,8 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
               if (8 === tmp4) {
                 let _console3 = console;
                 let warnResult1 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+                let tmp31 = require;
+                let tmp32 = dependencyMap;
                 let obj7 = get64BitValue;
                 num7 = obj7.get64BitValue(getUint8, sum7);
               }
@@ -115,6 +125,8 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
               if (8 === tmp5) {
                 let _console4 = console;
                 let warnResult2 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+                let tmp35 = require;
+                let tmp36 = dependencyMap;
                 let obj8 = get64BitValue;
                 num8 = obj8.get64BitValue(getUint8, sum8);
               }
@@ -124,19 +136,27 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
             let extents = obj.extents;
             let arr = extents.push(obj1);
             num5 = num5 + 1;
+            tmp21 = sum6;
             continue;
           }
           if (4 === tmp7) {
             let num6 = getUint8.getUint32(sum6);
-          } else if (8 === tmp7) {
-            let _console2 = console;
-            let warnResult3 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
-            let obj5 = get64BitValue;
-            num6 = obj5.get64BitValue(getUint8, sum6);
+          } else {
+            num6 = 0;
+            if (8 === tmp7) {
+              let _console2 = console;
+              let warnResult3 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
+              let tmp26 = require;
+              let tmp27 = dependencyMap;
+              let obj5 = get64BitValue;
+              num6 = obj5.get64BitValue(getUint8, sum6);
+            }
           }
+          let tmp28 = num6;
         }
         arr = items1.push(obj);
         num9 = num9 + 1;
+        items = tmp21;
         items = items1;
       }
     }

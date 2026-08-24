@@ -33,6 +33,6 @@ const familyCenterPendingConnectionStore = new FamilyCenterPendingConnectionStor
     c0 = null;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterPendingConnectionStore.tsx");
 
 export default familyCenterPendingConnectionStore;

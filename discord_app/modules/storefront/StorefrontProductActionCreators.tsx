@@ -1,12 +1,12 @@
 // discord_app/modules/storefront/StorefrontProductActionCreators.tsx
-import obj132Default from "../../utils/Durations.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _getSystemLocale from "../user_settings/LocaleStore.tsx";
-import getFetchState from "StorefrontProductStore.tsx";
-import fromServer from "records/StorefrontProductRecord.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../user_settings/LocaleStore.tsx";
+import closure_5 from "StorefrontProductStore.tsx";
+import closure_6 from "records/StorefrontProductRecord.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _maybeFetchProductsWithSkus() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -66,13 +66,13 @@ function _maybeFetchProductsWithSkus() {
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                length = lib.filter((item, index) => {
-                  if (Boolean(item)) {
-                    fetchState = fetchState.getFetchState(item);
+                length = lib.filter((arg0) => {
+                  if (Boolean(arg0)) {
+                    fetchState = fetchState.getFetchState(arg0);
                     if ("loading" === fetchState) {
                       return false;
                     } else {
-                      const fetchedAt = obj.getFetchedAt(item);
+                      const fetchedAt = obj.getFetchedAt(arg0);
                       if (null != fetchedAt) {
                         const _Date = Date;
                         return Date.now() - fetchedAt > ("error" === fetchState ? closure_9 : closure_8);
@@ -314,9 +314,9 @@ function _maybeFetchProductsBySkuIds() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = 12 * obj132Default.Millis.HOUR;
-let closure_9 = 10 * obj132Default.Millis.MINUTE;
-const result = require("obj132").fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
+let closure_8 = 12 * setDefault.Millis.HOUR;
+let closure_9 = 10 * setDefault.Millis.MINUTE;
+const result = require("set").fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 
 export const maybeFetchProductsWithSkus = function maybeFetchProductsWithSkus() {
   const self = this;

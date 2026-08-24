@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
@@ -8,20 +8,19 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import VideoComponent from "../../../../components_native/common/Video.tsx";
-import useAPNGPlayerControls from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import metadataDefault from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
 import metadataDefault2 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
 import metadataDefault3 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function BountiesRecapOrbsBackground(arg0) {
   ({ style, reducedMotion } = arg0);
-  let obj = obj132;
+  let obj = set;
   if (obj.isAndroid()) {
     obj = { style: null, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: null };
     obj[0] = style;
@@ -29,8 +28,8 @@ function BountiesRecapOrbsBackground(arg0) {
     obj[0] = metadataDefault;
     obj[1] = closure_3.absoluteFillObject;
     obj[2] = !reducedMotion;
-    obj[4] = callback(useAPNGPlayerControls.APNGPlayer, obj);
-    let tmp3Result = callback(closure_4, obj);
+    obj[4] = tmp3(tmp(9217).APNGPlayer, obj);
+    let tmp3Result = tmp3(closure_4, obj);
   } else {
     obj1 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
     const obj2 = { uri: null };
@@ -38,7 +37,7 @@ function BountiesRecapOrbsBackground(arg0) {
     obj1[0] = obj2;
     obj1[1] = style;
     obj1[3] = reducedMotion;
-    tmp3Result = callback(VideoComponent.VideoComponent, obj1);
+    tmp3Result = tmp3(tmp(9018).VideoComponent, obj1);
   }
   return tmp3Result;
 }
@@ -47,15 +46,19 @@ noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const lg = ThemesDefault.radii.lg;
 let closure_9 = createCacheKey.createStyles(() => {
-  let obj = { overflow: "hidden", borderRadius: lg, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  let obj = { root: null, content: null, centeredCopy: null, orbsBackground: null, headerLabel: null, titleRow: null, actions: null, orbAmount: null };
+  obj = { overflow: "hidden", borderRadius: lg, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
   obj[0] = obj;
   obj = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_24, justifyContent: "center", alignItems: "center" };
   obj[1] = obj;
   obj[2] = { alignItems: "center", width: "100%" };
   obj[3] = { position: "absolute", top: 0, left: 0, right: 0, height: "40%", zIndex: 1 };
   obj[4] = { paddingBottom: ThemesDefault.space.PX_4, textTransform: "uppercase" };
+  obj1 = { paddingBottom: ThemesDefault.space.PX_4, textTransform: "uppercase" };
   obj[5] = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_8 };
+  const obj2 = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_8 };
   obj[6] = { position: "absolute", left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_12 };
+  const obj3 = { position: "absolute", left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_12 };
   let num = 0;
   if (obj7.isIOS()) {
     num = 6;
@@ -63,7 +66,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj[7] = { marginTop: num, lineHeight: 46 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapPage.tsx");
 
 export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmount) {
   orbAmount = orbAmount.orbAmount;
@@ -72,7 +75,8 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const items1 = [tmp.root, style];
+  obj = { style: items1, pointerEvents: "box-none", children: null };
+  items1 = [tmp.root, style];
   obj = { style: closure_3.absoluteFillObject, pointerEvents: "none", children: null };
   obj1 = { source: null, style: null, resizeMode: "cover", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
   const tmp2 = useSafeAreaInsetsDefault();
@@ -91,6 +95,8 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   const obj7 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj8 = { style: tmp.titleRow, children: null };
   const items5 = [callback(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false }), ];
+  const obj2 = { uri: metadataDefault3 };
+  const obj3 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items5[1] = callback(Text.Text, { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount });
   obj8[1] = items5;
   obj7[3] = callback2(closure_4, obj8);

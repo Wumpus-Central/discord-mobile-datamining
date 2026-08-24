@@ -3,7 +3,7 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { Keyboard } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   date = date.date;
@@ -18,26 +18,25 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   }
   function openDatePicker() {
     updateDate.dismiss();
-    importDefault(label[4]);
-    const obj = { onSubmit: updateDate, title: label, startDate: null, maximumDate: null, minimumDate: null, requireDateChanged: true };
+    let obj = closure_1_1(label[4]);
+    obj = { onSubmit: updateDate, title: label, startDate: null, maximumDate: null, minimumDate: null, requireDateChanged: true };
     let toDateResult;
     if (date != null) {
       toDateResult = date.toDate();
     }
     if (toDateResult == null) {
-      const obj4 = importDefault(label[3])();
+      const obj4 = tmp2(tmp3[3])();
       const result = obj4.set("year", obj4.year() - 10);
       toDateResult = obj4.toDate();
     }
     obj[2] = toDateResult;
-    const obj5 = importDefault(label[3])();
+    const obj5 = closure_1_1(label[3])();
     const result1 = obj5.set("year", obj5.year() - 3);
     obj[3] = obj5.toDate();
-    const obj6 = importDefault(label[3])();
+    const obj6 = closure_1_1(label[3])();
     const result2 = obj6.set("year", obj6.year() - 100);
     obj[4] = obj6.toDate();
     obj.openLazy(date(label[6])(label[5], label.paths), "DatePicker", obj);
-    const tmp4 = date(label[6])(label[5], label.paths);
   }
   ({ style, error } = date);
   ref = ref.useRef(null);
@@ -52,7 +51,7 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   }
   let obj = importDefault(label[3])();
   let result = obj.set("year", obj.year() - 10);
-  let tmp4 = label;
+  const tmp4 = label;
   const tmp5 = importDefault(label[3]);
   const formatResult1 = importDefault(label[3])(obj.toDate()).format("L");
   obj = { style, ref, value: null, placeholder: null, returnKeyType: "next", textContentType: "none", autoCapitalize: "none", clearButtonVisibility: null, editable: false, forceAccessibleContainer: true, accessibilityLabel: null, onPress: null, label: null, error: null };
@@ -75,6 +74,6 @@ const forwardRefResult = importAllResult.forwardRef((date, ref) => {
   obj[13] = error;
   return tmp8(importDefault(label[7]), obj);
 });
-let result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
+let result = require("set").fileFinishedImporting("modules/age_gate/native/components/DateInput.tsx");
 
 export default forwardRefResult;

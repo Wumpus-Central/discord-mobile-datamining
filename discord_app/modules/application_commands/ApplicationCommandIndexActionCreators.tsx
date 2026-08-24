@@ -1,9 +1,9 @@
 // discord_app/modules/application_commands/ApplicationCommandIndexActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchApplicationCommandIndex() {
   let self = this;
   let tmp = callback((arg0, arg1) => {
@@ -67,20 +67,20 @@ function _fetchApplicationCommandIndex() {
               }
               function end(error) {
                 const diff = performance.now() - c3;
-                lib2(698);
-                const obj = { duration_ms: diff, error: error.error, aborted: lib2.signal.aborted, include_applications: true, retries: Math.max(constants - 1, 0), kind: null, command_type: null, url: dependencyMap, target_type: lib.type, target_id: null, failure_statuses: null };
+                let obj = lib2(698);
+                obj = { duration_ms: diff, error: error.error, aborted: lib2.signal.aborted, include_applications: true, retries: Math.max(constants - 1, 0), kind: null, command_type: null, url: dependencyMap, target_type: lib.type, target_id: null, failure_statuses: null };
                 const type = lib.type;
                 if ("channel" === type) {
-                  let channelId = lib.channelId;
+                  let channelId = tmp3.channelId;
                 } else if ("guild" === type) {
-                  channelId = lib.guildId;
+                  channelId = tmp3.guildId;
                 } else {
                   channelId = null;
                   if ("user" !== type) {
                     if ("application" === type) {
-                      channelId = lib.applicationId;
+                      channelId = tmp3.applicationId;
                     } else {
-                      lib(1370).assertNever(lib);
+                      lib(1370).assertNever(tmp3);
                       const obj3 = lib(1370);
                     }
                   }
@@ -118,16 +118,16 @@ function _fetchApplicationCommandIndex() {
                   },
                   rejectWithError: false
                 });
-                return value.then((result) => {
-                  if (202 === result.status) {
+                return value.then((status) => {
+                  if (202 === status.status) {
                     arr = arr.push(202);
                     let dispatchResult = callback(5000);
                   } else {
                     callback2({ error: false });
-                    closure_1_1(closure_1_2[2]);
-                    const obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target: null, index: null };
+                    let obj = closure_1_1(closure_1_2[2]);
+                    obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target: null, index: null };
                     obj[1] = closure_0;
-                    obj[2] = result.body;
+                    obj[2] = status.body;
                     dispatchResult = obj.dispatch(obj);
                   }
                   return dispatchResult;
@@ -145,8 +145,8 @@ function _fetchApplicationCommandIndex() {
                     }
                     arr.push(num2);
                     callback2({ error: true });
-                    closure_1_1(closure_1_2[2]);
-                    const obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: null };
+                    let obj = closure_1_1(closure_1_2[2]);
+                    obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: null };
                     obj[1] = closure_0;
                     dispatchResult = obj.dispatch(obj);
                   }
@@ -186,7 +186,7 @@ function _fetchApplicationCommandIndex() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: c4, Endpoints: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandIndexActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandIndexActionCreators.tsx");
 
 export const fetchApplicationCommandIndex = function fetchApplicationCommandIndex(closure_0, abortController) {
   const self = this;
@@ -199,6 +199,7 @@ export const fetchApplicationCommandIndex = function fetchApplicationCommandInde
   return applyArgumentsResult;
 };
 export const requestApplicationCommandIndex = function requestApplicationCommandIndex(target) {
-  const obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target };
+  let obj = dispatcherDefault;
+  obj = { type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target };
   obj.dispatch(obj);
 };

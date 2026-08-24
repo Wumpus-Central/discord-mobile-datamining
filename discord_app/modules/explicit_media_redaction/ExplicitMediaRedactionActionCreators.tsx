@@ -1,29 +1,31 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");
 
 export const reportFalsePositive = function reportFalsePositive(channel_id, message_id, attachment_ids, embed_ids) {
   const HTTP = sendRequest.HTTP;
-  const obj = { channel_id, message_id, attachment_ids, embed_ids };
+  obj = { url: Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE, body: obj, rejectWithError: false };
+  obj = { channel_id, message_id, attachment_ids, embed_ids };
   return HTTP.post(obj);
 };
 export const reportFailedSendFalsePositive = function reportFailedSendFalsePositive(channelId, messageId, closure_2, closure_3) {
   const HTTP = sendRequest.HTTP;
-  const obj = { channel_id: channelId, message_id: messageId, attachment_ids: closure_2, filenames: closure_3 };
+  obj = { url: Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE, body: obj, rejectWithError: false };
+  obj = { channel_id: channelId, message_id: messageId, attachment_ids: closure_2, filenames: closure_3 };
   return HTTP.post(obj);
 };
-export const sendMessagesForScanning = function sendMessagesForScanning(channel_id, message_ids) {
+export const sendMessagesForScanning = function sendMessagesForScanning(channel_id, found) {
   const HTTP = sendRequest.HTTP;
-  { url: Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(channel_id), body: obj, rejectWithError: false };
-  obj = { message_ids };
+  obj = { url: Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(channel_id), body: obj, rejectWithError: false };
+  obj = { message_ids: found };
   return HTTP.patch(obj);
 };
 export const sendMultiChannelMessagesForScanning = function sendMultiChannelMessagesForScanning(found) {
-  const mapped = found.map((item, index) => ({ channel_id: item.channel_id, message_id: item.id }));
+  const mapped = found.map((channel_id) => ({ channel_id: channel_id.channel_id, message_id: channel_id.id }));
   const HTTP = sendRequest.HTTP;
   return HTTP.patch({ url: Endpoints.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES, body: { messages: mapped }, rejectWithError: false });
 };

@@ -2,17 +2,18 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel.tsx";
 import InappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_2 from "../../../../stores/UserStore.tsx";
 import { SafetyWarningTypes } from "../../ChannelSafetyWarningsStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
   let obj = InappropriateConversationExperiment;
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
   const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = initialize;
   const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
   let isStaffResult;
   if (stateFromStores != null) {
@@ -36,6 +37,7 @@ export const useInappropriateConversationsTiers = function useInappropriateConve
         }
         obj[1] = type1 === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2;
         tmp4 = obj;
+        const tmp6 = SafetyWarningTypes;
       }
     }
   }

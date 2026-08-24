@@ -1,9 +1,9 @@
 // discord_app/modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import encodeProperties from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import trackImpressionDefault from "../useTrackImpression.tsx";
 
-const result = obj132.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
+const result = set.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(impressionProperties, params) {
   impressionProperties = impressionProperties.impressionProperties;

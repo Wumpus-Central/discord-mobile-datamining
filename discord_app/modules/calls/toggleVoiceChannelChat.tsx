@@ -1,10 +1,10 @@
 // discord_app/modules/calls/toggleVoiceChannelChat.tsx
 import _modDef8666 from "../../actions/ChannelRTCActionCreators.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
-import getParticipants from "ChannelRTCStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/RTCConnectionStore.tsx";
+import closure_4 from "ChannelRTCStore.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
   let obj = connected;

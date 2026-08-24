@@ -1,7 +1,7 @@
 // _runtime/00414_memo.js
 import noopAll from "00019_noop.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
 import noop from "00019_noop.js";
 import jsxProd from "react/00021_jsxProd.js";
 
@@ -13,27 +13,44 @@ const memoResult = memo(function Pressable(ref) {
   const merged = Object.assign(ref, Object.create(null));
   android_disableSound = undefined;
   blockNativeResponder = undefined;
+  let cancelable;
   delayHoverIn = undefined;
+  let delayHoverOut;
+  let delayLongPress;
+  let disabled;
+  let hitSlop;
+  let onBlur;
+  let onFocus;
+  let onHoverIn;
+  let onHoverOut;
+  let onLongPress;
+  let onPress;
+  let onPressIn;
+  let onPressMove;
+  let onPressOut;
+  let pressRetentionOffset;
   unstable_pressDelay = undefined;
+  closure_19 = undefined;
+  c20 = undefined;
   closure_21 = undefined;
   ({ accessibilityState, aria-live: accessibilityLiveRegion, android_disableSound } = merged);
   ({ aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: accessibilityLabel, aria-selected: tmp6, blockNativeResponder } = merged);
-  const cancelable = merged.cancelable;
+  cancelable = merged.cancelable;
   ({ children, delayHoverIn } = merged);
-  const delayHoverOut = merged.delayHoverOut;
-  const delayLongPress = merged.delayLongPress;
-  let disabled = merged.disabled;
-  const hitSlop = merged.hitSlop;
-  const onBlur = merged.onBlur;
-  const onFocus = merged.onFocus;
-  const onHoverIn = merged.onHoverIn;
-  const onHoverOut = merged.onHoverOut;
-  const onLongPress = merged.onLongPress;
-  const onPress = merged.onPress;
-  const onPressIn = merged.onPressIn;
-  const onPressMove = merged.onPressMove;
-  const onPressOut = merged.onPressOut;
-  const pressRetentionOffset = merged.pressRetentionOffset;
+  delayHoverOut = merged.delayHoverOut;
+  delayLongPress = merged.delayLongPress;
+  disabled = merged.disabled;
+  hitSlop = merged.hitSlop;
+  onBlur = merged.onBlur;
+  onFocus = merged.onFocus;
+  onHoverIn = merged.onHoverIn;
+  onHoverOut = merged.onHoverOut;
+  onLongPress = merged.onLongPress;
+  onPress = merged.onPress;
+  onPressIn = merged.onPressIn;
+  onPressMove = merged.onPressMove;
+  onPressOut = merged.onPressOut;
+  pressRetentionOffset = merged.pressRetentionOffset;
   ({ style, unstable_pressDelay } = merged);
   ({ accessible, android_ripple, focusable, testOnly_pressed } = merged);
   const tmp7 = delayHoverOut(merged, cancelable);
@@ -94,46 +111,46 @@ const memoResult = memo(function Pressable(ref) {
     obj.disabled = disabled;
     tmp26 = obj;
   }
-  let prop = merged["aria-valuemax"];
-  if (prop == null) {
+  aria_valuemax = merged["aria-valuemax"];
+  if (aria_valuemax == null) {
     const accessibilityValue = merged.accessibilityValue;
     let max;
     if (accessibilityValue != null) {
       max = accessibilityValue.max;
     }
-    prop = max;
+    aria_valuemax = max;
   }
-  obj = { max: prop, min: null, now: null, text: null };
-  let prop1 = merged["aria-valuemin"];
-  if (prop1 == null) {
+  obj = { max: aria_valuemax, min: null, now: null, text: null };
+  aria_valuemin = merged["aria-valuemin"];
+  if (aria_valuemin == null) {
     const accessibilityValue2 = merged.accessibilityValue;
     let min;
     if (accessibilityValue2 != null) {
       min = accessibilityValue2.min;
     }
-    prop1 = min;
+    aria_valuemin = min;
   }
-  obj[1] = prop1;
-  let prop2 = merged["aria-valuenow"];
-  if (prop2 == null) {
+  obj[1] = aria_valuemin;
+  aria_valuenow = merged["aria-valuenow"];
+  if (aria_valuenow == null) {
     const accessibilityValue3 = merged.accessibilityValue;
     let now;
     if (accessibilityValue3 != null) {
       now = accessibilityValue3.now;
     }
-    prop2 = now;
+    aria_valuenow = now;
   }
-  obj[2] = prop2;
-  let prop3 = merged["aria-valuetext"];
-  if (prop3 == null) {
+  obj[2] = aria_valuenow;
+  aria_valuetext = merged["aria-valuetext"];
+  if (aria_valuetext == null) {
     const accessibilityValue4 = merged.accessibilityValue;
     let text;
     if (accessibilityValue4 != null) {
       text = accessibilityValue4.text;
     }
-    prop3 = text;
+    aria_valuetext = text;
   }
-  obj[3] = prop3;
+  obj[3] = aria_valuetext;
   let str = "none";
   if ("off" !== accessibilityLiveRegion) {
     if (accessibilityLiveRegion == null) {
@@ -165,7 +182,7 @@ const memoResult = memo(function Pressable(ref) {
   obj1.hitSlop = hitSlop;
   const items1 = [android_disableSound, tmp12, blockNativeResponder, cancelable, delayHoverIn, delayHoverOut, delayLongPress, disabled, hitSlop, onBlur, onFocus, onHoverIn, onHoverOut, onLongPress, onPress, onPressIn, onPressMove, onPressOut, pressRetentionOffset, tmp19, tmp20, unstable_pressDelay];
   const tmp13Result = tmp13(items, 2);
-  const tmp41 = delayLongPress(() => ({
+  const tmp37 = delayLongPress(() => ({
     cancelable,
     disabled,
     hitSlop,
@@ -214,7 +231,7 @@ const memoResult = memo(function Pressable(ref) {
     blockNativeResponder
   }), items1);
   const obj2 = {};
-  const tmp42 = android_disableSound(blockNativeResponder[6])(delayLongPress(() => ({
+  const tmp38 = android_disableSound(blockNativeResponder[6])(delayLongPress(() => ({
     cancelable,
     disabled,
     hitSlop,
@@ -262,9 +279,9 @@ const memoResult = memo(function Pressable(ref) {
     },
     blockNativeResponder
   }), items1));
-  const tmp43 = onBlur;
+  const tmp39 = onBlur;
   const merged4 = Object.assign(obj1);
-  const merged5 = Object.assign(tmp42);
+  const merged5 = Object.assign(tmp38);
   obj2.ref = tmp11;
   if (typeof style === "function") {
     const obj3 = { pressed: null };
@@ -281,7 +298,7 @@ const memoResult = memo(function Pressable(ref) {
   }
   const items2 = [childrenResult, null];
   obj2.children = items2;
-  return tmp43(android_disableSound(blockNativeResponder[7]), obj2);
+  return tmp39(android_disableSound(blockNativeResponder[7]), obj2);
 });
 memoResult.displayName = "Pressable";
 

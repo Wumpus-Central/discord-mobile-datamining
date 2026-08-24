@@ -6,11 +6,13 @@ import reactNativeNavigationIntegration from "01190_reactNativeNavigationIntegra
 import _isNativeReflectConstruct from "01191__isNativeReflectConstruct.js";
 import addGestureBreadcrumb from "01193_addGestureBreadcrumb.js";
 
-for (const key10013 in require("metro/01155__.js")) {
-  arg5[key10013] = require("metro/01155__.js")[key10013];
+for (const key10013 in require("module_1155")) {
+  let tmp2 = key10013;
+  arg5[key10013] = require("module_1155")[key10013];
   continue;
 }
 for (const key10017 in require("TimeToInitialDisplay")) {
+  let tmp3 = key10017;
   arg5[key10017] = require("TimeToInitialDisplay")[key10017];
   continue;
 }

@@ -1,8 +1,6 @@
 // discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import handleImageLoad from "../image_upload/ImageLoaderUtils.tsx";
 import parseDefault from "../../../_runtime/01484_parse.js";
@@ -38,7 +36,7 @@ function getArchivedAvatarURL(allowWebp) {
       let str6 = "gif";
       if (flag) {
         str6 = "gif";
-        if (getAvatarURL.SUPPORTS_WEBP) {
+        if (tmp2(1435).SUPPORTS_WEBP) {
           str6 = "webp";
         }
       }
@@ -46,15 +44,18 @@ function getArchivedAvatarURL(allowWebp) {
     }
     obj = { size: null };
     const obj3 = handleImageLoad;
+    tmp2 = require;
+    const tmp6 = require;
     obj[0] = obj3.getBestMediaProxySize(allowWebp.size * handleImageLoad.getDevicePixelRatio());
     let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
     if (isAnimatedIconHashResult) {
-      isAnimatedIconHashResult = getAvatarURL.isAnimatedIconHash(storageHash);
-      const tmp6Result = getAvatarURL;
+      isAnimatedIconHashResult = tmp6(1435).isAnimatedIconHash(storageHash);
+      const tmp6Result = tmp6(1435);
     }
     if (isAnimatedIconHashResult) {
       obj.animated = true;
     }
+    const obj4 = handleImageLoad;
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
     return "" + combined + ARCHIVED_AVATARResult + "?" + parseDefault.stringify(obj);
@@ -72,7 +73,7 @@ function getArchivedAvatarURL(allowWebp) {
   }
 }
 const Endpoints = ME.Endpoints;
-const result = obj132.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
+const result = set.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
 
 export const getImageFormat = function getImageFormat(canAnimate) {
   let flag = canAnimate.canAnimate;
@@ -109,9 +110,9 @@ export const getImageFormat = function getImageFormat(canAnimate) {
   }
 };
 export { getArchivedAvatarURL };
-export const generateAvatarDescription = function generateAvatarDescription(Image) {
-  let obj = Image;
-  if (Image == null) {
+export const generateAvatarDescription = function generateAvatarDescription(maxSettingsForPreset) {
+  let obj = maxSettingsForPreset;
+  if (maxSettingsForPreset == null) {
     obj = {};
   }
   ({ filename, assetOrigin } = obj);
@@ -120,20 +121,20 @@ export const generateAvatarDescription = function generateAvatarDescription(Imag
   }
   if (assetOrigin !== AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
     if (filename == null) {
-      const intl = getSystemLocale.intl;
-      filename = intl.string(getSystemLocale.t.lqaIxI);
+      const intl = tmp3(1236).intl;
+      filename = intl.string(tmp3(1236).t.lqaIxI);
     }
     const _Date = Date;
     const date = new Date();
-    const intl2 = getSystemLocale.intl;
-    if (assetOrigin === AssetOriginTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
-      let DYil93 = getSystemLocale.t.eC2sZi;
+    const intl2 = tmp3(1236).intl;
+    if (assetOrigin === tmp3(8385).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+      let DYil93 = tmp3(1236).t.eC2sZi;
     } else {
-      DYil93 = getSystemLocale.t.DYil93;
+      DYil93 = tmp3(1236).t.DYil93;
     }
     obj = { name: null, dateTime: null };
     obj[0] = filename;
-    obj[1] = date.toLocaleString(getSystemLocale.intl.currentLocale, { year: "numeric", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
+    obj[1] = date.toLocaleString(tmp3(1236).intl.currentLocale, { year: "numeric", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
     return intl2.formatToPlainString(DYil93, obj);
   }
 };
@@ -142,12 +143,12 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   if (flag === undefined) {
     flag = true;
   }
-  let tmpResult = getAvatarURL;
+  let tmpResult = tmp(1435);
   if (tmpResult.isAnimatedIconHash(storageHash)) {
     let str5 = "gif";
     if (flag) {
       str5 = "gif";
-      if (getAvatarURL.SUPPORTS_WEBP) {
+      if (tmp(1435).SUPPORTS_WEBP) {
         str5 = "webp";
       }
     }
@@ -159,7 +160,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
       let str3 = "png";
       if (flag) {
         str3 = "png";
-        if (getAvatarURL.SUPPORTS_WEBP) {
+        if (tmp(1435).SUPPORTS_WEBP) {
           str3 = "webp";
         }
       }
@@ -167,8 +168,8 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
     }
   }
   if (null == arg1) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.lqaIxI);
+    const intl = tmp(1236).intl;
+    let stringResult = intl.string(tmp(1236).t.lqaIxI);
   } else {
     stringResult = arg1.split(",")[0];
   }
@@ -182,7 +183,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   } else {
     str9 = "image/webp";
     if ("webp" !== str) {
-      tmpResult = isDiscordFrontendDevelopment;
+      tmpResult = tmp(1370);
       tmpResult.assertNever(str);
     }
   }

@@ -1,10 +1,10 @@
 // discord_app/modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import closure_2 from "../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../stores/RTCConnectionStore.tsx";
 import { END_TO_END_ENCRYPTION_DISABLED as closure_4 } from "../SecureFramesConstants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 
 export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(channelId) {
   channelId = channelId.channelId;
@@ -16,8 +16,8 @@ export const useIsSecureFramesUIEnabled = function useIsSecureFramesUIEnabled(ch
     let flag = false;
     if (null != channelId) {
       flag = false;
-      if (obj.getChannelId() === channelId) {
-        const channel = obj2.getChannel(channelId);
+      if (obj.getChannelId() === tmp) {
+        const channel = obj2.getChannel(tmp);
         flag = false;
         if (null != channel) {
           flag = false;

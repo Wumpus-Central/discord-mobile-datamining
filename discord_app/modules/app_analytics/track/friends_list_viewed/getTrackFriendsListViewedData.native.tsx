@@ -1,19 +1,19 @@
 // discord_app/modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../../../user_settings/UserSettings.tsx";
 import setStoredContacts from "../../../contact_sync/native/ContactSyncPersistedStore.tsx";
 import _uploadContacts from "../../../contact_sync/native/ContactSyncUtils.tsx";
 import getFriendStatusCountsDefault from "../../../friends/getFriendStatusCounts.tsx";
-import initialize from "../../../friend_suggestions/FriendSuggestionStore.tsx";
-import recountRelationshipTypes from "../../../game_relationships/GameRelationshipStore.tsx";
-import set from "../../../../stores/ConnectedAccountsStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
+import closure_4 from "../../../friend_suggestions/FriendSuggestionStore.tsx";
+import closure_5 from "../../../game_relationships/GameRelationshipStore.tsx";
+import closure_6 from "../../../../stores/ConnectedAccountsStore.tsx";
+import closure_7 from "../../../../stores/RelationshipStore.tsx";
 import ME from "../../../../Constants.tsx";
 
 const useContactSyncStore = setStoredContacts.useContactSyncStore;
 ({ PlatformTypes: closure_8, FriendDiscoveryFlags: c9 } = ME);
-const result = obj132.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx");
+const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/getTrackFriendsListViewedData.native.tsx");
 
 export default function getTrackFriendsListViewedData() {
   localAccount = localAccount.getLocalAccount(constants.CONTACTS);
@@ -21,6 +21,7 @@ export default function getTrackFriendsListViewedData() {
   const setting = FriendDiscoverySettings.getSetting();
   let obj = hasFlag;
   const hasFlagResult = obj.hasFlag(setting, constants2.FIND_BY_PHONE);
+  const obj2 = hasFlag;
   suggestionCount = suggestionCount.getSuggestionCount();
   obj = { num_friends: store2.getFriendCount() };
   const merged = Object.assign(getFriendStatusCountsDefault());

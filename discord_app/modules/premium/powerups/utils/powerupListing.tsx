@@ -1,15 +1,16 @@
 // discord_app/modules/premium/powerups/utils/powerupListing.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import calculateAppliedBoosts from "../GuildPowerupsStore.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../GuildPowerupsStore.tsx";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
+import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 function orderPowerupListings(items) {
-  const findIndexResult = items.findIndex((item, index) => {
-    let tmp = "singlePerk" === item.type;
+  const findIndexResult = items.findIndex((type) => {
+    let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = item.powerup.skuId === callback(4265).GUILD_POWERUP_GUILD_THEME_SKU_ID;
+      tmp = type.powerup.skuId === callback(4265).GUILD_POWERUP_GUILD_THEME_SKU_ID;
     }
     return tmp;
   });
@@ -20,19 +21,19 @@ function orderPowerupListings(items) {
     items.unshift(callback(items.splice(findIndexResult, 1), 1)[0]);
     obj = items;
   }
-  const findIndexResult1 = obj.findIndex((item, index) => {
-    let tmp = "singlePerk" === item.type;
+  const findIndexResult1 = obj.findIndex((type) => {
+    let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = item.powerup.skuId === callback(4265).GUILD_POWERUP_TAG_SKU_ID;
+      tmp = type.powerup.skuId === callback(4265).GUILD_POWERUP_TAG_SKU_ID;
     }
     return tmp;
   });
-  const findIndexResult2 = obj.findIndex((item, index) => {
-    let tmp = "multiPerk" === item.type;
+  const findIndexResult2 = obj.findIndex((type) => {
+    let tmp = "multiPerk" === type.type;
     if (tmp) {
-      let flag = "guildTagsBadgePacks" === item.group;
+      let flag = "guildTagsBadgePacks" === type.group;
       if (!flag) {
-        const group = item.group;
+        const group = type.group;
         flag = false;
       }
       tmp = flag;
@@ -47,10 +48,10 @@ function orderPowerupListings(items) {
       if (findIndexResult2 !== findIndexResult1 + 1) {
         items1 = [];
         HermesBuiltin.arraySpread(tmp9, 0);
-        items1.splice(items1.findIndex((item, index) => {
-          let tmp = "singlePerk" === item.type;
+        items1.splice(items1.findIndex((type) => {
+          let tmp = "singlePerk" === type.type;
           if (tmp) {
-            tmp = item.powerup.skuId === callback(4265).GUILD_POWERUP_TAG_SKU_ID;
+            tmp = type.powerup.skuId === callback(4265).GUILD_POWERUP_TAG_SKU_ID;
           }
           return tmp;
         }) + 1, 0, callback(items1.splice(findIndexResult2, 1), 1)[0]);
@@ -62,27 +63,27 @@ function orderPowerupListings(items) {
 }
 function buildPowerupListings(arg0, arr) {
   let items = [];
-  closure_1 = arr.reduce((acc, item, index) => {
-    if (item.type !== constants.PERK) {
-      return acc;
+  closure_1 = arr.reduce((arg0, type) => {
+    if (type.type !== constants.PERK) {
+      return arg0;
     } else {
-      if (null != table2[item.skuId]) {
-        if (acc[tmp2] == null) {
-          acc[tmp2] = [];
+      if (null != table2[type.skuId]) {
+        if (arg0[tmp2] == null) {
+          arg0[tmp2] = [];
         }
-        let arr = acc[tmp2];
-        arr = arr.push(item);
+        let arr = arg0[tmp2];
+        arr = arr.push(type);
       }
-      return acc;
+      return arg0;
     }
   }, {});
   function _loop() {
-    if (type.type === GuildPowerupType.LEVEL) {
+    if (type.type === closure_1_5.LEVEL) {
       obj = { type: "singleLevel", powerup: null };
-      obj[1] = type;
+      obj[1] = tmp;
       items.push(obj);
       return 0;
-    } else if (null != closure_1_8[type.skuId]) {
+    } else if (null != closure_1_8[tmp.skuId]) {
       if (undefined !== table[tmp13]) {
         items = closure_1_7[tmp13];
         const sorted = obj2.sort((skuId, skuId2) => {
@@ -98,8 +99,8 @@ function buildPowerupListings(arg0, arr) {
       return 0;
     } else {
       obj = { type: "singlePerk", powerup: null, badge: null };
-      obj[1] = type;
-      obj[2] = PERK_SKU_BADGES[type.skuId];
+      obj[1] = tmp;
+      obj[2] = closure_1_6[tmp.skuId];
       items.push(obj);
     }
   }
@@ -114,7 +115,7 @@ function buildPowerupListings(arg0, arr) {
     tmp2 = arg0 === GuildPowerupType.PERK;
   }
   if (tmp2) {
-    arr = items.push({ type: "gameServer" });
+    items.push({ type: "gameServer" });
   }
   return orderPowerupListings(items);
 }
@@ -124,17 +125,17 @@ let obj = { guildTagsBadgePacks: null };
 let items = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
 obj[0] = items;
 const entries = Object.entries(obj);
-let closure_8 = entries.reduce((acc, item, index) => {
-  [tmp, tmp2] = item;
+let closure_8 = entries.reduce((arg0, arg1) => {
+  [tmp, tmp2] = arg1;
   for (const item10016 of tmp2) {
     arg0[item10016] = tmp;
     continue;
   }
-  return acc;
+  return arg0;
 }, {});
 let items1 = [, ];
 ({ LEVEL: arr3[0], PERK: arr3[1] } = GuildPowerupType);
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/utils/powerupListing.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/powerupListing.tsx");
 
 export const POWERUP_GROUP_TO_SKU_IDS = obj;
 export { buildPowerupListings };
@@ -142,25 +143,25 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
   const _require = guildId;
   dependencyMap = gameServerEnabled;
   const items = [closure_4];
-  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;
   }
   items1 = [powerupCatalog, gameServerEnabled];
-  return React.useMemo(() => items1.reduce((acc, item, index) => {
+  return React.useMemo(() => closure_1_11.reduce((arr) => {
     let tmp;
     if (powerupCatalog != null) {
-      tmp = powerupCatalog.powerupCatalog[item];
+      tmp = powerupCatalog.powerupCatalog[arg1];
     }
     if (null == tmp) {
-      return acc;
+      return arr;
     } else {
       obj = { type: null, listings: null };
-      obj[0] = item;
-      obj[1] = closure_1_10(item, tmp, closure_1);
-      acc.push(obj);
-      return acc;
+      obj[0] = arg1;
+      obj[1] = closure_1_10(arg1, tmp, closure_1);
+      arr.push(obj);
+      return arr;
     }
   }, []), items1);
 };

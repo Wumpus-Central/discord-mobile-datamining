@@ -2,7 +2,7 @@
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 const GUILD_ROLE_CONNECTIONS_SCREEN = "GUILD_ROLE_CONNECTIONS_SCREEN";
 const memoResult = importAllResult.memo((guildId) => {
@@ -10,9 +10,10 @@ const memoResult = importAllResult.memo((guildId) => {
   const onClose = guildId.onClose;
   const items = [guildId, onClose];
   const memo = importAllResult.useMemo(() => {
-    let obj = { title: null, headerLeft: null, headerRight: null, render: null };
-    let intl = guildId(dependencyMap[2]).intl;
-    obj[0] = intl.string(guildId(dependencyMap[2]).t.ghtnss);
+    let obj = {};
+    obj = { title: null, headerLeft: null, headerRight: null, render: null };
+    let intl = guildId(closure_1_2[2]).intl;
+    obj[0] = intl.string(guildId(closure_1_2[2]).t.ghtnss);
     obj[1] = function headerLeft() {
       return null;
     };
@@ -25,11 +26,11 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[3] = function render() {
       return closure_1_4(callback2(closure_1_2[5]), { guildId: closure_0, onCloseModal: callback2 });
     };
-    obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj;
+    obj[closure_1_5] = obj;
     return obj;
   }, items);
   return jsx(guildId(6312).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 });
-const result = require("obj132").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModal.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModal.tsx");
 
 export default memoResult;

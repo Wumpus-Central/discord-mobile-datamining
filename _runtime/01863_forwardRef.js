@@ -27,9 +27,12 @@ export default forwardRef((offset, ref) => {
     flag = true;
   }
   const merged = Object.assign(offset, Object.create(null));
+  let height;
+  let progress;
+  let animatedStyle;
   const reanimatedKeyboardAnimation = num(style[2]).useReanimatedKeyboardAnimation();
-  const height = reanimatedKeyboardAnimation.height;
-  const progress = reanimatedKeyboardAnimation.progress;
+  height = reanimatedKeyboardAnimation.height;
+  progress = reanimatedKeyboardAnimation.progress;
   const obj2 = num(style[2]);
   const fn = function h() {
     num(style[3]);
@@ -46,7 +49,7 @@ export default forwardRef((offset, ref) => {
   fn.__workletHash = 13627085806149;
   fn.__initData = progress;
   let items = [num, num2, flag];
-  const animatedStyle = num(style[3]).useAnimatedStyle(fn, items);
+  animatedStyle = num(style[3]).useAnimatedStyle(fn, items);
   const items1 = [style, animatedStyle];
   const obj3 = num(style[3]);
   obj = {

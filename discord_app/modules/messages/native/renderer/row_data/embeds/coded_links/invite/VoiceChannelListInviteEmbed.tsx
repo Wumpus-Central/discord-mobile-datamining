@@ -1,28 +1,28 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx
-import obj132 from "../../../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../../../../Constants.tsx";
 import GuildNSFWContentLevel from "../../../../../../../../records/GuildRecord.tsx";
 import InviteSendStates from "../../../../../../../instant_invite/Constants.tsx";
 import CodedLinkExtendedType2 from "../CodedLinksConstants.tsx";
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../../../../../a11y/AccessibilityStore.tsx";
-import _toTimestampMs from "../../../../../../../channel/VoiceChannelStartTimeStore.tsx";
-import ensureGuildLoaded from "../../../../../../../../stores/ChannelStore.tsx";
-import trackCommunicationDisabled from "../../../../../../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../../../../../../stores/GuildStore.tsx";
-import getUncachedChannelPermissions from "../../../../../../../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../../../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../../../../stores/UserStore.tsx";
-import updateVoiceState from "../../../../../../../../stores/VoiceStateStore.tsx";
-import getVoiceStatesForGuild from "../../../../../../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_4 from "../../../../../../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../../../../../../channel/VoiceChannelStartTimeStore.tsx";
+import closure_7 from "../../../../../../../../stores/ChannelStore.tsx";
+import closure_8 from "../../../../../../../../stores/GuildMemberStore.tsx";
+import closure_9 from "../../../../../../../../stores/GuildStore.tsx";
+import closure_10 from "../../../../../../../../stores/PermissionStore.tsx";
+import closure_11 from "../../../../../../../../stores/RelationshipStore.tsx";
+import closure_12 from "../../../../../../../../stores/UserStore.tsx";
+import closure_13 from "../../../../../../../../stores/VoiceStateStore.tsx";
+import closure_14 from "../../../../../../../../stores/views/SortedVoiceStateStore.tsx";
 
 const processColor = get_ActivityIndicator.processColor;
 const getGuildIconSource = GuildNSFWContentLevel.getGuildIconSource;
 const CodedLinkExtendedType = CodedLinkExtendedType2.CodedLinkExtendedType;
 const BasicPermissions = ME.BasicPermissions;
 const InviteTypes = InviteSendStates.InviteTypes;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/VoiceChannelListInviteEmbed.tsx");
 
 export const canShowVoiceChannelListInviteEmbed = function canShowVoiceChannelListInviteEmbed(invite) {
   let tmp = null;
@@ -87,14 +87,14 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     }
     voiceStatesForChannelAlt = voiceStatesForChannelAlt.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((item, index) => item.voiceState.selfStream), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((item, index) => !item.voiceState.selfStream), arraySpreadResult);
+    let arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream), 0);
+    arraySpreadResult = HermesBuiltin.arraySpread(voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream), arraySpreadResult);
     const substr = items.slice(0, 10);
     displayNameStylesEnabled = obj.displayNameStylesEnabled;
-    const mapped = substr.map((item, index) => {
-      let member = item.member;
+    const mapped = substr.map((member) => {
+      member = member.member;
       if (member == null) {
-        member = closure_1_8.getMember(guild.id, item.user.id);
+        member = closure_1_8.getMember(guild.id, member.user.id);
       }
       let avatar;
       if (member != null) {
@@ -103,18 +103,18 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
       if (null != avatar) {
         let obj = { guildId: null, userId: null, avatar: null, size: 24 };
         obj[0] = guild.id;
-        obj[1] = item.user.id;
+        obj[1] = member.user.id;
         obj[2] = member.avatar;
-        let guildMemberAvatarURLSimple = displayNameStylesEnabled(dependencyMap[18]).getGuildMemberAvatarURLSimple(obj);
-        const obj2 = displayNameStylesEnabled(dependencyMap[18]);
+        let guildMemberAvatarURLSimple = displayNameStylesEnabled(closure_1_2[18]).getGuildMemberAvatarURLSimple(obj);
+        const obj2 = displayNameStylesEnabled(closure_1_2[18]);
       } else {
-        obj = displayNameStylesEnabled(dependencyMap[18]);
-        guildMemberAvatarURLSimple = obj.getUserAvatarURL(item.user, false, 24);
+        obj = displayNameStylesEnabled(closure_1_2[18]);
+        guildMemberAvatarURLSimple = obj.getUserAvatarURL(member.user, false, 24);
       }
       let assetUriForEmbed = guildMemberAvatarURLSimple;
       if (typeof guildMemberAvatarURLSimple === "number") {
-        assetUriForEmbed = guild(dependencyMap[17]).getAssetUriForEmbed(guildMemberAvatarURLSimple);
-        const obj6 = guild(dependencyMap[17]);
+        assetUriForEmbed = guild(closure_1_2[17]).getAssetUriForEmbed(guildMemberAvatarURLSimple);
+        const obj6 = guild(closure_1_2[17]);
       }
       let tmp11;
       if (displayNameStylesEnabled) {
@@ -126,7 +126,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
           }
         }
         if (fontId == null) {
-          const displayNameStyles2 = item.user.displayNameStyles;
+          const displayNameStyles2 = member.user.displayNameStyles;
           let fontId1;
           if (displayNameStyles2 != null) {
             fontId1 = displayNameStyles2.fontId;
@@ -135,15 +135,15 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
         }
         tmp11 = fontId;
       }
-      obj = { userId: item.user.id, displayName: null, avatarUrl: null, isStreaming: null, fontId: null };
-      let nick = item.nick;
+      obj = { userId: member.user.id, displayName: null, avatarUrl: null, isStreaming: null, fontId: null };
+      let nick = member.nick;
       if (nick == null) {
-        nick = displayNameStylesEnabled(dependencyMap[19]).getName(item.user);
-        const obj5 = displayNameStylesEnabled(dependencyMap[19]);
+        nick = displayNameStylesEnabled(closure_1_2[19]).getName(member.user);
+        const obj5 = displayNameStylesEnabled(closure_1_2[19]);
       }
       obj[1] = nick;
       obj[2] = assetUriForEmbed;
-      let flag2 = item.voiceState.selfStream;
+      let flag2 = member.voiceState.selfStream;
       if (flag2 == null) {
         flag2 = false;
       }
@@ -156,10 +156,11 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(guild.id);
     const merged = Object.assign(baseColors);
     const tmp20 = obj;
+    const tmp29 = processColor;
     const tmp39 = displayNameStylesEnabled;
     const tmp41 = displayNameStylesEnabled(8169)(closure_2);
     const embedScrollGradientBackground = guild(4194).getEmbedScrollGradientBackground();
-    let backgroundColor = processColor(embedScrollGradientBackground);
+    let backgroundColor = tmp29(embedScrollGradientBackground);
     if (backgroundColor == null) {
       backgroundColor = baseColors.backgroundColor;
     }

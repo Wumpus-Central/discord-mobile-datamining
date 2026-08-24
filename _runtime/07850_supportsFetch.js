@@ -24,6 +24,7 @@ function isNativeFunction(arg0) {
   let isMatch = arg0;
   if (arg0) {
     isMatch = /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(arg0.toString());
+    const obj = /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/;
   }
   return isMatch;
 }
@@ -61,7 +62,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
       return true;
     } else {
       let flag2 = false;
-      const _document = getGlobalSingleton.GLOBAL_OBJ.document;
+      const _document = tmp5(7739).GLOBAL_OBJ.document;
       if (_document) {
         if (typeof _document.createElement === "function") {
           try {
@@ -74,7 +75,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
               _fetch = tmp8.contentWindow.fetch;
             }
             if (_fetch) {
-              flag2 = isNativeFunction(tmp8.contentWindow.fetch);
+              flag2 = tmp4(tmp8.contentWindow.fetch);
             }
             const head2 = _document.head;
             head2.removeChild(element);
@@ -88,6 +89,8 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
       }
       return flag2;
     }
+    tmp4 = isNativeFunction;
+    tmp5 = require;
   } else {
     return false;
   }

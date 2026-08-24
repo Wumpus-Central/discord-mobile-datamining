@@ -1,11 +1,10 @@
 // discord_app/modules/conversations/ConversationExperiments.tsx
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_2 from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import "ApexExperiment";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
-const require = fn;
-let ApexExperiment = { 1: null, 2: { enabled: false } };
+const require = arg1;
+ApexExperiment = { 1: null, 2: { enabled: false } };
 ApexExperiment[2] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-conversation-highlighting-utility", defaultConfig: { enabled: false }, variations: ApexExperiment });
 ApexExperiment = { 1: null };
@@ -14,7 +13,7 @@ const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", nam
 const obj1 = { 1: null };
 obj1[1] = { enabled: true };
 const apexExperiment2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-04-topical-navigation-staff-control", defaultConfig: { enabled: false }, variations: obj1 });
-const result = require("obj132").fileFinishedImporting("modules/conversations/ConversationExperiments.tsx");
+const result = require("set").fileFinishedImporting("modules/conversations/ConversationExperiments.tsx");
 
 export const ConversationHighlightingExperiment = apexExperiment;
 export const TopicalNavGuildExperiment = apexExperiment1;
@@ -74,11 +73,11 @@ export const isTopicalNavEnabled = function isTopicalNavEnabled(c1, fetch_channe
         let enabled2 = null != guild1;
         if (enabled2) {
           const features2 = guild1.features;
-          enabled2 = !features2.has(GuildFeatures.SUMMARIES_ENABLED_GA);
+          enabled2 = !features2.has(tmp10.SUMMARIES_ENABLED_GA);
         }
         if (enabled2) {
           const features3 = guild1.features;
-          enabled2 = features3.has(GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING);
+          enabled2 = features3.has(tmp10.CONVERSATIONS_EXTRACTION_PROCESSING);
         }
         if (enabled2) {
           obj = { guildId: null, location: null };
@@ -98,6 +97,7 @@ export const useIsConversationDebugUXEnabled = function useIsConversationDebugUX
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0, CONVERSATIONS_EXTRACTION_PROCESSING];
+  const obj = { location };
   const obj2 = _require(CONVERSATIONS_EXTRACTION_PROCESSING[3]);
   return _require(CONVERSATIONS_EXTRACTION_PROCESSING[3]).useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
@@ -117,19 +117,22 @@ export const useIsConversationDebugUXEnabled = function useIsConversationDebugUX
   }, items1) && apexExperiment.useConfig({ location }).enabled;
 };
 export const useIsTopicalNavEnabled = function useIsTopicalNavEnabled(guild_id, channel_header) {
+  let obj = { location: channel_header };
   const CONVERSATIONS_EXTRACTION_PROCESSING = GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING;
   let _require = guild_id;
   let SUMMARIES_ENABLED_GA = CONVERSATIONS_EXTRACTION_PROCESSING;
   const items = [closure_2];
   const items1 = [guild_id, CONVERSATIONS_EXTRACTION_PROCESSING];
   const obj2 = _require(SUMMARIES_ENABLED_GA[3]);
-  let obj = { location: channel_header };
+  obj = { location: channel_header };
   let str = guild_id;
   if (guild_id == null) {
     str = "";
   }
   obj = { guildId: str, location: channel_header };
-  const CONVERSATIONS_EXTRACTION_PROCESSING2 = GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING;
+  const CONVERSATIONS_EXTRACTION_PROCESSING2 = tmp.CONVERSATIONS_EXTRACTION_PROCESSING;
+  _require = guild_id;
+  SUMMARIES_ENABLED_GA = CONVERSATIONS_EXTRACTION_PROCESSING2;
   let tmp2Result = tmp2(tmp3[3]);
   const items2 = [closure_2];
   const items3 = [guild_id, CONVERSATIONS_EXTRACTION_PROCESSING2];
@@ -149,7 +152,7 @@ export const useIsTopicalNavEnabled = function useIsTopicalNavEnabled(guild_id, 
     }
     return tmp2;
   }, items3);
-  SUMMARIES_ENABLED_GA = GuildFeatures.SUMMARIES_ENABLED_GA;
+  SUMMARIES_ENABLED_GA = tmp.SUMMARIES_ENABLED_GA;
   _require = guild_id;
   tmp2Result = tmp2(tmp3[3]);
   [][0] = closure_2;

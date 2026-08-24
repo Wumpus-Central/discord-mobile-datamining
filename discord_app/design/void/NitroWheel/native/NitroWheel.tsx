@@ -5,8 +5,9 @@ import registerAssetDefault from "../../../../../_runtime/09367_registerAsset.js
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
+const result = require("set").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 
 export default function NitroWheel(style) {
+  const obj = { source: registerAssetDefault, style: style.style, resizeMode: "contain" };
   return jsx(preloadDefault, { source: registerAssetDefault, style: style.style, resizeMode: "contain" });
 };

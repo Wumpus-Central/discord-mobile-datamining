@@ -1,17 +1,18 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx
-import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import loadSavedGuildStickers from "../../../../stickers/StickersStore.tsx";
+import closure_8 from "../../../../stickers/StickersStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c5 = importAllResult;
 ({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoActionSheet(arg0) {
   ({ guildId: require, stickerId: importDefault, hideActionSheet } = arg0);
+  let stateFromStores;
   let callback;
   function _onDeleteSticker() {
     const self = this;
@@ -108,11 +109,11 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
   }
   let obj = require(hideActionSheet[6]);
   const items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => {
+  stateFromStores = obj.useStateFromStores(items, () => {
     const stickersByGuildId = closure_1_8.getStickersByGuildId(closure_0);
     let found;
     if (stickersByGuildId != null) {
-      found = stickersByGuildId.find((item, index) => item.id === closure_1);
+      found = stickersByGuildId.find((id) => id.id === closure_1);
     }
     return found;
   });
@@ -125,32 +126,33 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
   }, items1);
   let tmp8Result = null;
   if (null != stateFromStores) {
+    obj = { header: null, children: null };
     obj = { title: null, subtitle: null };
     ({ name: obj3[0], description: obj3[1] } = stateFromStores);
-    obj[0] = callback2(require(hideActionSheet[12]).BottomSheetTitleHeader, obj);
+    obj[0] = callback2(tmp(tmp2[12]).BottomSheetTitleHeader, obj);
     obj1 = { style: null, children: null };
     let obj2 = { paddingHorizontal: null, paddingBottom: null };
-    obj2[0] = importDefault(hideActionSheet[13]).space.PX_12;
-    obj2[1] = importDefault(hideActionSheet[13]).space.PX_16;
+    obj2[0] = importDefault(tmp2[13]).space.PX_12;
+    obj2[1] = importDefault(tmp2[13]).space.PX_16;
     obj1[0] = obj2;
     const obj3 = { icon: null, label: null, onPress: null };
-    obj3[0] = callback2(require(hideActionSheet[16]).PencilIcon, {});
-    let intl = require(hideActionSheet[10]).intl;
-    obj3[1] = intl.string(require(hideActionSheet[10]).t.tdhW5b);
+    obj3[0] = callback2(tmp(tmp2[16]).PencilIcon, {});
+    let intl = tmp(tmp2[10]).intl;
+    obj3[1] = intl.string(tmp(tmp2[10]).t.tdhW5b);
     obj3[2] = function onPress() {
-      importDefault(hideActionSheet[17])({ guildId: closure_0, stickerId: closure_1 });
+      closure_1_1(hideActionSheet[17])({ guildId: closure_0, stickerId: closure_1 });
     };
-    const items2 = [callback2(require(hideActionSheet[15]).TableRow, obj3), ];
+    const items2 = [callback2(tmp(tmp2[15]).TableRow, obj3), ];
     const obj4 = { icon: null, trailing: null, label: null, variant: "danger", disabled: null, onPress: null };
-    obj4[0] = callback2(require(hideActionSheet[18]).TrashIcon, { color: "text-feedback-critical" });
+    obj4[0] = callback2(tmp(tmp2[18]).TrashIcon, { color: "text-feedback-critical" });
     tmp8Result = null;
     if (tmp5) {
-      tmp8Result = callback2(closure_6, {});
+      tmp8Result = tmp8(closure_6, {});
     }
     const obj5 = { hasIcons: true, children: null };
     obj4[1] = tmp8Result;
-    const intl2 = require(hideActionSheet[10]).intl;
-    obj4[2] = intl2.string(require(hideActionSheet[10]).t["+ZhGOk"]);
+    const intl2 = tmp(tmp2[10]).intl;
+    obj4[2] = intl2.string(tmp(tmp2[10]).t["+ZhGOk"]);
     obj4[4] = tmp5;
     obj4[5] = function onDeleteSticker() {
       const self = this;
@@ -162,14 +164,16 @@ const memoResult = importAllResult.memo(function GuildSettingsModalStickerInfoAc
       }
       return applyArgumentsResult;
     };
-    items2[1] = callback2(require(hideActionSheet[15]).TableRow, obj4);
+    items2[1] = callback2(tmp(tmp2[15]).TableRow, obj4);
     obj5[1] = items2;
-    obj1[1] = callback(require(hideActionSheet[14]).TableRowGroup, obj5);
+    obj1[1] = closure_10(tmp(tmp2[14]).TableRowGroup, obj5);
     obj[1] = callback2(closure_7, obj1);
-    tmp8Result = callback2(require(hideActionSheet[11]).BottomSheet, obj);
+    tmp8Result = tmp8(tmp(tmp2[11]).BottomSheet, obj);
+    const tmp11 = closure_10;
+    const tmp9 = closure_7;
   }
   return tmp8Result;
 });
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx");
 
 export default memoResult;

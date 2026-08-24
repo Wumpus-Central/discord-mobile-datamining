@@ -33,7 +33,7 @@ obj = {
   }
 };
 const collectiblesMarketingsStore = new CollectiblesMarketingsStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesMarketingsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesMarketingsStore.tsx");
 
 export default collectiblesMarketingsStore;
 export const FetchState = obj;

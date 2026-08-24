@@ -1,9 +1,9 @@
 // discord_app/modules/reactions/useCanRemoveAllReactions.tsx
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");
 
 export default function useCanRemoveAllReactions(channel) {
   const _require = channel;
@@ -12,5 +12,5 @@ export default function useCanRemoveAllReactions(channel) {
   const items = [closure_2];
   const items1 = [channel, isActiveChannelOrUnarchivableThread];
   const obj2 = _require(isActiveChannelOrUnarchivableThread[3]);
-  return null != channel && _require(isActiveChannelOrUnarchivableThread[3]).useStateFromStores(items, () => closure_1_2.can(Permissions.MANAGE_MESSAGES, closure_0) && isActiveChannelOrUnarchivableThread, items1);
+  return null != channel && _require(isActiveChannelOrUnarchivableThread[3]).useStateFromStores(items, () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0) && isActiveChannelOrUnarchivableThread, items1);
 };

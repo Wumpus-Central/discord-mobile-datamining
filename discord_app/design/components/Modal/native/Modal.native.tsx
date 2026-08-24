@@ -5,13 +5,14 @@ import NavigationStack from "../../Navigator/native/Navigator.native.tsx";
 import NAV_BAR_HEIGHT from "../../Navigator/native/NavigatorConstants.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Modal/native/Modal.native.tsx");
 
 export const Modal = function Modal(arg0) {
+  let obj = {};
   const merged = Object.assign(arg0);
-  const obj = { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top };
+  obj = { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top };
   obj.headerStyle = obj;
   return jsx(NavigationStack.Navigator, { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsetsDefault().top });
 };

@@ -11,18 +11,19 @@ import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 function GuildChannelLabel(channel) {
   channel = channel.channel;
-  { style: callback().content, children: null };
+  let obj = { style: callback().content, children: null };
   const tmp = callback();
   const tmp2 = computeChannelNameDefault(channel);
-  const obj = { channel, layout: closure_5, name: tmp2 };
+  obj = { channel, layout: closure_5, name: tmp2 };
   obj[1] = ChannelContentComponent.renderChannelContent(obj);
   return <closure_4 channel={channel} layout={closure_5} name={tmp2} />;
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
-let obj = { width: 20, height: 20, marginRight: 8, tintColor: ThemesDefault.colors.TEXT_MUTED };
+let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
+obj = { width: 20, height: 20, marginRight: 8, tintColor: ThemesDefault.colors.TEXT_MUTED };
 obj[3] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildChannelRow(channel) {
@@ -32,7 +33,8 @@ const memoResult = importAllResult.memo(function GuildChannelRow(channel) {
   const tmp2 = callback();
   let obj = LaunchpadChannelIcon;
   const channelAccessibilityProps = obj.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
-  { style: tmp2.simpleIcon, source: getChannelIcon.getSimpleChannelIcon(channel) };
+  obj = { style: tmp2.simpleIcon, source: getChannelIcon.getSimpleChannelIcon(channel) };
+  const obj3 = getChannelIcon;
   obj = {};
   const merged1 = Object.assign(channelAccessibilityProps);
   const merged2 = Object.assign(merged);
@@ -46,6 +48,6 @@ const memoResult = importAllResult.memo(function GuildChannelRow(channel) {
   obj.extras = extras;
   return jsx(SearchListRow.SearchListRow, {});
 });
-const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelRow.tsx");
 
 export default memoResult;

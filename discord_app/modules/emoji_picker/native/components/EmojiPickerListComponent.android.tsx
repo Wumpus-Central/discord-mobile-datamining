@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import getEmojiToGroupId from "../../../emojis/EmojiStore.tsx";
+import closure_4 from "../../../emojis/EmojiStore.tsx";
 import { EmojiCategoryTypes } from "../../EmojiPickerConstants.tsx";
 import { IMAGE_SIZE } from "EmojiPickerListConstants.tsx";
 import { PADDING_VERTICAL } from "../../../expression_picker/ExpressionPickerConstants.tsx";
@@ -11,7 +11,7 @@ import BottomSheetModal from "../../../../../_runtime/06952_BottomSheetModal.js"
 import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1 } });
@@ -32,6 +32,8 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   const onLongPressEmoji = analyticsLocations.onLongPressEmoji;
   const onShowNitroUpsell = analyticsLocations.onShowNitroUpsell;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
+  ref = undefined;
+  let callback;
   let callback1;
   ({ paddingTop, paddingBottom } = analyticsLocations);
   ref = data.useRef(null);
@@ -46,7 +48,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
       Commands.refreshEmojis(ref.current);
     }
   }, items);
-  const callback = data.useCallback((arg0) => {
+  callback = data.useCallback((arg0) => {
     if (null != ref.current) {
       const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
       Commands.scrollingEnabled(tmp.current, arg0);
@@ -141,7 +143,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
+        const Commands = closure_1_0(closure_1_2[8]).Commands;
         Commands.scrollToHeaderIndex(tmp.current, animated.index, flag);
       }
     },
@@ -178,6 +180,6 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   obj1[0] = items8;
   return useTier0UpsellContent(onShowNitroUpsell, obj1);
 });
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
 
 export default forwardRefResult;

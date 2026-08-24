@@ -3,14 +3,17 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import MessageEmbedTypes from "ICYMITypes.tsx";
 
-require = fn;
+require = arg1;
 let closure_2 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIFiltersStore extends DeviceSettingsStore {
 }
 const prototype = ICYMIFiltersStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-
+  let obj = arg0;
+  if (arg0 == null) {
+    obj = {};
+  }
 };
 prototype["filterStaffContent"] = function filterStaffContent() {
   return true === closure_2.filterStaffContent;
@@ -35,6 +38,6 @@ const iCYMIFiltersStore = new ICYMIFiltersStore(dispatcherDefault, {
     filters = filters.filters;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
 
 export default iCYMIFiltersStore;

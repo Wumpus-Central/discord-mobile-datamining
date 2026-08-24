@@ -4,9 +4,9 @@ import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import AppRowLabel from "../screens/home/AppLauncherHomeScreen.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
 
 export default function RecommendationAppRow(onPress) {
   ({ application, isFirstRow } = onPress);
@@ -21,7 +21,8 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  const obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
+  let obj = getAvatarURLDefault;
+  obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
   return jsx(AppRowLabel.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
 };

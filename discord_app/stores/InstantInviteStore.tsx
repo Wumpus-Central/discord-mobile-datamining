@@ -4,7 +4,7 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import headDefault from "../../_runtime/08045_head.js";
 import reverseDefault from "../../_runtime/08047_reverse.js";
 import _modDef8048 from "../../_runtime/metro/08048__.js";
-import createFromServer from "../records/InviteRecord.tsx";
+import closure_3 from "../records/InviteRecord.tsx";
 import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
 
 let closure_5 = {};
@@ -100,9 +100,9 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
   FRIEND_INVITE_REVOKE_SUCCESS: function handleFriendInviteRevokeSuccess(invites) {
     if (null != invites.invites) {
       invites = invites.invites;
-      const item = invites.forEach((item, index) => {
-        if (null != table[item.code]) {
-          const code = item.code;
+      const item = invites.forEach((code) => {
+        if (null != table[code.code]) {
+          code = code.code;
           delete tmp2[tmp];
         }
       });
@@ -156,8 +156,8 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
   FRIEND_INVITES_FETCH_RESPONSE: function handleFriendInviteFetchResponse(invites) {
     closure_8 = {};
     invites = invites.invites;
-    const item = invites.forEach((item, index) => {
-      closure_8[item.code] = closure_3.createFromServer(item);
+    const item = invites.forEach((code) => {
+      closure_8[code.code] = closure_3.createFromServer(code);
     });
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
@@ -184,6 +184,7 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     } else {
       return false;
     }
+    const str = inviteCode.inviteCode;
   },
   INVITE_MODAL_CLOSE: function handleInviteModalClose(inviteCode) {
     let tmp = null != str;
@@ -207,6 +208,6 @@ const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("stores/InstantInviteStore.tsx");
+let result = require("set").fileFinishedImporting("stores/InstantInviteStore.tsx");
 
 export default instantInviteStore;

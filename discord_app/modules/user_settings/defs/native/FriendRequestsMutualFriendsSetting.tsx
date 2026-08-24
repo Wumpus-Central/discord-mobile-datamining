@@ -3,12 +3,12 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import hasFlagAll from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { FriendSourceFlags } from "../../../../Constants.tsx";
-import "createToggle";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.IqlCSq);
@@ -18,7 +18,7 @@ let createToggle = {
     const FriendSourceFlagsSetting = setting(4066).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
-    return React.useMemo(() => setting(dependencyMap[5]).computeFlags(setting), items).mutualFriends;
+    return React.useMemo(() => setting(closure_1_2[5]).computeFlags(setting), items).mutualFriends;
   },
   onValueChange: function onFriendRequestsMutualFriendsSettingValueChange(arg0) {
     const FriendSourceFlagsSetting = explicitContentFromProto.FriendSourceFlagsSetting;
@@ -37,6 +37,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsMutualFriendsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsMutualFriendsSetting.tsx");
 
 export default createToggle;

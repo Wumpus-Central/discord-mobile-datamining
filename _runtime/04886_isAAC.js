@@ -21,8 +21,8 @@ arg5.isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
     }
     checkByFileTypeResult = !excludeSimilarTypes;
     if (!excludeSimilarTypes) {
-      const fileChunk1 = getFileChunk.getFileChunk(fileChunk);
-      const FileTypes2 = _mod4883.FileTypes;
+      const fileChunk1 = tmp(4882).getFileChunk(fileChunk);
+      const FileTypes2 = tmp(4883).FileTypes;
       checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
     }
   }

@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/WidgetAssetUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import getAvatarURL from "../../utils/AvatarUtils.tsx";
 
 const DEFAULT_CDN_HOST = ME.DEFAULT_CDN_HOST;
-const result = obj132.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/WidgetAssetUtils.tsx");
 
-export const getWidgetAssetURL = function getWidgetAssetURL(closure_0, fileId, arg2) {
+export const getWidgetAssetURL = function getWidgetAssetURL(arg0, fileId, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -26,5 +26,5 @@ export const getWidgetAssetURL = function getWidgetAssetURL(closure_0, fileId, a
     }
     str = str2;
   }
-  return "https://" + CDN_HOST + "/widget-assets/" + closure_0 + "/" + fileId + "?format=" + str + "&animated=" + flag;
+  return "https://" + CDN_HOST + "/widget-assets/" + arg0 + "/" + fileId + "?format=" + str + "&animated=" + flag;
 };

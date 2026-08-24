@@ -1,25 +1,22 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import nameFromUserDefault from "../../../utils/UserUtils.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
 import useCollectiblesDataDefault from "../../collectibles/hooks/useCollectiblesData.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import getCollectibleTypeName from "../FamilyCenterActivityPurchaseRowUtils.tsx";
-import AvatarDecorationPreviewImageDefault from "FamilyCenterActivityItemPreview.tsx";
-import getGiftRowDisplayInfo from "../FamilyCenterActivityGiftRowUtils.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+createCacheKey = { container: null, textContainer: null };
+createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
 
 export default function FamilyCenterActivityGiftRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
@@ -50,7 +47,7 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[1] = price;
     let name = null;
     if (null != teenUserForId) {
-      let tmp2Result = nameFromUserDefault;
+      let tmp2Result = tmp2(4219);
       name = tmp2Result.getName(teenUserForId);
     }
     obj[2] = name;
@@ -58,28 +55,28 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = getGiftRowDisplayInfo.getGiftSubtext(obj);
+    const giftSubtext = tmp5(14261).getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = AvatarDecorationPreviewImageDefault;
+    tmp2Result = tmp2(14260);
     if (product == null) {
       product = null;
     }
     obj1[1] = product;
     obj1[2] = isSubscription;
     obj1[3] = subscriptionPlanId;
-    const items = [callback(tmp2Result, obj1), ];
+    const items = [closure_4(tmp2Result, obj1), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.textContainer;
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     obj3[4] = displayName;
-    const items1 = [callback(Text.Text, obj3), ];
+    const items1 = [closure_4(tmp5(4734).Text, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj4[2] = giftSubtext;
-    items1[1] = callback(Text.Text, obj4);
+    items1[1] = closure_4(tmp5(4734).Text, obj4);
     obj2[1] = items1;
-    items[1] = callback2(View, obj2);
+    items[1] = closure_5(View, obj2);
     obj[1] = items;
-    return callback2(View, obj);
+    return closure_5(View, obj);
   }
 };

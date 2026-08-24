@@ -1,29 +1,32 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewHeader.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "../MessageRequestConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { alignItems: "flex-start", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
+createCacheKey = { container: null, avatar: null };
+createCacheKey = { alignItems: "flex-start", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_4 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewHeader.tsx");
+let obj1 = { marginBottom: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewHeader.tsx");
 
 export default function RestrictedMessagePreviewHeader(channel) {
   channel = channel.channel;
   const user = channel.user;
   let analyticsLocations;
+  let userTag;
   const tmp = callback2();
   analyticsLocations = user(analyticsLocations[6])().analyticsLocations;
   let obj = user(analyticsLocations[7]);
   const name = obj.getName(user);
   obj1 = user(analyticsLocations[7]);
-  const userTag = obj1.getUserTag(user, { decoration: "never", identifiable: "always" });
+  userTag = obj1.getUserTag(user, { decoration: "never", identifiable: "always" });
   const items = [user.id, channel.id, analyticsLocations];
   const callback = userTag.useCallback(() => {
     user(analyticsLocations[8])({ userId: user.id, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations });
@@ -35,9 +38,10 @@ export default function RestrictedMessagePreviewHeader(channel) {
     const obj = channel(analyticsLocations[9]);
     const result = channel(analyticsLocations[10]).presentUsernameCopied();
   }, items1);
+  obj = { style: tmp.container, children: null };
   callback2 = userTag.useCallback(() => {
-    user(analyticsLocations[11]);
-    let obj = {
+    let obj = user(analyticsLocations[11]);
+    obj = {
       user,
       onPressMutualGuild(arg0) {
         const result = callback(8935).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
@@ -85,5 +89,5 @@ export default function RestrictedMessagePreviewHeader(channel) {
   items3[4] = callback(user(analyticsLocations[21]), obj6);
   items3[5] = callback(user(analyticsLocations[23]), { channel, user });
   obj[1] = items3;
-  return callback(View, obj);
+  return closure_7(View, obj);
 };

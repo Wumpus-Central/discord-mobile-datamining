@@ -5,9 +5,9 @@ import BaseIconImage from "../../BaseIconImage.tsx";
 import registerAsset from "../../../../../../../_runtime/14357_registerAsset.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx");
 
 export const FiltersHorizontalIcon = function FiltersHorizontalIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

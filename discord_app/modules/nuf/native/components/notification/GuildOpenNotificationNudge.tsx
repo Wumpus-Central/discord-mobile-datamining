@@ -1,23 +1,23 @@
 // discord_app/modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx
 import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import trackCommunicationDisabled from "../../../../../stores/GuildMemberStore.tsx";
-import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
-import handleConnectionOpen from "../../../../../stores/SelectedGuildStore.tsx";
-import updateUserGuildSettingsInternal from "../../../../../stores/UserGuildSettingsStore.tsx";
-import set from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../../stores/GuildMemberStore.tsx";
+import closure_6 from "../../../../../stores/GuildStore.tsx";
+import closure_7 from "../../../../../stores/SelectedGuildStore.tsx";
+import closure_8 from "../../../../../stores/UserGuildSettingsStore.tsx";
+import closure_9 from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 import { PermissionPromptType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 import EventActionType from "NotificationPermissionConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ EventActionLocation: unpackModuleId, NotificationNudgeSurface: closure_12 } = EventActionType);
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = ME);
 let c16 = "guild-open-notification-nudge-key";
 let closure_17 = { cooldownDurationMs: 5184000000 };
-let result = require("obj132").fileFinishedImporting("modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx");
+let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/GuildOpenNotificationNudge.tsx");
 
 export default function GuildOpenNotificationNudge(guildId) {
   guildId = guildId.guildId;
@@ -83,8 +83,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   stateFromStores3 = stateFromStores(589).useStateFromStores(items3, () => {
     let result = null != stateFromStores;
     if (result) {
-      const guild = closure_1_6.getGuild(stateFromStores);
-      result = stateFromStores(ref[15]).isBlockedByOnboarding(guild, selfMember.getSelfMember(stateFromStores));
+      const guild = closure_1_6.getGuild(tmp);
+      result = stateFromStores(ref[15]).isBlockedByOnboarding(guild, selfMember.getSelfMember(tmp));
       const obj = stateFromStores(ref[15]);
     }
     return result;
@@ -160,7 +160,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     }
     if (tmp2) {
       let obj = stateFromStores(ref[19]);
-      const result = obj.setPushPermissionReactivationSeen(PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET);
+      const result = obj.setPushPermissionReactivationSeen(closure_1_10.GUILD_OPEN_BOTTOM_SHEET);
       obj = { guildId: null, markAsDismissed: null };
       obj[0] = stateFromStores;
       obj[1] = closure_5;
@@ -168,5 +168,4 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
       const obj2 = stateFromStores3(ref[20]);
     }
   }, items6);
-  const obj8 = stateFromStores(589);
 };

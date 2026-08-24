@@ -1,28 +1,31 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
 
 export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {
   ({ eventId, stageId } = arg0);
   if (!tmp) {
-    const obj = { type: "LIVE_CHANNEL_NOTICE_HIDE", eventId: null, stageId: null };
+    let obj = dispatcherDefault;
+    obj = { type: "LIVE_CHANNEL_NOTICE_HIDE", eventId: null, stageId: null };
     obj[1] = eventId;
     obj[2] = stageId;
     obj.dispatch(obj);
   }
-  tmp = null == eventId && null == stageId;
 };
 export const hideUpcomingEventNotice = function hideUpcomingEventNotice(eventId) {
-  const obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId };
+  let obj = dispatcherDefault;
+  obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId };
   obj.dispatch(obj);
 };
 export const markUpcomingEventNoticeAsSeen = function markUpcomingEventNoticeAsSeen(guildEventId) {
-  const obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN", guildEventId };
+  let obj = dispatcherDefault;
+  obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN", guildEventId };
   obj.dispatch(obj);
 };
 export const dismissEventBanner = function dismissEventBanner(id) {
-  const obj = { type: "EVENT_BANNER_DISMISS", eventId: id };
+  let obj = dispatcherDefault;
+  obj = { type: "EVENT_BANNER_DISMISS", eventId: id };
   obj.dispatch(obj);
 };

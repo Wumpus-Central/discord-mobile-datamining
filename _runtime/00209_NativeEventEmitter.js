@@ -1,6 +1,6 @@
 // _runtime/00209_NativeEventEmitter.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 let NativeEventEmitter = importDefault;
 class NativeEventEmitter {
@@ -77,7 +77,6 @@ let items = [
         _nativeModule.removeListeners(self.listenerCount(arg0));
       }
       NativeEventEmitter(92).removeAllListeners(arg0);
-      const tmpResult = NativeEventEmitter(92);
     }
   },
   {

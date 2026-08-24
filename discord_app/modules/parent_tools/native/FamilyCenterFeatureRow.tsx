@@ -15,15 +15,16 @@ import registerAssetDefault3 from "../../../../_runtime/14243_registerAsset.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { marginTop: 20, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey = { tableGroup: null };
+createCacheKey = { marginTop: 20, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
 
 export default function FamilyCenterFeatureRows() {
   let obj = useAgeSpecificText;
@@ -67,9 +68,9 @@ export default function FamilyCenterFeatureRows() {
   const stringResult2 = intl5.string(messagesProxyDefault["+pi4Yt"]);
   items1[1] = callback(TableRowGroupTitle.TableRowGroup, {
     hasIcons: true,
-    children: items.map((item, index) => {
-      const header = item.header;
-      ({ description, icon, IconComponent } = item);
+    children: items.map((header) => {
+      header = header.header;
+      ({ description, icon, IconComponent } = header);
       return callback2(callback(6291).TableRow, { label: header, subLabel: description, icon: callback2(callback(6291).TableRow.Icon, { source: icon, IconComponent }) }, header);
     })
   });

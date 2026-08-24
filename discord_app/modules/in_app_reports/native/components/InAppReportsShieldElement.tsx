@@ -5,10 +5,10 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
-const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
 export default function ShieldElement(element) {
   element = element.element;

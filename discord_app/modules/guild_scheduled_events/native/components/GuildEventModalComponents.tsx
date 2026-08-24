@@ -3,7 +3,6 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import dismissGlobalKeyboardAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
@@ -12,23 +11,23 @@ import useChannelsUserCanStartStageIn from "../../useGuildsUserCanStartStageIn.t
 import registerAssetDefault2 from "../../../../../_runtime/08824_registerAsset.js";
 import registerAssetDefault3 from "../../../../../_runtime/08825_registerAsset.js";
 import LocationIcon from "../../../../design/components/Icon/native/redesign/generated/LocationIcon.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../../GuildScheduledEventsConstants.tsx";
 import { GuildFeatures } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ GuildScheduledEventEntityTypes: closure_6, GUILD_EVENT_MAX_DESCRIPTION_LENGTH: error, MAX_EVENT_LOCATION_LENGTH: closure_8, GUILD_EVENT_MAX_NAME_LENGTH: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ formGroup: { paddingVertical: 8 }, formGroupSmall: { paddingVertical: 4 }, formGroupLarge: { paddingTop: 16, paddingBottom: 4 }, dateInput: { flexGrow: 1, flexShrink: 1, flexBasis: "60%" }, timeInput: { flexGrow: 1, flexShrink: 1, flexBasis: "30%" }, formHeader: { marginBottom: 8 }, header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 } });
-let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventModalComponents.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventModalComponents.tsx");
 
 export const GuildEventTopic = function GuildEventTopic(arg0) {
   ({ topic, onChange } = arg0);
-  { style: callback3().formGroupSmall, children: null };
-  const obj = { label: null, accessibilityLabel: null, placeholder: null, onChange: null, value: null, maxLength: null, autoFocus: true, isClearable: true };
+  let obj = { style: callback3().formGroupSmall, children: null };
+  obj = { label: null, accessibilityLabel: null, placeholder: null, onChange: null, value: null, maxLength: null, autoFocus: true, isClearable: true };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["0HbEQ6"]);
   const intl2 = getSystemLocale.intl;
@@ -43,8 +42,8 @@ export const GuildEventTopic = function GuildEventTopic(arg0) {
 };
 export const GuildEventLocation = function GuildEventLocation(arg0) {
   ({ location: _location, onChange, onFocus } = arg0);
-  { style: callback3().formGroupLarge, children: null };
-  const obj = { label: null, placeholder: null, value: null, maxLength: null, onChange: null, onFocus: null, isClearable: true };
+  let obj = { style: callback3().formGroupLarge, children: null };
+  obj = { label: null, placeholder: null, value: null, maxLength: null, onChange: null, onFocus: null, isClearable: true };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.yx785A);
   const intl2 = getSystemLocale.intl;
@@ -60,17 +59,19 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
   startDate = startDate.startDate;
   const recurrenceRule = startDate.recurrenceRule;
   const onRecurrenceChange = startDate.onRecurrenceChange;
+  dependencyMap = undefined;
   let recurrenceOptions;
   const tmp = callback3();
   const items = [recurrenceRule, startDate];
   dependencyMap = recurrenceOptions.useMemo(() => startDate(paths[8]).recurrenceRuleToOption(startDate, recurrenceRule), items);
   let obj = startDate(8785);
   recurrenceOptions = obj.getRecurrenceOptions(startDate);
-  const found = recurrenceOptions.find((item, index) => item.value === closure_3);
+  const found = recurrenceOptions.find((value) => value.value === closure_3);
   let label;
   if (found != null) {
     label = found.label;
   }
+  obj = { style: tmp.formGroup, children: null };
   obj = { style: tmp.header, children: null };
   obj1 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl = tmp2(1236).intl;
@@ -88,7 +89,7 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
       obj[1] = recurrenceOptions;
       obj[2] = function onItemSelect(arg0) {
         callback(arg0);
-        recurrenceRule(closure_1_3[12]).hideActionSheet();
+        closure_1_1(closure_1_3[12]).hideActionSheet();
       };
       obj[3] = paths;
       obj2.openLazy(startDate(paths[14])(paths[13], paths.paths), "SelectRecurrenceOption", obj);
@@ -114,7 +115,8 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
 export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelection(arg0) {
   ({ guild, disabled } = arg0);
   ({ entityType, onChange } = arg0);
-  let obj = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
+  let obj = useChannelsUserCanStartStageIn;
+  obj = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
   const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(guild);
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.BVZqJl);
@@ -138,13 +140,13 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
   const features = guild.features;
   if (features.has(GuildFeatures.COMMUNITY)) {
     obj1 = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
-    const intl5 = getSystemLocale.intl;
-    obj1[0] = intl5.string(getSystemLocale.t.EErMzA);
+    const intl5 = tmp(1236).intl;
+    obj1[0] = intl5.string(tmp(1236).t.EErMzA);
     obj1[1] = constants.STAGE_INSTANCE;
-    const intl6 = getSystemLocale.intl;
-    obj1[2] = intl6.string(getSystemLocale.t.LgALpp);
+    const intl6 = tmp(1236).intl;
+    obj1[2] = intl6.string(tmp(1236).t.LgALpp);
     obj1[3] = registerAssetDefault;
-    obj1[4] = StageIcon.StageIcon;
+    obj1[4] = tmp(6892).StageIcon;
     obj1[5] = 0 === channelsUserCanStartStageIn.length || disabled;
     items.unshift(obj1);
   }
@@ -152,19 +154,20 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
     defaultValue: entityType,
     onChange,
     hasIcons: true,
-    children: items.map((item, index) => {
-      const name = item.name;
-      ({ value, description, IconComponent, disabled } = item);
+    children: items.map((name) => {
+      name = name.name;
+      ({ value, description, IconComponent, disabled } = name);
       return callback2(callback(table[24]).TableRadioRow, { label: name, subLabel: description, value, icon: callback2(IconComponent, {}), disabled }, name);
     })
   });
 };
 export const GuildEventDescription = function GuildEventDescription(onFocus) {
   onFocus = onFocus.onFocus;
+  let ref;
   ({ description, onChange } = onFocus);
-  const ref = React.useRef(null);
-  { style: callback3().formGroupSmall, ref, children: null };
-  const obj = { label: null, maxLength: null, placeholder: null, onChange: null, onFocus: null, value: null };
+  ref = React.useRef(null);
+  let obj = { style: callback3().formGroupSmall, ref, children: null };
+  obj = { label: null, maxLength: null, placeholder: null, onChange: null, onFocus: null, value: null };
   const intl = onFocus(1236).intl;
   obj[0] = intl.string(onFocus(1236).t["+gRCC7"]);
   obj[1] = closure_7;
@@ -202,6 +205,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
     };
   }
   let tmp5 = callback3();
+  obj = { style: tmp5.formGroup, children: null };
   obj = { direction: "horizontal", spacing: 16, children: null };
   obj1 = { style: tmp5.dateInput, children: null };
   const items = [callback(time(4734).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: dateLabel }), ];
@@ -217,26 +221,30 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
         obj = { onSubmit: null, title: null, startDate: null, minimumDate: null, maximumDate: null, requireDateChanged: true, mode: null };
         obj[0] = function onSubmit(set) {
           if ("date" !== closure_0) {
-            fn(set);
+            closure_1_6(set);
           } else {
             const obj = { hour: null, minute: null, second: 0, millisecond: 0 };
-            obj[0] = date.get("hour");
-            obj[1] = date.get("minute");
-            fn(set.set(obj));
+            obj[0] = closure_1_2.get("hour");
+            obj[1] = closure_1_2.get("minute");
+            closure_1_6(set.set(obj));
           }
         };
         obj[1] = "date" === time ? time : timeLabel;
         const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+        const obj4 = date;
+        const tmp2 = dependencyMap;
+        const tmp5 = "date" === time ? time : timeLabel;
         obj[2] = date.toDate();
         if (null != closure_1_3) {
-          let toDateResult = closure_1_3.toDate();
+          let toDateResult = obj5.toDate();
         } else {
-          toDateResult = date.toDate();
+          toDateResult = obj4.toDate();
         }
         obj[3] = toDateResult;
         obj[4] = maximumDate.toDate();
         obj[6] = openLazyResult;
         openLazyResult = obj2.openLazy(asyncRequireImpl(8828, dependencyMap.paths), "DatePicker", obj);
+        obj5 = closure_1_3;
         const tmp8 = asyncRequireImpl(8828, dependencyMap.paths);
       }
     },
@@ -244,8 +252,9 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
   });
   obj1[1] = items;
   const items1 = [callback2(disabled, obj1), ];
-  const obj4 = { style: tmp5.timeInput, children: null };
+  let obj4 = { style: tmp5.timeInput, children: null };
   const items2 = [callback(time(4734).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel }), ];
+  let obj2 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: dateLabel };
   const obj3 = {
     text: dateLabel,
     value: date.format("MMM Do YYYY"),
@@ -257,31 +266,36 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
         obj = { onSubmit: null, title: null, startDate: null, minimumDate: null, maximumDate: null, requireDateChanged: true, mode: null };
         obj[0] = function onSubmit(set) {
           if ("date" !== closure_0) {
-            fn(set);
+            closure_1_6(set);
           } else {
             const obj = { hour: null, minute: null, second: 0, millisecond: 0 };
-            obj[0] = date.get("hour");
-            obj[1] = date.get("minute");
-            fn(set.set(obj));
+            obj[0] = closure_1_2.get("hour");
+            obj[1] = closure_1_2.get("minute");
+            closure_1_6(set.set(obj));
           }
         };
         obj[1] = "date" === time ? time : timeLabel;
         const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+        const obj4 = date;
+        const tmp2 = dependencyMap;
+        const tmp5 = "date" === time ? time : timeLabel;
         obj[2] = date.toDate();
         if (null != closure_1_3) {
-          let toDateResult = closure_1_3.toDate();
+          let toDateResult = obj5.toDate();
         } else {
-          toDateResult = date.toDate();
+          toDateResult = obj4.toDate();
         }
         obj[3] = toDateResult;
         obj[4] = maximumDate.toDate();
         obj[6] = openLazyResult;
         openLazyResult = obj2.openLazy(asyncRequireImpl(8828, dependencyMap.paths), "DatePicker", obj);
+        obj5 = closure_1_3;
         const tmp8 = asyncRequireImpl(8828, dependencyMap.paths);
       }
     },
     disabled
   };
+  let obj5 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel };
   time = "time";
   items2[1] = callback(time(8811).InputButton, {
     text: timeLabel,
@@ -294,26 +308,30 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
         obj = { onSubmit: null, title: null, startDate: null, minimumDate: null, maximumDate: null, requireDateChanged: true, mode: null };
         obj[0] = function onSubmit(set) {
           if ("date" !== closure_0) {
-            fn(set);
+            closure_1_6(set);
           } else {
             const obj = { hour: null, minute: null, second: 0, millisecond: 0 };
-            obj[0] = date.get("hour");
-            obj[1] = date.get("minute");
-            fn(set.set(obj));
+            obj[0] = closure_1_2.get("hour");
+            obj[1] = closure_1_2.get("minute");
+            closure_1_6(set.set(obj));
           }
         };
         obj[1] = "date" === time ? time : timeLabel;
         const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+        const obj4 = date;
+        const tmp2 = dependencyMap;
+        const tmp5 = "date" === time ? time : timeLabel;
         obj[2] = date.toDate();
         if (null != closure_1_3) {
-          let toDateResult = closure_1_3.toDate();
+          let toDateResult = obj5.toDate();
         } else {
-          toDateResult = date.toDate();
+          toDateResult = obj4.toDate();
         }
         obj[3] = toDateResult;
         obj[4] = maximumDate.toDate();
         obj[6] = openLazyResult;
         openLazyResult = obj2.openLazy(asyncRequireImpl(8828, dependencyMap.paths), "DatePicker", obj);
+        obj5 = closure_1_3;
         const tmp8 = asyncRequireImpl(8828, dependencyMap.paths);
       }
     },

@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
 import registerAssetDefault from "../../../../../../../_runtime/09803_registerAsset.js";
-import noop from "../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkConstants.tsx";
 import { PlatformTypes } from "../../../../../../Constants.tsx";
 import { CRUNCHYROLL_LINK_DEST_ORIGIN as closure_6 } from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let closure_8 = createCacheKey.createStyles({ image: { width: 152, height: 123 } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx");
 
 export default function CrunchyrollLinkPreConnect() {
   let obj = navigation(1500);

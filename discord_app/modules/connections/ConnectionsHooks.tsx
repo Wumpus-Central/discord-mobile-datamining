@@ -1,19 +1,19 @@
 // discord_app/modules/connections/ConnectionsHooks.tsx
-import obj132Default from "../../utils/Durations.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import set from "../../stores/ConnectedAccountsStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import setDefault from "../../utils/Durations.tsx";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/ConnectedAccountsStore.tsx";
+import closure_6 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import { KeyboardKeysUpdated } from "../../../discord_common/js/shared/constants/KeyboardConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ACTIVITY_PLATFORM_TYPES: error, PlatformTypes } = ME);
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
 const map = new Map(items1);
-let closure_12 = 30 * obj132Default.Millis.DAY;
+let closure_12 = 30 * setDefault.Millis.DAY;
 let items2 = [PlatformTypes.PLAYSTATION, 2];
 let items3 = [items2, , , , ];
 const items4 = [PlatformTypes.XBOX, 2];
@@ -26,23 +26,24 @@ const items7 = [PlatformTypes.TWITCH, 1];
 items3[4] = items7;
 const map1 = new Map(items3);
 const date = new Date(2023, 1, 18);
-const result = require("obj132").fileFinishedImporting("modules/connections/ConnectionsHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/ConnectionsHooks.tsx");
 
 export const usePlatformAllowed = function usePlatformAllowed(forUserProfile) {
   forUserProfile = forUserProfile.forUserProfile;
+  closure_1 = undefined;
   let allowPlayStationStaging;
   const items = [closure_6];
   closure_1 = forUserProfile(allowPlayStationStaging[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = forUserProfile(allowPlayStationStaging[8]).PlayStationVoiceExperiment;
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
-  return (allowPlayStationStaging) => {
-    if (allowPlayStationStaging.type === PlatformTypes.PLAYSTATION_STAGING) {
+  return (type) => {
+    if (type.type === closure_1_8.PLAYSTATION_STAGING) {
       let tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
-        if (closure_1_10[allowPlayStationStaging.type] != null) {
+        if (closure_1_10[type.type] != null) {
           hasItem = obj.includes(tmp10.id);
         }
         tmp4 = !hasItem;
@@ -51,14 +52,14 @@ export const usePlatformAllowed = function usePlatformAllowed(forUserProfile) {
       if (tmp4) {
         let tmp7 = fn;
         if (!tmp7) {
-          const migrationData = allowPlayStationStaging.migrationData;
+          const migrationData = type.migrationData;
           let migrationExperimentEnabled;
           if (migrationData != null) {
             migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
           }
           let enabled = !migrationExperimentEnabled;
           if (!migrationExperimentEnabled) {
-            enabled = allowPlayStationStaging.enabled;
+            enabled = type.enabled;
           }
           tmp7 = enabled;
         }
@@ -71,21 +72,23 @@ export const usePlatformAllowed = function usePlatformAllowed(forUserProfile) {
 export const usePlatforms = function usePlatforms() {
   let items = [closure_5];
   const stateFromStores = _require(memo[7]).useStateFromStores(items, () => accounts.getAccounts());
+  _require = stateFromStores;
   _require = false;
+  let fn;
   memo = undefined;
   let obj = _require(memo[7]);
   const items1 = [closure_6];
-  _require(memo[7]).useStateFromStores(items1, () => currentUser.getCurrentUser());
+  fn = _require(memo[7]).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = _require(memo[8]).PlayStationVoiceExperiment;
-  PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
-  const fn = (allowPlayStationStaging) => {
-    if (allowPlayStationStaging.type === PlatformTypes.PLAYSTATION_STAGING) {
+  memo = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
+  fn = (type) => {
+    if (type.type === closure_1_8.PLAYSTATION_STAGING) {
       let tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
-        if (closure_1_10[allowPlayStationStaging.type] != null) {
+        if (closure_1_10[type.type] != null) {
           hasItem = obj.includes(tmp10.id);
         }
         tmp4 = !hasItem;
@@ -94,14 +97,14 @@ export const usePlatforms = function usePlatforms() {
       if (tmp4) {
         let tmp7 = fn;
         if (!tmp7) {
-          const migrationData = allowPlayStationStaging.migrationData;
+          const migrationData = type.migrationData;
           let migrationExperimentEnabled;
           if (migrationData != null) {
             migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
           }
           let enabled = !migrationExperimentEnabled;
           if (!migrationExperimentEnabled) {
-            enabled = allowPlayStationStaging.enabled;
+            enabled = type.enabled;
           }
           tmp7 = enabled;
         }
@@ -113,7 +116,7 @@ export const usePlatforms = function usePlatforms() {
   const items2 = [stateFromStores];
   memo = React.useMemo(() => {
     const set = new Set();
-    const item = set.forEach((item, index) => set.add(item.type));
+    const item = set.forEach((type) => set.add(type.type));
     return set;
   }, items2);
   const items3 = [memo, fn];
@@ -147,14 +150,14 @@ export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
   closure_1 = fn(allowPlayStationStaging[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = fn(allowPlayStationStaging[8]).PlayStationVoiceExperiment;
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
-  fn = (allowPlayStationStaging) => {
-    if (allowPlayStationStaging.type === PlatformTypes.PLAYSTATION_STAGING) {
+  fn = (type) => {
+    if (type.type === closure_1_8.PLAYSTATION_STAGING) {
       let tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
-        if (closure_1_10[allowPlayStationStaging.type] != null) {
+        if (closure_1_10[type.type] != null) {
           hasItem = obj.includes(tmp10.id);
         }
         tmp4 = !hasItem;
@@ -163,14 +166,14 @@ export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
       if (tmp4) {
         let tmp7 = fn;
         if (!tmp7) {
-          const migrationData = allowPlayStationStaging.migrationData;
+          const migrationData = type.migrationData;
           let migrationExperimentEnabled;
           if (migrationData != null) {
             migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("ConnectionsHooks");
           }
           let enabled = !migrationExperimentEnabled;
           if (!migrationExperimentEnabled) {
-            enabled = allowPlayStationStaging.enabled;
+            enabled = type.enabled;
           }
           tmp7 = enabled;
         }
@@ -197,12 +200,12 @@ export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
 };
 export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
   function handleKeyDown(key) {
-    if (key.key === KeyboardKeysUpdated.SHIFT) {
+    if (key.key === closure_1_9.SHIFT) {
       callback(true);
     }
   }
   function handleKeyUp(key) {
-    if (key.key === KeyboardKeysUpdated.SHIFT) {
+    if (key.key === closure_1_9.SHIFT) {
       callback(false);
     }
   }

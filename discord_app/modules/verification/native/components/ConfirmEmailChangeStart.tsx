@@ -1,26 +1,26 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeStart.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
 
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
   const _require = tmp;
-  let obj = useNavigation;
+  let obj = _useNavigation;
   const navigation = obj.useNavigation();
-  obj1 = initialize;
+  obj1 = _initialize;
   const items = [closure_9];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(React.useState(false), 2);
@@ -44,7 +44,7 @@ export default function ConfirmEmailChangeStart() {
     const intl2 = tmp2(1236).intl;
     obj3[4] = intl2.string(tmp2(1236).t.dQ71Wa);
     items1[1] = callback2(tmp2(4734).Text, obj3);
-    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((item, index) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children: item }, index));
+    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.button;
     const obj5 = { text: null, onPress: null, loading: null, grow: true };

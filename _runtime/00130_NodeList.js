@@ -1,9 +1,9 @@
 // _runtime/00130_NodeList.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import setPlatformObject from "00126_setPlatformObject.js";
 
-const NodeList = fn;
+const NodeList = arg1;
 let closure_3 = { value: {}, writable: false };
 class NodeList {
   constructor(arg0) {
@@ -64,6 +64,11 @@ const items = [
             if (typeof call === "unknown") {
               let tmp3 = call(tmp2, num, self);
             } else {
+              let tmp5 = call;
+              let tmp6 = arg1;
+              let tmp7 = tmp2;
+              let tmp8 = num;
+              let tmp9 = self;
               let callResult = call(arg1, tmp2, tmp, self);
             }
           }

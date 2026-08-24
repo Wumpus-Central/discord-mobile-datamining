@@ -6,21 +6,23 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import registerAssetDefault from "../../../../../_runtime/14568_registerAsset.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, flexDirection: "row", padding: 16 };
+createCacheKey = { container: null, text: null };
+createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, flexDirection: "row", padding: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx");
 
 export default function NavigateForwardButton(arg0) {
   ({ onPress, text } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
+  let obj = { style: tmp.container, onPress, children: null };
+  obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
   const items = [callback(Text.Text, obj), ];
   obj = { source: registerAssetDefault };
   items[1] = callback(Button.Icon, obj);

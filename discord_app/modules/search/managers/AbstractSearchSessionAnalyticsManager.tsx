@@ -1,9 +1,9 @@
 // discord_app/modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import v1 from "../../../../_runtime/00514_v1.js";
 import SearchTokenTypes from "../SearchUtils.tsx";
 
-let result = obj132.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
+let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
 class AbstractSearchSessionAnalyticsManager {
   constructor() {
     obj = Object.create(new.target.prototype);

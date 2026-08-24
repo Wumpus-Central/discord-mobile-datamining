@@ -5,23 +5,24 @@ import Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import SafeAreaPaddingView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import styles from "../TwoWayLinkStyles.tsx";
-import noop from "../../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../../../../Constants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
 
 export default function XboxLinkEducation(onClose) {
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
   obj1 = combinedDefault;
   const articleURL = obj1.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
+  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   obj1 = { source: React.useMemo(() => ({ uri: callback(table[7]) }), []), style: callback3().image };
   const items = [callback(closure_4, obj1), , ];

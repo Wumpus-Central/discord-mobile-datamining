@@ -1,10 +1,14 @@
 // discord_common/js/shared/utils/FunctionUtils.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_1 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-let result = require("obj132").fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
 function promiseThrottle(arg0) {
   closure_0 = arg0;
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 5000;
+  }
   c2 = -1;
   c3 = null;
   return () => {
@@ -39,7 +43,8 @@ class PromiseDeduper {
 }
 const prototype = PromiseDeduper.prototype;
 prototype["one"] = function one(play, fn, arg2, arg3) {
-  const self = this;
+  let self = this;
+  self = this;
   closure_1 = play;
   let obj = arg2;
   if (arg2 === undefined) {
@@ -68,7 +73,7 @@ prototype["one"] = function one(play, fn, arg2, arg3) {
   const result = self.set(play, cleanupPromise);
   return cleanupPromise;
 };
-prototype["many"] = function many(items, fn) {
+prototype["many"] = function many(items) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -77,25 +82,30 @@ prototype["many"] = function many(items, fn) {
   if (flag === undefined) {
     flag = false;
   }
+  let map;
   closure_2 = undefined;
   let self = this;
   items = [...new Set(items)];
   const items1 = [];
-  let map = new Map();
+  map = new Map();
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp4 = closure_2;
     // GetOwnPrivateBySym (0x65)
     let tmp3 = nextResult;
     let value = push.get(nextResult);
     if (!flag) {
+      let tmp6 = value;
       if (null != value) {
         push = nextResult;
+        let tmp7 = value;
         let result = map.set(nextResult, value);
       }
       continue;
     }
     push = items1.push;
+    let tmp9 = nextResult;
     let arr = push(tmp3);
   }
   if (items1.length <= 0) {
@@ -120,11 +130,12 @@ prototype["many"] = function many(items, fn) {
         }
         return applyArgumentsResult;
       };
-    })())).then((result) => {
+    })())).then((arg0) => {
       map = new Map();
       while (tmp !== undefined) {
+        let tmp3 = self;
         let tmp4 = self(tmp2, 2);
-        result = map.set(tmp4[0], tmp4[1]);
+        let result = map.set(tmp4[0], tmp4[1]);
         continue;
       }
       return map;
@@ -153,24 +164,24 @@ prototype["many"] = function many(items, fn) {
     })()));
   } else {
     try {
-      closure_2 = fn(items1);
+      closure_2 = arg1(items1);
       function _loop(arg0) {
         const _self = arg0;
-        const cleanupPromise = promise.then((result) => {
-          if (result.has(closure_0)) {
-            return result.get(closure_0);
+        const cleanupPromise = promise.then((has) => {
+          if (has.has(closure_0)) {
+            return has.get(tmp);
           } else {
             const _Error = Error;
             const _String = String;
             const _HermesInternal = HermesInternal;
-            error = new Error("Promise deduper result missing key: " + String(closure_0));
+            error = new Error("Promise deduper result missing key: " + String(tmp));
             throw error;
           }
         }).finally(() => {
           // GetOwnPrivateBySym (0x65)
-          if (obj.get(set) === cleanupPromise) {
+          if (obj.get(closure_0) === cleanupPromise) {
             // GetOwnPrivateBySym (0x65)
-            set.delete(set);
+            closure_0.delete(closure_0);
           }
         });
         // GetOwnPrivateBySym (0x65)
@@ -248,6 +259,7 @@ export { promiseThrottle };
 export { PromiseDeduper };
 export const clearObject = function clearObject(obj) {
   for (const key10003 in arg0) {
+    let tmp3 = key10003;
     if (!arg0.hasOwnProperty(key10003)) {
       continue;
     } else {

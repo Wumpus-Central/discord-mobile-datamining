@@ -1,13 +1,11 @@
 // _runtime/07776_logSpanEnd.js
-import consoleSandbox from "07738_consoleSandbox.js";
-import spanTimeInputToSeconds from "07743_spanTimeInputToSeconds.js";
 import __SENTRY_DEBUG__ from "metro/07766___SENTRY_DEBUG__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 arg5.logSpanEnd = function logSpanEnd(spanContext) {
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-    let tmpResult = spanTimeInputToSeconds;
+    let tmpResult = tmp(7743);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
@@ -20,20 +18,20 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
       str2 = op;
     }
     const spanId = spanContext.spanContext().spanId;
-    tmpResult = spanTimeInputToSeconds;
+    tmpResult = tmp(7743);
     let str3 = "";
     if (tmpResult.getRootSpan(spanContext) === spanContext) {
       str3 = "root ";
     }
     const _HermesInternal = HermesInternal;
     const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const logger = consoleSandbox.logger;
+    const logger = tmp(7738).logger;
     logger.log(combined);
   }
 };
 arg5.logSpanStart = function logSpanStart(spanContext) {
   if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-    let tmpResult = spanTimeInputToSeconds;
+    let tmpResult = tmp(7743);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
     let str = "< unknown name >";
@@ -46,9 +44,9 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
       str2 = op;
     }
     const parent_span_id = spanToJSONResult.parent_span_id;
-    tmpResult = spanTimeInputToSeconds;
+    tmpResult = tmp(7743);
     const spanIsSampledResult = tmpResult.spanIsSampled(spanContext);
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    const rootSpan = tmp(7743).getRootSpan(spanContext);
     let str3 = "unsampled";
     if (spanIsSampledResult) {
       str3 = "sampled";
@@ -70,8 +68,8 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
       items.push("parent ID: " + parent_span_id);
     }
     if (rootSpan !== spanContext) {
-      const tmpResult2 = spanTimeInputToSeconds;
-      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
+      const tmpResult2 = tmp(7743);
+      ({ op: op2, description: description2 } = tmp(7743).spanToJSON(rootSpan));
       const _HermesInternal6 = HermesInternal;
       items.push("root ID: " + rootSpan.spanContext().spanId);
       if (op2) {
@@ -82,11 +80,11 @@ arg5.logSpanStart = function logSpanStart(spanContext) {
         const _HermesInternal8 = HermesInternal;
         items.push("root description: " + description2);
       }
-      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
+      const spanToJSONResult1 = tmp(7743).spanToJSON(rootSpan);
     }
-    const logger = consoleSandbox.logger;
+    const logger = tmp(7738).logger;
     const _HermesInternal9 = HermesInternal;
     logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult1 = spanTimeInputToSeconds;
+    const tmpResult1 = tmp(7743);
   }
 };

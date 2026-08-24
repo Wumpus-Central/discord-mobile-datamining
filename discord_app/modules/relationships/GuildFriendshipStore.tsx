@@ -36,6 +36,7 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
     obj[0] = tmp4.FETCHING;
     dependencyMap[id1] = obj;
     const membersById = showTooManyUserGuildsAlertDefault.requestMembersById(id1, items, false);
+    const obj2 = showTooManyUserGuildsAlertDefault;
   }
 };
 const guildFriendshipStore = new GuildFriendshipStore(dispatcherDefault, {
@@ -70,6 +71,6 @@ const guildFriendshipStore = new GuildFriendshipStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/relationships/GuildFriendshipStore.tsx");
+const result = require("set").fileFinishedImporting("modules/relationships/GuildFriendshipStore.tsx");
 
 export default guildFriendshipStore;

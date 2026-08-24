@@ -1,5 +1,5 @@
 // discord_app/modules/application_account_linking/native/AccountLinkManagerNative.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import _claimIncentivizedAccountLinkingReward from "../AccountLinkManager.tsx";
 
 const AccountLinkManager = _claimIncentivizedAccountLinkingReward.AccountLinkManager;
@@ -42,6 +42,6 @@ class AccountLinkManagerNative extends AccountLinkManager {
 }
 let closure_2 = AccountLinkManagerNative.prototype;
 const accountLinkManagerNative = new AccountLinkManagerNative();
-const result = obj132.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
+const result = set.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
 
 export default accountLinkManagerNative;

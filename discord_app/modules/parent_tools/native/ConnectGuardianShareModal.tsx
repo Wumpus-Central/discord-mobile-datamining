@@ -5,13 +5,13 @@ import messagesProxyDefault from "../FamilyCenter.messages.js";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
 import useOnNewPendingRequestDefault from "../hooks/useOnNewPendingRequest.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
+import closure_5 from "../FamilyCenterStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ConnectGuardianShareScreen() {
   const tmp = callback3();
   let obj = getLinkCode(1236);
@@ -34,6 +34,7 @@ function ConnectGuardianShareScreen() {
     getLinkCode();
   }, []);
   useOnNewPendingRequestDefault(_modDef5260.pop);
+  obj = { spacing: ThemesDefault.space.PX_40, children: null };
   obj = { spacing: ThemesDefault.space.PX_8, children: null };
   obj1 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   let intl = getLinkCode(1236).intl;
@@ -62,24 +63,26 @@ function ConnectGuardianShareScreen() {
     const obj7 = { children: null };
     items4[1] = tmp11Result;
     obj3[2] = items4;
-    items3[1] = callback2(getLinkCode(4733).Stack, obj3);
+    items3[1] = tmp12(getLinkCode(4733).Stack, obj3);
     obj[1] = items3;
-    obj7[0] = callback2(getLinkCode(4733).Stack, obj);
+    obj7[0] = tmp12(getLinkCode(4733).Stack, obj);
     obj6[0] = tmp11(getLinkCode(5445).ModalContent, obj7);
     return tmp11(getLinkCode(5440).ModalScreen, obj6);
   }
+  const tmp9 = useOnNewPendingRequestDefault;
   tmp11Result = tmp11(View, { style: tmp.loading, children: callback(getLinkCode(5446).ActivityIndicator, {}) });
-  const obj8 = { style: tmp.loading, children: callback(getLinkCode(5446).ActivityIndicator, {}) };
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { alignItems: "center", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_24 };
+createCacheKey = { title: { textAlign: "center" }, body: { textAlign: "center" }, qrLabel: { textAlign: "center" }, cardSection: { alignItems: "center" }, loading: null };
+createCacheKey = { alignItems: "center", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_24 };
 createCacheKey[4] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianShareModal.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianShareModal.tsx");
 
 export default function ConnectGuardianShareModal() {
   const memo = React.useMemo(() => {
-    const obj = {
+    let obj = { CONNECT_GUARDIAN_SHARE: null };
+    obj = {
       headerShown: true,
       headerLeft: callback(6314).getHeaderBackButton(callback2(5260).pop),
       headerTitle() {

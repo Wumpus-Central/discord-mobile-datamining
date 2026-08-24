@@ -1,8 +1,6 @@
 // _runtime/01186_getDefaultIntegrations.js
 import debugSymbolicatorIntegration from "00811_debugSymbolicatorIntegration.js";
 import isHermesEnabled from "01002_isHermesEnabled.js";
-import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
-import reactNativeTracingIntegration from "01187_reactNativeTracingIntegration.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -15,18 +13,18 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     obj = { patchGlobalPromise: null };
     obj[0] = patchGlobalPromise.patchGlobalPromise;
     push(obj2.reactNativeErrorHandlersIntegration(obj));
-    let tmpResult = debugSymbolicatorIntegration;
+    let tmpResult = tmp(811);
     items.push(tmpResult.nativeLinkedErrorsIntegration());
   } else {
     push(obj2.browserApiErrorsIntegration());
-    tmpResult = debugSymbolicatorIntegration;
+    tmpResult = tmp(811);
     items.push(tmpResult.browserGlobalHandlersIntegration());
-    items.push(debugSymbolicatorIntegration.browserLinkedErrorsIntegration());
+    items.push(tmp(811).browserLinkedErrorsIntegration());
     if (patchGlobalPromise.enableAutoSessionTracking) {
-      items.push(feedbackAsyncIntegration.browserSessionIntegration());
-      const tmpResult2 = feedbackAsyncIntegration;
+      items.push(tmp(1024).browserSessionIntegration());
+      const tmpResult2 = tmp(1024);
     }
-    const tmpResult1 = debugSymbolicatorIntegration;
+    const tmpResult1 = tmp(811);
   }
   notWebResult = obj.notWeb();
   items.push(debugSymbolicatorIntegration.inboundFiltersIntegration());
@@ -49,32 +47,32 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   const tmpResult11 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.createReactNativeRewriteFrames());
   if (patchGlobalPromise.enableNative) {
-    items.push(debugSymbolicatorIntegration.deviceContextIntegration());
-    const tmpResult13 = debugSymbolicatorIntegration;
-    items.push(debugSymbolicatorIntegration.modulesLoaderIntegration());
+    items.push(tmp(811).deviceContextIntegration());
+    const tmpResult13 = tmp(811);
+    items.push(tmp(811).modulesLoaderIntegration());
     let enableLogs = patchGlobalPromise.enableLogs;
     if (enableLogs) {
       enableLogs = "native" !== patchGlobalPromise.logsOrigin;
     }
     if (enableLogs) {
-      items.push(debugSymbolicatorIntegration.logEnricherIntegration());
-      const tmpResult15 = debugSymbolicatorIntegration;
-      items.push(feedbackAsyncIntegration.consoleLoggingIntegration());
-      const tmpResult16 = feedbackAsyncIntegration;
+      items.push(tmp(811).logEnricherIntegration());
+      const tmpResult15 = tmp(811);
+      items.push(tmp(1024).consoleLoggingIntegration());
+      const tmpResult16 = tmp(1024);
     }
     if (patchGlobalPromise.attachScreenshot) {
-      items.push(debugSymbolicatorIntegration.screenshotIntegration());
-      const tmpResult17 = debugSymbolicatorIntegration;
+      items.push(tmp(811).screenshotIntegration());
+      const tmpResult17 = tmp(811);
     }
     if (patchGlobalPromise.attachViewHierarchy) {
-      items.push(debugSymbolicatorIntegration.viewHierarchyIntegration());
-      const tmpResult18 = debugSymbolicatorIntegration;
+      items.push(tmp(811).viewHierarchyIntegration());
+      const tmpResult18 = tmp(811);
     }
     if (typeof patchGlobalPromise.profilesSampleRate === "number") {
-      items.push(debugSymbolicatorIntegration.hermesProfilingIntegration());
-      const tmpResult19 = debugSymbolicatorIntegration;
+      items.push(tmp(811).hermesProfilingIntegration());
+      const tmpResult19 = tmp(811);
     }
-    const tmpResult14 = debugSymbolicatorIntegration;
+    const tmpResult14 = tmp(811);
   }
   const tracesSampleRate = patchGlobalPromise.tracesSampleRate;
   let tmp26 = typeof tracesSampleRate === "number";
@@ -89,8 +87,8 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     enableNative = patchGlobalPromise.enableNative;
   }
   if (enableNative) {
-    items.push(debugSymbolicatorIntegration.appStartIntegration());
-    const tmpResult20 = debugSymbolicatorIntegration;
+    items.push(tmp(811).appStartIntegration());
+    const tmpResult20 = tmp(811);
   }
   const tmpResult12 = debugSymbolicatorIntegration;
   let enableNative2 = tmp26;
@@ -109,34 +107,34 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     enableStallTracking = patchGlobalPromise.enableStallTracking;
   }
   if (enableStallTracking) {
-    items.push(debugSymbolicatorIntegration.stallTrackingIntegration());
-    const tmpResult22 = debugSymbolicatorIntegration;
+    items.push(tmp(811).stallTrackingIntegration());
+    const tmpResult22 = tmp(811);
   }
   let enableUserInteractionTracing = tmp26;
   if (tmp26) {
     enableUserInteractionTracing = patchGlobalPromise.enableUserInteractionTracing;
   }
   if (enableUserInteractionTracing) {
-    items.push(debugSymbolicatorIntegration.userInteractionIntegration());
-    const tmpResult23 = debugSymbolicatorIntegration;
+    items.push(tmp(811).userInteractionIntegration());
+    const tmpResult23 = tmp(811);
   }
   let enableAutoPerformanceTracing = tmp26;
   if (tmp26) {
     enableAutoPerformanceTracing = patchGlobalPromise.enableAutoPerformanceTracing;
   }
   if (enableAutoPerformanceTracing) {
-    items.push(debugSymbolicatorIntegration.appRegistryIntegration());
-    const tmpResult24 = debugSymbolicatorIntegration;
-    items.push(reactNativeTracingIntegration.reactNativeTracingIntegration());
-    const tmpResult25 = reactNativeTracingIntegration;
+    items.push(tmp(811).appRegistryIntegration());
+    const tmpResult24 = tmp(811);
+    items.push(tmp(1187).reactNativeTracingIntegration());
+    const tmpResult25 = tmp(1187);
   }
   if (tmp26) {
-    items.push(debugSymbolicatorIntegration.timeToDisplayIntegration());
-    const tmpResult26 = debugSymbolicatorIntegration;
+    items.push(tmp(811).timeToDisplayIntegration());
+    const tmpResult26 = tmp(811);
   }
   if (patchGlobalPromise.enableCaptureFailedRequests) {
-    items.push(debugSymbolicatorIntegration.httpClientIntegration());
-    const tmpResult27 = debugSymbolicatorIntegration;
+    items.push(tmp(811).httpClientIntegration());
+    const tmpResult27 = tmp(811);
   }
   const tmpResult21 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.expoContextIntegration());
@@ -147,8 +145,8 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     }
     obj = { sidecarUrl: null };
     obj[0] = spotlight;
-    items.push(debugSymbolicatorIntegration.spotlightIntegration(obj));
-    const tmpResult29 = debugSymbolicatorIntegration;
+    items.push(tmp(811).spotlightIntegration(obj));
+    const tmpResult29 = tmp(811);
   }
   const replaysOnErrorSampleRate = patchGlobalPromise.replaysOnErrorSampleRate;
   let notWebResult1 = typeof replaysOnErrorSampleRate === "number";
@@ -158,6 +156,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   let tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
   if (!tmp40) {
     tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
+    const tmp41 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
   }
   let tmp42 = !notWebResult1;
   if (!notWebResult1) {
@@ -185,12 +184,12 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     notWebResult1 = tmp40;
   }
   if (notWebResult1) {
-    notWebResult1 = isHermesEnabled.notWeb();
-    const tmpResult30 = isHermesEnabled;
+    notWebResult1 = tmp(1002).notWeb();
+    const tmpResult30 = tmp(1002);
   }
   if (notWebResult1) {
-    items.push(debugSymbolicatorIntegration.mobileReplayIntegration());
-    const tmpResult31 = debugSymbolicatorIntegration;
+    items.push(tmp(811).mobileReplayIntegration());
+    const tmpResult31 = tmp(811);
   }
   const tmpResult28 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.primitiveTagIntegration());

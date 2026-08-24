@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {
   const WINDOW = WINDOW2.WINDOW;
-  const listener = WINDOW.addEventListener("popstate", (event) => {
+  const listener = WINDOW.addEventListener("popstate", () => {
     const href = callback(table[1]).WINDOW.location.href;
     if (href !== href) {
       const obj = { from: null, to: null };
@@ -52,16 +52,16 @@ function instrumentHistory() {
         return callback.apply(self, items);
       };
     }
-    let tmpResult = registerSpanErrorInstrumentation;
-    tmpResult.fill(WINDOW2.WINDOW.history, "pushState", historyReplacementFunction);
-    tmpResult = registerSpanErrorInstrumentation;
-    tmpResult.fill(WINDOW2.WINDOW.history, "replaceState", historyReplacementFunction);
+    let tmpResult = tmp(817);
+    tmpResult.fill(tmp(1039).WINDOW.history, "pushState", historyReplacementFunction);
+    tmpResult = tmp(817);
+    tmpResult.fill(tmp(1039).WINDOW.history, "replaceState", historyReplacementFunction);
   }
-  obj = registerSpanErrorInstrumentation;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addHistoryInstrumentationHandler = function addHistoryInstrumentationHandler(arg0) {
   registerSpanErrorInstrumentation.addHandler("history", arg0);
+  const obj = registerSpanErrorInstrumentation;
   registerSpanErrorInstrumentation.maybeInstrument("history", instrumentHistory);
 };
 arg5.instrumentHistory = instrumentHistory;

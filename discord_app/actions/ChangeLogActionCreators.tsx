@@ -2,34 +2,38 @@
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
-import handleUserSettingsProtoStoreChange from "../modules/changelog/ChangelogStore.tsx";
+import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../modules/changelog/ChangelogStore.tsx";
 import { Endpoints } from "../Constants.tsx";
 import { ChangelogPlatforms } from "../modules/changelog/ChangelogConstants.tsx";
 
-require = fn;
+require = arg1;
 function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const result = require("obj132").fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 
 export default {
   lockChangeLog(key) {
-    const obj = { type: "CHANGE_LOG_LOCK", key };
+    let obj = dispatcherDefault;
+    obj = { type: "CHANGE_LOG_LOCK", key };
     obj.dispatch(obj);
   },
   unlockChangeLog(key) {
-    const obj = { type: "CHANGE_LOG_UNLOCK", key };
+    let obj = dispatcherDefault;
+    obj = { type: "CHANGE_LOG_UNLOCK", key };
     obj.dispatch(obj);
   },
   markChangelogAsSeen(closure_2, date) {
-    const obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: closure_2, changelogDate: date };
+    let obj = dispatcherDefault;
+    obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: closure_2, changelogDate: date };
     obj.dispatch(obj);
     const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(closure_2);
   },
   setChangelogOverride(id) {
-    const obj = { type: "CHANGE_LOG_SET_OVERRIDE", id };
+    let obj = dispatcherDefault;
+    obj = { type: "CHANGE_LOG_SET_OVERRIDE", id };
     obj.dispatch(obj);
     if (null != id) {
       const self = this;
@@ -38,7 +42,8 @@ export default {
   },
   sendChangelogMessage(changelog_id) {
     const HTTP = sendRequest.HTTP;
-    const obj = { changelog_id };
+    obj = { url: Endpoints.CHANGELOG_MESSAGES, body: obj, rejectWithError: true };
+    obj = { changelog_id };
     HTTP.post(obj);
   },
   fetchChangelogConfig() {
@@ -62,9 +67,9 @@ export default {
         return null;
       }
       if (dependencyMap) {
-        let MOBILE = closure_1_6.DESKTOP;
+        let MOBILE = tmp48.DESKTOP;
       } else {
-        MOBILE = closure_1_6.MOBILE;
+        MOBILE = tmp48.MOBILE;
       }
       let str = "";
       if (!c3) {

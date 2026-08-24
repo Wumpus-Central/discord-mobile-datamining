@@ -1,6 +1,4 @@
 // _runtime/14857__getRequireWildcardCache.js
-import _typeof from "metro/00045__typeof.js";
-
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap !== "function") {
     return null;

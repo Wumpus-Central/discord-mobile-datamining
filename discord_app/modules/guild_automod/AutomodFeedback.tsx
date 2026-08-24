@@ -1,9 +1,10 @@
 // discord_app/modules/guild_automod/AutomodFeedback.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-let obj = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
-const result = obj132.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
+let obj = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
+obj = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
+const result = set.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
 
 export const Feedback = obj;
 export const generateFeedbackOptions = function generateFeedbackOptions() {
@@ -22,12 +23,12 @@ export const generateFeedbackOptions = function generateFeedbackOptions() {
 export const RaidAlertType = { JOIN_RAID: "JOIN_RAID", MENTION_RAID: "MENTION_RAID" };
 export const RaidResolutionType = obj;
 export const getMostImportantRaidResolutionType = function getMostImportantRaidResolutionType(c3) {
-  if (obj.includes(obj.LEGITIMATE_ACTIVITY)) {
-    let DM_SPAM = obj.LEGITIMATE_ACTIVITY;
-  } else if (obj.includes(obj.DM_SPAM)) {
-    DM_SPAM = obj.DM_SPAM;
+  if (c3.includes(obj.LEGITIMATE_ACTIVITY)) {
+    let DM_SPAM = tmp.LEGITIMATE_ACTIVITY;
+  } else if (c3.includes(tmp.DM_SPAM)) {
+    DM_SPAM = tmp.DM_SPAM;
   } else {
-    DM_SPAM = obj.includes(obj.JOIN_RAID) ? obj.JOIN_RAID : obj.OTHER;
+    DM_SPAM = c3.includes(tmp.JOIN_RAID) ? tmp.JOIN_RAID : tmp.OTHER;
   }
   return DM_SPAM;
 };

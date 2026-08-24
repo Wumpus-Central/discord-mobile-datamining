@@ -10,22 +10,27 @@ import AutomatedUnderageAppealStatusDefault from "SafetyHubPage.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SafetyHubLinks } from "../SafetyHubConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
+createCacheKey = { container: null, header: null, text: null, link: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8, alignItems: "center" };
+let obj1 = { backgroundColor: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT, flexDirection: "row", paddingVertical: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[2] = { marginRight: ThemesDefault.space.PX_8, textAlign: "left", flexShrink: 1 };
 createCacheKey[3] = { textDecorationLine: "underline" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/SuspendedUserPage.tsx");
+let obj2 = { marginRight: ThemesDefault.space.PX_8, textAlign: "left", flexShrink: 1 };
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/SuspendedUserPage.tsx");
 
 export default function SuspendedUserSafetyHubPage() {
   const tmp = callback3();
-  const obj = { style: tmp.header, children: null };
+  let obj = { top: true, right: true, left: true, children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { style: tmp.header, children: null };
   obj1 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);

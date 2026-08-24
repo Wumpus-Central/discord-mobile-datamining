@@ -1,12 +1,12 @@
 // _runtime/01723_setElementAnimation.js
-import addLogBoxLog from "01658_addLogBoxLog.js";
 import isWorkletFunction from "01679_isWorkletFunction.js";
 import isReducedMotionEnabledInSystem from "01695_isReducedMotionEnabledInSystem.js";
-import linear from "01706_linear.js";
 import TransitionType from "01710_TransitionType.js";
-import getEasingByName from "01713_getEasingByName.js";
 import BaseAnimationBuilder from "01724_BaseAnimationBuilder.js";
 import weakMap from "01740_weakMap.js";
+import { isWorkletFunction } from "01679_isWorkletFunction.js";
+import { TransitionType } from "01710_TransitionType.js";
+import { weakMap } from "01740_weakMap.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -22,13 +22,17 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     tmp = null;
   }
   c3 = tmp;
+  let animationName;
+  let duration;
+  let delay;
+  let easing;
   let maybeRemoveElement;
   c9 = undefined;
-  const animationName = dummyAnimationConfig.animationName;
-  const duration = dummyAnimationConfig.duration;
-  const delay = dummyAnimationConfig.delay;
-  const easing = dummyAnimationConfig.easing;
-  if (dummyAnimationConfig.animationType === require("01679_isWorkletFunction.js").LayoutAnimationType.ENTERING) {
+  animationName = dummyAnimationConfig.animationName;
+  duration = dummyAnimationConfig.duration;
+  delay = dummyAnimationConfig.delay;
+  easing = dummyAnimationConfig.easing;
+  if (dummyAnimationConfig.animationType === _isWorkletFunction.LayoutAnimationType.ENTERING) {
     const _requestAnimationFrame = requestAnimationFrame;
     const animationFrame = requestAnimationFrame(function configureAnimation() {
       dummy.style.animationName = animationName;
@@ -59,6 +63,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       obj = { scrollTopOffset: 0, scrollLeftOffset: 0 };
       for (let parentElement = dummy; parentElement; parentElement = parentElement.parentElement) {
         let tmp3 = 0 !== parentElement.scrollTop;
+        let tmp4 = parentElement;
         if (tmp3) {
           tmp3 = 0 === obj.scrollTopOffset;
         }
@@ -73,6 +78,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       obj[4] = obj;
       const snapshots = dummy(dummyAnimationConfig[7]).snapshots;
       const result = snapshots.set(dummy, obj);
+      const tmp = dummy;
     }
     if (typeof maybeRemoveElement !== "function") {
       HermesBuiltin.throwTypeError();
@@ -81,13 +87,14 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     if (isDummy) {
       let hasItem;
       if (_null != null) {
-        hasItem = _null.contains(dummy);
+        hasItem = obj4.contains(obj3);
       }
       isDummy = hasItem;
+      obj4 = _null;
     }
     if (isDummy) {
-      dummy.removedAfterAnimation = true;
-      _null.removeChild(dummy);
+      obj3.removedAfterAnimation = true;
+      _null.removeChild(obj3);
     }
     if (typeof maybeCallCallback !== "function") {
       HermesBuiltin.throwTypeError();
@@ -100,7 +107,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       dummyAnimationConfig.callback(true);
       c9 = true;
     }
-    const removed = dummy.removeEventListener("animationcancel", animationCancelHandler);
+    const removed = obj3.removeEventListener("animationcancel", animationCancelHandler);
   };
   function animationCancelHandler() {
     if (typeof maybeRemoveElement !== "function") {
@@ -110,13 +117,14 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     if (isDummy) {
       let hasItem;
       if (_null != null) {
-        hasItem = _null.contains(dummy);
+        hasItem = obj2.contains(obj);
       }
       isDummy = hasItem;
+      obj2 = _null;
     }
     if (isDummy) {
-      dummy.removedAfterAnimation = true;
-      _null.removeChild(dummy);
+      obj.removedAfterAnimation = true;
+      _null.removeChild(obj);
     }
     if (typeof maybeCallCallback !== "function") {
       HermesBuiltin.throwTypeError();
@@ -129,7 +137,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       dummyAnimationConfig.callback(false);
       c9 = true;
     }
-    const removed = dummy.removeEventListener("animationcancel", animationCancelHandler);
+    const removed = obj.removeEventListener("animationcancel", animationCancelHandler);
   }
   dummy.onanimationstart = () => {
     if (dummyAnimationConfig.animationType === dummy(dummyAnimationConfig[4]).LayoutAnimationType.ENTERING) {
@@ -138,7 +146,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     }
     const listener = dummy.addEventListener("animationcancel", animationCancelHandler);
   };
-  if (!(animationName in require("01710_TransitionType.js").Animations)) {
+  if (!(animationName in _TransitionType.Animations)) {
     let result = tmp2(1741).scheduleAnimationCleanup(animationName, duration + delay, () => {
       if (flag) {
         const snapshots = dummy(dummyAnimationConfig[7]).snapshots;
@@ -152,13 +160,14 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       if (isDummy) {
         let hasItem;
         if (_null != null) {
-          hasItem = _null.contains(dummy);
+          hasItem = obj2.contains(tmp5);
         }
         isDummy = hasItem;
+        obj2 = _null;
       }
       if (isDummy) {
-        dummy.removedAfterAnimation = true;
-        _null.removeChild(dummy);
+        tmp5.removedAfterAnimation = true;
+        _null.removeChild(tmp5);
       }
       if (typeof maybeCallCallback !== "function") {
         HermesBuiltin.throwTypeError();
@@ -180,10 +189,10 @@ arg5.getReducedMotionFromConfig = function getReducedMotionFromConfig(entering) 
     const reduceMotionV = entering.reduceMotionV;
     if (isWorkletFunction.ReduceMotion.Never === reduceMotionV) {
       return false;
-    } else if (isWorkletFunction.ReduceMotion.Always === reduceMotionV) {
+    } else if (tmp3(1679).ReduceMotion.Always === reduceMotionV) {
       return true;
     } else {
-      return isReducedMotionEnabledInSystem.ReducedMotionManager.jsValue;
+      return tmp3(1695).ReducedMotionManager.jsValue;
     }
   } else {
     return isReducedMotionEnabledInSystem.ReducedMotionManager.jsValue;
@@ -193,7 +202,7 @@ arg5.getProcessedConfig = function getProcessedConfig(animationWithInitialValues
   const obj = { animationName: animationWithInitialValues, animationType, duration: null, delay: null, easing: null, callback: null, reversed: null };
   let num = 0.3;
   if (animationWithInitialValues in TransitionType.Animations) {
-    num = TransitionType.Animations[animationWithInitialValues].duration;
+    num = tmp(1710).Animations[animationWithInitialValues].duration;
   }
   if (undefined !== entering.durationV) {
     num = entering.durationV / 1000;
@@ -209,24 +218,24 @@ arg5.getProcessedConfig = function getProcessedConfig(animationWithInitialValues
   if (!entering.delayV) {
     obj[3] = num3;
     if (entering.easingV) {
-      const tmp8 = entering.easingV[linear.EasingNameSymbol];
-      let tmpResult = getEasingByName;
+      const tmp8 = entering.easingV[tmp(undefined, 1706).EasingNameSymbol];
+      let tmpResult = tmp(1713);
       if (tmp9) {
         let easingByName = tmpResult.getEasingByName(tmp8);
       } else {
         let maybeGetBezierEasingResult = tmpResult.maybeGetBezierEasing(entering.easingV);
         if (!maybeGetBezierEasingResult) {
-          const logger = addLogBoxLog.logger;
+          const logger = tmp(1658).logger;
           logger.warn("Selected easing is not currently supported on web. Using linear easing instead.");
-          tmpResult = getEasingByName;
+          tmpResult = tmp(1713);
           maybeGetBezierEasingResult = tmpResult.getEasingByName("linear");
         }
         easingByName = maybeGetBezierEasingResult;
       }
-      tmp9 = tmp8 in getEasingByName.WebEasings;
+      tmp9 = tmp8 in tmp(1713).WebEasings;
     } else {
-      easingByName = getEasingByName.getEasingByName("linear");
-      const tmpResult1 = getEasingByName;
+      easingByName = tmp(1713).getEasingByName("linear");
+      const tmpResult1 = tmp(1713);
     }
     obj[4] = easingByName;
     let callbackV = null;
@@ -259,16 +268,23 @@ arg5.maybeModifyStyleForKeyframe = function maybeModifyStyleForKeyframe(style, e
     const iter = values[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
+      if (!("originX" in nextResult)) {
+        let tmp9 = nextResult;
+      }
+      let str4 = "absolute";
       style.style.position = "absolute";
+      let tmp10 = iter;
       iter.return();
     }
   }
 };
 arg5.saveSnapshot = function saveSnapshot(_componentDOMRef) {
   const size = _componentDOMRef.getBoundingClientRect();
-  const obj = { scrollTopOffset: 0, scrollLeftOffset: 0 };
+  let obj = { top: size.top, left: size.left, width: size.width, height: size.height, scrollOffsets: null };
+  obj = { scrollTopOffset: 0, scrollLeftOffset: 0 };
   for (let parentElement = _componentDOMRef; parentElement; parentElement = parentElement.parentElement) {
     let tmp = 0 !== parentElement.scrollTop;
+    let tmp2 = parentElement;
     if (tmp) {
       tmp = 0 === obj.scrollTopOffset;
     }
@@ -314,7 +330,6 @@ arg5.handleLayoutTransition = function handleLayoutTransition(_componentDOMRef, 
     setElementAnimation(result.dummy, result.dummyAnimationConfig);
   }
   setElementAnimation(_componentDOMRef, processedConfig);
-  const TransitionGeneratorResult = tmp4Result.TransitionGenerator(ENTRY_EXIT, easingY);
 };
 arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, processedConfig) {
   let firstChild;
@@ -331,11 +346,12 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
   function saveScrollPosition(scrollTop) {
     const result = map.set(scrollTop, { top: scrollTop.scrollTop, left: scrollTop.scrollLeft });
     const arr = Array.from(scrollTop.children);
+    const obj = { top: scrollTop.scrollTop, left: scrollTop.scrollLeft };
     while (tmp3 !== undefined) {
+      let tmp5 = saveScrollPosition;
       let tmp6 = saveScrollPosition(tmp4);
       continue;
     }
-    tmp3 = Array.from(scrollTop.children)[Symbol.iterator]();
   }
   saveScrollPosition(offsetParent);
   if (offsetParent.firstChild) {
@@ -358,13 +374,13 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
     }
     const arr = Array.from(cloneNodeResult.children);
     while (tmp5 !== undefined) {
+      let tmp7 = restoreScrollPosition;
       let tmp8 = restoreScrollPosition(tmp6);
       continue;
     }
-    tmp5 = Array.from(cloneNodeResult.children)[Symbol.iterator]();
   }
   let result = restoreScrollPosition(cloneNodeResult);
-  const snapshots = require("01740_weakMap.js").snapshots;
+  const snapshots = _weakMap.snapshots;
   const rect = snapshots.get(parentElement);
   let num = 0;
   let num2 = 0;
@@ -374,6 +390,7 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
     let tmp8 = 0 !== parentElement.scrollTop;
     let scrollLeft = num;
     let scrollTop = num2;
+    let tmp9 = parentElement;
     if (tmp8) {
       tmp8 = 0 === scrollTop;
     }
@@ -400,6 +417,6 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
   }
   const snapshots2 = tmp6(1740).snapshots;
   const result1 = snapshots2.set(cloneNodeResult, rect);
-  require("01740_weakMap.js").setElementPosition(cloneNodeResult, rect);
+  _weakMap.setElementPosition(cloneNodeResult, rect);
   map(cloneNodeResult, processedConfig, false, offsetParent);
 };

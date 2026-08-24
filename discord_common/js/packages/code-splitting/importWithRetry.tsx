@@ -1,7 +1,7 @@
 // discord_common/js/packages/code-splitting/importWithRetry.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_1 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 function _importWithRetry() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -163,7 +163,7 @@ function pausedPromise(arg0) {
 function awaitOnline() {
   return Promise.resolve();
 }
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/code-splitting/importWithRetry.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/code-splitting/importWithRetry.tsx");
 
 export { awaitOnline };
 export function setAwaitOnline(arg0) {

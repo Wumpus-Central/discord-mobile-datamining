@@ -1,6 +1,7 @@
 // _runtime/07787_applyClientOptions.js
 import isMatchingPattern from "07747_isMatchingPattern.js";
 import _mod7775 from "metro/07775__.js";
+import { getFilenameToDebugIdMap } from "07790_getFilenameToDebugIdMap.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -33,6 +34,7 @@ function applyClientOptions(environment, environment2) {
   }
   if (environment.message) {
     environment.message = isMatchingPattern.truncate(environment.message, num);
+    const obj = isMatchingPattern;
   }
   let value = iter;
   if (environment.exception && environment.exception.values && environment.exception.values[0]) {
@@ -40,6 +42,7 @@ function applyClientOptions(environment, environment2) {
   }
   if (value) {
     iter.value = isMatchingPattern.truncate(iter.value, num);
+    const obj2 = isMatchingPattern;
   }
   const request = environment.request;
   let url = request;
@@ -48,21 +51,22 @@ function applyClientOptions(environment, environment2) {
   }
   if (url) {
     request.url = isMatchingPattern.truncate(request.url, num);
+    const obj3 = isMatchingPattern;
   }
 }
 function applyDebugIds(exception) {
-  _require = require("07790_getFilenameToDebugIdMap.js").getFilenameToDebugIdMap(arg1);
+  _require = _getFilenameToDebugIdMap.getFilenameToDebugIdMap(arg1);
   try {
     const values = exception.exception.values;
-    let item = values.forEach((item, index) => {
-      const frames = item.stacktrace.frames;
-      item = frames.forEach((item, index) => {
-        let filename = table;
-        if (table) {
-          filename = item.filename;
+    let item = values.forEach((stacktrace) => {
+      const frames = stacktrace.stacktrace.frames;
+      const item = frames.forEach((filename) => {
+        filename = closure_0;
+        if (closure_0) {
+          filename = filename.filename;
         }
         if (filename) {
-          item.debug_id = table[item.filename];
+          filename.debug_id = closure_0[filename.filename];
         }
       });
     });
@@ -73,14 +77,14 @@ function applyDebugMeta(exception) {
   const obj = {};
   try {
     const values = exception.exception.values;
-    let item = values.forEach((item, index) => {
-      const frames = item.stacktrace.frames;
-      item = frames.forEach((item, index) => {
-        if (item.debug_id) {
-          if (item.abs_path) {
-            closure_0[item.abs_path] = item.debug_id;
-          } else if (item.filename) {
-            closure_0[item.filename] = item.debug_id;
+    let item = values.forEach((stacktrace) => {
+      const frames = stacktrace.stacktrace.frames;
+      const item = frames.forEach((debug_id) => {
+        if (debug_id.debug_id) {
+          if (debug_id.abs_path) {
+            closure_0[debug_id.abs_path] = debug_id.debug_id;
+          } else if (debug_id.filename) {
+            closure_0[debug_id.filename] = debug_id.debug_id;
           }
           delete tmp2[tmp];
         }
@@ -101,8 +105,8 @@ function applyDebugMeta(exception) {
       images = exception.debug_meta.images;
       const _Object2 = Object;
       const entries = Object.entries(obj);
-      const item1 = entries.forEach((item, index) => {
-        [tmp, tmp2] = item;
+      const item1 = entries.forEach((arg0) => {
+        [tmp, tmp2] = arg0;
         images.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
       });
     }
@@ -149,13 +153,13 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
   let timestamp = event_id.timestamp;
   if (!timestamp) {
     timestamp = num(num2[1]).dateTimestampInSeconds();
-    const obj3 = num(num2[1]);
+    let obj3 = num(num2[1]);
   }
   obj.timestamp = timestamp;
   let integrations = event_id2.integrations;
   if (!integrations) {
     const integrations1 = normalizeDepth.integrations;
-    integrations = integrations1.map((item, index) => item.name);
+    integrations = integrations1.map((name) => name.name);
   }
   applyClientOptions(obj, normalizeDepth);
   if (integrations.length > 0) {
@@ -203,38 +207,38 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
     if (items1.length) {
       event_id2.attachments = items1;
     }
-    const obj6 = num(num2[2]);
+    let obj6 = num(num2[2]);
     const result1 = num(num2[3]).applyScopeDataToEvent(obj, scopeData);
     const items2 = [];
     HermesBuiltin.arraySpread(scopeData.eventProcessors, HermesBuiltin.arraySpread(eventProcessors, 0));
     const tmp26Result1 = num(num2[3]);
     const result2 = num(num2[4]).notifyEventProcessors(items2, obj, event_id2);
-    return result2.then((result) => {
-      if (result) {
-        applyDebugMeta(result);
+    return result2.then((breadcrumbs) => {
+      if (breadcrumbs) {
+        closure_1_4(breadcrumbs);
       }
-      let tmp4 = result;
+      let tmp4 = breadcrumbs;
       if (typeof closure_0 === "number") {
-        tmp4 = result;
+        tmp4 = breadcrumbs;
         if (tmp3 > 0) {
           closure_0 = tmp3;
           let tmp30 = null;
-          if (result) {
+          if (breadcrumbs) {
             let obj = {};
-            let merged = Object.assign(result);
-            let breadcrumbs = result.breadcrumbs;
+            let merged = Object.assign(breadcrumbs);
+            breadcrumbs = breadcrumbs.breadcrumbs;
             if (breadcrumbs) {
               obj = { breadcrumbs: null };
-              breadcrumbs = result.breadcrumbs;
-              obj[0] = breadcrumbs.map((item, index) => {
+              breadcrumbs = breadcrumbs.breadcrumbs;
+              obj[0] = breadcrumbs.map((data) => {
                 let obj = {};
-                const merged = Object.assign(item);
-                let data = item.data;
+                const merged = Object.assign(data);
+                data = data.data;
                 if (data) {
                   obj = { data: null };
-                  const normalizer = callback(7783);
-                  obj[0] = normalizer.normalize(item.data, callback, dependencyMap);
+                  obj[0] = callback(7783).normalize(data.data, callback, dependencyMap);
                   data = obj;
+                  const obj3 = callback(7783);
                 }
                 const merged1 = Object.assign(data);
                 return obj;
@@ -242,48 +246,48 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
               breadcrumbs = obj;
             }
             let merged1 = Object.assign(breadcrumbs);
-            let user = result.user;
+            let user = breadcrumbs.user;
             if (user) {
               obj = { user: null };
-              let normalizer = num(num2[8]);
-              obj[0] = normalizer.normalize(result.user, tmp3, closure_1);
+              obj[0] = num(num2[8]).normalize(breadcrumbs.user, tmp3, tmp33);
               user = obj;
+              const obj4 = num(num2[8]);
             }
             const merged2 = Object.assign(user);
-            let contexts = result.contexts;
+            let contexts = breadcrumbs.contexts;
             if (contexts) {
               obj1 = { contexts: null };
-              const normalizer2 = num(num2[8]);
-              obj1[0] = normalizer2.normalize(result.contexts, tmp3, closure_1);
+              obj1[0] = num(num2[8]).normalize(breadcrumbs.contexts, tmp3, tmp33);
               contexts = obj1;
+              const obj6 = num(num2[8]);
             }
             const merged3 = Object.assign(contexts);
-            let extra = result.extra;
+            let extra = breadcrumbs.extra;
             if (extra) {
               const obj2 = { extra: null };
-              const normalizer3 = num(num2[8]);
-              obj2[0] = normalizer3.normalize(result.extra, tmp3, closure_1);
+              obj2[0] = num(num2[8]).normalize(breadcrumbs.extra, tmp3, tmp33);
               extra = obj2;
+              const obj8 = num(num2[8]);
             }
             const merged4 = Object.assign(extra);
             if (tmp26) {
-              obj.contexts.trace = result.contexts.trace;
-              if (result.contexts.trace.data) {
-                const normalizer4 = num(num2[8]);
-                obj.contexts.trace.data = normalizer4.normalize(result.contexts.trace.data, tmp3, closure_1);
+              obj.contexts.trace = breadcrumbs.contexts.trace;
+              if (breadcrumbs.contexts.trace.data) {
+                obj.contexts.trace.data = num(num2[8]).normalize(breadcrumbs.contexts.trace.data, tmp3, tmp33);
+                const obj9 = num(num2[8]);
               }
             }
-            if (result.spans) {
-              const spans = result.spans;
-              obj.spans = spans.map((item, index) => {
+            if (breadcrumbs.spans) {
+              const spans = breadcrumbs.spans;
+              obj.spans = spans.map((data) => {
                 let obj = {};
-                const merged = Object.assign(item);
-                let data = item.data;
+                const merged = Object.assign(data);
+                data = data.data;
                 if (data) {
                   obj = { data: null };
-                  const normalizer = callback(7783);
-                  obj[0] = normalizer.normalize(item.data, callback, dependencyMap);
+                  obj[0] = callback(7783).normalize(data.data, callback, dependencyMap);
                   data = obj;
+                  const obj3 = callback(7783);
                 }
                 const merged1 = Object.assign(data);
                 return obj;
@@ -291,12 +295,12 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
             }
             tmp30 = obj;
             if (tmp29) {
-              const normalizer5 = num(num2[8]);
-              obj.contexts.flags = normalizer5.normalize(result.contexts.flags, 3, closure_1);
+              obj.contexts.flags = 3(num2[8]).normalize(breadcrumbs.contexts.flags, 3, tmp33);
               tmp30 = obj;
+              const obj10 = num(num2[8]);
             }
-            tmp26 = result.contexts && result.contexts.trace && obj.contexts;
-            tmp29 = result.contexts && result.contexts.flags && obj.contexts;
+            tmp26 = breadcrumbs.contexts && breadcrumbs.contexts.trace && obj.contexts;
+            tmp29 = breadcrumbs.contexts && breadcrumbs.contexts.flags && obj.contexts;
           }
           tmp4 = tmp30;
         }

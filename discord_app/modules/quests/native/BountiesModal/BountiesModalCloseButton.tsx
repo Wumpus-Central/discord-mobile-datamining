@@ -7,14 +7,15 @@ import XSmallIcon from "../../../../design/components/Icon/native/redesign/gener
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 let closure_4 = createCacheKey.createStyles(() => {
-  const obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32 };
+  let obj = { closeButton: null };
+  obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32 };
   obj[0] = obj;
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
 
 export default function BountiesModalCloseButton(onPress) {
   let obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };

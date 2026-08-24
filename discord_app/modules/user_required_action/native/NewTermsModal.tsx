@@ -4,21 +4,23 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import showSimpleActionSheet from "../../action_sheet/native/showSimpleActionSheet.tsx";
 import trackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleRequiredAction from "../../../stores/UserRequiredActionStore.tsx";
+import closure_9 from "../../../stores/UserRequiredActionStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function handleTouch() {
   closure_7.dismiss();
 }
 function handleMoreActions() {
-  const obj = { label: null, isDestructive: true, onPress: null };
+  let obj = showSimpleActionSheet;
+  obj = { key: "NewTermsModalMore", options: null, hasIcons: false };
+  obj = { label: null, isDestructive: true, onPress: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["2jxGer"]);
   obj[2] = function onPress() {
@@ -31,16 +33,22 @@ function handleMoreActions() {
 ({ View: closure_6, Keyboard: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ MarketingURLs: c10, UserRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
+createCacheKey = { contentContainer: null, scrollView: null, container: null, description: null, agreementDescription: null, navbarRight: null, stickyFooter: null };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24 };
+let obj3 = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { position: "absolute", right: 0, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj4 = { position: "absolute", right: 0, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[6] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
+let obj5 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
 
 export default function NewTermsModal() {
   const tmp = callback5();
@@ -82,7 +90,7 @@ export default function NewTermsModal() {
             closure_0 = tmp2;
             closure_0 = undefined;
             closure_1_1(true);
-            obj1 = memo(table[15]);
+            obj1 = closure_1_0(table[15]);
             table = 1;
             c3 = 1;
             obj1 = { value: null, done: false };

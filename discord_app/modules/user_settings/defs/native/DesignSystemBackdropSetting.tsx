@@ -1,17 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DesignSystemBackdropSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { BackdropCard } from "../../design_system/native/UserSettingsDesignSystemBackdrop.tsx";
 
-const obj = {
+obj = {
+  useTitle() {
+    return "Backdrop";
+  },
+  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: obj
+};
+obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_BACKDROP,
   getComponent() {
-    return BackdropCard /* BackdropCard */.default;
+    return BackdropCard.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemBackdropSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemBackdropSetting.tsx");
 
 export default route;

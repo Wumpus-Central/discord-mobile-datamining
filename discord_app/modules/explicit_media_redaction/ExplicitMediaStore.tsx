@@ -1,12 +1,12 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaStore.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import { apexExperiment } from "SensitiveContentSelfHarmExperiment.tsx";
 
-const require = fn;
-let closure_3 = 14 * obj132Default.Millis.DAY;
+const require = arg1;
+let closure_3 = 14 * setDefault.Millis.DAY;
 let closure_4 = Object.freeze([]);
 let c5;
 let closure_6 = {};
@@ -32,6 +32,7 @@ prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
     let tmp3 = !reportSubmit;
     if (!reportSubmit) {
       tmp3 = DISCORD_EPOCHDefault.age(tmp.messageId) < closure_3;
+      const obj = DISCORD_EPOCHDefault;
     }
     tmp2 = tmp3;
   }
@@ -84,11 +85,11 @@ const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
     messageId = messageId.messageId;
     const channelId = messageId.channelId;
     if (null != dependencyMap2[channelId]) {
-      dependencyMap2[channelId] = arr.map((item, index) => {
-        let tmp = item;
-        if (item.messageId === messageId) {
+      dependencyMap2[channelId] = arr.map((messageId) => {
+        let tmp = messageId;
+        if (messageId.messageId === messageId) {
           const obj = {};
-          const merged = Object.assign(item);
+          const merged = Object.assign(messageId);
           obj.reportSubmit = true;
           tmp = obj;
         }
@@ -101,6 +102,6 @@ const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
 
 export default explicitMediaStore;

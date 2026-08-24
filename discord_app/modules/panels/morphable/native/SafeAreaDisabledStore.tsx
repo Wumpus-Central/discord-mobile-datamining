@@ -1,5 +1,5 @@
 // discord_app/modules/panels/morphable/native/SafeAreaDisabledStore.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set2 from "../../../../../_runtime/00002_set.js";
 import keys from "../../../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0, arg1) => {
@@ -22,7 +22,7 @@ let obj = keys.create((arg0, arg1) => {
               let obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
-              const items = [closure_0];
+              const items = [tmp];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
               const set = new Set(items);
@@ -33,7 +33,7 @@ let obj = keys.create((arg0, arg1) => {
           } else if (hasItem) {
             const _Set = Set;
             const set1 = new Set(lockKeys);
-            set1.delete(closure_0);
+            set1.delete(tmp);
             obj = {};
             const merged1 = Object.assign(lockKeys);
             obj.lockKeys = set1;
@@ -47,6 +47,6 @@ let obj = keys.create((arg0, arg1) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
+const result = set2.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
 
 export default obj;

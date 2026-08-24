@@ -1,5 +1,5 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx
-import obj132 from "../../../../utils/PlatformUtils.tsx";
+import set from "../../../../utils/PlatformUtils.tsx";
 import nDefault from "../../../../../_runtime/00689_n.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
@@ -9,21 +9,22 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   let PX_24 = arg0;
-  let obj = {};
+  let obj = { wrap: null, container: null, buttonsContainer: null, button: null, gradient: null };
+  obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.alignItems = "center";
   obj.top = undefined;
   obj[0] = obj;
   obj = { paddingVertical: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL, marginBottom: null, borderRadius: null, backgroundColor: null, paddingHorizontal: null, borderWidth: null };
-  let obj3 = obj132;
+  let obj3 = set;
   if (obj3.isIOS()) {
-    PX_24 = ThemesDefault.space.PX_24;
+    PX_24 = tmp3(712).space.PX_24;
   }
   let tmp5 = arg2;
   obj[2] = PX_24;
@@ -34,18 +35,18 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   obj[4] = tmp5;
   obj[5] = ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_PADDING_HORIZONTAL;
   obj[6] = ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BORDER_WIDTH;
-  const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
+  const merged1 = Object.assign(tmp3(712).shadows.SHADOW_HIGH);
   if (arg3) {
     obj1 = { borderColor: null };
-    obj1[0] = ThemesDefault.colors.BORDER_MUTED;
+    obj1[0] = tmp3(712).colors.BORDER_MUTED;
     let obj2 = obj1;
   } else {
     obj2 = { borderTopColor: null };
-    obj2[0] = ThemesDefault.colors.BORDER_MUTED;
+    obj2[0] = tmp3(712).colors.BORDER_MUTED;
   }
   const merged2 = Object.assign(obj2);
   obj[1] = obj;
-  obj3 = { gap: ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_GAP, alignItems: "stretch", flexDirection: "row", marginHorizontal: ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL };
+  obj3 = { gap: tmp3(712).modules.mobile.MEDIA_KEYBOARD_BAR_GAP, alignItems: "stretch", flexDirection: "row", marginHorizontal: tmp3(712).modules.mobile.MEDIA_KEYBOARD_BAR_BUTTONS_MARGIN_HORIZONTAL };
   obj[2] = obj3;
   obj[3] = { flexBasis: 64, minHeight: 48, flexGrow: 1, justifyContent: "center", flexDirection: "column", alignItems: "center", padding: ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_PADDING, borderRadius: ThemesDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_BORDER_RADIUS, gap: 4 };
   const obj5 = {};
@@ -79,8 +80,9 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   if (enabled) {
     hexResult1 = tmpResult1.useToken(ThemesDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER);
   }
-  const tmp9Result = callback(useSafeAreaInsetsDefault().bottom, hexResult1, hexResult, enabled);
+  const tmp9Result = closure_8(useSafeAreaInsetsDefault().bottom, hexResult1, hexResult, enabled);
   importDefault = tmp9Result;
+  const tmp9 = closure_8;
   tmpResult1 = onHeightChange(4097);
   dependencyMap = onHeightChange(4097).useToken(tmp6(712).modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
   const tmpResult2 = onHeightChange(4097);
@@ -99,7 +101,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
     return obj;
   }, items);
   const items1 = [onHeightChange];
-  {
+  obj = {
     style: tmp9Result.wrap,
     pointerEvents: "box-none",
     onLayout: importAllResult.useCallback((nativeEvent) => {
@@ -116,29 +118,30 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetActions
   const tmp6Result = LinearGradientDefault;
   obj1[1] = callback(closure_5, {
     style: tmp9Result.buttonsContainer,
-    children: overflowButtons.map((item, index) => {
-      let obj = { disabled: item.disabled };
+    children: overflowButtons.map((accessibilityLabel) => {
+      obj = { accessibilityRole: "button", accessibilityLabel: accessibilityLabel.text, accessibilityState: obj, disabled: accessibilityLabel.disabled, style: lib.button, onPress: accessibilityLabel.onPress, children: null };
+      obj = { disabled: accessibilityLabel.disabled };
       let str = "text-muted";
       let str2 = "text-muted";
-      if (!item.disabled) {
+      if (!accessibilityLabel.disabled) {
         str2 = dependencyMap;
       }
-      const items = [closure_1_6(item.IconComponent, { size: "md", color: str2 }), ];
+      const items = [closure_1_6(accessibilityLabel.IconComponent, { size: "md", color: str2 }), ];
       obj = { lineClamp: 1, variant: closure_4, color: null, children: null };
-      if (!item.disabled) {
+      if (!accessibilityLabel.disabled) {
         str = closure_3;
       }
       obj[2] = str;
-      obj[3] = item.text;
+      obj[3] = accessibilityLabel.text;
       items[1] = closure_1_6(onHeightChange(4734).Text, obj);
       obj[6] = items;
-      return closure_1_7(onHeightChange(5433).PressableOpacity, obj, index);
+      return closure_1_7(onHeightChange(5433).PressableOpacity, obj, arg1);
     })
   });
   items2[1] = callback(closure_5, obj1);
   obj[3] = items2;
   return callback2(closure_5, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx");
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetActions.tsx");
 
 export default memoResult;

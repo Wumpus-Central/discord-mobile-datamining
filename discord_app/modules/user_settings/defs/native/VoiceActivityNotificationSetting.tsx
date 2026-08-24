@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ME from "../../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
@@ -24,10 +24,30 @@ const toggle = createToggle.createToggle({
   onValueChange(voice_activity_notifications) {
     const EnableVoiceActivityNotifications = explicitContentFromProto.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
-    const obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
+    let obj = expandEventPropertiesDefault;
+    obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
     obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
   }
 });
-const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx");
+let obj = {
+  useTitle() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.wtk08S);
+  },
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableVoiceActivityNotifications.useSetting,
+  useDescription() {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.rngMNx);
+  },
+  onValueChange(voice_activity_notifications) {
+    const EnableVoiceActivityNotifications = explicitContentFromProto.EnableVoiceActivityNotifications;
+    EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
+    let obj = expandEventPropertiesDefault;
+    obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
+    obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
+  }
+};
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/VoiceActivityNotificationSetting.tsx");
 
 export default toggle;

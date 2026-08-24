@@ -1,7 +1,7 @@
 // _runtime/04150_getStringProperty.js
 import c from "04135_c.js";
 import useRiveProperty from "04148_useRiveProperty.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 require = arg1;
 function getStringProperty(stringProperty) {
@@ -11,6 +11,7 @@ function getStringProperty(stringProperty) {
 export const useRiveString = function useRiveString(LVL, instance) {
   let obj = c;
   const cResult = obj.c(4);
+  const obj2 = useRiveProperty;
   [tmp3, tmp4, tmp5] = callback(useRiveProperty.useRiveProperty(instance, LVL, getStringProperty), 3);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {

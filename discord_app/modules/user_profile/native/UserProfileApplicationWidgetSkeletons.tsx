@@ -4,14 +4,15 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import Text from "../../../design/components/Text/native/Text.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
-const createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = { skeleton: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx");
 
 export const ImageSkeleton = function ImageSkeleton(style) {
   const obj = { style: null };

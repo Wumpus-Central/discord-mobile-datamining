@@ -1,26 +1,30 @@
 // discord_app/modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import initializeState from "../../../quests/QuestStore.tsx";
-import handleThemeChange from "../../ThemeStore.tsx";
+import closure_8 from "../../../quests/QuestStore.tsx";
+import closure_9 from "../../ThemeStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c5, ActivityIndicator: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { container: null, controlBarContainer: null, segmentedControlContainer: null, pagesContainer: null, activityIndicator: null, allSectionsContainer: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
 createCacheKey[2] = { paddingHorizontal: PX_16 };
 createCacheKey[3] = { flex: 1, width: "100%" };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_32 };
+let obj1 = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
+let obj2 = { marginTop: ThemesDefault.space.PX_32 };
 createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_80 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx");
+let obj3 = { marginBottom: ThemesDefault.space.PX_80 };
+let result = require("set").fileFinishedImporting("modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx");
 
 export default function SettingsQuestPreviewScreen() {
   let obj = params(first[8]);
@@ -34,6 +38,7 @@ export default function SettingsQuestPreviewScreen() {
   }
   const tmp6 = callback(stateFromStores.useState(questId), 2);
   first = tmp6[0];
+  callback = tmp8;
   let tmpResult = tmp(tmp2[9]);
   let items = [callback2];
   let items1 = [first];
@@ -69,22 +74,22 @@ export default function SettingsQuestPreviewScreen() {
     } else {
       let completedAt;
       if (stateFromStores != null) {
-        const userStatus = stateFromStores.userStatus;
+        const userStatus = tmp14.userStatus;
         if (userStatus != null) {
           completedAt = userStatus.completedAt;
         }
       }
       let progress;
       if (stateFromStores != null) {
-        const userStatus2 = stateFromStores.userStatus;
+        const userStatus2 = tmp14.userStatus;
         if (userStatus2 != null) {
           progress = userStatus2.progress;
         }
       }
       const _HermesInternal = HermesInternal;
-      const combined = "" + first + "-" + stateFromStores1 + "-" + completedAt + "-" + progress;
+      const combined = "" + tmp + "-" + tmp13 + "-" + completedAt + "-" + progress;
       const obj = { questId: null };
-      obj[0] = first;
+      obj[0] = tmp;
       return closure_1_10(params(first[11]).QuestEmbedPreview, obj, combined);
     }
   }, items4);
@@ -108,17 +113,17 @@ export default function SettingsQuestPreviewScreen() {
     obj[2] = tmp3;
     const items1 = [obj, , , ];
     obj = { id: "bar", label: null, page: null };
-    const intl2 = params(first[12]).intl;
+    const intl2 = tmp(tmp2[12]).intl;
     obj[1] = intl2.string(params(first[12]).t.uL4oBf);
     obj[2] = callback2();
     items1[1] = obj;
     obj1 = { id: "card", label: null, page: null };
-    const intl3 = params(first[12]).intl;
+    const intl3 = tmp(tmp2[12]).intl;
     obj1[1] = intl3.string(params(first[12]).t.MAvIf1);
     obj1[2] = callback();
     items1[2] = obj1;
     const obj2 = { id: "embed", label: null, page: null };
-    const intl4 = params(first[12]).intl;
+    const intl4 = tmp(tmp2[12]).intl;
     obj2[1] = intl4.string(params(first[12]).t.AswoU2);
     obj2[2] = callback1();
     items1[3] = obj2;
@@ -152,10 +157,10 @@ export default function SettingsQuestPreviewScreen() {
   const effect = obj1.useEffect(() => {
     let questId;
     if (params != null) {
-      questId = params.questId;
+      questId = tmp.questId;
     }
     if (null != questId) {
-      callback(params.questId);
+      callback(tmp.questId);
     }
   }, items7);
   const items8 = [first];
@@ -169,10 +174,9 @@ export default function SettingsQuestPreviewScreen() {
   const effect2 = obj1.useEffect(() => {
     function listener(quest_id) {
       if (tmp2) {
-        const questPreview = listener(first[14]).fetchQuestPreview(closure_2);
-        const obj = listener(first[14]);
+        const questPreview = listener(closure_1_2[14]).fetchQuestPreview(tmp);
+        const obj = listener(closure_1_2[14]);
       }
-      tmp2 = null != closure_2 && quest_id.quest_id === closure_2;
     }
     const subscription = lib(first[15]).subscribe("QUEST_PREVIEW_UPDATE", listener);
     return () => {
@@ -243,5 +247,4 @@ export default function SettingsQuestPreviewScreen() {
   items15[2] = callback2(params(first[19]).QuestBarPreview, { quest: stateFromStores, isVisible: memo1 });
   obj1[1] = items15;
   tmp31Result = tmp31(tmp32, obj1);
-  let obj2 = { style: tmp3.controlBarContainer, children: callback2(params(first[16]).MobileQuestPreviewControlBar, { questId: first, setQuestId: tmp6[1], refreshQuest: callback4 }) };
 };

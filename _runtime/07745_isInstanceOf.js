@@ -122,16 +122,16 @@ arg5.isThenable = function isThenable(arg0) {
   }
   return Boolean(then);
 };
-arg5.isVueViewModel = function isVueViewModel(__isVue) {
-  let tmp = typeof __isVue !== "object";
-  if (typeof __isVue === "object") {
-    tmp = null === __isVue;
+arg5.isVueViewModel = function isVueViewModel(obj) {
+  let tmp = typeof obj !== "object";
+  if (typeof obj === "object") {
+    tmp = null === obj;
   }
   if (!tmp) {
-    __isVue = __isVue.__isVue;
+    const __isVue = obj.__isVue;
     let tmp2 = !__isVue;
     if (!__isVue) {
-      tmp2 = !__isVue._isVue;
+      tmp2 = !obj._isVue;
     }
     tmp = tmp2;
   }

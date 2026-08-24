@@ -1,10 +1,10 @@
 // discord_app/modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx
-import noop from "../../../../_runtime/00019_noop.js";
-import getState from "../../../stores/native/AppStateStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/native/AppStateStore.tsx";
 import { AppStates } from "../../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
 
 export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked, value) {
   const _require = startAuthorization;
@@ -47,8 +47,8 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
           if (stateFromStores) {
             tmp.current = false;
             if (flag) {
-              hasAlreadyLinked(flag[6]);
-              const obj = { content: null, key: "account-linked-toast" };
+              let obj = hasAlreadyLinked(flag[6]);
+              obj = { content: null, key: "account-linked-toast" };
               const intl = startAuthorization(flag[7]).intl;
               obj[0] = intl.string(hasAlreadyLinked(flag[8]).uG6teD);
               obj.open(obj);

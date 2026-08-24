@@ -1,6 +1,6 @@
 // _runtime/00087_PixelRatio.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const PixelRatio = arg1;
 class PixelRatio {

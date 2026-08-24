@@ -1,9 +1,9 @@
 // discord_app/modules/webauthn/SignalHelpers.native.tsx
 import timestampDefault from "../debug/Logger.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 let closure_4 = new timestampDefault("SignalHelpers.native");
 const prototype = function SignalHelpers() {
   return Object.create(new.target.prototype);
@@ -40,8 +40,8 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
           } else if (undefined !== closure_1_3.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
             obj1 = v0(table[3]);
             const result = obj1.encodeUserIdForWebAuthn(table);
-            const mapped = v0.map((item, index) => item.cred_id);
-            const found = mapped.filter((item, index) => "" !== item);
+            const mapped = v0.map((cred_id) => cred_id.cred_id);
+            const found = mapped.filter((arg0) => "" !== arg0);
             obj1 = { rpId: null, encodedId: null, allAcceptedCredentialIds: null, credentials: null };
             obj1[0] = closure_1_5;
             obj1[1] = result;
@@ -108,13 +108,13 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
             const email = closure_1_0.email;
             let global_name = email;
             if (email == null) {
-              global_name = closure_1_0.global_name;
+              global_name = tmp7.global_name;
             }
             let username = global_name;
             if (global_name == null) {
-              username = closure_1_0.username;
+              username = tmp7.username;
             }
-            username = closure_1_0.username;
+            username = tmp7.username;
             obj1 = { rpId: null, encodedId: null, name: null, displayName: null };
             obj1[0] = closure_1_5;
             obj1[1] = result;
@@ -216,6 +216,6 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
   })();
 };
 const tmp2 = new timestampDefault("SignalHelpers.native");
-let result = require("obj132").fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
+let result = require("set").fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
 
 export default prototype;

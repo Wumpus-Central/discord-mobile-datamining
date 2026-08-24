@@ -1,5 +1,5 @@
 // discord_app/modules/search/managers/native/SearchSessionAnalyticsManager.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import SearchEntrypointAnalyticsLocations from "../../native/tracking/TrackingConstants.tsx";
 import SearchTokenTypes from "../../SearchUtils.tsx";
 import getSessionDefault from "../AbstractSearchSessionAnalyticsManager.tsx";
@@ -44,6 +44,6 @@ prototype["setSelectedTab"] = function setSelectedTab(visibleTabs, arg1) {
   const result = selectedTabs.set(SearchTokenTypes.getSearchContextId(visibleTabs), table[arg1]);
 };
 const searchSessionAnalyticsManager = new SearchSessionAnalyticsManager();
-let result = obj132.fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");
+let result = set.fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");
 
 export default searchSessionAnalyticsManager;

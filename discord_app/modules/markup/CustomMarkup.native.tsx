@@ -1,5 +1,5 @@
 // discord_app/modules/markup/CustomMarkup.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import tDefault from "../../../_runtime/04092_t.js";
 import AST_KEY from "MarkupTypes.tsx";
 import MarkupText from "MarkupReactRules.native.tsx";
@@ -15,6 +15,7 @@ function createRules(arg0) {
   }
   const tmp = MarkupTextDefault(arg0, obj);
   items = [get_defaultRulesDefault.defaultRules, tmp, ];
+  obj = {};
   obj = {};
   const merged = Object.assign(tDefault.defaultRules.link);
   obj.react = tmp[AST_KEY.AST_KEY.LINK].react;
@@ -51,6 +52,7 @@ function createNotifCenterV2MessagePreviewRules(closure_28, closure_28, roleStyl
   const tmp = MarkupTextDefault(closure_28, closure_28, roleStyle);
   items = [get_defaultRulesDefault.notifCenterV2MessagePreviewRules, ];
   let obj = {};
+  obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
   obj.react = tmp[AST_KEY.AST_KEY.MENTION].react;
   obj[AST_KEY.AST_KEY.MENTION] = obj;
@@ -66,7 +68,7 @@ function createNotifCenterV2MessagePreviewRules(closure_28, closure_28, roleStyl
   return combineMarkupRulesDefault(items);
 }
 let items = [AST_KEY.AST_KEY.URL, AST_KEY.AST_KEY.AUTOLINK, AST_KEY.AST_KEY.LINK, "mailto", "tel"];
-const result = obj132.fileFinishedImporting("modules/markup/CustomMarkup.native.tsx");
+const result = set.fileFinishedImporting("modules/markup/CustomMarkup.native.tsx");
 
 export { createRules };
 export const getParser = function getParser(arg0) {
@@ -107,6 +109,7 @@ export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2Mes
 export const createWidgetMessageRules = function createWidgetMessageRules() {
   items = [get_defaultRulesDefault.lockscreenWidgetMessageRules, ];
   let obj = {};
+  obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
   obj.react = MarkupText.plainMentionRenderer;
   obj[AST_KEY.AST_KEY.MENTION] = obj;
@@ -118,8 +121,10 @@ export const createWidgetMessageRules = function createWidgetMessageRules() {
   return combineMarkupRulesDefault(items);
 };
 export const getWidgetMessageRules = function getWidgetMessageRules() {
+  let obj = get_defaultRulesDefault;
   items = [get_defaultRulesDefault.lockscreenWidgetMessageRules, ];
-  const obj = {};
+  obj = {};
+  obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
   obj.react = MarkupText.plainMentionRenderer;
   obj[AST_KEY.AST_KEY.MENTION] = obj;

@@ -3,14 +3,14 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import selectVoiceChannelAdditional from "SelectedChannelActionCreatorsAdditional.native.tsx";
 import disconnectRemoteAll from "../modules/game_console/GameConsoleActionCreators.tsx";
-import set from "../modules/game_console/GameConsoleStore.tsx";
-import ensureGuildLoaded from "../stores/ChannelStore.tsx";
-import _detectH265HardwareDecode from "../stores/MediaEngineStore.tsx";
+import closure_4 from "../modules/game_console/GameConsoleStore.tsx";
+import closure_5 from "../stores/ChannelStore.tsx";
+import closure_6 from "../stores/MediaEngineStore.tsx";
 import ME from "../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ ME: error, PopoutWindowKeys, Routes: closure_8 } = ME);
-const result = require("obj132").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
 
 export default {
   selectChannel(guildId) {
@@ -54,6 +54,7 @@ export default {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != remoteSessionId) {
       disconnectRemoteAll.remoteDisconnect(remoteSessionId);
+      const obj = disconnectRemoteAll;
     }
     const voiceChannel = this.selectVoiceChannel(null);
   }

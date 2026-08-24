@@ -1,9 +1,9 @@
 // discord_app/modules/calls/native/getPrivateChannelCall.tsx
-import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import closure_2 from "../../../stores/VoiceStateStore.tsx";
 import { NOOP_NULL } from "../../../Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 
 export default function getPrivateChannelCall(id) {
   const _require = id;

@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
+const require = arg1;
 function _handleFavoritesGuildAddSuggestedChannel() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -98,7 +98,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
 
 export default function handleFavoritesGuildAddSuggestedChannel() {
   const self = this;

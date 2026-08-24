@@ -1,10 +1,10 @@
 // discord_app/modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
-import getEmojiToGroupId from "../../../emojis/EmojiStore.tsx";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../emojis/EmojiStore.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useEmojiPickerSearchState.tsx");
 
 export default function useEmojiPickerSearchState(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -30,7 +30,7 @@ export default function useEmojiPickerSearchState(arg0, arg1, arg2) {
         obj[3] = closure_2;
         dependencyMap = closure_4.searchWithoutFetchingLatest(obj);
         callback(705).batchUpdates(() => {
-          ref.current = closure_0;
+          closure_1_3.current = closure_0;
           closure_1_4(closure_1);
         });
         const obj3 = callback(705);

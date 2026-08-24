@@ -1,15 +1,15 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
-const result = require("obj132").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
 
 export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   let obj = tieredTenureBadgeData(9496);
@@ -97,11 +97,12 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     if (tmp30Result) {
       const obj5 = { variant: "heading-sm/normal", color: "text-muted", children: null };
       obj5[2] = formatResult;
-      tmp30Result = callback(tmp(4734).Text, obj5);
+      tmp30Result = tmp30(tmp(4734).Text, obj5);
     }
     const obj6 = { children: null };
     items3[1] = tmp30Result;
     obj6[0] = items3;
+    const tmp28 = callback2;
     const tmpResult = tmp(9495);
     const obj7 = { title: null, titleStyle: null, bodyComponent: null, cta: null, buttonOnPress: null, headerComponent: null, pillText: null };
     const tmp28Result = callback2(View, obj6);

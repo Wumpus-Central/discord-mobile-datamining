@@ -2,21 +2,21 @@
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet.tsx";
-import setContent from "../../action_sheet/native/ActionSheetStore.tsx";
+import closure_3 from "../../action_sheet/native/ActionSheetStore.tsx";
 import GuildFeatures from "../PremiumConstants.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-require = fn;
+require = arg1;
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: c4, PremiumTypes: c5 } = GuildFeatures);
 keys = keys.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
-const result = require("obj132").fileFinishedImporting("modules/premium/native/PremiumPlanPurchasedStore.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanPurchasedStore.tsx");
 
 export const usePremiumPlanPurchasedStore = keys;
 export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFromNewFlow(arg0) {
   ({ productId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = arg0);
   batchUpdates.batchUpdates(() => {
-    keys.setState({ productId: closure_0, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 });
+    closure_1_6.setState({ productId: closure_0, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 });
   });
 };
 export const setPaymentSuccess = function setPaymentSuccess() {
@@ -27,11 +27,12 @@ export const setPaymentSuccess = function setPaymentSuccess() {
     if (onPaymentSuccess != null) {
       onPaymentSuccess(state.productId);
     }
+    const obj2 = batchUpdates;
   }
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => keys.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_6.setState({ mobileWebRedirectCheckoutStatus: closure_0 }));
 };
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(arg0) {
   const _require = arg0;
@@ -46,20 +47,22 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
         obj[1] = items;
         obj[2] = {};
         openPremiumPlanSelectionActionSheetDefault(obj);
+        const tmp3 = openPremiumPlanSelectionActionSheetDefault;
       }
-      require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => keys.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
+      _batchUpdates.batchUpdates(() => closure_1_6.setState({ isPaymentSuccess: true, mobileWebRedirectCheckoutStatus: closure_0 }));
       if (null != onPaymentSuccess) {
         onPaymentSuccess(tmp13);
       }
-      const obj2 = batchUpdates;
+      const obj2 = _batchUpdates;
     }
   }
 };
-export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(fn) {
+export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(arg0) {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
     batchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    const obj = batchUpdates;
   } else {
-    fn();
+    arg0();
   }
 };
 export const reset = function reset() {
@@ -79,6 +82,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    keys.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "call" });
+    closure_1_6.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "call" });
   });
 };

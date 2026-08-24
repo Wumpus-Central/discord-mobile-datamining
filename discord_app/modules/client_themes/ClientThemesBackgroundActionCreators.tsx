@@ -1,15 +1,17 @@
 // discord_app/modules/client_themes/ClientThemesBackgroundActionCreators.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-const result = obj132.fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
 export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {
-  const obj = { type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id };
+  let obj = dispatcherDefault;
+  obj = { type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id };
   obj.dispatch(obj);
 };
 export const updateMobilePendingThemeIndex = function updateMobilePendingThemeIndex(mobileThemesIndex) {
-  const obj = { type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex };
+  let obj = dispatcherDefault;
+  obj = { type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex };
   obj.dispatch(obj);
 };
 export const resetBackgroundGradientPreset = function resetBackgroundGradientPreset() {

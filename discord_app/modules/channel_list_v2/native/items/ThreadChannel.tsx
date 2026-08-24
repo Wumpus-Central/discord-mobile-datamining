@@ -4,34 +4,37 @@ import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import storeThread from "../../../threads/JoinedThreadsStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
-import generateOldThreadCutoff from "../../../../stores/ReadStateStore.tsx";
-import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
-import updateVoiceState from "../../../../stores/VoiceStateStore.tsx";
-import getVoiceStatesForGuild from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_5 from "../../../threads/JoinedThreadsStore.tsx";
+import closure_6 from "../../../../stores/ChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/SelectedChannelStore.tsx";
+import closure_10 from "../../../../stores/UserStore.tsx";
+import closure_11 from "../../../../stores/VoiceStateStore.tsx";
+import closure_12 from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import hairlineWidth from "../RedesignChannelListConstants.tsx";
 import { Permissions } from "../../../../Constants.tsx";
 import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
 import { OpenThreadAnalyticsLocations as closure_16 } from "../../../threads/ThreadConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ThreadChannel(channel) {
   channel = channel.channel;
   ({ selected, threadIndex } = channel);
   const threadCount = channel.threadCount;
+  importAllResult = undefined;
+  let id;
+  let ownerId;
   let parent_id;
   let fontScale;
   let user;
   let parentChannel;
   const tmp = callback3();
   importAllResult = tmp;
-  const id = channel.id;
-  let ownerId;
+  id = channel.id;
+  ownerId = undefined;
   if (channel != null) {
     ownerId = channel.ownerId;
   }
@@ -46,10 +49,10 @@ function ThreadChannel(channel) {
   const items = [parent_id, ownerId, closure_10, closure_12, closure_11, user, parentChannel, fontScale];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
     const isMutedResult = ownerId.isMuted(id);
-    const obj = { user: closure_1_10.getUser(ownerId), parentChannel: parent_id.getChannel(parent_id), voiceStates: closure_1_12.getVoiceStatesForChannel(channel), hasVideo: closure_1_11.hasVideo(channel.id), isLocked: !fontScale.can(Permissions.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
+    const obj = { user: closure_1_10.getUser(ownerId), parentChannel: parent_id.getChannel(parent_id), voiceStates: closure_1_12.getVoiceStatesForChannel(channel), hasVideo: closure_1_11.hasVideo(channel.id), isLocked: !fontScale.can(closure_1_14.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
     let hasUnreadResult = !isMutedResult;
     if (!isMutedResult) {
-      hasUnreadResult = user.hasUnread(id);
+      hasUnreadResult = user.hasUnread(tmp);
     }
     obj[6] = hasUnreadResult;
     obj[7] = user.getMentionCount(id);
@@ -109,8 +112,8 @@ function ThreadChannel(channel) {
   const items2 = [channel];
   const items3 = [channel, user, parentChannel];
   const callback = obj3.useCallback(() => {
-    channel(threadCount[21]);
-    const obj = { source: closure_1_16.CHANNEL_LIST };
+    let obj = channel(threadCount[21]);
+    obj = { source: closure_1_16.CHANNEL_LIST };
     obj.transitionToThread(channel, obj);
   }, items2);
   const items4 = [memo, , ];
@@ -119,8 +122,8 @@ function ThreadChannel(channel) {
     if (channel.isForumPost()) {
       if (null != user) {
         if (null != parentChannel) {
-          if (parentChannel.isForumLikeChannel()) {
-            threadIndex(threadCount[22])(channel, parentChannel);
+          if (obj.isForumLikeChannel()) {
+            threadIndex(threadCount[22])(tmp, obj);
           }
         }
       }
@@ -134,7 +137,7 @@ function ThreadChannel(channel) {
   if (unread) {
     obj2 = { style: null };
     obj2[0] = tmp.unreadIcon;
-    tmp14Result = callback2(tmp15, obj2);
+    tmp14Result = tmp14(tmp15, obj2);
   }
   obj1[1] = tmp14Result;
   const items5 = [callback2(id, obj1), , ];
@@ -156,24 +159,24 @@ function ThreadChannel(channel) {
       obj5[0] = num;
       obj5[1] = hasVideo;
       obj5[2] = channel;
-      tmp14Result = callback2(tmp4(obj[26]).ConnectedUserLimit, obj5);
+      tmp14Result = tmp14(tmp4(obj[26]).ConnectedUserLimit, obj5);
     }
     let tmp14Result1 = tmp14Result;
   } else {
     const obj6 = { value: null, isMentionLowImportance: null };
     obj6[0] = mentionCount;
     obj6[1] = isMentionLowImportance;
-    tmp14Result1 = callback2(tmp4(obj[27]).Badge, obj6);
+    tmp14Result1 = tmp14(tmp4(obj[27]).Badge, obj6);
   }
   obj4[13] = tmp14Result1;
   if (0 === voiceStates.length) {
     const obj7 = { children: null };
     obj4[14] = null;
-    items5[2] = callback2(tmp8Result, obj4);
+    items5[2] = tmp14(tmp8Result, obj4);
     obj[1] = items5;
-    items4[2] = callback(tmp15, obj);
+    items4[2] = tmp12(tmp15, obj);
     obj7[0] = items4;
-    return callback(closure_19, obj7);
+    return tmp12(closure_19, obj7);
   } else {
     if (selectedVoiceChannelId !== channel.threadId) {
       if (1 !== voiceStates.length) {
@@ -187,7 +190,7 @@ function ThreadChannel(channel) {
         obj9[3] = obj10;
         obj8[0] = tmp4(obj[30]).computeSummarizedVoiceUsers(obj9);
         obj8[2] = channel.guild_id;
-        let tmp14Result2 = callback2(tmp8Result, obj8);
+        let tmp14Result2 = tmp14(tmp8Result, obj8);
         const tmp4Result = tmp4(obj[30]);
       }
     }
@@ -195,30 +198,32 @@ function ThreadChannel(channel) {
     obj = { channel: null, collapsed: false, voiceStates: null };
     obj[0] = channel;
     obj[2] = voiceStates;
-    tmp14Result2 = callback2(tmp8, obj);
+    tmp14Result2 = tmp14(tmp8, obj);
   }
-  tmp9 = threadIndex(obj[20])({ channel, locked: isLocked, video: hasVideo, selected });
 }
 let c3 = importAllResult;
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = hairlineWidth);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let obj = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: ThemesDefault.radii.md, flex: 1 };
+let obj = { container: null, threadRow: null, unreadContainer: null, spineSpacer: null, unreadIcon: null, threadLineSegment: null };
+obj = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: ThemesDefault.radii.md, flex: 1 };
 obj[0] = obj;
 obj[1] = { flex: 0, flexDirection: "row", alignSelf: "stretch" };
 obj[2] = { width: 8, alignItems: "flex-start", justifyContent: "flex-start" };
 obj[3] = { width: 28 };
-const createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
+createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
 obj[4] = createCacheKey;
 obj[5] = { backgroundColor: ThemesDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
 let closure_20 = createCacheKey.createStyles(obj);
 let closure_21 = importAllResult.memo((arg0) => {
   ({ color, fontScale } = arg0);
-  const obj = { position: "absolute", left: 23, top: callback(fontScale) / 2 - 16 + 2 };
+  let obj = { width: 12, height: 16, style: null, children: null };
+  obj = { position: "absolute", left: 23, top: callback(fontScale) / 2 - 16 + 2 };
   obj[2] = obj;
   obj[3] = callback2(inlineStyles.Path, { fill: color, d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z" });
   return callback2(inlineStylesDefault, obj);
 });
-const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/ThreadChannel.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/ThreadChannel.tsx");
 
 export default function ConnectedThreadChannel(threadId) {
   threadId = threadId.threadId;

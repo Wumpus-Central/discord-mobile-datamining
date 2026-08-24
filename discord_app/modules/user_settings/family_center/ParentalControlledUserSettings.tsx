@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/family_center/ParentalControlledUserSettings.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import shallowEqualDefault from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import ME from "../../../Constants.tsx";
 import create from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
@@ -115,8 +115,9 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
   } else {
     ({ amount, currency } = arg0);
     const SpendingLimitSettings = create.SpendingLimitSettings;
+    let obj = { oneTimePurchaseLimit: null };
     const SpendingLimit = create.SpendingLimit;
-    const obj = { amount: null, currency: null };
+    obj = { amount: null, currency: null };
     const _String = String;
     obj[0] = String(amount);
     obj[1] = currency;
@@ -124,7 +125,8 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
     return SpendingLimitSettings.create(obj);
   }
 }, { comparator: spendingLimitEqual.spendingLimitEqual });
-const result10 = obj132.fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettings.tsx");
+const obj1 = { comparator: spendingLimitEqual.spendingLimitEqual };
+const result10 = set.fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettings.tsx");
 
 export const ParentalControlledExplicitContent = result;
 export const ParentalControlledLegacyExplicitContent = result1;

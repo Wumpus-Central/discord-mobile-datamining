@@ -2,12 +2,12 @@
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isEqualDefault from "../../../_runtime/04632_isEqual.js";
 import guildHasTag from "../guild_tag/GuildTagUtils.tsx";
-import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import createUserWidgetFromServer from "UserProfileStore.tsx";
+import closure_3 from "../../stores/GuildMemberStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "UserProfileStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
 export const setPendingChanges = function setPendingChanges(guildId) {
   guildId = guildId.guildId;
@@ -66,6 +66,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
         displayNameStyles1 = null;
       }
       obj.pendingDisplayNameStyles = isEqualDefault(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
+      const tmp12 = isEqualDefault;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -302,6 +303,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       } else {
         obj.pendingPrimaryGuildId = merged.primaryGuildId;
       }
+      const obj2 = guildHasTag;
     }
     if ("legacyUsernameDisabled" in merged) {
       obj.pendingLegacyUsernameDisabled = merged.legacyUsernameDisabled;
@@ -310,6 +312,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     obj[1] = guildId;
     const merged1 = Object.assign(obj);
     dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
     obj5 = userProfile;
   }
 };

@@ -1,7 +1,7 @@
 // discord_common/js/shared/shared-constants/Powerups.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");
 
 export const VANITY_URL_POWERUP_SKU_ID = "1387197800336330924";
 export const GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID = "1395150519886024775";

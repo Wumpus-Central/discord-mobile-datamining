@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
 
-const result = obj132.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
 export default function maybeShowDiscardChangesAlert(onHasEdits) {
   ({ resetPending: require, onConfirm } = onHasEdits);
@@ -12,8 +12,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     if (onHasEdits != null) {
       onHasEdits();
     }
-    onConfirm(4656);
-    const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+    let obj = onConfirm(4656);
+    obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.pvRCSu);
     const intl2 = getSystemLocale.intl;
@@ -37,7 +37,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
 };
 export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
-  const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+  let obj = _modDef4656;
+  obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.pvRCSu);
   const intl2 = getSystemLocale.intl;

@@ -1,13 +1,14 @@
 // discord_app/modules/auth_sessions/AuthSessionsActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _fetchAuthSessions() {
   const self = this;
   const tmp = callback(function*() {
     const callback = tmp2;
+    closure_0 = tmp5;
     const HTTP = closure_1_0(530).HTTP;
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_4.AUTH_SESSIONS;
@@ -127,7 +128,7 @@ function _logOutSessions() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
 
 export const fetchAuthSessions = function fetchAuthSessions() {
   const self = this;

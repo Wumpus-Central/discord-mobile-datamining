@@ -1,5 +1,5 @@
 // discord_common/js/packages/application-widget-renderer/src/schemas.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import ApplicationWidgetFieldPresentationType from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
 import ApplicationWidgetFieldValueType from "../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx";
 import _mod12197 from "../../../../../_runtime/metro/12197__.js";
@@ -41,7 +41,7 @@ const objectResult2 = z12.object(obj1);
 const z16 = _mod12197.z;
 const z17 = _mod12197.z;
 const partialRecordResult = z16.partialRecord(z17.enum(ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface), objectResult2);
-const result = obj132.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
 
 export const applicationWidgetStaticFieldConfigSchema = objectResult;
 export const applicationWidgetFieldConfigSchema = objectResult;

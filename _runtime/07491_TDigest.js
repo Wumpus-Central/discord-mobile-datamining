@@ -64,11 +64,11 @@ class TDigest {
     sum = str + self.n;
     items = [, , , , , ];
     items[0] = `${tmp} samples using ${self.size()} centroids`;
-    items[1] = `min = ${require("../discord_app/index.native.tsx")}`;
+    items[1] = `min = ${require("module_0")}`;
     items[2] = `Q1  = ${self.percentile(0.25)}`;
     items[3] = `Q2  = ${self.percentile(0.5)}`;
     items[4] = `Q3  = ${self.percentile(0.75)}`;
-    items[5] = `max = ${require("../discord_app/modules/debug/logAppStart.tsx")}`;
+    items[5] = `max = ${require("module_1")}`;
     return items.join("\n");
   }
   push(arg0, arg1) {

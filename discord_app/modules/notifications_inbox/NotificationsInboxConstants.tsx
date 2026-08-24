@@ -1,21 +1,23 @@
 // discord_app/modules/notifications_inbox/NotificationsInboxConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 const NOTIFICATIONS_INBOX = ME.NOTIFICATIONS_INBOX;
-let obj = {};
+let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
+obj = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
+obj = {};
 obj[obj.UNREAD] = getSystemLocale.t.sRUdB8;
 obj[obj.TODAY] = getSystemLocale.t.F4jZQs;
 obj[obj.YESTERDAY] = getSystemLocale.t.gnv4pE;
 obj[obj.OLDER] = getSystemLocale.t.exrPZv;
-const result = obj132.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
+const result = set.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
 
 export const ANALYTICS_NAME = "Notifications Inbox";
 export const NOTIFICATIONS_INBOX_RAW_GUILD_ID = "notifications_inbox_guild_id";
 export const GUILD_HEADER_HEIGHT = 88;
-export const INBOX_MESSAGE_AGE_THRESHOLD = obj132Default.Millis.WEEK;
+export const INBOX_MESSAGE_AGE_THRESHOLD = setDefault.Millis.WEEK;
 export const MAX_MESSAGES_PER_CHANNEL = 50;
 export const MAX_UNREAD_MESSAGES_PER_CHANNEL = 10;
 export const NOTIFICATIONS_INBOX_FEATURE = "notifications-inbox";

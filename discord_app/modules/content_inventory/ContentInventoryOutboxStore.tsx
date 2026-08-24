@@ -2,8 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isMatchingListeningActivity from "matchUtils.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 let map = new Map();
 let set = new Set();
 let c4 = null;
@@ -88,7 +89,7 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
     } else {
       const entries = value.entries;
       const obj = {};
-      const found = entries.filter((item, index) => item.id !== id.id);
+      const found = entries.filter((id) => id.id !== id.id);
       const merged = Object.assign(value);
       obj.entries = found;
       const result = map.set(userId, obj);
@@ -104,6 +105,6 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
     c5 = false;
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
+let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
 
 export default contentInventoryOutboxStore;

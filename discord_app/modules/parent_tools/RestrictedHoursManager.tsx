@@ -1,17 +1,14 @@
 // discord_app/modules/parent_tools/RestrictedHoursManager.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import getSystemLocale from "../../intl/index.native.tsx";
-import frozen from "FamilyCenterModels.tsx";
 import messagesProxyDefault from "FamilyCenter.messages.js";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import apexExperiment from "FamilyCenterV3Experiment.tsx";
-import setsEqual from "FamilyCenterRestrictedHoursUtils.tsx";
 import closeRestrictedHoursModal from "RestrictedHoursActionCreators.native.tsx";
-import DesktopNotificationTypes from "../../stores/NotificationSettingsStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
-import freshTeenActivityWithMap from "FamilyCenterStore.tsx";
+import closure_3 from "../../stores/NotificationSettingsStore.tsx";
+import closure_4 from "../../stores/UserStore.tsx";
+import closure_5 from "FamilyCenterStore.tsx";
 
-require = fn;
+require = arg1;
 function scheduleUpcomingWarning() {
   if (null != timeout) {
     const _clearTimeout = clearTimeout;
@@ -53,12 +50,13 @@ function scheduleUpcomingWarning() {
       const combined = "" + tmp7.rule.ruleId + ":" + tmp7.startAtMs;
       if (combined !== combined) {
         ({ startAtMs, rule } = tmp7);
-        const intl = getSystemLocale.intl;
+        const intl = tmp5(1236).intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const items = [frozen.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
+        let tmp5Result = tmp5(10017);
+        const items = [tmp5(1943).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(messagesProxyDefault["0JlDg0"]);
-        const tmp5Result = setsEqual;
+        tmp5Result = tmp5(10017);
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
         const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();
@@ -67,6 +65,7 @@ function scheduleUpcomingWarning() {
         obj[1] = stringResult;
         obj[2] = trimmed;
         dispatcherDefault.dispatch(obj);
+        const obj7 = dispatcherDefault;
       }
       const _setTimeout2 = setTimeout;
       timeout = setTimeout(() => {
@@ -87,7 +86,8 @@ function checkAndUpdateModal() {
   const result = closure_5.isCurrentUserInRestrictedHours();
   if (result !== c6) {
     c6 = result;
-    const obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
+    let obj = dispatcherDefault;
+    obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
     const obj3 = closeRestrictedHoursModal;
@@ -115,7 +115,8 @@ function handleScheduleUpdate() {
     scheduleUpcomingWarning();
   } else {
     c6 = result;
-    const obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
+    let obj = dispatcherDefault;
+    obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
     const obj3 = closeRestrictedHoursModal;
@@ -149,10 +150,12 @@ class RestrictedHoursManager extends tmp2 {
 const prototype = RestrictedHoursManager.prototype;
 prototype["_initialize"] = function _initialize() {
   closure_6 = closure_5.isCurrentUserInRestrictedHours();
-  const obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: closure_6 };
+  let obj = dispatcherDefault;
+  obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: closure_6 };
   obj.dispatch(obj);
   if (closure_6) {
     const result = closeRestrictedHoursModal.openRestrictedHoursModal();
+    const obj3 = closeRestrictedHoursModal;
   }
   const interval = setInterval(checkAndUpdateModal, 60000);
   scheduleUpcomingWarning();
@@ -173,7 +176,7 @@ prototype["_terminate"] = function _terminate() {
   c6 = false;
 };
 const restrictedHoursManager = new RestrictedHoursManager();
-let result = require("obj132").fileFinishedImporting("modules/parent_tools/RestrictedHoursManager.tsx");
+let result = require("set").fileFinishedImporting("modules/parent_tools/RestrictedHoursManager.tsx");
 
 export default restrictedHoursManager;
 export const getCurrentRestrictedHoursState = function getCurrentRestrictedHoursState() {

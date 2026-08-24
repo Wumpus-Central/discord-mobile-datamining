@@ -1,14 +1,12 @@
 // discord_app/modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
 import items3 from "../../../colors/native/ColorConstants.tsx";
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";
 import usePremiumGroupFeaturesTableCardTextDefault from "../hooks/usePremiumGroupFeaturesTableCardText.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -27,15 +25,20 @@ class BetaPill {
 const View = get_ActivityIndicator.View;
 const Gradients = items3.Gradients;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { padding: 16, borderRadius: ThemesDefault.radii.sm - 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
+let obj = { premiumGroupCard: null, headerContainer: null, betaPill: null, betaText: null, title: null, description: null };
+obj = { padding: 16, borderRadius: ThemesDefault.radii.sm - 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
 obj[0] = obj;
 obj[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 };
 obj[2] = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+let obj1 = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
 obj[3] = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+let obj2 = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
 obj[4] = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+const obj3 = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
 obj[5] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_7 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
+let obj4 = { color: ThemesDefault.colors.TEXT_DEFAULT };
+const result = set.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
 export default function PremiumGroupFeaturesTableCard(arg0) {
   ({ style, premiumGroupRole } = arg0);
@@ -48,22 +51,23 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, style: null, children: null };
     obj[1] = Button.GradientBorder.Direction.HORIZONTAL;
     obj[2] = Gradients.PREMIUM_TIER_2;
-    obj[3] = ThemesDefault.radii.sm;
+    obj[3] = tmp2(712).radii.sm;
     obj[4] = style;
     obj = { start: null, end: null, colors: null, locations: null, style: null, children: null };
     obj[0] = { x: 0, y: 0 };
     obj[1] = { x: 1, y: 0 };
     let obj2 = hexToRgba;
     const items = [obj2.hexWithOpacity("#8547C6", 0.15), , ];
-    const tmp2Result = LinearGradientDefault;
+    const tmp2Result = tmp2(4756);
     items[1] = hexToRgba.hexWithOpacity("#B845C1", 0.15);
+    const obj4 = hexToRgba;
     items[2] = hexToRgba.hexWithOpacity("#AB5D8A", 0.15);
     obj[2] = items;
     obj[3] = [0, 0.4996, 0.9593];
     obj[4] = tmp.premiumGroupCard;
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items1 = [callback(PremiumGroupWordmarkDefault, { width: 181, height: 16 }), callback(BetaPill, {})];
+    const items1 = [callback(tmp2(9329), { width: 181, height: 16 }), callback(BetaPill, {})];
     obj[1] = items1;
     const items2 = [callback2(View, obj), , ];
     obj1 = { variant: "text-sm/normal", style: null, children: null };

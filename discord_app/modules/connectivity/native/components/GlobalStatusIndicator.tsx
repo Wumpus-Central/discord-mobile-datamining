@@ -1,14 +1,15 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusIndicator.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import setContent from "../../../action_sheet/native/ActionSheetStore.tsx";
-import getParticipants from "../../../calls/ChannelRTCStore.tsx";
-import initialize from "../../../native_menu/native/NativeMenuStore.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
+import closure_7 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import closure_8 from "../../../calls/ChannelRTCStore.tsx";
+import closure_9 from "../../../native_menu/native/NativeMenuStore.tsx";
+import closure_10 from "../../../../stores/ChannelStore.tsx";
+import closure_11 from "../../../../stores/RTCConnectionStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: c4, StyleSheet: c5, TouchableWithoutFeedback: closure_6, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDStatusBarOverlayViewManager);
@@ -16,6 +17,8 @@ function GlobalStatusIndicatorWrapper(onPress) {
   onPress = onPress.onPress;
   importDefault = undefined;
   let stateFromStores;
+  let stateFromStores1;
+  let openVoice;
   let callback;
   closure_6 = undefined;
   const tmp3 = importDefault(stateFromStores[8])();
@@ -35,11 +38,11 @@ function GlobalStatusIndicatorWrapper(onPress) {
   }, items1);
   const items2 = [closure_10];
   const items3 = [stateFromStores];
-  const stateFromStores1 = onPress(stateFromStores[9]).useStateFromStores(items2, () => closure_1_10.getChannel(stateFromStores), items3);
+  stateFromStores1 = onPress(stateFromStores[9]).useStateFromStores(items2, () => closure_1_10.getChannel(stateFromStores), items3);
   const obj2 = onPress(stateFromStores[9]);
   const tmp = importDefault;
   const voiceChatNavigationContext = onPress(stateFromStores[10]).useVoiceChatNavigationContext();
-  let openVoice;
+  openVoice = undefined;
   if (voiceChatNavigationContext != null) {
     openVoice = voiceChatNavigationContext.openVoice;
   }
@@ -47,14 +50,14 @@ function GlobalStatusIndicatorWrapper(onPress) {
   callback = stateFromStores1.useCallback(() => {
     if (null != stateFromStores1) {
       if (null != openVoice) {
-        if (closure_1_8.getChatOpen(stateFromStores1.id)) {
+        if (closure_1_8.getChatOpen(tmp.id)) {
           tmp2();
         }
         if (onPress != null) {
           tmp8();
         }
       }
-      const result = onPress(stateFromStores[11]).navigateToVoiceChannel(stateFromStores1, "RTC Panel");
+      const result = onPress(stateFromStores[11]).navigateToVoiceChannel(tmp, "RTC Panel");
       const obj = onPress(stateFromStores[11]);
     }
   }, items4);
@@ -64,7 +67,7 @@ function GlobalStatusIndicatorWrapper(onPress) {
   });
   const items5 = [stateFromStores];
   const effect1 = stateFromStores1.useEffect(() => {
-    closure_0 = nativeEventEmitter.addListener("StatusBarTapped", () => {
+    closure_0 = closure_1_15.addListener("StatusBarTapped", () => {
       ref.current();
     });
     return () => {
@@ -85,11 +88,11 @@ function GlobalStatusIndicatorWrapper(onPress) {
   }
   obj[1] = stringResult;
   obj[2] = callback;
-  obj = { children: callback(tmp(tmp2[13]), {}) };
-  obj[3] = callback(openVoice, obj);
-  return callback(closure_6, obj);
+  obj = { children: tmp12(tmp(tmp2[13]), {}) };
+  obj[3] = closure_12(openVoice, obj);
+  return closure_12(closure_6, obj);
 }
-let result = require("obj132").fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
+let result = require("set").fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
 
 export default function GlobalStatusIndicator(children) {
   children = children.children;
@@ -102,15 +105,18 @@ export default function GlobalStatusIndicator(children) {
     flag2 = false;
   }
   const onPress = children.onPress;
+  let height;
+  let isVisible;
+  let stateFromStores1;
   const globalStatusIndicatorState = children(onPress[15]).useGlobalStatusIndicatorState(flag);
   let obj = children(onPress[15]);
   let items = [closure_7];
   const stateFromStores = children(onPress[9]).useStateFromStores(items, () => null != content.getContent());
   const obj2 = children(onPress[9]);
   const items1 = [closure_9];
-  const height = globalStatusIndicatorState.height;
-  let isVisible = globalStatusIndicatorState.isVisible;
-  let stateFromStores1 = children(onPress[9]).useStateFromStores(items1, () => open.isOpen());
+  height = globalStatusIndicatorState.height;
+  isVisible = globalStatusIndicatorState.isVisible;
+  stateFromStores1 = children(onPress[9]).useStateFromStores(items1, () => open.isOpen());
   if (isVisible) {
     isVisible = !flag2;
   }
@@ -139,7 +145,7 @@ export default function GlobalStatusIndicator(children) {
     if (isVisible) {
       obj = { onPress: null };
       obj[0] = onPress;
-      tmp3Result = closure_1_12(GlobalStatusIndicatorWrapper, obj);
+      tmp3Result = tmp3(closure_1_16, obj);
     }
     children[1] = tmp3Result;
     return closure_1_14(closure_1_13, { children });
@@ -147,7 +153,7 @@ export default function GlobalStatusIndicator(children) {
 };
 export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
   const _require = globalStatusIndicatorState;
-  const sharedValue = require("../../../reanimated/ReanimatedRexport.tsx").useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = _ReanimatedRexport.useSharedValue(globalStatusIndicatorState.height);
   const items = [globalStatusIndicatorState.height, sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

@@ -11,9 +11,12 @@ arg5.UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
   if (3 < str.length) {
     while (true) {
       let index = str.indexOf("-", num);
+      let tmp4 = num;
+      let tmp5 = iter;
       let tmp6 = -1 === index ? length - num : index - num;
       let substr = str.slice(num, num + tmp6);
       let tmp8 = obj;
+      let tmp9 = dependencyMap;
       let invariantResult2 = obj(13617).invariant(tmp6 >= 2, "Expected a subtag to have at least 2 characters");
       if (undefined === iter) {
         if (2 !== tmp6) {
@@ -33,12 +36,12 @@ arg5.UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
         obj = { key: null, value: "" };
         obj[0] = substr;
         tmp13 = obj;
-        if (undefined === keywords.find((item, index) => {
-          let key;
+        if (undefined === keywords.find((key) => {
+          key = undefined;
           if (null != obj) {
             key = obj.key;
           }
-          return item.key === key;
+          return key.key === key;
         })) {
           arr = keywords.push(obj);
           tmp13 = obj;

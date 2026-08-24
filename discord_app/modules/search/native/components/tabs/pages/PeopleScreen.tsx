@@ -1,21 +1,25 @@
 // discord_app/modules/search/native/components/tabs/pages/PeopleScreen.tsx
-import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import teardown from "../../../stores/SearchPeopleTabStore.tsx";
-import prototype from "../../../stores/SearchQueryStore.tsx";
+import closure_5 from "../../../stores/SearchPeopleTabStore.tsx";
+import closure_6 from "../../../stores/SearchQueryStore.tsx";
 import MessageEmbedTypes from "../../../../SearchConstants.tsx";
 import { SearchResultContentEntityTypes as closure_9 } from "../../../tracking/TrackingConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ SearchListItemTypes: error, USER_ESTIMATED_ITEM_SIZE: closure_8 } = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
   searchContext = searchContext.searchContext;
   let _require = searchContext;
+  importDefault = undefined;
   let stateFromStores;
+  let stateFromStores1;
+  let fullscreenPlaceholderCount;
   let onPressGroupDMItem;
   let onPressDMItem;
+  let callback;
   let callback1;
   let obj = _require(stateFromStores[7]);
   importDefault = obj.getSearchContextId(searchContext);
@@ -23,14 +27,15 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
   let items = [onPressGroupDMItem];
   stateFromStores = obj1.useStateFromStores(items, () => onPressGroupDMItem.getResults(closure_1));
   const items1 = [onPressDMItem];
-  const stateFromStores1 = _require(stateFromStores[8]).useStateFromStores(items1, () => onPressDMItem.isInitialSearchQuery(closure_0));
+  stateFromStores1 = _require(stateFromStores[8]).useStateFromStores(items1, () => onPressDMItem.isInitialSearchQuery(closure_0));
   const obj3 = _require(stateFromStores[8]);
   obj = { placeholderHeight: callback1, numColumns: 1 };
-  const fullscreenPlaceholderCount = _require(stateFromStores[9]).useFullscreenPlaceholderCount(obj);
+  fullscreenPlaceholderCount = _require(stateFromStores[9]).useFullscreenPlaceholderCount(obj);
   const obj4 = _require(stateFromStores[9]);
   onPressGroupDMItem = _require(stateFromStores[10]).useOnPressGroupDMItem({ searchContext });
   const obj6 = _require(stateFromStores[10]);
   onPressDMItem = _require(stateFromStores[10]).useOnPressDMItem({ searchContext });
+  _require = undefined;
   _require = stateFromStores1((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -90,7 +95,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
             obj2[3] = callback;
             obj2[4] = closure_2_9.CHANNEL;
             const result = callback(stateFromStores[12]).trackSearchResultClicked(obj2);
-            onPressDMItem(closure_0, closure_2);
+            closure_1_6(closure_0, closure_2);
             c5 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -102,7 +107,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
     })();
   });
   const items2 = [onPressDMItem, searchContext];
-  const callback = fullscreenPlaceholderCount.useCallback(function() {
+  callback = fullscreenPlaceholderCount.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -114,17 +119,17 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
   }, items2);
   const items3 = [onPressGroupDMItem, searchContext];
   callback1 = fullscreenPlaceholderCount.useCallback((channelId, index) => {
-    callback(stateFromStores[12]);
-    const obj = { searchContext: closure_0, channelId, index, entityType: closure_1_9.CHANNEL };
+    let obj = callback(stateFromStores[12]);
+    obj = { searchContext: closure_0, channelId, index, entityType: closure_1_9.CHANNEL };
     const result = obj.trackSearchResultClicked(obj);
     onPressGroupDMItem(channelId);
   }, items3);
   const items4 = [callback, callback1, stateFromStores1, fullscreenPlaceholderCount, stateFromStores];
   const memo = fullscreenPlaceholderCount.useMemo(() => {
     let items = [];
-    let item = stateFromStores.forEach((item, index) => {
-      const title = item.title;
-      items = item.items;
+    let item = stateFromStores.forEach((title) => {
+      title = title.title;
+      items = title.items;
       if (null != title) {
         if (items.length > 0) {
           let obj = { type: null, props: null };
@@ -135,15 +140,15 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
           title.push(obj);
         }
       }
-      item = items.forEach((item, index) => {
-        closure_0 = index;
-        if ("user" in item) {
-          ({ user, firstMatch } = item);
+      const item = items.forEach((type) => {
+        closure_0 = arg1;
+        if ("user" in type) {
+          ({ user, firstMatch } = type);
           let obj = { type: null, section: null, props: null };
           obj[0] = callback.DM;
           obj[1] = closure_0;
           obj = { type: null, user: null, nickname: null, onPress: null };
-          obj[0] = item.type;
+          obj[0] = type.type;
           obj[1] = user;
           let tmp8;
           if (user.username !== firstMatch) {
@@ -160,7 +165,7 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
           obj[0] = callback.GROUP_DM;
           obj[1] = closure_0;
           obj1 = { channel: null, onPress: null };
-          obj1[0] = item;
+          obj1[0] = type;
           obj1[1] = function onPress(arg0) {
             return closure_1_8(arg0, closure_0);
           };
@@ -171,12 +176,18 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
     });
     if (!stateFromStores1) {
       if (0 === items.length) {
-        for (let num3 = 0; num3 < fullscreenPlaceholderCount; num3 = num3 + 1) {
-          let obj = { type: null, key: null };
-          obj[0] = callback.MESSAGE_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj[1] = "message-placeholder-" + num3;
-          let arr = items.push(obj);
+        let num3 = 0;
+        if (0 < fullscreenPlaceholderCount) {
+          do {
+            let obj = { type: null, key: null };
+            let tmp4 = callback;
+            obj[0] = callback.MESSAGE_PLACEHOLDER;
+            let _HermesInternal = HermesInternal;
+            obj[1] = "message-placeholder-" + num3;
+            let arr = items.push(obj);
+            num3 = num3 + 1;
+            let tmp6 = fullscreenPlaceholderCount;
+          } while (num3 < fullscreenPlaceholderCount);
         }
       }
     }
@@ -195,6 +206,6 @@ const memoResult = importAllResult.memo(function PeopleScreen(searchContext) {
   }
   return tmp13;
 });
-let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
 
 export default memoResult;

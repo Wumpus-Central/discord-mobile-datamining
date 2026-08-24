@@ -1,14 +1,12 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
-import ImageSkeleton from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function CollectionItem(arg0) {
   ({ componentConfig, resolveFieldValue } = arg0);
   const tmp = callback3();
@@ -34,7 +32,7 @@ function CollectionItem(arg0) {
   } else {
     const obj2 = { style: null };
     obj2[0] = tmp.itemImage;
-    tmp11 = callback(ImageSkeleton.ImageSkeleton, obj2);
+    tmp11 = callback(tmp3(12278).ImageSkeleton, obj2);
     tmp12 = callback;
   }
   const items1 = [tmp11, ];
@@ -42,39 +40,43 @@ function CollectionItem(arg0) {
   if ("value" === singleStringOrSkeleton.status) {
     const obj4 = { variant: "text-xs/medium", lineClamp: 2, children: null };
     obj4[2] = singleStringOrSkeleton.text;
-    let tmp12Result = tmp12(Text.Text, obj4);
+    let tmp12Result = tmp12(tmp3(4734).Text, obj4);
   } else {
-    tmp12Result = tmp12(ImageSkeleton.TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(tmp3(12278).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
   const items2 = [tmp12Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj5 = { variant: "text-xxs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj5[3] = singleStringOrSkeleton1.text;
-    tmp12Result = tmp12(Text.Text, obj5);
+    tmp12Result = tmp12(tmp3(4734).Text, obj5);
   } else {
-    tmp12Result = tmp12(ImageSkeleton.TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result = tmp12(tmp3(12278).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
   }
   items2[1] = tmp12Result;
   obj3[1] = items2;
-  items1[1] = callback(closure_3, obj3);
+  items1[1] = closure_5(closure_3, obj3);
   obj[1] = items1;
-  return callback(closure_3, obj);
+  return closure_5(closure_3, obj);
 }
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { flexDirection: "row", flexWrap: "wrap", rowGap: ThemesDefault.space.PX_16, columnGap: ThemesDefault.space.PX_16 };
+createCacheKey = { grid: null, item: null, itemImage: null, itemContent: null };
+createCacheKey = { flexDirection: "row", flexWrap: "wrap", rowGap: ThemesDefault.space.PX_16, columnGap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "47%", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+obj1 = { width: "47%", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj2 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[3] = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx");
+let obj3 = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
+const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx");
 
 export default function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
-  { style: callback3().grid, children: null };
-  let obj = { componentConfig: bottomConfig.components.item_1, resolveFieldValue };
+  let obj = { style: callback3().grid, children: null };
+  obj = { componentConfig: bottomConfig.components.item_1, resolveFieldValue };
   const items = [callback(CollectionItem, obj), , , ];
   obj = { componentConfig: bottomConfig.components.item_2, resolveFieldValue };
   items[1] = callback(CollectionItem, obj);

@@ -1,11 +1,11 @@
 // _runtime/01523_useLazyValue.js
-import noop from "00019_noop.js";
+import closure_0 from "00019_noop.js";
 
 
-export const useLazyValue = function useLazyValue(fn) {
+export const useLazyValue = function useLazyValue(arg0) {
   const ref = React.useRef(undefined);
   if (undefined === ref.current) {
-    ref.current = fn();
+    ref.current = arg0();
   }
   return ref.current;
 };

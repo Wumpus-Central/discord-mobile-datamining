@@ -1,18 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/CallSystemMessage.tsx
-import getSystemLocale from "../../../../../intl/index.native.tsx";
-import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
-import resetCache from "../../../../../utils/DateUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import getHumanizedCallDurationDefault from "../../../getHumanizedCallDuration.tsx";
 import useIsCallActive from "../../../../calls/mobile/useIsCallActive.tsx";
-import getParticipants from "../../../../calls/ChannelRTCStore.tsx";
-import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
-import updateVoiceState from "../../../../../stores/VoiceStateStore.tsx";
+import closure_3 from "../../../../calls/ChannelRTCStore.tsx";
+import closure_4 from "../../../../../stores/AuthenticationStore.tsx";
+import closure_5 from "../../../../../stores/VoiceStateStore.tsx";
 import { ME } from "../../../../../Constants.tsx";
 import { ParticipantTypes } from "../../../../calls/CallConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 
 export const createCallSystemMessage = function createCallSystemMessage(message) {
   message = message.message;
@@ -32,22 +29,22 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
     const participants1 = call.participants;
     tmp9 = -1 === participants1.indexOf(id);
   }
-  const intl = getSystemLocale.intl;
+  const intl = tmp7(1236).intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = tmp7(1236).t;
   if (checkIsCallActiveResult) {
     let str2 = "";
     if (checkIsCallActiveResult) {
       if (null == userVoiceChannelId) {
-        const intl3 = getSystemLocale.intl;
-        str2 = intl3.string(getSystemLocale.t.DqA3mi);
+        const intl3 = tmp7(1236).intl;
+        str2 = intl3.string(tmp7(1236).t.DqA3mi);
       } else {
         str2 = "";
       }
     }
-    const found = participants.filter((item, index) => item.type === constants.USER && !item.ringing);
-    let mapped = found.map((item, index) => {
-      const user = item.user;
+    const found = participants.filter((type) => type.type === constants.USER && !type.ringing);
+    let mapped = found.map((user) => {
+      user = user.user;
       return callback(table[8]).ensureAvatarSource(user.getAvatarSource(undefined)).uri;
     });
     let formatToPlainStringResult = str2;
@@ -60,19 +57,19 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
       stringResult1 = string(t.v05Xd6);
     }
     if (null != tmp6) {
-      const intl2 = getSystemLocale.intl;
+      const intl2 = tmp7(1236).intl;
       obj = { duration: null, timestamp: null };
       obj[0] = tmp6;
-      let tmp7Result = resetCache;
+      let tmp7Result = tmp7(4063);
       obj[1] = tmp7Result.calendarFormat(message.timestamp);
-      formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.SBDnp1, obj);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp7(1236).t.SBDnp1, obj);
     } else {
-      tmp7Result = resetCache;
+      tmp7Result = tmp7(4063);
       formatToPlainStringResult = tmp7Result.calendarFormat(message.timestamp);
     }
     const author = message.author;
-    mapped = [ensureAvatarSource.ensureAvatarSource(author.getAvatarSource(undefined)).uri];
-    const tmp7Result1 = ensureAvatarSource;
+    mapped = [tmp7(1438).ensureAvatarSource(author.getAvatarSource(undefined)).uri];
+    const tmp7Result1 = tmp7(1438);
   }
   obj = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
   timestamp = message.timestamp;

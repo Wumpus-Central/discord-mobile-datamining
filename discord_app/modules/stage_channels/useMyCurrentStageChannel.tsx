@@ -1,10 +1,10 @@
 // discord_app/modules/stage_channels/useMyCurrentStageChannel.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/SelectedChannelStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
 export default function useMyCurrentStageChannel() {
   const items = [closure_3, closure_2];

@@ -1,8 +1,8 @@
 // _runtime/07773_handleCallbackErrors.js
 const require = arg1;
 const dependencyMap = arg6;
-arg5.handleCallbackErrors = function handleCallbackErrors(fn) {
-  fn = arg2;
+arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {
+  let fn = arg2;
   if (arg2 === undefined) {
     fn = function t() {
 
@@ -13,9 +13,9 @@ arg5.handleCallbackErrors = function handleCallbackErrors(fn) {
       const callback = arg1;
       const table = fn;
       if (obj.isThenable(promise)) {
-        return promise.then((result) => {
+        return promise.then((arg0) => {
           callback2();
-          return result;
+          return arg0;
         }, (arg0) => {
           callback(arg0);
           callback2();
@@ -26,7 +26,7 @@ arg5.handleCallbackErrors = function handleCallbackErrors(fn) {
         return promise;
       }
       obj = callback(table[0]);
-    })(fn(), arg1, fn);
+    })(arg0(), arg1, fn);
   } catch (tmp5) {
     tmp3(tmp5);
     tmp2();

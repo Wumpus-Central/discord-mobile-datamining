@@ -2,6 +2,7 @@
 function shim(obj) {
   const items = [];
   for (const key10003 in arg0) {
+    let tmp = key10003;
     let arr = items.push(key10003);
     continue;
   }

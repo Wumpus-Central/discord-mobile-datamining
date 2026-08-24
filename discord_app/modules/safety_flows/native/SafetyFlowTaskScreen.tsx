@@ -4,17 +4,15 @@ import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
-import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
-import ModalActionButton from "../../../design/components/Modal/native/ModalActionButton.native.tsx";
 import LogOutDisclaimerDefault from "LogOutDisclaimer.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("obj132").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
 
 export default function SafetyFlowTaskScreen(action) {
   ({ ImageComponent, subtitle, subtitleColor } = action);
@@ -43,16 +41,16 @@ export default function SafetyFlowTaskScreen(action) {
     obj[1] = subtitleColor;
     obj[2] = tmp2.header;
     obj[3] = subtitle;
-    tmp7Result = callback(Text.Text, obj);
+    tmp7Result = tmp7(tmp4(4734).Text, obj);
   }
   obj = { children: null };
   items[2] = tmp7Result;
-  const items1 = [callback(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
+  const items1 = [closure_4(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
   obj[0] = items1;
-  children = [callback(ModalContent.ModalContent, obj), ];
+  children = [closure_4(ModalContent.ModalContent, obj), ];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = callback(LogOutDisclaimerDefault, {});
+      withLogout = tmp7(LogOutDisclaimerDefault, {});
     }
     const items3 = [withLogout, ];
     tmp7Result = null != action;
@@ -61,13 +59,13 @@ export default function SafetyFlowTaskScreen(action) {
       obj1[1] = action;
       obj1[2] = onAction;
       obj1[3] = submitting;
-      tmp7Result = callback(ModalActionButton.ModalActionButton, obj1);
+      tmp7Result = tmp7(tmp4(11964).ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2[0] = items3;
-    footer = callback(ModalFooter.ModalFooter, obj2);
+    footer = tmp3(tmp4(11114).ModalFooter, obj2);
   }
   children[1] = footer;
-  return callback(ModalScreen.ModalScreen, { children });
+  return closure_4(ModalScreen.ModalScreen, { children });
 };

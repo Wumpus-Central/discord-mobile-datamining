@@ -1,9 +1,9 @@
 // discord_app/modules/content_inventory/reactionUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import rebuildDefault from "../messages/MessageParser.tsx";
 
-const result = obj132.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
+const result = set.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 
 export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {
   channel = channel.channel;

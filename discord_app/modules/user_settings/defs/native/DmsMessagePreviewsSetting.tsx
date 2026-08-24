@@ -2,11 +2,11 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import useMessagePreview from "../../../main_tabs_v2/useMessagePreviews.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import "createToggle";
+import closure_2 from "../../../../../_runtime/00019_noop.js";
+import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = fn;
-let createToggle = {
+require = arg1;
+createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.OAOUoQ);
@@ -41,6 +41,6 @@ let createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx");
 
 export default createToggle;

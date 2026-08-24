@@ -1,12 +1,12 @@
 // discord_app/modules/guild_scheduled_events/StartEventUtils.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { createChannelRecordFromServer as closure_4 } from "../../records/ChannelRecord.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/ChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
 import { ChannelTypes } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function createStageChannelForEvent(guild, name, arg2) {
   const self = this;
   const apply = _createStageChannelForEvent.apply;
@@ -359,7 +359,7 @@ function _setEventAsActive() {
   return applyArgumentsResult;
 }
 ({ GuildScheduledEventEntityTypes: error, GuildScheduledEventPrivacyLevel: closure_8 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
 
 export { createStageChannelForEvent };
 export { findOrCreateEventChannel };

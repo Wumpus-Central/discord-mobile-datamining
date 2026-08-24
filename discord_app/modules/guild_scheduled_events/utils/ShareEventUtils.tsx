@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/utils/ShareEventUtils.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");
 
 export const SHARE_EVENT_DETAILS_LINK = (guildId) => "https://discord.com/events/" + guildId.guildId + "/" + guildId.guildEventId;
 export const canUseInviteModal = function canUseInviteModal(arg0, arg1, arg2) {

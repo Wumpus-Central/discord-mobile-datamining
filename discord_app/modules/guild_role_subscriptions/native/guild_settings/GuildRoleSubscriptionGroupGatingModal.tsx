@@ -3,14 +3,14 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import FormGuildGatingModeSelectorDefault from "../components/FormGuildGatingModeSelector.tsx";
 import HeaderDefault from "../components/GuildRoleSubscriptionTierEditStep.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import usePriceTiers from "../RoleTierEditStore.tsx";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../RoleTierEditStore.tsx";
 import { GuildRoleSubscriptionsTierScenes as closure_5 } from "../../GuildRoleSubscriptionsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
 
 export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   [tmp2, tmp3] = callback(closure_4.useGroupIsFullGateState(), 2);

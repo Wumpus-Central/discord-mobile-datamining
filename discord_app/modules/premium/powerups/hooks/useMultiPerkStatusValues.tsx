@@ -1,33 +1,33 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../GuildPowerups.messages.js";
 import BoostedGuildTiers from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 
 const PowerupActiveStatusType = BoostedGuildTiers.PowerupActiveStatusType;
-const result = obj132.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
   let obj = usePowerupActiveStatus;
   const powerupsActiveStatuses = obj.usePowerupsActiveStatuses(powerups.guildId, powerups);
-  const someResult = powerupsActiveStatuses.some((item, index) => item.type !== constants.INACTIVE);
+  const someResult = powerupsActiveStatuses.some((type) => type.type !== constants.INACTIVE);
   if (powerups.length <= 0) {
     return null;
   } else {
-    const reduced = powerupsActiveStatuses.reduce((acc, item, index) => {
-      const sourceEntitlement = item.sourceEntitlement;
+    const reduced = powerupsActiveStatuses.reduce((arg0, sourceEntitlement) => {
+      sourceEntitlement = sourceEntitlement.sourceEntitlement;
       let ends_at;
       if (sourceEntitlement != null) {
         ends_at = sourceEntitlement.ends_at;
       }
-      let tmp2 = acc;
+      let tmp2 = arg0;
       if (null != ends_at) {
-        if (null == acc) {
+        if (null == arg0) {
           let tmp3 = ends_at;
         } else {
-          tmp3 = acc;
+          tmp3 = arg0;
         }
         tmp2 = tmp3;
       }
@@ -43,10 +43,10 @@ export default function useMultiPerkStatusValues(powerups) {
       obj[1] = intl.string(messagesProxyDefault.FFLkmx);
       tmp4 = obj;
     }
-    const reduced1 = powerupsActiveStatuses.reduce((acc, item, index) => {
-      let sum = acc;
-      if (item.type === constants.POWERUP_ACTIVATED) {
-        sum = acc + item.powerup.cost;
+    const reduced1 = powerupsActiveStatuses.reduce((arg0, type) => {
+      let sum = arg0;
+      if (type.type === constants.POWERUP_ACTIVATED) {
+        sum = arg0 + type.powerup.cost;
       }
       return sum;
     }, 0);
@@ -61,8 +61,8 @@ export default function useMultiPerkStatusValues(powerups) {
     if (num == null) {
       num = 0;
     }
-    const reduced2 = powerupsActiveStatuses.reduce((acc, item, index) => {
-      const powerup = item.powerup;
+    const reduced2 = powerupsActiveStatuses.reduce((arg0, powerup) => {
+      powerup = powerup.powerup;
       let num;
       if (powerup != null) {
         num = powerup.cost;
@@ -70,8 +70,8 @@ export default function useMultiPerkStatusValues(powerups) {
       if (num == null) {
         num = 0;
       }
-      let tmp = acc;
-      if (acc >= num) {
+      let tmp = arg0;
+      if (arg0 >= num) {
         let num2;
         if (powerup != null) {
           num2 = powerup.cost;
@@ -83,8 +83,8 @@ export default function useMultiPerkStatusValues(powerups) {
       }
       return tmp;
     }, num);
-    const reduced3 = powerupsActiveStatuses.reduce((acc, item, index) => {
-      const powerup = item.powerup;
+    const reduced3 = powerupsActiveStatuses.reduce((arg0, powerup) => {
+      powerup = powerup.powerup;
       let num;
       if (powerup != null) {
         num = powerup.cost;
@@ -92,7 +92,7 @@ export default function useMultiPerkStatusValues(powerups) {
       if (num == null) {
         num = 0;
       }
-      return acc + num;
+      return arg0 + num;
     }, 0);
     let tmp10 = reduced2;
     if (someResult) {
@@ -115,4 +115,5 @@ export default function useMultiPerkStatusValues(powerups) {
     obj1[7] = reduced3;
     return obj1;
   }
+  let tmp = require;
 };

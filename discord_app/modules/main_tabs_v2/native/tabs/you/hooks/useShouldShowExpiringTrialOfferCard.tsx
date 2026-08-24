@@ -1,21 +1,23 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx
 import defaultAreStatesEqual from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import obj132Default from "../../../../../../utils/Durations.tsx";
+import setDefault from "../../../../../../utils/Durations.tsx";
 import useCountdownDefault from "../../../../../../hooks/useCountdown.tsx";
 import usePremiumTrialOffer from "../../../../../premium/hooks/usePremiumTrialOffer.android.tsx";
-import clearDismissUntil from "../../../../../premium/native/NoticeStore.tsx";
+import closure_3 from "../../../../../premium/native/NoticeStore.tsx";
 import { NoticeTypes } from "../../../../../../Constants.tsx";
 import { PremiumSubscriptionSKUs } from "../../../../../premium/PremiumConstants.tsx";
 
-require = fn;
-let closure_6 = 10 * obj132Default.Millis.SECOND;
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
+require = arg1;
+let closure_6 = 10 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
 
 export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpiringTrialOfferCard() {
   const items = [closure_3];
   const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => noticeType.getNoticeType());
+  const obj = defaultAreStatesEqual;
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let num = 0;
+  const obj2 = usePremiumTrialOffer;
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expiresAt) {
@@ -24,11 +26,13 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     }
   }
   let tmp5 = null != premiumTrialOffer;
+  const tmp3 = useCountdownDefault;
   if (tmp5) {
     tmp5 = null != stateFromStores;
   }
   if (tmp5) {
     tmp5 = stateFromStores === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING || stateFromStores === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING;
+    const tmp6 = stateFromStores === NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING || stateFromStores === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING;
   }
   if (!tmp5) {
     if (tmp5) {
@@ -37,7 +41,7 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     if (tmp5) {
       const _Object = Object;
       const values = Object.values(tmp3Result);
-      tmp5 = !values.every((item, index) => 0 === item);
+      tmp5 = !values.every((arg0) => 0 === arg0);
     }
     return tmp5;
   } else {
@@ -57,5 +61,4 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
       TIER_0 = PremiumSubscriptionSKUs.TIER_0;
     }
   }
-  tmp3Result = useCountdownDefault(num, closure_6);
 };

@@ -5,9 +5,9 @@ import messagesProxyDefault from "../AgeAssurance.messages.js";
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");
 
 export default function AgeVerificationQuestUnsupportedAlertModal() {
   let obj = { title: null, content: null, actions: null };
@@ -15,6 +15,7 @@ export default function AgeVerificationQuestUnsupportedAlertModal() {
   obj[0] = intl.string(messagesProxyDefault.gUqXQN);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(messagesProxyDefault.yBHwMy);
+  obj = { children: null };
   obj = { text: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t["NX+WJN"]);

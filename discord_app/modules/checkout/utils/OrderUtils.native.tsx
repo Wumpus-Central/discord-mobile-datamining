@@ -1,8 +1,8 @@
 // discord_app/modules/checkout/utils/OrderUtils.native.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { OrderStatus } from "../../payments/PaymentConstants.tsx";
 
-const require = fn;
+const require = arg1;
 function _discardDraftOrder() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -113,7 +113,7 @@ function _discardDraftOrder() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/checkout/utils/OrderUtils.native.tsx");
+const result = require("set").fileFinishedImporting("modules/checkout/utils/OrderUtils.native.tsx");
 
 export const discardDraftOrder = function discardDraftOrder(arg0) {
   const self = this;

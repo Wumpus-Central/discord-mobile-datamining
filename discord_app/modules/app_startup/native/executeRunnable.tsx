@@ -2,12 +2,12 @@
 import timestampDefault from "../../debug/Logger.tsx";
 import setRequestedByAll from "../../gateway/RequestGatewaySocket.tsx";
 import getIsPausedAll from "../../gateway/PauseGatewaySocket.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import linkFromAppsFlyer from "NativeAppStartup.tsx";
 
-const require = fn;
+const require = arg1;
 ({ init: c5, applicationReady: closure_6 } = linkFromAppsFlyer);
-const result = require("obj132").fileFinishedImporting("modules/app_startup/native/executeRunnable.tsx");
+const result = require("set").fileFinishedImporting("modules/app_startup/native/executeRunnable.tsx");
 
 export default function executeRunnable(arg0, arg1) {
   closure_0 = arg0;
@@ -15,6 +15,7 @@ export default function executeRunnable(arg0, arg1) {
   new timestampDefault(arg0).log("Loading the " + arg0 + " Discord runnable");
   const obj = new timestampDefault(arg0);
   getIsPausedAll.setIsPaused(false);
+  const obj2 = getIsPausedAll;
   const combined = "executeRunnable:" + arg0;
   return setRequestedByAll.withRequest(combined, callback(function*() {
     const obj4 = closure_1_0(15);

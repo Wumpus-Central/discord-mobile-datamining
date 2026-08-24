@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumSKUFeature.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
+const result = set.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
 export default function PremiumSKUFeature(name, getFeatureValue, description) {
   let obj = Object.create(new.target.prototype);

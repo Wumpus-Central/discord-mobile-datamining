@@ -3,10 +3,10 @@ import getSystemLocale from "../intl/index.native.tsx";
 import createExecutableDefault from "ApplicationRecord.tsx";
 import getPlatformUserUrlDefault from "../lib/Platforms.tsx";
 
-require = fn;
+require = arg1;
 createExecutableDefault;
 let c3 = "twitch:";
-const result = require("obj132").fileFinishedImporting("records/TwitchApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/TwitchApplicationRecord.tsx");
 class TwitchApplicationRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new TwitchApplicationRecord(global, tmp2, tmp, new.target);

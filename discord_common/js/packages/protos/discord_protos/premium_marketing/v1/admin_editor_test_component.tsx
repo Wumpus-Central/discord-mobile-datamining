@@ -4,10 +4,10 @@ import create from "../../common/v1/localized_string.tsx";
 import create2 from "help_article.tsx";
 import create3 from "cta_button.tsx";
 import create4 from "theme_aware_asset.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = fn;
+require = arg1;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , ];
@@ -62,8 +62,9 @@ class AdminEditorTestComponent$Type extends MessageType {
 }
 let prototype = AdminEditorTestComponent$Type.prototype;
 prototype["create"] = function create(arr) {
+  let obj = { deprecatedField: "", plainTextField: "", checkboxField: false, assetField: "" };
   const _Object = Object;
-  const obj = { enumerable: false, value: this };
+  obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -80,44 +81,85 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.deprecatedField = pos.string();
       } else if (2 === tmp5) {
+        let tmp42 = require;
+        let tmp43 = dependencyMap;
         let LocalizedString2 = create.LocalizedString;
+        let tmp44 = LocalizedString2;
+        let tmp45 = pos;
+        let tmp46 = readUnknownField;
         obj.localizedTextField = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.localizedTextField);
       } else if (3 === tmp5) {
         obj.plainTextField = pos.string();
       } else if (4 === tmp5) {
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
         let LocalizedString = create.LocalizedString;
+        let tmp39 = LocalizedString;
+        let tmp40 = pos;
+        let tmp41 = readUnknownField;
         obj.textareaField = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.textareaField);
       } else if (5 === tmp5) {
         obj.checkboxField = pos.bool();
       } else if (6 === tmp5) {
         obj.assetField = pos.string();
       } else if (7 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let ThemeAwareAsset = create4.ThemeAwareAsset;
+        let tmp34 = ThemeAwareAsset;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.themedAssetField = ThemeAwareAsset.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.themedAssetField);
       } else if (8 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let HelpArticle = create2.HelpArticle;
+        let tmp29 = HelpArticle;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.helpArticleField = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticleField);
       } else if (9 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let CTAButton = create3.CTAButton;
+        let tmp24 = CTAButton;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.ctaField = CTAButton.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaField);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -233,6 +275,6 @@ items[8] = {
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, tmp, T, AdminEditorTestComponent$Type, prototype, items);
 // ThrowIfThisInitialized (0x7c)
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/admin_editor_test_component.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/admin_editor_test_component.tsx");
 
 export const AdminEditorTestComponent = prototype;

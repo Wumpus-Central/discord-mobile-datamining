@@ -1,5 +1,5 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigModels.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
 class SettingsConfig {
   constructor(arg0) {
@@ -99,7 +99,7 @@ RegionalFeatureConfig["fromConnectionOpen"] = function fromConnectionOpen(region
   obj2.appStore = obj1;
   return obj2;
 };
-const result = obj132.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
+const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigModels.tsx");
 
 export { SettingsConfig };
 export { AgeVerificationConfig };

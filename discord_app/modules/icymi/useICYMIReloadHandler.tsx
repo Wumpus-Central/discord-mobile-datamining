@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/useICYMIReloadHandler.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../_runtime/00019_noop.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
 
 export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
   closure_0 = showDot;
@@ -36,9 +36,9 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             return obj;
           } else {
             closure_0 = tmp2;
-            const ICYMIAnalytics = showDot(9065).ICYMIAnalytics;
+            const ICYMIAnalytics = closure_1_0(9065).ICYMIAnalytics;
             let str = "NoDotShown";
-            if (showDot) {
+            if (closure_1_0) {
               str = "DotShown";
             }
             obj1 = { variant: null, homeSessionId: "gravity_refresh" };

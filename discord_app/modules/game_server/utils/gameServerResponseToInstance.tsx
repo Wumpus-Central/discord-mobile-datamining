@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/utils/gameServerResponseToInstance.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
+const result = set.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {
   const obj = { id: id.id, name: id.name, regionId: id.region_id, regionName: id.region_name, planId: id.sku_id, planName: id.plan_name, onlineConnectionsCount: null, maxConnectionsCount: null, serverIP: null, port: null, entitlementId: null, subscriptionId: null, providerType: null, gameServerPanelUrl: null, status: null, gameId: null, gameConfig: null };

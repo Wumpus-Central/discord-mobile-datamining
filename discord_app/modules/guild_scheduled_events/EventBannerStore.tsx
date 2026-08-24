@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/EventBannerStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
@@ -60,6 +60,6 @@ const eventBannerStore = new EventBannerStore(dispatcherDefault, {
     }
   }
 });
-const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
 
 export default eventBannerStore;

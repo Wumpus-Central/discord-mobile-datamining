@@ -1,9 +1,9 @@
 // _runtime/04140__fromURL.js
-import "asyncGeneratorStep";
+import _fromFileURL from "00005_asyncGeneratorStep.js";
+import { Image as _fromResource } from "00017_get_ActivityIndicator.js";
 import { NitroModules } from "metro/04112__.js";
 
-require("get ActivityIndicator").Image;
-NitroModules.createHybridObject("RiveFileFactory");
+let _fromBytes = NitroModules.createHybridObject("RiveFileFactory");
 let obj = {};
 function _fromURL() {
   const self = this;
@@ -88,7 +88,7 @@ function _fromURL() {
   }
   return applyArgumentsResult;
 }
-function _fromFileURL(arg0) {
+_fromFileURL = function _fromFileURL(arg0) {
   const self = this;
   const tmp = _fromFileURL((arg0) => {
     closure_0 = arg0;
@@ -171,8 +171,8 @@ function _fromFileURL(arg0) {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-}
-function _fromResource() {
+};
+_fromResource = function _fromResource() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
     closure_0 = arg0;
@@ -254,8 +254,8 @@ function _fromResource() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-}
-function _fromBytes() {
+};
+_fromBytes = function _fromBytes() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
     closure_0 = arg0;
@@ -337,7 +337,7 @@ function _fromBytes() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-}
+};
 function _fromSource() {
   const self = this;
   const tmp = _fromFileURL((arg0, arg1) => {
@@ -507,7 +507,7 @@ obj.fromResource = function fromResource(closure_1_5, closure_1, closure_2) {
   }
   return applyArgumentsResult;
 };
-obj.fromBytes = function fromBytes(closure_0, current, arg2) {
+obj.fromBytes = function fromBytes(arg0, current, arg2) {
   const self = this;
   const apply = _fromBytes.apply;
   if (typeof apply === "unknown") {

@@ -1,5 +1,5 @@
 // _runtime/01052_LCPEntryManager.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import LCPEntryManager from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -9,7 +9,6 @@ class LCPEntryManager {
     return;
   }
 }
-_classCallCheck = LCPEntryManager;
 const items = [
   {
     key: "_processEntry",

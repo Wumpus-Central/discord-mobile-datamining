@@ -1,16 +1,17 @@
 // discord_app/modules/favorites/FavoritesGuildSuggestionsStore.tsx
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import withContent from "../dismissible_content/DismissibleContentShownStateStore.tsx";
+import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/00019_noop.js";
+import closure_4 from "../dismissible_content/DismissibleContentShownStateStore.tsx";
 import { NOOP } from "../../Constants.tsx";
 import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
 import keys from "../../../_runtime/00644_keys.js";
+import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import { useFavoritesAccess } from "FavoritesHooks.tsx";
 
-const require = fn;
+const require = arg1;
 let items = [];
 let closure_8 = keys.create(() => ({ suggestions: items, dismiss: NOOP }));
-const result = require("obj132").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
 
 export const NO_SUGGESTIONS = items;
 export const useFavoritesGuildSuggestions = function useFavoritesGuildSuggestions() {
@@ -26,7 +27,7 @@ export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestion
   state.setState({ suggestions });
 };
 export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
-  let obj = useFavoritesAccess;
+  let obj = _useFavoritesAccess;
   const favoritesAccess = obj.useFavoritesAccess();
   let isFreemium = favoritesAccess.hasAccess;
   if (isFreemium) {
@@ -42,7 +43,7 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
   } else {
     items1 = [];
   }
-  const tmp5 = callback(require("../dismissible_content/hooks/useSelectedDismissibleContent.tsx").useSelectedDismissibleContent(items1), 2);
+  const tmp5 = callback(_useSelectedDismissibleContent.useSelectedDismissibleContent(items1), 2);
   _require = tmp6;
   const items2 = [tmp5[1]];
   const layoutEffect = React.useLayoutEffect(() => {

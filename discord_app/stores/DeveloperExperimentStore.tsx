@@ -2,12 +2,12 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import validatePremiumType from "../modules/user/UserStoreUtils.tsx";
-import createGuildRecordFromRust from "GuildStore.tsx";
-import mergeGuildAvatar from "UserStore.tsx";
+import closure_2 from "GuildStore.tsx";
+import closure_3 from "UserStore.tsx";
 import { ExperimentBuckets } from "../modules/experiments/ExperimentConstants.tsx";
 import { Environments } from "../modules/user/UserStoreConstants.tsx";
 
-require = fn;
+require = arg1;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {
   const _window = window;
@@ -49,6 +49,6 @@ prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {
 };
 DeveloperExperimentStore.displayName = "DeveloperExperimentStore";
 const developerExperimentStore = new DeveloperExperimentStore(dispatcherDefault, { CONNECTION_OPEN: init, OVERLAY_INITIALIZE: init, CURRENT_USER_UPDATE: init });
-const result = require("obj132").fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
+const result = require("set").fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
 
 export default developerExperimentStore;

@@ -5,12 +5,12 @@ import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/package
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ StyleSheet, TurboModuleRegistry } = get_ActivityIndicator);
 const enforcing = TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
 const styles = StyleSheet.create({ flex: { flex: 1 } });
-const result = require("obj132").fileFinishedImporting("modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx");
+const result = require("set").fileFinishedImporting("modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx");
 
 export default function DiscordGestureHandlerRootView(arg0) {
   ({ children, style } = arg0);

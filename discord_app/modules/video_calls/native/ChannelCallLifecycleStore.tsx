@@ -2,14 +2,15 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import isUndefinedOrNullDefault from "../../../../_runtime/00659_isUndefinedOrNull.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
+import closure_3 from "../../../stores/SelectedChannelStore.tsx";
 import { VoiceCallOverlayType } from "ChannelCallConstants.tsx";
 
 let c4 = false;
 let c5 = false;
 let c6 = false;
 let c7 = false;
-let obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
+let obj = {};
+obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
 obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
@@ -110,6 +111,6 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefaul
     }
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 
 export default channelCallLifecycleStore;

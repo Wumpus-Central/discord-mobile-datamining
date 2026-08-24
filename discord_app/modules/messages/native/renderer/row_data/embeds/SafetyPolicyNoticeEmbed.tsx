@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
-import obj132 from "../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../../Constants.tsx";
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
@@ -11,7 +11,7 @@ import frozen from "../../EmbedUtils.tsx";
 const Image = get_ActivityIndicator.Image;
 const MessageEmbedTypes = ME.MessageEmbedTypes;
 const SafetyHubPolicyNoticeKeys = SafetyHubView.SafetyHubPolicyNoticeKeys;
-const result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
 
 export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEmbed(message) {
   if (null != message.embeds) {
@@ -31,7 +31,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         const fields1 = first2.fields;
         let found;
         if (fields1 != null) {
-          found = fields1.find((item, index) => item.rawName === constants.CLASSIFICATION_ID);
+          found = fields1.find((rawName) => rawName.rawName === constants.CLASSIFICATION_ID);
         }
         let rawValue;
         if (found != null) {
@@ -40,7 +40,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
         const fields2 = first2.fields;
         let found1;
         if (fields2 != null) {
-          found1 = fields2.find((item, index) => item.rawName === constants.INCIDENT_TIMESTAMP);
+          found1 = fields2.find((rawName) => rawName.rawName === constants.INCIDENT_TIMESTAMP);
         }
         if (null != found1) {
           if (null != found1.rawValue) {
@@ -56,6 +56,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             obj[1] = frozen.getAssetUriForEmbed(Image.resolveAssetSource(registerAssetDefault));
             const intl2 = getSystemLocale.intl;
             obj = { daysAgo: null };
+            const obj2 = frozen;
             const obj4 = tDefault();
             obj[0] = obj4.diff(tDefault.unix(parsed), "days");
             obj[2] = intl2.formatToPlainString(getSystemLocale.t.eevFb6, obj);

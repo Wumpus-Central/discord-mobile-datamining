@@ -1,14 +1,14 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx
 import mapped from "../AVError.tsx";
 import getVoiceChannelErrorContext from "../AVErrorContext.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
-import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
+import closure_2 from "../../../../stores/ChannelStore.tsx";
+import closure_3 from "../../../../stores/MediaEngineStore.tsx";
+import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
 import ME from "../../../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ InputModes: c5, RTCConnectionStates: closure_6 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoAudioInputDetected.tsx");
 
 export const AVErrorNoAudioInputDetectedDefinition = {
   getActiveErrors(voiceState) {
@@ -29,11 +29,11 @@ export const AVErrorNoAudioInputDetectedDefinition = {
       if (null != mediaSessionId.getMediaSessionId()) {
         if (!inputDetectedThisConnection.getInputDetectedThisConnection()) {
           if (mediaSessionId.getState() === constants2.RTC_CONNECTED) {
-            if (inputDetectedThisConnection.getSettings().mode === constants.VOICE_ACTIVITY) {
-              if (inputDetectedThisConnection.getSettings().silenceWarning) {
-                if (false === inputDetectedThisConnection.getInputDetected()) {
+            if (obj5.getSettings().mode === constants.VOICE_ACTIVITY) {
+              if (obj5.getSettings().silenceWarning) {
+                if (false === obj5.getInputDetected()) {
                   if (!isGuildStageVoiceResult) {
-                    if (!inputDetectedThisConnection.isSelfMute()) {
+                    if (!obj5.isSelfMute()) {
                       const obj = { type: null };
                       obj[0] = mapped.AVError.NO_AUDIO_INPUT_DETECTED;
                       const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());

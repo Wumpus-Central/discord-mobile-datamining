@@ -1,8 +1,5 @@
 // _runtime/metro/13730__.js
-import _mod13674 from "13674__.js";
 import all from "../13699_all.js";
-import defineProperty from "../13727_defineProperty.js";
-import text from "../13731_text.js";
 
 
 export default (arg0, arg1, arg2, arg3) => {
@@ -16,13 +13,13 @@ export default (arg0, arg1, arg2, arg3) => {
     name = obj.name;
   }
   if (all(arg2)) {
-    text(arg2, name, obj);
+    tmp3(13731)(arg2, name, obj);
   }
   if (obj.global) {
     if (flag) {
       arg0[arg1] = arg2;
     } else {
-      _mod13674(arg1, arg2);
+      tmp3(13674)(arg1, arg2);
     }
   } else {
     try {
@@ -40,8 +37,8 @@ export default (arg0, arg1, arg2, arg3) => {
         obj[0] = arg2;
         obj[2] = !obj.nonConfigurable;
         obj[3] = !obj.nonWritable;
-        defineProperty.f(arg0, arg1, obj);
-        const tmp3Result = defineProperty;
+        tmp3(13727).f(arg0, arg1, obj);
+        const tmp3Result = tmp3(13727);
       }
     } catch (err) {
     }

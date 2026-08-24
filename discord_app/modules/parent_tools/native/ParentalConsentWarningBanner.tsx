@@ -1,20 +1,21 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningBanner.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { FamilyCenterSubPages } from "../FamilyCenterConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ Pressable: c4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ AnalyticEvents: closure_8, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + ThemesDefault.space.PX_16;
 let closure_15 = [0.5875, 1];
-const createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { strip: null, pressable: null, label: null, link: null };
+createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -27,13 +28,15 @@ createCacheKey[1] = obj1;
 createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { textDecorationLine: "underline" };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
+let obj2 = { paddingRight: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
 
 export default function ParentalConsentWarningBanner(children) {
+  let _require;
   let token;
   let daysRemaining;
   const tmp = callback();
-  const _require = tmp;
+  _require = tmp;
   let Gfqlpa = token;
   let obj = daysRemaining;
   const tmp2 = token(daysRemaining[7])();
@@ -76,28 +79,28 @@ export default function ParentalConsentWarningBanner(children) {
   const items1 = [daysRemaining];
   const sum = tmp2.top + closure_14;
   const items2 = [tmp.link];
-  callback = React.useCallback(() => {
-    token(daysRemaining[14]);
-    let obj = { days_remaining: daysRemaining };
+  callback = obj7.useCallback(() => {
+    let obj = token(daysRemaining[14]);
+    obj = { days_remaining: daysRemaining };
     obj.track(closure_1_8.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, obj);
-    const tab = token(daysRemaining[15]).selectTab(FamilyCenterSubPages.REQUESTS);
+    const tab = token(daysRemaining[15]).selectTab(closure_1_7.REQUESTS);
     const obj3 = token(daysRemaining[15]);
     obj = { screen: closure_1_9.FAMILY_CENTER };
     lib(daysRemaining[16]).openUserSettings(obj);
   }, items1);
-  const callback1 = React.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
+  const callback1 = obj7.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
   const items3 = [StyleSheet.absoluteFill, ];
   let num2 = 0;
   if (isOnMainSurface) {
     num2 = closure_14;
   }
   items3[1] = { marginTop: num2 };
-  children = [, ];
-  children[0] = callback(View, { style: items3, children: children.children });
+  children = [closure_11(View, { style: items3, children: children.children }), ];
   let tmp18 = null;
   if (isOnMainSurface) {
     tmp18 = null;
     if (null != daysRemaining) {
+      obj = { style: null, pointerEvents: "box-none", children: null };
       const items5 = [tmp.strip, ];
       obj = { height: null };
       obj[0] = sum;
@@ -108,7 +111,7 @@ export default function ParentalConsentWarningBanner(children) {
       obj1[2] = memo;
       obj1[3] = closure_15;
       ({ START: obj10[4], END: obj10[5] } = closure_10);
-      const items6 = [callback(Gfqlpa(obj[18]), obj1), ];
+      const items6 = [tmp15(Gfqlpa(obj[18]), obj1), ];
       obj2 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
       const intl2 = intl(obj[19]).intl;
       obj2[1] = intl2.string(Gfqlpa(obj[20]).O2HKdA);
@@ -134,14 +137,15 @@ export default function ParentalConsentWarningBanner(children) {
         formatResult = intl3.format(Gfqlpa(obj[20]).ZBK5mM, obj5);
       }
       obj4[4] = formatResult;
-      obj4 = callback(intl(obj[17]).Text, obj4);
+      obj4 = tmp15(intl(obj[17]).Text, obj4);
       obj2[4] = obj4;
-      obj2 = callback(closure_4, obj2);
+      obj2 = tmp15(closure_4, obj2);
       items6[1] = obj2;
       obj[2] = items6;
-      callback2(View, obj);
+      tmp13(tmp16, obj);
+      const tmp21 = closure_4;
     }
   }
   children[1] = tmp18;
-  return callback2(closure_13, { children });
+  return closure_12(closure_13, { children });
 };

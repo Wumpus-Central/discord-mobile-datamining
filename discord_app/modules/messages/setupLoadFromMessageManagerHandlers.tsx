@@ -1,7 +1,7 @@
 // discord_app/modules/messages/setupLoadFromMessageManagerHandlers.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set2 from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
+const result = set2.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
 
 export default function setupLoadFromMessageManagerHandlers(actions) {
   closure_0 = arg1;
@@ -9,6 +9,8 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
   if (arg2 === undefined) {
     obj = {};
   }
+  let onBeforeBatch;
+  let set;
   function handleMessage(message) {
     message = message.message;
     let hasItem = null != message.channel_id;
@@ -34,13 +36,13 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     if (onBeforeBatch != null) {
       tmp2();
     }
-    const item = messages.forEach((item, index) => {
-      let hasItem = null != item.channel_id;
+    const item = messages.forEach((channel_id) => {
+      let hasItem = null != channel_id.channel_id;
       if (hasItem) {
-        hasItem = set.has(item.channel_id);
+        hasItem = set.has(channel_id.channel_id);
       }
       if (hasItem) {
-        callback(item);
+        callback(channel_id);
       }
     });
   }
@@ -49,15 +51,15 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     if (onBeforeBatch != null) {
       tmp();
     }
-    let item = data.forEach((item, index) => {
-      const messages = item.messages;
-      item = messages.forEach((item, index) => {
-        item = item.forEach((item, index) => callback(item));
+    let item = data.forEach((messages) => {
+      messages = messages.messages;
+      let item = messages.forEach((arr) => {
+        const item = arr.forEach((arg0) => callback(arg0));
       });
     });
   }
-  const onBeforeBatch = obj.onBeforeBatch;
-  const set = new Set();
+  onBeforeBatch = obj.onBeforeBatch;
+  set = new Set();
   obj = {};
   const merged = Object.assign(actions.actions);
   obj.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
@@ -72,14 +74,14 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     if (onBeforeBatch != null) {
       tmp();
     }
-    const item = messages.forEach((item, index) => callback(item));
+    const item = messages.forEach((arg0) => callback(arg0));
   };
   obj.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
     pins = pins.pins;
     if (onBeforeBatch != null) {
       tmp();
     }
-    const item = pins.forEach((item, index) => callback(item.message));
+    const item = pins.forEach((message) => callback(message.message));
   };
   obj.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
   obj.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;

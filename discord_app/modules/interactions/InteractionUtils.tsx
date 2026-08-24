@@ -4,12 +4,12 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import _fetchMessageInteractionData from "InteractionActionCreators.tsx";
 import getFirstSkemaFieldError from "SkemaUtils.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import deleteNonce from "InteractionStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/AuthenticationStore.tsx";
+import closure_5 from "InteractionStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function _executeMessageComponentInteraction() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -193,17 +193,17 @@ function mapMessageComponentLocalStateForAPI(type) {
   } else {
     type = type.type;
     if (PermissionOverwriteType.ComponentType.TEXT_INPUT !== type) {
-      if (PermissionOverwriteType.ComponentType.FILE_UPLOAD !== type) {
-        if (PermissionOverwriteType.ComponentType.RADIO_GROUP !== type) {
-          if (PermissionOverwriteType.ComponentType.CHECKBOX_GROUP !== type) {
-            if (PermissionOverwriteType.ComponentType.CHECKBOX !== type) {
-              if (PermissionOverwriteType.ComponentType.STRING_SELECT === type) {
+      if (tmp(1954).ComponentType.FILE_UPLOAD !== type) {
+        if (tmp(1954).ComponentType.RADIO_GROUP !== type) {
+          if (tmp(1954).ComponentType.CHECKBOX_GROUP !== type) {
+            if (tmp(1954).ComponentType.CHECKBOX !== type) {
+              if (tmp(1954).ComponentType.STRING_SELECT === type) {
                 return type;
               } else {
-                if (PermissionOverwriteType.ComponentType.USER_SELECT !== type) {
-                  if (PermissionOverwriteType.ComponentType.ROLE_SELECT !== type) {
-                    if (PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT !== type) {
-                      if (PermissionOverwriteType.ComponentType.CHANNEL_SELECT !== type) {
+                if (tmp(1954).ComponentType.USER_SELECT !== type) {
+                  if (tmp(1954).ComponentType.ROLE_SELECT !== type) {
+                    if (tmp(1954).ComponentType.MENTIONABLE_SELECT !== type) {
+                      if (tmp(1954).ComponentType.CHANNEL_SELECT !== type) {
                         return null;
                       }
                     }
@@ -212,7 +212,7 @@ function mapMessageComponentLocalStateForAPI(type) {
                 const selectedOptions = type.selectedOptions;
                 obj = { type: null, values: null };
                 obj[0] = type.type;
-                obj[1] = selectedOptions.map((item, index) => item.value);
+                obj[1] = selectedOptions.map((value) => value.value);
                 return obj;
               }
             }
@@ -227,6 +227,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
   if (!ok.ok) {
     if (ok.hasErr) {
       _fetchMessageInteractionData.setFailed(nonce);
+      const obj10 = _fetchMessageInteractionData;
     } else {
       if (ok.status >= 400) {
         if (ok.status < 500) {
@@ -252,13 +253,15 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   }
                   obj[3] = tmp9;
                   dispatcherDefault.dispatch(obj);
+                  const obj7 = dispatcherDefault;
                 }
+                const obj6 = getFirstSkemaFieldError;
+                const tmp24 = require;
                 let message;
                 if (firstSkemaError != null) {
                   message = firstSkemaError.message;
                 }
                 _fetchMessageInteractionData.setFailed(nonce, undefined, message);
-                const tmp24Result = _fetchMessageInteractionData;
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
@@ -271,7 +274,9 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
               }
               obj[3] = tmp20;
               dispatcherDefault.dispatch(obj);
+              const obj3 = dispatcherDefault;
               _fetchMessageInteractionData.setFailed(nonce, undefined, ok.body.message);
+              const obj5 = _fetchMessageInteractionData;
             } else {
               const obj2 = _fetchMessageInteractionData;
               obj2.setFailed(nonce, ok.body.code, ok.body.message, ok.status);
@@ -292,7 +297,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
 }
 ({ Endpoints: closure_6, AbortCodes: error, MessageStates: closure_8, MessageFlags: c9 } = ME);
 let obj = { SENDING: 0, [0]: "SENDING", CREATED: 1, [1]: "CREATED", FAILED: 2, [2]: "FAILED", TIMED_OUT: 3, [3]: "TIMED_OUT", EPHEMERAL_SUCCESS: 4, [4]: "EPHEMERAL_SUCCESS" };
-let result = require("obj132").fileFinishedImporting("modules/interactions/InteractionUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/interactions/InteractionUtils.tsx");
 
 export const getInteractionTimeoutTimestamp = function getInteractionTimeoutTimestamp(arg0) {
   if (null != arg0) {
@@ -300,6 +305,7 @@ export const getInteractionTimeoutTimestamp = function getInteractionTimeoutTime
       const _Number = Number;
       if (!Number.isNaN(arg0)) {
         let sum = DISCORD_EPOCHDefault.extractTimestamp(arg0) + 900000;
+        obj = DISCORD_EPOCHDefault;
       }
       return sum;
     }
@@ -312,6 +318,7 @@ export const getInteractionInitialResponseDeadlineTimestamp = function getIntera
       const _Number = Number;
       if (!Number.isNaN(arg0)) {
         let sum = DISCORD_EPOCHDefault.extractTimestamp(arg0) + 3000;
+        obj = DISCORD_EPOCHDefault;
       }
       return sum;
     }
@@ -334,8 +341,8 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
   if (state2 != null) {
     state = state2.state;
   }
-  if (!tmp2) {
-    if (!tmp10) {
+  if (state.state !== constants2.SENT) {
+    if (state.state !== tmp.SEND_FAILED) {
       let interactionType;
       if (state2 != null) {
         interactionType = state2.data.interactionType;
@@ -344,7 +351,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       const isCommandTypeResult = state.isCommandType();
       if (!tmp21) {
         if (isCommandTypeResult) {
-          if (state.state === constants2.SENDING) {
+          if (state.state === tmp.SENDING) {
             return SENDING;
           }
         }
@@ -353,12 +360,12 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
             SENDING = obj.TIMED_OUT;
           }
           if (isCommandTypeResult) {
-            if (state.state === constants2.SEND_FAILED) {
+            if (state.state === tmp.SEND_FAILED) {
               SENDING = obj.FAILED;
             }
           }
           if (null != state.interaction) {
-            if (state.hasFlag(constants3.EPHEMERAL)) {
+            if (state.hasFlag(tmp23.EPHEMERAL)) {
               SENDING = obj.EPHEMERAL_SUCCESS;
             }
           }
@@ -373,6 +380,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
           const _Number2 = Number;
           if (!Number.isNaN(id2)) {
             let sum = DISCORD_EPOCHDefault.extractTimestamp(id2) + 3000;
+            const obj2 = DISCORD_EPOCHDefault;
           }
           const _Date4 = Date;
           sum < Date.now();
@@ -381,7 +389,6 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       const _Date3 = Date;
       sum = Date.now();
     }
-    tmp10 = state.state === constants2.SEND_FAILED;
   } else {
     const id = state.id;
     if (null != id) {
@@ -398,7 +405,6 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
     const _Date = Date;
     sum1 = Date.now();
   }
-  tmp2 = state.state === constants2.SENT;
 };
 export const canRetryInteractionData = function canRetryInteractionData(interactionData) {
   const options = interactionData.options;
@@ -420,13 +426,19 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
         if (1 !== length1) {
           break;
         } else {
+          let tmp6 = require;
+          let tmp7 = require;
+          let tmp8 = dependencyMap;
+          let tmp9 = dependencyMap;
           tmp4 = options1;
           if (options1[0].type === PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
             continue;
           } else {
+            let tmp10 = tmp6;
+            let tmp11 = tmp8;
             tmp4 = options1;
             items = options1;
-            if (options1[0].type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
+            if (options1[0].type !== tmp7(1954).ApplicationCommandOptionType.SUB_COMMAND) {
               break;
             }
           }
@@ -437,12 +449,20 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
       tmp4 = options;
       items = options;
     }
+    const tmp17 = require;
+    const tmp18 = require;
+    const tmp19 = dependencyMap;
   }
   if (items == null) {
     items = [];
   }
   for (const item10042 of items) {
+    let tmp12 = require;
+    let tmp13 = require;
+    let tmp14 = dependencyMap;
+    let tmp15 = dependencyMap;
     if (item10042.type === PermissionOverwriteType.ApplicationCommandOptionType.ATTACHMENT) {
+      let tmp16 = obj;
       obj.return();
       let flag = false;
       return false;

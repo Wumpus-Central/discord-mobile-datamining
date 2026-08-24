@@ -1,20 +1,23 @@
 // discord_app/modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import handleThemeChange from "../../user_settings/ThemeStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../user_settings/ThemeStore.tsx";
 import { VerificationMethod } from "../AgeVerificationConstants.tsx";
 import { buildIncodeParamsInjection as closure_8 } from "../AgeVerificationIncodeWebViewConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { ModalContent } from "../../../design/components/Modal/native/ModalContent.native.tsx";
+import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: { flex: 1, alignSelf: "stretch" } });
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx");
 
 export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected) {
   onMethodSelected = onMethodSelected.onMethodSelected;
+  let _require = onMethodSelected;
   const trustedOrigin = onMethodSelected.trustedOrigin;
   dependencyMap = undefined;
   let callback;
@@ -23,7 +26,8 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   const tmp = callback2(React.useState(false), 2);
   [tmp4, c3] = callback2(React.useState(false), 2);
   const tmp5 = callback4();
-  const _require = callback((arg0) => {
+  _require = undefined;
+  _require = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -100,7 +104,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
                 obj3[3] = closure_1.interviewId;
                 obj3[4] = closure_2_6.theme;
                 obj3[5] = callback;
-                closure_2 = closure_2_8(obj3, trustedOrigin);
+                closure_2 = closure_2_8(obj3, closure_1_1);
                 callback(closure_2);
                 c4 = 1;
               }
@@ -138,31 +142,32 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     }
     return applyArgumentsResult;
   }, items);
-  const ModalContent = require("../../../design/components/Modal/native/ModalContent.native.tsx").ModalContent;
   let obj = { children: null };
+  const ModalContent = _ModalContent.ModalContent;
+  obj = { children: null };
   if (tmp2) {
     obj = { align: "center", justify: "center", spacing: 16, style: null, children: null };
     obj[3] = tmp5.loadingContainer;
-    obj[4] = callback(tmp7(5446).ActivityIndicator, { size: "large" });
-    obj[0] = callback(tmp7(4733).Stack, obj);
-    obj[0] = callback(ModalContent, obj);
+    obj[4] = tmp6(tmp7(5446).ActivityIndicator, { size: "large" });
+    obj[0] = tmp6(tmp7(4733).Stack, obj);
+    obj[0] = tmp6(ModalContent, obj);
     let tmp11 = obj;
   } else {
     obj1 = { align: "stretch", spacing: 24, style: null, children: null };
     obj1[2] = tmp5.container;
     let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items1 = [callback(tmp7(5447).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+    const items1 = [tmp6(tmp7(5447).ShieldSpotIllustration, { height: 100, width: 177 }), ];
     let obj3 = { align: "center", justify: "center", spacing: 8, children: null };
     const obj4 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: null, children: null };
     obj4[3] = tmp5.header;
     const intl = tmp7(1236).intl;
     obj4[4] = intl.string(trustedOrigin(2853).eZvwAe);
-    const items2 = [callback(tmp7(4734).Text, obj4), ];
+    const items2 = [tmp6(tmp7(4734).Text, obj4), ];
     const obj5 = { variant: "text-md/medium", color: "text-strong", style: null, children: null };
     obj5[2] = tmp5.header;
     const intl2 = tmp7(1236).intl;
     obj5[3] = intl2.string(trustedOrigin(2853)["5yWXmT"]);
-    items2[1] = callback(tmp7(4734).Text, obj5);
+    items2[1] = tmp6(tmp7(4734).Text, obj5);
     obj3[3] = items2;
     items1[1] = callback3(tmp7(4733).Stack, obj3);
     obj2[3] = items1;
@@ -172,7 +177,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
       obj6[2] = tmp5.header;
       const intl3 = tmp7(1236).intl;
       obj6[3] = intl3.string(tmp7(1236).t.c6kn6F);
-      tmp6Result = callback(tmp7(4734).Text, obj6);
+      tmp6Result = tmp6(tmp7(4734).Text, obj6);
     }
     items3[1] = tmp6Result;
     const obj7 = { hasIcons: false, children: null };
@@ -182,24 +187,24 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     const intl5 = tmp7(1236).intl;
     obj8[2] = intl5.string(trustedOrigin(2853).fm7qBC);
     obj8[3] = function onPress() {
-      callback(VerificationMethod.FACIAL_AGE_ESTIMATION);
+      callback(closure_1_7.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [callback(tmp7(6291).TableRow, obj8), ];
+    const items4 = [tmp6(tmp7(6291).TableRow, obj8), ];
     const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1236).intl;
     obj9[1] = intl6.string(trustedOrigin(2853)["NeVlw/"]);
     const intl7 = tmp7(1236).intl;
     obj9[2] = intl7.string(trustedOrigin(2853).ARmJ0M);
     obj9[3] = function onPress() {
-      callback(VerificationMethod.ID_VERIFICATION);
+      callback(closure_1_7.ID_VERIFICATION);
     };
-    items4[1] = callback(tmp7(6291).TableRow, obj9);
+    items4[1] = tmp6(tmp7(6291).TableRow, obj9);
     obj7[1] = items4;
     items3[2] = callback3(tmp7(6286).TableRowGroup, obj7);
     obj1[3] = items3;
     obj[0] = callback3(tmp7(4733).Stack, obj1);
-    obj[0] = callback(ModalContent, obj);
+    obj[0] = tmp6(ModalContent, obj);
     tmp11 = obj;
   }
-  return callback(require("../../../design/components/Modal/native/ModalScreen.native.tsx").ModalScreen, tmp11);
+  return closure_9(_ModalScreen.ModalScreen, tmp11);
 };

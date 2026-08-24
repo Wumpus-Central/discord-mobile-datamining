@@ -1,18 +1,16 @@
 // discord_app/modules/launchpad/native/LaunchPadMembers.tsx
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import getSystemLocale from "../../../intl/index.native.tsx";
-import Text from "../../../design/components/Text/native/Text.tsx";
 import _modDef10785 from "../../main_tabs_v2/native/shared_components/user_list/GuildChannelUserList.tsx";
 import _modDef11364 from "../../main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx";
 import _modDef15910 from "../../main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
+import closure_4 from "../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../stores/SelectedChannelStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 let closure_7 = createCacheKey.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const memoResult = importAllResult.memo(function LaunchPadMembers() {
   const tmp = callback();
@@ -74,13 +72,13 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     obj5[0] = tmp.emptyWrapper;
     const obj6 = { style: null, variant: "text-md/semibold", children: null };
     obj6[0] = tmp.emptyText;
-    const intl = getSystemLocale.intl;
-    obj6[2] = intl.string(getSystemLocale.t["+7wtJq"]);
-    obj5[1] = jsx(Text.Text, { style: null, variant: "text-md/semibold", children: null });
+    const intl = tmp2(1236).intl;
+    obj6[2] = intl.string(tmp2(1236).t["+7wtJq"]);
+    obj5[1] = jsx(tmp2(4734).Text, { style: null, variant: "text-md/semibold", children: null });
     tmp8 = <View style={null}>{null}</View>;
   }
   return tmp8;
 });
-const result = require("obj132").fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
 
 export default memoResult;

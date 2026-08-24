@@ -2,20 +2,21 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import closure_5 from "../../../stores/RelationshipStore.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 ({ Fonts, AnalyticEvents: closure_6, MessageFlags: error } = ME);
-let obj = { fontStyle: "italic" };
+let obj = { systemContent: null, messageContent: null };
+obj = { fontStyle: "italic" };
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 12));
 obj.lineHeight = 16;
 obj[0] = obj;
-const createCacheKey = {};
+createCacheKey = {};
 const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 12));
 createCacheKey.lineHeight = 16;
 obj[1] = createCacheKey;
@@ -23,22 +24,23 @@ let closure_9 = createCacheKey.createStyles(obj);
 const importDefaultResult1 = importDefaultResult;
 const memoResult = importAllResult.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
+  let message;
   const tmp = callback();
   let obj = channel(11763);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  const message = messageRequestPreview.message;
+  message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
   const items = [closure_5];
   const items1 = [message];
   const stateFromStoresObject = channel(589).useStateFromStoresObject(items, () => {
     let isBlockedForMessageResult = null != message;
     if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = closure_1_5.isBlockedForMessage(message);
+      isBlockedForMessageResult = closure_1_5.isBlockedForMessage(tmp);
     }
     const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
-    let isIgnoredForMessageResult = null != message;
+    let isIgnoredForMessageResult = null != tmp;
     if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = closure_1_5.isIgnoredForMessage(message);
+      isIgnoredForMessageResult = closure_1_5.isIgnoredForMessage(tmp);
     }
     obj[1] = isIgnoredForMessageResult;
     return obj;
@@ -47,8 +49,8 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   const effect = importAllResult.useEffect(() => {
     if (null != message) {
-      message(dependencyMap[10]);
-      const obj = { is_spam: null, channel_id: null, other_user_id: null };
+      let obj = message(closure_1_2[10]);
+      obj = { is_spam: null, channel_id: null, other_user_id: null };
       ({ isSpam: obj2[0], id: obj2[1] } = channel);
       obj[2] = tmp.author.id;
       obj.track(closure_1_6.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
@@ -100,19 +102,22 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
         } else if (null != message.interaction) {
           const intl4 = tmp2(1236).intl;
           stringResult1 = intl4.string(tmp2(1236).t["2v7kfl"]);
-        } else if (message.hasFlag(constants.IS_VOICE_MESSAGE)) {
-          const intl3 = tmp2(1236).intl;
-          stringResult1 = intl3.string(tmp2(1236).t["6bhHrc"]);
         } else {
-          const intl2 = tmp2(1236).intl;
-          const string = intl2.string;
-          const t = tmp2(1236).t;
-          if (hasFlagResult) {
-            stringResult1 = string(t.Xxm5i3);
+          if (message.hasFlag(constants.IS_VOICE_MESSAGE)) {
+            const intl3 = tmp2(1236).intl;
+            stringResult1 = intl3.string(tmp2(1236).t["6bhHrc"]);
           } else {
-            stringResult1 = string(t.LoMGlg);
+            const intl2 = tmp2(1236).intl;
+            const string = intl2.string;
+            const t = tmp2(1236).t;
+            if (hasFlagResult) {
+              stringResult1 = string(t.Xxm5i3);
+            } else {
+              stringResult1 = string(t.LoMGlg);
+            }
+            hasFlagResult = message.hasFlag(tmp15.IS_COMPONENTS_V2);
           }
-          hasFlagResult = message.hasFlag(constants.IS_COMPONENTS_V2);
+          tmp15 = constants;
         }
         stringResult = stringResult1;
         flag = false;
@@ -125,8 +130,8 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
     }
   }
   obj = { style: channel.style, children: jsx(tmp2(1297).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={channel.style}>{jsx(tmp2(1297).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  return <View style={arg0.style}>{jsx(tmp2(1297).LegacyText, { style: tmp14, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });
-const result = require("obj132").fileFinishedImporting("modules/message_request/native/MessageRequestPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestPreview.tsx");
 
 export default memoResult;

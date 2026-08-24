@@ -1,26 +1,27 @@
 // discord_app/modules/dismissible_content/useSelectedDismissibleContentShared.tsx
-import noop from "../../../_runtime/00019_noop.js";
-import set from "DismissibleContentFrameworkStore.tsx";
+import closure_2 from "../../../_runtime/00019_noop.js";
+import closure_3 from "DismissibleContentFrameworkStore.tsx";
 import { ContentDismissActionType } from "DismissibleContentConstants.tsx";
+import { set } from "DismissibleContentFatigueConfig.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
-export const useSelectedDismissibleContentShared = function useSelectedDismissibleContentShared(arg0, arg1, flag, closure_14) {
+export const useSelectedDismissibleContentShared = function useSelectedDismissibleContentShared(arg0, arg1, flag, id) {
   const _require = arg0;
   dependencyMap = arg1;
   if (flag === undefined) {
     flag = false;
   }
-  const React = closure_14;
+  const React = id;
   closure_3 = undefined;
   let tmp = null != arg0 && !flag;
   if (tmp) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig.tsx").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
   }
   closure_3 = tmp;
-  const items = [tmp, arg1, arg0, closure_14];
+  const items = [tmp, arg1, arg0, id];
   const effect = React.useEffect(() => () => {
     let tmp = closure_3;
     if (closure_3) {
@@ -33,7 +34,7 @@ export const useSelectedDismissibleContentShared = function useSelectedDismissib
       if (!tmp6) {
         let result = closure_1_0(closure_1_1[4]).isGuildDismissibleContent(tmp5);
         if (result) {
-          const lastDismissed2 = closure_1_3.lastDismissed;
+          const lastDismissed2 = tmp2.lastDismissed;
           let guildId;
           if (lastDismissed2 != null) {
             guildId = lastDismissed2.guildId;
@@ -44,6 +45,7 @@ export const useSelectedDismissibleContentShared = function useSelectedDismissib
         const obj = closure_1_0(closure_1_1[4]);
       }
       tmp = tmp6;
+      tmp2 = closure_1_3;
     }
     if (tmp) {
       callback(closure_1_4.AUTO_DISMISS, true);

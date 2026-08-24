@@ -2,8 +2,8 @@
 let propertyIsEnumerable = {}.propertyIsEnumerable;
 if (!getOwnPropertyDescriptor) {
   if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+    propertyIsEnumerable = function propertyIsEnumerable(SymbolResult) {
+      const tmp = getOwnPropertyDescriptor(this, SymbolResult);
       return tmp && tmp.enumerable;
     };
   }
@@ -11,7 +11,7 @@ if (!getOwnPropertyDescriptor) {
 } else {
   const call = propertyIsEnumerable.call;
   if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = require("../discord_app/modules/debug/logAppStart.tsx");
+    let propertyIsEnumerableResult = require("module_1");
   } else {
     propertyIsEnumerableResult = call(obj, 1);
   }

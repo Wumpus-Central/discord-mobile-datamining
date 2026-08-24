@@ -3,7 +3,7 @@ import appendDefault from "BaseTelemetryChannel.tsx";
 import TelemetryChannel from "../TelemetryRingNative.android.tsx";
 import importDefaultResult1 from "../TelemetryRingNative.android.tsx";
 
-require = fn;
+require = arg1;
 let closure_3 = { type: "BYTES", limit: 1048576 };
 appendDefault;
 class SentryTelemetryImpl extends tmp3 {
@@ -23,6 +23,6 @@ prototype["snapshotForBreadcrumbs"] = function snapshotForBreadcrumbs() {
 let items = [require("TelemetryChannel").TelemetryChannel.SENTRY];
 // ThrowIfThisInitialized (0x7c)
 const tmp5 = new "snapshotForBreadcrumbs"(importDefaultResult1, items, tmp, prototype, SentryTelemetryImpl, "snapshotForBreadcrumbs", importDefaultResult1);
-const result = require("obj132").fileFinishedImporting("modules/telemetry_ring/native/channels/SentryTelemetry.tsx");
+const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/SentryTelemetry.tsx");
 
 export default tmp5;

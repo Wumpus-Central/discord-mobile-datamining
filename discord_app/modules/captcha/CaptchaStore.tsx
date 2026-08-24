@@ -2,12 +2,13 @@
 import batchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import setDefault from "../monitoring/MonitoringAgent.tsx";
 import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
 import keys from "../../../_runtime/00644_keys.js";
+import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-require = fn;
+require = arg1;
 keys = keys.create(() => ({ captchaServeVolume: {} }));
-const result = require("obj132").fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
+const result = require("set").fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
 
 export const useCaptchaStore = keys;
 export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
@@ -15,23 +16,26 @@ export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
 };
 export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(arg0) {
   const _require = arg0;
-  require("../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    keys.setState((arg0) => {
+  _batchUpdates.batchUpdates(() => {
+    closure_1_4.setState((arg0) => {
       let sum = arg0;
       if (null == closure_0) {
         return sum;
       } else {
-        const obj = {};
+        let obj = { captchaServeVolume: null };
+        obj = {};
         const merged = Object.assign(sum.captchaServeVolume);
         if (tmp3) {
-          sum = sum.captchaServeVolume[closure_0] + 1;
-          obj[closure_0] = sum;
+          sum = sum.captchaServeVolume[tmp2] + 1;
+          obj[tmp2] = sum;
           obj[0] = obj;
+          let tmp6 = obj;
         } else {
-          obj[closure_0] = 1;
+          obj[tmp2] = 1;
           obj[0] = obj;
+          tmp6 = obj;
         }
-        tmp3 = closure_0 in sum.captchaServeVolume;
+        tmp3 = tmp2 in sum.captchaServeVolume;
       }
     });
   });
@@ -39,9 +43,14 @@ export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(
 export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
   const entries = Object.entries(keys.getState().captchaServeVolume);
   while (tmp2 !== undefined) {
+    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
+    let tmp8 = importDefault;
+    let tmp9 = dependencyMap;
     [tmp6, tmp7] = tmp5;
-    let obj = { name: null, tags: null };
+    let obj = setDefault;
+    obj = { name: null, tags: null };
+    let tmp10 = require;
     obj[0] = set.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;
     let _HermesInternal = HermesInternal;
     let items = ["user_flow:" + tmp6];

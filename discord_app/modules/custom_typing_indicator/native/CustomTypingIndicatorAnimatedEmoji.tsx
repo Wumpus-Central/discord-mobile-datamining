@@ -1,10 +1,10 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let closure_5 = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,RING_RADIUS,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-RING_RADIUS*Math.sin(currentAngle)},{translateY:translateY.get()+RING_RADIUS*(Math.cos(currentAngle)-1)}]};}" };
-let result = require("obj132").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
+let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
 
 export default function CustomTypingIndicatorAnimatedEmoji(size) {
   ({ emoji, index } = size);
@@ -15,12 +15,14 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
   const animation = size.animation;
   let enabled;
   let sharedValue;
+  let sharedValue1;
+  let sharedValue2;
   enabled = sharedValue.useContext(index(enabled[2]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let obj = index(enabled[3]);
   sharedValue = obj.useSharedValue(1);
   obj1 = index(enabled[3]);
-  const sharedValue1 = obj1.useSharedValue(0);
-  const sharedValue2 = index(enabled[3]).useSharedValue(0);
+  sharedValue1 = obj1.useSharedValue(0);
+  sharedValue2 = index(enabled[3]).useSharedValue(0);
   let items = [animation, index, enabled, sharedValue1, sharedValue, sharedValue2];
   const effect = sharedValue.useEffect(() => {
     let obj = sharedValue;
@@ -30,40 +32,40 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
     if (!enabled) {
       if (null != animation) {
         const result3 = 200 * index;
-        if (index(enabled[4]).CustomTypingIndicatorAnimation.PULSE === animation) {
-          index(enabled[3]);
-          const tmp13Result = index(enabled[3]);
-          const tmp13Result1 = index(enabled[3]);
-          const tmp13Result2 = index(enabled[5]);
-          const withTimingResult = index(enabled[5]).withTiming(1.18, { duration: 360 });
-          const result4 = obj.set(tmp13Result.withDelay(result3, tmp13Result.withRepeat(tmp13Result1.withSequence(withTimingResult, index(enabled[5]).withTiming(1, { duration: 360 })), -1)));
-          const tmp13Result3 = index(enabled[5]);
-        } else if (index(enabled[4]).CustomTypingIndicatorAnimation.RING === animation) {
-          const tmp13Result4 = index(enabled[3]);
-          const tmp13Result5 = index(enabled[3]);
+        if (index(enabled[4]).CustomTypingIndicatorAnimation.PULSE === tmp4) {
+          let tmp13Result = tmp13(tmp14[3]);
+          tmp13Result = tmp13(tmp14[3]);
+          const tmp13Result1 = tmp13(tmp14[3]);
+          const tmp13Result2 = tmp13(tmp14[5]);
+          const withTimingResult = tmp13(tmp14[5]).withTiming(1.18, { duration: 360 });
+          const result4 = obj.set(tmp13Result.withDelay(result3, tmp13Result.withRepeat(tmp13Result1.withSequence(withTimingResult, tmp13(tmp14[5]).withTiming(1, { duration: 360 })), -1)));
+          const tmp13Result3 = tmp13(tmp14[5]);
+        } else if (tmp13(tmp14[4]).CustomTypingIndicatorAnimation.RING === tmp4) {
+          const tmp13Result4 = tmp13(tmp14[3]);
+          const tmp13Result5 = tmp13(tmp14[3]);
           const _Math = Math;
           obj = { duration: 1400, easing: null };
           const result5 = 2 * Math.PI;
-          obj[1] = index(enabled[3]).Easing.linear;
-          const result6 = sharedValue1.set(tmp13Result4.withDelay(result3, tmp13Result5.withRepeat(index(enabled[5]).withTiming(result5, obj), -1)));
-          const tmp13Result6 = index(enabled[5]);
-        } else if (index(enabled[4]).CustomTypingIndicatorAnimation.WAVE === animation) {
-          const tmp13Result7 = index(enabled[3]);
-          const tmp13Result8 = index(enabled[3]);
-          const tmp13Result9 = index(enabled[3]);
-          const tmp13Result10 = index(enabled[5]);
-          const withTimingResult1 = index(enabled[5]).withTiming(-6, { duration: 260 });
-          const tmp13Result11 = index(enabled[5]);
-          const withTimingResult2 = index(enabled[5]).withTiming(0, { duration: 260 });
-          const result7 = sharedValue2.set(tmp13Result7.withDelay(result3, tmp13Result8.withRepeat(tmp13Result9.withSequence(withTimingResult1, withTimingResult2, index(enabled[5]).withTiming(0, { duration: 380 })), -1)));
-          const tmp13Result12 = index(enabled[5]);
+          obj[1] = tmp13(tmp14[3]).Easing.linear;
+          const result6 = sharedValue1.set(tmp13Result4.withDelay(result3, tmp13Result5.withRepeat(tmp13(tmp14[5]).withTiming(result5, obj), -1)));
+          const tmp13Result6 = tmp13(tmp14[5]);
+        } else if (tmp13(tmp14[4]).CustomTypingIndicatorAnimation.WAVE === tmp4) {
+          const tmp13Result7 = tmp13(tmp14[3]);
+          const tmp13Result8 = tmp13(tmp14[3]);
+          const tmp13Result9 = tmp13(tmp14[3]);
+          const tmp13Result10 = tmp13(tmp14[5]);
+          const withTimingResult1 = tmp13(tmp14[5]).withTiming(-6, { duration: 260 });
+          const tmp13Result11 = tmp13(tmp14[5]);
+          const withTimingResult2 = tmp13(tmp14[5]).withTiming(0, { duration: 260 });
+          const result7 = sharedValue2.set(tmp13Result7.withDelay(result3, tmp13Result8.withRepeat(tmp13Result9.withSequence(withTimingResult1, withTimingResult2, tmp13(tmp14[5]).withTiming(0, { duration: 380 })), -1)));
+          const tmp13Result12 = tmp13(tmp14[5]);
         }
         return () => {
-          index(enabled[3]).cancelAnimation(closure_3);
-          const obj = index(enabled[3]);
-          index(enabled[3]).cancelAnimation(closure_4);
-          const obj2 = index(enabled[3]);
-          index(enabled[3]).cancelAnimation(closure_5);
+          closure_1_0(closure_1_2[3]).cancelAnimation(closure_3);
+          const obj = closure_1_0(closure_1_2[3]);
+          closure_1_0(closure_1_2[3]).cancelAnimation(closure_4);
+          const obj2 = closure_1_0(closure_1_2[3]);
+          closure_1_0(closure_1_2[3]).cancelAnimation(closure_5);
         };
       }
     }
@@ -72,7 +74,8 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
   const tmp = enabled;
   const fn = function _() {
     let value = sharedValue1.get();
-    let obj = { scale: sharedValue.get() };
+    let obj = { transform: null };
+    obj = { scale: sharedValue.get() };
     const items = [obj, , ];
     obj = { translateX: -5 * Math.sin(value) };
     items[1] = obj;
@@ -87,6 +90,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
   fn.__workletHash = 5950955699805;
   fn.__initData = sharedValue2;
   const animatedStyle = index(enabled[3]).useAnimatedStyle(fn);
+  obj = { style: animatedStyle, children: null };
   obj = { name: emoji.name, src: null, fastImageStyle: null, textEmojiStyle: null };
   let emojiURL;
   const obj4 = index(enabled[3]);

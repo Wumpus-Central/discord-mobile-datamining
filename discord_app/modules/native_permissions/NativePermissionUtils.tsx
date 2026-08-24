@@ -8,7 +8,7 @@ if (ProcessArgs.isDiscordTestSet()) {
 } else {
   _default = require("combineStatuses").default;
 }
-const result = require("obj132").fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
 export const NativePermissionsRequestOptions = require("requestAuthorization").NativePermissionsRequestOptions;

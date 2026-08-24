@@ -1,10 +1,10 @@
 // discord_app/modules/lurker_mode/LurkerActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
-import initialize from "LurkingStore.tsx";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../stores/RTCConnectionStore.tsx";
+import closure_5 from "LurkingStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function stopLurkingAll(items) {
   const self = this;
   const apply = _stopLurkingAll.apply;
@@ -48,17 +48,17 @@ function _stopLurkingAll() {
               obj[0] = arg1;
               return obj;
             } else {
-              const found = closure_1_5.lurkingGuildIds().filter((item, index) => !closure_0.includes(item));
+              const found = closure_1_5.lurkingGuildIds().filter((arg0) => !closure_0.includes(arg0));
               if (0 !== found.length) {
                 const _Map = Map;
-                const map = new Map(found.map((item, index) => {
-                  const items = [item, lurkingSourceForGuild.getLurkingSourceForGuild(item)];
+                const map = new Map(found.map((closure_0) => {
+                  const items = [closure_0, lurkingSourceForGuild.getLurkingSourceForGuild(closure_0)];
                   return items;
                 }));
                 v0 = map;
                 obj1 = v0(table[4]);
                 obj1 = { type: "GUILD_STOP_LURKING", ignoredGuildIds: null };
-                obj1[1] = closure_0;
+                obj1[1] = tmp19;
                 obj1.dispatch(obj1);
                 table = 1;
                 v0 = 1;
@@ -85,6 +85,7 @@ function _stopLurkingAll() {
                 return obj2;
               }
               const lurkingGuildIdsResult = closure_1_5.lurkingGuildIds();
+              tmp19 = closure_0;
             }
           } else if (arg0 === 1) {
             v0 = 3;
@@ -147,14 +148,14 @@ function _stopLurking() {
               return obj;
             } else {
               let table = tmp4;
-              let length = 0;
+              closure_1 = 0;
               let callback;
               let tmp19 = callback;
               if (callback === undefined) {
                 tmp19 = null;
               }
               callback = tmp19;
-              length = undefined;
+              closure_1 = undefined;
               table = undefined;
               c3 = 1;
               guildId = 1;
@@ -171,8 +172,8 @@ function _stopLurking() {
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                length = closure_5.lurkingGuildIds();
-                if (0 !== length.length) {
+                closure_1 = closure_5.lurkingGuildIds();
+                if (0 !== closure_1.length) {
                   const items = [callback, guildId.getGuildId()];
                   table = items.filter(callback(table[6]).isNotNullish);
                   c3 = 2;
@@ -212,7 +213,7 @@ function _stopLurking() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 
 export { stopLurkingAll };
 export const stopLurking = function stopLurking(guildId) {

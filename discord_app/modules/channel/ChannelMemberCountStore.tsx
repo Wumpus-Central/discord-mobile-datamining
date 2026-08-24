@@ -2,8 +2,8 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import closure_2 from "../gateway/GatewayConnectionStore.tsx";
+import closure_3 from "../../stores/ChannelStore.tsx";
 
 let closure_4 = Object.freeze({ online: null, total: null });
 let closure_5 = {};
@@ -45,8 +45,8 @@ const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
       const channelMemberCount = socket.requestChannelMemberCount(_null.guildId, _null.channelId);
     }
     const keys = DISCORD_EPOCHDefault.keys(closure_6);
-    const item = keys.forEach((item, index) => {
-      if (null == channel.getChannel(item)) {
+    const item = keys.forEach((arg0) => {
+      if (null == channel.getChannel(arg0)) {
         delete tmp[tmp2];
       }
     });
@@ -66,6 +66,6 @@ const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
     return true;
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
 
 export default channelMemberCountStore;

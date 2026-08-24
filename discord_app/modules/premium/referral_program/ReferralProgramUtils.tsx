@@ -1,21 +1,21 @@
 // discord_app/modules/premium/referral_program/ReferralProgramUtils.tsx
 import DISCORD_EPOCHDefault from "../../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import obj132Default from "../../../utils/Durations.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import addVersionedDismissedContent from "../../dismissible_content/DismissibleContentUtils.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useIsEligibleSenderForReferralProgram from "hooks/useIsEligibleSenderForReferralProgram.tsx";
-import emitChanges from "../ReferralTrialStore.tsx";
+import closure_3 from "../ReferralTrialStore.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
 export const getReferralTrialOfferExpirationCopy = function getReferralTrialOfferExpirationCopy(time) {
   const diff = time - Date.now();
-  const result = diff / obj132Default.Millis.HOUR;
+  const result = diff / setDefault.Millis.HOUR;
   if (result > 24) {
     const intl3 = getSystemLocale.intl;
     let obj = { numDays: null };
@@ -74,6 +74,7 @@ export const markReferralProgramPopoverSeen = function markReferralProgramPopove
     let obj = { dismissAction: null };
     obj[0] = ContentDismissActionType.INDIRECT_ACTION;
     const result = addVersionedDismissedContent.markSnowflakeBoundDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, promotionId, obj);
+    const obj2 = addVersionedDismissedContent;
   } else {
     obj = UNSAFE_isDismissibleContentDismissed;
     const result1 = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
@@ -84,20 +85,23 @@ export const isReferralProgramPopoverSeen = function isReferralProgramPopoverSee
 };
 export const useIsReferralProgramPopoverShowable = function useIsReferralProgramPopoverShowable() {
   let isEligibleSenderForReferralProgram = useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(false);
+  const obj = useIsEligibleSenderForReferralProgram;
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => store.getReferralsRemaining());
+  const obj2 = initialize;
   const items1 = [closure_3];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getReminderStateId());
+  const obj3 = initialize;
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {
-      let tmpResult = UNSAFE_isDismissibleContentDismissed;
-      tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
+      let tmpResult = tmp(4196);
+      tmp8 = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, stateFromStores1).isDismissed;
     }
     let tmp6 = tmp8;
   } else {
-    tmpResult = UNSAFE_isDismissibleContentDismissed;
-    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+    tmpResult = tmp(4196);
+    tmp6 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
   if (isEligibleSenderForReferralProgram) {
     isEligibleSenderForReferralProgram = tmp6;

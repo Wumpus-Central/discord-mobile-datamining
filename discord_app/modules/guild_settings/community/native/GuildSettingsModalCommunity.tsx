@@ -1,33 +1,39 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import comparator from "../../../../stores/GuildChannelStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildChannelStore.tsx";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "../../../../stores/GuildChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
-import handleFormInit from "../../GuildSettingsStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/RelationshipStore.tsx";
+import closure_9 from "../../../../stores/UserStore.tsx";
+import closure_10 from "../../GuildSettingsStore.tsx";
 import { calculateLocaleOptions } from "../../discovery/GuildSettingsDiscoveryConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey = { overview: { flex: 1 }, overviewContent: null };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx");
 
 export default function GuildSettingsModalCommunity(guildId) {
   guildId = guildId.guildId;
+  let preferredLocale = guildId;
   const onClose = guildId.onClose;
   let navigation;
+  let submitting;
+  let hasChanges;
+  let guild;
+  let rulesChannel;
   let publicUpdatesChannel;
   let callback1;
-  let preferredLocale;
+  preferredLocale = undefined;
   let obj = preferredLocale(navigation[12]);
   const token = obj.useToken(onClose(navigation[11]).modules.mobile.TABLE_ROW_PADDING);
   obj1 = preferredLocale(navigation[13]);
@@ -35,20 +41,20 @@ export default function GuildSettingsModalCommunity(guildId) {
   let obj2 = preferredLocale(navigation[14]);
   const items = [closure_10];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => props.getProps());
-  const submitting = stateFromStoresObject.submitting;
-  const hasChanges = stateFromStoresObject.hasChanges;
-  const guild = stateFromStoresObject.guild;
+  submitting = stateFromStoresObject.submitting;
+  hasChanges = stateFromStoresObject.hasChanges;
+  guild = stateFromStoresObject.guild;
   let obj3 = preferredLocale(navigation[14]);
   const items1 = [publicUpdatesChannel];
   const stateFromStoresObject1 = obj3.useStateFromStoresObject(items1, () => {
     let canResult = null != guild;
     if (canResult) {
-      canResult = publicUpdatesChannel.can(closure_1_15.MANAGE_GUILD, guild);
+      canResult = publicUpdatesChannel.can(closure_1_15.MANAGE_GUILD, tmp);
     }
     const obj = { canManage: canResult, isAdmin: null };
-    let canResult1 = null != guild;
+    let canResult1 = null != tmp;
     if (canResult1) {
-      canResult1 = publicUpdatesChannel.can(closure_1_15.ADMINISTRATOR, guild);
+      canResult1 = publicUpdatesChannel.can(closure_1_15.ADMINISTRATOR, tmp);
     }
     obj[1] = canResult1;
     return obj;
@@ -60,17 +66,17 @@ export default function GuildSettingsModalCommunity(guildId) {
     let obj = hasChanges;
     let rulesChannelId;
     if (guild != null) {
-      rulesChannelId = guild.rulesChannelId;
+      rulesChannelId = tmp.rulesChannelId;
     }
     obj = { rulesChannel: hasChanges.getChannel(rulesChannelId), publicUpdatesChannel: null };
     let prop;
     if (guild != null) {
-      prop = guild.publicUpdatesChannelId;
+      prop = tmp.publicUpdatesChannelId;
     }
     obj[1] = obj.getChannel(prop);
     return obj;
   });
-  const rulesChannel = stateFromStoresObject2.rulesChannel;
+  rulesChannel = stateFromStoresObject2.rulesChannel;
   publicUpdatesChannel = stateFromStoresObject2.publicUpdatesChannel;
   let obj5 = submitting;
   const items3 = [guild, navigation, onClose];
@@ -92,13 +98,13 @@ export default function GuildSettingsModalCommunity(guildId) {
   const callback = submitting.useCallback(() => {
     if (null != guild) {
       const _Set = Set;
-      const set = new Set(guild.features);
+      const set = new Set(tmp.features);
       set.delete(closure_1_13.COMMUNITY);
       set.delete(closure_1_13.DISCOVERABLE);
       const obj = { features: null, rulesChannelId: null, publicUpdatesChannelId: null, preferredLocale: null };
       obj[0] = set;
-      obj[3] = guild.preferredLocale;
-      onClose(navigation[15]).saveGuild(guild.id, obj);
+      obj[3] = tmp.preferredLocale;
+      onClose(navigation[15]).saveGuild(tmp.id, obj);
       const obj2 = onClose(navigation[15]);
     }
   }, items4);
@@ -112,20 +118,20 @@ export default function GuildSettingsModalCommunity(guildId) {
   }
   const items5 = [guild, navigation, submitting, hasChanges, onClose];
   const effect1 = obj5.useEffect(() => {
-    function handlePublicCancelChanges(closure_2) {
+    function handlePublicCancelChanges(arg0) {
       if (null != closure_5) {
-        handlePublicSaveChanges(navigation[15]).cancelChanges(tmp.id);
-        const obj = handlePublicSaveChanges(navigation[15]);
+        handlePublicSaveChanges(closure_1_2[15]).cancelChanges(tmp.id);
+        const obj = handlePublicSaveChanges(closure_1_2[15]);
       }
       if (handlePublicSaveChanges != null) {
         tmp5();
       }
     }
-    function handlePublicSaveChanges(closure_1_2) {
+    function handlePublicSaveChanges(arg0) {
       if (null != closure_5) {
         ({ id, rulesChannelId, publicUpdatesChannelId, preferredLocale, features, safetyAlertsChannelId } = closure_5);
-        handlePublicSaveChanges(navigation[15]);
-        const obj = { rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, preferredLocale: null, features: null };
+        let obj = handlePublicSaveChanges(closure_1_2[15]);
+        obj = { rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, preferredLocale: null, features: null };
         obj[0] = rulesChannelId;
         obj[1] = safetyAlertsChannelId;
         obj[2] = publicUpdatesChannelId;
@@ -162,26 +168,27 @@ export default function GuildSettingsModalCommunity(guildId) {
   callback1 = obj5.useCallback(() => {
     const channels = guild.getChannels(preferredLocale);
     if (null != channels) {
-      const found = channels[rulesChannel].filter((item, index) => item.channel.type === constants.GUILD_TEXT);
-      const mapped = found.map((item, index) => {
-        const channel = item.channel;
+      const found = channels[rulesChannel].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+      const mapped = found.map((channel) => {
+        channel = channel.channel;
         const obj = { value: channel.id, label: callback(table[19]).computeChannelName(channel, closure_9, closure_8, true) };
         return obj;
       });
+      const arr = channels[rulesChannel];
     }
     return [];
   }, items6);
   const items7 = [callback1, rulesChannel];
   const items8 = [callback1, publicUpdatesChannel];
   const callback2 = obj5.useCallback(() => {
-    onClose(navigation[20]);
-    let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    let obj = onClose(navigation[20]);
+    obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
     const intl = preferredLocale(navigation[16]).intl;
     obj[0] = intl.string(preferredLocale(navigation[16]).t.Yr6nGx);
     obj[1] = callback1();
     obj[2] = function onItemSelect(rulesChannelId) {
-      callback(8874);
-      const obj = { rulesChannelId };
+      let obj = callback(8874);
+      obj = { rulesChannelId };
       obj.updateGuild(obj);
       callback(4342).hideActionSheet();
     };
@@ -194,14 +201,14 @@ export default function GuildSettingsModalCommunity(guildId) {
   }, items7);
   preferredLocale = undefined;
   const callback3 = obj5.useCallback(() => {
-    onClose(navigation[20]);
-    let obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    let obj = onClose(navigation[20]);
+    obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
     const intl = preferredLocale(navigation[16]).intl;
     obj[0] = intl.string(preferredLocale(navigation[16]).t.VqhxxN);
     obj[1] = callback1();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      callback(8874);
-      const obj = { publicUpdatesChannelId };
+      let obj = callback(8874);
+      obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
       callback(4342).hideActionSheet();
     };
@@ -218,6 +225,7 @@ export default function GuildSettingsModalCommunity(guildId) {
   [][0] = preferredLocale;
   let tmp21Result1 = null;
   if (null != guild) {
+    obj = { style: null, contentContainerStyle: null, children: null };
     ({ overview: obj7[0], overviewContent: obj7[1] } = tmp5);
     obj = { style: null, spacing: null, children: null };
     obj1 = { paddingHorizontal: null };
@@ -241,10 +249,10 @@ export default function GuildSettingsModalCommunity(guildId) {
     }
     obj4 = { text: null };
     obj4[0] = str;
-    obj3[2] = callback(tmp(tmp2[26]).TableRow.TrailingText, obj4);
+    obj3[2] = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj4);
     obj3[4] = callback2;
-    obj2[2] = callback(tmp(tmp2[26]).TableRow, obj3);
-    const items9 = [callback(tmp(tmp2[25]).TableRowGroup, obj2), , , ];
+    obj2[2] = closure_16(tmp(tmp2[26]).TableRow, obj3);
+    const items9 = [closure_16(tmp(tmp2[25]).TableRowGroup, obj2), , , ];
     let str2 = null;
     if (null != publicUpdatesChannel) {
       tmpResult = tmp(tmp2[19]);
@@ -262,15 +270,15 @@ export default function GuildSettingsModalCommunity(guildId) {
     }
     const obj7 = { text: null };
     obj7[0] = str2;
-    obj6[2] = callback(tmp(tmp2[26]).TableRow.TrailingText, obj7);
+    obj6[2] = closure_16(tmp(tmp2[26]).TableRow.TrailingText, obj7);
     obj6[4] = callback3;
-    obj5[2] = callback(tmp(tmp2[26]).TableRow, obj6);
-    items9[1] = callback(tmp(tmp2[25]).TableRowGroup, obj5);
+    obj5[2] = closure_16(tmp(tmp2[26]).TableRow, obj6);
+    items9[1] = closure_16(tmp(tmp2[25]).TableRowGroup, obj5);
     preferredLocale = undefined;
     let tmp21Result = null;
     if (null != guild) {
       preferredLocale = guild.preferredLocale;
-      let found = calculateLocaleOptions().find((item, index) => item.value === preferredLocale);
+      let found = calculateLocaleOptions().find((value) => value.value === preferredLocale);
       let str3;
       if (found != null) {
         str3 = found.label;
@@ -287,10 +295,10 @@ export default function GuildSettingsModalCommunity(guildId) {
       }
       const obj10 = { text: null };
       obj10[0] = str3;
-      obj9[2] = callback(tmp(tmp2[26]).TableRow.TrailingText, obj10);
+      obj9[2] = tmp21(tmp(tmp2[26]).TableRow.TrailingText, obj10);
       obj9[4] = tmp19;
-      obj8[2] = callback(tmp(tmp2[26]).TableRow, obj9);
-      tmp21Result = callback(tmp(tmp2[25]).TableRowGroup, obj8);
+      obj8[2] = tmp21(tmp(tmp2[26]).TableRow, obj9);
+      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj8);
       const arr11 = calculateLocaleOptions();
     }
     items9[2] = tmp21Result;
@@ -303,13 +311,14 @@ export default function GuildSettingsModalCommunity(guildId) {
       const intl8 = tmp(tmp2[16]).intl;
       obj12[2] = intl8.string(tmp(tmp2[16]).t.c1BmbC);
       obj12[3] = !tmp12;
-      obj11[2] = callback(tmp(tmp2[26]).TableRow, obj12);
-      tmp21Result = callback(tmp(tmp2[25]).TableRowGroup, obj11);
+      obj11[2] = tmp21(tmp(tmp2[26]).TableRow, obj12);
+      tmp21Result = tmp21(tmp(tmp2[25]).TableRowGroup, obj11);
     }
     items9[3] = tmp21Result;
     obj[2] = items9;
-    obj[2] = callback2(tmp(tmp2[24]).Stack, obj);
-    tmp21Result1 = callback(tmp(tmp2[23]).Form, obj);
+    obj[2] = closure_17(tmp(tmp2[24]).Stack, obj);
+    tmp21Result1 = tmp21(tmp(tmp2[23]).Form, obj);
+    const tmp22 = closure_17;
   }
   return tmp21Result1;
 };

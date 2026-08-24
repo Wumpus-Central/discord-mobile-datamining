@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx
-import obj132 from "../../../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import keys from "../../../../../../../_runtime/00644_keys.js";
 
@@ -8,7 +8,7 @@ let obj = keys.create(() => {
   obj = { states: new Map() };
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
+let result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/stores/ChannelDetailsStore.tsx");
 
 export const useChannelDetailsStore = obj;
 export const deleteChannelStates = function deleteChannelStates() {
@@ -60,7 +60,6 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   const map = new Map(states);
   const result = map.set(arg0, obj);
   map(705).batchUpdates(() => closure_1_3.setState({ states: map }));
-  const obj5 = map(705);
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;

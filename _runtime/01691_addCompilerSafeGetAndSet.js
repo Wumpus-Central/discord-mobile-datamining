@@ -2,18 +2,25 @@
 import valueSetter from "01692_valueSetter.js";
 import isJest from "01657_isJest.js";
 
-isJest.shouldBeUseWeb();
+isJest = isJest.shouldBeUseWeb();
 let closure_2 = isJest.isJest();
 function addCompilerSafeGetAndSet(prototype) {
   closure_0 = prototype;
-  const obj = {
-    value(__isAnimationDefinition) {
-      if (typeof __isAnimationDefinition === "function") {
-        if (!__isAnimationDefinition.__isAnimationDefinition) {
-          obj.value = __isAnimationDefinition(obj.value);
+  let obj = {
+    value() {
+      return obj.value;
+    },
+    configurable: false,
+    enumerable: false
+  };
+  obj = {
+    value(fn) {
+      if (typeof fn === "function") {
+        if (!fn.__isAnimationDefinition) {
+          obj.value = fn(obj.value);
         }
       }
-      obj.value = __isAnimationDefinition;
+      obj.value = fn;
     },
     configurable: false,
     enumerable: false
@@ -30,32 +37,32 @@ hideInternalValueProp.__closure = {};
 hideInternalValueProp.__workletHash = 3380393180484;
 hideInternalValueProp.__initData = { code: "function hideInternalValueProp_Pnpm_mutablesTs2(mutable){Object.defineProperty(mutable,'_value',{configurable:false,enumerable:false});}" };
 function makeMutableUI(initialValues) {
-  new Map();
+  let obj = new Map();
   closure_1 = initialValues;
-  let obj = {};
+  obj = {};
   Object.defineProperty(obj, "value", {
     get: () => closure_1,
-    set: (closure_1) => {
+    set: (value) => {
       obj = obj(initialValues[2]);
-      obj.valueSetter(obj, closure_1);
+      obj.valueSetter(obj, value);
     }
   });
   Object.defineProperty(obj, "_value", {
     get: () => closure_1,
     set: (arg0) => {
       closure_1 = arg0;
-      const item = arg0.forEach((item, index) => {
-        item(closure_0);
+      const item = arg0.forEach((arg0) => {
+        arg0(closure_0);
       });
     }
   });
-  obj.modify = function modify(fn, flag) {
+  obj.modify = function modify(arg0, flag) {
     if (flag === undefined) {
       flag = true;
     }
     obj = obj(initialValues[2]);
-    if (undefined !== fn) {
-      let tmp2 = fn(initialValues);
+    if (undefined !== arg0) {
+      let tmp2 = arg0(initialValues);
     } else {
       tmp2 = initialValues;
     }
@@ -77,13 +84,20 @@ function makeMutableUI(initialValues) {
     HermesBuiltin.throwTypeError();
   }
   obj = {
-    value(__isAnimationDefinition) {
-      if (typeof __isAnimationDefinition === "function") {
-        if (!__isAnimationDefinition.__isAnimationDefinition) {
-          obj.value = __isAnimationDefinition(obj.value);
+    value() {
+      return obj.value;
+    },
+    configurable: false,
+    enumerable: false
+  };
+  obj = {
+    value(fn) {
+      if (typeof fn === "function") {
+        if (!fn.__isAnimationDefinition) {
+          obj.value = fn(obj.value);
         }
       }
-      obj.value = __isAnimationDefinition;
+      obj.value = fn;
     },
     configurable: false,
     enumerable: false
@@ -101,31 +115,32 @@ let closure_9 = { code: "function pnpm_mutablesTs7(){const{mutable,modifier,forc
 
 export { makeMutableUI };
 export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
+  let obj = prototype;
   const map = new Map();
-  let obj = {};
+  obj = {};
   Object.defineProperty(obj, "value", {
     get: () => obj,
-    set: (closure_1) => {
+    set: (value) => {
       obj = obj(map[2]);
-      obj.valueSetter(obj, closure_1);
+      obj.valueSetter(obj, value);
     }
   });
   Object.defineProperty(obj, "_value", {
     get: () => obj,
     set: (arg0) => {
       closure_0 = arg0;
-      const item = map.forEach((item, index) => {
-        item(closure_0);
+      const item = map.forEach((arg0) => {
+        arg0(closure_0);
       });
     }
   });
-  obj.modify = function modify(fn, flag) {
+  obj.modify = function modify(arg0, flag) {
     if (flag === undefined) {
       flag = true;
     }
     obj = obj(map[2]);
-    if (undefined !== fn) {
-      let value = fn(iter.value);
+    if (undefined !== arg0) {
+      let value = arg0(iter.value);
     } else {
       value = iter.value;
     }
@@ -146,13 +161,20 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     HermesBuiltin.throwTypeError();
   }
   obj = {
-    value(__isAnimationDefinition) {
-      if (typeof __isAnimationDefinition === "function") {
-        if (!__isAnimationDefinition.__isAnimationDefinition) {
-          obj.value = __isAnimationDefinition(obj.value);
+    value() {
+      return obj.value;
+    },
+    configurable: false,
+    enumerable: false
+  };
+  obj = {
+    value(fn) {
+      if (typeof fn === "function") {
+        if (!fn.__isAnimationDefinition) {
+          obj.value = fn(obj.value);
         }
       }
-      obj.value = __isAnimationDefinition;
+      obj.value = fn;
     },
     configurable: false,
     enumerable: false
@@ -164,9 +186,9 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
   return obj;
 }) : (function makeMutableNative(initial) {
   let obj = initial;
-  obj(obj[3]);
+  obj = obj(obj[3]);
   let fn = function n() {
-    return makeMutableUI(obj);
+    return closure_1_5(obj);
   };
   obj = { makeMutableUI, initial };
   fn.__closure = obj;
@@ -189,7 +211,7 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
       closure_0 = newValue;
       obj = obj(obj[4]);
       const fn = function n() {
-        obj.value = closure_0;
+        closure_1_1.value = closure_0;
       };
       obj = { mutable: obj, newValue };
       fn.__closure = obj;
@@ -214,7 +236,7 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     if (arg1 === undefined) {
       flag = true;
     }
-    obj(obj[4]);
+    obj = obj(obj[4]);
     const fn = function u() {
       flag.modify(closure_0, flag);
     };
@@ -249,13 +271,13 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
       enumerable: false
     },
     set: {
-      value(__isAnimationDefinition) {
-        if (typeof __isAnimationDefinition === "function") {
-          if (!__isAnimationDefinition.__isAnimationDefinition) {
-            obj.value = __isAnimationDefinition(obj.value);
+      value(fn) {
+        if (typeof fn === "function") {
+          if (!fn.__isAnimationDefinition) {
+            obj.value = fn(obj.value);
           }
         }
-        obj.value = __isAnimationDefinition;
+        obj.value = fn;
       },
       configurable: false,
       enumerable: false

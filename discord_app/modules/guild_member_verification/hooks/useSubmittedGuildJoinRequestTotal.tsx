@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx
-import updateSubmittedGuildJoinRequestTotal from "../GuildJoinRequestStore.tsx";
+import closure_2 from "../GuildJoinRequestStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");
 
 export const useSubmittedGuildJoinRequestTotal = function useSubmittedGuildJoinRequestTotal(guildId) {
   guildId = guildId.guildId;

@@ -1,5 +1,5 @@
 // discord_app/modules/media_uploads/DetectedFileSize.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 function _getDetectedFileSize() {
   const self = this;
@@ -117,7 +117,7 @@ function _getDetectedFileSize() {
   }
   return applyArgumentsResult;
 }
-let result = require("obj132").fileFinishedImporting("modules/media_uploads/DetectedFileSize.tsx");
+let result = require("set").fileFinishedImporting("modules/media_uploads/DetectedFileSize.tsx");
 
 export const getDetectedFileSize = function getDetectedFileSize() {
   const self = this;

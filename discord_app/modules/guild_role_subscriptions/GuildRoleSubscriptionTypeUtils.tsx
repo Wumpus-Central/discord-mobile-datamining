@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
 import MAX_SUBSCRIPTION_TIERS from "GuildRoleSubscriptionsConstants.tsx";
 
 let closure_2 = MAX_SUBSCRIPTION_TIERS.GuildRoleSubscriptionBenefitTypes;
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
-const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
 
 export const getBenefitKey = function getBenefitKey(id) {
   if ("roles" in id) {
@@ -22,11 +22,11 @@ export const formatPlanInterval = function formatPlanInterval(first2) {
   const interval = first2.interval;
   const intl = getSystemLocale.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
-    let cuSp8Q = getSystemLocale.t["3rUmPQ"];
-  } else if (SubscriptionIntervalTypes.MONTH === interval) {
-    cuSp8Q = getSystemLocale.t.zuN545;
-  } else if (SubscriptionIntervalTypes.YEAR === interval) {
-    cuSp8Q = getSystemLocale.t.cuSp8Q;
+    let cuSp8Q = tmp(1236).t["3rUmPQ"];
+  } else if (tmp3.MONTH === interval) {
+    cuSp8Q = tmp(1236).t.zuN545;
+  } else if (tmp3.YEAR === interval) {
+    cuSp8Q = tmp(1236).t.cuSp8Q;
   }
   return intl.format(cuSp8Q, { count: first2.interval_count });
 };
@@ -46,12 +46,12 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
     obj = { days: null };
     obj[0] = interval_count;
     formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.jzH70Z, obj);
-  } else if (SubscriptionIntervalTypes.MONTH === interval) {
+  } else if (tmp.MONTH === interval) {
     const intl2 = getSystemLocale.intl;
     obj1 = { months: null };
     obj1[0] = interval_count;
     return intl2.formatToPlainString(getSystemLocale.t.erUSmA, obj1);
-  } else if (SubscriptionIntervalTypes.YEAR === interval) {
+  } else if (tmp.YEAR === interval) {
     const intl = getSystemLocale.intl;
     obj = { years: null };
     obj[0] = interval_count;

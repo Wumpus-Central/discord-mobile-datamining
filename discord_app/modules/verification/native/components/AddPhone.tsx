@@ -1,21 +1,22 @@
 // discord_app/modules/verification/native/components/AddPhone.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleSetLocationMetadata from "../../../phone/PhoneStore.tsx";
-import handleRequiredAction from "../../../../stores/UserRequiredActionStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_8 from "../../../phone/PhoneStore.tsx";
+import closure_9 from "../../../../stores/UserRequiredActionStore.tsx";
+import closure_10 from "../../../../stores/UserStore.tsx";
 import { UserFlags } from "../../../../Constants.tsx";
 import { NOOP_NULL } from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { background: null, container: null, title: null, input: null, redesignInput: null, button: null };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 16, flex: 1 };
 createCacheKey[2] = { textAlign: "center" };
@@ -23,11 +24,13 @@ createCacheKey[3] = { marginTop: 24 };
 createCacheKey[4] = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[5] = { marginTop: 8 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/verification/native/components/AddPhone.tsx");
+let obj1 = { borderRadius: ThemesDefault.radii.lg };
+let result = require("set").fileFinishedImporting("modules/verification/native/components/AddPhone.tsx");
 
 export default function AddPhone(reason) {
   ({ header, onComplete: require, onDeletePhone } = reason);
   reason = reason.reason;
+  let stateFromStores;
   let callback;
   let React;
   let first;
@@ -153,7 +156,7 @@ export default function AddPhone(reason) {
   let tmp = callback2();
   let obj = require(reason[12]);
   const items = [closure_10];
-  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
+  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = require(reason[12]);
   const items1 = [closure_9];
   let phone;
@@ -177,6 +180,7 @@ export default function AddPhone(reason) {
   }
   const items2 = [first1];
   const stateFromStores2 = require(reason[12]).useStateFromStores(items2, () => first1.getCountryCode());
+  let str = stateFromStores2.code;
   const tmp2Result = require(reason[12]);
   [tmp13, tmp14] = callback(stateFromStores2.code.split(" "), 2);
   React = tmp14;
@@ -213,10 +217,12 @@ export default function AddPhone(reason) {
       if (c5 == null) {
         str = "";
       }
-      callback(str);
+      closure_9(str);
+      const tmp2 = closure_9;
     }
   }, items3);
-  const items4 = [tmp.background, reason.style];
+  obj = { style: items4, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+  items4 = [tmp.background, reason.style];
   obj = { style: tmp.container, children: null };
   if (header != null) {
     const items5 = [header, , , ];
@@ -224,8 +230,8 @@ export default function AddPhone(reason) {
     ({ input: obj8[0], redesignInput: obj8[1] } = tmp);
     if (null != phone) {
       if (!result) {
-        const intl3 = require(tmp3[17]).intl;
-        let stringResult = intl3.string(require(tmp3[17]).t.K6R0UP);
+        const intl3 = tmp2(tmp3[17]).intl;
+        let stringResult = intl3.string(tmp2(tmp3[17]).t.K6R0UP);
       }
       function handleSubmit() {
         const self = this;
@@ -245,7 +251,7 @@ export default function AddPhone(reason) {
         action(arg0);
         callback2(arg1);
       };
-      obj1[7] = require(tmp3[19]).PhoneOrEmailSelectorForceMode.PHONE;
+      obj1[7] = tmp2(tmp3[19]).PhoneOrEmailSelectorForceMode.PHONE;
       obj1[9] = handleSubmit;
       obj1[10] = tmp11Result1[0];
       obj1[11] = function onPressCountrySelector() {
@@ -260,27 +266,27 @@ export default function AddPhone(reason) {
       }
       let obj3 = { variant: "primary", size: null, text: null, onPress: null, loading: null };
       obj3[1] = str5;
-      const intl5 = require(tmp3[17]).intl;
-      obj3[2] = intl5.string(require(tmp3[17]).t.PDTjLN);
+      const intl5 = tmp2(tmp3[17]).intl;
+      obj3[2] = intl5.string(tmp2(tmp3[17]).t.PDTjLN);
       obj3[3] = handleSubmit;
       obj3[4] = tmp11Result2[0];
-      obj2[1] = tmp22(require(tmp3[23]).Button, obj3);
+      obj2[1] = tmp22(tmp2(tmp3[23]).Button, obj3);
       items5[2] = tmp22(tmp25, obj2);
       let tmp22Result = null;
       if (tmp8) {
         obj4 = { style: null, children: null };
         obj4[0] = tmp.button;
         const obj5 = { variant: "secondary", size: "md", text: null, onPress: null };
-        const intl6 = require(tmp3[17]).intl;
-        obj5[2] = intl6.string(require(tmp3[17]).t.kYvzoQ);
+        const intl6 = tmp2(tmp3[17]).intl;
+        obj5[2] = intl6.string(tmp2(tmp3[17]).t.kYvzoQ);
         obj5[3] = function onPress() {
           let obj = stateFromStores;
           if (null != stateFromStores) {
             if (obj.hasFlag(ref.MFA_SMS)) {
               obj = { importer: null };
               obj[0] = function importer() {
-                return closure_1_0(reason[22])(reason[25], reason.paths).then((result) => {
-                  closure_0 = result.default;
+                return closure_1_0(closure_1_2[22])(closure_1_2[25], closure_1_2.paths).then((arg0) => {
+                  closure_0 = arg0.default;
                   return (arg0) => {
                     const obj = {};
                     const merged = Object.assign(arg0);
@@ -300,7 +306,7 @@ export default function AddPhone(reason) {
             }
           }
         };
-        obj4[1] = tmp22(require(tmp3[23]).Button, obj5);
+        obj4[1] = tmp22(tmp2(tmp3[23]).Button, obj5);
         tmp22Result = tmp22(tmp25, obj4);
       }
       items5[3] = tmp22Result;
@@ -308,21 +314,20 @@ export default function AddPhone(reason) {
       obj[3] = tmp24(tmp25, obj);
       return tmp22(tmp23, obj);
     }
-    const intl4 = require(tmp3[17]).intl;
-    stringResult = intl4.string(require(tmp3[17]).t["64bX0M"]);
+    const intl4 = tmp2(tmp3[17]).intl;
+    stringResult = intl4.string(tmp2(tmp3[17]).t["64bX0M"]);
   } else {
     const obj6 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj6[0] = tmp.title;
     if (null != phone) {
       if (!result) {
-        const intl = require(tmp3[17]).intl;
-        let stringResult1 = intl.string(require(tmp3[17]).t.WO0zBE);
+        const intl = tmp2(tmp3[17]).intl;
+        let stringResult1 = intl.string(tmp2(tmp3[17]).t.WO0zBE);
       }
       obj6[4] = stringResult1;
       tmp22Result = tmp22(tmp31, obj6);
     }
-    const intl2 = require(tmp3[17]).intl;
-    stringResult1 = intl2.string(require(tmp3[17]).t.hY8QTR);
+    const intl2 = tmp2(tmp3[17]).intl;
+    stringResult1 = intl2.string(tmp2(tmp3[17]).t.hY8QTR);
   }
-  const tmp12 = callback(stateFromStores2.code.split(" "), 2);
 };

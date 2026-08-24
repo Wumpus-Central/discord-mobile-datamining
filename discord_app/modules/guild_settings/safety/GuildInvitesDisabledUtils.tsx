@@ -1,18 +1,18 @@
 // discord_app/modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx
-import computeAlertSettings from "../../guild_antiraid/GuildIncidentsStore.tsx";
-import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import closure_2 from "../../guild_antiraid/GuildIncidentsStore.tsx";
+import closure_3 from "../../../stores/PermissionStore.tsx";
 import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
 
 export const useInvitesDisabledPermission = function useInvitesDisabledPermission(guild) {
   const _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  return _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
@@ -23,7 +23,7 @@ export const useInvitesDisabledPermission = function useInvitesDisabledPermissio
 export const useInvitesDisabled = function useInvitesDisabled(features) {
   const _require = features;
   const items = [closure_2];
-  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  const stateFromStores = _initialize.useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_2.getGuildIncident(tmp.id);
@@ -56,7 +56,7 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
   let _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  let stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
+  let stateFromStores = _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
@@ -64,9 +64,9 @@ export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDi
     return canResult;
   }, items1);
   _require = guild;
-  const obj = initialize;
+  const obj = _initialize;
   const items2 = [closure_2];
-  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
+  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
       guildIncident = closure_1_2.getGuildIncident(tmp.id);

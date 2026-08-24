@@ -1,12 +1,13 @@
 // _runtime/01289__isNativeReflectConstruct.js
 import noop from "00019_noop.js";
 import _isNativeReflectConstruct2 from "01278__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import c4 from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import _inherits from "00098__inherits.js";
 
+let _class = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -35,23 +36,25 @@ function formatReact(str) {
   return bindFormatValuesResult;
 }
 const createElement = noop.createElement;
-function _class(dependencyMap) {
+let obj = { format: formatReact, builder: null };
+_class = exports.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+_class = function _class(arg0) {
   const self = this;
-  _classCallCheck(this, _class);
-  const obj = _getPrototypeOf(_class);
+  callback(this, _class);
+  const obj = callback2(_class);
   if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, callback2(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
-  const tmp3Result = _possibleConstructorReturn(self, constructResult);
+  const tmp3Result = closure_4(self, constructResult);
   tmp3Result._nodeKey = 0;
   tmp3Result.result = [];
   return tmp3Result;
-}
+};
 _inherits(_class, _isNativeReflectConstruct2.FormatBuilder);
-let obj = {
+obj = {
   key: "pushRichTextTag",
   value: function pushRichTextTag(arg0, arg1, arg2) {
     const result = this.result;
@@ -93,23 +96,25 @@ obj[1] = _createClass(_class, items);
 
 export { formatReact };
 export const makeReactFormatter = function makeReactFormatter(arg0) {
-  _class = function _class(dependencyMap) {
+  let obj = { format: formatReact, builder: null };
+  _class = arg0;
+  _class = function _class(arg0) {
     const self = this;
-    _classCallCheck(this, _class);
-    const obj = _getPrototypeOf(_class);
+    callback(this, _class);
+    const obj = callback2(_class);
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
-      let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+      let constructResult = Reflect.construct(obj, arguments, callback2(self).constructor);
     } else {
       constructResult = obj(...arguments);
     }
-    const tmp3Result = _possibleConstructorReturn(self, constructResult);
+    const tmp3Result = closure_4(self, constructResult);
     tmp3Result._nodeKey = 0;
     tmp3Result.result = [];
     return tmp3Result;
   };
   _inherits(_class, _class(1278).FormatBuilder);
-  let obj = {
+  obj = {
     key: "pushRichTextTag",
     value: function pushRichTextTag(arg0, arg1, arg2) {
       const result = this.result;
@@ -152,23 +157,23 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
 };
 export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
   $b(arg0, key) {
-    return <strong key={key}>{arg0}</strong>;
+    return <strong key={arg1}>{arg0}</strong>;
   },
   $i(arg0, key) {
-    return <em key={key}>{arg0}</em>;
+    return <em key={arg1}>{arg0}</em>;
   },
   $del(arg0, key) {
-    return <del key={key}>{arg0}</del>;
+    return <del key={arg1}>{arg0}</del>;
   },
   $code(arg0, key) {
-    return <code key={key}>{arg0}</code>;
+    return <code key={arg1}>{arg0}</code>;
   },
   $link(arg0, key) {
     [tmp] = arg2;
-    return <a href={tmp} key={key}>{arg0}</a>;
+    return <a href={tmp} key={arg1}>{arg0}</a>;
   },
   $p(arg0, key) {
-    return <p key={key}>{arg0}</p>;
+    return <p key={arg1}>{arg0}</p>;
   }
 };
 export const reactFormatter = obj;

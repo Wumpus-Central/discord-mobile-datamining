@@ -1,20 +1,16 @@
 // discord_app/modules/media_channel/MediaPostEmbedUtils.tsx
-import getSystemLocale from "../../intl/index.native.tsx";
-import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import getAvatarURLDefault from "../../utils/AvatarUtils.tsx";
 import trimTrailingPunctuation from "../coded_links/findCodedLinks.tsx";
-import ME2 from "../links/LinkUtils.tsx";
 import getNicknameDefault from "../../utils/NicknameUtils.tsx";
 import MAX_THUMBNAIL_COUNT from "MediaPostThumbnailUtils.tsx";
-import computeChannelName from "../channel/useChannelName.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/RelationshipStore.tsx";
+import closure_5 from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 ({ GuildFeatures: closure_6, MessageAttachmentFlags: error } = ME);
-let result = require("obj132").fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 
 export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(arg0) {
   ({ mediaPostEmbedData, guild, parentChannel, user, canAccess } = arg0);
@@ -30,9 +26,9 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (!canAccess) {
       has_media_attachment = mediaPostEmbedData.has_media_attachment;
     }
-    const intl = getSystemLocale.intl;
+    const intl = tmp17(1236).intl;
     const string = intl.string;
-    const t = getSystemLocale.t;
+    const t = tmp17(1236).t;
     if (canAccess) {
       let stringResult = string(t.UsZEBI);
     } else {
@@ -55,17 +51,19 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
       obj = { id: null, icon: null, size: 40, canAnimate: false };
       ({ guild_id: obj3[0], guild_icon: obj3[1] } = mediaPostEmbedData);
       avatarURL = getAvatarURLDefault.getGuildIconURL(obj);
+      const obj2 = getAvatarURLDefault;
     }
     const thumbnail = mediaPostEmbedData.thumbnail;
     let flag = false;
     if (null != thumbnail) {
       ({ height, width } = thumbnail);
       flag = null != height && null != width && height >= width;
+      const tmp8 = null != height && null != width && height >= width;
     }
     if (flag) {
       flag = !has_media_attachment;
     }
-    let tmp17Result = hasFlag;
+    let tmp17Result = tmp17(1403);
     const thumbnail2 = mediaPostEmbedData.thumbnail;
     let num2;
     if (thumbnail2 != null) {
@@ -75,6 +73,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
       num2 = 0;
     }
     let str = mediaPostEmbedData.title;
+    const obj7 = MAX_THUMBNAIL_COUNT;
     tmp6 = null != avatarURL && selectedGuildId === mediaPostEmbedData.guild_id;
     if (str == null) {
       str = "";
@@ -86,8 +85,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[3] = thumbnailImage;
     let stringResult1;
     if (has_media_attachment) {
-      const intl2 = getSystemLocale.intl;
-      stringResult1 = intl2.string(getSystemLocale.t.Yonlia);
+      const intl2 = tmp17(1236).intl;
+      stringResult1 = intl2.string(tmp17(1236).t.Yonlia);
     }
     obj[4] = stringResult1;
     ({ parent_channel_id: obj5[5], channel_id: obj5[6] } = mediaPostEmbedData);
@@ -111,7 +110,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     obj[13] = name;
     let channelName;
     if (null != parentChannel) {
-      tmp17Result = computeChannelName;
+      tmp17Result = tmp17(4984);
       channelName = tmp17Result.computeChannelName(parentChannel, closure_5, closure_4);
     }
     obj[14] = channelName;
@@ -128,13 +127,14 @@ export const getMediaPostEmbedChannelId = function getMediaPostEmbedChannelId(ur
   if (null != url) {
     const parseURLSafelyResult = trimTrailingPunctuation.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmp2Result = trimTrailingPunctuation;
+      let tmp2Result = tmp2(4358);
       const result = tmp2Result.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmp2Result = ME2;
+        tmp2Result = tmp2(4488);
         tryParseChannelPathResult = tmp2Result.tryParseChannelPath(result);
       }
     }
+    const obj = trimTrailingPunctuation;
   }
   if (null != tryParseChannelPathResult) {
     let channelId = tryParseChannelPathResult.threadId;
@@ -150,13 +150,14 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
   if (null != url) {
     const parseURLSafelyResult = trimTrailingPunctuation.parseURLSafely(url);
     if (null != parseURLSafelyResult) {
-      let tmpResult = trimTrailingPunctuation;
+      let tmpResult = tmp(4358);
       const result = tmpResult.remainingPathFromDiscordHostMatch(parseURLSafelyResult);
       if (null != result) {
-        tmpResult = ME2;
+        tmpResult = tmp(4488);
         return tmpResult.tryParseChannelPath(result);
       }
     }
+    const obj = trimTrailingPunctuation;
   }
 };
 export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {

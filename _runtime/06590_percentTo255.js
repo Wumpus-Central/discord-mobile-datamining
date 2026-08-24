@@ -13,7 +13,7 @@ arg5.convertPercentageColor = (str) => {
     if (!regex.test(replaced)) {
       return str;
     } else {
-      const match = regex.exec(replaced);
+      const match = obj2.exec(replaced);
       if (!match) {
         const _console = console;
         const _HermesInternal = HermesInternal;
@@ -54,5 +54,6 @@ arg5.convertPercentageColor = (str) => {
       const combined2 = _HermesInternal2.concat(combined, ", ", result, ")");
       endsWithResult = match[7].endsWith("%");
     }
+    obj2 = regex;
   }
 };

@@ -1,14 +1,14 @@
 // discord_app/modules/app_database/modules/messages/isReadableChannel.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import createChannelRecord from "../../../../records/ChannelRecord.tsx";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import closure_1 from "../../../../stores/ChannelStore.tsx";
+import closure_2 from "../../../../stores/PermissionStore.tsx";
 import ME from "../../../../Constants.tsx";
 
 const isTextChannel = createChannelRecord.isTextChannel;
 ({ ChannelTypes: c3, BasicPermissions } = ME);
 let closure_4 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
-const result = obj132.fileFinishedImporting("modules/app_database/modules/messages/isReadableChannel.tsx");
+const result = set.fileFinishedImporting("modules/app_database/modules/messages/isReadableChannel.tsx");
 
 export const isReadableChannel = function isReadableChannel(basicChannel) {
   let tmp = null != basicChannel;

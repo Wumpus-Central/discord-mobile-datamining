@@ -1,5 +1,5 @@
 // _runtime/07762_SyncPromise.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const SyncPromise = require;
@@ -92,7 +92,7 @@ let items = [
   {
     key: "catch",
     value: function _catch(arg0) {
-      return this.then((result) => result, arg0);
+      return this.then((arg0) => arg0, arg0);
     }
   },
   {
@@ -102,9 +102,9 @@ let items = [
       arg0((arg0, arg1) => {
         closure_0 = arg0;
         const _self = arg1;
-        return _self.then((result) => {
+        return _self.then((arg0) => {
           c3 = false;
-          closure_2 = result;
+          closure_2 = arg0;
           if (closure_0) {
             tmp();
           }
@@ -114,7 +114,7 @@ let items = [
           if (closure_0) {
             tmp();
           }
-        }).then((result) => {
+        }).then(() => {
           if (closure_3) {
             callback2(closure_2);
           } else {
@@ -130,7 +130,7 @@ let items = [
     value: function __init() {
       const self = this;
       this._resolve = (arg0) => {
-        self._setResult(obj.RESOLVED, arg0);
+        self._setResult(closure_1_2.RESOLVED, arg0);
       };
     }
   },
@@ -139,7 +139,7 @@ let items = [
     value: function __init2() {
       const self = this;
       this._reject = (arg0) => {
-        self._setResult(obj.REJECTED, arg0);
+        self._setResult(closure_1_2.REJECTED, arg0);
       };
     }
   },
@@ -147,16 +147,16 @@ let items = [
     key: "__init3",
     value: function __init3() {
       const self = this;
-      this._setResult = (_state, _value) => {
-        if (self._state === obj.PENDING) {
-          if (obj2.isThenable(_value)) {
-            _value.then(self._resolve, self._reject);
+      this._setResult = (_state, promise) => {
+        if (self._state === closure_1_2.PENDING) {
+          if (obj2.isThenable(promise)) {
+            promise.then(obj._resolve, obj._reject);
           } else {
-            self._state = _state;
-            self._value = _value;
-            self._executeHandlers();
+            obj._state = _state;
+            obj._value = promise;
+            obj._executeHandlers();
           }
-          obj2 = self(dependencyMap[2]);
+          obj2 = self(closure_1_1[2]);
         }
       };
     }
@@ -166,19 +166,20 @@ let items = [
     value: function __init4() {
       const self = this;
       this._executeHandlers = () => {
-        if (self._state !== obj.PENDING) {
-          const _handlers = self._handlers;
+        if (self._state !== closure_1_2.PENDING) {
+          const _handlers = tmp._handlers;
           const substr = _handlers.slice();
-          self._handlers = [];
-          const item = substr.forEach((item, index) => {
-            if (!item[0]) {
+          tmp._handlers = [];
+          const item = substr.forEach((arg0) => {
+            if (!arg0[0]) {
               if (_state._state === closure_1_2.RESOLVED) {
-                item[1](_state._value);
+                arg0[1](tmp._value);
               }
-              if (_state._state === closure_1_2.REJECTED) {
-                item[2](_state._value);
+              if (_state._state === tmp2.REJECTED) {
+                arg0[2](tmp._value);
               }
-              item[0] = true;
+              arg0[0] = true;
+              tmp2 = closure_1_2;
             }
           });
         }
@@ -192,13 +193,13 @@ let c4 = _moduleResult;
 export const SyncPromise = _moduleResult;
 export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
   closure_0 = arg0;
-  return new closure_4((arg0, fn) => {
-    fn(closure_0);
+  return new closure_4((arg0, arg1) => {
+    arg1(closure_0);
   });
 };
 export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
   closure_0 = arg0;
-  return new closure_4((fn) => {
-    fn(closure_0);
+  return new closure_4((arg0) => {
+    arg0(closure_0);
   });
 };

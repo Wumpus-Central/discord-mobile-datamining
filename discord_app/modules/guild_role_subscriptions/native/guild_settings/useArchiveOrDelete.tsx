@@ -1,13 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../../_runtime/00019_noop.js";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx";
 
-const require = fn;
+const require = arg1;
 ({ useEffect: closure_6, useRef: error } = noop);
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
 
 export default function useArchiveOrDelete(guildId, groupListingId, editStateId) {
   const _require = guildId;
@@ -130,17 +131,18 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     return applyArgumentsResult;
   }
   let stringResult3 = dependencyMap;
-  let obj = useFetchListingsForGuild;
+  let obj = _useFetchListingsForGuild;
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = getRoleEmojisAll.useEditStateIds(groupListingId, guildId).removeEditStateId;
-  const deleteSubscriptionListing = require("../../GuildRoleSubscriptionsHooks.tsx").useDeleteSubscriptionListing();
+  let obj2 = getRoleEmojisAll;
+  const deleteSubscriptionListing = _useFetchListingsForGuild.useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = useFetchListingsForGuild;
-  const archiveSubscriptionListing = require("../../GuildRoleSubscriptionsHooks.tsx").useArchiveSubscriptionListing();
+  let obj3 = _useFetchListingsForGuild;
+  const archiveSubscriptionListing = _useFetchListingsForGuild.useArchiveSubscriptionListing();
   closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
   closure_10 = removeEditStateId(null);
-  let obj4 = useFetchListingsForGuild;
+  let obj4 = _useFetchListingsForGuild;
   const first = callback(getRoleEmojisAll.useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
@@ -199,9 +201,9 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     }
   }
   const intl7 = tmp(1236).intl;
-  intl7.formatToPlainString(require("../../../../intl/index.native.tsx").t.x2qwWL, { tierName: first });
+  intl7.formatToPlainString(_getSystemLocale.t.x2qwWL, { tierName: first });
   const intl8 = tmp(1236).intl;
-  intl8.string(require("../../../../intl/index.native.tsx").t.GMtG6p);
+  intl8.string(_getSystemLocale.t.GMtG6p);
   let intl9 = tmp(1236).intl;
   let intl10 = intl9.string;
   let string = tmp(1236).t;

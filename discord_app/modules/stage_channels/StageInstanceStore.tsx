@@ -1,5 +1,5 @@
 // discord_app/modules/stage_channels/StageInstanceStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
@@ -8,15 +8,16 @@ function handleStageInstanceCreateOrUpdate(instance) {
   instance = instance.instance;
   const guild_id = instance.guild_id;
   const items = [instance];
-  let obj = dependencyMap[guild_id];
+  let obj;
+  obj = dependencyMap[guild_id];
   if (obj == null) {
     obj = {};
   }
   obj = {};
   const merged = Object.assign(obj);
-  const item = items.forEach((item, index) => {
-    closure_1_2[item.channel_id] = item;
-    obj[item.channel_id] = item;
+  const item = items.forEach((channel_id) => {
+    closure_1_2[channel_id.channel_id] = channel_id;
+    obj[channel_id.channel_id] = channel_id;
   });
   dependencyMap[guild_id] = obj;
 }
@@ -43,11 +44,11 @@ prototype["isPublic"] = function isPublic(id) {
   }
   return privacy_level === constants.PUBLIC;
 };
-prototype["getStageInstancesByGuild"] = function getStageInstancesByGuild(closure_0) {
-  if (null == closure_0) {
+prototype["getStageInstancesByGuild"] = function getStageInstancesByGuild(id) {
+  if (null == id) {
     let obj = {};
   } else {
-    obj = dependencyMap[closure_0];
+    obj = dependencyMap[id];
     if (obj == null) {
       obj = {};
     }
@@ -63,18 +64,19 @@ const stageInstanceStore = new StageInstanceStore(dispatcherDefault, {
     guilds = guilds.guilds;
     closure_1 = {};
     closure_2 = {};
-    let item = guilds.forEach((item, index) => {
-      ({ id, stage_instances } = item);
-      let obj = table[id];
+    let item = guilds.forEach((arg0) => {
+      ({ id, stage_instances } = arg0);
+      let obj;
+      obj = table[id];
       if (obj == null) {
         obj = {};
       }
       obj = {};
       const merged = Object.assign(obj);
       if (stage_instances != null) {
-        item = stage_instances.forEach((item, index) => {
-          closure_1_2[item.channel_id] = item;
-          obj[item.channel_id] = item;
+        const item = stage_instances.forEach((channel_id) => {
+          closure_1_2[channel_id.channel_id] = channel_id;
+          obj[channel_id.channel_id] = channel_id;
         });
       }
       table[id] = obj;
@@ -82,16 +84,17 @@ const stageInstanceStore = new StageInstanceStore(dispatcherDefault, {
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     ({ id, stage_instances } = guild.guild);
-    let obj = dependencyMap[id];
+    let obj;
+    obj = dependencyMap[id];
     if (obj == null) {
       obj = {};
     }
     obj = {};
     const merged = Object.assign(obj);
     if (stage_instances != null) {
-      const item = stage_instances.forEach((item, index) => {
-        closure_1_2[item.channel_id] = item;
-        obj[item.channel_id] = item;
+      const item = stage_instances.forEach((channel_id) => {
+        closure_1_2[channel_id.channel_id] = channel_id;
+        obj[channel_id.channel_id] = channel_id;
       });
     }
     dependencyMap[id] = obj;
@@ -103,7 +106,7 @@ const stageInstanceStore = new StageInstanceStore(dispatcherDefault, {
     }
     delete tmp2[tmp];
     const keys = Object.keys(obj);
-    const item = keys.forEach((item, index) => {
+    const item = keys.forEach((arg0) => {
       delete tmp2[tmp];
     });
   },
@@ -142,6 +145,6 @@ const stageInstanceStore = new StageInstanceStore(dispatcherDefault, {
     closure_1 = {};
   }
 });
-const result = obj132.fileFinishedImporting("modules/stage_channels/StageInstanceStore.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/StageInstanceStore.tsx");
 
 export default stageInstanceStore;

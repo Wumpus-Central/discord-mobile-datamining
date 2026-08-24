@@ -1,11 +1,11 @@
 // _runtime/00891__isNativeReflectConstruct.js
 import isErrorEvent from "00876_isErrorEvent.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00032__slicedToArray.js";
+import closure_3 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
-import c4 from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
+import closure_6 from "metro/00096__get.js";
 import _inherits from "00098__inherits.js";
 
 const ServerRuntimeClient = require;
@@ -102,7 +102,7 @@ let items = [
         }
       }
       const self = this;
-      let fn = _get(_getPrototypeOf(self.prototype), "captureException", this);
+      let fn = callback4(callback3(self.prototype), "captureException", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -152,7 +152,7 @@ let items = [
         const obj = ServerRuntimeClient(848);
       }
       const self = this;
-      let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", this);
+      let fn = callback4(callback3(self.prototype), "captureEvent", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -184,7 +184,7 @@ let items = [
             obj.monitor_config = obj;
           }
           const obj4 = ServerRuntimeClient(881);
-          [tmp11, tmp12] = _slicedToArray(ServerRuntimeClient(881)._getTraceInfoFromScope(self, arg2), 2);
+          [tmp11, tmp12] = callback(ServerRuntimeClient(881)._getTraceInfoFromScope(self, arg2), 2);
           if (tmp12) {
             obj1 = { trace: null };
             obj1[0] = tmp12;
@@ -194,7 +194,7 @@ let items = [
           const sdkMetadata = self.getSdkMetadata();
           const checkInEnvelope = tmp7Result.createCheckInEnvelope(obj, tmp11, sdkMetadata, tunnel, self.getDsn());
           if (ServerRuntimeClient(823).DEBUG_BUILD) {
-            const debug2 = ServerRuntimeClient(824).debug;
+            const debug2 = tmp7(824).debug;
             debug2.log("Sending checkin:", checkInId.monitorSlug, checkInId.status);
           }
           self.sendEnvelope(checkInEnvelope);
@@ -235,7 +235,7 @@ let items = [
       if (self._options.serverName) {
         platform.server_name = platform.server_name || self._options.serverName;
       }
-      let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
+      let fn = callback4(callback3(self.prototype), "_prepareEvent", self);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

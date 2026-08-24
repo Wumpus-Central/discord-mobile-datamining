@@ -1,19 +1,19 @@
 // discord_app/modules/channel_list_v2/native/items/VoiceChannel.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useEmbeddedAppsDefault from "../../../activities/useEmbeddedAppsForChannel.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleConnectionOpen from "../../../../stores/CollapsedVoiceChannelStore.tsx";
-import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
-import generateOldThreadCutoff from "../../../../stores/ReadStateStore.tsx";
-import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
-import getVoiceStatesForGuild from "../../../../stores/views/SortedVoiceStateStore.tsx";
+import closure_6 from "../../../../stores/CollapsedVoiceChannelStore.tsx";
+import closure_7 from "../../../../stores/PermissionStore.tsx";
+import closure_8 from "../../../../stores/ReadStateStore.tsx";
+import closure_9 from "../../../../stores/UserGuildSettingsStore.tsx";
+import closure_10 from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import { NO_VOICE_STATES } from "../../../../stores/views/SortedVoiceStateStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function _handleVoiceChannelPress() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -113,7 +113,8 @@ function _handleVoiceChannelPress() {
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: closure_12, Permissions: map1 } = ME);
-let obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, maxHeight: 1 };
+let obj = { channelInfo: null, voiceStates: null, voiceStatesCollapsed: null, container: null };
+obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, maxHeight: 1 };
 obj[0] = obj;
 obj[1] = { marginLeft: 36, marginTop: -4, marginBottom: 2 };
 obj[2] = { marginLeft: 16 };
@@ -174,7 +175,7 @@ let closure_17 = importAllResult.memo((channel) => {
   items2[2] = gameMentionsAsPlainText;
   const effect = importAllResult.useEffect(() => {
     if (null !== gameMentionsAsPlainText) {
-      gameMentionsAsPlainText(dependencyMap[26]);
+      obj = gameMentionsAsPlainText(closure_1_2[26]);
       obj = { guild_id: null, channel_id: null };
       ({ guild_id: obj2[0], id: obj2[1] } = channel);
       obj.track(closure_1_12.VOICE_CHANNEL_TOPIC_VIEWED, obj);
@@ -201,7 +202,7 @@ let closure_17 = importAllResult.memo((channel) => {
       })(channel);
     },
     onLongPress() {
-      const result = channel(dependencyMap[29]).openChannelLongPressActionSheet(channel.id);
+      const result = channel(closure_1_2[29]).openChannelLongPressActionSheet(channel.id);
     },
     style: obj.container,
     accessible: true,
@@ -247,8 +248,8 @@ let closure_17 = importAllResult.memo((channel) => {
       obj5 = { users: null, max: 8, guildId: null, renderIcon: false };
       obj5[0] = summarizedVoiceUsers;
       obj5[2] = channel.guild_id;
-      obj4[1] = jsx(tmp18(15392), { users: null, max: 8, guildId: null, renderIcon: false });
-      tmp17Result = <View style={null}>{null}</View>;
+      obj4[1] = tmp17(tmp18(15392), obj5);
+      tmp17Result = tmp17(View, obj4);
       const tmpResult1 = tmp(4979);
     } else {
       const obj6 = { style: null, children: null };
@@ -257,8 +258,8 @@ let closure_17 = importAllResult.memo((channel) => {
       obj7[0] = channel;
       obj7[1] = collapsed;
       obj7[2] = ensureSyncedChannelVoiceStates;
-      obj6[1] = jsx(tmp18(15383), { channel: null, collapsed: null, voiceStates: null });
-      tmp17Result = <View style={null}>{null}</View>;
+      obj6[1] = tmp17(tmp18(15383), obj7);
+      tmp17Result = tmp17(View, obj6);
     }
   }
   obj1[15] = tmp17Result;
@@ -276,7 +277,7 @@ let closure_17 = importAllResult.memo((channel) => {
       })(channel);
     },
     onLongPress() {
-      const result = channel(dependencyMap[29]).openChannelLongPressActionSheet(channel.id);
+      const result = channel(closure_1_2[29]).openChannelLongPressActionSheet(channel.id);
     },
     style: obj.container,
     accessible: true,
@@ -327,7 +328,7 @@ const memoResult = importAllResult.memo((channel) => {
   obj[7] = subtitle;
   return <closure_17 channel={channel} embeddedActivitiesCount={null} collapsed={null} voiceStates={null} selected={null} locked={null} bypassLimit={null} subtitle={null} />;
 });
-let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/VoiceChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/VoiceChannel.tsx");
 
 export default memoResult;
 export const VOICE_USERS_MARGIN_TOP = -4;

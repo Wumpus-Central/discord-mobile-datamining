@@ -2,7 +2,8 @@
 import toJSDefault from "../../../lib/Record.tsx";
 
 toJSDefault;
-const prototype = function BaseCollectiblesItemRecord(skuId) {
+let prototype;
+prototype = function BaseCollectiblesItemRecord(skuId) {
   const tmp = new prototype(new.target);
   // ThrowIfThisInitialized (0x7c)
   tmp.skuId = skuId.skuId;
@@ -26,6 +27,6 @@ prototype["fromServer"] = function fromServer(sku_id) {
   tmp4.skuId = obj.skuId;
   return tmp4;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/BaseCollectiblesItemRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/BaseCollectiblesItemRecord.tsx");
 
 export default prototype;

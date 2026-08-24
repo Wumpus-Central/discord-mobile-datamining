@@ -2,10 +2,10 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import hasAtLeastOneGPlaySynced from "../CollectiblesUtils.tsx";
 import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
 
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
@@ -15,6 +15,7 @@ export default function useMobileCollectiblesPurchaseSKU(product) {
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const collectibleGoogleSkuId = hasAtLeastOneGPlaySynced.getCollectibleGoogleSkuId(product, stateFromStores);
   obj = {};
+  const obj2 = hasAtLeastOneGPlaySynced;
   const merged1 = Object.assign(merged);
   obj.skuId = product.skuId;
   obj.platformSkuId = collectibleGoogleSkuId;

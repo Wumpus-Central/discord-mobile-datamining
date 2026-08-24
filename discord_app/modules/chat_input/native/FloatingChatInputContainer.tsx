@@ -1,15 +1,16 @@
 // discord_app/modules/chat_input/native/FloatingChatInputContainer.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import { Easing } from "../../reanimated/ReanimatedRexport.tsx";
 
-const require = fn;
+const require = arg1;
 function useKeyboardOpenPaddingStyle() {
   token = token(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
   let obj = token(4097);
+  const obj2 = React;
   [tmp5, importDefault] = sharedValue(React.useState(() => {
     const KeyboardController = token(1643).KeyboardController;
     const stateResult = KeyboardController.state();
@@ -59,7 +60,7 @@ function useKeyboardOpenPaddingStyle() {
   }
   sharedValue = tmpResult.useSharedValue(num);
   const items = [tmp5, token, sharedValue];
-  const effect1 = React.useEffect(() => {
+  const effect1 = obj2.useEffect(() => {
     let obj = token(4664);
     let num = 0;
     if (dependencyMap) {
@@ -79,7 +80,7 @@ function useKeyboardOpenPaddingStyle() {
 }
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
 let closure_7 = { code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}" };
-let result = require("obj132").fileFinishedImporting("modules/chat_input/native/FloatingChatInputContainer.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/FloatingChatInputContainer.tsx");
 
 export default function FloatingChatInputContainer(arg0) {
   ({ style, onLayout, children } = arg0);

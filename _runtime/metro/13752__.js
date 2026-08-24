@@ -1,22 +1,22 @@
 // _runtime/metro/13752__.js
 
 export default {
-  isASCIIDigit(decodeResult) {
-    let tmp = decodeResult >= 48;
+  isASCIIDigit(arg0) {
+    let tmp = arg0 >= 48;
     if (tmp) {
-      tmp = decodeResult <= 57;
+      tmp = arg0 <= 57;
     }
     return tmp;
   },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65;
+  isASCIIAlpha(buffer) {
+    let tmp = buffer >= 65;
     if (tmp) {
-      tmp = input <= 90;
+      tmp = buffer <= 90;
     }
     if (!tmp) {
-      let tmp2 = input >= 97;
+      let tmp2 = buffer >= 97;
       if (tmp2) {
-        tmp2 = input <= 122;
+        tmp2 = buffer <= 122;
       }
       tmp = tmp2;
     }
@@ -43,22 +43,22 @@ export default {
     }
     return tmp;
   },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48;
+  isASCIIHex(arg0) {
+    let tmp = arg0 >= 48;
     if (tmp) {
-      tmp = decodeResult <= 57;
+      tmp = arg0 <= 57;
     }
     if (!tmp) {
-      let tmp2 = decodeResult >= 65;
+      let tmp2 = arg0 >= 65;
       if (tmp2) {
-        tmp2 = decodeResult <= 70;
+        tmp2 = arg0 <= 70;
       }
       tmp = tmp2;
     }
     if (!tmp) {
-      let tmp3 = decodeResult >= 97;
+      let tmp3 = arg0 >= 97;
       if (tmp3) {
-        tmp3 = decodeResult <= 102;
+        tmp3 = arg0 <= 102;
       }
       tmp = tmp3;
     }

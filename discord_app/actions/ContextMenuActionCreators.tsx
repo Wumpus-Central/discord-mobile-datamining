@@ -1,5 +1,5 @@
 // discord_app/actions/ContextMenuActionCreators.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 
@@ -122,7 +122,7 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
           tmp16Result = tmp16(6915);
           importDefault = tmp16Result.addResultListener(() => {
             callback();
-            obj = callback(dependencyMap[1]);
+            obj = callback(closure_1_2[1]);
             obj = { type: "CONTEXT_MENU_OPEN", contextMenu: obj };
             obj.dispatch(obj);
           });
@@ -134,12 +134,13 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
     dispatcherDefault.dispatch(obj1);
+    const obj6 = dispatcherDefault;
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }
 }
 const AppContext = ME.AppContext;
-const result = obj132.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
 export function closeContextMenu() {
 

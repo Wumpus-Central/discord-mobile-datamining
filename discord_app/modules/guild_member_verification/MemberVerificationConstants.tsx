@@ -1,17 +1,17 @@
 // discord_app/modules/guild_member_verification/MemberVerificationConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
 import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
+import set from "../../../_runtime/00002_set.js";
 
 const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];
 const items1 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS];
+let set = new Set(items1);
 const items2 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.MULTIPLE_CHOICE, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TEXT_INPUT, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.PARAGRAPH];
-const set = new Set(items1);
-const set1 = new Set(items2);
-const result = obj132.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
+const obj = { field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION };
+const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
 
 export const REQUIRED_FORM_FIELDS = items;
 export const AUTOMATIC_APPROVAL_FORM_FIELDS = set;
-export const MANUAL_APPROVAL_FORM_FIELDS = set1;
+export const MANUAL_APPROVAL_FORM_FIELDS = new Set(items2);
 export const MAX_FORM_ELEMENTS = 5;
 export const MAX_NUM_RULES = 16;
 export const MAX_RULE_LENGTH = 300;

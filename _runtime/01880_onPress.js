@@ -4,7 +4,7 @@ import disabledDefault from "01873_disabled.js";
 import itemsDefault from "01874_items.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopDefault;
 require("noop").useCallback;
 
@@ -39,7 +39,7 @@ export default function _default(icon) {
         tmp(isDefaultPrevented);
       }
       if (!isDefaultPrevented.isDefaultPrevented()) {
-        const KeyboardController = onPress(dependencyMap[5]).KeyboardController;
+        const KeyboardController = onPress(closure_1_2[5]).KeyboardController;
         KeyboardController.setFocusTo("next");
       }
     }, items),
@@ -49,7 +49,7 @@ export default function _default(icon) {
     obj = { disabled: null, theme: null, type: "next" };
     obj[0] = disabled;
     obj[1] = theme;
-    children = <icon disabled={null} theme={null} type="next" />;
+    children = tmp9(icon, obj);
   }
   obj[8] = children;
   return <button accessibilityHint="Moves focus to the next field" accessibilityLabel="Next" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={onPress(1872).TEST_ID_KEYBOARD_TOOLBAR_NEXT} theme={theme} onPress={useCallback((isDefaultPrevented) => {
@@ -57,7 +57,7 @@ export default function _default(icon) {
       tmp(isDefaultPrevented);
     }
     if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = onPress(dependencyMap[5]).KeyboardController;
+      const KeyboardController = onPress(closure_1_2[5]).KeyboardController;
       KeyboardController.setFocusTo("next");
     }
   }, items)}>{null}</button>;

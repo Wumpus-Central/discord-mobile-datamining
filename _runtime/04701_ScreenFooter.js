@@ -15,5 +15,5 @@ noopDefault;
 
 export default ScreenFooter;
 export const FooterComponent = function FooterComponent(children) {
-  return <ScreenFooter collapsable={false}>{children.children}</ScreenFooter>;
+  return <ScreenFooter collapsable={false}>{arg0.children}</ScreenFooter>;
 };

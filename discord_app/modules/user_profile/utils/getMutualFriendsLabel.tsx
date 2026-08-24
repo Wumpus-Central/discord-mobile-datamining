@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/utils/getMutualFriendsLabel.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 
-const result = obj132.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 
 export default function getMutualFriendsLabel(arg0) {
   let str = arg0;

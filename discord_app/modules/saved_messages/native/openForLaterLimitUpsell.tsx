@@ -1,10 +1,10 @@
 // discord_app/modules/saved_messages/native/openForLaterLimitUpsell.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import openPremiumUpsellActionSheetDefault from "../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import PremiumUpsellSubfeatureNames2 from "../../premium/roadblocks/native/utils/PremiumUpsellSubfeatureNames.tsx";
 
-const result = obj132.fileFinishedImporting("modules/saved_messages/native/openForLaterLimitUpsell.tsx");
+const result = set.fileFinishedImporting("modules/saved_messages/native/openForLaterLimitUpsell.tsx");
 
 export default function openForLaterLimitUpsell(arg0, arg1) {
   const PremiumUpsellSubfeatureNames = PremiumUpsellSubfeatureNames2.PremiumUpsellSubfeatureNames;

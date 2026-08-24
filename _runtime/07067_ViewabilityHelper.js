@@ -1,6 +1,6 @@
 // _runtime/07067_ViewabilityHelper.js
 import _createClassDefault from "metro/07051__createClass.js";
-import _classCallCheck from "metro/07050__classCallCheck.js";
+import closure_2 from "metro/07050__classCallCheck.js";
 
 const ViewabilityHelper = arg1;
 class ViewabilityHelper {
@@ -28,7 +28,8 @@ const items = [
   {
     key: "updateViewableItems",
     value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
-      const self = this;
+      let self = this;
+      self = this;
       dependencyMap = arg0;
       closure_2 = arg1;
       closure_3 = arg2;
@@ -75,7 +76,7 @@ const items = [
       }
       if (!waitForInteraction) {
         const prop4 = self.possiblyViewableIndices;
-        const found = prop4.filter((item, index) => {
+        const found = prop4.filter((arg0) => {
           const viewabilityConfig = self.viewabilityConfig;
           let prop;
           if (viewabilityConfig != null) {
@@ -86,7 +87,7 @@ const items = [
           if (viewabilityConfig2 != null) {
             prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
           }
-          return self.isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
+          return self.isItemViewable(arg0, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
         });
         self.viewableIndices = found;
         const viewabilityConfig6 = self.viewabilityConfig;
@@ -115,17 +116,18 @@ const items = [
   {
     key: "checkViewableIndicesChanges",
     value: function checkViewableIndicesChanges(found) {
-      const self = this;
-      found = found.filter((item, index) => {
+      let self = this;
+      self = this;
+      found = found.filter((arg0) => {
         const viewableIndices = self.viewableIndices;
-        return viewableIndices.includes(item);
+        return viewableIndices.includes(arg0);
       });
-      const found1 = found.filter((item, index) => {
+      const found1 = found.filter((arg0) => {
         const lastReportedViewableIndices = self.lastReportedViewableIndices;
-        return !lastReportedViewableIndices.includes(item);
+        return !lastReportedViewableIndices.includes(arg0);
       });
       const prop = this.lastReportedViewableIndices;
-      const found2 = prop.filter((item, index) => !found.includes(item));
+      const found2 = prop.filter((arg0) => !found.includes(arg0));
       if (tmp) {
         self.lastReportedViewableIndices = found;
         const result = self.viewableIndicesChanged(found, found1, found2);
@@ -140,17 +142,17 @@ const items = [
   },
   {
     key: "isItemViewable",
-    value: function isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5) {
-      const size = callback(item);
+    value: function isItemViewable(arg0, arg1, arg2, arg3, width, prop, prop1, closure_5) {
+      const size = closure_5(arg0);
       if (undefined === size) {
         return false;
       } else {
-        const diff = (closure_1 ? size.x : size.y) - closure_2;
-        const tmp3 = closure_1 ? size.width : size.height;
-        if (closure_1) {
-          let width = styles.width;
+        const diff = (arg1 ? size.x : size.y) - arg2;
+        const tmp3 = arg1 ? size.width : size.height;
+        if (arg1) {
+          width = width.width;
         } else {
-          width = styles.height - closure_3;
+          width = width.height - arg3;
         }
         const _Math = Math;
         const _Math2 = Math;

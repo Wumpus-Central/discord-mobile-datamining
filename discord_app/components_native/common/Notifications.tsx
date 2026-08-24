@@ -2,12 +2,12 @@
 import noopAll from "../../../_runtime/00019_noop.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import NotificationWrapperDefault from "../../modules/in_app_notifications/native/InAppNotificationContainer.tsx";
-import handleAlertMessage from "../../stores/native/InAppNotificationStore.tsx";
+import closure_3 from "../../stores/native/InAppNotificationStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 noopAll;
-const result = require("obj132").fileFinishedImporting("components_native/common/Notifications.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default function Notifications() {
   let obj = initialize;

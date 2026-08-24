@@ -1,10 +1,9 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx
-import obj132Default from "../../../utils/Durations.tsx";
-import dispatcherDefault from "../../../Dispatcher.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import getTimeSafe from "../SavedMessagesStore.tsx";
+import closure_3 from "../SavedMessagesStore.tsx";
 
-let require = fn;
+let require = arg1;
 function scheduleNextNotification() {
   if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
     if (null != timeout) {
@@ -12,12 +11,12 @@ function scheduleNextNotification() {
       clearTimeout(timeout);
     }
     messageReminders = messageReminders.getMessageReminders();
-    const found = messageReminders.find((item, index) => {
-      let tmp = null != item.saveData.dueAt;
+    const found = messageReminders.find((saveData) => {
+      let tmp = null != saveData.saveData.dueAt;
       if (tmp) {
         const _Date = Date;
         const date = new Date();
-        tmp = item.saveData.dueAt > date;
+        tmp = saveData.saveData.dueAt > date;
       }
       return tmp;
     });
@@ -32,19 +31,20 @@ function scheduleNextNotification() {
       let _Date = Date;
       const timestamp = Date.now();
       dueAt = found.saveData.dueAt;
-      const sum = timestamp + obj132Default.Millis.WEEK;
+      const sum = timestamp + setDefault.Millis.WEEK;
       if (dueAt.getTime() <= sum) {
         const dueAt2 = found.saveData.dueAt;
         const _Date2 = Date;
         const time = dueAt2.getTime();
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
-          let obj = found(dependencyMap[1]);
+          let obj = found(closure_1_2[1]);
           if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
             obj = { type: "MESSAGE_REMINDER_DUE", savedMessage: null };
             obj[1] = found;
-            dispatcherDefault.dispatch(obj);
-            scheduleNextNotification();
+            closure_1_1(closure_1_2[2]).dispatch(obj);
+            closure_1_5();
+            const obj2 = closure_1_1(closure_1_2[2]);
           }
         }, time - Date.now());
       }
@@ -52,7 +52,6 @@ function scheduleNextNotification() {
       timeout = null;
     }
   }
-  obj = found(8484);
 }
 let c4 = null;
 initializeDefault;
@@ -78,6 +77,6 @@ let prototype = function MessageRemindersNotificationManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("obj132").fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
 
 export default prototype;

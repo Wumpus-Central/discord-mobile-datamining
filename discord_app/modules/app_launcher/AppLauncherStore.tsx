@@ -3,11 +3,11 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import AppLauncherEntrypoint from "AppLauncherTypes.tsx";
 
-require = fn;
+require = arg1;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
-    DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(9566).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
@@ -18,7 +18,7 @@ function handleDismissWithDismissed() {
 function handleSetActiveCommand() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.COMMAND;
   if (DISMISSED === undefined) {
-    DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
+    DISMISSED = tmp(9566).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
   obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
@@ -48,7 +48,7 @@ prototype["shouldShowModal"] = function shouldShowModal() {
   }
   return show;
 };
-prototype["entrypoint"] = function entrypoint(closure_3) {
+prototype["entrypoint"] = function entrypoint(arg0) {
   return obj.entrypoint;
 };
 prototype["lastShownEntrypoint"] = function lastShownEntrypoint() {
@@ -67,7 +67,7 @@ prototype["activeChannelId"] = function activeChannelId() {
 prototype["closeReason"] = function closeReason() {
   return obj.closeReason;
 };
-prototype["initialState"] = function initialState(onSuccess) {
+prototype["initialState"] = function initialState(arg0) {
   return obj.initialState;
 };
 AppLauncherStore.displayName = "AppLauncherStore";
@@ -103,6 +103,6 @@ obj = {
   APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand
 };
 const appLauncherStore = new AppLauncherStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");
 
 export default appLauncherStore;

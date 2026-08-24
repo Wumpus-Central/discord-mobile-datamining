@@ -2,9 +2,9 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import obj132 from "../../../discord_common/js/packages/libdave/index.tsx";
+import set from "../../../discord_common/js/packages/libdave/index.tsx";
 
-require = fn;
+require = arg1;
 let closure_3 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class VerifiedKeyStore extends PersistedStore {
@@ -23,7 +23,7 @@ prototype["getState"] = function getState() {
   return { users: closure_3 };
 };
 prototype["getKeyTrustedAt"] = function getKeyTrustedAt(arg0, uint8Array) {
-  const obj = obj132;
+  const obj = set;
   let tmp2;
   if (dependencyMap[arg0] != null) {
     tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
@@ -50,7 +50,8 @@ const verifiedKeyStore = new VerifiedKeyStore(dispatcherDefault, {
     }
     dependencyMap[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    obj[obj132.serializeKey(uint8Array)] = Date.now();
+    const obj2 = set;
+    obj[set.serializeKey(uint8Array)] = Date.now();
   },
   SECURE_FRAMES_VERIFIED_KEY_DELETE: function handleSecureFramesVerifiedKeyDelete(arg0) {
     let tmp6 = null;
@@ -77,6 +78,6 @@ const verifiedKeyStore = new VerifiedKeyStore(dispatcherDefault, {
     return null != dependencyMap[arg0.userId];
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
 
 export default verifiedKeyStore;

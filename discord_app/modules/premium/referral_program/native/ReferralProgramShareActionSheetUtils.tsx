@@ -1,8 +1,8 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx
-import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
+import closure_0 from "../../../../stores/RelationshipStore.tsx";
 import { UserRowModes } from "../../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
 
 export const buildReferralUserRow = function buildReferralUserRow(selectedNotResendUsers) {
   ({ eligibleUsers, row, selectedUserIds, resendUsers } = selectedNotResendUsers);

@@ -4,7 +4,7 @@ import noop from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 noopDefault;
 ({ useCallback: c3, useMemo: c4 } = noop);
 ({ StyleSheet, Text: c5 } = get_ActivityIndicator);
@@ -20,6 +20,7 @@ export default function _default(rippleRadius) {
   if (button === undefined) {
     button = keyboardState(theme[3]);
   }
+  keyboardState = undefined;
   theme = undefined;
   let obj = onPress(theme[4]);
   keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);

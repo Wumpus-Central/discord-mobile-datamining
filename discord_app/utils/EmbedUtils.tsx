@@ -1,5 +1,5 @@
 // discord_app/utils/EmbedUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 import MessageEmbedTypes from "../modules/messages/EmbedConstants.tsx";
 import ME from "../Constants.tsx";
 
@@ -37,7 +37,7 @@ const re14 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-sh
 const re15 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
 const re16 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
 const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
-let result = obj132.fileFinishedImporting("utils/EmbedUtils.tsx");
+let result = set.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   let obj = { id: null, url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
@@ -122,6 +122,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (tmp16) {
     const image = footer.image;
     tmp16 = image.width > 0 && image.height > 0;
+    const tmp17 = image.width > 0 && image.height > 0;
   }
   if (tmp16) {
     const image2 = footer.image;
@@ -146,19 +147,21 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     if (tmp20) {
       const video = footer.video;
       tmp20 = video.width > 0 && video.height > 0;
+      const tmp21 = video.width > 0 && video.height > 0;
     }
     if (tmp20) {
       obj5 = { width: null, height: null, url: null };
       obj5[0] = footer.video.width;
       obj5[1] = footer.video.height;
       obj6 = { format: "webp" };
+      str = undefined;
       const _URL = URL;
       str = new URL(footer.video.proxy_url);
       const _Object = Object;
       const keys = Object.keys(obj6);
-      const item = keys.forEach((item, index) => {
+      const item = keys.forEach((arg0) => {
         const searchParams = str.searchParams;
-        const result = searchParams.set(item, obj6[item]);
+        const result = searchParams.set(arg0, obj6[arg0]);
       });
       obj5[2] = str.toString();
       obj.thumbnail = obj5;
@@ -167,6 +170,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     if (tmp27) {
       const video2 = footer.video;
       tmp27 = video2.width > 0 && video2.height > 0;
+      const tmp28 = video2.width > 0 && video2.height > 0;
     }
     if (tmp27) {
       ({ provider, video: video3 } = footer);
@@ -176,6 +180,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
           let isMatch = null != video3.proxy_url;
           if (!isMatch) {
             isMatch = /^https:/i.test(video3.url);
+            const obj13 = /^https:/i;
           }
           let tmp33 = null != id;
           if (tmp33) {
@@ -224,7 +229,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     if (fields == null) {
       fields = [];
     }
-    obj.fields = fields.map((item, index) => ({ rawName: item.name, rawValue: item.value, inline: item.inline }));
+    obj.fields = fields.map((name) => ({ rawName: name.name, rawValue: name.value, inline: name.inline }));
   } else {
     obj.fields = [];
   }
@@ -242,13 +247,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
 export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
   const map = new Map();
   const items = [];
-  const item = mapped.forEach((item, index) => {
-    if (null != item.url) {
-      const value = map.get(item.url);
+  const item = mapped.forEach((url) => {
+    if (null != url.url) {
+      const value = map.get(url.url);
       if (null == value) {
-        items.push(item);
-        const result = map.set(item.url, item);
-      } else if (null != item.image) {
+        items.push(url);
+        const result = obj.set(url.url, url);
+      } else if (null != url.image) {
         if (null == value.images) {
           value.images = [];
           if (null != value.image) {
@@ -257,10 +262,11 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
           }
         }
         const images1 = value.images;
-        images1.push(item.image);
+        images1.push(url.image);
       }
+      obj = map;
     } else {
-      items.push(item);
+      items.push(url);
     }
   });
   return items;
@@ -277,6 +283,7 @@ export const isEmbedInline = function isEmbedInline(first1) {
     let tmp2 = type === constants2.GIFV;
     if (!tmp2) {
       tmp2 = type !== constants2.RICH && null == author && null == rawTitle;
+      const tmp3 = type !== constants2.RICH && null == author && null == rawTitle;
     }
     tmp = tmp2;
   }
@@ -367,6 +374,7 @@ export const getMaxEmbedMediaSize = function getMaxEmbedMediaSize(provider) {
         if (provider2 != null) {
           name1 = provider2.name;
         }
+        const tmp3 = getEffectiveVideoProvider;
       }
     }
     obj = { maxMediaWidth: 400, maxMediaHeight: 300 };
@@ -384,10 +392,10 @@ export const shouldStripEmbeds = function shouldStripEmbeds(message) {
   let someResult = "" !== message.content;
   if (!someResult) {
     const messageSnapshots = message.messageSnapshots;
-    someResult = messageSnapshots.some((item, index) => {
-      let tmp = "" !== item.message.content;
+    someResult = messageSnapshots.some((message) => {
+      let tmp = "" !== message.message.content;
       if (!tmp) {
-        tmp = item.message.attachments.length > 0;
+        tmp = message.message.attachments.length > 0;
       }
       return tmp;
     });

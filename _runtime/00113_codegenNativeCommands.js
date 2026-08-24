@@ -4,11 +4,11 @@ const dependencyMap = arg6;
 arg5.default = function codegenNativeCommands(supportedCommands) {
   const obj = {};
   supportedCommands = supportedCommands.supportedCommands;
-  const item = supportedCommands.forEach((item, index) => {
-    closure_0 = item;
-    closure_0[item] = (arg0) => {
+  const item = supportedCommands.forEach((arg0) => {
+    closure_0 = arg0;
+    closure_0[arg0] = (arg0) => {
       const substr = [...arguments].slice();
-      item(closure_1_1[0]).dispatchCommand(arg0, item, substr);
+      callback(closure_1_1[0]).dispatchCommand(arg0, callback, substr);
     };
   });
   return obj;

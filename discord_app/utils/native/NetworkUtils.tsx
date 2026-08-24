@@ -1,5 +1,5 @@
 // discord_app/utils/native/NetworkUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import ME from "../../Constants.tsx";
 import importDefaultResult from "../../../_runtime/01476_configure.js";
@@ -18,15 +18,19 @@ function notifyListeners(isConnected) {
     carrier = details.carrier;
   }
   obj[2] = carrier;
+  let flag = isConnected;
+  if (isConnected == null) {
+    flag = false;
+  }
   obj.log("Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.cellularGeneration);
-  const item = isConnected ? closure_4 : closure_5.forEach((item, index) => {
+  const item = isConnected ? closure_4 : closure_5.forEach((arg0) => {
     flag = isConnected;
     if (isConnected == null) {
       flag = false;
     }
-    return item(flag, obj);
+    return arg0(flag, obj);
   });
-  const item1 = arr3.forEach((item, index) => item(obj));
+  const item1 = arr3.forEach((arg0) => arg0(obj));
 }
 const NetworkConnectionTypes = ME.NetworkConnectionTypes;
 let obj = new timestampDefault("NetworkUtils");
@@ -37,8 +41,8 @@ let closure_6 = [];
 let c7 = null;
 let c8 = false;
 let response = importDefaultResult.fetch();
-response.then((result) => {
-  let flag = result.isConnected;
+response.then((isConnected) => {
+  let flag = isConnected.isConnected;
   if (flag == null) {
     flag = false;
   }
@@ -47,8 +51,8 @@ obj = {
   addOnlineCallback(_handleNetworkOnline) {
     if (null == closure_7) {
       closure_7 = importDefaultResult.addEventListener(notifyListeners);
+      obj = importDefaultResult;
     }
-    arr = arr.push(_handleNetworkOnline);
   },
   removeOnlineCallback(_handleNetworkOnline) {
     const index = arr.indexOf(_handleNetworkOnline);
@@ -74,18 +78,19 @@ obj = {
     arr2.push(_handleNetworkOffline);
     if (null == closure_7) {
       closure_7 = importDefaultResult.addEventListener(notifyListeners);
+      obj = importDefaultResult;
     }
   },
   removeOfflineCallback(_handleNetworkOffline) {
     const index = arr2.indexOf(_handleNetworkOffline);
     if (-1 !== index) {
-      arr2.splice(index, 1);
+      arr.splice(index, 1);
       let tmp5 = null != _null;
       if (tmp5) {
-        tmp5 = 0 === arr2.length;
+        tmp5 = 0 === arr.length;
       }
       if (tmp5) {
-        tmp5 = 0 === arr2.length;
+        tmp5 = 0 === arr.length;
       }
       if (tmp5) {
         tmp5 = 0 === arr3.length;
@@ -100,21 +105,22 @@ obj = {
     arr3.push(handleConnectionInfoChange);
     if (null == closure_7) {
       closure_7 = importDefaultResult.addEventListener(notifyListeners);
+      obj = importDefaultResult;
     }
   },
   removeChangeCallback(arg0) {
     const index = arr3.indexOf(arg0);
     if (-1 !== index) {
-      arr3.splice(index, 1);
+      arr.splice(index, 1);
       let tmp5 = null != _null;
       if (tmp5) {
-        tmp5 = 0 === arr3.length;
+        tmp5 = 0 === arr.length;
       }
       if (tmp5) {
         tmp5 = 0 === arr2.length;
       }
       if (tmp5) {
-        tmp5 = 0 === arr3.length;
+        tmp5 = 0 === arr.length;
       }
       if (tmp5) {
         _null();
@@ -124,8 +130,8 @@ obj = {
   },
   getNetworkInformation() {
     const response = importDefaultResult.fetch();
-    return response.then((result) => {
-      ({ type, details } = result);
+    return response.then((arg0) => {
+      ({ type, details } = arg0);
       obj = { type, effectiveSpeed: null, serviceProvider: null };
       let cellularGeneration = null;
       if (type === constants.CELLULAR) {
@@ -144,6 +150,6 @@ obj = {
     return c8;
   }
 };
-const result = obj132.fileFinishedImporting("utils/native/NetworkUtils.tsx");
+const result = set.fileFinishedImporting("utils/native/NetworkUtils.tsx");
 
 export default obj;

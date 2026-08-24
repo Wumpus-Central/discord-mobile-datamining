@@ -2,7 +2,8 @@
 import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importDefaultResult from "../utils/deepmerge.tsx";
 
-let obj = { borderRadius: ThemesDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } };
+let obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: null, category: null, voiceUsers: null, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
+obj = { borderRadius: ThemesDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } };
 obj[1] = obj;
 obj[2] = { margin: { marginTop: 24 } };
 obj[3] = { height: 40, margin: { marginTop: -4, marginLeft: 80 } };
@@ -26,7 +27,7 @@ obj[14] = { margin: { marginVertical: 20 } };
 const importDefaultResultResult = importDefaultResult(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj4 = { size: require("Button").IconSizes.REFRESH_SMALL_16, gameSize: require("GameIcon").GameIconSizes.SMALL };
 const tmp4 = importDefaultResult(importDefaultResultResult, { layout: { marginThread: { marginLeft: 0 } }, container: { paddingThread: { paddingLeft: 20 } }, unreadBadge: { positionThread: { left: 4 } }, mentionBadge: { positionThread: { top: 34 } } });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Cozy.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Cozy.tsx");
 
 export const CHANNEL_LIST_STYLES_COZY = importDefaultResultResult;
 export const CHANNEL_LIST_STYLES_COZY_LAUNCHPAD = tmp4;

@@ -1,20 +1,23 @@
 // discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx
-import _importWithRetry from "importWithRetry.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import obj132 from "../../../../_runtime/00002_obj132.js";
 
-require = fn;
+const require = arg1;
 ({ jsx: c4, Fragment: c5 } = jsxProd);
 function loaderMaker() {
+  let str = arg0;
+  if (arg0 === undefined) {
+    str = "transparent";
+  }
   return () => {
     const style = { position: "absolute", width: "100%", height: "100%", backgroundColor: str };
     return closure_1_4("div", { style });
   };
 }
-const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx");
 for (const key10029 in require("_importWithRetry")) {
+  let tmp4 = key10029;
   arg5[key10029] = require("_importWithRetry")[key10029];
   continue;
 }
@@ -26,8 +29,10 @@ export const makeLazy = function makeLazy(memo) {
   if (flag === undefined) {
     flag = false;
   }
+  closure_4 = undefined;
   closure_4 = name.lazy(() => {
-    const obj = { createPromise: closure_0, webpackId: closure_1, name };
+    let obj = closure_1_0(closure_1_1[3]);
+    obj = { createPromise: closure_0, webpackId: closure_1, name };
     return obj.importWithRetry(obj);
   });
   class Wrapper {
@@ -72,16 +77,18 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
   if (memo === undefined) {
     memo = false;
   }
+  closure_5 = undefined;
   const React = null;
   c4 = null;
   closure_5 = React.lazy(function importPromise() {
     if (null == closure_3) {
-      const obj = { createPromise: null, webpackId: null };
+      let obj = closure_1_0(closure_1_1[3]);
+      obj = { createPromise: null, webpackId: null };
       obj[0] = closure_0;
       obj[1] = closure_1;
-      closure_3 = obj.importWithRetry(obj).then((result) => {
-        closure_4 = result.default;
-        return result;
+      closure_3 = obj.importWithRetry(obj).then((arg0) => {
+        closure_4 = arg0.default;
+        return arg0;
       });
       const importWithRetryResult = obj.importWithRetry(obj);
     }
@@ -140,12 +147,13 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
   memoResult.displayName = "Suspense(" + name + ")";
   memoResult.preload = () => {
     if (null == closure_3) {
-      const obj = { createPromise: null, webpackId: null };
+      let obj = closure_1_0(closure_1_1[3]);
+      obj = { createPromise: null, webpackId: null };
       obj[0] = closure_0;
       obj[1] = closure_1;
-      closure_3 = obj.importWithRetry(obj).then((result) => {
-        closure_4 = result.default;
-        return result;
+      closure_3 = obj.importWithRetry(obj).then((arg0) => {
+        closure_4 = arg0.default;
+        return arg0;
       });
       const importWithRetryResult = obj.importWithRetry(obj);
     }
@@ -158,9 +166,12 @@ export const LazyLibrary = function LazyLibrary(arg0) {
   ({ render, renderFallback } = arg0);
   [tmp2, c2] = callback(React.useState(null), 2);
   const effect = React.useEffect(() => {
-    const obj = { createPromise: closure_0, webpackId: closure_1 };
-    obj.importWithRetry(obj).then((result) => callback(result.default));
+    let obj = closure_1_0(closure_1_1[3]);
+    obj = { createPromise: closure_0, webpackId: closure_1 };
+    obj.importWithRetry(obj).then((arg0) => callback(arg0.default));
   }, []);
   const tmp = callback(React.useState(null), 2);
-  return callback(closure_5, { children: null == tmp2 ? renderFallback() : render(tmp2) });
+  const tmp4 = closure_4;
+  const tmp5 = closure_5;
+  return tmp4(tmp5, { children: null == tmp2 ? renderFallback() : render(tmp2) });
 };

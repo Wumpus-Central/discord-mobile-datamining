@@ -1,9 +1,9 @@
 // discord_app/modules/user_limited_access/UserLimitedAccessUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 
 const AbortCodes = ME.AbortCodes;
-const result = obj132.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
+const result = set.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = arg0 >= 400;

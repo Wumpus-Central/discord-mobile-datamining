@@ -2,7 +2,7 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
 import styleProperties from "ButtonHooks.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -10,7 +10,7 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "ButtonConstants.native.tsx";
 import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-require = fn;
+require = arg1;
 function CollapsingText(children) {
   const collapseText = children.collapseText;
   let sharedValue;
@@ -41,7 +41,8 @@ function CollapsingText(children) {
       obj = { width: null, opacity: null };
       obj[0] = sharedValue(textCollapsed[8]).withSpring(num, sharedValue(textCollapsed[9]).SUBTLE_SPRING, "animate-always");
       const obj4 = sharedValue(textCollapsed[8]);
-      if (num2 === collapseText.get()) {
+      const obj5 = collapseText;
+      if (num2 === obj5.get()) {
         num2 = 0;
       }
       obj[1] = sharedValue(textCollapsed[8]).withSpring(num2, sharedValue(textCollapsed[9]).SUBTLE_SPRING, "animate-always");
@@ -108,7 +109,8 @@ let closure_9 = createCacheKey.createStyles((arg0, arg1) => {
   return obj;
 });
 let closure_10 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
-let obj = { borderWidth: 1, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+let obj = { entityWrapper: null };
+obj = { borderWidth: 1, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = importDefaultResult.createAnimatedComponent(IconSizesDefault);
@@ -233,9 +235,10 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   ref = obj1.useRef(null);
   closure_6 = obj1.useRef({ width: 0, height: 0 });
   const tmp15 = enabled(obj1.useState({ pressed: false, posx: 0, posy: 0 }), 2);
+  let callback = tmp15[1];
   const items = [onLayout, startsWithResult];
   const items1 = [startsWithResult, onPressIn, enabled];
-  const callback = obj1.useCallback((nativeEvent) => {
+  callback = obj1.useCallback((nativeEvent) => {
     if (onLayout != null) {
       tmp(nativeEvent);
     }
@@ -383,10 +386,10 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   }
   items6[2] = tmp33;
   obj5[1] = items6;
-  obj4[8] = callback(redux.Provider, obj5);
+  obj4[8] = closure_8(redux.Provider, obj5);
   obj3.children = callback(onPressIn(onLayout[18]).ButtonPill, obj4);
   return callback(onPressIn(onLayout[16]).BaseButton, obj3);
 }), createCacheKey);
-let result = require("obj132").fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
 
 export const BaseTextButton = merged;

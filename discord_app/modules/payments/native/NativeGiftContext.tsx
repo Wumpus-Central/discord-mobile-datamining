@@ -1,26 +1,26 @@
 // discord_app/modules/payments/native/NativeGiftContext.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import createDefinedContextDefault from "../../../utils/ContextUtils.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import initialize from "../../badges/BadgeDirectoryStore.tsx";
-import createEmptyPromotionsByType from "../../premium/promotions/PromotionsStore.tsx";
-import frozen from "../../../records/GiftCodeRecord.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../badges/BadgeDirectoryStore.tsx";
+import closure_7 from "../../premium/promotions/PromotionsStore.tsx";
+import closure_8 from "../../../records/GiftCodeRecord.tsx";
+import closure_9 from "../../../stores/UserStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { GPlayBillingResult as unpackModuleId } from "../../gplay/native/Constants.tsx";
 import GuildFeatures from "../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let c4 = importDefaultResult;
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = GuildFeatures);
 let closure_16 = new timestampDefault("NativeGiftContext");
 const tmp4 = new timestampDefault("NativeGiftContext");
 [closure_17, tmp6, tmp7] = importDefaultResult(createDefinedContextDefault(), 3);
 const importDefaultResultResult = importDefaultResult(createDefinedContextDefault(), 3);
-let result = require("obj132").fileFinishedImporting("modules/payments/native/NativeGiftContext.tsx");
+let result = require("set").fileFinishedImporting("modules/payments/native/NativeGiftContext.tsx");
 
 export const NativeGiftContextProvider = function NativeGiftContextProvider(basePurchaseAnalytics) {
   basePurchaseAnalytics = basePurchaseAnalytics.basePurchaseAnalytics;
@@ -31,7 +31,10 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   setRevision = onClose;
   const setCurrentAnalyticsStep = basePurchaseAnalytics.setCurrentAnalyticsStep;
   setOrder = setCurrentAnalyticsStep;
+  let planIdForPremiumType;
   let memo;
+  let memo1;
+  let first7;
   let first;
   let first1;
   closure_10 = undefined;
@@ -42,7 +45,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   jsx = undefined;
   let first6;
   let redux;
-  let first7;
+  first7 = undefined;
   closure_19 = undefined;
   let first8;
   closure_21 = undefined;
@@ -51,7 +54,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   let first10;
   closure_25 = undefined;
   let orderContext;
-  let planIdForPremiumType;
+  planIdForPremiumType = undefined;
   let productIdForGift;
   let skuId;
   let androidShopOrdersEnabled;
@@ -61,7 +64,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   closure_34 = undefined;
   let enabled;
   let stateFromStores;
-  let memo1;
+  memo1 = undefined;
   let callback;
   let callback1;
   let callback2;
@@ -81,6 +84,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
   let tmp2Result = tmp2(obj.useState(planInterval), 2);
   first1 = tmp2Result[0];
   memo1 = first1;
+  first7 = tmp9;
   obj1 = _require(setRevision[15]);
   tmp2Result = tmp2(obj.useState(obj1.useGiftStyles()[0]), 2);
   const first2 = tmp2Result[0];
@@ -132,7 +136,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     memo = obj.useMemo(() => {
       let tmp;
       if (androidShopOrdersEnabled) {
-        const obj = { external_product_id: null };
+        let obj = { line_items: null };
+        obj = { external_product_id: null };
         obj[0] = productIdForGift;
         const items = [obj];
         obj[0] = items;
@@ -198,12 +203,12 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       const obj = { gift_style: closure_0, recipient_id: revision, custom_message: setRevision, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null };
       let id;
       if (setOrder != null) {
-        id = setOrder.id;
+        id = tmp.id;
       }
       obj[3] = id;
       let surrogates;
       if (setOrder != null) {
-        surrogates = setOrder.surrogates;
+        surrogates = tmp.surrogates;
       }
       obj[4] = surrogates;
       let soundId;
@@ -222,8 +227,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     const items5 = [first8];
     const effect1 = obj.useEffect(() => {
       if (null != first8) {
-        revision(setRevision[27]);
-        const obj = { title: null, body: null };
+        let obj = revision(setRevision[27]);
+        obj = { title: null, body: null };
         const intl = lib(setRevision[16]).intl;
         obj[0] = intl.string(lib(setRevision[16]).t.R0RpRX);
         const intl2 = lib(setRevision[16]).intl;
@@ -248,9 +253,14 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       }
     }, items6);
     ({ order, revision, setRevision, setOrder } = orderContext);
+    _require = order;
     closure_10 = tmp5;
     closure_11 = tmp9;
     TIER_2 = tmp26;
+    constants = undefined;
+    table = undefined;
+    jsx = undefined;
+    obj = { orderId: "a", planId: "capitalize", planSelection: null, giftInfo: null };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;
@@ -317,9 +327,9 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                     tmp14 = tmp15;
                   }
                   closure_3 = tmp14;
-                  closure_4 = closure_13.current.giftInfo !== id2;
+                  closure_4 = tmp20;
                   c5 = false;
-                  id2 = undefined;
+                  let id2;
                   if (tmp != null) {
                     id2 = tmp.id;
                   }
@@ -363,7 +373,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                                 obj1[0] = closure_0;
                                 obj1[1] = revision;
                                 const obj2 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
-                                ({ sku_id: obj14[0], quantity: obj14[1], purchase_type: obj14[2] } = first);
+                                ({ sku_id: obj14[0], quantity: obj14[1], purchase_type: obj14[2] } = closure_1_1);
                                 obj2[3] = c4;
                                 const items = [obj2];
                                 obj1[2] = items;
@@ -391,13 +401,13 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               const obj6 = { orderId: null, giftInfo: null, expectedRevision: null };
                               obj6[0] = revision;
                               const obj7 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-                              obj7[0] = id2.recipient_id;
-                              obj7[1] = id2.gift_style;
-                              obj7[2] = id2.emoji_id;
-                              obj7[3] = id2.emoji_name;
-                              obj7[4] = id2.sound_id;
-                              obj7[5] = id2.reward_sku_ids;
-                              obj7[6] = id2.custom_message;
+                              obj7[0] = closure_1_6.recipient_id;
+                              obj7[1] = closure_1_6.gift_style;
+                              obj7[2] = closure_1_6.emoji_id;
+                              obj7[3] = closure_1_6.emoji_name;
+                              obj7[4] = closure_1_6.sound_id;
+                              obj7[5] = closure_1_6.reward_sku_ids;
+                              obj7[6] = closure_1_6.custom_message;
                               obj6[1] = obj7;
                               obj6[2] = closure_7;
                               c4 = 4;
@@ -416,7 +426,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             closure_1_10(closure_1_13.current.planSelection.premiumType);
                             closure_1_11(closure_1_13.current.planSelection.planInterval);
                           }
-                          throw first;
+                          throw closure_1_1;
                         } else {
                           if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -468,7 +478,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                           } else {
                             closure_7 = arg1;
                             if (closure_1_13.current.orderId === closure_6) {
-                              closure_1_13.current.giftInfo = id2;
+                              closure_1_13.current.giftInfo = closure_1_6;
                               closure_1_2(closure_7);
                             }
                           }
@@ -493,6 +503,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                       }
                     }
                   })();
+                  const tmp12 = closure_13;
                   setOrder(function*() {
                     if (c5 === 2) {
                       c5 = 3;
@@ -531,7 +542,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                                 obj1[0] = closure_0;
                                 obj1[1] = revision;
                                 const obj2 = { sku_id: null, quantity: null, purchase_type: null, subscription_plan_id: null };
-                                ({ sku_id: obj14[0], quantity: obj14[1], purchase_type: obj14[2] } = first);
+                                ({ sku_id: obj14[0], quantity: obj14[1], purchase_type: obj14[2] } = closure_1_1);
                                 obj2[3] = c4;
                                 const items = [obj2];
                                 obj1[2] = items;
@@ -559,13 +570,13 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               const obj6 = { orderId: null, giftInfo: null, expectedRevision: null };
                               obj6[0] = revision;
                               const obj7 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
-                              obj7[0] = id2.recipient_id;
-                              obj7[1] = id2.gift_style;
-                              obj7[2] = id2.emoji_id;
-                              obj7[3] = id2.emoji_name;
-                              obj7[4] = id2.sound_id;
-                              obj7[5] = id2.reward_sku_ids;
-                              obj7[6] = id2.custom_message;
+                              obj7[0] = closure_1_6.recipient_id;
+                              obj7[1] = closure_1_6.gift_style;
+                              obj7[2] = closure_1_6.emoji_id;
+                              obj7[3] = closure_1_6.emoji_name;
+                              obj7[4] = closure_1_6.sound_id;
+                              obj7[5] = closure_1_6.reward_sku_ids;
+                              obj7[6] = closure_1_6.custom_message;
                               obj6[1] = obj7;
                               obj6[2] = closure_7;
                               c4 = 4;
@@ -584,7 +595,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                             closure_1_10(closure_1_13.current.planSelection.premiumType);
                             closure_1_11(closure_1_13.current.planSelection.planInterval);
                           }
-                          throw first;
+                          throw closure_1_1;
                         } else {
                           if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -636,7 +647,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                           } else {
                             closure_7 = arg1;
                             if (closure_1_13.current.orderId === closure_6) {
-                              closure_1_13.current.giftInfo = id2;
+                              closure_1_13.current.giftInfo = closure_1_6;
                               closure_1_2(closure_7);
                             }
                           }
@@ -661,8 +672,8 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                       }
                     }
                   })().catch((error) => {
-                    id(setRevision[14]);
-                    let obj = { orderId: id, planId: closure_4, needsPlanSync: closure_3, needsGiftSync: closure_4 };
+                    let obj = id(setRevision[14]);
+                    obj = { orderId: id, planId: closure_4, needsPlanSync: closure_3, needsGiftSync: closure_4 };
                     const result = obj.captureBillingException(error, { tags: { source: "NativeGiftContext_syncOrder" }, extra: obj });
                     obj = { error, orderId: id };
                     first6.error("Failed to sync order", obj);
@@ -690,7 +701,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       closure_0 = arg0;
       function handleGiftCodeCreate(giftCode) {
         const fromServer = first.createFromServer(giftCode.giftCode);
-        if (fromServer.subscriptionPlanId === planIdForPremiumType) {
+        if (fromServer.subscriptionPlanId === closure_1_27) {
           closure_1_17(fromServer);
           let tmp6 = null != handleGiftCodeCreate;
           if (tmp6) {
@@ -702,7 +713,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             tmp6 = hasItem;
           }
           if (tmp6) {
-            const result = lib(setRevision[30]).logGiftIntentFlowPurchasedGift(handleGiftCodeCreate);
+            const result = lib(setRevision[30]).logGiftIntentFlowPurchasedGift(tmp18);
             const obj = lib(setRevision[30]);
           }
           if (lib != null) {
@@ -710,11 +721,13 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
           }
           revision(setRevision[31]).unsubscribe("GIFT_CODE_CREATE", handleGiftCodeCreate);
           const obj2 = revision(setRevision[31]);
+          tmp18 = handleGiftCodeCreate;
         }
         closure_1_19(false);
       }
       return handleGiftCodeCreate;
     }, items8);
+    _require = undefined;
     _require = setOrder((arg0) => {
       closure_0 = arg0;
       c5 = 0;
@@ -752,16 +765,16 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                 const subscription = revision(setRevision[31]).subscribe("GIFT_CODE_CREATE", callback);
                 const obj11 = revision(setRevision[31]);
                 if (!obj12.isAndroid()) {
-                  if (null != orderContext.orderId) {
+                  if (null != closure_1_26.orderId) {
                     c4 = 1;
                     obj1 = { orderId: null, skuId: null };
-                    obj1[0] = orderContext.orderId;
-                    obj1[1] = skuId;
+                    obj1[0] = closure_1_26.orderId;
+                    obj1[1] = closure_1_29;
                     first6.info("Starting order signing with pre-created order", obj1);
                     c5 = 2;
                     c6 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = callback(setRevision[13]).markOrderAsSigningInProgress(orderContext.orderId);
+                    obj2[0] = callback(setRevision[13]).markOrderAsSigningInProgress(closure_1_26.orderId);
                     return obj2;
                   }
                 }
@@ -775,14 +788,14 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                 const obj3 = { tags: null, extra: null };
                 obj3[0] = { source: "NativeGiftContext_handlePurchaseComplete_sign" };
                 const obj4 = { skuId: null, orderId: null };
-                obj4[0] = skuId;
-                obj4[1] = orderContext.orderId;
+                obj4[0] = closure_1_29;
+                obj4[1] = closure_1_26.orderId;
                 obj3[1] = obj4;
                 const result = obj1.captureBillingException(callback, obj3);
                 const obj5 = { error: null, skuId: null, orderId: null };
                 obj5[0] = callback;
-                obj5[1] = skuId;
-                obj5[2] = orderContext.orderId;
+                obj5[1] = closure_1_29;
+                obj5[2] = closure_1_26.orderId;
                 first6.error("Failed to sign order in purchase completion", obj5);
               } else if (arg0 === 1) {
                 c6 = 3;
@@ -830,7 +843,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     callback3 = obj.useCallback((arg0) => {
       let obj = memo1;
       if (null != memo1.getNextTier(lib(setRevision[26]).BadgeId.GIFTING)) {
-        const singleRequirementProgress = obj.getSingleRequirementProgress(tmp(setRevision[26]).BadgeId.GIFTING);
+        const singleRequirementProgress = obj.getSingleRequirementProgress(tmp(tmp2[26]).BadgeId.GIFTING);
         let current;
         if (singleRequirementProgress != null) {
           current = singleRequirementProgress.current;
@@ -849,13 +862,13 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
           if (isActivePurchase.isActivePurchase) {
             revision(setRevision[31]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", handleGPlayUpdatePurchaseAction);
             if (isActivePurchase.billingResult !== constants.OK) {
-              callback2(closure_1);
+              closure_1_40(closure_1);
             }
             const obj = revision(setRevision[31]);
           }
         }
-        const subscription = revision(setRevision[31]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", handleGPlayUpdatePurchaseAction);
-        const obj3 = revision(setRevision[31]);
+        const subscription = revision(tmp2[31]).subscribe("GPLAY_UPDATE_PURCHASE_STATE", handleGPlayUpdatePurchaseAction);
+        const obj3 = revision(tmp2[31]);
       }
       setOrder(lib(setRevision[33]).PaymentFlowStep.REVIEW);
       obj = { productId: productIdForGift, isGift: true, analyticsLoadId: lib.load_id, analyticsLocation: lib.location, analyticsLocations: lib.location_stack, allowPlanChange: false, giftInfoOptions: memo1, onPurchaseComplete: null, onPurchaseError: null, orderId: null, analyticsData: null };
@@ -874,17 +887,16 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
         return applyArgumentsResult;
       };
       obj[8] = function onPurchaseError() {
-        return callback2(closure_1);
+        return closure_1_40(closure_1);
       };
       obj[9] = orderContext.orderId;
       obj = { load_id: lib.load_id, succeededOnlyFields: null };
       obj1 = { is_custom_message_edited: null, is_custom_emoji_sound_available: false };
-      const intl = tmp(setRevision[16]).intl;
+      const intl = tmp(tmp2[16]).intl;
       obj1[0] = closure_10 !== intl.string(lib(setRevision[16]).t.ZkOo1U);
       obj[1] = obj1;
       obj[10] = obj;
       handlePremiumPurchase(obj);
-      tmpResult = lib(setRevision[32]);
     }, items11);
     const items12 = [orderContext, recipientUserId, stateFromStores, first2, first, first1, productIdForGift, first3, first4, first5, first6, first7, first10, basePurchaseAnalytics, setCurrentAnalyticsStep, tmp5, tmp9, onClose, callback3, stateFromStoresArray, fetchClaimableGiftingPromotionRewardSkuIds, first9, tmp29];
     obj1 = { value: null, children: null };

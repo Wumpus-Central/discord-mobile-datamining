@@ -1,11 +1,11 @@
 // discord_app/modules/game_profile/native/components/GameProfileGameClaimCta.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { RelativeMarketingURLs } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
 
 export default function GameProfileGameClaimCta(trackAction) {
   trackAction = trackAction.trackAction;
@@ -66,7 +66,7 @@ export default function GameProfileGameClaimCta(trackAction) {
     }
   }), items);
   if (linkedApplications != null) {
-    someResult = linkedApplications.some((item, index) => item.type === trackAction(table[6]).GameLinkTypes.OFFICIAL);
+    someResult = linkedApplications.some((type) => type.type === trackAction(table[6]).GameLinkTypes.OFFICIAL);
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };

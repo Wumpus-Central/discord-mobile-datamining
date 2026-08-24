@@ -2,9 +2,10 @@
 import fromServerDefault from "BaseCollectiblesItemRecord.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-require = fn;
+require = arg1;
 fromServerDefault;
-const prototype = function ProfileFrameRecord(arg0) {
+let prototype;
+prototype = function ProfileFrameRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
   tmp2.type = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
@@ -34,7 +35,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ label: tmp6.label, layers: tmp6.layers, innerWidth: tmp6.innerWidth, overflowTop: tmp6.overflowTop, overflowBottom: tmp6.overflowBottom, overflowHorizontal: tmp6.overflowHorizontal } = obj);
   return tmp3;
 };
-const result = require("obj132").fileFinishedImporting("modules/collectibles/records/ProfileFrameRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/ProfileFrameRecord.tsx");
 
 export default prototype;
 export const isProfileFrameRecord = function isProfileFrameRecord(item) {

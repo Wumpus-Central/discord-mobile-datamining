@@ -1,7 +1,7 @@
 // discord_app/design/components/Tooltip/native/useTooltipPosition.native.tsx
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_0 from "../../../../../_runtime/00019_noop.js";
 
-const result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");
 
 export default function useTooltipPosition(arg0, arg1, arg2, arg3) {
   const React = arg0;

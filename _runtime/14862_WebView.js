@@ -5,6 +5,6 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, "WebView", {
   enumerable: true,
   get() {
-    return WebView /* WebView */.WebView;
+    return WebView.WebView;
   }
 });

@@ -2,10 +2,10 @@
 import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
 import updateAssets from "../../../utils/ApplicationAssetUtils.tsx";
 import setCoverImageURLAll from "../MessageActivityInviteCoverImageActionCreators.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
-import getCoverImageURL from "../MessageActivityInviteCoverImageStore.tsx";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../MessageActivityInviteCoverImageStore.tsx";
 
-require = fn;
+require = arg1;
 function _getPresenceActivityInviteCoverImageURL(messageId) {
   ({ presenceActivity, application } = messageId);
   let obj = { messageId: messageId.messageId };
@@ -26,6 +26,7 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     let assetImage = null;
     if (null != invite_cover_image) {
       assetImage = updateAssets.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
+      const obj2 = updateAssets;
     }
     if (assetImage == null) {
       assetImage = coverImageURL;
@@ -40,23 +41,24 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     return obj;
   }
 }
-let result = require("obj132").fileFinishedImporting("modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/utils/usePresenceActivityInviteCoverImageURL.tsx");
 
 export const usePresenceActivityInviteCoverImageURL = (messageId) => {
   messageId = messageId.messageId;
   const presenceActivity = messageId.presenceActivity;
   const application = messageId.application;
   let cachedImageURL;
+  let imageURL;
   const items = [closure_5];
   const items1 = [messageId, presenceActivity, application];
-  const stateFromStoresObject = messageId(cachedImageURL[4]).useStateFromStoresObject(items, () => _getPresenceActivityInviteCoverImageURL({ messageId, presenceActivity, application }), items1);
+  const stateFromStoresObject = messageId(cachedImageURL[4]).useStateFromStoresObject(items, () => closure_1_6({ messageId, presenceActivity, application }), items1);
   cachedImageURL = stateFromStoresObject.cachedImageURL;
-  const imageURL = stateFromStoresObject.imageURL;
+  imageURL = stateFromStoresObject.imageURL;
   const items2 = [cachedImageURL, imageURL, messageId];
   const effect = imageURL.useEffect(() => {
     if (cachedImageURL !== imageURL) {
-      application(cachedImageURL[5]);
-      const obj = { messageId: null, coverImageURL: null };
+      let obj = application(cachedImageURL[5]);
+      obj = { messageId: null, coverImageURL: null };
       obj[0] = messageId;
       obj[1] = tmp;
       obj.setCoverImageURL(obj);
@@ -74,6 +76,7 @@ export const getPresenceActivityInviteCoverImageURL = function getPresenceActivi
     obj[0] = messageId;
     obj[1] = imageURL;
     setCoverImageURLAll.setCoverImageURL(obj);
+    const obj2 = setCoverImageURLAll;
   }
   return imageURL;
 };

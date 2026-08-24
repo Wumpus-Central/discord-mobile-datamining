@@ -1,8 +1,8 @@
 // discord_app/modules/badges/BadgeSettingsActionCreators.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = fn;
+const require = arg1;
 function _updateBadgeSettings() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -159,7 +159,7 @@ function _updateBadgeSettings() {
   }
   return applyArgumentsResult;
 }
-const result = require("obj132").fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 
 export const updateBadgeSettings = function updateBadgeSettings(arg0) {
   const self = this;

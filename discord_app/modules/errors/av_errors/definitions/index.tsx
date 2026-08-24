@@ -1,5 +1,5 @@
 // discord_app/modules/errors/av_errors/definitions/index.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import mapped from "../AVError.tsx";
 import AVErrorNoAudioInputDetectedDefinition from "AVErrorNoAudioInputDetected.tsx";
 import AVErrorNoInputDevicesDefinition from "AVErrorNoInputDevices.tsx";
@@ -37,6 +37,6 @@ obj[mapped.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT] = AVErrorVideoStreamRece
 obj[mapped.AVError.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM] = AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition.AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition;
 obj[mapped.AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM] = AVErrorVideoStreamReceiverReadyTimeoutNoStreamDefinition.AVErrorVideoStreamReceiverReadyTimeoutNoStreamDefinition;
 obj[mapped.AVError.CAMERA_SEND_LOW_FPS] = AVErrorCameraSendLowFPSDefinition.AVErrorCameraSendLowFPSDefinition;
-const result = obj132.fileFinishedImporting("modules/errors/av_errors/definitions/index.tsx");
+const result = set.fileFinishedImporting("modules/errors/av_errors/definitions/index.tsx");
 
 export const ErrorDefinitions = obj;

@@ -1,16 +1,17 @@
 // discord_app/modules/media_viewer/native/useVideoControls.tsx
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import keys from "../../../../_runtime/00644_keys.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-require = fn;
+require = arg1;
 keys = keys.create(() => ({ controls: "ct", paused: true }));
 let closure_8 = createCacheKey.createStyles({ slider: { marginBottom: 8 } });
-let result = require("obj132").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
 export default function useVideoControls(arg0, portal) {
   const _require = arg0;
@@ -51,6 +52,7 @@ export default function useVideoControls(arg0, portal) {
             }
             closure_1.pause(tmp6);
             callback2(tmp6);
+            const obj = closure_1;
           }
         }
       }
@@ -66,6 +68,7 @@ export default function useVideoControls(arg0, portal) {
     obj[4] = tmp13;
     return videoURI(tmp8(tmp3[12]), obj, videoURI);
   }
+  const obj2 = state;
   tmp = callback2();
   tmp2 = _require;
 };
@@ -77,8 +80,8 @@ export const initVideoStateStore = function initVideoStateStore() {
 };
 export const setMuted = function setMuted(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
-    const useMediaPlayerMutedStore = callback(dependencyMap[6]).useMediaPlayerMutedStore;
+  _batchUpdates.batchUpdates(() => {
+    const useMediaPlayerMutedStore = callback(closure_1_2[6]).useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState({ isMuted: callback });
   });
 };
@@ -90,11 +93,11 @@ export const toggleMuted = function toggleMuted() {
 };
 export const setVideoStateControls = function setVideoStateControls(videoControls) {
   const _require = videoControls;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => keys.setState({ controls: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_7.setState({ controls: closure_0 }));
 };
 export const setPausedState = function setPausedState(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => keys.setState({ paused: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_7.setState({ paused: closure_0 }));
 };
 export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
   const controls = keys.getState().controls;

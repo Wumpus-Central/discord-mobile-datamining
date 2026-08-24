@@ -1,9 +1,9 @@
 // discord_app/records/EmojiRecord.tsx
 import toJSDefault from "../lib/Record.tsx";
-import createdAt from "UserRecord.tsx";
+import closure_0 from "UserRecord.tsx";
 
 toJSDefault;
-const result = require("obj132").fileFinishedImporting("records/EmojiRecord.tsx");
+const result = require("set").fileFinishedImporting("records/EmojiRecord.tsx");
 const prototype = function EmojiRecord(user) {
   const tmp2 = new prototype(tmp, new.target, new.target);
   // ThrowIfThisInitialized (0x7c)

@@ -5,16 +5,16 @@ import isBlurDisabledDefault from "../../../visual_effect_view/native/VisualEffe
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import SpoilerDefault from "../../../markup/native/SpoilerIcon.tsx";
 import getForumPostShouldObscure from "../../../messages/MessageAttachmentUtils.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import handleThemeChange from "../../../user_settings/ThemeStore.tsx";
+import closure_8 from "../../../user_settings/ThemeStore.tsx";
 import { ANDROID_FOREGROUND_RIPPLE } from "../../../../design/void/Form/native/FormConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 
-require = fn;
+require = arg1;
 function ForumPostMediaAndroid(blurTheme) {
   const shouldSpoiler = blurTheme.shouldSpoiler;
   const obj = { style: blurTheme.androidStyle, source: blurTheme.source, blurRadius: null, resizeMode: "cover", children: null };
@@ -23,8 +23,8 @@ function ForumPostMediaAndroid(blurTheme) {
     num = 10;
   }
   obj[2] = num;
-  obj[4] = callback(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme: blurTheme.blurTheme });
-  return callback(closure_7, obj);
+  obj[4] = closure_10(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme: blurTheme.blurTheme });
+  return closure_10(closure_7, obj);
 }
 function ForumPostMediaIOS(arg0) {
   const obj = { children: null };
@@ -68,7 +68,7 @@ function ForumPostMedia(obscureReason) {
   const _require = obscureReason;
   const tmp = callback4();
   const ref = React.useRef(null);
-  let obj = redactionSettingToRenderedString;
+  let obj = _redactionSettingToRenderedString;
   const shouldAgeVerifyForReason = obj.useShouldAgeVerifyForReason(obscureReason.obscureReason);
   if (obscureReason.isMediaPost) {
     obj = {};
@@ -80,13 +80,13 @@ function ForumPostMedia(obscureReason) {
     if (tmp3Result.isAndroid()) {
       obj = {};
       const merged1 = Object.assign(obscureReason);
-      tmp6Result = callback2(ForumPostMediaAndroid, obj);
-      tmp12 = callback2;
+      tmp6Result = tmp6(ForumPostMediaAndroid, obj);
+      tmp12 = tmp6;
     } else {
       obj1 = {};
       const merged2 = Object.assign(obscureReason);
-      tmp6Result = callback2(ForumPostMediaIOS, obj1);
-      tmp12 = callback2;
+      tmp6Result = tmp6(ForumPostMediaIOS, obj1);
+      tmp12 = tmp6;
     }
     tmp3Result = tmp3(500);
   }
@@ -101,8 +101,8 @@ function ForumPostMedia(obscureReason) {
         const obj3 = { androidRippleConfig: null, activeOpacity: 0, onPress: null, children: null };
         obj3[0] = ANDROID_FOREGROUND_RIPPLE;
         obj3[2] = function onPress() {
-          ref(5428);
-          const obj = { entryPoint: obscureReason(5254).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
+          let obj = ref(5428);
+          obj = { entryPoint: obscureReason(5254).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
           const result = obj.showAgeVerificationGetStartedModal(obj);
         };
         obj3[3] = tmp6Result;
@@ -143,14 +143,16 @@ function ForumPostMedia(obscureReason) {
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = Math.min(PixelRatio.get(), 4);
 let closure_14 = Math.min(PixelRatio.get(), 4);
-const createCacheKey = { borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: null, thumbnail: null, spoilerIconContainer: null, spoilerIcon: null, gridMediaContainer: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { height: 80, width: 80 };
 createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" };
 createCacheKey[4] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };
 createCacheKey[5] = { borderRadius: 2, overflow: "hidden" };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/forums/native/posts/ForumPostMedia.tsx");
+let obj1 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };
+let result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostMedia.tsx");
 
 export { ForumPostMediaSpoiler };
 export const useSharedMediaProps = function useSharedMediaProps(arg0) {
@@ -176,11 +178,12 @@ export const ForumPostMediaThumbnail = function ForumPostMediaThumbnail(firstMes
   firstMessageId = firstMessageId.firstMessageId;
   const media = firstMessageId.media;
   let isEmbed = firstMessageId.isEmbed;
+  let onTapMedia;
   let React;
   ({ embedLeftBorderColor, containerStyle } = firstMessageId);
   const tmp = callback4();
   let obj = { threadId: channel.id };
-  const onTapMedia = firstMessageId(media[21])(obj).onTapMedia;
+  onTapMedia = firstMessageId(media[21])(obj).onTapMedia;
   let items = [firstMessageId, media, onTapMedia];
   const callback = React.useCallback((containerRef) => {
     const items = [media];
@@ -189,13 +192,14 @@ export const ForumPostMediaThumbnail = function ForumPostMediaThumbnail(firstMes
   let obj2 = React;
   const obj3 = isLocalDeviceMedia(media[18]);
   const tmp2 = media;
+  const tmp4 = isLocalDeviceMedia;
   [flag, tmp6] = onTapMedia(isLocalDeviceMedia(media[18]).useShouldObscure({ media, channel }), 2);
   const tmp5 = onTapMedia(isLocalDeviceMedia(media[18]).useShouldObscure({ media, channel }), 2);
   let str = "light";
   if (obj4.isThemeDark(closure_8.theme)) {
     str = "dark";
   }
-  const GifAutoPlay = isLocalDeviceMedia(tmp2[20]).GifAutoPlay;
+  const GifAutoPlay = tmp4(tmp2[20]).GifAutoPlay;
   let tmp7 = "png";
   if (GifAutoPlay.useSetting()) {
     tmp7 = null;
@@ -239,7 +243,7 @@ export const ForumPostMediaThumbnail = function ForumPostMediaThumbnail(firstMes
   obj[6] = memo;
   obj[7] = callback;
   obj[8] = channel.isMediaPost();
-  return callback(ForumPostMedia, obj);
+  return closure_10(ForumPostMedia, obj);
 };
 export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   ({ channel, media } = targetWidth);
@@ -249,6 +253,7 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   let React;
   let obj = media(targetHeight[18]);
   const tmp = callback4();
+  const tmp2 = media;
   const tmp3 = targetHeight;
   [flag, tmp5] = callback(obj.useShouldObscure({ media, channel }), 2);
   const tmp4 = callback(obj.useShouldObscure({ media, channel }), 2);
@@ -256,7 +261,7 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   if (obj2.isThemeDark(closure_8.theme)) {
     str = "dark";
   }
-  const GifAutoPlay = media(tmp3[20]).GifAutoPlay;
+  const GifAutoPlay = tmp2(tmp3[20]).GifAutoPlay;
   let tmp6 = "png";
   if (GifAutoPlay.useSetting()) {
     tmp6 = null;
@@ -275,7 +280,8 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
     if (c4) {
       const _Math3 = Math;
       const bound = Math.min(1, targetWidth * closure_1_14 / media.width, targetHeight * closure_1_14 / media.height);
-      let obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: null };
+      let obj = { uri: null };
+      obj = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: null };
       ({ src: obj6[0], width: obj6[1], height: obj6[2] } = media);
       const _Math4 = Math;
       obj[3] = Math.ceil(media.width * bound);
@@ -286,7 +292,7 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
       return obj;
     } else {
       obj = { uri: null };
-      media(targetHeight[22]);
+      obj1 = media(targetHeight[22]);
       obj1 = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, format: null };
       ({ src: obj3[0], width: obj3[1], height: obj3[2] } = media);
       const _Math = Math;
@@ -304,5 +310,5 @@ export const ForumPostGridMedia = function ForumPostGridMedia(targetWidth) {
   obj[6] = memo;
   obj[7] = media.height >= media.width;
   obj[8] = isMediaPostResult;
-  return callback(ForumPostMedia, obj);
+  return closure_10(ForumPostMedia, obj);
 };

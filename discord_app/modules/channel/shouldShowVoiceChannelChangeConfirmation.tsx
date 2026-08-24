@@ -1,21 +1,21 @@
 // discord_app/modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx
-import set from "../game_console/GameConsoleStore.tsx";
-import CHANNEL_SIDEBAR_WIDTH from "../user_settings/UnsyncedUserSettingsStore.tsx";
-import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import closure_0 from "../game_console/GameConsoleStore.tsx";
+import closure_1 from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import closure_2 from "../../stores/AuthenticationStore.tsx";
+import closure_3 from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/VoiceStateStore.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
 export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
-  if (voiceStateForSession.disableVoiceChannelChangeAlert) {
+  if (obj.disableVoiceChannelChangeAlert) {
     return false;
   } else {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != voiceStateForSession.getVoiceStateForSession(id.getId(), remoteSessionId)) {
       return false;
-    } else if (voiceStateForSession.isCurrentClientInVoiceChannel()) {
-      if (voiceStateForSession.isInChannel(id.id)) {
+    } else if (obj.isCurrentClientInVoiceChannel()) {
+      if (obj.isInChannel(id.id)) {
         return false;
       } else {
         guild = guild.getGuild(id.getGuildId());
@@ -23,7 +23,7 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
         if (guild != null) {
           afkChannelId = guild.afkChannelId;
         }
-        return null == afkChannelId || !voiceStateForSession.isInChannel(guild.afkChannelId);
+        return null == afkChannelId || !obj.isInChannel(guild.afkChannelId);
       }
     } else {
       return false;

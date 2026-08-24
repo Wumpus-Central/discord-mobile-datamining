@@ -1,13 +1,13 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
-import isRateLimited from "../../../../unique_usernames/UniqueUsernamesStore.tsx";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import closure_5 from "../../../../unique_usernames/UniqueUsernamesStore.tsx";
 import { useRegistrationUIStore } from "../../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../../RegistrationConstants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ authStateToRegisterTransitionStep: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);
-let result = require("obj132").fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
+let result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
 
 export const useUsernameRegistrationStep = function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
   const _require = REGISTER_ACCOUNT_INFORMATION;
@@ -23,6 +23,7 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
   const tmp7 = first(obj.useState(str), 2);
   first = tmp7[0];
   const obj2 = _require(navigation[6]);
+  const tmp5 = useRegistrationUIStore;
   const tmp10 = context(navigation[7])("username", useRegistrationUIStore((errors) => errors.errors));
   const tmp5Result = useRegistrationUIStore((errors) => errors.errors);
   const usernameStatus = _require(navigation[8]).useUsernameStatus(first, true, true);
@@ -50,19 +51,19 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       context(obj);
     }
     if (arg0) {
-      let tmp3Result = REGISTER_ACCOUNT_INFORMATION(navigation[10]);
+      let tmp3Result = tmp3(tmp4[10]);
       const result = tmp3Result.handleRegistrationSubmit(REGISTER_ACCOUNT_INFORMATION, navigation, context);
     } else {
       obj = { step: null, toStep: null, actionType: null };
       obj[0] = closure_1_7(REGISTER_ACCOUNT_INFORMATION);
-      tmp3Result = REGISTER_ACCOUNT_INFORMATION(navigation[10]);
+      tmp3Result = tmp3(tmp4[10]);
       obj[1] = tmp3Result.getNextRegistrationTransitionStep(REGISTER_ACCOUNT_INFORMATION);
       obj[2] = closure_1_8.SUCCESS;
       context(obj);
-      const nextAuthState = REGISTER_ACCOUNT_INFORMATION(navigation[10]).getNextAuthState(REGISTER_ACCOUNT_INFORMATION);
-      const StackActions = REGISTER_ACCOUNT_INFORMATION(navigation[11]).StackActions;
+      const nextAuthState = tmp3(tmp4[10]).getNextAuthState(REGISTER_ACCOUNT_INFORMATION);
+      const StackActions = tmp3(tmp4[11]).StackActions;
       navigation.dispatch(StackActions.push(nextAuthState));
-      const tmp3Result1 = REGISTER_ACCOUNT_INFORMATION(navigation[10]);
+      const tmp3Result1 = tmp3(tmp4[10]);
     }
   }, items);
   const items2 = [first, , ];
@@ -101,11 +102,11 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
         if ("" !== tmp) {
           let type;
           if (obj != null) {
-            type = obj.type;
+            type = tmp2.type;
           }
           let message = null;
           if (type === REGISTER_ACCOUNT_INFORMATION(navigation[9]).NameValidationState.ERROR) {
-            message = obj.message;
+            message = tmp2.message;
           }
         }
         return message;

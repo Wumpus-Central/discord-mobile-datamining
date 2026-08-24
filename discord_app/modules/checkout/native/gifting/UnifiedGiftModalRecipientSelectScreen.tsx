@@ -5,24 +5,26 @@ import SearchableUserListDefault from "../../../main_tabs_v2/native/shared_compo
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UserRowModes } from "../../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
-const createCacheKey = { flex: 1, paddingTop: 16, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { container: null };
+createCacheKey = { flex: 1, paddingTop: 16, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx");
 
 export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   setRecipientUser = setRecipientUser.setRecipientUser;
+  importDefault = undefined;
   let obj = setRecipientUser(1500);
   importDefault = obj.useNavigation();
-  { style: callback().container, children: jsx(SearchableUserListDefault, obj) };
+  obj = { style: callback().container, children: jsx(SearchableUserListDefault, obj) };
   obj = {
     onSelectUser(user) {
       setRecipientUser(user);
-      navigation.navigate(setRecipientUser(dependencyMap[8]).UnifiedGiftModalScreens.GIFT_DETAIL);
+      navigation.navigate(setRecipientUser(closure_1_2[8]).UnifiedGiftModalScreens.GIFT_DETAIL);
     },
     rowMode: UserRowModes.NONE,
     disableGradient: true,
@@ -30,6 +32,6 @@ export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) 
   };
   return <View onSelectUser={function onSelectUser(user) {
     setRecipientUser(user);
-    navigation.navigate(setRecipientUser(dependencyMap[8]).UnifiedGiftModalScreens.GIFT_DETAIL);
+    navigation.navigate(setRecipientUser(closure_1_2[8]).UnifiedGiftModalScreens.GIFT_DETAIL);
   }} rowMode={UserRowModes.NONE} disableGradient disableThemedGradient />;
 };

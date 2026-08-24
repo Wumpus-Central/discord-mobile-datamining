@@ -2,10 +2,10 @@
 import isRestrictedFromShowingGuildPurchaseEntryPoints from "../../creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
 import computeGuildRoleSubscriptionSettingsVisibility from "../../guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
 import set from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_2 from "../../../stores/UserStore.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx");
 
 export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationOnboarding(closure_2) {
   currentUser = currentUser.getCurrentUser();
@@ -13,8 +13,11 @@ export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationO
   if (currentUser != null) {
     id = currentUser.id;
   }
-  const obj = { guild: closure_2, isOwner: closure_2.ownerId === id, canManageGuildRoleSubscriptions: computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(closure_2), isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+  let obj = computeGuildRoleSubscriptionSettingsVisibility;
+  obj = { guild: closure_2, isOwner: closure_2.ownerId === id, canManageGuildRoleSubscriptions: computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(closure_2), isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+  const obj3 = computeGuildRoleSubscriptionSettingsVisibility;
   obj[3] = set.isUserInCreatorMonetizationEligibleCountry();
+  const obj4 = set;
   obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints.shouldRestrictUpdatingCreatorMonetizationSettings(closure_2.id);
   return obj.canSeeGuildRoleSubscriptionSettings(obj);
 };

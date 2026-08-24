@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/utils/parseUserProfileCollectibles.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-const result = obj132.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {
   let tmp;
@@ -25,33 +25,51 @@ export default function parseUserProfileCollectibles(collectibles) {
       let date;
       if (null != nextResult.expires_at) {
         let _Date = Date;
+        let tmp9 = nextResult;
+        let tmp10 = new.target;
+        let tmp11 = new.target;
         date = new Date(tmp7.expires_at);
       }
       obj[2] = date;
       let arr = items.push(obj);
+      let tmp13 = nextResult;
+      let tmp14 = require;
+      let tmp15 = dependencyMap;
       if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
         obj = { skuId: null, expiresAt: null };
+        let tmp20 = nextResult;
         obj[0] = tmp7.sku_id;
         let rounded;
         if (null != tmp7.expires_at) {
           let _Math = Math;
           let _Date3 = Date;
+          let tmp22 = nextResult;
+          let tmp23 = new.target;
+          let tmp24 = new.target;
           let date1 = new Date(tmp7.expires_at);
+          let tmp25 = date1;
           rounded = Math.floor(date1.getTime() / 1000);
         }
         obj[1] = rounded;
         tmp = obj;
-      } else if (tmp7.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME) {
-        obj = { skuId: null, type: null, expiresAt: null };
-        obj[0] = tmp7.sku_id;
-        obj[1] = CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
-        let date2;
-        if (null != tmp7.expires_at) {
-          let _Date2 = Date;
-          date2 = new Date(tmp7.expires_at);
+      } else {
+        let tmp28 = nextResult;
+        if (tmp7.type === tmp14(1949).CollectiblesItemType.PROFILE_FRAME) {
+          obj = { skuId: null, type: null, expiresAt: null };
+          let tmp29 = nextResult;
+          obj[0] = tmp7.sku_id;
+          obj[1] = tmp14(1949).CollectiblesItemType.PROFILE_FRAME;
+          let date2;
+          if (null != tmp7.expires_at) {
+            let _Date2 = Date;
+            let tmp16 = nextResult;
+            let tmp17 = new.target;
+            let tmp18 = new.target;
+            date2 = new Date(tmp7.expires_at);
+          }
+          obj[2] = date2;
+          tmp2 = obj;
         }
-        obj[2] = date2;
-        tmp2 = obj;
       }
       continue;
     }

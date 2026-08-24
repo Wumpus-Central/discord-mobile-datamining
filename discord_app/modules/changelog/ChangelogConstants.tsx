@@ -1,7 +1,7 @@
 // discord_app/modules/changelog/ChangelogConstants.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 
-const result = obj132.fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");
+const result = set.fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");
 
 export const CHANGELOG_MODAL_KEY = "CHANGELOG_MODAL";
 export const SYSTEM_UPDATES_USER_ID = "1232523165893132288";

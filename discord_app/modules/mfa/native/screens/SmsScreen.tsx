@@ -1,18 +1,19 @@
 // discord_app/modules/mfa/native/screens/SmsScreen.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Endpoints } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const result = require("obj132").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
 
 export default function SmsScreen(mfaChallenge) {
   mfaChallenge = mfaChallenge.mfaChallenge;
   const finish = mfaChallenge.finish;
+  dependencyMap = undefined;
   c3 = undefined;
   let first;
   let React;
@@ -93,6 +94,7 @@ export default function SmsScreen(mfaChallenge) {
                   message = lib.message;
                 }
                 SMS_CODE_LENGTH(message);
+                const tmp14 = SMS_CODE_LENGTH;
               } else if (arg0 === 1) {
                 v02 = 3;
                 throw arg1;
@@ -202,6 +204,7 @@ export default function SmsScreen(mfaChallenge) {
               c4 = 0;
               closure_1_3(false);
               v0 = 3;
+              const tmp16 = closure_2;
             } else if (arg0 === 1) {
               v0 = 3;
               throw arg1;
@@ -261,21 +264,22 @@ export default function SmsScreen(mfaChallenge) {
   const effect = React.useEffect(() => {
     dependencyMap(null);
     const HTTP = mfaChallenge(530).HTTP;
-    const obj = { ticket: mfaChallenge.ticket };
+    obj = { url: _undefined2.LOGIN_SMS_SEND, body: obj, oldFormErrors: true, rejectWithError: false };
+    obj = { ticket: mfaChallenge.ticket };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((result) => {
-      const intl = mfaChallenge(closure_1_2[8]).intl;
-      callback(intl.formatToPlainString(mfaChallenge(closure_1_2[8]).t["8r6h7+"], { phoneNumber: result.body.phone }));
-    }).catch((error) => {
-      const body = error.body;
+    HTTP.post(obj).then((body) => {
+      const intl = closure_1_0(closure_1_2[8]).intl;
+      callback(intl.formatToPlainString(closure_1_0(closure_1_2[8]).t["8r6h7+"], { phoneNumber: body.body.phone }));
+    }).catch((body) => {
+      body = body.body;
       let message;
       if (body != null) {
         message = body.message;
       }
       if (message == null) {
-        message = error.message;
+        message = body.message;
       }
-      callback(message);
+      closure_2(message);
       callback(undefined);
     });
   }, items);

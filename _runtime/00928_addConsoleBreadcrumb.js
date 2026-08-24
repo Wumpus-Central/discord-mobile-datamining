@@ -1,36 +1,36 @@
 // _runtime/00928_addConsoleBreadcrumb.js
 import _mod821 from "metro/00821__.js";
 import isMatchingPattern from "00832_isMatchingPattern.js";
-import addBreadcrumb from "00908_addBreadcrumb.js";
 import severityLevelFromString from "00920_severityLevelFromString.js";
 import setupIntegration from "00887_setupIntegration.js";
 
-function addConsoleBreadcrumb(level, arguments) {
-  let obj = { arguments, logger: "console" };
-  obj[2] = severityLevelFromString.severityLevelFromString(level);
+function addConsoleBreadcrumb(arg0, arguments) {
+  obj = { category: "console", data: obj, level: null, message: null };
+  obj = { arguments, logger: "console" };
+  obj[2] = severityLevelFromString.severityLevelFromString(arg0);
   if ("util" in _mod821.GLOBAL_OBJ) {
-    if (typeof _mod821.GLOBAL_OBJ.util.format === "function") {
-      const util = _mod821.GLOBAL_OBJ.util;
+    if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
+      const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;
       const items = [];
       HermesBuiltin.arraySpread(arguments, 0);
       let applyResult = HermesBuiltin.apply(items, util);
     }
     obj[3] = applyResult;
-    if ("assert" === level) {
+    if ("assert" === arg0) {
       if (false === arguments[0]) {
         const substr = arguments.slice(1);
         if (substr.length <= 0) {
           obj.message = "Assertion failed";
           obj.data.arguments = substr;
         } else {
-          if (!("util" in _mod821.GLOBAL_OBJ)) {
-            let tmpResult = isMatchingPattern;
+          if (!("util" in tmp(821).GLOBAL_OBJ)) {
+            let tmpResult = tmp(832);
             let safeJoinResult = tmpResult.safeJoin(substr, " ");
             const _HermesInternal = HermesInternal;
             const combined = "Assertion failed: " + safeJoinResult;
           }
-          const util2 = _mod821.GLOBAL_OBJ.util;
+          const util2 = tmp(821).GLOBAL_OBJ.util;
           const format2 = util2.format;
           const items1 = [];
           HermesBuiltin.arraySpread(substr, 0);
@@ -38,14 +38,14 @@ function addConsoleBreadcrumb(level, arguments) {
         }
       }
     }
-    tmpResult = addBreadcrumb;
+    tmpResult = tmp(908);
     obj = { input: null, level: null };
     obj[0] = arguments;
-    obj[1] = level;
+    obj[1] = arg0;
     tmpResult.addBreadcrumb(obj, obj);
   }
+  const obj3 = severityLevelFromString;
   applyResult = isMatchingPattern.safeJoin(arguments, " ");
-  const tmpResult1 = isMatchingPattern;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -65,16 +65,15 @@ export const consoleIntegration = setupIntegration.defineIntegration(() => {
     name: "Console",
     setup(arg0) {
       closure_0 = arg0;
-      const result = set(dependencyMap[2]).addConsoleInstrumentationHandler((level) => {
+      const result = set(closure_1_1[2]).addConsoleInstrumentationHandler((level) => {
         level = level.level;
-        let hasItem = set(dependencyMap[3]).getClient() === set;
+        let hasItem = set(closure_2_1[3]).getClient() === set;
         if (hasItem) {
           hasItem = set.has(level);
         }
         if (hasItem) {
-          addConsoleBreadcrumb(level, level.args);
+          closure_2_2(level, level.args);
         }
-        const obj = set(dependencyMap[3]);
       });
     }
   };

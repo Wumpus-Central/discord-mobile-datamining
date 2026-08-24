@@ -1,15 +1,15 @@
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
-import obj132Default from "../../../utils/Durations.tsx";
+import setDefault from "../../../utils/Durations.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../design/void/native.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import closure_5 from "../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function Emoji(url) {
   url = url.url;
   const tmp = callback();
@@ -30,9 +30,10 @@ function Emoji(url) {
   }
   return tmp5;
 }
-let closure_7 = 6 * obj132Default.Millis.SECOND;
-let closure_8 = 2 * obj132Default.Millis.SECOND;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, position: "absolute", right: 16, top: 16 };
+let closure_7 = 6 * setDefault.Millis.SECOND;
+let closure_8 = 2 * setDefault.Millis.SECOND;
+createCacheKey = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, position: "absolute", right: 16, top: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { right: "auto", left: 16 };
 createCacheKey[2] = { padding: 12 };
@@ -40,7 +41,7 @@ createCacheKey[3] = { fontSize: 32, lineHeight: 38, alignContent: "center", just
 createCacheKey[4] = { width: 32, height: 32 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function AnimatedEffectEmojiTsx1(){const{withSequence,withTiming,ANIMATION_ROTATION_DEG,withDelay,useReducedMotion,STANDARD_EASING}=this.__closure;const rotate=withSequence(withTiming(ANIMATION_ROTATION_DEG+\"deg\",{duration:0}),withDelay(100,withTiming('0deg',{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));const scale=withSequence(withTiming(0,{duration:0}),withDelay(100,withTiming(1,{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));return{transform:[{scale:scale},{rotate:rotate}]};}" };
-const result = require("obj132").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
 
 export default function AnimatedEffectEmoji(onComplete) {
   ({ voiceChannelEffect, hasNotch } = onComplete);
@@ -137,7 +138,7 @@ export default function AnimatedEffectEmoji(onComplete) {
     obj2[1] = emoji.name;
     obj1[1] = <Emoji url={null} surrogates={null} />;
     obj[1] = <View style={null}>{null}</View>;
-    tmp9Result = jsx(sentAt(tmp3[10]).View, { style: null, children: null });
+    tmp9Result = tmp9(sentAt(tmp3[10]).View, obj);
   }
   return tmp9Result;
 };

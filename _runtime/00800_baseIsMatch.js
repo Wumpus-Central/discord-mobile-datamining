@@ -1,9 +1,8 @@
 // _runtime/00800_baseIsMatch.js
-import baseIsEqual from "00768_baseIsEqual.js";
 import Stack from "00775_Stack.js";
 
 
-export default function baseIsMatch(arg0, resizeMode, arg2, fn) {
+export default function baseIsMatch(arg0, arg1, arg2, arg3) {
   if (null == arg0) {
     return !length;
   } else {
@@ -14,7 +13,8 @@ export default function baseIsMatch(arg0, resizeMode, arg2, fn) {
     if (+length) {
       while (true) {
         let tmp = arg2[diff];
-        if (!fn) {
+        let tmp2 = diff;
+        if (!arg3) {
           if (tmp[2]) {
             let tmp3 = tmp[1] !== ObjectResult[tmp[0]];
           }
@@ -38,7 +38,8 @@ export default function baseIsMatch(arg0, resizeMode, arg2, fn) {
         let tmp11 = ObjectResult[first];
         let tmp12 = tmp9[1];
         let tmp13 = tmp8;
-        if (!fn) {
+        let tmp14 = sum;
+        if (!arg3) {
           if (tmp9[2]) {
             let tmp15 = tmp13;
             if (undefined === tmp11) {
@@ -51,14 +52,29 @@ export default function baseIsMatch(arg0, resizeMode, arg2, fn) {
           sum = sum + 1;
           tmp8 = tmp15;
         }
+        let tmp16 = require;
+        let tmp17 = dependencyMap;
+        let tmp18 = new.target;
+        let tmp19 = new.target;
         let tmp20 = new Stack();
         let tmp21 = tmp20;
-        if (fn) {
-          tmp13 = fn(tmp11, tmp12, first, ObjectResult, resizeMode, tmp21);
+        if (arg3) {
+          let tmp22 = tmp11;
+          let tmp23 = tmp12;
+          let tmp24 = first;
+          let tmp25 = ObjectResult;
+          let tmp26 = arg1;
+          let tmp27 = tmp20;
+          tmp13 = arg3(tmp11, tmp12, first, ObjectResult, arg1, tmp21);
         }
         let tmp28 = tmp13;
         if (undefined === tmp13) {
-          tmp28 = baseIsEqual(tmp12, tmp11, 3, fn, tmp21);
+          let tmp29 = tmp12;
+          let tmp30 = tmp11;
+          let num2 = 3;
+          let tmp31 = arg3;
+          let tmp32 = tmp20;
+          tmp28 = tmp16(768)(tmp12, tmp11, 3, arg3, tmp21);
         }
         tmp15 = tmp13;
         if (!tmp28) {

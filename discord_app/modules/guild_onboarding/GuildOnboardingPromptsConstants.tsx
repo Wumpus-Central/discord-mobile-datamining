@@ -2,18 +2,19 @@
 import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_6 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { PlatformTypes } from "../../Constants.tsx";
+import set from "../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function serverPromptToClientPrompt(id) {
   const options = id.options;
   return {
     id: id.id,
-    options: options.map((item, index) => {
-      obj = { id: item.id, channelIds: item.channel_ids, roleIds: item.role_ids, emoji: item.emoji, title: item.title, description: null };
-      let str = item.description;
+    options: options.map((id) => {
+      obj = { id: id.id, channelIds: id.channel_ids, roleIds: id.role_ids, emoji: id.emoji, title: id.title, description: null };
+      let str = id.description;
       if (str == null) {
         str = "";
       }
@@ -36,6 +37,7 @@ function validateOnboardingConnection(connection_type) {
       items.push("Application ID is required for application connections");
     }
     obj3 = isNullOrEmpty;
+    const tmp9 = require;
     if (!tmp9Result.isNullOrEmpty(connection_type.provider_id)) {
       items.push("Platform ID not allowed for application connections");
     }
@@ -50,6 +52,7 @@ function validateOnboardingConnection(connection_type) {
     if (!tmp3Result.isNullOrEmpty(connection_type.application_id)) {
       items.push("Application ID not allowed for platform connections");
     }
+    const tmp3 = require;
     tmp3Result = isNullOrEmpty;
   } else {
     const connection_type2 = connection_type.connection_type;
@@ -67,13 +70,14 @@ function validateOnboardingConnection(connection_type) {
 }
 let closure_3 = ["id"];
 let closure_4 = ["id"];
-let obj = { APPLICATION: 0, [0]: "APPLICATION", PROVIDER_CONNECTED_ACCOUNT: 1, [1]: "PROVIDER_CONNECTED_ACCOUNT" };
+let obj = { MULTIPLE_CHOICE: 0, [0]: "MULTIPLE_CHOICE", DROPDOWN: 1, [1]: "DROPDOWN" };
+obj = { APPLICATION: 0, [0]: "APPLICATION", PROVIDER_CONNECTED_ACCOUNT: 1, [1]: "PROVIDER_CONNECTED_ACCOUNT" };
 let items = [, , , , , , , ];
 ({ PLAYSTATION_STAGING: arr[0], CONTACTS: arr[1], DOMAIN: arr[2], TWITTER_LEGACY: arr[3], MASTODON: arr[4], INSTAGRAM: arr[5], LEAGUE_OF_LEGENDS: arr[6], SKYPE: arr[7] } = PlatformTypes);
-const set = new Set(items);
+let set = new Set(items);
 const values = Object.values(PlatformTypes);
-let closure_11 = values.filter((item, index) => !set.has(item));
-const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx");
+let closure_11 = values.filter((arg0) => !set.has(arg0));
+const result = set.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx");
 
 export const MAX_PROMPT_TITLE_LENGTH = 100;
 export const MAX_PROMPT_OPTION_TITLE_LENGTH = 50;
@@ -125,27 +129,27 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
   const options = id.options;
   return {
     id: id.id,
-    options: options.map((item, index) => {
-      obj = { id: item.id, channel_ids: item.channelIds, role_ids: item.roleIds, emoji: item.emoji, emoji_id: null, emoji_name: null, emoji_animated: null, title: null, description: null };
-      const emoji = item.emoji;
-      let id;
+    options: options.map((id) => {
+      obj = { id: id.id, channel_ids: id.channelIds, role_ids: id.roleIds, emoji: id.emoji, emoji_id: null, emoji_name: null, emoji_animated: null, title: null, description: null };
+      const emoji = id.emoji;
+      id = undefined;
       if (emoji != null) {
         id = emoji.id;
       }
       obj[4] = id;
-      const emoji2 = item.emoji;
+      const emoji2 = id.emoji;
       let name;
       if (emoji2 != null) {
         name = emoji2.name;
       }
       obj[5] = name;
-      const emoji3 = item.emoji;
+      const emoji3 = id.emoji;
       let animated;
       if (emoji3 != null) {
         animated = emoji3.animated;
       }
       obj[6] = animated;
-      ({ title: obj[7], description: obj[8] } = item);
+      ({ title: obj[7], description: obj[8] } = id);
       return obj;
     }),
     title: id.title,
@@ -191,6 +195,7 @@ export const isEmojiEmpty = function isEmojiEmpty(id) {
   let tmp = null == id;
   if (!tmp) {
     tmp = null == id.id && null == id.name;
+    const tmp2 = null == id.id && null == id.name;
   }
   return tmp;
 };
@@ -235,26 +240,27 @@ export const parseConnectionIdentifier = function parseConnectionIdentifier(str)
 export { validateOnboardingConnection };
 export const validateOnboardingConnections = function validateOnboardingConnections(arr) {
   let items = [];
-  new Set();
+  set = new Set();
   function _loop(arg0) {
-    let arr = validateOnboardingConnection(connection_type);
-    items = [...arr.map((item, index) => "Connection " + closure_0 + 1 + ": " + item)];
+    items = arg0;
+    let arr = closure_1_12(connection_type);
+    items = [...arr.map((arg0) => "Connection " + closure_0 + 1 + ": " + arg0)];
     items.push.apply(items);
-    if (connection_type.connection_type === obj.APPLICATION) {
+    if (connection_type.connection_type === closure_1_8.APPLICATION) {
       const _HermesInternal2 = HermesInternal;
-      let combined = "app:" + connection_type.application_id;
+      let combined = "app:" + tmp.application_id;
     } else {
       const _HermesInternal = HermesInternal;
-      combined = "provider:" + connection_type.provider_id;
+      combined = "provider:" + tmp.provider_id;
     }
     if (set.has(combined)) {
-      arr = arr2.push("Duplicate connection configuration");
+      arr = items.push("Duplicate connection configuration");
     }
     set.add(combined);
-    arr2 = items;
   }
   const entries = arr.entries();
   while (tmp3 !== undefined) {
+    let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
     closure_2 = tmp6[1];
     let _loopResult = _loop(tmp6[0]);

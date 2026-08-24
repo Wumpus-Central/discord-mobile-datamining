@@ -6,14 +6,14 @@ import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c3 = importAllResult;
 let closure_7 = createCacheKey.createStyles({ buttonParent: { flexShrink: 1 } });
 const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
   ({ activityName, setMode } = arg0);
   const items = [setMode];
   const callback = importAllResult.useCallback(() => {
-    setMode(ActivityPanelModes.PIP);
+    setMode(closure_1_5.PIP);
   }, items);
   if (undefined !== activityName) {
     if ("" !== activityName) {
@@ -36,6 +36,6 @@ const memoResult = importAllResult.memo(function MinimizeActivityButton(arg0) {
   obj[2] = callback;
   tmp3 = jsx(setMode(8035).IconButton, { icon: registerAssetDefault, accessibilityLabel: null, onPress: null, size: "sm", variant: "secondary-overlay", maxFontSizeMultiplier: 1 });
 });
-const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/MinimizeActivityButton.tsx");
 
 export default memoResult;

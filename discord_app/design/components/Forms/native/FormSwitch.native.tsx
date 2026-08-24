@@ -3,29 +3,34 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import CONFIG_NEVER_ANIMATE from "../../../animation/reanimated/spring/spring.tsx";
 import IconSizesDefault from "../../../void/Icon/native/Icon.tsx";
 import SUBTLE_SPRING from "../../../animation/reanimated/spring/springPresets.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-require = fn;
+require = arg1;
 let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
-let obj = { width: ThemesDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: ThemesDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: ThemesDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
+let obj = { switch: null, unselectedBackground: null, unselectedIcon: null, selectedIcon: null, selected: null, knob: null };
+obj = { width: ThemesDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: ThemesDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: ThemesDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
 obj[0] = obj;
-const createCacheKey = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_DEFAULT };
+createCacheKey = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_DEFAULT };
 obj[1] = createCacheKey;
 obj[2] = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
+let obj2 = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
 obj[3] = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
+let obj3 = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
 obj[4] = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_SELECTED_DEFAULT };
+let obj4 = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_SELECTED_DEFAULT };
 obj[5] = { height: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
 let closure_7 = createCacheKey.createStyles(obj);
+let obj5 = { height: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
 let closure_8 = importDefaultResult.createAnimatedComponent(IconSizesDefault);
 let closure_9 = { code: "function FormSwitchNativeTsx1(){const{withSpring,checked,selected,unselectedBackground,SUBTLE_SPRING}=this.__closure;return{backgroundColor:withSpring(checked?selected.tintColor:unselectedBackground.tintColor,SUBTLE_SPRING,'animate-always'),borderColor:withSpring(checked?selected.borderColor:unselectedBackground.borderColor,SUBTLE_SPRING,'animate-always')};}" };
 let closure_10 = { code: "function FormSwitchNativeTsx2(){const{withSpring,checked,knobCheckedLeft,SUBTLE_SPRING,knobSelectedBackgroundColor,knobBackgroundColor}=this.__closure;return{left:withSpring(checked?knobCheckedLeft:0,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?knobSelectedBackgroundColor:knobBackgroundColor,SUBTLE_SPRING,'animate-always')};}" };
 let closure_11 = { code: "function FormSwitchNativeTsx3(){const{useReducedMotion,checked,on,off,withSpring,SUBTLE_SPRING}=this.__closure;const scale=useReducedMotion?1:checked?on:off;return{opacity:withSpring(checked?on:off,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(scale,SUBTLE_SPRING)}]};}" };
 const importDefaultResult1 = importDefaultResult;
-let result = require("obj132").fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
 
 export const FormSwitch = function FormSwitch(onValueChange) {
   ({ disabled, value } = onValueChange);
@@ -91,7 +96,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
     if (first) {
       num = token;
     }
-    obj = { left: obj.withSpring(num, v0(enabled[11]).SUBTLE_SPRING, "animate-always"), backgroundColor: v0(enabled[10]).withSpring(first ? token2 : token1, v0(enabled[11]).SUBTLE_SPRING, "animate-always") };
+    obj = { left: obj.withSpring(num, tmp(tmp2[11]).SUBTLE_SPRING, "animate-always"), backgroundColor: v0(enabled[10]).withSpring(first ? token2 : token1, v0(enabled[11]).SUBTLE_SPRING, "animate-always") };
     return obj;
   };
   obj = { withSpring: _require(enabled[10]).withSpring, checked: first, knobCheckedLeft: token, SUBTLE_SPRING: _require(enabled[11]).SUBTLE_SPRING, knobSelectedBackgroundColor: token2, knobBackgroundColor: token1 };
@@ -99,10 +104,12 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   fn.__workletHash = 3687946563898;
   fn.__initData = token2;
   _require = 1;
+  importDefault = 0;
   const animatedStyle1 = obj5.useAnimatedStyle(fn);
   const fn2 = function n() {
     if (enabled) {
-      let obj = { opacity: null, transform: null };
+      let obj = CONFIG_NEVER_ANIMATE;
+      obj = { opacity: null, transform: null };
       obj[0] = obj.withSpring(first ? c0 : c1, SUBTLE_SPRING.SUBTLE_SPRING, "animate-always");
       obj = { scale: null };
       obj[0] = CONFIG_NEVER_ANIMATE.withSpring(1, SUBTLE_SPRING.SUBTLE_SPRING);
@@ -121,7 +128,8 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   obj1 = { useReducedMotion: enabled, checked: first, on: 1, off: 0, withSpring: _require(enabled[10]).withSpring, SUBTLE_SPRING: _require(enabled[11]).SUBTLE_SPRING };
   const fn3 = function n() {
     if (enabled) {
-      let obj = { opacity: null, transform: null };
+      let obj = CONFIG_NEVER_ANIMATE;
+      obj = { opacity: null, transform: null };
       obj[0] = obj.withSpring(first ? c0 : c1, SUBTLE_SPRING.SUBTLE_SPRING, "animate-always");
       obj = { scale: null };
       obj[0] = CONFIG_NEVER_ANIMATE.withSpring(1, SUBTLE_SPRING.SUBTLE_SPRING);

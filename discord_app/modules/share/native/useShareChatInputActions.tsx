@@ -1,10 +1,10 @@
 // discord_app/modules/share/native/useShareChatInputActions.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { EmojiIntention } from "../../emojis/EmojiConstants.tsx";
 
-const require = fn;
-let result = require("obj132").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
+const require = arg1;
+let result = require("set").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
 
 export const useShareChatInputActions = function useShareChatInputActions(setText, selectedDestinationChannel, appEntryKey) {
   closure_0 = setText;
@@ -67,8 +67,8 @@ export const useShareChatInputActions = function useShareChatInputActions(setTex
       if (current != null) {
         current.blur();
       }
-      setText(selectedDestinationChannel[3]);
-      const obj = { onPressEmoji: callback3, onClose: callback4, pickerIntention: constants.CHAT, autoFocus: false, startExpanded: false, channel: selectedDestinationChannel, appEntryKey: closure_2, guildId: null };
+      let obj = setText(selectedDestinationChannel[3]);
+      obj = { onPressEmoji: callback3, onClose: callback4, pickerIntention: constants.CHAT, autoFocus: false, startExpanded: false, channel: selectedDestinationChannel, appEntryKey: closure_2, guildId: null };
       let guildId;
       if (selectedDestinationChannel != null) {
         guildId = selectedDestinationChannel.getGuildId();

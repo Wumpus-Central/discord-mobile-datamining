@@ -22,45 +22,45 @@ function isArguments(obj) {
   }
   return tmp3;
 }
-let isArguments2 = function isArguments(callee) {
+let isArguments2 = function isArguments(obj) {
   if (typeof isArguments !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = closure_0;
   if (closure_0) {
-    tmp = callee;
+    tmp = obj;
   }
   if (tmp) {
-    tmp = typeof callee === "object";
+    tmp = typeof obj === "object";
   }
   if (tmp) {
     const _Symbol = Symbol;
-    tmp = Symbol.toStringTag in callee;
+    tmp = Symbol.toStringTag in obj;
   }
   let tmp3 = !tmp;
   if (!tmp) {
-    tmp3 = "[object Arguments]" === callback(callee);
+    tmp3 = "[object Arguments]" === callback(obj);
   }
   let tmp5 = tmp3;
   if (!tmp5) {
-    let tmp7 = null !== callee && typeof callee === "object";
+    let tmp7 = null !== obj && typeof obj === "object";
     if (tmp7) {
-      tmp7 = "length" in callee;
+      tmp7 = "length" in obj;
     }
     if (tmp7) {
-      tmp7 = typeof callee.length === "number";
+      tmp7 = typeof obj.length === "number";
     }
     if (tmp7) {
-      tmp7 = callee.length >= 0;
+      tmp7 = obj.length >= 0;
     }
     if (tmp7) {
-      tmp7 = "[object Array]" !== callback(callee);
+      tmp7 = "[object Array]" !== callback(obj);
     }
     if (tmp7) {
-      tmp7 = "callee" in callee;
+      tmp7 = "callee" in obj;
     }
     if (tmp7) {
-      tmp7 = "[object Function]" === callback(callee.callee);
+      tmp7 = "[object Function]" === callback(obj.callee);
     }
     tmp5 = tmp7;
   }

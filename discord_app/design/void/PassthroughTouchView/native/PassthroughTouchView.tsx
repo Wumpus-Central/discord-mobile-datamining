@@ -4,7 +4,7 @@ import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/pack
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
-const result = require("obj132").fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
+const result = require("set").fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
 
 export default function PassthroughTouchView(onTouchDown) {
   const merged = Object.assign(onTouchDown, Object.create(null));

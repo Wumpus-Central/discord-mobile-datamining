@@ -1,8 +1,7 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import _modDef4090 from "../../../../lib/native/Linking.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -19,7 +18,7 @@ function ExternalLinkItem(data) {
     obj[0] = url(12820).LinkExternalMediumIcon;
     obj[2] = callback(url(6296).TableRowIcon, obj);
     obj[3] = function onPress() {
-      _modDef4090.openURL(url);
+      closure_1_1(closure_1_2[8]).openURL(url);
     };
     tmp3 = callback(url(8086).RowButton, obj);
   }
@@ -28,15 +27,15 @@ function ExternalLinkItem(data) {
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerText: { marginBottom: 8 } });
-const result = obj132.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
 
 export default function ExternalLinksElement(elements) {
   elements = elements.elements;
   const tmp = callback2();
   if (null != elements) {
     if (0 !== elements.length) {
-      if (null != elements.find((item, index) => item.data.is_localized)) {
-        const someResult = elements.some((item, index) => item.data.is_header_hidden);
+      if (null != elements.find((data) => data.data.is_localized)) {
+        const someResult = elements.some((data) => data.data.is_header_hidden);
         let obj = { style: null, children: null };
         obj[0] = tmp.linksContainer;
         let tmp5 = !someResult;
@@ -48,9 +47,9 @@ export default function ExternalLinksElement(elements) {
           tmp5 = callback(Text.Text, obj);
           const str = intl.string(getSystemLocale.t.hvVgAZ);
         }
-        const items = [tmp5, elements.map((item, index) => callback(closure_7, { data: item.data }, "external-link-" + index))];
+        const items = [tmp5, elements.map((data) => callback(closure_7, { data: data.data }, "external-link-" + arg1))];
         obj[1] = items;
-        return callback(View, obj);
+        return closure_5(View, obj);
       }
     }
   }

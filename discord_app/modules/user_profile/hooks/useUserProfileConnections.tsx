@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/hooks/useUserProfileConnections.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import createUserWidgetFromServer from "../UserProfileStore.tsx";
+import closure_4 from "../UserProfileStore.tsx";
 
 const useMemo = noop.useMemo;
 let closure_5 = [];
-const result = obj132.fileFinishedImporting("modules/user_profile/hooks/useUserProfileConnections.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileConnections.tsx");
 
 export default function useUserProfileConnections(arg0) {
   const _require = arg0;
@@ -21,19 +21,19 @@ export default function useUserProfileConnections(arg0) {
   return useMemo(() => {
     let connectedAccounts;
     if (stateFromStores != null) {
-      connectedAccounts = stateFromStores.connectedAccounts;
+      connectedAccounts = tmp.connectedAccounts;
     }
     if (null == connectedAccounts) {
       let found = closure_1_5;
     } else {
-      const connectedAccounts1 = stateFromStores.connectedAccounts;
-      found = connectedAccounts1.filter((item, index) => {
-        const type = item.type;
-        const value = platformAllowed(stateFromStores[4]).get(type);
+      const connectedAccounts1 = tmp.connectedAccounts;
+      found = connectedAccounts1.filter((type) => {
+        type = type.type;
+        const value = closure_1_1(closure_1_2[4]).get(type);
         let isSupportedResult = null != value;
         if (isSupportedResult) {
-          isSupportedResult = platformAllowed(stateFromStores[4]).isSupported(type);
-          const tmpResult = platformAllowed(stateFromStores[4]);
+          isSupportedResult = closure_1_1(closure_1_2[4]).isSupported(type);
+          const tmpResult = closure_1_1(closure_1_2[4]);
         }
         if (isSupportedResult) {
           isSupportedResult = callback(value);

@@ -17,12 +17,12 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((fn) => {
-      closure_0 = fn;
+    _Promise = new _Promise((arg0, arg1) => {
+      closure_0 = arg0;
       closure_1 = arg1;
-      function fulfilled(result) {
+      function fulfilled(arg0) {
         try {
-          step(iter.next(result));
+          step(iter.next(arg0));
         } catch (tmp5) {
           callback2(tmp5);
         }
@@ -42,8 +42,8 @@ if (!fn) {
           let tmp = done.value;
           callback = tmp;
           if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((fn) => {
-              fn(closure_0);
+            tmp = new tmp((arg0) => {
+              arg0(closure_0);
             });
           }
           tmp.then(fulfilled, iter);
@@ -57,13 +57,13 @@ if (!fn) {
       const iter2 = iter.next();
       const value = iter2.value;
       if (iter2.done) {
-        fn(value);
+        arg0(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((fn) => {
-            fn(closure_0);
+          tmp3 = new tmp3((arg0) => {
+            arg0(closure_0);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -72,6 +72,24 @@ if (!fn) {
     return _Promise;
   };
 }
+let obj = {
+  onUnhandled(id, originalException) {
+    obj = registerSpanErrorInstrumentation;
+    obj = { data: obj, originalException, syntheticException: null, mechanism: null };
+    obj = { id };
+    let syntheticError;
+    if (!obj4.isErrorLike(originalException)) {
+      syntheticError = createSyntheticError.createSyntheticError();
+      const tmpResult = createSyntheticError;
+    }
+    obj[2] = syntheticError;
+    obj[3] = { handled: true, type: "onunhandledrejection" };
+    obj.captureException(originalException, obj);
+  },
+  onHandled(displayId, error) {
+
+  }
+};
 arg5.reactNativeErrorHandlersIntegration = () => {
   obj = arg0;
   if (arg0 === undefined) {
@@ -86,7 +104,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
           try {
             obj = callback(_undefined[0]);
             if (obj.isHermesEnabled()) {
-              let _HermesInternal = callback(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+              let _HermesInternal = tmp3(tmp5[1]).RN_GLOBAL_OBJ.HermesInternal;
               let prop;
               if (null !== _HermesInternal) {
                 if (undefined !== tmp8) {
@@ -95,9 +113,9 @@ arg5.reactNativeErrorHandlersIntegration = () => {
               }
               if (prop) {
                 _HermesInternal = undefined;
-                if (null !== callback(_undefined[1]).RN_GLOBAL_OBJ) {
-                  if (undefined !== callback(_undefined[1]).RN_GLOBAL_OBJ) {
-                    _HermesInternal = callback(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+                if (null !== tmp3(tmp5[1]).RN_GLOBAL_OBJ) {
+                  if (undefined !== tmp3(tmp5[1]).RN_GLOBAL_OBJ) {
+                    _HermesInternal = tmp3(tmp5[1]).RN_GLOBAL_OBJ.HermesInternal;
                   }
                 }
                 let hasPromise;
@@ -117,24 +135,24 @@ arg5.reactNativeErrorHandlersIntegration = () => {
                   }
                 }
                 if (undefined) {
-                  const debug3 = callback(_undefined[2]).debug;
+                  const debug3 = tmp3(tmp5[2]).debug;
                   debug3.log("Using Hermes native promise rejection tracking");
-                  const _HermesInternal2 = callback(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+                  const _HermesInternal2 = tmp3(tmp5[1]).RN_GLOBAL_OBJ.HermesInternal;
                   obj = { allRejections: true, onUnhandled: null, onHandled: null };
                   ({ onUnhandled: obj6[1], onHandled: obj6[2] } = closure_3);
                   let result = _HermesInternal2.enablePromiseRejectionTracker(obj);
-                  const debug4 = callback(_undefined[2]).debug;
+                  const debug4 = tmp3(tmp5[2]).debug;
                   debug4.log("Unhandled promise rejections will be caught by Sentry.");
                 }
               }
             }
-            let tmp3Result = callback(_undefined[0]);
+            let tmp3Result = tmp3(tmp5[0]);
             if (tmp3Result.isWeb()) {
-              const debug2 = callback(_undefined[2]).debug;
+              const debug2 = tmp3(tmp5[2]).debug;
               debug2.log("Using Browser JS promise rejection tracking for React Native Web");
-              tmp3Result = callback(_undefined[2]);
+              tmp3Result = tmp3(tmp5[2]);
               const result1 = tmp3Result.addGlobalUnhandledRejectionInstrumentationHandler((originalException) => {
-                callback(817);
+                obj = callback(817);
                 obj = { originalException, syntheticException: null, mechanism: null };
                 let syntheticError;
                 if (!obj3.isErrorLike(originalException)) {
@@ -144,21 +162,20 @@ arg5.reactNativeErrorHandlersIntegration = () => {
                 obj[1] = syntheticError;
                 obj[2] = { handled: false, type: "onunhandledrejection" };
                 obj.captureException(originalException, obj);
-                obj3 = callback(813);
               });
             } else if (patchGlobalPromise) {
-              callback(_undefined[4]).polyfillPromise();
+              tmp3(tmp5[4]).polyfillPromise();
               (function attachUnhandledRejectionHandler() {
                 obj = callback(1017);
                 const result = obj.requireRejectionTracking();
                 obj = { allRejections: true, onUnhandled: closure_3.onUnhandled, onHandled: closure_3.onHandled };
                 result.enable(obj);
               })();
-              const tmp3Result1 = callback(_undefined[4]);
-              callback(_undefined[4]).checkPromiseAndWarn();
-              const tmp3Result2 = callback(_undefined[4]);
+              const tmp3Result1 = tmp3(tmp5[4]);
+              tmp3(tmp5[4]).checkPromiseAndWarn();
+              const tmp3Result2 = tmp3(tmp5[4]);
             } else {
-              const debug = callback(_undefined[2]).debug;
+              const debug = tmp3(tmp5[2]).debug;
               debug.log("Unhandled promise rejections will not be caught by Sentry.");
             }
           } catch (err) {
@@ -169,7 +186,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
       }
       if (merged.onerror) {
         c0 = false;
-        const _ErrorUtils = obj(dependencyMap[1]).RN_GLOBAL_OBJ.ErrorUtils;
+        const _ErrorUtils = obj(closure_1_1[1]).RN_GLOBAL_OBJ.ErrorUtils;
         if (_ErrorUtils) {
           if (null !== _ErrorUtils.getGlobalHandler) {
             if (undefined !== getGlobalHandler) {
@@ -271,7 +288,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
                     if (!num3) {
                       num3 = 2000;
                     }
-                    client.flush(num3).then((result) => {
+                    client.flush(num3).then(() => {
                       obj2(client, obj2);
                     }, (arg0) => {
                       const debug = client(obj2[2]).debug;
@@ -288,9 +305,11 @@ arg5.reactNativeErrorHandlersIntegration = () => {
             });
           });
         } else {
-          let debug = obj(dependencyMap[2]).debug;
+          let debug = tmp3(tmp4[2]).debug;
           debug.warn("ErrorUtils not found. Can be caused by different environment for example react-native-web.");
         }
+        tmp3 = obj;
+        tmp4 = closure_1_1;
       }
     }
   };

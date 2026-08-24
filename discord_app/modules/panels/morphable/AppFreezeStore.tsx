@@ -1,5 +1,5 @@
 // discord_app/modules/panels/morphable/AppFreezeStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set2 from "../../../../_runtime/00002_set.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0) => {
@@ -8,7 +8,7 @@ let obj = keys.create((arg0) => {
     lockKeys: new Set(),
     requestFreezeLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(dependencyMap[1]).batchUpdates(() => {
+      callback(closure_1_1[1]).batchUpdates(() => {
         closure_1_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_0);
@@ -18,7 +18,7 @@ let obj = keys.create((arg0) => {
               let obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
-              const items = [closure_0];
+              const items = [tmp];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
               const set = new Set(items);
@@ -29,7 +29,7 @@ let obj = keys.create((arg0) => {
           } else if (hasItem) {
             const _Set = Set;
             const set1 = new Set(lockKeys);
-            set1.delete(closure_0);
+            set1.delete(tmp);
             obj = {};
             const merged1 = Object.assign(lockKeys);
             obj.lockKeys = set1;
@@ -43,6 +43,6 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = obj132.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
+const result = set2.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
 
 export default obj;

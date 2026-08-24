@@ -1,13 +1,13 @@
 // discord_app/modules/notifications/native/NativeNotificationsManager.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import updateGuildUnreadSentinel from "../../../stores/GuildReadStateStore.tsx";
-import generateOldThreadCutoff from "../../../stores/ReadStateStore.tsx";
+import closure_5 from "../../../stores/GuildReadStateStore.tsx";
+import closure_6 from "../../../stores/ReadStateStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-let require = fn;
+let require = arg1;
 function getDeliveredNotifications() {
   const self = this;
   const apply = _getDeliveredNotifications.apply;
@@ -142,29 +142,29 @@ function _updateAndClearStaleNotifications() {
         } else {
           (function clearStaleNotifications() {
             if (obj.shouldClearChannelNotificationsOnAppForeground({ location: "clearStaleNotifications" })) {
-              const found = closure_9.filter((item, index) => {
-                if (null != item.userInfo) {
-                  if (typeof item.userInfo === "object") {
-                    if (typeof item.userInfo.channel_id !== "string") {
+              const found = closure_9.filter((userInfo) => {
+                if (null != userInfo.userInfo) {
+                  if (typeof userInfo.userInfo === "object") {
+                    if (typeof userInfo.userInfo.channel_id !== "string") {
                       return false;
-                    } else if (typeof item.userInfo.notif_instance_id !== "string") {
+                    } else if (typeof userInfo.userInfo.notif_instance_id !== "string") {
                       return false;
                     } else {
-                      let message_id = item.userInfo.notif_instance_id;
-                      if ("MESSAGE_CREATE" === item.userInfo.type) {
-                        if (typeof item.userInfo.message_id !== "string") {
+                      let message_id = userInfo.userInfo.notif_instance_id;
+                      if ("MESSAGE_CREATE" === userInfo.userInfo.type) {
+                        if (typeof userInfo.userInfo.message_id !== "string") {
                           return false;
                         } else {
-                          message_id = item.userInfo.message_id;
+                          message_id = userInfo.userInfo.message_id;
                         }
-                      } else if ("GENERIC_PUSH_NOTIFICATION_SENT" !== item.userInfo.type) {
+                      } else if ("GENERIC_PUSH_NOTIFICATION_SENT" !== userInfo.userInfo.type) {
                         return false;
-                      } else if ("REACTIONS_PUSH_NOTIFICATION" !== item.userInfo.notification_type) {
+                      } else if ("REACTIONS_PUSH_NOTIFICATION" !== userInfo.userInfo.notification_type) {
                         return false;
                       }
                       if (null != message_id) {
                         if (typeof message_id === "string") {
-                          const ackMessageIdResult = closure_6.ackMessageId(item.userInfo.channel_id);
+                          const ackMessageIdResult = closure_6.ackMessageId(userInfo.userInfo.channel_id);
                           let tmp3 = null != ackMessageIdResult;
                           if (tmp3) {
                             tmp3 = callback(table[8]).compare(ackMessageIdResult, message_id) > 0;
@@ -179,14 +179,13 @@ function _updateAndClearStaleNotifications() {
                 }
                 return false;
               });
-              const mapped = found.map((item, index) => item.identifier);
+              const mapped = found.map((identifier) => identifier.identifier);
               if (mapped.length > 0) {
                 const result = v1(table[7]).removeDeliveredNotifications(mapped);
                 callback();
                 const obj2 = v1(table[7]);
               }
             }
-            obj = v0(table[6]);
           })();
           c2 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -223,7 +222,6 @@ let prototype = function NativeNotificationsManager() {
         const result1 = DCDNotificationManager.clearNotificationsForChannel(channelId);
       }
     }
-    obj = applyArgumentsResult(500);
   };
   require = applyArgumentsResult;
   applyArgumentsResult.handlePostConnectionOpen = callback(function*() {
@@ -336,14 +334,14 @@ let prototype = function NativeNotificationsManager() {
               }
               return applyArgumentsResult;
             }
-            function normalizeTimestampToMs(match) {
-              if (null != match) {
-                if (typeof match === "number") {
+            function normalizeTimestampToMs(joined) {
+              if (null != joined) {
+                if (typeof joined === "number") {
                   const _Math = Math;
-                  let rounded = Math.round(1000 * match);
-                } else if (typeof match === "string") {
+                  let rounded = Math.round(1000 * joined);
+                } else if (typeof joined === "string") {
                   const _parseInt = parseInt;
-                  rounded = parseInt(match, 10);
+                  rounded = parseInt(joined, 10);
                 }
                 return rounded;
               }
@@ -412,8 +410,8 @@ let prototype = function NativeNotificationsManager() {
                 closure_5 = arg1;
                 if (null !== closure_5) {
                   const parts = closure_5.trim().split("\n");
-                  const item = parts.forEach((item, index) => {
-                    const parsed = JSON.parse(item);
+                  const item = parts.forEach((arg0) => {
+                    const parsed = JSON.parse(arg0);
                     const result = map.set(parsed._local_uuid, parsed.app_state);
                   });
                   const str13 = closure_5.trim();
@@ -435,7 +433,7 @@ let prototype = function NativeNotificationsManager() {
                   obj4[0] = arg1;
                   return obj4;
                 } else {
-                  closure_1_0(closure_1_2[10]);
+                  const obj12 = closure_1_0(closure_1_2[10]);
                 }
               } else if (arg0 === 1) {
                 logger = 3;
@@ -487,8 +485,8 @@ let prototype = function NativeNotificationsManager() {
       if (setShowFullscreenCallUI != null) {
         const result1 = setShowFullscreenCallUI(true);
       }
+      const tmp = closure_4;
     }
-    obj = applyArgumentsResult(500);
   };
   applyArgumentsResult.updateAndClearStaleNotifications = function updateAndClearStaleNotifications() {
     callback2();
@@ -500,6 +498,6 @@ class prototype extends tmp3 {
 }
 prototype = new prototype();
 const tmp2 = new timestampDefault("NativeNotificationsManager");
-let result = require("obj132").fileFinishedImporting("modules/notifications/native/NativeNotificationsManager.tsx");
+let result = require("set").fileFinishedImporting("modules/notifications/native/NativeNotificationsManager.tsx");
 
 export default prototype;

@@ -1,10 +1,10 @@
 // discord_app/modules/tti_analytics/native/AppStartInfo.android.tsx
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_4 = {};
-const result = require("obj132").fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");
+const result = require("set").fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");
 
 export const AppStartInfo = {
   getAppUIViewed() {
@@ -22,8 +22,9 @@ export const AppStartInfo = {
   },
   getAppStartInfo() {
     return callback(function*() {
+      let callback = 0;
       let obj5 = closure_1_0(closure_1_1[3]);
-      const callback = yield obj5.getAppStartedTimestamp();
+      callback = yield obj5.getAppStartedTimestamp();
       if (callback <= 0) {
         const _Error = Error;
         error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");

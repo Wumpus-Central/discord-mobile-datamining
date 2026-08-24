@@ -1,12 +1,13 @@
 // discord_app/modules/user_profile/DisplayProfile.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import GuildFeatures from "../premium/PremiumConstants.tsx";
 import useAvatarsWithGuilds from "../profile_customization/ProfileCustomizationUtils.tsx";
+import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
 
 const PremiumTypes = GuildFeatures.PremiumTypes;
-const result = obj132.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
 class DisplayProfile {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -119,14 +120,14 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(items /* items */.isGameWidget);
+      found = widgets.filter(items.isGameWidget);
     }
     return found;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "primaryColor", {
-  get: function primaryColor(onSelectColor) {
+  get: function primaryColor(arg0) {
     const themeColors = this.themeColors;
     let first;
     if (themeColors != null) {
@@ -141,7 +142,7 @@ Object.defineProperty(prototype, "primaryColor", {
 });
 Object.defineProperty(prototype, "canUsePremiumProfileCustomization", {
   get: function canUsePremiumProfileCustomization() {
-    return require("../../utils/PremiumUtils.tsx").isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
+    return getPremiumPlanItem.isPremiumAtLeast(this.premiumType, PremiumTypes.TIER_2);
   },
   set: undefined
 });
@@ -152,7 +153,7 @@ Object.defineProperty(prototype, "canEditThemes", {
   set: undefined
 });
 Object.defineProperty(prototype, "application", {
-  get: function application(dependencyMap, arg1) {
+  get: function application(setOrientationLockState, arg1) {
     return this._userProfile.application;
   },
   set: undefined
@@ -163,6 +164,7 @@ Object.defineProperty(prototype, "isLoaded", {
     let tmp = undefined !== this._userProfile;
     if (tmp) {
       tmp = null == self.guildId || undefined !== self._guildMemberProfile;
+      const tmp3 = null == self.guildId || undefined !== self._guildMemberProfile;
     }
     return tmp;
   },
@@ -251,9 +253,11 @@ prototype["getBannerURL"] = function getBannerURL(arg0) {
       obj[3] = canAnimate;
       obj[4] = size;
       let guildMemberBannerURL = getAvatarURL.getGuildMemberBannerURL(obj);
+      const obj3 = getAvatarURL;
     }
     return guildMemberBannerURL;
   }
+  obj = getAvatarURL;
   obj = { id: self.userId, banner: self.banner, canAnimate, size };
   guildMemberBannerURL = obj.getUserBannerURL(obj);
 };
@@ -282,6 +286,7 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
         obj[2] = arg1;
         obj[3] = num;
         userBannerURL = getAvatarURL.getUserBannerURL(obj);
+        const obj2 = getAvatarURL;
       }
       let bannerURL = userBannerURL;
     } else {
@@ -294,7 +299,8 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  const obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
+  let obj = useAvatarsWithGuilds;
+  obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let bio;
   if (_guildMemberProfile != null) {
@@ -305,7 +311,8 @@ prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  const obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
+  let obj = useAvatarsWithGuilds;
+  obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;
   if (_guildMemberProfile != null) {

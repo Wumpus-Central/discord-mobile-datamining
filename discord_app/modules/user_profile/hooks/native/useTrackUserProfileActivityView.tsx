@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../../_runtime/00019_noop.js";
-import map from "../../../content_inventory/ContentInventoryOutboxStore.tsx";
+import closure_5 from "../../../content_inventory/ContentInventoryOutboxStore.tsx";
 
-const require = fn;
+const require = arg1;
 ({ useEffect: c3, useState: c4 } = noop);
-const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileActivityView.tsx");
 
 export default function useTrackUserProfileActivityView(arg0) {
   ({ userId: require, onAction } = arg0);

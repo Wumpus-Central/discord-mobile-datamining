@@ -3,11 +3,13 @@ import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
 import create2 from "user_settings_shared.tsx";
 import now from "../../../google/protobuf/timestamp.tsx";
 import defineProperty from "../../../google/protobuf/wrappers.tsx";
-import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7, MessageType as MessageType8, MessageType as MessageType9, MessageType as MessageType10, MessageType as MessageType11, MessageType as MessageType12, MessageType as MessageType13, MessageType as MessageType14, MessageType as MessageType15, MessageType as MessageType16, MessageType as MessageType17, MessageType as MessageType18, MessageType as MessageType19, MessageType as MessageType20, MessageType as MessageType21, MessageType as MessageType22, MessageType as MessageType23, MessageType as MessageType24, MessageType as MessageType25, MessageType as MessageType26, MessageType as MessageType27, MessageType as MessageType28, MessageType as MessageType29, MessageType as MessageType30, MessageType as MessageType31, MessageType as MessageType32, MessageType as MessageType33, MessageType as MessageType34, MessageType as MessageType35, MessageType as MessageType36, MessageType as MessageType37, MessageType as MessageType38, MessageType as MessageType39, MessageType as MessageType40, MessageType as MessageType41, MessageType as MessageType42, MessageType as MessageType43, MessageType as MessageType44, MessageType as MessageType45, MessageType as MessageType46, MessageType as MessageType47, MessageType as MessageType48, MessageType as MessageType49, MessageType as MessageType50, MessageType as MessageType51, MessageType as MessageType52, MessageType as MessageType53, MessageType as MessageType54 } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = fn;
-let obj = { NO_GUILD_ONBOARDING: 0, [0]: "NO_GUILD_ONBOARDING", GUILD_NOTICE_SHOWN: 1, [1]: "GUILD_NOTICE_SHOWN", GUILD_NOTICE_CLEARED: 2, [2]: "GUILD_NOTICE_CLEARED" };
+require = arg1;
+let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", MENTIONS: 1, [1]: "MENTIONS", UNREADS: 2, [2]: "UNREADS", TODOS: 3, [3]: "TODOS", FOR_YOU: 4, [4]: "FOR_YOU", GAME_INVITES: 5, [5]: "GAME_INVITES", BOOKMARKS: 6, [6]: "BOOKMARKS", SCHEDULED: 7, [7]: "SCHEDULED", REMINDERS: 8, [8]: "REMINDERS" };
+obj = { NO_PROGRESS: 0, [0]: "NO_PROGRESS", JOIN_GUILD: 1, [1]: "JOIN_GUILD", INVITE_USER: 2, [2]: "INVITE_USER", CONTACT_SYNC: 4, [4]: "CONTACT_SYNC" };
+obj = { NO_GUILD_ONBOARDING: 0, [0]: "NO_GUILD_ONBOARDING", GUILD_NOTICE_SHOWN: 1, [1]: "GUILD_NOTICE_SHOWN", GUILD_NOTICE_CLEARED: 2, [2]: "GUILD_NOTICE_CLEARED" };
 const obj1 = { UNSET_EXPLICIT_CONTENT_REDACTION: 0, [0]: "UNSET_EXPLICIT_CONTENT_REDACTION", SHOW: 1, [1]: "SHOW", BLUR: 2, [2]: "BLUR", BLOCK: 3, [3]: "BLOCK" };
 const obj2 = { DEFAULT_UNSET: 0, [0]: "DEFAULT_UNSET", DISABLED: 1, [1]: "DISABLED", NON_FRIENDS: 2, [2]: "NON_FRIENDS", FRIENDS_AND_NON_FRIENDS: 3, [3]: "FRIENDS_AND_NON_FRIENDS" };
 const obj3 = { NOTIFICATIONS_ENABLED: 0, [0]: "NOTIFICATIONS_ENABLED", ONLY_DMS: 1, [1]: "ONLY_DMS", NOTIFICATIONS_DISABLED: 2, [2]: "NOTIFICATIONS_DISABLED" };
@@ -250,6 +252,7 @@ class PreloadedUserSettings$Type extends MessageType {
 }
 const prototype = PreloadedUserSettings$Type.prototype;
 prototype["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -265,14 +268,15 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.appVersionSettings = closure_77.internalBinaryRead(pos, pos.uint32(), arg2, obj.appVersionSettings);
   }
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
+    let joined25 = require;
     const Versions = create2.Versions;
     const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(versions.versions, tag.tag(1, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
@@ -399,17 +403,22 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, w
     const internalBinaryWriteResult24 = inAppFeedbackStateType1.internalBinaryWrite(versions.inAppFeedbackSettings, tag.tag(25, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (versions.appVersionSettings) {
+    joined25 = closure_77;
+    joined25 = require;
+    joined25 = dependencyMap;
     const tagResult25 = tag.tag(26, _mod1307.WireType.LengthDelimited);
-    const joined25 = closure_77.internalBinaryWrite(versions.appVersionSettings, tag.tag(26, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined25 = closure_77.internalBinaryWrite(versions.appVersionSettings, tag.tag(26, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult25 = closure_77.internalBinaryWrite(versions.appVersionSettings, tag.tag(26, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
+      joined25 = require;
+      joined25 = dependencyMap;
       onWrite = _mod1307.UnknownFieldHandler.onWrite;
     }
     const self = this;
-    onWrite(this.typeName, versions, tag);
+    joined25 = onWrite(this.typeName, versions, tag);
   }
   return tag;
 };
@@ -435,6 +444,7 @@ class InboxSettings$Type extends MessageType2 {
 }
 const prototype2 = InboxSettings$Type.prototype;
 prototype2["create"] = function create(arr) {
+  obj = { currentTab: 0, viewedTutorial: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -453,6 +463,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -462,16 +473,31 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -511,7 +537,7 @@ let items = [
   },
   { no: 2, name: "viewed_tutorial", kind: "scalar", T: 8 }
 ];
-const tmp9 = new "CUSTOM"("discord_protos.discord_users.v1.InboxSettings", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, fn, dependencyMap, obj);
+let tmp9 = new "CUSTOM"("discord_protos.discord_users.v1.InboxSettings", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_25 = tmp9;
 class AllGuildSettings$Type extends MessageType3 {
@@ -531,6 +557,7 @@ class AllGuildSettings$Type extends MessageType3 {
 }
 const prototype3 = AllGuildSettings$Type.prototype;
 prototype3["create"] = function create(arr) {
+  obj = { guilds: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -549,6 +576,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -556,16 +584,31 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -580,8 +623,10 @@ prototype3["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -590,6 +635,7 @@ prototype3["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = guildSettingsType;
         internalBinaryReadResult = guildSettingsType.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -613,12 +659,15 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(guilds, tag, wr
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
+    let tmp7 = guildSettingsType;
     let internalBinaryWriteResult = guildSettingsType.internalBinaryWrite(guilds.guilds[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -648,7 +697,7 @@ const items1 = [
     }
   }
 ];
-let tmp10 = new "CUSTOM"("discord_protos.discord_users.v1.AllGuildSettings", items1, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp10 = new "CUSTOM"("discord_protos.discord_users.v1.AllGuildSettings", items1, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_26 = tmp10;
 class GuildDismissibleContentState$Type extends MessageType4 {
@@ -666,6 +715,7 @@ class GuildDismissibleContentState$Type extends MessageType4 {
 }
 const prototype4 = GuildDismissibleContentState$Type.prototype;
 prototype4["create"] = function create(arr) {
+  obj = { dismissed: false, lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -684,6 +734,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -701,16 +752,31 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -751,7 +817,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(dismissed, tag,
   return tag;
 };
 const items2 = [{ no: 1, name: "dismissed", kind: "scalar", T: 8 }, { no: 2, name: "last_dismissed_version", kind: "scalar", T: 13 }, { no: 3, name: "last_dismissed_at_ms", kind: "scalar", T: 4 }, { no: 4, name: "last_dismissed_object_id", kind: "scalar", T: 4 }, { no: 5, name: "num_times_dismissed", kind: "scalar", T: 13 }];
-const tmp11 = new "CUSTOM"("discord_protos.discord_users.v1.GuildDismissibleContentState", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp11 = new "CUSTOM"("discord_protos.discord_users.v1.GuildDismissibleContentState", items2, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_27 = tmp11;
 class GuildSettings$Type extends MessageType5 {
@@ -847,9 +913,9 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.guildThemeSourcePreference = pos.int32();
   }
   return obj;
 };
@@ -859,8 +925,10 @@ prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -869,6 +937,7 @@ prototype5["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_30;
         internalBinaryReadResult = closure_30.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -893,8 +962,10 @@ prototype5["binaryReadMap12"] = function binaryReadMap12(arg0, pos) {
   let num;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       let int32Result = tmp3;
       if (1 === tmp7) {
         int32Result = pos.int32();
@@ -902,6 +973,7 @@ prototype5["binaryReadMap12"] = function binaryReadMap12(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_27;
         internalBinaryReadResult = closure_27.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -926,12 +998,15 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(channels, tag, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
+    let tmp7 = closure_30;
     let internalBinaryWriteResult = closure_30.internalBinaryWrite(channels.channels[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -986,6 +1061,8 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(channels, tag, 
   const iter2 = keys1[Symbol.iterator]();
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
+    let tmp45 = require;
+    let tmp46 = dependencyMap;
     let tagResult13 = tag.tag(12, _mod1307.WireType.LengthDelimited);
     let forkResult2 = tagResult13.fork();
     let tagResult14 = forkResult2.tag(1, _mod1307.WireType.Varint);
@@ -993,6 +1070,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(channels, tag, 
     let int32Result = tagResult14.int32(parseInt(nextResult1));
     let tagResult15 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult3 = tagResult15.fork();
+    let tmp49 = closure_27;
     let internalBinaryWriteResult5 = closure_27.internalBinaryWrite(channels.guildDismissibleContentStates[nextResult1], tag, writeUnknownFields);
     let joined6 = tag.join();
     let joined7 = joined6.join();
@@ -1048,6 +1126,7 @@ class ChannelIconEmoji$Type extends MessageType6 {
 }
 const prototype6 = ChannelIconEmoji$Type.prototype;
 prototype6["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1066,30 +1145,61 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let UInt64Value2 = defineProperty.UInt64Value;
+        let tmp34 = UInt64Value2;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.id = UInt64Value2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.id);
       } else if (2 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp29 = StringValue;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.name = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.name);
       } else if (3 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let UInt64Value = defineProperty.UInt64Value;
+        let tmp24 = UInt64Value;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.color = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.color);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1153,7 +1263,7 @@ const items3 = [
     }
   }
 ];
-let tmp13 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelIconEmoji", items3, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp13 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelIconEmoji", items3, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_29 = tmp13;
 class ChannelSettings$Type extends MessageType7 {
@@ -1183,6 +1293,7 @@ class ChannelSettings$Type extends MessageType7 {
 }
 const prototype7 = ChannelSettings$Type.prototype;
 prototype7["create"] = function create(arr) {
+  obj = { collapsedInInbox: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1201,27 +1312,51 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.collapsedInInbox = pos.bool();
       } else if (2 === tmp5) {
+        let tmp26 = closure_29;
+        let tmp27 = closure_29;
+        let tmp28 = pos;
+        let tmp29 = readUnknownField;
         obj.iconEmoji = closure_29.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.iconEmoji);
       } else if (3 === tmp5) {
+        let tmp22 = closure_31;
+        let tmp23 = closure_31;
+        let tmp24 = pos;
+        let tmp25 = readUnknownField;
         obj.customNotificationSoundConfig = closure_31.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.customNotificationSoundConfig);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1274,7 +1409,7 @@ const items4 = [
     }
   }
 ];
-const tmp14 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelSettings", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp14 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelSettings", items4, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_30 = tmp14;
 class CustomNotificationSoundConfig$Type extends MessageType8 {
@@ -1296,6 +1431,7 @@ class CustomNotificationSoundConfig$Type extends MessageType8 {
 }
 const prototype8 = CustomNotificationSoundConfig$Type.prototype;
 prototype8["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1314,24 +1450,45 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp24 = StringValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.notificationSoundPackId = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.notificationSoundPackId);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1367,7 +1524,7 @@ const items5 = [
     }
   }
 ];
-let tmp15 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomNotificationSoundConfig", items5, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp15 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomNotificationSoundConfig", items5, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_31 = tmp15;
 class RecurringDismissibleContentState$Type extends MessageType9 {
@@ -1384,6 +1541,7 @@ class RecurringDismissibleContentState$Type extends MessageType9 {
 }
 const prototype9 = RecurringDismissibleContentState$Type.prototype;
 prototype9["create"] = function create(arr) {
+  obj = { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1402,6 +1560,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -1417,16 +1576,31 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1463,7 +1637,7 @@ prototype9["internalBinaryWrite"] = function internalBinaryWrite(lastDismissedVe
   return tag;
 };
 const items6 = [{ no: 1, name: "last_dismissed_version", kind: "scalar", T: 13 }, { no: 2, name: "last_dismissed_at_ms", kind: "scalar", T: 4 }, { no: 3, name: "last_dismissed_object_id", kind: "scalar", T: 4 }, { no: 4, name: "num_times_dismissed", kind: "scalar", T: 13 }];
-const tmp16 = new "binaryReadMap12"("discord_protos.discord_users.v1.RecurringDismissibleContentState", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp16 = new "binaryReadMap12"("discord_protos.discord_users.v1.RecurringDismissibleContentState", items6, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_32 = tmp16;
 class UserContentSettings$Type extends MessageType10 {
@@ -1543,21 +1717,42 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.dismissedContents = pos.bytes();
       } else if (2 === tmp5) {
+        let tmp38 = require;
+        let tmp39 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp40 = StringValue;
+        let tmp41 = pos;
+        let tmp42 = readUnknownField;
         obj.lastDismissedOutboundPromotionStartDate = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.lastDismissedOutboundPromotionStartDate);
       } else if (3 === tmp5) {
+        let tmp33 = require;
+        let tmp34 = dependencyMap;
         let Timestamp3 = now.Timestamp;
+        let tmp35 = Timestamp3;
+        let tmp36 = pos;
+        let tmp37 = readUnknownField;
         obj.premiumTier0ModalDismissedAt = Timestamp3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.premiumTier0ModalDismissedAt);
       } else if (4 === tmp5) {
+        let tmp28 = require;
+        let tmp29 = dependencyMap;
         let Timestamp2 = now.Timestamp;
+        let tmp30 = Timestamp2;
+        let tmp31 = pos;
+        let tmp32 = readUnknownField;
         obj.guildOnboardingUpsellDismissedAt = Timestamp2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.guildOnboardingUpsellDismissedAt);
       } else if (5 === tmp5) {
+        let tmp23 = require;
+        let tmp24 = dependencyMap;
         let Timestamp = now.Timestamp;
+        let tmp25 = Timestamp;
+        let tmp26 = pos;
+        let tmp27 = readUnknownField;
         obj.safetyUserSentimentNoticeDismissedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.safetyUserSentimentNoticeDismissedAt);
       } else if (6 === tmp5) {
         let str5 = pos.fixed64();
@@ -1570,16 +1765,31 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1594,8 +1804,10 @@ prototype10["binaryReadMap7"] = function binaryReadMap7(recurringDismissibleCont
   let num;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       let int32Result = tmp3;
       if (1 === tmp7) {
         int32Result = pos.int32();
@@ -1603,6 +1815,7 @@ prototype10["binaryReadMap7"] = function binaryReadMap7(recurringDismissibleCont
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_32;
         internalBinaryReadResult = closure_32.internalBinaryRead(pos, pos.uint32(), readUnknownField);
       }
       tmp2 = internalBinaryReadResult;
@@ -1659,6 +1872,8 @@ prototype10["internalBinaryWrite"] = function internalBinaryWrite(dismissedConte
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp21 = require;
+    let tmp22 = dependencyMap;
     let tagResult6 = tag.tag(7, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult6.fork();
     let tagResult7 = forkResult.tag(1, _mod1307.WireType.Varint);
@@ -1666,6 +1881,7 @@ prototype10["internalBinaryWrite"] = function internalBinaryWrite(dismissedConte
     let int32Result = tagResult7.int32(parseInt(nextResult));
     let tagResult8 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult8.fork();
+    let tmp25 = closure_32;
     let internalBinaryWriteResult4 = closure_32.internalBinaryWrite(dismissedContents.recurringDismissibleContentStates[nextResult], tag, writeUnknownFields);
     let joined4 = tag.join();
     let joined5 = joined4.join();
@@ -1734,7 +1950,7 @@ const items7 = [
   },
   { no: 8, name: "last_gift_intent_dismissed_at_ms", kind: "scalar", T: 6 }
 ];
-const tmp17 = new "binaryReadMap12"("discord_protos.discord_users.v1.UserContentSettings", items7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp17 = new "binaryReadMap12"("discord_protos.discord_users.v1.UserContentSettings", items7, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_33 = tmp17;
 class VideoFilterAsset$Type extends MessageType11 {
@@ -1749,6 +1965,7 @@ class VideoFilterAsset$Type extends MessageType11 {
 }
 const prototype11 = VideoFilterAsset$Type.prototype;
 prototype11["create"] = function create(arr) {
+  obj = { id: "0", assetHash: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1767,6 +1984,7 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -1777,16 +1995,31 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1815,7 +2048,7 @@ prototype11["internalBinaryWrite"] = function internalBinaryWrite(id, tag, write
   return tag;
 };
 const items8 = [{ no: 1, name: "id", kind: "scalar", T: 6 }, { no: 2, name: "asset_hash", kind: "scalar", T: 9 }];
-let tmp18 = new "binaryReadMap12"("discord_protos.discord_users.v1.VideoFilterAsset", items8, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp18 = new "binaryReadMap12"("discord_protos.discord_users.v1.VideoFilterAsset", items8, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_34 = tmp18;
 class VideoFilterBackgroundBlur$Type extends MessageType12 {
@@ -1829,6 +2062,7 @@ class VideoFilterBackgroundBlur$Type extends MessageType12 {
 }
 const prototype12 = VideoFilterBackgroundBlur$Type.prototype;
 prototype12["create"] = function create(arr) {
+  obj = { useBlur: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1847,6 +2081,7 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -1854,16 +2089,31 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1888,7 +2138,7 @@ prototype12["internalBinaryWrite"] = function internalBinaryWrite(useBlur, tag, 
   return tag;
 };
 const items9 = [{ no: 1, name: "use_blur", kind: "scalar", T: 8 }];
-let tmp19 = new "binaryReadMap12"("discord_protos.discord_users.v1.VideoFilterBackgroundBlur", items9, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp19 = new "binaryReadMap12"("discord_protos.discord_users.v1.VideoFilterBackgroundBlur", items9, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_35 = tmp19;
 class VoiceAndVideoSettings$Type extends MessageType13 {
@@ -1977,6 +2227,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(arr) {
+  obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -1992,9 +2243,10 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const FloatValue = defineProperty.FloatValue;
+    obj.soundmojiVolume = FloatValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.soundmojiVolume);
   }
   return obj;
 };
@@ -2141,7 +2393,7 @@ const items10 = [
     }
   }
 ];
-const tmp20 = new "binaryReadMap12"("discord_protos.discord_users.v1.VoiceAndVideoSettings", items10, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp20 = new "binaryReadMap12"("discord_protos.discord_users.v1.VoiceAndVideoSettings", items10, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_36 = tmp20;
 class ExplicitContentSettings$Type extends MessageType14 {
@@ -2183,6 +2435,7 @@ class ExplicitContentSettings$Type extends MessageType14 {
 }
 const prototype14 = ExplicitContentSettings$Type.prototype;
 prototype14["create"] = function create(arr) {
+  obj = { explicitContentGuilds: 0, explicitContentFriendDm: 0, explicitContentNonFriendDm: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2201,6 +2454,7 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -2212,16 +2466,31 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -2282,7 +2551,7 @@ const items11 = [
     }
   }
 ];
-let tmp21 = new "binaryReadMap12"("discord_protos.discord_users.v1.ExplicitContentSettings", items11, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp21 = new "binaryReadMap12"("discord_protos.discord_users.v1.ExplicitContentSettings", items11, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_37 = tmp21;
 class GoreContentSettings$Type extends MessageType15 {
@@ -2324,6 +2593,7 @@ class GoreContentSettings$Type extends MessageType15 {
 }
 const prototype15 = GoreContentSettings$Type.prototype;
 prototype15["create"] = function create(arr) {
+  obj = { goreContentGuilds: 0, goreContentFriendDm: 0, goreContentNonFriendDm: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2342,6 +2612,7 @@ prototype15["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -2353,16 +2624,31 @@ prototype15["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -2423,7 +2709,7 @@ const items12 = [
     }
   }
 ];
-const tmp22 = new "binaryReadMap12"("discord_protos.discord_users.v1.GoreContentSettings", items12, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp22 = new "binaryReadMap12"("discord_protos.discord_users.v1.GoreContentSettings", items12, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_38 = tmp22;
 class SelfHarmContentSettings$Type extends MessageType16 {
@@ -2465,6 +2751,7 @@ class SelfHarmContentSettings$Type extends MessageType16 {
 }
 const prototype16 = SelfHarmContentSettings$Type.prototype;
 prototype16["create"] = function create(arr) {
+  obj = { selfHarmContentGuilds: 0, selfHarmContentFriendDm: 0, selfHarmContentNonFriendDm: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2483,6 +2770,7 @@ prototype16["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -2494,16 +2782,31 @@ prototype16["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -2564,7 +2867,7 @@ const items13 = [
     }
   }
 ];
-const tmp23 = new "binaryReadMap12"("discord_protos.discord_users.v1.SelfHarmContentSettings", items13, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp23 = new "binaryReadMap12"("discord_protos.discord_users.v1.SelfHarmContentSettings", items13, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_39 = tmp23;
 class KeywordFilterSettings$Type extends MessageType17 {
@@ -2602,6 +2905,7 @@ class KeywordFilterSettings$Type extends MessageType17 {
 }
 const prototype17 = KeywordFilterSettings$Type.prototype;
 prototype17["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -2620,30 +2924,61 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let BoolValue3 = defineProperty.BoolValue;
+        let tmp34 = BoolValue3;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.profanity = BoolValue3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.profanity);
       } else if (2 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let BoolValue2 = defineProperty.BoolValue;
+        let tmp29 = BoolValue2;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.sexualContent = BoolValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.sexualContent);
       } else if (3 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.slurs = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.slurs);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -2707,7 +3042,7 @@ const items14 = [
     }
   }
 ];
-let tmp24 = new "binaryReadMap12"("discord_protos.discord_users.v1.KeywordFilterSettings", items14, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp24 = new "binaryReadMap12"("discord_protos.discord_users.v1.KeywordFilterSettings", items14, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_40 = tmp24;
 class TextAndImagesSettings$Type extends MessageType18 {
@@ -3006,6 +3341,7 @@ class TextAndImagesSettings$Type extends MessageType18 {
 }
 const prototype18 = TextAndImagesSettings$Type.prototype;
 prototype18["create"] = function create(arr) {
+  obj = { emojiPickerCollapsedSections: [], stickerPickerCollapsedSections: [], soundboardPickerCollapsedSections: [], dmSpamFilterV2: 0, searchProvider: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -3021,9 +3357,10 @@ prototype18["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const BoolValue = defineProperty.BoolValue;
+    obj.includeGameMentionsInAutocomplete = BoolValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.includeGameMentionsInAutocomplete);
   }
   return obj;
 };
@@ -3032,6 +3369,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   let length2;
   let length3;
   if (diversitySurrogate.diversitySurrogate) {
+    let joined27 = require;
     const StringValue = defineProperty.StringValue;
     const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(diversitySurrogate.diversitySurrogate, tag.tag(1, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
@@ -3058,6 +3396,8 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   let num5 = 0;
   if (0 < diversitySurrogate.emojiPickerCollapsedSections.length) {
     do {
+      let tmp13 = require;
+      let tmp14 = dependencyMap;
       let tagResult4 = tag.tag(5, _mod1307.WireType.LengthDelimited);
       let stringResult = tagResult4.string(diversitySurrogate.emojiPickerCollapsedSections[num5]);
       num5 = num5 + 1;
@@ -3067,6 +3407,8 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   let num6 = 0;
   if (0 < diversitySurrogate.stickerPickerCollapsedSections.length) {
     do {
+      let tmp16 = require;
+      let tmp17 = dependencyMap;
       let tagResult5 = tag.tag(6, _mod1307.WireType.LengthDelimited);
       let stringResult1 = tagResult5.string(diversitySurrogate.stickerPickerCollapsedSections[num6]);
       num6 = num6 + 1;
@@ -3178,6 +3520,8 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   let num24 = 0;
   if (0 < diversitySurrogate.soundboardPickerCollapsedSections.length) {
     do {
+      let tmp70 = require;
+      let tmp71 = dependencyMap;
       let tagResult23 = tag.tag(25, _mod1307.WireType.LengthDelimited);
       let stringResult2 = tagResult23.string(diversitySurrogate.soundboardPickerCollapsedSections[num24]);
       num24 = num24 + 1;
@@ -3223,49 +3567,64 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   }
   if (diversitySurrogate.defaultReactionEmoji) {
     const tagResult31 = tag.tag(33, _mod1307.WireType.LengthDelimited);
-    const joined27 = inAppFeedbackStateType.internalBinaryWrite(diversitySurrogate.defaultReactionEmoji, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined27 = inAppFeedbackStateType.internalBinaryWrite(diversitySurrogate.defaultReactionEmoji, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult27 = inAppFeedbackStateType.internalBinaryWrite(diversitySurrogate.defaultReactionEmoji, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.showMentionSuggestions) {
+    joined27 = require;
+    joined27 = dependencyMap;
     const BoolValue20 = defineProperty.BoolValue;
     const tagResult32 = tag.tag(34, _mod1307.WireType.LengthDelimited);
-    const joined28 = BoolValue20.internalBinaryWrite(diversitySurrogate.showMentionSuggestions, tag.tag(34, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined27 = BoolValue20.internalBinaryWrite(diversitySurrogate.showMentionSuggestions, tag.tag(34, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult28 = BoolValue20.internalBinaryWrite(diversitySurrogate.showMentionSuggestions, tag.tag(34, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.selfHarmContentSettings) {
+    joined27 = closure_39;
+    joined27 = require;
+    joined27 = dependencyMap;
     const tagResult33 = tag.tag(35, _mod1307.WireType.LengthDelimited);
-    const joined29 = closure_39.internalBinaryWrite(diversitySurrogate.selfHarmContentSettings, tag.tag(35, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined27 = closure_39.internalBinaryWrite(diversitySurrogate.selfHarmContentSettings, tag.tag(35, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult29 = closure_39.internalBinaryWrite(diversitySurrogate.selfHarmContentSettings, tag.tag(35, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.isCrossDmSearchEnabled) {
+    joined27 = require;
+    joined27 = dependencyMap;
     const BoolValue21 = defineProperty.BoolValue;
     const tagResult34 = tag.tag(36, _mod1307.WireType.LengthDelimited);
-    const joined30 = BoolValue21.internalBinaryWrite(diversitySurrogate.isCrossDmSearchEnabled, tag.tag(36, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined27 = BoolValue21.internalBinaryWrite(diversitySurrogate.isCrossDmSearchEnabled, tag.tag(36, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult30 = BoolValue21.internalBinaryWrite(diversitySurrogate.isCrossDmSearchEnabled, tag.tag(36, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (0 !== diversitySurrogate.searchProvider) {
-    tag.tag(37, _mod1307.WireType.Varint).int32(diversitySurrogate.searchProvider);
+    joined27 = require;
+    joined27 = dependencyMap;
+    joined27 = tag.tag(37, _mod1307.WireType.Varint).int32(diversitySurrogate.searchProvider);
     const tagResult35 = tag.tag(37, _mod1307.WireType.Varint);
   }
   if (diversitySurrogate.customSearchUrl) {
+    joined27 = require;
+    joined27 = dependencyMap;
     const StringValue3 = defineProperty.StringValue;
     const tagResult36 = tag.tag(38, _mod1307.WireType.LengthDelimited);
-    const joined31 = StringValue3.internalBinaryWrite(diversitySurrogate.customSearchUrl, tag.tag(38, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined27 = StringValue3.internalBinaryWrite(diversitySurrogate.customSearchUrl, tag.tag(38, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult31 = StringValue3.internalBinaryWrite(diversitySurrogate.customSearchUrl, tag.tag(38, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.includeGameMentionsInAutocomplete) {
+    joined27 = require;
+    joined27 = dependencyMap;
     const BoolValue22 = defineProperty.BoolValue;
     const tagResult37 = tag.tag(39, _mod1307.WireType.LengthDelimited);
-    const joined32 = BoolValue22.internalBinaryWrite(diversitySurrogate.includeGameMentionsInAutocomplete, tag.tag(39, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined27 = BoolValue22.internalBinaryWrite(diversitySurrogate.includeGameMentionsInAutocomplete, tag.tag(39, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult32 = BoolValue22.internalBinaryWrite(diversitySurrogate.includeGameMentionsInAutocomplete, tag.tag(39, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
+      joined27 = require;
+      joined27 = dependencyMap;
       onWrite = _mod1307.UnknownFieldHandler.onWrite;
     }
     const self = this;
-    onWrite(this.typeName, diversitySurrogate, tag);
+    joined27 = onWrite(this.typeName, diversitySurrogate, tag);
   }
   return tag;
 };
@@ -3470,6 +3829,7 @@ class NotificationSettings$Type extends MessageType19 {
 }
 const prototype19 = NotificationSettings$Type.prototype;
 prototype19["create"] = function create(arr) {
+  obj = { notificationCenterAckedBeforeId: "0", focusModeExpiresAtMs: "0", reactionNotifications: 0, gameActivityNotifications: 0, customStatusPushNotifications: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -3485,9 +3845,10 @@ prototype19["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    const BoolValue = defineProperty.BoolValue;
+    obj.notifyFriendsOnComeOnline = BoolValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.notifyFriendsOnComeOnline);
   }
   return obj;
 };
@@ -3876,6 +4237,7 @@ class PrivacySettings$Type extends MessageType20 {
 }
 const prototype20 = PrivacySettings$Type.prototype;
 prototype20["create"] = function create(arr) {
+  obj = { restrictedGuildIds: [], defaultGuildsRestricted: false, allowAccessibilityDetection: false, activityRestrictedGuildIds: [], defaultGuildsActivityRestricted: 0, activityJoiningRestrictedGuildIds: [], messageRequestRestrictedGuildIds: [], guildsLeaderboardOptOutDefault: 0, slayerSdkReceiveDmsInGame: 0, defaultGuildsActivityRestrictedV2: 0, profileVisibility: 0, adTopicOptOuts: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -3891,9 +4253,28 @@ prototype20["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    while (true) {
+      let tmp6 = require;
+      let tmp7 = dependencyMap;
+      if (tmp2 === _mod1307.WireType.LengthDelimited) {
+        let sum1 = pos.int32() + pos.pos;
+        if (pos.pos < sum1) {
+          do {
+            let adTopicOptOuts = obj.adTopicOptOuts;
+            let arr = adTopicOptOuts.push(pos.int32());
+            pos = pos.pos;
+          } while (pos < sum1);
+        }
+      } else {
+        let adTopicOptOuts1 = obj.adTopicOptOuts;
+        arr = adTopicOptOuts1.push(pos.int32());
+      }
+    }
+    const _globalThis = globalThis;
+    const _HermesInternal = HermesInternal;
+    error = new Error("Unknown field " + tmp3 + " (wire type " + tmp2 + ") for " + tmp.typeName);
   }
   return obj;
 };
@@ -3904,6 +4285,7 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
   let length4;
   let length5;
   if (allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyFriends) {
+    let joined23 = require;
     const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyFriends, tag.tag(1, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
@@ -4098,31 +4480,36 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
     const tagResult29 = tag.tag(32, _mod1307.WireType.Varint);
   }
   if (allowActivityPartyPrivacyFriends.hideFriendRequestNotes) {
+    joined23 = dependencyMap;
     const BoolValue18 = defineProperty.BoolValue;
     const tagResult30 = tag.tag(33, _mod1307.WireType.LengthDelimited);
-    const joined23 = BoolValue18.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideFriendRequestNotes, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    joined23 = BoolValue18.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideFriendRequestNotes, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult19 = BoolValue18.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideFriendRequestNotes, tag.tag(33, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.adTopicOptOuts.length) {
-    tag.tag(34, _mod1307.WireType.LengthDelimited).fork();
+    joined23 = require;
+    joined23 = dependencyMap;
+    joined23 = tag.tag(34, _mod1307.WireType.LengthDelimited).fork();
     let num42 = 0;
     if (0 < allowActivityPartyPrivacyFriends.adTopicOptOuts.length) {
       do {
-        let int32Result5 = tag.int32(allowActivityPartyPrivacyFriends.adTopicOptOuts[num42]);
+        joined23 = tag.int32(allowActivityPartyPrivacyFriends.adTopicOptOuts[num42]);
         num42 = num42 + 1;
         length5 = allowActivityPartyPrivacyFriends.adTopicOptOuts.length;
       } while (num42 < length5);
     }
-    const joined24 = tag.join();
+    joined23 = tag.join();
     const tagResult31 = tag.tag(34, _mod1307.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
+      joined23 = require;
+      joined23 = dependencyMap;
       onWrite = _mod1307.UnknownFieldHandler.onWrite;
     }
     const self = this;
-    onWrite(this.typeName, allowActivityPartyPrivacyFriends, tag);
+    joined23 = onWrite(this.typeName, allowActivityPartyPrivacyFriends, tag);
   }
   return tag;
 };
@@ -4146,6 +4533,7 @@ class DebugSettings$Type extends MessageType21 {
 }
 const prototype21 = DebugSettings$Type.prototype;
 prototype21["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -4164,24 +4552,45 @@ prototype21["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.rtcPanelShowVoiceStates = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.rtcPanelShowVoiceStates);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -4217,7 +4626,7 @@ const items15 = [
     }
   }
 ];
-let tmp28 = new "binaryReadMap12"("discord_protos.discord_users.v1.DebugSettings", items15, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp28 = new "binaryReadMap12"("discord_protos.discord_users.v1.DebugSettings", items15, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_44 = tmp28;
 class GameLibrarySettings$Type extends MessageType22 {
@@ -4255,6 +4664,7 @@ class GameLibrarySettings$Type extends MessageType22 {
 }
 const prototype22 = GameLibrarySettings$Type.prototype;
 prototype22["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -4273,30 +4683,61 @@ prototype22["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let BoolValue3 = defineProperty.BoolValue;
+        let tmp34 = BoolValue3;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.installShortcutDesktop = BoolValue3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.installShortcutDesktop);
       } else if (2 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let BoolValue2 = defineProperty.BoolValue;
+        let tmp29 = BoolValue2;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.installShortcutStartMenu = BoolValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.installShortcutStartMenu);
       } else if (3 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.disableGamesTab = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disableGamesTab);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -4360,7 +4801,7 @@ const items16 = [
     }
   }
 ];
-let tmp29 = new "binaryReadMap12"("discord_protos.discord_users.v1.GameLibrarySettings", items16, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp29 = new "binaryReadMap12"("discord_protos.discord_users.v1.GameLibrarySettings", items16, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_45 = tmp29;
 class StatusSettings$Type extends MessageType23 {
@@ -4407,6 +4848,7 @@ class StatusSettings$Type extends MessageType23 {
 }
 const prototype23 = StatusSettings$Type.prototype;
 prototype23["create"] = function create(arr) {
+  obj = { statusExpiresAtMs: "0" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -4425,35 +4867,70 @@ prototype23["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp36 = require;
+        let tmp37 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp38 = StringValue;
+        let tmp39 = pos;
+        let tmp40 = readUnknownField;
         obj.status = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.status);
       } else if (2 === tmp5) {
+        let tmp32 = closure_47;
+        let tmp33 = closure_47;
+        let tmp34 = pos;
+        let tmp35 = readUnknownField;
         obj.customStatus = closure_47.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.customStatus);
       } else if (3 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp29 = BoolValue;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.showCurrentGame = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.showCurrentGame);
       } else if (4 === tmp5) {
         let str4 = pos.fixed64();
         obj.statusExpiresAtMs = str4.toString();
       } else if (5 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let UInt64Value = defineProperty.UInt64Value;
+        let tmp24 = UInt64Value;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.statusCreatedAtMs = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.statusCreatedAtMs);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -4535,7 +5012,7 @@ const items17 = [
     }
   }
 ];
-let tmp30 = new "binaryReadMap12"("discord_protos.discord_users.v1.StatusSettings", items17, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp30 = new "binaryReadMap12"("discord_protos.discord_users.v1.StatusSettings", items17, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_46 = tmp30;
 class CustomStatus$Type extends MessageType24 {
@@ -4561,6 +5038,7 @@ class CustomStatus$Type extends MessageType24 {
 }
 const prototype24 = CustomStatus$Type.prototype;
 prototype24["create"] = function create(arr) {
+  obj = { text: "", emojiId: "0", emojiName: "", expiresAtMs: "0", createdAtMs: "0" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -4579,6 +5057,7 @@ prototype24["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -4595,21 +5074,41 @@ prototype24["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         let str4 = pos.fixed64();
         obj.createdAtMs = str4.toString();
       } else if (6 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp24 = StringValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.label = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.label);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -4670,7 +5169,7 @@ const items18 = [
     }
   }
 ];
-let tmp31 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomStatus", items18, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp31 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomStatus", items18, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_47 = tmp31;
 class LocalizationSettings$Type extends MessageType25 {
@@ -4708,6 +5207,7 @@ class LocalizationSettings$Type extends MessageType25 {
 }
 const prototype25 = LocalizationSettings$Type.prototype;
 prototype25["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -4726,30 +5226,61 @@ prototype25["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let StringValue2 = defineProperty.StringValue;
+        let tmp34 = StringValue2;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.locale = StringValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.locale);
       } else if (2 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let Int32Value = defineProperty.Int32Value;
+        let tmp29 = Int32Value;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.timezoneOffset = Int32Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.timezoneOffset);
       } else if (3 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp24 = StringValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.timezoneName = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.timezoneName);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -4813,7 +5344,7 @@ const items19 = [
     }
   }
 ];
-let tmp32 = new "binaryReadMap12"("discord_protos.discord_users.v1.LocalizationSettings", items19, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp32 = new "binaryReadMap12"("discord_protos.discord_users.v1.LocalizationSettings", items19, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_48 = tmp32;
 class ChannelListSettings$Type extends MessageType26 {
@@ -4843,6 +5374,7 @@ class ChannelListSettings$Type extends MessageType26 {
 }
 const prototype26 = ChannelListSettings$Type.prototype;
 prototype26["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -4861,27 +5393,53 @@ prototype26["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let StringValue2 = defineProperty.StringValue;
+        let tmp29 = StringValue2;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.layout = StringValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.layout);
       } else if (2 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp24 = StringValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.messagePreviews = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.messagePreviews);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -4931,7 +5489,7 @@ const items20 = [
     }
   }
 ];
-const tmp33 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelListSettings", items20, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp33 = new "binaryReadMap12"("discord_protos.discord_users.v1.ChannelListSettings", items20, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_49 = tmp33;
 class AppearanceSettings$Type extends MessageType27 {
@@ -5043,6 +5601,7 @@ class AppearanceSettings$Type extends MessageType27 {
 }
 const prototype27 = AppearanceSettings$Type.prototype;
 prototype27["create"] = function create(arr) {
+  obj = { theme: 0, developerMode: false, mobileRedesignDisabled: false, timestampHourCycle: 0, launchPadMode: 0, uiDensity: 0, swipeRightToLeftMode: 0, defaultGuildThemePreference: 0, darkSidebar: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5058,9 +5617,9 @@ prototype27["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.darkSidebar = pos.bool();
   }
   return obj;
 };
@@ -5155,6 +5714,7 @@ class CustomUserThemeSettings$Type extends MessageType28 {
 }
 const prototype28 = CustomUserThemeSettings$Type.prototype;
 prototype28["create"] = function create(arr) {
+  obj = { colors: [], gradientColorStops: [], gradientAngle: 0, baseMix: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5173,12 +5733,15 @@ prototype28["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let colors = obj.colors;
         let arr = colors.push(pos.string());
       } else if (2 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         if (tmp6 === _mod1307.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -5199,16 +5762,31 @@ prototype28["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -5223,6 +5801,8 @@ prototype28["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, w
   let num = 0;
   if (0 < colors.colors.length) {
     do {
+      let tmp = require;
+      let tmp2 = dependencyMap;
       let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
       let stringResult = tagResult.string(colors.colors[num]);
       num = num + 1;
@@ -5261,7 +5841,7 @@ prototype28["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, w
   return tag;
 };
 const items21 = [{ no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 }, { no: 2, name: "gradient_color_stops", kind: "scalar", repeat: 1, T: 2 }, { no: 3, name: "gradient_angle", kind: "scalar", T: 5 }, { no: 4, name: "base_mix", kind: "scalar", T: 5 }];
-let tmp35 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomUserThemeSettings", items21, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp35 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomUserThemeSettings", items21, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_51 = tmp35;
 class ClientThemeSettings$Type extends MessageType29 {
@@ -5291,6 +5871,7 @@ class ClientThemeSettings$Type extends MessageType29 {
 }
 const prototype29 = ClientThemeSettings$Type.prototype;
 prototype29["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5309,26 +5890,51 @@ prototype29["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (2 === tmp5) {
+        let tmp26 = require;
+        let tmp27 = dependencyMap;
         let UInt32Value = defineProperty.UInt32Value;
+        let tmp28 = UInt32Value;
+        let tmp29 = pos;
+        let tmp30 = readUnknownField;
         obj.backgroundGradientPresetId = UInt32Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.backgroundGradientPresetId);
       } else if (4 === tmp5) {
+        let tmp22 = closure_51;
+        let tmp23 = closure_51;
+        let tmp24 = pos;
+        let tmp25 = readUnknownField;
         obj.customUserThemeSettings = closure_51.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.customUserThemeSettings);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -5377,7 +5983,7 @@ const items22 = [
     }
   }
 ];
-let tmp36 = new "binaryReadMap12"("discord_protos.discord_users.v1.ClientThemeSettings", items22, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp36 = new "binaryReadMap12"("discord_protos.discord_users.v1.ClientThemeSettings", items22, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_52 = tmp36;
 class GuildFolders$Type extends MessageType30 {
@@ -5401,6 +6007,7 @@ class GuildFolders$Type extends MessageType30 {
 }
 const prototype30 = GuildFolders$Type.prototype;
 prototype30["create"] = function create(arr) {
+  obj = { folders: [], guildPositions: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5419,12 +6026,16 @@ prototype30["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let folders = obj.folders;
+        let tmp27 = closure_54;
         let arr = folders.push(closure_54.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (2 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         if (tmp6 === _mod1307.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -5443,16 +6054,31 @@ prototype30["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -5467,6 +6093,9 @@ prototype30["internalBinaryWrite"] = function internalBinaryWrite(folders, tag, 
   let num = 0;
   if (0 < folders.folders.length) {
     do {
+      let tmp = closure_54;
+      let tmp2 = require;
+      let tmp3 = dependencyMap;
       let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
       let internalBinaryWriteResult = closure_54.internalBinaryWrite(folders.folders[num], tagResult.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
@@ -5509,7 +6138,7 @@ const items23 = [
   },
   { no: 2, name: "guild_positions", kind: "scalar", repeat: 1, T: 6 }
 ];
-let tmp37 = new "binaryReadMap12"("discord_protos.discord_users.v1.GuildFolders", items23, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp37 = new "binaryReadMap12"("discord_protos.discord_users.v1.GuildFolders", items23, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_53 = tmp37;
 class GuildFolder$Type extends MessageType31 {
@@ -5547,6 +6176,7 @@ class GuildFolder$Type extends MessageType31 {
 }
 const prototype31 = GuildFolder$Type.prototype;
 prototype31["create"] = function create(arr) {
+  obj = { guildIds: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5565,9 +6195,12 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
         if (tmp6 === _mod1307.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -5584,27 +6217,57 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           arr = guildIds1.push(str4.toString());
         }
       } else if (2 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let Int64Value = defineProperty.Int64Value;
+        let tmp34 = Int64Value;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.id = Int64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.id);
       } else if (3 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp29 = StringValue;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.name = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.name);
       } else if (4 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let UInt64Value = defineProperty.UInt64Value;
+        let tmp24 = UInt64Value;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.color = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.color);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -5683,7 +6346,7 @@ const items24 = [
     }
   }
 ];
-let tmp38 = new "binaryReadMap12"("discord_protos.discord_users.v1.GuildFolder", items24, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp38 = new "binaryReadMap12"("discord_protos.discord_users.v1.GuildFolder", items24, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_54 = tmp38;
 class Favorites$Type extends MessageType32 {
@@ -5715,6 +6378,7 @@ class Favorites$Type extends MessageType32 {
 }
 const prototype32 = Favorites$Type.prototype;
 prototype32["create"] = function create(arr) {
+  obj = { favoriteChannels: {}, muted: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5733,6 +6397,7 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -5740,21 +6405,41 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         obj.muted = pos.bool();
       } else if (3 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.guildVisible = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.guildVisible);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -5769,8 +6454,10 @@ prototype32["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -5779,6 +6466,7 @@ prototype32["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_56;
         internalBinaryReadResult = closure_56.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -5802,12 +6490,15 @@ prototype32["internalBinaryWrite"] = function internalBinaryWrite(favoriteChanne
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
+    let tmp7 = closure_56;
     let internalBinaryWriteResult = closure_56.internalBinaryWrite(favoriteChannels.favoriteChannels[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -5856,7 +6547,7 @@ const items25 = [
     }
   }
 ];
-let tmp39 = new "binaryReadMap12"("discord_protos.discord_users.v1.Favorites", items25, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp39 = new "binaryReadMap12"("discord_protos.discord_users.v1.Favorites", items25, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_55 = tmp39;
 class FavoriteChannel$Type extends MessageType33 {
@@ -5891,6 +6582,7 @@ class FavoriteChannel$Type extends MessageType33 {
 }
 const prototype33 = FavoriteChannel$Type.prototype;
 prototype33["create"] = function create(arr) {
+  obj = { nickname: "", type: 0, position: 0, parentId: "0", collapsed: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -5909,6 +6601,7 @@ prototype33["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -5921,23 +6614,43 @@ prototype33["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         let str4 = pos.fixed64();
         obj.parentId = str4.toString();
       } else if (5 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let UInt32Value = defineProperty.UInt32Value;
+        let tmp24 = UInt32Value;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.channelType = UInt32Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.channelType);
       } else if (6 === tmp5) {
         obj.collapsed = pos.bool();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6006,7 +6719,7 @@ const items26 = [
   },
   { no: 6, name: "collapsed", kind: "scalar", T: 8 }
 ];
-let tmp40 = new "binaryReadMap12"("discord_protos.discord_users.v1.FavoriteChannel", items26, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp40 = new "binaryReadMap12"("discord_protos.discord_users.v1.FavoriteChannel", items26, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_56 = tmp40;
 class AudioContextSetting$Type extends MessageType34 {
@@ -6023,6 +6736,7 @@ class AudioContextSetting$Type extends MessageType34 {
 }
 const prototype34 = AudioContextSetting$Type.prototype;
 prototype34["create"] = function create(arr) {
+  obj = { muted: false, volume: 0, modifiedAt: "0", soundboardMuted: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6041,6 +6755,7 @@ prototype34["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -6055,16 +6770,31 @@ prototype34["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6101,7 +6831,7 @@ prototype34["internalBinaryWrite"] = function internalBinaryWrite(muted, tag, wr
   return tag;
 };
 const items27 = [{ no: 1, name: "muted", kind: "scalar", T: 8 }, { no: 2, name: "volume", kind: "scalar", T: 2 }, { no: 3, name: "modified_at", kind: "scalar", T: 6 }, { no: 4, name: "soundboard_muted", kind: "scalar", T: 8 }];
-let tmp41 = new "binaryReadMap12"("discord_protos.discord_users.v1.AudioContextSetting", items27, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp41 = new "binaryReadMap12"("discord_protos.discord_users.v1.AudioContextSetting", items27, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_57 = tmp41;
 class AudioSettings$Type extends MessageType35 {
@@ -6131,6 +6861,7 @@ class AudioSettings$Type extends MessageType35 {
 }
 const prototype35 = AudioSettings$Type.prototype;
 prototype35["create"] = function create(arr) {
+  obj = { user: {}, stream: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6149,6 +6880,7 @@ prototype35["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -6158,16 +6890,31 @@ prototype35["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6182,8 +6929,10 @@ prototype35["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -6192,6 +6941,7 @@ prototype35["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_57;
         internalBinaryReadResult = closure_57.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -6216,8 +6966,10 @@ prototype35["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -6226,6 +6978,7 @@ prototype35["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_57;
         internalBinaryReadResult = closure_57.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -6249,12 +7002,15 @@ prototype35["internalBinaryWrite"] = function internalBinaryWrite(user, tag, wri
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
+    let tmp7 = closure_57;
     let internalBinaryWriteResult = closure_57.internalBinaryWrite(user.user[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -6262,12 +7018,15 @@ prototype35["internalBinaryWrite"] = function internalBinaryWrite(user, tag, wri
   }
   const keys1 = Object.keys(user.stream);
   for (const item10059 of keys1) {
+    let tmp11 = require;
+    let tmp12 = dependencyMap;
     let tagResult3 = arg1.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult2 = tagResult3.fork();
     let tagResult4 = forkResult2.tag(1, _mod1307.WireType.Bit64);
     let fixed64Result1 = tagResult4.fixed64(item10059);
     let tagResult5 = arg1.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult3 = tagResult5.fork();
+    let tmp15 = closure_57;
     let internalBinaryWriteResult1 = closure_57.internalBinaryWrite(arg0.stream[item10059], arg1, arg2);
     let joined2 = arg1.join();
     let joined3 = joined2.join();
@@ -6309,7 +7068,7 @@ const items28 = [
     }
   }
 ];
-let tmp42 = new "binaryReadMap12"("discord_protos.discord_users.v1.AudioSettings", items28, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp42 = new "binaryReadMap12"("discord_protos.discord_users.v1.AudioSettings", items28, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_58 = tmp42;
 class CommunitiesSettings$Type extends MessageType36 {
@@ -6331,6 +7090,7 @@ class CommunitiesSettings$Type extends MessageType36 {
 }
 const prototype36 = CommunitiesSettings$Type.prototype;
 prototype36["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6349,24 +7109,45 @@ prototype36["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.disableHomeAutoNav = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disableHomeAutoNav);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6402,7 +7183,7 @@ const items29 = [
     }
   }
 ];
-const tmp43 = new "binaryReadMap12"("discord_protos.discord_users.v1.CommunitiesSettings", items29, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp43 = new "binaryReadMap12"("discord_protos.discord_users.v1.CommunitiesSettings", items29, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_59 = tmp43;
 class SoundboardSettings$Type extends MessageType37 {
@@ -6416,6 +7197,7 @@ class SoundboardSettings$Type extends MessageType37 {
 }
 const prototype37 = SoundboardSettings$Type.prototype;
 prototype37["create"] = function create(arr) {
+  obj = { volume: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6434,6 +7216,7 @@ prototype37["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -6441,16 +7224,31 @@ prototype37["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6475,7 +7273,7 @@ prototype37["internalBinaryWrite"] = function internalBinaryWrite(volume, tag, w
   return tag;
 };
 const items30 = [{ no: 1, name: "volume", kind: "scalar", T: 2 }];
-const tmp44 = new "binaryReadMap12"("discord_protos.discord_users.v1.SoundboardSettings", items30, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp44 = new "binaryReadMap12"("discord_protos.discord_users.v1.SoundboardSettings", items30, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_60 = tmp44;
 class CustomCallSound$Type extends MessageType38 {
@@ -6490,6 +7288,7 @@ class CustomCallSound$Type extends MessageType38 {
 }
 const prototype38 = CustomCallSound$Type.prototype;
 prototype38["create"] = function create(arr) {
+  obj = { soundId: "0", guildId: "0" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6508,6 +7307,7 @@ prototype38["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -6519,16 +7319,31 @@ prototype38["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6557,7 +7372,7 @@ prototype38["internalBinaryWrite"] = function internalBinaryWrite(soundId, tag, 
   return tag;
 };
 const items31 = [{ no: 1, name: "sound_id", kind: "scalar", T: 6 }, { no: 2, name: "guild_id", kind: "scalar", T: 6 }];
-const tmp45 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomCallSound", items31, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp45 = new "binaryReadMap12"("discord_protos.discord_users.v1.CustomCallSound", items31, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_61 = tmp45;
 class BroadcastSettings$Type extends MessageType39 {
@@ -6589,6 +7404,7 @@ class BroadcastSettings$Type extends MessageType39 {
 }
 const prototype39 = BroadcastSettings$Type.prototype;
 prototype39["create"] = function create(arr) {
+  obj = { allowedGuildIds: [], allowedUserIds: [] };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6607,12 +7423,20 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
         let BoolValue2 = defineProperty.BoolValue;
+        let tmp39 = BoolValue2;
+        let tmp40 = pos;
+        let tmp41 = readUnknownField;
         obj.allowFriends = BoolValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.allowFriends);
       } else if (2 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         if (tmp6 === _mod1307.WireType.LengthDelimited) {
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
@@ -6629,6 +7453,8 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           arr = allowedGuildIds1.push(str6.toString());
         }
       } else if (3 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         if (tmp6 === _mod1307.WireType.LengthDelimited) {
           let sum2 = pos.int32() + pos.pos;
           if (pos.pos < sum2) {
@@ -6645,21 +7471,41 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let arr2 = allowedUserIds1.push(str4.toString());
         }
       } else if (4 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.autoBroadcast = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.autoBroadcast);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6739,7 +7585,7 @@ const items32 = [
     }
   }
 ];
-const tmp46 = new "binaryReadMap12"("discord_protos.discord_users.v1.BroadcastSettings", items32, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp46 = new "binaryReadMap12"("discord_protos.discord_users.v1.BroadcastSettings", items32, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_62 = tmp46;
 class ClipsSettings$Type extends MessageType40 {
@@ -6761,6 +7607,7 @@ class ClipsSettings$Type extends MessageType40 {
 }
 const prototype40 = ClipsSettings$Type.prototype;
 prototype40["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6779,24 +7626,45 @@ prototype40["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.allowVoiceRecording = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.allowVoiceRecording);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6832,7 +7700,7 @@ const items33 = [
     }
   }
 ];
-const tmp47 = new "binaryReadMap12"("discord_protos.discord_users.v1.ClipsSettings", items33, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp47 = new "binaryReadMap12"("discord_protos.discord_users.v1.ClipsSettings", items33, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_63 = tmp47;
 class SpendingLimit$Type extends MessageType41 {
@@ -6847,6 +7715,7 @@ class SpendingLimit$Type extends MessageType41 {
 }
 const prototype41 = SpendingLimit$Type.prototype;
 prototype41["create"] = function create(arr) {
+  obj = { amount: "0", currency: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6865,6 +7734,7 @@ prototype41["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -6875,16 +7745,31 @@ prototype41["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -6913,7 +7798,7 @@ prototype41["internalBinaryWrite"] = function internalBinaryWrite(amount, tag, w
   return tag;
 };
 const items34 = [{ no: 1, name: "amount", kind: "scalar", T: 4 }, { no: 2, name: "currency", kind: "scalar", T: 9 }];
-const tmp48 = new "binaryReadMap12"("discord_protos.discord_users.v1.SpendingLimit", items34, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp48 = new "binaryReadMap12"("discord_protos.discord_users.v1.SpendingLimit", items34, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_64 = tmp48;
 class SpendingLimitSettings$Type extends MessageType42 {
@@ -6935,6 +7820,7 @@ class SpendingLimitSettings$Type extends MessageType42 {
 }
 const prototype42 = SpendingLimitSettings$Type.prototype;
 prototype42["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -6953,23 +7839,43 @@ prototype42["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp22 = closure_64;
+        let tmp23 = closure_64;
+        let tmp24 = pos;
+        let tmp25 = readUnknownField;
         obj.oneTimePurchaseLimit = closure_64.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.oneTimePurchaseLimit);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7004,7 +7910,7 @@ const items35 = [
     }
   }
 ];
-const tmp49 = new "binaryReadMap12"("discord_protos.discord_users.v1.SpendingLimitSettings", items35, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+let tmp49 = new "binaryReadMap12"("discord_protos.discord_users.v1.SpendingLimitSettings", items35, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_65 = tmp49;
 class SafetySettings$Type extends MessageType43 {
@@ -7036,6 +7942,7 @@ class SafetySettings$Type extends MessageType43 {
 }
 const prototype43 = SafetySettings$Type.prototype;
 prototype43["create"] = function create(arr) {
+  obj = { safetySettingsPreset: 0, ignoreProfileSpeedbumpDisabled: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7054,6 +7961,7 @@ prototype43["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -7061,20 +7969,39 @@ prototype43["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         obj.ignoreProfileSpeedbumpDisabled = pos.bool();
       } else if (3 === tmp5) {
+        let tmp22 = closure_65;
+        let tmp23 = closure_65;
+        let tmp24 = pos;
+        let tmp25 = readUnknownField;
         obj.spendingLimitSettings = closure_65.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.spendingLimitSettings);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7127,7 +8054,7 @@ const items36 = [
     }
   }
 ];
-const tmp50 = new "binaryReadMap12"("discord_protos.discord_users.v1.SafetySettings", items36, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp50 = new "binaryReadMap12"("discord_protos.discord_users.v1.SafetySettings", items36, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_66 = tmp50;
 class ForLaterSettings$Type extends MessageType44 {
@@ -7150,6 +8077,7 @@ class ForLaterSettings$Type extends MessageType44 {
 }
 const prototype44 = ForLaterSettings$Type.prototype;
 prototype44["create"] = function create(arr) {
+  obj = { currentTab: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7168,6 +8096,7 @@ prototype44["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -7175,16 +8104,31 @@ prototype44["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7219,7 +8163,7 @@ const items37 = [
     }
   }
 ];
-const tmp51 = new "binaryReadMap12"("discord_protos.discord_users.v1.ForLaterSettings", items37, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp51 = new "binaryReadMap12"("discord_protos.discord_users.v1.ForLaterSettings", items37, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_67 = tmp51;
 class ICYMISettings$Type extends MessageType45 {
@@ -7233,6 +8177,7 @@ class ICYMISettings$Type extends MessageType45 {
 }
 const prototype45 = ICYMISettings$Type.prototype;
 prototype45["create"] = function create(arr) {
+  obj = { feedGeneratedAt: "0" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7251,6 +8196,7 @@ prototype45["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -7259,16 +8205,31 @@ prototype45["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7293,7 +8254,7 @@ prototype45["internalBinaryWrite"] = function internalBinaryWrite(feedGeneratedA
   return tag;
 };
 const items38 = [{ no: 1, name: "feed_generated_at", kind: "scalar", T: 6 }];
-const tmp52 = new "binaryReadMap12"("discord_protos.discord_users.v1.ICYMISettings", items38, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp52 = new "binaryReadMap12"("discord_protos.discord_users.v1.ICYMISettings", items38, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_68 = tmp52;
 class AllApplicationSettings$Type extends MessageType46 {
@@ -7313,6 +8274,7 @@ class AllApplicationSettings$Type extends MessageType46 {
 }
 const prototype46 = AllApplicationSettings$Type.prototype;
 prototype46["create"] = function create(arr) {
+  obj = { appSettings: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7331,6 +8293,7 @@ prototype46["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -7338,16 +8301,31 @@ prototype46["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7362,8 +8340,10 @@ prototype46["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -7372,6 +8352,7 @@ prototype46["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_70;
         internalBinaryReadResult = closure_70.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -7395,12 +8376,15 @@ prototype46["internalBinaryWrite"] = function internalBinaryWrite(appSettings, t
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
     let tagResult2 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
+    let tmp7 = closure_70;
     let internalBinaryWriteResult = closure_70.internalBinaryWrite(appSettings.appSettings[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -7430,7 +8414,7 @@ const items39 = [
     }
   }
 ];
-const tmp53 = new "binaryReadMap12"("discord_protos.discord_users.v1.AllApplicationSettings", items39, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp53 = new "binaryReadMap12"("discord_protos.discord_users.v1.AllApplicationSettings", items39, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_69 = tmp53;
 class ApplicationSettings$Type extends MessageType47 {
@@ -7460,6 +8444,7 @@ class ApplicationSettings$Type extends MessageType47 {
 }
 const prototype47 = ApplicationSettings$Type.prototype;
 prototype47["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7478,25 +8463,49 @@ prototype47["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp26 = closure_71;
+        let tmp27 = closure_71;
+        let tmp28 = pos;
+        let tmp29 = readUnknownField;
         obj.appDmSettings = closure_71.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.appDmSettings);
       } else if (2 === tmp5) {
+        let tmp22 = closure_72;
+        let tmp23 = closure_72;
+        let tmp24 = pos;
+        let tmp25 = readUnknownField;
         obj.appSharingSettings = closure_72.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.appSharingSettings);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7544,7 +8553,7 @@ const items40 = [
     }
   }
 ];
-const tmp54 = new "binaryReadMap12"("discord_protos.discord_users.v1.ApplicationSettings", items40, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp54 = new "binaryReadMap12"("discord_protos.discord_users.v1.ApplicationSettings", items40, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_70 = tmp54;
 class ApplicationDMSettings$Type extends MessageType48 {
@@ -7558,6 +8567,7 @@ class ApplicationDMSettings$Type extends MessageType48 {
 }
 const prototype48 = ApplicationDMSettings$Type.prototype;
 prototype48["create"] = function create(arr) {
+  obj = { allowMobilePush: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7576,6 +8586,7 @@ prototype48["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (2 === tmp5) {
@@ -7583,16 +8594,31 @@ prototype48["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7617,7 +8643,7 @@ prototype48["internalBinaryWrite"] = function internalBinaryWrite(allowMobilePus
   return tag;
 };
 const items41 = [{ no: 2, name: "allow_mobile_push", kind: "scalar", T: 8 }];
-const tmp55 = new "binaryReadMap12"("discord_protos.discord_users.v1.ApplicationDMSettings", items41, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp55 = new "binaryReadMap12"("discord_protos.discord_users.v1.ApplicationDMSettings", items41, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_71 = tmp55;
 class ApplicationSharingSettings$Type extends MessageType49 {
@@ -7631,6 +8657,7 @@ class ApplicationSharingSettings$Type extends MessageType49 {
 }
 const prototype49 = ApplicationSharingSettings$Type.prototype;
 prototype49["create"] = function create(arr) {
+  obj = { disableApplicationActivitySharing: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7649,6 +8676,7 @@ prototype49["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -7656,16 +8684,31 @@ prototype49["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7690,7 +8733,7 @@ prototype49["internalBinaryWrite"] = function internalBinaryWrite(disableApplica
   return tag;
 };
 const items42 = [{ no: 1, name: "disable_application_activity_sharing", kind: "scalar", T: 8 }];
-const tmp56 = new "binaryReadMap12"("discord_protos.discord_users.v1.ApplicationSharingSettings", items42, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp56 = new "binaryReadMap12"("discord_protos.discord_users.v1.ApplicationSharingSettings", items42, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_72 = tmp56;
 class AdsSettings$Type extends MessageType50 {
@@ -7704,6 +8747,7 @@ class AdsSettings$Type extends MessageType50 {
 }
 const prototype50 = AdsSettings$Type.prototype;
 prototype50["create"] = function create(arr) {
+  obj = { alwaysDeliver: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7722,6 +8766,7 @@ prototype50["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -7729,16 +8774,31 @@ prototype50["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7763,7 +8823,7 @@ prototype50["internalBinaryWrite"] = function internalBinaryWrite(alwaysDeliver,
   return tag;
 };
 const items43 = [{ no: 1, name: "always_deliver", kind: "scalar", T: 8 }];
-const tmp57 = new "binaryReadMap12"("discord_protos.discord_users.v1.AdsSettings", items43, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj);
+const tmp57 = new "binaryReadMap12"("discord_protos.discord_users.v1.AdsSettings", items43, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj);
 // ThrowIfThisInitialized (0x7c)
 let closure_73 = tmp57;
 class InAppFeedbackState$Type extends MessageType51 {
@@ -7793,6 +8853,7 @@ class InAppFeedbackState$Type extends MessageType51 {
 }
 const prototype51 = InAppFeedbackState$Type.prototype;
 prototype51["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7811,27 +8872,53 @@ prototype51["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let UInt64Value2 = defineProperty.UInt64Value;
+        let tmp29 = UInt64Value2;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.lastImpressionTime = UInt64Value2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.lastImpressionTime);
       } else if (2 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let UInt64Value = defineProperty.UInt64Value;
+        let tmp24 = UInt64Value;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.optOutExpiryTime = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.optOutExpiryTime);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -7883,7 +8970,7 @@ const obj53 = {
   }
 };
 items44[1] = obj53;
-const tmp58 = new "binaryReadMap12"("discord_protos.discord_users.v1.InAppFeedbackState", items44, tmp6, tmp5, "create", InAppFeedbackState$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, "binaryReadMap12", items44, new.target, exports, obj53, undefined, 8, 4);
+const tmp58 = new "binaryReadMap12"("discord_protos.discord_users.v1.InAppFeedbackState", items44, tmp6, tmp5, "create", InAppFeedbackState$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, "binaryReadMap12", items44, new.target, exports, obj53, undefined, 8, 4);
 // ThrowIfThisInitialized (0x7c)
 let closure_74 = tmp58;
 class DefaultReactionEmoji$Type extends MessageType52 {
@@ -7929,6 +9016,7 @@ class DefaultReactionEmoji$Type extends MessageType52 {
 }
 const prototype52 = DefaultReactionEmoji$Type.prototype;
 prototype52["create"] = function create(arr) {
+  obj = {};
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -7947,33 +9035,69 @@ prototype52["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
+        let tmp37 = require;
+        let tmp38 = dependencyMap;
         let UInt64Value = defineProperty.UInt64Value;
+        let tmp39 = UInt64Value;
+        let tmp40 = pos;
+        let tmp41 = readUnknownField;
         obj.emojiId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.emojiId);
       } else if (2 === tmp5) {
+        let tmp32 = require;
+        let tmp33 = dependencyMap;
         let StringValue = defineProperty.StringValue;
+        let tmp34 = StringValue;
+        let tmp35 = pos;
+        let tmp36 = readUnknownField;
         obj.emojiName = StringValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.emojiName);
       } else if (3 === tmp5) {
+        let tmp27 = require;
+        let tmp28 = dependencyMap;
         let BoolValue2 = defineProperty.BoolValue;
+        let tmp29 = BoolValue2;
+        let tmp30 = pos;
+        let tmp31 = readUnknownField;
         obj.animated = BoolValue2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.animated);
       } else if (4 === tmp5) {
+        let tmp22 = require;
+        let tmp23 = dependencyMap;
         let BoolValue = defineProperty.BoolValue;
+        let tmp24 = BoolValue;
+        let tmp25 = pos;
+        let tmp26 = readUnknownField;
         obj.disableDoubleTap = BoolValue.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.disableDoubleTap);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -8053,7 +9177,7 @@ const obj55 = {
   }
 };
 items45[3] = obj55;
-const inAppFeedbackStateType = new InAppFeedbackState$Type("discord_protos.discord_users.v1.DefaultReactionEmoji", items45, tmp6, DefaultReactionEmoji$Type, "create", InAppFeedbackState$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, items45, new.target, exports, obj55, undefined, 8, 4, 3, 2);
+const inAppFeedbackStateType = new InAppFeedbackState$Type("discord_protos.discord_users.v1.DefaultReactionEmoji", items45, tmp6, DefaultReactionEmoji$Type, "create", InAppFeedbackState$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, items45, new.target, exports, obj55, undefined, 8, 4, 3, 2);
 // ThrowIfThisInitialized (0x7c)
 class InAppFeedbackSettings$Type extends MessageType53 {
   constructor() {
@@ -8072,6 +9196,7 @@ class InAppFeedbackSettings$Type extends MessageType53 {
 }
 const prototype53 = InAppFeedbackSettings$Type.prototype;
 prototype53["create"] = function create(arr) {
+  obj = { inAppFeedbackStates: {} };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -8090,6 +9215,7 @@ prototype53["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -8097,16 +9223,31 @@ prototype53["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -8121,8 +9262,10 @@ prototype53["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let num;
   if (pos.pos < sum) {
     while (true) {
+      let tmp5 = callback;
       let tmp6 = callback(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
+      let tmp8 = tmp2;
       let int32Result = tmp3;
       if (1 === tmp7) {
         int32Result = pos.int32();
@@ -8130,6 +9273,7 @@ prototype53["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
+        let tmp15 = closure_74;
         internalBinaryReadResult = closure_74.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -8154,6 +9298,8 @@ prototype53["internalBinaryWrite"] = function internalBinaryWrite(inAppFeedbackS
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp3 = require;
+    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1307.WireType.Varint);
@@ -8161,6 +9307,7 @@ prototype53["internalBinaryWrite"] = function internalBinaryWrite(inAppFeedbackS
     let int32Result = tagResult1.int32(parseInt(nextResult));
     let tagResult2 = tag.tag(2, _mod1307.WireType.LengthDelimited);
     let forkResult1 = tagResult2.fork();
+    let tmp7 = closure_74;
     let internalBinaryWriteResult = closure_74.internalBinaryWrite(inAppFeedbackStates.inAppFeedbackStates[nextResult], tag, writeUnknownFields);
     let joined = tag.join();
     let joined1 = joined.join();
@@ -8178,7 +9325,7 @@ prototype53["internalBinaryWrite"] = function internalBinaryWrite(inAppFeedbackS
 };
 const obj56 = { no: 1, name: "in_app_feedback_states", kind: "map", K: 5, V: obj57 };
 const items46 = [obj56];
-const inAppFeedbackStateType1 = new InAppFeedbackState$Type("discord_protos.discord_users.v1.InAppFeedbackSettings", items46, tmp6, InAppFeedbackSettings$Type, "create", InAppFeedbackState$Type, "internalBinaryRead", "internalBinaryWrite", items46, undefined, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, inAppFeedbackStateType, new.target, exports, obj56, undefined, 8, 4, 3, 2);
+const inAppFeedbackStateType1 = new InAppFeedbackState$Type("discord_protos.discord_users.v1.InAppFeedbackSettings", items46, tmp6, InAppFeedbackSettings$Type, "create", InAppFeedbackState$Type, "internalBinaryRead", "internalBinaryWrite", items46, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, inAppFeedbackStateType, new.target, exports, obj56, undefined, 8, 4, 3, 2);
 // ThrowIfThisInitialized (0x7c)
 class AppVersionSettings$Type extends MessageType54 {
   constructor() {
@@ -8191,6 +9338,7 @@ class AppVersionSettings$Type extends MessageType54 {
 }
 const prototype54 = AppVersionSettings$Type.prototype;
 prototype54["create"] = function create(arr) {
+  obj = { isUsingOutdatedMobileVersion: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -8209,6 +9357,7 @@ prototype54["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
+      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -8216,16 +9365,31 @@ prototype54["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
+          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
+          let str = ") for ";
+          let str2 = " (wire type ";
+          let str3 = "Unknown field ";
+          let tmp16 = tmp5;
+          let tmp17 = tmp6;
+          let tmp18 = new.target;
+          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
+              let tmp8 = require;
+              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
+            let tmp10 = obj;
+            let tmp11 = tmp5;
+            let tmp12 = tmp6;
+            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -8252,10 +9416,10 @@ prototype54["internalBinaryWrite"] = function internalBinaryWrite(isUsingOutdate
 const items47 = [];
 const obj58 = { no: 1, name: "is_using_outdated_mobile_version", kind: "scalar", T: 8 };
 items47[0] = obj58;
-const tmp61 = new "internalBinaryRead"("discord_protos.discord_users.v1.AppVersionSettings", items47, tmp6, InAppFeedbackSettings$Type, "create", AppVersionSettings$Type, "internalBinaryRead", items47, new.target, undefined, tmp, fn, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, inAppFeedbackStateType, inAppFeedbackStateType1, exports, obj58, undefined, 8, 4);
+const tmp61 = new "internalBinaryRead"("discord_protos.discord_users.v1.AppVersionSettings", items47, tmp6, InAppFeedbackSettings$Type, "create", AppVersionSettings$Type, "internalBinaryRead", items47, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, obj, obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, inAppFeedbackStateType, inAppFeedbackStateType1, exports, obj58, undefined, 8, 4);
 // ThrowIfThisInitialized (0x7c)
 let closure_77 = tmp61;
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx");
 
 export const InboxTab = obj;
 export const HubProgressStep = obj;

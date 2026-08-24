@@ -1,9 +1,9 @@
 // discord_app/modules/feedback/native/requestReviewModal.tsx
 import timestampDefault from "../../debug/Logger.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = fn;
+const require = arg1;
 function _showAndroidRatingRequest() {
   const self = this;
   const tmp = callback(function*() {
@@ -100,7 +100,7 @@ function _showAndroidRatingRequest() {
 }
 let closure_5 = new timestampDefault("requestReviewModal");
 const tmp2 = new timestampDefault("requestReviewModal");
-const result = require("obj132").fileFinishedImporting("modules/feedback/native/requestReviewModal.tsx");
+const result = require("set").fileFinishedImporting("modules/feedback/native/requestReviewModal.tsx");
 
 export default function requestReviewModal() {
   if (obj.isAndroid()) {

@@ -1,35 +1,11 @@
 // discord_app/modules/premium/native/utils/GiftAnimationData.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import GuildFeatures from "../../PremiumConstants.tsx";
 import _sendGiftMessage from "../../PremiumGiftingUtils.tsx";
-import _mod9601 from "../../../../../_runtime/metro/09601__.js";
-import _mod9602 from "../../../../../_runtime/metro/09602__.js";
-import _mod9603 from "../../../../../_runtime/metro/09603__.js";
-import _mod9604 from "../../../../../_runtime/metro/09604__.js";
-import _mod9605 from "../../../../../_runtime/metro/09605__.js";
-import _mod9606 from "../../../../../_runtime/metro/09606__.js";
-import _mod9607 from "../../../../../_runtime/metro/09607__.js";
-import _mod9608 from "../../../../../_runtime/metro/09608__.js";
-import _mod9609 from "../../../../../_runtime/metro/09609__.js";
-import _mod9610 from "../../../../../_runtime/metro/09610__.js";
-import _mod9611 from "../../../../../_runtime/metro/09611__.js";
-import _mod9612 from "../../../../../_runtime/metro/09612__.js";
-import _mod9613 from "../../../../../_runtime/metro/09613__.js";
-import _mod9614 from "../../../../../_runtime/metro/09614__.js";
-import _mod9615 from "../../../../../_runtime/metro/09615__.js";
-import _mod9616 from "../../../../../_runtime/metro/09616__.js";
-import _mod9617 from "../../../../../_runtime/metro/09617__.js";
-import _mod9618 from "../../../../../_runtime/metro/09618__.js";
-import _mod9619 from "../../../../../_runtime/metro/09619__.js";
-import _mod9620 from "../../../../../_runtime/metro/09620__.js";
-import _mod9621 from "../../../../../_runtime/metro/09621__.js";
-import _mod9622 from "../../../../../_runtime/metro/09622__.js";
-import _mod9623 from "../../../../../_runtime/metro/09623__.js";
-import _mod9624 from "../../../../../_runtime/metro/09624__.js";
 
 const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
-const result = obj132.fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
 
 export const LottieType = obj;
 export const getLottieType = function getLottieType(giftStyle) {
@@ -43,72 +19,72 @@ export const getLottieType = function getLottieType(giftStyle) {
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9601;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9602;
+      return tmp17(9601);
+    } else if (tmp17(8294).AnimationState.LOOP === ACTION) {
+      return tmp17(9602);
     } else {
-      return _mod9603;
+      return tmp17(9603);
     }
-  } else if (PremiumGiftStyles.CAKE === giftStyle) {
+  } else if (tmp.CAKE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9604;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9605;
+      return tmp15(9604);
+    } else if (tmp15(8294).AnimationState.LOOP === ACTION) {
+      return tmp15(9605);
     } else {
-      return _mod9606;
+      return tmp15(9606);
     }
-  } else if (PremiumGiftStyles.CHEST === giftStyle) {
+  } else if (tmp.CHEST === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9607;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9608;
+      return tmp13(9607);
+    } else if (tmp13(8294).AnimationState.LOOP === ACTION) {
+      return tmp13(9608);
     } else {
-      return _mod9609;
+      return tmp13(9609);
     }
-  } else if (PremiumGiftStyles.COFFEE === giftStyle) {
+  } else if (tmp.COFFEE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9610;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9611;
+      return tmp11(9610);
+    } else if (tmp11(8294).AnimationState.LOOP === ACTION) {
+      return tmp11(9611);
     } else {
-      return _mod9612;
+      return tmp11(9612);
     }
-  } else if (PremiumGiftStyles.SEASONAL_STANDARD_BOX === giftStyle) {
+  } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9613;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9614;
+      return tmp9(9613);
+    } else if (tmp9(8294).AnimationState.LOOP === ACTION) {
+      return tmp9(9614);
     } else {
-      return _mod9615;
+      return tmp9(9615);
     }
-  } else if (PremiumGiftStyles.SEASONAL_CAKE === giftStyle) {
+  } else if (tmp.SEASONAL_CAKE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9616;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9617;
+      return tmp7(9616);
+    } else if (tmp7(8294).AnimationState.LOOP === ACTION) {
+      return tmp7(9617);
     } else {
-      return _mod9618;
+      return tmp7(9618);
     }
-  } else if (PremiumGiftStyles.SEASONAL_CHEST === giftStyle) {
+  } else if (tmp.SEASONAL_CHEST === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9619;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9620;
+      return tmp5(9619);
+    } else if (tmp5(8294).AnimationState.LOOP === ACTION) {
+      return tmp5(9620);
     } else {
-      return _mod9621;
+      return tmp5(9621);
     }
-  } else if (PremiumGiftStyles.SEASONAL_COFFEE === giftStyle) {
+  } else if (tmp.SEASONAL_COFFEE === giftStyle) {
     if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
-      return _mod9622;
-    } else if (_sendGiftMessage.AnimationState.LOOP === ACTION) {
-      return _mod9623;
+      return tmp3(9622);
+    } else if (tmp3(8294).AnimationState.LOOP === ACTION) {
+      return tmp3(9623);
     } else {
-      return _mod9624;
+      return tmp3(9624);
     }
   } else {
-    if (PremiumGiftStyles.SNOWGLOBE !== giftStyle) {
-      if (PremiumGiftStyles.BOX !== giftStyle) {
-        const CUP = PremiumGiftStyles.CUP;
+    if (tmp.SNOWGLOBE !== giftStyle) {
+      if (tmp.BOX !== giftStyle) {
+        const CUP = tmp.CUP;
       }
     }
     const _Error = Error;

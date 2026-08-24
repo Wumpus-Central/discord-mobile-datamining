@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/hooks/useShopProductItems.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_2 from "../../../../_runtime/00019_noop.js";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-require = fn;
+require = arg1;
 class ItemsSortingHat {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -13,26 +13,26 @@ class ItemsSortingHat {
 }
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
-  get: function firstAvatarDecoration(closure_2) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
+  get: function firstAvatarDecoration(first) {
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileEffect", {
   get: function firstProfileEffect() {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT);
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstNameplate", {
-  get: function firstNameplate(closure_2) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
+  get: function firstNameplate(first) {
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileFrame", {
-  get: function firstProfileFrame(closure_2) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
+  get: function firstProfileFrame(first) {
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
   },
   set: undefined
 });
@@ -46,28 +46,28 @@ prototype["getFirstItemByType"] = function getFirstItemByType(AVATAR_DECORATION)
   return null != first ? first : undefined;
 };
 prototype["sortByTypes"] = function sortByTypes(items) {
-  return items.reduce((acc, item, index) => {
-    const value = acc.get(item.type);
+  return items.reduce((get, type) => {
+    const value = get.get(type.type);
     if (null != value) {
-      value.push(item);
+      value.push(type);
     } else {
-      const items = [item];
-      const result = acc.set(item.type, items);
+      const items = [type];
+      const result = get.set(type.type, items);
     }
-    return acc;
+    return get;
   }, new Map());
 };
-let result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
 
 export { ItemsSortingHat };
 export const useShopProductItems = function useShopProductItems(product) {
   closure_0 = product;
   const items = [product];
   return React.useMemo(() => {
-    if (typeof ItemsSortingHat !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(ItemsSortingHat.prototype);
+    let obj = Object.create(closure_1_3.prototype);
     obj.itemsByTypes = obj.sortByTypes(product.items);
     obj = { firstProfileEffect: obj.firstProfileEffect, firstAvatarDecoration: obj.firstAvatarDecoration, firstNameplate: obj.firstNameplate, firstProfileFrame: obj.firstProfileFrame };
     return obj;

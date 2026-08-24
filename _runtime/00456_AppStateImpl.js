@@ -1,6 +1,6 @@
 // _runtime/00456_AppStateImpl.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 
 const AppStateImpl = importDefault;
 class AppStateImpl {
@@ -43,7 +43,7 @@ class AppStateImpl {
           self.currentState = app_state.app_state;
           obj.emit("appStateDidChange", app_state);
         }
-      }, require("metro/00459__.js"));
+      }, require("module_459"));
     }
     return;
   }
@@ -85,7 +85,6 @@ const items = [
           if (tmp5) {
             callback2();
           }
-          tmp5 = "focus" === closure_0 && arg0;
         });
       }
     }

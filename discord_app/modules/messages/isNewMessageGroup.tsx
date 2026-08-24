@@ -1,7 +1,6 @@
 // discord_app/modules/messages/isNewMessageGroup.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
-import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import obj132Default from "../../utils/Durations.tsx";
+import set from "../../../_runtime/00002_set.js";
+import setDefault from "../../utils/Durations.tsx";
 import resetCache from "../../utils/DateUtils.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
 import ME from "../../Constants.tsx";
@@ -33,9 +32,9 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
         if (!tmp34) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
-            let tmp9 = content.hasFlag(constants3.EPHEMERAL) !== type.hasFlag(constants3.EPHEMERAL);
+            let tmp9 = content.hasFlag(tmp.EPHEMERAL) !== type.hasFlag(tmp.EPHEMERAL);
             if (!tmp9) {
-              let tmp11 = content.hasFlag(constants3.IS_SCHEDULED) !== type.hasFlag(constants3.IS_SCHEDULED);
+              let tmp11 = content.hasFlag(tmp.IS_SCHEDULED) !== type.hasFlag(tmp.IS_SCHEDULED);
               if (!tmp11) {
                 let tmp13 = null != type.webhookId && content.author.username !== type.author.username;
                 if (!tmp13) {
@@ -45,31 +44,32 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                   }
                   let tmp16 = !isForumPostResult;
                   if (isForumPostResult) {
-                    tmp16 = content.id !== DISCORD_EPOCHDefault.castChannelIdAsMessageId(isForumPost.id);
-                    const tmp40Result = DISCORD_EPOCHDefault;
+                    tmp16 = content.id !== tmp40(11).castChannelIdAsMessageId(isForumPost.id);
+                    const tmp40Result = tmp40(11);
                   }
                   let tmp17 = !tmp16;
                   if (tmp16) {
                     const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
                     let tmp20 = !isSameDayResult;
                     if (isSameDayResult) {
-                      const isWithinIntervalResult = resetCache.isWithinInterval(content.timestamp, type.timestamp, closure_6);
+                      const isWithinIntervalResult = tmp18(4063).isWithinInterval(content.timestamp, type.timestamp, closure_6);
                       let tmp23 = !isWithinIntervalResult;
                       if (isWithinIntervalResult) {
-                        const hasFlagResult3 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                        const hasFlagResult3 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
                         let hasFlagResult4 = !hasFlagResult3;
                         if (hasFlagResult3) {
-                          hasFlagResult4 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                          hasFlagResult4 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
                         }
                         let tmp26 = !hasFlagResult4;
                         if (hasFlagResult4) {
-                          const hasFlagResult5 = content.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                          const hasFlagResult5 = content.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
                           let hasFlagResult6 = !hasFlagResult5;
                           if (hasFlagResult5) {
-                            hasFlagResult6 = type.hasFlag(constants3.SUPPRESS_NOTIFICATIONS);
+                            hasFlagResult6 = type.hasFlag(tmp.SUPPRESS_NOTIFICATIONS);
                           }
                           if (!hasFlagResult6) {
                             hasFlagResult6 = !(type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone);
+                            const tmp29 = type.mentions.length > 0 || type.mentionRoles.length > 0 || type.mentionEveryone;
                           }
                           let tmp30 = !hasFlagResult6;
                           if (hasFlagResult6) {
@@ -100,30 +100,33 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                         tmp23 = tmp26;
                       }
                       tmp20 = tmp23;
-                      const tmp18Result = resetCache;
+                      const tmp18Result = tmp18(4063);
                     }
                     tmp17 = tmp20;
+                    const obj2 = resetCache;
+                    tmp18 = require;
                   }
                   tmp13 = tmp17;
                 }
                 tmp11 = tmp13;
               }
               tmp9 = tmp11;
-              const hasFlagResult2 = content.hasFlag(constants3.IS_SCHEDULED);
+              const hasFlagResult2 = content.hasFlag(tmp.IS_SCHEDULED);
             }
             tmp7 = tmp9;
-            const hasFlagResult1 = content.hasFlag(constants3.EPHEMERAL);
+            const hasFlagResult1 = content.hasFlag(tmp.EPHEMERAL);
           }
           tmp34 = tmp7;
         }
+        tmp40 = importDefault;
       }
     }
   }
   return tmp4;
 }
 ({ MessageTypes: c3, ChannelStreamTypes: c4, MessageFlags: c5 } = ME);
-let closure_6 = 7 * obj132Default.Millis.MINUTE;
-const result = obj132.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
+let closure_6 = 7 * setDefault.Millis.MINUTE;
+const result = set.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
 
 export default isNewMessageGroup;
 export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag) {
@@ -131,7 +134,7 @@ export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag
   if (!tmp) {
     let tmp3 = type.type === constants2.MESSAGE && type.content.id === type.content.channel_id;
     if (!tmp3) {
-      let tmp4 = type.type !== constants2.MESSAGE && type.type !== constants2.THREAD_STARTER_MESSAGE;
+      let tmp4 = type.type !== tmp2.MESSAGE && type.type !== tmp2.THREAD_STARTER_MESSAGE;
       if (!tmp4) {
         tmp4 = isNewMessageGroup(isForumPost, type.content, hasFlag);
       }

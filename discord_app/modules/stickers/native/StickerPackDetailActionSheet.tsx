@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/native/StickerPackDetailActionSheet.tsx
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
@@ -7,7 +7,7 @@ import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetCon
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 let c4 = importAllResult;
 ({ MIN_MARGIN: c5, STICKER_SIZE: closure_6 } = PADDING_HORIZONTAL);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
@@ -18,6 +18,9 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   const onClose = stickerPack.onClose;
   let callback;
   let first;
+  closure_5 = undefined;
+  closure_6 = undefined;
+  let rounded;
   closure_8 = undefined;
   function onPressSticker(arg0) {
     _undefined(arg0);
@@ -25,12 +28,12 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   function toggleDisplayingPackDetails() {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(ref.current);
+      clearTimeout(tmp.current);
     }
     callback(!first);
     if (!first) {
       const _setTimeout = setTimeout;
-      ref.current = setTimeout(() => callback(false), 4000);
+      tmp.current = setTimeout(() => callback(false), 4000);
     }
   }
   const tmp = callback2();
@@ -39,8 +42,8 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   first = tmp6[0];
   closure_5 = tmp6[1];
   closure_6 = first.useRef(null);
-  const rounded = Math.floor(Math.min(closure_8, analyticsPopoutType(onClose[7])().width) / (closure_6 + closure_5));
-  analyticsPopoutType(onClose[9]);
+  rounded = Math.floor(Math.min(closure_8, analyticsPopoutType(onClose[7])().width) / (closure_6 + closure_5));
+  let obj = analyticsPopoutType(onClose[9]);
   const tmp4 = callback(first.useState(null), 2);
   closure_8 = first.useRef(onClose);
   const items = [onClose];
@@ -57,11 +60,11 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   }, []);
   const items1 = [analyticsPopoutType, stickerPack.id];
   const effect2 = first.useEffect(() => {
-    analyticsPopoutType(onClose[10]);
-    const obj = { type: analyticsPopoutType, sticker_pack_id: stickerPack.id };
+    let obj = analyticsPopoutType(onClose[10]);
+    obj = { type: analyticsPopoutType, sticker_pack_id: stickerPack.id };
     obj.track(rounded.OPEN_POPOUT, obj);
   }, items1);
-  let obj = { stickerPack, style: tmp.header, onPress: null, withBanner: true, withDescription: true };
+  obj = { stickerPack, style: tmp.header, onPress: null, withBanner: true, withDescription: true };
   const chunkResult = obj.chunk(stickerPack.stickers, rounded);
   let obj2 = stickerPack(onClose[13]);
   let tmp17;
@@ -73,10 +76,10 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
   obj[2] = tmp17;
   const items2 = [onPressSticker(analyticsPopoutType(onClose[12]), obj), onPressSticker(stickerPack(onClose[14]).ActionSheetHeaderBar, { variant: "floating" })];
   obj1[0] = items2;
-  obj[3] = callback(closure_10, obj1);
+  obj[3] = closure_11(closure_10, obj1);
   obj2 = { style: tmp.stickers, contentContainerStyle: obj3, children: null };
   const tmp16 = analyticsPopoutType(onClose[12]);
-  obj2[2] = chunkResult.map((item, index) => onPressSticker(analyticsPopoutType(onClose[16]), { containerWidth: rounded, stickers: item, rowSize: rounded, onPressSticker, nativeRow: false }, index));
+  obj2[2] = chunkResult.map((stickers) => onPressSticker(analyticsPopoutType(onClose[16]), { containerWidth: rounded, stickers, rowSize: rounded, onPressSticker, nativeRow: false }, arg1));
   obj[4] = onPressSticker(stickerPack(onClose[15]).BottomSheetScrollView, obj2);
   const children = [onPressSticker(stickerPack(onClose[11]).BottomSheet, obj), , ];
   let tmp14Result = null != tmp5;
@@ -100,8 +103,8 @@ const memoResult = importAllResult.memo(function StickerPackDetailActionSheet(st
     first = tmp14(tmp2(tmp3[13]), obj6);
   }
   children[2] = first;
-  return callback(closure_10, { children });
+  return closure_11(closure_10, { children });
 });
-const result = require("obj132").fileFinishedImporting("modules/stickers/native/StickerPackDetailActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPackDetailActionSheet.tsx");
 
 export default memoResult;

@@ -1,25 +1,29 @@
 // discord_app/modules/rpc/server/commands/soundboard.tsx
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import handleSoundCreateOrUpdate from "../../../soundboard/SoundboardStore.tsx";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../soundboard/SoundboardStore.tsx";
+import closure_5 from "../../../../stores/UserStore.tsx";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 
-const require = fn;
+const require = arg1;
 ({ RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);
 ({ RPCCommands, RPCErrors: closure_6 } = sum);
 let obj = {};
+obj = { scope: null, handler: null };
+obj = {};
 let items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler() {
   return callback(function*() {
+    closure_1 = tmp5;
+    let sounds2 = tmp2;
     const obj2 = closure_1_0(table[6]);
     yield obj2.maybeFetchSoundboardSounds();
-    const sounds2 = sounds.getSounds();
+    sounds2 = sounds.getSounds();
     closure_1 = [];
-    const item = sounds2.forEach((item, index) => item.forEach((item, index) => arr.push(closure_1_0(closure_1_2[7]).soundboardSoundToAPI(item))));
+    const item = sounds2.forEach((arr) => arr.forEach((arg0) => arr.push(closure_1_0(closure_1_2[7]).soundboardSoundToAPI(arg0))));
     return closure_1;
   })();
 };
@@ -30,8 +34,8 @@ const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC
 obj2[RPC_SCOPE_CONFIG.ALL] = items1;
 obj1[0] = obj2;
 obj1[1] = function validation(string) {
-  createRpcJoiSchemaObjectDefault(string);
-  const obj = { guild_id: string.string(), sound_id: string.string() };
+  let obj = createRpcJoiSchemaObjectDefault(string);
+  obj = { guild_id: string.string(), sound_id: string.string() };
   return obj.required().keys(obj);
 };
 obj1[2] = function handler(args) {
@@ -102,7 +106,7 @@ obj1[2] = function handler(args) {
             const tmp52 = new closure_1_1(id[11])(obj3, "Invalid Channel.");
             throw tmp52;
           } else if (c3) {
-            if (closure_1_1(id[12])(closure_2)) {
+            if (tmp75(tmp76[12])(closure_2)) {
               if (null != closure_1_1) {
                 obj3 = closure_1_0(id[10]);
                 const items = [closure_1_1(id[13]).RPC];
@@ -119,7 +123,7 @@ obj1[2] = function handler(args) {
           } else {
             const obj5 = { errorCode: null };
             obj5[0] = closure_1_6.INVALID_SOUND;
-            const tmp22 = new closure_1_1(id[11])(obj5, "Invalid Sound.");
+            const tmp22 = new tmp75(tmp76[11])(obj5, "Invalid Sound.");
             throw tmp22;
           }
         }
@@ -131,6 +135,6 @@ obj1[2] = function handler(args) {
   })();
 };
 obj[RPCCommands.PLAY_SOUNDBOARD_SOUND] = obj1;
-let result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/soundboard.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/commands/soundboard.tsx");
 
 export default obj;

@@ -3,18 +3,19 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import useChannelFollowerStatsDefault from "../../../channel_following/useChannelFollowerStats.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
-const createCacheKey = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+createCacheKey = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: null };
+createCacheKey = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 createCacheKey[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
+const result = require("set").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
 
 export default function PublishModal(channelId) {
   const tmp = callback2();
@@ -53,10 +54,10 @@ export default function PublishModal(channelId) {
       }
       obj1 = { numGuildsFollowing: null };
       obj1[0] = num2;
-      obj[1] = intl.format(getSystemLocale.t.GCGrNP, obj1);
+      obj[1] = intl.format(tmp11(1236).t.GCGrNP, obj1);
       let tmp12 = obj;
     } else {
-      obj[1] = intl.string(getSystemLocale.t["8FpqOs"]);
+      obj[1] = intl.string(tmp11(1236).t["8FpqOs"]);
       tmp12 = obj;
     }
     obj[1] = jsx(Button.LegacyText, tmp12);

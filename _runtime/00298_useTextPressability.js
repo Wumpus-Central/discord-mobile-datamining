@@ -5,12 +5,12 @@ import noopDefault from "00111_noop.js";
 import flattenStyleDefault from "00148_flattenStyle.js";
 import get_hairlineWidthDefault from "00254_get_hairlineWidth.js";
 import NativeText2 from "00299_NativeText.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_4 from "metro/00032__slicedToArray.js";
 import importAllResult from "00019_noop.js";
 import noop from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function useTextPressability(textPressabilityProps) {
   const onLongPress = textPressabilityProps.onLongPress;
   const onPress = textPressabilityProps.onPress;
@@ -23,7 +23,10 @@ function useTextPressability(textPressabilityProps) {
   let onResponderTerminationRequest = textPressabilityProps.onResponderTerminationRequest;
   let onStartShouldSetResponder = textPressabilityProps.onStartShouldSetResponder;
   const pressRetentionOffset = textPressabilityProps.pressRetentionOffset;
-  const first = onResponderGrant(onResponderTerminate(false), 2)[0];
+  let first;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  first = onResponderGrant(onResponderTerminate(false), 2)[0];
   let items = [pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut, textPressabilityProps.suppressHighlighting];
   const tmp = onResponderGrant(onResponderTerminate(false), 2);
   const tmp4 = onPress(onPressOut[8])(onResponderRelease(() => ({ disabled: false, pressRectOffset: pressRetentionOffset, onLongPress, onPress, onPressIn, onPressOut }), items));
@@ -57,13 +60,13 @@ function useTextPressability(textPressabilityProps) {
           tmp2(arg0);
         }
       };
-      obj[4] = closure_12.onClick;
+      obj[4] = tmp.onClick;
       if (null == onResponderTerminationRequest) {
-        onResponderTerminationRequest = closure_12.onResponderTerminationRequest;
+        onResponderTerminationRequest = tmp.onResponderTerminationRequest;
       }
       obj[5] = onResponderTerminationRequest;
       if (null == onStartShouldSetResponder) {
-        onStartShouldSetResponder = closure_12.onStartShouldSetResponder;
+        onStartShouldSetResponder = tmp.onStartShouldSetResponder;
       }
       obj[6] = onStartShouldSetResponder;
       tmp2 = obj;

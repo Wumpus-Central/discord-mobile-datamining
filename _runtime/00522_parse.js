@@ -1,10 +1,8 @@
 // _runtime/00522_parse.js
-import validateDefault from "00518_validate.js";
-
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function parse(arr) {
-  if (validateDefault(arr)) {
+  if (module(518)(arr)) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(16);
     const _parseInt = parseInt;

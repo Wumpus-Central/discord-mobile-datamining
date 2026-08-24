@@ -2,38 +2,47 @@
 import isTracingDefault from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import _modDef1208 from "../../../utils/SentryUtils.native.tsx";
+import getConstantsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import DCDDeviceManager from "../../../utils/native/DeviceUtils.tsx";
 import getMediaPerformanceClassDefault from "../../device/getMediaPerformanceClass.android.tsx";
 import AppStartInfo2 from "AppStartInfo.android.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import handleClearCaches from "../../cache/CacheStore.tsx";
-import getHash from "../../experiments/ExperimentStore.tsx";
-import handleThemeChange from "../../user_settings/ThemeStore.tsx";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import refreshSourceMapCookie from "../../../stores/DeveloperOptionsStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../cache/CacheStore.tsx";
+import closure_5 from "../../experiments/ExperimentStore.tsx";
+import closure_6 from "../../user_settings/ThemeStore.tsx";
+import closure_7 from "../../../stores/AuthenticationStore.tsx";
+import closure_8 from "../../../stores/ChannelStore.tsx";
+import closure_9 from "../../../stores/DeveloperOptionsStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { ACCEPT_INVITE_MODAL_KEY } from "../../accept_invite/native/AcceptInviteConstants.tsx";
 import { StaticChannelRoutes } from "../../channel/ChannelConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import v1 from "../../../../_runtime/00514_v1.js";
-import importAllResult from "../../../utils/native/ClientInfoUtils.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function getDeviceMetadata() {
   if (null == obj) {
     obj = { device_model: null, device_brand: null, device_product: null, device_manufacturer: null, smallest_screen_width_dp: null, device_performance_class: null, soc_name: null, ram_size: null, max_cpu_freq: null };
     obj[0] = DCDDeviceManager.getDeviceModel();
+    const obj2 = DCDDeviceManager;
     obj[1] = DCDDeviceManager.getDeviceBrand();
+    const obj3 = DCDDeviceManager;
     obj[2] = DCDDeviceManager.getDeviceProduct();
+    const obj4 = DCDDeviceManager;
     obj[3] = DCDDeviceManager.getDeviceManufacturer();
+    const obj5 = DCDDeviceManager;
     obj[4] = DCDDeviceManager.getSmallestScreenWidthDp();
     obj[5] = getMediaPerformanceClassDefault();
+    const obj6 = DCDDeviceManager;
     obj[6] = DCDDeviceManager.getSocName();
+    const obj7 = DCDDeviceManager;
     obj[7] = DCDDeviceManager.getRamSize();
+    const obj8 = DCDDeviceManager;
     obj[8] = DCDDeviceManager.getMaxCpuFreq();
+    const obj9 = DCDDeviceManager;
   }
   return obj;
 }
@@ -94,6 +103,8 @@ function getRedesignScreenName() {
     }
     tmpResult = coerceMainRoute;
   }
+  const obj = getRootNavigationRef;
+  const tmp = require;
 }
 function sharedProperties(screen_name, has_cached_data) {
   const obj = { load_id: closure_16, duration_ms_since_app_opened: Date.now() - arg2, screen_name, has_cached_data, manifest: null };
@@ -178,7 +189,7 @@ function _trackAppUIViewedAsync() {
               if (closure_0 == null) {
                 str = "unknownn";
               }
-              !(function logLegacyAppUiViewed(unknownn, closure_1, closure_2, closure_3, closure_4) {
+              !(function logLegacyAppUiViewed(arg0, closure_1, closure_2, closure_3, closure_4) {
                 const self = this;
                 const apply = closure_24.apply;
                 if (typeof apply === "unknown") {
@@ -207,12 +218,12 @@ function _trackAppUIViewedAsync() {
                         const readySupplemental2 = callback(9).readySupplemental;
                         let hasDataResult = readySupplemental2.hasData();
                         if (hasDataResult) {
-                          const firstContentfulPaint = callback(9).firstContentfulPaint;
+                          const firstContentfulPaint = tmp6(9).firstContentfulPaint;
                           let hasDataResult1 = firstContentfulPaint.hasData();
                           if (!hasDataResult1) {
-                            const renderLatestMessages = callback(9).renderLatestMessages;
-                            hasDataResult1 = renderLatestMessages.hasData() || null != callback(9).interstitial;
-                            const tmp10 = renderLatestMessages.hasData() || null != callback(9).interstitial;
+                            const renderLatestMessages = tmp6(9).renderLatestMessages;
+                            hasDataResult1 = renderLatestMessages.hasData() || null != tmp6(9).interstitial;
+                            const tmp10 = renderLatestMessages.hasData() || null != tmp6(9).interstitial;
                           }
                           hasDataResult = hasDataResult1;
                         }
@@ -233,7 +244,6 @@ function _trackAppUIViewedAsync() {
                   }
                   return flag2;
                 });
-                const obj = callback(9);
               }
             })();
             c6 = 3;
@@ -433,9 +443,9 @@ function _trackAppUIViewed() {
             closure_5 = 2;
             theme = 1;
             let obj3 = { value: null, done: false };
-            obj3[0] = allNativeTimestamps.then((result) => {
-              _null(paths[17]).logGroups[0].nativeLogs = result;
-              _null(paths[23]).processNativeLogs(result, paths);
+            obj3[0] = allNativeTimestamps.then((nativeLogs) => {
+              _null(paths[17]).logGroups[0].nativeLogs = nativeLogs;
+              _null(paths[23]).processNativeLogs(nativeLogs, paths);
             });
             return obj3;
           }
@@ -482,8 +492,8 @@ function _trackAppUIViewed() {
             obj4 = lib(appCreatedTime[26]);
             const obj5 = { importer: null };
             obj5[0] = function importer() {
-              return callback(paths[28])(paths[27], paths.paths).then((result) => {
-                closure_0 = result.default;
+              return callback(paths[28])(paths[27], paths.paths).then((arg0) => {
+                closure_0 = arg0.default;
                 return (arg0) => {
                   let str = closure_1_6.app_launch_scenario;
                   if (str == null) {
@@ -507,9 +517,10 @@ function _trackAppUIViewed() {
               obj.logged_at = Date.now();
               obj.user_id = id.getId();
               const timestamp = Date.now();
-              const item = callback2(obj).forEach((item, index) => {
+              closure_0 = timestamp;
+              const item = callback2(obj).forEach((arg0) => {
                 const obj = {};
-                const merged = Object.assign(item);
+                const merged = Object.assign(arg0);
                 obj.type = "app_ui_viewed";
                 obj.batch_id = closure_0;
                 const json = JSON.stringify(obj);
@@ -517,9 +528,9 @@ function _trackAppUIViewed() {
               });
               closure_0 = timestamp + 1;
               const arr = callback2(obj);
-              const item1 = callback2(allExperimentAssignments.getAllExperimentAssignments()).forEach((item, index) => {
+              const item1 = callback2(allExperimentAssignments.getAllExperimentAssignments()).forEach((arg0) => {
                 const obj = {};
-                const merged = Object.assign(item);
+                const merged = Object.assign(arg0);
                 obj.batch_id = closure_0;
                 obj.type = "experiments";
                 const json = JSON.stringify(obj);
@@ -560,7 +571,9 @@ function batchKeys(arg0) {
     const obj = {};
     const iter = substr[Symbol.iterator]();
     do {
+      let tmp4 = substr;
       let nextResult = iter.next();
+      let tmp6 = iter;
       while (iter !== undefined) {
         obj[nextResult] = arg0[nextResult];
         continue;
@@ -651,13 +664,13 @@ function _trackAppLaunchCompletedAsync() {
 }
 let c14 = null;
 let closure_16 = v1.v4();
-const Manifest = importAllResult.getConstants().Manifest;
+const Manifest = getConstantsAll.getConstants().Manifest;
 let c18 = false;
-const set = new Set(["private_channel", "guild-forum", "guild-directory", "guild-text", "thread", "redesign-guilds", "redesign-messages"]);
+let set = new Set(["private_channel", "guild-forum", "guild-directory", "guild-text", "thread", "redesign-guilds", "redesign-messages"]);
 const set1 = new Set(["friends_list", "guild-voice", "redesign-guild-voice", "unknown-channel", "redesign-unknown-channel", "channel-list", "other"]);
 let c25 = null;
 let c26 = null;
-const result = require("obj132").fileFinishedImporting("modules/tti_analytics/native/TTIAnalyticsUtils.tsx");
+const result = set.fileFinishedImporting("modules/tti_analytics/native/TTIAnalyticsUtils.tsx");
 
 export { getDeviceMetadata };
 export function currentLoadId() {
@@ -668,6 +681,7 @@ export const trackAppOpened = function trackAppOpened(launcher) {
   obj.mark("\u{1F3C3}", "Track app_opened");
   obj = { openFrom: launcher };
   _modDef1208.addBreadcrumb({ category: "lifecycle", message: "App opened", data: obj });
+  const obj2 = _modDef1208;
   obj = {};
   const merged = Object.assign(getDeviceMetadata());
   obj.opened_from = launcher;
@@ -689,7 +703,7 @@ export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, has
   }
   const AppStartInfo = AppStartInfo2.AppStartInfo;
   if (!AppStartInfo.getAppUIViewed()) {
-    (function trackAppUIViewedAsync(redesignScreenName, arg1, hasCacheResult) {
+    (function trackAppUIViewedAsync(ModalScreen, arg1, hasCacheResult) {
       const self = this;
       const apply = closure_23.apply;
       if (typeof apply === "unknown") {
@@ -704,9 +718,9 @@ export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, has
 export function getLastTrackedAppUiViewed2Properties() {
   return c26;
 }
-export const trackAppLaunchCompleted = function trackAppLaunchCompleted(unknown, hasCacheResult) {
-  let str = unknown;
-  if (unknown === undefined) {
+export const trackAppLaunchCompleted = function trackAppLaunchCompleted(arg0, hasCacheResult) {
+  let str = arg0;
+  if (arg0 === undefined) {
     str = getRedesignScreenName();
   }
   if (hasCacheResult === undefined) {
@@ -718,7 +732,7 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted(unknown,
     if (str == null) {
       str = "unknown";
     }
-    (function trackAppLaunchCompletedAsync(unknown, hasCacheResult) {
+    (function trackAppLaunchCompletedAsync(arg0, hasCacheResult) {
       const self = this;
       const apply = closure_30.apply;
       if (typeof apply === "unknown") {
@@ -728,5 +742,6 @@ export const trackAppLaunchCompleted = function trackAppLaunchCompleted(unknown,
       }
       return applyArgumentsResult;
     })(str, hasCacheResult);
+    const obj = isTracingDefault;
   }
 };

@@ -1,9 +1,6 @@
 // _runtime/00463_codegenNativeComponent.js
-import measureDefault from "00068_measure.js";
-import get_BatchedBridgeDefault from "00464_get_BatchedBridge.js";
-
 const global = arg0;
-importDefault = arg2;
+const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function codegenNativeComponent(arg0, paperComponentName) {
   paperComponentName = arg0;
@@ -23,7 +20,7 @@ arg5.default = function codegenNativeComponent(arg0, paperComponentName) {
           if (tmp7Result.hasViewManagerConfig(paperComponentName.paperComponentNameDeprecated)) {
             paperComponentNameDeprecated = paperComponentName.paperComponentNameDeprecated;
           }
-          tmp7Result = measureDefault;
+          tmp7Result = tmp7(68);
         }
         let str = paperComponentName.paperComponentNameDeprecated;
         if (str == null) {
@@ -33,8 +30,9 @@ arg5.default = function codegenNativeComponent(arg0, paperComponentName) {
         error = new Error("Failed to find native component for either " + arg0 + " or " + str);
         throw error;
       }
-      obj2 = measureDefault;
+      obj2 = module(68);
+      tmp7 = module;
     }
   }
-  return get_BatchedBridgeDefault(paperComponentNameDeprecated);
+  return module(464)(paperComponentNameDeprecated);
 };

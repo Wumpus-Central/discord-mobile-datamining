@@ -1,8 +1,8 @@
 // discord_app/utils/web/WindowIdUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import apply from "../../../_runtime/00012_apply.js";
 
-const result = obj132.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
+const result = set.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 
 export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;

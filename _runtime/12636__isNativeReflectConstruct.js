@@ -1,15 +1,16 @@
 // _runtime/12636__isNativeReflectConstruct.js
 import noopDefault from "00019_noop.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "00005_asyncGeneratorStep.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult1 from "metro/00042__createClass.js";
 import importDefaultResult2 from "00098__inherits.js";
 import { Linking } from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const DeepLinking = fn;
+const DeepLinking = arg1;
+let closure_1 = dependencyMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,7 +31,7 @@ function _isNativeReflectConstruct() {
   }
 }
 const re8 = /.*?:\/\//g;
-let closure_1;
+closure_1 = undefined;
 class DeepLinking {
   constructor() {
     self = this;

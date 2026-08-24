@@ -1,9 +1,9 @@
 // _runtime/01571_transformPreventedRoutes.js
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import noop from "00019_noop.js";
+import closure_3 from "metro/00032__slicedToArray.js";
+import closure_4 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 function transformPreventedRoutes(arr) {
   const obj = {};
   const values = arr.values();
@@ -15,21 +15,26 @@ function transformPreventedRoutes(arr) {
 }
 
 export const PreventRemoveProvider = function PreventRemoveProvider(children) {
+  let first;
+  let first1;
+  dependencyMap = undefined;
   let callback;
   let React;
+  let context;
+  let setPreventRemove;
   let notifyPreventRemove;
   closure_8 = undefined;
   closure_9 = undefined;
   closure_10 = undefined;
-  const first = callback(React.useState(() => first(1509).nanoid()), 1)[0];
+  first = callback(React.useState(() => first(1509).nanoid()), 1)[0];
   const tmp2 = callback(React.useState(() => new Map()), 2);
-  const first1 = tmp2[0];
+  first1 = tmp2[0];
   dependencyMap = tmp2[1];
   callback = React.useRef(new Map());
   React = React.useContext(first(1566).NavigationHelpersContext);
-  const context = React.useContext(first(1541).NavigationRouteContext);
+  context = React.useContext(first(1541).NavigationRouteContext);
   const context1 = React.useContext(first(1570).PreventRemoveContext);
-  let setPreventRemove;
+  setPreventRemove = undefined;
   if (context1 != null) {
     setPreventRemove = context1.setPreventRemove;
   }
@@ -40,10 +45,11 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
   const tmp11 = first1(1522)((arg0, arg1, arg2) => {
     closure_0 = arg1;
     if (arg2) {
-      if (null != state) {
-        if (state != null) {
-          const routes = state.getState().routes;
-          routes.every((item, index) => item.key !== closure_0);
+      if (null != closure_4) {
+        let everyResult;
+        if (obj != null) {
+          const routes = obj.getState().routes;
+          everyResult = routes.every((key) => key.key !== closure_0);
         }
       }
       const _Error = Error;
@@ -97,11 +103,11 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
   const insertionEffect = obj.useInsertionEffect(() => {
     let key;
     if (context != null) {
-      key = context.key;
+      key = tmp.key;
     }
     if (undefined !== key) {
       if (undefined !== setPreventRemove) {
-        tmp3(first, context.key, closure_10);
+        tmp3(first, tmp.key, closure_10);
         return () => {
           callback(closure_0, key.key, false);
         };

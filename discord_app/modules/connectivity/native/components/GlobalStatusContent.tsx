@@ -1,45 +1,43 @@
 // discord_app/modules/connectivity/native/components/GlobalStatusContent.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import componentDidMountDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
-import ChannelCallCameraPreviewDefault from "../../../video_calls/native/components/ChannelCallModal.tsx";
 import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useCanCurrentUserSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
-import StageChannelRaiseHandAckDefault from "../../../stage_channels/native/components/GlobalStageChannelStatus.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
-import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
-import handleUpdate from "../../../../stores/SessionsStore.tsx";
+import closure_4 from "../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
+import closure_6 from "../../../../stores/RTCConnectionStore.tsx";
+import closure_7 from "../../../../stores/SessionsStore.tsx";
 import { RTC_PANEL_HEIGHT } from "../ConnectivityConstants.tsx";
 import { RTCConnectionStates } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
+const require = arg1;
 noopAll;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { bgNeutral: null, bg: null, container: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 createCacheKey[2] = { paddingHorizontal: 16, alignItems: "center", justifyContent: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/connectivity/native/components/GlobalStatusContent.tsx");
+let obj1 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+const result = require("set").fileFinishedImporting("modules/connectivity/native/components/GlobalStatusContent.tsx");
 
 export default function ConnectivityGlobalStatusContent() {
   const tmp = callback2();
   const tmp4 = useVoiceStateForRemoteSessionDefault();
   const _require = tmp4;
-  let obj = initialize;
+  let obj = _initialize;
   const items = [closure_6, closure_5, closure_4, closure_7];
   const items1 = [tmp4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let channelId;
     if (closure_0 != null) {
-      channelId = closure_0.channelId;
+      channelId = tmp2.channelId;
     }
     if (channelId == null) {
       channelId = closure_1_6.getChannelId();
@@ -57,7 +55,7 @@ export default function ConnectivityGlobalStatusContent() {
     let str;
     const guild = closure_1_5.getGuild(guildId1);
     if (closure_0 != null) {
-      str = closure_0.sessionId;
+      str = tmp2.sessionId;
     }
     if (str == null) {
       str = "";
@@ -69,7 +67,7 @@ export default function ConnectivityGlobalStatusContent() {
     }
     const obj = { guild, channel, rtcConnectionState: null, remotePlatform: null };
     if (null != closure_0) {
-      let RTC_CONNECTED = RTCConnectionStates.RTC_CONNECTED;
+      let RTC_CONNECTED = closure_1_9.RTC_CONNECTED;
     } else {
       RTC_CONNECTED = closure_1_6.getState();
     }
@@ -101,7 +99,7 @@ export default function ConnectivityGlobalStatusContent() {
   tmp5Result = tmp5(8944);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4229).isModalOpen(ChannelCallCameraPreviewDefault);
+    isScreenLandscape = tmp5(4229).isModalOpen(tmp2(8668));
     const tmp5Result1 = tmp5(4229);
   }
   if (isScreenLandscape) {
@@ -110,13 +108,14 @@ export default function ConnectivityGlobalStatusContent() {
   }
   let num = 0;
   if (!isScreenLandscape) {
-    num = useSafeAreaInsetsDefault().top;
+    num = tmp2(1629)().top;
   }
-  const items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container, ];
+  obj = { style: items2, children: null };
+  items2 = [tmp14 ? tmp.bg : tmp.bgNeutral, tmp.container, ];
   obj = { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num };
   items2[2] = obj;
   if (isScreenLandscape) {
-    isScreenLandscape = callback(componentDidMountDefault, { hidden: true });
+    isScreenLandscape = callback(tmp2(8032), { hidden: true });
   }
   const items3 = [isScreenLandscape, ];
   let tmp19 = null;
@@ -128,9 +127,9 @@ export default function ConnectivityGlobalStatusContent() {
     obj1[3] = isThemeDarkResult;
     obj1[4] = rtcConnectionState;
     obj1[5] = remotePlatform;
-    tmp19 = callback(StageChannelRaiseHandAckDefault, obj1);
+    tmp19 = callback(tmp2(12500), obj1);
   }
   items3[1] = tmp19;
   obj[1] = items3;
-  return callback(View, obj);
+  return closure_11(View, obj);
 };

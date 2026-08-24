@@ -11,22 +11,23 @@ import { YouBarNavigatorScreens } from "../../MainTabsConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = fn;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const memoResult = importAllResult.memo(function GuildsOnly() {
   let obj = trackTabPressed;
   const trackTabPerformance = obj.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+  const tmp3 = importDefault;
   const tmp4 = getGuildThemeNameDefault();
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   obj = { gradient: tmp4, children: null };
   const items = [callback(LeftPanelContentDefault, {}), callback(_modDef15625, {}), ];
   if (isEligibleForQuests) {
-    isEligibleForQuests = callback(QuestDockWithGestureAnimationDefault, {});
+    isEligibleForQuests = tmp6(QuestDockWithGestureAnimationDefault, {});
   }
   items[2] = isEligibleForQuests;
-  obj[1] = callback(QuestDockMode.QuestDockExternalCoordinationContextProvider, { children: items });
+  obj[1] = closure_5(QuestDockMode.QuestDockExternalCoordinationContextProvider, { children: items });
   return callback(ManaContext.ThemeContextProvider, obj);
 }, () => true);
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 
 export default memoResult;

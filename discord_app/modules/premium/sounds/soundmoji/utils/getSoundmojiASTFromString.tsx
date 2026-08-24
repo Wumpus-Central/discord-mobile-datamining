@@ -2,14 +2,13 @@
 import getAvatarURL from "../../../../../utils/AvatarUtils.tsx";
 import getSoundmojiRenderingExperiment from "../SoundmojiRenderingExperiment.tsx";
 import isSoundValidDefault from "isSoundValid.tsx";
-import getSoundFromSoundsDefault from "getSoundFromMessage.tsx";
 import getSoundStringDefault from "getSoundString.tsx";
-import handleSoundCreateOrUpdate from "../../../../soundboard/SoundboardStore.tsx";
-import reinjectEphemerals from "../../../../../stores/MessageStore.tsx";
+import closure_3 from "../../../../soundboard/SoundboardStore.tsx";
+import closure_4 from "../../../../../stores/MessageStore.tsx";
 import { MessageStates } from "../../../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
 
 export default function getSoundmojiASTFromString(soundId, guildId) {
   ({ channelId, messageId, soundboardSounds } = guildId);
@@ -20,7 +19,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     const tmp9 = isSoundValidDefault(soundById, guildId.guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = getSoundFromSoundsDefault(channelId, messageId, tmp2, soundboardSounds);
+        const tmp16 = tmp8(6823)(channelId, messageId, tmp2, soundboardSounds);
         tmp5 = tmp16;
         if (tmp9) {
           tmp5 = tmp16;
@@ -45,6 +44,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
       }
       tmp5 = tmp11;
     }
+    tmp8 = importDefault;
   }
   if (null == tmp5) {
     obj = { type: "text", content: null };
@@ -91,6 +91,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     obj[8] = emojiURL;
     return obj;
   }
+  const tmp3 = require;
 };
 export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
 export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
@@ -99,7 +100,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
     const tmp9 = isSoundValidDefault(soundById, guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = getSoundFromSoundsDefault(channelId, messageId, soundId, arg4);
+        const tmp16 = tmp8(6823)(channelId, messageId, soundId, arg4);
         if (tmp9) {
           if (null == tmp16) {
             const message = store2.getMessage(channelId, messageId);
@@ -122,6 +123,6 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
       }
       return tmp11;
     }
+    tmp8 = importDefault;
   }
-  obj = getSoundmojiRenderingExperiment;
 };

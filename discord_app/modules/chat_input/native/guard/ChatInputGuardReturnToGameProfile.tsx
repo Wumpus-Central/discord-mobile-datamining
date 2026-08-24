@@ -9,20 +9,23 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = fn;
-let obj = { height: 40, width: 40, resizeMode: "contain", borderRadius: ThemesDefault.radii.md };
+require = arg1;
+let obj = { icon: null };
+obj = { height: 40, width: 40, resizeMode: "contain", borderRadius: ThemesDefault.radii.md };
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ChatInputGuardReturnToGameProfile(pendingGameProfileReturn) {
   let tmp2Result;
   const tmp = callback();
+  const tmp3 = importDefault;
   if (null != pendingGameProfileReturn.pendingGameProfileReturn.gameIconUrl) {
     let obj = { style: null, source: null };
     obj[0] = tmp.icon;
     obj1 = getAvatarURL;
     obj[1] = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
-    tmp2Result = <Image style={null} source={null} />;
+    tmp2Result = tmp2(Image, obj);
   }
+  obj = { type: "simple-action", icon: tmp2Result, message: null, actionLabel: null, actionIcon: null, actionOnPress: null };
   const intl = getSystemLocale.intl;
   obj = { gameName: pendingGameProfileReturn.gameName };
   obj[2] = intl.format(getSystemLocale.t.HRHaSF, obj);
@@ -33,6 +36,6 @@ const memoResult = importAllResult.memo(function ChatInputGuardReturnToGameProfi
   obj[5] = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
   return jsx(ChatInputGuardDefault, { gameName: pendingGameProfileReturn.gameName });
 });
-const result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx");
 
 export default memoResult;

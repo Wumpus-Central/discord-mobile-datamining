@@ -1,11 +1,12 @@
 // discord_app/modules/multi_account/useMultiAccount.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import noop from "../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "../../stores/UserStore.tsx";
+import closure_6 from "MultiAccountStore.tsx";
 import { MultiAccountTokenStatus } from "MultiAccountStore.tsx";
 
-require = fn;
-let result = require("obj132").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
 
 export const useMultiAccountUsers = function useMultiAccountUsers() {
   let items = [closure_6, closure_5];
@@ -14,7 +15,7 @@ export const useMultiAccountUsers = function useMultiAccountUsers() {
     users = users.getUsers();
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      if (!users.some((item, index) => item.id === currentUser.id)) {
+      if (!users.some((id) => id.id === currentUser.id)) {
         obj = { isLoading: null, multiAccountUsers: null };
         obj[0] = obj.getIsValidatingUsers();
         obj = { id: null, avatar: null, username: null, discriminator: null, tokenStatus: null, pushSyncToken: null };
@@ -27,7 +28,6 @@ export const useMultiAccountUsers = function useMultiAccountUsers() {
       return obj;
     }
     obj = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: users };
-    obj1 = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: users };
   });
   const effect = React.useEffect(() => {
     callback(table[4]).wait(() => {

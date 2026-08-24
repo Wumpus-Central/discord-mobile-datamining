@@ -1,17 +1,18 @@
 // discord_app/modules/guild_progress/native/components/ProgressItem.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
-const createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
+const require = arg1;
+createCacheKey = { formCTAContainer: { marginBottom: 8 }, formCTA: null, formCTAFullWidth: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: "100%" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_progress/native/components/ProgressItem.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_progress/native/components/ProgressItem.tsx");
 
 export default function ProgressItem(onPress) {
   onPress = onPress.onPress;
@@ -29,12 +30,12 @@ export default function ProgressItem(onPress) {
       tmp2 = null != analyticsSetupType;
     }
     if (tmp2) {
-      isCompleted(analyticsSetupType[6]);
-      const obj = { setup_type: null, action: null, action_completed: null };
+      let obj = isCompleted(analyticsSetupType[6]);
+      obj = { setup_type: null, action: null, action_completed: null };
       obj[0] = analyticsSetupType;
       obj[1] = analyticsAction;
       obj[2] = isCompleted;
-      obj.trackWithMetadata(AnalyticEvents.SERVER_SETUP_CTA_CLICKED, obj);
+      obj.trackWithMetadata(closure_1_5.SERVER_SETUP_CTA_CLICKED, obj);
     }
     onPress();
   }, items);

@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/ChangeSpendingLimitFormState.tsx
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../_runtime/00019_noop.js";
-import freshTeenActivityWithMap from "FamilyCenterStore.tsx";
+import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../_runtime/00019_noop.js";
+import closure_5 from "FamilyCenterStore.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/parent_tools/ChangeSpendingLimitFormState.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/ChangeSpendingLimitFormState.tsx");
 
 export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFormState(teenId) {
   const _require = teenId;
@@ -86,7 +86,7 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
   const items4 = [tmp18, tmp14, rounded, teenId, formatted];
   obj = { amountInput: tmp12, handleAmountChange: callback, currency: formatted, currencySymbol: memo, exponent: num, isClearingCap: tmp14, isOverspending: null, canSave: null, isSubmitting: null, renewalDate: null, monthlySpend: null, save: null };
   let tmp23 = null != stateFromStores1;
-  const callback1 = React.useCallback(formatted(function*() {
+  const callback1 = obj3.useCallback(formatted(function*() {
     if (c4 === 2) {
       c4 = 3;
       HermesBuiltin.throwTypeError();
@@ -118,21 +118,21 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
               closure_1_8(true);
               c3 = 1;
               if (closure_1_5) {
-                const ParentalControlledSpendingLimit2 = teenId(14182).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit2 = closure_1_0(14182).ParentalControlledSpendingLimit;
                 dependencyMap = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = ParentalControlledSpendingLimit2.updateControlledSetting(teenId, null);
+                obj1[0] = ParentalControlledSpendingLimit2.updateControlledSetting(closure_1_0, null);
                 return obj1;
-              } else if (null != rounded) {
-                const ParentalControlledSpendingLimit = teenId(14182).ParentalControlledSpendingLimit;
+              } else if (null != closure_1_7) {
+                const ParentalControlledSpendingLimit = closure_1_0(14182).ParentalControlledSpendingLimit;
                 const obj2 = { amount: null, currency: null };
                 obj2[0] = tmp16;
-                obj2[1] = formatted;
+                obj2[1] = closure_1_2;
                 dependencyMap = 3;
                 c4 = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = ParentalControlledSpendingLimit.updateControlledSetting(teenId, obj2);
+                obj3[0] = ParentalControlledSpendingLimit.updateControlledSetting(closure_1_0, obj2);
                 return obj3;
               }
             }

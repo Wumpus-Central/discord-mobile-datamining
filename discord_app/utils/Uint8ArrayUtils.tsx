@@ -1,7 +1,7 @@
 // discord_app/utils/Uint8ArrayUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set from "../../_runtime/00002_set.js";
 
-let result = obj132.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
+let result = set.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
 
 export const hasBit = function hasBit(dismissedContents, closure_0) {
   let tmp = 0 !== dismissedContents.length;
@@ -23,26 +23,26 @@ export const addBit = function addBit(dismissedContents, CHANNEL_NOTICE_INVITE) 
   tmp2[rounded] = tmp2[rounded] | 1 << CHANNEL_NOTICE_INVITE % 8;
   return tmp2;
 };
-export const removeBit = function removeBit(dismissedContents, closure_0) {
+export const removeBit = function removeBit(dismissedContents, arg1) {
   let tmp = 0 !== dismissedContents.length;
   if (tmp) {
     const _Math = Math;
-    tmp = dismissedContents[Math.floor(Math, closure_0 / 8)] & 1 << closure_0 % 8;
+    tmp = dismissedContents[Math.floor(Math, arg1 / 8)] & 1 << arg1 % 8;
   }
   if (tmp) {
     const _Math2 = Math;
-    const rounded = Math.floor(closure_0 / 8);
-    dismissedContents[rounded] = dismissedContents[rounded] & ~1 << closure_0 % 8;
+    const rounded = Math.floor(arg1 / 8);
+    dismissedContents[rounded] = dismissedContents[rounded] & ~1 << arg1 % 8;
   }
   return dismissedContents;
 };
 export const isUint8Array = function isUint8Array(arg0) {
   return arg0 instanceof Uint8Array;
 };
-export const isSerializedUint8Array = function isSerializedUint8Array(__tag__) {
-  let tmp = null != __tag__ && typeof __tag__ === "object";
+export const isSerializedUint8Array = function isSerializedUint8Array(obj) {
+  let tmp = null != obj && typeof obj === "object";
   if (tmp) {
-    tmp = "uint8array" === __tag__.__tag__;
+    tmp = "uint8array" === obj.__tag__;
   }
   return tmp;
 };

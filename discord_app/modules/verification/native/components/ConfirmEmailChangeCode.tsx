@@ -1,27 +1,29 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeCode.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 import { setEmailToken } from "../../ChangeEmailStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
 
 export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   let _require = isChangeEmail;
-  let obj = useNavigation;
-  const navigation = obj.useNavigation();
+  let navigation;
+  let obj = _useNavigation;
+  navigation = obj.useNavigation();
   const items = [isChangeEmail, navigation];
   const callback = React.useCallback((arg0) => {
     let tmp = arg0;
     if (arg0 == null) {
       tmp = null;
     }
-    setEmailToken(tmp);
+    closure_1_5(tmp);
     const push = navigation.push;
-    const VerificationModalScenes = callback(dependencyMap[5]).VerificationModalScenes;
+    const VerificationModalScenes = callback(closure_1_2[5]).VerificationModalScenes;
     if (callback) {
       push(VerificationModalScenes.CHANGE_EMAIL_COLLECT_REASONS);
     } else {
@@ -29,6 +31,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     }
   }, items);
   obj = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
+  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -102,9 +105,9 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
       }
     }
   });
-  const intl = require("../../../../intl/index.native.tsx").intl;
-  obj[3] = intl.string(require("../../../../intl/index.native.tsx").t["2x/2Uo"]);
-  const intl2 = require("../../../../intl/index.native.tsx").intl;
-  obj[4] = intl2.string(require("../../../../intl/index.native.tsx").t.PDTjLN);
+  const intl = _getSystemLocale.intl;
+  obj[3] = intl.string(_getSystemLocale.t["2x/2Uo"]);
+  const intl2 = _getSystemLocale.intl;
+  obj[4] = intl2.string(_getSystemLocale.t.PDTjLN);
   return jsx(navigation(8574), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

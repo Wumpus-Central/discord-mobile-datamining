@@ -4,29 +4,31 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import context from "../../app_analytics/useAnalyticsLocations.tsx";
 import contextDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import subblockDefault from "FeaturedCategorySubblock.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function Subblocks(style) {
   style = style.style;
   const subblocks = style.featuredBlock.subblocks;
-  return subblocks.map((item, index) => {
-    const obj = { style, children: jsx(subblockDefault, obj1) };
-    obj[1] = <View style={style}>{jsx(subblockDefault, obj1)}</View>;
-    return jsx(style(dependencyMap[5]).CollectiblesAnalyticsProvider, { style, children: jsx(subblockDefault, obj1) }, index);
+  return subblocks.map((subblock, tilePosition) => {
+    obj = { newValue: obj, children: null };
+    obj = { tilePosition };
+    obj = { style, children: closure_1_4(closure_1_1(closure_1_2[6]), obj1) };
+    obj[1] = closure_1_4(closure_1_3, obj);
+    return closure_1_4(style(closure_1_2[5]).CollectiblesAnalyticsProvider, obj, tilePosition);
   });
 }
 noopAll;
 let closure_5 = createCacheKey.createStyles({ container: { display: "flex", width: "100%", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 }, featuredSubblock: { flex: 1, flexBasis: 400, maxWidth: "100%" } });
-const result = require("obj132").fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedBlock.tsx");
 
 export default function FeaturedBlock(featuredBlock) {
   const tmp = callback();
-  { value: contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
-  const obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
-  obj[1] = <View featuredBlock={featuredBlock.featuredBlock} style={tmp.featuredSubblock} />;
+  let obj = { value: contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations, children: null };
+  obj = { style: tmp.container, children: <Subblocks value={contextDefault(QUICK_SWITCHERDefault.COLLECTIBLES_SHOP_FEATURED_BLOCK).analyticsLocations}>{null}</Subblocks> };
+  obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
+  obj[1] = <View featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
   return jsx(context.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
 };

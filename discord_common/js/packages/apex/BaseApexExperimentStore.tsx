@@ -3,11 +3,12 @@ import initializeDefault from "../flux/index.tsx";
 import Storage2 from "../storage/Storage.tsx";
 import UnitType from "ApexTypes.tsx";
 import MurmurHashV3Default from "../../../../_runtime/01217_MurmurHashV3.js";
-import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { WebAnalyticsEvents } from "../../shared/Constants.tsx";
+import set from "../../../../_runtime/00002_set.js";
 
-require = fn;
+require = arg1;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -60,7 +61,7 @@ let closure_11 = {};
 let closure_12 = {};
 let closure_13 = {};
 let closure_14 = {};
-const set = new Set();
+let set = new Set();
 const set1 = new Set();
 const apexTrackedExposures = "apexTrackedExposures";
 let c18 = 604800000;
@@ -85,13 +86,17 @@ prototype["loadStoredState"] = function loadStoredState(version, buildOverrideEx
     }
     closure_13 = {};
     for (const key10020 in arg1) {
+      let tmp11 = key10020;
       let tmp9 = dependencyMap5[key10020];
       if (null == tmp9) {
+        let tmp6 = importDefault;
+        let tmp7 = dependencyMap;
         let obj2 = MurmurHashV3Default;
         let v3Result = obj2.v3(key10020);
         tmp12[key10020] = v3Result;
         tmp9 = v3Result;
       }
+      let tmp10 = closure_13;
       obj = { hashedName: null, variantId: null, isOverride: true, exposureTrackingEnabled: false, useAsEligibility: false };
       obj[0] = tmp9;
       obj[1] = arg1[key10020];
@@ -115,9 +120,9 @@ prototype["loadStoredState"] = function loadStoredState(version, buildOverrideEx
 prototype["getState"] = function getState() {
   return { version: 3, evaluatedExperiments: closure_9, clientOverrides: closure_11 };
 };
-prototype["setExperimentAssignments"] = function setExperimentAssignments(apexExperiments, arg1) {
+prototype["setExperimentAssignments"] = function setExperimentAssignments(apexExperiments, guilds) {
   if (null == apexExperiments) {
-    if (null == arg1) {
+    if (null == guilds) {
       return false;
     }
   }
@@ -127,20 +132,35 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
     const iter = items[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
+      let tmp5 = require;
+      let tmp6 = dependencyMap;
       let tmp7 = UnitType.UnitTypeToKind[nextResult];
       let tmp8 = apexExperiments.assignments[nextResult];
       let tmp9 = tmp8;
       if (null != tmp8) {
+        let tmp35 = tmp7;
         if (null != tmp7) {
+          let tmp36 = closure_9;
+          let tmp37 = tmp7;
           let tmp38 = closure_9[tmp7];
+          let tmp39 = tmp8;
           for (const key10031 in tmp9) {
+            let tmp42 = set1;
+            let tmp40 = key10031;
+            let tmp41 = key10031;
             let addResult = set1.add(key10031);
+            let tmp44 = tmp8;
             ({ evaluation_id, assignments } = tmp9[key10031]);
             let obj = { evaluationId: null, assignments: null };
             obj[0] = evaluation_id;
             obj[1] = {};
-            tmp38[key10031] = obj;
+            let tmp11 = tmp38;
+            let tmp12 = tmp40;
+            tmp38[tmp41] = obj;
+            let tmp13 = assignments;
+            let tmp14 = assignments;
             for (const item10042 of assignments) {
+              let tmp15 = callback2;
               let tmp16 = callback2(item10042, 6);
               [tmp17, tmp18, tmp19] = tmp16;
               let num = tmp19;
@@ -150,14 +170,23 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               if (tmp19 == null) {
                 num = 0;
               }
+              let tmp23 = obj;
+              let tmp24 = tmp17;
               obj = { hashedName: null, variantId: null, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null, config: null };
               obj[0] = tmp17;
+              let tmp25 = tmp18;
               obj[1] = tmp18;
+              let tmp26 = tmp21;
               obj[2] = tmp21;
+              let tmp27 = num;
+              let tmp28 = require;
+              let tmp29 = dependencyMap;
               obj[3] = num & UnitType.ExperimentFlags.IsOverride;
+              let tmp30 = tmp20;
               obj[4] = tmp20;
               obj[5] = num & UnitType.ExperimentFlags.ExposureTrackingEnabled;
               obj[6] = num & UnitType.ExperimentFlags.UseAsEligibility;
+              let tmp31 = tmp22;
               obj[7] = tmp22;
               tmp10.assignments[tmp17] = obj;
               continue;
@@ -167,27 +196,33 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
       }
       continue;
     }
+    const tmp33 = items;
   }
-  if (null != arg1) {
-    const result1 = self.setGuildExperimentAssignments(arg1);
+  if (null != guilds) {
+    const result1 = self.setGuildExperimentAssignments(guilds);
   }
   return true;
 };
-prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignments(arg0) {
-  let obj = arg0;
-  if (arg0 == null) {
+prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignments(guilds) {
+  let obj = guilds;
+  if (guilds == null) {
     obj = {};
   }
   const entries = Object.entries(obj);
   while (tmp3 !== undefined) {
+    let tmp5 = callback2;
     let tmp6 = callback2(tmp4, 2);
     [tmp7, tmp8] = tmp6;
     ({ evaluation_id, assignments } = tmp8);
     obj = { evaluationId: null, assignments: null };
     obj[0] = evaluation_id;
     obj[1] = {};
+    let tmp10 = tmp7;
     tmp[tmp7] = obj;
+    let tmp11 = assignments;
+    let tmp12 = assignments;
     for (const item10038 of assignments) {
+      let tmp13 = callback2;
       let tmp14 = callback2(item10038, 5);
       [tmp15, tmp16, tmp17] = tmp14;
       let num = tmp17;
@@ -197,19 +232,26 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
         num = 0;
       }
       obj = { hashedName: null, variantId: null, trackedVariantId: null, isOverride: null, revision: null, exposureTrackingEnabled: null, useAsEligibility: null };
+      let tmp20 = tmp15;
       obj[0] = tmp15;
+      let tmp21 = tmp16;
       obj[1] = tmp16;
+      let tmp22 = tmp19;
       obj[2] = tmp19;
+      let tmp23 = num;
+      let tmp24 = require;
+      let tmp25 = dependencyMap;
       obj[3] = num & UnitType.ExperimentFlags.IsOverride;
+      let tmp26 = tmp18;
       obj[4] = tmp18;
       obj[5] = num & UnitType.ExperimentFlags.ExposureTrackingEnabled;
       obj[6] = num & UnitType.ExperimentFlags.UseAsEligibility;
+      let tmp27 = obj;
       tmp9.assignments[tmp15] = obj;
       continue;
     }
     continue;
   }
-  tmp3 = entries[Symbol.iterator]();
 };
 prototype["createOverride"] = function createOverride(experimentName, variantId) {
   const obj = {};
@@ -219,6 +261,7 @@ prototype["createOverride"] = function createOverride(experimentName, variantId)
     const v3Result = MurmurHashV3Default.v3(experimentName);
     tmp2[experimentName] = v3Result;
     tmp3 = v3Result;
+    const obj2 = MurmurHashV3Default;
   }
   obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, exposureTrackingEnabled: false };
   const result = this.trackExposureSuppression(experimentName, "client_override");
@@ -235,6 +278,7 @@ prototype["createSessionOverride"] = function createSessionOverride(experimentNa
     const v3Result = MurmurHashV3Default.v3(experimentName);
     tmp2[experimentName] = v3Result;
     tmp3 = v3Result;
+    const obj2 = MurmurHashV3Default;
   }
   obj[experimentName] = { hashedName: tmp3, variantId, isOverride: true, exposureTrackingEnabled: false };
 };
@@ -245,8 +289,8 @@ prototype["deleteSessionOverride"] = function deleteSessionOverride(experimentNa
 prototype["setExperimentsMetadata"] = function setExperimentsMetadata(experiments) {
   const obj = {};
   const merged = Object.assign(obj);
-  const merged1 = Object.assign(Object.fromEntries(experiments.map((item, index) => {
-    items = [item.name, item];
+  const merged1 = Object.assign(Object.fromEntries(experiments.map((name) => {
+    items = [name.name, name];
     return items;
   })));
 };
@@ -293,14 +337,15 @@ prototype["getAssignment"] = function getAssignment(kind, closure_1, name) {
   }
   return override;
 };
-prototype["getServerAssignment"] = function getServerAssignment(kind, closure_1, name) {
+prototype["getServerAssignment"] = function getServerAssignment(kind, id, name) {
   let tmp2 = dependencyMap5[name];
   if (null == tmp2) {
     const v3Result = MurmurHashV3Default.v3(name);
     tmp[name] = v3Result;
     tmp2 = v3Result;
+    const obj = MurmurHashV3Default;
   }
-  return null != closure_9[kind][closure_1] ? closure_9[kind][closure_1].assignments[tmp2] : undefined;
+  return null != closure_9[kind][id] ? closure_9[kind][id].assignments[tmp2] : undefined;
 };
 prototype["getEvaluation"] = function getEvaluation(arg0, arg1) {
   let evaluationId;
@@ -325,16 +370,17 @@ prototype["getEvaluationAndAssignmentInner"] = function getEvaluationAndAssignme
         const v3Result = MurmurHashV3Default.v3(closure_4);
         tmp2[closure_4] = v3Result;
         tmp3 = v3Result;
+        const obj = MurmurHashV3Default;
       }
       items2[1] = tmp10.assignments[tmp3];
     }
     return items2;
   }
 };
-prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(closure_5, closure_1, closure_4, closure_2) {
+prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(revision, closure_1, closure_4, closure_2) {
   const self = this;
-  [tmp3, tmp4] = callback2(this.getEvaluationAndAssignmentInner(closure_5, closure_1, closure_4), 2);
-  if ("guild" !== closure_5) {
+  [tmp3, tmp4] = callback2(this.getEvaluationAndAssignmentInner(revision, closure_1, closure_4), 2);
+  if ("guild" !== revision) {
     items = [tmp3, tmp4];
     return items;
   } else {
@@ -342,7 +388,7 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(cl
     if (closure_2 == null) {
       LOGGED_OUT_USER_ID_SENTINEL = UnitType.LOGGED_OUT_USER_ID_SENTINEL;
     }
-    [r10021, tmp8] = callback2(self.getEvaluationAndAssignmentInner("user", LOGGED_OUT_USER_ID_SENTINEL, closure_4), 2);
+    [r10021, tmp8] = tmp(self.getEvaluationAndAssignmentInner("user", LOGGED_OUT_USER_ID_SENTINEL, closure_4), 2);
     if (null == tmp8) {
       const items1 = [undefined, undefined];
       let items6 = items1;
@@ -364,46 +410,50 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(cl
     }
     return items6;
   }
-  const tmp2 = callback2(this.getEvaluationAndAssignmentInner(closure_5, closure_1, closure_4), 2);
+  tmp = callback2;
+  const tmp2 = callback2(this.getEvaluationAndAssignmentInner(revision, closure_1, closure_4), 2);
 };
-prototype["trackExperimentExposure"] = function trackExperimentExposure(closure_3, closure_4, location, closure_5, revision, trackedVariantId, closure_1) {
-  const self = this;
-  importDefault = closure_3;
-  dependencyMap = closure_4;
+prototype["trackExperimentExposure"] = function trackExperimentExposure(arg0, trackedVariantId, location, revision, revision2, trackedVariantId2, closure_1) {
+  let self = this;
+  self = this;
+  importDefault = arg0;
+  dependencyMap = trackedVariantId;
   closure_3 = location;
-  closure_4 = closure_5;
-  closure_5 = revision;
-  closure_6 = trackedVariantId;
+  closure_4 = revision;
+  closure_5 = revision2;
+  closure_6 = trackedVariantId2;
   closure_0 = closure_1;
-  const combined = "" + closure_4 + "|" + revision + "|" + trackedVariantId + "|" + location + "|" + closure_1 + "|1";
+  const combined = "" + trackedVariantId + "|" + revision2 + "|" + trackedVariantId2 + "|" + location + "|" + closure_1 + "|1";
   let tmp3 = dependencyMap5[combined];
   if (null == tmp3) {
     const v3Result = MurmurHashV3Default.v3(combined);
     tmp2[combined] = v3Result;
     tmp3 = v3Result;
+    const obj = MurmurHashV3Default;
   }
-  if ("user" === closure_5) {
+  if ("user" === revision) {
     self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: closure_1, experiment: closure_2, exposure_location: closure_3, unit_type: closure_4, tracked_variation_id: closure_6 }, { flush: true }));
-  } else if ("installation" === closure_5) {
+  } else if ("installation" === revision) {
     self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: closure_1, installation_id: closure_0, experiment: closure_2, exposure_location: closure_3, unit_type: closure_4, tracked_variation_id: closure_6 }, { flush: true }));
-  } else if ("guild" === closure_5) {
+  } else if ("guild" === revision) {
     self.withExposureTracking(tmp3, () => self.track(constants.EXPERIMENT_GUILD_EVALUATION_EXPOSED, { evaluation_id: closure_1, guild_id: closure_0, experiment: closure_2, exposure_location: closure_3, unit_type: closure_4, tracked_variation_id: closure_6, revision: constants }, { flush: true }));
   }
 };
 prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPointExposures(location) {
+  let self = this;
   closure_0 = location;
-  const self = this;
+  self = this;
   function _loop(evaluationId) {
     closure_0 = evaluationId;
     const combined = "" + evaluationId + "|" + closure_0;
     let tmp3 = closure_1_20[combined];
     if (null == tmp3) {
-      const v3Result = self(dependencyMap[6]).v3(combined);
+      const v3Result = self(closure_1_2[6]).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      const obj = self(dependencyMap[6]);
+      const obj = self(closure_1_2[6]);
     }
-    self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "user" }, { flush: true }));
+    self.withExposureTracking(tmp3, () => closure_1_1.track(closure_2_5.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "user" }, { flush: true }));
   }
   const result = this.evaluationsWithUnitIds("user");
   const iter = result[Symbol.iterator]();
@@ -417,12 +467,12 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + closure_0;
     let tmp3 = closure_1_20[combined];
     if (null == tmp3) {
-      const v3Result = self(dependencyMap[6]).v3(combined);
+      const v3Result = self(closure_1_2[6]).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      const obj = self(dependencyMap[6]);
+      const obj = self(closure_1_2[6]);
     }
-    _self.withExposureTracking(tmp3, () => unitId.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "installation", installation_id: unitId }, { flush: true }));
+    _self.withExposureTracking(tmp3, () => unitId.track(closure_2_5.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: closure_0, exposure_location: closure_0, unit_type: "installation", installation_id: unitId }, { flush: true }));
   }
   const result1 = self.evaluationsWithUnitIds("installation");
   for (const item10023 of result1) {
@@ -430,12 +480,12 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     continue;
   }
 };
-prototype["withExposureTracking"] = function withExposureTracking(v3Result, fn) {
+prototype["withExposureTracking"] = function withExposureTracking(arg0, arg1) {
   const self = this;
-  if (this.shouldTrackExposure(v3Result)) {
-    fn();
+  if (this.shouldTrackExposure(arg0)) {
+    arg1();
     const _Date = Date;
-    closure_19[v3Result] = Date.now();
+    closure_19[arg0] = Date.now();
     self.saveTrackedExposures(closure_19);
   }
 };
@@ -475,21 +525,21 @@ prototype["trackExposureSuppression"] = function trackExposureSuppression(name, 
 };
 prototype["evaluationIds"] = function evaluationIds(arg0) {
   const values = Object.values(closure_9[arg0]);
-  const mapped = values.map((item, index) => item.evaluationId);
-  return mapped.filter((item, index) => null != item);
+  const mapped = values.map((evaluationId) => evaluationId.evaluationId);
+  return mapped.filter((arg0) => null != arg0);
 };
 prototype["evaluationsWithUnitIds"] = function evaluationsWithUnitIds(installation) {
   const entries = Object.entries(closure_9[installation]);
-  const found = entries.filter((item, index) => {
-    [, tmp] = item;
+  const found = entries.filter((arg0) => {
+    [, tmp] = arg0;
     return null != tmp.evaluationId;
   });
-  return found.map((item, index) => {
-    [tmp, tmp2] = item;
+  return found.map((arg0) => {
+    [tmp, tmp2] = arg0;
     return { evaluationId: tmp2.evaluationId, unitId: tmp };
   });
 };
-prototype["shouldTrackExposure"] = function shouldTrackExposure(v3Result) {
+prototype["shouldTrackExposure"] = function shouldTrackExposure(arg0) {
   let tmp2 = null == tmp;
   if (!tmp2) {
     const _Date = Date;
@@ -511,6 +561,8 @@ prototype["loadTrackedExposures"] = function loadTrackedExposures() {
       if (keys !== undefined) {
         flag2 = flag;
         while (keys[tmp] !== undefined) {
+          let tmp12 = tmp10;
+          let tmp13 = c18;
           if (timestamp - exposures[tmp10] <= c18) {
             continue;
           } else {
@@ -574,6 +626,7 @@ prototype["getHash"] = function getHash(arg0) {
     const v3Result = MurmurHashV3Default.v3(arg0);
     tmp[arg0] = v3Result;
     tmp2 = v3Result;
+    const obj = MurmurHashV3Default;
   }
   return tmp2;
 };
@@ -607,6 +660,6 @@ prototype["getOverride"] = function getOverride(arg0) {
 };
 BaseApexExperimentStore.displayName = "ApexExperimentStore";
 BaseApexExperimentStore.persistKey = "ApexExperimentStore";
-let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/apex/BaseApexExperimentStore.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/apex/BaseApexExperimentStore.tsx");
 
 export default BaseApexExperimentStore;

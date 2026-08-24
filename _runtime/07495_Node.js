@@ -90,7 +90,7 @@ class BinTree {
       tmp6 = null;
       obj3 = obj1;
       tmp7 = null;
-      if (null !== require("../discord_app/modules/debug/logAppStart.tsx")) {
+      if (null !== require("module_1")) {
         do {
           get_childResult = obj2.get_child(num);
           _comparatorResult = self._comparator(global, get_childResult.data);

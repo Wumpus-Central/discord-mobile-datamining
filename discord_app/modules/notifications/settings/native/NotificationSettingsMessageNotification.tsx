@@ -1,13 +1,14 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
+import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 
-const require = fn;
+const require = arg1;
 class NotificationSettingsMessageNotification {
   constructor(arg0) {
     closure_0 = global;
@@ -16,7 +17,7 @@ class NotificationSettingsMessageNotification {
     tmp3 = closure_2;
     obj = require("getPushNotificationSelectOptions");
     pushNotificationSelectOptions = obj.getPushNotificationSelectOptions();
-    found = pushNotificationSelectOptions.find((item, index) => item.value === onPress.setting);
+    found = pushNotificationSelectOptions.find((value) => value.value === onPress.setting);
     tmp5 = jsxs;
     tmp6 = View;
     obj = { style: global.style, children: null };
@@ -68,14 +69,15 @@ class NotificationSettingsMessageNotification {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
+createCacheKey = { card: null, cta: null, label: null, header: null, headerTitle: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 20, borderWidth: 1, padding: 14 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginTop: 4 };
 createCacheKey[2] = { textAlign: "center", marginTop: 8 };
 createCacheKey[3] = { marginBottom: 8 };
 createCacheKey[4] = { marginBottom: 4 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotification.tsx");
 
 export default NotificationSettingsMessageNotification;
 export const NotificationSettingsGuildMessageNotification = function NotificationSettingsGuildMessageNotification(style) {
@@ -83,10 +85,11 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
   let obj = {
     context: "guild",
     style: style.style,
-    setting: require("../utils/notificationSettingsGuildFlagUtils.tsx").useGuildPresetSettings(style.guildId).notification,
+    setting: _updateGuildPreset.useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
-      const obj = { guildId: style.guildId };
-      obj.openLazy(style(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), "MessageNotificationGuildActionSheet", obj);
+      let obj = closure_1_1(closure_1_2[11]);
+      obj = { guildId: style.guildId };
+      obj.openLazy(style(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "MessageNotificationGuildActionSheet", obj);
     }
   };
   return callback(NotificationSettingsMessageNotification, obj);
@@ -96,10 +99,11 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
   let obj = {
     context: "channel",
     style: style.style,
-    setting: require("../utils/notficationSettingsChannelFlagUtils.tsx").useChannelPresetSettings(style.channel).notification,
+    setting: _useChannelPresetSettings.useChannelPresetSettings(style.channel).notification,
     onCustomize() {
-      const obj = { channel: style.channel };
-      obj.openLazy(style(dependencyMap[13])(dependencyMap[15], dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
+      let obj = closure_1_1(closure_1_2[11]);
+      obj = { channel: style.channel };
+      obj.openLazy(style(closure_1_2[13])(closure_1_2[15], closure_1_2.paths), "MessageNotificationChannelActionSheet", obj);
     }
   };
   return callback(NotificationSettingsMessageNotification, obj);

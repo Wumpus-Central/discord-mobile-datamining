@@ -1,10 +1,10 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
 import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../ModalActionCreators.tsx";
-import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../Constants.tsx";
 
-require = fn;
+require = arg1;
 function redeemGiftCode(arg0) {
   const self = this;
   const apply = _redeemGiftCode.apply;
@@ -188,12 +188,13 @@ function _redeemGiftCode() {
   return applyArgumentsResult;
 }
 function openGiftCodeRedeemModal(code) {
-  const obj = { code };
+  let obj = _modDef5260;
+  obj = { code };
   obj.pushLazy(asyncRequireImpl(10645, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});
-const result = require("obj132").fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
 
 export default { redeemGiftCode, openGiftCodeRedeemModal };
 export { redeemGiftCode };

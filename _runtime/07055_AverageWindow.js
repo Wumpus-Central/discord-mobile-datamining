@@ -8,7 +8,7 @@ class AverageWindow {
     tmp = MultiTypeAverageWindow(this, MultiTypeAverageWindow);
     this.nextIndex = 0;
     num = 1;
-    array = new Array(require("../discord_app/modules/debug/logAppStart.tsx"));
+    array = new Array(require("module_1"));
     this.inputValues = array;
     num2 = arg1;
     if (arg1 == null) {

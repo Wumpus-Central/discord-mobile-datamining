@@ -4,14 +4,14 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSemanticColorContextFromThemeContext from "SemanticColorContext.native.tsx";
 import ManaContext from "../../../../discord_common/js/packages/design/native.tsx";
 
-require = fn;
+require = arg1;
 const map = new Map();
 const keys = Object.keys(ThemesDefault.colors);
-let closure_4 = Object.fromEntries(keys.map((item, index) => {
-  const items = [applyDefault.kebabCase(item), item];
+let closure_4 = Object.fromEntries(keys.map((arg0) => {
+  const items = [applyDefault.kebabCase(arg0), arg0];
   return items;
 }));
-let result = require("obj132").fileFinishedImporting("design/tokens/native/useToken.tsx");
+let result = require("set").fileFinishedImporting("design/tokens/native/useToken.tsx");
 
 export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
   let obj = require;
@@ -48,7 +48,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     const internal2 = ThemesDefault.internal;
     let semanticColorName = BACKGROUND_BASE_LOW;
     if (internal2.isSemanticColor(BACKGROUND_BASE_LOW)) {
-      const internal3 = ThemesDefault.internal;
+      const internal3 = tmp6(712).internal;
       semanticColorName = internal3.getSemanticColorName(BACKGROUND_BASE_LOW);
     }
     const _HermesInternal = HermesInternal;
@@ -58,7 +58,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
     if (tmp3 != value) {
       tmp3 = tmp3 != semanticColor;
       if (tmp3) {
-        result = map.set(combined, semanticColor);
+        result = obj4.set(combined, semanticColor);
         let tmp14 = semanticColor;
       }
     } else if (typeof BACKGROUND_BASE_LOW === "string") {
@@ -66,21 +66,22 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
       if ("#" !== BACKGROUND_BASE_LOW[0]) {
         semanticColor = value;
         if (BACKGROUND_BASE_LOW in closure_4) {
-          const internal5 = ThemesDefault.internal;
+          const internal5 = tmp6(712).internal;
           obj = getSemanticColorContextFromThemeContext;
           result = obj.getSemanticColorContextFromThemeContext(themeContext);
-          semanticColor = internal5.resolveSemanticColor(theme, ThemesDefault.colors[tmp15[BACKGROUND_BASE_LOW]], result);
+          semanticColor = internal5.resolveSemanticColor(theme, tmp6(712).colors[tmp15[BACKGROUND_BASE_LOW]], result);
         }
       }
     } else {
-      const internal6 = ThemesDefault.internal;
+      const internal6 = tmp6(712).internal;
       semanticColor = value;
       if (internal6.isSemanticColor(BACKGROUND_BASE_LOW)) {
-        const internal4 = ThemesDefault.internal;
+        const internal4 = tmp6(712).internal;
         semanticColor = internal4.resolveSemanticColor(theme, BACKGROUND_BASE_LOW, getSemanticColorContextFromThemeContext.getSemanticColorContextFromThemeContext(themeContext));
         const objResult = getSemanticColorContextFromThemeContext;
       }
     }
     resolveResult = tmp14;
+    obj4 = map;
   }
 };

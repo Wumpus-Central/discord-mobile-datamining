@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
-import sortActivity from "../../../../../stores/PresenceStore.tsx";
-import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import closure_5 from "../../../../../stores/PresenceStore.tsx";
+import closure_6 from "../../../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function GroupDmMemberCount(channel) {
   channel = channel.channel;
   let items = [closure_7, closure_5];
@@ -24,19 +24,19 @@ function GroupDmMemberCount(channel) {
       str = "0";
     }
     items[tmp] = str;
-    return items.reduce((acc, item, index) => {
-      status = status.getStatus(item);
+    return items.reduce((arg0, arg1) => {
+      status = status.getStatus(arg1);
       let num = 0;
       if (status !== constants.INVISIBLE) {
         num = 0;
-        if (status !== constants.OFFLINE) {
+        if (status !== tmp2.OFFLINE) {
           num = 0;
-          if (status !== constants.UNKNOWN) {
+          if (status !== tmp2.UNKNOWN) {
             num = 1;
           }
         }
       }
-      return acc + num;
+      return arg0 + num;
     }, 0);
   });
   const obj = channel(589);
@@ -46,7 +46,8 @@ let c3 = importAllResult;
 ({ ChannelTypes: closure_8, StatusTypes: c9 } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.REFRESH_MEDIUM_32];
-let obj = { color: ThemesDefault.colors.TEXT_MUTED };
+let obj = { activityStatusText: null };
+obj = { color: ThemesDefault.colors.TEXT_MUTED };
 obj[0] = obj;
 let closure_14 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId) {
@@ -54,19 +55,20 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   const screenIndex = channelId.screenIndex;
   const pressable = channelId.pressable;
   let stateFromStores;
+  let stateFromStores1;
   let obj = channelId(stateFromStores[10]);
   const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(channelId));
   let obj2 = channelId(stateFromStores[10]);
   const items1 = [closure_7];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
+  stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let type;
     if (stateFromStores != null) {
-      type = stateFromStores.type;
+      type = obj.type;
     }
     let user;
     if (type === closure_1_8.DM) {
-      user = closure_1_7.getUser(stateFromStores.getRecipientId());
+      user = closure_1_7.getUser(obj.getRecipientId());
     }
     return user;
   });
@@ -75,16 +77,16 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   const stateFromStoresObject = obj4.useStateFromStoresObject(items2, () => {
     let isMobileOnlineResult = null != stateFromStores1;
     if (isMobileOnlineResult) {
-      isMobileOnlineResult = closure_1_5.isMobileOnline(stateFromStores1.id);
+      isMobileOnlineResult = closure_1_5.isMobileOnline(tmp.id);
     }
     const obj = { isMobileOnline: isMobileOnlineResult, isVROnline: null, status: null };
-    let isVROnlineResult = null != stateFromStores1;
+    let isVROnlineResult = null != tmp;
     if (isVROnlineResult) {
-      isVROnlineResult = closure_1_5.isVROnline(stateFromStores1.id);
+      isVROnlineResult = closure_1_5.isVROnline(tmp.id);
     }
     obj[1] = isVROnlineResult;
     if (null != stateFromStores1) {
-      let UNKNOWN = closure_1_5.getStatus(stateFromStores1.id);
+      let UNKNOWN = closure_1_5.getStatus(tmp.id);
     } else {
       UNKNOWN = closure_1_9.UNKNOWN;
     }
@@ -98,7 +100,7 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   }, items3);
   if (null != stateFromStores) {
     let tmp2Result = tmp2(tmp3[12]);
-    let channelName = tmp2Result.computeChannelName(stateFromStores, closure_7, closure_6);
+    let channelName = tmp2Result.computeChannelName(stateFromStores, tmp4, closure_6);
   } else {
     const intl = tmp2(tmp3[13]).intl;
     channelName = intl.string(tmp2(tmp3[13]).t.ai6Lbr);
@@ -114,6 +116,7 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
     obj[1] = guild_id;
     obj[2] = tmp.activityStatusText;
     tmp10Result = callback(screenIndex(tmp3[14]), obj);
+    const tmp10 = callback;
     const tmp12 = screenIndex(tmp3[14]);
   }
   tmp2Result = tmp2(tmp3[15]);
@@ -168,6 +171,8 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   }
   const items4 = [renderUserAvatarResult, ];
   tmp = callback2();
+  const tmp28 = closure_12;
+  tmp4 = closure_7;
   obj2 = { accessibleTitle: formatToPlainStringResult, subtitle: tmp10Result, disableArrow: !pressable, userId: null, guildId: null };
   let id;
   if (stateFromStores1 != null) {
@@ -182,7 +187,7 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
   obj2[4] = guild_id1;
   items4[1] = channelId(stateFromStores[17]).renderChannelTitle(channelName, obj2);
   obj3[0] = items4;
-  const tmp28Result = callback(closure_11, obj3);
+  const tmp28Result = tmp28(closure_11, obj3);
   if (pressable) {
     let num = 44;
     if (null == tmp10Result) {
@@ -191,12 +196,12 @@ const memoResult = importAllResult.memo(function PrivateChannelHeader(channelId)
     obj4 = { children: null };
     const tmp2Result5 = tmp2(tmp3[17]);
     obj4[0] = tmp2Result5.renderTitleWrapper(tmp28Result, callback, combined, num);
-    return callback(closure_11, obj4);
+    return callback(tmp29, obj4);
   } else {
     return tmp28Result;
   }
   const tmp2Result4 = channelId(stateFromStores[17]);
 });
-let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelHeader.tsx");
 
 export default memoResult;

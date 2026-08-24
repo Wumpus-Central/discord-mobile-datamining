@@ -2,15 +2,14 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ImpersonateType from "ImpersonateTypes.tsx";
 import areArraysShallowlyEqual from "../../utils/FunctionUtils.tsx";
-import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import closure_4 from "../../stores/GuildRoleStore.tsx";
+import closure_5 from "../../stores/GuildStore.tsx";
 import { GuildSettingsSections } from "../../Constants.tsx";
 import { ChannelNotificationSettingsFlags as closure_7 } from "../user_settings/UserSettingsConstants.tsx";
 
-require = fn;
+require = arg1;
 let closure_8 = {};
 const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {
@@ -145,8 +144,8 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   } else {
     const type = tmp6.type;
     if (ImpersonateType.ImpersonateType.ROLES !== type) {
-      if (ImpersonateType.ImpersonateType.SERVER_SHOP !== type) {
-        if (ImpersonateType.ImpersonateType.NEW_MEMBER === type) {
+      if (tmp7(1988).ImpersonateType.SERVER_SHOP !== type) {
+        if (tmp7(1988).ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
         } else {
           return GuildSettingsSections.ROLES;
@@ -197,17 +196,16 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
               optInChannels = new Set();
             }
             const keys = optInChannels(11).keys(overrides);
-            const item = keys.forEach((item, index) => {
-              let num = overrides[item].flags;
+            const item = keys.forEach((arg0) => {
+              let num = overrides[arg0].flags;
               if (num == null) {
                 num = 0;
               }
               if (obj.hasFlag(num, closure_1_7.OPT_IN_ENABLED)) {
-                optInChannels.add(item);
+                obj2.add(arg0);
               } else {
-                optInChannels.delete(item);
+                obj2.delete(arg0);
               }
-              obj = hasFlagAll;
             });
             tmp6.optInChannels = optInChannels;
             return true;
@@ -235,7 +233,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
               tmp5 = removedOptionIds.length > 0;
             }
             if (tmp5) {
-              const item = removedOptionIds.forEach((item, index) => onboardingResponses.delete(item));
+              const item = removedOptionIds.forEach((arg0) => onboardingResponses.delete(arg0));
             }
             if (tmp) {
               onboardingResponses.add(optionId);
@@ -260,12 +258,12 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
       let flag = null != tmp2;
       if (flag) {
         if (null != roles) {
-          tmp2.roles = roles.reduce((acc, item, index) => {
-            const role = closure_1_4.getRole(guildId, item);
+          tmp2.roles = roles.reduce((arg0, arg1) => {
+            const role = closure_1_4.getRole(guildId, arg1);
             if (null != role) {
-              acc[item] = role;
+              arg0[arg1] = role;
             }
-            return acc;
+            return arg0;
           }, {});
         }
         let tmp3 = null != flags;
@@ -282,6 +280,6 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     }
   }
 });
-let result = require("obj132").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
+let result = require("set").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
 
 export default impersonateStore;

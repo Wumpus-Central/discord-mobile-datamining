@@ -7,12 +7,12 @@ import getQuestLogger from "../lib/getQuestLogger.tsx";
 import MODAL_KEYDefault from "../../collectibles/native/ProductPurchaseSuccessActionCreators.tsx";
 import _getDefaultRewardName from "../utils/QuestRewardUtils.tsx";
 import useQuests from "../hooks/QuestHooks.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../stores/UserStore.tsx";
 import { QuestsExperimentLocations } from "../QuestConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function QuestCollectibleRewardModalMessages(quest) {
   quest = quest.quest;
   const tmp = callback3();
@@ -21,6 +21,7 @@ function QuestCollectibleRewardModalMessages(quest) {
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = _getDefaultRewardName;
   const defaultRewardNameWithArticle = obj1.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+  obj = { children: null };
   const claimedCollectibleRewardMessage = useQuests.useClaimedCollectibleRewardMessage(quest.config);
   obj = { variant: "heading-xl/bold", style: tmp.title, children: null };
   const intl = getSystemLocale.intl;
@@ -32,23 +33,26 @@ function QuestCollectibleRewardModalMessages(quest) {
   return callback2(closure_6, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const createCacheKey = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
+createCacheKey = { title: null };
+createCacheKey = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/quests/native/openQuestCollectibleRewardModal.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/openQuestCollectibleRewardModal.tsx");
 
 export const openQuestCollectibleRewardModal = function openQuestCollectibleRewardModal(onSuccess) {
   ({ quest: require, product } = onSuccess);
-  let obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
+  let obj = getQuestLogger;
+  obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   const questLogger = obj.getQuestLogger(obj);
   if (null != product) {
     obj = { product: null, renderMessages: null, onSuccess: null };
     obj[0] = product;
     obj[1] = function renderMessages() {
-      return closure_1_5(QuestCollectibleRewardModalMessages, { quest: closure_0 });
+      return closure_1_5(closure_1_9, { quest: closure_0 });
     };
     obj[2] = onSuccess.onSuccess;
     MODAL_KEYDefault.open(obj);
+    const obj4 = MODAL_KEYDefault;
   } else {
     questLogger.warn("Product is null");
   }

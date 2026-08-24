@@ -1,13 +1,12 @@
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx
 import QUICK_SWITCHERDefault from "../../../app_analytics/AnalyticsLocation.tsx";
-import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
 import EditUserProfileBannerDefault from "../../../user_profile/native/UserProfileEditForm.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
-import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
 
 export default function UserSettingsEditUserProfile(arg0) {
   let obj = stateFromStores(589);
@@ -16,7 +15,8 @@ export default function UserSettingsEditUserProfile(arg0) {
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (null != stateFromStores) {
-      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+      closure_1_1(closure_1_2[6])(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+      const tmp3 = closure_1_1(closure_1_2[6]);
     }
   }, items1);
   let tmp7 = null;

@@ -1,11 +1,11 @@
 // discord_app/modules/age_assurance/native/AgeVerificationModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00019_noop.js";
 import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "../AgeVerificationConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 function AgeVerifyScreen(uri) {
   const onComplete = uri.onComplete;
   const onClose = uri.onClose;
@@ -22,9 +22,8 @@ function AgeVerifyScreen(uri) {
     if (obj.isModalOpen(closure_1_4)) {
       callback();
     }
-    obj = onComplete(isSuspendedUser[4]);
   }, items1);
-  let obj = onComplete(isSuspendedUser[3]);
+  const obj = onComplete(isSuspendedUser[3]);
   const watchAgeVerificationStatusChange = onComplete(isSuspendedUser[5]).useWatchAgeVerificationStatusChange(callback1);
   const items2 = [callback, isSuspendedUser];
   const onMessage = callback.useCallback((nativeEvent) => {
@@ -54,17 +53,20 @@ function AgeVerifyScreen(uri) {
   return jsx(onClose(isSuspendedUser[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" });
 }
 let closure_6 = { VERIFY_AGE: "VERIFY_AGE" };
-const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { headerStyle: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
 
 export default function AgeVerificationModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;
+  let React;
+  c4 = undefined;
   const tmp = callback();
-  const React = tmp;
+  React = tmp;
   let intl = webviewUrl(onClose[11]).intl;
   const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
   c4 = stringResult;

@@ -1,8 +1,8 @@
 // discord_app/utils/GlobalUtils.tsx
-import obj132 from "../../_runtime/00002_obj132.js";
+import set2 from "../../_runtime/00002_set.js";
 
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;
-const result = obj132.fileFinishedImporting("utils/GlobalUtils.tsx");
+const result = set2.fileFinishedImporting("utils/GlobalUtils.tsx");
 
 export function isDiscordFrontendDevelopment() {
   return false;

@@ -10,19 +10,15 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionShe
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import getAlertModalItemKey from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import isSponsoredPlayQuest from "../utils/QuestUtils.tsx";
-import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import _manuallyStartConsoleQuest from "../QuestActionCreators.tsx";
 import _getDefaultRewardName from "../utils/QuestRewardUtils.tsx";
-import OrbsBalance from "QuestOrbsRewardModal.native.tsx";
-import QuestCollectibleRewardModalMessages from "openQuestCollectibleRewardModal.tsx";
-import CloudIcon from "../../../design/components/Icon/native/redesign/generated/CloudIcon.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import zustandStore from "../QuestHomeNavigationStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../QuestHomeNavigationStore.tsx";
 import QuestsExperimentLocations from "../QuestConstants.tsx";
 import { UserSettingsSections } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = fn;
+require = arg1;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
   return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10951, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
@@ -37,11 +33,12 @@ function viewReward(quest) {
     obj[1] = questContent;
     obj[2] = questContentPosition;
     obj[3] = sourceQuestContent;
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10951, dependencyMap.paths), closure_6, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2007)(10951, dependencyMap.paths), closure_6, obj);
+    const obj7 = ACTION_SHEET_HEIGHT_HALFDefault;
   } else {
-    let tmpResult = _getDefaultRewardName;
+    let tmpResult = tmp(10491);
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
-      tmpResult = OrbsBalance;
+      tmpResult = tmp(10958);
       obj = { quest: null };
       obj[0] = quest;
       const result = tmpResult.openQuestOrbsRewardModal(obj);
@@ -50,8 +47,8 @@ function viewReward(quest) {
       obj1[0] = quest;
       obj1[1] = product;
       obj1[2] = onSuccess;
-      const result1 = QuestCollectibleRewardModalMessages.openQuestCollectibleRewardModal(obj1);
-      const tmpResult1 = QuestCollectibleRewardModalMessages;
+      const result1 = tmp(10965).openQuestCollectibleRewardModal(obj1);
+      const tmpResult1 = tmp(10965);
     }
   }
 }
@@ -306,7 +303,7 @@ function _handleRewardClaimThenView() {
 noopAll;
 ({ QuestsExperimentLocations: c5, QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6, QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: error, QuestVariants: closure_8 } = QuestsExperimentLocations);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
   return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10949, dependencyMap.paths), closure_7, { questId: questId.questId });
@@ -359,7 +356,7 @@ export const openQuestHome = function openQuestHome(scrollToQuestId) {
           obj[2] = str;
           closure_1_4.setState(obj);
           obj = { screen: null };
-          obj[0] = UserSettingsSections.QUESTS;
+          obj[0] = closure_1_9.QUESTS;
           if (flag) {
             obj1 = {};
             const merged = Object.assign(obj);
@@ -405,23 +402,25 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
       obj = { marginRight: null };
       obj[0] = num;
       const features2 = quest.config.features;
-      if (features2.includes(constants.CLOUD_GAMING_ACTIVITY)) {
+      if (features2.includes(tmp3.CLOUD_GAMING_ACTIVITY)) {
         obj = { size: "sm", style: null, color: null };
         obj[1] = obj;
         obj[2] = ThemesDefault.colors.WHITE;
-        let tmp5Result = callback(CloudIcon.CloudIcon, obj);
+        let tmp5Result = tmp5(tmp(10966).CloudIcon, obj);
       } else {
         obj1 = { size: "sm", style: null, color: null };
         obj1[1] = obj;
         obj1[2] = ThemesDefault.colors.WHITE;
-        tmp5Result = callback(GameControllerIcon.GameControllerIcon, obj1);
+        tmp5Result = tmp5(tmp(9430).GameControllerIcon, obj1);
       }
       return tmp5Result;
     }
+    tmp3 = constants;
   }
 };
 export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
-  let obj = { title: null, content: null, actions: null };
+  let obj = useAlertStore;
+  obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.Lhpq2P);
   const intl2 = getSystemLocale.intl;
@@ -447,10 +446,10 @@ export const dismissOverlayScreens = function dismissOverlayScreens() {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
       const routes = rootState.routes;
-      const found = routes.filter((item, index) => {
-        let tmp = "you" !== item.name;
+      const found = routes.filter((name) => {
+        let tmp = "you" !== name.name;
         if (tmp) {
-          tmp = "settings" !== item.name;
+          tmp = "settings" !== name.name;
         }
         return tmp;
       });

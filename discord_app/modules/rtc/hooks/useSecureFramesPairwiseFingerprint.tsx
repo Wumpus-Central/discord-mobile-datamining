@@ -1,29 +1,35 @@
 // discord_app/modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
-import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
-import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
+import closure_6 from "../../../stores/AuthenticationStore.tsx";
+import closure_7 from "../../../stores/MediaEngineStore.tsx";
+import closure_8 from "../../../stores/RTCConnectionStore.tsx";
 import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "../SecureFramesConstants.tsx";
 import { Features } from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
 
 export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwiseFingerprint(userId) {
   userId = userId.userId;
   let _require = userId;
+  let stateFromStores;
   let first;
+  let callback;
   let first1;
   let React;
   let stateFromStores1;
+  let stateFromStores2;
+  callback = undefined;
+  let callback1;
+  closure_10 = undefined;
   const items = [stateFromStores1];
-  const stateFromStores = _require(first[8]).useStateFromStores(items, () => stateFromStores1.getId());
+  stateFromStores = _require(first[8]).useStateFromStores(items, () => stateFromStores1.getId());
   stateFromStores(first[9])(stateFromStores !== userId, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
   const tmp3 = first1(React.useState(null), 2);
   first = tmp3[0];
-  let callback = tmp3[1];
+  callback = tmp3[1];
   const tmp5 = first1(React.useState(false), 2);
   first1 = tmp5[0];
   React = tmp5[1];
@@ -32,11 +38,12 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   stateFromStores1 = _require(first[8]).useStateFromStores(items1, () => callback.getSecureFramesRosterMapEntry(closure_0));
   const obj2 = _require(first[8]);
   const items2 = [callback];
-  const stateFromStores2 = _require(first[8]).useStateFromStores(items2, () => callback.getSecureFramesRosterMapEntry(stateFromStores));
+  stateFromStores2 = _require(first[8]).useStateFromStores(items2, () => callback.getSecureFramesRosterMapEntry(stateFromStores));
   callback = React.useCallback((arg0) => {
     callback(stateFromStores(first[10]).fromByteArray(arg0));
     callback2(false);
   }, []);
+  _require = undefined;
   _require = callback((arg0, arg1, arg2, arg3) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -77,7 +84,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
               if (stateFromStores2.supports(constants.MLS_PAIRWISE_FINGERPRINTS)) {
                 const rTCConnection = callback.getRTCConnection();
                 if (rTCConnection != null) {
-                  const mLSPairwiseFingerprint = rTCConnection.getMLSPairwiseFingerprint(callback1, closure_2, (arg0) => {
+                  const mLSPairwiseFingerprint = rTCConnection.getMLSPairwiseFingerprint(callback1, tmp41, (arg0) => {
                     const uint8Array = new Uint8Array(arg0);
                     callback(uint8Array);
                   });
@@ -86,13 +93,13 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
               } else {
                 obj1 = callback(first[11]);
                 const _Uint8Array = Uint8Array;
-                let uint8Array = new Uint8Array(closure_1);
+                let uint8Array = new Uint8Array(tmp40);
                 const _Uint8Array2 = Uint8Array;
-                const uint8Array1 = new Uint8Array(closure_3);
+                const uint8Array1 = new Uint8Array(tmp42);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.generatePairwiseFingerprint(callback1, uint8Array, tmp39, uint8Array1, closure_2);
+                obj1[0] = obj1.generatePairwiseFingerprint(callback1, uint8Array, tmp39, uint8Array1, tmp41);
                 return obj1;
               }
             }
@@ -115,7 +122,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
     })();
   });
   const items3 = [callback];
-  const callback1 = React.useCallback(function() {
+  callback1 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

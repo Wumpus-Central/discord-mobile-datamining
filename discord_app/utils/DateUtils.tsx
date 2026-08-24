@@ -5,12 +5,10 @@ import create from "../../discord_common/js/packages/protos/discord_protos/disco
 import tDefault from "../../_runtime/03975_t.js";
 import onTimezoneChangeDefault from "../modules/date/onTimezoneChange.android.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
-import __DiscordCreateDateFormatter from "../modules/system_date_format/SystemDateFormatter.native.tsx";
-import defaultMeridiemDefault from "../lib/makeDateFormatter.tsx";
 import importDefaultResult from "../modules/user_settings/LocaleStore.tsx";
 import importDefaultResult1 from "../Dispatcher.tsx";
 
-require = fn;
+require = arg1;
 function resetCache() {
   closure_5 = Object.create(null);
 }
@@ -19,29 +17,41 @@ function syncHourCycleToIntlConfig() {
   const setting = TimestampHourCycle.getSetting();
   let result = setting !== create.TimestampHourCycle.AUTO;
   if (result) {
-    result = __DiscordCreateDateFormatter.supportsSystemDateFormatter();
-    const tmp4Result = __DiscordCreateDateFormatter;
+    result = tmp4(4080).supportsSystemDateFormatter();
+    const tmp4Result = tmp4(4080);
   }
-  const values = Object.values(getSystemLocale.intl.formatConfig.time);
+  const values = Object.values(tmp4(1236).intl.formatConfig.time);
   const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp13 = nextResult;
     let tmp14 = null != nextResult;
     if (tmp14) {
+      let tmp15 = nextResult;
       tmp14 = "hour" in tmp13;
     }
     if (tmp14) {
       if (result) {
+        let tmp16 = require;
+        let tmp17 = require;
+        let tmp18 = dependencyMap;
+        let tmp19 = dependencyMap;
         if (setting === create.TimestampHourCycle.H12) {
+          let tmp26 = nextResult;
           tmp13.hourCycle = "h12";
         }
       }
       if (result) {
+        let tmp20 = require;
+        let tmp21 = require;
+        let tmp22 = dependencyMap;
+        let tmp23 = dependencyMap;
         if (setting === create.TimestampHourCycle.H23) {
+          let tmp25 = nextResult;
           tmp13.hourCycle = "h23";
         }
       }
+      let tmp24 = nextResult;
       delete tmp2[tmp];
     }
     continue;
@@ -90,7 +100,7 @@ function differenceInCalendarDays(str, str2) {
 function dateFormat(date, LL, setting) {
   let obj2 = date;
   if (!obj.isMoment(date)) {
-    obj2 = tDefault(date);
+    obj2 = tmp(3975)(date);
   }
   obj = tDefault;
   if (setting == null) {
@@ -100,7 +110,7 @@ function dateFormat(date, LL, setting) {
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
   let tmp7 = table[combined];
   if (null == tmp7) {
-    const tmp9 = defaultMeridiemDefault(LL);
+    const tmp9 = tmp(4082)(LL);
     table[combined] = tmp9;
     tmp7 = tmp9;
   }
@@ -116,12 +126,12 @@ let c4 = 86400000;
 let closure_5 = Object.create(null);
 importDefaultResult.addChangeListener(resetCache);
 onTimezoneChangeDefault(resetCache);
-const tmp2 = new timestampDefault("DateUtils");
+let tmp2 = new timestampDefault("DateUtils");
 const subscription = importDefaultResult1.subscribe("USER_SETTINGS_PROTO_UPDATE", syncHourCycleToIntlConfig);
 const subscription1 = importDefaultResult1.subscribe("CONNECTION_OPEN", syncHourCycleToIntlConfig);
 const items = [{ key: "days", millisecondsInUnit: 86400000 }, { key: "hours", millisecondsInUnit: 3600000 }, { key: "minutes", millisecondsInUnit: 60000 }, { key: "seconds", millisecondsInUnit: 1000 }];
 const importDefaultResult2 = importDefaultResult1;
-let result = require("obj132").fileFinishedImporting("utils/DateUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/DateUtils.tsx");
 
 export { differenceInCalendarDays };
 export const differenceInDays = function differenceInDays(getTime, getTime2) {
@@ -155,13 +165,15 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
   if (arg1 === undefined) {
     flag = false;
   }
+  const obj = tDefault;
   const obj3 = tDefault();
   const localeDataResult = tDefault.localeData();
+  const tmp3 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
     toDateResult = timestamp.toDate();
   }
-  const tmp3Result = differenceInCalendarDays(toDateResult, obj3.toDate());
+  const tmp3Result = tmp3(toDateResult, obj3.toDate());
   if (tmp3Result < -1) {
     return dateFormat(timestamp, "L LT", setting);
   } else {
@@ -182,31 +194,37 @@ export const calendarFormat = function calendarFormat(timestamp, arg1, setting) 
     }
     let tmp8 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp8 = tDefault(timestamp);
+      tmp8 = tmp(3975)(timestamp);
     }
     return dateFormat(timestamp, localeDataResult.calendar(str2, tmp8, obj3), setting);
   }
   obj4 = tDefault;
 };
 export const calendarFormatCompact = function calendarFormatCompact(timestamp) {
+  const obj = tDefault;
   const obj3 = tDefault();
   const localeDataResult = tDefault.localeData();
+  const tmp2 = differenceInCalendarDays;
   let toDateResult = timestamp;
   if (obj4.isMoment(timestamp)) {
     toDateResult = timestamp.toDate();
   }
-  const tmp2Result = differenceInCalendarDays(toDateResult, obj3.toDate());
+  const tmp2Result = tmp2(toDateResult, obj3.toDate());
   if (0 === tmp2Result) {
     return tmp5(timestamp, "LT", arg1);
   } else if (-1 === tmp2Result) {
     let tmp6 = timestamp;
     if (!tmpResult.isMoment(timestamp)) {
-      tmp6 = tDefault(timestamp);
+      tmp6 = tmp(3975)(timestamp);
     }
-    const str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
-    tmpResult = tDefault;
+    let str2 = localeDataResult.calendar("lastDay", tmp6, obj3);
+    tmpResult = tmp(3975);
+  } else {
+    str2 = "L";
+    if (tmp2Result > -7) {
+      str2 = "dddd";
+    }
   }
-  obj4 = tDefault;
 };
 export const dateStringToMoment = function dateStringToMoment(arg0) {
   if (arg0.length >= 200) {
@@ -218,6 +236,7 @@ export const dateStringToMoment = function dateStringToMoment(arg0) {
   }
 };
 export const accessibilityLabelCalendarFormat = function accessibilityLabelCalendarFormat(timestamp) {
+  const obj = tDefault;
   const date = new Date();
   const tmp4 = differenceInCalendarDays(timestamp, date);
   let str = "sameElse";
@@ -238,8 +257,8 @@ export const accessibilityLabelCalendarFormat = function accessibilityLabelCalen
   }
   let str5 = "LLL";
   if ("sameElse" !== str) {
-    str5 = localeDataResult.calendar(str, tDefault(timestamp), tDefault(date));
-    const tmp6 = tDefault(timestamp);
+    str5 = localeDataResult.calendar(str, tmp(3975)(timestamp), tmp(3975)(date));
+    const tmp6 = tmp(3975)(timestamp);
   }
   return dateFormat(timestamp, str5);
 };
@@ -269,8 +288,8 @@ export const diffAsUnits = function diffAsUnits(date, closure_0) {
     const _Number3 = Number;
     const _Number4 = Number;
     closure_1 = Number(closure_0) - Number(date);
-    const item = items.forEach((item, index) => {
-      ({ key, millisecondsInUnit } = item);
+    const item = items.forEach((arg0) => {
+      ({ key, millisecondsInUnit } = arg0);
       obj[key] = Math.floor(closure_1 / millisecondsInUnit);
       closure_1 = closure_1 - obj[key] * millisecondsInUnit;
     });

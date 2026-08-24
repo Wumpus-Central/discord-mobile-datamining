@@ -2,11 +2,13 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import handleInit2 from "ApplicationCommandStore.tsx";
+import closure_2 from "ApplicationCommandStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
-import obj132 from "../../utils/PlatformUtils.tsx";
+import set from "../../utils/PlatformUtils.tsx";
+import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
-require = fn;
+require = arg1;
 function handleInit() {
   map.clear();
   map1.clear();
@@ -22,6 +24,7 @@ function handleSetActiveCommand(arg0) {
   let tmp3 = null != value;
   if (tmp3) {
     tmp3 = id !== value.commandId || activeOptionName !== value.optionName;
+    const tmp4 = id !== value.commandId || activeOptionName !== value.optionName;
   }
   if (tmp3) {
     if (tmp5) {
@@ -43,7 +46,7 @@ function handleSetActiveCommand(arg0) {
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-let closure_7 = obj132.isDesktop();
+let closure_7 = set.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {
 }
@@ -75,10 +78,11 @@ prototype["getLastErrored"] = function getLastErrored(id) {
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
+    const obj2 = store;
   }
   return obj.get(id).lastErrored;
 };
-prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, query) {
+prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, first) {
   let obj = map1;
   if (!map1.has(id)) {
     const activeCommand = store.getActiveCommand(id);
@@ -102,12 +106,13 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
+    const obj2 = store;
   }
   const optionNameToAutocompleteQueries = obj.get(id).optionNameToAutocompleteQueries;
-  optionNameToAutocompleteQueries.get(name);
-  let value;
+  let value = optionNameToAutocompleteQueries.get(name);
+  value = undefined;
   if (value != null) {
-    value = value.get(query);
+    value = value.get(first);
   }
   return value;
 };
@@ -135,6 +140,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
+    const obj2 = store;
   }
   return obj.get(id).optionNameToLastResults.get(name);
 };
@@ -162,11 +168,12 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
+    const obj2 = store;
   }
   return obj.get(id).lastResponseNonce;
 };
 ApplicationCommandAutocompleteStore.displayName = "ApplicationCommandAutocompleteStore";
-obj132 = {
+set = {
   CONNECTION_OPEN: handleInit,
   LOGOUT: handleInit,
   CHANNEL_SELECT: handleInit,
@@ -195,6 +202,7 @@ obj132 = {
       const map3 = new Map();
       obj[5] = map3;
       const result = obj.set(channelId, obj);
+      const obj2 = store;
     }
     let value = obj.get(channelId);
     const optionNameToLastQuery = value.optionNameToLastQuery;
@@ -270,6 +278,7 @@ obj132 = {
         const map3 = new Map();
         obj[5] = map3;
         const result = obj10.set(channelId, obj);
+        const obj2 = store;
       }
       value = obj10.get(channelId);
       const optionNameToAutocompleteQueries = value.optionNameToAutocompleteQueries;
@@ -286,13 +295,13 @@ obj132 = {
         if (activeOption != null) {
           type = activeOption.type;
         }
-        tmp29 = type === require("../../flow/Server.tsx").ApplicationCommandOptionType.INTEGER;
+        tmp29 = type === _PermissionOverwriteType.ApplicationCommandOptionType.INTEGER;
       }
       _require = tmp29;
       let mapped;
       if (choices != null) {
-        mapped = choices.map((item, index) => {
-          ({ value, name_localized, name } = item);
+        mapped = choices.map((arg0) => {
+          ({ value, name_localized, name } = arg0);
           if (name_localized == null) {
             name_localized = name;
           }
@@ -320,7 +329,7 @@ obj132 = {
       obj = { duration_ms: null, error: false, num_options: null };
       obj[0] = num;
       obj[2] = mapped.length;
-      require("../app_analytics/AppAnalyticsUtils.tsx").trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+      _collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
       map2.delete(nonce);
       const optionNameToAutocompleteQueries3 = value.optionNameToAutocompleteQueries;
       const value2 = optionNameToAutocompleteQueries3.get(value.name);
@@ -382,6 +391,7 @@ obj132 = {
           const map3 = new Map();
           obj[5] = map3;
           const result = obj4.set(channelId, obj);
+          const obj5 = store;
         }
         map1.get(channelId).lastErrored = true;
         return true;
@@ -401,6 +411,7 @@ obj132 = {
     let tmp3 = null != value;
     if (tmp3) {
       tmp3 = id !== value.commandId || activeOptionName !== value.optionName;
+      const tmp4 = id !== value.commandId || activeOptionName !== value.optionName;
     }
     if (tmp3) {
       if (tmp5) {
@@ -420,7 +431,7 @@ obj132 = {
     }
   }
 };
-const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(dispatcherDefault, obj132);
-let result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
+const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(dispatcherDefault, set);
+let result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
 
 export default applicationCommandAutocompleteStore;

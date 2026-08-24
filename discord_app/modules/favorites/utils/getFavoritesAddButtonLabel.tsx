@@ -1,9 +1,9 @@
 // discord_app/modules/favorites/utils/getFavoritesAddButtonLabel.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
 
-const result = obj132.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
+const result = set.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {
   if (length >= 2) {

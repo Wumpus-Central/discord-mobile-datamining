@@ -13,6 +13,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["initialize"] = function initialize(toggleStates) {
   for (const key10005 in obj) {
+    let tmp2 = key10005;
     let flag;
     if (arg0 != null) {
       toggleStates = arg0.toggleStates;
@@ -23,6 +24,7 @@ prototype["initialize"] = function initialize(toggleStates) {
     if (flag == null) {
       flag = false;
     }
+    let tmp = closure_1;
     closure_1[key10005] = flag;
     continue;
   }
@@ -43,8 +45,8 @@ prototype["all"] = function all(items) {
 };
 prototype["allWithDescriptions"] = function allWithDescriptions() {
   const entries = Object.entries(closure_1);
-  return entries.map((item, index) => {
-    [tmp, tmp2] = item;
+  return entries.map((arg0) => {
+    [tmp, tmp2] = arg0;
     const items = [tmp, tmp2, table[tmp]];
     return items;
   });
@@ -57,7 +59,7 @@ obj = {
   }
 };
 const designTogglesStore = new DesignTogglesStore(dispatcherDefault, obj);
-const result = require("obj132").fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesStore.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesStore.tsx");
 
 export default designTogglesStore;
 export const toggles = obj;

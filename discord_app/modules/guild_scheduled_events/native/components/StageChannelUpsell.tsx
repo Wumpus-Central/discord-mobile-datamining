@@ -8,21 +8,22 @@ import Button2 from "../../../../design/components/Button/native/Button.native.t
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import registerAssetDefault from "../../../../../_runtime/08143_registerAsset.js";
 import registerAssetDefault2 from "../../../../../_runtime/08844_registerAsset.js";
-import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { createChannelRecord } from "../../../../records/ChannelRecord.tsx";
 import { useStageChannelUpsellCardStore as closure_7 } from "../../StageChannelUpsellCardStore.tsx";
 import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "../GuildEventModalConstants.tsx";
 import { ChannelTypes } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 noopAll;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const createCacheKey = { flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: ThemesDefault.radii.sm };
+createCacheKey = { container: null, image: null, closeContainer: null, header: null, description: null, button: null };
+createCacheKey = { flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 16 };
 createCacheKey[2] = { position: "absolute", top: 14, right: 14 };
@@ -30,10 +31,11 @@ createCacheKey[3] = { lineHeight: 20, marginBottom: 4 };
 createCacheKey[4] = { textAlign: "center", marginBottom: 4 };
 createCacheKey[5] = { marginTop: 12, alignSelf: "stretch" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/StageChannelUpsell.tsx");
 
 export default function StageChannelUpsell(arg0) {
   ({ guildId: require, onCreate: importDefault } = arg0);
+  dependencyMap = undefined;
   let tmp = callback5();
   const tmp2 = callback(callback2(), 2);
   dependencyMap = tmp3;
@@ -77,11 +79,11 @@ export default function StageChannelUpsell(arg0) {
     const intl4 = getSystemLocale.intl;
     obj7[2] = intl4.string(getSystemLocale.t["X/3SyA"]);
     obj7[3] = function onPress() {
-      let obj = importDefault(lib[17]);
+      let obj = closure_1_1(lib[17]);
       obj.popWithKey(closure_1_8);
       obj = {
         guildId: closure_0,
-        channelType: ChannelTypes.GUILD_STAGE_VOICE,
+        channelType: closure_1_9.GUILD_STAGE_VOICE,
         onChannelCreated(id) {
           const tmp = closure_1_6({ id, type: closure_1_9.GUILD_STAGE_VOICE });
           if (null != tmp) {
@@ -92,10 +94,10 @@ export default function StageChannelUpsell(arg0) {
           callback(table[17]).popWithKey(closure_12);
         }
       };
-      importDefault(lib[17]).pushLazy(require(lib[19])(lib[18], lib.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      closure_1_1(lib[17]).pushLazy(closure_1_0(lib[19])(lib[18], lib.paths), obj, closure_1_12);
       lib();
-      const obj2 = importDefault(lib[17]);
-      importDefault(lib[20]).hideActionSheet();
+      const obj2 = closure_1_1(lib[17]);
+      closure_1_1(lib[20]).hideActionSheet();
     };
     obj6[1] = callback3(Button2.Button, obj7);
     items[5] = callback3(closure_5, obj6);

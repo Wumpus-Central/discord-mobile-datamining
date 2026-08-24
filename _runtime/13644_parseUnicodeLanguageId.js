@@ -38,6 +38,9 @@ function parseUnicodeLanguageId(locale) {
           const arr2 = parts.shift();
           while (!(arr2 in obj)) {
             obj[arr2] = 1;
+            if (parts.length) {
+              let tmp18 = regex9;
+            }
           }
           const _RangeError3 = RangeError;
           const concat = "Duplicate variant \"".concat;
@@ -73,9 +76,11 @@ function parseTransformedExtension(parts) {
           arr = parts.shift();
           let items1 = [];
           if (parts.length) {
+            let tmp5 = regex3;
             if (regex3.test(parts[0])) {
               arr = items1.push(parts.shift());
               while (parts.length) {
+                let tmp7 = regex3;
                 if (!regex3.test(parts[0])) {
                   break;
                 }
@@ -85,8 +90,13 @@ function parseTransformedExtension(parts) {
           if (!items1.length) {
             break;
           } else {
-            let items2 = [arr, items1.join(exports.SEPARATOR)];
+            let items2 = [arr, ];
+            let tmp13 = exports;
+            items2[1] = items1.join(exports.SEPARATOR);
             let arr1 = items.push(items2);
+            if (parts.length) {
+              let tmp15 = regex11;
+            }
           }
         }
         const _RangeError = RangeError;
@@ -131,8 +141,8 @@ arg5.isUnicodeVariantSubtag = function isUnicodeVariantSubtag(arg0) {
   return regex9.test(arg0);
 };
 arg5.parseUnicodeLanguageId = parseUnicodeLanguageId;
-arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
-  const parts = arr3.split(exports.SEPARATOR);
+arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(locale) {
+  const parts = locale.split(exports.SEPARATOR);
   const lang = parseUnicodeLanguageId(parts);
   let obj = e;
   const items = [];
@@ -150,20 +160,29 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
           if ("T" !== arr) {
             if ("x" !== arr) {
               if ("X" !== arr) {
+                let tmp97 = regex7;
                 if (regex7.test(arr)) {
                   if (arr in obj) {
+                    let tmp22 = globalThis;
                     let _RangeError2 = RangeError;
+                    let str10 = "There can only be 1 -";
                     let concat = "There can only be 1 -".concat;
+                    let str11 = "- extension";
+                    let tmp23 = new.target;
+                    let tmp24 = new.target;
                     let rangeError = new RangeError("There can only be 1 -".concat(arr, "- extension"));
+                    let tmp26 = rangeError;
                     throw rangeError;
                   } else {
                     obj = { type: null, value: null };
                     obj[0] = arr;
                     let items1 = [];
                     if (parts.length) {
+                      let tmp14 = regex2;
                       if (regex2.test(parts[0])) {
                         arr = items1.push(parts.shift());
                         while (parts.length) {
+                          let tmp16 = regex2;
                           if (!regex2.test(parts[0])) {
                             break;
                           }
@@ -172,6 +191,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
                     }
                     let str9 = "";
                     if (items1.length) {
+                      let tmp17 = exports;
                       str9 = items1.join(exports.SEPARATOR);
                     }
                     obj[1] = str9;
@@ -182,22 +202,34 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
                     let tmp21 = tmp4;
                   }
                 } else {
+                  let tmp9 = globalThis;
                   let _RangeError = RangeError;
+                  let tmp10 = new.target;
+                  let str8 = "Malformed extension type";
+                  let tmp11 = new.target;
                   let rangeError1 = new RangeError("Malformed extension type");
+                  let tmp13 = rangeError1;
                   throw rangeError1;
                 }
               }
             }
             if (tmp2) {
+              let tmp37 = globalThis;
               let _RangeError4 = RangeError;
+              let tmp38 = new.target;
+              let str13 = "There can only be 1 -x- extension";
+              let tmp39 = new.target;
               let rangeError2 = new RangeError("There can only be 1 -x- extension");
+              let tmp41 = rangeError2;
               throw rangeError2;
             } else {
               let items2 = [];
               if (parts.length) {
+                let tmp27 = regex;
                 if (regex.test(parts[0])) {
                   let arr2 = items2.push(parts.shift());
                   while (parts.length) {
+                    let tmp29 = regex;
                     if (!regex.test(parts[0])) {
                       break;
                     }
@@ -206,14 +238,20 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
               }
               if (items2.length) {
                 obj1 = { type: "x", value: null };
+                let tmp35 = exports;
                 obj1[1] = items2.join(exports.SEPARATOR);
-                arr3 = items.push(obj1);
+                let arr3 = items.push(obj1);
                 tmp19 = obj1;
                 tmp20 = tmp3;
                 tmp21 = tmp4;
               } else {
+                let tmp30 = globalThis;
                 let _RangeError3 = RangeError;
+                let tmp31 = new.target;
+                let str12 = "Malformed private_use_extension";
+                let tmp32 = new.target;
                 let rangeError3 = new RangeError("Malformed private_use_extension");
+                let tmp34 = rangeError3;
                 throw rangeError3;
               }
             }
@@ -230,10 +268,16 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
           }
         }
         if (tmp3) {
+          let tmp45 = globalThis;
           let _RangeError5 = RangeError;
+          let tmp46 = new.target;
+          let str14 = "There can only be 1 -t- extension";
+          let tmp47 = new.target;
           let rangeError4 = new RangeError("There can only be 1 -t- extension");
+          let tmp49 = rangeError4;
           throw rangeError4;
         } else {
+          let tmp42 = parseTransformedExtension;
           let tmp43 = parseTransformedExtension(parts);
           let arr4 = items.push(tmp43);
           tmp19 = tmp2;
@@ -256,6 +300,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
             if (regex5.test(parts[0])) {
               items4.push(parts.shift());
               while (parts.length) {
+                let tmp55 = regex5;
                 if (!regex5.test(parts[0])) {
                   break;
                 }
@@ -273,14 +318,17 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
         if (tmp51) {
           items3.push(tmp51);
           while (parts.length) {
+            let tmp58 = regex4;
             let tmp59;
             if (regex4.test(parts[0])) {
               let items6 = [];
               let arr8 = parts.shift();
               if (parts.length) {
+                let tmp61 = regex5;
                 if (regex5.test(parts[0])) {
                   let arr9 = items6.push(parts.shift());
                   while (parts.length) {
+                    let tmp63 = regex5;
                     if (!regex5.test(parts[0])) {
                       break;
                     }
@@ -289,6 +337,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
               }
               let str16 = "";
               if (items6.length) {
+                let tmp64 = exports;
                 str16 = items6.join(exports.SEPARATOR);
               }
               let items7 = [arr8, str16];
@@ -312,6 +361,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
           if (regex3.test(parts[0])) {
             items8.push(parts.shift());
             while (parts.length) {
+              let tmp67 = regex3;
               if (!regex3.test(parts[0])) {
                 break;
               }
@@ -326,6 +376,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
               if (regex5.test(parts[0])) {
                 items9.push(parts.shift());
                 while (parts.length) {
+                  let tmp73 = regex5;
                   if (!regex5.test(parts[0])) {
                     break;
                   }
@@ -343,14 +394,17 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
           if (tmp69) {
             items3.push(tmp69);
             while (parts.length) {
+              let tmp76 = regex4;
               let tmp77;
               if (regex4.test(parts[0])) {
                 let items11 = [];
                 let arr14 = parts.shift();
                 if (parts.length) {
+                  let tmp79 = regex5;
                   if (regex5.test(parts[0])) {
                     let arr15 = items11.push(parts.shift());
                     while (parts.length) {
+                      let tmp81 = regex5;
                       if (!regex5.test(parts[0])) {
                         break;
                       }
@@ -359,6 +413,7 @@ arg5.parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
                 }
                 let str18 = "";
                 if (items11.length) {
+                  let tmp82 = exports;
                   str18 = items11.join(exports.SEPARATOR);
                 }
                 let items12 = [arr14, str18];

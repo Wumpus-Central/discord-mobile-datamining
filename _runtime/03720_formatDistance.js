@@ -165,12 +165,12 @@ export default function formatDistance(arg0, arg1, locale) {
         return locale.formatDistance("xDays", Math.round(rounded / tmp37), defaultResult3);
       } else if (rounded < c14) {
         const _Math4 = Math;
-        return locale.formatDistance("aboutXMonths", Math.round(rounded / c13), defaultResult3);
+        return locale.formatDistance("aboutXMonths", Math.round(rounded / tmp39), defaultResult3);
       } else {
         const defaultResult8 = differenceInMonths.default(defaultResult5, defaultResult4);
         if (defaultResult8 < 12) {
           const _Math3 = Math;
-          return locale.formatDistance("xMonths", Math.round(rounded / c13), defaultResult3);
+          return locale.formatDistance("xMonths", Math.round(rounded / tmp39), defaultResult3);
         } else {
           const result = defaultResult8 % 12;
           const _Math2 = Math;

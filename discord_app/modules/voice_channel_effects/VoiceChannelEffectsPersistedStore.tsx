@@ -1,5 +1,5 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectsConstants.tsx";
@@ -25,9 +25,9 @@ VoiceChannelEffectsPersistedStore.displayName = "VoiceChannelEffectsPersistedSto
 VoiceChannelEffectsPersistedStore.persistKey = "VoiceChannelEffectsPersistedStore";
 const voiceChannelEffectsPersistedStore = new VoiceChannelEffectsPersistedStore(dispatcherDefault, {
   VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: function handleToggleAnimationType() {
-    closure_0 = closure_0 === constants.BASIC ? constants.PREMIUM : constants.BASIC;
+    closure_0 = closure_0 === constants.BASIC ? tmp.PREMIUM : tmp.BASIC;
   }
 });
-const result = obj132.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx");
+const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx");
 
 export default voiceChannelEffectsPersistedStore;

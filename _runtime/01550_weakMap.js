@@ -6,32 +6,32 @@ function createNormalizedConfigItem(arg0) {
 function createNormalizedConfigs(arg0) {
 
 }
-arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
-  if (initialRouteName) {
+arg5.getActionFromState = function getActionFromState(index, obj) {
+  if (obj) {
     let obj2 = weakMap;
-    obj1 = weakMap.get(initialRouteName);
+    obj1 = weakMap.get(obj);
     if (!obj1) {
       if (typeof createNormalizedConfigItem !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof initialRouteName !== "object") {
-        let obj = {};
-        const result = obj2.set(initialRouteName, obj);
+      if (typeof obj !== "object") {
+        obj = {};
+        const result = obj2.set(obj, obj);
       } else {
         let tmp2 = null;
       }
       obj = { initialRouteName: null, screens: null };
-      obj[0] = initialRouteName.initialRouteName;
-      tmp2 = tmp2 != initialRouteName.screens;
+      obj[0] = obj.initialRouteName;
+      tmp2 = tmp2 != obj.screens;
       let reduced;
       if (tmp2) {
         if (typeof createNormalizedConfigs !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
-        const entries = Object.entries(initialRouteName.screens);
-        reduced = entries.reduce((acc, item, index) => {
-          [tmp, tmp2] = item;
+        const entries = Object.entries(obj.screens);
+        reduced = entries.reduce((arg0, arg1) => {
+          [tmp, tmp2] = arg1;
           if (typeof closure_1 !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -46,8 +46,8 @@ arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
                 }
                 let _Object = Object;
                 let entries = Object.entries(tmp2.screens);
-                reduced = entries.reduce((acc, item, index) => {
-                  [tmp, tmp2] = item;
+                reduced = entries.reduce((arg0, arg1) => {
+                  [tmp, tmp2] = arg1;
                   if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
@@ -62,8 +62,8 @@ arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
                         }
                         let _Object = Object;
                         let entries = Object.entries(tmp2.screens);
-                        reduced = entries.reduce((acc, item, index) => {
-                          [tmp, tmp2] = item;
+                        reduced = entries.reduce((arg0, arg1) => {
+                          [tmp, tmp2] = arg1;
                           if (typeof closure_1 !== "function") {
                             HermesBuiltin.throwTypeError();
                           }
@@ -78,8 +78,8 @@ arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
                                 }
                                 let _Object = Object;
                                 let entries = Object.entries(tmp2.screens);
-                                reduced = entries.reduce((acc, item, index) => {
-                                  [tmp, tmp2] = item;
+                                reduced = entries.reduce((arg0, arg1) => {
+                                  [tmp, tmp2] = arg1;
                                   if (typeof closure_1 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
@@ -98,29 +98,29 @@ arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
                                       }
                                       obj[1] = reduced;
                                     }
-                                    acc[tmp] = {};
-                                    return acc;
+                                    arg0[tmp] = {};
+                                    return arg0;
                                   }
                                 }, {});
                               }
                               obj[1] = reduced;
                             }
-                            acc[tmp] = {};
-                            return acc;
+                            arg0[tmp] = {};
+                            return arg0;
                           }
                         }, {});
                       }
                       obj[1] = reduced;
                     }
-                    acc[tmp] = {};
-                    return acc;
+                    arg0[tmp] = {};
+                    return arg0;
                   }
                 }, {});
               }
               obj[1] = reduced;
             }
-            acc[tmp] = {};
-            return acc;
+            arg0[tmp] = {};
+            return arg0;
           }
         }, {});
       }
@@ -139,7 +139,7 @@ arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
     if (1 !== substr.length) {
       if (2 === substr.length) {
         if (undefined === substr[0].key) {
-          initialRouteName = undefined;
+          let initialRouteName;
           if (obj1 != null) {
             initialRouteName = obj1.initialRouteName;
           }
@@ -208,6 +208,7 @@ arg5.getActionFromState = function getActionFromState(index, initialRouteName) {
             obj3.screen = tmp22.name;
             if (tmp22.state) {
               let obj5 = {};
+              let tmp25 = obj5;
               let merged2 = Object.assign(tmp22.params);
               obj3.params = obj5;
               obj3.pop = true;

@@ -26,11 +26,13 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
+            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
+                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
@@ -43,6 +45,7 @@ if (self2) {
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
+              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -60,8 +63,7 @@ if (self2) {
       closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
       return {
         localeError: (code) => {
-          let str = code.code;
-          switch (str) {
+          switch (code.code) {
             case "t":
             break;
             case "to":
@@ -651,156 +653,43 @@ if (self2) {
             case "ter":
             break;
             case "na":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp58 = closure_2[parsedTypeResult];
-              if (tmp58 == null) {
-                tmp58 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Entr\u00E9e invalide : instanceof " + code.expected + " attendu, " + tmp58 + " re\u00E7u";
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Entr\u00E9e invalide : " + expected + " attendu, " + tmp58 + " re\u00E7u";
-              }
-              return combined;
+            break;
             case "al":
             break;
             case "CardA11yWrapper":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 = "Entr\u00E9e invalide : " + closure_2.stringifyPrimitive(code.values[0]) + " attendu";
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                str = "Option invalide : une valeur parmi ";
-                combined1 = `Option invalide : une valeur parmi ` + closure_2.joinValues(code.values, "|") + " attendue";
-              }
-              return combined1;
+            break;
             case "perGuildMaxCount":
             break;
             case "getChannelIcon":
-              let str32 = "<";
-              if (code.inclusive) {
-                str32 = "<=";
-              }
-              let tmp36 = dependencyMap[code.origin];
-              if (tmp36 == null) {
-                tmp36 = null;
-              }
-              let str33 = code.origin;
-              if (tmp36) {
-                if (str33 == null) {
-                  str33 = "valeur";
-                }
-                const verb = tmp36.verb;
-                str = code.maximum.toString();
-                let str39 = tmp36.unit;
-                if (str39 == null) {
-                  str39 = "\u00E9l\u00E9ment(s)";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 = "Trop grand : " + str33 + " doit " + verb + " " + str32 + str + " " + str39;
-              } else {
-                let str34 = str33;
-                if (str33 == null) {
-                  str34 = "valeur";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 = "Trop grand : " + str34 + " doit \u00EAtre " + str32 + code.maximum.toString();
-              }
-              return combined2;
+            break;
             case "getChannelIconComponent":
             break;
             case "getChannelIconComponentWithGuild":
-              let str22 = ">";
-              if (code.inclusive) {
-                str22 = ">=";
-              }
-              let tmp24 = dependencyMap[code.origin];
-              if (tmp24 == null) {
-                tmp24 = null;
-              }
-              let origin = code.origin;
-              if (tmp24) {
-                let str26 = code.minimum;
-                let str1 = str26.toString();
-                let _HermesInternal11 = HermesInternal;
-                let combined3 = "Trop petit : " + origin + " doit " + tmp24.verb + " " + str22 + str1 + " " + tmp24.unit;
-              } else {
-                let str23 = code.minimum;
-                let str2 = str23.toString();
-                let _HermesInternal10 = HermesInternal;
-                combined3 = "Trop petit : " + origin + " doit \u00EAtre " + str22 + str2;
-              }
-              return combined3;
+            break;
             case "co":
             break;
             case "C":
-              if ("starts_with" === code.format) {
-                let _HermesInternal9 = HermesInternal;
-                let combined4 = "Cha\u00EEne invalide : doit commencer par \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                let _HermesInternal8 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit se terminer par \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                let _HermesInternal7 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit inclure \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                let _HermesInternal6 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit correspondre au mod\u00E8le " + code.pattern;
-              } else {
-                let format = dependencyMap2[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                let _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " invalide";
-              }
-              return combined4;
+            break;
             case "Component":
             break;
             case "om":
-              let _HermesInternal4 = HermesInternal;
-              let combined5 = "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
-              return combined5;
+            break;
             case "mp":
             break;
             case "po":
-              let tmp5 = code.keys.length > 1;
-              let str4 = "";
-              let str5 = "";
-              if (tmp5) {
-                str5 = "s";
-              }
-              let tmp6 = code.keys.length > 1;
-              if (tmp6) {
-                str4 = "s";
-              }
-              let joinValuesResult = closure_2.joinValues(code.keys, ", ");
-              let _HermesInternal3 = HermesInternal;
-              let combined6 = "Cl\u00E9" + str5 + " non reconnue" + str4 + " : " + joinValuesResult;
-              return combined6;
+            break;
             case "pon":
             break;
             case "one":
-              let _HermesInternal2 = HermesInternal;
-              let combined7 = "Cl\u00E9 invalide dans " + code.origin;
-              return combined7;
+            break;
             case "ne":
             break;
             case "en":
-              return "Entr\u00E9e invalide";
+            break;
             case "loadIfNecessary":
             break;
             case "searchAllStickers":
-              let _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              let combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "ANDROID_NOTIFICATION_LIGHTS":
             break;
             case "L":
@@ -1392,80 +1281,23 @@ if (self2) {
             case "background":
             break;
             case "backgroundColorGradient":
-              str22 = ">";
-              if (code.inclusive) {
-                str22 = ">=";
-              }
-              tmp24 = dependencyMap[code.origin];
-              if (tmp24 == null) {
-                tmp24 = null;
-              }
-              origin = code.origin;
-              if (tmp24) {
-                str26 = code.minimum;
-                str1 = str26.toString();
-                _HermesInternal11 = HermesInternal;
-                combined3 = "Trop petit : " + origin + " doit " + tmp24.verb + " " + str22 + str1 + " " + tmp24.unit;
-              } else {
-                str23 = code.minimum;
-                str2 = str23.toString();
-                _HermesInternal10 = HermesInternal;
-                combined3 = "Trop petit : " + origin + " doit \u00EAtre " + str22 + str2;
-              }
-              return combined3;
+            break;
             case "kg":
             break;
             case "gr":
-              if ("starts_with" === code.format) {
-                _HermesInternal9 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit commencer par \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                _HermesInternal8 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit se terminer par \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                _HermesInternal7 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit inclure \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                _HermesInternal6 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit correspondre au mod\u00E8le " + code.pattern;
-              } else {
-                format = dependencyMap2[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " invalide";
-              }
-              return combined4;
+            break;
             case "und":
             break;
             case "Color":
-              _HermesInternal4 = HermesInternal;
-              combined5 = "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
-              return combined5;
+            break;
             case "ACTIVITY_LAYOUT_MODE_UPDATE":
             break;
             case "LAYOUT":
-              tmp5 = code.keys.length > 1;
-              str4 = "";
-              str5 = "";
-              if (tmp5) {
-                str5 = "s";
-              }
-              tmp6 = code.keys.length > 1;
-              if (tmp6) {
-                str4 = "s";
-              }
-              joinValuesResult = closure_2.joinValues(code.keys, ", ");
-              _HermesInternal3 = HermesInternal;
-              combined6 = "Cl\u00E9" + str5 + " non reconnue" + str4 + " : " + joinValuesResult;
-              return combined6;
+            break;
             case "YOU":
             break;
             case "UPDATE_CONFIG":
-              _HermesInternal2 = HermesInternal;
-              combined7 = "Cl\u00E9 invalide dans " + code.origin;
-              return combined7;
+            break;
             case "DATE_CONFIG":
             break;
             case "GUILD_INCIDENT_ALERT_MODE_DISABLED":
@@ -1473,10 +1305,7 @@ if (self2) {
             case "lok":
             break;
             case "kom":
-              _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "startCol":
             break;
             case "startCollectors":
@@ -1514,10 +1343,7 @@ if (self2) {
             case "priceTiers":
             break;
             case "overflow_bottom":
-              _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "_bottom":
             break;
             case "bot":
@@ -1833,10 +1659,7 @@ if (self2) {
             case "disabledContainer":
             break;
             case "disabledContainerStyle":
-              _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "isa":
             break;
             case "sab":
@@ -1866,10 +1689,7 @@ if (self2) {
             case "getInitialOrientation":
             break;
             case "onTapThreadEmbed":
-              _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "time_to_full_display":
             break;
             case "_displayName":
@@ -1891,10 +1711,7 @@ if (self2) {
             case "contentScanMetadata":
             break;
             case "dataFormatters":
-              _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "flag_vc":
             break;
             case "vcData":
@@ -1998,7 +1815,9 @@ if (self2) {
             case "brain":
             break;
             case "braintree":
-            break;
+              let _HermesInternal = HermesInternal;
+              let combined = "Valeur invalide dans " + code.origin;
+              return combined;
             case "tre":
             break;
             case "tree":
@@ -2434,10 +2253,7 @@ if (self2) {
             case "leftActions":
             break;
             case "_$esjava$I_length":
-              _HermesInternal = HermesInternal;
-              str2 = "Valeur invalide dans ";
-              combined8 = "Valeur invalide dans " + code.origin;
-              return combined8;
+            break;
             case "I_length":
             break;
             case "_l":
@@ -2543,7 +2359,9 @@ if (self2) {
             case "SvgFromXml":
             break;
             case "ml-Mlym":
-            break;
+              _HermesInternal = HermesInternal;
+              combined = "Valeur invalide dans " + code.origin;
+              return combined;
             case "NOTIFICATION_SETTINGS_PERMISSION_HEADER":
             break;
             case "HEADER_TITLE_TEXT_STYLE":

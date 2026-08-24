@@ -1,5 +1,5 @@
 // discord_app/utils/native/requireNativeComponentOrDefault.native.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 
@@ -7,7 +7,7 @@ import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator
 let closure_3 = new timestampDefault("RequireNativeComponentOrDefault");
 const map = new Map();
 const tmp3 = new timestampDefault("RequireNativeComponentOrDefault");
-let result = obj132.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
+let result = set.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
 
 export default function requireNativeComponentOrDefault(warnWhenMissing) {
   ({ componentName, componentFoundInstance, componentMissingFallbackInstance } = warnWhenMissing);
@@ -23,9 +23,9 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
       if (componentFoundInstance == null) {
         componentFoundInstance = callback(componentName);
       }
-      const result = map.set(componentName, componentFoundInstance);
+      const result = obj.set(componentName, componentFoundInstance);
     }
-    let value = map.get(componentName);
+    let value = obj.get(componentName);
   } else {
     value = componentMissingFallbackInstance;
     if (flag) {

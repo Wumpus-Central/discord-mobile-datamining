@@ -1,23 +1,24 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftSuccess.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createEmptyPromotionsByType from "../../promotions/PromotionsStore.tsx";
+import closure_5 from "../../promotions/PromotionsStore.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
+  let obj = { bodyContainer: null, actionContainer: null };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: ThemesDefault.space.PX_16, paddingBottom: arg0 + ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_LOW);
   obj[1] = obj;
   return obj;
 });
-let result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftSuccess.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftSuccess.tsx");
 
 export default function PremiumGiftSuccess() {
   const tmp3 = callback3(importDefault(stateFromStores[7])().bottom);
@@ -50,9 +51,9 @@ export default function PremiumGiftSuccess() {
       tmp = null != stateFromStores;
     }
     if (tmp) {
-      lib(stateFromStores[16]);
-      const obj = { dismissAction: null };
-      obj[0] = ContentDismissActionType.INDIRECT_ACTION;
+      let obj = lib(stateFromStores[16]);
+      obj = { dismissAction: null };
+      obj[0] = closure_1_6.INDIRECT_ACTION;
       const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(lib(stateFromStores[17]).DismissibleContent.GIFTING_PROMOTION_REMINDER, stateFromStores, obj);
     }
   }, items1);

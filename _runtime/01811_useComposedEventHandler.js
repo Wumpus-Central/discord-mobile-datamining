@@ -2,25 +2,27 @@
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}" };
-arg5.useComposedEventHandler = function useComposedEventHandler(tmp8Result) {
+arg5.useComposedEventHandler = function useComposedEventHandler(substr) {
+  let obj = {};
   const set = new Set();
-  const obj = {};
-  const found = tmp8Result.filter((item, index) => null !== item);
-  let item = found.forEach((item, index) => {
-    const workletEventHandler = item.workletEventHandler;
+  obj = {};
+  const found = substr.filter((arg0) => null !== arg0);
+  let item = found.forEach((workletEventHandler) => {
+    workletEventHandler = workletEventHandler.workletEventHandler;
     if (workletEventHandler instanceof obj(set[0]).WorkletEventHandler) {
       const eventNames = workletEventHandler.eventNames;
-      item = eventNames.forEach((item, index) => {
-        set.add(item);
-        if (obj[item]) {
-          obj[item].push(workletEventHandler.worklet);
+      const item = eventNames.forEach((arg0) => {
+        closure_1_1.add(arg0);
+        if (closure_1_2[arg0]) {
+          tmp2[arg0].push(workletEventHandler.worklet);
           let tmp3 = workletEventHandler;
+          const arr2 = tmp2[arg0];
         } else {
           tmp3 = workletEventHandler;
           const items = [workletEventHandler.worklet];
-          obj[item] = items;
+          tmp2[arg0] = items;
         }
-        workletEventHandler[item + "" + obj[item].length] = tmp3.worklet;
+        workletEventHandler[arg0 + "" + closure_1_2[arg0].length] = tmp3.worklet;
       });
     }
   });
@@ -28,7 +30,8 @@ arg5.useComposedEventHandler = function useComposedEventHandler(tmp8Result) {
   const fn = function v(arg0) {
     closure_0 = arg0;
     if (obj[arg0.eventName]) {
-      const item = tmp[arg0.eventName].forEach((item, index) => item(closure_0));
+      const item = tmp[arg0.eventName].forEach((arg0) => arg0(closure_0));
+      const arr = tmp[arg0.eventName];
     }
   };
   fn.__closure = { workletsMap: obj };

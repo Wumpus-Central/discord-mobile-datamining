@@ -1,9 +1,9 @@
 // _runtime/07107_useRecyclingState.js
-import _slicedToArray from "metro/07041__slicedToArray.js";
+import closure_2 from "metro/07041__slicedToArray.js";
 import noop from "00019_noop.js";
 import { useLayoutState } from "07059_useLayoutState.js";
 
-const require = fn;
+const require = arg1;
 ({ useCallback: c3, useMemo: c4, useRef: c5 } = noop);
 
 export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
@@ -11,8 +11,8 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   dependencyMap = arg2;
   let tmp = callback4(undefined);
   const callback = tmp;
-  const obj = useLayoutState;
-  [r10015, tmp3] = callback(require("07059_useLayoutState.js").useLayoutState(0), 2);
+  const obj = _useLayoutState;
+  [r10015, tmp3] = callback(_useLayoutState.useLayoutState(0), 2);
   const callback2 = tmp3;
   callback3(() => {
     let tmpResult = closure_0;

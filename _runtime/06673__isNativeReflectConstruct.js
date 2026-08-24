@@ -1,19 +1,18 @@
 // _runtime/06673__isNativeReflectConstruct.js
 import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import appendTransformPropsDefault from "06579_appendTransformProps.js";
 import extractFontDefault from "06593_extractFont.js";
 import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
 import _isNativeReflectConstructDefault2 from "06670__isNativeReflectConstruct.js";
 import __INTERNAL_VIEW_CONFIGDefault from "metro/06674___INTERNAL_VIEW_CONFIG.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
+import closure_5 from "metro/00041__classCallCheck.js";
+import closure_6 from "metro/00093__possibleConstructorReturn.js";
+import closure_7 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const TextPath = fn;
+const TextPath = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -58,17 +57,16 @@ class TextPath {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
+        tmp = closure_1_1(closure_1_2[8])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const merged = Object.assign(matrix, lib(dependencyMap[9]).pickNotNil(extractFontDefault(matrix, true)));
+      const merged = Object.assign(matrix, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(matrix, true)));
       if (lib.root) {
         const root = lib.root;
         root.setNativeProps(matrix);
       }
-      const obj = lib(dependencyMap[9]);
     };
     return tmp3Result;
   }

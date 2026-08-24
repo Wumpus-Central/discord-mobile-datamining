@@ -2,36 +2,35 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import tDefault from "../../_runtime/03975_t.js";
 import getPremiumPlanItem from "PremiumUtils.tsx";
-import fetchSubscriptionPlansForSKU from "../actions/SubscriptionPlanActionCreators.tsx";
 import prototype from "../modules/checkout/CheckoutError.tsx";
 import PauseDuration from "../../discord_common/js/shared/shared-constants/PauseDuration.tsx";
-import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../_runtime/00019_noop.js";
-import addSubscriptionPlan from "../stores/billing/SubscriptionPlanStore.tsx";
+import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../_runtime/00019_noop.js";
+import closure_5 from "../stores/billing/SubscriptionPlanStore.tsx";
 import ME from "../Constants.tsx";
 import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
-require = fn;
+require = arg1;
 ({ SubscriptionStatusTypes: closure_6, SubscriptionTypes: error } = ME);
 ({ SubscriptionPlans: closure_8, SubscriptionPlanInfo: c9 } = GuildFeatures);
-let result = require("obj132").fileFinishedImporting("utils/SubscriptionUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/SubscriptionUtils.tsx");
 
 export const getSubscriptionPlans = function getSubscriptionPlans(items) {
   items = items.items;
-  return items.map((item, index) => {
-    const value = closure_5.get(item.planId);
+  return items.map((planId) => {
+    const value = closure_5.get(planId.planId);
     callback(table[5])(null != value, "Unable to fetch plan");
     return value;
   });
 };
 export const getSubscriptionSKUs = function getSubscriptionSKUs(items) {
   items = items.items;
-  const mapped = items.map((item, index) => {
-    const value = closure_5.get(item.planId);
+  const mapped = items.map((planId) => {
+    const value = closure_5.get(planId.planId);
     callback(table[5])(null != value, "Unable to fetch plan");
     return value;
   });
-  return mapped.map((item, index) => item.skuId);
+  return mapped.map((skuId) => skuId.skuId);
 };
 export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchImmediately(getCurrentSubscriptionPlanIdForGroup, newPlanId, arr) {
   const currentSubscriptionPlanIdForGroup = getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
@@ -92,11 +91,15 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
   if (null == value) {
     const _HermesInternal = HermesInternal;
     _modDef38(null != table[subscriptionPlanId], "Missing hardcoded subscriptionPlan: " + subscriptionPlanId);
+    const tmp12 = require;
+    const tmp8 = _modDef38;
+    const tmp9 = null != table[subscriptionPlanId];
     const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!closure_5.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = fetchSubscriptionPlansForSKU.fetchSubscriptionPlansForSKU(result, closure_1);
-      const tmp12Result = fetchSubscriptionPlansForSKU;
+      const subscriptionPlansForSKU = tmp12(7223).fetchSubscriptionPlansForSKU(result, closure_1);
+      const tmp12Result = tmp12(7223);
     }
+    const obj3 = getPremiumPlanItem;
   }
   return value;
 };
@@ -125,8 +128,9 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
       if (null != subscriptionPlanId) {
         if (!closure_3) {
           const _HermesInternal = HermesInternal;
-          callback(first[5])(null != closure_1_9[subscriptionPlanId], "Missing hardcoded subscriptionPlan: " + subscriptionPlanId);
+          callback(first[5])(null != closure_1_9[tmp12], "Missing hardcoded subscriptionPlan: " + tmp12);
           const tmp5 = callback(first[5]);
+          const tmp6 = null != closure_1_9[tmp12];
           const obj = subscriptionPlanId(first[8]);
           const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(subscriptionPlanId(first[7]).castPremiumSubscriptionAsSkuId(tmp2.skuId), callback);
           const obj2 = subscriptionPlanId(first[7]);
@@ -138,7 +142,7 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
 };
 export const getSubscriptionPauseDurations = function getSubscriptionPauseDurations(status) {
   const keys = Object.keys(PauseDuration.PauseDuration);
-  const found = keys.filter((item, index) => isNaN(Number(item)));
+  const found = keys.filter((arg0) => isNaN(Number(arg0)));
   if (status.status !== constants.PAUSED) {
     let obj = { durations: null, currentDaysPaused: 0 };
     obj[0] = found;
@@ -149,8 +153,13 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     const rounded = Math.round(tDefault(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
+      let tmp11 = require;
+      let tmp12 = dependencyMap;
+      let tmp13 = dependencyMap;
+      let tmp10 = item10042;
       if (PauseDuration.PauseDuration[item10042] > rounded) {
-        let arr = items.push(item10042);
+        let tmp14 = item10042;
+        let arr = items.push(tmp10);
       }
       continue;
     }
@@ -163,11 +172,13 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     obj[0] = [];
     return obj;
   }
+  const tmp = dependencyMap;
 };
 export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
     isMomentResult = tDefault.isMoment(isSameOrAfter);
+    const obj = tDefault;
   }
   if (isMomentResult) {
     isMomentResult = isSameOrAfter.isSameOrAfter(tDefault());

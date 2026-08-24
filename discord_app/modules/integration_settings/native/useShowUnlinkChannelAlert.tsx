@@ -1,9 +1,9 @@
 // discord_app/modules/integration_settings/native/useShowUnlinkChannelAlert.tsx
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
 
 export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -38,8 +38,8 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   }), items);
   const items1 = [arg1, callback];
   return React.useCallback(() => {
-    callback2(4656);
-    let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+    let obj = callback2(4656);
+    obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.JmUENg);
     const intl2 = callback(1236).intl;

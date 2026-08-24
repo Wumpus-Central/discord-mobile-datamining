@@ -1,13 +1,14 @@
 // discord_app/modules/channel/ChannelInfoActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
-import handleConnectionReset from "ChannelStatusStore.tsx";
+import closure_2 from "../gateway/GatewayConnectionStore.tsx";
+import closure_3 from "ChannelStatusStore.tsx";
 
-const result = require("obj132").fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");
 
 export const fetchChannelInfo = function fetchChannelInfo(guild_id) {
   if (!closure_3.hasRequestedStatuses(guild_id)) {
-    const obj = { type: "FETCH_CHANNEL_INFO", guildId: null };
+    let obj = dispatcherDefault;
+    obj = { type: "FETCH_CHANNEL_INFO", guildId: null };
     obj[1] = guild_id;
     obj.dispatch(obj);
     socket = socket.getSocket();

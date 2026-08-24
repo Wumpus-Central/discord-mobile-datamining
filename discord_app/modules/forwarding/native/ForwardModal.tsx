@@ -1,25 +1,26 @@
 // discord_app/modules/forwarding/native/ForwardModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_5 from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import removePendingListFetch from "../../conversations/ConversationsStore.tsx";
-import filterStaffGuild from "../../icymi/ICYMIStore.tsx";
-import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
-import reinjectEphemerals from "../../../stores/MessageStore.tsx";
-import messages from "../../../stores/native/MessagePreviewStore.tsx";
+import closure_7 from "../../conversations/ConversationsStore.tsx";
+import closure_8 from "../../icymi/ICYMIStore.tsx";
+import closure_9 from "../../../stores/ChannelStore.tsx";
+import closure_10 from "../../../stores/MessageStore.tsx";
+import closure_11 from "../../../stores/native/MessagePreviewStore.tsx";
 import { MAX_DESTINATION_COUNT } from "../ForwardConstants.tsx";
 import { UserRowModes } from "../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import "createCacheKey";
+import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = fn;
+const require = arg1;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createCacheKey = { flex: 1, display: "flex", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { container: null };
+createCacheKey = { flex: 1, display: "flex", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let result = require("obj132").fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
+let result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
 
 export default function ForwardModal(message) {
   message = message.message;
@@ -31,6 +32,9 @@ export default function ForwardModal(message) {
   }
   const source = message.source;
   const customSendHandler = message.customSendHandler;
+  let height;
+  let channel_id;
+  let id;
   c7 = undefined;
   let stateFromStores;
   let stateFromStores1;
@@ -47,9 +51,9 @@ export default function ForwardModal(message) {
   let callback4;
   closure_21 = undefined;
   let tmp = callback();
-  let height = forwardOptions(source[14])({ ignoreKeyboard: true }).height;
-  const channel_id = message.channel_id;
-  let id = message.id;
+  height = forwardOptions(source[14])({ ignoreKeyboard: true }).height;
+  channel_id = message.channel_id;
+  id = message.id;
   let obj = channel_id;
   const items = [channel_id];
   const memo = channel_id.useMemo(() => callback(source[15]).getDestinationIdFromChannelId(channel_id), items);
@@ -63,14 +67,15 @@ export default function ForwardModal(message) {
     } else {
       message = message.getMessage(channel_id, id);
       if (message == null) {
-        message = trackForwardAddRecipientOnce.getMessage(id);
+        message = trackForwardAddRecipientOnce.getMessage(tmp3);
       }
       if (message == null) {
-        message = stateFromStores.getMessage(id);
+        message = stateFromStores.getMessage(tmp3);
       }
       if (message == null) {
-        message = _undefined.getMessage(channel_id, id);
+        message = _undefined.getMessage(tmp2, tmp3);
       }
+      tmp2 = channel_id;
     }
     return message;
   }, items2);
@@ -91,6 +96,7 @@ export default function ForwardModal(message) {
   closure_14 = obj.useRef(0);
   let tmp5Result = tmp5(obj.useState(""), 2);
   first = tmp5Result[0];
+  callback = tmp5Result[1];
   closure_17 = obj.useRef("");
   const items5 = [channel_id, id, trackForwardEditSearchOnce];
   callback = obj.useCallback((current) => {
@@ -118,20 +124,21 @@ export default function ForwardModal(message) {
     ref.current = ref.current + 1;
   }, []);
   const callback2 = obj.useCallback(() => {
-    callback(source[17]);
-    const obj = { channelId: channel_id, messageId: id, numDestinationChanges: ref.current, numQueryChanges: ref2.current };
+    let obj = callback(source[17]);
+    obj = { channelId: channel_id, messageId: id, numDestinationChanges: ref.current, numQueryChanges: ref2.current };
     obj.trackForwardCancel(obj);
     callback(source[18]).closeForwardModal();
   }, items7);
   const tmp18 = trackForwardEditSearchOnce;
   const tmp6 = height(channel_id.useState(false), 2);
   _require(source[19]).useNavigatorBackPressHandler(() => {
-    callback(source[17]);
-    const obj = { channelId: channel_id, messageId: id, numDestinationChanges: ref.current, numQueryChanges: ref2.current };
+    let obj = callback(source[17]);
+    obj = { channelId: channel_id, messageId: id, numDestinationChanges: ref.current, numQueryChanges: ref2.current };
     obj.trackForwardCancel(obj);
     return false;
   });
   const items8 = [stateFromStores, stateFromStores1];
+  _require = undefined;
   const callback3 = obj.useCallback((type) => {
     let destinationIsUnavailable;
     if (null != stateFromStores) {
@@ -150,215 +157,240 @@ export default function ForwardModal(message) {
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arr;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arr;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
-        }
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arr;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arr;
-              return obj;
-            } else {
-              closure_2 = tmp2;
-              c1 = tmp3;
-              c1 = undefined;
-              closure_2 = undefined;
-              c3 = undefined;
-              if (null == c3) {
-                if (null != stateFromStores) {
-                  closure_1_7(true);
-                  c3 = 2;
-                  c4 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = Promise.all(first1.map(callback(source[15]).getOrResolveChannelIdFromDestinationId));
-                  return obj1;
-                } else {
-                  const obj2 = { key: "FORWARD_ERROR", content: null };
-                  const intl2 = callback(source[22]).intl;
-                  obj2[1] = intl2.string(callback(source[22]).t.R0RpRX);
-                  forwardOptions(source[21]).open(obj2);
-                  const obj28 = forwardOptions(source[21]);
-                }
-              } else {
-                const obj3 = { withMessage: null };
-                obj3[0] = tmp119;
-                c3 = 1;
-                c4 = 1;
-                let obj4 = { value: null, done: false };
-                obj4[0] = tmp120(first1, obj3, closure_1_7);
-                return obj4;
-              }
-            }
+        let openResult = arg0;
+        openResult = tmp4;
+        if (tmp5 === 3) {
+          if (arg0 === 1) {
+            throw arr;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arr;
+            return obj;
           } else {
-            if (1 === tmp6) {
+            return { value: "HermesInternal", done: "HermesInternal" };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === c3) {
               if (arg0 === 1) {
                 c4 = 3;
                 throw arr;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arr;
-                return obj5;
+                obj = { value: null, done: true };
+                obj[0] = arr;
+                return obj;
+              } else {
+                closure_2 = tmp2;
+                c1 = tmp3;
+                c1 = undefined;
+                closure_2 = undefined;
+                c3 = undefined;
+                openResult = null;
+                if (null == c3) {
+                  if (null != closure_1_8) {
+                    closure_1_7(true);
+                    c3 = 2;
+                    c4 = 1;
+                    obj1 = { value: null, done: false };
+                    obj1[0] = Promise.all(closure_1_18.map(callback(source[15]).getOrResolveChannelIdFromDestinationId));
+                    return obj1;
+                  } else {
+                    openResult = forwardOptions;
+                    openResult = source;
+                    const obj2 = { key: "FORWARD_ERROR", content: null };
+                    openResult = callback;
+                    openResult = source;
+                    const intl2 = callback(source[22]).intl;
+                    openResult = callback;
+                    openResult = source;
+                    obj2[1] = intl2.string(callback(source[22]).t.R0RpRX);
+                    openResult = forwardOptions(source[21]).open(obj2);
+                    const obj28 = forwardOptions(source[21]);
+                  }
+                } else {
+                  const obj3 = { withMessage: null };
+                  obj3[0] = openResult;
+                  c3 = 1;
+                  c4 = 1;
+                  let obj4 = { value: null, done: false };
+                  obj4[0] = openResult(closure_1_18, obj3, closure_1_7);
+                  return obj4;
+                }
               }
             } else {
-              if (2 === tmp6) {
+              if (1 === tmp6) {
                 if (arg0 === 1) {
                   c4 = 3;
                   throw arr;
                 } else if (arg0 === 2) {
                   c4 = 3;
-                  const obj6 = { value: null, done: true };
-                  obj6[0] = arr;
-                  return obj6;
-                } else {
-                  closure_1 = arr.filter(callback(source[23]).isNotNullish);
-                  if (forwardOptions(source[24])(stateFromStores, closure_1)) {
-                    const promise = new Promise((arg0) => {
-                      const callback = arg0;
-                      callback(arr[25]);
-                      const obj = {
-                        onConfirm() {
-                          return callback(true);
-                        },
-                        onBack() {
-                          return callback(false);
-                        }
-                      };
-                      obj.openAlert("staff-to-non-staff-forward", callback2(_undefined(arr[26]), obj));
-                    });
-                    c3 = 3;
-                    c4 = 1;
-                    const obj7 = { value: null, done: false };
-                    obj7[0] = promise;
-                    return obj7;
-                  }
+                  const obj5 = { value: null, done: true };
+                  obj5[0] = arr;
+                  return obj5;
                 }
               } else {
-                if (3 === tmp6) {
+                if (2 === tmp6) {
                   if (arg0 === 1) {
                     c4 = 3;
                     throw arr;
                   } else if (arg0 === 2) {
                     c4 = 3;
-                    let obj8 = { value: null, done: true };
-                    obj8[0] = arr;
-                    return obj8;
-                  } else if (!arr) {
-                    closure_1_7(false);
-                    c4 = 3;
-                    const obj9 = { value: null, done: true };
-                    obj9[0] = undefined;
-                    return obj9;
+                    const obj6 = { value: null, done: true };
+                    obj6[0] = arr;
+                    return obj6;
+                  } else {
+                    openResult = c1;
+                    openResult = closure_2;
+                    openResult = callback;
+                    openResult = source;
+                    closure_1 = arr.filter(callback(source[23]).isNotNullish);
+                    openResult = forwardOptions;
+                    openResult = source;
+                    openResult = closure_1_8;
+                    openResult = closure_1;
+                    if (forwardOptions(source[24])(closure_1_8, closure_1)) {
+                      const promise = new Promise((arg0) => {
+                        const callback = arg0;
+                        let obj = callback(arr[25]);
+                        obj = {
+                          onConfirm() {
+                            return callback(true);
+                          },
+                          onBack() {
+                            return callback(false);
+                          }
+                        };
+                        obj.openAlert("staff-to-non-staff-forward", callback2(_undefined(arr[26]), obj));
+                      });
+                      c3 = 3;
+                      c4 = 1;
+                      const obj7 = { value: null, done: false };
+                      obj7[0] = promise;
+                      return obj7;
+                    }
                   }
-                } else if (4 === tmp6) {
-                  if (arg0 === 1) {
+                } else {
+                  if (3 === tmp6) {
+                    if (arg0 === 1) {
+                      c4 = 3;
+                      throw arr;
+                    } else if (arg0 === 2) {
+                      c4 = 3;
+                      let obj8 = { value: null, done: true };
+                      obj8[0] = arr;
+                      return obj8;
+                    } else if (!arr) {
+                      closure_1_7(false);
+                      c4 = 3;
+                      const obj9 = { value: null, done: true };
+                      obj9[0] = undefined;
+                      return obj9;
+                    }
+                  } else if (4 === tmp6) {
+                    if (arg0 === 1) {
+                      c4 = 3;
+                      throw arr;
+                    } else if (arg0 !== 2) {
+                      obj8 = callback(source[28]);
+                      obj8.transitionToChannel(c1[0], { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
+                      let obj13 = forwardOptions(source[29]);
+                      const obj10 = {};
+                      const merged = Object.assign(closure_1);
+                      obj10.withMessage = callback;
+                      obj13.sendForwards(closure_1_8, c1, obj10);
+                      c3 = 5;
+                      c4 = 1;
+                    }
+                  } else if (arg0 === 1) {
                     c4 = 3;
                     throw arr;
-                  } else if (arg0 !== 2) {
-                    obj8 = callback(source[28]);
-                    obj8.transitionToChannel(c1[0], { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
-                    let obj13 = forwardOptions(source[29]);
-                    const obj10 = {};
-                    const merged = Object.assign(closure_1);
-                    obj10.withMessage = callback;
-                    obj13.sendForwards(stateFromStores, c1, obj10);
-                    c3 = 5;
-                    c4 = 1;
-                  }
-                } else if (arg0 === 1) {
-                  c4 = 3;
-                  throw arr;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj11 = { value: null, done: true };
-                  obj11[0] = arr;
-                  return obj11;
-                } else {
-                  closure_2 = arr;
-                  const everyResult = closure_2.every((item, index) => "fulfilled" === item.status);
-                  if (!everyResult) {
-                    obj = { channelId: null, messageId: null, hasError: true, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null };
-                    obj[0] = channel_id;
-                    obj[1] = id;
-                    let tmp11 = null != callback;
-                    if (tmp11) {
-                      tmp11 = "" !== callback;
+                  } else if (arg0 === 2) {
+                    c4 = 3;
+                    const obj11 = { value: null, done: true };
+                    obj11[0] = arr;
+                    return obj11;
+                  } else {
+                    openResult = c1;
+                    closure_2 = arr;
+                    openResult = closure_2;
+                    openResult = c1;
+                    openResult = closure_2;
+                    openResult = callback;
+                    openResult = source;
+                    openResult = closure_2.every((status) => "fulfilled" === status.status);
+                    if (!openResult) {
+                      obj = { channelId: null, messageId: null, hasError: true, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null };
+                      obj[0] = closure_1_5;
+                      obj[1] = closure_1_6;
+                      let tmp11 = null != callback;
+                      if (tmp11) {
+                        tmp11 = "" !== callback;
+                      }
+                      obj[3] = tmp11;
+                      obj[4] = c1.length;
+                      obj[5] = closure_1_13.current;
+                      obj[6] = closure_1_14.current;
+                      obj27.trackForwardSent(obj);
+                      c3 = closure_1_18.filter((arg0, arg1) => "rejected" === arr[arg1].status);
+                      obj1 = callback(source[18]);
+                      let obj12 = { message: null, failedDestinations: null, forwardOptions: null };
+                      obj12[0] = closure_1_8;
+                      obj12[1] = c3;
+                      obj12[2] = closure_1;
+                      const result = obj1.showForwardFailedAlertModal(obj12);
                     }
-                    obj[3] = tmp11;
-                    obj[4] = c1.length;
-                    obj[5] = closure_1_13.current;
-                    obj[6] = closure_1_14.current;
-                    obj27.trackForwardSent(obj);
-                    c3 = first1.filter((item, index) => "rejected" === arr[index].status);
-                    obj1 = callback(source[18]);
-                    let obj12 = { message: null, failedDestinations: null, forwardOptions: null };
-                    obj12[0] = stateFromStores;
-                    obj12[1] = c3;
-                    obj12[2] = closure_1;
-                    const result = obj1.showForwardFailedAlertModal(obj12);
+                    obj27 = callback(source[17]);
                   }
-                  obj27 = callback(source[17]);
+                  c4 = 3;
+                  obj13 = { value: null, done: true };
+                  obj13[0] = arr;
+                  return obj13;
                 }
-                c4 = 3;
-                obj13 = { value: null, done: true };
-                obj13[0] = arr;
-                return obj13;
+                obj12 = callback(source[18]);
+                obj12.closeForwardModal();
+                if (1 === closure_1.length) {
+                  let obj15 = forwardOptions(source[27]);
+                  const obj14 = { channelId: null };
+                  obj14[0] = forwardOptions[0];
+                  c3 = 4;
+                  c4 = 1;
+                  obj15 = { value: null, done: false };
+                  obj15[0] = obj15.fetchMessages(obj14);
+                  return obj15;
+                }
               }
-              obj12 = callback(source[18]);
-              obj12.closeForwardModal();
-              if (1 === closure_1.length) {
-                let obj15 = forwardOptions(source[27]);
-                const obj14 = { channelId: null };
-                obj14[0] = forwardOptions[0];
-                c3 = 4;
-                c4 = 1;
-                obj15 = { value: null, done: false };
-                obj15[0] = obj15.fetchMessages(obj14);
-                return obj15;
+              const obj16 = { channelId: null, messageId: null, hasError: false, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null, source: null };
+              obj16[0] = closure_1_5;
+              obj16[1] = closure_1_6;
+              let tmp31 = null != callback;
+              if (tmp31) {
+                tmp31 = "" !== callback;
               }
+              obj16[3] = tmp31;
+              obj16[4] = closure_1.length;
+              obj16[5] = closure_1_13.current;
+              obj16[6] = closure_1_14.current;
+              obj16[7] = closure_1_2;
+              openResult(obj16);
+              obj4 = forwardOptions(source[21]);
+              const obj17 = { key: "FORWARD_SUCCESS", IconComponent: null, content: null };
+              obj17[1] = forwardOptions(source[30]);
+              const intl = callback(source[22]).intl;
+              obj17[2] = intl.string(callback(source[22]).t.kwmYkt);
+              obj4.open(obj17);
+              c4 = 3;
+              const obj18 = { value: null, done: true };
+              obj18[0] = undefined;
+              return obj18;
             }
-            const obj16 = { channelId: null, messageId: null, hasError: false, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null, source: null };
-            obj16[0] = channel_id;
-            obj16[1] = id;
-            let tmp31 = null != callback;
-            if (tmp31) {
-              tmp31 = "" !== callback;
-            }
-            obj16[3] = tmp31;
-            obj16[4] = closure_1.length;
-            obj16[5] = closure_1_13.current;
-            obj16[6] = closure_1_14.current;
-            obj16[7] = closure_1_2;
-            tmp110(obj16);
-            obj4 = forwardOptions(source[21]);
-            const obj17 = { key: "FORWARD_SUCCESS", IconComponent: null, content: null };
-            obj17[1] = forwardOptions(source[30]);
-            const intl = callback(source[22]).intl;
-            obj17[2] = intl.string(callback(source[22]).t.kwmYkt);
-            obj4.open(obj17);
             c4 = 3;
-            const obj18 = { value: null, done: true };
-            obj18[0] = undefined;
-            return obj18;
+          } catch (tmp96) {
+            c4 = openResult;
+            throw tmp96;
           }
-          c4 = 3;
-        } catch (tmp96) {
-          c4 = tmp;
-          throw tmp96;
         }
       }
     })();
@@ -385,7 +417,7 @@ export default function ForwardModal(message) {
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    const channelPermalink = callback(source[31]).getChannelPermalink(guild_id, channel_id, id);
+    const channelPermalink = callback(source[31]).getChannelPermalink(guild_id, tmp, id);
     const obj = callback(source[31]);
     const result = callback(source[32]).triggerHapticFeedback(forwardOptions(source[33]).IMPACT_LIGHT);
     const obj2 = callback(source[32]);
@@ -394,7 +426,6 @@ export default function ForwardModal(message) {
     callback(source[35]).copy(channelPermalink);
     const obj4 = callback(source[35]);
     callback(source[17]).trackForwardCopyLink(channel_id, id);
-    const obj5 = callback(source[17]);
   }, items11);
   const items12 = [height];
   const memo1 = obj.useMemo(() => {

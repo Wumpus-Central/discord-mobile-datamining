@@ -1,9 +1,9 @@
 // _runtime/01516_getPartialState.js
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
+import closure_4 from "metro/00109__objectWithoutProperties.js";
 import importAllResult from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const require = fn;
+const require = arg1;
 let closure_3 = ["key", "routeNames"];
 let c5 = importAllResult;
 function getPartialState(arg0) {
@@ -63,7 +63,7 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
       throw error;
     }
   }
-  let tmpResult = require(tmp2[5]);
+  let tmpResult = tmp(tmp2[5]);
   const syncState = tmpResult.useSyncState(() => {
     let tmp2;
     if (null != closure_0) {
@@ -79,12 +79,12 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
       let merged = Object.assign(getState(tmp2, state));
       obj.stale = true;
       let routes = tmp2.routes;
-      obj.routes = routes.map((item, index) => {
-        let tmp = item;
-        if (undefined !== item.state) {
+      obj.routes = routes.map((state) => {
+        let tmp = state;
+        if (undefined !== state.state) {
           let obj = {};
-          const merged = Object.assign(item);
-          state = item.state;
+          const merged = Object.assign(state);
+          state = state.state;
           if (typeof closure_7 !== "function") {
             HermesBuiltin.throwTypeError();
           }
@@ -95,12 +95,12 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
             const merged1 = Object.assign(callback(state, closure_3));
             obj.stale = true;
             const routes = state.routes;
-            obj.routes = routes.map((item, index) => {
-              let tmp = item;
-              if (undefined !== item.state) {
+            obj.routes = routes.map((state) => {
+              let tmp = state;
+              if (undefined !== state.state) {
                 let obj = {};
-                const merged = Object.assign(item);
-                state = item.state;
+                const merged = Object.assign(state);
+                state = state.state;
                 if (typeof closure_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
@@ -111,12 +111,12 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
                   const merged1 = Object.assign(callback(state, closure_3));
                   obj.stale = true;
                   const routes = state.routes;
-                  obj.routes = routes.map((item, index) => {
-                    let tmp = item;
-                    if (undefined !== item.state) {
+                  obj.routes = routes.map((state) => {
+                    let tmp = state;
+                    if (undefined !== state.state) {
                       let obj = {};
-                      const merged = Object.assign(item);
-                      state = item.state;
+                      const merged = Object.assign(state);
+                      state = state.state;
                       if (typeof closure_7 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
@@ -158,7 +158,7 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
   setState = syncState.setState;
   scheduleUpdate = syncState.scheduleUpdate;
   flushUpdates = syncState.flushUpdates;
-  tmpResult = require(tmp2[6]);
+  tmpResult = tmp(tmp2[6]);
   const lazyValue = tmpResult.useLazyValue(() => {
     const weakMap = new WeakMap();
     return weakMap;
@@ -178,7 +178,7 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
     closure_0 = arg0;
     if (null == _undefined.focus[0]) {
       const _console = console;
-      console.error(require(onReady[10]).NOT_INITIALIZED_ERROR);
+      console.error(closure_1_0(onReady[10]).NOT_INITIALIZED_ERROR);
     } else {
       const focus = tmp.focus;
       focus[0]((dispatch) => dispatch.dispatch(closure_0));
@@ -212,12 +212,12 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
     }
     if (null == key) {
       const _console = console;
-      console.error(require(onReady[10]).NOT_INITIALIZED_ERROR);
+      console.error(closure_1_0(onReady[10]).NOT_INITIALIZED_ERROR);
     } else {
       const focus = _undefined.focus;
       focus[0]((dispatch) => {
         const obj = {};
-        const CommonActions = key(onReady[11]).CommonActions;
+        const CommonActions = key(closure_1_2[11]).CommonActions;
         const merged = Object.assign(CommonActions.reset(key));
         obj.target = key;
         return dispatch.dispatch(obj);
@@ -238,7 +238,7 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
   const tmp19 = onStateChange(onReady[9])(() => {
     const tmp = callback();
     if (null != tmp) {
-      return require(onReady[12]).findFocusedRoute(tmp);
+      return closure_1_0(onReady[12]).findFocusedRoute(tmp);
     }
   });
   closure_20 = tmp19;
@@ -253,16 +253,16 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
   let items = [tmp16, tmp15, eventEmitter, getCurrentOptions, tmp19, tmp18, getState, tmp20, tmp17];
   memo = obj.useMemo(() => {
     const obj = {};
-    const keys = Object.keys(require(onReady[11]).CommonActions);
-    const merged = Object.assign(keys.reduce((acc, item, index) => {
-      closure_0 = item;
-      acc[item] = () => {
+    const keys = Object.keys(closure_1_0(onReady[11]).CommonActions);
+    const merged = Object.assign(keys.reduce((arg0, arg1) => {
+      closure_0 = arg1;
+      arg0[arg1] = () => {
         const items = [...arguments];
-        const CommonActions = closure_2_0(onReady[11]).CommonActions;
+        const CommonActions = closure_2_0(closure_2_2[11]).CommonActions;
         const items1 = [...items];
         return closure_1_16(CommonActions[closure_0].apply(items1));
       };
-      return acc;
+      return arg0;
     }, {}));
     const merged1 = Object.assign(eventEmitter.create("root"));
     obj.dispatch = closure_16;
@@ -299,7 +299,8 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
   const tmp27 = onStateChange(onReady[9])((current) => {
     if (ref3.current !== current) {
       ref3.current = current;
-      const obj = { options: null };
+      let obj = { type: "options", data: null };
+      obj = { options: null };
       obj[0] = current;
       obj[1] = obj;
       eventEmitter.emit(obj);
@@ -360,9 +361,9 @@ export const BaseNavigationContainer = importAllResult.forwardRef(function BaseN
       ref8.current(tmp);
     }
     ref.current = false;
-    tmp = callback();
   }, items5);
   const tmpResult4 = require(onReady[14]);
+  obj = { value: memo, children: null };
   obj = { value: memo1, children: null };
   obj1 = { value: memo2, children: null };
   const obj2 = { value: lazyValue, children: null };

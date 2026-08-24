@@ -1,14 +1,14 @@
 // _runtime/06476_importDefaultResult1.js
 import isGestureEnabled from "06445_isGestureEnabled.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import noop from "00019_noop.js";
+import closure_5 from "metro/00032__slicedToArray.js";
+import closure_6 from "metro/00109__objectWithoutProperties.js";
+import closure_7 from "00019_noop.js";
 import { useState } from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
 import importDefaultResult from "06389_createNativeWrapper.js";
 
-require = fn;
+require = arg1;
 let closure_3 = ["children", "refreshControl", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER", "keyboardShouldPersistTaps"];
 let closure_4 = ["refreshControl", "ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 ({ FlatList: c9, RefreshControl, ScrollView: ScrollView2, Switch, TextInput } = get_ActivityIndicator);
@@ -30,16 +30,17 @@ class ScrollView {
     obj.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
     obj.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = function onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER(arg0) {
       closure_0 = arg0;
-      require(table[7]).ghQueueMicrotask(() => {
-        let tmp = first;
-        if (first) {
-          tmp = first.handlerTag === lib.handlerTag;
+      closure_1_0(table[7]).ghQueueMicrotask(() => {
+        let tmp = closure_1_1;
+        if (closure_1_1) {
+          tmp = closure_1_1.handlerTag === lib.handlerTag;
         }
         if (!tmp) {
           closure_1_2(lib);
           if (lib != null) {
-            lib(lib);
+            lib(tmp4);
           }
+          tmp4 = lib;
         }
       });
     };
@@ -79,27 +80,34 @@ export const FlatList = (ref) => {
   dependencyMap = tmp2[1];
   function updateGesture(arg0) {
     closure_0 = arg0;
-    require(table[7]).ghQueueMicrotask(() => {
-      let tmp = first;
-      if (first) {
-        tmp = first.handlerTag === lib.handlerTag;
+    closure_1_0(table[7]).ghQueueMicrotask(() => {
+      let tmp = closure_1_1;
+      if (closure_1_1) {
+        tmp = closure_1_1.handlerTag === lib.handlerTag;
       }
       if (!tmp) {
         closure_1_2(lib);
         if (lib != null) {
-          lib(lib);
+          lib(tmp4);
         }
+        tmp4 = lib;
       }
     });
   }
   let obj = {};
+  obj = {};
   const entries = Object.entries(callback2(ref, obj));
   for (const item10028 of entries) {
+    let tmp5 = callback;
     let tmp6 = callback(item10028, 2);
     let first1 = tmp6[0];
     let tmp8 = first1;
     let tmp9 = tmp6[1];
+    let tmp10 = require;
+    let tmp11 = dependencyMap;
     let NativeWrapperProps = isGestureEnabled.NativeWrapperProps;
+    let tmp12 = first1;
+    let tmp13 = tmp9;
     if (NativeWrapperProps.has(first1)) {
       obj[tmp8] = tmp9;
     } else {
@@ -113,7 +121,7 @@ export const FlatList = (ref) => {
     obj = { onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER: updateGesture };
     const merged = Object.assign(arg0);
     const merged1 = Object.assign(obj);
-    return <ScrollView onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER={updateGesture} />;
+    return closure_1_10(closure_1_12, obj);
   };
   if (!refreshControl) {
     obj.refreshControl = undefined;
@@ -128,5 +136,4 @@ export const FlatList = (ref) => {
     }
     closure_7.cloneElement(refreshControl, obj2);
   }
-  let tmp = callback2(ref, obj);
 };

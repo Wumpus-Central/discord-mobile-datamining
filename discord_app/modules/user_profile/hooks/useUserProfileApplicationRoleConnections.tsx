@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import createUserWidgetFromServer from "../UserProfileStore.tsx";
+import closure_3 from "../UserProfileStore.tsx";
 
 const useMemo = noop.useMemo;
 let closure_4 = [];
-const result = obj132.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
 
 export default function useUserProfileApplicationRoleConnections(arg0) {
   const _require = arg0;
@@ -19,7 +19,7 @@ export default function useUserProfileApplicationRoleConnections(arg0) {
   return useMemo(() => {
     let prop;
     if (stateFromStores != null) {
-      prop = stateFromStores.applicationRoleConnections;
+      prop = tmp.applicationRoleConnections;
     }
     return null == prop ? closure_1_4 : stateFromStores.applicationRoleConnections;
   }, items1);

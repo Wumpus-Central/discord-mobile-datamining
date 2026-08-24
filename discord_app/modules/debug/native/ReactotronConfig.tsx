@@ -4,4 +4,4 @@ import importDefaultResult from "../../../../_runtime/13778_reactNativeCorePlugi
 const reactNative = importDefaultResult.configure({}).useReactNative();
 reactNative.connect();
 const configureResult = importDefaultResult.configure({});
-const result = require("obj132").fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");
+const result = require("set").fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");

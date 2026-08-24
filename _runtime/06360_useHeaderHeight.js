@@ -1,6 +1,6 @@
 // _runtime/06360_useHeaderHeight.js
 import HeaderHeightContext from "06359_HeaderHeightContext.js";
-import noop from "00019_noop.js";
+import closure_2 from "00019_noop.js";
 
 require = arg1;
 

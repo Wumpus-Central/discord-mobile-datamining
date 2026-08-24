@@ -1,17 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import ErrorBlockDefault from "../components/ErrorBlock.tsx";
 import useGroupListingsFetchContext from "../../GroupListingsFetchContext.tsx";
-import WarningNoticeDefault from "../components/WarningNotice.tsx";
 import useOnboardingMonetizationEnableFlowDefault from "../../../creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx";
 import useRoleSubscriptionSettingsDisabled from "../../RoleSubscriptionSettingsDisabledContext.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import closure_5 from "../../../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function ApplicationRejectedNotice(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(589);
@@ -29,16 +27,16 @@ function ApplicationRejectedNotice(guildId) {
   ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
-    let tmp9Result = ErrorBlockDefault;
+    let tmp9Result = tmp9(11384);
     obj[0] = resubmissionError.getAnyErrorMessage();
     let tmp14 = callback(tmp9Result, obj);
   } else if (null != requestRejectedNoticeText) {
     obj = { notice: null };
     obj[0] = requestRejectedNoticeText;
-    tmp14 = callback(WarningNoticeDefault, obj);
+    tmp14 = callback(tmp9(16904), obj);
   } else if (tmp13) {
     obj1 = { notice: null };
-    tmp9Result = WarningNoticeDefault;
+    tmp9Result = tmp9(16904);
     const intl3 = tmp2(1236).intl;
     obj1[0] = intl3.string(tmp2(1236).t.MyJpJT);
     tmp14 = callback(tmp9Result, obj1);
@@ -49,22 +47,22 @@ function ApplicationRejectedNotice(guildId) {
     obj2[1] = intl2.string(tmp2(1236).t["YKw/NQ"]);
     obj2[2] = tmp12;
     obj2[3] = tmp11;
-    tmp14 = callback(WarningNoticeDefault, obj2);
-    const tmp9Result1 = WarningNoticeDefault;
+    tmp14 = callback(tmp9(16904), obj2);
+    const tmp9Result1 = tmp9(16904);
   } else if (true === hasItem1) {
     const obj3 = { notice: null };
     const intl = tmp2(1236).intl;
     obj3[0] = intl.string(tmp2(1236).t.e2g9sW);
-    tmp14 = callback(WarningNoticeDefault, obj3);
-    const tmp9Result2 = WarningNoticeDefault;
+    tmp14 = callback(tmp9(16904), obj3);
+    const tmp9Result2 = tmp9(16904);
   } else {
     tmp14 = null;
     if (true === hasItem) {
       const obj4 = { notice: null };
       const intl4 = tmp2(1236).intl;
       obj4[0] = intl4.string(tmp2(1236).t.rxI9sl);
-      tmp14 = callback(WarningNoticeDefault, obj4);
-      const tmp9Result3 = WarningNoticeDefault;
+      tmp14 = callback(tmp9(16904), obj4);
+      const tmp9Result3 = tmp9(16904);
     }
   }
   let tmp24 = null;
@@ -100,10 +98,12 @@ noopAll;
 ({ ActivityIndicator: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
-const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");
 
 export default function GuildSettingsRoleSubscriptionContainer(guildId) {
-  const obj = {};
+  let obj = { guildId: guildId.guildId, refetchOnMount: true, children: null };
+  obj = { guildId: guildId.guildId, children: null };
+  obj = {};
   const merged = Object.assign(guildId);
   obj[1] = callback(GuildSettingsRoleSubscription, obj);
   obj[2] = callback(useRoleSubscriptionSettingsDisabled.RoleSubscriptionSettingsDisabledContextProvider, obj);

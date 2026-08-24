@@ -10,11 +10,11 @@ export const isNewArch = function isNewArch() {
     try {
       let prop;
       if (global != null) {
-        prop = global.nativeFabricUIManager;
+        prop = tmp2.nativeFabricUIManager;
       }
       let flag = Boolean(prop);
       if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
+        const __turboModuleProxy = tmp2.__turboModuleProxy;
       }
       if (!flag) {
         flag = Boolean(__turboModuleProxy);

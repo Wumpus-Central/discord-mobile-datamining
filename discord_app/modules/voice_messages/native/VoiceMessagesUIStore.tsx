@@ -1,10 +1,11 @@
 // discord_app/modules/voice_messages/native/VoiceMessagesUIStore.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import batchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import _mod4115 from "../../reanimated/ReanimatedRexport.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../design/animation/reanimated/spring/spring.tsx";
 import VoiceMessageAnimationState from "../VoiceMessageConstants.tsx";
 import keys from "../../../../_runtime/00644_keys.js";
+import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
@@ -14,37 +15,37 @@ let obj = keys.create(() => {
   obj[6] = [];
   return obj;
 });
-let result = obj132.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
+let result = set.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
 
 export const VoiceMessageRecordingStatus = { REQUESTED: 0, [0]: "REQUESTED", STARTED: 1, [1]: "STARTED" };
 export const useVoiceMessagesUIStore = obj;
 export const setShowRecordingOverlay = function setShowRecordingOverlay(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ showRecordingOverlay: closure_0 });
   });
 };
 export const setVoiceMessageRecordingState = function setVoiceMessageRecordingState(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ recordingStatus: closure_0 });
   });
 };
 export const setVoiceMessageRecordingId = function setVoiceMessageRecordingId(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ recordingId: closure_0 });
   });
 };
 export const setVoiceMessageStartTimeMillis = function setVoiceMessageStartTimeMillis(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ startTimeMillis: closure_0 });
   });
 };
 export const setVoiceMessageAnimationState = function setVoiceMessageAnimationState(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     const merged = Object.assign(closure_0);
     closure_1_4.setState({});
   });
@@ -62,7 +63,6 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   waveformVersion(705).batchUpdates(() => {
     closure_1_4.setState({ waveformVersion: waveformVersion + 1 });
   });
-  const obj2 = waveformVersion(705);
 };
 export const showVoiceMessagesTooltip = function showVoiceMessagesTooltip() {
   batchUpdates.batchUpdates(() => {
@@ -87,19 +87,19 @@ export const resetVoiceMessageState = function resetVoiceMessageState() {
 };
 export const setSavedVoiceMessageUploadData = function setSavedVoiceMessageUploadData(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ savedVoiceMessageUploadData: closure_0 });
   });
 };
 export const setIsVoiceMessageButtonMounted = function setIsVoiceMessageButtonMounted(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ isVoiceMessageButtonMounted: closure_0 });
   });
 };
 export const setIsUsingHoldGesture = function setIsUsingHoldGesture(arg0) {
   const _require = arg0;
-  require("../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => {
+  _batchUpdates.batchUpdates(() => {
     closure_1_4.setState({ isUsingHoldGesture: closure_0 });
   });
 };

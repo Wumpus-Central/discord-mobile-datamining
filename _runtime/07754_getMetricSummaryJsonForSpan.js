@@ -1,6 +1,6 @@
 // _runtime/07754_getMetricSummaryJsonForSpan.js
 import addNonEnumerableProperty from "07744_addNonEnumerableProperty.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import closure_2 from "metro/00032__slicedToArray.js";
 
 const _sentryMetrics = "_sentryMetrics";
 
@@ -9,15 +9,20 @@ export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(
     const obj = {};
     const tmp3 = tmp[Symbol.iterator]();
     while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      let tmp7 = callback;
+      let tmp8 = callback(callback(tmp5, 2)[1], 2);
       [tmp9, tmp11] = tmp8;
       let arr = obj[tmp9];
       if (!arr) {
+        let tmp12 = tmp9;
         let items = [];
         obj[tmp10] = items;
         arr = items;
       }
+      let tmp13 = require;
+      let tmp14 = dependencyMap;
       let obj2 = addNonEnumerableProperty;
+      let tmp15 = tmp11;
       arr = arr.push(obj2.dropUndefinedKeys(tmp11));
       continue;
     }
@@ -35,20 +40,20 @@ export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(acti
   const combined = "" + arg1 + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
   const value = obj.get(bucketKey);
   if (value) {
-    const range = _slicedToArray(value, 2)[1];
+    const tmp12 = callback(value, 2)[1];
     const items = [combined, ];
     obj = { min: null, max: null, count: null, sum: null, tags: null };
     const _Math = Math;
-    obj[0] = Math.min(range.min, diff);
+    obj[0] = Math.min(tmp12.min, diff);
     const _Math2 = Math;
-    obj[1] = Math.max(range.max, diff);
-    const sum = range.count + 1;
-    range.count = sum;
+    obj[1] = Math.max(tmp12.max, diff);
+    const sum = tmp12.count + 1;
+    tmp12.count = sum;
     obj[2] = sum;
-    const sum1 = range.sum + diff;
-    range.sum = sum1;
+    const sum1 = tmp12.sum + diff;
+    tmp12.sum = sum1;
     obj[3] = sum1;
-    obj[4] = range.tags;
+    obj[4] = tmp12.tags;
     items[1] = obj;
     const result = obj.set(bucketKey, items);
   } else {

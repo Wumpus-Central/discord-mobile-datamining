@@ -1,14 +1,14 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesUtils.tsx
 import isDiscordFrontendDevelopment from "../../../utils/GlobalUtils.tsx";
 import fuzzysearchDefault from "../../../../_runtime/06775_fuzzysearch.js";
-import noop from "../../../../_runtime/00019_noop.js";
-import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
-import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import closure_3 from "../../../../_runtime/00019_noop.js";
+import closure_4 from "../../../stores/GuildMemberStore.tsx";
+import closure_5 from "../../../stores/UserStore.tsx";
 import { GuildSettingsRoleEditSections as closure_6 } from "../GuildSettingsConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
 
 export const ADD_MEMBER_QUERY_LIMIT = 50;
 export const MAX_PREFETCH_MEMBER_COUNT = 1000;
@@ -28,12 +28,12 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
   const obj = _require(stateFromStoresArray[5]);
   const items2 = [closure_5];
   const items3 = [stateFromStoresArray];
-  const stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items2, () => stateFromStoresArray.reduce((acc, item, index) => {
-    user = user.getUser(item.userId);
+  const stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items2, () => stateFromStoresArray.reduce((arg0, userId) => {
+    user = user.getUser(userId.userId);
     if (null != user) {
-      acc[item.userId] = user;
+      arg0[userId.userId] = user;
     }
-    return acc;
+    return arg0;
   }, {}), items3);
   const items4 = [stateFromStoresArray, stateFromStoresObject, id];
   return stateFromStoresObject.useMemo(() => {
@@ -42,19 +42,29 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
+      let tmp4 = stateFromStoresObject;
       let tmp5 = stateFromStoresObject[nextResult.userId];
       let obj = tmp5;
       if (null != tmp5) {
+        let tmp15 = nextResult;
         let nick = tmp3.nick;
         if (nick == null) {
+          let tmp6 = callback;
+          let tmp7 = stateFromStoresArray;
           let obj2 = callback(stateFromStoresArray[6]);
+          let tmp8 = tmp5;
           nick = obj2.getName(obj);
         }
         obj = { name: null, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
         obj[0] = nick;
+        let tmp9 = callback;
+        let tmp10 = stateFromStoresArray;
         let obj4 = callback(stateFromStoresArray[6]);
+        let tmp11 = tmp5;
         obj[1] = obj4.getUserTag(obj);
+        let tmp12 = nextResult;
         obj[2] = tmp3.userId;
+        let tmp13 = closure_0;
         obj[3] = obj.getAvatarSource(closure_0);
         obj[4] = obj.getAvatarURL(closure_0, 80);
         obj[5] = obj.bot;
@@ -69,6 +79,9 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
   }, items4);
 };
 export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembersLoadFail) {
+  let _require = id;
+  let callback = id2;
+  let stateFromStoresArray = onMembersLoadFail;
   stateFromStoresObject = stateFromStoresObject.useRef(onMembersLoadFail);
   const effect = stateFromStoresObject.useEffect(() => {
     stateFromStoresObject.current = stateFromStoresArray;
@@ -79,12 +92,13 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
     membersForRole.catch(stateFromStoresObject.current);
   }, items);
   const items1 = [id2];
-  const callback = stateFromStoresObject.useCallback((roles) => {
+  callback = stateFromStoresObject.useCallback((roles) => {
     roles = roles.roles;
     return roles.includes(callback);
   }, items1);
-  const _require = id;
-  let stateFromStoresArray;
+  _require = id;
+  stateFromStoresArray = undefined;
+  stateFromStoresObject = undefined;
   const items2 = [closure_4];
   const items3 = [id, callback];
   stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items2, () => {
@@ -98,12 +112,12 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
   let obj = _require(stateFromStoresArray[5]);
   const items4 = [closure_5];
   const items5 = [stateFromStoresArray];
-  stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items4, () => stateFromStoresArray.reduce((acc, item, index) => {
-    user = user.getUser(item.userId);
+  stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items4, () => stateFromStoresArray.reduce((arg0, userId) => {
+    user = user.getUser(userId.userId);
     if (null != user) {
-      acc[item.userId] = user;
+      arg0[userId.userId] = user;
     }
-    return acc;
+    return arg0;
   }, {}), items5);
   const items6 = [stateFromStoresArray, stateFromStoresObject, id];
   return stateFromStoresObject.useMemo(() => {
@@ -112,19 +126,29 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
+      let tmp4 = stateFromStoresObject;
       let tmp5 = stateFromStoresObject[nextResult.userId];
       let obj = tmp5;
       if (null != tmp5) {
+        let tmp15 = nextResult;
         let nick = tmp3.nick;
         if (nick == null) {
+          let tmp6 = callback;
+          let tmp7 = stateFromStoresArray;
           let obj2 = callback(stateFromStoresArray[6]);
+          let tmp8 = tmp5;
           nick = obj2.getName(obj);
         }
         obj = { name: null, userTag: null, id: null, avatarSource: null, avatarURL: null, bot: null, verifiedBot: null, roles: null, key: null, user: null };
         obj[0] = nick;
+        let tmp9 = callback;
+        let tmp10 = stateFromStoresArray;
         let obj4 = callback(stateFromStoresArray[6]);
+        let tmp11 = tmp5;
         obj[1] = obj4.getUserTag(obj);
+        let tmp12 = nextResult;
         obj[2] = tmp3.userId;
+        let tmp13 = closure_0;
         obj[3] = obj.getAvatarSource(closure_0);
         obj[4] = obj.getAvatarURL(closure_0, 80);
         obj[5] = obj.bot;
@@ -150,33 +174,35 @@ export const useQueryGuildMembers = function useQueryGuildMembers(id, formatted)
       current = ref.current;
     }
     if (!current) {
-      callback(ref[9]).track(AnalyticEvents.SEARCH_STARTED, { search_type: "Role Members" });
+      callback(ref[9]).track(closure_1_7.SEARCH_STARTED, { search_type: "Role Members" });
       ref.current = true;
       const tmpResult = callback(ref[9]);
     }
-    const obj = callback(ref[8]);
   }, items);
 };
 export const filterFullMembersByQuery = function filterFullMembersByQuery(str, id) {
-  str = str.trim();
-  const formatted = str.toLowerCase();
+  const formatted = str.trim().toLowerCase();
   let tmp8Result = id.id === formatted;
   if (!tmp8Result) {
     tmp8Result = fuzzysearchDefault(formatted, id.name.toLowerCase());
+    const str2 = id.name;
+    const tmp5 = fuzzysearchDefault;
   }
   if (!tmp8Result) {
     tmp8Result = fuzzysearchDefault(formatted, id.userTag.toLowerCase());
+    const str3 = id.userTag;
+    const tmp8 = fuzzysearchDefault;
   }
   return tmp8Result;
 };
 export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY) {
   if (constants.MEMBERS === DISPLAY) {
     return "Members";
-  } else if (constants.PERMISSIONS === DISPLAY) {
+  } else if (tmp.PERMISSIONS === DISPLAY) {
     return "Permissions";
-  } else if (constants.DISPLAY === DISPLAY) {
+  } else if (tmp.DISPLAY === DISPLAY) {
     return "Role Settings";
-  } else if (constants.VERIFICATIONS === DISPLAY) {
+  } else if (tmp.VERIFICATIONS === DISPLAY) {
     return "Connections";
   } else {
     isDiscordFrontendDevelopment.assertNever(DISPLAY);
@@ -185,8 +211,9 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
 export const filterRole = function filterRole(name, str) {
   let hasItem = "" === str;
   if (!hasItem) {
-    const formatted = str.toLowerCase();
+    const formatted = name.name.toLowerCase();
     hasItem = formatted.includes(str.toLowerCase());
+    str = name.name;
   }
   return hasItem;
 };

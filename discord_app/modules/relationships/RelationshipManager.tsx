@@ -1,5 +1,5 @@
 // discord_app/modules/relationships/RelationshipManager.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../design/shared.tsx";
@@ -15,8 +15,8 @@ function handleRelationshipAdd(relationship) {
     obj[0] = relationship.user.username;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale.t.zH0kC7, obj));
     const result = showPendingNotificationAll.showPendingNotification(relationship.user);
+    const obj2 = showPendingNotificationAll;
   }
-  tmp = relationship.type !== RelationshipTypes.PENDING_INCOMING || relationship.userIgnored;
 }
 function handleFriendRequestAccepted(user) {
   user = user.user;
@@ -35,6 +35,6 @@ let prototype = function RelationshipManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = obj132.fileFinishedImporting("modules/relationships/RelationshipManager.tsx");
+let result = set.fileFinishedImporting("modules/relationships/RelationshipManager.tsx");
 
 export default prototype;

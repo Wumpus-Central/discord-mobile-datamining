@@ -2,18 +2,18 @@
 import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
 import useCanSeeOnboardingHome from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
 import getPrice from "../slayer_storefront/SlayerStorefrontUtils.tsx";
-import initializeFromUserSettings from "../favorites/FavoriteStore.tsx";
-import shouldShowOnboarding from "../guild_onboarding/GuildOnboardingStore.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import comparator from "../../stores/GuildChannelStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
-import makeSortedChannel from "../../stores/views/PrivateChannelSortStore.tsx";
+import closure_2 from "../favorites/FavoriteStore.tsx";
+import closure_3 from "../guild_onboarding/GuildOnboardingStore.tsx";
+import closure_4 from "../../stores/ChannelStore.tsx";
+import closure_5 from "../../stores/GuildChannelStore.tsx";
+import closure_6 from "../../stores/GuildStore.tsx";
+import closure_7 from "../../stores/SelectedChannelStore.tsx";
+import closure_8 from "../../stores/views/PrivateChannelSortStore.tsx";
 import { ME } from "../../Constants.tsx";
 import { StaticChannelRoute } from "../channel/ChannelConstants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
 
 export const getChannelIdForGuildTransition = function getChannelIdForGuildTransition(guildId) {
   channelId = channelId.getChannelId(guildId);
@@ -51,7 +51,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     }
     return id;
   } else {
-    if (channelId === StaticChannelRoute.GAME_SHOP) {
+    if (channelId === tmp8.GAME_SHOP) {
       if (obj2.canSeeGameShop(guildId)) {
         return channelId;
       }

@@ -1,5 +1,5 @@
 // discord_app/modules/search/managers/SearchFetchManager.tsx
-import obj132 from "../../../../_runtime/00002_obj132.js";
+import set from "../../../../_runtime/00002_set.js";
 import cleanUp from "AbstractSearchFetchManager.tsx";
 import fetch from "../SearchFetcher.tsx";
 
@@ -14,6 +14,6 @@ SearchFetchManager.prototype["create"] = function create(arg0) {
   return searchFetcherImpl;
 };
 const searchFetchManager = new SearchFetchManager();
-let result = obj132.fileFinishedImporting("modules/search/managers/SearchFetchManager.tsx");
+let result = set.fileFinishedImporting("modules/search/managers/SearchFetchManager.tsx");
 
 export default searchFetchManager;

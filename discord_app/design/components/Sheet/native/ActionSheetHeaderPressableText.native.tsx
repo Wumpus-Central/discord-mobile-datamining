@@ -1,5 +1,5 @@
 // discord_app/design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import Text from "../../Text/native/Text.tsx";
@@ -8,7 +8,7 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 
 const jsx = jsxProd.jsx;
 let closure_4 = createCacheKey.createStyles(() => ({ container: { marginTop: 3 } }));
-const result = obj132.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
+const result = set.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
 
 export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressableText(onPress) {
   ({ label, accessibilityLabel } = onPress);

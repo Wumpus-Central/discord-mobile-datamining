@@ -1,10 +1,10 @@
 // _runtime/00369__isNativeReflectConstruct.js
 import _inheritsDefault from "00098__inherits.js";
 import _isNativeReflectConstructDefault from "00366__isNativeReflectConstruct.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
-import _get from "metro/00096__get.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import closure_5 from "metro/00096__get.js";
 import importDefaultResult from "metro/00042__createClass.js";
 
 const AnimatedDivision = importDefault;
@@ -91,7 +91,8 @@ let items = [
       const _b = this._b;
       _b.__makeNative(arg0);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__makeNative", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -134,7 +135,8 @@ let items = [
       const _b = this._b;
       _b.__addChild(this);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__attach", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -149,7 +151,8 @@ let items = [
       const _b = this._b;
       _b.__removeChild(this);
       const self = this;
-      let fn = callback3(callback2(self.prototype), "__detach", this);
+      let fn;
+      fn = callback3(callback2(self.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

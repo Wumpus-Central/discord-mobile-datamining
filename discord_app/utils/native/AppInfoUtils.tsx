@@ -1,9 +1,9 @@
 // discord_app/utils/native/AppInfoUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getConstants from "ClientInfoUtils.tsx";
 
 const constants = getConstants.getConstants();
-const result = obj132.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
+const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
 export const getAppMajorVersion = function getAppMajorVersion() {
   if (undefined === closure_0) {

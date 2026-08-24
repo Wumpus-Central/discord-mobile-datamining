@@ -1,11 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandUserAppUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import EphemeralMessageReason from "../../../discord_common/js/shared/shared-constants/EphemeralMessageReason.tsx";
 
-const result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
+const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {
+  const tmp = require;
   if (EphemeralMessageReason.EphemeralMessageReason.FEATURE_LIMITED === ephemerality_reason1) {
     const intl19 = getSystemLocale.intl;
     return intl19.string(getSystemLocale.t.WCvmrR);

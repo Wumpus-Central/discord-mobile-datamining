@@ -1,21 +1,14 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
-import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../_runtime/00002_set.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import getSystemLocale from "../../../../intl/index.native.tsx";
-import Button from "../../../../design/void/native.tsx";
 import resetCache from "../../../../utils/DateUtils.tsx";
-import Text from "../../../../design/components/Text/native/Text.tsx";
-import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
-import processColorStrings from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import useMaybeGetSortedBoosts from "../hooks/useMaybeGetSortedBoosts.tsx";
 import useMaybeGetSortedBoostsDefault from "../hooks/useMaybeGetSortedBoosts.tsx";
-import BoostTier1Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier1Icon.tsx";
-import BoostGemSlashIcon2 from "../../../../design/components/Icon/native/redesign/generated/BoostGemSlashIcon.tsx";
 import getBoostRowMessageTextDefault from "../utils/getBoostRowMessageText.tsx";
-import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import closure_4 from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
@@ -38,16 +31,16 @@ function GuildPowerupsRecentActivityRow(row) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    let tmpResult = processColorStrings;
+    let tmpResult = tmp(8186);
     const processColorStringsArray = tmpResult.useProcessColorStringsArray(roleColorStrings);
-    tmpResult = processColorStrings;
+    tmpResult = tmp(8186);
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = BoostGemIcon.BoostGemIcon;
+      let BoostGemSlashIcon = tmp(7979).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = BoostTier1Icon.BoostTier1Icon;
+      BoostGemSlashIcon = tmp(11751).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = BoostGemSlashIcon2.BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(11753).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp4.boostRowContainer;
@@ -58,7 +51,7 @@ function GuildPowerupsRecentActivityRow(row) {
     } else {
       obj2 = { size: "sm" };
     }
-    const items1 = [callback(BoostGemSlashIcon, obj2), , ];
+    const items1 = [closure_5(BoostGemSlashIcon, obj2), , ];
     obj3 = { style: null, children: null };
     obj3[0] = tmp4.boostMessage;
     let tmp19Result = "dot" === stateFromStores;
@@ -69,7 +62,7 @@ function GuildPowerupsRecentActivityRow(row) {
       const obj4 = { size: "small", color: null, colors: null };
       obj4[1] = roleColor;
       obj4[2] = roleColorStrings;
-      tmp19Result = callback(Button.RoleDot, obj4);
+      tmp19Result = tmp19(tmp(1297).RoleDot, obj4);
     }
     const items2 = [tmp19Result, , , ];
     const obj5 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
@@ -81,14 +74,14 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     obj5[4] = tmp23;
     obj5[5] = username;
-    items2[1] = callback(Text.Text, obj5);
-    items2[2] = callback(Text.Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
+    items2[1] = closure_5(tmp(4734).Text, obj5);
+    items2[2] = closure_5(tmp(4734).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
     obj6[2] = tmp4.messageText;
     obj6[3] = getBoostRowMessageTextDefault(row);
-    items2[3] = callback(Text.Text, obj6);
+    items2[3] = closure_5(tmp(4734).Text, obj6);
     obj3[1] = items2;
-    items1[1] = callback2(View, obj3);
+    items1[1] = closure_6(View, obj3);
     let str4 = "text-xs/semibold";
     if (manaTypeConsolidationExperiment) {
       str4 = "text-xs/medium";
@@ -102,15 +95,15 @@ function GuildPowerupsRecentActivityRow(row) {
     obj7[1] = str5;
     obj7[2] = tmp4.timestamp;
     obj7[3] = calendarFormatResult;
-    items1[2] = callback(Text.Text, obj7);
+    items1[2] = closure_5(tmp(4734).Text, obj7);
     obj[1] = items1;
-    return callback2(View, obj);
+    return closure_6(View, obj);
   }
-  calendarFormatResult = obj2.calendarFormat(new Date(sortKey));
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { marginTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj = { sectionContainer: null, boostContainer: null, boostRowContainer: null, boostMessage: null, username: null, messageText: null, timestamp: null };
+obj = { marginTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { gap: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_16 };
 obj[2] = { flexDirection: "row", alignItems: "center", gap: 8 };
@@ -119,7 +112,8 @@ obj[4] = { maxWidth: 170, flexShrink: 1 };
 obj[5] = { flexShrink: 0 };
 obj[6] = { flexShrink: 0 };
 let closure_7 = createCacheKey.createStyles(obj);
-const result = obj132.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
+let obj1 = { gap: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_16 };
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
 
 export default function GuildPowerupsRecentActivitySection(guildId) {
   let obj = apexExperiment;
@@ -136,15 +130,16 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
     }
     obj = { variant: "heading-lg/semibold", color: null, children: null };
     obj[1] = str;
-    const intl = getSystemLocale.intl;
-    obj[2] = intl.string(getSystemLocale.t.yM9Krm);
-    const items = [callback(Text.Text, obj), ];
+    const intl = tmp(1236).intl;
+    obj[2] = intl.string(tmp(1236).t.yM9Krm);
+    const items = [closure_5(tmp(4734).Text, obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp4.boostContainer;
-    obj1[1] = arr.map((item, index) => callback(closure_8, { row: item }, "boost-" + item.boost.id));
-    items[1] = callback(View, obj1);
+    obj1[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));
+    items[1] = closure_5(View, obj1);
     obj[1] = items;
-    tmp6Result = callback2(View, obj);
+    tmp6Result = closure_6(tmp7, obj);
+    const tmp6 = closure_6;
   }
   return tmp6Result;
 };

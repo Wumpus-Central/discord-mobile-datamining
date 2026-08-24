@@ -1,13 +1,13 @@
 // _runtime/00157__isNativeReflectConstruct.js
+import _wrapNativeSuperDefault from "metro/00158__wrapNativeSuper.js";
 import DOMException from "metro/00041__classCallCheck.js";
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_1 from "metro/00093__possibleConstructorReturn.js";
+import closure_2 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import importDefaultResult1 from "00098__inherits.js";
-import _classPrivateFieldBase from "00090__classPrivateFieldBase.js";
+import closure_3 from "00090__classPrivateFieldBase.js";
 import importDefaultResult3 from "00091__classPrivateFieldKey.js";
-import "setPlatformObject";
-import importDefaultResult2 from "metro/00158__wrapNativeSuper.js";
+import setPlatformObject from "00126_setPlatformObject.js";
 
 function _isNativeReflectConstruct() {
   try {
@@ -53,7 +53,7 @@ class DOMException {
     definePropertyResult = Object.defineProperty(tmp3Result, closure_6, { writable: true, value: "a" });
     tmp9 = closure_7;
     definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "a" });
-    if (undefined === fn) {
+    if (undefined === arg1) {
       tmp16 = closure_3;
       str = "Error";
       closure_3(tmp3Result, tmp7)[tmp7] = "Error";
@@ -63,7 +63,7 @@ class DOMException {
       tmp11 = closure_3;
       _String = String;
       tmp12 = closure_3(tmp3Result, tmp7);
-      tmp12[tmp7] = String(fn);
+      tmp12[tmp7] = String(arg1);
       tmp14 = closure_5;
       num = closure_5[tmp3Result.name];
       tmp15 = null;
@@ -76,7 +76,7 @@ class DOMException {
     return tmp3Result;
   }
 }
-importDefaultResult1(DOMException, importDefaultResult2(Error));
+importDefaultResult1(DOMException, _wrapNativeSuperDefault(Error));
 obj = {
   key: "name",
   get() {
@@ -94,6 +94,7 @@ let items = [
 ];
 const importDefaultResultResult = importDefaultResult(DOMException, items);
 for (const key10045 in obj) {
+  let tmp9 = key10045;
   let _Object = Object;
   obj = { enumerable: true, value: null };
   obj[1] = obj[key10045];
@@ -104,7 +105,7 @@ for (const key10045 in obj) {
   let definePropertyResult2 = Object.defineProperty(importDefaultResultResult.prototype, key10045, obj1);
   continue;
 }
-const setPlatformObject = {
+setPlatformObject = {
   clone(message) {
     return new closure_8(message.message, message.name);
   }

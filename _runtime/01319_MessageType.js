@@ -1,5 +1,5 @@
 // _runtime/01319_MessageType.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
 const MessageType = require;
@@ -45,8 +45,8 @@ const items = [
   {
     key: "clone",
     value: function clone(arr) {
-      this.create();
-      const obj = MessageType(1331);
+      let obj = this.create();
+      obj = MessageType(1331);
       const result = obj.reflectionMergePartial(this, obj, arr);
       return obj;
     }
@@ -83,8 +83,8 @@ const items = [
   },
   {
     key: "mergePartial",
-    value: function mergePartial(EmojiFrecency, arr) {
-      const result = MessageType(1331).reflectionMergePartial(this, EmojiFrecency, arr);
+    value: function mergePartial(reflectionCreateResult, arr) {
+      const result = MessageType(1331).reflectionMergePartial(this, reflectionCreateResult, arr);
     }
   },
   {

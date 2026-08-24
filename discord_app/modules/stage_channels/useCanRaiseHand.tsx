@@ -1,12 +1,13 @@
 // discord_app/modules/stage_channels/useCanRaiseHand.tsx
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_2 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/stage_channels/useCanRaiseHand.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/useCanRaiseHand.tsx");
 
 export const useCanRaiseHand = function useCanRaiseHand(channel) {
   const _require = channel;
   const items = [closure_2];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.can(Permissions.REQUEST_TO_SPEAK, closure_0));
+  return _initialize.useStateFromStores(items, () => closure_1_2.can(closure_1_3.REQUEST_TO_SPEAK, closure_0));
 };

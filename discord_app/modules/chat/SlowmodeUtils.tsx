@@ -1,15 +1,15 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
-import obj132Default from "../../utils/Durations.tsx";
+import setDefault from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import tDefault from "../../../_runtime/03975_t.js";
-import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import closure_3 from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
+import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
 
-export const canBypassSlowmodeHelper = function canBypassSlowmodeHelper(item, closure_9) {
-  return closure_9.can(Permissions.BYPASS_SLOWMODE, item);
+export const canBypassSlowmodeHelper = function canBypassSlowmodeHelper(rateLimitPerUser, can) {
+  return can.can(Permissions.BYPASS_SLOWMODE, rateLimitPerUser);
 };
 export const canBypassSlowmode = function canBypassSlowmode(channel) {
   return closure_3.can(Permissions.BYPASS_SLOWMODE, channel);
@@ -17,29 +17,29 @@ export const canBypassSlowmode = function canBypassSlowmode(channel) {
 export const useCanBypassSlowmode = function useCanBypassSlowmode(channel) {
   const _require = channel;
   const items = [closure_3];
-  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_3.can(Permissions.BYPASS_SLOWMODE, closure_0));
+  return _initialize.useStateFromStores(items, () => closure_1_3.can(closure_1_4.BYPASS_SLOWMODE, closure_0));
 };
 export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
   if (canBypassSlowmode) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["8+NidX"]);
-  } else if (stateFromStores >= obj132Default.Millis.HOUR) {
-    let tmp2Result = tDefault;
-    const time2 = tmp2Result.duration(stateFromStores);
+  } else if (stateFromStores >= setDefault.Millis.HOUR) {
+    let tmp2Result = tmp2(3975);
+    const durationResult = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
-    const combined = "" + time2.minutes();
+    const combined = "" + durationResult.minutes();
     const _HermesInternal4 = HermesInternal;
-    const combined1 = "" + time2.seconds();
+    const combined1 = "" + durationResult.seconds();
     const padStartResult = combined.padStart(2, "0");
     const _HermesInternal5 = HermesInternal;
-    return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
+    return "" + durationResult.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    tmp2Result = tDefault;
-    const time = tmp2Result.duration(stateFromStores);
+    tmp2Result = tmp2(3975);
+    const durationResult1 = tmp2Result.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
-    const combined2 = "" + time.seconds();
+    const combined2 = "" + durationResult1.seconds();
     const _HermesInternal2 = HermesInternal;
-    return "" + time.minutes() + ":" + combined2.padStart(2, "0");
+    return "" + durationResult1.minutes() + ":" + combined2.padStart(2, "0");
   } else {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Icu3bf);
@@ -50,14 +50,14 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   if (arg1 === undefined) {
     flag = false;
   }
-  if (rateLimitPerUser >= obj132Default.Seconds.HOUR) {
+  if (rateLimitPerUser >= setDefault.Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded = Math.floor(rateLimitPerUser / obj132Default.Seconds.HOUR);
+    const rounded = Math.floor(rateLimitPerUser / tmp(687).Seconds.HOUR);
     const _Math3 = Math;
-    const diff = rateLimitPerUser - rounded * obj132Default.Seconds.HOUR;
-    const rounded1 = Math.floor(diff / obj132Default.Seconds.MINUTE);
-    const diff1 = rateLimitPerUser - rounded * obj132Default.Seconds.HOUR;
-    const diff2 = diff1 - rounded1 * obj132Default.Seconds.MINUTE;
+    const diff = rateLimitPerUser - rounded * tmp(687).Seconds.HOUR;
+    const rounded1 = Math.floor(diff / tmp(687).Seconds.MINUTE);
+    const diff1 = rateLimitPerUser - rounded * tmp(687).Seconds.HOUR;
+    const diff2 = diff1 - rounded1 * tmp(687).Seconds.MINUTE;
     const intl3 = getSystemLocale.intl;
     const t3 = getSystemLocale.t;
     let obj = { hours: null, minutes: null, seconds: null };

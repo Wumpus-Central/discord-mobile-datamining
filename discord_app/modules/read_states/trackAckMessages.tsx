@@ -1,13 +1,13 @@
 // discord_app/modules/read_states/trackAckMessages.tsx
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
-import updateGuildUnreadSentinel from "../../stores/GuildReadStateStore.tsx";
-import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
-import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
+import closure_2 from "../../stores/ChannelStore.tsx";
+import closure_3 from "../../stores/GuildReadStateStore.tsx";
+import closure_4 from "../../stores/GuildStore.tsx";
+import closure_5 from "../../stores/UserGuildSettingsStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-require = fn;
-const result = require("obj132").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
 
 export default function trackAckMessages(channel_id) {
   channel = channel.getChannel(channel_id);
@@ -19,10 +19,10 @@ export default function trackAckMessages(channel_id) {
   obj[1] = guildId;
   obj[2] = arg1;
   guildsArray = guildsArray.getGuildsArray();
-  obj[3] = guildsArray.map((item, index) => {
-    const mentionCount = closure_3.getMentionCount(item.id);
-    const hasUnreadResult = closure_3.hasUnread(item.id);
-    return "" + item.id + "," + hasUnreadResult + "," + mentionCount + "," + closure_5.isMuted(item.id) + "," + closure_5.resolveGuildUnreadSetting(item);
+  obj[3] = guildsArray.map((id) => {
+    const mentionCount = closure_3.getMentionCount(id.id);
+    const hasUnreadResult = closure_3.hasUnread(id.id);
+    return "" + id.id + "," + hasUnreadResult + "," + mentionCount + "," + closure_5.isMuted(id.id) + "," + closure_5.resolveGuildUnreadSetting(id);
   });
   collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
 };

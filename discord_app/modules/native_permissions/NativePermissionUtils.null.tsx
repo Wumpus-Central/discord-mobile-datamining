@@ -1,5 +1,5 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.null.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import requestAuthorization from "NativePermissionBaseUtils.tsx";
 
 const NativePermissionBaseUtils = requestAuthorization.NativePermissionBaseUtils;
@@ -22,6 +22,6 @@ prototype["openAlertModal"] = function openAlertModal() {
 
 };
 const nativePermissionDesktopNullUtils = new NativePermissionDesktopNullUtils();
-const result = obj132.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
+const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
 
 export default nativePermissionDesktopNullUtils;

@@ -1,9 +1,9 @@
 // discord_app/modules/premium/native/hooks/useSelectPremiumGift.tsx
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import noop from "../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import closure_4 from "../../../../../_runtime/00019_noop.js";
 
-const require = fn;
-const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/useSelectPremiumGift.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useSelectPremiumGift.tsx");
 
 export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPlanSelect) {
   let navigation = _require(recipientUserId[2]).useNavigation();
@@ -16,6 +16,7 @@ export const useSelectPremiumGift = function useSelectPremiumGift(PremiumGiftPla
   const setOrder = nativeGiftContext.setOrder;
   let obj2 = _require(recipientUserId[3]);
   const createOrReuseGiftOrder = _require(recipientUserId[4]).useCreateOrReuseGiftOrder(PremiumGiftPlanSelect);
+  _require = undefined;
   _require = planInterval((arg0) => {
     closure_0 = arg0;
     c4 = 0;

@@ -1,12 +1,12 @@
 // discord_app/modules/guild_profile/GuildProfileUtils.tsx
-import obj132 from "../../../_runtime/00002_obj132.js";
+import set from "../../../_runtime/00002_set.js";
 import ME from "../../Constants.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import fromGuildPropertiesWithAdditionalFields from "../../utils/GuildRecordUtils.tsx";
 
 let closure_2 = createChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = ME.GuildFeatures;
-const result = obj132.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
 export const getEstablishedDate = function getEstablishedDate(tmpResult1, locale) {
   if (null != tmpResult1) {
@@ -49,5 +49,6 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       return !isGuildVoiceOrThreadResult;
     }
+    const obj = fromGuildPropertiesWithAdditionalFields;
   }
 };

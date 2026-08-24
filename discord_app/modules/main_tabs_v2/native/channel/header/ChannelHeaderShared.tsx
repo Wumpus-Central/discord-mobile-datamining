@@ -7,20 +7,18 @@ import map from "../../../../../design/tokens/native/useToken.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import computeChannelName from "../../../../channel/useChannelName.tsx";
 import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
-import AVERAGE_FONT_WIDTH_RATIODefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import FacepileGroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import registerAssetDefault from "../../../../../../_runtime/12712_registerAsset.js";
 import _modDef12713 from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import noop from "../../../../../../_runtime/00019_noop.js";
+import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import closure_4 from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
-import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import closure_6 from "../../../../../stores/RelationshipStore.tsx";
+import closure_7 from "../../../../../stores/UserStore.tsx";
 import { getMinHeaderHeight } from "../../shared_components/MainTabsV2Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = fn;
+require = arg1;
 function TitleWrapper(headerAccessibilityLabel) {
   ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
   importDefault = undefined;
@@ -50,6 +48,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[6] = tmp2.wrapper;
     obj[7] = children;
     tmp7Result = callback2(titleContentHeight(5433).PressableOpacity, obj);
+    const tmp7 = callback2;
   }
   return tmp7Result;
 }
@@ -61,7 +60,8 @@ function ChannelTitle(guildId) {
   ({ userId, icon } = guildId);
   const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelTitle");
   const tmp4 = callback3(tmp3);
-  let obj = { style: tmp4.nameWithArrow, children: null };
+  let obj = { style: tmp4.channelContent, children: null };
+  obj = { style: tmp4.nameWithArrow, children: null };
   let tmp7 = null;
   if (tmp3) {
     tmp7 = null;
@@ -82,11 +82,11 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = callback(AVERAGE_FONT_WIDTH_RATIODefault, obj);
-    let tmp8 = callback;
-    const tmpResult = AVERAGE_FONT_WIDTH_RATIODefault;
+    let tmp8Result = tmp11(tmp(9452), obj);
+    let tmp8 = tmp11;
+    const tmpResult = tmp(9452);
   } else {
-    tmp8 = callback;
+    tmp8 = closure_9;
     let str = "heading-lg/bold";
     if (tmp3) {
       str = "redesign/heading-18/semibold";
@@ -102,24 +102,24 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = registerAssetDefault;
+    obj2[0] = tmp(12712);
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(Button.Icon, obj2);
   }
   items[2] = tmp8Result;
   obj[1] = items;
-  const items1 = [callback2(View, obj), ];
+  const items1 = [closure_10(View, obj), ];
   let tmp8Result1 = null != subtitle;
   if (tmp8Result1) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp4.subTitleContainer;
     obj3[1] = subtitle;
-    tmp8Result1 = tmp8(View, obj3);
+    tmp8Result1 = tmp8(tmp6, obj3);
   }
   items1[1] = tmp8Result1;
   obj[1] = items1;
-  return callback2(View, obj);
+  return closure_10(View, obj);
 }
 function GroupDMIcon(channel) {
   const obj = { size: null, channel: null, style: null };
@@ -142,7 +142,7 @@ function UserAvatar(user) {
   obj[5] = isMobileOnline;
   obj[6] = isVROnline;
   obj[7] = callback3(useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared")).channelIcon;
-  return callback(Button.Avatar, obj);
+  return closure_9(Button.Avatar, obj);
 }
 function ChannelIconRaw(IconComponent) {
   IconComponent = IconComponent.IconComponent;
@@ -163,12 +163,13 @@ function ChannelIconRaw(IconComponent) {
     }
     obj[2] = obj;
     let tmp8Result = callback2(IconComponent, obj);
+    const tmp8 = callback2;
   } else {
     obj1 = { size: null, source: null, color: null };
-    obj1[0] = Button.Icon.Sizes.SMALL_20;
+    obj1[0] = tmp3(1297).Icon.Sizes.SMALL_20;
     obj1[1] = IconComponent.icon;
     obj1[2] = tmp5.guildChannelIcon.tintColor;
-    tmp8Result = callback2(Button.Icon, obj1);
+    tmp8Result = callback2(tmp3(1297).Icon, obj1);
   }
   return tmp8Result;
 }
@@ -198,7 +199,7 @@ function MemberCountText(arg0) {
     tmp9 = leadingAccessoryWidth;
   }
   obj[3] = tmp9;
-  const children = [callback(_modDef12713, obj), ];
+  const children = [closure_9(_modDef12713, obj), ];
   let tmp7Result = null;
   if (withSeparator) {
     let str3 = "text-xs/medium";
@@ -207,17 +208,20 @@ function MemberCountText(arg0) {
     }
     obj = { variant: null, color: "text-subtle", children: "\u2022" };
     obj[0] = str3;
-    tmp7Result = callback(Text.Text, obj);
+    tmp7Result = tmp7(Text.Text, obj);
   }
   children[1] = tmp7Result;
-  return callback2(closure_11, { children });
+  return closure_10(closure_11, { children });
 }
 function ParentChannelSubTitle(channel) {
   channel = channel.channel;
   const tmp2 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared");
+  let obj = { lineClamp: 1, accessibilityLabel: null, maxFontSizeMultiplier: 2, variant: null, color: null, style: null, children: null };
   const intl = getSystemLocale.intl;
-  const obj = { channelName: null };
+  obj = { channelName: null };
   const tmp3 = callback3(tmp2);
+  const tmp4 = closure_9;
+  const tmp5 = require;
   obj[0] = computeChannelName.computeChannelName(channel, closure_7, closure_6);
   obj[1] = intl.formatToPlainString(getSystemLocale.t.BjYvHO, obj);
   let str = "text-xs/medium";
@@ -231,8 +235,11 @@ function ParentChannelSubTitle(channel) {
   }
   obj[4] = str2;
   obj[5] = tmp3.parentChannelName;
-  obj[6] = computeChannelName.computeChannelName(channel, closure_7, closure_6);
-  return callback(Text.Text, obj);
+  const obj3 = computeChannelName;
+  const tmp6 = closure_7;
+  const tmp7 = closure_6;
+  obj[6] = computeChannelName.computeChannelName(channel, tmp6, tmp7);
+  return tmp4(Text.Text, obj);
 }
 function EmptyIcon() {
   return callback2(View, { style: callback3(useIsMobileVisualRefreshExperimentEnabledDefault("ChannelHeaderShared")).channelIconWrapper });
@@ -259,10 +266,10 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[10] = { lineHeight: 16, flexShrink: 1 };
   return obj;
 });
-const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
 
-export const renderTitleWrapper = function renderTitleWrapper(tmp28Result, callback, combined, closure_13) {
-  return callback2(TitleWrapper, { onPress: callback, headerAccessibilityLabel: combined, titleContentHeight: closure_13, children: tmp28Result });
+export const renderTitleWrapper = function renderTitleWrapper(tmp28Result, callback, combined, titleContentHeight) {
+  return callback2(TitleWrapper, { onPress: callback, headerAccessibilityLabel: combined, titleContentHeight, children: tmp28Result });
 };
 export const renderChannelTitle = function renderChannelTitle(channelName, arg1) {
   let obj = arg1;

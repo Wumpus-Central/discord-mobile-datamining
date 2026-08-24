@@ -1,8 +1,8 @@
 // _runtime/01197__isNativeReflectConstruct.js
-import _possibleConstructorReturn from "metro/00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "00095__getPrototypeOf.js";
+import closure_2 from "metro/00093__possibleConstructorReturn.js";
+import closure_3 from "00095__getPrototypeOf.js";
 import importDefaultResult from "00098__inherits.js";
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00041__classCallCheck.js";
 import importDefaultResult1 from "metro/00042__createClass.js";
 
 let ScreenshotButtonManager = arg1;
@@ -203,14 +203,13 @@ export const showFeedbackWidget = () => {
 };
 export const showScreenshotButton = () => {
   if (obj.isWeb()) {
-    const debug = ScreenshotButtonManager(817).debug;
+    const debug = tmp(817).debug;
     debug.warn("ScreenshotButton is not supported on Web.");
   } else {
-    const result = ScreenshotButtonManager(1198).lazyLoadAutoInjectScreenshotButtonIntegration();
+    const result = tmp(1198).lazyLoadAutoInjectScreenshotButtonIntegration();
     importDefaultResult1Result3.show();
-    const tmpResult = ScreenshotButtonManager(1198);
+    const tmpResult = tmp(1198);
   }
-  obj = ScreenshotButtonManager(1002);
 };
 export const hideScreenshotButton = () => {
   importDefaultResult1Result3.hide();

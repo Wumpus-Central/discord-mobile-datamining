@@ -2,11 +2,11 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import getExpiringGuildEntitlements from "utils/getExpiringGuildEntitlements.tsx";
-import handleGameServerInstanceCreated from "../../game_server/GameServerStore.tsx";
-import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
-import calculateAppliedBoosts from "GuildPowerupsStore.tsx";
+import closure_2 from "../../game_server/GameServerStore.tsx";
+import closure_3 from "../../../stores/GuildStore.tsx";
+import closure_4 from "GuildPowerupsStore.tsx";
 
-require = fn;
+require = arg1;
 let closure_5 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildPowerupsNotificationStore extends PersistedStore {
@@ -30,8 +30,8 @@ let items = [
   (arg0) => {
     closure_0 = arg0;
     const entries = Object.entries(arg0);
-    const item = entries.forEach((item, index) => {
-      [tmp, tmp2] = item;
+    const item = entries.forEach((arg0) => {
+      [tmp, tmp2] = arg0;
       closure_0[tmp] = tmp2;
     });
     return arg0;
@@ -86,6 +86,6 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(dispat
     closure_5 = {};
   }
 });
-const result = require("obj132").fileFinishedImporting("modules/premium/powerups/GuildPowerupsNotificationStore.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsNotificationStore.tsx");
 
 export default guildPowerupsNotificationStore;
