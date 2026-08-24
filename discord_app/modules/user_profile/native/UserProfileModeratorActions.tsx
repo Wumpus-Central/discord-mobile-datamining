@@ -1,23 +1,23 @@
-// === Module 12151: ModeratorActionRow ===
+// === Module 12203: ModeratorActionRow ===
 
-// Module 12151 (ModeratorActionRow)
+// Module 12203 (ModeratorActionRow)
 import noopAll from "noop" /* 19 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4734 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import Divider from "Divider" /* 7185 */;
-import closure_4 from "buildStageChannelUserRoles" /* 4990 */;
+import Text from "Text" /* 4739 */;
+import TableRowInner from "TableRowInner" /* 6322 */;
+import Divider from "Divider" /* 7223 */;
+import closure_4 from "buildStageChannelUserRoles" /* 4995 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "comparator" /* 1981 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_11 from "updateVoiceState" /* 4547 */;
 import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4012 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function ModeratorActionRow(arg0) {
@@ -375,7 +375,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = callback(5260);
+              let arr = callback(5265);
               arr = arr.pop();
             }
           };

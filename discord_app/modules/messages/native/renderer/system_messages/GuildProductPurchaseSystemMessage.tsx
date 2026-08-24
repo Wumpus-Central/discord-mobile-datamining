@@ -1,12 +1,12 @@
-// === Module 8243: createGuildProductPurchaseSystemMessage ===
+// === Module 8283: createGuildProductPurchaseSystemMessage ===
 
-// Module 8243 (createGuildProductPurchaseSystemMessage)
+// Module 8283 (createGuildProductPurchaseSystemMessage)
 import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_3 from "hasFlag" /* 4031 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4819 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8225 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8227 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8228 */;
+import closure_3 from "hasFlag" /* 4034 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import { MessageTypes } from "ME" /* 676 */;
 
@@ -50,7 +50,7 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
         let guildMemberAvatarSource = tmp5Result.getGuildMemberAvatarSource(obj, author);
       }
       obj = { content: null, totalMonthsSubscribed: 0, username: null, avatarURL: null, welcomeLabel: null };
-      tmp5Result = tmp5(8213);
+      tmp5Result = tmp5(8253);
       obj1 = { username: null, usernameOnClickHandler: null, productName: null };
       obj1[0] = messageAuthorWithProcessedColor.nick;
       obj2 = { message: null, author: null, roleStyle: null };

@@ -1,22 +1,22 @@
-// === Module 12294: isNonEmptyBoardWidget ===
+// === Module 12346: isNonEmptyBoardWidget ===
 
-// Module 12294 (isNonEmptyBoardWidget)
-import toSubmission from "toSubmission" /* 5380 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 12296 */;
+// Module 12346 (isNonEmptyBoardWidget)
+import toSubmission from "toSubmission" /* 5385 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 12348 */;
 import closure_3 from "noop" /* 19 */;
 
 require = arg1;
 function isNonEmptyBoardWidget(games) {
   let tmp3 = games instanceof toSubmission.ApplicationWidget;
   if (!tmp3) {
-    let tmp4 = games instanceof tmp(5375).UserProfilePersonalWidget;
+    let tmp4 = games instanceof tmp(5380).UserProfilePersonalWidget;
     if (!tmp4) {
-      let isGameWidgetResult = tmp(5367).isGameWidget(games);
+      let isGameWidgetResult = tmp(5372).isGameWidget(games);
       if (isGameWidgetResult) {
         isGameWidgetResult = games.games.length > 0;
       }
       tmp4 = isGameWidgetResult;
-      const tmpResult = tmp(5367);
+      const tmpResult = tmp(5372);
     }
     tmp3 = tmp4;
   }
@@ -25,7 +25,7 @@ function isNonEmptyBoardWidget(games) {
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(12295).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(12347).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
   const tmp2 = useUserProfileWidgetsDefault(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];

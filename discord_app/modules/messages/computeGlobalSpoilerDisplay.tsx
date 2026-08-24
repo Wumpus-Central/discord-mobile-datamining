@@ -1,7 +1,7 @@
-// === Module 10717: computeGlobalSpoilerDisplay ===
+// === Module 10756: computeGlobalSpoilerDisplay ===
 
-// Module 10717 (computeGlobalSpoilerDisplay)
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+// Module 10756 (computeGlobalSpoilerDisplay)
+import closure_2 from "getUncachedChannelPermissions" /* 4024 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -22,7 +22,7 @@ export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoiler
   const _require = channel;
   const items = [closure_2];
   const stateFromStores = _require(647).useStateFromStores(items, () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0));
-  const RenderSpoilers = _require(4066).RenderSpoilers;
+  const RenderSpoilers = _require(4069).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   let flag = true;
   if (constants.ALWAYS !== setting) {

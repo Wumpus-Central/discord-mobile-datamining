@@ -1,6 +1,6 @@
-// === Module 10731: getEmbeddedActivityKey ===
+// === Module 10770: getEmbeddedActivityKey ===
 
-// Module 10731 (getEmbeddedActivityKey)
+// Module 10770 (getEmbeddedActivityKey)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");

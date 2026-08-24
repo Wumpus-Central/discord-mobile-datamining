@@ -1,10 +1,10 @@
-// === Module 13319: isMidjourneyOnboardingFlow ===
+// === Module 13377: isMidjourneyOnboardingFlow ===
 
-// Module 13319 (isMidjourneyOnboardingFlow)
+// Module 13377 (isMidjourneyOnboardingFlow)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import MIDJOURNEY_GUILD_ID from "MIDJOURNEY_GUILD_ID" /* 13320 */;
+import closure_3 from "handleConnectionOpen" /* 4201 */;
+import MIDJOURNEY_GUILD_ID from "MIDJOURNEY_GUILD_ID" /* 13378 */;
 
 require = arg1;
 ({ MIDJOURNEY_BOT_ID: c4, MIDJOURNEY_GUILD_ID: c5 } = MIDJOURNEY_GUILD_ID);

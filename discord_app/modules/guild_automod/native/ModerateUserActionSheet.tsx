@@ -1,14 +1,14 @@
-// === Module 11013: ? ===
+// === Module 11052: ? ===
 
-// Module 11013
+// Module 11052
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let c3 = importAllResult;

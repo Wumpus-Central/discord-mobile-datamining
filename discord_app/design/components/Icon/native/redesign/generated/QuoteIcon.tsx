@@ -1,10 +1,10 @@
-// === Module 12184: QuoteIcon ===
+// === Module 12236: QuoteIcon ===
 
-// Module 12184 (QuoteIcon)
+// Module 12236 (QuoteIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 12185 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 12237 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

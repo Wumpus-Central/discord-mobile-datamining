@@ -1,12 +1,12 @@
-// === Module 11431: MAX_MESSAGES_ALLOWED_FOR_GREETING ===
+// === Module 11482: MAX_MESSAGES_ALLOWED_FOR_GREETING ===
 
-// Module 11431 (MAX_MESSAGES_ALLOWED_FOR_GREETING)
+// Module 11482 (MAX_MESSAGES_ALLOWED_FOR_GREETING)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import set2 from "set" /* 1398 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_3 from "processChannel" /* 4804 */;
+import closure_4 from "reinjectEphemerals" /* 4999 */;
+import closure_5 from "markAllUserIdListsStale" /* 4033 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
@@ -30,9 +30,9 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   if (tmp) {
     recipientId = channel.getRecipientId();
   }
-  const strangerDangerWarning = _require(10570).useStrangerDangerWarning(channel.id);
+  const strangerDangerWarning = _require(10609).useStrangerDangerWarning(channel.id);
   const hasFlagResult = channel.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj = _require(10570);
+  const obj = _require(10609);
   const items = [recipientId, closure_3, strangerDangerWarning, hasFlagResult];
   const items1 = [strangerDangerWarning, tmp, channel.id, recipientId, hasFlagResult];
   return _require(589).useStateFromStores(items, () => {

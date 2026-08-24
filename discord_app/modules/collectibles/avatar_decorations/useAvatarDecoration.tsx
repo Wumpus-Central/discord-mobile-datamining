@@ -1,8 +1,8 @@
-// === Module 4797: useAvatarDecoration ===
+// === Module 4802: useAvatarDecoration ===
 
-// Module 4797 (useAvatarDecoration)
+// Module 4802 (useAvatarDecoration)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");

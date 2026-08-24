@@ -1,8 +1,8 @@
-// === Module 9417: handleJoinGuild ===
+// === Module 9454: handleJoinGuild ===
 
-// Module 9417 (handleJoinGuild)
+// Module 9454 (handleJoinGuild)
 import set from "set" /* 2 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6815 */;
 
 let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 

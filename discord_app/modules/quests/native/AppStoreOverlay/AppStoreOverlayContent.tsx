@@ -1,6 +1,6 @@
-// === Module 10693: _getAppStoreOverlayContent ===
+// === Module 10732: _getAppStoreOverlayContent ===
 
-// Module 10693 (_getAppStoreOverlayContent)
+// Module 10732 (_getAppStoreOverlayContent)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -24,7 +24,7 @@ function _getAppStoreOverlayContent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

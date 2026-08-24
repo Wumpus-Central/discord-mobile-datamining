@@ -1,9 +1,9 @@
-// === Module 8651: PortalToNativeView ===
+// === Module 8688: PortalToNativeView ===
 
-// Module 8651 (PortalToNativeView)
+// Module 8688 (PortalToNativeView)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 noopAll;
 let closure_1 = require("get ActivityIndicator").requireNativeComponent("PortalToNativeView");

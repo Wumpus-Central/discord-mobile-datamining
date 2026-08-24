@@ -1,12 +1,12 @@
-// === Module 8837: getEventChannelsByType ===
+// === Module 8874: getEventChannelsByType ===
 
-// Module 8837 (getEventChannelsByType)
-import canManageResource from "canManageResource" /* 8839 */;
+// Module 8874 (getEventChannelsByType)
+import canManageResource from "canManageResource" /* 8876 */;
 import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_3 from "comparator" /* 1980 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8838 */;
+import closure_3 from "comparator" /* 1981 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4024 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8875 */;
 
 require = arg1;
 function getEventChannelsByType(id, channelTypeFromEntity) {

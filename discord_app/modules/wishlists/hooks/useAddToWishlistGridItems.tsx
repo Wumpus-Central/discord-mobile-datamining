@@ -1,6 +1,6 @@
-// === Module 12324: useAddToWishlistGridItems ===
+// === Module 12376: useAddToWishlistGridItems ===
 
-// Module 12324 (useAddToWishlistGridItems)
+// Module 12376 (useAddToWishlistGridItems)
 import closure_2 from "noop" /* 19 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 

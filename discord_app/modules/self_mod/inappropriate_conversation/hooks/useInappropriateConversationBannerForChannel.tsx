@@ -1,12 +1,12 @@
-// === Module 10575: useInappropriateConversationBannerForChannel ===
+// === Module 10614: useInappropriateConversationBannerForChannel ===
 
-// Module 10575 (useInappropriateConversationBannerForChannel)
+// Module 10614 (useInappropriateConversationBannerForChannel)
 import set from "set" /* 2 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10573 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10577 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 9960 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10612 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10613 */;
+import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10615 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10616 */;
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");

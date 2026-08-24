@@ -1,8 +1,8 @@
-// === Module 6858: shouldShowMembershipVerificationGate ===
+// === Module 6896: shouldShowMembershipVerificationGate ===
 
-// Module 6858 (shouldShowMembershipVerificationGate)
-import isValidFormResponse from "isValidFormResponse" /* 6859 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+// Module 6896 (shouldShowMembershipVerificationGate)
+import isValidFormResponse from "isValidFormResponse" /* 6897 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

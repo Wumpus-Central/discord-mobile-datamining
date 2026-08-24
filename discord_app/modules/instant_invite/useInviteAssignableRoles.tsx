@@ -1,10 +1,10 @@
-// === Module 17018: useInviteAssignableRoles ===
+// === Module 17111: useInviteAssignableRoles ===
 
-// Module 17018 (useInviteAssignableRoles)
+// Module 17111 (useInviteAssignableRoles)
 import closure_3 from "noop" /* 19 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1985 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
 

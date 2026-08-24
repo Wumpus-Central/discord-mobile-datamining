@@ -1,12 +1,12 @@
-// === Module 14896: UserSettingsDesignSystemText ===
+// === Module 14960: UserSettingsDesignSystemText ===
 
-// Module 14896 (UserSettingsDesignSystemText)
+// Module 14960 (UserSettingsDesignSystemText)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import Stack from "Stack" /* 4733 */;
-import TEXT_VARIANT2 from "TEXT_VARIANT" /* 4735 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import map from "map" /* 4100 */;
+import Stack from "Stack" /* 4738 */;
+import TEXT_VARIANT2 from "TEXT_VARIANT" /* 4740 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -28,8 +28,8 @@ export default function UserSettingsDesignSystemText() {
       obj = { variant: null, children: null };
       obj[0] = arg0;
       obj[1] = arg0;
-      obj[0] = callback2(callback(4734).Text, obj, arg0);
-      tmp = callback2(callback(6291).TableRow, obj, arg0);
+      obj[0] = callback2(callback(4739).Text, obj, arg0);
+      tmp = callback2(callback(6322).TableRow, obj, arg0);
     }
     return tmp;
   });

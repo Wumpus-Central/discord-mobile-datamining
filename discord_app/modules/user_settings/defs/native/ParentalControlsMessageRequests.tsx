@@ -1,15 +1,15 @@
-// === Module 15035: toggle ===
+// === Module 15099: toggle ===
 
-// Module 15035 (toggle)
+// Module 15099 (toggle)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
-import useSelectedTeen from "useSelectedTeen" /* 7623 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import result2 from "result" /* 14182 */;
-import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15021 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
-import createToggle from "createToggle" /* 10669 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5433 */;
+import useSelectedTeen from "useSelectedTeen" /* 7661 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14249 */;
+import result2 from "result" /* 14250 */;
+import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15085 */;
+import closure_3 from "freshTeenActivityWithMap" /* 5301 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 createToggle = {
@@ -43,7 +43,7 @@ createToggle = {
         let obj = shouldAgeVerifyForDMDefaultOff;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
           obj = { entryPoint: null };
-          obj[0] = tmp2(5254).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
+          obj[0] = tmp2(5259).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
           const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
           const obj2 = openIncodeAgeVerificationModalDefault;
         }

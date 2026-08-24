@@ -1,6 +1,6 @@
-// === Module 6099: metadata ===
+// === Module 6130: metadata ===
 
-// Module 6099 (metadata)
+// Module 6130 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyChatSpotIllustration-2x.png.js");

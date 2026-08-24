@@ -1,11 +1,11 @@
-// === Module 7409: PremiumPill ===
+// === Module 7447: PremiumPill ===
 
-// Module 7409 (PremiumPill)
+// Module 7447 (PremiumPill)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {
@@ -70,10 +70,11 @@ export const PremiumPill = (discountOffer) => {
     }
     return num;
   }, items);
-  const tmp8 = flag(flag2[6])(memo, 60000);
-  callback = tmp8;
+  const tmp8Result = flag(flag2[6])(memo, 60000, undefined, isNaN(memo));
+  callback = tmp8Result;
+  const tmp8 = flag(flag2[6]);
   premiumTrialOfferPremiumType = discountOffer(flag2[7]).usePremiumTrialOfferPremiumType();
-  const items1 = [flag2, discountOffer, flag, trialOffer, premiumType, premiumTrialOfferPremiumType, tmp8.days, flag3];
+  const items1 = [flag2, discountOffer, flag, trialOffer, premiumType, premiumTrialOfferPremiumType, tmp8Result.days, flag3];
   const str3 = premiumType.useMemo(() => {
     if (flag2) {
       const intl4 = discountOffer(flag2[8]).intl;
@@ -109,7 +110,7 @@ export const PremiumPill = (discountOffer) => {
     }
     return stringResult;
   }, items1);
-  let tmp10 = null;
+  let tmp11 = null;
   if (null != str3) {
     let obj = { style: null, children: null };
     const items2 = [tmp6.pillContainer, style];
@@ -119,7 +120,7 @@ export const PremiumPill = (discountOffer) => {
     obj[2] = tmp6.discountPillText;
     obj[3] = str3.toUpperCase();
     obj[1] = flag3(tmp(tmp2[9]).Text, obj);
-    tmp10 = flag3(trialOffer, obj);
+    tmp11 = flag3(trialOffer, obj);
   }
-  return tmp10;
+  return tmp11;
 };

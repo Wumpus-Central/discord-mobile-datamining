@@ -1,6 +1,6 @@
-// === Module 10237: _openStickersPremiumUpsellAlert ===
+// === Module 10276: _openStickersPremiumUpsellAlert ===
 
-// Module 10237 (_openStickersPremiumUpsellAlert)
+// Module 10276 (_openStickersPremiumUpsellAlert)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _openStickersPremiumUpsellAlert() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -75,7 +75,7 @@ function _openStickersPremiumUpsellAlert() {
             };
             obj.openLazy(obj4);
             constants = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           constants = tmp;

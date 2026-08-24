@@ -1,13 +1,13 @@
-// === Module 12840: useBuyNitroPlanLabelRenderer ===
+// === Module 12895: useBuyNitroPlanLabelRenderer ===
 
-// Module 12840 (useBuyNitroPlanLabelRenderer)
+// Module 12895 (useBuyNitroPlanLabelRenderer)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ DISCOUNTS: closure_6, SubscriptionPlans: error } = GuildFeatures);

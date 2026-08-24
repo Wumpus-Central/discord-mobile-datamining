@@ -1,10 +1,10 @@
-// === Module 14671: computeIsFavoritesGuildVisible ===
+// === Module 14739: computeIsFavoritesGuildVisible ===
 
-// Module 14671 (computeIsFavoritesGuildVisible)
+// Module 14739 (computeIsFavoritesGuildVisible)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 9988 */;
-import closure_2 from "handleConnectionOpen" /* 4197 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10018 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10027 */;
+import closure_2 from "handleConnectionOpen" /* 4201 */;
 import closure_3 from "initializeFromUserSettings" /* 1394 */;
 
 require = arg1;

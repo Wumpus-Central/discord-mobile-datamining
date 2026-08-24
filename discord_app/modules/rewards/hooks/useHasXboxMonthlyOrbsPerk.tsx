@@ -1,8 +1,8 @@
-// === Module 13279: hasCrepeMonthlyOrbsPerk ===
+// === Module 13337: hasCrepeMonthlyOrbsPerk ===
 
-// Module 13279 (hasCrepeMonthlyOrbsPerk)
+// Module 13337 (hasCrepeMonthlyOrbsPerk)
 import initialize from "initialize" /* 589 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4042 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
@@ -33,7 +33,7 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = tmp(4039);
+    let tmpResult = tmp(4042);
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
       tmpResult = tmp(1938);

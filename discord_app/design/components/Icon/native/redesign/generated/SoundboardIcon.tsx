@@ -1,10 +1,10 @@
-// === Module 7993: SoundboardIcon ===
+// === Module 8032: SoundboardIcon ===
 
-// Module 7993 (SoundboardIcon)
+// Module 8032 (SoundboardIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 7994 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 8033 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

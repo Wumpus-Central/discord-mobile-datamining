@@ -1,6 +1,6 @@
-// === Module 6149: metadata ===
+// === Module 6180: metadata ===
 
-// Module 6149 (metadata)
+// Module 6180 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ShareNitroSpotIllustration-2x.png.js");

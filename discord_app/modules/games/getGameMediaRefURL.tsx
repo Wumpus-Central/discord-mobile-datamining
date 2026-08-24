@@ -1,9 +1,9 @@
-// === Module 4507: getGameMediaRefURL ===
+// === Module 4511: getGameMediaRefURL ===
 
-// Module 4507 (getGameMediaRefURL)
+// Module 4511 (getGameMediaRefURL)
 import set from "set" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import isImageProxyURL from "isImageProxyURL" /* 4508 */;
+import isImageProxyURL from "isImageProxyURL" /* 4512 */;
 
 const result = set.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 

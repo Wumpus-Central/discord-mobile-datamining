@@ -1,17 +1,17 @@
-// === Module 15248: RegisterAgeGate ===
+// === Module 15312: RegisterAgeGate ===
 
-// Module 15248 (RegisterAgeGate)
+// Module 15312 (RegisterAgeGate)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "hasConsented" /* 5258 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import closure_6 from "hasConsented" /* 5263 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15276 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15277 */;
 import { AuthStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "t" /* 3975 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "t" /* 3978 */;
 import subtractResult from "module_100" /* 100 */;
 
 const require = arg1;

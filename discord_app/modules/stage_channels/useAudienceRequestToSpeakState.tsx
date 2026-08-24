@@ -1,7 +1,7 @@
-// === Module 4981: useAudienceRequestToSpeakState ===
+// === Module 4986: useAudienceRequestToSpeakState ===
 
-// Module 4981 (useAudienceRequestToSpeakState)
-import closure_2 from "updateVoiceState" /* 4542 */;
+// Module 4986 (useAudienceRequestToSpeakState)
+import closure_2 from "updateVoiceState" /* 4547 */;
 
 const require = arg1;
 const obj = { NONE: 0, [0]: "NONE", REQUESTED_TO_SPEAK: 1, [1]: "REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK: 2, [2]: "REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK", ON_STAGE: 3, [3]: "ON_STAGE" };

@@ -1,25 +1,25 @@
-// === Module 4266: getGuildTierFromGuild ===
+// === Module 4270: getGuildTierFromGuild ===
 
-// Module 4266 (getGuildTierFromGuild)
+// Module 4270 (getGuildTierFromGuild)
 import _modDef1208 from "module_1208" /* 1208 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import combinedDefault from "combined" /* 1993 */;
-import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import tDefault from "t" /* 3975 */;
-import getPremiumPlanItemAll from "getPremiumPlanItem" /* 4039 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4268 */;
-import formatSize from "formatSize" /* 4269 */;
-import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4270 */;
-import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4281 */;
+import combinedDefault from "combined" /* 1994 */;
+import messagesProxyDefault from "messagesProxy" /* 2920 */;
+import tDefault from "t" /* 3978 */;
+import getPremiumPlanItemAll from "getPremiumPlanItem" /* 4042 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4272 */;
+import formatSize from "formatSize" /* 4273 */;
+import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4274 */;
+import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4285 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
-import closure_7 from "reset" /* 4045 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4271 */;
+import closure_7 from "reset" /* 4048 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 1925 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes" /* 4053 */;
+import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes" /* 4056 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;
@@ -768,7 +768,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4300).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4304).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

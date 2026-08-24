@@ -1,6 +1,6 @@
-// === Module 8385: AssetOriginTypes ===
+// === Module 8424: AssetOriginTypes ===
 
-// Module 8385 (AssetOriginTypes)
+// Module 8424 (AssetOriginTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/profile_customization/ProfilePendingImageTypes.tsx");

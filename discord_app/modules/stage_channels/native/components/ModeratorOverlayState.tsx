@@ -1,6 +1,6 @@
-// === Module 12487: useModeratorOverlayChannelState ===
+// === Module 12541: useModeratorOverlayChannelState ===
 
-// Module 12487 (useModeratorOverlayChannelState)
+// Module 12541 (useModeratorOverlayChannelState)
 import set from "set" /* 2 */;
 import identity from "identity" /* 700 */;
 
@@ -21,7 +21,7 @@ const result = set.fileFinishedImporting("modules/stage_channels/native/componen
 
 export const useModeratorOverlayChannelState = function useModeratorOverlayChannelState(id) {
   const _require = id;
-  dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, _require(4006).shallow);
-  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _require(4006).shallow).has(id), () => callback(closure_0)];
+  dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, _require(4009).shallow);
+  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _require(4009).shallow).has(id), () => callback(closure_0)];
   return items;
 };

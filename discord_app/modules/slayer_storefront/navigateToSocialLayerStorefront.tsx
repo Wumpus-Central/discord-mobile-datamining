@@ -1,12 +1,12 @@
-// === Module 8040: navigateToSocialLayerStorefrontWithGuildPreview ===
+// === Module 8079: navigateToSocialLayerStorefrontWithGuildPreview ===
 
-// Module 8040 (navigateToSocialLayerStorefrontWithGuildPreview)
+// Module 8079 (navigateToSocialLayerStorefrontWithGuildPreview)
 import transitionTo from "transitionTo" /* 1222 */;
-import getPrice from "getPrice" /* 7200 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
+import getPrice from "getPrice" /* 7238 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8080 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 7240 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -38,7 +38,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -102,7 +102,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     if (null != set) {
                       if (!set.has(guild3.PREVIEW_ENABLED)) {
                         if (null != lib) {
-                          let obj4 = lib(8042);
+                          let obj4 = lib(8081);
                           let obj2 = { inviteKey: null, context: null, skipOnboarding: true };
                           obj2[0] = lib.code;
                           obj2[1] = { location: "game_shop" };
@@ -117,12 +117,12 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                     c3 = 2;
                     guild = 1;
                     obj4 = { value: null, done: false };
-                    obj4[0] = id(7301).startLurking(id, {}, { shouldNavigate: false });
+                    obj4[0] = id(7339).startLurking(id, {}, { shouldNavigate: false });
                     return obj4;
                   }
                 } else {
                   guild = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               }
             } else if (2 === tmp5) {

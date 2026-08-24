@@ -1,10 +1,10 @@
-// === Module 14722: toggle ===
+// === Module 14786: toggle ===
 
-// Module 14722 (toggle)
+// Module 14786 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createToggle from "createToggle" /* 10669 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 createToggle = {

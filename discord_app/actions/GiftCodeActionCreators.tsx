@@ -1,11 +1,11 @@
-// === Module 10642: resolveGiftCode ===
+// === Module 10681: resolveGiftCode ===
 
-// Module 10642 (resolveGiftCode)
-import _modDef10643 from "module_10643" /* 10643 */;
+// Module 10681 (resolveGiftCode)
+import _modDef10682 from "module_10682" /* 10682 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
-import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 5309 */;
+import closure_4 from "addApplication" /* 4482 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5306 */;
+import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 5314 */;
 import ME from "ME" /* 676 */;
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1924 */;
 
@@ -41,7 +41,7 @@ function _resolveGiftCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef10643.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef10682.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

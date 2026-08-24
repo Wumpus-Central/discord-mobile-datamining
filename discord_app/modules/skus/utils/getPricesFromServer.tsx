@@ -1,8 +1,8 @@
-// === Module 4517: getPricesFromServer ===
+// === Module 4522: getPricesFromServer ===
 
-// Module 4517 (getPricesFromServer)
+// Module 4522 (getPricesFromServer)
 import set from "set" /* 2 */;
-import createFromServer from "createFromServer" /* 4040 */;
+import createFromServer from "createFromServer" /* 4043 */;
 
 const getPriceFromServer = createFromServer.getPriceFromServer;
 const result = set.fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");

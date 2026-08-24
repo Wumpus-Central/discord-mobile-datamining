@@ -1,6 +1,6 @@
-// === Module 8600: PhoneOrEmailSelectorForceMode ===
+// === Module 8637: PhoneOrEmailSelectorForceMode ===
 
-// Module 8600 (PhoneOrEmailSelectorForceMode)
+// Module 8637 (PhoneOrEmailSelectorForceMode)
 import set from "set" /* 2 */;
 
 let obj = { PHONE: "phone", EMAIL: "email" };

@@ -1,14 +1,14 @@
-// === Module 14124: pressable ===
+// === Module 14192: pressable ===
 
-// Module 14124 (pressable)
+// Module 14192 (pressable)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import _modDef5265 from "module_5265" /* 5265 */;
+import ChangePhoneReason from "ChangePhoneReason" /* 8666 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
-import createToggle from "createToggle" /* 10669 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8664 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 createToggle = {
@@ -29,9 +29,9 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = _modDef5260;
+    let obj = _modDef5265;
     obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
-    obj.pushLazy(asyncRequireImpl(8626, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(8663, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

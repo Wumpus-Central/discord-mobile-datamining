@@ -1,14 +1,14 @@
-// === Module 14479: items ===
+// === Module 14547: items ===
 
-// Module 14479 (items)
+// Module 14547 (items)
 import noopAll from "noop" /* 19 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
-import useTheme from "useTheme" /* 4310 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import preloadDefault from "preload" /* 5449 */;
+import useTheme from "useTheme" /* 4314 */;
+import LinearGradientDefault from "LinearGradient" /* 4761 */;
+import preloadDefault from "preload" /* 5454 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -83,7 +83,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2[0] = items2;
-    obj2[1] = importDefault(isThemeDarkResult ? 14480 : 14481);
+    obj2[1] = importDefault(isThemeDarkResult ? 14548 : 14549);
     obj2[2] = str2;
     items1[1] = tmp6(preloadDefault, obj2);
     obj[1] = items1;

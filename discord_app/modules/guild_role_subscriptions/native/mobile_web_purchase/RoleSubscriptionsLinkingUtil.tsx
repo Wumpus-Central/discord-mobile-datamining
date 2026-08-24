@@ -1,6 +1,6 @@
-// === Module 7278: performRoleSubscriptionUpsellRedirect ===
+// === Module 7316: performRoleSubscriptionUpsellRedirect ===
 
-// Module 7278 (performRoleSubscriptionUpsellRedirect)
+// Module 7316 (performRoleSubscriptionUpsellRedirect)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
@@ -35,7 +35,7 @@ function _performRoleSubscriptionUpsellRedirect() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -136,7 +136,7 @@ function _performRoleSubscriptionTeamCreationRedirect() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -167,7 +167,7 @@ function _performRoleSubscriptionTeamCreationRedirect() {
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;
@@ -202,7 +202,7 @@ function _performRoleSubscriptionEditPayoutRedirect() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -233,7 +233,7 @@ function _performRoleSubscriptionEditPayoutRedirect() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c1 = tmp;
@@ -280,7 +280,7 @@ function _performDeveloperPortalRedirectWithTokenHandoff() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

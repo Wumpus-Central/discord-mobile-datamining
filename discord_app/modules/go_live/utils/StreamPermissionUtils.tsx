@@ -1,16 +1,16 @@
-// === Module 7478: canStreamInChannel ===
+// === Module 7516: canStreamInChannel ===
 
-// Module 7478 (canStreamInChannel)
+// Module 7516 (canStreamInChannel)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import allowChannelAccess from "allowChannelAccess" /* 4979 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 4987 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
-import closure_3 from "set" /* 4540 */;
+import allowChannelAccess from "allowChannelAccess" /* 4984 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 4992 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5257 */;
+import closure_3 from "set" /* 4545 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_8 from "updateVoiceState" /* 4547 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

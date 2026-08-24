@@ -1,9 +1,9 @@
-// === Module 7445: trackAppDirectoryProfileEmbed ===
+// === Module 7483: trackAppDirectoryProfileEmbed ===
 
-// Module 7445 (trackAppDirectoryProfileEmbed)
+// Module 7483 (trackAppDirectoryProfileEmbed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "handleConnectionOpen" /* 1979 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
+import closure_2 from "handleConnectionOpen" /* 1980 */;
+import closure_3 from "handleConnectionOpen" /* 4201 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");

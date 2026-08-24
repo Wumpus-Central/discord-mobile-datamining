@@ -1,8 +1,8 @@
-// === Module 15933: stripPossessive ===
+// === Module 16030: stripPossessive ===
 
-// Module 15933 (stripPossessive)
+// Module 16030 (stripPossessive)
 import applyDefault from "apply" /* 12 */;
-import snowballStem from "snowballStem" /* 15934 */;
+import snowballStem from "snowballStem" /* 16031 */;
 import set from "set" /* 2 */;
 
 function stripPossessive(str) {

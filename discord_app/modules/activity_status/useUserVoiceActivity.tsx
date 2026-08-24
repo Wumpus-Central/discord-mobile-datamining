@@ -1,13 +1,13 @@
-// === Module 9896: getVisibleUserVoiceActivity ===
+// === Module 9935: getVisibleUserVoiceActivity ===
 
-// Module 9896 (getVisibleUserVoiceActivity)
+// Module 9935 (getVisibleUserVoiceActivity)
 import importDefaultResult from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult1 from "getUncachedChannelPermissions" /* 4021 */;
-import importDefaultResult2 from "updateVoiceState" /* 4542 */;
+import importDefaultResult1 from "getUncachedChannelPermissions" /* 4024 */;
+import importDefaultResult2 from "updateVoiceState" /* 4547 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;
-function getVisibleUserVoiceActivity(arg0) {
+function getVisibleUserVoiceActivity(arg0, arg1) {
   ({ userId, guildId } = arg0);
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -65,7 +65,7 @@ function getVisibleUserVoiceActivity(arg0) {
   }
 }
 let closure_6 = { ChannelStore: importDefaultResult, PermissionStore: importDefaultResult1, VoiceStateStore: importDefaultResult2 };
-let closure_7 = Object.freeze({ voiceState: "r", voiceChannel: "accessibilityRole" });
+let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "ct" });
 const result = require("set").fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default function useUserVoiceActivity(userId) {

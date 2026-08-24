@@ -1,11 +1,11 @@
-// === Module 12121: UserProfileActivityVoiceChannel ===
+// === Module 12173: UserProfileActivityVoiceChannel ===
 
-// Module 12121 (UserProfileActivityVoiceChannel)
+// Module 12173 (UserProfileActivityVoiceChannel)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import sum from "sum" /* 505 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import set from "set" /* 500 */;
 
 const View = get_ActivityIndicator.View;

@@ -1,10 +1,10 @@
-// === Module 11108: PhoneIcon ===
+// === Module 11147: PhoneIcon ===
 
-// Module 11108 (PhoneIcon)
+// Module 11147 (PhoneIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 11109 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 11148 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

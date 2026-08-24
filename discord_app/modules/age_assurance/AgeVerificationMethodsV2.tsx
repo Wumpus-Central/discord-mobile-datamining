@@ -1,6 +1,6 @@
-// === Module 6567: _fetchAgeVerificationMethodsV ===
+// === Module 6600: _fetchAgeVerificationMethodsV ===
 
-// Module 6567 (_fetchAgeVerificationMethodsV)
+// Module 6600 (_fetchAgeVerificationMethodsV)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -16,7 +16,7 @@ function _fetchAgeVerificationMethodsV() {
     let body = arg1.body;
     const methods = body.methods;
     obj[0] = methods.map((method) => {
-      let obj = { method: method.method, vendor: method.vendor, title: method.title, description: method.description, providedBy: null, icon: null };
+      let obj = { method: method.method, vendor: method.vendor, title: method.title, description: method.description, providedBy: null, icon: null, externalWindow: null };
       let provided_by = method.provided_by;
       if (provided_by == null) {
         provided_by = null;
@@ -42,6 +42,11 @@ function _fetchAgeVerificationMethodsV() {
         tmp3 = obj;
       }
       obj[5] = tmp3;
+      let external_window = method.external_window;
+      if (external_window == null) {
+        external_window = null;
+      }
+      obj[6] = external_window;
       return obj;
     });
     const footer_message = body.footer_message;

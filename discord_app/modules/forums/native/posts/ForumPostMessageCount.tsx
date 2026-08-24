@@ -1,15 +1,15 @@
-// === Module 11194: num2 ===
+// === Module 11246: num2 ===
 
-// Module 11194 (num2)
+// Module 11246 (num2)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ChatIcon from "ChatIcon" /* 6867 */;
-import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
-import AnimatedCountDefault from "AnimatedCount" /* 10519 */;
+import ChatIcon from "ChatIcon" /* 6905 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8552 */;
+import AnimatedCountDefault from "AnimatedCount" /* 10558 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -60,7 +60,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
     obj1[2] = messageCountText;
-    let tmp7Result = tmp7(tmp2(4734).Text, obj1);
+    let tmp7Result = tmp7(tmp2(4739).Text, obj1);
   } else {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
@@ -77,7 +77,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     obj4[0] = unreadCount;
     const items2 = ["(", intl2.format(tmp2(1236).t.z3PEth, obj4), ")"];
     obj3[3] = items2;
-    tmp5Result = tmp5(tmp2(4734).Text, obj3);
+    tmp5Result = tmp5(tmp2(4739).Text, obj3);
   }
   items1[2] = tmp5Result;
   obj[2] = items1;

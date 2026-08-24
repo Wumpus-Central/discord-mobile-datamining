@@ -1,10 +1,10 @@
-// === Module 6168: SocialMediaSpotIllustration ===
+// === Module 6199: SocialMediaSpotIllustration ===
 
-// Module 6168 (SocialMediaSpotIllustration)
+// Module 6199 (SocialMediaSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6169 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6200 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SocialMediaSpotIllustration.native.tsx");

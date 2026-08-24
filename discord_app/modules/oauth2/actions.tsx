@@ -1,12 +1,12 @@
-// === Module 9772: getLocationContextServer ===
+// === Module 9811: getLocationContextServer ===
 
-// Module 9772 (getLocationContextServer)
+// Module 9811 (getLocationContextServer)
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 import sendRequest from "sendRequest" /* 530 */;
-import handleLogoutDefault from "handleLogout" /* 5256 */;
+import handleLogoutDefault from "handleLogout" /* 5261 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -56,7 +56,7 @@ function _authorize() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -195,7 +195,7 @@ function _fetchAuthorization() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -315,7 +315,7 @@ function _startSamsungAuthorization() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -357,7 +357,7 @@ function _startSamsungAuthorization() {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
           c5 = tmp;

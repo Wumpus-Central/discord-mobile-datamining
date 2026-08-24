@@ -1,11 +1,11 @@
-// === Module 14123: pressable ===
+// === Module 14191: pressable ===
 
-// Module 14123 (pressable)
+// Module 14191 (pressable)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef8561 from "module_8561" /* 8561 */;
+import _modDef8600 from "module_8600" /* 8600 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import createToggle from "createToggle" /* 10669 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 createToggle = {
@@ -26,7 +26,7 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    _modDef8561.open(true);
+    _modDef8600.open(true);
   },
   withArrow: true
 };

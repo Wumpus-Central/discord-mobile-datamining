@@ -1,6 +1,6 @@
-// === Module 16365: useActivityUsers ===
+// === Module 16462: useActivityUsers ===
 
-// Module 16365 (useActivityUsers)
+// Module 16462 (useActivityUsers)
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import closure_3 from "participantFromServer" /* 1390 */;
 

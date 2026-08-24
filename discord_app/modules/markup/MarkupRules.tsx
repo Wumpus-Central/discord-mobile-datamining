@@ -1,35 +1,35 @@
-// === Module 6809: parseLink ===
+// === Module 6846: parseLink ===
 
-// Module 6809 (parseLink)
+// Module 6846 (parseLink)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1986 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import validateContentTypes from "validateContentTypes" /* 6811 */;
-import validateContentTypesDefault from "validateContentTypes" /* 6811 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6814 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import getChannelDefault from "getChannel" /* 6816 */;
-import _modDef6819 from "module_6819" /* 6819 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6820 */;
-import getSoundmojiASTFromStringDefault from "getSoundmojiASTFromString" /* 6820 */;
-import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 6826 */;
-import staticRouteToTranslation from "staticRouteToTranslation" /* 6827 */;
-import matchDefault from "match" /* 6828 */;
-import regExpDefault from "regExp" /* 6829 */;
-import _modDef6830 from "module_6830" /* 6830 */;
-import matchDefault2 from "match" /* 6831 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1987 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
+import getNicknameDefault from "getNickname" /* 4801 */;
+import validateContentTypes from "validateContentTypes" /* 6848 */;
+import validateContentTypesDefault from "validateContentTypes" /* 6848 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6851 */;
+import textRegexpDefault from "textRegexp" /* 6852 */;
+import getChannelDefault from "getChannel" /* 6853 */;
+import regExpDefault from "regExp" /* 6856 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6858 */;
+import getSoundmojiASTFromStringDefault from "getSoundmojiASTFromString" /* 6858 */;
+import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 6864 */;
+import staticRouteToTranslation from "staticRouteToTranslation" /* 6865 */;
+import matchDefault from "match" /* 6866 */;
+import regExpDefault2 from "regExp" /* 6867 */;
+import _modDef6868 from "module_6868" /* 6868 */;
+import matchDefault2 from "match" /* 6869 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_toArray" /* 853 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5246 */;
-import { GAME_MENTION_RAW_RE } from "regExp" /* 6810 */;
-import importDefaultResult from "t" /* 4092 */;
-import importDefaultResult3 from "combineMarkupRules" /* 6808 */;
+import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5251 */;
+import { GAME_MENTION_RAW_RE } from "regExp" /* 6847 */;
+import importDefaultResult from "t" /* 4095 */;
+import importDefaultResult3 from "combineMarkupRules" /* 6845 */;
 import importDefaultResult4 from "apply" /* 12 */;
 
 require = arg1;
@@ -138,8 +138,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNicknameDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4219).getName(str);
-        const tmp4Result = tmp4(4219);
+        nickname = tmp4(4223).getName(str);
+        const tmp4Result = tmp4(4223);
       }
       str = nickname;
       const obj2 = getNicknameDefault;
@@ -514,7 +514,7 @@ obj[19] = {
 obj[20] = getChannelDefault.channelMention;
 obj[21] = getChannelDefault.channelOrMessageUrl;
 obj[22] = getChannelDefault.mediaPostLink;
-obj[23] = _modDef6819.attachmentLink;
+obj[23] = regExpDefault.attachmentLink;
 const obj10 = {
   order: textRegexpDefault.order,
   requiredFirstCharacters: ["@"],
@@ -874,8 +874,8 @@ obj[33] = {
   }
 };
 obj[34] = matchDefault;
-obj[35] = regExpDefault;
-obj[36] = _modDef6830;
+obj[35] = regExpDefault2;
+obj[36] = _modDef6868;
 let items = [obj, ];
 const obj20 = {
   order: textRegexpDefault.order,

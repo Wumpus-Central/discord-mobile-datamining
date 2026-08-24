@@ -1,8 +1,8 @@
-// === Module 12067: showMediaMessagePreviewActionSheet ===
+// === Module 12119: showMediaMessagePreviewActionSheet ===
 
-// Module 12067 (showMediaMessagePreviewActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+// Module 12119 (showMediaMessagePreviewActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
@@ -22,7 +22,7 @@ export default function showMediaMessagePreviewActionSheet(message) {
         obj[1] = message;
         obj[2] = user;
         obj[3] = message.closeMediaModal;
-        obj.openLazy(asyncRequireImpl(12068, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(12120, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
       }
     }
   }

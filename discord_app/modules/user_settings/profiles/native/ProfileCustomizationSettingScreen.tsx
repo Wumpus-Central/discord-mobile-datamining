@@ -1,20 +1,20 @@
-// === Module 14000: ProfileCustomizationSubsection ===
+// === Module 14068: ProfileCustomizationSubsection ===
 
-// Module 14000 (ProfileCustomizationSubsection)
+// Module 14068 (ProfileCustomizationSubsection)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14001 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14066 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14069 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14134 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_10 from "zustandStore" /* 9537 */;
-import closure_11 from "handleFormOpen" /* 8370 */;
+import closure_10 from "zustandStore" /* 9574 */;
+import closure_11 from "handleFormOpen" /* 8409 */;
 import { ProfileCustomizationSubsection } from "MAX_FAVORITES" /* 685 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 let closure_3 = ["handleSubmit"];
@@ -152,7 +152,7 @@ const memoResult = importAllResult.memo(() => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(() => {
                   delayedCall.delay();
                 }
                 navigation = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } catch (tmp14) {
               navigation = tmp;

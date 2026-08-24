@@ -1,17 +1,17 @@
-// === Module 15531: GameCommunityMultiGuildUpsellCard ===
+// === Module 15596: GameCommunityMultiGuildUpsellCard ===
 
-// Module 15531 (GameCommunityMultiGuildUpsellCard)
+// Module 15596 (GameCommunityMultiGuildUpsellCard)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "initialize" /* 4022 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_9 from "initialize" /* 4025 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ Image: closure_6, View: error } = get_ActivityIndicator);
@@ -134,7 +134,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -234,7 +234,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

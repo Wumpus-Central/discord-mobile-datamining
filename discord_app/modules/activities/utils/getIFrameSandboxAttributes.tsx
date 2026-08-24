@@ -1,6 +1,6 @@
-// === Module 12475: getIFrameSandboxAttributes ===
+// === Module 12529: getIFrameSandboxAttributes ===
 
-// Module 12475 (getIFrameSandboxAttributes)
+// Module 12529 (getIFrameSandboxAttributes)
 import set from "set" /* 2 */;
 
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];

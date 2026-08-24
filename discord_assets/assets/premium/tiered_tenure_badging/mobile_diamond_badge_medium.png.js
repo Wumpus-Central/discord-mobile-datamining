@@ -1,6 +1,6 @@
-// === Module 9484: metadata ===
+// === Module 9521: metadata ===
 
-// Module 9484 (metadata)
+// Module 9521 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_diamond_badge_medium.png.js");

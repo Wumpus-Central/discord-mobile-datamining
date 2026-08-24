@@ -1,10 +1,10 @@
-// === Module 8311: FacebookNeutralIcon ===
+// === Module 8351: FacebookNeutralIcon ===
 
-// Module 8311 (FacebookNeutralIcon)
+// Module 8351 (FacebookNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 8312 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 8352 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

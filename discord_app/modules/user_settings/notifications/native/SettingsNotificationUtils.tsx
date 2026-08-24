@@ -1,9 +1,9 @@
-// === Module 14790: hasAndroidNotificationChannels ===
+// === Module 14854: hasAndroidNotificationChannels ===
 
-// Module 14790 (hasAndroidNotificationChannels)
+// Module 14854 (hasAndroidNotificationChannels)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4358 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
 

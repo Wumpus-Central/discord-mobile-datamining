@@ -1,13 +1,13 @@
-// === Module 11572: ApplicationCommandItem ===
+// === Module 11621: ApplicationCommandItem ===
 
-// Module 11572 (ApplicationCommandItem)
+// Module 11621 (ApplicationCommandItem)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10216 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

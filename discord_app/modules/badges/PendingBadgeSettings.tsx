@@ -1,11 +1,11 @@
-// === Module 14021: getSavedBadgeSettings ===
+// === Module 14089: getSavedBadgeSettings ===
 
-// Module 14021 (getSavedBadgeSettings)
+// Module 14089 (getSavedBadgeSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set2 from "set" /* 14022 */;
+import set2 from "set" /* 14090 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "initialize" /* 8936 */;
+import closure_5 from "initialize" /* 8973 */;
 
 require = arg1;
 function getSavedBadgeSettings() {
@@ -102,7 +102,7 @@ export const setPendingBadgeHiddenBadges = function setPendingBadgeHiddenBadges(
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp4 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessible", pendingBadgeHiddenBadges: "height" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "accessible", pendingBadgeHiddenBadges: "Object" });
 };
 export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
   ({ pendingBadgeDisplayOrder, pendingBadgeHiddenBadges } = arg1);
@@ -139,7 +139,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
       let tmp11 = item10026;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let NON_CUSTOMIZABLE_BADGE_IDS = set(14022).NON_CUSTOMIZABLE_BADGE_IDS;
+      let NON_CUSTOMIZABLE_BADGE_IDS = set(14090).NON_CUSTOMIZABLE_BADGE_IDS;
       if (NON_CUSTOMIZABLE_BADGE_IDS.has(item10026.badge_id)) {
         let tmp16 = item10026;
         let arr = items1.push(tmp11);
@@ -210,11 +210,11 @@ export const applyPendingBadgeSettingsToProfileBadges = function applyPendingBad
       let tmp11 = item10027;
       let tmp12 = set;
       let tmp13 = dependencyMap;
-      let obj = set(8937);
+      let obj = set(8974);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(14022).NON_CUSTOMIZABLE_BADGE_IDS;
+        let NON_CUSTOMIZABLE_BADGE_IDS = tmp12(14090).NON_CUSTOMIZABLE_BADGE_IDS;
         let tmp16 = profileBadgeId;
         if (!NON_CUSTOMIZABLE_BADGE_IDS.has(tmp15)) {
           let tmp17 = profileBadgeId;

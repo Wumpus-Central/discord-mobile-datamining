@@ -1,6 +1,6 @@
-// === Module 15920: getAdjustedPlaceholderCount ===
+// === Module 16017: getAdjustedPlaceholderCount ===
 
-// Module 15920 (getAdjustedPlaceholderCount)
+// Module 16017 (getAdjustedPlaceholderCount)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");

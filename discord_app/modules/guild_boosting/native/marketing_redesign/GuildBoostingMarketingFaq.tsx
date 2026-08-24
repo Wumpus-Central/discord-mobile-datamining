@@ -1,15 +1,15 @@
-// === Module 13037: items1 ===
+// === Module 13092: items1 ===
 
-// Module 13037 (items1)
+// Module 13092 (items1)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
+import combinedDefault from "combined" /* 1994 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -146,7 +146,7 @@ export default function GuildBoostingMarketingFaq() {
   obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
   const intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t.HPJ6Nj);
-  let items = [callback2(_require(4734).Heading, obj), ];
+  let items = [callback2(_require(4739).Heading, obj), ];
   const tmp2 = callback(React.useState(null), 2);
   items[1] = callback2(View, {
     style: tmp.list,

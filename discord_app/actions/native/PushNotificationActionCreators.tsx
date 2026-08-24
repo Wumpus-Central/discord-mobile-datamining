@@ -1,16 +1,16 @@
-// === Module 11584: getOrRefreshPushSyncToken ===
+// === Module 11633: getOrRefreshPushSyncToken ===
 
-// Module 11584 (getOrRefreshPushSyncToken)
+// Module 11633 (getOrRefreshPushSyncToken)
 import timestampDefault from "timestamp" /* 3 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5227 from "module_5227" /* 5227 */;
+import _modDef5232 from "module_5232" /* 5232 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 11585 */;
+import closure_5 from "initialize" /* 11634 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
-import str2 from "str2" /* 5259 */;
+import str2 from "str2" /* 5264 */;
 
 require = arg1;
 function getOrRefreshPushSyncToken() {
@@ -42,7 +42,7 @@ function _getOrRefreshPushSyncToken() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -106,7 +106,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(11589);
+            obj = callback(11638);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -150,7 +150,7 @@ let obj = {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = _modDef5227;
+      obj = _modDef5232;
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -245,8 +245,8 @@ let obj = {
       } else if (arg0 !== 2) {
         v0 = arg1;
         if (v0.body.invalid_push_sync_tokens.length > 0) {
-          const result = v0(11589).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-          const obj9 = v0(11589);
+          const result = v0(11638).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+          const obj9 = v0(11638);
         }
       }
       return arg1;
@@ -254,7 +254,7 @@ let obj = {
   },
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
-    let obj = _modDef5227;
+    let obj = _modDef5232;
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;

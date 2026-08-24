@@ -1,8 +1,8 @@
-// === Module 5081: fromMessage ===
+// === Module 5086: fromMessage ===
 
-// Module 5081 (fromMessage)
+// Module 5086 (fromMessage)
 import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "trackCommunicationDisabled" /* 1990 */;
+import closure_1 from "trackCommunicationDisabled" /* 1991 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 

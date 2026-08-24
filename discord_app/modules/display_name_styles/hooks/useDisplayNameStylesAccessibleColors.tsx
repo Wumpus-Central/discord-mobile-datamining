@@ -1,8 +1,8 @@
-// === Module 9456: useDisplayNameStylesAccessibleColors ===
+// === Module 9493: useDisplayNameStylesAccessibleColors ===
 
-// Module 9456 (useDisplayNameStylesAccessibleColors)
+// Module 9493 (useDisplayNameStylesAccessibleColors)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");

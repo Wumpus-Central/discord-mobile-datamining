@@ -1,6 +1,6 @@
-// === Module 6049: metadata ===
+// === Module 6080: metadata ===
 
-// Module 6049 (metadata)
+// Module 6080 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PencilIllocon-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 8703: ActivityPanelModes ===
+// === Module 8740: ActivityPanelModes ===
 
-// Module 8703 (ActivityPanelModes)
+// Module 8740 (ActivityPanelModes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");

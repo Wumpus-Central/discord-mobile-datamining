@@ -1,9 +1,9 @@
-// === Module 6903: saferParse ===
+// === Module 6941: saferParse ===
 
-// Module 6903 (saferParse)
+// Module 6941 (saferParse)
 import set from "set" /* 2 */;
-import tDefault from "t" /* 4092 */;
-import collectAst from "collectAst" /* 6904 */;
+import tDefault from "t" /* 4095 */;
+import collectAst from "collectAst" /* 6942 */;
 
 function saferParse(arg0, arg1, inline) {
   let text = arg1;

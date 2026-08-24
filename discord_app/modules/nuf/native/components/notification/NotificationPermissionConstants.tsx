@@ -1,6 +1,6 @@
-// === Module 11582: EventActionType ===
+// === Module 11631: EventActionType ===
 
-// Module 11582 (EventActionType)
+// Module 11631 (EventActionType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/nuf/native/components/notification/NotificationPermissionConstants.tsx");

@@ -1,6 +1,6 @@
-// === Module 5589: metadata ===
+// === Module 5596: metadata ===
 
-// Module 5589 (metadata)
+// Module 5596 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CloverIllocon-2x.png.js");

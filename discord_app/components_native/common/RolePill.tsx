@@ -1,12 +1,12 @@
-// === Module 9971: RolePill ===
+// === Module 10010: RolePill ===
 
-// Module 9971 (RolePill)
+// Module 10010 (RolePill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -29,9 +29,9 @@ export default function RolePill(role) {
   role = role.role;
   ({ guildId, color } = role);
   let combined;
-  const DeveloperMode = role(4066).DeveloperMode;
+  const DeveloperMode = role(4069).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = role(7163);
+  let obj = role(7201);
   obj = { guildId, roleId: role.id, size: 12 };
   const roleIcon = obj.useRoleIcon(obj);
   let name = role.name;
@@ -76,8 +76,8 @@ export default function RolePill(role) {
     }
     obj2[2] = guildId;
     obj2[3] = color;
-    let tmp10Result = tmp10(combined(7182), obj2);
-    const tmp15 = combined(7182);
+    let tmp10Result = tmp10(combined(7220), obj2);
+    const tmp15 = combined(7220);
   } else {
     const items = [tmp9.bubble, ];
     if (null != color) {
@@ -101,8 +101,8 @@ export default function RolePill(role) {
     tmp10Result = tmp10(tmp12, obj6);
   }
   items1[1] = tmp10Result;
-  items1[2] = closure_6(role(4734).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = closure_6(role(4739).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
   obj1[1] = items1;
   obj[4] = closure_7(View, obj1);
-  return closure_6(role(5433).PressableHighlight, obj);
+  return closure_6(role(5438).PressableHighlight, obj);
 };

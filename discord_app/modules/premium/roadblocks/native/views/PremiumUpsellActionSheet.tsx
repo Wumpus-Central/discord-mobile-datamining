@@ -1,25 +1,25 @@
-// === Module 8480: AlwaysCompressImagesSwitch ===
+// === Module 8519: AlwaysCompressImagesSwitch ===
 
-// Module 8480 (AlwaysCompressImagesSwitch)
+// Module 8519 (AlwaysCompressImagesSwitch)
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9217 */;
+import preloadDefault from "preload" /* 5454 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9254 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import closure_7 from "handleThemeChange" /* 1302 */;
 import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
+import closure_9 from "handleConnectionOpen" /* 4201 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
-import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4524 */;
-import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8481 */;
+import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4529 */;
+import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8520 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
@@ -47,8 +47,8 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj1[0] = tmp.compressionHint;
       const intl2 = tmp2(1236).intl;
       obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4734).Text, obj1);
-      obj[1] = callback2(tmp2(7178).TableSwitchRow, obj);
+      obj[5] = callback2(tmp2(4739).Text, obj1);
+      obj[1] = callback2(tmp2(7216).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }

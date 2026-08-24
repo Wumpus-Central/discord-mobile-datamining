@@ -1,6 +1,6 @@
-// === Module 11365: AppLauncherChannelOption ===
+// === Module 11416: AppLauncherChannelOption ===
 
-// Module 11365 (AppLauncherChannelOption)
+// Module 11416 (AppLauncherChannelOption)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;

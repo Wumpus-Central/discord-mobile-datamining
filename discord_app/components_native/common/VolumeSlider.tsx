@@ -1,18 +1,18 @@
-// === Module 12139: VolumeSlider ===
+// === Module 12191: VolumeSlider ===
 
-// Module 12139 (VolumeSlider)
+// Module 12191 (VolumeSlider)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import map from "map" /* 4097 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
-import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8105 */;
-import VoiceXIcon from "VoiceXIcon" /* 12140 */;
+import map from "map" /* 4100 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 6934 */;
+import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8144 */;
+import VoiceXIcon from "VoiceXIcon" /* 12192 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources" /* 4529 */;
+import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources" /* 4534 */;
 import jsxProd from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -46,7 +46,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: tmp4.leftIcon };
   const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), , ];
   obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = tmp5(4782);
+  let tmp5Result = tmp5(4787);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
   obj1[4] = minTrackColor;

@@ -1,9 +1,9 @@
-// === Module 10368: CollectiblesWishlistItemCard ===
+// === Module 10408: CollectiblesWishlistItemCard ===
 
-// Module 10368 (CollectiblesWishlistItemCard)
+// Module 10408 (CollectiblesWishlistItemCard)
 import closure_3 from "noop" /* 19 */;
-import { transformSKUToCollectiblesItem as closure_4 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import closure_5 from "initialize" /* 10369 */;
+import { transformSKUToCollectiblesItem as closure_4 } from "createCollectiblesItemsFromServerResponse" /* 5310 */;
+import closure_5 from "initialize" /* 10409 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

@@ -1,14 +1,14 @@
-// === Module 10268: UploadPreviewActionSheet ===
+// === Module 10307: UploadPreviewActionSheet ===
 
-// Module 10268 (UploadPreviewActionSheet)
+// Module 10307 (UploadPreviewActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { DraftType } from "handleChanged" /* 4830 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6989 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
@@ -115,9 +115,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((code) => {
       if ("E_PICKER_CANCELLED" !== code.code) {
-        let obj = callback2(4094);
+        let obj = callback2(4097);
         obj = { key: "CROP_ERROR", IconComponent: null, content: null };
-        obj[1] = callback(8074).CircleErrorIcon;
+        obj[1] = callback(8113).CircleErrorIcon;
         obj[2] = code.message;
         obj.open(obj);
       }

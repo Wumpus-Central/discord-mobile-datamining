@@ -1,8 +1,8 @@
-// === Module 6828: match ===
+// === Module 6866: match ===
 
-// Module 6828 (match)
-import t from "t" /* 4092 */;
-import tDefault from "t" /* 4092 */;
+// Module 6866 (match)
+import t from "t" /* 4095 */;
+import tDefault from "t" /* 4095 */;
 
 require = arg1;
 const re2 = /\n$/;

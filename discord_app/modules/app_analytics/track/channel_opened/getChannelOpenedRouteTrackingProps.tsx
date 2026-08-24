@@ -1,8 +1,8 @@
-// === Module 15959: getChannelOpenedRouteTrackingProps ===
+// === Module 16056: getChannelOpenedRouteTrackingProps ===
 
-// Module 15959 (getChannelOpenedRouteTrackingProps)
+// Module 16056 (getChannelOpenedRouteTrackingProps)
 import transitionTo from "transitionTo" /* 1222 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7521 */;
+import collectThreadMetadata from "collectThreadMetadata" /* 7559 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 require = arg1;

@@ -1,16 +1,16 @@
-// === Module 11865: ContactSyncLandingOnboardingRedesign ===
+// === Module 11914: ContactSyncLandingOnboardingRedesign ===
 
-// Module 11865 (ContactSyncLandingOnboardingRedesign)
+// Module 11914 (ContactSyncLandingOnboardingRedesign)
 import ThemesDefault from "Themes" /* 712 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 11859 */;
-import registerAssetDefault from "registerAsset" /* 11866 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 11867 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 11908 */;
+import registerAssetDefault from "registerAsset" /* 11915 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 11916 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4844 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
@@ -52,7 +52,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             callback();
           }
           table = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         table = tmp;
@@ -101,18 +101,18 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
   obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
-  items1[1] = callback2(onNext(4734).Text, obj1);
+  items1[1] = callback2(onNext(4739).Text, obj1);
   const obj2 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
   const intl2 = onNext(1236).intl;
   obj2[2] = intl2.string(onNext(1236).t.G8zcHt);
-  items1[2] = callback2(onNext(4734).Text, obj2);
+  items1[2] = callback2(onNext(4739).Text, obj2);
   const obj3 = { style: tmp.buttonContainer, children: null };
   const obj4 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1236).intl;
   obj4[2] = intl3.string(onNext(1236).t.LhlgY9);
   obj4[3] = callback;
   obj4[4] = loading;
-  obj3[1] = callback2(onNext(4745).Button, obj4);
+  obj3[1] = callback2(onNext(4750).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
   items1[4] = callback2(ContactSyncErrorDefault, { error });
   obj[1] = items1;

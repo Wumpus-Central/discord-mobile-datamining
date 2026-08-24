@@ -1,11 +1,11 @@
-// === Module 7527: handleInit ===
+// === Module 7565: handleInit ===
 
-// Module 7527 (handleInit)
+// Module 7565 (handleInit)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "handlePermissionsChange" /* 4970 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_3 from "handlePermissionsChange" /* 4975 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 
 const require = arg1;
 function handleInit() {
@@ -78,8 +78,8 @@ function handleSetActiveCommand(arg0) {
       obj[5] = query;
       obj[6] = searchResultsPosition;
       obj[7] = source;
-      obj(5245).trackCommandSelected(obj);
-      const obj3 = obj(5245);
+      obj(5250).trackCommandSelected(obj);
+      const obj3 = obj(5250);
     }
     return true;
   }

@@ -1,6 +1,6 @@
-// === Module 7348: useKeyboardBlurring ===
+// === Module 7386: useKeyboardBlurring ===
 
-// Module 7348 (useKeyboardBlurring)
+// Module 7386 (useKeyboardBlurring)
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "subscribeToKeyboardUIStore" /* 1496 */;
@@ -79,7 +79,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
     obj = {};
-    obj = { value: "r", defaultValue: "accessibilityRole" };
+    obj = { value: "Array", defaultValue: "ct" };
     let tmp6Result = tmp6(tmp3[10]);
     let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
     tmp6Result = tmp6(tmp3[10]);

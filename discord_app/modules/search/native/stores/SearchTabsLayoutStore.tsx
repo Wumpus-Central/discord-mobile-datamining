@@ -1,16 +1,16 @@
-// === Module 11535: handleSearchQuery ===
+// === Module 11584: handleSearchQuery ===
 
-// Module 11535 (handleSearchQuery)
+// Module 11584 (handleSearchQuery)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11560 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleReaction" /* 4971 */;
-import closure_5 from "search" /* 11536 */;
-import closure_6 from "setAutocompleteOptions" /* 11537 */;
-import closure_7 from "teardown" /* 11538 */;
-import closure_8 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import closure_4 from "handleReaction" /* 4976 */;
+import closure_5 from "search" /* 11585 */;
+import closure_6 from "setAutocompleteOptions" /* 11586 */;
+import closure_7 from "teardown" /* 11587 */;
+import closure_8 from "prototype" /* 11559 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8546 */;
 
 require = arg1;
 function handleSearchQuery(searchContext) {
@@ -46,7 +46,7 @@ function computeLayoutForState(value) {
     } else {
       arr = table2[searchContext.type];
     }
-    channel = channel.getChannel(_require(11511).getChannelIdFromSearchContext(searchContext));
+    channel = channel.getChannel(_require(11560).getChannelIdFromSearchContext(searchContext));
     let flag;
     if (channel != null) {
       flag = channel.isArchivedThread();
@@ -80,7 +80,7 @@ function computeLayoutForState(value) {
         return closure_5;
       }
     });
-    let tmp6Result = tmp6(11511);
+    let tmp6Result = tmp6(11560);
     autocompleteVisible = tmp6Result.getSearchContextId(searchContext);
     const reduced = found.reduce((arg0, closure_1) => {
       if (reduced.MEMBERS === closure_1) {
@@ -122,7 +122,7 @@ function computeLayoutForState(value) {
     tmp6Result = tmp6(643);
     const result = tmp6Result.areArraysShallowEqual(value.candidateTabs, found);
     let tmp13 = !result;
-    const obj2 = _require(11511);
+    const obj2 = _require(11560);
     const result1 = _require(643).areArraysShallowEqual(value.visibleTabs, visibleTabs);
     const visibleTabCounts2 = value.visibleTabCounts;
     let tmp16 = visibleTabCounts2 === visibleTabCounts;

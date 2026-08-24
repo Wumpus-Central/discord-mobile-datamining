@@ -1,18 +1,18 @@
-// === Module 5388: makeSortedChannel ===
+// === Module 5393: makeSortedChannel ===
 
-// Module 5388 (makeSortedChannel)
+// Module 5393 (makeSortedChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 5389 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "processChannel" /* 4800 */;
+import tDefault from "t" /* 3978 */;
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 5394 */;
+import closure_3 from "processChannel" /* 4804 */;
+import closure_4 from "processChannel" /* 4805 */;
 import { isPrivate } from "createChannelRecord" /* 1395 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_8 from "generateOldThreadCutoff" /* 4777 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5048 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
@@ -80,7 +80,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
 let closure_15 = [];
 let closure_16 = [];
 let closure_17 = [];
-const f36560 = () => {
+const f36671 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -93,7 +93,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f36560 !== "function") {
+  if (typeof f36671 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let values = secondaryIndexMap.values(constants.FAVORITE);

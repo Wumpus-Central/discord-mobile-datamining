@@ -1,12 +1,12 @@
-// === Module 11690: GuildPowerupsBoostGem ===
+// === Module 11739: GuildPowerupsBoostGem ===
 
-// Module 11690 (GuildPowerupsBoostGem)
+// Module 11739 (GuildPowerupsBoostGem)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BoostGemDefault from "BoostGem" /* 11691 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import BoostGemDefault from "BoostGem" /* 11740 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

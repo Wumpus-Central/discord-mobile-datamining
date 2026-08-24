@@ -1,17 +1,17 @@
-// === Module 12142: AnimatedContainer ===
+// === Module 12194: AnimatedContainer ===
 
-// Module 12142 (AnimatedContainer)
+// Module 12194 (AnimatedContainer)
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4734 */;
-import result4 from "result" /* 6289 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
+import Text from "Text" /* 4739 */;
+import result4 from "result" /* 6320 */;
+import apexExperiment from "apexExperiment" /* 8347 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { createElement } from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AnimatedContainer(scale) {
@@ -155,7 +155,7 @@ function GroupMemberAvatar(guildId) {
     obj = { style: null, source: null };
     obj[0] = tmp3.avatar;
     obj[1] = memo;
-    obj[1] = callback(user(5449), obj);
+    obj[1] = callback(user(5454), obj);
     tmp5 = callback(View, obj);
   }
   return tmp5;

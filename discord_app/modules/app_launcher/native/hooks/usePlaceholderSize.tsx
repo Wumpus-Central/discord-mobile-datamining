@@ -1,6 +1,6 @@
-// === Module 11227: usePlaceholderWidth ===
+// === Module 11278: usePlaceholderWidth ===
 
-// Module 11227 (usePlaceholderWidth)
+// Module 11278 (usePlaceholderWidth)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/usePlaceholderSize.tsx");

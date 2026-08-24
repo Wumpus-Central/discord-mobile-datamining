@@ -1,6 +1,6 @@
-// === Module 5028: hasAttachmentsEmbedsComponentsOrSnapshots ===
+// === Module 5033: hasAttachmentsEmbedsComponentsOrSnapshots ===
 
-// Module 5028 (hasAttachmentsEmbedsComponentsOrSnapshots)
+// Module 5033 (hasAttachmentsEmbedsComponentsOrSnapshots)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");

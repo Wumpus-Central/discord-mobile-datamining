@@ -1,11 +1,11 @@
-// === Module 8437: formatSharedClientThemeData ===
+// === Module 8476: formatSharedClientThemeData ===
 
-// Module 8437 (formatSharedClientThemeData)
+// Module 8476 (formatSharedClientThemeData)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2533 */;
-import registerAssetDefault from "registerAsset" /* 7989 */;
+import messagesProxyDefault from "messagesProxy" /* 2534 */;
+import registerAssetDefault from "registerAsset" /* 8028 */;
 
 const Image = get_ActivityIndicator.Image;
 const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");

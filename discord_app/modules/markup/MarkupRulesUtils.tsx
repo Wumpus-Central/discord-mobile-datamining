@@ -1,6 +1,6 @@
-// === Module 8308: smartOutput ===
+// === Module 8348: smartOutput ===
 
-// Module 8308 (smartOutput)
+// Module 8348 (smartOutput)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");

@@ -1,12 +1,12 @@
-// === Module 7451: getQuestDeliveryDataForPlacement ===
+// === Module 7489: getQuestDeliveryDataForPlacement ===
 
-// Module 7451 (getQuestDeliveryDataForPlacement)
+// Module 7489 (getQuestDeliveryDataForPlacement)
 import _modDef1208 from "module_1208" /* 1208 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "set" /* 7452 */;
-import closure_5 from "initializeState" /* 7453 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6756 */;
+import closure_3 from "_getSystemLocale" /* 1995 */;
+import closure_4 from "set" /* 7490 */;
+import closure_5 from "initializeState" /* 7491 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6753 */;
 
 require = arg1;
 function getQuestDeliveryDataForPlacement(arg0, adContentId) {
@@ -17,9 +17,9 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
       let tmp8 = null;
       if (null != adDecisionByPlacementAndAdCreativeId) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-        let tmpResult = tmp(7468);
+        let tmpResult = tmp(7506);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
-        tmpResult = tmp(7468);
+        tmpResult = tmp(7506);
         obj[1] = tmpResult.getDeliveredAdCreativeId(adDecisionByPlacementAndAdCreativeId.creative);
         ({ adDecisionData: obj[2], adContext: obj[3], metadataSealed: obj[4], trafficMetadataSealed: obj[5] } = adDecisionByPlacementAndAdCreativeId);
         tmp8 = obj;
@@ -34,27 +34,27 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   } else {
     const questAdDecisionByPlacement = quest.questAdDecisionByPlacement;
     const value = questAdDecisionByPlacement.get(arg0);
-    if (arg0 === tmp(6719).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
+    if (arg0 === tmp(6756).AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
       if (null != value) {
         obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-        obj[0] = tmp(7468).getDeliveredQuestId(value.creative);
-        const tmpResult1 = tmp(7468);
-        obj[1] = tmp(7468).getDeliveredAdCreativeId(value.creative);
+        obj[0] = tmp(7506).getDeliveredQuestId(value.creative);
+        const tmpResult1 = tmp(7506);
+        obj[1] = tmp(7506).getDeliveredAdCreativeId(value.creative);
         ({ adDecisionData: obj7[2], adContext: obj7[3], metadataSealed: obj7[4], trafficMetadataSealed: obj7[5] } = value);
         let tmp9 = obj;
-        const tmpResult2 = tmp(7468);
+        const tmpResult2 = tmp(7506);
       }
       return tmp9;
     }
     tmp9 = null;
     if (null != value) {
       obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
-      obj[0] = tmp(7468).getDeliveredQuestId(value.creative);
-      const tmpResult3 = tmp(7468);
-      obj[1] = tmp(7468).getDeliveredAdCreativeId(value.creative);
+      obj[0] = tmp(7506).getDeliveredQuestId(value.creative);
+      const tmpResult3 = tmp(7506);
+      obj[1] = tmp(7506).getDeliveredAdCreativeId(value.creative);
       ({ adDecisionData: obj4[2], adContext: obj4[3], metadataSealed: obj4[4], trafficMetadataSealed: obj4[5] } = value);
       tmp9 = obj;
-      const tmpResult4 = tmp(7468);
+      const tmpResult4 = tmp(7506);
     }
   }
 }
@@ -120,7 +120,7 @@ export const isDismissible = function isDismissible(closure_1) {
 export const isDismissed = function isDismissed(dismissedQuestContent) {
   const keys = Object.keys(closure_6);
   if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
-    return tmp2(1403).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 6719).QuestContent[arg1]]);
+    return tmp2(1403).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 6756).QuestContent[arg1]]);
   } else {
     return false;
   }

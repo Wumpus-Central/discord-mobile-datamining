@@ -1,9 +1,9 @@
-// === Module 10055: hairlineWidth ===
+// === Module 10094: hairlineWidth ===
 
-// Module 10055 (hairlineWidth)
+// Module 10094 (hairlineWidth)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import map from "map" /* 9288 */;
+import map from "map" /* 9325 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 let c2 = "text-xs/medium";

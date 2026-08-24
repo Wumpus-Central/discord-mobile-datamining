@@ -1,9 +1,9 @@
-// === Module 8215: getPrivateChannelIntegrationAddedSystemMessageContent ===
+// === Module 8255: getPrivateChannelIntegrationAddedSystemMessageContent ===
 
-// Module 8215 (getPrivateChannelIntegrationAddedSystemMessageContent)
+// Module 8255 (getPrivateChannelIntegrationAddedSystemMessageContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
+import combinedDefault from "combined" /* 1994 */;
 import ME from "ME" /* 676 */;
 
 ({ HelpdeskArticles: c3, NOOP: c4 } = ME);

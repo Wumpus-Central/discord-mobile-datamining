@@ -1,8 +1,8 @@
-// === Module 15796: getCoverImageURI ===
+// === Module 15865: getCoverImageURI ===
 
-// Module 15796 (getCoverImageURI)
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
-import closure_2 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+// Module 15865 (getCoverImageURI)
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4388 */;
+import closure_2 from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionSettingsUtils.tsx");

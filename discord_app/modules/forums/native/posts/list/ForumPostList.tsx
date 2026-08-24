@@ -1,17 +1,17 @@
-// === Module 11198: ForumPostList ===
+// === Module 11249: ForumPostList ===
 
-// Module 11198 (ForumPostList)
+// Module 11249 (ForumPostList)
 import noopAll from "noop" /* 19 */;
-import useAvailableTags from "useAvailableTags" /* 7237 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11179 */;
-import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 11189 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 11199 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 11202 */;
+import useAvailableTags from "useAvailableTags" /* 7275 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11231 */;
+import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 11241 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 11250 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 11253 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;

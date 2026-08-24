@@ -1,9 +1,9 @@
-// === Module 12982: BoostGemPixel ===
+// === Module 13037: BoostGemPixel ===
 
-// Module 12982 (BoostGemPixel)
+// Module 13037 (BoostGemPixel)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import inlineStyles from "inlineStyles" /* 6607 */;
+import inlineStylesDefault from "inlineStyles" /* 6607 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

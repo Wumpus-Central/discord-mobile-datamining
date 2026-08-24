@@ -1,6 +1,6 @@
-// === Module 15973: useOnMessageSend ===
+// === Module 16070: useOnMessageSend ===
 
-// Module 15973 (useOnMessageSend)
+// Module 16070 (useOnMessageSend)
 import closure_2 from "noop" /* 19 */;
 import { MessageStates } from "ME" /* 676 */;
 

@@ -1,8 +1,8 @@
-// === Module 7875: ? ===
+// === Module 7914: ? ===
 
-// Module 7875
+// Module 7914
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 7425 */;
+import closure_4 from "createFromServer" /* 7463 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -24,7 +24,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

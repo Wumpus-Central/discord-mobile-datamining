@@ -1,16 +1,16 @@
-// === Module 15542: NsfwGateGuildSidebar ===
+// === Module 15607: NsfwGateGuildSidebar ===
 
-// Module 15542 (NsfwGateGuildSidebar)
+// Module 15607 (NsfwGateGuildSidebar)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { NsfwGateSource } from "NsfwGateSource" /* 9348 */;
+import { NsfwGateSource } from "NsfwGateSource" /* 9385 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ AnalyticEvents: c9, HelpdeskArticles: c10, Fonts: unpackModuleId } = ME);

@@ -1,9 +1,9 @@
-// === Module 12535: useIsVoiceChannelFull ===
+// === Module 12589: useIsVoiceChannelFull ===
 
-// Module 12535 (useIsVoiceChannelFull)
+// Module 12589 (useIsVoiceChannelFull)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_4 from "updateVoiceState" /* 4547 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

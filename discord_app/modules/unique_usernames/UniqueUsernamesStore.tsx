@@ -1,6 +1,6 @@
-// === Module 14119: isRateLimited ===
+// === Module 14187: isRateLimited ===
 
-// Module 14119 (isRateLimited)
+// Module 14187 (isRateLimited)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

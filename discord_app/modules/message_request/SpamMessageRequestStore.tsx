@@ -1,6 +1,6 @@
-// === Module 4800: processChannel ===
+// === Module 4805: processChannel ===
 
-// Module 4800 (processChannel)
+// Module 4805 (processChannel)
 import clearAllDefault from "clearAll" /* 1220 */;
 import prototype from "ensureGuildLoaded" /* 1391 */;
 import set from "set" /* 2 */;

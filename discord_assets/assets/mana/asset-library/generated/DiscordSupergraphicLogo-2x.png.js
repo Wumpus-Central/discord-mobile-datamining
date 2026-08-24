@@ -1,6 +1,6 @@
-// === Module 5651: metadata ===
+// === Module 5658: metadata ===
 
-// Module 5651 (metadata)
+// Module 5658 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordSupergraphicLogo-2x.png.js");

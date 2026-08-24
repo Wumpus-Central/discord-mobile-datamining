@@ -1,6 +1,6 @@
-// === Module 4985: sanitizeGuildTextChannelName ===
+// === Module 4990: sanitizeGuildTextChannelName ===
 
-// Module 4985 (sanitizeGuildTextChannelName)
+// Module 4990 (sanitizeGuildTextChannelName)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");

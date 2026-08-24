@@ -1,9 +1,9 @@
-// === Module 7358: getSearchSessionId ===
+// === Module 7396: getSearchSessionId ===
 
-// Module 7358 (getSearchSessionId)
+// Module 7396 (getSearchSessionId)
 import set from "set" /* 2 */;
 import v1 from "v1" /* 514 */;
-import trackSettingSearchInputFocused from "trackSettingSearchInputFocused" /* 7359 */;
+import trackSettingSearchInputFocused from "trackSettingSearchInputFocused" /* 7397 */;
 
 class SettingSearchSessionAnalyticsManager {
 }

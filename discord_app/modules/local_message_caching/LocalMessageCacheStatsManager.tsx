@@ -1,10 +1,10 @@
-// === Module 17106: makeLogLine ===
+// === Module 17200: makeLogLine ===
 
-// Module 17106 (makeLogLine)
+// Module 17200 (makeLogLine)
 import set from "set" /* 2 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import recordChannelFetchStartDefault from "recordChannelFetchStart" /* 5082 */;
+import initializeDefault from "initialize" /* 5043 */;
+import recordChannelFetchStartDefault from "recordChannelFetchStart" /* 5087 */;
 import ME from "ME" /* 676 */;
 
 function makeLogLine(channelId) {

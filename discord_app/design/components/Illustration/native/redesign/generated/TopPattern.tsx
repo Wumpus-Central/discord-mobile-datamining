@@ -1,9 +1,9 @@
-// === Module 12950: getTopPatternSource ===
+// === Module 13005: getTopPatternSource ===
 
-// Module 12950 (getTopPatternSource)
+// Module 13005 (getTopPatternSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7907 */;
+import getIllustrationSource from "getIllustrationSource" /* 7946 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(12951);
+      return callback(13006);
     },
     darker() {
-      return callback(12952);
+      return callback(13007);
     },
     light() {
-      return callback(12953);
+      return callback(13008);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useTopPatternSource = function useTopPatternSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12951);
+      return callback(13006);
     },
     darker() {
-      return callback(12952);
+      return callback(13007);
     },
     light() {
-      return callback(12953);
+      return callback(13008);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const TopPattern = function TopPattern(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12951);
+      return callback(13006);
     },
     darker() {
-      return callback(12952);
+      return callback(13007);
     },
     light() {
-      return callback(12953);
+      return callback(13008);
     }
   };
   obj = {};

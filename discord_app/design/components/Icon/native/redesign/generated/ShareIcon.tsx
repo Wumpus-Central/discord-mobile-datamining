@@ -1,10 +1,10 @@
-// === Module 12047: ShareIcon ===
+// === Module 12099: ShareIcon ===
 
-// Module 12047 (ShareIcon)
+// Module 12099 (ShareIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 12048 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 12100 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

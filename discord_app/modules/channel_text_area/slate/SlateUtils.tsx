@@ -1,6 +1,6 @@
-// === Module 7439: createEmptyState ===
+// === Module 7477: createEmptyState ===
 
-// Module 7439 (createEmptyState)
+// Module 7477 (createEmptyState)
 import set from "set" /* 2 */;
 
 let obj = { type: "line", children: null };

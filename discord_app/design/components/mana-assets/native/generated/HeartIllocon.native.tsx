@@ -1,10 +1,10 @@
-// === Module 5898: HeartIllocon ===
+// === Module 5929: HeartIllocon ===
 
-// Module 5898 (HeartIllocon)
+// Module 5929 (HeartIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5899 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5930 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");

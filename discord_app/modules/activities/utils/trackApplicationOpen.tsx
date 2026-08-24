@@ -1,6 +1,6 @@
-// === Module 8768: trackApplicationOpen ===
+// === Module 8805: trackApplicationOpen ===
 
-// Module 8768 (trackApplicationOpen)
+// Module 8805 (trackApplicationOpen)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;

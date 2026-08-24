@@ -1,9 +1,9 @@
-// === Module 15188: ScrollBenchmark ===
+// === Module 15252: ScrollBenchmark ===
 
-// Module 15188 (ScrollBenchmark)
+// Module 15252 (ScrollBenchmark)
 import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15185 */;
+import TableRowInner from "TableRowInner" /* 6322 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15249 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

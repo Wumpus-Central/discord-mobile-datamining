@@ -1,17 +1,17 @@
-// === Module 13828: processColor ===
+// === Module 13886: processColor ===
 
-// Module 13828 (processColor)
+// Module 13886 (processColor)
 import ThemesDefault from "Themes" /* 712 */;
-import initializeDefault from "initialize" /* 4720 */;
+import initializeDefault from "initialize" /* 4726 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "reset" /* 4652 */;
+import closure_5 from "addApplication" /* 4482 */;
+import closure_6 from "reset" /* 4658 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_9 from "createRTCConnection" /* 4544 */;
+import closure_10 from "markAllUserIdListsStale" /* 4033 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import { InputModes } from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -24,7 +24,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "RCTView", embeddedActivity: "face_with_spiral_eyes", isStreaming: "woozy_face" };
+    obj.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "sentry-feedback-screenshot-button", embeddedActivity: "onDismiss", isStreaming: "1212569433839636530" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
       const state = closure_1_9.getState();
@@ -219,7 +219,7 @@ prototype["terminate"] = function terminate() {
 };
 set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "RCTView", embeddedActivity: "face_with_spiral_eyes", isStreaming: "woozy_face" };
+set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "sentry-feedback-screenshot-button", embeddedActivity: "onDismiss", isStreaming: "1212569433839636530" };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();

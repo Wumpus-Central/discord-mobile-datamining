@@ -1,8 +1,8 @@
-// === Module 6771: parseServerPackSticker ===
+// === Module 6808: parseServerPackSticker ===
 
-// Module 6771 (parseServerPackSticker)
+// Module 6808 (parseServerPackSticker)
 import setDefault from "set" /* 687 */;
-import StickerFormat from "StickerFormat" /* 4964 */;
+import StickerFormat from "StickerFormat" /* 4969 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { TypeTag } from "TypeTag" /* 1432 */;
 import { LibdiscoreStore } from "identity" /* 1911 */;

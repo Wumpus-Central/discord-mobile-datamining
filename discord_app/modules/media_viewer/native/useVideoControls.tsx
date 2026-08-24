@@ -1,13 +1,13 @@
-// === Module 9000: useVideoControls ===
+// === Module 9037: useVideoControls ===
 
-// Module 9000 (useVideoControls)
+// Module 9037 (useVideoControls)
 import batchUpdates from "batchUpdates" /* 705 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
 import keys from "keys" /* 644 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 keys = keys.create(() => ({ controls: "ct", paused: true }));

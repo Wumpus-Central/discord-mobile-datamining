@@ -1,14 +1,12 @@
-// === Module 4719: _updateAccessibilityFocusLock ===
+// === Module 4725: _updateAccessibilityFocusLock ===
 
-// Module 4719 (_updateAccessibilityFocusLock)
-import set from "set" /* 2 */;
+// Module 4725 (_updateAccessibilityFocusLock)
 import timestampDefault from "timestamp" /* 3 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import initializeDefault from "initialize" /* 4720 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
+import initializeDefault from "initialize" /* 4726 */;
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4727 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let closure_4 = new timestampDefault("AccessibilityFocusLockManager");
+require = arg1;
+let closure_3 = new timestampDefault("AccessibilityFocusLockManager");
 initializeDefault;
 class AccessibilityFocusLockManager extends tmp3 {
   constructor() {
@@ -44,32 +42,20 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
     if (self._screenReaderEnabled) {
       const _setTimeout = setTimeout;
       self._focusLockEnabledDelayTimeoutId = setTimeout(() => {
-        if (obj.isAndroid()) {
-          item10014(closure_1_2[5]).enableFocusLock(item10014, flag);
-          const obj2 = item10014(closure_1_2[5]);
-        } else {
-          const DCDAccessibilityManager = closure_1_3.DCDAccessibilityManager;
-          DCDAccessibilityManager.enableFocusLock(item10014, flag);
-        }
+        item10014(closure_1_2[3]).enableFocusLock(item10014, flag);
       }, self._focusLockEnabledDelayTimeout);
       self._focusLockEnabled = true;
     }
   }
   if (self._focusLockEnabled) {
-    if (obj.isAndroid()) {
-      item10014(4722).disableFocusLock();
-      let obj2 = item10014(4722);
-    } else {
-      let DCDAccessibilityManager = NativeModules.DCDAccessibilityManager;
-      DCDAccessibilityManager.disableFocusLock();
-    }
+    item10014(4665).disableFocusLock();
     self._focusLockEnabled = false;
-    obj = flag(500);
+    const obj = item10014(4665);
   }
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  this._screenReaderEnabledListener = self(4721).addScreenReaderEnabledListener((_screenReaderEnabled) => {
+  this._screenReaderEnabledListener = self(4727).addScreenReaderEnabledListener((_screenReaderEnabled) => {
     self._screenReaderEnabled = _screenReaderEnabled;
     const result = self._updateAccessibilityFocusLock();
   });
@@ -128,6 +114,6 @@ prototype["disableAccessibilityFocusLock"] = function disableAccessibilityFocusL
 };
 const accessibilityFocusLockManager = new AccessibilityFocusLockManager();
 const tmp2 = new timestampDefault("AccessibilityFocusLockManager");
-let result = set.fileFinishedImporting("modules/a11y/native/AccessibilityFocusLockManager.tsx");
+let result = require("set").fileFinishedImporting("modules/a11y/native/AccessibilityFocusLockManager.tsx");
 
 export default accessibilityFocusLockManager;

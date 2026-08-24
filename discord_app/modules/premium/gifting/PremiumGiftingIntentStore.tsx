@@ -1,18 +1,18 @@
-// === Module 8290: getCurrentTime ===
+// === Module 8330: getCurrentTime ===
 
-// Module 8290 (getCurrentTime)
+// Module 8330 (getCurrentTime)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8291 */;
-import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8292 */;
-import closure_3 from "getHash" /* 4288 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8331 */;
+import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8332 */;
+import closure_3 from "getHash" /* 4292 */;
 import closure_4 from "initialize" /* 1212 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_5 from "recomputeAffinities" /* 5412 */;
 import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_7 from "hasConsented" /* 5258 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "hasConsented" /* 5263 */;
+import closure_8 from "markAllUserIdListsStale" /* 4033 */;
 import { Consents } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -57,29 +57,29 @@ function updateFriendAnniversaries() {
           if (store.isFriend(nextResult)) {
             let tmp22 = userAffinity;
             if (null != userAffinity) {
-              let tmp47 = userAffinity;
+              let tmp23 = userAffinity;
               if (userAffinity.dmProbability > 0) {
-                let tmp23 = since;
+                let tmp24 = since;
                 if (null != since) {
                   let _Date = Date;
-                  let tmp24 = since;
-                  let tmp25 = new.target;
+                  let tmp25 = since;
                   let tmp26 = new.target;
+                  let tmp27 = new.target;
                   let date = new Date(since);
-                  let tmp30 = require;
-                  let tmp31 = dependencyMap;
-                  let tmp28 = date;
+                  let tmp31 = require;
+                  let tmp32 = dependencyMap;
                   let tmp29 = date;
+                  let tmp30 = date;
                   let obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS;
                   if (obj.isFriendAnniversary(date)) {
-                    let tmp32 = arr;
                     let tmp33 = arr;
-                    let tmp34 = nextResult;
+                    let tmp34 = arr;
+                    let tmp35 = nextResult;
                     arr = arr.push(tmp17);
-                    let tmp36 = closure_14;
+                    let tmp37 = closure_14;
                     obj = { friendsSince: null };
-                    let tmp37 = tmp28;
-                    obj[0] = tmp29;
+                    let tmp38 = tmp29;
+                    obj[0] = tmp30;
                     closure_14[tmp17] = obj;
                   }
                 }
@@ -120,7 +120,7 @@ function generateFriendAnniversaries(c15) {
   highAffinity = dependencyMap;
   set1 = new Set();
   if (obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(4066).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(4069).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       closure_15 = c15;
       const friendIDs = store.getFriendIDs();
@@ -142,7 +142,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => closure_5.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8291).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8331).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = closure_5.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -151,7 +151,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8291);
+          const highestAffinityResult = highestAffinity(8331);
         }
         sampleSizeResult = _null;
       }

@@ -1,8 +1,8 @@
-// === Module 7602: HeaderRecord ===
+// === Module 7640: HeaderRecord ===
 
-// Module 7602 (HeaderRecord)
+// Module 7640 (HeaderRecord)
 import set from "set" /* 2 */;
-import HeaderRecord from "HeaderRecord" /* 6773 */;
+import HeaderRecord from "HeaderRecord" /* 6810 */;
 
 ({ HeaderRecord: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
 const result = set.fileFinishedImporting("modules/autocompleter/createAutocompleterResult.tsx");

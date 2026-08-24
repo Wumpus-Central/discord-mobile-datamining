@@ -1,22 +1,23 @@
-// === Module 13886: messageEventsValidation ===
+// === Module 13952: messageEventsValidation ===
 
-// Module 13886 (messageEventsValidation)
+// Module 13952 (messageEventsValidation)
 import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "initialize" /* 4504 */;
+import prototypeDefault from "prototype" /* 8789 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8792 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8794 */;
+import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 13892 */;
+import closure_4 from "addApplication" /* 4482 */;
+import closure_5 from "initialize" /* 4508 */;
 import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_7 from "reset" /* 4652 */;
+import closure_7 from "reset" /* 4658 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_12 from "createRTCConnection" /* 4539 */;
+import closure_11 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_12 from "createRTCConnection" /* 4544 */;
 import closure_13 from "mergeGuildAvatar" /* 1922 */;
-import closure_14 from "updateVoiceState" /* 4542 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import closure_14 from "updateVoiceState" /* 4547 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -41,7 +42,7 @@ function messageEvents(args) {
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
-      tmp13Result = tmp13(5252);
+      tmp13Result = tmp13(5257);
     }
     obj4 = recurseReplaceContentTree;
     tmp13 = require;
@@ -69,9 +70,21 @@ function speakingEvents(args) {
     }
   }
 }
-({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
+function voiceSessionEventValidation(string) {
+  let obj = createRpcJoiSchemaObjectDefault(string);
+  obj = { session_id: null };
+  const requiredResult = obj.required();
+  obj[0] = string.string().required();
+  return requiredResult.keys(obj);
+}
+function voiceSessionEvent(socket) {
+  const result = getCapabilitiesForSocketDefault.validateEventSubscription(socket.socket, socket.args.session_id);
+}
+({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = RPC_SCOPE_CONFIG);
 ({ ApplicationFlags: closure_15, RPCErrors: closure_16, RPCEvents } = ME);
-let obj = {};
+let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
+items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
+obj = {};
 obj = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
@@ -114,19 +127,19 @@ obj = {
   }
 };
 obj[RPCEvents.GUILD_STATUS] = obj;
-obj = { scope: null, validation: null, handler: null };
-const obj1 = {};
-const items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
-obj1[RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj1;
-obj[1] = function validation(string) {
+const obj1 = { scope: null, validation: null, handler: null };
+let obj2 = {};
+const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
+obj2[RPC_SCOPE_CONFIG.ANY] = items1;
+obj1[0] = obj2;
+obj1[1] = function validation(string) {
   let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
   return requiredResult.keys(obj);
 };
-obj[2] = function handler(args) {
+obj1[2] = function handler(args) {
   const channel_id = args.args.channel_id;
   if (null == store.getChannel(channel_id)) {
     const obj = { errorCode: null };
@@ -146,29 +159,29 @@ obj[2] = function handler(args) {
         const _Object = Object;
         const values = Object.values(closure_1_14.getVoiceStatesForChannel(channel.id));
         if (prevState) {
-          const obj2 = closure_1_1(closure_1_3[18]);
-          const item = closure_1_1(closure_1_3[18]).differenceBy(values, prevState, (userId) => userId.userId).forEach((userId) => callback(closure_1_0(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
-          const differenceByResult = closure_1_1(closure_1_3[18]).differenceBy(values, prevState, (userId) => userId.userId);
+          const obj2 = closure_1_1(closure_1_3[19]);
+          const item = closure_1_1(closure_1_3[19]).differenceBy(values, prevState, (userId) => userId.userId).forEach((userId) => callback(closure_1_0(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
+          const differenceByResult = closure_1_1(closure_1_3[19]).differenceBy(values, prevState, (userId) => userId.userId);
         }
         return values;
       }
     };
   }
 };
-obj[RPCEvents.VOICE_STATE_CREATE] = obj;
-let obj2 = { scope: null, validation: null, handler: null };
-const obj3 = {};
-const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
-obj3[RPC_SCOPE_CONFIG.ANY] = items1;
-obj2[0] = obj3;
-obj2[1] = function validation(string) {
+obj[RPCEvents.VOICE_STATE_CREATE] = obj1;
+const obj3 = { scope: null, validation: null, handler: null };
+let obj4 = {};
+const items2 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
+obj4[RPC_SCOPE_CONFIG.ANY] = items2;
+obj3[0] = obj4;
+obj3[1] = function validation(string) {
   let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
   return requiredResult.keys(obj);
 };
-obj2[2] = function handler(args) {
+obj3[2] = function handler(args) {
   const channel_id = args.args.channel_id;
   if (null == store.getChannel(channel_id)) {
     const obj = { errorCode: null };
@@ -187,27 +200,27 @@ obj2[2] = function handler(args) {
         guildId = channel.getGuildId();
         const _Object = Object;
         const values = Object.values(closure_1_14.getVoiceStatesForChannel(channel.id));
-        const obj2 = closure_1_1(closure_1_3[18]);
-        const item = closure_1_1(closure_1_3[18]).differenceBy(dispatch.prevState, values, (userId) => userId.userId).forEach((userId) => dispatch(dispatch(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
+        const obj2 = closure_1_1(closure_1_3[19]);
+        const item = closure_1_1(closure_1_3[19]).differenceBy(dispatch.prevState, values, (userId) => userId.userId).forEach((userId) => dispatch(dispatch(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
         return values;
       }
     };
   }
 };
-obj[RPCEvents.VOICE_STATE_DELETE] = obj2;
-let obj4 = { scope: null, validation: null, handler: null };
-const obj5 = {};
-const items2 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
-obj5[RPC_SCOPE_CONFIG.ANY] = items2;
-obj4[0] = obj5;
-obj4[1] = function validation(string) {
+obj[RPCEvents.VOICE_STATE_DELETE] = obj3;
+const obj5 = { scope: null, validation: null, handler: null };
+const obj6 = {};
+const items3 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
+obj6[RPC_SCOPE_CONFIG.ANY] = items3;
+obj5[0] = obj6;
+obj5[1] = function validation(string) {
   let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
   return requiredResult.keys(obj);
 };
-obj4[2] = function handler(args) {
+obj5[2] = function handler(args) {
   const channel_id = args.args.channel_id;
   if (null == store.getChannel(channel_id)) {
     const obj = { errorCode: null };
@@ -227,60 +240,93 @@ obj4[2] = function handler(args) {
         const _Object = Object;
         const values = Object.values(closure_1_14.getVoiceStatesForChannel(channel.id));
         const mapped = values.map((userId) => dispatch(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId));
-        const obj2 = closure_1_1(closure_1_3[18]);
-        const item = closure_1_1(closure_1_3[18]).differenceWith(mapped, dispatch.prevState, closure_1_1(closure_1_3[18]).isEqual).forEach((arg0) => dispatch(arg0));
+        const obj2 = closure_1_1(closure_1_3[19]);
+        const item = closure_1_1(closure_1_3[19]).differenceWith(mapped, dispatch.prevState, closure_1_1(closure_1_3[19]).isEqual).forEach((arg0) => dispatch(arg0));
         return mapped;
       }
     };
   }
 };
-obj[RPCEvents.VOICE_STATE_UPDATE] = obj4;
-const obj6 = { scope: null, handler: null };
-const obj7 = {};
-const items3 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
-obj7[RPC_SCOPE_CONFIG.ANY] = items3;
-obj6[0] = obj7;
-obj6[1] = function handler() {
+obj[RPCEvents.VOICE_STATE_UPDATE] = obj5;
+const obj7 = { scope: null, handler: null };
+const obj8 = {};
+const items4 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ];
+obj8[RPC_SCOPE_CONFIG.ANY] = items4;
+obj7[0] = obj8;
+obj7[1] = function handler() {
   return (arg0) => {
-    const obj = { state: callback(8757).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
+    const obj = { state: callback(8794).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
     ({ prevState, dispatch } = arg0);
-    const obj2 = callback(8757);
+    const obj2 = callback(8794);
     if (!obj3.isEqual(obj, prevState)) {
       dispatch(obj);
     }
     return obj;
   };
 };
-obj[RPCEvents.VOICE_CONNECTION_STATUS] = obj6;
+obj[RPCEvents.VOICE_CONNECTION_STATUS] = obj7;
 obj[RPCEvents.MESSAGE_CREATE] = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
-const obj8 = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
-obj[RPCEvents.MESSAGE_UPDATE] = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
 const obj9 = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
-obj[RPCEvents.MESSAGE_DELETE] = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
-const obj11 = { scope: null, validation: null, handler: null };
-const obj12 = {};
-const items4 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ, RPC_LOCAL_SCOPE];
-obj12[RPC_SCOPE_CONFIG.ANY] = items4;
-obj11[0] = obj12;
-obj11[1] = speakingEventsValidation;
-obj11[2] = speakingEvents;
-obj[RPCEvents.SPEAKING_START] = obj11;
-const obj13 = { scope: null, validation: null, handler: null };
-const obj14 = {};
-const items5 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ, RPC_LOCAL_SCOPE];
-obj14[RPC_SCOPE_CONFIG.ANY] = items5;
-obj13[0] = obj14;
-obj13[1] = speakingEventsValidation;
-obj13[2] = speakingEvents;
-obj[RPCEvents.SPEAKING_STOP] = obj13;
+obj[RPCEvents.MESSAGE_UPDATE] = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
 const obj10 = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
+obj[RPCEvents.MESSAGE_DELETE] = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
+const obj12 = { scope: null, validation: null, handler: null };
+const obj13 = {};
+const items5 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ, RPC_LOCAL_SCOPE];
+obj13[RPC_SCOPE_CONFIG.ANY] = items5;
+obj12[0] = obj13;
+obj12[1] = speakingEventsValidation;
+obj12[2] = speakingEvents;
+obj[RPCEvents.SPEAKING_START] = obj12;
+const obj14 = { scope: null, validation: null, handler: null };
+const obj15 = {};
+const items6 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_VOICE_READ, RPC_LOCAL_SCOPE];
+obj15[RPC_SCOPE_CONFIG.ANY] = items6;
+obj14[0] = obj15;
+obj14[1] = speakingEventsValidation;
+obj14[2] = speakingEvents;
+obj[RPCEvents.SPEAKING_STOP] = obj14;
+obj[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
+  scope: obj,
+  validation: voiceSessionEventValidation,
+  handler(args) {
+    const session_id = args.args.session_id;
+    const socket = args.socket;
+    const result = socket(13892).validateEventSubscription(socket, session_id);
+    return (prevState) => {
+      prevState = prevState.prevState;
+      let obj = socket(closure_1_3[17]);
+      const participantsForEventSubscription = obj.getParticipantsForEventSubscription(socket, session_id);
+      let tmp5 = prevState;
+      if (null != participantsForEventSubscription) {
+        let isEqualResult = null == prevState;
+        if (!isEqualResult) {
+          isEqualResult = socket(closure_1_3[19]).isEqual(participantsForEventSubscription, prevState);
+          const tmpResult = socket(closure_1_3[19]);
+        }
+        tmp5 = participantsForEventSubscription;
+        if (!isEqualResult) {
+          obj = { session_id: null, participants: null };
+          obj[0] = session_id;
+          obj[1] = participantsForEventSubscription;
+          prevState.dispatch(obj);
+          tmp5 = participantsForEventSubscription;
+        }
+      }
+      return tmp5;
+    };
+  }
+};
+obj[RPCEvents.VOICE_SESSION_SPEAKING_START] = { scope: obj, validation: voiceSessionEventValidation, handler: voiceSessionEvent };
+obj[RPCEvents.VOICE_SESSION_SPEAKING_STOP] = { scope: obj, validation: voiceSessionEventValidation, handler: voiceSessionEvent };
+const obj11 = { scope: require("set").OAuth2Scopes.RPC, validation: messageEventsValidation, handler: messageEvents };
 obj[RPCEvents.GUILD_CREATE] = {
   scope: require("set").OAuth2Scopes.RPC,
   handler() {
 
   }
 };
-const obj15 = {
+const obj16 = {
   scope: require("set").OAuth2Scopes.RPC,
   handler() {
 
@@ -292,98 +338,92 @@ obj[RPCEvents.CHANNEL_CREATE] = {
 
   }
 };
-const obj17 = { scope: null, handler: null };
-const obj18 = {};
-const items6 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
-obj18[RPC_SCOPE_CONFIG.ANY] = items6;
-obj17[0] = obj18;
-obj17[1] = function handler() {
-
-};
-obj[RPCEvents.GAME_JOIN] = obj17;
-const obj19 = { scope: null, handler: null };
-const obj20 = {};
+const obj18 = { scope: null, handler: null };
+const obj19 = {};
 const items7 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
-obj20[RPC_SCOPE_CONFIG.ANY] = items7;
-obj19[0] = obj20;
-obj19[1] = function handler() {
+obj19[RPC_SCOPE_CONFIG.ANY] = items7;
+obj18[0] = obj19;
+obj18[1] = function handler() {
 
 };
-obj[RPCEvents.GAME_SPECTATE] = obj19;
-const obj21 = { scope: null, handler: null };
-const obj22 = {};
-const items8 = [require("set").OAuth2Scopes.RPC, RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-obj22[RPC_SCOPE_CONFIG.ANY] = items8;
-obj21[0] = obj22;
-obj21[1] = function handler() {
+obj[RPCEvents.GAME_JOIN] = obj18;
+const obj20 = { scope: null, handler: null };
+const obj21 = {};
+const items8 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+obj21[RPC_SCOPE_CONFIG.ANY] = items8;
+obj20[0] = obj21;
+obj20[1] = function handler() {
 
 };
-obj[RPCEvents.ACTIVITY_JOIN] = obj21;
-const obj23 = { scope: null, handler: null };
-const obj24 = {};
-const items9 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
-obj24[RPC_SCOPE_CONFIG.ANY] = items9;
-obj23[0] = obj24;
-obj23[1] = function handler() {
+obj[RPCEvents.GAME_SPECTATE] = obj20;
+const obj22 = { scope: null, handler: null };
+const obj23 = {};
+const items9 = [require("set").OAuth2Scopes.RPC, RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj23[RPC_SCOPE_CONFIG.ANY] = items9;
+obj22[0] = obj23;
+obj22[1] = function handler() {
 
 };
-obj[RPCEvents.ACTIVITY_JOIN_REQUEST] = obj23;
-const obj25 = { scope: null, handler: null };
-const obj26 = {};
-const items10 = [require("set").OAuth2Scopes.RPC, RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-obj26[RPC_SCOPE_CONFIG.ANY] = items10;
-obj25[0] = obj26;
-obj25[1] = function handler() {
+obj[RPCEvents.ACTIVITY_JOIN] = obj22;
+const obj24 = { scope: null, handler: null };
+const obj25 = {};
+const items10 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+obj25[RPC_SCOPE_CONFIG.ANY] = items10;
+obj24[0] = obj25;
+obj24[1] = function handler() {
 
 };
-obj[RPCEvents.ACTIVITY_SPECTATE] = obj25;
-const obj27 = { scope: null, handler: null };
-const obj28 = {};
-const items11 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
-obj28[RPC_SCOPE_CONFIG.ANY] = items11;
-obj27[0] = obj28;
-obj27[1] = function handler() {
+obj[RPCEvents.ACTIVITY_JOIN_REQUEST] = obj24;
+const obj26 = { scope: null, handler: null };
+const obj27 = {};
+const items11 = [require("set").OAuth2Scopes.RPC, RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
+obj27[RPC_SCOPE_CONFIG.ANY] = items11;
+obj26[0] = obj27;
+obj26[1] = function handler() {
 
 };
-obj[RPCEvents.ACTIVITY_INVITE] = obj27;
-const obj29 = { scope: "Array", handler: 0 };
-obj29[1] = function handler() {
+obj[RPCEvents.ACTIVITY_SPECTATE] = obj26;
+const obj28 = { scope: null, handler: null };
+const obj29 = {};
+const items12 = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+obj29[RPC_SCOPE_CONFIG.ANY] = items12;
+obj28[0] = obj29;
+obj28[1] = function handler() {
 
 };
-obj[RPCEvents.ACTIVITY_PIP_MODE_UPDATE] = obj29;
+obj[RPCEvents.ACTIVITY_INVITE] = obj28;
 const obj30 = { scope: "Array", handler: 0 };
 obj30[1] = function handler() {
 
 };
-obj[RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE] = obj30;
+obj[RPCEvents.ACTIVITY_PIP_MODE_UPDATE] = obj30;
 const obj31 = { scope: "Array", handler: 0 };
 obj31[1] = function handler() {
 
 };
-obj[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj31;
-obj[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsUpdateEvent;
-const items12 = [RPC_AUTHENTICATED_SCOPE];
-obj[RPCEvents.THERMAL_STATE_UPDATE] = {
-  scope: { [RPC_SCOPE_CONFIG.ANY]: items12 },
-  handler() {
+obj[RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE] = obj31;
+const obj32 = { scope: "Array", handler: 0 };
+obj32[1] = function handler() {
 
-  }
 };
+obj[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj32;
+obj[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsUpdateEvent;
 const items13 = [RPC_AUTHENTICATED_SCOPE];
-obj[RPCEvents.ORIENTATION_UPDATE] = {
+obj[RPCEvents.THERMAL_STATE_UPDATE] = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items13 },
   handler() {
 
   }
 };
-const obj16 = {
-  scope: require("set").OAuth2Scopes.RPC,
+const items14 = [RPC_AUTHENTICATED_SCOPE];
+obj[RPCEvents.ORIENTATION_UPDATE] = {
+  scope: { [RPC_SCOPE_CONFIG.ANY]: items14 },
   handler() {
 
   }
 };
-const obj32 = {
-  scope: { [RPC_SCOPE_CONFIG.ANY]: items12 },
+const obj17 = {
+  scope: require("set").OAuth2Scopes.RPC,
   handler() {
 
   }
@@ -394,22 +434,28 @@ const obj33 = {
 
   }
 };
+const obj34 = {
+  scope: { [RPC_SCOPE_CONFIG.ANY]: items14 },
+  handler() {
+
+  }
+};
 obj[RPCEvents.VOICE_CHANNEL_SELECT] = {
   scope: require("set").OAuth2Scopes.RPC,
   handler() {
 
   }
 };
-const obj35 = { scope: null, handler: null };
-const obj36 = {};
-const items14 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_NOTIFICATIONS_READ];
-obj36[RPC_SCOPE_CONFIG.ALL] = items14;
-obj35[0] = obj36;
-obj35[1] = function handler() {
+const obj36 = { scope: null, handler: null };
+const obj37 = {};
+const items15 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_NOTIFICATIONS_READ];
+obj37[RPC_SCOPE_CONFIG.ALL] = items15;
+obj36[0] = obj37;
+obj36[1] = function handler() {
 
 };
-obj[RPCEvents.NOTIFICATION_CREATE] = obj35;
-const obj34 = {
+obj[RPCEvents.NOTIFICATION_CREATE] = obj36;
+const obj35 = {
   scope: require("set").OAuth2Scopes.RPC,
   handler() {
 
@@ -435,12 +481,12 @@ obj[RPCEvents.RELATIONSHIP_UPDATE] = {
     tmpResult = fromStringAll;
   }
 };
-const obj38 = { scope: null, handler: null };
-const obj39 = {};
-const items15 = [RPC_LOCAL_SCOPE, require("set").OAuth2Scopes.IDENTIFY];
-obj39[RPC_SCOPE_CONFIG.ANY] = items15;
-obj38[0] = obj39;
-obj38[1] = function handler() {
+const obj39 = { scope: null, handler: null };
+const obj40 = {};
+const items16 = [RPC_LOCAL_SCOPE, require("set").OAuth2Scopes.IDENTIFY];
+obj40[RPC_SCOPE_CONFIG.ANY] = items16;
+obj39[0] = obj40;
+obj39[1] = function handler() {
   return (prevState) => {
     prevState = prevState.prevState;
     const obj = { currentUser: currentUser.getCurrentUser() };
@@ -453,18 +499,18 @@ obj38[1] = function handler() {
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(callback(8758)(obj.currentUser));
+      prevState.dispatch(callback(8795)(obj.currentUser));
     }
     return obj;
   };
 };
-obj[RPCEvents.CURRENT_USER_UPDATE] = obj38;
-const obj40 = { scope: null, handler: null };
-const obj41 = {};
-const items16 = [require("set").OAuth2Scopes.IDENTIFY, require("set").OAuth2Scopes.GUILDS_MEMBERS_READ];
-obj41[RPC_SCOPE_CONFIG.ALL] = items16;
-obj40[0] = obj41;
-obj40[1] = function handler(args) {
+obj[RPCEvents.CURRENT_USER_UPDATE] = obj39;
+const obj41 = { scope: null, handler: null };
+const obj42 = {};
+const items17 = [require("set").OAuth2Scopes.IDENTIFY, require("set").OAuth2Scopes.GUILDS_MEMBERS_READ];
+obj42[RPC_SCOPE_CONFIG.ALL] = items17;
+obj41[0] = obj42;
+obj41[1] = function handler(args) {
   const guild_id = args.args.guild_id;
   return (prevState) => {
     prevState = prevState.prevState;
@@ -473,37 +519,37 @@ obj40[1] = function handler(args) {
     if (!tmp) {
       let tmp2 = null != prevState;
       if (tmp2) {
-        tmp2 = closure_1_1(closure_1_3[21])(obj, prevState);
+        tmp2 = closure_1_1(closure_1_3[22])(obj, prevState);
       }
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(closure_1_1(closure_1_3[23])(obj.currentGuildMember));
+      prevState.dispatch(closure_1_1(closure_1_3[24])(obj.currentGuildMember));
     }
     return obj;
   };
 };
-obj[RPCEvents.CURRENT_GUILD_MEMBER_UPDATE] = obj40;
-const items17 = [RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
-obj[RPCEvents.ENTITLEMENT_CREATE] = {
-  scope: { [RPC_SCOPE_CONFIG.ANY]: items17 },
-  handler() {
-
-  }
-};
+obj[RPCEvents.CURRENT_GUILD_MEMBER_UPDATE] = obj41;
 const items18 = [RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
-obj[RPCEvents.ENTITLEMENT_DELETE] = {
+obj[RPCEvents.ENTITLEMENT_CREATE] = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items18 },
   handler() {
 
   }
 };
-const obj44 = { scope: null, handler: null };
-const obj45 = {};
-const items19 = [RPC_LOCAL_SCOPE, require("set").OAuth2Scopes.RPC_SCREENSHARE_READ];
-obj45[RPC_SCOPE_CONFIG.ALL] = items19;
-obj44[0] = obj45;
-obj44[1] = function handler() {
+const items19 = [RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+obj[RPCEvents.ENTITLEMENT_DELETE] = {
+  scope: { [RPC_SCOPE_CONFIG.ANY]: items19 },
+  handler() {
+
+  }
+};
+const obj45 = { scope: null, handler: null };
+const obj46 = {};
+const items20 = [RPC_LOCAL_SCOPE, require("set").OAuth2Scopes.RPC_SCREENSHARE_READ];
+obj46[RPC_SCOPE_CONFIG.ALL] = items20;
+obj45[0] = obj46;
+obj45[1] = function handler() {
   return (arg0) => {
     ({ prevState, dispatch } = arg0);
     streamerActiveStreamMetadata = streamerActiveStreamMetadata.getStreamerActiveStreamMetadata();
@@ -525,7 +571,7 @@ obj44[1] = function handler() {
     }
     let tmp8 = null;
     if (null != application) {
-      tmp8 = callback(13888)(application);
+      tmp8 = callback(13954)(application);
     }
     if (streamerActiveStreamMetadata != null) {
       const sourceName = streamerActiveStreamMetadata.sourceName;
@@ -552,13 +598,13 @@ obj44[1] = function handler() {
     return obj;
   };
 };
-obj[RPCEvents.SCREENSHARE_STATE_UPDATE] = obj44;
-const obj46 = { scope: null, handler: null };
-const obj47 = {};
-const items20 = [RPC_LOCAL_SCOPE, require("set").OAuth2Scopes.RPC_VIDEO_READ];
-obj47[RPC_SCOPE_CONFIG.ALL] = items20;
-obj46[0] = obj47;
-obj46[1] = function handler() {
+obj[RPCEvents.SCREENSHARE_STATE_UPDATE] = obj45;
+const obj47 = { scope: null, handler: null };
+const obj48 = {};
+const items21 = [RPC_LOCAL_SCOPE, require("set").OAuth2Scopes.RPC_VIDEO_READ];
+obj48[RPC_SCOPE_CONFIG.ALL] = items21;
+obj47[0] = obj48;
+obj47[1] = function handler() {
   return (arg0) => {
     const obj = { active: videoEnabled.isVideoEnabled() };
     ({ prevState, dispatch } = arg0);
@@ -568,13 +614,13 @@ obj46[1] = function handler() {
     return obj;
   };
 };
-obj[RPCEvents.VIDEO_STATE_UPDATE] = obj46;
-const obj48 = { scope: "Array", handler: 0 };
-obj48[1] = function handler() {
+obj[RPCEvents.VIDEO_STATE_UPDATE] = obj47;
+const obj49 = { scope: "Array", handler: 0 };
+obj49[1] = function handler() {
 
 };
-obj[RPCEvents.AUTHORIZE_REQUEST] = obj48;
-const obj37 = {
+obj[RPCEvents.AUTHORIZE_REQUEST] = obj49;
+const obj38 = {
   scope: require("set").OAuth2Scopes.RELATIONSHIPS_READ,
   handler(socket) {
     let obj = fromStringAll;
@@ -594,18 +640,18 @@ const obj37 = {
     tmpResult = fromStringAll;
   }
 };
-const obj42 = {
-  scope: { [RPC_SCOPE_CONFIG.ANY]: items17 },
-  handler() {
-
-  }
-};
 const obj43 = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items18 },
   handler() {
 
   }
 };
-const result = require("set").fileFinishedImporting("modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx");
+const obj44 = {
+  scope: { [RPC_SCOPE_CONFIG.ANY]: items19 },
+  handler() {
+
+  }
+};
+let result = require("set").fileFinishedImporting("modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx");
 
 export default obj;

@@ -1,22 +1,22 @@
-// === Module 7250: filterPlayingActivities ===
+// === Module 7288: filterPlayingActivities ===
 
-// Module 7250 (filterPlayingActivities)
+// Module 7288 (filterPlayingActivities)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7261 */;
-import closure_3 from "upsertAccount" /* 7241 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7299 */;
+import closure_3 from "upsertAccount" /* 7279 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "gameFromServer" /* 4509 */;
-import closure_6 from "checkIdleAFK" /* 4974 */;
-import closure_7 from "setLibraryApplications" /* 4512 */;
-import closure_8 from "updateActivities" /* 7251 */;
-import closure_9 from "sortActivity" /* 4559 */;
-import { sortActivity } from "sortActivity" /* 4559 */;
-import closure_11 from "handleUpdate" /* 4541 */;
+import closure_5 from "gameFromServer" /* 4514 */;
+import closure_6 from "checkIdleAFK" /* 4979 */;
+import closure_7 from "setLibraryApplications" /* 4517 */;
+import closure_8 from "updateActivities" /* 7289 */;
+import closure_9 from "sortActivity" /* 4564 */;
+import { sortActivity } from "sortActivity" /* 4564 */;
+import closure_11 from "handleUpdate" /* 4546 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -68,22 +68,22 @@ function shouldShowActivity(flags) {
       } else {
         shouldShowActivityResult = null != flags.application_id;
         if (shouldShowActivityResult) {
-          let tmpResult = tmp(4520);
+          let tmpResult = tmp(4525);
           shouldShowActivityResult = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
         }
       }
       return shouldShowActivityResult;
     } else if (tmp3.PLAYING === type) {
       if (null != flags.application_id) {
-        tmpResult = tmp(4520);
+        tmpResult = tmp(4525);
         let result = tmpResult.shouldShareApplicationActivity(flags.application_id, closure_7);
       } else {
         const searchGamesByNameResult = closure_5.searchGamesByName(flags.name);
         if (1 === searchGamesByNameResult.length) {
-          result = tmp(4520).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
-          const tmpResult1 = tmp(4520);
+          result = tmp(4525).shouldShareApplicationActivity(searchGamesByNameResult[0], closure_7);
+          const tmpResult1 = tmp(4525);
         } else {
-          const ShowCurrentGame = tmp(4066).ShowCurrentGame;
+          const ShowCurrentGame = tmp(4069).ShowCurrentGame;
           result = ShowCurrentGame.getSetting();
         }
       }
@@ -94,8 +94,8 @@ function shouldShowActivity(flags) {
       }
       let result1 = null == flags.application_id;
       if (!result1) {
-        result1 = tmp(4520).shouldShareApplicationActivity(flags.application_id, closure_7);
-        const tmpResult2 = tmp(4520);
+        result1 = tmp(4525).shouldShareApplicationActivity(flags.application_id, closure_7);
+        const tmpResult2 = tmp(4525);
       }
       return result1;
     }

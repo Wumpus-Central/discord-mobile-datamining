@@ -1,7 +1,7 @@
-// === Module 14022: set ===
+// === Module 14090: set ===
 
-// Module 14022 (set)
-import BadgeId from "BadgeId" /* 8932 */;
+// Module 14090 (set)
+import BadgeId from "BadgeId" /* 8969 */;
 import set from "set" /* 2 */;
 
 let items = [BadgeId.BadgeId.STAFF];

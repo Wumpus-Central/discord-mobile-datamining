@@ -1,26 +1,26 @@
-// === Module 12575: ExpandedControlItemIcon ===
+// === Module 12629: ExpandedControlItemIcon ===
 
-// Module 12575 (ExpandedControlItemIcon)
+// Module 12629 (ExpandedControlItemIcon)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Form from "Form" /* 8083 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
-import stopScreenshareDefault from "stopScreenshare" /* 10931 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12135 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
-import NOOP from "NOOP" /* 12567 */;
-import registerAssetDefault from "registerAsset" /* 12576 */;
-import registerAssetDefault2 from "registerAsset" /* 12577 */;
-import useDeafStatesDefault from "useDeafStates" /* 12578 */;
+import Form from "Form" /* 8122 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9686 */;
+import stopScreenshareDefault from "stopScreenshare" /* 10970 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 12187 */;
+import VolumeSliderDefault from "VolumeSlider" /* 12191 */;
+import NOOP from "NOOP" /* 12621 */;
+import registerAssetDefault from "registerAsset" /* 12630 */;
+import registerAssetDefault2 from "registerAsset" /* 12631 */;
+import useDeafStatesDefault from "useDeafStates" /* 12632 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4652 */;
+import closure_5 from "reset" /* 4658 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4534 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function ExpandedControlItemIcon(iconSource) {
@@ -128,7 +128,7 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   if (null != stateFromStores) {
     obj1 = { label: null };
     obj1[0] = tmp11;
-    tmp9Result = tmp9(tmp2(8083).FormRow, obj1);
+    tmp9Result = tmp9(tmp2(8122).FormRow, obj1);
   }
   return tmp9Result;
 };
@@ -161,7 +161,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12579 : 12580), label: null };
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12633 : 12634), label: null };
   const intl = tmp4(1236).intl;
   obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);

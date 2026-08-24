@@ -1,12 +1,12 @@
-// === Module 5319: updateProduct ===
+// === Module 5324: updateProduct ===
 
-// Module 5319 (updateProduct)
+// Module 5324 (updateProduct)
 import sum from "sum" /* 505 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4054 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import GPlayConnectionState from "GPlayConnectionState" /* 5320 */;
+import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4057 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
+import GPlayConnectionState from "GPlayConnectionState" /* 5325 */;
 import set from "set" /* 2 */;
 
 function updateProduct(currencyCode) {

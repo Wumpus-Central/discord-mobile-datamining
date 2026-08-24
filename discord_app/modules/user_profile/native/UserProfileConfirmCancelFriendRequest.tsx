@@ -1,9 +1,9 @@
-// === Module 11792: UserProfileConfirmCancelFriendRequest ===
+// === Module 11841: UserProfileConfirmCancelFriendRequest ===
 
-// Module 11792 (UserProfileConfirmCancelFriendRequest)
+// Module 11841 (UserProfileConfirmCancelFriendRequest)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4667 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

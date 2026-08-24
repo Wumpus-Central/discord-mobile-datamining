@@ -1,24 +1,24 @@
-// === Module 8305: defaultRules ===
+// === Module 8345: defaultRules ===
 
-// Module 8305 (defaultRules)
-import tDefault from "t" /* 4092 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import regExpDefault from "regExp" /* 6829 */;
-import _modDef6830 from "module_6830" /* 6830 */;
+// Module 8345 (defaultRules)
+import tDefault from "t" /* 4095 */;
+import get_defaultRulesDefault from "get defaultRules" /* 6844 */;
+import textRegexpDefault from "textRegexp" /* 6852 */;
+import regExpDefault from "regExp" /* 6867 */;
+import _modDef6868 from "module_6868" /* 6868 */;
 
 const require = arg1;
 function defaultRules(uri) {
   let obj = {};
-  const merged = Object.assign(_require(8306).baseRules);
-  if (null != _require(8306).customRules.strong) {
+  const merged = Object.assign(_require(8346).baseRules);
+  if (null != _require(8346).customRules.strong) {
     obj = {};
-    const merged1 = Object.assign(tmp(8306).baseRules.strong);
-    if (typeof tmp(8306).customRules.strong === "function") {
-      const customRules = tmp(8306).customRules;
+    const merged1 = Object.assign(tmp(8346).baseRules.strong);
+    if (typeof tmp(8346).customRules.strong === "function") {
+      const customRules = tmp(8346).customRules;
       let strong = customRules.strong(uri);
     } else {
-      strong = tmp(8306).customRules.strong;
+      strong = tmp(8346).customRules.strong;
     }
     obj = { strong: null };
     const merged2 = Object.assign(strong);
@@ -28,31 +28,31 @@ function defaultRules(uri) {
     const merged3 = Object.assign(obj1);
     const obj2 = {};
     const merged4 = Object.assign(image);
-    if (typeof tmp(8306).customRules.image === "function") {
-      const customRules2 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.image === "function") {
+      const customRules2 = tmp(8346).customRules;
       image = customRules2.image(uri);
     } else {
-      image = tmp(8306).customRules.image;
+      image = tmp(8346).customRules.image;
     }
     const merged5 = Object.assign(image);
     obj.image = obj2;
     const obj3 = {};
     const merged6 = Object.assign(link);
-    if (typeof tmp(8306).customRules.link === "function") {
-      const customRules3 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.link === "function") {
+      const customRules3 = tmp(8346).customRules;
       link = customRules3.link(uri);
     } else {
-      link = tmp(8306).customRules.link;
+      link = tmp(8346).customRules.link;
     }
     const merged7 = Object.assign(link);
     obj.link = obj3;
     const obj4 = {};
     const merged8 = Object.assign(list);
-    if (typeof tmp(8306).customRules.list === "function") {
-      const customRules4 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.list === "function") {
+      const customRules4 = tmp(8346).customRules;
       list = customRules4.list(uri);
     } else {
-      list = tmp(8306).customRules.list;
+      list = tmp(8346).customRules.list;
     }
     const merged9 = Object.assign(list);
     obj.list = obj4;
@@ -98,41 +98,41 @@ function defaultRules(uri) {
       obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
-    if (typeof tmp(8306).customRules.lheading === "function") {
-      const customRules5 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.lheading === "function") {
+      const customRules5 = tmp(8346).customRules;
       lheading = customRules5.lheading(uri);
     } else {
-      lheading = tmp(8306).customRules.lheading;
+      lheading = tmp(8346).customRules.lheading;
     }
     const merged11 = Object.assign(lheading);
     obj.lheading = obj6;
     const obj7 = {};
     const merged12 = Object.assign(heading);
-    if (typeof tmp(8306).customRules.heading === "function") {
-      const customRules6 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.heading === "function") {
+      const customRules6 = tmp(8346).customRules;
       heading = customRules6.heading(uri);
     } else {
-      heading = tmp(8306).customRules.heading;
+      heading = tmp(8346).customRules.heading;
     }
     const merged13 = Object.assign(heading);
     obj.heading = obj7;
     const obj8 = {};
     const merged14 = Object.assign(blockQuote);
-    if (typeof tmp(8306).customRules.blockQuote === "function") {
-      const customRules7 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.blockQuote === "function") {
+      const customRules7 = tmp(8346).customRules;
       blockQuote = customRules7.blockQuote(uri);
     } else {
-      blockQuote = tmp(8306).customRules.blockQuote;
+      blockQuote = tmp(8346).customRules.blockQuote;
     }
     const merged15 = Object.assign(blockQuote);
     obj.blockQuote = obj8;
     const obj9 = {};
     const merged16 = Object.assign(paragraph);
-    if (typeof tmp(8306).customRules.paragraph === "function") {
-      const customRules8 = tmp(8306).customRules;
+    if (typeof tmp(8346).customRules.paragraph === "function") {
+      const customRules8 = tmp(8346).customRules;
       paragraph = customRules8.paragraph(uri);
     } else {
-      paragraph = tmp(8306).customRules.paragraph;
+      paragraph = tmp(8346).customRules.paragraph;
     }
     const merged17 = Object.assign(paragraph);
     obj.paragraph = obj9;
@@ -181,11 +181,11 @@ export default {
       obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
-    if (typeof _require(8306).customRules.lheading === "function") {
-      const customRules = tmp3(8306).customRules;
+    if (typeof _require(8346).customRules.lheading === "function") {
+      const customRules = tmp3(8346).customRules;
       lheading = customRules.lheading(uri);
     } else {
-      lheading = tmp3(8306).customRules.lheading;
+      lheading = tmp3(8346).customRules.lheading;
     }
     obj = { lheading: null };
     const merged2 = Object.assign(lheading);
@@ -202,7 +202,7 @@ export default {
     obj.newline = obj;
     obj.text = textRegexpDefault;
     obj.list = regExpDefault;
-    obj.subtext = _modDef6830;
+    obj.subtext = _modDef6868;
     const merged2 = Object.assign(obj);
     return obj;
   }

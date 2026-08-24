@@ -1,12 +1,12 @@
-// === Module 12662: JoinVoiceChannelButton ===
+// === Module 12716: JoinVoiceChannelButton ===
 
-// Module 12662 (JoinVoiceChannelButton)
+// Module 12716 (JoinVoiceChannelButton)
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
 import { Permissions } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_9 = createCacheKey.createStyles({ container: { flexDirection: "row" } });
@@ -40,6 +40,6 @@ export default function JoinVoiceChannelButton(channel) {
     const obj = closure_1_2(closure_1_3[9]);
     const voiceChannel = closure_1_1(closure_1_3[10]).selectVoiceChannel(channel.id);
   }, items1);
-  obj[1] = jsx(channel(4745).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj[1] = jsx(channel(4750).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={items2}>{null}</View>;
 };

@@ -1,6 +1,6 @@
-// === Module 5358: _fetchUserEntitlements ===
+// === Module 5363: _fetchUserEntitlements ===
 
-// Module 5358 (_fetchUserEntitlements)
+// Module 5363 (_fetchUserEntitlements)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _fetchUserEntitlements() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

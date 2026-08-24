@@ -1,6 +1,6 @@
-// === Module 9775: Permissions ===
+// === Module 9814: Permissions ===
 
-// Module 9775 (Permissions)
+// Module 9814 (Permissions)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

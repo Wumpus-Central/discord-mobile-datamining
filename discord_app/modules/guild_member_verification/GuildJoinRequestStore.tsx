@@ -1,14 +1,14 @@
-// === Module 7428: updateSubmittedGuildJoinRequestTotal ===
+// === Module 7466: updateSubmittedGuildJoinRequestTotal ===
 
-// Module 7428 (updateSubmittedGuildJoinRequestTotal)
+// Module 7466 (updateSubmittedGuildJoinRequestTotal)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4199 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import tDefault from "t" /* 3978 */;
+import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4203 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4204 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4202 */;
 
 require = arg1;
 function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatus) {
@@ -18,7 +18,7 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
         const result = map.set(guildId, tDefault());
       }
-      if (applicationStatus === tmp12(4200).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4204).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
         const result1 = map.set(guildId, tDefault());

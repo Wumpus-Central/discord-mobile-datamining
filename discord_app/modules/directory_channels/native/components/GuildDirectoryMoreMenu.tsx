@@ -1,8 +1,8 @@
-// === Module 11480: GuildDirectoryMoreMenu ===
+// === Module 11529: GuildDirectoryMoreMenu ===
 
-// Module 11480 (GuildDirectoryMoreMenu)
+// Module 11529 (GuildDirectoryMoreMenu)
 import noopAll from "noop" /* 19 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 11474 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 11523 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1236).intl;
     obj[0] = intl.string(entry(1236).t.XnuOvN);
-    obj[1] = entry(9925).PencilIcon;
+    obj[1] = entry(9964).PencilIcon;
     obj[2] = function handleEdit() {
       let obj = closure_1_1(closure_1_3[3]);
       obj = { entry };
@@ -30,7 +30,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1236).intl;
     obj[0] = intl2.string(entry(1236).t.KUxYWH);
-    obj[1] = entry(4333).TrashIcon;
+    obj[1] = entry(4337).TrashIcon;
     obj[3] = function handleRemove() {
       let obj = closure_1_1(closure_1_3[4]);
       obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
@@ -58,7 +58,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1236).intl;
     obj[0] = intl3.string(entry(1236).t.Aen9eh);
-    obj[1] = entry(9435).FlagIcon;
+    obj[1] = entry(9472).FlagIcon;
     obj[3] = function handleReport() {
       const result = entry(closure_1_3[8]).showReportModalForGuildDirectoryEntry(entry);
     };
@@ -77,10 +77,10 @@ export default function GuildDirectoryMoreMenu(entry) {
       const intl = entry(1236).intl;
       obj.accessibilityLabel = intl.string(entry(1236).t.PdRCRg);
       obj = { size: "sm", color: callback(712).colors.WHITE };
-      obj.icon = callback2(entry(9415).MoreHorizontalIcon, obj);
-      return callback2(entry(8035).IconButton, obj);
+      obj.icon = callback2(entry(9452).MoreHorizontalIcon, obj);
+      return callback2(entry(8074).IconButton, obj);
     };
-    tmp9 = jsx(entry(9958).ContextMenu, { items: null, children: null });
+    tmp9 = jsx(entry(9997).ContextMenu, { items: null, children: null });
   }
   return tmp9;
 };

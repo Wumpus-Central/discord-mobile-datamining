@@ -1,17 +1,17 @@
-// === Module 15463: PX_8 ===
+// === Module 15527: PX_8 ===
 
-// Module 15463 (PX_8)
+// Module 15527 (PX_8)
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 8633 */;
+import messagesProxyDefault from "messagesProxy" /* 3082 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 8670 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 15464 */;
+import items from "items" /* 15528 */;
 import { NOOP } from "ME" /* 676 */;
-import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10055 */;
+import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10094 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ useFavoritesGuildSuggestions: c5, useFavoritesGuildSuggestionsDismissal: closure_6 } = items);
@@ -24,7 +24,7 @@ const result = require("set").fileFinishedImporting("modules/favorites/native/Fa
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = callback6();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("FavoritesGuildSuggestedChannels");
-  let obj = arr(15369);
+  let obj = arr(15433);
   const categoryStyles = obj.useCategoryStyles(tmp4);
   arr = callback();
   const tmp7 = callback2();
@@ -33,9 +33,9 @@ export default function FavoritesGuildSuggestedChannels() {
   const memo = React.useMemo(() => {
     const obj = { label: null, perform: null, Icon: null };
     const intl = arr(1236).intl;
-    obj[0] = intl.string(callback(3079).F3dWTe);
+    obj[0] = intl.string(callback(3082).F3dWTe);
     obj[1] = callback;
-    obj[2] = arr(6368).XSmallIcon;
+    obj[2] = arr(6399).XSmallIcon;
     return obj;
   }, items);
   const tmp9 = useScaledRowHeightDefault();
@@ -52,12 +52,12 @@ export default function FavoritesGuildSuggestedChannels() {
     obj[2] = categoryStyles;
     obj[3] = tmp4;
     obj[4] = memo;
-    const items2 = [tmp5(15369).renderCategoryItem(obj), ];
+    const items2 = [tmp5(15433).renderCategoryItem(obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rows;
     obj1[1] = arr.map((result) => {
       let obj = { style: closure_3, children: null };
-      obj = { result, onPressDestination: callback(15466), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
+      obj = { result, onPressDestination: callback(15530), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
       obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
       const intl = arr(1236).intl;
       obj[3] = intl.string(result(1236).t.OYkgVk);
@@ -65,14 +65,14 @@ export default function FavoritesGuildSuggestedChannels() {
         const tmp = closure_1_1(closure_1_2[15]);
         return tmp(callback(closure_1_2[17]).getDestinationIdFromResult(callback));
       };
-      obj[5] = closure_1_9(result(4745).Button, obj);
-      obj[1] = closure_1_9(callback(15465), obj);
+      obj[5] = closure_1_9(result(4750).Button, obj);
+      obj[1] = closure_1_9(callback(15529), obj);
       return closure_1_9(closure_1_4, obj, "" + result.type + "-" + result.record.id);
     });
     items2[1] = callback4(View, obj1);
     obj[1] = items2;
     tmp10 = callback5(View, obj);
-    const tmp5Result = tmp5(15369);
+    const tmp5Result = tmp5(15433);
   }
   return tmp10;
 };

@@ -1,6 +1,6 @@
-// === Module 10592: LikelyAtoMoreTipsModalActionItems ===
+// === Module 10631: LikelyAtoMoreTipsModalActionItems ===
 
-// Module 10592 (LikelyAtoMoreTipsModalActionItems)
+// Module 10631 (LikelyAtoMoreTipsModalActionItems)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -24,7 +24,7 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   const intl2 = senderId(1236).intl;
   obj[1] = intl2.string(senderId(1236).t.w2ve0t);
   obj[2] = senderId.handleMutePressed;
-  obj[3] = jsx(senderId(10001).BellSlashIcon, {});
-  obj[1] = jsx(senderId(6291).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(6286).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
+  obj[3] = jsx(senderId(10040).BellSlashIcon, {});
+  obj[1] = jsx(senderId(6322).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(6317).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
 };

@@ -1,17 +1,17 @@
-// === Module 13989: DevToolsPersistedStoresActionSheet ===
+// === Module 14057: DevToolsPersistedStoresActionSheet ===
 
-// Module 13989 (DevToolsPersistedStoresActionSheet)
+// Module 14057 (DevToolsPersistedStoresActionSheet)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import databaseNameDefault from "databaseName" /* 1971 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
+import databaseNameDefault from "databaseName" /* 1972 */;
+import TableRowInner from "TableRowInner" /* 6322 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { PersistedStore } from "getClass" /* 590 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function DevToolsPersistedStoresActionSheet(store) {
@@ -19,10 +19,10 @@ function DevToolsPersistedStoresActionSheet(store) {
   const close = store.close;
   let obj = { header: null, children: null };
   obj = { title: store.getName() };
-  obj[0] = jsx(store(6949).BottomSheetTitleHeader, { title: store.getName() });
-  obj = { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) };
-  obj[1] = jsx(store(7177).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) });
-  return jsx(store(7175).ActionSheet, { hasIcons: false, children: jsx(store(7177).ActionSheetRow, obj1) });
+  obj[0] = jsx(store(6987).BottomSheetTitleHeader, { title: store.getName() });
+  obj = { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) };
+  obj[1] = jsx(store(7215).ActionSheetRow.Group, { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) });
+  return jsx(store(7213).ActionSheet, { hasIcons: false, children: jsx(store(7215).ActionSheetRow, obj1) });
 }
 let c4 = importAllResult;
 let obj = { container: null, sectionHeader: null };
@@ -63,9 +63,9 @@ let closure_11 = importAllResult.memo(() => {
 let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
-    const result = callback(1971).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-    const obj = callback(1971);
-    callback(4094).open({ key: "disable_database_and_remove", content: "Database has been removed." });
+    const result = callback(1972).replaceDisableAllDatabases("via UserSettingsDatabaseControls");
+    const obj = callback(1972);
+    callback(4097).open({ key: "disable_database_and_remove", content: "Database has been removed." });
   }
 }));
 let closure_13 = importAllResult.memo(() => {
@@ -78,7 +78,7 @@ let closure_13 = importAllResult.memo(() => {
       navigation.navigate("cacheStats");
     }
   };
-  return jsx(_require(6291).TableRow, {
+  return jsx(_require(6322).TableRow, {
     label: "View Cache Stats",
     end: true,
     onPress() {

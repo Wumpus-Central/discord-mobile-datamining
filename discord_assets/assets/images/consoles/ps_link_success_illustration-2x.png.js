@@ -1,6 +1,6 @@
-// === Module 13339: metadata ===
+// === Module 13397: metadata ===
 
-// Module 13339 (metadata)
+// Module 13397 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js");

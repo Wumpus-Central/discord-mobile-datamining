@@ -1,7 +1,7 @@
-// === Module 8512: useIsNsfwGated ===
+// === Module 8551: useIsNsfwGated ===
 
-// Module 8512 (useIsNsfwGated)
-import closure_2 from "initialize" /* 5253 */;
+// Module 8551 (useIsNsfwGated)
+import closure_2 from "initialize" /* 5258 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;

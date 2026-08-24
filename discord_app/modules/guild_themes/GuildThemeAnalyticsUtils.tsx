@@ -1,6 +1,6 @@
-// === Module 15957: collectGuildThemeAnalyticsMetadata ===
+// === Module 16054: collectGuildThemeAnalyticsMetadata ===
 
-// Module 15957 (collectGuildThemeAnalyticsMetadata)
+// Module 16054 (collectGuildThemeAnalyticsMetadata)
 import closure_0 from "createGuildRecordFromRust" /* 1910 */;
 
 const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");

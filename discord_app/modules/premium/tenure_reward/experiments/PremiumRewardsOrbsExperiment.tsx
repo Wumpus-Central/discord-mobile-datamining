@@ -1,6 +1,6 @@
-// === Module 13278: PremiumRewardsOrbsTreatment ===
+// === Module 13336: PremiumRewardsOrbsTreatment ===
 
-// Module 13278 (PremiumRewardsOrbsTreatment)
+// Module 13336 (PremiumRewardsOrbsTreatment)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 let obj = { CONTROL: "control", TREATMENT_A: "treatment_a", TREATMENT_B: "treatment_b", TREATMENT_C: "treatment_c", TREATMENT_D: "treatment_d" };

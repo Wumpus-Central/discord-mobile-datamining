@@ -1,10 +1,10 @@
-// === Module 10671: useSubscribeMissingActivities ===
+// === Module 10710: useSubscribeMissingActivities ===
 
-// Module 10671 (useSubscribeMissingActivities)
+// Module 10710 (useSubscribeMissingActivities)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpenOrResumed" /* 10672 */;
-import closure_5 from "sortActivity" /* 4559 */;
+import closure_4 from "handleConnectionOpenOrResumed" /* 10711 */;
+import closure_5 from "sortActivity" /* 4564 */;
 
 const require = arg1;
 let closure_6 = [];

@@ -1,16 +1,16 @@
-// === Module 16552: finishRoll ===
+// === Module 16647: finishRoll ===
 
-// Module 16552 (finishRoll)
+// Module 16647 (finishRoll)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import initializeDefault from "initialize" /* 5038 */;
-import trackInviteDefault from "trackInvite" /* 7427 */;
-import rebuildDefault from "rebuild" /* 7436 */;
+import initializeDefault from "initialize" /* 5043 */;
+import trackInviteDefault from "trackInvite" /* 7465 */;
+import rebuildDefault from "rebuild" /* 7474 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "INITIAL_STATE" /* 11146 */;
-import { INITIAL_STATE } from "INITIAL_STATE" /* 11146 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8459 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "INITIAL_STATE" /* 11185 */;
+import { INITIAL_STATE } from "INITIAL_STATE" /* 11185 */;
+import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8498 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 
 require = arg1;
 ({ AFTER_ROLL_DELAY_MS: error, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: c9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: unpackModuleId, ROLL_DURATION_MS: closure_12 } = ROLL_DURATION_MS);

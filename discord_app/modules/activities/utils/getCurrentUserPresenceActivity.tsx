@@ -1,6 +1,6 @@
-// === Module 10924: getCurrentUserPresenceActivity ===
+// === Module 10963: getCurrentUserPresenceActivity ===
 
-// Module 10924 (getCurrentUserPresenceActivity)
+// Module 10963 (getCurrentUserPresenceActivity)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");

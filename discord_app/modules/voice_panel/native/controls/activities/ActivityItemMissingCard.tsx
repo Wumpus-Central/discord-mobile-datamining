@@ -1,13 +1,13 @@
-// === Module 16362: ActivityItemEmptyCard ===
+// === Module 16459: ActivityItemEmptyCard ===
 
-// Module 16362 (ActivityItemEmptyCard)
+// Module 16459 (ActivityItemEmptyCard)
 import ThemesDefault from "Themes" /* 712 */;
-import setDefault from "set" /* 7190 */;
+import setDefault from "set" /* 7228 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function ActivityItemEmptyCard(activity) {
@@ -34,7 +34,7 @@ function ActivityItemEmptyCard(activity) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -71,7 +71,7 @@ function ActivityItemEmptyCard(activity) {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         v0 = tmp;

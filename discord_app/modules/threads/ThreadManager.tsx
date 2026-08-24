@@ -1,8 +1,8 @@
-// === Module 16712: handleChannelDelete ===
+// === Module 16808: handleChannelDelete ===
 
-// Module 16712 (handleChannelDelete)
-import initializeDefault from "initialize" /* 5038 */;
-import withErrorHandlingDefault from "withErrorHandling" /* 8516 */;
+// Module 16808 (handleChannelDelete)
+import initializeDefault from "initialize" /* 5043 */;
+import withErrorHandlingDefault from "withErrorHandling" /* 8555 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 

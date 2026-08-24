@@ -1,9 +1,9 @@
-// === Module 4282: handleGameServerInstanceCreated ===
+// === Module 4286: handleGameServerInstanceCreated ===
 
-// Module 4282 (handleGameServerInstanceCreated)
+// Module 4286 (handleGameServerInstanceCreated)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4284 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4288 */;
 
 function handleGameServerInstanceCreated(arg0) {
   ({ guildId, gameServer } = arg0);

@@ -1,14 +1,14 @@
-// === Module 8919: updateWithLatestInvite ===
+// === Module 8956: updateWithLatestInvite ===
 
-// Module 8919 (updateWithLatestInvite)
+// Module 8956 (updateWithLatestInvite)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isGuildMemberDefault from "isGuildMember" /* 8920 */;
-import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 8922 */;
+import isGuildMemberDefault from "isGuildMember" /* 8957 */;
+import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 8959 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "map" /* 8043 */;
+import closure_11 from "map" /* 8082 */;
 import { FormStates } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 14569: useManageSubscriptionCardData ===
+// === Module 14637: useManageSubscriptionCardData ===
 
-// Module 14569 (useManageSubscriptionCardData)
+// Module 14637 (useManageSubscriptionCardData)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import closure_6 from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
 import { SubscriptionStatusTypes } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 7449: useConstRef ===
+// === Module 7487: useConstRef ===
 
-// Module 7449 (useConstRef)
+// Module 7487 (useConstRef)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useConstRef.tsx");

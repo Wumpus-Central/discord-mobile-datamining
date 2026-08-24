@@ -1,10 +1,10 @@
-// === Module 16499: ? ===
+// === Module 16594: ? ===
 
-// Module 16499
+// Module 16594
 import initialize from "initialize" /* 589 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "setContent" /* 4086 */;
-import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10480 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+import closure_3 from "setContent" /* 4089 */;
+import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10519 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
@@ -30,7 +30,7 @@ export default {
     const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(_require(2007)(16500, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(_require(2008)(16595, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let obj = arg1;
@@ -53,8 +53,8 @@ export default {
           return callback({ captcha_key, captcha_rqtoken, captcha_session_id: closure_1_3 });
         },
         onReject(arg0) {
-          if (arg0 === obj(10478).CaptchaError.CANCEL) {
-            const captchaCancelError = new obj(10478).CaptchaCancelError();
+          if (arg0 === obj(10517).CaptchaError.CANCEL) {
+            const captchaCancelError = new obj(10517).CaptchaCancelError();
             callback2(captchaCancelError);
           } else {
             const _Error = Error;
@@ -64,7 +64,7 @@ export default {
           }
         },
         close() {
-          return callback2(4342).hideActionSheet(closure_4);
+          return callback2(4346).hideActionSheet(closure_4);
         }
       };
       const merged = Object.assign(closure_0);

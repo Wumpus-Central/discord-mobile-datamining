@@ -1,17 +1,17 @@
-// === Module 15763: AddEmojiButton ===
+// === Module 15832: AddEmojiButton ===
 
-// Module 15763 (AddEmojiButton)
+// Module 15832 (AddEmojiButton)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import context from "context" /* 15709 */;
+import context from "context" /* 15778 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6989 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AddEmojiButton(channel) {
@@ -103,7 +103,7 @@ function ReactActionSheetBase(content) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -120,13 +120,13 @@ function ReactActionSheetBase(content) {
             } else {
               closure_0 = tmp4;
               closure_1_5(true);
-              v0(9057).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
-              const obj5 = v0(9057);
+              v0(9094).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
+              const obj5 = v0(9094);
               obj1 = { itemId: null, itemType: null, actionParameters: null };
               obj1[0] = closure_1_0.id;
               obj1[1] = closure_1_6;
               obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
-              v0(9057).feedItemActioned(obj1);
+              v0(9094).feedItemActioned(obj1);
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
@@ -145,7 +145,7 @@ function ReactActionSheetBase(content) {
             callback(false);
             callback2("");
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp10) {
           dependencyMap = tmp;
@@ -169,7 +169,7 @@ function ReactActionSheetBase(content) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -210,7 +210,7 @@ function ReactActionSheetBase(content) {
             } else {
               closure_1_5(false);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp9) {
             c3 = tmp;
@@ -311,8 +311,8 @@ function ReactActionSheetBase(content) {
                 ({ id: obj5[0], animated: obj5[1] } = id);
                 obj[0] = obj3.getEmojiURL({ id: null, animated: null, size: 48 });
                 obj[1] = obj;
-                obj[3] = ref(onPressEmoji(sendMessage[27]), obj, id.id);
-                let tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj);
+                obj[3] = ref(onPressEmoji(sendMessage[27]), obj);
+                let tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj, id.id);
                 obj1 = { id: null, animated: null, size: 48 };
                 const tmp9 = onPressEmoji(sendMessage[27]);
               } else {
@@ -328,7 +328,7 @@ function ReactActionSheetBase(content) {
                 obj3[2] = items1;
                 obj3[4] = id.surrogates;
                 obj2[3] = ref(lib(sendMessage[21]).Text, obj3);
-                tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj2);
+                tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj2, id.surrogates);
               }
               return tmp11;
             }),

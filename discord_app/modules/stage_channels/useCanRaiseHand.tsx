@@ -1,7 +1,7 @@
-// === Module 12530: useCanRaiseHand ===
+// === Module 12584: useCanRaiseHand ===
 
-// Module 12530 (useCanRaiseHand)
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+// Module 12584 (useCanRaiseHand)
+import closure_2 from "getUncachedChannelPermissions" /* 4024 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

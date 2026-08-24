@@ -1,9 +1,9 @@
-// === Module 7259: isEmbeddedActivity ===
+// === Module 7297: isEmbeddedActivity ===
 
-// Module 7259 (isEmbeddedActivity)
+// Module 7297 (isEmbeddedActivity)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import hasFlagDefault from "hasFlag" /* 7260 */;
+import hasFlagDefault from "hasFlag" /* 7298 */;
 
 const ActivityFlags = ME.ActivityFlags;
 const result = set.fileFinishedImporting("modules/activities/utils/isEmbeddedActivity.tsx");

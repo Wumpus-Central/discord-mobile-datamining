@@ -1,6 +1,6 @@
-// === Module 11829: _fetchWelcomeScreen ===
+// === Module 11878: _fetchWelcomeScreen ===
 
-// Module 11829 (_fetchWelcomeScreen)
+// Module 11878 (_fetchWelcomeScreen)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;

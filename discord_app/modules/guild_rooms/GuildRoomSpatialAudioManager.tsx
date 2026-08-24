@@ -1,16 +1,16 @@
-// === Module 16587: _initialize ===
+// === Module 16683: _initialize ===
 
-// Module 16587 (_initialize)
-import initializeDefault from "initialize" /* 5038 */;
-import experimentDefault from "experiment" /* 9882 */;
+// Module 16683 (_initialize)
+import initializeDefault from "initialize" /* 5043 */;
+import experimentDefault from "experiment" /* 9921 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4288 */;
+import closure_4 from "getHash" /* 4292 */;
 import closure_5 from "initialize" /* 1212 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "resolveCreatingNotes" /* 9864 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_9 from "createRTCConnection" /* 4544 */;
+import closure_10 from "resolveCreatingNotes" /* 9903 */;
 
 let require = arg1;
 initializeDefault;
@@ -88,7 +88,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require(16588).computeLivingRoomWorldPoints(obj);
+          _require = _require(16684).computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(callback);
@@ -103,7 +103,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _require(16588);
+          const obj3 = _require(16684);
         }
       }
     }

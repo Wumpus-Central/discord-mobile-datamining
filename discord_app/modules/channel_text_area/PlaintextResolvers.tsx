@@ -1,20 +1,20 @@
-// === Module 10259: resolvePlaintextInlineVoid ===
+// === Module 10298: resolvePlaintextInlineVoid ===
 
-// Module 10259 (resolvePlaintextInlineVoid)
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import createEmptyState from "createEmptyState" /* 7439 */;
+// Module 10298 (resolvePlaintextInlineVoid)
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4041 */;
+import createEmptyState from "createEmptyState" /* 7477 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "rebuild" /* 5251 */;
+import closure_4 from "getEmojiToGroupId" /* 6764 */;
+import closure_5 from "rebuild" /* 5256 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1980 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_7 from "comparator" /* 1981 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1981 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_13 from "markAllUserIdListsStale" /* 4030 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_13 from "markAllUserIdListsStale" /* 4033 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
 import { EmojiIntention } from "set" /* 1925 */;
@@ -165,8 +165,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4984).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4984);
+          callback(4989).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4989);
         }
         const substr = arr.slice(1);
       }

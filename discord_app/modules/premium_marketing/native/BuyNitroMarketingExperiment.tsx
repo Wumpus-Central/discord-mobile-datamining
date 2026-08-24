@@ -1,6 +1,6 @@
-// === Module 7879: getMobileNitroMarketingRedesignExperiment ===
+// === Module 7918: getMobileNitroMarketingRedesignExperiment ===
 
-// Module 7879 (getMobileNitroMarketingRedesignExperiment)
+// Module 7918 (getMobileNitroMarketingRedesignExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

@@ -1,12 +1,12 @@
-// === Module 14039: UserProfileBadgesEditButton ===
+// === Module 14107: UserProfileBadgesEditButton ===
 
-// Module 14039 (UserProfileBadgesEditButton)
+// Module 14107 (UserProfileBadgesEditButton)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getBadgeAssetFromCDN } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import { getBadgeAssetFromCDN } from "USER_PROFILE_TOOLTIP_DELAY" /* 8968 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
@@ -26,9 +26,9 @@ export default function UserProfileBadgesEditButton(arg0) {
   let analyticsLocations;
   const tmp = callback2();
   _require = tmp;
-  let obj = _require(14024);
+  let obj = _require(14092);
   const isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
-  analyticsLocations = analyticsLocations(7139)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7177)().analyticsLocations;
   [][0] = analyticsLocations;
   const callback = React.useCallback(() => {
     analyticsLocations(paths[8]).openLazy(lib(paths[10])(paths[9], paths.paths), "Hide Badges", {});
@@ -70,7 +70,7 @@ export default function UserProfileBadgesEditButton(arg0) {
     obj1[4] = callback;
     const intl3 = tmp2(1236).intl;
     obj1[5] = intl3.string(tmp2(1236).t.XMDvpN);
-    obj[1] = callback(tmp2(4734).Text, obj1);
+    obj[1] = callback(tmp2(4739).Text, obj1);
     const obj2 = { style: null, "aria-hidden": true, children: null };
     obj2[0] = tmp.content;
     if (null != substr1) {
@@ -93,7 +93,7 @@ export default function UserProfileBadgesEditButton(arg0) {
       obj3[2] = tmp.overflowCount;
       const _HermesInternal = HermesInternal;
       obj3[3] = "+" + diff;
-      tmp13Result = tmp13(tmp2(4734).Text, obj3);
+      tmp13Result = tmp13(tmp2(4739).Text, obj3);
     }
     items[1] = tmp13Result;
     obj2[2] = items;
@@ -106,7 +106,7 @@ export default function UserProfileBadgesEditButton(arg0) {
     }
     obj[3] = tmp18;
     obj[4] = tmp6;
-    return callback(tmp2(14036).UserProfileEditFormButton, obj);
+    return callback(tmp2(14104).UserProfileEditFormButton, obj);
   } else {
     return null;
   }

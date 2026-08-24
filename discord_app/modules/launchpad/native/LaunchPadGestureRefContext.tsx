@@ -1,6 +1,6 @@
-// === Module 15274: context ===
+// === Module 15338: context ===
 
-// Module 15274 (context)
+// Module 15338 (context)
 import importAllResult from "noop" /* 19 */;
 
 const context = importAllResult.createContext({ current: "r" });

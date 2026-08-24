@@ -1,14 +1,14 @@
-// === Module 15552: GuildFolderSettingsScene ===
+// === Module 15617: GuildFolderSettingsScene ===
 
-// Module 15552 (GuildFolderSettingsScene)
+// Module 15617 (GuildFolderSettingsScene)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Form from "Form" /* 8083 */;
-import FormRoleColorPickerDefault from "FormRoleColorPicker" /* 15554 */;
+import Form from "Form" /* 8122 */;
+import FormRoleColorPickerDefault from "FormRoleColorPicker" /* 15619 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15553 */;
+import closure_5 from "insertUnsortedGuilds" /* 5083 */;
+import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15618 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -80,7 +80,7 @@ export default function GuildFolderSettingsModal(folderId) {
   callback = obj2.useCallback(() => {
     dependencyMap = first1;
     const guildFolders = store.getGuildFolders();
-    folderId(9365).saveGuildFolders(guildFolders.map((folderId) => {
+    folderId(9402).saveGuildFolders(guildFolders.map((folderId) => {
       let tmp = folderId;
       if (folderId.folderId === closure_0) {
         const obj = {};
@@ -91,11 +91,11 @@ export default function GuildFolderSettingsModal(folderId) {
       }
       return tmp;
     }));
-    let obj = folderId(9365);
-    const result = folderId(15551).hideGuildsBarFolderModal();
+    let obj = folderId(9402);
+    const result = folderId(15616).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(15551).hideGuildsBarFolderModal();
+    const result = folderId(15616).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {
@@ -121,11 +121,11 @@ export default function GuildFolderSettingsModal(folderId) {
     };
     const intl = folderId(1236).intl;
     obj[1] = intl.string(folderId(1236).t.Dx7im5);
-    obj[2] = folderId(6314).getHeaderCloseButton(callback1);
+    obj[2] = folderId(6345).getHeaderCloseButton(callback1);
     if (closure_5) {
       const intl2 = tmp3(1236).intl;
-      let fn = tmp3(6314).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
-      const tmp3Result = tmp3(6314);
+      let fn = tmp3(6345).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
+      const tmp3Result = tmp3(6345);
     } else {
       fn = () => null;
     }
@@ -133,5 +133,5 @@ export default function GuildFolderSettingsModal(folderId) {
     return { [closure_1_10]: obj };
   }, items3);
   obj = { screens: memo, initialRouteName: c10 };
-  return callback1(folderId(6312).Navigator, obj);
+  return callback1(folderId(6343).Navigator, obj);
 };

@@ -1,21 +1,21 @@
-// === Module 12968: PricingSubheadingCopy ===
+// === Module 13023: PricingSubheadingCopy ===
 
-// Module 12968 (PricingSubheadingCopy)
+// Module 13023 (PricingSubheadingCopy)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 12853 */;
+import Text from "Text" /* 4739 */;
+import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 12908 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "_getSystemLocale" /* 1995 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "addSubscriptionPlan" /* 4044 */;
-import closure_9 from "reset" /* 4045 */;
-import closure_10 from "updateProduct" /* 5319 */;
+import closure_8 from "addSubscriptionPlan" /* 4047 */;
+import closure_9 from "reset" /* 4048 */;
+import closure_10 from "updateProduct" /* 5324 */;
 import { CurrencyCodes } from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PricingSubheadingCopy() {

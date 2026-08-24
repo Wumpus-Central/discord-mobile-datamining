@@ -1,10 +1,10 @@
-// === Module 8597: MobilePhoneIcon ===
+// === Module 6604: MobilePhoneIcon ===
 
-// Module 8597 (MobilePhoneIcon)
+// Module 6604 (MobilePhoneIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 8598 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6605 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

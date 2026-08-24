@@ -1,9 +1,9 @@
-// === Module 14486: useVideoQuestPlayerAnalytics ===
+// === Module 14554: useVideoQuestPlayerAnalytics ===
 
-// Module 14486 (useVideoQuestPlayerAnalytics)
+// Module 14554 (useVideoQuestPlayerAnalytics)
 import closure_3 from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionInfoChange" /* 4564 */;
+import closure_5 from "handleConnectionInfoChange" /* 4569 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 9523: useResolveGame ===
+// === Module 9560: useResolveGame ===
 
-// Module 9523 (useResolveGame)
+// Module 9560 (useResolveGame)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

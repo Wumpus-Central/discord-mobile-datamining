@@ -1,8 +1,8 @@
-// === Module 4842: get ===
+// === Module 4847: get ===
 
-// Module 4842 (get)
+// Module 4847 (get)
 import set from "set" /* 2 */;
-import setDefault from "set" /* 4004 */;
+import setDefault from "set" /* 4007 */;
 
 let prototype;
 prototype = function ProcessArgs() {

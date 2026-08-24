@@ -1,8 +1,8 @@
-// === Module 6829: regExp ===
+// === Module 6867: regExp ===
 
-// Module 6829 (regExp)
+// Module 6867 (regExp)
 import _modDef38 from "module_38" /* 38 */;
-import tDefault from "t" /* 4092 */;
+import tDefault from "t" /* 4095 */;
 import closure_10 from "module_0" /* 0 */;
 
 const re2 = /\n{2,}$/;

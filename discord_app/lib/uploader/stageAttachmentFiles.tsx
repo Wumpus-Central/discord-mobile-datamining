@@ -1,6 +1,6 @@
-// === Module 7586: _stageAttachmentFiles ===
+// === Module 7624: _stageAttachmentFiles ===
 
-// Module 7586 (_stageAttachmentFiles)
+// Module 7624 (_stageAttachmentFiles)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { AbortCodes } from "ME" /* 676 */;
 
@@ -25,7 +25,7 @@ function _stageAttachmentFiles() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -110,7 +110,7 @@ function _stageAttachmentFiles() {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c5 = tmp;

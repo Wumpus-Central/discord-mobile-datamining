@@ -1,11 +1,11 @@
-// === Module 11479: isFetching ===
+// === Module 11528: isFetching ===
 
-// Module 11479 (isFetching)
+// Module 11528 (isFetching)
 import set2 from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import guildDirectoryEntryFromServer from "guildDirectoryEntryFromServer" /* 11471 */;
-import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
+import guildDirectoryEntryFromServer from "guildDirectoryEntryFromServer" /* 11520 */;
+import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11521 */;
 
 const DirectoryEntryCategories = DirectoryEntryTypes.DirectoryEntryCategories;
 let closure_3 = Object.freeze({});

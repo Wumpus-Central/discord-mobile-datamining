@@ -1,11 +1,11 @@
-// === Module 15401: useFavoritesGuildResetAction ===
+// === Module 15465: useFavoritesGuildResetAction ===
 
-// Module 15401 (useFavoritesGuildResetAction)
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+// Module 15465 (useFavoritesGuildResetAction)
+import messagesProxyDefault from "messagesProxy" /* 3082 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10018 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
+import closure_4 from "handleConnectionOpen" /* 4201 */;
 import { Routes } from "ME" /* 676 */;
 
 require = arg1;

@@ -1,9 +1,9 @@
-// === Module 8059: setIsOnStartStageScreen ===
+// === Module 8098: setIsOnStartStageScreen ===
 
-// Module 8059 (setIsOnStartStageScreen)
+// Module 8098 (setIsOnStartStageScreen)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import keys from "keys" /* 644 */;
 
 const require = arg1;
@@ -25,7 +25,7 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   const stateFromStores1 = _require(589).useStateFromStores(items1, () => closure_1_4.can(id(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, id), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(8060)(id.id);
+    tmp3 = !stateFromStores(8099)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

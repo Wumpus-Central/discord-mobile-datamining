@@ -1,10 +1,10 @@
-// === Module 15816: OnboardingHomeResourcesSheet ===
+// === Module 15885: OnboardingHomeResourcesSheet ===
 
-// Module 15816 (OnboardingHomeResourcesSheet)
+// Module 15885 (OnboardingHomeResourcesSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15814 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 15884 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15883 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding_ho
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
   importDefault = undefined;
-  let obj = guildId(4097);
+  let obj = guildId(4100);
   importDefault = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = {
@@ -45,7 +45,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
     })
   };
-  obj[0] = jsx(guildId(7177).ActionSheetRow.Group, {
+  obj[0] = jsx(guildId(7215).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       closure_0 = label;
@@ -73,7 +73,7 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       return closure_1_4(guildId(closure_1_2[9]).ActionSheetRow, obj, label.channelId);
     })
   });
-  return jsx(guildId(7175).ActionSheet, {
+  return jsx(guildId(7213).ActionSheet, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       closure_0 = label;

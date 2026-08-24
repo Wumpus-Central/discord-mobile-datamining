@@ -1,9 +1,9 @@
-// === Module 4848: openPrivacySettings ===
+// === Module 4853: openPrivacySettings ===
 
-// Module 4848 (openPrivacySettings)
+// Module 4853 (openPrivacySettings)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 4849 */;
+import enforcingDefault from "enforcing" /* 4854 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");

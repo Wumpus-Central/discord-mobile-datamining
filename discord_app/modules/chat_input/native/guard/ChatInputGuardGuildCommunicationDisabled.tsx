@@ -1,11 +1,11 @@
-// === Module 11629: ? ===
+// === Module 11678: ? ===
 
-// Module 11629
+// Module 11678
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11033 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 11630 */;
-import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 1992 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11072 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 11665 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 11679 */;
+import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 1993 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 

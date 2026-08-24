@@ -1,6 +1,6 @@
-// === Module 5398: getAll ===
+// === Module 5403: getAll ===
 
-// Module 5398 (getAll)
+// Module 5403 (getAll)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;
 
@@ -40,7 +40,7 @@ prototype["getAll"] = function getAll() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

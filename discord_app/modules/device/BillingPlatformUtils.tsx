@@ -1,6 +1,6 @@
-// === Module 4052: isPremiumGiftingSupported ===
+// === Module 4055: isPremiumGiftingSupported ===
 
-// Module 4052 (isPremiumGiftingSupported)
+// Module 4055 (isPremiumGiftingSupported)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
@@ -22,5 +22,8 @@ export const isCollectibleGiftingSupported = function isCollectibleGiftingSuppor
   return !isMetaQuest.isMetaQuest();
 };
 export const isSocialLayerStorefrontGiftingSupported = function isSocialLayerStorefrontGiftingSupported() {
+  return !isMetaQuest.isMetaQuest();
+};
+export const isSocialLayerStorefrontPurchaseSupported = function isSocialLayerStorefrontPurchaseSupported() {
   return !isMetaQuest.isMetaQuest();
 };

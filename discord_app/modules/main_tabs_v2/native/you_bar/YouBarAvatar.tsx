@@ -1,18 +1,18 @@
-// === Module 15644: YouBarAvatarLarge ===
+// === Module 15712: YouBarAvatarLarge ===
 
-// Module 15644 (YouBarAvatarLarge)
+// Module 15712 (YouBarAvatarLarge)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "filterPlayingActivities" /* 7250 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_9 from "filterPlayingActivities" /* 7288 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14518 */;
 import { StatusTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function YouBarAvatarLarge(transitionState) {
@@ -184,7 +184,7 @@ function YouBarAvatarLarge(transitionState) {
     obj4[0] = obj5;
     obj2[2] = closure_22(sharedValue1, obj4);
     const items6 = [closure_22(tmp23Result, obj2), , , ];
-    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "Other" };
+    const obj6 = { user: null, guildId: "Array", size: false, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "xxs" };
     obj6[0] = stateFromStores;
     obj6[2] = closure_11;
     if (OFFLINE === StatusTypes.UNKNOWN) {
@@ -394,7 +394,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -430,7 +430,7 @@ const memoResult = importAllResult.memo(function YouBarAvatarAnimated(isLargeAva
           arg1.openUserSettings();
           callback(false);
           paths = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         paths = tmp;

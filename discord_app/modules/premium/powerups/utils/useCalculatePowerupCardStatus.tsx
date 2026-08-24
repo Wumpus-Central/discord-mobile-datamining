@@ -1,8 +1,8 @@
-// === Module 11688: useCalculatePowerupCardStatus ===
+// === Module 11737: useCalculatePowerupCardStatus ===
 
-// Module 11688 (useCalculatePowerupCardStatus)
+// Module 11737 (useCalculatePowerupCardStatus)
 import closure_3 from "noop" /* 19 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
+import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4266 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
@@ -44,12 +44,12 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
         obj1 = { type: "active", statusText: null };
         const obj2 = { perkName: null };
         obj2[0] = title;
-        obj1[1] = intl2.formatToPlainString(lib(2367).WRRYUT, obj2);
+        obj1[1] = intl2.formatToPlainString(lib(2368).WRRYUT, obj2);
         tmp5 = obj1;
       } else if (tmp.type !== tmp4.INACTIVE) {
         obj = { type: "active", statusText: null };
         const intl = powerup(1236).intl;
-        obj[1] = intl.string(lib(2367).FFLkmx);
+        obj[1] = intl.string(lib(2368).FFLkmx);
         tmp5 = obj;
       }
     }

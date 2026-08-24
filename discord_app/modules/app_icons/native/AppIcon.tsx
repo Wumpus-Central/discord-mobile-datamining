@@ -1,14 +1,14 @@
-// === Module 14833: AppIcon ===
+// === Module 14897: AppIcon ===
 
-// Module 14833 (AppIcon)
+// Module 14897 (AppIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4310 */;
+import useThemeDefault from "useTheme" /* 4314 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getIconById } from "items" /* 7946 */;
+import { getIconById } from "items" /* 7985 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;

@@ -1,12 +1,12 @@
-// === Module 11333: validateOptionContent ===
+// === Module 11384: validateOptionContent ===
 
-// Module 11333 (validateOptionContent)
+// Module 11384 (validateOptionContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import getString from "getString" /* 10256 */;
-import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 11334 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5251 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5253 */;
+import getString from "getString" /* 10295 */;
+import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 11385 */;
 
 function validateOptionContent(allowEmptyValues) {
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);

@@ -1,6 +1,6 @@
-// === Module 16819: IntegrationExpireBehaviorTypes ===
+// === Module 16912: IntegrationExpireBehaviorTypes ===
 
-// Module 16819 (IntegrationExpireBehaviorTypes)
+// Module 16912 (IntegrationExpireBehaviorTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IntegrationExpireBehaviorTypes.tsx");

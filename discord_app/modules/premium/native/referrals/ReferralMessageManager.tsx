@@ -1,13 +1,13 @@
-// === Module 17051: handleReferralMessages ===
+// === Module 17144: handleReferralMessages ===
 
-// Module 17051 (handleReferralMessages)
+// Module 17144 (handleReferralMessages)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import set from "set" /* 686 */;
-import initializeDefault from "initialize" /* 5038 */;
-import _fetchUserOffer from "_fetchUserOffer" /* 7876 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
-import closure_3 from "reset" /* 4045 */;
-import closure_4 from "emitChanges" /* 7421 */;
+import initializeDefault from "initialize" /* 5043 */;
+import _fetchUserOffer from "_fetchUserOffer" /* 7915 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16731 */;
+import closure_3 from "reset" /* 4048 */;
+import closure_4 from "emitChanges" /* 7459 */;
 
 require = arg1;
 function handleReferralMessages(type) {

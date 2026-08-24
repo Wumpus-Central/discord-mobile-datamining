@@ -1,6 +1,6 @@
-// === Module 7349: useKeyboardIsOpen ===
+// === Module 7387: useKeyboardIsOpen ===
 
-// Module 7349 (useKeyboardIsOpen)
+// Module 7387 (useKeyboardIsOpen)
 import context from "context" /* 1497 */;
 import computeEntryStateDefault from "computeEntryState" /* 1498 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;

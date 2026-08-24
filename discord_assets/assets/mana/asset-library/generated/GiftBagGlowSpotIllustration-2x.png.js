@@ -1,6 +1,6 @@
-// === Module 5831: metadata ===
+// === Module 5862: metadata ===
 
-// Module 5831 (metadata)
+// Module 5862 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftBagGlowSpotIllustration-2x.png.js");

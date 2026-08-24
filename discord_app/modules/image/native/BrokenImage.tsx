@@ -1,9 +1,9 @@
-// === Module 11261: BrokenImage ===
+// === Module 11312: BrokenImage ===
 
-// Module 11261 (BrokenImage)
+// Module 11312 (BrokenImage)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import inlineStyles from "inlineStyles" /* 6607 */;
+import inlineStylesDefault from "inlineStyles" /* 6607 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

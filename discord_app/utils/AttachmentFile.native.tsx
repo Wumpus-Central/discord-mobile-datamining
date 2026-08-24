@@ -1,8 +1,8 @@
-// === Module 4837: _getAttachmentFile ===
+// === Module 4842: _getAttachmentFile ===
 
-// Module 4837 (_getAttachmentFile)
+// Module 4842 (_getAttachmentFile)
 import timestampDefault from "timestamp" /* 3 */;
-import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
+import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4843 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -26,7 +26,7 @@ function _getAttachmentFile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -74,13 +74,13 @@ function _getAttachmentFile() {
               return obj3;
             } else {
               closure_3 = arg1;
-              logger = lib(4830).getAttachmentPayload(lib, callback, closure_3.name);
+              logger = lib(4835).getAttachmentPayload(lib, callback, closure_3.name);
               c6 = 2;
-              const obj10 = lib(4830);
+              const obj10 = lib(4835);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(4838).getFileSize(closure_3.uri);
+              obj4[0] = lib(4843).getFileSize(closure_3.uri);
               return obj4;
             }
           } else {
@@ -156,7 +156,7 @@ function _cancelGetAttachmentFile() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ function _cancelGetAttachmentFile() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp8) {
           c1 = tmp;

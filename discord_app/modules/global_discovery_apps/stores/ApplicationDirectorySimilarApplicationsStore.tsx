@@ -1,6 +1,6 @@
-// === Module 11250: getSimilarApplications ===
+// === Module 11301: getSimilarApplications ===
 
-// Module 11250 (getSimilarApplications)
+// Module 11301 (getSimilarApplications)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import privDefault from "priv" /* 1405 */;

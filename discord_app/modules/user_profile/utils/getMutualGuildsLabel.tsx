@@ -1,6 +1,6 @@
-// === Module 11772: getMutualGuildsLabel ===
+// === Module 11821: getMutualGuildsLabel ===
 
-// Module 11772 (getMutualGuildsLabel)
+// Module 11821 (getMutualGuildsLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

@@ -1,10 +1,10 @@
-// === Module 16740: ModerationIcon ===
+// === Module 16833: ModerationIcon ===
 
-// Module 16740 (ModerationIcon)
+// Module 16833 (ModerationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 16741 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 16834 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

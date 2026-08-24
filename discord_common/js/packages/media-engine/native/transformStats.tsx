@@ -1,8 +1,8 @@
-// === Module 4630: sumBytes ===
+// === Module 4636: sumBytes ===
 
-// Module 4630 (sumBytes)
+// Module 4636 (sumBytes)
 import set from "set" /* 2 */;
-import formatSinkWantStat from "formatSinkWantStat" /* 4631 */;
+import formatSinkWantStat from "formatSinkWantStat" /* 4637 */;
 
 function sumBytes(rtpStats) {
   let num;
@@ -498,9 +498,9 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
       closure_3 = num + audio.bytesSent;
       let obj = { type: "audio", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, bytesSent: null, packetsSent: null, packetsLost: null, fractionLost: null, audioLevel: null, bitrate: null, bitrateTarget: null, audioDetected: null, framesCaptured: null, framesRendered: null, noiseCancellerFrames: null, noiseCancellerProcessTime: null, voiceActivityDetectorProcessTime: null, passthroughCount: null, encryptSuccessCount: null, encryptFailureCount: null, encryptDuration: null, encryptAttempts: null, encryptMaxAttempts: null, encryptMissingKeyCount: null, pttQueueLatencyMicrosSamples: null, sampleRateMismatchPercent: null, currentSampleRate: null };
       obj[1] = audio.ssrc;
-      obj1 = _require(4631);
+      obj1 = _require(4637);
       obj[2] = obj1.formatSinkWantStat(id, audio.ssrc, false);
-      let obj2 = _require(4631);
+      let obj2 = _require(4637);
       obj[3] = obj2.formatSinkWantAsInt(id, audio.ssrc);
       obj = { id: null, name: null };
       ({ codecPayloadType: obj4[0], codecName: obj4[1] } = audio);
@@ -576,9 +576,9 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
         arr = tmp[id];
         obj = { type: "audio", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, bytesReceived: null, packetsReceived: null, packetsLost: null, fractionLost: null, fecPacketsReceived: null, fecPacketsDiscarded: null, audioLevel: null, audioDetected: null, currentSampleRate: null, jitter: null, jitterBuffer: null, jitterBufferPreferred: null, decodingCNG: null, decodingMutedOutput: null, decodingNormal: null, decodingPLC: null, decodingPLCCNG: null, nackCount: null, accelerateRate: null, expandRate: null, preemptiveExpandRate: null, speechExpandRate: null, secondaryDecodedRate: null, opSilence: null, opNormal: null, opMerge: null, opExpand: null, opAccelerate: null, opPreemptiveExpand: null, opCNG: null, delayEstimate: null, passthroughCount: null, decryptSuccessCount: null, decryptFailureCount: null, decryptDuration: null, decryptAttempts: null, decryptMissingKeyCount: null, decryptInvalidNonceCount: null };
         obj[1] = audio.ssrc;
-        let obj2 = id(4631);
+        let obj2 = id(4637);
         obj[2] = obj2.formatSinkWantStat(id, audio.ssrc, false);
-        obj[3] = id(4631).formatSinkWantAsInt(id, audio.ssrc);
+        obj[3] = id(4637).formatSinkWantAsInt(id, audio.ssrc);
         obj = { id: null, name: null };
         ({ codecPayloadType: obj4[0], codecName: obj4[1] } = audio);
         obj[4] = obj;
@@ -602,7 +602,7 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
         }
         const merged = Object.assign(obj2);
         obj = arr.push(obj);
-        const obj3 = id(4631);
+        const obj3 = id(4637);
       }
     });
   }

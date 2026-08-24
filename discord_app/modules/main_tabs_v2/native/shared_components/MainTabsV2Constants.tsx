@@ -1,6 +1,6 @@
-// === Module 8493: MIN_HEADER_HEIGHT ===
+// === Module 8532: MIN_HEADER_HEIGHT ===
 
-// Module 8493 (MIN_HEADER_HEIGHT)
+// Module 8532 (MIN_HEADER_HEIGHT)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

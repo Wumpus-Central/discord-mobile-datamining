@@ -1,6 +1,6 @@
-// === Module 6005: metadata ===
+// === Module 6036: metadata ===
 
-// Module 6005 (metadata)
+// Module 6036 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroSupergraphicLogo-2x.png.js");

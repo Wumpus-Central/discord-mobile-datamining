@@ -1,6 +1,6 @@
-// === Module 13234: reset ===
+// === Module 13289: reset ===
 
-// Module 13234 (reset)
+// Module 13289 (reset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

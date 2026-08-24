@@ -1,10 +1,10 @@
-// === Module 6797: handleConnectionOpen ===
+// === Module 6834: handleConnectionOpen ===
 
-// Module 6797 (handleConnectionOpen)
+// Module 6834 (handleConnectionOpen)
 import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "initialize" /* 5043 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "incrementVersion" /* 5270 */;
+import closure_3 from "incrementVersion" /* 5275 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 
@@ -46,7 +46,7 @@ function _saveUserGuildSettings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -114,7 +114,7 @@ function _saveUserGuildSettings() {
               return obj;
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -160,7 +160,7 @@ function _saveUserGuildSettingsBulk() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -1,10 +1,10 @@
-// === Module 5480: AccountAgeTier7SmallBadge ===
+// === Module 5485: AccountAgeTier7SmallBadge ===
 
-// Module 5480 (AccountAgeTier7SmallBadge)
+// Module 5485 (AccountAgeTier7SmallBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import vanityUrlDefault from "vanityUrl" /* 5481 */;
+import preloadDefault from "preload" /* 5454 */;
+import vanityUrlDefault from "vanityUrl" /* 5486 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AccountAgeTier7SmallBadge.native.tsx");

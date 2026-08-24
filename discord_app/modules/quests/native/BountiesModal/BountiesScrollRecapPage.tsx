@@ -1,23 +1,23 @@
-// === Module 14403: BountiesRecapOrbsBackground ===
+// === Module 14471: BountiesRecapOrbsBackground ===
 
-// Module 14403 (BountiesRecapOrbsBackground)
+// Module 14471 (BountiesRecapOrbsBackground)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import VideoComponent from "VideoComponent" /* 9018 */;
-import OrbsIcon from "OrbsIcon" /* 9238 */;
-import metadataDefault from "metadata" /* 14404 */;
-import metadataDefault2 from "metadata" /* 14405 */;
-import metadataDefault3 from "metadata" /* 14406 */;
+import Text from "Text" /* 4739 */;
+import Button from "Button" /* 4750 */;
+import VideoComponent from "VideoComponent" /* 9055 */;
+import OrbsIcon from "OrbsIcon" /* 9275 */;
+import metadataDefault from "metadata" /* 14472 */;
+import metadataDefault2 from "metadata" /* 14473 */;
+import metadataDefault3 from "metadata" /* 14474 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function BountiesRecapOrbsBackground(arg0) {
@@ -30,7 +30,7 @@ function BountiesRecapOrbsBackground(arg0) {
     obj[0] = metadataDefault;
     obj[1] = closure_3.absoluteFillObject;
     obj[2] = !reducedMotion;
-    obj[4] = tmp3(tmp(9217).APNGPlayer, obj);
+    obj[4] = tmp3(tmp(9254).APNGPlayer, obj);
     let tmp3Result = tmp3(closure_4, obj);
   } else {
     obj1 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
@@ -39,7 +39,7 @@ function BountiesRecapOrbsBackground(arg0) {
     obj1[0] = obj2;
     obj1[1] = style;
     obj1[3] = reducedMotion;
-    tmp3Result = tmp3(tmp(9018).VideoComponent, obj1);
+    tmp3Result = tmp3(tmp(9055).VideoComponent, obj1);
   }
   return tmp3Result;
 }

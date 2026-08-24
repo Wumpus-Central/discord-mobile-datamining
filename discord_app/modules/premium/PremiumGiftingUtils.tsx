@@ -1,9 +1,9 @@
-// === Module 8294: _sendGiftMessage ===
+// === Module 8334: _sendGiftMessage ===
 
-// Module 8294 (_sendGiftMessage)
+// Module 8334 (_sendGiftMessage)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 
 const require = arg1;
 function _sendGiftMessage() {
@@ -41,13 +41,13 @@ function _sendGiftMessage() {
           return channel;
         }
       });
-      dependencyMap = callback(4381).getGiftCodeURL(callback);
-      const obj9 = lib(7427);
+      dependencyMap = callback(4385).getGiftCodeURL(callback);
+      const obj9 = lib(7465);
       const id = lib.id;
-      const obj8 = callback(4381);
+      const obj8 = callback(4385);
       const obj4 = { isGiftLinkSentOnBehalfOfUser: true, location: null };
       obj4[1] = constants.GIFTING;
-      return obj9.sendMessage(id, lib(7436).parse(lib, dependencyMap), undefined, obj4);
+      return obj9.sendMessage(id, lib(7474).parse(lib, dependencyMap), undefined, obj4);
     })();
   });
   closure_6 = tmp;

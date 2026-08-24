@@ -1,17 +1,17 @@
-// === Module 7528: getAccessibilityLabelFormatter ===
+// === Module 7566: getAccessibilityLabelFormatter ===
 
-// Module 7528 (getAccessibilityLabelFormatter)
+// Module 7566 (getAccessibilityLabelFormatter)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import getTimestampStringDefault from "getTimestampString" /* 5093 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7521 */;
+import tDefault from "t" /* 3978 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5047 */;
+import getTimestampStringDefault from "getTimestampString" /* 5098 */;
+import collectThreadMetadata from "collectThreadMetadata" /* 7559 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "generateOldThreadCutoff" /* 4772 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_7 from "storeThread" /* 4023 */;
+import closure_5 from "generateOldThreadCutoff" /* 4777 */;
+import closure_6 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_7 from "storeThread" /* 4026 */;
 import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
 import ME from "ME" /* 676 */;
 
@@ -49,7 +49,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
   if (null != result) {
     const guildId = closure_1_0.getGuildId();
     const parent_id = closure_1_0.parent_id;
-    let tmpResult = tmp(6795);
+    let tmpResult = tmp(6832);
     const currentChannelSettings = tmpResult.getCurrentChannelSettings(guildId, parent_id);
     let num = closure_7.flags(closure_1_0.id);
     if (num == null) {
@@ -77,7 +77,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     }
     let notificationAnalyticsString = getNotificationAnalyticsString(num);
     const isMutedResult = closure_7.isMuted(closure_1_0.id);
-    tmpResult = tmp(6795);
+    tmpResult = tmp(6832);
     let result1 = tmpResult.muteConfigToTimestamp(obj7.getMuteConfig(closure_1_0.id));
     ({ can_send_message, parent_channel_type } = result);
     obj = {};
@@ -102,8 +102,8 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     obj.new_thread_is_muted = muted;
     obj.old_thread_muted_until = result1;
     if (null != c1.mute_config) {
-      result1 = tmp(6795).muteConfigToTimestamp(c1.mute_config);
-      const tmpResult1 = tmp(6795);
+      result1 = tmp(6832).muteConfigToTimestamp(c1.mute_config);
+      const tmpResult1 = tmp(6832);
     }
     obj.new_thread_muted_until = result1;
     expandEventPropertiesDefault.track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);

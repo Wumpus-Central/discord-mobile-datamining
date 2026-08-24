@@ -1,6 +1,6 @@
-// === Module 4224: hslToRgb ===
+// === Module 4228: hslToRgb ===
 
-// Module 4224 (hslToRgb)
+// Module 4228 (hslToRgb)
 import closure_0 from "_slicedToArray" /* 32 */;
 
 function hslToRgb(alpha) {

@@ -1,6 +1,6 @@
-// === Module 6073: metadata ===
+// === Module 6104: metadata ===
 
-// Module 6073 (metadata)
+// Module 6104 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ProfileEffectsAbstractUI-2x.png.js");

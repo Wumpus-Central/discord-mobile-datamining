@@ -1,12 +1,12 @@
-// === Module 10856: useIsReportToModEnabled ===
+// === Module 10895: useIsReportToModEnabled ===
 
-// Module 10856 (useIsReportToModEnabled)
+// Module 10895 (useIsReportToModEnabled)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import canReportMessageToMods from "canReportMessageToMods" /* 7238 */;
-import _fetchProfile from "_fetchProfile" /* 8418 */;
+import canReportMessageToMods from "canReportMessageToMods" /* 7276 */;
+import _fetchProfile from "_fetchProfile" /* 8457 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
+import closure_5 from "reinjectEphemerals" /* 4999 */;
 
 const useEffect = noop.useEffect;
 const result = set.fileFinishedImporting("modules/report_to_mod/hooks/useReportToModHooks.tsx");

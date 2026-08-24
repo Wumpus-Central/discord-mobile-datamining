@@ -1,10 +1,10 @@
-// === Module 7206: resetStoreState ===
+// === Module 7244: resetStoreState ===
 
-// Module 7206 (resetStoreState)
+// Module 7244 (resetStoreState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_2 from "_getSystemLocale" /* 1995 */;
 
 require = arg1;
 function resetStoreState() {
@@ -63,6 +63,15 @@ prototype["getFetchStateForApplicationId"] = function getFetchStateForApplicatio
       combined = "skus:" + obj.skuId;
     }
     return closure_3[combined];
+  }
+};
+prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(arg0) {
+  if (null != arg0) {
+    let prop;
+    if (dependencyMap[arg0] != null) {
+      prop = tmp2.storefrontPromotionIds;
+    }
+    return prop;
   }
 };
 prototype["getRewardsForSkuId"] = function getRewardsForSkuId(id) {

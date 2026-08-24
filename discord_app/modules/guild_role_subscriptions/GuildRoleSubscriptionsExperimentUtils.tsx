@@ -1,6 +1,6 @@
-// === Module 13353: GuildFeatures ===
+// === Module 13411: GuildFeatures ===
 
-// Module 13353 (GuildFeatures)
+// Module 13411 (GuildFeatures)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

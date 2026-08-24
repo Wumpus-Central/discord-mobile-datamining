@@ -1,20 +1,20 @@
-// === Module 5285: isChattableChannel ===
+// === Module 5290: isChattableChannel ===
 
-// Module 5285 (isChattableChannel)
+// Module 5290 (isChattableChannel)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import useCanChannelBeDefault from "useCanChannelBeDefault" /* 5288 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import useCanChannelBeDefault from "useCanChannelBeDefault" /* 5293 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "set" /* 5221 */;
-import closure_6 from "comparator" /* 1980 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1980 */;
+import closure_5 from "set" /* 5226 */;
+import closure_6 from "comparator" /* 1981 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1981 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5286 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4024 */;
+import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5291 */;
 import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4012 */;
 
 require = arg1;
 function isChattableChannel(guild_id) {

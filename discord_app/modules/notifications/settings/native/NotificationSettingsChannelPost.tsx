@@ -1,9 +1,9 @@
-// === Module 10112: NotificationSettingsChannelPost ===
+// === Module 10151: NotificationSettingsChannelPost ===
 
-// Module 10112 (NotificationSettingsChannelPost)
+// Module 10151 (NotificationSettingsChannelPost)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_4 from "updateUserGuildSettingsInternal" /* 5048 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -32,7 +32,7 @@ export const NotificationSettingsChannelPost = function NotificationSettingsChan
   obj1[3] = function onPress() {
     const result = closure_1_1(closure_1_2[8]).setForumThreadsCreated(channel.channel, !newForumThreadsCreated);
   };
-  obj[2] = jsx(_require(8558).TableCheckboxRow, { label: null, checked: null, disabled: null, onPress: null });
-  obj[1] = jsx(_require(6286).TableRowGroup, { title: null, hasIcons: false, children: null });
+  obj[2] = jsx(_require(8597).TableCheckboxRow, { label: null, checked: null, disabled: null, onPress: null });
+  obj[1] = jsx(_require(6317).TableRowGroup, { title: null, hasIcons: false, children: null });
   return <newForumThreadsCreated title={null} hasIcons={false}>{null}</newForumThreadsCreated>;
 };

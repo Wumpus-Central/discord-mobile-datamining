@@ -1,6 +1,6 @@
-// === Module 16735: Overview ===
+// === Module 16828: Overview ===
 
-// Module 16735 (Overview)
+// Module 16828 (Overview)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -8,8 +8,8 @@ import closure_5 from "handleRequiredAction" /* 1385 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "combined" /* 1993 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "combined" /* 1994 */;
 
 const require = arg1;
 ({ Endpoints: error, VerificationModalScenes: closure_8, VerificationTypes: c9, HelpdeskArticles } = ME);
@@ -60,7 +60,7 @@ export default function Overview() {
             HTTP.post(obj);
           });
         };
-        let tmp4 = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj);
+        let tmp4 = closure_1_10(closure_1_0(closure_1_2[13]).Button, obj, arg0);
       } else {
         obj = { style: null, children: null };
         obj[0] = verificationType.verificationType;

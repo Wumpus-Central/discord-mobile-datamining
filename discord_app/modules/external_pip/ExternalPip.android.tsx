@@ -1,6 +1,6 @@
-// === Module 10027: NativeEventEmitter ===
+// === Module 10066: NativeEventEmitter ===
 
-// Module 10027 (NativeEventEmitter)
+// Module 10066 (NativeEventEmitter)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

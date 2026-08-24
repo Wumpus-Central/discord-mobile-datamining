@@ -1,22 +1,22 @@
-// === Module 16849: EnhancedRoleColorsSelectStyleModal ===
+// === Module 16942: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 16849 (EnhancedRoleColorsSelectStyleModal)
+// Module 16942 (EnhancedRoleColorsSelectStyleModal)
 import set from "set" /* 2 */;
 import sum from "sum" /* 505 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6814 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
-import Background from "Background" /* 6950 */;
-import setOptionsDefault from "setOptions" /* 8157 */;
-import title from "title" /* 16830 */;
-import handleSetSection from "handleSetSection" /* 16831 */;
-import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 16850 */;
+import useThemeDefault from "useTheme" /* 4314 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6851 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6987 */;
+import Background from "Background" /* 6988 */;
+import setOptionsDefault from "setOptions" /* 8196 */;
+import title from "title" /* 16923 */;
+import handleSetSection from "handleSetSection" /* 16924 */;
+import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 16926 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 16943 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 const RoleColorsStyle = handleSetSection.RoleColorsStyle;
@@ -102,7 +102,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           disabled: tmp,
           onPress() {
             closure_1_1(id.id);
-            closure_2_1(4342).hideActionSheet();
+            closure_2_1(4346).hideActionSheet();
           },
           children: null
         };
@@ -114,11 +114,11 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
           rowGenerator: constants,
           modifyRow(message) {
             message.message.roleColor = undefined;
-            const result = closure_2_0(1986).extractColorStringsFromServerColors(id.colors);
-            const obj = closure_2_0(1986);
-            message.message.roleColors = closure_2_0(8186).processColorStrings(result);
+            const result = closure_2_0(1987).extractColorStringsFromServerColors(id.colors);
+            const obj = closure_2_0(1987);
+            message.message.roleColors = closure_2_0(8226).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = closure_2_1(12733);
+            message.message.avatarURL = closure_2_1(12788);
           }
         };
         const items1 = [closure_1_9(closure_1_1(button[16]), obj), ];
@@ -145,15 +145,15 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj6[0] = items1;
     const intl4 = tmp4(1236).intl;
-    obj6[2] = intl4.string(tmp(2367)["+/IHLl"]);
-    obj5[0] = tmp7(tmp4(4734).Text, obj6);
-    obj4[2] = intl3.format(tmp(2367).VpEDJc, obj5);
-    const items2 = [tmp7(tmp4(4734).Text, obj4), ];
+    obj6[2] = intl4.string(tmp(2368)["+/IHLl"]);
+    obj5[0] = tmp7(tmp4(4739).Text, obj6);
+    obj4[2] = intl3.format(tmp(2368).VpEDJc, obj5);
+    const items2 = [tmp7(tmp4(4739).Text, obj4), ];
     const obj7 = { style: null, variant: "text-sm/normal", children: null };
     obj7[0] = tmp3.upsellText;
     const intl5 = tmp4(1236).intl;
-    obj7[2] = intl5.string(tmp(2367).FJZeZF);
-    items2[1] = tmp7(tmp4(4734).Text, obj7);
+    obj7[2] = intl5.string(tmp(2368).FJZeZF);
+    items2[1] = tmp7(tmp4(4739).Text, obj7);
     obj3[1] = items2;
     tmp8Result = tmp8(tmp9, obj3);
   }

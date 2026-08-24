@@ -1,9 +1,9 @@
-// === Module 13430: useGuildHeaderCounts ===
+// === Module 13488: useGuildHeaderCounts ===
 
-// Module 13430 (useGuildHeaderCounts)
+// Module 13488 (useGuildHeaderCounts)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "initialize" /* 13431 */;
+import closure_4 from "handleInviteData" /* 4299 */;
+import closure_5 from "initialize" /* 13489 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");

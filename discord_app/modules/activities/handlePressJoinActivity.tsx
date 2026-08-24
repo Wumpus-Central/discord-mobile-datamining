@@ -1,15 +1,15 @@
-// === Module 8728: handlePressJoinActivity ===
+// === Module 8765: handlePressJoinActivity ===
 
-// Module 8728 (handlePressJoinActivity)
-import setDefault from "set" /* 4827 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 8729 */;
+// Module 8765 (handlePressJoinActivity)
+import setDefault from "set" /* 4832 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 8766 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createExecutable" /* 4479 */;
+import closure_4 from "createExecutable" /* 4483 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
+import closure_9 from "updateVoiceState" /* 4547 */;
 import closure_10 from "participantFromServer" /* 1390 */;
 
 require = arg1;
@@ -19,10 +19,10 @@ function handlePressJoinActivity(arg0) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }
-  } else if (tmp(8729).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
-    const result = tmp(8730).showActivitiesInvalidPermissionsAlert();
-    const tmpResult = tmp(8730);
-  } else if (tmp(8729).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
+  } else if (tmp(8766).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
+    const result = tmp(8767).showActivitiesInvalidPermissionsAlert();
+    const tmpResult = tmp(8767);
+  } else if (tmp(8766).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
     let obj = { title: null, body: null, hideActionSheet: false };
     const intl7 = tmp(1236).intl;
     obj[0] = intl7.string(tmp(1236).t.PtobXW);
@@ -30,7 +30,7 @@ function handlePressJoinActivity(arg0) {
     obj[1] = intl8.string(tmp(1236).t.UXoQTp);
     setDefault.show(obj);
     const obj7 = setDefault;
-  } else if (tmp(8729).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
+  } else if (tmp(8766).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
     obj = { title: null, body: null, hideActionSheet: false };
     const intl5 = tmp(1236).intl;
     obj[0] = intl5.string(tmp(1236).t.PtobXW);
@@ -38,7 +38,7 @@ function handlePressJoinActivity(arg0) {
     obj[1] = intl6.string(tmp(1236).t.uGDCcw);
     setDefault.show(obj);
     const obj5 = setDefault;
-  } else if (tmp(8729).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
+  } else if (tmp(8766).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
     let obj2 = setDefault;
     obj1 = { title: null, body: null, hideActionSheet: false };
     const intl3 = tmp(1236).intl;
@@ -74,7 +74,7 @@ function _maybeJoinEmbeddedActivity() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ function _maybeJoinEmbeddedActivity() {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -157,7 +157,7 @@ function _maybeJoinEmbeddedActivity() {
                         return obj;
                       }
                       c0 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } catch (tmp13) {
                       c0 = tmp;
                       throw tmp13;
@@ -199,7 +199,7 @@ function _maybeJoinEmbeddedActivity() {
                 });
                 closure_9 = c3;
                 if (null == closure_9) {
-                  let obj4 = callback2(7140);
+                  let obj4 = callback2(7178);
                   c3 = 2;
                   c4 = 1;
                   let obj2 = { value: null, done: false };
@@ -232,13 +232,13 @@ function _maybeJoinEmbeddedActivity() {
                 obj4[1] = closure_9;
                 obj4[2] = callback;
                 obj4[3] = id;
-                obj3 = callback(8699);
+                obj3 = callback(8736);
                 obj4[4] = obj3.getIsActivitiesEnabledForCurrentPlatform();
                 obj4[5] = c5;
                 obj4[6] = closure_9;
                 obj4[7] = c7;
                 obj4[8] = c6;
-                obj3[0] = callback2(8729)(obj4);
+                obj3[0] = callback2(8766)(obj4);
                 obj3[1] = function handleCanJoin() {
                   const self = this;
                   const apply = _handleCanJoin.apply;
@@ -251,11 +251,11 @@ function _maybeJoinEmbeddedActivity() {
                 };
                 id(obj3);
                 const tmp49 = id;
-                const tmp52 = callback2(8729);
+                const tmp52 = callback2(8766);
               }
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp31) {
           c4 = tmp;

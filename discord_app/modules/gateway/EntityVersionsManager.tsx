@@ -1,17 +1,17 @@
-// === Module 16559: handleDeletedEntityIds ===
+// === Module 16654: handleDeletedEntityIds ===
 
-// Module 16559 (handleDeletedEntityIds)
+// Module 16654 (handleDeletedEntityIds)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault2 from "initialize" /* 5038 */;
-import getAllDefault from "getAll" /* 5398 */;
-import closure_2 from "getEmojiToGroupId" /* 6727 */;
-import closure_3 from "loadSavedGuildStickers" /* 6769 */;
+import initializeDefault2 from "initialize" /* 5043 */;
+import getAllDefault from "getAll" /* 5403 */;
+import closure_2 from "getEmojiToGroupId" /* 6764 */;
+import closure_3 from "loadSavedGuildStickers" /* 6806 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "_handleConnectionOpen" /* 4495 */;
+import closure_7 from "_handleConnectionOpen" /* 4499 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;

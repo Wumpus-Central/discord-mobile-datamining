@@ -1,12 +1,12 @@
-// === Module 10867: _markUnread ===
+// === Module 10906: _markUnread ===
 
-// Module 10867 (_markUnread)
+// Module 10906 (_markUnread)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4023 */;
+import closure_4 from "storeThread" /* 4026 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
-import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4772 */;
+import closure_6 from "reinjectEphemerals" /* 4999 */;
+import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4777 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -30,7 +30,7 @@ function _markUnread() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -101,7 +101,7 @@ function _markUnread() {
                 const toArrayResult = messages.toArray();
               }
               channel = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {

@@ -1,24 +1,24 @@
-// === Module 10045: NotificationWrapper ===
+// === Module 10084: NotificationWrapper ===
 
-// Module 10045 (NotificationWrapper)
-import _modDef10047 from "module_10047" /* 10047 */;
-import _modDef10122 from "module_10122" /* 10122 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10125 */;
-import BugReporterNotification from "BugReporterNotification" /* 10126 */;
-import AlertNotificationDefault from "AlertNotification" /* 10157 */;
-import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10158 */;
-import NotificationAvatarDefault from "NotificationAvatar" /* 10521 */;
-import _modDef10522 from "module_10522" /* 10522 */;
-import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 10525 */;
+// Module 10084 (NotificationWrapper)
+import _modDef10086 from "module_10086" /* 10086 */;
+import _modDef10161 from "module_10161" /* 10161 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10164 */;
+import BugReporterNotification from "BugReporterNotification" /* 10165 */;
+import AlertNotificationDefault from "AlertNotification" /* 10196 */;
+import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10197 */;
+import NotificationAvatarDefault from "NotificationAvatar" /* 10560 */;
+import _modDef10561 from "module_10561" /* 10561 */;
+import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 10564 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 10046 */;
-import set from "set" /* 10030 */;
+import closure_6 from "initialize" /* 10085 */;
+import set from "set" /* 10069 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import { Easing } from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import { Easing } from "module_4119" /* 4119 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function NotificationWrapper(notification) {
@@ -27,11 +27,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10047, { notification: null });
+    return jsx(_modDef10086, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10122, { notification: null });
+    return jsx(_modDef10161, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -66,13 +66,13 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef10522, { notification: null });
+    return jsx(_modDef10561, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
-obj[1] = Easing.in(require("module_4115").Easing.ease);
+obj[1] = Easing.in(require("module_4119").Easing.ease);
 let closure_16 = createCacheKey.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let closure_18 = { code: "function InAppNotificationContainerTsx1(){const{runOnJS,setInitialized}=this.__closure;return runOnJS(setInitialized)(true);}" };
 let closure_19 = { code: "function InAppNotificationContainerTsx2(){const{runOnJS,setPanning}=this.__closure;runOnJS(setPanning)(false);}" };

@@ -1,11 +1,11 @@
-// === Module 5277: ack ===
+// === Module 5282: ack ===
 
-// Module 5277 (ack)
+// Module 5282 (ack)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "rebuild" /* 5251 */;
+import closure_2 from "rebuild" /* 5256 */;
 import { isReadableType } from "createChannelRecord" /* 1395 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "setIndex" /* 5278 */;
+import closure_5 from "setIndex" /* 5283 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { CURRENT_APP_CONTEXT } from "ME" /* 676 */;
 
@@ -91,7 +91,7 @@ export const ackChannel = function ackChannel(channel, arg1) {
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: 72, force: 180, context: null, location: null };
+      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "quest_app_store_overlay", force: null, context: "BULK_ACK", location: null };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;
@@ -115,6 +115,16 @@ export const localAck = function localAck(channelId) {
 export const enableAutomaticAck = function enableAutomaticAck(channelId, windowId) {
   let obj = dispatcherDefault;
   obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
+  obj.dispatch(obj);
+};
+export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
+  let obj = dispatcherDefault;
+  obj = { type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
+  obj.dispatch(obj);
+};
+export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
+  let obj = dispatcherDefault;
+  obj = { type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
   obj.dispatch(obj);
 };
 export const disableAutomaticAck = function disableAutomaticAck(channelId, windowId) {

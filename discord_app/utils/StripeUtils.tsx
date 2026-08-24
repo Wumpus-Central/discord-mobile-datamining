@@ -1,12 +1,12 @@
-// === Module 4472: getStripe ===
+// === Module 4476: getStripe ===
 
-// Module 4472 (getStripe)
+// Module 4476 (getStripe)
 import timestampDefault from "timestamp" /* 3 */;
 import initialize from "initialize" /* 589 */;
-import _typeof from "_typeof" /* 4473 */;
+import _typeof from "_typeof" /* 4477 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -42,7 +42,7 @@ function _authenticatePaymentIntentForPaymentId() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

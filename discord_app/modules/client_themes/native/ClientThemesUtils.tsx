@@ -1,19 +1,19 @@
-// === Module 4194: getGradientColorByPercentage ===
+// === Module 4198: getGradientColorByPercentage ===
 
-// Module 4194 (getGradientColorByPercentage)
+// Module 4198 (getGradientColorByPercentage)
 import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import hslToRgbDefault from "hslToRgb" /* 4224 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
-import getCustomThemesName from "getCustomThemesName" /* 4307 */;
-import useThemeDefault from "useTheme" /* 4310 */;
+import hexToRgba from "hexToRgba" /* 4227 */;
+import hslToRgbDefault from "hslToRgb" /* 4228 */;
+import getGuildThemeNameDefault from "getGuildThemeName" /* 4229 */;
+import getCustomThemesName from "getCustomThemesName" /* 4311 */;
+import useThemeDefault from "useTheme" /* 4314 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
-import closure_6 from "isSyncedModeThemesEnabled" /* 4195 */;
+import closure_6 from "isSyncedModeThemesEnabled" /* 4199 */;
 import closure_7 from "reset" /* 1346 */;
 
 require = arg1;
@@ -31,7 +31,7 @@ function getGradientColorByPercentage(type, END) {
   } else {
     colors = type.customThemeSettings.colors;
     if (1 === colors.length) {
-      return tmp(4223).hexToRgb(colors[0]);
+      return tmp(4227).hexToRgb(colors[0]);
     } else {
       const mapped2 = colors.map((arg0, arg1) => arg1 / (colors.length - 1) * 100);
       obj = nDefault;
@@ -148,8 +148,8 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
     const tmp30 = getGradientColorByPercentage(customBackgroundGradient, tmp10);
     const tmp35 = new hslToRgbDefault(tmp30.r, tmp30.g, tmp30.b, tmp11);
     const tmp38 = new hslToRgbDefault(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - tmp11);
-    const mixColorsResult = tmp(4223).mixColors(tmp35, tmp38);
-    const tmpResult1 = tmp(4223);
+    const mixColorsResult = tmp(4227).mixColors(tmp35, tmp38);
+    const tmpResult1 = tmp(4227);
     const obj5 = nDefault;
     return nDefault.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
   }

@@ -1,18 +1,18 @@
-// === Module 11645: GuildProgressHeader ===
+// === Module 11694: GuildProgressHeader ===
 
-// Module 11645 (GuildProgressHeader)
+// Module 11694 (GuildProgressHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
+import Text from "Text" /* 4739 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 8875 */;
-import closure_7 from "comparator" /* 1980 */;
-import Steps from "Steps" /* 11637 */;
+import closure_6 from "handleFormInit" /* 8912 */;
+import closure_7 from "comparator" /* 1981 */;
+import Steps from "Steps" /* 11686 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 class GuildProgressHeader {
@@ -61,7 +61,7 @@ export default function GuildProgressActionSheet(guild) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -79,16 +79,16 @@ export default function GuildProgressActionSheet(guild) {
               closure_1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
-              closure_1_1(8874).init(closure_1_5);
-              const obj6 = closure_1_1(8874);
-              closure_1_0(11643).hideActionSheet(closure_1_0.id);
-              const obj7 = closure_1_0(11643);
+              closure_1_1(8911).init(closure_1_5);
+              const obj6 = closure_1_1(8911);
+              closure_1_0(11692).hideActionSheet(closure_1_0.id);
+              const obj7 = closure_1_0(11692);
               obj1 = { size: null };
               obj1[0] = closure_1_10;
               dependencyMap = 1;
               c3 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = closure_1_1(4838).openImagePicker(obj1);
+              obj2[0] = closure_1_1(4843).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -102,11 +102,11 @@ export default function GuildProgressActionSheet(guild) {
           } else {
             base64 = arg1.base64;
             if (null != base64) {
-              obj = closure_1_1(8874);
+              obj = closure_1_1(8911);
               obj.updateIcon(closure_5, base64);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c3 = tmp;

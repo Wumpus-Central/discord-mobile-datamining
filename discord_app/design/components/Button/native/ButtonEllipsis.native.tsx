@@ -1,14 +1,14 @@
-// === Module 4760: EllipsisCircle ===
+// === Module 4765: EllipsisCircle ===
 
-// Module 4760 (EllipsisCircle)
+// Module 4765 (EllipsisCircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _mod4115 from "module_4115" /* 4115 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
+import _mod4119 from "module_4119" /* 4119 */;
+import _modDef4119 from "module_4119" /* 4119 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4671 */;
 import jsxProd from "jsxProd" /* 21 */;
-import { Easing } from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import { Easing } from "module_4119" /* 4119 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function EllipsisCircle(offset) {
@@ -64,7 +64,7 @@ function EllipsisCircle(offset) {
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { duration: 500, easing: null };
-obj[1] = Easing.inOut(require("module_4115").Easing.quad);
+obj[1] = Easing.inOut(require("module_4119").Easing.quad);
 let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -92,12 +92,12 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   return { circle };
 });
 function withEllipsisAnimation(arg0, value) {
-  obj = _mod4115;
+  obj = _mod4119;
   const result = 166.66666666666666 * arg0;
-  const obj2 = _mod4115;
+  const obj2 = _mod4119;
   return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true));
 }
-obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4115").withDelay, withRepeat: require("module_4115").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
+obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4119").withDelay, withRepeat: require("module_4119").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
 withEllipsisAnimation.__closure = obj;
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
@@ -115,5 +115,5 @@ export const Ellipsis = function Ellipsis(arg0) {
   const merged2 = Object.assign(arg0);
   items[2] = callback(EllipsisCircle, { offset: 2 });
   obj[1] = items;
-  return callback2(_modDef4115.View, obj);
+  return callback2(_modDef4119.View, obj);
 };

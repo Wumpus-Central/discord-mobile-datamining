@@ -1,10 +1,10 @@
-// === Module 16717: handleChannelDelete ===
+// === Module 16813: handleChannelDelete ===
 
-// Module 16717 (handleChannelDelete)
+// Module 16813 (handleChannelDelete)
 import set from "set" /* 2 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getNextPositionFromChannels from "getNextPositionFromChannels" /* 9978 */;
-import items from "items" /* 15464 */;
+import initializeDefault from "initialize" /* 5043 */;
+import getNextPositionFromChannels from "getNextPositionFromChannels" /* 10017 */;
+import items from "items" /* 15528 */;
 
 function handleChannelDelete(channel) {
   const result = getNextPositionFromChannels.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });

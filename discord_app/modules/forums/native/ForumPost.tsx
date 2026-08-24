@@ -1,12 +1,12 @@
-// === Module 11176: ForumPostGrid ===
+// === Module 11228: ForumPostGrid ===
 
-// Module 11176 (ForumPostGrid)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11178 */;
-import GIFIconDefault from "GIFIcon" /* 11182 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11193 */;
+// Module 11228 (ForumPostGrid)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11230 */;
+import GIFIconDefault from "GIFIcon" /* 11234 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11245 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import { useForumChannelStore } from "set" /* 11177 */;
+import closure_4 from "markAllUserIdListsStale" /* 4033 */;
+import { useForumChannelStore } from "set" /* 11229 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -153,9 +153,9 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const obj2 = threadId(589);
   const tmp = threadId;
   const tmp4 = stateFromStores;
-  const firstForumPostMessage = threadId(7269).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(7307).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(8513);
+  threadId(8552);
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -166,8 +166,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(11198), obj);
-    tmp5 = callback(tmp(11197).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(11249), obj);
+    tmp5 = callback(tmp(11248).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

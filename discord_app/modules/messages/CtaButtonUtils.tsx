@@ -1,10 +1,10 @@
-// === Module 11096: CtaButtonType ===
+// === Module 11135: CtaButtonType ===
 
-// Module 11096 (CtaButtonType)
+// Module 11135 (CtaButtonType)
 import initialize from "initialize" /* 589 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import shouldRenderReportFalsePositiveButton2 from "shouldRenderReportFalsePositiveButton" /* 11097 */;
-import closure_2 from "initialize" /* 4993 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4997 */;
+import shouldRenderReportFalsePositiveButton2 from "shouldRenderReportFalsePositiveButton" /* 11136 */;
+import closure_2 from "initialize" /* 4998 */;
 
 require = arg1;
 let obj = { MARK_AS_FALSE_POSITIVE: "mark_as_false_positive", AGE_VERIFICATION_RETRY: "age_verification_retry", CONNECT_TO_TEEN: "connect_to_teen" };
@@ -16,11 +16,11 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
   } else {
-    let tmpResult = tmp(4992);
+    let tmpResult = tmp(4997);
     if (tmpResult.isAgeVerificationMessageWithRetryCta(channel_id, id)) {
       CONNECT_TO_TEEN = obj.AGE_VERIFICATION_RETRY;
     } else {
-      tmpResult = tmp(4992);
+      tmpResult = tmp(4997);
       if (tmpResult.isAgeVerificationMessageWithConnectToTeenCta(channel_id, id)) {
         CONNECT_TO_TEEN = obj.CONNECT_TO_TEEN;
       }

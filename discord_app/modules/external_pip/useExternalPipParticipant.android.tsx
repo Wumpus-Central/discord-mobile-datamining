@@ -1,13 +1,13 @@
-// === Module 16224: useExternalPipParticipant ===
+// === Module 16321: useExternalPipParticipant ===
 
-// Module 16224 (useExternalPipParticipant)
+// Module 16321 (useExternalPipParticipant)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4773 */;
+import closure_4 from "getParticipants" /* 4778 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_7 from "createRTCConnection" /* 4544 */;
+import ParticipantTypes from "ParticipantTypes" /* 4549 */;
 
 const require = arg1;
 ({ isStreamParticipant: closure_8, ParticipantTypes: c9 } = ParticipantTypes);
@@ -261,7 +261,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "HermesInternal" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "accessibilityLabel" };
   }, items4);
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {

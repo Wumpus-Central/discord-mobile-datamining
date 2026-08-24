@@ -1,9 +1,9 @@
-// === Module 5427: set ===
+// === Module 5432: set ===
 
-// Module 5427 (set)
+// Module 5432 (set)
 import ME from "ME" /* 676 */;
-import messagesProxyDefault from "messagesProxy" /* 2853 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
+import messagesProxyDefault from "messagesProxy" /* 2854 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5259 */;
 import set from "set" /* 2 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
@@ -48,6 +48,7 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
   items[2] = obj;
   return items;
 };
+export const TRUSTED_PROVIDERS_URL = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
 export const AGE_VERIFICATION_MODAL_KEY = "AGE_VERIFICATION_MODAL_KEY";
 export const AGE_VERIFICATION_GET_STARTED_MODAL_KEY = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 export const AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY = "AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY";

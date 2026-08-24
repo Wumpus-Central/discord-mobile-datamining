@@ -1,16 +1,16 @@
-// === Module 15369: renderCategoryItem ===
+// === Module 15433: renderCategoryItem ===
 
-// Module 15369 (renderCategoryItem)
+// Module 15433 (renderCategoryItem)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 5275 */;
-import closure_6 from "incrementVersion" /* 5270 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
-import hairlineWidth from "hairlineWidth" /* 10055 */;
+import closure_5 from "set" /* 5280 */;
+import closure_6 from "incrementVersion" /* 5275 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 5048 */;
+import hairlineWidth from "hairlineWidth" /* 10094 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function renderCategoryItem(longPressAction) {
@@ -52,7 +52,7 @@ function renderCategoryItem(longPressAction) {
     obj[2] = str;
     obj[4] = styles.categoryText;
     obj[5] = name;
-    tmp35Result = callback(trailingAction(4734).Text, obj);
+    tmp35Result = callback(trailingAction(4739).Text, obj);
     const tmp35 = callback;
   }
   let tmp3 = null;
@@ -67,7 +67,7 @@ function renderCategoryItem(longPressAction) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(11932).PlusMediumIcon;
+    Icon = trailingAction(11981).PlusMediumIcon;
   }
   if (null == trailingAction) {
     obj1 = { children: null };
@@ -138,7 +138,7 @@ function renderCategoryItem(longPressAction) {
       obj5[5] = onLongPress;
       obj5[6] = items;
       obj5[7] = tmp18Result;
-      let tmp29Result = tmp29(trailingAction(5433).PressableHighlight, obj5);
+      let tmp29Result = tmp29(trailingAction(5438).PressableHighlight, obj5);
     } else {
       const obj6 = { accessibilityRole: "header", style: null, children: null };
       obj6[1] = items;
@@ -165,7 +165,7 @@ function renderCategoryItem(longPressAction) {
     obj9[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
     colors = tmp9(Icon, obj9);
     obj8[6] = colors;
-    obj8 = tmp9(trailingAction(5433).PressableOpacity, obj8);
+    obj8 = tmp9(trailingAction(5438).PressableOpacity, obj8);
     obj7[1] = obj8;
     callback(View, obj7);
     const tmp10 = View;
@@ -253,8 +253,8 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const tmp = collapsed;
   const tmp4 = styles(tmp3);
   const tmp5 = id;
-  const tmp9 = collapsed(4984)(channel);
-  const tmp11 = collapsed(15370)(channel);
+  const tmp9 = collapsed(4989)(channel);
+  const tmp11 = collapsed(15434)(channel);
   obj = { name: tmp9, muted: stateFromStoresObject.muted, collapsed, onPress: callback, onLongPress: null, withMarginTop: null, styles: null, isRefreshEnabled: null, trailingAction: null, longPressAction: null };
   let perform;
   if (tmp11 != null) {
@@ -267,14 +267,14 @@ export const CategoryChannel = function CategoryChannel(channel) {
   obj[5] = channel.withMarginTop;
   obj[6] = tmp4;
   obj[7] = tmp3;
-  obj[8] = collapsed(11958)(channel);
+  obj[8] = collapsed(12007)(channel);
   obj[9] = tmp11;
   ({ collapsed: collapsed2, isRefreshEnabled } = obj);
   const merged = Object.assign(obj, Object.create(null));
   const colors = tmp(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(tmp5(9464).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
+  obj.icon = callback(tmp5(9501).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed2 };
   obj.isRefreshEnabled = isRefreshEnabled;
   return renderCategoryItem(obj);
@@ -301,7 +301,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(712).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(9464).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
+  obj.icon = callback(guildId(9501).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
   obj.isRefreshEnabled = obj.isRefreshEnabled;
   return renderCategoryItem(obj);

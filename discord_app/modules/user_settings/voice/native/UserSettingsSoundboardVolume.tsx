@@ -1,14 +1,14 @@
-// === Module 12553: SoundboardVolume ===
+// === Module 12607: SoundboardVolume ===
 
-// Module 12553 (SoundboardVolume)
+// Module 12607 (SoundboardVolume)
 import noopAll from "noop" /* 19 */;
-import combinedDefault from "combined" /* 1993 */;
-import contextDefault from "context" /* 7139 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
+import combinedDefault from "combined" /* 1994 */;
+import contextDefault from "context" /* 7177 */;
+import VolumeSliderDefault from "VolumeSlider" /* 12191 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -18,7 +18,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/voice
 
 export default function SoundboardVolume() {
   const tmp = callback3();
-  let obj = analyticsLocations(7304);
+  let obj = analyticsLocations(7342);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = contextDefault().analyticsLocations;
   obj = { title: null, hasIcons: false, children: null };
@@ -35,9 +35,9 @@ export default function SoundboardVolume() {
   const obj2 = { style: tmp.slider, children: callback(VolumeSliderDefault, obj3) };
   obj5[0] = combinedDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj4[2] = intl3.format(analyticsLocations(1236).t.BPbGq7, obj5);
-  items[1] = callback(analyticsLocations(4734).Text, obj4);
+  items[1] = callback(analyticsLocations(4739).Text, obj4);
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
-  obj[2] = callback(analyticsLocations(6291).TableRow, obj);
-  return callback(analyticsLocations(12547).UserSettingsTableRowGroup, obj);
+  obj[2] = callback(analyticsLocations(6322).TableRow, obj);
+  return callback(analyticsLocations(12601).UserSettingsTableRowGroup, obj);
 };

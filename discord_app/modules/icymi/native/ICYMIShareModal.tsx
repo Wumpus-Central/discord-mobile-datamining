@@ -1,21 +1,21 @@
-// === Module 15758: Screenshot ===
+// === Module 15827: Screenshot ===
 
-// Module 15758 (Screenshot)
+// Module 15827 (Screenshot)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 8803 */;
+import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 8840 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_9 from "map" /* 4824 */;
+import { DraftType } from "handleChanged" /* 4830 */;
+import closure_9 from "map" /* 4829 */;
 import { AbortCodes } from "ME" /* 676 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { UserRowModes } from "UserRowModes" /* 9118 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function Screenshot(setUri) {
@@ -40,26 +40,26 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(8501);
+  let obj = setUri(8540);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1494)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4225)();
+  const tmp4 = ref(4229)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(15760);
-  obj4[0] = setUri(4194).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4194).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(15829);
+  obj4[0] = setUri(4198).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4198).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(9091), obj3), ];
+  const items2 = [callback3(ref(9128), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
-  const tmp7 = ref(9091);
+  const tmp7 = ref(9128);
   const items3 = [tmp.contentContainer, clientThemesOverride];
   obj5[1] = callback3(View, { style: items3, children: setUri.render() });
-  items2[1] = callback3(setUri(4104).ThemeContextProvider, obj5);
+  items2[1] = callback3(setUri(4107).ThemeContextProvider, obj5);
   obj2[1] = items2;
   obj1[2] = callback4(View, obj2);
   obj[1] = callback3(tmp6, obj1);
@@ -154,7 +154,7 @@ class ICYMIShareModal {
               obj[0] = arr;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -197,7 +197,7 @@ class ICYMIShareModal {
                     closure_0 = arg0;
                     c2 = 0;
                     c1 = 0;
-                    return (/* F120938 */ function*() { ... })();
+                    return (/* F121968 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;
@@ -383,7 +383,7 @@ export const GameShareModal = function GameShareModal(content) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

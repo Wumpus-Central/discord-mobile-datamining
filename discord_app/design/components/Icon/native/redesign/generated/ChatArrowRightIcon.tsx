@@ -1,10 +1,10 @@
-// === Module 10899: ChatArrowRightIcon ===
+// === Module 10938: ChatArrowRightIcon ===
 
-// Module 10899 (ChatArrowRightIcon)
+// Module 10938 (ChatArrowRightIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 10900 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 10939 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

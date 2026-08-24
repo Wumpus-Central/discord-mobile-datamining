@@ -1,6 +1,6 @@
-// === Module 12325: useIsNitroWishlistingEnabled ===
+// === Module 12377: useIsNitroWishlistingEnabled ===
 
-// Module 12325 (useIsNitroWishlistingEnabled)
+// Module 12377 (useIsNitroWishlistingEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

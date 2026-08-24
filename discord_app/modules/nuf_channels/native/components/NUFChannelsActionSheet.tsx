@@ -1,8 +1,8 @@
-// === Module 12647: NUFChannelsActionSheet ===
+// === Module 12701: NUFChannelsActionSheet ===
 
-// Module 12647 (NUFChannelsActionSheet)
-import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 12648 */;
-import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 12649 */;
+// Module 12701 (NUFChannelsActionSheet)
+import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 12702 */;
+import NUFChannelIllustrationDefault from "NUFChannelIllustration" /* 12703 */;
 import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -39,5 +39,5 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
   obj[3] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj[4] = callback;
   obj[2] = jsx(NUFActionSheetTemplateDefault, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
-  return jsx(markAsDismissed(6950).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
+  return jsx(markAsDismissed(6988).BottomSheet, { illustration: jsx(NUFChannelIllustrationDefault, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
 };

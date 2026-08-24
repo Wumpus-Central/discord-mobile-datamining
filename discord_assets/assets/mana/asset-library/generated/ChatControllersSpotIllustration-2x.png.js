@@ -1,6 +1,6 @@
-// === Module 5583: metadata ===
+// === Module 5590: metadata ===
 
-// Module 5583 (metadata)
+// Module 5590 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChatControllersSpotIllustration-2x.png.js");

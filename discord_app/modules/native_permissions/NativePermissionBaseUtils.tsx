@@ -1,9 +1,9 @@
-// === Module 4844: requestAuthorization ===
+// === Module 4849: requestAuthorization ===
 
-// Module 4844 (requestAuthorization)
+// Module 4849 (requestAuthorization)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4845 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
+import closure_4 from "initialize" /* 4850 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4844 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;

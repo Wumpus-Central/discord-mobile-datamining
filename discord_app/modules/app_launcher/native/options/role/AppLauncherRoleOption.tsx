@@ -1,9 +1,9 @@
-// === Module 11361: AppLauncherRoleOption ===
+// === Module 11412: AppLauncherRoleOption ===
 
-// Module 11361 (AppLauncherRoleOption)
+// Module 11412 (AppLauncherRoleOption)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

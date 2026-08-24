@@ -1,7 +1,7 @@
-// === Module 8887: guildEventDetailsParser ===
+// === Module 8924: guildEventDetailsParser ===
 
-// Module 8887 (guildEventDetailsParser)
-import importDefaultResult from "get defaultRules" /* 6807 */;
+// Module 8924 (guildEventDetailsParser)
+import importDefaultResult from "get defaultRules" /* 6844 */;
 
 const reactParserForResult = importDefaultResult.reactParserFor(importDefaultResult.guildEventLocationRules);
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");

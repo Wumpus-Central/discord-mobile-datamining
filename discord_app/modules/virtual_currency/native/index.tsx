@@ -1,11 +1,11 @@
-// === Module 10399: BalanceWidgetPill ===
+// === Module 10438: BalanceWidgetPill ===
 
-// Module 10399 (BalanceWidgetPill)
+// Module 10438 (BalanceWidgetPill)
 import set from "set" /* 2 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 10400 */;
-import BalanceCounter from "BalanceCounter" /* 10408 */;
-import BalanceWidgetPillButton from "BalanceWidgetPillButton" /* 10410 */;
-import refDefault from "ref" /* 10411 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 10439 */;
+import BalanceCounter from "BalanceCounter" /* 10447 */;
+import BalanceWidgetPillButton from "BalanceWidgetPillButton" /* 10449 */;
+import refDefault from "ref" /* 10450 */;
 
 const result = set.fileFinishedImporting("modules/virtual_currency/native/index.tsx");
 

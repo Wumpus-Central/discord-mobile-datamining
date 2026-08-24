@@ -1,14 +1,14 @@
-// === Module 12448: map ===
+// === Module 12500: map ===
 
-// Module 12448 (map)
+// Module 12500 (map)
 import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import sleep from "sleep" /* 4548 */;
+import sleep from "sleep" /* 4553 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionInfoChange" /* 4564 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
+import closure_5 from "handleConnectionInfoChange" /* 4569 */;
+import closure_6 from "createRTCConnection" /* 4544 */;
+import closure_7 from "updateVoiceState" /* 4547 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;

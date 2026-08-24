@@ -1,7 +1,7 @@
-// === Module 11453: newMemberActionFromServer ===
+// === Module 11502: newMemberActionFromServer ===
 
-// Module 11453 (newMemberActionFromServer)
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+// Module 11502 (newMemberActionFromServer)
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 

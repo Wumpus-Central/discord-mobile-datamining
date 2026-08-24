@@ -1,8 +1,8 @@
-// === Module 14476: openVideoQuestModal ===
+// === Module 14544: openVideoQuestModal ===
 
-// Module 14476 (openVideoQuestModal)
+// Module 14544 (openVideoQuestModal)
 import v1All from "v1" /* 514 */;
-import closure_4 from "initializeState" /* 7453 */;
+import closure_4 from "initializeState" /* 7491 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");
@@ -21,7 +21,7 @@ export default function openVideoQuestModal(questId) {
       }
     }
     if (null == completedAt) {
-      sourceQuestContent(14470)();
+      sourceQuestContent(14538)();
     }
   }
   const v4Result = v1All.v4();
@@ -39,7 +39,7 @@ export default function openVideoQuestModal(questId) {
     },
     sourceQuestContent
   };
-  const obj3 = sourceQuestContent(5260);
-  const tmp8 = questId(2007)(14477, dependencyMap.paths);
-  return obj3.pushLazy(tmp8, obj, questId(10704).getVideoQuestModalKey(questId));
+  const obj3 = sourceQuestContent(5265);
+  const tmp8 = questId(2008)(14545, dependencyMap.paths);
+  return obj3.pushLazy(tmp8, obj, questId(10743).getVideoQuestModalKey(questId));
 };

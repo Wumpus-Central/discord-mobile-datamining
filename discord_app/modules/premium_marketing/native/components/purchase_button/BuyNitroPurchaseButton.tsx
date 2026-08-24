@@ -1,13 +1,13 @@
-// === Module 8021: BuyNitroPurchaseButton ===
+// === Module 8060: BuyNitroPurchaseButton ===
 
-// Module 8021 (BuyNitroPurchaseButton)
+// Module 8060 (BuyNitroPurchaseButton)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateProduct" /* 5319 */;
+import closure_6 from "updateProduct" /* 5324 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);

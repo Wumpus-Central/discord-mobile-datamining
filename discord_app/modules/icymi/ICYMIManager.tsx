@@ -1,10 +1,10 @@
-// === Module 13909: _initialize ===
+// === Module 13977: _initialize ===
 
-// Module 13909 (_initialize)
+// Module 13977 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import _modDef9057 from "module_9057" /* 9057 */;
-import apexExperiment from "apexExperiment" /* 9058 */;
+import initializeDefault from "initialize" /* 4726 */;
+import _modDef9094 from "module_9094" /* 9094 */;
+import apexExperiment from "apexExperiment" /* 9095 */;
 
 require = arg1;
 let c3 = null;
@@ -23,7 +23,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   if (obj.getICYMIEnabled("ICYMIManager")) {
     obj = { isInitialLoad: null };
     obj[0] = true;
-    const dehydrated = _modDef9057.fetchDehydrated(obj);
+    const dehydrated = _modDef9094.fetchDehydrated(obj);
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -58,11 +58,11 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         }, 15 * callback(table[1]).Millis.MINUTE);
       }, 15 * callback(table[1]).Millis.MINUTE);
     }, 15 * tmp2(687).Millis.MINUTE);
-    let tmp2Result = tmp2(9057);
+    let tmp2Result = tmp2(9094);
     const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = tmp2(9057);
+    tmp2Result = tmp2(9094);
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
-    const obj2 = _modDef9057;
+    const obj2 = _modDef9094;
   }
 };
 const iCYMIManager = new ICYMIManager();

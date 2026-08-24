@@ -1,8 +1,8 @@
-// === Module 14062: useUserAvailableGuildsWithTags ===
+// === Module 14130: useUserAvailableGuildsWithTags ===
 
-// Module 14062 (useUserAvailableGuildsWithTags)
+// Module 14130 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 
 require = arg1;

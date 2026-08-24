@@ -1,39 +1,39 @@
-// === Module 7309: VoiceChannelEffectAnimationType ===
+// === Module 7347: VoiceChannelEffectAnimationType ===
 
-// Module 7309 (VoiceChannelEffectAnimationType)
+// Module 7347 (VoiceChannelEffectAnimationType)
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import _modDef7310 from "module_7310" /* 7310 */;
-import _modDef7311 from "module_7311" /* 7311 */;
-import _modDef7312 from "module_7312" /* 7312 */;
-import _modDef7313 from "module_7313" /* 7313 */;
-import _modDef7314 from "module_7314" /* 7314 */;
-import _modDef7315 from "module_7315" /* 7315 */;
-import _modDef7316 from "module_7316" /* 7316 */;
-import _modDef7317 from "module_7317" /* 7317 */;
-import _modDef7318 from "module_7318" /* 7318 */;
-import _modDef7319 from "module_7319" /* 7319 */;
-import _modDef7320 from "module_7320" /* 7320 */;
-import _modDef7321 from "module_7321" /* 7321 */;
-import _modDef7322 from "module_7322" /* 7322 */;
-import _modDef7323 from "module_7323" /* 7323 */;
-import _modDef7324 from "module_7324" /* 7324 */;
-import _modDef7325 from "module_7325" /* 7325 */;
-import _modDef7326 from "module_7326" /* 7326 */;
-import _modDef7327 from "module_7327" /* 7327 */;
-import _modDef7328 from "module_7328" /* 7328 */;
-import _modDef7329 from "module_7329" /* 7329 */;
-import _modDef7330 from "module_7330" /* 7330 */;
-import _modDef7331 from "module_7331" /* 7331 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4041 */;
+import _modDef7348 from "module_7348" /* 7348 */;
+import _modDef7349 from "module_7349" /* 7349 */;
+import _modDef7350 from "module_7350" /* 7350 */;
+import _modDef7351 from "module_7351" /* 7351 */;
+import _modDef7352 from "module_7352" /* 7352 */;
+import _modDef7353 from "module_7353" /* 7353 */;
+import _modDef7354 from "module_7354" /* 7354 */;
+import _modDef7355 from "module_7355" /* 7355 */;
+import _modDef7356 from "module_7356" /* 7356 */;
+import _modDef7357 from "module_7357" /* 7357 */;
+import _modDef7358 from "module_7358" /* 7358 */;
+import _modDef7359 from "module_7359" /* 7359 */;
+import _modDef7360 from "module_7360" /* 7360 */;
+import _modDef7361 from "module_7361" /* 7361 */;
+import _modDef7362 from "module_7362" /* 7362 */;
+import _modDef7363 from "module_7363" /* 7363 */;
+import _modDef7364 from "module_7364" /* 7364 */;
+import _modDef7365 from "module_7365" /* 7365 */;
+import _modDef7366 from "module_7366" /* 7366 */;
+import _modDef7367 from "module_7367" /* 7367 */;
+import _modDef7368 from "module_7368" /* 7368 */;
+import _modDef7369 from "module_7369" /* 7369 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 7308 */;
+import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType" /* 7346 */;
 import importDefaultResult from "apply" /* 12 */;
 
 const require = arg1;
 ({ EMOJI_SIZE: c4, VoiceChannelEffectAnimationType } = VoiceChannelEffectAnimationType);
-const items = [_modDef7310];
-const items1 = [_modDef7311, _modDef7312, _modDef7313, _modDef7314, _modDef7315, _modDef7316, _modDef7317, _modDef7318, _modDef7319, _modDef7320, _modDef7321, _modDef7322, _modDef7323, _modDef7324, _modDef7325, _modDef7326, _modDef7327, _modDef7328, _modDef7329, _modDef7330, _modDef7331];
+const items = [_modDef7348];
+const items1 = [_modDef7349, _modDef7350, _modDef7351, _modDef7352, _modDef7353, _modDef7354, _modDef7355, _modDef7356, _modDef7357, _modDef7358, _modDef7359, _modDef7360, _modDef7361, _modDef7362, _modDef7363, _modDef7364, _modDef7365, _modDef7366, _modDef7367, _modDef7368, _modDef7369];
 let obj = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = importDefaultResult.memoize((arg0) => {
   closure_0 = arg0;

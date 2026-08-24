@@ -1,9 +1,9 @@
-// === Module 5025: resolveGoreSettingWithDefaults ===
+// === Module 5030: resolveGoreSettingWithDefaults ===
 
-// Module 5025 (resolveGoreSettingWithDefaults)
+// Module 5030 (resolveGoreSettingWithDefaults)
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4082 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { HelpdeskArticles } from "ME" /* 676 */;

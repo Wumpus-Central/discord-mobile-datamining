@@ -1,9 +1,9 @@
-// === Module 8772: canInstallApplication ===
+// === Module 8809: canInstallApplication ===
 
-// Module 8772 (canInstallApplication)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
-import closure_2 from "getIndexKey" /* 8448 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
+// Module 8809 (canInstallApplication)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8807 */;
+import closure_2 from "getIndexKey" /* 8487 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5251 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");

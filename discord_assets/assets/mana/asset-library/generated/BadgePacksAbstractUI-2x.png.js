@@ -1,6 +1,6 @@
-// === Module 5535: metadata ===
+// === Module 5542: metadata ===
 
-// Module 5535 (metadata)
+// Module 5542 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BadgePacksAbstractUI-2x.png.js");

@@ -1,13 +1,13 @@
-// === Module 15575: useFavoritesGuildUnreads ===
+// === Module 15640: useFavoritesGuildUnreads ===
 
-// Module 15575 (useFavoritesGuildUnreads)
-import closure_3 from "rebuild" /* 5251 */;
-import closure_4 from "storeThread" /* 4023 */;
+// Module 15640 (useFavoritesGuildUnreads)
+import closure_3 from "rebuild" /* 5256 */;
+import closure_4 from "storeThread" /* 4026 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_6 from "updateGuildUnreadSentinel" /* 5388 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_8 from "generateOldThreadCutoff" /* 4777 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5048 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildUnreads.tsx");

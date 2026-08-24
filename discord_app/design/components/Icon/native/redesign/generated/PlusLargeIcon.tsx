@@ -1,10 +1,10 @@
-// === Module 9975: PlusLargeIcon ===
+// === Module 10014: PlusLargeIcon ===
 
-// Module 9975 (PlusLargeIcon)
+// Module 10014 (PlusLargeIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9976 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 10015 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

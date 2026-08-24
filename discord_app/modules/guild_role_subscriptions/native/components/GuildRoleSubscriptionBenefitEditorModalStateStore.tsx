@@ -1,11 +1,11 @@
-// === Module 16973: resetImperatively ===
+// === Module 17066: resetImperatively ===
 
-// Module 16973 (resetImperatively)
+// Module 17066 (resetImperatively)
 import set from "set" /* 2 */;
-import isIterable from "isIterable" /* 4006 */;
+import isIterable from "isIterable" /* 4009 */;
 import identity from "identity" /* 700 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "opacity", description: "title", refId: "accessibilityRole" });
+let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "Icon", description: "radii", refId: "accessibilityLabel" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

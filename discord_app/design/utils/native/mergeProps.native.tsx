@@ -1,6 +1,6 @@
-// === Module 4101: chainCallbacks ===
+// === Module 4104: chainCallbacks ===
 
-// Module 4101 (chainCallbacks)
+// Module 4104 (chainCallbacks)
 import set from "set" /* 2 */;
 
 function chainCallbacks(arg0, arg1) {

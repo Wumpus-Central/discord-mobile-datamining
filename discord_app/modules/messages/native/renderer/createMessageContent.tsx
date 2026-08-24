@@ -1,36 +1,36 @@
-// === Module 8164: createThreadEmbed ===
+// === Module 8203: createThreadEmbed ===
 
-// Module 8164 (createThreadEmbed)
+// Module 8203 (createThreadEmbed)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import processMessage from "processMessage" /* 5013 */;
-import Changeset from "Changeset" /* 8158 */;
-import items6 from "items" /* 8168 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import _formatMessageCountLabel from "_formatMessageCountLabel" /* 8170 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_7 from "getEmojiToGroupId" /* 6727 */;
-import closure_8 from "handleMessageSendFailedAutomod" /* 8163 */;
-import closure_9 from "deleteNonce" /* 8165 */;
-import closure_10 from "initialize" /* 4022 */;
-import closure_11 from "set" /* 8166 */;
-import closure_12 from "processMessage" /* 5013 */;
-import closure_14 from "storeThread" /* 4023 */;
-import closure_15 from "updateState" /* 7271 */;
+import computeChannelName from "computeChannelName" /* 4989 */;
+import processMessage from "processMessage" /* 5018 */;
+import Changeset from "Changeset" /* 8197 */;
+import items6 from "items" /* 8207 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8208 */;
+import _formatMessageCountLabel from "_formatMessageCountLabel" /* 8209 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_5 from "addApplication" /* 4482 */;
+import closure_6 from "isSyncedModeThemesEnabled" /* 4199 */;
+import closure_7 from "getEmojiToGroupId" /* 6764 */;
+import closure_8 from "handleMessageSendFailedAutomod" /* 8202 */;
+import closure_9 from "deleteNonce" /* 8204 */;
+import closure_10 from "initialize" /* 4025 */;
+import closure_11 from "set" /* 8205 */;
+import closure_12 from "processMessage" /* 5018 */;
+import closure_14 from "storeThread" /* 4026 */;
+import closure_15 from "updateState" /* 7309 */;
 import closure_16 from "handleThemeChange" /* 1302 */;
 import closure_17 from "fetchFingerprint" /* 1218 */;
 import closure_18 from "ensureGuildLoaded" /* 1391 */;
-import closure_19 from "trackCommunicationDisabled" /* 1990 */;
+import closure_19 from "trackCommunicationDisabled" /* 1991 */;
 import closure_20 from "createGuildRecordFromRust" /* 1910 */;
-import closure_21 from "markAllUserIdListsStale" /* 4030 */;
-import closure_22 from "initialize" /* 7582 */;
+import closure_21 from "markAllUserIdListsStale" /* 4033 */;
+import closure_22 from "initialize" /* 7620 */;
 import closure_23 from "mergeGuildAvatar" /* 1922 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4670 */;
 import ME from "ME" /* 676 */;
 
 function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, arg5) {
@@ -51,7 +51,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(5267);
+            let tmp15Result = tmp15(5272);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
               obj[0] = channelName;
@@ -76,8 +76,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1236).intl;
                 obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(8171);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8172));
+                tmp15Result = tmp15(8210);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(8211));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {
@@ -1225,7 +1225,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result7 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: 2087, hasBailedAst: 2088 };
+    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "???", hasBailedAst: "???" };
     const tmp13Result1 = tmp13(tmp3[42]);
   }
 }

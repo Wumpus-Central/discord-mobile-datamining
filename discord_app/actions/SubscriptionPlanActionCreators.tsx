@@ -1,9 +1,9 @@
-// === Module 7223: fetchSubscriptionPlansForSKU ===
+// === Module 7261: fetchSubscriptionPlansForSKU ===
 
-// Module 7223 (fetchSubscriptionPlansForSKU)
+// Module 7261 (fetchSubscriptionPlansForSKU)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_4 from "handlePaymentSourceCreateEnd" /* 4044 */;
 import { Endpoints } from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -42,7 +42,7 @@ function _fetchSubscriptionPlansForSKU() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

@@ -1,11 +1,11 @@
-// === Module 12701: ForumChannelCloseSearchButton ===
+// === Module 12756: ForumChannelCloseSearchButton ===
 
-// Module 12701 (ForumChannelCloseSearchButton)
+// Module 12756 (ForumChannelCloseSearchButton)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 7515 */;
+import closure_5 from "initialize" /* 7553 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo((channelId) => {
 const memoResult1 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(12702);
+  let obj = channelId(12757);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = callback();
   const items = [closure_5];
@@ -97,7 +97,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
           const obj3 = closure_1_1(closure_1_2[10]);
         }
       };
-      obj[1] = jsx(tmp2(7337).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
+      obj[1] = jsx(tmp2(7375).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
       tmp6Result = tmp6(View, obj);
       const tmp7 = View;
     }

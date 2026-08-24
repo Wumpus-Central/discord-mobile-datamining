@@ -1,6 +1,6 @@
-// === Module 13276: RewardProgram ===
+// === Module 13334: RewardProgram ===
 
-// Module 13276 (RewardProgram)
+// Module 13334 (RewardProgram)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/RewardProgram.tsx");

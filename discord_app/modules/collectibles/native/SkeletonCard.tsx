@@ -1,11 +1,11 @@
-// === Module 14434: sharedValue ===
+// === Module 14502: sharedValue ===
 
-// Module 14434 (sharedValue)
+// Module 14502 (sharedValue)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
+import _modDef4119 from "module_4119" /* 4119 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((width, height) => {
@@ -20,22 +20,22 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/S
 export default function _default(width) {
   let COLLECTIBLES_SHOP_CARD_WIDTH = width.width;
   if (COLLECTIBLES_SHOP_CARD_WIDTH === undefined) {
-    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(9172).COLLECTIBLES_SHOP_CARD_WIDTH;
+    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(9209).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   let COLLECTIBLES_SHOP_CARD_HEIGHT = width.height;
   sharedValue = undefined;
   if (COLLECTIBLES_SHOP_CARD_HEIGHT == null) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(9172).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(9209).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
   const tmp3 = closure_5;
   const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
-  sharedValue = sharedValue(4115).useSharedValue(0.3);
+  sharedValue = sharedValue(4119).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     const obj = sharedValue(closure_1_2[5]);
     const result = sharedValue.set(obj.withRepeat(sharedValue(closure_1_2[6]).withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(4115);
+  let obj = sharedValue(4119);
   class C {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -45,7 +45,7 @@ export default function _default(width) {
   C.__closure = { opacity: sharedValue };
   C.__workletHash = 5620456625640;
   C.__initData = closure_6;
-  const animatedStyle = sharedValue(4115).useAnimatedStyle(C);
+  const animatedStyle = sharedValue(4119).useAnimatedStyle(C);
   const style = [tmp3Result.skeletonCard, width.style, animatedStyle];
-  return jsx(_modDef4115.View, { style });
+  return jsx(_modDef4119.View, { style });
 };

@@ -1,10 +1,10 @@
-// === Module 15428: useIsCurrentUserEligibleForPowerupUpsells ===
+// === Module 15492: useIsCurrentUserEligibleForPowerupUpsells ===
 
-// Module 15428 (useIsCurrentUserEligibleForPowerupUpsells)
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "insertUnsortedGuilds" /* 5078 */;
+// Module 15492 (useIsCurrentUserEligibleForPowerupUpsells)
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "insertUnsortedGuilds" /* 5083 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_5 from "handleGuildBoostsUpdate" /* 4271 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;

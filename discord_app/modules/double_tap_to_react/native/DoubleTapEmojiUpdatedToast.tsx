@@ -1,15 +1,15 @@
-// === Module 9311: ToastEmoji ===
+// === Module 9348: ToastEmoji ===
 
-// Module 9311 (ToastEmoji)
+// Module 9348 (ToastEmoji)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import Text from "Text" /* 4734 */;
+import dispatcherDefault from "dispatcher" /* 4097 */;
+import Text from "Text" /* 4739 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -85,7 +85,7 @@ const result = set.fileFinishedImporting("modules/double_tap_to_react/native/Dou
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
-  let obj = emoji(4721);
+  let obj = emoji(4727);
   if (obj.getIsScreenReaderEnabled()) {
     const AccessibilityAnnouncer = tmp(1351).AccessibilityAnnouncer;
     const intl = tmp(1236).intl;

@@ -1,6 +1,6 @@
-// === Module 1984: GuildRoleRecordTypeTag ===
+// === Module 1985: GuildRoleRecordTypeTag ===
 
-// Module 1984 (GuildRoleRecordTypeTag)
+// Module 1985 (GuildRoleRecordTypeTag)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import fromString from "fromString" /* 506 */;

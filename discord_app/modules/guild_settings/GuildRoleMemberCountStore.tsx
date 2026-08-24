@@ -1,6 +1,6 @@
-// === Module 6928: getRoleMemberCount ===
+// === Module 6966: getRoleMemberCount ===
 
-// Module 6928 (getRoleMemberCount)
+// Module 6966 (getRoleMemberCount)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

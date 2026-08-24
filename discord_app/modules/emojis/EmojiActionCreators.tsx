@@ -1,6 +1,6 @@
-// === Module 9299: toggleGuildExpandedState ===
+// === Module 9336: toggleGuildExpandedState ===
 
-// Module 9299 (toggleGuildExpandedState)
+// Module 9336 (toggleGuildExpandedState)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,9 +1,9 @@
-// === Module 16588: computeLivingRoomWorldPoints ===
+// === Module 16684: computeLivingRoomWorldPoints ===
 
-// Module 16588 (computeLivingRoomWorldPoints)
+// Module 16684 (computeLivingRoomWorldPoints)
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "resolveCreatingNotes" /* 9864 */;
-import items from "items" /* 9867 */;
+import closure_4 from "resolveCreatingNotes" /* 9903 */;
+import items from "items" /* 9906 */;
 
 const require = arg1;
 function computeLivingRoomWorldPoints(channelId) {
@@ -56,7 +56,7 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   let obj = channelId(589);
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  let interactionsEnabled = stateFromStores(9882).useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
+  let interactionsEnabled = stateFromStores(9921).useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
   if (interactionsEnabled) {
     interactionsEnabled = null != guildId;
   }
@@ -66,7 +66,7 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   }
   dependencyMap = tmp5;
   obj = { available: interactionsEnabled, worldPoints: null };
-  const obj2 = stateFromStores(9882);
+  const obj2 = stateFromStores(9921);
   const tmp = channelId;
   const items1 = [closure_4];
   const items2 = [tmp5, channelId, stateFromStores];

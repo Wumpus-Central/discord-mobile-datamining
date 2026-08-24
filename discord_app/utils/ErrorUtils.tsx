@@ -1,8 +1,8 @@
-// === Module 7731: getUnderlyingIOSExceptionRecursively ===
+// === Module 7769: getUnderlyingIOSExceptionRecursively ===
 
-// Module 7731 (getUnderlyingIOSExceptionRecursively)
+// Module 7769 (getUnderlyingIOSExceptionRecursively)
 import set from "set" /* 2 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 7732 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 7770 */;
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
@@ -15,9 +15,9 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
 }
 const result = set.fileFinishedImporting("utils/ErrorUtils.tsx");
 
-export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
+export const getUnderlyingIOSError = function getUnderlyingIOSError(closure_8) {
   try {
-    let tmp3 = getUnderlyingIOSExceptionRecursively(c11);
+    let tmp3 = getUnderlyingIOSExceptionRecursively(closure_8);
     if (tmp3 == null) {
       tmp3 = null;
     }

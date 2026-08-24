@@ -1,9 +1,9 @@
-// === Module 9537: zustandStore ===
+// === Module 9574: zustandStore ===
 
-// Module 9537 (zustandStore)
+// Module 9574 (zustandStore)
 import set from "set" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4245 */;
 
 let closure_0 = MAX_FAVORITES.ProfileCustomizationSubsection;
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ subsection: constants.USER_PROFILE, scrollPosition: null }));

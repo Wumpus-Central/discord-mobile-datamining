@@ -1,6 +1,6 @@
-// === Module 4020: createFavoritesGuildChannelRecord ===
+// === Module 4023: createFavoritesGuildChannelRecord ===
 
-// Module 4020 (createFavoritesGuildChannelRecord)
+// Module 4023 (createFavoritesGuildChannelRecord)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

@@ -1,23 +1,23 @@
-// === Module 10806: getCommandOptionComponents ===
+// === Module 10845: getCommandOptionComponents ===
 
-// Module 10806 (getCommandOptionComponents)
+// Module 10845 (getCommandOptionComponents)
 import ThemesDefault from "Themes" /* 712 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_8 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
-import closure_11 from "markAllUserIdListsStale" /* 4030 */;
+import closure_10 from "reinjectEphemerals" /* 4999 */;
+import closure_11 from "markAllUserIdListsStale" /* 4033 */;
 import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import closure_13 from "getIndexKey" /* 8448 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5246 */;
+import closure_13 from "getIndexKey" /* 8487 */;
+import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5251 */;
 import ME from "ME" /* 676 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import regExp from "regExp" /* 6810 */;
+import regExp from "regExp" /* 6847 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function getCommandOptionComponents(option) {
@@ -82,11 +82,11 @@ function getCommandOptionComponents(option) {
           if (null != channel) {
             let obj = { style: null, children: null };
             obj[0] = styles.commandOptionMentionText;
-            const items1 = [closure_18, tmp6(4984).computeChannelName(channel, authStore, closure_11)];
+            const items1 = [closure_18, tmp6(4989).computeChannelName(channel, authStore, closure_11)];
             obj[1] = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = callback2(tmp6(1297).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4984);
+            const tmp6Result = tmp6(4989);
           }
           const str3 = iter.value;
         } else {
@@ -238,8 +238,8 @@ function getCommandCopyText(item10118, arg1, id, name_localized) {
           const channel = store.getChannel(item10118.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_18 + tmp5(4984).computeChannelName(channel, authStore, closure_11);
-            const tmp5Result = tmp5(4984);
+            sum = closure_18 + tmp5(4989).computeChannelName(channel, authStore, closure_11);
+            const tmp5Result = tmp5(4989);
           }
           const str4 = item10118.value;
         } else if (tmp5(1954).ApplicationCommandOptionType.ROLE === type) {
@@ -667,7 +667,7 @@ export default function ExecutedCommandPopout(channelId) {
       const obj = stateFromStores(closure_1_3[38]);
     }
   }, items1);
-  obj = { value: messageId(7139)(messageId(7159).EXECUTED_COMMAND).analyticsLocations, children: null };
+  obj = { value: messageId(7177)(messageId(7197).EXECUTED_COMMAND).analyticsLocations, children: null };
   obj = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -710,6 +710,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj4);
   }
   obj[2] = tmp9Result;
-  obj[1] = closure_21(channelId(6950).BottomSheet, obj);
-  return closure_21(channelId(7139).AnalyticsLocationProvider, obj);
+  obj[1] = closure_21(channelId(6988).BottomSheet, obj);
+  return closure_21(channelId(7177).AnalyticsLocationProvider, obj);
 };

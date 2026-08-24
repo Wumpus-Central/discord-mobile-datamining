@@ -1,11 +1,11 @@
-// === Module 14261: getGiftRowDisplayInfo ===
+// === Module 14329: getGiftRowDisplayInfo ===
 
-// Module 14261 (getGiftRowDisplayInfo)
+// Module 14329 (getGiftRowDisplayInfo)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import _mod3618 from "module_3618" /* 3618 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import _mod3621 from "module_3621" /* 3621 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
 
 const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 
@@ -14,7 +14,7 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
   const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(_mod3618.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod3621.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -42,14 +42,14 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       obj = { date: null };
       const _Intl2 = Intl;
       const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1236).intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = tmp8(3618);
+      let tmp8Result = tmp8(3621);
       obj[0] = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       obj1 = { date: null };
       const _Intl = Intl;
       const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1236).intl.currentLocale, { month: "short", day: "numeric" });
-      tmp8Result = tmp8(3618);
+      tmp8Result = tmp8(3621);
       obj1[0] = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

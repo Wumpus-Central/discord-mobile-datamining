@@ -1,6 +1,6 @@
-// === Module 7459: getQuestLogger ===
+// === Module 7497: getQuestLogger ===
 
-// Module 7459 (getQuestLogger)
+// Module 7497 (getQuestLogger)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "refreshSourceMapCookie" /* 706 */;
 import { NOOP } from "sum" /* 505 */;

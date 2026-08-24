@@ -1,10 +1,10 @@
-// === Module 5888: HdAudioSpotIllustration ===
+// === Module 5919: HdAudioSpotIllustration ===
 
-// Module 5888 (HdAudioSpotIllustration)
+// Module 5919 (HdAudioSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5889 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5920 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HdAudioSpotIllustration.native.tsx");

@@ -1,13 +1,13 @@
-// === Module 5404: getCommittedVersions ===
+// === Module 5409: getCommittedVersions ===
 
-// Module 5404 (getCommittedVersions)
+// Module 5409 (getCommittedVersions)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import setDefault from "set" /* 687 */;
 import itemsDefault from "items" /* 1955 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "handleConnectionOpen" /* 4197 */;
-import isCacheEnabled from "isCacheEnabled" /* 5395 */;
+import importDefaultResult from "handleConnectionOpen" /* 4201 */;
+import isCacheEnabled from "isCacheEnabled" /* 5400 */;
 
 let obj = arg1;
 let c4 = importDefaultResult;
@@ -70,7 +70,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

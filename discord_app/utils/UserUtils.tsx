@@ -1,9 +1,9 @@
-// === Module 4219: nameFromUser ===
+// === Module 4223: nameFromUser ===
 
-// Module 4219 (nameFromUser)
+// Module 4223 (nameFromUser)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "initialize" /* 4220 */;
+import closure_2 from "initialize" /* 4224 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

@@ -1,10 +1,10 @@
-// === Module 4031: hasFlag ===
+// === Module 4034: hasFlag ===
 
-// Module 4031 (hasFlag)
+// Module 4034 (hasFlag)
 import hasFlag from "hasFlag" /* 1403 */;
 import toJSDefault from "toJS" /* 1931 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5031 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8807 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

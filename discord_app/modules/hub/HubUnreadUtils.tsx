@@ -1,8 +1,8 @@
-// === Module 15474: useHubUnreadCount ===
+// === Module 15538: useHubUnreadCount ===
 
-// Module 15474 (useHubUnreadCount)
-import closure_3 from "isFetching" /* 11479 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+// Module 15538 (useHubUnreadCount)
+import closure_3 from "isFetching" /* 11528 */;
+import closure_4 from "generateOldThreadCutoff" /* 4777 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");

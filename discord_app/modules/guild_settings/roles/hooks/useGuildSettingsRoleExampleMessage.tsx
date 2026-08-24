@@ -1,6 +1,6 @@
-// === Module 16850: useGuildSettingsRoleExampleMessage ===
+// === Module 16943: useGuildSettingsRoleExampleMessage ===
 
-// Module 16850 (useGuildSettingsRoleExampleMessage)
+// Module 16943 (useGuildSettingsRoleExampleMessage)
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createdAt" /* 1930 */;
 import { MessageStates } from "ME" /* 676 */;

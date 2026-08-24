@@ -1,17 +1,17 @@
-// === Module 11255: PortalKeyboardBottomSheetHeader ===
+// === Module 11306: PortalKeyboardBottomSheetHeader ===
 
-// Module 11255 (PortalKeyboardBottomSheetHeader)
+// Module 11306 (PortalKeyboardBottomSheetHeader)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
-import TwinButtons from "TwinButtons" /* 8811 */;
+import _modDef4119 from "module_4119" /* 4119 */;
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4727 */;
+import TwinButtons from "TwinButtons" /* 8848 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 10046 */;
+import closure_6 from "initialize" /* 10085 */;
 import jsxProd from "jsxProd" /* 21 */;
 import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PortalKeyboardBottomSheetHeader(arg0) {
@@ -34,7 +34,7 @@ function PortalKeyboardBackground(arg0) {
   style[0] = style;
   style[1] = callback2().background;
   style[2] = roundingStyle;
-  return callback(_modDef4115.View, { pointerEvents, style });
+  return callback(_modDef4119.View, { pointerEvents, style });
 }
 let c4 = importAllResult;
 ({ Platform, View: c5 } = get_ActivityIndicator);
@@ -359,7 +359,7 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   }
   items6[1] = tmp37;
   items6[2] = roundingViewStyle;
-  obj5.children = forceMaxHeight(animatedIndex(flag[27]).AccessibilityViewAnimated, {
+  obj5.children = forceMaxHeight(animatedIndex(flag[26]).AccessibilityViewAnimated, {
     nativeID: "portal-keyboard-sheet",
     style: items6,
     onAccessibilityEscape() {
@@ -379,11 +379,11 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   if (tmp31Result) {
     const obj7 = { animatedSheetIndex: null };
     obj7[0] = animatedIndex;
-    tmp31Result = tmp31(tmp6(tmp4[28]), obj7);
+    tmp31Result = tmp31(tmp6(tmp4[27]), obj7);
   }
   items7[1] = tmp31Result;
-  items7[2] = forceMaxHeight(animatedIndex(flag[29]).NavScrim, {});
+  items7[2] = forceMaxHeight(animatedIndex(flag[28]).NavScrim, {});
   obj3[3] = items7;
   obj2[1] = tmp33(chatInputRef(flag[10]).View, obj3);
-  return forceMaxHeight(animatedIndex(flag[26]).ThemeContextProvider, obj2);
+  return forceMaxHeight(animatedIndex(flag[13]).ThemeContextProvider, obj2);
 });

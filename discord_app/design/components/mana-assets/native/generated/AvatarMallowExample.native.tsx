@@ -1,10 +1,10 @@
-// === Module 5522: AvatarMallowExample ===
+// === Module 5527: AvatarMallowExample ===
 
-// Module 5522 (AvatarMallowExample)
+// Module 5527 (AvatarMallowExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5523 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5528 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMallowExample.native.tsx");

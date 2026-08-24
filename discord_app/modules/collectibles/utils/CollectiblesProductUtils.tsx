@@ -1,9 +1,9 @@
-// === Module 5312: getProductOrbPrice ===
+// === Module 5317: getProductOrbPrice ===
 
-// Module 5312 (getProductOrbPrice)
+// Module 5317 (getProductOrbPrice)
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import { isProfileEffectRecord } from "fromServer" /* 5307 */;
+import { isProfileEffectRecord } from "fromServer" /* 5312 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

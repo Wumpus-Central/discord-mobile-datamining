@@ -1,10 +1,10 @@
-// === Module 5934: MapleIllocon ===
+// === Module 5965: MapleIllocon ===
 
-// Module 5934 (MapleIllocon)
+// Module 5965 (MapleIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5935 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5966 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MapleIllocon.native.tsx");

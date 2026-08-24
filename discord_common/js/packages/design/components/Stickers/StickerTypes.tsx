@@ -1,6 +1,6 @@
-// === Module 4965: MetaStickerType ===
+// === Module 4970: MetaStickerType ===
 
-// Module 4965 (MetaStickerType)
+// Module 4970 (MetaStickerType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx");

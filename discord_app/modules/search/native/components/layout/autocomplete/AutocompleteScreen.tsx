@@ -1,14 +1,14 @@
-// === Module 15945: ? ===
+// === Module 16042: ? ===
 
-// Module 15945
+// Module 16042
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "markAllUserIdListsStale" /* 4033 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "handleUserSearchResults" /* 11513 */;
-import closure_9 from "prototype" /* 11510 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import closure_8 from "handleUserSearchResults" /* 11562 */;
+import closure_9 from "prototype" /* 11559 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8546 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,12 +1,12 @@
-// === Module 11945: ? ===
+// === Module 11994: ? ===
 
-// Module 11945
+// Module 11994
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
+import Text from "Text" /* 4739 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -26,9 +26,9 @@ const memoResult = importAllResult.memo((topViewHeight) => {
   items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   let obj2 = AccessibilityAnnouncer;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(11946);
+    let tmp4Result = tmp4(11995);
   } else {
-    tmp4Result = tmp4(11947);
+    tmp4Result = tmp4(11996);
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [closure_5(closure_4, obj), , ];

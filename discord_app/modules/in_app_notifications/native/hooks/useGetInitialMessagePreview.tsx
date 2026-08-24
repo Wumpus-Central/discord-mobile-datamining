@@ -1,9 +1,9 @@
-// === Module 10079: useGetInitialMessagePreview ===
+// === Module 10118: useGetInitialMessagePreview ===
 
-// Module 10079 (useGetInitialMessagePreview)
+// Module 10118 (useGetInitialMessagePreview)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "hasFlag" /* 4031 */;
-import { MessageSnapshotRecord } from "hasFlag" /* 4031 */;
+import closure_3 from "hasFlag" /* 4034 */;
+import { MessageSnapshotRecord } from "hasFlag" /* 4034 */;
 
 const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 

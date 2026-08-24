@@ -1,10 +1,10 @@
-// === Module 7637: create ===
+// === Module 7675: create ===
 
-// Module 7637 (create)
+// Module 7675 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7633 */;
-import create2 from "create" /* 7634 */;
-import create3 from "create" /* 7635 */;
+import create from "create" /* 7671 */;
+import create2 from "create" /* 7672 */;
+import create3 from "create" /* 7673 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -22,7 +22,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(7635).CTAButton;
+            return callback(7673).CTAButton;
           }
     };
     items[5] = {
@@ -30,7 +30,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7634).HelpArticle;
+            return callback(7672).HelpArticle;
           }
     };
     items[6] = {
@@ -38,7 +38,7 @@ class MarketingPageBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(7633).LocalizedString;
+            return callback(7671).LocalizedString;
           }
     };
     obj = { no: 8, name: "body_localized", kind: "message", T: null };
@@ -230,7 +230,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(7635).CTAButton;
+      return callback(7673).CTAButton;
     }
   },
   {
@@ -238,7 +238,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7634).HelpArticle;
+      return callback(7672).HelpArticle;
     }
   },
   {
@@ -246,7 +246,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(7633).LocalizedString;
+      return callback(7671).LocalizedString;
     }
   },
 ,

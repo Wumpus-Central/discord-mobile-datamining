@@ -1,24 +1,24 @@
-// === Module 9654: trackDeviceChanged ===
+// === Module 9693: trackDeviceChanged ===
 
-// Module 9654 (trackDeviceChanged)
+// Module 9693 (trackDeviceChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import debounceDefault from "debounce" /* 636 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9656 */;
-import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9658 */;
-import _getFilterBlob from "_getFilterBlob" /* 9659 */;
-import isPremiumResolution from "isPremiumResolution" /* 9667 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9695 */;
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9697 */;
+import _getFilterBlob from "_getFilterBlob" /* 9698 */;
+import isPremiumResolution from "isPremiumResolution" /* 9706 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4538 */;
+import closure_4 from "initialize" /* 4543 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_7 from "createRTCConnection" /* 4544 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9694 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4534 */;
 
 require = arg1;
 function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {
@@ -619,7 +619,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -639,7 +639,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9658)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9697)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -656,7 +656,7 @@ obj = {
             obj3[1] = closure_0;
             obj.dispatch(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -706,7 +706,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -726,7 +726,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9658)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9697)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -743,7 +743,7 @@ obj = {
             obj3[1] = closure_0;
             obj.dispatch(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

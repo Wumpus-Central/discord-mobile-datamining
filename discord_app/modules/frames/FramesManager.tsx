@@ -1,11 +1,11 @@
-// === Module 8767: leaveFrame ===
+// === Module 8804: leaveFrame ===
 
-// Module 8767 (leaveFrame)
+// Module 8804 (leaveFrame)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "map" /* 8708 */;
+import initializeDefault from "initialize" /* 5043 */;
+import closure_3 from "map" /* 8745 */;
 import ME from "ME" /* 676 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4281 */;
 
 let require = arg1;
 ({ AnalyticEvents: c4, RPCCloseCodes: c5 } = ME);
@@ -19,13 +19,13 @@ class FramesManager extends tmp3 {
             applyArgumentsResult.handleRPCDisconnect(arg0);
           },
       FRAME_LAUNCH(applicationId) {
-            const result = applyArgumentsResult(8716).trackFrameSessionStart(applicationId.applicationId);
+            const result = applyArgumentsResult(8753).trackFrameSessionStart(applicationId.applicationId);
           },
       FRAME_LAUNCH_FAIL(applicationId) {
-            const result = applyArgumentsResult(8723).discardPendingFrameLaunch(applicationId.applicationId);
+            const result = applyArgumentsResult(8760).discardPendingFrameLaunch(applicationId.applicationId);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(8716).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(8753).trackFrameSessionEnd(applicationId.applicationId);
           }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
@@ -51,8 +51,8 @@ class FramesManager extends tmp3 {
     return applyArgumentsResult;
   }
 }
-FramesManager.prototype["leaveFrame"] = function leaveFrame(closure_0) {
-  frame = frame.getFrame(closure_0);
+FramesManager.prototype["leaveFrame"] = function leaveFrame(frameId) {
+  frame = frame.getFrame(frameId);
   if (null != frame) {
     let obj = dispatcherDefault;
     obj = { type: "FRAME_STOP", applicationId: null, frameId: null };

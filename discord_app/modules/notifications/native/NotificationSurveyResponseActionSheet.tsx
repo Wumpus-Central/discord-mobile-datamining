@@ -1,19 +1,19 @@
-// === Module 10834: onClose ===
+// === Module 10873: onClose ===
 
-// Module 10834 (onClose)
+// Module 10873 (onClose)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import Text from "Text" /* 4734 */;
-import Background from "Background" /* 6950 */;
-import registerAssetDefault from "registerAsset" /* 10835 */;
+import combinedDefault from "combined" /* 1994 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+import Text from "Text" /* 4739 */;
+import Background from "Background" /* 6988 */;
+import registerAssetDefault from "registerAsset" /* 10874 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "createTextStyle" /* 6819 */;
 
 require = arg1;
 function onClose() {
@@ -45,8 +45,8 @@ export default function NotificationSurveyResponseActionSheet(header) {
     obj[0] = header;
     obj = { onPress: null };
     obj[0] = onClose;
-    obj[1] = callback(tmp3(7176).ActionSheetCloseButton, obj);
-    tmp5 = callback(tmp3(6949).BottomSheetTitleHeader, obj);
+    obj[1] = callback(tmp3(7214).ActionSheetCloseButton, obj);
+    tmp5 = callback(tmp3(6987).BottomSheetTitleHeader, obj);
   }
   obj = { children: null };
   const items = [tmp5, ];

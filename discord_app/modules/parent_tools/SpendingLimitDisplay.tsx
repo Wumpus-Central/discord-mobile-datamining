@@ -1,12 +1,12 @@
-// === Module 14266: getSpendingLimitDisplayState ===
+// === Module 14334: getSpendingLimitDisplayState ===
 
-// Module 14266 (getSpendingLimitDisplayState)
+// Module 14334 (getSpendingLimitDisplayState)
 import initialize from "initialize" /* 589 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import spendingLimitEqual from "spendingLimitEqual" /* 14184 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
+import spendingLimitEqual from "spendingLimitEqual" /* 14252 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
+import closure_4 from "freshTeenActivityWithMap" /* 5301 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -24,7 +24,7 @@ function getSpendingLimitDisplayState(amount) {
       obj[1] = formatRateResult;
       return obj;
     } else {
-      let num = tmp5(5317).CurrencyExponents[amount.currency];
+      let num = tmp5(5322).CurrencyExponents[amount.currency];
       if (num == null) {
         num = 2;
       }
@@ -34,9 +34,9 @@ function getSpendingLimitDisplayState(amount) {
         obj[1] = formatRateResult;
         const intl = tmp5(1236).intl;
         obj1 = { amount: null };
-        obj1[0] = tmp5(5316).formatPrice(diff, currency);
+        obj1[0] = tmp5(5321).formatPrice(diff, currency);
         obj[2] = intl.formatToPlainString(messagesProxyDefault["+Q+bU1"], obj1);
-        const tmp5Result = tmp5(5316);
+        const tmp5Result = tmp5(5321);
       } else {
         obj = { kind: "on", monthlyText: null };
         obj[1] = formatRateResult;

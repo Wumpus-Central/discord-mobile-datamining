@@ -1,6 +1,6 @@
-// === Module 4043: createFromServer ===
+// === Module 4046: createFromServer ===
 
-// Module 4043 (createFromServer)
+// Module 4046 (createFromServer)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import toJSDefault from "toJS" /* 1931 */;

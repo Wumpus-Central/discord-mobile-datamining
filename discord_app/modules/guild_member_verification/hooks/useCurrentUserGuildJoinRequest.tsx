@@ -1,7 +1,7 @@
-// === Module 8539: useCurrentUserGuildJoinRequest ===
+// === Module 8578: useCurrentUserGuildJoinRequest ===
 
-// Module 8539 (useCurrentUserGuildJoinRequest)
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+// Module 8578 (useCurrentUserGuildJoinRequest)
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4202 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");

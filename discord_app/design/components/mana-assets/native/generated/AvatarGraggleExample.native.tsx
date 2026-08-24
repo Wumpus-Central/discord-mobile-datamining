@@ -1,10 +1,10 @@
-// === Module 5516: AvatarGraggleExample ===
+// === Module 5521: AvatarGraggleExample ===
 
-// Module 5516 (AvatarGraggleExample)
+// Module 5521 (AvatarGraggleExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5517 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5522 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarGraggleExample.native.tsx");

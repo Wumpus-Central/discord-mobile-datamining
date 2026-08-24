@@ -1,14 +1,14 @@
-// === Module 4542: updateVoiceState ===
+// === Module 4547: updateVoiceState ===
 
-// Module 4542 (updateVoiceState)
+// Module 4547 (updateVoiceState)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "isVoiceMuted" /* 4543 */;
+import closure_6 from "isVoiceMuted" /* 4548 */;
 import { ME } from "ME" /* 676 */;
-import { VoicePlatforms } from "ParticipantTypes" /* 4544 */;
+import { VoicePlatforms } from "ParticipantTypes" /* 4549 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -290,8 +290,8 @@ prototype["getCurrentClientVoiceChannelId"] = function getCurrentClientVoiceChan
   }
   return channelId;
 };
-prototype["getUsersWithVideo"] = function getUsersWithVideo(arg0) {
-  let value = map.get(arg0);
+prototype["getUsersWithVideo"] = function getUsersWithVideo(closure_0) {
+  let value = map.get(closure_0);
   if (value == null) {
     value = set;
   }

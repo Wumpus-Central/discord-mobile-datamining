@@ -1,8 +1,8 @@
-// === Module 12837: _showMarketingMomentRewardScreen ===
+// === Module 12892: _showMarketingMomentRewardScreen ===
 
-// Module 12837 (_showMarketingMomentRewardScreen)
+// Module 12892 (_showMarketingMomentRewardScreen)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5306 */;
 
 const require = arg1;
 function _showMarketingMomentRewardScreen() {
@@ -23,7 +23,7 @@ function _showMarketingMomentRewardScreen() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -65,7 +65,7 @@ function _showMarketingMomentRewardScreen() {
               obj.open(obj3);
             }
             product = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp21) {
           product = tmp;

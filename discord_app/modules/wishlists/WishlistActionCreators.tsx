@@ -1,17 +1,17 @@
-// === Module 9192: extraWishlistParams ===
+// === Module 9229: extraWishlistParams ===
 
-// Module 9192 (extraWishlistParams)
+// Module 9229 (extraWishlistParams)
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import useSKUPrice from "useSKUPrice" /* 7205 */;
+import useSKUPrice from "useSKUPrice" /* 7243 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
+import closure_4 from "createUserWidgetFromServer" /* 5370 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "handlePaymentSourceCreateEnd" /* 4041 */;
-import closure_7 from "fromServer" /* 7201 */;
-import closure_8 from "fromServer" /* 9187 */;
-import { getWishlistSkuIds } from "fromServer" /* 9187 */;
+import closure_6 from "handlePaymentSourceCreateEnd" /* 4044 */;
+import closure_7 from "fromServer" /* 7239 */;
+import closure_8 from "fromServer" /* 9224 */;
+import { getWishlistSkuIds } from "fromServer" /* 9224 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -129,7 +129,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -278,7 +278,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -395,7 +395,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

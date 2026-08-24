@@ -1,6 +1,6 @@
-// === Module 8753: prototype ===
+// === Module 8790: prototype ===
 
-// Module 8753 (prototype)
+// Module 8790 (prototype)
 import set from "set" /* 2 */;
 
 const prototype = function RPCError(arg0, message) {

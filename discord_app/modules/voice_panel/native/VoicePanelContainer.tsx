@@ -1,12 +1,12 @@
-// === Module 16270: VoicePanel ===
+// === Module 16364: VoicePanel ===
 
-// Module 16270 (VoicePanel)
-import isIterable from "isIterable" /* 4006 */;
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 16271 */;
+// Module 16364 (VoicePanel)
+import isIterable from "isIterable" /* 4009 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 16365 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "withEqualityFn" /* 8664 */;
+import closure_5 from "withEqualityFn" /* 8701 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -37,7 +37,7 @@ function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function VoicePanelContainer() {
   const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
-  return jsx(wrapChildrenDefault.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  return jsx(ManaContext.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 

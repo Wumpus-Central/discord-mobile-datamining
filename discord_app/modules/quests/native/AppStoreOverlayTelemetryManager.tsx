@@ -1,10 +1,10 @@
-// === Module 10690: handleAppStateUpdate ===
+// === Module 10729: handleAppStateUpdate ===
 
-// Module 10690 (handleAppStateUpdate)
+// Module 10729 (handleAppStateUpdate)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import ME from "ME" /* 676 */;
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "initialize" /* 5043 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c3 = null;

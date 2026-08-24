@@ -1,12 +1,12 @@
-// === Module 15994: SuggestedFriendsScreen ===
+// === Module 16091: SuggestedFriendsScreen ===
 
-// Module 15994 (SuggestedFriendsScreen)
+// Module 16091 (SuggestedFriendsScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);

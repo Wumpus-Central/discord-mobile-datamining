@@ -1,10 +1,10 @@
-// === Module 6316: ArrowLargeLeftIcon ===
+// === Module 6347: ArrowLargeLeftIcon ===
 
-// Module 6316 (ArrowLargeLeftIcon)
+// Module 6347 (ArrowLargeLeftIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 6317 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6348 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

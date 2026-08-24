@@ -1,9 +1,9 @@
-// === Module 11169: _scheduleMessage ===
+// === Module 11221: _scheduleMessage ===
 
-// Module 11169 (_scheduleMessage)
-import tDefault from "t" /* 3975 */;
+// Module 11221 (_scheduleMessage)
+import tDefault from "t" /* 3978 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11170 */;
+import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11222 */;
 
 const require = arg1;
 function _scheduleMessage() {
@@ -25,7 +25,7 @@ function _scheduleMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -229,5 +229,5 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   };
   items1[tmp4] = obj4;
   obj2[3] = items1;
-  const result3 = _require(7172).showSimpleActionSheet(obj2);
+  const result3 = _require(7210).showSimpleActionSheet(obj2);
 };

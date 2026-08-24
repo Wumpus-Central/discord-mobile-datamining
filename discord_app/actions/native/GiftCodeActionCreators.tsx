@@ -1,8 +1,8 @@
-// === Module 10644: redeemGiftCode ===
+// === Module 10683: redeemGiftCode ===
 
-// Module 10644 (redeemGiftCode)
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+// Module 10683 (redeemGiftCode)
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import _modDef5265 from "module_5265" /* 5265 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
@@ -36,7 +36,7 @@ function _redeemGiftCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,9 +83,9 @@ function _redeemGiftCode() {
               return obj1;
             } else {
               if (obj18.getIsPaymentsBlocked()) {
-                options(7729)();
+                options(7767)();
                 paymentSource = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } else {
                 channelId = options.channelId;
                 let tmp41 = null;
@@ -121,12 +121,12 @@ function _redeemGiftCode() {
                 obj5[0] = HTTP.post(obj3);
                 return obj5;
               }
-              obj18 = callback(7388);
+              obj18 = callback(7426);
             }
           } else if (2 === tmp7) {
             channelId = 0;
             closure_10 = c3;
-            billingError = new callback(4273).BillingError(closure_10);
+            billingError = new callback(4277).BillingError(closure_10);
             obj3 = options(709);
             obj6 = { type: "GIFT_CODE_REDEEM_FAILURE", code: null, error: null };
             obj6[1] = callback;
@@ -190,9 +190,9 @@ function _redeemGiftCode() {
   return applyArgumentsResult;
 }
 function openGiftCodeRedeemModal(code) {
-  let obj = _modDef5260;
+  let obj = _modDef5265;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl(10645, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
+  obj.pushLazy(asyncRequireImpl(10684, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});

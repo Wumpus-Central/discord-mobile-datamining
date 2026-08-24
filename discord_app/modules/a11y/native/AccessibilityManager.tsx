@@ -1,15 +1,15 @@
-// === Module 13810: ? ===
+// === Module 13868: ? ===
 
-// Module 13810
+// Module 13868
 import dispatcherDefault from "dispatcher" /* 709 */;
-import setSystemTheme from "setSystemTheme" /* 4222 */;
-import uDefault from "u" /* 10561 */;
-import AccessibilityFeatureFlagsDefault from "AccessibilityFeatureFlags" /* 13811 */;
-import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 13812 */;
-import updateSaturation from "updateSaturation" /* 13814 */;
+import setSystemTheme from "setSystemTheme" /* 4226 */;
+import uDefault from "u" /* 10600 */;
+import AccessibilityFeatureFlagsDefault from "AccessibilityFeatureFlags" /* 13869 */;
+import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 13870 */;
+import updateSaturation from "updateSaturation" /* 13872 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { SystemTheme } from "SystemThemeState" /* 1305 */;
 
@@ -59,7 +59,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ export default {
             closure_0 = arg1;
             const result = closure_0.updateScreenReaderEnabled(closure_0);
             c3 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c3 = tmp;

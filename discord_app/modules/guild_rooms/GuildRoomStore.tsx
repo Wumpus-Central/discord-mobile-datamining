@@ -1,13 +1,13 @@
-// === Module 9864: resolveCreatingNotes ===
+// === Module 9903: resolveCreatingNotes ===
 
-// Module 9864 (resolveCreatingNotes)
+// Module 9903 (resolveCreatingNotes)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 9865 */;
+import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 9904 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_7 from "createRTCConnection" /* 4544 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
 
 require = arg1;
 function resolveCreatingNotes(roomId, objects) {

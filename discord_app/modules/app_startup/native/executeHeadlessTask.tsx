@@ -1,10 +1,10 @@
-// === Module 17144: _executeHeadlessTask ===
+// === Module 17238: _executeHeadlessTask ===
 
-// Module 17144 (_executeHeadlessTask)
+// Module 17238 (_executeHeadlessTask)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import linkFromAppsFlyer from "linkFromAppsFlyer" /* 16441 */;
+import linkFromAppsFlyer from "linkFromAppsFlyer" /* 16536 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
@@ -29,7 +29,7 @@ function _executeHeadlessTask() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

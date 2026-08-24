@@ -1,10 +1,10 @@
-// === Module 10376: useFetchCollectiblesProduct ===
+// === Module 10416: useFetchCollectiblesProduct ===
 
-// Module 10376 (useFetchCollectiblesProduct)
+// Module 10416 (useFetchCollectiblesProduct)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_4 from "addSku" /* 4521 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "addSku" /* 4526 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5306 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
 const require = arg1;

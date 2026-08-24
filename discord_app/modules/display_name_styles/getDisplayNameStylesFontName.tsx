@@ -1,7 +1,7 @@
-// === Module 14033: getDisplayNameStylesFontName ===
+// === Module 14101: getDisplayNameStylesFontName ===
 
-// Module 14033 (getDisplayNameStylesFontName)
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
+// Module 14101 (getDisplayNameStylesFontName)
+import messagesProxyDefault from "messagesProxy" /* 2694 */;
 
 const obj = {};
 obj[require("DisplayNameFont").DisplayNameFont.DEFAULT] = messagesProxyDefault.ZEL6mz;

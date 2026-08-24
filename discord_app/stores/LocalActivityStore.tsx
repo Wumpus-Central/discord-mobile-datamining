@@ -1,22 +1,22 @@
-// === Module 7251: updateActivities ===
+// === Module 7289: updateActivities ===
 
-// Module 7251 (updateActivities)
+// Module 7289 (updateActivities)
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "initialize" /* 4504 */;
-import closure_7 from "updateActivities" /* 7252 */;
-import closure_8 from "upsertAccount" /* 7241 */;
+import closure_5 from "addApplication" /* 4482 */;
+import closure_6 from "initialize" /* 4508 */;
+import closure_7 from "updateActivities" /* 7290 */;
+import closure_8 from "upsertAccount" /* 7279 */;
 import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_10 from "reset" /* 4652 */;
+import closure_10 from "reset" /* 4658 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "gameFromServer" /* 4509 */;
-import closure_13 from "makeTwitchRequest" /* 7255 */;
-import closure_14 from "handleConnectionOpen" /* 1979 */;
-import closure_15 from "handleUpdate" /* 4541 */;
+import closure_12 from "gameFromServer" /* 4514 */;
+import closure_13 from "makeTwitchRequest" /* 7293 */;
+import closure_14 from "handleConnectionOpen" /* 1980 */;
+import closure_15 from "handleUpdate" /* 4546 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -269,7 +269,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp12 = num;
         let tmp13 = callback;
         let tmp14 = dependencyMap;
-        let obj2 = callback(7258);
+        let obj2 = callback(7296);
         let tmp15 = tmp9;
         let obj3 = callback(1403);
         let num2;
@@ -283,7 +283,7 @@ const localActivityStore = new LocalActivityStore(dispatcherDefault, {
         let tmp18 = tmp9;
         let tmp19 = constants2;
         let hasFlagResult = obj3.hasFlag(num2, constants.INSTANCE);
-        let tmp13Result = tmp13(7258);
+        let tmp13Result = tmp13(7296);
         let tmp20 = tmp11;
         let tmp21 = obj2;
         let tmp22 = tmp10;

@@ -1,15 +1,15 @@
-// === Module 8687: usePipVideoOrStream ===
+// === Module 8724: usePipVideoOrStream ===
 
-// Module 8687 (usePipVideoOrStream)
+// Module 8724 (usePipVideoOrStream)
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "updateSpeaker" /* 8688 */;
-import closure_6 from "reset" /* 4652 */;
+import closure_4 from "getParticipants" /* 4778 */;
+import closure_5 from "updateSpeaker" /* 8725 */;
+import closure_6 from "reset" /* 4658 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_10 from "createRTCConnection" /* 4539 */;
-import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_10 from "createRTCConnection" /* 4544 */;
+import ParticipantTypes from "ParticipantTypes" /* 4549 */;
 
 const require = arg1;
 ({ isStreamParticipant: unpackModuleId, isUserParticipant: closure_12, ParticipantTypes: map1 } = ParticipantTypes);

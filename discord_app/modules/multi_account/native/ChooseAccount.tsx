@@ -1,15 +1,15 @@
-// === Module 15216: ChooseAccount ===
+// === Module 15280: ChooseAccount ===
 
-// Module 15216 (ChooseAccount)
+// Module 15280 (ChooseAccount)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11586 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11634 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11635 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -45,7 +45,7 @@ export default function ChooseAccount() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -85,10 +85,10 @@ export default function ChooseAccount() {
                 intl2 = tmp31(1236).intl;
                 string = intl2.string;
                 obj1[4] = string(lib(1236).t["ETE/oC"]);
-                obj1 = closure_1_1(4656).confirm(obj1);
+                obj1 = closure_1_1(4662).confirm(obj1);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = closure_1_1(4656);
+                const obj8 = closure_1_1(4662);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -100,13 +100,13 @@ export default function ChooseAccount() {
               return obj3;
             } else {
               if (arg1) {
-                obj = closure_1_1(4342);
+                obj = closure_1_1(4346);
                 obj.hideActionSheet();
-                obj1 = closure_1_2(11589);
+                obj1 = closure_1_2(11638);
                 obj1.removeAccount(lib.id);
               }
               c4 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp23) {
             c4 = tmp;
@@ -127,7 +127,7 @@ export default function ChooseAccount() {
   let tmp = callback3();
   let obj = _require(1500);
   _require = obj.useNavigation();
-  obj1 = _require(15217);
+  obj1 = _require(15281);
   const multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   obj = { headerText: null, subHeader: null, backgroundImageSource: null, backgroundImageCover: true, contentStyle: null, children: null };
   let intl = _require(1236).intl;
@@ -135,8 +135,8 @@ export default function ChooseAccount() {
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl2 = _require(1236).intl;
   obj[2] = intl2.string(_require(1236).t["0M5fN7"]);
-  obj[1] = callback(_require(4734).Text, obj);
-  obj[2] = multiAccountUsers(13324);
+  obj[1] = callback(_require(4739).Text, obj);
+  obj[2] = multiAccountUsers(13382);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -207,8 +207,8 @@ export default function ChooseAccount() {
 
   ];
   let obj2 = { leading: null, label: null, labelStyle: null, onPress: null };
-  const tmp2 = multiAccountUsers(8609);
-  obj2[0] = callback(_require(8083).FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: _require(1297).Icon.Sizes.SMALL_20, source: multiAccountUsers(15219) });
+  const tmp2 = multiAccountUsers(8646);
+  obj2[0] = callback(_require(8122).FormRow.Icon, { themedColor: multiAccountUsers(712).colors.TEXT_LINK, size: _require(1297).Icon.Sizes.SMALL_20, source: multiAccountUsers(15283) });
   let intl3 = _require(1236).intl;
   obj2[1] = intl3.string(_require(1236).t.bPP34Q);
   obj2[2] = tmp.addAccountLabel;
@@ -229,7 +229,7 @@ export default function ChooseAccount() {
       obj.track(closure_1_9.LOGIN_VIEWED, { source: "choose_account_add_account" });
     }
   };
-  items[1] = callback(_require(8083).FormRow, obj2);
+  items[1] = callback(_require(8122).FormRow, obj2);
   obj1[1] = items;
   obj[5] = callback2(View, obj1);
   return callback(tmp2, obj);

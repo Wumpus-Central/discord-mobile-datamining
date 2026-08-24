@@ -1,20 +1,20 @@
-// === Module 16986: PriceTier ===
+// === Module 17079: PriceTier ===
 
-// Module 16986 (PriceTier)
+// Module 17079 (PriceTier)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import preloadDefault from "preload" /* 5449 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import getBenefitKey from "getBenefitKey" /* 14577 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14584 */;
-import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 16987 */;
+import Text from "Text" /* 4739 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
+import preloadDefault from "preload" /* 5454 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14641 */;
+import getBenefitKey from "getBenefitKey" /* 14645 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14652 */;
+import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 17080 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PriceTier(arg0) {

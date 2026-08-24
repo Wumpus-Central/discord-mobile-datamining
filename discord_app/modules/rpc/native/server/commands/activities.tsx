@@ -1,13 +1,13 @@
-// === Module 13880: RPC_LOCAL_SCOPE ===
+// === Module 13946: RPC_LOCAL_SCOPE ===
 
-// Module 13880 (RPC_LOCAL_SCOPE)
-import prototypeDefault from "prototype" /* 8752 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 8918 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 13849 */;
+// Module 13946 (RPC_LOCAL_SCOPE)
+import prototypeDefault from "prototype" /* 8789 */;
+import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 8955 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 13913 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
 import ME from "ME" /* 676 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4844 */;
 
 require = arg1;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
@@ -56,7 +56,7 @@ obj1[1] = function handler(socket) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

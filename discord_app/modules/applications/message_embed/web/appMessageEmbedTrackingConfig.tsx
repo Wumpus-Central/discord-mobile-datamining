@@ -1,8 +1,8 @@
-// === Module 7447: trackingConfigWithDefaults ===
+// === Module 7485: trackingConfigWithDefaults ===
 
-// Module 7447 (trackingConfigWithDefaults)
+// Module 7485 (trackingConfigWithDefaults)
 import closure_0 from "fetchFingerprint" /* 1218 */;
-import { LinkType } from "LinkType" /* 7442 */;
+import { LinkType } from "LinkType" /* 7480 */;
 
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 

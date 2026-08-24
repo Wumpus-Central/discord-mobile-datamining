@@ -1,10 +1,10 @@
-// === Module 9551: ClydeIcon ===
+// === Module 9588: ClydeIcon ===
 
-// Module 9551 (ClydeIcon)
+// Module 9588 (ClydeIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9552 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 9589 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

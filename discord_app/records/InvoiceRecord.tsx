@@ -1,8 +1,8 @@
-// === Module 4048: createFromServer ===
+// === Module 4051: createFromServer ===
 
-// Module 4048 (createFromServer)
+// Module 4051 (createFromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4049 */;
+import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4052 */;
 
 require = arg1;
 toJSDefault;

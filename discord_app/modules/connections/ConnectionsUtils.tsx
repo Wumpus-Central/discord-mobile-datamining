@@ -1,14 +1,14 @@
-// === Module 5224: officialApplicationIds ===
+// === Module 5229: officialApplicationIds ===
 
-// Module 5224 (officialApplicationIds)
+// Module 5229 (officialApplicationIds)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import ChannelTypesDefault from "ChannelTypes" /* 5226 */;
-import closure_3 from "createGuildRoleRecordFromRust" /* 1983 */;
+import ChannelTypesDefault from "ChannelTypes" /* 5231 */;
+import closure_3 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4024 */;
+import OperatorTypes from "OperatorTypes" /* 5230 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

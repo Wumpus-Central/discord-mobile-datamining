@@ -1,9 +1,9 @@
-// === Module 9888: showRequestFailedAlert ===
+// === Module 9927: showRequestFailedAlert ===
 
-// Module 9888 (showRequestFailedAlert)
+// Module 9927 (showRequestFailedAlert)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import setDefault from "set" /* 4827 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4277 */;
+import setDefault from "set" /* 4832 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
@@ -50,7 +50,7 @@ function _deleteGameRelationship() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ function _removeGameFriend() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -212,7 +212,7 @@ function _removeGameFriend() {
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c4 = tmp;
@@ -250,7 +250,7 @@ function _cancelGameFriendRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -308,7 +308,7 @@ function _cancelGameFriendRequest() {
             return obj;
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp12) {
           c4 = tmp;
@@ -355,7 +355,7 @@ export default {
       const intl = onSuccess(closure_1_2[4]).intl;
       AccessibilityAnnouncer.announce(intl.string(onSuccess(closure_1_2[4]).t.taJiuc));
     }).catch((arg0) => {
-      const aPIError = new onSuccess(4273).APIError(arg0);
+      const aPIError = new onSuccess(4277).APIError(arg0);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1236).intl;
@@ -365,7 +365,7 @@ export default {
         anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
       }
       obj[1] = anyErrorMessage;
-      callback(4827).show(obj);
+      callback(4832).show(obj);
       return Promise.reject(arg0);
     });
   },

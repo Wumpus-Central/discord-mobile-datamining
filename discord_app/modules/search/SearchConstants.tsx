@@ -1,7 +1,7 @@
-// === Module 8507: MessageEmbedTypes ===
+// === Module 8546: MessageEmbedTypes ===
 
-// Module 8507 (MessageEmbedTypes)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
+// Module 8546 (MessageEmbedTypes)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4074 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

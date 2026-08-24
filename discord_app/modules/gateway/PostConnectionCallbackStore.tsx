@@ -1,8 +1,8 @@
-// === Module 4493: processCallbacks ===
+// === Module 4497: processCallbacks ===
 
-// Module 4493 (processCallbacks)
-import closure_0 from "initialize" /* 4494 */;
-import closure_1 from "_handleConnectionOpen" /* 4495 */;
+// Module 4497 (processCallbacks)
+import closure_0 from "initialize" /* 4498 */;
+import closure_1 from "_handleConnectionOpen" /* 4499 */;
 import importDefaultResult from "dispatcher" /* 709 */;
 
 function processCallbacks() {

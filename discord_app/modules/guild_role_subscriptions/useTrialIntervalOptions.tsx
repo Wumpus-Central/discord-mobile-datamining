@@ -1,8 +1,8 @@
-// === Module 14578: useTrialIntervalOptions ===
+// === Module 14646: useTrialIntervalOptions ===
 
-// Module 14578 (useTrialIntervalOptions)
+// Module 14646 (useTrialIntervalOptions)
 import closure_2 from "noop" /* 19 */;
-import { TIER_TRIAL_INTERVALS } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import { TIER_TRIAL_INTERVALS } from "MAX_SUBSCRIPTION_TIERS" /* 14619 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
@@ -18,9 +18,9 @@ export default function useTrialIntervalOptions(arg0) {
         if (7 === interval.interval_count) {
           const intl = lib(1236).intl;
           obj = { defaultLimit: null };
-          obj[0] = lib(14577).formatPlanIntervalDuration(interval);
+          obj[0] = lib(14645).formatPlanIntervalDuration(interval);
           let formatToPlainStringResult = intl.formatToPlainString(lib(1236).t.XfSsr1, obj);
-          const obj4 = lib(14577);
+          const obj4 = lib(14645);
         }
         obj[1] = formatToPlainStringResult;
         let tmp5 = interval.interval === tmp.DAY;
@@ -30,7 +30,7 @@ export default function useTrialIntervalOptions(arg0) {
         obj[2] = tmp5;
         return obj;
       }
-      formatToPlainStringResult = lib(14577).formatPlanIntervalDuration(interval);
+      formatToPlainStringResult = lib(14645).formatPlanIntervalDuration(interval);
     });
     let selectedOption = closure_0;
     if (null != closure_0) {

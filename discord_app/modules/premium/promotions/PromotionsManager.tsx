@@ -1,13 +1,13 @@
-// === Module 16687: _terminate ===
+// === Module 16783: _terminate ===
 
-// Module 16687 (_terminate)
-import initializeDefault from "initialize" /* 5038 */;
-import fetchActivePromotions from "fetchActivePromotions" /* 7928 */;
+// Module 16783 (_terminate)
+import initializeDefault from "initialize" /* 5043 */;
+import fetchActivePromotions from "fetchActivePromotions" /* 7967 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4045 */;
-import closure_7 from "createEmptyPromotionsByType" /* 7628 */;
+import closure_6 from "reset" /* 4048 */;
+import closure_7 from "createEmptyPromotionsByType" /* 7666 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { EntitlementTypes } from "ME" /* 676 */;
 import { SubscriptionTypes } from "sum" /* 505 */;
@@ -41,7 +41,7 @@ class PromotionsManager extends tmp2 {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -78,7 +78,7 @@ class PromotionsManager extends tmp2 {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp6) {
           v0 = tmp;
           throw tmp6;
@@ -117,7 +117,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         v0 = tmp;

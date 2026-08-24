@@ -1,12 +1,12 @@
-// === Module 12819: ExternalLinkItem ===
+// === Module 12874: ExternalLinkItem ===
 
-// Module 12819 (ExternalLinkItem)
+// Module 12874 (ExternalLinkItem)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
+import Text from "Text" /* 4739 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 function ExternalLinkItem(data) {
   data = data.data;
@@ -17,12 +17,12 @@ function ExternalLinkItem(data) {
     obj[0] = tmp;
     obj[1] = tmp2;
     obj = { IconComponent: null };
-    obj[0] = url(12820).LinkExternalMediumIcon;
-    obj[2] = callback(url(6296).TableRowIcon, obj);
+    obj[0] = url(12875).LinkExternalMediumIcon;
+    obj[2] = callback(url(6327).TableRowIcon, obj);
     obj[3] = function onPress() {
       closure_1_1(closure_1_2[8]).openURL(url);
     };
-    tmp3 = callback(url(8086).RowButton, obj);
+    tmp3 = callback(url(8125).RowButton, obj);
   }
   return tmp3;
 }

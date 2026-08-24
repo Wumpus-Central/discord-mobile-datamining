@@ -1,11 +1,11 @@
-// === Module 12494: useIsInvitedToSpeak ===
+// === Module 12548: useIsInvitedToSpeak ===
 
-// Module 12494 (useIsInvitedToSpeak)
+// Module 12548 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 589 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4986 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4986 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");

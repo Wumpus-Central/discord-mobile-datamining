@@ -1,8 +1,8 @@
-// === Module 13466: WarningCircle ===
+// === Module 13524: WarningCircle ===
 
-// Module 13466 (WarningCircle)
+// Module 13524 (WarningCircle)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStyles from "inlineStyles" /* 6607 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

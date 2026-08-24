@@ -1,6 +1,6 @@
-// === Module 8320: sanitizeMediaDimension ===
+// === Module 8360: sanitizeMediaDimension ===
 
-// Module 8320 (sanitizeMediaDimension)
+// Module 8360 (sanitizeMediaDimension)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");

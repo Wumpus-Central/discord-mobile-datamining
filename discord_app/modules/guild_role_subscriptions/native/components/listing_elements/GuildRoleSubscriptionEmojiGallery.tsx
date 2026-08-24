@@ -1,9 +1,9 @@
-// === Module 14585: EmojiGallery ===
+// === Module 14653: EmojiGallery ===
 
-// Module 14585 (EmojiGallery)
+// Module 14653 (EmojiGallery)
 import noopAll from "noop" /* 19 */;
-import chunkDefault from "chunk" /* 9420 */;
-import GappedList from "GappedList" /* 9422 */;
+import chunkDefault from "chunk" /* 9457 */;
+import GappedList from "GappedList" /* 9459 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

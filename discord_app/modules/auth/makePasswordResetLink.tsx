@@ -1,6 +1,6 @@
-// === Module 8593: makePasswordResetLink ===
+// === Module 8632: makePasswordResetLink ===
 
-// Module 8593 (makePasswordResetLink)
+// Module 8632 (makePasswordResetLink)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

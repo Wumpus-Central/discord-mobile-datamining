@@ -1,8 +1,8 @@
-// === Module 7193: HotspotStore ===
+// === Module 7231: HotspotStore ===
 
-// Module 7193 (HotspotStore)
-import importDefaultResult from "set" /* 7194 */;
-import HotspotLocations from "HotspotLocations" /* 7195 */;
+// Module 7231 (HotspotStore)
+import importDefaultResult from "set" /* 7232 */;
+import HotspotLocations from "HotspotLocations" /* 7233 */;
 
 const result = require("set").fileFinishedImporting("modules/hotspot/index.tsx");
 for (const key10022 in tmp4) {

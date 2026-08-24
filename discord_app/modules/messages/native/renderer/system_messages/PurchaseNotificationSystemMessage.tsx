@@ -1,9 +1,9 @@
-// === Module 8242: createPurchaseNotificationSystemMessage ===
+// === Module 8282: createPurchaseNotificationSystemMessage ===
 
-// Module 8242 (createPurchaseNotificationSystemMessage)
+// Module 8282 (createPurchaseNotificationSystemMessage)
 import set from "set" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import createGuildProductPurchaseSystemMessage from "createGuildProductPurchaseSystemMessage" /* 8243 */;
+import createGuildProductPurchaseSystemMessage from "createGuildProductPurchaseSystemMessage" /* 8283 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 

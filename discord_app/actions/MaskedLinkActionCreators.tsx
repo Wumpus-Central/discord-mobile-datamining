@@ -1,6 +1,6 @@
-// === Module 12425: trustDomain ===
+// === Module 12477: trustDomain ===
 
-// Module 12425 (trustDomain)
+// Module 12477 (trustDomain)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

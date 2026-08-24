@@ -1,10 +1,10 @@
-// === Module 6799: updateGuildSelfMember ===
+// === Module 6836: updateGuildSelfMember ===
 
-// Module 6799 (updateGuildSelfMember)
+// Module 6836 (updateGuildSelfMember)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import updateImpersonating from "updateImpersonating" /* 6792 */;
-import closure_3 from "initialize" /* 1982 */;
+import updateImpersonating from "updateImpersonating" /* 6829 */;
+import closure_3 from "initialize" /* 1983 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;

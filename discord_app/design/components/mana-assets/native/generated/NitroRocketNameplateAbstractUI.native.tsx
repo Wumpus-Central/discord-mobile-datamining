@@ -1,10 +1,10 @@
-// === Module 5990: NitroRocketNameplateAbstractUI ===
+// === Module 6021: NitroRocketNameplateAbstractUI ===
 
-// Module 5990 (NitroRocketNameplateAbstractUI)
+// Module 6021 (NitroRocketNameplateAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5991 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6022 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroRocketNameplateAbstractUI.native.tsx");

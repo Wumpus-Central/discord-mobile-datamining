@@ -1,10 +1,10 @@
-// === Module 8191: MessageAccessibilityAction ===
+// === Module 8231: MessageAccessibilityAction ===
 
-// Module 8191 (MessageAccessibilityAction)
+// Module 8231 (MessageAccessibilityAction)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "recomputeGuild" /* 4977 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import closure_2 from "recomputeGuild" /* 4982 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;
@@ -37,14 +37,14 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
   let formatToPlainStringResult = null;
   if (true !== disableDoubleTap) {
     if (null != setting) {
-      const result = tmp(8192).disambiguatedEmojiFromSettingsValue(setting);
+      const result = tmp(8232).disambiguatedEmojiFromSettingsValue(setting);
       if (null != result) {
         const intl9 = tmp(1236).intl;
         obj = { emojiName: null };
         obj[0] = result.name;
         formatToPlainStringResult = intl9.formatToPlainString(tmp(1236).t.eQIttH, obj);
       }
-      const tmpResult = tmp(8192);
+      const tmpResult = tmp(8232);
     }
     const intl8 = tmp(1236).intl;
     formatToPlainStringResult = intl8.formatToPlainString(tmp(1236).t.eQIttH, { emojiName: "heart" });
@@ -80,7 +80,7 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       obj[0] = intl2.string(tmp5(1236).t.lfIHs4);
       obj[1] = tmp7.ADD_REACTION;
       items.push(obj);
-      const DoubleTapReactionEmoji = tmp5(4066).DoubleTapReactionEmoji;
+      const DoubleTapReactionEmoji = tmp5(4069).DoubleTapReactionEmoji;
       const setting = DoubleTapReactionEmoji.getSetting();
       let disableDoubleTap;
       if (setting != null) {
@@ -89,7 +89,7 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       let formatToPlainStringResult = null;
       if (true !== disableDoubleTap) {
         if (null != setting) {
-          let tmp5Result = tmp5(8192);
+          let tmp5Result = tmp5(8232);
           const result = tmp5Result.disambiguatedEmojiFromSettingsValue(setting);
           if (null != result) {
             const intl4 = tmp5(1236).intl;
@@ -108,7 +108,7 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
         items.push(obj1);
       }
     }
-    tmp5Result = tmp5(8199);
+    tmp5Result = tmp5(8239);
     if (tmp5Result.canReplyToMessage(channel, message)) {
       const obj2 = { label: null, name: null };
       const intl5 = tmp5(1236).intl;

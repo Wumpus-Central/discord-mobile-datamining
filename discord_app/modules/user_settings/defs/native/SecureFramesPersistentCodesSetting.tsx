@@ -1,11 +1,11 @@
-// === Module 14994: toggle ===
+// === Module 15058: toggle ===
 
-// Module 14994 (toggle)
+// Module 15058 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9711 */;
-import closure_3 from "items" /* 9709 */;
-import createToggle from "createToggle" /* 10669 */;
+import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9750 */;
+import closure_3 from "items" /* 9748 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 createToggle = {

@@ -1,11 +1,11 @@
-// === Module 13872: RPC_EMBEDDED_APP_SCOPE ===
+// === Module 13937: RPC_EMBEDDED_APP_SCOPE ===
 
-// Module 13872 (RPC_EMBEDDED_APP_SCOPE)
-import transformUserDefault from "transformUser" /* 8758 */;
+// Module 13937 (RPC_EMBEDDED_APP_SCOPE)
+import transformUserDefault from "transformUser" /* 8795 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
 import { RPCCommands } from "ME" /* 676 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13909 */;
 
 ({ RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
 let obj = {};
@@ -21,7 +21,7 @@ obj = {
   }
 };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_LOCAL_SCOPE];
-obj[RPCCommands.GET_USER] = createRPCCommand.createRPCCommand(RPCCommands.GET_USER, obj);
+obj[RPCCommands.GET_USER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_USER, obj);
 const result = require("set").fileFinishedImporting("modules/rpc/server/commands/users.tsx");
 
 export default obj;

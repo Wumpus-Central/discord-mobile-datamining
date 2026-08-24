@@ -1,21 +1,21 @@
-// === Module 11454: ActionChannelInfo ===
+// === Module 11503: ActionChannelInfo ===
 
-// Module 11454 (ActionChannelInfo)
+// Module 11503 (ActionChannelInfo)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 10983 */;
-import newMemberActionFromServer from "newMemberActionFromServer" /* 11453 */;
-import useMemberActionsForChannel from "useMemberActionsForChannel" /* 11455 */;
+import registerAssetDefault from "registerAsset" /* 11022 */;
+import newMemberActionFromServer from "newMemberActionFromServer" /* 11502 */;
+import useMemberActionsForChannel from "useMemberActionsForChannel" /* 11504 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "getEmojiToGroupId" /* 6727 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_7 from "getEmojiToGroupId" /* 6764 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
 import { Routes } from "ME" /* 676 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function ActionChannelInfo(action) {
@@ -38,7 +38,7 @@ function ActionChannelInfo(action) {
     obj2[0] = tmp4;
     obj1[2] = intl.format(tmp(1236).t.MkzlDL, obj2);
   }
-  return closure_12(action(4734).Text, obj1);
+  return closure_12(action(4739).Text, obj1);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
@@ -68,7 +68,7 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     obj1 = { uri: null };
-    let tmp5Result = tmp5(5449);
+    let tmp5Result = tmp5(5454);
     tmp5Result = tmp5(1435);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
@@ -79,15 +79,15 @@ function ChannelActionEmoji(emoji) {
   } else {
     tmp2Result = tmp6;
     if (null != name) {
-      const tmp5Result1 = tmp5(4034);
+      const tmp5Result1 = tmp5(4037);
       tmp2Result = tmp6;
       if (null != tmp5Result1.getByName(tmp5Result2.convertSurrogateToName(name, false))) {
         const obj3 = { style: null, variant: "heading-lg/normal", children: null };
         obj3[0] = tmp.textEmoji;
         obj3[2] = name;
-        tmp2Result = tmp2(tmp3(4734).Text, obj3);
+        tmp2Result = tmp2(tmp3(4739).Text, obj3);
       }
-      tmp5Result2 = tmp5(4034);
+      tmp5Result2 = tmp5(4037);
     }
   }
   return tmp2Result;
@@ -372,7 +372,7 @@ let closure_18 = { code: "function MemberActionChatInputBannerTsx1(){const{useRe
 let closure_19 = { code: "function MemberActionChatInputBannerTsx2(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(5283);
+  let obj = channel(5288);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [closure_9];
   const stateFromStores = channel(647).useStateFromStores(items, () => {

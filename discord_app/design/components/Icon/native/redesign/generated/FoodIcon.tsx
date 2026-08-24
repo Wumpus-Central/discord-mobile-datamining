@@ -1,10 +1,10 @@
-// === Module 9428: FoodIcon ===
+// === Module 9465: FoodIcon ===
 
-// Module 9428 (FoodIcon)
+// Module 9465 (FoodIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9429 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 9466 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

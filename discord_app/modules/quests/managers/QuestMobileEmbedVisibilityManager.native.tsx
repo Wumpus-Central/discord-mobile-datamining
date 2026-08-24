@@ -1,23 +1,23 @@
-// === Module 17036: log ===
+// === Module 17129: log ===
 
-// Module 17036 (log)
+// Module 17129 (log)
 import privDefault from "priv" /* 1405 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import useAlertStore2 from "useAlertStore" /* 4657 */;
-import initializeDefault from "initialize" /* 5038 */;
-import getQuestLogger from "getQuestLogger" /* 7459 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4234 */;
+import useAlertStore2 from "useAlertStore" /* 4663 */;
+import initializeDefault from "initialize" /* 5043 */;
+import getQuestLogger from "getQuestLogger" /* 7497 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "setContent" /* 4086 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
-import closure_9 from "withEqualityFn" /* 8664 */;
+import closure_5 from "setContent" /* 4089 */;
+import closure_6 from "getParticipants" /* 4778 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 8544 */;
+import closure_9 from "withEqualityFn" /* 8701 */;
 import { isTextChannel } from "createChannelRecord" /* 1395 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "handleConnectionOpen" /* 1979 */;
-import closure_13 from "getAlert" /* 10737 */;
-import closure_14 from "getState" /* 7383 */;
-import closure_15 from "initializeState" /* 7453 */;
-import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9506 */;
+import closure_12 from "handleConnectionOpen" /* 1980 */;
+import closure_13 from "getAlert" /* 10776 */;
+import closure_14 from "getState" /* 7421 */;
+import closure_15 from "initializeState" /* 7491 */;
+import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_16 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9543 */;
 import { MessageStates } from "ME" /* 676 */;
 
 require = arg1;
@@ -231,8 +231,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(10023).isChannelFocused();
-      applyArgumentsResult(4229);
+      let isChannelFocusedResult = applyArgumentsResult(10062).isChannelFocused();
+      applyArgumentsResult(4233);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

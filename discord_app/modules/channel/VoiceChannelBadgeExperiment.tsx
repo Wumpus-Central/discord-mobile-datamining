@@ -1,9 +1,9 @@
-// === Module 8439: experiment ===
+// === Module 8478: experiment ===
 
-// Module 8439 (experiment)
+// Module 8478 (experiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4293 */;
+import createExperiment from "createExperiment" /* 4290 */;
 
 const items = [{ id: 0, label: "Control", config: { enabled: false } }, { id: 1, label: "Show voice badges", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: items });

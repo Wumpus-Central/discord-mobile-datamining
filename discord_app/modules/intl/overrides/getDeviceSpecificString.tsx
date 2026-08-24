@@ -1,6 +1,6 @@
-// === Module 7571: getDeviceSpecificString ===
+// === Module 7609: getDeviceSpecificString ===
 
-// Module 7571 (getDeviceSpecificString)
+// Module 7609 (getDeviceSpecificString)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

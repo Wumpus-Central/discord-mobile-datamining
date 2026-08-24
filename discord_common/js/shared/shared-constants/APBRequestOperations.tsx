@@ -1,6 +1,6 @@
-// === Module 7867: APBRequestOperations ===
+// === Module 7905: APBRequestOperations ===
 
-// Module 7867 (APBRequestOperations)
+// Module 7905 (APBRequestOperations)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/APBRequestOperations.tsx");

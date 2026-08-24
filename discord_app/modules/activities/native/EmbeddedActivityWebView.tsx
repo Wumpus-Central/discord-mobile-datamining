@@ -1,18 +1,18 @@
-// === Module 12471: getSafeArea ===
+// === Module 12525: getSafeArea ===
 
-// Module 12471 (getSafeArea)
+// Module 12525 (getSafeArea)
 import timestampDefault from "timestamp" /* 3 */;
-import usePreviousDefault from "usePrevious" /* 6701 */;
+import usePreviousDefault from "usePrevious" /* 6738 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 7872 */;
-import items3 from "items3" /* 4481 */;
+import closure_8 from "initialize" /* 7911 */;
+import items3 from "items3" /* 4485 */;
 import ME from "ME" /* 676 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4281 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import set from "set" /* 500 */;
 
 const require = arg1;
@@ -159,7 +159,7 @@ class BaseActivityWebView {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -409,7 +409,7 @@ class BaseActivityWebView {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -459,7 +459,7 @@ class BaseActivityWebView {
                     closure_1_30(items.map((arg0) => "^" + content_security_policy(table[26])(arg0).replace(/\\\*/g, ".*")));
                     closure_1_28(true);
                     c4 = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
                   c4 = tmp;
@@ -600,7 +600,7 @@ class BaseActivityWebView {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {

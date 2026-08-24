@@ -1,13 +1,13 @@
-// === Module 10519: AnimatedCount ===
+// === Module 10558: AnimatedCount ===
 
-// Module 10519 (AnimatedCount)
-import Text from "Text" /* 4734 */;
-import defaultFormatter2 from "defaultFormatter" /* 10520 */;
+// Module 10558 (AnimatedCount)
+import Text from "Text" /* 4739 */;
+import defaultFormatter2 from "defaultFormatter" /* 10559 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AnimatedCount(state) {

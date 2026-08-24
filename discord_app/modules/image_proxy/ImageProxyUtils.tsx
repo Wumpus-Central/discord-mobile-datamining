@@ -1,8 +1,9 @@
-// === Module 4508: isImageProxyURL ===
+// === Module 4512: isImageProxyURL ===
 
-// Module 4508 (isImageProxyURL)
+// Module 4512 (isImageProxyURL)
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import getHostWithoutPort from "getHostWithoutPort" /* 4513 */;
 import set from "set" /* 2 */;
 
 let parts;
@@ -21,13 +22,7 @@ function isImageProxyURL(hostname) {
   return startsWithResult;
 }
 const mapped = parts.map((str) => str.substring(2));
-const mapped1 = mapped.map(function getHostWithoutPort(arg0) {
-  let first;
-  if (arg0 != null) {
-    first = arg0.split(":")[0];
-  }
-  return first;
-});
+const mapped1 = mapped.map(getHostWithoutPort.getHostWithoutPort);
 let set = new Set(mapped1.filter(Boolean));
 let result = set.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
 

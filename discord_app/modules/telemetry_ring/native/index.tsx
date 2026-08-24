@@ -3,11 +3,11 @@
 // Module 1210 (TelemetryRingLifecycle)
 import set from "set" /* 2 */;
 import _updateZoomedInExportDefault from "_updateZoomedInExport" /* 1211 */;
-import shouldRunDefault from "shouldRun" /* 13558 */;
-import apexExperiment from "apexExperiment" /* 13559 */;
-import TelemetryChannel from "TelemetryChannel" /* 13562 */;
-import snapshotForBreadcrumbsDefault from "snapshotForBreadcrumbs" /* 13565 */;
-import NormalTelemetryImplDefault from "NormalTelemetryImpl" /* 13566 */;
+import shouldRunDefault from "shouldRun" /* 13616 */;
+import apexExperiment from "apexExperiment" /* 13617 */;
+import TelemetryChannel from "TelemetryChannel" /* 13620 */;
+import snapshotForBreadcrumbsDefault from "snapshotForBreadcrumbs" /* 13623 */;
+import NormalTelemetryImplDefault from "NormalTelemetryImpl" /* 13624 */;
 
 const result = set.fileFinishedImporting("modules/telemetry_ring/native/index.tsx");
 

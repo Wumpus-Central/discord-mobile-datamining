@@ -1,10 +1,10 @@
-// === Module 4537: bitrate ===
+// === Module 4542: bitrate ===
 
-// Module 4537 (bitrate)
+// Module 4542 (bitrate)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import DesktopSources from "DesktopSources" /* 4534 */;
 
 const DEFAULT_VOICE_BITRATE = DesktopSources.DEFAULT_VOICE_BITRATE;
 const Store = initializeDefault.Store;

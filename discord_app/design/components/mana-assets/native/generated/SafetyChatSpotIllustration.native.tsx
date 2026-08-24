@@ -1,10 +1,10 @@
-// === Module 6098: SafetyChatSpotIllustration ===
+// === Module 6129: SafetyChatSpotIllustration ===
 
-// Module 6098 (SafetyChatSpotIllustration)
+// Module 6129 (SafetyChatSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6099 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6130 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SafetyChatSpotIllustration.native.tsx");

@@ -1,20 +1,20 @@
-// === Module 7253: handleUpdateActivity ===
+// === Module 7291: handleUpdateActivity ===
 
-// Module 7253 (handleUpdateActivity)
+// Module 7291 (handleUpdateActivity)
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import unpackStageChannelParty from "unpackStageChannelParty" /* 7292 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "createRTCConnection" /* 4544 */;
+import closure_7 from "markAllUserIdListsStale" /* 4033 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "getActiveStageChannelIds" /* 4989 */;
+import closure_10 from "getActiveStageChannelIds" /* 4994 */;
 import closure_11 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 4983 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -50,7 +50,7 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = obj;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6703).StageChannelParticipantNamedIndex.SPEAKER);
+              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6740).StageChannelParticipantNamedIndex.SPEAKER);
               const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
@@ -72,11 +72,11 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4984);
+                let tmp12Result = tmp12(4989);
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(4988);
+              tmp12Result = tmp12(4993);
               obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
               let start;
               if (tmp15 != null) {
@@ -167,9 +167,9 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
     voiceStates = voiceStates.voiceStates;
     let _require;
     if (null != c17) {
-      const result = _require(7254).unpackStageChannelParty(c17);
+      const result = _require(7292).unpackStageChannelParty(c17);
       _require = result;
-      const obj = _require(7254);
+      const obj = _require(7292);
       if (tmp5) {
         handleUpdateActivity();
       }

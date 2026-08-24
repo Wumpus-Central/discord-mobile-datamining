@@ -1,10 +1,10 @@
-// === Module 6000: NitroStarterBadgeLargeBadge ===
+// === Module 6031: NitroStarterBadgeLargeBadge ===
 
-// Module 6000 (NitroStarterBadgeLargeBadge)
+// Module 6031 (NitroStarterBadgeLargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import vanityUrlDefault from "vanityUrl" /* 6001 */;
+import preloadDefault from "preload" /* 5454 */;
+import vanityUrlDefault from "vanityUrl" /* 6032 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroStarterBadgeLargeBadge.native.tsx");

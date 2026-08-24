@@ -1,8 +1,8 @@
-// === Module 11160: ? ===
+// === Module 11212: ? ===
 
-// Module 11160
+// Module 11212
 import set2 from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11161 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11213 */;
 
 let result = set2.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
@@ -37,12 +37,12 @@ export default {
     if (null == arg0) {
       return null;
     } else {
-      const nonce = _require(7501).createNonce();
+      const nonce = _require(7539).createNonce();
       const result = set.set(nonce, (arg0) => {
         set.delete(nonce);
         callback(arg0);
       });
-      const Commands = _require(11161).Commands;
+      const Commands = _require(11213).Commands;
       Commands.flushText(arg0, nonce);
     }
   },

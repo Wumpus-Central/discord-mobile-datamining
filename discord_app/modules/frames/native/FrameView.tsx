@@ -1,12 +1,12 @@
-// === Module 16263: FrameViewInner ===
+// === Module 15935: FrameViewInner ===
 
-// Module 16263 (FrameViewInner)
+// Module 15935 (FrameViewInner)
 import initialize from "initialize" /* 589 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "map" /* 8708 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
-import { ActivityPlatform } from "items3" /* 4481 */;
+import closure_5 from "map" /* 8745 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 8746 */;
+import { ActivityPlatform } from "items3" /* 4485 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -102,4 +102,20 @@ const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
 const result = require("set").fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default memoResult;
+export const InlineFrameView = function InlineFrameView(frameId) {
+  frameId = frameId.frameId;
+  let tmp = null;
+  const merged = Object.assign(frameId, Object.create(null));
+  let obj = frameId(589);
+  const items = [closure_5];
+  const items1 = [frameId];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(closure_1_5.getFrame(frameId)), items1);
+  if (null != stateFromStores) {
+    obj = { frame: null };
+    obj[0] = stateFromStores;
+    const merged1 = Object.assign(merged);
+    tmp = <FrameViewInner frame={null} />;
+  }
+  return tmp;
+};
 export const FrameView = memoResult;

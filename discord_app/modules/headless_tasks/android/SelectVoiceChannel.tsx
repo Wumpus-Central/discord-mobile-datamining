@@ -1,8 +1,8 @@
-// === Module 17155: promise ===
+// === Module 17249: promise ===
 
-// Module 17155 (promise)
+// Module 17249 (promise)
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_4 from "createRTCConnection" /* 4544 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/headless_tasks/android/SelectVoiceChannel.tsx");

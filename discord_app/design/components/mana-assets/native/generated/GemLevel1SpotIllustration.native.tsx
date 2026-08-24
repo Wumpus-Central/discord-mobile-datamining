@@ -1,10 +1,10 @@
-// === Module 5812: GemLevel1SpotIllustration ===
+// === Module 5843: GemLevel1SpotIllustration ===
 
-// Module 5812 (GemLevel1SpotIllustration)
+// Module 5843 (GemLevel1SpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5813 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5844 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel1SpotIllustration.native.tsx");

@@ -1,15 +1,15 @@
-// === Module 15481: GuildPowerupsProgressBar ===
+// === Module 15546: GuildPowerupsProgressBar ===
 
-// Module 15481 (GuildPowerupsProgressBar)
+// Module 15546 (GuildPowerupsProgressBar)
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import LinearGradientDefault from "LinearGradient" /* 4761 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15482 */;
+import closure_5 from "initialize" /* 15547 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "module_4119" /* 4119 */;
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
@@ -129,11 +129,12 @@ export default function GuildPowerupsProgressBar(guildId) {
     obj[1] = tmp6;
     formatToPlainStringResult = intl.formatToPlainString(tmp5(tmp3[16])["/rbPDs"], obj);
   }
-  obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+  obj1 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
   const intl3 = tmp2(tmp3[15]).intl;
   obj1[1] = intl3.string(stateFromStores1(num[16]).NI6Ihe);
-  obj1[2] = callback;
-  obj1[3] = tmp.container;
+  obj1[2] = { text: formatToPlainStringResult };
+  obj1[3] = callback;
+  obj1[4] = tmp.container;
   obj2 = { style: tmp.track, children: null };
   const tmp2Result1 = guildId(num[6]);
   const items7 = [, , ];
@@ -159,7 +160,7 @@ export default function GuildPowerupsProgressBar(guildId) {
   obj5[1] = items9;
   items8[1] = closure_8(sharedValue, obj5);
   obj2[1] = items8;
-  obj1[4] = closure_8(sharedValue, obj2);
+  obj1[5] = closure_8(sharedValue, obj2);
   return callback(guildId(num[17]).PressableScale, obj1);
 };
 export const BOOST_PROGRESS_BAR_HEIGHT = result + 30;

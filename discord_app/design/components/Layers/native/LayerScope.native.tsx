@@ -1,8 +1,8 @@
-// === Module 7126: Layer ===
+// === Module 7164: Layer ===
 
-// Module 7126 (Layer)
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import add from "add" /* 7128 */;
+// Module 7164 (Layer)
+import useInitialValueDefault from "useInitialValue" /* 7165 */;
+import add from "add" /* 7166 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -15,7 +15,7 @@ function Layer(zIndex) {
   let context;
   dependencyMap = undefined;
   let callback;
-  context = React.useContext(zIndex(7128).LayerContext);
+  context = React.useContext(zIndex(7166).LayerContext);
   dependencyMap = callback(React.useState({}), 2)[1];
   callback = React.useRef(null);
   const items = [context];

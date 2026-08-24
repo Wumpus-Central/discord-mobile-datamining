@@ -1,15 +1,15 @@
-// === Module 16871: ConnectedGuildSettingsModalBans ===
+// === Module 16964: ConnectedGuildSettingsModalBans ===
 
-// Module 16871 (ConnectedGuildSettingsModalBans)
+// Module 16964 (ConnectedGuildSettingsModalBans)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleFormInit" /* 8875 */;
+import closure_9 from "handleFormInit" /* 8912 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);

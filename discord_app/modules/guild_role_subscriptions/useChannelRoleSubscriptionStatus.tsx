@@ -1,9 +1,9 @@
-// === Module 6817: getChannelRoleSubscriptionStatus ===
+// === Module 6854: getChannelRoleSubscriptionStatus ===
 
-// Module 6817 (getChannelRoleSubscriptionStatus)
-import closure_2 from "isSubscriptionGated" /* 1981 */;
+// Module 6854 (getChannelRoleSubscriptionStatus)
+import closure_2 from "isSubscriptionGated" /* 1982 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;

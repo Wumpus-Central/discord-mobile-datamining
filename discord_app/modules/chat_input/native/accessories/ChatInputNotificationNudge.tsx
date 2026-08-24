@@ -1,20 +1,20 @@
-// === Module 11577: ChatInputNotificationNudgeImpl ===
+// === Module 11626: ChatInputNotificationNudgeImpl ===
 
-// Module 11577 (ChatInputNotificationNudgeImpl)
+// Module 11626 (ChatInputNotificationNudgeImpl)
 import ThemesDefault from "Themes" /* 712 */;
-import useIsAppDMDefault from "useIsAppDM" /* 11323 */;
-import apexExperimentDefault from "apexExperiment" /* 11592 */;
+import useIsAppDMDefault from "useIsAppDM" /* 11374 */;
+import apexExperimentDefault from "apexExperiment" /* 11641 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "storeThread" /* 4023 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import { PermissionPromptType } from "set" /* 11578 */;
+import closure_7 from "storeThread" /* 4026 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5048 */;
+import { PermissionPromptType } from "set" /* 11627 */;
 import ME from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import EventActionType from "EventActionType" /* 11582 */;
+import EventActionType from "EventActionType" /* 11631 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function ChatInputNotificationNudgeImpl(onDismiss) {
@@ -151,9 +151,9 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(11583);
+  let tmpResult = tmp(11632);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  tmpResult = tmp(11583);
+  tmpResult = tmp(11632);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
   const tmp4 = importDefault;
   const tmp4Result = apexExperimentDefault;
@@ -167,10 +167,10 @@ export default function ChatInputNotificationNudge(channel) {
   obj = { cooldownDurationMs: c20 };
   const tmp10 = c20;
   const tmp11 = callback;
-  const tmpResult1 = channel(7366);
-  [tmp13, tmp14] = callback(channel(7366).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmpResult1 = channel(7404);
+  [tmp13, tmp14] = callback(channel(7404).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   importDefault = tmp14;
-  const tmp12 = callback(channel(7366).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
+  const tmp12 = callback(channel(7404).useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   let prop1 = null;
   if (tmp5) {
     prop1 = null;
@@ -185,11 +185,11 @@ export default function ChatInputNotificationNudge(channel) {
     }
   }
   obj = { cooldownDurationMs: tmp10 };
-  const tmp11Result = tmp11(channel(7366).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
+  const tmp11Result = tmp11(channel(7404).useSelectedTimeRecurringDismissibleContent(prop1, obj, undefined, true), 2);
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
-  const tmpResult2 = channel(7366);
+  const tmpResult2 = channel(7404);
   const tmp18 = callback2(() => _undefined(closure_1_12.USER_DISMISS), items1);
   if (tmp13 === channel(1377).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
     obj1 = { promptType: null, location: null, surface: null, body: null, onDismiss: null };

@@ -1,10 +1,10 @@
-// === Module 11471: guildDirectoryEntryFromServer ===
+// === Module 11520: guildDirectoryEntryFromServer ===
 
-// Module 11471 (guildDirectoryEntryFromServer)
+// Module 11520 (guildDirectoryEntryFromServer)
 import set2 from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import DirectoryEntryTypes2 from "DirectoryEntryTypes" /* 11472 */;
+import DirectoryEntryTypes2 from "DirectoryEntryTypes" /* 11521 */;
 
 const DirectoryEntryTypes = DirectoryEntryTypes2.DirectoryEntryTypes;
 const result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");

@@ -1,12 +1,12 @@
-// === Module 14783: route ===
+// === Module 14847: route ===
 
-// Module 14783 (route)
+// Module 14847 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9826 */;
-import useWebBrowserSettingOptions from "useWebBrowserSettingOptions" /* 14784 */;
-import createToggle from "createToggle" /* 10669 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9865 */;
+import useWebBrowserSettingOptions from "useWebBrowserSettingOptions" /* 14848 */;
+import createToggle from "createToggle" /* 10708 */;
 
 obj = {
   useTitle() {
@@ -23,7 +23,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.BROWSER,
   getComponent() {
-    return require(14785).default;
+    return require(14849).default;
   }
 };
 const route = createToggle.createRoute(obj);

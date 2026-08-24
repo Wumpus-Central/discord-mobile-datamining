@@ -1,12 +1,12 @@
-// === Module 12299: createNitroSuggestedSku ===
+// === Module 12351: createNitroSuggestedSku ===
 
-// Module 12299 (createNitroSuggestedSku)
+// Module 12351 (createNitroSuggestedSku)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSKUPrice from "useSKUPrice" /* 7205 */;
+import useSKUPrice from "useSKUPrice" /* 7243 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "createFromServer" /* 4515 */;
-import { isCollectiblesWishlistItemRecord as closure_5 } from "createCollectiblesItemFromServerResponse" /* 9189 */;
-import { isPremiumWishlistItemRecord as closure_6, isSKUWishlistItemRecord } from "fromServer" /* 9190 */;
+import closure_4 from "createFromServer" /* 4520 */;
+import { isCollectiblesWishlistItemRecord as closure_5 } from "createCollectiblesItemFromServerResponse" /* 9226 */;
+import { isPremiumWishlistItemRecord as closure_6, isSKUWishlistItemRecord } from "fromServer" /* 9227 */;
 import { SKUProductLines } from "ME" /* 676 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
@@ -34,15 +34,11 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
   isWishlistOwner = isWishlistOwner.isWishlistOwner;
   if (isSKUWishlistItemRecord(sku)) {
     if (sku.sku.productLine === SKUProductLines.SOCIAL_LAYER_GAME_ITEM) {
-      let prop = isWishlistOwner.isSocialLayerStorefrontMobilePurchasingEnabled;
-      if (prop) {
-        if (!isWishlistOwner) {
-          isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-          const obj = useSKUPrice;
-        }
-        prop = isWishlistOwner;
+      if (!isWishlistOwner) {
+        isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
+        const obj = useSKUPrice;
       }
-      let tmp2 = prop;
+      let tmp2 = isWishlistOwner;
     }
     return tmp2;
   }

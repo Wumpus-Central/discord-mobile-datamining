@@ -1,19 +1,19 @@
-// === Module 8927: Loading ===
+// === Module 8964: Loading ===
 
-// Module 8927 (Loading)
+// Module 8964 (Loading)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef8928 from "module_8928" /* 8928 */;
+import _modDef8965 from "module_8965" /* 8965 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "updateWithLatestInvite" /* 8919 */;
+import closure_8 from "updateWithLatestInvite" /* 8956 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4024 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 4375 */;
 import { Permissions } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function Loading() {
@@ -27,7 +27,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback2(_modDef8928, obj, num));
+    let arr = items.push(callback2(_modDef8965, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };

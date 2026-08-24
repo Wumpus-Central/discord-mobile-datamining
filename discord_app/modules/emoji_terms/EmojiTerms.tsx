@@ -1,8 +1,8 @@
-// === Module 6734: ? ===
+// === Module 6771: ? ===
 
-// Module 6734
-import setParamsDefault from "setParams" /* 6735 */;
-import emojiTermsImporter from "emojiTermsImporter" /* 6736 */;
+// Module 6771
+import setParamsDefault from "setParams" /* 6772 */;
+import emojiTermsImporter from "emojiTermsImporter" /* 6773 */;
 
 require = arg1;
 let closure_2 = new setParamsDefault(function loadEmoji(arg0) {

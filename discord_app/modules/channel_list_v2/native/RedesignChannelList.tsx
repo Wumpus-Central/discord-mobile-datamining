@@ -1,19 +1,19 @@
-// === Module 15366: GuildChannels ===
+// === Module 15430: GuildChannels ===
 
-// Module 15366 (GuildChannels)
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11075 */;
-import itemsDefault from "items" /* 15527 */;
-import handleJoinGuildDefault from "handleJoinGuild" /* 15532 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 15542 */;
+// Module 15430 (GuildChannels)
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11114 */;
+import itemsDefault from "items" /* 15592 */;
+import handleJoinGuildDefault from "handleJoinGuild" /* 15597 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 15607 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "handleReset" /* 5250 */;
-import closure_8 from "withEqualityFn" /* 15289 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_7 from "handleReset" /* 5255 */;
+import closure_8 from "withEqualityFn" /* 15353 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4545 */;
+import closure_10 from "handleConnectionOpen" /* 1980 */;
+import closure_11 from "getVoiceStatesForGuild" /* 4550 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -66,9 +66,9 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return callback(tmp2(15534).default, obj);
+          return callback(tmp2(15599).default, obj);
         } else {
-          tmp2Result = tmp2(9346);
+          tmp2Result = tmp2(9383);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;

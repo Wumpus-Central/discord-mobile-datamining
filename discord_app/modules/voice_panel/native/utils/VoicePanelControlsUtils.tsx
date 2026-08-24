@@ -1,10 +1,10 @@
-// === Module 11447: VOICE_PANEL_DRAWER_MAX_WIDTH ===
+// === Module 11496: VOICE_PANEL_DRAWER_MAX_WIDTH ===
 
-// Module 11447 (VOICE_PANEL_DRAWER_MAX_WIDTH)
+// Module 11496 (VOICE_PANEL_DRAWER_MAX_WIDTH)
 import set from "set" /* 2 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import CARD_SIZE from "CARD_SIZE" /* 11443 */;
+import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11487 */;
+import VoicePanelModes from "VoicePanelModes" /* 11489 */;
+import CARD_SIZE from "CARD_SIZE" /* 11492 */;
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
 const EDGE_GUTTER = CARD_SIZE.EDGE_GUTTER;

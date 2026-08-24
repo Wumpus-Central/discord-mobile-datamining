@@ -1,25 +1,25 @@
-// === Module 10802: handleMessagesTapURLLink ===
+// === Module 10841: handleMessagesTapURLLink ===
 
-// Module 10802 (handleMessagesTapURLLink)
+// Module 10841 (handleMessagesTapURLLink)
 import set from "set" /* 2 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
 import set2 from "set" /* 1398 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import parseQueryDefault from "parseQuery" /* 4355 */;
-import str2 from "str2" /* 5259 */;
-import getIndexKey from "getIndexKey" /* 8448 */;
-import isLinkTrusted from "isLinkTrusted" /* 8775 */;
-import _mod9096 from "module_9096" /* 9096 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 9101 */;
-import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 10736 */;
-import isLinkTrusted2 from "isLinkTrusted" /* 10800 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "handleMessageSendFailedAutomod" /* 8163 */;
-import closure_6 from "handleQuickSwitcherUpdate" /* 10551 */;
+import parseQueryDefault from "parseQuery" /* 4359 */;
+import str2 from "str2" /* 5264 */;
+import getIndexKey from "getIndexKey" /* 8487 */;
+import isLinkTrusted from "isLinkTrusted" /* 8812 */;
+import _mod9133 from "module_9133" /* 9133 */;
+import GameProfileEmbedAction from "GameProfileEmbedAction" /* 9138 */;
+import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 10775 */;
+import isLinkTrusted2 from "isLinkTrusted" /* 10839 */;
+import closure_4 from "addApplication" /* 4482 */;
+import closure_5 from "handleMessageSendFailedAutomod" /* 8202 */;
+import closure_6 from "handleQuickSwitcherUpdate" /* 10590 */;
 import closure_7 from "createdAt" /* 1930 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "updateInvite" /* 4359 */;
-import closure_10 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "updateInvite" /* 4363 */;
+import closure_10 from "reinjectEphemerals" /* 4999 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
@@ -43,11 +43,11 @@ function handleMessagesTapURLLink(data, channelId) {
             invite = invite.getInvite(payload.inviteCode);
             let num = null == invite;
             if (!num) {
-              num = !tmp2(4369).isGuildScheduledEventInviteEmbed(invite);
-              const tmp2Result = tmp2(4369);
+              num = !tmp2(4373).isGuildScheduledEventInviteEmbed(invite);
+              const tmp2Result = tmp2(4373);
             }
             if (!num) {
-              tmp4(10801)(invite);
+              tmp4(10840)(invite);
               num = 0;
             }
             flag2 = !num;
@@ -80,9 +80,9 @@ function handleMessagesTapURLLink(data, channelId) {
         obj = { shouldOpenGameProfile: true, gameId: null };
         obj[1] = gameId;
         obj[3] = obj;
-        _mod9096.default.openGameProfileModal(obj);
+        _mod9133.default.openGameProfileModal(obj);
         flag3 = true;
-        const _default = _mod9096.default;
+        const _default = _mod9133.default;
       }
       flag2 = flag3;
     }
@@ -92,8 +92,8 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(10800).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(10800);
+        isLinkTrustedResult = tmp19(10839).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(10839);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;

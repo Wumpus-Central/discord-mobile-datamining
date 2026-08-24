@@ -1,22 +1,22 @@
-// === Module 11914: HubEmailConnectionSubmitSchool ===
+// === Module 11963: HubEmailConnectionSubmitSchool ===
 
-// Module 11914 (HubEmailConnectionSubmitSchool)
+// Module 11963 (HubEmailConnectionSubmitSchool)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import _modDef8575 from "module_8575" /* 8575 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 11905 */;
+import Text from "Text" /* 4739 */;
+import Button2 from "Button" /* 4750 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5446 */;
+import _modDef8614 from "module_8614" /* 8614 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 11954 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11897 */;
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11946 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
@@ -57,7 +57,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
       }
     }, 100);
   };
-  items1[2] = callback2(_modDef8575, obj4);
+  items1[2] = callback2(_modDef8614, obj4);
   obj1[1] = items1;
   const items2 = [closure_10(first, obj1), callback2(first, { style: tmp.redesignGrowSpacing }), ];
   const obj7 = { style: tmp.redesignSubmit, children: null };

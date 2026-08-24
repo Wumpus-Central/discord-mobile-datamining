@@ -1,9 +1,9 @@
-// === Module 4267: handleGuildBoostsUpdate ===
+// === Module 4271: handleGuildBoostsUpdate ===
 
-// Module 4267 (handleGuildBoostsUpdate)
+// Module 4271 (handleGuildBoostsUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "reset" /* 4045 */;
+import closure_0 from "reset" /* 4048 */;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;

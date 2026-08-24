@@ -1,14 +1,14 @@
-// === Module 13297: getApplicationIdForActivity ===
+// === Module 13355: getApplicationIdForActivity ===
 
-// Module 13297 (getApplicationIdForActivity)
+// Module 13355 (getApplicationIdForActivity)
 import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7261 */;
-import _isStreamingDefault from "_isStreaming" /* 8411 */;
-import isOnXboxDefault from "isOnXbox" /* 12099 */;
-import getIconURL from "getIconURL" /* 12779 */;
-import getIconURL2 from "getIconURL" /* 13298 */;
-import getIconURL3 from "getIconURL" /* 13299 */;
+import items3 from "items3" /* 4485 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7299 */;
+import _isStreamingDefault from "_isStreaming" /* 8450 */;
+import isOnXboxDefault from "isOnXbox" /* 12151 */;
+import getIconURL from "getIconURL" /* 12834 */;
+import getIconURL2 from "getIconURL" /* 13356 */;
+import getIconURL3 from "getIconURL" /* 13357 */;
 
 const SpotifyApplication = getIconURL.SpotifyApplication;
 let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;

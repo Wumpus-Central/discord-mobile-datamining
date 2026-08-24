@@ -1,12 +1,12 @@
-// === Module 8900: GuildEventRecurrences ===
+// === Module 8937: GuildEventRecurrences ===
 
-// Module 8900 (GuildEventRecurrences)
+// Module 8937 (GuildEventRecurrences)
 import ThemesDefault from "Themes" /* 712 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8901 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8938 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
@@ -30,7 +30,7 @@ export default function GuildEventRecurrences(guildEventId) {
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1236).intl;
   obj[1] = intl.string(guildEventId(1236).t["D/jjoa"]);
-  const items = [callback(guildEventId(4734).Text, obj), , ];
+  const items = [callback(guildEventId(4739).Text, obj), , ];
   obj = {
     style: tmp2.scrollView,
     ref,
@@ -57,7 +57,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = callback(tmp8(4745).Button, obj1);
+    canViewMoreRecurrences = callback(tmp8(4750).Button, obj1);
   }
   items[2] = canViewMoreRecurrences;
   obj[1] = items;

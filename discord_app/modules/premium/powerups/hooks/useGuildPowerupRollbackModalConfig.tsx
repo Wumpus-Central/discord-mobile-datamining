@@ -1,9 +1,9 @@
-// === Module 11681: useGuildPowerupRollbackModalConfig ===
+// === Module 11730: useGuildPowerupRollbackModalConfig ===
 
-// Module 11681 (useGuildPowerupRollbackModalConfig)
+// Module 11730 (useGuildPowerupRollbackModalConfig)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import closure_5 from "calculateAppliedBoosts" /* 4265 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");

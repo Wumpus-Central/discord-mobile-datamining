@@ -1,8 +1,8 @@
-// === Module 17082: handleConnectionOpenSupplemental ===
+// === Module 17175: handleConnectionOpenSupplemental ===
 
-// Module 17082 (handleConnectionOpenSupplemental)
-import initializeDefault from "initialize" /* 5038 */;
-import _openSafetyFlow from "_openSafetyFlow" /* 17083 */;
+// Module 17175 (handleConnectionOpenSupplemental)
+import initializeDefault from "initialize" /* 5043 */;
+import _openSafetyFlow from "_openSafetyFlow" /* 17176 */;
 
 require = arg1;
 function handleConnectionOpenSupplemental() {

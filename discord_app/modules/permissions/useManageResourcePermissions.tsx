@@ -1,12 +1,12 @@
-// === Module 8839: canManageResource ===
+// === Module 8876: canManageResource ===
 
-// Module 8839 (canManageResource)
+// Module 8876 (canManageResource)
 import fromStringAll from "fromString" /* 506 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4024 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8838 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8875 */;
 import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;

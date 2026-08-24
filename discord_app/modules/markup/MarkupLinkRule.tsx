@@ -1,13 +1,13 @@
-// === Module 6811: validateContentTypes ===
+// === Module 6848: validateContentTypes ===
 
-// Module 6811 (validateContentTypes)
+// Module 6848 (validateContentTypes)
 import privDefault from "priv" /* 1405 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import tDefault from "t" /* 4092 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
-import AST_KEY from "AST_KEY" /* 4765 */;
-import safelyPartiallyDecodeURIComponent from "safelyPartiallyDecodeURIComponent" /* 6812 */;
-import errorDefault from "error" /* 6813 */;
+import tDefault from "t" /* 4095 */;
+import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4362 */;
+import AST_KEY from "AST_KEY" /* 4770 */;
+import safelyPartiallyDecodeURIComponent from "safelyPartiallyDecodeURIComponent" /* 6849 */;
+import errorDefault from "error" /* 6850 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;
@@ -77,34 +77,34 @@ function getRawText(content) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
     if (AST_KEY.AST_KEY.TEXT !== type) {
-      if (tmp3(4765).AST_KEY.INLINE_CODE !== type) {
-        if (tmp3(4765).AST_KEY.CUSTOM_EMOJI === type) {
+      if (tmp3(4770).AST_KEY.INLINE_CODE !== type) {
+        if (tmp3(4770).AST_KEY.CUSTOM_EMOJI === type) {
           let tmp16 = str;
           let tmp17 = nextResult;
           str = `${tmp2.name}`;
-        } else if (tmp3(4765).AST_KEY.EMOJI === type) {
+        } else if (tmp3(4770).AST_KEY.EMOJI === type) {
           let tmp14 = str;
           let tmp15 = nextResult;
           str = `${tmp2.name}${tmp2.surrogate}`;
-        } else if (tmp3(4765).AST_KEY.LINE_BREAK === type) {
+        } else if (tmp3(4770).AST_KEY.LINE_BREAK === type) {
           let tmp13 = str;
           str = `${tmp2.name}${tmp2.surrogate}
   `;
         } else {
-          if (tmp3(4765).AST_KEY.STRONG !== type) {
-            if (tmp3(4765).AST_KEY.ITALICS !== type) {
-              if (tmp3(4765).AST_KEY.UNDERLINE !== type) {
-                if (tmp3(4765).AST_KEY.STRIKETHROUGH !== type) {
-                  if (tmp3(4765).AST_KEY.SPOILER !== type) {
-                    if (tmp3(4765).AST_KEY.TIMESTAMP === type) {
+          if (tmp3(4770).AST_KEY.STRONG !== type) {
+            if (tmp3(4770).AST_KEY.ITALICS !== type) {
+              if (tmp3(4770).AST_KEY.UNDERLINE !== type) {
+                if (tmp3(4770).AST_KEY.STRIKETHROUGH !== type) {
+                  if (tmp3(4770).AST_KEY.SPOILER !== type) {
+                    if (tmp3(4770).AST_KEY.TIMESTAMP === type) {
                       let tmp9 = str;
                       str = `${tmp2.name}${tmp2.surrogate}
   <timestamp>`;
                     } else {
-                      if (tmp3(4765).AST_KEY.BLOCK_QUOTE !== type) {
-                        if (tmp3(4765).AST_KEY.LIST !== type) {
-                          if (tmp3(4765).AST_KEY.HEADING !== type) {
-                            if (tmp3(4765).AST_KEY.SUBTEXT !== type) {
+                      if (tmp3(4770).AST_KEY.BLOCK_QUOTE !== type) {
+                        if (tmp3(4770).AST_KEY.LIST !== type) {
+                          if (tmp3(4770).AST_KEY.HEADING !== type) {
+                            if (tmp3(4770).AST_KEY.SUBTEXT !== type) {
                               let tmp3Result = tmp3(1370);
                               let tmp5 = nextResult;
                               let assertNeverResult = tmp3Result.assertNever(tmp2.type);
@@ -142,11 +142,11 @@ function isSuspiciousUrl(url) {
   } else {
     let value = store.get(url);
     if (null == value) {
-      let tmpResult = tmp(6812);
+      let tmpResult = tmp(6849);
       const sanitizeWhitespaceResult = tmpResult.sanitizeWhitespace(url);
       obj = { whitespaceSanitized: null, fullySanitized: null };
       obj[0] = sanitizeWhitespaceResult;
-      tmpResult = tmp(6812);
+      tmpResult = tmp(6849);
       obj[1] = tmpResult.sanitizeUnicodeConfusables(sanitizeWhitespaceResult);
       const result = obj2.set(url, obj);
       value = obj;
@@ -360,12 +360,12 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
               if (null != validateContentTypes(rules(value1.fullySanitized, obj3), items1)) {
                 if (0 === str4.trim().length) {
                   obj4 = { type: null, content: null };
-                  obj4[0] = tmp42(4765).AST_KEY.TEXT;
+                  obj4[0] = tmp42(4770).AST_KEY.TEXT;
                   obj4[1] = tmp2;
                   return obj4;
                 } else {
                   let tmp51Result = tmp51(12);
-                  tmp51Result = tmp51(4092);
+                  tmp51Result = tmp51(4095);
                   const obj5 = { content: null, target: null, title: null };
                   obj5[0] = tmp51Result.parserFor(tmp51Result.pick(rules.rules, tmp28))(value.whitespaceSanitized, obj3);
                   obj5[1] = tmp53.target;

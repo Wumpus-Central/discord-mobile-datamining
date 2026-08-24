@@ -1,11 +1,11 @@
-// === Module 7228: useGuildShopVisibleInGuild ===
+// === Module 7266: useGuildShopVisibleInGuild ===
 
-// Module 7228 (useGuildShopVisibleInGuild)
+// Module 7266 (useGuildShopVisibleInGuild)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import computeCanEveryoneInGuildSeeRoleSubscriptions from "computeCanEveryoneInGuildSeeRoleSubscriptions" /* 7216 */;
-import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7219 */;
-import useGuildEligibleForGuildProducts from "useGuildEligibleForGuildProducts" /* 7224 */;
+import computeCanEveryoneInGuildSeeRoleSubscriptions from "computeCanEveryoneInGuildSeeRoleSubscriptions" /* 7254 */;
+import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7257 */;
+import useGuildEligibleForGuildProducts from "useGuildEligibleForGuildProducts" /* 7262 */;
 
 const GuildFeatures = ME.GuildFeatures;
 let result = set.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
@@ -16,13 +16,13 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     id = id.id;
   }
   const guildEligibleForGuildProducts = useGuildEligibleForGuildProducts.useGuildEligibleForGuildProducts(id);
-  let tmpResult = tmp(7216);
+  let tmpResult = tmp(7254);
   let id1;
   if (id != null) {
     id1 = id.id;
   }
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
-  tmpResult = tmp(7229);
+  tmpResult = tmp(7267);
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
   const obj = useGuildEligibleForGuildProducts;
   let id2;

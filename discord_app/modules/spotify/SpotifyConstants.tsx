@@ -1,7 +1,7 @@
-// === Module 7242: SPOTIFY_APP_PROTOCOL ===
+// === Module 7280: SPOTIFY_APP_PROTOCOL ===
 
-// Module 7242 (SPOTIFY_APP_PROTOCOL)
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+// Module 7280 (SPOTIFY_APP_PROTOCOL)
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5102 */;
 import set from "set" /* 500 */;
 
 const spotify = "spotify";

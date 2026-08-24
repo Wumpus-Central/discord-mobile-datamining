@@ -1,14 +1,14 @@
-// === Module 11354: AppLauncherSelectOptionFormRow ===
+// === Module 11405: AppLauncherSelectOptionFormRow ===
 
-// Module 11354 (AppLauncherSelectOptionFormRow)
+// Module 11405 (AppLauncherSelectOptionFormRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import Form from "Form" /* 8083 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 11347 */;
+import Text from "Text" /* 4739 */;
+import Form from "Form" /* 8122 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 11398 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -48,7 +48,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   }
   obj[4] = fn;
   const tmp2 = callback();
-  obj[5] = jsx(Button.Icon, { source: unselectedSubLabel(6299), size: Button.IconSizes.SMALL_20 });
+  obj[5] = jsx(Button.Icon, { source: unselectedSubLabel(6330), size: Button.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
 };

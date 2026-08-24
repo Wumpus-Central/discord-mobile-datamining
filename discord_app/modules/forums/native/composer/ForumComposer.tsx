@@ -1,24 +1,24 @@
-// === Module 10168: Tags ===
+// === Module 10207: Tags ===
 
-// Module 10168 (Tags)
+// Module 10207 (Tags)
 import ThemesDefault from "Themes" /* 712 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4239 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import TagIcon from "TagIcon" /* 8014 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4243 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5446 */;
+import TagIcon from "TagIcon" /* 8053 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import closure_11 from "handleThemeChange" /* 1302 */;
-import closure_12 from "handleChanged" /* 4825 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import closure_14 from "trackCommunicationDisabled" /* 1990 */;
-import closure_15 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_16 from "handleConnectionOpen" /* 1979 */;
-import closure_17 from "setCooldown" /* 7440 */;
-import { SlowmodeType } from "setCooldown" /* 7440 */;
-import closure_19 from "map" /* 4824 */;
+import closure_12 from "handleChanged" /* 4830 */;
+import { DraftType } from "handleChanged" /* 4830 */;
+import closure_14 from "trackCommunicationDisabled" /* 1991 */;
+import closure_15 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_16 from "handleConnectionOpen" /* 1980 */;
+import closure_17 from "setCooldown" /* 7478 */;
+import { SlowmodeType } from "setCooldown" /* 7478 */;
+import closure_19 from "map" /* 4829 */;
 import closure_20 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
@@ -27,7 +27,7 @@ import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 import { OpenThreadAnalyticsLocations as closure_27 } from "AbortCodes" /* 1235 */;
 import sum from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function Tags(tags) {
@@ -108,7 +108,7 @@ function ActionBar(channel) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;
     obj[1] = channel.id;
-    isMediaChannelResult = callback(tmp5(10265), obj);
+    isMediaChannelResult = callback(tmp5(10304), obj);
   }
   const items3 = [isMediaChannelResult, ];
   obj1 = { style: tmp.actions, children: null };
@@ -121,7 +121,7 @@ function ActionBar(channel) {
       const items5 = [, ];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj2[1] = items5;
-      obj2[2] = tmp2(8014).TagIcon;
+      obj2[2] = tmp2(8053).TagIcon;
       obj2[3] = function onPress() {
         isEdit.dismiss();
         let obj = closure_1_1(closure_1_2[76]);
@@ -147,18 +147,18 @@ function ActionBar(channel) {
         };
         obj.openLazy(channel(closure_1_2[52])(closure_1_2[77], closure_1_2.paths), "ForumPostTagsActionSheet", obj);
       };
-      tmp10 = callback(tmp2(5432).HeaderActionButton, obj2);
+      tmp10 = callback(tmp2(5437).HeaderActionButton, obj2);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10173).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10212).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj3 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl3 = tmp2(1236).intl;
       obj3[0] = intl3.string(tmp2(1236).t.iZ7Mz9);
       obj3[1] = tmp.actionButton;
-      obj3[2] = tmp2(7939).ReactionIcon;
+      obj3[2] = tmp2(7978).ReactionIcon;
       obj3[3] = onShowExpressionPicker;
-      tmp18 = callback(tmp2(5432).HeaderActionButton, obj3);
+      tmp18 = callback(tmp2(5437).HeaderActionButton, obj3);
     }
     items4[2] = tmp18;
     const obj4 = { style: null, children: null };
@@ -180,13 +180,13 @@ function ActionBar(channel) {
     obj5[2] = submitting;
     const obj6 = { size: "sm", color: null };
     obj6[1] = tmp5(712).colors.WHITE;
-    obj5[3] = callback(tmp2(6867).ChatIcon, obj6);
+    obj5[3] = callback(tmp2(6905).ChatIcon, obj6);
     obj5[4] = function onPress() {
       if (canPost) {
         callback({});
       }
     };
-    obj4[1] = callback(tmp2(4745).Button, obj5);
+    obj4[1] = callback(tmp2(4750).Button, obj5);
     items4[3] = callback(tmp13, obj4);
     obj1[1] = items4;
     items3[1] = tmp12(tmp13, obj1);
@@ -200,9 +200,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj7[1] = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(10448).KeyboardIcon;
+      let ImageIcon = tmp2(10487).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(6882).ImageIcon;
+      ImageIcon = tmp2(6920).ImageIcon;
     }
     obj7[2] = ImageIcon;
     obj7[3] = function onPress() {
@@ -215,7 +215,7 @@ function ActionBar(channel) {
       }
       const result1 = channel(closure_1_2[75]).trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    callback(tmp2(5432).HeaderActionButton, obj7);
+    callback(tmp2(5437).HeaderActionButton, obj7);
     const tmp15 = callback;
   }
 }
@@ -522,7 +522,7 @@ export default function ForumComposer(parentChannel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -687,7 +687,7 @@ export default function ForumComposer(parentChannel) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

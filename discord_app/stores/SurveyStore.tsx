@@ -1,16 +1,16 @@
-// === Module 9874: fetchSurveyIfNeeded ===
+// === Module 9913: fetchSurveyIfNeeded ===
 
-// Module 9874 (fetchSurveyIfNeeded)
+// Module 9913 (fetchSurveyIfNeeded)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import overrideSurvey from "overrideSurvey" /* 9875 */;
-import closure_4 from "handleInviteData" /* 4295 */;
+import tDefault from "t" /* 3978 */;
+import overrideSurvey from "overrideSurvey" /* 9914 */;
+import closure_4 from "handleInviteData" /* 4299 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_7 from "handleConnectionOpen" /* 4201 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;

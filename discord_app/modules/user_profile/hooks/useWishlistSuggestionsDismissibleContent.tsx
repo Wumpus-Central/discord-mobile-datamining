@@ -1,10 +1,10 @@
-// === Module 12323: useWishlistSuggestionsDismissibleContent ===
+// === Module 12375: useWishlistSuggestionsDismissibleContent ===
 
-// Module 12323 (useWishlistSuggestionsDismissibleContent)
+// Module 12375 (useWishlistSuggestionsDismissibleContent)
 import setDefault from "set" /* 687 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
+import closure_4 from "createUserWidgetFromServer" /* 5370 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

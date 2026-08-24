@@ -1,11 +1,11 @@
-// === Module 10680: canSeeExperimentEmbeds ===
+// === Module 10719: canSeeExperimentEmbeds ===
 
-// Module 10680 (canSeeExperimentEmbeds)
+// Module 10719 (canSeeExperimentEmbeds)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getHash" /* 4288 */;
+import closure_5 from "getHash" /* 4292 */;
 import closure_6 from "initialize" /* 1212 */;
 
 require = arg1;

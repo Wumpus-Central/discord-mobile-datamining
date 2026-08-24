@@ -1,40 +1,40 @@
-// === Module 16444: getMessages ===
+// === Module 16539: getMessages ===
 
-// Module 16444 (getMessages)
-import _modDef16445 from "module_16445" /* 16445 */;
-import format from "format" /* 16487 */;
-import module_16454 from "module_16454" /* 16454 */;
-import module_16455 from "module_16455" /* 16455 */;
-import module_16456 from "module_16456" /* 16456 */;
-import module_16457 from "module_16457" /* 16457 */;
-import module_16458 from "module_16458" /* 16458 */;
-import module_16459 from "module_16459" /* 16459 */;
-import module_16460 from "module_16460" /* 16460 */;
-import module_16461 from "module_16461" /* 16461 */;
-import module_16462 from "module_16462" /* 16462 */;
-import module_16463 from "module_16463" /* 16463 */;
-import module_16464 from "module_16464" /* 16464 */;
-import module_16465 from "module_16465" /* 16465 */;
-import module_16466 from "module_16466" /* 16466 */;
-import module_16467 from "module_16467" /* 16467 */;
-import module_16468 from "module_16468" /* 16468 */;
-import module_16469 from "module_16469" /* 16469 */;
-import module_16470 from "module_16470" /* 16470 */;
-import module_16471 from "module_16471" /* 16471 */;
-import module_16472 from "module_16472" /* 16472 */;
-import module_16473 from "module_16473" /* 16473 */;
-import module_16474 from "module_16474" /* 16474 */;
-import module_16475 from "module_16475" /* 16475 */;
-import module_16476 from "module_16476" /* 16476 */;
-import module_16477 from "module_16477" /* 16477 */;
-import module_16478 from "module_16478" /* 16478 */;
-import module_16479 from "module_16479" /* 16479 */;
-import module_16480 from "module_16480" /* 16480 */;
-import module_16481 from "module_16481" /* 16481 */;
+// Module 16539 (getMessages)
+import _modDef16540 from "module_16540" /* 16540 */;
+import format from "format" /* 16582 */;
+import module_16549 from "module_16549" /* 16549 */;
+import module_16550 from "module_16550" /* 16550 */;
+import module_16551 from "module_16551" /* 16551 */;
+import module_16552 from "module_16552" /* 16552 */;
+import module_16553 from "module_16553" /* 16553 */;
+import module_16554 from "module_16554" /* 16554 */;
+import module_16555 from "module_16555" /* 16555 */;
+import module_16556 from "module_16556" /* 16556 */;
+import module_16557 from "module_16557" /* 16557 */;
+import module_16558 from "module_16558" /* 16558 */;
+import module_16559 from "module_16559" /* 16559 */;
+import module_16560 from "module_16560" /* 16560 */;
+import module_16561 from "module_16561" /* 16561 */;
+import module_16562 from "module_16562" /* 16562 */;
+import module_16563 from "module_16563" /* 16563 */;
+import module_16564 from "module_16564" /* 16564 */;
+import module_16565 from "module_16565" /* 16565 */;
+import module_16566 from "module_16566" /* 16566 */;
+import module_16567 from "module_16567" /* 16567 */;
+import module_16568 from "module_16568" /* 16568 */;
+import module_16569 from "module_16569" /* 16569 */;
+import module_16570 from "module_16570" /* 16570 */;
+import module_16571 from "module_16571" /* 16571 */;
+import module_16572 from "module_16572" /* 16572 */;
+import module_16573 from "module_16573" /* 16573 */;
+import module_16574 from "module_16574" /* 16574 */;
+import module_16575 from "module_16575" /* 16575 */;
+import module_16576 from "module_16576" /* 16576 */;
 import { EventEmitter } from "EventEmitter" /* 652 */;
 
 require = arg1;
-global.IntlMessageFormat = _modDef16445;
+global.IntlMessageFormat = _modDef16540;
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -138,11 +138,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(16487);
+        obj = self(16582);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(16487).getMessage(tmp7, tmp);
+          return self(16582).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -171,7 +171,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("module_16486"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("module_16581"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {

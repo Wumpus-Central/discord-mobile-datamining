@@ -1,8 +1,8 @@
-// === Module 5343: fromServer ===
+// === Module 5348: fromServer ===
 
-// Module 5343 (fromServer)
+// Module 5348 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 5339 */;
+import ShopBlockType from "ShopBlockType" /* 5344 */;
 
 let prototype;
 prototype = function FeedBlockRecord(arg0) {

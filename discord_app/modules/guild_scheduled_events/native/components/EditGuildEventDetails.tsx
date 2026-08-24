@@ -1,12 +1,12 @@
-// === Module 8883: EditGuildEventDetails ===
+// === Module 8920: EditGuildEventDetails ===
 
-// Module 8883 (EditGuildEventDetails)
+// Module 8920 (EditGuildEventDetails)
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 4370 */;
+import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 4374 */;
 import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);

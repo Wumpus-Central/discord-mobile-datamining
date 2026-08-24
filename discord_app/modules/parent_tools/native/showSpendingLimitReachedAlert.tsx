@@ -1,27 +1,27 @@
-// === Module 7620: isSpendingLimitError ===
+// === Module 7658: isSpendingLimitError ===
 
-// Module 7620 (isSpendingLimitError)
+// Module 7658 (isSpendingLimitError)
 import set from "set" /* 2 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
-import _modDef4656 from "module_4656" /* 4656 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4277 */;
+import _modDef4662 from "module_4662" /* 4662 */;
 
 const result = set.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {
   let tmp3 = billingError instanceof V6OrEarlierAPIError.BillingError;
   if (tmp3) {
-    let tmp4 = billingError.code === tmp(4061).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
+    let tmp4 = billingError.code === tmp(4064).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
     if (!tmp4) {
-      tmp4 = billingError.code === tmp(4061).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED;
+      tmp4 = billingError.code === tmp(4064).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED;
     }
     tmp3 = tmp4;
   }
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  let obj = activeLinkUserIds(7621);
+  let obj = activeLinkUserIds(7659);
   activeLinkUserIds = obj.getActiveLinkUserIds();
-  obj1 = _modDef4656;
+  obj1 = _modDef4662;
   obj = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1236).intl;
   obj[0] = intl.string(activeLinkUserIds(1236).t.QJKKrT);

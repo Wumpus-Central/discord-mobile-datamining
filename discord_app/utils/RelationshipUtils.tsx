@@ -1,18 +1,18 @@
-// === Module 16692: showPendingNotification ===
+// === Module 16788: showPendingNotification ===
 
-// Module 16692 (showPendingNotification)
+// Module 16788 (showPendingNotification)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import _modDef14825 from "module_14825" /* 14825 */;
+import _modDef14889 from "module_14889" /* 14889 */;
 
 const FriendsSections = ME.FriendsSections;
 const result = set.fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
   const intl = getSystemLocale.intl;
-  let obj = _modDef14825;
+  let obj = _modDef14889;
   const stringResult = intl.string(getSystemLocale.t["t3+Af3"]);
   obj = {
     omitViewTracking: true,
@@ -28,7 +28,7 @@ export const showPendingNotification = function showPendingNotification(user) {
 export const showAcceptedNotification = function showAcceptedNotification(user) {
   const _require = user;
   const intl = _require(1236).intl;
-  let obj = _modDef14825;
+  let obj = _modDef14889;
   const stringResult = intl.string(_require(1236).t.MYr3Ka);
   obj = {
     omitViewTracking: true,

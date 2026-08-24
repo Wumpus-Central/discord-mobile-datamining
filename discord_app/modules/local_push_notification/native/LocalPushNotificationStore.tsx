@@ -1,14 +1,14 @@
-// === Module 13262: set ===
+// === Module 13320: set ===
 
-// Module 13262 (set)
+// Module 13320 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
+import tDefault from "t" /* 3978 */;
+import NativeModulesDefault from "NativeModules" /* 11628 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "recomputeGuild" /* 4977 */;
-import LocalNotificationTypes from "LocalNotificationTypes" /* 13263 */;
+import closure_4 from "recomputeGuild" /* 4982 */;
+import LocalNotificationTypes from "LocalNotificationTypes" /* 13321 */;
 import { VerificationLevels } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -44,9 +44,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = callback(11579).cancelLocalNotifications(userInfo);
-        const obj = callback(11579);
-        const result1 = callback(11579).cancelLocalNotifications(userInfo);
+        const result = callback(11628).cancelLocalNotifications(userInfo);
+        const obj = callback(11628);
+        const result1 = callback(11628).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -78,8 +78,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(11579).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(11579);
+              const result = tmp15(11628).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(11628);
             }
             tmp15 = importDefault;
           }

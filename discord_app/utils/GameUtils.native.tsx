@@ -1,6 +1,6 @@
-// === Module 7245: set ===
+// === Module 7283: set ===
 
-// Module 7245 (set)
+// Module 7283 (set)
 import set from "set" /* 2 */;
 
 let c0 = "not supported";

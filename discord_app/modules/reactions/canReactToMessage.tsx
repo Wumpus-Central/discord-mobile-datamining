@@ -1,11 +1,11 @@
-// === Module 8194: canReactToMessageInternal ===
+// === Module 8234: canReactToMessageInternal ===
 
-// Module 8194 (canReactToMessageInternal)
+// Module 8234 (canReactToMessageInternal)
 import hasFlag from "hasFlag" /* 1403 */;
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "recomputeGuild" /* 4977 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4013 */;
+import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "recomputeGuild" /* 4982 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

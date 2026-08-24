@@ -1,13 +1,13 @@
-// === Module 7205: useSKUPrice ===
+// === Module 7243: useSKUPrice ===
 
-// Module 7205 (useSKUPrice)
+// Module 7243 (useSKUPrice)
 import applyDefault from "apply" /* 12 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 7207 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
+import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 7245 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "resetStoreState" /* 7206 */;
+import closure_6 from "resetStoreState" /* 7244 */;
 import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
@@ -81,7 +81,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "accessibilityRole", purchaseType: 1359806465, storeHasPrice: -434843420 };
+    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -238,7 +238,7 @@ function formatSKUPrice(arg0, arg1) {
 const result = require("set").fileFinishedImporting("modules/storefront/StorefrontUtils.tsx");
 
 export const transformStorefrontPricesServer = function transformStorefrontPricesServer(storefront_pricing) {
-  let obj = { skuPriceMap: applyDefault.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
+  let obj = { skuPriceMap: applyDefault.mapValues(storefront_pricing.sku_price_map, (pricingResultId) => ({ pricingResultId: pricingResultId.pricing_result_id, storefrontPromotionIds: pricingResultId.storefront_promotion_ids, rewardResultIds: pricingResultId.reward_result_ids })), pricingResultIdMap: null, rewardResultIdMap: null };
   const obj2 = applyDefault;
   obj[1] = applyDefault.mapValues(storefront_pricing.pricing_result_id_map, (arg0) => callback(12).mapValues(arg0, (user_price) => {
     const obj = { userPrice: user_price.map((currency) => ({ currency: currency.currency, amount: currency.amount })), prices: callback(table[6]).mapValues(user_price.prices, (arg0) => callback(table[6]).mapValues(arg0, (arr) => arr.map(() => { ... }))) };
@@ -377,7 +377,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "accessibilityRole", purchaseType: 1359806465, storeHasPrice: -434843420 };
+    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

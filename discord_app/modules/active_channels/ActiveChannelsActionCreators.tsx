@@ -1,6 +1,6 @@
-// === Module 15324: _fetchActiveChannels ===
+// === Module 15388: _fetchActiveChannels ===
 
-// Module 15324 (_fetchActiveChannels)
+// Module 15388 (_fetchActiveChannels)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -25,7 +25,7 @@ function _fetchActiveChannels() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

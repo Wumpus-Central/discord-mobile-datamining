@@ -1,10 +1,10 @@
-// === Module 13232: hydrateGuild ===
+// === Module 13287: hydrateGuild ===
 
-// Module 13232 (hydrateGuild)
+// Module 13287 (hydrateGuild)
 import set2 from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import itemsDefault from "items" /* 1955 */;
-import isCacheEnabled from "isCacheEnabled" /* 5395 */;
+import isCacheEnabled from "isCacheEnabled" /* 5400 */;
 
 function hydrateGuild(guild) {
   closure_0 = guild;
@@ -359,14 +359,14 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   const obj = itemsDefault;
   const tmp4 = require;
   if (obj2.isCacheEnabled()) {
-    let tmpResult = tmp(5401);
+    let tmpResult = tmp(5406);
     let committedVersions = tmpResult.getCommittedVersions();
   } else {
     committedVersions = Promise.resolve({});
   }
   obj2 = isCacheEnabled;
   if (tmp4Result.isCacheEnabled()) {
-    tmpResult = tmp(1975);
+    tmpResult = tmp(1976);
     let guildIds = tmpResult.getGuildIds();
   } else {
     const _Set = Set;
@@ -374,8 +374,8 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     guildIds = Promise.resolve(set);
   }
   if (null != databaseResult) {
-    let okAsyncResult = tmp(5402).okAsync(databaseResult);
-    const tmpResult1 = tmp(5402);
+    let okAsyncResult = tmp(5407).okAsync(databaseResult);
+    const tmpResult1 = tmp(5407);
   } else {
     okAsyncResult = Promise.resolve(false);
   }
@@ -395,7 +395,7 @@ export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPriori
     tmp4 = false === closure_1.databaseOk;
   }
   if (tmp4) {
-    let tmp2Result = tmp2(1971);
+    let tmp2Result = tmp2(1972);
     const result = tmp2Result.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
   }
   tmp2Result = tmp2(12);

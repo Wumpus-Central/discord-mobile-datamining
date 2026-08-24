@@ -1,11 +1,11 @@
-// === Module 11805: JoinRequestRejectionReasonActionSheet ===
+// === Module 11854: JoinRequestRejectionReasonActionSheet ===
 
-// Module 11805 (JoinRequestRejectionReasonActionSheet)
+// Module 11854 (JoinRequestRejectionReasonActionSheet)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 class JoinRequestRejectionReasonActionSheet {
@@ -46,7 +46,7 @@ class JoinRequestRejectionReasonActionSheet {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

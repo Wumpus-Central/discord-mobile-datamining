@@ -1,26 +1,26 @@
-// === Module 15596: getMediaIcon ===
+// === Module 15662: getMediaIcon ===
 
-// Module 15596 (getMediaIcon)
+// Module 15662 (getMediaIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import map from "map" /* 4097 */;
-import StageIcon from "StageIcon" /* 6892 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
-import setDefault from "set" /* 7190 */;
-import AppsIcon from "AppsIcon" /* 7974 */;
-import registerAssetDefault from "registerAsset" /* 7975 */;
-import VideoIcon from "VideoIcon" /* 7998 */;
-import registerAssetDefault2 from "registerAsset" /* 8129 */;
-import registerAssetDefault3 from "registerAsset" /* 8896 */;
-import CalendarIcon from "CalendarIcon" /* 8897 */;
-import ScreenIcon from "ScreenIcon" /* 12015 */;
-import canConnectToChannelDefault from "canConnectToChannel" /* 15594 */;
-import registerAssetDefault4 from "registerAsset" /* 15597 */;
-import registerAssetDefault5 from "registerAsset" /* 15598 */;
-import registerAssetDefault6 from "registerAsset" /* 15599 */;
+import map from "map" /* 4100 */;
+import StageIcon from "StageIcon" /* 6930 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 6934 */;
+import setDefault from "set" /* 7228 */;
+import AppsIcon from "AppsIcon" /* 8013 */;
+import registerAssetDefault from "registerAsset" /* 8014 */;
+import VideoIcon from "VideoIcon" /* 8037 */;
+import registerAssetDefault2 from "registerAsset" /* 8168 */;
+import registerAssetDefault3 from "registerAsset" /* 8933 */;
+import CalendarIcon from "CalendarIcon" /* 8934 */;
+import ScreenIcon from "ScreenIcon" /* 12064 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 15658 */;
+import registerAssetDefault4 from "registerAsset" /* 15663 */;
+import registerAssetDefault5 from "registerAsset" /* 15664 */;
+import registerAssetDefault6 from "registerAsset" /* 15665 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function getMediaIcon(closure_3) {
@@ -113,7 +113,7 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildActivityIndicato
   closure_0 = undefined;
   importDefault = undefined;
   ({ guildId, style } = arg0);
-  const tmp = canConnectToChannelDefault(guildId);
+  const tmp = useGuildsBarGuildMediaStateDefault(guildId);
   closure_0 = tmp;
   const tmp2 = getMediaIcon(tmp);
   importDefault = tmp2;
@@ -163,7 +163,7 @@ export default memoResult1;
 export const GuildsBarActivityIndicatorBase = memoResult;
 export { getMediaIcon };
 export const useActivityIndicatorState = function useActivityIndicatorState(guildId) {
-  const tmp = canConnectToChannelDefault(guildId);
+  const tmp = useGuildsBarGuildMediaStateDefault(guildId);
   closure_0 = tmp;
   const tmp2 = getMediaIcon(tmp);
   importDefault = tmp2;

@@ -1,13 +1,13 @@
-// === Module 14460: QuestDockDismissalNotification ===
+// === Module 14528: QuestDockDismissalNotification ===
 
-// Module 14460 (QuestDockDismissalNotification)
+// Module 14528 (QuestDockDismissalNotification)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import registerAssetDefault from "registerAsset" /* 7919 */;
+import dispatcherDefault from "dispatcher" /* 4097 */;
+import registerAssetDefault from "registerAsset" /* 7958 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function QuestDockDismissalNotification() {
@@ -23,7 +23,7 @@ function QuestDockDismissalNotification() {
     }
   };
   obj[2] = intl.format(_require(1236).t.dYE1px, obj);
-  return jsx(_require(4734).Text, {
+  return jsx(_require(4739).Text, {
     arrowHook() {
       let obj = { style: closure_0.toastArrowForwardIconContainer, children: null };
       obj = { resizeMode: "contain", source: closure_1_1(closure_1_2[7]), style: closure_0.toastArrowForwardIcon };

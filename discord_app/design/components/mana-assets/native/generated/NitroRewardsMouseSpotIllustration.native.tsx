@@ -1,10 +1,10 @@
-// === Module 5988: NitroRewardsMouseSpotIllustration ===
+// === Module 6019: NitroRewardsMouseSpotIllustration ===
 
-// Module 5988 (NitroRewardsMouseSpotIllustration)
+// Module 6019 (NitroRewardsMouseSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5989 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6020 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/NitroRewardsMouseSpotIllustration.native.tsx");

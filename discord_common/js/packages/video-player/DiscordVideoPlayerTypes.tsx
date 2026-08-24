@@ -1,6 +1,6 @@
-// === Module 7456: DEFAULT_VIDEO_VOLUME ===
+// === Module 7494: DEFAULT_VIDEO_VOLUME ===
 
-// Module 7456 (DEFAULT_VIDEO_VOLUME)
+// Module 7494 (DEFAULT_VIDEO_VOLUME)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");

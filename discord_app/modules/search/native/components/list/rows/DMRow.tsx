@@ -1,20 +1,20 @@
-// === Module 15875: FriendPresence ===
+// === Module 15972: FriendPresence ===
 
-// Module 15875 (FriendPresence)
+// Module 15972 (FriendPresence)
 import ThemesDefault from "Themes" /* 712 */;
-import nameFromUser from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9893 */;
+import nameFromUser from "nameFromUser" /* 4223 */;
+import Text from "Text" /* 4739 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9932 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "sortActivity" /* 4559 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_9 from "sortActivity" /* 4564 */;
+import closure_10 from "markAllUserIdListsStale" /* 4033 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function FriendPresence(user) {
@@ -98,7 +98,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
           c3 = 0;
           callback(false);
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp23) {
         closure_2 = tmp23;

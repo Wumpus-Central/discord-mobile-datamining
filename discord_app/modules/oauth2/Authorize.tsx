@@ -1,12 +1,12 @@
-// === Module 4373: filterScopes ===
+// === Module 4377: filterScopes ===
 
-// Module 4373 (filterScopes)
+// Module 4377 (filterScopes)
 import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import set from "set" /* 4375 */;
-import keysSorter from "keysSorter" /* 4376 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import set from "set" /* 4379 */;
+import keysSorter from "keysSorter" /* 4380 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
+import closure_4 from "handleConnectionOpen" /* 4201 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -20,10 +20,10 @@ export const filterScopes = function filterScopes(items) {
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(tmp(4379).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(tmp(4379).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };

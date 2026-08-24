@@ -1,12 +1,12 @@
-// === Module 4358: trimTrailingPunctuation ===
+// === Module 4362: trimTrailingPunctuation ===
 
-// Module 4358 (trimTrailingPunctuation)
+// Module 4362 (trimTrailingPunctuation)
 import Url from "Url" /* 1489 */;
-import closure_2 from "updateInvite" /* 4359 */;
+import closure_2 from "updateInvite" /* 4363 */;
 import { PRIMARY_DOMAIN } from "ME" /* 676 */;
 import { CollectibleShopTab } from "items" /* 678 */;
 import importDefaultResult from "ip" /* 1488 */;
-import importDefaultResult1 from "set" /* 4362 */;
+import importDefaultResult1 from "set" /* 4366 */;
 
 require = arg1;
 function trimTrailingPunctuation(str) {
@@ -1073,7 +1073,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4363).CodedLinkType.INVITE);
+            flag = formatted.includes(url(4367).CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;

@@ -1,17 +1,17 @@
-// === Module 15349: formatVoiceActivityTitle ===
+// === Module 15413: formatVoiceActivityTitle ===
 
-// Module 15349 (formatVoiceActivityTitle)
+// Module 15413 (formatVoiceActivityTitle)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
+import getNicknameDefault from "getNickname" /* 4801 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_5 from "recomputeAffinities" /* 5412 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import closure_7 from "updateVoiceState" /* 4547 */;
+import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14708 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
@@ -132,8 +132,8 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const _require = channelId;
-  const voiceUserAffinitySortType = _require(8285).useVoiceUserAffinitySortType("useVoiceChannelUsers");
-  const obj = _require(8285);
+  const voiceUserAffinitySortType = _require(8325).useVoiceUserAffinitySortType("useVoiceChannelUsers");
+  const obj = _require(8325);
   const items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
   return _require(589).useStateFromStoresArray(items, () => {

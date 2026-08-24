@@ -1,6 +1,6 @@
-// === Module 5010: addGlobalTag ===
+// === Module 5015: addGlobalTag ===
 
-// Module 5010 (addGlobalTag)
+// Module 5015 (addGlobalTag)
 import set from "set" /* 2 */;
 import DesignIds from "DesignIds" /* 673 */;
 

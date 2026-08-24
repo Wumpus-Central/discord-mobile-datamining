@@ -1,17 +1,17 @@
-// === Module 15250: PrivacyPolicyDescription ===
+// === Module 15314: PrivacyPolicyDescription ===
 
-// Module 15250 (PrivacyPolicyDescription)
+// Module 15314 (PrivacyPolicyDescription)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import Text from "Text" /* 4734 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15251 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4108 */;
+import Text from "Text" /* 4739 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15315 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 5257 */;
-import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15212 */;
+import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 5262 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15276 */;
 import { MarketingURLs } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PrivacyPolicyDescription(style) {
@@ -37,12 +37,12 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   if (asCheckbox) {
     obj = { checked: null };
     obj[0] = consent;
-    let tmp7Result = tmp7(tmp2(8085).FormCheckbox, obj);
+    let tmp7Result = tmp7(tmp2(8124).FormCheckbox, obj);
     let tmp9 = tmp7;
   } else {
     obj1 = { selected: null };
     obj1[0] = consent;
-    tmp7Result = tmp7(tmp2(8083).FormRow.Radio, obj1);
+    tmp7Result = tmp7(tmp2(8122).FormRow.Radio, obj1);
     tmp9 = tmp7;
   }
   const items = [tmp7Result, ];

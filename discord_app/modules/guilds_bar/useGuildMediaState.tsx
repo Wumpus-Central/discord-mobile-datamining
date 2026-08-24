@@ -1,19 +1,19 @@
-// === Module 15594: canConnectToChannel ===
+// === Module 15659: canConnectToChannel ===
 
-// Module 15594 (canConnectToChannel)
+// Module 15659 (canConnectToChannel)
 import set from "set" /* 692 */;
 import closure_3 from "participantFromServer" /* 1390 */;
 import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import { isVoiceChannel } from "createChannelRecord" /* 1395 */;
-import closure_6 from "reset" /* 4652 */;
+import closure_6 from "reset" /* 4658 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "markAllUserIdListsStale" /* 4030 */;
-import closure_12 from "handleConnectionOpen" /* 1979 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_14 from "updateVoiceState" /* 4542 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_11 from "markAllUserIdListsStale" /* 4033 */;
+import closure_12 from "handleConnectionOpen" /* 1980 */;
+import closure_13 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_14 from "updateVoiceState" /* 4547 */;
 import { BasicPermissions } from "ME" /* 676 */;
 
 require = arg1;

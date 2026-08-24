@@ -1,13 +1,13 @@
-// === Module 14156: route ===
+// === Module 14224: route ===
 
-// Module 14156 (route)
+// Module 14224 (route)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 5264 */;
+import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 5269 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFetchedCredentials" /* 14077 */;
+import closure_4 from "hasFetchedCredentials" /* 14145 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import createToggle from "createToggle" /* 10669 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 createToggle = {
@@ -27,7 +27,7 @@ createToggle = {
         flag = false;
       }
       if (!flag) {
-        let obj = callback2(4827);
+        let obj = callback2(4832);
         obj = { title: null, body: null };
         const intl = callback(1236).intl;
         obj[0] = intl.string(callback(1236).t.v740sh);
@@ -55,7 +55,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return require(14080) /* UserSettingsWebAuthn */.default;
+    return require(14148) /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

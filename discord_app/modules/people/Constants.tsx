@@ -1,6 +1,6 @@
-// === Module 9891: RELATIONSHIP_COUNT_ANIMATION_THRESHOLD ===
+// === Module 9930: RELATIONSHIP_COUNT_ANIMATION_THRESHOLD ===
 
-// Module 9891 (RELATIONSHIP_COUNT_ANIMATION_THRESHOLD)
+// Module 9930 (RELATIONSHIP_COUNT_ANIMATION_THRESHOLD)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/people/Constants.tsx");

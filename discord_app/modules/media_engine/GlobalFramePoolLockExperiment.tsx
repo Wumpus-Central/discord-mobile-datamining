@@ -1,6 +1,6 @@
-// === Module 13116: getGlobalFramePoolLockExperimentConfig ===
+// === Module 13172: getGlobalFramePoolLockExperimentConfig ===
 
-// Module 13116 (getGlobalFramePoolLockExperimentConfig)
+// Module 13172 (getGlobalFramePoolLockExperimentConfig)
 import getUnitIdDefault from "getUnitId" /* 1368 */;
 
 let obj = { 1: null };

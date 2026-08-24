@@ -1,34 +1,34 @@
-// === Module 16995: ArchiveOrDeleteTierSection ===
+// === Module 17088: ArchiveOrDeleteTierSection ===
 
-// Module 16995 (ArchiveOrDeleteTierSection)
+// Module 17088 (ArchiveOrDeleteTierSection)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7219 */;
-import FormHeaderDefault from "FormHeader" /* 8913 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 14558 */;
-import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 16945 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 16958 */;
-import useEditStateContext from "useEditStateContext" /* 16962 */;
-import AddBenefitButton from "AddBenefitButton" /* 16965 */;
-import MemberPreviews from "MemberPreviews" /* 16988 */;
-import Content from "Content" /* 16990 */;
-import registerAssetDefault from "registerAsset" /* 16996 */;
+import Text from "Text" /* 4739 */;
+import Button2 from "Button" /* 4750 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6840 */;
+import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7257 */;
+import FormHeaderDefault from "FormHeader" /* 8950 */;
+import useFetchListingsForGuild from "useFetchListingsForGuild" /* 14626 */;
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 17038 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17051 */;
+import useEditStateContext from "useEditStateContext" /* 17055 */;
+import AddBenefitButton from "AddBenefitButton" /* 17058 */;
+import MemberPreviews from "MemberPreviews" /* 17081 */;
+import Content from "Content" /* 17083 */;
+import registerAssetDefault from "registerAsset" /* 17089 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
-import closure_10 from "usePriceTiers" /* 16950 */;
-import { GuildRoleSubscriptionsTierScenes } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import closure_8 from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
+import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
+import closure_10 from "usePriceTiers" /* 17043 */;
+import { GuildRoleSubscriptionsTierScenes } from "MAX_SUBSCRIPTION_TIERS" /* 14619 */;
 import { GuildSettingsSections } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function ArchiveOrDeleteTierSection() {
@@ -137,13 +137,13 @@ let closure_22 = require("noop").forwardRef((arg0, ref) => {
           items = [callback2(Button.Spacer, { size: 16 }), , ];
           obj = { children: null };
           obj[0] = error.getAnyErrorMessage();
-          items[1] = callback2(groupListingId(11384), obj);
+          items[1] = callback2(groupListingId(11435), obj);
           Spacer = Button.Spacer;
           tmp = callback2(Spacer, { size: 16 });
           items[2] = tmp;
           obj[0] = items;
           let tmp13 = callback3(closure_15, obj);
-          const tmp12 = groupListingId(11384);
+          const tmp12 = groupListingId(11435);
         } else {
           obj1 = { message: null, ctaMessage: null, onClick: null, submitting: null, disabled: null };
           const intl = getSystemLocale.intl;
@@ -163,8 +163,8 @@ let closure_22 = require("noop").forwardRef((arg0, ref) => {
           };
           obj1[3] = submitting;
           obj1[4] = roleSubscriptionSettingsDisabled;
-          tmp13 = callback2(groupListingId(16997), obj1);
-          const tmp17 = groupListingId(16997);
+          tmp13 = callback2(groupListingId(17090), obj1);
+          const tmp17 = groupListingId(17090);
         }
       }
     }

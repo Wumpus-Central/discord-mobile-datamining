@@ -1,6 +1,6 @@
-// === Module 4069: STICKER_PICKER_TAB_PANEL_ID ===
+// === Module 4072: STICKER_PICKER_TAB_PANEL_ID ===
 
-// Module 4069 (STICKER_PICKER_TAB_PANEL_ID)
+// Module 4072 (STICKER_PICKER_TAB_PANEL_ID)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/stickers/StickersConstants.tsx");

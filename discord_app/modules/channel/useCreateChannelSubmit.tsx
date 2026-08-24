@@ -1,6 +1,6 @@
-// === Module 8847: useCreateChannelSubmit ===
+// === Module 8884: useCreateChannelSubmit ===
 
-// Module 8847 (useCreateChannelSubmit)
+// Module 8884 (useCreateChannelSubmit)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -34,7 +34,7 @@ export default function useCreateChannelSubmit(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

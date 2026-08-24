@@ -1,9 +1,9 @@
-// === Module 4556: DEFAULT_FRECENCY ===
+// === Module 4561: DEFAULT_FRECENCY ===
 
-// Module 4556 (DEFAULT_FRECENCY)
+// Module 4561 (DEFAULT_FRECENCY)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
-import tDefault from "t" /* 3975 */;
+import tDefault from "t" /* 3978 */;
 
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
   return Math.ceil(arg0 * (arg1 / numOfRecentUses.numOfRecentUses));

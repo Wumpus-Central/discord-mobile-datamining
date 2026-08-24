@@ -1,17 +1,17 @@
-// === Module 11366: ChannelIcon ===
+// === Module 11417: ChannelIcon ===
 
-// Module 11366 (ChannelIcon)
+// Module 11417 (ChannelIcon)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import TextIcon3 from "TextIcon" /* 6876 */;
-import stylesDefault from "styles" /* 11357 */;
+import Text from "Text" /* 4739 */;
+import computeChannelNameDefault from "computeChannelName" /* 4989 */;
+import TableRowInner from "TableRowInner" /* 6322 */;
+import TextIcon3 from "TextIcon" /* 6914 */;
+import stylesDefault from "styles" /* 11408 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 class ChannelIcon {

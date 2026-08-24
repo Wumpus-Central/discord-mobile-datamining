@@ -1,6 +1,6 @@
-// === Module 9273: useTooltipPosition ===
+// === Module 9310: useTooltipPosition ===
 
-// Module 9273 (useTooltipPosition)
+// Module 9310 (useTooltipPosition)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");

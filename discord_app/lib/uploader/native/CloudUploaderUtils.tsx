@@ -1,15 +1,15 @@
-// === Module 4870: getUploadPayload ===
+// === Module 4875: getUploadPayload ===
 
-// Module 4870 (getUploadPayload)
+// Module 4875 (getUploadPayload)
 import applyDefault from "apply" /* 12 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "_getSystemLocale" /* 1995 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import closure_5 from "refreshSourceMapCookie" /* 706 */;
 
 const require = arg1;
 function getUploadPayload(closure_0) {
-  const obj = { filename: closure_0.filename, file_size: closure_0.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
+  const obj = { filename: closure_0.filename, file_size: closure_0.currentSize, id: applyDefault.uniqueId(), original_content_type: "ct" };
   return obj;
 }
 let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");

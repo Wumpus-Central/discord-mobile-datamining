@@ -1,10 +1,10 @@
-// === Module 6230: SwordAndChestSpotIllustration ===
+// === Module 6261: SwordAndChestSpotIllustration ===
 
-// Module 6230 (SwordAndChestSpotIllustration)
+// Module 6261 (SwordAndChestSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6231 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6262 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SwordAndChestSpotIllustration.native.tsx");

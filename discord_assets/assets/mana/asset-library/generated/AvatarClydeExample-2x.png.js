@@ -1,6 +1,6 @@
-// === Module 5509: metadata ===
+// === Module 5514: metadata ===
 
-// Module 5509 (metadata)
+// Module 5514 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarClydeExample-2x.png.js");

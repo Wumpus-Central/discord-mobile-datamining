@@ -1,11 +1,11 @@
-// === Module 14340: PremiumScreen ===
+// === Module 14408: PremiumScreen ===
 
-// Module 14340 (PremiumScreen)
+// Module 14408 (PremiumScreen)
 import noopAll from "noop" /* 19 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7382 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
-import dispatcherDefault from "dispatcher" /* 7877 */;
+import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7420 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7423 */;
+import dispatcherDefault from "dispatcher" /* 7916 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

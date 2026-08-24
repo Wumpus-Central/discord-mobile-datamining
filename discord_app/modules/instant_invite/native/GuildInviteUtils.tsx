@@ -1,20 +1,20 @@
-// === Module 12331: _sendGuildInvite ===
+// === Module 12383: _sendGuildInvite ===
 
-// Module 12331 (_sendGuildInvite)
+// Module 12383 (_sendGuildInvite)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "handleInviteData" /* 4295 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "comparator" /* 1981 */;
+import closure_6 from "handleInviteData" /* 4299 */;
+import closure_7 from "trackCommunicationDisabled" /* 1991 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "insertUnsortedGuilds" /* 5078 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_10 from "insertUnsortedGuilds" /* 5083 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import { setSendState } from "setSendState" /* 12332 */;
-import { InviteSendStates } from "InviteSendStates" /* 4371 */;
+import { setSendState } from "setSendState" /* 12384 */;
+import { InviteSendStates } from "InviteSendStates" /* 4375 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -39,7 +39,7 @@ function _sendGuildInvite() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -68,12 +68,12 @@ function _sendGuildInvite() {
                 throw Error();
               } else {
                 obj1 = { max_uses: null, max_age: null, unique: true };
-                obj1[0] = callback2(8920).INVITE_OPTIONS_ONCE.value;
-                obj1[1] = callback2(8920).INVITE_OPTIONS_7_DAYS.value;
+                obj1[0] = callback2(8957).INVITE_OPTIONS_ONCE.value;
+                obj1[1] = callback2(8957).INVITE_OPTIONS_7_DAYS.value;
                 c6 = 2;
                 c7 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback2(8042).createInvite(defaultChannel.id, obj1, tmp45);
+                obj2[0] = callback2(8081).createInvite(defaultChannel.id, obj1, tmp45);
                 return obj2;
               }
               tmp45 = dependencyMap;
@@ -91,10 +91,10 @@ function _sendGuildInvite() {
               throw arg1;
             } else if (arg0 !== 2) {
               code = arg1;
-              let obj4 = callback2(11889);
+              let obj4 = callback2(11938);
               const obj3 = { inviteKey: null, type: null, user: null, location: null, inviteAnalyticsMetadata: null };
               obj3[0] = code.code;
-              obj3[1] = callback(11889).InvitePropertiesType.USER;
+              obj3[1] = callback(11938).InvitePropertiesType.USER;
               obj3[2] = user.getUser(callback);
               obj3[3] = dependencyMap;
               obj4 = { source: null };
@@ -143,7 +143,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   obj.track(constants.OPEN_POPOUT, obj);
   const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(asyncRequireImpl(12333, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(asyncRequireImpl(12385, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

@@ -1,6 +1,6 @@
-// === Module 13916: createLock ===
+// === Module 13984: createLock ===
 
-// Module 13916 (createLock)
+// Module 13984 (createLock)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");

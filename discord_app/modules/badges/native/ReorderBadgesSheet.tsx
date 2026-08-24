@@ -1,21 +1,21 @@
-// === Module 14044: BadgeTileContent ===
+// === Module 14112: BadgeTileContent ===
 
-// Module 14044 (BadgeTileContent)
+// Module 14112 (BadgeTileContent)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableCard from "PressableCard" /* 6292 */;
-import DragIcon from "DragIcon" /* 6301 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 14041 */;
-import PX_16 from "PX_16" /* 14043 */;
+import PressableCard from "PressableCard" /* 6323 */;
+import DragIcon from "DragIcon" /* 6332 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 14109 */;
+import PX_16 from "PX_16" /* 14111 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleFormOpen" /* 8370 */;
+import closure_5 from "handleFormOpen" /* 8409 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "initialize" /* 8936 */;
+import closure_7 from "initialize" /* 8973 */;
 import ME from "ME" /* 676 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function BadgeTileContent(badge) {

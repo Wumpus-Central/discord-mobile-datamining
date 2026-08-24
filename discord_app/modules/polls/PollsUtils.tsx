@@ -1,22 +1,22 @@
-// === Module 7508: getSampleOfVoterUsernamesForAnswer ===
+// === Module 7546: getSampleOfVoterUsernamesForAnswer ===
 
-// Module 7508 (getSampleOfVoterUsernamesForAnswer)
+// Module 7546 (getSampleOfVoterUsernamesForAnswer)
 import v1 from "v1" /* 514 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4819 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reactionKey" /* 7509 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import closure_4 from "reactionKey" /* 7547 */;
+import closure_5 from "reinjectEphemerals" /* 4999 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_7 from "markAllUserIdListsStale" /* 4033 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7614 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7510).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7548).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {

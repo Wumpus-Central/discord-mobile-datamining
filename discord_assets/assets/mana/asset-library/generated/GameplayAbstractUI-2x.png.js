@@ -1,6 +1,6 @@
-// === Module 5799: metadata ===
+// === Module 5830: metadata ===
 
-// Module 5799 (metadata)
+// Module 5830 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameplayAbstractUI-2x.png.js");

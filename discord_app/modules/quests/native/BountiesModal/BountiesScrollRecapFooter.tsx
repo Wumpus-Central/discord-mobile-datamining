@@ -1,17 +1,17 @@
-// === Module 14401: BountiesScrollRecapFooter ===
+// === Module 14469: BountiesScrollRecapFooter ===
 
-// Module 14401 (BountiesScrollRecapFooter)
+// Module 14469 (BountiesScrollRecapFooter)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import Text from "Text" /* 4734 */;
-import OrbsIcon from "OrbsIcon" /* 9238 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import Text from "Text" /* 4739 */;
+import OrbsIcon from "OrbsIcon" /* 9275 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;

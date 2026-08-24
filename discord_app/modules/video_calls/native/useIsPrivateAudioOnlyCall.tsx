@@ -1,13 +1,13 @@
-// === Module 8673: areParticipantStatesEqual ===
+// === Module 8710: areParticipantStatesEqual ===
 
-// Module 8673 (areParticipantStatesEqual)
+// Module 8710 (areParticipantStatesEqual)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
-import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
+import closure_4 from "getParticipants" /* 4778 */;
+import closure_5 from "reset" /* 4658 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_7 from "updateVoiceState" /* 4547 */;
+import { isActivityParticipant } from "ParticipantTypes" /* 4549 */;
 
 const require = arg1;
 function areParticipantStatesEqual(arg0, arg1) {

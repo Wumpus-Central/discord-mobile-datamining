@@ -1,6 +1,6 @@
-// === Module 16505: isLimitedAccessErrorCode ===
+// === Module 16600: isLimitedAccessErrorCode ===
 
-// Module 16505 (isLimitedAccessErrorCode)
+// Module 16600 (isLimitedAccessErrorCode)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

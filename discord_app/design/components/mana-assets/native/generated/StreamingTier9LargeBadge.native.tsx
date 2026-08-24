@@ -1,10 +1,10 @@
-// === Module 6222: StreamingTier9LargeBadge ===
+// === Module 6253: StreamingTier9LargeBadge ===
 
-// Module 6222 (StreamingTier9LargeBadge)
+// Module 6253 (StreamingTier9LargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import vanityUrlDefault from "vanityUrl" /* 6223 */;
+import preloadDefault from "preload" /* 5454 */;
+import vanityUrlDefault from "vanityUrl" /* 6254 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier9LargeBadge.native.tsx");

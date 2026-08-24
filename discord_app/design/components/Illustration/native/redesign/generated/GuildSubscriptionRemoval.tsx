@@ -1,9 +1,9 @@
-// === Module 13050: getGuildSubscriptionRemovalSource ===
+// === Module 13105: getGuildSubscriptionRemovalSource ===
 
-// Module 13050 (getGuildSubscriptionRemovalSource)
+// Module 13105 (getGuildSubscriptionRemovalSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7907 */;
+import getIllustrationSource from "getIllustrationSource" /* 7946 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRe
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(13051);
+      return callback(13106);
     },
     darker() {
-      return callback(13052);
+      return callback(13107);
     },
     light() {
-      return callback(13053);
+      return callback(13108);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRe
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13051);
+      return callback(13106);
     },
     darker() {
-      return callback(13052);
+      return callback(13107);
     },
     light() {
-      return callback(13053);
+      return callback(13108);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) 
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13051);
+      return callback(13106);
     },
     darker() {
-      return callback(13052);
+      return callback(13107);
     },
     light() {
-      return callback(13053);
+      return callback(13108);
     }
   };
   obj = {};

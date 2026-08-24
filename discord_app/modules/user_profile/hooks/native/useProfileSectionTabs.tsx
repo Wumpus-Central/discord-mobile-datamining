@@ -1,9 +1,9 @@
-// === Module 12300: useProfileTabIndices ===
+// === Module 12352: useProfileTabIndices ===
 
-// Module 12300 (useProfileTabIndices)
+// Module 12352 (useProfileTabIndices)
 import closure_0 from "_slicedToArray" /* 32 */;
 import closure_1 from "noop" /* 19 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8968 */;
 
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 

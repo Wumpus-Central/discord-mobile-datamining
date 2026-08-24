@@ -1,8 +1,8 @@
-// === Module 7210: _signOrder ===
+// === Module 7248: _signOrder ===
 
-// Module 7210 (_signOrder)
+// Module 7248 (_signOrder)
 import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 4061 */;
+import setDefault from "set" /* 4064 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -26,7 +26,7 @@ function _signOrder() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -172,7 +172,7 @@ function _getOrder() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -275,7 +275,7 @@ function _fetchOrderEntitlements() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

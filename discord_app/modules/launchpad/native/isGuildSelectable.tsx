@@ -1,10 +1,10 @@
-// === Module 16194: isGuildSelectable ===
+// === Module 16291: isGuildSelectable ===
 
-// Module 16194 (isGuildSelectable)
+// Module 16291 (isGuildSelectable)
 import closure_0 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_1 from "reset" /* 4652 */;
-import closure_2 from "updateGuildUnreadSentinel" /* 5383 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_1 from "reset" /* 4658 */;
+import closure_2 from "updateGuildUnreadSentinel" /* 5388 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 5048 */;
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");
 

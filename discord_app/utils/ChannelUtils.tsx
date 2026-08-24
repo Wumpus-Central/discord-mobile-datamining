@@ -1,22 +1,22 @@
-// === Module 4979: allowChannelAccess ===
+// === Module 4984: allowChannelAccess ===
 
-// Module 4979 (allowChannelAccess)
+// Module 4984 (allowChannelAccess)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 506 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import hasStream from "hasStream" /* 4980 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4985 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import hasStream from "hasStream" /* 4985 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4986 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4990 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "comparator" /* 1980 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4545 */;
+import closure_8 from "comparator" /* 1981 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_10 from "handleConnectionOpen" /* 1980 */;
+import closure_11 from "getVoiceStatesForGuild" /* 4550 */;
 import ME from "ME" /* 676 */;
 
 function allowChannelAccess(id, channelType, MEMBER) {

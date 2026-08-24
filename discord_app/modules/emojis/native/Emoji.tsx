@@ -1,10 +1,10 @@
-// === Module 6930: Emoji ===
+// === Module 6968: Emoji ===
 
-// Module 6930 (Emoji)
+// Module 6968 (Emoji)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
-import preloadDefault from "preload" /* 5449 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4041 */;
+import preloadDefault from "preload" /* 5454 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThemeChange" /* 1302 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -15,7 +15,7 @@ const result = require("set").fileFinishedImporting("modules/emojis/native/Emoji
 
 export default function Emoji(arg0) {
   ({ src, name } = arg0);
-  ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit } = arg0);
+  ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit, onError } = arg0);
   let obj = set;
   let uRL = src;
   if (obj.isAndroid()) {
@@ -29,18 +29,19 @@ export default function Emoji(arg0) {
   if (!forceTextEmoji) {
     if (null != uRL) {
       if ("" !== uRL) {
-        obj = { resizeMode: "contain", style: null, placeholder: null, source: null };
+        obj = { resizeMode: "contain", style: null, placeholder: null, source: null, onError: null };
         obj[1] = fastImageStyle;
         const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(6931);
+          let tmp9Result = tmp9(6969);
         } else {
-          tmp9Result = tmp9(6932);
+          tmp9Result = tmp9(6970);
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };
         obj1[0] = uRL;
         obj[3] = obj1;
+        obj[4] = onError;
         let tmp6Result = tmp6(tmp10, obj);
         tmpResult = tmp(1363);
       }

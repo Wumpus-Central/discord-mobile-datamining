@@ -1,12 +1,12 @@
-// === Module 7593: sortByMatchScore ===
+// === Module 7631: sortByMatchScore ===
 
-// Module 7593 (sortByMatchScore)
+// Module 7631 (sortByMatchScore)
 import set from "set" /* 2 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 6776 */;
-import getAutocompleterBoosterMapDefault from "getAutocompleterBoosterMap" /* 7594 */;
-import HeaderRecord2 from "HeaderRecord" /* 7602 */;
-import _modDef7603 from "module_7603" /* 7603 */;
-import HeaderRecord from "HeaderRecord" /* 6773 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 6813 */;
+import getAutocompleterBoosterMapDefault from "getAutocompleterBoosterMap" /* 7632 */;
+import HeaderRecord2 from "HeaderRecord" /* 7640 */;
+import _modDef7641 from "module_7641" /* 7641 */;
+import HeaderRecord from "HeaderRecord" /* 6810 */;
 
 const result = set.fileFinishedImporting("modules/autocompleter/index.tsx");
 for (const key10022 in _module1) {
@@ -17,5 +17,5 @@ for (const key10022 in _module1) {
 
 export default getAutocompleterBoosterMapDefault;
 export const createHeaderResult = HeaderRecord2.createHeaderResult;
-export const findNextSelectedResult = _modDef7603;
+export const findNextSelectedResult = _modDef7641;
 export const sortByMatchScore = sortByMatchScoreDefault;

@@ -1,6 +1,6 @@
-// === Module 5091: result ===
+// === Module 5096: result ===
 
-// Module 5091 (result)
+// Module 5096 (result)
 import setDefault from "set" /* 687 */;
 
 const result = 2 * setDefault.Millis.DAY;

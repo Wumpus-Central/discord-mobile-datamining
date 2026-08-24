@@ -1,15 +1,15 @@
-// === Module 13059: collectCallFeedback ===
+// === Module 13114: collectCallFeedback ===
 
-// Module 13059 (collectCallFeedback)
+// Module 13114 (collectCallFeedback)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "handleSyncedStoresUpdate" /* 9660 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5047 */;
+import closure_3 from "handleSyncedStoresUpdate" /* 9699 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_6 from "createRTCConnection" /* 4544 */;
+import closure_7 from "handleConnectionOpen" /* 1980 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleAudioRouteChanged" /* 9648 */;
+import closure_9 from "handleAudioRouteChanged" /* 9687 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
@@ -47,7 +47,7 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
         if (obj.hasUsedBackgroundInCall) {
           obj = {};
           const merged1 = Object.assign(obj);
-          let tmp5Result = tmp5(9664);
+          let tmp5Result = tmp5(9703);
           const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
           const videoDevices = store.getVideoDevices();
           const tmp22 = videoDevices[store.getVideoDeviceId(store)];
@@ -58,12 +58,12 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           obj1 = { video_device_name: null, video_hardware_scaling_enabled: null, video_effect_type: null, video_effect_detail: null };
           obj1[0] = name;
           obj1[1] = store.getHardwareEncoding();
-          tmp5Result = tmp5(9661);
+          tmp5Result = tmp5(9700);
           obj1[2] = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1[3] = tmp5(9661).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          obj1[3] = tmp5(9700).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj1);
           const obj10 = store;
-          const tmp5Result1 = tmp5(9661);
+          const tmp5Result1 = tmp5(9700);
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: null };
           obj2[1] = obj;
           dispatcherDefault.dispatch(obj2);

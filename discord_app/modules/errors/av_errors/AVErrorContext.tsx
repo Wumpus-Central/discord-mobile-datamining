@@ -1,12 +1,12 @@
-// === Module 17055: getVoiceChannelErrorContext ===
+// === Module 17148: getVoiceChannelErrorContext ===
 
-// Module 17055 (getVoiceChannelErrorContext)
-import isStreamKey from "isStreamKey" /* 4531 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "initialize" /* 4558 */;
+// Module 17148 (getVoiceChannelErrorContext)
+import isStreamKey from "isStreamKey" /* 4536 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4574 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_3 from "createRTCConnection" /* 4544 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "initialize" /* 4563 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");

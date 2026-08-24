@@ -1,10 +1,10 @@
-// === Module 4095: FriendsIcon ===
+// === Module 4098: FriendsIcon ===
 
-// Module 4095 (FriendsIcon)
+// Module 4098 (FriendsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 4311 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 4315 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

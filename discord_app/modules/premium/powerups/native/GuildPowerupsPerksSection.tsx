@@ -1,14 +1,14 @@
-// === Module 11738: GuildPowerupPerksSection ===
+// === Module 11787: GuildPowerupPerksSection ===
 
-// Module 11738 (GuildPowerupPerksSection)
+// Module 11787 (GuildPowerupPerksSection)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 11721 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 11770 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);

@@ -1,17 +1,17 @@
-// === Module 7930: claimedOutboundPromotionCodeFromServer ===
+// === Module 7969: claimedOutboundPromotionCodeFromServer ===
 
-// Module 7930 (claimedOutboundPromotionCodeFromServer)
+// Module 7969 (claimedOutboundPromotionCodeFromServer)
 import set2 from "set" /* 500 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
-import CountryListMode from "CountryListMode" /* 7656 */;
+import CountryListMode from "CountryListMode" /* 7694 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "createFromServer" /* 7629 */;
-import closure_6 from "createEmptyPromotionsByType" /* 7628 */;
+import closure_5 from "createFromServer" /* 7667 */;
+import closure_6 from "createEmptyPromotionsByType" /* 7666 */;
 import { PromotionFlags } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
-import { ActivityPlatform } from "items3" /* 4481 */;
+import { ActivityPlatform } from "items3" /* 4485 */;
 
 require = arg1;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -35,7 +35,7 @@ function _claimOutboundPromotion() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

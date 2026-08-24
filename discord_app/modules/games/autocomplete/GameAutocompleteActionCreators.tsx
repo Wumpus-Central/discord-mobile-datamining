@@ -1,8 +1,8 @@
-// === Module 7601: _fetchGameAutocomplete ===
+// === Module 7639: _fetchGameAutocomplete ===
 
-// Module 7601 (_fetchGameAutocomplete)
+// Module 7639 (_fetchGameAutocomplete)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 6899 */;
+import closure_4 from "set" /* 6937 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -25,7 +25,7 @@ function _fetchGameAutocomplete() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

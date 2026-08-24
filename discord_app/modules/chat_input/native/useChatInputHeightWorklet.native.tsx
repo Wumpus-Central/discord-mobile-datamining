@@ -1,6 +1,6 @@
-// === Module 11206: useChatInputHeightWorklet ===
+// === Module 11257: useChatInputHeightWorklet ===
 
-// Module 11206 (useChatInputHeightWorklet)
+// Module 11257 (useChatInputHeightWorklet)
 import set from "set" /* 500 */;
 import closure_3 from "noop" /* 19 */;
 

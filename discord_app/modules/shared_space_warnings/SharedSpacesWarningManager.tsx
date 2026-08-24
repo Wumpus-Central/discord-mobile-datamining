@@ -1,16 +1,16 @@
-// === Module 13282: handleChannelSelect ===
+// === Module 13340: handleChannelSelect ===
 
-// Module 13282 (handleChannelSelect)
+// Module 13340 (handleChannelSelect)
 import setDefault from "set" /* 687 */;
 import keys from "keys" /* 691 */;
-import initializeDefault from "initialize" /* 5038 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13284 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13288 */;
+import initializeDefault from "initialize" /* 5043 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13342 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13346 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
-import closure_10 from "init" /* 13281 */;
+import closure_3 from "createRTCConnection" /* 4544 */;
+import closure_4 from "markAllUserIdListsStale" /* 4033 */;
+import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13341 */;
+import closure_10 from "init" /* 13339 */;
 
 require = arg1;
 function handleChannelSelect(channelId) {

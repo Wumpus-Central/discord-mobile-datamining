@@ -1,12 +1,12 @@
-// === Module 16138: MobileSurvey ===
+// === Module 16236: MobileSurvey ===
 
-// Module 16138 (MobileSurvey)
+// Module 16236 (MobileSurvey)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "fetchSurveyIfNeeded" /* 9874 */;
+import closure_5 from "fetchSurveyIfNeeded" /* 9913 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ confirmIcon: { marginLeft: 4 } });
@@ -34,7 +34,7 @@ export default function MobileSurvey() {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -66,7 +66,7 @@ export default function MobileSurvey() {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } catch (tmp9) {
               c0 = tmp;
               throw tmp9;
@@ -115,8 +115,8 @@ export default function MobileSurvey() {
     obj[5] = function renderConfirmRightIcon() {
       return closure_1_7(lib(closure_1_2[12]).Icon, { style: lib.confirmIcon, color: stateFromStores(closure_1_2[13]).unsafe_rawColors.WHITE, size: lib(closure_1_2[12]).Icon.Sizes.SMALL, source: stateFromStores(closure_1_2[14]) });
     };
-    tmp5 = jsx(stateFromStores(4763), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(4763);
+    tmp5 = jsx(stateFromStores(4768), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(4768);
   }
   return tmp5;
 };

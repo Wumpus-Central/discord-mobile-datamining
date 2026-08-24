@@ -1,13 +1,13 @@
-// === Module 12011: Spacer ===
+// === Module 12060: Spacer ===
 
-// Module 12011 (Spacer)
+// Module 12060 (Spacer)
 import ThemesDefault from "Themes" /* 712 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 12012 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 12061 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function Spacer() {
@@ -117,7 +117,7 @@ export default function GameProfileSimilarGames(trackAction) {
   trackAction = trackAction.trackAction;
   importDefault = undefined;
   const tmp = callback3();
-  const GameProfileSimilarGamesMobileExperiment = trackAction(9126).GameProfileSimilarGamesMobileExperiment;
+  const GameProfileSimilarGamesMobileExperiment = trackAction(9163).GameProfileSimilarGamesMobileExperiment;
   const config = GameProfileSimilarGamesMobileExperiment.useConfig({ location: "GameProfileSimilarGames" });
   ({ enabled, dense } = config);
   const tmp6 = useSimilarGamesDefault(trackAction.gameId, enabled);
@@ -136,7 +136,7 @@ export default function GameProfileSimilarGames(trackAction) {
     obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     obj[2] = intl.string(tmp2(1236).t["6rLyQB"]);
-    obj[1] = callback(tmp2(4734).Text, obj);
+    obj[1] = callback(tmp2(4739).Text, obj);
     const items = [callback(closure_6, obj), ];
     obj1 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
     obj1[1] = tmp9;
@@ -146,7 +146,7 @@ export default function GameProfileSimilarGames(trackAction) {
     obj1[4] = Spacer;
     obj1[5] = ListPadding;
     obj1[6] = ListPadding;
-    items[1] = callback(tmp2(8029).FlashList, obj1);
+    items[1] = callback(tmp2(8068).FlashList, obj1);
     obj[1] = items;
     let tmp10 = callback2(closure_6, obj);
   } else {
@@ -159,7 +159,7 @@ export default function GameProfileSimilarGames(trackAction) {
       const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp2(1236).intl;
       obj4[2] = intl2.string(tmp2(1236).t["6rLyQB"]);
-      obj3[1] = callback(tmp2(4734).Text, obj4);
+      obj3[1] = callback(tmp2(4739).Text, obj4);
       const items1 = [callback(closure_6, obj3), ];
       const obj5 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
       obj5[1] = similarGames;
@@ -170,7 +170,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj5[5] = ListPadding;
       obj5[6] = ListPadding;
       obj5[8] = result + PX_12;
-      items1[1] = callback(tmp2(8029).FlashList, obj5);
+      items1[1] = callback(tmp2(8068).FlashList, obj5);
       obj2[1] = items1;
       tmp10 = callback2(closure_6, obj2);
     }

@@ -1,9 +1,9 @@
-// === Module 4879: create ===
+// === Module 4884: create ===
 
-// Module 4879 (create)
+// Module 4884 (create)
 import set from "set" /* 2 */;
-import detectFile from "detectFile" /* 4880 */;
-import create from "create" /* 4907 */;
+import detectFile from "detectFile" /* 4885 */;
+import create from "create" /* 4912 */;
 
 const result = set.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {

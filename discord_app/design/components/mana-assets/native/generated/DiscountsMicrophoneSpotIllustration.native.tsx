@@ -1,10 +1,10 @@
-// === Module 5654: DiscountsMicrophoneSpotIllustration ===
+// === Module 5661: DiscountsMicrophoneSpotIllustration ===
 
-// Module 5654 (DiscountsMicrophoneSpotIllustration)
+// Module 5661 (DiscountsMicrophoneSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5655 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5662 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMicrophoneSpotIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 10353: SlayerShopCardCTAType ===
+// === Module 10392: SlayerShopCardCTAType ===
 
-// Module 10353 (SlayerShopCardCTAType)
+// Module 10392 (SlayerShopCardCTAType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontAnalyticsConstants.tsx");

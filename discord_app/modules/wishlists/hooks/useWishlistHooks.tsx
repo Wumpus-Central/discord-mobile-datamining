@@ -1,14 +1,14 @@
-// === Module 9185: getUserWishlistKey ===
+// === Module 9222: getUserWishlistKey ===
 
-// Module 9185 (getUserWishlistKey)
+// Module 9222 (getUserWishlistKey)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_6 from "createUserWidgetFromServer" /* 5365 */;
+import closure_6 from "createUserWidgetFromServer" /* 5370 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "get" /* 9186 */;
-import { getWishlistSkuIds } from "fromServer" /* 9187 */;
+import closure_9 from "get" /* 9223 */;
+import { getWishlistSkuIds } from "fromServer" /* 9224 */;
 
 const require = arg1;
 function getUserWishlistKey(arg0, arg1) {

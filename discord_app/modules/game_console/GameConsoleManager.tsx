@@ -1,18 +1,18 @@
-// === Module 16580: syncLocalState ===
+// === Module 16676: syncLocalState ===
 
-// Module 16580 (syncLocalState)
+// Module 16676 (syncLocalState)
 import timestampDefault from "timestamp" /* 3 */;
-import start from "start" /* 4259 */;
-import initializeDefault from "initialize" /* 5038 */;
+import start from "start" /* 4263 */;
+import initializeDefault from "initialize" /* 5043 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleUpdate" /* 4541 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
-import closure_9 from "set" /* 4540 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_6 from "createRTCConnection" /* 4544 */;
+import closure_7 from "handleUpdate" /* 4546 */;
+import closure_8 from "updateVoiceState" /* 4547 */;
+import closure_9 from "set" /* 4545 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9802 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4534 */;
 
 require = arg1;
 function syncLocalState() {
@@ -43,7 +43,7 @@ function _syncLocalState() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ function _syncLocalState() {
             obj1.toggleSelfDeaf({ syncRemote: false });
           }
           c4 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp16) {
           c4 = tmp;
           throw tmp16;
@@ -237,14 +237,14 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(9845);
+      let obj = callback(9884);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.wGMxr3);
       const intl2 = callback(1236).intl;
       obj[1] = intl2.string(callback(1236).t.i5k8b5);
-      callback2(4827).show(obj);
+      callback2(4832).show(obj);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {

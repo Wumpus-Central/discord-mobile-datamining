@@ -1,13 +1,13 @@
-// === Module 9598: GiftBackgroundSelect ===
+// === Module 9635: GiftBackgroundSelect ===
 
-// Module 9598 (GiftBackgroundSelect)
+// Module 9635 (GiftBackgroundSelect)
 import ThemesDefault from "Themes" /* 712 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9625 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9662 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "module_4119" /* 4119 */;
 
 require = arg1;
 class GiftBackgroundSelect {
@@ -24,7 +24,7 @@ class GiftBackgroundSelect {
     first = tmp2[0];
     closure_0 = first;
     closure_1 = tmp2[1];
-    obj = require("module_4115");
+    obj = require("module_4119");
     sharedValue = obj.useSharedValue(false);
     closure_2 = sharedValue;
     items = [, ];
@@ -33,7 +33,7 @@ class GiftBackgroundSelect {
     effect = closure_4.useEffect(() => {
       const result = sharedValue.set(null != first);
     }, items);
-    obj2 = require("module_4115");
+    obj2 = require("module_4119");
     class N {
       constructor() {
         tmp = closure_0;

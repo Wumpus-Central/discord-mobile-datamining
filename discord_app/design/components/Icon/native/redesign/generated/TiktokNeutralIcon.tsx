@@ -1,10 +1,10 @@
-// === Module 11525: TiktokNeutralIcon ===
+// === Module 11574: TiktokNeutralIcon ===
 
-// Module 11525 (TiktokNeutralIcon)
+// Module 11574 (TiktokNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 11526 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 11575 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

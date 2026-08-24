@@ -1,6 +1,6 @@
-// === Module 17010: _getTemplates ===
+// === Module 17103: _getTemplates ===
 
-// Module 17010 (_getTemplates)
+// Module 17103 (_getTemplates)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
@@ -24,7 +24,7 @@ function _getTemplates() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function _getTemplates() {
               obj.dispatch(obj4);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp16) {
           c4 = tmp;

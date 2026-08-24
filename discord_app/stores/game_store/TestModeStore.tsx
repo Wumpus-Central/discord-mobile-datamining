@@ -1,12 +1,12 @@
-// === Module 7874: reset ===
+// === Module 7913: reset ===
 
-// Module 7874 (reset)
+// Module 7913 (reset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
 import closure_5 from "initialize" /* 1303 */;
 import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_7 from "setLibraryApplications" /* 4512 */;
+import closure_7 from "setLibraryApplications" /* 4517 */;
 import set from "set" /* 2 */;
 
 require = arg1;

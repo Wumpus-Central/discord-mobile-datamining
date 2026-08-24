@@ -1,6 +1,6 @@
-// === Module 13439: _openActivityDMLauncher ===
+// === Module 13497: _openActivityDMLauncher ===
 
-// Module 13439 (_openActivityDMLauncher)
+// Module 13497 (_openActivityDMLauncher)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 
@@ -27,7 +27,7 @@ function _openActivityDMLauncher() {
           obj[0] = customId;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ function _openActivityDMLauncher() {
               c7 = 2;
               customId = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = callback2(7140).fetchApplication(callback);
+              obj2[0] = callback2(7178).fetchApplication(callback);
               return obj2;
             }
           } else {
@@ -91,7 +91,7 @@ function _openActivityDMLauncher() {
                 }
                 if (null != bot) {
                   if (null != id) {
-                    let obj9 = callback2(4770);
+                    let obj9 = callback2(4775);
                     const obj4 = { recipientIds: null };
                     obj4[0] = id;
                     c7 = 3;
@@ -114,7 +114,7 @@ function _openActivityDMLauncher() {
                 return obj6;
               } else {
                 c7 = customId;
-                obj6 = callback(12411);
+                obj6 = callback(12463);
                 c7 = 4;
                 customId = 1;
                 const obj7 = { value: null, done: false };
@@ -128,7 +128,7 @@ function _openActivityDMLauncher() {
               } else if (arg0 !== 2) {
                 customId = customId.customId;
                 if (flag) {
-                  obj3 = callback(4237);
+                  obj3 = callback(4241);
                   const bestActiveInput = obj3.getBestActiveInput();
                   if (bestActiveInput != null) {
                     const obj8 = { type: null, context: null };
@@ -146,15 +146,15 @@ function _openActivityDMLauncher() {
                   obj10[0] = callback;
                   obj10[1] = {};
                   obj10[2] = c7;
-                  const items = [callback2(7159).ACTIVITY_BOOKMARK];
+                  const items = [callback2(7197).ACTIVITY_BOOKMARK];
                   obj10[3] = items;
-                  obj10[4] = callback(5248).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
+                  obj10[4] = callback(5253).CommandOrigin.ACTIVITY_BOOKMARK_EMBED;
                   obj10[5] = callback2;
                   obj10[6] = customId;
                   c7 = 5;
                   customId = 1;
                   const obj11 = { value: null, done: false };
-                  obj11[0] = callback2(8746)(obj10);
+                  obj11[0] = callback2(8783)(obj10);
                   return obj11;
                 }
               }

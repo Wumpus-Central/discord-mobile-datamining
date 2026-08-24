@@ -1,6 +1,6 @@
-// === Module 16672: buildRequestHashPayload ===
+// === Module 16768: buildRequestHashPayload ===
 
-// Module 16672 (buildRequestHashPayload)
+// Module 16768 (buildRequestHashPayload)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -88,7 +88,7 @@ function _getAgeSignalIntegrityToken() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -160,7 +160,7 @@ function _getAgeSignalIntegrityToken() {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           v0 = tmp;
           throw tmp9;

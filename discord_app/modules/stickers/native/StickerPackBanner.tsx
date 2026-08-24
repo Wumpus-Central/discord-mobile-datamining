@@ -1,8 +1,8 @@
-// === Module 10229: StickerPackBanner ===
+// === Module 10268: StickerPackBanner ===
 
-// Module 10229 (StickerPackBanner)
+// Module 10268 (StickerPackBanner)
 import noopAll from "noop" /* 19 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4828 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

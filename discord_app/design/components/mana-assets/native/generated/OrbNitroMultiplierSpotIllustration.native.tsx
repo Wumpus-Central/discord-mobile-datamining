@@ -1,10 +1,10 @@
-// === Module 6038: OrbNitroMultiplierSpotIllustration ===
+// === Module 6069: OrbNitroMultiplierSpotIllustration ===
 
-// Module 6038 (OrbNitroMultiplierSpotIllustration)
+// Module 6069 (OrbNitroMultiplierSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6039 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6070 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/OrbNitroMultiplierSpotIllustration.native.tsx");

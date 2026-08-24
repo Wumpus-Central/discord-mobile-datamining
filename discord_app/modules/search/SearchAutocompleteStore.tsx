@@ -1,17 +1,17 @@
-// === Module 11513: handleUserSearchResults ===
+// === Module 11562: handleUserSearchResults ===
 
-// Module 11513 (handleUserSearchResults)
+// Module 11562 (handleUserSearchResults)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isEqualDefault from "isEqual" /* 4632 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7597 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
-import getShortcutsDefault from "getShortcuts" /* 11512 */;
+import isEqualDefault from "isEqual" /* 4638 */;
+import getTransformedUserDefault from "getTransformedUser" /* 7635 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11560 */;
+import getShortcutsDefault from "getShortcuts" /* 11561 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "initialize" /* 4220 */;
+import closure_6 from "handleConnectionOpen" /* 1980 */;
+import closure_7 from "initialize" /* 4224 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -31,7 +31,7 @@ function handleUserSearchResults(c165, results) {
         let tmp6 = null != filter;
         if (tmp6) {
           tmp6 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
-          let tmp7 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
+          const tmp7 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
         }
         tmp8 = tmp6;
       }
@@ -45,27 +45,30 @@ function handleUserSearchResults(c165, results) {
           const iter = results[Symbol.iterator]();
           while (iter !== undefined) {
             if (items.length >= arg1) {
-              let tmp15 = iter;
+              let tmp12 = iter;
               iter.return();
               break;
             } else {
-              let tmp3 = user;
-              let tmp4 = nextResult;
+              let tmp13 = user;
+              let tmp14 = nextResult;
               user = user.getUser(tmp2.id);
-              let tmp6 = user;
+              let obj3 = user;
               if (null != user) {
-                let tmp7 = callback;
-                let tmp8 = table;
-                let obj = callback(table[10]);
-                let tmp9 = user;
-                let userTag = obj.getUserTag(tmp6);
-                if (null != userTag) {
-                  obj = { text: null, user: null };
-                  let tmp12 = userTag;
-                  obj[0] = tmp11;
-                  let tmp13 = user;
-                  obj[1] = tmp6;
-                  let arr = items.push(obj);
+                let tmp3 = user;
+                if (!obj3.isNonUserBot()) {
+                  let tmp4 = callback;
+                  let tmp5 = table;
+                  let obj = callback(table[10]);
+                  let tmp6 = user;
+                  let userTag = obj.getUserTag(obj3);
+                  if (null != userTag) {
+                    obj = { text: null, user: null };
+                    let tmp9 = userTag;
+                    obj[0] = tmp8;
+                    let tmp10 = user;
+                    obj[1] = obj3;
+                    let arr = items.push(obj);
+                  }
                 }
               }
               continue;
@@ -75,7 +78,7 @@ function handleUserSearchResults(c165, results) {
         })(results.results, num);
         ({ mode, tokens } = value);
         ({ query, cursorScope } = value);
-        const tmp10 = getAutocompleteList(c165, mode, tokens);
+        let tmp10 = getAutocompleteList(c165, mode, tokens);
         const searchContextId1 = SearchTokenTypes.getSearchContextId(c165);
         let value1 = obj2.get(searchContextId1);
         if (value1 == null) {
@@ -122,7 +125,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
       if (str == null) {
         str = "";
       }
-      let obj = currentUser(11511);
+      let obj = currentUser(11560);
       if (obj.isGuildLikeSearchContext(searchContext)) {
         let tmp8 = null != filter;
         if (tmp8) {
@@ -131,7 +134,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
         }
         if (tmp8) {
           if (0 !== str.length) {
-            let tmp6Result = tmp6(11511);
+            let tmp6Result = tmp6(11560);
             const searchContextId = tmp6Result.getSearchContextId(searchContext);
             let value = map1.get(searchContextId);
             if (value == null) {
@@ -152,7 +155,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
               }
               arr3 = results;
               if (tmp20) {
-                tmp6Result = tmp6(11512);
+                tmp6Result = tmp6(11561);
                 arr3 = results;
                 if (tmp6Result.isMeAutcompleteAnswer(str)) {
                   currentUser = currentUser.getCurrentUser();
@@ -316,13 +319,13 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
         let autocompletes = value.autocompletes;
         let flag = false;
       }
-      let tmp5Result = tmp5(11511);
+      let tmp5Result = tmp5(11560);
       const searchContextId1 = tmp5Result.getSearchContextId(searchContext);
       value = map1.get(searchContextId1);
       if (value == null) {
         obj = { results: null, context: null };
         obj[0] = [];
-        let tmpResult = tmp(7597);
+        let tmpResult = tmp(7635);
         obj[1] = tmpResult.getUserSearchContext(handleUserSearchResults.bind(null, searchContext));
         value = obj;
       }
@@ -348,13 +351,13 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
       tmp9 = tmp10;
     }
     if (tmp9) {
-      tmp5Result = tmp5(11511);
+      tmp5Result = tmp5(11560);
       const searchContextId2 = tmp5Result.getSearchContextId(searchContext);
       let value1 = map1.get(searchContextId2);
       if (value1 == null) {
         obj1 = { results: null, context: null };
         obj1[0] = [];
-        tmpResult = tmp(7597);
+        tmpResult = tmp(7635);
         obj1[1] = tmpResult.getUserSearchContext(handleUserSearchResults.bind(null, searchContext));
         value1 = obj1;
       }
@@ -369,10 +372,10 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
       }
       if (null != trimmed) {
         if (trimmed.length > 0) {
-          const guildIdFromSearchContext = tmp5(11511).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = tmp5(11560).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
-            const members = tmp(6777).requestMembers(guildIdFromSearchContext, trimmed, c17);
-            const tmpResult1 = tmp(6777);
+            const members = tmp(6814).requestMembers(guildIdFromSearchContext, trimmed, c17);
+            const tmpResult1 = tmp(6814);
           }
           const context3 = value1.context;
           obj2 = { query: null, filters: null, boosters: null };
@@ -381,8 +384,8 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
           obj3[0] = guildIdFromSearchContext;
           obj2[1] = obj3;
           const tmp26 = guildIdFromSearchContext;
-          const tmp5Result1 = tmp5(11511);
-          obj2[2] = tmp5(6714).getBoosterMap(AutocompleterResultTypes.USER);
+          const tmp5Result1 = tmp5(11560);
+          obj2[2] = tmp5(6751).getBoosterMap(AutocompleterResultTypes.USER);
           context3.setQuery(obj2);
           autocompletes = undefined;
           if (value != null) {
@@ -392,7 +395,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(dispatcher
             autocompletes = [];
           }
           flag = false;
-          const tmp5Result2 = tmp5(6714);
+          const tmp5Result2 = tmp5(6751);
         }
       }
       const context2 = value1.context;

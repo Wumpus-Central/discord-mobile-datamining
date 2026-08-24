@@ -1,7 +1,7 @@
-// === Module 11451: getCurrentAndNextResourceChannel ===
+// === Module 11500: getCurrentAndNextResourceChannel ===
 
-// Module 11451 (getCurrentAndNextResourceChannel)
-import closure_2 from "handleSettingsLoadSuccess" /* 5048 */;
+// Module 11500 (getCurrentAndNextResourceChannel)
+import closure_2 from "handleSettingsLoadSuccess" /* 5053 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/getNextResourceChannel.tsx");

@@ -1,15 +1,15 @@
-// === Module 5397: getAsync ===
+// === Module 5402: getAsync ===
 
-// Module 5397 (getAsync)
+// Module 5402 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import fromGuildPropertiesWithAdditionalFieldsAll from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import fromServerArrayAll from "fromServerArray" /* 1985 */;
-import compareGuildRolesAll from "compareGuildRoles" /* 1987 */;
+import fromServerArrayAll from "fromServerArray" /* 1986 */;
+import compareGuildRolesAll from "compareGuildRoles" /* 1988 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { updateJoinedAt } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import set from "set" /* 2 */;
 
@@ -115,7 +115,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         let tmp13 = nextResult;
         let tmp14 = guild;
         let fromBackgroundSyncResult = tmp7Result.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result1 = tmp7(1985);
+        let tmp7Result1 = tmp7(1986);
         let tmp17 = store2;
         let result = tmp7Result1.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, store2.getSelfMember(tmp2.id)), arg1);

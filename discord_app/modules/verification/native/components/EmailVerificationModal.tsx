@@ -1,18 +1,18 @@
-// === Module 8562: closeModal ===
+// === Module 8601: closeModal ===
 
-// Module 8562 (closeModal)
-import _modDef8561 from "module_8561" /* 8561 */;
+// Module 8601 (closeModal)
+import _modDef8600 from "module_8600" /* 8600 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import { resetChangeEmailStore } from "ChangeEmailFields" /* 8563 */;
+import { resetChangeEmailStore } from "ChangeEmailFields" /* 8602 */;
 import { VerificationModalScenes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function closeModal() {
   resetChangeEmailStore();
-  _modDef8561.close();
+  _modDef8600.close();
 }
 const result = require("set").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 

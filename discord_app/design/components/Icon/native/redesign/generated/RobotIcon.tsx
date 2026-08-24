@@ -1,10 +1,10 @@
-// === Module 9832: RobotIcon ===
+// === Module 9871: RobotIcon ===
 
-// Module 9832 (RobotIcon)
+// Module 9871 (RobotIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9833 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 9872 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

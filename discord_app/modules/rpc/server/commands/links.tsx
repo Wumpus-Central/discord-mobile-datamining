@@ -1,18 +1,18 @@
-// === Module 13850: set ===
+// === Module 13914: set ===
 
-// Module 13850 (set)
-import openUserSettings from "openUserSettings" /* 7360 */;
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+// Module 13914 (set)
+import openUserSettings from "openUserSettings" /* 7398 */;
+import getApplicationFlags from "getApplicationFlags" /* 7912 */;
+import prototypeDefault from "prototype" /* 8789 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8792 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8794 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import closure_5 from "addApplication" /* 4482 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
 import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import items3 from "items3" /* 4485 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13909 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -37,7 +37,6 @@ obj = {
     return callback(function*() {
       if (application === 2) {
         application = 3;
-        let str = "Generator functions may not be called on executing generators";
         HermesBuiltin.throwTypeError();
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -47,7 +46,7 @@ obj = {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -63,55 +62,83 @@ obj = {
               return obj;
             } else {
               application = tmp3;
-              str = tmp5;
+              let str = tmp5;
               str = undefined;
               application = undefined;
               let embeddedActivityLocationChannelId;
               const result = closure_1_0(closure_1_2[7]).validatePostMessageTransport(closure_1_0.transport);
+              const obj18 = closure_1_0(closure_1_2[7]);
+              let internalDeepLink = null;
+              if (null != obj19.tryValidateEmbeddedAppFrame(closure_1_0)) {
+                let tmp86Result = tmp86(closure_1_2[9]);
+                internalDeepLink = tmp86Result.resolveInternalDeepLink(closure_1_1);
+              }
+              if (null != internalDeepLink) {
+                if (tmp86(closure_1_2[10]).isPlatformEmbedded) {
+                  let obj5 = closure_1_1(closure_1_2[11]);
+                  obj5.focus(null, true);
+                }
+                tmp86Result = tmp86(closure_1_2[9]);
+                if (tmp86Result.openInternalDeepLink(internalDeepLink)) {
+                  const application3 = closure_1_0.application;
+                  let id;
+                  if (application3 != null) {
+                    id = application3.id;
+                  }
+                  obj1 = { application_id: null, url: null, opened: true };
+                  obj1[0] = id;
+                  obj1[1] = closure_1_1;
+                  closure_1_1(closure_1_2[12]).track(closure_1_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj1);
+                  application = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = { opened: true };
+                  return obj2;
+                }
+              }
               currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
               c3 = 1;
               const _URL = URL;
-              const str3 = new URL(closure_1_1);
-              str = str3.toString();
-              if (closure_1_0(closure_1_2[8]).isPlatformEmbedded) {
-                let tmp63Result = tmp63(closure_1_2[9]);
+              str = new URL(closure_1_1);
+              str = str.toString();
+              if (closure_1_0(closure_1_2[10]).isPlatformEmbedded) {
                 let ACTIVITY_POPOUT = null;
-                if (tmp63Result.shouldOpenActivityInPopoutWindow()) {
+                if (tmp86Result1.shouldOpenActivityInPopoutWindow()) {
                   ACTIVITY_POPOUT = closure_1_7.ACTIVITY_POPOUT;
                 }
-                closure_1_1(closure_1_2[10]).focus(ACTIVITY_POPOUT, true);
-                const obj6 = closure_1_1(closure_1_2[10]);
+                tmp86Result1 = tmp86(closure_1_2[13]);
+                closure_1_1(closure_1_2[11]).focus(ACTIVITY_POPOUT, true);
+                const obj9 = closure_1_1(closure_1_2[11]);
               }
               const application2 = closure_1_0.application;
-              let id;
+              let id1;
               if (application2 != null) {
-                id = application2.id;
+                id1 = application2.id;
               }
-              application = application.getApplication(id);
-              tmp63Result = tmp63(closure_1_2[11]);
+              application = application.getApplication(id1);
+              obj19 = closure_1_0(closure_1_2[8]);
               let _location;
               if (currentEmbeddedActivity != null) {
                 _location = currentEmbeddedActivity.location;
               }
-              embeddedActivityLocationChannelId = tmp63Result.getEmbeddedActivityLocationChannelId(_location);
-              const obj12 = closure_1_0(closure_1_2[7]);
-              let id1;
+              embeddedActivityLocationChannelId = closure_1_0(closure_1_2[14]).getEmbeddedActivityLocationChannelId(_location);
+              const tmp86Result2 = closure_1_0(closure_1_2[14]);
+              let id2;
               if (application != null) {
-                id1 = application.id;
+                id2 = application.id;
               }
               currentEmbeddedActivity = 2;
               application = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(closure_1_2[12]).fetchIsLinkTrusted(id1, str);
-              return obj1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = closure_1_0(closure_1_2[15]).fetchIsLinkTrusted(id2, str);
+              return obj3;
             }
           } else if (1 === tmp8) {
             c3 = 0;
-            const obj2 = { errorCode: null };
-            obj2[0] = closure_1_8.INVALID_COMMAND;
+            const obj4 = { errorCode: null };
+            obj4[0] = closure_1_8.INVALID_COMMAND;
             const _HermesInternal = HermesInternal;
-            let tmp30 = closure_1_1(closure_1_2[17]);
-            tmp30 = new tmp30(obj2, "Invalid URL: " + application);
+            let tmp30 = closure_1_1(closure_1_2[19]);
+            tmp30 = new tmp30(obj4, "Invalid URL: " + application);
             throw tmp30;
           } else if (arg0 === 1) {
             application = 3;
@@ -119,42 +146,45 @@ obj = {
           } else if (arg0 === 2) {
             c3 = 0;
             application = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
+            obj5 = { value: null, done: true };
+            obj5[0] = arg1;
+            return obj5;
           } else {
             if (arg1) {
-              closure_1_1(closure_1_2[13])(str);
-              obj = closure_1_1(closure_1_2[14]);
+              closure_1_1(closure_1_2[16])(str);
+              obj = closure_1_1(closure_1_2[12]);
               application = str.application;
-              let id2;
+              let id3;
               if (application != null) {
-                id2 = application.id;
+                id3 = application.id;
               }
-              const obj4 = { application_id: null, url: null, opened: true };
-              obj4[0] = id2;
-              obj4[1] = str;
-              obj.track(closure_1_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj4);
+              const obj6 = { application_id: null, url: null, opened: true };
+              obj6[0] = id3;
+              obj6[1] = str;
+              obj.track(closure_1_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj6);
               const resolved = Promise.resolve({ opened: true });
             } else {
               new Promise((arg0) => {
                 closure_0 = arg0;
-                let obj = closure_2_0(closure_2_2[15]);
+                let obj = closure_2_0(closure_2_2[17]);
                 obj = {
                   href: closure_0,
                   shouldConfirm: true,
+                  onClick() {
+                    return false;
+                  },
                   onConfirm() {
-                    closure_3_1(closure_3_2[13])(callback);
+                    closure_3_1(closure_3_2[16])(callback);
                     application = str.application;
                     let id;
                     if (application != null) {
                       id = application.id;
                     }
-                    closure_3_1(closure_3_2[14]).track(closure_3_10.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: callback, opened: true });
+                    closure_3_1(closure_3_2[12]).track(closure_3_10.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: callback, opened: true });
                     callback({ opened: true });
                   },
                   onCancel() {
-                    let obj = closure_3_1(closure_3_2[14]);
+                    let obj = closure_3_1(closure_3_2[12]);
                     application = str.application;
                     let id;
                     if (application != null) {
@@ -166,17 +196,17 @@ obj = {
                   }
                 };
                 obj = { application, channelId: closure_2 };
-                return obj.handleClick(obj, undefined, undefined, closure_2_0(closure_2_2[16]).getActivitiesModalContextKey(obj));
+                return obj.handleClick(obj, undefined, undefined, closure_2_0(closure_2_2[18]).getActivitiesModalContextKey(obj));
               });
             }
             c3 = 0;
             application = 3;
           }
-        } catch (tmp52) {
-          embeddedActivityLocationChannelId = tmp52;
+        } catch (tmp75) {
+          embeddedActivityLocationChannelId = tmp75;
           if (tmp4 === c3) {
             application = tmp2;
-            throw tmp52;
+            throw tmp75;
           } else {
             currentEmbeddedActivity = tmp;
           }
@@ -211,7 +241,7 @@ obj = {
 };
 items2 = [RPC_AUTHENTICATED_SCOPE];
 items3 = [RPC_AUTHENTICATED_SCOPE];
-obj[RPCCommands.SHARE_LINK] = createRPCCommand.createRPCCommand(RPCCommands.SHARE_LINK, {
+obj[RPCCommands.SHARE_LINK] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SHARE_LINK, {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items3 },
   handler(arg0) {
     ({ socket, args } = arg0);
@@ -230,7 +260,7 @@ obj[RPCCommands.SHARE_LINK] = createRPCCommand.createRPCCommand(RPCCommands.SHAR
       if (tmpResult.hasApplicationFlag(socket.application, constants.EMBEDDED)) {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
-          let obj = closure_1_0(closure_1_2[21]);
+          let obj = closure_1_0(closure_1_2[23]);
           obj = {
             applicationId: c3,
             customId: closure_0,

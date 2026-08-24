@@ -1,18 +1,18 @@
-// === Module 16582: prototype ===
+// === Module 16678: prototype ===
 
-// Module 16582 (prototype)
-import initializeDefault from "initialize" /* 5038 */;
+// Module 16678 (prototype)
+import initializeDefault from "initialize" /* 5043 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 1982 */;
+import closure_5 from "initialize" /* 1983 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 4197 */;
-import closure_11 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_12 from "set" /* 5049 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import closure_10 from "handleConnectionOpen" /* 4201 */;
+import closure_11 from "handleSettingsLoadSuccess" /* 5053 */;
+import closure_12 from "set" /* 5054 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4012 */;
 
 const require = arg1;
 initializeDefault;
@@ -129,7 +129,7 @@ let prototype = function GuildOnboardingHomeManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -300,7 +300,7 @@ let prototype = function GuildOnboardingHomeManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -360,7 +360,7 @@ let prototype = function GuildOnboardingHomeManager() {
               const result = obj.completeNewMemberAction(callback, closure_1);
             }
             actionType = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp31) {
           actionType = tmp;
@@ -397,7 +397,7 @@ let prototype = function GuildOnboardingHomeManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -496,7 +496,7 @@ let prototype = function GuildOnboardingHomeManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -586,7 +586,7 @@ let prototype = function GuildOnboardingHomeManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

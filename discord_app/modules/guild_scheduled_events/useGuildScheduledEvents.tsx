@@ -1,15 +1,15 @@
-// === Module 8891: useGuildEvents ===
+// === Module 8928: useGuildEvents ===
 
-// Module 8891 (useGuildEvents)
+// Module 8928 (useGuildEvents)
 import setDefault from "set" /* 687 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import scheduledEventSort from "scheduledEventSort" /* 4370 */;
-import closure_9 from "scheduledEventSort" /* 4370 */;
-import closure_10 from "initialize" /* 8892 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
+import scheduledEventSort from "scheduledEventSort" /* 4374 */;
+import closure_9 from "scheduledEventSort" /* 4374 */;
+import closure_10 from "initialize" /* 8929 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import ME from "ME" /* 676 */;
 
@@ -222,29 +222,71 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
     }
   }
 };
+export const getGuildActiveEvent = function getGuildActiveEvent(closure_0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = closure_9;
+  }
+  let tmp = arg2;
+  if (arg2 === undefined) {
+    tmp = closure_4;
+  }
+  closure_0 = tmp;
+  let tmp2 = arg3;
+  if (arg3 === undefined) {
+    tmp2 = closure_6;
+  }
+  closure_1 = tmp2;
+  const guildScheduledEventsByIndex = obj.getGuildScheduledEventsByIndex(closure_8.GUILD_EVENT_ACTIVE(closure_0));
+  return guildScheduledEventsByIndex.find((entity_type) => {
+    if (entity_type.entity_type !== closure_1_11.NONE) {
+      if (closure_1_7(entity_type)) {
+        if (null == entity_type.channel_id) {
+          return true;
+        } else {
+          basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
+          let canBasicChannelResult = null != basicChannel;
+          if (canBasicChannelResult) {
+            canBasicChannelResult = closure_1.canBasicChannel(closure_1_13.VIEW_CHANNEL, basicChannel);
+          }
+          return canBasicChannelResult;
+        }
+      }
+    }
+    return false;
+  });
+};
 export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
   const _require = guild_id;
   const items = [closure_9, closure_4, closure_6];
   const items1 = [guild_id];
   return _require(589).useStateFromStores(items, () => {
-    const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_ACTIVE(closure_0));
-    return guildScheduledEventsByIndex.find((entity_type) => {
-      if (entity_type.entity_type !== constants.NONE) {
-        if (callback(entity_type)) {
-          if (null == entity_type.channel_id) {
-            return true;
-          } else {
-            basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
-            let canBasicChannelResult = null != basicChannel;
-            if (canBasicChannelResult) {
-              canBasicChannelResult = closure_6.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+    if (closure_1_9 !== undefined) {
+      if (tmp2 !== undefined) {
+        closure_0 = tmp2;
+        if (tmp3 !== undefined) {
+          closure_1 = tmp3;
+          const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_ACTIVE(tmp));
+          return guildScheduledEventsByIndex.find((entity_type) => {
+            if (entity_type.entity_type !== closure_1_11.NONE) {
+              if (closure_1_7(entity_type)) {
+                if (null == entity_type.channel_id) {
+                  return true;
+                } else {
+                  basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
+                  let canBasicChannelResult = null != basicChannel;
+                  if (canBasicChannelResult) {
+                    canBasicChannelResult = closure_1.canBasicChannel(closure_1_13.VIEW_CHANNEL, basicChannel);
+                  }
+                  return canBasicChannelResult;
+                }
+              }
             }
-            return canBasicChannelResult;
-          }
+            return false;
+          });
         }
       }
-      return false;
-    });
+    }
   }, items1);
 };
 export const useGuildChannelScheduledEvents = function useGuildChannelScheduledEvents(id) {
@@ -289,11 +331,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   }, items1);
   const items2 = [stateFromStores];
   return React.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = callback(8791).getEventSchedule(status);
+    const eventSchedule = callback(8828).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = callback(8791);
+    const obj = callback(8828);
     let toISOStringResult1;
-    const obj2 = callback(8785);
+    const obj2 = callback(8822);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

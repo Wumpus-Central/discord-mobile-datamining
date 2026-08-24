@@ -1,6 +1,6 @@
-// === Module 11811: PX_24 ===
+// === Module 11860: PX_24 ===
 
-// Module 11811 (PX_24)
+// Module 11860 (PX_24)
 import ThemesDefault from "Themes" /* 712 */;
 
 const PX_24 = ThemesDefault.space.PX_24;

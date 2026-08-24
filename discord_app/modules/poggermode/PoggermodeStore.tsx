@@ -1,13 +1,13 @@
-// === Module 7578: updateCombo ===
+// === Module 7616: updateCombo ===
 
-// Module 7578 (updateCombo)
+// Module 7616 (updateCombo)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7579 */;
+import getComboShakeIntensity from "getComboShakeIntensity" /* 7617 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
-import closure_4 from "initialize" /* 7432 */;
-import ConfettiLocation from "ConfettiLocation" /* 7433 */;
+import closure_3 from "handleConnectionOpen" /* 1980 */;
+import closure_4 from "initialize" /* 7470 */;
+import ConfettiLocation from "ConfettiLocation" /* 7471 */;
 import { ComponentActions } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -50,7 +50,7 @@ function updateCombo(userId) {
     decayInterval = iter.decayInterval;
   }
   if (decayInterval == null) {
-    decayInterval = new obj(4259).Interval();
+    decayInterval = new obj(4263).Interval();
   }
   obj.decayInterval = decayInterval;
   const result = obj.set("" + userId.userId + "-" + userId.channelId, obj);
@@ -215,12 +215,12 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7579).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7617).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7579);
+                  const obj2 = id(7617);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();

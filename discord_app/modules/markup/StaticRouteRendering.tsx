@@ -1,8 +1,8 @@
-// === Module 6827: staticRouteToTranslation ===
+// === Module 6865: staticRouteToTranslation ===
 
-// Module 6827 (staticRouteToTranslation)
+// Module 6865 (staticRouteToTranslation)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_2 from "createGuildRoleRecordFromRust" /* 1984 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");

@@ -1,14 +1,14 @@
-// === Module 10801: handleAcceptEventInstantInvite ===
+// === Module 10840: handleAcceptEventInstantInvite ===
 
-// Module 10801 (handleAcceptEventInstantInvite)
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
+// Module 10840 (handleAcceptEventInstantInvite)
+import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8081 */;
+import closure_3 from "scheduledEventSort" /* 4374 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
-  let obj = guildScheduledEvent(9346);
+  let obj = guildScheduledEvent(9383);
   if (!obj.handleNSFWGuildInvite(code)) {
     if (tmpResult.isGuildScheduledEventInviteEmbed(code)) {
       if (null != code.code) {
@@ -30,6 +30,6 @@ export default function handleAcceptEventInstantInvite(code) {
         }
       }
     }
-    tmpResult = guildScheduledEvent(4369);
+    tmpResult = guildScheduledEvent(4373);
   }
 };

@@ -1,15 +1,15 @@
-// === Module 11960: FavoritesGuildAddChannelModal ===
+// === Module 12009: FavoritesGuildAddChannelModal ===
 
-// Module 11960 (FavoritesGuildAddChannelModal)
+// Module 12009 (FavoritesGuildAddChannelModal)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MAX_FAVORITES_ADD_CHANNEL_COUNT as closure_7 } from "date" /* 1429 */;
-import { UserRowModes } from "UserRowModes" /* 9081 */;
+import { UserRowModes } from "UserRowModes" /* 9118 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -24,11 +24,11 @@ export default function FavoritesGuildAddChannelModal(parentId) {
   let first;
   dependencyMap = undefined;
   let height;
-  const tmp = callback4();
-  first(11962)(parentId.source);
-  const tmp4 = callback(React.useState([]), 2);
-  first = tmp4[0];
-  dependencyMap = tmp4[1];
+  const tmp = callback3();
+  first(12011)(parentId.source);
+  const tmp6 = callback(React.useState([]), 2);
+  first = tmp6[0];
+  dependencyMap = tmp6[1];
   callback = React.useCallback((arg0) => {
     dependencyMap(arg0);
   }, []);
@@ -45,7 +45,7 @@ export default function FavoritesGuildAddChannelModal(parentId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -114,21 +114,30 @@ export default function FavoritesGuildAddChannelModal(parentId) {
     children: null
   };
   obj = { title: null, onClose: null };
-  const tmp2 = first(11961)();
+  const tmp2 = first;
+  const tmp4 = first(12010)();
   let intl = parentId(1236).intl;
-  obj[0] = intl.string(first(3079).Rp35U1);
-  obj[1] = parentId(11959).closeFavoritesGuildAddChannelModal;
-  const items2 = [callback2(first(9090), obj), ];
+  obj[0] = intl.string(first(3082).Rp35U1);
+  obj[1] = parentId(12008).closeFavoritesGuildAddChannelModal;
+  const items2 = [callback2(first(9127), obj), ];
   obj = { style: tmp.container, children: null };
-  const items3 = [callback2(first(9091), { absolute: true }), callback2(first(9092), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 }), ];
+  const items3 = [callback2(first(9128), { absolute: true }), , ];
+  obj1 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp4, insetEnd: null, disableGradient: true, disableStickySections: true, disableSelection: null };
+  let num = 0;
+  const tmp12 = first(9127);
+  if (first.length > 0) {
+    num = tmp2(712).space.PX_80;
+  }
+  obj1[4] = num;
+  obj1[7] = first.length >= closure_7;
+  items3[1] = callback2(first(9129), obj1);
   let obj2 = { isVisible: first.length > 0, floatingBackgroundColor: tmp.container.backgroundColor, text: null, onPress: null };
-  obj1 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: [], onSelectedDestinationChange: callback, channelFilter: tmp2, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first.length >= closure_7 };
-  const tmp7 = first(9090);
-  obj2[2] = parentId(11965).getFavoritesAddButtonLabel(first.length);
+  const tmp14 = first(9129);
+  obj2[2] = parentId(12014).getFavoritesAddButtonLabel(first.length);
   obj2[3] = callback1;
-  items3[2] = callback2(parentId(11963).ModalFloatingAction, obj2);
+  items3[2] = callback2(parentId(12012).ModalFloatingAction, obj2);
   obj[1] = items3;
-  items2[1] = callback3(View, obj);
+  items2[1] = closure_10(View, obj);
   obj[1] = items2;
-  return callback3(View, obj);
+  return closure_10(View, obj);
 };

@@ -1,10 +1,10 @@
-// === Module 4836: doesImageMatchUpload ===
+// === Module 4841: doesImageMatchUpload ===
 
-// Module 4836 (doesImageMatchUpload)
+// Module 4841 (doesImageMatchUpload)
 import set from "set" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import isBlockedDomain from "isBlockedDomain" /* 1917 */;
-import cancel from "cancel" /* 4829 */;
+import cancel from "cancel" /* 4834 */;
 
 const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
@@ -118,7 +118,7 @@ export const canUploadNatively = function canUploadNatively(item) {
     fileIsInAppDirResult = null != item.uri;
   }
   if (fileIsInAppDirResult) {
-    let tmpResult = tmp(4837);
+    let tmpResult = tmp(4842);
     fileIsInAppDirResult = tmpResult.fileIsInAppDir(item.uri);
   }
   if (fileIsInAppDirResult) {

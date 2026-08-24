@@ -1,9 +1,9 @@
-// === Module 10915: _getMetadata ===
+// === Module 10954: _getMetadata ===
 
-// Module 10915 (_getMetadata)
+// Module 10954 (_getMetadata)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "sortActivity" /* 4559 */;
+import closure_4 from "sortActivity" /* 4564 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -68,8 +68,8 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(closure_0, closure_1) {
   const _require = closure_0;
-  const spotifyMetadataFromActivity = _require(10914).getSpotifyMetadataFromActivity(closure_0, closure_1);
-  let obj = _require(10914);
+  const spotifyMetadataFromActivity = _require(10953).getSpotifyMetadataFromActivity(closure_0, closure_1);
+  let obj = _require(10953);
   spotifyMetadataFromActivity.then((metadata) => {
     let obj = callback(closure_1_2[3]);
     obj = { type: "ACTIVITY_PLAY", activity: closure_0, userId: callback, metadata };

@@ -1,6 +1,6 @@
-// === Module 5382: parseUserProfileCollectibles ===
+// === Module 5387: parseUserProfileCollectibles ===
 
-// Module 5382 (parseUserProfileCollectibles)
+// Module 5387 (parseUserProfileCollectibles)
 import set from "set" /* 2 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
@@ -14,7 +14,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles = collectibles.collectibles;
   }
   if (null == collectibles) {
-    return { collectibles: "Array", profileEffect: "HermesInternal", profileFrame: "r" };
+    return { collectibles: "getGuild", profileEffect: "call", profileFrame: "HTTP" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

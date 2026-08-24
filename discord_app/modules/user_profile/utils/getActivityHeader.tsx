@@ -1,11 +1,11 @@
-// === Module 12111: getActivityHeader ===
+// === Module 12163: getActivityHeader ===
 
-// Module 12111 (getActivityHeader)
+// Module 12163 (getActivityHeader)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12112 */;
-import PlatformTypesDefault from "PlatformTypes" /* 12113 */;
+import unpackStageChannelParty from "unpackStageChannelParty" /* 7292 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12164 */;
+import PlatformTypesDefault from "PlatformTypes" /* 12165 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityTypes: c3, PlatformTypes: c4 } = ME);
@@ -163,7 +163,7 @@ export default function getActivityHeader(session_id) {
       obj11[2] = str;
       return obj11;
     }
-    tmp35 = tmp(12116)(tmp3, session_id);
+    tmp35 = tmp(12168)(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };

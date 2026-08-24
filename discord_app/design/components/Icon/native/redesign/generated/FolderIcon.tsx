@@ -1,10 +1,10 @@
-// === Module 6870: FolderIcon ===
+// === Module 6908: FolderIcon ===
 
-// Module 6870 (FolderIcon)
+// Module 6908 (FolderIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 6835 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6873 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

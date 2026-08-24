@@ -1,6 +1,6 @@
-// === Module 4182: metadata ===
+// === Module 4186: metadata ===
 
-// Module 4182 (metadata)
+// Module 4186 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/GameServerHosting.riv.js");

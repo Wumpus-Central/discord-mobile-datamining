@@ -1,18 +1,18 @@
-// === Module 12105: ActiveTimestamp ===
+// === Module 12157: ActiveTimestamp ===
 
-// Module 12105 (ActiveTimestamp)
+// Module 12157 (ActiveTimestamp)
 import initialize from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8348 */;
-import GameControllerIcon from "GameControllerIcon" /* 9430 */;
-import TimerIcon from "TimerIcon" /* 10793 */;
+import Text from "Text" /* 4739 */;
+import calculateTimestampDurations from "calculateTimestampDurations" /* 8387 */;
+import GameControllerIcon from "GameControllerIcon" /* 9467 */;
+import TimerIcon from "TimerIcon" /* 10832 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 class ActiveTimestamp {
@@ -41,21 +41,22 @@ function ContentTimestamp(entry) {
   } else {
     obj = { variant: "text-sm/medium", style: null, children: null };
     obj[1] = tmp.text;
-    obj[2] = tmp2(8348).formatEndedTimestamp(entry, tmp6);
-    tmp7Result = tmp7(tmp2(4734).Text, obj);
-    const tmp2Result = tmp2(8348);
+    obj[2] = tmp2(8387).formatEndedTimestamp(entry, tmp6);
+    tmp7Result = tmp7(tmp2(4739).Text, obj);
+    const tmp2Result = tmp2(8387);
   }
   return tmp7Result;
 }
-function BaseBadge(arg0) {
-  ({ Icon, iconColor, text } = arg0);
+function BaseBadge(accessibilityLabel) {
+  accessibilityLabel = accessibilityLabel.accessibilityLabel;
+  ({ Icon, iconColor, text } = accessibilityLabel);
   const tmp = callback3();
-  let obj = { style: tmp.badgeContainer, children: null };
+  let obj = { style: tmp.badgeContainer, accessible: null != accessibilityLabel, accessibilityLabel, children: null };
   obj = { style: tmp.icon, color: iconColor };
   const items = [callback(Icon, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: text };
   items[1] = callback(Text.Text, obj);
-  obj[1] = items;
+  obj[3] = items;
   return callback2(View, obj);
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
@@ -85,20 +86,22 @@ export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
   let obj = calculateTimestampDurations;
   if (obj.isEntryMarathon(entry)) {
-    let tmpResult = tmp(8348);
+    let tmpResult = tmp(8387);
     const colors = ThemesDefault.colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
-    tmpResult = tmp(8348);
-    const text = tmpResult.getMarathonDescription(entry).text;
-    let tmp7 = null;
+    tmpResult = tmp(8387);
+    const marathonDescription = tmpResult.getMarathonDescription(entry);
+    const text = marathonDescription.text;
+    let tmp9 = null;
     if (null != text) {
-      obj = { Icon: null, iconColor: null, text: null };
-      obj[0] = tmp(10793).TimerIcon;
+      obj = { Icon: null, iconColor: null, text: null, accessibilityLabel: null };
+      obj[0] = tmp(10832).TimerIcon;
       obj[1] = tmp6;
       obj[2] = text;
-      tmp7 = callback(BaseBadge, obj);
+      obj[3] = tmp8;
+      tmp9 = callback(BaseBadge, obj);
     }
-    return tmp7;
+    return tmp9;
   } else {
     return null;
   }
@@ -108,7 +111,7 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(12106).NewUserIcon;
+    obj[0] = tmp(12158).NewUserIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.keY6mW);
     obj[2] = ThemesDefault.colors.STATUS_POSITIVE;
@@ -123,13 +126,17 @@ export const StreakBadge = function StreakBadge(entry) {
   if (null != streakCount) {
     tmp4 = null;
     if (streakCount >= 2) {
-      obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(12108).FlashIcon;
+      obj = { Icon: null, text: null, iconColor: null, accessibilityLabel: null };
+      obj[0] = tmp(12160).FlashIcon;
       const intl = tmp(1236).intl;
       obj = { days: null };
       obj[0] = streakCount;
       obj[1] = intl.formatToPlainString(tmp(1236).t["Klie/P"], obj);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
+      const intl2 = tmp(1236).intl;
+      obj1 = { days: null };
+      obj1[0] = streakCount;
+      obj[3] = intl2.formatToPlainString(tmp(1236).t.nVLPBf, obj1);
       tmp4 = callback(BaseBadge, obj);
     }
   }
@@ -141,9 +148,9 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(12110).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== tmp(12162).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(9526).FireIcon;
+      obj[0] = tmp(9563).FireIcon;
       const intl = tmp(1236).intl;
       obj[1] = intl.string(tmp(1236).t.TsWCdW);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -157,7 +164,7 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(10123).RetryIcon;
+    obj[0] = tmp(10162).RetryIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.adnLsB);
     obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -172,7 +179,7 @@ export const TopGameBadge = function TopGameBadge(entry) {
     return null;
   } else {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(8010).TrophyIcon;
+    obj[0] = tmp(8049).TrophyIcon;
     obj = { children: null };
     const intl = tmp(1236).intl;
     const items = [intl.string(tmp(1236).t["/50eHi"]), ": ", ];

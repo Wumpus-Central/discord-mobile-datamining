@@ -1,9 +1,9 @@
-// === Module 8419: preloadUserBannerImage ===
+// === Module 8458: preloadUserBannerImage ===
 
-// Module 8419 (preloadUserBannerImage)
+// Module 8458 (preloadUserBannerImage)
 import set from "set" /* 2 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 

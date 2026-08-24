@@ -1,15 +1,15 @@
-// === Module 9249: hasAtLeastOneGPlaySynced ===
+// === Module 9286: hasAtLeastOneGPlaySynced ===
 
-// Module 9249 (hasAtLeastOneGPlaySynced)
+// Module 9286 (hasAtLeastOneGPlaySynced)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4052 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import updateProductDefault from "updateProduct" /* 5319 */;
-import BalanceWidgetMode from "BalanceWidgetMode" /* 9250 */;
-import metadataDefault from "metadata" /* 9251 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4042 */;
+import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4055 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 5317 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5318 */;
+import updateProductDefault from "updateProduct" /* 5324 */;
+import BalanceWidgetMode from "BalanceWidgetMode" /* 9287 */;
+import metadataDefault from "metadata" /* 9288 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
   const products = nextResult.products;
@@ -144,7 +144,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(5313);
+      let tmp7Result = tmp7(5318);
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -152,7 +152,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = tmp7(5316);
+      tmp7Result = tmp7(5321);
       priceString = tmp7Result.formatPrice(result.amount, result.currency);
     }
   }

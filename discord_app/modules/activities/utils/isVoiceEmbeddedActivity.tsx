@@ -1,11 +1,11 @@
-// === Module 8724: isVoiceEmbeddedActivity ===
+// === Module 8761: isVoiceEmbeddedActivity ===
 
-// Module 8724 (isVoiceEmbeddedActivity)
+// Module 8761 (isVoiceEmbeddedActivity)
 import set from "set" /* 692 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "updateVoiceState" /* 4547 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");

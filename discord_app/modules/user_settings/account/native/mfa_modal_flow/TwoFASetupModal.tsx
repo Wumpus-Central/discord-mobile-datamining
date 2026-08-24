@@ -1,15 +1,15 @@
-// === Module 14139: TwoFAModalSetupSections ===
+// === Module 14207: TwoFAModalSetupSections ===
 
-// Module 14139 (TwoFAModalSetupSections)
+// Module 14207 (TwoFAModalSetupSections)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import NavigationStack from "NavigationStack" /* 6343 */;
+import useInitialValueDefault from "useInitialValue" /* 7165 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { TwoFAModalSetupSections } from "frozen" /* 14140 */;
+import { TwoFAModalSetupSections } from "frozen" /* 14208 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -29,22 +29,22 @@ export default function TwoFASetupModal(initialRouteName) {
   let obj = {
     initialRouteName: LANDING,
     screens: useInitialValueDefault(() => {
-      let obj = callback(8588);
+      let obj = callback(8627);
       callback = obj.generateTotpSecret();
       obj = {};
       obj = {
-        headerLeft: callback(6314).getHeaderCloseButton(callback2(14138).close),
+        headerLeft: callback(6345).getHeaderCloseButton(callback2(14206).close),
         headerTitle() {
-          return callback3(callback(14141).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(14209).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
-          return callback3(callback2(14142), {});
+          return callback3(callback2(14210), {});
         }
       };
       obj[constants.LANDING] = obj;
       obj[constants.SCAN] = {
         headerTitle() {
-          return callback3(callback(14141).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(14209).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_1_6(closure_1_1(closure_1_2[14]), { totpSecret: closure_0 });
@@ -52,20 +52,20 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj[constants.ENTER_CODE] = {
         headerTitle() {
-          return callback3(callback(14141).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(14209).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return closure_1_6(closure_1_1(closure_1_2[15]), { totpSecret: closure_0 });
         }
       };
       obj1 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = callback(6314);
-      obj1[0] = callback(6314).getHeaderCloseButton(callback2(14138).close);
+      const obj4 = callback(6345);
+      obj1[0] = callback(6345).getHeaderCloseButton(callback2(14206).close);
       obj1[1] = function headerTitle() {
         return null;
       };
       obj1[2] = function render() {
-        return callback3(callback2(14148), {});
+        return callback3(callback2(14216), {});
       };
       obj[constants.SUCCESS] = obj1;
       return obj;
@@ -106,8 +106,8 @@ export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
       stringResult = intl.string(tmp2(1236).t.XiOHRX);
     }
     obj1[1] = stringResult;
-    obj1 = tmp8(tmp2(4745).Button, obj1);
+    obj1 = tmp8(tmp2(4750).Button, obj1);
     obj[2] = obj1;
-    closure_6(tmp2(6803).SafeAreaPaddingView, obj);
+    closure_6(tmp2(6840).SafeAreaPaddingView, obj);
   }
 };

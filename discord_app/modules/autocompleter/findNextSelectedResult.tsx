@@ -1,13 +1,13 @@
-// === Module 7603: ? ===
+// === Module 7641: ? ===
 
-// Module 7603
+// Module 7641
 import set from "set" /* 2 */;
-import HeaderRecord from "HeaderRecord" /* 6773 */;
+import HeaderRecord from "HeaderRecord" /* 6810 */;
 
 ({ FindResultDirections: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
 const result = set.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
-function findNextSelectedResult(DOWN, closure_23, items) {
-  if (0 === items.length) {
+function findNextSelectedResult(DOWN, closure_23, arr) {
+  if (0 === arr.length) {
     return 0;
   } else {
     let tmp = closure_23;
@@ -25,8 +25,8 @@ function findNextSelectedResult(DOWN, closure_23, items) {
     if (sum >= 0) {
       if (sum < length) {
         let tmp13Result = sum;
-        if (items[sum].type === constants2.HEADER) {
-          tmp13Result = callback(DOWN, sum, items, tmp);
+        if (arr[sum].type === constants2.HEADER) {
+          tmp13Result = callback(DOWN, sum, arr, tmp);
         }
       }
       return tmp13Result;
@@ -35,7 +35,7 @@ function findNextSelectedResult(DOWN, closure_23, items) {
     if (sum < 0) {
       num2 = length;
     }
-    tmp13Result = callback(DOWN, num2, items, tmp);
+    tmp13Result = callback(DOWN, num2, arr, tmp);
     const tmp13 = callback;
   }
 }

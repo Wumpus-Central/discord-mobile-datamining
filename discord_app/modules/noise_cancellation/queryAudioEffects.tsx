@@ -1,6 +1,6 @@
-// === Module 13177: _queryAudioEffects ===
+// === Module 13233: _queryAudioEffects ===
 
-// Module 13177 (_queryAudioEffects)
+// Module 13233 (_queryAudioEffects)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
@@ -26,7 +26,7 @@ function _queryAudioEffects() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function _queryAudioEffects() {
             obj2 = lib(698);
             obj2.track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (arg0 === 1) {
             c8 = 3;
             throw arg1;

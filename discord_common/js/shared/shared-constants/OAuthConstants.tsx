@@ -1,6 +1,6 @@
-// === Module 13342: OAuthConstants ===
+// === Module 13400: OAuthConstants ===
 
-// Module 13342 (OAuthConstants)
+// Module 13400 (OAuthConstants)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/OAuthConstants.tsx");

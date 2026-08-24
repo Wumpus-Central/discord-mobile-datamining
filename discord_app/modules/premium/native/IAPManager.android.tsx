@@ -1,7 +1,7 @@
-// === Module 16599: prototype ===
+// === Module 16695: prototype ===
 
-// Module 16599 (prototype)
-import initializeDefault from "initialize" /* 5038 */;
+// Module 16695 (prototype)
+import initializeDefault from "initialize" /* 5043 */;
 
 initializeDefault;
 let prototype = function IAPManager() {

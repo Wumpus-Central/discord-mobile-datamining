@@ -1,11 +1,11 @@
-// === Module 12629: ? ===
+// === Module 12683: ? ===
 
-// Module 12629
-import HideStageChannelCallIcon from "HideStageChannelCallIcon" /* 12587 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12591 */;
+// Module 12683
+import HideStageChannelCallIcon from "HideStageChannelCallIcon" /* 12641 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12645 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -26,7 +26,7 @@ const memoResult = importAllResult.memo((channel) => {
   if (speaker) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    speaker = tmp7(tmp8(12587).MusicMuteButton, obj);
+    speaker = tmp7(tmp8(12641).MusicMuteButton, obj);
   }
   items[2] = speaker;
   obj = { channelId: channel.id };

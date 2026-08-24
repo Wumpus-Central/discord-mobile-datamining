@@ -1,10 +1,10 @@
-// === Module 5321: isGenericIapConnected ===
+// === Module 5326: isGenericIapConnected ===
 
-// Module 5321 (isGenericIapConnected)
+// Module 5326 (isGenericIapConnected)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import SubscriptionPlans from "SubscriptionPlans" /* 5322 */;
+import SubscriptionPlans from "SubscriptionPlans" /* 5327 */;
 
 require = arg1;
 let c3 = null;

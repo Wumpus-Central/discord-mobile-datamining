@@ -1,15 +1,15 @@
-// === Module 14203: pressable ===
+// === Module 14271: pressable ===
 
-// Module 14203 (pressable)
+// Module 14271 (pressable)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import _uploadContacts from "_uploadContacts" /* 11853 */;
-import createToggle from "createToggle" /* 10669 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import _modDef5265 from "module_5265" /* 5265 */;
+import MobileUserSettings from "MobileUserSettings" /* 8238 */;
+import _uploadContacts from "_uploadContacts" /* 11902 */;
+import createToggle from "createToggle" /* 10708 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const pressable = createToggle.createPressable({
@@ -21,7 +21,7 @@ const pressable = createToggle.createPressable({
   onPress: function onContactSyncNamePress() {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventPropertiesDefault;
-    _modDef5260.pushLazy(asyncRequireImpl(14202, dependencyMap.paths), "Contact Sync Name Update Modal");
+    _modDef5265.pushLazy(asyncRequireImpl(14270, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
@@ -37,7 +37,7 @@ let obj = {
   onPress: function onContactSyncNamePress() {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventPropertiesDefault;
-    _modDef5260.pushLazy(asyncRequireImpl(14202, dependencyMap.paths), "Contact Sync Name Update Modal");
+    _modDef5265.pushLazy(asyncRequireImpl(14270, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

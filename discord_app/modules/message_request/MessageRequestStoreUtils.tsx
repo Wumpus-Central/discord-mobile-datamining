@@ -1,6 +1,6 @@
-// === Module 16098: sortChannelIds ===
+// === Module 16196: sortChannelIds ===
 
-// Module 16098 (sortChannelIds)
+// Module 16196 (sortChannelIds)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestStoreUtils.tsx");

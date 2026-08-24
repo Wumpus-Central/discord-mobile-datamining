@@ -1,8 +1,8 @@
-// === Module 8893: getNextShownUpcomingEventNoticeType ===
+// === Module 8930: getNextShownUpcomingEventNoticeType ===
 
-// Module 8893 (getNextShownUpcomingEventNoticeType)
+// Module 8930 (getNextShownUpcomingEventNoticeType)
 import set from "set" /* 2 */;
-import tDefault from "t" /* 3975 */;
+import tDefault from "t" /* 3978 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 ({ UpcomingGuildEventNoticeTypes: obj1, NEW_EVENT_WINDOW_MILLISECONDS: c3, EVENT_STARTING_SOON_WINDOW_MILLISECONDS: c4, ACKED_RECENTLY_WINDOW_DAYS: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
@@ -14,7 +14,7 @@ export const getNextShownUpcomingEventNoticeType = function getNextShownUpcoming
   const diff = time - closure_4;
   if (obj.isBetween(diff, time)) {
     if (null != arg1) {
-      const obj4 = tmp(3975)(arg1);
+      const obj4 = tmp(3978)(arg1);
       const isBetweenResult = obj4.isBetween(diff, time);
       let EVENT_STARTING_SOON;
       if (!isBetweenResult) {

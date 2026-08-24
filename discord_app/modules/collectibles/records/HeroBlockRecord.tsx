@@ -1,8 +1,8 @@
-// === Module 5345: fromServer ===
+// === Module 5350: fromServer ===
 
-// Module 5345 (fromServer)
+// Module 5350 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 5339 */;
+import ShopBlockType from "ShopBlockType" /* 5344 */;
 
 let prototype;
 prototype = function HeroBlockRecord(unpublished_at) {
@@ -18,9 +18,9 @@ prototype = function HeroBlockRecord(unpublished_at) {
   }
   obj.unpublishedAt = date;
   ({ banner_text_color: tmp.bannerTextColor, mobile_title: tmp.mobileTitle, mobile_summary: tmp.mobileSummary, mobile_products_title: tmp.mobileProductsTitle, hero_banner_url: tmp.heroBannerUrl, hero_banner_animated_url: tmp.heroBannerAnimatedUrl, hero_rive_url: tmp.heroRiveUrl, hero_logo_url: tmp.heroLogoUrl, mobile_hero_url: tmp.mobileHeroUrl, mobile_hero_animated_url: tmp.mobileHeroAnimatedUrl } = unpublished_at);
-  let tmp2Result = tmp2(5313);
+  let tmp2Result = tmp2(5318);
   obj.bannerDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.banner_display_config);
-  tmp2Result = tmp2(5313);
+  tmp2Result = tmp2(5318);
   obj.logoDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.logo_display_config);
   return obj;
 }.prototype;

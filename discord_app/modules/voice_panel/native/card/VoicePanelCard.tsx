@@ -1,24 +1,24 @@
-// === Module 16348: SelfStreamCard ===
+// === Module 16445: SelfStreamCard ===
 
-// Module 16348 (SelfStreamCard)
+// Module 16445 (SelfStreamCard)
 import ThemesDefault from "Themes" /* 712 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4749 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "anyoneHasFlagInContext" /* 4774 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16307 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 11443 */;
+import closure_6 from "reset" /* 4658 */;
+import closure_7 from "createRTCConnection" /* 4544 */;
+import closure_8 from "anyoneHasFlagInContext" /* 4779 */;
+import VoicePanelModes from "VoicePanelModes" /* 11489 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11487 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16401 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 11492 */;
 import ME from "ME" /* 676 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4549 */;
+import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 11490 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "module_4119" /* 4119 */;
 
 require = arg1;
 function SelfStreamCard(sharedCoords) {
@@ -1173,13 +1173,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str2 = "animate-never";
   }
   obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
-  let tmpResult = tmp(4744);
+  let tmpResult = tmp(4749);
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4744);
+  tmpResult = tmp(4749);
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1445,7 +1445,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "call", layout: "heading-xl/semibold", layoutPhysics: "mobile-text-heading-primary" };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: "exhalar", layoutPhysics: "inhalar" };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

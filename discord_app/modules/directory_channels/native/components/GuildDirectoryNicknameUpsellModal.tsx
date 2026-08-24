@@ -1,25 +1,25 @@
-// === Module 11835: GuildDirectoryNicknameUpsell ===
+// === Module 11884: GuildDirectoryNicknameUpsell ===
 
-// Module 11835 (GuildDirectoryNicknameUpsell)
+// Module 11884 (GuildDirectoryNicknameUpsell)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
-import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import GuildIconSizes from "GuildIconSizes" /* 7188 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import _modDef8575 from "module_8575" /* 8575 */;
+import Text from "Text" /* 4739 */;
+import Button2 from "Button" /* 4750 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5446 */;
+import useInitialValueDefault from "useInitialValue" /* 7165 */;
+import GuildIconSizes from "GuildIconSizes" /* 7226 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7226 */;
+import _modDef8614 from "module_8614" /* 8614 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import { GuildPrompts } from "GuildPrompts" /* 11824 */;
+import { GuildPrompts } from "GuildPrompts" /* 11873 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function GuildDirectoryNicknameUpsell(arg0) {
@@ -128,7 +128,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(_modDef8575, obj5);
+  items2[2] = callback(_modDef8614, obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
@@ -171,7 +171,7 @@ const result = require("set").fileFinishedImporting("modules/directory_channels/
 
 export default function GuildDirectoryNicknameUpsellModal(arg0) {
   const _require = arg0;
-  return callback(_require(6312).Navigator, {
+  return callback(_require(6343).Navigator, {
     screens: useInitialValueDefault(() => {
       ({ guildId: closure_0, onHide: closure_1 } = callback);
       function handleClose() {

@@ -1,11 +1,11 @@
-// === Module 7650: create ===
+// === Module 7688: create ===
 
-// Module 7650 (create)
+// Module 7688 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7633 */;
-import create2 from "create" /* 7634 */;
-import create3 from "create" /* 7635 */;
-import create4 from "create" /* 7643 */;
+import create from "create" /* 7671 */;
+import create2 from "create" /* 7672 */;
+import create3 from "create" /* 7673 */;
+import create4 from "create" /* 7681 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -20,7 +20,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(7643).ThemeAwareAsset;
+            return callback(7681).ThemeAwareAsset;
           }
     };
     items[3] = {
@@ -28,7 +28,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(7635).CTAButton;
+            return callback(7673).CTAButton;
           }
     };
     items[4] = { no: 5, name: "help_article_id", kind: "scalar", T: 9 };
@@ -37,7 +37,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7634).HelpArticle;
+            return callback(7672).HelpArticle;
           }
     };
     obj = { no: 7, name: "header_localized", kind: "message", T: null };
@@ -53,7 +53,7 @@ class PremiumTabPopover$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7633).LocalizedString;
+            return callback(7671).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTabPopover", items, T);
@@ -228,7 +228,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(7643).ThemeAwareAsset;
+      return callback(7681).ThemeAwareAsset;
     }
   },
   {
@@ -236,7 +236,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(7635).CTAButton;
+      return callback(7673).CTAButton;
     }
   },
   { no: 5, name: "help_article_id", kind: "scalar", T: 9 },
@@ -245,7 +245,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7634).HelpArticle;
+      return callback(7672).HelpArticle;
     }
   },
 ,
@@ -264,7 +264,7 @@ items[7] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7633).LocalizedString;
+    return callback(7671).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTabPopover", items, tmp, T, PremiumTabPopover$Type, prototype, items);

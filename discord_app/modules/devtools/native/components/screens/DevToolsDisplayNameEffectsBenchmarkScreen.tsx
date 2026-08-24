@@ -1,20 +1,20 @@
-// === Module 15180: effectName ===
+// === Module 15244: effectName ===
 
-// Module 15180 (effectName)
+// Module 15244 (effectName)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2693 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9453 */;
-import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 9457 */;
+import messagesProxyDefault from "messagesProxy" /* 2694 */;
+import Stack from "Stack" /* 4738 */;
+import Text from "Text" /* 4739 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9489 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9490 */;
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 9494 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function effectName(arg0) {

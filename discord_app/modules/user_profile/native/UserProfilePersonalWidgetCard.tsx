@@ -1,19 +1,19 @@
-// === Module 12291: PersonalWidgetText ===
+// === Module 12343: PersonalWidgetText ===
 
-// Module 12291 (PersonalWidgetText)
+// Module 12343 (PersonalWidgetText)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import preloadDefault from "preload" /* 5449 */;
-import GifTagDefault from "GifTag" /* 8989 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import LinearGradientDefault from "LinearGradient" /* 4761 */;
+import preloadDefault from "preload" /* 5454 */;
+import GifTagDefault from "GifTag" /* 9026 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PersonalWidgetText(lineClamp) {
@@ -150,7 +150,7 @@ function CoverSection(section) {
     if (showGifTag) {
       const obj7 = { style: null };
       obj7[0] = tmp.gifTag;
-      tmp27Result = tmp27(tmp20(8989), obj7);
+      tmp27Result = tmp27(tmp20(9026), obj7);
     }
     items2[2] = tmp27Result;
     obj3[1] = items2;
@@ -266,7 +266,7 @@ export default function UserProfilePersonalWidgetCard(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(7988).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8027).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -276,10 +276,10 @@ export default function UserProfilePersonalWidgetCard(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(12186), obj);
+    tmp4Result = tmp4(tmp5(12238), obj);
   }
   obj[3] = tmp4Result;
-  const tmp6 = disableInteraction(7185);
+  const tmp6 = disableInteraction(7223);
   const sections = widget.sections;
   obj[4] = callback2(closure_7, {
     style: tmp.sectionsContainer,

@@ -1,6 +1,6 @@
-// === Module 11446: isNewLayoutBetter ===
+// === Module 11495: isNewLayoutBetter ===
 
-// Module 11446 (isNewLayoutBetter)
+// Module 11495 (isNewLayoutBetter)
 import set from "set" /* 2 */;
 
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {

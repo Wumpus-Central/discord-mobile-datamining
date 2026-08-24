@@ -1,18 +1,18 @@
-// === Module 12660: VoiceEmptyState ===
+// === Module 12714: VoiceEmptyState ===
 
-// Module 12660 (VoiceEmptyState)
+// Module 12714 (VoiceEmptyState)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import registerAssetDefault from "registerAsset" /* 12661 */;
-import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 12662 */;
+import registerAssetDefault from "registerAsset" /* 12715 */;
+import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 12716 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "createTextStyle" /* 6782 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "createTextStyle" /* 6819 */;
 
 require = arg1;
 noopAll;

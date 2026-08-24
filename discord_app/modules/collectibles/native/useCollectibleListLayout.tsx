@@ -1,6 +1,6 @@
-// === Module 8395: useCollectibleListLayout ===
+// === Module 8434: useCollectibleListLayout ===
 
-// Module 8395 (useCollectibleListLayout)
+// Module 8434 (useCollectibleListLayout)
 import closure_0 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 

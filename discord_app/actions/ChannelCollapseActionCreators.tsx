@@ -1,9 +1,9 @@
-// === Module 10007: ? ===
+// === Module 10046: ? ===
 
-// Module 10007
+// Module 10046
 import dispatcherDefault from "dispatcher" /* 709 */;
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 6797 */;
-import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 6834 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 5048 */;
 
 let result = require("set").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
 

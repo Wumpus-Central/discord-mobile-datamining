@@ -1,16 +1,16 @@
-// === Module 15316: MessagesEmptyState ===
+// === Module 15380: MessagesEmptyState ===
 
-// Module 15316 (MessagesEmptyState)
+// Module 15380 (MessagesEmptyState)
 import encodeProperties from "encodeProperties" /* 503 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
+import Text from "Text" /* 4739 */;
+import Button from "Button" /* 4750 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
@@ -36,14 +36,14 @@ export default function MessagesEmptyState() {
   const tmp4 = callback(React.useState(0), 2);
   obj[0] = encodeProperties.ImpressionTypes.VIEW;
   obj[1] = encodeProperties.ImpressionNames.MESSAGES_EMPTY_NUX;
-  navigation(9177)(obj);
+  navigation(9214)(obj);
   if (tmp5 > 0) {
     width = tmp5;
   }
   const result = 0.9 * width;
-  let tmp7Result = tmp7(8944);
+  let tmp7Result = tmp7(8981);
   const isScreenLandscape = tmp7Result.useIsScreenLandscape();
-  tmp7Result = tmp7(14452);
+  tmp7Result = tmp7(14520);
   const items1 = [tmp.scrollViewContentContainer, ];
   let tmp18;
   if (isScreenLandscape) {
@@ -56,12 +56,12 @@ export default function MessagesEmptyState() {
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: tmp2(15317), style: null };
+  const obj5 = { resizeMode: "contain", source: tmp2(15381), style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;
   }
-  const tmp10 = navigation(9177);
+  const tmp10 = navigation(9214);
   const tmp17 = closure_7;
   const tmp21 = closure_6;
   obj5[2] = { height: num, width: Math.min(result, 622) };

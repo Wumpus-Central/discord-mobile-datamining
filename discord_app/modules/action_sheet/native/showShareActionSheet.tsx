@@ -1,10 +1,10 @@
-// === Module 9067: showShareActionSheet ===
+// === Module 9104: showShareActionSheet ===
 
-// Module 9067 (showShareActionSheet)
+// Module 9104 (showShareActionSheet)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 9068 */;
-import trackAppClickInNativeShareSheet from "trackAppClickInNativeShareSheet" /* 9069 */;
+import enforcingDefault from "enforcing" /* 9105 */;
+import trackAppClickInNativeShareSheet from "trackAppClickInNativeShareSheet" /* 9106 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 if (PlatformTypes.isAndroid()) {
@@ -24,7 +24,7 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
     let mediaShareParams = _require(fn[3]).getMediaShareParams(source.source);
     const obj2 = _require(fn[3]);
   } else {
-    mediaShareParams = { mediaFallbackUrl: "r", mediaStagingOptions: "accessibilityRole" };
+    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "ct" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

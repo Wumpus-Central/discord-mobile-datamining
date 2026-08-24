@@ -1,6 +1,6 @@
-// === Module 12034: apexExperiment ===
+// === Module 12083: apexExperiment ===
 
-// Module 12034 (apexExperiment)
+// Module 12083 (apexExperiment)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;

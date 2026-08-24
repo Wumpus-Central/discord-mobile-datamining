@@ -1,19 +1,19 @@
-// === Module 11693: GuildPowerupCardFooterActive ===
+// === Module 11742: GuildPowerupCardFooterActive ===
 
-// Module 11693 (GuildPowerupCardFooterActive)
+// Module 11742 (GuildPowerupCardFooterActive)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2367 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
-import Text from "Text" /* 4734 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import apexExperiment from "apexExperiment" /* 8307 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11669 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 11694 */;
+import messagesProxyDefault from "messagesProxy" /* 2368 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4339 */;
+import Text from "Text" /* 4739 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8113 */;
+import apexExperiment from "apexExperiment" /* 8347 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11718 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 11743 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 class GuildPowerupCardFooterActive {
   constructor(arg0) {

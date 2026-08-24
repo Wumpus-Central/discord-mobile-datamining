@@ -1,11 +1,11 @@
-// === Module 4370: scheduledEventSort ===
+// === Module 4374: scheduledEventSort ===
 
-// Module 4370 (scheduledEventSort)
+// Module 4374 (scheduledEventSort)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "trackCommunicationDisabled" /* 1991 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 function scheduledEventSort(status) {

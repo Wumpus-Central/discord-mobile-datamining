@@ -1,6 +1,6 @@
-// === Module 8850: getRoleRowData ===
+// === Module 8887: getRoleRowData ===
 
-// Module 8850 (getRoleRowData)
+// Module 8887 (getRoleRowData)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 506 */;
@@ -8,13 +8,13 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import compareGuildRoles from "compareGuildRoles" /* 1987 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import RowType2 from "RowType" /* 8064 */;
-import _updatePermission from "_updatePermission" /* 8851 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import compareGuildRoles from "compareGuildRoles" /* 1988 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
+import RowType2 from "RowType" /* 8103 */;
+import _updatePermission from "_updatePermission" /* 8888 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

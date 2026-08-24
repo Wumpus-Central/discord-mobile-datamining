@@ -1,10 +1,10 @@
-// === Module 6876: TextIcon ===
+// === Module 6914: TextIcon ===
 
-// Module 6876 (TextIcon)
+// Module 6914 (TextIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 6836 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6874 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

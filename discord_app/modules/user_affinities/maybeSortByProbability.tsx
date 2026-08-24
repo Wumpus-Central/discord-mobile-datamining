@@ -1,6 +1,6 @@
-// === Module 8284: maybeSortByProbability ===
+// === Module 8324: maybeSortByProbability ===
 
-// Module 8284 (maybeSortByProbability)
+// Module 8324 (maybeSortByProbability)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByPro
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;
   const _require = userAffinitiesMap;
-  const voiceUserAffinitySortType = _require(8285).getVoiceUserAffinitySortType(location);
+  const voiceUserAffinitySortType = _require(8325).getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
     return sort;
   } else if ("vc_probability" === voiceUserAffinitySortType) {

@@ -1,15 +1,15 @@
-// === Module 16026: ConnectedCreateThreadHeaderButton ===
+// === Module 16124: ConnectedCreateThreadHeaderButton ===
 
-// Module 16026 (ConnectedCreateThreadHeaderButton)
-import registerAssetDefault from "registerAsset" /* 11948 */;
+// Module 16124 (ConnectedCreateThreadHeaderButton)
+import registerAssetDefault from "registerAsset" /* 11997 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 9922 */;
+import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 9961 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 15867 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 15964 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 9970 */;
 
 const require = arg1;
 function ConnectedCreateThreadHeaderButton(channelId) {
@@ -27,7 +27,7 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(7234);
+  let obj = channel(7272);
   [][0] = channel;
   const canStartThread = obj.useCanStartThread(channel);
   let tmp5 = null;
@@ -37,7 +37,7 @@ function CreateThreadHeaderButton(channel) {
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
     obj[2] = registerAssetDefault;
-    tmp5 = callback(tmp(8492).HeaderIconButton, obj);
+    tmp5 = callback(tmp(8531).HeaderIconButton, obj);
   }
   return tmp5;
 }
@@ -133,7 +133,7 @@ const memoResult = importAllResult.memo((route) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(8492);
+            let obj = route(8531);
             obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(500).isAndroid();

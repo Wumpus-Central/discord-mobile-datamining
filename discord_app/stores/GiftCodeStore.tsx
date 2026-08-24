@@ -1,11 +1,11 @@
-// === Module 10641: updateGiftCode ===
+// === Module 10680: updateGiftCode ===
 
-// Module 10641 (updateGiftCode)
+// Module 10680 (updateGiftCode)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3975 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
-import closure_3 from "frozen" /* 9626 */;
+import tDefault from "t" /* 3978 */;
+import _resolveGiftCode from "_resolveGiftCode" /* 4385 */;
+import closure_3 from "frozen" /* 9663 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -19,7 +19,7 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4259).Timeout();
+      const timeout = new code(4263).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {

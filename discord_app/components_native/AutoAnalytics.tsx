@@ -1,29 +1,29 @@
-// === Module 15956: componentDidMount ===
+// === Module 16053: componentDidMount ===
 
-// Module 15956 (componentDidMount)
+// Module 16053 (componentDidMount)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 5057 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7522 */;
-import collectGuildThemeAnalyticsMetadata from "collectGuildThemeAnalyticsMetadata" /* 15957 */;
-import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 15958 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 15959 */;
-import closure_3 from "getParticipants" /* 4773 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "scheduledEventSort" /* 4370 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5047 */;
+import isClickstreamEnabled from "isClickstreamEnabled" /* 5062 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7560 */;
+import collectGuildThemeAnalyticsMetadata from "collectGuildThemeAnalyticsMetadata" /* 16054 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 16055 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16056 */;
+import closure_3 from "getParticipants" /* 4778 */;
+import closure_4 from "_handleConnectionOpen" /* 4499 */;
+import closure_5 from "scheduledEventSort" /* 4374 */;
 import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "trackCommunicationDisabled" /* 1991 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_11 from "handleConnectionInfoChange" /* 4564 */;
-import closure_12 from "createRTCConnection" /* 4539 */;
-import closure_13 from "handleConnectionOpen" /* 1979 */;
-import closure_14 from "handleConnectionOpen" /* 4197 */;
-import closure_15 from "filterPlayingActivities" /* 7250 */;
-import closure_16 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_11 from "handleConnectionInfoChange" /* 4569 */;
+import closure_12 from "createRTCConnection" /* 4544 */;
+import closure_13 from "handleConnectionOpen" /* 1980 */;
+import closure_14 from "handleConnectionOpen" /* 4201 */;
+import closure_15 from "filterPlayingActivities" /* 7288 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 5048 */;
 import closure_17 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;
@@ -52,8 +52,8 @@ prototype["componentDidMount"] = function componentDidMount() {
     if (tmp) {
       obj1 = { channel_is_nsfw: null };
       obj1[0] = tmp2;
-      tmp18(5042).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
-      const tmp18Result = tmp18(5042);
+      tmp18(5047).trackWithMetadata(tmp17.TEXT_IN_VOICE_OPENED, obj1);
+      const tmp18Result = tmp18(5047);
     }
     const obj11 = collectGuildAnalyticsMetadata;
     tmp17 = constants;
@@ -226,8 +226,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
     if (isTextInVoice) {
       obj4 = { channel_is_nsfw: null };
       obj4[0] = isNSFWChannel;
-      tmp44(5042).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
-      const tmp44Result = tmp44(5042);
+      tmp44(5047).trackWithMetadata(tmp43.TEXT_IN_VOICE_OPENED, obj4);
+      const tmp44Result = tmp44(5047);
     }
     tmp43 = constants;
     tmp44 = require;

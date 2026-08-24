@@ -1,6 +1,6 @@
-// === Module 12114: isOnMetaQuest ===
+// === Module 12166: isOnMetaQuest ===
 
-// Module 12114 (isOnMetaQuest)
+// Module 12166 (isOnMetaQuest)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

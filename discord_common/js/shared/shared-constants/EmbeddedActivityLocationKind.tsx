@@ -1,6 +1,6 @@
-// === Module 8738: EmbeddedActivityLocationKind ===
+// === Module 8775: EmbeddedActivityLocationKind ===
 
-// Module 8738 (EmbeddedActivityLocationKind)
+// Module 8775 (EmbeddedActivityLocationKind)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/EmbeddedActivityLocationKind.tsx");

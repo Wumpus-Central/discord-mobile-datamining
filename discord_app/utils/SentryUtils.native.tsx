@@ -35,8 +35,8 @@ let obj = {
   },
   captureException(arg0, extra) {
     const _require = arg0;
-    importAll = _require(13569).getUpdatedOptions(extra);
-    const obj = _require(13569);
+    importAll = _require(13627).getUpdatedOptions(extra);
+    const obj = _require(13627);
     addBreadcrumbAll.withScope((setTags) => {
       if (null != callback) {
         if (null != tmp.tags) {
@@ -52,7 +52,7 @@ let obj = {
   },
   captureCrash(error, extra) {
     const _require = error;
-    const updatedOptions = _require(13569).getUpdatedOptions(extra);
+    const updatedOptions = _require(13627).getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -64,7 +64,7 @@ let obj = {
       }
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
-    let obj = _require(13569);
+    let obj = _require(13627);
     updatedOptions(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -94,8 +94,9 @@ let obj = {
   },
   captureMessage(arg0, extra) {
     const _require = arg0;
-    const updatedOptions = _require(13569).getUpdatedOptions(extra);
-    const obj = _require(13569);
+    closure_1 = arg2;
+    importAll = _require(13627).getUpdatedOptions(extra);
+    const obj = _require(13627);
     addBreadcrumbAll.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -103,7 +104,14 @@ let obj = {
       if (tmp4) {
         setExtras.setTags(tmp.tags);
       }
-      closure_1_2(closure_1_3[3]).captureMessage(closure_0);
+      if (tmp6) {
+        setExtras.setFingerprint(tmp.fingerprint);
+        setExtras.addEventProcessor((arg0) => {
+          arg0.exception = undefined;
+          return arg0;
+        });
+      }
+      callback(closure_1_3[3]).captureMessage(closure_0, closure_1);
     });
   },
   addFeatureFlag(arg0, arg1) {
@@ -193,7 +201,7 @@ let obj = {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: 72, timestamp: 180, level: null, tags: null };
+                let obj = { type: "y", event_id: "quest_app_store_overlay", timestamp: null, level: "BULK_ACK", tags: null };
                 obj[1] = timestamp.event_id;
                 obj[2] = result;
                 obj[3] = formatted;

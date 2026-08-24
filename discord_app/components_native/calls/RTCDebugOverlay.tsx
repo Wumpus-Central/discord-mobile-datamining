@@ -1,24 +1,24 @@
-// === Module 12595: Text ===
+// === Module 12649: Text ===
 
-// Module 12595 (Text)
+// Module 12649 (Text)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Button2 from "Button" /* 4745 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import Button2 from "Button" /* 4750 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6840 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "updateStats" /* 12596 */;
-import closure_11 from "initialize" /* 4558 */;
+import closure_9 from "createRTCConnection" /* 4544 */;
+import closure_10 from "updateStats" /* 12650 */;
+import closure_11 from "initialize" /* 4563 */;
 import closure_12 from "mergeGuildAvatar" /* 1922 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4534 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import hexToRgba from "hexToRgba" /* 4227 */;
 
 require = arg1;
 function Text(arg0) {
@@ -95,7 +95,7 @@ function RTCDebugGeneral() {
   if (null != stateFromStores) {
     name = stateFromStores.name;
   }
-  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4984)(stateFromStores1) } } }) };
+  obj = { title: "general", children: tmp5(ObjectKV, { obj: { guild: obj, channel: { id: channelId, name: channelId(4989)(stateFromStores1) } } }) };
   obj[1] = name;
   return closure_14(Section, obj);
 }
@@ -210,7 +210,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(709).wait(callback2(12597).close);
+    return () => callback(709).wait(callback2(12651).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

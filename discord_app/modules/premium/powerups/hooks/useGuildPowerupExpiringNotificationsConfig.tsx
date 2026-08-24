@@ -1,10 +1,10 @@
-// === Module 11726: useGuildPowerupExpiringNotificationsConfig ===
+// === Module 11775: useGuildPowerupExpiringNotificationsConfig ===
 
-// Module 11726 (useGuildPowerupExpiringNotificationsConfig)
+// Module 11775 (useGuildPowerupExpiringNotificationsConfig)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 11727 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 11728 */;
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 11776 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 11777 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
@@ -15,7 +15,7 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = getSystemLocale.intl;
-      stringResult = intl.string(tmp(2757)["B3OfL/"]);
+      stringResult = intl.string(tmp(2758)["B3OfL/"]);
     }
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
@@ -29,11 +29,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = getSystemLocale.intl;
-      arr = items3.push(intl2.string(tmp(2367).Sfr0Jw));
+      arr = items3.push(intl2.string(tmp(2368).Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = getSystemLocale.intl;
-      arr = items3.push(intl3.string(tmp(2757).wiungr));
+      arr = items3.push(intl3.string(tmp(2758).wiungr));
     }
     let obj = { shouldShow: null, expiringPowerups: null, expiringPowerupNames: null, warnings: null };
     obj[0] = tmp3;

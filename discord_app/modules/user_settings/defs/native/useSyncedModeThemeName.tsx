@@ -1,6 +1,6 @@
-// === Module 14650: useSyncedModeThemeName ===
+// === Module 14718: useSyncedModeThemeName ===
 
-// Module 14650 (useSyncedModeThemeName)
+// Module 14718 (useSyncedModeThemeName)
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "ThemeTypes" /* 1348 */;

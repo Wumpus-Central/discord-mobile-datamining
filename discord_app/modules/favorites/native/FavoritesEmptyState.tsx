@@ -1,18 +1,18 @@
-// === Module 15955: FavoritesEmptyState ===
+// === Module 16052: FavoritesEmptyState ===
 
-// Module 15955 (FavoritesEmptyState)
+// Module 16052 (FavoritesEmptyState)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+import messagesProxyDefault from "messagesProxy" /* 3082 */;
+import Stack from "Stack" /* 4738 */;
+import Text from "Text" /* 4739 */;
+import Button from "Button" /* 4750 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5452 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10018 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -49,14 +49,14 @@ export default function FavoritesEmptyState() {
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1236).intl;
-    obj3[1] = intl4.string(tmp9(3079)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(11932).PlusMediumIcon, {});
+    obj3[1] = intl4.string(tmp9(3082)["6kk0gM"]);
+    obj3[2] = tmp8(tmp2(11981).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(1236).intl;
-    obj4[1] = intl3.string(tmp9(3079).yYVbdv);
+    obj4[1] = intl3.string(tmp9(3082).yYVbdv);
     obj4[2] = callback1;
   }
   items[2] = callback(Button.Button, obj4);

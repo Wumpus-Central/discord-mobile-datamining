@@ -1,17 +1,17 @@
-// === Module 9625: NativeGiftContextProvider ===
+// === Module 9662: NativeGiftContextProvider ===
 
-// Module 9625 (NativeGiftContextProvider)
+// Module 9662 (NativeGiftContextProvider)
 import timestampDefault from "timestamp" /* 3 */;
-import createDefinedContextDefault from "createDefinedContext" /* 7399 */;
+import createDefinedContextDefault from "createDefinedContext" /* 7437 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importDefaultResult from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 8936 */;
-import closure_7 from "createEmptyPromotionsByType" /* 7628 */;
-import closure_8 from "frozen" /* 9626 */;
+import closure_6 from "initialize" /* 8973 */;
+import closure_7 from "createEmptyPromotionsByType" /* 7666 */;
+import closure_8 from "frozen" /* 9663 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 5320 */;
+import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 5325 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -262,7 +262,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     constants = undefined;
     table = undefined;
     jsx = undefined;
-    obj = { orderId: "a", planId: "capitalize", planSelection: null, giftInfo: null };
+    obj = { orderId: "a", planId: "comunicaci\u00F3n", planSelection: "cuaderno de notas", giftInfo: "cartera" };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;
@@ -349,7 +349,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -445,7 +445,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               if (closure_1_13.current.orderId !== closure_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = revision.revision;
                                 v0(revision);
@@ -466,7 +466,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               if (closure_1_13.current.orderId !== closure_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -493,7 +493,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp68) {
                         closure_2 = tmp68;
                         if (tmp4 === v0) {
@@ -518,7 +518,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -614,7 +614,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               if (closure_1_13.current.orderId !== closure_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               } else {
                                 revision = revision.revision;
                                 v0(revision);
@@ -635,7 +635,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                               if (closure_1_13.current.orderId !== closure_6) {
                                 v0 = 0;
                                 c5 = 3;
-                                return { value: "HermesInternal", done: "HermesInternal" };
+                                return { value: "HermesInternal", done: null };
                               }
                             }
                           } else if (arg0 === 1) {
@@ -662,7 +662,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
                           v0 = 0;
                         }
                         c5 = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp68) {
                         closure_2 = tmp68;
                         if (tmp4 === v0) {
@@ -747,7 +747,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

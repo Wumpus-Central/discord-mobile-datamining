@@ -1,6 +1,6 @@
-// === Module 8371: ANALYTICS_NAME ===
+// === Module 8410: ANALYTICS_NAME ===
 
-// Module 8371 (ANALYTICS_NAME)
+// Module 8410 (ANALYTICS_NAME)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import setDefault from "set" /* 687 */;
@@ -37,7 +37,7 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "icons" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "Wumpus" };
   obj[4] = [];
   return tmp2(1430).fromGuildBasic(obj);
 };

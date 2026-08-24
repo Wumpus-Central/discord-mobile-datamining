@@ -1,9 +1,9 @@
-// === Module 15549: getGuildsBarGuildMenuItems ===
+// === Module 15614: getGuildsBarGuildMenuItems ===
 
-// Module 15549 (getGuildsBarGuildMenuItems)
+// Module 15614 (getGuildsBarGuildMenuItems)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 5048 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 
 const require = arg1;
@@ -11,9 +11,9 @@ let result = require("set").fileFinishedImporting("modules/guilds_bar/native/uti
 
 export default function getGuildsBarGuildMenuItems(arg0) {
   const _require = arg0;
-  let obj = _require(10088);
+  let obj = _require(10127);
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
-  obj = { IconComponent: _require(8658).EnvelopeIcon, label: null, action: null };
+  obj = { IconComponent: _require(8695).EnvelopeIcon, label: null, action: null };
   const intl = _require(1236).intl;
   obj[1] = intl.string(_require(1236).t.e6RscS);
   obj[2] = function action() {
@@ -29,7 +29,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
             const items = [closure_0];
             arg1.default(items, closure_1_6.GUILD_LIST);
             paths = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp11) {
           paths = tmp;
@@ -73,14 +73,14 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     })();
   };
   let items = [obj, , ];
-  obj = { IconComponent: _require(10003).BellIcon, label: null, action: null };
+  obj = { IconComponent: _require(10042).BellIcon, label: null, action: null };
   const intl2 = _require(1236).intl;
   obj[1] = intl2.string(_require(1236).t.HcoRu0);
   obj[2] = function action() {
     closure_1_1(closure_1_2[10]).open(closure_0);
   };
   items[1] = obj;
-  obj1 = { IconComponent: _require(7355).SettingsIcon, label: null, action: null };
+  obj1 = { IconComponent: _require(7393).SettingsIcon, label: null, action: null };
   const intl3 = _require(1236).intl;
   obj1[1] = intl3.string(_require(1236).t.PdRCRg);
   obj1[2] = function action() {
@@ -94,7 +94,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = tmp5(11552);
+      obj2[0] = tmp5(11601);
       const intl5 = tmp(1236).intl;
       obj2[1] = intl5.string(tmp(1236).t.De0BTC);
       obj2[2] = function action() {
@@ -105,7 +105,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = tmp5(11551);
+      obj2[0] = tmp5(11600);
       const intl4 = tmp(1236).intl;
       obj2[1] = intl4.string(tmp(1236).t.vRzp7P);
       obj2[2] = function action() {

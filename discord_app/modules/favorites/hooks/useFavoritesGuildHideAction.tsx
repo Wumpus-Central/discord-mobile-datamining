@@ -1,16 +1,16 @@
-// === Module 15400: useFavoritesGuildHideAction ===
+// === Module 15464: useFavoritesGuildHideAction ===
 
-// Module 15400 (useFavoritesGuildHideAction)
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
+// Module 15464 (useFavoritesGuildHideAction)
+import messagesProxyDefault from "messagesProxy" /* 3082 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
+import closure_4 from "handleConnectionOpen" /* 4201 */;
 import { Routes } from "ME" /* 676 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  let obj = hasAccess(9979);
+  let obj = hasAccess(10018);
   hasAccess = obj.useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };

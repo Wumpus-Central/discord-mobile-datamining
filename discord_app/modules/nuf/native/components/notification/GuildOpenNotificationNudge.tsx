@@ -1,16 +1,16 @@
-// === Module 15780: GuildOpenNotificationNudge ===
+// === Module 15849: GuildOpenNotificationNudge ===
 
-// Module 15780 (GuildOpenNotificationNudge)
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 15781 */;
+// Module 15849 (GuildOpenNotificationNudge)
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 15850 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_9 from "set" /* 11578 */;
-import { PermissionPromptType } from "set" /* 11578 */;
-import EventActionType from "EventActionType" /* 11582 */;
+import closure_7 from "handleConnectionOpen" /* 4201 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_9 from "set" /* 11627 */;
+import { PermissionPromptType } from "set" /* 11627 */;
+import EventActionType from "EventActionType" /* 11631 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -59,9 +59,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(589);
-  let obj2 = stateFromStores3(14789);
-  const canSeePushNotificationNudge = stateFromStores(11583).useCanSeePushNotificationNudge();
-  const obj3 = stateFromStores(11583);
+  let obj2 = stateFromStores3(14853);
+  const canSeePushNotificationNudge = stateFromStores(11632).useCanSeePushNotificationNudge();
+  const obj3 = stateFromStores(11632);
   const items1 = [closure_8];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
@@ -121,7 +121,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return tmp2;
   });
   if (tmp12) {
-    let tmpResult = tmp(4215);
+    let tmpResult = tmp(4219);
     tmp12 = !tmpResult.isPseudoGuildId(stateFromStores);
   }
   if (tmp12) {
@@ -142,7 +142,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   if (tmp12) {
     tmp12 = stateFromStores4;
   }
-  tmpResult = tmp(7366);
+  tmpResult = tmp(7404);
   let prop = null;
   if (tmp12) {
     prop = tmp(1377).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;

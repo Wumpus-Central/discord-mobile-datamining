@@ -1,19 +1,19 @@
-// === Module 7238: canReportMessageToMods ===
+// === Module 7276: canReportMessageToMods ===
 
-// Module 7238 (canReportMessageToMods)
+// Module 7276 (canReportMessageToMods)
 import fromStringAll from "fromString" /* 506 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 5005 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 5291 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 5292 */;
-import getContextForPermission from "getContextForPermission" /* 7231 */;
-import canReportUser from "canReportUser" /* 7267 */;
-import closure_4 from "handleLoadThreadsSuccess" /* 7239 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import isCurrentUserTeen from "isCurrentUserTeen" /* 5010 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 5296 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 5297 */;
+import getContextForPermission from "getContextForPermission" /* 7269 */;
+import canReportUser from "canReportUser" /* 7305 */;
+import closure_4 from "handleLoadThreadsSuccess" /* 7277 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
+import closure_7 from "reinjectEphemerals" /* 4999 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { ReportToModPermissions } from "ReportToModPermissions" /* 7266 */;
+import { ReportToModPermissions } from "ReportToModPermissions" /* 7304 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
@@ -181,8 +181,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(5019).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5020).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(5019);
+          tmp9 = !tmp10(5024).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5025).ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = tmp10(5024);
         }
         return tmp9;
       } else {

@@ -1,12 +1,12 @@
-// === Module 8413: useDominantRGBFromImage ===
+// === Module 8452: useDominantRGBFromImage ===
 
-// Module 8413 (useDominantRGBFromImage)
+// Module 8452 (useDominantRGBFromImage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import importDefaultResult from "apply" /* 12 */;
 
 const require = arg1;
@@ -18,15 +18,15 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8414)();
+  let tmp5 = first(8453)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8415).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8454).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require(4223).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require(4223);
+    hexToRgbResult = _require(4227).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    const obj2 = _require(4227);
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);
   callback = tmp8[1];

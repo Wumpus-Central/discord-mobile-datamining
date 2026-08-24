@@ -1,6 +1,6 @@
-// === Module 5239: AutomodQuarantineUserMessageEmbedKeys ===
+// === Module 5244: AutomodQuarantineUserMessageEmbedKeys ===
 
-// Module 5239 (AutomodQuarantineUserMessageEmbedKeys)
+// Module 5244 (AutomodQuarantineUserMessageEmbedKeys)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx");

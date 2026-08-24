@@ -1,14 +1,14 @@
-// === Module 12803: WidgetPreview ===
+// === Module 12858: WidgetPreview ===
 
-// Module 12803 (WidgetPreview)
+// Module 12858 (WidgetPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import isFieldEmpty from "isFieldEmpty" /* 5375 */;
-import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
-import PersonalWidgetTextDefault from "PersonalWidgetText" /* 12291 */;
+import createDefaultFieldsSection from "createDefaultFieldsSection" /* 5380 */;
+import useSharedStylesDefault from "useSharedStyles" /* 9019 */;
+import PersonalWidgetTextDefault from "PersonalWidgetText" /* 12343 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -23,7 +23,7 @@ export default function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
   const tmp = callback3();
   const tmp4 = useSharedStylesDefault();
-  if (widget instanceof isFieldEmpty.UserProfilePersonalWidget) {
+  if (widget instanceof createDefaultFieldsSection.UserProfilePersonalWidget) {
     let obj = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
@@ -40,10 +40,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(12174).WidgetSection, obj);
+        tmp6 = callback(tmp5(12226).WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(5367);
+    tmp5Result = tmp5(5372);
   }
   let tmp9 = null;
   if (null !== tmp6) {
@@ -53,7 +53,7 @@ export default function WidgetPreview(arg0) {
     obj2[0] = tmp.title;
     const intl = tmp5(1236).intl;
     obj2[3] = intl.string(tmp5(1236).t.SpsnDY).toUpperCase();
-    const items2 = [callback(tmp5(4734).Text, obj2), tmp6];
+    const items2 = [callback(tmp5(4739).Text, obj2), tmp6];
     obj1[1] = items2;
     tmp9 = callback2(View, obj1);
     const str = intl.string(tmp5(1236).t.SpsnDY);

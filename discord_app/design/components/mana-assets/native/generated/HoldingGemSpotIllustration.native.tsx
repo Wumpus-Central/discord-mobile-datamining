@@ -1,10 +1,10 @@
-// === Module 5908: HoldingGemSpotIllustration ===
+// === Module 5939: HoldingGemSpotIllustration ===
 
-// Module 5908 (HoldingGemSpotIllustration)
+// Module 5939 (HoldingGemSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5909 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5940 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HoldingGemSpotIllustration.native.tsx");

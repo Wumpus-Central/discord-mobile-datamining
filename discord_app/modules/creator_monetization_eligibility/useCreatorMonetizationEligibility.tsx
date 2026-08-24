@@ -1,10 +1,10 @@
-// === Module 16933: useCreatorMonetizationEligibility ===
+// === Module 17026: useCreatorMonetizationEligibility ===
 
-// Module 16933 (useCreatorMonetizationEligibility)
+// Module 17026 (useCreatorMonetizationEligibility)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { CreatorMonetizationApplicationState as closure_6 } from "CreatorMonetizationApplicationState" /* 16903 */;
+import { CreatorMonetizationApplicationState as closure_6 } from "CreatorMonetizationApplicationState" /* 16996 */;
 
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
@@ -33,7 +33,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

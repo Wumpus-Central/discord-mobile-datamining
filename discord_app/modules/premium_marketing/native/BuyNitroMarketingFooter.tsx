@@ -1,14 +1,14 @@
-// === Module 12844: BuyNitroMarketingFooter ===
+// === Module 12899: BuyNitroMarketingFooter ===
 
-// Module 12844 (BuyNitroMarketingFooter)
+// Module 12899 (BuyNitroMarketingFooter)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 8021 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6408 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7197 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 8060 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 ({ Platform, View: c3 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;

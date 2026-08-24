@@ -1,18 +1,18 @@
-// === Module 6314: HeaderBackImage ===
+// === Module 6345: HeaderBackImage ===
 
-// Module 6314 (HeaderBackImage)
+// Module 6345 (HeaderBackImage)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4734 */;
-import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 6315 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6316 */;
-import Background from "Background" /* 6319 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
+import Text from "Text" /* 4739 */;
+import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 6346 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6347 */;
+import Background from "Background" /* 6350 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6401 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 class HeaderBackImage {
@@ -57,7 +57,7 @@ function CloseButton(onPress) {
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.create(null));
-  let obj = onPress(6318);
+  let obj = onPress(6349);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -71,7 +71,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return callback(closure_9, {});
   };
-  return callback(onPress(6319).HeaderBackButton, obj);
+  return callback(onPress(6350).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -173,7 +173,7 @@ export function getHeaderConditionalBackButton(handleBack) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -210,7 +210,7 @@ export function getHeaderConditionalBackButton(handleBack) {
                 }
               }
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp10) {
             c2 = tmp;

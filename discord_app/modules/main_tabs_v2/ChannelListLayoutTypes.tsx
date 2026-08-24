@@ -1,6 +1,6 @@
-// === Module 4071: ChannelListLayoutTypes ===
+// === Module 4074: ChannelListLayoutTypes ===
 
-// Module 4071 (ChannelListLayoutTypes)
+// Module 4074 (ChannelListLayoutTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/ChannelListLayoutTypes.tsx");

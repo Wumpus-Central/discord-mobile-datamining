@@ -1,11 +1,11 @@
-// === Module 7574: FadeOutLottieAnimation ===
+// === Module 7612: FadeOutLottieAnimation ===
 
-// Module 7574 (FadeOutLottieAnimation)
+// Module 7612 (FadeOutLottieAnimation)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ content: { width: "100%" } });
@@ -32,7 +32,7 @@ export default function FadeOutLottieAnimation(onComplete) {
   const effect = React.useEffect(() => {
     dependencyMap(false);
   }, []);
-  onComplete(4115);
+  onComplete(4119);
   class T {
     constructor() {
       if (closure_1) {
@@ -72,7 +72,7 @@ export default function FadeOutLottieAnimation(onComplete) {
       return;
     }
   }
-  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4664).withTiming, runOnJS: onComplete(4115).runOnJS, setIsFadeOut: tmp7 };
+  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4671).withTiming, runOnJS: onComplete(4119).runOnJS, setIsFadeOut: tmp7 };
   T.__closure = obj;
   T.__workletHash = 1137618554665;
   T.__initData = closure_8;
@@ -93,9 +93,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       dependencyMap(true);
     };
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(first(7130), { style: null, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(first(4115).View, obj);
-    const tmp16 = first(7130);
+    obj[1] = jsx(first(7168), { style: null, speed: null, onAnimationFinish: null });
+    let tmp14Result = tmp14(first(4119).View, obj);
+    const tmp16 = first(7168);
   } else {
     tmp14Result = null;
   }

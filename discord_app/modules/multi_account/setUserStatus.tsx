@@ -1,9 +1,9 @@
-// === Module 10025: _setUserStatus ===
+// === Module 10064: _setUserStatus ===
 
-// Module 10025 (_setUserStatus)
+// Module 10064 (_setUserStatus)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 6796 */;
-import closure_5 from "filterPlayingActivities" /* 7250 */;
+import closure_4 from "initialize" /* 6833 */;
+import closure_5 from "filterPlayingActivities" /* 7288 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
@@ -25,7 +25,7 @@ function _setUserStatus() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ function _setUserStatus() {
               obj3.track(constants.USER_STATUS_UPDATED, obj5);
             }
             globalStats = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp54) {
           globalStats = tmp;

@@ -1,18 +1,18 @@
-// === Module 8453: computePermissions ===
+// === Module 8492: computePermissions ===
 
-// Module 8453 (computePermissions)
+// Module 8492 (computePermissions)
 import fromStringAll from "fromString" /* 506 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8493 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 1982 */;
+import closure_4 from "initialize" /* 1983 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
 import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "trackCommunicationDisabled" /* 1991 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4024 */;
 import closure_12 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

@@ -1,9 +1,9 @@
-// === Module 8696: CircleWithCutout ===
+// === Module 8733: CircleWithCutout ===
 
-// Module 8696 (CircleWithCutout)
+// Module 8733 (CircleWithCutout)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import inlineStyles from "inlineStyles" /* 6607 */;
+import inlineStylesDefault from "inlineStyles" /* 6607 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

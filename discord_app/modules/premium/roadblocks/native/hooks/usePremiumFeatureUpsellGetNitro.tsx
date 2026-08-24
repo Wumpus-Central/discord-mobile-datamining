@@ -1,11 +1,11 @@
-// === Module 9395: usePremiumFeatureUpsellGetNitro ===
+// === Module 9432: usePremiumFeatureUpsellGetNitro ===
 
-// Module 9395 (usePremiumFeatureUpsellGetNitro)
-import contextDefault from "context" /* 7139 */;
+// Module 9432 (usePremiumFeatureUpsellGetNitro)
+import contextDefault from "context" /* 7177 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "reset" /* 4045 */;
-import closure_7 from "emitChanges" /* 7421 */;
+import closure_6 from "reset" /* 4048 */;
+import closure_7 from "emitChanges" /* 7459 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { AnalyticsObjectTypes } from "ME" /* 676 */;
 
@@ -50,7 +50,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
-          callback2(7393)(obj, dependencyMap);
+          callback2(7431)(obj, dependencyMap);
         }
       }
     }
@@ -60,15 +60,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4466).fetchSubscriptions();
-          const obj2 = callback(4466);
+          resolved = callback(4470).fetchSubscriptions();
+          const obj2 = callback(4470);
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7876).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7876);
+          resolved1 = callback(7915).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(7915);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
@@ -81,20 +81,20 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           callback4();
         }).catch(() => {
           const intl = callback(1236).intl;
-          callback2(4093).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          callback2(4096).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
         }).finally(() => callback3(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           callback4();
         }).catch(() => {
           const intl = callback(1236).intl;
-          callback2(4093).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          callback2(4096).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
         });
       }
     }
     callback2();
     tmp5 = onPress.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
-    const bestActiveInput = callback(4237).getBestActiveInput();
+    const bestActiveInput = callback(4241).getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }

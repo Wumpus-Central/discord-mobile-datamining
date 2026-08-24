@@ -1,19 +1,19 @@
-// === Module 11341: AppLauncherCommandOption ===
+// === Module 11392: AppLauncherCommandOption ===
 
-// Module 11341 (AppLauncherCommandOption)
+// Module 11392 (AppLauncherCommandOption)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11342 */;
-import AttachmentPreviewAppLauncherDefault from "AttachmentPreviewAppLauncher" /* 11353 */;
-import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 11355 */;
-import MentionableIconDefault from "MentionableIcon" /* 11356 */;
-import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11361 */;
-import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11362 */;
-import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11365 */;
+import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 11393 */;
+import AttachmentPreviewAppLauncherDefault from "AttachmentPreviewAppLauncher" /* 11404 */;
+import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 11406 */;
+import MentionableIconDefault from "MentionableIcon" /* 11407 */;
+import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 11412 */;
+import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 11413 */;
+import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 11416 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AppLauncherOptionAutoFocusType as closure_4 } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -237,8 +237,8 @@ export default function AppLauncherCommandOption(option) {
           obj6[1] = function onPress() {
             return onDismiss(name);
           };
-          obj6[2] = tmp13(tmp2(7341).CircleXIcon, { size: "md" });
-          items[1] = tmp13(tmp2(5433).PressableOpacity, obj6);
+          obj6[2] = tmp13(tmp2(7379).CircleXIcon, { size: "md" });
+          items[1] = tmp13(tmp2(5438).PressableOpacity, obj6);
           obj4[1] = items;
           tmp62 = callback(View, obj4);
         }
@@ -290,7 +290,7 @@ export default function AppLauncherCommandOption(option) {
     obj8[3] = command;
     obj8[4] = optionValues;
     let first6;
-    let tmp64Result = tmp64(11348);
+    let tmp64Result = tmp64(11399);
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -323,7 +323,7 @@ export default function AppLauncherCommandOption(option) {
     obj9[1] = name;
     obj9[2] = channel.guild_id;
     let first7;
-    tmp64Result = tmp64(11350);
+    tmp64Result = tmp64(11401);
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

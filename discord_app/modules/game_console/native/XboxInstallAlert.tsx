@@ -1,12 +1,12 @@
-// === Module 9859: XboxInstallAlert ===
+// === Module 9898: XboxInstallAlert ===
 
-// Module 9859 (XboxInstallAlert)
+// Module 9898 (XboxInstallAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import componentDidMountDefault from "componentDidMount" /* 4763 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
+import componentDidMountDefault from "componentDidMount" /* 4768 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9802 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -36,7 +36,7 @@ export default function XboxInstallAlert(arg0) {
   obj.onConfirm = function onConfirm() {
     const obj = lib(500);
     const isAndroidResult = lib(500).isAndroid();
-    const openURL = callback(4090).openURL;
+    const openURL = callback(4093).openURL;
     if (isAndroidResult) {
       openURL(closure_3);
     } else {

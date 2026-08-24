@@ -1,34 +1,34 @@
-// === Module 5042: collectGuildAnalyticsMetadata ===
+// === Module 5047: collectGuildAnalyticsMetadata ===
 
-// Module 5042 (collectGuildAnalyticsMetadata)
+// Module 5047 (collectGuildAnalyticsMetadata)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import setDefault from "set" /* 687 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import set2 from "set" /* 1398 */;
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import Presets from "Presets" /* 5046 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 5047 */;
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import Presets from "Presets" /* 5051 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 5052 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_9 from "comparator" /* 1980 */;
-import closure_10 from "handleInviteData" /* 4295 */;
-import closure_11 from "trackCommunicationDisabled" /* 1990 */;
-import closure_12 from "createGuildRoleRecordFromRust" /* 1983 */;
+import comparator from "comparator" /* 1981 */;
+import closure_9 from "comparator" /* 1981 */;
+import closure_10 from "handleInviteData" /* 4299 */;
+import closure_11 from "trackCommunicationDisabled" /* 1991 */;
+import closure_12 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_15 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_16 from "sortActivity" /* 4559 */;
-import closure_17 from "createRTCConnection" /* 4539 */;
-import closure_18 from "generateOldThreadCutoff" /* 4772 */;
-import closure_19 from "markAllUserIdListsStale" /* 4030 */;
-import closure_20 from "handleConnectionOpen" /* 1979 */;
-import closure_21 from "handleConnectionOpen" /* 4197 */;
-import closure_22 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_14 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_15 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_16 from "sortActivity" /* 4564 */;
+import closure_17 from "createRTCConnection" /* 4544 */;
+import closure_18 from "generateOldThreadCutoff" /* 4777 */;
+import closure_19 from "markAllUserIdListsStale" /* 4033 */;
+import closure_20 from "handleConnectionOpen" /* 1980 */;
+import closure_21 from "handleConnectionOpen" /* 4201 */;
+import closure_22 from "updateUserGuildSettingsInternal" /* 5048 */;
 import closure_23 from "mergeGuildAvatar" /* 1922 */;
-import closure_24 from "updateVoiceState" /* 4542 */;
+import closure_24 from "updateVoiceState" /* 4547 */;
 import ME from "ME" /* 676 */;
 
 function collectGuildAnalyticsMetadata(guildId) {
@@ -285,7 +285,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj);
       const tmp9Result = obj(12)(store4.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(5045).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(5050).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

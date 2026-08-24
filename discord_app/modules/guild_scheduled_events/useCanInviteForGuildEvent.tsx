@@ -1,14 +1,14 @@
-// === Module 8801: canEveryoneRoleViewEvent ===
+// === Module 8838: canEveryoneRoleViewEvent ===
 
-// Module 8801 (canEveryoneRoleViewEvent)
-import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import canViewInviteModal from "canViewInviteModal" /* 8802 */;
+// Module 8838 (canEveryoneRoleViewEvent)
+import applyOverwritesAll from "applyOverwrites" /* 4029 */;
+import canViewInviteModal from "canViewInviteModal" /* 8839 */;
 import closure_3 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
+import closure_5 from "comparator" /* 1981 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
+import { isGuildEventEnded } from "scheduledEventSort" /* 4374 */;
 import { GuildScheduledEventEntityTypes as closure_9 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Permissions } from "ME" /* 676 */;
 

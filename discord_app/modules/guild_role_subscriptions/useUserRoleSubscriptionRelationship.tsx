@@ -1,9 +1,9 @@
-// === Module 14552: useUserRoleSubscriptionRelationship ===
+// === Module 14620: useUserRoleSubscriptionRelationship ===
 
-// Module 14552 (useUserRoleSubscriptionRelationship)
+// Module 14620 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "computeRolesForGuild" /* 6728 */;
-import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import closure_2 from "computeRolesForGuild" /* 6765 */;
+import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS" /* 14619 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");

@@ -1,24 +1,24 @@
-// === Module 9920: handleVoiceOrStageChannelConnectPress ===
+// === Module 9959: handleVoiceOrStageChannelConnectPress ===
 
-// Module 9920 (handleVoiceOrStageChannelConnectPress)
+// Module 9959 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
-import closure_6 from "initialize" /* 5268 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9960 */;
+import closure_6 from "initialize" /* 5273 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "handleThreadCreateOrUpdate" /* 4969 */;
+import closure_8 from "handleThreadCreateOrUpdate" /* 4974 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_13 from "incrementVersion" /* 5270 */;
+import closure_13 from "incrementVersion" /* 5275 */;
 import closure_14 from "ensureGuildLoaded" /* 1391 */;
-import closure_15 from "handleConnectionOpen" /* 5271 */;
+import closure_15 from "handleConnectionOpen" /* 5276 */;
 import closure_16 from "createGuildRecordFromRust" /* 1910 */;
-import closure_17 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_18 from "markAllUserIdListsStale" /* 4030 */;
-import closure_19 from "handleConnectionOpen" /* 1979 */;
-import closure_20 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_17 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_18 from "markAllUserIdListsStale" /* 4033 */;
+import closure_19 from "handleConnectionOpen" /* 1980 */;
+import closure_20 from "updateUserGuildSettingsInternal" /* 5048 */;
 import closure_21 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { ChannelDetailsNavigatorScreens as closure_31 } from "ChannelDetailsNavigatorScreens" /* 9922 */;
+import { ChannelDetailsNavigatorScreens as closure_31 } from "ChannelDetailsNavigatorScreens" /* 9961 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -50,7 +50,7 @@ function _handleVoiceOrStageChannelConnectPress() {
           obj[0] = openGuildVoiceModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -683,7 +683,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -716,7 +716,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   } else {
                     arg1.openEndStageModal(closure_0);
                     paths = 3;
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp10) {
                   paths = tmp;

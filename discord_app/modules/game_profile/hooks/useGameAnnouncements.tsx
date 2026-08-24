@@ -1,9 +1,9 @@
-// === Module 9167: useGameAnnouncements ===
+// === Module 9204: useGameAnnouncements ===
 
-// Module 9167 (useGameAnnouncements)
+// Module 9204 (useGameAnnouncements)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "getSimilarGames" /* 9098 */;
+import closure_3 from "getSimilarGames" /* 9135 */;
 
 const useEffect = noop.useEffect;
 let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");

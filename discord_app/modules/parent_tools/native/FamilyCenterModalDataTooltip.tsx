@@ -1,17 +1,17 @@
-// === Module 14248: Row ===
+// === Module 14316: Row ===
 
-// Module 14248 (Row)
+// Module 14316 (Row)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import Modal from "Modal" /* 11115 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import Text from "Text" /* 4739 */;
+import _modDef5265 from "module_5265" /* 5265 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7660 */;
+import Modal from "Modal" /* 11154 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function Row(arg0) {
@@ -30,18 +30,18 @@ function Row(arg0) {
 }
 function FamilyCenterModalDataTooltipScreen() {
   const tmp = callback4();
-  obj = _require(11107);
+  obj = _require(11146);
   const intl = _require(1236).intl;
   const intl2 = _require(1236).intl;
   const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxyDefault.n6LOrh), intl2.string(messagesProxyDefault.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  obj1 = _require(5363);
+  obj1 = _require(5368);
   const sortedActivityTypeConfigs = obj1.getSortedActivityTypeConfigs();
   obj = { children: null };
   obj = { children: null };
   obj1 = { style: tmp.container, children: null };
   const items = [
-    callback(_require(4734).Text, { style: tmp.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText }),
+    callback(_require(4739).Text, { style: tmp.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText }),
     sortedActivityTypeConfigs.map((arg0) => {
       [tmp, obj] = arg0;
       obj = { IconComponent: closure_1_7[tmp], header: obj.tooltipHeader(), description: obj.tooltipDescription(closure_0) };
@@ -50,16 +50,16 @@ function FamilyCenterModalDataTooltipScreen() {
   ];
   obj1[1] = items;
   obj[0] = callback2(View, obj1);
-  const items1 = [callback(_require(5445).ModalContent, obj), ];
+  const items1 = [callback(_require(5450).ModalContent, obj), ];
   const obj3 = { children: null };
   const obj4 = { variant: "primary", text: null, onPress: null };
   const intl3 = _require(1236).intl;
   obj4[1] = intl3.string(_require(1236).t["NX+WJN"]);
-  obj4[2] = _modDef5260.pop;
-  obj3[0] = callback(_require(4745).Button, obj4);
-  items1[1] = callback(_require(11114).ModalFooter, obj3);
+  obj4[2] = _modDef5265.pop;
+  obj3[0] = callback(_require(4750).Button, obj4);
+  items1[1] = callback(_require(11153).ModalFooter, obj3);
   obj[0] = items1;
-  return callback2(_require(5440).ModalScreen, obj);
+  return callback2(_require(5445).ModalScreen, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { [USER_INTERACTION]: require("ChatIcon").ChatIcon, [USER_CALLED]: require("PhoneIcon").PhoneIcon, [USER_ADD]: require("FriendsIcon").FriendsIcon, [GUILD_ADD]: require("ServerGridIcon").ServerGridIcon, [GUILD_INTERACTION]: require("ThreadIcon").ThreadIcon, [PURCHASES]: require("CreditCardIcon").CreditCardIcon, [TOTAL_VOICE_MINUTES]: require("ClockIcon").ClockIcon, [GIFTS]: require("GiftIcon").GiftIcon };
@@ -88,7 +88,7 @@ export default function FamilyCenterModalDataTooltip() {
     obj = { DATA_TOOLTIP: null };
     obj = {
       headerShown: true,
-      headerLeft: callback(6314).getHeaderCloseButton(callback2(5260).pop),
+      headerLeft: callback(6345).getHeaderCloseButton(callback2(5265).pop),
       headerTitle() {
         return null;
       },

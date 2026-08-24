@@ -1,6 +1,6 @@
-// === Module 11044: AutomodEventType ===
+// === Module 11083: AutomodEventType ===
 
-// Module 11044 (AutomodEventType)
+// Module 11083 (AutomodEventType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodEventType.tsx");

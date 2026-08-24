@@ -1,8 +1,8 @@
-// === Module 14108: useSafetyHubFetchError ===
+// === Module 14176: useSafetyHubFetchError ===
 
-// Module 14108 (useSafetyHubFetchError)
+// Module 14176 (useSafetyHubFetchError)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11100 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubFetchError.tsx");

@@ -1,31 +1,31 @@
-// === Module 9895: getDiscoverableApplicationStream ===
+// === Module 9934: getDiscoverableApplicationStream ===
 
-// Module 9895 (getDiscoverableApplicationStream)
-import closure_2 from "reset" /* 4652 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+// Module 9934 (getDiscoverableApplicationStream)
+import closure_2 from "reset" /* 4658 */;
+import closure_3 from "markAllUserIdListsStale" /* 4033 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
 const require = arg1;
-function getDiscoverableApplicationStream(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    const items = [closure_2, closure_3];
+function getDiscoverableApplicationStream(id, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [closure_2, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;
-  if (null != arg0) {
-    let NONE = obj2.getRelationshipType(arg0);
+  if (null != id) {
+    let NONE = obj2.getRelationshipType(id);
   } else {
     NONE = RelationshipTypes.NONE;
   }
   let anyDiscoverableStreamForUser = null;
-  if (null != arg0) {
-    anyDiscoverableStreamForUser = obj.getAnyDiscoverableStreamForUser(arg0);
+  if (null != id) {
+    anyDiscoverableStreamForUser = obj.getAnyDiscoverableStreamForUser(id);
   }
   let tmp6 = null;
   if (NONE !== RelationshipTypes.BLOCKED) {
     tmp6 = null;
-    if (null != arg0) {
+    if (null != id) {
       tmp6 = anyDiscoverableStreamForUser;
     }
   }

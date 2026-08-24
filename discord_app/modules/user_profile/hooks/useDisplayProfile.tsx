@@ -1,11 +1,11 @@
-// === Module 8416: useDisplayProfile ===
+// === Module 8455: useDisplayProfile ===
 
-// Module 8416 (useDisplayProfile)
-import premiumSinceDefault from "premiumSince" /* 8420 */;
+// Module 8455 (useDisplayProfile)
+import premiumSinceDefault from "premiumSince" /* 8459 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import closure_5 from "createUserWidgetFromServer" /* 5370 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1990 */;
 
 const require = arg1;
 let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSinceDefault(arg0, arg1));

@@ -1,6 +1,6 @@
-// === Module 5543: metadata ===
+// === Module 5550: metadata ===
 
-// Module 5543 (metadata)
+// Module 5550 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BellSpotIllustration-2x.png.js");

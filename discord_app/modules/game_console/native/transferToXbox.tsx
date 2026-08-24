@@ -1,6 +1,6 @@
-// === Module 9857: _transferToXbox ===
+// === Module 9896: _transferToXbox ===
 
-// Module 9857 (_transferToXbox)
+// Module 9896 (_transferToXbox)
 import noopAll from "noop" /* 19 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
@@ -26,7 +26,7 @@ function _transferToXbox() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function _transferToXbox() {
               dependencyMap = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(9848).maybeShowPTTAlert(closure_1_6.XBOX);
+              obj1[0] = closure_1_1(9887).maybeShowPTTAlert(closure_1_6.XBOX);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -64,7 +64,7 @@ function _transferToXbox() {
               dependencyMap = 2;
               c4 = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = callback2(9845).disconnectRemote();
+              obj3[0] = callback2(9884).disconnectRemote();
               return obj3;
             }
           } else if (2 === tmp5) {
@@ -77,7 +77,7 @@ function _transferToXbox() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              let obj9 = callback2(9845);
+              let obj9 = callback2(9884);
               dependencyMap = 3;
               c4 = 1;
               const obj5 = { value: null, done: false };
@@ -97,7 +97,7 @@ function _transferToXbox() {
               callback = arg1;
               const obj7 = { nonce: null, forQRCode: false };
               obj7[0] = callback;
-              callback2 = callback(9858)(user, obj7);
+              callback2 = callback(9897)(user, obj7);
               dependencyMap = 4;
               c4 = 1;
               const obj8 = { value: null, done: false };
@@ -113,14 +113,14 @@ function _transferToXbox() {
             obj9[0] = arg1;
             return obj9;
           } else if (arg1) {
-            tmp47(9851)(user.id, constants.XBOX);
-            obj3 = callback2(9845);
+            tmp47(9890)(user.id, constants.XBOX);
+            obj3 = callback2(9884);
             obj3.waitForSession(constants.XBOX, user.id, callback);
-            obj4 = callback2(9860);
+            obj4 = callback2(9899);
             obj4.stopOwnStream(false);
             closure_5.openURL(callback2);
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             const obj10 = { importer: null };
             obj10[0] = function importer() {
@@ -131,7 +131,7 @@ function _transferToXbox() {
             };
             c4 = 3;
             const obj11 = { value: null, done: true };
-            obj11[0] = tmp47(4656).openLazy(obj10);
+            obj11[0] = tmp47(4662).openLazy(obj10);
             return obj11;
           }
         } catch (tmp39) {

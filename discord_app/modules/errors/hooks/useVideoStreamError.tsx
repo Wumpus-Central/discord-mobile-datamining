@@ -1,9 +1,9 @@
-// === Module 12439: useVideoStreamError ===
+// === Module 12491: useVideoStreamError ===
 
-// Module 12439 (useVideoStreamError)
+// Module 12491 (useVideoStreamError)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "isAVErrorContextOfType" /* 12440 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import closure_3 from "isAVErrorContextOfType" /* 12492 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4534 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
@@ -15,12 +15,12 @@ export default function useVideoStreamError(arg0, arg1) {
   const stateFromStores = _require(589).useStateFromStores(items, () => {
     if (closure_1_2.getId() !== dependencyMap) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9668).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9668).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
+      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9707).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9707).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
       items[Symbol.iterator]();
     }
     if (callback === closure_1_4.STREAM) {
-      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9668).AVError.SCREENSHARE_OS_ERROR);
+      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9707).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
     }
@@ -39,12 +39,12 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
   return _require(589).useStateFromStores(items, () => {
     if (closure_1_2.getId() !== dependencyMap) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9668).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9668).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
+      let arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9707).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9707).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
       items[Symbol.iterator]();
     }
     if (callback === closure_1_4.STREAM) {
-      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9668).AVError.SCREENSHARE_OS_ERROR);
+      let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9707).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
     }

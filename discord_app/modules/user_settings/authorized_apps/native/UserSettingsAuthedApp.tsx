@@ -1,25 +1,25 @@
-// === Module 14298: WarningLabel ===
+// === Module 14366: WarningLabel ===
 
-// Module 14298 (WarningLabel)
+// Module 14366 (WarningLabel)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import Text from "Text" /* 4734 */;
-import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7147 */;
-import postMessageToWebViewDefault from "postMessageToWebView" /* 8713 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4334 */;
+import Text from "Text" /* 4739 */;
+import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7185 */;
+import postMessageToWebViewDefault from "postMessageToWebView" /* 8750 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "recomputeFromAppTokens" /* 5289 */;
+import closure_7 from "recomputeFromAppTokens" /* 5294 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_11 from "_getSystemLocale" /* 1994 */;
+import closure_9 from "markAllUserIdListsStale" /* 4033 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_11 from "_getSystemLocale" /* 1995 */;
 import ME from "ME" /* 676 */;
-import { ChannelDetailsNavigatorScreens as closure_15 } from "ChannelDetailsNavigatorScreens" /* 9922 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_16 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
+import { ChannelDetailsNavigatorScreens as closure_15 } from "ChannelDetailsNavigatorScreens" /* 9961 */;
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_16 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10633 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function WarningLabel(children) {

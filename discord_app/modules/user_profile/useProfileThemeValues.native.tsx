@@ -1,9 +1,9 @@
-// === Module 7161: useProfileThemeValues ===
+// === Module 7199: useProfileThemeValues ===
 
-// Module 7161 (useProfileThemeValues)
+// Module 7199 (useProfileThemeValues)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 
 const useMemo = noop.useMemo;
 const result = set.fileFinishedImporting("modules/user_profile/useProfileThemeValues.native.tsx");

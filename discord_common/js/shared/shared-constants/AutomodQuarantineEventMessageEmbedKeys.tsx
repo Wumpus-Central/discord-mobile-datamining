@@ -1,6 +1,6 @@
-// === Module 5236: AutomodQuarantineEventMessageEmbedKeys ===
+// === Module 5241: AutomodQuarantineEventMessageEmbedKeys ===
 
-// Module 5236 (AutomodQuarantineEventMessageEmbedKeys)
+// Module 5241 (AutomodQuarantineEventMessageEmbedKeys)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineEventMessageEmbedKeys.tsx");

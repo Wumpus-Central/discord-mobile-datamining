@@ -1,17 +1,17 @@
-// === Module 7421: emitChanges ===
+// === Module 7459: emitChanges ===
 
-// Module 7421 (emitChanges)
+// Module 7459 (emitChanges)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import apexExperiment from "apexExperiment" /* 7611 */;
-import closure_2 from "createFromServer" /* 7422 */;
-import closure_3 from "emitChanges" /* 7423 */;
-import closure_4 from "createFromServer" /* 7610 */;
-import closure_5 from "createFromServer" /* 7425 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4042 */;
+import apexExperiment from "apexExperiment" /* 7649 */;
+import closure_2 from "createFromServer" /* 7460 */;
+import closure_3 from "emitChanges" /* 7461 */;
+import closure_4 from "createFromServer" /* 7648 */;
+import closure_5 from "createFromServer" /* 7463 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addEntitlement" /* 5357 */;
-import closure_8 from "reset" /* 4045 */;
+import closure_7 from "addEntitlement" /* 5362 */;
+import closure_8 from "reset" /* 4048 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -225,7 +225,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   let values = Object.values(closure_14);
   const _require = values.map((id) => id.id);
   const currentUser = authStore.getCurrentUser();
-  obj = _require(4039);
+  obj = _require(4042);
   if (obj.isPremium(currentUser)) {
     if (!self.canFractionalPremiumUserUseOffer()) {
       items = [];
@@ -303,7 +303,7 @@ prototype["getAlmostExpiringDiscountOffersForReminder"] = function getAlmostExpi
 prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _require(4039);
+  obj = _require(4042);
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {
@@ -347,7 +347,7 @@ prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscoun
 prototype["getUnacknowledgedOffers"] = function getUnacknowledgedOffers(arg0) {
   const _require = arg0;
   const currentUser = authStore.getCurrentUser();
-  obj = _require(4039);
+  obj = _require(4042);
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {

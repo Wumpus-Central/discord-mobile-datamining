@@ -1,9 +1,9 @@
-// === Module 8401: CutoutableAvatarDecoration ===
+// === Module 8440: CutoutableAvatarDecoration ===
 
-// Module 8401 (CutoutableAvatarDecoration)
+// Module 8440 (CutoutableAvatarDecoration)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

@@ -1,9 +1,9 @@
-// === Module 11691: BoostGem ===
+// === Module 11740: BoostGem ===
 
-// Module 11691 (BoostGem)
+// Module 11740 (BoostGem)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 6571 */;
-import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import inlineStyles from "inlineStyles" /* 6607 */;
+import inlineStylesDefault from "inlineStyles" /* 6607 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

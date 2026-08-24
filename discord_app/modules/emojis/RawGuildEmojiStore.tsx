@@ -1,7 +1,7 @@
-// === Module 6729: fromServer ===
+// === Module 6766: fromServer ===
 
-// Module 6729 (fromServer)
-import EmojiTypes from "EmojiTypes" /* 4037 */;
+// Module 6766 (fromServer)
+import EmojiTypes from "EmojiTypes" /* 4040 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { TypeTag } from "TypeTag" /* 1432 */;
 import { LibdiscoreStore } from "identity" /* 1911 */;

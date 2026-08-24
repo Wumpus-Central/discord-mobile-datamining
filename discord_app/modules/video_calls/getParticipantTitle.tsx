@@ -1,10 +1,10 @@
-// === Module 12606: getParticipantTitle ===
+// === Module 12660: getParticipantTitle ===
 
-// Module 12606 (getParticipantTitle)
+// Module 12660 (getParticipantTitle)
 import set from "set" /* 2 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4544 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import useIsGuestOrLurker from "useIsGuestOrLurker" /* 12607 */;
+import ParticipantTypes2 from "ParticipantTypes" /* 4549 */;
+import getNicknameDefault from "getNickname" /* 4801 */;
+import useIsGuestOrLurker from "useIsGuestOrLurker" /* 12661 */;
 
 const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
 let result = set.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");

@@ -1,6 +1,6 @@
-// === Module 6079: metadata ===
+// === Module 6110: metadata ===
 
-// Module 6079 (metadata)
+// Module 6110 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PuzzleCubeSpotIllustration-2x.png.js");

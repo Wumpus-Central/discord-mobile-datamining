@@ -1,6 +1,6 @@
-// === Module 9278: useCollectiblesExternalGatewayFacet ===
+// === Module 9315: useCollectiblesExternalGatewayFacet ===
 
-// Module 9278 (useCollectiblesExternalGatewayFacet)
+// Module 9315 (useCollectiblesExternalGatewayFacet)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;

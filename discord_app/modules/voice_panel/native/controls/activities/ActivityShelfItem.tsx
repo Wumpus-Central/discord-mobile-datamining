@@ -1,28 +1,28 @@
-// === Module 16366: ActivityActionOverlay ===
+// === Module 16463: ActivityActionOverlay ===
 
-// Module 16366 (ActivityActionOverlay)
+// Module 16463 (ActivityActionOverlay)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import Text from "Text" /* 4734 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import setDefault from "set" /* 7190 */;
-import isTestModeForApplication2 from "isTestModeForApplication" /* 7871 */;
-import postMessageToWebViewDefault from "postMessageToWebView" /* 8713 */;
-import useActivityAction from "useActivityAction" /* 11230 */;
-import useActivityActionDefault from "useActivityAction" /* 11230 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11319 */;
-import ParticipantsSummaryDefault from "ParticipantsSummary" /* 16364 */;
-import useActivityUsersDefault from "useActivityUsers" /* 16365 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import Text from "Text" /* 4739 */;
+import getNicknameDefault from "getNickname" /* 4801 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5253 */;
+import PressableBase from "PressableBase" /* 5438 */;
+import setDefault from "set" /* 7228 */;
+import isTestModeForApplication2 from "isTestModeForApplication" /* 7910 */;
+import postMessageToWebViewDefault from "postMessageToWebView" /* 8750 */;
+import useActivityAction from "useActivityAction" /* 11281 */;
+import useActivityActionDefault from "useActivityAction" /* 11281 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11282 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11370 */;
+import ParticipantsSummaryDefault from "ParticipantsSummary" /* 16461 */;
+import useActivityUsersDefault from "useActivityUsers" /* 16462 */;
 import closure_3 from "noop" /* 19 */;
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import hexToRgba from "hexToRgba" /* 4227 */;
 
 require = arg1;
 function ActivityActionOverlay(arg0) {
@@ -30,15 +30,15 @@ function ActivityActionOverlay(arg0) {
   ({ applicationId, activityItem, launchingComponentId } = arg0);
   ({ id, name } = activityItem.application);
   if (useActivityAction.ActivityAction.JOIN !== action) {
-    if (tmp4(11230).ActivityAction.LEAVE !== action) {
+    if (tmp4(11281).ActivityAction.LEAVE !== action) {
       return null;
     }
   }
-  let tmp8 = action === tmp4(11230).ActivityAction.LEAVE;
+  let tmp8 = action === tmp4(11281).ActivityAction.LEAVE;
   if (tmp8) {
     let obj = { style: null };
     obj[0] = tmp3.ongoingActivityJoinedContainer;
-    tmp8 = callback(tmp(7190), obj);
+    tmp8 = callback(tmp(7228), obj);
   }
   const items = [tmp8, ];
   id = undefined;
@@ -68,7 +68,7 @@ function ParticipantsText(arg0) {
   obj = { style: items, children: null };
   items = [, ];
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
-  obj = { source: tmp2(11953), size: Button.Icon.Sizes.EXTRA_SMALL, color: "white" };
+  obj = { source: tmp2(12002), size: Button.Icon.Sizes.EXTRA_SMALL, color: "white" };
   const items1 = [callback(Button.Icon, obj), ];
   obj1 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityAction.ActivityAction.START) {
@@ -76,8 +76,8 @@ function ParticipantsText(arg0) {
     if (num2 == null) {
       num2 = 0;
     }
-    let itemSubtitleForMaxPlayersShort = tmp9(11324).getItemSubtitleForMaxPlayersShort(num2);
-    const tmp9Result = tmp9(11324);
+    let itemSubtitleForMaxPlayersShort = tmp9(11375).getItemSubtitleForMaxPlayersShort(num2);
+    const tmp9Result = tmp9(11375);
   } else {
     itemSubtitleForMaxPlayersShort = name;
     if (arr.length > 1) {
@@ -133,17 +133,17 @@ export default function ActivityShelfItem(arg0) {
   let tmp10 = useEmbeddedActivityBackgroundDefault(obj);
   let tmp11 = !disableBadges;
   if (!disableBadges) {
-    const items = [tmp8(11230).ActivityAction.LEAVE, tmp8(11230).ActivityAction.JOIN];
+    const items = [tmp8(11281).ActivityAction.LEAVE, tmp8(11281).ActivityAction.JOIN];
     tmp11 = !items.includes(activityAction);
   }
   const tmp7Result = useActivityActionDefault(obj);
   const isTestModeForApplication = isTestModeForApplication2.useIsTestModeForApplication(activityItem.application.id);
-  obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === tmp8(11230).ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: items1, children: null };
+  obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === tmp8(11281).ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: items1, children: null };
   items1 = [tmp.container, { width, height }];
   obj1 = { style: tmp.imageOuterContainer, children: null };
-  let tmp3Result = tmp3(7190);
+  let tmp3Result = tmp3(7228);
   const obj2 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
-  tmp3Result = tmp3(16363);
+  tmp3Result = tmp3(16460);
   if (activityAction === useActivityAction.ActivityAction.START) {
     tmp10 = imageBackground;
   }
@@ -156,7 +156,7 @@ export default function ActivityShelfItem(arg0) {
   if (tmp11) {
     const obj4 = { labelType: null };
     obj4[0] = labelType;
-    tmp15Result = tmp15(tmp3(11262), obj4);
+    tmp15Result = tmp15(tmp3(11313), obj4);
   }
   items3[1] = tmp15Result;
   tmp15Result = null;
@@ -167,16 +167,16 @@ export default function ActivityShelfItem(arg0) {
       obj5[0] = tmp.developerIconContainer;
       const obj6 = { size: null, source: null, color: null };
       obj6[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-      obj6[1] = tmp3(16367);
+      obj6[1] = tmp3(16464);
       obj6[2] = tmp.developerIconColor.color;
       obj5[1] = tmp15(tmp8(1297).Icon, obj6);
-      tmp15Result = tmp15(tmp3(7190), obj5);
-      const tmp3Result1 = tmp3(7190);
+      tmp15Result = tmp15(tmp3(7228), obj5);
+      const tmp3Result1 = tmp3(7228);
     }
   }
   items3[2] = tmp15Result;
   const items4 = [closure_7(ManaContext.ThemeContextProvider, { theme: "dark", children: items3 }), ];
-  let tmp15Result1 = activityAction === tmp8(11230).ActivityAction.START;
+  let tmp15Result1 = activityAction === tmp8(11281).ActivityAction.START;
   if (tmp15Result1) {
     const obj7 = { action: null, channelId: null, guildId: null, activityItem: null };
     obj7[0] = activityAction;

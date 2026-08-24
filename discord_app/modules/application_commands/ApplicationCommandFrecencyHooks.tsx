@@ -1,9 +1,9 @@
-// === Module 8457: useTopCommands ===
+// === Module 8496: useTopCommands ===
 
-// Module 8457 (useTopCommands)
+// Module 8496 (useTopCommands)
 import closure_2 from "noop" /* 19 */;
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8450 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 8450 */;
+import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8489 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 8489 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 const require = arg1;

@@ -1,14 +1,14 @@
-// === Module 12644: VoiceActionSheet ===
+// === Module 12698: VoiceActionSheet ===
 
-// Module 12644 (VoiceActionSheet)
-import contextDefault from "context" /* 7139 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
-import _initializeDefault from "_initialize" /* 12646 */;
+// Module 12698 (VoiceActionSheet)
+import contextDefault from "context" /* 7177 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7197 */;
+import _initializeDefault from "_initialize" /* 12700 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4550 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
@@ -44,19 +44,19 @@ export default function VoiceActionSheet(channel) {
     obj = { children: null };
     obj = { channel: null };
     obj[0] = channel;
-    obj[0] = callback(tmp2(12656), obj);
-    let children = callback(tmp5(7175).ActionSheet, obj);
+    obj[0] = callback(tmp2(12710), obj);
+    let children = callback(tmp5(7213).ActionSheet, obj);
     let tmp8 = callback;
   } else if (stateFromStores) {
     obj1 = { children: null };
     const obj2 = { channel: null };
     obj2[0] = channel;
-    const items2 = [callback(tmp2(12659), obj2), ];
+    const items2 = [callback(tmp2(12713), obj2), ];
     let obj3 = { channel: null };
     obj3[0] = channel;
-    items2[1] = callback(tmp2(12660), obj3);
+    items2[1] = callback(tmp2(12714), obj3);
     obj1[0] = items2;
-    children = callback2(tmp5(7175).ActionSheet, obj1);
+    children = callback2(tmp5(7213).ActionSheet, obj1);
     tmp8 = callback;
   } else {
     tmp8 = callback;
@@ -65,13 +65,13 @@ export default function VoiceActionSheet(channel) {
     obj5[0] = tmp.container;
     const obj6 = { blurTheme: "dark", style: null };
     obj6[1] = tmp.visualEffectView;
-    const items3 = [callback(tmp2(4725), obj6), ];
+    const items3 = [callback(tmp2(4730), obj6), ];
     const obj7 = { channel: null };
     obj7[0] = channel;
-    items3[1] = callback(tmp2(12663), obj7);
+    items3[1] = callback(tmp2(12717), obj7);
     obj5[1] = items3;
     obj4[2] = callback2(closure_4, obj5);
-    children = callback(tmp5(7175).ActionSheet, obj4);
+    children = callback(tmp5(7213).ActionSheet, obj4);
   }
-  return tmp8(channel(7139).AnalyticsLocationProvider, { value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7177).AnalyticsLocationProvider, { value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

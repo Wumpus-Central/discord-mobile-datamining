@@ -1,6 +1,6 @@
-// === Module 4306: GuildThemeSourcePreference ===
+// === Module 4310: GuildThemeSourcePreference ===
 
-// Module 4306 (GuildThemeSourcePreference)
+// Module 4310 (GuildThemeSourcePreference)
 import set from "set" /* 2 */;
 import create from "create" /* 1306 */;
 

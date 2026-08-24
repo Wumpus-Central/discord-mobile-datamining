@@ -1,59 +1,60 @@
-// === Module 4772: generateOldThreadCutoff ===
+// === Module 4777: generateOldThreadCutoff ===
 
-// Module 4772 (generateOldThreadCutoff)
+// Module 4777 (generateOldThreadCutoff)
 import timestampDefault from "timestamp" /* 3 */;
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4028 */;
-import hasDefault from "has" /* 4029 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import isMentionedDefault from "isMentioned" /* 4819 */;
-import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 4999 */;
-import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 5282 */;
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel" /* 5383 */;
-import getState from "getState" /* 7383 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8779 */;
-import getFocusedChannelId from "getFocusedChannelId" /* 10023 */;
-import _modDef10501 from "module_10501" /* 10501 */;
-import _networkAwareRetryDefault from "_networkAwareRetry" /* 13063 */;
-import filterOutMessageRequestsAndSpam from "filterOutMessageRequestsAndSpam" /* 13064 */;
+import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4031 */;
+import hasDefault from "has" /* 4032 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4234 */;
+import isMentionedDefault from "isMentioned" /* 4824 */;
+import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 5004 */;
+import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 5287 */;
+import updateGuildUnreadSentinel from "updateGuildUnreadSentinel" /* 5388 */;
+import getState from "getState" /* 7421 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8816 */;
+import getFocusedChannelId from "getFocusedChannelId" /* 10062 */;
+import _modDef10540 from "module_10540" /* 10540 */;
+import _networkAwareRetryDefault from "_networkAwareRetry" /* 13118 */;
+import filterOutMessageRequestsAndSpam from "filterOutMessageRequestsAndSpam" /* 13119 */;
+import map2 from "map" /* 13121 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "getParticipants" /* 4773 */;
-import closure_7 from "isSubscriptionGated" /* 1981 */;
-import closure_8 from "getHash" /* 4288 */;
-import closure_9 from "scheduledEventSort" /* 4370 */;
-import { isEventUpcoming } from "scheduledEventSort" /* 4370 */;
-import closure_11 from "processChannel" /* 4799 */;
-import closure_12 from "processChannel" /* 4800 */;
-import closure_13 from "_validate" /* 4801 */;
-import closure_14 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_15 from "storeThread" /* 4023 */;
+import closure_6 from "getParticipants" /* 4778 */;
+import closure_7 from "isSubscriptionGated" /* 1982 */;
+import closure_8 from "getHash" /* 4292 */;
+import closure_9 from "scheduledEventSort" /* 4374 */;
+import { isEventUpcoming } from "scheduledEventSort" /* 4374 */;
+import closure_11 from "processChannel" /* 4804 */;
+import closure_12 from "processChannel" /* 4805 */;
+import closure_13 from "_validate" /* 4806 */;
+import closure_14 from "handleThreadCreateOrUpdate" /* 4974 */;
+import closure_15 from "storeThread" /* 4026 */;
 import closure_16 from "handleConnectionClosedOrResumed" /* 1340 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_22 from "fetchFingerprint" /* 1218 */;
-import closure_23 from "handlePermissionsChange" /* 4970 */;
+import closure_23 from "handlePermissionsChange" /* 4975 */;
 import closure_24 from "ensureGuildLoaded" /* 1391 */;
-import closure_25 from "percentageScrolled" /* 4973 */;
-import closure_26 from "handleConnectionOpen" /* 4826 */;
+import closure_25 from "percentageScrolled" /* 4978 */;
+import closure_26 from "handleConnectionOpen" /* 4831 */;
 import closure_27 from "createGuildRecordFromRust" /* 1910 */;
-import closure_28 from "checkIdleAFK" /* 4974 */;
-import closure_29 from "reinjectEphemerals" /* 4994 */;
-import closure_30 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_31 from "markAllUserIdListsStale" /* 4030 */;
-import importDefaultResult from "handleConnectionOpen" /* 1979 */;
-import closure_33 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_28 from "checkIdleAFK" /* 4979 */;
+import closure_29 from "reinjectEphemerals" /* 4999 */;
+import closure_30 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_31 from "markAllUserIdListsStale" /* 4033 */;
+import importDefaultResult from "handleConnectionOpen" /* 1980 */;
+import closure_33 from "updateUserGuildSettingsInternal" /* 5048 */;
 import closure_34 from "mergeGuildAvatar" /* 1922 */;
-import closure_35 from "map" /* 13060 */;
+import closure_35 from "map" /* 13115 */;
 import ME from "ME" /* 676 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 8740 */;
 import set from "set" /* 1398 */;
 import { GuildScheduledEventStatus } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 5049 */;
 import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
 import apply from "apply" /* 12 */;
 
@@ -139,7 +140,7 @@ function _processBulkAckQueue() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -187,7 +188,7 @@ function _processBulkAckQueue() {
             closure_65.length = 0;
             c66 = false;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c6 = 3;
@@ -200,7 +201,7 @@ function _processBulkAckQueue() {
             } else {
               callback2(callback);
               c6 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c6 = 3;
@@ -305,7 +306,7 @@ function shouldAutomaticallyAck(value, arg1) {
           }
           return false;
         }
-        obj5 = _modDef10501;
+        obj5 = _modDef10540;
       }
       if (tmp4) {
         if (!value._persisted) {
@@ -1706,7 +1707,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
       const result = filterOutMessageRequestsAndSpam.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
-        let result1 = tmp4(5282).isOptInEnabledForGuild(self._guildId);
+        let result1 = tmp4(5287).isOptInEnabledForGuild(self._guildId);
         if (result1) {
           result1 = self._lastMessageTimestamp < c71;
         }
@@ -1715,7 +1716,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
           canTrackUnreadsResult = self.canTrackUnreads();
         }
         tmp9 = canTrackUnreadsResult;
-        const tmp4Result = tmp4(5282);
+        const tmp4Result = tmp4(5287);
       }
       tmp3 = tmp9;
       obj = filterOutMessageRequestsAndSpam;
@@ -2033,14 +2034,14 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         }
         callback(709).dispatch({ type: "MESSAGE_ACKED" });
         if (dependencyMap) {
-          recalculateFlagsResult(2007)(13065, tmp5.paths).then((arg0) => {
+          recalculateFlagsResult(2008)(13120, tmp5.paths).then((arg0) => {
             obj = closure_1;
             if (closure_1 == null) {
               obj = {};
             }
             arg0.default(channelId.channelId, obj);
           });
-          const promise = recalculateFlagsResult(2007)(13065, tmp5.paths);
+          const promise = recalculateFlagsResult(2008)(13120, tmp5.paths);
         }
         obj = callback(709);
         tmp5 = dependencyMap;
@@ -3162,7 +3163,12 @@ obj = {
       const currentSidebarChannelId = store2.getCurrentSidebarChannelId(channelId1);
       channelId2 = channelId1;
     }
-    if (tmp20) {
+    let result = channelId2 === channelId || currentSidebarChannelId === channelId;
+    if (!result) {
+      let tmp8Result = tmp8(13121);
+      result = tmp8Result.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
+    }
+    if (result) {
       if (shouldAutomaticallyAck(value)) {
         if (!isPushNotification.isPushNotification) {
           const channelId3 = value.channelId;
@@ -3198,7 +3204,7 @@ obj = {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            let tmp8Result = tmp8(10023);
+            tmp8Result = tmp8(10062);
             hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
           }
           if (!hasUnreadResult) {
@@ -3211,13 +3217,12 @@ obj = {
         if (!closure_31.isBlockedOrIgnoredForMessage(message)) {
           if (message.type !== constants7.RECIPIENT_REMOVE) {
             if (null != currentUser) {
-              tmp8Result = tmp8(4819);
               const obj5 = { rawMessage: null, userId: null, suppressEveryone: null, suppressRoles: null };
               obj5[0] = message;
               obj5[1] = currentUser.id;
               obj5[2] = closure_33.isSuppressEveryoneEnabled(value.guildId);
               obj5[3] = closure_33.isSuppressRolesEnabled(value.guildId);
-              if (tmp8Result.isRawMessageMentioned(obj5)) {
+              if (tmp8Result1.isRawMessageMentioned(obj5)) {
                 obj6 = { shouldMention: true, isMentionLowImportance: false };
               }
               if (obj6.shouldMention) {
@@ -3236,7 +3241,7 @@ obj = {
                         let lastMessageId = value1.lastMessageId;
                         if (lastMessageId == null) {
                           lastMessageId = importDefault(11).fromTimestamp(value1.getAckTimestamp());
-                          const obj19 = importDefault(11);
+                          const obj20 = importDefault(11);
                         }
                         const obj7 = { messageId: null, local: null, trackAnalytics: false };
                         obj7[0] = lastMessageId;
@@ -3249,6 +3254,7 @@ obj = {
                   tmp46 = ReadStateTypes;
                 }
               }
+              tmp8Result1 = tmp8(4824);
             }
             const channel = obj2.getChannel(message.channel_id);
             let tmp34 = null != channel && channel.isPrivate();
@@ -3261,13 +3267,13 @@ obj = {
               if (closure_33.mentionOnAllMessages) {
                 if (null != channel) {
                   if (channel.isThread()) {
-                    if (tmp8Result1.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
+                    if (tmp8Result2.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
                       obj6 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result1 = tmp8(10022);
+                    tmp8Result2 = tmp8(10061);
                   } else if (!channel.isVocal()) {
-                    if (!obj15.isChannelMuted(channel.guild_id, channel.id)) {
-                      if (obj15.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {
+                    if (!obj16.isChannelMuted(channel.guild_id, channel.id)) {
+                      if (obj16.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {
                         obj6 = { shouldMention: true, isMentionLowImportance: true };
                       }
                     }
@@ -3713,6 +3719,29 @@ obj = {
   },
   DISABLE_AUTOMATIC_ACK: function handleDisableAutomaticAck(arg0) {
     ({ channelId, windowId } = arg0);
+    return false;
+  },
+  REGISTER_VISIBLE_INLINE_CHANNEL: function handleRegisterVisibleInlineChannel(channelId) {
+    channelId = channelId.channelId;
+    obj = map2;
+    const result = obj.registerVisibleInlineChannel(channelId, channelId.windowId);
+    obj = { section: constants3.CHANNEL, object: constants2.ACK_MESSAGE_VIEWED, objectType: constants.ACK_AUTOMATIC };
+    let flag = false;
+    if (null != channelId) {
+      const value = ReadState.get(channelId);
+      let ackResult = shouldAutomaticallyAck(value, undefined);
+      if (ackResult) {
+        obj = { trackAnalytics: true, location: null };
+        obj[1] = obj;
+        ackResult = value.ack(obj);
+      }
+      flag = ackResult;
+    }
+    return flag;
+  },
+  UNREGISTER_VISIBLE_INLINE_CHANNEL: function handleUnregisterVisibleInlineChannel(arg0) {
+    ({ channelId, windowId } = arg0);
+    const result = map2.unregisterVisibleInlineChannel(channelId, windowId);
     return false;
   },
   GUILD_FEATURE_ACK: handleGuildFeatureAck,

@@ -1,14 +1,14 @@
-// === Module 11197: useForumPostContainerPressedIn ===
+// === Module 11248: useForumPostContainerPressedIn ===
 
-// Module 11197 (useForumPostContainerPressedIn)
+// Module 11248 (useForumPostContainerPressedIn)
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10160 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10199 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 8165 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -26,7 +26,7 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   let sharedValue;
   ({ threadId, children, style } = arg0);
   const tmp = callback();
-  let obj = sharedValue(4115);
+  let obj = sharedValue(4119);
   sharedValue = obj.useSharedValue(false);
   const items = [sharedValue];
   const memo = importAllResult.useMemo(() => ({
@@ -43,10 +43,10 @@ export const ForumPostPressableContainer = function ForumPostPressableContainer(
   if (useIsMobileVisualRefreshExperimentEnabledDefault("ForumPostContainer")) {
     str = "surface-high";
   }
-  obj = { style: tmp.card, children: jsx(sharedValue(6292).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };
+  obj = { style: tmp.card, children: jsx(sharedValue(6323).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };
   items1 = [tmp.childContainer, style];
-  obj = { value: sharedValue, children: <View style={tmp.card}>{jsx(sharedValue(6292).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View> };
-  return <redux.Provider value={sharedValue}><View style={tmp.card}>{jsx(sharedValue(6292).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View></redux.Provider>;
+  obj = { value: sharedValue, children: <View style={tmp.card}>{jsx(sharedValue(6323).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View> };
+  return <redux.Provider value={sharedValue}><View style={tmp.card}>{jsx(sharedValue(6323).Card, { style: items1, variant: str, accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View></redux.Provider>;
 };
 export const ForumPostDisabledContainer = function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);

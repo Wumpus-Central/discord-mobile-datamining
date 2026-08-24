@@ -1,10 +1,10 @@
-// === Module 5670: DownloadBarIllocon ===
+// === Module 5677: DownloadBarIllocon ===
 
-// Module 5670 (DownloadBarIllocon)
+// Module 5677 (DownloadBarIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5671 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5678 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DownloadBarIllocon.native.tsx");

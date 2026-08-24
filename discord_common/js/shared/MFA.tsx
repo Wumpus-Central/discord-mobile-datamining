@@ -1,6 +1,6 @@
-// === Module 15129: finishMFACheck ===
+// === Module 15193: finishMFACheck ===
 
-// Module 15129 (finishMFACheck)
+// Module 15193 (finishMFACheck)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -34,7 +34,7 @@ function _finishMFACheck() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

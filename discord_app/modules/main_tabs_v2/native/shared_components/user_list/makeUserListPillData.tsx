@@ -1,9 +1,9 @@
-// === Module 9638: makeUserListPillData ===
+// === Module 9677: makeUserListPillData ===
 
-// Module 9638 (makeUserListPillData)
+// Module 9677 (makeUserListPillData)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -12,7 +12,8 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 
 export default function makeUserListPillData(id) {
   let obj = { id: id.id, text: nameFromUserDefault.getName(id), icon: null };
-  obj = { user: id, guildId: "Array", size: Button.AvatarSizes.XXSMALL };
-  obj[2] = jsx(Button.Avatar, { user: id, guildId: "Array", size: Button.AvatarSizes.XXSMALL });
+  obj = { user: id, guildId: "Array", size: -1 };
+  obj[2] = Button.AvatarSizes.XXSMALL;
+  obj[2] = jsx(Button.Avatar, { user: id, guildId: "Array", size: -1 });
   return obj;
 };

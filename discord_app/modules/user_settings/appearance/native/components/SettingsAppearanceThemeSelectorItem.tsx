@@ -1,26 +1,26 @@
-// === Module 14619: GradientThemeBackground ===
+// === Module 14687: GradientThemeBackground ===
 
-// Module 14619 (GradientThemeBackground)
+// Module 14687 (GradientThemeBackground)
 import noopAll from "noop" /* 19 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
-import map from "map" /* 4097 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
-import hslToRgbDefault from "hslToRgb" /* 4224 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import getMixedGradientColor from "getMixedGradientColor" /* 9091 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import registerAssetDefault from "registerAsset" /* 14620 */;
-import SynchronizeIconDefault from "SynchronizeIcon" /* 14621 */;
+import map from "map" /* 4100 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4108 */;
+import hslToRgbDefault from "hslToRgb" /* 4228 */;
+import PressableBase from "PressableBase" /* 5438 */;
+import getMixedGradientColor from "getMixedGradientColor" /* 9128 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 9128 */;
+import registerAssetDefault from "registerAsset" /* 14688 */;
+import SynchronizeIconDefault from "SynchronizeIcon" /* 14689 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThemeChange" /* 1302 */;
-import importDefaultResult from "THEME_ITEM_WIDTH" /* 14618 */;
+import importDefaultResult from "THEME_ITEM_WIDTH" /* 14686 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function GradientThemeBackground(arg0) {
@@ -61,9 +61,9 @@ function DefaultThemeBackground(item) {
   } else {
     theme = item.theme;
   }
-  let tmpResult = tmp(4097);
+  let tmpResult = tmp(4100);
   const token = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, theme);
-  tmpResult = tmp(4097);
+  tmpResult = tmp(4100);
   const token1 = tmpResult.useToken(ThemesDefault.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
   obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };

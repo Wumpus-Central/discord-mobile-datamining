@@ -1,10 +1,10 @@
-// === Module 9986: showFavoritesGuildAddedToast ===
+// === Module 10025: showFavoritesGuildAddedToast ===
 
-// Module 9986 (showFavoritesGuildAddedToast)
+// Module 10025 (showFavoritesGuildAddedToast)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import StarIcon from "StarIcon" /* 9410 */;
+import dispatcherDefault from "dispatcher" /* 4097 */;
+import StarIcon from "StarIcon" /* 9447 */;
 
 const result = set.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");
 

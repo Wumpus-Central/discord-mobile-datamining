@@ -1,6 +1,6 @@
-// === Module 5569: metadata ===
+// === Module 5576: metadata ===
 
-// Module 5569 (metadata)
+// Module 5576 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ButterflyIllocon-2x.png.js");

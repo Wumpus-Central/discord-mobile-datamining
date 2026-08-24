@@ -1,14 +1,14 @@
-// === Module 8068: StageSparkleInner ===
+// === Module 8107: StageSparkleInner ===
 
-// Module 8068 (StageSparkleInner)
+// Module 8107 (StageSparkleInner)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 8069 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import preloadDefault from "preload" /* 5454 */;
+import registerAssetDefault from "registerAsset" /* 8108 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function StageSparkleInner(style) {
@@ -34,8 +34,8 @@ function StageSparkleInner(style) {
   }
   obj[1] = tmp6Result;
   const items1 = [closure_4(View, obj), ];
-  const obj2 = { style: tmp3.sparkles, source: tmp10(8070) };
-  items1[1] = closure_4(tmp10(5449), obj2);
+  const obj2 = { style: tmp3.sparkles, source: tmp10(8109) };
+  items1[1] = closure_4(tmp10(5454), obj2);
   obj[1] = items1;
   return closure_5(View, obj);
 }

@@ -1,6 +1,6 @@
-// === Module 10918: getPartySize ===
+// === Module 10957: getPartySize ===
 
-// Module 10918 (getPartySize)
+// Module 10957 (getPartySize)
 import closure_0 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");

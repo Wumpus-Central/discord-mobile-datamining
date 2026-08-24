@@ -1,12 +1,12 @@
-// === Module 15386: VoiceUserNameItem ===
+// === Module 15450: VoiceUserNameItem ===
 
-// Module 15386 (VoiceUserNameItem)
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4815 */;
+// Module 15450 (VoiceUserNameItem)
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4820 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsxs: closure_6, jsx: error } = jsxProd);
@@ -22,7 +22,7 @@ export default function VoiceUserNameItem(arg0) {
   ({ guildId, color, variant } = arg0);
   const tmp = callback3();
   let obj = { userId: user.id, guildId };
-  obj1 = _require(9455);
+  obj1 = _require(9492);
   const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStylesDefault(obj) });
   const tmp4 = useDisplayNameStylesDefault(obj);
   [tmp8, c0] = callback(React.useState(0), 2);
@@ -63,8 +63,8 @@ export default function VoiceUserNameItem(arg0) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(4219).getName(user);
-    const tmp2Result = tmp2(4219);
+    nick = tmp2(4223).getName(user);
+    const tmp2Result = tmp2(4223);
   }
   const items1 = [nick, ];
   if (isGuest) {
@@ -72,11 +72,11 @@ export default function VoiceUserNameItem(arg0) {
     const intl = tmp5(1236).intl;
     const items2 = ["\u00A0", intl.string(tmp5(1236).t["pFO/Ph"])];
     obj2[3] = items2;
-    isGuest = tmp18(tmp5(4734).Text, obj2);
+    isGuest = tmp18(tmp5(4739).Text, obj2);
   }
   items1[1] = isGuest;
   obj[5] = items1;
-  const items3 = [closure_6(_require(4734).Text, obj), ];
+  const items3 = [closure_6(_require(4739).Text, obj), ];
   if (!tmp12) {
     tmp12 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
     const tmp22 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
@@ -87,7 +87,7 @@ export default function VoiceUserNameItem(arg0) {
     obj3[1] = tmp.tag;
     const obj4 = { userId: null };
     obj4[0] = user.id;
-    obj3[2] = callback2(tmp2(15387), obj4);
+    obj3[2] = callback2(tmp2(15451), obj4);
     tmp12 = callback2(tmp19, obj3);
   }
   items3[1] = tmp12;

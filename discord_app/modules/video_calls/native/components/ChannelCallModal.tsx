@@ -1,18 +1,18 @@
-// === Module 8668: ChannelCallCameraPreview ===
+// === Module 8705: ChannelCallCameraPreview ===
 
-// Module 8668 (ChannelCallCameraPreview)
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 8675 */;
-import useRevealProviderValue from "useRevealProviderValue" /* 8678 */;
-import CameraPreviewDefault from "CameraPreview" /* 8681 */;
-import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 12484 */;
+// Module 8705 (ChannelCallCameraPreview)
+import coerceMainRoute from "coerceMainRoute" /* 4233 */;
+import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 8712 */;
+import useRevealProviderValue from "useRevealProviderValue" /* 8715 */;
+import CameraPreviewDefault from "CameraPreview" /* 8718 */;
+import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 12538 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
+import closure_5 from "getParticipants" /* 4778 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8706 */;
+import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8707 */;
+import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8714 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -64,10 +64,10 @@ let closure_18 = importAllResult.memo((arg0) => {
     if (null != first) {
       closure_1_1(closure_1_2[13]).initialize(tmp);
       return () => {
-        callback2(12483).terminate();
-        const obj = callback2(12483);
-        callback2(8032).setHidden(false);
-        const obj2 = callback2(8032);
+        callback2(12537).terminate();
+        const obj = callback2(12537);
+        callback2(8071).setHidden(false);
+        const obj2 = callback2(8071);
         if (!obj3.isModalOpen(closure_31)) {
           callback3();
         }

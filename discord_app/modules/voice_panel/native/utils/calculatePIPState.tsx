@@ -1,12 +1,12 @@
-// === Module 16305: calculatePIPState ===
+// === Module 16399: calculatePIPState ===
 
-// Module 16305 (calculatePIPState)
-import isStreamKey from "isStreamKey" /* 4531 */;
-import PIPReferenceDimensions from "PIPReferenceDimensions" /* 16306 */;
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "reset" /* 4652 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+// Module 16399 (calculatePIPState)
+import isStreamKey from "isStreamKey" /* 4536 */;
+import PIPReferenceDimensions from "PIPReferenceDimensions" /* 16400 */;
+import closure_2 from "getParticipants" /* 4778 */;
+import closure_3 from "reset" /* 4658 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11489 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4549 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
@@ -64,7 +64,7 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   }
   let SquarePIPReferenceDimensions = getTargetDimensions.getTargetDimensions(id1);
   if (SquarePIPReferenceDimensions == null) {
-    SquarePIPReferenceDimensions = tmp13(16306).SquarePIPReferenceDimensions;
+    SquarePIPReferenceDimensions = tmp13(16400).SquarePIPReferenceDimensions;
   }
   if (tmp10) {
     tmp10 = tmp;

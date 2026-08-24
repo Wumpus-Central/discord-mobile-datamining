@@ -1,10 +1,10 @@
-// === Module 9637: fetchUserAffinitiesV2 ===
+// === Module 9676: fetchUserAffinitiesV2 ===
 
-// Module 9637 (fetchUserAffinitiesV2)
+// Module 9676 (fetchUserAffinitiesV2)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "hasConsented" /* 5258 */;
-import closure_4 from "recomputeAffinities" /* 5407 */;
+import closure_3 from "hasConsented" /* 5263 */;
+import closure_4 from "recomputeAffinities" /* 5412 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

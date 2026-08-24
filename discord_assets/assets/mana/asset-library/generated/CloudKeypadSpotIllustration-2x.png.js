@@ -1,6 +1,6 @@
-// === Module 5587: metadata ===
+// === Module 5594: metadata ===
 
-// Module 5587 (metadata)
+// Module 5594 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CloudKeypadSpotIllustration-2x.png.js");

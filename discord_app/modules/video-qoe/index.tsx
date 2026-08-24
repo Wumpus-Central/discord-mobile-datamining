@@ -1,13 +1,13 @@
-// === Module 14489: SimpleMuxWrapper ===
+// === Module 14557: SimpleMuxWrapper ===
 
-// Module 14489 (SimpleMuxWrapper)
+// Module 14557 (SimpleMuxWrapper)
 import set from "set" /* 2 */;
-import logger from "logger" /* 14490 */;
-import generateSessionId from "generateSessionId" /* 14491 */;
-import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 14492 */;
-import logger2 from "logger" /* 14494 */;
-import logger3 from "logger" /* 14495 */;
-import getVideoQoEMetricsConfig from "getVideoQoEMetricsConfig" /* 14496 */;
+import logger from "logger" /* 14558 */;
+import generateSessionId from "generateSessionId" /* 14559 */;
+import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 14560 */;
+import logger2 from "logger" /* 14562 */;
+import logger3 from "logger" /* 14563 */;
+import getVideoQoEMetricsConfig from "getVideoQoEMetricsConfig" /* 14564 */;
 
 const result = set.fileFinishedImporting("modules/video-qoe/index.tsx");
 

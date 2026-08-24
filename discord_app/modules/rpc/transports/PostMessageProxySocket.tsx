@@ -1,11 +1,11 @@
-// === Module 8761: send ===
+// === Module 8798: send ===
 
-// Module 8761 (send)
+// Module 8798 (send)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 8751 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import checkRpcVersionDefault from "checkRpcVersion" /* 8762 */;
+import HANDSHAKEDefault from "HANDSHAKE" /* 8788 */;
+import prototypeDefault from "prototype" /* 8789 */;
+import checkRpcVersionDefault from "checkRpcVersion" /* 8799 */;
 
 const RPCCloseCodes = ME.RPCCloseCodes;
 checkRpcVersionDefault;

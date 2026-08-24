@@ -1,6 +1,6 @@
-// === Module 16033: getIsChannelNameSettingEditable ===
+// === Module 16131: getIsChannelNameSettingEditable ===
 
-// Module 16033 (getIsChannelNameSettingEditable)
+// Module 16131 (getIsChannelNameSettingEditable)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");

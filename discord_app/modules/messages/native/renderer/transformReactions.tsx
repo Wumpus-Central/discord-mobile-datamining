@@ -1,16 +1,12 @@
-// === Module 8181: transformReactions ===
+// === Module 8221: transformReactions ===
 
-// Module 8181 (transformReactions)
+// Module 8221 (transformReactions)
 import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 8177 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {
   ({ reactions, animateEmoji: require } = arg0);
-  closure_1 = undefined;
-  closure_1 = apexExperiment.shouldSkipAccessibilityLabels();
-  let obj = apexExperiment;
   return reactions.flatMap((emoji) => {
     emoji = emoji.emoji;
     const merged = Object.assign(emoji, Object.create(null));
@@ -22,55 +18,58 @@ export default function transformReactions(arg0) {
     if (null != vote) {
       return [];
     } else {
-      let animated = closure_0;
-      if (closure_0) {
+      let animated = emoji;
+      if (emoji) {
         animated = emoji.animated;
       }
       if (null == emoji.id) {
-        let obj2 = callback(closure_1_2[1]);
+        let obj2 = closure_1_1(closure_1_2[0]);
         let uRL = obj2.getURL(emoji.name);
+        let tmp4 = closure_1_2;
       } else {
-        let obj = callback(closure_1_2[2]);
+        tmp4 = closure_1_2;
+        let obj = closure_1_1(closure_1_2[1]);
         obj = { id: null, animated: null, size: 48 };
         obj[0] = emoji.id;
         obj[1] = animated;
         uRL = obj.getEmojiURL(obj);
       }
-      if (callback) {
-        let str = emoji.name;
-        if (str == null) {
-          str = "";
-        }
-        let accessibleEmojiDisplayName = str;
-      } else {
-        const obj4 = closure_1_0(closure_1_2[3]);
-        accessibleEmojiDisplayName = obj4.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
+      let obj3 = closure_1_0(tmp4[2]);
+      obj = { expensive: null, cheap: null };
+      obj[0] = function expensive() {
+        return emoji(closure_1_2[3]).getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
+      };
+      let str = emoji.name;
+      if (str == null) {
+        str = "";
       }
+      obj[1] = str;
       let combined = null;
+      const accessibilityLabelOrCheapFallbackUnsafe = obj3.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
       if (null != emoji.id) {
         const _HermesInternal = HermesInternal;
         combined = "" + emoji.id;
       }
-      obj = {};
-      const merged1 = Object.assign(merged);
       obj1 = {};
+      const merged1 = Object.assign(merged);
+      obj2 = {};
       const merged2 = Object.assign(emoji);
-      obj1.id = combined;
-      obj1.src = uRL;
-      obj1.displayName = accessibleEmojiDisplayName;
-      obj1.animated = animated;
-      obj.emoji = obj1;
+      obj2.id = combined;
+      obj2.src = uRL;
+      obj2.displayName = accessibilityLabelOrCheapFallbackUnsafe;
+      obj2.animated = animated;
+      obj1.emoji = obj2;
       const _Array = Array;
-      if (Array.isArray(obj.burst_colors)) {
-        if (obj.burst_colors.length > 0) {
-          obj2 = { colors: null, shouldProcessMobileColors: null };
-          obj2[0] = obj.burst_colors;
-          obj2[1] = closure_1_0(closure_1_2[5]).isIOS();
-          obj.themedBurstColors = closure_1_0(closure_1_2[4]).buildPlatformedThemedEmojiColorPalette(obj2);
-          const obj8 = closure_1_0(closure_1_2[5]);
+      if (Array.isArray(obj1.burst_colors)) {
+        if (obj1.burst_colors.length > 0) {
+          obj3 = { colors: null, shouldProcessMobileColors: null };
+          obj3[0] = obj1.burst_colors;
+          obj3[1] = tmp8(tmp4[5]).isIOS();
+          obj1.themedBurstColors = tmp8(tmp4[4]).buildPlatformedThemedEmojiColorPalette(obj3);
+          const tmp8Result = tmp8(tmp4[5]);
         }
       }
-      return obj;
+      return obj1;
     }
   }).map((burst_count) => {
     burst_count = burst_count.burst_count;

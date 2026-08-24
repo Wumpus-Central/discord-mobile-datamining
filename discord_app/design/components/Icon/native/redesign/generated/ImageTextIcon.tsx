@@ -1,10 +1,10 @@
-// === Module 14765: ImageTextIcon ===
+// === Module 14829: ImageTextIcon ===
 
-// Module 14765 (ImageTextIcon)
+// Module 14829 (ImageTextIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 14766 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 14830 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

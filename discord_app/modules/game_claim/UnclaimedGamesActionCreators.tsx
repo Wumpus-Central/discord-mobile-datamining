@@ -1,10 +1,10 @@
-// === Module 15453: fetchUnclaimedGames ===
+// === Module 15517: fetchUnclaimedGames ===
 
-// Module 15453 (fetchUnclaimedGames)
+// Module 15517 (fetchUnclaimedGames)
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "getMap" /* 15454 */;
+import importDefaultResult from "getMap" /* 15518 */;
 import { Endpoints } from "ME" /* 676 */;
 import initialize from "initialize" /* 589 */;
 
@@ -33,7 +33,7 @@ function _fetchUnclaimedGames() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ function _fetchUnclaimedGames() {
           obj4[1] = body;
           obj.dispatch(obj4);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;

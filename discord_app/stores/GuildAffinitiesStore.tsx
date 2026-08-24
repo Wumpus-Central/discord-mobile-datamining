@@ -1,9 +1,9 @@
-// === Module 9052: initialize ===
+// === Module 9089: initialize ===
 
-// Module 9052 (initialize)
+// Module 9089 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import fetchGuildAffinities from "fetchGuildAffinities" /* 9053 */;
+import fetchGuildAffinities from "fetchGuildAffinities" /* 9090 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 
 require = arg1;

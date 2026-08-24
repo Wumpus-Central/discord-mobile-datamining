@@ -1,10 +1,10 @@
-// === Module 5762: GameDiversityTier2LargeBadge ===
+// === Module 5793: GameDiversityTier2LargeBadge ===
 
-// Module 5762 (GameDiversityTier2LargeBadge)
+// Module 5793 (GameDiversityTier2LargeBadge)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import vanityUrlDefault from "vanityUrl" /* 5763 */;
+import preloadDefault from "preload" /* 5454 */;
+import vanityUrlDefault from "vanityUrl" /* 5794 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier2LargeBadge.native.tsx");

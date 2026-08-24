@@ -1,15 +1,15 @@
-// === Module 6788: handleUpdate ===
+// === Module 6825: handleUpdate ===
 
-// Module 6788 (handleUpdate)
+// Module 6825 (handleUpdate)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "initialize" /* 1982 */;
+import closure_3 from "initialize" /* 1983 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "shouldShowOnboarding" /* 6784 */;
-import { GuildOnboardingStatus } from "shouldShowOnboarding" /* 6784 */;
-import { GuildOnboardingMode } from "serverPromptToClientPrompt" /* 5286 */;
+import closure_5 from "shouldShowOnboarding" /* 6821 */;
+import { GuildOnboardingStatus } from "shouldShowOnboarding" /* 6821 */;
+import { GuildOnboardingMode } from "serverPromptToClientPrompt" /* 5291 */;
 
 const require = arg1;
 function handleUpdate(arg0) {

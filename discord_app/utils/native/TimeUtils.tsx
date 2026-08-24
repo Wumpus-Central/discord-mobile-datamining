@@ -1,6 +1,6 @@
-// === Module 4869: getTimeFormat ===
+// === Module 4874: getTimeFormat ===
 
-// Module 4869 (getTimeFormat)
+// Module 4874 (getTimeFormat)
 import set from "set" /* 2 */;
 
 let result = set.fileFinishedImporting("utils/native/TimeUtils.tsx");

@@ -1,12 +1,12 @@
-// === Module 14059: memoResult1 ===
+// === Module 14127: memoResult1 ===
 
-// Module 14059 (memoResult1)
-import useCollectibleListLayout from "useCollectibleListLayout" /* 8395 */;
+// Module 14127 (memoResult1)
+import useCollectibleListLayout from "useCollectibleListLayout" /* 8434 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isNameplateRecord } from "fromServer" /* 1947 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -79,7 +79,7 @@ const memoResult1 = importAllResult.memo((nameplate) => {
   }, items1);
   const tmp = callback3();
   const items2 = [tmp.nameplate, { borderRadius: 6 }];
-  return callback(nameplate(8396).EditCollectiblesListItemProduct, { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: callback(setSelectedNameplate(9221), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 }) });
+  return callback(nameplate(8435).EditCollectiblesListItemProduct, { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: callback(setSelectedNameplate(9258), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 }) });
 });
 memoResult1.displayName = "EditNameplateItem";
 const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/EditNameplateSection.tsx");

@@ -1,6 +1,6 @@
-// === Module 8612: BackgroundImage ===
+// === Module 8649: BackgroundImage ===
 
-// Module 8612 (BackgroundImage)
+// Module 8649 (BackgroundImage)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -16,7 +16,7 @@ export default function BackgroundImage(backgroundImageSource) {
     flag = false;
   }
   dependencyMap = undefined;
-  const tmp = flag(4310)();
+  const tmp = flag(4314)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };

@@ -1,6 +1,6 @@
-// === Module 5705: metadata ===
+// === Module 5736: metadata ===
 
-// Module 5705 (metadata)
+// Module 5736 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FlowerIllocon-2x.png.js");

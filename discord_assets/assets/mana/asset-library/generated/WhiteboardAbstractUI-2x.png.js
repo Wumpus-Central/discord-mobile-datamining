@@ -1,6 +1,6 @@
-// === Module 6269: metadata ===
+// === Module 6300: metadata ===
 
-// Module 6269 (metadata)
+// Module 6300 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WhiteboardAbstractUI-2x.png.js");

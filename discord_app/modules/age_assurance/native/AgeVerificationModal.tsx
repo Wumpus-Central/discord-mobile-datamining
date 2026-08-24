@@ -1,11 +1,11 @@
-// === Module 6557: AgeVerifyScreen ===
+// === Module 6590: AgeVerifyScreen ===
 
-// Module 6557 (AgeVerifyScreen)
+// Module 6590 (AgeVerifyScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set" /* 5427 */;
+import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set" /* 5432 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function AgeVerifyScreen(uri) {
@@ -76,7 +76,7 @@ export default function AgeVerificationModal(webviewUrl) {
   const memo = React.useMemo(() => {
     function handleClose() {
       dependencyMap();
-      let arr = callback2(5260);
+      let arr = callback2(5265);
       arr = arr.pop();
     }
     return {
@@ -87,7 +87,7 @@ export default function AgeVerificationModal(webviewUrl) {
           const obj = { onPress: handleClose, text: null };
           const intl = callback(1236).intl;
           obj[1] = intl.string(callback(1236).t.cpT0Cq);
-          return closure_1_5(callback(5432).HeaderActionButton, obj);
+          return closure_1_5(callback(5437).HeaderActionButton, obj);
         },
         render() {
           return closure_1_5(closure_1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });

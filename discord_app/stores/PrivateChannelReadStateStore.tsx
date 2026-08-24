@@ -1,14 +1,14 @@
-// === Module 13302: rebuildUnreads ===
+// === Module 13360: rebuildUnreads ===
 
-// Module 13302 (rebuildUnreads)
+// Module 13360 (rebuildUnreads)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1990 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "makeSortedChannel" /* 5388 */;
+import closure_4 from "generateOldThreadCutoff" /* 4777 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
+import closure_6 from "makeSortedChannel" /* 5393 */;
 import set from "set" /* 2 */;
 
 function rebuildUnreads() {

@@ -1,13 +1,13 @@
-// === Module 6297: TableRowArrow ===
+// === Module 6328: TableRowArrow ===
 
-// Module 6297 (TableRowArrow)
+// Module 6328 (TableRowArrow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import IconSizes from "IconSizes" /* 4747 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
+import IconSizes from "IconSizes" /* 4752 */;
+import IconSizesDefault from "IconSizes" /* 4752 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -25,7 +25,7 @@ export const TableRowArrow = function TableRowArrow() {
   const tmp = importDefault;
   const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("TableRowArrow");
   const tmp5 = jsx;
-  obj[2] = tmp(tmp3 ? 6298 : 6299);
+  obj[2] = tmp(tmp3 ? 6329 : 6330);
   obj[3] = IconSizes.IconSizes.CUSTOM;
   return tmp5(IconSizesDefault, obj);
 };

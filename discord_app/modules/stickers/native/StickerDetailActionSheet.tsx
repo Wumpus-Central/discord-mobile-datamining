@@ -1,23 +1,23 @@
-// === Module 10234: StandardStickerDetail ===
+// === Module 10273: StandardStickerDetail ===
 
-// Module 10234 (StandardStickerDetail)
+// Module 10273 (StandardStickerDetail)
 import ThemesDefault from "Themes" /* 712 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10217 */;
-import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10224 */;
-import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10224 */;
-import hideStickerDetailActionSheet from "hideStickerDetailActionSheet" /* 10233 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10256 */;
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10263 */;
+import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10263 */;
+import hideStickerDetailActionSheet from "hideStickerDetailActionSheet" /* 10272 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "loadSavedGuildStickers" /* 6769 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
+import closure_11 from "loadSavedGuildStickers" /* 6806 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10226 */;
 import ME from "ME" /* 676 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6989 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -107,8 +107,8 @@ function StandardStickerDetail(chatInputRef) {
         if (null != stateFromStores) {
           if (stateFromStores1) {
             if (null != chatInputRef) {
-              const result1 = tmp(10219).openStickerPickerToPackId(tmp6, pack_id);
-              const tmpResult = tmp(10219);
+              const result1 = tmp(10258).openStickerPickerToPackId(tmp6, pack_id);
+              const tmpResult = tmp(10258);
             }
           }
         }
@@ -372,7 +372,7 @@ function GuildStickerDetail(sticker) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -409,7 +409,7 @@ function GuildStickerDetail(sticker) {
               v0(closure_0);
               closure_1_5(true);
               v0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp16) {
             v0 = tmp;
@@ -691,10 +691,10 @@ export default importAllResult.memo(function StickerDetailActionSheet(chatInputR
     obj1[0] = tmp.content;
     obj1[1] = tmp6Result;
     obj[1] = tmp6(closure_6, obj1);
-    return tmp6(tmp2(6950).BottomSheet, obj);
+    return tmp6(tmp2(6988).BottomSheet, obj);
   }
   if (null != first) {
-    let tmp2Result = tmp2(4823);
+    let tmp2Result = tmp2(4828);
     if (tmp2Result.isStandardSticker(first)) {
       const obj2 = { sticker: null, channel: null, chatInputRef: null };
       obj2[0] = first;
@@ -702,7 +702,7 @@ export default importAllResult.memo(function StickerDetailActionSheet(chatInputR
       obj2[2] = chatInputRef.chatInputRef;
       tmp6Result = tmp6(StandardStickerDetail, obj2);
     } else {
-      tmp2Result = tmp2(4823);
+      tmp2Result = tmp2(4828);
       if (tmp2Result.isGuildSticker(first)) {
         const obj3 = { sticker: null, channel: null };
         obj3[0] = first;

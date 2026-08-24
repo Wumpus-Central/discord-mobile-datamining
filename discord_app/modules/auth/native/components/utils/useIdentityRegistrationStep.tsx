@@ -1,11 +1,11 @@
-// === Module 15222: useIdentityRegistrationStep ===
+// === Module 15286: useIdentityRegistrationStep ===
 
-// Module 15222 (useIdentityRegistrationStep)
+// Module 15286 (useIdentityRegistrationStep)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15276 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15277 */;
 import { AbortCodes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -56,7 +56,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -97,7 +97,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             ref = c4;
             if (ref instanceof callback(navigation[10]).CaptchaCancelError) {
               c7 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             } else {
               obj1 = callback(navigation[11]);
               const authenticationErrorsFromAPIError = obj1.getAuthenticationErrorsFromAPIError(closure_5);
@@ -179,7 +179,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
             };
             closure_1_2.push(callback(navigation[13]).AuthStates.VERIFY_PHONE, obj7);
             c7 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp55) {
           c4 = tmp55;

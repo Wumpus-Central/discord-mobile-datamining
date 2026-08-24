@@ -1,11 +1,11 @@
-// === Module 7926: useBuyNitroMarketingLifecycleHooks ===
+// === Module 7965: useBuyNitroMarketingLifecycleHooks ===
 
-// Module 7926 (useBuyNitroMarketingLifecycleHooks)
+// Module 7965 (useBuyNitroMarketingLifecycleHooks)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7392 */;
+import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7430 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ reset: c4, usePremiumPlanPurchasedStore: c5 } = usePremiumPlanPurchasedStore);
@@ -22,7 +22,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _require(7927).usePromotionMarketingComponent(_require(7931).MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = _require(7966).usePromotionMarketingComponent(_require(7970).MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;
@@ -47,9 +47,9 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     let BuyNitroPurchaseLock = initialLoadCompleted(_navigator[10]).BuyNitroPurchaseLock;
     BuyNitroPurchaseLock.end();
     return () => {
-      const BuyNitroPurchaseLock = callback(7932).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = callback(7971).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = callback(7932).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = callback(7971).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
     };
   }, []);

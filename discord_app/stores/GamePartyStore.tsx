@@ -1,12 +1,12 @@
-// === Module 12780: updateParty ===
+// === Module 12835: updateParty ===
 
-// Module 12780 (updateParty)
+// Module 12835 (updateParty)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "filterPlayingActivities" /* 7250 */;
+import closure_3 from "markAllUserIdListsStale" /* 4033 */;
+import closure_4 from "filterPlayingActivities" /* 7288 */;
 import ME from "ME" /* 676 */;
 
 function updateParty(closure_6, id, activities, status) {

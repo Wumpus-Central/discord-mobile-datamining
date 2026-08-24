@@ -1,17 +1,17 @@
-// === Module 15352: ? ===
+// === Module 15416: ? ===
 
-// Module 15352
+// Module 15416
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "truncateOldMessageData" /* 13255 */;
-import { MAX_STORED_MESSAGES } from "truncateOldMessageData" /* 13255 */;
+import closure_5 from "truncateOldMessageData" /* 13310 */;
+import { MAX_STORED_MESSAGES } from "truncateOldMessageData" /* 13310 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleTypingStart" /* 11152 */;
+import closure_8 from "handleTypingStart" /* 11191 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14708 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,6 +1,6 @@
-// === Module 5501: metadata ===
+// === Module 5506: metadata ===
 
-// Module 5501 (metadata)
+// Module 5506 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ApiIllocon-2x.png.js");

@@ -1,7 +1,7 @@
-// === Module 4275: prototype ===
+// === Module 4279: prototype ===
 
-// Module 4275 (prototype)
-import setDefault from "set" /* 4061 */;
+// Module 4279 (prototype)
+import setDefault from "set" /* 4064 */;
 
 setDefault;
 const prototype = function StripeError(error) {

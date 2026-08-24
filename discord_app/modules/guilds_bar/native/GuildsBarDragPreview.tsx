@@ -1,13 +1,13 @@
-// === Module 15623: PreviewItem ===
+// === Module 15689: PreviewItem ===
 
-// Module 15623 (PreviewItem)
-import isIterable from "isIterable" /* 4006 */;
+// Module 15689 (PreviewItem)
+import isIterable from "isIterable" /* 4009 */;
 import importAllResult from "noop" /* 19 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import closure_5 from "withEqualityFn" /* 15547 */;
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15548 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5083 */;
+import closure_5 from "withEqualityFn" /* 15612 */;
+import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15613 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PreviewItem(dragRegion) {
@@ -134,7 +134,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: false, children: false };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "call", expanded: 22857793, children: -1770978816 };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -338,7 +338,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "documentElement", scrollPosition: null, dragRegion: "es", windowSize: null, dropComplete: null, listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "SURVEY_SEEN", scrollPosition: null, dragRegion: "text-md/medium", windowSize: "text-overlay-light", dropComplete: null, listInsets: 3 };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

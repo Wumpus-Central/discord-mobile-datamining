@@ -1,8 +1,8 @@
-// === Module 15494: FavoritesGuildCoachmarkMenuItemContent ===
+// === Module 15559: FavoritesGuildCoachmarkMenuItemContent ===
 
-// Module 15494 (FavoritesGuildCoachmarkMenuItemContent)
-import Layer from "Layer" /* 7126 */;
-import items12 from "items1" /* 9990 */;
+// Module 15559 (FavoritesGuildCoachmarkMenuItemContent)
+import Layer from "Layer" /* 7164 */;
+import items12 from "items1" /* 10029 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initializeFromUserSettings" /* 1394 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
@@ -33,7 +33,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "tokenize must be called with bankDetails or bankLogin.", onButtonPress: "M16 6h-1v6h1V6Z" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "Contact Sync Suggestions", onButtonPress: "M4 10v4h1v1h3v-1h1v-4H4Z" };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {

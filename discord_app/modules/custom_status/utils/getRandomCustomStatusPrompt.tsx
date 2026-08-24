@@ -1,8 +1,8 @@
-// === Module 9293: getRandomCustomStatusPrompt ===
+// === Module 9330: getRandomCustomStatusPrompt ===
 
-// Module 9293 (getRandomCustomStatusPrompt)
+// Module 9330 (getRandomCustomStatusPrompt)
 import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 9292 */;
+import StatusTypes from "StatusTypes" /* 9329 */;
 
 ({ CustomStatusPrompts: obj1, CustomStatusPromptValues: c3 } = StatusTypes);
 const result = set.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");

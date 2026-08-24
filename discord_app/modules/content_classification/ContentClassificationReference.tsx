@@ -1,8 +1,8 @@
-// === Module 4785: isAgeRestrictedClassificationReference ===
+// === Module 4790: isAgeRestrictedClassificationReference ===
 
-// Module 4785 (isAgeRestrictedClassificationReference)
+// Module 4790 (isAgeRestrictedClassificationReference)
 import set from "set" /* 2 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4791 */;
 
 let result = set.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 

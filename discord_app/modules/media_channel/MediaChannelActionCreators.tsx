@@ -1,6 +1,6 @@
-// === Module 11055: _fetchMediaPostEmbed ===
+// === Module 11094: _fetchMediaPostEmbed ===
 
-// Module 11055 (_fetchMediaPostEmbed)
+// Module 11094 (_fetchMediaPostEmbed)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
@@ -74,7 +74,7 @@ function _unfurlEmbedUrl() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -125,11 +125,11 @@ function _unfurlEmbedUrl() {
             obj[0] = body.body;
             return obj;
           }
-        } catch (tmp19) {
-          closure_3 = tmp19;
+        } catch (tmp23) {
+          closure_3 = tmp23;
           if (tmp4 === constants) {
             c6 = tmp2;
-            throw tmp19;
+            throw tmp23;
           } else {
             c5 = tmp;
           }

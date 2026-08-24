@@ -1,15 +1,15 @@
-// === Module 11536: search ===
+// === Module 11585: search ===
 
-// Module 11536 (search)
+// Module 11585 (search)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import NOOP from "NOOP" /* 6714 */;
-import NOOPDefault from "NOOP" /* 6714 */;
-import HeaderRecord from "HeaderRecord" /* 6773 */;
-import comparator from "comparator" /* 1980 */;
-import closure_5 from "generateOldThreadCutoff" /* 4772 */;
+import NOOP from "NOOP" /* 6751 */;
+import NOOPDefault from "NOOP" /* 6751 */;
+import HeaderRecord from "HeaderRecord" /* 6810 */;
+import comparator from "comparator" /* 1981 */;
+import closure_5 from "generateOldThreadCutoff" /* 4777 */;
 
 ({ GUILD_VOCAL_CHANNELS_KEY: c3, GUILD_SELECTABLE_CHANNELS_KEY: c4 } = comparator);
 HeaderRecord.AutocompleterResultTypes;

@@ -1,9 +1,9 @@
-// === Module 10017: setsEqual ===
+// === Module 10056: setsEqual ===
 
-// Module 10017 (setsEqual)
+// Module 10056 (setsEqual)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1940 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
 import set from "set" /* 2 */;
 
 function setsEqual(set, set2) {
@@ -28,13 +28,13 @@ function formatDays(days) {
   set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = set(1236).intl;
-    return intl3.string(dateTimeFormat(2335).bPjqd1);
+    return intl3.string(dateTimeFormat(2336).bPjqd1);
   } else if (tmp2(set, set)) {
     const intl2 = set(1236).intl;
-    return intl2.string(dateTimeFormat(2335)["4dr9L9"]);
+    return intl2.string(dateTimeFormat(2336)["4dr9L9"]);
   } else if (tmp2(set, set1)) {
     const intl = set(1236).intl;
-    return intl.string(dateTimeFormat(2335)["6lTTJ+"]);
+    return intl.string(dateTimeFormat(2336)["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     dateTimeFormat = new Intl.DateTimeFormat(set(1236).intl.currentLocale, { weekday: "short" });

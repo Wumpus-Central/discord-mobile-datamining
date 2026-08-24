@@ -1,11 +1,11 @@
-// === Module 6697: useAgeVerificationMethods ===
+// === Module 6733: useAgeVerificationMethods ===
 
-// Module 6697 (useAgeVerificationMethods)
+// Module 6733 (useAgeVerificationMethods)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "initialize" /* 5426 */;
-import set from "set" /* 5427 */;
+import closure_6 from "initialize" /* 5431 */;
+import set from "set" /* 5432 */;
 
 const require = arg1;
 ({ VERIFICATION_METHOD_TITLE_MAP: error, VerificationMethod: closure_8 } = set);
@@ -95,7 +95,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -128,7 +128,7 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp5) {
                     c1 = tmp;

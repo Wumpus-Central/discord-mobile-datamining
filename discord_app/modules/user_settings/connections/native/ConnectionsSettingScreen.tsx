@@ -1,21 +1,21 @@
-// === Module 14313: onPress ===
+// === Module 14381: onPress ===
 
-// Module 14313 (onPress)
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+// Module 14381 (onPress)
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14314, dependencyMap.paths), "AddConnection");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14382, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1500).useStackNavigation();
   let obj = stackNavigation(1500);
   const tmp = stackNavigation;
-  const params = stackNavigation(7385).useSettingNavigationRoute().params;
+  const params = stackNavigation(7423).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -29,11 +29,11 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
         obj.onPress = closure_5;
         const intl = callback(1236).intl;
         obj.label = intl.string(callback(1236).t.OYkgVk);
-        return callback2(callback(8492).HeaderTextButton, obj);
+        return callback2(callback(8531).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(14315).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14383).UserSettingsConnections, { selectedPlatformType });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 

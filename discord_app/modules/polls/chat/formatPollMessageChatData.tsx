@@ -1,16 +1,16 @@
-// === Module 8429: reactionForId ===
+// === Module 8468: reactionForId ===
 
-// Module 8429 (reactionForId)
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8431 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
+// Module 8468 (reactionForId)
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4013 */;
+import GuildMemberFlags from "GuildMemberFlags" /* 4030 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8470 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_4 from "getEmojiToGroupId" /* 6764 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "reinjectEphemerals" /* 4999 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { getPollState } from "useMessagePollInteractions" /* 8430 */;
+import { getPollState } from "useMessagePollInteractions" /* 8469 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

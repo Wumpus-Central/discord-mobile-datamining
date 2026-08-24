@@ -1,11 +1,11 @@
-// === Module 11131: items ===
+// === Module 11170: items ===
 
-// Module 11131 (items)
+// Module 11170 (items)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import hasFetchedColors from "hasFetchedColors" /* 8345 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import hasFetchedColors from "hasFetchedColors" /* 8384 */;
+import hexToRgba from "hexToRgba" /* 4227 */;
 
 let c3 = "#000000";
 let items = [hexToRgba.hexToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_760), ];
@@ -17,19 +17,19 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
     return tmp;
   } else {
     if (obj5.hasFetchedColors(id2)) {
-      let tmp6Result = tmp6(8346);
+      let tmp6Result = tmp6(8385);
       const heroColors = tmp6Result.getHeroColors(id2);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
       if (false === tmp4) {
-        tmp6Result = tmp6(4223);
-        items = [tmp6Result.hexToRgba(primaryColor), tmp6(4223).hexToRgba(secondaryColor)];
+        tmp6Result = tmp6(4227);
+        items = [tmp6Result.hexToRgba(primaryColor), tmp6(4227).hexToRgba(secondaryColor)];
         tmp5 = items;
-        const tmp6Result1 = tmp6(4223);
+        const tmp6Result1 = tmp6(4227);
       }
       return tmp5;
     } else {
-      tmp6(8345).maybeFetchColors(id2);
+      tmp6(8384).maybeFetchColors(id2);
       return tmp;
     }
     obj5 = hasFetchedColors;

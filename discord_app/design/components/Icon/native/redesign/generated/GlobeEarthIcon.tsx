@@ -1,10 +1,10 @@
-// === Module 9826: GlobeEarthIcon ===
+// === Module 9865: GlobeEarthIcon ===
 
-// Module 9826 (GlobeEarthIcon)
+// Module 9865 (GlobeEarthIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9827 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 9866 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

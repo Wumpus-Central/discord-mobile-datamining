@@ -1,6 +1,6 @@
-// === Module 4265: VANITY_URL_POWERUP_SKU_ID ===
+// === Module 4269: VANITY_URL_POWERUP_SKU_ID ===
 
-// Module 4265 (VANITY_URL_POWERUP_SKU_ID)
+// Module 4269 (VANITY_URL_POWERUP_SKU_ID)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");

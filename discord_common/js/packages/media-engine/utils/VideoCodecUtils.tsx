@@ -1,8 +1,8 @@
-// === Module 4628: items ===
+// === Module 4634: items ===
 
-// Module 4628 (items)
+// Module 4634 (items)
 import set2 from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import DesktopSources from "DesktopSources" /* 4534 */;
 
 const ExperimentFlags = DesktopSources.ExperimentFlags;
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];

@@ -1,7 +1,7 @@
-// === Module 10682: makeClientVariant ===
+// === Module 10721: makeClientVariant ===
 
-// Module 10682 (makeClientVariant)
-import create from "create" /* 4367 */;
+// Module 10721 (makeClientVariant)
+import create from "create" /* 4371 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import closure_5 from "initialize" /* 1212 */;

@@ -1,14 +1,14 @@
-// === Module 10309: AnimatedImage ===
+// === Module 10348: AnimatedImage ===
 
-// Module 10309 (AnimatedImage)
+// Module 10348 (AnimatedImage)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
+import Text from "Text" /* 4739 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AnimatedImage(arg0) {

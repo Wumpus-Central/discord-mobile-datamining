@@ -1,12 +1,12 @@
-// === Module 6004: NitroSupergraphicLogo ===
+// === Module 6035: NitroSupergraphicLogo ===
 
-// Module 6004 (NitroSupergraphicLogo)
+// Module 6035 (NitroSupergraphicLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import metadataDefault from "metadata" /* 6005 */;
+import map from "map" /* 4100 */;
+import metadataDefault from "metadata" /* 6036 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

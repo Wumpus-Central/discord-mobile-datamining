@@ -1,13 +1,13 @@
-// === Module 6806: TermsFieldListItem ===
+// === Module 6843: TermsFieldListItem ===
 
-// Module 6806 (TermsFieldListItem)
+// Module 6843 (TermsFieldListItem)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
+import Text from "Text" /* 4739 */;
+import get_defaultRulesDefault from "get defaultRules" /* 6844 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function TermsFieldListItem(arg0) {
@@ -47,7 +47,7 @@ export default function TermsFieldList(rules) {
   const intl = rules(1236).intl;
   obj[4] = intl.string(rules(1236).t.prJqwT);
   let items = [
-    callback(rules(4734).Text, obj),
+    callback(rules(4739).Text, obj),
     rules.map((rule) => {
       const items = [termsContainer.termsContainer, , ];
       let firstItem = null;

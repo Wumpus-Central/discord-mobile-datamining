@@ -1,18 +1,18 @@
-// === Module 10748: keyExtractor ===
+// === Module 10787: keyExtractor ===
 
-// Module 10748 (keyExtractor)
+// Module 10787 (keyExtractor)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "guildHasCommunity" /* 5276 */;
-import closure_7 from "setIndex" /* 5278 */;
-import closure_8 from "comparator" /* 1980 */;
+import closure_6 from "guildHasCommunity" /* 5281 */;
+import closure_7 from "setIndex" /* 5283 */;
+import closure_8 from "comparator" /* 1981 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 5048 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function keyExtractor(section) {
@@ -47,7 +47,7 @@ let closure_17 = importAllResult.memo((channel) => {
   let obj = channel(589);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.isChannelOptedIn(channel.guild_id, channel.id));
-  obj1 = channel(4105);
+  obj1 = channel(4108);
   const checkboxA11yNative = obj1.useCheckboxA11yNative({ checked: stateFromStores });
   obj = {
     style: tmp.categoryContainer,
@@ -68,8 +68,8 @@ let closure_17 = importAllResult.memo((channel) => {
     accessibilityState = checkboxA11yNative.accessibilityState;
   }
   obj[3] = accessibilityState;
-  obj = { style: tmp.categoryTitle, title: onChannelClick(4984)(channel), lineClamp: 1 };
-  const items1 = [closure_12(channel(6286).TableRowGroupTitle, obj), ];
+  obj = { style: tmp.categoryTitle, title: onChannelClick(4989)(channel), lineClamp: 1 };
+  const items1 = [closure_12(channel(6317).TableRowGroupTitle, obj), ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     obj1 = { style: null, accessibilityRole: null, accessibilityState: null, children: null };
@@ -79,18 +79,18 @@ let closure_17 = importAllResult.memo((channel) => {
     obj2[0] = tmp.selectAllCheckbox;
     const obj3 = { checked: null };
     obj3[0] = stateFromStores;
-    obj2[1] = tmp8(tmp4(8085).FormCheckbox, obj3);
+    obj2[1] = tmp8(tmp4(8124).FormCheckbox, obj3);
     const items2 = [tmp8(View, obj2), ];
     const obj4 = { variant: "text-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1236).intl;
     obj4[2] = intl.string(tmp4(1236).t.mSQwnW);
-    items2[1] = tmp8(tmp4(4734).Text, obj4);
+    items2[1] = tmp8(tmp4(4739).Text, obj4);
     obj1[3] = items2;
     tmp10Result = tmp10(View, obj1);
   }
   items1[1] = tmp10Result;
   obj[4] = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(5433).PressableOpacity, obj);
+  return closure_12(channel(5438).PressableOpacity, obj);
 });
 let closure_18 = importAllResult.memo((channel) => {
   channel = channel.channel;

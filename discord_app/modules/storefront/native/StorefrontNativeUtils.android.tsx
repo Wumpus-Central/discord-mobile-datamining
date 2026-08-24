@@ -1,6 +1,6 @@
-// === Module 10355: useFormattedSKUPrice ===
+// === Module 10394: useFormattedSKUPrice ===
 
-// Module 10355 (useFormattedSKUPrice)
+// Module 10394 (useFormattedSKUPrice)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -29,7 +29,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
       const obj = _null(closure_1_2[1]);
     }
   }, items);
-  const items1 = [stateFromStores(5319)];
+  const items1 = [stateFromStores(5324)];
   const items2 = [tmp2];
   stateFromStores = _require(589).useStateFromStores(items1, () => {
     let product = null;

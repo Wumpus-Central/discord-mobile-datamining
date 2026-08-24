@@ -1,9 +1,9 @@
-// === Module 5374: convertClip ===
+// === Module 5379: convertClip ===
 
-// Module 5374 (convertClip)
+// Module 5379 (convertClip)
 import set from "set" /* 2 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
-import WidgetType from "WidgetType" /* 5366 */;
+import WidgetType from "WidgetType" /* 5371 */;
 
 function convertClip(gameId) {
   let obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };

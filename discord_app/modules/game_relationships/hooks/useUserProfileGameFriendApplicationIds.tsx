@@ -1,8 +1,8 @@
-// === Module 12298: useUserProfileGameFriendApplicationIds ===
+// === Module 12350: useUserProfileGameFriendApplicationIds ===
 
-// Module 12298 (useUserProfileGameFriendApplicationIds)
+// Module 12350 (useUserProfileGameFriendApplicationIds)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import closure_3 from "markAllUserIdListsStale" /* 4033 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;

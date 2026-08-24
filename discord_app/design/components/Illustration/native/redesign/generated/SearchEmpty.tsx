@@ -1,9 +1,9 @@
-// === Module 9383: getSearchEmptySource ===
+// === Module 9420: getSearchEmptySource ===
 
-// Module 9383 (getSearchEmptySource)
+// Module 9420 (getSearchEmptySource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7907 */;
+import getIllustrationSource from "getIllustrationSource" /* 7946 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getSearchEmptySource = function getSearchEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9384);
+      return callback(9421);
     },
     darker() {
-      return callback(9385);
+      return callback(9422);
     },
     light() {
-      return callback(9386);
+      return callback(9423);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useSearchEmptySource = function useSearchEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9384);
+      return callback(9421);
     },
     darker() {
-      return callback(9385);
+      return callback(9422);
     },
     light() {
-      return callback(9386);
+      return callback(9423);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const SearchEmpty = function SearchEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9384);
+      return callback(9421);
     },
     darker() {
-      return callback(9385);
+      return callback(9422);
     },
     light() {
-      return callback(9386);
+      return callback(9423);
     }
   };
   obj = {};

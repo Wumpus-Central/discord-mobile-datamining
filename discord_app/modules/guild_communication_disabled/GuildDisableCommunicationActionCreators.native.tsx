@@ -1,10 +1,10 @@
-// === Module 11019: openDisableCommunication ===
+// === Module 11058: openDisableCommunication ===
 
-// Module 11019 (openDisableCommunication)
+// Module 11058 (openDisableCommunication)
 import noopAll from "noop" /* 19 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import _modDef5260 from "module_5260" /* 5260 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import _modDef4662 from "module_4662" /* 4662 */;
+import _modDef5265 from "module_5265" /* 5265 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -16,17 +16,17 @@ export const openDisableCommunication = function openDisableCommunication(userId
   ({ guildId, cancelButtonCallback } = userId);
   user = user.getUser(userId.userId);
   if (null != user) {
-    let obj = _modDef5260;
+    let obj = _modDef5265;
     obj = { guildId: null, user: null, cancelButtonCallback: null };
     obj[0] = guildId;
     obj[1] = user;
     obj[2] = cancelButtonCallback;
-    obj.pushLazy(asyncRequireImpl(11020, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11059, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
-  let obj = _modDef4656;
+  let obj = _modDef4662;
   obj = {
     importer() {
       return closure_1_0(closure_1_2[5])(closure_1_2[7], closure_1_2.paths).then((arg0) => {

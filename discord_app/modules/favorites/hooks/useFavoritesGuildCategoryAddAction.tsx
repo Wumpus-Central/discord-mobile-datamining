@@ -1,7 +1,7 @@
-// === Module 11958: useFavoritesGuildCategoryAddAction ===
+// === Module 12007: useFavoritesGuildCategoryAddAction ===
 
-// Module 11958 (useFavoritesGuildCategoryAddAction)
-import messagesProxyDefault from "messagesProxy" /* 3079 */;
+// Module 12007 (useFavoritesGuildCategoryAddAction)
+import messagesProxyDefault from "messagesProxy" /* 3082 */;
 import closure_3 from "noop" /* 19 */;
 import { ChannelTypes } from "ME" /* 676 */;
 

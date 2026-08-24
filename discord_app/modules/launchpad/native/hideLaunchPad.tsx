@@ -1,6 +1,6 @@
-// === Module 11956: hideLaunchPad ===
+// === Module 12005: hideLaunchPad ===
 
-// Module 11956 (hideLaunchPad)
+// Module 12005 (hideLaunchPad)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;

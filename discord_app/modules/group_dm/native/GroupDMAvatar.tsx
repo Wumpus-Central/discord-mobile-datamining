@@ -1,11 +1,11 @@
-// === Module 9916: FacepileGroupDMAvatar ===
+// === Module 9955: FacepileGroupDMAvatar ===
 
-// Module 9916 (FacepileGroupDMAvatar)
+// Module 9955 (FacepileGroupDMAvatar)
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 class FacepileGroupDMAvatar {
@@ -67,7 +67,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj3);
     items3 = [, ];
     items3[0] = tmp11(require("Button").Avatar, obj1);
-    obj4 = { status, statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "heading-md/bold" };
+    obj4 = { status, statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "tertiary" };
     obj4[6] = animate;
     if (null == users) {
       obj5 = { source: null };

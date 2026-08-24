@@ -1,10 +1,10 @@
-// === Module 15002: SponsoredContentPreferencesScreen ===
+// === Module 15066: SponsoredContentPreferencesScreen ===
 
-// Module 15002 (SponsoredContentPreferencesScreen)
-import combinedDefault from "combined" /* 1993 */;
-import _modDef13991 from "module_13991" /* 13991 */;
+// Module 15066 (SponsoredContentPreferencesScreen)
+import combinedDefault from "combined" /* 1994 */;
+import _modDef14059 from "module_14059" /* 14059 */;
 import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8238 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -34,5 +34,5 @@ export default function SponsoredContentPreferencesScreen() {
     obj = { sections: items1 };
     return obj.createList(obj);
   }, items4);
-  return jsx(_modDef13991, { node });
+  return jsx(_modDef14059, { node });
 };

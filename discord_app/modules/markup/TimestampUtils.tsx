@@ -1,10 +1,10 @@
-// === Module 6826: TIMESTAMP_FORMATS ===
+// === Module 6864: TIMESTAMP_FORMATS ===
 
-// Module 6826 (TIMESTAMP_FORMATS)
+// Module 6864 (TIMESTAMP_FORMATS)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
-import tDefault from "t" /* 3975 */;
-import resetCache from "resetCache" /* 4063 */;
+import tDefault from "t" /* 3978 */;
+import resetCache from "resetCache" /* 4066 */;
 
 let obj = {
   t(date) {
@@ -44,18 +44,18 @@ let obj = {
     const obj5 = tDefault;
     const result5 = tDefault.relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = tmp(3975);
+      let tmpResult = tmp(3978);
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = tmp(3975);
+      tmpResult = tmp(3978);
       const result6 = tmpResult.relativeTimeThreshold("s", result);
       const tmpResultResult = tmpResult(toDate.toDate());
-      const result7 = tmp(3975).relativeTimeThreshold("ss", result2);
-      const tmpResult1 = tmp(3975);
-      const result8 = tmp(3975).relativeTimeThreshold("m", result4);
+      const result7 = tmp(3978).relativeTimeThreshold("ss", result2);
+      const tmpResult1 = tmp(3978);
+      const result8 = tmp(3978).relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = tmp(3975);
-        fromNowResult = tmp(3975)(toDate.toDate()).fromNow();
-        const tmpResult4Result = tmp(3975)(toDate.toDate());
+        const tmpResult3 = tmp(3978);
+        fromNowResult = tmp(3978)(toDate.toDate()).fromNow();
+        const tmpResult4Result = tmp(3978)(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {

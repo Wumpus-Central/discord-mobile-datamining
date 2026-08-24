@@ -1,6 +1,6 @@
-// === Module 5324: map ===
+// === Module 5329: map ===
 
-// Module 5324 (map)
+// Module 5329 (map)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -29,7 +29,7 @@ Object.defineProperty(prototype, "isClaiming", {
   set: undefined
 });
 Object.defineProperty(prototype, "purchases", {
-  get: function purchases(hasPreviouslyFetched, arg1) {
+  get: function purchases() {
     return map;
   },
   set: undefined

@@ -1,9 +1,9 @@
-// === Module 11312: useSortedSectionCommands ===
+// === Module 11363: useSortedSectionCommands ===
 
-// Module 11312 (useSortedSectionCommands)
+// Module 11363 (useSortedSectionCommands)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { CommandListSortOrder } from "CommandListSortOrder" /* 11313 */;
+import { CommandListSortOrder } from "CommandListSortOrder" /* 11364 */;
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 4975: ? ===
+// === Module 4980: ? ===
 
-// Module 4975
+// Module 4980
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 4976 */;
-import disconnectRemoteAll from "disconnectRemote" /* 9845 */;
-import closure_4 from "set" /* 4540 */;
+import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 4981 */;
+import disconnectRemoteAll from "disconnectRemote" /* 9884 */;
+import closure_4 from "set" /* 4545 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4501 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

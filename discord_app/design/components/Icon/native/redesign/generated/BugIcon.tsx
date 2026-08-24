@@ -1,10 +1,10 @@
-// === Module 14886: BugIcon ===
+// === Module 14950: BugIcon ===
 
-// Module 14886 (BugIcon)
+// Module 14950 (BugIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 14887 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 14951 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 5527: metadata ===
+// === Module 5532: metadata ===
 
-// Module 5527 (metadata)
+// Module 5532 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarNellyExample-2x.png.js");

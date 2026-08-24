@@ -1,6 +1,6 @@
-// === Module 13286: GdmWarningMedium ===
+// === Module 13344: GdmWarningMedium ===
 
-// Module 13286 (GdmWarningMedium)
+// Module 13344 (GdmWarningMedium)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");

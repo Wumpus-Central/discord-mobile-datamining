@@ -1,26 +1,25 @@
-// === Module 9181: CollectiblesPreview ===
+// === Module 9218: CollectiblesPreview ===
 
-// Module 9181 (CollectiblesPreview)
+// Module 9218 (CollectiblesPreview)
 import ThemesDefault from "Themes" /* 712 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import apexExperiment from "apexExperiment" /* 8323 */;
-import SourceIcon from "SourceIcon" /* 9182 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 9205 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9206 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9208 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9218 */;
-import filterLayerDefault from "filterLayer" /* 9225 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9227 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9228 */;
+import map from "map" /* 4100 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import SourceIcon from "SourceIcon" /* 9219 */;
+import firstAvatarDecoration from "firstAvatarDecoration" /* 9242 */;
+import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 9243 */;
+import ProfileEffectSampleDefault from "ProfileEffectSample" /* 9245 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9255 */;
+import filterLayerDefault from "filterLayer" /* 9262 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9264 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9265 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
+import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse" /* 5310 */;
 import { SKUProductLines } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 class CollectiblesPreview {
@@ -135,7 +134,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9182).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9219).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => closure_1_5(sku), items);
@@ -164,18 +163,8 @@ class SocialLayerStorefrontSKUPreview {
       size = obj;
     }
     tmp3 = closure_8(size.width, size.height);
-    tmp4 = closure_2;
-    obj = require("apexExperiment");
-    tmp5 = null;
-    if (obj.useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "sku_preview" })) {
-      tmp6 = jsx;
-      tmp7 = closure_1;
-      obj1 = { sku: null, containerStyle: null };
-      obj1[0] = global.sku;
-      obj1[1] = tmp3.socialLayerStorefrontContainer;
-      tmp5 = jsx(require("SlayerStorefrontItemCard"), obj1);
-    }
-    return tmp5;
+    obj = { sku: global.sku, containerStyle: tmp3.socialLayerStorefrontContainer };
+    return jsx(require("SlayerStorefrontItemCard"), obj);
   }
 }
 class PremiumSKUPreview {

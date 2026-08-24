@@ -1,9 +1,9 @@
-// === Module 10512: ? ===
+// === Module 10551: ? ===
 
-// Module 10512
+// Module 10551
 import set from "set" /* 2 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4009 */;
+import GuildMemberFlags2 from "GuildMemberFlags" /* 4012 */;
 
 const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
 const result = set.fileFinishedImporting("modules/guests/GuestUtils.tsx");
@@ -29,7 +29,7 @@ export default {
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = tmp2(1403).hasFlag(num2, tmp2(8056).GuildInviteFlags.IS_GUEST_INVITE);
+        hasFlagResult1 = tmp2(1403).hasFlag(num2, tmp2(8095).GuildInviteFlags.IS_GUEST_INVITE);
         const tmp2Result = tmp2(1403);
       }
       tmp = hasFlagResult1;

@@ -1,11 +1,11 @@
-// === Module 7584: _fileSize ===
+// === Module 7622: _fileSize ===
 
-// Module 7584 (_fileSize)
+// Module 7622 (_fileSize)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AbortCodes } from "ME" /* 676 */;
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 import { EventEmitter } from "EventEmitter" /* 652 */;
 
 const require = arg1;
@@ -109,7 +109,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -347,7 +347,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,10 +1,10 @@
-// === Module 5912: InkQuill3dIllustration ===
+// === Module 5943: InkQuill3dIllustration ===
 
-// Module 5912 (InkQuill3dIllustration)
+// Module 5943 (InkQuill3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5913 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5944 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/InkQuill3dIllustration.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 5653: metadata ===
+// === Module 5660: metadata ===
 
-// Module 5653 (metadata)
+// Module 5660 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordWordmarkLogo-2x.png.js");

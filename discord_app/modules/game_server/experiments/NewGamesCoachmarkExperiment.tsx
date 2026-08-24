@@ -1,6 +1,6 @@
-// === Module 11677: useIsNewGamesCoachmarkEnabled ===
+// === Module 11726: useIsNewGamesCoachmarkEnabled ===
 
-// Module 11677 (useIsNewGamesCoachmarkEnabled)
+// Module 11726 (useIsNewGamesCoachmarkEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

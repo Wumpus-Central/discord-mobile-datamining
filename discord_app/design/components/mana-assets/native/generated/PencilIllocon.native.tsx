@@ -1,10 +1,10 @@
-// === Module 6048: PencilIllocon ===
+// === Module 6079: PencilIllocon ===
 
-// Module 6048 (PencilIllocon)
+// Module 6079 (PencilIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6049 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6080 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PencilIllocon.native.tsx");

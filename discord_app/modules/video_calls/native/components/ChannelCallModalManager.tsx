@@ -1,9 +1,9 @@
-// === Module 12483: _initialize ===
+// === Module 12537: _initialize ===
 
-// Module 12483 (_initialize)
-import initializeDefault from "initialize" /* 4720 */;
+// Module 12537 (_initialize)
+import initializeDefault from "initialize" /* 4726 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import closure_4 from "updateVoiceState" /* 4547 */;
 
 let require = arg1;
 initializeDefault;

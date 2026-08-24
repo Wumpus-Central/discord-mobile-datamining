@@ -1,6 +1,6 @@
-// === Module 10651: PauseDuration ===
+// === Module 10690: PauseDuration ===
 
-// Module 10651 (PauseDuration)
+// Module 10690 (PauseDuration)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/PauseDuration.tsx");

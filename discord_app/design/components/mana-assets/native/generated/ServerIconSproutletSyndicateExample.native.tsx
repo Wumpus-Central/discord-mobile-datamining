@@ -1,10 +1,10 @@
-// === Module 6134: ServerIconSproutletSyndicateExample ===
+// === Module 6165: ServerIconSproutletSyndicateExample ===
 
-// Module 6134 (ServerIconSproutletSyndicateExample)
+// Module 6165 (ServerIconSproutletSyndicateExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6135 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6166 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconSproutletSyndicateExample.native.tsx");

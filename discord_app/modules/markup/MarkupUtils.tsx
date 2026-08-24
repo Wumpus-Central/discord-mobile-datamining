@@ -1,10 +1,10 @@
-// === Module 6807: get defaultRules ===
+// === Module 6844: get defaultRules ===
 
-// Module 6807 (get defaultRules)
-import MarkupTextDefault from "MarkupText" /* 4766 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6808 */;
-import parseLinkDefault from "parseLink" /* 6809 */;
-import reactParserForAll from "reactParserFor" /* 6902 */;
+// Module 6844 (get defaultRules)
+import MarkupTextDefault from "MarkupText" /* 4771 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6845 */;
+import parseLinkDefault from "parseLink" /* 6846 */;
+import reactParserForAll from "reactParserFor" /* 6940 */;
 import importDefaultResult from "apply" /* 12 */;
 
 let closure_3 = ["url", "autolink", "link", "mailto", "tel"];

@@ -1,10 +1,10 @@
-// === Module 17044: prototype ===
+// === Module 17137: prototype ===
 
-// Module 17044 (prototype)
+// Module 17137 (prototype)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "initialize" /* 5043 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;

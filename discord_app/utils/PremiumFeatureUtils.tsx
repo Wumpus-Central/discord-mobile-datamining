@@ -1,6 +1,6 @@
-// === Module 9366: getUserMaxFileSize ===
+// === Module 9403: getUserMaxFileSize ===
 
-// Module 9366 (getUserMaxFileSize)
+// Module 9403 (getUserMaxFileSize)
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
 import closure_2 from "setPremiumTypeActual" /* 1923 */;
 import ME from "ME" /* 676 */;

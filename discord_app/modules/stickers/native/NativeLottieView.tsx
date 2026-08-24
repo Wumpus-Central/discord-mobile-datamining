@@ -1,10 +1,10 @@
-// === Module 8218: NativeLottieView ===
+// === Module 8258: NativeLottieView ===
 
-// Module 8218 (NativeLottieView)
+// Module 8258 (NativeLottieView)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8219 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8259 */;
 import noop from "noop" /* 19 */;
 import closure_2 from "noop" /* 19 */;
 import set from "set" /* 500 */;

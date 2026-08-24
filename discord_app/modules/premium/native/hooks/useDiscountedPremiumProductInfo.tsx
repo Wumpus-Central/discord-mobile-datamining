@@ -1,8 +1,8 @@
-// === Module 7687: useDiscountedPremiumProductInfo ===
+// === Module 7725: useDiscountedPremiumProductInfo ===
 
-// Module 7687 (useDiscountedPremiumProductInfo)
+// Module 7725 (useDiscountedPremiumProductInfo)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateProduct" /* 5319 */;
+import closure_3 from "updateProduct" /* 5324 */;
 import { CurrencyCodes } from "sum" /* 505 */;
 
 const require = arg1;

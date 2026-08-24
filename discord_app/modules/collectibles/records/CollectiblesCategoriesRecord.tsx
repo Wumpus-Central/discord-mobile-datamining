@@ -1,8 +1,8 @@
-// === Module 5326: fromServer ===
+// === Module 5331: fromServer ===
 
-// Module 5326 (fromServer)
-import closure_0 from "fromServer" /* 5327 */;
-import closure_1 from "fromServer" /* 5302 */;
+// Module 5331 (fromServer)
+import closure_0 from "fromServer" /* 5332 */;
+import closure_1 from "fromServer" /* 5307 */;
 
 let prototype;
 prototype = function CollectiblesCategoriesRecord(categories) {

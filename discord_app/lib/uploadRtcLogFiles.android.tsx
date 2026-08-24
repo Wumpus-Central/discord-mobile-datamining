@@ -1,6 +1,6 @@
-// === Module 10132: _uploadRtcLogFiles ===
+// === Module 10171: _uploadRtcLogFiles ===
 
-// Module 10132 (_uploadRtcLogFiles)
+// Module 10171 (_uploadRtcLogFiles)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _uploadRtcLogFiles() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         while (true) {
@@ -191,7 +191,7 @@ function _uploadRtcLogFiles() {
           if (closure_1 === undefined) {
             let num7 = 3;
             c8 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           } else {
             let tmp58 = closure_3;
             closure_1 = tmp57;

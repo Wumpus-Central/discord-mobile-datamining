@@ -1,6 +1,6 @@
-// === Module 5434: getStyleProp ===
+// === Module 5439: getStyleProp ===
 
-// Module 5434 (getStyleProp)
+// Module 5439 (getStyleProp)
 import set from "set" /* 2 */;
 
 function getStyleProp(style, borderRadius) {

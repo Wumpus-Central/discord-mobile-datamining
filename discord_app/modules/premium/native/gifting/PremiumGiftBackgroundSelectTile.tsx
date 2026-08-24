@@ -1,25 +1,25 @@
-// === Module 11973: PremiumGiftStyles ===
+// === Module 12022: PremiumGiftStyles ===
 
-// Module 11973 (PremiumGiftStyles)
+// Module 12022 (PremiumGiftStyles)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2399 */;
-import preloadDefault from "preload" /* 5449 */;
-import registerAssetDefault from "registerAsset" /* 11975 */;
-import registerAssetDefault2 from "registerAsset" /* 11976 */;
-import registerAssetDefault3 from "registerAsset" /* 11977 */;
-import registerAssetDefault4 from "registerAsset" /* 11978 */;
-import metadataDefault from "metadata" /* 11979 */;
-import metadataDefault2 from "metadata" /* 11980 */;
-import metadataDefault3 from "metadata" /* 11981 */;
-import metadataDefault4 from "metadata" /* 11982 */;
-import metadataDefault5 from "metadata" /* 11983 */;
+import messagesProxyDefault from "messagesProxy" /* 2400 */;
+import preloadDefault from "preload" /* 5454 */;
+import registerAssetDefault from "registerAsset" /* 12024 */;
+import registerAssetDefault2 from "registerAsset" /* 12025 */;
+import registerAssetDefault3 from "registerAsset" /* 12026 */;
+import registerAssetDefault4 from "registerAsset" /* 12027 */;
+import metadataDefault from "metadata" /* 12028 */;
+import metadataDefault2 from "metadata" /* 12029 */;
+import metadataDefault3 from "metadata" /* 12030 */;
+import metadataDefault4 from "metadata" /* 12031 */;
+import metadataDefault5 from "metadata" /* 12032 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PremiumGiftStyles } from "GuildFeatures" /* 1924 */;
-import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 11974 */;
+import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 12023 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;

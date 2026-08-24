@@ -1,8 +1,8 @@
-// === Module 14525: QuestEmbedPreview ===
+// === Module 14593: QuestEmbedPreview ===
 
-// Module 14525 (QuestEmbedPreview)
+// Module 14593 (QuestEmbedPreview)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFlag" /* 4031 */;
+import closure_4 from "hasFlag" /* 4034 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { MessageTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -58,9 +58,9 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     obj = { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" };
     obj[0] = memo;
     obj[1] = memo1;
-    obj[1] = jsx(stateFromStores(10066), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(14524), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
-    const tmp9 = stateFromStores(14524);
+    obj[1] = jsx(stateFromStores(10105), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
+    tmp6 = jsx(stateFromStores(14592), { rowGenerator: null, message: null, horizontalOffset: 0, pointerEvents: "none" });
+    const tmp9 = stateFromStores(14592);
   }
   return tmp6;
 };

@@ -1,11 +1,11 @@
-// === Module 7243: apiRequest ===
+// === Module 7281: apiRequest ===
 
-// Module 7243 (apiRequest)
+// Module 7281 (apiRequest)
 import set from "set" /* 500 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault from "set" /* 7245 */;
-import closure_3 from "isProtocolRegistered" /* 7244 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
+import setDefault from "set" /* 7283 */;
+import closure_3 from "isProtocolRegistered" /* 7282 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7280 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

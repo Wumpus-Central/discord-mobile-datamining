@@ -1,10 +1,10 @@
-// === Module 5512: AvatarDecorationsAbstractUI ===
+// === Module 5517: AvatarDecorationsAbstractUI ===
 
-// Module 5512 (AvatarDecorationsAbstractUI)
+// Module 5517 (AvatarDecorationsAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5513 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5518 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarDecorationsAbstractUI.native.tsx");

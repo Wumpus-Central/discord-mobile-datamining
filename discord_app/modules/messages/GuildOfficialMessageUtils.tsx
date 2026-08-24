@@ -1,15 +1,15 @@
-// === Module 7232: useCanManageGuildOfficialMessages ===
+// === Module 7270: useCanManageGuildOfficialMessages ===
 
-// Module 7232 (useCanManageGuildOfficialMessages)
+// Module 7270 (useCanManageGuildOfficialMessages)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import nDefault from "n" /* 689 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
-import experimentDefault from "experiment" /* 7233 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
+import hexToRgba from "hexToRgba" /* 4227 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5390 */;
+import experimentDefault from "experiment" /* 7271 */;
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7272 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
+import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

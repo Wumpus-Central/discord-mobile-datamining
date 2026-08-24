@@ -1,6 +1,6 @@
-// === Module 8786: RecurrenceOptions ===
+// === Module 8823: RecurrenceOptions ===
 
-// Module 8786 (RecurrenceOptions)
+// Module 8823 (RecurrenceOptions)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/CreateGuildScheduledEventConstants.tsx");

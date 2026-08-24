@@ -1,10 +1,10 @@
-// === Module 10850: getTimeSafe ===
+// === Module 10889: getTimeSafe ===
 
-// Module 10850 (getTimeSafe)
+// Module 10889 (getTimeSafe)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4808 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8528 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import set from "set" /* 2 */;
 
@@ -95,9 +95,9 @@ let c3 = 10000000000000;
 const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
   const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
-    let BOOKMARK = tmp(8489).SavedMessageSortTypes.REMINDER;
+    let BOOKMARK = tmp(8528).SavedMessageSortTypes.REMINDER;
   } else {
-    BOOKMARK = tmp(8489).SavedMessageSortTypes.BOOKMARK;
+    BOOKMARK = tmp(8528).SavedMessageSortTypes.BOOKMARK;
   }
   items[1] = BOOKMARK;
   return items;

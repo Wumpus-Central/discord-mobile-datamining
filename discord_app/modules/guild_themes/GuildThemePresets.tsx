@@ -1,9 +1,9 @@
-// === Module 4226: set ===
+// === Module 4230: set ===
 
-// Module 4226 (set)
+// Module 4230 (set)
 import sum from "sum" /* 505 */;
 import nDefault from "n" /* 689 */;
-import items21 from "items" /* 4227 */;
+import items21 from "items" /* 4231 */;
 import set from "set" /* 2 */;
 
 const ThemeTypes = sum.ThemeTypes;
@@ -56,7 +56,7 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
   return tmp;
 };
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
-  return { presetId: mapped[0].id, customUserThemeSettings: "a" };
+  return { presetId: mapped[0].id, customUserThemeSettings: "r" };
 };
 export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, arg1) {
   return arg1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;

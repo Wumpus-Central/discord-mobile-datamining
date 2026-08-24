@@ -1,19 +1,19 @@
-// === Module 9093: makeAutocompleterSearchParams ===
+// === Module 9130: makeAutocompleterSearchParams ===
 
-// Module 9093 (makeAutocompleterSearchParams)
-import trackClose from "trackClose" /* 9094 */;
+// Module 9130 (makeAutocompleterSearchParams)
+import getQuickSwitcherOptions from "getQuickSwitcherOptions" /* 9131 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
+import closure_5 from "_handleConnectionOpen" /* 4499 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "handleChannelSelect" /* 6772 */;
-import { ALLOWED_TYPES } from "ALLOWED_TYPES" /* 7606 */;
+import closure_7 from "handleChannelSelect" /* 6809 */;
+import { ALLOWED_TYPES } from "ALLOWED_TYPES" /* 7644 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
 export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
-  const query = trackClose.getQuickSwitcherOptions(arg0);
+  const query = getQuickSwitcherOptions.getQuickSwitcherOptions(arg0);
   let queryMode = query.queryMode;
   let resultTypes = ALLOWED_TYPES;
   let hasItem = null != queryMode;

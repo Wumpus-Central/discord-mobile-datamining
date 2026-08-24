@@ -1,13 +1,13 @@
-// === Module 11822: useIsHubRealNamePromptShowing ===
+// === Module 11871: useIsHubRealNamePromptShowing ===
 
-// Module 11822 (useIsHubRealNamePromptShowing)
+// Module 11871 (useIsHubRealNamePromptShowing)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 11823 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "initialize" /* 11872 */;
+import closure_5 from "trackCommunicationDisabled" /* 1991 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
-import { GuildPrompts } from "GuildPrompts" /* 11824 */;
+import { GuildPrompts } from "GuildPrompts" /* 11873 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");

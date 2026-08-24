@@ -1,9 +1,9 @@
-// === Module 12099: isOnXbox ===
+// === Module 12151: isOnXbox ===
 
-// Module 12099 (isOnXbox)
+// Module 12151 (isOnXbox)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import items3 from "items3" /* 4481 */;
+import items3 from "items3" /* 4485 */;
 
 let closure_0 = items3.XBOX_ACTIVITY_APPLICATION_ID;
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;

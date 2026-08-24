@@ -1,9 +1,9 @@
-// === Module 8479: openPremiumUpsellActionSheet ===
+// === Module 8518: openPremiumUpsellActionSheet ===
 
-// Module 8479 (openPremiumUpsellActionSheet)
+// Module 8518 (openPremiumUpsellActionSheet)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
 
 const PremiumUpsellActionSheetKey = "PremiumUpsellActionSheetKey";
 const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx");
@@ -11,6 +11,6 @@ const result = set.fileFinishedImporting("modules/premium/roadblocks/native/util
 export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { featureName, subfeatureName, analyticsLocations };
-  obj.openLazy(asyncRequireImpl(8480, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
+  obj.openLazy(asyncRequireImpl(8519, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
 };
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

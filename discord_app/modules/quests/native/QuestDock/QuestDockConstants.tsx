@@ -1,6 +1,6 @@
-// === Module 14447: QUEST_DOCK_COLLAPSED_HEIGHT ===
+// === Module 14515: QUEST_DOCK_COLLAPSED_HEIGHT ===
 
-// Module 14447 (QUEST_DOCK_COLLAPSED_HEIGHT)
+// Module 14515 (QUEST_DOCK_COLLAPSED_HEIGHT)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 

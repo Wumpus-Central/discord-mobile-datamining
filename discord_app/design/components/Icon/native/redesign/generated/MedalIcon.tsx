@@ -1,10 +1,10 @@
-// === Module 15735: MedalIcon ===
+// === Module 15804: MedalIcon ===
 
-// Module 15735 (MedalIcon)
+// Module 15804 (MedalIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 15736 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 15805 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

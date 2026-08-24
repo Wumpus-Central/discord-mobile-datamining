@@ -1,10 +1,10 @@
-// === Module 10549: isSelectedFromHomeChannel ===
+// === Module 10588: isSelectedFromHomeChannel ===
 
-// Module 10549 (isSelectedFromHomeChannel)
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 1979 */;
-import coerceMainRoute from "coerceMainRoute" /* 4229 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
-import handlePermissionsChangeDefault from "handlePermissionsChange" /* 4970 */;
+// Module 10588 (isSelectedFromHomeChannel)
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 1980 */;
+import coerceMainRoute from "coerceMainRoute" /* 4233 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4234 */;
+import handlePermissionsChangeDefault from "handlePermissionsChange" /* 4975 */;
 import { isGuildHomeChannel } from "set" /* 1398 */;
 
 require = arg1;
@@ -41,7 +41,7 @@ export default function isSelectedFromHomeChannel(id) {
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
-                      let tmp6Result = tmp6(4229);
+                      let tmp6Result = tmp6(4233);
                       coerceChannelRouteResult1 = tmp6Result.coerceChannelRoute(state.routes[index - 1]);
                       if (null != coerceChannelRouteResult1) {
                         break;

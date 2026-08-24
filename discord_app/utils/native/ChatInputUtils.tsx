@@ -1,10 +1,10 @@
-// === Module 4237: getBestActiveInput ===
+// === Module 4241: getBestActiveInput ===
 
-// Module 4237 (getBestActiveInput)
+// Module 4241 (getBestActiveInput)
 import set from "set" /* 2 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1892 */;
-import zustandStore from "zustandStore" /* 4240 */;
+import zustandStore from "zustandStore" /* 4244 */;
 
 function getBestActiveInput() {
   let str;
@@ -235,7 +235,7 @@ export const dismissKeyboard = function dismissKeyboard() {
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  let tmpResult = tmp(4239);
+  let tmpResult = tmp(4243);
   const keyboardType = tmpResult.getKeyboardType();
   if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     tmpResult = tmp(1498);

@@ -1,6 +1,6 @@
-// === Module 4168: metadata ===
+// === Module 4172: metadata ===
 
-// Module 4168 (metadata)
+// Module 4172 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BountiesScrollIndicator.riv.js");

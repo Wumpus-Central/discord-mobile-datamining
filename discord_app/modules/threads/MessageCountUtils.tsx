@@ -1,6 +1,6 @@
-// === Module 8170: _formatMessageCountLabel ===
+// === Module 8209: _formatMessageCountLabel ===
 
-// Module 8170 (_formatMessageCountLabel)
+// Module 8209 (_formatMessageCountLabel)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;

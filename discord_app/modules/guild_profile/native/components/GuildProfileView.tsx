@@ -1,23 +1,23 @@
-// === Module 9513: GuildProfileBackground ===
+// === Module 9550: GuildProfileBackground ===
 
-// Module 9513 (GuildProfileBackground)
+// Module 9550 (GuildProfileBackground)
 import ThemesDefault from "Themes" /* 712 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import map from "map" /* 4097 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9515 */;
-import stylesDefault from "styles" /* 9516 */;
-import ClickableGameIconDefault from "ClickableGameIcon" /* 9518 */;
-import TraitEmojiDefault from "TraitEmoji" /* 9531 */;
+import map from "map" /* 4100 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import useThemeDefault from "useTheme" /* 4314 */;
+import LinearGradientDefault from "LinearGradient" /* 4761 */;
+import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9552 */;
+import stylesDefault from "styles" /* 9553 */;
+import ClickableGameIconDefault from "ClickableGameIcon" /* 9555 */;
+import TraitEmojiDefault from "TraitEmoji" /* 9568 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function GuildProfileBackground(guildProfile) {
@@ -37,7 +37,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9514)() * useWindowDimensionsDefault().width;
+      obj[2] = tmp3(9551)() * useWindowDimensionsDefault().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1435).getGuildDiscoverySplashSource(obj);
@@ -116,7 +116,7 @@ export default function GuildProfileView(guildProfile) {
   if (tmp5Result) {
     obj = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj[2] = guildProfile.description;
-    tmp5Result = tmp5(guildProfile(4734).Text, obj);
+    tmp5Result = tmp5(guildProfile(4739).Text, obj);
   }
   const items2 = [tmp5Result, callback(ClickableGameIconDefault, { profile: guildProfile }), callback(TraitEmojiDefault, { profile: guildProfile })];
   obj[1] = items2;

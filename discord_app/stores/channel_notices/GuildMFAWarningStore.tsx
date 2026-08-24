@@ -1,9 +1,9 @@
-// === Module 13306: handleUserStoreUpdates ===
+// === Module 13364: handleUserStoreUpdates ===
 
-// Module 13306 (handleUserStoreUpdates)
+// Module 13364 (handleUserStoreUpdates)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "comparator" /* 1980 */;
+import closure_0 from "comparator" /* 1981 */;
 import closure_1 from "mergeGuildAvatar" /* 1922 */;
 import { MFALevels } from "ME" /* 676 */;
 

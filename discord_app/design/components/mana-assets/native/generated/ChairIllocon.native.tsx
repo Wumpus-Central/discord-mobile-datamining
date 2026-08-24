@@ -1,10 +1,10 @@
-// === Module 5580: ChairIllocon ===
+// === Module 5587: ChairIllocon ===
 
-// Module 5580 (ChairIllocon)
+// Module 5587 (ChairIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5581 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5588 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ChairIllocon.native.tsx");

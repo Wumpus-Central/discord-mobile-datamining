@@ -1,22 +1,22 @@
-// === Module 7570: onDismiss ===
+// === Module 7608: onDismiss ===
 
-// Module 7570 (onDismiss)
+// Module 7608 (onDismiss)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import Background from "Background" /* 6950 */;
-import ReactionTypes from "ReactionTypes" /* 7510 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
-import getDeviceSpecificString from "getDeviceSpecificString" /* 7571 */;
-import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7572 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+import Text from "Text" /* 4739 */;
+import Button2 from "Button" /* 4750 */;
+import Background from "Background" /* 6988 */;
+import ReactionTypes from "ReactionTypes" /* 7548 */;
+import _generateAnimationSource from "_generateAnimationSource" /* 7569 */;
+import getDeviceSpecificString from "getDeviceSpecificString" /* 7609 */;
+import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7610 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function onDismiss() {
@@ -86,13 +86,13 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     obj[3] = emoji;
     tmpResult.dispatch(obj);
   } else {
-    const result = tmp4(4196).UNSAFE_markDismissibleContentAsDismissed(tmp4(1377).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
-    tmpResult = tmp(4342);
+    const result = tmp4(4200).UNSAFE_markDismissibleContentAsDismissed(tmp4(1377).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
+    tmpResult = tmp(4346);
     obj = { channelId: null, messageId: null, emoji: null };
     obj[0] = channelId;
     obj[1] = messageId;
     obj[2] = emoji;
-    tmpResult.openLazy(tmp4(2007)(7570, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
-    const tmp4Result = tmp4(4196);
+    tmpResult.openLazy(tmp4(2008)(7608, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    const tmp4Result = tmp4(4200);
   }
 };

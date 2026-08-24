@@ -1,20 +1,20 @@
-// === Module 15546: getDropIndex ===
+// === Module 15611: getDropIndex ===
 
-// Module 15546 (getDropIndex)
+// Module 15611 (getDropIndex)
 import _modDef1208 from "module_1208" /* 1208 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 1363 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4343 */;
-import renderDefaultEmpty from "renderDefaultEmpty" /* 8124 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4347 */;
+import renderDefaultEmpty from "renderDefaultEmpty" /* 8163 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { Dimensions } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "insertUnsortedGuilds" /* 5078 */;
-import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
-import importDefaultResult from "withEqualityFn" /* 15547 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
-import module_4115 from "module_4115" /* 4115 */;
+import closure_7 from "insertUnsortedGuilds" /* 5083 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5083 */;
+import importDefaultResult from "withEqualityFn" /* 15612 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15613 */;
+import module_4119 from "module_4119" /* 4119 */;
 import apply from "apply" /* 12 */;
 import importDefaultResult1 from "debounce" /* 636 */;
 
@@ -270,7 +270,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         if (null != GUILDS) {
           const type = item.type;
           if (renderDefaultEmpty.FastListItemTypes.SECTION !== type) {
-            if (tmp10(8124).FastListItemTypes.ITEM === type) {
+            if (tmp10(8163).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
                 if (GUILDS.type !== tmp12.FOLDER) {
@@ -298,7 +298,7 @@ let c12 = 160;
 let c13 = 16.666666666666668;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
 obj[0] = require("module_4294967295");
-obj[1] = module_4115.makeMutable([]);
+obj[1] = module_4119.makeMutable([]);
 obj[2] = require("module_4294967295");
 let closure_16 = importDefaultResult1(require("HapticFeedbackTypes").triggerHapticFeedback, 16);
 let closure_17 = importDefaultResult1((intl) => {
@@ -634,7 +634,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "r", overSpecs: "accessibilityRole" });
+    state.setStateShallow({ dragSpecs: "Array", overSpecs: "ct" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -759,7 +759,7 @@ export default function useGuildsBarGesture() {
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: null };
+        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: -1 };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);

@@ -1,13 +1,13 @@
-// === Module 15669: PAGE_SIZE_WITH_MENTIONS ===
+// === Module 15738: PAGE_SIZE_WITH_MENTIONS ===
 
-// Module 15669 (PAGE_SIZE_WITH_MENTIONS)
+// Module 15738 (PAGE_SIZE_WITH_MENTIONS)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "findOrCreateMessageRecord" /* 5384 */;
-import closure_7 from "_validate" /* 4801 */;
-import closure_8 from "handleLoadFinished" /* 15668 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
+import closure_6 from "findOrCreateMessageRecord" /* 5389 */;
+import closure_7 from "_validate" /* 4806 */;
+import closure_8 from "handleLoadFinished" /* 15737 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 5049 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
@@ -142,7 +142,7 @@ export const useNotificationCenterItemsLoader = function useNotificationCenterIt
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

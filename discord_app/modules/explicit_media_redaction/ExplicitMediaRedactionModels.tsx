@@ -1,6 +1,6 @@
-// === Module 5022: ContentHarmTypeChannel ===
+// === Module 5027: ContentHarmTypeChannel ===
 
-// Module 5022 (ContentHarmTypeChannel)
+// Module 5027 (ContentHarmTypeChannel)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionModels.tsx");

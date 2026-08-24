@@ -1,10 +1,10 @@
-// === Module 13879: toggleVoiceChannelChat ===
+// === Module 13945: toggleVoiceChannelChat ===
 
-// Module 13879 (toggleVoiceChannelChat)
-import _modDef8666 from "module_8666" /* 8666 */;
+// Module 13945 (toggleVoiceChannelChat)
+import _modDef8703 from "module_8703" /* 8703 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "getParticipants" /* 4773 */;
+import closure_3 from "createRTCConnection" /* 4544 */;
+import closure_4 from "getParticipants" /* 4778 */;
 
 const result = require("set").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
@@ -22,7 +22,7 @@ export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
           if (open == null) {
             tmp3 = !chatOpen.getChatOpen(channelId);
           }
-          _modDef8666.updateChatOpen(channelId, tmp3);
+          _modDef8703.updateChatOpen(channelId, tmp3);
           obj = { channelId: null, chatOpen: null };
           obj[0] = channelId;
           obj[1] = tmp3;

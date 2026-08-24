@@ -1,14 +1,12 @@
-// === Module 14707: CustomTypingIndicatorAnimation ===
+// === Module 11197: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT ===
 
-// Module 14707 (CustomTypingIndicatorAnimation)
+// Module 11197 (CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)
 import set from "set" /* 2 */;
+import create from "create" /* 1940 */;
 
-let obj = { DEFAULT: "DEFAULT", YAPPING: "YAPPING", VENTING: "VENTING", OVERSHARING: "OVERSHARING", BARKING: "BARKING", BABBLING: "BABBLING", DAYDREAMING: "DAYDREAMING" };
-obj = { emojis: [], typingSuggestion: obj.DEFAULT, animation: null };
+let obj = { emojis: [], typingSuggestion: create.TypingSuggestion.UNSPECIFIED, animation: create.TypingIndicatorAnimation.UNSPECIFIED };
 const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
 
-export const CustomTypingIndicatorAnimation = { PULSE: "PULSE", RING: "RING", WAVE: "WAVE" };
-export const CustomTypingIndicatorSuggestion = obj;
 export const CUSTOM_TYPING_INDICATOR_EMOJI_COUNT = 3;
 export const EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = obj;
 export const hasCustomTypingIndicatorEmojis = function hasCustomTypingIndicatorEmojis(emojis) {
@@ -22,9 +20,46 @@ export const isValidCustomTypingIndicatorEmojiSelection = function isValidCustom
   return tmp;
 };
 export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveCustomTypingIndicatorAnimation(config) {
-  let animation = null;
   if (3 === config.emojis.length) {
-    animation = config.animation;
+    let UNSPECIFIED = config.animation;
+  } else {
+    UNSPECIFIED = create.TypingIndicatorAnimation.UNSPECIFIED;
   }
-  return animation;
+  return UNSPECIFIED;
+};
+export const parseServerTypingIndicatorStyle = function parseServerTypingIndicatorStyle(typing_indicator_style) {
+  let tmp = null;
+  if (null != typing_indicator_style) {
+    let emojis = typing_indicator_style.emojis;
+    if (emojis == null) {
+      emojis = [];
+    }
+    let obj = { emojis: null, typingSuggestion: null, animation: null };
+    obj[0] = emojis.map((custom_emoji_id) => {
+      if (null != custom_emoji_id.custom_emoji_id) {
+        let obj = { id: null, name: "" };
+        obj[0] = custom_emoji_id.custom_emoji_id;
+      } else {
+        let str = custom_emoji_id.unicode_emoji;
+        if (str == null) {
+          str = "";
+        }
+        obj = { name: null };
+        obj[0] = str;
+      }
+      return obj;
+    });
+    let UNSPECIFIED = typing_indicator_style.typing_suggestion;
+    if (UNSPECIFIED == null) {
+      UNSPECIFIED = create.TypingSuggestion.UNSPECIFIED;
+    }
+    obj[1] = UNSPECIFIED;
+    let UNSPECIFIED2 = typing_indicator_style.animation;
+    if (UNSPECIFIED2 == null) {
+      UNSPECIFIED2 = create.TypingIndicatorAnimation.UNSPECIFIED;
+    }
+    obj[2] = UNSPECIFIED2;
+    tmp = obj;
+  }
+  return tmp;
 };

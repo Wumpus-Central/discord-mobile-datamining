@@ -1,12 +1,12 @@
-// === Module 13091: start ===
+// === Module 13147: start ===
 
-// Module 13091 (start)
+// Module 13147 (start)
 import applyDefault from "apply" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import onDefault from "on" /* 4572 */;
-import getSamples from "getSamples" /* 7490 */;
-import getStatsDefault from "getStats" /* 7496 */;
-import _initStatsDefault from "_initStats" /* 13092 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4574 */;
+import onDefault from "on" /* 4577 */;
+import getSamples from "getSamples" /* 7528 */;
+import getStatsDefault from "getStats" /* 7534 */;
+import _initStatsDefault from "_initStats" /* 13148 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;

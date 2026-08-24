@@ -1,12 +1,9 @@
-// === Module 6546: designConfig ===
+// === Module 6577: designConfig ===
 
-// Module 6546 (designConfig)
+// Module 6577 (designConfig)
 import set from "set" /* 2 */;
 
 const obj = {
-  getDefaultLinkInterceptor() {
-
-  },
   useTrackNavigatorScreenImpression() {
 
   }

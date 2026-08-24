@@ -1,9 +1,9 @@
-// === Module 11157: useTextareaPlaceholderAndLabels ===
+// === Module 11209: useTextareaPlaceholderAndLabels ===
 
-// Module 11157 (useTextareaPlaceholderAndLabels)
+// Module 11209 (useTextareaPlaceholderAndLabels)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import computeChannelNameDefault from "computeChannelName" /* 4989 */;
 import ME from "ME" /* 676 */;
 
 ({ ChannelTypes: c3, ChannelTypesSets: c4 } = ME);

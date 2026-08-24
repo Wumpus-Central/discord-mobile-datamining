@@ -1,6 +1,6 @@
-// === Module 5442: getKeyboardDuration ===
+// === Module 5447: getKeyboardDuration ===
 
-// Module 5442 (getKeyboardDuration)
+// Module 5447 (getKeyboardDuration)
 import set from "set" /* 2 */;
 import context from "context" /* 1497 */;
 import computeEntryStateDefault from "computeEntryState" /* 1498 */;

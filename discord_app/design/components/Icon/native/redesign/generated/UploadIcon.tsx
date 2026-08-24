@@ -1,10 +1,10 @@
-// === Module 7942: UploadIcon ===
+// === Module 7981: UploadIcon ===
 
-// Module 7942 (UploadIcon)
+// Module 7981 (UploadIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 7943 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 7982 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

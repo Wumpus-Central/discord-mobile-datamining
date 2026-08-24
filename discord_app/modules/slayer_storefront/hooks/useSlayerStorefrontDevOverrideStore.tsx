@@ -1,6 +1,6 @@
-// === Module 9201: useSlayerStorefrontDevOverrideStore ===
+// === Module 9238: useSlayerStorefrontDevOverrideStore ===
 
-// Module 9201 (useSlayerStorefrontDevOverrideStore)
+// Module 9238 (useSlayerStorefrontDevOverrideStore)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 
@@ -30,6 +30,14 @@ const tmp2 = keys.create()((arg0) => {
     isNitroEligibleForSocialLayerStorefront: false,
     setIsNitroEligibleForSocialLayerStorefront(isNitroEligibleForSocialLayerStorefront) {
       return callback({ isNitroEligibleForSocialLayerStorefront });
+    },
+    overrideCurrentPremiumPlanId: false,
+    setOverrideCurrentPremiumPlanId(overrideCurrentPremiumPlanId) {
+      return callback({ overrideCurrentPremiumPlanId });
+    },
+    currentPremiumPlanId: null,
+    setCurrentPremiumPlanId(currentPremiumPlanId) {
+      return callback({ currentPremiumPlanId });
     }
   };
 });

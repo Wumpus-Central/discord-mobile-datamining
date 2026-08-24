@@ -1,6 +1,6 @@
-// === Module 4471: _createStripeSetupIntent ===
+// === Module 4475: _createStripeSetupIntent ===
 
-// Module 4471 (_createStripeSetupIntent)
+// Module 4475 (_createStripeSetupIntent)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -23,7 +23,7 @@ function _createStripeSetupIntent() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -118,7 +118,7 @@ function _createSetupIntentForPaymentElements() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

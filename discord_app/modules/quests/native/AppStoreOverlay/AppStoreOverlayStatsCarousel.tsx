@@ -1,15 +1,15 @@
-// === Module 10697: AppStoreOverlayStatCardItem ===
+// === Module 10736: AppStoreOverlayStatCardItem ===
 
-// Module 10697 (AppStoreOverlayStatCardItem)
+// Module 10736 (AppStoreOverlayStatCardItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 10698 */;
-import FractionalStarDefault from "FractionalStar" /* 10699 */;
+import Text from "Text" /* 4739 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 10737 */;
+import FractionalStarDefault from "FractionalStar" /* 10738 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AppStoreOverlayStatCardItem(stat) {
@@ -24,10 +24,10 @@ function AppStoreOverlayStatCardItem(stat) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(10698);
+      let tmp9Result = tmp9(10737);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1236).intl.currentLocale);
     }
-    tmp9Result = tmp9(10698);
+    tmp9Result = tmp9(10737);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1236).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };
@@ -84,7 +84,7 @@ function AppStoreOverlayStatCardItem(stat) {
     if (tmp21Result) {
       const obj4 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: null };
       obj4[3] = secondaryText;
-      tmp21Result = callback(tmp18(4734).Text, obj4);
+      tmp21Result = callback(tmp18(4739).Text, obj4);
     }
     secondaryContent = tmp21Result;
   }

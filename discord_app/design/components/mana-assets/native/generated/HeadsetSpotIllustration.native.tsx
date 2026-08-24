@@ -1,10 +1,10 @@
-// === Module 5894: HeadsetSpotIllustration ===
+// === Module 5925: HeadsetSpotIllustration ===
 
-// Module 5894 (HeadsetSpotIllustration)
+// Module 5925 (HeadsetSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5895 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5926 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/HeadsetSpotIllustration.native.tsx");

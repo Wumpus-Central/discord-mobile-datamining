@@ -1,8 +1,8 @@
-// === Module 14788: _initializeAndroidNotificationSettingsStore ===
+// === Module 14852: _initializeAndroidNotificationSettingsStore ===
 
-// Module 14788 (_initializeAndroidNotificationSettingsStore)
-import isIterable from "isIterable" /* 4006 */;
-import NativeModulesDefault from "NativeModules" /* 11579 */;
+// Module 14852 (_initializeAndroidNotificationSettingsStore)
+import isIterable from "isIterable" /* 4009 */;
+import NativeModulesDefault from "NativeModules" /* 11628 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import identity from "identity" /* 700 */;
 
@@ -21,7 +21,7 @@ function _initializeAndroidNotificationSettingsStore() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -47,7 +47,7 @@ function _initializeAndroidNotificationSettingsStore() {
               closure_3 = 2;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(11579).getLightsEnabled();
+              obj1[0] = closure_1_1(11628).getLightsEnabled();
               return obj1;
             }
             obj16 = closure_1_0(500);
@@ -67,7 +67,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj2;
             } else {
               callback = arg1;
-              let obj8 = callback2(11579);
+              let obj8 = callback2(11628);
               closure_3 = 3;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -86,7 +86,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj4;
             } else {
               callback2 = arg1;
-              let obj5 = callback2(11579);
+              let obj5 = callback2(11628);
               closure_3 = 4;
               c4 = 1;
               obj5 = { value: null, done: false };
@@ -105,7 +105,7 @@ function _initializeAndroidNotificationSettingsStore() {
               return obj6;
             } else {
               dependencyMap = arg1;
-              obj2 = callback2(11579);
+              obj2 = callback2(11628);
               closure_3 = 5;
               c4 = 1;
               const obj7 = { value: null, done: false };
@@ -149,7 +149,7 @@ function _initializeAndroidNotificationSettingsStore() {
   }
   return applyArgumentsResult;
 }
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "flex", isSoundsEnabled: "y", isNotifyEveryTime: "HermesInternal" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "channel", isVibrationsEnabled: "then", isSoundsEnabled: "WireType", isNotifyEveryTime: "header" }));
 let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
 export const initializeAndroidNotificationSettingsStore = function initializeAndroidNotificationSettingsStore() {

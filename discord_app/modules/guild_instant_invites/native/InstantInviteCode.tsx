@@ -1,19 +1,19 @@
-// === Module 9964: InstantInviteDetails ===
+// === Module 10003: InstantInviteDetails ===
 
-// Module 9964 (InstantInviteDetails)
+// Module 10003 (InstantInviteDetails)
 import ThemesDefault from "Themes" /* 712 */;
-import Stack from "Stack" /* 4733 */;
-import Text from "Text" /* 4734 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import componentDidMountDefault from "componentDidMount" /* 9946 */;
+import Stack from "Stack" /* 4738 */;
+import Text from "Text" /* 4739 */;
+import computeChannelName from "computeChannelName" /* 4989 */;
+import getChannelIcon from "getChannelIcon" /* 6870 */;
+import componentDidMountDefault from "componentDidMount" /* 9985 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "markAllUserIdListsStale" /* 4033 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 class InstantInviteDetails {
@@ -74,11 +74,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4734).Text, obj), ];
+  const items1 = [callback(invite(4739).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4733).Stack, obj);
+  obj[1] = callback2(invite(4738).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

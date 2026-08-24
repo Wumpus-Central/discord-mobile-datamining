@@ -1,12 +1,12 @@
-// === Module 5283: useCanSeeOnboardingHome ===
+// === Module 5288: useCanSeeOnboardingHome ===
 
-// Module 5283 (useCanSeeOnboardingHome)
+// Module 5288 (useCanSeeOnboardingHome)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
-import closure_3 from "initialize" /* 1982 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 5289 */;
+import closure_3 from "initialize" /* 1983 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 5053 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 
@@ -113,7 +113,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(5285).isGuildOnboardingSettingsAvailable(id);
+          let result = tmp14(5290).isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);

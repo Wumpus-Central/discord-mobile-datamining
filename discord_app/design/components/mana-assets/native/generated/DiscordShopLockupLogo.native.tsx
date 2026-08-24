@@ -1,12 +1,12 @@
-// === Module 5648: DiscordShopLockupLogo ===
+// === Module 5655: DiscordShopLockupLogo ===
 
-// Module 5648 (DiscordShopLockupLogo)
+// Module 5655 (DiscordShopLockupLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4097 */;
-import metadataDefault from "metadata" /* 5649 */;
+import map from "map" /* 4100 */;
+import metadataDefault from "metadata" /* 5656 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

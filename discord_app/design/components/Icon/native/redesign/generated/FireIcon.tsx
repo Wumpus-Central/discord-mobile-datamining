@@ -1,10 +1,10 @@
-// === Module 9526: FireIcon ===
+// === Module 9563: FireIcon ===
 
-// Module 9526 (FireIcon)
+// Module 9563 (FireIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9527 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 9564 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

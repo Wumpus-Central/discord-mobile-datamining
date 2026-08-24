@@ -1,10 +1,10 @@
-// === Module 5387: handleCacheOrSocketLoaded ===
+// === Module 5392: handleCacheOrSocketLoaded ===
 
-// Module 5387 (handleCacheOrSocketLoaded)
+// Module 5392 (handleCacheOrSocketLoaded)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "createGuildRecordFromRust" /* 1910 */;
-import closure_1 from "markAllUserIdListsStale" /* 4030 */;
+import closure_1 from "markAllUserIdListsStale" /* 4033 */;
 
 function handleCacheOrSocketLoaded() {
   let flag = false;

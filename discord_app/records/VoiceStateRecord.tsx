@@ -1,6 +1,6 @@
-// === Module 4543: isVoiceMuted ===
+// === Module 4548: isVoiceMuted ===
 
-// Module 4543 (isVoiceMuted)
+// Module 4548 (isVoiceMuted)
 import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;

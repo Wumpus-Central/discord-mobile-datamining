@@ -1,10 +1,10 @@
-// === Module 11286: EmptyState ===
+// === Module 11337: EmptyState ===
 
-// Module 11286 (EmptyState)
+// Module 11337 (EmptyState)
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles({ container: { position: "relative", justifyContent: "center", alignItems: "center" }, textContainer: { justifyContent: "center", width: "100%" }, text: { marginTop: 16, textAlign: "center" } });
@@ -16,8 +16,8 @@ export default function EmptyState(showsGenericMessage) {
     flag = false;
   }
   const tmp = callback();
-  let obj = flag(11224);
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(9566).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  let obj = flag(11275);
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(flag(9603).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = React.useEffect(() => {
     const intl = flag(closure_1_1[6]).intl;
@@ -43,7 +43,7 @@ export default function EmptyState(showsGenericMessage) {
     stringResult = string(t.LSNOYf);
   }
   obj1[3] = stringResult;
-  obj[1] = jsx(flag(4734).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
+  obj[1] = jsx(flag(4739).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
   obj[1] = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.textContainer}>{null}</View>;
 };

@@ -1,6 +1,6 @@
-// === Module 5000: requireSortedDescending ===
+// === Module 5005: requireSortedDescending ===
 
-// Module 5000 (requireSortedDescending)
+// Module 5005 (requireSortedDescending)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;

@@ -1,6 +1,6 @@
-// === Module 7211: _safeTransitionTo ===
+// === Module 7249: _safeTransitionTo ===
 
-// Module 7211 (_safeTransitionTo)
+// Module 7249 (_safeTransitionTo)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { Routes } from "ME" /* 676 */;
@@ -25,7 +25,7 @@ function _safeTransitionTo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

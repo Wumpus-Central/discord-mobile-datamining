@@ -1,18 +1,18 @@
-// === Module 4970: handlePermissionsChange ===
+// === Module 4975: handlePermissionsChange ===
 
-// Module 4970 (handlePermissionsChange)
+// Module 4975 (handlePermissionsChange)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
-import SidebarType from "SidebarType" /* 4972 */;
-import closure_3 from "getHash" /* 4288 */;
-import closure_4 from "handleReaction" /* 4971 */;
+import SidebarType from "SidebarType" /* 4977 */;
+import closure_3 from "getHash" /* 4292 */;
+import closure_4 from "handleReaction" /* 4976 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
+import closure_9 from "handleConnectionOpen" /* 4201 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 1398 */;
@@ -195,7 +195,7 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(4972).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(4977).SidebarType.VIEW_CHANNEL) {
           channelId = null;
         }
         tmp9 = channelId;
@@ -226,7 +226,7 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
     let tmp9 = null;
     if (null != dependencyMap[tmp]) {
       if (tmp8.type !== SidebarType.SidebarType.VIEW_THREAD) {
-        if (tmp8.type !== tmp10(4972).SidebarType.VIEW_CHANNEL) {
+        if (tmp8.type !== tmp10(4977).SidebarType.VIEW_CHANNEL) {
           let tmp12 = null;
         }
         tmp9 = tmp12;

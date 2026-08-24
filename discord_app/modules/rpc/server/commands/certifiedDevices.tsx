@@ -1,12 +1,12 @@
-// === Module 13839: RPC_LOCAL_SCOPE ===
+// === Module 13902: RPC_LOCAL_SCOPE ===
 
-// Module 13839 (RPC_LOCAL_SCOPE)
+// Module 13902 (RPC_LOCAL_SCOPE)
 import set from "set" /* 2 */;
-import set2 from "set" /* 4375 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import set2 from "set" /* 4379 */;
+import DesktopSources from "DesktopSources" /* 4534 */;
+import prototypeDefault from "prototype" /* 8789 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8792 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
 import ME from "ME" /* 676 */;
 
 ({ RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
@@ -67,7 +67,7 @@ obj[2] = function handler(socket) {
     const tmp10 = new prototypeDefault(obj, "No application.");
     throw tmp10;
   } else {
-    obj = devices(13840);
+    obj = devices(13903);
     obj.setCertifiedDevices(socket.application.id, devices.map((type) => {
       const related = type.related;
       return {

@@ -1,6 +1,6 @@
-// === Module 5240: AutomodNotificationEmbedKeys ===
+// === Module 5245: AutomodNotificationEmbedKeys ===
 
-// Module 5240 (AutomodNotificationEmbedKeys)
+// Module 5245 (AutomodNotificationEmbedKeys)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx");

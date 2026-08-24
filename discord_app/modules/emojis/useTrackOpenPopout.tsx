@@ -1,11 +1,11 @@
-// === Module 9403: useTrackOpenPopout ===
+// === Module 9440: useTrackOpenPopout ===
 
-// Module 9403 (useTrackOpenPopout)
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+// Module 9440 (useTrackOpenPopout)
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4766 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5047 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import { EmojiInteractionPoint } from "set" /* 1925 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

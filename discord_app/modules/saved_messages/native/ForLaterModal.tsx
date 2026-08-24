@@ -1,14 +1,14 @@
-// === Module 8491: ForLaterModal ===
+// === Module 8530: ForLaterModal ===
 
-// Module 8491 (ForLaterModal)
+// Module 8530 (ForLaterModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import _modDef5260 from "module_5260" /* 5260 */;
-import keyExtractorDefault from "keyExtractor" /* 12720 */;
+import _modDef5265 from "module_5265" /* 5265 */;
+import keyExtractorDefault from "keyExtractor" /* 12775 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -28,7 +28,7 @@ export default function ForLaterModal(type) {
   let _require;
   const tmp = callback();
   const intl = _require(1236).intl;
-  if (type === _require(8489).SavedMessageSortTypes.REMINDER) {
+  if (type === _require(8528).SavedMessageSortTypes.REMINDER) {
   } else {
   }
   const stringResult = intl.string(_2pAkDA);
@@ -51,11 +51,11 @@ export default function ForLaterModal(type) {
     num = useSafeAreaInsetsDefault().top;
   }
   obj[3] = num + ThemesDefault.space.PX_8;
-  tmp4Result = tmp4(6314);
-  obj[4] = tmp4Result.getHeaderCloseButton(_modDef5260.pop);
+  tmp4Result = tmp4(6345);
+  obj[4] = tmp4Result.getHeaderCloseButton(_modDef5265.pop);
   ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [closure_4(_require(6319).Header, obj), ];
-  obj = { type, onClose: _modDef5260.pop };
+  const items = [closure_4(_require(6350).Header, obj), ];
+  obj = { type, onClose: _modDef5265.pop };
   items[1] = closure_4(keyExtractorDefault, obj, type);
   obj[1] = items;
   return closure_5(View, obj);

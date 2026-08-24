@@ -1,8 +1,8 @@
-// === Module 5346: fromServer ===
+// === Module 5351: fromServer ===
 
-// Module 5346 (fromServer)
+// Module 5351 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 5339 */;
+import ShopBlockType from "ShopBlockType" /* 5344 */;
 
 let prototype;
 prototype = function ImmersiveBannerBlockRecord(end_time) {

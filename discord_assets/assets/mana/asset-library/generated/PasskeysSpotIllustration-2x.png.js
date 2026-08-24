@@ -1,6 +1,6 @@
-// === Module 6047: metadata ===
+// === Module 6078: metadata ===
 
-// Module 6047 (metadata)
+// Module 6078 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PasskeysSpotIllustration-2x.png.js");

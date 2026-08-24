@@ -1,20 +1,20 @@
-// === Module 12615: StreamPreviewContainer ===
+// === Module 12669: StreamPreviewContainer ===
 
-// Module 12615 (StreamPreviewContainer)
+// Module 12669 (StreamPreviewContainer)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 4540 */;
-import closure_6 from "reset" /* 4652 */;
+import closure_5 from "set" /* 4545 */;
+import closure_6 from "reset" /* 4658 */;
 import closure_7 from "fetchFingerprint" /* 1218 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_11 from "updateVoiceState" /* 4547 */;
 import { Permissions } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import hexToRgba from "hexToRgba" /* 4223 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import hexToRgba from "hexToRgba" /* 4227 */;
 
 const require = arg1;
 function StreamPreviewContainer(disableTransition) {

@@ -1,9 +1,9 @@
-// === Module 13855: items ===
+// === Module 13920: items ===
 
-// Module 13855 (items)
+// Module 13920 (items)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
+import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4362 */;
 
 const items = [trimTrailingPunctuation.parseQuestsEmbedCode];
 const result = set.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");

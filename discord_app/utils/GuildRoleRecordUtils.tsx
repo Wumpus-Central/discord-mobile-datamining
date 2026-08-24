@@ -1,11 +1,11 @@
-// === Module 1985: fromServerArray ===
+// === Module 1986: fromServerArray ===
 
-// Module 1985 (fromServerArray)
+// Module 1986 (fromServerArray)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
-import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1984 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1986 */;
+import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1985 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1987 */;
 import isValueEqual from "isValueEqual" /* 1431 */;
 
 function fromServerArray(id, roles) {

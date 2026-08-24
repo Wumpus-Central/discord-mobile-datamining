@@ -1,15 +1,15 @@
-// === Module 14189: useGoreContentNonFriendsDmSettingValue ===
+// === Module 14257: useGoreContentNonFriendsDmSettingValue ===
 
-// Module 14189 (useGoreContentNonFriendsDmSettingValue)
+// Module 14257 (useGoreContentNonFriendsDmSettingValue)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
-import MobileUserSettings from "MobileUserSettings" /* 8198 */;
-import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14177 */;
-import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14178 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14180 */;
-import createToggle from "createToggle" /* 10669 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5006 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5030 */;
+import MobileUserSettings from "MobileUserSettings" /* 8238 */;
+import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14245 */;
+import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14246 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14248 */;
+import createToggle from "createToggle" /* 10708 */;
 
 function useGoreContentNonFriendsDmSettingValue() {
   const obj = useExplicitContentSettingOrDefault;

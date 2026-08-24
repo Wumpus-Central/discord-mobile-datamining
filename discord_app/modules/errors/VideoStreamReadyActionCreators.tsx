@@ -1,6 +1,6 @@
-// === Module 12452: videoStreamTimedOut ===
+// === Module 12504: videoStreamTimedOut ===
 
-// Module 12452 (videoStreamTimedOut)
+// Module 12504 (videoStreamTimedOut)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

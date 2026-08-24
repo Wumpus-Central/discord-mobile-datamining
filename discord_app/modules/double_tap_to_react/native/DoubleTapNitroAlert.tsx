@@ -1,16 +1,16 @@
-// === Module 8197: DoubleTapNitroAlert ===
+// === Module 8237: DoubleTapNitroAlert ===
 
-// Module 8197 (DoubleTapNitroAlert)
+// Module 8237 (DoubleTapNitroAlert)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4667 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8113 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 8193 */;
+import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 8233 */;
 import { UserSettingsSections } from "ME" /* 676 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8238 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
@@ -19,13 +19,13 @@ const result = require("set").fileFinishedImporting("modules/double_tap_to_react
 
 export default function DoubleTapNitroAlert(emojiName) {
   const callback = React.useCallback(() => {
-    let obj = callback(7360);
+    let obj = callback(7398);
     obj = { screen: constants.TEXT, params: obj };
     obj = { initialSetting: constants2.DOUBLE_TAP_EMOJI };
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(7360);
+    let obj = callback(7398);
     obj = { screen: constants.PREMIUM };
     obj.openUserSettings(obj, () => {
       callback(table[8]).dismissAlert(closure_4);

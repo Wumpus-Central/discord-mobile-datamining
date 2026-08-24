@@ -1,12 +1,12 @@
-// === Module 13774: initialize ===
+// === Module 13832: initialize ===
 
-// Module 13774 (initialize)
+// Module 13832 (initialize)
 import extractId from "extractId" /* 513 */;
 import v1 from "v1" /* 514 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "init" /* 7472 */;
+import closure_3 from "init" /* 7510 */;
 
 require = arg1;
 let c4 = 0;

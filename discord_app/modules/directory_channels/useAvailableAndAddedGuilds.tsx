@@ -1,13 +1,13 @@
-// === Module 11485: useAvailableAndAddedGuilds ===
+// === Module 11534: useAvailableAndAddedGuilds ===
 
-// Module 11485 (useAvailableAndAddedGuilds)
+// Module 11534 (useAvailableAndAddedGuilds)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "insertUnsortedGuilds" /* 5078 */;
-import closure_10 from "isFetching" /* 11479 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_9 from "insertUnsortedGuilds" /* 5083 */;
+import closure_10 from "isFetching" /* 11528 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
@@ -54,7 +54,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             v0(false);
             v0 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp15) {
           v0 = tmp;

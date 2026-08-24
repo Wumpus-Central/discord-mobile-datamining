@@ -1,10 +1,10 @@
-// === Module 6062: PowerupSpotIllustration ===
+// === Module 6093: PowerupSpotIllustration ===
 
-// Module 6062 (PowerupSpotIllustration)
+// Module 6093 (PowerupSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6063 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6094 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PowerupSpotIllustration.native.tsx");

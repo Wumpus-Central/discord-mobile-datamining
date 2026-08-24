@@ -1,11 +1,11 @@
-// === Module 5410: initialize ===
+// === Module 5415: initialize ===
 
-// Module 5410 (initialize)
+// Module 5415 (initialize)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5411 from "module_5411" /* 5411 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 5412 */;
+import _modDef5416 from "module_5416" /* 5416 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 5417 */;
 import closure_2 from "createdAt" /* 1930 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
@@ -47,8 +47,8 @@ const friendSuggestionStore = new FriendSuggestionStore(dispatcherDefault, {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = _modDef5411.fetch();
-        const obj = _modDef5411;
+        const response = _modDef5416.fetch();
+        const obj = _modDef5416;
       }
     } else {
       maybeDispatchDevOnlyDummyFriendSuggestionsDefault();

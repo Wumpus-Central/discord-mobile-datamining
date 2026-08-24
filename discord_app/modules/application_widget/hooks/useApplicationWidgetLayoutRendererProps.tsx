@@ -1,12 +1,12 @@
-// === Module 12283: useApplicationWidgetLayoutRendererProps ===
+// === Module 12335: useApplicationWidgetLayoutRendererProps ===
 
-// Module 12283 (useApplicationWidgetLayoutRendererProps)
+// Module 12335 (useApplicationWidgetLayoutRendererProps)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleFeaturedOrDeveloperFetchSuccess" /* 12284 */;
-import closure_6 from "map" /* 12285 */;
-import { FetchState } from "map" /* 12285 */;
-import closure_8 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "handleFeaturedOrDeveloperFetchSuccess" /* 12336 */;
+import closure_6 from "map" /* 12337 */;
+import { FetchState } from "map" /* 12337 */;
+import closure_8 from "_getSystemLocale" /* 1995 */;
 
 const require = arg1;
 let closure_9 = [];

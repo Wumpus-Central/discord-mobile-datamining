@@ -1,13 +1,13 @@
-// === Module 6921: sanitizeFilename ===
+// === Module 6959: sanitizeFilename ===
 
-// Module 6921 (sanitizeFilename)
+// Module 6959 (sanitizeFilename)
 import log from "log" /* 4 */;
 import Storage3 from "Storage" /* 595 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
-import GameTheme from "GameTheme" /* 4511 */;
-import DomainMigrationEventType from "DomainMigrationEventType" /* 6922 */;
-import IPCEvents from "IPCEvents" /* 6923 */;
-import decideFileExtension from "decideFileExtension" /* 6924 */;
+import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4310 */;
+import GameTheme from "GameTheme" /* 4516 */;
+import DomainMigrationEventType from "DomainMigrationEventType" /* 6960 */;
+import IPCEvents from "IPCEvents" /* 6961 */;
+import getExtensionFromContentType from "getExtensionFromContentType" /* 6962 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { NativeFeatures } from "ME" /* 676 */;
@@ -84,7 +84,7 @@ function _transcodeImageToPng() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -292,18 +292,18 @@ const re22 = /[^a-zA-Z0-9]/g;
 const re23 = /\.[^.]*$/;
 let obj = { SAVED: "saved", CANCELED: "canceled", ERRORED: "errored" };
 obj = {
-  requireModule(discord_krisp) {
+  requireModule(discord_voice) {
     if (c14) {
-      if (closure_15.hasOwnProperty(discord_krisp)) {
-        if (null != tmp[discord_krisp]) {
-          return tmp[discord_krisp];
+      if (closure_15.hasOwnProperty(discord_voice)) {
+        if (null != tmp[discord_voice]) {
+          return tmp[discord_voice];
         }
       }
     }
     const nativeModules = DiscordNative.nativeModules;
-    const requireModuleResult = nativeModules.requireModule(discord_krisp);
+    const requireModuleResult = nativeModules.requireModule(discord_voice);
     if (c14) {
-      closure_15[discord_krisp] = requireModuleResult;
+      closure_15[discord_voice] = requireModuleResult;
     }
     return requireModuleResult;
   },
@@ -620,7 +620,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(500);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(6923).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(6961).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(500);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -670,7 +670,7 @@ obj.bounceDock = function bounceDock(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -707,7 +707,7 @@ obj.bounceDock = function bounceDock(arg0) {
               dock = dock.dock;
               dock.cancelBounce(dock);
               c3 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -781,7 +781,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -895,7 +895,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -933,7 +933,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
           const _Buffer = Buffer;
           clipboard.copyImage(Buffer.from(closure_0), closure_1);
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -945,7 +945,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
   if (null != closure_1_0) {
     if (require(500) /* set */.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(6924).decideFileExtension(closure_1_0, closure_1_1);
+      const decideFileExtensionResult = tmp(6962).decideFileExtension(closure_1_0, closure_1_1);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -972,7 +972,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1168,7 +1168,7 @@ obj.saveFile = function saveFile(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1384,7 +1384,7 @@ obj.canCopyImage = function canCopyImage(closure_1_0) {
       return false;
     } else {
       if (null != tmp) {
-        const decideFileExtensionResult = decideFileExtension.decideFileExtension(tmp, undefined);
+        const decideFileExtensionResult = getExtensionFromContentType.decideFileExtension(tmp, undefined);
         if (null != decideFileExtensionResult) {
           if (!set.has(decideFileExtensionResult)) {
             if (!set1.has(decideFileExtensionResult)) {
@@ -1392,7 +1392,7 @@ obj.canCopyImage = function canCopyImage(closure_1_0) {
             }
           }
         }
-        const tmp2Result = decideFileExtension;
+        const tmp2Result = getExtensionFromContentType;
       }
       return true;
     }
@@ -1506,7 +1506,7 @@ obj.waitForIPCReady = function waitForIPCReady() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1651,7 +1651,7 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1725,7 +1725,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(6923).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(6961).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
@@ -2077,7 +2077,7 @@ obj.stopCPUProfiling = function stopCPUProfiling() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2747,7 +2747,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

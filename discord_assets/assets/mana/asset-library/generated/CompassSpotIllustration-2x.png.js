@@ -1,6 +1,6 @@
-// === Module 5609: metadata ===
+// === Module 5616: metadata ===
 
-// Module 5609 (metadata)
+// Module 5616 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js");

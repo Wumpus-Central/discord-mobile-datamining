@@ -1,12 +1,12 @@
-// === Module 11262: ActivityShelfBadge ===
+// === Module 11313: ActivityShelfBadge ===
 
-// Module 11262 (ActivityShelfBadge)
+// Module 11313 (ActivityShelfBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import Button from "Button" /* 1297 */;
 
 require = arg1;
@@ -38,7 +38,7 @@ export default function ActivityShelfBadge(arg0) {
     obj[1] = tmp.badgeText;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.y2b7CA);
-    obj[1] = jsx(tmp2(4734).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
+    obj[1] = jsx(tmp2(4739).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
     let tmp6 = <View variant="text-xs/semibold" style={null} color="text-overlay-light">{null}</View>;
   } else {
     tmp6 = null;
@@ -51,7 +51,7 @@ export default function ActivityShelfBadge(arg0) {
       obj1[1] = tmp.badgeText;
       const intl2 = tmp2(1236).intl;
       obj1[3] = intl2.string(tmp2(1236).t["/qdhkk"]);
-      obj[1] = jsx(tmp2(4734).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
+      obj[1] = jsx(tmp2(4739).Text, { variant: "text-xs/semibold", style: null, color: "text-overlay-light", children: null });
       tmp6 = <View style={null}>{null}</View>;
     }
   }

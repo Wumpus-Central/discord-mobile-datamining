@@ -1,13 +1,13 @@
-// === Module 4977: recomputeGuild ===
+// === Module 4982: recomputeGuild ===
 
-// Module 4977 (recomputeGuild)
+// Module 4982 (recomputeGuild)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4009 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import GuildMemberFlags2 from "GuildMemberFlags" /* 4012 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;

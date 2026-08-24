@@ -1,12 +1,12 @@
-// === Module 14458: CloseButton ===
+// === Module 14526: CloseButton ===
 
-// Module 14458 (CloseButton)
+// Module 14526 (CloseButton)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import HeaderActionButton from "HeaderActionButton" /* 5432 */;
-import NavigationStack from "NavigationStack" /* 6312 */;
-import registerAssetDefault from "registerAsset" /* 8143 */;
+import HeaderActionButton from "HeaderActionButton" /* 5437 */;
+import NavigationStack from "NavigationStack" /* 6343 */;
+import registerAssetDefault from "registerAsset" /* 8182 */;
 
 function CloseButton() {
   const obj = {
@@ -33,7 +33,7 @@ const result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureM
 export default function QuestDisclosureModal(arg0) {
   ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
   function onClose() {
-    return callback2(14457).hideModal();
+    return callback2(14525).hideModal();
   }
   let obj = {
     headerLeft: onClose,
@@ -44,7 +44,7 @@ export default function QuestDisclosureModal(arg0) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.GcsZKJ);
-      return callback3(callback(6314).NavigatorHeader, obj);
+      return callback3(callback(6345).NavigatorHeader, obj);
     },
     render() {
       return closure_1_3(closure_1_1(closure_1_2[6]), { isTargetedDisclosure: closure_0, gamePublisher: closure_1, gameTitle: closure_2, onClose, cosponsorName: closure_3, isVideoQuest: closure_4 });

@@ -1,12 +1,12 @@
-// === Module 9496: usePremiumSince ===
+// === Module 9533: usePremiumSince ===
 
-// Module 9496 (usePremiumSince)
+// Module 9533 (usePremiumSince)
 import initialize from "initialize" /* 589 */;
-import tDefault from "t" /* 3975 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9497 */;
-import closure_3 from "createUserWidgetFromServer" /* 5365 */;
+import tDefault from "t" /* 3978 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9534 */;
+import closure_3 from "createUserWidgetFromServer" /* 5370 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4045 */;
+import closure_5 from "reset" /* 4048 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -135,7 +135,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(5381);
+        tmpResult = tmp(5386);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -150,7 +150,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9497);
+  let tmpResult = tmp(9534);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -177,8 +177,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(5381).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(5381);
+        earnedOnDate = tmp(5386).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(5386);
       }
     }
   }

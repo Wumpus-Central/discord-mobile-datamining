@@ -1,10 +1,10 @@
-// === Module 6553: ? ===
+// === Module 6584: ? ===
 
-// Module 6553
+// Module 6584
 import set from "set" /* 2 */;
-import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
-import SafetyToastType2 from "SafetyToastType" /* 5430 */;
-import getSafetyToastTypeContent from "getSafetyToastTypeContent" /* 6554 */;
+import presentAddedFriendToast from "presentAddedFriendToast" /* 4096 */;
+import SafetyToastType2 from "SafetyToastType" /* 5435 */;
+import getSafetyToastTypeContent from "getSafetyToastTypeContent" /* 6585 */;
 
 const SafetyToastType = SafetyToastType2.SafetyToastType;
 const result = set.fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");
@@ -42,9 +42,10 @@ export default {
     const obj = presentAddedFriendToast;
     obj.showSafetySuccess(REPORT_TO_MOD_SUCCESS, getSafetyToastTypeContent.getSafetyToastTypeContent(REPORT_TO_MOD_SUCCESS));
   },
-  showFailedToast(GENERIC_ERROR) {
+  showFailedToast(TIGGER_PAWTECT_ERROR) {
+    let GENERIC_ERROR = TIGGER_PAWTECT_ERROR;
     const obj = presentAddedFriendToast;
-    if (GENERIC_ERROR == null) {
+    if (TIGGER_PAWTECT_ERROR == null) {
       GENERIC_ERROR = SafetyToastType.GENERIC_ERROR;
     }
     obj.presentFailedToast(getSafetyToastTypeContent.getSafetyToastTypeContent(GENERIC_ERROR));

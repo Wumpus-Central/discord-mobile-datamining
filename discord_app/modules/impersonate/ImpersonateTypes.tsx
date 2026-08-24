@@ -1,6 +1,6 @@
-// === Module 1988: ImpersonateType ===
+// === Module 1989: ImpersonateType ===
 
-// Module 1988 (ImpersonateType)
+// Module 1989 (ImpersonateType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/impersonate/ImpersonateTypes.tsx");

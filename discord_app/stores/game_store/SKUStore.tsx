@@ -1,10 +1,10 @@
-// === Module 4521: addSku ===
+// === Module 4526: addSku ===
 
-// Module 4521 (addSku)
+// Module 4526 (addSku)
 import initializeAll from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_1 from "createFromServer" /* 4515 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_1 from "createFromServer" /* 4520 */;
+import closure_2 from "_getSystemLocale" /* 1995 */;
 import set from "set" /* 2 */;
 
 function addSku(sku) {

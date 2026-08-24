@@ -1,15 +1,15 @@
-// === Module 12465: Emoji ===
+// === Module 12517: Emoji ===
 
-// Module 12465 (Emoji)
+// Module 12517 (Emoji)
 import setDefault from "set" /* 687 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import preloadDefault from "preload" /* 5449 */;
+import preloadDefault from "preload" /* 5454 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function Emoji(url) {

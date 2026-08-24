@@ -1,9 +1,9 @@
-// === Module 4749: MINIMUM_HIT_AREA ===
+// === Module 4754: MINIMUM_HIT_AREA ===
 
-// Module 4749 (MINIMUM_HIT_AREA)
+// Module 4754 (MINIMUM_HIT_AREA)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
-import IconSizes from "IconSizes" /* 4747 */;
+import IconSizes from "IconSizes" /* 4752 */;
 
 const SMALL = IconSizes.IconSizes.SMALL;
 const SMALL_20 = IconSizes.IconSizes.SMALL_20;

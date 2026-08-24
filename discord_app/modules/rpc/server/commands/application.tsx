@@ -1,13 +1,13 @@
-// === Module 13837: ? ===
+// === Module 13900: ? ===
 
-// Module 13837
+// Module 13900
 import sendRequest from "sendRequest" /* 530 */;
-import isTestModeForApplication from "isTestModeForApplication" /* 7871 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 13838 */;
-import closure_3 from "addApplication" /* 4478 */;
+import isTestModeForApplication from "isTestModeForApplication" /* 7910 */;
+import prototypeDefault from "prototype" /* 8789 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8792 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8794 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 13901 */;
+import closure_3 from "addApplication" /* 4482 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -35,9 +35,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(7873);
+    let tmpResult = tmp(7912);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(8716);
+      tmpResult = tmp(8753);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       obj[0] = id;
@@ -59,7 +59,7 @@ let obj = {
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(8752)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(8789)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }
@@ -71,8 +71,8 @@ obj = {
     if (null == id) {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_COMMAND;
-      const tmp7 = new prototypeDefault(obj, "No application.");
-      throw tmp7;
+      const tmp10 = new prototypeDefault(obj, "No application.");
+      throw tmp10;
     } else {
       const HTTP = sendRequest.HTTP;
       obj = { url: null, body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
@@ -80,7 +80,7 @@ obj = {
       obj = { test_mode: null };
       obj[0] = isTestModeForApplication.isTestModeForApplication(id);
       obj[1] = obj;
-      const obj4 = isTestModeForApplication;
+      const obj3 = isTestModeForApplication;
       return HTTP.post(obj).then((body) => body.body);
     }
   }

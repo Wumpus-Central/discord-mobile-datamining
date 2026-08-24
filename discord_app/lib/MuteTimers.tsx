@@ -1,6 +1,6 @@
-// === Module 4024: reset ===
+// === Module 4027: reset ===
 
-// Module 4024 (reset)
+// Module 4027 (reset)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/MuteTimers.tsx");

@@ -1,24 +1,24 @@
-// === Module 12711: TitleWrapper ===
+// === Module 12766: TitleWrapper ===
 
-// Module 12711 (TitleWrapper)
+// Module 12766 (TitleWrapper)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import Text from "Text" /* 4734 */;
-import computeChannelName from "computeChannelName" /* 4984 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import _modDef12713 from "module_12713" /* 12713 */;
+import map from "map" /* 4100 */;
+import Text from "Text" /* 4739 */;
+import computeChannelName from "computeChannelName" /* 4989 */;
+import getChannelIcon from "getChannelIcon" /* 6870 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9955 */;
+import _modDef12768 from "module_12768" /* 12768 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "markAllUserIdListsStale" /* 4033 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT" /* 8493 */;
+import { getMinHeaderHeight } from "MIN_HEADER_HEIGHT" /* 8532 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function TitleWrapper(headerAccessibilityLabel) {
@@ -49,7 +49,7 @@ function TitleWrapper(headerAccessibilityLabel) {
     obj[5] = tmp6;
     obj[6] = tmp2.wrapper;
     obj[7] = children;
-    tmp7Result = callback2(titleContentHeight(5433).PressableOpacity, obj);
+    tmp7Result = callback2(titleContentHeight(5438).PressableOpacity, obj);
     const tmp7 = callback2;
   }
   return tmp7Result;
@@ -84,9 +84,9 @@ function ChannelTitle(guildId) {
     obj[3] = str2;
     ({ channelName: obj4[6], channelNameContainer: obj4[7] } = tmp4);
     obj[8] = accessibleTitle;
-    let tmp8Result = tmp11(tmp(9452), obj);
+    let tmp8Result = tmp11(tmp(9489), obj);
     let tmp8 = tmp11;
-    const tmpResult = tmp(9452);
+    const tmpResult = tmp(9489);
   } else {
     tmp8 = closure_9;
     let str = "heading-lg/bold";
@@ -104,7 +104,7 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12712);
+    obj2[0] = tmp(12767);
     obj2[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(Button.Icon, obj2);
@@ -201,7 +201,7 @@ function MemberCountText(arg0) {
     tmp9 = leadingAccessoryWidth;
   }
   obj[3] = tmp9;
-  const children = [closure_9(_modDef12713, obj), ];
+  const children = [closure_9(_modDef12768, obj), ];
   let tmp7Result = null;
   if (withSeparator) {
     let str3 = "text-xs/medium";

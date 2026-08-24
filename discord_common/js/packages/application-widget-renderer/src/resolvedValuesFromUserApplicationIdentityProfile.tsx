@@ -1,8 +1,8 @@
-// === Module 12275: isVisualUnfurledMedia ===
+// === Module 12327: isVisualUnfurledMedia ===
 
-// Module 12275 (isVisualUnfurledMedia)
-import resolveFieldValue from "resolveFieldValue" /* 12193 */;
-import ProfileDataDynamicType from "ProfileDataDynamicType" /* 12276 */;
+// Module 12327 (isVisualUnfurledMedia)
+import resolveFieldValue from "resolveFieldValue" /* 12245 */;
+import ProfileDataDynamicType from "ProfileDataDynamicType" /* 12328 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;
@@ -111,26 +111,26 @@ function resolvedValuesFromDynamic(data) {
       if (nextResult.type === ProfileDataDynamicType.ProfileDataDynamicType.STRING) {
         let tmp9 = nextResult;
         obj = { type: null, value: null };
-        obj[0] = tmp5(12193).ResolvedValueType.STRING;
+        obj[0] = tmp5(12245).ResolvedValueType.STRING;
         obj[1] = iter.value;
         obj[iter.name] = obj;
       } else {
         let tmp11 = nextResult;
-        if (iter.type === tmp5(12276).ProfileDataDynamicType.NUMBER) {
+        if (iter.type === tmp5(12328).ProfileDataDynamicType.NUMBER) {
           let tmp8 = nextResult;
           obj = { type: null, value: null };
-          obj[0] = tmp5(12193).ResolvedValueType.NUMBER;
+          obj[0] = tmp5(12245).ResolvedValueType.NUMBER;
           obj[1] = iter.value;
           obj[iter.name] = obj;
         } else {
           let tmp12 = nextResult;
-          if (iter.type === tmp5(12276).ProfileDataDynamicType.MEDIA) {
+          if (iter.type === tmp5(12328).ProfileDataDynamicType.MEDIA) {
             let tmp13 = isVisualUnfurledMedia;
             let tmp14 = nextResult;
             if (isVisualUnfurledMedia(iter.value)) {
               let tmp7 = nextResult;
               obj1 = { type: null, media: null };
-              obj1[0] = tmp5(12193).ResolvedValueType.MEDIA;
+              obj1[0] = tmp5(12245).ResolvedValueType.MEDIA;
               let obj2 = { url: null, width: null, height: null };
               obj2[0] = iter.value.proxy_url;
               obj2[1] = iter.value.width;

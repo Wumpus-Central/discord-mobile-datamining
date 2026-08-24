@@ -1,6 +1,6 @@
-// === Module 13425: COMMUNITY_PORTAL_SERVER_SAFETY_PAGE ===
+// === Module 13483: COMMUNITY_PORTAL_SERVER_SAFETY_PAGE ===
 
-// Module 13425 (COMMUNITY_PORTAL_SERVER_SAFETY_PAGE)
+// Module 13483 (COMMUNITY_PORTAL_SERVER_SAFETY_PAGE)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

@@ -1,9 +1,9 @@
-// === Module 15007: DataAndPrivacySettings ===
+// === Module 15071: DataAndPrivacySettings ===
 
-// Module 15007 (DataAndPrivacySettings)
+// Module 15071 (DataAndPrivacySettings)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasConsented" /* 5258 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import closure_4 from "hasConsented" /* 5263 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8238 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -19,7 +19,7 @@ export default function DataAndPrivacySettings() {
   items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   let intl = stackNavigation(1236).intl;
   obj = { helpdeskArticle: null };
-  let obj3 = items1(1993);
+  let obj3 = items1(1994);
   obj[0] = obj3.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj[1] = intl.format(stackNavigation(1236).t["igTSG/"], obj);
   items1 = [obj, , , ];
@@ -27,7 +27,7 @@ export default function DataAndPrivacySettings() {
   items2 = [MobileUserSettings.USE_DATA_TO_CUSTOMIZE_DISCORD];
   let intl2 = stackNavigation(1236).intl;
   let obj2 = { helpdeskArticle: null };
-  let obj6 = items1(1993);
+  let obj6 = items1(1994);
   obj2[0] = obj6.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
   obj1[1] = intl2.format(stackNavigation(1236).t["eQL/Mr"], obj2);
   items1[1] = obj1;
@@ -35,7 +35,7 @@ export default function DataAndPrivacySettings() {
   items3 = [MobileUserSettings.USE_DATA_FOR_QUESTS];
   let intl3 = stackNavigation(1236).intl;
   const obj4 = { helpdeskArticle: null };
-  let obj9 = items1(1993);
+  let obj9 = items1(1994);
   obj4[0] = obj9.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj3[1] = intl3.format(stackNavigation(1236).t.cf9mvV, obj4);
   items1[2] = obj3;
@@ -43,7 +43,7 @@ export default function DataAndPrivacySettings() {
   items4 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P];
   let intl4 = stackNavigation(1236).intl;
   obj6 = { helpdeskArticle: null };
-  let obj12 = items1(1993);
+  let obj12 = items1(1994);
   obj6[0] = obj12.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
   obj5[1] = intl4.format(stackNavigation(1236).t["2QFDU/"], obj6);
   items1[3] = obj5;
@@ -53,7 +53,7 @@ export default function DataAndPrivacySettings() {
   const items5 = [MobileUserSettings.REQUEST_YOUR_DATA];
   obj7[1] = items5;
   const intl6 = stackNavigation(1236).intl;
-  const obj8 = { helpdeskArticle: items1(1993).getArticleURL(constants.GDPR_REQUEST_DATA) };
+  const obj8 = { helpdeskArticle: items1(1994).getArticleURL(constants.GDPR_REQUEST_DATA) };
   obj7[2] = intl6.format(stackNavigation(1236).t.P3kNfr, obj8);
   items1.push(obj7);
   obj9 = { settings: items6, subLabel: null };
@@ -69,10 +69,10 @@ export default function DataAndPrivacySettings() {
   items1.push({ settings: items7 });
   const effect = React.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14212).fetchConsents();
-      const obj = stackNavigation(14212);
+      const consents = stackNavigation(14280).fetchConsents();
+      const obj = stackNavigation(14280);
     }
-    const harvestStatus = stackNavigation(14215).fetchHarvestStatus();
+    const harvestStatus = stackNavigation(14283).fetchHarvestStatus();
   }, []);
   const items8 = [stackNavigation, items1];
   const obj11 = { children: null };
@@ -113,9 +113,9 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(closure_1_7.CONTENT_AND_SOCIAL);
     }
   };
-  const obj16 = items1(1993);
-  obj12[0] = stackNavigation(14172).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [callback(items1(14172), obj12), callback(items1(13991), { node: memo })];
+  const obj16 = items1(1994);
+  obj12[0] = stackNavigation(14240).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [callback(items1(14240), obj12), callback(items1(14059), { node: memo })];
   obj11[0] = items9;
   return callback2(closure_9, obj11);
 };

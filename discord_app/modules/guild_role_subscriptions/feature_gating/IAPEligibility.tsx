@@ -1,6 +1,6 @@
-// === Module 6766: items ===
+// === Module 6803: items ===
 
-// Module 6766 (items)
+// Module 6803 (items)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 
@@ -11,7 +11,7 @@ const result = require("set").fileFinishedImporting("modules/guild_role_subscrip
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
-    const str = tmp(6767).getSystemVersion();
+    const str = tmp(6804).getSystemVersion();
     if (null != str) {
       const parts = str.split(".");
       const _Number = Number;
@@ -74,7 +74,7 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
 export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIAP(guildId) {
   const _require = guildId;
   const memo = React.useMemo(() => {
-    const str = guildId(6767).getSystemVersion();
+    const str = guildId(6804).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");

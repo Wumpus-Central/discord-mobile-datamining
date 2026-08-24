@@ -1,8 +1,8 @@
-// === Module 8426: createUploaderAttachments ===
+// === Module 8465: createUploaderAttachments ===
 
-// Module 8426 (createUploaderAttachments)
+// Module 8465 (createUploaderAttachments)
 import set from "set" /* 2 */;
-import Changeset from "Changeset" /* 8158 */;
+import Changeset from "Changeset" /* 8197 */;
 
 const AttachmentType = Changeset.AttachmentType;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/transformUploaderAttachments.tsx");

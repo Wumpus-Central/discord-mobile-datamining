@@ -1,10 +1,10 @@
-// === Module 11397: useUploadDisabled ===
+// === Module 11448: useUploadDisabled ===
 
-// Module 11397 (useUploadDisabled)
+// Module 11448 (useUploadDisabled)
 import set from "set" /* 2 */;
-import handleChanged from "handleChanged" /* 4825 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "map" /* 4824 */;
+import handleChanged from "handleChanged" /* 4830 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_4 from "map" /* 4829 */;
 import ME from "ME" /* 676 */;
 
 const DraftType = handleChanged.DraftType;

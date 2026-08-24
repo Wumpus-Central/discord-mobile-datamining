@@ -1,9 +1,9 @@
-// === Module 16287: useSortedGuildIdsForSoundboard ===
+// === Module 16381: useSortedGuildIdsForSoundboard ===
 
-// Module 16287 (useSortedGuildIdsForSoundboard)
+// Module 16381 (useSortedGuildIdsForSoundboard)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_5 from "insertUnsortedGuilds" /* 5083 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import { Permissions } from "sum" /* 505 */;

@@ -1,13 +1,13 @@
-// === Module 12420: URLCallout ===
+// === Module 12472: URLCallout ===
 
-// Module 12420 (URLCallout)
+// Module 12472 (URLCallout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
-import useUrlParts from "useUrlParts" /* 12421 */;
+import Text from "Text" /* 4739 */;
+import useUrlParts from "useUrlParts" /* 12473 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;

@@ -1,13 +1,13 @@
-// === Module 10154: BugReporterFeatureActionSheet ===
+// === Module 10193: BugReporterFeatureActionSheet ===
 
-// Module 10154 (BugReporterFeatureActionSheet)
+// Module 10193 (BugReporterFeatureActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4734 */;
+import Text from "Text" /* 4739 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 let c4 = importAllResult;
@@ -31,9 +31,9 @@ let closure_10 = importAllResult.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10130);
+  let obj = item(10169);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10130).getFeatureId(feature);
+  const featureId1 = item(10169).getFeatureId(feature);
   obj = {
     start,
     end,
@@ -42,10 +42,10 @@ let closure_10 = importAllResult.memo((item) => {
       setFeature(item);
       setFeature(closure_1_2[9]).hideActionSheet();
     },
-    trailing: callback(item(8102).FormRadio, obj)
+    trailing: callback(item(8141).FormRadio, obj)
   };
   obj = { selected: featureId === featureId1 };
-  return callback(item(6291).TableRow, obj);
+  return callback(item(6322).TableRow, obj);
 });
 const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center" };
 const result = require("set").fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

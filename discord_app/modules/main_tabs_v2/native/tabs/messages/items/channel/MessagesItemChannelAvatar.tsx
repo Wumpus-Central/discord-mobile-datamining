@@ -1,16 +1,16 @@
-// === Module 15299: ? ===
+// === Module 15363: ? ===
 
-// Module 15299
+// Module 15363
 import ThemesDefault from "Themes" /* 712 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9955 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "handleTypingStart" /* 11152 */;
+import closure_5 from "sortActivity" /* 4564 */;
+import closure_6 from "handleTypingStart" /* 11191 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10094 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "md", size: "primary", animate: null, typing: null, autoStatusCutout: null };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "danger", size: null, animate: null, typing: null, autoStatusCutout: "redux.action" };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -125,7 +125,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "md", size: "primary", animate: null, typing: null, autoStatusCutout: null });
+      tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "danger", size: null, animate: null, typing: null, autoStatusCutout: "redux.action" });
       const tmp11 = jsx;
     }
   }

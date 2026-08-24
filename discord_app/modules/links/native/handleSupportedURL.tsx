@@ -1,22 +1,22 @@
-// === Module 4492: handleSupportedURL ===
+// === Module 4496: handleSupportedURL ===
 
-// Module 4492 (handleSupportedURL)
+// Module 4496 (handleSupportedURL)
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "asyncGeneratorStep" /* 5 */;
-import closure_8 from "scheduledEventSort" /* 4370 */;
-import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7392 */;
-import closure_10 from "zustandStore" /* 12849 */;
+import closure_8 from "scheduledEventSort" /* 4374 */;
+import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7430 */;
+import closure_10 from "zustandStore" /* 12904 */;
 import closure_11 from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
-import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 5297 */;
-import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow" /* 4357 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13311 */;
-import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { StreamTypes } from "StreamIssueReportReasons" /* 4537 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4844 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8811 */;
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 5302 */;
+import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow" /* 4361 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13369 */;
+import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11098 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8238 */;
 
 const require = arg1;
 let closure_4 = ["code", "state"];
@@ -202,7 +202,7 @@ export default function handleSupportedURL(payload) {
       result = inviteCode;
       result = payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
       result = rootNavigationRef1;
-      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: true };
+      let obj3 = { guildId: null, channelId: null, messageId: "Array", navigationSettings: "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F" };
       obj3[0] = guildId2;
       obj3[1] = channelId2;
       let obj4 = { safe: null, navigationReplace: null, waitForConnection: null, skipMessageFetch: null };
@@ -361,7 +361,7 @@ export default function handleSupportedURL(payload) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -436,7 +436,7 @@ export default function handleSupportedURL(payload) {
                     const result = obj2.openGuildEventDetails(obj4);
                   }
                   c4 = 3;
-                  return { value: "HermesInternal", done: "HermesInternal" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp35) {
                 c4 = tmp;
@@ -468,7 +468,7 @@ export default function handleSupportedURL(payload) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -530,7 +530,7 @@ export default function handleSupportedURL(payload) {
                   obj3.disconnectRemote();
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               } catch (tmp37) {
                 c2 = tmp;
                 throw tmp37;
@@ -590,7 +590,7 @@ export default function handleSupportedURL(payload) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -776,7 +776,7 @@ export default function handleSupportedURL(payload) {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -864,15 +864,15 @@ export default function handleSupportedURL(payload) {
               } else if (result.QUESTS === type) {
                 addPostConnectionCallback(() => {
                   if (null != payload.questId) {
-                    let obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
+                    let obj = payload(inviteCode[70]);
+                    obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
                     obj[0] = arr.questId;
                     obj[1] = closure_1_12.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT;
                     obj[2] = payload(inviteCode[71]).QuestContent.QUEST_EMBED_MOBILE;
                     obj = { referrer_id: null };
                     obj[0] = arr.referrerId;
                     obj[3] = obj;
-                    payload(inviteCode[70]).trackQuestEvent(obj);
-                    const obj3 = payload(inviteCode[70]);
+                    obj.trackQuestEvent(obj);
                   }
                   let sort;
                   if (payload != null) {
@@ -882,26 +882,25 @@ export default function handleSupportedURL(payload) {
                   if (payload != null) {
                     filter = arr.filter;
                   }
-                  obj = payload(inviteCode[72]);
                   obj1 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp3 = null;
+                  let tmp9 = null;
                   if (null != sort) {
-                    tmp3 = null;
+                    tmp9 = null;
                     if ("" !== sort) {
-                      tmp3 = sort;
+                      tmp9 = sort;
                     }
                   }
-                  obj1[1] = tmp3;
-                  let tmp4 = null;
+                  obj1[1] = tmp9;
+                  let tmp10 = null;
                   if (null != filter) {
-                    tmp4 = null;
+                    tmp10 = null;
                     if ("" !== filter) {
-                      tmp4 = filter;
+                      tmp10 = filter;
                     }
                   }
-                  obj1[2] = tmp4;
+                  obj1[2] = tmp10;
                   obj1[3] = payload(inviteCode[71]).QuestContent.QUEST_SHARE_LINK;
-                  obj.openQuestHome(obj1);
+                  payload(inviteCode[72]).openQuestHome(obj1);
                 });
                 flag = true;
               } else if (result.QUEST_HOME_PREVIEW === type) {

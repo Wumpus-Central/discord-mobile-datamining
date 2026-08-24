@@ -1,6 +1,6 @@
-// === Module 5819: metadata ===
+// === Module 5850: metadata ===
 
-// Module 5819 (metadata)
+// Module 5850 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel3Illocon-2x.png.js");

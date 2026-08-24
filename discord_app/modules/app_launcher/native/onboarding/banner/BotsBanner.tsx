@@ -1,9 +1,9 @@
-// === Module 11241: BotsBanner ===
+// === Module 11292: BotsBanner ===
 
-// Module 11241 (BotsBanner)
+// Module 11292 (BotsBanner)
 import noopAll from "noop" /* 19 */;
-import BannerBaseDefault from "BannerBase" /* 11237 */;
-import useBannerBots from "useBannerBots" /* 11242 */;
+import BannerBaseDefault from "BannerBase" /* 11288 */;
+import useBannerBots from "useBannerBots" /* 11293 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

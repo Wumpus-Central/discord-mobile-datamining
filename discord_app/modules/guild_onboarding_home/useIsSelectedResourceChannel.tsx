@@ -1,9 +1,9 @@
-// === Module 10548: useIsSelectedResourceChannel ===
+// === Module 10587: useIsSelectedResourceChannel ===
 
-// Module 10548 (useIsSelectedResourceChannel)
-import closure_3 from "handlePermissionsChange" /* 4970 */;
+// Module 10587 (useIsSelectedResourceChannel)
+import closure_3 from "handlePermissionsChange" /* 4975 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 
@@ -30,6 +30,6 @@ export default function useIsSelectedResourceChannel(arg0) {
   if (stateFromStores == null) {
     tmp2 = EMPTY_STRING_SNOWFLAKE_ID;
   }
-  const obj2 = _require(5283);
-  return null != stateFromStores && _require(5283).useCanSeeOnboardingHome(tmp2);
+  const obj2 = _require(5288);
+  return null != stateFromStores && _require(5288).useCanSeeOnboardingHome(tmp2);
 };

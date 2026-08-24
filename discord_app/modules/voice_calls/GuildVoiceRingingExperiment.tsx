@@ -1,9 +1,9 @@
-// === Module 4798: experiment ===
+// === Module 4803: experiment ===
 
-// Module 4798 (experiment)
+// Module 4803 (experiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4293 */;
+import createExperiment from "createExperiment" /* 4290 */;
 
 const items = [{ id: 1, label: "Allow users to ring each other in Guild Voice Channels", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2024-12_guild_voice_channel_ringing", label: "Guild Voice Ringing", defaultConfig: { enabled: false }, commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, treatments: items });

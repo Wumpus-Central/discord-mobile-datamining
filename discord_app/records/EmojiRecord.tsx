@@ -1,6 +1,6 @@
-// === Module 16784: prototype ===
+// === Module 16877: prototype ===
 
-// Module 16784 (prototype)
+// Module 16877 (prototype)
 import toJSDefault from "toJS" /* 1931 */;
 import closure_0 from "createdAt" /* 1930 */;
 

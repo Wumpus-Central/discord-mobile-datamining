@@ -1,10 +1,10 @@
-// === Module 6284: WumpusMahjongSpotIllustration ===
+// === Module 6315: WumpusMahjongSpotIllustration ===
 
-// Module 6284 (WumpusMahjongSpotIllustration)
+// Module 6315 (WumpusMahjongSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6285 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6316 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WumpusMahjongSpotIllustration.native.tsx");

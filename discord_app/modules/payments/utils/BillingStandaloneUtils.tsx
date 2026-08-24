@@ -1,6 +1,6 @@
-// === Module 7376: goToStandalonePremiumCheckout ===
+// === Module 7414: goToStandalonePremiumCheckout ===
 
-// Module 7376 (goToStandalonePremiumCheckout)
+// Module 7414 (goToStandalonePremiumCheckout)
 import set from "set" /* 2 */;
 import v1 from "v1" /* 514 */;
 import sendRequest from "sendRequest" /* 530 */;

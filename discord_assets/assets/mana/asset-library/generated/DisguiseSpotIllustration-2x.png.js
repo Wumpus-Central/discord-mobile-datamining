@@ -1,6 +1,6 @@
-// === Module 5657: metadata ===
+// === Module 5664: metadata ===
 
-// Module 5657 (metadata)
+// Module 5664 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisguiseSpotIllustration-2x.png.js");

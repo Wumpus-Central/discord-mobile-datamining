@@ -1,6 +1,6 @@
-// === Module 16833: HOLOGRAPHIC_ROLE_COLORS ===
+// === Module 16926: HOLOGRAPHIC_ROLE_COLORS ===
 
-// Module 16833 (HOLOGRAPHIC_ROLE_COLORS)
+// Module 16926 (HOLOGRAPHIC_ROLE_COLORS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/constants/EnhancedRoleColorConstants.tsx");

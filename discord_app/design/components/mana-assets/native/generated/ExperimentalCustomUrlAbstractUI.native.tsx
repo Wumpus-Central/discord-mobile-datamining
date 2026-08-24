@@ -1,10 +1,10 @@
-// === Module 5680: ExperimentalCustomUrlAbstractUI ===
+// === Module 5711: ExperimentalCustomUrlAbstractUI ===
 
-// Module 5680 (ExperimentalCustomUrlAbstractUI)
+// Module 5711 (ExperimentalCustomUrlAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5681 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5712 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalCustomUrlAbstractUI.native.tsx");

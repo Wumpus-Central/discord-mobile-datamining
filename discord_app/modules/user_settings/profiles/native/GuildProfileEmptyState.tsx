@@ -1,15 +1,15 @@
-// === Module 14069: GuildProfileEmptyState ===
+// === Module 14137: GuildProfileEmptyState ===
 
-// Module 14069 (GuildProfileEmptyState)
+// Module 14137 (GuildProfileEmptyState)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import SvgComponentDefault from "SvgComponent" /* 14070 */;
+import Text from "Text" /* 4739 */;
+import Button from "Button" /* 4750 */;
+import SvgComponentDefault from "SvgComponent" /* 14138 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -48,7 +48,7 @@ export default function GuildProfileEmptyState() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -80,7 +80,7 @@ export default function GuildProfileEmptyState() {
         } else {
           arg1.default.openCreateGuildModal();
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         v0 = tmp;
@@ -105,7 +105,7 @@ export default function GuildProfileEmptyState() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -137,7 +137,7 @@ export default function GuildProfileEmptyState() {
         } else {
           const result = arg1.default.openGuildJoinServerScreen();
           v0 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp8) {
         v0 = tmp;

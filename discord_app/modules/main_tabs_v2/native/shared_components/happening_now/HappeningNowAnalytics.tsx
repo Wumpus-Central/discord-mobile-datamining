@@ -1,6 +1,6 @@
-// === Module 15322: convertNullableArrayToItemAndItemIndex ===
+// === Module 15386: convertNullableArrayToItemAndItemIndex ===
 
-// Module 15322 (convertNullableArrayToItemAndItemIndex)
+// Module 15386 (convertNullableArrayToItemAndItemIndex)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;

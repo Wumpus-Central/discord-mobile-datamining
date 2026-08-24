@@ -1,17 +1,17 @@
-// === Module 11272: LearnMoreAboutAppsSection ===
+// === Module 11323: LearnMoreAboutAppsSection ===
 
-// Module 11272 (LearnMoreAboutAppsSection)
+// Module 11323 (LearnMoreAboutAppsSection)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11273 */;
+import Text from "Text" /* 4739 */;
+import PressableBase from "PressableBase" /* 5438 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9603 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11324 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -30,8 +30,8 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 export default function LearnMoreAboutAppsSection(visible) {
   const tmp = callback3();
   const callback = React.useCallback(() => {
-    const obj = callback(4090);
-    obj.openURL(callback(1993).getAppsSupportURL(constants.APPS_LEARN_MORE));
+    const obj = callback(4093);
+    obj.openURL(callback(1994).getAppsSupportURL(constants.APPS_LEARN_MORE));
   }, []);
   const intl = getSystemLocale.intl;
   const stringResult = intl.string(getSystemLocale.t["kw8/Ec"]);

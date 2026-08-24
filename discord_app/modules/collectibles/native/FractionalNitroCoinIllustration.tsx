@@ -1,8 +1,8 @@
-// === Module 9247: FRACTIONAL_NITRO_COIN_SIZE ===
+// === Module 9284: FRACTIONAL_NITRO_COIN_SIZE ===
 
-// Module 9247 (FRACTIONAL_NITRO_COIN_SIZE)
+// Module 9284 (FRACTIONAL_NITRO_COIN_SIZE)
 import noopAll from "noop" /* 19 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5452 */;
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
 

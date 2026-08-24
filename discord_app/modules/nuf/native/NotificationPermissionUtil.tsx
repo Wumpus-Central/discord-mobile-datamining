@@ -1,16 +1,16 @@
-// === Module 11583: _requestPushNotificationPermission ===
+// === Module 11632: _requestPushNotificationPermission ===
 
-// Module 11583 (_requestPushNotificationPermission)
+// Module 11632 (_requestPushNotificationPermission)
 import initialize from "initialize" /* 589 */;
-import set from "set" /* 11591 */;
+import set from "set" /* 11640 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "set" /* 11578 */;
-import { EventActionType } from "EventActionType" /* 11582 */;
+import closure_7 from "set" /* 11627 */;
+import { EventActionType } from "EventActionType" /* 11631 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus" /* 4839 */;
+import { NotificationAuthorizationStatus as closure_10 } from "NativePermissionStatus" /* 4844 */;
 
 require = arg1;
 function _requestPushNotificationPermission() {
@@ -33,7 +33,7 @@ function _requestPushNotificationPermission() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -69,7 +69,7 @@ function _requestPushNotificationPermission() {
           } else {
             closure_3 = arg1;
             if (closure_3 === constants3.DENIED) {
-              callback2(11581)();
+              callback2(11630)();
               obj2 = callback2(698);
               const obj3 = { action_type: null, action_location: null };
               obj3[0] = constants.TO_SETTINGS;
@@ -78,7 +78,7 @@ function _requestPushNotificationPermission() {
               dependencyMap();
               obj = 3;
             } else if (closure_3 !== constants3.AUTHORIZED) {
-              obj = callback2(11590);
+              obj = callback2(11639);
               const permission = obj.requestPermission((permission_granted) => {
                 let obj = callback(698);
                 obj = { action_type: closure_0, action_location: callback, permission_granted };
@@ -86,7 +86,7 @@ function _requestPushNotificationPermission() {
                 dependencyMap();
               });
             }
-            obj1 = callback(11584);
+            obj1 = callback(11633);
             const result = obj1.updateNotificationAuthorizationStatus(closure_3);
             dependencyMap();
           }
@@ -120,7 +120,7 @@ function _enableProvisionalPushNotification() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -173,7 +173,7 @@ function _enableProvisionalPushNotification() {
             });
           }
           c3 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -219,7 +219,7 @@ export const useShowReactivationPrompt = function useShowReactivationPrompt() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -255,7 +255,7 @@ export const useShowReactivationPrompt = function useShowReactivationPrompt() {
                 closure_1_0(true);
               }
               c2 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c2 = tmp;

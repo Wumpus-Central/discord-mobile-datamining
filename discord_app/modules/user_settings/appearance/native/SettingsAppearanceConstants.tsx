@@ -1,6 +1,6 @@
-// === Module 14618: THEME_ITEM_WIDTH ===
+// === Module 14686: THEME_ITEM_WIDTH ===
 
-// Module 14618 (THEME_ITEM_WIDTH)
+// Module 14686 (THEME_ITEM_WIDTH)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceConstants.tsx");

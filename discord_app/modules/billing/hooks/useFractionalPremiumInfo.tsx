@@ -1,14 +1,14 @@
-// === Module 5356: calculateFractionalPremiumInfo ===
+// === Module 5361: calculateFractionalPremiumInfo ===
 
-// Module 5356 (calculateFractionalPremiumInfo)
-import tDefault from "t" /* 3975 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4054 */;
+// Module 5361 (calculateFractionalPremiumInfo)
+import tDefault from "t" /* 3978 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4042 */;
+import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4057 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "reset" /* 4045 */;
-import closure_7 from "addEntitlement" /* 5357 */;
+import closure_6 from "reset" /* 4048 */;
+import closure_7 from "addEntitlement" /* 5362 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -74,17 +74,17 @@ function calculateFractionalPremiumInfo(isFetching) {
         obj2[0] = null != first;
         obj2[1] = tmp7;
         if (null != first) {
-          let tmp11 = tmp2(3975)(first.startsAt);
+          let tmp11 = tmp2(3978)(first.startsAt);
         } else {
-          tmp11 = tmp2(3975)(0);
+          tmp11 = tmp2(3978)(0);
         }
         obj2[2] = tmp11;
         if (null != first) {
           const obj4 = getPremiumPlanItem;
-          let tmp2ResultResult = tmp2(3975)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
-          const tmp2Result = tmp2(3975);
+          let tmp2ResultResult = tmp2(3978)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
+          const tmp2Result = tmp2(3978);
         } else {
-          tmp2ResultResult = tmp2(3975)(0);
+          tmp2ResultResult = tmp2(3978)(0);
         }
         obj2[3] = tmp2ResultResult;
         let str = "";
@@ -93,9 +93,9 @@ function calculateFractionalPremiumInfo(isFetching) {
         }
         obj2[4] = str;
         if (null != first) {
-          let tmp18 = tmp2(3975)(first.endsAt);
+          let tmp18 = tmp2(3978)(first.endsAt);
         } else {
-          tmp18 = tmp2(3975)(0);
+          tmp18 = tmp2(3978)(0);
         }
         obj2[5] = tmp18;
         obj2[6] = unactivatedFractionalPremiumUnits;

@@ -1,11 +1,11 @@
-// === Module 10715: fetchBountiesAndDispatch ===
+// === Module 10754: fetchBountiesAndDispatch ===
 
-// Module 10715 (fetchBountiesAndDispatch)
+// Module 10754 (fetchBountiesAndDispatch)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7473 */;
+import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7511 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionInfoChange" /* 4564 */;
-import closure_5 from "set" /* 7452 */;
+import closure_4 from "handleConnectionInfoChange" /* 4569 */;
+import closure_5 from "set" /* 7490 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -113,7 +113,7 @@ function _fetchQuestHomeBounties() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -133,9 +133,9 @@ function _fetchQuestHomeBounties() {
               obj1 = { value: null, done: false };
               obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
                 let uuid = tmp2;
-                let obj5 = closure_1_0(5054);
+                let obj5 = closure_1_0(5059);
                 uuid = yield obj5.getSession();
-                const uuid2 = closure_1_0(7473).getOrRefreshAdSession();
+                const uuid2 = closure_1_0(7511).getOrRefreshAdSession();
                 const HTTP = closure_1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
                 obj3[0] = closure_1_6.QUESTS_GET_DECISIONS;
@@ -165,7 +165,7 @@ function _fetchQuestHomeBounties() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c1 = tmp;
           throw tmp9;
@@ -201,7 +201,7 @@ function _fetchBountyPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -251,7 +251,7 @@ function _fetchBountyPreview() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp10) {
           c2 = tmp;
           throw tmp10;
@@ -288,7 +288,7 @@ function _claimBountyReward() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

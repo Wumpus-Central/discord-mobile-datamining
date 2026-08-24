@@ -1,16 +1,16 @@
-// === Module 7149: GameIcon ===
+// === Module 7187: GameIcon ===
 
-// Module 7149 (GameIcon)
+// Module 7187 (GameIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 7150 */;
-import registerAssetDefault2 from "registerAsset" /* 7151 */;
-import registerAssetDefault3 from "registerAsset" /* 7152 */;
-import registerAssetDefault4 from "registerAsset" /* 7153 */;
+import registerAssetDefault from "registerAsset" /* 7188 */;
+import registerAssetDefault2 from "registerAsset" /* 7189 */;
+import registerAssetDefault3 from "registerAsset" /* 7190 */;
+import registerAssetDefault4 from "registerAsset" /* 7191 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 class GameIcon {
   constructor(arg0) {

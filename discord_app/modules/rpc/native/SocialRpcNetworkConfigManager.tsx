@@ -1,13 +1,13 @@
-// === Module 17042: updateSocialRpcNetworkConfig ===
+// === Module 17135: updateSocialRpcNetworkConfig ===
 
-// Module 17042 (updateSocialRpcNetworkConfig)
+// Module 17135 (updateSocialRpcNetworkConfig)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;
 import sendRequest from "sendRequest" /* 530 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5038 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
+import initializeDefault from "initialize" /* 5043 */;
+import closure_4 from "_getSystemLocale" /* 1995 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 
 function updateSocialRpcNetworkConfig() {

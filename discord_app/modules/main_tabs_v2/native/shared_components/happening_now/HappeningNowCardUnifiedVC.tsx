@@ -1,13 +1,13 @@
-// === Module 15335: HappeningNowCardUnifiedVC ===
+// === Module 15399: HappeningNowCardUnifiedVC ===
 
-// Module 15335 (HappeningNowCardUnifiedVC)
+// Module 15399 (HappeningNowCardUnifiedVC)
 import noopAll from "noop" /* 19 */;
-import IconOrPreviewDefault from "IconOrPreview" /* 15336 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15348 */;
-import formatVoiceActivityTitleDefault from "formatVoiceActivityTitle" /* 15349 */;
+import IconOrPreviewDefault from "IconOrPreview" /* 15400 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15412 */;
+import formatVoiceActivityTitleDefault from "formatVoiceActivityTitle" /* 15413 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "reset" /* 4658 */;
+import closure_5 from "markAllUserIdListsStale" /* 4033 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

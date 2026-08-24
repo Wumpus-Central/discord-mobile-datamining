@@ -1,10 +1,10 @@
-// === Module 5514: AvatarDefaultExample ===
+// === Module 5519: AvatarDefaultExample ===
 
-// Module 5514 (AvatarDefaultExample)
+// Module 5519 (AvatarDefaultExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5515 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5520 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarDefaultExample.native.tsx");

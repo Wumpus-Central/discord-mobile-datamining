@@ -1,6 +1,6 @@
-// === Module 5007: isStable ===
+// === Module 5012: isStable ===
 
-// Module 5007 (isStable)
+// Module 5012 (isStable)
 import getConstantsAll from "getConstants" /* 1626 */;
 import set from "set" /* 500 */;
 

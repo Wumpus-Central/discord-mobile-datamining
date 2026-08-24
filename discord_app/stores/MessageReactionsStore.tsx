@@ -1,10 +1,10 @@
-// === Module 7509: reactionKey ===
+// === Module 7547: reactionKey ===
 
-// Module 7509 (reactionKey)
+// Module 7547 (reactionKey)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import checkReactionResponseAll from "checkReactionResponse" /* 7511 */;
-import closure_2 from "initialize" /* 4022 */;
+import checkReactionResponseAll from "checkReactionResponse" /* 7549 */;
+import closure_2 from "initialize" /* 4025 */;
 import closure_3 from "createdAt" /* 1930 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
@@ -39,12 +39,12 @@ prototype = function Reaction() {
   obj.users = new Map();
   return obj;
 }.prototype;
-prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
-  ({ name, id } = emoji);
+prototype["ensure"] = function ensure(arg0, arg1, arg2) {
+  ({ name, id } = arg1);
   if (id == null) {
     id = "";
   }
-  const combined = "" + messageId + ":" + name + ":" + id + ":" + reactionType;
+  const combined = "" + arg0 + ":" + name + ":" + id + ":" + arg2;
   let tmp3 = dependencyMap[combined];
   if (tmp3 == null) {
     if (typeof prototype !== "function") {

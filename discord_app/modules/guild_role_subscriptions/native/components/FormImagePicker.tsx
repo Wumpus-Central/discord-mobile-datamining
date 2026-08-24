@@ -1,14 +1,14 @@
-// === Module 16951: pickImage ===
+// === Module 17044: pickImage ===
 
-// Module 16951 (pickImage)
+// Module 17044 (pickImage)
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5449 */;
-import renderDefault from "render" /* 8910 */;
+import preloadDefault from "preload" /* 5454 */;
+import renderDefault from "render" /* 8947 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function pickImage() {
@@ -40,7 +40,7 @@ function _pickImage() {
           obj[0] = base64;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -83,7 +83,7 @@ function _pickImage() {
               callback(obj);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c4 = tmp;
@@ -235,8 +235,8 @@ export default function FormImagePicker(children) {
   obj = { style: tmp2.buttonColumn, children: null };
   obj = { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description };
   const items = [
-    callback2(tmp6(4734).Text, obj),
-    callback2(tmp6(4745).Button, {
+    callback2(tmp6(4739).Text, obj),
+    callback2(tmp6(4750).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

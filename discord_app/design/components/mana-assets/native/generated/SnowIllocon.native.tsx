@@ -1,10 +1,10 @@
-// === Module 6166: SnowIllocon ===
+// === Module 6197: SnowIllocon ===
 
-// Module 6166 (SnowIllocon)
+// Module 6197 (SnowIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6167 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6198 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/SnowIllocon.native.tsx");

@@ -1,34 +1,34 @@
-// === Module 10754: PlatformIcon ===
+// === Module 10793: PlatformIcon ===
 
-// Module 10754 (PlatformIcon)
+// Module 10793 (PlatformIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import Text from "Text" /* 4734 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import officialApplicationIds2 from "officialApplicationIds" /* 5224 */;
-import getChannelIcon from "getChannelIcon" /* 6832 */;
+import useThemeDefault from "useTheme" /* 4314 */;
+import Text from "Text" /* 4739 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4766 */;
+import computeChannelNameDefault from "computeChannelName" /* 4989 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5102 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5229 */;
+import getChannelIcon from "getChannelIcon" /* 6870 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "recomputeFromAppTokens" /* 5289 */;
-import closure_10 from "_getSystemLocale" /* 1994 */;
+import closure_9 from "recomputeFromAppTokens" /* 5294 */;
+import closure_10 from "_getSystemLocale" /* 1995 */;
 import closure_11 from "createdAt" /* 1930 */;
 import closure_12 from "fetchFingerprint" /* 1218 */;
 import closure_13 from "ensureGuildLoaded" /* 1391 */;
-import closure_14 from "set" /* 5221 */;
-import closure_15 from "trackCommunicationDisabled" /* 1990 */;
-import closure_16 from "getUncachedChannelPermissions" /* 4021 */;
-import OperatorTypes from "OperatorTypes" /* 5225 */;
+import closure_14 from "set" /* 5226 */;
+import closure_15 from "trackCommunicationDisabled" /* 1991 */;
+import closure_16 from "getUncachedChannelPermissions" /* 4024 */;
+import OperatorTypes from "OperatorTypes" /* 5230 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PlatformIcon(platformType) {
@@ -287,7 +287,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj3[3] = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj4 = { style: null, user: null, size: null, guildId: "Array" };
+      const obj4 = { style: null, user: null, size: null, guildId: "ct" };
       obj4[0] = tmp.appIcon;
       obj4[1] = memo;
       obj4[2] = tmp2(tmp3[21]).AvatarSizes.XSMALL;
@@ -409,7 +409,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = callback(React.useState(0), 2);
-  closure_16 = eligibilityStatesGroups(4097).useToken(ThemesDefault.unsafe_rawColors.GREEN_330);
+  closure_16 = eligibilityStatesGroups(4100).useToken(ThemesDefault.unsafe_rawColors.GREEN_330);
   obj = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -604,7 +604,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result1;
     let tmp24Result2 = null;
     if (null != tmp11) {
-      const obj10 = { style: null, user: null, size: null, guildId: "Array" };
+      const obj10 = { style: null, user: null, size: null, guildId: "ct" };
       obj10[0] = tmp38.appIcon;
       obj10[1] = tmp11;
       obj10[2] = tmp15(tmp6[21]).AvatarSizes.XSMALL;
@@ -697,7 +697,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(closure_0);
       closure_1_1(closure_1_2[40]).setFriendSync(account.type, account.id, closure_0);
     };
-    tmp12 = callback2(account(8083).FormSwitchRow, obj);
+    tmp12 = callback2(account(8122).FormSwitchRow, obj);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -711,7 +711,7 @@ function ConnectedUserAccountOptions(account) {
       callback3(closure_0);
       closure_1_1(closure_1_2[40]).setShowActivity(account.type, account.id, closure_0);
     };
-    tmp15 = callback2(account(8083).FormSwitchRow, obj);
+    tmp15 = callback2(account(8122).FormSwitchRow, obj);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -730,7 +730,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = closure_1_1(closure_1_2[40]).setMetadataVisibility(type, id, num);
     };
-    tmp18 = callback2(account(8083).FormSwitchRow, obj2);
+    tmp18 = callback2(account(8122).FormSwitchRow, obj2);
   }
   const obj3 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj4 = { label: null, value: null, onValueChange: null };
@@ -747,7 +747,7 @@ function ConnectedUserAccountOptions(account) {
     }
     closure_1_1(closure_1_2[40]).setVisibility(type, id, num);
   };
-  const items = [callback2(account(8083).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
+  const items = [callback2(account(8122).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3[1] = items;
   return callback3(closure_8, obj3);
 }
@@ -837,7 +837,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -870,7 +870,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp11) {
             c0 = tmp;

@@ -1,13 +1,13 @@
-// === Module 11091: AppealIngestionRequestSent ===
+// === Module 11130: AppealIngestionRequestSent ===
 
-// Module 11091 (AppealIngestionRequestSent)
+// Module 11130 (AppealIngestionRequestSent)
 import noopAll from "noop" /* 19 */;
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11086 */;
-import registerAssetDefault from "registerAsset" /* 11092 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11125 */;
+import registerAssetDefault from "registerAsset" /* 11131 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import SafetyHubView from "SafetyHubView" /* 5438 */;
+import SafetyHubView from "SafetyHubView" /* 5443 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -18,7 +18,7 @@ let closure_9 = createCacheKey.createStyles({ container: { flex: 1, padding: 8 }
 const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
 
 export default function AppealIngestionRequestSent() {
-  let obj = _require(11083);
+  let obj = _require(11122);
   _require = obj.useEmitAppealIngestionEvent();
   const tmp = callback3();
   const intl = _require(1236).intl;
@@ -27,11 +27,11 @@ export default function AppealIngestionRequestSent() {
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(_require(1236).t.Qdx8AP);
-  const items = [callback(closure_4, { source: registerAssetDefault, style: tmp.checkboxPng }), callback(_require(11081).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const items = [callback(closure_4, { source: registerAssetDefault, style: tmp.checkboxPng }), callback(_require(11120).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = _require(1236).intl;
   obj2[3] = intl3.string(_require(1236).t["9BRc1N"]);
-  items[2] = callback(_require(4734).Text, obj2);
+  items[2] = callback(_require(4739).Text, obj2);
   const obj3 = { text: null, url: null, onPress: null };
   obj1 = { source: registerAssetDefault, style: tmp.checkboxPng };
   const intl4 = _require(1236).intl;
@@ -52,5 +52,5 @@ export default function AppealIngestionRequestSent() {
   items[4] = callback(AppealIngestionExternalLinkDefault, obj4);
   obj[1] = items;
   obj[0] = callback2(closure_3, obj);
-  return callback(_require(11081).AppealIngestionModalScreen, obj);
+  return callback(_require(11120).AppealIngestionModalScreen, obj);
 };

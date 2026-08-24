@@ -1,8 +1,8 @@
-// === Module 4179: ExpressiveButtonRive ===
+// === Module 4183: ExpressiveButtonRive ===
 
-// Module 4179 (ExpressiveButtonRive)
-import BaseRive from "BaseRive" /* 4109 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
+// Module 4183 (ExpressiveButtonRive)
+import BaseRive from "BaseRive" /* 4113 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4168 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -24,7 +24,7 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = tmp(4113);
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -34,7 +34,7 @@ let closure_9 = {
       posx1 = onDataBindingChange.posx;
     }
     const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = tmp(4113);
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -77,7 +77,7 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = tmp(4113);
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -87,7 +87,7 @@ let closure_9 = {
       posx1 = onDataBindingChange.posx;
     }
     const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = tmp(4113);
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -130,7 +130,7 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = tmp(4113);
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -140,7 +140,7 @@ let closure_9 = {
       posx1 = onDataBindingChange.posx;
     }
     const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = tmp(4113);
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;
@@ -183,7 +183,7 @@ let closure_9 = {
       posy1 = onDataBindingChange.posy;
     }
     const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = tmp(4113);
     let posx;
     if (dataBinding != null) {
       posx = dataBinding.posx;
@@ -193,7 +193,7 @@ let closure_9 = {
       posx1 = onDataBindingChange.posx;
     }
     const numberBinding1 = tmpResult.useNumberBinding("posx", instance, posx, posx1, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = tmp(4113);
     let buttonColor;
     if (dataBinding != null) {
       buttonColor = dataBinding.buttonColor;

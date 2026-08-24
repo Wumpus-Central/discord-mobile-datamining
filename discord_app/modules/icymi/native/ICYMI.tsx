@@ -1,36 +1,36 @@
-// === Module 15706: SettingsButton ===
+// === Module 15775: SettingsButton ===
 
-// Module 15706 (SettingsButton)
+// Module 15775 (SettingsButton)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4194 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
-import PressableBase from "PressableBase" /* 5433 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7925 */;
-import IconButton from "IconButton" /* 8035 */;
-import generateHydrationId from "generateHydrationId" /* 9056 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14356 */;
-import goBack from "goBack" /* 15657 */;
-import IconWithBadge from "IconWithBadge" /* 15659 */;
-import jsxDefault from "jsx" /* 15778 */;
+import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4198 */;
+import getGuildThemeNameDefault from "getGuildThemeName" /* 4229 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4334 */;
+import PressableBase from "PressableBase" /* 5438 */;
+import XSmallIcon from "XSmallIcon" /* 6399 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6840 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7964 */;
+import IconButton from "IconButton" /* 8074 */;
+import generateHydrationId from "generateHydrationId" /* 9093 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 9128 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14424 */;
+import goBack from "goBack" /* 15726 */;
+import IconWithBadge from "IconWithBadge" /* 15728 */;
+import jsxDefault from "jsx" /* 15847 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "initialize" /* 9054 */;
-import closure_11 from "filterStaffGuild" /* 9044 */;
-import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 15707 */;
+import closure_10 from "initialize" /* 9091 */;
+import closure_11 from "filterStaffGuild" /* 9081 */;
+import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 15776 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import createICYMIStyles from "createICYMIStyles" /* 15708 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import createICYMIStyles from "createICYMIStyles" /* 15777 */;
 
 require = arg1;
 function SettingsButton() {
@@ -55,11 +55,11 @@ function InfoButton() {
     size: "sm",
     icon: callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" }),
     onPress() {
-      callback2(9057).itemInteracted("info_button", "info_button", "press_info_button");
-      const obj = callback2(9057);
-      callback2(9057).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
-      const obj2 = callback2(9057);
-      callback(15721).pushICYMIInfoModal({ extendedOnboarding: true });
+      callback2(9094).itemInteracted("info_button", "info_button", "press_info_button");
+      const obj = callback2(9094);
+      callback2(9094).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
+      const obj2 = callback2(9094);
+      callback(15790).pushICYMIInfoModal({ extendedOnboarding: true });
     }
   });
 }
@@ -72,11 +72,11 @@ function ICYMIHeaderTextWrapper() {
       obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
       const intl = callback(1236).intl;
       obj[4] = intl.string(callback(1236).t.SY4sdZ);
-      const items = [callback2(callback(4734).Text, obj), ];
+      const items = [callback2(callback(4739).Text, obj), ];
       obj = { color: "text-brand", variant: "text-xs/bold", style: { marginTop: 4 }, children: null };
       const intl2 = callback(1236).intl;
       obj[3] = intl2.string(callback(1236).t.Ac2OZA);
-      items[1] = callback2(callback(4734).Text, obj);
+      items[1] = callback2(callback(4739).Text, obj);
       obj[0] = items;
       return callback3(closure_15, obj);
     }, [])
@@ -186,7 +186,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       obj = { scrollToTop: null };
       obj[0] = function scrollToTop() {
-        callback(8488).showForLaterModal(callback(8489).SavedMessageSortTypes.BOOKMARK);
+        callback(8527).showForLaterModal(callback(8528).SavedMessageSortTypes.BOOKMARK);
       };
       ref1.current = obj;
     }
@@ -447,9 +447,9 @@ export const ICYMITab = function ICYMITab(route) {
   const items2 = [closure_14(getMixedGradientColorDefault, { absolute: true }), ];
   const tmp14 = closure_16;
   const tmpResult = jsxDefault;
-  items2[1] = closure_14(_require(4104).ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
+  items2[1] = closure_14(_require(4107).ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
   obj3.children = items2;
   obj2[0] = tmp14(tmp11, obj3);
-  obj1[0] = closure_14(_require(15709).ICYMIContextProvider, obj2);
+  obj1[0] = closure_14(_require(15778).ICYMIContextProvider, obj2);
   return closure_14(tmpResult, obj1);
 };

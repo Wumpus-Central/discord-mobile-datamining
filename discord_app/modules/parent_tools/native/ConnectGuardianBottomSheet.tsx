@@ -1,20 +1,20 @@
-// === Module 14236: ConnectGuardianBottomSheet ===
+// === Module 14304: ConnectGuardianBottomSheet ===
 
-// Module 14236 (ConnectGuardianBottomSheet)
+// Module 14304 (ConnectGuardianBottomSheet)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import Text from "Text" /* 4734 */;
-import Button from "Button" /* 4745 */;
-import Background from "Background" /* 6950 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14237 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 14238 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import Text from "Text" /* 4739 */;
+import Button from "Button" /* 4750 */;
+import Background from "Background" /* 6988 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14305 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 14306 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
-import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "items" /* 5297 */;
+import closure_5 from "freshTeenActivityWithMap" /* 5301 */;
+import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_6 } from "items" /* 5302 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -47,14 +47,14 @@ export default function ConnectGuardianBottomSheet(arg0) {
   obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   if (title == null) {
     const intl = tmp2(1236).intl;
-    title = intl.string(tmp7(2335).aCUVfL);
+    title = intl.string(tmp7(2336).aCUVfL);
   }
   obj1[4] = title;
   const items2 = [closure_7(Text.Text, obj1), ];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = tmp2(1236).intl;
-    body = intl2.format(tmp7(2335)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+    body = intl2.format(tmp7(2336)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj2[3] = body;
   items2[1] = closure_7(Text.Text, obj2);

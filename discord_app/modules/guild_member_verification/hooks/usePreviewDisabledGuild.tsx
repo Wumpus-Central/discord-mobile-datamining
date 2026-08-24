@@ -1,9 +1,9 @@
-// === Module 8528: usePreviewDisabledGuild ===
+// === Module 8567: usePreviewDisabledGuild ===
 
-// Module 8528 (usePreviewDisabledGuild)
+// Module 8567 (usePreviewDisabledGuild)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "get" /* 6801 */;
+import closure_5 from "get" /* 6838 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");

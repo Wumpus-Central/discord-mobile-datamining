@@ -1,11 +1,11 @@
-// === Module 7208: getOrbPriceFromPrices ===
+// === Module 7246: getOrbPriceFromPrices ===
 
-// Module 7208 (getOrbPriceFromPrices)
+// Module 7246 (getOrbPriceFromPrices)
 import set from "set" /* 2 */;
 import items2 from "items" /* 678 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import ConstraintReasonCode2 from "ConstraintReasonCode" /* 7209 */;
-import _signOrder from "_signOrder" /* 7210 */;
+import ConstraintReasonCode2 from "ConstraintReasonCode" /* 7247 */;
+import _signOrder from "_signOrder" /* 7248 */;
 import ME from "ME" /* 676 */;
 
 ({ CurrencyCodes: obj1, MarketingURLs: c3, PriceSetAssignmentPurchaseTypes: c4 } = ME);
@@ -64,16 +64,16 @@ export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMe
     let keFvXM = dependencyMap;
     let OrderSigningFailedWithConstraintsError = _signOrder.OrderSigningFailedWithConstraintsError;
     if (!(code instanceof OrderSigningFailedWithConstraintsError)) {
-      if (code instanceof tmp(7210).OrderProcessingPendingError) {
+      if (code instanceof tmp(7248).OrderProcessingPendingError) {
         const intl5 = tmp(1236).intl;
         let stringResult = intl5.string(tmp(1236).t["2BmwgV"]);
-      } else if (code.code === tmp(4061).ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
+      } else if (code.code === tmp(4064).ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
         const intl4 = tmp(1236).intl;
         stringResult = intl4.string(tmp(1236).t.keFvXM);
-      } else if (code.code === tmp(4061).ErrorCodes.ALREADY_PURCHASED) {
+      } else if (code.code === tmp(4064).ErrorCodes.ALREADY_PURCHASED) {
         const intl3 = tmp(1236).intl;
         stringResult = intl3.string(tmp(1236).t.m371Mx);
-      } else if (code.code === tmp(4061).ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
+      } else if (code.code === tmp(4064).ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
         const intl2 = tmp(1236).intl;
         stringResult = intl2.string(tmp(1236).t.ZHgEG7);
       } else {

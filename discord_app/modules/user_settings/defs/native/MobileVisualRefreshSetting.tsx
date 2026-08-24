@@ -1,13 +1,13 @@
-// === Module 14672: toggle ===
+// === Module 14740: toggle ===
 
-// Module 14672 (toggle)
+// Module 14740 (toggle)
 import initialize from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import closure_3 from "initialize" /* 1212 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import createToggle from "createToggle" /* 10669 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;

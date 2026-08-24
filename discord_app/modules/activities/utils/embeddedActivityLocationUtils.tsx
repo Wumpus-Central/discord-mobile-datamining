@@ -1,6 +1,6 @@
-// === Module 4011: getEmbeddedActivityLocationChannelId ===
+// === Module 4014: getEmbeddedActivityLocationChannelId ===
 
-// Module 4011 (getEmbeddedActivityLocationChannelId)
+// Module 4014 (getEmbeddedActivityLocationChannelId)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");

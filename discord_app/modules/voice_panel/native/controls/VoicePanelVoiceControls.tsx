@@ -1,36 +1,56 @@
-// === Module 16422: NOOP ===
+// === Module 16517: VideoGuardNotice ===
 
-// Module 16422 (NOOP)
+// Module 16517 (VideoGuardNotice)
 import ThemesDefault from "Themes" /* 712 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11130 */;
-import dismissPanelDefault from "dismissPanel" /* 11439 */;
-import apexExperimentDefault from "apexExperiment" /* 12136 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 12673 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16256 */;
-import apexExperimentDefault2 from "apexExperiment" /* 16418 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import Stack from "Stack" /* 4738 */;
+import Text from "Text" /* 4739 */;
+import setDefault from "set" /* 7228 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11169 */;
+import dismissPanelDefault from "dismissPanel" /* 11488 */;
+import apexExperimentDefault from "apexExperiment" /* 12188 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 12727 */;
+import VIDEO_GUARD_BLOG_POST_URL from "VIDEO_GUARD_BLOG_POST_URL" /* 13162 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16353 */;
+import apexExperimentDefault2 from "apexExperiment" /* 16414 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 11438 */;
+import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 11487 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import importDefaultResult from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import importDefaultResult from "module_4119" /* 4119 */;
 
 require = arg1;
+function VideoGuardNotice() {
+  let obj = { style: callback3().videoGuardNotice, children: null };
+  const tmp = callback3();
+  obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.UoW002), " ", ];
+  const intl2 = getSystemLocale.intl;
+  obj = { helpdeskArticle: VIDEO_GUARD_BLOG_POST_URL.VIDEO_GUARD_BLOG_POST_URL };
+  items[2] = intl2.format(getSystemLocale.t.BPDKoA, obj);
+  obj[2] = items;
+  obj[1] = callback(Text.Text, obj);
+  return callback2(setDefault, obj);
+}
 function NOOP() {
 
 }
 let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null };
+({ jsxs: c5, jsx: closure_6, Fragment: error } = jsxProd);
+let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null, videoGuardNotice: null };
 obj = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 obj[1] = createCacheKey;
 obj[2] = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+obj[3] = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
-let closure_10 = importAllResult.memo((arg0) => {
+let obj2 = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_10 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
+let closure_11 = importAllResult.memo((arg0) => {
   ({ channel, openTab } = arg0);
   const channelId = importAllResult.useContext(dismissPanelDefault).channelId;
   const tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
@@ -42,122 +62,131 @@ let closure_10 = importAllResult.memo((arg0) => {
   const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
   let obj2 = apexExperimentDefault;
   let nonContextualStreamOutputPresent = obj2.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
+  const VideoGuardExperiment = VIDEO_GUARD_BLOG_POST_URL.VideoGuardExperiment;
   const tmp6 = useSelectedActiveStreamDefault(channel);
+  let tmp8 = tmp2;
+  if (tmp2) {
+    tmp8 = !VideoGuardExperiment.useConfig({ location: "VoicePanelVoiceControls" }).videoEnabled;
+  }
+  if (tmp8) {
+    tmp8 = callback2(VideoGuardNotice, {});
+  }
+  const items = [tmp8, , , , , , , ];
   if (!tmp2) {
-    const items = [tmp2, , , , , , ];
+    items[1] = tmp2;
     obj = { channel: null, connected: null };
     obj[0] = channel;
     obj[1] = tmp2;
-    items[1] = callback(tmp3(16423).GameConsoles, obj);
+    items[2] = callback2(tmp3(16518).GameConsoles, obj);
     if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = tmp12(tmp3(16423).StreamVolumeItem, {});
+      nonContextualStreamOutputPresent = tmp14(tmp3(16518).StreamVolumeItem, {});
     }
-    items[2] = nonContextualStreamOutputPresent;
+    items[3] = nonContextualStreamOutputPresent;
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1236).intl;
     obj[0] = intl.string(tmp3(1236).t.NiTd0e);
-    const items1 = [callback(tmp3(16423).DeafenSwitch, {}), , , , ];
+    const items1 = [callback2(tmp3(16518).DeafenSwitch, {}), , , , ];
     obj1 = { channel: null, connected: null };
     obj1[0] = channel;
     obj1[1] = tmp2;
-    items1[1] = callback(tmp3(16423).AudioRouteButton, obj1);
+    items1[1] = callback2(tmp3(16518).AudioRouteButton, obj1);
     obj2 = { channelId: null };
     obj2[0] = channelId;
-    items1[2] = callback(tmp3(16423).HideNonVideoParticipants, obj2);
-    items1[3] = callback(tmp3(16423).HideSelfVideo, {});
-    let tmp12Result = tmp2;
+    items1[2] = callback2(tmp3(16518).HideNonVideoParticipants, obj2);
+    items1[3] = callback2(tmp3(16518).HideSelfVideo, {});
+    let tmp14Result = tmp2;
     if (tmp2) {
       const obj3 = { channel: null, connected: null };
       obj3[0] = channel;
       obj3[1] = tmp2;
-      tmp12Result = tmp12(tmp3(16423).InviteButton, obj3);
+      tmp14Result = tmp14(tmp3(16518).InviteButton, obj3);
     }
-    items1[4] = tmp12Result;
+    items1[4] = tmp14Result;
     obj[2] = items1;
-    items[3] = tmp7(tmp3(6286).TableRowGroup, obj);
-    items[4] = callback(tmp3(12556).VoiceProcessingOptions, {});
+    items[4] = tmp7(tmp3(6317).TableRowGroup, obj);
+    items[5] = callback2(tmp3(12610).VoiceProcessingOptions, {});
     const obj4 = { guildId: null };
     obj4[0] = channel.guild_id;
-    const items2 = [callback(tmp3(16423).VoiceSettingsButton, obj4), ];
-    tmp12Result = null != tmp6;
-    if (tmp12Result) {
+    const items2 = [callback2(tmp3(16518).VoiceSettingsButton, obj4), ];
+    tmp14Result = null != tmp6;
+    if (tmp14Result) {
       const obj5 = { stream: null };
       obj5[0] = tmp6;
-      tmp12Result = tmp12(tmp3(16423).ReportStreamIssueButton, obj5);
+      tmp14Result = tmp14(tmp3(16518).ReportStreamIssueButton, obj5);
     }
     const obj6 = { hasIcons: true, children: null };
-    items2[1] = tmp12Result;
+    items2[1] = tmp14Result;
     obj6[1] = items2;
-    items[5] = tmp7(tmp3(6286).TableRowGroup, obj6);
+    items[6] = tmp7(tmp3(6317).TableRowGroup, obj6);
     let tmp7Result = null;
     if (tmp2) {
       tmp7Result = null;
       if (setting) {
         tmp7Result = null;
-        if (embeddedActivityLaunchability === tmp3(11130).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+        if (embeddedActivityLaunchability === tmp3(11169).EmbeddedActivityLaunchability.CAN_LAUNCH) {
           const obj7 = { title: null, hasIcons: true, children: null };
           const intl2 = tmp3(1236).intl;
           obj7[0] = intl2.string(tmp3(1236).t.J6rqB7);
-          const items3 = [tmp12(tmp3(16423).LeaveActivitiesButton, {}), tmp12(tmp3(16423).ShareActivityLogsButton, {}), tmp12(tmp3(16423).ToggleShowActivitiesDebugOverlay, {})];
+          const items3 = [tmp14(tmp3(16518).LeaveActivitiesButton, {}), tmp14(tmp3(16518).ShareActivityLogsButton, {}), tmp14(tmp3(16518).ToggleShowActivitiesDebugOverlay, {})];
           obj7[2] = items3;
-          tmp7Result = tmp7(tmp3(6286).TableRowGroup, obj7);
+          tmp7Result = tmp7(tmp3(6317).TableRowGroup, obj7);
         }
       }
     }
     const obj8 = { spacing: 24, children: null };
-    items[6] = tmp7Result;
+    items[7] = tmp7Result;
     obj8[1] = items;
-    return tmp7(tmp8, obj8);
+    return tmp7(Stack.Stack, obj8);
   } else {
     const obj9 = { openTab: null };
     obj9[0] = openTab;
-    const items4 = [callback(tmp3(16423).ActivitiesButton, obj9), ];
-    if (tmp3(16418).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
+    const items4 = [callback2(tmp3(16518).ActivitiesButton, obj9), ];
+    if (tmp3(16414).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj10 = { openTab: null };
       obj10[0] = openTab;
-      let tmp9Result = tmp9(tmp3(16423).ChatButton, obj10);
+      let tmp11Result = tmp11(tmp3(16518).ChatButton, obj10);
       const obj11 = { hasIcons: true, children: null };
-      items4[1] = tmp9Result;
+      items4[1] = tmp11Result;
       obj11[1] = items4;
-      tmp7Result = tmp7(tmp3(6286).TableRowGroup, obj11);
-    } else if (tmp3(16418).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
+      tmp7Result = tmp7(tmp3(6317).TableRowGroup, obj11);
+    } else if (tmp3(16414).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
       const obj12 = { channel: null };
       obj12[0] = channel;
-      tmp9Result = tmp9(tmp3(16423).ScreenshareButton, obj12);
+      tmp11Result = tmp11(tmp3(16518).ScreenshareButton, obj12);
     }
     const obj13 = { channel: null };
     obj13[0] = channel;
-    tmp9Result = tmp9(tmp3(16423).SoundboardButton, obj13);
+    tmp11Result = tmp11(tmp3(16518).SoundboardButton, obj13);
   }
 });
-let closure_12 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
-let closure_13 = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
+let closure_13 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+let closure_14 = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
 const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisible) {
   isVisible = isVisible.isVisible;
   let channelId;
   let sharedValue;
   let gestureRef;
   let scrollerRef;
-  let tmp = callback2();
-  channelId = gestureRef.useContext(channelId(sharedValue[8])).channelId;
-  let obj = isVisible(sharedValue[20]);
+  let tmp = callback3();
+  channelId = gestureRef.useContext(channelId(sharedValue[12])).channelId;
+  let obj = isVisible(sharedValue[23]);
   const items = [scrollerRef];
   const stateFromStores = obj.useStateFromStores(items, () => scrollerRef.getChannel(channelId));
-  obj1 = isVisible(sharedValue[7]);
+  obj1 = isVisible(sharedValue[11]);
   sharedValue = obj1.useSharedValue(false);
-  const fn = function s(offset) {
+  const fn = function c(offset) {
     const result = sharedValue.set(offset.offset > 0);
   };
   fn.__closure = { isScrolled: sharedValue };
   fn.__workletHash = 16758626276795;
-  fn.__initData = closure_13;
+  fn.__initData = closure_14;
   const items1 = [sharedValue];
   const callback = gestureRef.useCallback(fn, items1);
-  const tmp8 = gestureRef.useContext(isVisible(sharedValue[21]).ControlsGestureScrollLock)({ onScrollHandlerWorkletized: callback });
+  const tmp8 = gestureRef.useContext(isVisible(sharedValue[24]).ControlsGestureScrollLock)({ onScrollHandlerWorkletized: callback });
   gestureRef = tmp8.gestureRef;
   scrollerRef = tmp8.scrollerRef;
   ({ onScroll, animatedProps } = tmp8);
-  let obj2 = isVisible(sharedValue[22]);
+  let obj2 = isVisible(sharedValue[25]);
   const isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
   const items2 = [isVisible, scrollerRef];
   const effect = gestureRef.useEffect(() => {
@@ -174,9 +203,9 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
   }, items2);
   const items3 = [gestureRef];
   const memo = gestureRef.useMemo(() => {
-    const Gesture = isVisible(sharedValue[23]).Gesture;
+    const Gesture = isVisible(sharedValue[26]).Gesture;
     const NativeResult = Gesture.Native();
-    const enabledResult = NativeResult.enabled(!isVisible(sharedValue[24]).isMetaQuest());
+    const enabledResult = NativeResult.enabled(!isVisible(sharedValue[27]).isMetaQuest());
     let result = enabledResult;
     if (null != gestureRef) {
       result = enabledResult.simultaneousWithExternalGesture(tmp);
@@ -184,12 +213,12 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
     return result;
   }, items3);
   obj = { gesture: memo, children: null };
-  obj = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets: closure_12, children: null };
+  obj = { style: isScreenReaderEnabled ? tmp.scrollViewScreenReader : tmp.scrollView, ref: scrollerRef, onScroll, animatedProps, onMomentumScrollEnd: NOOP, scrollEventThrottle: 8.333333333333334, scrollIndicatorInsets: closure_13, children: null };
   let tmp14Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     obj1 = { style: null };
     obj1[0] = tmp.blurRegion;
-    tmp14Result = tmp14(tmp2(tmp3[25]), obj1);
+    tmp14Result = tmp14(tmp2(tmp3[7]), obj1);
   }
   const items4 = [tmp14Result, , ];
   tmp14Result = null != stateFromStores;
@@ -197,22 +226,22 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
     obj2 = { channel: null, openTab: null };
     obj2[0] = stateFromStores;
     obj2[1] = isVisible.openTab;
-    tmp14Result = tmp14(closure_10, obj2);
+    tmp14Result = tmp14(closure_11, obj2);
   }
   items4[1] = tmp14Result;
-  items4[2] = closure_5(isVisible(sharedValue[26]).SafeAreaPaddingView, { bottom: true });
+  items4[2] = closure_6(isVisible(sharedValue[28]).SafeAreaPaddingView, { bottom: true });
   obj[7] = items4;
-  obj[1] = closure_6(closure_9, obj);
-  const children = [closure_5(isVisible(sharedValue[23]).GestureDetector, obj), ];
+  obj[1] = closure_5(closure_10, obj);
+  const children = [closure_6(isVisible(sharedValue[26]).GestureDetector, obj), ];
   let tmp14Result1 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj3 = { shown: null, style: null };
     obj3[0] = sharedValue;
     obj3[1] = tmp.blurRegion;
-    tmp14Result1 = tmp14(tmp2(tmp3[27]), obj3);
+    tmp14Result1 = tmp14(tmp2(tmp3[29]), obj3);
   }
   children[1] = tmp14Result1;
-  return closure_6(closure_7, { children });
+  return closure_5(closure_7, { children });
 });
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 13957: BeakerIcon ===
+// === Module 14025: BeakerIcon ===
 
-// Module 13957 (BeakerIcon)
+// Module 14025 (BeakerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 13958 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 14026 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

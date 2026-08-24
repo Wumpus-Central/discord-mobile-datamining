@@ -1,6 +1,6 @@
-// === Module 4309: useCustomThemeDisplaySettings ===
+// === Module 4313: useCustomThemeDisplaySettings ===
 
-// Module 4309 (useCustomThemeDisplaySettings)
+// Module 4313 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 589 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
 import closure_2 from "_slicedToArray" /* 32 */;

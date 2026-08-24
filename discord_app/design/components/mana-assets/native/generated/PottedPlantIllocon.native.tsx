@@ -1,10 +1,10 @@
-// === Module 6060: PottedPlantIllocon ===
+// === Module 6091: PottedPlantIllocon ===
 
-// Module 6060 (PottedPlantIllocon)
+// Module 6091 (PottedPlantIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6061 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6092 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PottedPlantIllocon.native.tsx");

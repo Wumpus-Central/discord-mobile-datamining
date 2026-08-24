@@ -1,14 +1,14 @@
-// === Module 11209: useKeyboardActionSheetHeight ===
+// === Module 11260: useKeyboardActionSheetHeight ===
 
-// Module 11209 (useKeyboardActionSheetHeight)
+// Module 11260 (useKeyboardActionSheetHeight)
 import set from "set" /* 2 */;
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5444 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5444 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5449 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5449 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6401 */;
 
 const result = set.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
 

@@ -1,10 +1,10 @@
-// === Module 12010: useFetchCollectiblesProducts ===
+// === Module 12059: useFetchCollectiblesProducts ===
 
-// Module 12010 (useFetchCollectiblesProducts)
+// Module 12059 (useFetchCollectiblesProducts)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_4 from "addSku" /* 4521 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "addSku" /* 4526 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5306 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
 const require = arg1;
@@ -86,7 +86,7 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
       if (!tmp24) {
         let tmp34 = lib;
         let tmp35 = dependencyMap;
-        let obj = lib(5300);
+        let obj = lib(5305);
         let tmp36 = tmp8;
         obj = { includeBundles: null };
         obj[0] = tmp15;

@@ -1,15 +1,15 @@
-// === Module 13230: guildId ===
+// === Module 13285: guildId ===
 
-// Module 13230 (guildId)
+// Module 13285 (guildId)
 import hasFlag from "hasFlag" /* 1403 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import isClipsEnabled from "isClipsEnabled" /* 4526 */;
-import shouldCommitDefault from "shouldCommit" /* 13228 */;
-import closure_2 from "initialize" /* 4504 */;
-import closure_3 from "reset" /* 4652 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import isClipsEnabled from "isClipsEnabled" /* 4531 */;
+import shouldCommitDefault from "shouldCommit" /* 13283 */;
+import closure_2 from "initialize" /* 4508 */;
+import closure_3 from "reset" /* 4658 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "initialize" /* 4565 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_6 from "initialize" /* 4570 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -61,7 +61,7 @@ prototype["computeVoiceFlags"] = function computeVoiceFlags() {
     isClipsEnabledResult = tmp11;
     obj3 = currentUserActiveStream;
   }
-  let tmpResult = tmp(4526);
+  let tmpResult = tmp(4531);
   let result = tmpResult.isDecoupledClipsEnabled();
   if (result) {
     visibleGame = visibleGame.getVisibleGame();

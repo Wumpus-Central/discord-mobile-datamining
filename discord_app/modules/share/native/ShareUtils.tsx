@@ -1,11 +1,11 @@
-// === Module 13362: _sendShareMessage ===
+// === Module 13420: _sendShareMessage ===
 
-// Module 13362 (_sendShareMessage)
-import dispatcherDefault from "dispatcher" /* 4094 */;
-import registerAssetDefault from "registerAsset" /* 10455 */;
+// Module 13420 (_sendShareMessage)
+import dispatcherDefault from "dispatcher" /* 4097 */;
+import registerAssetDefault from "registerAsset" /* 10494 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { DraftType } from "handleChanged" /* 4830 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 
 const require = arg1;
 function _sendShareMessage() {
@@ -26,7 +26,7 @@ function _sendShareMessage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -74,13 +74,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7436).parse(lib2, lib2);
+              constants = lib2(7474).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8466);
+                let obj2 = lib2(8505);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8451).Future();
-              let obj3 = lib2(7427);
+              future = new lib(8490).Future();
+              let obj3 = lib2(7465);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
               obj2[2] = c4;

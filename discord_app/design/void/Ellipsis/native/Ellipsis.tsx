@@ -1,13 +1,13 @@
-// === Module 13454: AnimatedEllipsisDot ===
+// === Module 13512: AnimatedEllipsisDot ===
 
-// Module 13454 (AnimatedEllipsisDot)
+// Module 13512 (AnimatedEllipsisDot)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function AnimatedEllipsisDot(disableScale) {

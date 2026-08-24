@@ -1,7 +1,7 @@
-// === Module 15367: useIsGameCommunityServerPreview ===
+// === Module 15431: useIsGameCommunityServerPreview ===
 
-// Module 15367 (useIsGameCommunityServerPreview)
-import closure_2 from "initialize" /* 4022 */;
+// Module 15431 (useIsGameCommunityServerPreview)
+import closure_2 from "initialize" /* 4025 */;
 import { JoinGuildSources } from "ME" /* 676 */;
 
 const require = arg1;

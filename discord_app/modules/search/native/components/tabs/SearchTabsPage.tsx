@@ -1,27 +1,27 @@
-// === Module 15863: SearchTabsPage ===
+// === Module 15960: SearchTabsPage ===
 
-// Module 15863 (SearchTabsPage)
+// Module 15960 (SearchTabsPage)
 import _modDef38 from "module_38" /* 38 */;
-import mapDefault from "map" /* 8995 */;
-import GuildNSFWDefault from "GuildNSFW" /* 11838 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 11840 */;
-import ClearAllHistoryDefault from "ClearAllHistory" /* 15864 */;
-import _modDef15906 from "module_15906" /* 15906 */;
-import SearchableMembersScreenDefault from "SearchableMembersScreen" /* 15908 */;
-import _modDef15912 from "module_15912" /* 15912 */;
-import _modDef15913 from "module_15913" /* 15913 */;
-import _modDef15921 from "module_15921" /* 15921 */;
-import _modDef15923 from "module_15923" /* 15923 */;
-import _modDef15930 from "module_15930" /* 15930 */;
-import InitialPinsScreenDefault from "InitialPinsScreen" /* 15937 */;
+import mapDefault from "map" /* 9032 */;
+import GuildNSFWDefault from "GuildNSFW" /* 11887 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 11889 */;
+import ClearAllHistoryDefault from "ClearAllHistory" /* 15961 */;
+import _modDef16003 from "module_16003" /* 16003 */;
+import SearchableMembersScreenDefault from "SearchableMembersScreen" /* 16005 */;
+import _modDef16009 from "module_16009" /* 16009 */;
+import _modDef16010 from "module_16010" /* 16010 */;
+import _modDef16018 from "module_16018" /* 16018 */;
+import _modDef16020 from "module_16020" /* 16020 */;
+import _modDef16027 from "module_16027" /* 16027 */;
+import InitialPinsScreenDefault from "InitialPinsScreen" /* 16034 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 8546 */;
 import { SearchTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function SearchTabsPage(selectMediaTab) {
@@ -42,9 +42,9 @@ function SearchTabsPage(selectMediaTab) {
     }
     return closure_1_6.getChannel(channelId);
   });
-  obj1 = searchContext(5267);
+  obj1 = searchContext(5272);
   const isChannelSpoilerGated = obj1.useIsChannelSpoilerGated(stateFromStores);
-  searchContext(5252);
+  searchContext(5257);
   if (tmp2) {
     if (tab !== SearchTabs.MEMBERS) {
       if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -68,7 +68,7 @@ function SearchTabsPage(selectMediaTab) {
     } else if (tmp11.PEOPLE === tab) {
       const obj2 = { searchContext: null };
       obj2[0] = searchContext;
-      return jsx(_modDef15906, { searchContext: null });
+      return jsx(_modDef16003, { searchContext: null });
     } else if (tmp11.MEMBERS === tab) {
       const obj3 = { searchContext: null };
       obj3[0] = searchContext;
@@ -76,38 +76,38 @@ function SearchTabsPage(selectMediaTab) {
     } else if (tmp11.GUILD_CHANNELS === tab) {
       const obj4 = { searchContext: null };
       obj4[0] = searchContext;
-      return jsx(_modDef15912, { searchContext: null });
+      return jsx(_modDef16009, { searchContext: null });
     } else if (tmp11.MEDIA === tab) {
       const obj5 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj5[0] = tab;
       obj5[1] = searchContext;
       obj5[2] = isFocused;
       obj5[3] = width;
-      return jsx(_modDef15913, { tab: null, searchContext: null, isFocused: null, width: null });
+      return jsx(_modDef16010, { tab: null, searchContext: null, isFocused: null, width: null });
     } else if (tmp11.FILES === tab) {
       const obj6 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj6[0] = tab;
       obj6[1] = searchContext;
       obj6[2] = isFocused;
       obj6[3] = width;
-      return jsx(_modDef15921, { tab: null, searchContext: null, isFocused: null, width: null });
+      return jsx(_modDef16018, { tab: null, searchContext: null, isFocused: null, width: null });
     } else if (tmp11.LINKS === tab) {
       const obj7 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj7[0] = tab;
       obj7[1] = searchContext;
       obj7[2] = isFocused;
       obj7[3] = width;
-      return jsx(_modDef15923, { tab: null, searchContext: null, isFocused: null, width: null });
+      return jsx(_modDef16020, { tab: null, searchContext: null, isFocused: null, width: null });
     } else if (tmp11.THREADS === tab) {
       const obj8 = { searchContext: null };
       obj8[0] = searchContext;
-      return jsx(tmp4(15924).SearchTabsThreadScreen, { searchContext: null });
+      return jsx(tmp4(16021).SearchTabsThreadScreen, { searchContext: null });
     } else if (tmp11.MESSAGES === tab) {
       const obj9 = { tab: null, searchContext: null, isFocused: null };
       obj9[0] = tab;
       obj9[1] = searchContext;
       obj9[2] = isFocused;
-      return jsx(_modDef15930, { tab: null, searchContext: null, isFocused: null });
+      return jsx(_modDef16027, { tab: null, searchContext: null, isFocused: null });
     } else if (tmp11.PINS === tab) {
       const obj10 = { tab: null, searchContext: null, isFocused: null };
       obj10[0] = tab;

@@ -1,13 +1,13 @@
-// === Module 8989: GifTag ===
+// === Module 9026: GifTag ===
 
-// Module 8989 (GifTag)
+// Module 9026 (GifTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import Text from "Text" /* 4739 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import importDefaultResult from "n" /* 689 */;
 
 const View = get_ActivityIndicator.View;

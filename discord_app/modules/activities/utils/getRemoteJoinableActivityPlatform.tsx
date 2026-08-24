@@ -1,9 +1,9 @@
-// === Module 10923: getRemoteJoinableActivityPlatform ===
+// === Module 10962: getRemoteJoinableActivityPlatform ===
 
-// Module 10923 (getRemoteJoinableActivityPlatform)
+// Module 10962 (getRemoteJoinableActivityPlatform)
 import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "isConnected" /* 5290 */;
-import closure_3 from "handleUpdate" /* 4541 */;
+import closure_2 from "isConnected" /* 5295 */;
+import closure_3 from "handleUpdate" /* 4546 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -24,7 +24,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         remoteApplicationActivity = remoteApplicationActivity.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
-          let tmp11Result = tmp11(7258);
+          let tmp11Result = tmp11(7296);
           tmp4 = null;
           if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {

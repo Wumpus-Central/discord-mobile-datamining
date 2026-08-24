@@ -1,7 +1,7 @@
-// === Module 8934: UserProfileAnalyticsProvider ===
+// === Module 8971: UserProfileAnalyticsProvider ===
 
-// Module 8934 (UserProfileAnalyticsProvider)
-import contextDefault from "context" /* 7139 */;
+// Module 8971 (UserProfileAnalyticsProvider)
+import contextDefault from "context" /* 7177 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -110,7 +110,7 @@ export const useCreateUserProfileAnalyticsContext = function useCreateUserProfil
 };
 export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsContext() {
   const context = importAllResult.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7139)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7177)().analyticsLocations;
   const items = [context, analyticsLocations];
   const items1 = [context, analyticsLocations];
   const items2 = [context, analyticsLocations];

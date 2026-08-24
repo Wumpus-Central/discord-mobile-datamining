@@ -1,6 +1,6 @@
-// === Module 4720: initialize ===
+// === Module 4726: initialize ===
 
-// Module 4720 (initialize)
+// Module 4726 (initialize)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/LifecycleManager.tsx");

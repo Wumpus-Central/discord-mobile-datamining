@@ -1,9 +1,9 @@
-// === Module 14495: logger ===
+// === Module 14563: logger ===
 
-// Module 14495 (logger)
+// Module 14563 (logger)
 import set from "set" /* 2 */;
 import log from "log" /* 4 */;
-import UDefault from "U" /* 14493 */;
+import UDefault from "U" /* 14561 */;
 
 const logger = new log.Logger("MobileCustomMuxIntegration");
 let c4 = "1.0.0";

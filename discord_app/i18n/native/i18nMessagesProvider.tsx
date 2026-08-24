@@ -1,8 +1,8 @@
-// === Module 17119: i18nManager ===
+// === Module 17213: i18nManager ===
 
-// Module 17119 (i18nManager)
+// Module 17213 (i18nManager)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 17120 */;
+import enforcingDefault from "enforcing" /* 17214 */;
 import set from "set" /* 500 */;
 
 if (set.isAndroid()) {

@@ -1,10 +1,10 @@
-// === Module 5688: ExperimentalMarvelRivalsWidgetAbstractUI ===
+// === Module 5719: ExperimentalMarvelRivalsWidgetAbstractUI ===
 
-// Module 5688 (ExperimentalMarvelRivalsWidgetAbstractUI)
+// Module 5719 (ExperimentalMarvelRivalsWidgetAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5689 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5720 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalMarvelRivalsWidgetAbstractUI.native.tsx");

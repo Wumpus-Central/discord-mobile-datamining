@@ -1,6 +1,6 @@
-// === Module 7212: startDiceRoll ===
+// === Module 7250: startDiceRoll ===
 
-// Module 7212 (startDiceRoll)
+// Module 7250 (startDiceRoll)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

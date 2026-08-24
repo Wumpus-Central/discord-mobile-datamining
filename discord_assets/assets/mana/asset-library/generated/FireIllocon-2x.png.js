@@ -1,6 +1,6 @@
-// === Module 5701: metadata ===
+// === Module 5732: metadata ===
 
-// Module 5701 (metadata)
+// Module 5732 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FireIllocon-2x.png.js");

@@ -1,20 +1,20 @@
-// === Module 16131: StyleSheet ===
+// === Module 16229: StyleSheet ===
 
-// Module 16131 (StyleSheet)
+// Module 16229 (StyleSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4656 from "module_4656" /* 4656 */;
-import Dialog from "Dialog" /* 4716 */;
-import _modDef6551 from "module_6551" /* 6551 */;
-import getStoresDefault from "getStores" /* 16132 */;
+import _modDef4662 from "module_4662" /* 4662 */;
+import Dialog from "Dialog" /* 4722 */;
+import _modDef6582 from "module_6582" /* 6582 */;
+import getStoresDefault from "getStores" /* 16230 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import importDefaultResult from "initialize" /* 13300 */;
-import importDefaultResult1 from "handleUpdateVADPermission" /* 13772 */;
-import importDefaultResult2 from "fetchSurveyIfNeeded" /* 9874 */;
-import closure_12 from "getAlert" /* 10737 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import importDefaultResult from "initialize" /* 13358 */;
+import importDefaultResult1 from "handleUpdateVADPermission" /* 13830 */;
+import importDefaultResult2 from "fetchSurveyIfNeeded" /* 9913 */;
+import closure_12 from "getAlert" /* 10776 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 let c3 = importAllResult;
@@ -29,7 +29,7 @@ let obj = {
     return importDefaultResult.shouldShowWarning();
   },
   getComponent() {
-    return require(16133) /* render */.default;
+    return require(16231) /* render */.default;
   }
 };
 items = [importDefaultResult];
@@ -41,7 +41,7 @@ obj = {
     return importDefaultResult1.shouldShowWarning();
   },
   getComponent() {
-    return require(16137) /* render */.default;
+    return require(16235) /* render */.default;
   }
 };
 items2 = [importDefaultResult1];
@@ -54,7 +54,7 @@ items1[2] = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return require(16138) /* MobileSurvey */.default;
+    return require(16236) /* MobileSurvey */.default;
   }
 };
 let closure_15 = new getStoresDefault(items1);
@@ -125,7 +125,7 @@ AlertWrapper.prototype["render"] = function render() {
     str = "alerts-component";
   }
   const props = self.props;
-  let obj = { onClose: _modDef4656.close };
+  let obj = { onClose: _modDef4662.close };
   ({ opacity, scale } = self.state);
   obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
   obj = { style: items, children: null };
@@ -138,11 +138,11 @@ AlertWrapper.prototype["render"] = function render() {
   const items3 = [{ scale }];
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
-  obj[2] = callback2(_modDef6551, obj);
+  obj[2] = callback2(_modDef6582, obj);
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "HermesInternal", props: "r" });
+let closure_18 = Object.freeze({ renderAlert: "getGuild", renderKey: "call", props: "HTTP" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -150,7 +150,7 @@ let obj1 = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return require(16138) /* MobileSurvey */.default;
+    return require(16236) /* MobileSurvey */.default;
   }
 };
 const tmp7 = new getStoresDefault(items1);
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "HermesInternal", props: "r" };
+        return { renderAlert: "getGuild", renderKey: "call", props: "HTTP" };
       }
     }
   });

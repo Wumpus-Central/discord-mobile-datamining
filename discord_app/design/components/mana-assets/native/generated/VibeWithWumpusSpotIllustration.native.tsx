@@ -1,10 +1,10 @@
-// === Module 6256: VibeWithWumpusSpotIllustration ===
+// === Module 6287: VibeWithWumpusSpotIllustration ===
 
-// Module 6256 (VibeWithWumpusSpotIllustration)
+// Module 6287 (VibeWithWumpusSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6257 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6288 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/VibeWithWumpusSpotIllustration.native.tsx");

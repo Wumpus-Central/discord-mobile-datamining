@@ -1,10 +1,10 @@
-// === Module 7939: ReactionIcon ===
+// === Module 7978: ReactionIcon ===
 
-// Module 7939 (ReactionIcon)
+// Module 7978 (ReactionIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 7940 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 7979 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 9561: SlashBoxIcon ===
+// === Module 9598: SlashBoxIcon ===
 
-// Module 9561 (SlashBoxIcon)
+// Module 9598 (SlashBoxIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 9562 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 9599 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

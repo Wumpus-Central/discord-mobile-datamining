@@ -1,19 +1,19 @@
-// === Module 14254: UserRow ===
+// === Module 14322: UserRow ===
 
-// Module 14254 (UserRow)
+// Module 14322 (UserRow)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import messagesProxyDefault from "messagesProxy" /* 2335 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import Text from "Text" /* 4734 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import ActionSheet from "ActionSheet" /* 7175 */;
+import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
+import Text from "Text" /* 4739 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5368 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
+import TableRowInner from "TableRowInner" /* 6322 */;
+import ActionSheet from "ActionSheet" /* 7213 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function UserRow(userActivity) {

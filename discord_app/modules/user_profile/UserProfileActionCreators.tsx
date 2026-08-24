@@ -1,6 +1,6 @@
-// === Module 8377: _saveProfileChanges ===
+// === Module 8416: _saveProfileChanges ===
 
-// Module 8377 (_saveProfileChanges)
+// Module 8416 (_saveProfileChanges)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
@@ -33,7 +33,7 @@ function _saveProfileChanges() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -103,7 +103,7 @@ function _saveProfileChanges() {
                 const obj15 = callback2(body[13]);
               } else {
                 c9 = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
               tmp71 = body;
             }

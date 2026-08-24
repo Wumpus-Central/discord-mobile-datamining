@@ -1,12 +1,12 @@
-// === Module 9233: useCanPurchaseFrames ===
+// === Module 9270: useCanPurchaseFrames ===
 
-// Module 9233 (useCanPurchaseFrames)
+// Module 9270 (useCanPurchaseFrames)
 import initialize from "initialize" /* 589 */;
 import create from "create" /* 1940 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
-import apexExperiment from "apexExperiment" /* 8956 */;
-import apexExperiment2 from "apexExperiment" /* 9234 */;
-import apexExperimentDefault from "apexExperiment" /* 9234 */;
+import apexExperiment from "apexExperiment" /* 8993 */;
+import apexExperiment2 from "apexExperiment" /* 9271 */;
+import apexExperimentDefault from "apexExperiment" /* 9271 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 

@@ -1,15 +1,15 @@
-// === Module 11260: HeroMedia ===
+// === Module 11311: HeroMedia ===
 
-// Module 11260 (HeroMedia)
+// Module 11311 (HeroMedia)
 import noopAll from "noop" /* 19 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9567 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11232 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9604 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11282 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11283 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6989 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -35,7 +35,7 @@ export default function HeroMedia(width) {
   let tmp2Result = tmp2(589);
   const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
-  tmp2Result = tmp2(7145);
+  tmp2Result = tmp2(7183);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
   let prop;
   if (getOrFetchApplication != null) {

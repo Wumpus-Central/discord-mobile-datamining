@@ -1,9 +1,9 @@
-// === Module 10494: items ===
+// === Module 10533: items ===
 
-// Module 10494 (items)
+// Module 10533 (items)
 import set from "set" /* 2 */;
 import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1938 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4042 */;
 
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };
@@ -45,7 +45,7 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(5315);
+        tmp4Result = tmp4(5320);
       }
       return NITRO;
     }

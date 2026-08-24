@@ -1,11 +1,11 @@
-// === Module 8789: getExistingRsvp ===
+// === Module 8826: getExistingRsvp ===
 
-// Module 8789 (getExistingRsvp)
+// Module 8826 (getExistingRsvp)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useEventException from "useEventException" /* 8790 */;
-import useEventSchedule from "useEventSchedule" /* 8791 */;
+import useEventException from "useEventException" /* 8827 */;
+import useEventSchedule from "useEventSchedule" /* 8828 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
+import closure_3 from "scheduledEventSort" /* 4374 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 require = arg1;
@@ -42,7 +42,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     let recurrenceStatus = null;
     if (null != scheduled_start_time) {
-      let tmp33Result = tmp33(8785);
+      let tmp33Result = tmp33(8822);
       let scheduled_start_time1;
       if (guildScheduledEvent != null) {
         scheduled_start_time1 = guildScheduledEvent.scheduled_start_time;
@@ -52,7 +52,7 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     }
     if (null == recurrenceStatus) {
       if (recurrenceId == null) {
-        tmp33Result = tmp33(8785);
+        tmp33Result = tmp33(8822);
         recurrenceId = tmp33Result.getNextRecurrenceIdInEvent(guildScheduledEvent);
       }
       let tmp12 = recurrenceId;

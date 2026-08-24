@@ -1,6 +1,6 @@
-// === Module 1975: getSync ===
+// === Module 1976: getSync ===
 
-// Module 1975 (getSync)
+// Module 1976 (getSync)
 import timestampDefault from "timestamp" /* 3 */;
 import itemsDefault from "items" /* 1955 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
@@ -49,7 +49,7 @@ prototype["getGuildIds"] = function getGuildIds() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

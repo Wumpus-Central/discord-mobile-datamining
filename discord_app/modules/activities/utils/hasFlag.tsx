@@ -1,6 +1,6 @@
-// === Module 7260: hasFlag ===
+// === Module 7298: hasFlag ===
 
-// Module 7260 (hasFlag)
+// Module 7298 (hasFlag)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import hasFlag from "hasFlag" /* 1403 */;

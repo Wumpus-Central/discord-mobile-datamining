@@ -1,6 +1,6 @@
-// === Module 8944: getIsScreenLandscape ===
+// === Module 8981: getIsScreenLandscape ===
 
-// Module 8944 (getIsScreenLandscape)
+// Module 8981 (getIsScreenLandscape)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "getDimensionsStoreStateForEntry" /* 1495 */;
 

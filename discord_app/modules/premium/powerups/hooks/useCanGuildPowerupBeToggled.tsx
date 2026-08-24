@@ -1,10 +1,10 @@
-// === Module 11703: useCanGuildPowerupBeToggled ===
+// === Module 11752: useCanGuildPowerupBeToggled ===
 
-// Module 11703 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
+// Module 11752 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11717 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
-import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
+import closure_4 from "calculateAppliedBoosts" /* 4265 */;
+import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4266 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
@@ -54,7 +54,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           if (null != found1) {
             if (null != allPowerups[found1]) {
               const intl = callback(1236).intl;
-              const tmp11 = lib(2367);
+              const tmp11 = lib(2368);
               let title;
               if (allPowerups[found1] != null) {
                 title = tmp13.title;

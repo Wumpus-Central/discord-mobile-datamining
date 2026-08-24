@@ -1,7 +1,7 @@
-// === Module 11618: useLongestChannelMessageBeforeReply ===
+// === Module 11667: useLongestChannelMessageBeforeReply ===
 
-// Module 11618 (useLongestChannelMessageBeforeReply)
-import closure_2 from "reinjectEphemerals" /* 4994 */;
+// Module 11667 (useLongestChannelMessageBeforeReply)
+import closure_2 from "reinjectEphemerals" /* 4999 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/useLongestChannelMessageBeforeReply.tsx");

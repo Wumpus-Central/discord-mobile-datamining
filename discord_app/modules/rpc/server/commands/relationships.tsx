@@ -1,14 +1,14 @@
-// === Module 13859: items ===
+// === Module 13924: items ===
 
-// Module 13859 (items)
+// Module 13924 (items)
 import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 8752 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import prototypeDefault from "prototype" /* 8789 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8794 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "markAllUserIdListsStale" /* 4033 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import createRPCCommand from "createRPCCommand" /* 13846 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13909 */;
 
 require = arg1;
 ({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);
@@ -66,7 +66,7 @@ obj[1] = function handler(socket) {
   }
   tmpResult = fromStringAll;
 };
-obj[RPCCommands.GET_RELATIONSHIPS] = createRPCCommand.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
+obj[RPCCommands.GET_RELATIONSHIPS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
 
 export default obj;

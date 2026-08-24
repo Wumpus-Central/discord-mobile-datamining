@@ -1,11 +1,11 @@
-// === Module 13866: addRegularStoreListing ===
+// === Module 13931: addRegularStoreListing ===
 
-// Module 13866 (addRegularStoreListing)
+// Module 13931 (addRegularStoreListing)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "createFromServer" /* 13867 */;
+import closure_3 from "_getSystemLocale" /* 1995 */;
+import closure_4 from "createFromServer" /* 13932 */;
 import set from "set" /* 2 */;
 
 require = arg1;

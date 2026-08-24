@@ -1,6 +1,6 @@
-// === Module 4808: prototype ===
+// === Module 4813: prototype ===
 
-// Module 4808 (prototype)
+// Module 4813 (prototype)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");

@@ -1,10 +1,10 @@
-// === Module 5668: DollarSignIllocon ===
+// === Module 5675: DollarSignIllocon ===
 
-// Module 5668 (DollarSignIllocon)
+// Module 5675 (DollarSignIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5669 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5676 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DollarSignIllocon.native.tsx");

@@ -1,12 +1,12 @@
-// === Module 10300: openGiftingBadgeInfoActionSheet ===
+// === Module 10339: openGiftingBadgeInfoActionSheet ===
 
-// Module 10300 (openGiftingBadgeInfoActionSheet)
+// Module 10339 (openGiftingBadgeInfoActionSheet)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
 
 const result = set.fileFinishedImporting("modules/premium/gifting/native/openGiftingBadgeInfoActionSheet.tsx");
 
 export default function openGiftingBadgeInfoActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10301, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10340, dependencyMap.paths), "GiftingBadgeInfoActionSheet");
 };

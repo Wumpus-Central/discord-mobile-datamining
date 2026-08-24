@@ -1,6 +1,6 @@
-// === Module 12890: metadata ===
+// === Module 12945: metadata ===
 
-// Module 12890 (metadata)
+// Module 12945 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/referral_program/referralTrial.png.js");

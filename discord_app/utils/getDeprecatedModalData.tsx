@@ -1,7 +1,7 @@
-// === Module 5262: getDeprecatedModalData ===
+// === Module 5267: getDeprecatedModalData ===
 
-// Module 5262 (getDeprecatedModalData)
-import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+// Module 5267 (getDeprecatedModalData)
+import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { ModalAnimation } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("utils/getDeprecatedModalData.tsx");

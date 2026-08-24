@@ -1,16 +1,16 @@
-// === Module 14992: UserListItem ===
+// === Module 15056: UserListItem ===
 
-// Module 14992 (UserListItem)
+// Module 15056 (UserListItem)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4734 */;
-import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9708 */;
+import Text from "Text" /* 4739 */;
+import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9747 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function UserListItem(userId) {
@@ -39,7 +39,7 @@ function UserListItem(userId) {
   }, items3);
   let tmp8Result = null != stateFromStores;
   if (tmp8Result) {
-    obj = { user: null, guildId: "Array", size: null };
+    obj = { user: null, guildId: "Array", size: -1 };
     obj[0] = stateFromStores;
     obj[2] = tmp(tmp2[14]).AvatarSizes.REFRESH_MEDIUM_32;
     tmp8Result = tmp8(tmp(tmp2[14]).Avatar, obj);

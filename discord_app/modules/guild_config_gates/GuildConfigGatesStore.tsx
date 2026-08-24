@@ -1,6 +1,6 @@
-// === Module 16861: hasLoaded ===
+// === Module 16954: hasLoaded ===
 
-// Module 16861 (hasLoaded)
+// Module 16954 (hasLoaded)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

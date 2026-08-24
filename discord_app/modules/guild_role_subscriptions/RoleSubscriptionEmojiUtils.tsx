@@ -1,7 +1,7 @@
-// === Module 6732: isRoleSubscriptionEmoji ===
+// === Module 6769: isRoleSubscriptionEmoji ===
 
-// Module 6732 (isRoleSubscriptionEmoji)
-import closure_0 from "computeRolesForGuild" /* 6728 */;
+// Module 6769 (isRoleSubscriptionEmoji)
+import closure_0 from "computeRolesForGuild" /* 6765 */;
 
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");
 

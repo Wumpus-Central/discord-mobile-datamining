@@ -1,8 +1,8 @@
-// === Module 14845: _emailSupport ===
+// === Module 14909: _emailSupport ===
 
-// Module 14845 (_emailSupport)
+// Module 14909 (_emailSupport)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
 
 const require = arg1;
 function _emailSupport() {
@@ -19,7 +19,7 @@ function _emailSupport() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -34,10 +34,10 @@ function _emailSupport() {
             obj[0] = arg1;
             return obj;
           } else {
-            const tmp10 = closure_1_1(4090);
+            const tmp10 = closure_1_1(4093);
             closure_1 = tmp10;
             const openURL = tmp10.openURL;
-            obj1 = closure_1_1(1993);
+            obj1 = closure_1_1(1994);
             c2 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -66,7 +66,7 @@ function _emailSupport() {
         } else {
           openURL(arg1);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         dependencyMap = tmp;

@@ -1,13 +1,13 @@
-// === Module 4814: useNullableMessageAuthor ===
+// === Module 4819: useNullableMessageAuthor ===
 
-// Module 4814 (useNullableMessageAuthor)
+// Module 4819 (useNullableMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "markAllUserIdListsStale" /* 4033 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;

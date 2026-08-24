@@ -1,11 +1,11 @@
-// === Module 16967: EmojiAlias ===
+// === Module 17060: EmojiAlias ===
 
-// Module 16967 (EmojiAlias)
+// Module 17060 (EmojiAlias)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4734 */;
+import Text from "Text" /* 4739 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;

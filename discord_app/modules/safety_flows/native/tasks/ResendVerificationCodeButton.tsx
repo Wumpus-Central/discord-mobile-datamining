@@ -1,6 +1,6 @@
-// === Module 17095: ResendVerificationCodeButton ===
+// === Module 17188: ResendVerificationCodeButton ===
 
-// Module 17095 (ResendVerificationCodeButton)
+// Module 17188 (ResendVerificationCodeButton)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -42,7 +42,7 @@ export default function ResendVerificationCodeButton(flowId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

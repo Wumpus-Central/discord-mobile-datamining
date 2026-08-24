@@ -1,10 +1,10 @@
-// === Module 4528: isClientClipsCapable ===
+// === Module 4533: isClientClipsCapable ===
 
-// Module 4528 (isClientClipsCapable)
+// Module 4533 (isClientClipsCapable)
 import set from "set" /* 2 */;
 import setAll from "set" /* 500 */;
-import apexExperiment from "apexExperiment" /* 4527 */;
-import DesktopSources from "DesktopSources" /* 4529 */;
+import apexExperiment from "apexExperiment" /* 4532 */;
+import DesktopSources from "DesktopSources" /* 4534 */;
 
 const Features = DesktopSources.Features;
 const result = set.fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");

@@ -1,6 +1,6 @@
-// === Module 10525: MessageRequestInAppNotification ===
+// === Module 10564: MessageRequestInAppNotification ===
 
-// Module 10525 (MessageRequestInAppNotification)
+// Module 10564 (MessageRequestInAppNotification)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -22,9 +22,9 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = React.useCallback(() => {
-    numMutualGuilds(10031).clearNotification();
-    const obj = numMutualGuilds(10031);
-    const rootNavigationRef = author(4230).getRootNavigationRef();
+    numMutualGuilds(10070).clearNotification();
+    const obj = numMutualGuilds(10070);
+    const rootNavigationRef = author(4234).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
@@ -36,8 +36,8 @@ export default function MessageRequestInAppNotification(notification) {
   obj = { text: null };
   let intl = author(1236).intl;
   obj[0] = intl.string(author(1236).t["Bx4/Lf"]);
-  obj[2] = jsx(author(10048).SystemMessageText, { text: null });
+  obj[2] = jsx(author(10087).SystemMessageText, { text: null });
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(author(10113).NotificationPressable, { text: null });
+  return jsx(author(10152).NotificationPressable, { text: null });
 };

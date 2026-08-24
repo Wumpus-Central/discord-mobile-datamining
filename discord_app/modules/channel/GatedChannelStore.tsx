@@ -1,16 +1,16 @@
-// === Module 1981: isSubscriptionGated ===
+// === Module 1982: isSubscriptionGated ===
 
-// Module 1981 (isSubscriptionGated)
+// Module 1982 (isSubscriptionGated)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import isSubscriptionRole from "isSubscriptionRole" /* 4012 */;
-import hasViewChannelPermission from "hasViewChannelPermission" /* 4013 */;
-import closure_2 from "initialize" /* 1982 */;
+import isSubscriptionRole from "isSubscriptionRole" /* 4015 */;
+import hasViewChannelPermission from "hasViewChannelPermission" /* 4016 */;
+import closure_2 from "initialize" /* 1983 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
+import { hasPermission } from "GuildRoleRecordTypeTag" /* 1985 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;

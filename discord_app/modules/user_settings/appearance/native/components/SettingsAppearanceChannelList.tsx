@@ -1,13 +1,13 @@
-// === Module 14635: ChannelListPreview ===
+// === Module 14703: ChannelListPreview ===
 
-// Module 14635 (ChannelListPreview)
+// Module 14703 (ChannelListPreview)
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsellComponent" /* 14647 */;
+import _modDef4119 from "module_4119" /* 4119 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault from "SettingsAppearanceChannelListPreviewNitroUpsellComponent" /* 14715 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
@@ -70,9 +70,9 @@ export default function ChannelListPreview(useGradientBackground) {
     obj[0] = themes;
     obj[1] = themeIndex;
     obj[3] = tmp4(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = callback(tmp4(14644), obj);
+    obj[1] = callback(tmp4(14712), obj);
     tmp7 = callback(closure_4, obj);
-    const tmp4Result = tmp4(14644);
+    const tmp4Result = tmp4(14712);
   }
   const items2 = [tmp7, , ];
   obj1 = {
@@ -85,8 +85,8 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = callback(animatedStyles(8029).FlashList, obj1);
+  items2[1] = callback(animatedStyles(8068).FlashList, obj1);
   items2[2] = callback(SettingsAppearanceChannelListPreviewNitroUpsellComponentDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj[4] = items2;
-  return closure_6(_modDef4115.View, obj);
+  return closure_6(_modDef4119.View, obj);
 };

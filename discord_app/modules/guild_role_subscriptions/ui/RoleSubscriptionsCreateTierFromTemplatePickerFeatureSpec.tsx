@@ -1,10 +1,10 @@
-// === Module 13352: ? ===
+// === Module 13410: ? ===
 
-// Module 13352
+// Module 13410
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "getHash" /* 4292 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 8875: handleFormInit ===
+// === Module 8912: handleFormInit ===
 
-// Module 8875 (handleFormInit)
+// Module 8912 (handleFormInit)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import sendRequest from "sendRequest" /* 530 */;
@@ -11,19 +11,19 @@ import createChannelRecord from "createChannelRecord" /* 1395 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 import isValueEqual from "isValueEqual" /* 1431 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import tDefault from "t" /* 3975 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8876 */;
-import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 8877 */;
-import fetchVanityUrl from "fetchVanityUrl" /* 8879 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8880 */;
-import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 8881 */;
-import closure_14 from "handleUpdateStart" /* 8854 */;
-import closure_17 from "createFromServer" /* 8044 */;
+import tDefault from "t" /* 3978 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8913 */;
+import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 8914 */;
+import fetchVanityUrl from "fetchVanityUrl" /* 8916 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8917 */;
+import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 8918 */;
+import closure_14 from "handleUpdateStart" /* 8891 */;
+import closure_17 from "createFromServer" /* 8083 */;
 import closure_18 from "createdAt" /* 1930 */;
 import closure_19 from "createGuildRecordFromRust" /* 1910 */;
 import closure_20 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8254 */;
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8294 */;
 import set from "set" /* 2 */;
 
 function handleFormInit(location) {

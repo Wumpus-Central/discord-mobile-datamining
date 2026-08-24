@@ -1,7 +1,7 @@
-// === Module 12799: createDisplayNameStylesMobile ===
+// === Module 12854: createDisplayNameStylesMobile ===
 
-// Module 12799 (createDisplayNameStylesMobile)
-import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+// Module 12854 (createDisplayNameStylesMobile)
+import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import closure_1 from "mergeGuildAvatar" /* 1922 */;
 
 const result = require("set").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");

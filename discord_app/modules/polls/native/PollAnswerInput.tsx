@@ -1,15 +1,15 @@
-// === Module 11386: ImageInput ===
+// === Module 11437: ImageInput ===
 
-// Module 11386 (ImageInput)
+// Module 11437 (ImageInput)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import { DraftType } from "handleChanged" /* 4825 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import { DraftType } from "handleChanged" /* 4830 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7614 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 function ImageInput(openImageInputActionSheet) {
@@ -121,7 +121,7 @@ export default function PollAnswerInput(answer) {
     if (null != channel) {
       closure_1_4.dismiss();
       let obj = answer(channelId[14]);
-      obj = { channel: null, onPressEmoji: null, pickerIntention: null, startExpanded: false, autoFocus: false };
+      obj = { channel: null, onPressEmoji: null, pickerIntention: null };
       obj[0] = channel;
       obj[1] = function onPressEmoji(arg0) {
         callback(arg0, closure_1);

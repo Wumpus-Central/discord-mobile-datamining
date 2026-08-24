@@ -1,9 +1,9 @@
-// === Module 13890: createVoiceSettingsEventHandlers ===
+// === Module 13957: createVoiceSettingsEventHandlers ===
 
-// Module 13890 (createVoiceSettingsEventHandlers)
+// Module 13957 (createVoiceSettingsEventHandlers)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
 
 ({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: c4 } = RPC_SCOPE_CONFIG);
 const RPCEvents = ME.RPCEvents;
@@ -15,7 +15,7 @@ export default function createVoiceSettingsEventHandlers(arg0, arg1) {
   let obj = {};
   obj = { scope: null, handler: null };
   obj = {};
-  const items = [_require(4375).OAuth2Scopes.RPC, _require(4375).OAuth2Scopes.RPC_VOICE_READ];
+  const items = [_require(4379).OAuth2Scopes.RPC, _require(4379).OAuth2Scopes.RPC_VOICE_READ];
   obj[constants.ANY] = items;
   obj[0] = obj;
   obj[1] = function handler() {

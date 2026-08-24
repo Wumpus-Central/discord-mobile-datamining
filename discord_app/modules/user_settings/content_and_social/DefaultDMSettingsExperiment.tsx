@@ -1,10 +1,10 @@
-// === Module 15021: shouldAgeVerifyForDMDefaultOff ===
+// === Module 15085: shouldAgeVerifyForDMDefaultOff ===
 
-// Module 15021 (shouldAgeVerifyForDMDefaultOff)
+// Module 15085 (shouldAgeVerifyForDMDefaultOff)
 import set from "set" /* 2 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5039 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4075 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4997 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5044 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 8665: useIsStageVoicePanelEnabled ===
+// === Module 8702: useIsStageVoicePanelEnabled ===
 
-// Module 8665 (useIsStageVoicePanelEnabled)
+// Module 8702 (useIsStageVoicePanelEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

@@ -1,9 +1,9 @@
-// === Module 11675: useFeaturedExpiringPowerup ===
+// === Module 11724: useFeaturedExpiringPowerup ===
 
-// Module 11675 (useFeaturedExpiringPowerup)
+// Module 11724 (useFeaturedExpiringPowerup)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import closure_3 from "handleGameServerInstanceCreated" /* 4286 */;
+import closure_4 from "calculateAppliedBoosts" /* 4265 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");

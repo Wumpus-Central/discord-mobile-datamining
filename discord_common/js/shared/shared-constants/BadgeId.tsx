@@ -1,6 +1,6 @@
-// === Module 8932: BadgeId ===
+// === Module 8969: BadgeId ===
 
-// Module 8932 (BadgeId)
+// Module 8969 (BadgeId)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/BadgeId.tsx");

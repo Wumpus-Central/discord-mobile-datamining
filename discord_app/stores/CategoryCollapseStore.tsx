@@ -1,14 +1,14 @@
-// === Module 5270: incrementVersion ===
+// === Module 5275: incrementVersion ===
 
-// Module 5270 (incrementVersion)
+// Module 5275 (incrementVersion)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import create from "create" /* 1306 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4826 */;
-import closure_5 from "comparator" /* 1980 */;
+import closure_4 from "handleConnectionOpen" /* 4831 */;
+import closure_5 from "comparator" /* 1981 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 require = arg1;

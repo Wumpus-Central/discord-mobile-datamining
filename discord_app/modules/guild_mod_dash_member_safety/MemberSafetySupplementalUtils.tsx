@@ -1,10 +1,10 @@
-// === Module 5096: createFetchKeys ===
+// === Module 5101: createFetchKeys ===
 
-// Module 5096 (createFetchKeys)
+// Module 5101 (createFetchKeys)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
-import PlatformTypes from "PlatformTypes" /* 5220 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5102 */;
+import PlatformTypes from "PlatformTypes" /* 5225 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -45,7 +45,7 @@ function _fetchMemberSupplemental() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

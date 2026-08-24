@@ -1,13 +1,13 @@
-// === Module 5068: computeUsersAndMembers ===
+// === Module 5073: computeUsersAndMembers ===
 
-// Module 5068 (computeUsersAndMembers)
+// Module 5073 (computeUsersAndMembers)
 import timestampDefault from "timestamp" /* 3 */;
 import itemsDefault from "items" /* 1955 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
+import closure_5 from "_handleConnectionOpen" /* 4499 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleSelectedChannelStoreChanged" /* 5069 */;
+import closure_7 from "handleSelectedChannelStoreChanged" /* 5074 */;
 import set from "set" /* 2 */;
 
 let set = arg1;
@@ -41,7 +41,7 @@ prototype = function ChannelHistory(arr) {
 }.prototype;
 prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const self = this;
-  const result = set(5000).requireSortedDescending(arr);
+  const result = set(5005).requireSortedDescending(arr);
   const map = new Map();
   map1 = new Map();
   const iter = arr[Symbol.iterator]();
@@ -143,7 +143,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -214,14 +214,14 @@ prototype2["handleMessageCreate"] = function handleMessageCreate(optimistic, dat
       const self2 = this;
       this.upsertOne(optimistic.guildId, optimistic.channelId, optimistic.message, database);
     }
-    obj = set(5075);
+    obj = set(5080);
   }
 };
 prototype2["handleMessageUpdate"] = function handleMessageUpdate(message, database) {
   let isReadableChannelIdResult = null != message.message.id && null != message.message.channel_id;
   if (isReadableChannelIdResult) {
-    isReadableChannelIdResult = set(5075).isReadableChannelId(message.message.channel_id);
-    const obj = set(5075);
+    isReadableChannelIdResult = set(5080).isReadableChannelId(message.message.channel_id);
+    const obj = set(5080);
   }
   if (isReadableChannelIdResult) {
     message = message.message;
@@ -240,7 +240,7 @@ prototype2["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded
     let tmp2 = item10009;
     let tmp3 = set;
     let tmp4 = dependencyMap;
-    let obj = set(5075);
+    let obj = set(5080);
     if (obj.isReadableChannelId(item10009.channel_id)) {
       let tmp5 = item10009;
       let tmp6 = self;
@@ -267,7 +267,7 @@ prototype2["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(cha
       }
       self.upsertMany(basicChannel.guild_id, channelId.channelId, channelId.messages, database);
     }
-    obj = set(5075);
+    obj = set(5080);
   }
 };
 prototype2["handleMessageDelete"] = function handleMessageDelete(id) {
@@ -302,14 +302,14 @@ prototype2["resetInMemoryState"] = function resetInMemoryState() {
 prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009, database) {
   const obj = itemsDefault;
   const result = closure_5.lastTimeConnectedChanged();
-  const KvMessage = set(5081).KvMessage;
+  const KvMessage = set(5086).KvMessage;
   const messagesTransactionResult = itemsDefault.messagesTransaction(database);
   messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), set(1956).ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = itemsDefault.messagesTransaction(database);
   const result = closure_5.lastTimeConnectedChanged();
-  const KvMessage = set(5081).KvMessage;
+  const KvMessage = set(5086).KvMessage;
   const obj = itemsDefault;
   messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), set(1956).ConflictOptions.Replace);
   messagesTransactionResult.trimChannel(guildId, channelId, closure_7.saveLimit(channelId));
@@ -322,7 +322,7 @@ prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, da
   while (iter !== undefined) {
     let tmp3 = set;
     let tmp4 = dependencyMap;
-    let KvMessage = set(5081).KvMessage;
+    let KvMessage = set(5086).KvMessage;
     let tmp5 = KvMessage;
     let tmp6 = guild_id;
     let tmp7 = channelId;
@@ -366,7 +366,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

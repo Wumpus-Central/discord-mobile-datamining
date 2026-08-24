@@ -1,12 +1,12 @@
-// === Module 4829: cancel ===
+// === Module 4834: cancel ===
 
-// Module 4829 (cancel)
+// Module 4834 (cancel)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import v1 from "v1" /* 514 */;
 import EventEmitter2 from "EventEmitter" /* 652 */;
-import items from "items" /* 4830 */;
-import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 4834 */;
+import items from "items" /* 4835 */;
+import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 4839 */;
 
 let obj = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };
 const EventEmitter = EventEmitter2.EventEmitter;

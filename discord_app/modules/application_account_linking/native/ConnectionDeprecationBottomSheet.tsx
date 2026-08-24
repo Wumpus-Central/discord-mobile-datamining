@@ -1,21 +1,21 @@
-// === Module 16157: ConnectionIcon ===
+// === Module 16254: ConnectionIcon ===
 
-// Module 16157 (ConnectionIcon)
+// Module 16254 (ConnectionIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import IconSizes from "IconSizes" /* 4747 */;
-import IconSizesDefault from "IconSizes" /* 4747 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7142 */;
-import GameIcon from "GameIcon" /* 7149 */;
-import GameIconDefault from "GameIcon" /* 7149 */;
+import IconSizes from "IconSizes" /* 4752 */;
+import IconSizesDefault from "IconSizes" /* 4752 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7180 */;
+import GameIcon from "GameIcon" /* 7187 */;
+import GameIconDefault from "GameIcon" /* 7187 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "set" /* 5221 */;
+import closure_5 from "addApplication" /* 4482 */;
+import closure_6 from "set" /* 5226 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function ConnectionIcon(arg0) {
@@ -207,7 +207,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(7145).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(7183).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

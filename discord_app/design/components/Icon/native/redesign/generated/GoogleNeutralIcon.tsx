@@ -1,10 +1,10 @@
-// === Module 6564: GoogleNeutralIcon ===
+// === Module 6597: GoogleNeutralIcon ===
 
-// Module 6564 (GoogleNeutralIcon)
+// Module 6597 (GoogleNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 6565 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6598 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

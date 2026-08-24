@@ -1,8 +1,8 @@
-// === Module 7199: experiment ===
+// === Module 7237: experiment ===
 
-// Module 7199 (experiment)
+// Module 7237 (experiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import createExperiment from "createExperiment" /* 4290 */;
 
 const items = [{ id: 1, label: "Enable Guild Space", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-06_guild_spaces", label: "Guild Space", defaultConfig: { enabled: false }, treatments: items });

@@ -1,11 +1,11 @@
-// === Module 13436: GuildProgressBar ===
+// === Module 13494: GuildProgressBar ===
 
-// Module 13436 (GuildProgressBar)
+// Module 13494 (GuildProgressBar)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 createCacheKey = { wrapper: null, progress: null };
@@ -21,7 +21,7 @@ export default function GuildProgressBar(percent) {
   percent = percent.percent;
   let sharedValue;
   const tmp = callback();
-  let obj = percent(4115);
+  let obj = percent(4119);
   sharedValue = obj.useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = React.useEffect(() => {
@@ -35,8 +35,8 @@ export default function GuildProgressBar(percent) {
   fn.__initData = closure_7;
   obj = { style: items1, children: null };
   items1 = [tmp.wrapper, percent.style];
-  const animatedStyle = percent(4115).useAnimatedStyle(fn);
+  const animatedStyle = percent(4119).useAnimatedStyle(fn);
   const items2 = [tmp.progress, animatedStyle];
-  obj[1] = jsx(sharedValue(4115).View, { style: items2 });
+  obj[1] = jsx(sharedValue(4119).View, { style: items2 });
   return <View style={items1}>{null}</View>;
 };

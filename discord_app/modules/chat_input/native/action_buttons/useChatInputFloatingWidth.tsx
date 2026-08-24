@@ -1,8 +1,8 @@
-// === Module 11424: useChatInputFloatingWidth ===
+// === Module 11475: useChatInputFloatingWidth ===
 
-// Module 11424 (useChatInputFloatingWidth)
+// Module 11475 (useChatInputFloatingWidth)
 import closure_2 from "noop" /* 19 */;
-import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "TextAreaCta" /* 11149 */;
+import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "TextAreaCta" /* 11188 */;
 
 const require = arg1;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };

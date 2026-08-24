@@ -1,9 +1,9 @@
-// === Module 1971: databaseName ===
+// === Module 1972: databaseName ===
 
-// Module 1971 (databaseName)
+// Module 1972 (databaseName)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
-import getUserIdAll from "getUserId" /* 1972 */;
+import getUserIdAll from "getUserId" /* 1973 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 import importDefaultResult from "dispatcher" /* 709 */;
@@ -31,7 +31,7 @@ function _trySpeculativelyOpenDatabaseAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -295,7 +295,7 @@ function carefullySpeculativelyOpen(userId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

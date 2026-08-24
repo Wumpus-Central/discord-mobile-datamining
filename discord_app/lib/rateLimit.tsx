@@ -1,6 +1,6 @@
-// === Module 13229: rateLimit ===
+// === Module 13284: rateLimit ===
 
-// Module 13229 (rateLimit)
+// Module 13284 (rateLimit)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/rateLimit.tsx");

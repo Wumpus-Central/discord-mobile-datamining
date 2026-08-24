@@ -1,9 +1,9 @@
-// === Module 7582: initialize ===
+// === Module 7620: initialize ===
 
-// Module 7582 (initialize)
+// Module 7620 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "reinjectEphemerals" /* 4994 */;
+import closure_0 from "reinjectEphemerals" /* 4999 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

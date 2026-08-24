@@ -1,21 +1,21 @@
-// === Module 4503: _migrateDefaultStorage ===
+// === Module 4507: _migrateDefaultStorage ===
 
-// Module 4503 (_migrateDefaultStorage)
+// Module 4507 (_migrateDefaultStorage)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
-import isClipsEnabled from "isClipsEnabled" /* 4526 */;
-import isStreamKey from "isStreamKey" /* 4531 */;
-import apexExperimentDefault from "apexExperiment" /* 4534 */;
-import apexExperiment from "apexExperiment" /* 4535 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4501 */;
+import isClipsEnabled from "isClipsEnabled" /* 4531 */;
+import isStreamKey from "isStreamKey" /* 4536 */;
+import apexExperimentDefault from "apexExperiment" /* 4539 */;
+import apexExperiment from "apexExperiment" /* 4540 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4504 */;
+import closure_4 from "initialize" /* 4508 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import result from "result" /* 4523 */;
+import result from "result" /* 4528 */;
 import { VoiceFlags } from "ME" /* 676 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4529 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -33,7 +33,7 @@ function _migrateDefaultStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(4004).app;
+          const app = callback2(4007).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };
@@ -95,7 +95,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4525);
+            obj = callback(4530);
             callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }

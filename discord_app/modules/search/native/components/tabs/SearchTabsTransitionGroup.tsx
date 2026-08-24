@@ -1,7 +1,7 @@
-// === Module 15939: getItemKey ===
+// === Module 16036: getItemKey ===
 
-// Module 15939 (getItemKey)
-import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
+// Module 16036 (getItemKey)
+import ManaContext from "ManaContext" /* 4107 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -138,5 +138,5 @@ let result = require("set").fileFinishedImporting("modules/search/native/compone
 
 export default function SearchTabsTransitionGroup(state) {
   const items = [state.state];
-  return jsx(wrapChildrenDefault.TransitionGroup, { items, getItemKey, renderItem });
+  return jsx(ManaContext.TransitionGroup, { items, getItemKey, renderItem });
 };

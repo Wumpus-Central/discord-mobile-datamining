@@ -1,11 +1,11 @@
-// === Module 16210: ? ===
+// === Module 16307: ? ===
 
-// Module 16210
+// Module 16307
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5049 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -23,10 +23,10 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     flag = false;
   }
   const tmp = callback();
-  let obj = channel(15606);
+  let obj = channel(15672);
   const baseChannelUnreadBadgeState = obj.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(14663)(channel, { unread });
+  const tmp7 = flag(14731)(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
     let tmp2Result = tmp2(11);
@@ -39,9 +39,9 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const tmp4 = flag(16196)();
-  const fontScale = channel(4751).useFontScale();
-  tmp2Result = tmp2(16197);
+  const tmp4 = flag(16293)();
+  const fontScale = channel(4756).useFontScale();
+  tmp2Result = tmp2(16294);
   obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = {
@@ -56,8 +56,8 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   items2 = [channel.id];
   const merged = Object.assign(obj);
   obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
-  const tmp5Result = channel(4751);
-  obj1[5] = jsx(flag(16200), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const tmp5Result = channel(4756);
+  obj1[5] = jsx(flag(16297), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
     const obj3 = { channel: null, message: null, color: null, muted: null, layout: null };
@@ -65,15 +65,15 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
     obj3[1] = tmp7;
     obj3[2] = str;
     obj3[3] = muted;
-    obj3[4] = tmp5(4071).ChannelListLayoutTypes.COMPACT;
-    tmp11Result = tmp11(tmp5(10050).ChannelRowPreview, obj3);
+    obj3[4] = tmp5(4074).ChannelListLayoutTypes.COMPACT;
+    tmp11Result = tmp11(tmp5(10089).ChannelRowPreview, obj3);
   }
   obj1[6] = tmp11Result;
   obj1[7] = extractTimestampResult;
-  obj1[8] = flag(4984)(channel);
+  obj1[8] = flag(4989)(channel);
   obj1[9] = fontScale;
-  obj.children = flag(16209)(obj1);
-  return tmp2Result(jsx(channel(5433).PressableHighlight, {
+  obj.children = flag(16306)(obj1);
+  return tmp2Result(jsx(channel(5438).PressableHighlight, {
     onPress: importAllResult.useCallback(() => {
       let obj = channel(closure_1_2[3]);
       obj = { navigationReplace: flag };

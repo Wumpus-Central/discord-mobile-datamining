@@ -1,10 +1,10 @@
-// === Module 12061: MoreVerticalIcon ===
+// === Module 12113: MoreVerticalIcon ===
 
-// Module 12061 (MoreVerticalIcon)
+// Module 12113 (MoreVerticalIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 12062 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 12114 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

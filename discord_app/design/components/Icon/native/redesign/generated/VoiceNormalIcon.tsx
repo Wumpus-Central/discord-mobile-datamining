@@ -1,10 +1,10 @@
-// === Module 6896: VoiceNormalIcon ===
+// === Module 6934: VoiceNormalIcon ===
 
-// Module 6896 (VoiceNormalIcon)
+// Module 6934 (VoiceNormalIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 6841 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6879 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

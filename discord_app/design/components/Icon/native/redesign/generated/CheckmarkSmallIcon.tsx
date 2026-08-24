@@ -1,10 +1,10 @@
-// === Module 6933: CheckmarkSmallIcon ===
+// === Module 6971: CheckmarkSmallIcon ===
 
-// Module 6933 (CheckmarkSmallIcon)
+// Module 6971 (CheckmarkSmallIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 6934 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 6972 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

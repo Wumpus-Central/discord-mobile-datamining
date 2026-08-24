@@ -1,12 +1,12 @@
-// === Module 16158: _claimIncentivizedAccountLinkingReward ===
+// === Module 16255: _claimIncentivizedAccountLinkingReward ===
 
-// Module 16158 (_claimIncentivizedAccountLinkingReward)
+// Module 16255 (_claimIncentivizedAccountLinkingReward)
 import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5038 */;
+import initializeDefault from "initialize" /* 5043 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recomputeFromAppTokens" /* 5289 */;
-import closure_5 from "map" /* 16159 */;
+import closure_4 from "recomputeFromAppTokens" /* 5294 */;
+import closure_5 from "map" /* 16256 */;
 import ME from "ME" /* 676 */;
 
 let require = arg1;
@@ -29,7 +29,7 @@ function _claimIncentivizedAccountLinkingReward() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

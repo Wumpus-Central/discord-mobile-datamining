@@ -1,6 +1,6 @@
-// === Module 5002: getFpMessageInfo ===
+// === Module 5007: getFpMessageInfo ===
 
-// Module 5002 (getFpMessageInfo)
+// Module 5007 (getFpMessageInfo)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
@@ -55,7 +55,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require(5003) /* apexExperiment */;
+    obj = require(5008) /* apexExperiment */;
   },
   set: undefined
 });

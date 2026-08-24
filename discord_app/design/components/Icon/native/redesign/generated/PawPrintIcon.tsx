@@ -1,10 +1,10 @@
-// === Module 13981: PawPrintIcon ===
+// === Module 14049: PawPrintIcon ===
 
-// Module 13981 (PawPrintIcon)
+// Module 14049 (PawPrintIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 13982 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 14050 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

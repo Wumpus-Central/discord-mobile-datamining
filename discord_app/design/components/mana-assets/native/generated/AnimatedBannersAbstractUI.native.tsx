@@ -1,10 +1,10 @@
-// === Module 5498: AnimatedBannersAbstractUI ===
+// === Module 5503: AnimatedBannersAbstractUI ===
 
-// Module 5498 (AnimatedBannersAbstractUI)
+// Module 5503 (AnimatedBannersAbstractUI)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5499 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5504 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AnimatedBannersAbstractUI.native.tsx");

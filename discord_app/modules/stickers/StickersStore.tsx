@@ -1,13 +1,13 @@
-// === Module 6769: loadSavedGuildStickers ===
+// === Module 6806: loadSavedGuildStickers ===
 
-// Module 6769 (loadSavedGuildStickers)
+// Module 6806 (loadSavedGuildStickers)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "allGuildIds" /* 1393 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "parseServerGuildSticker" /* 6770 */;
-import closure_7 from "parseServerPackSticker" /* 6771 */;
+import closure_6 from "parseServerGuildSticker" /* 6807 */;
+import closure_7 from "parseServerPackSticker" /* 6808 */;
 
 const require = arg1;
 function loadSavedGuildStickers() {
@@ -34,7 +34,7 @@ function _loadSavedGuildStickers() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ function _loadSavedGuildStickers() {
               c0 = databaseResult;
               if (null != databaseResult) {
                 Loaded = tmp28.Loaded;
-                let obj2 = closure_1_0(1974);
+                let obj2 = closure_1_0(1975);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };

@@ -1,7 +1,7 @@
-// === Module 7198: isGuildSpaceAdmin ===
+// === Module 7236: isGuildSpaceAdmin ===
 
-// Module 7198 (isGuildSpaceAdmin)
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+// Module 7236 (isGuildSpaceAdmin)
+import closure_2 from "getUncachedChannelPermissions" /* 4024 */;
 import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
@@ -34,9 +34,9 @@ export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActi
   if (id != null) {
     id = id.id;
   }
-  const guildSpaceExperimentEnabled = _require(7199).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const guildSpaceExperimentEnabled = _require(7237).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   _require = id;
-  const obj = _require(7199);
+  const obj = _require(7237);
   const tmp = _require;
   const items = [closure_2];
   const items1 = [id];

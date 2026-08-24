@@ -1,8 +1,8 @@
-// === Module 10036: experiment ===
+// === Module 10075: experiment ===
 
-// Module 10036 (experiment)
+// Module 10075 (experiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4286 */;
+import createExperiment from "createExperiment" /* 4290 */;
 
 const items = [{ id: 1, label: "Automod Mention Raid Limit", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2022-12_mention_raid_limit", label: "Automod Mention Raid Limit", defaultConfig: { enabled: false }, treatments: items });

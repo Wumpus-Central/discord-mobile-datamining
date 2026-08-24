@@ -1,9 +1,9 @@
-// === Module 13910: _initialize ===
+// === Module 13978: _initialize ===
 
-// Module 13910 (_initialize)
+// Module 13978 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4720 */;
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
+import initializeDefault from "initialize" /* 4726 */;
+import closure_2 from "recountRelationshipTypes" /* 5411 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
 initializeDefault;

@@ -1,12 +1,12 @@
-// === Module 12592: CameraButton ===
+// === Module 12646: CameraButton ===
 
-// Module 12592 (CameraButton)
+// Module 12646 (CameraButton)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 8674 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12522 */;
-import registerAssetDefault from "registerAsset" /* 12593 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 8711 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12576 */;
+import registerAssetDefault from "registerAsset" /* 12647 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -46,12 +46,12 @@ export const GridButton = function GridButton(channel) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1236).intl;
       obj[0] = intl.string(channel(1236).t.HK4JIu);
-      obj[1] = tmp(12594);
+      obj[1] = tmp(12648);
       obj[2] = function onPress() {
         return closure_1_1(closure_1_2[11]).selectParticipant(channel.id, null);
       };
-      tmp4 = jsx(tmp(12522), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-      const tmpResult = tmp(12522);
+      tmp4 = jsx(tmp(12576), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
+      const tmpResult = tmp(12576);
     }
   }
   return tmp4;

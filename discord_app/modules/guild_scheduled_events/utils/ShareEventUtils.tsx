@@ -1,6 +1,6 @@
-// === Module 8803: SHARE_EVENT_DETAILS_LINK ===
+// === Module 8840: SHARE_EVENT_DETAILS_LINK ===
 
-// Module 8803 (SHARE_EVENT_DETAILS_LINK)
+// Module 8840 (SHARE_EVENT_DETAILS_LINK)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");

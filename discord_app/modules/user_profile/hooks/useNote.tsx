@@ -1,9 +1,9 @@
-// === Module 12159: _fetchNote ===
+// === Module 12211: _fetchNote ===
 
-// Module 12159 (_fetchNote)
+// Module 12211 (_fetchNote)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getNote" /* 12160 */;
+import closure_5 from "getNote" /* 12212 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _fetchNote() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

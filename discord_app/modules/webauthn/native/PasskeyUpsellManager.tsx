@@ -1,14 +1,14 @@
-// === Module 14083: handlePasskeyUpsellShow ===
+// === Module 14151: handlePasskeyUpsellShow ===
 
-// Module 14083 (handlePasskeyUpsellShow)
+// Module 14151 (handlePasskeyUpsellShow)
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import initializeDefault from "initialize" /* 5038 */;
-import _crypto from "_crypto" /* 8588 */;
-import _modDef14084 from "module_14084" /* 14084 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4200 */;
+import initializeDefault from "initialize" /* 5043 */;
+import _crypto from "_crypto" /* 8627 */;
+import _modDef14152 from "module_14152" /* 14152 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "hasFetchedCredentials" /* 14077 */;
+import closure_5 from "hasFetchedCredentials" /* 14145 */;
 import { LoginStates } from "ME" /* 676 */;
 
 require = arg1;
@@ -32,20 +32,20 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
     if (_crypto.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
-          let tmpResult = tmp(4196);
+          let tmpResult = tmp(4200);
           if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1377).DismissibleContent.PASSWORDLESS_UPSELL)) {
             if (!closure_5.hasFetchedCredentials()) {
-              tmpResult = tmp(4229);
+              tmpResult = tmp(4233);
               if (!tmpResult.isModalOpen()) {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14084.openPasskeyUpsell();
-                    const obj6 = _modDef14084;
+                    _modDef14152.openPasskeyUpsell();
+                    const obj6 = _modDef14152;
                   } else if (!c7) {
                     c7 = true;
-                    const webAuthnCredentials = tmp(5264).fetchWebAuthnCredentials();
-                    const tmpResult1 = tmp(5264);
+                    const webAuthnCredentials = tmp(5269).fetchWebAuthnCredentials();
+                    const tmpResult1 = tmp(5269);
                   }
                 }
                 tmp6 = undefined !== currentUser && currentUser.verified;

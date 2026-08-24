@@ -1,6 +1,6 @@
-// === Module 11148: VoiceMessageAnimationState ===
+// === Module 11187: VoiceMessageAnimationState ===
 
-// Module 11148 (VoiceMessageAnimationState)
+// Module 11187 (VoiceMessageAnimationState)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/voice_messages/VoiceMessageConstants.tsx");

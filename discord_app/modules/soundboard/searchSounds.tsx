@@ -1,9 +1,9 @@
-// === Module 7303: trackSearchStart ===
+// === Module 7341: trackSearchStart ===
 
-// Module 7303 (trackSearchStart)
+// Module 7341 (trackSearchStart)
 import debounceDefault from "debounce" /* 636 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import closure_3 from "getEmojiToGroupId" /* 6764 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -45,13 +45,13 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result = null;
     if (null != name.emojiName) {
-      result = stateFromStores(4034).convertSurrogateToName(name.emojiName, false);
-      const obj2 = stateFromStores(4034);
+      result = stateFromStores(4037).convertSurrogateToName(name.emojiName, false);
+      const obj2 = stateFromStores(4037);
     }
     let byName = null;
     if (null != result) {
-      byName = stateFromStores(4034).getByName(result);
-      const obj3 = stateFromStores(4034);
+      byName = stateFromStores(4037).getByName(result);
+      const obj3 = stateFromStores(4037);
     }
     if (null != customEmojiById) {
       const items = [customEmojiById.name];
@@ -100,8 +100,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(7304).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(7304);
+      result1 = lib(7342).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(7342);
     }
     let sum7 = sum6;
     if (result1) {

@@ -1,6 +1,6 @@
-// === Module 12559: set ===
+// === Module 12613: set ===
 
-// Module 12559 (set)
+// Module 12613 (set)
 import set from "set" /* 2 */;
 
 const deep_noise_suppression = "deep_noise_suppression";
@@ -25,8 +25,8 @@ export default function getEffectiveNoiseCancellation(arg0, arg1) {
           tmp5 = arg1 !== deep_noise_suppression;
         }
         if (!tmp5) {
-          tmp5 = !tmp(12560).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
-          const tmpResult1 = tmp(12560);
+          tmp5 = !tmp(12614).getWindowsAudioEffectsExperimentConfig({ location: "setNoiseCancellation" }).preferSystemEffects;
+          const tmpResult1 = tmp(12614);
         }
         if (tmp5) {
           tmp5 = arg0;

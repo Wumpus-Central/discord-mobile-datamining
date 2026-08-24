@@ -1,10 +1,10 @@
-// === Module 11336: fileTypesFormattedStringHelper ===
+// === Module 11387: fileTypesFormattedStringHelper ===
 
-// Module 11336 (fileTypesFormattedStringHelper)
+// Module 11387 (fileTypesFormattedStringHelper)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "_getSystemLocale" /* 1995 */;
 
 require = arg1;
 function fileTypesFormattedStringHelper(arr, locale) {

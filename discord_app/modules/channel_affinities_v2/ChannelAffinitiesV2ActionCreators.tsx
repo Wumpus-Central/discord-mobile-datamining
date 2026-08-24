@@ -1,10 +1,10 @@
-// === Module 15540: fetchChannelAffinitiesV2 ===
+// === Module 15605: fetchChannelAffinitiesV2 ===
 
-// Module 15540 (fetchChannelAffinitiesV2)
+// Module 15605 (fetchChannelAffinitiesV2)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "hasConsented" /* 5258 */;
-import closure_4 from "map" /* 15538 */;
+import closure_3 from "hasConsented" /* 5263 */;
+import closure_4 from "map" /* 15603 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

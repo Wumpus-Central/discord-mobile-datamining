@@ -1,27 +1,27 @@
-// === Module 9708: getCurrentUserSigningKey ===
+// === Module 9747: getCurrentUserSigningKey ===
 
-// Module 9708 (getCurrentUserSigningKey)
+// Module 9747 (getCurrentUserSigningKey)
 import byteLengthDefault from "byteLength" /* 206 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import combinedDefault from "combined" /* 1993 */;
-import tDefault from "t" /* 3975 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import getNicknameDefault from "getNickname" /* 4796 */;
-import setDefault2 from "set" /* 4827 */;
-import set from "set" /* 9693 */;
-import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9711 */;
-import _modDef9712 from "module_9712" /* 9712 */;
-import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9717 */;
+import combinedDefault from "combined" /* 1994 */;
+import tDefault from "t" /* 3978 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
+import getNicknameDefault from "getNickname" /* 4801 */;
+import setDefault2 from "set" /* 4832 */;
+import set from "set" /* 9732 */;
+import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9750 */;
+import _modDef9751 from "module_9751" /* 9751 */;
+import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9756 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "initialize" /* 4558 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_7 from "createRTCConnection" /* 4544 */;
+import closure_8 from "initialize" /* 4563 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "items" /* 9709 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import closure_10 from "items" /* 9748 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9749 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -92,7 +92,7 @@ function _isPublicKeyMatch() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -195,7 +195,7 @@ function _uploadCurrentUserPublicKey() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -269,7 +269,7 @@ function _uploadCurrentUserPublicKey() {
             const result = obj.addUploadedKeyVersion(callback);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp25) {
           signature = tmp25;
@@ -314,7 +314,7 @@ function _ensureCurrentUserPublicKey() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -348,7 +348,7 @@ function _ensureCurrentUserPublicKey() {
             return obj;
           }
           c1 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp8) {
           c1 = tmp;
           throw tmp8;
@@ -383,7 +383,7 @@ function _isCurrentUserPublicKeyMatch() {
           obj[0] = key;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -577,7 +577,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9712;
+  let obj = _modDef9751;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = _require(1236).intl;
   obj[0] = intl.string(_require(1236).t.hdL152);
@@ -605,7 +605,7 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9712.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9751.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = tDefault();

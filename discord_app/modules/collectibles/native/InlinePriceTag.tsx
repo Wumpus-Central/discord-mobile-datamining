@@ -1,26 +1,26 @@
-// === Module 9580: PriceTag ===
+// === Module 9617: PriceTag ===
 
-// Module 9580 (PriceTag)
+// Module 9617 (PriceTag)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import Text from "Text" /* 4734 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
-import useCurrentUser from "useCurrentUser" /* 9176 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9249 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9581 */;
-import useProductDisableState from "useProductDisableState" /* 9582 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 9583 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4042 */;
+import Text from "Text" /* 4739 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5318 */;
+import useCurrentUser from "useCurrentUser" /* 9213 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9270 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9286 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9618 */;
+import useProductDisableState from "useProductDisableState" /* 9619 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 9620 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateProduct" /* 5319 */;
+import closure_5 from "updateProduct" /* 5324 */;
 import { ShopCtaEnum } from "items" /* 678 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function PriceTag(accessibilityLabel) {
@@ -49,14 +49,14 @@ function OrbsPriceTag(arg0) {
   } else {
     let result = product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
     if (result) {
-      let tmp16Result = tmp16(5312);
+      let tmp16Result = tmp16(5317);
       result = tmp16Result.isOrbsExclusiveProduct(product);
     }
-    tmp16Result = tmp16(5313);
+    tmp16Result = tmp16(5318);
     const productDiscount = tmp16Result.getProductDiscount(product, eligibleForShopDiscount, constants2.DISCORD_ORB);
     ({ original, discountPercentage } = productDiscount);
     if (result) {
-      result = discountPercentage >= tmp16(5313).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
+      result = discountPercentage >= tmp16(5318).DISCOUNT_DISPLAY_MINIMUM_THRESHOLD;
     }
     const items = [tmp.priceTagRow, ];
     const canAfford = vcData.canAfford;
@@ -77,7 +77,7 @@ function OrbsPriceTag(arg0) {
       obj[2] = tmp.strikedOrbPrice;
       obj1 = { color: "interactive-text-active", size: "sm", style: null };
       obj1[2] = tmp.orbsIcon;
-      obj[3] = callback(tmp16(9238).OrbsIcon, obj1);
+      obj[3] = callback(tmp16(9275).OrbsIcon, obj1);
       const intl = tmp16(1236).intl;
       const obj2 = { orbAmount: null };
       obj2[0] = original.toString();
@@ -91,7 +91,7 @@ function OrbsPriceTag(arg0) {
     if (!result) {
       const obj4 = { color: "interactive-text-active", size: "sm", style: null };
       obj4[2] = tmp.orbsIcon;
-      tmp10Result = tmp10(tmp16(9238).OrbsIcon, obj4);
+      tmp10Result = tmp10(tmp16(9275).OrbsIcon, obj4);
     }
     obj3[2] = tmp10Result;
     const intl2 = tmp16(1236).intl;
@@ -191,7 +191,7 @@ export default function InlinePriceTag(arg0) {
   const isProfileFramesEarlyAccessPhase = obj7.useIsProfileFramesEarlyAccessPhase("InlinePriceTag");
   if (stateFromStores) {
     if (null == formattedPriceForCollectiblesProduct) {
-      return callback(tmp2(9258).CollectiblesShopPricePlaceholder, {});
+      return callback(tmp2(9295).CollectiblesShopPricePlaceholder, {});
     }
   }
   if (null == formattedPriceForCollectiblesProduct) {
@@ -210,9 +210,9 @@ export default function InlinePriceTag(arg0) {
     if (!canUseShopDiscountsResult) {
       tmp13 = tmp11;
     }
-    let tmp2Result = tmp2(9249);
+    let tmp2Result = tmp2(9286);
     const formattedPriceForCollectiblesProduct1 = tmp2Result.getFormattedPriceForCollectiblesProduct(product, true, true);
-    tmp2Result = tmp2(5313);
+    tmp2Result = tmp2(5318);
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj1 = { style: null, children: null };
@@ -258,7 +258,7 @@ export default function InlinePriceTag(arg0) {
         const items3 = [, ];
         ({ nitroIcon: arr4[0], nitroIconSubscribeNow: arr4[1] } = tmp);
         obj8[1] = items3;
-        const items4 = [tmp17(tmp2(7988).NitroWheelIcon, obj8), ];
+        const items4 = [tmp17(tmp2(8027).NitroWheelIcon, obj8), ];
         let androidTextPadding;
         if (tmp2Result1.isAndroid()) {
           androidTextPadding = tmp.androidTextPadding;
@@ -269,10 +269,10 @@ export default function InlinePriceTag(arg0) {
         const obj10 = { price: null, subscribeNowHook: null };
         obj10[0] = formattedPriceForCollectiblesProduct1;
         obj10[1] = function subscribeNowHook(children) {
-          return closure_1_9(closure_1_0(4734).Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
+          return closure_1_9(closure_1_0(4739).Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
         };
         obj9[3] = intl3.format(tmp2(1236).t.Kxw2LT, obj10);
-        items4[1] = tmp17(tmp2(4734).Text, obj9);
+        items4[1] = tmp17(tmp2(4739).Text, obj9);
         obj7[3] = items4;
         obj6[1] = tmp15(closure_3, obj7);
         tmp17Result = tmp17(tmp16, obj6);
@@ -306,14 +306,14 @@ export default function InlinePriceTag(arg0) {
         androidTextPadding1 = tmp.androidTextPadding;
       }
       obj12[4] = androidTextPadding1;
-      if (shopDiscountSource === tmp2(5313).ShopDiscountSource.THIRDPARTY) {
+      if (shopDiscountSource === tmp2(5318).ShopDiscountSource.THIRDPARTY) {
         const obj14 = { color: "interactive-text-active", style: null };
         obj14[1] = tmp.nitroIcon;
-        let tmp17Result2 = tmp17(tmp2(8014).TagIcon, obj14);
+        let tmp17Result2 = tmp17(tmp2(8053).TagIcon, obj14);
       } else {
         const obj15 = { color: "interactive-text-active", style: null };
         obj15[1] = tmp.nitroIcon;
-        tmp17Result2 = tmp17(tmp2(7988).NitroWheelIcon, obj15);
+        tmp17Result2 = tmp17(tmp2(8027).NitroWheelIcon, obj15);
       }
       obj12[5] = tmp17Result2;
       tmp17(tmp18, obj12);

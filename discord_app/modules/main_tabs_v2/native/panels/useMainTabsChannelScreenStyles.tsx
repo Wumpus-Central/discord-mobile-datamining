@@ -1,9 +1,9 @@
-// === Module 15787: useMainTabsChannelScreenStyles ===
+// === Module 15856: useMainTabsChannelScreenStyles ===
 
-// Module 15787 (useMainTabsChannelScreenStyles)
+// Module 15856 (useMainTabsChannelScreenStyles)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_2 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 createCacheKey = { elevation: null };
@@ -66,7 +66,7 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
   fn.__closure = { freezeValue: parentFreezeValue, isDragging, translateX, maxWidth, elevationStyle: elevation, isCompletelyCovered: derivedValue };
   fn.__workletHash = 16765484569296;
   fn.__initData = closure_4;
-  const animatedStyle = _require(4115).useAnimatedStyle(fn);
+  const animatedStyle = _require(4119).useAnimatedStyle(fn);
   let items = [tmp, animatedStyle];
   return React.useMemo(() => {
     const items = [elevation.elevation, animatedStyle];

@@ -1,11 +1,11 @@
-// === Module 16620: _initialize ===
+// === Module 16716: _initialize ===
 
-// Module 16620 (_initialize)
+// Module 16716 (_initialize)
 import timestampDefault from "timestamp" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 668 */;
-import initializeDefault from "initialize" /* 5038 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 16621 */;
-import closure_3 from "result" /* 5053 */;
+import initializeDefault from "initialize" /* 5043 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 16717 */;
+import closure_3 from "result" /* 5058 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -46,7 +46,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let obj = self(16621);
+    let obj = self(16717);
     if (null != obj) {
       tmp._isDelivering = true;
       const pendingReports = obj.getPendingReports();

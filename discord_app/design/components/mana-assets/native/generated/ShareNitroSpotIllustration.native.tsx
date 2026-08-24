@@ -1,10 +1,10 @@
-// === Module 6148: ShareNitroSpotIllustration ===
+// === Module 6179: ShareNitroSpotIllustration ===
 
-// Module 6148 (ShareNitroSpotIllustration)
+// Module 6179 (ShareNitroSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 6149 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 6180 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ShareNitroSpotIllustration.native.tsx");

@@ -1,7 +1,7 @@
-// === Module 15979: useMediaKeyboardConfig ===
+// === Module 16076: useMediaKeyboardConfig ===
 
-// Module 15979 (useMediaKeyboardConfig)
-import useUploadDisabledDefault from "useUploadDisabled" /* 11397 */;
+// Module 16076 (useMediaKeyboardConfig)
+import useUploadDisabledDefault from "useUploadDisabled" /* 11448 */;
 import closure_3 from "noop" /* 19 */;
 import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1624 */;
 import ME from "ME" /* 676 */;
@@ -17,11 +17,11 @@ export default function useMediaKeyboardConfig(arg0) {
   let canStartThread;
   MediaKeyboardTarget = undefined;
   let mediaKeyboardDraftType;
-  const tmp4 = context(7508).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
+  const tmp4 = context(7546).useCanPostPollsInChannel(channel) && context.target !== MediaKeyboardTarget.COMMAND;
   importDefault = tmp4;
   const tmp5 = useUploadDisabledDefault(channel);
   dependencyMap = tmp5;
-  let tmp2Result = tmp2(7234);
+  let tmp2Result = tmp2(7272);
   canStartThread = tmp2Result.useCanStartThread(channel);
   if (canStartThread) {
     const GUILD_THREADS_ONLY = mediaKeyboardDraftType.GUILD_THREADS_ONLY;
@@ -33,11 +33,11 @@ export default function useMediaKeyboardConfig(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  tmp2Result = tmp2(8446);
+  tmp2Result = tmp2(8485);
   const tmp8 = tmp2Result.useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
-  let obj = context(7508);
-  mediaKeyboardDraftType = context(10269).getMediaKeyboardDraftType(context.target);
+  let obj = context(7546);
+  mediaKeyboardDraftType = context(10308).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

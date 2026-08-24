@@ -1,34 +1,35 @@
-// === Module 8324: transformToRowGeneratedComponent ===
+// === Module 8363: transformToRowGeneratedComponent ===
 
-// Module 8324 (transformToRowGeneratedComponent)
+// Module 8363 (transformToRowGeneratedComponent)
 import setDefault from "set" /* 687 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4810 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8320 */;
-import nativeStylePropertiesDefault from "nativeStyleProperties" /* 8321 */;
-import MediaGalleryItemType from "MediaGalleryItemType" /* 8340 */;
+import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4815 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4816 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8360 */;
+import nativeStylePropertiesDefault from "nativeStyleProperties" /* 8361 */;
+import MediaGalleryItemType from "MediaGalleryItemType" /* 8379 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
-import { CheckpointVersions } from "CheckpointPersonas" /* 4806 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8325 */;
+import { CheckpointVersions } from "CheckpointPersonas" /* 4811 */;
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8364 */;
 import importDefaultResult from "priv" /* 1405 */;
 
 require = arg1;
 function transformToRowGeneratedComponent(message, accessory) {
-  const _require = message;
-  importDefault = accessory;
+  let _require = message;
+  let initialSnowflakeSelectOptions = accessory;
   message = message.message;
+  let f81931 = message;
   ({ interaction, guildId, shouldDisableInteractiveComponents, shouldObscureSpoiler } = message);
   const enabledContentHarmTypeFlags = message.enabledContentHarmTypeFlags;
   ({ shouldShowMosaicMediaDescriptions: processColor, shouldAgeVerify } = message);
   const type = accessory.type;
   let tmp = _require;
-  let tmp2 = message;
+  let tmp2 = f81931;
   ({ colors, markdownConfigs } = message);
-  if (_require(message[6]).ComponentType.ACTION_ROW === type) {
+  if (_require(f81931[6]).ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
-    const mapped = components.map((arg0) => {
+    let mapped = components.map((arg0) => {
       const tmp = closure_1_8(closure_0, arg0);
       let tmp2 = null;
       if (null != tmp) {
@@ -45,8 +46,8 @@ function transformToRowGeneratedComponent(message, accessory) {
     return obj;
   } else if (tmp(tmp2[6]).ComponentType.BUTTON === type) {
     if (accessory.style === tmp(tmp2[6]).ButtonStyle.PREMIUM) {
-      const intl9 = tmp(tmp2[8]).intl;
-      let label = intl9.string(tmp(tmp2[8]).t.CHa0vN);
+      const intl5 = tmp(tmp2[8]).intl;
+      let label = intl5.string(tmp(tmp2[8]).t.CHa0vN);
     } else {
       label = accessory.label;
     }
@@ -60,7 +61,7 @@ function transformToRowGeneratedComponent(message, accessory) {
     const initialStringSelectOptions = tmp(tmp2[10]).getInitialStringSelectOptions(accessory, message.id);
     const mapped1 = initialStringSelectOptions.map((arg0) => {
       closure_0 = arg0;
-      const options = accessory.options;
+      const options = initialSnowflakeSelectOptions.options;
       return options.findIndex((value) => value.value === closure_0);
     });
     const found1 = mapped1.filter((arg0) => -1 !== arg0);
@@ -71,28 +72,28 @@ function transformToRowGeneratedComponent(message, accessory) {
     obj1.selectedOptions = found1;
     const tmpResult2 = tmp(tmp2[9]);
     obj1.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    _require = accessory;
+    initialSnowflakeSelectOptions = found1;
+    f81931 = (arg0) => initialSnowflakeSelectOptions.options[arg0].label;
     const tmpResult3 = tmp(tmp2[7]);
-    if (tmpResult4.shouldSkipAccessibilityLabels()) {
-      let selectPlaceholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-      const tmpResult5 = tmp(tmp2[7]);
-    } else {
-      if (null != found1) {
-        if (0 !== found1.length) {
-          const mapped2 = found1.map((arg0) => accessory.options[arg0].label);
-          const intl7 = tmp(tmp2[8]).intl;
-          const obj2 = { selections: null };
-          obj2[0] = mapped2.join(",");
-          selectPlaceholder = intl7.formatToPlainString(tmp(tmp2[8]).t["I/ROH+"], obj2);
+    const obj2 = { expensive: null, cheap: null };
+    obj2[0] = function expensive() {
+      if (null != initialSnowflakeSelectOptions) {
+        if (0 !== arr.length) {
+          const mapped = arr.map(f81931);
+          const intl = accessory(f81931[8]).intl;
+          const obj = { selections: null };
+          obj[0] = mapped.join(",");
+          return intl.formatToPlainString(accessory(f81931[8]).t["I/ROH+"], obj);
         }
       }
-      const selectPlaceholder1 = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-      const intl8 = tmp(tmp2[8]).intl;
-      const obj3 = { placeholder: null };
-      obj3[0] = selectPlaceholder1;
-      selectPlaceholder = intl8.formatToPlainString(tmp(tmp2[8]).t["3aednA"], obj3);
-      const tmpResult6 = tmp(tmp2[7]);
-    }
-    obj1.accessibilityLabel = selectPlaceholder;
+      const placeholder = accessory(f81931[7]).getSelectPlaceholder(accessory);
+      const intl2 = accessory(f81931[8]).intl;
+      return intl2.formatToPlainString(accessory(f81931[8]).t["3aednA"], { placeholder });
+    };
+    const tmpResult4 = tmp(tmp2[19]);
+    obj2[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    obj1.accessibilityLabel = tmpResult4.getAccessibilityLabelOrCheapFallbackUnsafe(obj2);
     return obj1;
   } else {
     if (tmp(tmp2[6]).ComponentType.USER_SELECT !== type) {
@@ -107,10 +108,10 @@ function transformToRowGeneratedComponent(message, accessory) {
               }
               let tmp73 = null;
               if (null != tmp72) {
-                const obj4 = {};
+                const obj3 = {};
                 const merged3 = Object.assign(accessory);
                 const components1 = accessory.components;
-                const mapped3 = components1.map((arg0) => {
+                const mapped2 = components1.map((arg0) => {
                   const tmp = closure_1_8(closure_0, arg0);
                   let tmp2 = null;
                   if (null != tmp) {
@@ -118,15 +119,15 @@ function transformToRowGeneratedComponent(message, accessory) {
                   }
                   return tmp2;
                 });
-                obj4.components = mapped3.filter(tmp(tmp2[5]).isNotNullish);
-                obj4.accessory = tmp72;
-                obj4.errorText = tmp(tmp2[7]).getLayoutComponentErrorText(interaction, message, accessory);
-                tmp73 = obj4;
-                const tmpResult7 = tmp(tmp2[7]);
+                obj3.components = mapped2.filter(tmp(tmp2[5]).isNotNullish);
+                obj3.accessory = tmp72;
+                obj3.errorText = tmp(tmp2[7]).getLayoutComponentErrorText(interaction, message, accessory);
+                tmp73 = obj3;
+                const tmpResult6 = tmp(tmp2[7]);
               }
               return tmp73;
             } else if (tmp(tmp2[6]).ComponentType.TEXT_DISPLAY === type) {
-              const obj5 = {};
+              const obj4 = {};
               const merged4 = Object.assign(accessory);
               const textDisplayComponent = markdownConfigs.textDisplayComponent;
               const content = accessory.content;
@@ -134,87 +135,87 @@ function transformToRowGeneratedComponent(message, accessory) {
               let combined = "" + textDisplayComponent.type + "-" + message.id + "-" + content;
               let value = importDefaultResult.get(combined);
               if (null == value) {
-                let obj6 = {};
+                const obj5 = {};
                 const merged5 = Object.assign(textDisplayComponent.parserState);
-                const parseToASTResult = importDefault(tmp2[28]).parseToAST(content, true, obj6);
+                const parseToASTResult = initialSnowflakeSelectOptions(tmp2[28]).parseToAST(content, true, obj5);
                 let result = importDefaultResult.set(combined, parseToASTResult);
                 value = parseToASTResult;
-                const obj31 = importDefault(tmp2[28]);
+                const obj31 = initialSnowflakeSelectOptions(tmp2[28]);
               }
-              obj5.content = value;
-              return obj5;
+              obj4.content = value;
+              return obj4;
             } else if (tmp(tmp2[6]).ComponentType.THUMBNAIL === type) {
               ({ width, height, contentType } = accessory.media);
               if (null != width) {
                 if (width > 0) {
                   if (null != height) {
                     if (height > 0) {
-                      if (tmpResult8.isImageContentType(contentType)) {
+                      if (tmpResult7.isImageContentType(contentType)) {
                         let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
                       } else {
-                        if (tmpResult9.isVideoContentType(contentType)) {
+                        if (tmpResult8.isVideoContentType(contentType)) {
                           VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VIDEO;
                         }
-                        tmpResult9 = tmp(tmp2[20]);
+                        tmpResult8 = tmp(tmp2[20]);
                       }
-                      tmpResult8 = tmp(tmp2[20]);
+                      tmpResult7 = tmp(tmp2[20]);
                     }
                     let str2 = "generic";
                     if (VISUAL_PLACEHOLDER === tmp(tmp2[14]).MediaGalleryItemType.IMAGE) {
                       str2 = "image";
                     }
-                    const obj7 = { type: null, mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
-                    obj7[0] = str2;
+                    let obj6 = { type: null, mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
+                    obj6[0] = str2;
                     ({ media: obj25[1], spoiler: spoiler2 } = accessory);
                     if (spoiler2 == null) {
                       spoiler2 = false;
                     }
-                    obj7[2] = spoiler2;
-                    obj7[3] = message.author.bot;
-                    obj7[4] = shouldObscureSpoiler;
-                    obj7[5] = shouldAgeVerify;
-                    obj7[6] = enabledContentHarmTypeFlags;
-                    let unfurledMediaItemObscurityProps = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj7);
+                    obj6[2] = spoiler2;
+                    obj6[3] = message.author.bot;
+                    obj6[4] = shouldObscureSpoiler;
+                    obj6[5] = shouldAgeVerify;
+                    obj6[6] = enabledContentHarmTypeFlags;
+                    let unfurledMediaItemObscurityProps = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj6);
                     const isObscured2 = unfurledMediaItemObscurityProps.isObscured;
                     let isVerifiedTeenResult = isObscured2;
                     ({ isSpoiler: isSpoiler2, spoilerDescription: spoilerDescription2, obscureDescription: obscureDescription2, obscureAwaitingScan: obscureAwaitingScan2 } = unfurledMediaItemObscurityProps);
                     if (isObscured2) {
                       isVerifiedTeenResult = tmp(tmp2[15]).isVerifiedTeen();
-                      const tmpResult11 = tmp(tmp2[15]);
+                      const tmpResult10 = tmp(tmp2[15]);
                     }
-                    const obj8 = {};
+                    const obj7 = {};
                     const merged6 = Object.assign(accessory);
-                    obj8.media = transformUnfurledMediaItem(accessory.media, message);
-                    obj8.isSpoiler = isSpoiler2;
-                    obj8.spoilerDescription = spoilerDescription2;
-                    obj8.isObscure = isObscured2;
-                    obj8.isObscureAwaitingScan = obscureAwaitingScan2;
-                    obj8.obscureDescription = obscureDescription2;
+                    obj7.media = transformUnfurledMediaItem(accessory.media, message);
+                    obj7.isSpoiler = isSpoiler2;
+                    obj7.spoilerDescription = spoilerDescription2;
+                    obj7.isObscure = isObscured2;
+                    obj7.isObscureAwaitingScan = obscureAwaitingScan2;
+                    obj7.obscureDescription = obscureDescription2;
                     let tmp55 = isObscured2;
                     if (isObscured2) {
                       tmp55 = shouldAgeVerify;
                     }
-                    obj8.verifyAge = tmp55;
-                    obj8.obscureHideControls = isVerifiedTeenResult;
-                    obj8.obscureIsOpaque = isObscured2;
+                    obj7.verifyAge = tmp55;
+                    obj7.obscureHideControls = isVerifiedTeenResult;
+                    obj7.obscureIsOpaque = isObscured2;
                     let intl3 = tmp(tmp2[8]).intl;
-                    obj8.descriptionHint = intl3.string(tmp(tmp2[8]).t.IPzNKE);
+                    obj7.descriptionHint = intl3.string(tmp(tmp2[8]).t.IPzNKE);
                     let intl4 = tmp(tmp2[8]).intl;
-                    obj8.accessibilityRole = intl4.string(tmp(tmp2[8]).t.fKyfca);
-                    return obj8;
+                    obj7.accessibilityRole = intl4.string(tmp(tmp2[8]).t.fKyfca);
+                    return obj7;
                   }
                 }
               }
               VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
             } else if (tmp(tmp2[6]).ComponentType.MEDIA_GALLERY === type) {
               const items = accessory.items;
-              const mapped4 = items.map((media) => {
+              const mapped3 = items.map((media) => {
                 ({ width, height, contentType } = media.media);
                 if (null != width) {
                   if (width > 0) {
                     if (null != height) {
                       if (height > 0) {
-                        let obj = message(message[20]);
+                        let obj = accessory(f81931[20]);
                         if (obj.isImageContentType(contentType)) {
                           let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
                           let tmp3 = tmp2;
@@ -244,7 +245,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                         spoiler = false;
                       }
                       obj[2] = spoiler;
-                      obj[3] = message.author.bot;
+                      obj[3] = f81931.author.bot;
                       obj[4] = shouldObscureSpoiler;
                       obj[5] = enabledContentHarmTypeFlags;
                       obj[6] = shouldAgeVerify;
@@ -259,7 +260,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                       if (VISUAL_PLACEHOLDER !== tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
                         obj = {};
                         const merged = Object.assign(media);
-                        obj.media = closure_1_9(media.media, message);
+                        obj.media = closure_1_9(media.media, accessory);
                         obj.mediaType = VISUAL_PLACEHOLDER;
                         obj.videoPreviewUrl = tmp12;
                         obj.isSpoiler = isSpoiler;
@@ -294,12 +295,12 @@ function transformToRowGeneratedComponent(message, accessory) {
                         let combined = null;
                         if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
                           const _HermesInternal = HermesInternal;
-                          combined = "" + message.id + "_MediaGallery(" + accessory.id + ")_" + arg1;
+                          combined = "" + f81931.id + "_MediaGallery(" + initialSnowflakeSelectOptions.id + ")_" + arg1;
                         }
                         obj.portalId = combined;
                         let tmp16 = obj;
                       } else {
-                        const str3 = accessory(tmp3[25]).toURLSafe(media.media.proxyUrl);
+                        const str3 = initialSnowflakeSelectOptions(tmp3[25]).toURLSafe(media.media.proxyUrl);
                         str = null;
                         if (null != str3) {
                           const searchParams = str3.searchParams;
@@ -307,92 +308,92 @@ function transformToRowGeneratedComponent(message, accessory) {
                           str = str3.toString();
                         }
                         tmp16 = null;
-                        const obj6 = accessory(tmp3[25]);
+                        const obj6 = initialSnowflakeSelectOptions(tmp3[25]);
                         tmp12 = str;
                       }
                       return tmp16;
                     }
                   }
                 }
-                tmp3 = message;
-                VISUAL_PLACEHOLDER = message(message[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
-                tmp4 = message;
+                tmp3 = f81931;
+                VISUAL_PLACEHOLDER = accessory(f81931[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
+                tmp4 = accessory;
               });
-              const found2 = mapped4.filter(tmp(tmp2[5]).isNotNullish);
+              const found2 = mapped3.filter(tmp(tmp2[5]).isNotNullish);
               let tmp44 = null;
               if (0 !== found2.length) {
-                let obj9 = {};
+                const obj8 = {};
                 const merged7 = Object.assign(accessory);
-                obj9.items = found2;
-                tmp44 = obj9;
+                obj8.items = found2;
+                tmp44 = obj8;
               }
               return tmp44;
             } else if (tmp(tmp2[6]).ComponentType.FILE === type) {
-              const obj10 = { type: "file", mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
+              let obj9 = { type: "file", mediaItem: null, isSpoilered: null, isAuthorBot: null, shouldObscureSpoiler: null, shouldAgeVerify: null, enabledContentHarmTypeFlags: null };
               ({ file: obj16[1], spoiler } = accessory);
               if (spoiler == null) {
                 spoiler = false;
               }
-              obj10[2] = spoiler;
-              obj10[3] = message.author.bot;
-              obj10[4] = shouldObscureSpoiler;
-              obj10[5] = shouldAgeVerify;
-              obj10[6] = enabledContentHarmTypeFlags;
-              const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj10);
+              obj9[2] = spoiler;
+              obj9[3] = message.author.bot;
+              obj9[4] = shouldObscureSpoiler;
+              obj9[5] = shouldAgeVerify;
+              obj9[6] = enabledContentHarmTypeFlags;
+              const unfurledMediaItemObscurityProps1 = tmp(tmp2[13]).getUnfurledMediaItemObscurityProps(obj9);
               let isObscured = unfurledMediaItemObscurityProps1.isObscured;
               let isVerifiedTeenResult1 = isObscured;
               ({ isSpoiler, spoilerDescription, obscureDescription, obscureAwaitingScan } = unfurledMediaItemObscurityProps1);
               if (isObscured) {
                 isVerifiedTeenResult1 = tmp(tmp2[15]).isVerifiedTeen();
-                const tmpResult13 = tmp(tmp2[15]);
+                const tmpResult12 = tmp(tmp2[15]);
               }
-              const obj11 = {};
+              const obj10 = {};
               const merged8 = Object.assign(accessory);
-              obj11.file = transformUnfurledMediaItem(accessory.file, message);
+              obj10.file = transformUnfurledMediaItem(accessory.file, message);
               let name = accessory.name;
               if (name == null) {
                 let intl2 = tmp(tmp2[8]).intl;
                 name = intl2.string(tmp(tmp2[8]).t.GnuJ5u);
               }
-              obj11.name = name;
-              let obj18 = importDefault(tmp2[16]);
+              obj10.name = name;
+              let obj18 = initialSnowflakeSelectOptions(tmp2[16]);
               let num5 = accessory.size;
               if (num5 == null) {
                 num5 = 0;
               }
-              obj11.size = obj18.filesize(num5);
-              const tmpResult12 = tmp(tmp2[13]);
-              obj11.isSuspiciousDownload = null != tmp(tmp2[17]).isSuspiciousDownload(accessory.file.url);
-              obj11.isSpoiler = isSpoiler;
-              obj11.spoilerDescription = spoilerDescription;
-              obj11.isObscure = isObscured;
-              obj11.isObscureAwaitingScan = obscureAwaitingScan;
-              obj11.obscureDescription = obscureDescription;
+              obj10.size = obj18.filesize(num5);
+              const tmpResult11 = tmp(tmp2[13]);
+              obj10.isSuspiciousDownload = null != tmp(tmp2[17]).isSuspiciousDownload(accessory.file.url);
+              obj10.isSpoiler = isSpoiler;
+              obj10.spoilerDescription = spoilerDescription;
+              obj10.isObscure = isObscured;
+              obj10.isObscureAwaitingScan = obscureAwaitingScan;
+              obj10.obscureDescription = obscureDescription;
               let tmp43 = isObscured;
               if (isObscured) {
                 tmp43 = shouldAgeVerify;
               }
-              obj11.verifyAge = tmp43;
-              obj11.obscureHideControls = isVerifiedTeenResult1;
-              obj11.obscureIsOpaque = isObscured;
-              return obj11;
+              obj10.verifyAge = tmp43;
+              obj10.obscureHideControls = isVerifiedTeenResult1;
+              obj10.obscureIsOpaque = isObscured;
+              return obj10;
             } else if (tmp(tmp2[6]).ComponentType.SEPARATOR === type) {
               return accessory;
             } else if (tmp(tmp2[6]).ComponentType.TEXT_INPUT === type) {
               return null;
             } else if (tmp(tmp2[6]).ComponentType.CONTENT_INVENTORY_ENTRY === type) {
-              const obj12 = { type: null, id: null, contentInventoryEntry: null };
+              const obj11 = { type: null, id: null, contentInventoryEntry: null };
               ({ type: obj12[0], id: obj12[1] } = accessory);
-              const obj13 = { component: null, message: null };
-              obj13[0] = accessory;
-              obj13[1] = message;
-              obj12[2] = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj13);
-              return obj12;
+              const obj12 = { component: null, message: null };
+              obj12[0] = accessory;
+              obj12[1] = message;
+              obj11[2] = tmp(tmp2[18]).transformToRowGeneratedContentInventoryEntryComponent(obj12);
+              return obj11;
             } else if (tmp(tmp2[6]).ComponentType.CONTAINER === type) {
-              const obj14 = {};
+              const obj13 = {};
               const merged9 = Object.assign(accessory);
               const components2 = accessory.components;
-              const mapped5 = components2.map((arg0) => {
+              const mapped4 = components2.map((arg0) => {
                 const tmp = closure_1_8(closure_0, arg0);
                 let tmp2 = null;
                 if (null != tmp) {
@@ -400,25 +401,25 @@ function transformToRowGeneratedComponent(message, accessory) {
                 }
                 return tmp2;
               });
-              obj14.components = mapped5.filter(tmp(tmp2[5]).isNotNullish);
+              obj13.components = mapped4.filter(tmp(tmp2[5]).isNotNullish);
               let tmp30 = null;
               if (null != accessory.accentColor) {
                 tmp30 = processColor(accessory.accentColor);
               }
-              obj14.accentColor = tmp30;
-              obj14.isSpoiler = accessory.spoiler;
+              obj13.accentColor = tmp30;
+              obj13.isSpoiler = accessory.spoiler;
               let stringResult = null;
               if (accessory.spoiler) {
                 let intl = tmp(tmp2[8]).intl;
                 stringResult = intl.string(tmp(tmp2[8]).t.C8ci33);
               }
-              obj14.spoilerDescription = stringResult;
+              obj13.spoilerDescription = stringResult;
               let embedBackgroundColor = colors.embedBackgroundColor;
               if (embedBackgroundColor == null) {
                 embedBackgroundColor = null;
               }
-              obj14.themedBackgroundColor = embedBackgroundColor;
-              return obj14;
+              obj13.themedBackgroundColor = embedBackgroundColor;
+              return obj13;
             } else {
               if (tmp(tmp2[6]).ComponentType.LABEL !== type) {
                 if (tmp(tmp2[6]).ComponentType.FILE_UPLOAD !== type) {
@@ -428,54 +429,54 @@ function transformToRowGeneratedComponent(message, accessory) {
                     if (checkpointData.version === shouldAgeVerify.V2025) {
                       const _Intl = Intl;
                       const numberFormat = new Intl.NumberFormat(tmp(tmp2[8]).intl.currentLocale, { notation: "compact", compactDisplay: "short" });
-                      const obj15 = {};
+                      const obj14 = {};
                       const merged10 = Object.assign(tmp6);
-                      const obj16 = {};
+                      const obj15 = {};
                       const merged11 = Object.assign(checkpointData);
-                      obj16.cardId = checkpointData.cardId.toString();
-                      obj16.cardAssetUrl = tmp(tmp2[29]).getCardAssetUrl(checkpointData.cardId);
-                      obj16.authorId = message.author.id;
+                      obj15.cardId = checkpointData.cardId.toString();
+                      obj15.cardAssetUrl = tmp(tmp2[29]).getCardAssetUrl(checkpointData.cardId);
+                      obj15.authorId = message.author.id;
                       let num = checkpointData.powerLevel;
                       if (num == null) {
                         num = 0;
                       }
-                      obj16.powerLevel = numberFormat.format(num);
+                      obj15.powerLevel = numberFormat.format(num);
                       let str = checkpointData.cardId;
-                      const tmpResult16 = tmp(tmp2[29]);
+                      const tmpResult15 = tmp(tmp2[29]);
                       let num2 = checkpointData.powerLevelPercentile;
                       if (num2 == null) {
                         num2 = 0;
                       }
                       const checkpointPowerBarUnits = tmp(tmp2[29]).getCheckpointPowerBarUnits(num2);
-                      const tmpResult17 = tmp(tmp2[29]);
+                      const tmpResult16 = tmp(tmp2[29]);
                       let num3 = 10;
-                      if (tmpResult18.isIOS()) {
+                      if (tmpResult17.isIOS()) {
                         num3 = 9;
                       }
-                      obj16.powerLevelUnits = Math.min(checkpointPowerBarUnits, num3);
-                      tmpResult18 = tmp(tmp2[30]);
-                      obj16.voiceString = tmp(tmp2[29]).getVoiceDurationString(checkpointData.totalVoiceMinutes);
+                      obj15.powerLevelUnits = Math.min(checkpointPowerBarUnits, num3);
+                      tmpResult17 = tmp(tmp2[30]);
+                      obj15.voiceString = tmp(tmp2[29]).getVoiceDurationString(checkpointData.totalVoiceMinutes);
                       const numEmojisSent = checkpointData.numEmojisSent;
-                      obj16.reactionString = numEmojisSent.toLocaleString(tmp(tmp2[8]).intl.currentLocale);
+                      obj15.reactionString = numEmojisSent.toLocaleString(tmp(tmp2[8]).intl.currentLocale);
                       const numMessagesSent = checkpointData.numMessagesSent;
-                      obj16.messagesString = numMessagesSent.toLocaleString(tmp(tmp2[8]).intl.currentLocale);
+                      obj15.messagesString = numMessagesSent.toLocaleString(tmp(tmp2[8]).intl.currentLocale);
                       let tmp20;
                       if (null != checkpointData.topEmoji) {
-                        const obj17 = {};
+                        const obj16 = {};
                         const merged12 = Object.assign(checkpointData.topEmoji);
                         let result1;
                         if (null == checkpointData.topEmoji.emojiId) {
-                          obj9 = importDefault(tmp2[31]);
+                          obj9 = initialSnowflakeSelectOptions(tmp2[31]);
                           result1 = obj9.convertSurrogateToName(checkpointData.topEmoji.emojiName);
                         }
-                        obj17.emojiSurrogateName = result1;
-                        tmp20 = obj17;
+                        obj16.emojiSurrogateName = result1;
+                        tmp20 = obj16;
                       }
-                      obj16.topEmoji = tmp20;
-                      obj16.clickable = undefined;
-                      obj15.checkpointData = obj16;
-                      obj = obj15;
-                      const tmpResult19 = tmp(tmp2[29]);
+                      obj15.topEmoji = tmp20;
+                      obj15.clickable = undefined;
+                      obj14.checkpointData = obj15;
+                      obj = obj14;
+                      const tmpResult18 = tmp(tmp2[29]);
                     } else {
                       obj = { type: null, id: null };
                       obj[0] = tmp(tmp2[6]).ComponentType.UNKNOWN;
@@ -498,38 +499,37 @@ function transformToRowGeneratedComponent(message, accessory) {
         }
       }
     }
-    const initialSnowflakeSelectOptions = tmp(tmp2[11]).getInitialSnowflakeSelectOptions(accessory, message.id, guildId);
-    obj18 = {};
+    initialSnowflakeSelectOptions = tmp(tmp2[11]).getInitialSnowflakeSelectOptions(accessory, message.id, guildId);
+    const obj17 = {};
     const merged13 = Object.assign(accessory);
-    const tmpResult20 = tmp(tmp2[11]);
-    obj18.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
-    const tmpResult21 = tmp(tmp2[9]);
-    obj18.selectedOptions = tmp(tmp2[12]).transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId);
-    const tmpResult22 = tmp(tmp2[12]);
-    obj18.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-    const tmpResult23 = tmp(tmp2[7]);
-    if (tmpResult24.shouldSkipAccessibilityLabels()) {
-      let selectPlaceholder2 = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-      const tmpResult25 = tmp(tmp2[7]);
-    } else {
+    const tmpResult19 = tmp(tmp2[11]);
+    obj17.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
+    const tmpResult20 = tmp(tmp2[9]);
+    obj17.selectedOptions = tmp(tmp2[12]).transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId);
+    const tmpResult21 = tmp(tmp2[12]);
+    obj17.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    _require = accessory;
+    f81931 = (label) => label.label;
+    const tmpResult22 = tmp(tmp2[7]);
+    obj18 = { expensive: null, cheap: null };
+    obj18[0] = function expensive() {
       if (null != initialSnowflakeSelectOptions) {
-        if (0 !== initialSnowflakeSelectOptions.length) {
-          const mapped6 = initialSnowflakeSelectOptions.map((label) => label.label);
-          const intl5 = tmp(tmp2[8]).intl;
-          const obj19 = { selections: null };
-          obj19[0] = mapped6.join(",");
-          selectPlaceholder2 = intl5.formatToPlainString(tmp(tmp2[8]).t["I/ROH+"], obj19);
+        if (0 !== arr.length) {
+          const mapped = arr.map(f81931);
+          const intl = accessory(f81931[8]).intl;
+          const obj = { selections: null };
+          obj[0] = mapped.join(",");
+          return intl.formatToPlainString(accessory(f81931[8]).t["I/ROH+"], obj);
         }
       }
-      const selectPlaceholder3 = tmp(tmp2[7]).getSelectPlaceholder(accessory);
-      const intl6 = tmp(tmp2[8]).intl;
-      const obj20 = { placeholder: null };
-      obj20[0] = selectPlaceholder3;
-      selectPlaceholder2 = intl6.formatToPlainString(tmp(tmp2[8]).t["3aednA"], obj20);
-      const tmpResult26 = tmp(tmp2[7]);
-    }
-    obj18.accessibilityLabel = selectPlaceholder2;
-    return obj18;
+      const placeholder = accessory(f81931[7]).getSelectPlaceholder(accessory);
+      const intl2 = accessory(f81931[8]).intl;
+      return intl2.formatToPlainString(accessory(f81931[8]).t["3aednA"], { placeholder });
+    };
+    const tmpResult23 = tmp(tmp2[19]);
+    obj18[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
+    obj17.accessibilityLabel = tmpResult23.getAccessibilityLabelOrCheapFallbackUnsafe(obj18);
+    return obj17;
   }
 }
 function transformUnfurledMediaItem(file, shouldShowMedia) {
@@ -539,14 +539,14 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            let VISUAL_PLACEHOLDER = tmp(8340).MediaGalleryItemType.IMAGE;
+            let VISUAL_PLACEHOLDER = tmp(8379).MediaGalleryItemType.IMAGE;
             let tmp4 = tmp;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              VISUAL_PLACEHOLDER = tmp(8340).MediaGalleryItemType.VIDEO;
+              VISUAL_PLACEHOLDER = tmp(8379).MediaGalleryItemType.VIDEO;
               tmp4 = tmp;
             }
-            tmpResult = tmp(4811);
+            tmpResult = tmp(4816);
           }
           obj = urlMatchesFileExtension;
         }
@@ -588,7 +588,7 @@ let c10 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  obj = { type: "textDisplayComponent", parserState: obj(8315).getInitialParserStateFromMessage(message.message, closure_7) };
+  obj = { type: "textDisplayComponent", parserState: obj(8355).getInitialParserStateFromMessage(message.message, closure_7) };
   obj = {};
   const merged = Object.assign(message);
   obj.markdownConfigs = { textDisplayComponent: obj };
@@ -602,12 +602,12 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            return tmp(8340).MediaGalleryItemType.IMAGE;
+            return tmp(8379).MediaGalleryItemType.IMAGE;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              return tmp(8340).MediaGalleryItemType.VIDEO;
+              return tmp(8379).MediaGalleryItemType.VIDEO;
             }
-            tmpResult = tmp(4811);
+            tmpResult = tmp(4816);
           }
           obj = urlMatchesFileExtension;
         }

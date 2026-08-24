@@ -1,8 +1,8 @@
-// === Module 11505: setHubProgressActionComplete ===
+// === Module 11554: setHubProgressActionComplete ===
 
-// Module 11505 (setHubProgressActionComplete)
+// Module 11554 (setHubProgressActionComplete)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import { HUB_PROGRESS_STEP_ORDER } from "items" /* 11506 */;
+import { HUB_PROGRESS_STEP_ORDER } from "items" /* 11555 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

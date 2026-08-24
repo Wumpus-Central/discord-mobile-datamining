@@ -1,10 +1,10 @@
-// === Module 5367: items ===
+// === Module 5372: items ===
 
-// Module 5367 (items)
+// Module 5372 (items)
 import set from "set" /* 2 */;
-import WidgetType from "WidgetType" /* 5366 */;
-import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
-import findGameWidget from "findGameWidget" /* 5369 */;
+import WidgetType from "WidgetType" /* 5371 */;
+import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5373 */;
+import findGameWidget from "findGameWidget" /* 5374 */;
 
 const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];
 let BaseGameWidget;

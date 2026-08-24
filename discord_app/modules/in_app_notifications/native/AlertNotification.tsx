@@ -1,11 +1,11 @@
-// === Module 10157: AlertNotification ===
+// === Module 10196: AlertNotification ===
 
-// Module 10157 (AlertNotification)
+// Module 10196 (AlertNotification)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
@@ -20,7 +20,7 @@ export default function AlertNotification(notification) {
   channel = notification.channel;
   guild = notification.guild;
   const tmp = callback3();
-  obj = channel(10033);
+  obj = channel(10072);
   const incidentData = obj.useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
@@ -51,18 +51,18 @@ export default function AlertNotification(notification) {
   }, items1);
   obj = { icon: null, header: null, children: null, onPress: null, notification: null };
   obj = { children: null };
-  obj1 = { cutouts: items2, children: callback(guild(7188), { guild, selected: false }) };
+  obj1 = { cutouts: items2, children: callback(guild(7226), { guild, selected: false }) };
   items2 = [obj];
-  const items3 = [callback(guild(8402), obj1), ];
+  const items3 = [callback(guild(8441), obj1), ];
   const obj2 = { style: tmp.warningBadge, children: null };
-  const tmp8 = guild(8402);
-  obj2[1] = callback(channel(8078).WarningIcon, { style: tmp.warningIcon, color: guild(712).colors.ICON_FEEDBACK_WARNING });
+  const tmp8 = guild(8441);
+  obj2[1] = callback(channel(8117).WarningIcon, { style: tmp.warningIcon, color: guild(712).colors.ICON_FEEDBACK_WARNING });
   items3[1] = callback(View, obj2);
   obj[0] = items3;
   obj[0] = callback2(closure_6, obj);
   obj[1] = memo;
-  obj[2] = callback(channel(10048).SystemMessageText, { text: stringResult });
+  obj[2] = callback(channel(10087).SystemMessageText, { text: stringResult });
   obj[3] = callback;
   obj[4] = notification;
-  return callback(channel(10113).NotificationPressable, obj);
+  return callback(channel(10152).NotificationPressable, obj);
 };

@@ -71,5 +71,13 @@ prototype["raise"] = function raise(arg0) {
   const KV_RAW = set.KV_RAW;
   KV_RAW.raise(arg0);
 };
+prototype["malformedValueCount"] = function malformedValueCount() {
+  const KV_RAW = set.KV_RAW;
+  return KV_RAW.malformedValueCount();
+};
+prototype["malformedEntryCount"] = function malformedEntryCount() {
+  const KV_RAW = set.KV_RAW;
+  return KV_RAW.malformedEntryCount();
+};
 
 export const Host = prototype;

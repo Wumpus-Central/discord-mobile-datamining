@@ -1,22 +1,22 @@
-// === Module 11512: getShortcuts ===
+// === Module 11561: getShortcuts ===
 
-// Module 11512 (getShortcuts)
+// Module 11561 (getShortcuts)
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
-import NOOPDefault from "NOOP" /* 6714 */;
-import ANSWER_IN_REGEX from "ANSWER_IN_REGEX" /* 11515 */;
-import getMatch2 from "getMatch" /* 11517 */;
+import tDefault from "t" /* 3978 */;
+import NOOPDefault from "NOOP" /* 6751 */;
+import ANSWER_IN_REGEX from "ANSWER_IN_REGEX" /* 11564 */;
+import getMatch2 from "getMatch" /* 11566 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import comparator from "comparator" /* 1980 */;
-import closure_7 from "comparator" /* 1980 */;
-import closure_8 from "markAllUserIdListsStale" /* 4030 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "initialize" /* 4220 */;
+import comparator from "comparator" /* 1981 */;
+import closure_7 from "comparator" /* 1981 */;
+import closure_8 from "markAllUserIdListsStale" /* 4033 */;
+import closure_9 from "handleConnectionOpen" /* 1980 */;
+import closure_10 from "initialize" /* 4224 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "handleUserSearchResults" /* 11513 */;
-import closure_13 from "handleReset" /* 11514 */;
+import closure_12 from "handleUserSearchResults" /* 11562 */;
+import closure_13 from "handleReset" /* 11563 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -24,46 +24,46 @@ function getShortcuts() {
   obj = {};
   const intl = getSystemLocale.intl;
   obj[intl.string(getSystemLocale.t.HYiVEQ)] = () => {
-    obj = callback(3975)();
-    const addResult = callback(3975)().startOf("day").add(0, "day");
+    obj = callback(3978)();
+    const addResult = callback(3978)().startOf("day").add(0, "day");
     const items = [addResult, ];
-    const startOfResult = callback(3975)().startOf("day");
+    const startOfResult = callback(3978)().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl2 = getSystemLocale.intl;
   obj[intl2.string(getSystemLocale.t.cu86KC)] = () => {
-    obj = callback(3975)();
-    const addResult = callback(3975)().startOf("day").add(-1, "day");
+    obj = callback(3978)();
+    const addResult = callback(3978)().startOf("day").add(-1, "day");
     const items = [addResult, ];
-    const startOfResult = callback(3975)().startOf("day");
+    const startOfResult = callback(3978)().startOf("day");
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
   const intl3 = getSystemLocale.intl;
   obj[intl3.string(getSystemLocale.t["FvBj/6"])] = () => {
-    obj = callback(3975)();
-    const addResult = callback(3975)().startOf("week").add(0, "week");
+    obj = callback(3978)();
+    const addResult = callback(3978)().startOf("week").add(0, "week");
     const items = [addResult, ];
-    const startOfResult = callback(3975)().startOf("week");
+    const startOfResult = callback(3978)().startOf("week");
     items[1] = addResult.clone().add(1, "week");
     return items;
   };
   const intl4 = getSystemLocale.intl;
   obj[intl4.string(getSystemLocale.t["20uWCw"])] = () => {
-    obj = callback(3975)();
-    const addResult = callback(3975)().startOf("month").add(0, "month");
+    obj = callback(3978)();
+    const addResult = callback(3978)().startOf("month").add(0, "month");
     const items = [addResult, ];
-    const startOfResult = callback(3975)().startOf("month");
+    const startOfResult = callback(3978)().startOf("month");
     items[1] = addResult.clone().add(1, "month");
     return items;
   };
   const intl5 = getSystemLocale.intl;
   obj[intl5.string(getSystemLocale.t["dXC/hn"])] = () => {
-    obj = callback(3975)();
-    const addResult = callback(3975)().startOf("year").add(0, "year");
+    obj = callback(3978)();
+    const addResult = callback(3978)().startOf("year").add(0, "year");
     const items = [addResult, ];
-    const startOfResult = callback(3975)().startOf("year");
+    const startOfResult = callback(3978)().startOf("year");
     items[1] = addResult.clone().add(1, "year");
     return items;
   };
@@ -125,21 +125,21 @@ function dateValidator(getFullMatch) {
     const obj20 = tDefault;
     const set = new Set(tDefault.months().map((str) => str.toLowerCase()));
     if (set.has(formatted)) {
-      const localResult = tmp32(3975)(formatted, "MMMM").local();
+      const localResult = tmp32(3978)(formatted, "MMMM").local();
       const items = [localResult, ];
-      const obj17 = tmp32(3975)(formatted, "MMMM");
+      const obj17 = tmp32(3978)(formatted, "MMMM");
       items[1] = localResult.clone().add(1, "month");
       const cloneResult = localResult.clone();
       [obj9, obj10] = callback(items, 2);
       const tmp21 = callback(items, 2);
     } else {
       const _Set = Set;
-      let tmp32Result = tmp32(3975);
+      let tmp32Result = tmp32(3978);
       const set1 = new Set(tmp32Result.weekdays().map((str) => str.toLowerCase()));
       if (set1.has(formatted)) {
-        const localResult1 = tmp32(3975)(formatted, "dddd").local();
+        const localResult1 = tmp32(3978)(formatted, "dddd").local();
         const items1 = [localResult1, ];
-        const obj14 = tmp32(3975)(formatted, "dddd");
+        const obj14 = tmp32(3978)(formatted, "dddd");
         items1[1] = localResult1.clone().add(1, "day");
         const cloneResult1 = localResult1.clone();
         [obj9, obj10] = callback(items1, 2);
@@ -152,17 +152,17 @@ function dateValidator(getFullMatch) {
         tmp32Result = tmp32(12);
         const set2 = new Set(tmp32Result.range(2015, fullYear + 1).map((arg0) => arg0.toString()));
         if (set2.has(formatted)) {
-          const localResult2 = tmp32(3975)(formatted, "YYYY").local();
+          const localResult2 = tmp32(3978)(formatted, "YYYY").local();
           const items2 = [localResult2, ];
-          const obj11 = tmp32(3975)(formatted, "YYYY");
+          const obj11 = tmp32(3978)(formatted, "YYYY");
           items2[1] = localResult2.clone().add(1, "year");
           const cloneResult2 = localResult2.clone();
           [obj9, obj10] = callback(items2, 2);
           const tmp17 = callback(items2, 2);
         } else {
-          const localResult3 = tmp32(3975)(formatted, closure_16).local();
+          const localResult3 = tmp32(3978)(formatted, closure_16).local();
           const items3 = [localResult3, ];
-          const obj6 = tmp32(3975)(formatted, closure_16);
+          const obj6 = tmp32(3978)(formatted, closure_16);
           items3[1] = localResult3.clone().add(1, "day");
           const cloneResult3 = localResult3.clone();
           [obj9, obj10] = callback(items3, 2);
@@ -295,7 +295,7 @@ function isValidChannelAutocomplete(token, guildId) {
         flag = flag2;
       }
     }
-    obj2 = replaced(11511);
+    obj2 = replaced(11560);
   }
   return flag;
 }
@@ -514,7 +514,7 @@ function getUserAutocompletions(tokens) {
     const recentlyTalked = set1(tmp2[18]).getRecentlyTalked(currentlySelectedChannelId, maxResults);
     const item2 = recentlyTalked.forEach((record) => {
       record = record.record;
-      let hasItem = null == record;
+      let hasItem = null == record || record.isNonUserBot();
       if (!hasItem) {
         hasItem = set1.has(record.id);
       }
@@ -533,7 +533,7 @@ function getUserAutocompletions(tokens) {
     recentMessageAuthorIds = recentMessageAuthorIds.getRecentMessageAuthorIds(searchContext.guildId);
     const item3 = recentMessageAuthorIds.forEach((arg0) => {
       const user = closure_1_11.getUser(arg0);
-      let hasItem = null == user;
+      let hasItem = null == user || user.isNonUserBot();
       if (!hasItem) {
         hasItem = set1.has(user.id);
       }
@@ -546,12 +546,12 @@ function getUserAutocompletions(tokens) {
         obj[1] = set1(currentUser1[14]).getUserTag(user);
         items2.push(obj);
         set1.add(user.id);
-        const obj2 = set1(currentUser1[14]);
+        const obj3 = set1(currentUser1[14]);
       }
     });
     return items2.slice(0, maxResults);
   } else {
-    const obj3 = {};
+    let obj3 = {};
     const merged3 = Object.assign(obj);
     obj3.guildId = searchContext.guildId;
     queryChannelUsersResult = set1(tmp2[18]).queryGuildUsers(obj3);
@@ -570,7 +570,7 @@ function getChannelAutocompletions(arg0) {
     if ("#" === str2[0]) {
       substr1 = str2.substring(1);
     }
-    let obj2 = _require(11511);
+    let obj2 = _require(11560);
     if (obj2.isGuildLikeSearchContext(searchContext)) {
       const guildId = searchContext.guildId;
       _require = undefined;
@@ -579,8 +579,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_5;
       obj[2] = guildId;
-      let tmpResult = tmp(6714);
-      obj[7] = tmpResult.getBoosterMap(tmp(7593).AutocompleterResultTypes.TEXT_CHANNEL);
+      let tmpResult = tmp(6751);
+      obj[7] = tmpResult.getBoosterMap(tmp(7631).AutocompleterResultTypes.TEXT_CHANNEL);
       const obj12 = NOOPDefault;
       const tmp7 = importDefault;
       const queryChannelsResult = NOOPDefault.queryChannels(obj);
@@ -588,8 +588,8 @@ function getChannelAutocompletions(arg0) {
       obj[0] = substr1;
       obj[1] = closure_6;
       obj[2] = guildId;
-      tmpResult = tmp(6714);
-      obj[6] = tmpResult.getBoosterMap(tmp(7593).AutocompleterResultTypes.VOICE_CHANNEL);
+      tmpResult = tmp(6751);
+      obj[6] = tmpResult.getBoosterMap(tmp(7631).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(NOOPDefault.queryChannels(obj));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -635,18 +635,18 @@ function getChannelAutocompletions(arg0) {
           obj1[0] = substr1;
           obj1[1] = maxResults;
           const obj4 = NOOPDefault;
-          obj1[3] = tmp(6714).getBoosterMap(tmp(7593).AutocompleterResultTypes.GROUP_DM);
-          const tmpResult1 = tmp(6714);
+          obj1[3] = tmp(6751).getBoosterMap(tmp(7631).AutocompleterResultTypes.GROUP_DM);
+          const tmpResult1 = tmp(6751);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj1);
           obj2 = { query: null, limit: null, boosters: null };
           obj2[0] = substr1;
           obj2[1] = maxResults;
           const obj8 = NOOPDefault;
-          obj2[2] = tmp(6714).getBoosterMap(tmp(7593).AutocompleterResultTypes.USER);
-          const tmpResult2 = tmp(6714);
+          obj2[2] = tmp(6751).getBoosterMap(tmp(7631).AutocompleterResultTypes.USER);
+          const tmpResult2 = tmp(6751);
           const queryDMChannelsResult = obj8.queryDMChannels(obj2);
           const tmp6 = applyDefault;
-          const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7593).sortByMatchScore);
+          const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(7631).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             obj = { text: record.comparator, channel: record, key: null };
@@ -1159,10 +1159,10 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
     const items = ["filter:" + trimmed, trimmed];
     const token = new getMatch2.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
-      let tmp7Result = tmp7(11515);
+      let tmp7Result = tmp7(11564);
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);
     } else if (tmp15.ANSWER_AUTHOR_TYPE === tmp) {
-      tmp7Result = tmp7(11515);
+      tmp7Result = tmp7(11564);
       obj = {};
       const intl = tmp7(1236).intl;
       obj[intl.string(tmp7(1236).t.tPZo4p)] = "user";

@@ -1,10 +1,10 @@
-// === Module 14152: route ===
+// === Module 14220: route ===
 
-// Module 14152 (route)
+// Module 14220 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 ({ NOOP_NULL: c4, UserSettingsSections } = ME);
@@ -64,7 +64,7 @@ createToggle = {
       let intl3 = callback(1236).intl;
       obj[5] = intl3.string(callback(1236).t.PDTjLN);
       obj[6] = callback(1297).ButtonColors.BRAND;
-      callback2(14153)(obj);
+      callback2(14221)(obj);
       return false;
     }, []);
   },
@@ -73,7 +73,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return require(14100) /* CodeRow */.default;
+    return require(14168) /* CodeRow */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1,13 +1,13 @@
-// === Module 12823: EndStageActionSheet ===
+// === Module 12878: EndStageActionSheet ===
 
-// Module 12823 (EndStageActionSheet)
+// Module 12878 (EndStageActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8081 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8120 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "MAX_STAGE_TOPIC_LENGTH" /* 4983 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;
@@ -33,7 +33,7 @@ export default function EndStageActionSheet(channel) {
   obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1236).intl;
   obj1[3] = intl2.string(channel(1236).t.mT7jwN);
-  items[1] = callback(channel(4734).Text, obj1);
+  items[1] = callback(channel(4739).Text, obj1);
   let obj2 = { style: tmp.cancelButton, children: null };
   const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1236).intl;
@@ -43,7 +43,7 @@ export default function EndStageActionSheet(channel) {
     const obj = closure_1_1(closure_1_2[7]);
     channel(closure_1_2[8]).handleDisconnect(channel);
   };
-  obj2[1] = callback(channel(4745).Button, obj3);
+  obj2[1] = callback(channel(4750).Button, obj3);
   items[2] = callback(View, obj2);
   const obj4 = { style: tmp.confirmButton, children: null };
   const obj5 = { variant: "destructive", text: null, onPress: null };
@@ -56,7 +56,7 @@ export default function EndStageActionSheet(channel) {
     const obj2 = closure_1_1(closure_1_2[7]);
     channel(closure_1_2[8]).handleDisconnect(channel);
   };
-  obj4[1] = callback(channel(4745).Button, obj5);
+  obj4[1] = callback(channel(4750).Button, obj5);
   items[3] = callback(View, obj4);
   obj[1] = items;
   obj[0] = callback2(View, obj);

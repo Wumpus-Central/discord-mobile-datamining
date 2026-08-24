@@ -1,6 +1,6 @@
-// === Module 15824: StandaloneMembersView ===
+// === Module 15893: StandaloneMembersView ===
 
-// Module 15824 (StandaloneMembersView)
+// Module 15893 (StandaloneMembersView)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -17,21 +17,21 @@ export default function StandaloneMembersView(guildId) {
   importDefault = obj.useNavigation();
   const items = [guildId];
   const effect = React.useEffect(() => {
-    navigation(8874).init(guildId);
+    navigation(8911).init(guildId);
   }, items);
   obj = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
   dependencyMap = { contentContainerStyle: obj };
   obj = {};
   obj1 = {
-    headerLeft: guildId(6314).getHeaderCloseButton(() => navigation.goBack()),
+    headerLeft: guildId(6345).getHeaderCloseButton(() => navigation.goBack()),
     headerTitle() {
       const obj = { title: null };
       const intl = guildId(1236).intl;
       obj[0] = intl.string(guildId(1236).t["9Oq93m"]);
-      return callback(guildId(6314).NavigatorHeader, obj);
+      return callback(guildId(6345).NavigatorHeader, obj);
     },
     render() {
-      return closure_1_4(navigation(15825), { guildId });
+      return closure_1_4(navigation(15894), { guildId });
     }
   };
   obj[constants.MAIN] = obj1;
@@ -39,7 +39,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(guildId(11016).GuildSettingsModalMemberEditScene, { guildId });
+      return closure_1_4(guildId(11055).GuildSettingsModalMemberEditScene, { guildId });
     }
   };
   obj[constants.MEMBER_KICK] = {
@@ -49,7 +49,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(navigation(11029), { guildId });
+      return closure_1_4(navigation(11068), { guildId });
     }
   };
   obj[constants.MEMBER_BAN] = {
@@ -59,11 +59,11 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(navigation(11031), { guildId });
+      return closure_1_4(navigation(11070), { guildId });
     }
   };
   const obj2 = { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null };
   let intl = guildId(1236).intl;
   obj2[2] = intl.string(guildId(1236).t["13/7kX"]);
-  return jsx(guildId(6312).Navigator, { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null });
+  return jsx(guildId(6343).Navigator, { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null });
 };

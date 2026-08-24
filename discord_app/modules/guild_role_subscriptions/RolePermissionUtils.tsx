@@ -1,10 +1,10 @@
-// === Module 4013: hasViewChannelPermission ===
+// === Module 4016: hasViewChannelPermission ===
 
-// Module 4013 (hasViewChannelPermission)
+// Module 4016 (hasViewChannelPermission)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 506 */;
 import ME from "ME" /* 676 */;
-import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1985 */;
 
 const hasPermission = GuildRoleRecordTypeTag.hasPermission;
 const Permissions = ME.Permissions;

@@ -1,8 +1,8 @@
-// === Module 10035: isInMentionRaidExperiment ===
+// === Module 10074: isInMentionRaidExperiment ===
 
-// Module 10035 (isInMentionRaidExperiment)
+// Module 10074 (isInMentionRaidExperiment)
 import set from "set" /* 2 */;
-import experiment from "experiment" /* 10036 */;
+import experiment from "experiment" /* 10075 */;
 
 const result = set.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 

@@ -1,18 +1,18 @@
-// === Module 16242: BaseActivityPanelFocusedView ===
+// === Module 16339: BaseActivityPanelFocusedView ===
 
-// Module 16242 (BaseActivityPanelFocusedView)
+// Module 16339 (BaseActivityPanelFocusedView)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "participantFromServer" /* 1390 */;
-import { ActivityLayoutMode } from "items3" /* 4481 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
-import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16237 */;
+import { ActivityLayoutMode } from "items3" /* 4485 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 8740 */;
+import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16334 */;
 import { ThemeTypes } from "ME" /* 676 */;
-import { IS_IOS } from "VoicePanelModes" /* 11440 */;
+import { IS_IOS } from "VoicePanelModes" /* 11489 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 class BaseActivityPanelFocusedView {
@@ -53,7 +53,7 @@ class BaseActivityPanelFocusedView {
     tmp7 = require("useAnimatedKeyboardHeight")();
     closure_10 = tmp7;
     lg = require("Themes").radii.lg;
-    obj3 = require("module_4115");
+    obj3 = require("module_4119");
     fn = function _() {
       let num = 0;
       if (!wrapperDimensions.isWindowLandscape) {
@@ -136,13 +136,13 @@ class BaseActivityPanelFocusedView {
         tmp21 = wrapperOffset;
       }
     };
-    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4115").runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
+    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: require("ManaContext").TransitionStates, runOnJS: require("module_4119").runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
     fn.__closure = obj;
     fn.__workletHash = 3642447648301;
     fn.__initData = closure_20;
     animatedStyle = obj3.useAnimatedStyle(fn);
     closure_12 = animatedStyle;
-    obj5 = require("module_4115");
+    obj5 = require("module_4119");
     class T {
       constructor() {
         obj = wrapperOffset;
@@ -175,7 +175,7 @@ class BaseActivityPanelFocusedView {
       const items = [closure_4.wrapper, animatedStyle];
       return items;
     }, items1);
-    obj7 = require("module_4115");
+    obj7 = require("module_4119");
     class A {
       constructor() {
         num = 0;
@@ -203,7 +203,7 @@ class BaseActivityPanelFocusedView {
     items3[0] = tmp2.shade;
     items3[1] = animatedStyle1;
     items4 = [, ];
-    items4[0] = jsx(require("module_4115").View, { style: items3, pointerEvents: "none" });
+    items4[0] = jsx(require("module_4119").View, { style: items3, pointerEvents: "none" });
     obj3 = { style: memo, nativeID: "activity-panel-focused-view", accessibilityViewIsModal: true, onAccessibilityEscape: callback, children: null };
     obj4 = { style: animatedStyle2, children: null };
     tmp15 = null;
@@ -215,7 +215,7 @@ class BaseActivityPanelFocusedView {
     }
     obj4[1] = tmp15;
     items5 = [, ];
-    items5[0] = tmp14(require("module_4115").View, obj4);
+    items5[0] = tmp14(require("module_4119").View, obj4);
     items5[1] = header;
     obj3[4] = items5;
     items4[1] = tmp13(require("AccessibilityView").AccessibilityViewAnimated, obj3);
@@ -255,7 +255,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   const stateFromStoresObject = _require(channel[14]).useStateFromStoresObject(items, () => {
     const connectedActivityLocation = memo1.getConnectedActivityLocation();
     const selfEmbeddedActivityForLocation = memo1.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-    let obj = lib(channel[24]);
+    let obj = lib(channel[23]);
     obj = { channel: memo.getChannel(obj.getEmbeddedActivityLocationChannelId(connectedActivityLocation)), hasActivity: null != selfEmbeddedActivityForLocation };
     return obj;
   }, []);
@@ -266,7 +266,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   let obj = _require(channel[14]);
   const tmp3 = isWindowLandscape(channel[13])();
   _require = tmp3;
-  const wrapperDimensions = hasActivity.useContext(isWindowLandscape(channel[25])).wrapperDimensions;
+  const wrapperDimensions = hasActivity.useContext(isWindowLandscape(channel[24])).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;
   isWindowLandscape = !isLandscape;
   if (!isLandscape) {
@@ -287,13 +287,13 @@ const memoResult = importAllResult.memo((transitionState) => {
     return obj;
   }, items1);
   closure_4 = tmp5;
-  memo1 = obj2.useMemo(() => callback(isWindowLandscape(channel[26]), {}), []);
+  memo1 = obj2.useMemo(() => callback(isWindowLandscape(channel[25]), {}), []);
   callback = obj2.useCallback(() => {
-    const result = lib(channel[27]).updateActivityPanelMode(constants.PIP);
+    const result = lib(channel[26]).updateActivityPanelMode(constants.PIP);
   }, []);
   const items2 = [transitionState, transitionCleanUp, callback, hasActivity, memo1, channel, tmp5, memo];
   return hasActivity.useMemo(() => {
-    obj = { transitionState: closure_0, transitionCleanUp: isWindowLandscape, updateActivityPanelModeToPIP: callback, hasActivity, context: isWindowLandscape(channel[25]), header: memo1, children: closure_1_16(isWindowLandscape(channel[28]), obj) };
+    obj = { transitionState: closure_0, transitionCleanUp: isWindowLandscape, updateActivityPanelModeToPIP: callback, hasActivity, context: isWindowLandscape(channel[24]), header: memo1, children: closure_1_16(isWindowLandscape(channel[27]), obj) };
     obj = { channel, layoutMode: callback.FOCUSED, portraitSafeAreasConfig: closure_4, landscapeSafeAreasConfig: memo };
     return closure_1_16(closure_1_24, obj);
   }, items2);

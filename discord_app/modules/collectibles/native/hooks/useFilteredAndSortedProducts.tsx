@@ -1,6 +1,6 @@
-// === Module 14428: useFilteredAndSortedProducts ===
+// === Module 14496: useFilteredAndSortedProducts ===
 
-// Module 14428 (useFilteredAndSortedProducts)
+// Module 14496 (useFilteredAndSortedProducts)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 678 */;

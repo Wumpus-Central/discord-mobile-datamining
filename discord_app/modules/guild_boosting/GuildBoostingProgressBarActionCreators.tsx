@@ -1,6 +1,6 @@
-// === Module 15484: updateGuildPremiumSubscriptionCount ===
+// === Module 15549: updateGuildPremiumSubscriptionCount ===
 
-// Module 15484 (updateGuildPremiumSubscriptionCount)
+// Module 15549 (updateGuildPremiumSubscriptionCount)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

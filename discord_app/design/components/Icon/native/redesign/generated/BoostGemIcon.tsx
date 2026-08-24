@@ -1,10 +1,10 @@
-// === Module 7979: BoostGemIcon ===
+// === Module 8018: BoostGemIcon ===
 
-// Module 7979 (BoostGemIcon)
+// Module 8018 (BoostGemIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 7980 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 8019 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

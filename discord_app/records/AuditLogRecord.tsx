@@ -1,10 +1,10 @@
-// === Module 16758: getTargetType ===
+// === Module 16851: getTargetType ===
 
-// Module 16758 (getTargetType)
+// Module 16851 (getTargetType)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3975 */;
+import tDefault from "t" /* 3978 */;
 import ME from "ME" /* 676 */;
 
 function getTargetType(action) {

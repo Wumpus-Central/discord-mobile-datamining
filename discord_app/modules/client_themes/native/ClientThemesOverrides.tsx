@@ -1,16 +1,16 @@
-// === Module 8501: useGradientBottom ===
+// === Module 8540: useGradientBottom ===
 
-// Module 8501 (useGradientBottom)
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
+// Module 8540 (useGradientBottom)
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8541 */;
 import closure_3 from "noop" /* 19 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let closure_4 = createCacheKey.createStyles({ none: { backgroundColor: "transparent" } });
 const result = require("set").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
 
 export const useGradientBottom = function useGradientBottom() {
-  gradientValue = gradientValue(4194).useGradientValue(gradientValue(4194).GradientPercentage.END);
+  gradientValue = gradientValue(4198).useGradientValue(gradientValue(4198).GradientPercentage.END);
   const items = [gradientValue];
   return React.useMemo(() => {
     let tmp2;
@@ -23,7 +23,7 @@ export const useGradientBottom = function useGradientBottom() {
   }, items);
 };
 export const useGradientTop = function useGradientTop() {
-  gradientValue = gradientValue(4194).useGradientValue(gradientValue(4194).GradientPercentage.START);
+  gradientValue = gradientValue(4198).useGradientValue(gradientValue(4198).GradientPercentage.START);
   const items = [gradientValue];
   return React.useMemo(() => {
     let tmp2;
@@ -36,7 +36,7 @@ export const useGradientTop = function useGradientTop() {
   }, items);
 };
 export const useGradientMidpoint = function useGradientMidpoint() {
-  gradientValue = gradientValue(4194).useGradientValue(gradientValue(4194).GradientPercentage.MID);
+  gradientValue = gradientValue(4198).useGradientValue(gradientValue(4198).GradientPercentage.MID);
   const items = [gradientValue];
   return React.useMemo(() => {
     let tmp2;

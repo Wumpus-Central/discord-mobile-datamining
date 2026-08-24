@@ -1,10 +1,10 @@
-// === Module 12026: RedditNeutralIcon ===
+// === Module 12075: RedditNeutralIcon ===
 
-// Module 12026 (RedditNeutralIcon)
+// Module 12075 (RedditNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 12027 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 12076 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

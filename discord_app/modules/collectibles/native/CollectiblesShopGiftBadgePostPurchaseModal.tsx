@@ -1,18 +1,18 @@
-// === Module 11984: CollectiblesShopGiftBadgePostPurchaseModal ===
+// === Module 12033: CollectiblesShopGiftBadgePostPurchaseModal ===
 
-// Module 11984 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 12033 (CollectiblesShopGiftBadgePostPurchaseModal)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import messagesProxyDefault from "messagesProxy" /* 2431 */;
-import Text from "Text" /* 4734 */;
-import ModalScreen from "ModalScreen" /* 5440 */;
-import XSmallIcon from "XSmallIcon" /* 6368 */;
-import PostPurchaseFooterDefault from "PostPurchaseFooter" /* 10419 */;
+import messagesProxyDefault from "messagesProxy" /* 2432 */;
+import Text from "Text" /* 4739 */;
+import ModalScreen from "ModalScreen" /* 5445 */;
+import XSmallIcon from "XSmallIcon" /* 6399 */;
+import PostPurchaseFooterDefault from "PostPurchaseFooter" /* 10458 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
@@ -30,15 +30,15 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/C
 export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgress) {
   const tmp = callback3(useSafeAreaInsetsDefault().top);
   const callback = React.useCallback(() => {
-    let arr = callback2(5260);
+    let arr = callback2(5265);
     arr = arr.pop();
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(5300);
+    let obj = callback(5305);
     obj = { analyticsLocations: null, analyticsSource: null };
-    const items = [callback2(7159).GIFTING_BADGE_POST_PURCHASE];
+    const items = [callback2(7197).GIFTING_BADGE_POST_PURCHASE];
     obj[0] = items;
-    obj[1] = callback2(7159).GIFTING_BADGE_POST_PURCHASE;
+    obj[1] = callback2(7197).GIFTING_BADGE_POST_PURCHASE;
     const result = obj.openCollectiblesShopMobile(obj);
   }, []);
   let obj = { children: null };

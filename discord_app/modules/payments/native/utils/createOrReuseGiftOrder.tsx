@@ -1,10 +1,10 @@
-// === Module 10299: useCreateOrReuseGiftOrder ===
+// === Module 10338: useCreateOrReuseGiftOrder ===
 
-// Module 10299 (useCreateOrReuseGiftOrder)
+// Module 10338 (useCreateOrReuseGiftOrder)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4357 */;
+import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4361 */;
 import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
@@ -15,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/payments/native/utils
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
   let _require = GiftPurchaseButton;
-  let obj = _require(9266);
+  let obj = _require(9303);
   obj = { location: GiftPurchaseButton };
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled(obj);
   _require = undefined;
@@ -36,7 +36,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

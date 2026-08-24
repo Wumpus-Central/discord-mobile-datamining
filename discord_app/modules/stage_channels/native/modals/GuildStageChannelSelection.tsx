@@ -1,11 +1,11 @@
-// === Module 8914: GuildStageChannelSelection ===
+// === Module 8951: GuildStageChannelSelection ===
 
-// Module 8914 (GuildStageChannelSelection)
+// Module 8951 (GuildStageChannelSelection)
 import noopAll from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "markAllUserIdListsStale" /* 4033 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 noopAll;

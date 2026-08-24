@@ -1,8 +1,8 @@
-// === Module 16628: queueMessageLinkFetch ===
+// === Module 16724: queueMessageLinkFetch ===
 
-// Module 16628 (queueMessageLinkFetch)
+// Module 16724 (queueMessageLinkFetch)
 import timestampDefault from "timestamp" /* 3 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 16629 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 16725 */;
 
 let closure_0 = new timestampDefault("codedLinkQueue");
 const obj = new _isNativeReflectConstructDefault({ concurrency: 5, intervalCap: 10, interval: 2000 });

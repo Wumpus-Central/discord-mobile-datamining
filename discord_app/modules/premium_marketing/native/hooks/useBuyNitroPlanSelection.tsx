@@ -1,6 +1,6 @@
-// === Module 7933: PremiumTypes ===
+// === Module 7972: PremiumTypes ===
 
-// Module 7933 (PremiumTypes)
+// Module 7972 (PremiumTypes)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;

@@ -1,11 +1,11 @@
-// === Module 11236: SubmittingOverlay ===
+// === Module 11287: SubmittingOverlay ===
 
-// Module 11236 (SubmittingOverlay)
+// Module 11287 (SubmittingOverlay)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import _modDef4115 from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import _modDef4119 from "module_4119" /* 4119 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const jsx = jsxProd.jsx;
 let obj = { ellipsis: null };
@@ -17,7 +17,7 @@ const result = set.fileFinishedImporting("modules/app_launcher/native/screens/ho
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
-  let obj = submitting(4115);
+  let obj = submitting(4119);
   class S {
     constructor() {
       tmp = submitting;
@@ -31,7 +31,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       return obj;
     }
   }
-  obj = { withSpring: submitting(4744).withSpring, submitting, SUBTLE_SPRING: submitting(4748).SUBTLE_SPRING };
+  obj = { withSpring: submitting(4749).withSpring, submitting, SUBTLE_SPRING: submitting(4753).SUBTLE_SPRING };
   S.__closure = obj;
   S.__workletHash = 492443733468;
   S.__initData = closure_5;
@@ -39,8 +39,8 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   obj = { style: items, children: null };
   items = [submitting.style, callback().ellipsis, animatedStyle];
   if (submitting) {
-    submitting = tmp5(submitting(4760).Ellipsis, { variant: "active", size: "md" });
+    submitting = tmp5(submitting(4765).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
-  return jsx(_modDef4115.View, { style: items, children: null });
+  return jsx(_modDef4119.View, { style: items, children: null });
 };

@@ -1,6 +1,6 @@
-// === Module 5469: vanityUrl ===
+// === Module 5474: vanityUrl ===
 
-// Module 5469 (vanityUrl)
+// Module 5474 (vanityUrl)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier4SmallBadge-2x.png.js");

@@ -1,18 +1,18 @@
-// === Module 11413: GiftIconTrinketsAnimation ===
+// === Module 11464: GiftIconTrinketsAnimation ===
 
-// Module 11413 (GiftIconTrinketsAnimation)
+// Module 11464 (GiftIconTrinketsAnimation)
 import set from "set" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import map from "map" /* 4097 */;
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import preloadDefault from "preload" /* 5449 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9217 */;
+import map from "map" /* 4100 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4754 */;
+import preloadDefault from "preload" /* 5454 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9254 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 9567: useDefaultAppLauncherWidth ===
+// === Module 9604: useDefaultAppLauncherWidth ===
 
-// Module 9567 (useDefaultAppLauncherWidth)
+// Module 9604 (useDefaultAppLauncherWidth)
 import set from "set" /* 2 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6989 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9603 */;
 
 const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;
 const result = set.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");

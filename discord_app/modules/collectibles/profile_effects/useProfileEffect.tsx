@@ -1,10 +1,10 @@
-// === Module 8969: useProfileEffect ===
+// === Module 9006: useProfileEffect ===
 
-// Module 8969 (useProfileEffect)
+// Module 9006 (useProfileEffect)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_4 from "map" /* 5324 */;
-import { isProfileEffectRecord } from "fromServer" /* 5307 */;
+import closure_3 from "updateCategoriesAndProducts" /* 5306 */;
+import closure_4 from "map" /* 5329 */;
+import { isProfileEffectRecord } from "fromServer" /* 5312 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");

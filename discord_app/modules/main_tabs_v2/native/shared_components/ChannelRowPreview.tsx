@@ -1,27 +1,27 @@
-// === Module 10050: PreviewIcon ===
+// === Module 10089: PreviewIcon ===
 
-// Module 10050 (PreviewIcon)
+// Module 10089 (PreviewIcon)
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import map from "map" /* 4097 */;
-import LinkIcon from "LinkIcon" /* 4318 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import Text from "Text" /* 4734 */;
-import getFontScale from "getFontScale" /* 4751 */;
-import ImageIcon from "ImageIcon" /* 6882 */;
-import StickerIcon from "StickerIcon" /* 7990 */;
-import VideoIcon from "VideoIcon" /* 7998 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 8508 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8510 */;
-import map2 from "map" /* 9288 */;
-import MusicIcon from "MusicIcon" /* 9904 */;
-import formatMessagePreview from "formatMessagePreview" /* 10028 */;
-import AttachmentIcon from "AttachmentIcon" /* 10051 */;
-import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10053 */;
-import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import map from "map" /* 4100 */;
+import LinkIcon from "LinkIcon" /* 4322 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
+import Text from "Text" /* 4739 */;
+import getFontScale from "getFontScale" /* 4756 */;
+import ImageIcon from "ImageIcon" /* 6920 */;
+import StickerIcon from "StickerIcon" /* 8029 */;
+import VideoIcon from "VideoIcon" /* 8037 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 8547 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8549 */;
+import map2 from "map" /* 9325 */;
+import MusicIcon from "MusicIcon" /* 9943 */;
+import formatMessagePreview from "formatMessagePreview" /* 10067 */;
+import AttachmentIcon from "AttachmentIcon" /* 10090 */;
+import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10092 */;
+import getLayoutStyles from "getLayoutStyles" /* 10095 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "markAllUserIdListsStale" /* 4033 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -197,7 +197,7 @@ class NativeChannelRowPreview {
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
       let obj = new gifAutoPlay(seeMoreLabelColor[24])();
-      obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, renderComponents: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+      obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       obj.setOptions(obj);
       return obj;
     }, items);

@@ -1,8 +1,8 @@
-// === Module 12297: useIsGameFriends ===
+// === Module 12349: useIsGameFriends ===
 
-// Module 12297 (useIsGameFriends)
+// Module 12349 (useIsGameFriends)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 5406 */;
+import closure_3 from "recountRelationshipTypes" /* 5411 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
 const require = arg1;
@@ -16,5 +16,5 @@ export const useIsGameFriends = function useIsGameFriends(id) {
     const gameRelationshipsForUserByType = closure_1_3.getGameRelationshipsForUserByType(closure_0, closure_1_4.FRIEND);
     const items = [gameRelationshipsForUserByType.length > 0, closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(6709).isVersionEqual), 1)[0];
+  }, items1, _require(6746).isVersionEqual), 1)[0];
 };

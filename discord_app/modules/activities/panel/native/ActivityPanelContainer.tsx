@@ -1,11 +1,11 @@
-// === Module 16225: ? ===
+// === Module 16322: ? ===
 
-// Module 16225
+// Module 16322
 import initialize from "initialize" /* 589 */;
-import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16226 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16235 */;
+import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16323 */;
+import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16332 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "handleConnectionOpen" /* 1980 */;
 import closure_5 from "participantFromServer" /* 1390 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

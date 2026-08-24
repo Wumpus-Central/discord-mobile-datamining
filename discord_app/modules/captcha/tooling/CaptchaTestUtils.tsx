@@ -1,8 +1,8 @@
-// === Module 15138: found ===
+// === Module 15202: found ===
 
-// Module 15138 (found)
+// Module 15202 (found)
 import set from "set" /* 2 */;
-import _testCaptcha from "_testCaptcha" /* 15139 */;
+import _testCaptcha from "_testCaptcha" /* 15203 */;
 
 const entries = Object.entries(_testCaptcha.HCaptchaDifficulty);
 const mapped = entries.map((arg0) => {

@@ -1,6 +1,6 @@
-// === Module 16508: useFormattedEndTime ===
+// === Module 16603: useFormattedEndTime ===
 
-// Module 16508 (useFormattedEndTime)
+// Module 16603 (useFormattedEndTime)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 

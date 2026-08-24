@@ -1,9 +1,9 @@
-// === Module 15483: useTotalPossibleBoostCount ===
+// === Module 15548: useTotalPossibleBoostCount ===
 
-// Module 15483 (useTotalPossibleBoostCount)
+// Module 15548 (useTotalPossibleBoostCount)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4266 */;
 import ME from "ME" /* 676 */;
 
 let useMemo = noop.useMemo;

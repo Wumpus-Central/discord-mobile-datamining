@@ -1,10 +1,10 @@
-// === Module 5520: AvatarLokyExample ===
+// === Module 5525: AvatarLokyExample ===
 
-// Module 5520 (AvatarLokyExample)
+// Module 5525 (AvatarLokyExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5449 */;
-import metadataDefault from "metadata" /* 5521 */;
+import preloadDefault from "preload" /* 5454 */;
+import metadataDefault from "metadata" /* 5526 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarLokyExample.native.tsx");

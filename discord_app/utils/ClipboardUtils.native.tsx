@@ -1,7 +1,7 @@
-// === Module 7167: _copy ===
+// === Module 7205: _copy ===
 
-// Module 7167 (_copy)
-import useClipboardDefault from "useClipboard" /* 7168 */;
+// Module 7205 (_copy)
+import useClipboardDefault from "useClipboard" /* 7206 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _copy() {
@@ -23,7 +23,7 @@ function _copy() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -59,7 +59,7 @@ function _copy() {
             return obj;
           } else {
             c2 = 3;
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c2 = tmp;

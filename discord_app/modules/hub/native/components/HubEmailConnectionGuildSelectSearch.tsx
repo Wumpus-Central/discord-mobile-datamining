@@ -1,20 +1,20 @@
-// === Module 11920: EmptyState ===
+// === Module 11969: EmptyState ===
 
-// Module 11920 (EmptyState)
+// Module 11969 (EmptyState)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import Text from "Text" /* 4734 */;
-import HeaderBackImage from "HeaderBackImage" /* 6314 */;
-import _modDef7336 from "module_7336" /* 7336 */;
-import registerAssetDefault from "registerAsset" /* 11921 */;
+import Text from "Text" /* 4739 */;
+import HeaderBackImage from "HeaderBackImage" /* 6345 */;
+import _modDef7374 from "module_7374" /* 7374 */;
+import registerAssetDefault from "registerAsset" /* 11970 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11897 */;
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps" /* 11946 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function EmptyState() {
@@ -80,7 +80,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   obj1[2] = function onClose() {
 
   };
-  obj[1] = callback2(_modDef7336, obj1);
+  obj[1] = callback2(_modDef7374, obj1);
   const items = [callback2(HeaderBackImage.FauxHeader, obj), ];
   obj2 = {
     keyboardShouldPersistTaps: "always",
@@ -115,7 +115,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -202,7 +202,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     style: tmp.scrollContainer,
     contentContainerStyle: obj3
   };
-  const tmp8Result = _modDef7336;
+  const tmp8Result = _modDef7374;
   items[1] = callback2(anyErrorMessage, obj2);
   obj[0] = items;
   return callback3(closure_12, obj);

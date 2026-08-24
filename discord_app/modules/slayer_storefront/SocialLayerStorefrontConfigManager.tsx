@@ -1,8 +1,8 @@
-// === Module 13290: onPostConnectionOpen ===
+// === Module 13348: onPostConnectionOpen ===
 
-// Module 13290 (onPostConnectionOpen)
-import initializeDefault from "initialize" /* 5038 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
+// Module 13348 (onPostConnectionOpen)
+import initializeDefault from "initialize" /* 5043 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8080 */;
 
 require = arg1;
 initializeDefault;

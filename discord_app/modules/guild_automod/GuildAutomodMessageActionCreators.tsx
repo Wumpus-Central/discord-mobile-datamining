@@ -1,6 +1,6 @@
-// === Module 10804: removeAutomodMessageNotice ===
+// === Module 10843: removeAutomodMessageNotice ===
 
-// Module 10804 (removeAutomodMessageNotice)
+// Module 10843 (removeAutomodMessageNotice)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

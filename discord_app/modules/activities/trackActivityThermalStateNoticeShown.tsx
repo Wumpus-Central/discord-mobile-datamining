@@ -1,10 +1,10 @@
-// === Module 16275: trackActivityThermalStateNoticeShown ===
+// === Module 16369: trackActivityThermalStateNoticeShown ===
 
-// Module 16275 (trackActivityThermalStateNoticeShown)
+// Module 16369 (trackActivityThermalStateNoticeShown)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4014 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_4 from "createRTCConnection" /* 4544 */;
 import closure_5 from "participantFromServer" /* 1390 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

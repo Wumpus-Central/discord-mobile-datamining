@@ -1,16 +1,16 @@
-// === Module 14607: useAppearanceSettingTrailing ===
+// === Module 14675: useAppearanceSettingTrailing ===
 
-// Module 14607 (useAppearanceSettingTrailing)
+// Module 14675 (useAppearanceSettingTrailing)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import messagesProxyDefault from "messagesProxy" /* 2533 */;
-import useThemeDefault from "useTheme" /* 4310 */;
-import useActiveThemeType from "useActiveThemeType" /* 8503 */;
-import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
+import messagesProxyDefault from "messagesProxy" /* 2534 */;
+import useThemeDefault from "useTheme" /* 4314 */;
+import useActiveThemeType from "useActiveThemeType" /* 8542 */;
+import closure_3 from "isSyncedModeThemesEnabled" /* 4199 */;
 import { ActiveThemeType } from "SystemThemeState" /* 1305 */;
-import createToggle from "createToggle" /* 10669 */;
+import createToggle from "createToggle" /* 10708 */;
 
 require = arg1;
 function useAppearanceSettingTrailing() {
@@ -59,7 +59,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
-    return require(14608).default;
+    return require(14676).default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

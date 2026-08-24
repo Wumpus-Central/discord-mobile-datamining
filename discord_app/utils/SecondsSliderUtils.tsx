@@ -1,9 +1,9 @@
-// === Module 16032: getSecondsSliderLabel ===
+// === Module 16130: getSecondsSliderLabel ===
 
-// Module 16032 (getSecondsSliderLabel)
+// Module 16130 (getSecondsSliderLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3975 */;
+import tDefault from "t" /* 3978 */;
 
 const result = set.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 

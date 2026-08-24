@@ -1,6 +1,6 @@
-// === Module 7630: createFromServer ===
+// === Module 7668: createFromServer ===
 
-// Module 7630 (createFromServer)
+// Module 7668 (createFromServer)
 import setDefault from "set" /* 687 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
 import toJSDefault from "toJS" /* 1931 */;
@@ -46,7 +46,7 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     endDate = null;
   }
   ({ id, component_type } = start_date);
-  const PremiumMarketingComponentProperties = textDecoder(7631).PremiumMarketingComponentProperties;
+  const PremiumMarketingComponentProperties = textDecoder(7669).PremiumMarketingComponentProperties;
   const fromBinary = PremiumMarketingComponentProperties.fromBinary;
   const obj2 = textDecoder(1307);
   function readerFactory(buf) {

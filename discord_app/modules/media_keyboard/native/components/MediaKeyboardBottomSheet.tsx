@@ -1,6 +1,6 @@
-// === Module 15982: MediaKeyboardBackground ===
+// === Module 16079: MediaKeyboardBackground ===
 
-// Module 15982 (MediaKeyboardBackground)
+// Module 16079 (MediaKeyboardBackground)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -11,7 +11,7 @@ import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import set from "set" /* 500 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function MediaKeyboardBackground(arg0) {
@@ -240,19 +240,19 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   obj2[13] = closure_6;
   obj2[14] = onClose;
   let merged = Object.assign(tmp4);
-  obj2.children = closure_9(animatedIndex(onClose[26]).AccessibilityViewAnimated, {
+  obj2.children = closure_9(animatedIndex(onClose[25]).AccessibilityViewAnimated, {
     ref,
     nativeID: "media-keyboard-sheet",
     onAccessibilityEscape() {
       if (closure_3 != null) {
         tmp();
       }
-      animatedIndex(onClose[27]).dismissKeyboard();
+      animatedIndex(onClose[26]).dismissKeyboard();
     },
     accessibilityViewIsModal: tmp14[0],
     children
   });
   const items3 = [closure_9(bottomSheetRef(onClose[15]), obj2), accessoriesComponent(tmp4), overlayComponent];
   obj1[1] = items3;
-  return tmp23(animatedIndex(onClose[25]).ThemeContextProvider, obj1);
+  return tmp23(animatedIndex(onClose[12]).ThemeContextProvider, obj1);
 });

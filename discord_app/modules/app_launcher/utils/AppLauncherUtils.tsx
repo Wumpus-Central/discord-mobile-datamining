@@ -1,23 +1,23 @@
-// === Module 8447: getShelfBadgeTypeIfActive ===
+// === Module 8486: getShelfBadgeTypeIfActive ===
 
-// Module 8447 (getShelfBadgeTypeIfActive)
+// Module 8486 (getShelfBadgeTypeIfActive)
 import set from "set" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import buildCommand from "buildCommand" /* 5245 */;
-import getApplicationFlags from "getApplicationFlags" /* 7873 */;
-import getPlatformDefault from "getPlatform" /* 8718 */;
-import canInstallApplication from "canInstallApplication" /* 8772 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
+import buildCommand from "buildCommand" /* 5250 */;
+import getApplicationFlags from "getApplicationFlags" /* 7912 */;
+import getPlatformDefault from "getPlatform" /* 8755 */;
+import canInstallApplication from "canInstallApplication" /* 8809 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9603 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "getIndexKey" /* 8448 */;
-import closure_7 from "createExecutable" /* 4479 */;
-import closure_8 from "handleDismissWithDismissed" /* 11264 */;
+import closure_6 from "getIndexKey" /* 8487 */;
+import closure_7 from "createExecutable" /* 4483 */;
+import closure_8 from "handleDismissWithDismissed" /* 11315 */;
 import { ApplicationFlags } from "ME" /* 676 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5251 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4670 */;
 
 require = arg1;
 function getShelfBadgeTypeIfActive(application) {
@@ -161,7 +161,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         closure_3 = tmp39;

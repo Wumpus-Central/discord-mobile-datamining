@@ -1,8 +1,8 @@
-// === Module 8460: get untranslatedDescription ===
+// === Module 8499: get untranslatedDescription ===
 
-// Module 8460 (get untranslatedDescription)
-import setDefault from "set" /* 4827 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+// Module 8499 (get untranslatedDescription)
+import setDefault from "set" /* 4832 */;
+import closure_3 from "markAllUserIdListsStale" /* 4033 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
@@ -28,11 +28,11 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4984).computeChannelName(channel, closure_4, closure_3);
+    const channelName = channel(4989).computeChannelName(channel, closure_4, closure_3);
     const intl5 = channel(1236).intl;
     let obj = { name: null };
     obj[0] = channelName;
-    const obj5 = channel(4984);
+    const obj5 = channel(4989);
     const intl6 = channel(1236).intl;
     obj = { name: null };
     obj[0] = channelName;

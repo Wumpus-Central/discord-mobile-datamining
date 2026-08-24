@@ -1,20 +1,20 @@
-// === Module 11970: CollectiblesShopGiftPurchaseSection ===
+// === Module 12019: CollectiblesShopGiftPurchaseSection ===
 
-// Module 11970 (CollectiblesShopGiftPurchaseSection)
+// Module 12019 (CollectiblesShopGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 712 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 7697 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 9278 */;
+import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 7735 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 9315 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 8936 */;
-import { useNativeCheckoutStore } from "context" /* 7395 */;
+import closure_7 from "initialize" /* 8973 */;
+import { useNativeCheckoutStore } from "context" /* 7433 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { PaymentGateways } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 let require = arg1;
 function CollectiblesShopGiftPurchaseSection(disabled) {
@@ -186,8 +186,8 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/C
 export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   ({ product, onGiftModalDismiss } = arg0);
   ({ isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin } = arg0);
-  const GiftACOMOrderExperiment = onGiftModalDismiss(7696).GiftACOMOrderExperiment;
-  let obj = onGiftModalDismiss(9266);
+  const GiftACOMOrderExperiment = onGiftModalDismiss(7734).GiftACOMOrderExperiment;
+  let obj = onGiftModalDismiss(9303);
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled({ location: "WrappedCollectiblesShopGiftPurchaseSection" });
   if (obj2.isIOS()) {
     let GOOGLE = tmp4.APPLE_ADVANCED_COMMERCE;
@@ -200,8 +200,8 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   if (!tmp6) {
     let result = GOOGLE === tmp5.GOOGLE;
     if (result) {
-      result = tmp(4052).isGooglePlayBillingSupported();
-      const tmpResult = tmp(4052);
+      result = tmp(4055).isGooglePlayBillingSupported();
+      const tmpResult = tmp(4055);
     }
     if (result) {
       result = androidShopOrdersEnabled;
@@ -222,5 +222,5 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   const tmp8 = useCollectiblesExternalGatewayFacetDefault(product);
   obj[7] = callback2(CollectiblesShopGiftPurchaseSection, { product, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin });
   obj[2] = callback2(NativeCheckoutStoreProviderDefault, obj, product.skuId);
-  return callback2(onGiftModalDismiss(9585).NativePaymentContextProvider, obj);
+  return callback2(onGiftModalDismiss(9622).NativePaymentContextProvider, obj);
 };

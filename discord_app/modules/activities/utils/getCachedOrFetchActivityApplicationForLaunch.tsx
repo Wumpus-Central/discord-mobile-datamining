@@ -1,9 +1,9 @@
-// === Module 8735: _getCachedOrFetchActivityApplicationForLaunch ===
+// === Module 8772: _getCachedOrFetchActivityApplicationForLaunch ===
 
-// Module 8735 (_getCachedOrFetchActivityApplicationForLaunch)
+// Module 8772 (_getCachedOrFetchActivityApplicationForLaunch)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "createExecutable" /* 4479 */;
+import closure_4 from "addApplication" /* 4482 */;
+import closure_5 from "createExecutable" /* 4483 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;
@@ -26,7 +26,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

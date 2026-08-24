@@ -1,11 +1,11 @@
-// === Module 12600: useStageActionBarAnimation ===
+// === Module 12654: useStageActionBarAnimation ===
 
-// Module 12600 (useStageActionBarAnimation)
+// Module 12654 (useStageActionBarAnimation)
 import set from "set" /* 2 */;
-import _mod4115 from "module_4115" /* 4115 */;
+import _mod4119 from "module_4119" /* 4119 */;
 
 let obj = { duration: 250, easing: null };
-const Easing = _mod4115.Easing;
+const Easing = _mod4119.Easing;
 obj[1] = Easing.bezier(0.66, 0, 0.2, 1);
 let closure_4 = { code: "function StageChannelAnimationUtilsTsx1(){const{isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding}=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;}" };
 let closure_5 = { code: "function StageChannelAnimationUtilsTsx2(){const{withTiming,paddingTop,TIMING_CONFIG}=this.__closure;return{paddingTop:withTiming(paddingTop.get(),TIMING_CONFIG)};}" };

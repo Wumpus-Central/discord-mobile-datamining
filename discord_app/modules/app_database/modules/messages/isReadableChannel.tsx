@@ -1,10 +1,10 @@
-// === Module 5075: isReadableChannel ===
+// === Module 5080: isReadableChannel ===
 
-// Module 5075 (isReadableChannel)
+// Module 5080 (isReadableChannel)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4024 */;
 import ME from "ME" /* 676 */;
 
 const isTextChannel = createChannelRecord.isTextChannel;

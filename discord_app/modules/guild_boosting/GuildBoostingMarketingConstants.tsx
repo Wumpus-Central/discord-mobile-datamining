@@ -1,10 +1,10 @@
-// === Module 11735: BoostedGuildTiers ===
+// === Module 11784: BoostedGuildTiers ===
 
-// Module 11735 (BoostedGuildTiers)
+// Module 11784 (BoostedGuildTiers)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4266 */;
+import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4270 */;
 import ME from "ME" /* 676 */;
 
 const BoostedGuildTiers = ME.BoostedGuildTiers;

@@ -1,6 +1,6 @@
-// === Module 6793: getFlattenedChannels ===
+// === Module 6830: getFlattenedChannels ===
 
-// Module 6793 (getFlattenedChannels)
+// Module 6830 (getFlattenedChannels)
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;

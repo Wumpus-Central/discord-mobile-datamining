@@ -1,38 +1,38 @@
-// === Module 14518: Footer ===
+// === Module 14586: Footer ===
 
-// Module 14518 (Footer)
+// Module 14586 (Footer)
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import ManaContext from "ManaContext" /* 4104 */;
-import Text from "Text" /* 4734 */;
-import Button2 from "Button" /* 4745 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7124 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9395 */;
+import ManaContext from "ManaContext" /* 4107 */;
+import Text from "Text" /* 4739 */;
+import Button2 from "Button" /* 4750 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7162 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9432 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 function Footer(eligibleToReceivePremiumRewards) {
   const callback = React.useCallback(() => {
-    let obj = callback2(4342);
+    let obj = callback2(4346);
     obj.hideActionSheet();
     obj = { screen: constants2.PREMIUM };
-    callback(7360).openUserSettings(obj);
+    callback(7398).openUserSettings(obj);
   }, []);
   const tmp = callback3();
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants.QUEST_ORB_MULTIPLIER_PERK_INFO));
   const callback1 = React.useCallback(() => {
-    callback2(4342).hideActionSheet();
-    const obj = callback2(4342);
-    const obj2 = callback2(4090);
-    obj2.openURL(callback2(1993).getArticleURL(constants.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+    callback2(4346).hideActionSheet();
+    const obj = callback2(4346);
+    const obj2 = callback2(4093);
+    obj2.openURL(callback2(1994).getArticleURL(constants.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
   }, []);
   let obj = { style: tmp.buttonContainer, children: null };
   const callback2 = React.useCallback(() => {
-    callback2(4342).hideActionSheet();
+    callback2(4346).hideActionSheet();
   }, []);
   const Button = Button2.Button;
   if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
@@ -45,7 +45,7 @@ function Footer(eligibleToReceivePremiumRewards) {
     const intl4 = tmp10(1236).intl;
     obj[2] = intl4.string(tmp10(1236).t.cpT0Cq);
     obj[3] = callback2;
-    items[1] = tmp9(tmp10(4745).Button, obj);
+    items[1] = tmp9(tmp10(4750).Button, obj);
     obj[1] = items;
     let tmp11 = obj;
   } else {
@@ -59,7 +59,7 @@ function Footer(eligibleToReceivePremiumRewards) {
     const intl2 = tmp10(1236).intl;
     obj2[2] = intl2.string(tmp10(1236).t.PcTCB7);
     obj2[3] = callback;
-    items1[1] = tmp9(tmp10(4745).Button, obj2);
+    items1[1] = tmp9(tmp10(4750).Button, obj2);
     obj[1] = items1;
     tmp11 = obj;
   }
@@ -106,7 +106,7 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
   dependencyMap = undefined;
-  let obj = multiplier(10494);
+  let obj = multiplier(10533);
   const result = obj.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
   const items = [orbMultiplierEligibility];
@@ -144,9 +144,9 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
     return formatResult;
   }, items1);
   obj = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles: closure_11, children: null };
-  obj = { visible: orbMultiplierEligibility === multiplier(10494).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10494).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
-  const tmp4 = orbMultiplierEligibility === multiplier(10494).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10494).QuestOrbMultiplierEligibilityType.UPSELL;
+  obj = { visible: orbMultiplierEligibility === multiplier(10533).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10533).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
+  const tmp4 = orbMultiplierEligibility === multiplier(10533).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10533).QuestOrbMultiplierEligibilityType.UPSELL;
   obj[1] = callback(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj[4] = callback(orbMultiplierEligibility(14515), obj);
-  return callback(multiplier(6950).BottomSheet, obj);
+  obj[4] = callback(orbMultiplierEligibility(14583), obj);
+  return callback(multiplier(6988).BottomSheet, obj);
 };

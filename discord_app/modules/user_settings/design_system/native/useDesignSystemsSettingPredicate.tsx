@@ -1,8 +1,8 @@
-// === Module 14894: useDesignSystemsSettingPredicate ===
+// === Module 14958: useDesignSystemsSettingPredicate ===
 
-// Module 14894 (useDesignSystemsSettingPredicate)
+// Module 14958 (useDesignSystemsSettingPredicate)
 import set from "set" /* 2 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
+import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14267 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
 

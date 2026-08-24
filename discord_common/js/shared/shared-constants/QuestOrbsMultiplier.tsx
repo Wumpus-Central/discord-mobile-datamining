@@ -1,6 +1,6 @@
-// === Module 10692: QuestOrbsMultiplier ===
+// === Module 10731: QuestOrbsMultiplier ===
 
-// Module 10692 (QuestOrbsMultiplier)
+// Module 10731 (QuestOrbsMultiplier)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestOrbsMultiplier.tsx");

@@ -1,11 +1,11 @@
-// === Module 17112: _handleIncomingURL ===
+// === Module 17206: _handleIncomingURL ===
 
-// Module 17112 (_handleIncomingURL)
+// Module 17206 (_handleIncomingURL)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
-import closure_6 from "getState" /* 7383 */;
+import closure_5 from "createRTCConnection" /* 4544 */;
+import closure_6 from "getState" /* 7421 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -35,7 +35,7 @@ function _handleIncomingURL() {
             obj[0] = url;
             return obj;
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -189,18 +189,18 @@ function _handleIncomingURL() {
                         const obj30 = lib(closure_1_2[8]);
                       }
                       fingerprint = 3;
-                      return { value: "HermesInternal", done: "HermesInternal" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       throwTypeErrorResult = url;
                       const parts = url.split("voice/");
                       if (2 !== parts.length) {
                         fingerprint = 3;
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       } else {
                         const parts1 = parts[1].split("/");
                         if (0 === parts1.length) {
                           fingerprint = 3;
-                          return { value: "HermesInternal", done: "HermesInternal" };
+                          return { value: "HermesInternal", done: null };
                         } else if ("user" !== parts1[0]) {
                           if ("invite" === parts1[0]) {
                             throwTypeErrorResult = callback;

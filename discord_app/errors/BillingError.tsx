@@ -1,9 +1,9 @@
-// === Module 4061: set ===
+// === Module 4064: set ===
 
-// Module 4061 (set)
+// Module 4064 (set)
 import sendRequest from "sendRequest" /* 530 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import prototypeDefault from "prototype" /* 4062 */;
+import prototypeDefault from "prototype" /* 4065 */;
 import set from "set" /* 2 */;
 
 require = arg1;

@@ -1,9 +1,9 @@
-// === Module 13541: AvatarDuoPile ===
+// === Module 13599: AvatarDuoPile ===
 
-// Module 13541 (AvatarDuoPile)
+// Module 13599 (AvatarDuoPile)
 import noopAll from "noop" /* 19 */;
-import SolidCutout from "SolidCutout" /* 8402 */;
-import Pile from "Pile" /* 11788 */;
+import SolidCutout from "SolidCutout" /* 8441 */;
+import Pile from "Pile" /* 11837 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -16,7 +16,7 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if ("aria-label" in merged) {
     aria_label = merged["aria-label"];
   } else {
-    let tmp3Result = tmp3(11790);
+    let tmp3Result = tmp3(11839);
     aria_label = tmp3Result.getListSummaryLabel(merged.names);
   }
   const obj = { aria-label, shape: SolidCutout.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
@@ -24,7 +24,7 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if (tmp3Result.isArray(size)) {
     let mapped = size.map((arg0) => callback(table[6]).AVATAR_SIZE_MAP[arg0]);
   } else {
-    mapped = tmp3(12125).AVATAR_SIZE_MAP[size];
+    mapped = tmp3(12177).AVATAR_SIZE_MAP[size];
   }
   obj[2] = mapped;
   obj[6] = size.children;

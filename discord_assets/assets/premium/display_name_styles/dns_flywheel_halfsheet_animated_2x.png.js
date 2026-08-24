@@ -1,6 +1,6 @@
-// === Module 16154: metadata ===
+// === Module 16251: metadata ===
 
-// Module 16154 (metadata)
+// Module 16251 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/display_name_styles/dns_flywheel_halfsheet_animated_2x.png.js");

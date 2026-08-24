@@ -1,6 +1,6 @@
-// === Module 5517: metadata ===
+// === Module 5522: metadata ===
 
-// Module 5517 (metadata)
+// Module 5522 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarGraggleExample-2x.png.js");

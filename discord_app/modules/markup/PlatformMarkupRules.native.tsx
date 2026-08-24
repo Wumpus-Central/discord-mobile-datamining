@@ -1,16 +1,16 @@
-// === Module 6831: match ===
+// === Module 6869: match ===
 
-// Module 6831 (match)
+// Module 6869 (match)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import tDefault from "t" /* 4092 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4507 */;
-import textRegexpDefault from "textRegexp" /* 6815 */;
-import getChannelDefault from "getChannel" /* 6816 */;
-import _modDef6819 from "module_6819" /* 6819 */;
-import getGameMentionData from "getGameMentionData" /* 6898 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
+import tDefault from "t" /* 4095 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
+import textRegexpDefault from "textRegexp" /* 6852 */;
+import getChannelDefault from "getChannel" /* 6853 */;
+import regExpDefault from "regExp" /* 6856 */;
+import getGameMentionData from "getGameMentionData" /* 6936 */;
 
 const Image = get_ActivityIndicator.Image;
 const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;
@@ -332,7 +332,7 @@ obj[8] = {
 };
 obj[9] = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = _modDef6819.attachmentLink;
+    const attachmentLink = regExpDefault.attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };

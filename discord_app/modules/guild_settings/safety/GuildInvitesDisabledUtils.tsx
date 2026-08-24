@@ -1,8 +1,8 @@
-// === Module 11545: useInvitesDisabledPermission ===
+// === Module 11594: useInvitesDisabledPermission ===
 
-// Module 11545 (useInvitesDisabledPermission)
-import closure_2 from "computeAlertSettings" /* 10014 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+// Module 11594 (useInvitesDisabledPermission)
+import closure_2 from "computeAlertSettings" /* 10053 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

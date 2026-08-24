@@ -1,10 +1,10 @@
-// === Module 12353: UserClockIcon ===
+// === Module 12405: UserClockIcon ===
 
-// Module 12353 (UserClockIcon)
+// Module 12405 (UserClockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4096 */;
-import registerAsset from "registerAsset" /* 12354 */;
+import BaseIconImage from "BaseIconImage" /* 4099 */;
+import registerAsset from "registerAsset" /* 12406 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

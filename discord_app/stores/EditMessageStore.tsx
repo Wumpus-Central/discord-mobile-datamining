@@ -1,12 +1,12 @@
-// === Module 7435: initialize ===
+// === Module 7473: initialize ===
 
-// Module 7435 (initialize)
+// Module 7473 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import rebuildDefault from "rebuild" /* 7436 */;
-import createEmptyState from "createEmptyState" /* 7439 */;
-import closure_3 from "reinjectEphemerals" /* 4994 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import rebuildDefault from "rebuild" /* 7474 */;
+import createEmptyState from "createEmptyState" /* 7477 */;
+import closure_3 from "reinjectEphemerals" /* 4999 */;
 
 require = arg1;
 let closure_4 = {};

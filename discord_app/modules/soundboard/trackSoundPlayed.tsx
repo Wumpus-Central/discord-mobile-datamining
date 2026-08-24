@@ -1,12 +1,12 @@
-// === Module 7332: trackSoundPlayed ===
+// === Module 7370: trackSoundPlayed ===
 
-// Module 7332 (trackSoundPlayed)
+// Module 7370 (trackSoundPlayed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "initialize" /* 4504 */;
+import closure_2 from "initialize" /* 4508 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
+import closure_4 from "createRTCConnection" /* 4544 */;
+import closure_5 from "handleConnectionOpen" /* 1980 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4786 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 

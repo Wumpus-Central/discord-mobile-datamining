@@ -1,20 +1,20 @@
-// === Module 4026: applyOverwrites ===
+// === Module 4029: applyOverwrites ===
 
-// Module 4026 (applyOverwrites)
+// Module 4029 (applyOverwrites)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import compareGuildRoles from "compareGuildRoles" /* 1987 */;
-import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "storeThread" /* 4023 */;
+import compareGuildRoles from "compareGuildRoles" /* 1988 */;
+import GuildMemberFlags from "GuildMemberFlags" /* 4030 */;
+import closure_4 from "initialize" /* 1983 */;
+import closure_5 from "initialize" /* 4025 */;
+import closure_6 from "storeThread" /* 4026 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
+import { hasPermission } from "GuildRoleRecordTypeTag" /* 1985 */;
 import closure_12 from "fetchFingerprint" /* 1218 */;
 import closure_13 from "ensureGuildLoaded" /* 1391 */;
-import closure_14 from "trackCommunicationDisabled" /* 1990 */;
-import closure_15 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_14 from "trackCommunicationDisabled" /* 1991 */;
+import closure_15 from "createGuildRoleRecordFromRust" /* 1984 */;
 import closure_16 from "createGuildRecordFromRust" /* 1910 */;
 import closure_17 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
@@ -86,13 +86,13 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       const tmp19Result2 = tmp19(506);
     }
     const obj10 = GuildMemberFlags;
-    const tmp28Result = tmp28(4010);
+    const tmp28Result = tmp28(4013);
     found1 = found;
     if (tmp34) {
       found1 = tmp19(506).filter(found, closure_28);
       const tmp19Result3 = tmp19(506);
     }
-    tmp34 = tmp28(4010).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(4013).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }

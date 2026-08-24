@@ -1,9 +1,9 @@
-// === Module 9678: isStableVoiceStateEqual ===
+// === Module 9717: isStableVoiceStateEqual ===
 
-// Module 9678 (isStableVoiceStateEqual)
+// Module 9717 (isStableVoiceStateEqual)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_4 from "updateVoiceState" /* 4547 */;
 
 const require = arg1;
 function isStableVoiceStateEqual(arg0, arg1) {

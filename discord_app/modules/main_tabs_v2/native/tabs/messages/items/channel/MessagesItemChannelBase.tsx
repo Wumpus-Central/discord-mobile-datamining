@@ -1,18 +1,18 @@
-// === Module 15296: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
+// === Module 15360: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
 
-// Module 15296 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
+// Module 15360 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_5 from "sortActivity" /* 4564 */;
+import closure_6 from "generateOldThreadCutoff" /* 4777 */;
+import closure_7 from "markAllUserIdListsStale" /* 4033 */;
+import closure_8 from "handleConnectionOpen" /* 1980 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5048 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = store.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "r", activities: "accessibilityRole" };
+      obj = { status: "Array", activities: "ct" };
     }
     return obj;
   });

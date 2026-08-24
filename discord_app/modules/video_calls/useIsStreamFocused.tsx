@@ -1,8 +1,8 @@
-// === Module 12481: useIsStreamFocused ===
+// === Module 12535: useIsStreamFocused ===
 
-// Module 12481 (useIsStreamFocused)
-import closure_2 from "getParticipants" /* 4773 */;
-import { isStreamParticipant } from "ParticipantTypes" /* 4544 */;
+// Module 12535 (useIsStreamFocused)
+import closure_2 from "getParticipants" /* 4778 */;
+import { isStreamParticipant } from "ParticipantTypes" /* 4549 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");

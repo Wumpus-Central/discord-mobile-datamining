@@ -1,13 +1,13 @@
-// === Module 15966: FriendsScreen ===
+// === Module 16063: FriendsScreen ===
 
-// Module 15966 (FriendsScreen)
+// Module 16063 (FriendsScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recountRelationshipTypes" /* 5406 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "recountRelationshipTypes" /* 5411 */;
+import closure_6 from "markAllUserIdListsStale" /* 4033 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

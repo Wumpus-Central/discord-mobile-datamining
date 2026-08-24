@@ -1,6 +1,6 @@
-// === Module 8689: usePipDimensions ===
+// === Module 8726: usePipDimensions ===
 
-// Module 8689 (usePipDimensions)
+// Module 8726 (usePipDimensions)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

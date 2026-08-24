@@ -1,14 +1,14 @@
-// === Module 10913: render ===
+// === Module 10952: render ===
 
-// Module 10913 (render)
+// Module 10952 (render)
 import sendRequest from "sendRequest" /* 530 */;
 import Button from "Button" /* 1297 */;
 import getConstantsAll from "getConstants" /* 1626 */;
-import _modDef4090 from "module_4090" /* 4090 */;
-import registerAssetDefault from "registerAsset" /* 8352 */;
+import _modDef4093 from "module_4093" /* 4093 */;
+import registerAssetDefault from "registerAsset" /* 8391 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7280 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -171,8 +171,8 @@ export const openUrl = function openUrl(arg0, ALBUM, album_id) {
     });
     const openURLResult = closure_4.openURL(closure_7.PLAYER_OPEN(ALBUM, album_id, true, "mobile"));
   } else {
-    catchPromise = _modDef4090.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
-    const obj = _modDef4090;
+    catchPromise = _modDef4093.openURL(closure_7.WEB_OPEN(ALBUM, album_id, "mobile"));
+    const obj = _modDef4093;
   }
   return catchPromise;
 };
@@ -248,7 +248,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   let obj = { style: activity.style, children: null };
   obj = { icon: null, text: null, size: "sm", onPress: null, grow: true };
   obj = { source: registerAssetDefault };
-  obj[0] = callback(activity(4745).Button.Icon, obj);
+  obj[0] = callback(activity(4750).Button.Icon, obj);
   const intl = activity(1236).intl;
   obj[1] = intl.formatToPlainString(activity(1236).t.LEgD7t, { platform: activity.name });
   obj[3] = function onPress() {
@@ -274,7 +274,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
 
     });
   };
-  obj[1] = callback(activity(4745).Button, obj);
+  obj[1] = callback(activity(4750).Button, obj);
   return callback(closure_5, obj);
 };
 export { SpotifyTrack };

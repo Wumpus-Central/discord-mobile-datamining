@@ -1,14 +1,14 @@
-// === Module 10784: RoleMembersActionSheet ===
+// === Module 10823: RoleMembersActionSheet ===
 
-// Module 10784 (RoleMembersActionSheet)
+// Module 10823 (RoleMembersActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 7249 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import { EVERYONE_CHANNEL_ID } from "getMemberListId" /* 7287 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 const require = arg1;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -57,7 +57,7 @@ export default function RoleMembersActionSheet(guildId) {
   const tmp3 = guildId;
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(6927)(guildId);
+  const tmp11 = roleId(6965)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -82,9 +82,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj[1] = channelId;
     obj[2] = roleId;
-    obj[2] = closure_8(tmp9(10785), obj);
-    tmp16Result = tmp16(tmp3(6950).BottomSheet, obj);
-    let tmp9Result = tmp9(10785);
+    obj[2] = closure_8(tmp9(10824), obj);
+    tmp16Result = tmp16(tmp3(6988).BottomSheet, obj);
+    let tmp9Result = tmp9(10824);
   }
   return tmp16Result;
 };

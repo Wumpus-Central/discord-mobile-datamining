@@ -1,6 +1,6 @@
-// === Module 8272: metadata ===
+// === Module 8312: metadata ===
 
-// Module 8272 (metadata)
+// Module 8312 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/referral_program/trialExchange.png.js");

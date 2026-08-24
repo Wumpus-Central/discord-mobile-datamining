@@ -1,6 +1,6 @@
-// === Module 6731: EmojiCategoryTypes ===
+// === Module 6768: EmojiCategoryTypes ===
 
-// Module 6731 (EmojiCategoryTypes)
+// Module 6768 (EmojiCategoryTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");

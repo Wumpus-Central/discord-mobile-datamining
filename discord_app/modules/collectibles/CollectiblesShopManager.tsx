@@ -1,11 +1,11 @@
-// === Module 12000: chunk ===
+// === Module 12049: chunk ===
 
-// Module 12000 (chunk)
+// Module 12049 (chunk)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _maybeFetchProductsWithSkus from "_maybeFetchProductsWithSkus" /* 8962 */;
-import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 12001 */;
-import closure_2 from "getFetchState" /* 11999 */;
-import closure_3 from "getFetchState" /* 8963 */;
+import _maybeFetchProductsWithSkus from "_maybeFetchProductsWithSkus" /* 8999 */;
+import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 12050 */;
+import closure_2 from "getFetchState" /* 12048 */;
+import closure_3 from "getFetchState" /* 9000 */;
 import set from "set" /* 2 */;
 
 require = arg1;

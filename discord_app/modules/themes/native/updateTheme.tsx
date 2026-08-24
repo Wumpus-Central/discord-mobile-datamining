@@ -1,9 +1,9 @@
-// === Module 16177: updateTheme ===
+// === Module 16274: updateTheme ===
 
-// Module 16177 (updateTheme)
+// Module 16274 (updateTheme)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 13815 */;
+import enforcingDefault from "enforcing" /* 13873 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 const result = set.fileFinishedImporting("modules/themes/native/updateTheme.tsx");

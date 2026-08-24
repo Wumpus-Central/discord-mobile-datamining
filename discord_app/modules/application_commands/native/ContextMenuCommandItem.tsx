@@ -1,16 +1,16 @@
-// === Module 16085: ContextMenuCommandItem ===
+// === Module 16183: ContextMenuCommandItem ===
 
-// Module 16085 (ContextMenuCommandItem)
+// Module 16183 (ContextMenuCommandItem)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import preloadDefault from "preload" /* 5449 */;
-import TableRowInner from "TableRowInner" /* 6291 */;
-import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 11392 */;
+import preloadDefault from "preload" /* 5454 */;
+import TableRowInner from "TableRowInner" /* 6322 */;
+import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 11443 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 createCacheKey = { commandIcon: null, loadingIcon: null, loadingName: null };
@@ -42,7 +42,7 @@ export default function ContextMenuCommandItem(item) {
     }
     return intl.formatToPlainString(item(closure_1_2[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(11392);
+  let obj = item(11443);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
@@ -50,13 +50,13 @@ export default function ContextMenuCommandItem(item) {
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp8Result = tmp8(section(5449), obj);
+    tmp8Result = tmp8(section(5454), obj);
   }
   obj[3] = tmp8Result;
-  obj[4] = jsx(item(4320).SendMessageIcon, {});
+  obj[4] = jsx(item(4324).SendMessageIcon, {});
   obj[5] = start;
   obj[6] = end;
-  return jsx(item(6291).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  return jsx(item(6322).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 };
 export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingItem(arg0) {
   ({ start, end } = arg0);

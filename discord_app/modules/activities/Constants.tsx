@@ -1,6 +1,6 @@
-// === Module 4481: items3 ===
+// === Module 4485: items3 ===
 
-// Module 4481 (items3)
+// Module 4485 (items3)
 import ME from "ME" /* 676 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import set from "set" /* 2 */;

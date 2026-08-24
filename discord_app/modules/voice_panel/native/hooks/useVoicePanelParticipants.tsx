@@ -1,15 +1,15 @@
-// === Module 16302: getMemoizedParticipant ===
+// === Module 16396: getMemoizedParticipant ===
 
-// Module 16302 (getMemoizedParticipant)
+// Module 16396 (getMemoizedParticipant)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
+import closure_5 from "getParticipants" /* 4778 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
-import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import closure_8 from "createRTCConnection" /* 4544 */;
+import closure_9 from "updateVoiceState" /* 4547 */;
+import closure_10 from "getVoiceStatesForGuild" /* 4550 */;
+import VoicePanelModes from "VoicePanelModes" /* 11489 */;
 import { RTCConnectionStates } from "ME" /* 676 */;
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 10220: useStickerPickerStore ===
+// === Module 10259: useStickerPickerStore ===
 
-// Module 10220 (useStickerPickerStore)
+// Module 10259 (useStickerPickerStore)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

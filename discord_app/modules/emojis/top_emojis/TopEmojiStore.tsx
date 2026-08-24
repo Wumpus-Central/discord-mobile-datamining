@@ -1,6 +1,6 @@
-// === Module 6730: initialize ===
+// === Module 6767: initialize ===
 
-// Module 6730 (initialize)
+// Module 6767 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

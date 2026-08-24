@@ -1,9 +1,9 @@
-// === Module 10278: ? ===
+// === Module 10317: ? ===
 
-// Module 10278
+// Module 10317
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10279 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10318 */;
 import keys from "keys" /* 644 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -93,7 +93,7 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(closure_1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(10279)(obj);
+          lastAssetIndex(10318)(obj);
         }
       }
     }

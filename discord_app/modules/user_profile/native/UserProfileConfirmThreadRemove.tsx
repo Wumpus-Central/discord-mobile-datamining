@@ -1,10 +1,10 @@
-// === Module 11797: UserProfileConfirmThreadRemove ===
+// === Module 11846: UserProfileConfirmThreadRemove ===
 
-// Module 11797 (UserProfileConfirmThreadRemove)
+// Module 11846 (UserProfileConfirmThreadRemove)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import nameFromUserDefault from "nameFromUser" /* 4223 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4667 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

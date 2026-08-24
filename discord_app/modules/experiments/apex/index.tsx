@@ -1,14 +1,13 @@
 // === Module 1472: ApexExperiment ===
 
 // Module 1472 (ApexExperiment)
-import set from "set" /* 2 */;
-import getUnitId from "getUnitId" /* 1368 */;
 import getUnitIdDefault from "getUnitId" /* 1368 */;
-import INSTALLATION_UNIT_ID from "INSTALLATION_UNIT_ID" /* 1473 */;
+import importDefaultResult from "initialize" /* 1212 */;
 
-const result = set.fileFinishedImporting("modules/experiments/apex/index.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/apex/index.tsx");
 
-export const ApexExperiment = getUnitId.ApexExperiment;
-export const ApexExperimentsMessage = INSTALLATION_UNIT_ID.ApexExperimentsMessage;
-export const ExperimentName = INSTALLATION_UNIT_ID.ExperimentName;
+export const ApexExperiment = require("getUnitId").ApexExperiment;
+export const ApexExperimentsMessage = require("INSTALLATION_UNIT_ID").ApexExperimentsMessage;
+export const ExperimentName = require("INSTALLATION_UNIT_ID").ExperimentName;
 export const createApexExperiment = getUnitIdDefault;
+export const ApexExperimentStore = importDefaultResult;

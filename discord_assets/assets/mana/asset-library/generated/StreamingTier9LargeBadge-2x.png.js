@@ -1,6 +1,6 @@
-// === Module 6223: vanityUrl ===
+// === Module 6254: vanityUrl ===
 
-// Module 6223 (vanityUrl)
+// Module 6254 (vanityUrl)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamingTier9LargeBadge-2x.png.js");

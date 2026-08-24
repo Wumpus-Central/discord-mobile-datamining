@@ -1,12 +1,12 @@
-// === Module 7573: BurstReactionAnimation ===
+// === Module 7611: BurstReactionAnimation ===
 
-// Module 7573 (BurstReactionAnimation)
+// Module 7611 (BurstReactionAnimation)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
-import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import _generateAnimationSource from "_generateAnimationSource" /* 7569 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import createCacheKey from "createCacheKey" /* 4668 */;
 
 require = arg1;
 noopAll;
@@ -44,7 +44,7 @@ export default function BurstReactionAnimation(arg0) {
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj);
     obj1.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 7574 : 7130), { style: null, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 7612 : 7168), { style: null, loop: false, speed: null });
   }
   tmp2 = callback();
 };

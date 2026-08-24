@@ -1,12 +1,12 @@
-// === Module 16593: HolidayEmojiAnimationType ===
+// === Module 16689: HolidayEmojiAnimationType ===
 
-// Module 16593 (HolidayEmojiAnimationType)
+// Module 16689 (HolidayEmojiAnimationType)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import Soundpacks from "Soundpacks" /* 10042 */;
-import registerAssetDefault from "registerAsset" /* 16594 */;
-import registerAssetDefault2 from "registerAsset" /* 16595 */;
+import Soundpacks from "Soundpacks" /* 10081 */;
+import registerAssetDefault from "registerAsset" /* 16690 */;
+import registerAssetDefault2 from "registerAsset" /* 16691 */;
 
 let obj = {
   experiment: null,

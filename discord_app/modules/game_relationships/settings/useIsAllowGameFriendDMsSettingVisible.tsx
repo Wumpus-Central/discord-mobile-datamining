@@ -1,8 +1,8 @@
-// === Module 15028: useIsAllowGameFriendDMsSettingVisible ===
+// === Module 15092: useIsAllowGameFriendDMsSettingVisible ===
 
-// Module 15028 (useIsAllowGameFriendDMsSettingVisible)
+// Module 15092 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
+import closure_2 from "recountRelationshipTypes" /* 5411 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx");

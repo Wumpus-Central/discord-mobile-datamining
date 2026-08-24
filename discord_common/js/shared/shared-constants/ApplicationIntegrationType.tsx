@@ -1,6 +1,6 @@
-// === Module 8770: ApplicationIntegrationType ===
+// === Module 8807: ApplicationIntegrationType ===
 
-// Module 8770 (ApplicationIntegrationType)
+// Module 8807 (ApplicationIntegrationType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx");

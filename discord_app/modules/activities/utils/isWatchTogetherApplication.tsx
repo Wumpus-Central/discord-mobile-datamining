@@ -1,8 +1,8 @@
-// === Module 12434: isWatchTogetherApplication ===
+// === Module 12486: isWatchTogetherApplication ===
 
-// Module 12434 (isWatchTogetherApplication)
+// Module 12486 (isWatchTogetherApplication)
 import set from "set" /* 2 */;
-import items3 from "items3" /* 4481 */;
+import items3 from "items3" /* 4485 */;
 
 ({ WATCH_YOUTUBE_DEV_APP_ID: c0, WATCH_YOUTUBE_PROD_APP_ID: closure_1, WATCH_YOUTUBE_QA_APP_ID: obj1 } = items3);
 const result = set.fileFinishedImporting("modules/activities/utils/isWatchTogetherApplication.tsx");

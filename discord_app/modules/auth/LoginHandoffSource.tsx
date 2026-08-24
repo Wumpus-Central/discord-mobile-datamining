@@ -1,10 +1,10 @@
-// === Module 7283: LoginHandoffSource ===
+// === Module 7321: LoginHandoffSource ===
 
-// Module 7283 (LoginHandoffSource)
+// Module 7321 (LoginHandoffSource)
 import set from "set" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 import set2 from "set" /* 1398 */;
-import ME from "ME" /* 4488 */;
+import ME from "ME" /* 4492 */;
 
 const StaticChannelRoute = set2.StaticChannelRoute;
 const UserSettingsPath = MAX_FAVORITES.UserSettingsPath;
