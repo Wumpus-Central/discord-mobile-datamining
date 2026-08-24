@@ -3,7 +3,6 @@ import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumenta
 import ignoreNextOnError from "01028_ignoreNextOnError.js";
 import __SENTRY_DEBUG__ from "metro/01072___SENTRY_DEBUG__.js";
 import StringResult from "../discord_app/index.native.tsx";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 function createProfilePayload(arg0, arg1, resources, type) {
   if ("transaction" !== type.type) {
@@ -126,7 +125,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
   const first = samples.samples[0];
   if (first) {
     timestamp = first.timestamp;
-    let result = _registerSpanErrorInstrumentation.browserPerformanceTimeOrigin();
+    let result = require("00817_registerSpanErrorInstrumentation.js").browserPerformanceTimeOrigin();
     const _performance = performance;
     if (typeof performance.timeOrigin === "number") {
       const _performance2 = performance;

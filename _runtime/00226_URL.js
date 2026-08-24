@@ -46,7 +46,7 @@ class URL {
         if (str.endsWith("/")) {
           num = 1;
           num2 = 0;
-          substr = require("module_0");
+          substr = require("../discord_app/index.native.tsx");
         }
         combined = global;
         if (!global.startsWith("/")) {

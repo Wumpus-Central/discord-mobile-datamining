@@ -43,7 +43,7 @@ export const wrapTransportOnClose = function wrapTransportOnClose(closure_0) {
 export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0, closure_02) {
   const _require = closure_02;
   if (closure_0.onmessage) {
-    _addNonEnumerableProperty.fill(closure_0, "onmessage", (arg0) => {
+    require("00822_addNonEnumerableProperty.js").fill(closure_0, "onmessage", (arg0) => {
       closure_0 = arg0;
       return function(method, extra) {
         let self = this;
@@ -113,13 +113,13 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0,
         obj = callback(closure_2_1[2]);
       };
     });
-    let obj = _addNonEnumerableProperty;
+    let obj = addNonEnumerableProperty;
   }
 };
 export const wrapTransportSend = function wrapTransportSend(closure_0, closure_02) {
   const _require = closure_02;
   if (closure_0.send) {
-    _addNonEnumerableProperty.fill(closure_0, "send", (arg0) => {
+    require("00822_addNonEnumerableProperty.js").fill(closure_0, "send", (arg0) => {
       closure_0 = arg0;
       return closure_1_2(function() {
         const self = this;
@@ -139,7 +139,7 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -257,6 +257,6 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
         return iter;
       });
     });
-    let obj = _addNonEnumerableProperty;
+    let obj = addNonEnumerableProperty;
   }
 };

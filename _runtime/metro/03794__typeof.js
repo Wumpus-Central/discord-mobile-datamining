@@ -1,5 +1,7 @@
 // _runtime/metro/03794__typeof.js
-import Parser2 from "../03778_Parser.js";
+import Parser2 from "../03781_Parser.js";
+import setUTCISOWeek from "../03795_setUTCISOWeek.js";
+import startOfUTCISOWeek from "../03712_startOfUTCISOWeek.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(DayOfYearParser, Parser) {
+function _setPrototypeOf(ISOWeekParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DayOfYearParser, Parser) {
-      DayOfYearParser.__proto__ = Parser;
-      return DayOfYearParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
+      ISOWeekParser.__proto__ = Parser;
+      return ISOWeekParser;
     };
   }
-  return _setPrototypeOf(DayOfYearParser, Parser);
+  return _setPrototypeOf(ISOWeekParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +56,25 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+if (!setUTCISOWeek) {
+  let obj = { default: null };
+  obj[0] = setUTCISOWeek;
+  let tmp3 = obj;
+} else {
+  tmp3 = setUTCISOWeek;
+}
+setUTCISOWeek = tmp3;
+if (!startOfUTCISOWeek) {
+  obj = { default: null };
+  obj[0] = startOfUTCISOWeek;
+  let tmp5 = obj;
+} else {
+  tmp5 = startOfUTCISOWeek;
+}
+startOfUTCISOWeek = tmp5;
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class DayOfYearParser {
+class ISOWeekParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -81,59 +99,42 @@ class DayOfYearParser {
       applyResult = call.apply(_createSuperInternal, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
-        _ReferenceError3 = ReferenceError;
-        tmp25 = new.target;
-        str7 = "this hasn't been initialised - super() hasn't been called";
-        tmp26 = new.target;
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp28 = referenceError;
+        tmp23 = referenceError;
         throw referenceError;
       } else {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 90;
-          applyResult.priority = 90;
+          num3 = 100;
+          applyResult.priority = 100;
         }
         if (tmp13) {
-          _ReferenceError2 = ReferenceError;
-          tmp21 = new.target;
-          str6 = "this hasn't been initialised - super() hasn't been called";
-          tmp22 = new.target;
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp24 = referenceError1;
+          tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          str3 = "subpriority";
-          if ("subpriority" in applyResult) {
+          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
+          str3 = "incompatibleTokens";
+          if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subpriority", { value: 1, enumerable: true, configurable: true, writable: true });
+            obj = { value: null, enumerable: true, configurable: true, writable: true };
+            obj[0] = items1;
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
           } else {
-            applyResult.subpriority = 1;
+            applyResult.incompatibleTokens = items1;
           }
-          if (tmp13) {
-            _ReferenceError = ReferenceError;
-            tmp17 = new.target;
-            str5 = "this hasn't been initialised - super() hasn't been called";
-            tmp18 = new.target;
-            referenceError2 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            tmp20 = referenceError2;
-            throw referenceError2;
-          } else {
-            items1 = ["Y", "R", "q", "Q", "M", "L", "w", "I", "d", "E", "i", "e", "c", "t", "T"];
-            str4 = "incompatibleTokens";
-            if ("incompatibleTokens" in applyResult) {
-              _Object3 = Object;
-              obj = { value: null, enumerable: true, configurable: true, writable: true };
-              obj[0] = items1;
-              definePropertyResult2 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-            } else {
-              applyResult.incompatibleTokens = items1;
-            }
-            return applyResult;
-          }
+          return applyResult;
         }
       }
     } else {
@@ -147,7 +148,7 @@ class DayOfYearParser {
     }
   }
 }
-closure_1 = DayOfYearParser;
+closure_1 = ISOWeekParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -159,12 +160,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: DayOfYearParser, writable: true, configurable: true };
-DayOfYearParser.prototype = Object.create(prototype, { constructor: obj });
+obj = { value: ISOWeekParser, writable: true, configurable: true };
+ISOWeekParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(DayOfYearParser, Parser);
+  _setPrototypeOf(ISOWeekParser, Parser);
 }
-_createSuperInternal = DayOfYearParser;
+_createSuperInternal = ISOWeekParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -222,68 +223,53 @@ _createSuperInternal = function _createSuperInternal() {
   }
   return tmp8;
 };
-obj = {
-  key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("D" !== arg1) {
-      if ("DD" !== arg1) {
-        if ("Do" === arg1) {
-          return ordinalNumber.ordinalNumber(arg0, { unit: "date" });
-        } else {
-          return _createSuperInternal(3780).parseNDigits(arg1.length, arg0);
-        }
+let items = [
+  {
+    key: "parse",
+    value: function parse(arg0, arg1, ordinalNumber) {
+      if ("I" === arg1) {
+        return _createSuperInternal(3783).parseNumericPattern(_createSuperInternal(3784).numericPatterns.week, arg0);
+      } else if ("Io" === arg1) {
+        return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
+      } else {
+        return _createSuperInternal(3783).parseNDigits(arg1.length, arg0);
       }
     }
-    return _createSuperInternal(3780).parseNumericPattern(_createSuperInternal(3781).numericPatterns.dayOfYear, arg0);
-  }
-};
-let items = [
-  obj,
+  },
   {
     key: "validate",
-    value: function validate(getUTCFullYear) {
-      const uTCFullYear = getUTCFullYear.getUTCFullYear();
-      let tmp2 = arg1 >= 1;
-      if (_createSuperInternal(3780).isLeapYearIndex(uTCFullYear)) {
-        if (tmp2) {
-          tmp2 = arg1 <= 366;
-        }
-        let tmp3 = tmp2;
-      } else {
-        tmp3 = tmp2;
-        if (tmp2) {
-          tmp3 = arg1 <= 365;
-        }
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 53;
       }
-      return tmp3;
+      return tmp;
     }
   },
   {
     key: "set",
-    value: function set(setUTCMonth) {
-      setUTCMonth.setUTCMonth(0, arg2);
-      setUTCMonth.setUTCHours(0, 0, 0, 0);
-      return setUTCMonth;
+    value: function set(arg0, arg1, arg2) {
+      return startOfUTCISOWeek.default(setUTCISOWeek.default(arg0, arg2));
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    let tmp6 = num;
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
+    let tmp10 = num;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { DayOfYearParser };
+export { ISOWeekParser };

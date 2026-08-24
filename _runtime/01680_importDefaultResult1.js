@@ -24,7 +24,7 @@ class NativeReanimatedModule {
     tmp6 = closure_4(this, closure_5);
     tmp6[closure_5] = require("WorkletsModule").WorkletsModule;
     tmp9 = DummyReanimatedModuleProxy;
-    DummyReanimatedModuleProxy._REANIMATED_VERSION_JS = require("module_1681").jsVersion;
+    DummyReanimatedModuleProxy._REANIMATED_VERSION_JS = require("metro/01681__.js").jsVersion;
     if (undefined === DummyReanimatedModuleProxy.__reanimatedModuleProxy) {
       if (require("ReanimatedTurboModule").ReanimatedTurboModule) {
         ReanimatedTurboModule = require("ReanimatedTurboModule").ReanimatedTurboModule;

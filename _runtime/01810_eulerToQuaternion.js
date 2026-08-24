@@ -1,7 +1,6 @@
 // _runtime/01810_eulerToQuaternion.js
 import isWorkletFunction from "01679_isWorkletFunction.js";
 import noop from "00019_noop.js";
-import { isReanimated3 } from "01698_isReanimated3.js";
 
 ({ useEffect: obj1, useMemo: c3, useRef: c4 } = noop);
 function eulerToQuaternion(arg0, arg1, arg2) {
@@ -122,7 +121,7 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
   }, items);
   const callback = tmp13;
   obj = {
-    sensor: _isReanimated3.initializeSensor(arg0, tmp13),
+    sensor: require("01698_isReanimated3.js").initializeSensor(arg0, tmp13),
     unregister() {
 
     },

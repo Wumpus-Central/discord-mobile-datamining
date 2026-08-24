@@ -1,5 +1,4 @@
 // _runtime/01150_createAsyncHandlerProxy.js
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 const require = arg1;
 let dependencyMap = arg6;
 function createAsyncHandlerProxy(arg0, item10034, item10008, closure_1_18) {
@@ -86,7 +85,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, closure_1_18) {
       return applyResult;
     }
   });
-  const result = _registerSpanErrorInstrumentation.addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
+  const result = require("00817_registerSpanErrorInstrumentation.js").addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
   return proxy;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -1276,7 +1276,7 @@ let cancelAnimationWeb = function cancelAnimationNative(value) {
   if (globalThis._WORKLET) {
     value.value = value.value;
   } else {
-    obj = _runWorkletOnJS;
+    obj = runWorkletOnJS;
     const fn = function n() {
       value.value = value.value;
     };

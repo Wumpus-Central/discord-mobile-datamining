@@ -26,7 +26,7 @@ export const createStandardNavigationFactories = function createStandardNavigati
     throw error1;
   } else {
     let obj = { createNavigator: null, createScreen: null };
-    obj[0] = _BaseNavigationContainer.createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
+    obj[0] = require("01503_BaseNavigationContainer.js").createNavigatorFactory(function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
       let obj = callback(1503);
       navigationBuilder = obj.useNavigationBuilder(navigationBuilder, UNSTABLE_routeNamesChangeBehavior);
       dependencyMap = callback(1599).useBuildHref();
@@ -55,8 +55,8 @@ export const createStandardNavigationFactories = function createStandardNavigati
       routes = navigationBuilder.state.routes;
       routes = routes.concat(navigationBuilder.state.preloadedRoutes);
     });
-    const obj2 = _BaseNavigationContainer;
-    obj[1] = _BaseNavigationContainer.createScreenFactory();
+    const obj2 = BaseNavigationContainer;
+    obj[1] = require("01503_BaseNavigationContainer.js").createScreenFactory();
     return obj;
   }
 };

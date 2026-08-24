@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 64, scales: [2, 3], hash: "c274903a313d0e918f497d328c38b8dd", name: "img_search_empty_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 250.66666666666666, height: 167, scales: [3], hash: "9a7cbd196902440a5e0240c4f2a08774", name: "nsfw_gate", type: "png" });

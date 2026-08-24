@@ -1,6 +1,5 @@
 // _runtime/00354__combineCallbacks.js
 import AnimatedEvent from "00384_AnimatedEvent.js";
-import { AnimatedEvent } from "00384_AnimatedEvent.js";
 
 require = arg1;
 const module = arg2;
@@ -1002,7 +1001,7 @@ arg5.default = {
     closure_1 = listener;
     if (!__addListener) {
       return listener;
-    } else if (__addListener instanceof _AnimatedEvent.AnimatedEvent) {
+    } else if (__addListener instanceof require("00384_AnimatedEvent.js").AnimatedEvent) {
       __addListener.__addListener(listener);
       let fn = __addListener;
     } else {

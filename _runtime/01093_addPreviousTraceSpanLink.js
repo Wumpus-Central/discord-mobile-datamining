@@ -14,7 +14,7 @@ import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrum
 
 function addPreviousTraceSpanLink(spanContext, spanContext2, sampleRand) {
   const _require = sampleRand;
-  let obj = _registerSpanErrorInstrumentation;
+  let obj = registerSpanErrorInstrumentation;
   const spanToJSONResult = obj.spanToJSON(spanContext2);
   dependencyMap = spanToJSONResult;
   obj = {

@@ -1,5 +1,5 @@
 // _runtime/metro/03810__typeof.js
-import Parser2 from "../03778_Parser.js";
+import Parser2 from "../03781_Parser.js";
 
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(FractionOfSecondParser, Parser) {
+function _setPrototypeOf(Hour1To24Parser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(FractionOfSecondParser, Parser) {
-      FractionOfSecondParser.__proto__ = Parser;
-      return FractionOfSecondParser;
+    _setPrototypeOf = function _setPrototypeOf(Hour1To24Parser, Parser) {
+      Hour1To24Parser.__proto__ = Parser;
+      return Hour1To24Parser;
     };
   }
-  return _setPrototypeOf(FractionOfSecondParser, Parser);
+  return _setPrototypeOf(Hour1To24Parser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,7 +56,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 _createSuperInternal = undefined;
-class FractionOfSecondParser {
+class Hour1To24Parser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +92,10 @@ class FractionOfSecondParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 30, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 30;
-          applyResult.priority = 30;
+          num3 = 70;
+          applyResult.priority = 70;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +106,7 @@ class FractionOfSecondParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T"];
+          items1 = ["a", "b", "h", "H", "K", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +130,7 @@ class FractionOfSecondParser {
     }
   }
 }
-closure_1 = FractionOfSecondParser;
+closure_1 = Hour1To24Parser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,12 +142,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: FractionOfSecondParser, writable: true, configurable: true };
-FractionOfSecondParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: Hour1To24Parser, writable: true, configurable: true };
+Hour1To24Parser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(FractionOfSecondParser, Parser);
+  _setPrototypeOf(Hour1To24Parser, Parser);
 }
-_createSuperInternal = FractionOfSecondParser;
+_createSuperInternal = Hour1To24Parser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -207,20 +207,37 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    _createSuperInternal = arg1;
-    return _createSuperInternal(3780).mapValue(_createSuperInternal(3780).parseNDigits(arg1.length, arg0), function valueCallback(arg0) {
-      return Math.floor(arg0 * Math.pow(10, 3 - length.length));
-    });
+  value: function parse(arg0, arg1, ordinalNumber) {
+    if ("k" === arg1) {
+      return _createSuperInternal(3783).parseNumericPattern(_createSuperInternal(3784).numericPatterns.hour24h, arg0);
+    } else if ("ko" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+    } else {
+      return _createSuperInternal(3783).parseNDigits(arg1.length, arg0);
+    }
   }
 };
 let items = [
   obj,
   {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 1;
+      if (tmp) {
+        tmp = arg1 <= 24;
+      }
+      return tmp;
+    }
+  },
+  {
     key: "set",
-    value: function set(setUTCMilliseconds) {
-      setUTCMilliseconds.setUTCMilliseconds(arg2);
-      return setUTCMilliseconds;
+    value: function set(setUTCHours) {
+      let result = arg2;
+      if (arg2 <= 24) {
+        result = arg2 % 24;
+      }
+      setUTCHours.setUTCHours(result, 0, 0, 0);
+      return setUTCHours;
     }
   }
 ];
@@ -243,4 +260,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { FractionOfSecondParser };
+export { Hour1To24Parser };

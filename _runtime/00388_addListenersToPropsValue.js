@@ -42,8 +42,8 @@ function addListenersToPropsValue(addListener, arr) {
 
 export default function createAnimatedPropsHook(arg0) {
   const _require = arg0;
-  closure_1 = _createCompositeKeyForProps.createAnimatedPropsMemoHook(arg0);
-  let obj = _createCompositeKeyForProps;
+  closure_1 = require("00389_createCompositeKeyForProps.js").createAnimatedPropsMemoHook(arg0);
+  let obj = createCompositeKeyForProps;
   importAll = javaScriptFlagGetterAll.shouldUseSetNativePropsInFabric();
   return function useAnimatedProps(fn, items) {
     let obj = fn;

@@ -254,7 +254,7 @@ class Buffer {
       num = 0;
       if (0 === arg0.length) {
         tmp21 = Buffer;
-        return require("module_0");
+        return require("../discord_app/index.native.tsx");
       } else {
         num5 = arg1;
         if (undefined === arg1) {
@@ -702,7 +702,7 @@ class Buffer {
     tmp = this._arr || this;
     if (typeof call === "unknown") {
       num = 0;
-      substr = require("module_0");
+      substr = require("../discord_app/index.native.tsx");
     } else {
       num2 = 0;
       substr = call(tmp, 0);
@@ -1056,7 +1056,7 @@ class Buffer {
       _Math = Math;
       num5 = 2;
       num6 = 8;
-      diff = tmp15 - require("module_2");
+      diff = tmp15 - require("00002_set.js");
     }
     return diff;
   }
@@ -1117,7 +1117,7 @@ class Buffer {
       _Math = Math;
       num4 = 2;
       num5 = 8;
-      diff2 = tmp16 - require("module_2");
+      diff2 = tmp16 - require("00002_set.js");
     }
     return diff2;
   }
@@ -1436,7 +1436,7 @@ class Buffer {
       num2 = 8;
       num3 = 1;
       tmp6 = Buffer;
-      diff = require("module_2") - 1;
+      diff = require("00002_set.js") - 1;
       if (Buffer.isBuffer(self)) {
         if (diff >= tmp) {
           if (tmp >= 0) {
@@ -1497,7 +1497,7 @@ class Buffer {
       num2 = 8;
       num3 = 1;
       tmp6 = Buffer;
-      diff = require("module_2") - 1;
+      diff = require("00002_set.js") - 1;
       if (Buffer.isBuffer(self)) {
         if (diff >= tmp) {
           if (tmp >= 0) {
@@ -1790,7 +1790,7 @@ class Buffer {
       num = 8;
       num2 = 2;
       num3 = 1;
-      powResult = require("module_2");
+      powResult = require("00002_set.js");
       tmp7 = Buffer;
       diff = powResult - 1;
       tmp6 = -powResult;
@@ -1870,7 +1870,7 @@ class Buffer {
       num = 8;
       num2 = 2;
       num3 = 1;
-      powResult = require("module_2");
+      powResult = require("00002_set.js");
       tmp7 = Buffer;
       diff = powResult - 1;
       tmp6 = -powResult;
@@ -2482,7 +2482,7 @@ class Buffer {
       num2 = arg0;
       if (1 === arg0.length) {
         num5 = 0;
-        charCodeAtResult = require("module_0");
+        charCodeAtResult = require("../discord_app/index.native.tsx");
         str2 = "utf8";
         tmp11 = "utf8" === tmp;
         if (tmp11) {

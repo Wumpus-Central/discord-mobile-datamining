@@ -2,7 +2,6 @@
 import isJest from "01657_isJest.js";
 import addLogBoxLog from "01658_addLogBoxLog.js";
 import t from "01665_t.js";
-import { weakMap } from "01740_weakMap.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -16,7 +15,7 @@ function findDescendantWithExitingAnimation(isDummy, appendChild) {
     if (isDummy) {
       const _require = isDummy;
       dependencyMap = appendChild;
-      const snapshots = _weakMap.snapshots;
+      const snapshots = require("01740_weakMap.js").snapshots;
       const value = snapshots.get(isDummy);
       if (value) {
         isDummy.removedAfterAnimation = true;

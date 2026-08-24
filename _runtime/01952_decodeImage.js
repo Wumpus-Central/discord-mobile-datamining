@@ -783,28 +783,28 @@ do {
 const s = obj.s;
 let num3 = 143;
 do {
-  let arr = require("module_0");
+  let arr = require("../discord_app/index.native.tsx");
   tmp22 = num3;
   num3 = num3 - 1;
 } while (0 !== tmp22);
 const s1 = obj.s;
 let num4 = 111;
 do {
-  arr = require("module_0");
+  arr = require("../discord_app/index.native.tsx");
   tmp24 = num4;
   num4 = num4 - 1;
 } while (0 !== tmp24);
 const s2 = obj.s;
 let num5 = 23;
 do {
-  let arr1 = require("module_0");
+  let arr1 = require("../discord_app/index.native.tsx");
   tmp26 = num5;
   num5 = num5 - 1;
 } while (0 !== tmp26);
 const s3 = obj.s;
 let num6 = 7;
 do {
-  let arr2 = require("module_0");
+  let arr2 = require("../discord_app/index.native.tsx");
   tmp28 = num6;
   num6 = num6 - 1;
 } while (0 !== tmp28);
@@ -865,7 +865,7 @@ if (0 < s6.length) {
 const t = obj.t;
 let num14 = 31;
 do {
-  let arr3 = require("module_0");
+  let arr3 = require("../discord_app/index.native.tsx");
   tmp43 = num14;
   num14 = num14 - 1;
 } while (0 !== tmp43);
@@ -926,28 +926,28 @@ if (0 < t3.length) {
 let b = obj.b;
 let num22 = 18;
 do {
-  let arr4 = require("module_0");
+  let arr4 = require("../discord_app/index.native.tsx");
   tmp58 = num22;
   num22 = num22 - 1;
 } while (0 !== tmp58);
 let c = obj.c;
 let num23 = 285;
 do {
-  let arr5 = require("module_0");
+  let arr5 = require("../discord_app/index.native.tsx");
   tmp60 = num23;
   num23 = num23 - 1;
 } while (0 !== tmp60);
 let event = obj.e;
 let num24 = 29;
 do {
-  let arr6 = require("module_0");
+  let arr6 = require("../discord_app/index.native.tsx");
   tmp62 = num24;
   num24 = num24 - 1;
 } while (0 !== tmp62);
 let a = obj.a;
 let num25 = 319;
 do {
-  let arr7 = require("module_0");
+  let arr7 = require("../discord_app/index.native.tsx");
   tmp64 = num25;
   num25 = num25 - 1;
 } while (0 !== tmp64);

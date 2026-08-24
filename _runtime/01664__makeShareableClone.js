@@ -22,7 +22,7 @@ function updatePropsDOM(arg0, arg1, arg2) {
 
 }
 
-export const createJSReanimatedModule = require("module_1668").createJSReanimatedModule;
+export const createJSReanimatedModule = require("metro/01668__.js").createJSReanimatedModule;
 export const _updatePropsJS = (arg0, getAnimatableRef) => {
   const _require = arg0;
   if (getAnimatableRef) {

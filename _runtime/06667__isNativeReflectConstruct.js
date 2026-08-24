@@ -1,14 +1,12 @@
 // _runtime/06667__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
+import _isNativeReflectConstructDefault from "06646__isNativeReflectConstruct.js";
 import closure_2 from "metro/00041__classCallCheck.js";
 import closure_3 from "metro/00093__possibleConstructorReturn.js";
 import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
 
-const Symbol = importDefault;
+const FeImage = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,13 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Symbol {
+class FeImage {
   constructor() {
     self = this;
-    tmp = closure_2(this, Symbol);
+    tmp = closure_2(this, FeImage);
     tmp2 = closure_4;
-    obj = closure_4(Symbol);
+    obj = closure_4(FeImage);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -49,31 +46,19 @@ class Symbol {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Symbol, _isNativeReflectConstructDefault);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { name: props.id };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(6584)(props));
-      obj.children = props.children;
-      return jsx(self(6668), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+_inheritsDefault(FeImage, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeImage(6623).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeImage, items);
+importDefaultResultResult.displayName = "FeImage";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

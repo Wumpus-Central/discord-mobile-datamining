@@ -5,7 +5,6 @@ import dsnFromString from "00837_dsnFromString.js";
 import closure_2 from "metro/00032__slicedToArray.js";
 import { getGlobalSingleton } from "00825_getGlobalSingleton.js";
 import { normalize } from "00865_normalize.js";
-import { 00821__ } from "metro/00821__.js";
 
 function forEachEnvelopeItem(arg0, arg1) {
   for (const item10007 of tmp) {
@@ -156,7 +155,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     const items2 = [json, items];
     return items2;
   } else {
-    let sentryCarrier = _getGlobalSingleton.getSentryCarrier(_00821__.GLOBAL_OBJ);
+    let sentryCarrier = require("00825_getGlobalSingleton.js").getSentryCarrier(require("metro/00821__.js").GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(arr);
     } else {
@@ -164,7 +163,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
       const textEncoder = new TextEncoder();
       encodePolyfillResult = textEncoder.encode(arr);
     }
-    const obj2 = _getGlobalSingleton;
+    const obj2 = getGlobalSingleton;
   }
 };
 export const serializeEnvelope = function serializeEnvelope(arg0) {
@@ -234,8 +233,8 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
           append(json);
         } catch (err) {
           const _JSON3 = tmp2.JSON;
-          json = _JSON3.stringify(_normalize.normalize(tmp3));
-          const obj = _normalize;
+          json = _JSON3.stringify(require("00865_normalize.js").normalize(tmp3));
+          const obj = normalize;
         }
       }
     }

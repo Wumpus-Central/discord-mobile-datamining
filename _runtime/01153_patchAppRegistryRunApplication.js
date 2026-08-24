@@ -1,6 +1,5 @@
 // _runtime/01153_patchAppRegistryRunApplication.js
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
-import { TurboModuleRegistry } from "00997_TurboModuleRegistry.js";
 import { fillTyped } from "01154_fillTyped.js";
 
 require = arg1;
@@ -8,9 +7,9 @@ const dependencyMap = arg6;
 let AppRegistry = "AppRegistry";
 function patchAppRegistryRunApplication(arg0) {
   const _require = arg0;
-  AppRegistry = _TurboModuleRegistry.ReactNativeLibraries.AppRegistry;
+  AppRegistry = require("00997_TurboModuleRegistry.js").ReactNativeLibraries.AppRegistry;
   if (AppRegistry) {
-    _fillTyped.fillTyped(AppRegistry, "runApplication", (arg0) => {
+    require("01154_fillTyped.js").fillTyped(AppRegistry, "runApplication", (arg0) => {
       closure_0 = arg0;
       return () => {
         const items = [...arguments];
@@ -18,7 +17,7 @@ function patchAppRegistryRunApplication(arg0) {
         return lib(...items);
       };
     });
-    const tmpResult = _fillTyped;
+    const tmpResult = fillTyped;
   }
 }
 arg5.INTEGRATION_NAME = "AppRegistry";

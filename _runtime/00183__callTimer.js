@@ -84,8 +84,8 @@ let obj = {
       num = 0;
     }
     const timestamp = Date.now();
-    _00038__(TimingDefault, "NativeTiming is available");
-    const tmp4 = _00038__;
+    00038__(TimingDefault, "NativeTiming is available");
+    const tmp4 = 00038__;
     const timer = TimingDefault.createTimer(tmp, num, timestamp, false);
     return +closure_12;
   },
@@ -105,8 +105,8 @@ let obj = {
       num = 0;
     }
     const timestamp = Date.now();
-    _00038__(TimingDefault, "NativeTiming is available");
-    const tmp4 = _00038__;
+    00038__(TimingDefault, "NativeTiming is available");
+    const tmp4 = 00038__;
     const timer = TimingDefault.createTimer(tmp, num, timestamp, true);
     return +closure_12;
   },
@@ -142,10 +142,10 @@ let obj = {
     let fn = arg0;
     closure_0 = arg0;
     if (0 === arr3.length) {
-      _00038__(TimingDefault, "NativeTiming is available");
+      00038__(TimingDefault, "NativeTiming is available");
       obj = TimingDefault;
       obj.setSendIdleEvents(true);
-      const tmp3 = _00038__;
+      const tmp3 = 00038__;
     }
     if (timeout) {
       timeout = timeout.timeout;

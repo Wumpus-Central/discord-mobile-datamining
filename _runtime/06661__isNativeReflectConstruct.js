@@ -1,14 +1,16 @@
 // _runtime/06661__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
+import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import extractFeFloodDefault from "06645_extractFeFlood.js";
+import _isNativeReflectConstructDefault from "06646__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06662___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Polyline = importDefault;
+const FeFlood = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,61 +30,52 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Polyline {
+noopDefault;
+class FeFlood {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_2(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(closure_0);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeFlood);
+    tmp2 = closure_5;
+    obj = closure_5(FeFlood);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (points) => {
-      points = points.points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        points.d = "M" + lib(closure_1_1[7])(points);
-      }
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(points);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Polyline, _isNativeReflectConstructDefault);
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      const props = this.props;
-      const points = props.points;
-      const obj = { ref: this.refMethod, d: null };
-      let combined = points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        combined = "M" + Polyline(6660)(points);
+_inheritsDefault(FeFlood, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
       }
-      obj[1] = combined;
-      const merged = Object.assign(props);
-      return jsx(Polyline(6655), { ref: this.refMethod, d: null });
-    }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(6645).extractFilter(this.props));
+    const merged1 = Object.assign(extractFeFloodDefault(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(Polyline, items);
-importDefaultResultResult.displayName = "Polyline";
-importDefaultResultResult.defaultProps = { points: "" };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

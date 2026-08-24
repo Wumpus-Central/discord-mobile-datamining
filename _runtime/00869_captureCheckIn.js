@@ -4,7 +4,6 @@ import addContextToFrame from "00830_addContextToFrame.js";
 import getClient from "00848_getClient.js";
 import applyClientOptions from "00870_applyClientOptions.js";
 import closure_2 from "00005_asyncGeneratorStep.js";
-import { getClient } from "00848_getClient.js";
 
 function captureCheckIn(arg0, arg1) {
   const currentScope = getClient.getCurrentScope();
@@ -41,7 +40,7 @@ function _flush() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -102,7 +101,7 @@ function _close() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: "HermesInternal" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -405,7 +404,7 @@ export const withMonitor = function withMonitor(arg0, arg1, arg2) {
       throw tmp10;
     }
   }
-  return _getClient.withIsolationScope(() => {
+  return require("00848_getClient.js").withIsolationScope(() => {
     let isolateTrace;
     if (isolateTrace != null) {
       isolateTrace = isolateTrace.isolateTrace;

@@ -3,7 +3,6 @@ import _createClassDefault from "metro/00042__createClass.js";
 import isReanimated3 from "01698_isReanimated3.js";
 import t from "01815_t.js";
 import closure_3 from "metro/00041__classCallCheck.js";
-import { isReanimated3 } from "01698_isReanimated3.js";
 
 const FrameCallbackRegistryJS = global;
 require = arg1;
@@ -69,7 +68,7 @@ const items = [
       fn.__closure = { callbackId, state };
       fn.__workletHash = 5244475777443;
       fn.__initData = closure_6;
-      _isReanimated3.runOnUI(fn)();
+      require("01698_isReanimated3.js").runOnUI(fn)();
     }
   }
 ];

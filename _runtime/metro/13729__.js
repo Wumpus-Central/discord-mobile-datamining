@@ -1,10 +1,8 @@
 // _runtime/metro/13729__.js
-import getOwnPropertyDescriptor from "../13676_getOwnPropertyDescriptor.js";
-import _mod13710 from "13710__.js";
-import defineProperty from "../13727_defineProperty.js";
+import assign from "../13795_assign.js";
+import 13730__ from "13730__.js";
 
-
-export default getOwnPropertyDescriptor ? ((arg0, arg1, arg2) => defineProperty.f(arg0, arg1, _mod13710(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj[3] = Object.assign !== assign;
+obj = { assign };
+module_13730(obj, obj);

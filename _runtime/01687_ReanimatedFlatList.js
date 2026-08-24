@@ -5,7 +5,6 @@ import { useRef } from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 import createAnimatedComponent from "01688_createAnimatedComponent.js";
 import isReactRendering from "01793_isReactRendering.js";
-import { _isNativeReflectConstruct } from "01792__isNativeReflectConstruct.js";
 
 const require = arg1;
 let closure_2 = ["itemLayoutAnimation", "skipEnteringExitingAnimations", "CellRendererComponentStyle"];
@@ -58,7 +57,7 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
     obj = { skipEntering: true, skipExiting: true, children: null };
     obj[2] = tmp7;
-    tmp5Result = jsx(__isNativeReflectConstruct.LayoutAnimationConfig, { skipEntering: true, skipExiting: true, children: null });
+    tmp5Result = jsx(require("01792__isNativeReflectConstruct.js").LayoutAnimationConfig, { skipEntering: true, skipExiting: true, children: null });
   }
   return tmp5Result;
 });

@@ -43,7 +43,7 @@ class AppStateImpl {
           self.currentState = app_state.app_state;
           obj.emit("appStateDidChange", app_state);
         }
-      }, require("module_459"));
+      }, require("metro/00459__.js"));
     }
     return;
   }

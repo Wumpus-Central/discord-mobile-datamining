@@ -1,6 +1,5 @@
 // _runtime/01799_useHandler.js
 import noop from "00019_noop.js";
-import { isJest } from "01657_isJest.js";
 import { isWorkletFunction } from "01679_isWorkletFunction.js";
 import { freezeObjectInDev } from "01684_freezeObjectInDev.js";
 import { isAnimated } from "01800_isAnimated.js";
@@ -11,7 +10,7 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   const tmp = callback2(null);
   const _require = tmp;
   if (null === tmp.current) {
-    let obj = _freezeObjectInDev;
+    let obj = freezeObjectInDev;
     obj = { context: null, savedDependencies: null };
     obj[0] = obj.makeShareable({});
     obj[1] = [];
@@ -25,7 +24,7 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
     let tmp13 = key10024;
     let tmp14 = _require;
     let tmp15 = dependencyMap;
-    let obj8 = _isWorkletFunction;
+    let obj8 = isWorkletFunction;
     if (obj8.isWorkletFunction(arg0[key10024])) {
       continue;
     } else {
@@ -37,13 +36,13 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
       throw reanimatedError;
     }
   }
-  const dependencies = _isAnimated.buildDependencies(items10, memoizedGestureCallbacks);
-  const obj3 = _isAnimated;
+  const dependencies = require("01800_isAnimated.js").buildDependencies(items10, memoizedGestureCallbacks);
+  const obj3 = isAnimated;
   const tmp9 = _require;
   tmp.current.savedDependencies = dependencies;
-  obj = { context, doDependenciesDiffer: !_isAnimated.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
-  const obj4 = _isAnimated;
-  let isWebResult = _isJest.isWeb();
+  obj = { context, doDependenciesDiffer: !require("01800_isAnimated.js").areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  const obj4 = isAnimated;
+  let isWebResult = require("01657_isJest.js").isWeb();
   if (!isWebResult) {
     isWebResult = tmp9(1657).isJest();
     const tmp9Result = tmp9(1657);

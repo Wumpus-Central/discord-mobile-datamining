@@ -5,10 +5,6 @@ import closure_5 from "metro/00109__objectWithoutProperties.js";
 import closure_6 from "00019_noop.js";
 import { jsx } from "react/00021_jsxProd.js";
 import { PrivateValueStore } from "01504_PrivateValueStore.js";
-import { useLazyValue } from "01523_useLazyValue.js";
-import { NavigationBuilderContext } from "01530_NavigationBuilderContext.js";
-import { ConsumedParamsContext } from "01532_ConsumedParamsContext.js";
-import { context } from "01541_context.js";
 import { isArrayEqual } from "01564_isArrayEqual.js";
 import { useRegisterNavigator } from "01575_useRegisterNavigator.js";
 
@@ -564,10 +560,10 @@ function getStateFromParams(state) {
 export const useNavigationBuilder = function useNavigationBuilder(StackRouter, UNSTABLE_routeNamesChangeBehavior) {
   const _require = StackRouter;
   importDefault = UNSTABLE_routeNamesChangeBehavior;
-  let obj = _useRegisterNavigator;
+  let obj = useRegisterNavigator;
   dependencyMap = obj.useRegisterNavigator();
-  const context = React.useContext(_context.NavigationRouteContext);
-  const context1 = React.useContext(_ConsumedParamsContext.ConsumedParamsContext);
+  const context = React.useContext(require("01541_context.js").NavigationRouteContext);
+  const context1 = React.useContext(require("01532_ConsumedParamsContext.js").ConsumedParamsContext);
   let params;
   if (context != null) {
     params = context.params;
@@ -588,7 +584,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
   ({ children, screenOptions, screenLayout } = UNSTABLE_routeNamesChangeBehavior);
   getRouteConfigsFromChildren = hasItem(UNSTABLE_routeNamesChangeBehavior, context);
   const arr = getRouteConfigsFromChildren(children);
-  const lazyValue = _useLazyValue.useLazyValue(() => {
+  const lazyValue = require("01523_useLazyValue.js").useLazyValue(() => {
     if (null != initialRouteName.initialRouteName) {
       if (arr.every((props) => props.props.name !== initialRouteName.initialRouteName)) {
         const _Error = Error;
@@ -669,10 +665,10 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       routes = routes.routes;
       return routes.every((name) => !closure_12.includes(name.name));
     }, items2);
-    const context2 = React.useContext(_require("01517_get_getKey.js") /* get getKey */.NavigationStateContext);
+    const context2 = React.useContext(require("01517_get_getKey.js").NavigationStateContext);
     let state = context2.state;
     ({ getState: closure_21, setState: closure_22, setKey: closure_23, getKey: closure_24, getIsInitial: closure_25 } = context2);
-    const context3 = React.useContext(_NavigationBuilderContext.NavigationBuilderContext);
+    const context3 = React.useContext(require("01530_NavigationBuilderContext.js").NavigationBuilderContext);
     const getIsStateEmitted = context3.getIsStateEmitted;
     closure_27 = React.useRef(false);
     closure_28 = React.useRef(undefined);
@@ -1274,7 +1270,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     }
     const tmp42 = context1(React.useState(tmp38), 2);
     tmp45 = "lastUnhandled" === UNSTABLE_routeNamesChangeBehavior.UNSTABLE_routeNamesChangeBehavior && tmp38 && tmp43 !== tmp38;
-    const tmp30Result12 = _isArrayEqual;
+    const tmp30Result12 = isArrayEqual;
     rehydratedState = tmp39;
     if (!tmp51) {
       const obj19 = { routeNames: null, routeParamList: null, routeGetIdList: null, routeKeyChanges: null };
@@ -1285,7 +1281,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       stateForRouteNamesChange = lazyValue.getStateForRouteNamesChange(tmp39, obj19);
       rehydratedState = stateForRouteNamesChange;
     }
-    tmp51 = _isArrayEqual.isArrayEqual(tmp39.routeNames, mapped) && 0 === found.length;
+    tmp51 = require("01564_isArrayEqual.js").isArrayEqual(tmp39.routeNames, mapped) && 0 === found.length;
   } else {
     let _Error = Error;
     const error1 = new Error("Couldn't find any screens for the navigator. Have you defined any screens as its children?");

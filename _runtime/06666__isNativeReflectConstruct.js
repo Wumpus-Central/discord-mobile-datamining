@@ -1,10 +1,12 @@
 // _runtime/06666__isNativeReflectConstruct.js
-import _inheritsDefault from "00098__inherits.js";
-import Stop from "metro/00041__classCallCheck.js";
-import closure_1 from "metro/00093__possibleConstructorReturn.js";
-import closure_2 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "06646__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
+import importDefaultResult1 from "00098__inherits.js";
 
+let FeFuncA = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,16 +26,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Stop {
+class FeComponentTransferFunction {
   constructor() {
     self = this;
     items = [...arguments];
-    closure_0 = undefined;
-    tmp = Stop(this, closure_0);
+    tmp = closure_2(this, FeFuncA);
     items1 = [...items];
-    tmp2 = closure_2;
-    obj = closure_2(closure_0);
-    tmp3 = closure_1;
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -42,26 +43,125 @@ class Stop {
       constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
+    tmp3Result.channel = "UNKNOWN";
     return tmp3Result;
   }
 }
-_inheritsDefault(Stop, require("noop").Component);
+FeFuncA = FeComponentTransferFunction;
+importDefaultResult1(FeComponentTransferFunction, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
     value: function render() {
+      const result = FeFuncA(6623).warnUnimplementedFilter();
       return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+const importDefaultResultResult = importDefaultResult(FeComponentTransferFunction, items);
+importDefaultResultResult.defaultProps = { type: "identity", tableValues: [], slope: 1, intercept: 0, amplitude: 1, exponent: 1, offset: 0 };
+class FeFuncR {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = closure_2(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "R";
+    return tmp3Result;
+  }
+}
+FeFuncA = FeFuncR;
+importDefaultResult1(FeFuncR, importDefaultResultResult);
+const importDefaultResultResult1 = importDefaultResult(FeFuncR);
+importDefaultResultResult1.displayName = "FeFuncR";
+class FeFuncG {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = closure_2(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "G";
+    return tmp3Result;
+  }
+}
+FeFuncA = FeFuncG;
+importDefaultResult1(FeFuncG, importDefaultResultResult);
+const importDefaultResultResult2 = importDefaultResult(FeFuncG);
+importDefaultResultResult2.displayName = "FeFuncG";
+class FeFuncB {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = closure_2(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "B";
+    return tmp3Result;
+  }
+}
+FeFuncA = FeFuncB;
+importDefaultResult1(FeFuncB, importDefaultResultResult);
+const importDefaultResultResult3 = importDefaultResult(FeFuncB);
+importDefaultResultResult3.displayName = "FeFuncB";
+class FeFuncA {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = closure_2(this, FeFuncA);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(FeFuncA);
+    tmp3 = closure_3;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.channel = "A";
+    return tmp3Result;
+  }
+}
+importDefaultResult1(FeFuncA, importDefaultResultResult);
+const importDefaultResultResult4 = importDefaultResult(FeFuncA);
+importDefaultResultResult4.displayName = "FeFuncA";
 
 export default importDefaultResultResult;
+export const FeFuncR = importDefaultResultResult1;
+export const FeFuncG = importDefaultResultResult2;
+export const FeFuncB = importDefaultResultResult3;
+export const FeFuncA = importDefaultResultResult4;

@@ -1,6 +1,5 @@
 // _runtime/01040_set.js
 import addPageListener from "01041_addPageListener.js";
-import { WINDOW } from "01039_WINDOW.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -40,7 +39,7 @@ function onVisibilityUpdate(type) {
   }
 }
 arg5.getVisibilityWatcher = () => {
-  if (_WINDOW.WINDOW.document) {
+  if (require("01039_WINDOW.js").WINDOW.document) {
     if (num2 < 0) {
       let tmpResult = tmp(1042);
       _require = tmpResult.getActivationStart();

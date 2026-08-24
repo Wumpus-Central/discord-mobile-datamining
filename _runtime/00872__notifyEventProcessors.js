@@ -1,6 +1,5 @@
 // _runtime/00872__notifyEventProcessors.js
 import SyncPromise from "00873_SyncPromise.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -13,7 +12,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
       const obj = {};
       const merged = Object.assign(arg0);
       const tmpResult = tmp(obj, arg1);
-      let DEBUG_BUILD = ___SENTRY_DEBUG__.DEBUG_BUILD;
+      let DEBUG_BUILD = require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD;
       if (DEBUG_BUILD) {
         DEBUG_BUILD = null === tmpResult;
       }

@@ -3,7 +3,6 @@ import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumenta
 import WINDOW from "01039_WINDOW.js";
 import closure_2 from "metro/00032__slicedToArray.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
-import { onHidden } from "01060_onHidden.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -71,7 +70,7 @@ export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
 export const listenForWebVitalReportEvents = function listenForWebVitalReportEvents(on, arg1) {
   const _require = arg1;
   c2 = false;
-  _onHidden.onHidden(() => {
+  require("01060_onHidden.js").onHidden(() => {
     let tmp = !c2;
     if (!c2) {
       tmp = closure_1;
@@ -114,7 +113,7 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     HermesBuiltin.throwTypeError();
   } else {
     closure_2 = Object.assign(arg3, undefined);
-    const start_timestamp = _registerSpanErrorInstrumentation.spanToJSON(activeSpan).start_timestamp;
+    const start_timestamp = require("00817_registerSpanErrorInstrumentation.js").spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
       tmp = start_timestamp > sum;
@@ -125,9 +124,9 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
     if (tmp) {
       activeSpan.updateStartTime(sum);
     }
-    const obj2 = _registerSpanErrorInstrumentation;
+    const obj2 = registerSpanErrorInstrumentation;
     const tmp6 = _require;
-    return _registerSpanErrorInstrumentation.withActiveSpan(activeSpan, () => {
+    return require("00817_registerSpanErrorInstrumentation.js").withActiveSpan(activeSpan, () => {
       let obj = sum(sum1[1]);
       obj = { startTime: sum };
       const merged = Object.assign(closure_2);

@@ -4,7 +4,6 @@ import triggerHandlers from "01034_triggerHandlers.js";
 import getNavigationEntry from "01043_getNavigationEntry.js";
 import extractNetworkProtocol from "01059_extractNetworkProtocol.js";
 import closure_2 from "metro/00032__slicedToArray.js";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { extractNetworkProtocol } from "01059_extractNetworkProtocol.js";
 
 function _addMeasureSpans(activeSpan, entryType) {
@@ -107,11 +106,11 @@ function _addNavigationSpans(activeSpan, requestStart) {
   _addPerformanceNavigationTiming(activeSpan, requestStart, "secureConnection", arg2, "TLS/SSL");
   _addPerformanceNavigationTiming(activeSpan, requestStart, "fetch", arg2, "cache");
   _addPerformanceNavigationTiming(activeSpan, requestStart, "domainLookup", arg2, "DNS");
-  let obj = _extractNetworkProtocol;
+  let obj = extractNetworkProtocol;
   const sum = arg2 + obj.msToSec(requestStart.requestStart);
-  obj1 = _extractNetworkProtocol;
+  obj1 = extractNetworkProtocol;
   const sum1 = arg2 + obj1.msToSec(requestStart.responseEnd);
-  let obj2 = _extractNetworkProtocol;
+  let obj2 = extractNetworkProtocol;
   const sum2 = arg2 + obj2.msToSec(requestStart.responseStart);
   if (requestStart.responseEnd) {
     let tmp5Result = tmp5(1059);
@@ -265,9 +264,9 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
 export const addPerformanceEntries = function addPerformanceEntries(setAttribute, recordClsOnPageloadSpan) {
   let _require = setAttribute;
   dependencyMap = recordClsOnPageloadSpan;
-  let obj = _extractNetworkProtocol;
+  let obj = extractNetworkProtocol;
   const browserPerformanceAPI = obj.getBrowserPerformanceAPI();
-  const result = _registerSpanErrorInstrumentation.browserPerformanceTimeOrigin();
+  const result = require("00817_registerSpanErrorInstrumentation.js").browserPerformanceTimeOrigin();
   let getEntries;
   if (browserPerformanceAPI != null) {
     getEntries = browserPerformanceAPI.getEntries;
@@ -609,7 +608,7 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
   dependencyMap = undefined;
   let result1;
   ({ recordClsStandaloneSpans, recordLcpStandaloneSpans } = client);
-  const browserPerformanceAPI = _extractNetworkProtocol.getBrowserPerformanceAPI();
+  const browserPerformanceAPI = require("01059_extractNetworkProtocol.js").getBrowserPerformanceAPI();
   if (browserPerformanceAPI) {
     let tmpResult = tmp(817);
     if (tmpResult.browserPerformanceTimeOrigin()) {

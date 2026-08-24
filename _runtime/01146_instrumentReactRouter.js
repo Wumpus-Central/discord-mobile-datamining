@@ -2,12 +2,10 @@
 import feedbackAsyncIntegration from "01024_feedbackAsyncIntegration.js";
 import closure_2 from "metro/00032__slicedToArray.js";
 import closure_3 from "00019_noop.js";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
-import { getStatics } from "01140_getStatics.js";
 
-function instrumentReactRouter(f103592, arg1, arg2, location) {
-  const _require = f103592;
+function instrumentReactRouter(f104458, arg1, arg2, location) {
+  const _require = f104458;
   dependencyMap = arg4;
   let items = arg5;
   if (arg5 === undefined) {
@@ -40,23 +38,23 @@ function instrumentReactRouter(f103592, arg1, arg2, location) {
     if (location.location) {
       let pathname = location.location.pathname;
     } else {
-      if (_feedbackAsyncIntegration.WINDOW.location) {
+      if (require("01024_feedbackAsyncIntegration.js").WINDOW.location) {
         pathname = tmp(1024).WINDOW.location.pathname;
       }
       tmp = _require;
     }
     if (pathname) {
       [tmp5, tmp6] = items(normalizeTransactionName(pathname), 2);
-      let obj = _feedbackAsyncIntegration;
+      let obj = feedbackAsyncIntegration;
       obj = { name: null, attributes: null };
       obj[0] = tmp5;
       obj = {};
-      obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+      obj[require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
       let _HermesInternal = HermesInternal;
-      obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
-      obj[_registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
+      obj[require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
+      obj[require("00817_registerSpanErrorInstrumentation.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj[1] = obj;
-      let result = obj.startBrowserTracingPageLoadSpan(f103592, obj);
+      let result = obj.startBrowserTracingPageLoadSpan(f104458, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
     }
   }
@@ -298,6 +296,6 @@ export const withSentryRouting = function withSentryRouting(displayName) {
     }
   }
   WrappedRoute.displayName = "sentryRoute(" + displayName.displayName || displayName.name + ")";
-  _getStatics.hoistNonReactStatics(WrappedRoute, displayName);
+  require("01140_getStatics.js").hoistNonReactStatics(WrappedRoute, displayName);
   return WrappedRoute;
 };

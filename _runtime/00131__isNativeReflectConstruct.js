@@ -35,7 +35,7 @@ function getChildNodes(parentNode, arg1) {
   if (null == nativeNodeReference) {
     return [];
   } else {
-    const childNodes = NativeDOMCxx.getChildNodes(nativeNodeReference);
+    const childNodes = require("00139_NativeDOMCxx.js").getChildNodes(nativeNodeReference);
     const items = [];
     for (const item10013 of childNodes) {
       let tmp5 = ReadOnlyNode;
@@ -123,7 +123,7 @@ let items = [
       const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(this);
       let isConnectedResult = null != nativeNodeReference;
       if (isConnectedResult) {
-        isConnectedResult = NativeDOMCxx.isConnected(nativeNodeReference);
+        isConnectedResult = require("00139_NativeDOMCxx.js").isConnected(nativeNodeReference);
         const obj2 = NativeDOMCxx;
       }
       return isConnectedResult;
@@ -216,7 +216,7 @@ let items = [
       if (null == nativeNodeReference) {
         return null;
       } else {
-        const parentNode = NativeDOMCxx.getParentNode(nativeNodeReference);
+        const parentNode = require("00139_NativeDOMCxx.js").getParentNode(nativeNodeReference);
         let tmp6 = null;
         if (null != parentNode) {
           let publicInstanceFromInstanceHandle = tmp(136).getPublicInstanceFromInstanceHandle(parentNode);
@@ -278,7 +278,7 @@ let items = [
         nativeNodeReference1 = ReadOnlyNode(136).getNativeNodeReference(nativeNodeReference);
         if (null != nativeNodeReference) {
           if (null != nativeNodeReference1) {
-            let DOCUMENT_POSITION_DISCONNECTED = NativeDOMCxx.compareDocumentPosition(nativeNodeReference, nativeNodeReference1);
+            let DOCUMENT_POSITION_DISCONNECTED = require("00139_NativeDOMCxx.js").compareDocumentPosition(nativeNodeReference, nativeNodeReference1);
             const obj3 = NativeDOMCxx;
           }
           return DOCUMENT_POSITION_DISCONNECTED;

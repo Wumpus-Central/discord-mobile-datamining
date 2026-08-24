@@ -1,5 +1,4 @@
 // _runtime/00453_getColorScheme.js
-import { Appearance } from "00454_Appearance.js";
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
@@ -7,7 +6,7 @@ arg5.getColorScheme = function getColorScheme() {
   if (null == obj) {
     const tmp11 = new obj(89)();
     const _require = tmp11;
-    const _default = _Appearance.default;
+    const _default = require("00454_Appearance.js").default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp11;
@@ -40,7 +39,7 @@ arg5.setColorScheme = function setColorScheme(arg0) {
   if (null == obj) {
     const tmp14 = new obj(89)();
     const _require = tmp14;
-    const _default = _Appearance.default;
+    const _default = require("00454_Appearance.js").default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp14;
@@ -77,7 +76,7 @@ arg5.addChangeListener = function addChangeListener(onChange) {
   if (null == obj) {
     const tmp10 = new obj(89)();
     const _require = tmp10;
-    const _default = _Appearance.default;
+    const _default = require("00454_Appearance.js").default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp10;

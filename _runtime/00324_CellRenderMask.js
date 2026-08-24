@@ -7,7 +7,7 @@ const CellRenderMask = importDefault;
 class CellRenderMask {
   constructor(arg0) {
     tmp = closure_3(this, CellRenderMask);
-    tmp2 = require("module_38")(global >= 0, "CellRenderMask must contain a non-negative number os cells");
+    tmp2 = require("metro/00038__.js")(global >= 0, "CellRenderMask must contain a non-negative number os cells");
     this._numCells = global;
     if (0 === global) {
       items = [];

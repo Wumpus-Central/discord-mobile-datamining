@@ -1,10 +1,9 @@
 // _runtime/00897_eventFromEnvelope.js
 import closure_2 from "00005_asyncGeneratorStep.js";
-import { forEachEnvelopeItem } from "00864_forEachEnvelopeItem.js";
 
 function eventFromEnvelope(arg0, arg1) {
   const _require = arg1;
-  _forEachEnvelopeItem.forEachEnvelopeItem(arg0, (arg0, arg1) => {
+  require("00864_forEachEnvelopeItem.js").forEachEnvelopeItem(arg0, (arg0, arg1) => {
     if (items.includes(arg1)) {
       const _Array = Array;
       let tmp3;
@@ -71,7 +70,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    return { value: "HermesInternal", done: "HermesInternal" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -171,7 +170,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
           items[arraySpreadResult] = closure_1_1;
           closure_1 = closure_1 + 1;
           yield Promise.all(items.map(() => { ... }));
-          return arr.every(/* F120493 */ function() { ... });
+          return arr.every(/* F121520 */ function() { ... });
         })();
       });
       closure_6 = tmp;

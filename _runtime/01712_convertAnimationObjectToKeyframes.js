@@ -1,6 +1,5 @@
 // _runtime/01712_convertAnimationObjectToKeyframes.js
 import closure_2 from "metro/00032__slicedToArray.js";
-import { getEasingByName } from "01713_getEasingByName.js";
 
 const require = arg1;
 
@@ -88,7 +87,7 @@ export const convertAnimationObjectToKeyframes = function convertAnimationObject
         let tmp38 = _require;
         let tmp39 = dependencyMap;
         let tmp40 = arr;
-        if (arr in _getEasingByName.WebEasings) {
+        if (arr in require("01713_getEasingByName.js").WebEasings) {
           str = arr;
         } else if (arr.name in tmp38(1713).WebEasings) {
           let tmp19 = arr;

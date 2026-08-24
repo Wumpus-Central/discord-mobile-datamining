@@ -1,14 +1,15 @@
 // _runtime/06657__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
+import noopDefault from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "06646__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06658___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import { jsx } from "react/00021_jsxProd.js";
 
-const Pattern = importDefault;
+const FeGaussianBlur = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +29,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class Pattern {
+noopDefault;
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = closure_2(this, Pattern);
-    tmp2 = closure_4;
-    obj = closure_4(Pattern);
-    tmp3 = closure_3;
+    tmp = closure_3(this, FeGaussianBlur);
+    tmp2 = closure_5;
+    obj = closure_5(FeGaussianBlur);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -49,55 +50,34 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Pattern, _isNativeReflectConstructDefault);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      ({ patternTransform, patternUnits, patternContentUnits } = props);
-      ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-      if (!patternTransform) {
-        patternTransform = transform;
+_inheritsDefault(FeGaussianBlur, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
       }
-      if (!patternTransform) {
-        patternTransform = props;
-      }
-      const tmp3Result = self(6579)(patternTransform);
-      let obj = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
-      let num = patternUnits;
-      if (patternUnits) {
-        num = tmp(6649)[patternUnits];
-      }
-      if (!num) {
-        num = 0;
-      }
-      obj[7] = num;
-      let num2 = 1;
-      if (patternContentUnits) {
-        num2 = tmp(6649)[patternContentUnits];
-      }
-      obj[8] = num2;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const tmp3 = self(6579);
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(tmp(6584)({ viewBox, preserveAspectRatio }));
-      obj.children = children;
-      return jsx(self(6658), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIGDefault;
+    const merged = Object.assign(self(6645).extractFilter(this.props));
+    const obj2 = self(6645);
+    const merged1 = Object.assign(self(6645).extractIn(this.props));
+    const obj3 = self(6645);
+    const merged2 = Object.assign(self(6645).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

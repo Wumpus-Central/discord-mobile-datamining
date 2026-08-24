@@ -7,9 +7,7 @@ import closure_3 from "metro/00032__slicedToArray.js";
 import closure_9 from "00019_noop.js";
 import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
-import { getStatics } from "01140_getStatics.js";
 import { pickSplat } from "01149_pickSplat.js";
-import { __SENTRY_DEBUG__ } from "metro/01142___SENTRY_DEBUG__.js";
 
 function computeLocationKey(_location) {
   ({ search, pathname } = _location);
@@ -119,11 +117,11 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
     }
   }
   if (activeRootSpan == null) {
-    let obj = _pickSplat;
+    let obj = pickSplat;
     activeRootSpan = obj.getActiveRootSpan();
   }
   if (activeRootSpan) {
-    obj1 = _registerSpanErrorInstrumentation;
+    obj1 = registerSpanErrorInstrumentation;
     const spanToJSONResult = obj1.spanToJSON(activeRootSpan);
     if (spanToJSONResult.timestamp) {
       if (tmp12(1142).DEBUG_BUILD) {
@@ -244,8 +242,8 @@ function setupRouterSubscription(subscribe) {
   c3 = false;
   let tmp = arg4;
   if (tmp) {
-    tmp = "pageload" === _registerSpanErrorInstrumentation.spanToJSON(arg4).op;
-    let obj = _registerSpanErrorInstrumentation;
+    tmp = "pageload" === require("00817_registerSpanErrorInstrumentation.js").spanToJSON(arg4).op;
+    let obj = registerSpanErrorInstrumentation;
   }
   closure_4 = tmp;
   c5 = false;
@@ -389,7 +387,7 @@ function wrapPatchRoutesOnNavigation(arg0) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: "HermesInternal" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -462,7 +460,7 @@ function wrapPatchRoutesOnNavigation(arg0) {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        return { value: "HermesInternal", done: "HermesInternal" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -1252,8 +1250,8 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
           const tmp3Result1 = callback(table[6]);
         }
       };
-      const result = _registerSpanErrorInstrumentation.addNonEnumerableProperty(result2, combined, true);
-      let obj = _registerSpanErrorInstrumentation;
+      const result = require("00817_registerSpanErrorInstrumentation.js").addNonEnumerableProperty(result2, combined, true);
+      let obj = registerSpanErrorInstrumentation;
     }
   }
 }
@@ -1295,7 +1293,7 @@ export { computeLocationKey };
 export const createReactRouterV6CompatibleTracingIntegration = function createReactRouterV6CompatibleTracingIntegration(instrumentPageLoad, _6) {
   const _require = instrumentPageLoad;
   dependencyMap = _6;
-  let obj = _feedbackAsyncIntegration;
+  let obj = feedbackAsyncIntegration;
   obj = {};
   const merged = Object.assign(instrumentPageLoad);
   obj.instrumentPageLoad = false;
@@ -1360,8 +1358,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = instrumentPageLoad(1149).initializeRouterUtils(closure_7, flag);
   };
-  obj.afterAllSetup = function afterAllSetup(f103592) {
-    closure_2.afterAllSetup(f103592);
+  obj.afterAllSetup = function afterAllSetup(f104458) {
+    closure_2.afterAllSetup(f104458);
     const _location = instrumentPageLoad(1024).WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1379,11 +1377,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj[tmp2(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + dependencyMap;
       obj[1] = obj;
-      result = tmp2(1024).startBrowserTracingPageLoadSpan(f103592, obj);
+      result = tmp2(1024).startBrowserTracingPageLoadSpan(f104458, obj);
       const tmp2Result = tmp2(1024);
     }
     if (num) {
-      lazyRouteTimeout.add(f103592);
+      lazyRouteTimeout.add(f104458);
     }
   };
   return obj;
@@ -1413,14 +1411,14 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
                 return closure_1_9.createElement(closure_0, obj);
               }
             }
-            _getStatics.hoistNonReactStatics(SentryRoutes, arg0);
+            require("01140_getStatics.js").hoistNonReactStatics(SentryRoutes, arg0);
             return SentryRoutes;
           }
         }
       }
     }
   }
-  if (___SENTRY_DEBUG__.DEBUG_BUILD) {
+  if (require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
     class SentryRoutes {
       constructor(arg0) {
         closure_0 = arg0;
@@ -1488,8 +1486,8 @@ export const createV6CompatibleWrapCreateBrowserRouter = function createV6Compat
     }
   }
   fn = arg0;
-  if (___SENTRY_DEBUG__.DEBUG_BUILD) {
-    const debug = _registerSpanErrorInstrumentation.debug;
+  if (require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    const debug = require("00817_registerSpanErrorInstrumentation.js").debug;
     const _HermesInternal = HermesInternal;
     debug.warn("reactRouterV" + _6 + "Instrumentation was unable to wrap the `createRouter` function because of one or more missing parameters.");
     fn = arg0;
@@ -1568,8 +1566,8 @@ export const createV6CompatibleWrapCreateMemoryRouter = function createV6Compati
     }
   }
   fn = arg0;
-  if (___SENTRY_DEBUG__.DEBUG_BUILD) {
-    const debug = _registerSpanErrorInstrumentation.debug;
+  if (require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    const debug = require("00817_registerSpanErrorInstrumentation.js").debug;
     const _HermesInternal = HermesInternal;
     debug.warn("reactRouterV" + _6 + "Instrumentation was unable to wrap the `createMemoryRouter` function because of one or more missing parameters.");
     fn = arg0;
@@ -1662,8 +1660,8 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
       }
     }
   }
-  if (___SENTRY_DEBUG__.DEBUG_BUILD) {
-    const debug = _registerSpanErrorInstrumentation.debug;
+  if (require("metro/01142___SENTRY_DEBUG__.js").DEBUG_BUILD) {
+    const debug = require("00817_registerSpanErrorInstrumentation.js").debug;
     debug.warn("reactRouterV6Instrumentation was unable to wrap `useRoutes` because of one or more missing parameters.");
   }
   return arg0;

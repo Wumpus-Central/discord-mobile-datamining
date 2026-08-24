@@ -397,12 +397,12 @@ class RequestBase {
       if (self.req) {
         tmp2 = closure_0;
         tmp3 = closure_1;
-        obj = require("module_576");
+        obj = require("metro/00576__.js");
         tmp4 = globalThis;
         _process = process;
         str = "v13.0.0";
         if (obj.gte(process.version, "v13.0.0")) {
-          tmp2Result = require("module_576");
+          tmp2Result = require("metro/00576__.js");
           _process2 = process;
           str2 = "v14.0.0";
           if (tmp2Result.lt(process.version, "v14.0.0")) {
@@ -655,7 +655,7 @@ class RequestBase {
           sorted1 = parts.sort();
         }
         url2 = self.url;
-        str2 = require("module_0") + str2;
+        str2 = require("../discord_app/index.native.tsx") + str2;
         self.url = str2 + parts.join("&");
       }
     }

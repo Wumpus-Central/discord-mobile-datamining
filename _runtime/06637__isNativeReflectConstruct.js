@@ -1,12 +1,15 @@
 // _runtime/06637__isNativeReflectConstruct.js
+import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import _isNativeReflectConstructDefault from "06610__isNativeReflectConstruct.js";
-import closure_2 from "metro/00041__classCallCheck.js";
-import closure_3 from "metro/00093__possibleConstructorReturn.js";
-import closure_4 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "06631__isNativeReflectConstruct.js";
+import __INTERNAL_VIEW_CONFIGDefault from "metro/06638___INTERNAL_VIEW_CONFIG.js";
+import closure_3 from "metro/00041__classCallCheck.js";
+import closure_4 from "metro/00093__possibleConstructorReturn.js";
+import closure_5 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
+import { jsx } from "react/00021_jsxProd.js";
 
-const FeTurbulence = arg1;
+const ClipPath = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,13 +29,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTurbulence {
+noopAll;
+class ClipPath {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeTurbulence);
-    tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
-    tmp3 = closure_3;
+    tmp = closure_3(this, ClipPath);
+    tmp2 = closure_5;
+    obj = closure_5(ClipPath);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -46,19 +50,21 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeTurbulence, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const result = FeTurbulence(6587).warnUnimplementedFilter();
-    return null;
+_inheritsDefault(ClipPath, _isNativeReflectConstructDefault);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const props = this.props;
+      const obj = { ref: this.refMethod };
+      const tmp = __INTERNAL_VIEW_CONFIGDefault;
+      const merged = Object.assign(ClipPath(6622).extract(this, props));
+      obj.children = props.children;
+      return <tmp ref={this.refMethod} />;
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

@@ -54,7 +54,7 @@ class Profiler {
       return tmp3Result1;
     }
     obj2 = require("feedbackAsyncIntegration");
-    obj = { name: "<" + name + ">", onlyIfParent: true, op: require("module_1139").REACT_MOUNT_OP, attributes: { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": name } };
+    obj = { name: "<" + name + ">", onlyIfParent: true, op: require("metro/01139__.js").REACT_MOUNT_OP, attributes: { [closure_1_0(closure_1_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": name } };
     tmp3Result._mountSpan = obj2.startInactiveSpan(obj);
     tmp3Result1 = tmp3Result;
     return;

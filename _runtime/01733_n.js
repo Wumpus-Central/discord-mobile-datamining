@@ -7,7 +7,7 @@ let fn = function n(delayMs, _nextAnimation, reduceMotion) {
   const _require = delayMs;
   dependencyMap = _nextAnimation;
   closure_2 = reduceMotion;
-  let obj = _isValidLayoutAnimationProp;
+  let obj = isValidLayoutAnimationProp;
   const fn = function s() {
     let tmpResult = table;
     if (typeof table === "function") {
@@ -63,7 +63,7 @@ let fn = function n(delayMs, _nextAnimation, reduceMotion) {
     };
     return obj;
   };
-  obj = { _nextAnimation, delayMs, getReduceMotionForAnimation: _isValidLayoutAnimationProp.getReduceMotionForAnimation, reduceMotion };
+  obj = { _nextAnimation, delayMs, getReduceMotionForAnimation: require("01694_isValidLayoutAnimationProp.js").getReduceMotionForAnimation, reduceMotion };
   fn.__closure = obj;
   fn.__workletHash = 7904568249320;
   fn.__initData = closure_2;

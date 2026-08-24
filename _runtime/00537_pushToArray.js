@@ -76,14 +76,14 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
       }
       str2 = parts1;
       if (tmp5) {
-        str2 = _items.maybeMap(parts1, (arg0) => {
+        str2 = require("00536_items.js").maybeMap(parts1, (arg0) => {
           let tmp = arg0;
           if (arg0 instanceof Date) {
             tmp = callback(arg0);
           }
           return tmp;
         });
-        const obj2 = _items;
+        const obj2 = items;
       }
     }
   }
@@ -199,7 +199,7 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
                           let result = get.set(parts1, num2);
                           let tmp33 = _require;
                           let tmp34 = dependencyMap;
-                          let obj7 = _getSideChannel();
+                          let obj7 = getSideChannel();
                           let tmp35 = closure_9;
                           let result1 = obj7.set(closure_9, get);
                           if (tmp86) {
@@ -273,7 +273,7 @@ function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, arg8, fn2, ar
         tmp13 = isArray;
       }
     }
-    obj3 = _items;
+    obj3 = items;
     tmp10 = _require;
   }
   if (arg8) {

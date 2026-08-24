@@ -54,12 +54,12 @@ class Url {
               if (arg1) {
                 tmp4 = closure_0;
                 tmp5 = closure_1;
-                obj2 = require("module_533");
+                obj2 = require("metro/00533__.js");
                 str8 = self.search;
-                parsed = obj2.parse(require("module_1"));
+                parsed = obj2.parse(require("../discord_app/modules/debug/logAppStart.tsx"));
               } else {
                 str7 = self.search;
-                parsed = require("module_1");
+                parsed = require("../discord_app/modules/debug/logAppStart.tsx");
               }
               self.query = parsed;
             } else {
@@ -126,7 +126,7 @@ class Url {
             }
             substr1 = substr7;
             if (-1 !== lastIndexOfResult) {
-              substr = require("module_0");
+              substr = require("../discord_app/index.native.tsx");
               substr1 = substr7.slice(lastIndexOfResult + 1);
               tmp27 = globalThis;
               _decodeURIComponent = decodeURIComponent;
@@ -158,7 +158,7 @@ class Url {
             if (-1 === num10) {
               num10 = substr1.length;
             }
-            self.host = require("module_0");
+            self.host = require("../discord_app/index.native.tsx");
             substr2 = substr1.slice(num10);
             parseHostResult = self.parseHost();
             self.hostname = self.hostname || "";
@@ -212,7 +212,7 @@ class Url {
                   num12 = num12 + 1;
                   tmp37 = substr2;
                 }
-                substr3 = require("module_0");
+                substr3 = require("../discord_app/index.native.tsx");
                 substr4 = parts1.slice(num12 + 1);
                 tmp44 = closure_10;
                 match2 = str19.match(closure_10);
@@ -257,7 +257,7 @@ class Url {
             if (tmp36) {
               str29 = self.hostname;
               num15 = 2;
-              self.hostname = require("module_1");
+              self.hostname = require("../discord_app/modules/debug/logAppStart.tsx");
               text2 = tmp37;
               if ("/" !== tmp37[0]) {
                 text2 = `/${tmp37}`;
@@ -310,7 +310,7 @@ class Url {
         substr5 = arr8;
         if (-1 !== index3) {
           self.hash = arr8.substr(index3);
-          substr5 = require("module_0");
+          substr5 = require("../discord_app/index.native.tsx");
         }
         index4 = substr5.indexOf("?");
         tmp65 = substr5;
@@ -321,10 +321,10 @@ class Url {
           if (arg1) {
             tmp67 = closure_0;
             tmp68 = closure_1;
-            obj5 = require("module_533");
+            obj5 = require("metro/00533__.js");
             self.query = obj5.parse(self.query);
           }
-          substr6 = require("module_0");
+          substr6 = require("../discord_app/index.native.tsx");
         } else {
           substr6 = substr5;
           if (arg1) {
@@ -352,7 +352,7 @@ class Url {
       }
       num3 = 2;
       str11 = "//";
-      tmp12 = "//" === require("module_0");
+      tmp12 = "//" === require("../discord_app/index.native.tsx");
       tmp13 = !tmp12;
       if (tmp12) {
         tmp14 = tmp9;
@@ -365,7 +365,7 @@ class Url {
       tmp11 = tmp12;
       substr7 = str9;
       if (!tmp13) {
-        substr7 = require("module_2");
+        substr7 = require("00002_set.js");
         flag = true;
         self.slashes = true;
         tmp11 = tmp12;
@@ -421,7 +421,7 @@ class Url {
     if (length) {
       tmp7 = closure_0;
       tmp8 = closure_1;
-      obj = require("module_533");
+      obj = require("metro/00533__.js");
       str10 = obj.stringify(self.query, { arrayFormat: "repeat", addQueryPrefix: false });
     }
     str11 = self.search;
@@ -454,7 +454,7 @@ class Url {
         if (str6) {
           num4 = 0;
           str20 = "#";
-          tmp15 = "#" !== require("module_0");
+          tmp15 = "#" !== require("../discord_app/index.native.tsx");
         }
         text4 = str6;
         if (tmp15) {
@@ -465,7 +465,7 @@ class Url {
         if (str11) {
           num5 = 0;
           str22 = "?";
-          tmp17 = "?" !== require("module_0");
+          tmp17 = "?" !== require("../discord_app/index.native.tsx");
         }
         str23 = str11;
         if (tmp17) {
@@ -495,7 +495,7 @@ class Url {
     if (str5) {
       num3 = 0;
       str18 = "/";
-      tmp13 = "/" !== require("module_0");
+      tmp13 = "/" !== require("../discord_app/index.native.tsx");
     }
     text5 = `//${str17}`;
     str16 = text5;
@@ -661,7 +661,7 @@ class Url {
       if (pathname) {
         str3 = url2.pathname;
         str4 = "/";
-        pathname = "/" === require("module_0");
+        pathname = "/" === require("../discord_app/index.native.tsx");
       }
       host = url.host;
       if (!host) {
@@ -669,7 +669,7 @@ class Url {
         if (pathname2) {
           str5 = url.pathname;
           str6 = "/";
-          pathname2 = "/" === require("module_0");
+          pathname2 = "/" === require("../discord_app/index.native.tsx");
         }
         host = pathname2;
       }
@@ -863,7 +863,7 @@ class Url {
             if (first1) {
               str21 = combined[0];
               str22 = "/";
-              first1 = "/" === require("module_0");
+              first1 = "/" === require("../discord_app/index.native.tsx");
             }
             tmp31 = first1;
           }
@@ -884,7 +884,7 @@ class Url {
             if (first2) {
               str25 = combined[0];
               str26 = "/";
-              first2 = "/" === require("module_0");
+              first2 = "/" === require("../discord_app/index.native.tsx");
             }
             tmp35 = first2;
           }
@@ -974,10 +974,10 @@ class Url {
       str3 = ":";
       if (":" !== str2) {
         num = 1;
-        self.port = require("module_1");
+        self.port = require("../discord_app/modules/debug/logAppStart.tsx");
       }
       num2 = 0;
-      substr = require("module_0");
+      substr = require("../discord_app/index.native.tsx");
     }
     if (substr) {
       self.hostname = substr;

@@ -1,7 +1,6 @@
 // _runtime/00824_consoleSandbox.js
 import __SENTRY_DEBUG__ from "metro/00823___SENTRY_DEBUG__.js";
 import getGlobalSingleton from "00825_getGlobalSingleton.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -35,7 +34,7 @@ function _maybeLog(arg0) {
   dependencyMap = [...arguments].slice();
   let str = _require;
   let fn = dependencyMap;
-  const DEBUG_BUILD = ___SENTRY_DEBUG__.DEBUG_BUILD;
+  const DEBUG_BUILD = require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD;
   if (!DEBUG_BUILD) {
     if (DEBUG_BUILD) {
       consoleSandbox(() => {

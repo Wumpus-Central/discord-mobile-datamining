@@ -114,7 +114,7 @@ class State {
     tmp3 = new require("InternetReachability")(global, this._handleInternetReachabilityUpdate);
     this._internetReachability = tmp3;
     eventEmitter = require("get ActivityIndicator").eventEmitter;
-    this._nativeEventSubscription = eventEmitter.addListener(require("module_1482").DEVICE_CONNECTIVITY_EVENT, this._handleNativeStateUpdate);
+    this._nativeEventSubscription = eventEmitter.addListener(require("metro/01482__.js").DEVICE_CONNECTIVITY_EVENT, this._handleNativeStateUpdate);
     _fetchCurrentStateResult = this._fetchCurrentState();
     return;
   }

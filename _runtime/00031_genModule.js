@@ -135,7 +135,7 @@ if (global.nativeModuleProxy) {
   obj = nativeModuleProxy;
 } else {
   const __fbBatchedBridgeConfig = global.__fbBatchedBridgeConfig;
-  require("module_38")(__fbBatchedBridgeConfig, "__fbBatchedBridgeConfig is not set, cannot invoke native modules");
+  require("metro/00038__.js")(__fbBatchedBridgeConfig, "__fbBatchedBridgeConfig is not set, cannot invoke native modules");
   let closure_6 = require("defineLazyObjectProperty").default;
   let item = __fbBatchedBridgeConfig.remoteModuleConfig || [].forEach((arg0, arg1) => {
     closure_0 = arg1;

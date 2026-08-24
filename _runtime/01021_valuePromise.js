@@ -67,7 +67,7 @@ noop.resolve = (self) => {
 noop.all = (arg0) => {
   const call = slice.call;
   const _require = typeof call === "unknown" ? slice() : call(arg0);
-  return new _noop((arg0, arg1) => {
+  return new noop((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     function res(arg0, self) {
@@ -134,13 +134,13 @@ noop.all = (arg0) => {
 };
 noop.reject = (arg0) => {
   const _require = arg0;
-  return new _noop((arg0, arg1) => {
+  return new noop((arg0, arg1) => {
     arg1(closure_0);
   });
 };
 noop.race = (arg0) => {
   const _require = arg0;
-  return new _noop((arg0, arg1) => {
+  return new noop((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     const item = closure_0.forEach((arg0) => {

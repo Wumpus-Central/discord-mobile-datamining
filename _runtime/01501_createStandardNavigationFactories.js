@@ -16,9 +16,9 @@ import useLocale from "01620_useLocale.js";
 import useRoutePath from "01621_useRoutePath.js";
 import useScrollToTop from "01622_useScrollToTop.js";
 
-for (const key10013 in require("module_1502")) {
+for (const key10013 in require("metro/01502__.js")) {
   let tmp2 = key10013;
-  arg5[key10013] = require("module_1502")[key10013];
+  arg5[key10013] = require("metro/01502__.js")[key10013];
   continue;
 }
 for (const key10017 in require("BaseNavigationContainer")) {

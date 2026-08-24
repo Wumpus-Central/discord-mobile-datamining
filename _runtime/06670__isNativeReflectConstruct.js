@@ -1,18 +1,12 @@
 // _runtime/06670__isNativeReflectConstruct.js
-import noopAll from "00019_noop.js";
 import _inheritsDefault from "00098__inherits.js";
-import extractPropsDefault from "06586_extractProps.js";
-import extractFontDefault from "06593_extractFont.js";
-import _isNativeReflectConstructDefault from "06595__isNativeReflectConstruct.js";
-import __INTERNAL_VIEW_CONFIGDefault from "metro/06671___INTERNAL_VIEW_CONFIG.js";
-import closure_3 from "metro/00041__classCallCheck.js";
-import closure_4 from "metro/00093__possibleConstructorReturn.js";
-import closure_5 from "00095__getPrototypeOf.js";
+import _isNativeReflectConstructDefault from "06646__isNativeReflectConstruct.js";
+import closure_2 from "metro/00041__classCallCheck.js";
+import closure_3 from "metro/00093__possibleConstructorReturn.js";
+import closure_4 from "00095__getPrototypeOf.js";
 import importDefaultResult from "metro/00042__createClass.js";
-import { jsx } from "react/00021_jsxProd.js";
-import extractFont from "06593_extractFont.js";
 
-const TSpan = arg1;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,69 +26,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopAll;
-class TSpan {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, closure_0);
-    items1 = [...items];
-    tmp2 = closure_5;
-    obj = closure_5(closure_0);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeSpecularLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeSpecularLighting);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = closure_1_1(closure_1_2[7])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
-      const obj = lib(closure_1_2[8]);
-      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
-      if (lib.root) {
-        const root = lib.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(TSpan, _isNativeReflectConstructDefault);
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      let obj = TSpan(6586);
-      const propsAndStylesResult = obj.propsAndStyles(this.props);
-      obj = {};
-      const merged = Object.assign(propsAndStylesResult);
-      obj.x = null;
-      obj.y = null;
-      const tmp2Result = extractPropsDefault(obj, this);
-      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
-      tmp2Result.ref = this.refMethod;
-      obj = {};
-      const tmp2 = extractPropsDefault;
-      const merged2 = Object.assign(tmp2Result);
-      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-    }
+_inheritsDefault(FeSpecularLighting, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeSpecularLighting(6623).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-extractFont.setTSpan(importDefaultResultResult);
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

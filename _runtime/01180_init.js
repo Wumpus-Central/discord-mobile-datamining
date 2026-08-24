@@ -1,7 +1,6 @@
 // _runtime/01180_init.js
 import NativeModules from "01001_NativeModules.js";
 import closure_2 from "00019_noop.js";
-import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrumentation.js";
 
 require = arg1;
 let fn = this;
@@ -293,7 +292,7 @@ export const flush = function flush() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -368,7 +367,7 @@ export const close = function close() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -426,7 +425,7 @@ export const close = function close() {
 };
 export const withScope = function withScope(arg0) {
   const _require = arg0;
-  return _registerSpanErrorInstrumentation.withScope((arg0) => {
+  return require("00817_registerSpanErrorInstrumentation.js").withScope((arg0) => {
     try {
       return callback(arg0);
     } catch (tmp3) {
@@ -448,7 +447,7 @@ export const crashedLastRun = function crashedLastRun() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: "HermesInternal" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

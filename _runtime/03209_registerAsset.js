@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jcm9pc3NhbnQvY3JlcGU=", scales: [1], hash: "bed74f403f84dd611cabcbb75b01e81d", name: "cs.messages.bed74f403f84dd611cabcbb75b01e81d.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/partner_perks/xbox/partner_pass", scales: [1], hash: "5d043a239e74f1fd73cda189aff4d907", name: "XboxPartnerPass.compiled.messages", type: "jsona" });

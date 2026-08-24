@@ -9,7 +9,7 @@ do {
   if (num < 16) {
     str = "0";
   }
-  let str2 = str + require("module_16");
+  let str2 = str + require("../discord_app/utils/checkEnv.tsx");
   let arr = items.push(`%${str2.toUpperCase()}`);
   num = num + 1;
 } while (num < 256);

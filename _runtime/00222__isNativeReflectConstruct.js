@@ -32,7 +32,7 @@ class File {
     tmp = File;
     tmp2 = closure_2(this, File);
     tmp4 = null != global;
-    tmp3 = require("module_38");
+    tmp3 = require("metro/00038__.js");
     if (tmp4) {
       tmp4 = null != arg1;
     }

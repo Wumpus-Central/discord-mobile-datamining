@@ -2,7 +2,6 @@
 import registerSpanErrorInstrumentation from "00817_registerSpanErrorInstrumentation.js";
 import ignoreNextOnError from "01028_ignoreNextOnError.js";
 import shouldAttachHeaders from "01090_shouldAttachHeaders.js";
-import { ignoreNextOnError } from "01028_ignoreNextOnError.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const BrowserTracing = "BrowserTracing";
@@ -163,8 +162,8 @@ export const browserTracingIntegration = () => {
       const startInactiveSpanResult = _undefined(_undefined2[0]).startInactiveSpan(obj);
     }
   }
-  closure_3 = { name: "r", source: "accessibilityRole" };
-  document = _ignoreNextOnError.WINDOW.document;
+  closure_3 = { name: "Array", source: "ct" };
+  document = require("01028_ignoreNextOnError.js").WINDOW.document;
   obj = {};
   let merged = Object.assign(closure_3);
   let merged1 = Object.assign(obj);
@@ -567,12 +566,12 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   }
   return client[_sentry_idleSpan];
 };
-export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f103592, result) {
-  f103592.emit("startPageLoadSpan", result, arg2);
+export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f104458, result) {
+  f104458.emit("startPageLoadSpan", result, arg2);
   const currentScope = registerSpanErrorInstrumentation.getCurrentScope();
   currentScope.setTransactionName(result.name);
-  if (f103592[_sentry_idleSpan]) {
-    f103592.emit("afterStartPageLoadSpan", tmp3);
+  if (f104458[_sentry_idleSpan]) {
+    f104458.emit("afterStartPageLoadSpan", tmp3);
   }
-  return f103592[_sentry_idleSpan];
+  return f104458[_sentry_idleSpan];
 };

@@ -1977,11 +1977,11 @@ function releaseCache(refCount) {
   const _require = refCount;
   refCount.refCount = refCount.refCount - 1;
   if (0 === refCount.refCount) {
-    const result = _peek.unstable_scheduleCallback(_peek.unstable_NormalPriority, () => {
+    const result = require("00287_peek.js").unstable_scheduleCallback(require("00287_peek.js").unstable_NormalPriority, () => {
       const controller = pooledCache.controller;
       controller.abort();
     });
-    const obj = _peek;
+    const obj = peek;
   }
 }
 function noop() {
@@ -13095,7 +13095,7 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = { status: "pending", value: "Array", then: "\u{1F469}\u{1F3FF}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FE}" };
+      obj = { status: "pending", value: "Array", then: "\u{1F469}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F469}\u{1F3FE}" };
       obj[2] = function then(arg0) {
         items.push(arg0);
       };
@@ -14049,7 +14049,7 @@ if (globalThis.nativeFabricUIManager.registerEventHandler) {
       if (null != canonical) {
         if (null != canonical.canonical) {
           if (null == canonical.canonical.publicInstance) {
-            let obj = _require("00272_get_BatchedBridge.js") /* get BatchedBridge */;
+            let obj = require("00272_get_BatchedBridge.js") /* get BatchedBridge */;
             const nativeTag = canonical.canonical.nativeTag;
             const viewConfig = canonical.canonical.viewConfig;
             const internalInstanceHandle = canonical.canonical.internalInstanceHandle;

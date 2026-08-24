@@ -67,7 +67,7 @@ const items = [
       const nativeTextReference = ReadOnlyCharacterData(136).getNativeTextReference(this);
       let str = "";
       if (null != nativeTextReference) {
-        str = NativeDOMCxx.getTextContent(nativeTextReference);
+        str = require("00139_NativeDOMCxx.js").getTextContent(nativeTextReference);
         const obj2 = NativeDOMCxx;
       }
       return str;

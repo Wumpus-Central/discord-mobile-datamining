@@ -1,10 +1,3 @@
 // _runtime/metro/04211__.js
-let fn = Array.isArray;
-if (!fn) {
-  fn = (arg0) => {
-    const call = toString.call;
-    return "[object Array]" == (typeof call === "unknown" ? toString() : call(arg0));
-  };
-}
 
-export default fn;
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

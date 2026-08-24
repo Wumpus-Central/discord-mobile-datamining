@@ -1,34 +1,47 @@
 // _runtime/metro/13788__.js
-arg5.default = undefined;
-let closure_0 = { url: "http://localhost:8081" };
-arg5.default = () => {
-  let obj = arg0;
-  if (arg0 === undefined) {
+import all from "../13757_all.js";
+
+
+export default (arg0, arg1, arg2, arg3) => {
+  let obj = arg3;
+  if (!arg3) {
     obj = {};
   }
-  return () => {
-    closure_0 = Object.assign({}, obj, closure_0);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: null, lineNumber: null };
-          obj[0] = payload.file;
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj[1] = num;
-          const _fetch = fetch;
-          obj = { method: "POST", body: null };
-          const _JSON = JSON;
-          obj[1] = JSON.stringify(obj);
-          const response = fetch(combined, obj);
+  let flag = obj.enumerable;
+  let name = arg1;
+  if (undefined !== obj.name) {
+    name = obj.name;
+  }
+  if (all(arg2)) {
+    tmp3(13789)(arg2, name, obj);
+  }
+  if (obj.global) {
+    if (flag) {
+      arg0[arg1] = arg2;
+    } else {
+      tmp3(13732)(arg1, arg2);
+    }
+  } else {
+    try {
+      if (obj.unsafe) {
+        if (arg0[arg1]) {
+          flag = true;
         }
+      } else {
+        delete tmp[tmp2];
       }
-    };
-    return obj;
-  };
+      if (flag) {
+        arg0[arg1] = arg2;
+      } else {
+        obj = { value: null, enumerable: false, configurable: null, writable: null };
+        obj[0] = arg2;
+        obj[2] = !obj.nonConfigurable;
+        obj[3] = !obj.nonWritable;
+        tmp3(13785).f(arg0, arg1, obj);
+        const tmp3Result = tmp3(13785);
+      }
+    } catch (err) {
+    }
+  }
+  return arg0;
 };

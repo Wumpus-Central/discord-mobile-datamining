@@ -259,7 +259,7 @@ class Response {
         index = arr2.indexOf(":");
         tmp4 = num6;
         if (-1 !== index) {
-          str5 = require("module_0");
+          str5 = require("../discord_app/index.native.tsx");
           tmp6 = trim;
           formatted = str5.toLowerCase();
           str6 = arr2.slice(index + 1);

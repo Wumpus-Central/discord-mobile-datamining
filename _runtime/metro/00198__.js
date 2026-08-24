@@ -10,16 +10,16 @@ import { _isNativeReflectConstruct } from "../00217__isNativeReflectConstruct.js
 import { _isNativeReflectConstruct } from "../00222__isNativeReflectConstruct.js";
 import { _isNativeReflectConstruct } from "../00223__isNativeReflectConstruct.js";
 
-polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => _isNativeReflectConstruct.default);
-polyfillObjectProperty.polyfillGlobal("FormData", () => FormData.default);
+polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("FormData", () => FormData /* FormData */.default);
 polyfillObjectProperty.polyfillGlobal("fetch", () => t.fetch);
 polyfillObjectProperty.polyfillGlobal("Headers", () => t.Headers);
 polyfillObjectProperty.polyfillGlobal("Request", () => t.Request);
 polyfillObjectProperty.polyfillGlobal("Response", () => t.Response);
-polyfillObjectProperty.polyfillGlobal("WebSocket", () => _isNativeReflectConstruct.default);
-polyfillObjectProperty.polyfillGlobal("Blob", () => Blob.default);
-polyfillObjectProperty.polyfillGlobal("File", () => _isNativeReflectConstruct.default);
-polyfillObjectProperty.polyfillGlobal("FileReader", () => _isNativeReflectConstruct.default);
+polyfillObjectProperty.polyfillGlobal("WebSocket", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("Blob", () => Blob /* Blob */.default);
+polyfillObjectProperty.polyfillGlobal("File", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("FileReader", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
 polyfillObjectProperty.polyfillGlobal("URL", () => URL.URL);
 polyfillObjectProperty.polyfillGlobal("URLSearchParams", () => URL.URLSearchParams);
 polyfillObjectProperty.polyfillGlobal("AbortController", () => _isNativeReflectConstruct.AbortController);

@@ -3,7 +3,6 @@ import closure_2 from "metro/00032__slicedToArray.js";
 import importAllResult from "00019_noop.js";
 import get_ActivityIndicator from "00017_get_ActivityIndicator.js";
 import { jsx } from "react/00021_jsxProd.js";
-import { NativeSafeAreaProvider } from "01634_NativeSafeAreaProvider.js";
 
 const require = arg1;
 let c3 = importAllResult;
@@ -103,7 +102,7 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     tmp15Result = tmp15(tmp4.Provider, obj1);
   }
   obj.children = tmp15Result;
-  return jsx(_NativeSafeAreaProvider.NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
+  return jsx(require("01634_NativeSafeAreaProvider.js").NativeSafeAreaProvider, { style: items, onInsetsChange: callback });
 };
 export const SafeAreaListener = function SafeAreaListener(onChange) {
   onChange = onChange.onChange;

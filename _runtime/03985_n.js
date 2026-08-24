@@ -1,82 +1,31 @@
 // _runtime/03985_n.js
-import t from "03975_t.js";
+import t from "03978_t.js";
 
 const fn = function n(moment) {
   function translate(arg0, arg1, arg2, arg3) {
-    if (tmp) {
-      let str = " \u00E9v";
-    } else {
-      str = " \u00E9ve";
-    }
-    return tmp3 + str;
-  }
-  function week(arg0) {
-    let str = "[m\u00FAlt] ";
-    if (arg0) {
-      str = "";
-    }
-    return str + "[" + dependencyMap[this.day(this)] + "] LT[-kor]";
-  }
-  closure_0 = "vas\u00E1rnap h\u00E9tf\u0151n kedden szerd\u00E1n cs\u00FCt\u00F6rt\u00F6k\u00F6n p\u00E9nteken szombaton".split(" ");
-  obj = {
-    months: "janu\u00E1r_febru\u00E1r_m\u00E1rcius_\u00E1prilis_m\u00E1jus_j\u00FAnius_j\u00FAlius_augusztus_szeptember_okt\u00F3ber_november_december".split("_"),
-    monthsShort: "jan_feb_m\u00E1rc_\u00E1pr_m\u00E1j_j\u00FAn_j\u00FAl_aug_szept_okt_nov_dec".split("_"),
-    weekdays: "vas\u00E1rnap_h\u00E9tf\u0151_kedd_szerda_cs\u00FCt\u00F6rt\u00F6k_p\u00E9ntek_szombat".split("_"),
-    weekdaysShort: "vas_h\u00E9t_kedd_sze_cs\u00FCt_p\u00E9n_szo".split("_"),
-    weekdaysMin: "v_h_k_sze_cs_p_szo".split("_"),
-    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY. MMMM D.", LLL: "YYYY. MMMM D. H:mm", LLLL: "YYYY. MMMM D., dddd H:mm" },
-    meridiemParse: /de|du/i,
-    isPM(str) {
-      return "u" === str.charAt(1).toLowerCase();
-    },
-    meridiem(arg0, arg1, arg2) {
-      if (arg0 < 12) {
-        let str2 = "DE";
-        if (true === arg2) {
-          str2 = "de";
+    while (true) {
+      let tmp3 = arg0;
+      let num = 10;
+      let tmp4 = arg0;
+      if (arg0 >= 10) {
+        let str2 = " ";
+        return arg0 + " " + tmp2;
+      } else {
+        if (tmp) {
+          let tmp7 = items;
+          let tmp6 = items[arg0];
+        } else {
+          let tmp5 = parts;
+          tmp6 = parts[arg0];
         }
-        let str = str2;
-      } else {
-        str = "DU";
-        if (true === arg2) {
-          str = "du";
-        }
+        let tmp8 = tmp6;
       }
-      return str;
-    },
-    calendar: obj,
-    relativeTime: { future: "%s m\u00FAlva", past: "%s", s: translate, ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: translate, dd: translate, M: translate, MM: translate, y: translate, yy: translate },
-    dayOfMonthOrdinalParse: /\d{1,2}\./,
-    ordinal: "%d.",
-    week: { dow: 1, doy: 4 }
-  };
-  obj = {
-    sameDay: "[ma] LT[-kor]",
-    nextDay: "[holnap] LT[-kor]",
-    nextWeek() {
-      const self = this;
-      const call = week.call;
-      if (typeof call === "unknown") {
-        let text = `${"[" + closure_0[self.day(self)]}] LT[-kor]`;
-      } else {
-        text = call(self, true);
-      }
-      return text;
-    },
-    lastDay: "[tegnap] LT[-kor]",
-    lastWeek() {
-      const self = this;
-      const call = week.call;
-      if (typeof call === "unknown") {
-        let text = `${"[m\u00FAlt] [" + closure_0[self.day(self)]}] LT[-kor]`;
-      } else {
-        text = call(self, false);
-      }
-      return text;
-    },
-    sameElse: "L"
-  };
-  return moment.defineLocale("hu", obj);
+    }
+  }
+  const parts = "nolla yksi kaksi kolme nelj\u00E4 viisi kuusi seitsem\u00E4n kahdeksan yhdeks\u00E4n".split(" ");
+  const items = ["nolla", "yhden", "kahden", "kolmen", "nelj\u00E4n", "viiden", "kuuden", parts[7], parts[8], parts[9]];
+  ({ split, split: split2 } = "su_ma_ti_ke_to_pe_la");
+  return moment.defineLocale("fi", { months: "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kes\u00E4kuu_hein\u00E4kuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split("_"), monthsShort: "tammi_helmi_maalis_huhti_touko_kes\u00E4_hein\u00E4_elo_syys_loka_marras_joulu".split("_"), weekdays: "sunnuntai_maanantai_tiistai_keskiviikko_torstai_perjantai_lauantai".split("_"), weekdaysShort: "su_ma_ti_ke_to_pe_la".split("_"), weekdaysMin: "su_ma_ti_ke_to_pe_la".split("_"), longDateFormat: { LT: "HH.mm", LTS: "HH.mm.ss", L: "DD.MM.YYYY", LL: "Do MMMM[ta] YYYY", LLL: "Do MMMM[ta] YYYY, [klo] HH.mm", LLLL: "dddd, Do MMMM[ta] YYYY, [klo] HH.mm", l: "D.M.YYYY", ll: "Do MMM YYYY", lll: "Do MMM YYYY, [klo] HH.mm", llll: "ddd, Do MMM YYYY, [klo] HH.mm" }, calendar: { sameDay: "[t\u00E4n\u00E4\u00E4n] [klo] LT", nextDay: "[huomenna] [klo] LT", nextWeek: "dddd [klo] LT", lastDay: "[eilen] [klo] LT", lastWeek: "[viime] dddd[na] [klo] LT", sameElse: "L" }, relativeTime: { future: "%s p\u00E4\u00E4st\u00E4", past: "%s sitten", s: translate, ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: translate, dd: translate, M: translate, MM: translate, y: translate, yy: translate }, dayOfMonthOrdinalParse: /\d{1,2}\./, ordinal: "%d.", week: { dow: 1, doy: 4 } });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {

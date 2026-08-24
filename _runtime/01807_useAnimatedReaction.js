@@ -1,6 +1,5 @@
 // _runtime/01807_useAnimatedReaction.js
 import noop from "00019_noop.js";
-import { isJest } from "01657_isJest.js";
 import { useSharedValue } from "01806_useSharedValue.js";
 
 let useEffect = noop.useEffect;
@@ -9,16 +8,16 @@ let closure_3 = { code: "function pnpm_useAnimatedReactionTs1(){const{prepare,re
 export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items1) {
   const _require = fn;
   dependencyMap = fn2;
-  useEffect = _useSharedValue.useSharedValue(null);
+  useEffect = require("01806_useSharedValue.js").useSharedValue(null);
   let __closure = fn.__closure;
   if (__closure == null) {
     __closure = {};
   }
   const values = Object.values(__closure);
   let arr2 = values;
-  const obj = _useSharedValue;
+  const obj = useSharedValue;
   let tmp = _require;
-  let tmp3 = _isJest.shouldBeUseWeb() && !values.length;
+  let tmp3 = require("01657_isJest.js").shouldBeUseWeb() && !values.length;
   arr2 = items1;
   if (tmp3) {
     let length;

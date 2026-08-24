@@ -155,11 +155,11 @@ arg5.addPerformanceInstrumentationHandler = function addPerformanceInstrumentati
     if ("event" === event) {
       obj.durationThreshold = 0;
     }
-    _observe.observe(event, (entries) => {
+    require("01046_observe.js").observe(event, (entries) => {
       closure_1_8(closure_0, { entries });
     }, obj);
     tmp4[event] = true;
-    const obj2 = _observe;
+    const obj2 = observe;
   }
   _require = event;
   dependencyMap = handleEntries;

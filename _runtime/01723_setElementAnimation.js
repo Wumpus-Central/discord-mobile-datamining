@@ -4,9 +4,6 @@ import isReducedMotionEnabledInSystem from "01695_isReducedMotionEnabledInSystem
 import TransitionType from "01710_TransitionType.js";
 import BaseAnimationBuilder from "01724_BaseAnimationBuilder.js";
 import weakMap from "01740_weakMap.js";
-import { isWorkletFunction } from "01679_isWorkletFunction.js";
-import { TransitionType } from "01710_TransitionType.js";
-import { weakMap } from "01740_weakMap.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -32,7 +29,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
   duration = dummyAnimationConfig.duration;
   delay = dummyAnimationConfig.delay;
   easing = dummyAnimationConfig.easing;
-  if (dummyAnimationConfig.animationType === _isWorkletFunction.LayoutAnimationType.ENTERING) {
+  if (dummyAnimationConfig.animationType === require("01679_isWorkletFunction.js").LayoutAnimationType.ENTERING) {
     const _requestAnimationFrame = requestAnimationFrame;
     const animationFrame = requestAnimationFrame(function configureAnimation() {
       dummy.style.animationName = animationName;
@@ -146,7 +143,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     }
     const listener = dummy.addEventListener("animationcancel", animationCancelHandler);
   };
-  if (!(animationName in _TransitionType.Animations)) {
+  if (!(animationName in require("01710_TransitionType.js").Animations)) {
     let result = tmp2(1741).scheduleAnimationCleanup(animationName, duration + delay, () => {
       if (flag) {
         const snapshots = dummy(dummyAnimationConfig[7]).snapshots;
@@ -380,7 +377,7 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
     }
   }
   let result = restoreScrollPosition(cloneNodeResult);
-  const snapshots = _weakMap.snapshots;
+  const snapshots = require("01740_weakMap.js").snapshots;
   const rect = snapshots.get(parentElement);
   let num = 0;
   let num2 = 0;
@@ -417,6 +414,6 @@ arg5.handleExitingAnimation = function handleExitingAnimation(offsetParent, proc
   }
   const snapshots2 = tmp6(1740).snapshots;
   const result1 = snapshots2.set(cloneNodeResult, rect);
-  _weakMap.setElementPosition(cloneNodeResult, rect);
+  require("01740_weakMap.js").setElementPosition(cloneNodeResult, rect);
   map(cloneNodeResult, processedConfig, false, offsetParent);
 };

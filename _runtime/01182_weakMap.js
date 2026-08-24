@@ -7,7 +7,7 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
   const _require = globalScope;
   if (!weakMap.has(globalScope)) {
     let result = weakMap.set(globalScope, true);
-    _fillTyped.fillTyped(globalScope, "setUser", (arg0) => {
+    require("01154_fillTyped.js").fillTyped(globalScope, "setUser", (arg0) => {
       closure_0 = arg0;
       return (arg0) => {
         const NATIVE = callback(closure_2_1[1]).NATIVE;
@@ -16,8 +16,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0) : call(callback, arg0);
       };
     });
-    let obj2 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "setTag", (arg0) => {
+    let obj2 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "setTag", (arg0) => {
       closure_0 = arg0;
       return (arg0, arg1) => {
         const NATIVE = callback(closure_2_1[1]).NATIVE;
@@ -27,8 +27,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0, arg1) : call(callback, arg0, arg1);
       };
     });
-    const obj3 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "setTags", (arg0) => {
+    const obj3 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "setTags", (arg0) => {
       closure_0 = arg0;
       return (arg0) => {
         closure_0 = arg0;
@@ -42,8 +42,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? closure_0(arg0) : call(closure_0, arg0);
       };
     });
-    const obj4 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "setExtras", (arg0) => {
+    const obj4 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "setExtras", (arg0) => {
       closure_0 = arg0;
       return (arg0) => {
         closure_0 = arg0;
@@ -56,8 +56,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? closure_0(arg0) : call(closure_0, arg0);
       };
     });
-    const obj5 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "setExtra", (arg0) => {
+    const obj5 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "setExtra", (arg0) => {
       closure_0 = arg0;
       return (arg0, arg1) => {
         const NATIVE = callback(closure_2_1[1]).NATIVE;
@@ -66,8 +66,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0, arg1) : call(callback, arg0, arg1);
       };
     });
-    const obj6 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "addBreadcrumb", (arg0) => {
+    const obj6 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "addBreadcrumb", (arg0) => {
       closure_0 = arg0;
       return (level) => {
         let DEFAULT_BREADCRUMB_LEVEL = level.level;
@@ -100,8 +100,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return callback;
       };
     });
-    const obj7 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "clearBreadcrumbs", (arg0) => {
+    const obj7 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "clearBreadcrumbs", (arg0) => {
       closure_0 = arg0;
       return () => {
         const NATIVE = callback(closure_2_1[1]).NATIVE;
@@ -110,8 +110,8 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback() : call(callback);
       };
     });
-    const obj8 = _fillTyped;
-    _fillTyped.fillTyped(globalScope, "setContext", (arg0) => {
+    const obj8 = fillTyped;
+    require("01154_fillTyped.js").fillTyped(globalScope, "setContext", (arg0) => {
       closure_0 = arg0;
       return (arg0, arg1) => {
         const NATIVE = callback(closure_2_1[1]).NATIVE;
@@ -120,6 +120,6 @@ arg5.enableSyncToNative = function enableSyncToNative(globalScope) {
         return typeof call === "unknown" ? callback(arg0, arg1) : call(callback, arg0, arg1);
       };
     });
-    const obj9 = _fillTyped;
+    const obj9 = fillTyped;
   }
 };

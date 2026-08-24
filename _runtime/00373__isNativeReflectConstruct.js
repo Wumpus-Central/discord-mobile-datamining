@@ -76,7 +76,7 @@ class AnimatedValueXY {
     }
     tmp6 = AnimatedValueXY;
     tmp7 = closure_1;
-    tmp8 = require("module_38");
+    tmp8 = require("metro/00038__.js");
     tmp9 = point.x instanceof require("_isNativeReflectConstruct");
     if (tmp9) {
       tmp9 = point.y instanceof require("_isNativeReflectConstruct");

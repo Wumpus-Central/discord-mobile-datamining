@@ -10,13 +10,13 @@ let num = 0;
 if (0 < parts.length) {
   do {
     let obj = parts[num];
-    items[require("module_0")] = num;
+    items[require("../discord_app/index.native.tsx")] = num;
     num = num + 1;
     length = parts.length;
   } while (num < length);
 }
-items[require("module_0")] = parts.indexOf("+");
-items[require("module_0")] = parts.indexOf("/");
+items[require("../discord_app/index.native.tsx")] = parts.indexOf("+");
+items[require("../discord_app/index.native.tsx")] = parts.indexOf("/");
 arg5.base64decode = function base64decode(actionData) {
   const result = 3 * actionData.length / 4;
   if ("=" == actionData[actionData.length - 2]) {

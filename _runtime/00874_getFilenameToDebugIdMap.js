@@ -1,13 +1,12 @@
 // _runtime/00874_getFilenameToDebugIdMap.js
 import createStackParser from "00833_createStackParser.js";
-import { 00821__ } from "metro/00821__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 function getFilenameToDebugIdMap(arg0) {
   const _require = arg0;
-  const _sentryDebugIds = _00821__.GLOBAL_OBJ._sentryDebugIds;
-  const _debugIds = _00821__.GLOBAL_OBJ._debugIds;
+  const _sentryDebugIds = require("metro/00821__.js").GLOBAL_OBJ._sentryDebugIds;
+  const _debugIds = require("metro/00821__.js").GLOBAL_OBJ._debugIds;
   if (!_sentryDebugIds) {
     if (!_debugIds) {
       return {};

@@ -62,9 +62,9 @@ function _shouldCaptureResponse(failedRequestStatusCodes) {
     });
   }
   if (someResult) {
-    const obj = _registerSpanErrorInstrumentation;
-    someResult = !obj.isSentryRequestUrl(arg2, _registerSpanErrorInstrumentation.getClient());
-    const obj2 = _registerSpanErrorInstrumentation;
+    const obj = registerSpanErrorInstrumentation;
+    someResult = !obj.isSentryRequestUrl(arg2, require("00817_registerSpanErrorInstrumentation.js").getClient());
+    const obj2 = registerSpanErrorInstrumentation;
   }
   return someResult;
 }

@@ -601,7 +601,7 @@ class BigInteger {
             multiplyResult1 = obj7.multiply(modInvResult);
             modResult1 = multiplyResult1.mod(obj2);
           }
-          divideResult = require("module_2");
+          divideResult = require("00002_set.js");
           squareResult = modInvResult.square();
           modInvResult = squareResult.mod(obj2);
           obj7 = modResult1;
@@ -761,7 +761,7 @@ class BigInteger {
         self = this;
         num = 2;
         num2 = 0;
-        if (0 === require("module_2")) {
+        if (0 === require("00002_set.js")) {
           isEvenResult = self.isEven();
         } else {
           modResult = self.mod(obj);
@@ -779,30 +779,30 @@ class BigInteger {
     tmp2 = !isUnitResult;
     if (!isUnitResult) {
       num = 2;
-      equalsResult = require("module_2");
+      equalsResult = require("00002_set.js");
       if (!equalsResult) {
         num2 = 3;
-        equalsResult = require("module_3");
+        equalsResult = require("../discord_app/modules/debug/Logger.tsx");
       }
       if (!equalsResult) {
         num3 = 5;
-        equalsResult = require("module_5");
+        equalsResult = require("00005_asyncGeneratorStep.js");
       }
       tmp4 = equalsResult;
       if (!tmp4) {
         isEvenResult = absResult.isEven();
         if (!isEvenResult) {
           num4 = 3;
-          isEvenResult = require("module_3");
+          isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
         }
         if (!isEvenResult) {
           num5 = 5;
-          isEvenResult = require("module_5");
+          isEvenResult = require("00005_asyncGeneratorStep.js");
         }
         tmp6 = !isEvenResult;
         if (!isEvenResult) {
           num6 = 49;
-          tmp7 = require("module_49") || undefined;
+          tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
           tmp6 = tmp7;
         }
         tmp4 = tmp6;
@@ -824,7 +824,7 @@ class BigInteger {
         tmp15 = globalThis;
         _Math2 = Math;
         num12 = 2;
-        logResult = require("module_2");
+        logResult = require("00002_set.js");
         result = logResult * bitLengthResult.toJSNumber();
         flag = true;
         result1 = result;
@@ -852,30 +852,30 @@ class BigInteger {
     tmp2 = !isUnitResult;
     if (!isUnitResult) {
       num = 2;
-      equalsResult = require("module_2");
+      equalsResult = require("00002_set.js");
       if (!equalsResult) {
         num2 = 3;
-        equalsResult = require("module_3");
+        equalsResult = require("../discord_app/modules/debug/Logger.tsx");
       }
       if (!equalsResult) {
         num3 = 5;
-        equalsResult = require("module_5");
+        equalsResult = require("00005_asyncGeneratorStep.js");
       }
       tmp4 = equalsResult;
       if (!tmp4) {
         isEvenResult = absResult.isEven();
         if (!isEvenResult) {
           num4 = 3;
-          isEvenResult = require("module_3");
+          isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
         }
         if (!isEvenResult) {
           num5 = 5;
-          isEvenResult = require("module_5");
+          isEvenResult = require("00005_asyncGeneratorStep.js");
         }
         tmp6 = !isEvenResult;
         if (!isEvenResult) {
           num6 = 49;
-          tmp7 = require("module_49") || undefined;
+          tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
           tmp6 = tmp7;
         }
         tmp4 = tmp6;
@@ -897,7 +897,7 @@ class BigInteger {
       num10 = 1;
       for (let num11 = 0; num11 < num7; num11 = num11 + 1) {
         tmp9 = Integer;
-        arr = items.push(require("module_2"));
+        arr = items.push(require("00002_set.js"));
       }
       tmp11 = millerRabinTest;
       return millerRabinTest(absResult1, items);
@@ -930,7 +930,7 @@ class BigInteger {
       num = 0;
       num2 = -1;
       addResult = obj5;
-      if (-1 === require("module_0")) {
+      if (-1 === require("../discord_app/index.native.tsx")) {
         addResult = obj5.add(arg0);
       }
       negateResult = addResult;
@@ -1182,16 +1182,16 @@ class BigInteger {
     self = this;
     tmp = Integer;
     self2 = this;
-    if (this.compareTo(require("module_0")) < 0) {
+    if (this.compareTo(require("../discord_app/index.native.tsx")) < 0) {
       negateResult = self.negate();
       num = 1;
-      self2 = negateResult.subtract(require("module_1"));
+      self2 = negateResult.subtract(require("../discord_app/modules/debug/logAppStart.tsx"));
     }
-    if (0 === self2.compareTo(require("module_0"))) {
-      tmpResult = require("module_0");
+    if (0 === self2.compareTo(require("../discord_app/index.native.tsx"))) {
+      tmpResult = require("../discord_app/index.native.tsx");
     } else {
       num6 = 2;
-      tmpResult1 = require("module_2");
+      tmpResult1 = require("00002_set.js");
       if (tmpResult1.compareTo(self2) <= 0) {
         squareResult = tmpResult1.square(tmpResult1);
         if (squareResult.compareTo(self2) <= 0) {
@@ -1214,7 +1214,7 @@ class BigInteger {
         } else {
           obj2 = { p: null, e: 0 };
           num3 = 1;
-          obj2[0] = require("module_1");
+          obj2[0] = require("../discord_app/modules/debug/logAppStart.tsx");
           ({ p: p2, e: e2 } = obj2);
           multiplyResult1 = p2.multiply(tmpResult1);
           if (multiplyResult1.compareTo(self2) <= 0) {
@@ -1234,10 +1234,10 @@ class BigInteger {
       } else {
         obj5 = { p: null, e: 0 };
         num2 = 1;
-        obj5[0] = require("module_1");
+        obj5[0] = require("../discord_app/modules/debug/logAppStart.tsx");
         tmpResult2 = tmp(obj5.e);
         num7 = 1;
-        tmpResult = tmpResult2.add(require("module_1"));
+        tmpResult = tmpResult2.add(require("../discord_app/modules/debug/logAppStart.tsx"));
       }
     }
     return tmpResult;
@@ -1797,8 +1797,8 @@ class NativeBigInt {
     iter = parseValue(arg0);
     value = this.value;
     value = iter.value;
-    BigIntResult = require("module_0");
-    BigIntResult1 = require("module_1");
+    BigIntResult = require("../discord_app/index.native.tsx");
+    BigIntResult1 = require("../discord_app/modules/debug/logAppStart.tsx");
     if (value === BigIntResult) {
       tmp18 = Integer;
       return Integer[1];
@@ -1899,27 +1899,27 @@ class NativeBigInt {
     }
   }
   isEven() {
-    tmp = this.value & require("module_1");
-    return tmp === require("module_0");
+    tmp = this.value & require("../discord_app/modules/debug/logAppStart.tsx");
+    return tmp === require("../discord_app/index.native.tsx");
   }
   isOdd() {
-    tmp = this.value & require("module_1");
-    return tmp === require("module_1");
+    tmp = this.value & require("../discord_app/modules/debug/logAppStart.tsx");
+    return tmp === require("../discord_app/modules/debug/logAppStart.tsx");
   }
   isUnit() {
-    return this.abs().value === require("module_1");
+    return this.abs().value === require("../discord_app/modules/debug/logAppStart.tsx");
   }
   isZero() {
-    return this.value === require("module_0");
+    return this.value === require("../discord_app/index.native.tsx");
   }
   next() {
-    sum = this.value + require("module_1");
+    sum = this.value + require("../discord_app/modules/debug/logAppStart.tsx");
     obj = Object.create(NativeBigInt.prototype);
     obj.value = sum;
     return obj;
   }
   prev() {
-    diff = this.value - require("module_1");
+    diff = this.value - require("../discord_app/modules/debug/logAppStart.tsx");
     obj = Object.create(NativeBigInt.prototype);
     obj.value = diff;
     return obj;
@@ -4479,7 +4479,7 @@ while (true) {
               multiplyResult1 = obj7.multiply(modInvResult);
               modResult1 = multiplyResult1.mod(obj2);
             }
-            divideResult = require("module_2");
+            divideResult = require("00002_set.js");
             squareResult = modInvResult.square();
             modInvResult = squareResult.mod(obj2);
             obj7 = modResult1;
@@ -4639,7 +4639,7 @@ while (true) {
           self = this;
           num = 2;
           num2 = 0;
-          if (0 === require("module_2")) {
+          if (0 === require("00002_set.js")) {
             isEvenResult = self.isEven();
           } else {
             modResult = self.mod(obj);
@@ -4657,30 +4657,30 @@ while (true) {
       tmp2 = !isUnitResult;
       if (!isUnitResult) {
         num = 2;
-        equalsResult = require("module_2");
+        equalsResult = require("00002_set.js");
         if (!equalsResult) {
           num2 = 3;
-          equalsResult = require("module_3");
+          equalsResult = require("../discord_app/modules/debug/Logger.tsx");
         }
         if (!equalsResult) {
           num3 = 5;
-          equalsResult = require("module_5");
+          equalsResult = require("00005_asyncGeneratorStep.js");
         }
         tmp4 = equalsResult;
         if (!tmp4) {
           isEvenResult = absResult.isEven();
           if (!isEvenResult) {
             num4 = 3;
-            isEvenResult = require("module_3");
+            isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
           }
           if (!isEvenResult) {
             num5 = 5;
-            isEvenResult = require("module_5");
+            isEvenResult = require("00005_asyncGeneratorStep.js");
           }
           tmp6 = !isEvenResult;
           if (!isEvenResult) {
             num6 = 49;
-            tmp7 = require("module_49") || undefined;
+            tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
             tmp6 = tmp7;
           }
           tmp4 = tmp6;
@@ -4702,7 +4702,7 @@ while (true) {
           tmp15 = globalThis;
           _Math2 = Math;
           num12 = 2;
-          logResult = require("module_2");
+          logResult = require("00002_set.js");
           result = logResult * bitLengthResult.toJSNumber();
           flag = true;
           result1 = result;
@@ -4730,30 +4730,30 @@ while (true) {
       tmp2 = !isUnitResult;
       if (!isUnitResult) {
         num = 2;
-        equalsResult = require("module_2");
+        equalsResult = require("00002_set.js");
         if (!equalsResult) {
           num2 = 3;
-          equalsResult = require("module_3");
+          equalsResult = require("../discord_app/modules/debug/Logger.tsx");
         }
         if (!equalsResult) {
           num3 = 5;
-          equalsResult = require("module_5");
+          equalsResult = require("00005_asyncGeneratorStep.js");
         }
         tmp4 = equalsResult;
         if (!tmp4) {
           isEvenResult = absResult.isEven();
           if (!isEvenResult) {
             num4 = 3;
-            isEvenResult = require("module_3");
+            isEvenResult = require("../discord_app/modules/debug/Logger.tsx");
           }
           if (!isEvenResult) {
             num5 = 5;
-            isEvenResult = require("module_5");
+            isEvenResult = require("00005_asyncGeneratorStep.js");
           }
           tmp6 = !isEvenResult;
           if (!isEvenResult) {
             num6 = 49;
-            tmp7 = require("module_49") || undefined;
+            tmp7 = require("00049_defineLazyObjectProperty.js") || undefined;
             tmp6 = tmp7;
           }
           tmp4 = tmp6;
@@ -4775,7 +4775,7 @@ while (true) {
         num10 = 1;
         for (let num11 = 0; num11 < num7; num11 = num11 + 1) {
           tmp9 = Integer;
-          arr = items.push(require("module_2"));
+          arr = items.push(require("00002_set.js"));
         }
         tmp11 = millerRabinTest;
         return millerRabinTest(absResult1, items);
@@ -4808,7 +4808,7 @@ while (true) {
         num = 0;
         num2 = -1;
         addResult = obj5;
-        if (-1 === require("module_0")) {
+        if (-1 === require("../discord_app/index.native.tsx")) {
           addResult = obj5.add(arg0);
         }
         negateResult = addResult;
@@ -5060,16 +5060,16 @@ while (true) {
       self = this;
       tmp = Integer;
       self2 = this;
-      if (this.compareTo(require("module_0")) < 0) {
+      if (this.compareTo(require("../discord_app/index.native.tsx")) < 0) {
         negateResult = self.negate();
         num = 1;
-        self2 = negateResult.subtract(require("module_1"));
+        self2 = negateResult.subtract(require("../discord_app/modules/debug/logAppStart.tsx"));
       }
-      if (0 === self2.compareTo(require("module_0"))) {
-        tmpResult = require("module_0");
+      if (0 === self2.compareTo(require("../discord_app/index.native.tsx"))) {
+        tmpResult = require("../discord_app/index.native.tsx");
       } else {
         num6 = 2;
-        tmpResult1 = require("module_2");
+        tmpResult1 = require("00002_set.js");
         if (tmpResult1.compareTo(self2) <= 0) {
           squareResult = tmpResult1.square(tmpResult1);
           if (squareResult.compareTo(self2) <= 0) {
@@ -5092,7 +5092,7 @@ while (true) {
           } else {
             obj2 = { p: null, e: 0 };
             num3 = 1;
-            obj2[0] = require("module_1");
+            obj2[0] = require("../discord_app/modules/debug/logAppStart.tsx");
             ({ p: p2, e: e2 } = obj2);
             multiplyResult1 = p2.multiply(tmpResult1);
             if (multiplyResult1.compareTo(self2) <= 0) {
@@ -5112,10 +5112,10 @@ while (true) {
         } else {
           obj5 = { p: null, e: 0 };
           num2 = 1;
-          obj5[0] = require("module_1");
+          obj5[0] = require("../discord_app/modules/debug/logAppStart.tsx");
           tmpResult2 = tmp(obj5.e);
           num7 = 1;
-          tmpResult = tmpResult2.add(require("module_1"));
+          tmpResult = tmpResult2.add(require("../discord_app/modules/debug/logAppStart.tsx"));
         }
       }
       return tmpResult;

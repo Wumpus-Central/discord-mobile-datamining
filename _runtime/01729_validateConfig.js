@@ -1,9 +1,6 @@
 // _runtime/01729_validateConfig.js
 import t from "01665_t.js";
 import { isValidLayoutAnimationProp } from "01694_isValidLayoutAnimationProp.js";
-import { isValidRubberBandConfig } from "01730_isValidRubberBandConfig.js";
-import { rubberBandDecay } from "01731_rubberBandDecay.js";
-import { rigidDecay } from "01732_rigidDecay.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -40,7 +37,7 @@ let closure_3 = { code: "function pnpm_decayTs3(){const{userConfig,isValidRubber
 let fn = function n(userConfig, callback) {
   const _require = userConfig;
   dependencyMap = callback;
-  let obj = _isValidLayoutAnimationProp;
+  let obj = isValidLayoutAnimationProp;
   const fn = function c() {
     let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
     if (obj) {
@@ -80,8 +77,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "chat_list_android",
-      reduceMotion: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN"
+      startTimestamp: "db.fs_info",
+      reduceMotion: 0
     };
     let num = obj.velocity;
     if (num == null) {
@@ -94,7 +91,7 @@ let fn = function n(userConfig, callback) {
     obj[8] = userConfig(table[1]).getReduceMotionForAnimation(obj.reduceMotion);
     return obj;
   };
-  obj = { userConfig, isValidRubberBandConfig: _isValidRubberBandConfig.isValidRubberBandConfig, rubberBandDecay: _rubberBandDecay.rubberBandDecay, rigidDecay: _rigidDecay.rigidDecay, validateConfig, callback, getReduceMotionForAnimation: _isValidLayoutAnimationProp.getReduceMotionForAnimation };
+  obj = { userConfig, isValidRubberBandConfig: require("01730_isValidRubberBandConfig.js").isValidRubberBandConfig, rubberBandDecay: require("01731_rubberBandDecay.js").rubberBandDecay, rigidDecay: require("01732_rigidDecay.js").rigidDecay, validateConfig, callback, getReduceMotionForAnimation: require("01694_isValidLayoutAnimationProp.js").getReduceMotionForAnimation };
   fn.__closure = obj;
   fn.__workletHash = 17099614658252;
   fn.__initData = closure_3;

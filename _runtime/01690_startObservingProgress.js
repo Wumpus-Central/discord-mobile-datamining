@@ -4,13 +4,12 @@ import addCompilerSafeGetAndSet from "01691_addCompilerSafeGetAndSet.js";
 import resolvePath from "01693_resolvePath.js";
 import isJest from "01657_isJest.js";
 import runWorkletOnJS from "01661_runWorkletOnJS.js";
-import { isWorkletFunction } from "01679_isWorkletFunction.js";
 
 isJest = isJest.isAndroid();
 function startObservingProgress(arg0, addListener) {
   closure_0 = arg0;
   const _require = addListener;
-  dependencyMap = arg2 === _isWorkletFunction.LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+  dependencyMap = arg2 === require("01679_isWorkletFunction.js").LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
   addListener.addListener(arg0 + 1000000000, () => {
     set._notifyAboutProgress(set, set2.value, closure_2);
   });

@@ -111,7 +111,7 @@ class m {
       num = 1;
       num2 = 32;
       num3 = 7;
-      bound = require("module_32");
+      bound = require("metro/00032__slicedToArray.js");
       _Uint8Array = Uint8Array;
       num4 = 3;
       tmp3 = new.target;
@@ -246,9 +246,9 @@ class m {
         }
       }
       if (arr2.slice) {
-        substr = require("module_0");
+        substr = require("../discord_app/index.native.tsx");
       } else {
-        substr = require("module_0");
+        substr = require("../discord_app/index.native.tsx");
       }
       return substr;
     }
@@ -367,7 +367,7 @@ if (typeof Buffer !== "function") {
         num = 1;
         num2 = 32;
         num3 = 7;
-        bound = require("module_32");
+        bound = require("metro/00032__slicedToArray.js");
         _Uint8Array = Uint8Array;
         num4 = 3;
         tmp3 = new.target;
@@ -502,9 +502,9 @@ if (typeof Buffer !== "function") {
           }
         }
         if (arr2.slice) {
-          substr = require("module_0");
+          substr = require("../discord_app/index.native.tsx");
         } else {
-          substr = require("module_0");
+          substr = require("../discord_app/index.native.tsx");
         }
         return substr;
       }

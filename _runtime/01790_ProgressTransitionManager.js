@@ -6,7 +6,6 @@ import closure_3 from "metro/00041__classCallCheck.js";
 import { Platform } from "00017_get_ActivityIndicator.js";
 import importDefaultResult from "metro/00042__createClass.js";
 import isJest from "01657_isJest.js";
-import { runWorkletOnJS } from "01661_runWorkletOnJS.js";
 
 const ProgressTransitionManager = global;
 require = arg1;
@@ -35,7 +34,7 @@ let obj = {
     fn.__closure = { viewTag, progressAnimation };
     fn.__workletHash = 1345064651573;
     fn.__initData = closure_4;
-    _runWorkletOnJS.runOnUIImmediately(fn)();
+    require("01661_runWorkletOnJS.js").runOnUIImmediately(fn)();
     const result = this.registerEventHandlers();
   }
 };

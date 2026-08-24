@@ -1,6 +1,5 @@
 // _runtime/00245_map.js
 import frozen from "00257_frozen.js";
-import { HeadlessJsTaskSupport } from "00259_HeadlessJsTaskSupport.js";
 
 require = arg1;
 const module = arg2;
@@ -176,7 +175,7 @@ arg5.registerCancellableHeadlessTask = function registerCancellableHeadlessTask(
 };
 arg5.startHeadlessTask = function startHeadlessTask(arg0, arg1, arg2) {
   const _require = arg0;
-  const _default = _HeadlessJsTaskSupport.default;
+  const _default = require("00259_HeadlessJsTaskSupport.js").default;
   const value = map.get(arg1);
   if (value) {
     const promise = value()(arg2);

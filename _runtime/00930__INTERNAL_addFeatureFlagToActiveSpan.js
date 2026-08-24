@@ -2,7 +2,6 @@
 import spanToJSON from "00819_spanToJSON.js";
 import getClient from "00848_getClient.js";
 import { getClient } from "00848_getClient.js";
-import { __SENTRY_DEBUG__ } from "metro/00823___SENTRY_DEBUG__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -59,7 +58,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
   if (arg2 === undefined) {
     num = 100;
   }
-  let obj = _getClient;
+  let obj = getClient;
   const currentScope = obj.getCurrentScope();
   const contexts = currentScope.getScopeData().contexts;
   if (!contexts.flags) {
@@ -95,7 +94,7 @@ arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, a
   const _require = arg1;
   if (typeof flag === "boolean") {
     if (arr.length > arg3) {
-      if (___SENTRY_DEBUG__.DEBUG_BUILD) {
+      if (require("metro/00823___SENTRY_DEBUG__.js").DEBUG_BUILD) {
         const debug = tmp5(824).debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);

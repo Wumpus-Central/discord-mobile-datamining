@@ -12,8 +12,8 @@ const items = [];
 let num = 0;
 do {
   let str = num + 256;
-  str = require("module_16");
-  let arr = items.push(require("module_1"));
+  str = require("../discord_app/utils/checkEnv.tsx");
+  let arr = items.push(require("../discord_app/modules/debug/logAppStart.tsx"));
   num = num + 1;
 } while (num < 256);
 arg5.default = function stringify(array) {

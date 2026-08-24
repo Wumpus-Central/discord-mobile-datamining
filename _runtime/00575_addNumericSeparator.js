@@ -981,7 +981,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                       if (typeof cause[custom] === "function") {
                         typeError1 = _require;
                         typeError1 = dependencyMap;
-                        if (_00576__) {
+                        if (00576__) {
                           obj = { depth: null };
                           obj[0] = num5 - num7;
                           return typeError1(576)(cause, obj);

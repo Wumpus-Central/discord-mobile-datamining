@@ -7,8 +7,8 @@ arg5.snapshots = weakMap;
 arg5.makeElementVisible = function makeElementVisible(_componentDOMRef, arg1) {
   const _require = _componentDOMRef;
   if (0 === arg1) {
-    __makeShareableClone._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
-    const obj = __makeShareableClone;
+    require("01664__makeShareableClone.js")._updatePropsJS({ visibility: "initial" }, _componentDOMRef);
+    const obj = _makeShareableClone;
   } else {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {

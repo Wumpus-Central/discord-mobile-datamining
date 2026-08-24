@@ -1,57 +1,25 @@
 // _runtime/04349_useHaptics.js
-import noop from "00019_noop.js";
+import setEnabledDefault from "04350_setEnabled.js";
 
-const useMemo = noop.useMemo;
+for (const key10016 in require("isRingerSilent")) {
+  let tmp2 = key10016;
+  arg5[key10016] = require("isRingerSilent")[key10016];
+  continue;
+}
 
-export const useHaptics = function useHaptics(enableVibrateFallback) {
-  closure_0 = enableVibrateFallback;
-  let prop;
-  if (enableVibrateFallback != null) {
-    prop = enableVibrateFallback.enableVibrateFallback;
-  }
-  let prop1;
-  if (enableVibrateFallback != null) {
-    prop1 = enableVibrateFallback.ignoreAndroidSystemSettings;
-  }
-  const items = [prop, prop1];
-  return useMemo(() => ({
-    trigger(arg0, arg1) {
-      let obj = closure_1_1(closure_1_2[1]);
-      obj = {};
-      const merged = Object.assign(closure_0);
-      const merged1 = Object.assign(arg1);
-      obj.trigger(arg0, obj);
-    },
-    triggerPattern(arg0, arg1) {
-      let obj = closure_1_1(closure_1_2[1]);
-      obj = {};
-      const merged = Object.assign(closure_0);
-      const merged1 = Object.assign(arg1);
-      obj.triggerPattern(arg0, obj);
-    },
-    stop() {
-      callback(4346).stop();
-    },
-    isSupported() {
-      return callback(4346).isSupported();
-    },
-    playHaptic(arg0, arg1, arg2) {
-      let obj = closure_1_0(closure_1_2[2]);
-      obj = {};
-      const merged = Object.assign(closure_0);
-      const merged1 = Object.assign(arg2);
-      return obj.playHaptic(arg0, arg1, obj);
-    },
-    impact(arg0, arg1, arg2) {
-      let obj = closure_1_1(closure_1_2[1]);
-      obj = {};
-      const merged = Object.assign(closure_0);
-      const merged1 = Object.assign(arg2);
-      obj.impact(arg0, arg1, obj);
-    },
-    setEnabled: closure_1_1(closure_1_2[1]).setEnabled,
-    isEnabled: closure_1_1(closure_1_2[1]).isEnabled,
-    getSystemHapticStatus: closure_1_1(closure_1_2[1]).getSystemHapticStatus,
-    playAHAP: closure_1_1(closure_1_2[1]).playAHAP
-  }), items);
-};
+export default setEnabledDefault;
+export const useHaptics = require("useHaptics").useHaptics;
+export const Patterns = require("Patterns").Patterns;
+export const pattern = require("set").pattern;
+export const PATTERN_CHARS = require("set").PATTERN_CHARS;
+export const playHaptic = require("_playHaptic").playHaptic;
+export const TouchableHaptic = require("TouchableHaptic").TouchableHaptic;
+export const trigger = setEnabledDefault.trigger;
+export const stop = setEnabledDefault.stop;
+export const isSupported = setEnabledDefault.isSupported;
+export const triggerPattern = setEnabledDefault.triggerPattern;
+export const getSystemHapticStatus = setEnabledDefault.getSystemHapticStatus;
+export const setEnabled = setEnabledDefault.setEnabled;
+export const isEnabled = setEnabledDefault.isEnabled;
+export const impact = setEnabledDefault.impact;
+export const playAHAP = setEnabledDefault.playAHAP;

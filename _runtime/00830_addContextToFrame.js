@@ -180,8 +180,8 @@ arg5.uuid4 = function uuid4() {
       randomUUID = tmp.randomUUID;
     }
     if (randomUUID) {
-      let obj = _safeDateNow;
-      return _safeDateNow.withRandomSafeContext(() => lib.randomUUID()).replace(/-/g, "");
+      let obj = safeDateNow;
+      return require("00831_safeDateNow.js").withRandomSafeContext(() => lib.randomUUID()).replace(/-/g, "");
     } else {
       let str3 = c2;
       if (!c2) {

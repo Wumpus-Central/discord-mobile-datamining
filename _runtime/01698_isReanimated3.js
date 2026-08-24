@@ -41,7 +41,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
       throw reanimatedError;
     }
   }
-  obj = _isJest;
+  obj = isJest;
   tmp = _require;
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;

@@ -1,5 +1,4 @@
 // _runtime/01145_tanstackRouterBrowserTracingIntegration.js
-import { feedbackAsyncIntegration } from "01024_feedbackAsyncIntegration.js";
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -16,7 +15,7 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
   let merged = Object.assign(obj);
   obj.instrumentNavigation = false;
   obj.instrumentPageLoad = false;
-  let result = _feedbackAsyncIntegration.browserTracingIntegration(obj);
+  let result = require("01024_feedbackAsyncIntegration.js").browserTracingIntegration(obj);
   dependencyMap = result;
   const instrumentPageLoad = obj.instrumentPageLoad;
   closure_2 = undefined === instrumentPageLoad || instrumentPageLoad;
@@ -24,9 +23,9 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
   closure_3 = undefined === instrumentNavigation || instrumentNavigation;
   obj = {};
   const merged1 = Object.assign(result);
-  obj.afterAllSetup = function afterAllSetup(f103592) {
-    obj1 = f103592;
-    _undefined.afterAllSetup(f103592);
+  obj.afterAllSetup = function afterAllSetup(f104458) {
+    obj1 = f104458;
+    _undefined.afterAllSetup(f104458);
     const _location = callback(_undefined[0]).WINDOW.location;
     if (closure_2) {
       if (_location) {
@@ -68,7 +67,7 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
         }
         const merged = Object.assign(tmp9);
         result[1] = obj;
-        result = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f103592, result);
+        result = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f104458, result);
         const tmp2Result = tmp2(tmp3[0]);
       }
     }

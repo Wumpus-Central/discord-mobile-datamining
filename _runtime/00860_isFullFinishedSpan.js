@@ -42,7 +42,7 @@ class SentrySpan {
     self._links = obj.links;
     self._attributes = {};
     obj = { [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "manual" };
-    obj[require("module_839").SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
+    obj[require("metro/00839__.js").SEMANTIC_ATTRIBUTE_SENTRY_OP] = obj.op;
     merged = Object.assign(obj.attributes);
     setAttributesResult = self.setAttributes(obj);
     self._name = obj.name;

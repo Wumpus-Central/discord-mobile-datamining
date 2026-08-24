@@ -32,9 +32,9 @@ for (const key10033 in require("KeyboardController")) {
   arg5[key10033] = require("KeyboardController")[key10033];
   continue;
 }
-for (const key10037 in require("module_1852")) {
+for (const key10037 in require("metro/01852__.js")) {
   let tmp8 = key10037;
-  arg5[key10037] = require("module_1852")[key10037];
+  arg5[key10037] = require("metro/01852__.js")[key10037];
   continue;
 }
 for (const key10041 in require("useAnimatedKeyboard")) {

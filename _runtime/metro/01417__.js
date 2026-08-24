@@ -59,10 +59,10 @@ if (tmp) {
         if (typeof obj === "object") {
           if (closure_3) {
             let tmp14 = null;
-            if (_00542__) {
+            if (00542__) {
               _require = obj;
               dependencyMap = false;
-              _forEach(closure_8, (arg0, arg1) => {
+              forEach(closure_8, (arg0, arg1) => {
                 if (!closure_1) {
                   try {
                     if ("$" + arg0(closure_0) === arg1) {
@@ -83,7 +83,7 @@ if (tmp) {
               if (tmp7) {
                 _require = obj;
                 dependencyMap = false;
-                _forEach(closure_8, (arg0, arg1) => {
+                forEach(closure_8, (arg0, arg1) => {
                   if (!closure_1) {
                     try {
                       arg0(closure_0);

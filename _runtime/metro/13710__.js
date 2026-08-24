@@ -1,3 +1,21 @@
 // _runtime/metro/13710__.js
-
-export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });
+import { shouldPolyfill } from "../13711_shouldPolyfill.js";
+import { supportedValuesOf } from "../13712_supportedValuesOf.js";
+const require = arg1;
+const dependencyMap = arg6;
+arg5.shouldPolyfill = undefined;
+arg5.supportedValuesOf = undefined;
+let obj = {
+  enumerable: true,
+  get() {
+    return shouldPolyfill /* shouldPolyfill */.shouldPolyfill;
+  }
+};
+Object.defineProperty(arg5, "shouldPolyfill", obj);
+obj = {
+  enumerable: true,
+  get() {
+    return supportedValuesOf /* supportedValuesOf */.supportedValuesOf;
+  }
+};
+Object.defineProperty(arg5, "supportedValuesOf", obj);

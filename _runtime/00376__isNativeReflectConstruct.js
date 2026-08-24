@@ -104,7 +104,7 @@ class SpringAnimation {
           tmp10 = closure_1;
           tmp11 = closure_3;
           tmp13 = undefined === global.tension;
-          tmp12 = require("module_38");
+          tmp12 = require("metro/00038__.js");
           if (tmp13) {
             tmp13 = undefined === global.friction;
           }
@@ -138,17 +138,17 @@ class SpringAnimation {
         tmp21 = closure_1;
         num14 = 0;
         str2 = "Stiffness value must be greater than 0";
-        tmp22 = require("module_38")(tmp3Result._stiffness > 0, "Stiffness value must be greater than 0");
+        tmp22 = require("metro/00038__.js")(tmp3Result._stiffness > 0, "Stiffness value must be greater than 0");
         str3 = "Damping value must be greater than 0";
-        tmp23 = require("module_38")(tmp3Result._damping > 0, "Damping value must be greater than 0");
+        tmp23 = require("metro/00038__.js")(tmp3Result._damping > 0, "Damping value must be greater than 0");
         str4 = "Mass value must be greater than 0";
-        tmp24 = require("module_38")(tmp3Result._mass > 0, "Mass value must be greater than 0");
+        tmp24 = require("metro/00038__.js")(tmp3Result._mass > 0, "Mass value must be greater than 0");
         return tmp3Result;
       }
     }
     tmp17 = closure_3;
     tmp19 = undefined === global.bounciness;
-    tmp18 = require("module_38");
+    tmp18 = require("metro/00038__.js");
     if (tmp19) {
       tmp19 = undefined === global.speed;
     }
