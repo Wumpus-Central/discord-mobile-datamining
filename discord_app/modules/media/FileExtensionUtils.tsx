@@ -1,6 +1,6 @@
-// === Module 6962: getExtensionFromContentType ===
+// === Module 5460: getExtensionFromContentType ===
 
-// Module 6962 (getExtensionFromContentType)
+// Module 5460 (getExtensionFromContentType)
 import set from "set" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 

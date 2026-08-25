@@ -1,21 +1,21 @@
-// === Module 4507: _migrateDefaultStorage ===
+// === Module 4437: _migrateDefaultStorage ===
 
-// Module 4507 (_migrateDefaultStorage)
+// Module 4437 (_migrateDefaultStorage)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4501 */;
-import isClipsEnabled from "isClipsEnabled" /* 4531 */;
-import isStreamKey from "isStreamKey" /* 4536 */;
-import apexExperimentDefault from "apexExperiment" /* 4539 */;
-import apexExperiment from "apexExperiment" /* 4540 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4431 */;
+import isClipsEnabled from "isClipsEnabled" /* 4441 */;
+import isStreamKey from "isStreamKey" /* 4446 */;
+import apexExperimentDefault from "apexExperiment" /* 4449 */;
+import apexExperiment from "apexExperiment" /* 4450 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4508 */;
+import closure_4 from "initialize" /* 4403 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
-import result from "result" /* 4528 */;
+import result from "result" /* 4438 */;
 import { VoiceFlags } from "ME" /* 676 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4529 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4439 */;
 import set from "set" /* 2 */;
 
 require = arg1;
@@ -33,7 +33,7 @@ function _migrateDefaultStorage() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(4007).app;
+          const app = callback2(4008).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };
@@ -95,7 +95,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4530);
+            obj = callback(4440);
             callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }
@@ -531,6 +531,16 @@ let items = [
     obj.clipsQuality = obj;
     obj.clipsSettings = obj;
     return obj;
+  },
+  (clipsSettings) => {
+    obj = {};
+    const merged = Object.assign(clipsSettings);
+    obj = {};
+    const merged1 = Object.assign(clipsSettings.clipsSettings);
+    obj.clipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
+    obj.decoupledClipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
+    obj.clipsSettings = obj;
+    return obj;
   }
 ];
 ClipsStoreClass.migrations = items;
@@ -799,17 +809,10 @@ obj = {
     classification = classification.classification;
     closure_31.hardwareClassificationVersion = closure_6;
     closure_31.hardwareClassification = classification;
-    if (tmp3) {
+    if (tmp2) {
       closure_31.clipsSettings.clipsEnabled = true;
     }
     closure_31.hardwareClassificationForDecoupled = classification;
-    let clipsEnabled = closure_31.hardwareClassificationForDecoupled === tmp2.MEETS_AUTO_ENABLE && tmp5 !== tmp2.MEETS_AUTO_ENABLE;
-    if (clipsEnabled) {
-      clipsEnabled = closure_31.clipsSettings.clipsEnabled;
-    }
-    if (clipsEnabled) {
-      closure_31.clipsSettings.decoupledClipsEnabled = true;
-    }
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
     c26 = null;

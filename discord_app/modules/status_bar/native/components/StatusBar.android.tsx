@@ -1,9 +1,9 @@
-// === Module 8071: componentDidMount ===
+// === Module 7893: componentDidMount ===
 
-// Module 8071 (componentDidMount)
+// Module 7893 (componentDidMount)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import pushStackEntryDefault from "pushStackEntry" /* 8072 */;
+import pushStackEntryDefault from "pushStackEntry" /* 7894 */;
 
 const StatusBar = get_ActivityIndicator.StatusBar;
 class StatusBarAndroid extends StatusBar {

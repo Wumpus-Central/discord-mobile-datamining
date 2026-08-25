@@ -1,11 +1,11 @@
-// === Module 17116: showClipsToast ===
+// === Module 17148: showClipsToast ===
 
-// Module 17116 (showClipsToast)
+// Module 17148 (showClipsToast)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import dispatcherDefault from "dispatcher" /* 4097 */;
-import result2 from "result" /* 4528 */;
-import handleRTCConnectionStateDefault from "handleRTCConnectionState" /* 17117 */;
+import dispatcherDefault from "dispatcher" /* 4098 */;
+import result2 from "result" /* 4438 */;
+import handleRTCConnectionStateDefault from "handleRTCConnectionState" /* 17149 */;
 
 const CLIPS_TOAST_DURATION = result2.CLIPS_TOAST_DURATION;
 handleRTCConnectionStateDefault;
@@ -33,6 +33,9 @@ prototype["fireClipsInitEvent"] = function fireClipsInitEvent(arg0) {
 
 };
 prototype["handleStreamEnded"] = function handleStreamEnded(arg0) {
+
+};
+prototype["maybeStartNtpClock"] = function maybeStartNtpClock() {
 
 };
 const clipsManager = new ClipsManager();

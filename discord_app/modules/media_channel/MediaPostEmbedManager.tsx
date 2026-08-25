@@ -1,13 +1,13 @@
-// === Module 17115: resolveMediaPostEmbeds ===
+// === Module 17147: resolveMediaPostEmbeds ===
 
-// Module 17115 (resolveMediaPostEmbeds)
-import initializeDefault from "initialize" /* 5043 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16731 */;
-import closure_3 from "isSubscriptionGated" /* 1982 */;
+// Module 17147 (resolveMediaPostEmbeds)
+import initializeDefault from "initialize" /* 5367 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16763 */;
+import closure_3 from "isSubscriptionGated" /* 1983 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "getMediaPostEmbed" /* 10678 */;
-import { FetchState } from "getMediaPostEmbed" /* 10678 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_6 from "getMediaPostEmbed" /* 10479 */;
+import { FetchState } from "getMediaPostEmbed" /* 10479 */;
 import { MessageFlags } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

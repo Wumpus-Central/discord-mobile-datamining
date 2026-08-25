@@ -1,11 +1,11 @@
-// === Module 8704: isVoicePanelEnabled ===
+// === Module 10856: isVoicePanelEnabled ===
 
-// Module 8704 (isVoicePanelEnabled)
+// Module 10856 (isVoicePanelEnabled)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 8702 */;
+import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 4617 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4544 */;
-import closure_4 from "withEqualityFn" /* 8701 */;
+import closure_3 from "createRTCConnection" /* 4454 */;
+import closure_4 from "withEqualityFn" /* 4616 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");

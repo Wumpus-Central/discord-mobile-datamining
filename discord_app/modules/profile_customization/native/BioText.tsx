@@ -1,13 +1,13 @@
-// === Module 9586: LinkButton ===
+// === Module 9681: LinkButton ===
 
-// Module 9586 (LinkButton)
-import Text from "Text" /* 4739 */;
+// Module 9681 (LinkButton)
+import Text from "Text" /* 4376 */;
 import closure_3 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1979 */;
+import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1980 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function LinkButton(arg0) {
@@ -15,7 +15,7 @@ function LinkButton(arg0) {
   const tmp = callback3();
   obj = {
     onPress() {
-      let obj = callback(4093);
+      let obj = callback(4094);
       obj.openURL(closure_6);
       obj = { cta_type: "profile_bio", target: closure_6 };
       callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);

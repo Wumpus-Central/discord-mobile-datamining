@@ -1,6 +1,6 @@
-// === Module 10894: countContentTypes ===
+// === Module 11213: countContentTypes ===
 
-// Module 10894 (countContentTypes)
+// Module 11213 (countContentTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/countContentTypes.tsx");

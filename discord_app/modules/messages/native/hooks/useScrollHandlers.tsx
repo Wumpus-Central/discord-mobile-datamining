@@ -1,9 +1,9 @@
-// === Module 10773: useScrollHandlers ===
+// === Module 11102: useScrollHandlers ===
 
-// Module 10773 (useScrollHandlers)
+// Module 11102 (useScrollHandlers)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "noop" /* 19 */;
-import updateChatInputContainerHeight from "updateChatInputContainerHeight" /* 8719 */;
+import updateChatInputContainerHeight from "updateChatInputContainerHeight" /* 8758 */;
 
 const require = arg1;
 ({ updateIsAtBottom: c4, updateShouldShowJumpToPresentButton: c5 } = updateChatInputContainerHeight);

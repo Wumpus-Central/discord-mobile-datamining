@@ -1,6 +1,6 @@
-// === Module 13880: NotifTypes ===
+// === Module 13915: NotifTypes ===
 
-// Module 13880 (NotifTypes)
+// Module 13915 (NotifTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/NotifTypes.tsx");

@@ -1,12 +1,12 @@
-// === Module 8409: handleFormOpen ===
+// === Module 8417: handleFormOpen ===
 
-// Module 8409 (handleFormOpen)
+// Module 8417 (handleFormOpen)
 import initializeDefault from "initialize" /* 589 */;
 import INVITE from "INVITE" /* 677 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import date from "date" /* 1429 */;
-import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8410 */;
-import useBioMaxLength from "useBioMaxLength" /* 8411 */;
+import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8418 */;
+import useBioMaxLength from "useBioMaxLength" /* 8419 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -226,6 +226,11 @@ obj = {
     const merged = Object.assign(obj);
     obj.tryItOutDisplayNameStyles = displayNameStyles.displayNameStyles;
   },
+  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE: function handleSetTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
+    obj = {};
+    const merged = Object.assign(obj);
+    obj.tryItOutCustomTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
+  },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(avatarDecoration) {
     let tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
     obj = {};
@@ -252,6 +257,7 @@ obj = {
       obj.pendingGlobalName = undefined;
       obj.pendingNickname = undefined;
       obj.pendingDisplayNameStyles = undefined;
+      obj.pendingCustomTypingIndicatorStyle = undefined;
       obj.pendingAvatar = undefined;
       obj.pendingAvatarDecoration = undefined;
       obj.pendingNameplate = undefined;

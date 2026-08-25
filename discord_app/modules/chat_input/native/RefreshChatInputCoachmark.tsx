@@ -1,7 +1,7 @@
-// === Module 11210: RefreshChatInputCoachmark ===
+// === Module 11557: RefreshChatInputCoachmark ===
 
-// Module 11210 (RefreshChatInputCoachmark)
-import useCoachmark from "useCoachmark" /* 9351 */;
+// Module 11557 (RefreshChatInputCoachmark)
+import useCoachmark from "useCoachmark" /* 8800 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
@@ -17,7 +17,7 @@ export default function RefreshChatInputCoachmark(buttonRef) {
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
   importDefault = undefined;
-  _require(7404);
+  _require(6131);
   if (tmp2) {
     if (!disabled.disabled) {
       let items = [tmp3(1377).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];

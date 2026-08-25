@@ -1,8 +1,8 @@
-// === Module 12640: SingleVideoCall ===
+// === Module 10996: SingleVideoCall ===
 
-// Module 12640 (SingleVideoCall)
+// Module 10996 (SingleVideoCall)
 import closure_3 from "noop" /* 19 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8706 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9895 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

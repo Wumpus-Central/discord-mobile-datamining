@@ -1,6 +1,6 @@
-// === Module 4312: validateSavedTheme ===
+// === Module 4313: validateSavedTheme ===
 
-// Module 4312 (validateSavedTheme)
+// Module 4313 (validateSavedTheme)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

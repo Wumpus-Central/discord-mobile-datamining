@@ -1,18 +1,19 @@
-// === Module 16683: _initialize ===
+// === Module 16715: _initialize ===
 
-// Module 16683 (_initialize)
-import initializeDefault from "initialize" /* 5043 */;
-import experimentDefault from "experiment" /* 9921 */;
+// Module 16715 (_initialize)
+import experimentDefault from "experiment" /* 4608 */;
+import initializeDefault from "initialize" /* 5367 */;
+import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 16716 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4292 */;
+import closure_4 from "getHash" /* 4293 */;
 import closure_5 from "initialize" /* 1212 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_9 from "createRTCConnection" /* 4544 */;
-import closure_10 from "resolveCreatingNotes" /* 9903 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_9 from "createRTCConnection" /* 4454 */;
+import closure_10 from "resolveCreatingNotes" /* 4579 */;
 
-let require = arg1;
+require = arg1;
 initializeDefault;
 class GuildRoomSpatialAudioManager extends tmp2 {
   constructor() {
@@ -45,9 +46,12 @@ class GuildRoomSpatialAudioManager extends tmp2 {
           }
     };
     applyArgumentsResult.reapplyForExperimentUpdate = function reapplyForExperimentUpdate() {
-      const audioMixerSettings = closure_1_8.getAudioMixerSettings();
-      const result = closure_1_1(closure_1_2[9]).setAudioMixerSettings(audioMixerSettings);
-      applyArgumentsResult.apply();
+      if (applyArgumentsResult(closure_1_2[9]).GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
+        const audioMixerSettings = closure_1_8.getAudioMixerSettings();
+        const result = closure_1_1(closure_1_2[10]).setAudioMixerSettings(audioMixerSettings);
+        applyArgumentsResult.apply();
+        const obj = closure_1_1(closure_1_2[10]);
+      }
     };
     return applyArgumentsResult;
   }
@@ -61,15 +65,19 @@ prototype["_terminate"] = function _terminate() {
 
 };
 prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
-  const guildId = store.getGuildId();
-  let interactionsEnabled = null != guildId;
-  if (interactionsEnabled) {
-    let obj = experimentDefault;
-    obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
-    obj[0] = guildId;
-    interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+  if (GUILD_ROOM_SPATIAL_AUDIO_ENABLED.GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
+    const guildId = store.getGuildId();
+    let interactionsEnabled = null != guildId;
+    if (interactionsEnabled) {
+      let obj = experimentDefault;
+      obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
+      obj[0] = guildId;
+      interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+    }
+    return interactionsEnabled;
+  } else {
+    return false;
   }
-  return interactionsEnabled;
 };
 prototype["apply"] = function apply() {
   let obj = audioMixerSettings;
@@ -88,7 +96,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require(16684).computeLivingRoomWorldPoints(obj);
+          _require = _require(16716).computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             const entries = Object.entries(callback);
@@ -98,12 +106,12 @@ prototype["apply"] = function apply() {
               let tmp8 = callback;
               let tmp9 = closure_1_2;
               [tmp6, tmp7] = tmp5;
-              let obj = callback(closure_1_2[11]);
+              let obj = callback(closure_1_2[9]);
               let setUserPositionResult = setUserPosition.setUserPosition(tmp6, obj.livingRoomWorldPointToMediaEnginePoint(tmp7));
               continue;
             }
           });
-          const obj3 = _require(16684);
+          const obj3 = _require(16716);
         }
       }
     }

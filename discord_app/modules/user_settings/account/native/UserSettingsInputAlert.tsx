@@ -1,14 +1,14 @@
-// === Module 14222: renderContent ===
+// === Module 14252: renderContent ===
 
-// Module 14222 (renderContent)
-import componentDidMountDefault from "componentDidMount" /* 4768 */;
-import _modDef6582 from "module_6582" /* 6582 */;
+// Module 14252 (renderContent)
+import componentDidMountDefault from "componentDidMount" /* 4833 */;
+import _modDef5930 from "module_5930" /* 5930 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "accessibilityLabel" };
+let closure_5 = { input: "", error: "accessibilityRole" };
 const PureComponent = importAllResult.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
@@ -76,7 +76,7 @@ prototype["renderContent"] = function renderContent() {
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: null };
       obj[1] = helpText;
-      tmp7 = callback(tmp5(4739).Text, obj);
+      tmp7 = callback(tmp5(4376).Text, obj);
     }
     const items = [tmp7, ];
     obj = { label: null, placeholder: null, secureTextEntry: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
@@ -94,9 +94,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(8110).TextInput, obj);
+    items[1] = callback(self(7935).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4738).Stack, obj);
+    return closure_4(self(4813).Stack, obj);
   }
   error = self.state.error;
 };
@@ -108,7 +108,7 @@ prototype["render"] = function render() {
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(_modDef6582, obj);
+    tmpResult = callback(_modDef5930, obj);
   }
   return tmpResult;
 };

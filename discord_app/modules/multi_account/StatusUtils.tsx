@@ -1,6 +1,6 @@
-// === Module 10065: getStatusExpiryParts ===
+// === Module 9921: getStatusExpiryParts ===
 
-// Module 10065 (getStatusExpiryParts)
+// Module 9921 (getStatusExpiryParts)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

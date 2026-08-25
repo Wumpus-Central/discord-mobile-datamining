@@ -1,9 +1,9 @@
-// === Module 8267: createGuildDiscoveryDisqualifiedSystemMessage ===
+// === Module 8268: createGuildDiscoveryDisqualifiedSystemMessage ===
 
-// Module 8267 (createGuildDiscoveryDisqualifiedSystemMessage)
+// Module 8268 (createGuildDiscoveryDisqualifiedSystemMessage)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8228 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8224 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
 

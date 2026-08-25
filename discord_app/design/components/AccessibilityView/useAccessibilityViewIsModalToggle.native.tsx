@@ -1,6 +1,6 @@
-// === Module 4724: useAccessibilityViewIsModalToggle ===
+// === Module 4800: useAccessibilityViewIsModalToggle ===
 
-// Module 4724 (useAccessibilityViewIsModalToggle)
+// Module 4800 (useAccessibilityViewIsModalToggle)
 import closure_2 from "noop" /* 19 */;
 
 let result = require("set").fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");

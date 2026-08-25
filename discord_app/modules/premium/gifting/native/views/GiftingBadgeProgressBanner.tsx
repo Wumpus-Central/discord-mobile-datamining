@@ -1,16 +1,16 @@
-// === Module 10349: GiftingBadgeProgressBanner ===
+// === Module 10200: GiftingBadgeProgressBanner ===
 
-// Module 10349 (GiftingBadgeProgressBanner)
+// Module 10200 (GiftingBadgeProgressBanner)
 import noopAll from "noop" /* 19 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import ThemesDefault from "Themes" /* 712 */;
-import messagesProxyDefault from "messagesProxy" /* 2432 */;
-import Text from "Text" /* 4739 */;
-import contextDefault from "context" /* 7177 */;
-import trackImpressionDefault from "trackImpression" /* 9214 */;
+import messagesProxyDefault from "messagesProxy" /* 2433 */;
+import Text from "Text" /* 4376 */;
+import contextDefault from "context" /* 5834 */;
+import trackImpressionDefault from "trackImpression" /* 9497 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;
@@ -45,7 +45,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   if (tmp10Result) {
     obj1 = { icon: null, size: 24 };
     obj1[0] = nextTierIcon;
-    tmp10Result = tmp10(tmp2(10341), obj1);
+    tmp10Result = tmp10(tmp2(10192), obj1);
   }
   obj[1] = tmp10Result;
   const items2 = [closure_4(View, obj), ];

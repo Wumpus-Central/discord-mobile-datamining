@@ -1,15 +1,15 @@
-// === Module 12700: _initialize ===
+// === Module 13235: _initialize ===
 
-// Module 12700 (_initialize)
+// Module 13235 (_initialize)
 import Storage3 from "Storage" /* 595 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4234 */;
-import initializeDefault from "initialize" /* 5043 */;
-import closure_3 from "trackCommunicationDisabled" /* 1991 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4235 */;
+import initializeDefault from "initialize" /* 5367 */;
+import closure_3 from "trackCommunicationDisabled" /* 1992 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleConnectionOpen" /* 4201 */;
+import closure_5 from "handleConnectionOpen" /* 4202 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4012 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4013 */;
 
 require = arg1;
 let c9 = "2020_02_nuf_channels";
@@ -95,8 +95,8 @@ class NUFChannelsManager extends tmp2 {
       const value = Storage.get(closure_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4223).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4223);
+        isNewUserResult = applyArgumentsResult(4224).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4224);
       }
       return isNewUserResult;
     };
@@ -119,11 +119,11 @@ prototype["_initialize"] = function _initialize() {
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
-    let tmpResult = tmp(4223);
+    let tmpResult = tmp(4224);
     isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
   }
   if (isNewUserResult) {
-    tmpResult = tmp(4234);
+    tmpResult = tmp(4235);
     const rootNavigationRef = tmpResult.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const self = this;

@@ -1,6 +1,6 @@
-// === Module 11434: restartState ===
+// === Module 11790: restartState ===
 
-// Module 11434 (restartState)
+// Module 11790 (restartState)
 import _modDef38 from "module_38" /* 38 */;
 import closure_2 from "noop" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 11796: metadata ===
+// === Module 12136: metadata ===
 
-// Module 11796 (metadata)
+// Module 12136 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/game_servers/game_server_tile.png.js");

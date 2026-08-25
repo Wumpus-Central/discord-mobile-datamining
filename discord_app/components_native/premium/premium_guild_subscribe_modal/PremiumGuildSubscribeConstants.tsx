@@ -1,6 +1,6 @@
-// === Module 6749: PremiumGuildSubscribeModalScenes ===
+// === Module 5260: PremiumGuildSubscribeModalScenes ===
 
-// Module 6749 (PremiumGuildSubscribeModalScenes)
+// Module 5260 (PremiumGuildSubscribeModalScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx");

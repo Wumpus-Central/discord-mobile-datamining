@@ -1,29 +1,29 @@
-// === Module 9686: _handleToggleVideo ===
+// === Module 9296: _handleToggleVideo ===
 
-// Module 9686 (_handleToggleVideo)
+// Module 9296 (_handleToggleVideo)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1892 */;
-import _modDef4662 from "module_4662" /* 4662 */;
-import openChannelCallModal from "openChannelCallModal" /* 8700 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9693 */;
-import mapped from "mapped" /* 9707 */;
-import registerAssetDefault from "registerAsset" /* 9708 */;
-import registerAssetDefault2 from "registerAsset" /* 9709 */;
-import registerAssetDefault3 from "registerAsset" /* 9710 */;
-import useIsVideoModeDefault from "useIsVideoMode" /* 9925 */;
+import openChannelCallModal from "openChannelCallModal" /* 4615 */;
+import _modDef4745 from "module_4745" /* 4745 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9303 */;
+import mapped from "mapped" /* 9317 */;
+import registerAssetDefault from "registerAsset" /* 9318 */;
+import registerAssetDefault2 from "registerAsset" /* 9319 */;
+import registerAssetDefault3 from "registerAsset" /* 9320 */;
+import useIsVideoModeDefault from "useIsVideoMode" /* 10931 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "reset" /* 4658 */;
+import closure_8 from "reset" /* 4402 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_11 from "handleConnectionOpen" /* 1980 */;
-import closure_12 from "updateVoiceState" /* 4547 */;
-import closure_13 from "handleAudioRouteChanged" /* 9687 */;
-import closure_14 from "nativeEventEmitter" /* 9690 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4844 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_11 from "handleConnectionOpen" /* 1981 */;
+import closure_12 from "updateVoiceState" /* 4399 */;
+import closure_13 from "handleAudioRouteChanged" /* 9297 */;
+import closure_14 from "nativeEventEmitter" /* 9300 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4618 */;
 import importDefaultResult from "apply" /* 12 */;
 import set from "set" /* 500 */;
 
@@ -47,7 +47,7 @@ function _handleToggleVideo() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -180,7 +180,7 @@ export const handleToggleSelfMute = function handleToggleSelfMute() {
   trackDeviceChangedDefault.toggleSelfMute();
 };
 export const showSuppressedAlert = function showSuppressedAlert() {
-  obj = _modDef4662;
+  obj = _modDef4745;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.FJSZVM);
@@ -189,7 +189,7 @@ export const showSuppressedAlert = function showSuppressedAlert() {
   obj.show(obj);
 };
 export const showServerMuteAlert = function showServerMuteAlert() {
-  obj = _modDef4662;
+  obj = _modDef4745;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["+JQCa/"]);
@@ -198,7 +198,7 @@ export const showServerMuteAlert = function showServerMuteAlert() {
   obj.show(obj);
 };
 export const showServerDeafenAlert = function showServerDeafenAlert() {
-  obj = _modDef4662;
+  obj = _modDef4745;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.QZ7WSS);
@@ -207,7 +207,7 @@ export const showServerDeafenAlert = function showServerDeafenAlert() {
   obj.show(obj);
 };
 export const showCameraDisabledAlert = function showCameraDisabledAlert() {
-  obj = _modDef4662;
+  obj = _modDef4745;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.OYzPcW);
@@ -216,7 +216,7 @@ export const showCameraDisabledAlert = function showCameraDisabledAlert() {
   obj.show(obj);
 };
 export const showScreenshareDisabledAlert = function showScreenshareDisabledAlert() {
-  obj = _modDef4662;
+  obj = _modDef4745;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["/x4knx"]);
@@ -238,10 +238,10 @@ export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshar
   obj[0] = intl2.string(getSystemLocale.t.oblMYa);
   const intl3 = tmp(1236).intl;
   obj[1] = "" + intl3.string(getSystemLocale.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
-  _modDef4662.show(obj);
+  _modDef4745.show(obj);
 };
 export const showTabletRequirementAlert = function showTabletRequirementAlert() {
-  obj = _modDef4662;
+  obj = _modDef4745;
   obj = { title: null, body: null, hideActionSheet: false };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["1N0dxa"]);
@@ -296,10 +296,10 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   obj = isEnabled(589);
   const items = [closure_9, closure_11, closure_8, closure_12, closure_10, closure_13];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(9925).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
+    isVideoMode = isEnabled(10931).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9688).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9688).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9298).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9298).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -332,7 +332,7 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
     }
     dependencyMap(isEnabled);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9709 : 9710) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9319 : 9320) };
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
@@ -341,8 +341,8 @@ export const useImmediateMaskedSpeakerStates = () => {
   const stateFromStores = obj.useStateFromStores(items, () => currentRouteType.getCurrentRouteType());
   const tmp4 = useIsVideoModeDefault();
   _require = tmp4;
-  let tmp5 = stateFromStores === _require(9688).RouteTypes.SPEAKER;
-  const tmp6 = stateFromStores === _require(9688).RouteTypes.BLUETOOTH;
+  let tmp5 = stateFromStores === _require(9298).RouteTypes.SPEAKER;
+  const tmp6 = stateFromStores === _require(9298).RouteTypes.BLUETOOTH;
   if (!tmp5) {
     tmp5 = tmp6;
   }
@@ -367,6 +367,6 @@ export const useImmediateMaskedSpeakerStates = () => {
   const effect = React.useEffect(() => {
     callback(closure_1);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9709 : 9710) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9319 : 9320) };
   return obj;
 };

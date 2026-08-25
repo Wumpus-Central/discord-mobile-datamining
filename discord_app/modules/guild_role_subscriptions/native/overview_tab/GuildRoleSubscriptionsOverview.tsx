@@ -1,15 +1,15 @@
-// === Module 15858: serverNameHook ===
+// === Module 15890: serverNameHook ===
 
-// Module 15858 (serverNameHook)
+// Module 15890 (serverNameHook)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import notSupportedDefault from "notSupported" /* 7974 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14627 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 15859 */;
-import SeparatorDefault from "Separator" /* 15860 */;
+import Text from "Text" /* 4376 */;
+import notSupportedDefault from "notSupported" /* 7796 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14657 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 15891 */;
+import SeparatorDefault from "Separator" /* 15892 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4499 */;
-import closure_5 from "initialize" /* 4205 */;
+import closure_4 from "_handleConnectionOpen" /* 5102 */;
+import closure_5 from "initialize" /* 4206 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 

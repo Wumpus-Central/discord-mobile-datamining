@@ -1,28 +1,28 @@
-// === Module 14327: getCollectibleTypeName ===
+// === Module 14357: getCollectibleTypeName ===
 
-// Module 14327 (getCollectibleTypeName)
+// Module 14357 (getCollectibleTypeName)
 import set from "set" /* 2 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import messagesProxyDefault from "messagesProxy" /* 2336 */;
-import fromServer from "fromServer" /* 5311 */;
-import fromServer2 from "fromServer" /* 5312 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+import messagesProxyDefault from "messagesProxy" /* 2337 */;
+import fromServer from "fromServer" /* 7153 */;
+import fromServer2 from "fromServer" /* 7154 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1236).intl;
     return intl5.string(messagesProxyDefault.obi47v);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = tmp(1236).intl;
     return intl4.string(messagesProxyDefault.RX8BMR);
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (tmp(1950).CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = tmp(1236).intl;
     return intl3.string(messagesProxyDefault.nNGEHk);
-  } else if (tmp(1949).CollectiblesItemType.BUNDLE === type) {
+  } else if (tmp(1950).CollectiblesItemType.BUNDLE === type) {
     const intl2 = tmp(1236).intl;
     return intl2.string(messagesProxyDefault.VS1fKo);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1236).intl;
     return intl.string(messagesProxyDefault.JiIY1l);
   } else {

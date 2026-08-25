@@ -1,10 +1,10 @@
-// === Module 6719: UnknownGameIcon ===
+// === Module 8097: UnknownGameIcon ===
 
-// Module 6719 (UnknownGameIcon)
+// Module 8097 (UnknownGameIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6720 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8098 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

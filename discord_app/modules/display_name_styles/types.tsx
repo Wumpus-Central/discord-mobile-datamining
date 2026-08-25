@@ -1,6 +1,6 @@
-// === Module 9490: DisplayNameStyleColorPreset ===
+// === Module 9618: DisplayNameStyleColorPreset ===
 
-// Module 9490 (DisplayNameStyleColorPreset)
+// Module 9618 (DisplayNameStyleColorPreset)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/display_name_styles/types.tsx");

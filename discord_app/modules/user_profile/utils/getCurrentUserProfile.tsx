@@ -1,8 +1,8 @@
-// === Module 10437: getCurrentUserProfile ===
+// === Module 10288: getCurrentUserProfile ===
 
-// Module 10437 (getCurrentUserProfile)
+// Module 10288 (getCurrentUserProfile)
 import closure_0 from "mergeGuildAvatar" /* 1922 */;
-import closure_1 from "createUserWidgetFromServer" /* 5370 */;
+import closure_1 from "createUserWidgetFromServer" /* 7227 */;
 
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");
 

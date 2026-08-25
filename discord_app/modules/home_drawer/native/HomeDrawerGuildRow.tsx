@@ -1,22 +1,22 @@
-// === Module 15645: GuildRowWrapper ===
+// === Module 15677: GuildRowWrapper ===
 
-// Module 15645 (GuildRowWrapper)
+// Module 15677 (GuildRowWrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "storeThread" /* 4026 */;
+import closure_5 from "storeThread" /* 4027 */;
 import { isThread } from "createChannelRecord" /* 1395 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "comparator" /* 1981 */;
-import closure_9 from "updateGuildUnreadSentinel" /* 5388 */;
+import closure_8 from "comparator" /* 1982 */;
+import closure_9 from "updateGuildUnreadSentinel" /* 7242 */;
 import closure_10 from "createGuildRecordFromRust" /* 1910 */;
-import closure_11 from "generateOldThreadCutoff" /* 4777 */;
-import closure_12 from "markAllUserIdListsStale" /* 4033 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_11 from "generateOldThreadCutoff" /* 4395 */;
+import closure_12 from "markAllUserIdListsStale" /* 4034 */;
+import closure_13 from "updateUserGuildSettingsInternal" /* 4589 */;
 import closure_14 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5049 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function GuildRowWrapper(guild) {
@@ -341,7 +341,7 @@ export default function HomeDrawerGuildRow(guildId) {
   obj = guildId(589);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4239).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4240).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

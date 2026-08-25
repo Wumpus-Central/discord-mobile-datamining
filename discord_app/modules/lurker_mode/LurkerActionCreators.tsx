@@ -1,9 +1,9 @@
-// === Module 7322: stopLurkingAll ===
+// === Module 6045: stopLurkingAll ===
 
-// Module 7322 (stopLurkingAll)
+// Module 6045 (stopLurkingAll)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createRTCConnection" /* 4544 */;
-import closure_5 from "initialize" /* 4025 */;
+import closure_4 from "createRTCConnection" /* 4454 */;
+import closure_5 from "initialize" /* 4026 */;
 import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
@@ -35,7 +35,7 @@ function _stopLurkingAll() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ function _stopLurkingAll() {
                     c6 = 0;
                     c7 = 0;
                     c5 = 0;
-                    return (/* F121649 */ function*() { ... })();
+                    return (/* F121881 */ function*() { ... })();
                   });
                   return function() {
                     const self = this;
@@ -99,7 +99,7 @@ function _stopLurkingAll() {
             return obj;
           }
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp13) {
           v0 = tmp;
           throw tmp13;
@@ -134,7 +134,7 @@ function _stopLurking() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -195,7 +195,7 @@ function _stopLurking() {
               return obj;
             }
             guildId = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           guildId = tmp;

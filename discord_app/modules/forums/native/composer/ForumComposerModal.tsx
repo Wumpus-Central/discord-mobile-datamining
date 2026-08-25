@@ -1,17 +1,17 @@
-// === Module 10205: ForumComposerModal ===
+// === Module 10056: ForumComposerModal ===
 
-// Module 10205 (ForumComposerModal)
+// Module 10056 (ForumComposerModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 10085 */;
+import closure_5 from "initialize" /* 9941 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "handleChanged" /* 4830 */;
-import { DraftType } from "handleChanged" /* 4830 */;
-import closure_9 from "map" /* 4829 */;
-import closure_10 from "handleLoadThreadsSuccess" /* 7277 */;
+import closure_7 from "handleChanged" /* 4742 */;
+import { DraftType } from "handleChanged" /* 4742 */;
+import closure_9 from "map" /* 4741 */;
+import closure_10 from "handleLoadThreadsSuccess" /* 6002 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 noopAll;

@@ -1,6 +1,6 @@
-// === Module 17158: AVErrorStreamReconnectingDefinition ===
+// === Module 17190: AVErrorStreamReconnectingDefinition ===
 
-// Module 17158 (AVErrorStreamReconnectingDefinition)
+// Module 17190 (AVErrorStreamReconnectingDefinition)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 
@@ -12,9 +12,9 @@ export const AVErrorStreamReconnectingDefinition = {
     activeStreams = activeStreams.activeStreams;
     const found = activeStreams.filter((state) => state.state === constants.RECONNECTING);
     return found.map((currentUserActiveStream) => {
-      const obj = { type: callback(9707).AVError.STREAM_RECONNECTING };
-      const obj2 = callback(17148);
-      const merged = Object.assign(obj2.getStreamErrorContext(callback(4536).encodeStreamKey(currentUserActiveStream)));
+      const obj = { type: callback(9317).AVError.STREAM_RECONNECTING };
+      const obj2 = callback(17180);
+      const merged = Object.assign(obj2.getStreamErrorContext(callback(4446).encodeStreamKey(currentUserActiveStream)));
       return obj;
     });
   },

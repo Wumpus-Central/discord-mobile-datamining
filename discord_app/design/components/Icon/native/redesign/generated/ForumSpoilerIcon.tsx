@@ -1,10 +1,10 @@
-// === Module 6917: ForumSpoilerIcon ===
+// === Module 4914: ForumSpoilerIcon ===
 
-// Module 6917 (ForumSpoilerIcon)
+// Module 4914 (ForumSpoilerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6892 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 4888 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 7313: subscribeGuildMembers ===
+// === Module 6035: subscribeGuildMembers ===
 
-// Module 7313 (subscribeGuildMembers)
+// Module 6035 (subscribeGuildMembers)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -47,9 +47,9 @@ export default function subscribeGuildMembers(arg0) {
         if (!isEqualResult) {
           if (null != self._subscriptions) {
             tmpResult = tmp(tmp2[3]);
-            const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) => callback(7314).unsubscribeMembers(guildId, userIds));
+            const item = tmpResult.forEach(self._subscriptions, (userIds, guildId) => callback(6036).unsubscribeMembers(guildId, userIds));
           }
-          const item1 = tmp(tmp2[3]).forEach(tmp4, (userIds, guildId) => callback(7314).subscribeMembers(guildId, userIds));
+          const item1 = tmp(tmp2[3]).forEach(tmp4, (userIds, guildId) => callback(6036).subscribeMembers(guildId, userIds));
           self._subscriptions = tmp4;
           const tmpResult1 = tmp(tmp2[3]);
         }

@@ -1,19 +1,19 @@
-// === Module 13300: showReviewRequestModal ===
+// === Module 13162: showReviewRequestModal ===
 
-// Module 13300 (showReviewRequestModal)
+// Module 13162 (showReviewRequestModal)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import keys from "keys" /* 691 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4234 */;
-import sleep from "sleep" /* 4553 */;
-import apexExperiment from "apexExperiment" /* 13301 */;
-import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13302 */;
-import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13304 */;
-import closure_4 from "getHash" /* 4292 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4235 */;
+import sleep from "sleep" /* 4458 */;
+import apexExperiment from "apexExperiment" /* 13163 */;
+import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13164 */;
+import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13166 */;
+import closure_4 from "getHash" /* 4293 */;
 import closure_5 from "initialize" /* 1212 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -21,10 +21,10 @@ function showReviewRequestModal() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
-    let tmpResult = tmp(4233);
+    let tmpResult = tmp(4234);
     tmp3 = null != tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
   }
-  tmpResult = tmp(7387);
+  tmpResult = tmp(6113);
   const keyboardIsOpen = tmpResult.getKeyboardIsOpen();
   const tmp5 = null != voiceChannelId.getVoiceChannelId();
   if (tmp3) {
@@ -47,7 +47,7 @@ function showReviewRequestModal() {
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(13301).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(13163).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = c10;
   if (c10) {
@@ -62,7 +62,7 @@ function showReviewRequestModal() {
   }
   if (tmp18) {
     const _setTimeout = setTimeout;
-    timeout = setTimeout(showReviewRequestModal, tmp(4553).MS_PER_MINUTE);
+    timeout = setTimeout(showReviewRequestModal, tmp(4458).MS_PER_MINUTE);
   }
 }
 function handleConnectionClosedOrInterrupted() {
@@ -118,7 +118,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(13301).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(13163).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = closure_10;
     if (closure_10) {
@@ -133,7 +133,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
     }
     if (tmp13) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, tmp(4553).MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, tmp(4458).MS_PER_MINUTE);
     }
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -194,7 +194,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(13301).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(13163).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = c10;
       if (c10) {
@@ -209,7 +209,7 @@ const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(showReviewRequestModal, tmp(4553).MS_PER_MINUTE);
+        timeout = setTimeout(showReviewRequestModal, tmp(4458).MS_PER_MINUTE);
       }
     } else if (-1 !== timeout) {
       const _clearTimeout2 = clearTimeout;

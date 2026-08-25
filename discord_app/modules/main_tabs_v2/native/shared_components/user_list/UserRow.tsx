@@ -1,21 +1,21 @@
-// === Module 9684: UserRowSubLabel ===
+// === Module 9780: UserRowSubLabel ===
 
-// Module 9684 (UserRowSubLabel)
+// Module 9780 (UserRowSubLabel)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ActivityStatusDefault from "ActivityStatus" /* 9932 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9788 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import closure_6 from "addApplication" /* 4482 */;
-import closure_7 from "initialize" /* 5415 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_6 from "addApplication" /* 4421 */;
+import closure_7 from "initialize" /* 7268 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "sortActivity" /* 4564 */;
-import closure_10 from "markAllUserIdListsStale" /* 4033 */;
-import { UserRowModes } from "UserRowModes" /* 9118 */;
+import closure_9 from "sortActivity" /* 4469 */;
+import closure_10 from "markAllUserIdListsStale" /* 4034 */;
+import { UserRowModes } from "UserRowModes" /* 9770 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function UserRowSubLabel(arg0) {
@@ -39,9 +39,9 @@ function UserRowSubLabel(arg0) {
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4223).getUserTag(user);
-    callback(tmp(4739).Text, obj);
-    const tmpResult = tmp(4223);
+    obj[3] = tmp(4224).getUserTag(user);
+    callback(tmp(4376).Text, obj);
+    const tmpResult = tmp(4224);
   }
   if (null == stateFromStores) {
     obj1 = { style: null };
@@ -63,7 +63,7 @@ function UserRowSubLabel(arg0) {
     const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
-    items1[1] = callback(tmp(4739).Text, obj5);
+    items1[1] = callback(tmp(4376).Text, obj5);
     obj2[1] = items1;
     closure_15(View, obj2);
     const tmp11 = closure_15;
@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "r" };
+      let obj = { accessibilityActions: null, actions: "a" };
       obj[0] = items;
       return obj;
     } else {

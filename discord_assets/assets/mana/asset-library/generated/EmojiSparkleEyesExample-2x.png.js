@@ -1,6 +1,6 @@
-// === Module 5696: metadata ===
+// === Module 6382: metadata ===
 
-// Module 5696 (metadata)
+// Module 6382 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiSparkleEyesExample-2x.png.js");

@@ -1,11 +1,11 @@
-// === Module 13328: clearDismissUntil ===
+// === Module 13190: clearDismissUntil ===
 
-// Module 13328 (clearDismissUntil)
+// Module 13190 (clearDismissUntil)
 import initializeDefault from "initialize" /* 589 */;
 import Storage4 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3978 */;
-import closure_3 from "emitChanges" /* 7459 */;
+import hooksDefault from "hooks" /* 3979 */;
+import closure_3 from "emitChanges" /* 7057 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 import { NoticeTypes } from "ME" /* 676 */;
 
@@ -23,10 +23,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = tDefault(value);
+        tmp4 = hooksDefault(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(tDefault());
+        return tmp4.isAfter(hooksDefault());
       }
     }
     let tmp6 = null != tmp11;

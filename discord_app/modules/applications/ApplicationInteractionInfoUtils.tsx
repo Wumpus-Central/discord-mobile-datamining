@@ -1,8 +1,8 @@
-// === Module 8484: canViewInteractionInfo ===
+// === Module 8491: canViewInteractionInfo ===
 
-// Module 8484 (canViewInteractionInfo)
+// Module 8491 (canViewInteractionInfo)
 import set from "set" /* 2 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
 
 const result = set.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 

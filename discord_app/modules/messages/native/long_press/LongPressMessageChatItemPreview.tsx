@@ -1,12 +1,12 @@
-// === Module 10902: LongPressMessageChatItemPreview ===
+// === Module 11221: LongPressMessageChatItemPreview ===
 
-// Module 10902 (LongPressMessageChatItemPreview)
+// Module 11221 (LongPressMessageChatItemPreview)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 8196 */;
-import DCDChatItemDefault from "DCDChatItem" /* 10105 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import setOptionsDefault from "setOptions" /* 8192 */;
+import DCDChatItemDefault from "DCDChatItem" /* 8736 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const jsx = jsxProd.jsx;
 let obj = { chatItem: null };

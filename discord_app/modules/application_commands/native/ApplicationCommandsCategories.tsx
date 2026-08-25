@@ -1,15 +1,15 @@
-// === Module 11619: ApplicationCommandsCategories ===
+// === Module 11965: ApplicationCommandsCategories ===
 
-// Module 11619 (ApplicationCommandsCategories)
+// Module 11965 (ApplicationCommandsCategories)
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5454 */;
+import preloadDefault from "preload" /* 5374 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import ICON_SIZE from "ICON_SIZE" /* 11616 */;
+import closure_8 from "trackCommunicationDisabled" /* 1992 */;
+import ICON_SIZE from "ICON_SIZE" /* 11962 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -75,7 +75,7 @@ let closure_13 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = callback(stateFromStores, { style: items2, children: tmp6 });
-  return callback(section(5438).PressableOpacity, obj, section.name);
+  return callback(section(4949).PressableOpacity, obj, section.name);
 });
 let obj2 = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 let result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");

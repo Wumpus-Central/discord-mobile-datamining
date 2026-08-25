@@ -1,8 +1,8 @@
-// === Module 7527: parseEncoder ===
+// === Module 7345: parseEncoder ===
 
-// Module 7527 (parseEncoder)
-import getSamples from "getSamples" /* 7528 */;
-import getStatsDefault from "getStats" /* 7534 */;
+// Module 7345 (parseEncoder)
+import getSamples from "getSamples" /* 7346 */;
+import getStatsDefault from "getStats" /* 7352 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import set from "set" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 13506: getWideBannerDismissibleContentVersion ===
+// === Module 13541: getWideBannerDismissibleContentVersion ===
 
-// Module 13506 (getWideBannerDismissibleContentVersion)
-import closure_2 from "map" /* 5357 */;
+// Module 13541 (getWideBannerDismissibleContentVersion)
+import closure_2 from "map" /* 7192 */;
 import { CollectibleShopTab } from "items" /* 678 */;
 
 const require = arg1;

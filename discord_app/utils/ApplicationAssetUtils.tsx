@@ -1,13 +1,13 @@
-// === Module 7285: updateAssets ===
+// === Module 8396: updateAssets ===
 
-// Module 7285 (updateAssets)
+// Module 8396 (updateAssets)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import sendRequest from "sendRequest" /* 530 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 7286 */;
+import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 8397 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -117,7 +117,7 @@ function _resolveExternalAssets() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -217,7 +217,7 @@ function _resolveExternalAssets() {
           }
           let num4 = 3;
           c9 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       }
     })();
@@ -346,7 +346,7 @@ function _fetchAssetIds() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

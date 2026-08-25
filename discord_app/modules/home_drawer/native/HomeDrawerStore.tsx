@@ -1,21 +1,21 @@
-// === Module 15353: withEqualityFn ===
+// === Module 15383: withEqualityFn ===
 
-// Module 15353 (withEqualityFn)
+// Module 15383 (withEqualityFn)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import isIterable from "isIterable" /* 4009 */;
+import isIterable from "isIterable" /* 4010 */;
 import identity from "identity" /* 700 */;
 
 const DM_WIDTH = ME.DM_WIDTH;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   dependencyMap = arg1;
-  let obj = { panelX: _require(4119).makeMutable(0), gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
-  const obj2 = _require(4119);
-  obj[1] = _require(4119).makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
+  let obj = { panelX: _require(4120).makeMutable(0), gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
+  const obj2 = _require(4120);
+  obj[1] = _require(4120).makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
   obj[3] = { current: 0 };
-  const obj3 = _require(4119);
-  obj[4] = _require(4119).makeMutable(false);
+  const obj3 = _require(4120);
+  obj[4] = _require(4120).makeMutable(false);
   obj[5] = function setPanelX(arg0) {
     ({ panelX, gestureState } = callback2());
     if ("open" === arg0) {

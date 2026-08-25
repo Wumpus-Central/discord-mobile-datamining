@@ -1,10 +1,10 @@
-// === Module 13324: isLatest ===
+// === Module 13186: isLatest ===
 
-// Module 13324 (isLatest)
+// Module 13186 (isLatest)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4808 */;
-import closure_3 from "hasFlag" /* 4034 */;
-import closure_4 from "generateOldThreadCutoff" /* 4777 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4625 */;
+import closure_3 from "hasFlag" /* 4035 */;
+import closure_4 from "generateOldThreadCutoff" /* 4395 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/message_previews/PreviewData.tsx");

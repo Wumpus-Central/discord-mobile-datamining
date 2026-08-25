@@ -1,17 +1,17 @@
-// === Module 8100: StartStageChannelEventActionSheet ===
+// === Module 7922: StartStageChannelEventActionSheet ===
 
-// Module 8100 (StartStageChannelEventActionSheet)
+// Module 7922 (StartStageChannelEventActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 4983 */;
+import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 5239 */;
 import ME from "ME" /* 676 */;
 import { GuildScheduledEventPrivacyLevel as closure_12 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ MAX_STAGE_TOPIC_LENGTH: c9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = MAX_STAGE_TOPIC_LENGTH);
@@ -45,7 +45,7 @@ export default function StartStageChannelEventActionSheet(channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -70,14 +70,14 @@ export default function StartStageChannelEventActionSheet(channel) {
                 const result = obj3.dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != closure_1_1) {
-                  let tmp33Result = tmp33(8101);
+                  let tmp33Result = tmp33(7923);
                   v0 = 3;
                   c5 = 1;
                   obj1 = { value: null, done: false };
                   obj1[0] = tmp33Result.editStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY);
                   return obj1;
                 } else {
-                  tmp33Result = tmp33(8101);
+                  tmp33Result = tmp33(7923);
                   v0 = 2;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
@@ -90,7 +90,7 @@ export default function StartStageChannelEventActionSheet(channel) {
             if (1 === tmp7) {
               dependencyMap = 0;
               closure_1 = closure_2;
-              aPIError = new closure_1_0(4277).APIError(closure_1);
+              aPIError = new closure_1_0(4278).APIError(closure_1);
               v0(aPIError);
               dependencyMap(false);
             } else {
@@ -109,7 +109,7 @@ export default function StartStageChannelEventActionSheet(channel) {
                 obj[0] = arg1;
                 return obj;
               }
-              obj1 = closure_1_1(4346);
+              obj1 = closure_1_1(4347);
               obj1.hideActionSheet(closure_1_10);
               dependencyMap = 0;
             }
@@ -158,8 +158,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp7 = _handleSave(obj1.useState(false), 2);
   [obj3, c4] = _handleSave(obj1.useState(null), 2);
   const tmp9 = _handleSave(obj1.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(4996).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(4766)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5247).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(4831)(() => {
     let obj = stateFromStores(_undefined[14]);
     let id;
     if (stateFromStores != null) {
@@ -169,7 +169,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj.track(closure_1_11.START_STAGE_OPENED, obj);
   });
   obj = { style: tmp.header, children: null };
-  const items1 = [callback(stateFromStores(8107), {}), , ];
+  const items1 = [callback(stateFromStores(7932), {}), , ];
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == stateFromStores) {
     const intl2 = tmp2(1236).intl;
@@ -179,7 +179,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult = intl.string(tmp2(1236).t["5BKP4y"]);
   }
   obj[4] = stringResult;
-  items1[1] = callback(channel(4739).Text, obj);
+  items1[1] = callback(channel(4376).Text, obj);
   obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == stateFromStores) {
     const intl4 = tmp2(1236).intl;
@@ -189,11 +189,11 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult1 = intl3.string(tmp2(1236).t["I+9bLx"]);
   }
   obj1[3] = stringResult1;
-  items1[2] = callback(channel(4739).Text, obj1);
+  items1[2] = callback(channel(4376).Text, obj1);
   obj[1] = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(4996);
+  const tmp2Result = channel(5247);
   if (null == stateFromStores) {
     const intl5 = tmp2(1236).intl;
     stringResult2 = intl5.string(tmp2(1236).t.gR66jX);
@@ -221,8 +221,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const intl8 = tmp2(1236).intl;
   obj3[8] = intl8.string(channel(1236).t["5FPBOB"]);
   obj3[9] = handleSave;
-  items2[1] = callback(channel(8110).TextInput, obj3);
-  items2[2] = callback(tmp11(8116), {
+  items2[1] = callback(channel(7935).TextInput, obj3);
+  items2[2] = callback(tmp11(7941), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_10);
     },
@@ -234,7 +234,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-feedback-critical", children: null };
     obj5[0] = tmp.error;
     obj5[3] = obj2.getAnyErrorMessage();
-    tmp15Result = tmp15(tmp2(4739).Text, obj5);
+    tmp15Result = tmp15(tmp2(4376).Text, obj5);
   }
   items2[3] = tmp15Result;
   const obj6 = { style: tmp.startButton, children: null };
@@ -245,7 +245,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl9 = tmp2(1236).intl;
     stringResult3 = intl9.string(tmp2(1236).t.K344S7);
   }
-  obj6[1] = callback(channel(4750).Button, { text: stringResult3, onPress: handleSave, disabled: "" === first, loading: tmp8, accessibilityHint: stringResult2 });
+  obj6[1] = callback(channel(4815).Button, { text: stringResult3, onPress: handleSave, disabled: "" === first, loading: tmp8, accessibilityHint: stringResult2 });
   items2[4] = callback(View, obj6);
   tmp15Result = null != stringResult2 && !shouldAgeVerifyToSpeakForCurrentUser;
   if (tmp15Result) {
@@ -253,7 +253,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj8[1] = tmp.buttonSubtitle;
     const intl11 = tmp2(1236).intl;
     obj8[4] = intl11.string(tmp2(1236).t.gR66jX);
-    tmp15Result = tmp15(tmp2(4739).Text, obj8);
+    tmp15Result = tmp15(tmp2(4376).Text, obj8);
   }
   const obj4 = {
     onConfirmPress() {
@@ -266,5 +266,5 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp13Result = closure_14(View, obj);
   items2[5] = tmp15Result;
   obj2[2] = items2;
-  return callback(channel(6988).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(6840).SafeAreaPaddingView, obj2) });
+  return callback(channel(5503).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(5434).SafeAreaPaddingView, obj2) });
 };

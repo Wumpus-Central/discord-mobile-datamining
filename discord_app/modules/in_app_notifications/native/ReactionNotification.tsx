@@ -1,21 +1,21 @@
-// === Module 10197: ReactionNotificationBody ===
+// === Module 10048: ReactionNotificationBody ===
 
-// Module 10197 (ReactionNotificationBody)
+// Module 10048 (ReactionNotificationBody)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4739 */;
-import GuildIconSizes from "GuildIconSizes" /* 7226 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 7226 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9955 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10068 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10088 */;
+import Text from "Text" /* 4376 */;
+import GuildIconSizes from "GuildIconSizes" /* 5885 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 5885 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9813 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 9924 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 9944 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import set from "set" /* 10069 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import set from "set" /* 9925 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
 require = arg1;
@@ -33,7 +33,7 @@ function ReactionNotificationBody(arg0) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
     obj[2] = closure_7;
     obj[3] = secondaryText;
-    tmp8Result = tmp8(tmp2(4739).Text, obj);
+    tmp8Result = tmp8(tmp2(4376).Text, obj);
   }
   children[1] = tmp8Result;
   tmp8Result = null;
@@ -45,7 +45,7 @@ function ReactionNotificationBody(arg0) {
       obj1[2] = closure_6;
       obj1[4] = gradientStyles;
       obj1[5] = gradientColors;
-      tmp8Result = tmp8(tmp2(10089).NativeChannelRowPreview, obj1);
+      tmp8Result = tmp8(tmp2(9945).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
@@ -69,9 +69,9 @@ function ReactionNotificationBodyWrapper(arg0) {
   dependencyMap = tmp3;
   const tmp4 = callback2();
   const React = tmp4;
-  const AnimateEmoji = message(4069).AnimateEmoji;
+  const AnimateEmoji = message(4070).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(10109);
+  let obj = message(9961);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -96,7 +96,7 @@ function ReactionNotificationBodyWrapper(arg0) {
           let obj = { style: null, variant: "text-sm/normal", children: null };
           obj[0] = italic.italic;
           obj[2] = tmp.emoji.name;
-          return closure_1_10(message(4739).Text, obj, tmp.emoji.name);
+          return closure_1_10(message(4376).Text, obj, tmp.emoji.name);
         }
       }
       let id1;
@@ -113,14 +113,14 @@ function ReactionNotificationBodyWrapper(arg0) {
           animated = tmp.emoji.animated;
         }
         obj[1] = animated;
-        obj[2] = message(10198).DEFAULT_EMOJI_SIZE;
+        obj[2] = message(10049).DEFAULT_EMOJI_SIZE;
         emojiURL = obj.getEmojiURL(obj);
       }
       obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
       ({ textEmoji: obj3[0], imageEmoji: obj3[1] } = italic);
       obj1[2] = emojiURL;
       obj1[3] = tmp.emoji.name;
-      return closure_1_10(reaction(6968), obj1);
+      return closure_1_10(reaction(5466), obj1);
     }
   }, items);
   const items1 = [callback, tmp3, message, previewableMedia];
@@ -130,21 +130,21 @@ function ReactionNotificationBodyWrapper(arg0) {
         if (1 === arr.length) {
           const first = arr[0];
           const type = first.type;
-          if (message(10109).PreviewableMediaTypes.IMAGE === type) {
+          if (message(9961).PreviewableMediaTypes.IMAGE === type) {
             let obj = { text: null, secondaryText: null };
             const intl11 = message(1236).intl;
             obj = { emojiHook: null };
             obj[0] = callback;
             obj[0] = intl11.format(message(1236).t.I7mNcA, obj);
             return obj;
-          } else if (message(10109).PreviewableMediaTypes.VIDEO === type) {
+          } else if (message(9961).PreviewableMediaTypes.VIDEO === type) {
             obj1 = { text: null, secondaryText: null };
             const intl10 = message(1236).intl;
             const obj2 = { emojiHook: null };
             obj2[0] = callback;
             obj1[0] = intl10.format(message(1236).t["Umew/z"], obj2);
             return obj1;
-          } else if (message(10109).PreviewableMediaTypes.AUDIO === type) {
+          } else if (message(9961).PreviewableMediaTypes.AUDIO === type) {
             const obj3 = { text: null, secondaryText: null };
             const intl9 = message(1236).intl;
             const obj4 = { emojiHook: null };
@@ -152,7 +152,7 @@ function ReactionNotificationBodyWrapper(arg0) {
             obj3[0] = intl9.format(message(1236).t["P/bwx9"], obj4);
             obj3[1] = first.media.filename;
             return obj3;
-          } else if (message(10109).PreviewableMediaTypes.FILE === type) {
+          } else if (message(9961).PreviewableMediaTypes.FILE === type) {
             const obj5 = { text: null, secondaryText: null };
             const intl8 = message(1236).intl;
             const obj6 = { emojiHook: null };
@@ -160,21 +160,21 @@ function ReactionNotificationBodyWrapper(arg0) {
             obj5[0] = intl8.format(message(1236).t.TXNjGW, obj6);
             obj5[1] = first.media.filename;
             return obj5;
-          } else if (message(10109).PreviewableMediaTypes.STICKER === type) {
+          } else if (message(9961).PreviewableMediaTypes.STICKER === type) {
             const obj7 = { text: null, secondaryText: null };
             const intl7 = message(1236).intl;
             const obj8 = { emojiHook: null };
             obj8[0] = callback;
             obj7[0] = intl7.format(message(1236).t.pnm8NC, obj8);
             return obj7;
-          } else if (message(10109).PreviewableMediaTypes.VOICE_MESSAGE === type) {
+          } else if (message(9961).PreviewableMediaTypes.VOICE_MESSAGE === type) {
             const obj9 = { text: null, secondaryText: null };
             const intl6 = message(1236).intl;
             const obj10 = { emojiHook: null };
             obj10[0] = callback;
             obj9[0] = intl6.format(message(1236).t.k6YnQO, obj10);
             return obj9;
-          } else if (message(10109).PreviewableMediaTypes.GIF === type) {
+          } else if (message(9961).PreviewableMediaTypes.GIF === type) {
             const obj11 = { text: null, secondaryText: null };
             const intl5 = message(1236).intl;
             const obj12 = { emojiHook: null };
@@ -189,7 +189,7 @@ function ReactionNotificationBodyWrapper(arg0) {
             obj13[0] = intl4.format(message(1236).t.sHV43G, obj14);
             return obj13;
           }
-        } else if (reaction(5031)(message)) {
+        } else if (reaction(6025)(message)) {
           const obj15 = { text: null, secondaryText: null };
           const intl3 = message(1236).intl;
           const obj16 = { emojiHook: null };
@@ -231,9 +231,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  obj1 = message(10068);
+  obj1 = message(9924);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(10118);
+  let obj2 = message(9970);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }

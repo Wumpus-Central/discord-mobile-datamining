@@ -1,8 +1,8 @@
-// === Module 10950: ? ===
+// === Module 8231: ? ===
 
-// Module 10950
-import closure_0 from "recomputeGuild" /* 4982 */;
-import closure_1 from "getUncachedChannelPermissions" /* 4024 */;
+// Module 8231
+import closure_0 from "recomputeGuild" /* 5238 */;
+import closure_1 from "getUncachedChannelPermissions" /* 4025 */;
 import { Permissions } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
@@ -18,6 +18,9 @@ export default (getGuildId) => {
   }
   if (!canChatInGuildResult) {
     canChatInGuildResult = getGuildId.isPrivate();
+  }
+  if (canChatInGuildResult) {
+    canChatInGuildResult = !getGuildId.isSystemDM();
   }
   return canChatInGuildResult;
 };

@@ -1,10 +1,10 @@
-// === Module 12233: ThumbsDownIcon ===
+// === Module 8743: ThumbsDownIcon ===
 
-// Module 12233 (ThumbsDownIcon)
+// Module 8743 (ThumbsDownIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 12234 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8744 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

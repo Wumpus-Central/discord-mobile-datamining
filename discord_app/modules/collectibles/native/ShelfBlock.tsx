@@ -1,14 +1,14 @@
-// === Module 15042: ListEdgeSpacer ===
+// === Module 15072: ListEdgeSpacer ===
 
-// Module 15042 (ListEdgeSpacer)
+// Module 15072 (ListEdgeSpacer)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5306 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7148 */;
 import { CollectiblesMobileShopScreen as closure_7 } from "items" /* 678 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function ListEdgeSpacer() {

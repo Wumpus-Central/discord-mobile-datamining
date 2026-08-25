@@ -1,10 +1,10 @@
-// === Module 9468: BicycleIcon ===
+// === Module 8910: BicycleIcon ===
 
-// Module 9468 (BicycleIcon)
+// Module 8910 (BicycleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9469 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8911 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,15 +1,13 @@
-// === Module 8231: MessageAccessibilityAction ===
+// === Module 8227: MessageAccessibilityAction ===
 
-// Module 8231 (MessageAccessibilityAction)
+// Module 8227 (MessageAccessibilityAction)
+import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import closure_2 from "recomputeGuild" /* 4982 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
-import { Permissions } from "ME" /* 676 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import _modDef8231 from "module_8231" /* 8231 */;
 
-require = arg1;
 let obj = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };
-let result = require("set").fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
+let result = set.fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
 
 export const MessageAccessibilityAction = obj;
 export const getMessageAccessibilityActionFromLabel = function getMessageAccessibilityActionFromLabel(action) {
@@ -37,14 +35,14 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
   let formatToPlainStringResult = null;
   if (true !== disableDoubleTap) {
     if (null != setting) {
-      const result = tmp(8232).disambiguatedEmojiFromSettingsValue(setting);
+      const result = tmp(8228).disambiguatedEmojiFromSettingsValue(setting);
       if (null != result) {
         const intl9 = tmp(1236).intl;
         obj = { emojiName: null };
         obj[0] = result.name;
         formatToPlainStringResult = intl9.formatToPlainString(tmp(1236).t.eQIttH, obj);
       }
-      const tmpResult = tmp(8232);
+      const tmpResult = tmp(8228);
     }
     const intl8 = tmp(1236).intl;
     formatToPlainStringResult = intl8.formatToPlainString(tmp(1236).t.eQIttH, { emojiName: "heart" });
@@ -58,29 +56,18 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
   if (null == channel) {
     return [];
   } else {
-    const guildId = channel.getGuildId();
-    let canChatInGuildResult = null != guildId;
-    if (canChatInGuildResult) {
-      canChatInGuildResult = closure_2.canChatInGuild(guildId);
-    }
-    if (canChatInGuildResult) {
-      canChatInGuildResult = closure_3.can(Permissions.ADD_REACTIONS, channel);
-    }
-    if (!canChatInGuildResult) {
-      canChatInGuildResult = channel.isPrivate();
-    }
     obj = { label: null, name: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.iXAna6);
+    const intl6 = getSystemLocale.intl;
+    obj[0] = intl6.string(getSystemLocale.t.iXAna6);
     obj[1] = obj.VIEW_PROFILE;
     const items = [obj];
-    if (canChatInGuildResult) {
+    if (_modDef8231(channel)) {
       obj = { label: null, name: null };
-      const intl2 = tmp5(1236).intl;
-      obj[0] = intl2.string(tmp5(1236).t.lfIHs4);
-      obj[1] = tmp7.ADD_REACTION;
+      const intl = tmp10(1236).intl;
+      obj[0] = intl.string(tmp10(1236).t.lfIHs4);
+      obj[1] = tmp12.ADD_REACTION;
       items.push(obj);
-      const DoubleTapReactionEmoji = tmp5(4069).DoubleTapReactionEmoji;
+      const DoubleTapReactionEmoji = tmp10(4070).DoubleTapReactionEmoji;
       const setting = DoubleTapReactionEmoji.getSetting();
       let disableDoubleTap;
       if (setting != null) {
@@ -89,36 +76,36 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       let formatToPlainStringResult = null;
       if (true !== disableDoubleTap) {
         if (null != setting) {
-          let tmp5Result = tmp5(8232);
-          const result = tmp5Result.disambiguatedEmojiFromSettingsValue(setting);
+          let tmp10Result = tmp10(8228);
+          const result = tmp10Result.disambiguatedEmojiFromSettingsValue(setting);
           if (null != result) {
-            const intl4 = tmp5(1236).intl;
+            const intl3 = tmp10(1236).intl;
             obj = { emojiName: null };
             obj[0] = result.name;
-            formatToPlainStringResult = intl4.formatToPlainString(tmp5(1236).t.eQIttH, obj);
+            formatToPlainStringResult = intl3.formatToPlainString(tmp10(1236).t.eQIttH, obj);
           }
         }
-        const intl3 = tmp5(1236).intl;
-        formatToPlainStringResult = intl3.formatToPlainString(tmp5(1236).t.eQIttH, { emojiName: "heart" });
+        const intl2 = tmp10(1236).intl;
+        formatToPlainStringResult = intl2.formatToPlainString(tmp10(1236).t.eQIttH, { emojiName: "heart" });
       }
       if (null != formatToPlainStringResult) {
         obj1 = { label: null, name: null };
         obj1[0] = formatToPlainStringResult;
-        obj1[1] = tmp7.ADD_QUICK_REACTION;
+        obj1[1] = tmp12.ADD_QUICK_REACTION;
         items.push(obj1);
       }
     }
-    tmp5Result = tmp5(8239);
-    if (tmp5Result.canReplyToMessage(channel, message)) {
+    tmp10Result = tmp10(8236);
+    if (tmp10Result.canReplyToMessage(channel, message)) {
       const obj2 = { label: null, name: null };
-      const intl5 = tmp5(1236).intl;
-      obj2[0] = intl5.string(tmp5(1236).t["5IEsGx"]);
-      obj2[1] = tmp7.REPLY;
+      const intl4 = tmp10(1236).intl;
+      obj2[0] = intl4.string(tmp10(1236).t["5IEsGx"]);
+      obj2[1] = tmp12.REPLY;
       items.push(obj2);
     }
     const obj3 = { label: null, name: null };
-    const intl6 = tmp5(1236).intl;
-    obj3[0] = intl6.string(getSystemLocale.t.ChPNkN);
+    const intl5 = tmp10(1236).intl;
+    obj3[0] = intl5.string(getSystemLocale.t.ChPNkN);
     obj3[1] = obj.MESSAGE_ACTIONS_MENU;
     items.push(obj3);
     return items;

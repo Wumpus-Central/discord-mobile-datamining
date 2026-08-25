@@ -1,15 +1,15 @@
-// === Module 9592: findCommandInSection ===
+// === Module 9687: findCommandInSection ===
 
-// Module 9592 (findCommandInSection)
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5253 */;
-import ScoreMethod from "ScoreMethod" /* 8495 */;
-import getOptionValue from "getOptionValue" /* 8497 */;
+// Module 9687 (findCommandInSection)
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7129 */;
+import ScoreMethod from "ScoreMethod" /* 8502 */;
+import getOptionValue from "getOptionValue" /* 8504 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import getIndexKey from "getIndexKey" /* 8487 */;
-import closure_10 from "getIndexKey" /* 8487 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5251 */;
+import getIndexKey from "getIndexKey" /* 8494 */;
+import closure_10 from "getIndexKey" /* 8494 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4838 */;
 import { NOOP } from "ME" /* 676 */;
 
 require = arg1;
@@ -35,7 +35,7 @@ function findCommandInSection(found, commandKey) {
       }
       let command;
       if (null != rootCommand) {
-        obj = _require(5250);
+        obj = _require(7127);
         obj = { rootCommand: null, command: null, applicationId: null };
         obj[0] = rootCommand;
         obj[1] = rootCommand;
@@ -62,7 +62,7 @@ let result = require("set").fileFinishedImporting("modules/application_commands/
 export const getCachedCommand = function getCachedCommand(type, commandKey) {
   closure_0 = arg2;
   if (null == commandKey) {
-    return { application: "Array", command: "ct" };
+    return { application: "isArray", command: "accessibilityRole" };
   } else {
     const userState = authStore.getUserState();
     const result2 = userState.result;
@@ -117,7 +117,7 @@ export const getCachedCommand = function getCachedCommand(type, commandKey) {
         }
       }
     }
-    return { application: "Array", command: "ct" };
+    return { application: "isArray", command: "accessibilityRole" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -450,7 +450,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "ct" };
+    return { command: "isArray", application: "accessibilityRole" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

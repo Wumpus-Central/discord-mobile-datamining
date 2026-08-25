@@ -1,14 +1,14 @@
-// === Module 9431: PremiumFeatureUpsellPill ===
+// === Module 8874: PremiumFeatureUpsellPill ===
 
-// Module 9431 (PremiumFeatureUpsellPill)
+// Module 8874 (PremiumFeatureUpsellPill)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
-import { Gradients } from "items" /* 7441 */;
+import { Gradients } from "items" /* 7039 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function PremiumFeatureUpsellPill(featureName) {
@@ -20,49 +20,49 @@ function PremiumFeatureUpsellPill(featureName) {
   let useTier0UpsellContent;
   dependencyMap = undefined;
   let loading;
-  let obj = featureName(8510);
-  obj1 = featureName(9387);
+  let obj = featureName(8518);
+  obj1 = featureName(8830);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = callback(useTier0UpsellContent);
   dependencyMap = tmp4;
   const tmp6 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
   const fn = () => useTier0UpsellContent(closure_2[13])(featureName);
-  let tmpResult = tmp(4042);
+  let tmpResult = tmp(4043);
   const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(tmp6);
-  if (featureName(8521).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+  if (featureName(8529).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
     const intl4 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     let formatResult = intl4.format(tmp(1236).t["tw/SSq"], obj);
-  } else if (tmp(8521).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+  } else if (tmp(8529).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
     const intl3 = tmp(1236).intl;
     obj = { nitroTierName: null, onClick: null };
     obj[0] = premiumTypeDisplayName;
     obj[1] = fn;
     formatResult = intl3.format(tmp(1236).t.gMVjeS, obj);
-  } else if (tmp(8521).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+  } else if (tmp(8529).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
     const intl2 = tmp(1236).intl;
     obj1 = { maxFileSize: null, nitroTierName: null, onClick: null };
-    tmpResult = tmp(4042);
+    tmpResult = tmp(4043);
     obj1[0] = tmpResult.getMaxFileSizeForPremiumType(tmp6);
     obj1[1] = premiumTypeDisplayName;
     obj1[2] = fn;
     formatResult = intl2.format(tmp(1236).t.zzyLEK, obj1);
-  } else if (tmp(8521).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+  } else if (tmp(8529).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
     const intl = tmp(1236).intl;
     const obj2 = { nitroTierName: null, onClick: null };
     obj2[0] = premiumTypeDisplayName;
     obj2[1] = fn;
     formatResult = intl.format(tmp(1236).t.lyxfbj, obj2);
-  } else if (tmp(8521).EntitlementFeatureNames.APP_ICONS === featureName) {
+  } else if (tmp(8529).EntitlementFeatureNames.APP_ICONS === featureName) {
     const intl6 = tmp(1236).intl;
     const obj3 = { onClick: null };
     obj3[0] = fn;
     formatResult = intl6.format(tmp(1236).t.x2dQxN, obj3);
   }
-  const tmp10 = useTier0UpsellContent(9432)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
+  const tmp10 = useTier0UpsellContent(8875)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants.PREMIUM_UPSELL_FILE_UPLOAD);
   loading = tmp10.loading;
   const items = [tmp4.container, , ];
   if (flag) {
@@ -72,7 +72,7 @@ function PremiumFeatureUpsellPill(featureName) {
   items[1] = flag;
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
-  const items1 = [closure_12(featureName(1297).Icon, { source: useTier0UpsellContent(useTier0UpsellContent ? 9433 : 9434), style: tmp4.nitroWheel, disableColor: true }), closure_12(featureName(4739).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
+  const items1 = [closure_12(featureName(1297).Icon, { source: useTier0UpsellContent(useTier0UpsellContent ? 8876 : 8877), style: tmp4.nitroWheel, disableColor: true }), closure_12(featureName(4376).Text, { style: tmp4.text, variant: "text-sm/medium", children: formatResult })];
   obj5[1] = items1;
   const items2 = [closure_13(closure_5, obj5), ];
   const obj8 = { disabled: loading, shrink: true, style: tmp4.button, size: featureName(1297).ButtonSizes.XSMALL, onPress: tmp10.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
@@ -132,7 +132,7 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
 let closure_16 = { code: "function PremiumFeatureUpsellTsx2(finished){const{cleanUp}=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);}" };
 function animationEnterExit(value, cleanUp) {
   const _require = cleanUp;
-  const obj = { opacity: _require(4749).withSpring(value, _require(4753).springStandard, "respect-motion-settings", fn) };
+  const obj = { opacity: _require(4814).withSpring(value, _require(4818).springStandard, "respect-motion-settings", fn) };
   fn = function l(arg0) {
     if (closure_0 != null) {
       tmp(arg0);

@@ -1,13 +1,13 @@
-// === Module 5442: parseMessageEmbedForProps ===
+// === Module 7949: parseMessageEmbedForProps ===
 
-// Module 5442 (parseMessageEmbedForProps)
+// Module 7949 (parseMessageEmbedForProps)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3978 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4816 */;
-import ContentIdType from "ContentIdType" /* 5444 */;
+import hooksDefault from "hooks" /* 3979 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4571 */;
+import ContentIdType from "ContentIdType" /* 7951 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
-import SafetyHubView from "SafetyHubView" /* 5443 */;
+import SafetyHubView from "SafetyHubView" /* 7950 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -52,7 +52,7 @@ function parseMessageEmbedForProps(fields) {
 const result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return tDefault().to(tDefault(timestamp));
+  return hooksDefault().to(hooksDefault(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {

@@ -1,16 +1,16 @@
-// === Module 9844: CrunchyrollLinkDiscordSuccess ===
+// === Module 10650: CrunchyrollLinkDiscordSuccess ===
 
-// Module 9844 (CrunchyrollLinkDiscordSuccess)
+// Module 10650 (CrunchyrollLinkDiscordSuccess)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import Button from "Button" /* 4750 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6840 */;
-import styles from "styles" /* 9795 */;
-import registerAssetDefault from "registerAsset" /* 9845 */;
+import Text from "Text" /* 4376 */;
+import Button from "Button" /* 4815 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5434 */;
+import styles from "styles" /* 10572 */;
+import registerAssetDefault from "registerAsset" /* 10651 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;

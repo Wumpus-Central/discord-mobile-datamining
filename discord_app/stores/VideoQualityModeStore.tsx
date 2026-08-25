@@ -1,6 +1,6 @@
-// === Module 13159: mode ===
+// === Module 13298: mode ===
 
-// Module 13159 (mode)
+// Module 13298 (mode)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;

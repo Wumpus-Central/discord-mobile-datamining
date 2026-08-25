@@ -1,17 +1,17 @@
-// === Module 11650: ChatInputGuardWrapper ===
+// === Module 11993: ChatInputGuardWrapper ===
 
-// Module 11650 (ChatInputGuardWrapper)
+// Module 11993 (ChatInputGuardWrapper)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "initialize" /* 4025 */;
+import closure_3 from "initialize" /* 4026 */;
 import { isThread } from "createChannelRecord" /* 1395 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "recomputeGuild" /* 4982 */;
-import closure_8 from "markAllUserIdListsStale" /* 4033 */;
+import closure_7 from "recomputeGuild" /* 5238 */;
+import closure_8 from "markAllUserIdListsStale" /* 4034 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import { TextAreaCta } from "TextAreaCta" /* 11188 */;
+import { TextAreaCta } from "TextAreaCta" /* 11530 */;
 import ME from "ME" /* 676 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8664 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8672 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

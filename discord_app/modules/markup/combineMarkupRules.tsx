@@ -1,6 +1,6 @@
-// === Module 6845: combineMarkupRules ===
+// === Module 4836: combineMarkupRules ===
 
-// Module 6845 (combineMarkupRules)
+// Module 4836 (combineMarkupRules)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");

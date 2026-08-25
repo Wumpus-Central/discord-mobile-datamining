@@ -1,10 +1,10 @@
-// === Module 9496: PerLetterEffect ===
+// === Module 9622: PerLetterEffect ===
 
-// Module 9496 (PerLetterEffect)
+// Module 9622 (PerLetterEffect)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ View: c4, Text: c5 } = get_ActivityIndicator);
@@ -57,6 +57,6 @@ export default function PerLetterEffect(name) {
   const items2 = [textStyle, { lineHeight: "r" }];
   obj.style = items2;
   obj.children = memo;
-  obj[1] = jsx(name(4739).Text, {});
+  obj[1] = jsx(name(4376).Text, {});
   return <closure_4 />;
 };

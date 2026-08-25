@@ -1,7 +1,7 @@
-// === Module 4863: fromBlob ===
+// === Module 4982: fromBlob ===
 
-// Module 4863 (fromBlob)
-import _modDef4864 from "module_4864" /* 4864 */;
+// Module 4982 (fromBlob)
+import _modDef4983 from "module_4983" /* 4983 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let prototype;
@@ -16,7 +16,7 @@ prototype["fromBlob"] = function fromBlob(arg0) {
   })();
 };
 prototype["fromArrayBuffer"] = function fromArrayBuffer(arg0) {
-  const _ArrayBuffer = _modDef4864.ArrayBuffer;
+  const _ArrayBuffer = _modDef4983.ArrayBuffer;
   return _ArrayBuffer.hash(arg0);
 };
 prototype["fromDataURI"] = function fromDataURI(arg0) {

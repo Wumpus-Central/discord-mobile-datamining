@@ -1,9 +1,9 @@
-// === Module 13043: useOutboundPromotionRedemptionEndDate ===
+// === Module 13031: useOutboundPromotionRedemptionEndDate ===
 
-// Module 13043 (useOutboundPromotionRedemptionEndDate)
+// Module 13031 (useOutboundPromotionRedemptionEndDate)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "module_30" /* 30 */;
-import importDefaultResult from "t" /* 3978 */;
+import importDefaultResult from "hooks" /* 3979 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");

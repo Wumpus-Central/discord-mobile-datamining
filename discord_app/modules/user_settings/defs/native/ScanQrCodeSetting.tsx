@@ -1,11 +1,11 @@
-// === Module 14404: pressable ===
+// === Module 14434: pressable ===
 
-// Module 14404 (pressable)
+// Module 14434 (pressable)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import { NativePermissionTypes } from "NativePermissionStatus" /* 4844 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4618 */;
 import apply from "apply" /* 12 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import createToggle from "createToggle" /* 10708 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 apply = {
@@ -27,7 +27,7 @@ apply = {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ const debounceResult = apply.debounce(importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

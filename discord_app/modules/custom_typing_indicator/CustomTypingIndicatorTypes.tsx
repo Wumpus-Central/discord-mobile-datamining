@@ -1,8 +1,8 @@
-// === Module 11197: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT ===
+// === Module 1937: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT ===
 
-// Module 11197 (CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)
+// Module 1937 (CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)
 import set from "set" /* 2 */;
-import create from "create" /* 1940 */;
+import create from "create" /* 1938 */;
 
 let obj = { emojis: [], typingSuggestion: create.TypingSuggestion.UNSPECIFIED, animation: create.TypingIndicatorAnimation.UNSPECIFIED };
 const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
@@ -19,13 +19,30 @@ export const isValidCustomTypingIndicatorEmojiSelection = function isValidCustom
   }
   return tmp;
 };
-export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveCustomTypingIndicatorAnimation(config) {
-  if (3 === config.emojis.length) {
-    let UNSPECIFIED = config.animation;
+export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveCustomTypingIndicatorAnimation(map) {
+  if (3 === map.emojis.length) {
+    let UNSPECIFIED = map.animation;
   } else {
     UNSPECIFIED = create.TypingIndicatorAnimation.UNSPECIFIED;
   }
   return UNSPECIFIED;
+};
+export const serializeTypingIndicatorStyle = function serializeTypingIndicatorStyle(typingIndicatorStyle) {
+  const emojis = typingIndicatorStyle.emojis;
+  return {
+    emojis: emojis.map((id) => {
+      if (null != id.id) {
+        let obj = { custom_emoji_id: null };
+        obj[0] = id.id;
+      } else {
+        obj = { unicode_emoji: null };
+        obj[0] = id.name;
+      }
+      return obj;
+    }),
+    animation: typingIndicatorStyle.animation,
+    typing_suggestion: typingIndicatorStyle.typingSuggestion
+  };
 };
 export const parseServerTypingIndicatorStyle = function parseServerTypingIndicatorStyle(typing_indicator_style) {
   let tmp = null;
@@ -37,8 +54,12 @@ export const parseServerTypingIndicatorStyle = function parseServerTypingIndicat
     let obj = { emojis: null, typingSuggestion: null, animation: null };
     obj[0] = emojis.map((custom_emoji_id) => {
       if (null != custom_emoji_id.custom_emoji_id) {
-        let obj = { id: null, name: "" };
-        obj[0] = custom_emoji_id.custom_emoji_id;
+        let obj = { id: null, name: "", animated: null };
+        ({ custom_emoji_id: obj2[0], animated } = custom_emoji_id);
+        if (animated == null) {
+          animated = false;
+        }
+        obj[2] = animated;
       } else {
         let str = custom_emoji_id.unicode_emoji;
         if (str == null) {

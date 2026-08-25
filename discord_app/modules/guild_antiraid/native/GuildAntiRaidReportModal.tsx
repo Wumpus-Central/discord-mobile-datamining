@@ -1,18 +1,18 @@
-// === Module 13482: ReportModal ===
+// === Module 13517: ReportModal ===
 
-// Module 13482 (ReportModal)
+// Module 13517 (ReportModal)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Text from "Text" /* 4739 */;
-import Button from "Button" /* 4750 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
+import Text from "Text" /* 4376 */;
+import Button from "Button" /* 4815 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import COMMUNITY_PORTAL_SERVER_SAFETY_PAGE from "COMMUNITY_PORTAL_SERVER_SAFETY_PAGE" /* 13483 */;
+import getReportRaidHelpArticleURL from "getReportRaidHelpArticleURL" /* 13518 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function ReportModal(onSubmit) {
@@ -25,7 +25,7 @@ function ReportModal(onSubmit) {
   closure_3 = React.useCallback((arg0) => closure_1_9(closure_1_0(formRow[8]).Text, { style: formRow.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: closure_1_7(arg0) }), items);
   let obj = { style: tmp.container, children: null };
   const callback = React.useCallback(() => {
-    callback(formRow[9]).openURL(closure_6);
+    callback(formRow[9]).openURL(callback3());
   }, []);
   obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
@@ -77,7 +77,7 @@ function ReportModal(onSubmit) {
   obj[1] = items1;
   return callback3(View, obj);
 }
-({ COMMUNITY_PORTAL_SERVER_SAFETY_PAGE: closure_6, getReportRaidTypeLabel: error, REPORT_RAID_OPTIONS: closure_8 } = COMMUNITY_PORTAL_SERVER_SAFETY_PAGE);
+({ getReportRaidHelpArticleURL: closure_6, getReportRaidTypeLabel: error, REPORT_RAID_OPTIONS: closure_8 } = getReportRaidHelpArticleURL);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
 createCacheKey = { container: null, headerSubtitle: null, formBody: null, formRow: null, submitButtonContainer: null };

@@ -1,13 +1,13 @@
-// === Module 8510: usePremiumUpsellConfig ===
+// === Module 8518: usePremiumUpsellConfig ===
 
-// Module 8510 (usePremiumUpsellConfig)
+// Module 8518 (usePremiumUpsellConfig)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import registerAssetDefault from "registerAsset" /* 8511 */;
-import registerAssetDefault2 from "registerAsset" /* 8512 */;
-import registerAssetDefault3 from "registerAsset" /* 8513 */;
-import registerAssetDefault4 from "registerAsset" /* 8514 */;
-import registerAssetDefault5 from "registerAsset" /* 8515 */;
-import registerAssetDefault6 from "registerAsset" /* 8516 */;
+import registerAssetDefault from "registerAsset" /* 8519 */;
+import registerAssetDefault2 from "registerAsset" /* 8520 */;
+import registerAssetDefault3 from "registerAsset" /* 8521 */;
+import registerAssetDefault4 from "registerAsset" /* 8522 */;
+import registerAssetDefault5 from "registerAsset" /* 8523 */;
+import registerAssetDefault6 from "registerAsset" /* 8524 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
@@ -19,7 +19,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
   const _require = initialUpsellKey;
   closure_1 = analyticsLocations2;
   dependencyMap = analyticsLocation;
-  let obj = _require(7456);
+  let obj = _require(7054);
   const premiumTrialOffer = obj.usePremiumTrialOffer();
   let items = [, ];
   ({ GLOBAL_EMOJI: arr[0], UPLOAD: arr[1] } = closure_7);

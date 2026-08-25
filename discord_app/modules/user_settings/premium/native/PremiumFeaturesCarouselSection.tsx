@@ -1,20 +1,20 @@
-// === Module 12961: PremiumFeaturesCardBackground ===
+// === Module 12949: PremiumFeaturesCardBackground ===
 
-// Module 12961 (PremiumFeaturesCardBackground)
+// Module 12949 (PremiumFeaturesCardBackground)
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4739 */;
-import LinearGradientDefault from "LinearGradient" /* 4761 */;
-import preloadDefault from "preload" /* 5454 */;
-import PaginationDefault from "Pagination" /* 10350 */;
+import Text from "Text" /* 4376 */;
+import LinearGradientDefault from "LinearGradient" /* 4826 */;
+import preloadDefault from "preload" /* 5374 */;
+import PaginationDefault from "Pagination" /* 10201 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { Gradients } from "items" /* 7441 */;
+import { Gradients } from "items" /* 7039 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 class PremiumFeaturesCardBackground {
@@ -54,7 +54,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   let React;
   const tmp = callback4();
-  let obj = width(4727);
+  let obj = width(4802);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const tmp5 = mapped(React.useState(0), 2);
   const first = tmp5[0];
@@ -68,7 +68,7 @@ function PremiumFeaturesCarousel(arg0) {
     let obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = width(1236).intl;
     obj[0] = intl.string(width(1236).t["3cyhe3"]);
-    obj[1] = lib(7980);
+    obj[1] = lib(7802);
     obj[2] = lib.emojiImage;
     const items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = closure_1_9);
@@ -77,7 +77,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = width(1236).intl;
     obj[0] = intl2.string(width(1236).t["8AhJqy"]);
-    obj[1] = lib(7983);
+    obj[1] = lib(7805);
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = closure_1_9);
     const set = new Set(items);
@@ -86,7 +86,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = width(1236).intl;
     obj[0] = intl3.string(width(1236).t["t/Mvdj"]);
-    obj[1] = lib(8017);
+    obj[1] = lib(7839);
     const items3 = [closure_1_9.TIER_2];
     const set1 = new Set(items2);
     obj[2] = new Set(items3);
@@ -94,7 +94,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj1 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = width(1236).intl;
     obj1[0] = intl4.string(width(1236).t["n+DGY/"]);
-    obj1[1] = lib(8020);
+    obj1[1] = lib(7842);
     const items4 = [closure_1_9.TIER_2];
     const set2 = new Set(items3);
     obj1[2] = new Set(items4);
@@ -180,7 +180,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   dependencyMap = undefined;
   let callback;
   const tmp = callback4();
-  analyticsLocations = first(7177)().analyticsLocations;
+  analyticsLocations = first(5834)().analyticsLocations;
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];
@@ -208,7 +208,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   obj = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = analyticsLocations(1236).intl;
   obj[4] = intl.string(analyticsLocations(1236).t.RGadQR);
-  const items2 = [callback2(analyticsLocations(4739).Text, obj), callback2(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback })];
+  const items2 = [callback2(analyticsLocations(4376).Text, obj), callback2(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback })];
   obj[2] = items2;
   return callback3(closure_6, obj);
 };

@@ -1,9 +1,9 @@
-// === Module 8315: useMaybeFetchReferralsRemaining ===
+// === Module 8316: useMaybeFetchReferralsRemaining ===
 
-// Module 8315 (useMaybeFetchReferralsRemaining)
+// Module 8316 (useMaybeFetchReferralsRemaining)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "emitChanges" /* 7461 */;
+import closure_5 from "emitChanges" /* 7059 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
@@ -19,18 +19,18 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(589);
   let tmp = flag;
-  const hasDiscountApplied = flag(8316).useHasDiscountApplied();
-  const obj2 = flag(8316);
-  const hasActiveTrial = flag(8317).useHasActiveTrial();
-  const tmp6 = fetched(5361)();
+  const hasDiscountApplied = flag(8317).useHasDiscountApplied();
+  const obj2 = flag(8317);
+  const hasActiveTrial = flag(8318).useHasActiveTrial();
+  const tmp6 = fetched(7003)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }
   fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1945).isPremiumExactly(stateFromStores, TIER_2.TIER_2);
-    const tmpResult = tmp(1945);
+    fetched = tmp(1946).isPremiumExactly(stateFromStores, TIER_2.TIER_2);
+    const tmpResult = tmp(1946);
   }
   if (fetched) {
     fetched = tmp6.fetched;

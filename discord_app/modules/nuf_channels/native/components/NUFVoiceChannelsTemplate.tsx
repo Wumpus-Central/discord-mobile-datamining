@@ -1,9 +1,9 @@
-// === Module 12710: NUFVoiceChannelsTemplate ===
+// === Module 13245: NUFVoiceChannelsTemplate ===
 
-// Module 12710 (NUFVoiceChannelsTemplate)
+// Module 13245 (NUFVoiceChannelsTemplate)
 import noopAll from "noop" /* 19 */;
-import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 12711 */;
-import registerAssetDefault from "registerAsset" /* 12712 */;
+import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 13246 */;
+import registerAssetDefault from "registerAsset" /* 13247 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

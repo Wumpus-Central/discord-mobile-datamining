@@ -1,10 +1,10 @@
-// === Module 11005: CloudIcon ===
+// === Module 11345: CloudIcon ===
 
-// Module 11005 (CloudIcon)
+// Module 11345 (CloudIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 11006 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 11346 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

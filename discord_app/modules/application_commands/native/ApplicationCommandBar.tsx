@@ -1,16 +1,16 @@
-// === Module 11624: ApplicationCommandOptionItem ===
+// === Module 11970: ApplicationCommandOptionItem ===
 
-// Module 11624 (ApplicationCommandOptionItem)
+// Module 11970 (ApplicationCommandOptionItem)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import PressableBase from "PressableBase" /* 5438 */;
+import PressableBase from "PressableBase" /* 4949 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "trackCommunicationDisabled" /* 1992 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function ApplicationCommandOptionItem(arg0) {
@@ -326,9 +326,9 @@ export default function _default(command) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.applicationIcon;
     obj1[1] = memo;
-    tmp22 = callback2(section(5454), obj1);
+    tmp22 = callback2(section(5374), obj1);
   }
-  const items5 = [tmp22, callback2(command(4739).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  const items5 = [tmp22, callback2(command(4376).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -370,7 +370,7 @@ export default function _default(command) {
     obj4[0] = tmp.applicationOptionalOptionsIndicator;
     const intl = tmp12(1236).intl;
     obj4[4] = intl.string(tmp12(1236).t.U19GM3);
-    items7[1] = tmp25(tmp12(4739).Text, obj4);
+    items7[1] = tmp25(tmp12(4376).Text, obj4);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -400,7 +400,7 @@ export default function _default(command) {
   }
   items5[3] = tmp19Result;
   obj[5] = items5;
-  const items8 = [c10(closure_6, obj), callback2(command(8122).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8122).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [c10(closure_6, obj), callback2(command(8118).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8118).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj[1] = items8;
   return c10(onPressOption, obj);
 };

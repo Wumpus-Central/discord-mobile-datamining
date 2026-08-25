@@ -1,12 +1,12 @@
-// === Module 10711: handleConnectionOpenOrResumed ===
+// === Module 10519: handleConnectionOpenOrResumed ===
 
-// Module 10711 (handleConnectionOpenOrResumed)
+// Module 10519 (handleConnectionOpenOrResumed)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef10712 from "module_10712" /* 10712 */;
+import _modDef10520 from "module_10520" /* 10520 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "sortActivity" /* 4564 */;
-import { INVITE_EXPIRATION_MS } from "items3" /* 4485 */;
+import closure_3 from "sortActivity" /* 4469 */;
+import { INVITE_EXPIRATION_MS } from "items3" /* 4408 */;
 
 function handleConnectionOpenOrResumed() {
   closure_5 = {};
@@ -29,8 +29,8 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    _modDef10712.subscribeActivities(items);
-    const obj = _modDef10712;
+    _modDef10520.subscribeActivities(items);
+    const obj = _modDef10520;
   }
 });
 const Store = initializeDefault.Store;

@@ -1,8 +1,8 @@
-// === Module 11517: GuildDirectorySearchModal ===
+// === Module 11868: GuildDirectorySearchModal ===
 
-// Module 11517 (GuildDirectorySearchModal)
+// Module 11868 (GuildDirectorySearchModal)
 import noopAll from "noop" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 7165 */;
+import useInitialValueDefault from "useInitialValue" /* 5822 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -12,7 +12,7 @@ const result = require("set").fileFinishedImporting("modules/directory_channels/
 
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;
-  return jsx(_require(6343).Navigator, {
+  return jsx(_require(5889).Navigator, {
     screens: useInitialValueDefault(() => ({
       [closure_1_4]: {
         fullscreen: true,

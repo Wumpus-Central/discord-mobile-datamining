@@ -1,9 +1,9 @@
-// === Module 9365: usePremiumFeatures ===
+// === Module 8772: usePremiumFeatures ===
 
-// Module 9365 (usePremiumFeatures)
+// Module 8772 (usePremiumFeatures)
 import closure_3 from "noop" /* 19 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import { TOTAL_PREMIUM_GROUP_USERS } from "SubscriptionStatusTypes" /* 4056 */;
+import { TOTAL_PREMIUM_GROUP_USERS } from "SubscriptionStatusTypes" /* 4057 */;
 
 const require = arg1;
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: c4, PremiumTypes: c5 } = GuildFeatures);

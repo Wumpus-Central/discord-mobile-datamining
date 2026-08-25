@@ -1,9 +1,9 @@
-// === Module 11708: storeListingToGuildPowerup ===
+// === Module 12050: storeListingToGuildPowerup ===
 
-// Module 11708 (storeListingToGuildPowerup)
+// Module 12050 (storeListingToGuildPowerup)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1925 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4266 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4267 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 ({ DEFAULT_SOUND_SLOTS: c0, DEFAULT_STICKER_SLOTS: closure_1 } = GuildFeatures);

@@ -1,12 +1,12 @@
-// === Module 4574: BaseConnectionEvent ===
+// === Module 4479: BaseConnectionEvent ===
 
-// Module 4574 (BaseConnectionEvent)
+// Module 4479 (BaseConnectionEvent)
 import set from "set" /* 2 */;
-import destroy from "destroy" /* 4575 */;
-import destroy2 from "destroy" /* 4586 */;
-import Video from "Video" /* 4646 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 4647 */;
-import DesktopSources from "DesktopSources" /* 4534 */;
+import destroy from "destroy" /* 4480 */;
+import destroy2 from "destroy" /* 4491 */;
+import Video from "Video" /* 4551 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 4552 */;
+import DesktopSources from "DesktopSources" /* 4444 */;
 
 let closure_2 = DesktopSources.MediaEngineImplementations;
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");
@@ -23,12 +23,12 @@ export const determineMediaEngine = function determineMediaEngine() {
   ({ NATIVE: arr[0], WEBRTC: arr[1] } = closure_2);
   let DUMMY = items.find((arg0) => {
     if (constants.NATIVE === arg0) {
-      let _default = callback(4575).default;
+      let _default = callback(4480).default;
     } else {
       if (tmp.WEBRTC !== arg0) {
         const DUMMY = tmp.DUMMY;
       }
-      _default = callback(4646).default;
+      _default = callback(4551).default;
     }
     return _default.supported();
   });

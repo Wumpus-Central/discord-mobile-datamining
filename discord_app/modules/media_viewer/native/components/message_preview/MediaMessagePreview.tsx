@@ -1,19 +1,19 @@
-// === Module 12118: MeasureMessage ===
+// === Module 12456: MeasureMessage ===
 
-// Module 12118 (MeasureMessage)
+// Module 12456 (MeasureMessage)
 import ThemesDefault from "Themes" /* 712 */;
-import setOptionsDefault from "setOptions" /* 8196 */;
+import setOptionsDefault from "setOptions" /* 8192 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleLoadThreadsSuccess" /* 7277 */;
-import closure_8 from "handleReaction" /* 4976 */;
+import closure_7 from "handleLoadThreadsSuccess" /* 6002 */;
+import closure_8 from "handleReaction" /* 6006 */;
 import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "reinjectEphemerals" /* 4999 */;
-import closure_11 from "messages" /* 9103 */;
+import closure_10 from "reinjectEphemerals" /* 4623 */;
+import closure_11 from "messages" /* 9069 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function MeasureMessage(message) {
@@ -304,7 +304,7 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "absolute", message: null, messageChannel: "call", selectedChannelId: "right", tapLinkData: 1056813503384888500000000000000000000000000000000000000000000000000000000000000000000000 };
+        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "EMBEDDED_ACTIVITY_DEFERRED_OPEN", message: null, messageChannel: null, selectedChannelId: null, tapLinkData: null };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {

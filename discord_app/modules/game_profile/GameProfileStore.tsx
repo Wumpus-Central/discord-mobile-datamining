@@ -1,6 +1,6 @@
-// === Module 9135: getSimilarGames ===
+// === Module 9427: getSimilarGames ===
 
-// Module 9135 (getSimilarGames)
+// Module 9427 (getSimilarGames)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,9 +1,9 @@
-// === Module 7373: canChannelUseSoundboard ===
+// === Module 6099: canChannelUseSoundboard ===
 
-// Module 7373 (canChannelUseSoundboard)
+// Module 6099 (canChannelUseSoundboard)
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_4 from "handleConnectionOpen" /* 1981 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

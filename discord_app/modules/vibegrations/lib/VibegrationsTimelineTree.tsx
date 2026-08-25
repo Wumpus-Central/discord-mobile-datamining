@@ -1,8 +1,8 @@
-// === Module 15924: isSuppressedLaneFrame ===
+// === Module 15956: isSuppressedLaneFrame ===
 
-// Module 15924 (isSuppressedLaneFrame)
+// Module 15956 (isSuppressedLaneFrame)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3404 */;
+import messagesProxyDefault from "messagesProxy" /* 3405 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 
 require = arg1;

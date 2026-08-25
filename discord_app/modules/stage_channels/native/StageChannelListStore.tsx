@@ -1,7 +1,7 @@
-// === Module 12657: useActiveSpeakerPillScrollHandler ===
+// === Module 11013: useActiveSpeakerPillScrollHandler ===
 
-// Module 12657 (useActiveSpeakerPillScrollHandler)
-import isIterable from "isIterable" /* 4009 */;
+// Module 11013 (useActiveSpeakerPillScrollHandler)
+import isIterable from "isIterable" /* 4010 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import identity from "identity" /* 700 */;
@@ -29,7 +29,7 @@ export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillSc
     const items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, first(4009).shallow), 2);
+  }, first(4010).shallow), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   let items = [tmp[1]];

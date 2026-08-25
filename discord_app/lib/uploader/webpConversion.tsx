@@ -1,6 +1,6 @@
-// === Module 4883: _shouldConvertToWebP ===
+// === Module 5006: _shouldConvertToWebP ===
 
-// Module 4883 (_shouldConvertToWebP)
+// Module 5006 (_shouldConvertToWebP)
 import timestampDefault from "timestamp" /* 3 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1217 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -35,7 +35,7 @@ function _shouldConvertToWebP2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -249,7 +249,7 @@ function _performWebPConversion() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -518,7 +518,7 @@ function _maybeConvertToWebP() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

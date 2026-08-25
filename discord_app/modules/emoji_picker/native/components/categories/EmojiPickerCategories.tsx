@@ -1,13 +1,13 @@
-// === Module 9460: EXPRESSION_FOOTER_HEIGHT ===
+// === Module 8902: EXPRESSION_FOOTER_HEIGHT ===
 
-// Module 9460 (EXPRESSION_FOOTER_HEIGHT)
+// Module 8902 (EXPRESSION_FOOTER_HEIGHT)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 6768 */;
+import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 5286 */;
 import ME from "ME" /* 676 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 let c3 = importAllResult;

@@ -1,11 +1,11 @@
-// === Module 8929: initialize ===
+// === Module 9186: initialize ===
 
-// Module 8929 (initialize)
+// Module 9186 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getNextShownUpcomingEventNoticeType from "getNextShownUpcomingEventNoticeType" /* 8930 */;
+import getNextShownUpcomingEventNoticeType from "getNextShownUpcomingEventNoticeType" /* 9187 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "scheduledEventSort" /* 4374 */;
+import closure_3 from "scheduledEventSort" /* 7132 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 require = arg1;

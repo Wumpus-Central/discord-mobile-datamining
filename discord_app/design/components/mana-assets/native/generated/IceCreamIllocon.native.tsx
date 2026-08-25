@@ -1,10 +1,10 @@
-// === Module 5941: IceCreamIllocon ===
+// === Module 6631: IceCreamIllocon ===
 
-// Module 5941 (IceCreamIllocon)
+// Module 6631 (IceCreamIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5942 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6632 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/IceCreamIllocon.native.tsx");

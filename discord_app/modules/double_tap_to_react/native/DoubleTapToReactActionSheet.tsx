@@ -1,17 +1,17 @@
-// === Module 11604: EmojiConfetti ===
+// === Module 11950: EmojiConfetti ===
 
-// Module 11604 (EmojiConfetti)
+// Module 11950 (EmojiConfetti)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import closure_8 from "getEmojiToGroupId" /* 6764 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_8 from "getEmojiToGroupId" /* 5282 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import set from "set" /* 500 */;
 
 const require = arg1;
@@ -23,15 +23,15 @@ function EmojiConfetti(children) {
   let sharedValue1;
   let sharedValue2;
   let sharedValue3;
-  sharedValue = top(4119).useSharedValue(0);
-  let obj = top(4119);
-  sharedValue1 = top(4119).useSharedValue(0);
-  let obj2 = top(4119);
-  sharedValue2 = top(4119).useSharedValue(0.2);
-  let obj3 = top(4119);
-  sharedValue3 = top(4119).useSharedValue(0);
-  let obj4 = top(4119);
-  const mountLayoutEffect = top(4766).useMountLayoutEffect(() => {
+  sharedValue = top(4120).useSharedValue(0);
+  let obj = top(4120);
+  sharedValue1 = top(4120).useSharedValue(0);
+  let obj2 = top(4120);
+  sharedValue2 = top(4120).useSharedValue(0.2);
+  let obj3 = top(4120);
+  sharedValue3 = top(4120).useSharedValue(0);
+  let obj4 = top(4120);
+  const mountLayoutEffect = top(4831).useMountLayoutEffect(() => {
     let obj = sharedValue;
     let num = 0;
     if (!closure_2) {
@@ -72,7 +72,7 @@ function EmojiConfetti(children) {
     const withTimingResult5 = top(closure_1_2[13]).withTiming(1, { duration: 360 });
     const result5 = obj4.set(obj17.withSequence(withTimingResult4, withTimingResult5, top(closure_1_2[13]).withTiming(0, { duration: 240 })));
   });
-  let obj5 = top(4766);
+  let obj5 = top(4831);
   const fn = function f() {
     let obj = { scale: sharedValue2.get() };
     const items = [obj, ];
@@ -105,8 +105,8 @@ function EmojiConfetti(children) {
   fn.__closure = { sizeValue: sharedValue2, left, rotationValue: sharedValue1, top, positionValue: sharedValue, opacityValue: sharedValue3 };
   fn.__workletHash = 1455873119263;
   fn.__initData = closure_14;
-  const style = top(4119).useAnimatedStyle(fn);
-  return callback3(left(4119).View, { style, children: children.emojiComponent });
+  const style = top(4120).useAnimatedStyle(fn);
+  return callback3(left(4120).View, { style, children: children.emojiComponent });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
@@ -317,7 +317,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -371,7 +371,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           return obj.showDoubleTapEmojiUpdatedToast(obj);
         }, 500);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

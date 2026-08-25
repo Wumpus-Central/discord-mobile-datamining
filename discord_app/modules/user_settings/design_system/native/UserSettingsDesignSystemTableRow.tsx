@@ -1,30 +1,30 @@
-// === Module 14975: MyTableRow ===
+// === Module 15005: MyTableRow ===
 
-// Module 14975 (MyTableRow)
+// Module 15005 (MyTableRow)
 import initialize from "initialize" /* 589 */;
 import Button from "Button" /* 1297 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import LinearGradientDefault from "LinearGradient" /* 4761 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
-import TableRowInner from "TableRowInner" /* 6322 */;
-import TableRowIcon from "TableRowIcon" /* 6327 */;
-import TableSwitchRow from "TableSwitchRow" /* 7216 */;
-import SettingsIcon from "SettingsIcon" /* 7393 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8125 */;
-import TableRadioRow from "TableRadioRow" /* 8139 */;
-import context from "context" /* 8140 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 8597 */;
-import registerAssetDefault from "registerAsset" /* 13531 */;
-import registerAssetDefault2 from "registerAsset" /* 13532 */;
-import registerAssetDefault3 from "registerAsset" /* 13533 */;
-import registerAssetDefault4 from "registerAsset" /* 13534 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import LinearGradientDefault from "LinearGradient" /* 4826 */;
+import TableRowInner from "TableRowInner" /* 5480 */;
+import TableRowIcon from "TableRowIcon" /* 5486 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
+import TableSwitchRow from "TableSwitchRow" /* 5874 */;
+import SettingsIcon from "SettingsIcon" /* 6120 */;
+import RowButtonWrapper from "RowButtonWrapper" /* 8121 */;
+import TableRadioRow from "TableRadioRow" /* 8135 */;
+import context from "context" /* 8136 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 8605 */;
+import registerAssetDefault from "registerAsset" /* 13566 */;
+import registerAssetDefault2 from "registerAsset" /* 13567 */;
+import registerAssetDefault3 from "registerAsset" /* 13568 */;
+import registerAssetDefault4 from "registerAsset" /* 13569 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleConnectionOpen" /* 4201 */;
+import closure_8 from "handleConnectionOpen" /* 4202 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;

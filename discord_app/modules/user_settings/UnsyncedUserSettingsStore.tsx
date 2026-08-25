@@ -340,6 +340,16 @@ Object.defineProperty(prototype, "hdrDynamicRange", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "pauseSelfStreamPreviewWhenUnfocused", {
+  get: function pauseSelfStreamPreviewWhenUnfocused() {
+    let flag = closure_12.pauseSelfStreamPreviewWhenUnfocused;
+    if (flag == null) {
+      flag = true;
+    }
+    return flag;
+  },
+  set: undefined
+});
 UnsyncedUserSettingsStore.displayName = "UnsyncedUserSettingsStore";
 UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [

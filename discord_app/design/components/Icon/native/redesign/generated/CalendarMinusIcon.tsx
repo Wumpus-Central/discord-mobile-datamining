@@ -1,10 +1,10 @@
-// === Module 15951: CalendarMinusIcon ===
+// === Module 15983: CalendarMinusIcon ===
 
-// Module 15951 (CalendarMinusIcon)
+// Module 15983 (CalendarMinusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 15952 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 15984 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,9 +1,9 @@
-// === Module 10177: getLogMetadata ===
+// === Module 10027: getLogMetadata ===
 
-// Module 10177 (getLogMetadata)
+// Module 10027 (getLogMetadata)
 import set from "set" /* 2 */;
 import getConstantsAll from "getConstants" /* 1626 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4358 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4359 */;
 
 const result = set.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 

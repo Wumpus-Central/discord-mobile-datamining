@@ -1,6 +1,6 @@
-// === Module 13953: transformGuildMember ===
+// === Module 13988: transformGuildMember ===
 
-// Module 13953 (transformGuildMember)
+// Module 13988 (transformGuildMember)
 import set from "set" /* 2 */;
 import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
 

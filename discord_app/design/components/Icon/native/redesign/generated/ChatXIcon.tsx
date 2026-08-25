@@ -1,10 +1,10 @@
-// === Module 11682: ChatXIcon ===
+// === Module 12025: ChatXIcon ===
 
-// Module 11682 (ChatXIcon)
+// Module 12025 (ChatXIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 11683 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 12026 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

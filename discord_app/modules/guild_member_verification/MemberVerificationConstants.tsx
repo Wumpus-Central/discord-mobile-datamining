@@ -1,7 +1,7 @@
-// === Module 6898: items ===
+// === Module 4894: items ===
 
-// Module 6898 (items)
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4204 */;
+// Module 4894 (items)
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4205 */;
 import set from "set" /* 2 */;
 
 const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];

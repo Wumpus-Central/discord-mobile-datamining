@@ -1,16 +1,16 @@
-// === Module 12241: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 12558: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 12241 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 12558 (UserProfileApplicationWidgetTopHeroLayout)
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4761 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6383 */;
+import LinearGradientDefault from "LinearGradient" /* 4826 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5416 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HorizontalGradient } from "ME" /* 676 */;
-import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7224 */;
+import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
@@ -37,26 +37,26 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   let _require;
   const tmp = callback4();
   [tmp3, c0] = callback(React.useState(null), 2);
-  let obj = _require(12242);
+  let obj = _require(12559);
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  obj1 = _require(12242);
+  obj1 = _require(12559);
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
-  let obj2 = _require(12242);
+  let obj2 = _require(12559);
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
-  let obj3 = _require(12242);
+  let obj3 = _require(12559);
   const hero_image = topConfig.components.hero_image;
   let image;
   const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
   if (hero_image != null) {
     image = hero_image.fields.image;
   }
-  const items = [_require(12242).ResolvedValueType.MEDIA];
+  const items = [_require(12559).ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   obj = { style: tmp.root, children: null };
   const items1 = [header.header, , ];
   obj = { style: tmp.contentRow, children: null };
   obj1 = { style: tmp.heroText, children: null };
-  const items2 = [callback2(_require(12329).FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_require(12329).FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12329).FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12329).FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [callback2(_require(12646).FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback2(_require(12646).FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12646).FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback2(_require(12646).FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj1[1] = items2;
   const items3 = [callback3(closure_6, obj1), ];
   obj2 = { style: tmp.heroImageColumn, children: null };
@@ -64,7 +64,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   if (tmp14Result) {
     obj3 = { style: null };
     obj3[0] = tmp.heroImageSkeleton;
-    tmp14Result = tmp14(tmp4(12330).ImageSkeleton, obj3);
+    tmp14Result = tmp14(tmp4(12647).ImageSkeleton, obj3);
   }
   obj2[1] = tmp14Result;
   items3[1] = callback2(closure_6, obj2);

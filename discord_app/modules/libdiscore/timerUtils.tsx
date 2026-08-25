@@ -1,6 +1,6 @@
-// === Module 17235: onTimersDelayCallback ===
+// === Module 17267: onTimersDelayCallback ===
 
-// Module 17235 (onTimersDelayCallback)
+// Module 17267 (onTimersDelayCallback)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import debounceDefault from "debounce" /* 636 */;

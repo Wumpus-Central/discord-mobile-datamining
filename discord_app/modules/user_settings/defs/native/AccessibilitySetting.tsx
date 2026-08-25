@@ -1,13 +1,13 @@
-// === Module 14741: items ===
+// === Module 14771: items ===
 
-// Module 14741 (items)
+// Module 14771 (items)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7404 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6131 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10708 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
@@ -38,7 +38,7 @@ createToggle = {
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = callback(first(7404).useSelectedDismissibleContent(items), 2);
+    const tmp = callback(first(6131).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];
@@ -63,7 +63,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return require(14744) /* SettingsAccessibilityScreen */.default;
+    return require(14774) /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

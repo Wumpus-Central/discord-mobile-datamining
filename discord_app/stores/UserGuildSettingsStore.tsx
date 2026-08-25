@@ -1,21 +1,21 @@
-// === Module 5048: updateUserGuildSettingsInternal ===
+// === Module 4589: updateUserGuildSettingsInternal ===
 
-// Module 5048 (updateUserGuildSettingsInternal)
+// Module 4589 (updateUserGuildSettingsInternal)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlagAll from "hasFlag" /* 1403 */;
-import reset from "reset" /* 4027 */;
-import resetDefault from "reset" /* 4027 */;
-import closure_4 from "initialize" /* 1983 */;
-import closure_5 from "storeThread" /* 4026 */;
+import reset from "reset" /* 4028 */;
+import resetDefault from "reset" /* 4028 */;
+import closure_4 from "initialize" /* 1984 */;
+import closure_5 from "storeThread" /* 4027 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_8 from "ensureGuildLoaded" /* 1391 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4036 */;
-import { UnreadSetting } from "ReadStateTypes" /* 5049 */;
+import { AccountNotificationFlags } from "AccountNotificationFlags" /* 4037 */;
+import { UnreadSetting } from "ReadStateTypes" /* 4590 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 import set from "set" /* 2 */;
 

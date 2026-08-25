@@ -1,9 +1,9 @@
-// === Module 12020: useMobileCollectiblesPurchaseSKU ===
+// === Module 12345: useMobileCollectiblesPurchaseSKU ===
 
-// Module 12020 (useMobileCollectiblesPurchaseSKU)
+// Module 12345 (useMobileCollectiblesPurchaseSKU)
 import initialize from "initialize" /* 589 */;
-import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9286 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10396 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9565 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10247 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

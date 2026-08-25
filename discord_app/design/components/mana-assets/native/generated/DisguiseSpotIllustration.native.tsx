@@ -1,10 +1,10 @@
-// === Module 5663: DisguiseSpotIllustration ===
+// === Module 6349: DisguiseSpotIllustration ===
 
-// Module 5663 (DisguiseSpotIllustration)
+// Module 6349 (DisguiseSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5664 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6350 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DisguiseSpotIllustration.native.tsx");

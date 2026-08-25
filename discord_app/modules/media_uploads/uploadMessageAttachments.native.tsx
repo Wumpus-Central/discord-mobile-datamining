@@ -1,8 +1,8 @@
-// === Module 7619: _uploadMessageAttachments ===
+// === Module 7440: _uploadMessageAttachments ===
 
-// Module 7619 (_uploadMessageAttachments)
+// Module 7440 (_uploadMessageAttachments)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7620 */;
+import closure_4 from "initialize" /* 7441 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -24,7 +24,7 @@ function _uploadMessageAttachments() {
           obj[0] = attachments;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -65,13 +65,13 @@ function _uploadMessageAttachments() {
               return obj1;
             } else if (set.has(dependencyMap)) {
               set = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
-              const tmp16 = new callback2(7621)();
+              const tmp16 = new callback2(7442)();
               set = tmp16;
               const _HermesInternal = HermesInternal;
               closure_6 = "pending-upload-" + set._file.id;
-              let obj2 = callback(4808);
+              let obj2 = callback(4625);
               obj2 = {};
               const merged = Object.assign(callback2);
               obj2.key = closure_6;

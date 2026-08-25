@@ -1,6 +1,6 @@
-// === Module 5952: metadata ===
+// === Module 6644: metadata ===
 
-// Module 5952 (metadata)
+// Module 6644 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LavaIllocon-2x.png.js");

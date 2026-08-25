@@ -1,6 +1,6 @@
-// === Module 8912: handleFormInit ===
+// === Module 9169: handleFormInit ===
 
-// Module 8912 (handleFormInit)
+// Module 9169 (handleFormInit)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import sendRequest from "sendRequest" /* 530 */;
@@ -11,19 +11,19 @@ import createChannelRecord from "createChannelRecord" /* 1395 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 import isValueEqual from "isValueEqual" /* 1431 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import tDefault from "t" /* 3978 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8913 */;
-import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 8914 */;
-import fetchVanityUrl from "fetchVanityUrl" /* 8916 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8917 */;
-import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 8918 */;
-import closure_14 from "handleUpdateStart" /* 8891 */;
-import closure_17 from "createFromServer" /* 8083 */;
+import hooksDefault from "hooks" /* 3979 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9170 */;
+import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 9171 */;
+import fetchVanityUrl from "fetchVanityUrl" /* 9173 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9174 */;
+import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 9175 */;
+import closure_14 from "handleUpdateStart" /* 9148 */;
+import closure_17 from "createFromServer" /* 7905 */;
 import closure_18 from "createdAt" /* 1930 */;
 import closure_19 from "createGuildRecordFromRust" /* 1910 */;
 import closure_20 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8294 */;
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8295 */;
 import set from "set" /* 2 */;
 
 function handleFormInit(location) {
@@ -103,7 +103,7 @@ function _createInvite(code) {
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
   const created_at = code.created_at;
-  obj[9] = tDefault(created_at);
+  obj[9] = hooksDefault(created_at);
   ({ flags: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;

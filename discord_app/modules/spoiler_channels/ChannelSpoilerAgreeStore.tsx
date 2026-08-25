@@ -1,6 +1,6 @@
-// === Module 5273: initialize ===
+// === Module 6054: initialize ===
 
-// Module 5273 (initialize)
+// Module 6054 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "fetchFingerprint" /* 1218 */;

@@ -1,7 +1,7 @@
-// === Module 4020: version ===
+// === Module 4021: version ===
 
-// Module 4020 (version)
-import sortedIndexByDefault from "sortedIndexBy" /* 4021 */;
+// Module 4021 (version)
+import sortedIndexByDefault from "sortedIndexBy" /* 4022 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 let closure_3 = [];

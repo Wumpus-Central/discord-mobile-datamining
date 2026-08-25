@@ -1,8 +1,8 @@
-// === Module 9780: openClearAllIncomingRequestsConfirmationModal ===
+// === Module 9396: openClearAllIncomingRequestsConfirmationModal ===
 
-// Module 9780 (openClearAllIncomingRequestsConfirmationModal)
+// Module 9396 (openClearAllIncomingRequestsConfirmationModal)
 import set from "set" /* 2 */;
-import openClearAllIncomingRequestsConfirmationModal from "openClearAllIncomingRequestsConfirmationModal" /* 9781 */;
+import openClearAllIncomingRequestsConfirmationModal from "openClearAllIncomingRequestsConfirmationModal" /* 9397 */;
 
 const result = set.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
 

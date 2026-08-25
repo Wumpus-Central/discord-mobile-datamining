@@ -1,13 +1,13 @@
-// === Module 8587: getGuildBadgeSource ===
+// === Module 8595: getGuildBadgeSource ===
 
-// Module 8587 (getGuildBadgeSource)
+// Module 8595 (getGuildBadgeSource)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import registerAssetDefault from "registerAsset" /* 8588 */;
-import registerAssetDefault2 from "registerAsset" /* 8589 */;
-import registerAssetDefault3 from "registerAsset" /* 8590 */;
-import registerAssetDefault4 from "registerAsset" /* 8591 */;
+import registerAssetDefault from "registerAsset" /* 8596 */;
+import registerAssetDefault2 from "registerAsset" /* 8597 */;
+import registerAssetDefault3 from "registerAsset" /* 8598 */;
+import registerAssetDefault4 from "registerAsset" /* 8599 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

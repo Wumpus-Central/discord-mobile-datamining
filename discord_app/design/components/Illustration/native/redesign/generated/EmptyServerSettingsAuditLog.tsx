@@ -1,9 +1,9 @@
-// === Module 16870: getEmptyServerSettingsAuditLogSource ===
+// === Module 16902: getEmptyServerSettingsAuditLogSource ===
 
-// Module 16870 (getEmptyServerSettingsAuditLogSource)
+// Module 16902 (getEmptyServerSettingsAuditLogSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7946 */;
+import getIllustrationSource from "getIllustrationSource" /* 7767 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getEmptyServerSettingsAuditLogSource = function getEmptyServerSetti
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16871);
+      return callback(16903);
     },
     darker() {
-      return callback(16872);
+      return callback(16904);
     },
     light() {
-      return callback(16873);
+      return callback(16905);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useEmptyServerSettingsAuditLogSource = function useEmptyServerSetti
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16871);
+      return callback(16903);
     },
     darker() {
-      return callback(16872);
+      return callback(16904);
     },
     light() {
-      return callback(16873);
+      return callback(16905);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const EmptyServerSettingsAuditLog = function EmptyServerSettingsAuditLog(
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16871);
+      return callback(16903);
     },
     darker() {
-      return callback(16872);
+      return callback(16904);
     },
     light() {
-      return callback(16873);
+      return callback(16905);
     }
   };
   obj = {};

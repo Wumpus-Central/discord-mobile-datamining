@@ -1,6 +1,6 @@
-// === Module 11087: _transformMetadataToCamelCase ===
+// === Module 11429: _transformMetadataToCamelCase ===
 
-// Module 11087 (_transformMetadataToCamelCase)
+// Module 11429 (_transformMetadataToCamelCase)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_automod/DataUtils.tsx");

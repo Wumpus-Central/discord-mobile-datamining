@@ -1,11 +1,11 @@
-// === Module 13876: set ===
+// === Module 13911: set ===
 
-// Module 13876 (set)
+// Module 13911 (set)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4726 */;
+import initializeDefault from "initialize" /* 4562 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4033 */;
+import closure_5 from "markAllUserIdListsStale" /* 4034 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import set from "set" /* 2 */;
 
@@ -26,7 +26,7 @@ class AccessibilityCallManager extends tmp4 {
           if (!obj2.isIOS()) {
             const channel = store2.getChannel(channelId);
             if (null != channel) {
-              const channelName = tmp4(4989).computeChannelName(channel, closure_6, closure_5);
+              const channelName = tmp4(4574).computeChannelName(channel, closure_6, closure_5);
               if (null != channelName) {
                 obj.add(channelId);
                 const AccessibilityAnnouncer = tmp4(1363).AccessibilityAnnouncer;
@@ -35,10 +35,10 @@ class AccessibilityCallManager extends tmp4 {
                 obj[0] = channelName;
                 AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
               }
-              const tmp4Result = tmp4(4989);
+              const tmp4Result = tmp4(4574);
             }
           } else {
-            const NativePhoneIntegrationEnabled = tmp4(4069).NativePhoneIntegrationEnabled;
+            const NativePhoneIntegrationEnabled = tmp4(4070).NativePhoneIntegrationEnabled;
           }
           obj2 = callback(500);
         }
@@ -59,7 +59,7 @@ class AccessibilityCallManager extends tmp4 {
             if (!obj3.isIOS()) {
               const channel = store2.getChannel(channelId);
               if (null != channel) {
-                const channelName = tmp4(4989).computeChannelName(channel, closure_6, closure_5);
+                const channelName = tmp4(4574).computeChannelName(channel, closure_6, closure_5);
                 if (null != channelName) {
                   obj2.add(channelId);
                   const AccessibilityAnnouncer = tmp4(1363).AccessibilityAnnouncer;
@@ -68,10 +68,10 @@ class AccessibilityCallManager extends tmp4 {
                   obj[0] = channelName;
                   AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp4(1236).t["Bm0A/p"], obj), "assertive");
                 }
-                const tmp4Result = tmp4(4989);
+                const tmp4Result = tmp4(4574);
               }
             } else {
-              const NativePhoneIntegrationEnabled = tmp4(4069).NativePhoneIntegrationEnabled;
+              const NativePhoneIntegrationEnabled = tmp4(4070).NativePhoneIntegrationEnabled;
             }
             obj3 = callback(500);
           }

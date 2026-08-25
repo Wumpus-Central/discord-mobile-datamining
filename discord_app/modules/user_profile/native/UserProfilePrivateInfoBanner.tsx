@@ -1,13 +1,13 @@
-// === Module 12355: UserProfilePrivateInfoBanner ===
+// === Module 12673: UserProfilePrivateInfoBanner ===
 
-// Module 12355 (UserProfilePrivateInfoBanner)
+// Module 12673 (UserProfilePrivateInfoBanner)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import Text from "Text" /* 4376 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

@@ -1,10 +1,10 @@
-// === Module 9938: TvIcon ===
+// === Module 9794: TvIcon ===
 
-// Module 9938 (TvIcon)
+// Module 9794 (TvIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9939 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 9795 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

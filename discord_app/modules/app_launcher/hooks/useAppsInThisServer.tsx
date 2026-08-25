@@ -1,10 +1,10 @@
-// === Module 11350: useAppsInThisServer ===
+// === Module 11706: useAppsInThisServer ===
 
-// Module 11350 (useAppsInThisServer)
+// Module 11706 (useAppsInThisServer)
 import closure_4 from "noop" /* 19 */;
-import { useGuildIndexState } from "getIndexKey" /* 8487 */;
+import { useGuildIndexState } from "getIndexKey" /* 8494 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 5251 */;
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 4838 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");

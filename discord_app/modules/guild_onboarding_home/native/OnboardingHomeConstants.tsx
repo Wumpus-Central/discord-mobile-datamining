@@ -1,6 +1,6 @@
-// === Module 15883: ONBOARDING_HOME_RESOURCES_SHEET_KEY ===
+// === Module 15915: ONBOARDING_HOME_RESOURCES_SHEET_KEY ===
 
-// Module 15883 (ONBOARDING_HOME_RESOURCES_SHEET_KEY)
+// Module 15915 (ONBOARDING_HOME_RESOURCES_SHEET_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeConstants.tsx");

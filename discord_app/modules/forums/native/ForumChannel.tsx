@@ -1,27 +1,27 @@
-// === Module 11988: forumKeyExtractor ===
+// === Module 12316: forumKeyExtractor ===
 
-// Module 11988 (forumKeyExtractor)
+// Module 12316 (forumKeyExtractor)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import dispatcherDefault from "dispatcher" /* 4097 */;
-import Text from "Text" /* 4739 */;
-import registerAssetDefault from "registerAsset" /* 7958 */;
-import useGradientBottom from "useGradientBottom" /* 8540 */;
+import dispatcherDefault from "dispatcher" /* 4098 */;
+import Text from "Text" /* 4376 */;
+import registerAssetDefault from "registerAsset" /* 7779 */;
+import useGradientBottom from "useGradientBottom" /* 8548 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 4025 */;
-import closure_6 from "handleThreadCreateOrUpdate" /* 4974 */;
+import closure_5 from "initialize" /* 4026 */;
+import closure_6 from "handleThreadCreateOrUpdate" /* 5330 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "handleChanged" /* 4830 */;
-import closure_9 from "recomputeGuild" /* 4982 */;
-import { useForumChannelStore } from "set" /* 11229 */;
+import closure_8 from "handleChanged" /* 4742 */;
+import closure_9 from "recomputeGuild" /* 5238 */;
+import { useForumChannelStore } from "set" /* 11589 */;
 import ME from "ME" /* 676 */;
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
 import { Fonts } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
-import importDefaultResult from "createTextStyle" /* 6819 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
+import importDefaultResult from "createTextStyle" /* 5342 */;
 import set from "set" /* 500 */;
 
 require = arg1;
@@ -114,10 +114,10 @@ function SortAndViewOptions(channel) {
     t = { variant: "secondary", text: null, onPress: null, size: "sm", icon: null };
     t[1] = string3Result;
     t[2] = callback;
-    ArrowsUpDownIcon = ArrowsUpDownIcon(11380).ArrowsUpDownIcon;
+    ArrowsUpDownIcon = ArrowsUpDownIcon(11736).ArrowsUpDownIcon;
     tmp5Result = tmp5(ArrowsUpDownIcon, { size: "xxs" });
     t[4] = tmp5Result;
-    tmp5Result = tmp5(ArrowsUpDownIcon(4750).Button, t);
+    tmp5Result = tmp5(ArrowsUpDownIcon(4815).Button, t);
   } else {
     const intl = ArrowsUpDownIcon(1236).intl;
     const string = intl.string;
@@ -136,7 +136,7 @@ function SortAndViewOptions(channel) {
     obj[0] = tmp.optionsPill;
     obj = { size: "xs", style: null };
     obj[1] = tmp.sortOptionsIcon;
-    const items1 = [tmp5(ArrowsUpDownIcon(11380).ArrowsUpDownIcon, obj), , ];
+    const items1 = [tmp5(ArrowsUpDownIcon(11736).ArrowsUpDownIcon, obj), , ];
     obj1 = { variant: "text-sm/medium", color: "interactive-text-default", style: null, children: null };
     obj1[2] = tmp.sortOptionsText;
     const intl2 = ArrowsUpDownIcon(1236).intl;
@@ -148,11 +148,11 @@ function SortAndViewOptions(channel) {
       string2Result = string2(t2.xyYt8A);
     }
     obj1[3] = string2Result;
-    items1[1] = tmp5(ArrowsUpDownIcon(4739).Text, obj1);
-    items1[2] = tmp5(ArrowsUpDownIcon(9501).ChevronSmallDownIcon, { size: "xs" });
+    items1[1] = tmp5(ArrowsUpDownIcon(4376).Text, obj1);
+    items1[2] = tmp5(ArrowsUpDownIcon(9625).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items1;
     obj[6] = closure_16(View, obj);
-    return tmp5(ArrowsUpDownIcon(5438).PressableOpacity, obj);
+    return tmp5(ArrowsUpDownIcon(4949).PressableOpacity, obj);
   }
 }
 function TagFilter(channel) {
@@ -169,8 +169,8 @@ function TagFilter(channel) {
     const intl3 = tmp4(1236).intl;
     obj[1] = intl3.string(tmp4(1236).t["112vVE"]);
     obj[2] = handlePress;
-    obj[4] = tmp3(tmp4(8053).TagIcon, { size: "xxs" });
-    let tmp3Result = tmp3(tmp4(4750).Button, obj);
+    obj[4] = tmp3(tmp4(7875).TagIcon, { size: "xxs" });
+    let tmp3Result = tmp3(tmp4(4815).Button, obj);
   } else {
     obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.8, style: null, onPress: null, children: null };
     const intl = tmp4(1236).intl;
@@ -186,7 +186,7 @@ function TagFilter(channel) {
       const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
       obj2[2] = tmp.countText;
       obj2[3] = tagFilter.size;
-      obj1[1] = tmp3(tmp4(4739).Text, obj2);
+      obj1[1] = tmp3(tmp4(4376).Text, obj2);
       tmp3Result = tmp3(tmp6, obj1);
     }
     const items = [tmp3Result, , ];
@@ -194,11 +194,11 @@ function TagFilter(channel) {
     obj3[2] = tmp.sortOptionsText;
     const intl2 = tmp4(1236).intl;
     obj3[3] = intl2.string(tmp4(1236).t["112vVE"]);
-    items[1] = tmp3(tmp4(4739).Text, obj3);
-    items[2] = tmp3(tmp4(9501).ChevronSmallDownIcon, { size: "xs" });
+    items[1] = tmp3(tmp4(4376).Text, obj3);
+    items[2] = tmp3(tmp4(9625).ChevronSmallDownIcon, { size: "xs" });
     obj[1] = items;
     obj[5] = closure_16(View, obj);
-    tmp3Result = tmp3(tmp4(5438).PressableOpacity, obj);
+    tmp3Result = tmp3(tmp4(4949).PressableOpacity, obj);
     const tmp5 = closure_16;
   }
   return tmp3Result;

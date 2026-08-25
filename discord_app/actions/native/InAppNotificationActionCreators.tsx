@@ -1,6 +1,6 @@
-// === Module 10070: dispatcher ===
+// === Module 9926: dispatcher ===
 
-// Module 10070 (dispatcher)
+// Module 9926 (dispatcher)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,12 +1,12 @@
-// === Module 11798: useMaybeGetSortedBoosts ===
+// === Module 12138: useMaybeGetSortedBoosts ===
 
-// Module 11798 (useMaybeGetSortedBoosts)
+// Module 12138 (useMaybeGetSortedBoosts)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleModifyingAppliedBoostStart" /* 11780 */;
-import closure_6 from "handleConnectionReset" /* 6741 */;
-import closure_7 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "handleModifyingAppliedBoostStart" /* 12120 */;
+import closure_6 from "handleConnectionReset" /* 5250 */;
+import closure_7 from "trackCommunicationDisabled" /* 1992 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 
 const require = arg1;

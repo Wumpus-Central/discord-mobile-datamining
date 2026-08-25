@@ -1,10 +1,10 @@
-// === Module 16851: getTargetType ===
+// === Module 16883: getTargetType ===
 
-// Module 16851 (getTargetType)
+// Module 16883 (getTargetType)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3978 */;
+import hooksDefault from "hooks" /* 3979 */;
 import ME from "ME" /* 676 */;
 
 function getTargetType(action) {
@@ -269,7 +269,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = tDefault;
+    const tmp8 = hooksDefault;
     timestampStart = tmp8(DISCORD_EPOCHDefault.extractTimestamp(tmp5.id));
     const obj = DISCORD_EPOCHDefault;
   }

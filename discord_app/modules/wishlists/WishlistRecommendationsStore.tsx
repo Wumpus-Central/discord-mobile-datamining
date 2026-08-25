@@ -1,9 +1,9 @@
-// === Module 10386: handleUserSettingsStoreUpdate ===
+// === Module 10237: handleUserSettingsStoreUpdate ===
 
-// Module 10386 (handleUserSettingsStoreUpdate)
+// Module 10237 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "_getSystemLocale" /* 1995 */;
+import closure_0 from "_getSystemLocale" /* 1996 */;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_0.locale) {

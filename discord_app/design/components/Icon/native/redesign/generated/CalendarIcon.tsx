@@ -1,10 +1,10 @@
-// === Module 8934: CalendarIcon ===
+// === Module 9191: CalendarIcon ===
 
-// Module 8934 (CalendarIcon)
+// Module 9191 (CalendarIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8935 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 9192 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

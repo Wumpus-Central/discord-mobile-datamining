@@ -1,6 +1,6 @@
-// === Module 7561: handleSummarizeThreadFinish ===
+// === Module 7379: handleSummarizeThreadFinish ===
 
-// Module 7561 (handleSummarizeThreadFinish)
+// Module 7379 (handleSummarizeThreadFinish)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

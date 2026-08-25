@@ -1,6 +1,6 @@
-// === Module 12732: componentDidMount ===
+// === Module 13266: componentDidMount ===
 
-// Module 12732 (componentDidMount)
+// Module 13266 (componentDidMount)
 import applyDefault from "apply" /* 12 */;
 import Button from "Button" /* 1297 */;
 import { jsxs } from "jsxProd" /* 21 */;

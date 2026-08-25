@@ -1,10 +1,10 @@
-// === Module 9125: ArrowAngleRightUpIcon ===
+// === Module 11238: ArrowAngleRightUpIcon ===
 
-// Module 9125 (ArrowAngleRightUpIcon)
+// Module 11238 (ArrowAngleRightUpIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9126 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 11239 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

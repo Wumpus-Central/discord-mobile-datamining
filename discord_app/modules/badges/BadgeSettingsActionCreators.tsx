@@ -1,6 +1,6 @@
-// === Module 14088: _updateBadgeSettings ===
+// === Module 14123: _updateBadgeSettings ===
 
-// Module 14088 (_updateBadgeSettings)
+// Module 14123 (_updateBadgeSettings)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -24,7 +24,7 @@ function _updateBadgeSettings() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

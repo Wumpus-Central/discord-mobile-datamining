@@ -1,13 +1,13 @@
-// === Module 9698: _getFilterBlob ===
+// === Module 9308: _getFilterBlob ===
 
-// Module 9698 (_getFilterBlob)
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9701 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9703 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9705 */;
+// Module 9308 (_getFilterBlob)
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9311 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9313 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9315 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9699 */;
-import VideoFilterType from "VideoFilterType" /* 8420 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9309 */;
+import VideoFilterType from "VideoFilterType" /* 8428 */;
 import { NOOP } from "ME" /* 676 */;
 
 require = arg1;
@@ -72,7 +72,7 @@ function _applyBackgroundOption() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -94,13 +94,13 @@ function _applyBackgroundOption() {
               c5 = undefined;
               closure_3 = false;
               if (null == source) {
-                closure_1_10(tmp57, tmp58, callback(4574).FilterSettingsGraph.NONE);
+                closure_1_10(tmp57, tmp58, callback(4479).FilterSettingsGraph.NONE);
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else if (tmp59 === c7) {
-                closure_1_10(tmp57, tmp58, callback(4574).FilterSettingsGraph.BACKGROUND_BLUR);
+                closure_1_10(tmp57, tmp58, callback(4479).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 if (typeof tmp59 !== "string") {
                   if (typeof tmp59 !== "number") {
@@ -165,7 +165,7 @@ function _applyBackgroundOption() {
                     }
                   }
                 }
-                const tmp24 = callback2(9704)()[tmp59];
+                const tmp24 = callback2(9314)()[tmp59];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {
@@ -258,7 +258,7 @@ function _applyBackgroundOptionLive() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -318,7 +318,7 @@ function _applyBackgroundOptionLive() {
               const result = obj.trackBackgroundOptionUpdated(callback, location, "Enabled");
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp24) {
           c5 = tmp;
@@ -358,7 +358,7 @@ function _applyBackgroundOptionPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -420,7 +420,7 @@ function _applyBackgroundOptionPreview() {
               const result1 = obj.trackBackgroundOptionUpdated(callback, location, "Preview");
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           c6 = tmp;

@@ -1,7 +1,7 @@
-// === Module 17110: useInviteApplicationBypassInfo ===
+// === Module 17142: useInviteApplicationBypassInfo ===
 
-// Module 17110 (useInviteApplicationBypassInfo)
-import closure_2 from "getUncachedChannelPermissions" /* 4024 */;
+// Module 17142 (useInviteApplicationBypassInfo)
+import closure_2 from "getUncachedChannelPermissions" /* 4025 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;

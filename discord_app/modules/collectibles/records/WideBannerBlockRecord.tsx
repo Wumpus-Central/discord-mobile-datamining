@@ -1,8 +1,8 @@
-// === Module 5355: fromServer ===
+// === Module 7190: fromServer ===
 
-// Module 5355 (fromServer)
+// Module 7190 (fromServer)
 import set from "set" /* 2 */;
-import ShopBlockType from "ShopBlockType" /* 5344 */;
+import ShopBlockType from "ShopBlockType" /* 7179 */;
 
 let prototype;
 prototype = function WideBannerBlockRecord(arg0) {

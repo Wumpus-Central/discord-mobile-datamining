@@ -1,6 +1,6 @@
-// === Module 7492: useConsoleQuestUIStore ===
+// === Module 7306: useConsoleQuestUIStore ===
 
-// Module 7492 (useConsoleQuestUIStore)
+// Module 7306 (useConsoleQuestUIStore)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

@@ -1,16 +1,16 @@
-// === Module 16168: handleSetRegion ===
+// === Module 16200: handleSetRegion ===
 
-// Module 16168 (handleSetRegion)
+// Module 16200 (handleSetRegion)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Form from "Form" /* 8122 */;
-import TableRadioRow from "TableRadioRow" /* 8139 */;
+import Form from "Form" /* 8118 */;
+import TableRadioRow from "TableRadioRow" /* 8135 */;
 import closure_3 from "_toArray" /* 853 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "initialize" /* 16127 */;
+import closure_5 from "initialize" /* 16159 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;
@@ -80,7 +80,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8171).updateChannel({ rtcRegion: tmp });
+  self(8167).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     let obj = self(closure_1_2[9]);
     obj = { rtcRegion: c0 };
@@ -94,7 +94,7 @@ prototype["renderRegions"] = function renderRegions() {
   const self = this;
   const substr = callback(this.state.regions).slice(0);
   const mapped = substr.map(this.renderRegion, this);
-  return jsx(self(8140).TableRadioGroup, {
+  return jsx(self(8136).TableRadioGroup, {
     defaultValue: this.state.selectedRegionId,
     onChange(arg0) {
       return self.handleSetRegion(arg0);

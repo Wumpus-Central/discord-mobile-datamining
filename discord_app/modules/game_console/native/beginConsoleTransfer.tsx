@@ -1,6 +1,6 @@
-// === Module 9883: _beginConsoleTransfer ===
+// === Module 10965: _beginConsoleTransfer ===
 
-// Module 9883 (_beginConsoleTransfer)
+// Module 10965 (_beginConsoleTransfer)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;
 
@@ -24,7 +24,7 @@ function _beginConsoleTransfer() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -98,7 +98,7 @@ function _beginConsoleTransfer() {
             return obj;
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp35) {
           c5 = tmp;
           throw tmp35;

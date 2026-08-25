@@ -1,14 +1,14 @@
-// === Module 8257: transformSticker ===
+// === Module 8258: transformSticker ===
 
-// Module 8257 (transformSticker)
+// Module 8258 (transformSticker)
 import set from "set" /* 2 */;
-import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 4072 */;
+import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 4073 */;
 
 const StickerAnimationSettings = STICKER_PICKER_TAB_PANEL_ID.StickerAnimationSettings;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
 
 export const transformSticker = function transformSticker(tmp5Result1) {
-  const AnimateStickers = _require(4069).AnimateStickers;
+  const AnimateStickers = _require(4070).AnimateStickers;
   _require = tmp5Result1;
   let obj = {};
   const setting = AnimateStickers.getSetting();
@@ -18,16 +18,16 @@ export const transformSticker = function transformSticker(tmp5Result1) {
     str = "";
   }
   obj.asset = str;
-  let tmpResult = tmp(4828);
+  let tmpResult = tmp(4740);
   obj = { isPreview: !tmp5 };
   let str2 = tmpResult.getStickerAssetUrl(tmp5Result1, obj);
   if (str2 == null) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(8258).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(8259).NativeLottieRenderMode;
   obj.renderMode = setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-  tmpResult = tmp(8216);
+  tmpResult = tmp(8212);
   obj = {
     expensive() {
       const intl = tmp5Result1(closure_1_1[4]).intl;

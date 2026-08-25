@@ -1,6 +1,6 @@
-// === Module 7694: CountryListMode ===
+// === Module 7515: CountryListMode ===
 
-// Module 7694 (CountryListMode)
+// Module 7515 (CountryListMode)
 import set from "set" /* 2 */;
 
 const items = ["logitech", "call_of_duty"];

@@ -1,6 +1,6 @@
-// === Module 5538: metadata ===
+// === Module 6220: metadata ===
 
-// Module 5538 (metadata)
+// Module 6220 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarWumpusExample-2x.png.js");

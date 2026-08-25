@@ -1,8 +1,8 @@
-// === Module 8615: FreeFormLabel ===
+// === Module 8623: FreeFormLabel ===
 
-// Module 8615 (FreeFormLabel)
+// Module 8623 (FreeFormLabel)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4739 */;
+import Text from "Text" /* 4376 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

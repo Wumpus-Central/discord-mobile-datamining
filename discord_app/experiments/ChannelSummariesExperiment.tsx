@@ -1,6 +1,6 @@
-// === Module 10592: canSeeChannelSummaries ===
+// === Module 10389: canSeeChannelSummaries ===
 
-// Module 10592 (canSeeChannelSummaries)
+// Module 10389 (canSeeChannelSummaries)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1398 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;

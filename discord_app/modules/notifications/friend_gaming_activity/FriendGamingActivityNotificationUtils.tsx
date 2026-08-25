@@ -1,11 +1,11 @@
-// === Module 14877: onFriendGamingActivityNotificationSettingsChanged ===
+// === Module 14907: onFriendGamingActivityNotificationSettingsChanged ===
 
-// Module 14877 (onFriendGamingActivityNotificationSettingsChanged)
+// Module 14907 (onFriendGamingActivityNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4036 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import AccountNotificationFlags from "AccountNotificationFlags" /* 4037 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
 
 let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
 const AnalyticEvents = ME.AnalyticEvents;

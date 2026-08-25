@@ -1,15 +1,15 @@
-// === Module 8706: VoiceChatDrawerState ===
+// === Module 9895: VoiceChatDrawerState ===
 
-// Module 8706 (VoiceChatDrawerState)
+// Module 9895 (VoiceChatDrawerState)
 import batchUpdates from "batchUpdates" /* 705 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 8710 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 8711 */;
+import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 9897 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9898 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "participantFromServer" /* 1390 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8707 */;
-import { OrientationLockState } from "items3" /* 4485 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4549 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9896 */;
+import { OrientationLockState } from "items3" /* 4408 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4401 */;
 import keys from "keys" /* 644 */;
 import importDefaultResult from "apply" /* 12 */;
 
@@ -18,13 +18,13 @@ require = arg1;
 const timeout = new require("start").Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 obj = {};
-obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
+obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "isLoadedFromServer" };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
+obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "isLoadedFromServer" };
 obj[4] = obj;
 let closure_9 = Object.freeze(obj);
 let obj2 = keys.create(() => closure_9);
-const obj1 = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
+const obj1 = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "isLoadedFromServer" };
 const throttleResult = importDefaultResult.throttle(() => {
   const pipFocus = obj2.getState().pipFocus;
   pipFocus(705).batchUpdates(() => closure_1_10.setState({ pipFocus: !pipFocus }));
@@ -95,7 +95,7 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = _require(8712);
+  obj = _require(9899);
   const tmp7 = _require;
   const tmp8 = applicationId;
   const items = [tmp8];

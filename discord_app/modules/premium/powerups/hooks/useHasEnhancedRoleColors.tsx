@@ -1,6 +1,6 @@
-// === Module 6851: useHasEnhancedRoleColors ===
+// === Module 4843: useHasEnhancedRoleColors ===
 
-// Module 6851 (useHasEnhancedRoleColors)
+// Module 4843 (useHasEnhancedRoleColors)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

@@ -1,11 +1,11 @@
-// === Module 13616: shouldRun ===
+// === Module 13651: shouldRun ===
 
-// Module 13616 (shouldRun)
-import apexExperiment from "apexExperiment" /* 13617 */;
-import getIntervalMsDefault from "getIntervalMs" /* 13618 */;
-import TelemetryChannel from "TelemetryChannel" /* 13620 */;
+// Module 13651 (shouldRun)
+import apexExperiment from "apexExperiment" /* 13652 */;
+import getIntervalMsDefault from "getIntervalMs" /* 13653 */;
+import TelemetryChannel from "TelemetryChannel" /* 13655 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult1 from "TelemetryChannel" /* 13620 */;
+import importDefaultResult1 from "TelemetryChannel" /* 13655 */;
 
 require = arg1;
 let closure_4 = { type: "ROWS", limit: 250 };
@@ -49,7 +49,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {

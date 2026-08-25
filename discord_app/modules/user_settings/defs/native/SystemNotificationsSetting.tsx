@@ -1,13 +1,13 @@
-// === Module 14858: _handleEnableSystemNotification ===
+// === Module 14888: _handleEnableSystemNotification ===
 
-// Module 14858 (_handleEnableSystemNotification)
+// Module 14888 (_handleEnableSystemNotification)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus" /* 4844 */;
-import EventActionType from "EventActionType" /* 11631 */;
-import createToggle from "createToggle" /* 10708 */;
+import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus" /* 4618 */;
+import EventActionType from "EventActionType" /* 11974 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 function _handleEnableSystemNotification() {
@@ -24,7 +24,7 @@ function _handleEnableSystemNotification() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -60,7 +60,7 @@ function _handleEnableSystemNotification() {
         } else {
           closure_0 = arg1;
           if (closure_0 === constants2.UNDETERMINED) {
-            let obj3 = callback(11639);
+            let obj3 = callback(11982);
             const permission = obj3.requestPermission((permission_granted) => {
               let obj = tmp2(table[7]);
               obj = { action_type: constants2.ALLOW_TO_REQUEST, action_location: constants3.NOTIFICATION_SETTING, permission_granted };
@@ -79,7 +79,7 @@ function _handleEnableSystemNotification() {
             obj3 = { setting_type: "os", current_status: null };
             obj3[1] = num3;
             obj.track(constants.NOTIFICATION_SETTINGS_CLICKED, obj3);
-            obj2 = callback(11628);
+            obj2 = callback(10861);
             let result = obj2.openNotificationSettings();
           }
           c3 = 3;

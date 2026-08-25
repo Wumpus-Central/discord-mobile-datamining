@@ -1,7 +1,7 @@
-// === Module 7334: useGuildOnboardingAvailable ===
+// === Module 6059: useGuildOnboardingAvailable ===
 
-// Module 7334 (useGuildOnboardingAvailable)
-import closure_2 from "initialize" /* 1983 */;
+// Module 6059 (useGuildOnboardingAvailable)
+import closure_2 from "initialize" /* 1984 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;

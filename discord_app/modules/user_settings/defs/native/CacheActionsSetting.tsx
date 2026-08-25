@@ -1,20 +1,20 @@
-// === Module 14941: handleCacheActionPress ===
+// === Module 14971: handleCacheActionPress ===
 
-// Module 14941 (handleCacheActionPress)
+// Module 14971 (handleCacheActionPress)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import dispatcherDefault from "dispatcher" /* 4097 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6987 */;
-import ActionSheet from "ActionSheet" /* 7213 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7215 */;
-import FileUpIcon from "FileUpIcon" /* 14055 */;
-import FileWarningIcon from "FileWarningIcon" /* 14943 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import dispatcherDefault from "dispatcher" /* 4098 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5502 */;
+import ActionSheet from "ActionSheet" /* 5870 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 5872 */;
+import FileUpIcon from "FileUpIcon" /* 14090 */;
+import FileWarningIcon from "FileWarningIcon" /* 14973 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4499 */;
+import closure_4 from "_handleConnectionOpen" /* 5102 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10708 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 function handleCacheActionPress(key) {
@@ -51,7 +51,7 @@ function CacheActionsActionSheet() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            obj1 = closure_1_0(14942);
+            obj1 = closure_1_0(14972);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -86,7 +86,7 @@ function CacheActionsActionSheet() {
           const intl = callback(1236).intl;
           callback2(intl.string(callback(1236).t.GgUIfl));
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp15) {
         dependencyMap = tmp;
@@ -99,7 +99,7 @@ function CacheActionsActionSheet() {
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
-    let obj = callback(14942);
+    let obj = callback(14972);
     obj.clearCaches();
     const intl = callback(1236).intl;
     const stringResult = intl.string(callback(1236).t["23xR5w"]);
@@ -110,9 +110,9 @@ function CacheActionsActionSheet() {
       },
       content: stringResult
     };
-    callback2(4097).open(obj);
-    const obj2 = callback2(4097);
-    callback2(4346).hideActionSheet(closure_7);
+    callback2(4098).open(obj);
+    const obj2 = callback2(4098);
+    callback2(4347).hideActionSheet(closure_7);
   };
   items[1] = callback2(ActionSheetRowIcon.ActionSheetRow, obj2);
   obj[1] = items;

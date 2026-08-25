@@ -1,13 +1,13 @@
-// === Module 12060: Spacer ===
+// === Module 12385: Spacer ===
 
-// Module 12060 (Spacer)
+// Module 12385 (Spacer)
 import ThemesDefault from "Themes" /* 712 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 12061 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 12386 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function Spacer() {
@@ -97,6 +97,7 @@ function LoadingCard(cardWidth) {
 let PX_12 = ThemesDefault.space.PX_12;
 const PX_16 = ThemesDefault.space.PX_16;
 PX_12 = ThemesDefault.space.PX_12;
+let closure_12 = Array.from({ length: 3 }, (arg0, arg1) => arg1);
 createCacheKey = { container: null, header: null, card: null, coverArt: null, coverArtFallback: null, loadingArt: null };
 createCacheKey = { gap: ThemesDefault.space.PX_8, marginHorizontal: -1 * ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
@@ -109,7 +110,7 @@ let obj3 = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[4] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_8 };
 let obj4 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
+let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSimilarGames.tsx");
 
@@ -117,63 +118,55 @@ export default function GameProfileSimilarGames(trackAction) {
   trackAction = trackAction.trackAction;
   importDefault = undefined;
   const tmp = callback3();
-  const GameProfileSimilarGamesMobileExperiment = trackAction(9163).GameProfileSimilarGamesMobileExperiment;
-  const config = GameProfileSimilarGamesMobileExperiment.useConfig({ location: "GameProfileSimilarGames" });
-  ({ enabled, dense } = config);
-  const tmp6 = useSimilarGamesDefault(trackAction.gameId, enabled);
-  const similarGames = tmp6.similarGames;
-  let num = 3;
-  if (dense) {
-    num = 4;
-  }
-  const result = (useWindowDimensionsDefault().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
+  ({ similarGames, isFetching } = useSimilarGamesDefault(trackAction.gameId));
+  const result = (useWindowDimensionsDefault().width - 2 * PX_16 - 2 * PX_12 - PX_12) / 3;
   importDefault = result;
-  if (tmp6.isFetching) {
+  if (isFetching) {
     let obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.header;
     obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1236).intl;
-    obj[2] = intl.string(tmp2(1236).t["6rLyQB"]);
-    obj[1] = callback(tmp2(4739).Text, obj);
+    const intl = trackAction(1236).intl;
+    obj[2] = intl.string(trackAction(1236).t["6rLyQB"]);
+    obj[1] = callback(trackAction(4376).Text, obj);
     const items = [callback(closure_6, obj), ];
     obj1 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
-    obj1[1] = tmp9;
+    obj1[1] = closure_12;
     obj1[2] = function renderItem() {
-      return closure_1_7(closure_1_16, { cardWidth: c1 });
+      return closure_1_7(closure_1_17, { cardWidth: c1 });
     };
     obj1[4] = Spacer;
     obj1[5] = ListPadding;
     obj1[6] = ListPadding;
-    items[1] = callback(tmp2(8068).FlashList, obj1);
+    items[1] = callback(trackAction(7890).FlashList, obj1);
     obj[1] = items;
-    let tmp10 = callback2(closure_6, obj);
+    let tmp6 = callback2(closure_6, obj);
   } else {
-    tmp10 = null;
+    tmp6 = null;
     if (0 !== similarGames.length) {
       const obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.header;
       const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
-      const intl2 = tmp2(1236).intl;
-      obj4[2] = intl2.string(tmp2(1236).t["6rLyQB"]);
-      obj3[1] = callback(tmp2(4739).Text, obj4);
+      const intl2 = trackAction(1236).intl;
+      obj4[2] = intl2.string(trackAction(1236).t["6rLyQB"]);
+      obj3[1] = callback(trackAction(4376).Text, obj4);
       const items1 = [callback(closure_6, obj3), ];
       const obj5 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
       obj5[1] = similarGames;
       obj5[2] = function renderItem(game) {
-        return closure_1_7(closure_1_15, { game: game.item, trackAction, cardWidth: c1 });
+        return closure_1_7(closure_1_16, { game: game.item, trackAction, cardWidth: c1 });
       };
       obj5[4] = Spacer;
       obj5[5] = ListPadding;
       obj5[6] = ListPadding;
-      obj5[8] = result + PX_12;
-      items1[1] = callback(tmp2(8068).FlashList, obj5);
+      obj5[8] = result + tmp4;
+      items1[1] = callback(trackAction(7890).FlashList, obj5);
       obj2[1] = items1;
-      tmp10 = callback2(closure_6, obj2);
+      tmp6 = callback2(closure_6, obj2);
     }
   }
-  return tmp10;
+  return tmp6;
 };

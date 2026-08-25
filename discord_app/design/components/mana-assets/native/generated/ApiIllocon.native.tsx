@@ -1,10 +1,10 @@
-// === Module 5505: ApiIllocon ===
+// === Module 6187: ApiIllocon ===
 
-// Module 5505 (ApiIllocon)
+// Module 6187 (ApiIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5506 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6188 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ApiIllocon.native.tsx");

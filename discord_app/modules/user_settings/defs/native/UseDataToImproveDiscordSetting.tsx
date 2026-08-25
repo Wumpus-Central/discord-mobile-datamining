@@ -1,15 +1,15 @@
-// === Module 14279: toggle ===
+// === Module 14309: toggle ===
 
-// Module 14279 (toggle)
+// Module 14309 (toggle)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import componentDidMountDefault from "componentDidMount" /* 4768 */;
-import setDefault from "set" /* 4832 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14249 */;
-import handleRequestSuccess from "handleRequestSuccess" /* 14280 */;
-import closure_3 from "hasConsented" /* 5263 */;
+import setDefault from "set" /* 4744 */;
+import componentDidMountDefault from "componentDidMount" /* 4833 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14279 */;
+import handleRequestSuccess from "handleRequestSuccess" /* 14310 */;
+import closure_3 from "hasConsented" /* 5935 */;
 import { Consents } from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10708 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 createToggle = {
@@ -26,7 +26,7 @@ createToggle = {
     if (arg0) {
       let items = [Consents.USAGE_STATISTICS];
       const obj3 = handleRequestSuccess;
-      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14281).showDataPrivacyRateLimitAlert(message.message));
+      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14311).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
       let obj = setDefault;
@@ -42,7 +42,7 @@ createToggle = {
       obj[4] = componentDidMountDefault.Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.USAGE_STATISTICS];
-        return callback(14280).setConsents([], items);
+        return callback(14310).setConsents([], items);
       };
       obj.show(obj);
     }

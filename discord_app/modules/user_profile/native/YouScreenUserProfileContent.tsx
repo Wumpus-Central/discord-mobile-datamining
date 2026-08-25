@@ -1,28 +1,28 @@
-// === Module 16116: YouAvatar ===
+// === Module 16148: YouAvatar ===
 
-// Module 16116 (YouAvatar)
+// Module 16148 (YouAvatar)
 import set from "set" /* 500 */;
-import useSharedStylesDefault from "useSharedStyles" /* 9019 */;
-import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 9027 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12225 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 12226 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
+import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8989 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 12546 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 12547 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { useIsContentShown } from "withContent" /* 1383 */;
-import closure_8 from "filterPlayingActivities" /* 7288 */;
-import closure_9 from "createUserWidgetFromServer" /* 5370 */;
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8968 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7224 */;
+import closure_8 from "filterPlayingActivities" /* 5104 */;
+import closure_9 from "createUserWidgetFromServer" /* 7227 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8932 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16109).trackYouTabAvatarPress();
-    const obj = callback(16109);
-    const result1 = callback(15697).showYouAccountActionSheet();
+    const result = callback(16141).trackYouTabAvatarPress();
+    const obj = callback(16141);
+    const result1 = callback(15729).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();
@@ -58,7 +58,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
 }
 function EditSection(navigateToProfileCustomization) {
   navigateToProfileCustomization = navigateToProfileCustomization.navigateToProfileCustomization;
-  let enabled = navigateToProfileCustomization.isProfileLoaded;
+  let canSet = navigateToProfileCustomization.isProfileLoaded;
   let trackUserProfileAction;
   let first;
   let callback;
@@ -72,8 +72,8 @@ function EditSection(navigateToProfileCustomization) {
   const isBadgeManagementEnabled = obj3.useIsBadgeManagementEnabled({ location: "YouScreenUserProfileContent" });
   let obj4 = navigateToProfileCustomization(first[20]);
   const tmp8 = useIsContentShown(navigateToProfileCustomization(first[21]).DismissibleContent.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS);
-  let tmp9 = enabled;
-  if (enabled) {
+  let tmp9 = canSet;
+  if (canSet) {
     tmp9 = isDisplayNameStylesFlywheelSettersEnabled;
   }
   if (tmp9) {
@@ -83,8 +83,8 @@ function EditSection(navigateToProfileCustomization) {
   if (tmp9) {
     items.push(tmp4(tmp2[21]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK);
   }
-  let hasBadges = enabled;
-  if (enabled) {
+  let hasBadges = canSet;
+  if (canSet) {
     hasBadges = isBadgeManagementEnabled;
   }
   if (hasBadges) {
@@ -93,13 +93,13 @@ function EditSection(navigateToProfileCustomization) {
   if (hasBadges) {
     items.push(tmp4(tmp2[21]).DismissibleContent.BADGE_CUSTOMIZATION_COACHMARK);
   }
-  if (enabled) {
-    enabled = obj4.useCustomTypingIndicatorConfig("YouScreenUserProfileContent").enabled;
+  if (canSet) {
+    canSet = obj4.useCustomTypingIndicatorConfig("YouScreenUserProfileContent").canSet;
   }
-  if (enabled) {
-    enabled = !tmp8;
+  if (canSet) {
+    canSet = !tmp8;
   }
-  if (enabled) {
+  if (canSet) {
     items.push(tmp4(tmp2[21]).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_PROFILE_COACHMARK);
   }
   const tmp3 = trackUserProfileAction(first[14])();

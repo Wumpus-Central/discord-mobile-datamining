@@ -1,18 +1,18 @@
-// === Module 7633: handleUserUpdate ===
+// === Module 7454: handleUserUpdate ===
 
-// Module 7633 (handleUserUpdate)
+// Module 7454 (handleUserUpdate)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import nameFromUserDefault from "nameFromUser" /* 4223 */;
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import nameFromUserDefault from "nameFromUser" /* 4224 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "handleConnectionOpenOrResumed" /* 7278 */;
-import closure_8 from "sortActivity" /* 4564 */;
-import closure_9 from "filterPlayingActivities" /* 7288 */;
+import closure_6 from "trackCommunicationDisabled" /* 1992 */;
+import closure_7 from "handleConnectionOpenOrResumed" /* 6003 */;
+import closure_8 from "sortActivity" /* 4469 */;
+import closure_9 from "filterPlayingActivities" /* 5104 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

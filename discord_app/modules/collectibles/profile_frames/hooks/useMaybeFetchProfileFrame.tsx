@@ -1,8 +1,8 @@
-// === Module 8982: useMaybeFetchProfileFrame ===
+// === Module 8944: useMaybeFetchProfileFrame ===
 
-// Module 8982 (useMaybeFetchProfileFrame)
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8983 */;
-import useProfileFrameDefault from "useProfileFrame" /* 8994 */;
+// Module 8944 (useMaybeFetchProfileFrame)
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8945 */;
+import useProfileFrameDefault from "useProfileFrame" /* 8956 */;
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
@@ -11,7 +11,7 @@ let result = require("set").fileFinishedImporting("modules/collectibles/profile_
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
   let tmp = useFramePreviewOverrideFrameDefault();
-  const isProfileFramesEnabled = _require(8993).useIsProfileFramesEnabled(location);
+  const isProfileFramesEnabled = _require(8955).useIsProfileFramesEnabled(location);
   const tmp3 = useProfileFrameDefault(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];

@@ -1,12 +1,12 @@
-// === Module 16260: deriveProfileFramesMarketing ===
+// === Module 16292: deriveProfileFramesMarketing ===
 
-// Module 16260 (deriveProfileFramesMarketing)
+// Module 16292 (deriveProfileFramesMarketing)
 import initialize from "initialize" /* 589 */;
-import apexExperimentDefault from "apexExperiment" /* 8993 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9270 */;
-import apexExperiment from "apexExperiment" /* 9271 */;
-import apexExperimentDefault2 from "apexExperiment" /* 9271 */;
-import apexExperiment2 from "apexExperiment" /* 16261 */;
+import apexExperimentDefault from "apexExperiment" /* 8955 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9549 */;
+import apexExperiment from "apexExperiment" /* 9550 */;
+import apexExperimentDefault2 from "apexExperiment" /* 9550 */;
+import apexExperiment2 from "apexExperiment" /* 16293 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

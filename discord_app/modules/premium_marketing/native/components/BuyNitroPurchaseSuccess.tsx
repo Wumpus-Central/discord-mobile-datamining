@@ -1,11 +1,11 @@
-// === Module 8064: presentBuyNitroPurchaseSuccess ===
+// === Module 7886: presentBuyNitroPurchaseSuccess ===
 
-// Module 8064 (presentBuyNitroPurchaseSuccess)
+// Module 7886 (presentBuyNitroPurchaseSuccess)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useAlertStore from "useAlertStore" /* 4663 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4667 */;
-import { reset } from "usePremiumPlanPurchasedStore" /* 7430 */;
+import useAlertStore from "useAlertStore" /* 4746 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4750 */;
+import { reset } from "usePremiumPlanPurchasedStore" /* 7028 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 

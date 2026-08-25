@@ -1,11 +1,11 @@
-// === Module 16718: handleAppStateUpdate ===
+// === Module 16750: handleAppStateUpdate ===
 
-// Module 16718 (handleAppStateUpdate)
+// Module 16750 (handleAppStateUpdate)
 import set from "set" /* 2 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5043 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 5071 */;
-import enforcingDefault from "enforcing" /* 16719 */;
+import initializeDefault from "initialize" /* 5367 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 7081 */;
+import enforcingDefault from "enforcing" /* 16751 */;
 import ME from "ME" /* 676 */;
 
 ({ AppStates: c3, AnalyticEvents: c4 } = ME);

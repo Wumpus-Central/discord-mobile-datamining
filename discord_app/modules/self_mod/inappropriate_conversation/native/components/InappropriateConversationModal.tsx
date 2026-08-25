@@ -1,24 +1,24 @@
-// === Module 15239: IntroScreen ===
+// === Module 15269: IntroScreen ===
 
-// Module 15239 (IntroScreen)
+// Module 15269 (IntroScreen)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useNavigation from "useNavigation" /* 1500 */;
-import nameFromUserDefault from "nameFromUser" /* 4223 */;
-import Text from "Text" /* 4739 */;
-import Button from "Button" /* 4750 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5452 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 10627 */;
-import TakeActionButtonsDefault from "TakeActionButtons" /* 15240 */;
+import nameFromUserDefault from "nameFromUser" /* 4224 */;
+import Text from "Text" /* 4376 */;
+import Button from "Button" /* 4815 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6136 */;
+import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 10425 */;
+import TakeActionButtonsDefault from "TakeActionButtons" /* 15270 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { useState } from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10608 */;
+import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10406 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function IntroScreen(arg0) {
@@ -100,16 +100,16 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = callback4();
   let obj = { style: tmp.container, children: null };
-  const items = [callback2(trackAnalyticsEvent(5452).SafetyChatSpotIllustration, {}), , ];
+  const items = [callback2(trackAnalyticsEvent(6136).SafetyChatSpotIllustration, {}), , ];
   obj = { style: tmp.warningText, children: null };
   obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1236).intl;
   obj[3] = intl.string(trackAnalyticsEvent(1236).t.NUMAsF);
-  const items1 = [callback2(trackAnalyticsEvent(4739).Text, obj), ];
+  const items1 = [callback2(trackAnalyticsEvent(4376).Text, obj), ];
   obj1 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
   const intl2 = trackAnalyticsEvent(1236).intl;
   obj1[2] = intl2.string(trackAnalyticsEvent(1236).t.uicS5l);
-  items1[1] = callback2(trackAnalyticsEvent(4739).Text, obj1);
+  items1[1] = callback2(trackAnalyticsEvent(4376).Text, obj1);
   obj[1] = items1;
   items[1] = callback3(closure_7, obj);
   const obj2 = { style: tmp.ctaContainer, children: null };
@@ -120,7 +120,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     closure_1_6.openURL(closure_1_9);
     trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [callback2(trackAnalyticsEvent(4750).Button, obj3), ];
+  const items2 = [callback2(trackAnalyticsEvent(4815).Button, obj3), ];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1236).intl;
   obj4[2] = intl4.string(trackAnalyticsEvent(1236).t.ogLlvy);
@@ -128,7 +128,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     closure_1_6.openURL(closure_1_10);
     trackAnalyticsEvent(trackAnalyticsEvent(closure_1_2[15]).CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = callback2(trackAnalyticsEvent(4750).Button, obj4);
+  items2[1] = callback2(trackAnalyticsEvent(4815).Button, obj4);
   obj2[1] = items2;
   items[2] = callback3(closure_7, obj2);
   obj[1] = items;

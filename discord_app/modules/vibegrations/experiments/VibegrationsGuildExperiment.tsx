@@ -1,6 +1,6 @@
-// === Module 7253: useIsVibegrationsGuildEnabled ===
+// === Module 5976: useIsVibegrationsGuildEnabled ===
 
-// Module 7253 (useIsVibegrationsGuildEnabled)
+// Module 5976 (useIsVibegrationsGuildEnabled)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;

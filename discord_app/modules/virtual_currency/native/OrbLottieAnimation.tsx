@@ -1,6 +1,6 @@
-// === Module 10441: forwardRef ===
+// === Module 10296: forwardRef ===
 
-// Module 10441 (forwardRef)
+// Module 10296 (forwardRef)
 import closure_2 from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -10,7 +10,7 @@ const require = arg1;
 const forwardRefResult = forwardRef((animationType, ref) => {
   animationType = animationType.animationType;
   dependencyMap = undefined;
-  let obj = animationType(4314);
+  let obj = animationType(4315);
   const theme = obj.useTheme();
   const obj2 = animationType(1363);
   const tmp5 = callback(null);
@@ -35,9 +35,9 @@ const forwardRefResult = forwardRef((animationType, ref) => {
     }
   }));
   if (isThemeLightResult) {
-    let SpendEarnOrbsLottie = tmp(10442).SpendEarnOrbsLightThemeLottie;
+    let SpendEarnOrbsLottie = tmp(10297).SpendEarnOrbsLightThemeLottie;
   } else {
-    SpendEarnOrbsLottie = tmp(10445).SpendEarnOrbsLottie;
+    SpendEarnOrbsLottie = tmp(10300).SpendEarnOrbsLottie;
   }
   obj = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
   let str = "spend";

@@ -1,9 +1,9 @@
-// === Module 9998: updateContextMenuState ===
+// === Module 8746: updateContextMenuState ===
 
-// Module 9998 (updateContextMenuState)
+// Module 8746 (updateContextMenuState)
 import batchUpdates from "batchUpdates" /* 705 */;
-import _mod4119 from "module_4119" /* 4119 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4347 */;
+import _mod4120 from "module_4120" /* 4120 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4348 */;
 import closure_2 from "noop" /* 19 */;
 import keys from "keys" /* 644 */;
 
@@ -33,14 +33,14 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
     const result1 = num / 4;
     if (activeIndex.get() !== result1) {
       const result2 = activeIndex.set(result1);
-      const obj = _mod4119;
-      _mod4119.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
-      const runOnJSResult = _mod4119.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
+      const obj = _mod4120;
+      _mod4120.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
+      const runOnJSResult = _mod4120.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
     }
   }
   const result3 = activeIndex.set(-1);
 }
-keys = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: require("module_4119").runOnJS, triggerHapticFeedback: require("HapticFeedbackTypes").triggerHapticFeedback, HapticFeedbackTypes: require("HapticFeedbackTypes").HapticFeedbackTypes };
+keys = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUNDS_PAGE_Y_OFFSET: 1, INDEX_BOUNDS_PAGE_X_OFFSET: 0, INDEX_BOUNDS_OFFSET: 4, runOnJS: require("module_4120").runOnJS, triggerHapticFeedback: require("HapticFeedbackTypes").triggerHapticFeedback, HapticFeedbackTypes: require("HapticFeedbackTypes").HapticFeedbackTypes };
 updateContextMenuState.__closure = keys;
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = { code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}" };

@@ -1,8 +1,8 @@
-// === Module 9084: CRUNCHYROLL_LINK_DEST_ORIGIN ===
+// === Module 9048: CRUNCHYROLL_LINK_DEST_ORIGIN ===
 
-// Module 9084 (CRUNCHYROLL_LINK_DEST_ORIGIN)
+// Module 9048 (CRUNCHYROLL_LINK_DEST_ORIGIN)
 import set from "set" /* 2 */;
-import set2 from "set" /* 4379 */;
+import set2 from "set" /* 9049 */;
 
 const items = [set2.OAuth2Scopes.ACTIVITIES_WRITE, set2.OAuth2Scopes.EMAIL, set2.OAuth2Scopes.IDENTIFY];
 const result = set.fileFinishedImporting("modules/connections/CrunchyrollConnectionConstants.tsx");

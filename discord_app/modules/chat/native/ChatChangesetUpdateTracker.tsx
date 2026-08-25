@@ -1,6 +1,6 @@
-// === Module 10514: weakMap ===
+// === Module 11097: weakMap ===
 
-// Module 10514 (weakMap)
+// Module 11097 (weakMap)
 import set from "set" /* 2 */;
 
 const weakMap = new WeakMap();

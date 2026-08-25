@@ -1,12 +1,12 @@
-// === Module 4543: initialize ===
+// === Module 4453: initialize ===
 
-// Module 4543 (initialize)
+// Module 4453 (initialize)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DesktopSources from "DesktopSources" /* 4534 */;
+import DesktopSources from "DesktopSources" /* 4444 */;
 
 const DeviceTypes = DesktopSources.DeviceTypes;
 const CertifiedDeviceStore = "CertifiedDeviceStore";

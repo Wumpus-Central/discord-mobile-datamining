@@ -1,14 +1,14 @@
-// === Module 7466: updateSubmittedGuildJoinRequestTotal ===
+// === Module 7064: updateSubmittedGuildJoinRequestTotal ===
 
-// Module 7466 (updateSubmittedGuildJoinRequestTotal)
+// Module 7064 (updateSubmittedGuildJoinRequestTotal)
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3978 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4203 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4204 */;
+import hooksDefault from "hooks" /* 3979 */;
+import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4204 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4205 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4202 */;
+import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4203 */;
 
 require = arg1;
 function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatus) {
@@ -16,12 +16,12 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
     if (null != DELETED) {
       if (DELETED === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
-        const result = map.set(guildId, tDefault());
+        const result = map.set(guildId, hooksDefault());
       }
-      if (applicationStatus === tmp12(4204).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      if (applicationStatus === tmp12(4205).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
-        const result1 = map.set(guildId, tDefault());
+        const result1 = map.set(guildId, hooksDefault());
       }
       tmp12 = require;
     }
@@ -139,8 +139,8 @@ prototype["hasFetched"] = function hasFetched(arg0) {
     const value = obj.get(arg0);
     let tmp3 = null != value;
     if (tmp3) {
-      tmp3 = tDefault().diff(value, "seconds") < closure_20;
-      const obj2 = tDefault();
+      tmp3 = hooksDefault().diff(value, "seconds") < closure_20;
+      const obj2 = hooksDefault();
     }
     return tmp3;
   } else {
@@ -208,7 +208,7 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(dispatcherDefault, {
     ({ status, total } = arg0);
     if (status === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       closure_6[guildId] = total;
-      let result = map.set(guildId, tDefault());
+      let result = map.set(guildId, hooksDefault());
     }
     const item = requests.forEach((joinRequestId) => {
       closure_19[joinRequestId.joinRequestId] = joinRequestId;

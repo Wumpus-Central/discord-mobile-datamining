@@ -1,10 +1,10 @@
-// === Module 6929: StageLockIcon ===
+// === Module 4926: StageLockIcon ===
 
-// Module 6929 (StageLockIcon)
+// Module 4926 (StageLockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6884 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 4880 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

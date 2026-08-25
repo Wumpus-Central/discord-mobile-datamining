@@ -1,14 +1,14 @@
-// === Module 10687: getSubscriptionPlans ===
+// === Module 10488: getSubscriptionPlans ===
 
-// Module 10687 (getSubscriptionPlans)
+// Module 10488 (getSubscriptionPlans)
 import _modDef38 from "module_38" /* 38 */;
-import tDefault from "t" /* 3978 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4042 */;
-import prototype from "prototype" /* 10688 */;
-import PauseDuration from "PauseDuration" /* 10690 */;
+import hooksDefault from "hooks" /* 3979 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
+import prototype from "prototype" /* 10489 */;
+import PauseDuration from "PauseDuration" /* 10491 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "addSubscriptionPlan" /* 4047 */;
+import closure_5 from "addSubscriptionPlan" /* 4048 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -98,8 +98,8 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     const tmp9 = null != table[subscriptionPlanId];
     const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!closure_5.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(7261).fetchSubscriptionPlansForSKU(result, closure_1);
-      const tmp12Result = tmp12(7261);
+      const subscriptionPlansForSKU = tmp12(5984).fetchSubscriptionPlansForSKU(result, closure_1);
+      const tmp12Result = tmp12(5984);
     }
     const obj3 = getPremiumPlanItem;
   }
@@ -150,9 +150,9 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     obj[0] = found;
     return obj;
   } else if (null != status.pauseEndsAt) {
-    const tmp6 = tDefault(status.currentPeriodStart);
+    const tmp6 = hooksDefault(status.currentPeriodStart);
     const _Math = Math;
-    const rounded = Math.round(tDefault(status.pauseEndsAt).diff(tmp6, "days", true));
+    const rounded = Math.round(hooksDefault(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
       let tmp11 = require;
@@ -179,11 +179,11 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
 export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
-    isMomentResult = tDefault.isMoment(isSameOrAfter);
-    const obj = tDefault;
+    isMomentResult = hooksDefault.isMoment(isSameOrAfter);
+    const obj = hooksDefault;
   }
   if (isMomentResult) {
-    isMomentResult = isSameOrAfter.isSameOrAfter(tDefault());
+    isMomentResult = isSameOrAfter.isSameOrAfter(hooksDefault());
   }
   return isMomentResult;
 };

@@ -1,6 +1,6 @@
-// === Module 7186: accountLinkAuthorizationStarted ===
+// === Module 5843: accountLinkAuthorizationStarted ===
 
-// Module 7186 (accountLinkAuthorizationStarted)
+// Module 5843 (accountLinkAuthorizationStarted)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

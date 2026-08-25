@@ -1,7 +1,7 @@
-// === Module 9810: useIsSocialLayerParentApplication ===
+// === Module 10589: useIsSocialLayerParentApplication ===
 
-// Module 9810 (useIsSocialLayerParentApplication)
-import getApplicationFlags from "getApplicationFlags" /* 7912 */;
+// Module 10589 (useIsSocialLayerParentApplication)
+import getApplicationFlags from "getApplicationFlags" /* 7733 */;
 import closure_2 from "noop" /* 19 */;
 import { ApplicationFlags } from "ME" /* 676 */;
 

@@ -1,22 +1,22 @@
-// === Module 8101: audienceAckRequestToSpeak ===
+// === Module 7923: audienceAckRequestToSpeak ===
 
-// Module 8101 (audienceAckRequestToSpeak)
+// Module 7923 (audienceAckRequestToSpeak)
 import _modDef38 from "module_38" /* 38 */;
 import fromStringAll from "fromString" /* 506 */;
 import sendRequest from "sendRequest" /* 530 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import _modDef4775 from "module_4775" /* 4775 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4986 */;
-import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 4996 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5047 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6815 */;
-import fillChunk from "fillChunk" /* 8102 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import _modDef4393 from "module_4393" /* 4393 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4568 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4588 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5247 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5338 */;
+import fillChunk from "fillChunk" /* 7925 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "updateVoiceState" /* 4547 */;
+import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_6 from "updateVoiceState" /* 4399 */;
 import ME from "ME" /* 676 */;
-import { SafetyToastType } from "SafetyToastType" /* 5435 */;
+import { SafetyToastType } from "SafetyToastType" /* 7924 */;
 
 require = arg1;
 function audienceAckRequestToSpeak(channel, suppress) {
@@ -85,7 +85,7 @@ function _startStage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -105,10 +105,10 @@ function _startStage() {
               closure_1 = undefined;
               if ("" !== closure_1) {
                 if (closure_1_5.getVoiceChannelId() !== tmp28.id) {
-                  let obj2 = callback(8096);
+                  let obj2 = callback(7918);
                   obj2.connectToStage(tmp28);
                 }
-                const obj4 = callback(8106);
+                const obj4 = callback(7931);
                 c6 = 1;
                 c7 = 1;
                 obj1 = { value: null, done: false };
@@ -116,7 +116,7 @@ function _startStage() {
                 return obj1;
               } else {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           } else if (arg0 === 1) {
@@ -171,7 +171,7 @@ function _editStage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -194,7 +194,7 @@ function _editStage() {
               return obj1;
             } else {
               table = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (arg0 === 1) {
             table = 3;
@@ -244,7 +244,7 @@ function _endStage() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -276,7 +276,7 @@ function _endStage() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c1 = tmp;
@@ -425,7 +425,7 @@ export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissi
     tmp5Result = tmp5(506);
     obj.deny = tmp5Result.add(obj.deny, REQUEST_TO_SPEAK);
   }
-  const result = _modDef4775.updatePermissionOverwrite(getGuildId.id, obj);
+  const result = _modDef4393.updatePermissionOverwrite(getGuildId.id, obj);
 };
 export const startStage = function startStage(closure_1_0, arg1, GUILD_ONLY, closure_1_11) {
   const self = this;

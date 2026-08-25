@@ -1,6 +1,6 @@
-// === Module 8788: HANDSHAKE ===
+// === Module 10823: HANDSHAKE ===
 
-// Module 8788 (HANDSHAKE)
+// Module 10823 (HANDSHAKE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/rpc/RPCOpcodes.tsx");

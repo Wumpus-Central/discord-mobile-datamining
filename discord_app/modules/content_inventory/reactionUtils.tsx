@@ -1,9 +1,9 @@
-// === Module 15828: sendMessageWithEmbed ===
+// === Module 15860: sendMessageWithEmbed ===
 
-// Module 15828 (sendMessageWithEmbed)
+// Module 15860 (sendMessageWithEmbed)
 import set from "set" /* 2 */;
-import trackInviteDefault from "trackInvite" /* 7465 */;
-import rebuildDefault from "rebuild" /* 7474 */;
+import trackInviteDefault from "trackInvite" /* 7063 */;
+import rebuildDefault from "rebuild" /* 7287 */;
 
 const result = set.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 

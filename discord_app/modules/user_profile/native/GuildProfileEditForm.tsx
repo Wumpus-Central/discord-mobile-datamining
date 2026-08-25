@@ -1,16 +1,16 @@
-// === Module 14140: EditGuildProfileBanner ===
+// === Module 14170: EditGuildProfileBanner ===
 
-// Module 14140 (EditGuildProfileBanner)
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4042 */;
-import contextDefault from "context" /* 7177 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7197 */;
-import ProfilePreviewButtonDefault from "ProfilePreviewButton" /* 14073 */;
+// Module 14170 (EditGuildProfileBanner)
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4043 */;
+import contextDefault from "context" /* 5834 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5854 */;
+import ProfilePreviewButtonDefault from "ProfilePreviewButton" /* 14108 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "createUserWidgetFromServer" /* 5370 */;
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 7224 */;
+import closure_8 from "trackCommunicationDisabled" /* 1992 */;
+import closure_9 from "createUserWidgetFromServer" /* 7227 */;
+import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 5882 */;
 import ME from "ME" /* 676 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -74,7 +74,7 @@ function EditGuildProfileBanner(user) {
   obj[8] = intl.string(user(1236).t["95hPAe"]);
   obj[9] = disabled;
   obj[1] = closure_17(ProfilePreviewButtonDefault, obj);
-  return closure_17(user(7177).AnalyticsLocationProvider, obj);
+  return closure_17(user(5834).AnalyticsLocationProvider, obj);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);

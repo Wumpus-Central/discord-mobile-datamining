@@ -9,8 +9,8 @@ import DismissibleContent from "DismissibleContent" /* 1377 */;
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1378 */;
 import set2 from "set" /* 1382 */;
 import getVersionedDismissibleContentCurrentVersion from "getVersionedDismissibleContentCurrentVersion" /* 1389 */;
-import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4222 */;
-import handleDCShownToUser from "handleDCShownToUser" /* 10026 */;
+import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4223 */;
+import handleDCShownToUser from "handleDCShownToUser" /* 9868 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
@@ -73,7 +73,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -105,7 +105,7 @@ function _markLatestVersionDismissibleContentAsDismissed() {
             return obj;
           } else {
             table = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           table = tmp;
@@ -172,7 +172,7 @@ function _markVersionedDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -208,7 +208,7 @@ function _markVersionedDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c6 = tmp;
@@ -246,7 +246,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -285,7 +285,7 @@ function _markSnowflakeBoundDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp23) {
           c6 = tmp;
@@ -322,7 +322,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -357,7 +357,7 @@ function _markTimeRecurringDismissibleContentAsDismissed() {
           } else {
             callback(closure_0, closure_1);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp19) {
           c5 = tmp;
@@ -610,7 +610,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "r" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

@@ -1,9 +1,9 @@
-// === Module 9340: withEqualityFn ===
+// === Module 8789: withEqualityFn ===
 
-// Module 9340 (withEqualityFn)
+// Module 8789 (withEqualityFn)
 import set from "set" /* 2 */;
 import identity from "identity" /* 700 */;
-import createJSONStorage from "createJSONStorage" /* 4246 */;
+import createJSONStorage from "createJSONStorage" /* 4247 */;
 
 let c0 = require;
 let closure_2 = Object.freeze({ inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 }, hasInteracted: false, activeCategoryIndex: 0, searchPlaceholder: null, bottomPosition: null, analyticsId: null });
@@ -108,7 +108,7 @@ const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPi
 export default function createStore() {
   let obj = _undefined(700);
   const withEqualityFn = obj.createWithEqualityFn();
-  const withEqualityFnResult = withEqualityFn(_undefined(4246).subscribeWithSelector(() => closure_2));
+  const withEqualityFnResult = withEqualityFn(_undefined(4247).subscribeWithSelector(() => closure_2));
   _undefined = withEqualityFnResult;
   obj = {
     useStore: withEqualityFnResult,

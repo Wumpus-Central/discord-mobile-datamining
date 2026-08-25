@@ -1,6 +1,6 @@
-// === Module 7304: ReportToModPermissions ===
+// === Module 6012: ReportToModPermissions ===
 
-// Module 7304 (ReportToModPermissions)
+// Module 6012 (ReportToModPermissions)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import importAllResult from "fromString" /* 506 */;

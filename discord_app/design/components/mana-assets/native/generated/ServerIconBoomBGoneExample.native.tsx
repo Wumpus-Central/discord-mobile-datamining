@@ -1,10 +1,10 @@
-// === Module 6151: ServerIconBoomBGoneExample ===
+// === Module 6839: ServerIconBoomBGoneExample ===
 
-// Module 6151 (ServerIconBoomBGoneExample)
+// Module 6839 (ServerIconBoomBGoneExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6152 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6840 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconBoomBGoneExample.native.tsx");

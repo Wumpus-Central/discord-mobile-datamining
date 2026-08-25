@@ -1,14 +1,14 @@
-// === Module 13830: handleUpdateVADPermission ===
+// === Module 13865: handleUpdateVADPermission ===
 
-// Module 13830 (handleUpdateVADPermission)
+// Module 13865 (handleUpdateVADPermission)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_6 from "createRTCConnection" /* 4544 */;
-import closure_7 from "updateVoiceState" /* 4547 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_6 from "createRTCConnection" /* 4454 */;
+import closure_7 from "updateVoiceState" /* 4399 */;
 import ME from "ME" /* 676 */;
 
 function handleUpdateVADPermission() {

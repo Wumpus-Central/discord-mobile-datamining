@@ -1,6 +1,6 @@
-// === Module 17001: useCreatorMonetizationEligibilityItems ===
+// === Module 17033: useCreatorMonetizationEligibilityItems ===
 
-// Module 17001 (useCreatorMonetizationEligibilityItems)
+// Module 17033 (useCreatorMonetizationEligibilityItems)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
@@ -37,7 +37,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           tmp13();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp16) {
         c2 = tmp;
         throw tmp16;
@@ -140,8 +140,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = callback(4087);
-          return tmp(callback(1994).getSubmitRequestURL());
+          const tmp = callback(4088);
+          return tmp(callback(1995).getSubmitRequestURL());
         };
       }
       obj[6] = fn;

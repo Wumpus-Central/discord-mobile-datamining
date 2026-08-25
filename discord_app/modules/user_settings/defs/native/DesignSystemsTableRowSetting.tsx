@@ -1,10 +1,10 @@
-// === Module 14974: route ===
+// === Module 15004: route ===
 
-// Module 14974 (route)
+// Module 15004 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import MobileUserSettings from "MobileUserSettings" /* 8238 */;
-import createToggle from "createToggle" /* 10708 */;
+import MobileUserSettings from "MobileUserSettings" /* 8235 */;
+import createToggle from "createToggle" /* 10516 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return require(14975) /* MyTableRow */.default;
+    return require(15005) /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

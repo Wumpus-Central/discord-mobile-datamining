@@ -1,8 +1,8 @@
-// === Module 10524: bountyCtaFromServer ===
+// === Module 10541: bountyCtaFromServer ===
 
-// Module 10524 (bountyCtaFromServer)
+// Module 10541 (bountyCtaFromServer)
 import set from "set" /* 2 */;
-import resolveAsset from "resolveAsset" /* 10525 */;
+import resolveAsset from "resolveAsset" /* 10542 */;
 
 const result = set.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 

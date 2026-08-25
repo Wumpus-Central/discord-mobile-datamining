@@ -1,19 +1,19 @@
-// === Module 17124: getBackoffJitter ===
+// === Module 17156: getBackoffJitter ===
 
-// Module 17124 (getBackoffJitter)
+// Module 17156 (getBackoffJitter)
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5043 */;
-import mapDefault from "map" /* 13115 */;
-import apexExperiment from "apexExperiment" /* 13297 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 17126 */;
+import initializeDefault from "initialize" /* 5367 */;
+import apexExperiment from "apexExperiment" /* 13159 */;
+import mapDefault from "map" /* 13386 */;
+import ContentInventoryFeature from "ContentInventoryFeature" /* 17158 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4499 */;
-import closure_5 from "set" /* 5226 */;
-import closure_6 from "checkIdleAFK" /* 4979 */;
-import closure_7 from "updateImpressionCaches" /* 11162 */;
-import closure_8 from "map" /* 9082 */;
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 9101 */;
+import closure_4 from "_handleConnectionOpen" /* 5102 */;
+import closure_5 from "set" /* 5106 */;
+import closure_6 from "checkIdleAFK" /* 5235 */;
+import closure_7 from "updateImpressionCaches" /* 11505 */;
+import closure_8 from "map" /* 9046 */;
+import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 9067 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import apply from "apply" /* 12 */;
 import set from "set" /* 2 */;
@@ -193,7 +193,7 @@ function _fetchInventory() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

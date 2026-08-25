@@ -1,18 +1,18 @@
-// === Module 7632: getAutocompleterBoosterMap ===
+// === Module 7453: getAutocompleterBoosterMap ===
 
-// Module 7632 (getAutocompleterBoosterMap)
+// Module 7453 (getAutocompleterBoosterMap)
 import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
-import tDefault from "t" /* 4095 */;
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4362 */;
-import CodedLinkType from "CodedLinkType" /* 4367 */;
-import NOOP from "NOOP" /* 6751 */;
-import NOOPDefault from "NOOP" /* 6751 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 6814 */;
-import getTransformedUserDefault from "getTransformedUser" /* 7635 */;
-import closure_3 from "handleUserUpdate" /* 7633 */;
-import closure_4 from "fromPath" /* 7634 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1981 */;
-import closure_6 from "markAllUserIdListsStale" /* 4033 */;
+import tDefault from "t" /* 4096 */;
+import getPathsFromURL from "getPathsFromURL" /* 4363 */;
+import CodedLinkType from "CodedLinkType" /* 4368 */;
+import NOOP from "NOOP" /* 5266 */;
+import NOOPDefault from "NOOP" /* 5266 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5337 */;
+import getTransformedUserDefault from "getTransformedUser" /* 7456 */;
+import closure_3 from "handleUserUpdate" /* 7454 */;
+import closure_4 from "fromPath" /* 7455 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1982 */;
+import closure_6 from "markAllUserIdListsStale" /* 4034 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
@@ -370,8 +370,8 @@ prototype["queryTextChannels"] = function queryTextChannels(closure_1, _limit) {
   const self = this;
   if (this._include(AutocompleterResultTypes.TEXT_CHANNEL)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6751).getBoosterMap(tmp);
-      const obj2 = blacklist(6751);
+      let boosterMap = blacklist(5266).getBoosterMap(tmp);
+      const obj2 = blacklist(5266);
     } else {
       boosterMap = {};
     }
@@ -418,8 +418,8 @@ prototype["queryGuilds"] = function queryGuilds(arg0, arg1) {
   const self = this;
   if (this._include(AutocompleterResultTypes.GUILD)) {
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6751).getBoosterMap(tmp);
-      const obj2 = blacklist(6751);
+      let boosterMap = blacklist(5266).getBoosterMap(tmp);
+      const obj2 = blacklist(5266);
     } else {
       boosterMap = {};
     }
@@ -526,8 +526,8 @@ prototype["queryGroupDMs"] = function queryGroupDMs(arg0, arg1) {
   if (this._include(AutocompleterResultTypes.GROUP_DM)) {
     const blacklist = self.options.blacklist;
     if (self.options.frecencyBoosters) {
-      let boosterMap = blacklist(6751).getBoosterMap(tmp);
-      const obj2 = blacklist(6751);
+      let boosterMap = blacklist(5266).getBoosterMap(tmp);
+      const obj2 = blacklist(5266);
     } else {
       boosterMap = {};
     }
@@ -559,7 +559,7 @@ prototype["queryApplications"] = function queryApplications(arg0, arg1) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = _require(7637).queryGamesAutocomplete(query);
+    let result = _require(7458).queryGamesAutocomplete(query);
     if (result == null) {
       result = [];
     }
@@ -591,7 +591,7 @@ prototype["refreshGameProfiles"] = function refreshGameProfiles() {
 };
 prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimit) {
   if (this._include(AutocompleterResultTypes.LINK)) {
-    let obj = trimTrailingPunctuation;
+    let obj = getPathsFromURL;
     const findCodedLinkResult = obj.findCodedLink(query);
     let type;
     if (findCodedLinkResult != null) {
@@ -601,7 +601,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = closure_4.fromInviteCode(findCodedLinkResult.code);
-      let tmp3Result = tmp3(6751);
+      let tmp3Result = tmp3(5266);
       obj[2] = tmp3Result.calculateScore(11);
       const items = [obj];
       return items;
@@ -628,7 +628,7 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
               obj = { type: null, record: null, score: null };
               obj[0] = tmp.LINK;
               obj[1] = closure_4.fromPath(pathname);
-              tmp3Result = tmp3(6751);
+              tmp3Result = tmp3(5266);
               obj[2] = tmp3Result.calculateScore(11);
               const items1 = [obj];
               let items2 = items1;

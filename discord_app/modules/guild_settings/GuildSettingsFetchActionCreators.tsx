@@ -1,9 +1,9 @@
-// === Module 8918: _fetchGuildIntegrationsApplications ===
+// === Module 9175: _fetchGuildIntegrationsApplications ===
 
-// Module 8918 (_fetchGuildIntegrationsApplications)
+// Module 9175 (_fetchGuildIntegrationsApplications)
 import sendRequest from "sendRequest" /* 530 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { BasicApplicationRecord } from "createExecutable" /* 4483 */;
+import { BasicApplicationRecord } from "createExecutable" /* 4406 */;
 import closure_5 from "createdAt" /* 1930 */;
 import { Endpoints } from "ME" /* 676 */;
 

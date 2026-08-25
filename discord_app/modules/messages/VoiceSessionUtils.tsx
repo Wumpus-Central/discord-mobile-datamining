@@ -1,9 +1,9 @@
-// === Module 8323: getSortedVoiceSessionParticipants ===
+// === Module 8324: getSortedVoiceSessionParticipants ===
 
-// Module 8323 (getSortedVoiceSessionParticipants)
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8243 */;
+// Module 8324 (getSortedVoiceSessionParticipants)
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8240 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeAffinities" /* 5412 */;
+import closure_4 from "recomputeAffinities" /* 7265 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
@@ -34,7 +34,7 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  return _require(8324).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  return _require(8325).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
   let stateFromStoresArray = author;
@@ -65,7 +65,7 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
   let _require = channel.getChannel(channel_id.channel_id);
   let tmp2 = getHumanizedCallDurationDefault(channel_id);
-  let obj = _require(4819);
+  let obj = _require(4634);
   const messageAuthor = obj.getMessageAuthor(channel_id);
   _require = channel_id;
   const call = channel_id.call;
@@ -90,7 +90,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     reduced = [];
   }
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  const result = _require(8324).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const result = _require(8325).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
     const obj = { user, messageAuthor: channel_id(closure_1_2[7]).getUserAuthor(user, channel_id) };
     return obj;

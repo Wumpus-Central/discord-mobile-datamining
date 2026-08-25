@@ -1,10 +1,10 @@
-// === Module 4037: parseRawEmojiObject ===
+// === Module 4038: parseRawEmojiObject ===
 
-// Module 4037 (parseRawEmojiObject)
+// Module 4038 (parseRawEmojiObject)
 import applyDefault from "apply" /* 12 */;
-import EmojiTypes from "EmojiTypes" /* 4040 */;
-import _mod13502 from "module_13502" /* 13502 */;
-import closure_3 from "defaultImageSrcGenerator" /* 4038 */;
+import EmojiTypes from "EmojiTypes" /* 4041 */;
+import _mod13537 from "module_13537" /* 13537 */;
+import closure_3 from "defaultImageSrcGenerator" /* 4039 */;
 import closure_13 from "module_917631" /* 917631 */;
 import closure_14 from "module_127988" /* 127988 */;
 
@@ -51,10 +51,10 @@ function findInlineEmojisFromSurrogates(content, arg1) {
             let str3 = "";
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let tmp18 = require(4039).surrogateToEmoji[`${tmp3}`];
+            let tmp18 = require(4040).surrogateToEmoji[`${tmp3}`];
             let tmp19 = null;
             if (null != tmp18) {
-              tmp19 = tmp16(4039).emojis[tmp18];
+              tmp19 = tmp16(4040).emojis[tmp18];
             }
             let first;
             if (tmp19 != null) {
@@ -87,10 +87,10 @@ function findInlineEmojisFromSurrogates(content, arg1) {
             } else {
               let tmp10 = require;
               let tmp11 = dependencyMap;
-              let tmp12 = require(4039).surrogateToEmoji[str];
+              let tmp12 = require(4040).surrogateToEmoji[str];
               let tmp13 = null;
               if (null != tmp12) {
-                tmp13 = tmp10(4039).emojis[tmp12];
+                tmp13 = tmp10(4040).emojis[tmp12];
               }
               let first1;
               if (tmp13 != null) {
@@ -128,10 +128,10 @@ function findInlineEmojisFromSurrogates(content, arg1) {
   if (!tmp23) {
     return items1;
   } else {
-    const tmp26 = require(4039).surrogateToEmoji[str2];
+    const tmp26 = require(4040).surrogateToEmoji[str2];
     let tmp27 = null;
     if (null != tmp26) {
-      tmp27 = tmp24(4039).emojis[tmp26];
+      tmp27 = tmp24(4040).emojis[tmp26];
     }
     let first2;
     if (tmp27 != null) {
@@ -177,7 +177,7 @@ class Emoji {
       while (tmp15 !== undefined) {
         tmp5 = closure_0;
         tmp6 = closure_2;
-        tmp7 = require("module_4039").emojis[tmp3];
+        tmp7 = require("module_4040").emojis[tmp3];
         tmp8 = tmp7;
         if (null != tmp7.diversity) {
           tmp9 = tmp7;
@@ -282,11 +282,11 @@ Object.defineProperty(prototype, "url", {
   get: function url() {
     const defaultDiversityChild = this.defaultDiversityChild;
     if (null != defaultDiversityChild) {
-      let uRL = importDefault(4041).getURL(defaultDiversityChild.surrogates);
-      const obj2 = importDefault(4041);
+      let uRL = importDefault(4042).getURL(defaultDiversityChild.surrogates);
+      const obj2 = importDefault(4042);
     } else {
-      uRL = importDefault(4041).getURL(tmp.surrogates);
-      const obj = importDefault(4041);
+      uRL = importDefault(4042).getURL(tmp.surrogates);
+      const obj = importDefault(4042);
     }
     return uRL;
   },
@@ -297,10 +297,10 @@ Object.defineProperty(prototype, "name", {
     const self = this;
     if (this.hasDiversity) {
       if (null != c4) {
-        const tmp6 = require(4039).surrogateToEmoji[c4];
+        const tmp6 = require(4040).surrogateToEmoji[c4];
         let tmp7 = null;
         if (null != tmp6) {
-          tmp7 = tmp4(4039).emojis[tmp6];
+          tmp7 = tmp4(4040).emojis[tmp6];
         }
         let first;
         if (tmp7 != null) {
@@ -349,13 +349,13 @@ let obj = {
     closure_4 = tmp;
   },
   getCategories() {
-    return Object.keys(require(4039).emojisByCategory);
+    return Object.keys(require(4040).emojisByCategory);
   },
   getByName(arg0) {
-    const tmp3 = require(4039).nameToEmoji[arg0];
+    const tmp3 = require(4040).nameToEmoji[arg0];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require(4039).emojis[tmp3];
+      tmp4 = require(4040).emojis[tmp3];
     }
     let tmp5 = null;
     if (null != tmp4) {
@@ -373,13 +373,13 @@ let obj = {
   getByCategory(name) {
     let value = map.get(name);
     if (null == value) {
-      const tmp4 = require(4039).emojisByCategory[name];
-      const emojis = require(4039).emojis;
-      const result = importDefault(4041).filterUnsupportedEmojis(emojis.slice(tmp4[0], tmp4[1]));
+      const tmp4 = require(4040).emojisByCategory[name];
+      const emojis = require(4040).emojis;
+      const result = importDefault(4042).filterUnsupportedEmojis(emojis.slice(tmp4[0], tmp4[1]));
       const mapped = result.map(parseRawEmojiObject);
       const result1 = map.set(name, mapped);
       value = mapped;
-      const obj2 = importDefault(4041);
+      const obj2 = importDefault(4042);
     }
     return value;
   },
@@ -430,10 +430,10 @@ let obj = {
     if (arg1 === undefined) {
       str = "";
     }
-    const tmp3 = require(4039).nameToEmoji[emojiName];
+    const tmp3 = require(4040).nameToEmoji[emojiName];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require(4039).emojis[tmp3];
+      tmp4 = require(4040).emojis[tmp3];
     }
     let surrogates;
     if (tmp4 != null) {
@@ -453,10 +453,10 @@ let obj = {
     if (arg2 === undefined) {
       str = "";
     }
-    const tmp3 = require(4039).surrogateToEmoji[name];
+    const tmp3 = require(4040).surrogateToEmoji[name];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require(4039).emojis[tmp3];
+      tmp4 = require(4040).emojis[tmp3];
     }
     let first;
     if (tmp4 != null) {
@@ -483,7 +483,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod13502[key10009];
+      str = _mod13537[key10009];
     }
     let combined = str;
     if (flag) {
@@ -494,10 +494,10 @@ let obj = {
   },
   convertSurrogateToBase(surrogates) {
     const reduced = items.reduce((str) => str.replace(arg1, ""), surrogates);
-    const tmp4 = require(4039).surrogateToEmoji[reduced];
+    const tmp4 = require(4040).surrogateToEmoji[reduced];
     let tmp5 = null;
     if (null != tmp4) {
-      tmp5 = tmp2(4039).emojis[tmp4];
+      tmp5 = tmp2(4040).emojis[tmp4];
     }
     let str;
     if (tmp5 != null) {
@@ -506,10 +506,10 @@ let obj = {
     if (str == null) {
       str = "";
     }
-    const tmp6 = require(4039).nameToEmoji[str];
+    const tmp6 = require(4040).nameToEmoji[str];
     let tmp7 = null;
     if (null != tmp6) {
-      tmp7 = tmp2(4039).emojis[tmp6];
+      tmp7 = tmp2(4040).emojis[tmp6];
     }
     let tmp8 = null;
     if (null != tmp7) {
@@ -540,8 +540,8 @@ let obj = {
       continue;
     }
   },
-  numDiversitySprites: require("module_4039").numDiversitySprites,
-  numNonDiversitySprites: require("module_4039").numNonDiversitySprites,
+  numDiversitySprites: require("module_4040").numDiversitySprites,
+  numNonDiversitySprites: require("module_4040").numNonDiversitySprites,
   EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
   EMOJI_NAME_AND_DIVERSITY_RE: tmp3,
   EMOJI_SHORTCUT_RE: /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,

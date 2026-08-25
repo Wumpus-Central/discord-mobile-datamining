@@ -1,6 +1,6 @@
-// === Module 8830: CREATE_GUILD_EVENT_MODAL_KEY ===
+// === Module 9097: CREATE_GUILD_EVENT_MODAL_KEY ===
 
-// Module 8830 (CREATE_GUILD_EVENT_MODAL_KEY)
+// Module 9097 (CREATE_GUILD_EVENT_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");

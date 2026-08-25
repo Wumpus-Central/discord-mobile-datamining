@@ -1,11 +1,11 @@
-// === Module 6741: handleConnectionReset ===
+// === Module 5250: handleConnectionReset ===
 
-// Module 6741 (handleConnectionReset)
+// Module 5250 (handleConnectionReset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import acknowledgeDefault from "acknowledge" /* 6742 */;
+import acknowledgeDefault from "acknowledge" /* 5251 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import importDefaultResult from "trackCommunicationDisabled" /* 1991 */;
+import importDefaultResult from "trackCommunicationDisabled" /* 1992 */;
 
 function handleConnectionReset() {
   navigation.reset();

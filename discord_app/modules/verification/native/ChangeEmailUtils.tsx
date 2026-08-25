@@ -1,9 +1,9 @@
-// === Module 8656: _saveEmail ===
+// === Module 8664: _saveEmail ===
 
-// Module 8656 (_saveEmail)
+// Module 8664 (_saveEmail)
 import keys from "keys" /* 691 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ChangeEmailFields from "ChangeEmailFields" /* 8602 */;
+import ChangeEmailFields from "ChangeEmailFields" /* 8610 */;
 
 require = arg1;
 function _saveEmail() {
@@ -26,7 +26,7 @@ function _saveEmail() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

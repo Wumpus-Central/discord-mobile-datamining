@@ -1,7 +1,7 @@
-// === Module 8748: leaveCurrentEmbeddedActivity ===
+// === Module 10684: leaveCurrentEmbeddedActivity ===
 
-// Module 8748 (leaveCurrentEmbeddedActivity)
-import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 8749 */;
+// Module 10684 (leaveCurrentEmbeddedActivity)
+import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 10685 */;
 import closure_2 from "participantFromServer" /* 1390 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");

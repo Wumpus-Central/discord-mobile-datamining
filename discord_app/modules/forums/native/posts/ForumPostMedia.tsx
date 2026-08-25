@@ -1,19 +1,19 @@
-// === Module 11237: ForumPostMediaAndroid ===
+// === Module 11597: ForumPostMediaAndroid ===
 
-// Module 11237 (ForumPostMediaAndroid)
+// Module 11597 (ForumPostMediaAndroid)
 import ThemesDefault from "Themes" /* 712 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4730 */;
-import preloadDefault from "preload" /* 5454 */;
-import SpoilerDefault from "Spoiler" /* 11238 */;
-import getForumPostShouldObscure from "getForumPostShouldObscure" /* 11240 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4805 */;
+import preloadDefault from "preload" /* 5374 */;
+import SpoilerDefault from "Spoiler" /* 11598 */;
+import getForumPostShouldObscure from "getForumPostShouldObscure" /* 11600 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "handleThemeChange" /* 1302 */;
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function ForumPostMediaAndroid(blurTheme) {
@@ -69,14 +69,14 @@ function ForumPostMedia(obscureReason) {
   const _require = obscureReason;
   const tmp = callback4();
   const ref = React.useRef(null);
-  let obj = _require(5006);
+  let obj = _require(7206);
   const shouldAgeVerifyForReason = obj.useShouldAgeVerifyForReason(obscureReason.obscureReason);
   if (obscureReason.isMediaPost) {
     obj = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = callback2(ref(11239), obj);
+    let tmp6Result = callback2(ref(11599), obj);
     let tmp12 = callback2;
-    const tmp19 = ref(11239);
+    const tmp19 = ref(11599);
   } else {
     if (tmp3Result.isAndroid()) {
       obj = {};
@@ -92,7 +92,7 @@ function ForumPostMedia(obscureReason) {
     tmp3Result = tmp3(500);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(5026).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6020).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj2 = { style: null, ref: null, children: null };
@@ -102,12 +102,12 @@ function ForumPostMedia(obscureReason) {
         const obj3 = { androidRippleConfig: null, activeOpacity: 0, onPress: null, children: null };
         obj3[0] = ANDROID_FOREGROUND_RIPPLE;
         obj3[2] = function onPress() {
-          let obj = ref(5433);
-          obj = { entryPoint: obscureReason(5259).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
+          let obj = ref(7942);
+          obj = { entryPoint: obscureReason(7944).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW };
           const result = obj.showAgeVerificationGetStartedModal(obj);
         };
         obj3[3] = tmp6Result;
-        obj2[2] = tmp12(tmp3(5438).PressableOpacity, obj3);
+        obj2[2] = tmp12(tmp3(4949).PressableOpacity, obj3);
         let tmp12Result = tmp12(closure_5, obj2);
       }
       return tmp12Result;
@@ -129,7 +129,7 @@ function ForumPostMedia(obscureReason) {
       return onPressResult;
     };
     obj5[3] = tmp6Result;
-    obj4[2] = tmp12(tmp3(5438).PressableOpacity, obj5);
+    obj4[2] = tmp12(tmp3(4949).PressableOpacity, obj5);
     tmp12Result = tmp12(closure_5, obj4);
   } else {
     const obj6 = { style: null, ref: null, children: null };

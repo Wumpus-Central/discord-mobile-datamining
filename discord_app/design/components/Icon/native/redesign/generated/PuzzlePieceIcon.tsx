@@ -1,10 +1,10 @@
-// === Module 14379: PuzzlePieceIcon ===
+// === Module 14409: PuzzlePieceIcon ===
 
-// Module 14379 (PuzzlePieceIcon)
+// Module 14409 (PuzzlePieceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 14380 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 14410 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

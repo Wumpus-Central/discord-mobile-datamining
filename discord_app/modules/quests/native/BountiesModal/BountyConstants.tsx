@@ -1,6 +1,6 @@
-// === Module 14466: END_CARD_IMAGE_SIZE ===
+// === Module 14496: END_CARD_IMAGE_SIZE ===
 
-// Module 14466 (END_CARD_IMAGE_SIZE)
+// Module 14496 (END_CARD_IMAGE_SIZE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyConstants.tsx");

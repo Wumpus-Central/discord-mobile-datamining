@@ -1,10 +1,10 @@
-// === Module 5913: GroupGamingSpotIllustration ===
+// === Module 6603: GroupGamingSpotIllustration ===
 
-// Module 5913 (GroupGamingSpotIllustration)
+// Module 6603 (GroupGamingSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5914 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6604 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GroupGamingSpotIllustration.native.tsx");

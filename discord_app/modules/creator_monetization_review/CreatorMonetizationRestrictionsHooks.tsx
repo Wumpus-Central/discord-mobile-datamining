@@ -1,10 +1,10 @@
-// === Module 7257: useShouldHideGuildPurchaseEntryPoints ===
+// === Module 5980: useShouldHideGuildPurchaseEntryPoints ===
 
-// Module 7257 (useShouldHideGuildPurchaseEntryPoints)
-import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 7258 */;
+// Module 5980 (useShouldHideGuildPurchaseEntryPoints)
+import useUnmountAbortSignalDefault from "useUnmountAbortSignal" /* 5981 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
-import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
+import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4019 */;
+import { FetchState } from "makeGroupListingIndexSubscriptionListingTag" /* 4019 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 
@@ -103,8 +103,8 @@ export const useShouldHideGuildPurchaseEntryPoints = function useShouldHideGuild
     }
     let result = flag;
   } else {
-    result = tmp(4017).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
-    const tmpResult1 = tmp(4017);
+    result = tmp(4018).isRestrictedFromShowingGuildPurchaseEntryPoints(stateFromStoresArray);
+    const tmpResult1 = tmp(4018);
   }
 };
 export const useShouldRestrictUpdatingCreatorMonetizationSettings = function useShouldRestrictUpdatingCreatorMonetizationSettings(guildId) {
@@ -171,8 +171,8 @@ export const useShouldRestrictUpdatingCreatorMonetizationSettings = function use
     }
     let result = flag;
   } else {
-    result = tmp(4017).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
-    const tmpResult1 = tmp(4017);
+    result = tmp(4018).isRestrictedFromUpdatingCreatorMonetizationSettings(stateFromStoresArray);
+    const tmpResult1 = tmp(4018);
   }
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -239,7 +239,7 @@ export const useIsMonetizationReapplicationDisabled = function useIsMonetization
     }
     return closure_1_5.getMonetizationRestrictionsFetchState(tmp2) === closure_1_6.FETCHING;
   });
-  obj[0] = stateFromStores(4017).isRestrictedFromMonetizationReapplication(stateFromStoresArray);
+  obj[0] = stateFromStores(4018).isRestrictedFromMonetizationReapplication(stateFromStoresArray);
   obj[1] = stateFromStores1;
   return obj;
 };

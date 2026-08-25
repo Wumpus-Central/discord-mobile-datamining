@@ -1,6 +1,6 @@
-// === Module 4590: BaseConnectionEvent ===
+// === Module 4495: BaseConnectionEvent ===
 
-// Module 4590 (BaseConnectionEvent)
+// Module 4495 (BaseConnectionEvent)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnectionEvent.tsx");

@@ -1,9 +1,9 @@
-// === Module 8995: useMaybeTrackProfileFrameViewed ===
+// === Module 8957: useMaybeTrackProfileFrameViewed ===
 
-// Module 8995 (useMaybeTrackProfileFrameViewed)
+// Module 8957 (useMaybeTrackProfileFrameViewed)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5306 */;
+import closure_4 from "updateCategoriesAndProducts" /* 7148 */;
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 let result = set.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx");

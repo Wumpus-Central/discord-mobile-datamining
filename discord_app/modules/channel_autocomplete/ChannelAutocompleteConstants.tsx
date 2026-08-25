@@ -1,6 +1,6 @@
-// === Module 6847: regExp ===
+// === Module 4839: regExp ===
 
-// Module 6847 (regExp)
+// Module 4839 (regExp)
 import set from "set" /* 2 */;
 
 let closure_0 = [];

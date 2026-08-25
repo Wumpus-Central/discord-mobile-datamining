@@ -1,9 +1,9 @@
-// === Module 13365: checkGuildIsHub ===
+// === Module 13226: checkGuildIsHub ===
 
-// Module 13365 (checkGuildIsHub)
+// Module 13226 (checkGuildIsHub)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "set" /* 7232 */;
+import closure_0 from "set" /* 5942 */;
 import closure_1 from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 

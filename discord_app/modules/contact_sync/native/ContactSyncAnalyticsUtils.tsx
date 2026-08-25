@@ -1,11 +1,11 @@
-// === Module 11904: Steps ===
+// === Module 12238: Steps ===
 
-// Module 11904 (Steps)
+// Module 12238 (Steps)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import trackNUFStep from "trackNUFStep" /* 11905 */;
+import trackNUFStep from "trackNUFStep" /* 12239 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { getIsOnboarding } from "ContactSyncModes" /* 11899 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11900 */;
+import { getIsOnboarding } from "ContactSyncModes" /* 12233 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12234 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -27,7 +27,7 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     phone = currentUser.phone;
   }
   closure_1 = null != phone;
-  obj = _require(11902);
+  obj = _require(12236);
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     let tmp = null;

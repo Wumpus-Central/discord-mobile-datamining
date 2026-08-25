@@ -1,18 +1,18 @@
-// === Module 7238: getPrice ===
+// === Module 5954: getPrice ===
 
-// Module 7238 (getPrice)
+// Module 5954 (getPrice)
 import applyDefault from "apply" /* 12 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import keysSorter from "keysSorter" /* 4380 */;
-import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4388 */;
-import RewardRequirementType from "RewardRequirementType" /* 7242 */;
-import useSKUPrice from "useSKUPrice" /* 7243 */;
-import closure_3 from "addApplication" /* 4482 */;
-import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 7239 */;
-import closure_5 from "createExecutable" /* 4483 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4643 */;
+import keysSorter from "keysSorter" /* 5279 */;
+import RewardRequirementType from "RewardRequirementType" /* 5958 */;
+import useSKUPrice from "useSKUPrice" /* 5959 */;
+import closure_3 from "addApplication" /* 4421 */;
+import { WishlistRecommendationReason as closure_4 } from "fromServer" /* 5955 */;
+import closure_5 from "createExecutable" /* 4406 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 7240 */;
-import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 7241 */;
+import closure_7 from "handleUserSettingsStoreUpdate" /* 5956 */;
+import STOREFRONT_MARKETING_GUILD_ID from "STOREFRONT_MARKETING_GUILD_ID" /* 5957 */;
 import ME from "ME" /* 676 */;
 import { CollectibleShopTab } from "items" /* 678 */;
 import { CurrencyCodes } from "sum" /* 505 */;
@@ -450,7 +450,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "Array", primaryIconLabel: "ct" };
+          obj = { primaryIconAsset: "isArray", primaryIconLabel: "accessibilityRole" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -463,7 +463,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "ct" };
+  return { primaryIconAsset: "isArray", primaryIconLabel: "accessibilityRole" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;
@@ -661,7 +661,7 @@ export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetS
   const items = [closure_7];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
   const obj = _require(589);
-  const application = _require(7183).useGetOrFetchApplication(applicationId);
+  const application = _require(5840).useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;

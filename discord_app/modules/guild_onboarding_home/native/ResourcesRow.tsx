@@ -1,13 +1,13 @@
-// === Module 15882: ResourcesRow ===
+// === Module 15914: ResourcesRow ===
 
-// Module 15882 (ResourcesRow)
+// Module 15914 (ResourcesRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 15884 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 15916 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15883 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15915 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 noopAll;
@@ -56,8 +56,8 @@ export default function ResourcesRow(guildId) {
     obj1 = { count: null };
     obj1[0] = arr.length - 2;
     obj[2] = intl.format(guildId(1236).t.F6iMs4, obj1);
-    obj[2] = callback(guildId(4739).Text, obj);
-    tmp6 = callback(guildId(5438).PressableOpacity, obj);
+    obj[2] = callback(guildId(4376).Text, obj);
+    tmp6 = callback(guildId(4949).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

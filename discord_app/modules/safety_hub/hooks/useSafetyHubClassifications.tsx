@@ -1,10 +1,10 @@
-// === Module 11105: useSafetyHubClassifications ===
+// === Module 11447: useSafetyHubClassifications ===
 
-// Module 11105 (useSafetyHubClassifications)
+// Module 11447 (useSafetyHubClassifications)
 import initialize from "initialize" /* 589 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11100 */;
-import { ViolationType } from "SafetyHubView" /* 5443 */;
+import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11442 */;
+import { ViolationType } from "SafetyHubView" /* 7950 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
@@ -39,7 +39,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(5444).MemberType.OWNER) {
+    if (member_type === tmp(7951).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

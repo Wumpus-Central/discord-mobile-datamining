@@ -1,12 +1,12 @@
-// === Module 16800: handleVoiceStateUpdates ===
+// === Module 16832: handleVoiceStateUpdates ===
 
-// Module 16800 (handleVoiceStateUpdates)
-import initializeDefault from "initialize" /* 5043 */;
+// Module 16832 (handleVoiceStateUpdates)
+import initializeDefault from "initialize" /* 5367 */;
 import closure_3 from "fetchFingerprint" /* 1218 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "reinjectEphemerals" /* 4999 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_7 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "reinjectEphemerals" /* 4623 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_7 from "handleConnectionOpen" /* 1981 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import { MessageFlags } from "ME" /* 676 */;
 

@@ -1,15 +1,15 @@
-// === Module 16138: init ===
+// === Module 16170: init ===
 
-// Module 16138 (init)
+// Module 16170 (init)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import closure_6 from "normalizeChannelPropertyForCompare" /* 8172 */;
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import closure_6 from "normalizeChannelPropertyForCompare" /* 8168 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
-import { ADVANCED_MODE_ON_KEY } from "RowType" /* 8103 */;
+import { ADVANCED_MODE_ON_KEY } from "RowType" /* 7926 */;
 import { Storage } from "Storage" /* 595 */;
 import set from "set" /* 2 */;
 

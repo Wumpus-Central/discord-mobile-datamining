@@ -1,17 +1,17 @@
-// === Module 11219: action ===
+// === Module 11566: action ===
 
-// Module 11219 (action)
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4035 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5047 */;
-import trackInviteDefault from "trackInvite" /* 7465 */;
-import checkReactionResponse from "checkReactionResponse" /* 7549 */;
-import _modDef8500 from "module_8500" /* 8500 */;
+// Module 11566 (action)
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4036 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4588 */;
+import trackInviteDefault from "trackInvite" /* 7063 */;
+import checkReactionResponse from "checkReactionResponse" /* 7367 */;
+import _modDef8507 from "module_8507" /* 8507 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 6764 */;
-import closure_5 from "reinjectEphemerals" /* 4999 */;
+import closure_4 from "getEmojiToGroupId" /* 5282 */;
+import closure_5 from "reinjectEphemerals" /* 4623 */;
 import ME from "ME" /* 676 */;
-import importDefaultResult from "t" /* 4095 */;
+import importDefaultResult from "t" /* 4096 */;
 
 require = arg1;
 ({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: closure_8 } = ME);
@@ -79,7 +79,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      obj = _modDef8500;
+      obj = _modDef8507;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }

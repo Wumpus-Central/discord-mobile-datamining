@@ -1,12 +1,12 @@
-// === Module 9533: usePremiumSince ===
+// === Module 9656: usePremiumSince ===
 
-// Module 9533 (usePremiumSince)
+// Module 9656 (usePremiumSince)
 import initialize from "initialize" /* 589 */;
-import tDefault from "t" /* 3978 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9534 */;
-import closure_3 from "createUserWidgetFromServer" /* 5370 */;
+import hooksDefault from "hooks" /* 3979 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 9657 */;
+import closure_3 from "createUserWidgetFromServer" /* 7227 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4048 */;
+import closure_5 from "reset" /* 4049 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -15,9 +15,9 @@ function usePremiumSince() {
   const stateFromStores = id(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = id(589);
   const tmp = id;
-  const isPremiumExactlyResult = id(1945).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+  const isPremiumExactlyResult = id(1946).isPremiumExactly(stateFromStores, closure_6.TIER_2);
   id = isPremiumExactlyResult;
-  const obj2 = id(1945);
+  const obj2 = id(1946);
   const items1 = [closure_5];
   const items2 = [isPremiumExactlyResult];
   let stateFromStores1 = id(589).useStateFromStores(items1, () => {
@@ -100,8 +100,8 @@ export const useTieredTenureBadgesFromSubscriptionData = function useTieredTenur
   if (obj3.isPremiumExactly(stateFromStores, closure_6.TIER_2)) {
     if (null != stateFromStores1) {
       if (null != stateFromStores1.premiumSince) {
-        const obj4 = tDefault();
-        _require = obj4.diff(tDefault(stateFromStores1.premiumSince).add(1, "day"), "months");
+        const obj4 = hooksDefault();
+        _require = obj4.diff(hooksDefault(stateFromStores1.premiumSince).add(1, "day"), "months");
         return values.reduce((arg0, tenureReqNumMonths) => {
           let id = arg0;
           if (closure_0 >= tenureReqNumMonths.tenureReqNumMonths) {
@@ -135,7 +135,7 @@ export const useTieredTenureEarnedOnDate = function useTieredTenureEarnedOnDate(
     if (null != stateFromStores1) {
       earnedOnDate = null;
       if (null != stateFromStores1.premiumSince) {
-        tmpResult = tmp(5386);
+        tmpResult = tmp(7240);
         earnedOnDate = tmpResult.getEarnedOnDate(tieredTenureBadgeForUser, stateFromStores1.premiumSince);
       }
     }
@@ -150,7 +150,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(9534);
+  let tmpResult = tmp(9657);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp7 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -177,8 +177,8 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
     if (null != stateFromStores2) {
       earnedOnDate = null;
       if (null != stateFromStores2.premiumSince) {
-        earnedOnDate = tmp(5386).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
-        const tmpResult3 = tmp(5386);
+        earnedOnDate = tmp(7240).getEarnedOnDate(tieredTenureBadgeForUser1, stateFromStores2.premiumSince);
+        const tmpResult3 = tmp(7240);
       }
     }
   }

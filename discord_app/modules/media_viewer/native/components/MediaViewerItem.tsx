@@ -1,6 +1,6 @@
-// === Module 12130: MediaViewerItem ===
+// === Module 12465: MediaViewerItem ===
 
-// Module 12130 (MediaViewerItem)
+// Module 12465 (MediaViewerItem)
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;

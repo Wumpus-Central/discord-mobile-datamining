@@ -1,6 +1,6 @@
-// === Module 16290: useSimpleGuildSize ===
+// === Module 16322: useSimpleGuildSize ===
 
-// Module 16290 (useSimpleGuildSize)
+// Module 16322 (useSimpleGuildSize)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");

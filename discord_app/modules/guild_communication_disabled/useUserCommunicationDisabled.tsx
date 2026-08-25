@@ -1,8 +1,8 @@
-// === Module 8240: useUserCommunicationDisabled ===
+// === Module 8237: useUserCommunicationDisabled ===
 
-// Module 8240 (useUserCommunicationDisabled)
-import isCommunicationDisabled from "isCommunicationDisabled" /* 4013 */;
-import closure_2 from "trackCommunicationDisabled" /* 1991 */;
+// Module 8237 (useUserCommunicationDisabled)
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4014 */;
+import closure_2 from "trackCommunicationDisabled" /* 1992 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;
@@ -33,7 +33,7 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
   const items2 = [prop, ];
   const obj = _require(589);
   const tmp = _require;
-  items2[1] = _require(4013).isMemberCommunicationDisabled(stateFromStores);
+  items2[1] = _require(4014).isMemberCommunicationDisabled(stateFromStores);
   return items2;
 };
 export const useCurrentUserCommunicationDisabled = function useCurrentUserCommunicationDisabled(guild_id) {
@@ -65,7 +65,7 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     prop = null;
   }
   const items3 = [prop, ];
-  tmpResult = tmp(4013);
+  tmpResult = tmp(4014);
   items3[1] = tmpResult.isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };

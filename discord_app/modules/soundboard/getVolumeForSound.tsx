@@ -1,9 +1,9 @@
-// === Module 13973: getVolumeForSound ===
+// === Module 14008: getVolumeForSound ===
 
-// Module 13973 (getVolumeForSound)
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import perceptualToAmplitude from "perceptualToAmplitude" /* 4787 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4501 */;
+// Module 14008 (getVolumeForSound)
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import perceptualToAmplitude from "perceptualToAmplitude" /* 4853 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4431 */;
 
 require = arg1;
 let result = require("set").fileFinishedImporting("modules/soundboard/getVolumeForSound.tsx");

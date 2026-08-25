@@ -1,6 +1,6 @@
-// === Module 12567: updateStageMusicMuted ===
+// === Module 10876: updateStageMusicMuted ===
 
-// Module 12567 (updateStageMusicMuted)
+// Module 10876 (updateStageMusicMuted)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

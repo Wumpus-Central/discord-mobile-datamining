@@ -1,12 +1,12 @@
-// === Module 10489: ForumPostTagsActionSheet ===
+// === Module 10344: ForumPostTagsActionSheet ===
 
-// Module 10489 (ForumPostTagsActionSheet)
+// Module 10344 (ForumPostTagsActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_FORUM_POST_TAGS } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7311 */;
+import { MAX_FORUM_POST_TAGS } from "FORUM_GUIDELINES_ACTION_SHEET" /* 6031 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
@@ -41,7 +41,7 @@ export default function ForumPostTagsActionSheet(thread) {
     }
   }
   const tmp3 = callback3();
-  let obj = thread(7275);
+  let obj = thread(6000);
   let appliedTags = obj.useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
@@ -51,7 +51,7 @@ export default function ForumPostTagsActionSheet(thread) {
   closure_5 = tmp9[1];
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(7275).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(6000).useVisibleForumTags(thread.parentChannel);
   obj = {
     onDismiss() {
       let tmp;
@@ -67,8 +67,8 @@ export default function ForumPostTagsActionSheet(thread) {
   const intl2 = tmp4(1236).intl;
   obj[1] = intl2.string(thread(1236).t["+HS9+m"]);
   obj[2] = tmp3.subtitle;
-  obj[1] = toggleTag(thread(6987).BottomSheetTitleHeader, obj);
-  const tmp4Result = thread(7275);
+  obj[1] = toggleTag(thread(5502).BottomSheetTitleHeader, obj);
+  const tmp4Result = thread(6000);
   let items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
@@ -107,8 +107,8 @@ export default function ForumPostTagsActionSheet(thread) {
     }
     flag(closure_1_2[13]).hideActionSheet();
   };
-  obj2[1] = toggleTag(thread(4750).Button, obj3);
+  obj2[1] = toggleTag(thread(4815).Button, obj3);
   items[1] = toggleTag(closure_5, obj2);
   obj[2] = items;
-  return callback2(thread(7213).ActionSheet, obj);
+  return callback2(thread(5870).ActionSheet, obj);
 };

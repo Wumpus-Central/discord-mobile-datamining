@@ -1,14 +1,14 @@
-// === Module 13924: items ===
+// === Module 13959: items ===
 
-// Module 13924 (items)
+// Module 13959 (items)
 import fromStringAll from "fromString" /* 506 */;
-import prototypeDefault from "prototype" /* 8789 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8794 */;
+import prototypeDefault from "prototype" /* 10824 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 10829 */;
 import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "markAllUserIdListsStale" /* 4033 */;
+import closure_5 from "markAllUserIdListsStale" /* 4034 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13909 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 13944 */;
 
 require = arg1;
 ({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);

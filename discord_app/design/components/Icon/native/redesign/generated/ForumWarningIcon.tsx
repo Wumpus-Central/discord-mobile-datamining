@@ -1,10 +1,10 @@
-// === Module 6916: ForumWarningIcon ===
+// === Module 4913: ForumWarningIcon ===
 
-// Module 6916 (ForumWarningIcon)
+// Module 4913 (ForumWarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6891 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 4887 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

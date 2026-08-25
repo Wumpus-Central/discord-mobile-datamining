@@ -1,8 +1,8 @@
-// === Module 13337: hasCrepeMonthlyOrbsPerk ===
+// === Module 13199: hasCrepeMonthlyOrbsPerk ===
 
-// Module 13337 (hasCrepeMonthlyOrbsPerk)
+// Module 13199 (hasCrepeMonthlyOrbsPerk)
 import initialize from "initialize" /* 589 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4042 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
@@ -16,10 +16,10 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = tmp2(1938).getPerkSource(perks, tmp2(1940).Perk.MONTHLY_ORBS);
+      const perkSource = tmp2(1942).getPerkSource(perks, tmp2(1938).Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
-        hasItem = perkSource.includes(tmp2(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+        hasItem = perkSource.includes(tmp2(1938).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       return hasItem;
     }
@@ -33,18 +33,18 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = tmp(4042);
+    let tmpResult = tmp(4043);
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
-      tmpResult = tmp(1938);
+      tmpResult = tmp(1942);
       let perks;
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      const perkSource = tmpResult.getPerkSource(perks, tmp(1940).Perk.MONTHLY_ORBS);
+      const perkSource = tmpResult.getPerkSource(perks, tmp(1938).Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
-        hasItem = perkSource.includes(tmp(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+        hasItem = perkSource.includes(tmp(1938).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       flag = hasItem;
     }

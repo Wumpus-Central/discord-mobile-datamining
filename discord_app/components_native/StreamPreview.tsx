@@ -1,16 +1,16 @@
-// === Module 12670: render ===
+// === Module 11027: render ===
 
-// Module 12670 (render)
+// Module 11027 (render)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import PressableBase from "PressableBase" /* 5438 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12190 */;
+import PressableBase from "PressableBase" /* 4949 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11030 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 ({ Image: c3, View: c4, StyleSheet } = get_ActivityIndicator);
@@ -34,9 +34,9 @@ DefaultFallback.prototype["render"] = function render() {
   let obj = { style: tmp.wrapper, children: null };
   obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = tmp6(12671);
+    let tmp6Result = tmp6(11028);
   } else {
-    tmp6Result = tmp6(12672);
+    tmp6Result = tmp6(11029);
   }
   obj[2] = tmp6Result;
   obj[1] = closure_6(closure_3, obj);
@@ -44,7 +44,7 @@ DefaultFallback.prototype["render"] = function render() {
 };
 DefaultFallback.contextType = require("ManaContext").ThemeContext;
 const obj2 = { touchable: null, imageContainer: null, image: null };
-const obj3 = { flex: 1, width: "100%", height: "x", aspectRatio: true, backgroundColor: true };
+const obj3 = { flex: 1, width: "100%", height: "View", aspectRatio: true, backgroundColor: true };
 obj3[4] = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
 obj2[0] = obj3;
 createCacheKey = { flex: 1, backgroundColor: ThemesDefault.unsafe_rawColors.BLACK };

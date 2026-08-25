@@ -1,10 +1,10 @@
-// === Module 10832: TimerIcon ===
+// === Module 11156: TimerIcon ===
 
-// Module 10832 (TimerIcon)
+// Module 11156 (TimerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 10833 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 11157 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

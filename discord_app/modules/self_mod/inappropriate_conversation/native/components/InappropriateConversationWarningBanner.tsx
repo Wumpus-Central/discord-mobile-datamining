@@ -1,9 +1,9 @@
-// === Module 10639: InappropriateConversationWarningBanner ===
+// === Module 10438: InappropriateConversationWarningBanner ===
 
-// Module 10639 (InappropriateConversationWarningBanner)
+// Module 10438 (InappropriateConversationWarningBanner)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4033 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9960 */;
+import closure_4 from "markAllUserIdListsStale" /* 4034 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9818 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

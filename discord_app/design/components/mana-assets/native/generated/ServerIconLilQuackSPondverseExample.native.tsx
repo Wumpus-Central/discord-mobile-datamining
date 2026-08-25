@@ -1,10 +1,10 @@
-// === Module 6161: ServerIconLilQuackSPondverseExample ===
+// === Module 6849: ServerIconLilQuackSPondverseExample ===
 
-// Module 6161 (ServerIconLilQuackSPondverseExample)
+// Module 6849 (ServerIconLilQuackSPondverseExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6162 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6850 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconLilQuackSPondverseExample.native.tsx");

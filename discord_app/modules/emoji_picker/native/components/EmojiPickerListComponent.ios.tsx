@@ -1,8 +1,8 @@
-// === Module 9428: ? ===
+// === Module 8871: ? ===
 
-// Module 9428
+// Module 8871
 import importAllResult from "noop" /* 19 */;
-import IMAGE_SIZE from "IMAGE_SIZE" /* 9338 */;
+import IMAGE_SIZE from "IMAGE_SIZE" /* 8787 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

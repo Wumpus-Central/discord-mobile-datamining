@@ -1,12 +1,12 @@
-// === Module 8891: handleUpdateStart ===
+// === Module 9148: handleUpdateStart ===
 
-// Module 8891 (handleUpdateStart)
+// Module 9148 (handleUpdateStart)
 import set from "set" /* 2 */;
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getEmoji from "getEmoji" /* 6945 */;
+import getEmoji from "getEmoji" /* 5441 */;
 
 function handleUpdateStart(guildId) {
   guildId = guildId.guildId;

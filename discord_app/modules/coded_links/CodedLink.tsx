@@ -1,6 +1,6 @@
-// === Module 4367: CodedLinkType ===
+// === Module 4368: CodedLinkType ===
 
-// Module 4367 (CodedLinkType)
+// Module 4368 (CodedLinkType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/coded_links/CodedLink.tsx");

@@ -1,10 +1,10 @@
-// === Module 11154: Modal ===
+// === Module 11497: Modal ===
 
-// Module 11154 (Modal)
+// Module 11497 (Modal)
 import noopAll from "noop" /* 19 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import NavigationStack from "NavigationStack" /* 6343 */;
-import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6401 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5373 */;
+import NavigationStack from "NavigationStack" /* 5889 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

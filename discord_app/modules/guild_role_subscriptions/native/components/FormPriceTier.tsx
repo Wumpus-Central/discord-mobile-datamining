@@ -1,8 +1,8 @@
-// === Module 17084: FormPriceTier ===
+// === Module 17116: FormPriceTier ===
 
-// Module 17084 (FormPriceTier)
+// Module 17116 (FormPriceTier)
 import noopAll from "noop" /* 19 */;
-import usePriceTiers from "usePriceTiers" /* 17043 */;
+import usePriceTiers from "usePriceTiers" /* 17075 */;
 import { CurrencyCodes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 

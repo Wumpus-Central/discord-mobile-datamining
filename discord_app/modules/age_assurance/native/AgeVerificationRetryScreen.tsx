@@ -1,14 +1,14 @@
-// === Module 6731: GetStartedScreen ===
+// === Module 8107: GetStartedScreen ===
 
-// Module 6731 (GetStartedScreen)
+// Module 8107 (GetStartedScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
-import { SafetyHubLinks } from "SafetyHubView" /* 5443 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 7950 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
@@ -58,7 +58,7 @@ export default function GetStartedScreen(modalSessionId) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -90,7 +90,7 @@ export default function GetStartedScreen(modalSessionId) {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           c0 = tmp;

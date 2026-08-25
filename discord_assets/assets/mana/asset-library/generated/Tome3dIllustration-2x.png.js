@@ -1,6 +1,6 @@
-// === Module 6274: metadata ===
+// === Module 6960: metadata ===
 
-// Module 6274 (metadata)
+// Module 6960 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/Tome3dIllustration-2x.png.js");

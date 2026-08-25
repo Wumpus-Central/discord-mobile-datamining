@@ -1,18 +1,18 @@
-// === Module 11588: matchGroupDMRecipients ===
+// === Module 11935: matchGroupDMRecipients ===
 
-// Module 11588 (matchGroupDMRecipients)
+// Module 11935 (matchGroupDMRecipients)
 import ThemesDefault from "Themes" /* 712 */;
-import computeChannelName from "computeChannelName" /* 4989 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6812 */;
+import computeChannelName from "computeChannelName" /* 4574 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5335 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "markAllUserIdListsStale" /* 4033 */;
+import closure_7 from "markAllUserIdListsStale" /* 4034 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserRowModes } from "UserRowModes" /* 9118 */;
+import { UserRowModes } from "UserRowModes" /* 9770 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function matchGroupDMRecipients(trimmed1, recipients) {
@@ -33,7 +33,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         let num3 = 1;
         return 1;
       } else {
-        let tmp19Result = tmp19(4223);
+        let tmp19Result = tmp19(4224);
         let tmp5 = user;
         let globalName = tmp19Result.getGlobalName(tmp4);
         let toLocaleLowerCaseResult1;
@@ -42,7 +42,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult1) {
           let tmp8 = toLocaleLowerCaseResult1;
-          if (tmp19(6812)(trimmed1, tmp7)) {
+          if (tmp19(5335)(trimmed1, tmp7)) {
             let tmp15 = obj;
             obj.return();
             let num2 = 1;
@@ -58,7 +58,7 @@ function matchGroupDMRecipients(trimmed1, recipients) {
         }
         if (null != toLocaleLowerCaseResult2) {
           let tmp13 = toLocaleLowerCaseResult2;
-          if (tmp19(6812)(trimmed1, tmp12)) {
+          if (tmp19(5335)(trimmed1, tmp12)) {
             let tmp14 = obj;
             obj.return();
             let num = 1;

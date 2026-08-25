@@ -1,6 +1,6 @@
-// === Module 4651: ? ===
+// === Module 4556: ? ===
 
-// Module 4651
+// Module 4556
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -20,7 +20,7 @@ export default {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -36,7 +36,7 @@ export default {
               return obj;
             } else {
               closure_0 = tmp4;
-              let obj2 = closure_1_0(4652);
+              let obj2 = closure_1_0(4557);
               dependencyMap = 1;
               c2 = 1;
               obj1 = { value: null, done: false };
@@ -52,7 +52,7 @@ export default {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = closure_1_0(4650);
+            obj = closure_1_0(4555);
             if (arg1) {
               obj.ROBLOX_PROTOCOL_URL(closure_0);
             } else {

@@ -1,9 +1,9 @@
-// === Module 14562: logger ===
+// === Module 14592: logger ===
 
-// Module 14562 (logger)
+// Module 14592 (logger)
 import set from "set" /* 2 */;
 import log from "log" /* 4 */;
-import logger2 from "logger" /* 14563 */;
+import logger2 from "logger" /* 14593 */;
 
 const logger = new log.Logger("MobileMuxWrapper");
 let result = set.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");

@@ -1,13 +1,13 @@
-// === Module 11169: getEmbeddedActivityLaunchability ===
+// === Module 10722: getEmbeddedActivityLaunchability ===
 
-// Module 11169 (getEmbeddedActivityLaunchability)
+// Module 10722 (getEmbeddedActivityLaunchability)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 8736 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10723 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_5 from "updateVoiceState" /* 4547 */;
-import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3" /* 4485 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_5 from "updateVoiceState" /* 4399 */;
+import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3" /* 4408 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

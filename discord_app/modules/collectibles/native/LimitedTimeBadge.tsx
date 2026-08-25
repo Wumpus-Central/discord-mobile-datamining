@@ -1,15 +1,15 @@
-// === Module 9274: LimitedTimeBadge ===
+// === Module 9553: LimitedTimeBadge ===
 
-// Module 9274 (LimitedTimeBadge)
+// Module 9553 (LimitedTimeBadge)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import useCountdownDefault from "useCountdown" /* 7448 */;
+import useCountdownDefault from "useCountdown" /* 7046 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
+import closure_4 from "_getSystemLocale" /* 1996 */;
 import closure_5 from "handleThemeChange" /* 1302 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;
@@ -79,7 +79,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     obj3[0] = days;
     obj2[2] = intl7.formatToPlainString(tmp2(1236).t.TlZULM, obj3);
     obj2[4] = sum;
-    obj1[1] = jsx(tmp2(4739).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+    obj1[1] = jsx(tmp2(4376).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
     return <View style={null}>{null}</View>;
   }
 };

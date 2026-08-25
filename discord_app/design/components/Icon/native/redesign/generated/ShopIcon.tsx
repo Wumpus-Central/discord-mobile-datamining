@@ -1,10 +1,10 @@
-// === Module 11367: ShopIcon ===
+// === Module 11723: ShopIcon ===
 
-// Module 11367 (ShopIcon)
+// Module 11723 (ShopIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 11368 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 11724 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

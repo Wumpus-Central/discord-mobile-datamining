@@ -1,16 +1,16 @@
-// === Module 16139: ViewModerators ===
+// === Module 16171: ViewModerators ===
 
-// Module 16139 (ViewModerators)
+// Module 16171 (ViewModerators)
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { RowType } from "RowType" /* 8103 */;
+import { RowType } from "RowType" /* 7926 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -53,7 +53,7 @@ export default function ViewModerators(channel) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -110,7 +110,7 @@ export default function ViewModerators(channel) {
             obj2 = v0(closure_2_3[9]);
             obj2.hideActionSheet();
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c2 = tmp;
@@ -220,5 +220,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(16140, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(16172, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

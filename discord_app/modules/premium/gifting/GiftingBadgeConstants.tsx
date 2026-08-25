@@ -1,8 +1,8 @@
-// === Module 10459: getTierForProgress ===
+// === Module 10314: getTierForProgress ===
 
-// Module 10459 (getTierForProgress)
+// Module 10314 (getTierForProgress)
 import set from "set" /* 2 */;
-import initialize from "initialize" /* 8973 */;
+import initialize from "initialize" /* 8937 */;
 
 let closure_0 = initialize.getSingleRequirementThreshold;
 const result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");

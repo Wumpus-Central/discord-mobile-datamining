@@ -1,10 +1,10 @@
-// === Module 7244: resetStoreState ===
+// === Module 5960: resetStoreState ===
 
-// Module 7244 (resetStoreState)
+// Module 5960 (resetStoreState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "_getSystemLocale" /* 1995 */;
+import closure_2 from "_getSystemLocale" /* 1996 */;
 
 require = arg1;
 function resetStoreState() {

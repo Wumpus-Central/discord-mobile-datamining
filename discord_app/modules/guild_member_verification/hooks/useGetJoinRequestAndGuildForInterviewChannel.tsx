@@ -1,13 +1,13 @@
-// === Module 11852: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 12190: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 11852 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 12190 (useGetJoinRequestAndGuildForInterviewChannel)
 import initialize from "initialize" /* 589 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_7 from "updateSubmittedGuildJoinRequestTotal" /* 7466 */;
-import closure_8 from "handleGatewayJoinRequestUpdate" /* 4202 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_7 from "updateSubmittedGuildJoinRequestTotal" /* 7064 */;
+import closure_8 from "handleGatewayJoinRequestUpdate" /* 4203 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;
@@ -49,19 +49,19 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const effect = joinRequest.useEffect(() => {
     if (!tmp) {
       dependencyMap(true);
-      const requestToJoinGuilds = first(8576).fetchRequestToJoinGuilds();
-      const obj = first(8576);
+      const requestToJoinGuilds = first(8584).fetchRequestToJoinGuilds();
+      const obj = first(8584);
     }
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {
     if (null == joinRequest) {
       callback(true);
-      const joinRequestForInterview = first(8576).fetchJoinRequestForInterview(closure_3);
+      const joinRequestForInterview = first(8584).fetchJoinRequestForInterview(closure_3);
       joinRequestForInterview.finally(() => {
         callback(false);
       });
-      const obj = first(8576);
+      const obj = first(8584);
     }
   }, items2);
   return { loading, joinRequest, joinRequestGuild };

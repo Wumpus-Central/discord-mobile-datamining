@@ -1,6 +1,6 @@
-// === Module 17208: installWebsocketTelemetryHook ===
+// === Module 17240: installWebsocketTelemetryHook ===
 
-// Module 17208 (installWebsocketTelemetryHook)
+// Module 17240 (installWebsocketTelemetryHook)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");

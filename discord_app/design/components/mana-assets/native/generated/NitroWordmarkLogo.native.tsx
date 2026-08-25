@@ -1,12 +1,12 @@
-// === Module 6041: NitroWordmarkLogo ===
+// === Module 6727: NitroWordmarkLogo ===
 
-// Module 6041 (NitroWordmarkLogo)
+// Module 6727 (NitroWordmarkLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4100 */;
-import metadataDefault from "metadata" /* 6042 */;
+import map from "map" /* 4101 */;
+import metadataDefault from "metadata" /* 6728 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

@@ -1,10 +1,10 @@
-// === Module 4545: set ===
+// === Module 4397: set ===
 
-// Module 4545 (set)
+// Module 4397 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "handleUpdate" /* 4546 */;
-import closure_1 from "updateVoiceState" /* 4547 */;
+import closure_0 from "handleUpdate" /* 4398 */;
+import closure_1 from "updateVoiceState" /* 4399 */;
 import set from "set" /* 2 */;
 
 let c2 = null;

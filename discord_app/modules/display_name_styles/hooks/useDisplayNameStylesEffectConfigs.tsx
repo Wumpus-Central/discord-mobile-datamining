@@ -1,8 +1,8 @@
-// === Module 9494: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
+// === Module 9620: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
 
-// Module 9494 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
-import messagesProxyDefault from "messagesProxy" /* 2694 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9495 */;
+// Module 9620 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
+import messagesProxyDefault from "messagesProxy" /* 2695 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 9621 */;
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

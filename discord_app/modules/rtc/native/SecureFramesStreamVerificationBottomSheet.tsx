@@ -1,8 +1,8 @@
-// === Module 9761: SecureFramesStreamVerificationBottomSheet ===
+// === Module 9372: SecureFramesStreamVerificationBottomSheet ===
 
-// Module 9761 (SecureFramesStreamVerificationBottomSheet)
+// Module 9372 (SecureFramesStreamVerificationBottomSheet)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 4563 */;
+import closure_4 from "initialize" /* 4468 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -37,8 +37,8 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj[1] = intl2.string(channelId(1236).t.qODBkW);
   const intl3 = channelId(1236).intl;
   obj = { helpArticle: null };
-  const tmp3 = streamKey(9762);
-  obj[0] = channelId(9747).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(9373);
+  obj[0] = channelId(9357).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1236).t["H3+ktv"], obj);
   obj[3] = stateFromStores;
   obj[4] = callback;

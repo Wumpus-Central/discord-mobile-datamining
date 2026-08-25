@@ -1,8 +1,8 @@
-// === Module 14075: createPendingImage ===
+// === Module 14110: createPendingImage ===
 
-// Module 14075 (createPendingImage)
+// Module 14110 (createPendingImage)
 import set from "set" /* 2 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8424 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 8430 */;
 
 const result = set.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 
@@ -13,14 +13,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   }
   ({ imageUri, staticImageUri, description, originalAsset, originalMd5 } = assetOrigin);
   if (AssetOriginTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
-    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: "<string:1805582337>" };
+    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: "Active Threads Popout" };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
     obj[2] = staticImageUri;
     obj[3] = description;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(8424).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (tmp3(8430).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: null, originalMd5: null };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
@@ -29,8 +29,8 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[4] = originalAsset;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(8424).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
-    obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F" };
+  } else if (tmp3(8430).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+    obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: null };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;
     obj1[3] = originalAsset;

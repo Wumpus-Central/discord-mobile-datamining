@@ -1,20 +1,20 @@
-// === Module 14835: UserSettingsText ===
+// === Module 14865: UserSettingsText ===
 
-// Module 14835 (UserSettingsText)
+// Module 14865 (UserSettingsText)
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9402 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 8845 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4048 */;
+import closure_5 from "reset" /* 4049 */;
 import closure_6 from "initialize" /* 1303 */;
 import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;

@@ -1,20 +1,20 @@
-// === Module 8720: initialize ===
+// === Module 10743: initialize ===
 
-// Module 8720 (initialize)
+// Module 10743 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "handleConnectionOpen" /* 1980 */;
-import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8707 */;
+import closure_3 from "handleConnectionOpen" /* 1981 */;
+import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9896 */;
 
 let c4 = false;
 let c5 = false;
 let c6 = false;
 let c7 = false;
 let obj = {};
-obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
+obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "isLoadedFromServer" };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "nodeType" };
+obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: "isLoadedFromServer" };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
 let c10 = true;
 const Store = initializeDefault.Store;

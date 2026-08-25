@@ -1,10 +1,10 @@
-// === Module 12568: DoorExitIcon ===
+// === Module 10877: DoorExitIcon ===
 
-// Module 12568 (DoorExitIcon)
+// Module 10877 (DoorExitIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 12569 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 10878 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

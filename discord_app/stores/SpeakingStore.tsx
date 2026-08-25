@@ -1,17 +1,17 @@
-// === Module 4779: anyoneHasFlagInContext ===
+// === Module 5244: anyoneHasFlagInContext ===
 
-// Module 4779 (anyoneHasFlagInContext)
+// Module 5244 (anyoneHasFlagInContext)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import getUnitIdDefault from "getUnitId" /* 4780 */;
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import getUnitIdDefault from "getUnitId" /* 5245 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_6 from "createRTCConnection" /* 4544 */;
-import closure_7 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_6 from "createRTCConnection" /* 4454 */;
+import closure_7 from "handleConnectionOpen" /* 1981 */;
 import { Permissions } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4534 */;
+import DesktopSources from "DesktopSources" /* 4444 */;
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;

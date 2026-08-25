@@ -1,17 +1,17 @@
-// === Module 11414: EmptyStateWithSnowflakeQuery ===
+// === Module 11770: EmptyStateWithSnowflakeQuery ===
 
-// Module 11414 (EmptyStateWithSnowflakeQuery)
+// Module 11770 (EmptyStateWithSnowflakeQuery)
 import closure_3 from "noop" /* 19 */;
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function EmptyStateWithSnowflakeQuery(onPressRow) {
   onPressRow = onPressRow.onPressRow;
   const tmp = callback();
   const items = [onPressRow.query];
-  return jsx(onPressRow(11396).AppLauncherList, {
+  return jsx(onPressRow(11752).AppLauncherList, {
     contentContainerStyle: callback().emptyState,
     data: items,
     renderItem(item) {

@@ -1,18 +1,18 @@
-// === Module 8967: InformationTable ===
+// === Module 8931: InformationTable ===
 
-// Module 8967 (InformationTable)
+// Module 8931 (InformationTable)
 import ThemesDefault from "Themes" /* 712 */;
-import registerAssetDefault from "registerAsset" /* 8970 */;
+import registerAssetDefault from "registerAsset" /* 8934 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "trackCommunicationDisabled" /* 1991 */;
+import closure_7 from "trackCommunicationDisabled" /* 1992 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8968 */;
+import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8932 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function InformationTable(speedBumpType) {
@@ -41,7 +41,7 @@ function InformationTable(speedBumpType) {
       return closure_1_12(items(closure_1_2[14]).TableRow, obj, arg1);
     })
   };
-  return callback2(items(6317).TableRowGroup, obj);
+  return callback2(items(5873).TableRowGroup, obj);
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: unpackModuleId } = ME);

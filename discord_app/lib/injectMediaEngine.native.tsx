@@ -1,8 +1,8 @@
-// === Module 4502: ? ===
+// === Module 4432: ? ===
 
-// Module 4502
+// Module 4432
 import set from "set" /* 2 */;
-import inject from "inject" /* 4503 */;
+import inject from "inject" /* 4433 */;
 
 inject.inject({
   supported() {
@@ -16,7 +16,7 @@ inject.inject({
 
   },
   getVoiceEngine() {
-    return require(4504) /* logger */.default;
+    return require(4434) /* logger */.default;
   },
   getOpenH264LibraryPath() {
 

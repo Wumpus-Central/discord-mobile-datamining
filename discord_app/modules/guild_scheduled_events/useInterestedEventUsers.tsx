@@ -1,10 +1,10 @@
-// === Module 8834: useInterestedEventUsers ===
+// === Module 9101: useInterestedEventUsers ===
 
-// Module 8834 (useInterestedEventUsers)
+// Module 9101 (useInterestedEventUsers)
 import set2 from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import closure_3 from "scheduledEventSort" /* 4374 */;
+import closure_3 from "scheduledEventSort" /* 7132 */;
 
 const useMemo = noop.useMemo;
 let closure_4 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventUserResponses;

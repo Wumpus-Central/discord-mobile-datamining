@@ -1,12 +1,12 @@
-// === Module 8504: getAutoArchiveOptions ===
+// === Module 8511: getAutoArchiveOptions ===
 
-// Module 8504 (getAutoArchiveOptions)
+// Module 8511 (getAutoArchiveOptions)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 687 */;
 import memoizeDefault from "memoize" /* 731 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3978 */;
+import hooksDefault from "hooks" /* 3979 */;
 
 function getAutoArchiveOptions() {
   let obj = { id: "1hour", label: null, value: null };
@@ -47,9 +47,9 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    const obj = tDefault;
-    label = tDefault.duration(arg0, "minutes").humanize();
-    const durationResult = tDefault.duration(arg0, "minutes");
+    const obj = hooksDefault;
+    label = hooksDefault.duration(arg0, "minutes").humanize();
+    const durationResult = hooksDefault.duration(arg0, "minutes");
   }
   return label;
 };

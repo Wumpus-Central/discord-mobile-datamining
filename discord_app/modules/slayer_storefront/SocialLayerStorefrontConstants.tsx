@@ -1,6 +1,6 @@
-// === Module 7241: STOREFRONT_MARKETING_GUILD_ID ===
+// === Module 5957: STOREFRONT_MARKETING_GUILD_ID ===
 
-// Module 7241 (STOREFRONT_MARKETING_GUILD_ID)
+// Module 5957 (STOREFRONT_MARKETING_GUILD_ID)
 import set from "set" /* 2 */;
 import Environments2 from "Environments" /* 1929 */;
 

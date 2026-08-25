@@ -1,17 +1,17 @@
-// === Module 9609: NameplateUser ===
+// === Module 9705: NameplateUser ===
 
-// Module 9609 (NameplateUser)
+// Module 9705 (NameplateUser)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import getNameplateData from "getNameplateData" /* 1946 */;
-import LinearGradientDefault from "LinearGradient" /* 4761 */;
-import TableRowInner from "TableRowInner" /* 6322 */;
-import firstAvatarDecoration from "firstAvatarDecoration" /* 9242 */;
+import getNameplateData from "getNameplateData" /* 1947 */;
+import LinearGradientDefault from "LinearGradient" /* 4826 */;
+import TableRowInner from "TableRowInner" /* 5480 */;
+import firstAvatarDecoration from "firstAvatarDecoration" /* 9521 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function NameplateUser(arg0) {
@@ -47,7 +47,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: null, autoStatusCutout: null, "aria-hidden": null };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}", autoStatusCutout: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}", "aria-hidden": "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;
     obj[4] = !stateFromStores;
@@ -111,7 +111,7 @@ export default function NameplateProductPreview(product) {
     const intl2 = tmp2(1236).intl;
     const items1 = [intl2.string(tmp2(1236).t["yzW/fZ"]), " \u2014 3"];
     obj3[5] = items1;
-    items[1] = callback2(tmp2(4739).Text, obj3);
+    items[1] = callback2(tmp2(4376).Text, obj3);
     const obj4 = { user: null, start: true };
     obj4[0] = nameplateSampleUsers.phibi;
     items[2] = callback(PlaceholderUser, obj4);
@@ -127,7 +127,7 @@ export default function NameplateProductPreview(product) {
     const intl3 = tmp2(1236).intl;
     const items2 = [intl3.string(tmp2(1236).t["NG43/6"]), " \u2014 12"];
     obj7[5] = items2;
-    items[5] = callback2(tmp2(4739).Text, obj7);
+    items[5] = callback2(tmp2(4376).Text, obj7);
     const obj8 = { user: null, start: true };
     obj8[0] = nameplateSampleUsers.boom;
     items[6] = callback(PlaceholderUser, obj8);

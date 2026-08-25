@@ -1,12 +1,12 @@
-// === Module 11848: ApplicationIconAndName ===
+// === Module 12186: ApplicationIconAndName ===
 
-// Module 11848 (ApplicationIconAndName)
+// Module 12186 (ApplicationIconAndName)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4739 */;
+import Text from "Text" /* 4376 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((width) => {

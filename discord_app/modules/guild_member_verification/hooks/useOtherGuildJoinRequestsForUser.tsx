@@ -1,8 +1,8 @@
-// === Module 15907: useOtherGuildJoinRequestsForUser ===
+// === Module 15939: useOtherGuildJoinRequestsForUser ===
 
-// Module 15907 (useOtherGuildJoinRequestsForUser)
+// Module 15939 (useOtherGuildJoinRequestsForUser)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateSubmittedGuildJoinRequestTotal" /* 7466 */;
+import closure_4 from "updateSubmittedGuildJoinRequestTotal" /* 7064 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useOtherGuildJoinRequestsForUser.tsx");

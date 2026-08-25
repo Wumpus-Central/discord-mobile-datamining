@@ -1,8 +1,8 @@
-// === Module 7674: create ===
+// === Module 7495: create ===
 
-// Module 7674 (create)
+// Module 7495 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7671 */;
+import create from "create" /* 7492 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -27,7 +27,7 @@ class PremiumTab$Type extends MessageType {
       name: "acknowledged_badge_label_localized",
       kind: "message",
       T() {
-            return callback(7671).LocalizedString;
+            return callback(7492).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTab", items, T);
@@ -172,7 +172,7 @@ items[5] = {
   name: "acknowledged_badge_label_localized",
   kind: "message",
   T() {
-    return callback(7671).LocalizedString;
+    return callback(7492).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTab", items, tmp, T, PremiumTab$Type, prototype, items);

@@ -1,12 +1,12 @@
-// === Module 12549: useGlobalStatusIndicatorState ===
+// === Module 10853: useGlobalStatusIndicatorState ===
 
-// Module 12549 (useGlobalStatusIndicatorState)
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9787 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 12548 */;
-import useMyCurrentStageChannelDefault from "useMyCurrentStageChannel" /* 12551 */;
+// Module 10853 (useGlobalStatusIndicatorState)
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10852 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 10855 */;
+import useMyCurrentStageChannelDefault from "useMyCurrentStageChannel" /* 10857 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4544 */;
-import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT" /* 12550 */;
+import closure_4 from "createRTCConnection" /* 4454 */;
+import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT" /* 10854 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   importDefault = undefined;
-  let obj = stateFromStores(8724);
+  let obj = stateFromStores(10747);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
   const items = [closure_4];
@@ -41,18 +41,18 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     return isGuildStageVoiceResult;
   }, items2);
   const obj3 = stateFromStores(589);
-  let num = stateFromStores(12546).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(4233);
+  let num = stateFromStores(10850).useGetStageRTCPanelHeight(stateFromStores);
+  stateFromStores(4234);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(8700);
+    let tmpResult = tmp(4615);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(8704);
+  tmpResult = tmp(10856);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
   const tmp14 = null != useMyCurrentStageChannelDefault();
   if (!isVoicePanelShowing) {

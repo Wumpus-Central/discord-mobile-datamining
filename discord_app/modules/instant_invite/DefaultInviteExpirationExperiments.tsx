@@ -1,10 +1,10 @@
-// === Module 8959: getDefaultInviteExpiration ===
+// === Module 9216: getDefaultInviteExpiration ===
 
-// Module 8959 (getDefaultInviteExpiration)
-import isGuildMemberDefault from "isGuildMember" /* 8957 */;
+// Module 9216 (getDefaultInviteExpiration)
+import isGuildMemberDefault from "isGuildMember" /* 9214 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
-import createExperiment from "createExperiment" /* 4290 */;
+import createExperiment from "createExperiment" /* 4291 */;
 
 const require = arg1;
 function getDefaultInviteExpiration(arg0) {

@@ -1,6 +1,6 @@
-// === Module 6727: useIsManualAgeVerificationHidden ===
+// === Module 8103: useIsManualAgeVerificationHidden ===
 
-// Module 6727 (useIsManualAgeVerificationHidden)
+// Module 8103 (useIsManualAgeVerificationHidden)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

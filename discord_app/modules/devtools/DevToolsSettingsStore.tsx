@@ -1,9 +1,9 @@
-// === Module 7509: initialize ===
+// === Module 7323: initialize ===
 
-// Module 7509 (initialize)
+// Module 7323 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "init" /* 7510 */;
+import closure_2 from "init" /* 7324 */;
 
 let closure_3 = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

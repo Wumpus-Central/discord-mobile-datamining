@@ -1,15 +1,15 @@
-// === Module 8533: PressableNavigatorBackIcon ===
+// === Module 8541: PressableNavigatorBackIcon ===
 
-// Module 8533 (PressableNavigatorBackIcon)
+// Module 8541 (PressableNavigatorBackIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 5388 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
+import closure_7 from "updateGuildUnreadSentinel" /* 7242 */;
+import closure_8 from "handleConnectionOpen" /* 1981 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 let c3 = importAllResult;

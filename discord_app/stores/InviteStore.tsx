@@ -1,11 +1,11 @@
-// === Module 4363: updateInvite ===
+// === Module 4364: updateInvite ===
 
-// Module 4363 (updateInvite)
+// Module 4364 (updateInvite)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import readSnowflake from "readSnowflake" /* 4364 */;
+import readSnowflake from "readSnowflake" /* 4365 */;
 
 function updateInvite(code, arg1) {
   let str = code;

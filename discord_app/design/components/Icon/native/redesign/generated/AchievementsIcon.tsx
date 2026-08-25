@@ -1,10 +1,10 @@
-// === Module 14031: AchievementsIcon ===
+// === Module 14066: AchievementsIcon ===
 
-// Module 14031 (AchievementsIcon)
+// Module 14066 (AchievementsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 14032 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 14067 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

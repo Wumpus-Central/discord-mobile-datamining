@@ -1,6 +1,6 @@
-// === Module 11946: HubEmailConnectionSteps ===
+// === Module 12275: HubEmailConnectionSteps ===
 
-// Module 11946 (HubEmailConnectionSteps)
+// Module 12275 (HubEmailConnectionSteps)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/hub/HubConstants.tsx");

@@ -1,6 +1,6 @@
-// === Module 12336: handleFeaturedOrDeveloperFetchSuccess ===
+// === Module 12653: handleFeaturedOrDeveloperFetchSuccess ===
 
-// Module 12336 (handleFeaturedOrDeveloperFetchSuccess)
+// Module 12653 (handleFeaturedOrDeveloperFetchSuccess)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

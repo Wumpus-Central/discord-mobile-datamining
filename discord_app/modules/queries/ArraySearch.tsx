@@ -1,6 +1,6 @@
-// === Module 11297: sortGroup ===
+// === Module 11653: sortGroup ===
 
-// Module 11297 (sortGroup)
+// Module 11653 (sortGroup)
 import set from "set" /* 2 */;
 
 function sortGroup(arr) {

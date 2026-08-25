@@ -1,8 +1,8 @@
-// === Module 9030: zustandStore ===
+// === Module 8992: zustandStore ===
 
-// Module 9030 (zustandStore)
+// Module 8992 (zustandStore)
 import set2 from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4245 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4246 */;
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
   const obj = { sources: [], spoilerIndexes: new Set() };

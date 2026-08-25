@@ -1,6 +1,6 @@
-// === Module 5270: signalAllAcceptedCredentials ===
+// === Module 5938: signalAllAcceptedCredentials ===
 
-// Module 5270 (signalAllAcceptedCredentials)
+// Module 5938 (signalAllAcceptedCredentials)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -25,7 +25,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
           return obj;
         }
         v0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp14) {
         v0 = tmp;
         throw tmp14;
@@ -90,7 +90,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp20) {
         c2 = tmp;
         throw tmp20;
@@ -163,7 +163,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -209,7 +209,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp10) {
         c0 = tmp;
         throw tmp10;

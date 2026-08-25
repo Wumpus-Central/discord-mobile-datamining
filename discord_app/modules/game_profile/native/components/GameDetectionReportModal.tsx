@@ -1,13 +1,13 @@
-// === Module 12081: ReportContent ===
+// === Module 12406: ReportContent ===
 
-// Module 12081 (ReportContent)
+// Module 12406 (ReportContent)
 import ThemesDefault from "Themes" /* 712 */;
-import NavigationStack from "NavigationStack" /* 6343 */;
+import NavigationStack from "NavigationStack" /* 5889 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function ReportContent(applicationId) {
@@ -124,7 +124,7 @@ function ReportContent(applicationId) {
     const intl4 = tmp2(tmp3[10]).intl;
     obj1[2] = intl4.string(tmp2(tmp3[10]).t.IQHicr);
     const items3 = [tmp15(tmp2(tmp3[14]).Text, obj1), ];
-    let obj2 = { value: "Array", onChange: false, hasIcons: null, children: "box-none" };
+    let obj2 = { value: "Array", onChange: false, hasIcons: null, children: 500 };
     obj2[1] = function onChange(arg0) {
       closure_0 = arg0;
       const timerId = setTimeout(() => {

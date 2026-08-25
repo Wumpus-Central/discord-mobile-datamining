@@ -1,13 +1,13 @@
-// === Module 8744: _launchFrame ===
+// === Module 10683: _launchFrame ===
 
-// Module 8744 (_launchFrame)
+// Module 10683 (_launchFrame)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 8748 */;
-import getFramesManagerDefault from "getFramesManager" /* 8802 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10684 */;
+import getFramesManagerDefault from "getFramesManager" /* 11064 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 8745 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8746 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8740 */;
+import closure_4 from "map" /* 10677 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 10678 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9915 */;
 
 require = arg1;
 function _launchFrame() {
@@ -29,7 +29,7 @@ function _launchFrame() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (callback4(callback2) === c5.MAIN) {
-                  let obj9 = callback(8748);
+                  let obj9 = callback(10684);
                   const result = obj9.leaveCurrentEmbeddedActivity();
                   callback6();
                 }
@@ -98,15 +98,15 @@ function _launchFrame() {
                 c5 = 4;
                 c6 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = callback(8738).createProxyTicket(callback, callback3(callback2));
+                obj5[0] = callback(10699).createProxyTicket(callback, callback3(callback2));
                 return obj5;
               }
             }
           } else if (2 === tmp7) {
             frame = 0;
             callback3 = intent;
-            c5 = callback2(8749)();
-            let obj7 = callback(8762);
+            c5 = callback2(10685)();
+            let obj7 = callback(10697);
             c5 = 3;
             c6 = 1;
             const obj6 = { value: null, done: false };
@@ -276,7 +276,7 @@ function _refreshProxyTicket() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -328,8 +328,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = closure_3;
-            closure_3 = applicationId(8749)();
-            let obj8 = callback(8762);
+            closure_3 = applicationId(10685)();
+            let obj8 = callback(10697);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

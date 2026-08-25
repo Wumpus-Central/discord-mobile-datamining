@@ -1,10 +1,10 @@
-// === Module 4202: handleGatewayJoinRequestUpdate ===
+// === Module 4203: handleGatewayJoinRequestUpdate ===
 
-// Module 4202 (handleGatewayJoinRequestUpdate)
+// Module 4203 (handleGatewayJoinRequestUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4203 */;
+import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4204 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

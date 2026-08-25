@@ -1,0 +1,117 @@
+// === Module 11583: MenuRow ===
+
+// Module 11583 (MenuRow)
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4376 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 9856 */;
+import AttachmentIcon from "AttachmentIcon" /* 9946 */;
+import registerAssetDefault from "registerAsset" /* 10986 */;
+import HourglassIcon from "HourglassIcon" /* 11580 */;
+import registerAssetDefault2 from "registerAsset" /* 11584 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
+
+function MenuRow(arg0) {
+  ({ icon, label, highlighted } = arg0);
+  const tmp = callback3();
+  const items = [tmp.menuRow, ];
+  let menuRowHighlighted = null;
+  if (highlighted) {
+    menuRowHighlighted = tmp.menuRowHighlighted;
+  }
+  let obj = { style: items, children: null };
+  items[1] = menuRowHighlighted;
+  obj = { size: "sm", color: ThemesDefault.colors.TEXT_STRONG };
+  const items1 = [callback(icon, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: label })];
+  obj[1] = items1;
+  return closure_7(closure_5, obj);
+}
+({ Image: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
+({ jsx: closure_6, jsxs: error } = jsxProd);
+let obj = { scrollView: { flex: 1 }, pageContainer: null, container: null, hero: null, heroIcon: null, heroSparkle: null, heroStar: null, textContainer: null, text: null, demo: null, menu: null, menuRow: null, menuRowHighlighted: null, menuDivider: null, chatInput: null, plusButton: null };
+obj = { alignItems: "center", flexGrow: 1, justifyContent: "center", paddingBottom: ThemesDefault.space.PX_32, paddingHorizontal: ThemesDefault.space.PX_32 };
+obj[1] = obj;
+obj[2] = { alignItems: "center" };
+obj[3] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_16 };
+obj[4] = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, height: 72, justifyContent: "center", width: 72 };
+obj[5] = { height: 16, position: "absolute", right: -6, top: -2, width: 16 };
+obj[6] = { bottom: 2, height: 14, left: -8, position: "absolute", width: 14 };
+let obj2 = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, height: 72, justifyContent: "center", width: 72 };
+obj[7] = { gap: ThemesDefault.space.PX_8 };
+obj[8] = { textAlign: "center" };
+let obj3 = { gap: ThemesDefault.space.PX_8 };
+obj[9] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
+let obj4 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
+obj[10] = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+let obj5 = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+obj[11] = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
+let obj6 = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
+obj[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj[13] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
+let obj8 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
+obj[14] = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8 };
+let obj9 = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8 };
+obj[15] = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE, justifyContent: "center", width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE };
+let closure_8 = createCacheKey.createStyles(obj);
+let obj10 = { alignItems: "center", backgroundColor: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_BACKGROUND, borderRadius: ThemesDefault.radii.round, height: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE, justifyContent: "center", width: ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE };
+const result = set.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesIntro.tsx");
+
+export default function ScheduledMessagesIntro() {
+  const tmp = callback3();
+  let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
+  obj = { style: tmp.container, children: null };
+  obj = { style: tmp.hero, children: null };
+  obj1 = { style: tmp.heroIcon, children: callback(HourglassIcon.HourglassIcon, { size: "lg", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT }) };
+  const items = [callback(closure_5, obj1), , ];
+  const obj2 = { size: "lg", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  items[1] = callback(closure_3, { source: registerAssetDefault, style: tmp.heroSparkle });
+  const obj3 = { source: registerAssetDefault, style: tmp.heroSparkle };
+  items[2] = callback(closure_3, { source: registerAssetDefault2, style: tmp.heroStar });
+  obj[1] = items;
+  const items1 = [callback2(closure_5, obj), , ];
+  const obj5 = { style: tmp.textContainer, children: null };
+  const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const intl = getSystemLocale.intl;
+  obj6[3] = intl.string(getSystemLocale.t["C/j9NE"]);
+  const items2 = [callback(Text.Heading, obj6), ];
+  const obj7 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
+  const intl2 = getSystemLocale.intl;
+  obj7[4] = intl2.format(getSystemLocale.t.PqmI8J, {});
+  items2[1] = callback(Text.Text, obj7);
+  obj5[1] = items2;
+  items1[1] = callback2(closure_5, obj5);
+  const obj8 = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+  const obj9 = { style: tmp.menu, children: null };
+  const obj10 = { icon: AttachmentIcon.AttachmentIcon, label: null, highlighted: false };
+  const intl3 = getSystemLocale.intl;
+  obj10[1] = intl3.string(getSystemLocale.t["8Hvr3+"]);
+  const items3 = [callback(MenuRow, obj10), callback(closure_5, { style: tmp.menuDivider }), ];
+  const obj12 = { icon: HourglassIcon.HourglassIcon, label: null, highlighted: true };
+  const intl4 = getSystemLocale.intl;
+  obj12[1] = intl4.string(getSystemLocale.t["3+ii4F"]);
+  items3[2] = callback(MenuRow, obj12);
+  obj9[1] = items3;
+  const items4 = [callback2(closure_5, obj9), ];
+  const obj13 = { style: tmp.chatInput, children: null };
+  const obj14 = { style: tmp.plusButton, children: null };
+  const obj11 = { style: tmp.menuDivider };
+  const obj4 = { source: registerAssetDefault2, style: tmp.heroStar };
+  obj14[1] = callback(PlusLargeIcon.PlusLargeIcon, { size: "xs", color: ThemesDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT });
+  const items5 = [callback(closure_5, obj14), ];
+  const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
+  const intl5 = getSystemLocale.intl;
+  obj16[2] = intl5.string(getSystemLocale.t.fxxYiB);
+  items5[1] = callback(Text.Text, obj16);
+  obj13[1] = items5;
+  items4[1] = callback2(closure_5, obj13);
+  obj8[3] = items4;
+  items1[2] = callback2(closure_5, obj8);
+  obj[1] = items1;
+  obj[2] = callback2(closure_5, obj);
+  return callback(closure_4, obj);
+};

@@ -1,18 +1,18 @@
-// === Module 15950: getSearchTokenLabel ===
+// === Module 15982: getSearchTokenLabel ===
 
-// Module 15950 (getSearchTokenLabel)
+// Module 15982 (getSearchTokenLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import AtIcon from "AtIcon" /* 6923 */;
-import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8545 */;
-import CalendarIcon from "CalendarIcon" /* 8934 */;
-import RobotIcon from "RobotIcon" /* 9871 */;
-import AttachmentIcon from "AttachmentIcon" /* 10090 */;
-import UserIcon from "UserIcon" /* 11043 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13125 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 15951 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 15953 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8546 */;
+import AtIcon from "AtIcon" /* 4920 */;
+import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8553 */;
+import CalendarIcon from "CalendarIcon" /* 9191 */;
+import AttachmentIcon from "AttachmentIcon" /* 9946 */;
+import RobotIcon from "RobotIcon" /* 10615 */;
+import UserIcon from "UserIcon" /* 11385 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13396 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 15983 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 15985 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8554 */;
 import ME from "ME" /* 676 */;
 
 ({ EMPTY_SEARCH_QUERY_STRING: c3, SearchQueryTagTypes: c4 } = MessageEmbedTypes);
@@ -209,7 +209,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(11561));
+  const keys = Object.keys(items(11908));
   const item = keys.forEach((type) => {
     let obj = textInputValue(closure_1_2[12]);
     if (obj.isSearchFilterTokenType(type)) {

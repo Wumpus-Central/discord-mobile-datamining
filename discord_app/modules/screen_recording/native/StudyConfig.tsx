@@ -1,6 +1,6 @@
-// === Module 15266: SURVEY_CONFIGS ===
+// === Module 15296: SURVEY_CONFIGS ===
 
-// Module 15266 (SURVEY_CONFIGS)
+// Module 15296 (SURVEY_CONFIGS)
 import set from "set" /* 2 */;
 
 const obj = {};

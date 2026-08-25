@@ -1,6 +1,6 @@
-// === Module 8301: parsePollResultSystemMessageEmbed ===
+// === Module 8302: parsePollResultSystemMessageEmbed ===
 
-// Module 8301 (parsePollResultSystemMessageEmbed)
+// Module 8302 (parsePollResultSystemMessageEmbed)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");

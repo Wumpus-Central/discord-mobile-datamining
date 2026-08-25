@@ -1,23 +1,23 @@
-// === Module 17012: EarningPreview ===
+// === Module 17044: EarningPreview ===
 
-// Module 17012 (EarningPreview)
+// Module 17044 (EarningPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4314 */;
-import Text from "Text" /* 4739 */;
-import preloadDefault from "preload" /* 5454 */;
-import registerAssetDefault from "registerAsset" /* 17013 */;
-import registerAssetDefault2 from "registerAsset" /* 17016 */;
-import registerAssetDefault3 from "registerAsset" /* 17017 */;
-import registerAssetDefault4 from "registerAsset" /* 17018 */;
-import registerAssetDefault5 from "registerAsset" /* 17019 */;
-import registerAssetDefault6 from "registerAsset" /* 17020 */;
+import useThemeDefault from "useTheme" /* 4315 */;
+import Text from "Text" /* 4376 */;
+import preloadDefault from "preload" /* 5374 */;
+import registerAssetDefault from "registerAsset" /* 17045 */;
+import registerAssetDefault2 from "registerAsset" /* 17048 */;
+import registerAssetDefault3 from "registerAsset" /* 17049 */;
+import registerAssetDefault4 from "registerAsset" /* 17050 */;
+import registerAssetDefault5 from "registerAsset" /* 17051 */;
+import registerAssetDefault6 from "registerAsset" /* 17052 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14619 */;
+import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 14649 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function EarningPreview() {
@@ -65,9 +65,9 @@ function ConsistentEarningBenefit() {
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(17014);
+    let tmpResult = tmp(17046);
   } else {
-    tmpResult = tmp(17015);
+    tmpResult = tmp(17047);
   }
   const items2 = [callback(BenefitAvatar, { avatarSource: tmpResult }), , ];
   obj4 = AccessibilityAnnouncer;

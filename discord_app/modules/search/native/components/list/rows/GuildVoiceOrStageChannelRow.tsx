@@ -1,14 +1,14 @@
-// === Module 15976: GuildVoiceChannelSubtitle ===
+// === Module 16008: GuildVoiceChannelSubtitle ===
 
-// Module 15976 (GuildVoiceChannelSubtitle)
-import useStageParticipants from "useStageParticipants" /* 6745 */;
-import _modDef15978 from "module_15978" /* 15978 */;
+// Module 16008 (GuildVoiceChannelSubtitle)
+import useStageParticipants from "useStageParticipants" /* 5255 */;
+import _modDef16010 from "module_16010" /* 16010 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes" /* 8546 */;
+import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes" /* 8554 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function GuildVoiceChannelSubtitle(channel) {
@@ -289,7 +289,7 @@ function GuildVoiceChannelExtras(arg0) {
     obj[2] = channel.guild_id;
     obj[3] = closure_6;
     obj[4] = tmp4;
-    obj[1] = tmp5(_modDef15978, obj);
+    obj[1] = tmp5(_modDef16010, obj);
     tmp5Result = tmp5(tmp6, obj);
   }
   obj[1] = tmp5Result;
@@ -317,12 +317,12 @@ const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
     obj = { channel: null, voiceStates: null };
     obj[0] = channel;
     obj[1] = voiceStates;
-    obj[1] = tmp4(channel(11507).VocalChannelJoinButton, obj);
+    obj[1] = tmp4(channel(11858).VocalChannelJoinButton, obj);
     trailing = tmp4(View, obj);
   }
   obj[4] = trailing;
   obj[5] = <GuildVoiceChannelExtras channel={channel} voiceStates={voiceStates} users={mapped} />;
-  return jsx(onPress(15980), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
+  return jsx(onPress(16012), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
 });
 const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
 

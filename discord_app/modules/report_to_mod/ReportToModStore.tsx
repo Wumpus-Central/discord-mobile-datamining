@@ -1,9 +1,9 @@
-// === Module 10888: handleSelectedGuildChange ===
+// === Module 11207: handleSelectedGuildChange ===
 
-// Module 10888 (handleSelectedGuildChange)
+// Module 11207 (handleSelectedGuildChange)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "handleConnectionOpen" /* 4201 */;
+import closure_0 from "handleConnectionOpen" /* 4202 */;
 
 function handleSelectedGuildChange() {
   lastSelectedGuildId = lastSelectedGuildId.getLastSelectedGuildId();

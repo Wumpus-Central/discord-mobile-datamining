@@ -1,18 +1,18 @@
-// === Module 16755: _shouldSkipContactSyncStep ===
+// === Module 16787: _shouldSkipContactSyncStep ===
 
-// Module 16755 (_shouldSkipContactSyncStep)
+// Module 16787 (_shouldSkipContactSyncStep)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _modDef5265 from "module_5265" /* 5265 */;
-import trackNUFStep from "trackNUFStep" /* 11905 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16756 */;
+import _modDef4611 from "module_4611" /* 4611 */;
+import trackNUFStep from "trackNUFStep" /* 12239 */;
+import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 16788 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15288 */;
-import closure_6 from "set" /* 5226 */;
+import closure_5 from "initialize" /* 15318 */;
+import closure_6 from "set" /* 5106 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 11900 */;
-import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4844 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12234 */;
+import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4618 */;
 
 require = arg1;
 function _shouldSkipContactSyncStep() {
@@ -29,7 +29,7 @@ function _shouldSkipContactSyncStep() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -45,13 +45,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(11902);
+            let obj2 = closure_1_0(12236);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11902).checkContactPermissions();
+              obj1[0] = closure_1_0(12236).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -89,12 +89,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef5265.popWithKey(tmp(16756).NEW_USER_MODAL_KEY);
-    const obj3 = _modDef5265;
+    _modDef4611.popWithKey(tmp(16788).NEW_USER_MODAL_KEY);
+    const obj3 = _modDef4611;
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(11974);
+  tmpResult = tmp(12302);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -127,7 +127,7 @@ function _getNextOnboardingStep() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -211,7 +211,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(11905);
+              obj3 = flag(12239);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);
@@ -298,7 +298,7 @@ let closure_13 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_14 = importDefaultResult(function*() {
       obj[0] = arg1;
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

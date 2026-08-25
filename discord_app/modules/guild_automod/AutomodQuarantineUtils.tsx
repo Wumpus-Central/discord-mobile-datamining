@@ -1,15 +1,15 @@
-// === Module 11090: useCurrentUserHasAutomodQuarantinedProfile ===
+// === Module 11432: useCurrentUserHasAutomodQuarantinedProfile ===
 
-// Module 11090 (useCurrentUserHasAutomodQuarantinedProfile)
+// Module 11432 (useCurrentUserHasAutomodQuarantinedProfile)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 9574 */;
+import closure_3 from "zustandStore" /* 10290 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_8 from "handleConnectionOpen" /* 4201 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_8 from "handleConnectionOpen" /* 4202 */;
 import ME from "ME" /* 676 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4012 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4013 */;
 import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES" /* 685 */;
 
 const require = arg1;
@@ -38,7 +38,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
     if (id == null) {
       guildId = closure_1_8.getGuildId();
     }
-    let obj = { nick: "Array", bio: "ct" };
+    let obj = { nick: "isArray", bio: "accessibilityRole" };
     let guild = closure_1_6.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

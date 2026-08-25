@@ -1,8 +1,8 @@
-// === Module 10027: hasOfferedFavoritesGuildOnboarding ===
+// === Module 9869: hasOfferedFavoritesGuildOnboarding ===
 
-// Module 10027 (hasOfferedFavoritesGuildOnboarding)
+// Module 9869 (hasOfferedFavoritesGuildOnboarding)
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10028 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9870 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import withContent from "withContent" /* 1383 */;
@@ -17,14 +17,14 @@ let c4 = importAllResult;
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
 const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  const favoritesAccess = _require(10018).useFavoritesAccess("FavoritesGuildIntroPopover");
+  const favoritesAccess = _require(9860).useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = _require(10018);
+  const obj = _require(9860);
   const items = [closure_8];
   const stateFromStores = _require(589).useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
   const obj2 = _require(589);
   const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
-  _require(7404);
+  _require(6131);
   if (hasAccess) {
     if (isFreemium) {
       if (!stateFromStores) {
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           } else {
             items3 = [];
           }
-          const tmp12 = callback(tmp(7404).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = callback(tmp(6131).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {

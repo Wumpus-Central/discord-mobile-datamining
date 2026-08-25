@@ -1,17 +1,17 @@
-// === Module 15560: _handleVoiceChannelPress ===
+// === Module 15592: _handleVoiceChannelPress ===
 
-// Module 15560 (_handleVoiceChannelPress)
+// Module 15592 (_handleVoiceChannelPress)
 import ThemesDefault from "Themes" /* 712 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11284 */;
+import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11642 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 5276 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_8 from "generateOldThreadCutoff" /* 4777 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5048 */;
-import closure_10 from "getVoiceStatesForGuild" /* 4550 */;
-import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4550 */;
+import closure_6 from "handleConnectionOpen" /* 7133 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_8 from "generateOldThreadCutoff" /* 4395 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 4589 */;
+import closure_10 from "getVoiceStatesForGuild" /* 4455 */;
+import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4455 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -34,7 +34,7 @@ function _handleVoiceChannelPress() {
           obj[0] = openMemberVerificationModal;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ function _handleVoiceChannelPress() {
           } else {
             openMemberVerificationModal.openGuildVoiceModal(guildId, "Channel List");
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           c3 = tmp;

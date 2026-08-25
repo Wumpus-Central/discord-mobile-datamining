@@ -1,8 +1,8 @@
-// === Module 9921: experiment ===
+// === Module 4608: experiment ===
 
-// Module 9921 (experiment)
+// Module 4608 (experiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4290 */;
+import createExperiment from "createExperiment" /* 4291 */;
 
 const items = [{ id: 1, label: "Enable Guild Rooms in this guild", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 2, label: "Enable Guild Rooms without Interactions", config: { enabled: true, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 3, label: "Enable Guild Rooms with Room Variants", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }, { id: 4, label: "Enable Guild Rooms without Postures", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: false } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: items });

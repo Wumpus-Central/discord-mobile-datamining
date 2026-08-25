@@ -1,6 +1,6 @@
-// === Module 13916: _fetchIsLinkTrusted ===
+// === Module 13951: _fetchIsLinkTrusted ===
 
-// Module 13916 (_fetchIsLinkTrusted)
+// Module 13951 (_fetchIsLinkTrusted)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -25,7 +25,7 @@ function _fetchIsLinkTrusted() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

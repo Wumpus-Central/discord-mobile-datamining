@@ -1,6 +1,6 @@
-// === Module 7221: getHigherContrastColor ===
+// === Module 5879: getHigherContrastColor ===
 
-// Module 7221 (getHigherContrastColor)
+// Module 5879 (getHigherContrastColor)
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 

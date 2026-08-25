@@ -1,10 +1,10 @@
-// === Module 12372: navigateToPremiumHomePage ===
+// === Module 12690: navigateToPremiumHomePage ===
 
-// Module 12372 (navigateToPremiumHomePage)
+// Module 12690 (navigateToPremiumHomePage)
 import set from "set" /* 2 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import pushLayer from "pushLayer" /* 5358 */;
-import openUserSettings from "openUserSettings" /* 7398 */;
+import openUserSettings from "openUserSettings" /* 6125 */;
+import pushLayer from "pushLayer" /* 7193 */;
 import ME from "ME" /* 676 */;
 
 ({ Routes: obj1, UserSettingsSections: c3 } = ME);

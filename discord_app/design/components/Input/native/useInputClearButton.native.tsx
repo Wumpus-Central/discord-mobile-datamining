@@ -1,9 +1,9 @@
-// === Module 7378: useInputClearButton ===
+// === Module 6104: useInputClearButton ===
 
-// Module 7378 (useInputClearButton)
+// Module 6104 (useInputClearButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import CircleXIcon from "CircleXIcon" /* 7379 */;
+import CircleXIcon from "CircleXIcon" /* 6105 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 

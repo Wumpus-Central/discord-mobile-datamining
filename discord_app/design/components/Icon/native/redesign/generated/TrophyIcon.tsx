@@ -1,10 +1,10 @@
-// === Module 8049: TrophyIcon ===
+// === Module 7871: TrophyIcon ===
 
-// Module 8049 (TrophyIcon)
+// Module 7871 (TrophyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8050 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 7872 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

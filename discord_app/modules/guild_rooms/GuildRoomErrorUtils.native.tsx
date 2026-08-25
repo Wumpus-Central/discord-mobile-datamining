@@ -1,6 +1,6 @@
-// === Module 9920: handleGuildRoomError ===
+// === Module 4607: handleGuildRoomError ===
 
-// Module 9920 (handleGuildRoomError)
+// Module 4607 (handleGuildRoomError)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

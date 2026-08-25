@@ -1,10 +1,10 @@
-// === Module 14679: route ===
+// === Module 14709: route ===
 
-// Module 14679 (route)
+// Module 14709 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import closure_3 from "handleThemeChange" /* 1302 */;
-import createToggle from "createToggle" /* 10708 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 createToggle = {
@@ -28,7 +28,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return require(14680) /* ThemeTypes */.default;
+    return require(14710) /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

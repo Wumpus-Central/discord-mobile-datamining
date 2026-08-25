@@ -1,7 +1,7 @@
-// === Module 4912: create ===
+// === Module 5035: create ===
 
-// Module 4912 (create)
-import decodeImageDefault from "decodeImage" /* 1952 */;
+// Module 5035 (create)
+import decodeImageDefault from "decodeImage" /* 1953 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -62,7 +62,7 @@ prototype["hasSrgbIccProfile"] = function hasSrgbIccProfile() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {

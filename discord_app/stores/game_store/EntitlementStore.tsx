@@ -1,13 +1,13 @@
-// === Module 5362: addEntitlement ===
+// === Module 7004: addEntitlement ===
 
-// Module 5362 (addEntitlement)
+// Module 7004 (addEntitlement)
 import applyDefault from "apply" /* 12 */;
 import initializeAll from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getComboId from "getComboId" /* 4525 */;
-import closure_3 from "createFromServer" /* 4519 */;
-import closure_4 from "setLibraryApplications" /* 4517 */;
-import closure_5 from "addSku" /* 4526 */;
+import getComboId from "getComboId" /* 4428 */;
+import closure_3 from "createFromServer" /* 4422 */;
+import closure_4 from "setLibraryApplications" /* 4419 */;
+import closure_5 from "addSku" /* 4429 */;
 import ME from "ME" /* 676 */;
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1924 */;
 import set from "set" /* 2 */;

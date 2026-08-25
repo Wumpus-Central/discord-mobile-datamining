@@ -1,8 +1,8 @@
-// === Module 15415: useEnsureHydratedUsers ===
+// === Module 15445: useEnsureHydratedUsers ===
 
-// Module 15415 (useEnsureHydratedUsers)
+// Module 15445 (useEnsureHydratedUsers)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionReset" /* 6741 */;
+import closure_3 from "handleConnectionReset" /* 5250 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
@@ -29,5 +29,5 @@ export const useEnsureHydratedUsers = function useEnsureHydratedUsers(guild_id, 
       }
     });
   }, items1);
-  const subscribeGuildMembers = _require(7313).useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
+  const subscribeGuildMembers = _require(6035).useSubscribeGuildMembers(memo, "useEnsureHydratedUsers");
 };

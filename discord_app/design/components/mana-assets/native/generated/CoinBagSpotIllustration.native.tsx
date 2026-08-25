@@ -1,10 +1,10 @@
-// === Module 5609: CoinBagSpotIllustration ===
+// === Module 6293: CoinBagSpotIllustration ===
 
-// Module 5609 (CoinBagSpotIllustration)
+// Module 6293 (CoinBagSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5610 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6294 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CoinBagSpotIllustration.native.tsx");

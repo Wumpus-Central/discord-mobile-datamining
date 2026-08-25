@@ -1,12 +1,12 @@
-// === Module 10100: HighlightText ===
+// === Module 9956: HighlightText ===
 
-// Module 10100 (HighlightText)
+// Module 9956 (HighlightText)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
-import hexToRgba from "hexToRgba" /* 4227 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
+import hexToRgba from "hexToRgba" /* 4228 */;
 
 require = arg1;
 noopAll;

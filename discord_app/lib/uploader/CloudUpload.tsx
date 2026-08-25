@@ -1,18 +1,19 @@
-// === Module 4833: set ===
+// === Module 4953: set ===
 
-// Module 4833 (set)
+// Module 4953 (set)
 import timestampDefault from "timestamp" /* 3 */;
 import failsDefault from "fails" /* 584 */;
 import setDefault from "set" /* 687 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import cancel from "cancel" /* 4834 */;
-import cancelDefault from "cancel" /* 4834 */;
+import cancel from "cancel" /* 4954 */;
+import cancelDefault from "cancel" /* 4954 */;
+import fromBlobDefault from "fromBlob" /* 4994 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "getUserAgnosticState" /* 4742 */;
+import closure_7 from "getUserAgnosticState" /* 4379 */;
 import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionInfoChange" /* 4569 */;
+import closure_9 from "handleConnectionInfoChange" /* 4474 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -190,6 +191,7 @@ class CloudUpload extends tmp5 {
     tmp5.uploadAnalytics = obj;
     tmp5.uploadAttempts = 0;
     tmp5._aborted = false;
+    tmp5._originalMd5 = null;
     tmp5.createResumeAwareProgressFn = function createResumeAwareProgressFn(arg0) {
       closure_0 = arg0;
       return (loaded) => {
@@ -227,13 +229,17 @@ class CloudUpload extends tmp5 {
     if (tmp10) {
       tmp5.mimeType = global.compressionMetadata.originalContentType;
     }
+    tmp11 = global.platform === require("cancel").UploadPlatform.WEB && null != global.originalMd5;
+    if (tmp11) {
+      tmp5._originalMd5 = global.originalMd5;
+    }
     abortController = new AbortController();
     tmp5._abortController = abortController;
     if (null == tmp5.origin) {
-      tmp12 = new.target;
       tmp13 = new.target;
+      tmp14 = new.target;
       defaultHttpClient = new require("doesImageMatchUpload").DefaultHttpClient();
-      tmp15 = defaultHttpClient;
+      tmp16 = defaultHttpClient;
       tmp5._uploadHttpClient = defaultHttpClient;
       tmp5._libdiscoreEnabled = false;
       return tmp5;
@@ -332,6 +338,9 @@ prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpt
     retryOptsResult = self.retryOpts();
   }
   return retryOptsResult;
+};
+prototype["buildOriginalMd5Headers"] = function buildOriginalMd5Headers() {
+  return fromBlobDefault.buildHeadersForMd5(this._originalMd5);
 };
 prototype["supportsResume"] = function supportsResume() {
   let _libdiscoreEnabled = this._libdiscoreEnabled;
@@ -446,7 +455,7 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(closure_3, arg1)
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -491,7 +500,7 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(closure_3, arg1)
                 tmp18 = tmp16;
               }
             }
-            obj4 = closure_1_1(closure_1_2[13]);
+            obj4 = closure_1_1(closure_1_2[14]);
             tmp18.onRequestProgress = obj4.throttle(_catch.createResumeAwareProgressFn(closure_1_1), 50);
             const _uploadHttpClient = _catch._uploadHttpClient;
             const obj2 = { fileByteRange: null };
@@ -550,7 +559,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -583,7 +592,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
             obj2[0] = closure_1_2;
             obj1[2] = obj2;
             obj1[3] = closure_1_3._abortController.signal;
-            obj1[4] = closure_1_1(closure_1_2[13]).throttle(closure_1_3.createResumeAwareProgressFn(0), 50);
+            obj1[4] = closure_1_1(closure_1_2[14]).throttle(closure_1_3.createResumeAwareProgressFn(0), 50);
             obj1[7] = retryOptsResult.timeout;
             iter3 = obj1;
             c4 = 0;
@@ -599,7 +608,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -637,7 +646,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         const _HermesInternal2 = HermesInternal;
                         closure_2_12.warn("Error uploading " + closure_3.id + ": " + closure_3.message + ", attempting resumption");
                         closure_3.uploadAnalytics.uploadResumptionReason = closure_3.messageShort;
-                        let obj8 = iter4(next[14]);
+                        let obj8 = iter4(next[15]);
                         c5 = 5;
                         c6 = 1;
                         const obj2 = { value: null, done: false };
@@ -740,7 +749,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       return obj;
                     } else {
                       c6 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                     c3 = 0;
                     c6 = 3;
@@ -861,7 +870,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
 prototype["getSize"] = function getSize() {
   const self = this;
   return callback(function*() {
-    const getFileSize = closure_1_0(table[15]).getFileSize;
+    const getFileSize = closure_1_0(table[16]).getFileSize;
     if (getFileSize != null) {
       const fileSize = getFileSize(closure_1_0.item.uri);
     }
@@ -888,7 +897,7 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -955,15 +964,15 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
 prototype["upload"] = function upload() {
   const self = this;
   return callback(function*() {
-    if (status === 2) {
-      status = 3;
+    if (c9 === 2) {
+      c9 = 3;
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
     } else {
       throwTypeErrorResult = arg1;
       throwTypeErrorResult = arg0;
       throwTypeErrorResult = tmp7;
-      throwTypeErrorResult = globalThis;
       throwTypeErrorResult = null;
+      throwTypeErrorResult = globalThis;
       if (tmp8 === 3) {
         if (arg0 === 1) {
           throw arg1;
@@ -972,30 +981,34 @@ prototype["upload"] = function upload() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
-          status = 2;
-          if (0 === c7) {
+          c9 = 2;
+          if (0 === c8) {
             if (arg0 === 1) {
-              status = 3;
+              c9 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              status = 3;
+              c9 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              c4 = tmp3;
-              c3 = tmp9;
+              c5 = tmp3;
+              c4 = tmp9;
               let store;
-              status = undefined;
-              let maxFileSize;
-              c3 = undefined;
+              let status;
+              closure_2 = undefined;
+              closure_3 = undefined;
               c4 = undefined;
-              closure_5 = undefined;
+              c5 = undefined;
               c6 = undefined;
+              c7 = undefined;
+              c8 = undefined;
+              c9 = undefined;
+              c10 = undefined;
               throwTypeErrorResult = store;
               throwTypeErrorResult = closure_1_15;
               if (store.status !== closure_1_15.COMPLETED) {
@@ -1010,16 +1023,16 @@ prototype["upload"] = function upload() {
                 throwTypeErrorResult = store;
                 if (false === store.reactNativeFilePrepped) {
                   throwTypeErrorResult = store;
-                  c7 = 1;
-                  status = 1;
+                  c8 = 1;
+                  c9 = 1;
                   obj1 = { value: null, done: false };
                   obj1[0] = store.reactNativeCompressAndExtractData();
                   return obj1;
                 }
               }
-              status = 3;
+              c9 = 3;
               c6 = 0;
-              status = 3;
+              c9 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -1027,287 +1040,473 @@ prototype["upload"] = function upload() {
           } else {
             if (1 === tmp9) {
               if (arg0 === 1) {
-                status = 3;
+                c9 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                status = 3;
+                c9 = 3;
                 let obj2 = { value: null, done: true };
                 obj2[0] = arg1;
                 return obj2;
               }
-            } else if (2 === tmp9) {
-              if (arg0 === 1) {
-                status = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                throwTypeErrorResult = c3;
-                store = arg1;
-                throwTypeErrorResult = store;
-                if (null != store) {
-                  throwTypeErrorResult = c3;
-                  throwTypeErrorResult = store;
-                  if (null != store.convertedFile) {
-                    throwTypeErrorResult = c4;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = store;
-                    store.item.file = store.convertedFile;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = store;
-                    store.currentSize = store.convertedFile.size;
-                  }
-                  throwTypeErrorResult = c3;
-                  throwTypeErrorResult = store;
-                  if (null != store.convertedMimeType) {
-                    throwTypeErrorResult = c3;
-                    throwTypeErrorResult = c4;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = store;
-                    store.uploadAnalytics.convertedMimeType = store.convertedMimeType;
-                  }
-                  throwTypeErrorResult = c3;
-                  throwTypeErrorResult = store;
-                  if (null != store.hashTimeMs) {
-                    throwTypeErrorResult = c3;
-                    throwTypeErrorResult = c4;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = store;
-                    store.uploadAnalytics.timing.hashTimeMs = store.hashTimeMs;
-                  }
-                  throwTypeErrorResult = c3;
-                  throwTypeErrorResult = store;
-                  if (null != store.conversionFailureReason) {
-                    throwTypeErrorResult = c3;
-                    throwTypeErrorResult = c4;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = store;
-                    store.uploadAnalytics.conversionFailureReason = store.conversionFailureReason;
-                  }
-                  throwTypeErrorResult = c3;
+            } else {
+              if (2 === tmp9) {
+                if (arg0 === 1) {
+                  c9 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c9 = 3;
+                  let obj3 = { value: null, done: true };
+                  obj3[0] = arg1;
+                  return obj3;
+                } else {
                   throwTypeErrorResult = c4;
-                  throwTypeErrorResult = store;
-                  throwTypeErrorResult = store;
-                  store.uploadAnalytics.timing.compressTimeMs = store.compressTimeMs;
-                }
-                throwTypeErrorResult = c4;
-                throwTypeErrorResult = store;
-                throwTypeErrorResult = maxFileSize;
-                throwTypeErrorResult = store;
-                throwTypeErrorResult = store(maxFileSize[16]).default.getUploadPayload(store);
-                c7 = 3;
-                status = 1;
-                const _default = store(maxFileSize[16]).default;
-              }
-            } else if (3 === tmp9) {
-              if (arg0 === 1) {
-                status = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                status = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              } else {
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = c4;
-                const lib = arg1;
-                throwTypeErrorResult = store;
-                throwTypeErrorResult = maxFileSize;
-                throwTypeErrorResult = store;
-                maxFileSize = store(maxFileSize[17]).getUploadTarget(store.item.target);
-                throwTypeErrorResult = lib;
-                if (null != lib.filename) {
-                  throwTypeErrorResult = c3;
-                  throwTypeErrorResult = lib;
-                  if ("" !== lib.filename) {
+                  closure_3 = arg1;
+                  throwTypeErrorResult = closure_3;
+                  if (null != closure_3) {
                     throwTypeErrorResult = c4;
-                    throwTypeErrorResult = store;
-                    const currentSize2 = store.currentSize;
-                    throwTypeErrorResult = store;
-                    if (0 !== store.currentSize) {
-                      let obj5 = store(maxFileSize[19]);
-                      const kestrelConfig = obj5.getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
-                      let obj6 = store(maxFileSize[19]);
-                      const effectiveKestrelLimit = obj6.getEffectiveKestrelLimit(kestrelConfig, maxFileSize.getMaxFileSize(store.channelId));
-                      const currentSize = store.currentSize;
-                      store = currentSize;
-                      if (currentSize == null) {
-                        store = 0;
-                      }
-                      if (store > effectiveKestrelLimit) {
-                        store.handleError(closure_1_10.ENTITY_TOO_LARGE);
-                      } else {
+                    store = true;
+                    throwTypeErrorResult = closure_3;
+                    if (null != closure_3.convertedFile) {
+                      throwTypeErrorResult = c5;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = null == store._originalMd5;
+                      if (throwTypeErrorResult) {
                         throwTypeErrorResult = c4;
-                        throwTypeErrorResult = c7;
-                        if (c7.get("upload_fail_50")) {
-                          const _Math = Math;
-                          if (Math.random() < 0.5) {
-                            const _setTimeout = setTimeout;
-                            const timerId = setTimeout(() => {
-                              c0.handleError(500);
-                            }, 1000);
-                          }
-                        }
-                        c6 = 1;
-                        const _HermesInternal3 = HermesInternal;
-                        closure_1_12.log("Requesting upload url for " + store.id);
-                        c7 = 6;
-                        status = 1;
+                        throwTypeErrorResult = file;
+                        throwTypeErrorResult = null != file;
+                      }
+                      if (throwTypeErrorResult) {
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        closure_3 = store;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = file;
+                        let obj13 = lib(file[19]);
+                        throwTypeErrorResult = file;
+                        c8 = 3;
+                        c9 = 1;
                         const obj4 = { value: null, done: false };
-                        obj4[0] = store.trackTime("getUploadUrlTimeMs", closure_1_5(function*() {
-                          const createAttachmentURL = closure_1_2.getCreateAttachmentURL(v0.channelId);
-                          const HTTP = v0(table[8]).HTTP;
-                          obj1 = { url: null, body: null };
-                          obj1[0] = createAttachmentURL;
-                          const obj2 = { files: null };
-                          const items = [c1];
-                          obj2[0] = items;
-                          obj1[1] = obj2;
-                          const merged = Object.assign(v0.createAttachmentUrlRetryOpts());
-                          obj1.rejectWithError = false;
-                          yield HTTP.post(obj1);
-                          return arg1;
-                        }));
+                        obj4[0] = obj13.fromBlob(file).catch(() => null);
                         return obj4;
                       }
-                    } else {
-                      store.handleError(closure_1_10.ENTITY_EMPTY);
                     }
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = closure_3;
+                    if (null != closure_3.convertedMimeType) {
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = c5;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = closure_3;
+                      store.uploadAnalytics.convertedMimeType = closure_3.convertedMimeType;
+                    }
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = closure_3;
+                    if (null != closure_3.conversionFailureReason) {
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = c5;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = closure_3;
+                      store.uploadAnalytics.conversionFailureReason = closure_3.conversionFailureReason;
+                    }
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = c5;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = closure_3;
+                    store.uploadAnalytics.timing.compressTimeMs = closure_3.compressTimeMs;
                   }
                 }
-                const _JSON2 = JSON;
-                closure_1_12.error("File does not have a filename.", JSON.stringify(lib));
-                store.handleError(closure_1_10.INVALID_FILE_ASSET);
-                status = 3;
-                obj5 = { value: null, done: true };
-                obj5[0] = undefined;
-                return obj5;
-              }
-            } else if (4 === tmp9) {
-              c6 = 0;
-              c7 = closure_5;
-              let code;
-              if (c7 != null) {
-                const body = c7.body;
-                if (body != null) {
-                  code = body.code;
-                }
-              }
-              status = code;
-              if (code == null) {
-                status = c7.status;
-              }
-              closure_6 = status;
-              if (closure_6 !== closure_1_10.ENTITY_TOO_LARGE) {
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = c4;
-                throwTypeErrorResult = closure_6;
-                maxFileSize = closure_6;
-                throwTypeErrorResult = closure_1_12;
-                if (closure_6 == null) {
-                  const _JSON = JSON;
-                  maxFileSize = JSON.stringify(c7.body);
-                }
-                const _HermesInternal2 = HermesInternal;
-                closure_1_12.error("Requesting upload url failed with code " + maxFileSize + " for " + store.id);
-                obj3 = lib(maxFileSize[20]);
-                obj3.captureException(c7);
-              }
-              store.handleError(closure_6);
-              status = 3;
-              obj6 = { value: null, done: true };
-              obj6[0] = undefined;
-              return obj6;
-            } else if (5 === tmp9) {
-              c6 = 0;
-              status = closure_5;
-              if (store.isCancelled()) {
-                store.handleComplete(status);
               } else {
-                const _HermesInternal = HermesInternal;
-                closure_1_12.info("Error: status " + status.status + " for " + store.id);
-                store.handleError(status);
+                if (3 === tmp9) {
+                  if (arg0 === 1) {
+                    c9 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c9 = 3;
+                    let obj5 = { value: null, done: true };
+                    obj5[0] = arg1;
+                    return obj5;
+                  } else {
+                    throwTypeErrorResult = closure_3;
+                    closure_3._originalMd5 = arg1;
+                  }
+                } else if (4 === tmp9) {
+                  if (arg0 === 1) {
+                    c9 = 3;
+                    throw arg1;
+                  } else if (arg0 !== 2) {
+                    throwTypeErrorResult = c4;
+                    closure_4 = arg1;
+                    throwTypeErrorResult = closure_4;
+                    if (null != closure_4) {
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = closure_4;
+                      if (null != closure_4.convertedFile) {
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = closure_4;
+                        store.item.file = closure_4.convertedFile;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = closure_4;
+                        store.currentSize = closure_4.convertedFile.size;
+                      }
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = closure_4;
+                      if (null != closure_4.convertedMimeType) {
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = closure_4;
+                        store.uploadAnalytics.convertedMimeType = closure_4.convertedMimeType;
+                      }
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = closure_4;
+                      if (null != closure_4.hashTimeMs) {
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = closure_4;
+                        store.uploadAnalytics.timing.hashTimeMs = closure_4.hashTimeMs;
+                      }
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = closure_4;
+                      if (null != closure_4.conversionFailureReason) {
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = closure_4;
+                        store.uploadAnalytics.conversionFailureReason = closure_4.conversionFailureReason;
+                      }
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = c5;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = closure_4;
+                      store.uploadAnalytics.timing.compressTimeMs = closure_4.compressTimeMs;
+                    }
+                    throwTypeErrorResult = c5;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = file;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store(file[20]).default.getUploadPayload(store);
+                    c8 = 5;
+                    c9 = 1;
+                    const _default = store(file[20]).default;
+                  }
+                } else if (5 === tmp9) {
+                  if (arg0 === 1) {
+                    c9 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c9 = 3;
+                    let obj6 = { value: null, done: true };
+                    obj6[0] = arg1;
+                    return obj6;
+                  } else {
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = c5;
+                    const lib2 = arg1;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = file;
+                    throwTypeErrorResult = store;
+                    const maxFileSize = store(file[21]).getUploadTarget(store.item.target);
+                    throwTypeErrorResult = lib2;
+                    if (null != lib2.filename) {
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = lib2;
+                      if ("" !== lib2.filename) {
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        const currentSize2 = store.currentSize;
+                        throwTypeErrorResult = store;
+                        if (0 !== store.currentSize) {
+                          obj5 = store(file[23]);
+                          const kestrelConfig = obj5.getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
+                          obj6 = store(file[23]);
+                          const effectiveKestrelLimit = obj6.getEffectiveKestrelLimit(kestrelConfig, maxFileSize.getMaxFileSize(store.channelId));
+                          const currentSize = store.currentSize;
+                          store = currentSize;
+                          if (currentSize == null) {
+                            store = 0;
+                          }
+                          if (store > effectiveKestrelLimit) {
+                            store.handleError(constants.ENTITY_TOO_LARGE);
+                          } else {
+                            throwTypeErrorResult = c5;
+                            throwTypeErrorResult = kestrelConfig;
+                            if (kestrelConfig.get("upload_fail_50")) {
+                              const _Math = Math;
+                              if (Math.random() < 0.5) {
+                                const _setTimeout = setTimeout;
+                                const timerId = setTimeout(() => {
+                                  c0.handleError(500);
+                                }, 1000);
+                              }
+                            }
+                            c6 = 1;
+                            const _HermesInternal3 = HermesInternal;
+                            closure_1_12.log("Requesting upload url for " + store.id);
+                            c8 = 8;
+                            c9 = 1;
+                            const obj7 = { value: null, done: false };
+                            obj7[0] = store.trackTime("getUploadUrlTimeMs", lib2(function*() {
+                              const createAttachmentURL = closure_1_6.getCreateAttachmentURL(v0.channelId);
+                              const HTTP = v0(table[8]).HTTP;
+                              obj1 = { url: null, body: null, headers: null };
+                              obj1[0] = createAttachmentURL;
+                              const obj2 = { files: null };
+                              const items = [closure_1_5];
+                              obj2[0] = items;
+                              obj1[1] = obj2;
+                              obj1[2] = v0.buildOriginalMd5Headers();
+                              const merged = Object.assign(v0.createAttachmentUrlRetryOpts());
+                              obj1.rejectWithError = false;
+                              yield HTTP.post(obj1);
+                              return arg1;
+                            }));
+                            return obj7;
+                          }
+                        } else {
+                          store.handleError(constants.ENTITY_EMPTY);
+                        }
+                      }
+                    }
+                    const _JSON2 = JSON;
+                    closure_1_12.error("File does not have a filename.", JSON.stringify(lib2));
+                    store.handleError(constants.INVALID_FILE_ASSET);
+                    c9 = 3;
+                    const obj8 = { value: null, done: true };
+                    obj8[0] = undefined;
+                    return obj8;
+                  }
+                } else if (6 === tmp9) {
+                  c6 = 0;
+                  closure_11 = c7;
+                  let code;
+                  if (closure_11 != null) {
+                    const body = closure_11.body;
+                    if (body != null) {
+                      code = body.code;
+                    }
+                  }
+                  status = code;
+                  if (code == null) {
+                    status = closure_11.status;
+                  }
+                  constants = status;
+                  if (constants !== constants.ENTITY_TOO_LARGE) {
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = c5;
+                    throwTypeErrorResult = constants;
+                    closure_2 = constants;
+                    throwTypeErrorResult = closure_1_12;
+                    if (constants == null) {
+                      const _JSON = JSON;
+                      closure_2 = JSON.stringify(closure_1_11.body);
+                    }
+                    const _HermesInternal2 = HermesInternal;
+                    closure_1_12.error("Requesting upload url failed with code " + closure_2 + " for " + store.id);
+                    obj3 = lib(file[24]);
+                    obj3.captureException(closure_1_11);
+                  }
+                  store.handleError(constants);
+                  c9 = 3;
+                  const obj9 = { value: null, done: true };
+                  obj9[0] = undefined;
+                  return obj9;
+                } else if (7 === tmp9) {
+                  c6 = 0;
+                  status = c7;
+                  if (store.isCancelled()) {
+                    store.handleComplete(status);
+                  } else {
+                    const _HermesInternal = HermesInternal;
+                    closure_1_12.info("Error: status " + status.status + " for " + store.id);
+                    store.handleError(status);
+                  }
+                } else if (8 === tmp9) {
+                  if (arg0 === 1) {
+                    c9 = 3;
+                    throw arg1;
+                  } else if (arg0 === 2) {
+                    c6 = 0;
+                    c9 = 3;
+                    const obj10 = { value: null, done: true };
+                    obj10[0] = arg1;
+                    return obj10;
+                  } else {
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = c5;
+                    c9 = arg1;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setResponseUrl(c9.body.attachments[0].upload_url);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = c9;
+                    throwTypeErrorResult = store.setUploadedFilename(c9.body.attachments[0].upload_filename);
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = c5;
+                    c6 = 2;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = lib2;
+                    c8 = 9;
+                    c9 = 1;
+                    const obj11 = { value: null, done: false };
+                    obj11[0] = store.trackTime("uploadTimeMs", lib2(function*() {
+                      yield c0.uploadFileToCloud();
+                      return arg1;
+                    }));
+                    return obj11;
+                  }
+                } else if (arg0 === 1) {
+                  c9 = 3;
+                  throw arg1;
+                } else if (arg0 !== 2) {
+                  store.trackUploadFinished(closure_1_15.COMPLETED);
+                  store.handleComplete(store.id);
+                  c6 = 0;
+                }
+                c9 = 3;
+                let obj12 = { value: null, done: true };
+                obj12[0] = arg1;
+                return obj12;
               }
-            } else if (6 === tmp9) {
-              if (arg0 === 1) {
-                status = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 0;
-                status = 3;
-                const obj7 = { value: null, done: true };
-                obj7[0] = arg1;
-                return obj7;
-              } else {
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = c4;
-                closure_5 = arg1;
-                throwTypeErrorResult = store;
-                throwTypeErrorResult = closure_5;
-                throwTypeErrorResult = store.setResponseUrl(closure_5.body.attachments[0].upload_url);
-                throwTypeErrorResult = store;
-                throwTypeErrorResult = closure_5;
-                throwTypeErrorResult = store.setUploadedFilename(closure_5.body.attachments[0].upload_filename);
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = c4;
-                c6 = 2;
-                throwTypeErrorResult = store;
-                throwTypeErrorResult = closure_1_5;
-                c7 = 7;
-                status = 1;
-                const obj8 = { value: null, done: false };
-                obj8[0] = store.trackTime("uploadTimeMs", closure_1_5(function*() {
-                  yield c0.uploadFileToCloud();
-                  return arg1;
-                }));
-                return obj8;
-              }
-            } else if (arg0 === 1) {
-              status = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              store.trackUploadFinished(closure_1_15.COMPLETED);
-              store.handleComplete(store.id);
-              c6 = 0;
-            }
-            status = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          }
-          throwTypeErrorResult = c4;
-          throwTypeErrorResult = store;
-          throwTypeErrorResult = c4;
-          if (store.isCancelled()) {
-            throwTypeErrorResult = store;
-            throwTypeErrorResult = obj13.handleComplete(store.id);
-          } else if (obj13.allowOptimization) {
-            throwTypeErrorResult = c4;
-            throwTypeErrorResult = store;
-            throwTypeErrorResult = store;
-            throwTypeErrorResult = maxFileSize;
-            if (store.item.platform === store(maxFileSize[9]).UploadPlatform.WEB) {
-              throwTypeErrorResult = c3;
               throwTypeErrorResult = c4;
-              throwTypeErrorResult = closure_1_18;
+              throwTypeErrorResult = c5;
+              throwTypeErrorResult = store;
+              throwTypeErrorResult = closure_3;
+              store.item.file = closure_3.convertedFile;
+              throwTypeErrorResult = store;
+              throwTypeErrorResult = closure_3;
+              store.currentSize = closure_3.convertedFile.size;
+              throwTypeErrorResult = store;
+              throwTypeErrorResult = closure_3;
+              throwTypeErrorResult = store.setFilename(closure_3.convertedFile.name);
+              throwTypeErrorResult = file;
+              throwTypeErrorResult = null == file;
+              if (!throwTypeErrorResult) {
+                throwTypeErrorResult = c5;
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = null != store.mimeType;
+                if (throwTypeErrorResult) {
+                  throwTypeErrorResult = c5;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = "" !== store.mimeType;
+                }
+              }
+              if (!throwTypeErrorResult) {
+                throwTypeErrorResult = c4;
+                throwTypeErrorResult = c5;
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = file;
+                obj12 = store(file[17]);
+                throwTypeErrorResult = file;
+                store.mimeType = obj12.heicMimeType(file);
+              }
+            }
+            throwTypeErrorResult = c5;
+            throwTypeErrorResult = store;
+            throwTypeErrorResult = c5;
+            if (store.isCancelled()) {
+              throwTypeErrorResult = store;
+              throwTypeErrorResult = obj18.handleComplete(store.id);
+            } else if (obj18.allowOptimization) {
+              throwTypeErrorResult = c5;
               throwTypeErrorResult = store;
               throwTypeErrorResult = store;
-              c7 = 2;
-              status = 1;
-              const obj10 = { value: null, done: false };
-              obj10[0] = closure_1_18.tryConvertToWebP(store.item.file, () => c0._aborted, store.id);
-              return obj10;
+              throwTypeErrorResult = file;
+              if (store.item.platform === store(file[9]).UploadPlatform.WEB) {
+                throwTypeErrorResult = c4;
+                throwTypeErrorResult = store;
+                if (!store) {
+                  throwTypeErrorResult = c5;
+                  throwTypeErrorResult = store;
+                  if (true !== store.item.heicConversionEvaluated) {
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = c5;
+                    throwTypeErrorResult = closure_1_18;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store;
+                    c8 = 4;
+                    c9 = 1;
+                    obj13 = { value: null, done: false };
+                    obj13[0] = closure_1_18.tryConvertToWebP(store.item.file, () => c0._aborted, store.id);
+                    return obj13;
+                  }
+                }
+              }
+            }
+          }
+          throwTypeErrorResult = c5;
+          throwTypeErrorResult = store;
+          if (store.isCancelled()) {
+            throwTypeErrorResult = c5;
+            throwTypeErrorResult = store;
+            throwTypeErrorResult = store;
+            throwTypeErrorResult = store.handleComplete(store.id);
+          } else {
+            throwTypeErrorResult = c4;
+            throwTypeErrorResult = c5;
+            store = false;
+            throwTypeErrorResult = store;
+            if (store.allowOptimization) {
+              throwTypeErrorResult = c5;
+              throwTypeErrorResult = store;
+              throwTypeErrorResult = store;
+              throwTypeErrorResult = file;
+              if (store.item.platform === store(file[9]).UploadPlatform.WEB) {
+                throwTypeErrorResult = c5;
+                throwTypeErrorResult = store;
+                if (true !== store.item.heicConversionEvaluated) {
+                  throwTypeErrorResult = c5;
+                  throwTypeErrorResult = store;
+                  if (null != store.item.file) {
+                    throwTypeErrorResult = c5;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = file;
+                    throwTypeErrorResult = store;
+                    if (obj25.isHeicFile(store.item.file)) {
+                      throwTypeErrorResult = c4;
+                      throwTypeErrorResult = c5;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = file;
+                      const HeicUploadConversionExperiment = store(file[18]).HeicUploadConversionExperiment;
+                      lib = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertHeicToJpeg" });
+                      throwTypeErrorResult = lib;
+                      if (lib.enabled) {
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = c5;
+                        throwTypeErrorResult = store;
+                        file = store.item.file;
+                        throwTypeErrorResult = closure_1_18;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = closure_1_18;
+                        c8 = 2;
+                        c9 = 1;
+                        const obj14 = { value: null, done: false };
+                        obj14[0] = closure_1_18.tryConvertHeicToJpeg(store.item.file, () => c0._aborted, store.id, lib.quality, lib.maxFileSizeBytes);
+                        return obj14;
+                      }
+                    }
+                    obj25 = store(file[17]);
+                  }
+                }
+              }
             }
           }
         } catch (throwTypeErrorResult) {
-          closure_5 = throwTypeErrorResult;
+          c7 = throwTypeErrorResult;
           if (tmp4 === c6) {
             throwTypeErrorResult = tmp2;
-            status = tmp2;
+            c9 = tmp2;
             throw throwTypeErrorResult;
           } else if (throwTypeErrorResult === throwTypeErrorResult) {
-            c7 = tmp6;
+            c8 = tmp6;
           } else {
-            c7 = tmp5;
+            c8 = tmp5;
           }
         }
       }
@@ -1332,7 +1531,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1385,7 +1584,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                   c4 = 1;
                   let obj2 = { value: null, done: false };
                   obj2[0] = closure_1_0.trackTime("compressTimeMs", closure_1_5(function*() {
-                    const obj2 = size(name[21]);
+                    const obj2 = size(name[25]);
                     const reactNativeFileIndex = closure_1_0.reactNativeFileIndex;
                     c0 = reactNativeFileIndex;
                     if (reactNativeFileIndex == null) {
@@ -1405,7 +1604,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                 obj3[0] = closure_1_0;
                 return obj3;
               }
-              obj17 = closure_1_0(closure_1_2[17]);
+              obj17 = closure_1_0(closure_1_2[21]);
             }
           } else {
             if (1 === tmp5) {
@@ -1532,7 +1731,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                           const fileSize = size.fileSize;
                           size = fileSize;
                           if (fileSize == null) {
-                            obj2 = closure_1_0(closure_1_2[22]);
+                            obj2 = closure_1_0(closure_1_2[26]);
                             c3 = 2;
                             c4 = 1;
                             const obj5 = { value: null, done: false };
@@ -1653,7 +1852,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1677,7 +1876,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
             c4 = undefined;
             closure_5 = undefined;
             closure_6 = undefined;
-            imageAttachmentMezzanineV2Config = closure_1_0(closure_1_2[23]).getImageAttachmentMezzanineV2Config({ location: "CloudUpload.maybeConvertToWebP" });
+            imageAttachmentMezzanineV2Config = closure_1_0(closure_1_2[27]).getImageAttachmentMezzanineV2Config({ location: "CloudUpload.maybeConvertToWebP" });
             if (imageAttachmentMezzanineV2Config.enabled) {
               if (null == closure_1_0) {
                 const _HermesInternal6 = HermesInternal;
@@ -1704,7 +1903,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
                   imageAttachmentMezzanineV2Config = 2;
                   c9 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = tmp98(tmp99[25])(tmp99[24], tmp99.paths);
+                  obj1[0] = tmp98(tmp99[29])(tmp99[28], tmp99.paths);
                   return obj1;
                 }
               }
@@ -1714,7 +1913,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
               c9 = 3;
               return { value: null, done: true };
             }
-            const obj9 = closure_1_0(closure_1_2[23]);
+            const obj9 = closure_1_0(closure_1_2[27]);
             tmp98 = closure_1_0;
           }
         } else {
@@ -1829,6 +2028,146 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
     }
   })();
 };
+CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, id, quality, maxFileSizeBytes) {
+  closure_0 = file;
+  closure_1 = arg1;
+  closure_2 = id;
+  closure_3 = quality;
+  closure_4 = maxFileSizeBytes;
+  return callback(function*() {
+    if (c6 === 2) {
+      c6 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: "HermesInternal" };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let constants = tmp3;
+            let maybeConvertHeicToJpeg = tmp7;
+            let UNKNOWN_ERROR;
+            maybeConvertHeicToJpeg = undefined;
+            constants = undefined;
+            closure_3 = undefined;
+            if (null != closure_1_0) {
+              if (!closure_1_1()) {
+                c4 = 1;
+                c5 = 2;
+                c6 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(closure_1_2[29])(closure_1_2[30], closure_1_2.paths);
+                return obj1;
+              }
+            }
+            c6 = 3;
+            return { value: null, done: true };
+          }
+        } else if (1 === tmp7) {
+          c4 = 0;
+          c4 = closure_3;
+          const _HermesInternal3 = HermesInternal;
+          closure_1_12.warn("heic conversion threw for " + constants + ":", c4);
+          c6 = 3;
+          let obj2 = { value: null, done: true };
+          obj2[0] = { convertedFile: null, convertedMimeType: null, conversionFailureReason: "unknown_error", compressTimeMs: 0 };
+          return obj2;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
+          } else {
+            UNKNOWN_ERROR = arg1;
+            maybeConvertHeicToJpeg = UNKNOWN_ERROR.maybeConvertHeicToJpeg;
+            constants = UNKNOWN_ERROR.HeicConversionFailureReason;
+            c5 = 3;
+            c6 = 1;
+            const obj4 = { value: null, done: false };
+            obj4[0] = maybeConvertHeicToJpeg(UNKNOWN_ERROR, closure_3, c4);
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c4 = 0;
+          c6 = 3;
+          const obj5 = { value: null, done: true };
+          obj5[0] = arg1;
+          return obj5;
+        } else {
+          closure_3 = arg1;
+          let tmp10 = null;
+          if (!maybeConvertHeicToJpeg()) {
+            tmp10 = null;
+            if (null != closure_3) {
+              if (!closure_3.success) {
+                const _HermesInternal = HermesInternal;
+                closure_1_12.log("heic conversion skipped for " + constants + ": " + closure_3.reason);
+                const reason = closure_3.reason;
+                UNKNOWN_ERROR = reason;
+                if (reason == null) {
+                  UNKNOWN_ERROR = constants.UNKNOWN_ERROR;
+                }
+                obj = { convertedFile: null, convertedMimeType: null, conversionFailureReason: null, compressTimeMs: null };
+                obj[2] = UNKNOWN_ERROR;
+                obj[3] = closure_3.compressTimeMs;
+              }
+              const _HermesInternal2 = HermesInternal;
+              closure_1_12.log("heic conversion worked for " + constants + ": " + closure_1_3.sizeBefore + " -> " + closure_1_3.sizeAfter + " bytes");
+              const obj6 = { convertedFile: null, convertedMimeType: "image/jpeg", conversionFailureReason: null, compressTimeMs: null };
+              const _File = File;
+              const items = [closure_1_3.convertedBlob];
+              obj2 = closure_1_0(closure_1_2[17]);
+              const obj7 = { type: "image/jpeg", lastModified: null };
+              obj7[1] = UNKNOWN_ERROR.lastModified;
+              file = new File(items, obj2.renameToJpegExtension(UNKNOWN_ERROR.name), obj7);
+              obj6[0] = file;
+              obj6[3] = closure_1_3.compressTimeMs;
+              obj = obj6;
+            }
+          }
+          c4 = 0;
+          c6 = 3;
+          const obj8 = { value: null, done: true };
+          obj8[0] = tmp10;
+          return obj8;
+        }
+      } catch (tmp68) {
+        closure_3 = tmp68;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp68;
+        } else {
+          c5 = tmp;
+        }
+      }
+    }
+  })();
+};
 prototype["handleError"] = function handleError(error) {
   const self = this;
   this.setStatus(obj.ERROR);
@@ -1883,7 +2222,7 @@ prototype["delete"] = function delete() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1898,7 +2237,7 @@ prototype["delete"] = function delete() {
             obj[0] = arg1;
             return obj;
           } else if (null != v0.uploadedFilename) {
-            obj1 = v0(4876);
+            obj1 = v0(4999);
             const uploadTarget = obj1.getUploadTarget(tmp18.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp18.uploadedFilename);
@@ -1963,7 +2302,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1987,7 +2326,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
               c4 = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(closure_1_2[16]).default.getUploadPayload(closure_1_0);
+              obj1[0] = closure_1_0(closure_1_2[20]).default.getUploadPayload(closure_1_0);
               return obj1;
             } else {
               c5 = 3;
@@ -2004,16 +2343,17 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             return obj2;
           } else {
             closure_1 = arg1;
-            const uploadTarget = closure_1_0(closure_1_2[17]).getUploadTarget(closure_1_0.item.target);
+            const uploadTarget = closure_1_0(closure_1_2[21]).getUploadTarget(closure_1_0.item.target);
             createAttachmentURL = uploadTarget.getCreateAttachmentURL(closure_1_0.channelId);
             c3 = 1;
             const HTTP = closure_1_0(closure_1_2[8]).HTTP;
-            const obj3 = { url: null, body: null };
+            const obj3 = { url: null, body: null, headers: null };
             obj3[0] = createAttachmentURL;
             const obj4 = { files: null };
             const items = [closure_1];
             obj4[0] = items;
             obj3[1] = obj4;
+            obj3[2] = store.buildOriginalMd5Headers();
             const merged = Object.assign(store.createAttachmentUrlRetryOpts());
             obj3.rejectWithError = true;
             c4 = 3;
@@ -2075,8 +2415,8 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
 prototype["setStatus"] = function setStatus(status) {
   this.status = status;
 };
-prototype["setFilename"] = function setFilename(filename) {
-  this.filename = filename;
+prototype["setFilename"] = function setFilename(name) {
+  this.filename = name;
 };
 prototype["setUploadedFilename"] = function setUploadedFilename(upload_filename) {
   this.uploadedFilename = upload_filename;

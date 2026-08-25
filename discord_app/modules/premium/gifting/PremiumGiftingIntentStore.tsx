@@ -1,18 +1,18 @@
-// === Module 8330: getCurrentTime ===
+// === Module 8331: getCurrentTime ===
 
-// Module 8330 (getCurrentTime)
+// Module 8331 (getCurrentTime)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8331 */;
-import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8332 */;
-import closure_3 from "getHash" /* 4292 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS from "FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS" /* 8332 */;
+import getFriendAnniversaryGateConfig from "getFriendAnniversaryGateConfig" /* 8333 */;
+import closure_3 from "getHash" /* 4293 */;
 import closure_4 from "initialize" /* 1212 */;
-import closure_5 from "recomputeAffinities" /* 5412 */;
+import closure_5 from "recomputeAffinities" /* 7265 */;
 import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_7 from "hasConsented" /* 5263 */;
-import closure_8 from "markAllUserIdListsStale" /* 4033 */;
+import closure_7 from "hasConsented" /* 5935 */;
+import closure_8 from "markAllUserIdListsStale" /* 4034 */;
 import { Consents } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -120,7 +120,7 @@ function generateFriendAnniversaries(c15) {
   highAffinity = dependencyMap;
   set1 = new Set();
   if (obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled) {
-    const EnableFriendAnniversaryNotifications = highestAffinity(4069).EnableFriendAnniversaryNotifications;
+    const EnableFriendAnniversaryNotifications = highestAffinity(4070).EnableFriendAnniversaryNotifications;
     if (EnableFriendAnniversaryNotifications.getSetting()) {
       closure_15 = c15;
       const friendIDs = store.getFriendIDs();
@@ -142,7 +142,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = obj.sort((arg0, arg1) => closure_5.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(8331).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
+          const result = highestAffinity(8332).categorizeFriendAnniversariesByAffinity(obj, (userId) => {
             const userAffinity = closure_5.getUserAffinity(userId);
             let dmProbability;
             if (userAffinity != null) {
@@ -151,7 +151,7 @@ function generateFriendAnniversaries(c15) {
             return dmProbability;
           }, true);
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(8331);
+          const highestAffinityResult = highestAffinity(8332);
         }
         sampleSizeResult = _null;
       }

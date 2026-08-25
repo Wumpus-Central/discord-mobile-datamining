@@ -1,9 +1,9 @@
-// === Module 7461: emitChanges ===
+// === Module 7059: emitChanges ===
 
-// Module 7461 (emitChanges)
+// Module 7059 (emitChanges)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import _fetchReferralEligibleUsers from "_fetchReferralEligibleUsers" /* 7462 */;
+import _fetchReferralEligibleUsers from "_fetchReferralEligibleUsers" /* 7060 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { NOOP_NULL } from "ME" /* 676 */;
 import set from "set" /* 2 */;
@@ -142,8 +142,8 @@ const referralTrialStore = new ReferralTrialStore(dispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(7462).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7462);
+      const referralsRemaining = userTrialOfferId(7060).fetchReferralsRemaining();
+      const obj = userTrialOfferId(7060);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);

@@ -1,8 +1,8 @@
-// === Module 12463: fetchCustomActivityLink ===
+// === Module 12423: fetchCustomActivityLink ===
 
-// Module 12463 (fetchCustomActivityLink)
+// Module 12423 (fetchCustomActivityLink)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getOne" /* 12464 */;
+import closure_4 from "getOne" /* 12424 */;
 import { Endpoints } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -36,7 +36,7 @@ function _fetchCustomActivityLink() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -155,7 +155,7 @@ function _getCustomActivityLinkParams() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -275,7 +275,7 @@ function _loadCustomActivityLink() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -329,7 +329,7 @@ function _loadCustomActivityLink() {
               obj5[2] = callback;
               obj.dispatch(obj5);
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } catch (tmp16) {

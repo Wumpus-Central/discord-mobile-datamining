@@ -1,10 +1,10 @@
-// === Module 5647: DiamondIllocon ===
+// === Module 6333: DiamondIllocon ===
 
-// Module 5647 (DiamondIllocon)
+// Module 6333 (DiamondIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5648 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6334 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiamondIllocon.native.tsx");

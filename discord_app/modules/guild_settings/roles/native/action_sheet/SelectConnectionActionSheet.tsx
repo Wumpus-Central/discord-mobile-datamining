@@ -1,14 +1,14 @@
-// === Module 16952: IdentityApplicationRow ===
+// === Module 16984: IdentityApplicationRow ===
 
-// Module 16952 (IdentityApplicationRow)
+// Module 16984 (IdentityApplicationRow)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useThemeDefault from "useTheme" /* 4314 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6840 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6987 */;
-import BottomSheetModal from "BottomSheetModal" /* 6990 */;
-import ActionSheet from "ActionSheet" /* 7213 */;
-import request from "request" /* 10794 */;
+import useThemeDefault from "useTheme" /* 4315 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 5434 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 5502 */;
+import BottomSheetModal from "BottomSheetModal" /* 5505 */;
+import ActionSheet from "ActionSheet" /* 5870 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
+import request from "request" /* 11123 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -25,7 +25,7 @@ function IdentityApplicationRow(arg0) {
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      obj = { user: null, size: null, guildId: "Array" };
+      obj = { user: null, size: null, guildId: "r" };
       obj[0] = bot;
       obj[1] = tmp(1297).AvatarSizes.XSMALL;
       tmp6Result = tmp6(tmp(1297).Avatar, obj);
@@ -39,7 +39,7 @@ function IdentityApplicationRow(arg0) {
     }
     obj[2] = description;
     obj[3] = onPress;
-    return closure_6(tmp(6322).TableRow, obj);
+    return closure_6(tmp(5480).TableRow, obj);
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -74,7 +74,7 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(5225);
+  let tmp3Result = tmp3(7109);
   const platforms = tmp3Result.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
@@ -99,7 +99,7 @@ export default function SelectConnectionActionSheet(arg0) {
       let tmp = null;
       if (null != application) {
         let obj = { icon: null, label: null, subLabel: null, onPress: null };
-        obj = { user: null, size: null, guildId: "Array" };
+        obj = { user: null, size: null, guildId: "r" };
         obj[0] = application.bot;
         obj[1] = closure_1_0(closure_1_2[6]).AvatarSizes.XSMALL;
         obj[0] = closure_1_6(closure_1_0(closure_1_2[6]).Avatar, obj);
@@ -155,7 +155,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const intl4 = tmp3(1236).intl;
     items.push(intl4.string(tmp3(1236).t.y3ZnnU));
   }
-  tmp3Result = tmp3(8836);
+  tmp3Result = tmp3(9103);
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
@@ -174,7 +174,7 @@ export default function SelectConnectionActionSheet(arg0) {
     obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(10135).SegmentedControl, obj2);
+    obj1[0] = tmp2(tmp3(9289).SegmentedControl, obj2);
     let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;

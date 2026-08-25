@@ -1,6 +1,6 @@
-// === Module 15306: statesAreEqual ===
+// === Module 15336: statesAreEqual ===
 
-// Module 15306 (statesAreEqual)
+// Module 15336 (statesAreEqual)
 import applyDefault from "apply" /* 12 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
@@ -22,7 +22,7 @@ export default function ConnectedMFA() {
   let navigation;
   navigation = isMultiAccount(1500).useNavigation();
   if (inContainer) {
-    inContainer = navigation(8621)();
+    inContainer = navigation(8629)();
   }
   let tmpResult = tmp(589);
   const items = [closure_4];
@@ -59,7 +59,7 @@ export default function ConnectedMFA() {
       tmp13 = obj;
     }
     obj[7] = tmp13;
-    return jsx(tmp(15184).MFAModal, obj);
+    return jsx(tmp(15214).MFAModal, obj);
   } else {
     tmpResult = tmp(501);
     let space = tmp4(712).space;

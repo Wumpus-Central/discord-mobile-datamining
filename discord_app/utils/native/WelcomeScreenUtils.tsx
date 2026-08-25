@@ -1,16 +1,16 @@
-// === Module 11875: useShowWelcomeModal ===
+// === Module 12211: useShowWelcomeModal ===
 
-// Module 11875 (useShowWelcomeModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+// Module 12211 (useShowWelcomeModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 11876 */;
-import { NO_WELCOME_SCREEN } from "handleInviteData" /* 11876 */;
-import closure_6 from "comparator" /* 1981 */;
+import closure_4 from "handleInviteData" /* 12212 */;
+import { NO_WELCOME_SCREEN } from "handleInviteData" /* 12212 */;
+import closure_6 from "comparator" /* 1982 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 
 require = arg1;
-let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "r" };
+let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "a" };
 const result = require("set").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 
 export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channelId) {
@@ -76,5 +76,5 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(11879, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
+  obj.openLazy(asyncRequireImpl(12215, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
 };

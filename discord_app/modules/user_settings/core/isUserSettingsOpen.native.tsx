@@ -1,7 +1,7 @@
-// === Module 13366: isUserSettingsOpen ===
+// === Module 13227: isUserSettingsOpen ===
 
-// Module 13366 (isUserSettingsOpen)
-import getRootNavigationRef from "getRootNavigationRef" /* 4234 */;
+// Module 13227 (isUserSettingsOpen)
+import getRootNavigationRef from "getRootNavigationRef" /* 4235 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

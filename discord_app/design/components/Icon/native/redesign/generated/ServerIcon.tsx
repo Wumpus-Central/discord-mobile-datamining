@@ -1,10 +1,10 @@
-// === Module 9852: ServerIcon ===
+// === Module 9854: ServerIcon ===
 
-// Module 9852 (ServerIcon)
+// Module 9854 (ServerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9853 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 9855 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

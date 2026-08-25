@@ -1,10 +1,10 @@
-// === Module 14793: LanguageIcon ===
+// === Module 14823: LanguageIcon ===
 
-// Module 14793 (LanguageIcon)
+// Module 14823 (LanguageIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 14794 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 14824 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

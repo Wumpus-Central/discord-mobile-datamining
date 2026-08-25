@@ -1,8 +1,8 @@
-// === Module 9234: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 9515: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 9234 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 9515 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 7240 */;
+import closure_4 from "handleUserSettingsStoreUpdate" /* 5956 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");

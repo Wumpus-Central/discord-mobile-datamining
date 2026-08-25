@@ -1,10 +1,10 @@
-// === Module 8013: AppsIcon ===
+// === Module 7835: AppsIcon ===
 
-// Module 8013 (AppsIcon)
+// Module 7835 (AppsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8014 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 7836 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

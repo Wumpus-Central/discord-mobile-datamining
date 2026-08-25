@@ -1,21 +1,21 @@
-// === Module 1981: comparator ===
+// === Module 1982: comparator ===
 
-// Module 1981 (comparator)
+// Module 1982 (comparator)
 import applyDefault from "apply" /* 12 */;
 import fromStringAll from "fromString" /* 506 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import closure_4 from "isSubscriptionGated" /* 1982 */;
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import closure_4 from "isSubscriptionGated" /* 1983 */;
 import closure_5 from "initializeFromUserSettings" /* 1394 */;
-import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4023 */;
+import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord" /* 4024 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_10 from "fetchFingerprint" /* 1218 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "trackCommunicationDisabled" /* 1991 */;
+import closure_12 from "trackCommunicationDisabled" /* 1992 */;
 import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_15 from "markAllUserIdListsStale" /* 4033 */;
+import closure_14 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_15 from "markAllUserIdListsStale" /* 4034 */;
 import closure_16 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

@@ -1,6 +1,6 @@
-// === Module 4052: coalesceInvoiceItems ===
+// === Module 4053: coalesceInvoiceItems ===
 
-// Module 4052 (coalesceInvoiceItems)
+// Module 4053 (coalesceInvoiceItems)
 import set2 from "set" /* 2 */;
 
 const result = set2.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");

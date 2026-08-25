@@ -1,11 +1,11 @@
-// === Module 11568: createRequestPayload ===
+// === Module 11915: createRequestPayload ===
 
-// Module 11568 (createRequestPayload)
-import fetch from "fetch" /* 11570 */;
+// Module 11915 (createRequestPayload)
+import fetch from "fetch" /* 11917 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8546 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8554 */;
 import { SearchTypes } from "ME" /* 676 */;
-import { AbstractSearchFetchManager } from "cleanUp" /* 11569 */;
+import { AbstractSearchFetchManager } from "cleanUp" /* 11916 */;
 
 require = arg1;
 let closure_2 = ["include_nsfw", "channel_id"];

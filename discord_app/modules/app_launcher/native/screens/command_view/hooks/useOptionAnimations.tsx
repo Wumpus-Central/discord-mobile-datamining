@@ -1,7 +1,7 @@
-// === Module 11390: OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION ===
+// === Module 11746: OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION ===
 
-// Module 11390 (OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION)
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4671 */;
+// Module 11746 (OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION)
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4381 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 
@@ -46,7 +46,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  let obj = sharedValue(4119);
+  let obj = sharedValue(4120);
   sharedValue = obj.useSharedValue(false);
   dependencyMap = React.useRef([]);
   let items = [sharedValue];

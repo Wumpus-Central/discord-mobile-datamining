@@ -1,16 +1,16 @@
-// === Module 14482: BountiesModalContentInner ===
+// === Module 14512: BountiesModalContentInner ===
 
-// Module 14482 (BountiesModalContentInner)
+// Module 14512 (BountiesModalContentInner)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "set" /* 7490 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6753 */;
+import closure_6 from "set" /* 7304 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5268 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function BountiesModalContentInner(bounty) {
@@ -89,18 +89,18 @@ function BountiesModalContentInner(bounty) {
   obj1 = width(589);
   const items4 = [flushProgress];
   const stateFromStores = obj1.useStateFromStores(items4, () => flushProgress.isBountyCompleted(width.id));
-  let obj2 = width(9289);
-  let obj3 = width(10750);
+  let obj2 = width(9568);
+  let obj3 = width(11068);
   const bountiesExperience = obj3.useBountiesExperience(handleVideoProgressAnalytics.VIDEO_MODAL_MOBILE);
   ({ loopingEnabled, ownedByVerticalScrollExperiment, stage1Enabled, rewardTimerSeconds } = bountiesExperience);
-  const BountyVideoEndMode = width(14440).BountyVideoEndMode;
+  const BountyVideoEndMode = width(14470).BountyVideoEndMode;
   const tmp12 = loopingEnabled ? BountyVideoEndMode.LOOP : BountyVideoEndMode.END_CARD;
   if (!stage1Enabled) {
     if (!ownedByVerticalScrollExperiment) {
       let result = 1000 * bounty.rewardTimerSeconds;
     }
     React = result;
-    let tmp9Result = tmp9(14443);
+    let tmp9Result = tmp9(14473);
     obj = { bountyId: null, endMode: null };
     obj[0] = bounty.id;
     obj[1] = tmp12;
@@ -127,7 +127,7 @@ function BountiesModalContentInner(bounty) {
       c3 = 0;
       return arg1;
     }), items5);
-    tmp9Result = tmp9(14444);
+    tmp9Result = tmp9(14474);
     obj = { bountyId: null, sourceQuestContent: null, rewardDurationMs: null, initialPlaybackTimeSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null, wasPreloaded: false, startupPath: "carousel", verticalScrollingPosition: null };
     obj[0] = bounty.id;
     obj[1] = sourceQuestContent;
@@ -157,7 +157,7 @@ function BountiesModalContentInner(bounty) {
       duration = initialProgress.duration;
     }
     obj1[11] = duration;
-    const bountiesModalTiming = tmp9(14440).useBountiesModalTiming(obj1);
+    const bountiesModalTiming = tmp9(14470).useBountiesModalTiming(obj1);
     isEndCardVisible = bountiesModalTiming.isEndCardVisible;
     maxVideoProgressSeconds = bountiesModalTiming.maxVideoProgressSeconds;
     videoDuration = bountiesModalTiming.videoDuration;
@@ -242,13 +242,13 @@ function BountiesModalContentInner(bounty) {
       });
     };
     ({ width: obj13[24], height: obj13[25] } = memo);
-    obj3[1] = videoDuration(tmp9(14446).BountyVideo, obj4);
+    obj3[1] = videoDuration(tmp9(14476).BountyVideo, obj4);
     const items9 = [videoDuration(handleProgress, obj3), , ];
     let obj5 = { style: null, children: null };
     obj5[0] = memo2;
     const obj6 = { onPress: null };
     obj6[0] = callback2;
-    obj5[1] = videoDuration(tmp2(14475), obj6);
+    obj5[1] = videoDuration(tmp2(14505), obj6);
     items9[1] = videoDuration(handleProgress, obj5);
     const obj7 = { left: null, right: null, bottom: true, style: null, pointerEvents: "box-none", children: null };
     ({ isFullWidth: obj16[0], isFullWidth: obj16[1] } = memo);
@@ -258,8 +258,8 @@ function BountiesModalContentInner(bounty) {
     obj8[1] = isEndCardVisible;
     obj8[2] = sourceQuestContent;
     obj8[3] = callback3;
-    obj7[5] = videoDuration(tmp2(14467), obj8);
-    items9[2] = videoDuration(tmp9(6840).SafeAreaPaddingView, obj7);
+    obj7[5] = videoDuration(tmp2(14497), obj8);
+    items9[2] = videoDuration(tmp9(5434).SafeAreaPaddingView, obj7);
     obj2[0] = items9;
     return callback2(closure_11, obj2);
   }

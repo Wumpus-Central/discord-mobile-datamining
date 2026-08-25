@@ -1,15 +1,15 @@
-// === Module 17131: syncYYTextReplacementExperiment ===
+// === Module 17163: syncYYTextReplacementExperiment ===
 
-// Module 17131 (syncYYTextReplacementExperiment)
+// Module 17163 (syncYYTextReplacementExperiment)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 500 */;
 import sendRequest from "sendRequest" /* 530 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import initializeDefault from "initialize" /* 5043 */;
-import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17132 */;
-import apexExperimentDefault from "apexExperiment" /* 17134 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
+import initializeDefault from "initialize" /* 5367 */;
+import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17164 */;
+import apexExperimentDefault from "apexExperiment" /* 17166 */;
+import closure_4 from "_getSystemLocale" /* 1996 */;
 import closure_5 from "fetchFingerprint" /* 1218 */;
 
 function syncYYTextReplacementExperiment() {
@@ -30,7 +30,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(17132);
+        let tmpResult = tmp(17164);
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }
@@ -39,7 +39,7 @@ function updateIOSExperiments() {
   if (NSUserDefaultsBridge2 != null) {
     const setShouldFixPushNotificationRawPayload = NSUserDefaultsBridge2.setShouldFixPushNotificationRawPayload;
     if (setShouldFixPushNotificationRawPayload != null) {
-      tmpResult = tmp(5004);
+      tmpResult = tmp(5100);
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }

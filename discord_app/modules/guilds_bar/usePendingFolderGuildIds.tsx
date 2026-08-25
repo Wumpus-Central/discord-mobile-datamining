@@ -1,8 +1,8 @@
-// === Module 9572: usePendingFolderGuildIds ===
+// === Module 11351: usePendingFolderGuildIds ===
 
-// Module 9572 (usePendingFolderGuildIds)
+// Module 11351 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4202 */;
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4203 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 
 require = arg1;

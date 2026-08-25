@@ -1,15 +1,15 @@
-// === Module 10302: AppliedForumTag ===
+// === Module 10153: AppliedForumTag ===
 
-// Module 10302 (AppliedForumTag)
+// Module 10153 (AppliedForumTag)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10303 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10154 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getEmojiToGroupId" /* 6764 */;
+import closure_4 from "getEmojiToGroupId" /* 5282 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 class AppliedForumTag {

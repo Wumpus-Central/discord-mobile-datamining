@@ -1,19 +1,19 @@
-// === Module 9171: WebsiteGameStoreLinkButton ===
+// === Module 9463: WebsiteGameStoreLinkButton ===
 
-// Module 9171 (WebsiteGameStoreLinkButton)
+// Module 9463 (WebsiteGameStoreLinkButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function WebsiteGameStoreLinkButton(data) {
   data = data.data;
   const trackAction = data.trackAction;
   dependencyMap = undefined;
-  dependencyMap = trackAction(9136)(trackAction(4093).openURL);
-  return callback(data(4750).Button, {
+  dependencyMap = trackAction(9428)(trackAction(4094).openURL);
+  return callback(data(4815).Button, {
     variant: "secondary",
     size: "md",
     text: data.title,

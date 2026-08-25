@@ -1,13 +1,13 @@
-// === Module 15717: YouBarButtonIcon ===
+// === Module 15749: YouBarButtonIcon ===
 
-// Module 15717 (YouBarButtonIcon)
+// Module 15749 (YouBarButtonIcon)
 import ThemesDefault from "Themes" /* 712 */;
-import IconButton from "IconButton" /* 8074 */;
+import IconButton from "IconButton" /* 7896 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14518 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14548 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 class YouBarButtonIcon {
@@ -83,7 +83,7 @@ class YouBarButtonIcon {
     items2 = [, ];
     items2[0] = memo;
     items2[1] = hasBadge;
-    memo1 = obj2.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "np", padding: "key", minWidth: "includes" }), items1);
+    memo1 = obj2.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "id", bottom: "height", padding: "add", minWidth: "flags" }), items1);
     obj1 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
     memo2 = obj2.useMemo(() => {
       if (size2) {

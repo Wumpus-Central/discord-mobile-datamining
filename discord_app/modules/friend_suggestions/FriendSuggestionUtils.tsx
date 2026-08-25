@@ -1,6 +1,6 @@
-// === Module 15372: getSuggestedContactNameForSuggestion ===
+// === Module 15402: getSuggestedContactNameForSuggestion ===
 
-// Module 15372 (getSuggestedContactNameForSuggestion)
+// Module 15402 (getSuggestedContactNameForSuggestion)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");

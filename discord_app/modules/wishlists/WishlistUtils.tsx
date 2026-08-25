@@ -1,12 +1,12 @@
-// === Module 12351: createNitroSuggestedSku ===
+// === Module 12669: createNitroSuggestedSku ===
 
-// Module 12351 (createNitroSuggestedSku)
+// Module 12669 (createNitroSuggestedSku)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useSKUPrice from "useSKUPrice" /* 7243 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "createFromServer" /* 4520 */;
-import { isCollectiblesWishlistItemRecord as closure_5 } from "createCollectiblesItemFromServerResponse" /* 9226 */;
-import { isPremiumWishlistItemRecord as closure_6, isSKUWishlistItemRecord } from "fromServer" /* 9227 */;
+import useSKUPrice from "useSKUPrice" /* 5959 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "createFromServer" /* 4423 */;
+import { isCollectiblesWishlistItemRecord as closure_4 } from "createCollectiblesItemFromServerResponse" /* 9507 */;
+import { isPremiumWishlistItemRecord as closure_5, isSKUWishlistItemRecord } from "fromServer" /* 9508 */;
 import { SKUProductLines } from "ME" /* 676 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
@@ -28,7 +28,7 @@ export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   obj[10] = [];
   obj[11] = {};
   const set1 = new Set();
-  return new closure_4(obj);
+  return new closure_3(obj);
 };
 export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnMobile(sku, isWishlistOwner) {
   isWishlistOwner = isWishlistOwner.isWishlistOwner;
@@ -84,18 +84,6 @@ export const buildReorderedWishlistData = function buildReorderedWishlistData(se
   const items = [...arg1];
   items.splice(arg3, 0, callback(items.splice(arg2, 1), 1)[0]);
   return { newWishlistData: set.set("items", items), previousSkuId: skuId2, nextSkuId: skuId3 };
-};
-export const buildReorderedNitroFirstWishlistItems = function buildReorderedNitroFirstWishlistItems(arr) {
-  const findIndexResult = arr.findIndex((skuId) => callback(table[9]).isPremiumSku(skuId.skuId));
-  if (findIndexResult <= 0) {
-    return arr;
-  } else {
-    const items = [];
-    HermesBuiltin.arraySpread(arr, 0);
-    const items1 = [callback(items.splice(findIndexResult, 1), 1)[0]];
-    HermesBuiltin.arraySpread(items, 1);
-    return items1;
-  }
 };
 export const buildReorderedOwnedItemsLastWishlistItems = function buildReorderedOwnedItemsLastWishlistItems(items) {
   let tmp = items;

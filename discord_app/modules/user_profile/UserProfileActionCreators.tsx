@@ -1,6 +1,6 @@
-// === Module 8416: _saveProfileChanges ===
+// === Module 8424: _saveProfileChanges ===
 
-// Module 8416 (_saveProfileChanges)
+// Module 8424 (_saveProfileChanges)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
@@ -33,7 +33,7 @@ function _saveProfileChanges() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -103,7 +103,7 @@ function _saveProfileChanges() {
                 const obj15 = callback2(body[13]);
               } else {
                 c9 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
               tmp71 = body;
             }
@@ -263,6 +263,13 @@ export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyle
   obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
   obj.dispatch(obj);
   obj = { feature_name: constants4.DISPLAY_NAME_STYLES, feature_tier: constants3.PREMIUM_STANDARD };
+  expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
+};
+export const setTryItOutCustomTypingIndicatorStyle = function setTryItOutCustomTypingIndicatorStyle(customTypingIndicatorStyle) {
+  let obj = dispatcherDefault;
+  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_CUSTOM_TYPING_INDICATOR_STYLE", customTypingIndicatorStyle };
+  obj.dispatch(obj);
+  obj = { feature_name: constants4.TYPING_INDICATOR, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutPreset = function setTryItOutPreset(arg0) {

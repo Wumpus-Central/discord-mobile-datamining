@@ -1,6 +1,6 @@
-// === Module 1975: _tryLoadAsync ===
+// === Module 1976: _tryLoadAsync ===
 
-// Module 1975 (_tryLoadAsync)
+// Module 1976 (_tryLoadAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
@@ -24,7 +24,7 @@ function _tryLoadAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -112,7 +112,7 @@ function _tryLoadOrResetCacheGatewayAsync() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

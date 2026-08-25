@@ -1,6 +1,6 @@
-// === Module 5284: getFlattenedChannelList ===
+// === Module 5361: getFlattenedChannelList ===
 
-// Module 5284 (getFlattenedChannelList)
+// Module 5361 (getFlattenedChannelList)
 import set from "set" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 

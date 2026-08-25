@@ -1,9 +1,9 @@
-// === Module 13951: unsupportedCommand ===
+// === Module 13986: unsupportedCommand ===
 
-// Module 13951 (unsupportedCommand)
+// Module 13986 (unsupportedCommand)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import prototypeDefault from "prototype" /* 8789 */;
+import prototypeDefault from "prototype" /* 10824 */;
 
 const RPCErrors = ME.RPCErrors;
 let obj = {

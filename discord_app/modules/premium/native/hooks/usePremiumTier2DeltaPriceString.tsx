@@ -1,10 +1,10 @@
-// === Module 13036: getViewerProductId ===
+// === Module 13024: getViewerProductId ===
 
-// Module 13036 (getViewerProductId)
-import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7416 */;
+// Module 13024 (getViewerProductId)
+import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7014 */;
 import closure_2 from "noop" /* 19 */;
-import { useNativeCheckoutStore } from "context" /* 7433 */;
-import closure_4 from "updateProduct" /* 5324 */;
+import { useNativeCheckoutStore } from "context" /* 7031 */;
+import closure_4 from "updateProduct" /* 5965 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -15,9 +15,9 @@ function getViewerProductId(subscription) {
     try {
       const productIdFromSubscription = getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
       try {
-        const productIdFromSubscription1 = tmp3(7416).getProductIdFromSubscription(subscription, true);
-        const tmp8 = tmp3(5327).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
-        const tmp10 = tmp3(5327).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
+        const productIdFromSubscription1 = tmp3(7014).getProductIdFromSubscription(subscription, true);
+        const tmp8 = tmp3(5968).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+        const tmp10 = tmp3(5968).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription1];
         if (null != tmp8) {
           if (null != tmp10) {
             if (tmp8.numPremiumGuild === tmp10.numPremiumGuild) {
@@ -27,7 +27,7 @@ function getViewerProductId(subscription) {
           }
         }
         tmp11 = productIdFromSubscription;
-        const tmp3Result = tmp3(7416);
+        const tmp3Result = tmp3(7014);
       } catch (err) {
         return tmp2;
       }

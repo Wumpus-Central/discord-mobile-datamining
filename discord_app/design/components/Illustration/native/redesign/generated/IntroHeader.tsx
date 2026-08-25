@@ -1,9 +1,9 @@
-// === Module 16971: getIntroHeaderSource ===
+// === Module 17003: getIntroHeaderSource ===
 
-// Module 16971 (getIntroHeaderSource)
+// Module 17003 (getIntroHeaderSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7946 */;
+import getIllustrationSource from "getIllustrationSource" /* 7767 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16972);
+      return callback(17004);
     },
     darker() {
-      return callback(16973);
+      return callback(17005);
     },
     light() {
-      return callback(16974);
+      return callback(17006);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useIntroHeaderSource = function useIntroHeaderSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16972);
+      return callback(17004);
     },
     darker() {
-      return callback(16973);
+      return callback(17005);
     },
     light() {
-      return callback(16974);
+      return callback(17006);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const IntroHeader = function IntroHeader(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16972);
+      return callback(17004);
     },
     darker() {
-      return callback(16973);
+      return callback(17005);
     },
     light() {
-      return callback(16974);
+      return callback(17006);
     }
   };
   obj = {};

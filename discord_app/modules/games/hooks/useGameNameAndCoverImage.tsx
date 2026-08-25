@@ -1,8 +1,8 @@
-// === Module 12235: useGameNameAndCoverImage ===
+// === Module 12552: useGameNameAndCoverImage ===
 
-// Module 12235 (useGameNameAndCoverImage)
+// Module 12552 (useGameNameAndCoverImage)
 import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5383 */;
+import importDefaultResult1 from "importDefaultResult1" /* 6033 */;
 
 const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 

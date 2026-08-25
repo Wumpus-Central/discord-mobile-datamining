@@ -1,23 +1,23 @@
-// === Module 14310: FamilyCenterFeatureRows ===
+// === Module 14340: FamilyCenterFeatureRows ===
 
-// Module 14310 (FamilyCenterFeatureRows)
+// Module 14340 (FamilyCenterFeatureRows)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2336 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
-import EyeIcon from "EyeIcon" /* 8644 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11146 */;
-import registerAssetDefault from "registerAsset" /* 11599 */;
-import registerAssetDefault2 from "registerAsset" /* 12422 */;
-import QrCodeIcon from "QrCodeIcon" /* 14307 */;
-import registerAssetDefault3 from "registerAsset" /* 14311 */;
-import ChatCheckIcon from "ChatCheckIcon" /* 14312 */;
+import messagesProxyDefault from "messagesProxy" /* 2337 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
+import EyeIcon from "EyeIcon" /* 8652 */;
+import registerAssetDefault from "registerAsset" /* 9243 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11488 */;
+import registerAssetDefault2 from "registerAsset" /* 11945 */;
+import QrCodeIcon from "QrCodeIcon" /* 14337 */;
+import registerAssetDefault3 from "registerAsset" /* 14341 */;
+import ChatCheckIcon from "ChatCheckIcon" /* 14342 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;
@@ -51,12 +51,12 @@ export default function FamilyCenterFeatureRows() {
   obj[2] = intl7.string(messagesProxyDefault["001l3m"]);
   obj[3] = ageSpecificText;
   const items = [obj, , ];
-  obj = { icon: registerAssetDefault, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  obj = { icon: registerAssetDefault2, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = getSystemLocale.intl;
   obj[2] = intl8.string(messagesProxyDefault.yipAeP);
   obj[3] = ageSpecificText1;
   items[1] = obj;
-  obj1 = { icon: registerAssetDefault2, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  obj1 = { icon: registerAssetDefault, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = getSystemLocale.intl;
   obj1[2] = intl9.string(messagesProxyDefault.hhOuMe);
   obj1[3] = ageSpecificText2;
@@ -73,7 +73,7 @@ export default function FamilyCenterFeatureRows() {
     children: items.map((header) => {
       header = header.header;
       ({ description, icon, IconComponent } = header);
-      return callback2(callback(6322).TableRow, { label: header, subLabel: description, icon: callback2(callback(6322).TableRow.Icon, { source: icon, IconComponent }) }, header);
+      return callback2(callback(5480).TableRow, { label: header, subLabel: description, icon: callback2(callback(5480).TableRow.Icon, { source: icon, IconComponent }) }, header);
     })
   });
   obj3[1] = items1;

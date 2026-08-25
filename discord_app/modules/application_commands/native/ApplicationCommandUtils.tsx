@@ -1,16 +1,16 @@
-// === Module 11443: getApplicationCommandsIconSource ===
+// === Module 11799: getApplicationCommandsIconSource ===
 
-// Module 11443 (getApplicationCommandsIconSource)
+// Module 11799 (getApplicationCommandsIconSource)
 import set from "set" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import registerAssetDefault from "registerAsset" /* 1902 */;
-import handleChanged from "handleChanged" /* 4830 */;
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5251 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5253 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10306 */;
-import registerAssetDefault2 from "registerAsset" /* 11444 */;
-import registerAssetDefault3 from "registerAsset" /* 11445 */;
-import closure_4 from "map" /* 4829 */;
+import handleChanged from "handleChanged" /* 4742 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4838 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7129 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10157 */;
+import registerAssetDefault2 from "registerAsset" /* 11800 */;
+import registerAssetDefault3 from "registerAsset" /* 11801 */;
+import closure_4 from "map" /* 4741 */;
 
 const DraftType = handleChanged.DraftType;
 const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;

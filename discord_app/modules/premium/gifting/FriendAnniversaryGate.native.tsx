@@ -1,8 +1,8 @@
-// === Module 8332: getFriendAnniversaryGateConfig ===
+// === Module 8333: getFriendAnniversaryGateConfig ===
 
-// Module 8332 (getFriendAnniversaryGateConfig)
+// Module 8333 (getFriendAnniversaryGateConfig)
 import set from "set" /* 2 */;
-import apexExperimentDefault from "apexExperiment" /* 8333 */;
+import apexExperimentDefault from "apexExperiment" /* 8334 */;
 
 const result = set.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.native.tsx");
 

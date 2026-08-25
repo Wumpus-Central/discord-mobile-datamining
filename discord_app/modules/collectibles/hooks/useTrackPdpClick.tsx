@@ -1,6 +1,6 @@
-// === Module 9304: useTrackPdpClick ===
+// === Module 9583: useTrackPdpClick ===
 
-// Module 9304 (useTrackPdpClick)
+// Module 9583 (useTrackPdpClick)
 import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 

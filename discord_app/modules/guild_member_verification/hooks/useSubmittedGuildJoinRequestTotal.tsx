@@ -1,7 +1,7 @@
-// === Module 15541: useSubmittedGuildJoinRequestTotal ===
+// === Module 15573: useSubmittedGuildJoinRequestTotal ===
 
-// Module 15541 (useSubmittedGuildJoinRequestTotal)
-import closure_2 from "updateSubmittedGuildJoinRequestTotal" /* 7466 */;
+// Module 15573 (useSubmittedGuildJoinRequestTotal)
+import closure_2 from "updateSubmittedGuildJoinRequestTotal" /* 7064 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");

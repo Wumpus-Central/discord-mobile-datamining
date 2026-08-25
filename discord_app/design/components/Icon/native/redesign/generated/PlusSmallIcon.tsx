@@ -1,10 +1,10 @@
-// === Module 9299: PlusSmallIcon ===
+// === Module 9578: PlusSmallIcon ===
 
-// Module 9299 (PlusSmallIcon)
+// Module 9578 (PlusSmallIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9300 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 9579 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

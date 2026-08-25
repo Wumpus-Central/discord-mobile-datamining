@@ -1,6 +1,6 @@
-// === Module 9213: useCurrentUser ===
+// === Module 9496: useCurrentUser ===
 
-// Module 9213 (useCurrentUser)
+// Module 9496 (useCurrentUser)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 589 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;

@@ -1,17 +1,17 @@
-// === Module 15561: useEnsureSyncedChannelVoiceStates ===
+// === Module 15593: useEnsureSyncedChannelVoiceStates ===
 
-// Module 15561 (useEnsureSyncedChannelVoiceStates)
+// Module 15593 (useEnsureSyncedChannelVoiceStates)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4778 */;
-import closure_5 from "isVoiceMuted" /* 4548 */;
+import closure_4 from "getParticipants" /* 4396 */;
+import closure_5 from "isVoiceMuted" /* 4400 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1991 */;
-import closure_9 from "retryFailedUsers" /* 13362 */;
-import closure_10 from "createRTCConnection" /* 4544 */;
+import closure_8 from "trackCommunicationDisabled" /* 1992 */;
+import closure_9 from "retryFailedUsers" /* 13223 */;
+import closure_10 from "createRTCConnection" /* 4454 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "updateVoiceState" /* 4547 */;
+import closure_12 from "updateVoiceState" /* 4399 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_calls/RTCConnectionDesyncHooks.tsx");

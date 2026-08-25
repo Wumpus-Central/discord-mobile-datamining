@@ -1,6 +1,6 @@
-// === Module 11901: setStoredContacts ===
+// === Module 12235: setStoredContacts ===
 
-// Module 11901 (setStoredContacts)
+// Module 12235 (setStoredContacts)
 import set from "set" /* 2 */;
 import Storage4 from "Storage" /* 595 */;
 import batchUpdates from "batchUpdates" /* 705 */;

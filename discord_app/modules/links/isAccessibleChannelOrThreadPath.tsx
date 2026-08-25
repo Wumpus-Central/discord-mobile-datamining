@@ -1,11 +1,11 @@
-// === Module 7251: _isAccessibleChannelOrThreadPath ===
+// === Module 5974: _isAccessibleChannelOrThreadPath ===
 
-// Module 7251 (_isAccessibleChannelOrThreadPath)
+// Module 5974 (_isAccessibleChannelOrThreadPath)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSubscriptionGated" /* 1982 */;
-import closure_5 from "shouldShowOnboarding" /* 6821 */;
+import closure_4 from "isSubscriptionGated" /* 1983 */;
+import closure_5 from "shouldShowOnboarding" /* 5344 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 1398 */;
@@ -33,7 +33,7 @@ function _isAccessibleChannelOrThreadPath() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

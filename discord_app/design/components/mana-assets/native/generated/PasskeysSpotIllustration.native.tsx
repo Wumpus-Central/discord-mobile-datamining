@@ -1,10 +1,10 @@
-// === Module 6077: PasskeysSpotIllustration ===
+// === Module 6761: PasskeysSpotIllustration ===
 
-// Module 6077 (PasskeysSpotIllustration)
+// Module 6761 (PasskeysSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6078 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6762 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PasskeysSpotIllustration.native.tsx");

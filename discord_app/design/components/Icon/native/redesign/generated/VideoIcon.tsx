@@ -1,10 +1,10 @@
-// === Module 8037: VideoIcon ===
+// === Module 7859: VideoIcon ===
 
-// Module 8037 (VideoIcon)
+// Module 7859 (VideoIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8038 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 7860 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

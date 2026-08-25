@@ -1,16 +1,16 @@
-// === Module 8655: EnterEmail ===
+// === Module 8663: EnterEmail ===
 
-// Module 8655 (EnterEmail)
+// Module 8663 (EnterEmail)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import ChangeEmailFields from "ChangeEmailFields" /* 8602 */;
+import ChangeEmailFields from "ChangeEmailFields" /* 8610 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
@@ -71,7 +71,7 @@ export default function EnterEmail(isChangeEmail) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

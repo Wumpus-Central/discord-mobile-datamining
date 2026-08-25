@@ -1,14 +1,14 @@
-// === Module 11549: CreateGuildContainer ===
+// === Module 11900: CreateGuildContainer ===
 
-// Module 11549 (CreateGuildContainer)
+// Module 11900 (CreateGuildContainer)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "comparator" /* 1981 */;
+import closure_6 from "comparator" /* 1982 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 createCacheKey = { flex: { flex: 1 }, contentContainer: null };
@@ -67,7 +67,7 @@ export default function CreateGuildContainer(onCreate) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ export default function CreateGuildContainer(onCreate) {
             callback(base64);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -129,7 +129,7 @@ export default function CreateGuildContainer(onCreate) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 5100: hasMemberSupplemental ===
+// === Module 7107: hasMemberSupplemental ===
 
-// Module 5100 (hasMemberSupplemental)
+// Module 7107 (hasMemberSupplemental)
 import set from "set" /* 2 */;
 
 let closure_2 = {};

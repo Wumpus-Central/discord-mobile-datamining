@@ -1,6 +1,6 @@
-// === Module 9313: retryMeasurements ===
+// === Module 8807: retryMeasurements ===
 
-// Module 9313 (retryMeasurements)
+// Module 8807 (retryMeasurements)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function retryMeasurements() {
@@ -36,7 +36,7 @@ function _retryMeasurements() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

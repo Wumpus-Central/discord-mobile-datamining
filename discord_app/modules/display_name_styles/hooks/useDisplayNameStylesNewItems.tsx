@@ -1,8 +1,8 @@
-// === Module 14754: useDisplayNameStylesNewFonts ===
+// === Module 14784: useDisplayNameStylesNewFonts ===
 
-// Module 14754 (useDisplayNameStylesNewFonts)
+// Module 14784 (useDisplayNameStylesNewFonts)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "set" /* 14755 */;
+import closure_3 from "set" /* 14785 */;
 import items3 from "items3" /* 1934 */;
 
 const require = arg1;

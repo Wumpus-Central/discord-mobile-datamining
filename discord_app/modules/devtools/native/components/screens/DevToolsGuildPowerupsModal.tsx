@@ -1,15 +1,15 @@
-// === Module 15218: ? ===
+// === Module 15248: ? ===
 
-// Module 15218
-import setWarningBoostsDefault from "setWarningBoosts" /* 15219 */;
+// Module 15248
+import setWarningBoostsDefault from "setWarningBoosts" /* 15249 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 9970 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 8717 */;
 import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
 const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
-  let obj = _require(6343);
+  let obj = _require(5889);
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {

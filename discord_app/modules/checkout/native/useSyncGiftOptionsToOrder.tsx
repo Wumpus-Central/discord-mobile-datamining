@@ -1,6 +1,6 @@
-// === Module 10404: useSyncGiftOptionsToOrder ===
+// === Module 10255: useSyncGiftOptionsToOrder ===
 
-// Module 10404 (useSyncGiftOptionsToOrder)
+// Module 10255 (useSyncGiftOptionsToOrder)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

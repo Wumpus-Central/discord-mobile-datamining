@@ -1,13 +1,13 @@
-// === Module 9235: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
+// === Module 9516: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
 
-// Module 9235 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
+// Module 9516 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "map" /* 9236 */;
-import closure_3 from "initialize" /* 4508 */;
-import closure_4 from "createUserWidgetFromServer" /* 5370 */;
+import closure_2 from "map" /* 9517 */;
+import closure_3 from "initialize" /* 4403 */;
+import closure_4 from "createUserWidgetFromServer" /* 7227 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "sortActivity" /* 4564 */;
-import closure_7 from "handleUserSettingsStoreUpdate" /* 7240 */;
+import closure_6 from "sortActivity" /* 4469 */;
+import closure_7 from "handleUserSettingsStoreUpdate" /* 5956 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/SocialLayerStorefrontEligibilityHooks.tsx");
@@ -114,7 +114,7 @@ export const useUsersPlayingStorefrontEnabledGamesApplicationIds = function useU
     return items;
   }, items1);
   const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(9237).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(9518).useSlayerStorefrontDevApplicationIdOverride();
   let tmp3 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {
     const items2 = [];
@@ -151,7 +151,7 @@ export const useAreUsersPlayingStorefrontEnabledGames = function useAreUsersPlay
     return items;
   }, items1);
   const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(9237).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(9518).useSlayerStorefrontDevApplicationIdOverride();
   let arr3 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {
     const items2 = [];

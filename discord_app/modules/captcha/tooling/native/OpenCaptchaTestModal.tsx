@@ -1,8 +1,8 @@
-// === Module 15200: showCaptchaTestModal ===
+// === Module 15230: showCaptchaTestModal ===
 
-// Module 15200 (showCaptchaTestModal)
+// Module 15230 (showCaptchaTestModal)
 import noopAll from "noop" /* 19 */;
-import _modDef5265 from "module_5265" /* 5265 */;
+import _modDef4611 from "module_4611" /* 4611 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -11,7 +11,7 @@ noopAll;
 const result = require("set").fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
 
 export const showCaptchaTestModal = function showCaptchaTestModal() {
-  _modDef5265.pushLazy(callback(function*() {
+  _modDef4611.pushLazy(callback(function*() {
     closure_0 = tmp2;
     yield closure_1_0(paths[5])(paths[4], paths.paths);
     closure_0 = arg1.default;

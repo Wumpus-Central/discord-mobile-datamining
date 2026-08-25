@@ -1,10 +1,10 @@
-// === Module 6593: VideoSelfieIcon ===
+// === Module 7970: VideoSelfieIcon ===
 
-// Module 6593 (VideoSelfieIcon)
+// Module 7970 (VideoSelfieIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6594 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 7971 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

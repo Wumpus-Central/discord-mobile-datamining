@@ -1,16 +1,16 @@
-// === Module 10460: GiftingBadgeProgressBar ===
+// === Module 10315: GiftingBadgeProgressBar ===
 
-// Module 10460 (GiftingBadgeProgressBar)
+// Module 10315 (GiftingBadgeProgressBar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2432 */;
-import Text from "Text" /* 4739 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10341 */;
+import messagesProxyDefault from "messagesProxy" /* 2433 */;
+import Text from "Text" /* 4376 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10192 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8973 */;
+import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8937 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function GiftingBadgeProgressBar(percent) {

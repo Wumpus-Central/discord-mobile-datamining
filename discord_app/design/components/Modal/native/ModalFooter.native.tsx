@@ -1,10 +1,10 @@
-// === Module 11153: ModalFooter ===
+// === Module 11495: ModalFooter ===
 
-// Module 11153 (ModalFooter)
+// Module 11495 (ModalFooter)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 noopAll;
 let closure_2 = createCacheKey.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });

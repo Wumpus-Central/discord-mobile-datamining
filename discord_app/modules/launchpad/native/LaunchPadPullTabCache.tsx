@@ -1,11 +1,11 @@
-// === Module 16277: setLaunchPadPullTabExclusionRect ===
+// === Module 16309: setLaunchPadPullTabExclusionRect ===
 
-// Module 16277 (setLaunchPadPullTabExclusionRect)
+// Module 16309 (setLaunchPadPullTabExclusionRect)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import Storage2 from "Storage" /* 595 */;
-import enforcingDefault from "enforcing" /* 4854 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10704 */;
+import enforcingDefault from "enforcing" /* 4973 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10512 */;
 
 function setLaunchPadPullTabExclusionRect() {
   let tmp = arg0;

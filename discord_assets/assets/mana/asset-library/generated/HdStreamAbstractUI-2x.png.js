@@ -1,6 +1,6 @@
-// === Module 5922: metadata ===
+// === Module 6610: metadata ===
 
-// Module 5922 (metadata)
+// Module 6610 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HdStreamAbstractUI-2x.png.js");

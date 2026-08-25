@@ -1,15 +1,15 @@
-// === Module 12993: BoostedGuildTierProgressCircle ===
+// === Module 12981: BoostedGuildTierProgressCircle ===
 
-// Module 12993 (BoostedGuildTierProgressCircle)
+// Module 12981 (BoostedGuildTierProgressCircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4270 */;
-import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4285 */;
-import getTier048PxSource from "getTier048PxSource" /* 12994 */;
+import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4271 */;
+import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4286 */;
+import getTier048PxSource from "getTier048PxSource" /* 12982 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;
@@ -62,11 +62,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (tmp13.TIER_1 === premiumTier) {
-          let tier048PxSource = tmp2(12998);
+          let tier048PxSource = tmp2(12986);
         } else if (tmp13.TIER_2 === premiumTier) {
-          tier048PxSource = tmp2(12999);
+          tier048PxSource = tmp2(12987);
         } else if (tmp13.TIER_3 === premiumTier) {
-          tier048PxSource = tmp2(13000);
+          tier048PxSource = tmp2(12988);
         }
       }
       const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -75,14 +75,14 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       const items = [tmp8(tmp12, obj2), ];
       const obj3 = { style: null, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
       obj3[0] = tmp.guildTierName;
-      let tmp19Result = tmp19(4270);
+      let tmp19Result = tmp19(4271);
       obj3[3] = tmp19Result.getTierName(guild.premiumTier);
-      items[1] = tmp8(tmp19(4739).Text, obj3);
+      items[1] = tmp8(tmp19(4376).Text, obj3);
       obj1[1] = items;
       obj[2] = tmp10(tmp11, obj1);
       return tmp8(tmp9, obj);
     }
-    tmp19Result = tmp19(12994);
+    tmp19Result = tmp19(12982);
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
     const obj10 = getGuildTierFromGuild;
   }

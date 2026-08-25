@@ -1,6 +1,6 @@
-// === Module 9566: useGuildProfileGameProfilesExperiment ===
+// === Module 12413: useGuildProfileGameProfilesExperiment ===
 
-// Module 9566 (useGuildProfileGameProfilesExperiment)
+// Module 12413 (useGuildProfileGameProfilesExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

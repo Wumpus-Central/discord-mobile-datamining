@@ -1,21 +1,21 @@
-// === Module 17197: AppStoreParentalRevocationScreen ===
+// === Module 17229: AppStoreParentalRevocationScreen ===
 
-// Module 17197 (AppStoreParentalRevocationScreen)
+// Module 17229 (AppStoreParentalRevocationScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2598 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import ModalScreen from "ModalScreen" /* 5445 */;
-import ModalContent from "ModalContent" /* 5450 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 6729 */;
-import ModalFooter from "ModalFooter" /* 11153 */;
-import ModalActionButton from "ModalActionButton" /* 12013 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17184 */;
+import messagesProxyDefault from "messagesProxy" /* 2599 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import ModalScreen from "ModalScreen" /* 7952 */;
+import ModalContent from "ModalContent" /* 7953 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8105 */;
+import ModalActionButton from "ModalActionButton" /* 11263 */;
+import ModalFooter from "ModalFooter" /* 11495 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17216 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);

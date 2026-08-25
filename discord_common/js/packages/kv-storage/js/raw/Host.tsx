@@ -1,7 +1,7 @@
-// === Module 1964: open ===
+// === Module 1965: open ===
 
-// Module 1964 (open)
-import set from "set" /* 1957 */;
+// Module 1965 (open)
+import set from "set" /* 1958 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -12,7 +12,7 @@ const prototype = function Host() {
 prototype["open"] = function open(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
-  const Runtime = _require(1965).Runtime;
+  const Runtime = _require(1966).Runtime;
   return Runtime.executeAsync("database_open", (arg0) => {
     const KV_RAW = callback(obj[2]).KV_RAW;
     obj = { database: callback, invalidateDisabledHandles: null };
@@ -42,7 +42,7 @@ prototype["openSyncUnsafe"] = function openSyncUnsafe(database, invalidateDisabl
 };
 prototype["delete"] = function delete(arg0) {
   const _require = arg0;
-  const Runtime = _require(1965).Runtime;
+  const Runtime = _require(1966).Runtime;
   return Runtime.executeAsync("database_delete", (arg0) => {
     const KV_RAW = callback(closure_1_1[2]).KV_RAW;
     return KV_RAW.databaseDelete(arg0, { database: callback });
@@ -61,7 +61,7 @@ prototype["list"] = function list() {
 };
 prototype["optimize"] = function optimize(arg0) {
   const _require = arg0;
-  const Runtime = _require(1965).Runtime;
+  const Runtime = _require(1966).Runtime;
   return Runtime.executeAsync("database_optimize", (arg0) => {
     const KV_RAW = callback(closure_1_1[2]).KV_RAW;
     return KV_RAW.databaseOptimize(arg0, { aggressive: callback });

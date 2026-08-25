@@ -1,18 +1,18 @@
-// === Module 16976: onModalClose ===
+// === Module 17008: onModalClose ===
 
-// Module 16976 (onModalClose)
+// Module 17008 (onModalClose)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import NavigationStack from "NavigationStack" /* 6343 */;
-import HeaderBackImage from "HeaderBackImage" /* 6345 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6349 */;
-import _modDef16975 from "module_16975" /* 16975 */;
-import EnableCommunityModalSteps from "EnableCommunityModalSteps" /* 16977 */;
+import HeaderBackImage from "HeaderBackImage" /* 5376 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5382 */;
+import NavigationStack from "NavigationStack" /* 5889 */;
+import _modDef17007 from "module_17007" /* 17007 */;
+import EnableCommunityModalSteps from "EnableCommunityModalSteps" /* 17009 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function onModalClose() {
-  _modDef16975.close();
+  _modDef17007.close();
 }
 function HeaderBackButton(arg0) {
   useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
@@ -28,10 +28,10 @@ const result = require("set").fileFinishedImporting("modules/public_guilds/nativ
 export default function EnableCommunityModal() {
   const memo = React.useMemo(() => {
     function headerRight() {
-      const obj = { source: callback2(8182), onPress: closure_5, accessibilityLabel: null };
+      const obj = { source: callback2(8178), onPress: closure_5, accessibilityLabel: null };
       const intl = callback(1236).intl;
       obj[2] = intl.string(callback(1236).t.cpT0Cq);
-      return callback3(callback(5437).HeaderActionButton, obj);
+      return callback3(callback(6117).HeaderActionButton, obj);
     }
     let obj = {
       headerRight,
@@ -40,7 +40,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16978), {});
+        return callback3(callback2(17010), {});
       }
     };
     obj = {
@@ -49,7 +49,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16990), {});
+        return callback3(callback2(17022), {});
       }
     };
     obj = {
@@ -58,7 +58,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16991), {});
+        return callback3(callback2(17023), {});
       }
     };
     return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };

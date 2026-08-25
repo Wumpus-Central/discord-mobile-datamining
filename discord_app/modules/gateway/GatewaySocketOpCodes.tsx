@@ -1,9 +1,9 @@
-// === Module 13247: presenceUpdate ===
+// === Module 13109: presenceUpdate ===
 
-// Module 13247 (presenceUpdate)
+// Module 13109 (presenceUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import Opcode from "Opcode" /* 13248 */;
-import closure_3 from "initialize" /* 4570 */;
+import Opcode from "Opcode" /* 13110 */;
+import closure_3 from "initialize" /* 4475 */;
 import { EventEmitter } from "EventEmitter" /* 652 */;
 
 require = arg1;
@@ -112,7 +112,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   if (_require > 0) {
     obj = { subscriptions: null };
     obj[0] = dependencyMap;
-    self.send(_require(13248).Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
+    self.send(_require(13110).Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);
   }
 };
 prototype["callConnect"] = function callConnect(channel_id) {

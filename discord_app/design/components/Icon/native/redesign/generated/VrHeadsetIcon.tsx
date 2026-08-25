@@ -1,10 +1,10 @@
-// === Module 14376: VrHeadsetIcon ===
+// === Module 14406: VrHeadsetIcon ===
 
-// Module 14376 (VrHeadsetIcon)
+// Module 14406 (VrHeadsetIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 14377 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 14407 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

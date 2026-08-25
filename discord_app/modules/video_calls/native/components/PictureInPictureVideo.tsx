@@ -1,26 +1,26 @@
-// === Module 12485: areParticipantsEqual ===
+// === Module 10763: areParticipantsEqual ===
 
-// Module 12485 (areParticipantsEqual)
+// Module 10763 (areParticipantsEqual)
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 8723 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 8726 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 8727 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10746 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 10749 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 10750 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "getParticipants" /* 4778 */;
+import closure_7 from "getParticipants" /* 4396 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_10 from "handleConnectionOpen" /* 1980 */;
-import closure_11 from "anyoneHasFlagInContext" /* 4779 */;
-import closure_12 from "initialize" /* 8720 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8706 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4549 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_10 from "handleConnectionOpen" /* 1981 */;
+import closure_11 from "anyoneHasFlagInContext" /* 5244 */;
+import closure_12 from "initialize" /* 10743 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9895 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4401 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import Button from "Button" /* 1297 */;
 
 require = arg1;

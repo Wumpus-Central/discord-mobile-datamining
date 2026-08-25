@@ -1,8 +1,8 @@
-// === Module 10164: ForumThreadCreatedNotification ===
+// === Module 10014: ForumThreadCreatedNotification ===
 
-// Module 10164 (ForumThreadCreatedNotification)
+// Module 10014 (ForumThreadCreatedNotification)
 import closure_3 from "noop" /* 19 */;
-import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set" /* 10069 */;
+import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set" /* 9925 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

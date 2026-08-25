@@ -1,21 +1,21 @@
-// === Module 5256: rebuild ===
+// === Module 5329: rebuild ===
 
-// Module 5256 (rebuild)
+// Module 5329 (rebuild)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import set2 from "set" /* 1398 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5257 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5274 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4619 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5331 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "generateOldThreadCutoff" /* 4777 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
-import closure_9 from "handleThreadCreateOrUpdate" /* 4974 */;
-import closure_10 from "storeThread" /* 4026 */;
+import closure_7 from "generateOldThreadCutoff" /* 4395 */;
+import closure_8 from "handleConnectionOpen" /* 1981 */;
+import closure_9 from "handleThreadCreateOrUpdate" /* 5330 */;
+import closure_10 from "storeThread" /* 4027 */;
 
 function rebuild() {
   closure_12 = {};

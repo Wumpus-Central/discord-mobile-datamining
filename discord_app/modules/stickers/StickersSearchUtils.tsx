@@ -1,8 +1,8 @@
-// === Module 10262: searchAllStickers ===
+// === Module 10113: searchAllStickers ===
 
-// Module 10262 (searchAllStickers)
+// Module 10113 (searchAllStickers)
 import set from "set" /* 2 */;
-import NOOPDefault from "NOOP" /* 6751 */;
+import NOOPDefault from "NOOP" /* 5266 */;
 
 const result = set.fileFinishedImporting("modules/stickers/StickersSearchUtils.tsx");
 

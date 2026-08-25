@@ -1,8 +1,8 @@
-// === Module 6978: FormLabel ===
+// === Module 5493: FormLabel ===
 
-// Module 6978 (FormLabel)
+// Module 5493 (FormLabel)
 import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4739 */;
+import Text from "Text" /* 4376 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 12136: useMediaViewerClosePosition ===
+// === Module 12469: useMediaViewerClosePosition ===
 
-// Module 12136 (useMediaViewerClosePosition)
+// Module 12469 (useMediaViewerClosePosition)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { NOOP } from "ME" /* 676 */;

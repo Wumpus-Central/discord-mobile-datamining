@@ -1,11 +1,11 @@
-// === Module 16640: showTakeoverModal ===
+// === Module 16672: showTakeoverModal ===
 
-// Module 16640 (showTakeoverModal)
+// Module 16672 (showTakeoverModal)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
-import _modDef5265 from "module_5265" /* 5265 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10608 */;
-import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10615 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
+import _modDef4611 from "module_4611" /* 4611 */;
+import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10406 */;
+import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10413 */;
 
 const TAKEOVER_MODAL_KEY = LOCATION_CONTEXT_MOBILE.TAKEOVER_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");
@@ -19,7 +19,7 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
     obj[1] = warningType;
     obj[2] = senderId;
     obj[3] = channelId;
-    _modDef5265.pushLazy(asyncRequireImpl(15239, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
-    const obj2 = _modDef5265;
+    _modDef4611.pushLazy(asyncRequireImpl(15269, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    const obj2 = _modDef4611;
   }
 };

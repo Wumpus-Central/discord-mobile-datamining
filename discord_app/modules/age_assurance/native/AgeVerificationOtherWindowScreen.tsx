@@ -1,17 +1,17 @@
-// === Module 6603: AgeVerificationOtherWindowScreen ===
+// === Module 7981: AgeVerificationOtherWindowScreen ===
 
-// Module 6603 (AgeVerificationOtherWindowScreen)
+// Module 7981 (AgeVerificationOtherWindowScreen)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2854 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import ModalScreen from "ModalScreen" /* 5445 */;
-import ModalContent from "ModalContent" /* 5450 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6604 */;
+import messagesProxyDefault from "messagesProxy" /* 2855 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import ModalScreen from "ModalScreen" /* 7952 */;
+import ModalContent from "ModalContent" /* 7953 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7982 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;

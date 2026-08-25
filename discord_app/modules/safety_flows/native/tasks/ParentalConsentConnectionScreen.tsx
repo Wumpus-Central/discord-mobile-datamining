@@ -1,16 +1,16 @@
-// === Module 17192: ParentalConsentConnectionScreen ===
+// === Module 17224: ParentalConsentConnectionScreen ===
 
-// Module 17192 (ParentalConsentConnectionScreen)
+// Module 17224 (ParentalConsentConnectionScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "freshTeenActivityWithMap" /* 5301 */;
+import closure_7 from "freshTeenActivityWithMap" /* 7143 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_9 } from "items" /* 5302 */;
+import { CONNECT_GUARDIAN_BOTTOM_SHEET_KEY as closure_9 } from "items" /* 7144 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -126,7 +126,7 @@ export default function ParentalConsentConnectionScreen() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

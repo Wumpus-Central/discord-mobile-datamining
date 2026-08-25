@@ -1,6 +1,6 @@
-// === Module 12041: useHandleBuyNow ===
+// === Module 12366: useHandleBuyNow ===
 
-// Module 12041 (useHandleBuyNow)
+// Module 12366 (useHandleBuyNow)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -29,7 +29,7 @@ function useHandleBuyNow(product) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -48,7 +48,7 @@ function useHandleBuyNow(product) {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(5305).fetchCollectiblesPurchases();
+              obj1[0] = closure_1_0(7147).fetchCollectiblesPurchases();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -61,14 +61,14 @@ function useHandleBuyNow(product) {
             return obj2;
           } else {
             callback(false);
-            obj = v0(4346);
+            obj = v0(4347);
             obj.hideActionSheet();
-            obj1 = v0(10428);
+            obj1 = v0(10279);
             const obj3 = { product: null, useCategoryImage: true };
             obj3[0] = closure_0;
             obj1.open(obj3);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp16) {
           dependencyMap = tmp;
@@ -125,7 +125,7 @@ function useHandleBuyNow(product) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

@@ -1,10 +1,10 @@
-// === Module 13972: _initialize ===
+// === Module 14007: _initialize ===
 
-// Module 13972 (_initialize)
+// Module 14007 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 4726 */;
+import initializeDefault from "initialize" /* 4562 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
 
 initializeDefault;
 class BaseSoundboardManager extends tmp2 {

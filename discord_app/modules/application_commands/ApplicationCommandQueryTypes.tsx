@@ -1,6 +1,6 @@
-// === Module 8495: ScoreMethod ===
+// === Module 8502: ScoreMethod ===
 
-// Module 8495 (ScoreMethod)
+// Module 8502 (ScoreMethod)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryTypes.tsx");

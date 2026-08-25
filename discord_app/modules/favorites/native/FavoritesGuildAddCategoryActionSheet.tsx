@@ -1,13 +1,13 @@
-// === Module 15478: FavoritesGuildAddCategoryActionSheet ===
+// === Module 15510: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 15478 (FavoritesGuildAddCategoryActionSheet)
+// Module 15510 (FavoritesGuildAddCategoryActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date" /* 1429 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function FavoritesGuildAddCategoryActionSheet() {
@@ -30,7 +30,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj = { title: null };
   const intl = first(1236).intl;
   obj[0] = intl.string(first(1236).t["ISN+NM"]);
-  obj[3] = callback2(first(6987).BottomSheetTitleHeader, obj);
+  obj[3] = callback2(first(5502).BottomSheetTitleHeader, obj);
   obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = first(1236).intl;
   obj1[0] = intl2.string(first(1236).t.OCAkGP);
@@ -40,15 +40,15 @@ function FavoritesGuildAddCategoryActionSheet() {
   obj1[3] = tmp2[1];
   obj1[4] = closure_5;
   obj1[8] = callback;
-  const items1 = [callback2(first(8110).TextInput, obj1), ];
+  const items1 = [callback2(first(7935).TextInput, obj1), ];
   let obj2 = { text: null, onPress: null, disabled: null };
   const intl4 = first(1236).intl;
   obj2[0] = intl4.string(first(1236).t.CumH4u);
   obj2[1] = callback;
   obj2[2] = !result;
-  items1[1] = callback2(first(4750).Button, obj2);
+  items1[1] = callback2(first(4815).Button, obj2);
   obj[4] = items1;
-  return callback3(first(6988).BottomSheet, obj);
+  return callback3(first(5503).BottomSheet, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";

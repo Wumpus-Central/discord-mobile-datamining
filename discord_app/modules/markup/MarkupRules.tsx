@@ -1,35 +1,35 @@
-// === Module 6846: parseLink ===
+// === Module 4837: parseLink ===
 
-// Module 6846 (parseLink)
+// Module 4837 (parseLink)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1987 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
-import getNicknameDefault from "getNickname" /* 4801 */;
-import validateContentTypes from "validateContentTypes" /* 6848 */;
-import validateContentTypesDefault from "validateContentTypes" /* 6848 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6851 */;
-import textRegexpDefault from "textRegexp" /* 6852 */;
-import getChannelDefault from "getChannel" /* 6853 */;
-import regExpDefault from "regExp" /* 6856 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 6858 */;
-import getSoundmojiASTFromStringDefault from "getSoundmojiASTFromString" /* 6858 */;
-import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 6864 */;
-import staticRouteToTranslation from "staticRouteToTranslation" /* 6865 */;
-import matchDefault from "match" /* 6866 */;
-import regExpDefault2 from "regExp" /* 6867 */;
-import _modDef6868 from "module_6868" /* 6868 */;
-import matchDefault2 from "match" /* 6869 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1988 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
+import getNicknameDefault from "getNickname" /* 4573 */;
+import validateContentTypes from "validateContentTypes" /* 4840 */;
+import validateContentTypesDefault from "validateContentTypes" /* 4840 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 4843 */;
+import textRegexpDefault from "textRegexp" /* 4844 */;
+import getChannelDefault from "getChannel" /* 4845 */;
+import regExpDefault from "regExp" /* 4848 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 4850 */;
+import getSoundmojiASTFromStringDefault from "getSoundmojiASTFromString" /* 4850 */;
+import TIMESTAMP_FORMATS from "TIMESTAMP_FORMATS" /* 4860 */;
+import staticRouteToTranslation from "staticRouteToTranslation" /* 4861 */;
+import matchDefault from "match" /* 4862 */;
+import regExpDefault2 from "regExp" /* 4863 */;
+import _modDef4864 from "module_4864" /* 4864 */;
+import matchDefault2 from "match" /* 4865 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_toArray" /* 853 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 5251 */;
-import { GAME_MENTION_RAW_RE } from "regExp" /* 6847 */;
-import importDefaultResult from "t" /* 4095 */;
-import importDefaultResult3 from "combineMarkupRules" /* 6845 */;
+import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4838 */;
+import { GAME_MENTION_RAW_RE } from "regExp" /* 4839 */;
+import importDefaultResult from "t" /* 4096 */;
+import importDefaultResult3 from "combineMarkupRules" /* 4836 */;
 import importDefaultResult4 from "apply" /* 12 */;
 
 require = arg1;
@@ -138,8 +138,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
     if (null != channel) {
       let nickname = getNicknameDefault.getNickname(channel.getGuildId(), channelId.channelId, str);
       if (nickname == null) {
-        nickname = tmp4(4223).getName(str);
-        const tmp4Result = tmp4(4223);
+        nickname = tmp4(4224).getName(str);
+        const tmp4Result = tmp4(4224);
       }
       str = nickname;
       const obj2 = getNicknameDefault;
@@ -875,7 +875,7 @@ obj[33] = {
 };
 obj[34] = matchDefault;
 obj[35] = regExpDefault2;
-obj[36] = _modDef6868;
+obj[36] = _modDef4864;
 let items = [obj, ];
 const obj20 = {
   order: textRegexpDefault.order,

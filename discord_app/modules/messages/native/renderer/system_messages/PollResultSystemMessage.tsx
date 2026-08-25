@@ -1,9 +1,9 @@
-// === Module 8300: createPollResultSystemMessage ===
+// === Module 8301: createPollResultSystemMessage ===
 
-// Module 8300 (createPollResultSystemMessage)
+// Module 8301 (createPollResultSystemMessage)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1925 */;
-import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8301 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8302 */;
 
 const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
 const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
@@ -16,14 +16,14 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     return null;
   } else {
     message = message.message;
-    const messageAuthorWithProcessedColor = obj6(8225).getMessageAuthorWithProcessedColor(message);
+    const messageAuthorWithProcessedColor = obj6(8221).getMessageAuthorWithProcessedColor(message);
     let obj = { username: null, usernameOnClick: null, title: null, titleOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
     obj = { message: null, author: null, roleStyle: null };
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = message.roleStyle;
-    obj[1] = tmp(8227)(obj);
+    obj[1] = tmp(8223)(obj);
     obj[2] = tmp3.questionText;
     obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
     obj1[1] = message.messageReference.channel_id;
@@ -79,17 +79,17 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
             items.push(obj7);
           } else {
             obj = { type: "emoji", content: null, surrogate: null };
-            obj[1] = tmp(4037).convertSurrogateToName(id.name, false);
+            obj[1] = tmp(4038).convertSurrogateToName(id.name, false);
             obj[2] = id.name;
             items.push(obj);
-            const tmpResult1 = tmp(4037);
+            const tmpResult1 = tmp(4038);
           }
           items.push({ type: "text", content: " " });
         }
       }
     }
     const obj10 = {};
-    const merged3 = Object.assign(tmp(8228)(message));
+    const merged3 = Object.assign(tmp(8224)(message));
     obj10.content = formatToPartsResult;
     return obj10;
   }

@@ -1,13 +1,13 @@
-// === Module 14845: route ===
+// === Module 14875: route ===
 
-// Module 14845 (route)
+// Module 14875 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import MobileUserSettings from "MobileUserSettings" /* 8238 */;
-import createToggle from "createToggle" /* 10708 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import MobileUserSettings from "MobileUserSettings" /* 8235 */;
+import createToggle from "createToggle" /* 10516 */;
 
 obj = {
   useTitle() {
@@ -35,7 +35,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
   getComponent() {
-    return require(14846) /* UserSettingsSwipeRightToLeft */.default;
+    return require(14876) /* UserSettingsSwipeRightToLeft */.default;
   }
 };
 const route = createToggle.createRoute(obj);

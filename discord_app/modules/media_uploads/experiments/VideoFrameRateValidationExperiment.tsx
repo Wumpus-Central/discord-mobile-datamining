@@ -1,6 +1,6 @@
-// === Module 4868: getVideoFrameRateValidationExperimentConfig ===
+// === Module 4987: getVideoFrameRateValidationExperimentConfig ===
 
-// Module 4868 (getVideoFrameRateValidationExperimentConfig)
+// Module 4987 (getVideoFrameRateValidationExperimentConfig)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

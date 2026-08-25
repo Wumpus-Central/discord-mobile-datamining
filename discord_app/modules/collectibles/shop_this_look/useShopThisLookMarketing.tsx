@@ -1,9 +1,9 @@
-// === Module 12390: useShopThisLookMarketing ===
+// === Module 12708: useShopThisLookMarketing ===
 
-// Module 12390 (useShopThisLookMarketing)
+// Module 12708 (useShopThisLookMarketing)
 import DismissibleContent from "DismissibleContent" /* 1377 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7404 */;
-import useEquippedCollectibleSkuIds from "useEquippedCollectibleSkuIds" /* 8997 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6131 */;
+import useEquippedCollectibleSkuIds from "useEquippedCollectibleSkuIds" /* 8959 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 4100: map ===
+// === Module 4101: map ===
 
-// Module 4100 (map)
+// Module 4101 (map)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
-import getSemanticColorContextFromThemeContext from "getSemanticColorContextFromThemeContext" /* 4101 */;
-import ManaContext from "ManaContext" /* 4107 */;
+import getSemanticColorContextFromThemeContext from "getSemanticColorContextFromThemeContext" /* 4102 */;
+import ManaContext from "ManaContext" /* 4108 */;
 
 require = arg1;
 const map = new Map();

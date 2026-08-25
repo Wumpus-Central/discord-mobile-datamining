@@ -1,29 +1,29 @@
-// === Module 15597: handleJoinGuild ===
+// === Module 15629: handleJoinGuild ===
 
-// Module 15597 (handleJoinGuild)
+// Module 15629 (handleJoinGuild)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import Button from "Button" /* 4750 */;
-import _modDef11930 from "module_11930" /* 11930 */;
-import registerAssetDefault from "registerAsset" /* 15598 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import Button from "Button" /* 4815 */;
+import _modDef12264 from "module_12264" /* 12264 */;
+import registerAssetDefault from "registerAsset" /* 15630 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "fetchFingerprint" /* 1218 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "handleConnectionOpen" /* 4201 */;
+import closure_10 from "handleConnectionOpen" /* 4202 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function handleJoinGuild() {
-  const result = _modDef11930.openGuildJoinServerScreen();
+  const result = _modDef12264.openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  _modDef11930.openCreateGuildModal();
+  _modDef12264.openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -120,7 +120,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }
   selectedGuildId = tmp6;
   obj = { type: navigation(503).ImpressionTypes.VIEW, name: navigation(503).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(9214)(obj);
+  selectedGuildId(9497)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
@@ -157,9 +157,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(8981);
+  let tmp2Result = tmp2(4952);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14520);
+  tmp2Result = tmp2(14550);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -172,7 +172,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1236).intl;
     obj3[4] = intl.string(tmp2(1236).t["7hB4kg"]);
-    obj2[1] = callback(tmp2(4739).Text, obj3);
+    obj2[1] = callback(tmp2(4376).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
     const items3 = [callback(closure_6, obj1), ];
     let tmp18;

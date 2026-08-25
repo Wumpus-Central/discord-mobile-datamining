@@ -1,9 +1,9 @@
-// === Module 10740: _openAppStoreOverlayMediaModal ===
+// === Module 10668: _openAppStoreOverlayMediaModal ===
 
-// Module 10740 (_openAppStoreOverlayMediaModal)
+// Module 10668 (_openAppStoreOverlayMediaModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "setContent" /* 4089 */;
+import closure_5 from "setContent" /* 4090 */;
 import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
 
 const require = arg1;
@@ -25,7 +25,7 @@ function _openAppStoreOverlayMediaModal() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -95,7 +95,7 @@ function _openAppStoreOverlayMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 4089.initVideoStateStore;
+            initVideoStateStore = 4090.initVideoStateStore;
             const obj4 = { text: null, onPress: null };
             const intl = callback(c2[10]).intl;
             obj4[0] = intl.string(callback(c2[10]).t.lwQdjB);
@@ -139,7 +139,7 @@ function _openAppStoreOverlayMediaModal() {
               initVideoStateStore();
             });
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp8) {
           c4 = tmp;

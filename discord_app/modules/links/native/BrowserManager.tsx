@@ -1,11 +1,11 @@
-// === Module 4344: NativeModules ===
+// === Module 4345: NativeModules ===
 
-// Module 4344 (NativeModules)
+// Module 4345 (NativeModules)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
 import keys2 from "keys" /* 691 */;
-import _modDef4093 from "module_4093" /* 4093 */;
-import enforcingDefault from "enforcing" /* 4345 */;
+import _modDef4094 from "module_4094" /* 4094 */;
+import enforcingDefault from "enforcing" /* 4346 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import keys from "keys" /* 644 */;
 
@@ -142,20 +142,20 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
       }
     }
   }
-  _modDef4093.performURLNavigation(closure_0);
+  _modDef4094.performURLNavigation(closure_0);
   return Promise.resolve();
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
   let obj = set2;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = enforcingDefault.selectBrowser(tmp(4345).BrowserType.SAFARI);
+      const browser = enforcingDefault.selectBrowser(tmp(4346).BrowserType.SAFARI);
       const obj3 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = enforcingDefault.selectBrowser(tmp(4345).BrowserType.IN_APP);
+      const browser1 = enforcingDefault.selectBrowser(tmp(4346).BrowserType.IN_APP);
       const obj2 = enforcingDefault;
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = enforcingDefault.selectBrowser(tmp(4345).BrowserType.CHROME);
+      const browser2 = enforcingDefault.selectBrowser(tmp(4346).BrowserType.CHROME);
       const obj5 = enforcingDefault;
     }
   } else {

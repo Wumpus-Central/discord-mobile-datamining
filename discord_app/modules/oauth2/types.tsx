@@ -1,6 +1,6 @@
-// === Module 9813: OAuth2Prompts ===
+// === Module 10592: OAuth2Prompts ===
 
-// Module 9813 (OAuth2Prompts)
+// Module 10592 (OAuth2Prompts)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/oauth2/types.tsx");

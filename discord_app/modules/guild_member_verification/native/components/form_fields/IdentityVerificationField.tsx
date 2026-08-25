@@ -1,13 +1,13 @@
-// === Module 8599: BaseIdentityVerificationField ===
+// === Module 8607: BaseIdentityVerificationField ===
 
-// Module 8599 (BaseIdentityVerificationField)
+// Module 8607 (BaseIdentityVerificationField)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4204 */;
-import Text from "Text" /* 4739 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4205 */;
+import Text from "Text" /* 4376 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function BaseIdentityVerificationField(icon) {
@@ -27,7 +27,7 @@ function BaseIdentityVerificationField(icon) {
   obj = { style: null, children: null };
   if (passesVerification) {
     obj[0] = tmp.verifiedContainer;
-    obj[1] = tmp6(tmp7(4330).CheckmarkLargeIcon, { color: "status-positive" });
+    obj[1] = tmp6(tmp7(4331).CheckmarkLargeIcon, { color: "status-positive" });
     let tmp9 = obj;
   } else {
     obj[0] = tmp.ctaButton;
@@ -35,7 +35,7 @@ function BaseIdentityVerificationField(icon) {
     const intl = tmp7(1236).intl;
     obj1[3] = intl.string(tmp7(1236).t["13ofGu"]);
     obj1[4] = onPress;
-    obj[1] = tmp6(tmp7(4750).Button, obj1);
+    obj[1] = tmp6(tmp7(4815).Button, obj1);
     tmp9 = obj;
   }
   items[2] = callback(View, tmp9);
@@ -67,7 +67,7 @@ export default function IdentityVerificationField(arg0) {
       string2Result = string2(INsLgA.c6EUJI);
     }
   } else {
-    if (tmp(4204).UserVerificationFieldPlatforms.PHONE === platform) {
+    if (tmp(4205).UserVerificationFieldPlatforms.PHONE === platform) {
       const intl2 = tmp(1236).intl;
       const string = intl2.string;
       const t = tmp(1236).t;
@@ -81,19 +81,19 @@ export default function IdentityVerificationField(arg0) {
       const intl = tmp(1236).intl;
       stringResult1 = intl.string(tmp(1236).t.mhv8BM);
     }
-    if (tmp(4204).UserVerificationFieldPlatforms.EMAIL === platform) {
-      let EnvelopeIcon = tmp(8695).EnvelopeIcon;
-    } else if (tmp(4204).UserVerificationFieldPlatforms.PHONE === platform) {
-      EnvelopeIcon = tmp(6604).MobilePhoneIcon;
+    if (tmp(4205).UserVerificationFieldPlatforms.EMAIL === platform) {
+      let EnvelopeIcon = tmp(8703).EnvelopeIcon;
+    } else if (tmp(4205).UserVerificationFieldPlatforms.PHONE === platform) {
+      EnvelopeIcon = tmp(7982).MobilePhoneIcon;
     } else {
-      EnvelopeIcon = tmp(8695).EnvelopeIcon;
+      EnvelopeIcon = tmp(8703).EnvelopeIcon;
     }
-    if (tmp(4204).UserVerificationFieldPlatforms.EMAIL === platform) {
+    if (tmp(4205).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
         callback2(paths[10]).open();
       };
     } else {
-      fn = tmp(4204).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
+      fn = tmp(4205).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
         let obj = callback2(paths[11]);
         obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
         obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);

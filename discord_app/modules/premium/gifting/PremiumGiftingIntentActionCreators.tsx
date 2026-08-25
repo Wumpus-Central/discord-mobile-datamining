@@ -1,12 +1,12 @@
-// === Module 7647: fetchAndReconcileGiftIntentDismissals ===
+// === Module 7468: fetchAndReconcileGiftIntentDismissals ===
 
-// Module 7647 (fetchAndReconcileGiftIntentDismissals)
+// Module 7468 (fetchAndReconcileGiftIntentDismissals)
 import sendRequest from "sendRequest" /* 530 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "recomputeAffinities" /* 5412 */;
+import closure_3 from "recomputeAffinities" /* 7265 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "reinjectEphemerals" /* 4999 */;
+import closure_5 from "reinjectEphemerals" /* 4623 */;
 import { GiftIntentType } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
 

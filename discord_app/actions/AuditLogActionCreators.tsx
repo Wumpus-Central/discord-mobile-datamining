@@ -1,9 +1,9 @@
-// === Module 16860: makeRequest ===
+// === Module 16892: makeRequest ===
 
-// Module 16860 (makeRequest)
+// Module 16892 (makeRequest)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "AuditLogActions" /* 16850 */;
+import closure_3 from "AuditLogActions" /* 16882 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
@@ -117,7 +117,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           dispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: "applicationId" };
+          obj = { userId: null, action: "Array", targetId: "isArray" };
           obj[0] = id;
           const tmp10Result = dispatcherDefault;
           nextPromise = makeRequest(guildId, obj).then((body) => {
@@ -141,7 +141,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
       if (!tmp5) {
         if (null != arg1) {
           dispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: -1 };
+          obj = { userId: null, action: "Array", targetId: "b" };
           obj[2] = arg0;
           const tmp10Result = dispatcherDefault;
           nextPromise = makeRequest(arg1, obj).then((body) => {

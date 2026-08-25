@@ -1,14 +1,14 @@
-// === Module 4825: transformMessagePoll ===
+// === Module 4737: transformMessagePoll ===
 
-// Module 4825 (transformMessagePoll)
+// Module 4737 (transformMessagePoll)
 import set from "set" /* 2 */;
-import tDefault from "t" /* 3978 */;
+import hooksDefault from "hooks" /* 3979 */;
 
 const result = set.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 
 export default function transformMessagePoll(expiry) {
   const obj = {};
   const merged = Object.assign(expiry);
-  obj.expiry = tDefault(expiry.expiry);
+  obj.expiry = hooksDefault(expiry.expiry);
   return obj;
 };

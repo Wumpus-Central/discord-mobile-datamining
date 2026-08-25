@@ -1,13 +1,13 @@
-// === Module 9587: parseBioReact ===
+// === Module 9682: parseBioReact ===
 
-// Module 9587 (parseBioReact)
+// Module 9682 (parseBioReact)
 import privDefault from "priv" /* 1405 */;
-import tDefault from "t" /* 4095 */;
-import MarkupTextDefault from "MarkupText" /* 4771 */;
-import parseLinkDefault from "parseLink" /* 6846 */;
-import importDefaultResult from "combineMarkupRules" /* 6845 */;
-import importAllResult from "reactParserFor" /* 6940 */;
-import importDefaultResult1 from "get defaultRules" /* 6844 */;
+import tDefault from "t" /* 4096 */;
+import MarkupTextDefault from "MarkupText" /* 4371 */;
+import parseLinkDefault from "parseLink" /* 4837 */;
+import importDefaultResult from "combineMarkupRules" /* 4836 */;
+import importAllResult from "reactParserFor" /* 8247 */;
+import importDefaultResult1 from "get defaultRules" /* 4370 */;
 import importDefaultResult3 from "apply" /* 12 */;
 
 const items = [parseLinkDefault.PROFILE_BIO_RULES, MarkupTextDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true })];

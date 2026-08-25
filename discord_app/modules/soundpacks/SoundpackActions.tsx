@@ -1,9 +1,9 @@
-// === Module 16693: setSoundpack ===
+// === Module 16725: setSoundpack ===
 
-// Module 16693 (setSoundpack)
+// Module 16725 (setSoundpack)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "Soundpacks" /* 10080 */;
+import closure_2 from "Soundpacks" /* 9936 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");

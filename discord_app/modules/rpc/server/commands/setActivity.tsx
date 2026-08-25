@@ -1,10 +1,10 @@
-// === Module 13925: RPC_LOCAL_SCOPE ===
+// === Module 13960: RPC_LOCAL_SCOPE ===
 
-// Module 13925 (RPC_LOCAL_SCOPE)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8792 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 9946 */;
-import closure_3 from "addApplication" /* 4482 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4281 */;
+// Module 13960 (RPC_LOCAL_SCOPE)
+import StatusDisplayTypes from "StatusDisplayTypes" /* 9802 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10827 */;
+import closure_3 from "addApplication" /* 4421 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4282 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

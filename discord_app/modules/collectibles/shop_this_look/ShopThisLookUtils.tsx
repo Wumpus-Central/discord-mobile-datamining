@@ -1,9 +1,9 @@
-// === Module 12393: isShoppableCollectibleSku ===
+// === Module 12711: isShoppableCollectibleSku ===
 
-// Module 12393 (isShoppableCollectibleSku)
+// Module 12711 (isShoppableCollectibleSku)
 import set from "set" /* 2 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 12394 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 12712 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 

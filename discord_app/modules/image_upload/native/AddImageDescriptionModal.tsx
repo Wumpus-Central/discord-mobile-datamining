@@ -1,16 +1,16 @@
-// === Module 10481: AddDescription ===
+// === Module 10336: AddDescription ===
 
-// Module 10481 (AddDescription)
+// Module 10336 (AddDescription)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _modDef9969 from "module_9969" /* 9969 */;
+import _modDef9827 from "module_9827" /* 9827 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { DraftType } from "handleChanged" /* 4830 */;
-import closure_9 from "map" /* 4829 */;
+import { DraftType } from "handleChanged" /* 4742 */;
+import closure_9 from "map" /* 4741 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function AddDescription(id) {
@@ -106,7 +106,7 @@ createCacheKey = { contentContainer: null, imageContainer: null, image: null, pl
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", borderRadius: ThemesDefault.radii.sm };
-let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: "\u{1F9DC}\u{1F3FC}\u200D\u2640\uFE0F" };
+let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: true };
 obj2[3] = ThemesDefault.radii.sm;
 createCacheKey[2] = obj2;
 let obj1 = { alignItems: "center", borderRadius: ThemesDefault.radii.sm };
@@ -123,5 +123,5 @@ export default function AddImageDescriptionModal(arg0) {
   obj[2] = function render() {
     return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(_modDef9969, obj);
+  return callback(_modDef9827, obj);
 };

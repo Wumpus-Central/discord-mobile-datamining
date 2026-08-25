@@ -1,6 +1,6 @@
-// === Module 9838: CrunchyrollLinkModalScenes ===
+// === Module 10644: CrunchyrollLinkModalScenes ===
 
-// Module 9838 (CrunchyrollLinkModalScenes)
+// Module 10644 (CrunchyrollLinkModalScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkConstants.tsx");

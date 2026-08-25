@@ -1,6 +1,6 @@
-// === Module 4869: getAdaptiveImageCompressionQuality ===
+// === Module 4988: getAdaptiveImageCompressionQuality ===
 
-// Module 4869 (getAdaptiveImageCompressionQuality)
+// Module 4988 (getAdaptiveImageCompressionQuality)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 

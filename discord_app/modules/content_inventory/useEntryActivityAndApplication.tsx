@@ -1,9 +1,9 @@
-// === Module 12149: useEntryActivityAndApplication ===
+// === Module 12482: useEntryActivityAndApplication ===
 
-// Module 12149 (useEntryActivityAndApplication)
+// Module 12482 (useEntryActivityAndApplication)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "entryToKey" /* 12150 */;
+import closure_5 from "entryToKey" /* 12483 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
@@ -23,11 +23,11 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = callback(first(7183)(items1), 2);
+  const tmp7 = callback(first(5840)(items1), 2);
   first = tmp7[0];
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
   const tmp = _require;
-  const tmp4 = first(7183);
+  const tmp4 = first(5840);
   const items2 = [closure_4];
   obj[1] = _require(589).useStateFromStores(items2, () => {
     let id;

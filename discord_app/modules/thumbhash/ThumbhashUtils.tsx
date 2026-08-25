@@ -1,8 +1,8 @@
-// === Module 15823: thumbHashToRGBA ===
+// === Module 15855: thumbHashToRGBA ===
 
-// Module 15823 (thumbHashToRGBA)
+// Module 15855 (thumbHashToRGBA)
 import set from "set" /* 2 */;
-import thumbHashToRGBA2 from "thumbHashToRGBA" /* 14612 */;
+import thumbHashToRGBA2 from "thumbHashToRGBA" /* 14642 */;
 
 function thumbHashToRGBA(arg0) {
   let obj = arg1;

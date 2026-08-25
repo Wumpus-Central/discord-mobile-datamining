@@ -1,12 +1,12 @@
-// === Module 13971: map ===
+// === Module 14006: map ===
 
-// Module 13971 (map)
+// Module 14006 (map)
 import timestampDefault from "timestamp" /* 3 */;
-import _initializeDefault from "_initialize" /* 13972 */;
+import _initializeDefault from "_initialize" /* 14007 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_5 from "handleConnectionOpen" /* 1980 */;
-import closure_6 from "handleSoundCreateOrUpdate" /* 4785 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_5 from "handleConnectionOpen" /* 1981 */;
+import closure_6 from "handleSoundCreateOrUpdate" /* 4851 */;
 
 const require = arg1;
 let map = new Map();
@@ -72,7 +72,7 @@ let prototype = function SoundboardManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -144,7 +144,7 @@ let prototype = function SoundboardManager() {
               const result = obj2.reportSoundFinishedPlaying(c2, c3);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp30) {
           c3 = tmp30;

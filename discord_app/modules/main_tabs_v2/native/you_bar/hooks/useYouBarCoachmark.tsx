@@ -1,9 +1,9 @@
-// === Module 15692: useYouBarCoachmark ===
+// === Module 15724: useYouBarCoachmark ===
 
-// Module 15692 (useYouBarCoachmark)
+// Module 15724 (useYouBarCoachmark)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4201 */;
+import closure_4 from "handleConnectionOpen" /* 4202 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
 const require = arg1;

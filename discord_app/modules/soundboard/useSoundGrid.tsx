@@ -1,13 +1,13 @@
-// === Module 16379: createSoundItems ===
+// === Module 16411: createSoundItems ===
 
-// Module 16379 (createSoundItems)
+// Module 16411 (createSoundItems)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "handleSoundCreateOrUpdate" /* 4785 */;
-import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4786 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 4851 */;
+import MAX_LENGTH_SOUND_NAME from "MAX_LENGTH_SOUND_NAME" /* 4852 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;

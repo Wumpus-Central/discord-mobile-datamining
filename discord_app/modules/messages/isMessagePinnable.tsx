@@ -1,9 +1,9 @@
-// === Module 10893: isMessagePinnable ===
+// === Module 11212: isMessagePinnable ===
 
-// Module 10893 (isMessagePinnable)
-import isSystemMessageDefault from "isSystemMessage" /* 5390 */;
-import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7272 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
+// Module 11212 (isMessagePinnable)
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 5996 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5997 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4025 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

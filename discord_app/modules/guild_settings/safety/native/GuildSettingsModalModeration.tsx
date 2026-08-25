@@ -1,19 +1,19 @@
-// === Module 16848: GuildSettingsOwnerConfiguredContentLevel ===
+// === Module 16880: GuildSettingsOwnerConfiguredContentLevel ===
 
-// Module 16848 (GuildSettingsOwnerConfiguredContentLevel)
+// Module 16880 (GuildSettingsOwnerConfiguredContentLevel)
 import ThemesDefault from "Themes" /* 712 */;
-import combinedDefault from "combined" /* 1994 */;
-import Stack from "Stack" /* 4738 */;
-import NavScrim from "NavScrim" /* 6581 */;
-import Form from "Form" /* 8122 */;
-import useUserIsTeen from "useUserIsTeen" /* 8191 */;
-import _modDef8911 from "module_8911" /* 8911 */;
+import combinedDefault from "combined" /* 1995 */;
+import Stack from "Stack" /* 4813 */;
+import NavScrim from "NavScrim" /* 5820 */;
+import Form from "Form" /* 8118 */;
+import useUserIsTeen from "useUserIsTeen" /* 8187 */;
+import _modDef9168 from "module_9168" /* 9168 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_5 from "handleFormInit" /* 8912 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_5 from "handleFormInit" /* 9169 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function GuildSettingsOwnerConfiguredContentLevel(guild) {
@@ -47,8 +47,8 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
     obj1[1] = DEFAULT2 === tmp6.AGE_RESTRICTED;
     obj1[2] = tmp8;
     obj1[3] = tmp7;
-    obj[3] = callback(tmp3(7216).TableSwitchRow, obj1);
-    tmp9 = callback(tmp3(6317).TableRowGroup, obj, "filter-section");
+    obj[3] = callback(tmp3(5874).TableSwitchRow, obj1);
+    tmp9 = callback(tmp3(5873).TableRowGroup, obj, "filter-section");
     const obj4 = combinedDefault;
   }
   return tmp9;
@@ -118,7 +118,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14262).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14292).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj[5] = verificationLevelOptions.map((arg0) => {
     ({ name, color, value } = arg0);
     ({ desc, disabled } = arg0);
@@ -142,7 +142,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj[3] = tmp5;
     return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "level-" + value);
   });
-  return callback(self(8140).TableRadioGroup, obj, "level-section");
+  return callback(self(8136).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -159,7 +159,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   };
   const obj3 = combinedDefault;
   const features = guild.features;
-  const contentFilterOptions = self(14262).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14292).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -172,7 +172,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj[3] = tmp2;
     return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "filter-" + value);
   });
-  return callback(self(8140).TableRadioGroup, obj, "filter-section");
+  return callback(self(8136).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -198,17 +198,17 @@ prototype["render"] = function render() {
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
-    _modDef8911.cancelChanges(tmp.props.guild.id);
-    const obj = _modDef8911;
+    _modDef9168.cancelChanges(tmp.props.guild.id);
+    const obj = _modDef9168;
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  let obj = _modDef8911;
+  let obj = _modDef9168;
   obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  let obj = _modDef8911;
+  let obj = _modDef9168;
   obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };

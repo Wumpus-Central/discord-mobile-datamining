@@ -1,18 +1,18 @@
-// === Module 11004: QuestCollectibleRewardModalMessages ===
+// === Module 11344: QuestCollectibleRewardModalMessages ===
 
-// Module 11004 (QuestCollectibleRewardModalMessages)
+// Module 11344 (QuestCollectibleRewardModalMessages)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import getQuestLogger from "getQuestLogger" /* 7497 */;
-import MODAL_KEYDefault from "MODAL_KEY" /* 10428 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 10530 */;
-import useQuests from "useQuests" /* 10723 */;
+import Text from "Text" /* 4376 */;
+import getQuestLogger from "getQuestLogger" /* 7311 */;
+import MODAL_KEYDefault from "MODAL_KEY" /* 10279 */;
+import useQuests from "useQuests" /* 10531 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 10547 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6753 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5268 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function QuestCollectibleRewardModalMessages(quest) {

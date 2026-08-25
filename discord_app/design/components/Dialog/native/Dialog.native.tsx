@@ -1,7 +1,7 @@
-// === Module 4722: Dialog ===
+// === Module 4798: Dialog ===
 
-// Module 4722 (Dialog)
-import AccessibilityView from "AccessibilityView" /* 4723 */;
+// Module 4798 (Dialog)
+import AccessibilityView from "AccessibilityView" /* 4799 */;
 import closure_2 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

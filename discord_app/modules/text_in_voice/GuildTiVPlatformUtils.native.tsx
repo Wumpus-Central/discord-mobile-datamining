@@ -1,6 +1,6 @@
-// === Module 8105: getSystemLocale ===
+// === Module 7928: getSystemLocale ===
 
-// Module 8105 (getSystemLocale)
+// Module 7928 (getSystemLocale)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

@@ -1,6 +1,6 @@
-// === Module 7536: _getDeviceState ===
+// === Module 7354: _getDeviceState ===
 
-// Module 7536 (_getDeviceState)
+// Module 7354 (_getDeviceState)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -25,7 +25,7 @@ function _getDeviceState() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

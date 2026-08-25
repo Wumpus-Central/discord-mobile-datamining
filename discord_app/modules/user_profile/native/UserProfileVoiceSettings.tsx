@@ -1,15 +1,15 @@
-// === Module 12198: UserVoiceSettings ===
+// === Module 12525: UserVoiceSettings ===
 
-// Module 12198 (UserVoiceSettings)
+// Module 12525 (UserVoiceSettings)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleSoundCreateOrUpdate" /* 4785 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_4 from "handleSoundCreateOrUpdate" /* 4851 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
 import { VideoToggleState } from "ME" /* 676 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function UserVoiceSettings(user) {
@@ -182,7 +182,7 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = callback3();
   let tmp9Result = dependencyMap;
-  let obj = channel(8971);
+  let obj = channel(8935);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = channel(589);
   const items = [closure_5];
@@ -217,9 +217,9 @@ function CurrentUserVoiceSettings(channel) {
     obj = { label: null, icon: null, onPress: null };
     obj[0] = stringResult;
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9724).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9334).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(11473).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10959).MicrophoneIcon;
     }
     obj1 = { children: null };
     obj[1] = MicrophoneIcon;
@@ -227,11 +227,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       trackUserProfileAction(closure_1_2[14]).toggleSelfMute();
     };
-    obj1[0] = closure_9(tmp2(7223).UserProfileFormRow, obj, "mute");
-    tmp9Result = tmp9(tmp2(7223).UserProfileCardRows, obj1);
+    obj1[0] = closure_9(tmp2(5881).UserProfileFormRow, obj, "mute");
+    tmp9Result = tmp9(tmp2(5881).UserProfileCardRows, obj1);
     obj[3] = tmp9Result;
-    tmp9Result = tmp9(trackUserProfileAction(7223), obj);
-    const tmp6Result = trackUserProfileAction(7223);
+    tmp9Result = tmp9(trackUserProfileAction(5881), obj);
+    const tmp6Result = trackUserProfileAction(5881);
   }
   return tmp8;
 }

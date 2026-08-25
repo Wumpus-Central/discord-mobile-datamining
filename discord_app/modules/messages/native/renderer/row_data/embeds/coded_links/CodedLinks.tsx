@@ -1,8 +1,8 @@
-// === Module 12812: createCodedLinkEmbeds ===
+// === Module 12799: createCodedLinkEmbeds ===
 
-// Module 12812 (createCodedLinkEmbeds)
+// Module 12799 (createCodedLinkEmbeds)
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "initialize" /* 4025 */;
+import closure_3 from "initialize" /* 4026 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 

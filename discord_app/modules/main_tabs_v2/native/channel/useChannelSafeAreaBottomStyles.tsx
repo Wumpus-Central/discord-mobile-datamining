@@ -1,16 +1,16 @@
-// === Module 10602: useChannelSafeAreaBottomStyles ===
+// === Module 10400: useChannelSafeAreaBottomStyles ===
 
-// Module 10602 (useChannelSafeAreaBottomStyles)
+// Module 10400 (useChannelSafeAreaBottomStyles)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4499 */;
-import closure_5 from "initialize" /* 4025 */;
+import closure_4 from "_handleConnectionOpen" /* 5102 */;
+import closure_5 from "initialize" /* 4026 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_8 from "createRTCConnection" /* 4544 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_8 from "createRTCConnection" /* 4454 */;
 import { InputModes } from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };

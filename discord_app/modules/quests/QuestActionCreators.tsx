@@ -1,17 +1,17 @@
-// === Module 10516: _manuallyStartConsoleQuest ===
+// === Module 10533: _manuallyStartConsoleQuest ===
 
-// Module 10516 (_manuallyStartConsoleQuest)
+// Module 10533 (_manuallyStartConsoleQuest)
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore" /* 9542 */;
-import closure_5 from "set" /* 5084 */;
-import closure_6 from "handleConnectionInfoChange" /* 4569 */;
-import closure_7 from "insertUnsortedGuilds" /* 5083 */;
-import closure_8 from "initializeState" /* 7491 */;
-import closure_9 from "_toPropertyKey" /* 7493 */;
-import { FetchStatus } from "_toPropertyKey" /* 7493 */;
-import { ORBS_INTRO_QUEST_ID } from "QuestsExperimentLocations" /* 6753 */;
+import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore" /* 9667 */;
+import closure_5 from "set" /* 5263 */;
+import closure_6 from "handleConnectionInfoChange" /* 4474 */;
+import closure_7 from "insertUnsortedGuilds" /* 5262 */;
+import closure_8 from "initializeState" /* 7305 */;
+import closure_9 from "_toPropertyKey" /* 7307 */;
+import { FetchStatus } from "_toPropertyKey" /* 7307 */;
+import { ORBS_INTRO_QUEST_ID } from "QuestsExperimentLocations" /* 5268 */;
 import ME from "ME" /* 676 */;
 
 const require = arg1;
@@ -35,7 +35,7 @@ function _manuallyStartConsoleQuest() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -202,7 +202,7 @@ function _manualStopConsoleQuest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -236,7 +236,7 @@ function _manualStopConsoleQuest() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           c1 = tmp;
@@ -268,7 +268,7 @@ function _resetRecentQuestCompletions() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ function _resetRecentQuestCompletions() {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp8) {
         v0 = tmp;
@@ -333,7 +333,7 @@ function _fetchCurrentQuests() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -489,7 +489,7 @@ function _sendHeartbeat() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -561,7 +561,7 @@ function _sendHeartbeat() {
               body = 3;
               c7 = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = callback2(5232).post(obj2);
+              obj6[0] = callback2(4601).post(obj2);
               return obj6;
             }
           } else {
@@ -570,7 +570,7 @@ function _sendHeartbeat() {
               c7 = c4;
               obj4 = callback2(709);
               const obj7 = { type: "QUESTS_SEND_HEARTBEAT_FAILURE", error: null, questId: null, streamKey: null };
-              const tmp29 = new callback2(4278)(c7);
+              const tmp29 = new callback2(4279)(c7);
               obj7[1] = tmp29;
               obj7[2] = callback;
               obj7[3] = callback2;
@@ -583,7 +583,7 @@ function _sendHeartbeat() {
               body = arg1;
               obj = callback2(709);
               const obj8 = { type: "QUESTS_SEND_HEARTBEAT_SUCCESS", userStatus: null, questId: null, streamKey: null };
-              obj2 = callback(7498);
+              obj2 = callback(7312);
               obj8[1] = obj2.questUserStatusFromServer(body.body);
               obj8[2] = callback;
               obj8[3] = callback2;
@@ -639,7 +639,7 @@ function _enrollInQuest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -788,7 +788,7 @@ function _enrollInQuest() {
             lib = arg1;
             obj12 = { type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: null };
             const obj23 = lib(709);
-            obj12[1] = callback(7498).questUserStatusFromServer(lib.body);
+            obj12[1] = callback(7312).questUserStatusFromServer(lib.body);
             obj23.dispatch(obj12);
             obj13 = { type: null };
             obj13[0] = constants.SUCCESS;
@@ -840,7 +840,7 @@ function _claimQuestReward() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -861,7 +861,7 @@ function _claimQuestReward() {
               closure_2 = undefined;
               if (claimingReward.isClaimingReward(callback)) {
                 claimingReward = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 let obj7 = lib(closure_2[10]);
                 obj1 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId: null };
@@ -977,7 +977,7 @@ function _fetchQuestRewardCode() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1018,7 +1018,7 @@ function _fetchQuestRewardCode() {
             dependencyMap = closure_3;
             let obj4 = lib(709);
             obj4 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
-            const tmp28 = new lib(4278)(dependencyMap);
+            const tmp28 = new lib(4279)(dependencyMap);
             obj4[1] = tmp28;
             obj4[2] = callback;
             obj4.dispatch(obj4);
@@ -1031,7 +1031,7 @@ function _fetchQuestRewardCode() {
             obj = lib(709);
             const obj5 = { type: "QUESTS_FETCH_REWARD_CODE_SUCCESS", questId: null, rewardCode: null };
             obj5[1] = callback;
-            obj2 = callback(7498);
+            obj2 = callback(7312);
             obj5[2] = obj2.questsRewardCodeFromServer(lib.body);
             obj.dispatch(obj5);
             c4 = 0;
@@ -1082,7 +1082,7 @@ function _dismissQuestContent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1137,7 +1137,7 @@ function _dismissQuestContent() {
               dependencyMap = closure_4;
               obj4 = lib(709);
               const obj5 = { type: "QUESTS_DISMISS_CONTENT_FAILURE", error: null, questId: null };
-              const tmp27 = new lib(4278)(dependencyMap);
+              const tmp27 = new lib(4279)(dependencyMap);
               obj5[1] = tmp27;
               obj5[2] = callback;
               obj4.dispatch(obj5);
@@ -1148,7 +1148,7 @@ function _dismissQuestContent() {
               lib = arg1;
               obj = lib(709);
               obj6 = { type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: null };
-              obj2 = callback(7498);
+              obj2 = callback(7312);
               obj6[1] = obj2.questUserStatusFromServer(lib.body);
               obj.dispatch(obj6);
               c5 = 0;
@@ -1201,7 +1201,7 @@ function _completeQuestPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1322,7 +1322,7 @@ function _resetQuestPreviewStatus() {
         dependencyMap = closure_3;
         let obj4 = lib(709);
         const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-        const tmp27 = new lib(4278)(dependencyMap);
+        const tmp27 = new lib(4279)(dependencyMap);
         obj3[1] = tmp27;
         obj3[2] = callback;
         obj4.dispatch(obj3);
@@ -1334,7 +1334,7 @@ function _resetQuestPreviewStatus() {
         lib = arg1;
         obj = lib(709);
         obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-        const obj2 = callback(7498);
+        const obj2 = callback(7312);
         obj4[1] = obj2.questUserStatusFromServer(lib.body);
         obj.dispatch(obj4);
         c4 = 0;
@@ -1373,7 +1373,7 @@ function _resetQuestDismissibilityStatus() {
         dependencyMap = closure_3;
         let obj4 = lib(709);
         const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-        const tmp27 = new lib(4278)(dependencyMap);
+        const tmp27 = new lib(4279)(dependencyMap);
         obj3[1] = tmp27;
         obj3[2] = callback;
         obj4.dispatch(obj3);
@@ -1385,7 +1385,7 @@ function _resetQuestDismissibilityStatus() {
         lib = arg1;
         obj = lib(709);
         obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-        const obj2 = callback(7498);
+        const obj2 = callback(7312);
         obj4[1] = obj2.questUserStatusFromServer(lib.body);
         obj.dispatch(obj4);
         c4 = 0;
@@ -1417,7 +1417,7 @@ function _fetchClaimedQuests() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1455,7 +1455,7 @@ function _fetchClaimedQuests() {
             callback = dependencyMap;
             let obj3 = callback(709);
             obj3 = { type: "QUESTS_FETCH_CLAIMED_QUESTS_FAILURE", error: null };
-            const tmp25 = new callback(4278)(callback);
+            const tmp25 = new callback(4279)(callback);
             obj3[1] = tmp25;
             obj3.dispatch(obj3);
           } else if (arg0 === 1) {
@@ -1523,7 +1523,7 @@ function _fetchQuestToDeliver() {
             obj[0] = body;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -1589,7 +1589,7 @@ function _fetchQuestToDeliver() {
                 const message = enabled;
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                let obj19 = callback2(10521);
+                let obj19 = callback2(10538);
                 const obj3 = { wasSuccessful: false, currentFetchedAt: null };
                 throwTypeErrorResult = dependencyMap;
                 obj3[1] = dependencyMap;
@@ -1601,7 +1601,7 @@ function _fetchQuestToDeliver() {
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
                 throwTypeErrorResult = obj4;
-                throwTypeErrorResult = Object.assign(callback2(7469)());
+                throwTypeErrorResult = Object.assign(callback2(7282)());
                 throwTypeErrorResult = undefined;
                 if (message != null) {
                   throwTypeErrorResult = message.message;
@@ -1619,7 +1619,7 @@ function _fetchQuestToDeliver() {
                 throwTypeErrorResult = message;
                 throwTypeErrorResult = new.target;
                 throwTypeErrorResult = new.target;
-                const obj24 = new callback2(4278)(message);
+                const obj24 = new callback2(4279)(message);
                 throwTypeErrorResult = obj24;
                 obj4.api_error = obj24.getAnyErrorMessage();
                 throwTypeErrorResult = callback2;
@@ -1634,7 +1634,7 @@ function _fetchQuestToDeliver() {
                 throwTypeErrorResult = message;
                 throwTypeErrorResult = new.target;
                 throwTypeErrorResult = new.target;
-                throwTypeErrorResult = new callback2(4278)(message);
+                throwTypeErrorResult = new callback2(4279)(message);
                 obj5[1] = throwTypeErrorResult;
                 throwTypeErrorResult = callback;
                 obj5[2] = callback;
@@ -1657,7 +1657,7 @@ function _fetchQuestToDeliver() {
                   closure_3 = body;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  obj16 = callback(7511);
+                  obj16 = callback(7325);
                   c7 = 3;
                   guildsTree = 1;
                   let obj7 = { value: null, done: false };
@@ -1680,7 +1680,7 @@ function _fetchQuestToDeliver() {
                   lib = body;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  const LessPersonalizedAdsExperiment = callback(10522).LessPersonalizedAdsExperiment;
+                  const LessPersonalizedAdsExperiment = callback(10539).LessPersonalizedAdsExperiment;
                   enabled = LessPersonalizedAdsExperiment.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" });
                   throwTypeErrorResult = lib;
                   type = lib();
@@ -1791,41 +1791,41 @@ function _fetchQuestToDeliver() {
                 if (creative != null) {
                   creative_type = creative.creative_type;
                 }
-                if (creative_type !== callback(7507).AdCreativeType.BOUNTY) {
+                if (creative_type !== callback(7321).AdCreativeType.BOUNTY) {
                   creative = body.creative;
                 } else {
-                  const BountiesMobileQuestBarExperiment = callback(10523).BountiesMobileQuestBarExperiment;
+                  const BountiesMobileQuestBarExperiment = callback(10540).BountiesMobileQuestBarExperiment;
                   creative = null;
                 }
                 obj16 = null;
                 if (null != creative) {
                   creative_type = creative.creative_type;
-                  if (callback(7507).AdCreativeType.QUEST === creative_type) {
-                    obj = callback(7498);
+                  if (callback(7321).AdCreativeType.QUEST === creative_type) {
+                    obj = callback(7312);
                     user = obj.questConfigFromServer(creative.creative_content);
                     const obj14 = { type: null, questId: null };
-                    obj14[0] = callback(7507).AdCreativeType.QUEST;
+                    obj14[0] = callback(7321).AdCreativeType.QUEST;
                     obj14[1] = user.id;
                     obj16 = obj14;
                   } else {
                     throwTypeErrorResult = lib;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
-                    if (callback(7507).AdCreativeType.BOUNTY === creative_type) {
+                    if (callback(7321).AdCreativeType.BOUNTY === creative_type) {
                       throwTypeErrorResult = closure_3;
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = callback;
                       throwTypeErrorResult = dependencyMap;
                       throwTypeErrorResult = creative;
-                      closure_16 = callback(10524).bountyFromServer(creative.creative_content);
+                      closure_16 = callback(10541).bountyFromServer(creative.creative_content);
                       const obj15 = { type: null, bounty: null };
                       throwTypeErrorResult = callback;
                       throwTypeErrorResult = dependencyMap;
-                      obj15[0] = callback(7507).AdCreativeType.BOUNTY;
+                      obj15[0] = callback(7321).AdCreativeType.BOUNTY;
                       throwTypeErrorResult = closure_16;
                       obj15[1] = closure_16;
                       obj16 = obj15;
-                      const obj32 = callback(10524);
+                      const obj32 = callback(10541);
                     }
                   }
                 } else {
@@ -1839,14 +1839,14 @@ function _fetchQuestToDeliver() {
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
                     throwTypeErrorResult = quest;
-                    user = callback(7498).questConfigFromServer(quest);
+                    user = callback(7312).questConfigFromServer(quest);
                     obj16 = { type: null, questId: null };
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
-                    obj16[0] = callback(7507).AdCreativeType.QUEST;
+                    obj16[0] = callback(7321).AdCreativeType.QUEST;
                     throwTypeErrorResult = user;
                     obj16[1] = user.id;
-                    const obj30 = callback(7498);
+                    const obj30 = callback(7312);
                   }
                 }
                 obj2 = callback2(709);
@@ -1900,7 +1900,7 @@ function _fetchQuestToDeliver() {
                 obj17[8] = callback;
                 obj17[9] = dependencyMap;
                 obj2.dispatch(obj17);
-                obj5 = callback2(10521);
+                obj5 = callback2(10538);
                 obj19 = { wasSuccessful: true, adRequestId: null, currentCreative: null, currentFetchedAt: null };
                 const _String = String;
                 obj19[1] = String(body.request_id);
@@ -1913,13 +1913,13 @@ function _fetchQuestToDeliver() {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  if (callback === callback(6756).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA) {
-                    obj7 = callback2(10539);
+                  if (callback === callback(5271).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA) {
+                    obj7 = callback2(10556);
                     obj7.startTracking(user.id);
                   }
                   obj8 = callback2(698);
                   const obj20 = {};
-                  const merged = Object.assign(callback2(7469)());
+                  const merged = Object.assign(callback2(7282)());
                   obj20.quest_id = user.id;
                   obj20.caller_source = callback2;
                   const _String2 = String;
@@ -1930,7 +1930,7 @@ function _fetchQuestToDeliver() {
               }
               type = 0;
               guildsTree = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (throwTypeErrorResult) {
             enabled = throwTypeErrorResult;
@@ -1977,7 +1977,7 @@ function _fetchEarnedQuestToDeliver() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2021,8 +2021,8 @@ function _fetchEarnedQuestToDeliver() {
                 if (0 !== found.length) {
                   const _Date = Date;
                   c3 = Date.now();
-                  const result = callback2(10541).recordEarnedRequestAttempt(tmp74, tmp75);
-                  const obj16 = callback2(10541);
+                  const result = callback2(10558).recordEarnedRequestAttempt(tmp74, tmp75);
+                  const obj16 = callback2(10558);
                   obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: null };
                   obj1[1] = tmp74;
                   callback2(709).dispatch(obj1);
@@ -2031,7 +2031,7 @@ function _fetchEarnedQuestToDeliver() {
                   response_ttl_seconds = 2;
                   c9 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = callback(5059).getSession();
+                  obj2[0] = callback(7069).getSession();
                   return obj2;
                 }
               }
@@ -2172,7 +2172,7 @@ function _updateVideoProgress() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2224,7 +2224,7 @@ function _updateVideoProgress() {
             return obj;
           } else {
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp6) {
           c3 = tmp;
@@ -2262,7 +2262,7 @@ function _fetchVideoTranscript() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2423,7 +2423,7 @@ function _fetchQuestPreview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2464,7 +2464,7 @@ function _fetchQuestPreview() {
             dependencyMap = closure_3;
             let obj4 = lib(709);
             obj4 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
-            const tmp28 = new lib(4278)(dependencyMap);
+            const tmp28 = new lib(4279)(dependencyMap);
             obj4[1] = tmp28;
             obj4[2] = callback;
             obj4.dispatch(obj4);
@@ -2477,7 +2477,7 @@ function _fetchQuestPreview() {
             obj = lib(709);
             const obj5 = { type: "QUESTS_FETCH_PREVIEW_SUCCESS", questId: null, quest: null };
             obj5[1] = callback;
-            obj2 = callback(7498);
+            obj2 = callback(7312);
             obj5[2] = obj2.questWithUserStatusFromServer(lib.body);
             obj.dispatch(obj5);
             c4 = 0;
@@ -2528,7 +2528,7 @@ function _fetchQuestHomeHero() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2813,7 +2813,7 @@ function _fetchQuestHomeHeroPreview() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -2981,7 +2981,7 @@ function _fetchQuestHomeHeroPreview() {
             obj1.dispatch(obj6);
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp72) {
           closure_5 = tmp72;

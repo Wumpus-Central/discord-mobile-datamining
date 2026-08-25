@@ -1,10 +1,10 @@
-// === Module 13296: commonTriggerPointConfiguration ===
+// === Module 13158: commonTriggerPointConfiguration ===
 
-// Module 13296 (commonTriggerPointConfiguration)
+// Module 13158 (commonTriggerPointConfiguration)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4293 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 7698 */;
-import apexExperiment from "apexExperiment" /* 13297 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4294 */;
+import registeredExperimentIds from "registeredExperimentIds" /* 7519 */;
+import apexExperiment from "apexExperiment" /* 13159 */;
 
 const items = [apexExperiment.HotwheelsActivityFeedNvidiaExperiment];
 const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(items, ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN, { location: "app open" });

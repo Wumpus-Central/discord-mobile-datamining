@@ -1,18 +1,18 @@
-// === Module 12487: ScreenShareTile ===
+// === Module 10765: ScreenShareTile ===
 
-// Module 12487 (ScreenShareTile)
+// Module 10765 (ScreenShareTile)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
-import Text from "Text" /* 4739 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6408 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 12488 */;
-import registerAssetDefault from "registerAsset" /* 12489 */;
+import Text from "Text" /* 4376 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5533 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10766 */;
+import registerAssetDefault from "registerAsset" /* 10767 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;

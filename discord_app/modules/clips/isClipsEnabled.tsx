@@ -1,73 +1,25 @@
-// === Module 4531: isClipsEnabled ===
+// === Module 4441: isClipsEnabled ===
 
-// Module 4531 (isClipsEnabled)
-import initialize from "initialize" /* 589 */;
-import apexExperiment from "apexExperiment" /* 4532 */;
-import closure_2 from "_migrateDefaultStorage" /* 4507 */;
+// Module 4441 (isClipsEnabled)
+import apexExperiment from "apexExperiment" /* 4442 */;
+import closure_2 from "_migrateDefaultStorage" /* 4437 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
 export const isClipsEnabled = function isClipsEnabled() {
-  let decoupledClipsEnabled = apexExperiment.areClipsAvailable();
-  if (decoupledClipsEnabled) {
-    decoupledClipsEnabled = store.getState().clipsSettings.clipsEnabled;
+  let clipsEnabled = apexExperiment.areClipsAvailable();
+  if (clipsEnabled) {
+    clipsEnabled = state.getState().clipsSettings.clipsEnabled;
   }
-  if (decoupledClipsEnabled) {
-    decoupledClipsEnabled = store.getState().clipsSettings.decoupledClipsEnabled;
-  }
-  return decoupledClipsEnabled;
+  return clipsEnabled;
 };
 export const useIsClipsEnabled = function useIsClipsEnabled() {
   let isClipsAvailable = apexExperiment.useIsClipsAvailable();
   const obj = apexExperiment;
   const items = [closure_2];
-  const stateFromStores = initialize.useStateFromStores(items, () => store.getState().clipsSettings.clipsEnabled);
-  const obj2 = initialize;
-  const items1 = [closure_2];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getState().clipsSettings.decoupledClipsEnabled);
   if (isClipsAvailable) {
-    isClipsAvailable = stateFromStores;
-  }
-  if (isClipsAvailable) {
-    isClipsAvailable = stateFromStores1;
-  }
-  return isClipsAvailable;
-};
-export const isDecoupledClipsEnabled = function isDecoupledClipsEnabled() {
-  let decoupledClipsEnabled = apexExperiment.areClipsAvailable();
-  if (decoupledClipsEnabled) {
-    decoupledClipsEnabled = store.getState().clipsSettings.clipsEnabled;
-  }
-  if (decoupledClipsEnabled) {
-    decoupledClipsEnabled = obj2.getState().clipsSettings.decoupledClipsEnabled;
-  }
-  const obj = apexExperiment;
-  obj2 = store;
-  const tmp = require;
-  if (decoupledClipsEnabled) {
-    decoupledClipsEnabled = tmpResult.isWindows();
-  }
-  return decoupledClipsEnabled;
-};
-export const useIsDecoupledClipsEnabled = function useIsDecoupledClipsEnabled() {
-  let isClipsAvailable = apexExperiment.useIsClipsAvailable();
-  const obj = apexExperiment;
-  const tmp = require;
-  const items = [closure_2];
-  const stateFromStores = initialize.useStateFromStores(items, () => store.getState().clipsSettings.clipsEnabled);
-  const obj2 = initialize;
-  const items1 = [closure_2];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getState().clipsSettings.decoupledClipsEnabled);
-  if (isClipsAvailable) {
-    isClipsAvailable = stateFromStores;
-  }
-  if (isClipsAvailable) {
-    isClipsAvailable = stateFromStores1;
-  }
-  const obj3 = initialize;
-  if (isClipsAvailable) {
-    isClipsAvailable = tmpResult.isWindows();
+    isClipsAvailable = obj2.useStateFromStores(items, () => state.getState().clipsSettings.clipsEnabled);
   }
   return isClipsAvailable;
 };

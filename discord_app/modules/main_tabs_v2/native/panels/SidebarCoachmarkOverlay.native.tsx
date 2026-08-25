@@ -1,7 +1,7 @@
-// === Module 15341: SidebarCoachmarkOverlayLayer ===
+// === Module 15371: SidebarCoachmarkOverlayLayer ===
 
-// Module 15341 (SidebarCoachmarkOverlayLayer)
-import useInitialValueDefault from "useInitialValue" /* 7165 */;
+// Module 15371 (SidebarCoachmarkOverlayLayer)
+import useInitialValueDefault from "useInitialValue" /* 5822 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

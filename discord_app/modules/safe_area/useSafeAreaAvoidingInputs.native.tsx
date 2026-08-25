@@ -1,6 +1,6 @@
-// === Module 9481: _calculateScrollOffset ===
+// === Module 9608: _calculateScrollOffset ===
 
-// Module 9481 (_calculateScrollOffset)
+// Module 9608 (_calculateScrollOffset)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 
@@ -24,7 +24,7 @@ function _calculateScrollOffset() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -70,7 +70,7 @@ function _calculateScrollOffset() {
                   return obj4;
                 } else {
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               }
             }
@@ -139,7 +139,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

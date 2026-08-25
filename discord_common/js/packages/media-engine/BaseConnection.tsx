@@ -1,14 +1,14 @@
-// === Module 4586: destroy ===
+// === Module 4491: destroy ===
 
-// Module 4586 (destroy)
-import onDefault from "on" /* 4577 */;
-import WantsVideoQuality from "WantsVideoQuality" /* 4587 */;
-import logger2 from "logger" /* 4589 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4590 */;
-import cloneDeepDefault from "cloneDeep" /* 4591 */;
-import flatRestDefault from "flatRest" /* 4620 */;
+// Module 4491 (destroy)
+import onDefault from "on" /* 4482 */;
+import WantsVideoQuality from "WantsVideoQuality" /* 4492 */;
+import logger2 from "logger" /* 4494 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4495 */;
+import cloneDeepDefault from "cloneDeep" /* 4496 */;
+import flatRestDefault from "flatRest" /* 4525 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import DesktopSources from "DesktopSources" /* 4534 */;
+import DesktopSources from "DesktopSources" /* 4444 */;
 
 require = arg1;
 ({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);

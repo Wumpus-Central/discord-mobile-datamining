@@ -1,9 +1,9 @@
-// === Module 8356: checkSpoilerEmbeds ===
+// === Module 8357: checkSpoilerEmbeds ===
 
-// Module 8356 (checkSpoilerEmbeds)
-import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4362 */;
-import getEffectiveVideoProvider from "getEffectiveVideoProvider" /* 4826 */;
-import useIsUserProfileEmbedRenderingEnabled from "useIsUserProfileEmbedRenderingEnabled" /* 8357 */;
+// Module 8357 (checkSpoilerEmbeds)
+import getPathsFromURL from "getPathsFromURL" /* 4363 */;
+import getEffectiveVideoProvider from "getEffectiveVideoProvider" /* 4738 */;
+import useIsUserProfileEmbedRenderingEnabled from "useIsUserProfileEmbedRenderingEnabled" /* 8363 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -39947,8 +39947,8 @@ function isUserProfileEmbedLink(type) {
     tmp = null != type.target;
   }
   if (tmp) {
-    tmp = null != trimTrailingPunctuation.parseUserProfileEmbedCode(type.target);
-    const obj = trimTrailingPunctuation;
+    tmp = null != getPathsFromURL.parseUserProfileEmbedCode(type.target);
+    const obj = getPathsFromURL;
   }
   return tmp;
 }
@@ -40013,8 +40013,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4294).isBuildOverrideLink(type.target);
-      const obj = callback(4294);
+      tmp = !callback(4295).isBuildOverrideLink(type.target);
+      const obj = callback(4295);
     }
     return tmp;
   });
@@ -40023,8 +40023,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4368).isExperimentEmbedURL(type.target);
-      const obj = callback(4368);
+      tmp = !callback(8358).isExperimentEmbedURL(type.target);
+      const obj = callback(8358);
     }
     return tmp;
   });
@@ -40206,7 +40206,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _require(4826);
+            obj3 = _require(4738);
           }
         } else {
           items2 = arr;
@@ -40310,16 +40310,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4294).isBuildOverrideLink(type.target);
-        const obj = callback(4294);
+        tmp = !callback(4295).isBuildOverrideLink(type.target);
+        const obj = callback(4295);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4368).isExperimentEmbedURL(type.target);
-        const obj = callback(4368);
+        tmp = !callback(8358).isExperimentEmbedURL(type.target);
+        const obj = callback(8358);
       }
       return tmp;
     });

@@ -1,16 +1,16 @@
-// === Module 10439: BalanceWidgetPill ===
+// === Module 10294: BalanceWidgetPill ===
 
-// Module 10439 (BalanceWidgetPill)
+// Module 10294 (BalanceWidgetPill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 10440 */;
-import forwardRef from "forwardRef" /* 10441 */;
-import BalanceCounter from "BalanceCounter" /* 10447 */;
-import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS" /* 10448 */;
+import useVirtualCurrencyBalanceAnimationData from "useVirtualCurrencyBalanceAnimationData" /* 10295 */;
+import forwardRef from "forwardRef" /* 10296 */;
+import BalanceCounter from "BalanceCounter" /* 10302 */;
+import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS" /* 10303 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import set from "set" /* 500 */;
 
 require = arg1;

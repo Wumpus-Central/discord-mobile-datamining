@@ -1,6 +1,6 @@
-// === Module 8752: getPostMessageJavaScript ===
+// === Module 10688: getPostMessageJavaScript ===
 
-// Module 8752 (getPostMessageJavaScript)
+// Module 10688 (getPostMessageJavaScript)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/native/getPostMessageJavaScript.tsx");

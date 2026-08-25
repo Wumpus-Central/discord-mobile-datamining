@@ -1,7 +1,7 @@
-// === Module 9343: useTopAndNewlyAddedEmojis ===
+// === Module 8792: useTopAndNewlyAddedEmojis ===
 
-// Module 9343 (useTopAndNewlyAddedEmojis)
-import closure_2 from "getEmojiToGroupId" /* 6764 */;
+// Module 8792 (useTopAndNewlyAddedEmojis)
+import closure_2 from "getEmojiToGroupId" /* 5282 */;
 import { EmojiIntention } from "set" /* 1925 */;
 
 const require = arg1;

@@ -1,16 +1,16 @@
-// === Module 11201: CustomTypingIndicatorDisplay ===
+// === Module 11548: CustomTypingIndicatorDisplay ===
 
-// Module 11201 (CustomTypingIndicatorDisplay)
+// Module 11548 (CustomTypingIndicatorDisplay)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 3406 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import PressableBase from "PressableBase" /* 5438 */;
-import items2 from "items" /* 11199 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11202 */;
+import messagesProxyDefault from "messagesProxy" /* 3407 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import PressableBase from "PressableBase" /* 4949 */;
+import items2 from "items" /* 11539 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11549 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;
@@ -31,7 +31,7 @@ export default function CustomTypingIndicatorDisplay(showName) {
   if (num === undefined) {
     num = 16;
   }
-  ({ justifyCenter, textEmojiLineHeight, bypassReducedMotionCheck } = showName);
+  ({ justifyCenter, bypassReducedMotionCheck } = showName);
   if (justifyCenter === undefined) {
     justifyCenter = false;
   }
@@ -45,11 +45,10 @@ export default function CustomTypingIndicatorDisplay(showName) {
       let formatResult = intl2.format(obj1.getCustomTypingIndicatorSuggestionWithNameMessage(config.typingSuggestion), obj);
       let tmp5 = require;
     }
-    obj = { config: null, size: null, textEmojiLineHeight: null, bypassReducedMotionCheck: null };
+    obj = { config: null, size: null, bypassReducedMotionCheck: null };
     obj[0] = config;
     obj[1] = num;
-    obj[2] = textEmojiLineHeight;
-    obj[3] = bypassReducedMotionCheck;
+    obj[2] = bypassReducedMotionCheck;
     const tmp10 = callback(CustomTypingIndicatorGlyphDefault, obj);
     let str = "flex-start";
     if (justifyCenter) {

@@ -1,10 +1,10 @@
-// === Module 9181: OpenCriticRatingCircle ===
+// === Module 9473: OpenCriticRatingCircle ===
 
-// Module 9181 (OpenCriticRatingCircle)
+// Module 9473 (OpenCriticRatingCircle)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import inlineStyles from "inlineStyles" /* 6607 */;
-import inlineStylesDefault from "inlineStyles" /* 6607 */;
+import inlineStyles from "inlineStyles" /* 7985 */;
+import inlineStylesDefault from "inlineStyles" /* 7985 */;
 
 const jsx = jsxProd.jsx;
 let result = set.fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");

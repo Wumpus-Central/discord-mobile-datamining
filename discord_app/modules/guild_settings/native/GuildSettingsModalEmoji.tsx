@@ -1,15 +1,15 @@
-// === Module 16875: computeEmojiItem ===
+// === Module 16907: computeEmojiItem ===
 
-// Module 16875 (computeEmojiItem)
+// Module 16907 (computeEmojiItem)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "initialize" /* 16876 */;
+import closure_8 from "initialize" /* 16908 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import importDefaultResult from "apply" /* 12 */;
 
 require = arg1;
@@ -189,8 +189,8 @@ let closure_15 = importDefaultResult.memoize((arr, stateFromStores) => {
   const found = arr.filter((roles) => !stateFromStores(closure_1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
-  const maxEmojiSlots = _require(4270).getMaxEmojiSlots(stateFromStores);
-  const obj2 = _require(4270);
+  const maxEmojiSlots = _require(4271).getMaxEmojiSlots(stateFromStores);
+  const obj2 = _require(4271);
   const obj3 = importDefaultResult;
   [arr2, arr3] = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const intl = _require(1236).intl;

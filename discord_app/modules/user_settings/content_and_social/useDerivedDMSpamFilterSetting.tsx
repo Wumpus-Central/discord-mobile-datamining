@@ -1,13 +1,13 @@
-// === Module 14264: useDerivedDmSpamFilterSettingValue ===
+// === Module 14294: useDerivedDmSpamFilterSettingValue ===
 
-// Module 14264 (useDerivedDmSpamFilterSettingValue)
+// Module 14294 (useDerivedDmSpamFilterSettingValue)
 import initialize from "initialize" /* 589 */;
 import create from "create" /* 1306 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import isFeatureAgeGated from "isFeatureAgeGated" /* 4075 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4082 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4076 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4083 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items" /* 4071 */;
+import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items" /* 4072 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");

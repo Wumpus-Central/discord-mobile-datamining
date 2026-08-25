@@ -1,14 +1,14 @@
-// === Module 16508: SoundboardButton ===
+// === Module 16540: SoundboardButton ===
 
-// Module 16508 (SoundboardButton)
+// Module 16540 (SoundboardButton)
 import ThemesDefault from "Themes" /* 712 */;
-import dismissPanelDefault from "dismissPanel" /* 11488 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 16494 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 16509 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 16509 */;
+import dismissPanelDefault from "dismissPanel" /* 11840 */;
+import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 16526 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 16541 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 16541 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -37,7 +37,7 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(16495);
+    let tmpResult = tmp(16527);
     const intl = tmp4(1236).intl;
     obj[3] = intl.string(tmp4(1236).t["6EJvHt"]);
     obj = { style: null };
@@ -46,13 +46,13 @@ export default function SoundboardButton(arg0) {
     obj1[0] = voicePanelButtonStyles.iconBg.backgroundColor;
     items[1] = obj1;
     obj[0] = items;
-    const items1 = [callback(tmp(7228), obj), ];
+    const items1 = [callback(tmp(5887), obj), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.iconContainer;
-    tmpResult = tmp(7228);
+    tmpResult = tmp(5887);
     const obj3 = { color: null };
     obj3[0] = color;
-    obj2[1] = callback(tmp4(8032).SoundboardIcon, obj3);
+    obj2[1] = callback(tmp4(7854).SoundboardIcon, obj3);
     items1[1] = callback(tmpResult, obj2);
     obj[4] = items1;
     tmp8 = callback2(tmpResult, obj);

@@ -1,7 +1,7 @@
-// === Module 16818: prototype ===
+// === Module 16850: prototype ===
 
-// Module 16818 (prototype)
-import initializeDefault from "initialize" /* 5043 */;
+// Module 16850 (prototype)
+import initializeDefault from "initialize" /* 5367 */;
 
 let require = arg1;
 initializeDefault;
@@ -17,10 +17,10 @@ let prototype = function VoiceProcessingErrorManager() {
     }
   };
   applyArgumentsResult.handleNoiseCancellationError = function handleNoiseCancellationError() {
-    const result = applyArgumentsResult(4096).presentNoiseCancellationError();
+    const result = applyArgumentsResult(4097).presentNoiseCancellationError();
   };
   applyArgumentsResult.handleVoiceActivityDetectionError = function handleVoiceActivityDetectionError() {
-    const result = applyArgumentsResult(4096).presentVoiceActivityDetectionError();
+    const result = applyArgumentsResult(4097).presentVoiceActivityDetectionError();
   };
   return applyArgumentsResult;
 }.prototype;

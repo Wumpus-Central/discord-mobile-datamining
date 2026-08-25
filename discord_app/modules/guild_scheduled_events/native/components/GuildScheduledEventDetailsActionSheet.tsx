@@ -1,15 +1,15 @@
-// === Module 8831: GuildScheduledEventDetailsActionSheet ===
+// === Module 9098: GuildScheduledEventDetailsActionSheet ===
 
-// Module 8831 (GuildScheduledEventDetailsActionSheet)
+// Module 9098 (GuildScheduledEventDetailsActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "scheduledEventSort" /* 4374 */;
+import closure_7 from "scheduledEventSort" /* 7132 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);

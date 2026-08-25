@@ -1,12 +1,12 @@
-// === Module 16354: BaseActivityPanelSystemUIManager ===
+// === Module 16386: BaseActivityPanelSystemUIManager ===
 
-// Module 16354 (BaseActivityPanelSystemUIManager)
+// Module 16386 (BaseActivityPanelSystemUIManager)
 import set from "set" /* 500 */;
-import componentDidMountDefault from "componentDidMount" /* 8071 */;
-import pushStackEntryDefault from "pushStackEntry" /* 8717 */;
-import useActivityWebViewLockDefault from "useActivityWebViewLock" /* 16331 */;
+import componentDidMountDefault from "componentDidMount" /* 7893 */;
+import pushStackEntryDefault from "pushStackEntry" /* 10741 */;
+import useActivityWebViewLockDefault from "useActivityWebViewLock" /* 16363 */;
 import importAllResult from "noop" /* 19 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 8740 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9915 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,11 +1,11 @@
-// === Module 16904: useGuildTagBadgeCollection ===
+// === Module 16936: useGuildTagBadgeCollection ===
 
-// Module 16904 (useGuildTagBadgeCollection)
+// Module 16936 (useGuildTagBadgeCollection)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "handleFormInit" /* 8912 */;
-import closure_4 from "calculateAppliedBoosts" /* 4265 */;
-import items from "items" /* 8207 */;
+import closure_3 from "handleFormInit" /* 9169 */;
+import closure_4 from "calculateAppliedBoosts" /* 4266 */;
+import items from "items" /* 8203 */;
 
 const useMemo = noop.useMemo;
 ({ BADGE_PACKS: c5, BADGES: closure_6, BADGE_PACK_TO_SKU_ID: error } = items);

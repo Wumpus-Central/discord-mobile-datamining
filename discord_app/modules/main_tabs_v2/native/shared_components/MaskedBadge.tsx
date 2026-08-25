@@ -1,11 +1,11 @@
-// === Module 8536: MaskedBadge ===
+// === Module 8544: MaskedBadge ===
 
-// Module 8536 (MaskedBadge)
+// Module 8544 (MaskedBadge)
 import ThemesDefault from "Themes" /* 712 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8537 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8545 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 createCacheKey = { maskStyle: { position: "relative", right: "channel" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };

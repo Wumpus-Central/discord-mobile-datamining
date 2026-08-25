@@ -1,8 +1,8 @@
-// === Module 8417: useShouldConvertBioEmoji ===
+// === Module 8425: useShouldConvertBioEmoji ===
 
-// Module 8417 (useShouldConvertBioEmoji)
+// Module 8425 (useShouldConvertBioEmoji)
 import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
 
 const result = set.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 

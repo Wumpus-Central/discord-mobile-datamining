@@ -1,13 +1,13 @@
-// === Module 15359: getMessagesItemChannelSizes ===
+// === Module 15389: getMessagesItemChannelSizes ===
 
-// Module 15359 (getMessagesItemChannelSizes)
+// Module 15389 (getMessagesItemChannelSizes)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 9325 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15360 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15360 */;
-import _modDef15369 from "module_15369" /* 15369 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15370 */;
+import map from "map" /* 9598 */;
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15390 */;
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 15390 */;
+import _modDef15399 from "module_15399" /* 15399 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15400 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
@@ -36,7 +36,7 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
     obj[1] = row;
-    tmp5 = jsx(_modDef15369, { height: null, row: null });
+    tmp5 = jsx(_modDef15399, { height: null, row: null });
   }
   return tmp5;
 });
@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let obj = _require(8068);
+  let obj = _require(7890);
   const items = [channelId.channelId];
   const tmp = callback(obj.useRecyclingState(false, items), 2);
   _require = tmp2;

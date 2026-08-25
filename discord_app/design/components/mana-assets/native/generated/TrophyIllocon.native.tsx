@@ -1,10 +1,10 @@
-// === Module 6281: TrophyIllocon ===
+// === Module 6967: TrophyIllocon ===
 
-// Module 6281 (TrophyIllocon)
+// Module 6967 (TrophyIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6282 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6968 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/TrophyIllocon.native.tsx");

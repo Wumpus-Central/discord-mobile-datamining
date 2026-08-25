@@ -1,6 +1,6 @@
-// === Module 9232: handleReset ===
+// === Module 9513: handleReset ===
 
-// Module 9232 (handleReset)
+// Module 9513 (handleReset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

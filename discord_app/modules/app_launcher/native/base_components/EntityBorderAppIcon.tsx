@@ -1,12 +1,12 @@
-// === Module 11280: EntityBorderAppIcon ===
+// === Module 11639: EntityBorderAppIcon ===
 
-// Module 11280 (EntityBorderAppIcon)
+// Module 11639 (EntityBorderAppIcon)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5454 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import preloadDefault from "preload" /* 5374 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;

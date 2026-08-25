@@ -1,8 +1,8 @@
-// === Module 8065: BuyNitroSectionHeader ===
+// === Module 7887: BuyNitroSectionHeader ===
 
-// Module 8065 (BuyNitroSectionHeader)
+// Module 7887 (BuyNitroSectionHeader)
 import set from "set" /* 2 */;
-import Text from "Text" /* 4739 */;
+import Text from "Text" /* 4376 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);

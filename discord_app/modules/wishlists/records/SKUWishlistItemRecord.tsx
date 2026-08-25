@@ -1,8 +1,8 @@
-// === Module 9228: fromServer ===
+// === Module 9509: fromServer ===
 
-// Module 9228 (fromServer)
-import fromServerDefault from "fromServer" /* 9225 */;
-import closure_0 from "createFromServer" /* 4520 */;
+// Module 9509 (fromServer)
+import fromServerDefault from "fromServer" /* 9506 */;
+import closure_0 from "createFromServer" /* 4423 */;
 
 fromServerDefault;
 let prototype;

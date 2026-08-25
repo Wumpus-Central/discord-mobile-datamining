@@ -1,12 +1,12 @@
-// === Module 11820: useUserProfileMutuals ===
+// === Module 12160: useUserProfileMutuals ===
 
-// Module 11820 (useUserProfileMutuals)
-import usePrevValueDefault from "usePrevValue" /* 8939 */;
+// Module 12160 (useUserProfileMutuals)
+import usePrevValueDefault from "usePrevValue" /* 9196 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_5 from "recomputeAffinities" /* 5412 */;
-import closure_6 from "insertUnsortedGuilds" /* 5083 */;
-import closure_7 from "createUserWidgetFromServer" /* 5370 */;
+import closure_5 from "recomputeAffinities" /* 7265 */;
+import closure_6 from "insertUnsortedGuilds" /* 5262 */;
+import closure_7 from "createUserWidgetFromServer" /* 7227 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");

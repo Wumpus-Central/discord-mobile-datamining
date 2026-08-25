@@ -1,10 +1,10 @@
-// === Module 9724: MicrophoneSlashIcon ===
+// === Module 9334: MicrophoneSlashIcon ===
 
-// Module 9724 (MicrophoneSlashIcon)
+// Module 9334 (MicrophoneSlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9725 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 9335 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

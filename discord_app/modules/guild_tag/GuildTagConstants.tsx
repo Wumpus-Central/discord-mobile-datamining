@@ -1,9 +1,9 @@
-// === Module 8207: items ===
+// === Module 8203: items ===
 
-// Module 8207 (items)
+// Module 8203 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4269 */;
+import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4270 */;
 
 const GuildFeatures = ME.GuildFeatures;
 let obj = { SWORD: 0, [0]: "SWORD", WATER_DROP: 1, [1]: "WATER_DROP", SKULL: 2, [2]: "SKULL", TOADSTOOL: 3, [3]: "TOADSTOOL", MOON: 4, [4]: "MOON", LIGHTNING: 5, [5]: "LIGHTNING", LEAF: 6, [6]: "LEAF", HEART: 7, [7]: "HEART", FIRE: 8, [8]: "FIRE", COMPASS: 9, [9]: "COMPASS", CROSSHAIRS: 10, [10]: "CROSSHAIRS", FLOWER: 11, [11]: "FLOWER", FORCE: 12, [12]: "FORCE", GEM: 13, [13]: "GEM", LAVA: 14, [14]: "LAVA", PSYCHIC: 15, [15]: "PSYCHIC", SMOKE: 16, [16]: "SMOKE", SNOW: 17, [17]: "SNOW", SOUND: 18, [18]: "SOUND", SUN: 19, [19]: "SUN", WIND: 20, [20]: "WIND", BUNNY: 21, [21]: "BUNNY", DOG: 22, [22]: "DOG", FROG: 23, [23]: "FROG", GOAT: 24, [24]: "GOAT", CAT: 25, [25]: "CAT", DIAMOND: 26, [26]: "DIAMOND", CROWN: 27, [27]: "CROWN", TROPHY: 28, [28]: "TROPHY", MONEY_BAG: 29, [29]: "MONEY_BAG", DOLLAR_SIGN: 30, [30]: "DOLLAR_SIGN", CLOVER: 31, [31]: "CLOVER", BLOSSOM: 32, [32]: "BLOSSOM", POTTED_PLANT: 33, [33]: "POTTED_PLANT", MAPLE: 34, [34]: "MAPLE", WILTED_FLOWER: 35, [35]: "WILTED_FLOWER", BUTTERFLY: 36, [36]: "BUTTERFLY", SNAIL: 37, [37]: "SNAIL", CATERPILLAR: 38, [38]: "CATERPILLAR", SPIDER: 39, [39]: "SPIDER", BEE: 40, [40]: "BEE" };

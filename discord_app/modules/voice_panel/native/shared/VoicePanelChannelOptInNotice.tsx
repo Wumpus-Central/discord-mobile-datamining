@@ -1,6 +1,6 @@
-// === Module 16428: ? ===
+// === Module 16460: ? ===
 
-// Module 16428
+// Module 16460
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -21,11 +21,11 @@ const memoResult = importAllResult.memo(function VoicePanelChannelOptInNotice(ch
   obj[0] = intl.string(channel(1236).t["9mysCh"]);
   const intl2 = channel(1236).intl;
   obj[1] = intl2.string(channel(1236).t.PDUCIN);
-  obj = { IconComponent: channel(13125).ChannelListMagnifyingGlassIcon };
-  obj[2] = jsx(channel(6327).TableRowIcon, { IconComponent: channel(13125).ChannelListMagnifyingGlassIcon });
+  obj = { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon };
+  obj[2] = jsx(channel(5486).TableRowIcon, { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon });
   obj[3] = callback;
-  obj[1] = jsx(channel(6322).TableRow, { IconComponent: channel(13125).ChannelListMagnifyingGlassIcon });
-  return jsx(analyticsSection(7228), { IconComponent: channel(13125).ChannelListMagnifyingGlassIcon });
+  obj[1] = jsx(channel(5480).TableRow, { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon });
+  return jsx(analyticsSection(5887), { IconComponent: channel(13396).ChannelListMagnifyingGlassIcon });
 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
 

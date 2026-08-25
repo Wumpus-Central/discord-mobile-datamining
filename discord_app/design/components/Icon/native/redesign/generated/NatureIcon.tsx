@@ -1,10 +1,10 @@
-// === Module 9463: NatureIcon ===
+// === Module 8905: NatureIcon ===
 
-// Module 9463 (NatureIcon)
+// Module 8905 (NatureIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9464 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8906 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,6 +1,6 @@
-// === Module 5614: metadata ===
+// === Module 6298: metadata ===
 
-// Module 5614 (metadata)
+// Module 6298 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CompassIllocon-2x.png.js");

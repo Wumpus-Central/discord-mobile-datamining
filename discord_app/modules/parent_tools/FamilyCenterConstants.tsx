@@ -1,9 +1,9 @@
-// === Module 5302: items ===
+// === Module 7144: items ===
 
-// Module 5302 (items)
+// Module 7144 (items)
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2336 */;
+import messagesProxyDefault from "messagesProxy" /* 2337 */;
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 
 require = arg1;

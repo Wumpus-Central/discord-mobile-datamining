@@ -1,8 +1,8 @@
-// === Module 13620: TelemetryChannel ===
+// === Module 13655: TelemetryChannel ===
 
-// Module 13620 (TelemetryChannel)
+// Module 13655 (TelemetryChannel)
 import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13621 */;
+import enforcingDefault from "enforcing" /* 13656 */;
 
 const result = set.fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");
 

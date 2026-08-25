@@ -1,12 +1,12 @@
-// === Module 14468: BountiesScrollPromptFooter ===
+// === Module 14498: BountiesScrollPromptFooter ===
 
-// Module 14468 (BountiesScrollPromptFooter)
+// Module 14498 (BountiesScrollPromptFooter)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
+import Text from "Text" /* 4376 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

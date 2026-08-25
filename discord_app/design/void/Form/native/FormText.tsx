@@ -1,11 +1,11 @@
-// === Module 8136: FormTextColors ===
+// === Module 8132: FormTextColors ===
 
-// Module 8136 (FormTextColors)
+// Module 8132 (FormTextColors)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import result2 from "result" /* 6320 */;
+import result2 from "result" /* 5265 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import importAllResult from "noop" /* 19 */;
 
 require = arg1;

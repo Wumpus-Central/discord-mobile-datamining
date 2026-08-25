@@ -1,9 +1,9 @@
-// === Module 5430: canEditMessage ===
+// === Module 11305: canEditMessage ===
 
-// Module 5430 (canEditMessage)
+// Module 11305 (canEditMessage)
 import set from "set" /* 2 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4808 */;
-import isSystemMessageDefault from "isSystemMessage" /* 5390 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4625 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5997 */;
 import ME from "ME" /* 676 */;
 
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
@@ -29,7 +29,7 @@ export default function canEditMessage(author) {
                 const isPollResult = author.isPoll();
                 let tmp17 = !isPollResult;
                 if (!isPollResult) {
-                  const tmp18 = tmp6(5031)(author);
+                  const tmp18 = tmp6(6025)(author);
                   let tmp19 = !tmp18;
                   if (!tmp18) {
                     tmp19 = author.type !== constants3.MEDIA_MENTION_MESSAGE;

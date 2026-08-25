@@ -1,11 +1,11 @@
-// === Module 11177: createChannelStream ===
+// === Module 11519: createChannelStream ===
 
-// Module 11177 (createChannelStream)
+// Module 11519 (createChannelStream)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "initialize" /* 10679 */;
-import closure_4 from "initialize" /* 7473 */;
-import closure_5 from "initialize" /* 7620 */;
-import Changeset from "Changeset" /* 8197 */;
+import closure_3 from "initialize" /* 10480 */;
+import closure_4 from "initialize" /* 7286 */;
+import closure_5 from "initialize" /* 7441 */;
+import Changeset from "Changeset" /* 8193 */;
 import { MessageFlags } from "ME" /* 676 */;
 
 require = arg1;

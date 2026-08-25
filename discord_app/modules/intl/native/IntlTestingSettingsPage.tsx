@@ -1,22 +1,22 @@
-// === Module 15140: TestLocaleSelector ===
+// === Module 15170: TestLocaleSelector ===
 
-// Module 15140 (TestLocaleSelector)
+// Module 15170 (TestLocaleSelector)
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3978 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 6317 */;
-import TableRowInner from "TableRowInner" /* 6322 */;
-import messagesProxyDefault from "messagesProxy" /* 15141 */;
-import messagesProxyDefault2 from "messagesProxy" /* 15173 */;
+import hooksDefault from "hooks" /* 3979 */;
+import TableRowInner from "TableRowInner" /* 5480 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 5873 */;
+import messagesProxyDefault from "messagesProxy" /* 15171 */;
+import messagesProxyDefault2 from "messagesProxy" /* 15203 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { setAppLocale } from "_setAppLocale" /* 1996 */;
-import closure_9 from "_getSystemLocale" /* 1995 */;
+import { setAppLocale } from "_setAppLocale" /* 1997 */;
+import closure_9 from "_getSystemLocale" /* 1996 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function TestLocaleSelector() {
@@ -38,7 +38,7 @@ function TestLocaleSelector() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -73,7 +73,7 @@ function TestLocaleSelector() {
             obj = closure_1_1(closure_1_2[11]);
             obj.updateLocale(closure_0);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           c4 = tmp;
@@ -92,9 +92,9 @@ function TestLocaleSelector() {
     }
     return applyArgumentsResult;
   };
-  const items = [callback3(_require(8139).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(8139).TableRadioRow, { label: "French", value: "fr" })];
+  const items = [callback3(_require(8135).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(8135).TableRadioRow, { label: "French", value: "fr" })];
   obj[4] = items;
-  return callback4(_require(8140).TableRadioGroup, obj);
+  return callback4(_require(8136).TableRadioGroup, obj);
 }
 function LocaleInfo() {
   let obj = initialize;
@@ -105,14 +105,14 @@ function LocaleInfo() {
     return items;
   }), 2);
   const first = tmp[0];
-  [tmp4, require] = callback(React.useState(tDefault.locale), 2);
+  [tmp4, require] = callback(React.useState(hooksDefault.locale), 2);
   const items1 = [first];
   const effect = React.useEffect(() => {
     const timerId = setTimeout(() => {
       callback(closure_1_1(closure_1_2[14]).locale());
     }, 0);
   }, items1);
-  obj1 = tDefault;
+  obj1 = hooksDefault;
   obj = { label: "Active System", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: "@discord/intl" }) };
   const items2 = [callback3(TableRowInner.TableRow, obj), , , , ];
   obj = { label: "App locale", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: first }) };
@@ -120,7 +120,7 @@ function LocaleInfo() {
   obj1 = { label: "System locale", trailing: callback3(TableRowInner.TableRow.TrailingText, { text: tmp[1] }) };
   items2[2] = callback3(TableRowInner.TableRow, obj1);
   const obj2 = { label: "@discord/intl locale", trailing: null };
-  const tmp3 = callback(React.useState(tDefault.locale), 2);
+  const tmp3 = callback(React.useState(hooksDefault.locale), 2);
   const tmp6 = closure_11;
   const tmp7 = callback3;
   obj2[1] = callback3(TableRowInner.TableRow.TrailingText, { text: getSystemLocale.intl.currentLocale });
@@ -161,15 +161,15 @@ export default function IntlTestingSettingsPage() {
   obj = { variant: "text-md/normal", children: null };
   const intl = _require(1236).intl;
   obj[1] = intl.format(messagesProxyDefault.HMvEC5, {});
-  items[2] = callback3(_require(4739).Text, obj);
+  items[2] = callback3(_require(4376).Text, obj);
   obj1 = { variant: "text-md/normal", children: null };
   const intl2 = _require(1236).intl;
   obj1[1] = intl2.format(messagesProxyDefault2.swfLzV, {});
-  items[3] = callback3(_require(4739).Text, obj1);
+  items[3] = callback3(_require(4376).Text, obj1);
   const obj2 = { variant: "text-md/normal", children: null };
   const intl3 = _require(1236).intl;
   obj2[1] = intl3.format(messagesProxyDefault.rmps8y, {});
-  items[4] = callback3(_require(4739).Text, obj2);
+  items[4] = callback3(_require(4376).Text, obj2);
   const obj3 = { variant: "text-md/normal", children: null };
   const intl4 = _require(1236).intl;
   obj3[1] = intl4.format(messagesProxyDefault.uczI4g, {
@@ -177,23 +177,23 @@ export default function IntlTestingSettingsPage() {
 
     }
   });
-  items[5] = callback3(_require(4739).Text, obj3);
+  items[5] = callback3(_require(4376).Text, obj3);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl5 = _require(1236).intl;
   obj5[1] = intl5.format(messagesProxyDefault.rdfRyh, {});
-  items[6] = callback3(_require(4739).Text, obj5);
+  items[6] = callback3(_require(4376).Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl6 = _require(1236).intl;
   obj6[1] = intl6.format(messagesProxyDefault.XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4739).Text, obj) };
+      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4376).Text, obj) };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
       return callback2(closure_6, obj);
     }
   });
-  items[7] = callback3(_require(4739).Text, obj6);
+  items[7] = callback3(_require(4376).Text, obj6);
   obj[2] = items;
-  obj[1] = callback4(_require(4738).Stack, obj);
+  obj[1] = callback4(_require(4813).Stack, obj);
   return callback3(closure_7, obj);
 };

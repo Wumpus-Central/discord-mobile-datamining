@@ -1,9 +1,9 @@
-// === Module 7314: subscribeMembers ===
+// === Module 6036: subscribeMembers ===
 
-// Module 7314 (subscribeMembers)
+// Module 6036 (subscribeMembers)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import reset from "reset" /* 7302 */;
+import reset from "reset" /* 6010 */;
 
 let result = set.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 

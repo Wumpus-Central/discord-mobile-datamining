@@ -1,6 +1,6 @@
-// === Module 6724: useIsAgeVerificationExpressiveModalEverywhereEnabled ===
+// === Module 8100: useIsAgeVerificationExpressiveModalEverywhereEnabled ===
 
-// Module 6724 (useIsAgeVerificationExpressiveModalEverywhereEnabled)
+// Module 8100 (useIsAgeVerificationExpressiveModalEverywhereEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

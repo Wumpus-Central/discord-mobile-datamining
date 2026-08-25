@@ -1,6 +1,6 @@
-// === Module 8815: getHostname ===
+// === Module 9082: getHostname ===
 
-// Module 8815 (getHostname)
+// Module 9082 (getHostname)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");

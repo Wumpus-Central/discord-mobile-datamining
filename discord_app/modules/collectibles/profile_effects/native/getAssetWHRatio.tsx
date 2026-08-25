@@ -1,6 +1,6 @@
-// === Module 9251: DEFAULT_PROFILE_EFFECT_WH_RATIO ===
+// === Module 9530: DEFAULT_PROFILE_EFFECT_WH_RATIO ===
 
-// Module 9251 (DEFAULT_PROFILE_EFFECT_WH_RATIO)
+// Module 9530 (DEFAULT_PROFILE_EFFECT_WH_RATIO)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/profile_effects/native/getAssetWHRatio.tsx");

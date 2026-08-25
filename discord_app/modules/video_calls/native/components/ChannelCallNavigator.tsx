@@ -1,17 +1,17 @@
-// === Module 12538: CallWithVoiceChat ===
+// === Module 10842: CallWithVoiceChat ===
 
-// Module 12538 (CallWithVoiceChat)
-import contextDefault from "context" /* 4259 */;
+// Module 10842 (CallWithVoiceChat)
+import contextDefault from "context" /* 4260 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "module_12539" /* 12539 */;
-import { ChannelCallScreens } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8707 */;
+import closure_8 from "module_10843" /* 10843 */;
+import { ChannelCallScreens } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9896 */;
 import { ComponentActions } from "ME" /* 676 */;
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_11 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8811 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_11 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 10706 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function CallWithVoiceChat(channel) {
@@ -22,13 +22,13 @@ function CallWithVoiceChat(channel) {
   let tmp = callback3();
   const result = 2 * translateX(1494)().width;
   _require = result;
-  let obj = _require(10049);
+  let obj = _require(9904);
   const voiceChatNavigationContext = obj.useVoiceChatNavigationContext();
   translateX = undefined;
   if (voiceChatNavigationContext != null) {
     translateX = voiceChatNavigationContext.translateX;
   }
-  let tmp5Result = tmp5(4119);
+  let tmp5Result = tmp5(4120);
   const fn = function o() {
     const obj = { width: c0, transform: null };
     let num;
@@ -46,9 +46,9 @@ function CallWithVoiceChat(channel) {
   fn.__workletHash = 4309613236072;
   fn.__initData = closure_15;
   const animatedStyle = tmp5Result.useAnimatedStyle(fn);
-  tmp5Result = tmp5(4119);
+  tmp5Result = tmp5(4120);
   const fn2 = function c() {
-    let obj = _undefined(4119);
+    let obj = _undefined(4120);
     let num;
     if (translateX != null) {
       num = translateX.get();
@@ -60,7 +60,7 @@ function CallWithVoiceChat(channel) {
     items = [-_undefined, 0];
     return obj;
   };
-  obj = { interpolate: tmp5(4119).interpolate, translateX, width: result };
+  obj = { interpolate: tmp5(4120).interpolate, translateX, width: result };
   fn2.__closure = obj;
   fn2.__workletHash = 1339801810447;
   fn2.__initData = closure_16;
@@ -93,15 +93,15 @@ function CallWithVoiceChat(channel) {
       tmp = arg0 !== arg1;
     }
     if (tmp) {
-      _undefined(4119).runOnJS(dependencyMap)(true);
-      const obj = _undefined(4119);
+      _undefined(4120).runOnJS(dependencyMap)(true);
+      const obj = _undefined(4120);
     }
   };
-  obj = { runOnJS: tmp5(4119).runOnJS, setShouldRenderChat: tmp12 };
+  obj = { runOnJS: tmp5(4120).runOnJS, setShouldRenderChat: tmp12 };
   fn4.__closure = obj;
   fn4.__workletHash = 661145094859;
   fn4.__initData = closure_18;
-  const animatedReaction = _require(4119).useAnimatedReaction(fn3, fn4);
+  const animatedReaction = _require(4120).useAnimatedReaction(fn3, fn4);
   obj1 = { style: items, children: null };
   items = [tmp.textInVoiceContainer, animatedStyle];
   const obj2 = { style: tmp.voiceContainer, children: null };
@@ -109,11 +109,11 @@ function CallWithVoiceChat(channel) {
   if (channel.isGuildStageVoice()) {
     const obj3 = { channel: null };
     obj3[0] = channel;
-    tmp16 = callback2(tmp2(12540), obj3);
+    tmp16 = callback2(tmp2(10844), obj3);
   }
   const items1 = [tmp16, ];
   const items2 = [animatedStyle1, StyleSheet.absoluteFill];
-  items1[1] = callback2(translateX(4119).View, { pointerEvents: "box-none", style: items2 });
+  items1[1] = callback2(translateX(4120).View, { pointerEvents: "box-none", style: items2 });
   obj2[1] = items1;
   const items3 = [closure_13(closure_6, obj2), ];
   const obj4 = { style: tmp.textContainer, children: null };
@@ -121,18 +121,18 @@ function CallWithVoiceChat(channel) {
   if (tmp11[0]) {
     const obj5 = { channel: null };
     obj5[0] = channel;
-    tmp18Result = tmp18(tmp2(10048), obj5);
+    tmp18Result = tmp18(tmp2(9894), obj5);
   }
   obj4[1] = tmp18Result;
   items3[1] = callback2(closure_6, obj4);
   obj1[1] = items3;
-  return closure_13(translateX(4119).View, obj1);
+  return closure_13(translateX(4120).View, obj1);
 }
 function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   let id;
-  let obj = isConnectedToVoiceChannel(8712);
+  let obj = isConnectedToVoiceChannel(9899);
   isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   id = React.useId();
   const items = [isConnectedToVoiceChannel, id];
@@ -144,7 +144,7 @@ function MainCallScreen(channel) {
       const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key: closure_1, lockEnabled: false });
     };
   }, items);
-  obj1 = isConnectedToVoiceChannel(5257);
+  obj1 = isConnectedToVoiceChannel(4619);
   const isChannelContentGated = obj1.useIsChannelContentGated(channel);
   const effect1 = React.useEffect(() => {
     function dismissOAuthModal() {
@@ -182,7 +182,7 @@ function MainCallScreen(channel) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -221,7 +221,7 @@ function MainCallScreen(channel) {
               } else {
                 c0 = true;
                 c3 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp7) {
               c3 = tmp;
@@ -252,14 +252,14 @@ function MainCallScreen(channel) {
       }
     };
   }, []);
-  isConnectedToVoiceChannel(12589);
+  isConnectedToVoiceChannel(10902);
   if (isChannelContentGated) {
     obj = { onReturnToSafety: null, guildId: null, channelId: null };
-    obj[0] = id(5265).pop;
+    obj[0] = id(4611).pop;
     ({ guild_id: obj6[1], id: obj6[2] } = channel);
-    let tmp14Result = callback2(id(11887), obj);
+    let tmp14Result = callback2(id(11045), obj);
     let tmp11 = callback2;
-    const tmp20 = id(11887);
+    const tmp20 = id(11045);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -275,7 +275,7 @@ function MainCallScreen(channel) {
     if (channel.isGuildStageVoice()) {
       let obj2 = { channel: null };
       obj2[0] = channel;
-      tmp14Result = tmp14(id(12540), obj2);
+      tmp14Result = tmp14(id(10844), obj2);
     }
     obj1[1] = tmp14Result;
     tmp14Result = tmp14(closure_6, obj1);
@@ -283,11 +283,11 @@ function MainCallScreen(channel) {
     const tmp15 = closure_6;
   }
   tmp = callback3();
-  const tmp21 = id(4229)();
-  const tmp22 = id(12552);
+  const tmp21 = id(4230)();
+  const tmp22 = id(10858);
   const tmp2Result = isConnectedToVoiceChannel(500);
   const tmp23 = isConnectedToVoiceChannel(500).isAndroid() || !isConnectedToVoiceChannel;
-  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(500).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4107).ThemeContextProvider, { gradient: tmp21, children: tmp14Result }) });
+  return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(500).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4108).ThemeContextProvider, { gradient: tmp21, children: tmp14Result }) });
 }
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -317,7 +317,7 @@ export default function ChannelCallNavigator(channel) {
   if (guild_id == null) {
     guild_id = null;
   }
-  obj = { value: guild_id, children: tmp2(channel(6343).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
+  obj = { value: guild_id, children: tmp2(channel(5889).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
   obj = {
     headerShown: false,
     ignoreKeyboard: true,

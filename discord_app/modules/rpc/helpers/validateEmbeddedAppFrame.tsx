@@ -1,14 +1,14 @@
-// === Module 13895: validateEmbeddedAppFrame ===
+// === Module 13930: validateEmbeddedAppFrame ===
 
-// Module 13895 (validateEmbeddedAppFrame)
-import getApplicationFlags from "getApplicationFlags" /* 7912 */;
-import prototypeDefault from "prototype" /* 8789 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8794 */;
-import closure_3 from "map" /* 8745 */;
-import closure_4 from "getBuilderPreviewApplicationId" /* 13896 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4281 */;
+// Module 13930 (validateEmbeddedAppFrame)
+import getApplicationFlags from "getApplicationFlags" /* 7733 */;
+import prototypeDefault from "prototype" /* 10824 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 10829 */;
+import closure_3 from "map" /* 10677 */;
+import closure_4 from "getBuilderPreviewApplicationId" /* 13931 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4282 */;
 import ME from "ME" /* 676 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 8746 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 10678 */;
 
 require = arg1;
 function validateEmbeddedAppFrame(transport) {
@@ -36,7 +36,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "Array", guildId: "ct" };
+              obj1 = { channelId: "isArray", guildId: "accessibilityRole" };
             } else {
               obj1 = null;
             }

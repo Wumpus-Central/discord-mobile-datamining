@@ -1,10 +1,10 @@
-// === Module 11670: ChatWarningIcon ===
+// === Module 12013: ChatWarningIcon ===
 
-// Module 11670 (ChatWarningIcon)
+// Module 12013 (ChatWarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8277 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8278 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

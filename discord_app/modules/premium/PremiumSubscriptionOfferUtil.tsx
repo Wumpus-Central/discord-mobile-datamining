@@ -1,17 +1,17 @@
-// === Module 8316: useHasDiscountApplied ===
+// === Module 8317: useHasDiscountApplied ===
 
-// Module 8316 (useHasDiscountApplied)
+// Module 8317 (useHasDiscountApplied)
 import initialize from "initialize" /* 589 */;
-import tDefault from "t" /* 3978 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7456 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7663 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 7664 */;
-import _fetchUserOffer from "_fetchUserOffer" /* 7915 */;
-import useHasActiveTrial from "useHasActiveTrial" /* 8317 */;
-import useIsInReverseTrial from "useIsInReverseTrial" /* 8318 */;
+import hooksDefault from "hooks" /* 3979 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7054 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7484 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 7485 */;
+import _fetchUserOffer from "_fetchUserOffer" /* 7736 */;
+import useHasActiveTrial from "useHasActiveTrial" /* 8318 */;
+import useIsInReverseTrial from "useIsInReverseTrial" /* 8319 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "reset" /* 4048 */;
+import closure_5 from "reset" /* 4049 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;
@@ -29,9 +29,9 @@ function useHasDiscountApplied() {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    const tmp6 = tDefault;
-    tmp4 = tDefault(Date.now()) <= tDefault(prop);
-    const tmp6Result = tDefault(Date.now());
+    const tmp6 = hooksDefault;
+    tmp4 = hooksDefault(Date.now()) <= hooksDefault(prop);
+    const tmp6Result = hooksDefault(Date.now());
   }
   return tmp4;
 }
@@ -62,9 +62,9 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
   let tmp9 = null != prop;
   if (tmp9) {
     const _Date = Date;
-    const tmp11 = tDefault;
-    tmp9 = tDefault(Date.now()) <= tDefault(prop);
-    const tmp11Result = tDefault(Date.now());
+    const tmp11 = hooksDefault;
+    tmp9 = hooksDefault(Date.now()) <= hooksDefault(prop);
+    const tmp11Result = hooksDefault(Date.now());
   }
   return null != premiumTrialOffer || hasActiveTrial || null != premiumDiscountOffer || null != premiumGroupDiscountOffer || tmp9;
 };
@@ -199,9 +199,9 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   let tmp7 = null != prop;
   if (tmp7) {
     const _Date = Date;
-    const tmp9 = tDefault;
-    tmp7 = tDefault(Date.now()) <= tDefault(prop);
-    const tmp9Result = tDefault(Date.now());
+    const tmp9 = hooksDefault;
+    tmp7 = hooksDefault(Date.now()) <= hooksDefault(prop);
+    const tmp9Result = hooksDefault(Date.now());
   }
   let tmp12 = null !== stateFromStores && stateFromStores.hasPremiumNitroMonthly && !tmp7;
   if (tmp12) {

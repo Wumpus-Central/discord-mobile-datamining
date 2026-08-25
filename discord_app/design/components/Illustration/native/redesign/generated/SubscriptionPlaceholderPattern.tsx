@@ -1,9 +1,9 @@
-// === Module 12989: getSubscriptionPlaceholderPatternSource ===
+// === Module 12977: getSubscriptionPlaceholderPatternSource ===
 
-// Module 12989 (getSubscriptionPlaceholderPatternSource)
+// Module 12977 (getSubscriptionPlaceholderPatternSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import getIllustrationSource from "getIllustrationSource" /* 7946 */;
+import getIllustrationSource from "getIllustrationSource" /* 7767 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -15,13 +15,13 @@ export const getSubscriptionPlaceholderPatternSource = function getSubscriptionP
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(12990);
+      return callback(12978);
     },
     darker() {
-      return callback(12991);
+      return callback(12979);
     },
     light() {
-      return callback(12992);
+      return callback(12980);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -30,13 +30,13 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12990);
+      return callback(12978);
     },
     darker() {
-      return callback(12991);
+      return callback(12979);
     },
     light() {
-      return callback(12992);
+      return callback(12980);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -45,13 +45,13 @@ export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPa
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(12990);
+      return callback(12978);
     },
     darker() {
-      return callback(12991);
+      return callback(12979);
     },
     light() {
-      return callback(12992);
+      return callback(12980);
     }
   };
   obj = {};

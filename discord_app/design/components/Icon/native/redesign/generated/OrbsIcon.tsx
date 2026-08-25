@@ -1,10 +1,10 @@
-// === Module 9275: OrbsIcon ===
+// === Module 9554: OrbsIcon ===
 
-// Module 9275 (OrbsIcon)
+// Module 9554 (OrbsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9276 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 9555 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

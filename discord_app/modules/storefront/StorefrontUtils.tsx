@@ -1,13 +1,13 @@
-// === Module 7243: useSKUPrice ===
+// === Module 5959: useSKUPrice ===
 
-// Module 7243 (useSKUPrice)
+// Module 5959 (useSKUPrice)
 import applyDefault from "apply" /* 12 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
-import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 7245 */;
+import StorefrontPromotionRewardType from "StorefrontPromotionRewardType" /* 5961 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5962 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "_getSystemLocale" /* 1995 */;
+import closure_4 from "_getSystemLocale" /* 1996 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "resetStoreState" /* 7244 */;
+import closure_6 from "resetStoreState" /* 5960 */;
 import ME from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
@@ -81,7 +81,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
+    obj = { userPrice: "r", pricesForPurchaseType: "disabled", purchaseType: "", storeHasPrice: "" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -377,7 +377,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "isArray", purchaseType: "exhalar", storeHasPrice: "inhalar" };
+    obj = { userPrice: "r", pricesForPurchaseType: "disabled", purchaseType: "", storeHasPrice: "" };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

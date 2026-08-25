@@ -1,11 +1,11 @@
-// === Module 10454: CircleQuestionIcon ===
+// === Module 10309: CircleQuestionIcon ===
 
-// Module 10454 (CircleQuestionIcon)
+// Module 10309 (CircleQuestionIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 10455 */;
-import registerAsset2 from "registerAsset" /* 10456 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 10310 */;
+import registerAsset2 from "registerAsset" /* 10311 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

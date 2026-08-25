@@ -1,22 +1,22 @@
-// === Module 15910: ProjectList ===
+// === Module 15942: ProjectList ===
 
-// Module 15910 (ProjectList)
+// Module 15942 (ProjectList)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_11 from "newMessage" /* 15911 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 15914 */;
-import closure_15 from "rejectPendingPublish" /* 15914 */;
-import closure_16 from "isProjectOwner" /* 15912 */;
-import { isProjectOwner } from "isProjectOwner" /* 15912 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_11 from "newMessage" /* 15943 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 15946 */;
+import closure_15 from "rejectPendingPublish" /* 15946 */;
+import closure_16 from "isProjectOwner" /* 15944 */;
+import { isProjectOwner } from "isProjectOwner" /* 15944 */;
 import { Permissions } from "ME" /* 676 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 8746 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 10678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function ProjectList(guildId) {
@@ -103,7 +103,7 @@ function ProjectList(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -438,7 +438,7 @@ function ChatScene(guildId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -665,12 +665,12 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: callback(9452).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: callback(8751).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = callback(1236).intl;
             obj[3] = intl.string(callback(1236).t["UKOtz+"]);
             obj[4] = accessibilityActions;
             obj[5] = onAccessibilityAction;
-            return callback2(callback(5437).HeaderActionButton, obj);
+            return callback2(callback(6117).HeaderActionButton, obj);
           }
         };
         items[1] = closure_1_20(stringResult(closure_1_2[42]).ContextMenu, obj);

@@ -1,19 +1,19 @@
-// === Module 16595: CaptchaModal ===
+// === Module 16627: CaptchaModal ===
 
-// Module 16595 (CaptchaModal)
+// Module 16627 (CaptchaModal)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
-import Stack from "Stack" /* 4738 */;
-import Text from "Text" /* 4739 */;
-import Button from "Button" /* 4750 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5452 */;
-import Background from "Background" /* 6988 */;
+import Text from "Text" /* 4376 */;
+import Stack from "Stack" /* 4813 */;
+import Button from "Button" /* 4815 */;
+import Background from "Background" /* 5503 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 6136 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15276 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15277 */;
+import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15306 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15307 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 ({ Keyboard: c4, View: c5 } = get_ActivityIndicator);
@@ -33,7 +33,7 @@ export default function CaptchaModal(arg0) {
   ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let navigation;
   let callback;
-  const tmp2 = callback2(onReject(8621)());
+  const tmp2 = callback2(onReject(8629)());
   let obj = createStandardNavigationFactories;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -55,7 +55,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16596)({ onReject, analyticsType: memo });
+  callback = onReject(16628)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

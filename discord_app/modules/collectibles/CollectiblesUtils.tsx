@@ -1,19 +1,19 @@
-// === Module 5318: getItemRecordsFromPurchases ===
+// === Module 7160: getItemRecordsFromPurchases ===
 
-// Module 5318 (getItemRecordsFromPurchases)
+// Module 7160 (getItemRecordsFromPurchases)
 import set from "set" /* 2 */;
 import apply from "apply" /* 12 */;
 import set2 from "set" /* 500 */;
 import sum from "sum" /* 505 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1938 */;
-import fromServer from "fromServer" /* 1947 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4042 */;
-import fromServer2 from "fromServer" /* 5311 */;
-import fromServer3 from "fromServer" /* 5312 */;
-import fromServer4 from "fromServer" /* 5313 */;
-import fromServer5 from "fromServer" /* 5319 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5321 */;
+import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1942 */;
+import fromServer from "fromServer" /* 1948 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4043 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5962 */;
+import fromServer2 from "fromServer" /* 7153 */;
+import fromServer3 from "fromServer" /* 7154 */;
+import fromServer4 from "fromServer" /* 7155 */;
+import fromServer5 from "fromServer" /* 7161 */;
 import items from "items" /* 678 */;
 import ME from "ME" /* 676 */;
 
@@ -25,21 +25,21 @@ function getItemRecordsFromPurchases(arr, PROFILE_EFFECT) {
     const found = tmpResult.flatMap(items, "items").filter(isAvatarDecorationRecord);
     tmpResult = tmp(12);
     return tmpResult.uniqBy(found, "skuId");
-  } else if (PROFILE_EFFECT === tmp(1949).CollectiblesItemType.NAMEPLATE) {
+  } else if (PROFILE_EFFECT === tmp(1950).CollectiblesItemType.NAMEPLATE) {
     const items1 = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
     const tmpResult1 = tmp(12);
     const found1 = tmp(12).flatMap(items1, "items").filter(isNameplateRecord);
     const flatMapResult1 = tmp(12).flatMap(items1, "items");
     return tmp(12).uniqBy(found1, "skuId");
-  } else if (PROFILE_EFFECT === tmp(1949).CollectiblesItemType.PROFILE_EFFECT) {
+  } else if (PROFILE_EFFECT === tmp(1950).CollectiblesItemType.PROFILE_EFFECT) {
     const items2 = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
     const tmpResult3 = tmp(12);
     const found2 = tmp(12).flatMap(items2, "items").filter(isProfileEffectRecord);
     const flatMapResult2 = tmp(12).flatMap(items2, "items");
     return tmp(12).uniqBy(found2, "skuId");
-  } else if (PROFILE_EFFECT === tmp(1949).CollectiblesItemType.PROFILE_FRAME) {
+  } else if (PROFILE_EFFECT === tmp(1950).CollectiblesItemType.PROFILE_FRAME) {
     const items3 = [];
     HermesBuiltin.arraySpread(arr.values(), 0);
     const tmpResult5 = tmp(12);
@@ -81,17 +81,17 @@ function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
     const found = tmpResult.flatMap(uniqByResult, "items").filter(isAvatarDecorationRecord);
     tmpResult = tmp(12);
     return tmpResult.uniqBy(found, "skuId");
-  } else if (PROFILE_EFFECT === tmp(1949).CollectiblesItemType.NAMEPLATE) {
+  } else if (PROFILE_EFFECT === tmp(1950).CollectiblesItemType.NAMEPLATE) {
     const tmpResult1 = tmp(12);
     const found1 = tmp(12).flatMap(uniqByResult, "items").filter(isNameplateRecord);
     const flatMapResult2 = tmp(12).flatMap(uniqByResult, "items");
     return tmp(12).uniqBy(found1, "skuId");
-  } else if (PROFILE_EFFECT === tmp(1949).CollectiblesItemType.PROFILE_EFFECT) {
+  } else if (PROFILE_EFFECT === tmp(1950).CollectiblesItemType.PROFILE_EFFECT) {
     const tmpResult3 = tmp(12);
     const found2 = tmp(12).flatMap(uniqByResult, "items").filter(isProfileEffectRecord);
     const flatMapResult3 = tmp(12).flatMap(uniqByResult, "items");
     return tmp(12).uniqBy(found2, "skuId");
-  } else if (PROFILE_EFFECT === tmp(1949).CollectiblesItemType.PROFILE_FRAME) {
+  } else if (PROFILE_EFFECT === tmp(1950).CollectiblesItemType.PROFILE_FRAME) {
     const tmpResult5 = tmp(12);
     const found3 = tmp(12).flatMap(uniqByResult, "items").filter(isProfileFrameRecord);
     const flatMapResult4 = tmp(12).flatMap(uniqByResult, "items");
@@ -134,10 +134,10 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1940).Perk.SHOP_DISCOUNTS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1938).Perk.SHOP_DISCOUNTS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1940).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(tmp4(1938).PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -146,14 +146,14 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
         if (tmp4Result.getIsCrepeEnabled("getShopDiscountSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(tmp4(1938).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.THIRDPARTY;
           }
         }
-        tmp4Result = tmp4(5320);
+        tmp4Result = tmp4(7162);
       }
       return NITRO;
     }
@@ -450,7 +450,7 @@ export const getCollectiblesProductPriceComparisons = function getCollectiblesPr
       type = type.type;
     }
     let tmp12 = tmp4;
-    if (type === _require(1949).CollectiblesItemType.BUNDLE) {
+    if (type === _require(1950).CollectiblesItemType.BUNDLE) {
       tmp12 = tmp4;
       if (hasShopDiscount) {
         obj = {};
@@ -561,13 +561,13 @@ export const getCollectibleTypeLabel = function getCollectibleTypeLabel(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t["7v0T9P"]);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t.wR5wOo);
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (tmp(1950).CollectiblesItemType.NAMEPLATE === type) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t.x5CoXR);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t.GWrZOd);
   } else {
@@ -612,12 +612,12 @@ export const getProfileEffects = function getProfileEffects(stateFromStores, fir
   return apply.uniqBy(items, "skuId");
 };
 export const groupProfileEffects = function groupProfileEffects(arr, arr) {
-  const tmp = getItemRecordsFromPurchases(arr, _require(1949).CollectiblesItemType.PROFILE_EFFECT);
+  const tmp = getItemRecordsFromPurchases(arr, _require(1950).CollectiblesItemType.PROFILE_EFFECT);
   _require = tmp;
-  arr = getItemRecordsFromCategories(arr, _require(1949).CollectiblesItemType.PROFILE_EFFECT);
+  arr = getItemRecordsFromCategories(arr, _require(1950).CollectiblesItemType.PROFILE_EFFECT);
   return {
     purchased: tmp,
-    shopPreviews: getItemRecordsFromCategories(arr, _require(1949).CollectiblesItemType.PROFILE_EFFECT).filter((skuId) => {
+    shopPreviews: getItemRecordsFromCategories(arr, _require(1950).CollectiblesItemType.PROFILE_EFFECT).filter((skuId) => {
       skuId = skuId.skuId;
       return !skuId.some((skuId) => skuId.skuId === skuId);
     })
@@ -829,15 +829,15 @@ export const canActionOnProduct = function canActionOnProduct(arg0) {
 export const getProductTypeNameForLogging = function getProductTypeNameForLogging(arg0, arg1) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === arg0) {
     return "avatar decoration";
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === arg0) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === arg0) {
     return "profile effect";
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === arg0) {
+  } else if (tmp(1950).CollectiblesItemType.NAMEPLATE === arg0) {
     return "nameplate";
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === arg0) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === arg0) {
     return "profile frame";
-  } else if (tmp(1949).CollectiblesItemType.BUNDLE === arg0) {
+  } else if (tmp(1950).CollectiblesItemType.BUNDLE === arg0) {
     return "bundle";
-  } else if (tmp(1949).CollectiblesItemType.EXTERNAL_SKU === arg0) {
+  } else if (tmp(1950).CollectiblesItemType.EXTERNAL_SKU === arg0) {
     let str3 = "3-day nitro credit";
     if (arg1 !== constants.FRACTIONAL_PREMIUM) {
       let str4 = "1-day nitro credit";
@@ -851,7 +851,7 @@ export const getProductTypeNameForLogging = function getProductTypeNameForLoggin
       str3 = str4;
     }
     return str3;
-  } else if (tmp(1949).CollectiblesItemType.VARIANTS_GROUP === arg0) {
+  } else if (tmp(1950).CollectiblesItemType.VARIANTS_GROUP === arg0) {
     return "variants group";
   } else {
     return "unknown";

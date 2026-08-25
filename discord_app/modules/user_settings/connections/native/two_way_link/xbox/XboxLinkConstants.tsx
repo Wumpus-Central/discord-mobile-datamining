@@ -1,6 +1,6 @@
-// === Module 9791: XboxLinkModalScenes ===
+// === Module 10568: XboxLinkModalScenes ===
 
-// Module 9791 (XboxLinkModalScenes)
+// Module 10568 (XboxLinkModalScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkConstants.tsx");

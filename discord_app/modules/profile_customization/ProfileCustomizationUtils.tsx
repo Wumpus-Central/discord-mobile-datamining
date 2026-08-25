@@ -1,13 +1,13 @@
-// === Module 8415: useAvatarsWithGuilds ===
+// === Module 8423: useAvatarsWithGuilds ===
 
-// Module 8415 (useAvatarsWithGuilds)
+// Module 8423 (useAvatarsWithGuilds)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer4 from "AccessibilityAnnouncer" /* 1363 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleFormOpen" /* 8409 */;
-import closure_4 from "createUserWidgetFromServer" /* 5370 */;
-import closure_5 from "trackCommunicationDisabled" /* 1991 */;
+import closure_3 from "handleFormOpen" /* 8417 */;
+import closure_4 from "createUserWidgetFromServer" /* 7227 */;
+import closure_5 from "trackCommunicationDisabled" /* 1992 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/profile_customization/ProfileCustomizationUtils.tsx");

@@ -1,19 +1,19 @@
-// === Module 15425: getFriendInviteCode ===
+// === Module 15455: getFriendInviteCode ===
 
-// Module 15425 (getFriendInviteCode)
+// Module 15455 (getFriendInviteCode)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import PressableBase from "PressableBase" /* 5438 */;
-import ButtonBadgeDefault from "ButtonBadge" /* 12752 */;
-import registerAssetDefault from "registerAsset" /* 13372 */;
-import registerAssetDefault2 from "registerAsset" /* 15426 */;
+import Text from "Text" /* 4376 */;
+import PressableBase from "PressableBase" /* 4949 */;
+import ButtonBadgeDefault from "ButtonBadge" /* 12741 */;
+import registerAssetDefault from "registerAsset" /* 13407 */;
+import registerAssetDefault2 from "registerAsset" /* 15456 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { InstantInviteSources } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function getFriendInviteCode() {
@@ -40,7 +40,7 @@ function _getFriendInviteCode() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -67,7 +67,7 @@ function _getFriendInviteCode() {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj2 = code(4096);
+          let obj2 = code(4097);
           const intl = code(1236).intl;
           obj2.presentError(intl.string(code(1236).t.R0RpRX));
           c5 = 3;
@@ -135,7 +135,7 @@ function _handleShare() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -169,13 +169,13 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(8955);
+          const obj5 = callback(9212);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7544)(callback);
+          obj2[0] = callback2(7362)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp7) {
         c3 = tmp;
@@ -216,7 +216,7 @@ function _handleLink() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -253,7 +253,7 @@ function _handleLink() {
           obj = callback(table[11]);
           obj.handleCopy(callback, null, constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp15) {
         c3 = tmp;

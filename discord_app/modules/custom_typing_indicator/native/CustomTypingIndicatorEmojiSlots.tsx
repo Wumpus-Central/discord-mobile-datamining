@@ -1,17 +1,17 @@
-// === Module 14777: EmojiGlyph ===
+// === Module 14807: EmojiGlyph ===
 
-// Module 14777 (EmojiGlyph)
+// Module 14807 (EmojiGlyph)
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import _modDef4119 from "module_4119" /* 4119 */;
-import Stack from "Stack" /* 4738 */;
-import EmojiDefault from "Emoji" /* 6968 */;
-import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "CUSTOM_TYPING_INDICATOR_EMOJI_COUNT" /* 11197 */;
-import items3 from "items" /* 11199 */;
+import CUSTOM_TYPING_INDICATOR_EMOJI_COUNT from "CUSTOM_TYPING_INDICATOR_EMOJI_COUNT" /* 1937 */;
+import _modDef4120 from "module_4120" /* 4120 */;
+import Stack from "Stack" /* 4813 */;
+import EmojiDefault from "Emoji" /* 5466 */;
+import items3 from "items" /* 11539 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function EmojiGlyph(emoji) {
@@ -35,7 +35,7 @@ function EmojiGlyph(emoji) {
 }
 function PlaceholderEmojiGlyph(emoji) {
   const pressed = emoji.pressed;
-  let obj = pressed(4119);
+  let obj = pressed(4120);
   const fn = function o() {
     const value = pressed.get();
     let obj = { opacity: null, transform: null };
@@ -51,13 +51,13 @@ function PlaceholderEmojiGlyph(emoji) {
     obj[1] = items;
     return obj;
   };
-  obj = { pressed, withSpring: pressed(4749).withSpring, interpolate: pressed(4119).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4753).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  obj = { pressed, withSpring: pressed(4814).withSpring, interpolate: pressed(4120).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4818).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
   fn.__closure = obj;
   fn.__workletHash = 16574219123934;
   fn.__initData = closure_9;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> };
-  return jsx(_modDef4119.View, { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> });
+  return jsx(_modDef4120.View, { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> });
 }
 function CustomTypingIndicatorEmojiSlot(index) {
   index = index.index;
@@ -88,7 +88,8 @@ function CustomTypingIndicatorEmojiSlot(index) {
           str2 = "";
         }
       },
-      pickerIntention: closure_1_5.TYPING_INDICATOR
+      pickerIntention: closure_1_5.TYPING_INDICATOR,
+      bypassPremiumEmojiEntitlement: true
     };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);

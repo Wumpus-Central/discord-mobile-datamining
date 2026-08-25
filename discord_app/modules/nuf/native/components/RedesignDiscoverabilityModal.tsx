@@ -1,13 +1,13 @@
-// === Module 16760: DiscoverabilityLandingScene ===
+// === Module 16792: DiscoverabilityLandingScene ===
 
-// Module 16760 (DiscoverabilityLandingScene)
+// Module 16792 (DiscoverabilityLandingScene)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useContactSyncModalStore } from "ContactSyncModes" /* 11899 */;
+import { useContactSyncModalStore } from "ContactSyncModes" /* 12233 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function DiscoverabilityLandingScene(onComplete) {
@@ -81,7 +81,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj[2] = name;
-  obj[1] = jsx(allowPhone(11919), { onNext: callback, loading: false, initialName: null });
+  obj[1] = jsx(allowPhone(12253), { onNext: callback, loading: false, initialName: null });
   return <tmp6 onNext={callback} loading={false} initialName={null} />;
 }
 class RedesignDiscoverabilityModal {

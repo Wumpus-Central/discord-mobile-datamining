@@ -1,6 +1,6 @@
-// === Module 8944: createStageChannelForEvent ===
+// === Module 9201: createStageChannelForEvent ===
 
-// Module 8944 (createStageChannelForEvent)
+// Module 9201 (createStageChannelForEvent)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
@@ -39,7 +39,7 @@ function _createStageChannelForEvent() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -165,7 +165,7 @@ function _preStartEventActions() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -239,7 +239,7 @@ function _setEventAsActive() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -340,7 +340,7 @@ function _setEventAsActive() {
               return obj;
             }
             id = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp41) {
           id = tmp;

@@ -1,9 +1,9 @@
-// === Module 7498: progressFromServer ===
+// === Module 7312: progressFromServer ===
 
-// Module 7498 (progressFromServer)
-import t from "t" /* 4490 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7496 */;
-import questFromServerV2 from "questFromServerV2" /* 7499 */;
+// Module 7312 (progressFromServer)
+import t from "t" /* 4593 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7310 */;
+import questFromServerV2 from "questFromServerV2" /* 7313 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;
@@ -58,7 +58,7 @@ function _questsEntitlementFromServer(skuId) {
       obj[0] = obj1;
       obj[0] = obj;
       tmp2 = obj;
-    } else if (tmp3(7496).QuestRewardTypes.REWARD_CODE === tag) {
+    } else if (tmp3(7310).QuestRewardTypes.REWARD_CODE === tag) {
       const obj2 = { tag: null, rewardCode: null };
       obj2[0] = quest_rewards.reward.tag;
       const obj3 = { userId: null, questId: null, code: null, platform: null, claimedAt: null, tier: null };

@@ -1,13 +1,13 @@
-// === Module 8387: calculateTimestampDurations ===
+// === Module 8393: calculateTimestampDurations ===
 
-// Module 8387 (calculateTimestampDurations)
+// Module 8393 (calculateTimestampDurations)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import _mod3621 from "module_3621" /* 3621 */;
-import tDefault from "t" /* 3978 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8383 */;
+import _mod3622 from "module_3622" /* 3622 */;
+import hooksDefault from "hooks" /* 3979 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8389 */;
 
 function calculateTimestampDurations(end, now) {
   const bound = Math.max(end - now, 0);
@@ -98,8 +98,8 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = tDefault(timestamp);
-  const tmp3 = tDefault;
+  const obj2 = hooksDefault(timestamp);
+  const tmp3 = hooksDefault;
   const diffResult = obj2.diff(tmp3(DISCORD_EPOCHDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < setDefault.Seconds.MINUTE) {
@@ -263,7 +263,7 @@ export const formatEntryTimestamp = function formatEntryTimestamp(contentInvento
   if (arg3 === undefined) {
     obj = {};
   }
-  IS_LIVE = IS_LIVE(8388).ContentInventoryTraitType.IS_LIVE;
+  IS_LIVE = IS_LIVE(8394).ContentInventoryTraitType.IS_LIVE;
   const traits = contentInventoryEntry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let flag;
@@ -286,7 +286,7 @@ export const getTrait = function getTrait(contentInventoryEntry, AGGREGATE_COUNT
   return traits.find((type) => type.type === TRENDING_CONTENT);
 };
 export const isEntryActive = function isEntryActive(entry) {
-  IS_LIVE = IS_LIVE(8388).ContentInventoryTraitType.IS_LIVE;
+  IS_LIVE = IS_LIVE(8394).ContentInventoryTraitType.IS_LIVE;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let flag;
@@ -299,7 +299,7 @@ export const isEntryActive = function isEntryActive(entry) {
   return flag;
 };
 export const isEntryNew = function isEntryNew(entry) {
-  FIRST_TIME = FIRST_TIME(8388).ContentInventoryTraitType.FIRST_TIME;
+  FIRST_TIME = FIRST_TIME(8394).ContentInventoryTraitType.FIRST_TIME;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let flag;
@@ -327,7 +327,7 @@ export const isEntryExpired = function isEntryExpired(content) {
   return tmp;
 };
 export const isEntryLive = function isEntryLive(traits) {
-  IS_LIVE = IS_LIVE(8388).ContentInventoryTraitType.IS_LIVE;
+  IS_LIVE = IS_LIVE(8394).ContentInventoryTraitType.IS_LIVE;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let flag;
@@ -351,7 +351,7 @@ export const isEntryLive = function isEntryLive(traits) {
   return flag;
 };
 export const getEntryDuration = function getEntryDuration(contentInventoryEntry) {
-  DURATION_SECONDS = DURATION_SECONDS(8388).ContentInventoryTraitType.DURATION_SECONDS;
+  DURATION_SECONDS = DURATION_SECONDS(8394).ContentInventoryTraitType.DURATION_SECONDS;
   const traits = contentInventoryEntry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let duration_seconds;
@@ -361,7 +361,7 @@ export const getEntryDuration = function getEntryDuration(contentInventoryEntry)
   return duration_seconds;
 };
 export const getAggregateRange = function getAggregateRange(traits) {
-  AGGREGATE_RANGE = AGGREGATE_RANGE(8388).ContentInventoryTraitType.AGGREGATE_RANGE;
+  AGGREGATE_RANGE = AGGREGATE_RANGE(8394).ContentInventoryTraitType.AGGREGATE_RANGE;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let range;
@@ -371,7 +371,7 @@ export const getAggregateRange = function getAggregateRange(traits) {
   return range;
 };
 export const isEntryMarathon = function isEntryMarathon(entry) {
-  MARATHON = MARATHON(8388).ContentInventoryTraitType.MARATHON;
+  MARATHON = MARATHON(8394).ContentInventoryTraitType.MARATHON;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let marathon;
@@ -381,7 +381,7 @@ export const isEntryMarathon = function isEntryMarathon(entry) {
   return marathon;
 };
 export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastPlayTime(entry) {
-  RESURRECTED = RESURRECTED(8388).ContentInventoryTraitType.RESURRECTED;
+  RESURRECTED = RESURRECTED(8394).ContentInventoryTraitType.RESURRECTED;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let prop;
@@ -396,7 +396,7 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
   return date;
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
-  let obj = _mod3621;
+  let obj = _mod3622;
   obj = { start, end: new Date() };
   const intervalToDurationResult = obj.intervalToDuration(obj);
   const months = intervalToDurationResult.months;
@@ -517,7 +517,7 @@ export const isEntryTopGame = function isEntryTopGame(contentInventoryEntry) {
   return contentInventoryEntry.content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
 };
 export const getStreakCount = function getStreakCount(entry) {
-  STREAK_DAYS = STREAK_DAYS(8388).ContentInventoryTraitType.STREAK_DAYS;
+  STREAK_DAYS = STREAK_DAYS(8394).ContentInventoryTraitType.STREAK_DAYS;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let streak_count_days;
@@ -527,7 +527,7 @@ export const getStreakCount = function getStreakCount(entry) {
   return streak_count_days;
 };
 export const isValidStreak = function isValidStreak(traits) {
-  STREAK_DAYS = STREAK_DAYS(8388).ContentInventoryTraitType.STREAK_DAYS;
+  STREAK_DAYS = STREAK_DAYS(8394).ContentInventoryTraitType.STREAK_DAYS;
   traits = traits.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let streak_count_days;
@@ -546,7 +546,7 @@ export const isValidStreak = function isValidStreak(traits) {
   }
 };
 export const getMarathonDescription = function getMarathonDescription(entry) {
-  DURATION_SECONDS = DURATION_SECONDS(8388).ContentInventoryTraitType.DURATION_SECONDS;
+  DURATION_SECONDS = DURATION_SECONDS(8394).ContentInventoryTraitType.DURATION_SECONDS;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let duration_seconds;
@@ -579,7 +579,7 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
   }
 };
 export const getTrendingType = function getTrendingType(entry) {
-  TRENDING_CONTENT = TRENDING_CONTENT(8388).ContentInventoryTraitType.TRENDING_CONTENT;
+  TRENDING_CONTENT = TRENDING_CONTENT(8394).ContentInventoryTraitType.TRENDING_CONTENT;
   const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let trending;

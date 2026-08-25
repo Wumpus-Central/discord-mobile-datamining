@@ -1,85 +1,85 @@
-// === Module 6773: emojiTermsImporter ===
+// === Module 5292: emojiTermsImporter ===
 
-// Module 6773 (emojiTermsImporter)
+// Module 5292 (emojiTermsImporter)
 import set from "set" /* 2 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2008 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2009 */;
 
 const result = set.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {
   bg() {
-    return asyncRequireImpl(6774, dependencyMap.paths);
+    return asyncRequireImpl(5293, dependencyMap.paths);
   },
   cs() {
-    return asyncRequireImpl(6775, dependencyMap.paths);
+    return asyncRequireImpl(5294, dependencyMap.paths);
   },
   da() {
-    return asyncRequireImpl(6776, dependencyMap.paths);
+    return asyncRequireImpl(5295, dependencyMap.paths);
   },
   de() {
-    return asyncRequireImpl(6777, dependencyMap.paths);
+    return asyncRequireImpl(5296, dependencyMap.paths);
   },
   el() {
-    return asyncRequireImpl(6778, dependencyMap.paths);
+    return asyncRequireImpl(5297, dependencyMap.paths);
   },
-  () => asyncRequireImpl(6779, dependencyMap.paths),
-  () => asyncRequireImpl(6780, dependencyMap.paths),
-  () => asyncRequireImpl(6781, dependencyMap.paths),
+  () => asyncRequireImpl(5298, dependencyMap.paths),
+  () => asyncRequireImpl(5299, dependencyMap.paths),
+  () => asyncRequireImpl(5300, dependencyMap.paths),
   fi() {
-    return asyncRequireImpl(6782, dependencyMap.paths);
+    return asyncRequireImpl(5301, dependencyMap.paths);
   },
   fr() {
-    return asyncRequireImpl(6783, dependencyMap.paths);
+    return asyncRequireImpl(5302, dependencyMap.paths);
   },
   hr() {
-    return asyncRequireImpl(6784, dependencyMap.paths);
+    return asyncRequireImpl(5303, dependencyMap.paths);
   },
   hu() {
-    return asyncRequireImpl(6785, dependencyMap.paths);
+    return asyncRequireImpl(5304, dependencyMap.paths);
   },
   it() {
-    return asyncRequireImpl(6786, dependencyMap.paths);
+    return asyncRequireImpl(5305, dependencyMap.paths);
   },
   ja() {
-    return asyncRequireImpl(6787, dependencyMap.paths);
+    return asyncRequireImpl(5306, dependencyMap.paths);
   },
   ko() {
-    return asyncRequireImpl(6788, dependencyMap.paths);
+    return asyncRequireImpl(5307, dependencyMap.paths);
   },
   lt() {
-    return asyncRequireImpl(6789, dependencyMap.paths);
+    return asyncRequireImpl(5308, dependencyMap.paths);
   },
   nl() {
-    return asyncRequireImpl(6790, dependencyMap.paths);
+    return asyncRequireImpl(5309, dependencyMap.paths);
   },
   no() {
-    return asyncRequireImpl(6791, dependencyMap.paths);
+    return asyncRequireImpl(5310, dependencyMap.paths);
   },
   pl() {
-    return asyncRequireImpl(6792, dependencyMap.paths);
+    return asyncRequireImpl(5311, dependencyMap.paths);
   },
-  () => asyncRequireImpl(6793, dependencyMap.paths),
+  () => asyncRequireImpl(5312, dependencyMap.paths),
   ro() {
-    return asyncRequireImpl(6794, dependencyMap.paths);
+    return asyncRequireImpl(5313, dependencyMap.paths);
   },
   ru() {
-    return asyncRequireImpl(6795, dependencyMap.paths);
+    return asyncRequireImpl(5314, dependencyMap.paths);
   },
-  () => asyncRequireImpl(6796, dependencyMap.paths),
+  () => asyncRequireImpl(5315, dependencyMap.paths),
   th() {
-    return asyncRequireImpl(6797, dependencyMap.paths);
+    return asyncRequireImpl(5316, dependencyMap.paths);
   },
   tr() {
-    return asyncRequireImpl(6798, dependencyMap.paths);
+    return asyncRequireImpl(5317, dependencyMap.paths);
   },
   uk() {
-    return asyncRequireImpl(6799, dependencyMap.paths);
+    return asyncRequireImpl(5318, dependencyMap.paths);
   },
   vi() {
-    return asyncRequireImpl(6800, dependencyMap.paths);
+    return asyncRequireImpl(5319, dependencyMap.paths);
   },
-  () => asyncRequireImpl(6801, dependencyMap.paths),
+  () => asyncRequireImpl(5320, dependencyMap.paths),
   hi() {
-    return asyncRequireImpl(6802, dependencyMap.paths);
+    return asyncRequireImpl(5321, dependencyMap.paths);
   }
 };

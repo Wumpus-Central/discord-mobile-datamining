@@ -1,15 +1,15 @@
-// === Module 10786: optIntoAllChannelsForExistingMember ===
+// === Module 11115: optIntoAllChannelsForExistingMember ===
 
-// Module 10786 (optIntoAllChannelsForExistingMember)
+// Module 11115 (optIntoAllChannelsForExistingMember)
 import create from "create" /* 1306 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 5287 */;
+import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7141 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
-import comparator from "comparator" /* 1981 */;
-import closure_6 from "comparator" /* 1981 */;
-import closure_7 from "trackCommunicationDisabled" /* 1991 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5048 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4012 */;
+import comparator from "comparator" /* 1982 */;
+import closure_6 from "comparator" /* 1982 */;
+import closure_7 from "trackCommunicationDisabled" /* 1992 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4589 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4013 */;
 
 require = arg1;
 function optIntoAllChannelsForExistingMember(id, arg1) {
@@ -41,7 +41,7 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   });
   mapped = found.map((channel) => channel.channel.id);
   const item = include.forEach((arg0) => mapped.push(arg0));
-  const obj2 = mapped(6828);
+  const obj2 = mapped(5353);
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c4, GUILD_VOCAL_CHANNELS_KEY: c5 } = comparator);
@@ -93,10 +93,10 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
   if (tmp7) {
     optIntoAllChannelsForExistingMember(id);
   } else {
-    tmpResult = tmp(5287);
+    tmpResult = tmp(7141);
     const result1 = tmpResult.isOptInEnabledForGuild(id);
-    tmp(6831).setGuildOptIn(id, !result1);
-    const tmpResult1 = tmp(6831);
+    tmp(5362).setGuildOptIn(id, !result1);
+    const tmpResult1 = tmp(5362);
   }
 };
 export { optIntoAllChannelsForExistingMember };

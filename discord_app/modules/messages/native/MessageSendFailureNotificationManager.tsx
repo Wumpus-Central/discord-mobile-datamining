@@ -1,17 +1,17 @@
-// === Module 17130: handleMessageSendFailure ===
+// === Module 17162: handleMessageSendFailure ===
 
-// Module 17130 (handleMessageSendFailure)
+// Module 17162 (handleMessageSendFailure)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import initializeDefault from "initialize" /* 5043 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10068 */;
-import dispatcherDefault from "dispatcher" /* 10070 */;
-import NativeModulesDefault from "NativeModules" /* 11628 */;
-import closure_3 from "handleConnectionOpen" /* 1980 */;
-import closure_4 from "handleConnectionOpen" /* 4201 */;
+import initializeDefault from "initialize" /* 5367 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 9924 */;
+import dispatcherDefault from "dispatcher" /* 9926 */;
+import NativeModulesDefault from "NativeModules" /* 10861 */;
+import closure_3 from "handleConnectionOpen" /* 1981 */;
+import closure_4 from "handleConnectionOpen" /* 4202 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "getState" /* 7421 */;
+import closure_6 from "getState" /* 7019 */;
 import ME from "ME" /* 676 */;
-import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13321 */;
+import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13183 */;
 
 require = arg1;
 function handleMessageSendFailure(shouldNotify) {

@@ -1,10 +1,10 @@
-// === Module 9472: FlagIcon ===
+// === Module 8916: FlagIcon ===
 
-// Module 9472 (FlagIcon)
+// Module 8916 (FlagIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 9473 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8917 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

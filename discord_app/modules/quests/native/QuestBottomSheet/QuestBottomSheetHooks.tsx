@@ -1,9 +1,9 @@
-// === Module 14543: useWatchTaskPressHandler ===
+// === Module 14573: useWatchTaskPressHandler ===
 
-// Module 14543 (useWatchTaskPressHandler)
+// Module 14573 (useWatchTaskPressHandler)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { QuestDockMode } from "QuestsExperimentLocations" /* 6753 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 5268 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
@@ -113,7 +113,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -146,14 +146,14 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
           return obj2;
         } else {
           let captureAdUserAction = closure_1_0;
-          if (obj12.shouldMigrateToAdAnalyticsInterface(closure_1_0(9539).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
-            captureAdUserAction = captureAdUserAction(9540).captureAdUserAction;
+          if (obj12.shouldMigrateToAdAnalyticsInterface(closure_1_0(9664).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
+            captureAdUserAction = captureAdUserAction(9665).captureAdUserAction;
             let obj3 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
-            obj3[0] = closure_1_0(9544).AdUserActionType.CLICK_INTERNAL;
-            obj3[1] = closure_1_0(7507).AdCreativeType.QUEST;
+            obj3[0] = closure_1_0(9669).AdUserActionType.CLICK_INTERNAL;
+            obj3[1] = closure_1_0(7321).AdCreativeType.QUEST;
             obj3[2] = closure_0;
-            obj3[3] = closure_1_0(7518).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
-            obj3[4] = closure_1_0(6756).QuestContent.QUEST_BOTTOM_SHEET;
+            obj3[3] = closure_1_0(7332).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
+            obj3[4] = closure_1_0(5271).QuestContent.QUEST_BOTTOM_SHEET;
             obj3[5] = c1;
             let id;
             if (closure_4 != null) {
@@ -166,14 +166,14 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj3[7] = questContentPosition;
             captureAdUserAction(obj3);
-            const captureAdUserActionResult = captureAdUserAction(9540);
+            const captureAdUserActionResult = captureAdUserAction(9665);
             obj6 = closure_4;
             obj7 = closure_1_4;
           } else {
             const obj4 = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
             obj4[0] = closure_0;
-            obj4[1] = closure_1_0(6756).QuestContent.QUEST_BOTTOM_SHEET;
-            obj4[2] = closure_1_0(7518).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
+            obj4[1] = closure_1_0(5271).QuestContent.QUEST_BOTTOM_SHEET;
+            obj4[2] = closure_1_0(7332).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
             obj2 = closure_4;
             let questContentPosition1;
             if (closure_4 != null) {
@@ -187,11 +187,11 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj4[4] = id1;
             obj4[5] = c1;
-            const result = captureAdUserAction(7508).trackQuestContentClicked(obj4);
-            const captureAdUserActionResult2 = captureAdUserAction(7508);
+            const result = captureAdUserAction(7322).trackQuestContentClicked(obj4);
+            const captureAdUserActionResult2 = captureAdUserAction(7322);
           }
           dependencyMap = 3;
-          obj12 = closure_1_0(9539);
+          obj12 = closure_1_0(9664);
         }
       } catch (tmp36) {
         dependencyMap = tmp;

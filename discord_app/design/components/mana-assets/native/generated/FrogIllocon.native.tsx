@@ -1,10 +1,10 @@
-// === Module 5739: FrogIllocon ===
+// === Module 6429: FrogIllocon ===
 
-// Module 5739 (FrogIllocon)
+// Module 6429 (FrogIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5740 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6430 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");

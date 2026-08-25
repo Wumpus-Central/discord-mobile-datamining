@@ -1,11 +1,11 @@
-// === Module 12163: getActivityHeader ===
+// === Module 12496: getActivityHeader ===
 
-// Module 12163 (getActivityHeader)
+// Module 12496 (getActivityHeader)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 7292 */;
-import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12164 */;
-import PlatformTypesDefault from "PlatformTypes" /* 12165 */;
+import unpackStageChannelParty from "unpackStageChannelParty" /* 9805 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12497 */;
+import PlatformTypesDefault from "PlatformTypes" /* 12498 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityTypes: c3, PlatformTypes: c4 } = ME);
@@ -163,7 +163,7 @@ export default function getActivityHeader(session_id) {
       obj11[2] = str;
       return obj11;
     }
-    tmp35 = tmp(12168)(tmp3, session_id);
+    tmp35 = tmp(12501)(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };
@@ -248,7 +248,7 @@ export default function getActivityHeader(session_id) {
             obj25[2] = str;
             obj = obj25;
           } else {
-            obj = { text: "r", platformIcon: "PX_16", platformLabel: "TRANSPARENT" };
+            obj = { text: "r", platformIcon: "r", platformLabel: false };
             obj[1] = icon;
             obj[2] = str;
           }

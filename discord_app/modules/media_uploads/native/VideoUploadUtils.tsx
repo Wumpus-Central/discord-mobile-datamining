@@ -1,6 +1,6 @@
-// === Module 4867: toString ===
+// === Module 4986: toString ===
 
-// Module 4867 (toString)
+// Module 4986 (toString)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;

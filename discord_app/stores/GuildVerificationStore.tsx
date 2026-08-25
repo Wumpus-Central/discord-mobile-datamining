@@ -1,13 +1,13 @@
-// === Module 4982: recomputeGuild ===
+// === Module 5238: recomputeGuild ===
 
-// Module 4982 (recomputeGuild)
+// Module 5238 (recomputeGuild)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4012 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
+import GuildMemberFlags2 from "GuildMemberFlags" /* 4013 */;
+import closure_4 from "trackCommunicationDisabled" /* 1992 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
@@ -250,8 +250,8 @@ prototype["getCheck"] = function getCheck(guild_id) {
   }
   return tmp5;
 };
-prototype["canChatInGuild"] = function canChatInGuild(guildId) {
-  return this.getCheck(guildId).canChat;
+prototype["canChatInGuild"] = function canChatInGuild(guild_id) {
+  return this.getCheck(guild_id).canChat;
 };
 GuildVerificationStore.displayName = "GuildVerificationStore";
 const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {

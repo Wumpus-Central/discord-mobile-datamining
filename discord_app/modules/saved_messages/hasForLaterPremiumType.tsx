@@ -1,8 +1,8 @@
-// === Module 8524: hasForLaterPremiumType ===
+// === Module 8532: hasForLaterPremiumType ===
 
-// Module 8524 (hasForLaterPremiumType)
+// Module 8532 (hasForLaterPremiumType)
 import initialize from "initialize" /* 589 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 

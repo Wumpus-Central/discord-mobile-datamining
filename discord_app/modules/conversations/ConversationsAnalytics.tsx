@@ -1,6 +1,6 @@
-// === Module 12740: ConversationsAnalytics ===
+// === Module 8713: ConversationsAnalytics ===
 
-// Module 12740 (ConversationsAnalytics)
+// Module 8713 (ConversationsAnalytics)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import closure_2 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;

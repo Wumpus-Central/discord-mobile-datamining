@@ -1,10 +1,10 @@
-// === Module 9796: TwoWayLinkStepHeader ===
+// === Module 10573: TwoWayLinkStepHeader ===
 
-// Module 9796 (TwoWayLinkStepHeader)
+// Module 10573 (TwoWayLinkStepHeader)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import styles from "styles" /* 9795 */;
+import Text from "Text" /* 4376 */;
+import styles from "styles" /* 10572 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

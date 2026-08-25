@@ -1,10 +1,10 @@
-// === Module 8505: dispatcher ===
+// === Module 8512: ? ===
 
-// Module 8505 (dispatcher)
+// Module 8512
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("actions/UploadAttachmentActionCreators.tsx");
+let result = set.fileFinishedImporting("actions/UploadAttachmentActionCreators.tsx");
 
 export default {
   popFirstFile(channelId) {
@@ -12,14 +12,51 @@ export default {
     obj = { type: "UPLOAD_ATTACHMENT_POP_FILE", channelId };
     obj.dispatch(obj);
   },
-  addFiles(arg0) {
-    ({ files, channelId, draftType } = arg0);
-    dispatcherDefault.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType });
+  addFiles(draftType) {
+    ({ files, channelId } = draftType);
+    draftType = draftType.draftType;
+    if (files.some(channelId(8513).itemNeedsHeicPreConversion)) {
+      function dispatch(files) {
+        let obj = draftType(closure_1_2[0]);
+        obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
+        obj.dispatch(obj);
+      }
+      Promise.all(files.map(channelId(8513).maybePreConvertHeicItem)).then(dispatch);
+      const allPromises = Promise.all(files.map(channelId(8513).maybePreConvertHeicItem));
+    } else {
+      let obj = draftType(709);
+      obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: null, files: null, draftType: null };
+      obj[1] = channelId;
+      obj[2] = files;
+      obj[3] = draftType;
+      obj.dispatch(obj);
+    }
   },
-  addFile(arg0) {
-    ({ file, channelId, draftType, allowOptimization } = arg0);
-    const items = [file];
-    dispatcherDefault.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files: items, draftType, allowOptimization });
+  addFile(draftType) {
+    ({ file, channelId } = draftType);
+    draftType = draftType.draftType;
+    const allowOptimization = draftType.allowOptimization;
+    let obj = channelId(allowOptimization[1]);
+    if (obj.itemNeedsHeicPreConversion(file)) {
+      function dispatch(arg0) {
+        let obj = draftType(allowOptimization[0]);
+        obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files: items, draftType, allowOptimization };
+        items = [arg0];
+        obj.dispatch(obj);
+      }
+      const result = channelId(tmp2[1]).maybePreConvertHeicItem(file);
+      result.then(dispatch);
+      const tmpResult = channelId(tmp2[1]);
+    } else {
+      obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: null, files: null, draftType: null, allowOptimization: null };
+      obj[1] = channelId;
+      let items = [file];
+      obj[2] = items;
+      obj[3] = draftType;
+      obj[4] = allowOptimization;
+      draftType(tmp2[0]).dispatch(obj);
+      const obj2 = draftType(tmp2[0]);
+    }
   },
   remove(channelId, id, draftType) {
     let obj = dispatcherDefault;

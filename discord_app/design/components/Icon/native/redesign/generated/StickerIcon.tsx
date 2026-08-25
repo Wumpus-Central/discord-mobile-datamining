@@ -1,10 +1,10 @@
-// === Module 8029: StickerIcon ===
+// === Module 7851: StickerIcon ===
 
-// Module 8029 (StickerIcon)
+// Module 7851 (StickerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8030 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 7852 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

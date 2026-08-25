@@ -1,16 +1,16 @@
-// === Module 9409: PremiumUpsellSectionDivider ===
+// === Module 8852: PremiumUpsellSectionDivider ===
 
-// Module 9409 (PremiumUpsellSectionDivider)
+// Module 8852 (PremiumUpsellSectionDivider)
 import noopAll from "noop" /* 19 */;
 import keys from "keys" /* 691 */;
 import ThemesDefault from "Themes" /* 712 */;
-import LinearGradientDefault from "LinearGradient" /* 4761 */;
-import LockIcon2 from "LockIcon" /* 6928 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9410 */;
+import LinearGradientDefault from "LinearGradient" /* 4826 */;
+import LockIcon2 from "LockIcon" /* 4925 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 8853 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7441 */;
+import { Gradients } from "items" /* 7039 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;
@@ -86,10 +86,10 @@ export default function PremiumUpsellSectionDivider(arg0) {
     lock = lock.lock;
     obj3[1] = lock;
     obj2[4] = tmp3(LockIcon, obj3);
-    obj2 = tmp3(tmp4(4761), obj2);
+    obj2 = tmp3(tmp4(4826), obj2);
     obj1[1] = obj2;
     tmp3(tmp2, obj1);
-    const tmp4Result = tmp4(4761);
+    const tmp4Result = tmp4(4826);
   }
 };
 export const PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT = 28;

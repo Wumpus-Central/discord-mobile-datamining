@@ -1,8 +1,8 @@
-// === Module 7211: showSimpleActionSheet ===
+// === Module 5868: showSimpleActionSheet ===
 
-// Module 7211 (showSimpleActionSheet)
+// Module 5868 (showSimpleActionSheet)
 import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
 
 const result = set.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
@@ -15,5 +15,5 @@ export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   obj.hideActionSheet = function hideActionSheet() {
     closure_1_1(closure_1_2[0]).hideActionSheet(key);
   };
-  obj.openLazy(key(2008)(7212, dependencyMap.paths), key, obj, key.stackingBehavior);
+  obj.openLazy(key(2009)(5869, dependencyMap.paths), key, obj, key.stackingBehavior);
 };

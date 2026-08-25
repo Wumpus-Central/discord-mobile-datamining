@@ -1,9 +1,9 @@
-// === Module 5427: getHermesInstrumentedStatsSummary ===
+// === Module 7280: getHermesInstrumentedStatsSummary ===
 
-// Module 5427 (getHermesInstrumentedStatsSummary)
+// Module 7280 (getHermesInstrumentedStatsSummary)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ElectronProcessType from "ElectronProcessType" /* 5428 */;
+import ElectronProcessType from "ElectronProcessType" /* 7281 */;
 
 let closure_1 = function getHermesInstrumentedStatsSummary() {
   const _HermesInternal = HermesInternal;

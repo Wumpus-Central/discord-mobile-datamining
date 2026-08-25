@@ -1,9 +1,9 @@
-// === Module 13990: useTrackNavigatorScreenImpression ===
+// === Module 14025: useTrackNavigatorScreenImpression ===
 
-// Module 13990 (useTrackNavigatorScreenImpression)
+// Module 14025 (useTrackNavigatorScreenImpression)
 import set from "set" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
-import trackImpressionDefault from "trackImpression" /* 9214 */;
+import trackImpressionDefault from "trackImpression" /* 9497 */;
 
 const result = set.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 

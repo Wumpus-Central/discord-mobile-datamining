@@ -1,6 +1,6 @@
-// === Module 2007: _preloadAllIntlMessageFiles ===
+// === Module 2008: _preloadAllIntlMessageFiles ===
 
-// Module 2007 (_preloadAllIntlMessageFiles)
+// Module 2008 (_preloadAllIntlMessageFiles)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -18,7 +18,7 @@ function _preloadAllIntlMessageFiles() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

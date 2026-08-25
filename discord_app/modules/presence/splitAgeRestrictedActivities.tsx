@@ -1,9 +1,9 @@
-// === Module 13367: splitAgeRestrictedActivities ===
+// === Module 13228: splitAgeRestrictedActivities ===
 
-// Module 13367 (splitAgeRestrictedActivities)
+// Module 13228 (splitAgeRestrictedActivities)
 import set from "set" /* 2 */;
-import isAgeRestrictedClassificationReference from "isAgeRestrictedClassificationReference" /* 4790 */;
-import apexExperiment from "apexExperiment" /* 13368 */;
+import isAgeRestrictedClassificationReference from "isAgeRestrictedClassificationReference" /* 10730 */;
+import apexExperiment from "apexExperiment" /* 13229 */;
 
 const result = set.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 

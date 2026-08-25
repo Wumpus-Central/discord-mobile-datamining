@@ -1,6 +1,6 @@
-// === Module 7553: initialize ===
+// === Module 7371: initialize ===
 
-// Module 7553 (initialize)
+// Module 7371 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "ensureGuildLoaded" /* 1391 */;

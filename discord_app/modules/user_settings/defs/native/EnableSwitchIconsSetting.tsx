@@ -1,11 +1,11 @@
-// === Module 14783: useEnableSwitchIconsSettingValue ===
+// === Module 14813: useEnableSwitchIconsSettingValue ===
 
-// Module 14783 (useEnableSwitchIconsSettingValue)
+// Module 14813 (useEnableSwitchIconsSettingValue)
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import createToggle from "createToggle" /* 10708 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 function useEnableSwitchIconsSettingValue() {

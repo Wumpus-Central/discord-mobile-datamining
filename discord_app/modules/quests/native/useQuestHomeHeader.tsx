@@ -1,17 +1,17 @@
-// === Module 14422: QuestHomeHeaderTitle ===
+// === Module 14452: QuestHomeHeaderTitle ===
 
-// Module 14422 (QuestHomeHeaderTitle)
+// Module 14452 (QuestHomeHeaderTitle)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import QuestsIcon from "QuestsIcon" /* 14419 */;
+import Text from "Text" /* 4376 */;
+import QuestsIcon from "QuestsIcon" /* 14449 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { QuestHomeSortMethods } from "QuestsExperimentLocations" /* 6753 */;
+import { QuestHomeSortMethods } from "QuestsExperimentLocations" /* 5268 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { CollectiblesMobileShopScreen as closure_7 } from "items" /* 678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function QuestHomeHeaderTitle() {
@@ -29,7 +29,7 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
   const merged = Object.assign(isVirtualCurrencyEnabled, Object.create(null));
   let balance;
-  let obj = balance(9290);
+  let obj = balance(9569);
   balance = obj.useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
   obj = { style: callback3().headerRightContainer, children: null };
@@ -37,7 +37,7 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
     obj = { balance: null, onPress: null };
     obj[0] = balance;
     obj[1] = tmp5;
-    isVirtualCurrencyEnabled = callback(balance(10438).BalanceWidgetPillButton, obj);
+    isVirtualCurrencyEnabled = callback(balance(10293).BalanceWidgetPillButton, obj);
   }
   let items = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);

@@ -1,9 +1,9 @@
-// === Module 12611: handleAutomaticGainControlChange ===
+// === Module 10947: handleAutomaticGainControlChange ===
 
-// Module 12611 (handleAutomaticGainControlChange)
+// Module 10947 (handleAutomaticGainControlChange)
 import initialize from "initialize" /* 589 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9693 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9303 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;

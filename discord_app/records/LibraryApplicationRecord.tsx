@@ -1,11 +1,11 @@
-// === Module 4518: createFromServer ===
+// === Module 4420: createFromServer ===
 
-// Module 4518 (createFromServer)
+// Module 4420 (createFromServer)
 import hasFlagAll from "hasFlag" /* 1403 */;
 import toJSDefault from "toJS" /* 1931 */;
-import tDefault from "t" /* 3978 */;
-import closure_3 from "addApplication" /* 4482 */;
-import closure_4 from "createFromServer" /* 4519 */;
+import hooksDefault from "hooks" /* 3979 */;
+import closure_3 from "addApplication" /* 4421 */;
+import closure_4 from "createFromServer" /* 4422 */;
 import ME from "ME" /* 676 */;
 
 toJSDefault;
@@ -34,7 +34,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = tDefault;
+    entitlements = hooksDefault;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj[3] = entitlementsResult;

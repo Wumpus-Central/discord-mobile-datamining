@@ -1,18 +1,18 @@
-// === Module 16740: items ===
+// === Module 16772: items ===
 
-// Module 16740 (items)
+// Module 16772 (items)
 import keys from "keys" /* 691 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault from "initialize" /* 5043 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 11926 */;
+import initializeDefault from "initialize" /* 5367 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12260 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSetLocationMetadata" /* 8620 */;
-import closure_5 from "set" /* 5226 */;
+import closure_4 from "handleSetLocationMetadata" /* 8628 */;
+import closure_5 from "set" /* 5106 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "initialize" /* 4498 */;
-import { NewUserTypes } from "NewUserTypes" /* 11927 */;
+import closure_7 from "initialize" /* 5451 */;
+import { NewUserTypes } from "NewUserTypes" /* 12261 */;
 import { PlatformTypes } from "ME" /* 676 */;
-import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 11946 */;
+import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 12275 */;
 
 require = arg1;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
@@ -130,7 +130,7 @@ let prototype = function NewUserManager() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

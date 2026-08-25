@@ -1,9 +1,9 @@
-// === Module 8800: useThermalState ===
+// === Module 11063: useThermalState ===
 
-// Module 8800 (useThermalState)
+// Module 11063 (useThermalState)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
-import NativeModulesDefault from "NativeModules" /* 8757 */;
+import NativeModulesDefault from "NativeModules" /* 10693 */;
 
 let obj = { UNHANDLED: -1, [-1]: "UNHANDLED", NOMINAL: 0, [0]: "NOMINAL", FAIR: 1, [1]: "FAIR", SERIOUS: 2, [2]: "SERIOUS", CRITICAL: 3, [3]: "CRITICAL" };
 obj = { NONE: 0, [0]: "NONE", LIGHT: 1, [1]: "LIGHT", MODERATE: 2, [2]: "MODERATE", SEVERE: 3, [3]: "SEVERE", CRITICAL: 4, [4]: "CRITICAL", EMERGENCY: 5, [5]: "EMERGENCY", SHUTDOWN: 6, [6]: "SHUTDOWN" };

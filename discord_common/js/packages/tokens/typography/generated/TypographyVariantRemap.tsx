@@ -1,6 +1,6 @@
-// === Module 4746: map ===
+// === Module 4388: map ===
 
-// Module 4746 (map)
+// Module 4388 (map)
 import set from "set" /* 2 */;
 
 const obj = { text: new Map(items), heading: null };

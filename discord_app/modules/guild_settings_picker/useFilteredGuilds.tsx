@@ -1,9 +1,9 @@
-// === Module 13413: useFilteredGuilds ===
+// === Module 13448: useFilteredGuilds ===
 
-// Module 13413 (useFilteredGuilds)
+// Module 13448 (useFilteredGuilds)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "insertUnsortedGuilds" /* 5083 */;
+import closure_5 from "insertUnsortedGuilds" /* 5262 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;

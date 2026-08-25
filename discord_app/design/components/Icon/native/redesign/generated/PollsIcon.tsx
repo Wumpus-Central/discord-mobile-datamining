@@ -1,10 +1,10 @@
-// === Module 10311: PollsIcon ===
+// === Module 10162: PollsIcon ===
 
-// Module 10311 (PollsIcon)
+// Module 10162 (PollsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 10312 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 10163 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

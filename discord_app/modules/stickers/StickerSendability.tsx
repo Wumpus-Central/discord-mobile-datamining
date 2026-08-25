@@ -1,11 +1,11 @@
-// === Module 7336: getStickerSendability ===
+// === Module 6061: getStickerSendability ===
 
-// Module 7336 (getStickerSendability)
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4042 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4828 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
-import closure_5 from "parseServerPackSticker" /* 6808 */;
+// Module 6061 (getStickerSendability)
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4043 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4740 */;
+import closure_4 from "trackCommunicationDisabled" /* 1992 */;
+import closure_5 from "parseServerPackSticker" /* 5327 */;
 import { Permissions } from "ME" /* 676 */;
 
 require = arg1;

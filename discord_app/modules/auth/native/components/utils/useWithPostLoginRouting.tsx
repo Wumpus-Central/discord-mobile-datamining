@@ -1,6 +1,6 @@
-// === Module 8631: useWithPostLoginRouting ===
+// === Module 8639: useWithPostLoginRouting ===
 
-// Module 8631 (useWithPostLoginRouting)
+// Module 8639 (useWithPostLoginRouting)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -48,10 +48,10 @@ export default function useWithPostLoginRouting(arg0, arg1) {
       obj[1] = intl2.string(arr(first[6]).t.myKyqh);
       obj[2] = closure_1_6.getCredentials().login;
       obj[3] = function onPhoneTokenReceived(arg0) {
-        const replaced = closure_0.replace(closure_1_8.EXTERNAL_LINK, { externalURL: closure_1_1(8632)(arg0) });
+        const replaced = closure_0.replace(closure_1_8.EXTERNAL_LINK, { externalURL: closure_1_1(8640)(arg0) });
       };
       obj[4] = function onClose() {
-        callback(5261).loginReset();
+        callback(5933).loginReset();
       };
       let replaced = arr.replace(closure_1_8.VERIFY_PHONE, obj);
     } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {
@@ -79,7 +79,7 @@ export default function useWithPostLoginRouting(arg0, arg1) {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {

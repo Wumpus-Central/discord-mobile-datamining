@@ -1,15 +1,15 @@
-// === Module 9245: ProfileEffectSample ===
+// === Module 9524: ProfileEffectSample ===
 
-// Module 9245 (ProfileEffectSample)
+// Module 9524 (ProfileEffectSample)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import preloadDefault from "preload" /* 5454 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 9244 */;
-import metadataDefault from "metadata" /* 9246 */;
-import StaticEffectDefault from "StaticEffect" /* 9247 */;
+import preloadDefault from "preload" /* 5374 */;
+import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 9523 */;
+import metadataDefault from "metadata" /* 9525 */;
+import StaticEffectDefault from "StaticEffect" /* 9526 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

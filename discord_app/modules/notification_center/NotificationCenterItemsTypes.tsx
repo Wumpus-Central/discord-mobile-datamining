@@ -1,6 +1,6 @@
-// === Module 4807: NotificationCenterScenes ===
+// === Module 7246: NotificationCenterScenes ===
 
-// Module 4807 (NotificationCenterScenes)
+// Module 7246 (NotificationCenterScenes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");

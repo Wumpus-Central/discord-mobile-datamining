@@ -1,15 +1,15 @@
-// === Module 14405: route ===
+// === Module 14435: route ===
 
-// Module 14405 (route)
+// Module 14435 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4042 */;
-import apexExperiment from "apexExperiment" /* 12905 */;
-import ThemedTabBadgeDefault from "ThemedTabBadge" /* 14406 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4043 */;
+import apexExperiment from "apexExperiment" /* 12892 */;
+import ThemedTabBadgeDefault from "ThemedTabBadge" /* 14436 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 4048 */;
+import closure_5 from "reset" /* 4049 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10708 */;
+import createToggle from "createToggle" /* 10516 */;
 
 require = arg1;
 createToggle = {
@@ -51,7 +51,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
-    return require(14408) /* PremiumScreen */.default;
+    return require(14438) /* PremiumScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

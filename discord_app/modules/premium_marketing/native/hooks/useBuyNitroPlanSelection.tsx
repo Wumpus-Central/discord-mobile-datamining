@@ -1,6 +1,6 @@
-// === Module 7972: PremiumTypes ===
+// === Module 7794: PremiumTypes ===
 
-// Module 7972 (PremiumTypes)
+// Module 7794 (PremiumTypes)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
@@ -15,9 +15,29 @@ let result = require("set").fileFinishedImporting("modules/premium_marketing/nat
 export const NITRO_PLAN_TIERS = items;
 export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) {
   let obj = memo2(memo[4]);
-  const premiumTrialOfferPremiumType = obj.usePremiumTrialOfferPremiumType();
-  const NitroACOMSubscriptionExperiment = memo2(memo[5]).NitroACOMSubscriptionExperiment;
-  obj1 = memo2(memo[6]);
+  const premiumTrialOffer = obj.usePremiumTrialOffer();
+  obj1 = memo2(memo[5]);
+  const premiumTrialOfferPremiumType = obj1.usePremiumTrialOfferPremiumType();
+  const buyNitroTrialUnavailableTiers = memo2(memo[6]).useBuyNitroTrialUnavailableTiers();
+  let tmp5;
+  if (null != premiumTrialOfferPremiumType) {
+    if (buyNitroOrderPriceOverrides.includes(premiumTrialOfferPremiumType)) {
+      tmp5 = premiumTrialOfferPremiumType;
+    }
+  }
+  let tmp7;
+  if (null != tmp5) {
+    if (!buyNitroTrialUnavailableTiers.has(tmp5)) {
+      tmp7 = tmp5;
+    }
+  }
+  if (null != tmp7) {
+    let trialId;
+    if (premiumTrialOffer != null) {
+      trialId = premiumTrialOffer.trialId;
+    }
+    const tmp8 = trialId;
+  }
   tier = undefined;
   if (tier != null) {
     tier = tier.tier;
@@ -25,16 +45,18 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (tier == null) {
     tier = null;
   }
+  const obj3 = memo2(memo[6]);
+  const tmp11 = found;
   [TIER_2, memo2] = found(found1.useState(tier), 2);
   if (TIER_2 == null) {
-    TIER_2 = tmp4;
+    TIER_2 = tmp5;
   }
   if (TIER_2 == null) {
     TIER_2 = priceString.TIER_2;
   }
   importDefault = TIER_2;
   items = [TIER_2];
-  memo = obj3.useMemo(() => {
+  memo = obj5.useMemo(() => {
     closure_0 = closure_1;
     const premiumBundlesWithPredicate = memo2(memo[3]).getPremiumBundlesWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
@@ -55,7 +77,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   const premiumDiscountOffer = tmpResult.usePremiumDiscountOffer();
   tmpResult = tmp(tmp2[8]);
   const isEligibleForBogoOffer = tmpResult.useIsEligibleForBogoOffer();
-  const tmp9 = found(found1.useState(tier), 2);
+  const tmp12 = found(found1.useState(tier), 2);
   const discountedPremiumProductInfo = memo2(memo[9]).useDiscountedPremiumProductInfo(premiumDiscountOffer, memo);
   ({ discountedProduct, discountedPriceString } = discountedPremiumProductInfo);
   let num = NaN;
@@ -79,60 +101,44 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     num2 = 1;
   }
   obj[2] = num2;
-  let tmp16 = null;
+  let tmp19 = null;
   if (!Number.isNaN(num)) {
-    tmp16 = num;
+    tmp19 = num;
   }
-  obj[3] = tmp16;
+  obj[3] = tmp19;
   found = memo.find((interval) => interval.interval === priceString1.MONTH);
   found1 = memo.find((interval) => interval.interval === priceString1.YEAR);
   let basePlanId;
-  let tmp19 = importDefault;
+  const tmp22 = importDefault;
   const tmpResult1 = memo2(memo[9]);
   if (found != null) {
     basePlanId = found.basePlanId;
   }
-  const tmp20Result = importDefault(memo[10])(basePlanId);
+  const tmp23Result = importDefault(memo[10])(basePlanId);
   priceString = undefined;
-  if (tmp20Result != null) {
-    priceString = tmp20Result.priceString;
+  if (tmp23Result != null) {
+    priceString = tmp23Result.priceString;
   }
   if (priceString == null) {
     priceString = null;
   }
   let basePlanId1;
-  let tmp20 = importDefault(memo[10]);
+  const tmp23 = importDefault(memo[10]);
   if (found1 != null) {
     basePlanId1 = found1.basePlanId;
   }
-  const tmp19ResultResult = tmp19(memo[10])(basePlanId1);
+  const tmp22ResultResult = tmp22(memo[10])(basePlanId1);
   let priceString1;
-  if (tmp19ResultResult != null) {
-    priceString1 = tmp19ResultResult.priceString;
+  if (tmp22ResultResult != null) {
+    priceString1 = tmp22ResultResult.priceString;
   }
   if (priceString1 == null) {
     priceString1 = null;
   }
-  let tmp8Result = tmp8(obj3.useState(() => new Map()), 2);
-  const first = tmp8Result[0];
-  closure_8 = tmp8Result[1];
-  const items1 = [found, found1, priceString, priceString1, first];
-  const callback = obj3.useCallback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    callback((get) => {
-      if (get.get(closure_0) === closure_1) {
-        return get;
-      } else {
-        const _Map = Map;
-        const map = new Map(get);
-        const result = map.set(tmp, tmp2);
-        return map;
-      }
-      tmp = closure_0;
-    });
-  }, []);
-  const memo1 = obj3.useMemo(() => {
+  const tmp22Result = tmp22(memo[10]);
+  buyNitroOrderPriceOverrides = memo2(memo[6]).useBuyNitroOrderPriceOverrides();
+  const items1 = [found, found1, priceString, priceString1, buyNitroOrderPriceOverrides];
+  const memo1 = obj5.useMemo(() => {
     const map = new Map();
     let tmp2 = null != found;
     if (tmp2) {
@@ -163,7 +169,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     return map;
   }, items1);
   const items2 = [memo, memo1];
-  memo2 = obj3.useMemo(() => {
+  memo2 = obj5.useMemo(() => {
     const set = new Set();
     if (memo1.size > 0) {
       for (const item10015 of memo) {
@@ -185,57 +191,57 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (productId == null) {
     productId = null;
   }
-  tmp8Result = tmp8(obj3.useState(productId), 2);
-  let first1 = tmp8Result[0];
-  closure_11 = tmp8Result[1];
+  const tmp11Result = tmp11(found1.useState(productId), 2);
+  let first = tmp11Result[0];
+  closure_10 = tmp11Result[1];
   const items3 = [TIER_2];
   [][0] = TIER_2;
-  const callback1 = obj3.useCallback((arg0) => {
+  const callback = obj5.useCallback((arg0) => {
     if (arg0 !== closure_1) {
       memo2(arg0);
-      callback2(null);
+      callback(null);
     }
   }, items3);
-  if (null != first1) {
-    const found2 = memo.find((productId) => productId.productId === first1);
-    let tmp42 = null != tmp4;
-    if (tmp42) {
+  if (null != first) {
+    const found2 = memo.find((productId) => productId.productId === first);
+    let tmp43 = null != tmp7;
+    if (tmp43) {
       let premiumTier;
       if (found2 != null) {
         premiumTier = found2.premiumTier;
       }
-      tmp42 = premiumTier === tmp4;
+      tmp43 = premiumTier === tmp7;
     }
     obj = { tier: null, setTier: null, productId: null, setProductId: null, item: null, priceString: null, isDiscounted: null, isTrial: null };
     obj[0] = TIER_2;
-    obj[1] = callback1;
-    obj[2] = first1;
-    obj[3] = tmp37;
+    obj[1] = callback;
+    obj[2] = first;
+    obj[3] = tmp38;
     obj[4] = found2;
-    let tmp44 = null;
+    let tmp45 = null;
     if (null != found2) {
-      if (!tmp41) {
+      if (!tmp42) {
         let value = memo1.get(found2.productId);
         if (value == null) {
           value = null;
         }
         discountedPriceString = value;
       }
-      tmp44 = discountedPriceString;
+      tmp45 = discountedPriceString;
     }
-    obj1 = { selection: null, items: null, priceStringByProductId: null, unavailableProductIds: null, bogoEligible: null, hasDiscountOffer: null, trialTier: null, discounted: null, applyOrderPriceOverride: null };
-    obj[5] = tmp44;
+    obj1 = { selection: null, items: null, priceStringByProductId: null, unavailableProductIds: null, bogoEligible: null, hasDiscountOffer: null, trialTier: null, trialId: null, discounted: null };
+    obj[5] = tmp45;
     obj[6] = null != found2 && found2.productId === obj.id && null != discountedPriceString;
-    obj[7] = tmp42;
+    obj[7] = tmp43;
     obj1[0] = obj;
     obj1[1] = memo;
     obj1[2] = memo1;
     obj1[3] = memo2;
     obj1[4] = isEligibleForBogoOffer;
     obj1[5] = null != premiumDiscountOffer;
-    obj1[6] = tmp4;
-    obj1[7] = obj;
-    obj1[8] = callback;
+    obj1[6] = tmp7;
+    obj1[7] = tmp8;
+    obj1[8] = obj;
     return obj1;
   }
   importDefault = isEligibleForBogoOffer ? priceString1.MONTH : priceString1.YEAR;
@@ -252,5 +258,5 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (found4 != null) {
     productId1 = found4.productId;
   }
-  first1 = productId1;
+  first = productId1;
 };

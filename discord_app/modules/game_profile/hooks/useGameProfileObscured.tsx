@@ -1,8 +1,8 @@
-// === Module 6939: useGameProfileObscured ===
+// === Module 4938: useGameProfileObscured ===
 
-// Module 6939 (useGameProfileObscured)
+// Module 4938 (useGameProfileObscured)
 import initialize from "initialize" /* 589 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4791 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4939 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

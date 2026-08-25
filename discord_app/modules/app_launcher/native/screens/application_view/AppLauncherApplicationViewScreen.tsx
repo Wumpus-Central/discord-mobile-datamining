@@ -1,13 +1,13 @@
-// === Module 11356: AppLauncherApplicationViewScreenInner ===
+// === Module 11712: AppLauncherApplicationViewScreenInner ===
 
-// Module 11356 (AppLauncherApplicationViewScreenInner)
+// Module 11712 (AppLauncherApplicationViewScreenInner)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getIndexKey" /* 8487 */;
+import closure_6 from "getIndexKey" /* 8494 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5251 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4838 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 function AppLauncherApplicationViewScreenInner(application) {

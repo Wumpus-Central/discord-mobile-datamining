@@ -1,9 +1,9 @@
-// === Module 7305: canReportUser ===
+// === Module 6013: canReportUser ===
 
-// Module 7305 (canReportUser)
+// Module 6013 (canReportUser)
 import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "handleInviteData" /* 4299 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_1 from "handleInviteData" /* 4300 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4025 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

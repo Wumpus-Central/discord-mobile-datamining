@@ -1,14 +1,14 @@
-// === Module 16799: handleVoiceChannelSelect ===
+// === Module 16831: handleVoiceChannelSelect ===
 
-// Module 16799 (handleVoiceChannelSelect)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4346 */;
-import useStageHasMedia from "useStageHasMedia" /* 4993 */;
-import initializeDefault from "initialize" /* 5043 */;
-import closure_3 from "setContent" /* 4089 */;
+// Module 16831 (handleVoiceChannelSelect)
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4347 */;
+import useStageHasMedia from "useStageHasMedia" /* 5242 */;
+import initializeDefault from "initialize" /* 5367 */;
+import closure_3 from "setContent" /* 4090 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 4983 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
+import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5239 */;
 
 require = arg1;
 let c8 = false;
@@ -48,12 +48,12 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
               if (closure_5.can(tmp5(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel: null };
                 obj[0] = channel;
-                ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp5(2008)(6744, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp5(2009)(5254, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
                 const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
               }
             }
-            tmp5Result = tmp5(9692);
+            tmp5Result = tmp5(9302);
           }
           tmp6 = dependencyMap;
         }

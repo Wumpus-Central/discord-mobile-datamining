@@ -1,16 +1,16 @@
-// === Module 9337: EmojiPickerActionSheet ===
+// === Module 8786: EmojiPickerActionSheet ===
 
-// Module 9337 (EmojiPickerActionSheet)
+// Module 8786 (EmojiPickerActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import { EmojiPickerSource } from "IMAGE_SIZE" /* 9338 */;
+import { EmojiPickerSource } from "IMAGE_SIZE" /* 8787 */;
 import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 676 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -44,6 +44,7 @@ export default function EmojiPickerActionSheet(onClose) {
     flag2 = true;
   }
   const source = onClose.source;
+  const bypassPremiumEmojiEntitlement = onClose.bypassPremiumEmojiEntitlement;
   let React;
   c5 = undefined;
   closure_6 = undefined;
@@ -63,7 +64,7 @@ export default function EmojiPickerActionSheet(onClose) {
   obj1 = onClose(pickerIntention[11]);
   const sharedValue = obj1.useSharedValue(0);
   let obj2 = onClose(pickerIntention[12]);
-  const emojiCategories = obj2.useEmojiCategories(pickerIntention, channel, guildId);
+  const emojiCategories = obj2.useEmojiCategories(pickerIntention, channel, guildId, false, bypassPremiumEmojiEntitlement);
   let bottom = onPressEmoji(pickerIntention[13])().insets.bottom;
   bottom2 = onPressEmoji(pickerIntention[14])().bottom;
   let obj3 = onClose(pickerIntention[15]);
@@ -73,7 +74,7 @@ export default function EmojiPickerActionSheet(onClose) {
   const sum = bottom + handleTextChange;
   const sum1 = sum + tmp10(tmp3[9]).space.PX_16;
   let tmp10Result = tmp10(tmp3[16]);
-  const tmp14 = onPressEmoji(pickerIntention[18])(channel, sharedValue, pickerIntention);
+  const tmp14 = onPressEmoji(pickerIntention[18])(channel, sharedValue, pickerIntention, bypassPremiumEmojiEntitlement);
   handleTextChange = tmp14.handleTextChange;
   let items = [onClose];
   let items1 = [onPressEmoji, tmp6, pickerIntention, source];
@@ -233,7 +234,7 @@ export default function EmojiPickerActionSheet(onClose) {
   obj1[9] = items6;
   const items8 = [tmp.content, { marginBottom: sum }];
   obj1[10] = items8;
-  obj3 = { bottomSheetIndex: sharedValue1, onPressEmoji: callback1, onLongPressEmoji: null, emojiPickerListRef: null, categories: null, categoryIndexActive: null, emojis: null, emojiPickerIntention: null, channel: null, guildId: null, searchQueryRef: null, insetBottom: null, analyticsObject: null, messageId: null };
+  obj3 = { bottomSheetIndex: sharedValue1, onPressEmoji: callback1, onLongPressEmoji: null, emojiPickerListRef: null, categories: null, categoryIndexActive: null, emojis: null, emojiPickerIntention: null, channel: null, guildId: null, searchQueryRef: null, insetBottom: null, analyticsObject: null, messageId: null, bypassPremiumEmojiEntitlement: null };
   tmp10Result = tmp10(tmp3[34]);
   obj3[2] = onClose(pickerIntention[35]).openEmojiActionSheet;
   obj3[3] = ref;
@@ -247,6 +248,7 @@ export default function EmojiPickerActionSheet(onClose) {
   obj3[11] = sum1;
   obj3[12] = analyticsObject;
   obj3[13] = messageId;
+  obj3[14] = bypassPremiumEmojiEntitlement;
   const items9 = [callback(tmp10Result, obj3), ];
   const obj4 = { bottomSheetRef: ref1, bottomSheetIndex: sharedValue1, style: memo, categories: emojiCategories, categoryIndexActive: sharedValue, emojiPickerListRef: ref, portalHostName: EmojiPickerActionSheet, renderAhead: null, isSearching: null, onClearSearch: null };
   tmp2Result1 = onClose(pickerIntention[15]);

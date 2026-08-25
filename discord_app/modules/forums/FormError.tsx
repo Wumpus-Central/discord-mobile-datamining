@@ -1,9 +1,9 @@
-// === Module 10209: FormSubmitErrorType ===
+// === Module 10060: FormSubmitErrorType ===
 
-// Module 10209 (FormSubmitErrorType)
+// Module 10060 (FormSubmitErrorType)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7646 */;
+import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7467 */;
 
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", EmptyTags: 2, [2]: "EmptyTags", ApiValidation: 3, [3]: "ApiValidation" };
 const result = set.fileFinishedImporting("modules/forums/FormError.tsx");

@@ -1,12 +1,12 @@
-// === Module 16790: _terminate ===
+// === Module 16822: _terminate ===
 
-// Module 16790 (_terminate)
+// Module 16822 (_terminate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5043 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_4 from "initialize" /* 4570 */;
-import { Features } from "DesktopSources" /* 4534 */;
+import initializeDefault from "initialize" /* 5367 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_4 from "initialize" /* 4475 */;
+import { Features } from "DesktopSources" /* 4444 */;
 
 let require = arg1;
 const SECOND = setDefault.Millis.SECOND;

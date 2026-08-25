@@ -1,8 +1,8 @@
-// === Module 15821: ICYMIMessageRowPreview ===
+// === Module 15853: ICYMIMessageRowPreview ===
 
-// Module 15821 (ICYMIMessageRowPreview)
-import explicitContentFromProto from "explicitContentFromProto" /* 4069 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+// Module 15853 (ICYMIMessageRowPreview)
+import explicitContentFromProto from "explicitContentFromProto" /* 4070 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import importAllResult from "noop" /* 19 */;
 import { MessageEmbedTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -21,7 +21,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
   let setting2;
   let obj = createCacheKey;
   obj = { seeMoreLabelColor: messageOptions(712).colors.TEXT_DEFAULT };
-  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4314)());
+  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4315)());
   const RenderEmbeds = explicitContentFromProto.RenderEmbeds;
   setting = RenderEmbeds.getSetting();
   const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
@@ -55,7 +55,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight
   };
-  return setting2(messageOptions(10105), obj);
+  return setting2(messageOptions(8736), obj);
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((message) => {
@@ -162,11 +162,11 @@ const memoResult2 = importAllResult.memo((message) => {
     obj[4] = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(5031)(message);
+  const tmp3 = merged(6025)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   obj = {};
-  const merged2 = Object.assign(message(8198).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(8194).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
   obj.renderReplies = false;
   obj.renderThreadEmbeds = false;

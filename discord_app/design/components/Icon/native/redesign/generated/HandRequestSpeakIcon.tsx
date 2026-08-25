@@ -1,10 +1,10 @@
-// === Module 12587: HandRequestSpeakIcon ===
+// === Module 10900: HandRequestSpeakIcon ===
 
-// Module 12587 (HandRequestSpeakIcon)
+// Module 10900 (HandRequestSpeakIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 12588 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 10901 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

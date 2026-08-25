@@ -1,8 +1,8 @@
-// === Module 5252: commandPermissions ===
+// === Module 7128: commandPermissions ===
 
-// Module 5252 (commandPermissions)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5253 */;
+// Module 7128 (commandPermissions)
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7129 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;

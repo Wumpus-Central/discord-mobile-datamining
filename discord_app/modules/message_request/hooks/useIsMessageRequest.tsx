@@ -1,8 +1,8 @@
-// === Module 10611: useIsMessageRequest ===
+// === Module 10409: useIsMessageRequest ===
 
-// Module 10611 (useIsMessageRequest)
-import closure_2 from "processChannel" /* 4804 */;
-import closure_3 from "processChannel" /* 4805 */;
+// Module 10409 (useIsMessageRequest)
+import closure_2 from "processChannel" /* 5947 */;
+import closure_3 from "processChannel" /* 5948 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");

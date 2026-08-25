@@ -1,8 +1,8 @@
-// === Module 12139: experiment ===
+// === Module 12472: experiment ===
 
-// Module 12139 (experiment)
+// Module 12472 (experiment)
 import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4290 */;
+import createExperiment from "createExperiment" /* 4291 */;
 
 const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: items });

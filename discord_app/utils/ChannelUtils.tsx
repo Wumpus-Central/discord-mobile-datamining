@@ -1,22 +1,22 @@
-// === Module 4984: allowChannelAccess ===
+// === Module 4566: allowChannelAccess ===
 
-// Module 4984 (allowChannelAccess)
+// Module 4566 (allowChannelAccess)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 506 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import applyOverwritesAll from "applyOverwrites" /* 4029 */;
-import hasStream from "hasStream" /* 4985 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4986 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4990 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import applyOverwritesAll from "applyOverwrites" /* 4030 */;
+import hasStream from "hasStream" /* 4567 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4568 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4576 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "comparator" /* 1981 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_10 from "handleConnectionOpen" /* 1980 */;
-import closure_11 from "getVoiceStatesForGuild" /* 4550 */;
+import closure_8 from "comparator" /* 1982 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_10 from "handleConnectionOpen" /* 1981 */;
+import closure_11 from "getVoiceStatesForGuild" /* 4455 */;
 import ME from "ME" /* 676 */;
 
 function allowChannelAccess(id, channelType, MEMBER) {
@@ -105,7 +105,7 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
     }
     const obj = { id: null, type: null, allow: null, deny: null };
     obj[0] = guildId;
-    obj[1] = _require(1954).PermissionOverwriteType.ROLE;
+    obj[1] = _require(1955).PermissionOverwriteType.ROLE;
     obj[2] = applyOverwritesAll.NONE;
     obj[3] = addResult2;
     items.push(obj);

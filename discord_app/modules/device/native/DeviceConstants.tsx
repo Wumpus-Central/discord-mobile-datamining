@@ -1,6 +1,6 @@
-// === Module 10322: frozen ===
+// === Module 10173: frozen ===
 
-// Module 10322 (frozen)
+// Module 10173 (frozen)
 import set from "set" /* 2 */;
 
 const frozen = Object.freeze({ VIDEO: "ALAssetTypeVideo", PHOTO: "ALAssetTypePhoto" });

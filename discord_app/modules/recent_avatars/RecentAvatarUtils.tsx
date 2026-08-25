@@ -1,12 +1,12 @@
-// === Module 8423: getArchivedAvatarURL ===
+// === Module 8429: getArchivedAvatarURL ===
 
-// Module 8423 (getArchivedAvatarURL)
+// Module 8429 (getArchivedAvatarURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import parseDefault from "parse" /* 1484 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 8424 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 8430 */;
 
 function getArchivedAvatarURL(allowWebp) {
   ({ userId, avatarId, storageHash, canAnimate } = allowWebp);
@@ -129,7 +129,7 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     const _Date = Date;
     const date = new Date();
     const intl2 = tmp3(1236).intl;
-    if (assetOrigin === tmp3(8424).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
+    if (assetOrigin === tmp3(8430).AssetOriginTypes.EDITED_ARCHIVED_ASSET) {
       let DYil93 = tmp3(1236).t.eC2sZi;
     } else {
       DYil93 = tmp3(1236).t.DYil93;

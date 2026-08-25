@@ -1,6 +1,6 @@
-// === Module 11466: PortalKeyboardPlaceholderInner ===
+// === Module 11820: PortalKeyboardPlaceholderInner ===
 
-// Module 11466 (PortalKeyboardPlaceholderInner)
+// Module 11820 (PortalKeyboardPlaceholderInner)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
@@ -8,13 +8,13 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import KeyboardTypes from "KeyboardTypes" /* 1627 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1895 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4243 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5449 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7964 */;
-import useGradientBottom from "useGradientBottom" /* 8540 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4244 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5478 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7785 */;
+import useGradientBottom from "useGradientBottom" /* 8548 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function PortalKeyboardPlaceholderInner(keyboardType) {

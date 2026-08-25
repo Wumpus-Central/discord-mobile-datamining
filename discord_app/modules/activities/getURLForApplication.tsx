@@ -1,8 +1,8 @@
-// === Module 8747: getURLForApplication ===
+// === Module 10679: getURLForApplication ===
 
-// Module 8747 (getURLForApplication)
-import closure_0 from "reset" /* 7913 */;
-import closure_1 from "initialize" /* 7911 */;
+// Module 10679 (getURLForApplication)
+import closure_0 from "reset" /* 7734 */;
+import closure_1 from "initialize" /* 7732 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 

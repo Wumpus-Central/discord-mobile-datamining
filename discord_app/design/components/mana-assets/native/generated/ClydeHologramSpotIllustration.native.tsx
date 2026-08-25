@@ -1,10 +1,10 @@
-// === Module 5605: ClydeHologramSpotIllustration ===
+// === Module 6289: ClydeHologramSpotIllustration ===
 
-// Module 5605 (ClydeHologramSpotIllustration)
+// Module 6289 (ClydeHologramSpotIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5606 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6290 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ClydeHologramSpotIllustration.native.tsx");

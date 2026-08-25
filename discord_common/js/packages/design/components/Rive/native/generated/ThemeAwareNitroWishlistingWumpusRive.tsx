@@ -1,8 +1,8 @@
-// === Module 4195: ThemeAwareNitroWishlistingWumpusRive ===
+// === Module 4196: ThemeAwareNitroWishlistingWumpusRive ===
 
-// Module 4195 (ThemeAwareNitroWishlistingWumpusRive)
-import BaseRive from "BaseRive" /* 4113 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4168 */;
+// Module 4196 (ThemeAwareNitroWishlistingWumpusRive)
+import BaseRive from "BaseRive" /* 4114 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4169 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

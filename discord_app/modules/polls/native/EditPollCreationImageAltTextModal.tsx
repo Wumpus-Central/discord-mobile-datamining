@@ -1,13 +1,13 @@
-// === Module 11441: EditPollCreationImageAltTextModal ===
+// === Module 11797: EditPollCreationImageAltTextModal ===
 
-// Module 11441 (EditPollCreationImageAltTextModal)
+// Module 11797 (EditPollCreationImageAltTextModal)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { MAX_POLL_ANSWER_LENGTH } from "POLL_ATTACHMENT_FOLDER" /* 7614 */;
+import { MAX_POLL_ANSWER_LENGTH } from "POLL_ATTACHMENT_FOLDER" /* 7432 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
@@ -32,7 +32,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   let first;
   const tmp = callback4();
-  const tmp4 = first(11438)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = first(11794)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let obj = React;
   let str;
@@ -53,42 +53,42 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   }, items);
   obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { onPress: onSave(11440).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  obj1 = { onPress: onSave(11796).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1236).intl;
   obj1[3] = intl.string(onSave(1236).t.cpT0Cq);
-  obj1[4] = callback2(onSave(1297).Icon, { source: first(8182) });
+  obj1[4] = callback2(onSave(1297).Icon, { source: first(8178) });
   const items1 = [callback2(closure_5, obj1), , ];
   const obj3 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: null };
   const intl2 = onSave(1236).intl;
   obj3[2] = intl2.string(onSave(1236).t.Cq44Rg);
-  items1[1] = callback2(onSave(4739).Text, obj3);
+  items1[1] = callback2(onSave(4376).Text, obj3);
   const obj4 = { onPress: callback, activeOpacity: 0.5, children: null };
   const obj5 = { variant: "text-md/medium", color: "text-brand", children: null };
   const intl3 = onSave(1236).intl;
   obj5[2] = intl3.string(onSave(1236).t["R3BPH+"]);
-  obj4[2] = callback2(onSave(4739).Text, obj5);
+  obj4[2] = callback2(onSave(4376).Text, obj5);
   items1[2] = callback2(closure_5, obj4);
   obj[1] = items1;
   const items2 = [callback3(closure_6, obj), callback2(closure_6, { style: tmp.separator }), ];
   const obj7 = { style: tmp.contentContainer, children: null };
-  let tmp2Result = tmp2(6582);
+  let tmp2Result = tmp2(5930);
   const items3 = [callback2(closure_6, { style: tmp.imageContainer, children: tmp4.renderImage }), ];
   const obj9 = { style: tmp.formContainer, children: null };
   const items4 = [callback2(onSave(1297).Spacer, { size: 27 }), , , ];
   const obj10 = { children: null };
-  tmp2Result = tmp2(8950);
+  tmp2Result = tmp2(9207);
   const intl4 = onSave(1236).intl;
   obj10[0] = intl4.string(onSave(1236).t["/2Gnoa"]);
   items4[1] = callback2(tmp2Result, obj10);
   const obj11 = { showTopContainer: false, showBorder: false, multiline: false, value: first, onChange: tmp5[1], clearButtonVisibility: onSave(1297).ClearButtonVisibility.WITH_CONTENT, style: tmp.textInput, textContentType: "none", maxLength: MAX_POLL_ANSWER_LENGTH, autoFocus: true, autoCorrect: true, accessibilityLabel: null };
   const intl5 = onSave(1236).intl;
   obj11[11] = intl5.string(onSave(1236).t["/2Gnoa"]);
-  items4[2] = callback2(onSave(8122).FormInput, obj11);
+  items4[2] = callback2(onSave(8118).FormInput, obj11);
   items4[3] = callback2(onSave(1297).Spacer, { size: 27 });
   obj9[1] = items4;
   items3[1] = callback3(closure_6, obj9);
   obj7[1] = items3;
   items2[2] = callback3(tmp2Result, obj7);
   obj[2] = items2;
-  return callback3(onSave(6840).SafeAreaPaddingView, obj);
+  return callback3(onSave(5434).SafeAreaPaddingView, obj);
 };

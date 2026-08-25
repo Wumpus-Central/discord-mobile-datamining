@@ -1,6 +1,6 @@
-// === Module 8811: OAUTH2_AUTHORIZE_MODAL_KEY ===
+// === Module 10706: OAUTH2_AUTHORIZE_MODAL_KEY ===
 
-// Module 8811 (OAUTH2_AUTHORIZE_MODAL_KEY)
+// Module 10706 (OAUTH2_AUTHORIZE_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/oauth2/native/Constants.tsx");

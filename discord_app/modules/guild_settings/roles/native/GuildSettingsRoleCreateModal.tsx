@@ -1,23 +1,23 @@
-// === Module 16922: RoleCreateScene ===
+// === Module 16954: RoleCreateScene ===
 
-// Module 16922 (RoleCreateScene)
+// Module 16954 (RoleCreateScene)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4766 */;
+import Text from "Text" /* 4376 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4831 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_11 from "mergeGuildAvatar" /* 1922 */;
-import closure_12 from "handleFormInit" /* 8912 */;
-import title from "title" /* 16923 */;
+import closure_12 from "handleFormInit" /* 9169 */;
+import title from "title" /* 16955 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function RoleCreateScene() {
@@ -66,11 +66,11 @@ function RoleCreateScene() {
     if (dependencyMap === closure_1_17) {
       const num5 = 0;
     }
-    yield closure_1_1(6815).createRole(closure_1_1.id, c2, num5);
+    yield closure_1_1(5338).createRole(closure_1_1.id, c2, num5);
     if (1 === tmp7) {
       c2 = 0;
       callback(false);
-      obj1 = closure_1_0(4096);
+      obj1 = closure_1_0(4097);
       const result = obj1.roleCreateFailedToast();
       c4 = 3;
     } else if (arg0 === 1) {
@@ -89,16 +89,16 @@ function RoleCreateScene() {
         if (null != selectedRoleId) {
           if (null != role) {
             if (null != guild) {
-              tmp3(4096).roleCreatedToast();
-              const obj5 = tmp3(4096);
+              tmp3(4097).roleCreatedToast();
+              const obj5 = tmp3(4097);
               const tmp13 = tmp3;
-              tmp3(16920).setRoleJustCreated(true);
+              tmp3(16952).setRoleJustCreated(true);
               let STEP_MEMBERS = closure_1_25.STEP_PERMISSIONS;
               const guild2 = obj.getProps().guild;
               tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               const currentUser = closure_1_11.getCurrentUser();
               const tmp23 = closure_1_9(guild2, currentUser);
-              const obj6 = tmp3(16920);
+              const obj6 = tmp3(16952);
               const tmp18 = tmp32;
               obj = { permission: null, user: null, context: null };
               obj[0] = closure_1_20.ADMINISTRATOR;
@@ -112,13 +112,13 @@ function RoleCreateScene() {
                 STEP_MEMBERS = tmp17.STEP_MEMBERS;
               }
               tmp3.push(STEP_MEMBERS);
-              obj7 = v0(4029);
+              obj7 = v0(4030);
               obj = { flow_type: null, from_step: null, to_step: null, skip: false };
               obj[0] = closure_1_19.GUILD_ROLE_CREATION_MODAL;
               obj[1] = closure_1_26[closure_1_25.STEP_DISPLAY];
               obj[2] = closure_1_26[STEP_MEMBERS];
               const tmp18Result = tmp18(698);
-              const merged = Object.assign(tmp13(5047).collectGuildAnalyticsMetadata(guild.id));
+              const merged = Object.assign(tmp13(4588).collectGuildAnalyticsMetadata(guild.id));
               tmp18Result.track(closure_1_18.USER_FLOW_TRANSITION, obj);
               return false;
             }
@@ -516,5 +516,5 @@ export default function GuildSettingsRoleCreateModal() {
     obj.track(closure_1_18.USER_FLOW_TRANSITION, obj);
   });
   obj = { screens: closure_32, initialRouteName: obj4.STEP_DISPLAY };
-  return callback3(stateFromStores(6343).Navigator, obj);
+  return callback3(stateFromStores(5889).Navigator, obj);
 };

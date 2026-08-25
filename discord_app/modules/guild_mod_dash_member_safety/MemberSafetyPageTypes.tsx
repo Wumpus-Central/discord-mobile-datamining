@@ -1,8 +1,8 @@
-// === Module 15895: SUBMITTED ===
+// === Module 15927: SUBMITTED ===
 
-// Module 15895 (SUBMITTED)
+// Module 15927 (SUBMITTED)
 import set from "set" /* 2 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4204 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4205 */;
 
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };
 const SUBMITTED = MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED;

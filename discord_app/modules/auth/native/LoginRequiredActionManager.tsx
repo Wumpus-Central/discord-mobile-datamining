@@ -1,8 +1,8 @@
-// === Module 16722: handleConnectionOpen ===
+// === Module 16754: handleConnectionOpen ===
 
-// Module 16722 (handleConnectionOpen)
-import initializeDefault from "initialize" /* 5043 */;
-import handleLogoutDefault from "handleLogout" /* 5261 */;
+// Module 16754 (handleConnectionOpen)
+import initializeDefault from "initialize" /* 5367 */;
+import handleLogoutDefault from "handleLogout" /* 5933 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import closure_4 from "handleUpdateUser" /* 1384 */;
 import ME from "ME" /* 676 */;
@@ -35,8 +35,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             const obj = closure_1_1(closure_1_2[5]);
           }
         };
-        currentUser(7398).openUserSettings(obj);
-        const obj2 = currentUser(7398);
+        currentUser(6125).openUserSettings(obj);
+        const obj2 = currentUser(6125);
       }
     }
     if (result1) {

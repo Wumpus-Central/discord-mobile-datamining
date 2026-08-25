@@ -1,9 +1,9 @@
-// === Module 10440: useVirtualCurrencyBalanceAnimationData ===
+// === Module 10295: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 10440 (useVirtualCurrencyBalanceAnimationData)
+// Module 10295 (useVirtualCurrencyBalanceAnimationData)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");

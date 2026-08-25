@@ -1,8 +1,8 @@
-// === Module 14267: useStaffOrDeveloperSettingPredicate ===
+// === Module 14297: useStaffOrDeveloperSettingPredicate ===
 
-// Module 14267 (useStaffOrDeveloperSettingPredicate)
+// Module 14297 (useStaffOrDeveloperSettingPredicate)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "init" /* 7510 */;
+import closure_2 from "init" /* 7324 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/user_settings/dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx");

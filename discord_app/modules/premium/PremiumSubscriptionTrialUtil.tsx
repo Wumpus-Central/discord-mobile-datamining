@@ -1,10 +1,10 @@
-// === Module 8317: useHasActiveTrial ===
+// === Module 8318: useHasActiveTrial ===
 
-// Module 8317 (useHasActiveTrial)
+// Module 8318 (useHasActiveTrial)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "reset" /* 4048 */;
-import closure_4 from "emitChanges" /* 7459 */;
+import closure_3 from "reset" /* 4049 */;
+import closure_4 from "emitChanges" /* 7057 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 require = arg1;

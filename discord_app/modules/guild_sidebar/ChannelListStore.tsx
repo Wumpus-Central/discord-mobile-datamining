@@ -1,26 +1,26 @@
-// === Module 5255: handleReset ===
+// === Module 7131: handleReset ===
 
-// Module 5255 (handleReset)
+// Module 7131 (handleReset)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4014 */;
-import computeSubtitleDefault from "computeSubtitle" /* 5277 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4015 */;
+import computeSubtitleDefault from "computeSubtitle" /* 7134 */;
 import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "isSubscriptionGated" /* 1982 */;
-import closure_5 from "scheduledEventSort" /* 4374 */;
-import closure_6 from "rebuild" /* 5256 */;
-import closure_7 from "storeThread" /* 4026 */;
+import closure_4 from "isSubscriptionGated" /* 1983 */;
+import closure_5 from "scheduledEventSort" /* 7132 */;
+import closure_6 from "rebuild" /* 5329 */;
+import closure_7 from "storeThread" /* 4027 */;
 import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
 import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "incrementVersion" /* 5275 */;
+import closure_10 from "incrementVersion" /* 5366 */;
 import closure_11 from "ensureGuildLoaded" /* 1391 */;
-import closure_12 from "handleConnectionOpen" /* 5276 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_14 from "generateOldThreadCutoff" /* 4777 */;
-import closure_15 from "handleConnectionOpen" /* 1980 */;
-import closure_16 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_12 from "handleConnectionOpen" /* 7133 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_14 from "generateOldThreadCutoff" /* 4395 */;
+import closure_15 from "handleConnectionOpen" /* 1981 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 4589 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 require = arg1;

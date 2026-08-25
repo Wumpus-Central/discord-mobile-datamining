@@ -1,17 +1,17 @@
-// === Module 8363: transformToRowGeneratedComponent ===
+// === Module 8369: transformToRowGeneratedComponent ===
 
-// Module 8363 (transformToRowGeneratedComponent)
+// Module 8369 (transformToRowGeneratedComponent)
 import setDefault from "set" /* 687 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4815 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4816 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8360 */;
-import nativeStylePropertiesDefault from "nativeStyleProperties" /* 8361 */;
-import MediaGalleryItemType from "MediaGalleryItemType" /* 8379 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4571 */;
+import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4632 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8366 */;
+import nativeStylePropertiesDefault from "nativeStyleProperties" /* 8367 */;
+import MediaGalleryItemType from "MediaGalleryItemType" /* 8385 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
-import { CheckpointVersions } from "CheckpointPersonas" /* 4811 */;
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8364 */;
+import { CheckpointVersions } from "CheckpointPersonas" /* 4628 */;
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8370 */;
 import importDefaultResult from "priv" /* 1405 */;
 
 require = arg1;
@@ -19,15 +19,15 @@ function transformToRowGeneratedComponent(message, accessory) {
   let _require = message;
   let initialSnowflakeSelectOptions = accessory;
   message = message.message;
-  let f81931 = message;
+  let f82107 = message;
   ({ interaction, guildId, shouldDisableInteractiveComponents, shouldObscureSpoiler } = message);
   const enabledContentHarmTypeFlags = message.enabledContentHarmTypeFlags;
   ({ shouldShowMosaicMediaDescriptions: processColor, shouldAgeVerify } = message);
   const type = accessory.type;
   let tmp = _require;
-  let tmp2 = f81931;
+  let tmp2 = f82107;
   ({ colors, markdownConfigs } = message);
-  if (_require(f81931[6]).ComponentType.ACTION_ROW === type) {
+  if (_require(f82107[6]).ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
     let mapped = components.map((arg0) => {
       const tmp = closure_1_8(closure_0, arg0);
@@ -74,22 +74,22 @@ function transformToRowGeneratedComponent(message, accessory) {
     obj1.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     _require = accessory;
     initialSnowflakeSelectOptions = found1;
-    f81931 = (arg0) => initialSnowflakeSelectOptions.options[arg0].label;
+    f82107 = (arg0) => initialSnowflakeSelectOptions.options[arg0].label;
     const tmpResult3 = tmp(tmp2[7]);
     const obj2 = { expensive: null, cheap: null };
     obj2[0] = function expensive() {
       if (null != initialSnowflakeSelectOptions) {
         if (0 !== arr.length) {
-          const mapped = arr.map(f81931);
-          const intl = accessory(f81931[8]).intl;
+          const mapped = arr.map(f82107);
+          const intl = accessory(f82107[8]).intl;
           const obj = { selections: null };
           obj[0] = mapped.join(",");
-          return intl.formatToPlainString(accessory(f81931[8]).t["I/ROH+"], obj);
+          return intl.formatToPlainString(accessory(f82107[8]).t["I/ROH+"], obj);
         }
       }
-      const placeholder = accessory(f81931[7]).getSelectPlaceholder(accessory);
-      const intl2 = accessory(f81931[8]).intl;
-      return intl2.formatToPlainString(accessory(f81931[8]).t["3aednA"], { placeholder });
+      const placeholder = accessory(f82107[7]).getSelectPlaceholder(accessory);
+      const intl2 = accessory(f82107[8]).intl;
+      return intl2.formatToPlainString(accessory(f82107[8]).t["3aednA"], { placeholder });
     };
     const tmpResult4 = tmp(tmp2[19]);
     obj2[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
@@ -215,7 +215,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                   if (width > 0) {
                     if (null != height) {
                       if (height > 0) {
-                        let obj = accessory(f81931[20]);
+                        let obj = accessory(f82107[20]);
                         if (obj.isImageContentType(contentType)) {
                           let VISUAL_PLACEHOLDER = tmp(tmp2[14]).MediaGalleryItemType.IMAGE;
                           let tmp3 = tmp2;
@@ -245,7 +245,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                         spoiler = false;
                       }
                       obj[2] = spoiler;
-                      obj[3] = f81931.author.bot;
+                      obj[3] = f82107.author.bot;
                       obj[4] = shouldObscureSpoiler;
                       obj[5] = enabledContentHarmTypeFlags;
                       obj[6] = shouldAgeVerify;
@@ -295,7 +295,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                         let combined = null;
                         if (VISUAL_PLACEHOLDER === tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
                           const _HermesInternal = HermesInternal;
-                          combined = "" + f81931.id + "_MediaGallery(" + initialSnowflakeSelectOptions.id + ")_" + arg1;
+                          combined = "" + f82107.id + "_MediaGallery(" + initialSnowflakeSelectOptions.id + ")_" + arg1;
                         }
                         obj.portalId = combined;
                         let tmp16 = obj;
@@ -315,8 +315,8 @@ function transformToRowGeneratedComponent(message, accessory) {
                     }
                   }
                 }
-                tmp3 = f81931;
-                VISUAL_PLACEHOLDER = accessory(f81931[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
+                tmp3 = f82107;
+                VISUAL_PLACEHOLDER = accessory(f82107[14]).MediaGalleryItemType.VISUAL_PLACEHOLDER;
                 tmp4 = accessory;
               });
               const found2 = mapped3.filter(tmp(tmp2[5]).isNotNullish);
@@ -509,22 +509,22 @@ function transformToRowGeneratedComponent(message, accessory) {
     const tmpResult21 = tmp(tmp2[12]);
     obj17.placeholder = tmp(tmp2[7]).getSelectPlaceholder(accessory);
     _require = accessory;
-    f81931 = (label) => label.label;
+    f82107 = (label) => label.label;
     const tmpResult22 = tmp(tmp2[7]);
     obj18 = { expensive: null, cheap: null };
     obj18[0] = function expensive() {
       if (null != initialSnowflakeSelectOptions) {
         if (0 !== arr.length) {
-          const mapped = arr.map(f81931);
-          const intl = accessory(f81931[8]).intl;
+          const mapped = arr.map(f82107);
+          const intl = accessory(f82107[8]).intl;
           const obj = { selections: null };
           obj[0] = mapped.join(",");
-          return intl.formatToPlainString(accessory(f81931[8]).t["I/ROH+"], obj);
+          return intl.formatToPlainString(accessory(f82107[8]).t["I/ROH+"], obj);
         }
       }
-      const placeholder = accessory(f81931[7]).getSelectPlaceholder(accessory);
-      const intl2 = accessory(f81931[8]).intl;
-      return intl2.formatToPlainString(accessory(f81931[8]).t["3aednA"], { placeholder });
+      const placeholder = accessory(f82107[7]).getSelectPlaceholder(accessory);
+      const intl2 = accessory(f82107[8]).intl;
+      return intl2.formatToPlainString(accessory(f82107[8]).t["3aednA"], { placeholder });
     };
     const tmpResult23 = tmp(tmp2[19]);
     obj18[1] = tmp(tmp2[7]).getSelectPlaceholder(accessory);
@@ -539,14 +539,14 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            let VISUAL_PLACEHOLDER = tmp(8379).MediaGalleryItemType.IMAGE;
+            let VISUAL_PLACEHOLDER = tmp(8385).MediaGalleryItemType.IMAGE;
             let tmp4 = tmp;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              VISUAL_PLACEHOLDER = tmp(8379).MediaGalleryItemType.VIDEO;
+              VISUAL_PLACEHOLDER = tmp(8385).MediaGalleryItemType.VIDEO;
               tmp4 = tmp;
             }
-            tmpResult = tmp(4816);
+            tmpResult = tmp(4571);
           }
           obj = urlMatchesFileExtension;
         }
@@ -588,7 +588,7 @@ let c10 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  obj = { type: "textDisplayComponent", parserState: obj(8355).getInitialParserStateFromMessage(message.message, closure_7) };
+  obj = { type: "textDisplayComponent", parserState: obj(8356).getInitialParserStateFromMessage(message.message, closure_7) };
   obj = {};
   const merged = Object.assign(message);
   obj.markdownConfigs = { textDisplayComponent: obj };
@@ -602,12 +602,12 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
       if (null != height) {
         if (height > 0) {
           if (obj.isImageContentType(contentType)) {
-            return tmp(8379).MediaGalleryItemType.IMAGE;
+            return tmp(8385).MediaGalleryItemType.IMAGE;
           } else {
             if (tmpResult.isVideoContentType(contentType)) {
-              return tmp(8379).MediaGalleryItemType.VIDEO;
+              return tmp(8385).MediaGalleryItemType.VIDEO;
             }
-            tmpResult = tmp(4816);
+            tmpResult = tmp(4571);
           }
           obj = urlMatchesFileExtension;
         }

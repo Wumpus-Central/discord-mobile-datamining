@@ -1,16 +1,16 @@
-// === Module 16602: RestrictedHoursLogoutBlockingLayer ===
+// === Module 16634: RestrictedHoursLogoutBlockingLayer ===
 
-// Module 16602 (RestrictedHoursLogoutBlockingLayer)
+// Module 16634 (RestrictedHoursLogoutBlockingLayer)
 import ThemesDefault from "Themes" /* 712 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 4737 */;
-import ActivityIndicator from "ActivityIndicator" /* 5451 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 16605 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 4812 */;
+import ActivityIndicator from "ActivityIndicator" /* 5929 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 16637 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function RestrictedHoursLogoutBlockingLayer(visible) {
@@ -209,18 +209,18 @@ export default function RestrictedHoursModal() {
     if (!tmp4.current) {
       tmp.current = true;
       callback(true);
-      const obj = tmp4(5261);
-      tmp4(5261).logout("restricted_hours").finally(() => {
+      const obj = tmp4(5933);
+      tmp4(5933).logout("restricted_hours").finally(() => {
         if (ref.current) {
           closure_1.current = false;
           callback(false);
         }
       });
-      const logoutResult = tmp4(5261).logout("restricted_hours");
+      const logoutResult = tmp4(5933).logout("restricted_hours");
     }
   }, []);
   importDefault = tmp4;
-  let obj = callback(6343);
+  let obj = callback(5889);
   const items = [callback, tmp4];
   const items1 = [tmp];
   const navigatorScreens = obj.useNavigatorScreens(() => ({
@@ -238,11 +238,11 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(16601).closeRestrictedHoursModal();
-      const obj = callback(16601);
+      const result = callback(16633).closeRestrictedHoursModal();
+      const obj = callback(16633);
     }
   }, items1);
   useBackPressHandlerDefault(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
-  return callback2(callback(11154).Modal, obj);
+  return callback2(callback(11497).Modal, obj);
 };

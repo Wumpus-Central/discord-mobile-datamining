@@ -1,9 +1,9 @@
-// === Module 10703: useIsMessageSwipeActionsEnabled ===
+// === Module 10511: useIsMessageSwipeActionsEnabled ===
 
-// Module 10703 (useIsMessageSwipeActionsEnabled)
+// Module 10511 (useIsMessageSwipeActionsEnabled)
 import set from "set" /* 2 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10704 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 10705 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10512 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 10513 */;
 
 const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
 const result = set.fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");

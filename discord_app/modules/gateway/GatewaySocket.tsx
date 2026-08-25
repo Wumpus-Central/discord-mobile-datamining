@@ -1,21 +1,21 @@
-// === Module 13243: noop ===
+// === Module 13105: noop ===
 
-// Module 13243 (noop)
+// Module 13105 (noop)
 import timestampDefault from "timestamp" /* 3 */;
 import isTracingDefault from "isTracing" /* 10 */;
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
 import setDefault from "set" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import setDefault2 from "set" /* 5011 */;
-import packDefault from "pack" /* 13244 */;
-import presenceUpdate from "presenceUpdate" /* 13247 */;
-import presenceUpdateDefault from "presenceUpdate" /* 13247 */;
-import shouldUseAltGatewayDefault from "shouldUseAltGateway" /* 13249 */;
-import setDefault3 from "set" /* 13251 */;
-import prettyPrintTrace_ from "prettyPrintTrace_" /* 13256 */;
-import CLOSEDDefault from "CLOSED" /* 13257 */;
-import items2 from "items" /* 13259 */;
+import setDefault2 from "set" /* 7208 */;
+import packDefault from "pack" /* 13106 */;
+import presenceUpdate from "presenceUpdate" /* 13109 */;
+import presenceUpdateDefault from "presenceUpdate" /* 13109 */;
+import shouldUseAltGatewayDefault from "shouldUseAltGateway" /* 13111 */;
+import setDefault3 from "set" /* 13113 */;
+import prettyPrintTrace_ from "prettyPrintTrace_" /* 13118 */;
+import CLOSEDDefault from "CLOSED" /* 13119 */;
+import items2 from "items" /* 13121 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "refreshSourceMapCookie" /* 706 */;
@@ -189,11 +189,11 @@ prototype["_connect"] = function _connect() {
   const self = this;
   let identify = this;
   if (this.willReconnect()) {
-    let obj = f92729(13278);
+    let obj = f92717(13140);
     if (obj.getIsPaused()) {
       closure_9.info("Skipping _connect because socket is paused");
     } else {
-      self.connectionState = identify(13257).CONNECTING;
+      self.connectionState = identify(13119).CONNECTING;
       self.nextReconnectIsImmediate = false;
       const algorithm = self.compressionHandler.getAlgorithm();
       name = name.getName();
@@ -236,18 +236,18 @@ prototype["_connect"] = function _connect() {
       ({ compressionHandler: compressionHandler2, _handleClose } = self);
       onOpen = compressionHandler2;
       identify = _handleClose.bind(self);
-      f92729 = (str) => {
+      f92717 = (str) => {
         const timestamp = Date.now();
         let obj = closure_1_10;
         ({ op, s, t, d } = closure_1_10.unpack(str));
-        if (op !== onOpen(13247).Opcode.DISPATCH) {
+        if (op !== onOpen(13109).Opcode.DISPATCH) {
           const _HermesInternal = HermesInternal;
-          identify(10).mark("\u{1F310}", "GatewaySocket.onMessage " + op + " " + tmp3(13247).Opcode[op]);
+          identify(10).mark("\u{1F310}", "GatewaySocket.onMessage " + op + " " + tmp3(13109).Opcode[op]);
           const obj2 = identify(10);
         }
         if (closure_1_6.isLoggingGatewayEvents) {
           const items = [op];
-          if (op === tmp3(13247).Opcode.DISPATCH) {
+          if (op === tmp3(13109).Opcode.DISPATCH) {
             items.push(t);
           }
           items.push(d);
@@ -270,18 +270,18 @@ prototype["_connect"] = function _connect() {
         if (null != s) {
           identify.seq = s;
         }
-        if (onOpen(13247).Opcode.HELLO === op) {
+        if (onOpen(13109).Opcode.HELLO === op) {
           identify._clearHelloTimeout();
           identify._handleHello(d);
-        } else if (tmp3(13247).Opcode.RECONNECT === op) {
+        } else if (tmp3(13109).Opcode.RECONNECT === op) {
           identify._handleReconnect();
-        } else if (tmp3(13247).Opcode.INVALID_SESSION === op) {
+        } else if (tmp3(13109).Opcode.INVALID_SESSION === op) {
           const result2 = identify._handleInvalidSession(d);
-        } else if (tmp3(13247).Opcode.HEARTBEAT === op) {
+        } else if (tmp3(13109).Opcode.HEARTBEAT === op) {
           const result3 = identify._handleHeartbeatReceive();
-        } else if (tmp3(13247).Opcode.HEARTBEAT_ACK === op) {
+        } else if (tmp3(13109).Opcode.HEARTBEAT_ACK === op) {
           identify._handleHeartbeatAck(d);
-        } else if (tmp3(13247).Opcode.DISPATCH === op) {
+        } else if (tmp3(13109).Opcode.DISPATCH === op) {
           let tmp29 = null;
           if (tmp18) {
             obj = { compressed_byte_size: null, uncompressed_byte_size: null, compression_algorithm: null, packing_algorithm: null, unpack_duration_ms: null };
@@ -307,7 +307,7 @@ prototype["_connect"] = function _connect() {
       dependencyMap = 0;
       compressionHandler2.dataReady((arg0) => {
         try {
-          f92729(arg0, c3);
+          f92717(arg0, c3);
           c3 = 0;
         } catch (tmp5) {
           c3 = 0;
@@ -392,7 +392,7 @@ prototype["_connect"] = function _connect() {
         }
       }
       if (null == tmp32) {
-        const tmp48 = tmp5(13246)(str);
+        const tmp48 = tmp5(13108)(str);
         tmp48.binaryType = "arraybuffer";
         tmp32 = tmp48;
       }
@@ -451,7 +451,7 @@ prototype["_connect"] = function _connect() {
       };
       tmp32.onerror = function onError() {
         identify.setResumeUrl(null);
-        identify(4654).flushDNSCache();
+        identify(4374).flushDNSCache();
         identify._handleClose(false, 0, "An error with the websocket occurred");
       };
       let compressionHandler = self.compressionHandler;
@@ -812,7 +812,7 @@ prototype["_doIdentify"] = function _doIdentify() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -851,30 +851,30 @@ prototype["_doIdentify"] = function _doIdentify() {
             handleIdentifyResult = closure_1_0.handleIdentify();
             c0 = handleIdentifyResult;
             if (null !== handleIdentifyResult) {
-              closure_1_0.connectionState = closure_1_1(13257).IDENTIFYING;
+              closure_1_0.connectionState = closure_1_1(13119).IDENTIFYING;
               const _Date = Date;
               timestamp = Date.now();
               closure_1_0.identifyStartTime = timestamp;
               if (obj10.isCacheEnabled()) {
-                let committedVersions = closure_1_1(5406).getCommittedVersions();
-                const obj12 = closure_1_1(5406);
+                let committedVersions = closure_1_1(7259).getCommittedVersions();
+                const obj12 = closure_1_1(7259);
               } else {
                 committedVersions = {};
               }
               const items = [committedVersions, , ];
-              obj10 = closure_1_0(5400);
+              obj10 = closure_1_0(7255);
               if (obj13.isCacheEnabled()) {
-                let committedVersions1 = closure_1_1(5409).getCommittedVersions();
-                const obj15 = closure_1_1(5409);
+                let committedVersions1 = closure_1_1(7262).getCommittedVersions();
+                const obj15 = closure_1_1(7262);
               } else {
                 committedVersions1 = {};
               }
               items[1] = committedVersions1;
-              obj13 = closure_1_0(5400);
-              let canUseGuildVersionsResult = closure_1_0(5400).isCacheEnabled();
+              obj13 = closure_1_0(7255);
+              let canUseGuildVersionsResult = closure_1_0(7255).isCacheEnabled();
               if (canUseGuildVersionsResult) {
-                canUseGuildVersionsResult = closure_1_1(5407).canUseGuildVersions();
-                const obj17 = closure_1_1(5407);
+                canUseGuildVersionsResult = closure_1_1(7260).canUseGuildVersions();
+                const obj17 = closure_1_1(7260);
               }
               items[2] = canUseGuildVersionsResult;
               closure_2 = 1;
@@ -919,7 +919,7 @@ prototype["_doIdentify"] = function _doIdentify() {
               obj = { guild_versions: null };
               obj[0] = {};
             }
-            if (c0.connectionState !== closure_1_1(13257).IDENTIFYING) {
+            if (c0.connectionState !== closure_1_1(13119).IDENTIFYING) {
               obj4.warn("Skipping identify because connectionState or identifyStartTime has changed");
             }
             const token = closure_1_0.token;
@@ -934,9 +934,9 @@ prototype["_doIdentify"] = function _doIdentify() {
             obj4.verbose("[IDENTIFY]");
             const obj5 = { token: null, capabilities: null, properties: null, presence: null, compress: null, client_state: null };
             obj5[0] = token;
-            obj4 = closure_1_0(13279);
+            obj4 = closure_1_0(13141);
             let obj6 = { useChannelObfuscation: null };
-            obj6 = closure_1_0(13280);
+            obj6 = closure_1_0(13142);
             obj6[0] = obj6.isChannelMetadataObfuscationEnabled("GatewaySocket");
             obj5[1] = obj4.getClientCapabilities(obj6);
             obj5[2] = obj4;
@@ -946,14 +946,14 @@ prototype["_doIdentify"] = function _doIdentify() {
             const _JSON = JSON;
             const length = JSON.stringify(obj5);
             c0.identifyUncompressedByteSize = length.length;
-            c0.identifyCompressedByteSize = v0(13262).deflate(length).length;
+            c0.identifyCompressedByteSize = v0(13124).deflate(length).length;
             c0.identifyCount = c0.identifyCount + num3;
             num3 = c0;
-            c0.send(closure_1_0(13247).Opcode.IDENTIFY, obj5, false);
+            c0.send(closure_1_0(13109).Opcode.IDENTIFY, obj5, false);
             tmp64 = closure_1_1(698);
             tmp64.track(token.SESSION_START_CLIENT, {});
             const compressionHandler = c0.compressionHandler;
-            const obj8 = v0(13262);
+            const obj8 = v0(13124);
           }
         }
         dependencyMap = 3;
@@ -1028,10 +1028,10 @@ prototype["isConnected"] = function isConnected() {
   const self = this;
   let tmp3 = this.connectionState === CLOSEDDefault.IDENTIFYING;
   if (!tmp3) {
-    tmp3 = self.connectionState === tmp(13257).RESUMING;
+    tmp3 = self.connectionState === tmp(13119).RESUMING;
   }
   if (!tmp3) {
-    tmp3 = self.connectionState === tmp(13257).SESSION_ESTABLISHED;
+    tmp3 = self.connectionState === tmp(13119).SESSION_ESTABLISHED;
   }
   return tmp3;
 };
@@ -1060,7 +1060,7 @@ prototype["resetSocketAndClearCacheOnError"] = function resetSocketAndClearCache
   obj1 = self(667);
   const usesClientModsResult = obj1.usesClientMods();
   let obj2 = setDefault2;
-  obj = { name: self(5016).MetricEvents.SOCKET_CRASHED, tags: null };
+  obj = { name: self(7213).MetricEvents.SOCKET_CRASHED, tags: null };
   if (metricAction == null) {
     metricAction = action;
   }
@@ -1141,7 +1141,7 @@ prototype["close"] = function close() {
       num = 4000;
     }
     self._cleanup((close) => close.close(num));
-    self.connectionState = self(13257).CLOSED;
+    self.connectionState = self(13119).CLOSED;
     if (!flag) {
       self.sessionId = null;
       self.token = null;

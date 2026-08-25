@@ -1,6 +1,6 @@
-// === Module 11255: getCommandContext ===
+// === Module 11615: getCommandContext ===
 
-// Module 11255 (getCommandContext)
+// Module 11615 (getCommandContext)
 import closure_0 from "noop" /* 19 */;
 import closure_1 from "createGuildRecordFromRust" /* 1910 */;
 
@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/
 
 export const getCommandContext = function getCommandContext(type) {
   if ("contextless" === type.type) {
-    let obj = { channel: "Array", guild: "ct" };
+    let obj = { channel: "isArray", guild: "accessibilityRole" };
   } else {
     obj = { channel: null, guild: null };
     obj[0] = type.channel;
@@ -21,7 +21,7 @@ export const useCommandContext = function useCommandContext(context) {
   const items = [context];
   return React.useMemo(() => {
     if ("contextless" === type.type) {
-      let obj = { channel: "Array", guild: "ct" };
+      let obj = { channel: "isArray", guild: "accessibilityRole" };
     } else {
       obj = { channel: null, guild: null };
       obj[0] = tmp.channel;

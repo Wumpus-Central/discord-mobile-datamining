@@ -1,10 +1,10 @@
-// === Module 4732: BLUR_EFFECT_NAMES ===
+// === Module 4807: BLUR_EFFECT_NAMES ===
 
-// Module 4732 (BLUR_EFFECT_NAMES)
+// Module 4807 (BLUR_EFFECT_NAMES)
 import set from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4734 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4358 */;
-import importDefaultResult from "map" /* 4733 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4809 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4359 */;
+import importDefaultResult from "map" /* 4808 */;
 
 const obj = { componentName: "DCDVisualEffectView", componentFoundInstance: null };
 const tmp2 = DCDDeviceManager.getSystemVersionMajor() >= 13;

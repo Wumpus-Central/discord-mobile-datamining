@@ -1,10 +1,10 @@
-// === Module 11493: canRenderParticipantVideo ===
+// === Module 10794: canRenderParticipantVideo ===
 
-// Module 11493 (canRenderParticipantVideo)
+// Module 10794 (canRenderParticipantVideo)
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
-import ParticipantTypes from "ParticipantTypes" /* 4549 */;
-import { Features } from "DesktopSources" /* 4534 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
+import ParticipantTypes from "ParticipantTypes" /* 4401 */;
+import { Features } from "DesktopSources" /* 4444 */;
 
 const require = arg1;
 function canRenderParticipantVideo(participant, closure_1_4) {

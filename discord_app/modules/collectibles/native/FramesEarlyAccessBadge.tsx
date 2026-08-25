@@ -1,19 +1,19 @@
-// === Module 9306: BadgeWithTooltip ===
+// === Module 9585: BadgeWithTooltip ===
 
-// Module 9306 (BadgeWithTooltip)
+// Module 9585 (BadgeWithTooltip)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
-import useThemeDefault from "useTheme" /* 4314 */;
-import Text from "Text" /* 4739 */;
-import Layer from "Layer" /* 7164 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8027 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9270 */;
+import useThemeDefault from "useTheme" /* 4315 */;
+import Text from "Text" /* 4376 */;
+import Layer from "Layer" /* 5821 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 7849 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9549 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
@@ -47,7 +47,7 @@ function BadgeWithTooltip(tooltipPosition) {
   }, []);
   const items = [tooltipPosition, stringResult, first, callback];
   const memo = callback.useMemo(() => ({ position: tooltipPosition, label: c3, visible: first, onPress: callback }), items);
-  let obj = tooltipPosition(9307);
+  let obj = tooltipPosition(8801);
   const tooltip = obj.useTooltip(ref, memo);
   const items1 = [first];
   const effect = callback.useEffect(() => {
@@ -62,7 +62,7 @@ function BadgeWithTooltip(tooltipPosition) {
   const callback1 = callback.useCallback(() => {
     callback((arg0) => !arg0);
   }, []);
-  const tmp2 = first(4314)();
+  const tmp2 = first(4315)();
   const isThemeDarkResult = tooltipPosition(1363).isThemeDark(tmp2);
   let str = "text-overlay-light";
   if (isThemeDarkResult) {
@@ -72,9 +72,9 @@ function BadgeWithTooltip(tooltipPosition) {
   const stringResult1 = intl2.string(tooltipPosition(1236).t["1m6qcO"]);
   obj = { ref, onPress: callback1, hitSlop: closure_9, accessibilityRole: "button", accessibilityLabel: stringResult1, accessibilityHint: stringResult, style: items2, children: null };
   items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items3 = [callback2(tooltipPosition(8027).NitroWheelIcon, { size: "xs", color: str }), ];
+  const items3 = [callback2(tooltipPosition(7849).NitroWheelIcon, { size: "xs", color: str }), ];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult1 };
-  items3[1] = callback2(tooltipPosition(4739).Text, obj);
+  items3[1] = callback2(tooltipPosition(4376).Text, obj);
   obj[7] = items3;
   return callback3(closure_5, obj);
 }

@@ -1,30 +1,30 @@
-// === Module 12593: VideoButton ===
+// === Module 10907: VideoButton ===
 
-// Module 12593 (VideoButton)
+// Module 10907 (VideoButton)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import context from "context" /* 7177 */;
-import contextDefault from "context" /* 7177 */;
-import useIsRemoteDefault from "useIsRemote" /* 7273 */;
-import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 8712 */;
-import ActionButtonAll from "ActionButton" /* 8731 */;
-import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 8734 */;
-import stopScreenshareDefault from "stopScreenshare" /* 10970 */;
-import registerAssetDefault from "registerAsset" /* 12597 */;
-import registerAssetDefault2 from "registerAsset" /* 12598 */;
-import registerAssetDefault3 from "registerAsset" /* 12599 */;
+import context from "context" /* 5834 */;
+import contextDefault from "context" /* 5834 */;
+import useIsRemoteDefault from "useIsRemote" /* 5998 */;
+import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 9899 */;
+import ActionButtonAll from "ActionButton" /* 10753 */;
+import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 10756 */;
+import stopScreenshareDefault from "stopScreenshare" /* 10912 */;
+import registerAssetDefault from "registerAsset" /* 10928 */;
+import registerAssetDefault2 from "registerAsset" /* 10929 */;
+import registerAssetDefault3 from "registerAsset" /* 10930 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "getParticipants" /* 4778 */;
-import closure_8 from "set" /* 4545 */;
-import closure_9 from "reset" /* 4658 */;
+import closure_7 from "getParticipants" /* 4396 */;
+import closure_8 from "set" /* 4397 */;
+import closure_9 from "reset" /* 4402 */;
 import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_12 from "initialize" /* 8720 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4549 */;
-import { Features } from "DesktopSources" /* 4534 */;
+import closure_11 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_12 from "initialize" /* 10743 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4401 */;
+import { Features } from "DesktopSources" /* 4444 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 class VideoButton {
@@ -296,7 +296,7 @@ function useActionBarSecondButton(channel) {
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
   closure_1 = undefined;
-  let obj = channel(8712);
+  let obj = channel(9899);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const items = [closure_7, closure_10];
   closure_1 = channel(589).useStateFromStores(items, () => {
@@ -366,12 +366,12 @@ export default function ChannelCallActionBar(arg0) {
   const tmp4 = useIsRemoteDefault();
   let obj = useIsFiveButtonLayout;
   const isFiveButtonLayout = obj.useIsFiveButtonLayout(channel.id);
-  obj = { value: contextDefault(tmp2(7197).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
+  obj = { value: contextDefault(tmp2(5854).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
   obj = { pointerEvents: "box-none", style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container, children: null };
   if (shouldShowConnectingScreen) {
     obj1 = { channel: null };
     obj1[0] = channel;
-    let tmp13Result = tmp11(tmp9(12600).CallConnectingActionBar, obj1);
+    let tmp13Result = tmp11(tmp9(10932).CallConnectingActionBar, obj1);
   } else {
     let tmp11Result = null;
     if (!tmp4) {
@@ -402,12 +402,12 @@ export default function ChannelCallActionBar(arg0) {
     const obj5 = { channel: null, isSmallSize: null };
     obj5[0] = channel;
     obj5[1] = isFiveButtonLayout;
-    items[2] = tmp11(tmp9(12620).ChannelCallMicButton, obj5);
+    items[2] = tmp11(tmp9(10956).ChannelCallMicButton, obj5);
     if (tmp7.END_REMOTE === END_REMOTE) {
       const obj6 = { channel: null, isSmallSize: null };
       obj6[0] = channel;
       obj6[1] = isFiveButtonLayout;
-      let tmp11Result2 = tmp11(tmp9(12627).DisconnectRemoteButton, obj6);
+      let tmp11Result2 = tmp11(tmp9(10982).DisconnectRemoteButton, obj6);
     } else if (tmp7.END_STREAM === END_REMOTE) {
       const obj7 = { channel: null, isSmallSize: null };
       obj7[0] = channel;

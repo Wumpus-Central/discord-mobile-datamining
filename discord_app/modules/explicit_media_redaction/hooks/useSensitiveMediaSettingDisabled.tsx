@@ -1,8 +1,8 @@
-// === Module 14248: useSensitiveMediaSettingDisabled ===
+// === Module 14278: useSensitiveMediaSettingDisabled ===
 
-// Module 14248 (useSensitiveMediaSettingDisabled)
+// Module 14278 (useSensitiveMediaSettingDisabled)
 import set from "set" /* 2 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14249 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14279 */;
 
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 9101: ContentInventoryFeedKey ===
+// === Module 9067: ContentInventoryFeedKey ===
 
-// Module 9101 (ContentInventoryFeedKey)
+// Module 9067 (ContentInventoryFeedKey)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");

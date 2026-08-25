@@ -1,9 +1,9 @@
-// === Module 8349: XNeutralIcon ===
+// === Module 8350: XNeutralIcon ===
 
-// Module 8349 (XNeutralIcon)
+// Module 8350 (XNeutralIcon)
 import noopAll from "noop" /* 19 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 8350 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 8351 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,19 +1,19 @@
-// === Module 15638: HomeDrawerDMsRow ===
+// === Module 15670: HomeDrawerDMsRow ===
 
-// Module 15638 (HomeDrawerDMsRow)
+// Module 15670 (HomeDrawerDMsRow)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4239 */;
-import Text from "Text" /* 4739 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15634 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4240 */;
+import Text from "Text" /* 4376 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15666 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "sortActivity" /* 4564 */;
-import closure_5 from "markAllUserIdListsStale" /* 4033 */;
+import closure_4 from "sortActivity" /* 4469 */;
+import closure_5 from "markAllUserIdListsStale" /* 4034 */;
 import { StatusTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function HomeDrawerDMsRow() {
@@ -36,7 +36,7 @@ function HomeDrawerDMsRow() {
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
     obj1[3] = intl.format(tmp2(1236).t.N5UIKr, obj2);
-    items1[1] = callback(tmp2(4739).Text, obj1);
+    items1[1] = callback(tmp2(4376).Text, obj1);
     obj[1] = items1;
     tmp5 = callback2(View, obj);
   }

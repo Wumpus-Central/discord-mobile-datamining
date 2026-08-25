@@ -1,14 +1,14 @@
-// === Module 16850: AuditLogActions ===
+// === Module 16882: AuditLogActions ===
 
-// Module 16850 (AuditLogActions)
+// Module 16882 (AuditLogActions)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "getTargetType" /* 16851 */;
-import { AuditLogChange } from "getTargetType" /* 16851 */;
+import closure_2 from "getTargetType" /* 16883 */;
+import { AuditLogChange } from "getTargetType" /* 16883 */;
 import { isGuildSelectableChannelType as closure_4 } from "createChannelRecord" /* 1395 */;
-import { hasAnyPermission } from "GuildRoleRecordTypeTag" /* 1985 */;
-import closure_6 from "trackCommunicationDisabled" /* 1991 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 1984 */;
+import { hasAnyPermission } from "GuildRoleRecordTypeTag" /* 1986 */;
+import closure_6 from "trackCommunicationDisabled" /* 1992 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import importAllResult from "fromString" /* 506 */;

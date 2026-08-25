@@ -1,11 +1,11 @@
-// === Module 14513: QuestDockMode ===
+// === Module 14543: QuestDockMode ===
 
-// Module 14513 (QuestDockMode)
+// Module 14543 (QuestDockMode)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6753 */;
-import QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED from "QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED" /* 14514 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5268 */;
+import QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED from "QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED" /* 14544 */;
 
 const QuestDockMode = QuestsExperimentLocations.QuestDockMode;
 let c5 = false;

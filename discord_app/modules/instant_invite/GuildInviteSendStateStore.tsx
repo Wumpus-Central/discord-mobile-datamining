@@ -1,6 +1,6 @@
-// === Module 12384: setSendState ===
+// === Module 12702: setSendState ===
 
-// Module 12384 (setSendState)
+// Module 12702 (setSendState)
 import set from "set" /* 2 */;
 import keys from "keys" /* 644 */;
 

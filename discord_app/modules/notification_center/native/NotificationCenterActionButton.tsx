@@ -1,10 +1,10 @@
-// === Module 15731: NotificationCenterActionButton ===
+// === Module 15763: NotificationCenterActionButton ===
 
-// Module 15731 (NotificationCenterActionButton)
+// Module 15763 (NotificationCenterActionButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import IconButton from "IconButton" /* 8074 */;
-import registerAssetDefault from "registerAsset" /* 9453 */;
+import IconButton from "IconButton" /* 7896 */;
+import registerAssetDefault from "registerAsset" /* 8752 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

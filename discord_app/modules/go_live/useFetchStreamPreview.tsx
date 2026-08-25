@@ -1,11 +1,11 @@
-// === Module 12190: useFetchStreamPreview ===
+// === Module 11030: useFetchStreamPreview ===
 
-// Module 12190 (useFetchStreamPreview)
+// Module 11030 (useFetchStreamPreview)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 9900 */;
+import closure_3 from "reset" /* 4565 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
 import { BasicPermissions } from "sum" /* 505 */;
 
 const require = arg1;

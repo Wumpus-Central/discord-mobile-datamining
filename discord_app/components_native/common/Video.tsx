@@ -1,13 +1,13 @@
-// === Module 9055: VideoComponent ===
+// === Module 9017: VideoComponent ===
 
-// Module 9055 (VideoComponent)
+// Module 9017 (VideoComponent)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 class VideoComponent {
@@ -138,7 +138,7 @@ class Video extends PureComponent {
 const prototype = Video.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
-  this._renderTask = self(6579).runAfterInteractions(() => {
+  this._renderTask = self(5927).runAfterInteractions(() => {
     self.setState({ postponeRender: false });
   });
 };

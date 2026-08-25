@@ -1,7 +1,7 @@
-// === Module 8668: CountrySelectModal ===
+// === Module 8676: CountrySelectModal ===
 
-// Module 8668 (CountrySelectModal)
-import NavigationStack from "NavigationStack" /* 6343 */;
+// Module 8676 (CountrySelectModal)
+import NavigationStack from "NavigationStack" /* 5889 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -14,14 +14,14 @@ export default function CountrySelectModal() {
     obj = { title: null, headerLeft: null, render: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.gzXECH);
-    obj[1] = callback(6345).getHeaderCloseButton(callback2(5265).pop);
+    obj[1] = callback(5376).getHeaderCloseButton(callback2(4611).pop);
     obj[2] = function render() {
       return callback2(callback(table[5]), {
         onClose() {
-          return callback(5265).pop();
+          return callback(4611).pop();
         },
         onCountrySelected(countryCode) {
-          return callback(8666).setCountryCode(countryCode);
+          return callback(8674).setCountryCode(countryCode);
         }
       });
     };
@@ -29,7 +29,7 @@ export default function CountrySelectModal() {
     return obj;
   }, []);
   const effect = React.useEffect(() => () => {
-    callback(6579).runAfterInteractions(callback(8690).setCountrySelectorClosed, 400);
+    callback(5927).runAfterInteractions(callback(8698).setCountrySelectorClosed, 400);
   }, []);
   return jsx(NavigationStack.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
 };

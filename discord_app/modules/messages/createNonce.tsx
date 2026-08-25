@@ -1,6 +1,6 @@
-// === Module 7539: snowflakeSequence ===
+// === Module 7357: snowflakeSequence ===
 
-// Module 7539 (snowflakeSequence)
+// Module 7357 (snowflakeSequence)
 import set from "set" /* 2 */;
 import DISCORD_EPOCH from "DISCORD_EPOCH" /* 11 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;

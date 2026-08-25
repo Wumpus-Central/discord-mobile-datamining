@@ -1,17 +1,17 @@
-// === Module 14647: getUsedTemplateChannelsForGuild ===
+// === Module 14677: getUsedTemplateChannelsForGuild ===
 
-// Module 14647 (getUsedTemplateChannelsForGuild)
-import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7264 */;
-import GuildFeatures2 from "GuildFeatures" /* 13411 */;
+// Module 14677 (getUsedTemplateChannelsForGuild)
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 5987 */;
+import GuildFeatures2 from "GuildFeatures" /* 13446 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
-import { useEditStateStore } from "AllChannelAccessOptions" /* 14642 */;
-import closure_9 from "initialize" /* 14648 */;
+import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4019 */;
+import { useEditStateStore } from "AllChannelAccessOptions" /* 14672 */;
+import closure_9 from "initialize" /* 14678 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
-import importDefaultResult from "allSettled" /* 4389 */;
+import importDefaultResult from "allSettled" /* 4644 */;
 
 require = arg1;
 function getUsedTemplateChannelsForGuild(arg0) {
@@ -65,7 +65,7 @@ function _createChannelsFromTemplateTierBenefits() {
           obj[0] = arr;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

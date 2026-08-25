@@ -1,19 +1,19 @@
-// === Module 12828: createVoiceChannelLinkEmbed ===
+// === Module 12815: createVoiceChannelLinkEmbed ===
 
-// Module 12828 (createVoiceChannelLinkEmbed)
+// Module 12815 (createVoiceChannelLinkEmbed)
 import set from "set" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8208 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8204 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { getGuildAcronym } from "GuildNSFWContentLevel" /* 1434 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_9 from "markAllUserIdListsStale" /* 4033 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_9 from "markAllUserIdListsStale" /* 4034 */;
 import closure_10 from "mergeGuildAvatar" /* 1922 */;
 import { Permissions } from "ME" /* 676 */;
-import { InviteTypes } from "InviteSendStates" /* 4375 */;
+import { InviteTypes } from "InviteSendStates" /* 7340 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
@@ -71,14 +71,14 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             obj.acceptLabelText = stringResult;
             obj.onlineText = undefined;
             obj.memberText = undefined;
-            let tmp16Result = tmp16(6870);
+            let tmp16Result = tmp16(4866);
             const assetSource = Image.resolveAssetSource(tmp16Result.getChannelIcon(channel));
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
             }
             obj.channelIcon = uri;
-            tmp16Result = tmp16(4989);
+            tmp16Result = tmp16(4574);
             obj.titleText = tmp16Result.computeChannelName(channel, closure_10, closure_9);
             obj.titleColor = colors.titleColor;
             let tmp24;

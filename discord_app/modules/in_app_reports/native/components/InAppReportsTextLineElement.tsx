@@ -1,13 +1,13 @@
-// === Module 8193: TextLineElement ===
+// === Module 8189: TextLineElement ===
 
-// Module 8193 (TextLineElement)
+// Module 8189 (TextLineElement)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ View: error, Linking: closure_8 } = get_ActivityIndicator);
@@ -40,7 +40,7 @@ export default function TextLineElement(element) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -98,7 +98,7 @@ export default function TextLineElement(element) {
               obj.openURL(closure_0);
             }
             table = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           table = tmp;

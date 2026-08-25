@@ -1,6 +1,6 @@
-// === Module 7502: videoAssetFromServer ===
+// === Module 7316: videoAssetFromServer ===
 
-// Module 7502 (videoAssetFromServer)
+// Module 7316 (videoAssetFromServer)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/types/v2/Video.tsx");

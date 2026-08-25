@@ -1,13 +1,13 @@
-// === Module 12004: ActivitiesPrivateChannelCallTooltip ===
+// === Module 12332: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 12004 (ActivitiesPrivateChannelCallTooltip)
+// Module 12332 (ActivitiesPrivateChannelCallTooltip)
 import noopAll from "noop" /* 19 */;
-import _modDef4119 from "module_4119" /* 4119 */;
+import _modDef4120 from "module_4120" /* 4120 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import { EMBEDDED_ACTIVITIES_BLOG_POST_URL as closure_5 } from "items3" /* 4485 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import { EMBEDDED_ACTIVITIES_BLOG_POST_URL as closure_5 } from "items3" /* 4408 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 noopAll;
@@ -44,11 +44,11 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
       return obj;
     }
   }
-  obj = { withRepeat: tmp2(4119).withRepeat, withSequence: tmp2(4119).withSequence, withTiming: tmp2(4671).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG: closure_7 };
+  obj = { withRepeat: tmp2(4120).withRepeat, withSequence: tmp2(4120).withSequence, withTiming: tmp2(4381).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG: closure_7 };
   T.__closure = obj;
   T.__workletHash = 4621705591670;
   T.__initData = closure_9;
-  const animatedStyle = num(4119).useAnimatedStyle(T);
+  const animatedStyle = num(4120).useAnimatedStyle(T);
   obj = { style: items1, children: null };
   items1 = [tmp.tooltipContainer, animatedStyle];
   obj1 = { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null };
@@ -62,8 +62,8 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const intl3 = tmp2(1236).intl;
   obj4[0] = intl3.string(num(1236).t["NX+WJN"]);
   obj4[1] = onClosePress.onClosePress;
-  obj3[1] = jsx(num(4750).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj3[1] = jsx(num(4815).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj[1] = jsx(num(1297).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null });
-  return jsx(_modDef4119.View, { style: items1, children: null });
+  return jsx(_modDef4120.View, { style: items1, children: null });
 };

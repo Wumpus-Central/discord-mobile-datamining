@@ -1,10 +1,10 @@
-// === Module 6935: HubIcon ===
+// === Module 4932: HubIcon ===
 
-// Module 6935 (HubIcon)
+// Module 4932 (HubIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6880 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 4876 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

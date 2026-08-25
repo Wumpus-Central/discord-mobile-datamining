@@ -1,12 +1,12 @@
-// === Module 16484: useConsoleConnectingInfo ===
+// === Module 16516: useConsoleConnectingInfo ===
 
-// Module 16484 (useConsoleConnectingInfo)
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9787 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9923 */;
-import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 16485 */;
-import getConsoleColorDefault from "getConsoleColor" /* 16487 */;
-import closure_3 from "set" /* 4545 */;
-import closure_4 from "handleUpdate" /* 4546 */;
+// Module 16516 (useConsoleConnectingInfo)
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 10855 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 12422 */;
+import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 16517 */;
+import getConsoleColorDefault from "getConsoleColor" /* 16519 */;
+import closure_3 from "set" /* 4397 */;
+import closure_4 from "handleUpdate" /* 4398 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");
@@ -60,7 +60,7 @@ export default function useConsoleConnectingInfo(arg0) {
   obj[1] = channelId2 === arg0 || channelId === arg0;
   obj[2] = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj[3] = tmp5(16486).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj[3] = tmp5(16518).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
   obj[4] = getConsoleColorDefault(str);
   obj[5] = tmp9;
   return obj;

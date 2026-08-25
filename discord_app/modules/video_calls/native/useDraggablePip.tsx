@@ -1,9 +1,9 @@
-// === Module 8728: clamp ===
+// === Module 10751: clamp ===
 
-// Module 8728 (clamp)
+// Module 10751 (clamp)
 import closure_2 from "_slicedToArray" /* 32 */;
-import { useChannelCallStore } from "VoiceChatDrawerState" /* 8706 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8714 */;
+import { useChannelCallStore } from "VoiceChatDrawerState" /* 9895 */;
+import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 10738 */;
 
 const require = arg1;
 ({ PIP_FOCUS_SCALE: c4, PIP_GESTURE_ACTIVE_OFFSET: c5 } = PIP_GESTURE_ACTIVE_OFFSET);

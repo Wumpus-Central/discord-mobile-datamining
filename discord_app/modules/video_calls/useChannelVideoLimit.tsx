@@ -1,8 +1,8 @@
-// === Module 9692: useChannelVideoLimit ===
+// === Module 9302: useChannelVideoLimit ===
 
-// Module 9692 (useChannelVideoLimit)
+// Module 9302 (useChannelVideoLimit)
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getVoiceStatesForGuild" /* 4550 */;
+import closure_3 from "getVoiceStatesForGuild" /* 4455 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 const require = arg1;

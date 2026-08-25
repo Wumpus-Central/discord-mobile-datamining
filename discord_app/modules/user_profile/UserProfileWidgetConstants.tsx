@@ -1,31 +1,31 @@
-// === Module 5376: items ===
+// === Module 7232: items ===
 
-// Module 5376 (items)
+// Module 7232 (items)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "addApplication" /* 4482 */;
+import closure_2 from "addApplication" /* 4421 */;
 
 require = arg1;
 const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").WidgetType.CLIPS_GALLERY, require("WidgetType").WidgetType.APPLICATION, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES, require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES];
 const items1 = [require("WidgetType").WidgetType.FAVORITE_GAMES];
 const items2 = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.CLIPS_GALLERY];
 const obj = {
-  [arg1(5371).WidgetType.FAVORITE_GAMES]: () => {
+  [arg1(7228).WidgetType.FAVORITE_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Rpf6Ak);
   },
-  [arg1(5371).WidgetType.CURRENT_GAMES]: () => {
+  [arg1(7228).WidgetType.CURRENT_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zs6NsE);
   },
-  [arg1(5371).WidgetType.WANT_TO_PLAY_GAMES]: () => {
+  [arg1(7228).WidgetType.WANT_TO_PLAY_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.I509Dl);
   },
-  [arg1(5371).WidgetType.PLAYED_GAMES]: () => {
+  [arg1(7228).WidgetType.PLAYED_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.QTq6Pf);
   },
-  [arg1(5371).WidgetType.APPLICATION]: (applicationId) => {
+  [arg1(7228).WidgetType.APPLICATION]: (applicationId) => {
     application = application.getApplication(applicationId.applicationId);
     let str;
     if (application != null) {
@@ -36,11 +36,11 @@ const obj = {
     }
     return str;
   },
-  [arg1(5371).WidgetType.PERSONAL]: () => {
+  [arg1(7228).WidgetType.PERSONAL]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.AVkYMx);
   },
-  [arg1(5371).WidgetType.CLIPS_GALLERY]: () => {
+  [arg1(7228).WidgetType.CLIPS_GALLERY]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zY8Ghg);
   }

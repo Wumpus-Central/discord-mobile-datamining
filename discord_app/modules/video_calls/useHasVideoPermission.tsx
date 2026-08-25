@@ -1,9 +1,9 @@
-// === Module 10969: useHasVideoPermission ===
+// === Module 10908: useHasVideoPermission ===
 
-// Module 10969 (useHasVideoPermission)
-import canStreamInChannel from "canStreamInChannel" /* 7516 */;
+// Module 10908 (useHasVideoPermission)
+import canStreamInChannel from "canStreamInChannel" /* 7330 */;
 import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4024 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4025 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/video_calls/useHasVideoPermission.tsx");

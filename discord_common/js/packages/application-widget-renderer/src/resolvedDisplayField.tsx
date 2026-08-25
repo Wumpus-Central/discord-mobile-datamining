@@ -1,8 +1,8 @@
-// === Module 12244: resolveTextComponentValues ===
+// === Module 12561: resolveTextComponentValues ===
 
-// Module 12244 (resolveTextComponentValues)
+// Module 12561 (resolveTextComponentValues)
 import set from "set" /* 2 */;
-import resolveFieldValue2 from "resolveFieldValue" /* 12245 */;
+import resolveFieldValue2 from "resolveFieldValue" /* 12562 */;
 
 let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
 
@@ -22,7 +22,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
-      const items1 = [tmp9(12245).ResolvedValueType.STRING, tmp9(12245).ResolvedValueType.NUMBER];
+      const items1 = [tmp9(12562).ResolvedValueType.STRING, tmp9(12562).ResolvedValueType.NUMBER];
       str = resolveFieldValue(subtitle_1.fields.label, items1);
     }
     if (null == iter) {
@@ -96,9 +96,9 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     if (null == iter) {
       obj = { status: "skeleton" };
     } else {
-      if (iter.type === tmp6(12245).ResolvedValueType.STRING) {
+      if (iter.type === tmp6(12562).ResolvedValueType.STRING) {
         let formatResult = iter.value;
-      } else if (iter.presentationType === tmp6(12246).ApplicationWidgetFieldPresentationType.DURATION) {
+      } else if (iter.presentationType === tmp6(12563).ApplicationWidgetFieldPresentationType.DURATION) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
         formatResult = closure_2.format(iter.value);

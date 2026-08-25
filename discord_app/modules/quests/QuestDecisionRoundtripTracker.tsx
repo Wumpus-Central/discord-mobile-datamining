@@ -1,14 +1,14 @@
-// === Module 10521: trackRoundtrip ===
+// === Module 10538: trackRoundtrip ===
 
-// Module 10521 (trackRoundtrip)
+// Module 10538 (trackRoundtrip)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5057 */;
-import isForegrounded from "isForegrounded" /* 5060 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7469 */;
-import result2 from "result" /* 7506 */;
-import AdCreativeType from "AdCreativeType" /* 7507 */;
-import closure_3 from "handleConnectionInfoChange" /* 4569 */;
-import closure_4 from "initializeState" /* 7491 */;
+import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7067 */;
+import isForegrounded from "isForegrounded" /* 7070 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7282 */;
+import result2 from "result" /* 7320 */;
+import AdCreativeType from "AdCreativeType" /* 7321 */;
+import closure_3 from "handleConnectionInfoChange" /* 4474 */;
+import closure_4 from "initializeState" /* 7305 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -142,8 +142,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str4 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
-          if (tmp8(7507).AdCreativeType.BOUNTY !== type) {
-            if (tmp8(7507).AdCreativeType.QUEST_HOME_HERO === type) {
+          if (tmp8(7321).AdCreativeType.BOUNTY !== type) {
+            if (tmp8(7321).AdCreativeType.QUEST_HOME_HERO === type) {
               str4 = "quest_home_hero";
             }
           }
@@ -160,8 +160,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str7 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
-          if (tmp10(7507).AdCreativeType.BOUNTY !== type2) {
-            if (tmp10(7507).AdCreativeType.QUEST_HOME_HERO === type2) {
+          if (tmp10(7321).AdCreativeType.BOUNTY !== type2) {
+            if (tmp10(7321).AdCreativeType.QUEST_HOME_HERO === type2) {
               str7 = "quest_home_hero";
             }
           }

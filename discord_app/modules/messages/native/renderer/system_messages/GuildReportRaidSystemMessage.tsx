@@ -1,12 +1,12 @@
-// === Module 8298: createGuildReportRaidSystemMessage ===
+// === Module 8299: createGuildReportRaidSystemMessage ===
 
-// Module 8298 (createGuildReportRaidSystemMessage)
+// Module 8299 (createGuildReportRaidSystemMessage)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
-import resultDefault from "result" /* 8218 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8225 */;
-import nativeStyleProperties from "nativeStyleProperties" /* 8291 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8292 */;
+import resultDefault from "result" /* 8214 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8221 */;
+import nativeStyleProperties from "nativeStyleProperties" /* 8292 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8293 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
@@ -25,7 +25,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp3 = resultDefault(theme);
   let automodUsernameColor = nativeStyleProperties.resolveAlertModeColors(theme).automodUsernameColor;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp(8227)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), guildName: null };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp(8223)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), guildName: null };
   let str;
   if (guild != null) {
     str = guild.name;
@@ -36,7 +36,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   obj[2] = str;
   const obj2 = nativeStyleProperties;
   obj = {};
-  const merged = Object.assign(tmp(8228)(roleStyle));
+  const merged = Object.assign(tmp(8224)(roleStyle));
   const intl = tmp8(1236).intl;
   obj.content = intl.formatToParts(getSystemLocale.t["MTmH+u"], obj);
   const intl2 = tmp8(1236).intl;

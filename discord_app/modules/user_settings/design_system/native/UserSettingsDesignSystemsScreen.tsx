@@ -1,9 +1,9 @@
-// === Module 14058: SettingsDesignSystemsScreen ===
+// === Module 14093: SettingsDesignSystemsScreen ===
 
-// Module 14058 (SettingsDesignSystemsScreen)
-import _modDef14059 from "module_14059" /* 14059 */;
+// Module 14093 (SettingsDesignSystemsScreen)
+import _modDef14094 from "module_14094" /* 14094 */;
 import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 8238 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8235 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -24,5 +24,5 @@ export default function SettingsDesignSystemsScreen() {
     sections[3] = { label: "Legacy Audit", settings: items4 };
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14059, { node });
+  return jsx(_modDef14094, { node });
 };

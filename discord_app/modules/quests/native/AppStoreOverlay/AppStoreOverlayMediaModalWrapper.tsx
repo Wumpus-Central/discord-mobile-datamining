@@ -1,7 +1,7 @@
-// === Module 10742: AppStoreOverlayMediaModalWrapper ===
+// === Module 10670: AppStoreOverlayMediaModalWrapper ===
 
-// Module 10742 (AppStoreOverlayMediaModalWrapper)
-import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 9045 */;
+// Module 10670 (AppStoreOverlayMediaModalWrapper)
+import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 9007 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,7 +1,7 @@
-// === Module 5231: ChannelTypes ===
+// === Module 5234: ChannelTypes ===
 
-// Module 5231 (ChannelTypes)
-import closure_2 from "createGuildRoleRecordFromRust" /* 1984 */;
+// Module 5234 (ChannelTypes)
+import closure_2 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import importAllResult from "fromString" /* 506 */;

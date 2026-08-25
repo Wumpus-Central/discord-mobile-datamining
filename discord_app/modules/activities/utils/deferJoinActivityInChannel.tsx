@@ -1,6 +1,6 @@
-// === Module 12883: deferJoinActivityApplication ===
+// === Module 12870: deferJoinActivityApplication ===
 
-// Module 12883 (deferJoinActivityApplication)
+// Module 12870 (deferJoinActivityApplication)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 

@@ -1,6 +1,6 @@
-// === Module 6863: getSoundString ===
+// === Module 4859: getSoundString ===
 
-// Module 6863 (getSoundString)
+// Module 4859 (getSoundString)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundString.tsx");

@@ -1,14 +1,14 @@
-// === Module 9226: createCollectiblesItemFromServerResponse ===
+// === Module 9507: createCollectiblesItemFromServerResponse ===
 
-// Module 9226 (createCollectiblesItemFromServerResponse)
-import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import fromServerDefault from "fromServer" /* 9225 */;
-import closure_2 from "fromServer" /* 5311 */;
-import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 5310 */;
-import closure_4 from "fromServer" /* 1947 */;
-import closure_5 from "fromServer" /* 5312 */;
-import closure_6 from "fromServer" /* 5313 */;
-import closure_7 from "createFromServer" /* 4520 */;
+// Module 9507 (createCollectiblesItemFromServerResponse)
+import CollectiblesItemType from "CollectiblesItemType" /* 1950 */;
+import fromServerDefault from "fromServer" /* 9506 */;
+import closure_2 from "fromServer" /* 7153 */;
+import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 7152 */;
+import closure_4 from "fromServer" /* 1948 */;
+import closure_5 from "fromServer" /* 7154 */;
+import closure_6 from "fromServer" /* 7155 */;
+import closure_7 from "createFromServer" /* 4423 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
 require = arg1;
@@ -16,11 +16,11 @@ function createCollectiblesItemFromServerResponse(collectibles_item) {
   const type = collectibles_item.type;
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     return closure_2.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_EFFECT === type) {
     return closure_5.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (tmp(1950).CollectiblesItemType.NAMEPLATE === type) {
     return closure_4.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (tmp(1950).CollectiblesItemType.PROFILE_FRAME === type) {
     return closure_6.fromServer(collectibles_item);
   } else {
     return null;

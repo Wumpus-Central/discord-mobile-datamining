@@ -1,8 +1,8 @@
-// === Module 13935: validateScope ===
+// === Module 13970: validateScope ===
 
-// Module 13935 (validateScope)
+// Module 13970 (validateScope)
 import set from "set" /* 2 */;
-import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4281 */;
+import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4282 */;
 
 let RPC_SCOPE_CONFIG = RPC_SCOPE_CONFIG2.RPC_SCOPE_CONFIG;
 const result = set.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");

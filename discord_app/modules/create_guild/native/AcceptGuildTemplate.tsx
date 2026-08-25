@@ -1,26 +1,26 @@
-// === Module 11013: GuildTemplateResolving ===
+// === Module 11355: GuildTemplateResolving ===
 
-// Module 11013 (GuildTemplateResolving)
+// Module 11355 (GuildTemplateResolving)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
-import ActivityIndicator from "ActivityIndicator" /* 5451 */;
-import DividerDefault from "Divider" /* 7731 */;
-import _modDef8614 from "module_8614" /* 8614 */;
-import getInvalidLinkSource from "getInvalidLinkSource" /* 11014 */;
-import renderIconDefault from "renderIcon" /* 11016 */;
+import ActivityIndicator from "ActivityIndicator" /* 5929 */;
+import DividerDefault from "Divider" /* 7552 */;
+import _modDef8622 from "module_8622" /* 8622 */;
+import getInvalidLinkSource from "getInvalidLinkSource" /* 11356 */;
+import renderIconDefault from "renderIcon" /* 11358 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildVocalChannelType } from "createChannelRecord" /* 1395 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1985 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1986 */;
 import ME from "ME" /* 676 */;
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7327 */;
+import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 6050 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "createTextStyle" /* 6819 */;
+import importDefaultResult from "createTextStyle" /* 5342 */;
 
 require = arg1;
 function GuildTemplateResolving() {
@@ -41,9 +41,9 @@ function GuildTemplateResolved(guildTemplate) {
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guildTemplate(1236).intl;
   obj[3] = intl.string(guildTemplate(1236).t.QzUORX);
-  const items1 = [callback(guildTemplate(4739).Text, obj), , , , , , , , , , ];
+  const items1 = [callback(guildTemplate(4376).Text, obj), , , , , , , , , , ];
   obj = { style: tmp.description, variant: "text-lg/medium", color: "text-default", children: guildTemplate.name };
-  items1[1] = callback(guildTemplate(4739).Text, obj);
+  items1[1] = callback(guildTemplate(4376).Text, obj);
   items1[2] = callback(renderIconDefault, { iconBackgroundColor: tmp.wrapper.backgroundColor, style: tmp.iconUploader, onPress: chooseIcon, icon });
   const obj2 = { label: null, error: null, hint: null, value: null, onChangeText: null, autoFocus: true, autoCorrect: false, returnKeyType: "done" };
   const intl2 = guildTemplate(1236).intl;
@@ -57,7 +57,7 @@ function GuildTemplateResolved(guildTemplate) {
   obj2[2] = intl3.format(guildTemplate(1236).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
   obj2[3] = name;
   obj2[4] = setName;
-  items1[3] = callback(_modDef8614, obj2);
+  items1[3] = callback(_modDef8622, obj2);
   const obj4 = { style: tmp.createButtonWrapper, children: null };
   const obj5 = { size: "md", text: null, onPress: null, loading: null, disabled: null, grow: true };
   const intl4 = tmp10(1236).intl;
@@ -65,17 +65,17 @@ function GuildTemplateResolved(guildTemplate) {
   obj5[2] = createServer;
   obj5[3] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
   obj5[4] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
-  obj4[1] = callback(guildTemplate(4750).Button, obj5);
+  obj4[1] = callback(guildTemplate(4815).Button, obj5);
   items1[4] = callback(closure_4, obj4);
   items1[5] = callback(DividerDefault, { style: tmp.divider, outer: true });
   const obj7 = { style: tmp.sectionHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp10(1236).intl;
   obj7[3] = intl5.string(guildTemplate(1236).t.OGiMXJ);
-  items1[6] = callback(guildTemplate(4739).Text, obj7);
+  items1[6] = callback(guildTemplate(4376).Text, obj7);
   const obj8 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl6 = tmp10(1236).intl;
   obj8[2] = intl6.string(guildTemplate(1236).t.Ztwyoz);
-  items1[7] = callback(guildTemplate(4739).Text, obj8);
+  items1[7] = callback(guildTemplate(4376).Text, obj8);
   items1[8] = callback(Channels, { channels: guildTemplate.serializedSourceGuild.channels });
   const obj10 = { style: tmp.sectionTip, variant: "text-xs/medium", color: "interactive-text-default", children: null };
   const obj11 = { style: tmp.protip, children: null };
@@ -86,7 +86,7 @@ function GuildTemplateResolved(guildTemplate) {
   const intl8 = tmp10(1236).intl;
   items3[1] = intl8.string(guildTemplate(1236).t.de7DpI);
   obj10[3] = items3;
-  items1[9] = closure_12(guildTemplate(4739).Text, obj10);
+  items1[9] = closure_12(guildTemplate(4376).Text, obj10);
   let tmp7Result = null;
   if (found.length > 0) {
     const obj12 = { children: null };
@@ -94,11 +94,11 @@ function GuildTemplateResolved(guildTemplate) {
     obj13[0] = tmp.sectionHeader;
     const intl9 = tmp10(1236).intl;
     obj13[3] = intl9.string(tmp10(1236).t.mQ0H1p);
-    const items4 = [tmp9(tmp10(4739).Text, obj13), , ];
+    const items4 = [tmp9(tmp10(4376).Text, obj13), , ];
     const obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp10(1236).intl;
     obj14[2] = intl10.string(tmp10(1236).t.jOPEYC);
-    items4[1] = tmp9(tmp10(4739).Text, obj14);
+    items4[1] = tmp9(tmp10(4376).Text, obj14);
     const obj15 = { roles: null };
     obj15[0] = found;
     items4[2] = tmp9(Roles, obj15);

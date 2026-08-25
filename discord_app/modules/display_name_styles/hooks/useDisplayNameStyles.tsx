@@ -1,9 +1,9 @@
-// === Module 4820: useDisplayNameStyles ===
+// === Module 4635: useDisplayNameStyles ===
 
-// Module 4820 (useDisplayNameStyles)
+// Module 4635 (useDisplayNameStyles)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1991 */;
+import closure_4 from "trackCommunicationDisabled" /* 1992 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 const useContext = noop.useContext;

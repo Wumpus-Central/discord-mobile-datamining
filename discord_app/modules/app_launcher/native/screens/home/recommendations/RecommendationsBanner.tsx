@@ -1,18 +1,18 @@
-// === Module 11320: ? ===
+// === Module 11676: ? ===
 
-// Module 11320
+// Module 11676
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import preloadDefault from "preload" /* 5454 */;
-import hasFetchedColorsDefault from "hasFetchedColors" /* 8384 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8455 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 9024 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11282 */;
+import preloadDefault from "preload" /* 5374 */;
+import hasFetchedColorsDefault from "hasFetchedColors" /* 8390 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8462 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8986 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10837 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createdAt" /* 1930 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -21,8 +21,8 @@ let closure_9 = createCacheKey.createStyles({ imageContainer: { width: "100%", h
 let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
   importDefault = undefined;
-  let obj = heroMediaDimensions(9602);
-  obj1 = heroMediaDimensions(11311);
+  let obj = heroMediaDimensions(9698);
+  obj1 = heroMediaDimensions(11667);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   obj = { applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
   const tmp4 = useEmbeddedActivityBackgroundDefault(obj);

@@ -37,32 +37,32 @@ function initializeFromUserSettings() {
       num = num4;
       num2 = num5;
       while (keys[tmp] !== undefined) {
-        let tmp22 = tmp7;
-        let tmp23 = favoriteChannels[tmp7];
-        let tmp24 = require;
-        let tmp25 = dependencyMap;
+        let tmp23 = tmp7;
+        let tmp24 = favoriteChannels[tmp7];
+        let tmp25 = require;
+        let tmp26 = dependencyMap;
         let sum = num4;
-        if (tmp23.type !== create.FavoriteChannelType.CATEGORY) {
+        if (tmp24.type !== create.FavoriteChannelType.CATEGORY) {
           sum = num4 + 1;
         }
         obj = { id: null, nickname: null, type: null, channelType: null, order: null, parentId: null };
         obj[0] = tmp7;
         let nickname = null;
-        if ("" !== tmp23.nickname) {
-          nickname = tmp23.nickname;
+        if ("" !== tmp24.nickname) {
+          nickname = tmp24.nickname;
         }
         obj[1] = nickname;
-        ({ type: obj2[2], channelType } = tmp23);
+        ({ type: obj2[2], channelType } = tmp24);
         let value;
         if (channelType != null) {
           value = channelType.value;
         }
         obj[3] = value;
-        obj[4] = tmp23.position;
+        obj[4] = tmp24.position;
         let tmp11 = closure_5;
         let parentId = null;
-        if (tmp23.parentId !== closure_5) {
-          parentId = tmp23.parentId;
+        if (tmp24.parentId !== closure_5) {
+          parentId = tmp24.parentId;
         }
         num5 = num5 + 1;
         obj[5] = parentId;
@@ -83,23 +83,33 @@ function initializeFromUserSettings() {
     tmp14 = !apply.isEmpty(obj);
     const obj3 = apply;
   }
-  let flag2 = flag !== flag;
-  if (!flag2) {
-    flag2 = closure_12 !== tmp14;
+  let flag2;
+  if (favorites != null) {
+    flag2 = favorites.autoAddJoinedThreads;
   }
-  if (!flag2) {
-    flag2 = closure_2 !== value;
+  if (flag2 == null) {
+    flag2 = false;
   }
-  if (!flag2) {
-    flag2 = !apply.isEqual(obj, obj);
+  let flag3 = flag !== flag;
+  if (!flag3) {
+    flag3 = closure_12 !== tmp14;
+  }
+  if (!flag3) {
+    flag3 = closure_2 !== value;
+  }
+  if (!flag3) {
+    flag3 = flag2 !== flag2;
+  }
+  if (!flag3) {
+    flag3 = !apply.isEqual(obj, obj);
     const obj4 = apply;
   }
-  if (flag2) {
+  if (flag3) {
     closure_12 = tmp14;
     closure_2 = value;
-    flag2 = true;
+    flag3 = true;
   }
-  return flag2;
+  return flag3;
 }
 ({ ChannelTypes: closure_6, FAVORITES: error } = ME);
 let closure_8 = {};
@@ -107,6 +117,7 @@ let c9 = 0;
 let c10 = 0;
 let c11 = false;
 let c12 = false;
+let c13 = false;
 const Store = initializeDefault.Store;
 class FavoriteStore extends Store {
 }
@@ -135,6 +146,16 @@ Object.defineProperty(prototype, "favoriteGuildEnabled", {
 Object.defineProperty(prototype, "favoriteGuildVisibleSetting", {
   get: function favoriteGuildVisibleSetting() {
     return closure_2;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "autoAddJoinedThreads", {
+  get: function autoAddJoinedThreads() {
+    let tmp = c13;
+    if (c13) {
+      tmp = c12;
+    }
+    return tmp;
   },
   set: undefined
 });

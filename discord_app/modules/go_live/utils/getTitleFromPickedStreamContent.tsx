@@ -1,6 +1,6 @@
-// === Module 4660: getTitleFromPickedStreamContent ===
+// === Module 13382: getTitleFromPickedStreamContent ===
 
-// Module 4660 (getTitleFromPickedStreamContent)
+// Module 13382 (getTitleFromPickedStreamContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 

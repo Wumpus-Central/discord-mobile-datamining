@@ -1,9 +1,9 @@
-// === Module 15642: FavoritesGuildCoachmarkIntro ===
+// === Module 15674: FavoritesGuildCoachmarkIntro ===
 
-// Module 15642 (FavoritesGuildCoachmarkIntro)
+// Module 15674 (FavoritesGuildCoachmarkIntro)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "withEqualityFn" /* 15612 */;
+import closure_5 from "withEqualityFn" /* 15644 */;
 import { FAVORITES } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;

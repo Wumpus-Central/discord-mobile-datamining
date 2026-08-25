@@ -1,16 +1,16 @@
-// === Module 16655: handleAppStateUpdate ===
+// === Module 16687: handleAppStateUpdate ===
 
-// Module 16655 (handleAppStateUpdate)
+// Module 16687 (handleAppStateUpdate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 687 */;
-import initializeDefault from "initialize" /* 5043 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 16656 */;
+import initializeDefault from "initialize" /* 5367 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 16688 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 11634 */;
-import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 5074 */;
-import closure_8 from "handleSelectedChannelStoreChanged" /* 5074 */;
-import closure_9 from "result" /* 5075 */;
+import closure_5 from "initialize" /* 11977 */;
+import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 7084 */;
+import closure_8 from "handleSelectedChannelStoreChanged" /* 7084 */;
+import closure_9 from "result" /* 7085 */;
 
 let require = arg1;
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } = handleSelectedChannelStoreChanged);
@@ -51,7 +51,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -105,7 +105,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } catch (tmp5) {
                   c0 = tmp;
                   throw tmp5;
@@ -126,7 +126,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -176,7 +176,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp6) {
                   c0 = tmp;
@@ -198,7 +198,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -229,7 +229,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   }
                   c0 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } catch (tmp7) {
                   c0 = tmp;
                   throw tmp7;
@@ -250,7 +250,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 while (true) {
@@ -332,7 +332,7 @@ class KvBackgroundManager extends tmp4 {
                       }
                       let num2 = 3;
                       c7 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     let tmp6 = closure_4;
@@ -359,7 +359,7 @@ class KvBackgroundManager extends tmp4 {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -391,7 +391,7 @@ class KvBackgroundManager extends tmp4 {
                     return obj;
                   } else {
                     v0 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp7) {
                   v0 = tmp;
@@ -439,7 +439,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -470,7 +470,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
                 c4 = 1;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(7541).startBackgroundTask();
+                obj1[0] = closure_1_1(7359).startBackgroundTask();
                 return obj1;
               }
             }
@@ -488,9 +488,9 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           } else {
             dependencyMap = arg1;
             if (obj10.isIOS()) {
-              if (dependencyMap === closure_1_1(7541).backgroundTaskIdentifierInvalid) {
+              if (dependencyMap === closure_1_1(7359).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
             c3 = 1;
@@ -510,7 +510,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean3 = closure_1_0.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean3;
-          obj2 = closure_1_1(7541);
+          obj2 = closure_1_1(7359);
           obj2.endBackgroundTask(dependencyMap);
           throw c2;
         } else if (arg0 === 1) {
@@ -525,7 +525,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean = timestamp.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean;
-          obj = closure_1_1(7541);
+          obj = closure_1_1(7359);
           obj.endBackgroundTask(c2);
           const tmp12 = timestamp;
         }
@@ -537,7 +537,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
           lastDeepClean2 = timestamp.lastDeepClean;
         }
         closure_1_0.lastDeepClean = lastDeepClean2;
-        obj1 = closure_1_1(7541);
+        obj1 = closure_1_1(7359);
         obj1.endBackgroundTask(c2);
         c5 = 3;
         const tmp26 = closure_1_0;
@@ -568,7 +568,7 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -634,7 +634,7 @@ prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
           return obj;
         } else {
           table = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
         const steps2 = v0.steps;
         v0 = 2;
@@ -665,7 +665,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

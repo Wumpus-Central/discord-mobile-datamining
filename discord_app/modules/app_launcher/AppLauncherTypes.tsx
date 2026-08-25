@@ -1,6 +1,6 @@
-// === Module 9603: AppLauncherEntrypoint ===
+// === Module 9699: AppLauncherEntrypoint ===
 
-// Module 9603 (AppLauncherEntrypoint)
+// Module 9699 (AppLauncherEntrypoint)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");

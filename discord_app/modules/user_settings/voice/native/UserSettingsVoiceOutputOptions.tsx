@@ -1,15 +1,15 @@
-// === Module 12606: UserSettingsVoiceOutputOptions ===
+// === Module 10939: UserSettingsVoiceOutputOptions ===
 
-// Module 12606 (UserSettingsVoiceOutputOptions)
-import VolumeSliderDefault from "VolumeSlider" /* 12191 */;
+// Module 10939 (UserSettingsVoiceOutputOptions)
+import VolumeSliderDefault from "VolumeSlider" /* 10940 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4658 */;
+import closure_5 from "reset" /* 4402 */;
 import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4501 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4534 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4431 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4444 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -63,7 +63,7 @@ export default function UserSettingsVoiceOutputOptions() {
     }
   };
   obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(6322).TableRow, obj), ];
+  const items4 = [callback(stateFromStores1(5480).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
@@ -76,9 +76,9 @@ export default function UserSettingsVoiceOutputOptions() {
     obj5[1] = callback;
     obj4[1] = tmp9(VolumeSliderDefault, obj5);
     obj3[1] = tmp9(View, obj4);
-    tmp9Result = tmp9(tmp2(6322).TableRow, obj3);
+    tmp9Result = tmp9(tmp2(5480).TableRow, obj3);
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(12601).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(10933).UserSettingsTableRowGroup, obj);
 };

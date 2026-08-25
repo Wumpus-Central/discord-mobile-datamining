@@ -1,6 +1,6 @@
-// === Module 13412: GuildPicker ===
+// === Module 13447: GuildPicker ===
 
-// Module 13412 (GuildPicker)
+// Module 13447 (GuildPicker)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -13,9 +13,9 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(13413)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
+  ({ options: c2, selectedGuild } = onChange(13448)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
   let name;
-  const tmp2 = onChange(13413)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  const tmp2 = onChange(13448)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   const tmp3 = jsx;
   if (selectedGuild != null) {
     name = selectedGuild.name;
@@ -45,5 +45,5 @@ export default function GuildPicker(isGuildIncluded) {
   };
   let intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t.etZ9tX);
-  return tmp3(onChange(13414), obj);
+  return tmp3(onChange(13449), obj);
 };

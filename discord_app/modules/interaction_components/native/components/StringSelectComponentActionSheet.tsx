@@ -1,11 +1,11 @@
-// === Module 11039: StringSelectComponentActionSheet ===
+// === Module 11381: StringSelectComponentActionSheet ===
 
-// Module 11039 (StringSelectComponentActionSheet)
+// Module 11381 (StringSelectComponentActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 createCacheKey = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: null, textEmoji: null, fastImageEmoji: null };
@@ -27,7 +27,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8372);
+  let obj = selectionActionComponent(8378);
   let tmp3 = first(React.useState(new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   React = tmp3[1];
@@ -145,5 +145,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj[12] = channelId;
   obj[13] = allowEmpty;
-  return tmp9(onSubmit(11040), obj);
+  return tmp9(onSubmit(11382), obj);
 };

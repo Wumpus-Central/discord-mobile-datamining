@@ -1,10 +1,10 @@
-// === Module 9768: useIsStreamRTCConnectionEmpty ===
+// === Module 9381: useIsStreamRTCConnectionEmpty ===
 
-// Module 9768 (useIsStreamRTCConnectionEmpty)
+// Module 9381 (useIsStreamRTCConnectionEmpty)
 import initialize from "initialize" /* 589 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4544 */;
-import closure_4 from "initialize" /* 4563 */;
+import closure_3 from "createRTCConnection" /* 4454 */;
+import closure_4 from "initialize" /* 4468 */;
 
 require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");

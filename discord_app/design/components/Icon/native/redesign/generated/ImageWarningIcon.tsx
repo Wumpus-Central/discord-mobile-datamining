@@ -1,10 +1,10 @@
-// === Module 6915: ImageWarningIcon ===
+// === Module 4912: ImageWarningIcon ===
 
-// Module 6915 (ImageWarningIcon)
+// Module 4912 (ImageWarningIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 6894 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 4890 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

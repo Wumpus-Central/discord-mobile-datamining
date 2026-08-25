@@ -1,9 +1,9 @@
-// === Module 9048: useMediaViewerSyncer ===
+// === Module 9010: useMediaViewerSyncer ===
 
-// Module 9048 (useMediaViewerSyncer)
+// Module 9010 (useMediaViewerSyncer)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 9049 */;
+import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN" /* 9011 */;
 import set from "set" /* 500 */;
 
 const require = arg1;

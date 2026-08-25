@@ -1,13 +1,13 @@
-// === Module 6959: sanitizeFilename ===
+// === Module 5457: sanitizeFilename ===
 
-// Module 6959 (sanitizeFilename)
+// Module 5457 (sanitizeFilename)
 import log from "log" /* 4 */;
 import Storage3 from "Storage" /* 595 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4310 */;
-import GameTheme from "GameTheme" /* 4516 */;
-import DomainMigrationEventType from "DomainMigrationEventType" /* 6960 */;
-import IPCEvents from "IPCEvents" /* 6961 */;
-import getExtensionFromContentType from "getExtensionFromContentType" /* 6962 */;
+import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4311 */;
+import GameTheme from "GameTheme" /* 4418 */;
+import DomainMigrationEventType from "DomainMigrationEventType" /* 5458 */;
+import IPCEvents from "IPCEvents" /* 5459 */;
+import getExtensionFromContentType from "getExtensionFromContentType" /* 5460 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { NativeFeatures } from "ME" /* 676 */;
@@ -84,7 +84,7 @@ function _transcodeImageToPng() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -620,7 +620,7 @@ obj.setBadge = function setBadge(arg0) {
     let tmpResult = tmp(500);
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(6961).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(tmp(5459).IPCEvents.APP_BADGE_SET, arg0);
     } else {
       tmpResult = tmp(500);
       if ("linux" === tmpResult.getPlatformName()) {
@@ -670,7 +670,7 @@ obj.bounceDock = function bounceDock(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -707,7 +707,7 @@ obj.bounceDock = function bounceDock(arg0) {
               dock = dock.dock;
               dock.cancelBounce(dock);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -781,7 +781,7 @@ obj.copyImage = function copyImage(arg0, closure_1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -895,7 +895,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -933,7 +933,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
           const _Buffer = Buffer;
           clipboard.copyImage(Buffer.from(closure_0), closure_1);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -945,7 +945,7 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
   if (null != closure_1_0) {
     if (require(500) /* set */.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(6962).decideFileExtension(closure_1_0, closure_1_1);
+      const decideFileExtensionResult = tmp(5460).decideFileExtension(closure_1_0, closure_1_1);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
@@ -972,7 +972,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1168,7 +1168,7 @@ obj.saveFile = function saveFile(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1506,7 +1506,7 @@ obj.waitForIPCReady = function waitForIPCReady() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1651,7 +1651,7 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1725,7 +1725,7 @@ obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(6961).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(tmp(5459).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
@@ -2077,7 +2077,7 @@ obj.stopCPUProfiling = function stopCPUProfiling() {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -2747,7 +2747,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

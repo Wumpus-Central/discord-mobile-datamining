@@ -1,8 +1,8 @@
-// === Module 9088: isCrunchyrollActivity ===
+// === Module 9054: isCrunchyrollActivity ===
 
-// Module 9088 (isCrunchyrollActivity)
+// Module 9054 (isCrunchyrollActivity)
 import set from "set" /* 2 */;
-import CRUNCHYROLL_LINK_DEST_ORIGIN from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 9084 */;
+import CRUNCHYROLL_LINK_DEST_ORIGIN from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 9048 */;
 
 const CRUNCHYROLL_CLIENT_ID = CRUNCHYROLL_LINK_DEST_ORIGIN.CRUNCHYROLL_CLIENT_ID;
 const result = set.fileFinishedImporting("modules/activities/utils/isCrunchyrollActivity.tsx");

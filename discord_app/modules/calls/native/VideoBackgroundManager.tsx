@@ -1,8 +1,8 @@
-// === Module 8454: prototype ===
+// === Module 8460: prototype ===
 
-// Module 8454 (prototype)
-import initializeDefault from "initialize" /* 5043 */;
-import closure_0 from "handleConnectionOpen" /* 1980 */;
+// Module 8460 (prototype)
+import initializeDefault from "initialize" /* 5367 */;
+import closure_0 from "handleConnectionOpen" /* 1981 */;
 
 initializeDefault;
 let prototype = function VideoBackgroundManager() {

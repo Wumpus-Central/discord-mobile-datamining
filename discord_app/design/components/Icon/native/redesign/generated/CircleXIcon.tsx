@@ -1,11 +1,11 @@
-// === Module 7379: CircleXIcon ===
+// === Module 6105: CircleXIcon ===
 
-// Module 7379 (CircleXIcon)
+// Module 6105 (CircleXIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 7380 */;
-import registerAsset2 from "registerAsset" /* 7381 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 6106 */;
+import registerAsset2 from "registerAsset" /* 6107 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

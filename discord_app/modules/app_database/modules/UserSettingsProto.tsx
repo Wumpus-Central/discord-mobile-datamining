@@ -1,6 +1,6 @@
-// === Module 5088: getAll ===
+// === Module 7095: getAll ===
 
-// Module 5088 (getAll)
+// Module 7095 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
@@ -34,7 +34,7 @@ class UserSettingsProto {
       if (databaseResult != null) {
         databaseResult.transaction((database) => {
           const state = closure_3.computeState();
-          obj = callback(1955);
+          obj = callback(1956);
           const result = obj.userSettingsTransaction(database);
           for (const key10014 in state) {
             let tmp3 = key10014;
@@ -53,7 +53,7 @@ class UserSettingsProto {
           if (num == null) {
             num = -1;
           }
-          const result1 = callback(1955).nonGuildVersionsTransaction(database);
+          const result1 = callback(1956).nonGuildVersionsTransaction(database);
           result1.put({ id: "user_settings_version", version: num });
         }, "handleUserSettingsProtoChange");
       }
@@ -78,7 +78,7 @@ prototype["getAll"] = function getAll(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -204,7 +204,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
   if (databaseResult != null) {
     databaseResult.transaction((database) => {
       const state = closure_3.computeState();
-      obj = callback(1955);
+      obj = callback(1956);
       const result = obj.userSettingsTransaction(database);
       for (const key10014 in state) {
         let tmp3 = key10014;
@@ -223,7 +223,7 @@ obj.handleUserSettingsProtoChange = function handleUserSettingsProtoChange() {
       if (num == null) {
         num = -1;
       }
-      const result1 = callback(1955).nonGuildVersionsTransaction(database);
+      const result1 = callback(1956).nonGuildVersionsTransaction(database);
       result1.put({ id: "user_settings_version", version: num });
     }, "handleUserSettingsProtoChange");
   }

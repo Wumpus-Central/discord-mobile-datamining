@@ -1,8 +1,8 @@
-// === Module 9331: ClearAfterValues ===
+// === Module 9604: ClearAfterValues ===
 
-// Module 9331 (ClearAfterValues)
+// Module 9604 (ClearAfterValues)
 import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 9329 */;
+import StatusTypes from "StatusTypes" /* 9602 */;
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const items = [, , ];
@@ -10,7 +10,7 @@ const items = [, , ];
 const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
-  const CustomStatusSetting = _require(4069).CustomStatusSetting;
+  const CustomStatusSetting = _require(4070).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   if (null != setting) {
     if ("" !== setting.expiresAtMs) {

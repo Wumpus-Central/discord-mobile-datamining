@@ -1,10 +1,10 @@
-// === Module 6159: ServerIconGeargrindExample ===
+// === Module 6847: ServerIconGeargrindExample ===
 
-// Module 6159 (ServerIconGeargrindExample)
+// Module 6847 (ServerIconGeargrindExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6160 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6848 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconGeargrindExample.native.tsx");

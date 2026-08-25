@@ -1,6 +1,6 @@
-// === Module 5564: metadata ===
+// === Module 6248: metadata ===
 
-// Module 5564 (metadata)
+// Module 6248 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BrushAndSwordIllocon-2x.png.js");

@@ -1,13 +1,13 @@
-// === Module 9699: handleSyncedStoresUpdate ===
+// === Module 9309: handleSyncedStoresUpdate ===
 
-// Module 9699 (handleSyncedStoresUpdate)
+// Module 9309 (handleSyncedStoresUpdate)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4574 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9700 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4479 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9310 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_4 from "handleConnectionOpen" /* 1981 */;
 import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 require = arg1;

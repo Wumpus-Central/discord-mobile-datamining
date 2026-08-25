@@ -1,6 +1,6 @@
-// === Module 6734: useIsGoogleWalletEnabled ===
+// === Module 8110: useIsGoogleWalletEnabled ===
 
-// Module 6734 (useIsGoogleWalletEnabled)
+// Module 8110 (useIsGoogleWalletEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 

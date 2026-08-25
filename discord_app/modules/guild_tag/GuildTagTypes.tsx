@@ -1,6 +1,6 @@
-// === Module 8919: toServerGuildProfile ===
+// === Module 9176: toServerGuildProfile ===
 
-// Module 8919 (toServerGuildProfile)
+// Module 9176 (toServerGuildProfile)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_tag/GuildTagTypes.tsx");

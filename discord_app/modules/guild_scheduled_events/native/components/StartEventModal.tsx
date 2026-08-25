@@ -1,11 +1,11 @@
-// === Module 8942: NavigationBar ===
+// === Module 9199: NavigationBar ===
 
-// Module 8942 (NavigationBar)
+// Module 9199 (NavigationBar)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import Text from "Text" /* 4739 */;
-import registerAssetDefault from "registerAsset" /* 8215 */;
-import GuildEventCardControlsDefault from "GuildEventCardControls" /* 8936 */;
+import Text from "Text" /* 4376 */;
+import registerAssetDefault from "registerAsset" /* 8211 */;
+import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9193 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -13,9 +13,9 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
 import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
-import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8830 */;
+import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9097 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function NavigationBar(onClose) {
@@ -29,7 +29,7 @@ function NavigationBar(onClose) {
   };
   obj = { source: registerAssetDefault };
   obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(5438).PressableOpacity, obj);
+  obj[0] = callback(onClose(4949).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {
@@ -103,7 +103,7 @@ export default function StartEventModal(event) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -143,7 +143,7 @@ export default function StartEventModal(event) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp11) {
           c0 = tmp;
           throw tmp11;

@@ -1,6 +1,6 @@
-// === Module 6855: isChannelTypeMentionable ===
+// === Module 4847: isChannelTypeMentionable ===
 
-// Module 6855 (isChannelTypeMentionable)
+// Module 4847 (isChannelTypeMentionable)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 

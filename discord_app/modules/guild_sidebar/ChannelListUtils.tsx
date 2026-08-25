@@ -1,6 +1,6 @@
-// === Module 4985: hasStream ===
+// === Module 4567: hasStream ===
 
-// Module 4985 (hasStream)
+// Module 4567 (hasStream)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");

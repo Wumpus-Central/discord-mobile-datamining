@@ -1,18 +1,18 @@
-// === Module 17166: getCurrentScreenshareCaptureMethod ===
+// === Module 17198: getCurrentScreenshareCaptureMethod ===
 
-// Module 17166 (getCurrentScreenshareCaptureMethod)
+// Module 17198 (getCurrentScreenshareCaptureMethod)
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "updateAveragedStatsHelper" /* 4562 */;
-import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4541 */;
-import closure_6 from "ApplicationStreamPresets" /* 4567 */;
+import closure_4 from "updateAveragedStatsHelper" /* 4467 */;
+import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4451 */;
+import closure_6 from "ApplicationStreamPresets" /* 4472 */;
 import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_9 from "createRTCConnection" /* 4544 */;
-import closure_10 from "initialize" /* 4570 */;
-import closure_11 from "handleConnectionOpen" /* 1980 */;
-import closure_12 from "initialize" /* 4563 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_9 from "createRTCConnection" /* 4454 */;
+import closure_10 from "initialize" /* 4475 */;
+import closure_11 from "handleConnectionOpen" /* 1981 */;
+import closure_12 from "initialize" /* 4468 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import DesktopSources from "DesktopSources" /* 4534 */;
+import DesktopSources from "DesktopSources" /* 4444 */;
 
 const require = arg1;
 function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {

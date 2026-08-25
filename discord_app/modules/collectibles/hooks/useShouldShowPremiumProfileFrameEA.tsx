@@ -1,10 +1,10 @@
-// === Module 12044: useShouldShowPremiumProfileFrameEA ===
+// === Module 12369: useShouldShowPremiumProfileFrameEA ===
 
-// Module 12044 (useShouldShowPremiumProfileFrameEA)
+// Module 12369 (useShouldShowPremiumProfileFrameEA)
 import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 8993 */;
-import apexExperiment2 from "apexExperiment" /* 9271 */;
-import apexExperimentDefault from "apexExperiment" /* 9271 */;
+import apexExperiment from "apexExperiment" /* 8955 */;
+import apexExperiment2 from "apexExperiment" /* 9550 */;
+import apexExperimentDefault from "apexExperiment" /* 9550 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
 

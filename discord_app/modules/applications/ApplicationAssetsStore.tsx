@@ -1,6 +1,6 @@
-// === Module 7286: handleFetchEmbeddedActivityShelfSuccess ===
+// === Module 8397: handleFetchEmbeddedActivityShelfSuccess ===
 
-// Module 7286 (handleFetchEmbeddedActivityShelfSuccess)
+// Module 8397 (handleFetchEmbeddedActivityShelfSuccess)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;

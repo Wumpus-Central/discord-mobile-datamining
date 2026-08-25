@@ -1,9 +1,9 @@
-// === Module 12519: getIsTabletActivitySurface ===
+// === Module 10805: getIsTabletActivitySurface ===
 
-// Module 12519 (getIsTabletActivitySurface)
+// Module 10805 (getIsTabletActivitySurface)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4358 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4359 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 
 let closure_2 = DCDDeviceManager.isIpadOS();

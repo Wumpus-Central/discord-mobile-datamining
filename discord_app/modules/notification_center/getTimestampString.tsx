@@ -1,9 +1,9 @@
-// === Module 4973: getDurationString ===
+// === Module 7248: getDurationString ===
 
-// Module 4973 (getDurationString)
+// Module 7248 (getDurationString)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import tDefault from "t" /* 3978 */;
+import hooksDefault from "hooks" /* 3979 */;
 
 function getDurationString(seconds) {
   seconds = seconds.seconds;
@@ -49,7 +49,7 @@ let c4 = 31104000;
 const result = set.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: tDefault().diff(tDefault(since), "s"), getFormatter };
+  const obj = { seconds: hooksDefault().diff(hooksDefault(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 };

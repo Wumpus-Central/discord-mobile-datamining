@@ -1,11 +1,11 @@
-// === Module 10680: updateGiftCode ===
+// === Module 10481: updateGiftCode ===
 
-// Module 10680 (updateGiftCode)
+// Module 10481 (updateGiftCode)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import tDefault from "t" /* 3978 */;
-import _resolveGiftCode from "_resolveGiftCode" /* 4385 */;
-import closure_3 from "frozen" /* 9663 */;
+import hooksDefault from "hooks" /* 3979 */;
+import _resolveGiftCode from "_resolveGiftCode" /* 4640 */;
+import closure_3 from "frozen" /* 9759 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 
@@ -19,14 +19,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4263).Timeout();
+      const timeout = new code(4264).Timeout();
       closure_7[code] = timeout;
       value = obj.get(code);
       if (null != value) {
         if (null != value.expiresAt) {
           const expiresAt = value.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - tDefault().valueOf();
+          const diff = valueOfResult - hooksDefault().valueOf();
           if (diff <= 0) {
             obj.delete(code);
             delete tmp2[tmp];
@@ -107,7 +107,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = tDefault();
+          const obj4 = hooksDefault();
         }
       }
       tmp18 = closure_7;

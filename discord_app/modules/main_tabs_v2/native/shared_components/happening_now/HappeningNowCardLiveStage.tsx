@@ -1,17 +1,17 @@
-// === Module 15397: HappeningNowLiveStageContent ===
+// === Module 15427: HappeningNowLiveStageContent ===
 
-// Module 15397 (HappeningNowLiveStageContent)
+// Module 15427 (HappeningNowLiveStageContent)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import getNicknameDefault from "getNickname" /* 4801 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14709 */;
-import useLiveStageData from "useLiveStageData" /* 15398 */;
+import getNicknameDefault from "getNickname" /* 4573 */;
+import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14739 */;
+import useLiveStageData from "useLiveStageData" /* 15428 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14708 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14738 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 class HappeningNowLiveStageContent {

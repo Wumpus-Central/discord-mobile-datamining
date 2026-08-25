@@ -1,13 +1,13 @@
-// === Module 14667: volumeSlider ===
+// === Module 14697: volumeSlider ===
 
-// Module 14667 (volumeSlider)
+// Module 14697 (volumeSlider)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7197 */;
-import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 7337 */;
-import hasPermissionToPlaySound from "hasPermissionToPlaySound" /* 7342 */;
-import MobileUserSettings from "MobileUserSettings" /* 8238 */;
-import createToggle from "createToggle" /* 10708 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 5854 */;
+import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 6062 */;
+import hasPermissionToPlaySound from "hasPermissionToPlaySound" /* 6068 */;
+import MobileUserSettings from "MobileUserSettings" /* 8235 */;
+import createToggle from "createToggle" /* 10516 */;
 
 const volumeSlider = createToggle.createVolumeSlider({
   useTitle() {

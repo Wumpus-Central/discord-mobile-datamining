@@ -1,10 +1,10 @@
-// === Module 8431: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 8437: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 8431 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 8437 (useMaybeFetchCollectiblesCategoriesShared)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4292 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5306 */;
+import closure_5 from "getHash" /* 4293 */;
+import closure_6 from "updateCategoriesAndProducts" /* 7148 */;
 import items from "items" /* 678 */;
 
 const require = arg1;

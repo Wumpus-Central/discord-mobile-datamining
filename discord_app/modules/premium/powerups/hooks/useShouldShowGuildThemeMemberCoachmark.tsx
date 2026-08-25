@@ -1,13 +1,13 @@
-// === Module 15483: useShouldShowGuildThemeMemberCoachmark ===
+// === Module 15515: useShouldShowGuildThemeMemberCoachmark ===
 
-// Module 15483 (useShouldShowGuildThemeMemberCoachmark)
+// Module 15515 (useShouldShowGuildThemeMemberCoachmark)
 import set from "set" /* 2 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4266 */;
-import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4285 */;
-import apexExperiment from "apexExperiment" /* 4307 */;
-import experiment from "experiment" /* 4308 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11731 */;
-import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 15484 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4267 */;
+import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4286 */;
+import apexExperiment from "apexExperiment" /* 4308 */;
+import experiment from "experiment" /* 4309 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12073 */;
+import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 15516 */;
 
 let closure_3 = BoostedGuildTiers.GUILD_THEME_POWERUP_BOOST_PRICE;
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");

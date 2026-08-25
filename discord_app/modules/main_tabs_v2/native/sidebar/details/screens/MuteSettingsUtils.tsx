@@ -1,16 +1,16 @@
-// === Module 10123: getMuteSettingLabel ===
+// === Module 9975: getMuteSettingLabel ===
 
-// Module 10123 (getMuteSettingLabel)
+// Module 9975 (getMuteSettingLabel)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import computeChannelName from "computeChannelName" /* 4989 */;
-import UserNotificationSettings from "UserNotificationSettings" /* 6832 */;
-import _modDef6835 from "module_6835" /* 6835 */;
-import getMuteSettingsAll from "getMuteSettings" /* 10124 */;
-import closure_4 from "storeThread" /* 4026 */;
+import computeChannelName from "computeChannelName" /* 4574 */;
+import UserNotificationSettings from "UserNotificationSettings" /* 5363 */;
+import _modDef5368 from "module_5368" /* 5368 */;
+import getMuteSettingsAll from "getMuteSettings" /* 9976 */;
+import closure_4 from "storeThread" /* 4027 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "markAllUserIdListsStale" /* 4033 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5048 */;
+import closure_7 from "markAllUserIdListsStale" /* 4034 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 4589 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { MuteUntilSeconds } from "MAX_FAVORITES" /* 685 */;
@@ -63,10 +63,10 @@ export const handleUnmutePress = function handleUnmutePress(channelId, guildId) 
   const channel = store.getChannel(channelId);
   if (null != channel) {
     if (channel.isThread()) {
-      let tmp7Result = tmp7(7550);
+      let tmp7Result = tmp7(7368);
       const result = tmp7Result.setNotificationSettings(channel, { muted: false });
     } else {
-      tmp7Result = tmp7(6835);
+      tmp7Result = tmp7(5368);
       const result1 = tmp7Result.updateChannelOverrideSettings(guildId, channel.id, { muted: false, mute_config: null }, UserNotificationSettings.NotificationLabels.Unmuted);
     }
   }
@@ -81,15 +81,15 @@ export const handleMuteSettingPress = function handleMuteSettingPress(arg0) {
     onOptionPress(muteSettings);
   } else if (null != channel) {
     if (channel.isThread()) {
-      let tmp4Result = tmp4(7550);
+      let tmp4Result = tmp4(7368);
       const result = tmp4Result.setNotificationSettings(channel, muteSettings);
     } else {
-      tmp4Result = tmp4(6835);
+      tmp4Result = tmp4(5368);
       const result1 = tmp4Result.updateChannelOverrideSettings(guildId, channel.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
     }
   } else if (null != guild) {
-    const result2 = _modDef6835.updateGuildNotificationSettings(guild.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
-    const obj5 = _modDef6835;
+    const result2 = _modDef5368.updateGuildNotificationSettings(guild.id, muteSettings, UserNotificationSettings.NotificationLabels.Muted);
+    const obj5 = _modDef5368;
   }
 };
 export const getMuteSettings = function getMuteSettings(arg0) {

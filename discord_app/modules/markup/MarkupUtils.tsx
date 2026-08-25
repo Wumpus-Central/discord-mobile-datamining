@@ -1,10 +1,10 @@
-// === Module 6844: get defaultRules ===
+// === Module 4370: get defaultRules ===
 
-// Module 6844 (get defaultRules)
-import MarkupTextDefault from "MarkupText" /* 4771 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6845 */;
-import parseLinkDefault from "parseLink" /* 6846 */;
-import reactParserForAll from "reactParserFor" /* 6940 */;
+// Module 4370 (get defaultRules)
+import MarkupTextDefault from "MarkupText" /* 4371 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 4836 */;
+import parseLinkDefault from "parseLink" /* 4837 */;
+import reactParserForAll from "reactParserFor" /* 8247 */;
 import importDefaultResult from "apply" /* 12 */;
 
 let closure_3 = ["url", "autolink", "link", "mailto", "tel"];
@@ -183,11 +183,11 @@ obj.parse = function parse() {
 };
 obj.parseTopic = function parseTopic(topic, arg1, arg2) {
   const merged = Object.assign(arg2);
-  return callback15()(topic, arg1, { allowLinks: true }, arg3);
+  return callback15()(topic, arg1, { allowLinks: true, allowGameMentions: true, shouldFetchGameMentionData: true }, arg3);
 };
 obj.parseTruncatedTopic = function parseTruncatedTopic(arg0, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return callback16()(arg0, arg1, { allowLinks: true }, arg3);
+  return callback16()(arg0, arg1, { allowLinks: true, allowGameMentions: true, shouldFetchGameMentionData: true }, arg3);
 };
 obj.parseVoiceChannelStatus = function parseVoiceChannelStatus(gameMentionsAsPlainText, arg1, arg2) {
   const items = [...arguments];

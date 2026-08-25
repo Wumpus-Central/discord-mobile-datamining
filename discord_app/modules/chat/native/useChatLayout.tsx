@@ -1,8 +1,8 @@
-// === Module 4236: useChatLayout ===
+// === Module 4237: useChatLayout ===
 
-// Module 4236 (useChatLayout)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4237 */;
-import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4237 */;
+// Module 4237 (useChatLayout)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4238 */;
+import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4238 */;
 import closure_3 from "noop" /* 19 */;
 
 require = arg1;

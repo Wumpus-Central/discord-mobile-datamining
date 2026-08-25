@@ -1,9 +1,9 @@
-// === Module 8559: getIsWindowSmall ===
+// === Module 8567: getIsWindowSmall ===
 
-// Module 8559 (getIsWindowSmall)
+// Module 8567 (getIsWindowSmall)
 import set from "set" /* 2 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4237 */;
-import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4237 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4238 */;
+import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4238 */;
 
 const result = set.fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
 

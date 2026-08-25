@@ -1,17 +1,17 @@
-// === Module 16654: handleDeletedEntityIds ===
+// === Module 16686: handleDeletedEntityIds ===
 
-// Module 16654 (handleDeletedEntityIds)
+// Module 16686 (handleDeletedEntityIds)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import initializeDefault2 from "initialize" /* 5043 */;
-import getAllDefault from "getAll" /* 5403 */;
-import closure_2 from "getEmojiToGroupId" /* 6764 */;
-import closure_3 from "loadSavedGuildStickers" /* 6806 */;
+import initializeDefault2 from "initialize" /* 5367 */;
+import getAllDefault from "getAll" /* 7257 */;
+import closure_2 from "getEmojiToGroupId" /* 5282 */;
+import closure_3 from "loadSavedGuildStickers" /* 5325 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "_handleConnectionOpen" /* 4499 */;
+import closure_7 from "_handleConnectionOpen" /* 5102 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;
@@ -38,7 +38,7 @@ function handleDeletedEntityIds(guild_id) {
         if (!set1.has(arg0)) {
           let obj = set3(set1[8]);
           obj = { type: "CHANNEL_DELETE", channel: null };
-          obj = { guild_id: null, id: null, parent_id: "Array" };
+          obj = { guild_id: null, id: null, parent_id: "r" };
           obj[0] = set3;
           obj[1] = arg0;
           obj[1] = obj;

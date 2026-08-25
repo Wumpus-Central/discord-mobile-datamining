@@ -1,19 +1,19 @@
-// === Module 6869: match ===
+// === Module 4865: match ===
 
-// Module 6869 (match)
+// Module 4865 (match)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
-import tDefault from "t" /* 4095 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4511 */;
-import textRegexpDefault from "textRegexp" /* 6852 */;
-import getChannelDefault from "getChannel" /* 6853 */;
-import regExpDefault from "regExp" /* 6856 */;
-import getGameMentionData from "getGameMentionData" /* 6936 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
+import tDefault from "t" /* 4096 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4413 */;
+import textRegexpDefault from "textRegexp" /* 4844 */;
+import getChannelDefault from "getChannel" /* 4845 */;
+import regExpDefault from "regExp" /* 4848 */;
+import INVISIBLE_CHAR_REGEX2 from "INVISIBLE_CHAR_REGEX" /* 4933 */;
+import getGameMentionData from "getGameMentionData" /* 4934 */;
 
 const Image = get_ActivityIndicator.Image;
-const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;
 obj = { escape: obj, invisibleUnicode: null, text: null, emoji: null, customEmoji: null, channelMention: null, gameMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, silentPrefix: null };
 obj = {
   requiredFirstCharacters: ["\\"],
@@ -41,7 +41,8 @@ obj = {};
 let merged = Object.assign(tDefault.defaultRules.escape);
 obj.requiredFirstCharacters = undefined;
 obj.match = function match(arg0) {
-  return regex.exec(arg0);
+  const INVISIBLE_CHAR_REGEX = INVISIBLE_CHAR_REGEX2.INVISIBLE_CHAR_REGEX;
+  return INVISIBLE_CHAR_REGEX.exec(arg0);
 };
 obj.parse = function parse() {
   return { type: "text", content: "" };

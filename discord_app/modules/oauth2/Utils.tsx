@@ -1,10 +1,10 @@
-// === Module 9809: getApplicationDetailsText ===
+// === Module 10588: getApplicationDetailsText ===
 
-// Module 9809 (getApplicationDetailsText)
+// Module 10588 (getApplicationDetailsText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4791 */;
-import useIsSocialLayerParentApplication from "useIsSocialLayerParentApplication" /* 9810 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4939 */;
+import useIsSocialLayerParentApplication from "useIsSocialLayerParentApplication" /* 10589 */;
 
 const MarketingURLs = ME.MarketingURLs;
 let result = set.fileFinishedImporting("modules/oauth2/Utils.tsx");

@@ -1,13 +1,13 @@
-// === Module 11770: GuildPowerupsSectionHeader ===
+// === Module 12110: GuildPowerupsSectionHeader ===
 
-// Module 11770 (GuildPowerupsSectionHeader)
+// Module 12110 (GuildPowerupsSectionHeader)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4739 */;
-import apexExperiment from "apexExperiment" /* 8347 */;
+import Text from "Text" /* 4376 */;
+import apexExperiment from "apexExperiment" /* 8348 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);

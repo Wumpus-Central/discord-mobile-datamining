@@ -1,7 +1,7 @@
-// === Module 5236: isSpamSupported ===
+// === Module 7113: isSpamSupported ===
 
-// Module 5236 (isSpamSupported)
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5237 */;
+// Module 7113 (isSpamSupported)
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7114 */;
 import closure_2 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 

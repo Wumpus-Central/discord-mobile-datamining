@@ -1,22 +1,22 @@
-// === Module 7546: getSampleOfVoterUsernamesForAnswer ===
+// === Module 7364: getSampleOfVoterUsernamesForAnswer ===
 
-// Module 7546 (getSampleOfVoterUsernamesForAnswer)
+// Module 7364 (getSampleOfVoterUsernamesForAnswer)
 import v1 from "v1" /* 514 */;
 import setDefault from "set" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4819 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4634 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reactionKey" /* 7547 */;
-import closure_5 from "reinjectEphemerals" /* 4999 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4024 */;
-import closure_7 from "markAllUserIdListsStale" /* 4033 */;
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7614 */;
+import closure_4 from "reactionKey" /* 7365 */;
+import closure_5 from "reinjectEphemerals" /* 4623 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4025 */;
+import closure_7 from "markAllUserIdListsStale" /* 4034 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7432 */;
 import ME from "ME" /* 676 */;
 
 require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7548).ReactionTypes.VOTE);
+  reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7366).ReactionTypes.VOTE);
   channel = channel.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -98,7 +98,8 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "ct", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "isArray", localCreationAnswerId: true };
+  obj[2] = v1.v4();
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {

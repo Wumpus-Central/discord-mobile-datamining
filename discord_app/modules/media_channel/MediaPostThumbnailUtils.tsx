@@ -1,8 +1,8 @@
-// === Module 4988: MAX_THUMBNAIL_COUNT ===
+// === Module 4570: MAX_THUMBNAIL_COUNT ===
 
-// Module 4988 (MAX_THUMBNAIL_COUNT)
+// Module 4570 (MAX_THUMBNAIL_COUNT)
 import set from "set" /* 2 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4816 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4571 */;
 
 const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 

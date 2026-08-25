@@ -1,6 +1,6 @@
-// === Module 7399: handleFormClose ===
+// === Module 6126: handleFormClose ===
 
-// Module 7399 (handleFormClose)
+// Module 6126 (handleFormClose)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_0 from "mergeGuildAvatar" /* 1922 */;

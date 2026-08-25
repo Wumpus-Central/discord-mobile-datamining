@@ -1,22 +1,22 @@
-// === Module 15418: HappeningNowCardCreateChannel ===
+// === Module 15448: HappeningNowCardCreateChannel ===
 
-// Module 15418 (HappeningNowCardCreateChannel)
+// Module 15448 (HappeningNowCardCreateChannel)
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4739 */;
-import registerAssetDefault from "registerAsset" /* 11997 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14709 */;
-import registerAssetDefault2 from "registerAsset" /* 15419 */;
-import registerAssetDefault3 from "registerAsset" /* 15420 */;
-import registerAssetDefault4 from "registerAsset" /* 15421 */;
+import Text from "Text" /* 4376 */;
+import registerAssetDefault from "registerAsset" /* 12325 */;
+import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14739 */;
+import registerAssetDefault2 from "registerAsset" /* 15449 */;
+import registerAssetDefault3 from "registerAsset" /* 15450 */;
+import registerAssetDefault4 from "registerAsset" /* 15451 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "comparator" /* 1981 */;
+import closure_6 from "comparator" /* 1982 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14708 */;
+import closure_8 from "handleConnectionOpen" /* 1981 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14738 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 let c3 = importAllResult;

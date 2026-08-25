@@ -4,7 +4,7 @@
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _toPropertyKeyDefault from "_toPropertyKey" /* 1213 */;
-import Version from "Version" /* 4294 */;
+import Version from "Version" /* 4295 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
 import { AnalyticEvents } from "ME" /* 676 */;

@@ -1,13 +1,13 @@
-// === Module 4500: callConnect ===
+// === Module 5103: callConnect ===
 
-// Module 4500 (callConnect)
+// Module 5103 (callConnect)
 import applyDefault from "apply" /* 12 */;
 import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 1980 */;
-import closure_5 from "handleConnectionOpen" /* 4201 */;
+import closure_4 from "handleConnectionOpen" /* 1981 */;
+import closure_5 from "handleConnectionOpen" /* 4202 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;

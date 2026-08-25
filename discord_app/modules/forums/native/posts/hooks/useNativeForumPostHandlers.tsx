@@ -1,13 +1,13 @@
-// === Module 10199: useNativeForumPostHandlers ===
+// === Module 10050: useNativeForumPostHandlers ===
 
-// Module 10199 (useNativeForumPostHandlers)
+// Module 10050 (useNativeForumPostHandlers)
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "setContent" /* 4089 */;
+import closure_5 from "setContent" /* 4090 */;
 import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "markAllUserIdListsStale" /* 4033 */;
+import closure_7 from "markAllUserIdListsStale" /* 4034 */;
 import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleLoadThreadsSuccess" /* 7277 */;
-import closure_10 from "handleLoadThreadsSuccess" /* 7312 */;
+import closure_9 from "handleLoadThreadsSuccess" /* 6002 */;
+import closure_10 from "handleLoadThreadsSuccess" /* 6032 */;
 import ME from "ME" /* 676 */;
 import { OpenThreadAnalyticsLocations as closure_15 } from "AbortCodes" /* 1235 */;
 
@@ -19,7 +19,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(7548).ReactionTypes.NORMAL;
+    NORMAL = threadId(7366).ReactionTypes.NORMAL;
   }
   let callback1;
   const items = [threadId];

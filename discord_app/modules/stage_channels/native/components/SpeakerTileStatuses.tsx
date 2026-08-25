@@ -1,17 +1,17 @@
-// === Module 12662: VoiceStatus ===
+// === Module 11018: VoiceStatus ===
 
-// Module 12662 (VoiceStatus)
+// Module 11018 (VoiceStatus)
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import registerAssetDefault from "registerAsset" /* 8643 */;
-import registerAssetDefault2 from "registerAsset" /* 12664 */;
+import registerAssetDefault from "registerAsset" /* 8651 */;
+import registerAssetDefault2 from "registerAsset" /* 11020 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4501 */;
-import closure_5 from "updateVoiceState" /* 4547 */;
-import closure_6 from "buildStageChannelUserRoles" /* 4995 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4431 */;
+import closure_5 from "updateVoiceState" /* 4399 */;
+import closure_6 from "buildStageChannelUserRoles" /* 5246 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
@@ -48,15 +48,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(12623);
+    let tmp5 = channelId(10961);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(12513);
+    tmp5 = channelId(10797);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(12514);
+      tmp5 = channelId(10798);
       flag3 = false;
     }
   }
@@ -83,7 +83,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(12663);
+    tmp4 = channelId(11019);
   }
   let tmp6 = null;
   if (null != tmp4) {

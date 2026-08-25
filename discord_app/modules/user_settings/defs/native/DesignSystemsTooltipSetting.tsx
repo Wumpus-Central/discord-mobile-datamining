@@ -1,10 +1,10 @@
-// === Module 14992: route ===
+// === Module 15022: route ===
 
-// Module 14992 (route)
+// Module 15022 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
-import MobileUserSettings from "MobileUserSettings" /* 8238 */;
-import createToggle from "createToggle" /* 10708 */;
+import MobileUserSettings from "MobileUserSettings" /* 8235 */;
+import createToggle from "createToggle" /* 10516 */;
 
 obj = {
   useTitle() {
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_TOOLTIP,
   getComponent() {
-    return require(14993) /* Content */.default;
+    return require(15023) /* Content */.default;
   }
 };
 const route = createToggle.createRoute(obj);

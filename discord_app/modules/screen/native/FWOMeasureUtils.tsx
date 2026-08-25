@@ -1,8 +1,8 @@
-// === Module 10001: __measureInWindowForFWO ===
+// === Module 8749: __measureInWindowForFWO ===
 
-// Module 10001 (__measureInWindowForFWO)
+// Module 8749 (__measureInWindowForFWO)
 import set from "set" /* 2 */;
-import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 10002 */;
+import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 8750 */;
 
 const __measureInWindowForFWO = global.__measureInWindowForFWO;
 function measureInWindowForFWO(value) {

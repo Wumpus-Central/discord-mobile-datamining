@@ -1,11 +1,11 @@
-// === Module 11625: DescriptionEllipsis ===
+// === Module 11971: DescriptionEllipsis ===
 
-// Module 11625 (DescriptionEllipsis)
+// Module 11971 (DescriptionEllipsis)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 noopAll;
 ({ jsx: closure_1, jsxs: obj1 } = jsxProd);

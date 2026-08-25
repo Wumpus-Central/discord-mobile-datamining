@@ -1,10 +1,10 @@
-// === Module 7677: create ===
+// === Module 7498: create ===
 
-// Module 7677 (create)
+// Module 7498 (create)
 import _mod1307 from "module_1307" /* 1307 */;
-import create from "create" /* 7671 */;
-import create2 from "create" /* 7672 */;
-import create3 from "create" /* 7673 */;
+import create from "create" /* 7492 */;
+import create2 from "create" /* 7493 */;
+import create3 from "create" /* 7494 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
@@ -21,7 +21,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(7673).CTAButton;
+            return callback(7494).CTAButton;
           }
     };
     items[5] = {
@@ -38,7 +38,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7672).HelpArticle;
+            return callback(7493).HelpArticle;
           }
     };
     obj = { no: 8, name: "header_localized", kind: "message", T: null };
@@ -54,7 +54,7 @@ class MobileBottomSheet$Type extends MessageType {
       name: "body_localized",
       kind: "message",
       T() {
-            return callback(7671).LocalizedString;
+            return callback(7492).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.MobileBottomSheet", items, T);
@@ -229,7 +229,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(7673).CTAButton;
+      return callback(7494).CTAButton;
     }
   },
   {
@@ -246,7 +246,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7672).HelpArticle;
+      return callback(7493).HelpArticle;
     }
   },
 ,
@@ -265,7 +265,7 @@ items[8] = {
   name: "body_localized",
   kind: "message",
   T() {
-    return callback(7671).LocalizedString;
+    return callback(7492).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.MobileBottomSheet", items, tmp, T, MobileBottomSheet$Type, prototype, items);

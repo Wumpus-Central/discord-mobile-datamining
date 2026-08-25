@@ -1,14 +1,14 @@
-// === Module 8806: _getPrimaryAppCommand ===
+// === Module 10702: _getPrimaryAppCommand ===
 
-// Module 8806 (_getPrimaryAppCommand)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import ScoreMethod from "ScoreMethod" /* 8495 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8807 */;
+// Module 10702 (_getPrimaryAppCommand)
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1955 */;
+import ScoreMethod from "ScoreMethod" /* 8502 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9691 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import getIndexKey from "getIndexKey" /* 8487 */;
-import closure_7 from "getIndexKey" /* 8487 */;
+import getIndexKey from "getIndexKey" /* 8494 */;
+import closure_7 from "getIndexKey" /* 8494 */;
 
 require = arg1;
 function _getPrimaryAppCommand() {
@@ -30,7 +30,7 @@ function _getPrimaryAppCommand() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

@@ -1,15 +1,15 @@
-// === Module 10632: StrangerDangerWarningBanner ===
+// === Module 10432: StrangerDangerWarningBanner ===
 
-// Module 10632 (StrangerDangerWarningBanner)
+// Module 10432 (StrangerDangerWarningBanner)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4033 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 9960 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10608 */;
+import closure_4 from "markAllUserIdListsStale" /* 4034 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9818 */;
+import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 10406 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_9 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10633 */;
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_9 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10433 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 class StrangerDangerWarningBanner {

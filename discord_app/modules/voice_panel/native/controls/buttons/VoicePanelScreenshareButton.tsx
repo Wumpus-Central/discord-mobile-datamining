@@ -1,6 +1,6 @@
-// === Module 16510: MobilePhoneShareIcon ===
+// === Module 16542: MobilePhoneShareIcon ===
 
-// Module 16510 (MobilePhoneShareIcon)
+// Module 16542 (MobilePhoneShareIcon)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
@@ -8,7 +8,7 @@ import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 const require = arg1;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);

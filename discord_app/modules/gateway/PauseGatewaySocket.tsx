@@ -1,6 +1,6 @@
-// === Module 13278: getIsPaused ===
+// === Module 13140: getIsPaused ===
 
-// Module 13278 (getIsPaused)
+// Module 13140 (getIsPaused)
 import set from "set" /* 2 */;
 
 let c0 = false;

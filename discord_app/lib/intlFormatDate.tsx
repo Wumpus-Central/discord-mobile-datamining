@@ -1,7 +1,7 @@
-// === Module 4086: makeIntlFormatter ===
+// === Module 4087: makeIntlFormatter ===
 
-// Module 4086 (makeIntlFormatter)
-import closure_2 from "_getSystemLocale" /* 1995 */;
+// Module 4087 (makeIntlFormatter)
+import closure_2 from "_getSystemLocale" /* 1996 */;
 
 const require = arg1;
 function makeIntlFormatter(locale, arg1) {

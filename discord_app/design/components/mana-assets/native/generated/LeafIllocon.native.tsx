@@ -1,10 +1,10 @@
-// === Module 5953: LeafIllocon ===
+// === Module 6645: LeafIllocon ===
 
-// Module 5953 (LeafIllocon)
+// Module 6645 (LeafIllocon)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 5954 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6646 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");

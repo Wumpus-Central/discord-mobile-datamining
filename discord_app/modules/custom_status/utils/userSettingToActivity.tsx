@@ -1,11 +1,11 @@
-// === Module 7294: _activityFromSetting ===
+// === Module 9594: _activityFromSetting ===
 
-// Module 7294 (_activityFromSetting)
+// Module 9594 (_activityFromSetting)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4037 */;
-import closure_4 from "getEmojiToGroupId" /* 6764 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4038 */;
+import closure_4 from "getEmojiToGroupId" /* 5282 */;
 
 function _activityFromSetting(emojiName) {
   if (null != arg1) {

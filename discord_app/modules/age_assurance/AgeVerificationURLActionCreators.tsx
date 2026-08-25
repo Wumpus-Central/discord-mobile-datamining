@@ -1,10 +1,10 @@
-// === Module 5441: requestAgeVerification ===
+// === Module 7948: requestAgeVerification ===
 
-// Module 5441 (requestAgeVerification)
+// Module 7948 (requestAgeVerification)
 import sendRequest from "sendRequest" /* 530 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 1218 */;
-import { VerificationVendorName } from "set" /* 5432 */;
+import { VerificationVendorName } from "set" /* 7943 */;
 import { Endpoints } from "ME" /* 676 */;
 
 require = arg1;
@@ -36,7 +36,7 @@ function _requestAgeVerification() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -276,7 +276,7 @@ function _initiateSuspendedUserAgeVerification() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -376,7 +376,7 @@ function _registerIncodeInterview() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -413,7 +413,7 @@ function _registerIncodeInterview() {
             return obj;
           } else {
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           c1 = tmp;
@@ -449,7 +449,7 @@ function _requestIncodeSessionBootstrap() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

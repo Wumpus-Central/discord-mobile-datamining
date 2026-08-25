@@ -1,10 +1,10 @@
-// === Module 10484: PencilSparkleIcon ===
+// === Module 10339: PencilSparkleIcon ===
 
-// Module 10484 (PencilSparkleIcon)
+// Module 10339 (PencilSparkleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 10485 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 10340 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// === Module 15254: ArrowSmallDownIcon ===
+// === Module 15284: ArrowSmallDownIcon ===
 
-// Module 15254 (ArrowSmallDownIcon)
+// Module 15284 (ArrowSmallDownIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import BaseIconImage from "BaseIconImage" /* 4099 */;
-import registerAsset from "registerAsset" /* 15255 */;
+import BaseIconImage from "BaseIconImage" /* 4100 */;
+import registerAsset from "registerAsset" /* 15285 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

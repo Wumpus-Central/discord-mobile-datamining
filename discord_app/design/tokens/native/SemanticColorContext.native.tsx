@@ -1,10 +1,10 @@
-// === Module 4101: getSemanticColorContextFromThemeContext ===
+// === Module 4102: getSemanticColorContextFromThemeContext ===
 
-// Module 4101 (getSemanticColorContextFromThemeContext)
+// Module 4102 (getSemanticColorContextFromThemeContext)
 import set from "set" /* 2 */;
 import nDefault from "n" /* 689 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4106 */;
-import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4198 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4107 */;
+import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4199 */;
 
 const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
@@ -45,7 +45,7 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
       obj[6] = int2hexResult1;
       obj[1] = obj;
       tmp9 = obj;
-      tmpResult1 = tmp(4102);
+      tmpResult1 = tmp(4103);
     }
     gradientThemeMetadata = tmp9;
   }

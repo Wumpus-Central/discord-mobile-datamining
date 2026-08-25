@@ -1,8 +1,8 @@
-// === Module 7742: _discardDraftOrder ===
+// === Module 7563: _discardDraftOrder ===
 
-// Module 7742 (_discardDraftOrder)
+// Module 7563 (_discardDraftOrder)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { OrderStatus } from "CustomCheckoutFlow" /* 4361 */;
+import { OrderStatus } from "CustomCheckoutFlow" /* 4362 */;
 
 const require = arg1;
 function _discardDraftOrder() {
@@ -24,7 +24,7 @@ function _discardDraftOrder() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

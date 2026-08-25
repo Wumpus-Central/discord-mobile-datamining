@@ -1,6 +1,6 @@
-// === Module 5227: toString ===
+// === Module 5107: toString ===
 
-// Module 5227 (toString)
+// Module 5107 (toString)
 import toJSDefault from "toJS" /* 1931 */;
 
 toJSDefault;

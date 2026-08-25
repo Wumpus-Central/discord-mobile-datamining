@@ -1,8 +1,8 @@
-// === Module 7522: _fetchAdUser ===
+// === Module 7336: _fetchAdUser ===
 
-// Module 7522 (_fetchAdUser)
+// Module 7336 (_fetchAdUser)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "adUser" /* 7520 */;
+import closure_3 from "adUser" /* 7334 */;
 import ME from "ME" /* 676 */;
 
 function _fetchAdUser() {
@@ -24,7 +24,7 @@ function _fetchAdUser() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

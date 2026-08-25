@@ -1,10 +1,10 @@
-// === Module 13297: apexExperiment ===
+// === Module 13159: apexExperiment ===
 
-// Module 13297 (apexExperiment)
+// Module 13159 (apexExperiment)
 import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4293 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4294 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
-import createExperiment from "createExperiment" /* 4290 */;
+import createExperiment from "createExperiment" /* 4291 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-content-inventory-memberlist-and-ranker", defaultConfig: { enabled: true, impressionCappingEnabled: true }, variations: { 0: { enabled: false, impressionCappingEnabled: false } } });
 let obj = { kind: "user", id: "2025-09_hotwheels_nvidia_boost", label: "Next iteration of the activity feed ranking model.", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN, defaultConfig: {}, treatments: items };

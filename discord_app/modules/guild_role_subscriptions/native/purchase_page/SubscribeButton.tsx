@@ -1,13 +1,13 @@
-// === Module 15872: emphasisHook ===
+// === Module 15904: emphasisHook ===
 
-// Module 15872 (emphasisHook)
-import Text from "Text" /* 4739 */;
+// Module 15904 (emphasisHook)
+import Text from "Text" /* 4376 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleConnectionOpen" /* 1980 */;
-import closure_9 from "makeGroupListingIndexSubscriptionListingTag" /* 4018 */;
+import closure_8 from "handleConnectionOpen" /* 1981 */;
+import closure_9 from "makeGroupListingIndexSubscriptionListingTag" /* 4019 */;
 import { AnalyticsLocations } from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -20,14 +20,14 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(14641);
-  obj1 = activeListingId(3978)(activeSubscription.currentPeriodEnd);
+  let obj = changeToListingId(14671);
+  obj1 = activeListingId(3979)(activeSubscription.currentPeriodEnd);
   obj = { children: null };
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1236).intl;
   obj1 = { activeListingName: callback2(obj.useName(activeListingId), 1)[0], billingEndDate: obj1.format("MMMM Do"), emphasisHook };
   obj[2] = intl.format(activeSubscription(1236).t.lA7ztO, obj1);
-  const items = [callback3(activeSubscription(4739).Text, obj), callback3(activeSubscription(1297).Spacer, { size: 16 }), ];
+  const items = [callback3(activeSubscription(4376).Text, obj), callback3(activeSubscription(1297).Spacer, { size: 16 }), ];
   const obj2 = { text: null, onPress: null };
   const intl2 = activeSubscription(1236).intl;
   obj2[0] = intl2.string(activeSubscription(1236).t.SACegK);
@@ -36,7 +36,7 @@ function SwitchTiersButton(activeSubscription) {
     obj = { activeSubscription, activeListingId, changeToListingId };
     obj.openLazy(activeSubscription(closure_1_3[21])(closure_1_3[20], closure_1_3.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
   };
-  items[2] = callback3(activeSubscription(15866).ArrowButton, obj2);
+  items[2] = callback3(activeSubscription(15898).ArrowButton, obj2);
   obj[0] = items;
   return callback4(View, obj);
 }
@@ -93,7 +93,7 @@ export default function SubscribeButton(listingId) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ export default function SubscribeButton(listingId) {
           c3 = 0;
           v0(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp22) {
         closure_2 = tmp22;

@@ -1,33 +1,33 @@
-// === Module 10299: HorizontalAutocompleteOption ===
+// === Module 10150: HorizontalAutocompleteOption ===
 
-// Module 10299 (HorizontalAutocompleteOption)
+// Module 10150 (HorizontalAutocompleteOption)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
-import _modDef4119 from "module_4119" /* 4119 */;
-import nameFromUserDefault from "nameFromUser" /* 4223 */;
-import Text from "Text" /* 4739 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4766 */;
-import preloadDefault from "preload" /* 5454 */;
-import RoleIconDefault from "RoleIcon" /* 7203 */;
-import registerAssetDefault from "registerAsset" /* 8377 */;
+import _modDef4120 from "module_4120" /* 4120 */;
+import nameFromUserDefault from "nameFromUser" /* 4224 */;
+import Text from "Text" /* 4376 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4831 */;
+import preloadDefault from "preload" /* 5374 */;
+import RoleIconDefault from "RoleIcon" /* 5860 */;
+import registerAssetDefault from "registerAsset" /* 8383 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1984 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1985 */;
 import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "markAllUserIdListsStale" /* 4033 */;
+import closure_8 from "markAllUserIdListsStale" /* 4034 */;
 import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
-import importDefaultResult from "createTextStyle" /* 6819 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
+import importDefaultResult from "createTextStyle" /* 5342 */;
 
 require = arg1;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4119);
+  let obj = sharedValue(4120);
   sharedValue = obj.useSharedValue(0);
   useMountLayoutEffectDefault(() => {
     const result = sharedValue.set(sharedValue(closure_1_2[14]).withTiming(1));
@@ -40,9 +40,9 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = closure_14;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4119).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4120).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
-  obj[1] = callback(_modDef4119.View, { style: items, children });
+  obj[1] = callback(_modDef4120.View, { style: items, children });
   return callback(closure_3, obj);
 }
 noopAll;
@@ -98,8 +98,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(7202).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(7202);
+      roleIconData = tmp2(5859).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5859);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -141,16 +141,16 @@ let obj3 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAssetDefault;
     } else {
-      let tmp2Result = tmp2(6870);
+      let tmp2Result = tmp2(4866);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = callback3();
-    tmp2Result = tmp2(4989);
+    tmp2Result = tmp2(4574);
     let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, closure_9, closure_8);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = callback(channel(4739).Text, obj);
+    items[1] = callback(channel(4376).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
   },

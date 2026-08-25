@@ -1,6 +1,6 @@
-// === Module 16253: metadata ===
+// === Module 16285: metadata ===
 
-// Module 16253 (metadata)
+// Module 16285 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/gifting/new_gifting_badges.png.js");

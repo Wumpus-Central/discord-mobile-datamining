@@ -1,16 +1,16 @@
-// === Module 9438: Emoji ===
+// === Module 8882: Emoji ===
 
-// Module 9438 (Emoji)
+// Module 8882 (Emoji)
 import ThemesDefault from "Themes" /* 712 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4041 */;
-import Text from "Text" /* 4739 */;
-import preloadDefault from "preload" /* 5454 */;
-import styles from "styles" /* 9439 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4042 */;
+import Text from "Text" /* 4376 */;
+import preloadDefault from "preload" /* 5374 */;
+import styles from "styles" /* 8883 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionOpen" /* 4201 */;
+import closure_5 from "handleConnectionOpen" /* 4202 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function Emoji(surrogate) {

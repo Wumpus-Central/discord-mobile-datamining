@@ -1,16 +1,16 @@
-// === Module 14709: HAPPENING_NOW_CARD_MARGIN_RIGHT ===
+// === Module 14739: HAPPENING_NOW_CARD_MARGIN_RIGHT ===
 
-// Module 14709 (HAPPENING_NOW_CARD_MARGIN_RIGHT)
+// Module 14739 (HAPPENING_NOW_CARD_MARGIN_RIGHT)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import Text from "Text" /* 4739 */;
-import PressableCard from "PressableCard" /* 6323 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7964 */;
+import Text from "Text" /* 4376 */;
+import PressableCard from "PressableCard" /* 5482 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7785 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14708 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14738 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 noopAll;

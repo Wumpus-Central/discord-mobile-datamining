@@ -1,6 +1,6 @@
-// === Module 12453: getGuildEventImageURL ===
+// === Module 9283: getGuildEventImageURL ===
 
-// Module 12453 (getGuildEventImageURL)
+// Module 9283 (getGuildEventImageURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;

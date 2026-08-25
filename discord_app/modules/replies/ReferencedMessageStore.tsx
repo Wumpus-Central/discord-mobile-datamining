@@ -1,15 +1,15 @@
-// === Module 5018: processMessage ===
+// === Module 7201: processMessage ===
 
-// Module 5018 (processMessage)
+// Module 7201 (processMessage)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import privDefault from "priv" /* 1405 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4808 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5006 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4625 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7206 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "removePendingListFetch" /* 5019 */;
+import closure_4 from "removePendingListFetch" /* 7202 */;
 import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4999 */;
+import closure_6 from "reinjectEphemerals" /* 4623 */;
 import ME from "ME" /* 676 */;
 import set from "set" /* 2 */;
 

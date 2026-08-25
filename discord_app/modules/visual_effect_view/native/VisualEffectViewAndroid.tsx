@@ -1,10 +1,10 @@
-// === Module 4735: MODERN_ANDROID_BLURRING_AVAILABLE ===
+// === Module 4810: MODERN_ANDROID_BLURRING_AVAILABLE ===
 
-// Module 4735 (MODERN_ANDROID_BLURRING_AVAILABLE)
+// Module 4810 (MODERN_ANDROID_BLURRING_AVAILABLE)
 import set from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4734 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4358 */;
-import importDefaultResult from "map" /* 4733 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4809 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4359 */;
+import importDefaultResult from "map" /* 4808 */;
 
 const obj = { componentName: "DCDVisualEffectView", componentFoundInstance: null };
 const tmp2 = DCDDeviceManager.getSystemVersionMajor() >= 31;

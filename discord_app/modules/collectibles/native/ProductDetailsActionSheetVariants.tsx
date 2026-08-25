@@ -1,15 +1,15 @@
-// === Module 9621: VariantOption ===
+// === Module 9717: VariantOption ===
 
-// Module 9621 (VariantOption)
+// Module 9717 (VariantOption)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
-import PressableBase from "PressableBase" /* 5438 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6971 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 9280 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9298 */;
+import PressableBase from "PressableBase" /* 4949 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 5469 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 9559 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9577 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function VariantOption(onPress) {
@@ -69,7 +69,7 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
   ({ product, selectedVariantIndex } = onVariantSelect);
   onVariantSelect = onVariantSelect.onVariantSelect;
   const tmp = callback2();
-  let obj = selectedVariantIndex(5317);
+  let obj = selectedVariantIndex(7159);
   let tmp5Result = null;
   if (obj.getIsVariantProduct(product)) {
     obj = { style: null, children: null };
@@ -79,13 +79,13 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
     obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     obj1[2] = intl.string(tmp2(1236).t.wbgaj6);
-    const items = [callback(tmp2(4739).Text, obj1), ];
+    const items = [callback(tmp2(4376).Text, obj1), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: null, children: null };
       obj2[3] = tmp.text;
       obj2[4] = product.variants[selectedVariantIndex].variantLabel;
-      tmp7Result = tmp7(tmp2(4739).Text, obj2);
+      tmp7Result = tmp7(tmp2(4376).Text, obj2);
     }
     items[1] = tmp7Result;
     obj[1] = items;

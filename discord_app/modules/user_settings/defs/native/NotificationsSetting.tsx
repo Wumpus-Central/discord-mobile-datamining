@@ -1,11 +1,11 @@
-// === Module 14850: route ===
+// === Module 14880: route ===
 
-// Module 14850 (route)
+// Module 14880 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import BellIcon from "BellIcon" /* 10042 */;
-import createToggle from "createToggle" /* 10708 */;
+import BellIcon from "BellIcon" /* 9284 */;
+import createToggle from "createToggle" /* 10516 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return require(14851) /* SystemNotificationsSubLabel */.default;
+    return require(14881) /* SystemNotificationsSubLabel */.default;
   }
 };
 const route = createToggle.createRoute(obj);

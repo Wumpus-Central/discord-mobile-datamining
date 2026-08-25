@@ -1,14 +1,14 @@
-// === Module 4099: BaseIconImage ===
+// === Module 4100: BaseIconImage ===
 
-// Module 4099 (BaseIconImage)
+// Module 4100 (BaseIconImage)
 import noopAll from "noop" /* 19 */;
-import map from "map" /* 4100 */;
+import map from "map" /* 4101 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 noopAll;
-let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "ct" }, refresh_sm: { width: 18, height: 18 } };
+let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "isArray", height: "accessibilityRole" }, refresh_sm: { width: 18, height: 18 } };
 const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = function BaseIconImage(source) {

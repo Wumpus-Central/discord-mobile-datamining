@@ -6,7 +6,7 @@ import getAvatarURL from "getAvatarURL" /* 1435 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
 import toJSDefault from "toJS" /* 1931 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1946 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -183,14 +183,20 @@ class UserRecord extends tmp2 {
     tmp6.primaryGuild = obj2.ensureUserPrimaryGuild(primary_guild);
     ({ collectibles: tmp6.collectibles, displayNameStyles } = global);
     if (displayNameStyles == null) {
-      tmp12Result = require("items");
+      tmp12Result = require("set");
       displayNameStyles = tmp12Result.parseServerDisplayNameStyles(global.display_name_styles);
     }
     tmp6.displayNameStyles = displayNameStyles;
+    typingIndicatorStyle = global.typingIndicatorStyle;
+    if (typingIndicatorStyle == null) {
+      tmp12Result1 = require("CUSTOM_TYPING_INDICATOR_EMOJI_COUNT");
+      typingIndicatorStyle = tmp12Result1.parseServerTypingIndicatorStyle(global.typing_indicator_style);
+    }
+    tmp6.typingIndicatorStyle = typingIndicatorStyle;
     premiumState = global.premiumState;
     if (premiumState == null) {
-      tmp12Result1 = require("parseServerPremiumState");
-      premiumState = tmp12Result1.parseServerPremiumState(global.premium_state);
+      tmp12Result2 = require("parseServerPremiumState");
+      premiumState = tmp12Result2.parseServerPremiumState(global.premium_state);
     }
     tmp6.premiumState = premiumState;
     perks = global.perks;
@@ -201,16 +207,16 @@ class UserRecord extends tmp2 {
     if (null != activePerksBitmask) {
       perks2 = global.perks;
     } else {
-      tmp12Result2 = require("parseServerPerkConfigKind");
-      perks2 = tmp12Result2.parseServerPerks(global.perks);
+      tmp12Result3 = require("parseServerPerkConfigKind");
+      perks2 = tmp12Result3.parseServerPerks(global.perks);
     }
     tmp6.perks = perks2;
-    tmp12Result3 = require("frozen");
+    tmp12Result4 = require("frozen");
     restrictedSchedule = global.restricted_schedule;
     if (restrictedSchedule == null) {
       restrictedSchedule = global.restrictedSchedule;
     }
-    tmp6.restrictedSchedule = tmp12Result3.ensureRestrictedScheduleRecord(restrictedSchedule);
+    tmp6.restrictedSchedule = tmp12Result4.ensureRestrictedScheduleRecord(restrictedSchedule);
     appTransactionIds = global.appTransactionIds;
     if (appTransactionIds == null) {
       appTransactionIds = global.app_transaction_ids;
@@ -219,12 +225,12 @@ class UserRecord extends tmp2 {
       appTransactionIds = null;
     }
     tmp6.appTransactionIds = appTransactionIds;
-    tmp12Result4 = require("parseStoreCountry");
+    tmp12Result5 = require("parseStoreCountry");
     storeCountry = global.store_country;
     if (storeCountry == null) {
       storeCountry = global.storeCountry;
     }
-    tmp6.storeCountry = tmp12Result4.parseStoreCountry(storeCountry);
+    tmp6.storeCountry = tmp12Result5.parseStoreCountry(storeCountry);
     obj = {
       writable: false,
       configurable: false,
@@ -233,13 +239,13 @@ class UserRecord extends tmp2 {
             if (arg0 <= 1073741824) {
               return ((tmp3.flags | tmp2.publicFlags) & arg0) === arg0;
             } else {
-              let tmp7Result = tmp7(tmp3[9]);
+              let tmp7Result = tmp7(tmp3[10]);
               const tmp6Result = tmp6(tmp5.flags);
-              tmp7Result = tmp7(tmp3[9]);
+              tmp7Result = tmp7(tmp3[10]);
               const deserializeResult = tmp7Result.deserialize(tmp4.publicFlags);
               const deserializeResult1 = tmp7Result.deserialize(arg0);
-              const tmp7Result1 = tmp7(tmp3[9]);
-              return tmp7Result1.has(tmp7(tmp3[9]).combine(tmp6Result, deserializeResult), deserializeResult1);
+              const tmp7Result1 = tmp7(tmp3[10]);
+              return tmp7Result1.has(tmp7(tmp3[10]).combine(tmp6Result, deserializeResult), deserializeResult1);
             }
           }
     };
@@ -372,14 +378,14 @@ prototype["getAvatarSource"] = function getAvatarSource(arg0, flag) {
   if (null != arg0) {
     closure_0 = tmp;
     if (null != this.guildMemberAvatars[arg0]) {
-      return importDefault(self[11]).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-        let obj = callback(self[11]);
+      return importDefault(self[12]).getAnimatableSourceWithFallback(flag, (canAnimate) => {
+        let obj = callback(self[12]);
         obj = { guildId: callback, avatar: closure_0, userId: self.id, canAnimate, size: closure_2 };
-        return obj.makeSource(callback(self[11]).getGuildMemberAvatarURLSimple(obj));
+        return obj.makeSource(callback(self[12]).getGuildMemberAvatarURLSimple(obj));
       });
     }
   }
-  return importDefault(self[11]).getAnimatableSourceWithFallback(flag, (flag) => callback(self[11]).getUserAvatarSource(self, flag, closure_2));
+  return importDefault(self[12]).getAnimatableSourceWithFallback(flag, (flag) => callback(self[12]).getUserAvatarSource(self, flag, closure_2));
 };
 prototype["isClaimed"] = function isClaimed() {
   return null != this.email || null != this.phone;
@@ -472,7 +478,7 @@ prototype["isOnReverseTrial"] = function isOnReverseTrial() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1940) /* create */.PremiumSource.REVERSE_TRIAL;
+    isPremiumResult = premiumSource === require(1938) /* create */.PremiumSource.REVERSE_TRIAL;
   }
   return isPremiumResult;
 };
@@ -484,7 +490,7 @@ prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1940) /* create */.PremiumSource.SUBSCRIPTION_GROUP;
+    isPremiumResult = premiumSource === require(1938) /* create */.PremiumSource.SUBSCRIPTION_GROUP;
   }
   return isPremiumResult;
 };
@@ -496,7 +502,7 @@ prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    isPremiumResult = prop === require(1940) /* create */.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = prop === require(1938) /* create */.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -509,14 +515,14 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    let tmp6 = prop === tmp(1940).PremiumSubscriptionType.NONE_UNSPECIFIED;
+    let tmp6 = prop === tmp(1938).PremiumSubscriptionType.NONE_UNSPECIFIED;
     if (!tmp6) {
       const premiumState2 = self.premiumState;
       let prop1;
       if (premiumState2 != null) {
         prop1 = premiumState2.premiumSubscriptionType;
       }
-      tmp6 = prop1 === tmp(1940).PremiumSubscriptionType.BOOST_ONLY;
+      tmp6 = prop1 === tmp(1938).PremiumSubscriptionType.BOOST_ONLY;
     }
     isPremiumResult = tmp6;
   }
@@ -526,7 +532,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
     if (premiumState3 != null) {
       premiumSource = premiumState3.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1940).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1938).PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -539,10 +545,10 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === tmp(1940).PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === tmp(1938).PremiumSource.FRACTIONAL_NITRO;
   }
   if (isPremiumResult) {
-    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1940).PremiumSubscriptionType.TIER_2;
+    isPremiumResult = self.premiumState.premiumSubscriptionType !== tmp(1938).PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
@@ -554,7 +560,7 @@ prototype["isFractionalPremium"] = function isFractionalPremium() {
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === require(1940) /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === require(1938) /* create */.PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -605,14 +611,14 @@ prototype["hasUniqueUsername"] = function hasUniqueUsername() {
 prototype["isPremiumGroupMember"] = function isPremiumGroupMember() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === require(1940) /* create */.PremiumSubscriptionGroupRole.MEMBER;
+    result = this.premiumGroupRole === require(1938) /* create */.PremiumSubscriptionGroupRole.MEMBER;
   }
   return result;
 };
 prototype["isPremiumGroupPrimary"] = function isPremiumGroupPrimary() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === require(1940) /* create */.PremiumSubscriptionGroupRole.PRIMARY;
+    result = this.premiumGroupRole === require(1938) /* create */.PremiumSubscriptionGroupRole.PRIMARY;
   }
   return result;
 };
@@ -641,7 +647,7 @@ Object.defineProperty(prototype, "nameplate", {
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return require(1946) /* getNameplateData */.getNameplateData(nameplate);
+    return require(1947) /* getNameplateData */.getNameplateData(nameplate);
   },
   set: undefined
 });
@@ -653,7 +659,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
       prop = premiumState.premiumSubscriptionGroupRole;
     }
     if (prop == null) {
-      prop = require(1940) /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
+      prop = require(1938) /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
     }
     return prop;
   },

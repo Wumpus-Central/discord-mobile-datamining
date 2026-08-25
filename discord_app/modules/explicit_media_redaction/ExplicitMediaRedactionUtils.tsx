@@ -1,20 +1,20 @@
-// === Module 5006: redactionSettingToRenderedString ===
+// === Module 7206: redactionSettingToRenderedString ===
 
-// Module 5006 (redactionSettingToRenderedString)
+// Module 7206 (redactionSettingToRenderedString)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import create from "create" /* 1306 */;
-import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4075 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4997 */;
-import isCurrentUserTeen from "isCurrentUserTeen" /* 5010 */;
-import setDefault from "set" /* 5011 */;
-import set from "set" /* 5016 */;
-import resetManager from "resetManager" /* 5017 */;
-import ObscureReason from "ObscureReason" /* 5026 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5044 */;
-import closure_3 from "getUserAgnosticState" /* 4742 */;
+import isFeatureAgeGated2 from "isFeatureAgeGated" /* 4076 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4621 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5248 */;
+import isCurrentUserTeen from "isCurrentUserTeen" /* 6015 */;
+import ObscureReason from "ObscureReason" /* 6020 */;
+import setDefault from "set" /* 7208 */;
+import set from "set" /* 7213 */;
+import resetManager from "resetManager" /* 7214 */;
+import closure_3 from "getUserAgnosticState" /* 4379 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getFpMessageInfo" /* 5007 */;
-import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 5009 */;
+import closure_5 from "getFpMessageInfo" /* 6017 */;
+import USER_SETTING_ACTION_SHEET_KEY from "USER_SETTING_ACTION_SHEET_KEY" /* 7207 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
 require = arg1;
@@ -118,12 +118,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(5011);
+        let tmp3Result = tmp3(7208);
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(5011);
+        tmp3Result = tmp3(7208);
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -174,8 +174,8 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(5011).distribution(obj, sum);
-      const tmp10Result = tmp10(5011);
+      tmp10(7208).distribution(obj, sum);
+      const tmp10Result = tmp10(7208);
     }
     const obj3 = expandEventPropertiesDefault;
     tmp10 = importDefault;

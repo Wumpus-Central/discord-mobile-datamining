@@ -1,6 +1,6 @@
-// === Module 7228: set ===
+// === Module 5887: set ===
 
-// Module 7228 (set)
+// Module 5887 (set)
 import set from "set" /* 2 */;
 import CommandsDefault from "Commands" /* 112 */;
 

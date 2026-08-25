@@ -1,14 +1,14 @@
-// === Module 4976: handleReaction ===
+// === Module 6006: handleReaction ===
 
-// Module 4976 (handleReaction)
+// Module 6006 (handleReaction)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import MAX_REACTIONS from "MAX_REACTIONS" /* 4035 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4277 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4808 */;
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4036 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4278 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4625 */;
 import closure_2 from "fetchFingerprint" /* 1218 */;
 import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4033 */;
+import closure_4 from "markAllUserIdListsStale" /* 4034 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
 require = arg1;

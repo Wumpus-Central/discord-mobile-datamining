@@ -1,9 +1,9 @@
-// === Module 12516: mediaEngineContextFromParticipantType ===
+// === Module 10800: mediaEngineContextFromParticipantType ===
 
-// Module 12516 (mediaEngineContextFromParticipantType)
+// Module 10800 (mediaEngineContextFromParticipantType)
 import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4534 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4549 */;
+import ParticipantTypes2 from "ParticipantTypes" /* 4401 */;
+import DesktopSources from "DesktopSources" /* 4444 */;
 
 const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
 const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;

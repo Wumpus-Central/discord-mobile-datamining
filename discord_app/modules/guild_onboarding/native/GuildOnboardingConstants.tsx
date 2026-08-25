@@ -1,6 +1,6 @@
-// === Module 6822: GUILD_ONBOARDING_MODAL_KEY ===
+// === Module 5345: GUILD_ONBOARDING_MODAL_KEY ===
 
-// Module 6822 (GUILD_ONBOARDING_MODAL_KEY)
+// Module 5345 (GUILD_ONBOARDING_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConstants.tsx");

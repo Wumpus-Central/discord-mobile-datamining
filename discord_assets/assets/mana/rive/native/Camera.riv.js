@@ -1,6 +1,6 @@
-// === Module 4174: metadata ===
+// === Module 4175: metadata ===
 
-// Module 4174 (metadata)
+// Module 4175 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/Camera.riv.js");

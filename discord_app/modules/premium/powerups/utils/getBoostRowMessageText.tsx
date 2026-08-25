@@ -1,10 +1,10 @@
-// === Module 11804: getBoostRowMessageText ===
+// === Module 12144: getBoostRowMessageText ===
 
-// Module 11804 (getBoostRowMessageText)
+// Module 12144 (getBoostRowMessageText)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import messagesProxyDefault from "messagesProxy" /* 2368 */;
-import BOOST_EXPIRING_DISPLAY_WINDOW_DAYS from "BOOST_EXPIRING_DISPLAY_WINDOW_DAYS" /* 11799 */;
+import messagesProxyDefault from "messagesProxy" /* 2369 */;
+import BOOST_EXPIRING_DISPLAY_WINDOW_DAYS from "BOOST_EXPIRING_DISPLAY_WINDOW_DAYS" /* 12139 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
 

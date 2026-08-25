@@ -1,6 +1,6 @@
-// === Module 14361: _addRestrictedScheduleRule ===
+// === Module 14391: _addRestrictedScheduleRule ===
 
-// Module 14361 (_addRestrictedScheduleRule)
+// Module 14391 (_addRestrictedScheduleRule)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
@@ -93,7 +93,7 @@ function _deleteRestrictedScheduleRule() {
           obj[0] = body;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -137,7 +137,7 @@ function _deleteRestrictedScheduleRule() {
             obj4[2] = body;
             obj.dispatch(obj4);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp13) {
           c5 = tmp;

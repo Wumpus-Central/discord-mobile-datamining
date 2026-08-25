@@ -1,10 +1,10 @@
-// === Module 6153: ServerIconCoincordExample ===
+// === Module 6841: ServerIconCoincordExample ===
 
-// Module 6153 (ServerIconCoincordExample)
+// Module 6841 (ServerIconCoincordExample)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6154 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6842 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconCoincordExample.native.tsx");

@@ -1,9 +1,9 @@
-// === Module 13624: NormalTelemetryImpl ===
+// === Module 13659: NormalTelemetryImpl ===
 
-// Module 13624 (NormalTelemetryImpl)
-import TelemetryChannel from "TelemetryChannel" /* 13620 */;
-import importDefaultResult from "append" /* 13619 */;
-import importDefaultResult1 from "TelemetryChannel" /* 13620 */;
+// Module 13659 (NormalTelemetryImpl)
+import TelemetryChannel from "TelemetryChannel" /* 13655 */;
+import importDefaultResult from "append" /* 13654 */;
+import importDefaultResult1 from "TelemetryChannel" /* 13655 */;
 
 require = arg1;
 class NormalTelemetryImpl extends tmp3 {

@@ -1,9 +1,9 @@
-// === Module 4865: isPhotoKitAsset ===
+// === Module 4984: isPhotoKitAsset ===
 
-// Module 4865 (isPhotoKitAsset)
+// Module 4984 (isPhotoKitAsset)
 import set from "set" /* 2 */;
 import set2 from "set" /* 500 */;
-import _initializeDefault from "_initialize" /* 4866 */;
+import _initializeDefault from "_initialize" /* 4985 */;
 
 const result = set.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
@@ -88,13 +88,13 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, closure
             if (obj2.isExtensionAnimated(formatted)) {
               return false;
             } else {
-              const supportedExtensions = tmp14(4866).getSupportedExtensions();
+              const supportedExtensions = tmp14(4985).getSupportedExtensions();
               if (null !== supportedExtensions) {
                 if (supportedExtensions.has(formatted)) {
                   return true;
                 }
               }
-              const tmp14Result = tmp14(4866);
+              const tmp14Result = tmp14(4985);
             }
             obj2 = _initializeDefault;
             tmp14 = importDefault;

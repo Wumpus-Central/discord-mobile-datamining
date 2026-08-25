@@ -1,6 +1,6 @@
-// === Module 15405: _getEmojiCacheKey ===
+// === Module 15435: _getEmojiCacheKey ===
 
-// Module 15405 (_getEmojiCacheKey)
+// Module 15435 (_getEmojiCacheKey)
 import privDefault from "priv" /* 1405 */;
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -27,7 +27,7 @@ function _getFromCacheOrFallback2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -143,7 +143,7 @@ function _getEmojiDominantColors() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

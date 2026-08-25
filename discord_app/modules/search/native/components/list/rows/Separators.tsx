@@ -1,11 +1,11 @@
-// === Module 15970: MessageVerticalSeparator ===
+// === Module 16002: MessageVerticalSeparator ===
 
-// Module 15970 (MessageVerticalSeparator)
+// Module 16002 (MessageVerticalSeparator)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8546 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8554 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 noopAll;
 ({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = MessageEmbedTypes);

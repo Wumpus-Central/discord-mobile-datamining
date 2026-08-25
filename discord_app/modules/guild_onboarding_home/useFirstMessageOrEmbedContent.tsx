@@ -1,6 +1,6 @@
-// === Module 15891: useFirstMessageOrEmbedContent ===
+// === Module 15923: useFirstMessageOrEmbedContent ===
 
-// Module 15891 (useFirstMessageOrEmbedContent)
+// Module 15923 (useFirstMessageOrEmbedContent)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");

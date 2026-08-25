@@ -1,17 +1,17 @@
-// === Module 10154: LocationText ===
+// === Module 10004: LocationText ===
 
-// Module 10154 (LocationText)
+// Module 10004 (LocationText)
 import initialize from "initialize" /* 589 */;
 import set from "set" /* 692 */;
 import ThemesDefault from "Themes" /* 712 */;
-import Text from "Text" /* 4739 */;
+import Text from "Text" /* 4376 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
-import closure_5 from "markAllUserIdListsStale" /* 4033 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
+import closure_5 from "markAllUserIdListsStale" /* 4034 */;
 import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 
 require = arg1;
 function LocationText(channel) {
@@ -96,7 +96,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     obj[0] = tmp5;
     const tmp6 = obj;
   }
-  let tmp2Result = tmp2(4989);
+  let tmp2Result = tmp2(4574);
   const channelName = tmp2Result.computeChannelName(channel, closure_6, closure_5);
   const type = channel.type;
   let tmp10 = channelName;
@@ -111,7 +111,7 @@ export default function MessageNotificationHeader(locationTextColor) {
           }
           let channelName1 = null;
           if (null != parentChannel) {
-            tmp2Result = tmp2(4989);
+            tmp2Result = tmp2(4574);
             channelName1 = tmp2Result.computeChannelName(parentChannel, closure_6, closure_5);
           }
           if (null != channelName1) {
@@ -143,7 +143,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     const items1 = [tmp.primaryText, tmp6];
     obj2[3] = items1;
     obj2[4] = author.nick;
-    tmp17Result = tmp17(tmp2(4739).Text, obj2);
+    tmp17Result = tmp17(tmp2(4376).Text, obj2);
   }
   const items2 = [tmp17Result, ];
   tmp17Result = null != tmp10;
@@ -174,11 +174,11 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
     obj[0] = tmp.secondaryTextContainer;
     obj = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: null, children: "\u00B7" };
     obj[3] = tmp.separator;
-    const items2 = [tmp4(tmp5(4739).Text, obj), ];
+    const items2 = [tmp4(tmp5(4376).Text, obj), ];
     obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj1[3] = tmp.secondaryText;
     obj1[4] = secondaryText;
-    items2[1] = tmp4(tmp5(4739).Text, obj1);
+    items2[1] = tmp4(tmp5(4376).Text, obj1);
     obj[1] = items2;
     tmp2Result = tmp2(tmp3, obj);
   }

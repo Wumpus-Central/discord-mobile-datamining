@@ -1,6 +1,6 @@
-// === Module 7496: QuestRewardTypes ===
+// === Module 7310: QuestRewardTypes ===
 
-// Module 7496 (QuestRewardTypes)
+// Module 7310 (QuestRewardTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx");

@@ -1,13 +1,13 @@
-// === Module 12138: BotUserProfileOverflowMenu ===
+// === Module 12471: BotUserProfileOverflowMenu ===
 
-// Module 12138 (BotUserProfileOverflowMenu)
+// Module 12471 (BotUserProfileOverflowMenu)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "markAllUserIdListsStale" /* 4033 */;
-import closure_6 from "handleConnectionOpen" /* 1980 */;
+import closure_5 from "markAllUserIdListsStale" /* 4034 */;
+import closure_6 from "handleConnectionOpen" /* 1981 */;
 import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10633 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10433 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

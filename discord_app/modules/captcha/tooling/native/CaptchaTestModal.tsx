@@ -1,14 +1,14 @@
-// === Module 15201: CaptchaTestScreen ===
+// === Module 15231: CaptchaTestScreen ===
 
-// Module 15201 (CaptchaTestScreen)
+// Module 15231 (CaptchaTestScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
-import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15202 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
+import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15232 */;
 import set from "set" /* 2 */;
 
 const require = arg1;
@@ -34,7 +34,7 @@ function CaptchaTestScreen(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -227,5 +227,5 @@ export default function CaptchaTestModal() {
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
   const intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t["13/7kX"]);
-  return callback(_require(6343).Navigator, obj);
+  return callback(_require(5889).Navigator, obj);
 };

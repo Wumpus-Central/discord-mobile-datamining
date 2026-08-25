@@ -1,10 +1,10 @@
-// === Module 6065: Orb3dIllustration ===
+// === Module 6749: Orb3dIllustration ===
 
-// Module 6065 (Orb3dIllustration)
+// Module 6749 (Orb3dIllustration)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5454 */;
-import metadataDefault from "metadata" /* 6066 */;
+import preloadDefault from "preload" /* 5374 */;
+import metadataDefault from "metadata" /* 6750 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/Orb3dIllustration.native.tsx");

@@ -1,8 +1,8 @@
-// === Module 8560: useHandleJoinThreadVoice ===
+// === Module 8568: useHandleJoinThreadVoice ===
 
-// Module 8560 (useHandleJoinThreadVoice)
+// Module 8568 (useHandleJoinThreadVoice)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4026 */;
+import closure_4 from "storeThread" /* 4027 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");
@@ -21,7 +21,7 @@ export default function useHandleJoinThreadVoice(arg0) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -110,7 +110,7 @@ export default function useHandleJoinThreadVoice(arg0) {
           } else {
             arg1.openGuildVoiceModal(guildId, "Thread Header");
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           c2 = 4;
           c3 = 1;

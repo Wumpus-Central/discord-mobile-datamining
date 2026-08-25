@@ -1,12 +1,12 @@
-// === Module 5659: DiscordWordmarkLogo ===
+// === Module 6345: DiscordWordmarkLogo ===
 
-// Module 5659 (DiscordWordmarkLogo)
+// Module 6345 (DiscordWordmarkLogo)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
-import map from "map" /* 4100 */;
-import metadataDefault from "metadata" /* 5660 */;
+import map from "map" /* 4101 */;
+import metadataDefault from "metadata" /* 6346 */;
 
 const Image = get_ActivityIndicator.Image;
 const jsx = jsxProd.jsx;

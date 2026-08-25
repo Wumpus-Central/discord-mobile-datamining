@@ -1,9 +1,9 @@
-// === Module 9021: useUserProfileOverscrollStyles ===
+// === Module 8984: useUserProfileOverscrollStyles ===
 
-// Module 9021 (useUserProfileOverscrollStyles)
+// Module 8984 (useUserProfileOverscrollStyles)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
 
 const require = arg1;
 let closure_6 = { code: "function useUserProfileOverscrollStylesTsx1(){const{position}=this.__closure;return position.get()<=0;}" };

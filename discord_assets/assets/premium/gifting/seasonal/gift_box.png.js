@@ -1,6 +1,6 @@
-// === Module 12032: metadata ===
+// === Module 12357: metadata ===
 
-// Module 12032 (metadata)
+// Module 12357 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js");

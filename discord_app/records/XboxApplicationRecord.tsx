@@ -1,8 +1,8 @@
-// === Module 13357: getIconURL ===
+// === Module 13218: getIconURL ===
 
-// Module 13357 (getIconURL)
-import createExecutableDefault from "createExecutable" /* 4483 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5102 */;
+// Module 13218 (getIconURL)
+import createExecutableDefault from "createExecutable" /* 4406 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5108 */;
 
 createExecutableDefault;
 let c2 = "xbox:";

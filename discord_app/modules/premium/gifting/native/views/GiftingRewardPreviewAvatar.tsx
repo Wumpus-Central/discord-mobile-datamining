@@ -1,10 +1,10 @@
-// === Module 10421: GiftingRewardPreviewAvatar ===
+// === Module 10272: GiftingRewardPreviewAvatar ===
 
-// Module 10421 (GiftingRewardPreviewAvatar)
+// Module 10272 (GiftingRewardPreviewAvatar)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import Button from "Button" /* 1297 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4669 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4372 */;
 import closure_3 from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -24,9 +24,9 @@ export default function GiftingRewardPreviewAvatar(asset) {
     obj[0] = asset.asset;
     tmp5 = obj;
   }
-  obj = { user: stateFromStores, guildId: "r", avatarDecoration: false, animate: false };
+  obj = { user: stateFromStores, guildId: "r", avatarDecoration: "ct", animate: null };
   obj[2] = tmp5;
   obj[3] = !stateFromStores1;
   const merged = Object.assign(asset);
-  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: false, animate: false });
+  return jsx(Button.Avatar, { user: stateFromStores, guildId: "r", avatarDecoration: "ct", animate: null });
 };

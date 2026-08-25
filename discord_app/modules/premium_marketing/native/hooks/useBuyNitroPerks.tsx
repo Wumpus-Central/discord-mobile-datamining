@@ -1,9 +1,9 @@
-// === Module 7977: useBuyNitroPerks ===
+// === Module 7799: useBuyNitroPerks ===
 
-// Module 7977 (useBuyNitroPerks)
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5361 */;
+// Module 7799 (useBuyNitroPerks)
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7003 */;
 import closure_3 from "noop" /* 19 */;
-import { Gradients } from "items" /* 7441 */;
+import { Gradients } from "items" /* 7039 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import importDefaultResult from "n" /* 689 */;
 

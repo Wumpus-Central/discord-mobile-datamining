@@ -1,15 +1,18 @@
-// === Module 8452: useDominantRGBFromImage ===
+// === Module 8458: useDominantRGBFromImage ===
 
-// Module 8452 (useDominantRGBFromImage)
+// Module 8458 (useDominantRGBFromImage)
+import Button from "Button" /* 1297 */;
+import LinearGradientDefault from "LinearGradient" /* 4826 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8461 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 676 */;
+import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4668 */;
+import createCacheKey from "createCacheKey" /* 4380 */;
 import importDefaultResult from "apply" /* 12 */;
 
-const require = arg1;
+require = arg1;
 function useDominantRGBFromImage(arg0, arg1) {
   const _require = arg0;
   let first = arg1;
@@ -18,15 +21,15 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8453)();
+  let tmp5 = first(8459)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8454).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8460).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require(4227).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require(4227);
+    hexToRgbResult = _require(4228).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    const obj2 = _require(4228);
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);
   callback = tmp8[1];
@@ -53,7 +56,7 @@ function useDominantRGBFromImage(arg0, arg1) {
             closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
             const tmp3 = closure_1_3(arg0[0], 3);
           }
-        }).catch(closure_1_9);
+        }).catch(closure_1_8);
         const nextPromise = dominantColorsLocalAsset.then((arg0) => {
           if (callback()) {
             const obj = { r: null, g: null, b: null };
@@ -78,81 +81,22 @@ class VideoBackground {
     if (isStageCall === undefined) {
       isStageCall = false;
     }
-    ({ user, guildId } = global);
-    renderVideoDetails = global.renderVideoDetails;
+    ({ user, renderVideoDetails } = global);
+    ({ avatarStyle, guildId } = global);
     merged = Object.assign(global, Object.create(null));
-    closure_1 = undefined;
-    closure_2 = undefined;
-    tmp2 = closure_12();
-    tmp3 = closure_13(url);
+    tmp2 = closure_11();
+    tmp3 = closure_12(url);
     tmp4 = useDominantRGBFromImage(url, tmp3);
     combined = "rgb(" + tmp4.r + ", " + tmp4.g + ", " + tmp4.b + ")";
-    tmp6 = closure_1;
     tmp7 = closure_2;
-    tmp8 = require("useIsMobileVisualRefreshExperimentEnabled")("VideoBackground-native");
-    closure_1 = tmp8;
+    tmp6 = closure_1;
     id = undefined;
+    tmp8 = require("useProfileTileGradient");
     if (user != null) {
       id = user.id;
     }
-    if (id == null) {
-      id = EMPTY_STRING_SNOWFLAKE_ID;
-    }
-    closure_2 = id;
-    tmp10 = require("useDisplayProfile")(id, guildId);
-    first = undefined;
-    if (tmp10 != null) {
-      themeColors = tmp10.themeColors;
-      if (themeColors != null) {
-        first = themeColors[0];
-      }
-    }
-    if (first == null) {
-      first = null;
-    }
-    tmp12 = undefined;
-    if (tmp10 != null) {
-      themeColors2 = tmp10.themeColors;
-      if (themeColors2 != null) {
-        tmp12 = themeColors2[1];
-      }
-    }
-    if (tmp12 == null) {
-      tmp12 = null;
-    }
-    tmp13 = tmp8;
-    if (tmp8) {
-      tmp13 = null != first;
-    }
-    if (tmp13) {
-      tmp13 = null != tmp12;
-    }
-    tmp14 = guildId;
-    obj = require("rgbToHex");
-    tmp15 = null;
-    if (tmp13) {
-      tmp15 = first;
-    }
-    tmp16 = null;
-    if (tmp13) {
-      tmp16 = tmp12;
-    }
-    videoTileGradientColors = obj.useVideoTileGradientColors(tmp15, tmp16);
-    items = [, , ];
-    items[0] = tmp8;
-    items[1] = id;
-    items[2] = guildId;
-    effect = closure_4.useEffect(() => {
-      let tmp2 = id !== closure_1_8;
-      if (tmp2) {
-        tmp2 = callback;
-      }
-      if (tmp2) {
-        const obj = { guildId: null, dispatchWait: true };
-        obj[0] = guildId;
-        callback(id[14])(id, undefined, obj);
-      }
-    }, items);
+    tmp8Result = tmp8({ userId: id, guildId, location: "VideoBackground-native" });
+    tmp11 = null != tmp8Result;
     if (null == tmp3) {
       return null;
     } else {
@@ -163,74 +107,74 @@ class VideoBackground {
       if (renderVideoDetailsResult == null) {
         renderVideoDetailsResult = null;
       }
-      items1 = [, , , ];
-      items1[0] = global.style;
-      items1[1] = tmp2.videoBackground;
-      tmp20 = null;
-      if (!tmp13) {
+      items = [, , , ];
+      items[0] = global.style;
+      items[1] = tmp2.videoBackground;
+      tmp13 = null;
+      if (!tmp11) {
         obj = { backgroundColor: null };
         obj[0] = combined;
-        tmp20 = obj;
+        tmp13 = obj;
       }
-      items1[2] = tmp20;
+      items[2] = tmp13;
       videoDetailsSpacer = null;
       if (null != renderVideoDetailsResult) {
         videoDetailsSpacer = tmp2.videoDetailsSpacer;
       }
-      items1[3] = videoDetailsSpacer;
-      tmp22 = null;
+      items[3] = videoDetailsSpacer;
+      tmp15 = null;
       if (isStageCall) {
-        tmp22 = null;
-        if (!tmp13) {
-          obj1 = { backgroundColor: null };
-          obj1[0] = combined;
-          tmp22 = obj1;
+        tmp15 = null;
+        if (!tmp11) {
+          obj = { backgroundColor: null };
+          obj[0] = combined;
+          tmp15 = obj;
         }
       }
-      tmp23 = jsx;
-      obj2 = { source: null };
-      obj2[0] = tmp3;
-      tmp24 = obj2;
-      tmp25 = merged;
+      tmp16 = jsx;
+      tmp17 = closure_0;
+      obj1 = { source: null };
+      obj1[0] = tmp3;
+      tmp18 = obj1;
+      tmp19 = merged;
       merged1 = Object.assign(merged);
-      items2 = [, ];
-      items2[0] = global.avatarStyle;
-      items2[1] = tmp22;
-      obj2.avatarStyle = items2;
-      obj2.isStageCall = isStageCall;
-      tmp27 = jsx(require("Button").Avatar, obj2);
-      if (null != videoTileGradientColors) {
-        tmp31 = jsxs;
-        obj3 = { colors: null, start: null, end: null, style: null, children: null };
-        obj3[0] = videoTileGradientColors;
-        obj3[1] = { x: 0, y: 0 };
-        obj3[2] = { x: 0, y: 1 };
-        obj3[3] = items1;
-        items3 = [, ];
-        items3[0] = tmp27;
-        items3[1] = renderVideoDetailsResult;
-        obj3[4] = items3;
-        tmp30 = jsxs(require("LinearGradient"), obj3);
+      items1 = [, ];
+      items1[0] = avatarStyle;
+      items1[1] = tmp15;
+      obj1.avatarStyle = items1;
+      obj1.isStageCall = isStageCall;
+      tmp21 = jsx(require("Button").Avatar, obj1);
+      if (null != tmp8Result) {
+        tmp25 = jsxs;
+        obj2 = { colors: null, start: null, end: null, style: null, children: null };
+        obj2[0] = tmp8Result;
+        obj2[1] = { x: 0, y: 0 };
+        obj2[2] = { x: 0, y: 1 };
+        obj2[3] = items;
+        items2 = [, ];
+        items2[0] = tmp21;
+        items2[1] = renderVideoDetailsResult;
+        obj2[4] = items2;
+        tmp24 = jsxs(require("LinearGradient"), obj2);
       } else {
-        tmp28 = jsxs;
-        tmp29 = View;
-        obj4 = { style: null, children: null };
-        obj4[0] = items1;
-        items4 = [, ];
-        items4[0] = tmp27;
-        items4[1] = renderVideoDetailsResult;
-        obj4[1] = items4;
-        tmp30 = jsxs(View, obj4);
+        tmp22 = jsxs;
+        tmp23 = View;
+        obj3 = { style: null, children: null };
+        obj3[0] = items;
+        items3 = [, ];
+        items3[0] = tmp21;
+        items3[1] = renderVideoDetailsResult;
+        obj3[1] = items3;
+        tmp24 = jsxs(View, obj3);
       }
-      return tmp30;
+      return tmp24;
     }
   }
 }
 let c4 = importAllResult;
 ({ View: c5, NativeModules: closure_6, Image: error } = get_ActivityIndicator);
-({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, NOOP: c9 } = ME);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = createCacheKey.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
+({ jsx: c9, jsxs: c10 } = jsxProd);
+let closure_11 = createCacheKey.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
 const memoizeResult = importDefaultResult.memoize((num) => {
   let tmp = null;
   if (null != num) {

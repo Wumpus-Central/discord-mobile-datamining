@@ -1,6 +1,6 @@
-// === Module 9429: useEmojiPickerViewableItemsChanged ===
+// === Module 8872: useEmojiPickerViewableItemsChanged ===
 
-// Module 9429 (useEmojiPickerViewableItemsChanged)
+// Module 8872 (useEmojiPickerViewableItemsChanged)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1922 */;
 

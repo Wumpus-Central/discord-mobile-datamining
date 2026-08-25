@@ -1,10 +1,10 @@
-// === Module 16993: useGuildApplication ===
+// === Module 17025: useGuildApplication ===
 
-// Module 16993 (useGuildApplication)
+// Module 17025 (useGuildApplication)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import closure_6 from "addApplication" /* 4482 */;
+import closure_6 from "addApplication" /* 4421 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/applications/useGuildApplication.tsx");
@@ -34,7 +34,7 @@ export default function useGuildApplication(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
