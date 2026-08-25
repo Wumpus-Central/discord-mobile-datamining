@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "127a752466784cf57691500bcfc955ae", name: "ic_file_small_acrobat", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 200, height: 72, scales: [2, 3], hash: "86035f94bc8c78da758eed4788f623cf", name: "empty_castle", type: "png" });

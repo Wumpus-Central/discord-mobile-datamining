@@ -27,7 +27,7 @@ export const useThenable = function useThenable(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -80,7 +80,7 @@ export const useThenable = function useThenable(arg0) {
               closure_2_2(items2);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp28) {
           closure_2 = tmp28;

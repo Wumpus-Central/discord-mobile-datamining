@@ -235,7 +235,7 @@ function _instrumentStream() {
             obj[0] = done;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -633,7 +633,7 @@ function _instrumentStream() {
                     throwTypeErrorResult = store;
                     throwTypeErrorResult = store.end();
                     c12 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 }
               break;

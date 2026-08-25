@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 120, height: 120, scales: [1], hash: "b269fec2e8135bbc2e2d49cb182b352b", name: "amanda", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2, 3], hash: "21dd2828907413d4c11bf84cb61743df", name: "search_empty_state_light", type: "png" });

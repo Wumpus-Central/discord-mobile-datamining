@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 64, height: 64, scales: [1, 2, 3], hash: "2d232c4ffc7aee7f8419734bdb63af83", name: "screenshare", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 311, height: 175, scales: [2, 3], hash: "813b26f9493222d83dc58dec090b98ea", name: "empty_dms_activities", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 18, height: 15, scales: [2, 3], hash: "dc018ce302b0357451a31422d7180d84", name: "sparkle_star_pointed", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 18, height: 18, scales: [1, 2, 3], hash: "62d7aa01daae8d1f045686e6148f0a24", name: "ic_add_18px", type: "png" });

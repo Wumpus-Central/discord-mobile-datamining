@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mZWVkYmFjaw==", scales: [1], hash: "c1dec89612e41abe4f52f9cf45a0720a", name: "ko.messages.c1dec89612e41abe4f52f9cf45a0720a.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mZWVkYmFjaw==", scales: [1], hash: "4ff4e23b06a3deb884ef919dbfebc748", name: "ja.messages.4ff4e23b06a3deb884ef919dbfebc748.compiled.messages", type: "jsona" });

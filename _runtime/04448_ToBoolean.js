@@ -1,5 +1,0 @@
-// _runtime/04448_ToBoolean.js
-
-export default function ToBoolean(arg0) {
-  return arg0;
-};

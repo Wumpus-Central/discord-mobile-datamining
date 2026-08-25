@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/activities/images", width: 445, height: 482, scales: [1], hash: "578f09ddbff611181344fe43546bae68", name: "announcement_birb", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 189, height: 163, scales: [2, 3], hash: "b5d60c4f52c2e5640ed435ba1b0b3fc3", name: "img_tier_2_clouds", type: "png" });

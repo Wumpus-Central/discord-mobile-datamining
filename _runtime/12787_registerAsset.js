@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/saved_messages", width: 297, height: 238, scales: [1], hash: "ee27927c992063817a4891d6fea39469", name: "wumpus-bookmark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 144, height: 150, scales: [1], hash: "c4e1982e9b2ef93acb5f2236a23782fc", name: "coffee_idle", type: "png" });

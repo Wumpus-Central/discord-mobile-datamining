@@ -496,7 +496,7 @@
               return nextPromise;
             }
       };
-      tmp = f67238(this, "_invoke", obj);
+      tmp = f67352(this, "_invoke", obj);
       return;
     }
   }
@@ -582,7 +582,7 @@
     }
   }
   function doneResult() {
-    return { value: "HermesInternal", done: null };
+    return { value: "HermesInternal", done: "HermesInternal" };
   }
   const hasOwnProperty = prototype.hasOwnProperty;
   let tmp = Object.defineProperty || ((arg0, arg1, value) => {
@@ -664,7 +664,7 @@
             if ("throw" === method) {
               throw arg1;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             _undefined.method = method;
@@ -1214,7 +1214,7 @@
                   return nextPromise;
                 }
         };
-        tmp = f67238(this, "_invoke", obj);
+        tmp = f67352(this, "_invoke", obj);
         return;
       }
     }
@@ -1736,7 +1736,7 @@
                       return nextPromise;
                     }
           };
-          tmp = f67238(this, "_invoke", obj);
+          tmp = f67352(this, "_invoke", obj);
           return;
         }
       }
@@ -1800,7 +1800,7 @@
               if ("throw" === method) {
                 throw arg1;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               _undefined.method = method;

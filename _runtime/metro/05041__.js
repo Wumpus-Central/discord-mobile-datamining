@@ -1,14 +1,2 @@
 // _runtime/metro/05041__.js
-import getNative from "../00773_getNative.js";
-import setToArray from "../00790_setToArray.js";
-import noop from "../05042_noop.js";
-
-if (getNative) {
-  const _module = setToArray;
-  const items = [, -0];
-  const tmp5 = new getNative(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new getNative(arg0);
-  }
-  module.exports = noop;
-}
+arg5.default = { USE_FILE: true, USE_JFIF: true, USE_PNG_FILE: true, USE_EXIF: true, USE_IPTC: true, USE_XMP: true, USE_ICC: true, USE_MPF: true, USE_PHOTOSHOP: true, USE_THUMBNAIL: true, USE_TIFF: true, USE_JPEG: true, USE_PNG: true, USE_HEIC: true, USE_AVIF: true, USE_WEBP: true, USE_GIF: true, USE_MAKER_NOTES: true };

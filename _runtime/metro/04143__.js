@@ -1,2 +1,2 @@
 // _runtime/metro/04143__.js
-arg5.Alignment = { TopLeft: "topLeft", TopCenter: "topCenter", TopRight: "topRight", CenterLeft: "centerLeft", Center: "center", CenterRight: "centerRight", BottomLeft: "bottomLeft", BottomCenter: "bottomCenter", BottomRight: "bottomRight" };
+arg5.Fit = { Fill: 0, [0]: "Fill", Contain: 1, [1]: "Contain", Cover: 2, [2]: "Cover", FitWidth: 3, [3]: "FitWidth", FitHeight: 4, [4]: "FitHeight", None: 5, [5]: "None", ScaleDown: 6, [6]: "ScaleDown", Layout: 7, [7]: "Layout" };

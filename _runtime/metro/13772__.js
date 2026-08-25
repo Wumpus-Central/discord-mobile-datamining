@@ -1,18 +1,19 @@
 // _runtime/metro/13772__.js
-import call from "../13738_call.js";
-import all from "../13759_all.js";
-import f2 from "../13773_f.js";
-import all2 from "../13783_all.js";
-import _mod13784 from "13784__.js";
+import _mod13770 from "13770__.js";
+import call from "../13773_call.js";
+import call2 from "../13775_call.js";
 
-let closure_2 = call([].concat);
+let fn = Object;
+let closure_3 = call("".split);
+if (_mod13770(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === call2(arg0)) {
+      let tmp2 = callback(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
+    }
+    return tmp2;
+  };
+}
 
-export default all("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(all2(arg0));
-  const f = _mod13784.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = callback(fResult, f(arg0));
-  }
-  return tmp2;
-});
+export default fn;

@@ -1,85 +1,13 @@
 // _runtime/04249_Portal.js
-import noop from "00019_noop.js";
+import Portal from "04250_Portal.js";
+import usePortal from "04251_usePortal.js";
+import PortalHost from "04254_PortalHost.js";
+import memo from "04256_memo.js";
+import print from "04258_print.js";
 
-({ useCallback: obj1, useEffect: c3, useMemo: c4, useRef: c5 } = noop);
-const memoResult = noop.memo((name) => {
-  name = name.name;
-  const handleOnMount = name.handleOnMount;
-  const handleOnUnmount = name.handleOnUnmount;
-  const handleOnUpdate = name.handleOnUpdate;
-  const children = name.children;
-  let addPortal;
-  let removePortal;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  closure_9 = undefined;
-  closure_10 = undefined;
-  const portal = name(handleOnMount[1]).usePortal(name.hostName);
-  addPortal = portal.addPortal;
-  removePortal = portal.removePortal;
-  const items = [name];
-  closure_7 = children(() => {
-    let nanoidResult = name;
-    if (!name) {
-      nanoidResult = name(handleOnMount[2]).nanoid();
-      const obj = name(handleOnMount[2]);
-    }
-    return nanoidResult;
-  }, items);
-  const tmp2 = addPortal();
-  closure_8 = tmp2;
-  const tmp3 = addPortal();
-  closure_9 = tmp3;
-  const tmp4 = addPortal();
-  closure_10 = tmp4;
-  const items1 = [handleOnMount, addPortal];
-  tmp2.current = handleOnUnmount(() => {
-    if (handleOnMount) {
-      tmp(() => callback(closure_7, closure_4));
-    } else {
-      addPortal(closure_7, children);
-    }
-  }, items1);
-  const items2 = [handleOnUnmount, removePortal];
-  tmp3.current = handleOnUnmount(() => {
-    if (handleOnUnmount) {
-      tmp(() => callback(closure_7));
-    } else {
-      removePortal(closure_7);
-    }
-  }, items2);
-  const items3 = [handleOnUpdate, addPortal, children];
-  tmp4.current = handleOnUnmount(() => {
-    if (handleOnUpdate) {
-      tmp(() => callback(closure_7, closure_4));
-    } else {
-      addPortal(closure_7, children);
-    }
-  }, items3);
-  handleOnUpdate(() => {
-    let current = ref.current;
-    if (current != null) {
-      current();
-    }
-    return () => {
-      const current = ref.current;
-      if (current != null) {
-        current();
-      }
-      closure_8.current = undefined;
-      ref.current = undefined;
-      closure_10.current = undefined;
-    };
-  }, []);
-  const items4 = [children];
-  handleOnUpdate(() => {
-    const current = ref2.current;
-    if (current != null) {
-      current();
-    }
-  }, items4);
-  return null;
-});
-memoResult.displayName = "Portal";
 
-export const Portal = memoResult;
+export const Portal = Portal.Portal;
+export const PortalHost = PortalHost.PortalHost;
+export const PortalProvider = memo.PortalProvider;
+export const usePortal = usePortal.usePortal;
+export const enableLogging = print.enableLogging;

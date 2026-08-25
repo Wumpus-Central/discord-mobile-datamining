@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/clips", scales: [1], hash: "00796364ffd3102b65698c30b83cf592", name: "Clips.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==", scales: [1], hash: "6712101c522aa3700eb55b2379c01c84", name: "zh-TW.messages.6712101c522aa3700eb55b2379c01c84.compiled.messages", type: "jsona" });

@@ -1,0 +1,5 @@
+// _runtime/05688_BottomSheetHostingContainer.js
+import BottomSheetHostingContainer from "05689_BottomSheetHostingContainer.js";
+
+
+export const BottomSheetHostingContainer = BottomSheetHostingContainer.BottomSheetHostingContainer;

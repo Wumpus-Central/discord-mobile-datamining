@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 24, height: 24, scales: [2, 3], hash: "81c4c8246b195a90d6f5bb90212bbc6a", name: "tier_3_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2e0d6978350694e35552111153599c69", name: "BoostTier3Icon", type: "png" });

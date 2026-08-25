@@ -2,4 +2,4 @@
 import registerAsset from "01241_registerAsset.js";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 128, height: 128, scales: [1], hash: "d82ee9ebaba96d70f18b4f52bd66277a", name: "nameplate_avatar_placeholder_light_mode", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/auth", width: 100, height: 100, scales: [1], hash: "2466a8cae3eebcc6d13072f6ff1957c4", name: "img-auth-qrcode-overlay", type: "png" });

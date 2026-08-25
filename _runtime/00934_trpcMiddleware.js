@@ -23,7 +23,7 @@ export const trpcMiddleware = function trpcMiddleware() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -115,7 +115,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               c5 = 0;
               c6 = 0;
               c4 = 0;
-              return (/* F121977 */ function*() { ... })();
+              return (/* F122220 */ function*() { ... })();
             });
             return obj.startSpanManual(obj, function(arg0) {
               const self = this;
