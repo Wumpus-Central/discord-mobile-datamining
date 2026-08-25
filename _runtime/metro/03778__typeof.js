@@ -1,13 +1,22 @@
 // === Module 3778: _typeof ===
 
 // Module 3778 (_typeof)
-let _createSuperInternal = function _typeof(arg0) {
+import code from "code" /* 3722 */;
+import subMilliseconds from "subMilliseconds" /* 3709 */;
+import _typeof from "_typeof" /* 3476 */;
+import assign from "assign" /* 3726 */;
+import dateLongFormatter from "dateLongFormatter" /* 3721 */;
+import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3639 */;
+import toInteger from "toInteger" /* 3480 */;
+import requiredArgs from "requiredArgs" /* 3477 */;
+
+function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "symbol") {
-      function _typeof(arg0) {
+      _typeof = function _typeof(arg0) {
         return typeof arg0;
-      }
+      };
     }
     return _typeof(arg0);
   }
@@ -25,354 +34,527 @@ let _createSuperInternal = function _typeof(arg0) {
     }
     str = typeof arg0;
   };
-};
-let store = function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
-  let _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(DateToSystemTimezoneSetter, Setter) {
-      DateToSystemTimezoneSetter.__proto__ = Setter;
-      return DateToSystemTimezoneSetter;
-    };
-  }
-  return _setPrototypeOf(DateToSystemTimezoneSetter, Setter);
-};
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
 }
-function _createClass(DateToSystemTimezoneSetter, items) {
-  for (let num = 0; num < items.length; num = num + 1) {
-    let tmp2 = items[num];
-    let flag = tmp2.enumerable;
-    let tmp3 = num;
-    if (!flag) {
-      flag = false;
-    }
-    tmp2.enumerable = flag;
-    tmp2.configurable = true;
-    if ("value" in tmp2) {
-      tmp2.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult = Object.defineProperty(tmp, tmp2.key, tmp2);
-  }
-  return DateToSystemTimezoneSetter;
-}
-arg5.DateToSystemTimezoneSetter = undefined;
-arg5.Setter = undefined;
-arg5.ValueSetter = undefined;
-class Setter {
-  constructor() {
-    self = this;
-    if (this instanceof _createSuperInternal) {
-      str2 = "subPriority";
-      if ("subPriority" in self) {
-        tmp6 = globalThis;
-        _Object = Object;
-        definePropertyResult = Object.defineProperty(self, "subPriority", { value: 0, enumerable: true, configurable: true, writable: true });
-      } else {
-        num = 0;
-        self.subPriority = 0;
-      }
-      return;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-_createSuperInternal = Setter;
-let obj = {
-  key: "validate",
-  value: function validate(arg0, arg1) {
-    return true;
-  }
-};
-let items = [obj];
-_createClass(Setter, items);
-arg5.Setter = Setter;
-_createSuperInternal = undefined;
-class ValueSetter {
-  constructor(arg0, arg1, arg2, arg3, arg4) {
-    self = this;
-    if (this instanceof closure_1) {
-      tmp6 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      tmp7 = typeof call === "unknown" ? tmp6() : call(self);
-      tmp8 = arg0;
-      tmp9 = arg1;
-      tmp10 = arg2;
-      tmp11 = arg3;
-      tmp12 = arg4;
-      tmp7.value = arg0;
-      tmp7.validateValue = arg1;
-      tmp7.setValue = arg2;
-      tmp7.priority = arg3;
-      if (arg4) {
-        tmp7.subPriority = arg4;
-      }
-      return tmp7;
-    } else {
-      tmp = globalThis;
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-store = ValueSetter;
-obj = { value: ValueSetter, writable: true, configurable: true };
-ValueSetter.prototype = Object.create(Setter.prototype, { constructor: obj });
-store(ValueSetter, Setter);
-_createSuperInternal = ValueSetter;
-store = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
+function _createForOfIteratorHelper(str) {
+  closure_0 = str;
+  if (typeof Symbol !== "undefined") {
+    const _Symbol = Symbol;
+    if (null != str[Symbol.iterator]) {
+      c4 = true;
+      c5 = false;
+      let obj = { s: null, n: null, e: null, f: null };
+      obj[0] = function s() {
+        closure_1 = lib[Symbol.iterator]();
+      };
+      obj[1] = function n() {
+        const iter = arr.next();
+        const done = iter.done;
+        return iter;
+      };
+      obj[2] = function e(arg0) {
+        c5 = true;
+        closure_3 = arg0;
+      };
+      obj[3] = function f() {
+        try {
+          let tmp = c4;
+          if (!c4) {
+            tmp = null == arr.return;
           }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _createSuperInternal(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-obj = {
-  key: "validate",
-  value: function validate(arg0, arg1) {
-    return this.validateValue(arg0, this.value, arg1);
-  }
-};
-const items1 = [
-  obj,
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      return this.setValue(arg0, arg1, this.value, arg2);
-    }
-  }
-];
-_createClass(ValueSetter, items1);
-arg5.ValueSetter = ValueSetter;
-_createSuperInternal = undefined;
-class DateToSystemTimezoneSetter {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
-        } else {
-          num3 = 10;
-          applyResult.priority = 10;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          str3 = "subPriority";
-          if ("subPriority" in applyResult) {
-            _Object2 = Object;
-            definePropertyResult1 = Object.defineProperty(applyResult, "subPriority", { value: -1, enumerable: true, configurable: true, writable: true });
+          if (!tmp) {
+            arr.return();
+          }
+          if (c5) {
+            throw closure_3;
+          }
+        } catch (tmp8) {
+          if (c5) {
+            throw closure_3;
           } else {
-            num4 = -1;
-            applyResult.subPriority = -1;
+            throw tmp8;
           }
-          return applyResult;
         }
+      };
+      return obj;
+    }
+  }
+  if (!Array.isArray(str)) {
+    let arr;
+    if (str) {
+      if (typeof str === "string") {
+        const _Array3 = Array;
+        let array = new Array(length2);
+        let num5 = 0;
+        arr = array;
+        if (0 < str.length) {
+          do {
+            array[num5] = str[num5];
+            num5 = num5 + 1;
+            arr = array;
+          } while (num5 < length2);
+        }
+      } else {
+        const _Object = Object;
+        const call = toString.call;
+        arr = typeof call === "unknown" ? toString() : call(str);
+        const substr = arr.slice(8, -1);
+        let name = substr;
+        if (tmp3) {
+          name = str.constructor.name;
+        }
+        class F {
+          constructor() {
+            return;
+          }
+        }
+        if ("Map" !== name) {
+          if ("Set" !== name) {
+            if ("Arguments" === name) {
+              const _Array = Array;
+              array = new Array(length);
+              let num3 = 0;
+              arr = array;
+              if (0 < str.length) {
+                do {
+                  array[num3] = str[num3];
+                  num3 = num3 + 1;
+                  arr = array;
+                } while (num3 < length);
+              }
+            } else {
+              const obj2 = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
+            }
+          }
+        }
+        const _Array2 = Array;
+        arr = Array.from(str);
+        tmp3 = "Object" === substr && str.constructor;
       }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
+    }
+    if (!arr) {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
       throw typeError;
     }
   }
-}
-store = DateToSystemTimezoneSetter;
-DateToSystemTimezoneSetter.prototype = Object.create(Setter.prototype, { constructor: { value: DateToSystemTimezoneSetter, writable: true, configurable: true } });
-store(DateToSystemTimezoneSetter, Setter);
-_createSuperInternal = DateToSystemTimezoneSetter;
-store = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
+  if (arr) {
+    closure_0 = arr;
+  }
+  c2 = 0;
+  class F {
+    constructor() {
+      return;
+    }
+  }
+  obj = {
+    s: F,
+    n() {
+      if (closure_2 >= lib.length) {
+        let obj = { done: true };
       } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
+        obj = { done: false, value: null };
+        closure_2 = tmp3 + 1;
+        obj[1] = tmp[+closure_2];
+      }
+      return obj;
+    },
+    e(arg0) {
+      throw arg0;
+    },
+    f: F
+  };
+  return obj;
+}
+if (!code) {
+  let obj = { default: null };
+  obj[0] = code;
+  let tmp3 = obj;
+} else {
+  tmp3 = code;
+}
+code = tmp3;
+if (!subMilliseconds) {
+  obj = { default: null };
+  obj[0] = subMilliseconds;
+  let tmp5 = obj;
+} else {
+  tmp5 = subMilliseconds;
+}
+subMilliseconds = tmp5;
+if (!_typeof) {
+  obj = { default: null };
+  obj[0] = _typeof;
+  let tmp7 = obj;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+if (!assign) {
+  let obj1 = { default: null };
+  obj1[0] = assign;
+  let tmp9 = obj1;
+} else {
+  tmp9 = assign;
+}
+assign = tmp9;
+if (!dateLongFormatter) {
+  let obj2 = { default: null };
+  obj2[0] = dateLongFormatter;
+  let tmp11 = obj2;
+} else {
+  tmp11 = dateLongFormatter;
+}
+dateLongFormatter = tmp11;
+if (!getTimezoneOffsetInMilliseconds) {
+  const obj3 = { default: null };
+  obj3[0] = getTimezoneOffsetInMilliseconds;
+  let tmp13 = obj3;
+} else {
+  tmp13 = getTimezoneOffsetInMilliseconds;
+}
+getTimezoneOffsetInMilliseconds = tmp13;
+if (!toInteger) {
+  const obj4 = { default: null };
+  obj4[0] = toInteger;
+  let tmp15 = obj4;
+} else {
+  tmp15 = toInteger;
+}
+toInteger = tmp15;
+if (!requiredArgs) {
+  const obj5 = { default: null };
+  obj5[0] = requiredArgs;
+  let tmp17 = obj5;
+} else {
+  tmp17 = requiredArgs;
+}
+requiredArgs = tmp17;
+const re12 = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g;
+const re13 = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g;
+const re14 = /^'([^]*?)'?$/;
+const re15 = /''/g;
+const re16 = /\S/;
+const re17 = /[a-zA-Z]/;
+
+export default function parse(arg0, arg1, arg2, locale) {
+  const _require = arg0;
+  dependencyMap = locale;
+  requiredArgs.default(3, arguments);
+  const mod = String(arg0);
+  const str = String(arg1);
+  const defaultOptions = _require(3481).getDefaultOptions();
+  locale = undefined;
+  if (null != locale) {
+    locale = locale.locale;
+  }
+  if (null === locale) {
+    locale = defaultOptions.locale;
+  }
+  if (null === locale) {
+    locale = mod.default;
+  }
+  if (locale.match) {
+    let prop;
+    if (null != locale) {
+      prop = locale.firstWeekContainsDate;
+    }
+    if (null === prop) {
+      let prop1;
+      if (null != locale) {
+        locale = locale.locale;
+        if (null !== locale) {
+          if (undefined !== locale) {
+            const options = locale.options;
+            if (null !== options) {
+              if (undefined !== options) {
+                prop1 = options.firstWeekContainsDate;
+              }
             }
-            return true;
-          } catch (err) {
-            return false;
           }
         }
       }
+      prop = prop1;
     }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
+    if (null === prop) {
+      prop = defaultOptions.firstWeekContainsDate;
     }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _createSuperInternal(constructResult)) {
-      tmp8 = constructResult;
+    if (null === prop) {
+      const locale2 = defaultOptions.locale;
+      let prop2;
+      if (null !== locale2) {
+        if (undefined !== locale2) {
+          const options2 = locale2.options;
+          if (null !== options2) {
+            if (undefined !== options2) {
+              prop2 = options2.firstWeekContainsDate;
+            }
+          }
+        }
+      }
+      prop = prop2;
     }
-  }
-  return tmp8;
-};
-const items2 = [
-  {
-    key: "set",
-    value: function set(getUTCFullYear, timestampIsSet) {
-      if (timestampIsSet.timestampIsSet) {
-        return getUTCFullYear;
-      } else {
-        const _Date = Date;
-        const date = new Date(0);
-        const uTCFullYear = getUTCFullYear.getUTCFullYear();
-        const uTCMonth = getUTCFullYear.getUTCMonth();
-        date.setFullYear(uTCFullYear, uTCMonth, getUTCFullYear.getUTCDate());
-        const uTCHours = getUTCFullYear.getUTCHours();
-        const uTCMinutes = getUTCFullYear.getUTCMinutes();
-        const uTCSeconds = getUTCFullYear.getUTCSeconds();
-        date.setHours(uTCHours, uTCMinutes, uTCSeconds, getUTCFullYear.getUTCMilliseconds());
-        return date;
+    let num2 = 1;
+    if (null !== prop) {
+      num2 = 1;
+      if (undefined !== prop) {
+        num2 = prop;
       }
     }
+    const defaultResult1 = toInteger.default(num2);
+    if (defaultResult1 >= 1) {
+      if (defaultResult1 <= 7) {
+        let weekStartsOn;
+        if (null != locale) {
+          weekStartsOn = locale.weekStartsOn;
+        }
+        if (null === weekStartsOn) {
+          let weekStartsOn1;
+          if (null != locale) {
+            const locale3 = locale.locale;
+            if (null !== locale3) {
+              if (undefined !== locale3) {
+                const options3 = locale3.options;
+                if (null !== options3) {
+                  if (undefined !== options3) {
+                    weekStartsOn1 = options3.weekStartsOn;
+                  }
+                }
+              }
+            }
+          }
+          weekStartsOn = weekStartsOn1;
+        }
+        if (null === weekStartsOn) {
+          weekStartsOn = defaultOptions.weekStartsOn;
+        }
+        if (null === weekStartsOn) {
+          const locale4 = defaultOptions.locale;
+          let weekStartsOn2;
+          if (null !== locale4) {
+            if (undefined !== locale4) {
+              const options4 = locale4.options;
+              if (null !== options4) {
+                if (undefined !== options4) {
+                  weekStartsOn2 = options4.weekStartsOn;
+                }
+              }
+            }
+          }
+          weekStartsOn = weekStartsOn2;
+        }
+        let num5 = 0;
+        if (null !== weekStartsOn) {
+          num5 = 0;
+          if (undefined !== weekStartsOn) {
+            num5 = weekStartsOn;
+          }
+        }
+        const defaultResult2 = toInteger.default(num5);
+        if (defaultResult2 >= 0) {
+          if (defaultResult2 <= 6) {
+            if ("" === str) {
+              if ("" === mod) {
+                let defaultResult3 = locale.default(arg2);
+              } else {
+                const _Date4 = Date;
+                defaultResult3 = new Date(NaN);
+              }
+              return defaultResult3;
+            } else {
+              let obj = { firstWeekContainsDate: null, weekStartsOn: null, locale: null };
+              obj[0] = defaultResult1;
+              obj[1] = defaultResult2;
+              obj[2] = locale;
+              const dateToSystemTimezoneSetter = new tmp2(3779).DateToSystemTimezoneSetter();
+              const items = [dateToSystemTimezoneSetter];
+              const match = str.match(closure_13);
+              const mapped = match.map((arg0) => {
+                const first = arg0[0];
+                let tmp2 = arg0;
+                if (first in obj.default) {
+                  tmp2 = obj.default[first](arg0, locale.formatLong);
+                }
+                return tmp2;
+              });
+              toInteger = [];
+              const obj11 = _createForOfIteratorHelper(mapped.join("").match(closure_12));
+              try {
+                function _loop() {
+                  let tmp2 = null != incompatibleTokens && tmp.useAdditionalWeekYearTokens;
+                  if (!tmp2) {
+                    tmp2 = !callback(locale[10]).isProtectedWeekYearToken(str);
+                  }
+                  if (!tmp2) {
+                    callback(locale[10]).throwProtectedError(str, str, str2);
+                  }
+                  let tmp10 = null != tmp && tmp.useAdditionalDayOfYearTokens;
+                  if (!tmp10) {
+                    tmp10 = !callback(locale[10]).isProtectedDayOfYearToken(str);
+                  }
+                  if (!tmp10) {
+                    callback(locale[10]).throwProtectedError(str, str, str2);
+                  }
+                  str2 = str[0];
+                  obj = callback(locale[11]).parsers[str2];
+                  if (obj) {
+                    incompatibleTokens = obj.incompatibleTokens;
+                    const _Array = Array;
+                    if (Array.isArray(incompatibleTokens)) {
+                      const found = arr2.find((token) => {
+                        let hasItem = incompatibleTokens.includes(token.token);
+                        if (!hasItem) {
+                          hasItem = token.token === str2;
+                        }
+                        return hasItem;
+                      });
+                      if (found) {
+                        const _RangeError3 = RangeError;
+                        const concat2 = "The format string mustn't contain `".concat;
+                        const combined = "The format string mustn't contain `".concat(found.fullToken, "` and `");
+                        const rangeError = new RangeError(combined.concat(str, "` at the same time"));
+                        throw rangeError;
+                      }
+                    } else if ("*" === obj.incompatibleTokens) {
+                      if (arr2.length > 0) {
+                        const _RangeError2 = RangeError;
+                        const concat = "The format string mustn't contain `".concat;
+                        const rangeError1 = new RangeError("The format string mustn't contain `".concat(str, "` and any other token at the same time"));
+                        throw rangeError1;
+                      }
+                    }
+                    obj = { token: null, fullToken: null };
+                    obj[0] = str2;
+                    obj[1] = str;
+                    let arr = arr2.push(obj);
+                    const runResult = obj.run(arr, str, locale.match, obj);
+                    if (runResult) {
+                      arr = items.push(runResult.setter);
+                      arr = runResult.rest;
+                    } else {
+                      obj = { v: null };
+                      const _Date2 = Date;
+                      const date = new Date(NaN);
+                      obj[0] = date;
+                      return obj;
+                    }
+                  } else if (str2.match(closure_1_17)) {
+                    const _RangeError = RangeError;
+                    const rangeError2 = new RangeError("Format string contains an unescaped latin alphabet character `" + str2 + "`");
+                    throw rangeError2;
+                  } else {
+                    let str5 = "'";
+                    if ("''" !== str) {
+                      str5 = str;
+                      if ("'" === str2) {
+                        str5 = str.match(closure_1_14)[1].replace(closure_1_15, "'");
+                        const str6 = str.match(closure_1_14)[1];
+                      }
+                    }
+                    if (0 !== arr.indexOf(str5)) {
+                      obj1 = { v: null };
+                      const _Date = Date;
+                      const date1 = new Date(NaN);
+                      obj1[0] = date1;
+                      return obj1;
+                    } else {
+                      arr = arr.slice(str5.length);
+                    }
+                  }
+                }
+                obj11.s();
+                const iter = obj11.n();
+                let iter2 = iter;
+                if (!iter.done) {
+                  const _loopResult = _loop();
+                  while ("object" !== _typeof(_loopResult)) {
+                    iter2 = obj11.n();
+                  }
+                  obj11.f();
+                  return _loopResult.v;
+                }
+                obj11.f();
+                if (mod.length > 0) {
+                  if (regex.test(mod)) {
+                    const _Date3 = Date;
+                    let date = new Date(NaN);
+                    return date;
+                  }
+                }
+                const mapped1 = items.map((priority) => priority.priority);
+                const sorted = mapped1.sort((arg0, arg1) => arg1 - arg0);
+                let found = sorted.filter((arg0, arg1, arr) => arr.indexOf(arg0) === arg1);
+                const mapped2 = found.map((arg0) => {
+                  closure_0 = arg0;
+                  const found = items.filter((priority) => priority.priority === closure_0);
+                  return found.sort((subPriority, subPriority2) => subPriority2.subPriority - subPriority.subPriority);
+                });
+                const mapped3 = mapped2.map((arg0) => arg0[0]);
+                const defaultResult4 = locale.default(arg2);
+                const _isNaN = isNaN;
+                if (isNaN(defaultResult4.getTime())) {
+                  let _Date2 = Date;
+                  let date1 = new Date(NaN);
+                  return date1;
+                } else {
+                  let defaultResult5 = str.default(defaultResult4, items.default(defaultResult4));
+                  obj = {};
+                  const obj7 = _createForOfIteratorHelper(mapped3);
+                  try {
+                    obj7.s();
+                    const iter3 = obj7.n();
+                    let iter4 = iter3;
+                    if (!iter3.done) {
+                      const value = iter4.value;
+                      while (value.validate(defaultResult5, obj)) {
+                        let tmp52 = value;
+                        let tmp53 = defaultResult5;
+                        let result = value.set(defaultResult5, obj, obj);
+                        let tmp55 = result;
+                        let _Array = Array;
+                        let tmp56 = result;
+                        if (Array.isArray(result)) {
+                          defaultResult5 = tmp55[0];
+                          let tmp57 = iter2;
+                          let defaultResult6 = iter2.default(obj, tmp55[1]);
+                        } else {
+                          defaultResult5 = tmp55;
+                        }
+                        let iter5 = obj7.n();
+                        iter4 = iter5;
+                      }
+                      let _Date = Date;
+                      const date2 = new Date(NaN);
+                      obj7.f();
+                      return date2;
+                    }
+                    obj7.f();
+                    return defaultResult5;
+                  } catch (tmp60) {
+                    obj2.f();
+                    throw tmp60;
+                  }
+                }
+              } catch (tmp70) {
+                obj.f();
+                throw tmp70;
+              }
+              const str7 = mapped.join("");
+            }
+          }
+        }
+        let _RangeError3 = RangeError;
+        let rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+        throw rangeError;
+      }
+    }
+    let _RangeError2 = RangeError;
+    let rangeError1 = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    throw rangeError1;
+  } else {
+    let _RangeError = RangeError;
+    let rangeError2 = new RangeError("locale must contain match property");
+    throw rangeError2;
   }
-];
-_createClass(DateToSystemTimezoneSetter, items2);
-arg5.DateToSystemTimezoneSetter = DateToSystemTimezoneSetter;
+  tmp2 = _require;
+};
+export default exports.default;

@@ -22,12 +22,12 @@ let obj = {
   popToTop() {
     return { type: "POP_TO_TOP" };
   },
-  popTo(name, params, flag) {
+  popTo(OVERVIEW, arg1, flag) {
     if (typeof flag === "boolean") {
       const _console = console;
       console.warn("Passing a boolean as the third argument to 'popTo' is deprecated. Pass '{ merge: true }' instead.");
     }
-    const payload = { name, params, merge: null };
+    const payload = { name: OVERVIEW, params: arg1, merge: null };
     let tmp = flag;
     if (typeof flag !== "boolean") {
       let merge;

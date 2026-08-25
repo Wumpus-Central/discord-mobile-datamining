@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "1c6dca03661172aa5af3340a0d3930a2", name: "img_account_sync_tiktok_light", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "c8b1b3c79df9edf9120c2a71e2b3bfd3", name: "img_account_sync_ebay_light_and_dark", type: "png" });

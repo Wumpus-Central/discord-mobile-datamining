@@ -361,7 +361,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "comunicaci\u00F3n", type: "cuaderno de notas", listener: "cartera" };
+          obj = { fired: false, wrapFn: "a", target: "assetFormat", type: "WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD", listener: "gemHeight" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -386,7 +386,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "comunicaci\u00F3n", type: "cuaderno de notas", listener: "cartera" };
+          obj = { fired: false, wrapFn: "a", target: "assetFormat", type: "WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD", listener: "gemHeight" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;

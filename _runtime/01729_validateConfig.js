@@ -78,8 +78,8 @@ let fn = function n(userConfig, callback) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "db.fs_info",
-      reduceMotion: 0
+      startTimestamp: "DELETE_PENDING_REPLY",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

@@ -214,7 +214,7 @@ class FeedbackWidget {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -249,7 +249,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "getGuild", attachment: "call", attachmentUri: "HTTP" });
+                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "Path" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {
@@ -640,7 +640,7 @@ let items = [
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -657,7 +657,7 @@ let items = [
                   obj = v0(closure_1_2[7]);
                   obj.feedbackAlertDialog(closure_1_2.errorTitle, closure_1_2.captureScreenshotError);
                   v0 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } catch (tmp8) {
                 v0 = tmp;

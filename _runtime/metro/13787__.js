@@ -1,12 +1,13 @@
 // === Module 13787: ? ===
 
 // Module 13787
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 13734 */;
-import _mod13768 from "module_13768" /* 13768 */;
-import defineProperty from "defineProperty" /* 13785 */;
+import _mod13766 from "module_13766" /* 13766 */;
 
+const tmp = _mod13766.navigator && _mod13766.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default getOwnPropertyDescriptor ? ((arg0, arg1, arg2) => defineProperty.f(arg0, arg1, _mod13768(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default str;

@@ -19,7 +19,7 @@ function processEvent(arg0, arg1) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -222,7 +222,7 @@ function symbolicate(arg0) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -303,7 +303,7 @@ function symbolicate(arg0) {
                   return v0(undefined, undefined, undefined, function() {
                     const self = this;
                     c1 = 0;
-                    return (/* F121510 */ function*() { ... })();
+                    return (/* F121753 */ function*() { ... })();
                   });
                 })(found);
                 c4 = 3;

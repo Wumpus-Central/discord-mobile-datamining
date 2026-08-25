@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 152, height: 123, scales: [2, 3], hash: "0669c0bbd186eac68c76b3fb934f05f4", name: "crunchyroll_connect", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 24, height: 24, scales: [2, 3], hash: "ff0787bdfe8164338278d2c417e963a2", name: "share-android", type: "png" });

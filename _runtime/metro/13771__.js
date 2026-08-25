@@ -1,27 +1,8 @@
 // === Module 13771: ? ===
 
 // Module 13771
-import call from "call" /* 13754 */;
 import _mod13772 from "module_13772" /* 13772 */;
+import _mod13776 from "module_13776" /* 13776 */;
 
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod13772(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
-    let tmp6 = call(arg0, tmp3);
-    let tmp7 = num;
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = tmp4(13754)(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+export default (arg0) => _mod13772(_mod13776(arg0));

@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/directory_channels/native/images", width: 375, height: 300, scales: [2], hash: "ce796d5b5dedd403e327ddf7cc5530fc", name: "hub_header", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/create_guild/native/images", width: 48, height: 48, scales: [2, 3], hash: "ddab91eeff97f71a819bf48cb718a6b3", name: "img_create_my_own", type: "png" });

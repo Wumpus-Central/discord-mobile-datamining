@@ -1,16 +1,4 @@
 // === Module 5041: ? ===
 
 // Module 5041
-import getNative from "getNative" /* 773 */;
-import setToArray from "setToArray" /* 790 */;
-import noop from "noop" /* 5042 */;
-
-if (getNative) {
-  const _module = setToArray;
-  const items = [, -0];
-  const tmp5 = new getNative(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new getNative(arg0);
-  }
-  module.exports = noop;
-}
+arg5.default = { USE_FILE: true, USE_JFIF: true, USE_PNG_FILE: true, USE_EXIF: true, USE_IPTC: true, USE_XMP: true, USE_ICC: true, USE_MPF: true, USE_PHOTOSHOP: true, USE_THUMBNAIL: true, USE_TIFF: true, USE_JPEG: true, USE_PNG: true, USE_HEIC: true, USE_AVIF: true, USE_WEBP: true, USE_GIF: true, USE_MAKER_NOTES: true };

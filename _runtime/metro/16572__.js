@@ -1,18 +1,10 @@
 // === Module 16572: ? ===
 
 // Module 16572
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "tr",
-  pluralRuleFunction(arg0, arg1) {
-    let str = "other";
-    let str2 = "other";
-    if (!arg1) {
-      if (1 == arg0) {
-        str = "one";
-      }
-      str2 = str;
-    }
-    return str2;
-  }
-});
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "tr-CY", parentLocale: "tr" });
+import MessageFormat from "MessageFormat" /* 16573 */;
+import module_576 from "module_576" /* 576 */;
+
+const _default = MessageFormat.default;
+_default.default = _default;
+
+export default _default;

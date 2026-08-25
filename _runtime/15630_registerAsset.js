@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset" /* 1241 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 16, height: 16, scales: [1, 2, 3], hash: "a57ba6ff6390c76b45de1785f93f6e88", name: "ic-application-required", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images", width: 193.5, height: 205.5, scales: [2, 3, 4], hash: "c4e35cf59b65ee25c9dfc91c26e34f5e", name: "guilds-empty-illustration", type: "png" });
